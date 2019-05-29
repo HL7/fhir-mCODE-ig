@@ -1,0 +1,621 @@
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://unitsofmeasure.org",
+      "concept" : [{
+        "code" : "cm",
+        "display" : "Centimeters"
+      },
+      {
+        "code" : "[in_i]",
+        "display" : "Inches"
+      }]
+    }]
+  }
+}}####
+e: {
+  "valueSet" : {
+  "resourceType" : "ValueSet",
+  "immutable" : false,
+  "expansion" : {
+    "identifier" : "urn:uuid:52d54a06-3e04-4c7e-9a94-d9a40f0b18b3",
+    "timestamp" : "2019-05-28T23:26:54-04:00",
+    "total" : 0,
+    "offset" : 0,
+    "parameter" : [{
+      "name" : "limitedExpansion",
+      "valueString" : "-1"
+    },
+    {
+      "name" : "version",
+      "valueString" : "http://unitsofmeasure.org?version=2.0.1"
+    }],
+    "contains" : [{
+      "system" : "http://unitsofmeasure.org",
+      "abstract" : false,
+      "code" : "cm",
+      "display" : "Centimeters"
+    },
+    {
+      "system" : "http://unitsofmeasure.org",
+      "abstract" : false,
+      "code" : "[in_i]",
+      "display" : "Inches"
+    }]
+  }
+},
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://unitsofmeasure.org",
+      "concept" : [{
+        "code" : "kg",
+        "display" : "kg"
+      },
+      {
+        "code" : "[lb_av]",
+        "display" : "pounds"
+      }]
+    }]
+  }
+}}####
+e: {
+  "valueSet" : {
+  "resourceType" : "ValueSet",
+  "immutable" : false,
+  "expansion" : {
+    "identifier" : "urn:uuid:3c8c56b5-3eca-4536-a877-129917164880",
+    "timestamp" : "2019-05-28T23:27:56-04:00",
+    "total" : 0,
+    "offset" : 0,
+    "parameter" : [{
+      "name" : "limitedExpansion",
+      "valueString" : "-1"
+    },
+    {
+      "name" : "version",
+      "valueString" : "http://unitsofmeasure.org?version=2.0.1"
+    }],
+    "contains" : [{
+      "system" : "http://unitsofmeasure.org",
+      "abstract" : false,
+      "code" : "kg",
+      "display" : "kg"
+    },
+    {
+      "system" : "http://unitsofmeasure.org",
+      "abstract" : false,
+      "code" : "[lb_av]",
+      "display" : "pounds"
+    }]
+  }
+},
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://unitsofmeasure.org",
+      "concept" : [{
+        "code" : "g/dL",
+        "display" : "Grams per deciliter"
+      },
+      {
+        "code" : "g/L",
+        "display" : "Grams per liter"
+      },
+      {
+        "code" : "mg/dL",
+        "display" : "Milligrams per deciliter"
+      }]
+    }]
+  }
+}}####
+e: {
+  "valueSet" : {
+  "resourceType" : "ValueSet",
+  "immutable" : false,
+  "expansion" : {
+    "identifier" : "urn:uuid:1cc2f194-2e11-45ef-93f7-d4176cf15135",
+    "timestamp" : "2019-05-28T23:31:00-04:00",
+    "total" : 0,
+    "offset" : 0,
+    "parameter" : [{
+      "name" : "limitedExpansion",
+      "valueString" : "-1"
+    },
+    {
+      "name" : "version",
+      "valueString" : "http://unitsofmeasure.org?version=2.0.1"
+    }],
+    "contains" : [{
+      "system" : "http://unitsofmeasure.org",
+      "abstract" : false,
+      "code" : "g/dL",
+      "display" : "Grams per deciliter"
+    },
+    {
+      "system" : "http://unitsofmeasure.org",
+      "abstract" : false,
+      "code" : "g/L",
+      "display" : "Grams per liter"
+    },
+    {
+      "system" : "http://unitsofmeasure.org",
+      "abstract" : false,
+      "code" : "mg/dL",
+      "display" : "Milligrams per deciliter"
+    }]
+  }
+},
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://unitsofmeasure.org",
+      "concept" : [{
+        "code" : "g/L",
+        "display" : "Grams per liter"
+      },
+      {
+        "code" : "mg/mL",
+        "display" : "Milligrams per milliliter"
+      },
+      {
+        "code" : "ug/uL",
+        "display" : "Micrograms per microliter"
+      }]
+    }]
+  }
+}}####
+e: {
+  "valueSet" : {
+  "resourceType" : "ValueSet",
+  "immutable" : false,
+  "expansion" : {
+    "identifier" : "urn:uuid:61cc4771-7c11-41a5-9b4e-2d8e970b6104",
+    "timestamp" : "2019-05-28T23:38:45-04:00",
+    "total" : 0,
+    "offset" : 0,
+    "parameter" : [{
+      "name" : "limitedExpansion",
+      "valueString" : "-1"
+    },
+    {
+      "name" : "version",
+      "valueString" : "http://unitsofmeasure.org?version=2.0.1"
+    }],
+    "contains" : [{
+      "system" : "http://unitsofmeasure.org",
+      "abstract" : false,
+      "code" : "g/L",
+      "display" : "Grams per liter"
+    },
+    {
+      "system" : "http://unitsofmeasure.org",
+      "abstract" : false,
+      "code" : "mg/mL",
+      "display" : "Milligrams per milliliter"
+    },
+    {
+      "system" : "http://unitsofmeasure.org",
+      "abstract" : false,
+      "code" : "ug/uL",
+      "display" : "Micrograms per microliter"
+    }]
+  }
+},
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://unitsofmeasure.org",
+      "concept" : [{
+        "code" : "mL/min/{1.73_m2}",
+        "display" : "Milliliter per min per ​1.73 sq M"
+      },
+      {
+        "code" : "mL/min",
+        "display" : "Milliliter per min"
+      }]
+    }]
+  }
+}}####
+e: {
+  "valueSet" : {
+  "resourceType" : "ValueSet",
+  "immutable" : false,
+  "expansion" : {
+    "identifier" : "urn:uuid:7a55dbb5-3532-436b-8d99-59951c8ecc86",
+    "timestamp" : "2019-05-28T23:38:46-04:00",
+    "total" : 0,
+    "offset" : 0,
+    "parameter" : [{
+      "name" : "limitedExpansion",
+      "valueString" : "-1"
+    },
+    {
+      "name" : "version",
+      "valueString" : "http://unitsofmeasure.org?version=2.0.1"
+    }],
+    "contains" : [{
+      "system" : "http://unitsofmeasure.org",
+      "abstract" : false,
+      "code" : "mL/min/{1.73_m2}",
+      "display" : "Milliliter per min per ​1.73 sq M"
+    },
+    {
+      "system" : "http://unitsofmeasure.org",
+      "abstract" : false,
+      "code" : "mL/min",
+      "display" : "Milliliter per min"
+    }]
+  }
+},
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://unitsofmeasure.org",
+      "concept" : [{
+        "code" : "10*6/uL",
+        "display" : "Million per microliter"
+      },
+      {
+        "code" : "10*12/L",
+        "display" : "Trillion per liter"
+      },
+      {
+        "code" : "10*6/mm3",
+        "display" : "Million per cubic millimeter"
+      }]
+    }]
+  }
+}}####
+e: {
+  "valueSet" : {
+  "resourceType" : "ValueSet",
+  "immutable" : false,
+  "expansion" : {
+    "identifier" : "urn:uuid:5a7e7b65-8216-4fea-8411-88ab97014e51",
+    "timestamp" : "2019-05-28T23:38:46-04:00",
+    "total" : 0,
+    "offset" : 0,
+    "parameter" : [{
+      "name" : "limitedExpansion",
+      "valueString" : "-1"
+    },
+    {
+      "name" : "version",
+      "valueString" : "http://unitsofmeasure.org?version=2.0.1"
+    }],
+    "contains" : [{
+      "system" : "http://unitsofmeasure.org",
+      "abstract" : false,
+      "code" : "10*6/uL",
+      "display" : "Million per microliter"
+    },
+    {
+      "system" : "http://unitsofmeasure.org",
+      "abstract" : false,
+      "code" : "10*12/L",
+      "display" : "Trillion per liter"
+    },
+    {
+      "system" : "http://unitsofmeasure.org",
+      "abstract" : false,
+      "code" : "10*6/mm3",
+      "display" : "Million per cubic millimeter"
+    }]
+  }
+},
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://unitsofmeasure.org",
+      "concept" : [{
+        "code" : "/100{WBCs}",
+        "display" : "Per 100 white blood cells"
+      },
+      {
+        "code" : "%",
+        "display" : "Percent"
+      },
+      {
+        "code" : "/100",
+        "display" : "Per 100"
+      }]
+    }]
+  }
+}}####
+e: {
+  "valueSet" : {
+  "resourceType" : "ValueSet",
+  "immutable" : false,
+  "expansion" : {
+    "identifier" : "urn:uuid:563a69e8-b9e6-45ef-bce5-e12664d80abb",
+    "timestamp" : "2019-05-28T23:38:47-04:00",
+    "total" : 0,
+    "offset" : 0,
+    "parameter" : [{
+      "name" : "limitedExpansion",
+      "valueString" : "-1"
+    },
+    {
+      "name" : "version",
+      "valueString" : "http://unitsofmeasure.org?version=2.0.1"
+    }],
+    "contains" : [{
+      "system" : "http://unitsofmeasure.org",
+      "abstract" : false,
+      "code" : "/100{WBCs}",
+      "display" : "Per 100 white blood cells"
+    },
+    {
+      "system" : "http://unitsofmeasure.org",
+      "abstract" : false,
+      "code" : "%",
+      "display" : "Percent"
+    },
+    {
+      "system" : "http://unitsofmeasure.org",
+      "abstract" : false,
+      "code" : "/100",
+      "display" : "Per 100"
+    }]
+  }
+},
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://unitsofmeasure.org",
+      "concept" : [{
+        "code" : "10*3/uL",
+        "display" : "Thousand per microliter"
+      },
+      {
+        "code" : "10*6/mL",
+        "display" : "Million per milliliter"
+      },
+      {
+        "code" : "10*9/L",
+        "display" : "Billion per liter"
+      },
+      {
+        "code" : "10*3/mm3",
+        "display" : "Thousand per cubic millimeter"
+      }]
+    }]
+  }
+}}####
+e: {
+  "valueSet" : {
+  "resourceType" : "ValueSet",
+  "immutable" : false,
+  "expansion" : {
+    "identifier" : "urn:uuid:da061e52-844a-4776-b77a-d85a5a2a0820",
+    "timestamp" : "2019-05-28T23:38:47-04:00",
+    "total" : 0,
+    "offset" : 0,
+    "parameter" : [{
+      "name" : "limitedExpansion",
+      "valueString" : "-1"
+    },
+    {
+      "name" : "version",
+      "valueString" : "http://unitsofmeasure.org?version=2.0.1"
+    }],
+    "contains" : [{
+      "system" : "http://unitsofmeasure.org",
+      "abstract" : false,
+      "code" : "10*3/uL",
+      "display" : "Thousand per microliter"
+    },
+    {
+      "system" : "http://unitsofmeasure.org",
+      "abstract" : false,
+      "code" : "10*6/mL",
+      "display" : "Million per milliliter"
+    },
+    {
+      "system" : "http://unitsofmeasure.org",
+      "abstract" : false,
+      "code" : "10*9/L",
+      "display" : "Billion per liter"
+    },
+    {
+      "system" : "http://unitsofmeasure.org",
+      "abstract" : false,
+      "code" : "10*3/mm3",
+      "display" : "Thousand per cubic millimeter"
+    }]
+  }
+},
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://unitsofmeasure.org",
+      "concept" : [{
+        "code" : "%",
+        "display" : "Percent"
+      },
+      {
+        "code" : "L/L",
+        "display" : "Liter per liter"
+      },
+      {
+        "code" : "mL/mL",
+        "display" : "Milliliter per milliliter"
+      }]
+    }]
+  }
+}}####
+e: {
+  "valueSet" : {
+  "resourceType" : "ValueSet",
+  "immutable" : false,
+  "expansion" : {
+    "identifier" : "urn:uuid:9acec108-eca1-467f-9b22-78482bf3fc2b",
+    "timestamp" : "2019-05-28T23:38:48-04:00",
+    "total" : 0,
+    "offset" : 0,
+    "parameter" : [{
+      "name" : "limitedExpansion",
+      "valueString" : "-1"
+    },
+    {
+      "name" : "version",
+      "valueString" : "http://unitsofmeasure.org?version=2.0.1"
+    }],
+    "contains" : [{
+      "system" : "http://unitsofmeasure.org",
+      "abstract" : false,
+      "code" : "%",
+      "display" : "Percent"
+    },
+    {
+      "system" : "http://unitsofmeasure.org",
+      "abstract" : false,
+      "code" : "L/L",
+      "display" : "Liter per liter"
+    },
+    {
+      "system" : "http://unitsofmeasure.org",
+      "abstract" : false,
+      "code" : "mL/mL",
+      "display" : "Milliliter per milliliter"
+    }]
+  }
+},
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://unitsofmeasure.org",
+      "concept" : [{
+        "code" : "pm",
+        "display" : "Picometer"
+      },
+      {
+        "code" : "nm",
+        "display" : "Nanometer"
+      },
+      {
+        "code" : "mm",
+        "display" : "Millimeter"
+      },
+      {
+        "code" : "cm",
+        "display" : "Centimeter"
+      },
+      {
+        "code" : "m",
+        "display" : "Meter"
+      },
+      {
+        "code" : "ft-us",
+        "display" : "Foot"
+      },
+      {
+        "code" : "in-us",
+        "display" : "Inch"
+      }]
+    }]
+  }
+}}####
+e: {
+  "valueSet" : {
+  "resourceType" : "ValueSet",
+  "immutable" : false,
+  "expansion" : {
+    "identifier" : "urn:uuid:5ce6e10f-45cb-4843-a46e-c34fe904e918",
+    "timestamp" : "2019-05-28T23:47:03-04:00",
+    "total" : 0,
+    "offset" : 0,
+    "parameter" : [{
+      "name" : "limitedExpansion",
+      "valueString" : "-1"
+    },
+    {
+      "name" : "version",
+      "valueString" : "http://unitsofmeasure.org?version=2.0.1"
+    }],
+    "contains" : [{
+      "system" : "http://unitsofmeasure.org",
+      "abstract" : false,
+      "code" : "pm",
+      "display" : "Picometer"
+    },
+    {
+      "system" : "http://unitsofmeasure.org",
+      "abstract" : false,
+      "code" : "nm",
+      "display" : "Nanometer"
+    },
+    {
+      "system" : "http://unitsofmeasure.org",
+      "abstract" : false,
+      "code" : "mm",
+      "display" : "Millimeter"
+    },
+    {
+      "system" : "http://unitsofmeasure.org",
+      "abstract" : false,
+      "code" : "cm",
+      "display" : "Centimeter"
+    },
+    {
+      "system" : "http://unitsofmeasure.org",
+      "abstract" : false,
+      "code" : "m",
+      "display" : "Meter"
+    },
+    {
+      "system" : "http://unitsofmeasure.org",
+      "abstract" : false,
+      "code" : "ft-us",
+      "display" : "Foot"
+    },
+    {
+      "system" : "http://unitsofmeasure.org",
+      "abstract" : false,
+      "code" : "in-us",
+      "display" : "Inch"
+    }]
+  }
+},
+  "error" : ""
+}
+-------------------------------------------------------------------------------------

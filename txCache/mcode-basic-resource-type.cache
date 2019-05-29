@@ -1,0 +1,63 @@
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "mcode-basic-resource-type"
+    }]
+  }
+}}####
+e: {
+  "valueSet" : {
+  "resourceType" : "ValueSet",
+  "id" : "mcode-basic-resource-type-vs",
+  "url" : "http://hl7.org/fhir/us/shr/ValueSet/mcode-basic-resource-type-vs",
+  "identifier" : [{
+    "system" : "http://hl7.org/fhir/us/mcode",
+    "value" : "mcode-basic-resource-type-vs"
+  }],
+  "version" : "0.9.1",
+  "name" : "mcode Basic Resource Type ValueSet",
+  "status" : "draft",
+  "date" : "2019-05-28T00:00:00-04:00",
+  "immutable" : false,
+  "expansion" : {
+    "identifier" : "urn:uuid:50c3ece5-838c-465e-bc64-de71234e41af",
+    "timestamp" : "2019-05-28T23:47:05-04:00",
+    "total" : 0,
+    "offset" : 0,
+    "parameter" : [{
+      "name" : "expansion-source",
+      "valueString" : "ValueSet/mcode-basic-resource-type-vs"
+    },
+    {
+      "name" : "limitedExpansion",
+      "valueString" : "-1"
+    },
+    {
+      "name" : "version",
+      "valueString" : "mcode-basic-resource-type?version=0.9.1"
+    }],
+    "contains" : [{
+      "system" : "mcode-basic-resource-type",
+      "abstract" : false,
+      "code" : "shr-core-ServiceRequest",
+      "display" : "shr-core-ServiceRequest"
+    },
+    {
+      "system" : "mcode-basic-resource-type",
+      "abstract" : false,
+      "code" : "shr-core-ResearchStudy",
+      "display" : "shr-core-ResearchStudy"
+    },
+    {
+      "system" : "mcode-basic-resource-type",
+      "abstract" : false,
+      "code" : "shr-core-ResearchSubject",
+      "display" : "shr-core-ResearchSubject"
+    }]
+  }
+},
+  "error" : ""
+}
+-------------------------------------------------------------------------------------

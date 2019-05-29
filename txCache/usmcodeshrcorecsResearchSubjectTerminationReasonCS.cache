@@ -1,0 +1,105 @@
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://hl7.org/fhir/us/mcode/shr/core/cs/ResearchSubjectTerminationReasonCS"
+    }]
+  }
+}}####
+e: {
+  "valueSet" : {
+  "resourceType" : "ValueSet",
+  "id" : "shr-core-ResearchSubjectTerminationReasonVS",
+  "url" : "http://hl7.org/fhir/us/mcode/shr/core/vs/ResearchSubjectTerminationReasonVS",
+  "identifier" : [{
+    "system" : "http://hl7.org/fhir/us/mcode",
+    "value" : "shr.core.ResearchSubjectTerminationReasonVS"
+  }],
+  "version" : "0.9.1",
+  "name" : "ResearchSubjectTerminationReasonVS",
+  "status" : "draft",
+  "date" : "2019-05-28T00:00:00-04:00",
+  "immutable" : false,
+  "expansion" : {
+    "identifier" : "urn:uuid:d6fc93ca-0d24-4361-b6a4-a40a4f17e70e",
+    "timestamp" : "2019-05-28T23:43:43-04:00",
+    "total" : 0,
+    "offset" : 0,
+    "parameter" : [{
+      "name" : "expansion-source",
+      "valueString" : "ValueSet/shr-core-ResearchSubjectTerminationReasonVS"
+    },
+    {
+      "name" : "limitedExpansion",
+      "valueString" : "-1"
+    },
+    {
+      "name" : "version",
+      "valueString" : "http://hl7.org/fhir/us/mcode/shr/core/cs/ResearchSubjectTerminationReasonCS?version=0.9.1"
+    }],
+    "contains" : [{
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/valueset-definition",
+        "valueString" : "Subject relocated"
+      }],
+      "system" : "http://hl7.org/fhir/us/mcode/shr/core/cs/ResearchSubjectTerminationReasonCS",
+      "abstract" : false,
+      "code" : "moved",
+      "display" : "Subject relocated"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/valueset-definition",
+        "valueString" : "Suject passed away"
+      }],
+      "system" : "http://hl7.org/fhir/us/mcode/shr/core/cs/ResearchSubjectTerminationReasonCS",
+      "abstract" : false,
+      "code" : "died",
+      "display" : "Suject passed away"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/valueset-definition",
+        "valueString" : "Research study ended"
+      }],
+      "system" : "http://hl7.org/fhir/us/mcode/shr/core/cs/ResearchSubjectTerminationReasonCS",
+      "abstract" : false,
+      "code" : "ended",
+      "display" : "Research study ended"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/valueset-definition",
+        "valueString" : "Subject could not tolerate treatement"
+      }],
+      "system" : "http://hl7.org/fhir/us/mcode/shr/core/cs/ResearchSubjectTerminationReasonCS",
+      "abstract" : false,
+      "code" : "adverse",
+      "display" : "Subject could not tolerate treatement"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/valueset-definition",
+        "valueString" : "Subject could not follow protocol, e.g. required appointments, dosing schedule, etc."
+      }],
+      "system" : "http://hl7.org/fhir/us/mcode/shr/core/cs/ResearchSubjectTerminationReasonCS",
+      "abstract" : false,
+      "code" : "protocol",
+      "display" : "Subject could not follow protocol, e.g. required appointments, dosing schedule, etc."
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/valueset-definition",
+        "valueString" : "Reason not known"
+      }],
+      "system" : "http://hl7.org/fhir/us/mcode/shr/core/cs/ResearchSubjectTerminationReasonCS",
+      "abstract" : false,
+      "code" : "unknown",
+      "display" : "Reason not known"
+    }]
+  }
+},
+  "error" : ""
+}
+-------------------------------------------------------------------------------------

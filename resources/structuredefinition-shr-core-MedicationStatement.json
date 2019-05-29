@@ -1,0 +1,2787 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "shr-core-MedicationStatement",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>MedicationStatement Profile</b></p>\n  <p>A record of the use of a medication. The use may be reported by the patient or clinician and adminstration does not have to be directly observed.\n\nFHIR Notes:\n\nAlthough FHIR supports the asserter (information source) and date asserted, it does not have a place for the author (who created and is responsible for the statement) and recorder (who entered the statement). Extensions are provided.\n\nThe treatment of &#039;not taken&#039; has changed from DSTU2 and STU3 to R4. In R4, status and statusReason are used to indicate medications not taken. For upward compatibility, the &#039;not taken&#039; attributes are profiled out.\nReasonCode is a choice of CodeableConcept or ref(Condition) in DSTU2, and limited to one reason (pick a type). In STU3 and R4, there can be multiple reason codes, and multiple reason references, simultaneously.\n\nPreference is given to using the National Library of Medicine (NLM) RxNorm terminology for medications. RxNorm is a coding standard established by the Office of the National Coordinator (ONC). However, RxNorm is restricted to FDA-approved drugs and does not include clinical trial drugs. MedicationStatement allows for the inclusion of other coding systems like the NCI Thesaurus (NCIT) to represent clinical trial oncology drugs.</p>\n  <p><b>Mapping Summary</b></p>\n  <p><pre>shr.core.MedicationStatement maps to http://fhir.org/guides/argonaut/StructureDefinition/argo-medicationstatement:\n  Language maps to language\n  Narrative maps to text\n  ImplicitRules maps to implicitRules\n  Metadata.VersionId maps to meta.versionId\n  Metadata.SourceSystem maps to meta.extension\n  Metadata.Profile maps to meta.profile\n  Metadata.LastUpdated maps to meta.lastUpdated\n  Metadata.SecurityLabel maps to meta.security\n  Metadata.Tag maps to meta.tag\n  Identifier maps to identifier\n  SubjectOfRecord maps to patient\n  MedicationInformationSource maps to informationSource\n  MedicationBasedOn maps to extension\n  MedicationStatementPartOf maps to extension\n  StatementDateTime maps to dateAsserted\n  Status maps to status\n  StatusReason maps to extension\n  constrain wasNotTaken to 0..0\n  constrain reasonNotTaken to 0..0\n  ReasonCode maps to reasonForUse[x]\n  MedicationReasonReference maps to reasonForUse[x]\n  OccurrenceTimeOrPeriod maps to effective[x]\n  Annotation maps to extension  // no mapping to note (string)\n  SupportingInformation maps to supportingInformation\n  MedicationCodeOrReference maps to medication[x]\n  constrain dosage to 0..1\n  Dosage.InstructionText maps to dosage.text\n  Dosage.Timing maps to dosage.timing\n  Dosage.AsNeeded maps to dosage.asNeeded[x]\n  Dosage.AdministrationSite maps to dosage.site[x]\n  Dosage.RouteIntoBody maps to dosage.route\n  Dosage.Method maps to dosage.method\n  Dosage.DoseAndRate.DoseAmount maps to dosage.quantity[x]\n  Dosage.DoseAndRate.DoseRate maps to dosage.rate[x]\n  Dosage.DoseAndRate.Type maps to dosage.extension\n  Dosage.MaxDosePerPeriod maps to dosage.maxDosePerPeriod\n  Dosage.DoseSequenceNumber maps to dosage.extension\n  Dosage.InstructionCode maps to dosage.extension\n  Dosage.PatientInstruction maps to dosage.extension\n  Dosage.MaxDosePerAdministration maps to dosage.extension\n  Dosage.MaxDosePerLifetime maps to dosage.extension\n</pre></p>\n</div>"
+  },
+  "url": "http://hl7.org/fhir/us/shr/StructureDefinition/shr-core-MedicationStatement",
+  "name": "MedicationStatement",
+  "status": "draft",
+  "publisher": "The MITRE Corporation",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "other",
+          "value": "http://standardhealthrecord.org"
+        }
+      ]
+    }
+  ],
+  "date": "2019-05-28",
+  "fhirVersion": "1.0.2",
+  "mapping": [
+    {
+      "identity": "rim",
+      "uri": "http://hl7.org/v3",
+      "name": "RIM"
+    },
+    {
+      "identity": "w5",
+      "uri": "http://hl7.org/fhir/w5",
+      "name": "W5 Mapping"
+    },
+    {
+      "identity": "v2",
+      "uri": "http://hl7.org/v2",
+      "name": "HL7 v2"
+    }
+  ],
+  "kind": "resource",
+  "constrainedType": "MedicationStatement",
+  "abstract": false,
+  "base": "http://fhir.org/guides/argonaut/StructureDefinition/argo-medicationstatement",
+  "snapshot": {
+    "element": [
+      {
+        "id": "MedicationStatement-MedicationStatement",
+        "path": "MedicationStatement",
+        "short": "shr-core-MedicationStatement",
+        "definition": "A record of the use of a medication. The use may be reported by the patient or clinician and adminstration does not have to be directly observed.\n\nFHIR Notes:\n\nAlthough FHIR supports the asserter (information source) and date asserted, it does not have a place for the author (who created and is responsible for the statement) and recorder (who entered the statement). Extensions are provided.\n\nThe treatment of 'not taken' has changed from DSTU2 and STU3 to R4. In R4, status and statusReason are used to indicate medications not taken. For upward compatibility, the 'not taken' attributes are profiled out.\nReasonCode is a choice of CodeableConcept or ref(Condition) in DSTU2, and limited to one reason (pick a type). In STU3 and R4, there can be multiple reason codes, and multiple reason references, simultaneously.\n\nPreference is given to using the National Library of Medicine (NLM) RxNorm terminology for medications. RxNorm is a coding standard established by the Office of the National Coordinator (ONC). However, RxNorm is restricted to FDA-approved drugs and does not include clinical trial drugs. MedicationStatement allows for the inclusion of other coding systems like the NCI Thesaurus (NCIT) to represent clinical trial oncology drugs.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "MedicationStatement",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "MedicationStatement"
+          }
+        ],
+        "maxLength": 0,
+        "constraint": [
+          {
+            "key": "mst-2",
+            "severity": "error",
+            "human": "Reason for use is only permitted if wasNotTaken is false",
+            "xpath": "not(exists(*[starts-with(local-name(.), 'reasonForUse')]) and f:wasNotTaken/@value=true())"
+          },
+          {
+            "key": "mst-1",
+            "severity": "error",
+            "human": "Reason not taken is only permitted if wasNotTaken is true",
+            "xpath": "not(exists(f:reasonNotTaken) and f:wasNotTaken/@value=false())"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "SubstanceAdministration"
+          },
+          {
+            "identity": "w5",
+            "map": "clinical.medication"
+          }
+        ]
+      },
+      {
+        "id": "MedicationStatement-MedicationStatement.id",
+        "path": "MedicationStatement.id",
+        "short": "Logical id of this artifact",
+        "definition": "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.",
+        "comments": "The only time that a resource does not have an id is when it is being submitted to the server using a create operation. Bundles always have an id, though it is usually a generated UUID.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "MedicationStatement.id",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "id"
+          }
+        ],
+        "maxLength": 0,
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": true
+      },
+      {
+        "id": "MedicationStatement-MedicationStatement.meta",
+        "path": "MedicationStatement.meta",
+        "short": "Metadata about the resource",
+        "definition": "The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content may not always be associated with version changes to the resource.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "MedicationStatement.meta",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Meta"
+          }
+        ],
+        "maxLength": 0,
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": true
+      },
+      {
+        "path": "MedicationStatement.meta.id",
+        "representation": [
+          "xmlAttr"
+        ],
+        "short": "xml:id (or equivalent in JSON)",
+        "definition": "unique id for the element within a resource (for internal references).",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "id"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ],
+        "id": "MedicationStatement-MedicationStatement.meta.id"
+      },
+      {
+        "path": "MedicationStatement.meta.extension",
+        "short": "Additional Content defined by implementations",
+        "definition": "May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+        "comments": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "alias": [
+          "extensions",
+          "user content"
+        ],
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ],
+        "id": "MedicationStatement-MedicationStatement.meta.extension",
+        "slicing": {
+          "id": "5",
+          "discriminator": [
+            "url"
+          ],
+          "ordered": false,
+          "rules": "open"
+        }
+      },
+      {
+        "path": "MedicationStatement.meta.extension",
+        "definition": "FHIR: This provides a minimal amount of Provenance information that can be used to track or differentiate the source of information in the resource. The source may identify another FHIR server, document, message, database, etc.\nFHIM: Identifies the computer system that created the medical record. This optional field may also be used to indicate that the medical record was originally created by a different organization from the one that is currently storing or utilizing the record in that the assigning authority of the Id could be set to that originating organization. This property is optional, as some systems will assume that all records that it contains originated in that system, however it is anticipated that it will become increasingly commonplace for records from multiple systems and organizations will be comingled in order to provide a complete picture of the patient's health record.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/us/shr/StructureDefinition/shr-core-SourceSystem-extension"
+            ]
+          }
+        ],
+        "id": "MedicationStatement-MedicationStatement.meta.ext",
+        "name": "sourcesystem",
+        "base": {
+          "path": "MedicationStatement.meta.extension",
+          "min": 0,
+          "max": "*"
+        }
+      },
+      {
+        "path": "MedicationStatement.meta.versionId",
+        "short": "Version specific identifier",
+        "definition": "The version specific identifier, as it appears in the version portion of the URL. This values changes when the resource is created, updated, or deleted.",
+        "comments": "The server assigns this value, and ignores what the client specifies, except in the case that the server is imposing version integrity on updates/deletes.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "id"
+          }
+        ],
+        "isSummary": true,
+        "id": "MedicationStatement-MedicationStatement.meta.versionId"
+      },
+      {
+        "path": "MedicationStatement.meta.lastUpdated",
+        "short": "When the resource version last changed",
+        "definition": "When the resource last changed - e.g. when the version changed.",
+        "comments": "This value is always populated except when the resource is first being created. The server / resource manager sets this value; what a client provides is irrelevant.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "instant"
+          }
+        ],
+        "isSummary": true,
+        "id": "MedicationStatement-MedicationStatement.meta.lastUpdated"
+      },
+      {
+        "path": "MedicationStatement.meta.profile",
+        "short": "Profiles this resource claims to conform to",
+        "definition": "A list of profiles [[[StructureDefinition]]]s that this resource claims to conform to. The URL is a reference to [[[StructureDefinition.url]]].",
+        "comments": "It is up to the server and/or other infrastructure of policy to determine whether/how these claims are verified and/or updated over time.  The list of profile URLs is a set.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "uri"
+          }
+        ],
+        "isSummary": true,
+        "id": "MedicationStatement-MedicationStatement.meta.profile"
+      },
+      {
+        "path": "MedicationStatement.meta.security",
+        "short": "Security Labels applied to this resource",
+        "definition": "Security labels applied to this resource. These tags connect specific resources to the overall security policy and infrastructure.",
+        "comments": "The security labels can be updated without changing the stated version of the resource  The list of security labels is a set. Uniqueness is based the system/code, and version and display are ignored.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "isSummary": true,
+        "binding": {
+          "strength": "extensible",
+          "description": "Security Labels from the Healthcare Privacy and Security Classification System.",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/security-labels"
+          }
+        },
+        "id": "MedicationStatement-MedicationStatement.meta.security"
+      },
+      {
+        "path": "MedicationStatement.meta.tag",
+        "short": "Tags applied to this resource",
+        "definition": "Tags applied to this resource. Tags are intended to be used to identify and relate resources to process and workflow, and applications are not required to consider the tags when interpreting the meaning of a resource.",
+        "comments": "The tags can be updated without changing the stated version of the resource.  The list of tags is a set. Uniqueness is based the system/code, and version and display are ignored.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "isSummary": true,
+        "binding": {
+          "strength": "example",
+          "description": "Codes that represent various types of tags, commonly workflow-related; e.g. \"Needs review by Dr. Jones\""
+        },
+        "id": "MedicationStatement-MedicationStatement.meta.tag"
+      },
+      {
+        "id": "MedicationStatement-MedicationStatement.implicitRules",
+        "path": "MedicationStatement.implicitRules",
+        "short": "A set of rules under which this content was created",
+        "definition": "A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content.",
+        "comments": "Asserting this rule set restricts the content to be only understood by a limited set of trading partners. This inherently limits the usefulness of the data in the long term. However, the existing health eco-system is highly fractured, and not yet ready to define, collect, and exchange data in a generally computable sense. Wherever possible, implementers and/or specification writers should avoid using this element as much as possible.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "MedicationStatement.implicitRules",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "uri"
+          }
+        ],
+        "maxLength": 0,
+        "mustSupport": false,
+        "isModifier": true,
+        "isSummary": true
+      },
+      {
+        "id": "MedicationStatement-MedicationStatement.language",
+        "path": "MedicationStatement.language",
+        "short": "Language of the resource content",
+        "definition": "The base language in which the resource is written.",
+        "comments": "Language is provided to support indexing and accessibility (typically, services such as text to speech use the language tag). The html language tag in the narrative applies  to the narrative. The language tag on the resource may be used to specify the language of other presentations generated from the data in the resource  Not all the content has to be in the base language. The Resource.language should not be assumed to apply to the narrative automatically. If a language is specified, it should it also be specified on the div element in the html (see rules in HTML5 for information about the relationship between xml:lang and the html lang attribute).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "MedicationStatement.language",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "maxLength": 0,
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "required",
+          "description": "A human language.",
+          "valueSetUri": "http://tools.ietf.org/html/bcp47"
+        }
+      },
+      {
+        "id": "MedicationStatement-MedicationStatement.text",
+        "path": "MedicationStatement.text",
+        "short": "Text summary of the resource, for human interpretation",
+        "definition": "A human-readable narrative that contains a summary of the resource, and may be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.",
+        "comments": "Contained resources do not have narrative. Resources that are not contained SHOULD have a narrative.",
+        "alias": [
+          "narrative",
+          "html",
+          "xhtml",
+          "display"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "MedicationStatement.text",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Narrative"
+          }
+        ],
+        "maxLength": 0,
+        "condition": [
+          "dom-1"
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "Act.text?"
+          }
+        ]
+      },
+      {
+        "id": "MedicationStatement-MedicationStatement.contained",
+        "path": "MedicationStatement.contained",
+        "short": "Contained, inline Resources",
+        "definition": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope.",
+        "comments": "This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again.",
+        "alias": [
+          "inline resources",
+          "anonymous resources",
+          "contained resources"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "MedicationStatement.contained",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Resource"
+          }
+        ],
+        "maxLength": 0,
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "N/A"
+          }
+        ]
+      },
+      {
+        "id": "MedicationStatement-MedicationStatement.extension",
+        "path": "MedicationStatement.extension",
+        "short": "Additional Content defined by implementations",
+        "definition": "May be used to represent additional information that is not part of the basic definition of the resource. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+        "comments": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "alias": [
+          "extensions",
+          "user content"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "MedicationStatement.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ],
+        "maxLength": 0,
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "N/A"
+          }
+        ],
+        "slicing": {
+          "id": "3",
+          "discriminator": [
+            "url"
+          ],
+          "ordered": false,
+          "rules": "open"
+        }
+      },
+      {
+        "id": "MedicationStatement-MedicationStatement.ext1",
+        "path": "MedicationStatement.extension",
+        "name": "medicationbasedon",
+        "definition": "MedicationBasedOn",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "MedicationStatement.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/us/shr/StructureDefinition/shr-core-MedicationBasedOn-extension"
+            ]
+          }
+        ],
+        "maxLength": 0,
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "MedicationStatement-MedicationStatement.ext2",
+        "path": "MedicationStatement.extension",
+        "name": "medicationstatementpartof",
+        "definition": "A larger event of which this particular event is a component or step.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "MedicationStatement.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/us/shr/StructureDefinition/shr-core-MedicationStatementPartOf-extension"
+            ]
+          }
+        ],
+        "maxLength": 0,
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "MedicationStatement-MedicationStatement.extension-statusreason",
+        "path": "MedicationStatement.extension",
+        "name": "statusreason",
+        "definition": "Captures the reason for the current state of the procedure.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "MedicationStatement.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/us/shr/StructureDefinition/shr-core-StatusReason-extension"
+            ]
+          }
+        ],
+        "maxLength": 0,
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "MedicationStatement-MedicationStatement.extension-annotation",
+        "path": "MedicationStatement.extension",
+        "name": "annotation",
+        "definition": "An added or follow-up note, often after the fact, that contains metadata about who made the statement and when.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "MedicationStatement.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/us/shr/StructureDefinition/shr-core-Annotation-extension"
+            ]
+          }
+        ],
+        "maxLength": 0,
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "MedicationStatement-MedicationStatement.extension-carecontext",
+        "path": "MedicationStatement.extension",
+        "name": "carecontext",
+        "definition": "The encounter or episode of care",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "MedicationStatement.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/us/shr/StructureDefinition/shr-core-CareContext-extension"
+            ]
+          }
+        ],
+        "maxLength": 0,
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "MedicationStatement-MedicationStatement.extension-category",
+        "path": "MedicationStatement.extension",
+        "name": "category",
+        "definition": "The general type or class of this item.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "MedicationStatement.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/us/shr/StructureDefinition/shr-core-Category-extension"
+            ]
+          }
+        ],
+        "maxLength": 0,
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "MedicationStatement-MedicationStatement.extension-category.id",
+        "path": "MedicationStatement.extension.id",
+        "representation": [
+          "xmlAttr"
+        ],
+        "short": "xml:id (or equivalent in JSON)",
+        "definition": "unique id for the element within a resource (for internal references).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Element.id",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "id"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "id": "MedicationStatement-MedicationStatement.extension-category.ext3",
+        "path": "MedicationStatement.extension.extension",
+        "short": "Additional Content defined by implementations",
+        "definition": "May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+        "comments": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "alias": [
+          "extensions",
+          "user content"
+        ],
+        "min": 0,
+        "max": "0",
+        "base": {
+          "path": "Element.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "id": "MedicationStatement-MedicationStatement.extension-category.url",
+        "path": "MedicationStatement.extension.url",
+        "representation": [
+          "xmlAttr"
+        ],
+        "short": "identifies the meaning of the extension",
+        "definition": "Source of the definition for the extension code - a logical name or a URL.",
+        "comments": "The definition may point directly to a computable or human-readable definition of the extensibility codes, or it may be a logical URI as declared in some other specification. The definition should be version specific.  This will ideally be the URI for the Resource Profile defining the extension, with the code for the extension after a #.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Extension.url",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "uri"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "N/A"
+          }
+        ],
+        "fixedUri": "http://hl7.org/fhir/us/shr/StructureDefinition/shr-core-Category-extension"
+      },
+      {
+        "id": "MedicationStatement-MedicationStatement.extension-category.val",
+        "path": "MedicationStatement.extension.valueCodeableConcept",
+        "short": "Value of extension",
+        "definition": "Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Extension.value[x]",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "N/A"
+          }
+        ],
+        "binding": {
+          "strength": "preferred",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/medication-statement-category"
+          }
+        }
+      },
+      {
+        "id": "MedicationStatement-MedicationStatement.ext4",
+        "path": "MedicationStatement.extension",
+        "name": "treatmentintent",
+        "definition": "The purpose of a treatment.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "MedicationStatement.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/us/shr/StructureDefinition/shr-core-TreatmentIntent-extension"
+            ]
+          }
+        ],
+        "maxLength": 0,
+        "mustSupport": true,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "MedicationStatement-MedicationStatement.ext5",
+        "path": "MedicationStatement.extension",
+        "name": "terminationreason",
+        "definition": "A code explaining unplanned or premature termination of a plan of treatment, course of medication, or research study.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "MedicationStatement.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/us/shr/StructureDefinition/shr-core-TerminationReason-extension"
+            ]
+          }
+        ],
+        "maxLength": 0,
+        "mustSupport": true,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "MedicationStatement-MedicationStatement.ext5.id",
+        "path": "MedicationStatement.extension.id",
+        "representation": [
+          "xmlAttr"
+        ],
+        "short": "xml:id (or equivalent in JSON)",
+        "definition": "unique id for the element within a resource (for internal references).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Element.id",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "id"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "id": "MedicationStatement-MedicationStatement.ext5.ext3",
+        "path": "MedicationStatement.extension.extension",
+        "short": "Additional Content defined by implementations",
+        "definition": "May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+        "comments": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "alias": [
+          "extensions",
+          "user content"
+        ],
+        "min": 0,
+        "max": "0",
+        "base": {
+          "path": "Element.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "id": "MedicationStatement-MedicationStatement.ext5.url",
+        "path": "MedicationStatement.extension.url",
+        "representation": [
+          "xmlAttr"
+        ],
+        "short": "identifies the meaning of the extension",
+        "definition": "Source of the definition for the extension code - a logical name or a URL.",
+        "comments": "The definition may point directly to a computable or human-readable definition of the extensibility codes, or it may be a logical URI as declared in some other specification. The definition should be version specific.  This will ideally be the URI for the Resource Profile defining the extension, with the code for the extension after a #.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Extension.url",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "uri"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "N/A"
+          }
+        ],
+        "fixedUri": "http://hl7.org/fhir/us/shr/StructureDefinition/shr-core-TerminationReason-extension"
+      },
+      {
+        "id": "MedicationStatement-MedicationStatement.ext5.val",
+        "path": "MedicationStatement.extension.valueCodeableConcept",
+        "short": "Value of extension",
+        "definition": "Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Extension.value[x]",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "N/A"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/us/mcode/shr/core/vs/TreatmentTerminationReasonVS"
+          }
+        }
+      },
+      {
+        "id": "MedicationStatement-MedicationStatement.modifierExtension",
+        "path": "MedicationStatement.modifierExtension",
+        "short": "Extensions that cannot be ignored",
+        "definition": "May be used to represent additional information that is not part of the basic definition of the resource, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.",
+        "comments": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "alias": [
+          "extensions",
+          "user content"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "MedicationStatement.modifierExtension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ],
+        "maxLength": 0,
+        "mustSupport": false,
+        "isModifier": true,
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "N/A"
+          }
+        ]
+      },
+      {
+        "id": "MedicationStatement-MedicationStatement.identifier",
+        "path": "MedicationStatement.identifier",
+        "short": "External identifier",
+        "definition": "External identifier - FHIR will generate its own internal identifiers (probably URLs) which do not need to be explicitly managed by the resource.  The identifier here is one that would be used by another non-FHIR system - for example an automated medication pump would provide a record each time it operated; an administration while the patient was off the ward might be made with a different system and entered after the event.  Particularly important if these records have to be updated.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "MedicationStatement.identifier",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Identifier"
+          }
+        ],
+        "maxLength": 0,
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "SubstanceAdministration.id"
+          },
+          {
+            "identity": "w5",
+            "map": "id"
+          }
+        ]
+      },
+      {
+        "id": "MedicationStatement-MedicationStatement.patient",
+        "path": "MedicationStatement.patient",
+        "short": "Who is/was taking  the medication",
+        "definition": "The person or animal who is/was taking the medication.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "MedicationStatement.patient",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "profile": [
+              "http://hl7.org/fhir/us/shr/StructureDefinition/shr-core-Patient"
+            ]
+          }
+        ],
+        "maxLength": 0,
+        "mustSupport": true,
+        "isModifier": false,
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "PID-3-Patient ID List"
+          },
+          {
+            "identity": "rim",
+            "map": "SubstanceAdministration->subject->Patient"
+          },
+          {
+            "identity": "w5",
+            "map": "who.focus"
+          }
+        ]
+      },
+      {
+        "id": "MedicationStatement-MedicationStatement.informationSource",
+        "path": "MedicationStatement.informationSource",
+        "definition": "The person who provided the information about the taking of this medication.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "MedicationStatement.informationSource",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "profile": [
+              "http://hl7.org/fhir/us/shr/StructureDefinition/shr-core-Patient"
+            ]
+          },
+          {
+            "code": "Reference",
+            "profile": [
+              "http://hl7.org/fhir/us/shr/StructureDefinition/shr-core-Practitioner"
+            ]
+          },
+          {
+            "code": "Reference",
+            "profile": [
+              "http://hl7.org/fhir/us/shr/StructureDefinition/shr-core-RelatedPerson"
+            ]
+          }
+        ],
+        "maxLength": 0,
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "w5",
+            "map": "who.source"
+          }
+        ]
+      },
+      {
+        "id": "MedicationStatement-MedicationStatement.dateAsserted",
+        "path": "MedicationStatement.dateAsserted",
+        "short": "When the statement was asserted?",
+        "definition": "The date when the medication statement was asserted by the information source.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "MedicationStatement.dateAsserted",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "maxLength": 0,
+        "mustSupport": true,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "MedicationStatement-MedicationStatement.status",
+        "path": "MedicationStatement.status",
+        "short": "active | completed | entered-in-error | intended",
+        "definition": "A code representing the patient or other source's judgment about the state of the medication used that this statement is about.  Generally this will be active or completed.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "MedicationStatement.status",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "maxLength": 0,
+        "mustSupport": true,
+        "isModifier": true,
+        "isSummary": false,
+        "binding": {
+          "strength": "required",
+          "description": "A code specifying the state of the prescribing event. Describes the lifecycle of the prescription.",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/medication-statement-status"
+          }
+        }
+      },
+      {
+        "id": "MedicationStatement-MedicationStatement.wasNotTaken",
+        "path": "MedicationStatement.wasNotTaken",
+        "short": "True if medication is/was not being taken",
+        "definition": "Set this to true if the record is saying that the medication was NOT taken.",
+        "min": 0,
+        "max": "0",
+        "base": {
+          "path": "MedicationStatement.wasNotTaken",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "boolean"
+          }
+        ],
+        "meaningWhenMissing": "If this is missing, then the medication was taken",
+        "maxLength": 0,
+        "mustSupport": false,
+        "isModifier": true,
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "SubstanceAdministration.actionNegationInd"
+          },
+          {
+            "identity": "w5",
+            "map": "status"
+          }
+        ]
+      },
+      {
+        "id": "MedicationStatement-MedicationStatement.reasonNotTaken",
+        "path": "MedicationStatement.reasonNotTaken",
+        "short": "True if asserting medication was not given",
+        "definition": "A code indicating why the medication was not taken.",
+        "min": 0,
+        "max": "0",
+        "base": {
+          "path": "MedicationStatement.reasonNotTaken",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "maxLength": 0,
+        "condition": [
+          "mst-1"
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": true,
+        "binding": {
+          "strength": "example",
+          "description": "A set of codes indicating the reason why the MedicationAdministration is negated.",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/reason-medication-not-given-codes"
+          }
+        },
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "SubstanceAdministration->Reason->Observation->Value"
+          }
+        ]
+      },
+      {
+        "id": "MedicationStatement-MedicationStatement.reasonForUsex",
+        "path": "MedicationStatement.reasonForUse[x]",
+        "definition": "A reason for why the medication is being/was taken.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "MedicationStatement.reasonForUse[x]",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          },
+          {
+            "code": "Reference",
+            "profile": [
+              "http://hl7.org/fhir/us/shr/StructureDefinition/shr-core-Condition"
+            ]
+          }
+        ],
+        "maxLength": 0,
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": true,
+        "binding": {
+          "strength": "example",
+          "description": "Codes identifying why the medication is being taken.",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/condition-code"
+          }
+        }
+      },
+      {
+        "id": "MedicationStatement-MedicationStatement.effectivex",
+        "path": "MedicationStatement.effective[x]",
+        "short": "Over what period was medication consumed?",
+        "definition": "The interval of time during which it is being asserted that the patient was taking the medication (or was not taking, when the wasNotGiven element is true).",
+        "comments": "If the medication is still being taken at the time the statement is recorded, the \"end\" date will be omitted.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "MedicationStatement.effective[x]",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "dateTime"
+          },
+          {
+            "code": "Period"
+          }
+        ],
+        "maxLength": 0,
+        "mustSupport": true,
+        "isModifier": false,
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "SubstanceAdministration.effectiveTime"
+          },
+          {
+            "identity": "w5",
+            "map": "when.done"
+          }
+        ]
+      },
+      {
+        "id": "MedicationStatement-MedicationStatement.note",
+        "path": "MedicationStatement.note",
+        "short": "Further information about the statement",
+        "definition": "Provides extra information about the medication statement that is not conveyed by the other attributes.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "MedicationStatement.note",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "maxLength": 0,
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": true
+      },
+      {
+        "id": "MedicationStatement-MedicationStatement.supportingInformation",
+        "path": "MedicationStatement.supportingInformation",
+        "short": "Additional supporting information",
+        "definition": "Allows linking the MedicationStatement to the underlying MedicationOrder, or to other information that supports the MedicationStatement.",
+        "comments": "Likely references would be to MedicationOrder, MedicationDispense, Claim, Observation or QuestionnaireAnswers.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "MedicationStatement.supportingInformation",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "profile": [
+              "http://hl7.org/fhir/us/shr/StructureDefinition/shr-core-DomainResource"
+            ]
+          }
+        ],
+        "maxLength": 0,
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": true
+      },
+      {
+        "id": "MedicationStatement-MedicationStatement.medicationx",
+        "path": "MedicationStatement.medication[x]",
+        "short": "What medication was taken",
+        "definition": "Identifies the medication being administered. This is either a link to a resource representing the details of the medication or a simple attribute carrying a code that identifies the medication from a known list of medications.",
+        "comments": "If only a code is specified, then it needs to be a code for a specific product.  If more information is required, then the use of the medication resource is recommended.  Note: do not use Medication.name to describe the medication this statement concerns. When the only available information is a text description of the medication, Medication.code.text should be used.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "MedicationStatement.medication[x]",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          },
+          {
+            "code": "Reference",
+            "profile": [
+              "http://hl7.org/fhir/us/shr/StructureDefinition/shr-core-Medication"
+            ]
+          }
+        ],
+        "maxLength": 0,
+        "mustSupport": true,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "extensible",
+          "description": "Prescribable medications",
+          "valueSetReference": {
+            "reference": "http://fhir.org/guides/argonaut/ValueSet/medication-codes"
+          }
+        },
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "SubstanceAdministration>Component>SubstanceAdministrationRequest.consumable"
+          },
+          {
+            "identity": "w5",
+            "map": "what"
+          }
+        ],
+        "slicing": {
+          "id": "4",
+          "discriminator": [
+            "@type"
+          ],
+          "ordered": false,
+          "rules": "open"
+        }
+      },
+      {
+        "id": "MedicationStatement-MedicationStatement.med",
+        "path": "MedicationStatement.medicationCodeableConcept",
+        "short": "What medication was taken",
+        "definition": "Identifies the medication being administered. This is either a link to a resource representing the details of the medication or a simple attribute carrying a code that identifies the medication from a known list of medications.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "MedicationStatement.medication[x]",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "isSummary": false,
+        "binding": {
+          "strength": "extensible",
+          "valueSetReference": {
+            "reference": "http://h7.org/fhir/us/core/ValueSet/us-core-medication-codes"
+          }
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "MedicationStatement-MedicationStatement.dosage",
+        "path": "MedicationStatement.dosage",
+        "short": "Details of how medication was taken",
+        "definition": "Indicates how the medication is/was used by the patient.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "MedicationStatement.dosage",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "maxLength": 0,
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "SubstanceAdministration>Component>SubstanceAdministrationRequest"
+          }
+        ]
+      },
+      {
+        "id": "MedicationStatement-MedicationStatement.dosage.id",
+        "path": "MedicationStatement.dosage.id",
+        "representation": [
+          "xmlAttr"
+        ],
+        "short": "xml:id (or equivalent in JSON)",
+        "definition": "unique id for the element within a resource (for internal references).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "MedicationStatement.dosage.id",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "id"
+          }
+        ],
+        "maxLength": 0,
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "id": "MedicationStatement-MedicationStatement.dosage.extension",
+        "path": "MedicationStatement.dosage.extension",
+        "short": "Additional Content defined by implementations",
+        "definition": "May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+        "comments": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "alias": [
+          "extensions",
+          "user content"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "MedicationStatement.dosage.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ],
+        "maxLength": 0,
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ],
+        "slicing": {
+          "id": "1",
+          "discriminator": [
+            "url"
+          ],
+          "ordered": false,
+          "rules": "open"
+        }
+      },
+      {
+        "id": "MedicationStatement-MedicationStatement.dosage.extension-type",
+        "path": "MedicationStatement.dosage.extension",
+        "name": "type",
+        "definition": "A code describing the item at a greater level of detail.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "MedicationStatement.dosage.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/us/shr/StructureDefinition/shr-core-Type-extension"
+            ]
+          }
+        ],
+        "maxLength": 0,
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "MedicationStatement-MedicationStatement.dosage.ext6.ext3",
+        "path": "MedicationStatement.dosage.extension.extension",
+        "short": "Additional Content defined by implementations",
+        "definition": "May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+        "comments": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "alias": [
+          "extensions",
+          "user content"
+        ],
+        "min": 0,
+        "max": "0",
+        "base": {
+          "path": "Element.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "id": "MedicationStatement-MedicationStatement.dosage.ext6.url",
+        "path": "MedicationStatement.dosage.extension.url",
+        "representation": [
+          "xmlAttr"
+        ],
+        "short": "identifies the meaning of the extension",
+        "definition": "Source of the definition for the extension code - a logical name or a URL.",
+        "comments": "The definition may point directly to a computable or human-readable definition of the extensibility codes, or it may be a logical URI as declared in some other specification. The definition should be version specific.  This will ideally be the URI for the Resource Profile defining the extension, with the code for the extension after a #.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Extension.url",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "uri"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "N/A"
+          }
+        ],
+        "fixedUri": "http://hl7.org/fhir/us/shr/StructureDefinition/shr-core-Type-extension"
+      },
+      {
+        "id": "MedicationStatement-MedicationStatement.dosage.ext6.val",
+        "path": "MedicationStatement.dosage.extension.valueCodeableConcept",
+        "short": "Value of extension",
+        "definition": "Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Extension.value[x]",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "N/A"
+          }
+        ],
+        "binding": {
+          "strength": "example",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/dose-rate-type"
+          }
+        }
+      },
+      {
+        "id": "MedicationStatement-MedicationStatement.dosage.ext7",
+        "path": "MedicationStatement.dosage.extension",
+        "name": "dosesequencenumber",
+        "definition": "Dose number within series.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "MedicationStatement.dosage.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/us/shr/StructureDefinition/shr-core-DoseSequenceNumber-extension"
+            ]
+          }
+        ],
+        "maxLength": 0,
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "MedicationStatement-MedicationStatement.dosage.ext8",
+        "path": "MedicationStatement.dosage.extension",
+        "name": "instructioncode",
+        "definition": "Coded instructions, e.g., 'with meals'.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "MedicationStatement.dosage.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/us/shr/StructureDefinition/shr-core-InstructionCode-extension"
+            ]
+          }
+        ],
+        "maxLength": 0,
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "MedicationStatement-MedicationStatement.dosage.ext8.id",
+        "path": "MedicationStatement.dosage.extension.id",
+        "representation": [
+          "xmlAttr"
+        ],
+        "short": "xml:id (or equivalent in JSON)",
+        "definition": "unique id for the element within a resource (for internal references).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Element.id",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "id"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "id": "MedicationStatement-MedicationStatement.dosage.ext8.ext3",
+        "path": "MedicationStatement.dosage.extension.extension",
+        "short": "Additional Content defined by implementations",
+        "definition": "May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+        "comments": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "alias": [
+          "extensions",
+          "user content"
+        ],
+        "min": 0,
+        "max": "0",
+        "base": {
+          "path": "Element.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "id": "MedicationStatement-MedicationStatement.dosage.ext8.url",
+        "path": "MedicationStatement.dosage.extension.url",
+        "representation": [
+          "xmlAttr"
+        ],
+        "short": "identifies the meaning of the extension",
+        "definition": "Source of the definition for the extension code - a logical name or a URL.",
+        "comments": "The definition may point directly to a computable or human-readable definition of the extensibility codes, or it may be a logical URI as declared in some other specification. The definition should be version specific.  This will ideally be the URI for the Resource Profile defining the extension, with the code for the extension after a #.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Extension.url",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "uri"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "N/A"
+          }
+        ],
+        "fixedUri": "http://hl7.org/fhir/us/shr/StructureDefinition/shr-core-InstructionCode-extension"
+      },
+      {
+        "id": "MedicationStatement-MedicationStatement.dosage.ext8.val",
+        "path": "MedicationStatement.dosage.extension.valueCodeableConcept",
+        "short": "Value of extension",
+        "definition": "Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Extension.value[x]",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "N/A"
+          }
+        ],
+        "binding": {
+          "strength": "example",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/additional-instruction-codes"
+          }
+        }
+      },
+      {
+        "id": "MedicationStatement-MedicationStatement.dosage.ext9",
+        "path": "MedicationStatement.dosage.extension",
+        "name": "patientinstruction",
+        "definition": "Patient or consumer-oriented instructions.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "MedicationStatement.dosage.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/us/shr/StructureDefinition/shr-core-PatientInstruction-extension"
+            ]
+          }
+        ],
+        "maxLength": 0,
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "MedicationStatement-MedicationStatement.dosage.ext10",
+        "path": "MedicationStatement.dosage.extension",
+        "name": "maxdoseperadministration",
+        "definition": "Upper limit on medication per administration.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "MedicationStatement.dosage.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/us/shr/StructureDefinition/shr-core-MaxDosePerAdministration-extension"
+            ]
+          }
+        ],
+        "maxLength": 0,
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "MedicationStatement-MedicationStatement.dosage.ext11",
+        "path": "MedicationStatement.dosage.extension",
+        "name": "maxdoseperlifetime",
+        "definition": "Upper limit on medication per lifetime of the patient.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "MedicationStatement.dosage.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/us/shr/StructureDefinition/shr-core-MaxDosePerLifetime-extension"
+            ]
+          }
+        ],
+        "maxLength": 0,
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "MedicationStatement-MedicationStatement.dosage.modifierExtension",
+        "path": "MedicationStatement.dosage.modifierExtension",
+        "short": "Extensions that cannot be ignored",
+        "definition": "May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.",
+        "comments": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "alias": [
+          "extensions",
+          "user content",
+          "modifiers"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "MedicationStatement.dosage.modifierExtension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ],
+        "maxLength": 0,
+        "mustSupport": false,
+        "isModifier": true,
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "N/A"
+          }
+        ]
+      },
+      {
+        "id": "MedicationStatement-MedicationStatement.dosage.text",
+        "path": "MedicationStatement.dosage.text",
+        "short": "Reported dosage information",
+        "definition": "Free text dosage information as reported about a patient's medication use. When coded dosage information is present, the free text may still be present for display to humans.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "MedicationStatement.dosage.text",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "maxLength": 0,
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": true
+      },
+      {
+        "id": "MedicationStatement-MedicationStatement.dosage.timing",
+        "path": "MedicationStatement.dosage.timing",
+        "short": "When/how often was medication taken",
+        "definition": "The timing schedule for giving the medication to the patient.  The Schedule data type allows many different expressions, for example.  \"Every  8 hours\"; \"Three times a day\"; \"1/2 an hour before breakfast for 10 days from 23-Dec 2011:\";  \"15 Oct 2013, 17 Oct 2013 and 1 Nov 2013\".",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "MedicationStatement.dosage.timing",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Timing",
+            "profile": [
+              "http://hl7.org/fhir/us/shr/StructureDefinition/shr-core-Timing"
+            ]
+          }
+        ],
+        "maxLength": 0,
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": ".effectiveTime"
+          }
+        ]
+      },
+      {
+        "id": "MedicationStatement-MedicationStatement.dosage.asNeededx",
+        "path": "MedicationStatement.dosage.asNeeded[x]",
+        "short": "Take \"as needed\" (for x)",
+        "definition": "Indicates whether the Medication is only taken when needed within a specific dosing schedule (Boolean option), or it indicates the precondition for taking the Medication (CodeableConcept).    Specifically if 'boolean' datatype is selected, then the following logic applies:  If set to True, this indicates that the medication is only taken when needed, within the specified schedule.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "MedicationStatement.dosage.asNeeded[x]",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "boolean"
+          },
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "maxLength": 0,
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": true,
+        "binding": {
+          "strength": "example",
+          "description": "A coded concept identifying the precondition that should be met or evaluated prior to consuming or administering a medication dose.  For example \"pain\", \"30 minutes prior to sexual intercourse\", \"on flare-up\" etc."
+        },
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "boolean: .outboundRelationship[typeCode=PRCN].negationInd (inversed - so negationInd = true means asNeeded=false  CodeableConcept: .outboundRelationship[typCode=PRCN].target[classCode=OBS, moodCode=EVN, isCriterionInd=true, code=\"Assertion\"].value"
+          }
+        ]
+      },
+      {
+        "id": "MedicationStatement-MedicationStatement.dosage.sit",
+        "path": "MedicationStatement.dosage.siteCodeableConcept",
+        "short": "Where (on body) medication is/was administered",
+        "definition": "A coded specification of or a reference to the anatomic site where the medication first enters the body.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "MedicationStatement.dosage.site[x]",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "isSummary": true,
+        "binding": {
+          "strength": "example",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/us/mcode/shr/core/vs/BodyLocationVS"
+          }
+        }
+      },
+      {
+        "id": "MedicationStatement-MedicationStatement.dosage.route",
+        "path": "MedicationStatement.dosage.route",
+        "short": "How the medication entered the body",
+        "definition": "A code specifying the route or physiological path of administration of a therapeutic agent into or onto a subject.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "MedicationStatement.dosage.route",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "maxLength": 0,
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": true,
+        "binding": {
+          "strength": "required",
+          "description": "A coded concept describing the route or physiological path of administration of a therapeutic agent into or onto the body of a subject.",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/route-codes"
+          }
+        },
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": ".routeCode"
+          }
+        ]
+      },
+      {
+        "id": "MedicationStatement-MedicationStatement.dosage.method",
+        "path": "MedicationStatement.dosage.method",
+        "short": "Technique used to administer medication",
+        "definition": "A coded value indicating the method by which the medication is intended to be or was introduced into or on the body.  This attribute will most often NOT be populated.  It is most commonly used for injections.  For example, Slow Push, Deep IV.",
+        "comments": "One of the reasons this attribute is not used often, is that the method is often pre-coordinated with the route and/or form of administration.  This means the codes used in route or form may pre-coordinate the method in the route code or the form code.  The implementation decision about what coding system to use for route or form code will determine how frequently the method code will be populated e.g. if route or form code pre-coordinate method code, then this attribute will not be populated often; if there is no pre-coordination then method code may  be used frequently.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "MedicationStatement.dosage.method",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "maxLength": 0,
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": true,
+        "binding": {
+          "strength": "preferred",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/administration-method-codes"
+          }
+        },
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": ".methodCode"
+          }
+        ]
+      },
+      {
+        "id": "MedicationStatement-MedicationStatement.dosage.quantityx",
+        "path": "MedicationStatement.dosage.quantity[x]",
+        "short": "Amount administered in one dose",
+        "definition": "The amount of therapeutic or other substance given at one administration event.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "MedicationStatement.dosage.quantity[x]",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Quantity",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/SimpleQuantity"
+            ]
+          },
+          {
+            "code": "Range"
+          }
+        ],
+        "maxLength": 0,
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": ".doseQuantity"
+          }
+        ]
+      },
+      {
+        "id": "MedicationStatement-MedicationStatement.dosage.ratex",
+        "path": "MedicationStatement.dosage.rate[x]",
+        "short": "Dose quantity per unit of time",
+        "definition": "Identifies the speed with which the medication was or will be introduced into the patient. Typically the rate for an infusion e.g. 100 ml per 1 hour or 100 ml/hr.  May also be expressed as a rate per unit of time e.g. 500 ml per 2 hours.   Currently we do not specify a default of '1' in the denominator, but this is being discussed. Other examples: 200 mcg/min or 200 mcg/1 minute; 1 liter/8 hours.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "MedicationStatement.dosage.rate[x]",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Ratio"
+          },
+          {
+            "code": "Range"
+          }
+        ],
+        "maxLength": 0,
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": ".rateQuantity"
+          }
+        ]
+      },
+      {
+        "id": "MedicationStatement-MedicationStatement.dosage.maxDosePerPeriod",
+        "path": "MedicationStatement.dosage.maxDosePerPeriod",
+        "short": "Maximum dose that was consumed per unit of time",
+        "definition": "The maximum total quantity of a therapeutic substance that may be administered to a subject over the period of time.  For example, 1000mg in 24 hours.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "MedicationStatement.dosage.maxDosePerPeriod",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Ratio"
+          }
+        ],
+        "maxLength": 0,
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": ".maxDoseQuantity"
+          }
+        ]
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "MedicationStatement-MedicationStatement",
+        "path": "MedicationStatement",
+        "short": "shr-core-MedicationStatement",
+        "definition": "A record of the use of a medication. The use may be reported by the patient or clinician and adminstration does not have to be directly observed.\n\nFHIR Notes:\n\nAlthough FHIR supports the asserter (information source) and date asserted, it does not have a place for the author (who created and is responsible for the statement) and recorder (who entered the statement). Extensions are provided.\n\nThe treatment of 'not taken' has changed from DSTU2 and STU3 to R4. In R4, status and statusReason are used to indicate medications not taken. For upward compatibility, the 'not taken' attributes are profiled out.\nReasonCode is a choice of CodeableConcept or ref(Condition) in DSTU2, and limited to one reason (pick a type). In STU3 and R4, there can be multiple reason codes, and multiple reason references, simultaneously.\n\nPreference is given to using the National Library of Medicine (NLM) RxNorm terminology for medications. RxNorm is a coding standard established by the Office of the National Coordinator (ONC). However, RxNorm is restricted to FDA-approved drugs and does not include clinical trial drugs. MedicationStatement allows for the inclusion of other coding systems like the NCI Thesaurus (NCIT) to represent clinical trial oncology drugs.",
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "MedicationStatement-MedicationStatement.meta",
+        "path": "MedicationStatement.meta"
+      },
+      {
+        "id": "MedicationStatement-MedicationStatement.meta.extension",
+        "path": "MedicationStatement.meta.extension",
+        "slicing": {
+          "id": "5",
+          "discriminator": [
+            "url"
+          ],
+          "ordered": false,
+          "rules": "open"
+        }
+      },
+      {
+        "path": "MedicationStatement.meta.extension",
+        "definition": "FHIR: This provides a minimal amount of Provenance information that can be used to track or differentiate the source of information in the resource. The source may identify another FHIR server, document, message, database, etc.\nFHIM: Identifies the computer system that created the medical record. This optional field may also be used to indicate that the medical record was originally created by a different organization from the one that is currently storing or utilizing the record in that the assigning authority of the Id could be set to that originating organization. This property is optional, as some systems will assume that all records that it contains originated in that system, however it is anticipated that it will become increasingly commonplace for records from multiple systems and organizations will be comingled in order to provide a complete picture of the patient's health record.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/us/shr/StructureDefinition/shr-core-SourceSystem-extension"
+            ]
+          }
+        ],
+        "id": "MedicationStatement-MedicationStatement.meta.ext",
+        "name": "sourcesystem",
+        "base": {
+          "path": "MedicationStatement.meta.extension",
+          "min": 0,
+          "max": "*"
+        }
+      },
+      {
+        "id": "MedicationStatement-MedicationStatement.extension",
+        "path": "MedicationStatement.extension",
+        "slicing": {
+          "id": "3",
+          "discriminator": [
+            "url"
+          ],
+          "ordered": false,
+          "rules": "open"
+        }
+      },
+      {
+        "id": "MedicationStatement-MedicationStatement.ext1",
+        "path": "MedicationStatement.extension",
+        "name": "medicationbasedon",
+        "definition": "MedicationBasedOn",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "MedicationStatement.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/us/shr/StructureDefinition/shr-core-MedicationBasedOn-extension"
+            ]
+          }
+        ],
+        "maxLength": 0,
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "MedicationStatement-MedicationStatement.ext2",
+        "path": "MedicationStatement.extension",
+        "name": "medicationstatementpartof",
+        "definition": "A larger event of which this particular event is a component or step.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "MedicationStatement.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/us/shr/StructureDefinition/shr-core-MedicationStatementPartOf-extension"
+            ]
+          }
+        ],
+        "maxLength": 0,
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "MedicationStatement-MedicationStatement.extension-statusreason",
+        "path": "MedicationStatement.extension",
+        "name": "statusreason",
+        "definition": "Captures the reason for the current state of the procedure.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "MedicationStatement.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/us/shr/StructureDefinition/shr-core-StatusReason-extension"
+            ]
+          }
+        ],
+        "maxLength": 0,
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "MedicationStatement-MedicationStatement.extension-annotation",
+        "path": "MedicationStatement.extension",
+        "name": "annotation",
+        "definition": "An added or follow-up note, often after the fact, that contains metadata about who made the statement and when.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "MedicationStatement.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/us/shr/StructureDefinition/shr-core-Annotation-extension"
+            ]
+          }
+        ],
+        "maxLength": 0,
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "MedicationStatement-MedicationStatement.extension-carecontext",
+        "path": "MedicationStatement.extension",
+        "name": "carecontext",
+        "definition": "The encounter or episode of care",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "MedicationStatement.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/us/shr/StructureDefinition/shr-core-CareContext-extension"
+            ]
+          }
+        ],
+        "maxLength": 0,
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "MedicationStatement-MedicationStatement.extension-category",
+        "path": "MedicationStatement.extension",
+        "name": "category",
+        "definition": "The general type or class of this item.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "MedicationStatement.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/us/shr/StructureDefinition/shr-core-Category-extension"
+            ]
+          }
+        ],
+        "maxLength": 0,
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "MedicationStatement-MedicationStatement.extension-category.val",
+        "path": "MedicationStatement.extension.valueCodeableConcept",
+        "binding": {
+          "strength": "preferred",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/medication-statement-category"
+          }
+        }
+      },
+      {
+        "id": "MedicationStatement-MedicationStatement.ext4",
+        "path": "MedicationStatement.extension",
+        "name": "treatmentintent",
+        "definition": "The purpose of a treatment.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "MedicationStatement.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/us/shr/StructureDefinition/shr-core-TreatmentIntent-extension"
+            ]
+          }
+        ],
+        "maxLength": 0,
+        "mustSupport": true,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "MedicationStatement-MedicationStatement.ext5",
+        "path": "MedicationStatement.extension",
+        "name": "terminationreason",
+        "definition": "A code explaining unplanned or premature termination of a plan of treatment, course of medication, or research study.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "MedicationStatement.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/us/shr/StructureDefinition/shr-core-TerminationReason-extension"
+            ]
+          }
+        ],
+        "maxLength": 0,
+        "mustSupport": true,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "MedicationStatement-MedicationStatement.ext5.val",
+        "path": "MedicationStatement.extension.valueCodeableConcept",
+        "binding": {
+          "strength": "required",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/us/mcode/shr/core/vs/TreatmentTerminationReasonVS"
+          }
+        }
+      },
+      {
+        "id": "MedicationStatement-MedicationStatement.patient",
+        "path": "MedicationStatement.patient",
+        "type": [
+          {
+            "code": "Reference",
+            "profile": [
+              "http://hl7.org/fhir/us/shr/StructureDefinition/shr-core-Patient"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "MedicationStatement-MedicationStatement.informationSource",
+        "path": "MedicationStatement.informationSource",
+        "type": [
+          {
+            "code": "Reference",
+            "profile": [
+              "http://hl7.org/fhir/us/shr/StructureDefinition/shr-core-Patient"
+            ]
+          },
+          {
+            "code": "Reference",
+            "profile": [
+              "http://hl7.org/fhir/us/shr/StructureDefinition/shr-core-Practitioner"
+            ]
+          },
+          {
+            "code": "Reference",
+            "profile": [
+              "http://hl7.org/fhir/us/shr/StructureDefinition/shr-core-RelatedPerson"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "MedicationStatement-MedicationStatement.wasNotTaken",
+        "path": "MedicationStatement.wasNotTaken",
+        "min": 0,
+        "max": "0"
+      },
+      {
+        "id": "MedicationStatement-MedicationStatement.reasonNotTaken",
+        "path": "MedicationStatement.reasonNotTaken",
+        "min": 0,
+        "max": "0"
+      },
+      {
+        "id": "MedicationStatement-MedicationStatement.reasonForUsex",
+        "path": "MedicationStatement.reasonForUse[x]",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          },
+          {
+            "code": "Reference",
+            "profile": [
+              "http://hl7.org/fhir/us/shr/StructureDefinition/shr-core-Condition"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "MedicationStatement-MedicationStatement.effectivex",
+        "path": "MedicationStatement.effective[x]",
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "MedicationStatement-MedicationStatement.supportingInformation",
+        "path": "MedicationStatement.supportingInformation",
+        "type": [
+          {
+            "code": "Reference",
+            "profile": [
+              "http://hl7.org/fhir/us/shr/StructureDefinition/shr-core-DomainResource"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "MedicationStatement-MedicationStatement.medicationx",
+        "path": "MedicationStatement.medication[x]",
+        "slicing": {
+          "id": "4",
+          "discriminator": [
+            "@type"
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          },
+          {
+            "code": "Reference",
+            "profile": [
+              "http://hl7.org/fhir/us/shr/StructureDefinition/shr-core-Medication"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "MedicationStatement-MedicationStatement.med",
+        "path": "MedicationStatement.medicationCodeableConcept",
+        "base": {
+          "path": "MedicationStatement.medication[x]",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "extensible",
+          "valueSetReference": {
+            "reference": "http://h7.org/fhir/us/core/ValueSet/us-core-medication-codes"
+          }
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "MedicationStatement-MedicationStatement.dosage",
+        "path": "MedicationStatement.dosage",
+        "min": 0,
+        "max": "1"
+      },
+      {
+        "id": "MedicationStatement-MedicationStatement.dosage.extension",
+        "path": "MedicationStatement.dosage.extension",
+        "slicing": {
+          "id": "1",
+          "discriminator": [
+            "url"
+          ],
+          "ordered": false,
+          "rules": "open"
+        }
+      },
+      {
+        "id": "MedicationStatement-MedicationStatement.dosage.extension-type",
+        "path": "MedicationStatement.dosage.extension",
+        "name": "type",
+        "definition": "A code describing the item at a greater level of detail.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "MedicationStatement.dosage.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/us/shr/StructureDefinition/shr-core-Type-extension"
+            ]
+          }
+        ],
+        "maxLength": 0,
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "MedicationStatement-MedicationStatement.dosage.ext6.val",
+        "path": "MedicationStatement.dosage.extension.valueCodeableConcept",
+        "binding": {
+          "strength": "example",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/dose-rate-type"
+          }
+        }
+      },
+      {
+        "id": "MedicationStatement-MedicationStatement.dosage.ext7",
+        "path": "MedicationStatement.dosage.extension",
+        "name": "dosesequencenumber",
+        "definition": "Dose number within series.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "MedicationStatement.dosage.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/us/shr/StructureDefinition/shr-core-DoseSequenceNumber-extension"
+            ]
+          }
+        ],
+        "maxLength": 0,
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "MedicationStatement-MedicationStatement.dosage.ext8",
+        "path": "MedicationStatement.dosage.extension",
+        "name": "instructioncode",
+        "definition": "Coded instructions, e.g., 'with meals'.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "MedicationStatement.dosage.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/us/shr/StructureDefinition/shr-core-InstructionCode-extension"
+            ]
+          }
+        ],
+        "maxLength": 0,
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "MedicationStatement-MedicationStatement.dosage.ext8.val",
+        "path": "MedicationStatement.dosage.extension.valueCodeableConcept",
+        "binding": {
+          "strength": "example",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/additional-instruction-codes"
+          }
+        }
+      },
+      {
+        "id": "MedicationStatement-MedicationStatement.dosage.ext9",
+        "path": "MedicationStatement.dosage.extension",
+        "name": "patientinstruction",
+        "definition": "Patient or consumer-oriented instructions.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "MedicationStatement.dosage.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/us/shr/StructureDefinition/shr-core-PatientInstruction-extension"
+            ]
+          }
+        ],
+        "maxLength": 0,
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "MedicationStatement-MedicationStatement.dosage.ext10",
+        "path": "MedicationStatement.dosage.extension",
+        "name": "maxdoseperadministration",
+        "definition": "Upper limit on medication per administration.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "MedicationStatement.dosage.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/us/shr/StructureDefinition/shr-core-MaxDosePerAdministration-extension"
+            ]
+          }
+        ],
+        "maxLength": 0,
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "MedicationStatement-MedicationStatement.dosage.ext11",
+        "path": "MedicationStatement.dosage.extension",
+        "name": "maxdoseperlifetime",
+        "definition": "Upper limit on medication per lifetime of the patient.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "MedicationStatement.dosage.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/us/shr/StructureDefinition/shr-core-MaxDosePerLifetime-extension"
+            ]
+          }
+        ],
+        "maxLength": 0,
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "MedicationStatement-MedicationStatement.dosage.timing",
+        "path": "MedicationStatement.dosage.timing",
+        "type": [
+          {
+            "code": "Timing",
+            "profile": [
+              "http://hl7.org/fhir/us/shr/StructureDefinition/shr-core-Timing"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "MedicationStatement-MedicationStatement.dosage.sit",
+        "path": "MedicationStatement.dosage.siteCodeableConcept",
+        "base": {
+          "path": "MedicationStatement.dosage.site[x]",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "example",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/us/mcode/shr/core/vs/BodyLocationVS"
+          }
+        }
+      },
+      {
+        "id": "MedicationStatement-MedicationStatement.dosage.route",
+        "path": "MedicationStatement.dosage.route",
+        "binding": {
+          "strength": "required",
+          "description": "A coded concept describing the route or physiological path of administration of a therapeutic agent into or onto the body of a subject.",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/route-codes"
+          }
+        }
+      },
+      {
+        "id": "MedicationStatement-MedicationStatement.dosage.method",
+        "path": "MedicationStatement.dosage.method",
+        "binding": {
+          "strength": "preferred",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/administration-method-codes"
+          }
+        }
+      }
+    ]
+  },
+  "identifier": [
+    {
+      "system": "http://hl7.org/fhir/us/mcode",
+      "value": "shr.core.MedicationStatement"
+    }
+  ],
+  "display": "shr-core-MedicationStatement",
+  "description": "A record of the use of a medication. The use may be reported by the patient or clinician and adminstration does not have to be directly observed.\n\nFHIR Notes:\n\nAlthough FHIR supports the asserter (information source) and date asserted, it does not have a place for the author (who created and is responsible for the statement) and recorder (who entered the statement). Extensions are provided.\n\nThe treatment of 'not taken' has changed from DSTU2 and STU3 to R4. In R4, status and statusReason are used to indicate medications not taken. For upward compatibility, the 'not taken' attributes are profiled out.\nReasonCode is a choice of CodeableConcept or ref(Condition) in DSTU2, and limited to one reason (pick a type). In STU3 and R4, there can be multiple reason codes, and multiple reason references, simultaneously.\n\nPreference is given to using the National Library of Medicine (NLM) RxNorm terminology for medications. RxNorm is a coding standard established by the Office of the National Coordinator (ONC). However, RxNorm is restricted to FDA-approved drugs and does not include clinical trial drugs. MedicationStatement allows for the inclusion of other coding systems like the NCI Thesaurus (NCIT) to represent clinical trial oncology drugs.",
+  "code": [
+    {
+      "system": "http://snomed.info/sct",
+      "code": "416608005",
+      "display": "Drug therapy (procedure)"
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "resourceType": "ValueSet",
+  "id": "shr-core-BodyHeightLengthUnitsVS",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n<p><b>BodyHeightLengthUnitsVS ValueSet</b></p>\n<p>Codes representing acceptable units for body height or length.</p>\n</div>"
+  },
+  "url": "http://hl7.org/fhir/us/mcode/shr/core/vs/BodyHeightLengthUnitsVS",
+  "identifier": {
+    "system": "http://hl7.org/fhir/us/mcode",
+    "value": "shr.core.BodyHeightLengthUnitsVS"
+  },
+  "name": "BodyHeightLengthUnitsVS",
+  "status": "draft",
+  "publisher": "The MITRE Corporation",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "other",
+          "value": "http://standardhealthrecord.org"
+        }
+      ]
+    }
+  ],
+  "date": "2019-05-28",
+  "description": "Codes representing acceptable units for body height or length.",
+  "compose": {
+    "include": [
+      {
+        "system": "http://unitsofmeasure.org",
+        "concept": [
+          {
+            "code": "cm",
+            "display": "Centimeters"
+          },
+          {
+            "code": "[in_i]",
+            "display": "Inches"
+          }
+        ]
+      }
+    ]
+  }
+}

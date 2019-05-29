@@ -1,0 +1,45 @@
+
+<p> </p>
+<p><b>Mapping Source</b></p>
+<p>This structure represents the following mapping definition:</p>
+<pre>
+shr.core.Patient maps to http://fhir.org/guides/argonaut/StructureDefinition/argo-patient:
+  Language maps to language
+  Narrative maps to text
+  ImplicitRules maps to implicitRules
+  Metadata.VersionId maps to meta.versionId
+  Metadata.SourceSystem maps to meta.extension
+  Metadata.Profile maps to meta.profile
+  Metadata.LastUpdated maps to meta.lastUpdated
+  Metadata.SecurityLabel maps to meta.security
+  Metadata.Tag maps to meta.tag
+  Identifier maps to identifier
+  Active maps to active
+  HumanName maps to name
+  ContactPoint maps to telecom
+  AdministrativeGender maps to gender
+  BirthDate maps to birthDate
+  Deceased maps to deceased[x]
+  Address maps to address
+  MaritalStatus maps to maritalStatus
+  MultipleBirth maps to multipleBirth[x]
+  PhotographicImage maps to photo
+  ContactPerson.Relationship maps to contact.relationship
+  ContactPerson.HumanName maps to contact.name
+  ContactPerson.ContactPoint maps to contact.telecom
+  ContactPerson.Address maps to contact.address
+  ContactPerson.AdministrativeGender maps to contact.gender
+  ContactPerson.Organization maps to contact.organization
+  ContactPerson.TimePeriod maps to contact.period
+  constrain animal to 0..0
+  Communication.Language maps to communication.language
+  Communication.Preferred maps to communication.preferred
+  GeneralPractitioner maps to careProvider
+  ManagingOrganization maps to managingOrganization
+  SamePersonAs.Patient maps to link.other
+  SamePersonAs.Relationship maps to link.type
+  BirthSex maps to http://fhir.org/guides/argonaut/StructureDefinition/argo-birthsex
+  Race maps to http://fhir.org/guides/argonaut/StructureDefinition/argo-race
+  Ethnicity maps to http://fhir.org/guides/argonaut/StructureDefinition/argo-ethnicity
+
+</pre>

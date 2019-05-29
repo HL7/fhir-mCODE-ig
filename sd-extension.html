@@ -1,0 +1,155 @@
+---
+# jekyll header
+---
+{% include header.html %}
+
+<div id="segment-breadcrumb" class="segmnt">
+  <!-- segment-breadcrumb -->
+  <div class="container">
+    <!-- container -->
+    <ul class="breadcrumb">
+      <li title="home"><a href="index.html"><b>Home</b></a></li>
+      <li title="extensions"><a href="extensions.html"><b>Extensions</b></a></li>
+      <li><b>{{[title]}}</b></li>
+    </ul>
+  </div>
+  <!-- /container -->
+</div>
+<!-- /segment-breadcrumb -->
+
+{% include container-start.html %}
+
+<!-- ============CONTENT CONTENT=============== -->
+
+{% capture examples %}{% include {{[type]}}-example-list-{{[id]}}.xhtml %}{% endcapture %}
+<ul class="nav nav-tabs">
+  <li class="active"><a href="#">Content</a></li>
+  <li><a href="{{[type]}}-{{[id]}}-definitions.html">Detailed Descriptions</a></li>
+{% if examples != "" %}
+  <li><a href="{{[type]}}-{{[id]}}-examples.html">Examples</a></li>
+{% endif %}
+  <li><a href="{{[type]}}-{{[id]}}.xml.html">XML</a></li>
+  <li><a href="{{[type]}}-{{[id]}}.json.html">JSON</a></li>
+  <li><a href="{{[type]}}-{{[id]}}.ttl.html">Turtle</a></li>
+</ul>
+
+<h2><a name="top"></a>{{[title]}}</h2>
+
+<a name="profile"> </a>
+<p>&nbsp;</p>
+<p>
+The official URL for this extension is:
+</p>
+<pre>{{ site.data.structuredefinitions.{{[id]}}.url }}</pre>
+
+<p>{{ site.data.structuredefinitions.{{[id]}}.description | markdownify }}</p>
+
+<p>
+This extension was published on {{ site.data.structuredefinitions.{{[id]}}.date }} as a {{ site.data.structuredefinitions.{{[id]}}.status }} by {{ site.data.structuredefinitions.{{[id]}}.publisher }}.
+</p>
+
+<div id="tabs">
+  <ul>
+    <li><a href="#tabs-summ">Text Summary</a></li>
+    <li><a href="#tabs-diff">Differential Table</a></li>
+    <li><a href="#tabs-snap">Snapshot Table</a></li>
+    <li><a href="#tabs-all">All</a></li>
+  </ul>
+
+  <div id="tabs-summ">
+    <div id="tbl-summ">
+      <div id="tbl-diff-inner">
+        <a name="summary"> </a>
+        {% include {{[type]}}-{{[id]}}-summary.xhtml %}
+      </div>
+    </div>
+  </div>
+
+  <div id="tabs-diff">
+    <div id="tbl-diff">
+      <div id="tbl-diff-inner">
+        {% include {{[type]}}-{{[id]}}-diff.xhtml %}
+      </div>
+    </div>
+  </div>
+
+  <div id="tabs-snap">
+    <div id="tbl-snap">
+      <div id="tbl-snap-inner">
+        {% include {{[type]}}-{{[id]}}-snapshot.xhtml %}
+      </div>
+    </div>
+  </div>
+
+  <div id="tabs-all">
+    <div id="tbl-summ">
+      <div id="tbl-diff-inner">
+        <a name="summary"> </a>
+        {% include {{[type]}}-{{[id]}}-summary.xhtml %}
+      </div>
+    </div>
+    <div id="all-tbl-diff">
+      <p><b>Differential View</b></p>
+      <div id="all-tbl-diff-inner">
+        {% include {{[type]}}-{{[id]}}-diff.xhtml %}
+      </div>
+    </div>
+    <div id="all-tbl-snap">
+      <p><b>Snapshot View</b></p>
+      <div id="all-tbl-snap-inner">
+        {% include {{[type]}}-{{[id]}}-snapshot.xhtml %}
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<a name="downloads"> </a>
+<p>Downloads: StructureDefinition: (<a href="{{[type]}}-{{[id]}}.xml" download="{{[type]}}-{{[id]}}.xml">XML</a>, <a href="{{[type]}}-{{[id]}}.json" download="{{[type]}}-{{[id]}}.json">JSON</a>,
+  <a href="{{[type]}}-{{[id]}}.ttl" download="{{[type]}}-{{[id]}}.ttl">TTL</a>), Schema: <a href="{{[id]}}.sch" download="{{[id]}}.sch">XML Schematron</a></p>
+
+<p>&nbsp;</p>
+
+<a name="tx"> </a>
+{%include {{[type]}}-{{[id]}}-tx.xhtml%}
+
+<p>&nbsp;</p>
+
+<a name="inv"> </a>
+{%include {{[type]}}-{{[id]}}-inv.xhtml%}
+
+<!-- ==============END CONTENT END CONTENT=================== -->
+
+{% include container-end.html %}
+
+<script src="jquery.js"> </script>
+<script src="jquery-ui.min.js"> </script>
+<script>
+  try {
+    var currentTabIndex = sessionStorage.getItem('fhir-resource-tab-index');
+  }
+  catch (exception) {
+  }
+
+  if (!currentTabIndex)
+    currentTabIndex = '0';
+
+  $('#tabs').tabs({
+    active: currentTabIndex,
+    activate: function (event, ui) {
+      var active = $('.selector').tabs('option', 'active');
+      currentTabIndex = ui.newTab.index();
+      document.activeElement.blur();
+      try {
+        sessionStorage.setItem('fhir-resource-tab-index', currentTabIndex);
+      }
+      catch (exception) {
+      }
+    }
+  });
+</script>
+
+{% include footer.html %}
+</body>
+
+</html>

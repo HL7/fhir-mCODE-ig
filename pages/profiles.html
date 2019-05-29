@@ -1,0 +1,965 @@
+---
+# jekyll header
+---
+{% include header.html %}
+
+<!-- ============BreadCrumb=============== -->
+<div id="segment-breadcrumb" class="segmnt">
+  <!-- segment-breadcrumb -->
+  <div class="container">
+    <!-- container -->
+    <ul class="breadcrumb">
+      <li title="home"><a href="index.html"><b>Home</b></a></li>
+      <li><b>Profiles</b></li>
+    </ul>
+  </div>
+  <!-- /container -->
+</div>
+<!-- /segment-breadcrumb -->
+
+{% include container-start.html %}
+
+<!-- ============CONTENT CONTENT=============== -->
+
+<h2>
+  Primary profiles defined as part of this Implementation Guide
+</h2>
+<table class="codes">
+  <thead>
+    <tr>
+      <td>
+        <b>Name</b>
+      </td>
+      <td>
+        <b>Based On</b>
+      </td>
+      <td>
+        <b>Definition</b>
+      </td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="StructureDefinition-shr-core-BloodPressure.html">BloodPressure</a></td>
+      <td><a href="http://hl7.org/fhir/DSTU2/observation.html">Observation</a></td>
+      <td>{% capture md_text %}The force of circulating blood on the walls of the arteries.{% endcapture %}{{ md_text | markdownify }}</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-shr-core-BodyHeight.html">BodyHeight</a></td>
+      <td><a href="http://hl7.org/fhir/DSTU2/observation.html">Observation</a></td>
+      <td>{% capture md_text %}Data structure for recording the body height, defined as the distance from the sole to the crown of the head.{% endcapture %}{{ md_text | markdownify }}</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-shr-core-BodyWeight.html">BodyWeight</a></td>
+      <td><a href="http://hl7.org/fhir/DSTU2/observation.html">Observation</a></td>
+      <td>{% capture md_text %}Data structure for recording the body weight, defined as the mass or quantity of heaviness of the individual.{% endcapture %}{{ md_text | markdownify }}</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-shr-lab-CBCWAutoDifferentialPanel.html">CBCWAutoDifferentialPanel</a></td>
+      <td><a href="http://hl7.org/fhir/DSTU2/observation.html">Observation</a></td>
+      <td>{% capture md_text %}Complete blood count (CBC) with auto differential panel. Includes various measures of red blood cells, platelets, and various types of white blood cells and other related measures, such as hemoglobin. The components of this panel are not entirely standardized, so the definition of the CBC includes tests that are optional, or performed by certain laboratories but not others. Instances typically will include a subset of the listed panel members. While recognizing scalability limitations, in this case, panel member is described by its own FHIR profile.
+
+Note to FHIR implementers: The Argonaut and US Core IGs both state that panels (related groups of observations) should be represented by the DiagnosticReport resource. This specification deviates from this approach by using Observation for panels. This is because panels can contain other panels, but a DiagnosticReport cannot contain other DiagnosticReports. Nested panels are, in fact, quite common in LOINC (see 39135-9 Wound assessment panel for an example of a deeply nested panel). To represent nested panels, the each sub-panel _must be_ an Observation. Of course, any sub-panel can also be a stand-alone panel, as well. Following the Argonaut/US Core recommended approach of using DiagnosticReport would imply that many or perhaps all panels would have to be represented twice: once as an Observation to permit the panel to be used as a sub-panel, and once as a DiagnosticReport to permit it to be used as a top-level panel. The specification authors believe there is little added value in representing panels as DiagnosticReports when Observation provides additional opportunity for nesting, and equivalent expressive power.{% endcapture %}{{ md_text | markdownify }}</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-onco-core-CancerDiseaseStatus.html">CancerDiseaseStatus</a></td>
+      <td><a href="http://hl7.org/fhir/DSTU2/observation.html">Observation</a></td>
+      <td>{% capture md_text %}A clinician's qualitative judgment on the current trend of the cancer, e.g., whether it is stable, worsening (progressing), or improving (responding). The judgment may be based a single type or multiple kinds of evidence, such as imaging data, assessment of symptoms, tumor markers, laboratory data, etc.{% endcapture %}{{ md_text | markdownify }}</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-onco-core-CancerRelatedRadiationProcedure.html">CancerRelatedRadiationProcedure</a></td>
+      <td><a href="http://hl7.org/fhir/DSTU2/procedure.html">Procedure</a></td>
+      <td>{% capture md_text %}A radiological treatment addressing a cancer condition. The scope of this profile has been narrowed to cancer-related procedures by constraining the ReasonReference and ReasonCode to cancer conditions.{% endcapture %}{{ md_text | markdownify }}</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-onco-core-CancerRelatedSurgicalProcedure.html">CancerRelatedSurgicalProcedure</a></td>
+      <td><a href="http://hl7.org/fhir/DSTU2/procedure.html">Procedure</a></td>
+      <td>{% capture md_text %}A surgical action addressing a cancer condition.{% endcapture %}{{ md_text | markdownify }}</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-shr-core-ComorbidCondition.html">ComorbidCondition</a></td>
+      <td><a href="http://hl7.org/fhir/DSTU2/condition.html">Condition</a></td>
+      <td>{% capture md_text %}A comorbidity refers to one or more diseases or conditions that occur along with another condition in the same person at the same time. Conditions considered comorbidities are often long-term or chronic conditions. Comorbidities are defined relative to an index disease and may be categorical, rather than described in full detail. The comorbid condition class provides comorbidity codes corresponding the Elixhauser Comorbidity Index.{% endcapture %}{{ md_text | markdownify }}</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-shr-lab-ComprehensiveMetabolic2000SerumOrPlasmaPanel.html">ComprehensiveMetabolic2000SerumOrPlasmaPanel</a></td>
+      <td><a href="http://hl7.org/fhir/DSTU2/observation.html">Observation</a></td>
+      <td>{% capture md_text %}Represents a comprehensive metabolic 2000 panel (CMP) from serum or plasma, which measures various components such as glucose, electrolytes, kidney function, and liver function. The components of this panel are not entirely standardized, so the definition of the CMP includes tests that are optional, or performed by certain laboratories but not others. Therefore, instances typically will include a subset of the listed panel members. While recognizing scalability limitations, in this case, panel member is described by its own FHIR profile.
+
+Note to FHIR implementers: The Argonaut and US Core IGs both state that panels (related groups of observations) should be represented by the DiagnosticReport resource. This specification deviates from this approach by using Observation for panels. This is because panels can contain other panels, but a DiagnosticReport cannot contain other DiagnosticReports. Nested panels are, in fact, quite common in LOINC (see 39135-9 Wound assessment panel for an example of a deeply nested panel). To represent nested panels, each sub-panel _must_ be an Observation. Of course, any sub-panel can also be a stand-alone panel, as well. Following the Argonaut/US Core recommended approach of using DiagnosticReport would imply that many or perhaps all panels would have to be represented twice: once as an Observation to permit the panel to be used as a sub-panel, and once as a DiagnosticReport to permit it to be used as a top-level panel. The authors of this specification believe there is little added value in representing panels as DiagnosticReports when Observation provides additional opportunity for nesting, and equivalent expressive power.{% endcapture %}{{ md_text | markdownify }}</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-shr-core-ECOGPerformanceStatus.html">ECOGPerformanceStatus</a></td>
+      <td><a href="http://hl7.org/fhir/DSTU2/observation.html">Observation</a></td>
+      <td>{% capture md_text %}The Eastern Cooperative Oncology Group (ECOG) Performance Status represents the patient's functional status and is used to determine their ability to tolerate therapies in serious illness, specifically for chemotherapy. Source: LOINC{% endcapture %}{{ md_text | markdownify }}</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-onco-core-GeneticVariantFound.html">GeneticVariantFound</a></td>
+      <td><a href="http://hl7.org/fhir/DSTU2/observation.html">Observation</a></td>
+      <td>{% capture md_text %}Data structure recording an alteration in the most common DNA nucleotide sequence. The term variant can be used to describe an alteration that may be benign, pathogenic, or of unknown significance. The term variant is increasingly being used in place of the term mutation.{% endcapture %}{{ md_text | markdownify }}</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-onco-core-GeneticVariantTested.html">GeneticVariantTested</a></td>
+      <td><a href="http://hl7.org/fhir/DSTU2/observation.html">Observation</a></td>
+      <td>{% capture md_text %}A test for a specific mutation on a particular gene.{% endcapture %}{{ md_text | markdownify }}</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-onco-core-GenomicsReport.html">GenomicsReport</a></td>
+      <td><a href="http://hl7.org/fhir/DSTU2/diagnosticreport.html">DiagnosticReport</a></td>
+      <td>{% capture md_text %}Genetic analysis summary report. The report may include one or more tests, with two distinct test types. The first type is a targeted mutation test, where a specific mutation on a specific gene is tested for. The result is either positive or negative for that mutation. The second type is a more general test for variants. This type of test returns the identity of variants found in a certain region of the genome.
+
+The identity of laboratory tests is typically represented by a LOINC code. However, many genetic tests and panels do not have LOINC codes, although some might have an identifier in NCBI Genetic Testing Registry (GTR), a central location for voluntary submission of genetic test information by providers. To identify the diagnostic report, the name of the report must be in the text sub-field of the code structure. If there is a coded identifier from GTR, LOINC, or other source, then it should be included into the the code sub-field of the code structure. If there is no suitable code, the code can be omitted.
+
+The performer of the test (organization or practitioner) should be included in the FHIR profile as the performer.actor.
+
+FHIR implementation note: The category for this profile is set to GE (Genetics), a code from http://hl7.org/fhir/ValueSet/diagnostic-service-sections. This may be contrary to the Argonaut specification, which assigns the category LAB to any diagnostic report containing a laboratory result.{% endcapture %}{{ md_text | markdownify }}</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-shr-core-KarnofskyPerformanceStatus.html">KarnofskyPerformanceStatus</a></td>
+      <td><a href="http://hl7.org/fhir/DSTU2/observation.html">Observation</a></td>
+      <td>{% capture md_text %}The Karnofsky Performance Status (KPS) is a tool used to measure a patient's functional status. It can be used to compare the effectiveness of different therapies and to help assess the prognosis of certain patients, such as those with certain cancers. The KPS score ranges from 0 to 100 in intervals of 10. Higher scores are associated with better functional status, with 100 representing no symptoms or evidence of disease, and 0 representing death [PMID: 23870327].{% endcapture %}{{ md_text | markdownify }}</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-shr-core-MedicationStatement.html">MedicationStatement</a></td>
+      <td><a href="http://hl7.org/fhir/DSTU2/medicationstatement.html">MedicationStatement</a></td>
+      <td>{% capture md_text %}A record of the use of a medication. The use may be reported by the patient or clinician and adminstration does not have to be directly observed.
+
+FHIR Notes:
+
+Although FHIR supports the asserter (information source) and date asserted, it does not have a place for the author (who created and is responsible for the statement) and recorder (who entered the statement). Extensions are provided.
+
+The treatment of 'not taken' has changed from DSTU2 and STU3 to R4. In R4, status and statusReason are used to indicate medications not taken. For upward compatibility, the 'not taken' attributes are profiled out.
+ReasonCode is a choice of CodeableConcept or ref(Condition) in DSTU2, and limited to one reason (pick a type). In STU3 and R4, there can be multiple reason codes, and multiple reason references, simultaneously.
+
+Preference is given to using the National Library of Medicine (NLM) RxNorm terminology for medications. RxNorm is a coding standard established by the Office of the National Coordinator (ONC). However, RxNorm is restricted to FDA-approved drugs and does not include clinical trial drugs. MedicationStatement allows for the inclusion of other coding systems like the NCI Thesaurus (NCIT) to represent clinical trial oncology drugs.{% endcapture %}{{ md_text | markdownify }}</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-shr-core-Patient.html">Patient</a></td>
+      <td><a href="http://hl7.org/fhir/DSTU2/patient.html">Patient</a></td>
+      <td>{% capture md_text %}A person in the role of a patient. Sometimes, the patient is not the subject of information in a clinical statement where the Patient is the SubjectOfRecord.
+
+SHR follows Argonaut and makes the value set binding on marital status required. MaritalStatus has a required binding in Argonaut, but an extensible binding in US-Core. To be feasible under both DSTU2 Argonaut and STU3 US-Core, the required binding strength is adopted.{% endcapture %}{{ md_text | markdownify }}</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-onco-core-PrimaryCancerCondition.html">PrimaryCancerCondition</a></td>
+      <td><a href="http://hl7.org/fhir/DSTU2/condition.html">Condition</a></td>
+      <td>{% capture md_text %}Records the history of the primary cancer condition, the original or first tumor in the body, abnormal cells that divide without control and can invade nearby tissues.{% endcapture %}{{ md_text | markdownify }}</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-onco-core-SecondaryCancerCondition.html">SecondaryCancerCondition</a></td>
+      <td><a href="http://hl7.org/fhir/DSTU2/condition.html">Condition</a></td>
+      <td>{% capture md_text %}Records the history of secondary neoplasms, including location(s) and the date of onset of metastases. A secondary cancer results from the spread (metastasization) of cancer from its original site.{% endcapture %}{{ md_text | markdownify }}</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-onco-core-TNMClinicalDistantMetastasesCategory.html">TNMClinicalDistantMetastasesCategory</a></td>
+      <td><a href="http://hl7.org/fhir/DSTU2/observation.html">Observation</a></td>
+      <td>{% capture md_text %}Category describing the presence or absence of metastases in remote anatomical locations, assessed using tests that are done before surgery. These include physical exams, imaging tests, laboratory tests (such as blood tests), and biopsies (definition adapted from NCI Dictionary of Cancer Terms).{% endcapture %}{{ md_text | markdownify }}</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-onco-core-TNMClinicalPrimaryTumorCategory.html">TNMClinicalPrimaryTumorCategory</a></td>
+      <td><a href="http://hl7.org/fhir/DSTU2/observation.html">Observation</a></td>
+      <td>{% capture md_text %}Category of the primary tumor, based on its size and extent, assessed prior to surgery, based on evidence such as physical examination, imaging, and/or biopsy.{% endcapture %}{{ md_text | markdownify }}</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-onco-core-TNMClinicalRegionalNodesCategory.html">TNMClinicalRegionalNodesCategory</a></td>
+      <td><a href="http://hl7.org/fhir/DSTU2/observation.html">Observation</a></td>
+      <td>{% capture md_text %}Category of the presence or absence of metastases in regional lymph nodes, assessed using tests that are done before surgery. These include physical exams, imaging tests, laboratory tests (such as blood tests), and biopsies (definition adapted from NCI Dictionary of Cancer Terms).{% endcapture %}{{ md_text | markdownify }}</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-onco-core-TNMClinicalStageGroup.html">TNMClinicalStageGroup</a></td>
+      <td><a href="http://hl7.org/fhir/DSTU2/observation.html">Observation</a></td>
+      <td>{% capture md_text %}The extent of the cancer in the body, according to the TNM classification system, based on information obtained prior to neoadjuvant treatment and surgery, e.g. based on evidence such as physical examination, imaging, and/or biopsy.{% endcapture %}{{ md_text | markdownify }}</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-onco-core-TNMPathologicDistantMetastasesCategory.html">TNMPathologicDistantMetastasesCategory</a></td>
+      <td><a href="http://hl7.org/fhir/DSTU2/observation.html">Observation</a></td>
+      <td>{% capture md_text %}Category describing the presence or absence of metastases in remote anatomical locations, assessed through pathologic analysis of a specimen.{% endcapture %}{{ md_text | markdownify }}</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-onco-core-TNMPathologicPrimaryTumorCategory.html">TNMPathologicPrimaryTumorCategory</a></td>
+      <td><a href="http://hl7.org/fhir/DSTU2/observation.html">Observation</a></td>
+      <td>{% capture md_text %}Category describing the primary tumor, based on its size and extent, assessed through pathologic analysis of a tumor specimen.{% endcapture %}{{ md_text | markdownify }}</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-onco-core-TNMPathologicRegionalNodesCategory.html">TNMPathologicRegionalNodesCategory</a></td>
+      <td><a href="http://hl7.org/fhir/DSTU2/observation.html">Observation</a></td>
+      <td>{% capture md_text %}Category describing the presence or absence of metastases in regional lymph nodes, assessed through pathologic analysis of a specimen.{% endcapture %}{{ md_text | markdownify }}</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-onco-core-TNMPathologicStageGroup.html">TNMPathologicStageGroup</a></td>
+      <td><a href="http://hl7.org/fhir/DSTU2/observation.html">Observation</a></td>
+      <td>{% capture md_text %}The extent of the cancer in the body, according to the TNM classification system, based on examination of tissue samples removed during surgery, in addition to physical examination and imaging and potentially, other prognostic factors.{% endcapture %}{{ md_text | markdownify }}</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-onco-core-TumorMarkerTest.html">TumorMarkerTest</a></td>
+      <td><a href="http://hl7.org/fhir/DSTU2/observation.html">Observation</a></td>
+      <td>{% capture md_text %}The result of a tumor marker test. Tumor marker tests are generally used to guide cancer treatment decisions and monitor treatment, as well as to predict the chance of recovery and cancer recurrence. A tumor marker is a substance found in tissue or blood or other body fluids that may be a sign of cancer or certain benign (noncancer) conditions. Most tumor markers are made by both normal cells and cancer cells, but they are made in larger amounts by cancer cells. A tumor marker may help to diagnose cancer, plan treatment, or find out how well treatment is working or if cancer has come back. Examples of tumor markers include CA-125 (in ovarian cancer), CA 15-3 (in breast cancer), CEA (in colon cancer), and PSA (in prostate cancer). Tumor markers differ from genetic markers in that they are measured at the levels of the protein and substance post-RNA protein synthesis. (Source: Adapted from NCI Dictionary of Cancer Terms and Cancer.net)
+
+Implementation note: The data value element is 'required if known' (0..1) because, for quantitative tests that are indeterminate, no data value will be reported, and the reason for the null value should be reported in the DataAbsentReason field.{% endcapture %}{{ md_text | markdownify }}</td>
+    </tr>
+    
+  </tbody>
+</table>
+
+<h2 id="supporting-profiles-header" style="display: none">
+  Supporting profiles defined as part of this Implementation Guide
+</h2>
+<table id="supporting-profiles-table" class="codes" style="display: none">
+  <thead>
+    <tr>
+      <td>
+        <b>Name</b>
+      </td>
+      <td>
+        <b>Based On</b>
+      </td>
+      <td>
+        <b>Definition</b>
+      </td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="StructureDefinition-shr-core-AbnormalBodyStructure.html">AbnormalBodyStructure</a></td>
+      <td><a href="http://hl7.org/fhir/DSTU2/condition.html">Condition</a></td>
+      <td>{% capture md_text %}A body structure such as wound or tumor, observed to be present in a patient. The body structure is a condition that persists over time. The Code represents the body structure itself (the morphology), while the BodyLocation is the location of that structure. This corresponds to FHIR R4, where the BodyStructure resource has morphology (corresponding to Code) and a location. For example, the Code could be blunt force injury (SCT 3821009) and location left knee.{% endcapture %}{{ md_text | markdownify }}</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-shr-core-AccessionIdentifier.html">AccessionIdentifier</a></td>
+      <td><a href="http://hl7.org/fhir/DSTU2/datatypes.html#identifier">Identifier</a></td>
+      <td>{% capture md_text %}Identifier assigned by the lab{% endcapture %}{{ md_text | markdownify }}</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-shr-core-ActionPerformed.html">ActionPerformed</a></td>
+      <td><a href="http://hl7.org/fhir/DSTU2/domainresource.html">DomainResource</a></td>
+      <td>{% capture md_text %}Abstract class representing an event occurrence or performance of any type of action.{% endcapture %}{{ md_text | markdownify }}</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-shr-core-ActionRequest.html">ActionRequest</a></td>
+      <td><a href="http://hl7.org/fhir/DSTU2/domainresource.html">DomainResource</a></td>
+      <td>{% capture md_text %}Abstract class representing a request for any type of action to be performed.{% endcapture %}{{ md_text | markdownify }}</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-shr-core-ActionStatement.html">ActionStatement</a></td>
+      <td><a href="http://hl7.org/fhir/DSTU2/domainresource.html">DomainResource</a></td>
+      <td>{% capture md_text %}Abstract class representing any type of action or event.{% endcapture %}{{ md_text | markdownify }}</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-shr-lab-AlanineAminotransferaseCCncPtSerPlasQnLabObs.html">AlanineAminotransferaseCCncPtSerPlasQnLabObs</a></td>
+      <td><a href="http://hl7.org/fhir/DSTU2/observation.html">Observation</a></td>
+      <td>{% capture md_text %}Alanine aminotransferase [Enzymatic activity/​volume] in Serum or Plasma{% endcapture %}{{ md_text | markdownify }}</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-shr-lab-AlbuminGlobulinMRtoPtSerPlasQnLabObs.html">AlbuminGlobulinMRtoPtSerPlasQnLabObs</a></td>
+      <td><a href="http://hl7.org/fhir/DSTU2/observation.html">Observation</a></td>
+      <td>{% capture md_text %}Albumin/​Globulin [Mass Ratio] in Serum or Plasma{% endcapture %}{{ md_text | markdownify }}</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-shr-lab-AlbuminMCncPtSerPlasQnLabObs.html">AlbuminMCncPtSerPlasQnLabObs</a></td>
+      <td><a href="http://hl7.org/fhir/DSTU2/observation.html">Observation</a></td>
+      <td>{% capture md_text %}Albumin [Mass/​volume] in Serum or Plasma{% endcapture %}{{ md_text | markdownify }}</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-shr-lab-AlkalinePhosphataseCCncPtSerPlasQnLabObs.html">AlkalinePhosphataseCCncPtSerPlasQnLabObs</a></td>
+      <td><a href="http://hl7.org/fhir/DSTU2/observation.html">Observation</a></td>
+      <td>{% capture md_text %}Alkaline phosphatase [Enzymatic activity/​volume] in Serum or Plasma{% endcapture %}{{ md_text | markdownify }}</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-shr-lab-AniongapSCncPtSerPlasQnLabObs.html">AniongapSCncPtSerPlasQnLabObs</a></td>
+      <td><a href="http://hl7.org/fhir/DSTU2/observation.html">Observation</a></td>
+      <td>{% capture md_text %}Anion gap in Serum or Plasma. Units are optional but if provided, must be in mmol/L.{% endcapture %}{{ md_text | markdownify }}</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-shr-core-Annotation.html">Annotation</a></td>
+      <td><a href="http://hl7.org/fhir/DSTU2/datatypes.html#annotation">Annotation</a></td>
+      <td>{% capture md_text %}An added or follow-up note, often after the fact, that contains metadata about who made the statement and when.{% endcapture %}{{ md_text | markdownify }}</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-shr-core-Appointment.html">Appointment</a></td>
+      <td><a href="http://hl7.org/fhir/DSTU2/appointment.html">Appointment</a></td>
+      <td>{% capture md_text %}A booking of a healthcare event among patient(s), practitioner(s), related person(s) and/or device(s) for a specific date/time.{% endcapture %}{{ md_text | markdownify }}</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-shr-lab-AspartateAminotransferaseCCncPtSerPlasQnLabObs.html">AspartateAminotransferaseCCncPtSerPlasQnLabObs</a></td>
+      <td><a href="http://hl7.org/fhir/DSTU2/observation.html">Observation</a></td>
+      <td>{% capture md_text %}Aspartate aminotransferase [Enzymatic activity/​volume] in Serum or Plasma{% endcapture %}{{ md_text | markdownify }}</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-shr-lab-Basophils100WBCNFrPtBldQnAutoCntLabObs.html">Basophils100WBCNFrPtBldQnAutoCntLabObs</a></td>
+      <td><a href="http://hl7.org/fhir/DSTU2/observation.html">Observation</a></td>
+      <td>{% capture md_text %}Basophils/​100 leukocytes in Blood by Automated count{% endcapture %}{{ md_text | markdownify }}</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-shr-lab-BasophilsNCncPtBldQnAutoCntLabObs.html">BasophilsNCncPtBldQnAutoCntLabObs</a></td>
+      <td><a href="http://hl7.org/fhir/DSTU2/observation.html">Observation</a></td>
+      <td>{% capture md_text %}Basophils [#/​volume] in Blood by Automated count{% endcapture %}{{ md_text | markdownify }}</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-shr-lab-BicarbonateSCncPtSerPlasQnLabObs.html">BicarbonateSCncPtSerPlasQnLabObs</a></td>
+      <td><a href="http://hl7.org/fhir/DSTU2/observation.html">Observation</a></td>
+      <td>{% capture md_text %}Bicarbonate [Moles/​volume] in Serum or Plasma{% endcapture %}{{ md_text | markdownify }}</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-shr-lab-BilirubinDirectMCncPtSerPlasQnLabObs.html">BilirubinDirectMCncPtSerPlasQnLabObs</a></td>
+      <td><a href="http://hl7.org/fhir/DSTU2/observation.html">Observation</a></td>
+      <td>{% capture md_text %}Bilirubin.direct [Mass/​volume] in Serum or Plasma{% endcapture %}{{ md_text | markdownify }}</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-shr-lab-BilirubinMCncPtSerPlasQnLabObs.html">BilirubinMCncPtSerPlasQnLabObs</a></td>
+      <td><a href="http://hl7.org/fhir/DSTU2/observation.html">Observation</a></td>
+      <td>{% capture md_text %}Bilirubin.total [Mass/​volume] in Serum or Plasma{% endcapture %}{{ md_text | markdownify }}</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-shr-lab-Blasts100WBCNFrPtBldQnManCntLabObs.html">Blasts100WBCNFrPtBldQnManCntLabObs</a></td>
+      <td><a href="http://hl7.org/fhir/DSTU2/observation.html">Observation</a></td>
+      <td>{% capture md_text %}Blasts/100 leukocytes in Blood by Manual count{% endcapture %}{{ md_text | markdownify }}</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-shr-lab-BlastsNCncPtBldQnLabObs.html">BlastsNCncPtBldQnLabObs</a></td>
+      <td><a href="http://hl7.org/fhir/DSTU2/observation.html">Observation</a></td>
+      <td>{% capture md_text %}Blasts [#/volume] in Blood. Units not required by LOINC but are strongly recommended.{% endcapture %}{{ md_text | markdownify }}</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-shr-lab-CalciumMCncPtSerPlasQnLabObs.html">CalciumMCncPtSerPlasQnLabObs</a></td>
+      <td><a href="http://hl7.org/fhir/DSTU2/observation.html">Observation</a></td>
+      <td>{% capture md_text %}Calcium [Mass/​volume] in Serum or Plasma{% endcapture %}{{ md_text | markdownify }}</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-onco-core-CancerCondition.html">CancerCondition</a></td>
+      <td><a href="http://hl7.org/fhir/DSTU2/condition.html">Condition</a></td>
+      <td>{% capture md_text %}Abstract class for describing a primary or secondary metastatic neoplastic diseases.{% endcapture %}{{ md_text | markdownify }}</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-onco-core-CancerStageCategory.html">CancerStageCategory</a></td>
+      <td><a href="http://hl7.org/fhir/DSTU2/observation.html">Observation</a></td>
+      <td>{% capture md_text %}Abstract parent class for members of cancer staging panels. Cancer panel members must include a timing element and staging system, and focus on a cancer disorder. Specific realizations will have value sets specific to certain staging systems.{% endcapture %}{{ md_text | markdownify }}</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-onco-core-CancerStageGroup.html">CancerStageGroup</a></td>
+      <td><a href="http://hl7.org/fhir/DSTU2/observation.html">Observation</a></td>
+      <td>{% capture md_text %}A panel that contains cancer staging information. This class is the parent of panels containing information related to clinical and pathologic staging, including TNMClinicalStageGroup and TNMPathologicStageGroup.{% endcapture %}{{ md_text | markdownify }}</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-shr-lab-CarbonDioxideSCncPtSerPlasQnLabObs.html">CarbonDioxideSCncPtSerPlasQnLabObs</a></td>
+      <td><a href="http://hl7.org/fhir/DSTU2/observation.html">Observation</a></td>
+      <td>{% capture md_text %}Carbon dioxide, total [Moles/​volume] in Serum or Plasma{% endcapture %}{{ md_text | markdownify }}</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-shr-lab-ChlorideSCncPtSerPlasQnLabObs.html">ChlorideSCncPtSerPlasQnLabObs</a></td>
+      <td><a href="http://hl7.org/fhir/DSTU2/observation.html">Observation</a></td>
+      <td>{% capture md_text %}Chloride [Moles/​volume] in Serum or Plasma{% endcapture %}{{ md_text | markdownify }}</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-shr-core-ClinicalStatement.html">ClinicalStatement</a></td>
+      <td><a href="http://hl7.org/fhir/DSTU2/domainresource.html">DomainResource</a></td>
+      <td>{% capture md_text %}This abstract class provides properties and behaviors common to entries in a medical record. Patient and Encounter are ubiquitous in clinical statements. This class also allows for common representation of simple data provenance elements asserter, recorder, and creation date.{% endcapture %}{{ md_text | markdownify }}</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-shr-core-CodedLaboratoryObservation.html">CodedLaboratoryObservation</a></td>
+      <td><a href="http://hl7.org/fhir/DSTU2/observation.html">Observation</a></td>
+      <td>{% capture md_text %}A coded result from a laboratory test.{% endcapture %}{{ md_text | markdownify }}</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-shr-core-CodedNonLaboratoryObservation.html">CodedNonLaboratoryObservation</a></td>
+      <td><a href="http://hl7.org/fhir/DSTU2/observation.html">Observation</a></td>
+      <td>{% capture md_text %}The result of evaluations (measurements, tests, or questions) whose answer is expressed as a code.{% endcapture %}{{ md_text | markdownify }}</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-shr-core-Composition.html">Composition</a></td>
+      <td><a href="http://hl7.org/fhir/DSTU2/composition.html">Composition</a></td>
+      <td>{% capture md_text %}A composition represents a set of Entries sharing common provenance, a document such as an extract from a patient record, a knowledge artifact, or a catalog definition.{% endcapture %}{{ md_text | markdownify }}</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-shr-core-Condition.html">Condition</a></td>
+      <td><a href="http://hl7.org/fhir/DSTU2/condition.html">Condition</a></td>
+      <td>{% capture md_text %}A condition that is or may be present in a subject. 'Condition' is interpreted broadly and could be a disorder, abnormality, problem, injury, complaint, functionality, illness, disease, ailment, sickness, affliction, upset, difficulty, disorder, symptom, worry, or trouble.
+The Observation-based class, ConditionAbsent, should be used to describe conditions that are not present or negative findings.
+SHR Condition uses the SHR BodyLocation structure that includes not only a code, but optional laterality, direction, clock direction, and distance. If included, the distance is measured from the location specified by the code, laterality, and direction.{% endcapture %}{{ md_text | markdownify }}</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-shr-core-Coverage.html">Coverage</a></td>
+      <td><a href="http://hl7.org/fhir/DSTU2/coverage.html">Coverage</a></td>
+      <td>{% capture md_text %}Health insurance coverage available (even if not used for payment for a given encounter).{% endcapture %}{{ md_text | markdownify }}</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-shr-lab-CreatinineMCncPtSerPlasQnLabObs.html">CreatinineMCncPtSerPlasQnLabObs</a></td>
+      <td><a href="http://hl7.org/fhir/DSTU2/observation.html">Observation</a></td>
+      <td>{% capture md_text %}Creatinine [Mass/​volume] in Serum or Plasma{% endcapture %}{{ md_text | markdownify }}</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-shr-core-Device.html">Device</a></td>
+      <td><a href="http://hl7.org/fhir/DSTU2/device.html">Device</a></td>
+      <td>{% capture md_text %}A specific durable physical device used in diagnosis or treatment. The value is the coding for a type of device, for example, a CPAP machine. The same device might be used on multiple patients.
+Device status cannot be reconciled between Argonaut and US-Core, each having different required value sets.
+Device type has extensible mappings to different value sets in Argonaut and US-Core, however both value sets have identical SNOMED content (descendants of 49062001 (Device). We adopt the US-Core value set, which is allowable because the binding is extensible.{% endcapture %}{{ md_text | markdownify }}</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-shr-core-DiagnosticReport.html">DiagnosticReport</a></td>
+      <td><a href="http://hl7.org/fhir/DSTU2/diagnosticreport.html">DiagnosticReport</a></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-shr-core-DocumentReference.html">DocumentReference</a></td>
+      <td><a href="http://hl7.org/fhir/DSTU2/documentreference.html">DocumentReference</a></td>
+      <td>{% capture md_text %}A reference to a document, used to describe a document that is made available to a healthcare system. A document is some sequence of bytes that is identifiable, establishes its own context (e.g., what subject, author, etc. can be displayed to the user), and has defined update management. The DocumentReference resource can be used with any document format that has a recognized mime type and that conforms to this definition.{% endcapture %}{{ md_text | markdownify }}</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-shr-core-DomainResource.html">DomainResource</a></td>
+      <td><a href="http://hl7.org/fhir/DSTU2/domainresource.html">DomainResource</a></td>
+      <td>{% capture md_text %}Parent class for any item in clinical or administrative health-related system. A DomainResource can belong to a single person's health record, or represent an entity that surfaces in multiple records, such as organizations, providers, payments, decision support artifacts, etc.
+
+Note to FHIR implementers: SHR includes Status and Identifier fields on DomainResource because these two attributes occur in almost every FHIR resource. The most significant exception are 3 or 4 resources that use an 'active' flag instead of coded status value. There is no apparent pattern to this inconsistency. FHIR resources that use a coded status have active and inactive as status values. In the spirit of providing a consistent object-oriented logical model for FHIR, SHR uses status across all domain resources.{% endcapture %}{{ md_text | markdownify }}</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-shr-core-Duration.html">Duration</a></td>
+      <td><a href="http://hl7.org/fhir/DSTU2/datatypes.html#quantity">Quantity</a></td>
+      <td>{% capture md_text %}The length of time that something continues.{% endcapture %}{{ md_text | markdownify }}</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-shr-core-Encounter.html">Encounter</a></td>
+      <td><a href="http://hl7.org/fhir/DSTU2/encounter.html">Encounter</a></td>
+      <td>{% capture md_text %}A description of an interaction between a patient and healthcare provider(s) for the purpose of providing healthcare service(s) or assessing the health status of a patient.{% endcapture %}{{ md_text | markdownify }}</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-shr-core-EncounterOrEpisode.html">EncounterOrEpisode</a></td>
+      <td><a href="http://hl7.org/fhir/DSTU2/domainresource.html">DomainResource</a></td>
+      <td>{% capture md_text %}Abstract element representing a group of services delivered to a patient.{% endcapture %}{{ md_text | markdownify }}</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-shr-core-Entity.html">Entity</a></td>
+      <td><a href="http://hl7.org/fhir/DSTU2/domainresource.html">DomainResource</a></td>
+      <td>{% capture md_text %}Root class for entities such as people, organizations, and devices that have a separately identifiable existence.{% endcapture %}{{ md_text | markdownify }}</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-shr-core-EntityOrRole.html">EntityOrRole</a></td>
+      <td><a href="http://hl7.org/fhir/DSTU2/domainresource.html">DomainResource</a></td>
+      <td>{% capture md_text %}Abstract parent class for both Entity and Role.{% endcapture %}{{ md_text | markdownify }}</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-shr-lab-Eosinophils100WBCNFrPtBldQnAutoCntLabObs.html">Eosinophils100WBCNFrPtBldQnAutoCntLabObs</a></td>
+      <td><a href="http://hl7.org/fhir/DSTU2/observation.html">Observation</a></td>
+      <td>{% capture md_text %}Eosinophils/​100 leukocytes in Blood by Automated count{% endcapture %}{{ md_text | markdownify }}</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-shr-lab-EosinophilsNCncPtBldQnAutoCntLabObs.html">EosinophilsNCncPtBldQnAutoCntLabObs</a></td>
+      <td><a href="http://hl7.org/fhir/DSTU2/observation.html">Observation</a></td>
+      <td>{% capture md_text %}Eosinophils [#/​volume] in Blood by Automated count{% endcapture %}{{ md_text | markdownify }}</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-shr-core-EpisodeOfCare.html">EpisodeOfCare</a></td>
+      <td><a href="http://hl7.org/fhir/DSTU2/episodeofcare.html">EpisodeOfCare</a></td>
+      <td>{% capture md_text %}An association between a patient and an organization / healthcare provider(s) during which time encounters may occur. The managing organization assumes a level of responsibility for the patient during this time.{% endcapture %}{{ md_text | markdownify }}</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-shr-lab-ErythrocyteDistributionWidthEntVolPtRBCQnLabObs.html">ErythrocyteDistributionWidthEntVolPtRBCQnLabObs</a></td>
+      <td><a href="http://hl7.org/fhir/DSTU2/observation.html">Observation</a></td>
+      <td>{% capture md_text %}Erythrocyte distribution width [Entitic volume] by Automated count{% endcapture %}{{ md_text | markdownify }}</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-shr-lab-ErythrocyteDistributionWidthRatioPtRBCQnAutoCntLabObs.html">ErythrocyteDistributionWidthRatioPtRBCQnAutoCntLabObs</a></td>
+      <td><a href="http://hl7.org/fhir/DSTU2/observation.html">Observation</a></td>
+      <td>{% capture md_text %}Erythrocyte distribution width [Ratio] by Automated count{% endcapture %}{{ md_text | markdownify }}</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-shr-lab-ErythrocyteMCHCMCncPtRBCQnAutoCntLabObs.html">ErythrocyteMCHCMCncPtRBCQnAutoCntLabObs</a></td>
+      <td><a href="http://hl7.org/fhir/DSTU2/observation.html">Observation</a></td>
+      <td>{% capture md_text %}MCHC [Mass/​volume] by Automated count{% endcapture %}{{ md_text | markdownify }}</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-shr-lab-ErythrocyteMCHEntMassPtRBCQnAutoCntLabObs.html">ErythrocyteMCHEntMassPtRBCQnAutoCntLabObs</a></td>
+      <td><a href="http://hl7.org/fhir/DSTU2/observation.html">Observation</a></td>
+      <td>{% capture md_text %}MCH [Entitic mass] by Automated count{% endcapture %}{{ md_text | markdownify }}</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-shr-lab-ErythrocytesNCncPtBldQnAutoCntLabObs.html">ErythrocytesNCncPtBldQnAutoCntLabObs</a></td>
+      <td><a href="http://hl7.org/fhir/DSTU2/observation.html">Observation</a></td>
+      <td>{% capture md_text %}Erythrocytes [#/​volume] in Blood by Automated count.{% endcapture %}{{ md_text | markdownify }}</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-shr-lab-ErythrocytesNucleated100WBCRatioPtBldQnAutoCntLabObs.html">ErythrocytesNucleated100WBCRatioPtBldQnAutoCntLabObs</a></td>
+      <td><a href="http://hl7.org/fhir/DSTU2/observation.html">Observation</a></td>
+      <td>{% capture md_text %}Nucleated erythrocytes/100 leukocytes [Ratio] in Blood by Automated count. Units not required by LOINC but are strongly recommended.{% endcapture %}{{ md_text | markdownify }}</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-shr-lab-ErythrocytesNucleated100WBCRatioPtBldQnLabObs.html">ErythrocytesNucleated100WBCRatioPtBldQnLabObs</a></td>
+      <td><a href="http://hl7.org/fhir/DSTU2/observation.html">Observation</a></td>
+      <td>{% capture md_text %}Nucleated erythrocytes/100 leukocytes [Ratio] in Blood.  Units are required.{% endcapture %}{{ md_text | markdownify }}</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-shr-lab-ErythrocytesNucleatedNCncPtBldQnLabObs.html">ErythrocytesNucleatedNCncPtBldQnLabObs</a></td>
+      <td><a href="http://hl7.org/fhir/DSTU2/observation.html">Observation</a></td>
+      <td>{% capture md_text %}Nucleated erythrocytes [#/volume] in Blood. Units not required by LOINC but are strongly recommended.{% endcapture %}{{ md_text | markdownify }}</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-shr-core-FillerOrderNumber.html">FillerOrderNumber</a></td>
+      <td><a href="http://hl7.org/fhir/DSTU2/datatypes.html#identifier">Identifier</a></td>
+      <td>{% capture md_text %}Identifier assigned by the lab carrying out the test.{% endcapture %}{{ md_text | markdownify }}</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-shr-lab-GFR173sqMPredArVRatPtSerPlasQnMDRDLabObs.html">GFR173sqMPredArVRatPtSerPlasQnMDRDLabObs</a></td>
+      <td><a href="http://hl7.org/fhir/DSTU2/observation.html">Observation</a></td>
+      <td>{% capture md_text %}Glomerular filtration rate/​1.73 sq M.predicted [Volume Rate/​Area] in Serum or Plasma by Creatinine-based formula (MDRD). Units are optional.{% endcapture %}{{ md_text | markdownify }}</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-shr-lab-GFR173sqMPredBlackArVRatPtSerPlasBldQnMDRDLabObs.html">GFR173sqMPredBlackArVRatPtSerPlasBldQnMDRDLabObs</a></td>
+      <td><a href="http://hl7.org/fhir/DSTU2/observation.html">Observation</a></td>
+      <td>{% capture md_text %}Glomerular filtration rate/​1.73 sq M predicted among blacks [Volume Rate/​Area] in Serum, Plasma or Blood by Creatinine-based formula (MDRD). Units are optional.{% endcapture %}{{ md_text | markdownify }}</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-shr-lab-GFR173sqMPredFemaleArVRatPtSerPlasBldQnMDRDLabObs.html">GFR173sqMPredFemaleArVRatPtSerPlasBldQnMDRDLabObs</a></td>
+      <td><a href="http://hl7.org/fhir/DSTU2/observation.html">Observation</a></td>
+      <td>{% capture md_text %}Glomerular filtration rate/​1.73 sq M predicted among females [Volume Rate/​Area] in Serum, Plasma or Blood by Creatinine-based formula (MDRD). Units are optional.{% endcapture %}{{ md_text | markdownify }}</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-shr-lab-GFR173sqMPredNonBlackArVRatPtSerPlasBldQnMDRDLabObs.html">GFR173sqMPredNonBlackArVRatPtSerPlasBldQnMDRDLabObs</a></td>
+      <td><a href="http://hl7.org/fhir/DSTU2/observation.html">Observation</a></td>
+      <td>{% capture md_text %}Glomerular filtration rate/​1.73 sq M predicted among non-blacks [Volume Rate/​Area] in Serum, Plasma or Blood by Creatinine-based formula (MDRD). Units are optional.{% endcapture %}{{ md_text | markdownify }}</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-shr-lab-GlobulinMCncPtSerQnCalculatedLabObs.html">GlobulinMCncPtSerQnCalculatedLabObs</a></td>
+      <td><a href="http://hl7.org/fhir/DSTU2/observation.html">Observation</a></td>
+      <td>{% capture md_text %}Globulin [Mass/​volume] in Serum by calculation{% endcapture %}{{ md_text | markdownify }}</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-shr-lab-GlucoseMCncPtSerPlasQnLabObs.html">GlucoseMCncPtSerPlasQnLabObs</a></td>
+      <td><a href="http://hl7.org/fhir/DSTU2/observation.html">Observation</a></td>
+      <td>{% capture md_text %}Glucose [Mass/​volume] in Serum or Plasma{% endcapture %}{{ md_text | markdownify }}</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-shr-lab-Granulocytes100WBCNFrPtBldQnAutoCntLabObs.html">Granulocytes100WBCNFrPtBldQnAutoCntLabObs</a></td>
+      <td><a href="http://hl7.org/fhir/DSTU2/observation.html">Observation</a></td>
+      <td>{% capture md_text %}Granulocytes/​100 leukocytes in Blood by Automated count{% endcapture %}{{ md_text | markdownify }}</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-shr-lab-GranulocytesImmature100WBCNFrPtBldQnAutoCntLabObs.html">GranulocytesImmature100WBCNFrPtBldQnAutoCntLabObs</a></td>
+      <td><a href="http://hl7.org/fhir/DSTU2/observation.html">Observation</a></td>
+      <td>{% capture md_text %}Immature granulocytes/100 leukocytes in Blood by Automated count. LOINC does not specify that units are required.{% endcapture %}{{ md_text | markdownify }}</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-shr-lab-GranulocytesImmatureNCncPtBldQnAutoCntLabObs.html">GranulocytesImmatureNCncPtBldQnAutoCntLabObs</a></td>
+      <td><a href="http://hl7.org/fhir/DSTU2/observation.html">Observation</a></td>
+      <td>{% capture md_text %}Immature granulocytes [#/volume] in Blood by Automated count. Units are not required{% endcapture %}{{ md_text | markdownify }}</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-shr-core-Group.html">Group</a></td>
+      <td><a href="http://hl7.org/fhir/DSTU2/group.html">Group</a></td>
+      <td>{% capture md_text %}A set of entities (personnel, material, or places) to be considered together. May be a pool of like-type resources, a team, or combination of personnel, material and places.{% endcapture %}{{ md_text | markdownify }}</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-shr-core-HeadlessLaboratoryPanel.html">HeadlessLaboratoryPanel</a></td>
+      <td><a href="http://hl7.org/fhir/DSTU2/observation.html">Observation</a></td>
+      <td>{% capture md_text %}A panel that does not have an overall value that summarizes the entire panel.{% endcapture %}{{ md_text | markdownify }}</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-shr-lab-HematocritVFrPtBldQnAutoCntLabObs.html">HematocritVFrPtBldQnAutoCntLabObs</a></td>
+      <td><a href="http://hl7.org/fhir/DSTU2/observation.html">Observation</a></td>
+      <td>{% capture md_text %}Hematocrit [Volume Fraction] of Blood by Automated count{% endcapture %}{{ md_text | markdownify }}</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-shr-lab-HemoglobinMCncPtBldQnLabObs.html">HemoglobinMCncPtBldQnLabObs</a></td>
+      <td><a href="http://hl7.org/fhir/DSTU2/observation.html">Observation</a></td>
+      <td>{% capture md_text %}Hemoglobin [Mass/​volume] in Blood{% endcapture %}{{ md_text | markdownify }}</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-shr-core-HumanName.html">HumanName</a></td>
+      <td><a href="http://hl7.org/fhir/DSTU2/datatypes.html#humanname">HumanName</a></td>
+      <td>{% capture md_text %}A name used by a human being, written as it would be typically expressed. May include a breakdown of the various elements of the name (family name, given name, etc.).{% endcapture %}{{ md_text | markdownify }}</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-shr-core-LaboratoryObservation.html">LaboratoryObservation</a></td>
+      <td><a href="http://hl7.org/fhir/DSTU2/observation.html">Observation</a></td>
+      <td>{% capture md_text %}A coded finding based on a specimen, usually collected from a patient (but possibly from a location).{% endcapture %}{{ md_text | markdownify }}</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-shr-core-LaboratoryPanel.html">LaboratoryPanel</a></td>
+      <td><a href="http://hl7.org/fhir/DSTU2/observation.html">Observation</a></td>
+      <td>{% capture md_text %}A set of independent but related observations that are often presented together to facilitate interpretation, such as a lipid panel.{% endcapture %}{{ md_text | markdownify }}</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-shr-lab-LeukocytesNCncPtBldQnAutoCntLabObs.html">LeukocytesNCncPtBldQnAutoCntLabObs</a></td>
+      <td><a href="http://hl7.org/fhir/DSTU2/observation.html">Observation</a></td>
+      <td>{% capture md_text %}Leukocytes [#/​volume] in Blood by Automated count{% endcapture %}{{ md_text | markdownify }}</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-shr-lab-LeukocytesOtherNCncPtBldQnAutoCntLabObs.html">LeukocytesOtherNCncPtBldQnAutoCntLabObs</a></td>
+      <td><a href="http://hl7.org/fhir/DSTU2/observation.html">Observation</a></td>
+      <td>{% capture md_text %}Leukocytes other [#/​volume] in Blood by Automated count. Units not required by LOINC but are strongly recommended.{% endcapture %}{{ md_text | markdownify }}</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-shr-core-Location.html">Location</a></td>
+      <td><a href="http://hl7.org/fhir/DSTU2/location.html">Location</a></td>
+      <td>{% capture md_text %}Services and space and equipment provided for a particular purpose; a building or place that provides a particular service or is used for a particular industry. Could be a clinical site, community site, or a mobile facility.{% endcapture %}{{ md_text | markdownify }}</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-shr-lab-Lymphocytes100WBCNFrPtBldQnAutoCntLabObs.html">Lymphocytes100WBCNFrPtBldQnAutoCntLabObs</a></td>
+      <td><a href="http://hl7.org/fhir/DSTU2/observation.html">Observation</a></td>
+      <td>{% capture md_text %}Lymphocytes/​100 leukocytes in Blood by Automated count{% endcapture %}{{ md_text | markdownify }}</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-shr-lab-LymphocytesNCncPtBldQnAutoCntLabObs.html">LymphocytesNCncPtBldQnAutoCntLabObs</a></td>
+      <td><a href="http://hl7.org/fhir/DSTU2/observation.html">Observation</a></td>
+      <td>{% capture md_text %}Lymphocytes [#/​volume] in Blood by Automated count{% endcapture %}{{ md_text | markdownify }}</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-shr-lab-LymphocytesVariant100WBCNFrPtBldQnAutoCntLabObs.html">LymphocytesVariant100WBCNFrPtBldQnAutoCntLabObs</a></td>
+      <td><a href="http://hl7.org/fhir/DSTU2/observation.html">Observation</a></td>
+      <td>{% capture md_text %}Variant lymphocytes/​100 leukocytes in Blood by Automated count. Units not required by LOINC but are strongly recommended.{% endcapture %}{{ md_text | markdownify }}</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-shr-lab-LymphocytesVariant100WBCNFrPtBldQnLabObs.html">LymphocytesVariant100WBCNFrPtBldQnLabObs</a></td>
+      <td><a href="http://hl7.org/fhir/DSTU2/observation.html">Observation</a></td>
+      <td>{% capture md_text %}Variant lymphocytes/100 leukocytes in Blood{% endcapture %}{{ md_text | markdownify }}</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-shr-lab-LymphocytesVariantNCncPtBldQnAutoCntLabObs.html">LymphocytesVariantNCncPtBldQnAutoCntLabObs</a></td>
+      <td><a href="http://hl7.org/fhir/DSTU2/observation.html">Observation</a></td>
+      <td>{% capture md_text %}Variant lymphocytes [#/​volume] in Blood by Automated count. Units not required by LOINC but are strongly recommended.{% endcapture %}{{ md_text | markdownify }}</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-shr-lab-MeanCorpuscularVolumeEntVolPtRBCQnAutoCntLabObs.html">MeanCorpuscularVolumeEntVolPtRBCQnAutoCntLabObs</a></td>
+      <td><a href="http://hl7.org/fhir/DSTU2/observation.html">Observation</a></td>
+      <td>{% capture md_text %}MCV [Entitic volume] by Automated count{% endcapture %}{{ md_text | markdownify }}</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-shr-core-Media.html">Media</a></td>
+      <td><a href="http://hl7.org/fhir/DSTU2/media.html">Media</a></td>
+      <td>{% capture md_text %}A photo, video, or audio recording acquired or used in healthcare. The actual content may be inline or provided by direct reference.{% endcapture %}{{ md_text | markdownify }}</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-shr-core-Medication.html">Medication</a></td>
+      <td><a href="http://hl7.org/fhir/DSTU2/medication.html">Medication</a></td>
+      <td>{% capture md_text %}A type of prescription drug or over-the-counter drug that is used to prevent, treat, or relieve symptoms of a disease or abnormal condition, but excluding vaccines.
+In FHIR DSTU2 and STU3, Medication lacks the identifier attribute, which is included in SHR as an extension.
+DSTU2 lacks the status attribute, which is required by US-Core.
+Batch is 0..1 in FHIR R4, and accordingly is restricted here.{% endcapture %}{{ md_text | markdownify }}</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-shr-core-MedicationAction.html">MedicationAction</a></td>
+      <td><a href="http://hl7.org/fhir/DSTU2/domainresource.html">DomainResource</a></td>
+      <td>{% capture md_text %}Abstract class representing medication exposure, independent of whether reported in a medication statement or medication administration. Does not include medication requests (prescriptions).{% endcapture %}{{ md_text | markdownify }}</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-shr-core-MedicationAdministration.html">MedicationAdministration</a></td>
+      <td><a href="http://hl7.org/fhir/DSTU2/medicationadministration.html">MedicationAdministration</a></td>
+      <td>{% capture md_text %}A record of the use of a medication. If the medication is given as part of a course of treatment, the PartOf attribute should refer to the CourseOfTreatment.
+Although FHIR MedicationAdministration supports date of administration, information source, performer, it lacks common provenance elements, statement creation date, author, and recorder. These are supported as optional extensions.
+FHIR DSTU2 lacks a category attribute, which is provided as an extension in that version.
+SHR does not allow the 'not given' attributes from DSTU2 and STU3, since they are dropped in R4. The status element is used to document medications not given.{% endcapture %}{{ md_text | markdownify }}</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-shr-core-MedicationDispense.html">MedicationDispense</a></td>
+      <td><a href="http://hl7.org/fhir/DSTU2/domainresource.html">DomainResource</a></td>
+      <td>{% capture md_text %}Indicates that a medication product has been dispensed for a named person/patient. This includes a description of the medication product (supply) provided and the instructions for administering the medication. The medication dispense is the result of a pharmacy system responding to a medication order.{% endcapture %}{{ md_text | markdownify }}</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-shr-core-MedicationRequest.html">MedicationRequest</a></td>
+      <td><a href="http://hl7.org/fhir/DSTU2/medicationorder.html">MedicationOrder</a></td>
+      <td>{% capture md_text %}An order for a medication to be dispensed and instructions for use.
+Value sets for status are in direct conflict between DSTU2 Argonaut and STU3 US-Core.
+Category does not exist in DSTU2 and is provided as an extension.
+Intent was added in STU3 and is provided as an extension with required binding.{% endcapture %}{{ md_text | markdownify }}</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-shr-lab-Metamyelocytes100WBCNFrPtBldQnManCntLabObs.html">Metamyelocytes100WBCNFrPtBldQnManCntLabObs</a></td>
+      <td><a href="http://hl7.org/fhir/DSTU2/observation.html">Observation</a></td>
+      <td>{% capture md_text %}Metamyelocytes/100 leukocytes in Blood by Manual count{% endcapture %}{{ md_text | markdownify }}</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-shr-lab-MetamyelocytesNCncPtBldQnLabObs.html">MetamyelocytesNCncPtBldQnLabObs</a></td>
+      <td><a href="http://hl7.org/fhir/DSTU2/observation.html">Observation</a></td>
+      <td>{% capture md_text %}Metamyelocytes [#/volume] in Blood{% endcapture %}{{ md_text | markdownify }}</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-shr-core-Money.html">Money</a></td>
+      <td><a href="http://hl7.org/fhir/DSTU2/datatypes.html#quantity">Quantity</a></td>
+      <td>{% capture md_text %}Representation of an amount of currency or monetary value.{% endcapture %}{{ md_text | markdownify }}</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-shr-lab-Monocytes100WBCNFrPtBldQnAutoCntLabObs.html">Monocytes100WBCNFrPtBldQnAutoCntLabObs</a></td>
+      <td><a href="http://hl7.org/fhir/DSTU2/observation.html">Observation</a></td>
+      <td>{% capture md_text %}Monocytes/​100 leukocytes in Blood by Automated count{% endcapture %}{{ md_text | markdownify }}</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-shr-lab-MonocytesNCncPtBldQnAutoCntLabObs.html">MonocytesNCncPtBldQnAutoCntLabObs</a></td>
+      <td><a href="http://hl7.org/fhir/DSTU2/observation.html">Observation</a></td>
+      <td>{% capture md_text %}Monocytes [#/​volume] in Blood by Automated count{% endcapture %}{{ md_text | markdownify }}</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-shr-lab-MorphologyImpPtBldNarLabObs.html">MorphologyImpPtBldNarLabObs</a></td>
+      <td><a href="http://hl7.org/fhir/DSTU2/observation.html">Observation</a></td>
+      <td>{% capture md_text %}Morphology [Interpretation] in Blood Narrative.{% endcapture %}{{ md_text | markdownify }}</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-shr-lab-Myelocytes100WBCNFrPtBldQnManCntLabObs.html">Myelocytes100WBCNFrPtBldQnManCntLabObs</a></td>
+      <td><a href="http://hl7.org/fhir/DSTU2/observation.html">Observation</a></td>
+      <td>{% capture md_text %}Myelocytes/100 leukocytes in Blood by Manual count{% endcapture %}{{ md_text | markdownify }}</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-shr-lab-MyelocytesNCncPtBldQnLabObs.html">MyelocytesNCncPtBldQnLabObs</a></td>
+      <td><a href="http://hl7.org/fhir/DSTU2/observation.html">Observation</a></td>
+      <td>{% capture md_text %}Myelocytes [#/volume] in Blood. Units not required by LOINC but are strongly recommended.{% endcapture %}{{ md_text | markdownify }}</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-shr-core-NationalProviderIdentifier.html">NationalProviderIdentifier</a></td>
+      <td><a href="http://hl7.org/fhir/DSTU2/datatypes.html#identifier">Identifier</a></td>
+      <td>{% capture md_text %}NPI: a unique 10 digit number to allow US healthcare providers to identify themselves in a standard way throughout the healthcare industry.{% endcapture %}{{ md_text | markdownify }}</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-shr-lab-Neutrophils100WBCNFrPtBldQnAutoCntLabObs.html">Neutrophils100WBCNFrPtBldQnAutoCntLabObs</a></td>
+      <td><a href="http://hl7.org/fhir/DSTU2/observation.html">Observation</a></td>
+      <td>{% capture md_text %}Neutrophils/​100 leukocytes in Blood by Automated count{% endcapture %}{{ md_text | markdownify }}</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-shr-lab-NeutrophilsBandForm100WBCNFrPtBldQnAutoCntLabObs.html">NeutrophilsBandForm100WBCNFrPtBldQnAutoCntLabObs</a></td>
+      <td><a href="http://hl7.org/fhir/DSTU2/observation.html">Observation</a></td>
+      <td>{% capture md_text %}Band form neutrophils/​100 leukocytes in Blood by Automated count. Units not required by LOINC but are strongly recommended.{% endcapture %}{{ md_text | markdownify }}</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-shr-lab-NeutrophilsBandForm100WBCNFrPtBldQnManCntLabObs.html">NeutrophilsBandForm100WBCNFrPtBldQnManCntLabObs</a></td>
+      <td><a href="http://hl7.org/fhir/DSTU2/observation.html">Observation</a></td>
+      <td>{% capture md_text %}Band form neutrophils/100 leukocytes in Blood by Manual count{% endcapture %}{{ md_text | markdownify }}</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-shr-lab-NeutrophilsBandFormNCncPtBldQnAutoCntLabObs.html">NeutrophilsBandFormNCncPtBldQnAutoCntLabObs</a></td>
+      <td><a href="http://hl7.org/fhir/DSTU2/observation.html">Observation</a></td>
+      <td>{% capture md_text %}Band form neutrophils [#/​volume] in Blood by Automated count{% endcapture %}{{ md_text | markdownify }}</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-shr-lab-NeutrophilsBandFormNCncPtBldQnLabObs.html">NeutrophilsBandFormNCncPtBldQnLabObs</a></td>
+      <td><a href="http://hl7.org/fhir/DSTU2/observation.html">Observation</a></td>
+      <td>{% capture md_text %}Band form neutrophils [#/volume] in Blood{% endcapture %}{{ md_text | markdownify }}</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-shr-lab-NeutrophilsNCncPtBldQnAutoCntLabObs.html">NeutrophilsNCncPtBldQnAutoCntLabObs</a></td>
+      <td><a href="http://hl7.org/fhir/DSTU2/observation.html">Observation</a></td>
+      <td>{% capture md_text %}Neutrophils [#/​volume] in Blood by Automated count{% endcapture %}{{ md_text | markdownify }}</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-shr-core-NonLaboratoryObservation.html">NonLaboratoryObservation</a></td>
+      <td><a href="http://hl7.org/fhir/DSTU2/observation.html">Observation</a></td>
+      <td>{% capture md_text %}An observation not based on a specimen.{% endcapture %}{{ md_text | markdownify }}</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-shr-core-Observation.html">Observation</a></td>
+      <td><a href="http://hl7.org/fhir/DSTU2/observation.html">Observation</a></td>
+      <td>{% capture md_text %}Represents the result of evaluations (measurements, tests, or questions) that have been performed.
+Observation has a value representing the result (answer), or an DataAbsentReason indicating why the value is not present. Things observed about the subject can include social and behavioral factors, subjective and objective observations, and assessments.
+For an Observation, the Code describes the aspect or property of the subject being observed or measured. The Code is the 'question code' that pairs to the 'answer' contained in the Value.{% endcapture %}{{ md_text | markdownify }}</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-shr-core-Organization.html">Organization</a></td>
+      <td><a href="http://hl7.org/fhir/DSTU2/organization.html">Organization</a></td>
+      <td>{% capture md_text %}A formally or informally recognized grouping of people or organizations formed for the purpose of achieving some form of collective action. Includes companies, institutions, corporations, departments, community groups, healthcare practice groups, payer/insurer, etc.
+
+Organization type is restricted to 0..1 in FHIR DSTU2, similarly restricted here. Other required attributes come from STU 3 mapping to us-core-organization.{% endcapture %}{{ md_text | markdownify }}</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-shr-lab-OtherCells100WBCNFrPtBldQnAutoCntLabObs.html">OtherCells100WBCNFrPtBldQnAutoCntLabObs</a></td>
+      <td><a href="http://hl7.org/fhir/DSTU2/observation.html">Observation</a></td>
+      <td>{% capture md_text %}Other cells/​100 leukocytes in Blood by Automated count. Units not required by LOINC but are strongly recommended.{% endcapture %}{{ md_text | markdownify }}</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-shr-lab-OtherCellsNCncPtBldQnAutoCntLabObs.html">OtherCellsNCncPtBldQnAutoCntLabObs</a></td>
+      <td><a href="http://hl7.org/fhir/DSTU2/observation.html">Observation</a></td>
+      <td>{% capture md_text %}Other cells [#/​volume] in Blood by Automated count. Units not required by LOINC but are strongly recommended.{% endcapture %}{{ md_text | markdownify }}</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-shr-core-PlacerOrderNumber.html">PlacerOrderNumber</a></td>
+      <td><a href="http://hl7.org/fhir/DSTU2/datatypes.html#identifier">Identifier</a></td>
+      <td>{% capture md_text %}Identifier assigned by the requester of the lab.{% endcapture %}{{ md_text | markdownify }}</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-shr-lab-PlateletDistributionWidthEntVolPtBldQnAutoCntLabObs.html">PlateletDistributionWidthEntVolPtBldQnAutoCntLabObs</a></td>
+      <td><a href="http://hl7.org/fhir/DSTU2/observation.html">Observation</a></td>
+      <td>{% capture md_text %}Platelet distribution width [Entitic volume] in Blood by Automated count. Units not required by LOINC but are strongly recommended.{% endcapture %}{{ md_text | markdownify }}</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-shr-lab-PlateletMeanVolumeEntVolPtBldQnAutoCntLabObs.html">PlateletMeanVolumeEntVolPtBldQnAutoCntLabObs</a></td>
+      <td><a href="http://hl7.org/fhir/DSTU2/observation.html">Observation</a></td>
+      <td>{% capture md_text %}Platelet mean volume [Entitic volume] in Blood by Automated count. Units not required by LOINC but are strongly recommended.{% endcapture %}{{ md_text | markdownify }}</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-shr-lab-PlateletMeanVolumeEntVolPtBldQnReesEckerLabObs.html">PlateletMeanVolumeEntVolPtBldQnReesEckerLabObs</a></td>
+      <td><a href="http://hl7.org/fhir/DSTU2/observation.html">Observation</a></td>
+      <td>{% capture md_text %}Platelet mean volume [Entitic volume] in Blood by Rees-Ecker.{% endcapture %}{{ md_text | markdownify }}</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-shr-lab-PlateletsNCncPtBldQnAutoCntLabObs.html">PlateletsNCncPtBldQnAutoCntLabObs</a></td>
+      <td><a href="http://hl7.org/fhir/DSTU2/observation.html">Observation</a></td>
+      <td>{% capture md_text %}Platelets [#/​volume] in Blood by Automated count{% endcapture %}{{ md_text | markdownify }}</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-shr-lab-PotassiumSCncPtSerPlasQnLabObs.html">PotassiumSCncPtSerPlasQnLabObs</a></td>
+      <td><a href="http://hl7.org/fhir/DSTU2/observation.html">Observation</a></td>
+      <td>{% capture md_text %}Potassium [Moles/​volume] in Serum or Plasma{% endcapture %}{{ md_text | markdownify }}</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-shr-core-Practitioner.html">Practitioner</a></td>
+      <td><a href="http://hl7.org/fhir/DSTU2/practitioner.html">Practitioner</a></td>
+      <td>{% capture md_text %}A person who practices a healing art.
+HumanName is limited to one required value by US-Core. Gender is required by US-Core. US-Core required an identifier, either a NPI (preferred) or tax id.{% endcapture %}{{ md_text | markdownify }}</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-shr-core-Procedure.html">Procedure</a></td>
+      <td><a href="http://hl7.org/fhir/DSTU2/procedure.html">Procedure</a></td>
+      <td>{% capture md_text %}An action that is or was performed on or for a patient. This can be a physical intervention like an operation, or less invasive like long term services, counseling, or hypnotherapy.{% endcapture %}{{ md_text | markdownify }}</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-shr-core-ProcedureRequest.html">ProcedureRequest</a></td>
+      <td><a href="http://hl7.org/fhir/DSTU2/procedurerequest.html">ProcedureRequest</a></td>
+      <td>{% capture md_text %}A request for a procedure to be performed. May be a proposal or an order.{% endcapture %}{{ md_text | markdownify }}</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-shr-lab-Promyelocytes100WBCNFrPtBldQnManCntLabObs.html">Promyelocytes100WBCNFrPtBldQnManCntLabObs</a></td>
+      <td><a href="http://hl7.org/fhir/DSTU2/observation.html">Observation</a></td>
+      <td>{% capture md_text %}Promyelocytes/100 leukocytes in Blood by Manual count{% endcapture %}{{ md_text | markdownify }}</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-shr-lab-PromyelocytesNCncPtBldQnLabObs.html">PromyelocytesNCncPtBldQnLabObs</a></td>
+      <td><a href="http://hl7.org/fhir/DSTU2/observation.html">Observation</a></td>
+      <td>{% capture md_text %}Promyelocytes [#/volume] in Blood{% endcapture %}{{ md_text | markdownify }}</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-shr-lab-ProteinMCncPtSerPlasQnLabObs.html">ProteinMCncPtSerPlasQnLabObs</a></td>
+      <td><a href="http://hl7.org/fhir/DSTU2/observation.html">Observation</a></td>
+      <td>{% capture md_text %}Protein [Mass/​volume] in Serum or Plasma{% endcapture %}{{ md_text | markdownify }}</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-shr-core-QuantitativeLaboratoryObservation.html">QuantitativeLaboratoryObservation</a></td>
+      <td><a href="http://hl7.org/fhir/DSTU2/observation.html">Observation</a></td>
+      <td>{% capture md_text %}A quantiative result from a laboratory test.{% endcapture %}{{ md_text | markdownify }}</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-shr-core-QuantitativeNonLaboratoryObservation.html">QuantitativeNonLaboratoryObservation</a></td>
+      <td><a href="http://hl7.org/fhir/DSTU2/observation.html">Observation</a></td>
+      <td>{% capture md_text %}The result of evaluations (measurements, tests, or questions) whose answer is expressed as a code.{% endcapture %}{{ md_text | markdownify }}</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-shr-lab-QuantityWithRequiredUnits.html">QuantityWithRequiredUnits</a></td>
+      <td><a href="http://hl7.org/fhir/DSTU2/datatypes.html#quantity">Quantity</a></td>
+      <td>{% capture md_text %}A quantity with that requires a coded unit of measure.{% endcapture %}{{ md_text | markdownify }}</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-shr-core-QuestionnaireResponse.html">QuestionnaireResponse</a></td>
+      <td><a href="http://hl7.org/fhir/DSTU2/domainresource.html">DomainResource</a></td>
+      <td>{% capture md_text %}A structured set of questions and their answers. The questions are ordered and grouped into coherent subsets, corresponding to the structure of the grouping of the questionnaire being responded to.{% endcapture %}{{ md_text | markdownify }}</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-shr-core-RadiationProcedure.html">RadiationProcedure</a></td>
+      <td><a href="http://hl7.org/fhir/DSTU2/procedure.html">Procedure</a></td>
+      <td>{% capture md_text %}A radiation oncology procedure. If the treatment is part of a larger course of treatment, the PartOf attribute should indicate that.{% endcapture %}{{ md_text | markdownify }}</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-shr-core-ReferralRequest.html">ReferralRequest</a></td>
+      <td><a href="http://hl7.org/fhir/DSTU2/referralrequest.html">ReferralRequest</a></td>
+      <td>{% capture md_text %}Used to record and send details about a request for referral service or transfer of a patient to the care of another provider or provider organization.{% endcapture %}{{ md_text | markdownify }}</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-shr-core-RelatedPerson.html">RelatedPerson</a></td>
+      <td><a href="http://hl7.org/fhir/DSTU2/relatedperson.html">RelatedPerson</a></td>
+      <td>{% capture md_text %}A person in a role defined in relationship to a patient{% endcapture %}{{ md_text | markdownify }}</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-shr-core-ResearchStudy.html">ResearchStudy</a></td>
+      <td><a href="http://hl7.org/fhir/DSTU2/basic.html">Basic</a></td>
+      <td>{% capture md_text %}A clinical trial or similar research study. Reference: list of FDA data elements describing a research study: prsinfo.clinicaltrials.gov/definitions.html{% endcapture %}{{ md_text | markdownify }}</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-shr-core-ResearchSubject.html">ResearchSubject</a></td>
+      <td><a href="http://hl7.org/fhir/DSTU2/basic.html">Basic</a></td>
+      <td>{% capture md_text %}Record of a subject's enrollment and participation in a research study.{% endcapture %}{{ md_text | markdownify }}</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-shr-core-Role.html">Role</a></td>
+      <td><a href="http://hl7.org/fhir/DSTU2/domainresource.html">DomainResource</a></td>
+      <td>{% capture md_text %}Capacity in which an actor is involved in an activity. For instance, 'attending physician'. Note that attributes of the actor (an entity) that remain constant regardless of the role the actor plays should be part of the entity and not the role. For instance, a person may be a practitioner and a patient. In both cases their date of birth will be the same and thus such information should not be part of the role.{% endcapture %}{{ md_text | markdownify }}</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-shr-core-ServiceRequest.html">ServiceRequest</a></td>
+      <td><a href="http://hl7.org/fhir/DSTU2/basic.html">Basic</a></td>
+      <td>{% capture md_text %}A record of a request for service such as diagnostic investigations, treatments, or operations to be performed.{% endcapture %}{{ md_text | markdownify }}</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-shr-core-SimpleCodedNonLaboratoryObservation.html">SimpleCodedNonLaboratoryObservation</a></td>
+      <td><a href="http://hl7.org/fhir/DSTU2/observation.html">Observation</a></td>
+      <td>{% capture md_text %}An observation whose result is a code, and also having no components or panel members{% endcapture %}{{ md_text | markdownify }}</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-shr-core-SimpleLaboratoryObservation.html">SimpleLaboratoryObservation</a></td>
+      <td><a href="http://hl7.org/fhir/DSTU2/observation.html">Observation</a></td>
+      <td>{% capture md_text %}A result from a laboratory test without panel members or components.{% endcapture %}{{ md_text | markdownify }}</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-shr-lab-SimpleQuantLabWithRequiredUnits.html">SimpleQuantLabWithRequiredUnits</a></td>
+      <td><a href="http://hl7.org/fhir/DSTU2/observation.html">Observation</a></td>
+      <td>{% capture md_text %}Laboratory tests that must be reported with units, following the LOINC UNITSREQUIRED field, a Y/N field that indicates that units are required when this LOINC is included as an OBX segment in a HIPAA attachment{% endcapture %}{{ md_text | markdownify }}</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-shr-core-SimpleQuantitativeLaboratoryObservation.html">SimpleQuantitativeLaboratoryObservation</a></td>
+      <td><a href="http://hl7.org/fhir/DSTU2/observation.html">Observation</a></td>
+      <td>{% capture md_text %}An observation whose result is a quantity, with no components or panel members{% endcapture %}{{ md_text | markdownify }}</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-shr-core-SituationStatement.html">SituationStatement</a></td>
+      <td><a href="http://hl7.org/fhir/DSTU2/domainresource.html">DomainResource</a></td>
+      <td>{% capture md_text %}An assertion, determination, opinion, evaluation, result, observation, or measurement made by a person or device.{% endcapture %}{{ md_text | markdownify }}</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-shr-lab-SodiumSCncPtSerPlasQnLabObs.html">SodiumSCncPtSerPlasQnLabObs</a></td>
+      <td><a href="http://hl7.org/fhir/DSTU2/observation.html">Observation</a></td>
+      <td>{% capture md_text %}Sodium [Moles/​volume] in Serum or Plasma{% endcapture %}{{ md_text | markdownify }}</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-shr-core-Specimen.html">Specimen</a></td>
+      <td><a href="http://hl7.org/fhir/DSTU2/specimen.html">Specimen</a></td>
+      <td>{% capture md_text %}A specimen is a substance, physical object, or collection of objects, that the laboratory considers a single discrete, uniquely identified unit that is the subject of one or more steps in the laboratory workflow. A specimen may include multiple physical pieces as long as they are considered a single unit within the laboratory workflow. A specimen results from one to many specimen collection procedures, and may be contained in multiple specimen containers. Specimen may have one or more processing activities.{% endcapture %}{{ md_text | markdownify }}</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-shr-core-Substance.html">Substance</a></td>
+      <td><a href="http://hl7.org/fhir/DSTU2/substance.html">Substance</a></td>
+      <td>{% capture md_text %}Any matter of defined composition that has discrete existence, whose origin may be biological, mineral or chemical.{% endcapture %}{{ md_text | markdownify }}</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-shr-core-SurgicalProcedure.html">SurgicalProcedure</a></td>
+      <td><a href="http://hl7.org/fhir/DSTU2/procedure.html">Procedure</a></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-shr-core-TaxIdentificationNumber.html">TaxIdentificationNumber</a></td>
+      <td><a href="http://hl7.org/fhir/DSTU2/datatypes.html#identifier">Identifier</a></td>
+      <td>{% capture md_text %}Tax identification number for the practitioner.{% endcapture %}{{ md_text | markdownify }}</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-shr-core-Timing.html">Timing</a></td>
+      <td><a href="http://hl7.org/fhir/DSTU2/datatypes.html#timing">Timing</a></td>
+      <td>{% capture md_text %}A timing schedule that specifies an event that may occur multiple times.
+Timing offers a choice of multiple OccurrenceTime (used is used to specify specific times), or recurrence patterns.{% endcapture %}{{ md_text | markdownify }}</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-onco-core-Tumor.html">Tumor</a></td>
+      <td><a href="http://hl7.org/fhir/DSTU2/condition.html">Condition</a></td>
+      <td>{% capture md_text %}The presence of an abnormal mass of tissue (neoplasm) that results when cells divide more than they should or do not die when they should. Tumors may be benign (not cancer), or malignant (cancer). (source: NCI Dictionary).{% endcapture %}{{ md_text | markdownify }}</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-shr-lab-UreaNitrogenCreatinineMRtoPtSerPlasQnLabObs.html">UreaNitrogenCreatinineMRtoPtSerPlasQnLabObs</a></td>
+      <td><a href="http://hl7.org/fhir/DSTU2/observation.html">Observation</a></td>
+      <td>{% capture md_text %}Urea nitrogen/​Creatinine [Mass Ratio] in Serum or Plasma{% endcapture %}{{ md_text | markdownify }}</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-shr-lab-UreaNitrogenMCncPtSerPlasQnLabObs.html">UreaNitrogenMCncPtSerPlasQnLabObs</a></td>
+      <td><a href="http://hl7.org/fhir/DSTU2/observation.html">Observation</a></td>
+      <td>{% capture md_text %}Urea nitrogen [Mass/​volume] in Serum or Plasma{% endcapture %}{{ md_text | markdownify }}</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-shr-core-VitalSign.html">VitalSign</a></td>
+      <td><a href="http://hl7.org/fhir/DSTU2/observation.html">Observation</a></td>
+      <td>{% capture md_text %}Abstract class parent for all vital sign profiles.{% endcapture %}{{ md_text | markdownify }}</td>
+    </tr>
+    
+  </tbody>
+</table>
+
+<!-- ==============END CONTENT END CONTENT=================== -->
+
+{% include container-end.html %}
+{% include footer.html %}

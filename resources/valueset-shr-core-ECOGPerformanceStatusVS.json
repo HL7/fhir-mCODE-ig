@@ -1,0 +1,61 @@
+{
+  "resourceType": "ValueSet",
+  "id": "shr-core-ECOGPerformanceStatusVS",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n<p><b>ECOGPerformanceStatusVS ValueSet</b></p>\n<p>Value set for Eastern Cooperative Oncology Group performance status. Values range from grade 0 (Asymptomatic) to grade 5 (Dead).</p>\n</div>"
+  },
+  "url": "http://hl7.org/fhir/us/mcode/shr/core/vs/ECOGPerformanceStatusVS",
+  "identifier": {
+    "system": "http://hl7.org/fhir/us/mcode",
+    "value": "shr.core.ECOGPerformanceStatusVS"
+  },
+  "name": "ECOGPerformanceStatusVS",
+  "status": "draft",
+  "publisher": "The MITRE Corporation",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "other",
+          "value": "http://standardhealthrecord.org"
+        }
+      ]
+    }
+  ],
+  "date": "2019-05-28",
+  "description": "Value set for Eastern Cooperative Oncology Group performance status. Values range from grade 0 (Asymptomatic) to grade 5 (Dead).",
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "concept": [
+          {
+            "code": "425389002",
+            "display": "ECOG Grade 0: Asymptomatic"
+          },
+          {
+            "code": "422512005",
+            "display": "ECOG Grade 1: Symptomatic but completely ambulatory"
+          },
+          {
+            "code": "422894000",
+            "display": "ECOG Grade 2: Symptomatic, <50% in bed during the day"
+          },
+          {
+            "code": "423053003",
+            "display": "ECOG Grade 3: Symptomatic, >50% in bed, but not bedbound"
+          },
+          {
+            "code": "423237006",
+            "display": "ECOG Grade 4: Bedbound"
+          },
+          {
+            "code": "423409001",
+            "display": "ECOG Grade 5: Death"
+          }
+        ]
+      }
+    ]
+  }
+}

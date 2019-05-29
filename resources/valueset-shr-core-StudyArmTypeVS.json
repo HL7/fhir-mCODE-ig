@@ -1,0 +1,53 @@
+{
+  "resourceType": "ValueSet",
+  "id": "shr-core-StudyArmTypeVS",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n<p><b>StudyArmTypeVS ValueSet</b></p>\n<p>The role of each arm in the clinical trial.\n\nFHIR is currently unable to handle values from NCI Thesaurus, so no values are listed in the Expansion, below. The values ARE in the downloads. For convenience, here is a listing of values in this value set:\nNCIT#C94487     &#039;Intervention Group&#039;\nNCIT#C68609     &#039;Active Comparator&#039;\nNCIT#C49648     &#039;Placebo Control&#039;\nNCIT#C116527    &#039;Sham Intervention&#039;\n</p>\n</div>"
+  },
+  "url": "http://hl7.org/fhir/us/mcode/shr/core/vs/StudyArmTypeVS",
+  "identifier": {
+    "system": "http://hl7.org/fhir/us/mcode",
+    "value": "shr.core.StudyArmTypeVS"
+  },
+  "name": "StudyArmTypeVS",
+  "status": "draft",
+  "publisher": "The MITRE Corporation",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "other",
+          "value": "http://standardhealthrecord.org"
+        }
+      ]
+    }
+  ],
+  "date": "2019-05-28",
+  "description": "The role of each arm in the clinical trial.\n\nFHIR is currently unable to handle values from NCI Thesaurus, so no values are listed in the Expansion, below. The values ARE in the downloads. For convenience, here is a listing of values in this value set:\nNCIT#C94487     'Intervention Group'\nNCIT#C68609     'Active Comparator'\nNCIT#C49648     'Placebo Control'\nNCIT#C116527    'Sham Intervention'",
+  "compose": {
+    "include": [
+      {
+        "system": "https://ncit.nci.nih.gov",
+        "concept": [
+          {
+            "code": "C94487",
+            "display": "Intervention Group"
+          },
+          {
+            "code": "C68609",
+            "display": "Active Comparator"
+          },
+          {
+            "code": "C49648",
+            "display": "Placebo Control"
+          },
+          {
+            "code": "C116527",
+            "display": "Sham Intervention"
+          }
+        ]
+      }
+    ]
+  }
+}

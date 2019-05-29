@@ -1,0 +1,62 @@
+---
+# jekyll header
+---
+{% include header.html %}
+
+<!-- ============BreadCrumb=============== -->
+<div id="segment-breadcrumb" class="segmnt">
+  <!-- segment-breadcrumb -->
+  <div class="container">
+    <!-- container -->
+    <ul class="breadcrumb">
+      <li title="home"><a href="index.html"><b>Home</b></a></li>
+      <li><b>Reference Model</b></li>
+    </ul>
+  </div>
+  <!-- /container -->
+</div>
+<!-- /segment-breadcrumb -->
+
+{% include container-start.html %}
+
+<!-- ============CONTENT CONTENT=============== -->
+
+<iframe id="modeldoc"
+    title="ModelDoc"
+    width="100%"
+    src="modeldoc/index.html">
+</iframe>
+
+<!-- Script to make the iframe fill the full height available to it -->
+<!-- Adapted from https://stackoverflow.com/a/330006/489105 -->
+<script>
+//<![CDATA[
+  var mdFrame = document.getElementById('modeldoc');
+
+  function pageY(elem) {
+      return elem.offsetParent ? (elem.offsetTop + pageY(elem.offsetParent)) : elem.offsetTop;
+  }
+
+  function resizeMdFrame() {
+    var height = document.documentElement.clientHeight;
+    height -= pageY(mdFrame);
+    height -= document.getElementById('segment-footer').clientHeight;
+    height = (height < 0) ? 0 : height;
+    mdFrame.style.height = height + 'px';
+  }
+
+  // .onload doesn't work with IE8 and older.
+  if (mdFrame.attachEvent) {
+    mdFrame.attachEvent("onload", resizeMdFrame);
+  } else {
+    mdFrame.onload = resizeMdFrame;
+  }
+
+  window.onresize = resizeMdFrame;
+//]]>
+</script>
+
+<!-- ==============END CONTENT END CONTENT=================== -->
+
+{% include container-end.html %}
+{% include footer.html %}

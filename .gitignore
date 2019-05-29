@@ -1,0 +1,7 @@
+.DS_Store
+/org.hl7.fhir.igpublisher.jar
+/publisher.jar
+/output
+/output/guide
+/qa
+/temp

@@ -1,0 +1,3397 @@
+<ImplementationGuide xmlns="http://hl7.org/fhir">
+    <id value="oncocore-0.9.1" />
+    <url value="http://hl7.org/fhir/us/shr/ImplementationGuide/oncocore-0.9.1" />
+    <name value="HL7 FHIR Implementation Guide: minimal Common Oncology Data Elements (mCODE), v0.9.1 FHIR Profiles" />
+    <status value="draft" />
+    <fhirVersion value="1.0.2"/>
+    <package>
+        <name value="Profiles in this Implementation Guide" />
+        <resource>
+          <purpose value="profile" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-AbnormalBodyStructure" />
+              <display value="shr-core-AbnormalBodyStructure" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="profile" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-AccessionIdentifier" />
+              <display value="shr-core-AccessionIdentifier" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="profile" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-ActionPerformed" />
+              <display value="shr-core-ActionPerformed" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="profile" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-ActionRequest" />
+              <display value="shr-core-ActionRequest" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="profile" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-ActionStatement" />
+              <display value="shr-core-ActionStatement" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="profile" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-lab-AlanineAminotransferaseCCncPtSerPlasQnLabObs" />
+              <display value="shr-lab-AlanineAminotransferaseCCncPtSerPlasQnLabObs" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="profile" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-lab-AlbuminGlobulinMRtoPtSerPlasQnLabObs" />
+              <display value="shr-lab-AlbuminGlobulinMRtoPtSerPlasQnLabObs" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="profile" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-lab-AlbuminMCncPtSerPlasQnLabObs" />
+              <display value="shr-lab-AlbuminMCncPtSerPlasQnLabObs" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="profile" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-lab-AlkalinePhosphataseCCncPtSerPlasQnLabObs" />
+              <display value="shr-lab-AlkalinePhosphataseCCncPtSerPlasQnLabObs" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="profile" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-lab-AniongapSCncPtSerPlasQnLabObs" />
+              <display value="shr-lab-AniongapSCncPtSerPlasQnLabObs" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="profile" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-Annotation" />
+              <display value="shr-core-Annotation" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="profile" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-Appointment" />
+              <display value="shr-core-Appointment" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="profile" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-lab-AspartateAminotransferaseCCncPtSerPlasQnLabObs" />
+              <display value="shr-lab-AspartateAminotransferaseCCncPtSerPlasQnLabObs" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="profile" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-lab-Basophils100WBCNFrPtBldQnAutoCntLabObs" />
+              <display value="shr-lab-Basophils100WBCNFrPtBldQnAutoCntLabObs" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="profile" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-lab-BasophilsNCncPtBldQnAutoCntLabObs" />
+              <display value="shr-lab-BasophilsNCncPtBldQnAutoCntLabObs" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="profile" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-lab-BicarbonateSCncPtSerPlasQnLabObs" />
+              <display value="shr-lab-BicarbonateSCncPtSerPlasQnLabObs" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="profile" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-lab-BilirubinDirectMCncPtSerPlasQnLabObs" />
+              <display value="shr-lab-BilirubinDirectMCncPtSerPlasQnLabObs" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="profile" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-lab-BilirubinMCncPtSerPlasQnLabObs" />
+              <display value="shr-lab-BilirubinMCncPtSerPlasQnLabObs" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="profile" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-lab-Blasts100WBCNFrPtBldQnManCntLabObs" />
+              <display value="shr-lab-Blasts100WBCNFrPtBldQnManCntLabObs" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="profile" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-lab-BlastsNCncPtBldQnLabObs" />
+              <display value="shr-lab-BlastsNCncPtBldQnLabObs" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="profile" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-BloodPressure" />
+              <display value="shr-core-BloodPressure" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="profile" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-BodyHeight" />
+              <display value="shr-core-BodyHeight" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="profile" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-BodyWeight" />
+              <display value="shr-core-BodyWeight" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="profile" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-lab-CBCWAutoDifferentialPanel" />
+              <display value="shr-lab-CBCWAutoDifferentialPanel" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="profile" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-lab-CalciumMCncPtSerPlasQnLabObs" />
+              <display value="shr-lab-CalciumMCncPtSerPlasQnLabObs" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="profile" />
+          <sourceReference>
+              <reference value="StructureDefinition/onco-core-CancerCondition" />
+              <display value="onco-core-CancerCondition" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="profile" />
+          <sourceReference>
+              <reference value="StructureDefinition/onco-core-CancerDiseaseStatus" />
+              <display value="onco-core-CancerDiseaseStatus" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="profile" />
+          <sourceReference>
+              <reference value="StructureDefinition/onco-core-CancerRelatedRadiationProcedure" />
+              <display value="onco-core-CancerRelatedRadiationProcedure" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="profile" />
+          <sourceReference>
+              <reference value="StructureDefinition/onco-core-CancerRelatedSurgicalProcedure" />
+              <display value="onco-core-CancerRelatedSurgicalProcedure" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="profile" />
+          <sourceReference>
+              <reference value="StructureDefinition/onco-core-CancerStageCategory" />
+              <display value="onco-core-CancerStageCategory" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="profile" />
+          <sourceReference>
+              <reference value="StructureDefinition/onco-core-CancerStageGroup" />
+              <display value="onco-core-CancerStageGroup" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="profile" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-lab-CarbonDioxideSCncPtSerPlasQnLabObs" />
+              <display value="shr-lab-CarbonDioxideSCncPtSerPlasQnLabObs" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="profile" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-lab-ChlorideSCncPtSerPlasQnLabObs" />
+              <display value="shr-lab-ChlorideSCncPtSerPlasQnLabObs" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="profile" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-ClinicalStatement" />
+              <display value="shr-core-ClinicalStatement" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="profile" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-CodedLaboratoryObservation" />
+              <display value="shr-core-CodedLaboratoryObservation" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="profile" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-CodedNonLaboratoryObservation" />
+              <display value="shr-core-CodedNonLaboratoryObservation" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="profile" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-ComorbidCondition" />
+              <display value="shr-core-ComorbidCondition" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="profile" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-Composition" />
+              <display value="shr-core-Composition" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="profile" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-lab-ComprehensiveMetabolic2000SerumOrPlasmaPanel" />
+              <display value="shr-lab-ComprehensiveMetabolic2000SerumOrPlasmaPanel" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="profile" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-Condition" />
+              <display value="shr-core-Condition" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="profile" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-Coverage" />
+              <display value="shr-core-Coverage" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="profile" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-lab-CreatinineMCncPtSerPlasQnLabObs" />
+              <display value="shr-lab-CreatinineMCncPtSerPlasQnLabObs" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="profile" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-Device" />
+              <display value="shr-core-Device" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="profile" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-DiagnosticReport" />
+              <display value="shr-core-DiagnosticReport" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="profile" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-DocumentReference" />
+              <display value="shr-core-DocumentReference" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="profile" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-DomainResource" />
+              <display value="shr-core-DomainResource" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="profile" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-Duration" />
+              <display value="shr-core-Duration" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="profile" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-ECOGPerformanceStatus" />
+              <display value="shr-core-ECOGPerformanceStatus" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="profile" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-Encounter" />
+              <display value="shr-core-Encounter" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="profile" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-EncounterOrEpisode" />
+              <display value="shr-core-EncounterOrEpisode" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="profile" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-Entity" />
+              <display value="shr-core-Entity" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="profile" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-EntityOrRole" />
+              <display value="shr-core-EntityOrRole" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="profile" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-lab-Eosinophils100WBCNFrPtBldQnAutoCntLabObs" />
+              <display value="shr-lab-Eosinophils100WBCNFrPtBldQnAutoCntLabObs" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="profile" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-lab-EosinophilsNCncPtBldQnAutoCntLabObs" />
+              <display value="shr-lab-EosinophilsNCncPtBldQnAutoCntLabObs" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="profile" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-EpisodeOfCare" />
+              <display value="shr-core-EpisodeOfCare" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="profile" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-lab-ErythrocyteDistributionWidthEntVolPtRBCQnLabObs" />
+              <display value="shr-lab-ErythrocyteDistributionWidthEntVolPtRBCQnLabObs" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="profile" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-lab-ErythrocyteDistributionWidthRatioPtRBCQnAutoCntLabObs" />
+              <display value="shr-lab-ErythrocyteDistributionWidthRatioPtRBCQnAutoCntLabObs" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="profile" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-lab-ErythrocyteMCHCMCncPtRBCQnAutoCntLabObs" />
+              <display value="shr-lab-ErythrocyteMCHCMCncPtRBCQnAutoCntLabObs" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="profile" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-lab-ErythrocyteMCHEntMassPtRBCQnAutoCntLabObs" />
+              <display value="shr-lab-ErythrocyteMCHEntMassPtRBCQnAutoCntLabObs" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="profile" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-lab-ErythrocytesNCncPtBldQnAutoCntLabObs" />
+              <display value="shr-lab-ErythrocytesNCncPtBldQnAutoCntLabObs" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="profile" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-lab-ErythrocytesNucleated100WBCRatioPtBldQnAutoCntLabObs" />
+              <display value="shr-lab-ErythrocytesNucleated100WBCRatioPtBldQnAutoCntLabObs" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="profile" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-lab-ErythrocytesNucleated100WBCRatioPtBldQnLabObs" />
+              <display value="shr-lab-ErythrocytesNucleated100WBCRatioPtBldQnLabObs" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="profile" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-lab-ErythrocytesNucleatedNCncPtBldQnLabObs" />
+              <display value="shr-lab-ErythrocytesNucleatedNCncPtBldQnLabObs" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="profile" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-FillerOrderNumber" />
+              <display value="shr-core-FillerOrderNumber" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="profile" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-lab-GFR173sqMPredArVRatPtSerPlasQnMDRDLabObs" />
+              <display value="shr-lab-GFR173sqMPredArVRatPtSerPlasQnMDRDLabObs" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="profile" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-lab-GFR173sqMPredBlackArVRatPtSerPlasBldQnMDRDLabObs" />
+              <display value="shr-lab-GFR173sqMPredBlackArVRatPtSerPlasBldQnMDRDLabObs" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="profile" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-lab-GFR173sqMPredFemaleArVRatPtSerPlasBldQnMDRDLabObs" />
+              <display value="shr-lab-GFR173sqMPredFemaleArVRatPtSerPlasBldQnMDRDLabObs" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="profile" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-lab-GFR173sqMPredNonBlackArVRatPtSerPlasBldQnMDRDLabObs" />
+              <display value="shr-lab-GFR173sqMPredNonBlackArVRatPtSerPlasBldQnMDRDLabObs" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="profile" />
+          <sourceReference>
+              <reference value="StructureDefinition/onco-core-GeneticVariantFound" />
+              <display value="onco-core-GeneticVariantFound" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="profile" />
+          <sourceReference>
+              <reference value="StructureDefinition/onco-core-GeneticVariantTested" />
+              <display value="onco-core-GeneticVariantTested" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="profile" />
+          <sourceReference>
+              <reference value="StructureDefinition/onco-core-GenomicsReport" />
+              <display value="onco-core-GenomicsReport" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="profile" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-lab-GlobulinMCncPtSerQnCalculatedLabObs" />
+              <display value="shr-lab-GlobulinMCncPtSerQnCalculatedLabObs" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="profile" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-lab-GlucoseMCncPtSerPlasQnLabObs" />
+              <display value="shr-lab-GlucoseMCncPtSerPlasQnLabObs" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="profile" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-lab-Granulocytes100WBCNFrPtBldQnAutoCntLabObs" />
+              <display value="shr-lab-Granulocytes100WBCNFrPtBldQnAutoCntLabObs" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="profile" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-lab-GranulocytesImmature100WBCNFrPtBldQnAutoCntLabObs" />
+              <display value="shr-lab-GranulocytesImmature100WBCNFrPtBldQnAutoCntLabObs" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="profile" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-lab-GranulocytesImmatureNCncPtBldQnAutoCntLabObs" />
+              <display value="shr-lab-GranulocytesImmatureNCncPtBldQnAutoCntLabObs" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="profile" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-Group" />
+              <display value="shr-core-Group" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="profile" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-HeadlessLaboratoryPanel" />
+              <display value="shr-core-HeadlessLaboratoryPanel" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="profile" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-lab-HematocritVFrPtBldQnAutoCntLabObs" />
+              <display value="shr-lab-HematocritVFrPtBldQnAutoCntLabObs" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="profile" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-lab-HemoglobinMCncPtBldQnLabObs" />
+              <display value="shr-lab-HemoglobinMCncPtBldQnLabObs" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="profile" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-HumanName" />
+              <display value="shr-core-HumanName" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="profile" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-KarnofskyPerformanceStatus" />
+              <display value="shr-core-KarnofskyPerformanceStatus" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="profile" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-LaboratoryObservation" />
+              <display value="shr-core-LaboratoryObservation" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="profile" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-LaboratoryPanel" />
+              <display value="shr-core-LaboratoryPanel" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="profile" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-lab-LeukocytesNCncPtBldQnAutoCntLabObs" />
+              <display value="shr-lab-LeukocytesNCncPtBldQnAutoCntLabObs" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="profile" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-lab-LeukocytesOtherNCncPtBldQnAutoCntLabObs" />
+              <display value="shr-lab-LeukocytesOtherNCncPtBldQnAutoCntLabObs" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="profile" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-Location" />
+              <display value="shr-core-Location" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="profile" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-lab-Lymphocytes100WBCNFrPtBldQnAutoCntLabObs" />
+              <display value="shr-lab-Lymphocytes100WBCNFrPtBldQnAutoCntLabObs" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="profile" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-lab-LymphocytesNCncPtBldQnAutoCntLabObs" />
+              <display value="shr-lab-LymphocytesNCncPtBldQnAutoCntLabObs" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="profile" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-lab-LymphocytesVariant100WBCNFrPtBldQnAutoCntLabObs" />
+              <display value="shr-lab-LymphocytesVariant100WBCNFrPtBldQnAutoCntLabObs" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="profile" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-lab-LymphocytesVariant100WBCNFrPtBldQnLabObs" />
+              <display value="shr-lab-LymphocytesVariant100WBCNFrPtBldQnLabObs" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="profile" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-lab-LymphocytesVariantNCncPtBldQnAutoCntLabObs" />
+              <display value="shr-lab-LymphocytesVariantNCncPtBldQnAutoCntLabObs" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="profile" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-lab-MeanCorpuscularVolumeEntVolPtRBCQnAutoCntLabObs" />
+              <display value="shr-lab-MeanCorpuscularVolumeEntVolPtRBCQnAutoCntLabObs" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="profile" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-Media" />
+              <display value="shr-core-Media" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="profile" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-Medication" />
+              <display value="shr-core-Medication" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="profile" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-MedicationAction" />
+              <display value="shr-core-MedicationAction" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="profile" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-MedicationAdministration" />
+              <display value="shr-core-MedicationAdministration" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="profile" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-MedicationDispense" />
+              <display value="shr-core-MedicationDispense" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="profile" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-MedicationRequest" />
+              <display value="shr-core-MedicationRequest" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="profile" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-MedicationStatement" />
+              <display value="shr-core-MedicationStatement" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="profile" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-lab-Metamyelocytes100WBCNFrPtBldQnManCntLabObs" />
+              <display value="shr-lab-Metamyelocytes100WBCNFrPtBldQnManCntLabObs" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="profile" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-lab-MetamyelocytesNCncPtBldQnLabObs" />
+              <display value="shr-lab-MetamyelocytesNCncPtBldQnLabObs" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="profile" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-Money" />
+              <display value="shr-core-Money" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="profile" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-lab-Monocytes100WBCNFrPtBldQnAutoCntLabObs" />
+              <display value="shr-lab-Monocytes100WBCNFrPtBldQnAutoCntLabObs" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="profile" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-lab-MonocytesNCncPtBldQnAutoCntLabObs" />
+              <display value="shr-lab-MonocytesNCncPtBldQnAutoCntLabObs" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="profile" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-lab-MorphologyImpPtBldNarLabObs" />
+              <display value="shr-lab-MorphologyImpPtBldNarLabObs" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="profile" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-lab-Myelocytes100WBCNFrPtBldQnManCntLabObs" />
+              <display value="shr-lab-Myelocytes100WBCNFrPtBldQnManCntLabObs" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="profile" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-lab-MyelocytesNCncPtBldQnLabObs" />
+              <display value="shr-lab-MyelocytesNCncPtBldQnLabObs" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="profile" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-NationalProviderIdentifier" />
+              <display value="shr-core-NationalProviderIdentifier" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="profile" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-lab-Neutrophils100WBCNFrPtBldQnAutoCntLabObs" />
+              <display value="shr-lab-Neutrophils100WBCNFrPtBldQnAutoCntLabObs" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="profile" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-lab-NeutrophilsBandForm100WBCNFrPtBldQnAutoCntLabObs" />
+              <display value="shr-lab-NeutrophilsBandForm100WBCNFrPtBldQnAutoCntLabObs" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="profile" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-lab-NeutrophilsBandForm100WBCNFrPtBldQnManCntLabObs" />
+              <display value="shr-lab-NeutrophilsBandForm100WBCNFrPtBldQnManCntLabObs" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="profile" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-lab-NeutrophilsBandFormNCncPtBldQnAutoCntLabObs" />
+              <display value="shr-lab-NeutrophilsBandFormNCncPtBldQnAutoCntLabObs" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="profile" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-lab-NeutrophilsBandFormNCncPtBldQnLabObs" />
+              <display value="shr-lab-NeutrophilsBandFormNCncPtBldQnLabObs" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="profile" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-lab-NeutrophilsNCncPtBldQnAutoCntLabObs" />
+              <display value="shr-lab-NeutrophilsNCncPtBldQnAutoCntLabObs" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="profile" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-NonLaboratoryObservation" />
+              <display value="shr-core-NonLaboratoryObservation" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="profile" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-Observation" />
+              <display value="shr-core-Observation" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="profile" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-Organization" />
+              <display value="shr-core-Organization" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="profile" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-lab-OtherCells100WBCNFrPtBldQnAutoCntLabObs" />
+              <display value="shr-lab-OtherCells100WBCNFrPtBldQnAutoCntLabObs" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="profile" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-lab-OtherCellsNCncPtBldQnAutoCntLabObs" />
+              <display value="shr-lab-OtherCellsNCncPtBldQnAutoCntLabObs" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="profile" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-Patient" />
+              <display value="shr-core-Patient" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="profile" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-PlacerOrderNumber" />
+              <display value="shr-core-PlacerOrderNumber" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="profile" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-lab-PlateletDistributionWidthEntVolPtBldQnAutoCntLabObs" />
+              <display value="shr-lab-PlateletDistributionWidthEntVolPtBldQnAutoCntLabObs" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="profile" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-lab-PlateletMeanVolumeEntVolPtBldQnAutoCntLabObs" />
+              <display value="shr-lab-PlateletMeanVolumeEntVolPtBldQnAutoCntLabObs" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="profile" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-lab-PlateletMeanVolumeEntVolPtBldQnReesEckerLabObs" />
+              <display value="shr-lab-PlateletMeanVolumeEntVolPtBldQnReesEckerLabObs" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="profile" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-lab-PlateletsNCncPtBldQnAutoCntLabObs" />
+              <display value="shr-lab-PlateletsNCncPtBldQnAutoCntLabObs" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="profile" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-lab-PotassiumSCncPtSerPlasQnLabObs" />
+              <display value="shr-lab-PotassiumSCncPtSerPlasQnLabObs" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="profile" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-Practitioner" />
+              <display value="shr-core-Practitioner" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="profile" />
+          <sourceReference>
+              <reference value="StructureDefinition/onco-core-PrimaryCancerCondition" />
+              <display value="onco-core-PrimaryCancerCondition" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="profile" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-Procedure" />
+              <display value="shr-core-Procedure" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="profile" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-ProcedureRequest" />
+              <display value="shr-core-ProcedureRequest" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="profile" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-lab-Promyelocytes100WBCNFrPtBldQnManCntLabObs" />
+              <display value="shr-lab-Promyelocytes100WBCNFrPtBldQnManCntLabObs" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="profile" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-lab-PromyelocytesNCncPtBldQnLabObs" />
+              <display value="shr-lab-PromyelocytesNCncPtBldQnLabObs" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="profile" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-lab-ProteinMCncPtSerPlasQnLabObs" />
+              <display value="shr-lab-ProteinMCncPtSerPlasQnLabObs" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="profile" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-QuantitativeLaboratoryObservation" />
+              <display value="shr-core-QuantitativeLaboratoryObservation" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="profile" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-QuantitativeNonLaboratoryObservation" />
+              <display value="shr-core-QuantitativeNonLaboratoryObservation" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="profile" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-lab-QuantityWithRequiredUnits" />
+              <display value="shr-lab-QuantityWithRequiredUnits" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="profile" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-QuestionnaireResponse" />
+              <display value="shr-core-QuestionnaireResponse" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="profile" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-RadiationProcedure" />
+              <display value="shr-core-RadiationProcedure" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="profile" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-ReferralRequest" />
+              <display value="shr-core-ReferralRequest" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="profile" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-RelatedPerson" />
+              <display value="shr-core-RelatedPerson" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="profile" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-ResearchStudy" />
+              <display value="shr-core-ResearchStudy" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="profile" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-ResearchSubject" />
+              <display value="shr-core-ResearchSubject" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="profile" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-Role" />
+              <display value="shr-core-Role" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="profile" />
+          <sourceReference>
+              <reference value="StructureDefinition/onco-core-SecondaryCancerCondition" />
+              <display value="onco-core-SecondaryCancerCondition" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="profile" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-ServiceRequest" />
+              <display value="shr-core-ServiceRequest" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="profile" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-SimpleCodedNonLaboratoryObservation" />
+              <display value="shr-core-SimpleCodedNonLaboratoryObservation" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="profile" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-SimpleLaboratoryObservation" />
+              <display value="shr-core-SimpleLaboratoryObservation" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="profile" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-lab-SimpleQuantLabWithRequiredUnits" />
+              <display value="shr-lab-SimpleQuantLabWithRequiredUnits" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="profile" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-SimpleQuantitativeLaboratoryObservation" />
+              <display value="shr-core-SimpleQuantitativeLaboratoryObservation" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="profile" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-SituationStatement" />
+              <display value="shr-core-SituationStatement" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="profile" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-lab-SodiumSCncPtSerPlasQnLabObs" />
+              <display value="shr-lab-SodiumSCncPtSerPlasQnLabObs" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="profile" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-Specimen" />
+              <display value="shr-core-Specimen" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="profile" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-Substance" />
+              <display value="shr-core-Substance" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="profile" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-SurgicalProcedure" />
+              <display value="shr-core-SurgicalProcedure" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="profile" />
+          <sourceReference>
+              <reference value="StructureDefinition/onco-core-TNMClinicalDistantMetastasesCategory" />
+              <display value="onco-core-TNMClinicalDistantMetastasesCategory" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="profile" />
+          <sourceReference>
+              <reference value="StructureDefinition/onco-core-TNMClinicalPrimaryTumorCategory" />
+              <display value="onco-core-TNMClinicalPrimaryTumorCategory" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="profile" />
+          <sourceReference>
+              <reference value="StructureDefinition/onco-core-TNMClinicalRegionalNodesCategory" />
+              <display value="onco-core-TNMClinicalRegionalNodesCategory" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="profile" />
+          <sourceReference>
+              <reference value="StructureDefinition/onco-core-TNMClinicalStageGroup" />
+              <display value="onco-core-TNMClinicalStageGroup" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="profile" />
+          <sourceReference>
+              <reference value="StructureDefinition/onco-core-TNMPathologicDistantMetastasesCategory" />
+              <display value="onco-core-TNMPathologicDistantMetastasesCategory" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="profile" />
+          <sourceReference>
+              <reference value="StructureDefinition/onco-core-TNMPathologicPrimaryTumorCategory" />
+              <display value="onco-core-TNMPathologicPrimaryTumorCategory" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="profile" />
+          <sourceReference>
+              <reference value="StructureDefinition/onco-core-TNMPathologicRegionalNodesCategory" />
+              <display value="onco-core-TNMPathologicRegionalNodesCategory" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="profile" />
+          <sourceReference>
+              <reference value="StructureDefinition/onco-core-TNMPathologicStageGroup" />
+              <display value="onco-core-TNMPathologicStageGroup" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="profile" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-TaxIdentificationNumber" />
+              <display value="shr-core-TaxIdentificationNumber" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="profile" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-Timing" />
+              <display value="shr-core-Timing" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="profile" />
+          <sourceReference>
+              <reference value="StructureDefinition/onco-core-Tumor" />
+              <display value="onco-core-Tumor" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="profile" />
+          <sourceReference>
+              <reference value="StructureDefinition/onco-core-TumorMarkerTest" />
+              <display value="onco-core-TumorMarkerTest" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="profile" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-lab-UreaNitrogenCreatinineMRtoPtSerPlasQnLabObs" />
+              <display value="shr-lab-UreaNitrogenCreatinineMRtoPtSerPlasQnLabObs" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="profile" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-lab-UreaNitrogenMCncPtSerPlasQnLabObs" />
+              <display value="shr-lab-UreaNitrogenMCncPtSerPlasQnLabObs" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="profile" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-VitalSign" />
+              <display value="shr-core-VitalSign" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-Active-extension" />
+              <display value="shr-core-Active" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-ActualArm-extension" />
+              <display value="shr-core-ActualArm" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-Additive-extension" />
+              <display value="shr-core-Additive" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-Address-extension" />
+              <display value="shr-core-Address" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-AdministrationSite-extension" />
+              <display value="shr-core-AdministrationSite" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-AdministrativeGender-extension" />
+              <display value="shr-core-AdministrativeGender" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-Alias-extension" />
+              <display value="shr-core-Alias" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-AllDay-extension" />
+              <display value="shr-core-AllDay" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-AnatomicalDirection-extension" />
+              <display value="shr-core-AnatomicalDirection" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-Annotation-extension" />
+              <display value="shr-core-Annotation" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-Answer-extension" />
+              <display value="shr-core-Answer" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-AnswerValue-extension" />
+              <display value="shr-core-AnswerValue" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-ApplicableAgeRange-extension" />
+              <display value="shr-core-ApplicableAgeRange" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-ApplicableSubpopulation-extension" />
+              <display value="shr-core-ApplicableSubpopulation" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-AppointmentReasonReference-extension" />
+              <display value="shr-core-AppointmentReasonReference" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-AsNeeded-extension" />
+              <display value="shr-core-AsNeeded" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-AssignedArm-extension" />
+              <display value="shr-core-AssignedArm" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-Attachment-extension" />
+              <display value="shr-core-Attachment" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-Author-extension" />
+              <display value="shr-core-Author" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-AvailabilityExceptions-extension" />
+              <display value="shr-core-AvailabilityExceptions" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-BasedOn-extension" />
+              <display value="shr-core-BasedOn" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-Beneficiary-extension" />
+              <display value="shr-core-Beneficiary" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-BeneficiaryRelationship-extension" />
+              <display value="shr-core-BeneficiaryRelationship" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-BloodPressureCuffSize-extension" />
+              <display value="shr-core-BloodPressureCuffSize" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-BodyLocation-extension" />
+              <display value="shr-core-BodyLocation" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-BodyPosition-extension" />
+              <display value="shr-core-BodyPosition" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-CanonicalUrl-extension" />
+              <display value="shr-core-CanonicalUrl" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-CareContext-extension" />
+              <display value="shr-core-CareContext" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-CarrierAIDC-extension" />
+              <display value="shr-core-CarrierAIDC" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-CarrierHRF-extension" />
+              <display value="shr-core-CarrierHRF" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-Category-extension" />
+              <display value="shr-core-Category" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-Citation-extension" />
+              <display value="shr-core-Citation" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-ClockFaceDirection-extension" />
+              <display value="shr-core-ClockFaceDirection" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-ClosingTime-extension" />
+              <display value="shr-core-ClosingTime" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-Code-extension" />
+              <display value="shr-core-Code" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-CodeableConcept-extension" />
+              <display value="shr-core-CodeableConcept" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-CommentOrDescription-extension" />
+              <display value="shr-core-CommentOrDescription" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-Communication-extension" />
+              <display value="shr-core-Communication" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-Comparator-extension" />
+              <display value="shr-core-Comparator" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-ComplicationReference-extension" />
+              <display value="shr-core-ComplicationReference" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-Condition-extension" />
+              <display value="shr-core-Condition" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-ConditionStudied-extension" />
+              <display value="shr-core-ConditionStudied" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-ContactDetail-extension" />
+              <display value="shr-core-ContactDetail" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-ContactPerson-extension" />
+              <display value="shr-core-ContactPerson" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-ContactPoint-extension" />
+              <display value="shr-core-ContactPoint" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-CostOrPercentage-extension" />
+              <display value="shr-core-CostOrPercentage" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-CostToBeneficiary-extension" />
+              <display value="shr-core-CostToBeneficiary" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-CourseOfTherapyType-extension" />
+              <display value="shr-core-CourseOfTherapyType" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-CoverageClassification-extension" />
+              <display value="shr-core-CoverageClassification" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-Currency-extension" />
+              <display value="shr-core-Currency" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-DailyLifeEventOffset-extension" />
+              <display value="shr-core-DailyLifeEventOffset" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-DateOfDiagnosis-extension" />
+              <display value="shr-core-DateOfDiagnosis" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-DayOfWeek-extension" />
+              <display value="shr-core-DayOfWeek" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-DependentIdentifier-extension" />
+              <display value="shr-core-DependentIdentifier" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-DescriptionMarkdown-extension" />
+              <display value="shr-core-DescriptionMarkdown" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-DetailsUri-extension" />
+              <display value="shr-core-DetailsUri" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-Device-extension" />
+              <display value="shr-core-Device" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-DeviceDesignation-extension" />
+              <display value="shr-core-DeviceDesignation" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-DeviceIdentifier-extension" />
+              <display value="shr-core-DeviceIdentifier" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-DeviceName-extension" />
+              <display value="shr-core-DeviceName" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-DiagnosisCode-extension" />
+              <display value="shr-core-DiagnosisCode" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-DispenseInterval-extension" />
+              <display value="shr-core-DispenseInterval" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-DisplayText-extension" />
+              <display value="shr-core-DisplayText" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-DistinctIdentifier-extension" />
+              <display value="shr-core-DistinctIdentifier" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-DoNotPerform-extension" />
+              <display value="shr-core-DoNotPerform" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-Dosage-extension" />
+              <display value="shr-core-Dosage" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-DoseAmount-extension" />
+              <display value="shr-core-DoseAmount" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-DoseAndRate-extension" />
+              <display value="shr-core-DoseAndRate" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-DoseRate-extension" />
+              <display value="shr-core-DoseRate" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-DoseSequenceNumber-extension" />
+              <display value="shr-core-DoseSequenceNumber" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-Duration-extension" />
+              <display value="shr-core-Duration" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-EffectiveTimePeriod-extension" />
+              <display value="shr-core-EffectiveTimePeriod" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-EncounterClass-extension" />
+              <display value="shr-core-EncounterClass" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-EncounterDiagnosis-extension" />
+              <display value="shr-core-EncounterDiagnosis" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-EncounterReasonReference-extension" />
+              <display value="shr-core-EncounterReasonReference" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-Enrollment-extension" />
+              <display value="shr-core-Enrollment" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/onco-core-EvidenceType-extension" />
+              <display value="onco-core-EvidenceType" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-Exception-extension" />
+              <display value="shr-core-Exception" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-ExpectedPerformanceTime-extension" />
+              <display value="shr-core-ExpectedPerformanceTime" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-ExpectedPerformer-extension" />
+              <display value="shr-core-ExpectedPerformer" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-ExpectedPerformerType-extension" />
+              <display value="shr-core-ExpectedPerformerType" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-FocalSubject-extension" />
+              <display value="shr-core-FocalSubject" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/onco-core-GeneStudied-extension" />
+              <display value="onco-core-GeneStudied" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-GroupIdentifier-extension" />
+              <display value="shr-core-GroupIdentifier" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-HandlingRisk-extension" />
+              <display value="shr-core-HandlingRisk" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/onco-core-HistologyMorphologyBehavior-extension" />
+              <display value="onco-core-HistologyMorphologyBehavior" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-HoursOfOperation-extension" />
+              <display value="shr-core-HoursOfOperation" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-HumanName-extension" />
+              <display value="shr-core-HumanName" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-Identifier-extension" />
+              <display value="shr-core-Identifier" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-IdentifierString-extension" />
+              <display value="shr-core-IdentifierString" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-ImplicitRules-extension" />
+              <display value="shr-core-ImplicitRules" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-Indication-extension" />
+              <display value="shr-core-Indication" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-InformationSource-extension" />
+              <display value="shr-core-InformationSource" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-InitialFill-extension" />
+              <display value="shr-core-InitialFill" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-InstructionCode-extension" />
+              <display value="shr-core-InstructionCode" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-InstructionText-extension" />
+              <display value="shr-core-InstructionText" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-Insurance-extension" />
+              <display value="shr-core-Insurance" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/onco-core-IsPrimaryTumor-extension" />
+              <display value="onco-core-IsPrimaryTumor" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-Jurisdiction-extension" />
+              <display value="shr-core-Jurisdiction" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-Keyword-extension" />
+              <display value="shr-core-Keyword" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-LabelText-extension" />
+              <display value="shr-core-LabelText" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-LandmarkLocation-extension" />
+              <display value="shr-core-LandmarkLocation" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-LandmarkToBodyLocationDirection-extension" />
+              <display value="shr-core-LandmarkToBodyLocationDirection" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-LandmarkToBodyLocationDistance-extension" />
+              <display value="shr-core-LandmarkToBodyLocationDistance" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-LandmarkType-extension" />
+              <display value="shr-core-LandmarkType" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-Language-extension" />
+              <display value="shr-core-Language" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-LastUpdated-extension" />
+              <display value="shr-core-LastUpdated" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-Laterality-extension" />
+              <display value="shr-core-Laterality" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-Location-extension" />
+              <display value="shr-core-Location" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-LocationType-extension" />
+              <display value="shr-core-LocationType" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-LowerBound-extension" />
+              <display value="shr-core-LowerBound" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-ManagingEntity-extension" />
+              <display value="shr-core-ManagingEntity" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-MaxDosePerAdministration-extension" />
+              <display value="shr-core-MaxDosePerAdministration" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-MaxDosePerLifetime-extension" />
+              <display value="shr-core-MaxDosePerLifetime" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-MaxDosePerPeriod-extension" />
+              <display value="shr-core-MaxDosePerPeriod" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-MediaBasedOn-extension" />
+              <display value="shr-core-MediaBasedOn" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-MedicationAdministrationPartOf-extension" />
+              <display value="shr-core-MedicationAdministrationPartOf" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-MedicationBasedOn-extension" />
+              <display value="shr-core-MedicationBasedOn" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-MedicationCodeOrReference-extension" />
+              <display value="shr-core-MedicationCodeOrReference" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-MedicationReasonReference-extension" />
+              <display value="shr-core-MedicationReasonReference" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-MedicationStatementPartOf-extension" />
+              <display value="shr-core-MedicationStatementPartOf" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-Metadata-extension" />
+              <display value="shr-core-Metadata" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-Method-extension" />
+              <display value="shr-core-Method" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-MoneyAmount-extension" />
+              <display value="shr-core-MoneyAmount" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-Name-extension" />
+              <display value="shr-core-Name" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-Narrative-extension" />
+              <display value="shr-core-Narrative" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-NarrativeQualifier-extension" />
+              <display value="shr-core-NarrativeQualifier" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-NarrativeText-extension" />
+              <display value="shr-core-NarrativeText" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-Number-extension" />
+              <display value="shr-core-Number" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-NumberOfRefillsAllowed-extension" />
+              <display value="shr-core-NumberOfRefillsAllowed" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-ObservationBasedOn-extension" />
+              <display value="shr-core-ObservationBasedOn" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-ObservationDerivedFrom-extension" />
+              <display value="shr-core-ObservationDerivedFrom" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-ObservationPartOf-extension" />
+              <display value="shr-core-ObservationPartOf" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-OccurrenceTimeOrPeriod-extension" />
+              <display value="shr-core-OccurrenceTimeOrPeriod" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-OnBehalfOf-extension" />
+              <display value="shr-core-OnBehalfOf" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-OpeningTime-extension" />
+              <display value="shr-core-OpeningTime" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-OperationalStatus-extension" />
+              <display value="shr-core-OperationalStatus" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-Organization-extension" />
+              <display value="shr-core-Organization" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-Orientation-extension" />
+              <display value="shr-core-Orientation" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-PackageAmount-extension" />
+              <display value="shr-core-PackageAmount" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-PartOf-extension" />
+              <display value="shr-core-PartOf" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-Participant-extension" />
+              <display value="shr-core-Participant" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-Participation-extension" />
+              <display value="shr-core-Participation" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-ParticipationPeriod-extension" />
+              <display value="shr-core-ParticipationPeriod" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-ParticipationType-extension" />
+              <display value="shr-core-ParticipationType" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-Patient-extension" />
+              <display value="shr-core-Patient" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-PatientInstruction-extension" />
+              <display value="shr-core-PatientInstruction" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-Payor-extension" />
+              <display value="shr-core-Payor" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-PersonAuthor-extension" />
+              <display value="shr-core-PersonAuthor" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-PersonInformationSource-extension" />
+              <display value="shr-core-PersonInformationSource" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-PolicyHolder-extension" />
+              <display value="shr-core-PolicyHolder" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-Precondition-extension" />
+              <display value="shr-core-Precondition" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-Preferred-extension" />
+              <display value="shr-core-Preferred" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/onco-core-PrimaryCancerCondition-extension" />
+              <display value="onco-core-PrimaryCancerCondition" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-PrincipalInvestigator-extension" />
+              <display value="shr-core-PrincipalInvestigator" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-PriorityCode-extension" />
+              <display value="shr-core-PriorityCode" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-PriorityRank-extension" />
+              <display value="shr-core-PriorityRank" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-ProcedurePartOf-extension" />
+              <display value="shr-core-ProcedurePartOf" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-ProcedureRequestSubjectOfRecord-extension" />
+              <display value="shr-core-ProcedureRequestSubjectOfRecord" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-Profile-extension" />
+              <display value="shr-core-Profile" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-Purpose-extension" />
+              <display value="shr-core-Purpose" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-Question-extension" />
+              <display value="shr-core-Question" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-QuestionnaireCanonical-extension" />
+              <display value="shr-core-QuestionnaireCanonical" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-QuestionnaireResponseBasedOn-extension" />
+              <display value="shr-core-QuestionnaireResponseBasedOn" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-QuestionnaireResponseItem-extension" />
+              <display value="shr-core-QuestionnaireResponseItem" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-QuestionnaireResponsePartOf-extension" />
+              <display value="shr-core-QuestionnaireResponsePartOf" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-QuestionnaireResponseRecorder-extension" />
+              <display value="shr-core-QuestionnaireResponseRecorder" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-RadiationDosePerFraction-extension" />
+              <display value="shr-core-RadiationDosePerFraction" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-RadiationFractionsDelivered-extension" />
+              <display value="shr-core-RadiationFractionsDelivered" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-ReasonCode-extension" />
+              <display value="shr-core-ReasonCode" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-ReasonReference-extension" />
+              <display value="shr-core-ReasonReference" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-ReferenceRange-extension" />
+              <display value="shr-core-ReferenceRange" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-ReferralBasedOn-extension" />
+              <display value="shr-core-ReferralBasedOn" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-ReferralReasonReference-extension" />
+              <display value="shr-core-ReferralReasonReference" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-ReferralRequestSubjectOfRecord-extension" />
+              <display value="shr-core-ReferralRequestSubjectOfRecord" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/onco-core-RegionStudied-extension" />
+              <display value="onco-core-RegionStudied" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-RelatedArtifact-extension" />
+              <display value="shr-core-RelatedArtifact" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/onco-core-RelatedCancerCondition-extension" />
+              <display value="onco-core-RelatedCancerCondition" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-RelatedDocument-extension" />
+              <display value="shr-core-RelatedDocument" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-RelationToLandmark-extension" />
+              <display value="shr-core-RelationToLandmark" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-Relationship-extension" />
+              <display value="shr-core-Relationship" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-RelevantTime-extension" />
+              <display value="shr-core-RelevantTime" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-RepeatCountMax-extension" />
+              <display value="shr-core-RepeatCountMax" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-Replaces-extension" />
+              <display value="shr-core-Replaces" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-Reported-extension" />
+              <display value="shr-core-Reported" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-RequestIntent-extension" />
+              <display value="shr-core-RequestIntent" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-RequestQuantity-extension" />
+              <display value="shr-core-RequestQuantity" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-RequestSubjectOfRecord-extension" />
+              <display value="shr-core-RequestSubjectOfRecord" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-Requester-extension" />
+              <display value="shr-core-Requester" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-ResearchStudy-extension" />
+              <display value="shr-core-ResearchStudy" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-ResearchStudyPhase-extension" />
+              <display value="shr-core-ResearchStudyPhase" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-ResultsInterpreter-extension" />
+              <display value="shr-core-ResultsInterpreter" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-RouteIntoBody-extension" />
+              <display value="shr-core-RouteIntoBody" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-Safety-extension" />
+              <display value="shr-core-Safety" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-SecurityLabel-extension" />
+              <display value="shr-core-SecurityLabel" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-SerialNumber-extension" />
+              <display value="shr-core-SerialNumber" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-ServiceBasedOn-extension" />
+              <display value="shr-core-ServiceBasedOn" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-ServiceCategory-extension" />
+              <display value="shr-core-ServiceCategory" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-ServiceDetails-extension" />
+              <display value="shr-core-ServiceDetails" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-ServiceReasonReference-extension" />
+              <display value="shr-core-ServiceReasonReference" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-SimpleQuantity-extension" />
+              <display value="shr-core-SimpleQuantity" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-SourceSystem-extension" />
+              <display value="shr-core-SourceSystem" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-SpecialHandling-extension" />
+              <display value="shr-core-SpecialHandling" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-Specialty-extension" />
+              <display value="shr-core-Specialty" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-Specimen-extension" />
+              <display value="shr-core-Specimen" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-SpecimenTreatment-extension" />
+              <display value="shr-core-SpecimenTreatment" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-SpecimenType-extension" />
+              <display value="shr-core-SpecimenType" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-Sponsor-extension" />
+              <display value="shr-core-Sponsor" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-StatementDateTime-extension" />
+              <display value="shr-core-StatementDateTime" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-Status-extension" />
+              <display value="shr-core-Status" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-StatusHistory-extension" />
+              <display value="shr-core-StatusHistory" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-StatusReason-extension" />
+              <display value="shr-core-StatusReason" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-StudyArm-extension" />
+              <display value="shr-core-StudyArm" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-StudyObjective-extension" />
+              <display value="shr-core-StudyObjective" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-SubjectOfRecord-extension" />
+              <display value="shr-core-SubjectOfRecord" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-Subrogation-extension" />
+              <display value="shr-core-Subrogation" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-SupportingInformation-extension" />
+              <display value="shr-core-SupportingInformation" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-SurgicalBodyLocationRole-extension" />
+              <display value="shr-core-SurgicalBodyLocationRole" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-Tag-extension" />
+              <display value="shr-core-Tag" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-TargetDocument-extension" />
+              <display value="shr-core-TargetDocument" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-TerminationReason-extension" />
+              <display value="shr-core-TerminationReason" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-Text-extension" />
+              <display value="shr-core-Text" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-TimeOfDay-extension" />
+              <display value="shr-core-TimeOfDay" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-TimePeriod-extension" />
+              <display value="shr-core-TimePeriod" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-Timing-extension" />
+              <display value="shr-core-Timing" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-Title-extension" />
+              <display value="shr-core-Title" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-TotalRadiationDoseDelivered-extension" />
+              <display value="shr-core-TotalRadiationDoseDelivered" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-TreatmentIntent-extension" />
+              <display value="shr-core-TreatmentIntent" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-Type-extension" />
+              <display value="shr-core-Type" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-UdiCarrier-extension" />
+              <display value="shr-core-UdiCarrier" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-Units-extension" />
+              <display value="shr-core-Units" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-UpperBound-extension" />
+              <display value="shr-core-UpperBound" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-Url-extension" />
+              <display value="shr-core-Url" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-UsedCode-extension" />
+              <display value="shr-core-UsedCode" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/onco-core-VariantDescription-extension" />
+              <display value="onco-core-VariantDescription" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/onco-core-VariantHGVSName-extension" />
+              <display value="onco-core-VariantHGVSName" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/onco-core-VariantIdentifier-extension" />
+              <display value="onco-core-VariantIdentifier" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/onco-core-VariantTested-extension" />
+              <display value="onco-core-VariantTested" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/shr-core-VersionId-extension" />
+              <display value="shr-core-VersionId" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="extension" />
+          <sourceReference>
+              <reference value="StructureDefinition/primitive-boolean-extension" />
+              <display value="primitive-boolean" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="terminology" />
+          <sourceReference>
+              <reference value="ValueSet/shr-core-AbnormalBodyStructureVS" />
+              <display value="AbnormalBodyStructureVS" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="terminology" />
+          <sourceReference>
+              <reference value="ValueSet/shr-core-AnatomicalDirectionVS" />
+              <display value="AnatomicalDirectionVS" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="terminology" />
+          <sourceReference>
+              <reference value="ValueSet/shr-core-BloodPressureBodyLocationVS" />
+              <display value="BloodPressureBodyLocationVS" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="terminology" />
+          <sourceReference>
+              <reference value="ValueSet/shr-core-BloodPressureCuffSizeVS" />
+              <display value="BloodPressureCuffSizeVS" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="terminology" />
+          <sourceReference>
+              <reference value="ValueSet/shr-core-BloodPressureMethodVS" />
+              <display value="BloodPressureMethodVS" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="terminology" />
+          <sourceReference>
+              <reference value="ValueSet/shr-core-BodyHeightLengthMethodVS" />
+              <display value="BodyHeightLengthMethodVS" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="terminology" />
+          <sourceReference>
+              <reference value="ValueSet/shr-core-BodyHeightLengthUnitsVS" />
+              <display value="BodyHeightLengthUnitsVS" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="terminology" />
+          <sourceReference>
+              <reference value="ValueSet/shr-core-BodyHeightPreconditionVS" />
+              <display value="BodyHeightPreconditionVS" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="terminology" />
+          <sourceReference>
+              <reference value="ValueSet/shr-core-BodyLocationVS" />
+              <display value="BodyLocationVS" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="terminology" />
+          <sourceReference>
+              <reference value="ValueSet/shr-core-BodyPositionVS" />
+              <display value="BodyPositionVS" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="terminology" />
+          <sourceReference>
+              <reference value="ValueSet/shr-core-BodyWeightMethodVS" />
+              <display value="BodyWeightMethodVS" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="terminology" />
+          <sourceReference>
+              <reference value="ValueSet/shr-core-BodyWeightPreconditionVS" />
+              <display value="BodyWeightPreconditionVS" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="terminology" />
+          <sourceReference>
+              <reference value="ValueSet/shr-core-BodyWeightUnitsVS" />
+              <display value="BodyWeightUnitsVS" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="terminology" />
+          <sourceReference>
+              <reference value="ValueSet/onco-core-CancerBodyLocationVS" />
+              <display value="CancerBodyLocationVS" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="terminology" />
+          <sourceReference>
+              <reference value="ValueSet/onco-core-CancerDiseaseStatusEvidenceTypeVS" />
+              <display value="CancerDiseaseStatusEvidenceTypeVS" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="terminology" />
+          <sourceReference>
+              <reference value="ValueSet/onco-core-CancerDisorderVS" />
+              <display value="CancerDisorderVS" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="terminology" />
+          <sourceReference>
+              <reference value="ValueSet/onco-core-CancerRelatedSurgicalProcedureVS" />
+              <display value="CancerRelatedSurgicalProcedureVS" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="terminology" />
+          <sourceReference>
+              <reference value="ValueSet/onco-core-CancerStagingSystemVS" />
+              <display value="CancerStagingSystemVS" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="terminology" />
+          <sourceReference>
+              <reference value="ValueSet/shr-core-CardiopulmonaryPreconditionVS" />
+              <display value="CardiopulmonaryPreconditionVS" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="terminology" />
+          <sourceReference>
+              <reference value="ValueSet/shr-lab-ChoiceOfUnitsVS-g-per-dL" />
+              <display value="ChoiceOfUnitsVS-g-per-dL" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="terminology" />
+          <sourceReference>
+              <reference value="ValueSet/shr-core-ClockFaceDirectionVS" />
+              <display value="ClockFaceDirectionVS" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="terminology" />
+          <sourceReference>
+              <reference value="ValueSet/shr-core-ComorbidConditionVS" />
+              <display value="ComorbidConditionVS" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="terminology" />
+          <sourceReference>
+              <reference value="ValueSet/shr-core-ConditionCategoryVS" />
+              <display value="ConditionCategoryVS" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="terminology" />
+          <sourceReference>
+              <reference value="ValueSet/shr-core-ConditionStatusTrendVS" />
+              <display value="ConditionStatusTrendVS" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="terminology" />
+          <sourceReference>
+              <reference value="ValueSet/shr-core-ECOGPerformanceStatusVS" />
+              <display value="ECOGPerformanceStatusVS" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="terminology" />
+          <sourceReference>
+              <reference value="ValueSet/shr-lab-EquivalentUnitsVS-g-per-L" />
+              <display value="EquivalentUnitsVS-g-per-L" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="terminology" />
+          <sourceReference>
+              <reference value="ValueSet/shr-lab-EquivalentUnitsVS-mL-per-min-filtration-rate" />
+              <display value="EquivalentUnitsVS-mL-per-min-filtration-rate" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="terminology" />
+          <sourceReference>
+              <reference value="ValueSet/shr-lab-EquivalentUnitsVS-million-per-uL" />
+              <display value="EquivalentUnitsVS-million-per-uL" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="terminology" />
+          <sourceReference>
+              <reference value="ValueSet/shr-lab-EquivalentUnitsVS-per-100-WBC" />
+              <display value="EquivalentUnitsVS-per-100-WBC" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="terminology" />
+          <sourceReference>
+              <reference value="ValueSet/shr-lab-EquivalentUnitsVS-thousand-per-uL" />
+              <display value="EquivalentUnitsVS-thousand-per-uL" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="terminology" />
+          <sourceReference>
+              <reference value="ValueSet/shr-lab-EquivalentUnitsVS-volume-fraction" />
+              <display value="EquivalentUnitsVS-volume-fraction" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="terminology" />
+          <sourceReference>
+              <reference value="ValueSet/onco-core-GeneticSpecimenTypeVS" />
+              <display value="GeneticSpecimenTypeVS" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="terminology" />
+          <sourceReference>
+              <reference value="ValueSet/onco-core-GeneticTestMethodVS" />
+              <display value="GeneticTestMethodVS" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="terminology" />
+          <sourceReference>
+              <reference value="ValueSet/onco-core-GenomicSourceClassVS" />
+              <display value="GenomicSourceClassVS" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="terminology" />
+          <sourceReference>
+              <reference value="ValueSet/onco-core-HistologyMorphologyBehaviorVS" />
+              <display value="HistologyMorphologyBehaviorVS" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="terminology" />
+          <sourceReference>
+              <reference value="ValueSet/shr-core-KarnofskyPerformanceStatusVS" />
+              <display value="KarnofskyPerformanceStatusVS" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="terminology" />
+          <sourceReference>
+              <reference value="ValueSet/shr-core-LandmarkTypeVS" />
+              <display value="LandmarkTypeVS" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="terminology" />
+          <sourceReference>
+              <reference value="ValueSet/shr-core-LateralityVS" />
+              <display value="LateralityVS" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="terminology" />
+          <sourceReference>
+              <reference value="ValueSet/shr-core-OrientationVS" />
+              <display value="OrientationVS" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="terminology" />
+          <sourceReference>
+              <reference value="ValueSet/shr-core-PositiveNegativeVS" />
+              <display value="PositiveNegativeVS" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="terminology" />
+          <sourceReference>
+              <reference value="ValueSet/onco-core-PrimaryCancerDisorderVS" />
+              <display value="PrimaryCancerDisorderVS" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="terminology" />
+          <sourceReference>
+              <reference value="ValueSet/shr-core-QuantitativeResultInterpretationVS" />
+              <display value="QuantitativeResultInterpretationVS" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="terminology" />
+          <sourceReference>
+              <reference value="ValueSet/shr-core-RadiationProcedureVS" />
+              <display value="RadiationProcedureVS" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="terminology" />
+          <sourceReference>
+              <reference value="ValueSet/shr-core-RadiationTargetBodySiteVS" />
+              <display value="RadiationTargetBodySiteVS" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="terminology" />
+          <sourceReference>
+              <reference value="ValueSet/shr-core-ResearchSubjectTerminationReasonVS" />
+              <display value="ResearchSubjectTerminationReasonVS" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="terminology" />
+          <sourceReference>
+              <reference value="ValueSet/onco-core-SecondaryCancerDisorderVS" />
+              <display value="SecondaryCancerDisorderVS" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="terminology" />
+          <sourceReference>
+              <reference value="ValueSet/shr-core-SettingVS" />
+              <display value="SettingVS" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="terminology" />
+          <sourceReference>
+              <reference value="ValueSet/shr-core-StudyArmTypeVS" />
+              <display value="StudyArmTypeVS" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="terminology" />
+          <sourceReference>
+              <reference value="ValueSet/shr-core-SurgicalBodyLocationRoleVS" />
+              <display value="SurgicalBodyLocationRoleVS" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="terminology" />
+          <sourceReference>
+              <reference value="ValueSet/shr-core-SurgicalMethodVS" />
+              <display value="SurgicalMethodVS" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="terminology" />
+          <sourceReference>
+              <reference value="ValueSet/shr-core-SurgicalProcedureVS" />
+              <display value="SurgicalProcedureVS" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="terminology" />
+          <sourceReference>
+              <reference value="ValueSet/onco-core-TNMDistantMetastasesCategoryVS" />
+              <display value="TNMDistantMetastasesCategoryVS" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="terminology" />
+          <sourceReference>
+              <reference value="ValueSet/onco-core-TNMPrimaryTumorCategoryVS" />
+              <display value="TNMPrimaryTumorCategoryVS" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="terminology" />
+          <sourceReference>
+              <reference value="ValueSet/onco-core-TNMRegionalNodesCategoryVS" />
+              <display value="TNMRegionalNodesCategoryVS" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="terminology" />
+          <sourceReference>
+              <reference value="ValueSet/onco-core-TNMStageGroupVS" />
+              <display value="TNMStageGroupVS" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="terminology" />
+          <sourceReference>
+              <reference value="ValueSet/shr-core-TreatmentIntentVS" />
+              <display value="TreatmentIntentVS" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="terminology" />
+          <sourceReference>
+              <reference value="ValueSet/shr-core-TreatmentTerminationReasonVS" />
+              <display value="TreatmentTerminationReasonVS" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="terminology" />
+          <sourceReference>
+              <reference value="ValueSet/onco-core-TumorMarkerTestVS" />
+              <display value="TumorMarkerTestVS" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="terminology" />
+          <sourceReference>
+              <reference value="ValueSet/shr-core-UnitsOfLengthVS" />
+              <display value="UnitsOfLengthVS" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="terminology" />
+          <sourceReference>
+              <reference value="ValueSet/shr-core-YesNoUnknownVS" />
+              <display value="YesNoUnknownVS" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="terminology" />
+          <sourceReference>
+              <reference value="ValueSet/mcode-basic-resource-type-vs" />
+              <display value="mcode Basic Resource Type ValueSet" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="example" />
+          <sourceReference>
+              <reference value="Observation/mCODECancerStageGroupExample01" />
+              <display value="Example: mCODECancerStageGroupExample01" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="example" />
+          <sourceReference>
+              <reference value="Observation/mCODEGeneticMutationTestResultExample01" />
+              <display value="Example: mCODEGeneticMutationTestResultExample01" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="example" />
+          <sourceReference>
+              <reference value="Observation/mCODEGeneticVariantFoundExample01" />
+              <display value="Example: mCODEGeneticVariantFoundExample01" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="example" />
+          <sourceReference>
+              <reference value="Observation/mCODEGeneticVariantTestedExample01" />
+              <display value="Example: mCODEGeneticVariantTestedExample01" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="example" />
+          <sourceReference>
+              <reference value="DiagnosticReport/mCODEGenomicsReportExample01" />
+              <display value="Example: mCODEGenomicsReportExample01" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="example" />
+          <sourceReference>
+              <reference value="Organization/mCODEOrganizationExampleFM1" />
+              <display value="Example: mCODEOrganizationExampleFM1" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="example" />
+          <sourceReference>
+              <reference value="Patient/mCODEPatientExample01" />
+              <display value="Example: mCODEPatientExample01" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="example" />
+          <sourceReference>
+              <reference value="Practitioner/mCODEPractitionerExample01" />
+              <display value="Example: mCODEPractitionerExample01" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="example" />
+          <sourceReference>
+              <reference value="Condition/mCODEPrimaryCancerConditionExample01" />
+              <display value="Example: mCODEPrimaryCancerConditionExample01" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="example" />
+          <sourceReference>
+              <reference value="Observation/mCODETNMClinicalDistantMetastasesCategoryExample01" />
+              <display value="Example: mCODETNMClinicalDistantMetastasesCategoryExample01" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="example" />
+          <sourceReference>
+              <reference value="Observation/mCODETNMClinicalPrimaryTumorCategoryExample01" />
+              <display value="Example: mCODETNMClinicalPrimaryTumorCategoryExample01" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <purpose value="example" />
+          <sourceReference>
+              <reference value="Observation/mCODETNMClinicalRegionalNodesCategoryExample01" />
+              <display value="Example: mCODETNMClinicalRegionalNodesCategoryExample01" />
+          </sourceReference>
+      </resource>
+      
+    </package>
+    <page>
+        <source value="index.html" />
+        <name value="HL7 FHIR Implementation Guide: minimal Common Oncology Data Elements (mCODE), v0.9.1" />
+        <kind value="page" />
+    </page>
+</ImplementationGuide>

@@ -1,0 +1,49 @@
+
+<p> </p>
+<p><b>Mapping Source</b></p>
+<p>This structure represents the following mapping definition:</p>
+<pre>
+shr.core.MedicationStatement maps to http://fhir.org/guides/argonaut/StructureDefinition/argo-medicationstatement:
+  Language maps to language
+  Narrative maps to text
+  ImplicitRules maps to implicitRules
+  Metadata.VersionId maps to meta.versionId
+  Metadata.SourceSystem maps to meta.extension
+  Metadata.Profile maps to meta.profile
+  Metadata.LastUpdated maps to meta.lastUpdated
+  Metadata.SecurityLabel maps to meta.security
+  Metadata.Tag maps to meta.tag
+  Identifier maps to identifier
+  SubjectOfRecord maps to patient
+  MedicationInformationSource maps to informationSource
+  MedicationBasedOn maps to extension
+  MedicationStatementPartOf maps to extension
+  StatementDateTime maps to dateAsserted
+  Status maps to status
+  StatusReason maps to extension
+  constrain wasNotTaken to 0..0
+  constrain reasonNotTaken to 0..0
+  ReasonCode maps to reasonForUse[x]
+  MedicationReasonReference maps to reasonForUse[x]
+  OccurrenceTimeOrPeriod maps to effective[x]
+  Annotation maps to extension  // no mapping to note (string)
+  SupportingInformation maps to supportingInformation
+  MedicationCodeOrReference maps to medication[x]
+  constrain dosage to 0..1
+  Dosage.InstructionText maps to dosage.text
+  Dosage.Timing maps to dosage.timing
+  Dosage.AsNeeded maps to dosage.asNeeded[x]
+  Dosage.AdministrationSite maps to dosage.site[x]
+  Dosage.RouteIntoBody maps to dosage.route
+  Dosage.Method maps to dosage.method
+  Dosage.DoseAndRate.DoseAmount maps to dosage.quantity[x]
+  Dosage.DoseAndRate.DoseRate maps to dosage.rate[x]
+  Dosage.DoseAndRate.Type maps to dosage.extension
+  Dosage.MaxDosePerPeriod maps to dosage.maxDosePerPeriod
+  Dosage.DoseSequenceNumber maps to dosage.extension
+  Dosage.InstructionCode maps to dosage.extension
+  Dosage.PatientInstruction maps to dosage.extension
+  Dosage.MaxDosePerAdministration maps to dosage.extension
+  Dosage.MaxDosePerLifetime maps to dosage.extension
+
+</pre>

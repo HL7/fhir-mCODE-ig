@@ -1,0 +1,28 @@
+
+<p> </p>
+<p><b>Mapping Source</b></p>
+<p>This structure represents the following mapping definition:</p>
+<pre>
+shr.core.ProcedureRequest maps to ProcedureRequest:
+  Identifier maps to identifier
+  StatementDateTime maps to orderedOn
+  ProcedureRequester maps to orderer
+  Code maps to code
+  Category maps to extension
+  SubjectOfRecord maps to subject
+  BodyLocation.Code maps to bodySite
+  BodyLocation.Laterality maps to bodySite.extension
+  BodyLocation.Orientation maps to bodySite.extension
+  BodyLocation.RelationToLandmark maps to bodySite.extension
+  CareContext maps to encounter
+  ReasonCode maps to reason[x]
+  ProcedureRequestReasonReference maps to reason[x]
+  Status maps to status
+  RequestIntent maps to extension
+  ExpectedPerformanceTime maps to scheduled[x]
+  ExpectedPerformerType maps to extension
+  ExpectedPerformer maps to performer
+  PriorityCode maps to priority
+  Annotation maps to notes
+
+</pre>

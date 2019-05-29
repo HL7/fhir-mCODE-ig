@@ -1,0 +1,89 @@
+{
+  "resourceType": "ValueSet",
+  "id": "shr-core-BodyPositionVS",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n<p><b>BodyPositionVS ValueSet</b></p>\n<p>Human body positions associated with actions or observations.</p>\n</div>"
+  },
+  "url": "http://hl7.org/fhir/us/mcode/shr/core/vs/BodyPositionVS",
+  "identifier": {
+    "system": "http://hl7.org/fhir/us/mcode",
+    "value": "shr.core.BodyPositionVS"
+  },
+  "name": "BodyPositionVS",
+  "status": "draft",
+  "publisher": "The MITRE Corporation",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "other",
+          "value": "http://standardhealthrecord.org"
+        }
+      ]
+    }
+  ],
+  "date": "2019-05-28",
+  "description": "Human body positions associated with actions or observations.",
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "concept": [
+          {
+            "code": "40199007",
+            "display": "Supine body position"
+          },
+          {
+            "code": "33586001",
+            "display": "Sitting position"
+          },
+          {
+            "code": "10904000",
+            "display": "Orthostatic body position"
+          },
+          {
+            "code": "414585002",
+            "display": "Left lateral tilt"
+          },
+          {
+            "code": "415346000",
+            "display": "Right lateral tilt"
+          },
+          {
+            "code": "30212006",
+            "display": "Fowler's position"
+          },
+          {
+            "code": "26527006",
+            "display": "Inverse Trendelenburg position"
+          },
+          {
+            "code": "102536004",
+            "display": "Left lateral decubitus position"
+          },
+          {
+            "code": "1240000",
+            "display": "Prone body position"
+          },
+          {
+            "code": "102538003",
+            "display": "Recumbent body position"
+          },
+          {
+            "code": "423413008",
+            "display": "Reverse trendelenburg positioning"
+          },
+          {
+            "code": "102535000",
+            "display": "Right lateral decubitus position"
+          },
+          {
+            "code": "34106002",
+            "display": "Trendelenburg position"
+          }
+        ]
+      }
+    ]
+  }
+}

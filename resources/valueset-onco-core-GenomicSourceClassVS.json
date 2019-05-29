@@ -1,0 +1,69 @@
+{
+  "resourceType": "ValueSet",
+  "id": "onco-core-GenomicSourceClassVS",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n<p><b>GenomicSourceClassVS ValueSet</b></p>\n<p>The genomic class of the specimen being analyzed, for example, germline for inherited genome, somatic for cancer genome, and prenatal for fetal genome.</p>\n</div>"
+  },
+  "url": "http://hl7.org/fhir/us/mcode/onco/core/vs/GenomicSourceClassVS",
+  "identifier": {
+    "system": "http://hl7.org/fhir/us/mcode",
+    "value": "onco.core.GenomicSourceClassVS"
+  },
+  "name": "GenomicSourceClassVS",
+  "status": "draft",
+  "publisher": "The MITRE Corporation",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "other",
+          "value": "http://standardhealthrecord.org"
+        }
+      ]
+    }
+  ],
+  "date": "2019-05-28",
+  "description": "The genomic class of the specimen being analyzed, for example, germline for inherited genome, somatic for cancer genome, and prenatal for fetal genome.",
+  "compose": {
+    "include": [
+      {
+        "system": "http://loinc.org",
+        "concept": [
+          {
+            "code": "LA6683-2",
+            "display": "Germline"
+          },
+          {
+            "code": "LA6684-0",
+            "display": "Somatic"
+          },
+          {
+            "code": "LA10429-1",
+            "display": "Fetal"
+          },
+          {
+            "code": "LA18194-3",
+            "display": "Likely germline"
+          },
+          {
+            "code": "LA18195-0",
+            "display": "Likely somatic"
+          },
+          {
+            "code": "LA18196-8",
+            "display": "Likely fetal"
+          },
+          {
+            "code": "LA18197-6",
+            "display": "Unknown genomic origin"
+          },
+          {
+            "code": "LA26807-0",
+            "display": "De novo"
+          }
+        ]
+      }
+    ]
+  }
+}

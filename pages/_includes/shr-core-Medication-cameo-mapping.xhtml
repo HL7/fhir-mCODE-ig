@@ -1,0 +1,27 @@
+
+<p> </p>
+<p><b>Mapping Source</b></p>
+<p>This structure represents the following mapping definition:</p>
+<pre>
+shr.core.Medication maps to http://fhir.org/guides/argonaut/StructureDefinition/argo-medication:
+  Language maps to language
+  Narrative maps to text
+  ImplicitRules maps to implicitRules
+  Metadata.VersionId maps to meta.versionId
+  Metadata.SourceSystem maps to meta.extension
+  Metadata.Profile maps to meta.profile
+  Metadata.LastUpdated maps to meta.lastUpdated
+  Metadata.SecurityLabel maps to meta.security
+  Metadata.Tag maps to meta.tag
+  Identifier maps to extension
+  Status maps to extension
+  Code maps to code
+  DoseForm maps to product.form
+  Ingredient.SubstanceOrCode maps to product.ingredient.item
+  Ingredient.IngredientStrength maps to product.ingredient.amount
+  Manufacturer maps to manufacturer
+  constrain product.batch to 0..1
+  LotNumber maps to product.batch.lotNumber
+  ExpirationDate maps to product.batch.expirationDate
+
+</pre>

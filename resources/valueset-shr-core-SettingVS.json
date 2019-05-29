@@ -1,0 +1,204 @@
+{
+  "resourceType": "ValueSet",
+  "id": "shr-core-SettingVS",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n<p><b>SettingVS ValueSet</b></p>\n<p>What type of place is found at a given location. More than one descriptor may be applicable.</p>\n</div>"
+  },
+  "url": "http://hl7.org/fhir/us/mcode/shr/core/vs/SettingVS",
+  "identifier": {
+    "system": "http://hl7.org/fhir/us/mcode",
+    "value": "shr.core.SettingVS"
+  },
+  "name": "SettingVS",
+  "status": "draft",
+  "publisher": "The MITRE Corporation",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "other",
+          "value": "http://standardhealthrecord.org"
+        }
+      ]
+    }
+  ],
+  "date": "2019-05-28",
+  "description": "What type of place is found at a given location. More than one descriptor may be applicable.",
+  "codeSystem": {
+    "system": "http://hl7.org/fhir/us/mcode/shr/core/cs/SettingCS",
+    "caseSensitive": true,
+    "concept": [
+      {
+        "code": "work",
+        "definition": "At or during work, in a workplace setting.",
+        "display": "At or during work, in a workplace setting."
+      },
+      {
+        "code": "home",
+        "definition": "At home",
+        "display": "At home"
+      },
+      {
+        "code": "residental",
+        "definition": "In a residential setting",
+        "display": "In a residential setting"
+      },
+      {
+        "code": "school",
+        "definition": "A primary or secondary school",
+        "display": "A primary or secondary school"
+      },
+      {
+        "code": "vehicle",
+        "definition": "In a parked or moving vehicle",
+        "display": "In a parked or moving vehicle"
+      },
+      {
+        "code": "office",
+        "definition": "An non-manufacturing, indoor business setting",
+        "display": "An non-manufacturing, indoor business setting"
+      },
+      {
+        "code": "factory",
+        "definition": "A manufacturing-oriented business setting",
+        "display": "A manufacturing-oriented business setting"
+      },
+      {
+        "code": "business",
+        "definition": "A place of business",
+        "display": "A place of business"
+      },
+      {
+        "code": "restaurant",
+        "definition": "A setting where food is served",
+        "display": "A setting where food is served"
+      },
+      {
+        "code": "food_prep",
+        "definition": "A place where food is prepared",
+        "display": "A place where food is prepared"
+      },
+      {
+        "code": "worksite",
+        "definition": "Workplace that is primarily outdoors",
+        "display": "Workplace that is primarily outdoors"
+      },
+      {
+        "code": "manufacturing",
+        "definition": "A setting where manufacturing takes place",
+        "display": "A setting where manufacturing takes place"
+      },
+      {
+        "code": "owned",
+        "definition": "A building or residence that is owned",
+        "display": "A building or residence that is owned"
+      },
+      {
+        "code": "rental",
+        "definition": "A building or residence that is rented",
+        "display": "A building or residence that is rented"
+      },
+      {
+        "code": "dorm",
+        "definition": "Shared (unassisted) living residence, such as a dormitory or fraternity",
+        "display": "Shared (unassisted) living residence, such as a dormitory or fraternity"
+      },
+      {
+        "code": "foster",
+        "definition": "Foster care group home",
+        "display": "Foster care group home"
+      },
+      {
+        "code": "assisted",
+        "definition": "Assisted living or independent living facility",
+        "display": "Assisted living or independent living facility"
+      },
+      {
+        "code": "snf",
+        "definition": "Skilled nursing facility or other Long-Term Care",
+        "display": "Skilled nursing facility or other Long-Term Care"
+      },
+      {
+        "code": "shelter",
+        "definition": "Homeless or other type of shelter",
+        "display": "Homeless or other type of shelter"
+      },
+      {
+        "code": "hotel",
+        "definition": "Hotel or motel",
+        "display": "Hotel or motel"
+      },
+      {
+        "code": "psh",
+        "definition": "Permanent supportive housing for formerly homeless persons (such as SHP, S+C, or SRO Mod Rehab)",
+        "display": "Permanent supportive housing for formerly homeless persons (such as SHP, S+C, or SRO Mod Rehab)"
+      },
+      {
+        "code": "psych",
+        "definition": "Psychiatric hospital or other psychiatric facility",
+        "display": "Psychiatric hospital or other psychiatric facility"
+      },
+      {
+        "code": "detox",
+        "definition": "Substance abuse treatment facility or detox center",
+        "display": "Substance abuse treatment facility or detox center"
+      },
+      {
+        "code": "prison",
+        "definition": "Individual resides in a correctional facility, state hospital, jail, prison, youth authority facility, juvenile hall, boot camp or Boys Ranch.",
+        "display": "Individual resides in a correctional facility, state hospital, jail, prison, youth authority facility, juvenile hall, boot camp or Boys Ranch."
+      },
+      {
+        "code": "transition",
+        "definition": "Transitional housing, residential provier program, or any type of halfway house",
+        "display": "Transitional housing, residential provier program, or any type of halfway house"
+      },
+      {
+        "code": "squat",
+        "definition": "A homeless camp, abandoned building, shantytown, bus/train/subway station/airport, or squatter area",
+        "display": "A homeless camp, abandoned building, shantytown, bus/train/subway station/airport, or squatter area"
+      },
+      {
+        "code": "outdoors",
+        "definition": "Outside of any shelter, e.g., on a street",
+        "display": "Outside of any shelter, e.g., on a street"
+      },
+      {
+        "code": "agricultural",
+        "definition": "Agricultural setting",
+        "display": "Agricultural setting"
+      },
+      {
+        "code": "farm",
+        "definition": "A farm with livestock",
+        "display": "A farm with livestock"
+      },
+      {
+        "code": "battlefield",
+        "definition": "On a battlefield",
+        "display": "On a battlefield"
+      },
+      {
+        "code": "deployed",
+        "definition": "Deployed to a military camp or area",
+        "display": "Deployed to a military camp or area"
+      },
+      {
+        "code": "ship",
+        "definition": "On a boat",
+        "display": "On a boat"
+      },
+      {
+        "code": "airplane",
+        "definition": "On an airplane",
+        "display": "On an airplane"
+      },
+      {
+        "code": "submarine",
+        "definition": "Aboard a submarine",
+        "display": "Aboard a submarine"
+      }
+    ]
+  }
+}

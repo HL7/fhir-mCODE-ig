@@ -1,0 +1,61 @@
+{
+  "resourceType": "ValueSet",
+  "id": "onco-core-CancerDiseaseStatusEvidenceTypeVS",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n<p><b>CancerDiseaseStatusEvidenceTypeVS ValueSet</b></p>\n<p>The type of evidence backing up the clinical determination of cancer progression.</p>\n</div>"
+  },
+  "url": "http://hl7.org/fhir/us/mcode/onco/core/vs/CancerDiseaseStatusEvidenceTypeVS",
+  "identifier": {
+    "system": "http://hl7.org/fhir/us/mcode",
+    "value": "onco.core.CancerDiseaseStatusEvidenceTypeVS"
+  },
+  "name": "CancerDiseaseStatusEvidenceTypeVS",
+  "status": "draft",
+  "publisher": "The MITRE Corporation",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "other",
+          "value": "http://standardhealthrecord.org"
+        }
+      ]
+    }
+  ],
+  "date": "2019-05-28",
+  "description": "The type of evidence backing up the clinical determination of cancer progression.",
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "concept": [
+          {
+            "code": "363679005",
+            "display": "Imaging (procedure)"
+          },
+          {
+            "code": "252416005",
+            "display": "Histopathology test (procedure)"
+          },
+          {
+            "code": "711015009",
+            "display": "Assessment of symptom control (procedure)"
+          },
+          {
+            "code": "5880005",
+            "display": "Physical examination procedure (procedure)"
+          },
+          {
+            "code": "250724005",
+            "display": "Tumor marker measurement (procedure)"
+          },
+          {
+            "code": "386344002",
+            "display": "Laboratory data interpretation (procedure)"
+          }
+        ]
+      }
+    ]
+  }
+}

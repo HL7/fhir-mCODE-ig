@@ -1,0 +1,86 @@
+---
+# jekyll header
+---
+{% include header.html %}
+
+<!-- ============BreadCrumb=============== -->
+
+<div id="segment-breadcrumb" class="segmnt">
+  <!-- segment-breadcrumb -->
+  <div class="container">
+    <!-- container -->
+    <ul class="breadcrumb">
+      <li title="Home"><a href="index.html"><b>Home</b></a></li>
+    </ul>
+  </div>
+  <!-- /container -->
+</div>
+<!-- /segment-breadcrumb -->
+
+{% include container-start.html %}
+
+<!-- ============CONTENT CONTENT=============== -->
+
+
+<style>
+        p.padding {
+          padding-right: 20px;
+        }
+</style>
+<h1>Contents of this Implementation Guide</h1>
+
+<ul>
+    <li><a href="#Background">Background</a></li>
+    <li><a href="modeling.html">Scope and Conceptual Model</a></li>
+    <li><a href="mCODEDataDictionary.xlsx">Data Dictionary (Excel download)</a></li>
+    <li><a href="examples.html">FHIR Examples</a></li>
+    <li><a href="implementation.html">Implementation Notes</a></li>
+    <li><a href="releaseNotes.html">Errata</a></li>
+    <li><a href="#Disclaimers">Disclaimers</a></li>
+    <li><a href="#Credits">Credits</a></li>
+</ul>
+
+<p>&nbsp;</p>
+
+<h1><a name="Background"></a>Background</h1>
+<p>According to the National Cancer Institute, 38.5 percent of men and women will be diagnosed with cancer at some point during their lifetimes. In 2014, an estimated 14.7M people were living with cancer in the United States. While numbers for cancer and other major diseases are staggering in terms of human suffering, such large figures also provide a place to look for potential solutions. The ultimate goal is to establish data models, technologies, and methods that result in research-quality real-world EHR data for every patient that drives evidence-based and data-driven treatment and analytics for high-quality health outcomes. The intent is that this research-quality real-world data would allow the information gathered from all cancer patients to contribute substantially to improving care for all future cancer patients.</p>
+
+<p><a href="https://www.asco.org/practice-guidelines/cancer-care-initiatives/mcode-creating-set-standard-data-elements-oncology-ehrs">mCODE™</a> —short for Minimal Common Oncology Data Elements—is an initiative intended to assemble a core set of structured data elements for oncology electronic health records (EHRs). The goal is to facilitate cancer data interoperability and improve overall cancer data quality for patient care and research by establishing a set of elements that would form the basic data that would populate all EHRs for patients with cancer. mCODE™ has been created and is being supported by the <a href="https://www.asco.org/">American Society of Clinical Oncology (ASCO&#174;)</a>in collaboration with the MITRE Corporation.
+
+<p>In late 2018, ASCO convened committee of twenty leading clinical experts in oncology, radiology, surgery, and public health developed two use cases which drove the initial clinical data requirements for mCODE. 
+<ul>
+    <li><b>Use Case 1</b>: <a href="mCODE_UseCase_RCC.docx">Comparative Effectiveness Analysis and Cooperative Decision Making</a></li>
+    <li><b>Use Case 2</b>: <a href="mCODE_UseCase_NGS.docx">CEA with Next generation sequencing (NGS)</a></li>
+<!-- Need more information about the use cases -->
+</ul>
+<p>In early 2019, an open survey was conducted to validate and prioritize the data elements from these use cases. Further down-scoping was done based on whether the data would be stored or capture in an electronic health record (EHR), or if it placed undue documentation burden on the clinician.</p> 
+
+<p>The data elements were formally modeled, and rendered as FHIR Profiles. The results are detailed in this Implementation Guide. Clinical readers should focus on the <a href="modeling.html">Scope and Conceptual Model</a>. Informaticists and FHIR implementers can reference the profiles and other technical information.</p> 
+
+<p>&nbsp;</p>
+
+<h1><a name="Disclaimers"></a>Disclaimers</h1>
+<p></p>
+<ul>
+    <li>mCODE elements listed in this IG might vary from the list identified by ASCO in their recent survey.  These elements are subject to change based on review from ASCO, CancerLinQ, and other reviewers from the oncology community.
+    </li>
+    <li>Links to Argonaut IG content are not working due to limitations in the FHIR IG Publisher. The Argonaut Data Query Implementation Guide Version 1.0.0 is located <a href = "http://www.fhir.org/guides/argonaut/r2/">here</a>.
+    </li>
+</ul>
+
+<p>&nbsp;</p>
+
+<h1><a name="Credits"></a>Credits</h1>
+<p>Domain content was provided by the ASCO/CancerLinQ team with additional research from the MITRE Corporation. Help, guidance, and wisdom was generously provided by all members of the ASCO/CancerLinQ team, especially the Dr. Robert Miller and Dr. Wendy Rubenstein.</p>
+<p>This IG was authored by the MITRE Corporation using the <a href="https://github.com/standardhealth/shr-cli/wiki">Clinical Information Modeling and Profiling Language (CIMPL),</a> a free, open source toolchain from <a href="https://www.mitre.org/">MITRE Corporation</a>.</p>
+
+<p>&nbsp;</p>
+<footer>
+    <hr>
+    <p><font color="#BEBEBD"><small>Approved for Public Release. Distribution Unlimited. Case Number 16-1988</small></font></p>
+</footer>
+
+<!-- ==============END CONTENT END CONTENT=================== -->
+
+{% include container-end.html %}
+{% include footer.html %}

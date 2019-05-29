@@ -1,0 +1,45 @@
+{
+  "resourceType": "ValueSet",
+  "id": "shr-core-BodyWeightUnitsVS",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n<p><b>BodyWeightUnitsVS ValueSet</b></p>\n<p>Codes representing the acceptable units for body weight measurement.</p>\n</div>"
+  },
+  "url": "http://hl7.org/fhir/us/mcode/shr/core/vs/BodyWeightUnitsVS",
+  "identifier": {
+    "system": "http://hl7.org/fhir/us/mcode",
+    "value": "shr.core.BodyWeightUnitsVS"
+  },
+  "name": "BodyWeightUnitsVS",
+  "status": "draft",
+  "publisher": "The MITRE Corporation",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "other",
+          "value": "http://standardhealthrecord.org"
+        }
+      ]
+    }
+  ],
+  "date": "2019-05-28",
+  "description": "Codes representing the acceptable units for body weight measurement.",
+  "compose": {
+    "include": [
+      {
+        "system": "http://unitsofmeasure.org",
+        "concept": [
+          {
+            "code": "kg",
+            "display": "kg"
+          },
+          {
+            "code": "[lb_av]",
+            "display": "pounds"
+          }
+        ]
+      }
+    ]
+  }
+}

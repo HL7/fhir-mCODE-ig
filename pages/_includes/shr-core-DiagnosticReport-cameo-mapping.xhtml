@@ -1,0 +1,34 @@
+
+<p> </p>
+<p><b>Mapping Source</b></p>
+<p>This structure represents the following mapping definition:</p>
+<pre>
+shr.core.DiagnosticReport maps to DiagnosticReport:
+  Language maps to language
+  Narrative maps to text
+  ImplicitRules maps to implicitRules
+  Metadata.VersionId maps to meta.versionId
+  Metadata.SourceSystem maps to meta.extension
+  Metadata.Profile maps to meta.profile
+  Metadata.LastUpdated maps to meta.lastUpdated
+  Metadata.SecurityLabel maps to meta.security
+  Metadata.Tag maps to meta.tag
+  Identifier maps to identifier
+  Status maps to status
+  Code maps to code
+  Category maps to category
+  ObservationSubjectOfRecord maps to subject
+  CareContext maps to encounter
+  RelevantTime maps to effective[x]
+  StatementDateTime maps to issued
+  DiagnosticReportPerformer maps to performer
+  ResultsInterpreter maps to extension
+  Specimen maps to specimen
+  Observation maps to result (slice on = target.reference.resolve(); slice on type = profile; slice strategy = includes)
+  MediaIncluded.CommentOrDescription maps to image.comment
+  MediaIncluded.Media maps to image.link
+  ConclusionText maps to conclusion
+  ConclusionCode maps to codedDiagnosis
+  PresentedForm maps to presentedForm
+
+</pre>

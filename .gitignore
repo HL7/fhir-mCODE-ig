@@ -1,7 +1,13 @@
 .DS_Store
-/org.hl7.fhir.igpublisher.jar
+/org.hl7.fhir.publisher.jar
 /publisher.jar
 /output
 /output/guide
 /qa
 /temp
+/ig.ini
+/resources/ig-expansion-parameters.json
+/resources/ig-validation-parameters.json
+/resources/ig-expansion-parameters.json
+/resources/ig-new.json
+/resources/ig-new.xml

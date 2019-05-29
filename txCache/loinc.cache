@@ -1937,3 +1937,47 @@ e: {
   "error" : ""
 }
 -------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "48002-0",
+  "display" : "Genomic source class [Type]"
+}, "valueSet" :null}####
+v: {
+  "display" : "Genomic source class [Type]",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "48003-8",
+  "display" : "DNA sequence variation identifier"
+}, "valueSet" :null}####
+v: {
+  "display" : "DNA sequence variation identifier [Identifier]",
+  "severity" : "warning",
+  "error" : "The display \"DNA sequence variation identifier\" is not a valid display for the code {http://loinc.org}48003-8 - should be one of [\"DNA sequence variation identifier [Identifier]\",\"DNA seq var ID\"]"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "82154-6",
+  "display" : "Genomic structural variant name"
+}, "valueSet" :null}####
+v: {
+  "display" : "Genomic structural variant name",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "47998-0",
+  "display" : "DNA sequence variation display name"
+}, "valueSet" :null}####
+v: {
+  "display" : "DNA sequence variation display name [Text] Narrative",
+  "severity" : "warning",
+  "error" : "The display \"DNA sequence variation display name\" is not a valid display for the code {http://loinc.org}47998-0 - should be one of [\"DNA sequence variation display name [Text] Narrative\",\"DNA seq var display name\"]"
+}
+-------------------------------------------------------------------------------------

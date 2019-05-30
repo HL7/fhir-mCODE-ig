@@ -15,7 +15,7 @@
     "qa": "qa",
     "specification": "http://hl7.org/fhir/DSTU2"
   },
-  "npm-name": "oncocore",
+  "npm-name": "hl7.fhir.us.mcode",
   "sct-edition": "http://snomed.info/sct/731000124108",
   "gen-examples": "false",
   "do-transforms": "false",

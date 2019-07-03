@@ -1,0 +1,66 @@
+{
+  "resourceType": "CodeSystem",
+  "id": "obf-ResearchSubjectTerminationReasonCS",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n<p><b>ResearchSubjectTerminationReasonCS CodeSystem</b></p>\n<p>The reason for a research subject leaving a research study.</p>\n</div>"
+  },
+  "url": "http://hl7.org/fhir/us/mcode/CodeSystem/obf-ResearchSubjectTerminationReasonCS",
+  "identifier": [
+    {
+      "system": "http://hl7.org/fhir/us/mcode",
+      "value": "obf.ResearchSubjectTerminationReasonCS"
+    }
+  ],
+  "name": "ResearchSubjectTerminationReasonCS",
+  "title": "ResearchSubjectTerminationReasonCS",
+  "status": "draft",
+  "publisher": "The MITRE Corporation",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://standardhealthrecord.org"
+        }
+      ]
+    }
+  ],
+  "date": "2019-07-03",
+  "description": "The reason for a research subject leaving a research study.",
+  "caseSensitive": true,
+  "content": "complete",
+  "count": 6,
+  "concept": [
+    {
+      "code": "moved",
+      "definition": "Subject relocated",
+      "display": "Subject relocated"
+    },
+    {
+      "code": "died",
+      "definition": "Suject passed away",
+      "display": "Suject passed away"
+    },
+    {
+      "code": "ended",
+      "definition": "Research study ended",
+      "display": "Research study ended"
+    },
+    {
+      "code": "adverse",
+      "definition": "Subject could not tolerate treatement",
+      "display": "Subject could not tolerate treatement"
+    },
+    {
+      "code": "protocol",
+      "definition": "Subject could not follow protocol, e.g. required appointments, dosing schedule, etc.",
+      "display": "Subject could not follow protocol, e.g. required appointments, dosing schedule, etc."
+    },
+    {
+      "code": "unknown",
+      "definition": "Reason not known",
+      "display": "Reason not known"
+    }
+  ]
+}

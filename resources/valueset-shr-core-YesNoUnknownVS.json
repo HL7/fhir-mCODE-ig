@@ -5,25 +5,28 @@
     "status": "generated",
     "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n<p><b>YesNoUnknownVS ValueSet</b></p>\n<p>A value set containing yes, no, and unknown.</p>\n</div>"
   },
-  "url": "http://hl7.org/fhir/us/mcode/shr/core/vs/YesNoUnknownVS",
-  "identifier": {
-    "system": "http://hl7.org/fhir/us/mcode",
-    "value": "shr.core.YesNoUnknownVS"
-  },
+  "url": "http://hl7.org/fhir/us/mcode/ValueSet/shr-core-YesNoUnknownVS",
+  "identifier": [
+    {
+      "system": "http://hl7.org/fhir/us/mcode",
+      "value": "shr.core.YesNoUnknownVS"
+    }
+  ],
   "name": "YesNoUnknownVS",
+  "title": "YesNoUnknownVS",
   "status": "draft",
   "publisher": "The MITRE Corporation",
   "contact": [
     {
       "telecom": [
         {
-          "system": "other",
+          "system": "url",
           "value": "http://standardhealthrecord.org"
         }
       ]
     }
   ],
-  "date": "2019-05-28",
+  "date": "2019-07-03",
   "description": "A value set containing yes, no, and unknown.",
   "compose": {
     "include": [

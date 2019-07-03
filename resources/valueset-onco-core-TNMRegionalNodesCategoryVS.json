@@ -5,25 +5,28 @@
     "status": "generated",
     "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n<p><b>TNMRegionalNodesCategoryVS ValueSet</b></p>\n<p>This value set is intended to contain allowable values for the N category, according to TNM staging rules. SNOMED CT codes or AJCC codes (preferrably, version 8 for current cancers) are allowed, but are not listed here due to AJCC intellectual property restrictions.\n\n* AJCC terminology: examples of N categories include &#039;cN0&#039;, indicating no evidence of lymph node involvement, and &#039;pN1&#039;, indicating regional lymph node involvement to a small extent, with specific thresholds for the lymph node groups and number of lymph nodes involved. Other N categories refer to increasing lymph node involvement. Please note allowable N categories may vary between clinical and pathologic classifications. The full set of allowable clinical and pathologic N categories, along with its current descriptions, can be accessed through the AJCC Staging Manual and any applicable updates and corrections, as well as the AJCC API.\n\n* SNOMED CT has content related to the N category under the hierarchy of 385382003 &#039;Node category finding&#039;, such as 5856006 &#039;N3 category&#039; and 277672002 &#039;Node stage N1a&#039;. If using SNOMED-CT to store N category findings, the use of codes that do not contain descriptions of the categories, such as the examples provided, is encouraged, as stage finding codes in SNOMED CT may not be up-to-date with current AJCC guidance. Note that SNOMED CT codes do not always make a distinction between clinical and pathological classifications (e.g. &#039;cN1&#039; and &#039;pN1&#039; may be represented by the same SNOMED CT code 53623008 &#039;N1 category&#039;). In addition, SNOMED CT may not have complete TNM staging terminology and may require supplementation with codes from another controlled vocabulary (e.g. NCI Thesaurus).</p>\n</div>"
   },
-  "url": "http://hl7.org/fhir/us/mcode/onco/core/vs/TNMRegionalNodesCategoryVS",
-  "identifier": {
-    "system": "http://hl7.org/fhir/us/mcode",
-    "value": "onco.core.TNMRegionalNodesCategoryVS"
-  },
+  "url": "http://hl7.org/fhir/us/mcode/ValueSet/onco-core-TNMRegionalNodesCategoryVS",
+  "identifier": [
+    {
+      "system": "http://hl7.org/fhir/us/mcode",
+      "value": "onco.core.TNMRegionalNodesCategoryVS"
+    }
+  ],
   "name": "TNMRegionalNodesCategoryVS",
+  "title": "TNMRegionalNodesCategoryVS",
   "status": "draft",
   "publisher": "The MITRE Corporation",
   "contact": [
     {
       "telecom": [
         {
-          "system": "other",
+          "system": "url",
           "value": "http://standardhealthrecord.org"
         }
       ]
     }
   ],
-  "date": "2019-05-28",
+  "date": "2019-07-03",
   "description": "This value set is intended to contain allowable values for the N category, according to TNM staging rules. SNOMED CT codes or AJCC codes (preferrably, version 8 for current cancers) are allowed, but are not listed here due to AJCC intellectual property restrictions.\n\n* AJCC terminology: examples of N categories include 'cN0', indicating no evidence of lymph node involvement, and 'pN1', indicating regional lymph node involvement to a small extent, with specific thresholds for the lymph node groups and number of lymph nodes involved. Other N categories refer to increasing lymph node involvement. Please note allowable N categories may vary between clinical and pathologic classifications. The full set of allowable clinical and pathologic N categories, along with its current descriptions, can be accessed through the AJCC Staging Manual and any applicable updates and corrections, as well as the AJCC API.\n\n* SNOMED CT has content related to the N category under the hierarchy of 385382003 'Node category finding', such as 5856006 'N3 category' and 277672002 'Node stage N1a'. If using SNOMED-CT to store N category findings, the use of codes that do not contain descriptions of the categories, such as the examples provided, is encouraged, as stage finding codes in SNOMED CT may not be up-to-date with current AJCC guidance. Note that SNOMED CT codes do not always make a distinction between clinical and pathological classifications (e.g. 'cN1' and 'pN1' may be represented by the same SNOMED CT code 53623008 'N1 category'). In addition, SNOMED CT may not have complete TNM staging terminology and may require supplementation with codes from another controlled vocabulary (e.g. NCI Thesaurus).",
   "compose": {}
 }

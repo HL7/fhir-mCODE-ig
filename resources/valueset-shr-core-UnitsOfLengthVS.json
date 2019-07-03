@@ -5,25 +5,28 @@
     "status": "generated",
     "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n<p><b>UnitsOfLengthVS ValueSet</b></p>\n<p>Units of measure related to length or distance.</p>\n</div>"
   },
-  "url": "http://hl7.org/fhir/us/mcode/shr/core/vs/UnitsOfLengthVS",
-  "identifier": {
-    "system": "http://hl7.org/fhir/us/mcode",
-    "value": "shr.core.UnitsOfLengthVS"
-  },
+  "url": "http://hl7.org/fhir/us/mcode/ValueSet/shr-core-UnitsOfLengthVS",
+  "identifier": [
+    {
+      "system": "http://hl7.org/fhir/us/mcode",
+      "value": "shr.core.UnitsOfLengthVS"
+    }
+  ],
   "name": "UnitsOfLengthVS",
+  "title": "UnitsOfLengthVS",
   "status": "draft",
   "publisher": "The MITRE Corporation",
   "contact": [
     {
       "telecom": [
         {
-          "system": "other",
+          "system": "url",
           "value": "http://standardhealthrecord.org"
         }
       ]
     }
   ],
-  "date": "2019-05-28",
+  "date": "2019-07-03",
   "description": "Units of measure related to length or distance.",
   "compose": {
     "include": [

@@ -5,25 +5,28 @@
     "status": "generated",
     "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n<p><b>CancerStagingSystemVS ValueSet</b></p>\n<p>System used for staging. Because SNOMED CT does not currently have a code representing AJCC Version 8, specify the exact text &#039;AJCC Version 8&#039; in the text sub-field of the code structure, and omit the code.</p>\n</div>"
   },
-  "url": "http://hl7.org/fhir/us/mcode/onco/core/vs/CancerStagingSystemVS",
-  "identifier": {
-    "system": "http://hl7.org/fhir/us/mcode",
-    "value": "onco.core.CancerStagingSystemVS"
-  },
+  "url": "http://hl7.org/fhir/us/mcode/ValueSet/onco-core-CancerStagingSystemVS",
+  "identifier": [
+    {
+      "system": "http://hl7.org/fhir/us/mcode",
+      "value": "onco.core.CancerStagingSystemVS"
+    }
+  ],
   "name": "CancerStagingSystemVS",
+  "title": "CancerStagingSystemVS",
   "status": "draft",
   "publisher": "The MITRE Corporation",
   "contact": [
     {
       "telecom": [
         {
-          "system": "other",
+          "system": "url",
           "value": "http://standardhealthrecord.org"
         }
       ]
     }
   ],
-  "date": "2019-05-28",
+  "date": "2019-07-03",
   "description": "System used for staging. Because SNOMED CT does not currently have a code representing AJCC Version 8, specify the exact text 'AJCC Version 8' in the text sub-field of the code structure, and omit the code.",
   "compose": {
     "include": [

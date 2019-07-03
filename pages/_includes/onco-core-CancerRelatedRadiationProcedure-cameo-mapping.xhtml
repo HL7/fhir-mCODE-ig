@@ -3,48 +3,49 @@
 <p><b>Mapping Source</b></p>
 <p>This structure represents the following mapping definition:</p>
 <pre>
-onco.core.CancerRelatedRadiationProcedure maps to http://fhir.org/guides/argonaut/StructureDefinition/argo-procedure:
+onco.core.CancerRelatedRadiationProcedure maps to http://hl7.org/fhir/us/core/StructureDefinition/us-core-procedure:
   Language maps to language
-  Narrative maps to text
   ImplicitRules maps to implicitRules
   Metadata.VersionId maps to meta.versionId
-  Metadata.SourceSystem maps to meta.extension
+  Metadata.SourceSystem maps to meta.source
   Metadata.Profile maps to meta.profile
   Metadata.LastUpdated maps to meta.lastUpdated
   Metadata.SecurityLabel maps to meta.security
   Metadata.Tag maps to meta.tag
+  Narrative maps to text
   Identifier maps to identifier
-  ProcedurePartOf maps to extension
-  SubjectOfRecord maps to subject
+  ProcedureBasedOn maps to basedOn
+  ProcedurePartOf maps to partOf  // add Observation, MedicationAdministration
   Status maps to status
-  StatusReason maps to extension
+  StatusReason maps to statusReason
   Category maps to category
   Code maps to code
-  constrain notPerformed to 0..0
-  constrain reasonNotPerformed to 0..0
+  SubjectOfRecord maps to subject
+  CareContext maps to encounter
+  OccurrenceTimeOrPeriod maps to performed[x]  // Types string, Age, Range -- not implemented in SHR
+  PersonAuthor maps to recorder
+  PersonInformationSource maps to asserter
+  Participation maps to performer
+  Participation.Participant maps to performer.actor  // Added Target Type PractitionerRole -- not implemented
+  Participation.ParticipationType maps to performer.function  // renamed role to function in R4
+  Participation.OnBehalfOf maps to performer.onBehalfOf
+  Location maps to location
+  ReasonCode maps to reasonCode
+  CancerSurgicalProcedureReasonReference maps to reasonReference
   BodyLocation.Code maps to bodySite
   BodyLocation.Laterality maps to bodySite.extension
   BodyLocation.Orientation maps to bodySite.extension
   BodyLocation.RelationToLandmark maps to bodySite.extension
-  ReasonCode maps to reason[x]
-  CancerSurgicalProcedureReasonReference maps to reason[x]
-  Participation maps to performer
-  Participation.Participant maps to performer.actor
-  Participation.ParticipationType maps to performer.role
-  Participation.OnBehalfOf maps to performer.extension
-  CareContext maps to encounter
-  Location maps to location
+  Annotation maps to note
   Outcome maps to outcome
   DiagnosticReport maps to report
   ComplicationCode maps to complication
-  ComplicationReference maps to extension
+  ComplicationReference maps to complicationDetail
   FollowUp maps to followUp
-  ProcedureBasedOn maps to request
-  Annotation maps to notes
   FocalDevice maps to focalDevice
   FocalDevice.Device maps to focalDevice.manipulated
   FocalDevice.FocalDeviceAction maps to focalDevice.action
-  UsedCode maps to extension
-  MaterialUsedReference maps to used
+  MaterialUsedReference maps to usedReference
+  UsedCode maps to usedCode
 
 </pre>

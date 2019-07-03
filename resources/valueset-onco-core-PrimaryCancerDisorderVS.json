@@ -5,25 +5,28 @@
     "status": "generated",
     "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n<p><b>PrimaryCancerDisorderVS ValueSet</b></p>\n<p>Types of primary malignant neoplastic disease, coded in  in SNOMED CT or ICD-10-CM.\n\n*SNOMED CT coding: Use a code from the disorder hierarchy under SNOMED CT 363346000 &#039;Malignant neoplastic disease (disorder)&#039; exluding codes descending from SNOMED CT 128462008 &#039;Secondary malignant neoplastic disease (disorder)&#039;. If body location is not precoordinated (i.e., implied by the code), the site of the primary tumor should be specified in the body site attribute.\n* ICD-10-CM coding: Use one of the codes given in this value set representing primary malignant neoplasms and neoplasms of uncertain or unspecified behavior.\n\nNote that ICD-O-3 specifies morphology and topography, not disorder. If ICD-O-3 is used, the primary cancer disorder code must be specifically be SNOMED-CT 363346000  &#039;Malignant neoplastic disease (disorder)&#039;. The ICD-O-3 morphology and topography codes should be entered in the HistologyMorphologyBehavior and body location fields, respectively.</p>\n</div>"
   },
-  "url": "http://hl7.org/fhir/us/mcode/onco/core/vs/PrimaryCancerDisorderVS",
-  "identifier": {
-    "system": "http://hl7.org/fhir/us/mcode",
-    "value": "onco.core.PrimaryCancerDisorderVS"
-  },
+  "url": "http://hl7.org/fhir/us/mcode/ValueSet/onco-core-PrimaryCancerDisorderVS",
+  "identifier": [
+    {
+      "system": "http://hl7.org/fhir/us/mcode",
+      "value": "onco.core.PrimaryCancerDisorderVS"
+    }
+  ],
   "name": "PrimaryCancerDisorderVS",
+  "title": "PrimaryCancerDisorderVS",
   "status": "draft",
   "publisher": "The MITRE Corporation",
   "contact": [
     {
       "telecom": [
         {
-          "system": "other",
+          "system": "url",
           "value": "http://standardhealthrecord.org"
         }
       ]
     }
   ],
-  "date": "2019-05-28",
+  "date": "2019-07-03",
   "description": "Types of primary malignant neoplastic disease, coded in  in SNOMED CT or ICD-10-CM.\n\n*SNOMED CT coding: Use a code from the disorder hierarchy under SNOMED CT 363346000 'Malignant neoplastic disease (disorder)' exluding codes descending from SNOMED CT 128462008 'Secondary malignant neoplastic disease (disorder)'. If body location is not precoordinated (i.e., implied by the code), the site of the primary tumor should be specified in the body site attribute.\n* ICD-10-CM coding: Use one of the codes given in this value set representing primary malignant neoplasms and neoplasms of uncertain or unspecified behavior.\n\nNote that ICD-O-3 specifies morphology and topography, not disorder. If ICD-O-3 is used, the primary cancer disorder code must be specifically be SNOMED-CT 363346000  'Malignant neoplastic disease (disorder)'. The ICD-O-3 morphology and topography codes should be entered in the HistologyMorphologyBehavior and body location fields, respectively.",
   "compose": {
     "include": [

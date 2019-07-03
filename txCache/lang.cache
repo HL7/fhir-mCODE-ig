@@ -1,9 +1,54 @@
 -------------------------------------------------------------------------------------
 {"code" : {
+  "coding" : [{
+    "system" : "urn:ietf:bcp:47",
+    "code" : "en-US",
+    "display" : "English (Region=United States)"
+  }],
+  "text" : "English"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "urn:ietf:bcp:47",
+      "filter" : [{
+        "property" : "ext-lang",
+        "op" : "exists",
+        "value" : "false"
+      },
+      {
+        "property" : "script",
+        "op" : "exists",
+        "value" : "false"
+      },
+      {
+        "property" : "variant",
+        "op" : "exists",
+        "value" : "false"
+      },
+      {
+        "property" : "extension",
+        "op" : "exists",
+        "value" : "false"
+      },
+      {
+        "property" : "private-use",
+        "op" : "exists",
+        "value" : "false"
+      }]
+    }]
+  }
+}, "lang":"null"}####
+v: {
+  "display" : "English (Region=United States)",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
   "system" : "urn:ietf:bcp:47",
-  "code" : "en-US",
-  "display" : "English (Region=United States)"
-}, "valueSet" :null}####
+  "code" : "en-US"
+}, "valueSet" :null, "lang":"null"}####
 v: {
   "display" : "English (Region=United States)",
   "severity" : null,

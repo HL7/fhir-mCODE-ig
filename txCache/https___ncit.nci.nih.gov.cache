@@ -84,11 +84,11 @@
       }]
     }]
   }
-}}####
+}, "lang":"null"}####
 v: {
   "display" : "",
   "severity" : "error",
-  "error" : "The code system \"https://ncit.nci.nih.gov\" is not known; The code provided (https://ncit.nci.nih.gov#C101293) is not  valid in the value set GeneticTestMethodVS"
+  "error" : "The code system \"https://ncit.nci.nih.gov\" in the include in \"http://hl7.org/fhir/us/mcode/ValueSet/onco-core-GeneticTestMethodVS\" is not known; The code system \"https://ncit.nci.nih.gov\" is not known for the code \"C101293\"; The code provided (https://ncit.nci.nih.gov#C101293) is not  valid in the value set GeneticTestMethodVS"
 }
 -------------------------------------------------------------------------------------
 {"hierarchical" : true, "valueSet" :{
@@ -172,7 +172,7 @@ v: {
   }
 }}####
 e: {
-  "error" : "Error unmarshalling resource: Unable to provide support for code system https://ncit.nci.nih.gov"
+  "error" : "Error from server: Unable to provide support for code system https://ncit.nci.nih.gov"
 }
 -------------------------------------------------------------------------------------
 {"hierarchical" : true, "valueSet" :{
@@ -200,6 +200,6 @@ e: {
   }
 }}####
 e: {
-  "error" : "Error unmarshalling resource: Unable to provide support for code system https://ncit.nci.nih.gov"
+  "error" : "Error from server: Unable to provide support for code system https://ncit.nci.nih.gov"
 }
 -------------------------------------------------------------------------------------

@@ -5,25 +5,28 @@
     "status": "generated",
     "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n<p><b>PositiveNegativeVS ValueSet</b></p>\n<p>Interpretation of a test result as positive, negative, equivocal, or indeterminate. Consolidates LOINC answer lists LL360-9, LL2329-2, LL2038-9, LL2021-5, LL2010-8, LL2009-0.</p>\n</div>"
   },
-  "url": "http://hl7.org/fhir/us/mcode/shr/core/vs/PositiveNegativeVS",
-  "identifier": {
-    "system": "http://hl7.org/fhir/us/mcode",
-    "value": "shr.core.PositiveNegativeVS"
-  },
+  "url": "http://hl7.org/fhir/us/mcode/ValueSet/shr-core-PositiveNegativeVS",
+  "identifier": [
+    {
+      "system": "http://hl7.org/fhir/us/mcode",
+      "value": "shr.core.PositiveNegativeVS"
+    }
+  ],
   "name": "PositiveNegativeVS",
+  "title": "PositiveNegativeVS",
   "status": "draft",
   "publisher": "The MITRE Corporation",
   "contact": [
     {
       "telecom": [
         {
-          "system": "other",
+          "system": "url",
           "value": "http://standardhealthrecord.org"
         }
       ]
     }
   ],
-  "date": "2019-05-28",
+  "date": "2019-07-03",
   "description": "Interpretation of a test result as positive, negative, equivocal, or indeterminate. Consolidates LOINC answer lists LL360-9, LL2329-2, LL2038-9, LL2021-5, LL2010-8, LL2009-0.",
   "compose": {
     "include": [

@@ -1,0 +1,33 @@
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://hl7.org/fhir/v3/ObservationInterpretation",
+      "concept" : [{
+        "code" : "H",
+        "display" : "Higher Than Normal. The result for a quantitative observation is above the upper limit of the reference range (as defined for the respective test procedure)."
+      },
+      {
+        "code" : "L",
+        "display" : "Lower Than Normal. The result for a quantitative observation is below the lower limit of the reference range (as defined for the respective test procedure)."
+      },
+      {
+        "code" : "A",
+        "display" : "Abnormal. The result or observation value is outside the reference range or expected norm (as defined for the respective test procedure). [Note: Typically applies to non-numeric results.]"
+      },
+      {
+        "code" : "HH",
+        "display" : "Panic High. The result for a quantitative observation is above a reference level at which immediate action should be considered for patient safety (as defined for the respective test procedure).\nSynonym: Above upper panic limits."
+      },
+      {
+        "code" : "LL",
+        "display" : "Panic Low. The result for a quantitative observation is below a reference level at which immediate action should be considered for patient safety (as defined for the respective test procedure)."
+      }]
+    }]
+  }
+}}####
+e: {
+  "error" : "Error from server: Unable to provide support for code system http://hl7.org/fhir/v3/ObservationInterpretation"
+}
+-------------------------------------------------------------------------------------

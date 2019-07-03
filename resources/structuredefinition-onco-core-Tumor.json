@@ -3,54 +3,84 @@
   "id": "onco-core-Tumor",
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>Tumor Profile</b></p>\n  <p>The presence of an abnormal mass of tissue (neoplasm) that results when cells divide more than they should or do not die when they should. Tumors may be benign (not cancer), or malignant (cancer). (source: NCI Dictionary).</p>\n  <p><b>Mapping Summary</b></p>\n  <p><pre>onco.core.Tumor maps to http://fhir.org/guides/argonaut/StructureDefinition/argo-condition:\n  Language maps to language\n  Narrative maps to text\n  ImplicitRules maps to implicitRules\n  Metadata.VersionId maps to meta.versionId\n  Metadata.SourceSystem maps to meta.extension\n  Metadata.Profile maps to meta.profile\n  Metadata.LastUpdated maps to meta.lastUpdated\n  Metadata.SecurityLabel maps to meta.security\n  Metadata.Tag maps to meta.tag\n  Identifier maps to identifier\n  SubjectOfRecord maps to patient\n  CareContext maps to encounter\n  PersonInformationSource maps to asserter\n  Author maps to extension\n  StatementDateTime maps to dateRecorded\n  Code maps to code\n  Category maps to category\n  ClinicalStatus maps to clinicalStatus\n  Status maps to verificationStatus\n  Severity maps to severity\n  Onset maps to onset[x]\n  Abatement maps to abatement[x]\n  StageInformation maps to stage\n  StageInformation.StageSummary maps to stage.summary\n  StageInformation.StageDetail maps to stage.assessment\n  StageInformation.Type maps to stage.extension\n  Evidence.Manifestation maps to evidence.code\n  Evidence.DomainResource maps to evidence.detail\n  BodyLocation.Code maps to bodySite\n  BodyLocation.Laterality maps to bodySite.extension\n  BodyLocation.Orientation maps to bodySite.extension\n  BodyLocation.RelationToLandmark maps to bodySite.extension\n  Annotation maps to extension\n  DateOfDiagnosis maps to extension\n</pre></p>\n</div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>Tumor Profile</b></p>\n  <p>The presence of an abnormal mass of tissue (neoplasm) that results when cells divide more than they should or do not die when they should. Tumors may be benign (not cancer), or malignant (cancer). (source: NCI Dictionary).</p>\n  <p><b>Mapping Summary</b></p>\n  <p><pre>onco.core.Tumor maps to http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition:\n  Language maps to language\n  ImplicitRules maps to implicitRules\n  Metadata.VersionId maps to meta.versionId\n  Metadata.SourceSystem maps to meta.source\n  Metadata.Profile maps to meta.profile\n  Metadata.LastUpdated maps to meta.lastUpdated\n  Metadata.SecurityLabel maps to meta.security\n  Metadata.Tag maps to meta.tag\n  Narrative maps to text\n  Identifier maps to identifier\n  ClinicalStatus maps to clinicalStatus\n  Status maps to verificationStatus\n  Category maps to category\n  Severity maps to severity\n  Code maps to code\n  BodyLocation.Code maps to bodySite\n  BodyLocation.Laterality maps to bodySite.extension\n  BodyLocation.Orientation maps to bodySite.extension\n  BodyLocation.RelationToLandmark maps to bodySite.extension\n  SubjectOfRecord maps to subject\n  CareContext maps to encounter\n  Onset maps to onset[x]\n  Abatement maps to abatement[x]\n  StatementDateTime maps to recordedDate\n  Author maps to recorder\n  PersonInformationSource maps to asserter\n  StageInformation maps to stage\n  StageInformation.StageSummary maps to stage.summary\n  StageInformation.StageDetail maps to stage.assessment\n  StageInformation.Type maps to stage.type\n  Evidence.Manifestation maps to evidence.code\n  Evidence.Resource maps to evidence.detail\n  Annotation maps to note\n  DateOfDiagnosis maps to extension\n</pre></p>\n</div>"
   },
-  "url": "http://hl7.org/fhir/us/shr/StructureDefinition/onco-core-Tumor",
+  "url": "http://hl7.org/fhir/us/mcode/StructureDefinition/onco-core-Tumor",
   "name": "Tumor",
-  "status": "draft",
+  "title": "onco-core-Tumor",
+  "status": "active",
+  "experimental": false,
+  "date": "2019-07-03",
   "publisher": "The MITRE Corporation",
   "contact": [
     {
       "telecom": [
         {
-          "system": "other",
+          "system": "url",
           "value": "http://standardhealthrecord.org"
         }
       ]
     }
   ],
-  "date": "2019-05-28",
-  "fhirVersion": "1.0.2",
+  "description": "The presence of an abnormal mass of tissue (neoplasm) that results when cells divide more than they should or do not die when they should. Tumors may be benign (not cancer), or malignant (cancer). (source: NCI Dictionary).",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "system": "urn:iso:std:iso:3166",
+          "code": "US",
+          "display": "United States of America"
+        }
+      ]
+    }
+  ],
+  "fhirVersion": "4.0.0",
   "mapping": [
     {
-      "identity": "us-core-stu3",
-      "uri": "http://unknown.org/US%20Core%20(STU3)",
-      "name": "US Core (STU3)"
+      "identity": "argonaut-dq-dstu2",
+      "uri": "http://unknown.org/Argonaut-DQ-DSTU2",
+      "name": "Argonaut-DQ-DSTU2"
+    },
+    {
+      "identity": "workflow",
+      "uri": "http://hl7.org/fhir/workflow",
+      "name": "Workflow Pattern"
+    },
+    {
+      "identity": "sct-concept",
+      "uri": "http://snomed.info/conceptdomain",
+      "name": "SNOMED CT Concept Domain Binding"
     },
     {
       "identity": "v2",
       "uri": "http://hl7.org/v2",
-      "name": "HL7 v2"
+      "name": "HL7 v2 Mapping"
     },
     {
       "identity": "rim",
       "uri": "http://hl7.org/v3",
-      "name": "RIM"
+      "name": "RIM Mapping"
     },
     {
       "identity": "w5",
-      "uri": "http://hl7.org/fhir/w5",
-      "name": "W5 Mapping"
+      "uri": "http://hl7.org/fhir/fivews",
+      "name": "FiveWs Pattern Mapping"
+    },
+    {
+      "identity": "sct-attr",
+      "uri": "http://snomed.org/attributebinding",
+      "name": "SNOMED CT Attribute Binding"
     }
   ],
   "kind": "resource",
-  "constrainedType": "Condition",
   "abstract": false,
-  "base": "http://fhir.org/guides/argonaut/StructureDefinition/argo-condition",
+  "type": "Condition",
+  "baseDefinition": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition",
+  "derivation": "constraint",
   "snapshot": {
     "element": [
       {
-        "id": "Condition",
+        "id": "Condition:onco-core-Tumor",
         "path": "Condition",
         "short": "onco-core-Tumor",
         "definition": "The presence of an abnormal mass of tissue (neoplasm) that results when cells divide more than they should or do not die when they should. Tumors may be benign (not cancer), or malignant (cancer). (source: NCI Dictionary).",
@@ -61,30 +91,121 @@
           "min": 0,
           "max": "*"
         },
-        "type": [
-          {
-            "code": "Condition"
-          }
-        ],
-        "maxLength": 0,
         "constraint": [
+          {
+            "key": "dom-2",
+            "severity": "error",
+            "human": "If the resource is contained in another resource, it SHALL NOT contain nested Resources",
+            "expression": "contained.contained.empty()",
+            "xpath": "not(parent::f:contained and f:contained)",
+            "source": "DomainResource"
+          },
+          {
+            "key": "dom-4",
+            "severity": "error",
+            "human": "If a resource is contained in another resource, it SHALL NOT have a meta.versionId or a meta.lastUpdated",
+            "expression": "contained.meta.versionId.empty() and contained.meta.lastUpdated.empty()",
+            "xpath": "not(exists(f:contained/*/f:meta/f:versionId)) and not(exists(f:contained/*/f:meta/f:lastUpdated))",
+            "source": "DomainResource"
+          },
+          {
+            "key": "dom-3",
+            "severity": "error",
+            "human": "If the resource is contained in another resource, it SHALL be referred to from elsewhere in the resource or SHALL refer to the containing resource",
+            "expression": "contained.where((('#'+id in (%resource.descendants().reference | %resource.descendants().as(canonical) | %resource.descendants().as(uri) | %resource.descendants().as(url))) or descendants().where(reference = '#').exists() or descendants().where(as(canonical) = '#').exists() or descendants().where(as(canonical) = '#').exists()).not()).trace('unmatched', id).empty()",
+            "xpath": "not(exists(for $contained in f:contained return $contained[not(parent::*/descendant::f:reference/@value=concat('#', $contained/*/id/@value) or descendant::f:reference[@value='#'])]))",
+            "source": "DomainResource"
+          },
           {
             "extension": [
               {
-                "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-expression",
-                "valueString": "clinicalStatus.exists() = (verificationStatus != 'entered-in-error')"
+                "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bestpractice",
+                "valueBoolean": true
+              },
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bestpractice-explanation",
+                "valueMarkdown": "When a resource has no narrative, only systems that fully understand the data can display the resource to a human safely. Including a human readable representation in the resource makes for a much more robust eco-system and cheaper handling of resources by intermediary systems. Some ecosystems restrict distribution of resources to only those systems that do fully understand the resources, and as a consequence implementers may believe that the narrative is superfluous. However experience shows that such eco-systems often open up to new participants over time."
               }
             ],
-            "key": "arg-1",
+            "key": "dom-6",
+            "severity": "warning",
+            "human": "A resource should have narrative for robust management",
+            "expression": "text.div.exists()",
+            "xpath": "exists(f:text/h:div)",
+            "source": "DomainResource"
+          },
+          {
+            "key": "dom-5",
             "severity": "error",
-            "human": "Condition.clinicalStatus SHALL be present if verificationStatus is not entered-in-error. Condition.clinicalStatus SHALL NOT be present if verification Status is entered-in-error",
-            "xpath": "exists(f:clinicalStatus)=(f:verificationStatus/@value!='entered-in-error')"
+            "human": "If a resource is contained in another resource, it SHALL NOT have a security label",
+            "expression": "contained.meta.security.empty()",
+            "xpath": "not(exists(f:contained/*/f:meta/f:security))",
+            "source": "DomainResource"
+          },
+          {
+            "key": "con-5",
+            "severity": "error",
+            "human": "Condition.clinicalStatus SHALL NOT be present if verification Status is entered-in-error",
+            "expression": "verificationStatus.coding.where(system='http://terminology.hl7.org/CodeSystem/condition-ver-status' and code='entered-in-error').empty() or clinicalStatus.empty()",
+            "xpath": "not(exists(f:verificationStatus/f:coding[f:system/@value='http://terminology.hl7.org/CodeSystem/condition-ver-status' and f:code/@value='entered-in-error'])) or not(exists(f:clinicalStatus))",
+            "source": "Condition"
+          },
+          {
+            "key": "con-4",
+            "severity": "error",
+            "human": "If condition is abated, then clinicalStatus must be either inactive, resolved, or remission",
+            "expression": "abatement.empty() or clinicalStatus.coding.where(system='http://terminology.hl7.org/CodeSystem/condition-clinical' and (code='resolved' or code='remission' or code='inactive')).exists()",
+            "xpath": "not(exists(*[starts-with(local-name(.), 'abatement')])) or exists(f:clinicalStatus/f:coding[f:system/@value='http://terminology.hl7.org/CodeSystem/condition-clinical' and f:code/@value=('resolved', 'remission', 'inactive')])",
+            "source": "Condition"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bestpractice",
+                "valueBoolean": true
+              },
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bestpractice-explanation",
+                "valueMarkdown": "Most systems will expect a clinicalStatus to be valued for problem-list-items that are managed over time, but might not need a clinicalStatus for point in time encounter-diagnosis."
+              }
+            ],
+            "key": "con-3",
+            "severity": "warning",
+            "human": "Condition.clinicalStatus SHALL be present if verificationStatus is not entered-in-error and category is problem-list-item",
+            "expression": "clinicalStatus.exists() or verificationStatus='entered-in-error' or category.select($this='problem-list-item').empty()",
+            "xpath": "exists(f:clinicalStatus) or f:verificationStatus/@value='entered-in-error' or not(exists(category[@value='problem-list-item']))",
+            "source": "Condition"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bestpractice",
+                "valueBoolean": true
+              }
+            ],
+            "key": "us-core-1",
+            "severity": "warning",
+            "human": "A code in Condition.category SHOULD be from US Core Condition Category Codes value set.",
+            "expression": "where(category in 'http://hl7.org/fhir/us/core/ValueSet/us-core-condition-category').exists()",
+            "xpath": "(no xpath equivalent)"
           }
         ],
         "mustSupport": false,
         "isModifier": false,
         "isSummary": false,
         "mapping": [
+          {
+            "identity": "rim",
+            "map": "Entity. Role, or Act"
+          },
+          {
+            "identity": "workflow",
+            "map": "Event"
+          },
+          {
+            "identity": "sct-concept",
+            "map": "< 243796009 |Situation with explicit context| : 246090004 |Associated finding| = ( ( < 404684003 |Clinical finding| MINUS ( << 420134006 |Propensity to adverse reactions| OR << 473010000 |Hypersensitivity condition| OR << 79899007 |Drug interaction| OR << 69449002 |Drug action| OR << 441742003 |Evaluation finding| OR << 307824009 |Administrative status| OR << 385356007 |Tumor stage finding|)) OR < 272379006 |Event|)"
+          },
           {
             "identity": "v2",
             "map": "PPR message"
@@ -94,25 +215,21 @@
             "map": "Observation[classCode=OBS, moodCode=EVN, code=ASSERTION, value<Diagnosis]"
           },
           {
-            "identity": "w5",
-            "map": "clinical.general"
-          },
-          {
-            "identity": "us-core-stu3",
+            "identity": "argonaut-dq-dstu2",
             "map": "Condition"
           }
         ]
       },
       {
-        "id": "Condition.id",
+        "id": "Condition:onco-core-Tumor.id",
         "path": "Condition.id",
         "short": "Logical id of this artifact",
         "definition": "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.",
-        "comments": "The only time that a resource does not have an id is when it is being submitted to the server using a create operation. Bundles always have an id, though it is usually a generated UUID.",
+        "comment": "The only time that a resource does not have an id is when it is being submitted to the server using a create operation.",
         "min": 0,
         "max": "1",
         "base": {
-          "path": "Condition.id",
+          "path": "Resource.id",
           "min": 0,
           "max": "1"
         },
@@ -121,20 +238,18 @@
             "code": "id"
           }
         ],
-        "maxLength": 0,
-        "mustSupport": false,
         "isModifier": false,
         "isSummary": true
       },
       {
-        "id": "Condition.meta",
+        "id": "Condition:onco-core-Tumor.meta",
         "path": "Condition.meta",
         "short": "Metadata about the resource",
-        "definition": "The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content may not always be associated with version changes to the resource.",
+        "definition": "The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.",
         "min": 0,
         "max": "1",
         "base": {
-          "path": "Condition.meta",
+          "path": "Resource.meta",
           "min": 0,
           "max": "1"
         },
@@ -143,182 +258,19 @@
             "code": "Meta"
           }
         ],
-        "maxLength": 0,
-        "mustSupport": false,
         "isModifier": false,
         "isSummary": true
       },
       {
-        "path": "Condition.meta.id",
-        "representation": [
-          "xmlAttr"
-        ],
-        "short": "xml:id (or equivalent in JSON)",
-        "definition": "unique id for the element within a resource (for internal references).",
-        "min": 0,
-        "max": "1",
-        "type": [
-          {
-            "code": "id"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "rim",
-            "map": "n/a"
-          }
-        ],
-        "id": "Condition.meta.id"
-      },
-      {
-        "path": "Condition.meta.extension",
-        "short": "Additional Content defined by implementations",
-        "definition": "May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
-        "comments": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
-        "alias": [
-          "extensions",
-          "user content"
-        ],
-        "min": 0,
-        "max": "*",
-        "type": [
-          {
-            "code": "Extension"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "rim",
-            "map": "n/a"
-          }
-        ],
-        "id": "Condition.meta.extension",
-        "slicing": {
-          "id": "3",
-          "discriminator": [
-            "url"
-          ],
-          "ordered": false,
-          "rules": "open"
-        }
-      },
-      {
-        "path": "Condition.meta.extension",
-        "definition": "FHIR: This provides a minimal amount of Provenance information that can be used to track or differentiate the source of information in the resource. The source may identify another FHIR server, document, message, database, etc.\nFHIM: Identifies the computer system that created the medical record. This optional field may also be used to indicate that the medical record was originally created by a different organization from the one that is currently storing or utilizing the record in that the assigning authority of the Id could be set to that originating organization. This property is optional, as some systems will assume that all records that it contains originated in that system, however it is anticipated that it will become increasingly commonplace for records from multiple systems and organizations will be comingled in order to provide a complete picture of the patient's health record.",
-        "min": 0,
-        "max": "1",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": [
-              "http://hl7.org/fhir/us/shr/StructureDefinition/shr-core-SourceSystem-extension"
-            ]
-          }
-        ],
-        "id": "Condition.meta.extension-sourcesystem",
-        "name": "sourcesystem",
-        "base": {
-          "path": "Condition.meta.extension",
-          "min": 0,
-          "max": "*"
-        }
-      },
-      {
-        "path": "Condition.meta.versionId",
-        "short": "Version specific identifier",
-        "definition": "The version specific identifier, as it appears in the version portion of the URL. This values changes when the resource is created, updated, or deleted.",
-        "comments": "The server assigns this value, and ignores what the client specifies, except in the case that the server is imposing version integrity on updates/deletes.",
-        "min": 0,
-        "max": "1",
-        "type": [
-          {
-            "code": "id"
-          }
-        ],
-        "isSummary": true,
-        "id": "Condition.meta.versionId"
-      },
-      {
-        "path": "Condition.meta.lastUpdated",
-        "short": "When the resource version last changed",
-        "definition": "When the resource last changed - e.g. when the version changed.",
-        "comments": "This value is always populated except when the resource is first being created. The server / resource manager sets this value; what a client provides is irrelevant.",
-        "min": 0,
-        "max": "1",
-        "type": [
-          {
-            "code": "instant"
-          }
-        ],
-        "isSummary": true,
-        "id": "Condition.meta.lastUpdated"
-      },
-      {
-        "path": "Condition.meta.profile",
-        "short": "Profiles this resource claims to conform to",
-        "definition": "A list of profiles [[[StructureDefinition]]]s that this resource claims to conform to. The URL is a reference to [[[StructureDefinition.url]]].",
-        "comments": "It is up to the server and/or other infrastructure of policy to determine whether/how these claims are verified and/or updated over time.  The list of profile URLs is a set.",
-        "min": 0,
-        "max": "*",
-        "type": [
-          {
-            "code": "uri"
-          }
-        ],
-        "isSummary": true,
-        "id": "Condition.meta.profile"
-      },
-      {
-        "path": "Condition.meta.security",
-        "short": "Security Labels applied to this resource",
-        "definition": "Security labels applied to this resource. These tags connect specific resources to the overall security policy and infrastructure.",
-        "comments": "The security labels can be updated without changing the stated version of the resource  The list of security labels is a set. Uniqueness is based the system/code, and version and display are ignored.",
-        "min": 0,
-        "max": "*",
-        "type": [
-          {
-            "code": "Coding"
-          }
-        ],
-        "isSummary": true,
-        "binding": {
-          "strength": "extensible",
-          "description": "Security Labels from the Healthcare Privacy and Security Classification System.",
-          "valueSetReference": {
-            "reference": "http://hl7.org/fhir/ValueSet/security-labels"
-          }
-        },
-        "id": "Condition.meta.security"
-      },
-      {
-        "path": "Condition.meta.tag",
-        "short": "Tags applied to this resource",
-        "definition": "Tags applied to this resource. Tags are intended to be used to identify and relate resources to process and workflow, and applications are not required to consider the tags when interpreting the meaning of a resource.",
-        "comments": "The tags can be updated without changing the stated version of the resource.  The list of tags is a set. Uniqueness is based the system/code, and version and display are ignored.",
-        "min": 0,
-        "max": "*",
-        "type": [
-          {
-            "code": "Coding"
-          }
-        ],
-        "isSummary": true,
-        "binding": {
-          "strength": "example",
-          "description": "Codes that represent various types of tags, commonly workflow-related; e.g. \"Needs review by Dr. Jones\""
-        },
-        "id": "Condition.meta.tag"
-      },
-      {
-        "id": "Condition.implicitRules",
+        "id": "Condition:onco-core-Tumor.implicitRules",
         "path": "Condition.implicitRules",
         "short": "A set of rules under which this content was created",
-        "definition": "A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content.",
-        "comments": "Asserting this rule set restricts the content to be only understood by a limited set of trading partners. This inherently limits the usefulness of the data in the long term. However, the existing health eco-system is highly fractured, and not yet ready to define, collect, and exchange data in a generally computable sense. Wherever possible, implementers and/or specification writers should avoid using this element as much as possible.",
+        "definition": "A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.",
+        "comment": "Asserting this rule set restricts the content to be only understood by a limited set of trading partners. This inherently limits the usefulness of the data in the long term. However, the existing health eco-system is highly fractured, and not yet ready to define, collect, and exchange data in a generally computable sense. Wherever possible, implementers and/or specification writers should avoid using this element. Often, when used, the URL is a reference to an implementation guide that defines these special rules as part of it's narrative along with other profiles, value sets, etc.",
         "min": 0,
         "max": "1",
         "base": {
-          "path": "Condition.implicitRules",
+          "path": "Resource.implicitRules",
           "min": 0,
           "max": "1"
         },
@@ -327,21 +279,20 @@
             "code": "uri"
           }
         ],
-        "maxLength": 0,
-        "mustSupport": false,
         "isModifier": true,
+        "isModifierReason": "This element is labeled as a modifier because the implicit rules may provide additional knowledge about the resource that modifies it's meaning or interpretation",
         "isSummary": true
       },
       {
-        "id": "Condition.language",
+        "id": "Condition:onco-core-Tumor.language",
         "path": "Condition.language",
         "short": "Language of the resource content",
         "definition": "The base language in which the resource is written.",
-        "comments": "Language is provided to support indexing and accessibility (typically, services such as text to speech use the language tag). The html language tag in the narrative applies  to the narrative. The language tag on the resource may be used to specify the language of other presentations generated from the data in the resource  Not all the content has to be in the base language. The Resource.language should not be assumed to apply to the narrative automatically. If a language is specified, it should it also be specified on the div element in the html (see rules in HTML5 for information about the relationship between xml:lang and the html lang attribute).",
+        "comment": "Language is provided to support indexing and accessibility (typically, services such as text to speech use the language tag). The html language tag in the narrative applies  to the narrative. The language tag on the resource may be used to specify the language of other presentations generated from the data in the resource. Not all the content has to be in the base language. The Resource.language should not be assumed to apply to the narrative automatically. If a language is specified, it should it also be specified on the div element in the html (see rules in HTML5 for information about the relationship between xml:lang and the html lang attribute).",
         "min": 0,
         "max": "1",
         "base": {
-          "path": "Condition.language",
+          "path": "Resource.language",
           "min": 0,
           "max": "1"
         },
@@ -350,22 +301,34 @@
             "code": "code"
           }
         ],
-        "maxLength": 0,
-        "mustSupport": false,
         "isModifier": false,
         "isSummary": false,
         "binding": {
-          "strength": "required",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet",
+              "valueCanonical": "http://hl7.org/fhir/ValueSet/all-languages"
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+              "valueString": "Language"
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-isCommonBinding",
+              "valueBoolean": true
+            }
+          ],
+          "strength": "preferred",
           "description": "A human language.",
-          "valueSetUri": "http://tools.ietf.org/html/bcp47"
+          "valueSet": "http://hl7.org/fhir/ValueSet/languages"
         }
       },
       {
-        "id": "Condition.text",
+        "id": "Condition:onco-core-Tumor.text",
         "path": "Condition.text",
         "short": "Text summary of the resource, for human interpretation",
-        "definition": "A human-readable narrative that contains a summary of the resource, and may be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.",
-        "comments": "Contained resources do not have narrative. Resources that are not contained SHOULD have a narrative.",
+        "definition": "A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.",
+        "comment": "Contained resources do not have narrative. Resources that are not contained SHOULD have a narrative. In some cases, a resource may only have text with little or no additional discrete data (as long as all minOccurs=1 elements are satisfied).  This may be necessary for data from legacy systems where information is captured as a \"text blob\" or where text is additionally entered raw or narrated and encoded information is added later.",
         "alias": [
           "narrative",
           "html",
@@ -375,7 +338,7 @@
         "min": 0,
         "max": "1",
         "base": {
-          "path": "Condition.text",
+          "path": "DomainResource.text",
           "min": 0,
           "max": "1"
         },
@@ -384,11 +347,6 @@
             "code": "Narrative"
           }
         ],
-        "maxLength": 0,
-        "condition": [
-          "dom-1"
-        ],
-        "mustSupport": false,
         "isModifier": false,
         "isSummary": false,
         "mapping": [
@@ -399,11 +357,11 @@
         ]
       },
       {
-        "id": "Condition.contained",
+        "id": "Condition:onco-core-Tumor.contained",
         "path": "Condition.contained",
         "short": "Contained, inline Resources",
         "definition": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope.",
-        "comments": "This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again.",
+        "comment": "This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again. Contained resources may have profiles and tags In their meta elements, but SHALL NOT have security labels.",
         "alias": [
           "inline resources",
           "anonymous resources",
@@ -412,7 +370,7 @@
         "min": 0,
         "max": "*",
         "base": {
-          "path": "Condition.contained",
+          "path": "DomainResource.contained",
           "min": 0,
           "max": "*"
         },
@@ -421,8 +379,6 @@
             "code": "Resource"
           }
         ],
-        "maxLength": 0,
-        "mustSupport": false,
         "isModifier": false,
         "isSummary": false,
         "mapping": [
@@ -433,11 +389,11 @@
         ]
       },
       {
-        "id": "Condition.extension",
+        "id": "Condition:onco-core-Tumor.extension",
         "path": "Condition.extension",
-        "short": "Additional Content defined by implementations",
-        "definition": "May be used to represent additional information that is not part of the basic definition of the resource. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
-        "comments": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "short": "Additional content defined by implementations",
+        "definition": "May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+        "comment": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
         "alias": [
           "extensions",
           "user content"
@@ -445,7 +401,7 @@
         "min": 0,
         "max": "*",
         "base": {
-          "path": "Condition.extension",
+          "path": "DomainResource.extension",
           "min": 0,
           "max": "*"
         },
@@ -454,8 +410,6 @@
             "code": "Extension"
           }
         ],
-        "maxLength": 0,
-        "mustSupport": false,
         "isModifier": false,
         "isSummary": false,
         "mapping": [
@@ -465,73 +419,25 @@
           }
         ],
         "slicing": {
-          "id": "2",
+          "id": "1",
           "discriminator": [
-            "url"
+            {
+              "type": "value",
+              "path": "url"
+            }
           ],
           "ordered": false,
           "rules": "open"
         }
       },
       {
-        "id": "Condition.extension-author",
+        "id": "Condition:onco-core-Tumor.extension:dateofdiagnosis",
         "path": "Condition.extension",
-        "name": "author",
-        "definition": "The actor who created the item and it responsible for the content (regardless of the information source or who recorded it). If only the author is given, it is assumed the author is the information source and the recorder.",
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "Condition.extension",
-          "min": 0,
-          "max": "*"
-        },
-        "type": [
-          {
-            "code": "Extension",
-            "profile": [
-              "http://hl7.org/fhir/us/shr/StructureDefinition/shr-core-Author-extension"
-            ]
-          }
-        ],
-        "maxLength": 0,
-        "mustSupport": false,
-        "isModifier": false,
-        "isSummary": false
-      },
-      {
-        "id": "Condition.extension-annotation",
-        "path": "Condition.extension",
-        "name": "annotation",
-        "definition": "An added or follow-up note, often after the fact, that contains metadata about who made the statement and when.",
-        "min": 0,
-        "max": "*",
-        "base": {
-          "path": "Condition.extension",
-          "min": 0,
-          "max": "*"
-        },
-        "type": [
-          {
-            "code": "Extension",
-            "profile": [
-              "http://hl7.org/fhir/us/shr/StructureDefinition/shr-core-Annotation-extension"
-            ]
-          }
-        ],
-        "maxLength": 0,
-        "mustSupport": false,
-        "isModifier": false,
-        "isSummary": false
-      },
-      {
-        "id": "Condition.extension-dateofdiagnosis",
-        "path": "Condition.extension",
-        "name": "dateofdiagnosis",
         "definition": "The date the disease was first clinically recognized with sufficient certainty, regardless of whether it was fully characterized at that time.",
         "min": 0,
         "max": "1",
         "base": {
-          "path": "Condition.extension",
+          "path": "DomainResource.extension",
           "min": 0,
           "max": "*"
         },
@@ -539,24 +445,22 @@
           {
             "code": "Extension",
             "profile": [
-              "http://hl7.org/fhir/us/shr/StructureDefinition/shr-core-DateOfDiagnosis-extension"
+              "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-DateOfDiagnosis-extension"
             ]
           }
         ],
-        "maxLength": 0,
-        "mustSupport": false,
         "isModifier": false,
-        "isSummary": false
+        "isSummary": false,
+        "sliceName": "dateofdiagnosis"
       },
       {
-        "id": "Condition.extension-primarycancercondition",
+        "id": "Condition:onco-core-Tumor.extension:primarycancercondition",
         "path": "Condition.extension",
-        "name": "primarycancercondition",
         "definition": "Records the history of the primary cancer condition, the original or first tumor in the body, abnormal cells that divide without control and can invade nearby tissues.",
         "min": 0,
         "max": "1",
         "base": {
-          "path": "Condition.extension",
+          "path": "DomainResource.extension",
           "min": 0,
           "max": "*"
         },
@@ -564,24 +468,22 @@
           {
             "code": "Extension",
             "profile": [
-              "http://hl7.org/fhir/us/shr/StructureDefinition/onco-core-PrimaryCancerCondition-extension"
+              "http://hl7.org/fhir/us/mcode/StructureDefinition/onco-core-PrimaryCancerCondition-extension"
             ]
           }
         ],
-        "maxLength": 0,
-        "mustSupport": false,
         "isModifier": false,
-        "isSummary": false
+        "isSummary": false,
+        "sliceName": "primarycancercondition"
       },
       {
-        "id": "Condition.extension-isprimarytumor",
+        "id": "Condition:onco-core-Tumor.extension:isprimarytumor",
         "path": "Condition.extension",
-        "name": "isprimarytumor",
         "definition": "Whether the tumor is the original or first tumor in the body, for a particular cancer.",
         "min": 0,
         "max": "1",
         "base": {
-          "path": "Condition.extension",
+          "path": "DomainResource.extension",
           "min": 0,
           "max": "*"
         },
@@ -589,21 +491,21 @@
           {
             "code": "Extension",
             "profile": [
-              "http://hl7.org/fhir/us/shr/StructureDefinition/onco-core-IsPrimaryTumor-extension"
+              "http://hl7.org/fhir/us/mcode/StructureDefinition/onco-core-IsPrimaryTumor-extension"
             ]
           }
         ],
-        "maxLength": 0,
-        "mustSupport": false,
         "isModifier": false,
-        "isSummary": false
+        "isSummary": false,
+        "sliceName": "isprimarytumor"
       },
       {
-        "id": "Condition.modifierExtension",
+        "id": "Condition:onco-core-Tumor.modifierExtension",
         "path": "Condition.modifierExtension",
         "short": "Extensions that cannot be ignored",
-        "definition": "May be used to represent additional information that is not part of the basic definition of the resource, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.",
-        "comments": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "definition": "May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
+        "comment": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "requirements": "Modifier extensions allow for extensions that *cannot* be safely ignored to be clearly distinguished from the vast majority of extensions which can be safely ignored.  This promotes interoperability by eliminating the need for implementers to prohibit the presence of extensions. For further information, see the [definition of modifier extensions](http://hl7.org/fhir/R4/extensibility.html#modifierExtension).",
         "alias": [
           "extensions",
           "user content"
@@ -611,7 +513,7 @@
         "min": 0,
         "max": "*",
         "base": {
-          "path": "Condition.modifierExtension",
+          "path": "DomainResource.modifierExtension",
           "min": 0,
           "max": "*"
         },
@@ -620,9 +522,8 @@
             "code": "Extension"
           }
         ],
-        "maxLength": 0,
-        "mustSupport": false,
         "isModifier": true,
+        "isModifierReason": "Modifier extensions are expected to modify the meaning or interpretation of the resource that contains them",
         "isSummary": false,
         "mapping": [
           {
@@ -632,11 +533,12 @@
         ]
       },
       {
-        "id": "Condition.identifier",
+        "id": "Condition:onco-core-Tumor.identifier",
         "path": "Condition.identifier",
         "short": "External Ids for this condition",
-        "definition": "This records identifiers associated with this condition that are defined by business processes and/or used to refer to it when a direct URL reference to the resource itself is not appropriate (e.g. in CDA documents, or in written / printed documentation).",
-        "requirements": "Need to allow connection to a wider workflow.",
+        "definition": "Business identifiers assigned to this condition by the performer or other systems which remain constant as the resource is updated and propagates from server to server.",
+        "comment": "This is a business identifier, not a resource identifier (see [discussion](http://hl7.org/fhir/R4/resource.html#identifiers)).  It is best practice for the identifier to only appear on a single resource instance, however business practices may occasionally dictate that multiple resource instances with the same identifier can exist - possibly even with different resource types.  For example, multiple Patient and a Person resource instance might share the same social insurance number.",
+        "requirements": "Allows identification of the condition as it is known by various participating systems and in a way that remains consistent across servers.",
         "min": 0,
         "max": "*",
         "base": {
@@ -649,46 +551,595 @@
             "code": "Identifier"
           }
         ],
-        "maxLength": 0,
-        "mustSupport": false,
         "isModifier": false,
         "isSummary": true,
         "mapping": [
           {
-            "identity": "rim",
-            "map": ".id"
+            "identity": "workflow",
+            "map": "Event.identifier"
           },
           {
             "identity": "w5",
-            "map": "id"
+            "map": "FiveWs.identifier"
+          },
+          {
+            "identity": "rim",
+            "map": ".id"
           }
         ]
       },
       {
-        "id": "Condition.patient",
-        "path": "Condition.patient",
-        "short": "Who has the condition?",
-        "definition": "Indicates the patient who the condition record is associated with.",
+        "id": "Condition:onco-core-Tumor.clinicalStatus",
+        "path": "Condition.clinicalStatus",
+        "short": "active | recurrence | relapse | inactive | remission | resolved",
+        "definition": "The clinical status of the condition.",
+        "comment": "The data type is CodeableConcept because clinicalStatus has some clinical judgment involved, such that there might need to be more specificity than the required FHIR value set allows. For example, a SNOMED coding might allow for additional specificity.",
         "min": 1,
         "max": "1",
         "base": {
-          "path": "Condition.patient",
+          "path": "Condition.clinicalStatus",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "condition": [
+          "con-3",
+          "con-4",
+          "con-5"
+        ],
+        "mustSupport": true,
+        "isModifier": true,
+        "isModifierReason": "This element is labeled as a modifier because the status contains codes that mark the condition as no longer active.",
+        "isSummary": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://hl7.org/fhir/ValueSet/condition-clinical"
+        },
+        "mapping": [
+          {
+            "identity": "workflow",
+            "map": "Event.status"
+          },
+          {
+            "identity": "w5",
+            "map": "FiveWs.status"
+          },
+          {
+            "identity": "sct-concept",
+            "map": "< 303105007 |Disease phases|"
+          },
+          {
+            "identity": "v2",
+            "map": "PRB-14"
+          },
+          {
+            "identity": "rim",
+            "map": "Observation ACT\n.inboundRelationship[typeCode=COMP].source[classCode=OBS, code=\"clinicalStatus\", moodCode=EVN].value"
+          },
+          {
+            "identity": "argonaut-dq-dstu2",
+            "map": "Condition.clinicalStatus"
+          }
+        ]
+      },
+      {
+        "id": "Condition:onco-core-Tumor.verificationStatus",
+        "path": "Condition.verificationStatus",
+        "short": "unconfirmed | provisional | differential | confirmed | refuted | entered-in-error",
+        "definition": "The verification status to support the clinical status of the condition.",
+        "comment": "verificationStatus is not required.  For example, when a patient has abdominal pain in the ED, there is not likely going to be a verification status.\nThe data type is CodeableConcept because verificationStatus has some clinical judgment involved, such that there might need to be more specificity than the required FHIR value set allows. For example, a SNOMED coding might allow for additional specificity.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Condition.verificationStatus",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "condition": [
+          "con-3",
+          "con-5"
+        ],
+        "mustSupport": true,
+        "isModifier": true,
+        "isModifierReason": "This element is labeled as a modifier because the status contains the code refuted and entered-in-error that mark the Condition as not currently valid.",
+        "isSummary": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://hl7.org/fhir/ValueSet/condition-ver-status"
+        },
+        "mapping": [
+          {
+            "identity": "workflow",
+            "map": "Event.status"
+          },
+          {
+            "identity": "w5",
+            "map": "FiveWs.status"
+          },
+          {
+            "identity": "sct-concept",
+            "map": "< 410514004 |Finding context value|"
+          },
+          {
+            "identity": "v2",
+            "map": "PRB-13"
+          },
+          {
+            "identity": "rim",
+            "map": "Observation ACT\n.inboundRelationship[typeCode=COMP].source[classCode=OBS, code=\"verificationStatus\", moodCode=EVN].value"
+          },
+          {
+            "identity": "sct-attr",
+            "map": "408729009"
+          },
+          {
+            "identity": "argonaut-dq-dstu2",
+            "map": "Condition.verificationStatus"
+          }
+        ]
+      },
+      {
+        "id": "Condition:onco-core-Tumor.category",
+        "path": "Condition.category",
+        "short": "problem-list-item | encounter-diagnosis",
+        "definition": "A category assigned to the condition.",
+        "comment": "The categorization is often highly contextual and may appear poorly differentiated or not very useful in other contexts.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Condition.category",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mustSupport": true,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "extensible",
+          "valueSet": "http://hl7.org/fhir/us/mcode/ValueSet/obf-ConditionCategoryVS"
+        },
+        "mapping": [
+          {
+            "identity": "w5",
+            "map": "FiveWs.class"
+          },
+          {
+            "identity": "sct-concept",
+            "map": "< 404684003 |Clinical finding|"
+          },
+          {
+            "identity": "v2",
+            "map": "'problem' if from PRB-3. 'diagnosis' if from DG1 segment in PV1 message"
+          },
+          {
+            "identity": "rim",
+            "map": ".code"
+          },
+          {
+            "identity": "argonaut-dq-dstu2",
+            "map": "Condition.category"
+          }
+        ]
+      },
+      {
+        "id": "Condition:onco-core-Tumor.severity",
+        "path": "Condition.severity",
+        "short": "Subjective severity of condition",
+        "definition": "A subjective assessment of the severity of the condition as evaluated by the clinician.",
+        "comment": "Coding of the severity with a terminology is preferred, where possible.",
+        "min": 0,
+        "max": "0",
+        "base": {
+          "path": "Condition.severity",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+              "valueString": "ConditionSeverity"
+            }
+          ],
+          "strength": "preferred",
+          "description": "A subjective assessment of the severity of the condition as evaluated by the clinician.",
+          "valueSet": "http://hl7.org/fhir/ValueSet/condition-severity"
+        },
+        "mapping": [
+          {
+            "identity": "w5",
+            "map": "FiveWs.grade"
+          },
+          {
+            "identity": "sct-concept",
+            "map": "< 272141005 |Severities|"
+          },
+          {
+            "identity": "v2",
+            "map": "PRB-26 / ABS-3"
+          },
+          {
+            "identity": "rim",
+            "map": "Can be pre/post-coordinated into value.  Or ./inboundRelationship[typeCode=SUBJ].source[classCode=OBS, moodCode=EVN, code=\"severity\"].value"
+          },
+          {
+            "identity": "sct-attr",
+            "map": "246112005"
+          }
+        ]
+      },
+      {
+        "id": "Condition:onco-core-Tumor.code",
+        "path": "Condition.code",
+        "short": "Identification of the condition, problem or diagnosis",
+        "definition": "Identification of the condition, problem or diagnosis.",
+        "requirements": "0..1 to account for primarily narrative only resources.",
+        "alias": [
+          "type"
+        ],
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Condition.code",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mustSupport": true,
+        "isModifier": false,
+        "isSummary": true,
+        "binding": {
+          "strength": "extensible",
+          "valueSet": "http://hl7.org/fhir/us/mcode/ValueSet/onco-core-HistologyMorphologyBehaviorVS"
+        },
+        "mapping": [
+          {
+            "identity": "workflow",
+            "map": "Event.code"
+          },
+          {
+            "identity": "w5",
+            "map": "FiveWs.what[x]"
+          },
+          {
+            "identity": "sct-concept",
+            "map": "code 246090004 |Associated finding| (< 404684003 |Clinical finding| MINUS\n<< 420134006 |Propensity to adverse reactions| MINUS \n<< 473010000 |Hypersensitivity condition| MINUS \n<< 79899007 |Drug interaction| MINUS\n<< 69449002 |Drug action| MINUS \n<< 441742003 |Evaluation finding| MINUS \n<< 307824009 |Administrative status| MINUS \n<< 385356007 |Tumor stage finding|) \nOR < 413350009 |Finding with explicit context|\nOR < 272379006 |Event|"
+          },
+          {
+            "identity": "v2",
+            "map": "PRB-3"
+          },
+          {
+            "identity": "rim",
+            "map": ".value"
+          },
+          {
+            "identity": "sct-attr",
+            "map": "246090004"
+          },
+          {
+            "identity": "argonaut-dq-dstu2",
+            "map": "Condition.code"
+          }
+        ]
+      },
+      {
+        "id": "Condition:onco-core-Tumor.bodySite",
+        "path": "Condition.bodySite",
+        "short": "Anatomical location, if relevant",
+        "definition": "The anatomical location where this condition manifests itself.",
+        "comment": "Only used if not implicit in code found in Condition.code. If the use case requires attributes from the BodySite resource (e.g. to identify and track separately) then use the standard extension [bodySite](http://hl7.org/fhir/R4/extension-bodysite.html).  May be a summary code, or a reference to a very precise definition of the location, or both.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Condition.bodySite",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "isModifier": false,
+        "isSummary": true,
+        "binding": {
+          "strength": "preferred",
+          "valueSet": "http://hl7.org/fhir/us/mcode/ValueSet/shr-core-BodyLocationVS"
+        },
+        "mapping": [
+          {
+            "identity": "sct-concept",
+            "map": "< 442083009  |Anatomical or acquired body structure|"
+          },
+          {
+            "identity": "rim",
+            "map": ".targetBodySiteCode"
+          },
+          {
+            "identity": "sct-attr",
+            "map": "363698007"
+          }
+        ]
+      },
+      {
+        "id": "Condition:onco-core-Tumor.bodySite.id",
+        "path": "Condition.bodySite.id",
+        "representation": [
+          "xmlAttr"
+        ],
+        "short": "Unique id for inter-element referencing",
+        "definition": "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Element.id",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "isModifier": false,
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "id": "Condition:onco-core-Tumor.bodySite.extension",
+        "path": "Condition.bodySite.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "description": "Extensions are always sliced by (at least) url",
+          "rules": "open"
+        },
+        "short": "Additional content defined by implementations",
+        "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+        "comment": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "alias": [
+          "extensions",
+          "user content"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Element.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ],
+        "isModifier": false,
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "id": "Condition:onco-core-Tumor.bodySite.extension:laterality",
+        "path": "Condition.bodySite.extension",
+        "definition": "Body side of the body location, if needed to distinguish from a similar location on the other side of the body.\n\nThe laterality element is part of BodyLocation, a flexible structure that allows the location to be determined by a single code, or a code plus laterality and/or orientation. The body location can also be specified in relation to one or more body landmarks. SNOMED CT is used in all cases.\n\n+ Code only: The code should include (precoordinate) laterality and/orientation to the degree necessary to completely specify the body location.\n+ Code plus laterality and/or orientation: The basic code augmented by codes specifying the body side and/or anatomical orientation.\n+ Relation to landmark: The location relative to a landmark is specified by:\n- Establishing the location and type of landmark using a body site code and optional laterality/orientation, and\n- Specifying the direction and distance from the landmark to the body location.\n\nNote that BodyLocation is a data type (a reusable structure), not a stand-alone entity. The concept is similar to how a postal address can apply to a person, location, or organization. This contrasts with FHIR's stand-alone BodySite (aka BodyStructure in r4) which 'is not ... intended for describing the type of anatomical location but rather a specific body site on a specific patient' (FHIR 3.5).",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Element.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/us/mcode/StructureDefinition/shr-core-Laterality-extension"
+            ]
+          }
+        ],
+        "isModifier": false,
+        "isSummary": false,
+        "sliceName": "laterality"
+      },
+      {
+        "id": "Condition:onco-core-Tumor.bodySite.extension:orientation",
+        "path": "Condition.bodySite.extension",
+        "definition": "Orientation of the body location, if needed to distinguish from a similar location in another orientation.\nThe orientation element is part of BodyLocation, a flexible structure that allows the location to be determined by a single code, or a code plus laterality and/or orientation. The body location can also be specified in relation to one or more body landmarks. SNOMED CT is used in all cases.\n\n+ Code only: The code should include (precoordinate) laterality and/orientation to the degree necessary to completely specify the body location.\n+ Code plus laterality and/or orientation: The basic code augmented by codes specifying the body side and/or anatomical orientation.\n+ Relation to landmark: The location relative to a landmark is specified by:\n- Establishing the location and type of landmark using a body site code and optional laterality/orientation, and\n- Specifying the direction and distance from the landmark to the body location.\n\nNote that BodyLocation is a data type (a reusable structure), not a stand-alone entity. The concept is similar to how a postal address can apply to a person, location, or organization. This contrasts with FHIR's stand-alone BodySite (aka BodyStructure in r4) which 'is not ... intended for describing the type of anatomical location but rather a specific body site on a specific patient' (FHIR 3.5).",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Element.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/us/mcode/StructureDefinition/shr-core-Orientation-extension"
+            ]
+          }
+        ],
+        "isModifier": false,
+        "isSummary": false,
+        "sliceName": "orientation"
+      },
+      {
+        "id": "Condition:onco-core-Tumor.bodySite.extension:relationtolandmark",
+        "path": "Condition.bodySite.extension",
+        "definition": "The relationship between a landmark that helps determine a body location and the body location itself. The location relative to a landmark is specified by:\n* Specifying the location and type of landmark using a body site code and optional laterality/orientation,\n* Specifying the direction from the landmark to the body location, and\n* Specifying the distance from the landmark to the body location.\n\nThe RelationToLandmark element is part of BodyLocation, a flexible structure that allows the location to be determined by a single code, or a code plus laterality and/or orientation. The body location can also be specified in relation to one or more body landmarks. SNOMED CT is used in all cases.\n\n+ Code only: The code should include (precoordinate) laterality and/orientation to the degree necessary to completely specify the body location.\n+ Code plus laterality and/or orientation: The basic code augmented by codes specifying the body side and/or anatomical orientation.\n+ Relation to landmark: The location relative to a landmark is specified by:\n- Establishing the location and type of landmark using a body site code and optional laterality/orientation, and\n- Specifying the direction and distance from the landmark to the body location.\n\nNote that BodyLocation is a data type (a reusable structure), not a stand-alone entity. The concept is similar to how a postal address can apply to a person, location, or organization. This contrasts with FHIR's stand-alone BodySite (aka BodyStructure in r4) which 'is not ... intended for describing the type of anatomical location but rather a specific body site on a specific patient' (FHIR 3.5).",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Element.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/us/mcode/StructureDefinition/shr-core-RelationToLandmark-extension"
+            ]
+          }
+        ],
+        "isModifier": false,
+        "isSummary": false,
+        "sliceName": "relationtolandmark"
+      },
+      {
+        "id": "Condition:onco-core-Tumor.bodySite.coding",
+        "path": "Condition.bodySite.coding",
+        "short": "Code defined by a terminology system",
+        "definition": "A reference to a code defined by a terminology system.",
+        "comment": "Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true.",
+        "requirements": "Allows for alternative encodings within a code system, and translations to other code systems.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "CodeableConcept.coding",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "isModifier": false,
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "C*E.1-8, C*E.10-22"
+          },
+          {
+            "identity": "rim",
+            "map": "union(., ./translation)"
+          },
+          {
+            "identity": "orim",
+            "map": "fhir:CodeableConcept.coding rdfs:subPropertyOf dt:CD.coding"
+          }
+        ]
+      },
+      {
+        "id": "Condition:onco-core-Tumor.bodySite.text",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable",
+            "valueBoolean": true
+          }
+        ],
+        "path": "Condition.bodySite.text",
+        "short": "Plain text representation of the concept",
+        "definition": "A human language representation of the concept as seen/selected/uttered by the user who entered the data and/or which represents the intended meaning of the user.",
+        "comment": "Very often the text is the same as a displayName of one of the codings.",
+        "requirements": "The codes from the terminologies do not always capture the correct meaning with all the nuances of the human using them, or sometimes there is no appropriate code at all. In these cases, the text is used to capture the full meaning of the source.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "CodeableConcept.text",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "isModifier": false,
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "C*E.9. But note many systems use C*E.2 for this"
+          },
+          {
+            "identity": "rim",
+            "map": "./originalText[mediaType/code=\"text/plain\"]/data"
+          },
+          {
+            "identity": "orim",
+            "map": "fhir:CodeableConcept.text rdfs:subPropertyOf dt:CD.originalText"
+          }
+        ]
+      },
+      {
+        "id": "Condition:onco-core-Tumor.subject",
+        "path": "Condition.subject",
+        "short": "Who has the condition?",
+        "definition": "Indicates the patient or group who the condition record is associated with.",
+        "requirements": "Group is typically used for veterinary or public health use cases.",
+        "alias": [
+          "patient"
+        ],
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Condition.subject",
           "min": 1,
           "max": "1"
         },
         "type": [
           {
             "code": "Reference",
-            "profile": [
-              "http://hl7.org/fhir/us/shr/StructureDefinition/shr-core-Patient"
+            "targetProfile": [
+              "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-Patient"
             ]
           }
         ],
-        "maxLength": 0,
         "mustSupport": true,
         "isModifier": false,
-        "isSummary": false,
+        "isSummary": true,
         "mapping": [
+          {
+            "identity": "workflow",
+            "map": "Event.subject"
+          },
+          {
+            "identity": "w5",
+            "map": "FiveWs.subject[x]"
+          },
           {
             "identity": "v2",
             "map": "PID-3"
@@ -699,20 +1150,20 @@
           },
           {
             "identity": "w5",
-            "map": "who.focus"
+            "map": "FiveWs.subject"
           },
           {
-            "identity": "us-core-stu3",
+            "identity": "argonaut-dq-dstu2",
             "map": "Condition.patient"
           }
         ]
       },
       {
-        "id": "Condition.encounter",
+        "id": "Condition:onco-core-Tumor.encounter",
         "path": "Condition.encounter",
-        "short": "Encounter when condition first asserted",
-        "definition": "Encounter during which the condition was first asserted.",
-        "comments": "This record indicates the encounter this particular record is associated with.  In the case of a \"new\" diagnosis reflecting ongoing/revised information about the condition, this might be distinct from the first encounter in which the underlying condition was first \"known\".",
+        "short": "Encounter created as part of",
+        "definition": "The Encounter during which this Condition was created or to which the creation of this record is tightly associated.",
+        "comment": "This will typically be the encounter the event occurred within, but some activities may be initiated prior to or after the official completion of an encounter but still be tied to the context of the encounter. This record indicates the encounter this particular record is associated with.  In the case of a \"new\" diagnosis reflecting ongoing/revised information about the condition, this might be distinct from the first encounter in which the underlying condition was first \"known\".",
         "min": 0,
         "max": "1",
         "base": {
@@ -723,16 +1174,22 @@
         "type": [
           {
             "code": "Reference",
-            "profile": [
-              "http://hl7.org/fhir/us/shr/StructureDefinition/shr-core-Encounter"
+            "targetProfile": [
+              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter"
             ]
           }
         ],
-        "maxLength": 0,
-        "mustSupport": false,
         "isModifier": false,
         "isSummary": true,
         "mapping": [
+          {
+            "identity": "workflow",
+            "map": "Event.context"
+          },
+          {
+            "identity": "w5",
+            "map": "FiveWs.context"
+          },
           {
             "identity": "v2",
             "map": "PV1-19 (+PV1-54)"
@@ -740,15 +1197,178 @@
           {
             "identity": "rim",
             "map": ".inboundRelationship[typeCode=COMP].source[classCode=ENC, moodCode=EVN]"
-          },
-          {
-            "identity": "w5",
-            "map": "context"
           }
         ]
       },
       {
-        "id": "Condition.asserter",
+        "id": "Condition:onco-core-Tumor.onset[x]",
+        "path": "Condition.onset[x]",
+        "short": "Estimated or actual date,  date-time, or age",
+        "definition": "Estimated or actual date or date-time  the condition began, in the opinion of the clinician.",
+        "comment": "Age is generally used when the patient reports an age at which the Condition began to occur.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Condition.onset[x]",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "dateTime"
+          },
+          {
+            "code": "Age"
+          },
+          {
+            "code": "Period"
+          },
+          {
+            "code": "Range"
+          },
+          {
+            "code": "string"
+          }
+        ],
+        "isModifier": false,
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "workflow",
+            "map": "Event.occurrence[x]"
+          },
+          {
+            "identity": "w5",
+            "map": "FiveWs.init"
+          },
+          {
+            "identity": "v2",
+            "map": "PRB-16"
+          },
+          {
+            "identity": "rim",
+            "map": ".effectiveTime.low or .inboundRelationship[typeCode=SUBJ].source[classCode=OBS, moodCode=EVN, code=\"age at onset\"].value"
+          }
+        ]
+      },
+      {
+        "id": "Condition:onco-core-Tumor.abatement[x]",
+        "path": "Condition.abatement[x]",
+        "short": "When in resolution/remission",
+        "definition": "The date or estimated date that the condition resolved or went into remission. This is called \"abatement\" because of the many overloaded connotations associated with \"remission\" or \"resolution\" - Conditions are never really resolved, but they can abate.",
+        "comment": "There is no explicit distinction between resolution and remission because in many cases the distinction is not clear. Age is generally used when the patient reports an age at which the Condition abated.  If there is no abatement element, it is unknown whether the condition has resolved or entered remission; applications and users should generally assume that the condition is still valid.  When abatementString exists, it implies the condition is abated.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Condition.abatement[x]",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "dateTime"
+          },
+          {
+            "code": "Age"
+          },
+          {
+            "code": "Period"
+          },
+          {
+            "code": "Range"
+          },
+          {
+            "code": "string"
+          }
+        ],
+        "condition": [
+          "con-4"
+        ],
+        "isModifier": false,
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "w5",
+            "map": "FiveWs.done[x]"
+          },
+          {
+            "identity": "rim",
+            "map": ".effectiveTime.high or .inboundRelationship[typeCode=SUBJ].source[classCode=OBS, moodCode=EVN, code=\"age at remission\"].value or .inboundRelationship[typeCode=SUBJ]source[classCode=CONC, moodCode=EVN].status=completed"
+          }
+        ]
+      },
+      {
+        "id": "Condition:onco-core-Tumor.recordedDate",
+        "path": "Condition.recordedDate",
+        "short": "Date record was first recorded",
+        "definition": "The recordedDate represents when this particular Condition record was created in the system, which is often a system-generated date.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Condition.recordedDate",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "isModifier": false,
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "w5",
+            "map": "FiveWs.recorded"
+          },
+          {
+            "identity": "v2",
+            "map": "REL-11"
+          },
+          {
+            "identity": "rim",
+            "map": ".participation[typeCode=AUT].time"
+          }
+        ]
+      },
+      {
+        "id": "Condition:onco-core-Tumor.recorder",
+        "path": "Condition.recorder",
+        "short": "Who recorded the condition",
+        "definition": "Individual who recorded the record and takes responsibility for its content.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Condition.recorder",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner",
+              "http://hl7.org/fhir/StructureDefinition/PractitionerRole",
+              "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-Patient",
+              "http://hl7.org/fhir/StructureDefinition/RelatedPerson"
+            ]
+          }
+        ],
+        "isModifier": false,
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "w5",
+            "map": "FiveWs.author"
+          },
+          {
+            "identity": "rim",
+            "map": ".participation[typeCode=AUT].role"
+          }
+        ]
+      },
+      {
+        "id": "Condition:onco-core-Tumor.asserter",
         "path": "Condition.asserter",
         "short": "Person who asserts this condition",
         "definition": "Individual who is making the condition statement.",
@@ -762,403 +1382,32 @@
         "type": [
           {
             "code": "Reference",
-            "profile": [
-              "http://hl7.org/fhir/us/shr/StructureDefinition/shr-core-Practitioner"
-            ]
-          },
-          {
-            "code": "Reference",
-            "profile": [
-              "http://hl7.org/fhir/us/shr/StructureDefinition/shr-core-Patient"
+            "targetProfile": [
+              "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-Patient",
+              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner",
+              "http://hl7.org/fhir/StructureDefinition/RelatedPerson"
             ]
           }
         ],
-        "maxLength": 0,
-        "mustSupport": false,
         "isModifier": false,
         "isSummary": true,
         "mapping": [
+          {
+            "identity": "w5",
+            "map": "FiveWs.source"
+          },
           {
             "identity": "v2",
             "map": "REL-7.1 identifier + REL-7.12 type code"
           },
           {
             "identity": "rim",
-            "map": ".participation[typeCode=AUT].role"
-          },
-          {
-            "identity": "w5",
-            "map": "who.author"
+            "map": ".participation[typeCode=INF].role"
           }
         ]
       },
       {
-        "id": "Condition.dateRecorded",
-        "path": "Condition.dateRecorded",
-        "short": "When first entered",
-        "definition": "A date, when  the Condition statement was documented.",
-        "comments": "The Date Recorded represents the date when this particular Condition record was created in the EHR, not the date of the most recent update in terms of when severity, abatement, etc. were specified.  The date of the last record modification can be retrieved from the resource metadata.",
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "Condition.dateRecorded",
-          "min": 0,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "date"
-          }
-        ],
-        "maxLength": 0,
-        "mustSupport": false,
-        "isModifier": false,
-        "isSummary": true,
-        "mapping": [
-          {
-            "identity": "v2",
-            "map": "REL-11"
-          },
-          {
-            "identity": "rim",
-            "map": ".participation[typeCode=AUT].time"
-          },
-          {
-            "identity": "w5",
-            "map": "when.recorded"
-          }
-        ]
-      },
-      {
-        "id": "Condition.code",
-        "path": "Condition.code",
-        "short": "Identification of the condition, problem or diagnosis",
-        "definition": "Identification of the condition, problem or diagnosis.",
-        "min": 1,
-        "max": "1",
-        "base": {
-          "path": "Condition.code",
-          "min": 1,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "CodeableConcept"
-          }
-        ],
-        "maxLength": 0,
-        "mustSupport": true,
-        "isModifier": false,
-        "isSummary": false,
-        "binding": {
-          "strength": "extensible",
-          "valueSetReference": {
-            "reference": "http://hl7.org/fhir/us/mcode/onco/core/vs/HistologyMorphologyBehaviorVS"
-          }
-        },
-        "mapping": [
-          {
-            "identity": "v2",
-            "map": "PRB-3"
-          },
-          {
-            "identity": "rim",
-            "map": ".value"
-          },
-          {
-            "identity": "w5",
-            "map": "what"
-          },
-          {
-            "identity": "us-core-stu3",
-            "map": "Condition.code"
-          }
-        ]
-      },
-      {
-        "id": "Condition.category",
-        "path": "Condition.category",
-        "short": "complaint | symptom | finding | diagnosis",
-        "definition": "A category assigned to the condition.",
-        "comments": "The categorization is often highly contextual and may appear poorly differentiated or not very useful in other contexts.",
-        "min": 1,
-        "max": "1",
-        "base": {
-          "path": "Condition.category",
-          "min": 0,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "CodeableConcept"
-          }
-        ],
-        "maxLength": 0,
-        "mustSupport": false,
-        "isModifier": false,
-        "isSummary": false,
-        "binding": {
-          "strength": "extensible",
-          "valueSetReference": {
-            "reference": "http://hl7.org/fhir/us/mcode/shr/core/vs/ConditionCategoryVS"
-          }
-        },
-        "mapping": [
-          {
-            "identity": "v2",
-            "map": "'problem' if from PRB-3. 'diagnosis' if from DG1 segment in PV1 message"
-          },
-          {
-            "identity": "rim",
-            "map": ".code"
-          },
-          {
-            "identity": "w5",
-            "map": "class"
-          },
-          {
-            "identity": "us-core-stu3",
-            "map": "Condition.category"
-          }
-        ]
-      },
-      {
-        "id": "Condition.clinicalStatus",
-        "path": "Condition.clinicalStatus",
-        "short": "active | relapse | remission | resolved",
-        "definition": "The clinical status of the condition.",
-        "min": 1,
-        "max": "1",
-        "base": {
-          "path": "Condition.clinicalStatus",
-          "min": 0,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "code"
-          }
-        ],
-        "maxLength": 0,
-        "mustSupport": true,
-        "isModifier": true,
-        "isSummary": false,
-        "binding": {
-          "strength": "required",
-          "valueSetReference": {
-            "reference": "http://hl7.org/fhir/ValueSet/condition-clinical"
-          }
-        },
-        "mapping": [
-          {
-            "identity": "v2",
-            "map": "PRB-14 / DG1-6"
-          },
-          {
-            "identity": "w5",
-            "map": "status"
-          },
-          {
-            "identity": "us-core-stu3",
-            "map": "Condition.clinicalStatus"
-          }
-        ]
-      },
-      {
-        "id": "Condition.verificationStatus",
-        "path": "Condition.verificationStatus",
-        "short": "provisional | differential | confirmed | refuted | entered-in-error | unknown",
-        "definition": "The verification status to support the clinical status of the condition.",
-        "min": 1,
-        "max": "1",
-        "base": {
-          "path": "Condition.verificationStatus",
-          "min": 1,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "code"
-          }
-        ],
-        "maxLength": 0,
-        "mustSupport": true,
-        "isModifier": true,
-        "isSummary": false,
-        "binding": {
-          "strength": "required",
-          "valueSetReference": {
-            "reference": "http://hl7.org/fhir/ValueSet/condition-ver-status"
-          }
-        },
-        "mapping": [
-          {
-            "identity": "v2",
-            "map": "PRB-13"
-          },
-          {
-            "identity": "rim",
-            "map": ".code (pre or post-coordinated in)  Can use valueNegationInd for refuted"
-          },
-          {
-            "identity": "w5",
-            "map": "status"
-          },
-          {
-            "identity": "us-core-stu3",
-            "map": "Condition.verificationStatus"
-          }
-        ]
-      },
-      {
-        "id": "Condition.severity",
-        "path": "Condition.severity",
-        "short": "Subjective severity of condition",
-        "definition": "A subjective assessment of the severity of the condition as evaluated by the clinician.",
-        "comments": "Coding of the severity with a terminology is preferred, where possible.",
-        "min": 0,
-        "max": "0",
-        "base": {
-          "path": "Condition.severity",
-          "min": 0,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "CodeableConcept"
-          }
-        ],
-        "maxLength": 0,
-        "mustSupport": false,
-        "isModifier": false,
-        "isSummary": true,
-        "binding": {
-          "strength": "preferred",
-          "description": "A subjective assessment of the severity of the condition as evaluated by the clinician.",
-          "valueSetReference": {
-            "reference": "http://hl7.org/fhir/ValueSet/condition-severity"
-          }
-        },
-        "mapping": [
-          {
-            "identity": "v2",
-            "map": "PRB-26 / ABS-3"
-          },
-          {
-            "identity": "rim",
-            "map": "Can be pre/post-coordinated into value.  Or ./inboundRelationship[typeCode=SUBJ].source[classCode=OBS, moodCode=EVN, code=\"severity\"].value"
-          },
-          {
-            "identity": "w5",
-            "map": "grade"
-          }
-        ]
-      },
-      {
-        "id": "Condition.onsetx",
-        "path": "Condition.onset[x]",
-        "short": "Estimated or actual date,  date-time, or age",
-        "definition": "Estimated or actual date or date-time  the condition began, in the opinion of the clinician.",
-        "comments": "Age is generally used when the patient reports an age at which the Condition began to occur.",
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "Condition.onset[x]",
-          "min": 0,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "dateTime"
-          },
-          {
-            "code": "Quantity",
-            "profile": [
-              "http://hl7.org/fhir/StructureDefinition/Age"
-            ]
-          },
-          {
-            "code": "Period"
-          },
-          {
-            "code": "Range"
-          },
-          {
-            "code": "string"
-          }
-        ],
-        "maxLength": 0,
-        "mustSupport": false,
-        "isModifier": false,
-        "isSummary": true,
-        "mapping": [
-          {
-            "identity": "v2",
-            "map": "PRB-16"
-          },
-          {
-            "identity": "rim",
-            "map": ".effectiveTime.low or .inboundRelationship[typeCode=SUBJ].source[classCode=OBS, moodCode=EVN, code=\"age at onset\"].value"
-          },
-          {
-            "identity": "w5",
-            "map": "when.init"
-          }
-        ]
-      },
-      {
-        "id": "Condition.abatementx",
-        "path": "Condition.abatement[x]",
-        "short": "If/when in resolution/remission",
-        "definition": "The date or estimated date that the condition resolved or went into remission. This is called \"abatement\" because of the many overloaded connotations associated with \"remission\" or \"resolution\" - Conditions are never really resolved, but they can abate.",
-        "comments": "There is no explicit distinction between resolution and remission because in many cases the distinction is not clear. Age is generally used when the patient reports an age at which the Condition abated.  If there is no abatement element, it is unknown whether the condition has resolved or entered remission; applications and users should generally assume that the condition is still valid.",
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "Condition.abatement[x]",
-          "min": 0,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "dateTime"
-          },
-          {
-            "code": "Quantity",
-            "profile": [
-              "http://hl7.org/fhir/StructureDefinition/Age"
-            ]
-          },
-          {
-            "code": "boolean"
-          },
-          {
-            "code": "Period"
-          },
-          {
-            "code": "Range"
-          },
-          {
-            "code": "string"
-          }
-        ],
-        "maxLength": 0,
-        "mustSupport": false,
-        "isModifier": false,
-        "isSummary": true,
-        "mapping": [
-          {
-            "identity": "rim",
-            "map": ".effectiveTime.high or .inboundRelationship[typeCode=SUBJ].source[classCode=OBS, moodCode=EVN, code=\"age at remission\"].value or .inboundRelationship[typeCode=SUBJ]source[classCode=CONC, moodCode=EVN].status=completed"
-          },
-          {
-            "identity": "w5",
-            "map": "when.done"
-          }
-        ]
-      },
-      {
-        "id": "Condition.stage",
+        "id": "Condition:onco-core-Tumor.stage",
         "path": "Condition.stage",
         "short": "Stage/grade, usually assessed formally",
         "definition": "Clinical stage or grade of a condition. May include formal severity assessments.",
@@ -1167,25 +1416,32 @@
         "base": {
           "path": "Condition.stage",
           "min": 0,
-          "max": "1"
+          "max": "*"
         },
         "type": [
           {
             "code": "BackboneElement"
           }
         ],
-        "maxLength": 0,
         "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "Element"
+          },
           {
             "key": "con-1",
             "severity": "error",
             "human": "Stage SHALL have summary or assessment",
+            "expression": "summary.exists() or assessment.exists()",
             "xpath": "exists(f:summary) or exists(f:assessment)"
           }
         ],
-        "mustSupport": false,
         "isModifier": false,
-        "isSummary": true,
+        "isSummary": false,
         "mapping": [
           {
             "identity": "rim",
@@ -1194,27 +1450,25 @@
         ]
       },
       {
-        "id": "Condition.stage.id",
+        "id": "Condition:onco-core-Tumor.stage.id",
         "path": "Condition.stage.id",
         "representation": [
           "xmlAttr"
         ],
-        "short": "xml:id (or equivalent in JSON)",
-        "definition": "unique id for the element within a resource (for internal references).",
+        "short": "Unique id for inter-element referencing",
+        "definition": "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
         "min": 0,
         "max": "1",
         "base": {
-          "path": "Condition.stage.id",
+          "path": "Element.id",
           "min": 0,
           "max": "1"
         },
         "type": [
           {
-            "code": "id"
+            "code": "string"
           }
         ],
-        "maxLength": 0,
-        "mustSupport": false,
         "isModifier": false,
         "isSummary": false,
         "mapping": [
@@ -1225,11 +1479,11 @@
         ]
       },
       {
-        "id": "Condition.stage.extension",
+        "id": "Condition:onco-core-Tumor.stage.extension",
         "path": "Condition.stage.extension",
-        "short": "Additional Content defined by implementations",
-        "definition": "May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
-        "comments": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "short": "Additional content defined by implementations",
+        "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+        "comment": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
         "alias": [
           "extensions",
           "user content"
@@ -1237,7 +1491,7 @@
         "min": 0,
         "max": "*",
         "base": {
-          "path": "Condition.stage.extension",
+          "path": "Element.extension",
           "min": 0,
           "max": "*"
         },
@@ -1246,8 +1500,6 @@
             "code": "Extension"
           }
         ],
-        "maxLength": 0,
-        "mustSupport": false,
         "isModifier": false,
         "isSummary": false,
         "mapping": [
@@ -1258,11 +1510,12 @@
         ]
       },
       {
-        "id": "Condition.stage.modifierExtension",
+        "id": "Condition:onco-core-Tumor.stage.modifierExtension",
         "path": "Condition.stage.modifierExtension",
-        "short": "Extensions that cannot be ignored",
-        "definition": "May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.",
-        "comments": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "short": "Extensions that cannot be ignored even if unrecognized",
+        "definition": "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
+        "comment": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "requirements": "Modifier extensions allow for extensions that *cannot* be safely ignored to be clearly distinguished from the vast majority of extensions which can be safely ignored.  This promotes interoperability by eliminating the need for implementers to prohibit the presence of extensions. For further information, see the [definition of modifier extensions](http://hl7.org/fhir/R4/extensibility.html#modifierExtension).",
         "alias": [
           "extensions",
           "user content",
@@ -1271,7 +1524,7 @@
         "min": 0,
         "max": "*",
         "base": {
-          "path": "Condition.stage.modifierExtension",
+          "path": "BackboneElement.modifierExtension",
           "min": 0,
           "max": "*"
         },
@@ -1280,10 +1533,9 @@
             "code": "Extension"
           }
         ],
-        "maxLength": 0,
-        "mustSupport": false,
         "isModifier": true,
-        "isSummary": false,
+        "isModifierReason": "Modifier extensions are expected to modify the meaning or interpretation of the element that contains them",
+        "isSummary": true,
         "mapping": [
           {
             "identity": "rim",
@@ -1292,7 +1544,7 @@
         ]
       },
       {
-        "id": "Condition.stage.summary",
+        "id": "Condition:onco-core-Tumor.stage.summary",
         "path": "Condition.stage.summary",
         "short": "Simple summary (disease specific)",
         "definition": "A simple summary of the stage such as \"Stage 3\". The determination of the stage is disease-specific.",
@@ -1308,21 +1560,27 @@
             "code": "CodeableConcept"
           }
         ],
-        "maxLength": 0,
         "condition": [
           "con-1"
         ],
-        "mustSupport": false,
         "isModifier": false,
-        "isSummary": true,
+        "isSummary": false,
         "binding": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+              "valueString": "ConditionStage"
+            }
+          ],
           "strength": "example",
           "description": "Codes describing condition stages (e.g. Cancer stages).",
-          "valueSetReference": {
-            "reference": "http://hl7.org/fhir/ValueSet/condition-stage"
-          }
+          "valueSet": "http://hl7.org/fhir/ValueSet/condition-stage"
         },
         "mapping": [
+          {
+            "identity": "sct-concept",
+            "map": "< 254291000 |Staging and scales|"
+          },
           {
             "identity": "v2",
             "map": "PRB-14"
@@ -1334,7 +1592,7 @@
         ]
       },
       {
-        "id": "Condition.stage.assessment",
+        "id": "Condition:onco-core-Tumor.stage.assessment",
         "path": "Condition.stage.assessment",
         "short": "Formal record of assessment",
         "definition": "Reference to a formal record of the evidence on which the staging assessment is based.",
@@ -1348,24 +1606,17 @@
         "type": [
           {
             "code": "Reference",
-            "profile": [
-              "http://hl7.org/fhir/us/shr/StructureDefinition/shr-core-DiagnosticReport"
-            ]
-          },
-          {
-            "code": "Reference",
-            "profile": [
-              "http://hl7.org/fhir/us/shr/StructureDefinition/shr-core-Observation"
+            "targetProfile": [
+              "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-Observation",
+              "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-DiagnosticReport"
             ]
           }
         ],
-        "maxLength": 0,
         "condition": [
           "con-1"
         ],
-        "mustSupport": false,
         "isModifier": false,
-        "isSummary": true,
+        "isSummary": false,
         "mapping": [
           {
             "identity": "rim",
@@ -1374,11 +1625,48 @@
         ]
       },
       {
-        "id": "Condition.evidence",
+        "id": "Condition:onco-core-Tumor.stage.type",
+        "path": "Condition.stage.type",
+        "short": "Kind of staging",
+        "definition": "The kind of staging, such as pathological or clinical staging.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Condition.stage.type",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+              "valueString": "ConditionStageType"
+            }
+          ],
+          "strength": "example",
+          "description": "Codes describing the kind of condition staging (e.g. clinical or pathological).",
+          "valueSet": "http://hl7.org/fhir/ValueSet/condition-stage-type"
+        },
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "./inboundRelationship[typeCode=SUBJ].source[classCode=OBS, moodCode=EVN, code=\"stage type\"]"
+          }
+        ]
+      },
+      {
+        "id": "Condition:onco-core-Tumor.evidence",
         "path": "Condition.evidence",
         "short": "Supporting evidence",
-        "definition": "Supporting Evidence / manifestations that are the basis on which this condition is suspected or confirmed.",
-        "comments": "The evidence may be a simple list of coded symptoms/manifestations, or references to observations or formal assessments, or both.",
+        "definition": "Supporting evidence / manifestations that are the basis of the Condition's verification status, such as evidence that confirmed or refuted the condition.",
+        "comment": "The evidence may be a simple list of coded symptoms/manifestations, or references to observations or formal assessments, or both.",
         "min": 0,
         "max": "*",
         "base": {
@@ -1391,18 +1679,25 @@
             "code": "BackboneElement"
           }
         ],
-        "maxLength": 0,
         "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "Element"
+          },
           {
             "key": "con-2",
             "severity": "error",
             "human": "evidence SHALL have code or details",
+            "expression": "code.exists() or detail.exists()",
             "xpath": "exists(f:code) or exists(f:detail)"
           }
         ],
-        "mustSupport": false,
         "isModifier": false,
-        "isSummary": true,
+        "isSummary": false,
         "mapping": [
           {
             "identity": "rim",
@@ -1411,27 +1706,25 @@
         ]
       },
       {
-        "id": "Condition.evidence.id",
+        "id": "Condition:onco-core-Tumor.evidence.id",
         "path": "Condition.evidence.id",
         "representation": [
           "xmlAttr"
         ],
-        "short": "xml:id (or equivalent in JSON)",
-        "definition": "unique id for the element within a resource (for internal references).",
+        "short": "Unique id for inter-element referencing",
+        "definition": "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
         "min": 0,
         "max": "1",
         "base": {
-          "path": "Condition.evidence.id",
+          "path": "Element.id",
           "min": 0,
           "max": "1"
         },
         "type": [
           {
-            "code": "id"
+            "code": "string"
           }
         ],
-        "maxLength": 0,
-        "mustSupport": false,
         "isModifier": false,
         "isSummary": false,
         "mapping": [
@@ -1442,11 +1735,11 @@
         ]
       },
       {
-        "id": "Condition.evidence.extension",
+        "id": "Condition:onco-core-Tumor.evidence.extension",
         "path": "Condition.evidence.extension",
-        "short": "Additional Content defined by implementations",
-        "definition": "May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
-        "comments": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "short": "Additional content defined by implementations",
+        "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+        "comment": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
         "alias": [
           "extensions",
           "user content"
@@ -1454,7 +1747,7 @@
         "min": 0,
         "max": "*",
         "base": {
-          "path": "Condition.evidence.extension",
+          "path": "Element.extension",
           "min": 0,
           "max": "*"
         },
@@ -1463,8 +1756,6 @@
             "code": "Extension"
           }
         ],
-        "maxLength": 0,
-        "mustSupport": false,
         "isModifier": false,
         "isSummary": false,
         "mapping": [
@@ -1475,11 +1766,12 @@
         ]
       },
       {
-        "id": "Condition.evidence.modifierExtension",
+        "id": "Condition:onco-core-Tumor.evidence.modifierExtension",
         "path": "Condition.evidence.modifierExtension",
-        "short": "Extensions that cannot be ignored",
-        "definition": "May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.",
-        "comments": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "short": "Extensions that cannot be ignored even if unrecognized",
+        "definition": "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
+        "comment": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "requirements": "Modifier extensions allow for extensions that *cannot* be safely ignored to be clearly distinguished from the vast majority of extensions which can be safely ignored.  This promotes interoperability by eliminating the need for implementers to prohibit the presence of extensions. For further information, see the [definition of modifier extensions](http://hl7.org/fhir/R4/extensibility.html#modifierExtension).",
         "alias": [
           "extensions",
           "user content",
@@ -1488,7 +1780,7 @@
         "min": 0,
         "max": "*",
         "base": {
-          "path": "Condition.evidence.modifierExtension",
+          "path": "BackboneElement.modifierExtension",
           "min": 0,
           "max": "*"
         },
@@ -1497,10 +1789,9 @@
             "code": "Extension"
           }
         ],
-        "maxLength": 0,
-        "mustSupport": false,
         "isModifier": true,
-        "isSummary": false,
+        "isModifierReason": "Modifier extensions are expected to modify the meaning or interpretation of the element that contains them",
+        "isSummary": true,
         "mapping": [
           {
             "identity": "rim",
@@ -1509,36 +1800,44 @@
         ]
       },
       {
-        "id": "Condition.evidence.code",
+        "id": "Condition:onco-core-Tumor.evidence.code",
         "path": "Condition.evidence.code",
         "short": "Manifestation/symptom",
         "definition": "A manifestation or symptom that led to the recording of this condition.",
         "min": 0,
-        "max": "1",
+        "max": "*",
         "base": {
           "path": "Condition.evidence.code",
           "min": 0,
-          "max": "1"
+          "max": "*"
         },
         "type": [
           {
             "code": "CodeableConcept"
           }
         ],
-        "maxLength": 0,
         "condition": [
           "con-2"
         ],
-        "mustSupport": false,
         "isModifier": false,
         "isSummary": true,
         "binding": {
           "strength": "example",
-          "valueSetReference": {
-            "reference": "http://hl7.org/fhir/ValueSet/clinical-findings"
-          }
+          "valueSet": "http://hl7.org/fhir/ValueSet/clinical-findings"
         },
         "mapping": [
+          {
+            "identity": "workflow",
+            "map": "Event.reasonCode"
+          },
+          {
+            "identity": "w5",
+            "map": "FiveWs.why[x]"
+          },
+          {
+            "identity": "sct-concept",
+            "map": "< 404684003 |Clinical finding|"
+          },
           {
             "identity": "rim",
             "map": "[code=\"diagnosis\"].value"
@@ -1546,7 +1845,7 @@
         ]
       },
       {
-        "id": "Condition.evidence.detail",
+        "id": "Condition:onco-core-Tumor.evidence.detail",
         "path": "Condition.evidence.detail",
         "short": "Supporting information found elsewhere",
         "definition": "Links to other relevant information, including pathology reports.",
@@ -1560,19 +1859,21 @@
         "type": [
           {
             "code": "Reference",
-            "profile": [
-              "http://hl7.org/fhir/us/shr/StructureDefinition/shr-core-DomainResource"
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Resource"
             ]
           }
         ],
-        "maxLength": 0,
         "condition": [
           "con-2"
         ],
-        "mustSupport": false,
         "isModifier": false,
         "isSummary": true,
         "mapping": [
+          {
+            "identity": "w5",
+            "map": "FiveWs.why[x]"
+          },
           {
             "identity": "rim",
             "map": ".self"
@@ -1580,239 +1881,29 @@
         ]
       },
       {
-        "id": "Condition.bodySite",
-        "path": "Condition.bodySite",
-        "short": "Anatomical location, if relevant",
-        "definition": "The anatomical location where this condition manifests itself.",
-        "comments": "May be a summary code, or a reference to a very precise definition of the location, or both.",
-        "min": 0,
-        "max": "*",
-        "base": {
-          "path": "Condition.bodySite",
-          "min": 0,
-          "max": "*"
-        },
-        "type": [
-          {
-            "code": "CodeableConcept"
-          }
-        ],
-        "maxLength": 0,
-        "mustSupport": false,
-        "isModifier": false,
-        "isSummary": true,
-        "binding": {
-          "strength": "preferred",
-          "valueSetReference": {
-            "reference": "http://hl7.org/fhir/us/mcode/shr/core/vs/BodyLocationVS"
-          }
-        },
-        "mapping": [
-          {
-            "identity": "rim",
-            "map": ".targetBodySiteCode"
-          }
-        ]
-      },
-      {
-        "path": "Condition.bodySite.id",
-        "representation": [
-          "xmlAttr"
-        ],
-        "short": "xml:id (or equivalent in JSON)",
-        "definition": "unique id for the element within a resource (for internal references).",
-        "min": 0,
-        "max": "1",
-        "type": [
-          {
-            "code": "id"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "rim",
-            "map": "n/a"
-          }
-        ],
-        "id": "Condition.bodySite.id"
-      },
-      {
-        "path": "Condition.bodySite.extension",
-        "short": "Additional Content defined by implementations",
-        "definition": "May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
-        "comments": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
-        "alias": [
-          "extensions",
-          "user content"
-        ],
-        "min": 0,
-        "max": "*",
-        "type": [
-          {
-            "code": "Extension"
-          }
-        ],
-        "mapping": [
-          {
-            "identity": "rim",
-            "map": "n/a"
-          }
-        ],
-        "id": "Condition.bodySite.extension",
-        "slicing": {
-          "id": "1",
-          "discriminator": [
-            "url"
-          ],
-          "ordered": false,
-          "rules": "open"
-        }
-      },
-      {
-        "path": "Condition.bodySite.extension",
-        "definition": "Body side of the body location, if needed to distinguish from a similar location on the other side of the body.\n\nThe laterality element is part of BodyLocation, a flexible structure that allows the location to be determined by a single code, or a code plus laterality and/or orientation. The body location can also be specified in relation to one or more body landmarks. SNOMED CT is used in all cases.\n\n+ Code only: The code should include (precoordinate) laterality and/orientation to the degree necessary to completely specify the body location.\n+ Code plus laterality and/or orientation: The basic code augmented by codes specifying the body side and/or anatomical orientation.\n+ Relation to landmark: The location relative to a landmark is specified by:\n- Establishing the location and type of landmark using a body site code and optional laterality/orientation, and\n- Specifying the direction and distance from the landmark to the body location.\n\nNote that BodyLocation is a data type (a reusable structure), not a stand-alone entity. The concept is similar to how a postal address can apply to a person, location, or organization. This contrasts with FHIR's stand-alone BodySite (aka BodyStructure in r4) which 'is not ... intended for describing the type of anatomical location but rather a specific body site on a specific patient' (FHIR 3.5).",
-        "min": 0,
-        "max": "*",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": [
-              "http://hl7.org/fhir/us/shr/StructureDefinition/shr-core-Laterality-extension"
-            ]
-          }
-        ],
-        "id": "Condition.bodySite.extension-laterality",
-        "name": "laterality",
-        "base": {
-          "path": "Condition.bodySite.extension",
-          "min": 0,
-          "max": "*"
-        }
-      },
-      {
-        "path": "Condition.bodySite.extension",
-        "definition": "Orientation of the body location, if needed to distinguish from a similar location in another orientation.\nThe orientation element is part of BodyLocation, a flexible structure that allows the location to be determined by a single code, or a code plus laterality and/or orientation. The body location can also be specified in relation to one or more body landmarks. SNOMED CT is used in all cases.\n\n+ Code only: The code should include (precoordinate) laterality and/orientation to the degree necessary to completely specify the body location.\n+ Code plus laterality and/or orientation: The basic code augmented by codes specifying the body side and/or anatomical orientation.\n+ Relation to landmark: The location relative to a landmark is specified by:\n- Establishing the location and type of landmark using a body site code and optional laterality/orientation, and\n- Specifying the direction and distance from the landmark to the body location.\n\nNote that BodyLocation is a data type (a reusable structure), not a stand-alone entity. The concept is similar to how a postal address can apply to a person, location, or organization. This contrasts with FHIR's stand-alone BodySite (aka BodyStructure in r4) which 'is not ... intended for describing the type of anatomical location but rather a specific body site on a specific patient' (FHIR 3.5).",
-        "min": 0,
-        "max": "*",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": [
-              "http://hl7.org/fhir/us/shr/StructureDefinition/shr-core-Orientation-extension"
-            ]
-          }
-        ],
-        "id": "Condition.bodySite.extension-orientation",
-        "name": "orientation",
-        "base": {
-          "path": "Condition.bodySite.extension",
-          "min": 0,
-          "max": "*"
-        }
-      },
-      {
-        "path": "Condition.bodySite.extension",
-        "definition": "The relationship between a landmark that helps determine a body location and the body location itself. The location relative to a landmark is specified by:\n* Specifying the location and type of landmark using a body site code and optional laterality/orientation,\n* Specifying the direction from the landmark to the body location, and\n* Specifying the distance from the landmark to the body location.\n\nThe RelationToLandmark element is part of BodyLocation, a flexible structure that allows the location to be determined by a single code, or a code plus laterality and/or orientation. The body location can also be specified in relation to one or more body landmarks. SNOMED CT is used in all cases.\n\n+ Code only: The code should include (precoordinate) laterality and/orientation to the degree necessary to completely specify the body location.\n+ Code plus laterality and/or orientation: The basic code augmented by codes specifying the body side and/or anatomical orientation.\n+ Relation to landmark: The location relative to a landmark is specified by:\n- Establishing the location and type of landmark using a body site code and optional laterality/orientation, and\n- Specifying the direction and distance from the landmark to the body location.\n\nNote that BodyLocation is a data type (a reusable structure), not a stand-alone entity. The concept is similar to how a postal address can apply to a person, location, or organization. This contrasts with FHIR's stand-alone BodySite (aka BodyStructure in r4) which 'is not ... intended for describing the type of anatomical location but rather a specific body site on a specific patient' (FHIR 3.5).",
-        "min": 0,
-        "max": "*",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": [
-              "http://hl7.org/fhir/us/shr/StructureDefinition/shr-core-RelationToLandmark-extension"
-            ]
-          }
-        ],
-        "id": "Condition.bodySite.extension-relationtolandmark",
-        "name": "relationtolandmark",
-        "base": {
-          "path": "Condition.bodySite.extension",
-          "min": 0,
-          "max": "*"
-        }
-      },
-      {
-        "path": "Condition.bodySite.coding",
-        "short": "Code defined by a terminology system",
-        "definition": "A reference to a code defined by a terminology system.",
-        "comments": "Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labelled as UserSelected = true.",
-        "requirements": "Allows for translations and alternate encodings within a code system.  Also supports communication of the same instance to systems requiring different encodings.",
-        "min": 0,
-        "max": "*",
-        "type": [
-          {
-            "code": "Coding"
-          }
-        ],
-        "isSummary": true,
-        "mapping": [
-          {
-            "identity": "orim",
-            "map": "fhir:CodeableConcept.coding rdfs:subPropertyOf dt:CD.coding"
-          },
-          {
-            "identity": "v2",
-            "map": "C*E.1-8, C*E.10-22"
-          },
-          {
-            "identity": "rim",
-            "map": "union(., ./translation)"
-          }
-        ],
-        "id": "Condition.bodySite.coding"
-      },
-      {
-        "path": "Condition.bodySite.text",
-        "short": "Plain text representation of the concept",
-        "definition": "A human language representation of the concept as seen/selected/uttered by the user who entered the data and/or which represents the intended meaning of the user.",
-        "comments": "Very often the text is the same as a displayName of one of the codings.",
-        "requirements": "The codes from the terminologies do not always capture the correct meaning with all the nuances of the human using them, or sometimes there is no appropriate code at all. In these cases, the text is used to capture the full meaning of the source.",
-        "min": 0,
-        "max": "1",
-        "type": [
-          {
-            "code": "string"
-          }
-        ],
-        "isSummary": true,
-        "mapping": [
-          {
-            "identity": "orim",
-            "map": "fhir:CodeableConcept.text rdfs:subPropertyOf dt:CD.originalText"
-          },
-          {
-            "identity": "v2",
-            "map": "C*E.9. But note many systems use C*E.2 for this"
-          },
-          {
-            "identity": "rim",
-            "map": "./originalText[mediaType/code=\"text/plain\"]/data"
-          }
-        ],
-        "id": "Condition.bodySite.text"
-      },
-      {
-        "id": "Condition.notes",
-        "path": "Condition.notes",
+        "id": "Condition:onco-core-Tumor.note",
+        "path": "Condition.note",
         "short": "Additional information about the Condition",
         "definition": "Additional information about the Condition. This is a general notes/comments entry  for description of the Condition, its diagnosis and prognosis.",
         "min": 0,
-        "max": "1",
+        "max": "*",
         "base": {
-          "path": "Condition.notes",
+          "path": "Condition.note",
           "min": 0,
-          "max": "1"
+          "max": "*"
         },
         "type": [
           {
-            "code": "string"
+            "code": "Annotation"
           }
         ],
-        "maxLength": 0,
-        "mustSupport": false,
         "isModifier": false,
-        "isSummary": true,
+        "isSummary": false,
         "mapping": [
+          {
+            "identity": "workflow",
+            "map": "Event.note"
+          },
           {
             "identity": "v2",
             "map": "NTE child of PRB"
@@ -1828,7 +1919,7 @@
   "differential": {
     "element": [
       {
-        "id": "Condition",
+        "id": "Condition:onco-core-Tumor",
         "path": "Condition",
         "short": "onco-core-Tumor",
         "definition": "The presence of an abnormal mass of tissue (neoplasm) that results when cells divide more than they should or do not die when they should. Tumors may be benign (not cancer), or malignant (cancer). (source: NCI Dictionary).",
@@ -1837,113 +1928,28 @@
         "isSummary": false
       },
       {
-        "id": "Condition.meta",
-        "path": "Condition.meta"
-      },
-      {
-        "id": "Condition.meta.extension",
-        "path": "Condition.meta.extension",
+        "id": "Condition:onco-core-Tumor.extension",
+        "path": "Condition.extension",
         "slicing": {
-          "id": "3",
+          "id": "1",
           "discriminator": [
-            "url"
+            {
+              "type": "value",
+              "path": "url"
+            }
           ],
           "ordered": false,
           "rules": "open"
         }
       },
       {
-        "path": "Condition.meta.extension",
-        "definition": "FHIR: This provides a minimal amount of Provenance information that can be used to track or differentiate the source of information in the resource. The source may identify another FHIR server, document, message, database, etc.\nFHIM: Identifies the computer system that created the medical record. This optional field may also be used to indicate that the medical record was originally created by a different organization from the one that is currently storing or utilizing the record in that the assigning authority of the Id could be set to that originating organization. This property is optional, as some systems will assume that all records that it contains originated in that system, however it is anticipated that it will become increasingly commonplace for records from multiple systems and organizations will be comingled in order to provide a complete picture of the patient's health record.",
-        "min": 0,
-        "max": "1",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": [
-              "http://hl7.org/fhir/us/shr/StructureDefinition/shr-core-SourceSystem-extension"
-            ]
-          }
-        ],
-        "id": "Condition.meta.extension-sourcesystem",
-        "name": "sourcesystem",
-        "base": {
-          "path": "Condition.meta.extension",
-          "min": 0,
-          "max": "*"
-        }
-      },
-      {
-        "id": "Condition.extension",
+        "id": "Condition:onco-core-Tumor.extension:dateofdiagnosis",
         "path": "Condition.extension",
-        "slicing": {
-          "id": "2",
-          "discriminator": [
-            "url"
-          ],
-          "ordered": false,
-          "rules": "open"
-        }
-      },
-      {
-        "id": "Condition.extension-author",
-        "path": "Condition.extension",
-        "name": "author",
-        "definition": "The actor who created the item and it responsible for the content (regardless of the information source or who recorded it). If only the author is given, it is assumed the author is the information source and the recorder.",
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "Condition.extension",
-          "min": 0,
-          "max": "*"
-        },
-        "type": [
-          {
-            "code": "Extension",
-            "profile": [
-              "http://hl7.org/fhir/us/shr/StructureDefinition/shr-core-Author-extension"
-            ]
-          }
-        ],
-        "maxLength": 0,
-        "mustSupport": false,
-        "isModifier": false,
-        "isSummary": false
-      },
-      {
-        "id": "Condition.extension-annotation",
-        "path": "Condition.extension",
-        "name": "annotation",
-        "definition": "An added or follow-up note, often after the fact, that contains metadata about who made the statement and when.",
-        "min": 0,
-        "max": "*",
-        "base": {
-          "path": "Condition.extension",
-          "min": 0,
-          "max": "*"
-        },
-        "type": [
-          {
-            "code": "Extension",
-            "profile": [
-              "http://hl7.org/fhir/us/shr/StructureDefinition/shr-core-Annotation-extension"
-            ]
-          }
-        ],
-        "maxLength": 0,
-        "mustSupport": false,
-        "isModifier": false,
-        "isSummary": false
-      },
-      {
-        "id": "Condition.extension-dateofdiagnosis",
-        "path": "Condition.extension",
-        "name": "dateofdiagnosis",
         "definition": "The date the disease was first clinically recognized with sufficient certainty, regardless of whether it was fully characterized at that time.",
         "min": 0,
         "max": "1",
         "base": {
-          "path": "Condition.extension",
+          "path": "DomainResource.extension",
           "min": 0,
           "max": "*"
         },
@@ -1951,24 +1957,22 @@
           {
             "code": "Extension",
             "profile": [
-              "http://hl7.org/fhir/us/shr/StructureDefinition/shr-core-DateOfDiagnosis-extension"
+              "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-DateOfDiagnosis-extension"
             ]
           }
         ],
-        "maxLength": 0,
-        "mustSupport": false,
         "isModifier": false,
-        "isSummary": false
+        "isSummary": false,
+        "sliceName": "dateofdiagnosis"
       },
       {
-        "id": "Condition.extension-primarycancercondition",
+        "id": "Condition:onco-core-Tumor.extension:primarycancercondition",
         "path": "Condition.extension",
-        "name": "primarycancercondition",
         "definition": "Records the history of the primary cancer condition, the original or first tumor in the body, abnormal cells that divide without control and can invade nearby tissues.",
         "min": 0,
         "max": "1",
         "base": {
-          "path": "Condition.extension",
+          "path": "DomainResource.extension",
           "min": 0,
           "max": "*"
         },
@@ -1976,24 +1980,22 @@
           {
             "code": "Extension",
             "profile": [
-              "http://hl7.org/fhir/us/shr/StructureDefinition/onco-core-PrimaryCancerCondition-extension"
+              "http://hl7.org/fhir/us/mcode/StructureDefinition/onco-core-PrimaryCancerCondition-extension"
             ]
           }
         ],
-        "maxLength": 0,
-        "mustSupport": false,
         "isModifier": false,
-        "isSummary": false
+        "isSummary": false,
+        "sliceName": "primarycancercondition"
       },
       {
-        "id": "Condition.extension-isprimarytumor",
+        "id": "Condition:onco-core-Tumor.extension:isprimarytumor",
         "path": "Condition.extension",
-        "name": "isprimarytumor",
         "definition": "Whether the tumor is the original or first tumor in the body, for a particular cancer.",
         "min": 0,
         "max": "1",
         "base": {
-          "path": "Condition.extension",
+          "path": "DomainResource.extension",
           "min": 0,
           "max": "*"
         },
@@ -2001,222 +2003,209 @@
           {
             "code": "Extension",
             "profile": [
-              "http://hl7.org/fhir/us/shr/StructureDefinition/onco-core-IsPrimaryTumor-extension"
+              "http://hl7.org/fhir/us/mcode/StructureDefinition/onco-core-IsPrimaryTumor-extension"
             ]
           }
         ],
-        "maxLength": 0,
-        "mustSupport": false,
         "isModifier": false,
-        "isSummary": false
+        "isSummary": false,
+        "sliceName": "isprimarytumor"
       },
       {
-        "id": "Condition.patient",
-        "path": "Condition.patient",
-        "type": [
-          {
-            "code": "Reference",
-            "profile": [
-              "http://hl7.org/fhir/us/shr/StructureDefinition/shr-core-Patient"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "Condition.encounter",
-        "path": "Condition.encounter",
-        "type": [
-          {
-            "code": "Reference",
-            "profile": [
-              "http://hl7.org/fhir/us/shr/StructureDefinition/shr-core-Encounter"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "Condition.asserter",
-        "path": "Condition.asserter",
-        "type": [
-          {
-            "code": "Reference",
-            "profile": [
-              "http://hl7.org/fhir/us/shr/StructureDefinition/shr-core-Practitioner"
-            ]
-          },
-          {
-            "code": "Reference",
-            "profile": [
-              "http://hl7.org/fhir/us/shr/StructureDefinition/shr-core-Patient"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "Condition.code",
-        "path": "Condition.code",
-        "binding": {
-          "strength": "extensible",
-          "valueSetReference": {
-            "reference": "http://hl7.org/fhir/us/mcode/onco/core/vs/HistologyMorphologyBehaviorVS"
-          }
-        }
-      },
-      {
-        "id": "Condition.category",
-        "path": "Condition.category",
-        "binding": {
-          "strength": "extensible",
-          "valueSetReference": {
-            "reference": "http://hl7.org/fhir/us/mcode/shr/core/vs/ConditionCategoryVS"
-          }
-        }
-      },
-      {
-        "id": "Condition.clinicalStatus",
+        "id": "Condition:onco-core-Tumor.clinicalStatus",
         "path": "Condition.clinicalStatus",
         "min": 1,
         "max": "1"
       },
       {
-        "id": "Condition.severity",
+        "id": "Condition:onco-core-Tumor.verificationStatus",
+        "path": "Condition.verificationStatus",
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "Condition:onco-core-Tumor.category",
+        "path": "Condition.category",
+        "min": 1,
+        "max": "1",
+        "binding": {
+          "strength": "extensible",
+          "valueSet": "http://hl7.org/fhir/us/mcode/ValueSet/obf-ConditionCategoryVS"
+        }
+      },
+      {
+        "id": "Condition:onco-core-Tumor.severity",
         "path": "Condition.severity",
         "min": 0,
         "max": "0"
       },
       {
-        "id": "Condition.stage",
+        "id": "Condition:onco-core-Tumor.code",
+        "path": "Condition.code",
+        "binding": {
+          "strength": "extensible",
+          "valueSet": "http://hl7.org/fhir/us/mcode/ValueSet/onco-core-HistologyMorphologyBehaviorVS"
+        }
+      },
+      {
+        "id": "Condition:onco-core-Tumor.bodySite",
+        "path": "Condition.bodySite",
+        "binding": {
+          "strength": "preferred",
+          "valueSet": "http://hl7.org/fhir/us/mcode/ValueSet/shr-core-BodyLocationVS"
+        }
+      },
+      {
+        "id": "Condition:onco-core-Tumor.bodySite.extension:laterality",
+        "path": "Condition.bodySite.extension",
+        "definition": "Body side of the body location, if needed to distinguish from a similar location on the other side of the body.\n\nThe laterality element is part of BodyLocation, a flexible structure that allows the location to be determined by a single code, or a code plus laterality and/or orientation. The body location can also be specified in relation to one or more body landmarks. SNOMED CT is used in all cases.\n\n+ Code only: The code should include (precoordinate) laterality and/orientation to the degree necessary to completely specify the body location.\n+ Code plus laterality and/or orientation: The basic code augmented by codes specifying the body side and/or anatomical orientation.\n+ Relation to landmark: The location relative to a landmark is specified by:\n- Establishing the location and type of landmark using a body site code and optional laterality/orientation, and\n- Specifying the direction and distance from the landmark to the body location.\n\nNote that BodyLocation is a data type (a reusable structure), not a stand-alone entity. The concept is similar to how a postal address can apply to a person, location, or organization. This contrasts with FHIR's stand-alone BodySite (aka BodyStructure in r4) which 'is not ... intended for describing the type of anatomical location but rather a specific body site on a specific patient' (FHIR 3.5).",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Element.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/us/mcode/StructureDefinition/shr-core-Laterality-extension"
+            ]
+          }
+        ],
+        "isModifier": false,
+        "isSummary": false,
+        "sliceName": "laterality"
+      },
+      {
+        "id": "Condition:onco-core-Tumor.bodySite.extension:orientation",
+        "path": "Condition.bodySite.extension",
+        "definition": "Orientation of the body location, if needed to distinguish from a similar location in another orientation.\nThe orientation element is part of BodyLocation, a flexible structure that allows the location to be determined by a single code, or a code plus laterality and/or orientation. The body location can also be specified in relation to one or more body landmarks. SNOMED CT is used in all cases.\n\n+ Code only: The code should include (precoordinate) laterality and/orientation to the degree necessary to completely specify the body location.\n+ Code plus laterality and/or orientation: The basic code augmented by codes specifying the body side and/or anatomical orientation.\n+ Relation to landmark: The location relative to a landmark is specified by:\n- Establishing the location and type of landmark using a body site code and optional laterality/orientation, and\n- Specifying the direction and distance from the landmark to the body location.\n\nNote that BodyLocation is a data type (a reusable structure), not a stand-alone entity. The concept is similar to how a postal address can apply to a person, location, or organization. This contrasts with FHIR's stand-alone BodySite (aka BodyStructure in r4) which 'is not ... intended for describing the type of anatomical location but rather a specific body site on a specific patient' (FHIR 3.5).",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Element.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/us/mcode/StructureDefinition/shr-core-Orientation-extension"
+            ]
+          }
+        ],
+        "isModifier": false,
+        "isSummary": false,
+        "sliceName": "orientation"
+      },
+      {
+        "id": "Condition:onco-core-Tumor.bodySite.extension:relationtolandmark",
+        "path": "Condition.bodySite.extension",
+        "definition": "The relationship between a landmark that helps determine a body location and the body location itself. The location relative to a landmark is specified by:\n* Specifying the location and type of landmark using a body site code and optional laterality/orientation,\n* Specifying the direction from the landmark to the body location, and\n* Specifying the distance from the landmark to the body location.\n\nThe RelationToLandmark element is part of BodyLocation, a flexible structure that allows the location to be determined by a single code, or a code plus laterality and/or orientation. The body location can also be specified in relation to one or more body landmarks. SNOMED CT is used in all cases.\n\n+ Code only: The code should include (precoordinate) laterality and/orientation to the degree necessary to completely specify the body location.\n+ Code plus laterality and/or orientation: The basic code augmented by codes specifying the body side and/or anatomical orientation.\n+ Relation to landmark: The location relative to a landmark is specified by:\n- Establishing the location and type of landmark using a body site code and optional laterality/orientation, and\n- Specifying the direction and distance from the landmark to the body location.\n\nNote that BodyLocation is a data type (a reusable structure), not a stand-alone entity. The concept is similar to how a postal address can apply to a person, location, or organization. This contrasts with FHIR's stand-alone BodySite (aka BodyStructure in r4) which 'is not ... intended for describing the type of anatomical location but rather a specific body site on a specific patient' (FHIR 3.5).",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Element.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/us/mcode/StructureDefinition/shr-core-RelationToLandmark-extension"
+            ]
+          }
+        ],
+        "isModifier": false,
+        "isSummary": false,
+        "sliceName": "relationtolandmark"
+      },
+      {
+        "id": "Condition:onco-core-Tumor.subject",
+        "path": "Condition.subject",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-Patient"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Condition:onco-core-Tumor.encounter",
+        "path": "Condition.encounter",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Condition:onco-core-Tumor.recorder",
+        "path": "Condition.recorder",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner",
+              "http://hl7.org/fhir/StructureDefinition/PractitionerRole",
+              "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-Patient",
+              "http://hl7.org/fhir/StructureDefinition/RelatedPerson"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Condition:onco-core-Tumor.asserter",
+        "path": "Condition.asserter",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-Patient",
+              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner",
+              "http://hl7.org/fhir/StructureDefinition/RelatedPerson"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Condition:onco-core-Tumor.stage",
         "path": "Condition.stage",
         "min": 0,
         "max": "0"
       },
       {
-        "id": "Condition.stage.assessment",
+        "id": "Condition:onco-core-Tumor.stage.assessment",
         "path": "Condition.stage.assessment",
         "type": [
           {
             "code": "Reference",
-            "profile": [
-              "http://hl7.org/fhir/us/shr/StructureDefinition/shr-core-DiagnosticReport"
-            ]
-          },
-          {
-            "code": "Reference",
-            "profile": [
-              "http://hl7.org/fhir/us/shr/StructureDefinition/shr-core-Observation"
+            "targetProfile": [
+              "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-Observation",
+              "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-DiagnosticReport"
             ]
           }
         ]
       },
       {
-        "id": "Condition.evidence",
+        "id": "Condition:onco-core-Tumor.evidence",
         "path": "Condition.evidence"
       },
       {
-        "id": "Condition.evidence.code",
+        "id": "Condition:onco-core-Tumor.evidence.code",
         "path": "Condition.evidence.code",
         "binding": {
           "strength": "example",
-          "valueSetReference": {
-            "reference": "http://hl7.org/fhir/ValueSet/clinical-findings"
-          }
-        }
-      },
-      {
-        "id": "Condition.evidence.detail",
-        "path": "Condition.evidence.detail",
-        "type": [
-          {
-            "code": "Reference",
-            "profile": [
-              "http://hl7.org/fhir/us/shr/StructureDefinition/shr-core-DomainResource"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "Condition.bodySite",
-        "path": "Condition.bodySite",
-        "binding": {
-          "strength": "preferred",
-          "valueSetReference": {
-            "reference": "http://hl7.org/fhir/us/mcode/shr/core/vs/BodyLocationVS"
-          }
-        }
-      },
-      {
-        "id": "Condition.bodySite.extension",
-        "path": "Condition.bodySite.extension",
-        "slicing": {
-          "id": "1",
-          "discriminator": [
-            "url"
-          ],
-          "ordered": false,
-          "rules": "open"
-        }
-      },
-      {
-        "path": "Condition.bodySite.extension",
-        "definition": "Body side of the body location, if needed to distinguish from a similar location on the other side of the body.\n\nThe laterality element is part of BodyLocation, a flexible structure that allows the location to be determined by a single code, or a code plus laterality and/or orientation. The body location can also be specified in relation to one or more body landmarks. SNOMED CT is used in all cases.\n\n+ Code only: The code should include (precoordinate) laterality and/orientation to the degree necessary to completely specify the body location.\n+ Code plus laterality and/or orientation: The basic code augmented by codes specifying the body side and/or anatomical orientation.\n+ Relation to landmark: The location relative to a landmark is specified by:\n- Establishing the location and type of landmark using a body site code and optional laterality/orientation, and\n- Specifying the direction and distance from the landmark to the body location.\n\nNote that BodyLocation is a data type (a reusable structure), not a stand-alone entity. The concept is similar to how a postal address can apply to a person, location, or organization. This contrasts with FHIR's stand-alone BodySite (aka BodyStructure in r4) which 'is not ... intended for describing the type of anatomical location but rather a specific body site on a specific patient' (FHIR 3.5).",
-        "min": 0,
-        "max": "*",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": [
-              "http://hl7.org/fhir/us/shr/StructureDefinition/shr-core-Laterality-extension"
-            ]
-          }
-        ],
-        "id": "Condition.bodySite.extension-laterality",
-        "name": "laterality",
-        "base": {
-          "path": "Condition.bodySite.extension",
-          "min": 0,
-          "max": "*"
-        }
-      },
-      {
-        "path": "Condition.bodySite.extension",
-        "definition": "Orientation of the body location, if needed to distinguish from a similar location in another orientation.\nThe orientation element is part of BodyLocation, a flexible structure that allows the location to be determined by a single code, or a code plus laterality and/or orientation. The body location can also be specified in relation to one or more body landmarks. SNOMED CT is used in all cases.\n\n+ Code only: The code should include (precoordinate) laterality and/orientation to the degree necessary to completely specify the body location.\n+ Code plus laterality and/or orientation: The basic code augmented by codes specifying the body side and/or anatomical orientation.\n+ Relation to landmark: The location relative to a landmark is specified by:\n- Establishing the location and type of landmark using a body site code and optional laterality/orientation, and\n- Specifying the direction and distance from the landmark to the body location.\n\nNote that BodyLocation is a data type (a reusable structure), not a stand-alone entity. The concept is similar to how a postal address can apply to a person, location, or organization. This contrasts with FHIR's stand-alone BodySite (aka BodyStructure in r4) which 'is not ... intended for describing the type of anatomical location but rather a specific body site on a specific patient' (FHIR 3.5).",
-        "min": 0,
-        "max": "*",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": [
-              "http://hl7.org/fhir/us/shr/StructureDefinition/shr-core-Orientation-extension"
-            ]
-          }
-        ],
-        "id": "Condition.bodySite.extension-orientation",
-        "name": "orientation",
-        "base": {
-          "path": "Condition.bodySite.extension",
-          "min": 0,
-          "max": "*"
-        }
-      },
-      {
-        "path": "Condition.bodySite.extension",
-        "definition": "The relationship between a landmark that helps determine a body location and the body location itself. The location relative to a landmark is specified by:\n* Specifying the location and type of landmark using a body site code and optional laterality/orientation,\n* Specifying the direction from the landmark to the body location, and\n* Specifying the distance from the landmark to the body location.\n\nThe RelationToLandmark element is part of BodyLocation, a flexible structure that allows the location to be determined by a single code, or a code plus laterality and/or orientation. The body location can also be specified in relation to one or more body landmarks. SNOMED CT is used in all cases.\n\n+ Code only: The code should include (precoordinate) laterality and/orientation to the degree necessary to completely specify the body location.\n+ Code plus laterality and/or orientation: The basic code augmented by codes specifying the body side and/or anatomical orientation.\n+ Relation to landmark: The location relative to a landmark is specified by:\n- Establishing the location and type of landmark using a body site code and optional laterality/orientation, and\n- Specifying the direction and distance from the landmark to the body location.\n\nNote that BodyLocation is a data type (a reusable structure), not a stand-alone entity. The concept is similar to how a postal address can apply to a person, location, or organization. This contrasts with FHIR's stand-alone BodySite (aka BodyStructure in r4) which 'is not ... intended for describing the type of anatomical location but rather a specific body site on a specific patient' (FHIR 3.5).",
-        "min": 0,
-        "max": "*",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": [
-              "http://hl7.org/fhir/us/shr/StructureDefinition/shr-core-RelationToLandmark-extension"
-            ]
-          }
-        ],
-        "id": "Condition.bodySite.extension-relationtolandmark",
-        "name": "relationtolandmark",
-        "base": {
-          "path": "Condition.bodySite.extension",
-          "min": 0,
-          "max": "*"
+          "valueSet": "http://hl7.org/fhir/ValueSet/clinical-findings"
         }
       }
     ]
@@ -2227,9 +2216,7 @@
       "value": "onco.core.Tumor"
     }
   ],
-  "display": "onco-core-Tumor",
-  "description": "The presence of an abnormal mass of tissue (neoplasm) that results when cells divide more than they should or do not die when they should. Tumors may be benign (not cancer), or malignant (cancer). (source: NCI Dictionary).",
-  "code": [
+  "keyword": [
     {
       "system": "http://snomed.info/sct",
       "code": "395557000",

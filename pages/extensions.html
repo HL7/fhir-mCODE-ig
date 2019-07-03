@@ -36,48 +36,12 @@
   </thead>
   <tbody>
     <tr>
-          <td><a href="StructureDefinition-shr-core-Annotation-extension.html">Annotation</a></td>
-          <td>{% capture md_text %}An added or follow-up note, often after the fact, that contains metadata about who made the statement and when.{% endcapture %}{{ md_text | markdownify }}</td>
-        </tr>
-        <tr>
-          <td><a href="StructureDefinition-shr-core-Author-extension.html">Author</a></td>
-          <td>{% capture md_text %}The actor who created the item and it responsible for the content (regardless of the information source or who recorded it). If only the author is given, it is assumed the author is the information source and the recorder.{% endcapture %}{{ md_text | markdownify }}</td>
-        </tr>
-        <tr>
-          <td><a href="StructureDefinition-shr-core-BasedOn-extension.html">BasedOn</a></td>
-          <td>{% capture md_text %}The proposal, order, or plan that is partly or wholly fulfilled by this item.{% endcapture %}{{ md_text | markdownify }}</td>
-        </tr>
-        <tr>
-          <td><a href="StructureDefinition-shr-core-BloodPressureCuffSize-extension.html">BloodPressureCuffSize</a></td>
-          <td>{% capture md_text %}The size of cuff used, if applicable.{% endcapture %}{{ md_text | markdownify }}</td>
-        </tr>
-        <tr>
-          <td><a href="StructureDefinition-shr-core-BodyPosition-extension.html">BodyPosition</a></td>
-          <td>{% capture md_text %}The position or physical attitude of the body.{% endcapture %}{{ md_text | markdownify }}</td>
-        </tr>
-        <tr>
-          <td><a href="StructureDefinition-shr-core-CareContext-extension.html">CareContext</a></td>
-          <td>{% capture md_text %}The encounter or episode of care{% endcapture %}{{ md_text | markdownify }}</td>
-        </tr>
-        <tr>
-          <td><a href="StructureDefinition-shr-core-Category-extension.html">Category</a></td>
-          <td>{% capture md_text %}The general type or class of this item.{% endcapture %}{{ md_text | markdownify }}</td>
-        </tr>
-        <tr>
-          <td><a href="StructureDefinition-shr-core-ComplicationReference-extension.html">ComplicationReference</a></td>
-          <td>{% capture md_text %}Complication following the procedure, as a reference to a Condition.{% endcapture %}{{ md_text | markdownify }}</td>
-        </tr>
-        <tr>
-          <td><a href="StructureDefinition-shr-core-DateOfDiagnosis-extension.html">DateOfDiagnosis</a></td>
+          <td><a href="StructureDefinition-obf-DateOfDiagnosis-extension.html">DateOfDiagnosis</a></td>
           <td>{% capture md_text %}The date the disease was first clinically recognized with sufficient certainty, regardless of whether it was fully characterized at that time.{% endcapture %}{{ md_text | markdownify }}</td>
         </tr>
         <tr>
           <td><a href="StructureDefinition-onco-core-EvidenceType-extension.html">EvidenceType</a></td>
           <td>{% capture md_text %}The type of evidence considered in making the determination.{% endcapture %}{{ md_text | markdownify }}</td>
-        </tr>
-        <tr>
-          <td><a href="StructureDefinition-shr-core-FocalSubject-extension.html">FocalSubject</a></td>
-          <td>{% capture md_text %}The person or entity that the information in this resource relates to, if different than the person of record. The subject of information can be a reference or a code, the latter when the subject is described generically, for example, in terms of a relationship to the subject of record (e.g., wife).{% endcapture %}{{ md_text | markdownify }}</td>
         </tr>
         <tr>
           <td><a href="StructureDefinition-onco-core-GeneStudied-extension.html">GeneStudied</a></td>
@@ -88,55 +52,42 @@
           <td>{% capture md_text %}A description of the morphologic and behavioral characteristics of the cancer.{% endcapture %}{{ md_text | markdownify }}</td>
         </tr>
         <tr>
-          <td><a href="StructureDefinition-shr-core-MedicationBasedOn-extension.html">MedicationBasedOn</a></td>
-          <td></td>
+          <td><a href="StructureDefinition-shr-core-Laterality-extension.html">Laterality</a></td>
+          <td>{% capture md_text %}Body side of the body location, if needed to distinguish from a similar location on the other side of the body.
+
+The laterality element is part of BodyLocation, a flexible structure that allows the location to be determined by a single code, or a code plus laterality and/or orientation. The body location can also be specified in relation to one or more body landmarks. SNOMED CT is used in all cases.
+
++ Code only: The code should include (precoordinate) laterality and/orientation to the degree necessary to completely specify the body location.
++ Code plus laterality and/or orientation: The basic code augmented by codes specifying the body side and/or anatomical orientation.
++ Relation to landmark: The location relative to a landmark is specified by:
+- Establishing the location and type of landmark using a body site code and optional laterality/orientation, and
+- Specifying the direction and distance from the landmark to the body location.
+
+Note that BodyLocation is a data type (a reusable structure), not a stand-alone entity. The concept is similar to how a postal address can apply to a person, location, or organization. This contrasts with FHIR's stand-alone BodySite (aka BodyStructure in r4) which 'is not ... intended for describing the type of anatomical location but rather a specific body site on a specific patient' (FHIR 3.5).{% endcapture %}{{ md_text | markdownify }}</td>
         </tr>
         <tr>
-          <td><a href="StructureDefinition-shr-core-MedicationStatementPartOf-extension.html">MedicationStatementPartOf</a></td>
-          <td>{% capture md_text %}A larger event of which this particular event is a component or step.{% endcapture %}{{ md_text | markdownify }}</td>
-        </tr>
-        <tr>
-          <td><a href="StructureDefinition-shr-core-ObservationBasedOn-extension.html">ObservationBasedOn</a></td>
-          <td>{% capture md_text %}A plan, proposal or order that is fulfilled in whole or in part by this event. For example, a MedicationRequest may require a patient to have laboratory test performed before it is dispensed.{% endcapture %}{{ md_text | markdownify }}</td>
-        </tr>
-        <tr>
-          <td><a href="StructureDefinition-shr-core-ObservationDerivedFrom-extension.html">ObservationDerivedFrom</a></td>
-          <td>{% capture md_text %}The target resource that represents a measurement from which this observation value is derived. For example, a calculated anion gap or a fetal measurement based on an ultrasound image.{% endcapture %}{{ md_text | markdownify }}</td>
-        </tr>
-        <tr>
-          <td><a href="StructureDefinition-shr-core-ObservationPartOf-extension.html">ObservationPartOf</a></td>
-          <td>{% capture md_text %}A larger event of which this particular Observation is a component or step. For example, an observation as part of a procedure.{% endcapture %}{{ md_text | markdownify }}</td>
-        </tr>
-        <tr>
-          <td><a href="StructureDefinition-shr-core-OccurrenceTimeOrPeriod-extension.html">OccurrenceTimeOrPeriod</a></td>
-          <td>{% capture md_text %}The point or period of time when the event takes place. Times can be precise (dateTime) or approximate (date). If a time period is used, and the start date or dateTime is missing, the start of the period is not known. If the end date or dateTime is missing, it means that the period is ongoing.{% endcapture %}{{ md_text | markdownify }}</td>
-        </tr>
-        <tr>
-          <td><a href="StructureDefinition-shr-core-PersonAuthor-extension.html">PersonAuthor</a></td>
-          <td>{% capture md_text %}A human author, patient, practitioner, or related person, as opposed to an organization or device.{% endcapture %}{{ md_text | markdownify }}</td>
-        </tr>
-        <tr>
-          <td><a href="StructureDefinition-shr-core-PersonInformationSource-extension.html">PersonInformationSource</a></td>
-          <td>{% capture md_text %}The person who provided the information, not necessarily the patient.{% endcapture %}{{ md_text | markdownify }}</td>
-        </tr>
-        <tr>
-          <td><a href="StructureDefinition-shr-core-Precondition-extension.html">Precondition</a></td>
-          <td>{% capture md_text %}A description of the conditions or context of an observation, for example, under sedation, fasting or post-exercise. A qualifier cannot modify the measurement type; for example, a fasting blood sugar is still a blood sugar.{% endcapture %}{{ md_text | markdownify }}</td>
+          <td><a href="StructureDefinition-shr-core-Orientation-extension.html">Orientation</a></td>
+          <td>{% capture md_text %}Orientation of the body location, if needed to distinguish from a similar location in another orientation.
+The orientation element is part of BodyLocation, a flexible structure that allows the location to be determined by a single code, or a code plus laterality and/or orientation. The body location can also be specified in relation to one or more body landmarks. SNOMED CT is used in all cases.
+
++ Code only: The code should include (precoordinate) laterality and/orientation to the degree necessary to completely specify the body location.
++ Code plus laterality and/or orientation: The basic code augmented by codes specifying the body side and/or anatomical orientation.
++ Relation to landmark: The location relative to a landmark is specified by:
+- Establishing the location and type of landmark using a body site code and optional laterality/orientation, and
+- Specifying the direction and distance from the landmark to the body location.
+
+Note that BodyLocation is a data type (a reusable structure), not a stand-alone entity. The concept is similar to how a postal address can apply to a person, location, or organization. This contrasts with FHIR's stand-alone BodySite (aka BodyStructure in r4) which 'is not ... intended for describing the type of anatomical location but rather a specific body site on a specific patient' (FHIR 3.5).{% endcapture %}{{ md_text | markdownify }}</td>
         </tr>
         <tr>
           <td><a href="StructureDefinition-onco-core-PrimaryCancerCondition-extension.html">PrimaryCancerCondition</a></td>
           <td>{% capture md_text %}Records the history of the primary cancer condition, the original or first tumor in the body, abnormal cells that divide without control and can invade nearby tissues.{% endcapture %}{{ md_text | markdownify }}</td>
         </tr>
         <tr>
-          <td><a href="StructureDefinition-shr-core-ProcedurePartOf-extension.html">ProcedurePartOf</a></td>
-          <td>{% capture md_text %}A larger event of which this particular procedure is a component or step.{% endcapture %}{{ md_text | markdownify }}</td>
-        </tr>
-        <tr>
-          <td><a href="StructureDefinition-shr-core-RadiationDosePerFraction-extension.html">RadiationDosePerFraction</a></td>
+          <td><a href="StructureDefinition-obf-RadiationDosePerFraction-extension.html">RadiationDosePerFraction</a></td>
           <td>{% capture md_text %}The total number of treatment sessions (fractions) administered during a course of radiation therapy therapy. A fraction is a portion of the total radiation dose, delivered as a series of treatments that make up the full course of radiotherapy. (source: LOINC){% endcapture %}{{ md_text | markdownify }}</td>
         </tr>
         <tr>
-          <td><a href="StructureDefinition-shr-core-RadiationFractionsDelivered-extension.html">RadiationFractionsDelivered</a></td>
+          <td><a href="StructureDefinition-obf-RadiationFractionsDelivered-extension.html">RadiationFractionsDelivered</a></td>
           <td>{% capture md_text %}The total number of treatment sessions (fractions) administered during a course of radiation therapy therapy. A fraction is a portion of the total radiation dose, delivered as a series of treatments that make up the full course of radiotherapy. (source: LOINC){% endcapture %}{{ md_text | markdownify }}</td>
         </tr>
         <tr>
@@ -148,36 +99,41 @@
           <td>{% capture md_text %}Cancer condition this information relates to. Includes the primary cancer, secondary cancer, or a particular tumor.{% endcapture %}{{ md_text | markdownify }}</td>
         </tr>
         <tr>
-          <td><a href="StructureDefinition-shr-core-ResultsInterpreter-extension.html">ResultsInterpreter</a></td>
-          <td>{% capture md_text %}The practitioner or organization that is responsible for the report's conclusions and interpretations.{% endcapture %}{{ md_text | markdownify }}</td>
+          <td><a href="StructureDefinition-shr-core-RelationToLandmark-extension.html">RelationToLandmark</a></td>
+          <td>{% capture md_text %}The relationship between a landmark that helps determine a body location and the body location itself. The location relative to a landmark is specified by:
+* Specifying the location and type of landmark using a body site code and optional laterality/orientation,
+* Specifying the direction from the landmark to the body location, and
+* Specifying the distance from the landmark to the body location.
+
+The RelationToLandmark element is part of BodyLocation, a flexible structure that allows the location to be determined by a single code, or a code plus laterality and/or orientation. The body location can also be specified in relation to one or more body landmarks. SNOMED CT is used in all cases.
+
++ Code only: The code should include (precoordinate) laterality and/orientation to the degree necessary to completely specify the body location.
++ Code plus laterality and/or orientation: The basic code augmented by codes specifying the body side and/or anatomical orientation.
++ Relation to landmark: The location relative to a landmark is specified by:
+- Establishing the location and type of landmark using a body site code and optional laterality/orientation, and
+- Specifying the direction and distance from the landmark to the body location.
+
+Note that BodyLocation is a data type (a reusable structure), not a stand-alone entity. The concept is similar to how a postal address can apply to a person, location, or organization. This contrasts with FHIR's stand-alone BodySite (aka BodyStructure in r4) which 'is not ... intended for describing the type of anatomical location but rather a specific body site on a specific patient' (FHIR 3.5).{% endcapture %}{{ md_text | markdownify }}</td>
         </tr>
         <tr>
-          <td><a href="StructureDefinition-shr-core-SpecimenType-extension.html">SpecimenType</a></td>
+          <td><a href="StructureDefinition-obf-SpecimenType-extension.html">SpecimenType</a></td>
           <td>{% capture md_text %}The type of material the specimen contains or consists of.{% endcapture %}{{ md_text | markdownify }}</td>
         </tr>
         <tr>
-          <td><a href="StructureDefinition-shr-core-StatementDateTime-extension.html">StatementDateTime</a></td>
+          <td><a href="StructureDefinition-obf-StatementDateTime-extension.html">StatementDateTime</a></td>
           <td>{% capture md_text %}The point in time when the statement was created.{% endcapture %}{{ md_text | markdownify }}</td>
         </tr>
         <tr>
-          <td><a href="StructureDefinition-shr-core-StatusReason-extension.html">StatusReason</a></td>
-          <td>{% capture md_text %}Captures the reason for the current state of the procedure.{% endcapture %}{{ md_text | markdownify }}</td>
-        </tr>
-        <tr>
-          <td><a href="StructureDefinition-shr-core-TerminationReason-extension.html">TerminationReason</a></td>
+          <td><a href="StructureDefinition-obf-TerminationReason-extension.html">TerminationReason</a></td>
           <td>{% capture md_text %}A code explaining unplanned or premature termination of a plan of treatment, course of medication, or research study.{% endcapture %}{{ md_text | markdownify }}</td>
         </tr>
         <tr>
-          <td><a href="StructureDefinition-shr-core-TotalRadiationDoseDelivered-extension.html">TotalRadiationDoseDelivered</a></td>
+          <td><a href="StructureDefinition-obf-TotalRadiationDoseDelivered-extension.html">TotalRadiationDoseDelivered</a></td>
           <td>{% capture md_text %}The total amount of radiation dose delivered for the course of therapy. (source: SNOMED, ASTRO){% endcapture %}{{ md_text | markdownify }}</td>
         </tr>
         <tr>
-          <td><a href="StructureDefinition-shr-core-TreatmentIntent-extension.html">TreatmentIntent</a></td>
+          <td><a href="StructureDefinition-obf-TreatmentIntent-extension.html">TreatmentIntent</a></td>
           <td>{% capture md_text %}The purpose of a treatment.{% endcapture %}{{ md_text | markdownify }}</td>
-        </tr>
-        <tr>
-          <td><a href="StructureDefinition-shr-core-UsedCode-extension.html">UsedCode</a></td>
-          <td>{% capture md_text %}Item used during an activity, represented as a code.{% endcapture %}{{ md_text | markdownify }}</td>
         </tr>
         <tr>
           <td><a href="StructureDefinition-onco-core-VariantTested-extension.html">VariantTested</a></td>

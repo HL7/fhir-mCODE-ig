@@ -155,11 +155,6 @@ body {
 #notes a {
   color: #555555;
 }
-/* For now, hide the publish-box. Eventually toggle it via a config parameter. */
-#publish-box {
-  display: none;
-}
-/* When we're ready to show the publish-box, remove code above and uncomment code below
 #publish-box {
   list-style: none;
   padding: 0;
@@ -172,7 +167,6 @@ p#publish-box {
 img#publish-box {
   text-align: baseline;
 }
-*/
 /* GENERIC OBJECTS
 ----------------------------------------------------------------------------------------*/
 .navbar {

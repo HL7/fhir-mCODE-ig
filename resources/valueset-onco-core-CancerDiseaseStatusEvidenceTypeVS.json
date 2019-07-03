@@ -5,25 +5,28 @@
     "status": "generated",
     "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n<p><b>CancerDiseaseStatusEvidenceTypeVS ValueSet</b></p>\n<p>The type of evidence backing up the clinical determination of cancer progression.</p>\n</div>"
   },
-  "url": "http://hl7.org/fhir/us/mcode/onco/core/vs/CancerDiseaseStatusEvidenceTypeVS",
-  "identifier": {
-    "system": "http://hl7.org/fhir/us/mcode",
-    "value": "onco.core.CancerDiseaseStatusEvidenceTypeVS"
-  },
+  "url": "http://hl7.org/fhir/us/mcode/ValueSet/onco-core-CancerDiseaseStatusEvidenceTypeVS",
+  "identifier": [
+    {
+      "system": "http://hl7.org/fhir/us/mcode",
+      "value": "onco.core.CancerDiseaseStatusEvidenceTypeVS"
+    }
+  ],
   "name": "CancerDiseaseStatusEvidenceTypeVS",
+  "title": "CancerDiseaseStatusEvidenceTypeVS",
   "status": "draft",
   "publisher": "The MITRE Corporation",
   "contact": [
     {
       "telecom": [
         {
-          "system": "other",
+          "system": "url",
           "value": "http://standardhealthrecord.org"
         }
       ]
     }
   ],
-  "date": "2019-05-28",
+  "date": "2019-07-03",
   "description": "The type of evidence backing up the clinical determination of cancer progression.",
   "compose": {
     "include": [

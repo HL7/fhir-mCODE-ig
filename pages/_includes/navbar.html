@@ -1,6 +1,3 @@
-{% assign title = site.data.fhir.ig.title %}
-{% unless title %}{% assign title = site.data.pages["index.html"].title %}{% endunless %}
-{% unless title %}{% assign title = site.data.fhir.ig.name %}{% endunless %}
 <div id="segment-header" class="segment">
   <!-- segment-header -->
   <div class="container">
@@ -9,7 +6,7 @@
       <img alt="HL7 FHIR Homepage" class="img-responsive logo" src="assets/images/fhir-logo-www.png" />
     </a>
     <div id="hl7-status" class="hl7-status">
-      <b>{{title}}</b>
+      <b>{{site.data.info.title}}</b>
     </div>
 
     <div id="hl7-nav">
@@ -46,10 +43,13 @@
             <li><a href="profiles.html">Profiles</a></li>
             <li><a href="extensions.html">Extensions</a></li>
             <li><a href="valuesets.html">Value Sets</a></li>
-            <!-- no code systems (DSTU2) -->
+            <li><a href="codesystems.html">Code Systems</a></li>
+            <!-- no search parameters -->
+            <!-- no operation definitions -->
+            <!-- no conformance / capability statements -->
             <li><a href="downloads.html">Downloads</a></li>
-            <li><a href="modeldoc.html">Reference Model</a></li>
-            
+            <!-- no reference model -->
+            <li><a href="http://hl7.org/fhir/us/mcode/history.html">History</a></li>
           </ul>
 
         </div>

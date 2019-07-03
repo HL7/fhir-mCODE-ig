@@ -3,32 +3,33 @@
 <p><b>Mapping Source</b></p>
 <p>This structure represents the following mapping definition:</p>
 <pre>
-onco.core.GenomicsReport maps to DiagnosticReport:
+onco.core.GenomicsReport maps to http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-note:
   Language maps to language
-  Narrative maps to text
   ImplicitRules maps to implicitRules
   Metadata.VersionId maps to meta.versionId
-  Metadata.SourceSystem maps to meta.extension
+  Metadata.SourceSystem maps to meta.source
   Metadata.Profile maps to meta.profile
   Metadata.LastUpdated maps to meta.lastUpdated
   Metadata.SecurityLabel maps to meta.security
   Metadata.Tag maps to meta.tag
+  Narrative maps to text
   Identifier maps to identifier
+  BasedOn maps to basedOn
   Status maps to status
-  Code maps to code
   Category maps to category
   ObservationSubjectOfRecord maps to subject
+  Code maps to code
   CareContext maps to encounter
   RelevantTime maps to effective[x]
   StatementDateTime maps to issued
   DiagnosticReportPerformer maps to performer
-  ResultsInterpreter maps to extension
+  ResultsInterpreter maps to resultsInterpreter
   Specimen maps to specimen
   Observation maps to result (slice on = target.reference.resolve(); slice on type = profile; slice strategy = includes)
-  MediaIncluded.CommentOrDescription maps to image.comment
-  MediaIncluded.Media maps to image.link
+  MediaIncluded.CommentOrDescription maps to media.comment
+  MediaIncluded.Media maps to media.link
   ConclusionText maps to conclusion
-  ConclusionCode maps to codedDiagnosis
+  ConclusionCode maps to conclusionCode
   PresentedForm maps to presentedForm
 
 </pre>

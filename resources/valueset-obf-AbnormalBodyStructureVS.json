@@ -1,0 +1,55 @@
+{
+  "resourceType": "ValueSet",
+  "id": "obf-AbnormalBodyStructureVS",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n<p><b>AbnormalBodyStructureVS ValueSet</b></p>\n<p>A morphologically altered or  physiology.</p>\n</div>"
+  },
+  "url": "http://hl7.org/fhir/us/mcode/ValueSet/obf-AbnormalBodyStructureVS",
+  "identifier": [
+    {
+      "system": "http://hl7.org/fhir/us/mcode",
+      "value": "obf.AbnormalBodyStructureVS"
+    }
+  ],
+  "name": "AbnormalBodyStructureVS",
+  "title": "AbnormalBodyStructureVS",
+  "status": "draft",
+  "publisher": "The MITRE Corporation",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://standardhealthrecord.org"
+        }
+      ]
+    }
+  ],
+  "date": "2019-07-03",
+  "description": "A morphologically altered or  physiology.",
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "filter": [
+          {
+            "property": "concept",
+            "op": "is-a",
+            "value": "49755003"
+          }
+        ]
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "filter": [
+          {
+            "property": "concept",
+            "op": "is-a",
+            "value": "280115004"
+          }
+        ]
+      }
+    ]
+  }
+}

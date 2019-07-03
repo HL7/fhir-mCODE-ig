@@ -3,7 +3,7 @@
   "system" : "http://loinc.org",
   "code" : "21924-6",
   "display" : "Tumor marker Cancer"
-}, "valueSet" :null}####
+}, "valueSet" :null, "lang":"null"}####
 v: {
   "display" : "Tumor marker Cancer",
   "severity" : null,
@@ -12,33 +12,29 @@ v: {
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
+  "code" : "21924-6",
+  "display" : "Tumor marker Cancer"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/definition-use"
+    }]
+  }
+}, "lang":"null"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code provided (http://loinc.org#21924-6) is not  valid in the value set DefinitionUseCodes"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
   "code" : "21908-9",
   "display" : "Stage group.clinical Cancer"
-}, "valueSet" :null}####
+}, "valueSet" :null, "lang":"null"}####
 v: {
   "display" : "Stage group.clinical Cancer",
-  "severity" : null,
-  "error" : ""
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://loinc.org",
-  "code" : "48018-6",
-  "display" : "Gene studied [ID]"
-}, "valueSet" :null}####
-v: {
-  "display" : "Gene studied [ID]",
-  "severity" : null,
-  "error" : ""
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://loinc.org",
-  "code" : "41103-3",
-  "display" : "Gene XXX mutations found [Identifier] in Blood or Tissue by Molecular genetics method Nominal"
-}, "valueSet" :null}####
-v: {
-  "display" : "Gene XXX mutations found [Identifier] in Blood or Tissue by Molecular genetics method Nominal",
   "severity" : null,
   "error" : ""
 }
@@ -56,7 +52,7 @@ v: {
       "system" : "http://loinc.org"
     }]
   }
-}}####
+}, "lang":"null"}####
 v: {
   "display" : "Genetic variant assessment",
   "severity" : null,
@@ -66,7 +62,7 @@ v: {
 {"code" : {
   "system" : "http://loinc.org",
   "code" : "69548-6"
-}, "valueSet" :null}####
+}, "valueSet" :null, "lang":"null"}####
 v: {
   "display" : "Genetic variant assessment",
   "severity" : null,
@@ -75,13 +71,109 @@ v: {
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
-  "code" : "69548-6",
-  "display" : "Genetic variant assessment"
-}, "valueSet" :null}####
+  "code" : "48002-0",
+  "display" : "Genomic source class [Type]"
+}, "valueSet" :null, "lang":"null"}####
 v: {
-  "display" : "Genetic variant assessment",
+  "display" : "Genomic source class [Type]",
   "severity" : null,
   "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "coding" : [{
+    "system" : "http://loinc.org",
+    "code" : "LA6684-0",
+    "display" : "Somatic"
+  }],
+  "text" : "Somatic"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://loinc.org",
+      "concept" : [{
+        "code" : "LA6683-2",
+        "display" : "Germline"
+      },
+      {
+        "code" : "LA6684-0",
+        "display" : "Somatic"
+      },
+      {
+        "code" : "LA10429-1",
+        "display" : "Fetal"
+      },
+      {
+        "code" : "LA18194-3",
+        "display" : "Likely germline"
+      },
+      {
+        "code" : "LA18195-0",
+        "display" : "Likely somatic"
+      },
+      {
+        "code" : "LA18196-8",
+        "display" : "Likely fetal"
+      },
+      {
+        "code" : "LA18197-6",
+        "display" : "Unknown genomic origin"
+      },
+      {
+        "code" : "LA26807-0",
+        "display" : "De novo"
+      }]
+    }]
+  }
+}, "lang":"null"}####
+v: {
+  "display" : "Somatic",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "LA6684-0"
+}, "valueSet" :null, "lang":"null"}####
+v: {
+  "display" : "Somatic",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "48003-8",
+  "display" : "DNA sequence variation identifier"
+}, "valueSet" :null, "lang":"null"}####
+v: {
+  "display" : "DNA sequence variation identifier [Identifier]",
+  "severity" : "warning",
+  "error" : "The display \"DNA sequence variation identifier\" is not a valid display for the code {http://loinc.org}48003-8 - should be one of [\"DNA sequence variation identifier [Identifier]\",\"DNA seq var ID\"]"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "82154-6",
+  "display" : "Genomic structural variant name"
+}, "valueSet" :null, "lang":"null"}####
+v: {
+  "display" : "Genomic structural variant name",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "47998-0",
+  "display" : "DNA sequence variation display name"
+}, "valueSet" :null, "lang":"null"}####
+v: {
+  "display" : "DNA sequence variation display name [Text] Narrative",
+  "severity" : "warning",
+  "error" : "The display \"DNA sequence variation display name\" is not a valid display for the code {http://loinc.org}47998-0 - should be one of [\"DNA sequence variation display name [Text] Narrative\",\"DNA seq var display name\"]"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
@@ -97,7 +189,7 @@ v: {
       "system" : "http://loinc.org"
     }]
   }
-}}####
+}, "lang":"null"}####
 v: {
   "display" : "Gene XXX mutations found [Identifier] in Blood or Tissue by Molecular genetics method Nominal",
   "severity" : null,
@@ -107,7 +199,7 @@ v: {
 {"code" : {
   "system" : "http://loinc.org",
   "code" : "41103-3"
-}, "valueSet" :null}####
+}, "valueSet" :null, "lang":"null"}####
 v: {
   "display" : "Gene XXX mutations found [Identifier] in Blood or Tissue by Molecular genetics method Nominal",
   "severity" : null,
@@ -118,7 +210,7 @@ v: {
   "system" : "http://loinc.org",
   "code" : "21907-1",
   "display" : "Distant metastases.clinical [Class] Cancer"
-}, "valueSet" :null}####
+}, "valueSet" :null, "lang":"null"}####
 v: {
   "display" : "Distant metastases.clinical [Class] Cancer",
   "severity" : null,
@@ -129,7 +221,7 @@ v: {
   "system" : "http://loinc.org",
   "code" : "21905-5",
   "display" : "Primary tumor.clinical [Class] Cancer"
-}, "valueSet" :null}####
+}, "valueSet" :null, "lang":"null"}####
 v: {
   "display" : "Primary tumor.clinical [Class] Cancer",
   "severity" : null,
@@ -140,7 +232,7 @@ v: {
   "system" : "http://loinc.org",
   "code" : "21906-3",
   "display" : "Regional lymph nodes.clinical [Class] Cancer"
-}, "valueSet" :null}####
+}, "valueSet" :null, "lang":"null"}####
 v: {
   "display" : "Regional lymph nodes.clinical [Class] Cancer",
   "severity" : null,
@@ -190,12 +282,9 @@ v: {
 e: {
   "valueSet" : {
   "resourceType" : "ValueSet",
-  "immutable" : false,
   "expansion" : {
-    "identifier" : "urn:uuid:d756ffc9-d6ff-4dd2-9489-5c3f6ab45e28",
-    "timestamp" : "2019-05-28T23:38:49-04:00",
-    "total" : 0,
-    "offset" : 0,
+    "identifier" : "urn:uuid:edca58f8-ae54-4b68-889c-a77a11d832f9",
+    "timestamp" : "2019-07-03T22:06:41.305Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueString" : "-1"
@@ -206,49 +295,41 @@ e: {
     }],
     "contains" : [{
       "system" : "http://loinc.org",
-      "abstract" : false,
       "code" : "LA6683-2",
       "display" : "Germline"
     },
     {
       "system" : "http://loinc.org",
-      "abstract" : false,
       "code" : "LA6684-0",
       "display" : "Somatic"
     },
     {
       "system" : "http://loinc.org",
-      "abstract" : false,
       "code" : "LA10429-1",
       "display" : "Fetal"
     },
     {
       "system" : "http://loinc.org",
-      "abstract" : false,
       "code" : "LA18194-3",
       "display" : "Likely germline"
     },
     {
       "system" : "http://loinc.org",
-      "abstract" : false,
       "code" : "LA18195-0",
       "display" : "Likely somatic"
     },
     {
       "system" : "http://loinc.org",
-      "abstract" : false,
       "code" : "LA18196-8",
       "display" : "Likely fetal"
     },
     {
       "system" : "http://loinc.org",
-      "abstract" : false,
       "code" : "LA18197-6",
       "display" : "Unknown genomic origin"
     },
     {
       "system" : "http://loinc.org",
-      "abstract" : false,
       "code" : "LA26807-0",
       "display" : "De novo"
     }]
@@ -312,12 +393,9 @@ e: {
 e: {
   "valueSet" : {
   "resourceType" : "ValueSet",
-  "immutable" : false,
   "expansion" : {
-    "identifier" : "urn:uuid:398c6221-e5e5-4d65-91fb-60662ffcc573",
-    "timestamp" : "2019-05-28T23:39:50-04:00",
-    "total" : 0,
-    "offset" : 0,
+    "identifier" : "urn:uuid:0ac0c15a-3cc1-4bc5-bf04-fdcdd5765c38",
+    "timestamp" : "2019-07-03T22:07:37.867Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueString" : "-1"
@@ -328,67 +406,56 @@ e: {
     }],
     "contains" : [{
       "system" : "http://loinc.org",
-      "abstract" : false,
       "code" : "LA29175-9",
       "display" : "KPS 100: Normal; no complaints; no evidence of disease"
     },
     {
       "system" : "http://loinc.org",
-      "abstract" : false,
       "code" : "LA29176-7",
       "display" : "KPS 90: Able to carry on normal activity; minor signs or symptoms of disease"
     },
     {
       "system" : "http://loinc.org",
-      "abstract" : false,
       "code" : "LA29177-5",
       "display" : "KPS 80: Normal activity with effort; some signs or symptoms of disease"
     },
     {
       "system" : "http://loinc.org",
-      "abstract" : false,
       "code" : "LA29178-3",
       "display" : "KPS 70: Cares for self; unable to carry on normal activity or do active work"
     },
     {
       "system" : "http://loinc.org",
-      "abstract" : false,
       "code" : "LA29179-1",
       "display" : "KPS 60: Requires occasional assistance but is able to care for most needs"
     },
     {
       "system" : "http://loinc.org",
-      "abstract" : false,
       "code" : "LA29180-9",
       "display" : "KPS 50: Requires considerable assistance and frequent medical care"
     },
     {
       "system" : "http://loinc.org",
-      "abstract" : false,
       "code" : "LA29181-7",
       "display" : "KPS 40: Disabled; requires special care and assistance"
     },
     {
       "system" : "http://loinc.org",
-      "abstract" : false,
       "code" : "LA29182-5",
       "display" : "KPS 30: Severely disabled; hospitalization is indicated, although death not imminent"
     },
     {
       "system" : "http://loinc.org",
-      "abstract" : false,
       "code" : "LA29183-3",
       "display" : "KPS 20: Very sick; hospitalization necessary; active supportive treatment necessary"
     },
     {
       "system" : "http://loinc.org",
-      "abstract" : false,
       "code" : "LA29184-1",
       "display" : "KPS 10: Moribund; fatal processes progressing rapidly"
     },
     {
       "system" : "http://loinc.org",
-      "abstract" : false,
       "code" : "LA9627-6",
       "display" : "KPS 0: Dead"
     }]
@@ -1012,12 +1079,9 @@ e: {
 e: {
   "valueSet" : {
   "resourceType" : "ValueSet",
-  "immutable" : false,
   "expansion" : {
-    "identifier" : "urn:uuid:970d69ec-c457-45fc-aae1-0d808a6db117",
-    "timestamp" : "2019-05-28T23:47:03-04:00",
-    "total" : 0,
-    "offset" : 0,
+    "identifier" : "urn:uuid:74ce4f4f-0073-4d89-a1e5-c9e1b5a9d8ca",
+    "timestamp" : "2019-07-03T22:12:45.727Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueString" : "-1"
@@ -1028,956 +1092,761 @@ e: {
     }],
     "contains" : [{
       "system" : "http://loinc.org",
-      "abstract" : false,
       "code" : "1695-6",
       "display" : "5-Hydroxyindoleacetate [Mass/time] in 24 hour Urine"
     },
     {
       "system" : "http://loinc.org",
-      "abstract" : false,
       "code" : "31203-3",
       "display" : "5-Hydroxyindoleacetate [Mass/volume] in 24 hour Urine"
     },
     {
       "system" : "http://loinc.org",
-      "abstract" : false,
       "code" : "1692-3",
       "display" : "5-Hydroxyindoleacetate [Mass/volume] in Cerebral spinal fluid"
     },
     {
       "system" : "http://loinc.org",
-      "abstract" : false,
       "code" : "1693-1",
       "display" : "5-Hydroxyindoleacetate [Mass/volume] in Serum or Plasma"
     },
     {
       "system" : "http://loinc.org",
-      "abstract" : false,
       "code" : "1694-9",
       "display" : "5-Hydroxyindoleacetate [Mass/volume] in Urine"
     },
     {
       "system" : "http://loinc.org",
-      "abstract" : false,
       "code" : "72820-4",
       "display" : "5-Hydroxyindoleacetate [Mass/volume] in Urine by Confirmatory method"
     },
     {
       "system" : "http://loinc.org",
-      "abstract" : false,
       "code" : "14573-0",
       "display" : "5-Hydroxyindoleacetate [Moles/time] in 24 hour Urine"
     },
     {
       "system" : "http://loinc.org",
-      "abstract" : false,
       "code" : "25971-3",
       "display" : "5-Hydroxyindoleacetate [Moles/volume] in 24 hour Urine"
     },
     {
       "system" : "http://loinc.org",
-      "abstract" : false,
       "code" : "47544-2",
       "display" : "5-Hydroxyindoleacetate [Moles/volume] in Cerebral spinal fluid"
     },
     {
       "system" : "http://loinc.org",
-      "abstract" : false,
       "code" : "74769-1",
       "display" : "5-Hydroxyindoleacetate [Moles/volume] in Platelet rich plasma"
     },
     {
       "system" : "http://loinc.org",
-      "abstract" : false,
       "code" : "50149-4",
       "display" : "5-Hydroxyindoleacetate [Moles/volume] in Serum or Plasma"
     },
     {
       "system" : "http://loinc.org",
-      "abstract" : false,
       "code" : "15009-4",
       "display" : "5-Hydroxyindoleacetate [Moles/volume] in Urine"
     },
     {
       "system" : "http://loinc.org",
-      "abstract" : false,
       "code" : "12172-3",
       "display" : "5-Hydroxyindoleacetate [Presence] in 24 hour Urine"
     },
     {
       "system" : "http://loinc.org",
-      "abstract" : false,
       "code" : "48168-9",
       "display" : "5-Hydroxyindoleacetate [Presence] in Urine"
     },
     {
       "system" : "http://loinc.org",
-      "abstract" : false,
       "code" : "44907-4",
       "display" : "5-Hydroxyindoleacetate panel - 24 hour Urine"
     },
     {
       "system" : "http://loinc.org",
-      "abstract" : false,
       "code" : "10459-6",
       "display" : "Alpha-1-Fetoprotein Ag [Presence] in Tissue by Immune stain"
     },
     {
       "system" : "http://loinc.org",
-      "abstract" : false,
       "code" : "11207-8",
       "display" : "Alpha-1-Fetoprotein [Mass/volume] in Body fluid"
     },
     {
       "system" : "http://loinc.org",
-      "abstract" : false,
       "code" : "1833-3",
       "display" : "Alpha-1-Fetoprotein [Mass/volume] in Cerebral spinal fluid"
     },
     {
       "system" : "http://loinc.org",
-      "abstract" : false,
       "code" : "54348-8",
       "display" : "Alpha-1-Fetoprotein [Mass/volume] in Cord blood"
     },
     {
       "system" : "http://loinc.org",
-      "abstract" : false,
       "code" : "49761-0",
       "display" : "Alpha-1-Fetoprotein [Mass/volume] in Peritoneal fluid"
     },
     {
       "system" : "http://loinc.org",
-      "abstract" : false,
       "code" : "49762-8",
       "display" : "Alpha-1-Fetoprotein [Mass/volume] in Pleural fluid"
     },
     {
       "system" : "http://loinc.org",
-      "abstract" : false,
       "code" : "1834-1",
       "display" : "Alpha-1-Fetoprotein [Mass/volume] in Serum or Plasma"
     },
     {
       "system" : "http://loinc.org",
-      "abstract" : false,
       "code" : "83073-7",
       "display" : "Alpha-1-Fetoprotein [Mass/volume] in Serum or Plasma by Immunoassay"
     },
     {
       "system" : "http://loinc.org",
-      "abstract" : false,
       "code" : "19173-4",
       "display" : "Alpha-1-Fetoprotein [Moles/volume] in Pleural fluid"
     },
     {
       "system" : "http://loinc.org",
-      "abstract" : false,
       "code" : "19177-5",
       "display" : "Alpha-1-Fetoprotein [Moles/volume] in Serum or Plasma"
     },
     {
       "system" : "http://loinc.org",
-      "abstract" : false,
       "code" : "31993-9",
       "display" : "Alpha-1-Fetoprotein [Presence] in Serum or Plasma"
     },
     {
       "system" : "http://loinc.org",
-      "abstract" : false,
       "code" : "44910-8",
       "display" : "Alpha-1-Fetoprotein [Units/volume] in Body fluid"
     },
     {
       "system" : "http://loinc.org",
-      "abstract" : false,
       "code" : "59564-5",
       "display" : "Alpha-1-Fetoprotein [Units/volume] in Cerebral spinal fluid"
     },
     {
       "system" : "http://loinc.org",
-      "abstract" : false,
       "code" : "19172-6",
       "display" : "Alpha-1-Fetoprotein [Units/volume] in Pleural fluid"
     },
     {
       "system" : "http://loinc.org",
-      "abstract" : false,
       "code" : "19176-7",
       "display" : "Alpha-1-Fetoprotein [Units/volume] in Serum or Plasma"
     },
     {
       "system" : "http://loinc.org",
-      "abstract" : false,
       "code" : "83072-9",
       "display" : "Alpha-1-Fetoprotein [Units/volume] in Serum or Plasma by Immunoassay"
     },
     {
       "system" : "http://loinc.org",
-      "abstract" : false,
       "code" : "41274-2",
       "display" : "Alpha-1-Fetoprotein interpretation in Serum or Plasma"
     },
     {
       "system" : "http://loinc.org",
-      "abstract" : false,
       "code" : "49246-2",
       "display" : "Alpha-1-Fetoprotein interpretation in Serum or Plasma Narrative"
     },
     {
       "system" : "http://loinc.org",
-      "abstract" : false,
       "code" : "49585-3",
       "display" : "Alpha-1-Fetoprotein multiple of the median cutoff [Multiple of the median] in Serum or Plasma"
     },
     {
       "system" : "http://loinc.org",
-      "abstract" : false,
       "code" : "48802-3",
       "display" : "Alpha-1-Fetoprotein panel - Serum or Plasma"
     },
     {
       "system" : "http://loinc.org",
-      "abstract" : false,
       "code" : "53962-7",
       "display" : "Alpha-1-fetoprotein.tumor marker [Mass/volume] in Serum or Plasma"
     },
     {
       "system" : "http://loinc.org",
-      "abstract" : false,
       "code" : "53960-1",
       "display" : "Alpha-1-fetoprotein.tumor marker [Moles/volume] in Serum or Plasma"
     },
     {
       "system" : "http://loinc.org",
-      "abstract" : false,
       "code" : "53961-9",
       "display" : "Alpha-1-fetoprotein.tumor marker [Units/volume] in Serum or Plasma"
     },
     {
       "system" : "http://loinc.org",
-      "abstract" : false,
       "code" : "10873-8",
       "display" : "Beta-2-Microglobulin [Mass/time] in 24 hour Urine"
     },
     {
       "system" : "http://loinc.org",
-      "abstract" : false,
       "code" : "54356-1",
       "display" : "Beta-2-Microglobulin [Mass/volume] in 24 hour Urine"
     },
     {
       "system" : "http://loinc.org",
-      "abstract" : false,
       "code" : "48166-3",
       "display" : "Beta-2-Microglobulin [Mass/volume] in Body fluid"
     },
     {
       "system" : "http://loinc.org",
-      "abstract" : false,
       "code" : "1951-3",
       "display" : "Beta-2-Microglobulin [Mass/volume] in Cerebral spinal fluid"
     },
     {
       "system" : "http://loinc.org",
-      "abstract" : false,
       "code" : "49081-3",
       "display" : "Beta-2-Microglobulin [Mass/volume] in Dialysis fluid"
     },
     {
       "system" : "http://loinc.org",
-      "abstract" : false,
       "code" : "88711-7",
       "display" : "Beta-2-Microglobulin [Mass/volume] in Peritoneal dialysis fluid"
     },
     {
       "system" : "http://loinc.org",
-      "abstract" : false,
       "code" : "59217-0",
       "display" : "Beta-2-Microglobulin [Mass/volume] in Peritoneal fluid"
     },
     {
       "system" : "http://loinc.org",
-      "abstract" : false,
       "code" : "59218-8",
       "display" : "Beta-2-Microglobulin [Mass/volume] in Pleural fluid"
     },
     {
       "system" : "http://loinc.org",
-      "abstract" : false,
       "code" : "1952-1",
       "display" : "Beta-2-Microglobulin [Mass/volume] in Serum or Plasma"
     },
     {
       "system" : "http://loinc.org",
-      "abstract" : false,
       "code" : "87708-4",
       "display" : "Beta-2-Microglobulin [Mass/volume] in Serum or Plasma --post dialysis"
     },
     {
       "system" : "http://loinc.org",
-      "abstract" : false,
       "code" : "83078-6",
       "display" : "Beta-2-Microglobulin [Mass/volume] in Serum or Plasma by Immunoassay"
     },
     {
       "system" : "http://loinc.org",
-      "abstract" : false,
       "code" : "1953-9",
       "display" : "Beta-2-Microglobulin [Mass/volume] in Urine"
     },
     {
       "system" : "http://loinc.org",
-      "abstract" : false,
       "code" : "83077-8",
       "display" : "Beta-2-Microglobulin [Mass/volume] in Urine by Immunoassay"
     },
     {
       "system" : "http://loinc.org",
-      "abstract" : false,
       "code" : "56662-0",
       "display" : "Beta-2-Microglobulin [Moles/time] in 24 hour Urine"
     },
     {
       "system" : "http://loinc.org",
-      "abstract" : false,
       "code" : "50824-2",
       "display" : "Beta-2-Microglobulin [Moles/volume] in 24 hour Urine"
     },
     {
       "system" : "http://loinc.org",
-      "abstract" : false,
       "code" : "39458-5",
       "display" : "Beta-2-Microglobulin [Moles/volume] in Body fluid"
     },
     {
       "system" : "http://loinc.org",
-      "abstract" : false,
       "code" : "32301-4",
       "display" : "Beta-2-Microglobulin [Moles/volume] in Cerebral spinal fluid"
     },
     {
       "system" : "http://loinc.org",
-      "abstract" : false,
       "code" : "14626-6",
       "display" : "Beta-2-Microglobulin [Moles/volume] in Serum"
     },
     {
       "system" : "http://loinc.org",
-      "abstract" : false,
       "code" : "76484-5",
       "display" : "Beta-2-Microglobulin [Moles/volume] in Serum or Plasma"
     },
     {
       "system" : "http://loinc.org",
-      "abstract" : false,
       "code" : "32302-2",
       "display" : "Beta-2-Microglobulin [Moles/volume] in Urine"
     },
     {
       "system" : "http://loinc.org",
-      "abstract" : false,
       "code" : "43919-0",
       "display" : "Beta-2-Microglobulin [Presence] in Cerebral spinal fluid"
     },
     {
       "system" : "http://loinc.org",
-      "abstract" : false,
       "code" : "43818-4",
       "display" : "Beta-2-Microglobulin [Presence] in Serum"
     },
     {
       "system" : "http://loinc.org",
-      "abstract" : false,
       "code" : "43819-2",
       "display" : "Beta-2-Microglobulin [Presence] in Urine"
     },
     {
       "system" : "http://loinc.org",
-      "abstract" : false,
       "code" : "83076-0",
       "display" : "Beta-2-Microglobulin [Units/volume] in Serum or Plasma by Immunoassay"
     },
     {
       "system" : "http://loinc.org",
-      "abstract" : false,
       "code" : "83079-4",
       "display" : "Beta-2-Microglobulin [Units/volume] in Urine by Immunoassay"
     },
     {
       "system" : "http://loinc.org",
-      "abstract" : false,
       "code" : "10467-9",
       "display" : "Beta-2-Microglobulin amyloid Ag [Presence] in Tissue by Immune stain"
     },
     {
       "system" : "http://loinc.org",
-      "abstract" : false,
       "code" : "54355-3",
       "display" : "Beta-2-Microglobulin in CSF/Beta-2-Microglobulin in serum"
     },
     {
       "system" : "http://loinc.org",
-      "abstract" : false,
       "code" : "56786-7",
       "display" : "Beta-2-Microglobulin.tumor marker [Mass/volume] in Serum"
     },
     {
       "system" : "http://loinc.org",
-      "abstract" : false,
       "code" : "2006-5",
       "display" : "Cancer Ag 125 [Presence] in Serum or Plasma"
     },
     {
       "system" : "http://loinc.org",
-      "abstract" : false,
       "code" : "48677-9",
       "display" : "Cancer Ag 125 [Presence] in Tissue by Immune stain"
     },
     {
       "system" : "http://loinc.org",
-      "abstract" : false,
       "code" : "11210-2",
       "display" : "Cancer Ag 125 [Units/volume] in Body fluid"
     },
     {
       "system" : "http://loinc.org",
-      "abstract" : false,
       "code" : "15156-3",
       "display" : "Cancer Ag 125 [Units/volume] in Body fluid by Dilution"
     },
     {
       "system" : "http://loinc.org",
-      "abstract" : false,
       "code" : "50775-6",
       "display" : "Cancer Ag 125 [Units/volume] in Cerebral spinal fluid"
     },
     {
       "system" : "http://loinc.org",
-      "abstract" : false,
       "code" : "68923-2",
       "display" : "Cancer Ag 125 [Units/volume] in Pericardial fluid"
     },
     {
       "system" : "http://loinc.org",
-      "abstract" : false,
       "code" : "59040-6",
       "display" : "Cancer Ag 125 [Units/volume] in Peritoneal dialysis fluid"
     },
     {
       "system" : "http://loinc.org",
-      "abstract" : false,
       "code" : "40618-1",
       "display" : "Cancer Ag 125 [Units/volume] in Peritoneal fluid"
     },
     {
       "system" : "http://loinc.org",
-      "abstract" : false,
       "code" : "19165-0",
       "display" : "Cancer Ag 125 [Units/volume] in Pleural fluid"
     },
     {
       "system" : "http://loinc.org",
-      "abstract" : false,
       "code" : "10334-1",
       "display" : "Cancer Ag 125 [Units/volume] in Serum or Plasma"
     },
     {
       "system" : "http://loinc.org",
-      "abstract" : false,
       "code" : "15157-1",
       "display" : "Cancer Ag 125 [Units/volume] in Serum or Plasma by Dilution"
     },
     {
       "system" : "http://loinc.org",
-      "abstract" : false,
       "code" : "83082-8",
       "display" : "Cancer Ag 125 [Units/volume] in Serum or Plasma by Immunoassay"
     },
     {
       "system" : "http://loinc.org",
-      "abstract" : false,
       "code" : "2007-3",
       "display" : "Cancer Ag 15-3 [Presence] in Serum or Plasma"
     },
     {
       "system" : "http://loinc.org",
-      "abstract" : false,
       "code" : "29153-4",
       "display" : "Cancer Ag 15-3 [Units/volume] in Body fluid"
     },
     {
       "system" : "http://loinc.org",
-      "abstract" : false,
       "code" : "50776-4",
       "display" : "Cancer Ag 15-3 [Units/volume] in Cerebral spinal fluid"
     },
     {
       "system" : "http://loinc.org",
-      "abstract" : false,
       "code" : "50777-2",
       "display" : "Cancer Ag 15-3 [Units/volume] in Pericardial fluid"
     },
     {
       "system" : "http://loinc.org",
-      "abstract" : false,
       "code" : "50778-0",
       "display" : "Cancer Ag 15-3 [Units/volume] in Peritoneal fluid"
     },
     {
       "system" : "http://loinc.org",
-      "abstract" : false,
       "code" : "19186-6",
       "display" : "Cancer Ag 15-3 [Units/volume] in Pleural fluid"
     },
     {
       "system" : "http://loinc.org",
-      "abstract" : false,
       "code" : "6875-9",
       "display" : "Cancer Ag 15-3 [Units/volume] in Serum or Plasma"
     },
     {
       "system" : "http://loinc.org",
-      "abstract" : false,
       "code" : "83083-6",
       "display" : "Cancer Ag 15-3 [Units/volume] in Serum or Plasma by Immunoassay"
     },
     {
       "system" : "http://loinc.org",
-      "abstract" : false,
       "code" : "2009-9",
       "display" : "Cancer Ag 19-9 [Presence] in Serum or Plasma"
     },
     {
       "system" : "http://loinc.org",
-      "abstract" : false,
       "code" : "26924-1",
       "display" : "Cancer Ag 19-9 [Units/volume] in Body fluid"
     },
     {
       "system" : "http://loinc.org",
-      "abstract" : false,
       "code" : "50779-8",
       "display" : "Cancer Ag 19-9 [Units/volume] in Cerebral spinal fluid"
     },
     {
       "system" : "http://loinc.org",
-      "abstract" : false,
       "code" : "50780-6",
       "display" : "Cancer Ag 19-9 [Units/volume] in Pericardial fluid"
     },
     {
       "system" : "http://loinc.org",
-      "abstract" : false,
       "code" : "50781-4",
       "display" : "Cancer Ag 19-9 [Units/volume] in Peritoneal fluid"
     },
     {
       "system" : "http://loinc.org",
-      "abstract" : false,
       "code" : "19163-5",
       "display" : "Cancer Ag 19-9 [Units/volume] in Pleural fluid"
     },
     {
       "system" : "http://loinc.org",
-      "abstract" : false,
       "code" : "24108-3",
       "display" : "Cancer Ag 19-9 [Units/volume] in Serum or Plasma"
     },
     {
       "system" : "http://loinc.org",
-      "abstract" : false,
       "code" : "83084-4",
       "display" : "Cancer Ag 19-9 [Units/volume] in Serum or Plasma by Immunoassay"
     },
     {
       "system" : "http://loinc.org",
-      "abstract" : false,
       "code" : "2012-3",
       "display" : "Cancer Ag 27-29 [Presence] in Serum or Plasma"
     },
     {
       "system" : "http://loinc.org",
-      "abstract" : false,
       "code" : "50782-2",
       "display" : "Cancer Ag 27-29 [Units/volume] in Cerebral spinal fluid"
     },
     {
       "system" : "http://loinc.org",
-      "abstract" : false,
       "code" : "19187-4",
       "display" : "Cancer Ag 27-29 [Units/volume] in Pleural fluid"
     },
     {
       "system" : "http://loinc.org",
-      "abstract" : false,
       "code" : "17842-6",
       "display" : "Cancer Ag 27-29 [Units/volume] in Serum or Plasma"
     },
     {
       "system" : "http://loinc.org",
-      "abstract" : false,
       "code" : "12515-3",
       "display" : "Carcinoembryonic Ag [Mass/volume] in Body fluid"
     },
     {
       "system" : "http://loinc.org",
-      "abstract" : false,
       "code" : "2037-0",
       "display" : "Carcinoembryonic Ag [Mass/volume] in Cerebral spinal fluid"
     },
     {
       "system" : "http://loinc.org",
-      "abstract" : false,
       "code" : "40621-5",
       "display" : "Carcinoembryonic Ag [Mass/volume] in Pericardial fluid"
     },
     {
       "system" : "http://loinc.org",
-      "abstract" : false,
       "code" : "40622-3",
       "display" : "Carcinoembryonic Ag [Mass/volume] in Peritoneal fluid"
     },
     {
       "system" : "http://loinc.org",
-      "abstract" : false,
       "code" : "19169-2",
       "display" : "Carcinoembryonic Ag [Mass/volume] in Pleural fluid"
     },
     {
       "system" : "http://loinc.org",
-      "abstract" : false,
       "code" : "2038-8",
       "display" : "Carcinoembryonic Ag [Mass/volume] in Semen"
     },
     {
       "system" : "http://loinc.org",
-      "abstract" : false,
       "code" : "2039-6",
       "display" : "Carcinoembryonic Ag [Mass/volume] in Serum or Plasma"
     },
     {
       "system" : "http://loinc.org",
-      "abstract" : false,
       "code" : "83085-1",
       "display" : "Carcinoembryonic Ag [Mass/volume] in Serum or Plasma by Immunoassay"
     },
     {
       "system" : "http://loinc.org",
-      "abstract" : false,
       "code" : "19170-0",
       "display" : "Carcinoembryonic Ag [Moles/volume] in Pleural fluid"
     },
     {
       "system" : "http://loinc.org",
-      "abstract" : false,
       "code" : "19167-6",
       "display" : "Carcinoembryonic Ag [Moles/volume] in Serum or Plasma"
     },
     {
       "system" : "http://loinc.org",
-      "abstract" : false,
       "code" : "10469-5",
       "display" : "Carcinoembryonic Ag [Presence] in Tissue by Immune stain"
     },
     {
       "system" : "http://loinc.org",
-      "abstract" : false,
       "code" : "19168-4",
       "display" : "Carcinoembryonic Ag [Units/volume] in Pleural fluid"
     },
     {
       "system" : "http://loinc.org",
-      "abstract" : false,
       "code" : "10560-1",
       "display" : "Carcinoembryonic Ag [Units/volume] in Semen"
     },
     {
       "system" : "http://loinc.org",
-      "abstract" : false,
       "code" : "19166-8",
       "display" : "Carcinoembryonic Ag [Units/volume] in Serum or Plasma"
     },
     {
       "system" : "http://loinc.org",
-      "abstract" : false,
       "code" : "2010-7",
       "display" : "Deprecated Cancer Ag 19-9 [Presence] in Serum or Plasma"
     },
     {
       "system" : "http://loinc.org",
-      "abstract" : false,
       "code" : "85337-4",
       "display" : "Estrogen receptor Ag [Presence] in Breast cancer specimen by Immune stain"
     },
     {
       "system" : "http://loinc.org",
-      "abstract" : false,
       "code" : "40556-3",
       "display" : "Estrogen receptor Ag [Presence] in Tissue by Immune stain"
     },
     {
       "system" : "http://loinc.org",
-      "abstract" : false,
       "code" : "16112-5",
       "display" : "Estrogen receptor [Interpretation] in Tissue"
     },
     {
       "system" : "http://loinc.org",
-      "abstract" : false,
       "code" : "14130-9",
       "display" : "Estrogen receptor [Moles/mass] in Tissue"
     },
     {
       "system" : "http://loinc.org",
-      "abstract" : false,
       "code" : "85310-1",
       "display" : "Estrogen receptor fluorescence intensity [Type] in Breast cancer specimen by Immune stain"
     },
     {
       "system" : "http://loinc.org",
-      "abstract" : false,
       "code" : "10480-2",
       "display" : "Estrogen+Progesterone receptor Ag [Presence] in Tissue by Immune stain"
     },
     {
       "system" : "http://loinc.org",
-      "abstract" : false,
       "code" : "83054-7",
       "display" : "PD-L1 by clone 22C3 [Interpretation] in Tissue by Immune stain Narrative"
     },
     {
       "system" : "http://loinc.org",
-      "abstract" : false,
       "code" : "83052-1",
       "display" : "PD-L1 by clone 22C3 [Presence] in Tissue by Immune stain"
     },
     {
       "system" : "http://loinc.org",
-      "abstract" : false,
       "code" : "85147-7",
       "display" : "PD-L1 by clone 22C3 in Tissue by Immune stain Report"
     },
     {
       "system" : "http://loinc.org",
-      "abstract" : false,
       "code" : "83056-2",
       "display" : "PD-L1 by clone 28-8 [Interpretation] in Tissue by Immune stain Narrative"
     },
     {
       "system" : "http://loinc.org",
-      "abstract" : false,
       "code" : "83055-4",
       "display" : "PD-L1 by clone 28-8 [Presence] in Tissue by Immune stain"
     },
     {
       "system" : "http://loinc.org",
-      "abstract" : false,
       "code" : "85148-5",
       "display" : "PD-L1 by clone 28-8 in Tissue by Immune stain Report"
     },
     {
       "system" : "http://loinc.org",
-      "abstract" : false,
       "code" : "83057-0",
       "display" : "PD-L1 by clone SP142 [Presence] in Tissue by Immune stain"
     },
     {
       "system" : "http://loinc.org",
-      "abstract" : false,
       "code" : "85149-3",
       "display" : "PD-L1 by clone SP142 in Tissue by Immune stain Report"
     },
     {
       "system" : "http://loinc.org",
-      "abstract" : false,
       "code" : "83053-9",
       "display" : "Cells.programmed cell death ligand 1/100 viable tumor cells in Tissue by Immune stain. (source: LOINC)"
     },
     {
       "system" : "http://loinc.org",
-      "abstract" : false,
       "code" : "85339-0",
       "display" : "Progesterone receptor Ag [Presence] in Breast cancer specimen by Immune stain"
     },
     {
       "system" : "http://loinc.org",
-      "abstract" : false,
       "code" : "40557-1",
       "display" : "Progesterone receptor Ag [Presence] in Tissue by Immune stain"
     },
     {
       "system" : "http://loinc.org",
-      "abstract" : false,
       "code" : "16113-3",
       "display" : "Progesterone receptor [Interpretation] in Tissue"
     },
     {
       "system" : "http://loinc.org",
-      "abstract" : false,
       "code" : "10861-3",
       "display" : "Progesterone receptor [Mass/mass] in Tissue"
     },
     {
       "system" : "http://loinc.org",
-      "abstract" : false,
       "code" : "31207-4",
       "display" : "Progesterone receptor [Moles/mass] in Tissue"
     },
     {
       "system" : "http://loinc.org",
-      "abstract" : false,
       "code" : "85331-7",
       "display" : "Progesterone receptor fluorescence intensity [Type] in Breast cancer specimen by Immune stain"
     },
     {
       "system" : "http://loinc.org",
-      "abstract" : false,
       "code" : "47738-0",
       "display" : "Prostate specific Ag [Mass/volume] in Body fluid"
     },
     {
       "system" : "http://loinc.org",
-      "abstract" : false,
       "code" : "59230-3",
       "display" : "Prostate specific Ag [Mass/volume] in Cerebral spinal fluid"
     },
     {
       "system" : "http://loinc.org",
-      "abstract" : false,
       "code" : "59223-8",
       "display" : "Prostate specific Ag [Mass/volume] in Peritoneal fluid"
     },
     {
       "system" : "http://loinc.org",
-      "abstract" : false,
       "code" : "59221-2",
       "display" : "Prostate specific Ag [Mass/volume] in Pleural fluid"
     },
     {
       "system" : "http://loinc.org",
-      "abstract" : false,
       "code" : "19199-9",
       "display" : "Prostate specific Ag [Mass/volume] in Semen"
     },
     {
       "system" : "http://loinc.org",
-      "abstract" : false,
       "code" : "2857-1",
       "display" : "Prostate specific Ag [Mass/volume] in Serum or Plasma"
     },
     {
       "system" : "http://loinc.org",
-      "abstract" : false,
       "code" : "35741-8",
       "display" : "Prostate specific Ag [Mass/volume] in Serum or Plasma by Detection limit <= 0.01 ng/mL"
     },
     {
       "system" : "http://loinc.org",
-      "abstract" : false,
       "code" : "83112-3",
       "display" : "Prostate specific Ag [Mass/volume] in Serum or Plasma by Immunoassay"
     },
     {
       "system" : "http://loinc.org",
-      "abstract" : false,
       "code" : "34611-4",
       "display" : "Prostate specific Ag [Mass/volume] in Urine"
     },
     {
       "system" : "http://loinc.org",
-      "abstract" : false,
       "code" : "19200-5",
       "display" : "Prostate specific Ag [Moles/volume] in Semen"
     },
     {
       "system" : "http://loinc.org",
-      "abstract" : false,
       "code" : "19197-3",
       "display" : "Prostate specific Ag [Moles/volume] in Serum or Plasma"
     },
     {
       "system" : "http://loinc.org",
-      "abstract" : false,
       "code" : "10508-0",
       "display" : "Prostate specific Ag [Presence] in Tissue by Immune stain"
     },
     {
       "system" : "http://loinc.org",
-      "abstract" : false,
       "code" : "19198-1",
       "display" : "Prostate specific Ag [Units/volume] in Semen"
     },
     {
       "system" : "http://loinc.org",
-      "abstract" : false,
       "code" : "19195-7",
       "display" : "Prostate specific Ag [Units/volume] in Serum or Plasma"
     },
     {
       "system" : "http://loinc.org",
-      "abstract" : false,
       "code" : "15325-4",
       "display" : "Prostate specific Ag/Prostate volume calculated"
     },
     {
       "system" : "http://loinc.org",
-      "abstract" : false,
       "code" : "15323-9",
       "display" : "Prostate specific Ag/Prostate volume calculated from height, width and length"
     },
     {
       "system" : "http://loinc.org",
-      "abstract" : false,
       "code" : "15324-7",
       "display" : "Prostate specific Ag/Prostate volume calculated from planimetry"
     }]
   }
 },
   "error" : ""
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://loinc.org",
-  "code" : "48002-0",
-  "display" : "Genomic source class [Type]"
-}, "valueSet" :null}####
-v: {
-  "display" : "Genomic source class [Type]",
-  "severity" : null,
-  "error" : ""
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://loinc.org",
-  "code" : "48003-8",
-  "display" : "DNA sequence variation identifier"
-}, "valueSet" :null}####
-v: {
-  "display" : "DNA sequence variation identifier [Identifier]",
-  "severity" : "warning",
-  "error" : "The display \"DNA sequence variation identifier\" is not a valid display for the code {http://loinc.org}48003-8 - should be one of [\"DNA sequence variation identifier [Identifier]\",\"DNA seq var ID\"]"
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://loinc.org",
-  "code" : "82154-6",
-  "display" : "Genomic structural variant name"
-}, "valueSet" :null}####
-v: {
-  "display" : "Genomic structural variant name",
-  "severity" : null,
-  "error" : ""
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://loinc.org",
-  "code" : "47998-0",
-  "display" : "DNA sequence variation display name"
-}, "valueSet" :null}####
-v: {
-  "display" : "DNA sequence variation display name [Text] Narrative",
-  "severity" : "warning",
-  "error" : "The display \"DNA sequence variation display name\" is not a valid display for the code {http://loinc.org}47998-0 - should be one of [\"DNA sequence variation display name [Text] Narrative\",\"DNA seq var display name\"]"
 }
 -------------------------------------------------------------------------------------

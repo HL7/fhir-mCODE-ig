@@ -5,7 +5,7 @@
     "status": "generated",
     "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>RelatedCancerCondition Extension</b></p>\n  <p>Cancer condition this information relates to. Includes the primary cancer, secondary cancer, or a particular tumor.</p>\n</div>"
   },
-  "url": "http://hl7.org/fhir/us/shr/StructureDefinition/onco-core-RelatedCancerCondition-extension",
+  "url": "http://hl7.org/fhir/us/mcode/StructureDefinition/onco-core-RelatedCancerCondition-extension",
   "identifier": [
     {
       "system": "http://hl7.org/fhir/us/mcode",
@@ -13,35 +13,39 @@
     }
   ],
   "name": "RelatedCancerCondition",
-  "display": "onco-core-RelatedCancerCondition",
+  "title": "onco-core-RelatedCancerCondition",
   "status": "draft",
+  "date": "2019-07-03",
   "publisher": "The MITRE Corporation",
   "contact": [
     {
       "telecom": [
         {
-          "system": "other",
+          "system": "url",
           "value": "http://standardhealthrecord.org"
         }
       ]
     }
   ],
-  "date": "2019-05-28",
   "description": "Cancer condition this information relates to. Includes the primary cancer, secondary cancer, or a particular tumor.",
-  "fhirVersion": "1.0.2",
-  "kind": "datatype",
-  "constrainedType": "Extension",
+  "fhirVersion": "4.0.0",
+  "kind": "complex-type",
   "abstract": false,
-  "contextType": "resource",
   "context": [
-    "*"
+    {
+      "type": "element",
+      "expression": "*"
+    }
   ],
-  "base": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
   "snapshot": {
     "element": [
       {
-        "id": "Extension",
+        "id": "Extension:relatedcancercondition",
         "path": "Extension",
+        "short": "RelatedCancerCondition",
         "definition": "Cancer condition this information relates to. Includes the primary cancer, secondary cancer, or a particular tumor.",
         "min": 0,
         "max": "*",
@@ -50,27 +54,46 @@
           "min": 0,
           "max": "*"
         },
-        "type": [
+        "condition": [
+          "ele-1"
+        ],
+        "constraint": [
           {
-            "code": "Element"
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "Element"
+          },
+          {
+            "key": "ext-1",
+            "severity": "error",
+            "human": "Must have either extensions or value[x], not both",
+            "expression": "extension.exists() != value.exists()",
+            "xpath": "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"
           }
         ],
+        "isModifier": false,
         "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          },
           {
             "identity": "rim",
             "map": "N/A"
           }
-        ],
-        "short": "RelatedCancerCondition"
+        ]
       },
       {
-        "id": "Extension.id",
+        "id": "Extension:relatedcancercondition.id",
         "path": "Extension.id",
         "representation": [
           "xmlAttr"
         ],
-        "short": "xml:id (or equivalent in JSON)",
-        "definition": "unique id for the element within a resource (for internal references).",
+        "short": "Unique id for inter-element referencing",
+        "definition": "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
         "min": 0,
         "max": "1",
         "base": {
@@ -80,9 +103,11 @@
         },
         "type": [
           {
-            "code": "id"
+            "code": "string"
           }
         ],
+        "isModifier": false,
+        "isSummary": false,
         "mapping": [
           {
             "identity": "rim",
@@ -91,11 +116,21 @@
         ]
       },
       {
-        "id": "Extension.extension",
+        "id": "Extension:relatedcancercondition.extension",
         "path": "Extension.extension",
-        "short": "Additional Content defined by implementations",
-        "definition": "May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
-        "comments": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "description": "Extensions are always sliced by (at least) url",
+          "rules": "open"
+        },
+        "short": "Additional content defined by implementations",
+        "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+        "comment": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
         "alias": [
           "extensions",
           "user content"
@@ -112,6 +147,8 @@
             "code": "Extension"
           }
         ],
+        "isModifier": false,
+        "isSummary": false,
         "mapping": [
           {
             "identity": "rim",
@@ -120,14 +157,14 @@
         ]
       },
       {
-        "id": "Extension.url",
+        "id": "Extension:relatedcancercondition.url",
         "path": "Extension.url",
         "representation": [
           "xmlAttr"
         ],
         "short": "identifies the meaning of the extension",
         "definition": "Source of the definition for the extension code - a logical name or a URL.",
-        "comments": "The definition may point directly to a computable or human-readable definition of the extensibility codes, or it may be a logical URI as declared in some other specification. The definition should be version specific.  This will ideally be the URI for the Resource Profile defining the extension, with the code for the extension after a #.",
+        "comment": "The definition may point directly to a computable or human-readable definition of the extensibility codes, or it may be a logical URI as declared in some other specification. The definition SHALL be a URI for the Structure Definition defining the extension.",
         "min": 1,
         "max": "1",
         "base": {
@@ -140,19 +177,21 @@
             "code": "uri"
           }
         ],
+        "isModifier": false,
+        "isSummary": false,
         "mapping": [
           {
             "identity": "rim",
             "map": "N/A"
           }
         ],
-        "fixedUri": "http://hl7.org/fhir/us/shr/StructureDefinition/onco-core-RelatedCancerCondition-extension"
+        "fixedUri": "http://hl7.org/fhir/us/mcode/StructureDefinition/onco-core-RelatedCancerCondition-extension"
       },
       {
-        "id": "Extension.valuex",
-        "path": "Extension.value[x]",
+        "id": "Extension:relatedcancercondition.valueReference",
+        "path": "Extension.valueReference",
         "short": "Value of extension",
-        "definition": "Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).",
+        "definition": "Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).",
         "min": 1,
         "max": "1",
         "base": {
@@ -163,23 +202,15 @@
         "type": [
           {
             "code": "Reference",
-            "profile": [
-              "http://hl7.org/fhir/us/shr/StructureDefinition/onco-core-PrimaryCancerCondition"
-            ]
-          },
-          {
-            "code": "Reference",
-            "profile": [
-              "http://hl7.org/fhir/us/shr/StructureDefinition/onco-core-SecondaryCancerCondition"
-            ]
-          },
-          {
-            "code": "Reference",
-            "profile": [
-              "http://hl7.org/fhir/us/shr/StructureDefinition/onco-core-Tumor"
+            "targetProfile": [
+              "http://hl7.org/fhir/us/mcode/StructureDefinition/onco-core-PrimaryCancerCondition",
+              "http://hl7.org/fhir/us/mcode/StructureDefinition/onco-core-SecondaryCancerCondition",
+              "http://hl7.org/fhir/us/mcode/StructureDefinition/onco-core-Tumor"
             ]
           }
         ],
+        "isModifier": false,
+        "isSummary": false,
         "mapping": [
           {
             "identity": "rim",
@@ -192,7 +223,7 @@
   "differential": {
     "element": [
       {
-        "id": "Extension",
+        "id": "Extension:relatedcancercondition",
         "path": "Extension",
         "short": "RelatedCancerCondition",
         "definition": "Cancer condition this information relates to. Includes the primary cancer, secondary cancer, or a particular tumor.",
@@ -200,37 +231,32 @@
         "max": "*"
       },
       {
-        "id": "Extension.extension",
+        "id": "Extension:relatedcancercondition.extension",
         "path": "Extension.extension",
         "min": 0,
         "max": "0"
       },
       {
-        "id": "Extension.url",
+        "id": "Extension:relatedcancercondition.url",
         "path": "Extension.url",
-        "fixedUri": "http://hl7.org/fhir/us/shr/StructureDefinition/onco-core-RelatedCancerCondition-extension"
+        "type": [
+          {
+            "code": "uri"
+          }
+        ],
+        "fixedUri": "http://hl7.org/fhir/us/mcode/StructureDefinition/onco-core-RelatedCancerCondition-extension"
       },
       {
-        "id": "Extension.valuex",
-        "path": "Extension.value[x]",
+        "id": "Extension:relatedcancercondition.valueReference",
+        "path": "Extension.valueReference",
         "min": 1,
         "type": [
           {
             "code": "Reference",
-            "profile": [
-              "http://hl7.org/fhir/us/shr/StructureDefinition/onco-core-PrimaryCancerCondition"
-            ]
-          },
-          {
-            "code": "Reference",
-            "profile": [
-              "http://hl7.org/fhir/us/shr/StructureDefinition/onco-core-SecondaryCancerCondition"
-            ]
-          },
-          {
-            "code": "Reference",
-            "profile": [
-              "http://hl7.org/fhir/us/shr/StructureDefinition/onco-core-Tumor"
+            "targetProfile": [
+              "http://hl7.org/fhir/us/mcode/StructureDefinition/onco-core-PrimaryCancerCondition",
+              "http://hl7.org/fhir/us/mcode/StructureDefinition/onco-core-SecondaryCancerCondition",
+              "http://hl7.org/fhir/us/mcode/StructureDefinition/onco-core-Tumor"
             ]
           }
         ]

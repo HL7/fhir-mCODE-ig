@@ -5,25 +5,28 @@
     "status": "generated",
     "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n<p><b>AnatomicalDirectionVS ValueSet</b></p>\n<p>Terms that specify anatomical direction.</p>\n</div>"
   },
-  "url": "http://hl7.org/fhir/us/mcode/shr/core/vs/AnatomicalDirectionVS",
-  "identifier": {
-    "system": "http://hl7.org/fhir/us/mcode",
-    "value": "shr.core.AnatomicalDirectionVS"
-  },
+  "url": "http://hl7.org/fhir/us/mcode/ValueSet/shr-core-AnatomicalDirectionVS",
+  "identifier": [
+    {
+      "system": "http://hl7.org/fhir/us/mcode",
+      "value": "shr.core.AnatomicalDirectionVS"
+    }
+  ],
   "name": "AnatomicalDirectionVS",
+  "title": "AnatomicalDirectionVS",
   "status": "draft",
   "publisher": "The MITRE Corporation",
   "contact": [
     {
       "telecom": [
         {
-          "system": "other",
+          "system": "url",
           "value": "http://standardhealthrecord.org"
         }
       ]
     }
   ],
-  "date": "2019-05-28",
+  "date": "2019-07-03",
   "description": "Terms that specify anatomical direction.",
   "compose": {
     "include": [

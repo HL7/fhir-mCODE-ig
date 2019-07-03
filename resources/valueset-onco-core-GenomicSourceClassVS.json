@@ -5,25 +5,28 @@
     "status": "generated",
     "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n<p><b>GenomicSourceClassVS ValueSet</b></p>\n<p>The genomic class of the specimen being analyzed, for example, germline for inherited genome, somatic for cancer genome, and prenatal for fetal genome.</p>\n</div>"
   },
-  "url": "http://hl7.org/fhir/us/mcode/onco/core/vs/GenomicSourceClassVS",
-  "identifier": {
-    "system": "http://hl7.org/fhir/us/mcode",
-    "value": "onco.core.GenomicSourceClassVS"
-  },
+  "url": "http://hl7.org/fhir/us/mcode/ValueSet/onco-core-GenomicSourceClassVS",
+  "identifier": [
+    {
+      "system": "http://hl7.org/fhir/us/mcode",
+      "value": "onco.core.GenomicSourceClassVS"
+    }
+  ],
   "name": "GenomicSourceClassVS",
+  "title": "GenomicSourceClassVS",
   "status": "draft",
   "publisher": "The MITRE Corporation",
   "contact": [
     {
       "telecom": [
         {
-          "system": "other",
+          "system": "url",
           "value": "http://standardhealthrecord.org"
         }
       ]
     }
   ],
-  "date": "2019-05-28",
+  "date": "2019-07-03",
   "description": "The genomic class of the specimen being analyzed, for example, germline for inherited genome, somatic for cancer genome, and prenatal for fetal genome.",
   "compose": {
     "include": [

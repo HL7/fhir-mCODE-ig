@@ -6,12 +6,6 @@
     "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n<p><b>RadiationTargetBodySiteVS ValueSet</b></p>\n<p>Codes for body sites that can be targets of radiation therapy. This list of sites is based on Commission on Cancer’s &#039;Standards for Oncology Registry Entry  - STORE 2018&#039;. This value set contains SNOMED CT equivalent terms.</p>\n</div>"
   },
   "url": "http://hl7.org/fhir/us/mcode/ValueSet/obf-RadiationTargetBodySiteVS",
-  "identifier": [
-    {
-      "system": "http://hl7.org/fhir/us/mcode",
-      "value": "obf.RadiationTargetBodySiteVS"
-    }
-  ],
   "name": "RadiationTargetBodySiteVS",
   "title": "RadiationTargetBodySiteVS",
   "status": "draft",
@@ -26,7 +20,7 @@
       ]
     }
   ],
-  "date": "2019-07-03",
+  "date": "2019-07-18",
   "description": "Codes for body sites that can be targets of radiation therapy. This list of sites is based on Commission on Cancer’s 'Standards for Oncology Registry Entry  - STORE 2018'. This value set contains SNOMED CT equivalent terms.",
   "compose": {
     "include": [

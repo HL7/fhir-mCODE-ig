@@ -6,12 +6,6 @@
     "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n<p><b>SettingVS ValueSet</b></p>\n<p>What type of place is found at a given location. More than one descriptor may be applicable.</p>\n</div>"
   },
   "url": "http://hl7.org/fhir/us/mcode/ValueSet/shr-core-SettingVS",
-  "identifier": [
-    {
-      "system": "http://hl7.org/fhir/us/mcode",
-      "value": "shr.core.SettingVS"
-    }
-  ],
   "name": "SettingVS",
   "title": "SettingVS",
   "status": "draft",
@@ -26,7 +20,7 @@
       ]
     }
   ],
-  "date": "2019-07-03",
+  "date": "2019-07-18",
   "description": "What type of place is found at a given location. More than one descriptor may be applicable.",
   "compose": {
     "include": [

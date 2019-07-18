@@ -6,12 +6,6 @@
     "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n<p><b>ConditionCategoryVS ValueSet</b></p>\n<p>A category assigned to the condition, for example, a disease, concern, symptom, functional impairment, or structural abnormality. Extends http://hl7.org/fhir/ValueSet/condition-category by including all codes from the corresponding code system, namely, http://terminology.hl7.org/CodeSystem/condition-category. Extensions are based on http://fhir.org/guides/argonaut/ValueSet/condition-category, but substituting SNOMED CT codes.</p>\n</div>"
   },
   "url": "http://hl7.org/fhir/us/mcode/ValueSet/obf-ConditionCategoryVS",
-  "identifier": [
-    {
-      "system": "http://hl7.org/fhir/us/mcode",
-      "value": "obf.ConditionCategoryVS"
-    }
-  ],
   "name": "ConditionCategoryVS",
   "title": "ConditionCategoryVS",
   "status": "draft",
@@ -26,7 +20,7 @@
       ]
     }
   ],
-  "date": "2019-07-03",
+  "date": "2019-07-18",
   "description": "A category assigned to the condition, for example, a disease, concern, symptom, functional impairment, or structural abnormality. Extends http://hl7.org/fhir/ValueSet/condition-category by including all codes from the corresponding code system, namely, http://terminology.hl7.org/CodeSystem/condition-category. Extensions are based on http://fhir.org/guides/argonaut/ValueSet/condition-category, but substituting SNOMED CT codes.",
   "compose": {
     "include": [

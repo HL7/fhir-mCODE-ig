@@ -6,12 +6,6 @@
     "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n<p><b>UnitsOfLengthVS ValueSet</b></p>\n<p>Units of measure related to length or distance.</p>\n</div>"
   },
   "url": "http://hl7.org/fhir/us/mcode/ValueSet/shr-core-UnitsOfLengthVS",
-  "identifier": [
-    {
-      "system": "http://hl7.org/fhir/us/mcode",
-      "value": "shr.core.UnitsOfLengthVS"
-    }
-  ],
   "name": "UnitsOfLengthVS",
   "title": "UnitsOfLengthVS",
   "status": "draft",
@@ -26,7 +20,7 @@
       ]
     }
   ],
-  "date": "2019-07-03",
+  "date": "2019-07-18",
   "description": "Units of measure related to length or distance.",
   "compose": {
     "include": [

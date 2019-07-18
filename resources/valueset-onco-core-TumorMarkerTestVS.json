@@ -6,12 +6,6 @@
     "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n<p><b>TumorMarkerTestVS ValueSet</b></p>\n<p>Codes representing tests for tumor markers. This value set of LOINC codes is not comprehensive and can be extended. LOINC codes are preferred. Other vocabularies can be used only if the test of interest is not covered by LOINC.\n\nFHIR implementation note: At the current time, profiles for the specific LOINC tests mentioned here do not exist.</p>\n</div>"
   },
   "url": "http://hl7.org/fhir/us/mcode/ValueSet/onco-core-TumorMarkerTestVS",
-  "identifier": [
-    {
-      "system": "http://hl7.org/fhir/us/mcode",
-      "value": "onco.core.TumorMarkerTestVS"
-    }
-  ],
   "name": "TumorMarkerTestVS",
   "title": "TumorMarkerTestVS",
   "status": "draft",
@@ -26,7 +20,7 @@
       ]
     }
   ],
-  "date": "2019-07-03",
+  "date": "2019-07-18",
   "description": "Codes representing tests for tumor markers. This value set of LOINC codes is not comprehensive and can be extended. LOINC codes are preferred. Other vocabularies can be used only if the test of interest is not covered by LOINC.\n\nFHIR implementation note: At the current time, profiles for the specific LOINC tests mentioned here do not exist.",
   "compose": {
     "include": [

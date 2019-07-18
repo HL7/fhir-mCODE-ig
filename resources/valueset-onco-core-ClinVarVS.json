@@ -1,0 +1,32 @@
+{
+  "resourceType": "ValueSet",
+  "id": "onco-core-ClinVarVS",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n<p><b>ClinVarVS ValueSet</b></p>\n<p>Value set of human genetic variants, drawn from [ClinVar](https://www.ncbi.nlm.nih.gov/clinvar/).</p>\n</div>"
+  },
+  "url": "http://hl7.org/fhir/us/mcode/ValueSet/onco-core-ClinVarVS",
+  "name": "ClinVarVS",
+  "title": "ClinVarVS",
+  "status": "draft",
+  "publisher": "The MITRE Corporation",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://standardhealthrecord.org"
+        }
+      ]
+    }
+  ],
+  "date": "2019-07-18",
+  "description": "Value set of human genetic variants, drawn from [ClinVar](https://www.ncbi.nlm.nih.gov/clinvar/).",
+  "compose": {
+    "include": [
+      {
+        "system": "http://www.ncbi.nlm.nih.gov/clinvar/"
+      }
+    ]
+  }
+}

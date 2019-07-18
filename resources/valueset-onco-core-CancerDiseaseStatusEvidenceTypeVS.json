@@ -6,12 +6,6 @@
     "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n<p><b>CancerDiseaseStatusEvidenceTypeVS ValueSet</b></p>\n<p>The type of evidence backing up the clinical determination of cancer progression.</p>\n</div>"
   },
   "url": "http://hl7.org/fhir/us/mcode/ValueSet/onco-core-CancerDiseaseStatusEvidenceTypeVS",
-  "identifier": [
-    {
-      "system": "http://hl7.org/fhir/us/mcode",
-      "value": "onco.core.CancerDiseaseStatusEvidenceTypeVS"
-    }
-  ],
   "name": "CancerDiseaseStatusEvidenceTypeVS",
   "title": "CancerDiseaseStatusEvidenceTypeVS",
   "status": "draft",
@@ -26,7 +20,7 @@
       ]
     }
   ],
-  "date": "2019-07-03",
+  "date": "2019-07-18",
   "description": "The type of evidence backing up the clinical determination of cancer progression.",
   "compose": {
     "include": [

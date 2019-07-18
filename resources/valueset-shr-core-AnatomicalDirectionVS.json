@@ -6,12 +6,6 @@
     "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n<p><b>AnatomicalDirectionVS ValueSet</b></p>\n<p>Terms that specify anatomical direction.</p>\n</div>"
   },
   "url": "http://hl7.org/fhir/us/mcode/ValueSet/shr-core-AnatomicalDirectionVS",
-  "identifier": [
-    {
-      "system": "http://hl7.org/fhir/us/mcode",
-      "value": "shr.core.AnatomicalDirectionVS"
-    }
-  ],
   "name": "AnatomicalDirectionVS",
   "title": "AnatomicalDirectionVS",
   "status": "draft",
@@ -26,208 +20,17 @@
       ]
     }
   ],
-  "date": "2019-07-03",
+  "date": "2019-07-18",
   "description": "Terms that specify anatomical direction.",
   "compose": {
     "include": [
       {
         "system": "http://snomed.info/sct",
-        "concept": [
+        "filter": [
           {
-            "code": "255549009",
-            "display": "Anterior"
-          },
-          {
-            "code": "261045000",
-            "display": "Anterior dorsal"
-          },
-          {
-            "code": "37197008",
-            "display": "Anterolateral"
-          },
-          {
-            "code": "255593009",
-            "display": "Circumferential"
-          },
-          {
-            "code": "65424008",
-            "display": "Contiguous"
-          },
-          {
-            "code": "46053002",
-            "display": "Distal"
-          },
-          {
-            "code": "255554000",
-            "display": "Dorsal"
-          },
-          {
-            "code": "298109001",
-            "display": "Ectopic"
-          },
-          {
-            "code": "33843005",
-            "display": "Efferent"
-          },
-          {
-            "code": "261788001",
-            "display": "Exteriorized"
-          },
-          {
-            "code": "69320009",
-            "display": "Extracellular"
-          },
-          {
-            "code": "263759007",
-            "display": "Foraminal"
-          },
-          {
-            "code": "298108009",
-            "display": "Heterotopic"
-          },
-          {
-            "code": "131186000",
-            "display": "Horizontal long axis"
-          },
-          {
-            "code": "261089000",
-            "display": "Inferior"
-          },
-          {
-            "code": "83167003",
-            "display": "Intracellular"
-          },
-          {
-            "code": "18769003",
-            "display": "Juxta-posed"
-          },
-          {
-            "code": "49370004",
-            "display": "Lateral"
-          },
-          {
-            "code": "103339001",
-            "display": "Long axis"
-          },
-          {
-            "code": "38717003",
-            "display": "Longitudinal"
-          },
-          {
-            "code": "261122009",
-            "display": "Lower"
-          },
-          {
-            "code": "112233002",
-            "display": "Marginal"
-          },
-          {
-            "code": "255561001",
-            "display": "Medial"
-          },
-          {
-            "code": "260528009",
-            "display": "Median"
-          },
-          {
-            "code": "261129000",
-            "display": "Mediolateral"
-          },
-          {
-            "code": "103342007",
-            "display": "Mid-longitudinal"
-          },
-          {
-            "code": "261136004",
-            "display": "Mural"
-          },
-          {
-            "code": "103341000",
-            "display": "Off axis"
-          },
-          {
-            "code": "298107004",
-            "display": "Orthotopic"
-          },
-          {
-            "code": "264114003",
-            "display": "Ostium"
-          },
-          {
-            "code": "103343002",
-            "display": "Parasagittal"
-          },
-          {
-            "code": "14414005",
-            "display": "Peripheral"
-          },
-          {
-            "code": "264147007",
-            "display": "Plantar"
-          },
-          {
-            "code": "60583000",
-            "display": "Postaxial"
-          },
-          {
-            "code": "255551008",
-            "display": "Posterior"
-          },
-          {
-            "code": "261165005",
-            "display": "Posterior dorsal"
-          },
-          {
-            "code": "264153007",
-            "display": "Posterior pole"
-          },
-          {
-            "code": "90069004",
-            "display": "Posterolateral"
-          },
-          {
-            "code": "32400000",
-            "display": "Preaxial"
-          },
-          {
-            "code": "62372003",
-            "display": "Segmental"
-          },
-          {
-            "code": "263869007",
-            "display": "Separate"
-          },
-          {
-            "code": "255584008",
-            "display": "Septal"
-          },
-          {
-            "code": "103340004",
-            "display": "Short axis"
-          },
-          {
-            "code": "264217000",
-            "display": "Superior"
-          },
-          {
-            "code": "421812003",
-            "display": "Top"
-          },
-          {
-            "code": "62824007",
-            "display": "Transverse"
-          },
-          {
-            "code": "261183002",
-            "display": "Upper"
-          },
-          {
-            "code": "33096000",
-            "display": "Vertical"
-          },
-          {
-            "code": "131185001",
-            "display": "Vertical long axis"
+            "property": "concept",
+            "op": "is-a",
+            "value": "272424004"
           }
         ]
       }

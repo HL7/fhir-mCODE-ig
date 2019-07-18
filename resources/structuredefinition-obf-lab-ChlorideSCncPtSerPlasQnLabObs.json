@@ -3,14 +3,14 @@
   "id": "obf-lab-ChlorideSCncPtSerPlasQnLabObs",
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>ChlorideSCncPtSerPlasQnLabObs Profile</b></p>\n  <p>Chloride [Moles/​volume] in Serum or Plasma</p>\n  <p><b>Mapping Summary</b></p>\n  <p><pre>obf.lab.ChlorideSCncPtSerPlasQnLabObs maps to http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab:\n  Language maps to language\n  ImplicitRules maps to implicitRules\n  Metadata.VersionId maps to meta.versionId\n  Metadata.SourceSystem maps to meta.source\n  Metadata.Profile maps to meta.profile\n  Metadata.LastUpdated maps to meta.lastUpdated\n  Metadata.SecurityLabel maps to meta.security\n  Metadata.Tag maps to meta.tag\n  Narrative maps to text\n  Identifier maps to identifier (slice on = type.coding.code; slice strategy = includes)\n  ObservationBasedOn maps to basedOn\n  ObservationPartOf maps to partOf\n  Status maps to status\n  Category maps to category\n  Code maps to code\n  ObservationSubjectOfRecord maps to subject\n  FocalSubject maps to focus\n  CareContext maps to encounter\n  RelevantTime maps to effective[x] // Add Types Timing, instant\n  StatementDateTime maps to issued\n  LaboratoryObservationPerformer maps to performer // Added Target Types PractitionerRole, CareTeam\n  DataValue maps to value[x] // Add Type integer, remove Type Attachment\n  DataAbsentReason maps to dataAbsentReason\n  Interpretation maps to interpretation\n  Annotation maps to note\n  BodyLocation.Code maps to bodySite\n  BodyLocation.Laterality maps to bodySite.extension\n  BodyLocation.Orientation maps to bodySite.extension\n  BodyLocation.RelationToLandmark maps to bodySite.extension\n  Method maps to method\n  Specimen maps to specimen\n  Device maps to device\n  ReferenceRange maps to referenceRange\n  ReferenceRange.LowerBound maps to referenceRange.low\n  ReferenceRange.UpperBound maps to referenceRange.high\n  ReferenceRange.Type maps to referenceRange.type\n  ReferenceRange.ApplicableSubpopulation maps to referenceRange.appliesTo\n  ReferenceRange.ApplicableAgeRange maps to referenceRange.age\n  ReferenceRange.Text maps to referenceRange.text\n  PanelMembers.Observation maps to hasMember (slice on = reference.resolve(); slice on type = profile; slice strategy = includes)\n  ObservationDerivedFrom maps to derivedFrom\n  Components.ObservationComponent maps to component (slice on = code.coding.code; slice strategy = includes)\n  Components.ObservationComponent.Code maps to component.code\n  Components.ObservationComponent.DataValue maps to component.value[x]\n  Components.ObservationComponent.DataAbsentReason maps to component.dataAbsentReason\n  Components.ObservationComponent.Interpretation maps to component.interpretation\n  Components.ObservationComponent.ReferenceRange maps to component.referenceRange\n  Components.ObservationComponent.ReferenceRange.LowerBound maps to component.referenceRange.low\n  Components.ObservationComponent.ReferenceRange.UpperBound maps to component.referenceRange.high\n  Components.ObservationComponent.ReferenceRange.Type maps to component.referenceRange.type\n  Components.ObservationComponent.ReferenceRange.ApplicableSubpopulation maps to component.referenceRange.appliesTo\n  Components.ObservationComponent.ReferenceRange.ApplicableAgeRange maps to component.referenceRange.age\n  Components.ObservationComponent.ReferenceRange.Text maps to component.referenceRange.text\n</pre></p>\n</div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>ChlorideSCncPtSerPlasQnLabObs Profile</b></p>\n  <p>Chloride [Moles/​volume] in Serum or Plasma</p>\n  <p><b>Mapping Summary</b></p>\n  <p><pre>obf.lab.ChlorideSCncPtSerPlasQnLabObs maps to http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab:\n  Language maps to language\n  ImplicitRules maps to implicitRules\n  Metadata.VersionId maps to meta.versionId\n  Metadata.SourceSystem maps to meta.source\n  Metadata.Profile maps to meta.profile\n  Metadata.LastUpdated maps to meta.lastUpdated\n  Metadata.SecurityLabel maps to meta.security\n  Metadata.Tag maps to meta.tag\n  Narrative maps to text\n  Identifier maps to identifier (slice on = type.coding.code; slice strategy = includes)\n  ObservationBasedOn maps to basedOn\n  ObservationPartOf maps to partOf\n  Status maps to status\n  Category maps to category\n  Code maps to code\n  ObservationSubjectOfRecord maps to subject\n  FocalSubject maps to focus\n  CareContext maps to encounter\n  RelevantTime maps to effective[x] // Add Types Timing, instant\n  StatementDateTime maps to issued\n  LaboratoryObservationPerformer maps to performer // Added Target Types PractitionerRole, CareTeam\n  DataValue maps to value[x] // Add Type integer, remove Type Attachment\n  DataAbsentReason maps to dataAbsentReason\n  Interpretation maps to interpretation\n  Annotation maps to note\n  BodyLocation.Code maps to bodySite\n  BodyLocation.Laterality maps to bodySite.extension\n  BodyLocation.AnatomicalOrientation maps to bodySite.extension\n  BodyLocation.RelationToLandmark maps to bodySite.extension\n  Method maps to method\n  Specimen maps to specimen\n  Device maps to device\n  ReferenceRange maps to referenceRange\n  ReferenceRange.LowerBound maps to referenceRange.low\n  ReferenceRange.UpperBound maps to referenceRange.high\n  ReferenceRange.Type maps to referenceRange.type\n  ReferenceRange.ApplicableSubpopulation maps to referenceRange.appliesTo\n  ReferenceRange.ApplicableAgeRange maps to referenceRange.age\n  ReferenceRange.Text maps to referenceRange.text\n  PanelMembers.Observation maps to hasMember (slice on = reference.resolve(); slice on type = profile; slice strategy = includes)\n  ObservationDerivedFrom maps to derivedFrom\n  Components.ObservationComponent maps to component (slice on = code.coding.code; slice strategy = includes)\n  Components.ObservationComponent.Code maps to component.code\n  Components.ObservationComponent.DataValue maps to component.value[x]\n  Components.ObservationComponent.DataAbsentReason maps to component.dataAbsentReason\n  Components.ObservationComponent.Interpretation maps to component.interpretation\n  Components.ObservationComponent.ReferenceRange maps to component.referenceRange\n  Components.ObservationComponent.ReferenceRange.LowerBound maps to component.referenceRange.low\n  Components.ObservationComponent.ReferenceRange.UpperBound maps to component.referenceRange.high\n  Components.ObservationComponent.ReferenceRange.Type maps to component.referenceRange.type\n  Components.ObservationComponent.ReferenceRange.ApplicableSubpopulation maps to component.referenceRange.appliesTo\n  Components.ObservationComponent.ReferenceRange.ApplicableAgeRange maps to component.referenceRange.age\n  Components.ObservationComponent.ReferenceRange.Text maps to component.referenceRange.text\n</pre></p>\n</div>"
   },
   "url": "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-lab-ChlorideSCncPtSerPlasQnLabObs",
   "name": "ChlorideSCncPtSerPlasQnLabObs",
   "title": "obf-lab-ChlorideSCncPtSerPlasQnLabObs",
   "status": "active",
   "experimental": false,
-  "date": "2019-07-03",
+  "date": "2019-07-18",
   "publisher": "The MITRE Corporation",
   "contact": [
     {
@@ -1026,7 +1026,7 @@
             "map": "fhir:Coding.system rdfs:subPropertyOf dt:CDCoding.codeSystem"
           }
         ],
-        "fixedUri": "http://hl7.org/fhir/observation-category"
+        "fixedUri": "http://terminology.hl7.org/CodeSystem/observation-category"
       },
       {
         "id": "Observation:obf-lab-ChlorideSCncPtSerPlasQnLabObs.category.coding:Fixed_laboratory.version",
@@ -3936,7 +3936,7 @@
       {
         "id": "Observation:obf-lab-ChlorideSCncPtSerPlasQnLabObs.category.coding:Fixed_laboratory.system",
         "path": "Observation.category.coding.system",
-        "fixedUri": "http://hl7.org/fhir/observation-category"
+        "fixedUri": "http://terminology.hl7.org/CodeSystem/observation-category"
       },
       {
         "id": "Observation:obf-lab-ChlorideSCncPtSerPlasQnLabObs.category.coding:Fixed_laboratory.code",
@@ -4258,11 +4258,5 @@
         }
       }
     ]
-  },
-  "identifier": [
-    {
-      "system": "http://hl7.org/fhir/us/mcode",
-      "value": "obf.lab.ChlorideSCncPtSerPlasQnLabObs"
-    }
-  ]
+  }
 }

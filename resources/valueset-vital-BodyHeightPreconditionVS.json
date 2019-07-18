@@ -1,0 +1,42 @@
+{
+  "resourceType": "ValueSet",
+  "id": "vital-BodyHeightPreconditionVS",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n<p><b>BodyHeightPreconditionVS ValueSet</b></p>\n<p>Circumstance for measuring body height.</p>\n</div>"
+  },
+  "url": "http://hl7.org/fhir/us/mcode/ValueSet/vital-BodyHeightPreconditionVS",
+  "name": "BodyHeightPreconditionVS",
+  "title": "BodyHeightPreconditionVS",
+  "status": "draft",
+  "publisher": "The MITRE Corporation",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://standardhealthrecord.org"
+        }
+      ]
+    }
+  ],
+  "date": "2019-07-18",
+  "description": "Circumstance for measuring body height.",
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "concept": [
+          {
+            "code": "971000205103",
+            "display": "With shoes"
+          },
+          {
+            "code": "961000205106",
+            "display": "No shoes"
+          }
+        ]
+      }
+    ]
+  }
+}

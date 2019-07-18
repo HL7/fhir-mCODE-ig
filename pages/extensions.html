@@ -36,16 +36,29 @@
   </thead>
   <tbody>
     <tr>
-          <td><a href="StructureDefinition-obf-DateOfDiagnosis-extension.html">DateOfDiagnosis</a></td>
-          <td>{% capture md_text %}The date the disease was first clinically recognized with sufficient certainty, regardless of whether it was fully characterized at that time.{% endcapture %}{{ md_text | markdownify }}</td>
+          <td><a href="StructureDefinition-shr-core-AnatomicalOrientation-extension.html">AnatomicalOrientation</a></td>
+          <td>{% capture md_text %}AnatomicalOrientation of the body location, if needed to distinguish from a similar location in another orientation.
+The orientation element is part of BodyLocation, a flexible structure that allows the location to be determined by a single code, or a code plus laterality and/or orientation. The body location can also be specified in relation to one or more body landmarks. SNOMED CT is used in all cases.
+
+* Code only: The code should include (precoordinate) laterality and/orientation to the degree necessary to completely specify the body location.
+* Code plus laterality and/or orientation: The basic code augmented by codes specifying the body side and/or anatomical orientation.
+* Relation to landmark: The location relative to a landmark is specified by:
+1. Establishing the location and type of landmark using a body site code and optional laterality/orientation, and
+2. Specifying the direction and distance from the landmark to the body location.
+
+Note that BodyLocation is a data type (a reusable structure), not a stand-alone entity. The concept is similar to how a postal address can apply to a person, location, or organization. This contrasts with FHIR's stand-alone BodySite (aka BodyStructure in r4) which 'is not ... intended for describing the type of anatomical location but rather a specific body site on a specific patient' (FHIR 3.5).{% endcapture %}{{ md_text | markdownify }}</td>
+        </tr>
+        <tr>
+          <td><a href="StructureDefinition-vital-BloodPressureCuffSize-extension.html">BloodPressureCuffSize</a></td>
+          <td>{% capture md_text %}The size of cuff used, if applicable.{% endcapture %}{{ md_text | markdownify }}</td>
+        </tr>
+        <tr>
+          <td><a href="StructureDefinition-vital-BodyPosition-extension.html">BodyPosition</a></td>
+          <td>{% capture md_text %}The position or physical attitude of the body.{% endcapture %}{{ md_text | markdownify }}</td>
         </tr>
         <tr>
           <td><a href="StructureDefinition-onco-core-EvidenceType-extension.html">EvidenceType</a></td>
-          <td>{% capture md_text %}The type of evidence considered in making the determination.{% endcapture %}{{ md_text | markdownify }}</td>
-        </tr>
-        <tr>
-          <td><a href="StructureDefinition-onco-core-GeneStudied-extension.html">GeneStudied</a></td>
-          <td>{% capture md_text %}A gene targeted for mutation analysis, identified in HUGO Gene Nomenclature Committee (HGNC) notation. The required code is HGNC gene ID. Gene IDs are of the format HGNC:n, where n is a unique number. Only the number, n, should be given as the code. For example, the HGNC identifier for the EGFR gene is 3236. The display text associated with the code should be the HGNC official gene symbol. For example, the official gene symbol for epidermal growth factor receptor is EGFR.{% endcapture %}{{ md_text | markdownify }}</td>
+          <td>{% capture md_text %}Categorization of the kind of evidence used as input to the clinical judgment. This corresponds to both the S and O in SOAP.{% endcapture %}{{ md_text | markdownify }}</td>
         </tr>
         <tr>
           <td><a href="StructureDefinition-onco-core-HistologyMorphologyBehavior-extension.html">HistologyMorphologyBehavior</a></td>
@@ -57,38 +70,29 @@
 
 The laterality element is part of BodyLocation, a flexible structure that allows the location to be determined by a single code, or a code plus laterality and/or orientation. The body location can also be specified in relation to one or more body landmarks. SNOMED CT is used in all cases.
 
-+ Code only: The code should include (precoordinate) laterality and/orientation to the degree necessary to completely specify the body location.
-+ Code plus laterality and/or orientation: The basic code augmented by codes specifying the body side and/or anatomical orientation.
-+ Relation to landmark: The location relative to a landmark is specified by:
-- Establishing the location and type of landmark using a body site code and optional laterality/orientation, and
-- Specifying the direction and distance from the landmark to the body location.
+* Code only: The code should include (precoordinate) laterality and/orientation to the degree necessary to completely specify the body location.
+* Code plus laterality and/or orientation: The basic code augmented by codes specifying the body side and/or anatomical orientation.
+* Relation to landmark: The location relative to a landmark is specified by:
+1. Establishing the location and type of landmark using a body site code and optional laterality/orientation, and
+2. Specifying the direction and distance from the landmark to the body location.
 
 Note that BodyLocation is a data type (a reusable structure), not a stand-alone entity. The concept is similar to how a postal address can apply to a person, location, or organization. This contrasts with FHIR's stand-alone BodySite (aka BodyStructure in r4) which 'is not ... intended for describing the type of anatomical location but rather a specific body site on a specific patient' (FHIR 3.5).{% endcapture %}{{ md_text | markdownify }}</td>
         </tr>
         <tr>
-          <td><a href="StructureDefinition-shr-core-Orientation-extension.html">Orientation</a></td>
-          <td>{% capture md_text %}Orientation of the body location, if needed to distinguish from a similar location in another orientation.
-The orientation element is part of BodyLocation, a flexible structure that allows the location to be determined by a single code, or a code plus laterality and/or orientation. The body location can also be specified in relation to one or more body landmarks. SNOMED CT is used in all cases.
-
-+ Code only: The code should include (precoordinate) laterality and/orientation to the degree necessary to completely specify the body location.
-+ Code plus laterality and/or orientation: The basic code augmented by codes specifying the body side and/or anatomical orientation.
-+ Relation to landmark: The location relative to a landmark is specified by:
-- Establishing the location and type of landmark using a body site code and optional laterality/orientation, and
-- Specifying the direction and distance from the landmark to the body location.
-
-Note that BodyLocation is a data type (a reusable structure), not a stand-alone entity. The concept is similar to how a postal address can apply to a person, location, or organization. This contrasts with FHIR's stand-alone BodySite (aka BodyStructure in r4) which 'is not ... intended for describing the type of anatomical location but rather a specific body site on a specific patient' (FHIR 3.5).{% endcapture %}{{ md_text | markdownify }}</td>
+          <td><a href="StructureDefinition-vital-PreconditionCode-extension.html">PreconditionCode</a></td>
+          <td>{% capture md_text %}A coded description of the conditions or context of an observation, for example, under sedation, fasting or post-exercise. A qualifier cannot modify the measurement type; for example, a fasting blood sugar is still a blood sugar.{% endcapture %}{{ md_text | markdownify }}</td>
         </tr>
         <tr>
           <td><a href="StructureDefinition-onco-core-PrimaryCancerCondition-extension.html">PrimaryCancerCondition</a></td>
-          <td>{% capture md_text %}Records the history of the primary cancer condition, the original or first tumor in the body, abnormal cells that divide without control and can invade nearby tissues.{% endcapture %}{{ md_text | markdownify }}</td>
+          <td>{% capture md_text %}Records the history of the primary cancer condition, the original or first tumor in the body (ref https://www.cancer.gov/publications/dictionaries/cancer-terms/def/primary-tumor).{% endcapture %}{{ md_text | markdownify }}</td>
         </tr>
         <tr>
           <td><a href="StructureDefinition-obf-RadiationDosePerFraction-extension.html">RadiationDosePerFraction</a></td>
-          <td>{% capture md_text %}The total number of treatment sessions (fractions) administered during a course of radiation therapy therapy. A fraction is a portion of the total radiation dose, delivered as a series of treatments that make up the full course of radiotherapy. (source: LOINC){% endcapture %}{{ md_text | markdownify }}</td>
+          <td>{% capture md_text %}The amount of radiation administered during a single session (fraction) of radiation therapy therapy.{% endcapture %}{{ md_text | markdownify }}</td>
         </tr>
         <tr>
           <td><a href="StructureDefinition-obf-RadiationFractionsDelivered-extension.html">RadiationFractionsDelivered</a></td>
-          <td>{% capture md_text %}The total number of treatment sessions (fractions) administered during a course of radiation therapy therapy. A fraction is a portion of the total radiation dose, delivered as a series of treatments that make up the full course of radiotherapy. (source: LOINC){% endcapture %}{{ md_text | markdownify }}</td>
+          <td>{% capture md_text %}Records the total number of treatment sessions (fractions) administered during the first course of therapy. Corresponds to LOINC 21950-2 'Number of radiation treatment' [sic].{% endcapture %}{{ md_text | markdownify }}</td>
         </tr>
         <tr>
           <td><a href="StructureDefinition-onco-core-RegionStudied-extension.html">RegionStudied</a></td>
@@ -107,11 +111,11 @@ Note that BodyLocation is a data type (a reusable structure), not a stand-alone 
 
 The RelationToLandmark element is part of BodyLocation, a flexible structure that allows the location to be determined by a single code, or a code plus laterality and/or orientation. The body location can also be specified in relation to one or more body landmarks. SNOMED CT is used in all cases.
 
-+ Code only: The code should include (precoordinate) laterality and/orientation to the degree necessary to completely specify the body location.
-+ Code plus laterality and/or orientation: The basic code augmented by codes specifying the body side and/or anatomical orientation.
-+ Relation to landmark: The location relative to a landmark is specified by:
-- Establishing the location and type of landmark using a body site code and optional laterality/orientation, and
-- Specifying the direction and distance from the landmark to the body location.
+* Code only: The code should include (precoordinate) laterality and/orientation to the degree necessary to completely specify the body location.
+* Code plus laterality and/or orientation: The basic code augmented by codes specifying the body side and/or anatomical orientation.
+* Relation to landmark: The location relative to a landmark is specified by:
+1. Establishing the location and type of landmark using a body site code and optional laterality/orientation, and
+2. Specifying the direction and distance from the landmark to the body location.
 
 Note that BodyLocation is a data type (a reusable structure), not a stand-alone entity. The concept is similar to how a postal address can apply to a person, location, or organization. This contrasts with FHIR's stand-alone BodySite (aka BodyStructure in r4) which 'is not ... intended for describing the type of anatomical location but rather a specific body site on a specific patient' (FHIR 3.5).{% endcapture %}{{ md_text | markdownify }}</td>
         </tr>

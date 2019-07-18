@@ -6,12 +6,6 @@
     "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n<p><b>TreatmentTerminationReasonVS ValueSet</b></p>\n<p>Values used to describe the reasons for stopping a treatment. Includes code for &#039;treatment completed&#039; as well as codes for unplanned (early) stoppage. Applies to medications and other treatments that take place over a period of time, such as radiation treatments.</p>\n</div>"
   },
   "url": "http://hl7.org/fhir/us/mcode/ValueSet/obf-TreatmentTerminationReasonVS",
-  "identifier": [
-    {
-      "system": "http://hl7.org/fhir/us/mcode",
-      "value": "obf.TreatmentTerminationReasonVS"
-    }
-  ],
   "name": "TreatmentTerminationReasonVS",
   "title": "TreatmentTerminationReasonVS",
   "status": "draft",
@@ -26,7 +20,7 @@
       ]
     }
   ],
-  "date": "2019-07-03",
+  "date": "2019-07-18",
   "description": "Values used to describe the reasons for stopping a treatment. Includes code for 'treatment completed' as well as codes for unplanned (early) stoppage. Applies to medications and other treatments that take place over a period of time, such as radiation treatments.",
   "compose": {
     "include": [

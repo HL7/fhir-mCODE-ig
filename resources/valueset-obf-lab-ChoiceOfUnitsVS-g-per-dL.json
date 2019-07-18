@@ -6,12 +6,6 @@
     "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n<p><b>ChoiceOfUnitsVS-g-per-dL ValueSet</b></p>\n<p>Choice of units for mass concentration.</p>\n</div>"
   },
   "url": "http://hl7.org/fhir/us/mcode/ValueSet/obf-lab-ChoiceOfUnitsVS-g-per-dL",
-  "identifier": [
-    {
-      "system": "http://hl7.org/fhir/us/mcode",
-      "value": "obf.lab.ChoiceOfUnitsVS-g-per-dL"
-    }
-  ],
   "name": "ChoiceOfUnitsVS_g_per_dL",
   "title": "ChoiceOfUnitsVS-g-per-dL",
   "status": "draft",
@@ -26,7 +20,7 @@
       ]
     }
   ],
-  "date": "2019-07-03",
+  "date": "2019-07-18",
   "description": "Choice of units for mass concentration.",
   "compose": {
     "include": [

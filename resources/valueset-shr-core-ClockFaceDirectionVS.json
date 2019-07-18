@@ -6,12 +6,6 @@
     "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n<p><b>ClockFaceDirectionVS ValueSet</b></p>\n<p>The relative direction of an object described using the analogy of a 12-hour clock to describe angles and directions. One imagines a clock face lying either upright or flat in front of oneself, and identifies the twelve hour markings with the directions in which they point.</p>\n</div>"
   },
   "url": "http://hl7.org/fhir/us/mcode/ValueSet/shr-core-ClockFaceDirectionVS",
-  "identifier": [
-    {
-      "system": "http://hl7.org/fhir/us/mcode",
-      "value": "shr.core.ClockFaceDirectionVS"
-    }
-  ],
   "name": "ClockFaceDirectionVS",
   "title": "ClockFaceDirectionVS",
   "status": "draft",
@@ -26,7 +20,7 @@
       ]
     }
   ],
-  "date": "2019-07-03",
+  "date": "2019-07-18",
   "description": "The relative direction of an object described using the analogy of a 12-hour clock to describe angles and directions. One imagines a clock face lying either upright or flat in front of oneself, and identifies the twelve hour markings with the directions in which they point.",
   "compose": {
     "include": [

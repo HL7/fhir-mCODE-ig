@@ -3,12 +3,12 @@
   "id": "obf-ECOGPerformanceStatus",
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>ECOGPerformanceStatus Profile</b></p>\n  <p>The Eastern Cooperative Oncology Group (ECOG) Performance Status represents the patient&#039;s functional status and is used to determine their ability to tolerate therapies in serious illness, specifically for chemotherapy. Source: LOINC</p>\n  <p><b>Mapping Summary</b></p>\n  <p><pre>obf.ECOGPerformanceStatus maps to Observation:\n  Language maps to language\n  ImplicitRules maps to implicitRules\n  Metadata.VersionId maps to meta.versionId\n  Metadata.SourceSystem maps to meta.source\n  Metadata.Profile maps to meta.profile\n  Metadata.LastUpdated maps to meta.lastUpdated\n  Metadata.SecurityLabel maps to meta.security\n  Metadata.Tag maps to meta.tag\n  Narrative maps to text\n  Identifier maps to identifier\n  ObservationBasedOn maps to basedOn\n  ObservationPartOf maps to partOf\n  Status maps to status\n  Category maps to category\n  Code maps to code\n  ObservationSubjectOfRecord maps to subject\n  FocalSubject maps to focus\n  CareContext maps to encounter\n  RelevantTime maps to effective[x] // Add Types Timing, instant\n  StatementDateTime maps to issued\n  Performer maps to performer // Added Target Types PractitionerRole, CareTeam\n  DataValue maps to value[x] // Add Type integer, remove Type Attachment\n  DataAbsentReason maps to dataAbsentReason\n  Interpretation maps to interpretation\n  Annotation maps to note\n  BodyLocation.Code maps to bodySite\n  BodyLocation.Laterality maps to bodySite.extension\n  BodyLocation.Orientation maps to bodySite.extension\n  BodyLocation.RelationToLandmark maps to bodySite.extension\n  Method maps to method\n  Specimen maps to specimen\n  Device maps to device\n  ReferenceRange maps to referenceRange\n  ReferenceRange.LowerBound maps to referenceRange.low\n  ReferenceRange.UpperBound maps to referenceRange.high\n  ReferenceRange.Type maps to referenceRange.type\n  ReferenceRange.ApplicableSubpopulation maps to referenceRange.appliesTo\n  ReferenceRange.ApplicableAgeRange maps to referenceRange.age\n  ReferenceRange.Text maps to referenceRange.text\n  PanelMembers.Observation maps to hasMember (slice on = reference.resolve(); slice on type = profile; slice strategy = includes)\n  ObservationDerivedFrom maps to derivedFrom\n  Components.ObservationComponent maps to component (slice on = code.coding.code; slice strategy = includes)\n  Components.ObservationComponent.Code maps to component.code\n  Components.ObservationComponent.DataValue maps to component.value[x]\n  Components.ObservationComponent.DataAbsentReason maps to component.dataAbsentReason\n  Components.ObservationComponent.Interpretation maps to component.interpretation\n  Components.ObservationComponent.ReferenceRange maps to component.referenceRange\n  Components.ObservationComponent.ReferenceRange.LowerBound maps to component.referenceRange.low\n  Components.ObservationComponent.ReferenceRange.UpperBound maps to component.referenceRange.high\n  Components.ObservationComponent.ReferenceRange.Type maps to component.referenceRange.type\n  Components.ObservationComponent.ReferenceRange.ApplicableSubpopulation maps to component.referenceRange.appliesTo\n  Components.ObservationComponent.ReferenceRange.ApplicableAgeRange maps to component.referenceRange.age\n  Components.ObservationComponent.ReferenceRange.Text maps to component.referenceRange.text\n</pre></p>\n</div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>ECOGPerformanceStatus Profile</b></p>\n  <p>The Eastern Cooperative Oncology Group (ECOG) Performance Status represents the patient&#039;s functional status and is used to determine their ability to tolerate therapies in serious illness, specifically for chemotherapy. Source: LOINC</p>\n  <p><b>Mapping Summary</b></p>\n  <p><pre>obf.ECOGPerformanceStatus maps to Observation:\n  Language maps to language\n  ImplicitRules maps to implicitRules\n  Metadata.VersionId maps to meta.versionId\n  Metadata.SourceSystem maps to meta.source\n  Metadata.Profile maps to meta.profile\n  Metadata.LastUpdated maps to meta.lastUpdated\n  Metadata.SecurityLabel maps to meta.security\n  Metadata.Tag maps to meta.tag\n  Narrative maps to text\n  Identifier maps to identifier\n  ProceduralObservationBasedOn maps to basedOn\n  ProceduralObservationPartOf maps to partOf\n  Status maps to status\n  Category maps to category\n  Code maps to code\n  ObservationSubjectOfRecord maps to subject\n  FocalSubject maps to focus\n  CareContext maps to encounter\n  RelevantTime maps to effective[x] // Add Types Timing, instant\n  StatementDateTime maps to issued\n  Performer maps to performer // Added Target Types PractitionerRole, CareTeam\n  DataValue maps to value[x] // Add Type integer, remove Type Attachment\n  DataAbsentReason maps to dataAbsentReason\n  Interpretation maps to interpretation\n  Annotation maps to note\n  BodyLocation.Code maps to bodySite\n  BodyLocation.Laterality maps to bodySite.extension\n  BodyLocation.AnatomicalOrientation maps to bodySite.extension\n  BodyLocation.RelationToLandmark maps to bodySite.extension\n  Method maps to method\n  Specimen maps to specimen\n  Device maps to device\n  ReferenceRange maps to referenceRange\n  ReferenceRange.LowerBound maps to referenceRange.low\n  ReferenceRange.UpperBound maps to referenceRange.high\n  ReferenceRange.Type maps to referenceRange.type\n  ReferenceRange.ApplicableSubpopulation maps to referenceRange.appliesTo\n  ReferenceRange.ApplicableAgeRange maps to referenceRange.age\n  ReferenceRange.Text maps to referenceRange.text\n  PanelMembers.Observation maps to hasMember (slice on = reference.resolve(); slice on type = profile; slice strategy = includes)\n  ObservationDerivedFrom maps to derivedFrom\n  Components.ObservationComponent maps to component (slice on = code.coding.code; slice strategy = includes)\n  Components.ObservationComponent.Code maps to component.code\n  Components.ObservationComponent.DataValue maps to component.value[x]\n  Components.ObservationComponent.DataAbsentReason maps to component.dataAbsentReason\n  Components.ObservationComponent.Interpretation maps to component.interpretation\n  Components.ObservationComponent.ReferenceRange maps to component.referenceRange\n  Components.ObservationComponent.ReferenceRange.LowerBound maps to component.referenceRange.low\n  Components.ObservationComponent.ReferenceRange.UpperBound maps to component.referenceRange.high\n  Components.ObservationComponent.ReferenceRange.Type maps to component.referenceRange.type\n  Components.ObservationComponent.ReferenceRange.ApplicableSubpopulation maps to component.referenceRange.appliesTo\n  Components.ObservationComponent.ReferenceRange.ApplicableAgeRange maps to component.referenceRange.age\n  Components.ObservationComponent.ReferenceRange.Text maps to component.referenceRange.text\n</pre></p>\n</div>"
   },
   "url": "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-ECOGPerformanceStatus",
   "name": "ECOGPerformanceStatus",
   "status": "active",
-  "date": "2019-07-03",
+  "date": "2019-07-18",
   "publisher": "The MITRE Corporation",
   "contact": [
     {
@@ -446,8 +446,8 @@
       {
         "id": "Observation:obf-ECOGPerformanceStatus.basedOn",
         "path": "Observation.basedOn",
-        "short": "Fulfills plan, proposal or order",
-        "definition": "A plan, proposal or order that is fulfilled in whole or in part by this event.  For example, a MedicationRequest may require a patient to have laboratory test performed before  it is dispensed.",
+        "short": "The plan, proposal or order that is fulfilled in whole or in part by this event",
+        "definition": "The plan, proposal or order that is fulfilled in whole or in part by this event. For example, a MedicationRequest may require a patient to have laboratory test performed before it is dispensed.",
         "requirements": "Allows tracing of authorization for the event and tracking whether proposals/recommendations were acted upon.",
         "alias": [
           "Fulfills"
@@ -463,7 +463,6 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/StructureDefinition/MedicationRequest",
               "http://hl7.org/fhir/StructureDefinition/ServiceRequest"
             ]
           }
@@ -488,8 +487,8 @@
       {
         "id": "Observation:obf-ECOGPerformanceStatus.partOf",
         "path": "Observation.partOf",
-        "short": "A larger event of which this particular Observation is a component or step. For example, an observation as part of a procedure.",
-        "definition": "A larger event of which this particular Observation is a component or step. For example, an observation as part of a procedure.",
+        "short": "The larger procedure that this particular observation is a component or step",
+        "definition": "The larger procedure that this particular observation is a component or step.",
         "comment": "To link an Observation to an Encounter use `encounter`.  See the  [Notes](observation.html#obsgrouping) below for guidance on referencing another Observation.",
         "alias": [
           "Container"
@@ -505,8 +504,6 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/StructureDefinition/MedicationAdministration",
-              "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-MedicationStatement",
               "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-Procedure"
             ]
           }
@@ -2903,11 +2900,12 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/StructureDefinition/MedicationRequest",
               "http://hl7.org/fhir/StructureDefinition/ServiceRequest"
             ]
           }
-        ]
+        ],
+        "short": "The plan, proposal or order that is fulfilled in whole or in part by this event",
+        "definition": "The plan, proposal or order that is fulfilled in whole or in part by this event. For example, a MedicationRequest may require a patient to have laboratory test performed before it is dispensed."
       },
       {
         "id": "Observation:obf-ECOGPerformanceStatus.partOf",
@@ -2916,14 +2914,12 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/StructureDefinition/MedicationAdministration",
-              "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-MedicationStatement",
               "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-Procedure"
             ]
           }
         ],
-        "short": "A larger event of which this particular Observation is a component or step. For example, an observation as part of a procedure.",
-        "definition": "A larger event of which this particular Observation is a component or step. For example, an observation as part of a procedure."
+        "short": "The larger procedure that this particular observation is a component or step",
+        "definition": "The larger procedure that this particular observation is a component or step."
       },
       {
         "id": "Observation:obf-ECOGPerformanceStatus.category",
@@ -3239,11 +3235,5 @@
       }
     ]
   },
-  "identifier": [
-    {
-      "system": "http://hl7.org/fhir/us/mcode",
-      "value": "obf.ECOGPerformanceStatus"
-    }
-  ],
   "title": "obf-ECOGPerformanceStatus"
 }

@@ -6,12 +6,6 @@
     "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n<p><b>EquivalentUnitsVS-per-100-WBC ValueSet</b></p>\n<p>Units equivalent to /100{WBCs}</p>\n</div>"
   },
   "url": "http://hl7.org/fhir/us/mcode/ValueSet/obf-lab-EquivalentUnitsVS-per-100-WBC",
-  "identifier": [
-    {
-      "system": "http://hl7.org/fhir/us/mcode",
-      "value": "obf.lab.EquivalentUnitsVS-per-100-WBC"
-    }
-  ],
   "name": "EquivalentUnitsVS_per_100_WBC",
   "title": "EquivalentUnitsVS-per-100-WBC",
   "status": "draft",
@@ -26,7 +20,7 @@
       ]
     }
   ],
-  "date": "2019-07-03",
+  "date": "2019-07-18",
   "description": "Units equivalent to /100{WBCs}",
   "compose": {
     "include": [

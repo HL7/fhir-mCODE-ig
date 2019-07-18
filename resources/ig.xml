@@ -148,6 +148,27 @@
       <resource>
           <exampleBoolean value="false" />
           <reference>
+            <reference value="StructureDefinition/vital-BloodPressure" />
+          </reference>
+          <name value="vital-BloodPressure" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/vital-BodyHeight" />
+          </reference>
+          <name value="vital-BodyHeight" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/vital-BodyWeight" />
+          </reference>
+          <name value="vital-BodyWeight" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
             <reference value="StructureDefinition/obf-lab-CBCWAutoDifferentialPanel" />
           </reference>
           <name value="obf-lab-CBCWAutoDifferentialPanel" />
@@ -470,13 +491,6 @@
       <resource>
           <exampleBoolean value="false" />
           <reference>
-            <reference value="StructureDefinition/obf-HeadlessLaboratoryPanel" />
-          </reference>
-          <name value="obf-HeadlessLaboratoryPanel" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
             <reference value="StructureDefinition/obf-lab-HematocritVFrPtBldQnAutoCntLabObs" />
           </reference>
           <name value="obf-lab-HematocritVFrPtBldQnAutoCntLabObs" />
@@ -512,9 +526,9 @@
       <resource>
           <exampleBoolean value="false" />
           <reference>
-            <reference value="StructureDefinition/obf-LaboratoryPanel" />
+            <reference value="StructureDefinition/obf-LaboratoryReport" />
           </reference>
-          <name value="obf-LaboratoryPanel" />
+          <name value="obf-LaboratoryReport" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
@@ -820,6 +834,13 @@
       <resource>
           <exampleBoolean value="false" />
           <reference>
+            <reference value="StructureDefinition/obf-QuantitativeNonLaboratoryObservation" />
+          </reference>
+          <name value="obf-QuantitativeNonLaboratoryObservation" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
             <reference value="StructureDefinition/obf-lab-QuantityWithRequiredUnits" />
           </reference>
           <name value="obf-lab-QuantityWithRequiredUnits" />
@@ -1002,30 +1023,9 @@
       <resource>
           <exampleBoolean value="false" />
           <reference>
-            <reference value="StructureDefinition/obf-Additive-extension" />
+            <reference value="StructureDefinition/vital-VitalSign" />
           </reference>
-          <name value="obf-Additive" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
-            <reference value="StructureDefinition/shr-core-Address-extension" />
-          </reference>
-          <name value="shr-core-Address" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
-            <reference value="StructureDefinition/obf-AdministrativeGender-extension" />
-          </reference>
-          <name value="obf-AdministrativeGender" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
-            <reference value="StructureDefinition/obf-Alias-extension" />
-          </reference>
-          <name value="obf-Alias" />
+          <name value="vital-VitalSign" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
@@ -1033,6 +1033,13 @@
             <reference value="StructureDefinition/shr-core-AnatomicalDirection-extension" />
           </reference>
           <name value="shr-core-AnatomicalDirection" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/shr-core-AnatomicalOrientation-extension" />
+          </reference>
+          <name value="shr-core-AnatomicalOrientation" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
@@ -1058,16 +1065,23 @@
       <resource>
           <exampleBoolean value="false" />
           <reference>
-            <reference value="StructureDefinition/obf-AppointmentReasonReference-extension" />
+            <reference value="StructureDefinition/obf-BasedOn-extension" />
           </reference>
-          <name value="obf-AppointmentReasonReference" />
+          <name value="obf-BasedOn" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
           <reference>
-            <reference value="StructureDefinition/obf-BasedOn-extension" />
+            <reference value="StructureDefinition/vital-BloodPressureCuffSize-extension" />
           </reference>
-          <name value="obf-BasedOn" />
+          <name value="vital-BloodPressureCuffSize" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/vital-BodyPosition-extension" />
+          </reference>
+          <name value="vital-BodyPosition" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
@@ -1100,13 +1114,6 @@
       <resource>
           <exampleBoolean value="false" />
           <reference>
-            <reference value="StructureDefinition/shr-core-CommentOrDescription-extension" />
-          </reference>
-          <name value="shr-core-CommentOrDescription" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
             <reference value="StructureDefinition/shr-core-Comparator-extension" />
           </reference>
           <name value="shr-core-Comparator" />
@@ -1121,27 +1128,6 @@
       <resource>
           <exampleBoolean value="false" />
           <reference>
-            <reference value="StructureDefinition/obf-ContactPerson-extension" />
-          </reference>
-          <name value="obf-ContactPerson" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
-            <reference value="StructureDefinition/shr-core-ContactPoint-extension" />
-          </reference>
-          <name value="shr-core-ContactPoint" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
-            <reference value="StructureDefinition/obf-DateOfDiagnosis-extension" />
-          </reference>
-          <name value="obf-DateOfDiagnosis" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
             <reference value="StructureDefinition/obf-DiagnosisCode-extension" />
           </reference>
           <name value="obf-DiagnosisCode" />
@@ -1152,13 +1138,6 @@
             <reference value="StructureDefinition/obf-Dosage-extension" />
           </reference>
           <name value="obf-Dosage" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
-            <reference value="StructureDefinition/obf-DoseSequenceNumber-extension" />
-          </reference>
-          <name value="obf-DoseSequenceNumber" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
@@ -1198,20 +1177,6 @@
       <resource>
           <exampleBoolean value="false" />
           <reference>
-            <reference value="StructureDefinition/onco-core-GeneStudied-extension" />
-          </reference>
-          <name value="onco-core-GeneStudied" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
-            <reference value="StructureDefinition/obf-HandlingRisk-extension" />
-          </reference>
-          <name value="obf-HandlingRisk" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
             <reference value="StructureDefinition/onco-core-HistologyMorphologyBehavior-extension" />
           </reference>
           <name value="onco-core-HistologyMorphologyBehavior" />
@@ -1219,37 +1184,9 @@
       <resource>
           <exampleBoolean value="false" />
           <reference>
-            <reference value="StructureDefinition/shr-core-HumanName-extension" />
-          </reference>
-          <name value="shr-core-HumanName" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
             <reference value="StructureDefinition/shr-core-Identifier-extension" />
           </reference>
           <name value="shr-core-Identifier" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
-            <reference value="StructureDefinition/obf-ImplicitRules-extension" />
-          </reference>
-          <name value="obf-ImplicitRules" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
-            <reference value="StructureDefinition/obf-Indication-extension" />
-          </reference>
-          <name value="obf-Indication" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
-            <reference value="StructureDefinition/obf-InstructionCode-extension" />
-          </reference>
-          <name value="obf-InstructionCode" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
@@ -1289,20 +1226,6 @@
       <resource>
           <exampleBoolean value="false" />
           <reference>
-            <reference value="StructureDefinition/shr-core-Language-extension" />
-          </reference>
-          <name value="shr-core-Language" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
-            <reference value="StructureDefinition/obf-LastUpdated-extension" />
-          </reference>
-          <name value="obf-LastUpdated" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
             <reference value="StructureDefinition/shr-core-Laterality-extension" />
           </reference>
           <name value="shr-core-Laterality" />
@@ -1324,37 +1247,9 @@
       <resource>
           <exampleBoolean value="false" />
           <reference>
-            <reference value="StructureDefinition/obf-Metadata-extension" />
-          </reference>
-          <name value="obf-Metadata" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
             <reference value="StructureDefinition/obf-Method-extension" />
           </reference>
           <name value="obf-Method" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
-            <reference value="StructureDefinition/obf-Narrative-extension" />
-          </reference>
-          <name value="obf-Narrative" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
-            <reference value="StructureDefinition/obf-NarrativeQualifier-extension" />
-          </reference>
-          <name value="obf-NarrativeQualifier" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
-            <reference value="StructureDefinition/obf-NarrativeText-extension" />
-          </reference>
-          <name value="obf-NarrativeText" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
@@ -1383,13 +1278,6 @@
             <reference value="StructureDefinition/obf-Organization-extension" />
           </reference>
           <name value="obf-Organization" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
-            <reference value="StructureDefinition/shr-core-Orientation-extension" />
-          </reference>
-          <name value="shr-core-Orientation" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
@@ -1429,9 +1317,9 @@
       <resource>
           <exampleBoolean value="false" />
           <reference>
-            <reference value="StructureDefinition/obf-PatientInstruction-extension" />
+            <reference value="StructureDefinition/vital-PreconditionCode-extension" />
           </reference>
-          <name value="obf-PatientInstruction" />
+          <name value="vital-PreconditionCode" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
@@ -1453,13 +1341,6 @@
             <reference value="StructureDefinition/shr-core-PriorityRank-extension" />
           </reference>
           <name value="shr-core-PriorityRank" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
-            <reference value="StructureDefinition/obf-Profile-extension" />
-          </reference>
-          <name value="obf-Profile" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
@@ -1520,13 +1401,6 @@
       <resource>
           <exampleBoolean value="false" />
           <reference>
-            <reference value="StructureDefinition/shr-core-Relationship-extension" />
-          </reference>
-          <name value="shr-core-Relationship" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
             <reference value="StructureDefinition/obf-RequestIntent-extension" />
           </reference>
           <name value="obf-RequestIntent" />
@@ -1537,34 +1411,6 @@
             <reference value="StructureDefinition/obf-Requester-extension" />
           </reference>
           <name value="obf-Requester" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
-            <reference value="StructureDefinition/obf-SecurityLabel-extension" />
-          </reference>
-          <name value="obf-SecurityLabel" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
-            <reference value="StructureDefinition/obf-SourceSystem-extension" />
-          </reference>
-          <name value="obf-SourceSystem" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
-            <reference value="StructureDefinition/obf-SpecialHandling-extension" />
-          </reference>
-          <name value="obf-SpecialHandling" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
-            <reference value="StructureDefinition/obf-SpecimenTreatment-extension" />
-          </reference>
-          <name value="obf-SpecimenTreatment" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
@@ -1600,13 +1446,6 @@
             <reference value="StructureDefinition/obf-SubjectOfRecord-extension" />
           </reference>
           <name value="obf-SubjectOfRecord" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
-            <reference value="StructureDefinition/obf-Tag-extension" />
-          </reference>
-          <name value="obf-Tag" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
@@ -1695,13 +1534,6 @@
       <resource>
           <exampleBoolean value="false" />
           <reference>
-            <reference value="StructureDefinition/obf-VersionId-extension" />
-          </reference>
-          <name value="obf-VersionId" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
             <reference value="ValueSet/obf-AbnormalBodyStructureVS" />
           </reference>
           <name value="AbnormalBodyStructureVS" />
@@ -1716,9 +1548,86 @@
       <resource>
           <exampleBoolean value="false" />
           <reference>
+            <reference value="ValueSet/shr-core-AnatomicalOrientationVS" />
+          </reference>
+          <name value="AnatomicalOrientationVS" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="ValueSet/vital-BloodPressureBodyLocationVS" />
+          </reference>
+          <name value="BloodPressureBodyLocationVS" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="ValueSet/vital-BloodPressureCuffSizeVS" />
+          </reference>
+          <name value="BloodPressureCuffSizeVS" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="ValueSet/vital-BloodPressureMethodVS" />
+          </reference>
+          <name value="BloodPressureMethodVS" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="ValueSet/vital-BodyHeightLengthMethodVS" />
+          </reference>
+          <name value="BodyHeightLengthMethodVS" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="ValueSet/vital-BodyHeightLengthUnitsVS" />
+          </reference>
+          <name value="BodyHeightLengthUnitsVS" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="ValueSet/vital-BodyHeightPreconditionVS" />
+          </reference>
+          <name value="BodyHeightPreconditionVS" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
             <reference value="ValueSet/shr-core-BodyLocationVS" />
           </reference>
           <name value="BodyLocationVS" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="ValueSet/vital-BodyPositionVS" />
+          </reference>
+          <name value="BodyPositionVS" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="ValueSet/vital-BodyWeightMethodVS" />
+          </reference>
+          <name value="BodyWeightMethodVS" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="ValueSet/vital-BodyWeightPreconditionVS" />
+          </reference>
+          <name value="BodyWeightPreconditionVS" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="ValueSet/vital-BodyWeightUnitsVS" />
+          </reference>
+          <name value="BodyWeightUnitsVS" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
@@ -1758,9 +1667,23 @@
       <resource>
           <exampleBoolean value="false" />
           <reference>
+            <reference value="ValueSet/vital-CardiopulmonaryPreconditionVS" />
+          </reference>
+          <name value="CardiopulmonaryPreconditionVS" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
             <reference value="ValueSet/obf-lab-ChoiceOfUnitsVS-g-per-dL" />
           </reference>
           <name value="ChoiceOfUnitsVS-g-per-dL" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="ValueSet/onco-core-ClinVarVS" />
+          </reference>
+          <name value="ClinVarVS" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
@@ -1856,6 +1779,13 @@
       <resource>
           <exampleBoolean value="false" />
           <reference>
+            <reference value="ValueSet/onco-core-GeneticTestVS" />
+          </reference>
+          <name value="GeneticTestVS" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
             <reference value="ValueSet/onco-core-GenomicSourceClassVS" />
           </reference>
           <name value="GenomicSourceClassVS" />
@@ -1880,20 +1810,6 @@
             <reference value="ValueSet/shr-core-LandmarkTypeVS" />
           </reference>
           <name value="LandmarkTypeVS" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
-            <reference value="ValueSet/shr-core-LateralityVS" />
-          </reference>
-          <name value="LateralityVS" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
-            <reference value="ValueSet/shr-core-OrientationVS" />
-          </reference>
-          <name value="OrientationVS" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
@@ -2059,58 +1975,58 @@
       <resource>
           <exampleBoolean value="true" />
           <reference>
-            <reference value="Observation/mCODECancerStageGroupExample01r4" />
+            <reference value="Observation/mCODECancerStageGroupExample01" />
           </reference>
-          <name value="Example: mCODECancerStageGroupExample01r4" />
+          <name value="Example: mCODECancerStageGroupExample01" />
       </resource>
       <resource>
           <exampleBoolean value="true" />
           <reference>
-            <reference value="Observation/mCODEGeneticVariantFoundExample01r4" />
+            <reference value="Observation/mCODEGeneticVariantFoundExample01" />
           </reference>
-          <name value="Example: mCODEGeneticVariantFoundExample01r4" />
+          <name value="Example: mCODEGeneticVariantFoundExample01" />
       </resource>
       <resource>
           <exampleBoolean value="true" />
           <reference>
-            <reference value="Observation/mCODEGeneticVariantTestedExample01r4" />
+            <reference value="Observation/mCODEGeneticVariantTestedExample01" />
           </reference>
-          <name value="Example: mCODEGeneticVariantTestedExample01r4" />
+          <name value="Example: mCODEGeneticVariantTestedExample01" />
       </resource>
       <resource>
           <exampleBoolean value="true" />
           <reference>
-            <reference value="DiagnosticReport/mCODEGenomicsReportExample01r4" />
+            <reference value="DiagnosticReport/mCODEGenomicsReportExample01" />
           </reference>
-          <name value="Example: mCODEGenomicsReportExample01r4" />
+          <name value="Example: mCODEGenomicsReportExample01" />
       </resource>
       <resource>
           <exampleBoolean value="true" />
           <reference>
-            <reference value="Organization/mCODEOrganizationExampleFM1r4" />
+            <reference value="Organization/mCODEOrganizationExampleFM1" />
           </reference>
-          <name value="Example: mCODEOrganizationExampleFM1r4" />
+          <name value="Example: mCODEOrganizationExampleFM1" />
       </resource>
       <resource>
           <exampleBoolean value="true" />
           <reference>
-            <reference value="Patient/mCODEPatientExample01r4" />
+            <reference value="Patient/mCODEPatientExample01" />
           </reference>
-          <name value="Example: mCODEPatientExample01r4" />
+          <name value="Example: mCODEPatientExample01" />
       </resource>
       <resource>
           <exampleBoolean value="true" />
           <reference>
-            <reference value="Practitioner/mCODEPractitionerExample01r4" />
+            <reference value="Practitioner/mCODEPractitionerExample01" />
           </reference>
-          <name value="Example: mCODEPractitionerExample01r4" />
+          <name value="Example: mCODEPractitionerExample01" />
       </resource>
       <resource>
           <exampleBoolean value="true" />
           <reference>
-            <reference value="Condition/mCODEPrimaryCancerConditionExample01r4" />
+            <reference value="Condition/mCODEPrimaryCancerConditionExample01" />
           </reference>
-          <name value="Example: mCODEPrimaryCancerConditionExample01r4" />
+          <name value="Example: mCODEPrimaryCancerConditionExample01" />
       </resource>
       <resource>
           <exampleBoolean value="true" />

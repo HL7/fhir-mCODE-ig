@@ -6,12 +6,6 @@
     "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n<p><b>SurgicalBodyLocationRoleVS ValueSet</b></p>\n<p>Roles of body site in surgical procedures. Value set includes codes from the SNOMED hierarchy descending from 363704007 &#039;Procedure site&#039; and descending from 272737002 &#039;Site of (attribute)&#039;.</p>\n</div>"
   },
   "url": "http://hl7.org/fhir/us/mcode/ValueSet/obf-SurgicalBodyLocationRoleVS",
-  "identifier": [
-    {
-      "system": "http://hl7.org/fhir/us/mcode",
-      "value": "obf.SurgicalBodyLocationRoleVS"
-    }
-  ],
   "name": "SurgicalBodyLocationRoleVS",
   "title": "SurgicalBodyLocationRoleVS",
   "status": "draft",
@@ -26,7 +20,7 @@
       ]
     }
   ],
-  "date": "2019-07-03",
+  "date": "2019-07-18",
   "description": "Roles of body site in surgical procedures. Value set includes codes from the SNOMED hierarchy descending from 363704007 'Procedure site' and descending from 272737002 'Site of (attribute)'.",
   "compose": {
     "include": [

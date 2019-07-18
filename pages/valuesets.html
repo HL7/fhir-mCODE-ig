@@ -36,6 +36,38 @@
   </thead>
   <tbody>
     <tr>
+          <td><a href="ValueSet-shr-core-AnatomicalOrientationVS.html">AnatomicalOrientationVS</a></td>
+          <td>{% capture md_text %}Terms that specify anatomical orientation. The orientation value set is part of BodyLocation, a flexible structure that allows the location to be determined by a single code, or a code plus laterality and/or orientation. The body location can also be specified in relation to one or more body landmarks. SNOMED CT is used in all cases.
+
+* Code only: The code should include (precoordinate) laterality and/orientation to the degree necessary to completely specify the body location.
+* Code plus laterality and/or orientation: The basic code augmented by codes specifying the body side and/or anatomical orientation.
+* Relation to landmark: The location relative to a landmark is specified by:
+1. Establishing the location and type of landmark using a body site code and optional laterality/orientation, and
+2. Specifying the direction and distance from the landmark to the body location.
+
+Note that BodyLocation is a data type (a reusable structure), not a stand-alone entity. The concept is similar to how a postal address can apply to a person, location, or organization. This contrasts with FHIR's stand-alone BodySite (aka BodyStructure in r4) which 'is not ... intended for describing the type of anatomical location but rather a specific body site on a specific patient' (FHIR 3.5).{% endcapture %}{{ md_text | markdownify }}</td>
+        </tr>
+        <tr>
+          <td><a href="ValueSet-vital-BloodPressureBodyLocationVS.html">BloodPressureBodyLocationVS</a></td>
+          <td>{% capture md_text %}Body locations for blood pressure measurement{% endcapture %}{{ md_text | markdownify }}</td>
+        </tr>
+        <tr>
+          <td><a href="ValueSet-vital-BloodPressureCuffSizeVS.html">BloodPressureCuffSizeVS</a></td>
+          <td>{% capture md_text %}Sizes of blood pressure cuffs.{% endcapture %}{{ md_text | markdownify }}</td>
+        </tr>
+        <tr>
+          <td><a href="ValueSet-vital-BloodPressureMethodVS.html">BloodPressureMethodVS</a></td>
+          <td>{% capture md_text %}Method used to determine blood pressure.{% endcapture %}{{ md_text | markdownify }}</td>
+        </tr>
+        <tr>
+          <td><a href="ValueSet-vital-BodyHeightLengthMethodVS.html">BodyHeightLengthMethodVS</a></td>
+          <td>{% capture md_text %}Method used to determine body height or length.{% endcapture %}{{ md_text | markdownify }}</td>
+        </tr>
+        <tr>
+          <td><a href="ValueSet-vital-BodyHeightPreconditionVS.html">BodyHeightPreconditionVS</a></td>
+          <td>{% capture md_text %}Circumstance for measuring body height.{% endcapture %}{{ md_text | markdownify }}</td>
+        </tr>
+        <tr>
           <td><a href="ValueSet-shr-core-BodyLocationVS.html">BodyLocationVS</a></td>
           <td>{% capture md_text %}Codes that describe normal and pathologic anatomic systems, regions, cavities, and spaces. The code set includes codes from the SNOMED CT hierarchy descending from 123037004 'Body Structure'.
 
@@ -44,10 +76,22 @@ Body location is a flexible structure that allows the location to be determined 
 * Code only: The code should include (precoordinate) laterality and/orientation to the degree necessary to completely specify the body location.
 * Code plus laterality and/or orientation: The basic code augmented by codes specifying the body side and/or anatomical orientation.
 * Relation to landmark: The location relative to a landmark is specified by:
-- Establishing the location and type of landmark using a body site code and optional laterality/orientation, and
-- Specifying the direction and distance from the landmark to the body location.
+1. Establishing the location and type of landmark using a body site code and optional laterality/orientation, and
+2. Specifying the direction and distance from the landmark to the body location.
 
 Note that BodyLocation is a data type (a reusable structure), not a stand-alone entity. The concept is similar to how a postal address can apply to a person, location, or organization. This contrasts with FHIR's stand-alone BodySite (aka BodyStructure in r4) which 'is not ... intended for describing the type of anatomical location but rather a specific body site on a specific patient' (FHIR 3.5).{% endcapture %}{{ md_text | markdownify }}</td>
+        </tr>
+        <tr>
+          <td><a href="ValueSet-vital-BodyPositionVS.html">BodyPositionVS</a></td>
+          <td>{% capture md_text %}Human body positions associated with actions or observations.{% endcapture %}{{ md_text | markdownify }}</td>
+        </tr>
+        <tr>
+          <td><a href="ValueSet-vital-BodyWeightMethodVS.html">BodyWeightMethodVS</a></td>
+          <td>{% capture md_text %}Method used to determine body weight.{% endcapture %}{{ md_text | markdownify }}</td>
+        </tr>
+        <tr>
+          <td><a href="ValueSet-vital-BodyWeightPreconditionVS.html">BodyWeightPreconditionVS</a></td>
+          <td>{% capture md_text %}Circumstances for body weight measurement. The choices are limited by availability of SNOMED terms, and could contain terms like pre- and post-dialysis, mother ante- and post-delivery, etc.{% endcapture %}{{ md_text | markdownify }}</td>
         </tr>
         <tr>
           <td><a href="ValueSet-onco-core-CancerBodyLocationVS.html">CancerBodyLocationVS</a></td>
@@ -68,6 +112,14 @@ Note that BodyLocation is a data type (a reusable structure), not a stand-alone 
         <tr>
           <td><a href="ValueSet-onco-core-CancerStagingSystemVS.html">CancerStagingSystemVS</a></td>
           <td>{% capture md_text %}System used for staging. Because SNOMED CT does not currently have a code representing AJCC Version 8, specify the exact text 'AJCC Version 8' in the text sub-field of the code structure, and omit the code.{% endcapture %}{{ md_text | markdownify }}</td>
+        </tr>
+        <tr>
+          <td><a href="ValueSet-vital-CardiopulmonaryPreconditionVS.html">CardiopulmonaryPreconditionVS</a></td>
+          <td>{% capture md_text %}Circumstances for cardiopulmonary measurements.{% endcapture %}{{ md_text | markdownify }}</td>
+        </tr>
+        <tr>
+          <td><a href="ValueSet-onco-core-ClinVarVS.html">ClinVarVS</a></td>
+          <td>{% capture md_text %}Value set of human genetic variants, drawn from [ClinVar](https://www.ncbi.nlm.nih.gov/clinvar/).{% endcapture %}{{ md_text | markdownify }}</td>
         </tr>
         <tr>
           <td><a href="ValueSet-obf-ComorbidConditionVS.html">ComorbidConditionVS</a></td>
@@ -110,6 +162,10 @@ NCIT#C116151       'Single Nucleotide Polymorphism Array'
 NCIT#C16356        'Southern Blotting'{% endcapture %}{{ md_text | markdownify }}</td>
         </tr>
         <tr>
+          <td><a href="ValueSet-onco-core-GeneticTestVS.html">GeneticTestVS</a></td>
+          <td>{% capture md_text %}Value set containing codes representing genetic tests. Currently the best source of codes is the [Genetic Test Registry](http://www.ncbi.nlm.nih.gov/gtr). The user should be aware that the GTR cannot be a sole reliable source since the test data is voluntarily updated and there is no overarching data steward. This value set contains all codes from GTR.{% endcapture %}{{ md_text | markdownify }}</td>
+        </tr>
+        <tr>
           <td><a href="ValueSet-onco-core-GenomicSourceClassVS.html">GenomicSourceClassVS</a></td>
           <td>{% capture md_text %}The genomic class of the specimen being analyzed, for example, germline for inherited genome, somatic for cancer genome, and prenatal for fetal genome.{% endcapture %}{{ md_text | markdownify }}</td>
         </tr>
@@ -122,30 +178,6 @@ NCIT#C16356        'Southern Blotting'{% endcapture %}{{ md_text | markdownify }
           <td>{% capture md_text %}Value set for Karnofsky Performance Status, with codes for each decade from 100 to 0. Higher scores are associated with better functional status, with 100 representing no symptoms or evidence of disease, and 0 representing death. This value set corresponds to LOINC list LL4986-7{% endcapture %}{{ md_text | markdownify }}</td>
         </tr>
         <tr>
-          <td><a href="ValueSet-shr-core-LateralityVS.html">LateralityVS</a></td>
-          <td>{% capture md_text %}Terms that specify the side of the body. The laterality value set is part of BodyLocation, a flexible structure that allows the location to be determined by a single code, or a code plus laterality and/or orientation. The body location can also be specified in relation to one or more body landmarks. SNOMED CT is used in all cases.
-
-+ Code only: The code should include (precoordinate) laterality and/orientation to the degree necessary to completely specify the body location.
-+ Code plus laterality and/or orientation: The basic code augmented by codes specifying the body side and/or anatomical orientation.
-+ Relation to landmark: The location relative to a landmark is specified by:
-- Establishing the location and type of landmark using a body site code and optional laterality/orientation, and
-- Specifying the direction and distance from the landmark to the body location.
-
-Note that BodyLocation is a data type (a reusable structure), not a stand-alone entity. The concept is similar to how a postal address can apply to a person, location, or organization. This contrasts with FHIR's stand-alone BodySite (aka BodyStructure in r4) which 'is not ... intended for describing the type of anatomical location but rather a specific body site on a specific patient' (FHIR 3.5).{% endcapture %}{{ md_text | markdownify }}</td>
-        </tr>
-        <tr>
-          <td><a href="ValueSet-shr-core-OrientationVS.html">OrientationVS</a></td>
-          <td>{% capture md_text %}Terms that specify anatomical orientation. The orientation value set is part of BodyLocation, a flexible structure that allows the location to be determined by a single code, or a code plus laterality and/or orientation. The body location can also be specified in relation to one or more body landmarks. SNOMED CT is used in all cases.
-
-+ Code only: The code should include (precoordinate) laterality and/orientation to the degree necessary to completely specify the body location.
-+ Code plus laterality and/or orientation: The basic code augmented by codes specifying the body side and/or anatomical orientation.
-+ Relation to landmark: The location relative to a landmark is specified by:
-- Establishing the location and type of landmark using a body site code and optional laterality/orientation, and
-- Specifying the direction and distance from the landmark to the body location.
-
-Note that BodyLocation is a data type (a reusable structure), not a stand-alone entity. The concept is similar to how a postal address can apply to a person, location, or organization. This contrasts with FHIR's stand-alone BodySite (aka BodyStructure in r4) which 'is not ... intended for describing the type of anatomical location but rather a specific body site on a specific patient' (FHIR 3.5).{% endcapture %}{{ md_text | markdownify }}</td>
-        </tr>
-        <tr>
           <td><a href="ValueSet-shr-core-PositiveNegativeVS.html">PositiveNegativeVS</a></td>
           <td>{% capture md_text %}Interpretation of a test result as positive, negative, equivocal, or indeterminate. Consolidates LOINC answer lists LL360-9, LL2329-2, LL2038-9, LL2021-5, LL2010-8, LL2009-0.{% endcapture %}{{ md_text | markdownify }}</td>
         </tr>
@@ -153,10 +185,15 @@ Note that BodyLocation is a data type (a reusable structure), not a stand-alone 
           <td><a href="ValueSet-onco-core-PrimaryCancerDisorderVS.html">PrimaryCancerDisorderVS</a></td>
           <td>{% capture md_text %}Types of primary malignant neoplastic disease, coded in  in SNOMED CT or ICD-10-CM.
 
-*SNOMED CT coding: Use a code from the disorder hierarchy under SNOMED CT 363346000 'Malignant neoplastic disease (disorder)' exluding codes descending from SNOMED CT 128462008 'Secondary malignant neoplastic disease (disorder)'. If body location is not precoordinated (i.e., implied by the code), the site of the primary tumor should be specified in the body site attribute.
-* ICD-10-CM coding: Use one of the codes given in this value set representing primary malignant neoplasms and neoplasms of uncertain or unspecified behavior.
+For SNOMED CT coding, use a code from the disorder hierarchy under SNOMED CT 363346000 'Malignant neoplastic disease (disorder)' excluding codes descending from SNOMED CT 128462008 'Secondary malignant neoplastic disease (disorder)'. If body location is not precoordinated (i.e., implied by the code), the site of the primary tumor should be specified in the body site attribute.
+
+For ICD-10-CM coding, use one of the codes given in this value set representing primary malignant neoplasms and neoplasms of uncertain or unspecified behavior.
 
 Note that ICD-O-3 specifies morphology and topography, not disorder. If ICD-O-3 is used, the primary cancer disorder code must be specifically be SNOMED-CT 363346000  'Malignant neoplastic disease (disorder)'. The ICD-O-3 morphology and topography codes should be entered in the HistologyMorphologyBehavior and body location fields, respectively.{% endcapture %}{{ md_text | markdownify }}</td>
+        </tr>
+        <tr>
+          <td><a href="ValueSet-obf-QuantitativeResultInterpretationVS.html">QuantitativeResultInterpretationVS</a></td>
+          <td>{% capture md_text %}Interpretations of abnormal quantitative results.{% endcapture %}{{ md_text | markdownify }}</td>
         </tr>
         <tr>
           <td><a href="ValueSet-obf-RadiationProcedureVS.html">RadiationProcedureVS</a></td>
@@ -248,6 +285,14 @@ FHIR implementation note: At the current time, profiles for the specific LOINC t
         <td>{% capture md_text %}The gender of a person used for administrative purposes.{% endcapture %}{{ md_text | markdownify }}</td>
       </tr>
       <tr>
+        <td><a href="http://hl7.org/fhir/ValueSet/ucum-bodylength">BodyLengthUnits</a></td>
+        <td>{% capture md_text %}UCUM units for recording body length measures such as height and head circumference{% endcapture %}{{ md_text | markdownify }}</td>
+      </tr>
+      <tr>
+        <td><a href="http://hl7.org/fhir/ValueSet/ucum-bodyweight">BodyWeightUnits</a></td>
+        <td>{% capture md_text %}UCUM units for recording Body Weight{% endcapture %}{{ md_text | markdownify }}</td>
+      </tr>
+      <tr>
         <td><a href="http://hl7.org/fhir/ValueSet/languages">CommonLanguages</a></td>
         <td>{% capture md_text %}This value set includes common codes from BCP-47 (http://tools.ietf.org/html/bcp47){% endcapture %}{{ md_text | markdownify }}</td>
       </tr>
@@ -284,6 +329,10 @@ FHIR implementation note: At the current time, profiles for the specific LOINC t
         <td>{% capture md_text %}The status of the diagnostic report.{% endcapture %}{{ md_text | markdownify }}</td>
       </tr>
       <tr>
+        <td><a href="http://hl7.org/fhir/ValueSet/diagnostic-service-sections">DiagnosticServiceSectionCodes</a></td>
+        <td>{% capture md_text %}This value set includes all the codes in HL7 V2 table 0074.{% endcapture %}{{ md_text | markdownify }}</td>
+      </tr>
+      <tr>
         <td><a href="http://hl7.org/fhir/ValueSet/event-status">EventStatus</a></td>
         <td>{% capture md_text %}Codes identifying the lifecycle stage of an event.{% endcapture %}{{ md_text | markdownify }}</td>
       </tr>
@@ -298,6 +347,10 @@ FHIR implementation note: At the current time, profiles for the specific LOINC t
       <tr>
         <td><a href="http://www.hl7.org/fhir/us/core/ValueSet-simple-language.html">LanguageCodesWithLanguageAndOptionallyARegionModifier</a></td>
         <td>{% capture md_text %}This value set includes codes from [BCP-47](http://tools.ietf.org/html/bcp47). This value set matches the ONC 2015 Edition LanguageCommunication data element value set within C-CDA to use a 2 character language code if one exists,   and a 3 character code if a 2 character code does not exist. It points back to [RFC 5646](https://tools.ietf.org/html/rfc5646), however only the language codes are required, all other elements are optional.{% endcapture %}{{ md_text | markdownify }}</td>
+      </tr>
+      <tr>
+        <td><a href="http://hl7.org/fhir/ValueSet/bodysite-laterality">Laterality</a></td>
+        <td>{% capture md_text %}Laterality: SNOMED-CT concepts for 'left', 'right', and 'bilateral'{% endcapture %}{{ md_text | markdownify }}</td>
       </tr>
       <tr>
         <td><a href="http://hl7.org/fhir/ValueSet/link-type">LinkType</a></td>
@@ -396,23 +449,23 @@ FHIR implementation note: At the current time, profiles for the specific LOINC t
         <td>{% capture md_text %}The US Core Diagnostic Report Category Value Set is a 'starter set' of categories supported for fetching and Diagnostic Reports and notes.{% endcapture %}{{ md_text | markdownify }}</td>
       </tr>
       <tr>
-        <td><a href="http://h7.org/fhir/us/core/ValueSet/us-core-medication-codes">http://h7.org/fhir/us/core/ValueSet/us-core-medication-codes</a></td>
-        <td></td>
+        <td><a href="http://www.hl7.org/fhir/us/core/ValueSet-us-core-diagnosticreport-lab-codes.html">USCoreDiagnosticReportLabCodes</a></td>
+        <td>{% capture md_text %}The Document Type value set includes all LOINC  values whose CLASSTYPE is LABORATORY in the LOINC database{% endcapture %}{{ md_text | markdownify }}</td>
       </tr>
       <tr>
-        <td><a href="http://hl7.org/fhir/ValueSet/v2-0487">http://hl7.org/fhir/ValueSet/v2-0487</a></td>
-        <td></td>
+        <td><a href="http://www.hl7.org/fhir/us/core/ValueSet-us-core-medication-codes.html">USCoreMedicationCodes</a></td>
+        <td>{% capture md_text %}All prescribable medication formulations represented using  either a 'generic' or 'brand-specific' concept. This includes RxNorm codes whose Term Type is SCD (semantic clinical drug), SBD (semantic brand drug), GPCK (generic pack), BPCK (brand pack), SCDG (semantic clinical drug group), SBDG (semantic brand drug group), SCDF (semantic clinical drug form), or SBDF (semantic brand drug form){% endcapture %}{{ md_text | markdownify }}</td>
       </tr>
       <tr>
-        <td><a href="http://www.genenames.org">http://www.genenames.org</a></td>
-        <td></td>
+        <td><a href="http://hl7.org/fhir/ValueSet/observation-vitalsignresult">VitalSigns</a></td>
+        <td>{% capture md_text %}This value set indicates the allowed vital sign result types.   The LOINC code for Vitals Signs panel (85353-1) is a grouping structure for a set of vital signs and includes related links (with type=has-member) to the Observations in this set (e.g. respiratory rate, heart rate, BP).  The Blood pressure panel (85354-9) is used to group the component observations Systolic blood pressure (8480-6) and Diastolic blood pressure (8462-4).{% endcapture %}{{ md_text | markdownify }}</td>
       </tr>
       <tr>
-        <td><a href="https://www.ncbi.nlm.nih.gov/clinvar">https://www.ncbi.nlm.nih.gov/clinvar</a></td>
-        <td></td>
+        <td><a href="http://hl7.org/fhir/ValueSet/ucum-vitals-common">VitalSignsUnits</a></td>
+        <td>{% capture md_text %}Common UCUM units for recording Vital Signs{% endcapture %}{{ md_text | markdownify }}</td>
       </tr>
       <tr>
-        <td><a href="https://www.ncbi.nlm.nih.gov/gtr">https://www.ncbi.nlm.nih.gov/gtr</a></td>
+        <td><a href="http://terminology.hl7.org/ValueSet/v2-0487">http://terminology.hl7.org/ValueSet/v2-0487</a></td>
         <td></td>
       </tr>
       

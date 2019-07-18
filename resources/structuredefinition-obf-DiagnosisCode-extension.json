@@ -6,16 +6,10 @@
     "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>DiagnosisCode Extension</b></p>\n  <p>Codes for a diagnosis.</p>\n</div>"
   },
   "url": "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-DiagnosisCode-extension",
-  "identifier": [
-    {
-      "system": "http://hl7.org/fhir/us/mcode",
-      "value": "obf.DiagnosisCode"
-    }
-  ],
   "name": "DiagnosisCode",
   "title": "obf-DiagnosisCode",
   "status": "draft",
-  "date": "2019-07-03",
+  "date": "2019-07-18",
   "publisher": "The MITRE Corporation",
   "contact": [
     {

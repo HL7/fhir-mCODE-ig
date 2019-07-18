@@ -6,12 +6,6 @@
     "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n<p><b>SurgicalMethodVS ValueSet</b></p>\n<p>Codes describing additional information about the method of the surgery. Includes the technique used to reach the site of the procedure, and actions taken during the surgery. Value set includes SNOMED codes descending from 103379005 &#039;Procedural approach&#039; and descending from 129284003 &#039;Surgical action&#039;.</p>\n</div>"
   },
   "url": "http://hl7.org/fhir/us/mcode/ValueSet/obf-SurgicalMethodVS",
-  "identifier": [
-    {
-      "system": "http://hl7.org/fhir/us/mcode",
-      "value": "obf.SurgicalMethodVS"
-    }
-  ],
   "name": "SurgicalMethodVS",
   "title": "SurgicalMethodVS",
   "status": "draft",
@@ -26,7 +20,7 @@
       ]
     }
   ],
-  "date": "2019-07-03",
+  "date": "2019-07-18",
   "description": "Codes describing additional information about the method of the surgery. Includes the technique used to reach the site of the procedure, and actions taken during the surgery. Value set includes SNOMED codes descending from 103379005 'Procedural approach' and descending from 129284003 'Surgical action'.",
   "compose": {
     "include": [

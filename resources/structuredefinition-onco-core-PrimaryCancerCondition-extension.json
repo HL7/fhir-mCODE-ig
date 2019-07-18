@@ -3,19 +3,13 @@
   "id": "onco-core-PrimaryCancerCondition-extension",
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>PrimaryCancerCondition Extension</b></p>\n  <p>Records the history of the primary cancer condition, the original or first tumor in the body, abnormal cells that divide without control and can invade nearby tissues.</p>\n</div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>PrimaryCancerCondition Extension</b></p>\n  <p>Records the history of the primary cancer condition, the original or first tumor in the body (ref https://www.cancer.gov/publications/dictionaries/cancer-terms/def/primary-tumor).</p>\n</div>"
   },
   "url": "http://hl7.org/fhir/us/mcode/StructureDefinition/onco-core-PrimaryCancerCondition-extension",
-  "identifier": [
-    {
-      "system": "http://hl7.org/fhir/us/mcode",
-      "value": "onco.core.PrimaryCancerCondition"
-    }
-  ],
   "name": "PrimaryCancerCondition",
   "title": "onco-core-PrimaryCancerCondition",
   "status": "draft",
-  "date": "2019-07-03",
+  "date": "2019-07-18",
   "publisher": "The MITRE Corporation",
   "contact": [
     {
@@ -27,7 +21,7 @@
       ]
     }
   ],
-  "description": "Records the history of the primary cancer condition, the original or first tumor in the body, abnormal cells that divide without control and can invade nearby tissues.",
+  "description": "Records the history of the primary cancer condition, the original or first tumor in the body (ref https://www.cancer.gov/publications/dictionaries/cancer-terms/def/primary-tumor).",
   "fhirVersion": "4.0.0",
   "kind": "complex-type",
   "abstract": false,
@@ -46,7 +40,7 @@
         "id": "Extension:primarycancercondition",
         "path": "Extension",
         "short": "PrimaryCancerCondition",
-        "definition": "Records the history of the primary cancer condition, the original or first tumor in the body, abnormal cells that divide without control and can invade nearby tissues.",
+        "definition": "Records the history of the primary cancer condition, the original or first tumor in the body (ref https://www.cancer.gov/publications/dictionaries/cancer-terms/def/primary-tumor).",
         "min": 0,
         "max": "*",
         "base": {
@@ -224,7 +218,7 @@
         "id": "Extension:primarycancercondition",
         "path": "Extension",
         "short": "PrimaryCancerCondition",
-        "definition": "Records the history of the primary cancer condition, the original or first tumor in the body, abnormal cells that divide without control and can invade nearby tissues.",
+        "definition": "Records the history of the primary cancer condition, the original or first tumor in the body (ref https://www.cancer.gov/publications/dictionaries/cancer-terms/def/primary-tumor).",
         "min": 0,
         "max": "*"
       },

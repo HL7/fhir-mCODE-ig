@@ -6,16 +6,10 @@
     "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>RegionStudied Extension</b></p>\n  <p>A description of the coverage of the genome that was tested for variants.</p>\n</div>"
   },
   "url": "http://hl7.org/fhir/us/mcode/StructureDefinition/onco-core-RegionStudied-extension",
-  "identifier": [
-    {
-      "system": "http://hl7.org/fhir/us/mcode",
-      "value": "onco.core.RegionStudied"
-    }
-  ],
   "name": "RegionStudied",
   "title": "onco-core-RegionStudied",
   "status": "draft",
-  "date": "2019-07-03",
+  "date": "2019-07-18",
   "publisher": "The MITRE Corporation",
   "contact": [
     {

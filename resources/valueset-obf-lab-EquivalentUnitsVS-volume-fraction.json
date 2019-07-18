@@ -6,12 +6,6 @@
     "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n<p><b>EquivalentUnitsVS-volume-fraction ValueSet</b></p>\n<p>Units equivalently representing volume fraction</p>\n</div>"
   },
   "url": "http://hl7.org/fhir/us/mcode/ValueSet/obf-lab-EquivalentUnitsVS-volume-fraction",
-  "identifier": [
-    {
-      "system": "http://hl7.org/fhir/us/mcode",
-      "value": "obf.lab.EquivalentUnitsVS-volume-fraction"
-    }
-  ],
   "name": "EquivalentUnitsVS_volume_fraction",
   "title": "EquivalentUnitsVS-volume-fraction",
   "status": "draft",
@@ -26,7 +20,7 @@
       ]
     }
   ],
-  "date": "2019-07-03",
+  "date": "2019-07-18",
   "description": "Units equivalently representing volume fraction",
   "compose": {
     "include": [

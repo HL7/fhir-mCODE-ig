@@ -6,12 +6,6 @@
     "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n<p><b>ResearchSubjectTerminationReasonCS CodeSystem</b></p>\n<p>The reason for a research subject leaving a research study.</p>\n</div>"
   },
   "url": "http://hl7.org/fhir/us/mcode/CodeSystem/obf-ResearchSubjectTerminationReasonCS",
-  "identifier": [
-    {
-      "system": "http://hl7.org/fhir/us/mcode",
-      "value": "obf.ResearchSubjectTerminationReasonCS"
-    }
-  ],
   "name": "ResearchSubjectTerminationReasonCS",
   "title": "ResearchSubjectTerminationReasonCS",
   "status": "draft",
@@ -26,7 +20,7 @@
       ]
     }
   ],
-  "date": "2019-07-03",
+  "date": "2019-07-18",
   "description": "The reason for a research subject leaving a research study.",
   "caseSensitive": true,
   "content": "complete",

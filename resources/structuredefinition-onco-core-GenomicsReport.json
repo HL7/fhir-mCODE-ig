@@ -3,13 +3,13 @@
   "id": "onco-core-GenomicsReport",
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>GenomicsReport Profile</b></p>\n  <p>Genetic analysis summary report. The report may include one or more tests, with two distinct test types. The first type is a targeted mutation test, where a specific mutation on a specific gene is tested for. The result is either positive or negative for that mutation. The second type is a more general test for variants. This type of test returns the identity of variants found in a certain region of the genome.\n\nThe identity of laboratory tests is typically represented by a LOINC code. However, many genetic tests and panels do not have LOINC codes, although some might have an identifier in NCBI Genetic Testing Registry (GTR), a central location for voluntary submission of genetic test information by providers. To identify the diagnostic report, the name of the report must be in the text sub-field of the code structure. If there is a coded identifier from GTR, LOINC, or other source, then it should be included into the the code sub-field of the code structure. If there is no suitable code, the code can be omitted.\n\nThe performer of the test (organization or practitioner) should be included in the FHIR profile as the performer.actor.\n\nFHIR implementation note: The category for this profile is set to GE (Genetics), a code from http://hl7.org/fhir/ValueSet/diagnostic-service-sections. This may be contrary to the Argonaut specification, which assigns the category LAB to any diagnostic report containing a laboratory result.</p>\n  <p><b>Mapping Summary</b></p>\n  <p><pre>onco.core.GenomicsReport maps to http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-note:\n  Language maps to language\n  ImplicitRules maps to implicitRules\n  Metadata.VersionId maps to meta.versionId\n  Metadata.SourceSystem maps to meta.source\n  Metadata.Profile maps to meta.profile\n  Metadata.LastUpdated maps to meta.lastUpdated\n  Metadata.SecurityLabel maps to meta.security\n  Metadata.Tag maps to meta.tag\n  Narrative maps to text\n  Identifier maps to identifier\n  BasedOn maps to basedOn\n  Status maps to status\n  Category maps to category\n  ObservationSubjectOfRecord maps to subject\n  Code maps to code\n  CareContext maps to encounter\n  RelevantTime maps to effective[x]\n  StatementDateTime maps to issued\n  DiagnosticReportPerformer maps to performer\n  ResultsInterpreter maps to resultsInterpreter\n  Specimen maps to specimen\n  Observation maps to result (slice on = target.reference.resolve(); slice on type = profile; slice strategy = includes)\n  MediaIncluded.CommentOrDescription maps to media.comment\n  MediaIncluded.Media maps to media.link\n  ConclusionText maps to conclusion\n  ConclusionCode maps to conclusionCode\n  PresentedForm maps to presentedForm\n</pre></p>\n</div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>GenomicsReport Profile</b></p>\n  <p>Genetic analysis summary report. The report may include one or more tests, with two distinct test types. The first type is a targeted mutation test, where a specific mutation on a specific gene is tested for. The result is either positive or negative for that mutation. The second type is a more general test for variants. This type of test returns the identity of variants found in a certain region of the genome.\n\nThe identity of laboratory tests is typically represented by a LOINC code. However, many genetic tests and panels do not have LOINC codes, although some might have an identifier in NCBI Genetic Testing Registry (GTR), a central location for voluntary submission of genetic test information by providers. To identify the diagnostic report, the name of the report must be in the text sub-field of the code structure. If there is a coded identifier from GTR, LOINC, or other source, then it should be included into the the code sub-field of the code structure. If there is no suitable code, the code can be omitted.\n\nThe performer of the test (organization or practitioner) should be included in the FHIR profile as the performer.actor.\n\nFHIR implementation note: The category for this profile is set to GE (Genetics), a code from http://hl7.org/fhir/ValueSet/diagnostic-service-sections. This may be contrary to the Argonaut specification, which assigns the category LAB to any diagnostic report containing a laboratory result.</p>\n  <p><b>Mapping Summary</b></p>\n  <p><pre>onco.core.GenomicsReport maps to http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-note:\n  Language maps to language\n  ImplicitRules maps to implicitRules\n  Metadata.VersionId maps to meta.versionId\n  Metadata.SourceSystem maps to meta.source\n  Metadata.Profile maps to meta.profile\n  Metadata.LastUpdated maps to meta.lastUpdated\n  Metadata.SecurityLabel maps to meta.security\n  Metadata.Tag maps to meta.tag\n  Narrative maps to text\n  Identifier maps to identifier\n  BasedOn maps to basedOn\n  Status maps to status\n  Category maps to category\n  ObservationSubjectOfRecord maps to subject\n  Code maps to code\n  CareContext maps to encounter\n  RelevantTime maps to effective[x]\n  StatementDateTime maps to issued\n  DiagnosticReportPerformer maps to performer\n  ResultsInterpreter maps to resultsInterpreter\n  Specimen maps to specimen\n  Observation maps to result (slice on = reference.resolve(); slice on type = profile; slice strategy = includes)\n  MediaIncluded.CommentOrDescription maps to media.comment\n  MediaIncluded.Media maps to media.link\n  ConclusionText maps to conclusion\n  ConclusionCode maps to conclusionCode\n  PresentedForm maps to presentedForm\n</pre></p>\n</div>"
   },
   "url": "http://hl7.org/fhir/us/mcode/StructureDefinition/onco-core-GenomicsReport",
   "name": "GenomicsReport",
   "title": "onco-core-GenomicsReport",
   "status": "active",
-  "date": "2019-07-03",
+  "date": "2019-07-18",
   "publisher": "The MITRE Corporation",
   "contact": [
     {
@@ -1222,7 +1222,7 @@
         "isSummary": true,
         "binding": {
           "strength": "extensible",
-          "valueSet": "https://www.ncbi.nlm.nih.gov/gtr"
+          "valueSet": "http://hl7.org/fhir/us/mcode/ValueSet/onco-core-GeneticTestVS"
         },
         "mapping": [
           {
@@ -1618,7 +1618,7 @@
           "discriminator": [
             {
               "type": "profile",
-              "path": "target.reference.resolve()"
+              "path": "reference.resolve()"
             }
           ],
           "ordered": false,
@@ -1676,7 +1676,7 @@
         "id": "DiagnosticReport:onco-core-GenomicsReport.result:onco-core-GeneticVariantTested",
         "path": "DiagnosticReport.result",
         "short": "GeneticVariantTested: A test for a specific mutation on a particular gene",
-        "definition": "A test for a specific mutation on a particular gene.",
+        "definition": "A test for a specific mutation on a particular gene. This profile is used to record whether a single discrete variant tested is present or absent (which mCODE denotes as positive or negative respectively).",
         "alias": [
           "Data",
           "Atomic Value",
@@ -2208,7 +2208,7 @@
         "path": "DiagnosticReport.code",
         "binding": {
           "strength": "extensible",
-          "valueSet": "https://www.ncbi.nlm.nih.gov/gtr"
+          "valueSet": "http://hl7.org/fhir/us/mcode/ValueSet/onco-core-GeneticTestVS"
         }
       },
       {
@@ -2277,7 +2277,7 @@
           "discriminator": [
             {
               "type": "profile",
-              "path": "target.reference.resolve()"
+              "path": "reference.resolve()"
             }
           ],
           "ordered": false,
@@ -2316,17 +2316,11 @@
         ],
         "sliceName": "onco-core-GeneticVariantTested",
         "short": "GeneticVariantTested: A test for a specific mutation on a particular gene",
-        "definition": "A test for a specific mutation on a particular gene.",
+        "definition": "A test for a specific mutation on a particular gene. This profile is used to record whether a single discrete variant tested is present or absent (which mCODE denotes as positive or negative respectively).",
         "min": 0,
         "max": "*",
         "mustSupport": true
       }
     ]
-  },
-  "identifier": [
-    {
-      "system": "http://hl7.org/fhir/us/mcode",
-      "value": "onco.core.GenomicsReport"
-    }
-  ]
+  }
 }

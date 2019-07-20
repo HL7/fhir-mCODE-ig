@@ -508,10 +508,6 @@
     "StructureDefinition/vital-VitalSign": {
       "base": "StructureDefinition-vital-VitalSign.html"
     },
-    "StructureDefinition/shr-core-AnatomicalDirection-extension": {
-      "base": "StructureDefinition-shr-core-AnatomicalDirection-extension.html",
-      "template-base": "sd-extension.html"
-    },
     "StructureDefinition/shr-core-AnatomicalOrientation-extension": {
       "base": "StructureDefinition-shr-core-AnatomicalOrientation-extension.html",
       "template-base": "sd-extension.html"
@@ -546,10 +542,6 @@
     },
     "StructureDefinition/shr-core-Category-extension": {
       "base": "StructureDefinition-shr-core-Category-extension.html",
-      "template-base": "sd-extension.html"
-    },
-    "StructureDefinition/shr-core-ClockFaceDirection-extension": {
-      "base": "StructureDefinition-shr-core-ClockFaceDirection-extension.html",
       "template-base": "sd-extension.html"
     },
     "StructureDefinition/shr-core-Code-extension": {
@@ -712,10 +704,6 @@
       "base": "StructureDefinition-onco-core-RegionStudied-extension.html",
       "template-base": "sd-extension.html"
     },
-    "StructureDefinition/onco-core-RelatedCancerCondition-extension": {
-      "base": "StructureDefinition-onco-core-RelatedCancerCondition-extension.html",
-      "template-base": "sd-extension.html"
-    },
     "StructureDefinition/shr-core-RelationToLandmark-extension": {
       "base": "StructureDefinition-shr-core-RelationToLandmark-extension.html",
       "template-base": "sd-extension.html"
@@ -862,9 +850,6 @@
     "ValueSet/onco-core-ClinVarVS": {
       "base": "ValueSet-onco-core-ClinVarVS.html"
     },
-    "ValueSet/shr-core-ClockFaceDirectionVS": {
-      "base": "ValueSet-shr-core-ClockFaceDirectionVS.html"
-    },
     "ValueSet/obf-ComorbidConditionVS": {
       "base": "ValueSet-obf-ComorbidConditionVS.html"
     },
@@ -919,8 +904,8 @@
     "ValueSet/shr-core-PositiveNegativeVS": {
       "base": "ValueSet-shr-core-PositiveNegativeVS.html"
     },
-    "ValueSet/onco-core-PrimaryCancerDisorderVS": {
-      "base": "ValueSet-onco-core-PrimaryCancerDisorderVS.html"
+    "ValueSet/onco-core-PrimaryOrUncertainBehaviorCancerDisorderVS": {
+      "base": "ValueSet-onco-core-PrimaryOrUncertainBehaviorCancerDisorderVS.html"
     },
     "ValueSet/obf-QuantitativeResultInterpretationVS": {
       "base": "ValueSet-obf-QuantitativeResultInterpretationVS.html"
@@ -985,10 +970,6 @@
     "CodeSystem/shr-core-SettingCS": {
       "base": "CodeSystem-shr-core-SettingCS.html"
     },
-    "Observation/mCODECancerStageGroupExample01": {
-      "base": "Observation-mCODECancerStageGroupExample01.html",
-      "source": "mCODECancerStageGroupExample01.json"
-    },
     "Observation/mCODEGeneticVariantFoundExample01": {
       "base": "Observation-mCODEGeneticVariantFoundExample01.html",
       "source": "mCODEGeneticVariantFoundExample01.json"
@@ -1028,6 +1009,30 @@
     "Observation/mCODETNMClinicalRegionalNodesCategoryExample01": {
       "base": "Observation-mCODETNMClinicalRegionalNodesCategoryExample01.html",
       "source": "mCODETNMClinicalRegionalNodesCategoryExample01.json"
+    },
+    "Observation/mCODETNMClinicalStageGroupExample01": {
+      "base": "Observation-mCODETNMClinicalStageGroupExample01.html",
+      "source": "mCODETNMClinicalStageGroupExample01.json"
+    },
+    "Observation/mCODETNMPathologicDistantMetastasesCategoryExample01": {
+      "base": "Observation-mCODETNMPathologicDistantMetastasesCategoryExample01.html",
+      "source": "mCODETNMPathologicDistantMetastasesCategoryExample01.json"
+    },
+    "Observation/mCODETNMPathologicPrimaryTumorCategoryExample01": {
+      "base": "Observation-mCODETNMPathologicPrimaryTumorCategoryExample01.html",
+      "source": "mCODETNMPathologicPrimaryTumorCategoryExample01.json"
+    },
+    "Observation/mCODETNMPathologicRegionalNodesCategoryExample01": {
+      "base": "Observation-mCODETNMPathologicRegionalNodesCategoryExample01.html",
+      "source": "mCODETNMPathologicRegionalNodesCategoryExample01.json"
+    },
+    "Observation/mCODETNMPathologicStageGroupExample01": {
+      "base": "Observation-mCODETNMPathologicStageGroupExample01.html",
+      "source": "mCODETNMPathologicStageGroupExample01.json"
+    },
+    "Observation/mCODETumorMarkerTestExample01": {
+      "base": "Observation-mCODETumorMarkerTestExample01.html",
+      "source": "mCODETumorMarkerTestExample01.json"
     }
   },
   "special-urls": [],

@@ -3,13 +3,13 @@
   "id": "onco-core-PrimaryCancerCondition-extension",
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>PrimaryCancerCondition Extension</b></p>\n  <p>Records the history of the primary cancer condition, the original or first tumor in the body (ref https://www.cancer.gov/publications/dictionaries/cancer-terms/def/primary-tumor).</p>\n</div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>PrimaryCancerCondition Extension</b></p>\n  <p>Records the history of the primary cancer condition, the original or first tumor in the body (ref https://www.cancer.gov/publications/dictionaries/cancer-terms/def/primary-tumor). Cancers of uncertain origin or behavior should be documented as primary.</p>\n</div>"
   },
   "url": "http://hl7.org/fhir/us/mcode/StructureDefinition/onco-core-PrimaryCancerCondition-extension",
   "name": "PrimaryCancerCondition",
   "title": "onco-core-PrimaryCancerCondition",
   "status": "draft",
-  "date": "2019-07-18",
+  "date": "2019-07-20",
   "publisher": "The MITRE Corporation",
   "contact": [
     {
@@ -21,7 +21,7 @@
       ]
     }
   ],
-  "description": "Records the history of the primary cancer condition, the original or first tumor in the body (ref https://www.cancer.gov/publications/dictionaries/cancer-terms/def/primary-tumor).",
+  "description": "Records the history of the primary cancer condition, the original or first tumor in the body (ref https://www.cancer.gov/publications/dictionaries/cancer-terms/def/primary-tumor). Cancers of uncertain origin or behavior should be documented as primary.",
   "fhirVersion": "4.0.0",
   "kind": "complex-type",
   "abstract": false,
@@ -40,7 +40,7 @@
         "id": "Extension:primarycancercondition",
         "path": "Extension",
         "short": "PrimaryCancerCondition",
-        "definition": "Records the history of the primary cancer condition, the original or first tumor in the body (ref https://www.cancer.gov/publications/dictionaries/cancer-terms/def/primary-tumor).",
+        "definition": "Records the history of the primary cancer condition, the original or first tumor in the body (ref https://www.cancer.gov/publications/dictionaries/cancer-terms/def/primary-tumor). Cancers of uncertain origin or behavior should be documented as primary.",
         "min": 0,
         "max": "*",
         "base": {
@@ -218,7 +218,7 @@
         "id": "Extension:primarycancercondition",
         "path": "Extension",
         "short": "PrimaryCancerCondition",
-        "definition": "Records the history of the primary cancer condition, the original or first tumor in the body (ref https://www.cancer.gov/publications/dictionaries/cancer-terms/def/primary-tumor).",
+        "definition": "Records the history of the primary cancer condition, the original or first tumor in the body (ref https://www.cancer.gov/publications/dictionaries/cancer-terms/def/primary-tumor). Cancers of uncertain origin or behavior should be documented as primary.",
         "min": 0,
         "max": "*"
       },

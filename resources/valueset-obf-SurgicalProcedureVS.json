@@ -20,7 +20,7 @@
       ]
     }
   ],
-  "date": "2019-07-18",
+  "date": "2019-07-20",
   "description": "Codes describing surgical procedures. Includes codes from SNOMED CT under the hierarchy of 387713003 'Surgical procedure'. Codes from ICD-10-PCS and CPT are acceptable. CPT codes are not listed here due to intellectual property restrictions. ICD-10-PCS codes are not listed because of a limitation in the FHIR Implementation Guide publisher. For CPT and ICD-10-PCS, only codes representing surgical procedures should be included.",
   "compose": {
     "include": [

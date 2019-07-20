@@ -1030,13 +1030,6 @@
       <resource>
           <exampleBoolean value="false" />
           <reference>
-            <reference value="StructureDefinition/shr-core-AnatomicalDirection-extension" />
-          </reference>
-          <name value="shr-core-AnatomicalDirection" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
             <reference value="StructureDefinition/shr-core-AnatomicalOrientation-extension" />
           </reference>
           <name value="shr-core-AnatomicalOrientation" />
@@ -1096,13 +1089,6 @@
             <reference value="StructureDefinition/shr-core-Category-extension" />
           </reference>
           <name value="shr-core-Category" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
-            <reference value="StructureDefinition/shr-core-ClockFaceDirection-extension" />
-          </reference>
-          <name value="shr-core-ClockFaceDirection" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
@@ -1383,13 +1369,6 @@
             <reference value="StructureDefinition/onco-core-RegionStudied-extension" />
           </reference>
           <name value="onco-core-RegionStudied" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
-            <reference value="StructureDefinition/onco-core-RelatedCancerCondition-extension" />
-          </reference>
-          <name value="onco-core-RelatedCancerCondition" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
@@ -1688,13 +1667,6 @@
       <resource>
           <exampleBoolean value="false" />
           <reference>
-            <reference value="ValueSet/shr-core-ClockFaceDirectionVS" />
-          </reference>
-          <name value="ClockFaceDirectionVS" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
             <reference value="ValueSet/obf-ComorbidConditionVS" />
           </reference>
           <name value="ComorbidConditionVS" />
@@ -1821,9 +1793,9 @@
       <resource>
           <exampleBoolean value="false" />
           <reference>
-            <reference value="ValueSet/onco-core-PrimaryCancerDisorderVS" />
+            <reference value="ValueSet/onco-core-PrimaryOrUncertainBehaviorCancerDisorderVS" />
           </reference>
-          <name value="PrimaryCancerDisorderVS" />
+          <name value="PrimaryOrUncertainBehaviorCancerDisorderVS" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
@@ -1975,13 +1947,6 @@
       <resource>
           <exampleBoolean value="true" />
           <reference>
-            <reference value="Observation/mCODECancerStageGroupExample01" />
-          </reference>
-          <name value="Example: mCODECancerStageGroupExample01" />
-      </resource>
-      <resource>
-          <exampleBoolean value="true" />
-          <reference>
             <reference value="Observation/mCODEGeneticVariantFoundExample01" />
           </reference>
           <name value="Example: mCODEGeneticVariantFoundExample01" />
@@ -2048,6 +2013,48 @@
             <reference value="Observation/mCODETNMClinicalRegionalNodesCategoryExample01" />
           </reference>
           <name value="Example: mCODETNMClinicalRegionalNodesCategoryExample01" />
+      </resource>
+      <resource>
+          <exampleBoolean value="true" />
+          <reference>
+            <reference value="Observation/mCODETNMClinicalStageGroupExample01" />
+          </reference>
+          <name value="Example: mCODETNMClinicalStageGroupExample01" />
+      </resource>
+      <resource>
+          <exampleBoolean value="true" />
+          <reference>
+            <reference value="Observation/mCODETNMPathologicDistantMetastasesCategoryExample01" />
+          </reference>
+          <name value="Example: mCODETNMPathologicDistantMetastasesCategoryExample01" />
+      </resource>
+      <resource>
+          <exampleBoolean value="true" />
+          <reference>
+            <reference value="Observation/mCODETNMPathologicPrimaryTumorCategoryExample01" />
+          </reference>
+          <name value="Example: mCODETNMPathologicPrimaryTumorCategoryExample01" />
+      </resource>
+      <resource>
+          <exampleBoolean value="true" />
+          <reference>
+            <reference value="Observation/mCODETNMPathologicRegionalNodesCategoryExample01" />
+          </reference>
+          <name value="Example: mCODETNMPathologicRegionalNodesCategoryExample01" />
+      </resource>
+      <resource>
+          <exampleBoolean value="true" />
+          <reference>
+            <reference value="Observation/mCODETNMPathologicStageGroupExample01" />
+          </reference>
+          <name value="Example: mCODETNMPathologicStageGroupExample01" />
+      </resource>
+      <resource>
+          <exampleBoolean value="true" />
+          <reference>
+            <reference value="Observation/mCODETumorMarkerTestExample01" />
+          </reference>
+          <name value="Example: mCODETumorMarkerTestExample01" />
       </resource>
       
         <page>

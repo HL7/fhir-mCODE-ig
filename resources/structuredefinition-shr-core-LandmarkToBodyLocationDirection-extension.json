@@ -9,7 +9,7 @@
   "name": "LandmarkToBodyLocationDirection",
   "title": "shr-core-LandmarkToBodyLocationDirection",
   "status": "draft",
-  "date": "2019-07-18",
+  "date": "2019-07-20",
   "publisher": "The MITRE Corporation",
   "contact": [
     {
@@ -66,12 +66,6 @@
             "human": "Must have either extensions or value[x], not both",
             "expression": "extension.exists() != value.exists()",
             "xpath": "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"
-          },
-          {
-            "key": "choice-1",
-            "severity": "error",
-            "human": "shr-core-LandmarkToBodyLocationDirection-extension SHALL have either extension('clockfacedirection') or extension('anatomicaldirection')",
-            "expression": "( extension('clockfacedirection').url | extension('anatomicaldirection').url ).distinct().count() == 1"
           }
         ],
         "isModifier": false,
@@ -136,7 +130,7 @@
           "user content"
         ],
         "min": 0,
-        "max": "*",
+        "max": "0",
         "base": {
           "path": "Element.extension",
           "min": 0,
@@ -155,64 +149,6 @@
             "map": "n/a"
           }
         ]
-      },
-      {
-        "id": "Extension:landmarktobodylocationdirection.extension:clockfacedirection",
-        "path": "Extension.extension",
-        "definition": "A direction indicated by an angle relative to 12 o'clock.",
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "Element.extension",
-          "min": 0,
-          "max": "*"
-        },
-        "type": [
-          {
-            "code": "Extension",
-            "profile": [
-              "http://hl7.org/fhir/us/mcode/StructureDefinition/shr-core-ClockFaceDirection-extension"
-            ]
-          }
-        ],
-        "isModifier": false,
-        "isSummary": false,
-        "mapping": [
-          {
-            "identity": "rim",
-            "map": "n/a"
-          }
-        ],
-        "sliceName": "clockfacedirection"
-      },
-      {
-        "id": "Extension:landmarktobodylocationdirection.extension:anatomicaldirection",
-        "path": "Extension.extension",
-        "definition": "A direction based on planes, surfaces, and orientations of the body.",
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "Element.extension",
-          "min": 0,
-          "max": "*"
-        },
-        "type": [
-          {
-            "code": "Extension",
-            "profile": [
-              "http://hl7.org/fhir/us/mcode/StructureDefinition/shr-core-AnatomicalDirection-extension"
-            ]
-          }
-        ],
-        "isModifier": false,
-        "isSummary": false,
-        "mapping": [
-          {
-            "identity": "rim",
-            "map": "n/a"
-          }
-        ],
-        "sliceName": "anatomicaldirection"
       },
       {
         "id": "Extension:landmarktobodylocationdirection.url",
@@ -246,12 +182,12 @@
         "fixedUri": "http://hl7.org/fhir/us/mcode/StructureDefinition/shr-core-LandmarkToBodyLocationDirection-extension"
       },
       {
-        "id": "Extension:landmarktobodylocationdirection.value[x]",
-        "path": "Extension.value[x]",
+        "id": "Extension:landmarktobodylocationdirection.valueCodeableConcept",
+        "path": "Extension.valueCodeableConcept",
         "short": "Value of extension",
         "definition": "Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).",
-        "min": 0,
-        "max": "0",
+        "min": 1,
+        "max": "1",
         "base": {
           "path": "Extension.value[x]",
           "min": 0,
@@ -259,151 +195,7 @@
         },
         "type": [
           {
-            "code": "base64Binary"
-          },
-          {
-            "code": "boolean"
-          },
-          {
-            "code": "canonical"
-          },
-          {
-            "code": "code"
-          },
-          {
-            "code": "date"
-          },
-          {
-            "code": "dateTime"
-          },
-          {
-            "code": "decimal"
-          },
-          {
-            "code": "id"
-          },
-          {
-            "code": "instant"
-          },
-          {
-            "code": "integer"
-          },
-          {
-            "code": "markdown"
-          },
-          {
-            "code": "oid"
-          },
-          {
-            "code": "positiveInt"
-          },
-          {
-            "code": "string"
-          },
-          {
-            "code": "time"
-          },
-          {
-            "code": "unsignedInt"
-          },
-          {
-            "code": "uri"
-          },
-          {
-            "code": "url"
-          },
-          {
-            "code": "uuid"
-          },
-          {
-            "code": "Address"
-          },
-          {
-            "code": "Age"
-          },
-          {
-            "code": "Annotation"
-          },
-          {
-            "code": "Attachment"
-          },
-          {
             "code": "CodeableConcept"
-          },
-          {
-            "code": "Coding"
-          },
-          {
-            "code": "ContactPoint"
-          },
-          {
-            "code": "Count"
-          },
-          {
-            "code": "Distance"
-          },
-          {
-            "code": "Duration"
-          },
-          {
-            "code": "HumanName"
-          },
-          {
-            "code": "Identifier"
-          },
-          {
-            "code": "Money"
-          },
-          {
-            "code": "Period"
-          },
-          {
-            "code": "Quantity"
-          },
-          {
-            "code": "Range"
-          },
-          {
-            "code": "Ratio"
-          },
-          {
-            "code": "Reference"
-          },
-          {
-            "code": "SampledData"
-          },
-          {
-            "code": "Signature"
-          },
-          {
-            "code": "Timing"
-          },
-          {
-            "code": "ContactDetail"
-          },
-          {
-            "code": "Contributor"
-          },
-          {
-            "code": "DataRequirement"
-          },
-          {
-            "code": "Expression"
-          },
-          {
-            "code": "ParameterDefinition"
-          },
-          {
-            "code": "RelatedArtifact"
-          },
-          {
-            "code": "TriggerDefinition"
-          },
-          {
-            "code": "UsageContext"
-          },
-          {
-            "code": "Dosage"
           }
         ],
         "isModifier": false,
@@ -413,7 +205,11 @@
             "identity": "rim",
             "map": "N/A"
           }
-        ]
+        ],
+        "binding": {
+          "strength": "preferred",
+          "valueSet": "http://hl7.org/fhir/us/mcode/ValueSet/shr-core-AnatomicalDirectionVS"
+        }
       }
     ]
   },
@@ -425,73 +221,13 @@
         "short": "LandmarkToBodyLocationDirection",
         "definition": "The direction from the landmark to the body location of interest, given as a clockface direction or anatomical direction.",
         "min": 0,
-        "max": "*",
-        "constraint": [
-          {
-            "key": "choice-1",
-            "severity": "error",
-            "human": "shr-core-LandmarkToBodyLocationDirection-extension SHALL have either extension('clockfacedirection') or extension('anatomicaldirection')",
-            "expression": "( extension('clockfacedirection').url | extension('anatomicaldirection').url ).distinct().count() == 1"
-          }
-        ]
+        "max": "*"
       },
       {
-        "id": "Extension:landmarktobodylocationdirection.extension:clockfacedirection",
+        "id": "Extension:landmarktobodylocationdirection.extension",
         "path": "Extension.extension",
-        "definition": "A direction indicated by an angle relative to 12 o'clock.",
         "min": 0,
-        "max": "1",
-        "base": {
-          "path": "Element.extension",
-          "min": 0,
-          "max": "*"
-        },
-        "type": [
-          {
-            "code": "Extension",
-            "profile": [
-              "http://hl7.org/fhir/us/mcode/StructureDefinition/shr-core-ClockFaceDirection-extension"
-            ]
-          }
-        ],
-        "isModifier": false,
-        "isSummary": false,
-        "mapping": [
-          {
-            "identity": "rim",
-            "map": "n/a"
-          }
-        ],
-        "sliceName": "clockfacedirection"
-      },
-      {
-        "id": "Extension:landmarktobodylocationdirection.extension:anatomicaldirection",
-        "path": "Extension.extension",
-        "definition": "A direction based on planes, surfaces, and orientations of the body.",
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "Element.extension",
-          "min": 0,
-          "max": "*"
-        },
-        "type": [
-          {
-            "code": "Extension",
-            "profile": [
-              "http://hl7.org/fhir/us/mcode/StructureDefinition/shr-core-AnatomicalDirection-extension"
-            ]
-          }
-        ],
-        "isModifier": false,
-        "isSummary": false,
-        "mapping": [
-          {
-            "identity": "rim",
-            "map": "n/a"
-          }
-        ],
-        "sliceName": "anatomicaldirection"
+        "max": "0"
       },
       {
         "id": "Extension:landmarktobodylocationdirection.url",
@@ -504,10 +240,18 @@
         "fixedUri": "http://hl7.org/fhir/us/mcode/StructureDefinition/shr-core-LandmarkToBodyLocationDirection-extension"
       },
       {
-        "id": "Extension:landmarktobodylocationdirection.value[x]",
-        "path": "Extension.value[x]",
-        "min": 0,
-        "max": "0"
+        "id": "Extension:landmarktobodylocationdirection.valueCodeableConcept",
+        "path": "Extension.valueCodeableConcept",
+        "min": 1,
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "preferred",
+          "valueSet": "http://hl7.org/fhir/us/mcode/ValueSet/shr-core-AnatomicalDirectionVS"
+        }
       }
     ]
   }

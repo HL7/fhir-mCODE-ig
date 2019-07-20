@@ -20,7 +20,7 @@
       ]
     }
   ],
-  "date": "2019-07-18",
+  "date": "2019-07-20",
   "description": "SNOMED and ICD-10 codes for common comorbid conditions. Aligns with Elixhauser comorbidity scale. ICD-10 codes are drawn from https://www.hcup-us.ahrq.gov/toolssoftware/comorbidityicd10/comformat_icd10cm_2019_1.txt",
   "compose": {
     "include": [

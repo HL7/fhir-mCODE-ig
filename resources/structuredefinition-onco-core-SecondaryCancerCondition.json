@@ -10,7 +10,7 @@
   "title": "onco-core-SecondaryCancerCondition",
   "status": "active",
   "experimental": false,
-  "date": "2019-07-18",
+  "date": "2019-07-20",
   "publisher": "The MITRE Corporation",
   "contact": [
     {
@@ -481,7 +481,7 @@
       {
         "id": "Condition:onco-core-SecondaryCancerCondition.extension:primarycancercondition",
         "path": "Condition.extension",
-        "definition": "Records the history of the primary cancer condition, the original or first tumor in the body (ref https://www.cancer.gov/publications/dictionaries/cancer-terms/def/primary-tumor).",
+        "definition": "Records the history of the primary cancer condition, the original or first tumor in the body (ref https://www.cancer.gov/publications/dictionaries/cancer-terms/def/primary-tumor). Cancers of uncertain origin or behavior should be documented as primary.",
         "min": 0,
         "max": "1",
         "base": {
@@ -576,7 +576,7 @@
         "short": "active | recurrence | relapse | inactive | remission | resolved",
         "definition": "The clinical status of the condition.",
         "comment": "The data type is CodeableConcept because clinicalStatus has some clinical judgment involved, such that there might need to be more specificity than the required FHIR value set allows. For example, a SNOMED coding might allow for additional specificity.",
-        "min": 1,
+        "min": 0,
         "max": "1",
         "base": {
           "path": "Condition.clinicalStatus",
@@ -2427,7 +2427,7 @@
       {
         "id": "Condition:onco-core-SecondaryCancerCondition.extension:primarycancercondition",
         "path": "Condition.extension",
-        "definition": "Records the history of the primary cancer condition, the original or first tumor in the body (ref https://www.cancer.gov/publications/dictionaries/cancer-terms/def/primary-tumor).",
+        "definition": "Records the history of the primary cancer condition, the original or first tumor in the body (ref https://www.cancer.gov/publications/dictionaries/cancer-terms/def/primary-tumor). Cancers of uncertain origin or behavior should be documented as primary.",
         "min": 0,
         "max": "1",
         "base": {
@@ -2446,12 +2446,6 @@
         "isModifier": false,
         "isSummary": false,
         "sliceName": "primarycancercondition"
-      },
-      {
-        "id": "Condition:onco-core-SecondaryCancerCondition.clinicalStatus",
-        "path": "Condition.clinicalStatus",
-        "min": 1,
-        "max": "1"
       },
       {
         "id": "Condition:onco-core-SecondaryCancerCondition.verificationStatus",

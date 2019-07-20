@@ -84,7 +84,7 @@ Note that BodyLocation is a data type (a reusable structure), not a stand-alone 
         </tr>
         <tr>
           <td><a href="StructureDefinition-onco-core-PrimaryCancerCondition-extension.html">PrimaryCancerCondition</a></td>
-          <td>{% capture md_text %}Records the history of the primary cancer condition, the original or first tumor in the body (ref https://www.cancer.gov/publications/dictionaries/cancer-terms/def/primary-tumor).{% endcapture %}{{ md_text | markdownify }}</td>
+          <td>{% capture md_text %}Records the history of the primary cancer condition, the original or first tumor in the body (ref https://www.cancer.gov/publications/dictionaries/cancer-terms/def/primary-tumor). Cancers of uncertain origin or behavior should be documented as primary.{% endcapture %}{{ md_text | markdownify }}</td>
         </tr>
         <tr>
           <td><a href="StructureDefinition-obf-RadiationDosePerFraction-extension.html">RadiationDosePerFraction</a></td>
@@ -97,10 +97,6 @@ Note that BodyLocation is a data type (a reusable structure), not a stand-alone 
         <tr>
           <td><a href="StructureDefinition-onco-core-RegionStudied-extension.html">RegionStudied</a></td>
           <td>{% capture md_text %}A description of the coverage of the genome that was tested for variants.{% endcapture %}{{ md_text | markdownify }}</td>
-        </tr>
-        <tr>
-          <td><a href="StructureDefinition-onco-core-RelatedCancerCondition-extension.html">RelatedCancerCondition</a></td>
-          <td>{% capture md_text %}Cancer condition this information relates to. Includes the primary cancer, secondary cancer, or a particular tumor.{% endcapture %}{{ md_text | markdownify }}</td>
         </tr>
         <tr>
           <td><a href="StructureDefinition-shr-core-RelationToLandmark-extension.html">RelationToLandmark</a></td>

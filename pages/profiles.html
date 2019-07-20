@@ -59,7 +59,7 @@ Note to FHIR implementers: The blood pressure profile in mCODE is based on the F
     <tr>
       <td><a href="StructureDefinition-obf-lab-CBCWAutoDifferentialPanel.html">CBCWAutoDifferentialPanel</a></td>
       <td><a href="http://hl7.org/fhir/R4/diagnosticreport.html">DiagnosticReport</a></td>
-      <td>{% capture md_text %}Complete blood count (CBC) with auto differential panel. Includes various measures of red blood cells, platelets, and various types of white blood cells and other related measures, such as hemoglobin. The components of this panel are not entirely standardized, so the definition of the CBC includes tests that are optional, or performed by certain laboratories but not others. Instances typically will include a subset of the listed panel members. While recognizing scalability limitations, in this case, panel member is described by its own FHIR profile.{% endcapture %}{{ md_text | markdownify }}</td>
+      <td>{% capture md_text %}Complete blood count (CBC) with auto differential panel. Includes various measures of red blood cells, platelets, and various types of white blood cells and other related measures, such as hemoglobin. The components of this panel are not entirely standardized, so the definition of the CBC includes tests that are optional, or performed by certain laboratories but not others. Instances typically will include a subset of the listed panel members.{% endcapture %}{{ md_text | markdownify }}</td>
     </tr>
     <tr>
       <td><a href="StructureDefinition-onco-core-CancerDiseaseStatus.html">CancerDiseaseStatus</a></td>
@@ -84,7 +84,7 @@ Note to FHIR implementers: The blood pressure profile in mCODE is based on the F
     <tr>
       <td><a href="StructureDefinition-obf-lab-ComprehensiveMetabolic2000SerumOrPlasmaPanel.html">ComprehensiveMetabolic2000SerumOrPlasmaPanel</a></td>
       <td><a href="http://hl7.org/fhir/R4/diagnosticreport.html">DiagnosticReport</a></td>
-      <td>{% capture md_text %}Represents a comprehensive metabolic 2000 panel (CMP) from serum or plasma, which measures various components such as glucose, electrolytes, kidney function, and liver function. The components of this panel are not entirely standardized, so the definition of the CMP includes tests that are optional, or performed by certain laboratories but not others. Therefore, instances typically will include a subset of the listed panel members. While recognizing scalability limitations, in this case, panel member is described by its own FHIR profile.{% endcapture %}{{ md_text | markdownify }}</td>
+      <td>{% capture md_text %}Represents a comprehensive metabolic 2000 panel (CMP) from serum or plasma, which measures various components such as glucose, electrolytes, kidney function, and liver function. The components of this panel are not entirely standardized, so the definition of the CMP includes tests that are optional, or performed by certain laboratories but not others. Therefore, instances typically will include a subset of the listed panel members.{% endcapture %}{{ md_text | markdownify }}</td>
     </tr>
     <tr>
       <td><a href="StructureDefinition-obf-ECOGPerformanceStatus.html">ECOGPerformanceStatus</a></td>
@@ -141,7 +141,7 @@ Compatibility: Lies at the intersection of Argonaut and US Core Patient. Marital
     <tr>
       <td><a href="StructureDefinition-onco-core-PrimaryCancerCondition.html">PrimaryCancerCondition</a></td>
       <td><a href="http://hl7.org/fhir/R4/condition.html">Condition</a></td>
-      <td>{% capture md_text %}Records the history of the primary cancer condition, the original or first tumor in the body (ref https://www.cancer.gov/publications/dictionaries/cancer-terms/def/primary-tumor).{% endcapture %}{{ md_text | markdownify }}</td>
+      <td>{% capture md_text %}Records the history of the primary cancer condition, the original or first tumor in the body (ref https://www.cancer.gov/publications/dictionaries/cancer-terms/def/primary-tumor). Cancers of uncertain origin or behavior should be documented as primary.{% endcapture %}{{ md_text | markdownify }}</td>
     </tr>
     <tr>
       <td><a href="StructureDefinition-onco-core-SecondaryCancerCondition.html">SecondaryCancerCondition</a></td>
@@ -325,7 +325,7 @@ Implementation note: The data value for TumorMarkerTest has cardinality is 0..1 
     <tr>
       <td><a href="StructureDefinition-onco-core-CancerStageGroup.html">CancerStageGroup</a></td>
       <td><a href="http://hl7.org/fhir/R4/observation.html">Observation</a></td>
-      <td>{% capture md_text %}A panel that contains cancer staging information. This class is the parent of panels containing information related to clinical and pathologic staging, including TNMClinicalStageGroup and TNMPathologicStageGroup.{% endcapture %}{{ md_text | markdownify }}</td>
+      <td>{% capture md_text %}A panel that contains cancer staging information. This class is the parent of classes containing information related to clinical and pathologic staging, including TNMClinicalStageGroup and TNMPathologicStageGroup.{% endcapture %}{{ md_text | markdownify }}</td>
     </tr>
     <tr>
       <td><a href="StructureDefinition-obf-lab-CarbonDioxideSCncPtSerPlasQnLabObs.html">CarbonDioxideSCncPtSerPlasQnLabObs</a></td>

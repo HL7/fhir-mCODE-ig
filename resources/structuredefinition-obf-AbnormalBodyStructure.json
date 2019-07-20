@@ -10,7 +10,7 @@
   "title": "obf-AbnormalBodyStructure",
   "status": "active",
   "experimental": false,
-  "date": "2019-07-18",
+  "date": "2019-07-20",
   "publisher": "The MITRE Corporation",
   "contact": [
     {
@@ -528,7 +528,7 @@
         "short": "active | recurrence | relapse | inactive | remission | resolved",
         "definition": "The clinical status of the condition.",
         "comment": "The data type is CodeableConcept because clinicalStatus has some clinical judgment involved, such that there might need to be more specificity than the required FHIR value set allows. For example, a SNOMED coding might allow for additional specificity.",
-        "min": 1,
+        "min": 0,
         "max": "1",
         "base": {
           "path": "Condition.clinicalStatus",
@@ -1918,12 +1918,6 @@
         "isModifier": false,
         "isSummary": false,
         "sliceName": "dateofdiagnosis"
-      },
-      {
-        "id": "Condition:obf-AbnormalBodyStructure.clinicalStatus",
-        "path": "Condition.clinicalStatus",
-        "min": 1,
-        "max": "1"
       },
       {
         "id": "Condition:obf-AbnormalBodyStructure.verificationStatus",

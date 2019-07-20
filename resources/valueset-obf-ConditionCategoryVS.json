@@ -20,7 +20,7 @@
       ]
     }
   ],
-  "date": "2019-07-18",
+  "date": "2019-07-20",
   "description": "A category assigned to the condition, for example, a disease, concern, symptom, functional impairment, or structural abnormality. Extends http://hl7.org/fhir/ValueSet/condition-category by including all codes from the corresponding code system, namely, http://terminology.hl7.org/CodeSystem/condition-category. Extensions are based on http://fhir.org/guides/argonaut/ValueSet/condition-category, but substituting SNOMED CT codes.",
   "compose": {
     "include": [

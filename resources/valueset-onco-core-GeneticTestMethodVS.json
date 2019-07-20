@@ -20,7 +20,7 @@
       ]
     }
   ],
-  "date": "2019-07-18",
+  "date": "2019-07-20",
   "description": "The method used to perform a genetic test, drawn from NCI Thesaurus. Examples include Fluorescent in situ hybridization (FISH), polymerase chain reaction-based assays (PCR), and next-generation sequencing (NGS).\n\nFHIR is currently unable to handle values from NCI Thesaurus, so no values are listed in the Expansion, below. The values ARE in the downloads. For convenience, here is a listing of values in this value set:\nNCIT#C130179       'Allele Specific Primer Polymerase Chain Reaction'\nNCIT#C18084        'Comparative Genomic Hybridization'\nNCIT#C19641        'Dideoxy Chain Termination DNA Sequencing'\nNCIT#C63328        'DNA Methylation Analysis'\nNCIT#C17563        'Fluorescence In Situ Hybridization'\nNCIT#C16768        'Karyotyping'\nNCIT#C18477        'Microarray Analysis'\nNCIT#C139286       'Microsatellite Stability Assessment'\nNCIT#C116161       'Multiplex Ligation-dependent Probe Amplification'\nNCIT#C101293       'Next Generation Sequencing'\nNCIT#C17003        'Polymerase Chain Reaction'\nNCIT#C51962        'Real Time PCR'\nNCIT#C17093        'Restriction Fragment Length Polymorphism'\nNCIT#C18136        'Reverse Transcriptase-Polymerase Chain Reaction'\nNCIT#C18473        'RNA Analysis'\nNCIT#C17565        'Sequence Analysis'\nNCIT#C116151       'Single Nucleotide Polymorphism Array'\nNCIT#C16356        'Southern Blotting'",
   "compose": {
     "include": [

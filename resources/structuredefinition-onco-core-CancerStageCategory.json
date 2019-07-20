@@ -8,7 +8,7 @@
   "url": "http://hl7.org/fhir/us/mcode/StructureDefinition/onco-core-CancerStageCategory",
   "name": "CancerStageCategory",
   "status": "active",
-  "date": "2019-07-18",
+  "date": "2019-07-20",
   "publisher": "The MITRE Corporation",
   "contact": [
     {
@@ -369,41 +369,7 @@
             "identity": "rim",
             "map": "N/A"
           }
-        ],
-        "slicing": {
-          "id": "1",
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "url"
-            }
-          ],
-          "ordered": false,
-          "rules": "open"
-        }
-      },
-      {
-        "id": "Observation:onco-core-CancerStageCategory.extension:primarycancercondition",
-        "path": "Observation.extension",
-        "definition": "Records the history of the primary cancer condition, the original or first tumor in the body (ref https://www.cancer.gov/publications/dictionaries/cancer-terms/def/primary-tumor).",
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "DomainResource.extension",
-          "min": 0,
-          "max": "*"
-        },
-        "type": [
-          {
-            "code": "Extension",
-            "profile": [
-              "http://hl7.org/fhir/us/mcode/StructureDefinition/onco-core-PrimaryCancerCondition-extension"
-            ]
-          }
-        ],
-        "isModifier": false,
-        "isSummary": false,
-        "sliceName": "primarycancercondition"
+        ]
       },
       {
         "id": "Observation:onco-core-CancerStageCategory.modifierExtension",
@@ -796,7 +762,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/StructureDefinition/Resource"
+              "http://hl7.org/fhir/us/mcode/StructureDefinition/onco-core-PrimaryCancerCondition"
             ]
           }
         ],
@@ -2481,44 +2447,6 @@
         "isSummary": false
       },
       {
-        "id": "Observation:onco-core-CancerStageCategory.extension",
-        "path": "Observation.extension",
-        "slicing": {
-          "id": "1",
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "url"
-            }
-          ],
-          "ordered": false,
-          "rules": "open"
-        }
-      },
-      {
-        "id": "Observation:onco-core-CancerStageCategory.extension:primarycancercondition",
-        "path": "Observation.extension",
-        "definition": "Records the history of the primary cancer condition, the original or first tumor in the body (ref https://www.cancer.gov/publications/dictionaries/cancer-terms/def/primary-tumor).",
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "DomainResource.extension",
-          "min": 0,
-          "max": "*"
-        },
-        "type": [
-          {
-            "code": "Extension",
-            "profile": [
-              "http://hl7.org/fhir/us/mcode/StructureDefinition/onco-core-PrimaryCancerCondition-extension"
-            ]
-          }
-        ],
-        "isModifier": false,
-        "isSummary": false,
-        "sliceName": "primarycancercondition"
-      },
-      {
         "id": "Observation:onco-core-CancerStageCategory.basedOn",
         "path": "Observation.basedOn",
         "type": [
@@ -2578,6 +2506,18 @@
         ],
         "short": "The subject of an observation",
         "definition": "The subject of an observation."
+      },
+      {
+        "id": "Observation:onco-core-CancerStageCategory.focus",
+        "path": "Observation.focus",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/us/mcode/StructureDefinition/onco-core-PrimaryCancerCondition"
+            ]
+          }
+        ]
       },
       {
         "id": "Observation:onco-core-CancerStageCategory.encounter",

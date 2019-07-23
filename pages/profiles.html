@@ -42,19 +42,19 @@
     <tr>
       <td><a href="StructureDefinition-vital-BloodPressure.html">BloodPressure</a></td>
       <td><a href="http://hl7.org/fhir/R4/observation.html">Observation</a></td>
-      <td>{% capture md_text %}The force of circulating blood on the walls of the arteries.
+      <td>{% capture md_text %}Records blood pressure measurements, defined as the force of circulating blood on the walls of the arteries.
 
-Note to FHIR implementers: The blood pressure profile in mCODE is based on the FHIR profile for blood pressure and adds a set of optional elements that can help clinicians interpret the result. Because these elements are optional, any BP that conforms to the current profile also will conform to the FHIR profile, and vice versa.{% endcapture %}{{ md_text | markdownify }}</td>
+Conformance note: The blood pressure profile is based on the FHIR profile for blood pressure, and adds a set of optional elements that can help clinicians interpret the result. Because these additional elements are optional, any BloodPressure that conforms to the current profile also will conform to the FHIR profile, and vice versa.{% endcapture %}{{ md_text | markdownify }}</td>
     </tr>
     <tr>
       <td><a href="StructureDefinition-vital-BodyHeight.html">BodyHeight</a></td>
       <td><a href="http://hl7.org/fhir/R4/observation.html">Observation</a></td>
-      <td>{% capture md_text %}Data structure for recording the body height, defined as the distance from the sole to the crown of the head.{% endcapture %}{{ md_text | markdownify }}</td>
+      <td>{% capture md_text %}Records the body height, defined as the distance from the sole to the crown of the head.{% endcapture %}{{ md_text | markdownify }}</td>
     </tr>
     <tr>
       <td><a href="StructureDefinition-vital-BodyWeight.html">BodyWeight</a></td>
       <td><a href="http://hl7.org/fhir/R4/observation.html">Observation</a></td>
-      <td>{% capture md_text %}Data structure for recording the body weight, defined as the mass or quantity of heaviness of the individual.{% endcapture %}{{ md_text | markdownify }}</td>
+      <td>{% capture md_text %}Records the body weight, defined as the mass or quantity of heaviness of the individual.{% endcapture %}{{ md_text | markdownify }}</td>
     </tr>
     <tr>
       <td><a href="StructureDefinition-obf-lab-CBCWAutoDifferentialPanel.html">CBCWAutoDifferentialPanel</a></td>
@@ -69,17 +69,23 @@ Note to FHIR implementers: The blood pressure profile in mCODE is based on the F
     <tr>
       <td><a href="StructureDefinition-onco-core-CancerRelatedRadiationProcedure.html">CancerRelatedRadiationProcedure</a></td>
       <td><a href="http://hl7.org/fhir/R4/procedure.html">Procedure</a></td>
-      <td>{% capture md_text %}A radiological treatment addressing a cancer condition. The scope of this profile has been narrowed to cancer-related procedures by constraining the ReasonReference and ReasonCode to cancer conditions.{% endcapture %}{{ md_text | markdownify }}</td>
+      <td>{% capture md_text %}A radiological treatment addressing a cancer condition. The scope of this profile has been narrowed to cancer-related procedures by constraining the ReasonReference and ReasonCode to cancer conditions.
+
+Conformance note: If an ICD-10-PCS code is used in the code attribute, and there is a semantically equivalent SNOMED CT or CPT code, the resulting Procedure instance will not be compliant with [US Core Profiles](http://hl7.org/fhir/us/core/STU3/index.html){% endcapture %}{{ md_text | markdownify }}</td>
     </tr>
     <tr>
       <td><a href="StructureDefinition-onco-core-CancerRelatedSurgicalProcedure.html">CancerRelatedSurgicalProcedure</a></td>
       <td><a href="http://hl7.org/fhir/R4/procedure.html">Procedure</a></td>
-      <td>{% capture md_text %}A surgical action addressing a cancer condition.{% endcapture %}{{ md_text | markdownify }}</td>
+      <td>{% capture md_text %}A surgical action addressing a cancer condition.
+
+Conformance note: If an ICD-10-PCS code is used in the code attribute, and there is a semantically equivalent SNOMED CT or CPT code, the resulting Procedure instance will not be compliant with [US Core Profiles](http://hl7.org/fhir/us/core/STU3/index.html).{% endcapture %}{{ md_text | markdownify }}</td>
     </tr>
     <tr>
       <td><a href="StructureDefinition-obf-ComorbidCondition.html">ComorbidCondition</a></td>
       <td><a href="http://hl7.org/fhir/R4/condition.html">Condition</a></td>
-      <td>{% capture md_text %}A comorbidity refers to one or more diseases or conditions that occur along with another condition in the same person at the same time. Conditions considered comorbidities are often long-term or chronic conditions. Comorbidities are defined relative to an index disease and may be categorical, rather than described in full detail. The comorbid condition class provides comorbidity codes corresponding the Elixhauser Comorbidity Index.{% endcapture %}{{ md_text | markdownify }}</td>
+      <td>{% capture md_text %}A comorbidity refers to one or more diseases or conditions that occur along with another condition in the same person at the same time. Conditions considered comorbidities are often long-term or chronic conditions. Comorbidities are defined relative to an index disease and may be categorical, rather than described in full detail. The comorbid condition class provides comorbidity codes corresponding the Elixhauser Comorbidity Index.
+
+Conformance note: If an ICD-10-CM code is used for the code attribute, and a semantically equivalent SNOMED code is available, the resulting instance will not be compliant with [US Core Profiles](http://hl7.org/fhir/us/core/STU3/index.html).{% endcapture %}{{ md_text | markdownify }}</td>
     </tr>
     <tr>
       <td><a href="StructureDefinition-obf-lab-ComprehensiveMetabolic2000SerumOrPlasmaPanel.html">ComprehensiveMetabolic2000SerumOrPlasmaPanel</a></td>
@@ -94,23 +100,25 @@ Note to FHIR implementers: The blood pressure profile in mCODE is based on the F
     <tr>
       <td><a href="StructureDefinition-onco-core-GeneticVariantFound.html">GeneticVariantFound</a></td>
       <td><a href="http://hl7.org/fhir/R4/observation.html">Observation</a></td>
-      <td>{% capture md_text %}Data structure recording an alteration in the most common DNA nucleotide sequence. The term variant can be used to describe an alteration that may be benign, pathogenic, or of unknown significance. The term variant is increasingly being used in place of the term mutation.{% endcapture %}{{ md_text | markdownify }}</td>
+      <td>{% capture md_text %}Records an alteration in the most common DNA nucleotide sequence. The term variant can be used to describe an alteration that may be benign, pathogenic, or of unknown significance. The term variant is increasingly being used in place of the term mutation.{% endcapture %}{{ md_text | markdownify }}</td>
     </tr>
     <tr>
       <td><a href="StructureDefinition-onco-core-GeneticVariantTested.html">GeneticVariantTested</a></td>
       <td><a href="http://hl7.org/fhir/R4/observation.html">Observation</a></td>
-      <td>{% capture md_text %}A test for a specific mutation on a particular gene. This profile is used to record whether a single discrete variant tested is present or absent (which mCODE denotes as positive or negative respectively).{% endcapture %}{{ md_text | markdownify }}</td>
+      <td>{% capture md_text %}A test for a specific mutation on a particular gene. This profile is used to record whether a single discrete variant tested is present or absent (denoted as positive or negative respectively).{% endcapture %}{{ md_text | markdownify }}</td>
     </tr>
     <tr>
       <td><a href="StructureDefinition-onco-core-GenomicsReport.html">GenomicsReport</a></td>
       <td><a href="http://hl7.org/fhir/R4/diagnosticreport.html">DiagnosticReport</a></td>
       <td>{% capture md_text %}Genetic analysis summary report. The report may include one or more tests, with two distinct test types. The first type is a targeted mutation test, where a specific mutation on a specific gene is tested for. The result is either positive or negative for that mutation. The second type is a more general test for variants. This type of test returns the identity of variants found in a certain region of the genome.
 
-The identity of laboratory tests is typically represented by a LOINC code. However, many genetic tests and panels do not have LOINC codes, although some might have an identifier in NCBI Genetic Testing Registry (GTR), a central location for voluntary submission of genetic test information by providers. To identify the diagnostic report, the name of the report must be in the text sub-field of the code structure. If there is a coded identifier from GTR, LOINC, or other source, then it should be included into the the code sub-field of the code structure. If there is no suitable code, the code can be omitted.
+The identity of non-genomic laboratory tests is typically represented by a LOINC code. However, many genetic tests and panels do not have LOINC codes, although some might have an identifier in NCBI Genetic Testing Registry (GTR), a central location for voluntary submission of genetic test information by providers. To identify the diagnostic report, the name of the report must be in the text sub-field of the code structure. If there is a coded identifier from GTR, LOINC, or other source, then it should be included into the the code sub-field of the code structure. If there is no suitable code, the code can be omitted.
 
-The performer of the test (organization or practitioner) should be included in the FHIR profile as the performer.actor.
+Conformance note: To be conformant to US Core, the code attribute must be a LOINC code, if available. If there is no suitable code in LOINC, then a code from an alternative code system (such as GTR) can be used.
 
-FHIR implementation note: The category for this profile is set to GE (Genetics), a code from http://hl7.org/fhir/ValueSet/diagnostic-service-sections. This may be contrary to the Argonaut specification, which assigns the category LAB to any diagnostic report containing a laboratory result.{% endcapture %}{{ md_text | markdownify }}</td>
+Implementation note: The performer of the test (organization or practitioner) should be included in the FHIR profile as the performer.actor.
+
+Conformance note: The category for this profile is set to GE (Genetics), a code from http://hl7.org/fhir/ValueSet/diagnostic-service-sections. This is contrary to the [Argonaut](http://www.fhir.org/guides/argonaut/r2/) and [US Core](http://hl7.org/fhir/us/core/STU3/index.html) specifications, which require the category 'LAB' in diagnostic reports containing laboratory results. This is assumed to be an oversight in the US Core and Argonaut specifications.{% endcapture %}{{ md_text | markdownify }}</td>
     </tr>
     <tr>
       <td><a href="StructureDefinition-obf-KarnofskyPerformanceStatus.html">KarnofskyPerformanceStatus</a></td>
@@ -141,12 +149,18 @@ Compatibility: Lies at the intersection of Argonaut and US Core Patient. Marital
     <tr>
       <td><a href="StructureDefinition-onco-core-PrimaryCancerCondition.html">PrimaryCancerCondition</a></td>
       <td><a href="http://hl7.org/fhir/R4/condition.html">Condition</a></td>
-      <td>{% capture md_text %}Records the history of the primary cancer condition, the original or first tumor in the body (ref https://www.cancer.gov/publications/dictionaries/cancer-terms/def/primary-tumor). Cancers of uncertain origin or behavior should be documented as primary.{% endcapture %}{{ md_text | markdownify }}</td>
+      <td>{% capture md_text %}Records the history of the primary cancer condition, the original or first tumor in the body (reference https://www.cancer.gov/publications/dictionaries/cancer-terms/def/primary-tumor). Cancers that are not clearly secondary (i.e., of uncertain origin or behavior) should be documented as primary.
+
+Cancer staging information summarized in this profile should reflect the most recent staging assessment on the patient, and should be updated if and when there is a new staging assessment. Past staging assessments will be preserved in instances of the TNMClinicalStageGroup and/or TNMPathologicalStageGroup, which refer back to PrimaryCancerCondition.
+
+Conformance note: For the code attribute, to be compliant with [US Core Profiles](http://hl7.org/fhir/us/core/STU3/index.html), SNOMED-CT must be used unless there is no suitable code, in which case ICD-10-CM can be used.{% endcapture %}{{ md_text | markdownify }}</td>
     </tr>
     <tr>
       <td><a href="StructureDefinition-onco-core-SecondaryCancerCondition.html">SecondaryCancerCondition</a></td>
       <td><a href="http://hl7.org/fhir/R4/condition.html">Condition</a></td>
-      <td>{% capture md_text %}Records the history of secondary neoplasms, including location(s) and the date of onset of metastases. A secondary cancer results from the spread (metastasization) of cancer from its original site (reference: https://www.cancer.gov/publications/dictionaries/cancer-terms/def/secondary-tumor).{% endcapture %}{{ md_text | markdownify }}</td>
+      <td>{% capture md_text %}Records the history of secondary neoplasms, including location(s) and the date of onset of metastases. A secondary cancer results from the spread (metastasization) of cancer from its original site (reference: https://www.cancer.gov/publications/dictionaries/cancer-terms/def/secondary-tumor).
+
+Conformance note: For the code attribute, to be compliant with [US Core Profiles](http://hl7.org/fhir/us/core/STU3/index.html), SNOMED-CT must be used unless there is no suitable code, in which case ICD-10-CM can be used.{% endcapture %}{{ md_text | markdownify }}</td>
     </tr>
     <tr>
       <td><a href="StructureDefinition-onco-core-TNMClinicalDistantMetastasesCategory.html">TNMClinicalDistantMetastasesCategory</a></td>
@@ -352,7 +366,7 @@ Implementation note: The data value for TumorMarkerTest has cardinality is 0..1 
       <td><a href="http://hl7.org/fhir/R4/condition.html">Condition</a></td>
       <td>{% capture md_text %}A condition that is or may be present in a subject. 'Condition' is interpreted broadly and could be a disorder, abnormality, problem, injury, complaint, functionality, illness, disease, ailment, sickness, affliction, upset, difficulty, disorder, symptom, worry, or trouble.
 The Observation-based class, ConditionAbsent, should be used to describe conditions that are not present or negative findings.
-SHR Condition uses the SHR BodyLocation structure that includes not only a code, but optional laterality, direction, clock direction, and distance. If included, the distance is measured from the location specified by the code, laterality, and direction.{% endcapture %}{{ md_text | markdownify }}</td>
+This profiled Condition uses the BodyLocation structure that includes not only a code, but optional laterality, direction, and relation to landmark(s).{% endcapture %}{{ md_text | markdownify }}</td>
     </tr>
     <tr>
       <td><a href="StructureDefinition-obf-lab-CreatinineMCncPtSerPlasQnLabObs.html">CreatinineMCncPtSerPlasQnLabObs</a></td>
@@ -776,7 +790,9 @@ For an Observation, the Code describes the aspect or property of the subject bei
     <tr>
       <td><a href="StructureDefinition-obf-SurgicalProcedure.html">SurgicalProcedure</a></td>
       <td><a href="http://hl7.org/fhir/R4/procedure.html">Procedure</a></td>
-      <td></td>
+      <td>{% capture md_text %}A procedure that involves a physical intervention on tissues.
+
+Conformance note: If an ICD-10-PCS code is used in the code attribute, and an equivalent SNOMED-CT is available, the resulting Procedure instance will not be compliant with [US Core Profiles](http://hl7.org/fhir/us/core/STU3/index.html).{% endcapture %}{{ md_text | markdownify }}</td>
     </tr>
     <tr>
       <td><a href="StructureDefinition-obf-TaxIdentificationNumber.html">TaxIdentificationNumber</a></td>
@@ -792,7 +808,9 @@ Timing offers a choice of multiple OccurrenceTime (used is used to specify speci
     <tr>
       <td><a href="StructureDefinition-onco-core-Tumor.html">Tumor</a></td>
       <td><a href="http://hl7.org/fhir/R4/condition.html">Condition</a></td>
-      <td>{% capture md_text %}The presence of an abnormal mass of tissue (neoplasm) that results when cells divide more than they should or do not die when they should. Tumors may be benign (not cancer), or malignant (cancer). (source: NCI Dictionary).{% endcapture %}{{ md_text | markdownify }}</td>
+      <td>{% capture md_text %}The presence of an abnormal mass of tissue (neoplasm) that results when cells divide more than they should or do not die when they should. Tumors may be benign (not cancer), or malignant (cancer). (source: NCI Dictionary).
+
+Conformance note: For the HistologyMorphologyBehavior attribute, to be compliant with [US Core Profiles](http://hl7.org/fhir/us/core/STU3/index.html), SNOMED-CT must be used unless there is no suitable code, in which case ICD-O-3 can be used.{% endcapture %}{{ md_text | markdownify }}</td>
     </tr>
     <tr>
       <td><a href="StructureDefinition-obf-lab-UreaNitrogenCreatinineMRtoPtSerPlasQnLabObs.html">UreaNitrogenCreatinineMRtoPtSerPlasQnLabObs</a></td>

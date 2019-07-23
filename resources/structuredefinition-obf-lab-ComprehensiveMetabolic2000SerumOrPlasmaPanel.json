@@ -3,14 +3,14 @@
   "id": "obf-lab-ComprehensiveMetabolic2000SerumOrPlasmaPanel",
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>ComprehensiveMetabolic2000SerumOrPlasmaPanel Profile</b></p>\n  <p>Represents a comprehensive metabolic 2000 panel (CMP) from serum or plasma, which measures various components such as glucose, electrolytes, kidney function, and liver function. The components of this panel are not entirely standardized, so the definition of the CMP includes tests that are optional, or performed by certain laboratories but not others. Therefore, instances typically will include a subset of the listed panel members.</p>\n  <p><b>Mapping Summary</b></p>\n  <p><pre>obf.lab.ComprehensiveMetabolic2000SerumOrPlasmaPanel maps to http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-lab:\n  Language maps to language\n  ImplicitRules maps to implicitRules\n  Metadata.VersionId maps to meta.versionId\n  Metadata.SourceSystem maps to meta.source\n  Metadata.Profile maps to meta.profile\n  Metadata.LastUpdated maps to meta.lastUpdated\n  Metadata.SecurityLabel maps to meta.security\n  Metadata.Tag maps to meta.tag\n  Narrative maps to text\n  Identifier maps to identifier\n  BasedOn maps to basedOn\n  Status maps to status\n  Category maps to category\n  ObservationSubjectOfRecord maps to subject\n  Code maps to code\n  CareContext maps to encounter\n  RelevantTime maps to effective[x]\n  StatementDateTime maps to issued\n  DiagnosticReportPerformer maps to performer\n  ResultsInterpreter maps to resultsInterpreter\n  Specimen maps to specimen\n  LaboratoryObservation maps to result (slice on = target.reference.resolve(); slice on type = profile; slice strategy = includes)\n  MediaIncluded.CommentOrDescription maps to media.comment\n  MediaIncluded.Media maps to media.link\n  ConclusionText maps to conclusion\n  ConclusionCode maps to conclusionCode\n  PresentedForm maps to presentedForm\n</pre></p>\n</div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>ComprehensiveMetabolic2000SerumOrPlasmaPanel Profile</b></p>\n  <p>Represents a comprehensive metabolic 2000 panel (CMP) from serum or plasma, which measures various components such as glucose, electrolytes, kidney function, and liver function. The components of this panel are not entirely standardized, so the definition of the CMP includes tests that are optional, or performed by certain laboratories but not others. Therefore, instances typically will include a subset of the listed panel members.</p>\n  <p><b>Mapping Summary</b></p>\n  <p><pre>obf.lab.ComprehensiveMetabolic2000SerumOrPlasmaPanel maps to http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-lab:\n  Language maps to language\n  ImplicitRules maps to implicitRules\n  Metadata.VersionId maps to meta.versionId\n  Metadata.SourceSystem maps to meta.source\n  Metadata.Profile maps to meta.profile\n  Metadata.LastUpdated maps to meta.lastUpdated\n  Metadata.SecurityLabel maps to meta.security\n  Metadata.Tag maps to meta.tag\n  Narrative maps to text\n  Identifier maps to identifier\n  BasedOn maps to basedOn\n  Status maps to status\n  Category maps to category\n  ObservationSubjectOfRecord maps to subject\n  Code maps to code\n  CareContext maps to encounter\n  RelevantTime maps to effective[x]\n  StatementDateTime maps to issued\n  DiagnosticReportPerformer maps to performer\n  ResultsInterpreter maps to resultsInterpreter\n  Specimen maps to specimen\n  LaboratoryObservation maps to result (slice on = $this.resolve().code.coding.code; slice strategy = includes)\n  MediaIncluded.CommentOrDescription maps to media.comment\n  MediaIncluded.Media maps to media.link\n  ConclusionText maps to conclusion\n  ConclusionCode maps to conclusionCode\n  PresentedForm maps to presentedForm\n</pre></p>\n</div>"
   },
   "url": "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-lab-ComprehensiveMetabolic2000SerumOrPlasmaPanel",
   "name": "ComprehensiveMetabolic2000SerumOrPlasmaPanel",
   "title": "obf-lab-ComprehensiveMetabolic2000SerumOrPlasmaPanel",
   "status": "active",
   "experimental": false,
-  "date": "2019-07-20",
+  "date": "2019-07-23",
   "publisher": "The MITRE Corporation",
   "contact": [
     {
@@ -1522,8 +1522,8 @@
           "id": "2",
           "discriminator": [
             {
-              "type": "profile",
-              "path": "target.reference.resolve()"
+              "type": "value",
+              "path": "$this.resolve().code.coding.code"
             }
           ],
           "ordered": false,
@@ -3351,8 +3351,8 @@
           "id": "2",
           "discriminator": [
             {
-              "type": "profile",
-              "path": "target.reference.resolve()"
+              "type": "value",
+              "path": "$this.resolve().code.coding.code"
             }
           ],
           "ordered": false,

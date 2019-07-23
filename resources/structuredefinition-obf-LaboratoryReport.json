@@ -3,14 +3,14 @@
   "id": "obf-LaboratoryReport",
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>LaboratoryReport Profile</b></p>\n  <p>A grouping or summarization of laboratory results, where individual results are typically Observations or nested Observations (panels). This class aligns with US Core DiagnosticReport Profile for Laboratory Results Reporting.</p>\n  <p><b>Mapping Summary</b></p>\n  <p><pre>obf.LaboratoryReport maps to http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-lab:\n  Language maps to language\n  ImplicitRules maps to implicitRules\n  Metadata.VersionId maps to meta.versionId\n  Metadata.SourceSystem maps to meta.source\n  Metadata.Profile maps to meta.profile\n  Metadata.LastUpdated maps to meta.lastUpdated\n  Metadata.SecurityLabel maps to meta.security\n  Metadata.Tag maps to meta.tag\n  Narrative maps to text\n  Identifier maps to identifier\n  BasedOn maps to basedOn\n  Status maps to status\n  Category maps to category\n  ObservationSubjectOfRecord maps to subject\n  Code maps to code\n  CareContext maps to encounter\n  RelevantTime maps to effective[x]\n  StatementDateTime maps to issued\n  DiagnosticReportPerformer maps to performer\n  ResultsInterpreter maps to resultsInterpreter\n  Specimen maps to specimen\n  LaboratoryObservation maps to result (slice on = target.reference.resolve(); slice on type = profile; slice strategy = includes)\n  MediaIncluded.CommentOrDescription maps to media.comment\n  MediaIncluded.Media maps to media.link\n  ConclusionText maps to conclusion\n  ConclusionCode maps to conclusionCode\n  PresentedForm maps to presentedForm\n</pre></p>\n</div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>LaboratoryReport Profile</b></p>\n  <p>A grouping or summarization of laboratory results, where individual results are typically Observations or nested Observations (panels). This class aligns with US Core DiagnosticReport Profile for Laboratory Results Reporting.</p>\n  <p><b>Mapping Summary</b></p>\n  <p><pre>obf.LaboratoryReport maps to http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-lab:\n  Language maps to language\n  ImplicitRules maps to implicitRules\n  Metadata.VersionId maps to meta.versionId\n  Metadata.SourceSystem maps to meta.source\n  Metadata.Profile maps to meta.profile\n  Metadata.LastUpdated maps to meta.lastUpdated\n  Metadata.SecurityLabel maps to meta.security\n  Metadata.Tag maps to meta.tag\n  Narrative maps to text\n  Identifier maps to identifier\n  BasedOn maps to basedOn\n  Status maps to status\n  Category maps to category\n  ObservationSubjectOfRecord maps to subject\n  Code maps to code\n  CareContext maps to encounter\n  RelevantTime maps to effective[x]\n  StatementDateTime maps to issued\n  DiagnosticReportPerformer maps to performer\n  ResultsInterpreter maps to resultsInterpreter\n  Specimen maps to specimen\n  LaboratoryObservation maps to result (slice on = $this.resolve().code.coding.code; slice strategy = includes)\n  MediaIncluded.CommentOrDescription maps to media.comment\n  MediaIncluded.Media maps to media.link\n  ConclusionText maps to conclusion\n  ConclusionCode maps to conclusionCode\n  PresentedForm maps to presentedForm\n</pre></p>\n</div>"
   },
   "url": "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-LaboratoryReport",
   "name": "LaboratoryReport",
   "title": "obf-LaboratoryReport",
   "status": "active",
   "experimental": false,
-  "date": "2019-07-20",
+  "date": "2019-07-23",
   "publisher": "The MITRE Corporation",
   "contact": [
     {
@@ -683,7 +683,7 @@
         "isSummary": true,
         "binding": {
           "strength": "extensible",
-          "valueSet": "http://hl7.org/fhir/ValueSet/report-codes"
+          "valueSet": "http://hl7.org/fhir/us/core/ValueSet/us-core-diagnosticreport-report-and-note-codes"
         },
         "mapping": [
           {
@@ -1466,7 +1466,7 @@
         "path": "DiagnosticReport.code",
         "binding": {
           "strength": "extensible",
-          "valueSet": "http://hl7.org/fhir/ValueSet/report-codes"
+          "valueSet": "http://hl7.org/fhir/us/core/ValueSet/us-core-diagnosticreport-report-and-note-codes"
         }
       },
       {

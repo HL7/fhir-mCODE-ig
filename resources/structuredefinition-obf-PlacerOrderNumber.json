@@ -8,7 +8,7 @@
   "url": "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-PlacerOrderNumber",
   "name": "PlacerOrderNumber",
   "status": "active",
-  "date": "2019-07-20",
+  "date": "2019-07-23",
   "publisher": "The MITRE Corporation",
   "contact": [
     {

@@ -3,7 +3,7 @@
   "id": "obf-SurgicalProcedureVS",
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n<p><b>SurgicalProcedureVS ValueSet</b></p>\n<p>Codes describing surgical procedures. Includes codes from SNOMED CT under the hierarchy of 387713003 &#039;Surgical procedure&#039;. Codes from ICD-10-PCS and CPT are acceptable. CPT codes are not listed here due to intellectual property restrictions. ICD-10-PCS codes are not listed because of a limitation in the FHIR Implementation Guide publisher. For CPT and ICD-10-PCS, only codes representing surgical procedures should be included.</p>\n</div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n<p><b>SurgicalProcedureVS ValueSet</b></p>\n<p>Codes describing surgical procedures. Includes codes from SNOMED CT under the hierarchy of 387713003 &#039;Surgical procedure&#039;. Codes from ICD-10-PCS and CPT are acceptable. CPT codes are not listed here due to intellectual property restrictions. ICD-10-PCS codes are not listed because of a limitation in the FHIR Implementation Guide publisher. For CPT and ICD-10-PCS, only codes representing surgical procedures should be included.\n\nConformance note: If an ICD-10-PCS code is used, and a semantically equivalent SNOMED CT or CPT code is available, the resulting Procedure instance will not be compliant with [US Core Profiles](http://hl7.org/fhir/us/core/STU3/index.html).</p>\n</div>"
   },
   "url": "http://hl7.org/fhir/us/mcode/ValueSet/obf-SurgicalProcedureVS",
   "name": "SurgicalProcedureVS",
@@ -20,8 +20,8 @@
       ]
     }
   ],
-  "date": "2019-07-20",
-  "description": "Codes describing surgical procedures. Includes codes from SNOMED CT under the hierarchy of 387713003 'Surgical procedure'. Codes from ICD-10-PCS and CPT are acceptable. CPT codes are not listed here due to intellectual property restrictions. ICD-10-PCS codes are not listed because of a limitation in the FHIR Implementation Guide publisher. For CPT and ICD-10-PCS, only codes representing surgical procedures should be included.",
+  "date": "2019-07-23",
+  "description": "Codes describing surgical procedures. Includes codes from SNOMED CT under the hierarchy of 387713003 'Surgical procedure'. Codes from ICD-10-PCS and CPT are acceptable. CPT codes are not listed here due to intellectual property restrictions. ICD-10-PCS codes are not listed because of a limitation in the FHIR Implementation Guide publisher. For CPT and ICD-10-PCS, only codes representing surgical procedures should be included.\n\nConformance note: If an ICD-10-PCS code is used, and a semantically equivalent SNOMED CT or CPT code is available, the resulting Procedure instance will not be compliant with [US Core Profiles](http://hl7.org/fhir/us/core/STU3/index.html).",
   "compose": {
     "include": [
       {

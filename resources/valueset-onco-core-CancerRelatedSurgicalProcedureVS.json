@@ -3,7 +3,7 @@
   "id": "onco-core-CancerRelatedSurgicalProcedureVS",
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n<p><b>CancerRelatedSurgicalProcedureVS ValueSet</b></p>\n<p>Includes selected SNOMED CT codes that may be used in the treatment of cancer tumors. Codes from ICD-10-PCS and CPT are acceptable. CPT codes are not listed here due to intellectual property restrictions. ICD-10-PCS codes are not listed because of a limitation in the FHIR Implementation Guide publisher. For CPT and ICD-10-PCS, only codes representing surgical procedures should be used.</p>\n</div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n<p><b>CancerRelatedSurgicalProcedureVS ValueSet</b></p>\n<p>Includes selected SNOMED CT codes that may be used in the treatment of cancer tumors. Codes from ICD-10-PCS and CPT are acceptable. CPT codes are not listed here due to intellectual property restrictions. ICD-10-PCS codes are not listed because of a limitation in the FHIR Implementation Guide publisher. For CPT and ICD-10-PCS, only codes representing surgical procedures should be used.\n\nConformance note: If an ICD-10-PCS code is used, and a semantically equivalent SNOMED CT code is available, the resulting FHIR Procedure instance will not be compliant with [US Core Profiles](http://hl7.org/fhir/us/core/STU3/index.html).</p>\n</div>"
   },
   "url": "http://hl7.org/fhir/us/mcode/ValueSet/onco-core-CancerRelatedSurgicalProcedureVS",
   "name": "CancerRelatedSurgicalProcedureVS",
@@ -20,8 +20,8 @@
       ]
     }
   ],
-  "date": "2019-07-20",
-  "description": "Includes selected SNOMED CT codes that may be used in the treatment of cancer tumors. Codes from ICD-10-PCS and CPT are acceptable. CPT codes are not listed here due to intellectual property restrictions. ICD-10-PCS codes are not listed because of a limitation in the FHIR Implementation Guide publisher. For CPT and ICD-10-PCS, only codes representing surgical procedures should be used.",
+  "date": "2019-07-23",
+  "description": "Includes selected SNOMED CT codes that may be used in the treatment of cancer tumors. Codes from ICD-10-PCS and CPT are acceptable. CPT codes are not listed here due to intellectual property restrictions. ICD-10-PCS codes are not listed because of a limitation in the FHIR Implementation Guide publisher. For CPT and ICD-10-PCS, only codes representing surgical procedures should be used.\n\nConformance note: If an ICD-10-PCS code is used, and a semantically equivalent SNOMED CT code is available, the resulting FHIR Procedure instance will not be compliant with [US Core Profiles](http://hl7.org/fhir/us/core/STU3/index.html).",
   "compose": {
     "include": [
       {
@@ -292,7 +292,7 @@
             "display": "Hepatectomy"
           },
           {
-            "code": "13600000000000000",
+            "code": "13580001000004101",
             "display": "Excision of tumor of liver"
           },
           {

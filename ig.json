@@ -853,9 +853,6 @@
     "ValueSet/obf-ComorbidConditionVS": {
       "base": "ValueSet-obf-ComorbidConditionVS.html"
     },
-    "ValueSet/obf-ConditionCategoryVS": {
-      "base": "ValueSet-obf-ConditionCategoryVS.html"
-    },
     "ValueSet/shr-core-ConditionStatusTrendVS": {
       "base": "ValueSet-shr-core-ConditionStatusTrendVS.html"
     },

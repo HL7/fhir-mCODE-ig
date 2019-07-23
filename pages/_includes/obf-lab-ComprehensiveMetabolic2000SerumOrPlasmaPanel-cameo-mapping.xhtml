@@ -25,7 +25,7 @@ obf.lab.ComprehensiveMetabolic2000SerumOrPlasmaPanel maps to http://hl7.org/fhir
   DiagnosticReportPerformer maps to performer
   ResultsInterpreter maps to resultsInterpreter
   Specimen maps to specimen
-  LaboratoryObservation maps to result (slice on = target.reference.resolve(); slice on type = profile; slice strategy = includes)
+  LaboratoryObservation maps to result (slice on = $this.resolve().code.coding.code; slice strategy = includes)
   MediaIncluded.CommentOrDescription maps to media.comment
   MediaIncluded.Media maps to media.link
   ConclusionText maps to conclusion

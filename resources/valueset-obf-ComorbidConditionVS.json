@@ -3,7 +3,7 @@
   "id": "obf-ComorbidConditionVS",
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n<p><b>ComorbidConditionVS ValueSet</b></p>\n<p>SNOMED and ICD-10 codes for common comorbid conditions. Aligns with Elixhauser comorbidity scale. ICD-10 codes are drawn from https://www.hcup-us.ahrq.gov/toolssoftware/comorbidityicd10/comformat_icd10cm_2019_1.txt</p>\n</div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n<p><b>ComorbidConditionVS ValueSet</b></p>\n<p>SNOMED and ICD-10-CM codes for common comorbid conditions. Aligns with Elixhauser comorbidity scale. ICD-10 codes are drawn from https://www.hcup-us.ahrq.gov/toolssoftware/comorbidityicd10/comformat_icd10cm_2019_1.txt.\n\nConformance note: If an ICD-10-CM code is used, and an equivalent SNOMED-CT code is available, the resulting instance will not validate against US Core Profiles.</p>\n</div>"
   },
   "url": "http://hl7.org/fhir/us/mcode/ValueSet/obf-ComorbidConditionVS",
   "name": "ComorbidConditionVS",
@@ -20,8 +20,8 @@
       ]
     }
   ],
-  "date": "2019-07-20",
-  "description": "SNOMED and ICD-10 codes for common comorbid conditions. Aligns with Elixhauser comorbidity scale. ICD-10 codes are drawn from https://www.hcup-us.ahrq.gov/toolssoftware/comorbidityicd10/comformat_icd10cm_2019_1.txt",
+  "date": "2019-07-23",
+  "description": "SNOMED and ICD-10-CM codes for common comorbid conditions. Aligns with Elixhauser comorbidity scale. ICD-10 codes are drawn from https://www.hcup-us.ahrq.gov/toolssoftware/comorbidityicd10/comformat_icd10cm_2019_1.txt.\n\nConformance note: If an ICD-10-CM code is used, and an equivalent SNOMED-CT code is available, the resulting instance will not validate against US Core Profiles.",
   "compose": {
     "include": [
       {

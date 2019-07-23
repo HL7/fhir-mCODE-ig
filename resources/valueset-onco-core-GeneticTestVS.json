@@ -3,7 +3,7 @@
   "id": "onco-core-GeneticTestVS",
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n<p><b>GeneticTestVS ValueSet</b></p>\n<p>Value set containing codes representing genetic tests. Currently the best source of codes is the [Genetic Test Registry](http://www.ncbi.nlm.nih.gov/gtr). The user should be aware that the GTR cannot be a sole reliable source since the test data is voluntarily updated and there is no overarching data steward. This value set contains all codes from GTR.</p>\n</div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n<p><b>GeneticTestVS ValueSet</b></p>\n<p>Value set containing codes representing genetic tests. Currently the best source of codes is the [Genetic Test Registry](http://www.ncbi.nlm.nih.gov/gtr). The user should be aware that the GTR cannot be a sole reliable source since the test data is voluntarily updated and there is no overarching data steward. This value set contains all codes from http://hl7.org/fhir/us/core/ValueSet/us-core-diagnosticreport-lab-codes, and all codes from GTR.\n\nConformance note: To be conformant to US Core, a LOINC code must be used, if available. Only if there is no suitable code in LOINC may other codes (such as those from GTR) be used.</p>\n</div>"
   },
   "url": "http://hl7.org/fhir/us/mcode/ValueSet/onco-core-GeneticTestVS",
   "name": "GeneticTestVS",
@@ -20,10 +20,13 @@
       ]
     }
   ],
-  "date": "2019-07-20",
-  "description": "Value set containing codes representing genetic tests. Currently the best source of codes is the [Genetic Test Registry](http://www.ncbi.nlm.nih.gov/gtr). The user should be aware that the GTR cannot be a sole reliable source since the test data is voluntarily updated and there is no overarching data steward. This value set contains all codes from GTR.",
+  "date": "2019-07-23",
+  "description": "Value set containing codes representing genetic tests. Currently the best source of codes is the [Genetic Test Registry](http://www.ncbi.nlm.nih.gov/gtr). The user should be aware that the GTR cannot be a sole reliable source since the test data is voluntarily updated and there is no overarching data steward. This value set contains all codes from http://hl7.org/fhir/us/core/ValueSet/us-core-diagnosticreport-lab-codes, and all codes from GTR.\n\nConformance note: To be conformant to US Core, a LOINC code must be used, if available. Only if there is no suitable code in LOINC may other codes (such as those from GTR) be used.",
   "compose": {
     "include": [
+      {
+        "system": "http://hl7.org/fhir/us/core/ValueSet/us-core-diagnosticreport-lab-codes"
+      },
       {
         "system": "http://www.ncbi.nlm.nih.gov/gtr"
       }

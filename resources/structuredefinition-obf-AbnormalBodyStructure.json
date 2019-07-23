@@ -10,7 +10,7 @@
   "title": "obf-AbnormalBodyStructure",
   "status": "active",
   "experimental": false,
-  "date": "2019-07-20",
+  "date": "2019-07-23",
   "publisher": "The MITRE Corporation",
   "contact": [
     {
@@ -664,7 +664,7 @@
         "isSummary": false,
         "binding": {
           "strength": "extensible",
-          "valueSet": "http://hl7.org/fhir/us/mcode/ValueSet/obf-ConditionCategoryVS"
+          "valueSet": "http://hl7.org/fhir/us/core/ValueSet/us-core-condition-category"
         },
         "mapping": [
           {
@@ -1929,11 +1929,7 @@
         "id": "Condition:obf-AbnormalBodyStructure.category",
         "path": "Condition.category",
         "min": 1,
-        "max": "1",
-        "binding": {
-          "strength": "extensible",
-          "valueSet": "http://hl7.org/fhir/us/mcode/ValueSet/obf-ConditionCategoryVS"
-        }
+        "max": "1"
       },
       {
         "id": "Condition:obf-AbnormalBodyStructure.code",

@@ -8,7 +8,7 @@
   "url": "http://hl7.org/fhir/us/mcode/StructureDefinition/onco-core-TNMClinicalDistantMetastasesCategory",
   "name": "TNMClinicalDistantMetastasesCategory",
   "status": "active",
-  "date": "2019-07-23",
+  "date": "2019-07-24",
   "publisher": "The MITRE Corporation",
   "contact": [
     {
@@ -1709,7 +1709,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/StructureDefinition/Device"
+              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-device"
             ]
           }
         ],
@@ -2151,7 +2151,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/StructureDefinition/DocumentReference",
+              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference",
               "http://hl7.org/fhir/StructureDefinition/Media",
               "http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse",
               "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-Observation"
@@ -3110,7 +3110,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/StructureDefinition/Device"
+              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-device"
             ]
           }
         ]
@@ -3172,7 +3172,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/StructureDefinition/DocumentReference",
+              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference",
               "http://hl7.org/fhir/StructureDefinition/Media",
               "http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse",
               "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-Observation"

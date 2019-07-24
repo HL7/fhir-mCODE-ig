@@ -20,7 +20,7 @@
       ]
     }
   ],
-  "date": "2019-07-23",
+  "date": "2019-07-24",
   "description": "System used for staging. Because SNOMED CT does not currently have a code representing AJCC Version 8, specify the exact text 'AJCC Version 8' in the text sub-field of the code structure, and omit the code.",
   "compose": {
     "include": [

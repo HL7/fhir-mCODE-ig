@@ -10,7 +10,7 @@
   "title": "onco-core-Tumor",
   "status": "active",
   "experimental": false,
-  "date": "2019-07-23",
+  "date": "2019-07-24",
   "publisher": "The MITRE Corporation",
   "contact": [
     {
@@ -1348,7 +1348,7 @@
             "code": "Reference",
             "targetProfile": [
               "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner",
-              "http://hl7.org/fhir/StructureDefinition/PractitionerRole",
+              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole",
               "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-Patient",
               "http://hl7.org/fhir/StructureDefinition/RelatedPerson"
             ]
@@ -2146,7 +2146,7 @@
             "code": "Reference",
             "targetProfile": [
               "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner",
-              "http://hl7.org/fhir/StructureDefinition/PractitionerRole",
+              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole",
               "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-Patient",
               "http://hl7.org/fhir/StructureDefinition/RelatedPerson"
             ]

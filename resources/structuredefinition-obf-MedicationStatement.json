@@ -10,7 +10,7 @@
   "title": "obf-MedicationStatement",
   "status": "active",
   "experimental": false,
-  "date": "2019-07-23",
+  "date": "2019-07-24",
   "publisher": "The MITRE Corporation",
   "contact": [
     {
@@ -631,7 +631,7 @@
             "code": "Reference",
             "targetProfile": [
               "http://hl7.org/fhir/StructureDefinition/ServiceRequest",
-              "http://hl7.org/fhir/StructureDefinition/MedicationRequest"
+              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest"
             ]
           }
         ],
@@ -815,8 +815,8 @@
         ]
       },
       {
-        "id": "MedicationStatement:obf-MedicationStatement.medicationCodeableConcept",
-        "path": "MedicationStatement.medicationCodeableConcept",
+        "id": "MedicationStatement:obf-MedicationStatement.medication[x]",
+        "path": "MedicationStatement.medication[x]",
         "short": "What medication was taken",
         "definition": "Identifies the medication being administered. This is either a link to a resource representing the details of the medication or a simple attribute carrying a code that identifies the medication from a known list of medications.",
         "comment": "If only a code is specified, then it needs to be a code for a specific product. If more information is required, then the use of the medication resource is recommended.  For example, if you require form or lot number, then you must reference the Medication resource.",
@@ -830,6 +830,12 @@
         "type": [
           {
             "code": "CodeableConcept"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-medication"
+            ]
           }
         ],
         "mustSupport": true,
@@ -1327,7 +1333,7 @@
             "code": "Reference",
             "targetProfile": [
               "http://hl7.org/fhir/StructureDefinition/ServiceRequest",
-              "http://hl7.org/fhir/StructureDefinition/MedicationRequest"
+              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest"
             ]
           }
         ]
@@ -1344,15 +1350,6 @@
               "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-Procedure",
               "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-Observation"
             ]
-          }
-        ]
-      },
-      {
-        "id": "MedicationStatement:obf-MedicationStatement.medicationCodeableConcept",
-        "path": "MedicationStatement.medicationCodeableConcept",
-        "type": [
-          {
-            "code": "CodeableConcept"
           }
         ]
       },

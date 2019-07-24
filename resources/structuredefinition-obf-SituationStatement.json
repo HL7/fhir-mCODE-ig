@@ -8,7 +8,7 @@
   "url": "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-SituationStatement",
   "name": "SituationStatement",
   "status": "active",
-  "date": "2019-07-23",
+  "date": "2019-07-24",
   "publisher": "The MITRE Corporation",
   "contact": [
     {

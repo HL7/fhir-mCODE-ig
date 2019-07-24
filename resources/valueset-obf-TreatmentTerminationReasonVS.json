@@ -20,7 +20,7 @@
       ]
     }
   ],
-  "date": "2019-07-23",
+  "date": "2019-07-24",
   "description": "Values used to describe the reasons for stopping a treatment. Includes code for 'treatment completed' as well as codes for unplanned (early) stoppage. Applies to medications and other treatments that take place over a period of time, such as radiation treatments.",
   "compose": {
     "include": [

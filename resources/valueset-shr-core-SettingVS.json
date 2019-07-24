@@ -20,7 +20,7 @@
       ]
     }
   ],
-  "date": "2019-07-23",
+  "date": "2019-07-24",
   "description": "What type of place is found at a given location. More than one descriptor may be applicable.",
   "compose": {
     "include": [

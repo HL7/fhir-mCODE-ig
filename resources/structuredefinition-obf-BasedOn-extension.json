@@ -9,7 +9,7 @@
   "name": "BasedOn",
   "title": "obf-BasedOn",
   "status": "draft",
-  "date": "2019-07-23",
+  "date": "2019-07-24",
   "publisher": "The MITRE Corporation",
   "contact": [
     {
@@ -198,7 +198,7 @@
             "code": "Reference",
             "targetProfile": [
               "http://hl7.org/fhir/StructureDefinition/ServiceRequest",
-              "http://hl7.org/fhir/StructureDefinition/MedicationRequest"
+              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest"
             ]
           }
         ],
@@ -248,7 +248,7 @@
             "code": "Reference",
             "targetProfile": [
               "http://hl7.org/fhir/StructureDefinition/ServiceRequest",
-              "http://hl7.org/fhir/StructureDefinition/MedicationRequest"
+              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest"
             ]
           }
         ]

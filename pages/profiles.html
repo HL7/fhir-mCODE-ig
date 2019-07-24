@@ -100,7 +100,7 @@ Conformance note: If an ICD-10-CM code is used for the code attribute, and a sem
     <tr>
       <td><a href="StructureDefinition-onco-core-GeneticVariantFound.html">GeneticVariantFound</a></td>
       <td><a href="http://hl7.org/fhir/R4/observation.html">Observation</a></td>
-      <td>{% capture md_text %}Records an alteration in the most common DNA nucleotide sequence. The term variant can be used to describe an alteration that may be benign, pathogenic, or of unknown significance. The term variant is increasingly being used in place of the term mutation.{% endcapture %}{{ md_text | markdownify }}</td>
+      <td>{% capture md_text %}Records an alteration in the most common DNA nucleotide sequence. The term variant can be used to describe an alteration that may be benign, pathogenic, or of unknown significance. The term variant is increasingly being used in place of the term mutation. When reporting 'Genetic Variant Found', at least one element out of the following must be reported: 'Variant Found Identifier', 'Variant Found HGVS Name', and 'Variant Found Description'.{% endcapture %}{{ md_text | markdownify }}</td>
     </tr>
     <tr>
       <td><a href="StructureDefinition-onco-core-GeneticVariantTested.html">GeneticVariantTested</a></td>

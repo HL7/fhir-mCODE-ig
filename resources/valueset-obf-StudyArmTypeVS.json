@@ -20,7 +20,7 @@
       ]
     }
   ],
-  "date": "2019-07-23",
+  "date": "2019-07-24",
   "description": "The role of each arm in the clinical trial.\n\nFHIR is currently unable to handle values from NCI Thesaurus, so no values are listed in the Expansion, below. The values ARE in the downloads. For convenience, here is a listing of values in this value set:\nNCIT#C94487     'Intervention Group'\nNCIT#C68609     'Active Comparator'\nNCIT#C49648     'Placebo Control'\nNCIT#C116527    'Sham Intervention'",
   "compose": {
     "include": [

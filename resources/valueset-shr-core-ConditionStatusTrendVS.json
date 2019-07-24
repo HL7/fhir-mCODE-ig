@@ -20,7 +20,7 @@
       ]
     }
   ],
-  "date": "2019-07-23",
+  "date": "2019-07-24",
   "description": "Standardized value set that describes the trend or status of a disease, condition, or ability. Based on LOINC answer lists LL2751-7 and LL4721-8. The value SNOMED-CT 260415000 (Not Detected) should be used to express No Evidence of Disease (NED), condition resolved, or full remission.",
   "compose": {
     "include": [

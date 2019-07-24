@@ -9,7 +9,7 @@
   "name": "Participant",
   "title": "obf-Participant",
   "status": "draft",
-  "date": "2019-07-23",
+  "date": "2019-07-24",
   "publisher": "The MITRE Corporation",
   "contact": [
     {
@@ -201,7 +201,7 @@
               "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner",
               "http://hl7.org/fhir/StructureDefinition/RelatedPerson",
               "http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization",
-              "http://hl7.org/fhir/StructureDefinition/Device",
+              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-device",
               "http://hl7.org/fhir/StructureDefinition/Group",
               "http://hl7.org/fhir/us/core/StructureDefinition/us-core-location"
             ]
@@ -256,7 +256,7 @@
               "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner",
               "http://hl7.org/fhir/StructureDefinition/RelatedPerson",
               "http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization",
-              "http://hl7.org/fhir/StructureDefinition/Device",
+              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-device",
               "http://hl7.org/fhir/StructureDefinition/Group",
               "http://hl7.org/fhir/us/core/StructureDefinition/us-core-location"
             ]

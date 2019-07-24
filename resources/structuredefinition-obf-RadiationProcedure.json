@@ -10,7 +10,7 @@
   "title": "obf-RadiationProcedure",
   "status": "active",
   "experimental": false,
-  "date": "2019-07-23",
+  "date": "2019-07-24",
   "publisher": "The MITRE Corporation",
   "contact": [
     {
@@ -1598,7 +1598,7 @@
               "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-Observation",
               "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-Procedure",
               "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-DiagnosticReport",
-              "http://hl7.org/fhir/StructureDefinition/DocumentReference"
+              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference"
             ]
           }
         ],
@@ -2261,7 +2261,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/StructureDefinition/Device"
+              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-device"
             ]
           }
         ],
@@ -2292,8 +2292,8 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/StructureDefinition/Device",
-              "http://hl7.org/fhir/StructureDefinition/Medication",
+              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-device",
+              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-medication",
               "http://hl7.org/fhir/StructureDefinition/Substance"
             ]
           }
@@ -2675,7 +2675,7 @@
               "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-Observation",
               "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-Procedure",
               "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-DiagnosticReport",
-              "http://hl7.org/fhir/StructureDefinition/DocumentReference"
+              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference"
             ]
           }
         ],
@@ -2804,14 +2804,26 @@
         }
       },
       {
+        "id": "Procedure:obf-RadiationProcedure.focalDevice.manipulated",
+        "path": "Procedure.focalDevice.manipulated",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-device"
+            ]
+          }
+        ]
+      },
+      {
         "id": "Procedure:obf-RadiationProcedure.usedReference",
         "path": "Procedure.usedReference",
         "type": [
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/StructureDefinition/Device",
-              "http://hl7.org/fhir/StructureDefinition/Medication",
+              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-device",
+              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-medication",
               "http://hl7.org/fhir/StructureDefinition/Substance"
             ]
           }

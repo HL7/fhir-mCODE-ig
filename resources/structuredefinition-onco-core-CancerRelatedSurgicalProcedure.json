@@ -10,7 +10,7 @@
   "title": "onco-core-CancerRelatedSurgicalProcedure",
   "status": "active",
   "experimental": false,
-  "date": "2019-07-23",
+  "date": "2019-07-24",
   "publisher": "The MITRE Corporation",
   "contact": [
     {
@@ -2029,7 +2029,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/StructureDefinition/Device"
+              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-device"
             ]
           }
         ],
@@ -2060,8 +2060,8 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/StructureDefinition/Device",
-              "http://hl7.org/fhir/StructureDefinition/Medication",
+              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-device",
+              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-medication",
               "http://hl7.org/fhir/StructureDefinition/Substance"
             ]
           }
@@ -2473,14 +2473,26 @@
         }
       },
       {
+        "id": "Procedure:onco-core-CancerRelatedSurgicalProcedure.focalDevice.manipulated",
+        "path": "Procedure.focalDevice.manipulated",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-device"
+            ]
+          }
+        ]
+      },
+      {
         "id": "Procedure:onco-core-CancerRelatedSurgicalProcedure.usedReference",
         "path": "Procedure.usedReference",
         "type": [
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/StructureDefinition/Device",
-              "http://hl7.org/fhir/StructureDefinition/Medication",
+              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-device",
+              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-medication",
               "http://hl7.org/fhir/StructureDefinition/Substance"
             ]
           }

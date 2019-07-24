@@ -1648,7 +1648,8 @@
             "identity": "rim",
             "map": "methodCode"
           }
-        ]
+        ],
+        "mustSupport": true
       },
       {
         "id": "Observation:onco-core-TNMClinicalPrimaryTumorCategory.specimen",
@@ -3093,7 +3094,8 @@
           "valueSet": "http://hl7.org/fhir/us/mcode/ValueSet/onco-core-CancerStagingSystemVS"
         },
         "short": "Method or staging system used to stage the cancer",
-        "definition": "Method or staging system used to stage the cancer."
+        "definition": "Method or staging system used to stage the cancer.",
+        "mustSupport": true
       },
       {
         "id": "Observation:onco-core-TNMClinicalPrimaryTumorCategory.specimen",

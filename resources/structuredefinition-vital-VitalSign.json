@@ -10,7 +10,7 @@
   "title": "vital-VitalSign",
   "status": "draft",
   "experimental": false,
-  "date": "2019-07-24",
+  "date": "2019-07-25",
   "publisher": "The MITRE Corporation",
   "contact": [
     {
@@ -64,7 +64,7 @@
   "snapshot": {
     "element": [
       {
-        "id": "Observation:vital-VitalSign",
+        "id": "Observation",
         "path": "Observation",
         "short": "vital-VitalSign",
         "definition": "Abstract class parent for all vital sign profiles.",
@@ -183,7 +183,7 @@
         ]
       },
       {
-        "id": "Observation:vital-VitalSign.id",
+        "id": "Observation.id",
         "path": "Observation.id",
         "short": "Logical id of this artifact",
         "definition": "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.",
@@ -204,7 +204,7 @@
         "isSummary": true
       },
       {
-        "id": "Observation:vital-VitalSign.meta",
+        "id": "Observation.meta",
         "path": "Observation.meta",
         "short": "Metadata about the resource",
         "definition": "The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.",
@@ -224,7 +224,7 @@
         "isSummary": true
       },
       {
-        "id": "Observation:vital-VitalSign.implicitRules",
+        "id": "Observation.implicitRules",
         "path": "Observation.implicitRules",
         "short": "A set of rules under which this content was created",
         "definition": "A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.",
@@ -246,7 +246,7 @@
         "isSummary": true
       },
       {
-        "id": "Observation:vital-VitalSign.language",
+        "id": "Observation.language",
         "path": "Observation.language",
         "short": "Language of the resource content",
         "definition": "The base language in which the resource is written.",
@@ -286,7 +286,7 @@
         }
       },
       {
-        "id": "Observation:vital-VitalSign.text",
+        "id": "Observation.text",
         "path": "Observation.text",
         "short": "Text summary of the resource, for human interpretation",
         "definition": "A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.",
@@ -319,7 +319,7 @@
         ]
       },
       {
-        "id": "Observation:vital-VitalSign.contained",
+        "id": "Observation.contained",
         "path": "Observation.contained",
         "short": "Contained, inline Resources",
         "definition": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope.",
@@ -351,7 +351,7 @@
         ]
       },
       {
-        "id": "Observation:vital-VitalSign.extension",
+        "id": "Observation.extension",
         "path": "Observation.extension",
         "short": "Additional content defined by implementations",
         "definition": "May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
@@ -393,7 +393,7 @@
         }
       },
       {
-        "id": "Observation:vital-VitalSign.extension:preconditioncode",
+        "id": "Observation.extension:preconditioncode",
         "path": "Observation.extension",
         "definition": "A coded description of the conditions or context of an observation, for example, under sedation, fasting or post-exercise. A qualifier cannot modify the measurement type; for example, a fasting blood sugar is still a blood sugar.",
         "min": 0,
@@ -416,7 +416,7 @@
         "sliceName": "preconditioncode"
       },
       {
-        "id": "Observation:vital-VitalSign.modifierExtension",
+        "id": "Observation.modifierExtension",
         "path": "Observation.modifierExtension",
         "short": "Extensions that cannot be ignored",
         "definition": "May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
@@ -449,7 +449,7 @@
         ]
       },
       {
-        "id": "Observation:vital-VitalSign.identifier",
+        "id": "Observation.identifier",
         "path": "Observation.identifier",
         "short": "Business Identifier for observation",
         "definition": "A unique identifier assigned to this observation.",
@@ -488,7 +488,7 @@
         ]
       },
       {
-        "id": "Observation:vital-VitalSign.basedOn",
+        "id": "Observation.basedOn",
         "path": "Observation.basedOn",
         "short": "Fulfills plan, proposal or order",
         "definition": "A plan, proposal or order that is fulfilled in whole or in part by this event.  For example, a MedicationRequest may require a patient to have laboratory test performed before  it is dispensed.",
@@ -530,7 +530,7 @@
         ]
       },
       {
-        "id": "Observation:vital-VitalSign.partOf",
+        "id": "Observation.partOf",
         "path": "Observation.partOf",
         "short": "A larger event of which this particular Observation is a component or step. For example, an observation as part of a procedure.",
         "definition": "A larger event of which this particular Observation is a component or step. For example, an observation as part of a procedure.",
@@ -573,7 +573,7 @@
         ]
       },
       {
-        "id": "Observation:vital-VitalSign.status",
+        "id": "Observation.status",
         "extension": [
           {
             "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-display-hint",
@@ -635,7 +635,7 @@
         ]
       },
       {
-        "id": "Observation:vital-VitalSign.category",
+        "id": "Observation.category",
         "path": "Observation.category",
         "slicing": {
           "discriminator": [
@@ -693,7 +693,7 @@
         ]
       },
       {
-        "id": "Observation:vital-VitalSign.category:VSCat",
+        "id": "Observation.category:VSCat",
         "path": "Observation.category",
         "sliceName": "VSCat",
         "short": "Classification of  type of observation",
@@ -738,7 +738,7 @@
         ]
       },
       {
-        "id": "Observation:vital-VitalSign.category:VSCat.id",
+        "id": "Observation.category:VSCat.id",
         "path": "Observation.category.id",
         "representation": [
           "xmlAttr"
@@ -767,7 +767,7 @@
         ]
       },
       {
-        "id": "Observation:vital-VitalSign.category:VSCat.extension",
+        "id": "Observation.category:VSCat.extension",
         "path": "Observation.category.extension",
         "slicing": {
           "discriminator": [
@@ -808,7 +808,7 @@
         ]
       },
       {
-        "id": "Observation:vital-VitalSign.category:VSCat.coding",
+        "id": "Observation.category:VSCat.coding",
         "path": "Observation.category.coding",
         "short": "Code defined by a terminology system",
         "definition": "A reference to a code defined by a terminology system.",
@@ -856,7 +856,7 @@
         }
       },
       {
-        "id": "Observation:vital-VitalSign.category:VSCat.coding:Fixed_vital-signs",
+        "id": "Observation.category:VSCat.coding:Fixed_vital-signs",
         "path": "Observation.category.coding",
         "sliceName": "Fixed_vital-signs",
         "short": "Code defined by a terminology system",
@@ -876,7 +876,7 @@
         "isSummary": true
       },
       {
-        "id": "Observation:vital-VitalSign.category:VSCat.coding:Fixed_vital-signs.id",
+        "id": "Observation.category:VSCat.coding:Fixed_vital-signs.id",
         "path": "Observation.category.coding.id",
         "representation": [
           "xmlAttr"
@@ -905,7 +905,7 @@
         ]
       },
       {
-        "id": "Observation:vital-VitalSign.category:VSCat.coding:Fixed_vital-signs.extension",
+        "id": "Observation.category:VSCat.coding:Fixed_vital-signs.extension",
         "path": "Observation.category.coding.extension",
         "slicing": {
           "discriminator": [
@@ -946,7 +946,7 @@
         ]
       },
       {
-        "id": "Observation:vital-VitalSign.category:VSCat.coding:Fixed_vital-signs.system",
+        "id": "Observation.category:VSCat.coding:Fixed_vital-signs.system",
         "path": "Observation.category.coding.system",
         "short": "Identity of the terminology system",
         "definition": "The identification of the code system that defines the meaning of the symbol in the code.",
@@ -983,7 +983,7 @@
         "fixedUri": "http://terminology.hl7.org/CodeSystem/observation-category"
       },
       {
-        "id": "Observation:vital-VitalSign.category:VSCat.coding:Fixed_vital-signs.version",
+        "id": "Observation.category:VSCat.coding:Fixed_vital-signs.version",
         "path": "Observation.category.coding.version",
         "short": "Version of the system - if relevant",
         "definition": "The version of the code system which was used when choosing this code. Note that a well-maintained code system does not need the version reported, because the meaning of codes is consistent across versions. However this cannot consistently be assured, and when the meaning is not guaranteed to be consistent, the version SHOULD be exchanged.",
@@ -1018,7 +1018,7 @@
         ]
       },
       {
-        "id": "Observation:vital-VitalSign.category:VSCat.coding:Fixed_vital-signs.code",
+        "id": "Observation.category:VSCat.coding:Fixed_vital-signs.code",
         "path": "Observation.category.coding.code",
         "short": "Symbol in syntax defined by the system",
         "definition": "A symbol in syntax defined by the system. The symbol may be a predefined code or an expression in a syntax defined by the coding system (e.g. post-coordination).",
@@ -1054,7 +1054,7 @@
         "fixedCode": "vital-signs"
       },
       {
-        "id": "Observation:vital-VitalSign.category:VSCat.coding:Fixed_vital-signs.display",
+        "id": "Observation.category:VSCat.coding:Fixed_vital-signs.display",
         "extension": [
           {
             "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable",
@@ -1095,7 +1095,7 @@
         ]
       },
       {
-        "id": "Observation:vital-VitalSign.category:VSCat.coding:Fixed_vital-signs.userSelected",
+        "id": "Observation.category:VSCat.coding:Fixed_vital-signs.userSelected",
         "path": "Observation.category.coding.userSelected",
         "short": "If this coding was chosen directly by the user",
         "definition": "Indicates that this coding was chosen by a user directly - e.g. off a pick list of available items (codes or displays).",
@@ -1131,7 +1131,7 @@
         ]
       },
       {
-        "id": "Observation:vital-VitalSign.category:VSCat.text",
+        "id": "Observation.category:VSCat.text",
         "extension": [
           {
             "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable",
@@ -1173,7 +1173,7 @@
         ]
       },
       {
-        "id": "Observation:vital-VitalSign.code",
+        "id": "Observation.code",
         "path": "Observation.code",
         "short": "Coded Responses from C-CDA Vital Sign Results",
         "definition": "Coded Responses from C-CDA Vital Sign Results.",
@@ -1236,7 +1236,7 @@
         ]
       },
       {
-        "id": "Observation:vital-VitalSign.subject",
+        "id": "Observation.subject",
         "path": "Observation.subject",
         "short": "The subject of an observation",
         "definition": "The subject of an observation.",
@@ -1284,7 +1284,7 @@
         ]
       },
       {
-        "id": "Observation:vital-VitalSign.focus",
+        "id": "Observation.focus",
         "extension": [
           {
             "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
@@ -1332,7 +1332,7 @@
         ]
       },
       {
-        "id": "Observation:vital-VitalSign.encounter",
+        "id": "Observation.encounter",
         "path": "Observation.encounter",
         "short": "Healthcare event during which this observation is made",
         "definition": "The healthcare event  (e.g. a patient and healthcare provider interaction) during which this observation is made.",
@@ -1378,7 +1378,7 @@
         ]
       },
       {
-        "id": "Observation:vital-VitalSign.effective[x]",
+        "id": "Observation.effective[x]",
         "path": "Observation.effective[x]",
         "short": "Often just a dateTime for Vital Signs",
         "definition": "Often just a dateTime for Vital Signs.",
@@ -1434,7 +1434,7 @@
         ]
       },
       {
-        "id": "Observation:vital-VitalSign.issued",
+        "id": "Observation.issued",
         "path": "Observation.issued",
         "short": "Date/Time this version was made available",
         "definition": "The date and time this version of the observation was made available to providers, typically after the results have been reviewed and verified.",
@@ -1469,7 +1469,7 @@
         ]
       },
       {
-        "id": "Observation:vital-VitalSign.performer",
+        "id": "Observation.performer",
         "path": "Observation.performer",
         "short": "Who is responsible for the observation",
         "definition": "Who was responsible for asserting the observed value as \"true\".",
@@ -1514,7 +1514,7 @@
         ]
       },
       {
-        "id": "Observation:vital-VitalSign.valueQuantity",
+        "id": "Observation.valueQuantity",
         "path": "Observation.valueQuantity",
         "short": "Vital Signs value are recorded using the Quantity data type. For supporting observations such as Cuff size could use other datatypes such as CodeableConcept.",
         "definition": "Vital Signs value are recorded using the Quantity data type. For supporting observations such as Cuff size could use other datatypes such as CodeableConcept.",
@@ -1558,7 +1558,7 @@
         ]
       },
       {
-        "id": "Observation:vital-VitalSign.dataAbsentReason",
+        "id": "Observation.dataAbsentReason",
         "path": "Observation.dataAbsentReason",
         "short": "Why the result is missing",
         "definition": "Provides a reason why the expected value in the element Observation.value[x] is missing.",
@@ -1605,7 +1605,7 @@
         ]
       },
       {
-        "id": "Observation:vital-VitalSign.interpretation",
+        "id": "Observation.interpretation",
         "path": "Observation.interpretation",
         "short": "High, low, normal, etc.",
         "definition": "A categorical assessment of an observation value.  For example, high, low, normal.",
@@ -1652,7 +1652,7 @@
         ]
       },
       {
-        "id": "Observation:vital-VitalSign.note",
+        "id": "Observation.note",
         "path": "Observation.note",
         "short": "Comments about the observation",
         "definition": "Comments about the observation or the results.",
@@ -1684,7 +1684,7 @@
         ]
       },
       {
-        "id": "Observation:vital-VitalSign.bodySite",
+        "id": "Observation.bodySite",
         "path": "Observation.bodySite",
         "short": "Observed body part",
         "definition": "Indicates the site on the subject's body where the observation was made (i.e. the target site).",
@@ -1705,7 +1705,7 @@
         "isSummary": false,
         "binding": {
           "strength": "preferred",
-          "valueSet": "http://hl7.org/fhir/us/mcode/ValueSet/shr-core-BodyLocationVS"
+          "valueSet": "http://hl7.org/fhir/us/mcode/ValueSet/obf-datatype-BodyLocationVS"
         },
         "mapping": [
           {
@@ -1727,7 +1727,7 @@
         ]
       },
       {
-        "id": "Observation:vital-VitalSign.method",
+        "id": "Observation.method",
         "path": "Observation.method",
         "short": "How it was done",
         "definition": "Indicates the mechanism used to perform the observation.",
@@ -1770,7 +1770,7 @@
         ]
       },
       {
-        "id": "Observation:vital-VitalSign.specimen",
+        "id": "Observation.specimen",
         "path": "Observation.specimen",
         "short": "Specimen used for this observation",
         "definition": "The specimen that was used when this observation was made.",
@@ -1812,7 +1812,7 @@
         ]
       },
       {
-        "id": "Observation:vital-VitalSign.device",
+        "id": "Observation.device",
         "path": "Observation.device",
         "short": "(Measurement) Device",
         "definition": "The device used to generate the observation data.",
@@ -1854,7 +1854,7 @@
         ]
       },
       {
-        "id": "Observation:vital-VitalSign.referenceRange",
+        "id": "Observation.referenceRange",
         "path": "Observation.referenceRange",
         "short": "Provides guide for interpretation",
         "definition": "Guidance on how to interpret the value by comparison to a normal or recommended range.  Multiple reference ranges are interpreted as an \"OR\".   In other words, to represent two distinct target populations, two `referenceRange` elements would be used.",
@@ -1903,7 +1903,7 @@
         ]
       },
       {
-        "id": "Observation:vital-VitalSign.referenceRange.id",
+        "id": "Observation.referenceRange.id",
         "path": "Observation.referenceRange.id",
         "representation": [
           "xmlAttr"
@@ -1932,7 +1932,7 @@
         ]
       },
       {
-        "id": "Observation:vital-VitalSign.referenceRange.extension",
+        "id": "Observation.referenceRange.extension",
         "path": "Observation.referenceRange.extension",
         "short": "Additional content defined by implementations",
         "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
@@ -1963,7 +1963,7 @@
         ]
       },
       {
-        "id": "Observation:vital-VitalSign.referenceRange.modifierExtension",
+        "id": "Observation.referenceRange.modifierExtension",
         "path": "Observation.referenceRange.modifierExtension",
         "short": "Extensions that cannot be ignored even if unrecognized",
         "definition": "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
@@ -1997,7 +1997,7 @@
         ]
       },
       {
-        "id": "Observation:vital-VitalSign.referenceRange.low",
+        "id": "Observation.referenceRange.low",
         "path": "Observation.referenceRange.low",
         "short": "Low Range, if relevant",
         "definition": "The value of the low bound of the reference range.  The low bound of the reference range endpoint is inclusive of the value (e.g.  reference range is >=5 - <=9). If the low bound is omitted,  it is assumed to be meaningless (e.g. reference range is <=2.3).",
@@ -2033,7 +2033,7 @@
         ]
       },
       {
-        "id": "Observation:vital-VitalSign.referenceRange.high",
+        "id": "Observation.referenceRange.high",
         "path": "Observation.referenceRange.high",
         "short": "High Range, if relevant",
         "definition": "The value of the high bound of the reference range.  The high bound of the reference range endpoint is inclusive of the value (e.g.  reference range is >=5 - <=9). If the high bound is omitted,  it is assumed to be meaningless (e.g. reference range is >= 2.3).",
@@ -2069,7 +2069,7 @@
         ]
       },
       {
-        "id": "Observation:vital-VitalSign.referenceRange.type",
+        "id": "Observation.referenceRange.type",
         "path": "Observation.referenceRange.type",
         "short": "Reference range qualifier",
         "definition": "Codes to indicate the what part of the targeted reference population it applies to. For example, the normal or therapeutic range.",
@@ -2116,7 +2116,7 @@
         ]
       },
       {
-        "id": "Observation:vital-VitalSign.referenceRange.appliesTo",
+        "id": "Observation.referenceRange.appliesTo",
         "path": "Observation.referenceRange.appliesTo",
         "short": "Reference range population",
         "definition": "Codes to indicate the target population this reference range applies to.  For example, a reference range may be based on the normal population or a particular sex or race.  Multiple `appliesTo`  are interpreted as an \"AND\" of the target populations.  For example, to represent a target population of African American females, both a code of female and a code for African American would be used.",
@@ -2163,7 +2163,7 @@
         ]
       },
       {
-        "id": "Observation:vital-VitalSign.referenceRange.age",
+        "id": "Observation.referenceRange.age",
         "path": "Observation.referenceRange.age",
         "short": "Applicable age range, if relevant",
         "definition": "The age at which this reference range is applicable. This is a neonatal age (e.g. number of weeks at term) if the meaning says so.",
@@ -2190,7 +2190,7 @@
         ]
       },
       {
-        "id": "Observation:vital-VitalSign.referenceRange.text",
+        "id": "Observation.referenceRange.text",
         "path": "Observation.referenceRange.text",
         "short": "Text based reference range in an observation",
         "definition": "Text based reference range in an observation which may be used when a quantitative range is not appropriate for an observation.  An example would be a reference value of \"Negative\" or a list or table of \"normals\".",
@@ -2220,7 +2220,7 @@
         ]
       },
       {
-        "id": "Observation:vital-VitalSign.hasMember",
+        "id": "Observation.hasMember",
         "path": "Observation.hasMember",
         "short": "Abstract class parent for all vital sign profiles",
         "definition": "Abstract class parent for all vital sign profiles.",
@@ -2254,7 +2254,7 @@
         ]
       },
       {
-        "id": "Observation:vital-VitalSign.derivedFrom",
+        "id": "Observation.derivedFrom",
         "path": "Observation.derivedFrom",
         "short": "Related measurements the observation is made from",
         "definition": "The target resource that represents a measurement from which this observation value is derived. For example, a calculated anion gap or a fetal measurement based on an ultrasound image.",
@@ -2290,7 +2290,7 @@
         ]
       },
       {
-        "id": "Observation:vital-VitalSign.component",
+        "id": "Observation.component",
         "path": "Observation.component",
         "short": "Used when reporting systolic and diastolic blood pressure.",
         "definition": "Used when reporting systolic and diastolic blood pressure.",
@@ -2340,7 +2340,7 @@
         ]
       },
       {
-        "id": "Observation:vital-VitalSign.component.id",
+        "id": "Observation.component.id",
         "path": "Observation.component.id",
         "representation": [
           "xmlAttr"
@@ -2369,7 +2369,7 @@
         ]
       },
       {
-        "id": "Observation:vital-VitalSign.component.extension",
+        "id": "Observation.component.extension",
         "path": "Observation.component.extension",
         "short": "Additional content defined by implementations",
         "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
@@ -2400,7 +2400,7 @@
         ]
       },
       {
-        "id": "Observation:vital-VitalSign.component.modifierExtension",
+        "id": "Observation.component.modifierExtension",
         "path": "Observation.component.modifierExtension",
         "short": "Extensions that cannot be ignored even if unrecognized",
         "definition": "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
@@ -2434,7 +2434,7 @@
         ]
       },
       {
-        "id": "Observation:vital-VitalSign.component.code",
+        "id": "Observation.component.code",
         "path": "Observation.component.code",
         "short": "Type of component observation (code / type)",
         "definition": "Describes what was observed. Sometimes this is called the observation \"code\".",
@@ -2486,7 +2486,7 @@
         ]
       },
       {
-        "id": "Observation:vital-VitalSign.component.value[x]",
+        "id": "Observation.component.value[x]",
         "path": "Observation.component.value[x]",
         "short": "Vital Sign Value recorded with UCUM",
         "definition": "Vital Sign Value recorded with UCUM.",
@@ -2518,7 +2518,7 @@
           {
             "code": "SampledData",
             "profile": [
-              "http://hl7.org/fhir/us/mcode/StructureDefinition/shr-core-SampledData"
+              "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-datatype-SampledData"
             ]
           },
           {
@@ -2565,7 +2565,7 @@
         ]
       },
       {
-        "id": "Observation:vital-VitalSign.component.dataAbsentReason",
+        "id": "Observation.component.dataAbsentReason",
         "path": "Observation.component.dataAbsentReason",
         "short": "Why the component result is missing",
         "definition": "Provides a reason why the expected value in the element Observation.component.value[x] is missing.",
@@ -2612,7 +2612,7 @@
         ]
       },
       {
-        "id": "Observation:vital-VitalSign.component.interpretation",
+        "id": "Observation.component.interpretation",
         "path": "Observation.component.interpretation",
         "short": "High, low, normal, etc.",
         "definition": "A categorical assessment of an observation value.  For example, high, low, normal.",
@@ -2666,7 +2666,7 @@
         ]
       },
       {
-        "id": "Observation:vital-VitalSign.component.referenceRange",
+        "id": "Observation.component.referenceRange",
         "path": "Observation.component.referenceRange",
         "short": "Provides guide for interpretation of component result",
         "definition": "Guidance on how to interpret the value by comparison to a normal or recommended range.",
@@ -2698,7 +2698,7 @@
         ]
       },
       {
-        "id": "Observation:vital-VitalSign.component.referenceRange.id",
+        "id": "Observation.component.referenceRange.id",
         "path": "Observation.component.referenceRange.id",
         "representation": [
           "xmlAttr"
@@ -2727,7 +2727,7 @@
         ]
       },
       {
-        "id": "Observation:vital-VitalSign.component.referenceRange.extension",
+        "id": "Observation.component.referenceRange.extension",
         "path": "Observation.component.referenceRange.extension",
         "short": "Additional content defined by implementations",
         "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
@@ -2758,7 +2758,7 @@
         ]
       },
       {
-        "id": "Observation:vital-VitalSign.component.referenceRange.modifierExtension",
+        "id": "Observation.component.referenceRange.modifierExtension",
         "path": "Observation.component.referenceRange.modifierExtension",
         "short": "Extensions that cannot be ignored even if unrecognized",
         "definition": "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
@@ -2792,7 +2792,7 @@
         ]
       },
       {
-        "id": "Observation:vital-VitalSign.component.referenceRange.low",
+        "id": "Observation.component.referenceRange.low",
         "path": "Observation.component.referenceRange.low",
         "short": "Low Range, if relevant",
         "definition": "The value of the low bound of the reference range.  The low bound of the reference range endpoint is inclusive of the value (e.g.  reference range is >=5 - <=9). If the low bound is omitted,  it is assumed to be meaningless (e.g. reference range is <=2.3).",
@@ -2828,7 +2828,7 @@
         ]
       },
       {
-        "id": "Observation:vital-VitalSign.component.referenceRange.high",
+        "id": "Observation.component.referenceRange.high",
         "path": "Observation.component.referenceRange.high",
         "short": "High Range, if relevant",
         "definition": "The value of the high bound of the reference range.  The high bound of the reference range endpoint is inclusive of the value (e.g.  reference range is >=5 - <=9). If the high bound is omitted,  it is assumed to be meaningless (e.g. reference range is >= 2.3).",
@@ -2864,7 +2864,7 @@
         ]
       },
       {
-        "id": "Observation:vital-VitalSign.component.referenceRange.type",
+        "id": "Observation.component.referenceRange.type",
         "path": "Observation.component.referenceRange.type",
         "short": "Reference range qualifier",
         "definition": "Codes to indicate the what part of the targeted reference population it applies to. For example, the normal or therapeutic range.",
@@ -2911,7 +2911,7 @@
         ]
       },
       {
-        "id": "Observation:vital-VitalSign.component.referenceRange.appliesTo",
+        "id": "Observation.component.referenceRange.appliesTo",
         "path": "Observation.component.referenceRange.appliesTo",
         "short": "Reference range population",
         "definition": "Codes to indicate the target population this reference range applies to.  For example, a reference range may be based on the normal population or a particular sex or race.  Multiple `appliesTo`  are interpreted as an \"AND\" of the target populations.  For example, to represent a target population of African American females, both a code of female and a code for African American would be used.",
@@ -2958,7 +2958,7 @@
         ]
       },
       {
-        "id": "Observation:vital-VitalSign.component.referenceRange.age",
+        "id": "Observation.component.referenceRange.age",
         "path": "Observation.component.referenceRange.age",
         "short": "Applicable age range, if relevant",
         "definition": "The age at which this reference range is applicable. This is a neonatal age (e.g. number of weeks at term) if the meaning says so.",
@@ -2985,7 +2985,7 @@
         ]
       },
       {
-        "id": "Observation:vital-VitalSign.component.referenceRange.text",
+        "id": "Observation.component.referenceRange.text",
         "path": "Observation.component.referenceRange.text",
         "short": "Text based reference range in an observation",
         "definition": "Text based reference range in an observation which may be used when a quantitative range is not appropriate for an observation.  An example would be a reference value of \"Negative\" or a list or table of \"normals\".",
@@ -3019,7 +3019,7 @@
   "differential": {
     "element": [
       {
-        "id": "Observation:vital-VitalSign",
+        "id": "Observation",
         "path": "Observation",
         "short": "vital-VitalSign",
         "definition": "Abstract class parent for all vital sign profiles.",
@@ -3027,7 +3027,7 @@
         "isSummary": false
       },
       {
-        "id": "Observation:vital-VitalSign.extension",
+        "id": "Observation.extension",
         "path": "Observation.extension",
         "slicing": {
           "id": "2",
@@ -3042,7 +3042,7 @@
         }
       },
       {
-        "id": "Observation:vital-VitalSign.extension:preconditioncode",
+        "id": "Observation.extension:preconditioncode",
         "path": "Observation.extension",
         "definition": "A coded description of the conditions or context of an observation, for example, under sedation, fasting or post-exercise. A qualifier cannot modify the measurement type; for example, a fasting blood sugar is still a blood sugar.",
         "min": 0,
@@ -3065,7 +3065,7 @@
         "sliceName": "preconditioncode"
       },
       {
-        "id": "Observation:vital-VitalSign.basedOn",
+        "id": "Observation.basedOn",
         "path": "Observation.basedOn",
         "type": [
           {
@@ -3078,7 +3078,7 @@
         ]
       },
       {
-        "id": "Observation:vital-VitalSign.partOf",
+        "id": "Observation.partOf",
         "path": "Observation.partOf",
         "type": [
           {
@@ -3094,17 +3094,17 @@
         "definition": "A larger event of which this particular Observation is a component or step. For example, an observation as part of a procedure."
       },
       {
-        "id": "Observation:vital-VitalSign.category",
+        "id": "Observation.category",
         "path": "Observation.category",
         "min": 1,
         "max": "1"
       },
       {
-        "id": "Observation:vital-VitalSign.category:VSCat",
+        "id": "Observation.category:VSCat",
         "path": "Observation.category"
       },
       {
-        "id": "Observation:vital-VitalSign.category:VSCat.coding",
+        "id": "Observation.category:VSCat.coding",
         "path": "Observation.category.coding",
         "slicing": {
           "id": "1",
@@ -3119,7 +3119,7 @@
         }
       },
       {
-        "id": "Observation:vital-VitalSign.category:VSCat.coding:Fixed_vital-signs",
+        "id": "Observation.category:VSCat.coding:Fixed_vital-signs",
         "path": "Observation.category.coding",
         "sliceName": "Fixed_vital-signs",
         "short": "Code defined by a terminology system",
@@ -3139,17 +3139,17 @@
         "isSummary": true
       },
       {
-        "id": "Observation:vital-VitalSign.category:VSCat.coding:Fixed_vital-signs.system",
+        "id": "Observation.category:VSCat.coding:Fixed_vital-signs.system",
         "path": "Observation.category.coding.system",
         "fixedUri": "http://terminology.hl7.org/CodeSystem/observation-category"
       },
       {
-        "id": "Observation:vital-VitalSign.category:VSCat.coding:Fixed_vital-signs.code",
+        "id": "Observation.category:VSCat.coding:Fixed_vital-signs.code",
         "path": "Observation.category.coding.code",
         "fixedCode": "vital-signs"
       },
       {
-        "id": "Observation:vital-VitalSign.subject",
+        "id": "Observation.subject",
         "path": "Observation.subject",
         "type": [
           {
@@ -3163,7 +3163,7 @@
         "definition": "The subject of an observation."
       },
       {
-        "id": "Observation:vital-VitalSign.encounter",
+        "id": "Observation.encounter",
         "path": "Observation.encounter",
         "type": [
           {
@@ -3175,7 +3175,7 @@
         ]
       },
       {
-        "id": "Observation:vital-VitalSign.performer",
+        "id": "Observation.performer",
         "path": "Observation.performer",
         "type": [
           {
@@ -3190,7 +3190,7 @@
         ]
       },
       {
-        "id": "Observation:vital-VitalSign.valueQuantity",
+        "id": "Observation.valueQuantity",
         "path": "Observation.valueQuantity",
         "type": [
           {
@@ -3199,7 +3199,7 @@
         ]
       },
       {
-        "id": "Observation:vital-VitalSign.interpretation",
+        "id": "Observation.interpretation",
         "path": "Observation.interpretation",
         "min": 0,
         "max": "1",
@@ -3209,21 +3209,21 @@
         }
       },
       {
-        "id": "Observation:vital-VitalSign.bodySite",
+        "id": "Observation.bodySite",
         "path": "Observation.bodySite",
         "binding": {
           "strength": "preferred",
-          "valueSet": "http://hl7.org/fhir/us/mcode/ValueSet/shr-core-BodyLocationVS"
+          "valueSet": "http://hl7.org/fhir/us/mcode/ValueSet/obf-datatype-BodyLocationVS"
         }
       },
       {
-        "id": "Observation:vital-VitalSign.specimen",
+        "id": "Observation.specimen",
         "path": "Observation.specimen",
         "min": 0,
         "max": "0"
       },
       {
-        "id": "Observation:vital-VitalSign.device",
+        "id": "Observation.device",
         "path": "Observation.device",
         "min": 0,
         "max": "0",
@@ -3237,13 +3237,13 @@
         ]
       },
       {
-        "id": "Observation:vital-VitalSign.referenceRange",
+        "id": "Observation.referenceRange",
         "path": "Observation.referenceRange",
         "min": 0,
         "max": "1"
       },
       {
-        "id": "Observation:vital-VitalSign.referenceRange.type",
+        "id": "Observation.referenceRange.type",
         "path": "Observation.referenceRange.type",
         "binding": {
           "extension": [
@@ -3258,7 +3258,7 @@
         }
       },
       {
-        "id": "Observation:vital-VitalSign.referenceRange.appliesTo",
+        "id": "Observation.referenceRange.appliesTo",
         "path": "Observation.referenceRange.appliesTo",
         "min": 0,
         "max": "1",
@@ -3275,7 +3275,7 @@
         }
       },
       {
-        "id": "Observation:vital-VitalSign.hasMember",
+        "id": "Observation.hasMember",
         "path": "Observation.hasMember",
         "min": 0,
         "max": "0",
@@ -3291,7 +3291,7 @@
         "definition": "Abstract class parent for all vital sign profiles."
       },
       {
-        "id": "Observation:vital-VitalSign.derivedFrom",
+        "id": "Observation.derivedFrom",
         "path": "Observation.derivedFrom",
         "type": [
           {
@@ -3305,11 +3305,11 @@
         ]
       },
       {
-        "id": "Observation:vital-VitalSign.component",
+        "id": "Observation.component",
         "path": "Observation.component"
       },
       {
-        "id": "Observation:vital-VitalSign.component.value[x]",
+        "id": "Observation.component.value[x]",
         "path": "Observation.component.value[x]",
         "type": [
           {
@@ -3330,7 +3330,7 @@
           {
             "code": "SampledData",
             "profile": [
-              "http://hl7.org/fhir/us/mcode/StructureDefinition/shr-core-SampledData"
+              "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-datatype-SampledData"
             ]
           },
           {
@@ -3345,11 +3345,11 @@
         ]
       },
       {
-        "id": "Observation:vital-VitalSign.component.referenceRange",
+        "id": "Observation.component.referenceRange",
         "path": "Observation.component.referenceRange"
       },
       {
-        "id": "Observation:vital-VitalSign.component.referenceRange.type",
+        "id": "Observation.component.referenceRange.type",
         "path": "Observation.component.referenceRange.type",
         "binding": {
           "extension": [
@@ -3364,7 +3364,7 @@
         }
       },
       {
-        "id": "Observation:vital-VitalSign.component.referenceRange.appliesTo",
+        "id": "Observation.component.referenceRange.appliesTo",
         "path": "Observation.component.referenceRange.appliesTo",
         "binding": {
           "extension": [

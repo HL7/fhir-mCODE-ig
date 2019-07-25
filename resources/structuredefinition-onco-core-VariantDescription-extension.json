@@ -9,7 +9,7 @@
   "name": "VariantDescription",
   "title": "onco-core-VariantDescription",
   "status": "draft",
-  "date": "2019-07-24",
+  "date": "2019-07-25",
   "publisher": "The MITRE Corporation",
   "contact": [
     {
@@ -37,7 +37,7 @@
   "snapshot": {
     "element": [
       {
-        "id": "Extension:variantdescription",
+        "id": "Extension",
         "path": "Extension",
         "short": "VariantDescription",
         "definition": "A clinician-friendly description for the variant. This could be, but not limited to, the protein change associated with the variation. For example, the protein change associated with Clinvar 3236 is G482V.",
@@ -81,7 +81,7 @@
         ]
       },
       {
-        "id": "Extension:variantdescription.id",
+        "id": "Extension.id",
         "path": "Extension.id",
         "representation": [
           "xmlAttr"
@@ -110,7 +110,7 @@
         ]
       },
       {
-        "id": "Extension:variantdescription.extension",
+        "id": "Extension.extension",
         "path": "Extension.extension",
         "slicing": {
           "discriminator": [
@@ -151,7 +151,7 @@
         ]
       },
       {
-        "id": "Extension:variantdescription.url",
+        "id": "Extension.url",
         "path": "Extension.url",
         "representation": [
           "xmlAttr"
@@ -182,7 +182,7 @@
         "fixedUri": "http://hl7.org/fhir/us/mcode/StructureDefinition/onco-core-VariantDescription-extension"
       },
       {
-        "id": "Extension:variantdescription.valueString",
+        "id": "Extension.valueString",
         "path": "Extension.valueString",
         "short": "Value of extension",
         "definition": "Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).",
@@ -212,7 +212,7 @@
   "differential": {
     "element": [
       {
-        "id": "Extension:variantdescription",
+        "id": "Extension",
         "path": "Extension",
         "short": "VariantDescription",
         "definition": "A clinician-friendly description for the variant. This could be, but not limited to, the protein change associated with the variation. For example, the protein change associated with Clinvar 3236 is G482V.",
@@ -220,13 +220,13 @@
         "max": "*"
       },
       {
-        "id": "Extension:variantdescription.extension",
+        "id": "Extension.extension",
         "path": "Extension.extension",
         "min": 0,
         "max": "0"
       },
       {
-        "id": "Extension:variantdescription.url",
+        "id": "Extension.url",
         "path": "Extension.url",
         "type": [
           {
@@ -236,7 +236,7 @@
         "fixedUri": "http://hl7.org/fhir/us/mcode/StructureDefinition/onco-core-VariantDescription-extension"
       },
       {
-        "id": "Extension:variantdescription.valueString",
+        "id": "Extension.valueString",
         "path": "Extension.valueString",
         "min": 1,
         "type": [

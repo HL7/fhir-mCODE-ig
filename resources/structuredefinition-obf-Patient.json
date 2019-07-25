@@ -10,7 +10,7 @@
   "title": "obf-Patient",
   "status": "active",
   "experimental": false,
-  "date": "2019-07-24",
+  "date": "2019-07-25",
   "publisher": "The MITRE Corporation",
   "contact": [
     {
@@ -75,7 +75,7 @@
   "snapshot": {
     "element": [
       {
-        "id": "Patient:obf-Patient",
+        "id": "Patient",
         "path": "Patient",
         "short": "obf-Patient",
         "definition": "A person in the role of a patient. Sometimes, the patient is not the subject of information in a clinical statement where the Patient is the SubjectOfRecord.\n\nCompatibility: Lies at the intersection of Argonaut and US Core Patient. MaritalStatus has a required binding in Argonaut, but an extensible binding in US-Core. To be feasible under both DSTU2 Argonaut and STU3 US-Core, the required binding strength is adopted.",
@@ -164,7 +164,7 @@
         ]
       },
       {
-        "id": "Patient:obf-Patient.id",
+        "id": "Patient.id",
         "path": "Patient.id",
         "short": "Logical id of this artifact",
         "definition": "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.",
@@ -185,7 +185,7 @@
         "isSummary": true
       },
       {
-        "id": "Patient:obf-Patient.meta",
+        "id": "Patient.meta",
         "path": "Patient.meta",
         "short": "Metadata about the resource",
         "definition": "The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.",
@@ -205,7 +205,7 @@
         "isSummary": true
       },
       {
-        "id": "Patient:obf-Patient.implicitRules",
+        "id": "Patient.implicitRules",
         "path": "Patient.implicitRules",
         "short": "A set of rules under which this content was created",
         "definition": "A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.",
@@ -227,7 +227,7 @@
         "isSummary": true
       },
       {
-        "id": "Patient:obf-Patient.language",
+        "id": "Patient.language",
         "path": "Patient.language",
         "short": "Language of the resource content",
         "definition": "The base language in which the resource is written.",
@@ -267,7 +267,7 @@
         }
       },
       {
-        "id": "Patient:obf-Patient.text",
+        "id": "Patient.text",
         "path": "Patient.text",
         "short": "Text summary of the resource, for human interpretation",
         "definition": "A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.",
@@ -300,7 +300,7 @@
         ]
       },
       {
-        "id": "Patient:obf-Patient.contained",
+        "id": "Patient.contained",
         "path": "Patient.contained",
         "short": "Contained, inline Resources",
         "definition": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope.",
@@ -332,7 +332,7 @@
         ]
       },
       {
-        "id": "Patient:obf-Patient.extension",
+        "id": "Patient.extension",
         "path": "Patient.extension",
         "slicing": {
           "id": "1",
@@ -363,7 +363,7 @@
         "isSummary": false
       },
       {
-        "id": "Patient:obf-Patient.extension:race",
+        "id": "Patient.extension:race",
         "path": "Patient.extension",
         "sliceName": "race",
         "definition": "An Extension",
@@ -393,7 +393,7 @@
         ]
       },
       {
-        "id": "Patient:obf-Patient.extension:ethnicity",
+        "id": "Patient.extension:ethnicity",
         "path": "Patient.extension",
         "sliceName": "ethnicity",
         "definition": "An Extension",
@@ -423,7 +423,7 @@
         ]
       },
       {
-        "id": "Patient:obf-Patient.extension:birthsex",
+        "id": "Patient.extension:birthsex",
         "path": "Patient.extension",
         "sliceName": "birthsex",
         "definition": "An Extension",
@@ -453,7 +453,7 @@
         ]
       },
       {
-        "id": "Patient:obf-Patient.modifierExtension",
+        "id": "Patient.modifierExtension",
         "path": "Patient.modifierExtension",
         "short": "Extensions that cannot be ignored",
         "definition": "May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
@@ -486,7 +486,7 @@
         ]
       },
       {
-        "id": "Patient:obf-Patient.identifier",
+        "id": "Patient.identifier",
         "path": "Patient.identifier",
         "short": "An identifier for this patient",
         "definition": "An identifier for this patient.",
@@ -530,7 +530,7 @@
         ]
       },
       {
-        "id": "Patient:obf-Patient.active",
+        "id": "Patient.active",
         "path": "Patient.active",
         "short": "Whether this patient's record is in active use",
         "definition": "Whether this patient record is in active use. \nMany systems use this property to mark as non-current patients, such as those that have not been seen for a period of time based on an organization's business rules.\n\nIt is often used to filter patient lists to exclude inactive patients\n\nDeceased patients may also be marked as inactive for the same reasons, but may be active for some time after death.",
@@ -568,7 +568,7 @@
         ]
       },
       {
-        "id": "Patient:obf-Patient.name",
+        "id": "Patient.name",
         "path": "Patient.name",
         "short": "A name associated with the patient",
         "definition": "A name associated with the individual.",
@@ -618,7 +618,7 @@
         ]
       },
       {
-        "id": "Patient:obf-Patient.telecom",
+        "id": "Patient.telecom",
         "path": "Patient.telecom",
         "short": "A contact detail for the individual",
         "definition": "A contact detail (e.g. a telephone number or an email address) by which the individual may be contacted.",
@@ -659,7 +659,7 @@
         ]
       },
       {
-        "id": "Patient:obf-Patient.gender",
+        "id": "Patient.gender",
         "path": "Patient.gender",
         "short": "male | female | other | unknown",
         "definition": "Administrative Gender - the gender that the patient is considered to have for administration and record keeping purposes.",
@@ -704,7 +704,7 @@
         ]
       },
       {
-        "id": "Patient:obf-Patient.birthDate",
+        "id": "Patient.birthDate",
         "path": "Patient.birthDate",
         "short": "The date of birth for the individual",
         "definition": "The date of birth for the individual.",
@@ -749,7 +749,7 @@
         ]
       },
       {
-        "id": "Patient:obf-Patient.deceased[x]",
+        "id": "Patient.deceased[x]",
         "path": "Patient.deceased[x]",
         "short": "Indicates if the individual is deceased or not",
         "definition": "Indicates if the individual is deceased or not.",
@@ -790,7 +790,7 @@
         "mustSupport": true
       },
       {
-        "id": "Patient:obf-Patient.address",
+        "id": "Patient.address",
         "path": "Patient.address",
         "short": "An address for the individual",
         "definition": "An address for the individual.",
@@ -831,7 +831,7 @@
         ]
       },
       {
-        "id": "Patient:obf-Patient.maritalStatus",
+        "id": "Patient.maritalStatus",
         "path": "Patient.maritalStatus",
         "short": "Marital (civil) status of a patient",
         "definition": "This field contains a patient's most recent marital (civil) status.",
@@ -881,7 +881,7 @@
         ]
       },
       {
-        "id": "Patient:obf-Patient.multipleBirth[x]",
+        "id": "Patient.multipleBirth[x]",
         "path": "Patient.multipleBirth[x]",
         "short": "Whether patient is part of a multiple birth",
         "definition": "Indicates whether the patient is part of a multiple (boolean) or indicates the actual birth order (integer).",
@@ -920,7 +920,7 @@
         ]
       },
       {
-        "id": "Patient:obf-Patient.photo",
+        "id": "Patient.photo",
         "path": "Patient.photo",
         "short": "Image of the patient",
         "definition": "Image of the patient.",
@@ -956,7 +956,7 @@
         ]
       },
       {
-        "id": "Patient:obf-Patient.contact",
+        "id": "Patient.contact",
         "extension": [
           {
             "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name",
@@ -1011,7 +1011,7 @@
         ]
       },
       {
-        "id": "Patient:obf-Patient.contact.id",
+        "id": "Patient.contact.id",
         "path": "Patient.contact.id",
         "representation": [
           "xmlAttr"
@@ -1040,7 +1040,7 @@
         ]
       },
       {
-        "id": "Patient:obf-Patient.contact.extension",
+        "id": "Patient.contact.extension",
         "path": "Patient.contact.extension",
         "short": "Additional content defined by implementations",
         "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
@@ -1071,7 +1071,7 @@
         ]
       },
       {
-        "id": "Patient:obf-Patient.contact.modifierExtension",
+        "id": "Patient.contact.modifierExtension",
         "path": "Patient.contact.modifierExtension",
         "short": "Extensions that cannot be ignored even if unrecognized",
         "definition": "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
@@ -1105,7 +1105,7 @@
         ]
       },
       {
-        "id": "Patient:obf-Patient.contact.relationship",
+        "id": "Patient.contact.relationship",
         "path": "Patient.contact.relationship",
         "short": "The kind of relationship",
         "definition": "The nature of the relationship between the patient and the contact person.",
@@ -1151,7 +1151,7 @@
         ]
       },
       {
-        "id": "Patient:obf-Patient.contact.name",
+        "id": "Patient.contact.name",
         "path": "Patient.contact.name",
         "short": "A name associated with the contact person",
         "definition": "A name associated with the contact person.",
@@ -1186,7 +1186,7 @@
         ]
       },
       {
-        "id": "Patient:obf-Patient.contact.telecom",
+        "id": "Patient.contact.telecom",
         "path": "Patient.contact.telecom",
         "short": "A contact detail for the person",
         "definition": "A contact detail for the person, e.g. a telephone number or an email address.",
@@ -1222,7 +1222,7 @@
         ]
       },
       {
-        "id": "Patient:obf-Patient.contact.address",
+        "id": "Patient.contact.address",
         "path": "Patient.contact.address",
         "short": "Address for the contact person",
         "definition": "Address for the contact person.",
@@ -1257,7 +1257,7 @@
         ]
       },
       {
-        "id": "Patient:obf-Patient.contact.gender",
+        "id": "Patient.contact.gender",
         "path": "Patient.contact.gender",
         "short": "male | female | other | unknown",
         "definition": "Administrative Gender - the gender that the contact person is considered to have for administration and record keeping purposes.",
@@ -1307,7 +1307,7 @@
         ]
       },
       {
-        "id": "Patient:obf-Patient.contact.organization",
+        "id": "Patient.contact.organization",
         "path": "Patient.contact.organization",
         "short": "Organization that is associated with the contact",
         "definition": "Organization on behalf of which the contact is acting or for which the contact is working.",
@@ -1348,7 +1348,7 @@
         ]
       },
       {
-        "id": "Patient:obf-Patient.contact.period",
+        "id": "Patient.contact.period",
         "path": "Patient.contact.period",
         "short": "The period during which this contact person or organization is valid to be contacted relating to this patient",
         "definition": "The period during which this contact person or organization is valid to be contacted relating to this patient.",
@@ -1378,7 +1378,7 @@
         ]
       },
       {
-        "id": "Patient:obf-Patient.communication",
+        "id": "Patient.communication",
         "path": "Patient.communication",
         "short": "A language which may be used to communicate with the patient about his or her health",
         "definition": "A language which may be used to communicate with the patient about his or her health.",
@@ -1425,7 +1425,7 @@
         ]
       },
       {
-        "id": "Patient:obf-Patient.communication.id",
+        "id": "Patient.communication.id",
         "path": "Patient.communication.id",
         "representation": [
           "xmlAttr"
@@ -1454,7 +1454,7 @@
         ]
       },
       {
-        "id": "Patient:obf-Patient.communication.extension",
+        "id": "Patient.communication.extension",
         "path": "Patient.communication.extension",
         "short": "Additional content defined by implementations",
         "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
@@ -1485,7 +1485,7 @@
         ]
       },
       {
-        "id": "Patient:obf-Patient.communication.modifierExtension",
+        "id": "Patient.communication.modifierExtension",
         "path": "Patient.communication.modifierExtension",
         "short": "Extensions that cannot be ignored even if unrecognized",
         "definition": "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
@@ -1519,7 +1519,7 @@
         ]
       },
       {
-        "id": "Patient:obf-Patient.communication.language",
+        "id": "Patient.communication.language",
         "path": "Patient.communication.language",
         "short": "The language which can be used to communicate with the patient about his or her health",
         "definition": "The ISO-639-1 alpha 2 code in lower case for the language, optionally followed by a hyphen and the ISO-3166-1 alpha 2 code for the region in upper case; e.g. \"en\" for English, or \"en-US\" for American English versus \"en-EN\" for England English.",
@@ -1570,7 +1570,7 @@
         ]
       },
       {
-        "id": "Patient:obf-Patient.communication.preferred",
+        "id": "Patient.communication.preferred",
         "path": "Patient.communication.preferred",
         "short": "Language preference indicator",
         "definition": "Indicates whether or not the patient prefers this language (over other languages he masters up a certain level).",
@@ -1606,7 +1606,7 @@
         ]
       },
       {
-        "id": "Patient:obf-Patient.generalPractitioner",
+        "id": "Patient.generalPractitioner",
         "path": "Patient.generalPractitioner",
         "short": "Patient's nominated primary care provider",
         "definition": "Patient's nominated care provider.",
@@ -1648,7 +1648,7 @@
         ]
       },
       {
-        "id": "Patient:obf-Patient.managingOrganization",
+        "id": "Patient.managingOrganization",
         "path": "Patient.managingOrganization",
         "short": "Organization that is the custodian of the patient record",
         "definition": "Organization that is the custodian of the patient record.",
@@ -1683,7 +1683,7 @@
         ]
       },
       {
-        "id": "Patient:obf-Patient.link",
+        "id": "Patient.link",
         "path": "Patient.link",
         "short": "Link to another patient resource that concerns the same actual person",
         "definition": "Link to another patient resource that concerns the same actual patient.",
@@ -1726,7 +1726,7 @@
         ]
       },
       {
-        "id": "Patient:obf-Patient.link.id",
+        "id": "Patient.link.id",
         "path": "Patient.link.id",
         "representation": [
           "xmlAttr"
@@ -1755,7 +1755,7 @@
         ]
       },
       {
-        "id": "Patient:obf-Patient.link.extension",
+        "id": "Patient.link.extension",
         "path": "Patient.link.extension",
         "short": "Additional content defined by implementations",
         "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
@@ -1786,7 +1786,7 @@
         ]
       },
       {
-        "id": "Patient:obf-Patient.link.modifierExtension",
+        "id": "Patient.link.modifierExtension",
         "path": "Patient.link.modifierExtension",
         "short": "Extensions that cannot be ignored even if unrecognized",
         "definition": "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
@@ -1820,7 +1820,7 @@
         ]
       },
       {
-        "id": "Patient:obf-Patient.link.other",
+        "id": "Patient.link.other",
         "path": "Patient.link.other",
         "short": "The other patient or related person resource that the link refers to",
         "definition": "The other patient resource that the link refers to.",
@@ -1864,7 +1864,7 @@
         ]
       },
       {
-        "id": "Patient:obf-Patient.link.type",
+        "id": "Patient.link.type",
         "path": "Patient.link.type",
         "short": "replaced-by | replaces | refer | seealso",
         "definition": "The type of link between this patient resource and another patient resource.",
@@ -1909,7 +1909,7 @@
   "differential": {
     "element": [
       {
-        "id": "Patient:obf-Patient",
+        "id": "Patient",
         "path": "Patient",
         "short": "obf-Patient",
         "definition": "A person in the role of a patient. Sometimes, the patient is not the subject of information in a clinical statement where the Patient is the SubjectOfRecord.\n\nCompatibility: Lies at the intersection of Argonaut and US Core Patient. MaritalStatus has a required binding in Argonaut, but an extensible binding in US-Core. To be feasible under both DSTU2 Argonaut and STU3 US-Core, the required binding strength is adopted.",
@@ -1918,12 +1918,12 @@
         "isSummary": false
       },
       {
-        "id": "Patient:obf-Patient.deceased[x]",
+        "id": "Patient.deceased[x]",
         "path": "Patient.deceased[x]",
         "mustSupport": true
       },
       {
-        "id": "Patient:obf-Patient.maritalStatus",
+        "id": "Patient.maritalStatus",
         "path": "Patient.maritalStatus",
         "binding": {
           "extension": [
@@ -1942,11 +1942,11 @@
         }
       },
       {
-        "id": "Patient:obf-Patient.contact",
+        "id": "Patient.contact",
         "path": "Patient.contact"
       },
       {
-        "id": "Patient:obf-Patient.contact.organization",
+        "id": "Patient.contact.organization",
         "path": "Patient.contact.organization",
         "type": [
           {
@@ -1958,7 +1958,7 @@
         ]
       },
       {
-        "id": "Patient:obf-Patient.generalPractitioner",
+        "id": "Patient.generalPractitioner",
         "path": "Patient.generalPractitioner",
         "type": [
           {
@@ -1971,7 +1971,7 @@
         ]
       },
       {
-        "id": "Patient:obf-Patient.managingOrganization",
+        "id": "Patient.managingOrganization",
         "path": "Patient.managingOrganization",
         "type": [
           {
@@ -1983,11 +1983,11 @@
         ]
       },
       {
-        "id": "Patient:obf-Patient.link",
+        "id": "Patient.link",
         "path": "Patient.link"
       },
       {
-        "id": "Patient:obf-Patient.link.other",
+        "id": "Patient.link.other",
         "path": "Patient.link.other",
         "type": [
           {

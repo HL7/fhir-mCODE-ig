@@ -9,7 +9,7 @@
   "name": "EncounterDiagnosis",
   "title": "obf-EncounterDiagnosis",
   "status": "draft",
-  "date": "2019-07-24",
+  "date": "2019-07-25",
   "publisher": "The MITRE Corporation",
   "contact": [
     {
@@ -37,7 +37,7 @@
   "snapshot": {
     "element": [
       {
-        "id": "Extension:encounterdiagnosis",
+        "id": "Extension",
         "path": "Extension",
         "short": "EncounterDiagnosis",
         "definition": "A diagnosis, which is a disease or injury determined to be present through evaluation of patient history, examination, and/or review of laboratory data. This element is not a stand-alone representation of the condition that was diagnosed, but is meant to be used as an sub-structure in a resource, such as Encounter.",
@@ -81,7 +81,7 @@
         ]
       },
       {
-        "id": "Extension:encounterdiagnosis.id",
+        "id": "Extension.id",
         "path": "Extension.id",
         "representation": [
           "xmlAttr"
@@ -110,7 +110,7 @@
         ]
       },
       {
-        "id": "Extension:encounterdiagnosis.extension",
+        "id": "Extension.extension",
         "path": "Extension.extension",
         "slicing": {
           "discriminator": [
@@ -151,7 +151,7 @@
         ]
       },
       {
-        "id": "Extension:encounterdiagnosis.extension:diagnosiscode",
+        "id": "Extension.extension:diagnosiscode",
         "path": "Extension.extension",
         "definition": "Codes for a diagnosis.",
         "min": 0,
@@ -180,7 +180,7 @@
         "sliceName": "diagnosiscode"
       },
       {
-        "id": "Extension:encounterdiagnosis.extension:condition",
+        "id": "Extension.extension:condition",
         "path": "Extension.extension",
         "definition": "A condition that is or may be present in a subject. 'Condition' is interpreted broadly and could be a disorder, abnormality, problem, injury, complaint, functionality, illness, disease, ailment, sickness, affliction, upset, difficulty, disorder, symptom, worry, or trouble.\nThe Observation-based class, ConditionAbsent, should be used to describe conditions that are not present or negative findings.\nThis profiled Condition uses the BodyLocation structure that includes not only a code, but optional laterality, direction, and relation to landmark(s).",
         "min": 1,
@@ -209,7 +209,7 @@
         "sliceName": "condition"
       },
       {
-        "id": "Extension:encounterdiagnosis.extension:priorityrank",
+        "id": "Extension.extension:priorityrank",
         "path": "Extension.extension",
         "definition": "The priority of the procedure, as a number (1 being the highest priority)",
         "min": 0,
@@ -223,7 +223,7 @@
           {
             "code": "Extension",
             "profile": [
-              "http://hl7.org/fhir/us/mcode/StructureDefinition/shr-core-PriorityRank-extension"
+              "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-datatype-PriorityRank-extension"
             ]
           }
         ],
@@ -238,7 +238,7 @@
         "sliceName": "priorityrank"
       },
       {
-        "id": "Extension:encounterdiagnosis.extension:type",
+        "id": "Extension.extension:type",
         "path": "Extension.extension",
         "definition": "A code describing the item at a greater level of detail.",
         "min": 0,
@@ -252,7 +252,7 @@
           {
             "code": "Extension",
             "profile": [
-              "http://hl7.org/fhir/us/mcode/StructureDefinition/shr-core-Type-extension"
+              "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-datatype-Type-extension"
             ]
           }
         ],
@@ -267,7 +267,7 @@
         "sliceName": "type"
       },
       {
-        "id": "Extension:encounterdiagnosis.extension:type.id",
+        "id": "Extension.extension:type.id",
         "path": "Extension.extension.id",
         "representation": [
           "xmlAttr"
@@ -296,7 +296,7 @@
         ]
       },
       {
-        "id": "Extension:encounterdiagnosis.extension:type.extension",
+        "id": "Extension.extension:type.extension",
         "path": "Extension.extension.extension",
         "slicing": {
           "discriminator": [
@@ -337,7 +337,7 @@
         ]
       },
       {
-        "id": "Extension:encounterdiagnosis.extension:type.url",
+        "id": "Extension.extension:type.url",
         "path": "Extension.extension.url",
         "representation": [
           "xmlAttr"
@@ -365,10 +365,10 @@
             "map": "N/A"
           }
         ],
-        "fixedUri": "http://hl7.org/fhir/us/mcode/StructureDefinition/shr-core-Type-extension"
+        "fixedUri": "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-datatype-Type-extension"
       },
       {
-        "id": "Extension:encounterdiagnosis.extension:type.valueCodeableConcept",
+        "id": "Extension.extension:type.valueCodeableConcept",
         "path": "Extension.extension.valueCodeableConcept",
         "short": "Value of extension",
         "definition": "Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).",
@@ -398,7 +398,7 @@
         }
       },
       {
-        "id": "Extension:encounterdiagnosis.url",
+        "id": "Extension.url",
         "path": "Extension.url",
         "representation": [
           "xmlAttr"
@@ -429,7 +429,7 @@
         "fixedUri": "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-EncounterDiagnosis-extension"
       },
       {
-        "id": "Extension:encounterdiagnosis.value[x]",
+        "id": "Extension.value[x]",
         "path": "Extension.value[x]",
         "short": "Value of extension",
         "definition": "Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).",
@@ -603,7 +603,7 @@
   "differential": {
     "element": [
       {
-        "id": "Extension:encounterdiagnosis",
+        "id": "Extension",
         "path": "Extension",
         "short": "EncounterDiagnosis",
         "definition": "A diagnosis, which is a disease or injury determined to be present through evaluation of patient history, examination, and/or review of laboratory data. This element is not a stand-alone representation of the condition that was diagnosed, but is meant to be used as an sub-structure in a resource, such as Encounter.",
@@ -611,13 +611,13 @@
         "max": "*"
       },
       {
-        "id": "Extension:encounterdiagnosis.extension",
+        "id": "Extension.extension",
         "path": "Extension.extension",
         "min": 1,
         "max": "*"
       },
       {
-        "id": "Extension:encounterdiagnosis.extension:diagnosiscode",
+        "id": "Extension.extension:diagnosiscode",
         "path": "Extension.extension",
         "definition": "Codes for a diagnosis.",
         "min": 0,
@@ -646,7 +646,7 @@
         "sliceName": "diagnosiscode"
       },
       {
-        "id": "Extension:encounterdiagnosis.extension:condition",
+        "id": "Extension.extension:condition",
         "path": "Extension.extension",
         "definition": "A condition that is or may be present in a subject. 'Condition' is interpreted broadly and could be a disorder, abnormality, problem, injury, complaint, functionality, illness, disease, ailment, sickness, affliction, upset, difficulty, disorder, symptom, worry, or trouble.\nThe Observation-based class, ConditionAbsent, should be used to describe conditions that are not present or negative findings.\nThis profiled Condition uses the BodyLocation structure that includes not only a code, but optional laterality, direction, and relation to landmark(s).",
         "min": 1,
@@ -675,7 +675,7 @@
         "sliceName": "condition"
       },
       {
-        "id": "Extension:encounterdiagnosis.extension:priorityrank",
+        "id": "Extension.extension:priorityrank",
         "path": "Extension.extension",
         "definition": "The priority of the procedure, as a number (1 being the highest priority)",
         "min": 0,
@@ -689,7 +689,7 @@
           {
             "code": "Extension",
             "profile": [
-              "http://hl7.org/fhir/us/mcode/StructureDefinition/shr-core-PriorityRank-extension"
+              "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-datatype-PriorityRank-extension"
             ]
           }
         ],
@@ -704,7 +704,7 @@
         "sliceName": "priorityrank"
       },
       {
-        "id": "Extension:encounterdiagnosis.extension:type",
+        "id": "Extension.extension:type",
         "path": "Extension.extension",
         "definition": "A code describing the item at a greater level of detail.",
         "min": 0,
@@ -718,7 +718,7 @@
           {
             "code": "Extension",
             "profile": [
-              "http://hl7.org/fhir/us/mcode/StructureDefinition/shr-core-Type-extension"
+              "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-datatype-Type-extension"
             ]
           }
         ],
@@ -733,7 +733,7 @@
         "sliceName": "type"
       },
       {
-        "id": "Extension:encounterdiagnosis.extension:type.valueCodeableConcept",
+        "id": "Extension.extension:type.valueCodeableConcept",
         "path": "Extension.extension.valueCodeableConcept",
         "binding": {
           "strength": "preferred",
@@ -741,7 +741,7 @@
         }
       },
       {
-        "id": "Extension:encounterdiagnosis.url",
+        "id": "Extension.url",
         "path": "Extension.url",
         "type": [
           {
@@ -751,7 +751,7 @@
         "fixedUri": "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-EncounterDiagnosis-extension"
       },
       {
-        "id": "Extension:encounterdiagnosis.value[x]",
+        "id": "Extension.value[x]",
         "path": "Extension.value[x]",
         "min": 0,
         "max": "0"

@@ -10,7 +10,7 @@
   "title": "vital-BloodPressure",
   "status": "draft",
   "experimental": false,
-  "date": "2019-07-24",
+  "date": "2019-07-25",
   "publisher": "The MITRE Corporation",
   "contact": [
     {
@@ -64,7 +64,7 @@
   "snapshot": {
     "element": [
       {
-        "id": "Observation:vital-BloodPressure",
+        "id": "Observation",
         "path": "Observation",
         "short": "vital-BloodPressure",
         "definition": "Records blood pressure measurements, defined as the force of circulating blood on the walls of the arteries.\n\nConformance note: The blood pressure profile is based on the FHIR profile for blood pressure, and adds a set of optional elements that can help clinicians interpret the result. Because these additional elements are optional, any BloodPressure that conforms to the current profile also will conform to the FHIR profile, and vice versa.",
@@ -184,7 +184,7 @@
         ]
       },
       {
-        "id": "Observation:vital-BloodPressure.id",
+        "id": "Observation.id",
         "path": "Observation.id",
         "short": "Logical id of this artifact",
         "definition": "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.",
@@ -205,7 +205,7 @@
         "isSummary": true
       },
       {
-        "id": "Observation:vital-BloodPressure.meta",
+        "id": "Observation.meta",
         "path": "Observation.meta",
         "short": "Metadata about the resource",
         "definition": "The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.",
@@ -225,7 +225,7 @@
         "isSummary": true
       },
       {
-        "id": "Observation:vital-BloodPressure.implicitRules",
+        "id": "Observation.implicitRules",
         "path": "Observation.implicitRules",
         "short": "A set of rules under which this content was created",
         "definition": "A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.",
@@ -247,7 +247,7 @@
         "isSummary": true
       },
       {
-        "id": "Observation:vital-BloodPressure.language",
+        "id": "Observation.language",
         "path": "Observation.language",
         "short": "Language of the resource content",
         "definition": "The base language in which the resource is written.",
@@ -287,7 +287,7 @@
         }
       },
       {
-        "id": "Observation:vital-BloodPressure.text",
+        "id": "Observation.text",
         "path": "Observation.text",
         "short": "Text summary of the resource, for human interpretation",
         "definition": "A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.",
@@ -320,7 +320,7 @@
         ]
       },
       {
-        "id": "Observation:vital-BloodPressure.contained",
+        "id": "Observation.contained",
         "path": "Observation.contained",
         "short": "Contained, inline Resources",
         "definition": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope.",
@@ -352,7 +352,7 @@
         ]
       },
       {
-        "id": "Observation:vital-BloodPressure.extension",
+        "id": "Observation.extension",
         "path": "Observation.extension",
         "short": "Additional content defined by implementations",
         "definition": "May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
@@ -394,7 +394,7 @@
         }
       },
       {
-        "id": "Observation:vital-BloodPressure.extension:preconditioncode",
+        "id": "Observation.extension:preconditioncode",
         "path": "Observation.extension",
         "definition": "A coded description of the conditions or context of an observation, for example, under sedation, fasting or post-exercise. A qualifier cannot modify the measurement type; for example, a fasting blood sugar is still a blood sugar.",
         "min": 0,
@@ -417,7 +417,7 @@
         "sliceName": "preconditioncode"
       },
       {
-        "id": "Observation:vital-BloodPressure.extension:preconditioncode.id",
+        "id": "Observation.extension:preconditioncode.id",
         "path": "Observation.extension.id",
         "representation": [
           "xmlAttr"
@@ -446,7 +446,7 @@
         ]
       },
       {
-        "id": "Observation:vital-BloodPressure.extension:preconditioncode.extension",
+        "id": "Observation.extension:preconditioncode.extension",
         "path": "Observation.extension.extension",
         "slicing": {
           "discriminator": [
@@ -487,7 +487,7 @@
         ]
       },
       {
-        "id": "Observation:vital-BloodPressure.extension:preconditioncode.url",
+        "id": "Observation.extension:preconditioncode.url",
         "path": "Observation.extension.url",
         "representation": [
           "xmlAttr"
@@ -518,7 +518,7 @@
         "fixedUri": "http://hl7.org/fhir/us/mcode/StructureDefinition/vital-PreconditionCode-extension"
       },
       {
-        "id": "Observation:vital-BloodPressure.extension:preconditioncode.valueCodeableConcept",
+        "id": "Observation.extension:preconditioncode.valueCodeableConcept",
         "path": "Observation.extension.valueCodeableConcept",
         "short": "Value of extension",
         "definition": "Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).",
@@ -548,7 +548,7 @@
         }
       },
       {
-        "id": "Observation:vital-BloodPressure.extension:bodyposition",
+        "id": "Observation.extension:bodyposition",
         "path": "Observation.extension",
         "definition": "The position or physical attitude of the body.",
         "min": 0,
@@ -571,7 +571,7 @@
         "sliceName": "bodyposition"
       },
       {
-        "id": "Observation:vital-BloodPressure.extension:bloodpressurecuffsize",
+        "id": "Observation.extension:bloodpressurecuffsize",
         "path": "Observation.extension",
         "definition": "The size of cuff used, if applicable.",
         "min": 0,
@@ -594,7 +594,7 @@
         "sliceName": "bloodpressurecuffsize"
       },
       {
-        "id": "Observation:vital-BloodPressure.modifierExtension",
+        "id": "Observation.modifierExtension",
         "path": "Observation.modifierExtension",
         "short": "Extensions that cannot be ignored",
         "definition": "May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
@@ -627,7 +627,7 @@
         ]
       },
       {
-        "id": "Observation:vital-BloodPressure.identifier",
+        "id": "Observation.identifier",
         "path": "Observation.identifier",
         "short": "Business Identifier for observation",
         "definition": "A unique identifier assigned to this observation.",
@@ -666,7 +666,7 @@
         ]
       },
       {
-        "id": "Observation:vital-BloodPressure.basedOn",
+        "id": "Observation.basedOn",
         "path": "Observation.basedOn",
         "short": "Fulfills plan, proposal or order",
         "definition": "A plan, proposal or order that is fulfilled in whole or in part by this event.  For example, a MedicationRequest may require a patient to have laboratory test performed before  it is dispensed.",
@@ -708,7 +708,7 @@
         ]
       },
       {
-        "id": "Observation:vital-BloodPressure.partOf",
+        "id": "Observation.partOf",
         "path": "Observation.partOf",
         "short": "A larger event of which this particular Observation is a component or step. For example, an observation as part of a procedure.",
         "definition": "A larger event of which this particular Observation is a component or step. For example, an observation as part of a procedure.",
@@ -751,7 +751,7 @@
         ]
       },
       {
-        "id": "Observation:vital-BloodPressure.status",
+        "id": "Observation.status",
         "extension": [
           {
             "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-display-hint",
@@ -813,7 +813,7 @@
         ]
       },
       {
-        "id": "Observation:vital-BloodPressure.category",
+        "id": "Observation.category",
         "path": "Observation.category",
         "slicing": {
           "discriminator": [
@@ -871,7 +871,7 @@
         ]
       },
       {
-        "id": "Observation:vital-BloodPressure.category:VSCat",
+        "id": "Observation.category:VSCat",
         "path": "Observation.category",
         "sliceName": "VSCat",
         "short": "Classification of  type of observation",
@@ -916,7 +916,7 @@
         ]
       },
       {
-        "id": "Observation:vital-BloodPressure.category:VSCat.id",
+        "id": "Observation.category:VSCat.id",
         "path": "Observation.category.id",
         "representation": [
           "xmlAttr"
@@ -945,7 +945,7 @@
         ]
       },
       {
-        "id": "Observation:vital-BloodPressure.category:VSCat.extension",
+        "id": "Observation.category:VSCat.extension",
         "path": "Observation.category.extension",
         "slicing": {
           "discriminator": [
@@ -986,7 +986,7 @@
         ]
       },
       {
-        "id": "Observation:vital-BloodPressure.category:VSCat.coding",
+        "id": "Observation.category:VSCat.coding",
         "path": "Observation.category.coding",
         "short": "Code defined by a terminology system",
         "definition": "A reference to a code defined by a terminology system.",
@@ -1034,7 +1034,7 @@
         }
       },
       {
-        "id": "Observation:vital-BloodPressure.category:VSCat.coding:Fixed_vital-signs",
+        "id": "Observation.category:VSCat.coding:Fixed_vital-signs",
         "path": "Observation.category.coding",
         "sliceName": "Fixed_vital-signs",
         "short": "Code defined by a terminology system",
@@ -1054,7 +1054,7 @@
         "isSummary": true
       },
       {
-        "id": "Observation:vital-BloodPressure.category:VSCat.coding:Fixed_vital-signs.id",
+        "id": "Observation.category:VSCat.coding:Fixed_vital-signs.id",
         "path": "Observation.category.coding.id",
         "representation": [
           "xmlAttr"
@@ -1083,7 +1083,7 @@
         ]
       },
       {
-        "id": "Observation:vital-BloodPressure.category:VSCat.coding:Fixed_vital-signs.extension",
+        "id": "Observation.category:VSCat.coding:Fixed_vital-signs.extension",
         "path": "Observation.category.coding.extension",
         "slicing": {
           "discriminator": [
@@ -1124,7 +1124,7 @@
         ]
       },
       {
-        "id": "Observation:vital-BloodPressure.category:VSCat.coding:Fixed_vital-signs.system",
+        "id": "Observation.category:VSCat.coding:Fixed_vital-signs.system",
         "path": "Observation.category.coding.system",
         "short": "Identity of the terminology system",
         "definition": "The identification of the code system that defines the meaning of the symbol in the code.",
@@ -1161,7 +1161,7 @@
         "fixedUri": "http://terminology.hl7.org/CodeSystem/observation-category"
       },
       {
-        "id": "Observation:vital-BloodPressure.category:VSCat.coding:Fixed_vital-signs.version",
+        "id": "Observation.category:VSCat.coding:Fixed_vital-signs.version",
         "path": "Observation.category.coding.version",
         "short": "Version of the system - if relevant",
         "definition": "The version of the code system which was used when choosing this code. Note that a well-maintained code system does not need the version reported, because the meaning of codes is consistent across versions. However this cannot consistently be assured, and when the meaning is not guaranteed to be consistent, the version SHOULD be exchanged.",
@@ -1196,7 +1196,7 @@
         ]
       },
       {
-        "id": "Observation:vital-BloodPressure.category:VSCat.coding:Fixed_vital-signs.code",
+        "id": "Observation.category:VSCat.coding:Fixed_vital-signs.code",
         "path": "Observation.category.coding.code",
         "short": "Symbol in syntax defined by the system",
         "definition": "A symbol in syntax defined by the system. The symbol may be a predefined code or an expression in a syntax defined by the coding system (e.g. post-coordination).",
@@ -1232,7 +1232,7 @@
         "fixedCode": "vital-signs"
       },
       {
-        "id": "Observation:vital-BloodPressure.category:VSCat.coding:Fixed_vital-signs.display",
+        "id": "Observation.category:VSCat.coding:Fixed_vital-signs.display",
         "extension": [
           {
             "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable",
@@ -1273,7 +1273,7 @@
         ]
       },
       {
-        "id": "Observation:vital-BloodPressure.category:VSCat.coding:Fixed_vital-signs.userSelected",
+        "id": "Observation.category:VSCat.coding:Fixed_vital-signs.userSelected",
         "path": "Observation.category.coding.userSelected",
         "short": "If this coding was chosen directly by the user",
         "definition": "Indicates that this coding was chosen by a user directly - e.g. off a pick list of available items (codes or displays).",
@@ -1309,7 +1309,7 @@
         ]
       },
       {
-        "id": "Observation:vital-BloodPressure.category:VSCat.text",
+        "id": "Observation.category:VSCat.text",
         "extension": [
           {
             "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable",
@@ -1351,7 +1351,7 @@
         ]
       },
       {
-        "id": "Observation:vital-BloodPressure.code",
+        "id": "Observation.code",
         "path": "Observation.code",
         "short": "Blood Pressure",
         "definition": "Blood Pressure.",
@@ -1415,7 +1415,7 @@
         ]
       },
       {
-        "id": "Observation:vital-BloodPressure.code.id",
+        "id": "Observation.code.id",
         "path": "Observation.code.id",
         "representation": [
           "xmlAttr"
@@ -1444,7 +1444,7 @@
         ]
       },
       {
-        "id": "Observation:vital-BloodPressure.code.extension",
+        "id": "Observation.code.extension",
         "path": "Observation.code.extension",
         "slicing": {
           "discriminator": [
@@ -1485,7 +1485,7 @@
         ]
       },
       {
-        "id": "Observation:vital-BloodPressure.code.coding",
+        "id": "Observation.code.coding",
         "path": "Observation.code.coding",
         "slicing": {
           "discriminator": [
@@ -1535,7 +1535,7 @@
         ]
       },
       {
-        "id": "Observation:vital-BloodPressure.code.coding:Fixed_55284-4",
+        "id": "Observation.code.coding:Fixed_55284-4",
         "path": "Observation.code.coding",
         "sliceName": "Fixed_55284-4",
         "short": "Blood pressure systolic and diastolic",
@@ -1555,7 +1555,7 @@
         "isSummary": true
       },
       {
-        "id": "Observation:vital-BloodPressure.code.coding:Fixed_55284-4.id",
+        "id": "Observation.code.coding:Fixed_55284-4.id",
         "path": "Observation.code.coding.id",
         "representation": [
           "xmlAttr"
@@ -1584,7 +1584,7 @@
         ]
       },
       {
-        "id": "Observation:vital-BloodPressure.code.coding:Fixed_55284-4.extension",
+        "id": "Observation.code.coding:Fixed_55284-4.extension",
         "path": "Observation.code.coding.extension",
         "slicing": {
           "discriminator": [
@@ -1625,7 +1625,7 @@
         ]
       },
       {
-        "id": "Observation:vital-BloodPressure.code.coding:Fixed_55284-4.system",
+        "id": "Observation.code.coding:Fixed_55284-4.system",
         "path": "Observation.code.coding.system",
         "short": "Identity of the terminology system",
         "definition": "The identification of the code system that defines the meaning of the symbol in the code.",
@@ -1662,7 +1662,7 @@
         "fixedUri": "http://loinc.org"
       },
       {
-        "id": "Observation:vital-BloodPressure.code.coding:Fixed_55284-4.version",
+        "id": "Observation.code.coding:Fixed_55284-4.version",
         "path": "Observation.code.coding.version",
         "short": "Version of the system - if relevant",
         "definition": "The version of the code system which was used when choosing this code. Note that a well-maintained code system does not need the version reported, because the meaning of codes is consistent across versions. However this cannot consistently be assured, and when the meaning is not guaranteed to be consistent, the version SHOULD be exchanged.",
@@ -1697,7 +1697,7 @@
         ]
       },
       {
-        "id": "Observation:vital-BloodPressure.code.coding:Fixed_55284-4.code",
+        "id": "Observation.code.coding:Fixed_55284-4.code",
         "path": "Observation.code.coding.code",
         "short": "Symbol in syntax defined by the system",
         "definition": "A symbol in syntax defined by the system. The symbol may be a predefined code or an expression in a syntax defined by the coding system (e.g. post-coordination).",
@@ -1733,7 +1733,7 @@
         "fixedCode": "55284-4"
       },
       {
-        "id": "Observation:vital-BloodPressure.code.coding:Fixed_55284-4.display",
+        "id": "Observation.code.coding:Fixed_55284-4.display",
         "extension": [
           {
             "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable",
@@ -1774,7 +1774,7 @@
         ]
       },
       {
-        "id": "Observation:vital-BloodPressure.code.coding:Fixed_55284-4.userSelected",
+        "id": "Observation.code.coding:Fixed_55284-4.userSelected",
         "path": "Observation.code.coding.userSelected",
         "short": "If this coding was chosen directly by the user",
         "definition": "Indicates that this coding was chosen by a user directly - e.g. off a pick list of available items (codes or displays).",
@@ -1810,7 +1810,7 @@
         ]
       },
       {
-        "id": "Observation:vital-BloodPressure.code.coding:BPCode",
+        "id": "Observation.code.coding:BPCode",
         "path": "Observation.code.coding",
         "sliceName": "BPCode",
         "short": "Code defined by a terminology system",
@@ -1847,7 +1847,7 @@
         ]
       },
       {
-        "id": "Observation:vital-BloodPressure.code.text",
+        "id": "Observation.code.text",
         "extension": [
           {
             "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable",
@@ -1889,7 +1889,7 @@
         ]
       },
       {
-        "id": "Observation:vital-BloodPressure.subject",
+        "id": "Observation.subject",
         "path": "Observation.subject",
         "short": "The subject of an observation",
         "definition": "The subject of an observation.",
@@ -1937,7 +1937,7 @@
         ]
       },
       {
-        "id": "Observation:vital-BloodPressure.focus",
+        "id": "Observation.focus",
         "extension": [
           {
             "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
@@ -1985,7 +1985,7 @@
         ]
       },
       {
-        "id": "Observation:vital-BloodPressure.encounter",
+        "id": "Observation.encounter",
         "path": "Observation.encounter",
         "short": "Healthcare event during which this observation is made",
         "definition": "The healthcare event  (e.g. a patient and healthcare provider interaction) during which this observation is made.",
@@ -2031,7 +2031,7 @@
         ]
       },
       {
-        "id": "Observation:vital-BloodPressure.effective[x]",
+        "id": "Observation.effective[x]",
         "path": "Observation.effective[x]",
         "short": "Often just a dateTime for Vital Signs",
         "definition": "Often just a dateTime for Vital Signs.",
@@ -2087,7 +2087,7 @@
         ]
       },
       {
-        "id": "Observation:vital-BloodPressure.issued",
+        "id": "Observation.issued",
         "path": "Observation.issued",
         "short": "Date/Time this version was made available",
         "definition": "The date and time this version of the observation was made available to providers, typically after the results have been reviewed and verified.",
@@ -2122,7 +2122,7 @@
         ]
       },
       {
-        "id": "Observation:vital-BloodPressure.performer",
+        "id": "Observation.performer",
         "path": "Observation.performer",
         "short": "Who is responsible for the observation",
         "definition": "Who was responsible for asserting the observed value as \"true\".",
@@ -2167,7 +2167,7 @@
         ]
       },
       {
-        "id": "Observation:vital-BloodPressure.valueQuantity",
+        "id": "Observation.valueQuantity",
         "path": "Observation.valueQuantity",
         "short": "Vital Signs value are recorded using the Quantity data type. For supporting observations such as Cuff size could use other datatypes such as CodeableConcept.",
         "definition": "Vital Signs value are recorded using the Quantity data type. For supporting observations such as Cuff size could use other datatypes such as CodeableConcept.",
@@ -2211,7 +2211,7 @@
         ]
       },
       {
-        "id": "Observation:vital-BloodPressure.dataAbsentReason",
+        "id": "Observation.dataAbsentReason",
         "path": "Observation.dataAbsentReason",
         "short": "Why the result is missing",
         "definition": "Provides a reason why the expected value in the element Observation.value[x] is missing.",
@@ -2258,7 +2258,7 @@
         ]
       },
       {
-        "id": "Observation:vital-BloodPressure.interpretation",
+        "id": "Observation.interpretation",
         "path": "Observation.interpretation",
         "short": "High, low, normal, etc.",
         "definition": "A categorical assessment of an observation value.  For example, high, low, normal.",
@@ -2305,7 +2305,7 @@
         ]
       },
       {
-        "id": "Observation:vital-BloodPressure.note",
+        "id": "Observation.note",
         "path": "Observation.note",
         "short": "Comments about the observation",
         "definition": "Comments about the observation or the results.",
@@ -2337,7 +2337,7 @@
         ]
       },
       {
-        "id": "Observation:vital-BloodPressure.bodySite",
+        "id": "Observation.bodySite",
         "path": "Observation.bodySite",
         "short": "Observed body part",
         "definition": "Indicates the site on the subject's body where the observation was made (i.e. the target site).",
@@ -2380,7 +2380,7 @@
         ]
       },
       {
-        "id": "Observation:vital-BloodPressure.method",
+        "id": "Observation.method",
         "path": "Observation.method",
         "short": "How it was done",
         "definition": "Indicates the mechanism used to perform the observation.",
@@ -2416,7 +2416,7 @@
         ]
       },
       {
-        "id": "Observation:vital-BloodPressure.specimen",
+        "id": "Observation.specimen",
         "path": "Observation.specimen",
         "short": "Specimen used for this observation",
         "definition": "The specimen that was used when this observation was made.",
@@ -2458,7 +2458,7 @@
         ]
       },
       {
-        "id": "Observation:vital-BloodPressure.device",
+        "id": "Observation.device",
         "path": "Observation.device",
         "short": "(Measurement) Device",
         "definition": "The device used to generate the observation data.",
@@ -2500,7 +2500,7 @@
         ]
       },
       {
-        "id": "Observation:vital-BloodPressure.referenceRange",
+        "id": "Observation.referenceRange",
         "path": "Observation.referenceRange",
         "short": "Provides guide for interpretation",
         "definition": "Guidance on how to interpret the value by comparison to a normal or recommended range.  Multiple reference ranges are interpreted as an \"OR\".   In other words, to represent two distinct target populations, two `referenceRange` elements would be used.",
@@ -2549,7 +2549,7 @@
         ]
       },
       {
-        "id": "Observation:vital-BloodPressure.referenceRange.id",
+        "id": "Observation.referenceRange.id",
         "path": "Observation.referenceRange.id",
         "representation": [
           "xmlAttr"
@@ -2578,7 +2578,7 @@
         ]
       },
       {
-        "id": "Observation:vital-BloodPressure.referenceRange.extension",
+        "id": "Observation.referenceRange.extension",
         "path": "Observation.referenceRange.extension",
         "short": "Additional content defined by implementations",
         "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
@@ -2609,7 +2609,7 @@
         ]
       },
       {
-        "id": "Observation:vital-BloodPressure.referenceRange.modifierExtension",
+        "id": "Observation.referenceRange.modifierExtension",
         "path": "Observation.referenceRange.modifierExtension",
         "short": "Extensions that cannot be ignored even if unrecognized",
         "definition": "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
@@ -2643,7 +2643,7 @@
         ]
       },
       {
-        "id": "Observation:vital-BloodPressure.referenceRange.low",
+        "id": "Observation.referenceRange.low",
         "path": "Observation.referenceRange.low",
         "short": "Low Range, if relevant",
         "definition": "The value of the low bound of the reference range.  The low bound of the reference range endpoint is inclusive of the value (e.g.  reference range is >=5 - <=9). If the low bound is omitted,  it is assumed to be meaningless (e.g. reference range is <=2.3).",
@@ -2679,7 +2679,7 @@
         ]
       },
       {
-        "id": "Observation:vital-BloodPressure.referenceRange.high",
+        "id": "Observation.referenceRange.high",
         "path": "Observation.referenceRange.high",
         "short": "High Range, if relevant",
         "definition": "The value of the high bound of the reference range.  The high bound of the reference range endpoint is inclusive of the value (e.g.  reference range is >=5 - <=9). If the high bound is omitted,  it is assumed to be meaningless (e.g. reference range is >= 2.3).",
@@ -2715,7 +2715,7 @@
         ]
       },
       {
-        "id": "Observation:vital-BloodPressure.referenceRange.type",
+        "id": "Observation.referenceRange.type",
         "path": "Observation.referenceRange.type",
         "short": "Reference range qualifier",
         "definition": "Codes to indicate the what part of the targeted reference population it applies to. For example, the normal or therapeutic range.",
@@ -2762,7 +2762,7 @@
         ]
       },
       {
-        "id": "Observation:vital-BloodPressure.referenceRange.appliesTo",
+        "id": "Observation.referenceRange.appliesTo",
         "path": "Observation.referenceRange.appliesTo",
         "short": "Reference range population",
         "definition": "Codes to indicate the target population this reference range applies to.  For example, a reference range may be based on the normal population or a particular sex or race.  Multiple `appliesTo`  are interpreted as an \"AND\" of the target populations.  For example, to represent a target population of African American females, both a code of female and a code for African American would be used.",
@@ -2809,7 +2809,7 @@
         ]
       },
       {
-        "id": "Observation:vital-BloodPressure.referenceRange.age",
+        "id": "Observation.referenceRange.age",
         "path": "Observation.referenceRange.age",
         "short": "Applicable age range, if relevant",
         "definition": "The age at which this reference range is applicable. This is a neonatal age (e.g. number of weeks at term) if the meaning says so.",
@@ -2836,7 +2836,7 @@
         ]
       },
       {
-        "id": "Observation:vital-BloodPressure.referenceRange.text",
+        "id": "Observation.referenceRange.text",
         "path": "Observation.referenceRange.text",
         "short": "Text based reference range in an observation",
         "definition": "Text based reference range in an observation which may be used when a quantitative range is not appropriate for an observation.  An example would be a reference value of \"Negative\" or a list or table of \"normals\".",
@@ -2866,7 +2866,7 @@
         ]
       },
       {
-        "id": "Observation:vital-BloodPressure.hasMember",
+        "id": "Observation.hasMember",
         "path": "Observation.hasMember",
         "short": "Abstract class parent for all vital sign profiles",
         "definition": "Abstract class parent for all vital sign profiles.",
@@ -2900,7 +2900,7 @@
         ]
       },
       {
-        "id": "Observation:vital-BloodPressure.derivedFrom",
+        "id": "Observation.derivedFrom",
         "path": "Observation.derivedFrom",
         "short": "Related measurements the observation is made from",
         "definition": "The target resource that represents a measurement from which this observation value is derived. For example, a calculated anion gap or a fetal measurement based on an ultrasound image.",
@@ -2936,7 +2936,7 @@
         ]
       },
       {
-        "id": "Observation:vital-BloodPressure.component",
+        "id": "Observation.component",
         "path": "Observation.component",
         "slicing": {
           "discriminator": [
@@ -3001,7 +3001,7 @@
         ]
       },
       {
-        "id": "Observation:vital-BloodPressure.component:SystolicBP",
+        "id": "Observation.component:SystolicBP",
         "path": "Observation.component",
         "sliceName": "SystolicBP",
         "short": "Used when reporting systolic and diastolic blood pressure.",
@@ -3053,7 +3053,7 @@
         ]
       },
       {
-        "id": "Observation:vital-BloodPressure.component:SystolicBP.id",
+        "id": "Observation.component:SystolicBP.id",
         "path": "Observation.component.id",
         "representation": [
           "xmlAttr"
@@ -3082,7 +3082,7 @@
         ]
       },
       {
-        "id": "Observation:vital-BloodPressure.component:SystolicBP.extension",
+        "id": "Observation.component:SystolicBP.extension",
         "path": "Observation.component.extension",
         "short": "Additional content defined by implementations",
         "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
@@ -3113,7 +3113,7 @@
         ]
       },
       {
-        "id": "Observation:vital-BloodPressure.component:SystolicBP.modifierExtension",
+        "id": "Observation.component:SystolicBP.modifierExtension",
         "path": "Observation.component.modifierExtension",
         "short": "Extensions that cannot be ignored even if unrecognized",
         "definition": "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
@@ -3147,7 +3147,7 @@
         ]
       },
       {
-        "id": "Observation:vital-BloodPressure.component:SystolicBP.code",
+        "id": "Observation.component:SystolicBP.code",
         "path": "Observation.component.code",
         "short": "Type of component observation (code / type)",
         "definition": "Describes what was observed. Sometimes this is called the observation \"code\".",
@@ -3203,7 +3203,7 @@
         ]
       },
       {
-        "id": "Observation:vital-BloodPressure.component:SystolicBP.code.id",
+        "id": "Observation.component:SystolicBP.code.id",
         "path": "Observation.component.code.id",
         "representation": [
           "xmlAttr"
@@ -3232,7 +3232,7 @@
         ]
       },
       {
-        "id": "Observation:vital-BloodPressure.component:SystolicBP.code.extension",
+        "id": "Observation.component:SystolicBP.code.extension",
         "path": "Observation.component.code.extension",
         "slicing": {
           "discriminator": [
@@ -3273,7 +3273,7 @@
         ]
       },
       {
-        "id": "Observation:vital-BloodPressure.component:SystolicBP.code.coding",
+        "id": "Observation.component:SystolicBP.code.coding",
         "path": "Observation.component.code.coding",
         "slicing": {
           "discriminator": [
@@ -3323,7 +3323,7 @@
         ]
       },
       {
-        "id": "Observation:vital-BloodPressure.component:SystolicBP.code.coding:SBPCode",
+        "id": "Observation.component:SystolicBP.code.coding:SBPCode",
         "path": "Observation.component.code.coding",
         "sliceName": "SBPCode",
         "short": "Systolic Blood Pressure",
@@ -3360,7 +3360,7 @@
         ]
       },
       {
-        "id": "Observation:vital-BloodPressure.component:SystolicBP.code.text",
+        "id": "Observation.component:SystolicBP.code.text",
         "extension": [
           {
             "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable",
@@ -3402,7 +3402,7 @@
         ]
       },
       {
-        "id": "Observation:vital-BloodPressure.component:SystolicBP.valueQuantity",
+        "id": "Observation.component:SystolicBP.valueQuantity",
         "path": "Observation.component.valueQuantity",
         "short": "Vital Sign Value recorded with UCUM",
         "definition": "Vital Sign Value recorded with UCUM.",
@@ -3454,7 +3454,7 @@
         ]
       },
       {
-        "id": "Observation:vital-BloodPressure.component:SystolicBP.dataAbsentReason",
+        "id": "Observation.component:SystolicBP.dataAbsentReason",
         "path": "Observation.component.dataAbsentReason",
         "short": "Why the component result is missing",
         "definition": "Provides a reason why the expected value in the element Observation.component.value[x] is missing.",
@@ -3501,7 +3501,7 @@
         ]
       },
       {
-        "id": "Observation:vital-BloodPressure.component:SystolicBP.interpretation",
+        "id": "Observation.component:SystolicBP.interpretation",
         "path": "Observation.component.interpretation",
         "short": "High, low, normal, etc.",
         "definition": "A categorical assessment of an observation value.  For example, high, low, normal.",
@@ -3555,7 +3555,7 @@
         ]
       },
       {
-        "id": "Observation:vital-BloodPressure.component:SystolicBP.referenceRange",
+        "id": "Observation.component:SystolicBP.referenceRange",
         "path": "Observation.component.referenceRange",
         "short": "Provides guide for interpretation of component result",
         "definition": "Guidance on how to interpret the value by comparison to a normal or recommended range.",
@@ -3583,7 +3583,7 @@
         ]
       },
       {
-        "id": "Observation:vital-BloodPressure.component:DiastolicBP",
+        "id": "Observation.component:DiastolicBP",
         "path": "Observation.component",
         "sliceName": "DiastolicBP",
         "short": "Used when reporting systolic and diastolic blood pressure.",
@@ -3635,7 +3635,7 @@
         ]
       },
       {
-        "id": "Observation:vital-BloodPressure.component:DiastolicBP.id",
+        "id": "Observation.component:DiastolicBP.id",
         "path": "Observation.component.id",
         "representation": [
           "xmlAttr"
@@ -3664,7 +3664,7 @@
         ]
       },
       {
-        "id": "Observation:vital-BloodPressure.component:DiastolicBP.extension",
+        "id": "Observation.component:DiastolicBP.extension",
         "path": "Observation.component.extension",
         "short": "Additional content defined by implementations",
         "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
@@ -3695,7 +3695,7 @@
         ]
       },
       {
-        "id": "Observation:vital-BloodPressure.component:DiastolicBP.modifierExtension",
+        "id": "Observation.component:DiastolicBP.modifierExtension",
         "path": "Observation.component.modifierExtension",
         "short": "Extensions that cannot be ignored even if unrecognized",
         "definition": "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
@@ -3729,7 +3729,7 @@
         ]
       },
       {
-        "id": "Observation:vital-BloodPressure.component:DiastolicBP.code",
+        "id": "Observation.component:DiastolicBP.code",
         "path": "Observation.component.code",
         "short": "Type of component observation (code / type)",
         "definition": "Describes what was observed. Sometimes this is called the observation \"code\".",
@@ -3781,7 +3781,7 @@
         ]
       },
       {
-        "id": "Observation:vital-BloodPressure.component:DiastolicBP.code.id",
+        "id": "Observation.component:DiastolicBP.code.id",
         "path": "Observation.component.code.id",
         "representation": [
           "xmlAttr"
@@ -3810,7 +3810,7 @@
         ]
       },
       {
-        "id": "Observation:vital-BloodPressure.component:DiastolicBP.code.extension",
+        "id": "Observation.component:DiastolicBP.code.extension",
         "path": "Observation.component.code.extension",
         "slicing": {
           "discriminator": [
@@ -3851,7 +3851,7 @@
         ]
       },
       {
-        "id": "Observation:vital-BloodPressure.component:DiastolicBP.code.coding",
+        "id": "Observation.component:DiastolicBP.code.coding",
         "path": "Observation.component.code.coding",
         "slicing": {
           "discriminator": [
@@ -3901,7 +3901,7 @@
         ]
       },
       {
-        "id": "Observation:vital-BloodPressure.component:DiastolicBP.code.coding:DBPCode",
+        "id": "Observation.component:DiastolicBP.code.coding:DBPCode",
         "path": "Observation.component.code.coding",
         "sliceName": "DBPCode",
         "short": "Diastolic Blood Pressure",
@@ -3938,7 +3938,7 @@
         ]
       },
       {
-        "id": "Observation:vital-BloodPressure.component:DiastolicBP.code.text",
+        "id": "Observation.component:DiastolicBP.code.text",
         "extension": [
           {
             "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable",
@@ -3980,7 +3980,7 @@
         ]
       },
       {
-        "id": "Observation:vital-BloodPressure.component:DiastolicBP.valueQuantity",
+        "id": "Observation.component:DiastolicBP.valueQuantity",
         "path": "Observation.component.valueQuantity",
         "short": "Vital Sign Value recorded with UCUM",
         "definition": "Vital Sign Value recorded with UCUM.",
@@ -4032,7 +4032,7 @@
         ]
       },
       {
-        "id": "Observation:vital-BloodPressure.component:DiastolicBP.dataAbsentReason",
+        "id": "Observation.component:DiastolicBP.dataAbsentReason",
         "path": "Observation.component.dataAbsentReason",
         "short": "Why the component result is missing",
         "definition": "Provides a reason why the expected value in the element Observation.component.value[x] is missing.",
@@ -4079,7 +4079,7 @@
         ]
       },
       {
-        "id": "Observation:vital-BloodPressure.component:DiastolicBP.interpretation",
+        "id": "Observation.component:DiastolicBP.interpretation",
         "path": "Observation.component.interpretation",
         "short": "High, low, normal, etc.",
         "definition": "A categorical assessment of an observation value.  For example, high, low, normal.",
@@ -4133,7 +4133,7 @@
         ]
       },
       {
-        "id": "Observation:vital-BloodPressure.component:DiastolicBP.referenceRange",
+        "id": "Observation.component:DiastolicBP.referenceRange",
         "path": "Observation.component.referenceRange",
         "short": "Provides guide for interpretation of component result",
         "definition": "Guidance on how to interpret the value by comparison to a normal or recommended range.",
@@ -4161,7 +4161,7 @@
         ]
       },
       {
-        "id": "Observation:vital-BloodPressure.component:vital-SystolicPressure",
+        "id": "Observation.component:vital-SystolicPressure",
         "path": "Observation.component",
         "short": "SystolicPressure: The blood pressure during the contraction of the left ventricle of the heart, when blood pressure is at its highest",
         "definition": "The blood pressure during the contraction of the left ventricle of the heart, when blood pressure is at its highest.",
@@ -4211,7 +4211,7 @@
         "sliceName": "vital-SystolicPressure"
       },
       {
-        "id": "Observation:vital-BloodPressure.component:vital-SystolicPressure.id",
+        "id": "Observation.component:vital-SystolicPressure.id",
         "path": "Observation.component.id",
         "representation": [
           "xmlAttr"
@@ -4240,7 +4240,7 @@
         ]
       },
       {
-        "id": "Observation:vital-BloodPressure.component:vital-SystolicPressure.extension",
+        "id": "Observation.component:vital-SystolicPressure.extension",
         "path": "Observation.component.extension",
         "short": "Additional content defined by implementations",
         "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
@@ -4271,7 +4271,7 @@
         ]
       },
       {
-        "id": "Observation:vital-BloodPressure.component:vital-SystolicPressure.modifierExtension",
+        "id": "Observation.component:vital-SystolicPressure.modifierExtension",
         "path": "Observation.component.modifierExtension",
         "short": "Extensions that cannot be ignored even if unrecognized",
         "definition": "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
@@ -4305,7 +4305,7 @@
         ]
       },
       {
-        "id": "Observation:vital-BloodPressure.component:vital-SystolicPressure.code",
+        "id": "Observation.component:vital-SystolicPressure.code",
         "path": "Observation.component.code",
         "short": "Type of component observation (code / type)",
         "definition": "Describes what was observed. Sometimes this is called the observation \"code\".",
@@ -4357,7 +4357,7 @@
         ]
       },
       {
-        "id": "Observation:vital-BloodPressure.component:vital-SystolicPressure.code.id",
+        "id": "Observation.component:vital-SystolicPressure.code.id",
         "path": "Observation.component.code.id",
         "representation": [
           "xmlAttr"
@@ -4386,7 +4386,7 @@
         ]
       },
       {
-        "id": "Observation:vital-BloodPressure.component:vital-SystolicPressure.code.extension",
+        "id": "Observation.component:vital-SystolicPressure.code.extension",
         "path": "Observation.component.code.extension",
         "slicing": {
           "discriminator": [
@@ -4427,7 +4427,7 @@
         ]
       },
       {
-        "id": "Observation:vital-BloodPressure.component:vital-SystolicPressure.code.coding",
+        "id": "Observation.component:vital-SystolicPressure.code.coding",
         "path": "Observation.component.code.coding",
         "short": "Code defined by a terminology system",
         "definition": "A reference to a code defined by a terminology system.",
@@ -4474,7 +4474,7 @@
         }
       },
       {
-        "id": "Observation:vital-BloodPressure.component:vital-SystolicPressure.code.coding:Fixed_8480-6",
+        "id": "Observation.component:vital-SystolicPressure.code.coding:Fixed_8480-6",
         "path": "Observation.component.code.coding",
         "sliceName": "Fixed_8480-6",
         "short": "Code defined by a terminology system",
@@ -4494,7 +4494,7 @@
         "isSummary": true
       },
       {
-        "id": "Observation:vital-BloodPressure.component:vital-SystolicPressure.code.coding:Fixed_8480-6.id",
+        "id": "Observation.component:vital-SystolicPressure.code.coding:Fixed_8480-6.id",
         "path": "Observation.component.code.coding.id",
         "representation": [
           "xmlAttr"
@@ -4523,7 +4523,7 @@
         ]
       },
       {
-        "id": "Observation:vital-BloodPressure.component:vital-SystolicPressure.code.coding:Fixed_8480-6.extension",
+        "id": "Observation.component:vital-SystolicPressure.code.coding:Fixed_8480-6.extension",
         "path": "Observation.component.code.coding.extension",
         "slicing": {
           "discriminator": [
@@ -4564,7 +4564,7 @@
         ]
       },
       {
-        "id": "Observation:vital-BloodPressure.component:vital-SystolicPressure.code.coding:Fixed_8480-6.system",
+        "id": "Observation.component:vital-SystolicPressure.code.coding:Fixed_8480-6.system",
         "path": "Observation.component.code.coding.system",
         "short": "Identity of the terminology system",
         "definition": "The identification of the code system that defines the meaning of the symbol in the code.",
@@ -4601,7 +4601,7 @@
         "fixedUri": "http://loinc.org"
       },
       {
-        "id": "Observation:vital-BloodPressure.component:vital-SystolicPressure.code.coding:Fixed_8480-6.version",
+        "id": "Observation.component:vital-SystolicPressure.code.coding:Fixed_8480-6.version",
         "path": "Observation.component.code.coding.version",
         "short": "Version of the system - if relevant",
         "definition": "The version of the code system which was used when choosing this code. Note that a well-maintained code system does not need the version reported, because the meaning of codes is consistent across versions. However this cannot consistently be assured, and when the meaning is not guaranteed to be consistent, the version SHOULD be exchanged.",
@@ -4636,7 +4636,7 @@
         ]
       },
       {
-        "id": "Observation:vital-BloodPressure.component:vital-SystolicPressure.code.coding:Fixed_8480-6.code",
+        "id": "Observation.component:vital-SystolicPressure.code.coding:Fixed_8480-6.code",
         "path": "Observation.component.code.coding.code",
         "short": "Symbol in syntax defined by the system",
         "definition": "A symbol in syntax defined by the system. The symbol may be a predefined code or an expression in a syntax defined by the coding system (e.g. post-coordination).",
@@ -4672,7 +4672,7 @@
         "fixedCode": "8480-6"
       },
       {
-        "id": "Observation:vital-BloodPressure.component:vital-SystolicPressure.code.coding:Fixed_8480-6.display",
+        "id": "Observation.component:vital-SystolicPressure.code.coding:Fixed_8480-6.display",
         "extension": [
           {
             "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable",
@@ -4713,7 +4713,7 @@
         ]
       },
       {
-        "id": "Observation:vital-BloodPressure.component:vital-SystolicPressure.code.coding:Fixed_8480-6.userSelected",
+        "id": "Observation.component:vital-SystolicPressure.code.coding:Fixed_8480-6.userSelected",
         "path": "Observation.component.code.coding.userSelected",
         "short": "If this coding was chosen directly by the user",
         "definition": "Indicates that this coding was chosen by a user directly - e.g. off a pick list of available items (codes or displays).",
@@ -4749,7 +4749,7 @@
         ]
       },
       {
-        "id": "Observation:vital-BloodPressure.component:vital-SystolicPressure.code.text",
+        "id": "Observation.component:vital-SystolicPressure.code.text",
         "extension": [
           {
             "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable",
@@ -4791,7 +4791,7 @@
         ]
       },
       {
-        "id": "Observation:vital-BloodPressure.component:vital-SystolicPressure.valueQuantity",
+        "id": "Observation.component:vital-SystolicPressure.valueQuantity",
         "path": "Observation.component.valueQuantity",
         "short": "mmHg",
         "definition": "mmHg",
@@ -4810,7 +4810,7 @@
         "isSummary": true
       },
       {
-        "id": "Observation:vital-BloodPressure.component:vital-SystolicPressure.valueQuantity.id",
+        "id": "Observation.component:vital-SystolicPressure.valueQuantity.id",
         "path": "Observation.component.valueQuantity.id",
         "representation": [
           "xmlAttr"
@@ -4839,7 +4839,7 @@
         ]
       },
       {
-        "id": "Observation:vital-BloodPressure.component:vital-SystolicPressure.valueQuantity.extension",
+        "id": "Observation.component:vital-SystolicPressure.valueQuantity.extension",
         "path": "Observation.component.valueQuantity.extension",
         "slicing": {
           "discriminator": [
@@ -4880,7 +4880,7 @@
         ]
       },
       {
-        "id": "Observation:vital-BloodPressure.component:vital-SystolicPressure.valueQuantity.value",
+        "id": "Observation.component:vital-SystolicPressure.valueQuantity.value",
         "path": "Observation.component.valueQuantity.value",
         "short": "Numerical value (with implicit precision)",
         "definition": "The value of the measured amount. The value includes an implicit precision in the presentation of the value.",
@@ -4912,7 +4912,7 @@
         ]
       },
       {
-        "id": "Observation:vital-BloodPressure.component:vital-SystolicPressure.valueQuantity.comparator",
+        "id": "Observation.component:vital-SystolicPressure.valueQuantity.comparator",
         "path": "Observation.component.valueQuantity.comparator",
         "short": "< | <= | >= | > - how to understand the value",
         "definition": "How the value should be understood and represented - whether the actual value is greater or less than the stated value due to measurement issues; e.g. if the comparator is \"<\" , then the real value is < stated value.",
@@ -4956,7 +4956,7 @@
         ]
       },
       {
-        "id": "Observation:vital-BloodPressure.component:vital-SystolicPressure.valueQuantity.unit",
+        "id": "Observation.component:vital-SystolicPressure.valueQuantity.unit",
         "extension": [
           {
             "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable",
@@ -4993,7 +4993,7 @@
         ]
       },
       {
-        "id": "Observation:vital-BloodPressure.component:vital-SystolicPressure.valueQuantity.system",
+        "id": "Observation.component:vital-SystolicPressure.valueQuantity.system",
         "path": "Observation.component.valueQuantity.system",
         "short": "System that defines coded unit form",
         "definition": "The identification of the system that provides the coded form of the unit.",
@@ -5028,7 +5028,7 @@
         "fixedUri": "http://unitsofmeasure.org"
       },
       {
-        "id": "Observation:vital-BloodPressure.component:vital-SystolicPressure.valueQuantity.code",
+        "id": "Observation.component:vital-SystolicPressure.valueQuantity.code",
         "path": "Observation.component.valueQuantity.code",
         "short": "Coded form of the unit",
         "definition": "A computer processable form of the unit in some unit representation system.",
@@ -5061,7 +5061,7 @@
         "fixedCode": "mm[Hg]"
       },
       {
-        "id": "Observation:vital-BloodPressure.component:vital-SystolicPressure.dataAbsentReason",
+        "id": "Observation.component:vital-SystolicPressure.dataAbsentReason",
         "path": "Observation.component.dataAbsentReason",
         "short": "Why the component result is missing",
         "definition": "Provides a reason why the expected value in the element Observation.component.value[x] is missing.",
@@ -5108,7 +5108,7 @@
         ]
       },
       {
-        "id": "Observation:vital-BloodPressure.component:vital-SystolicPressure.interpretation",
+        "id": "Observation.component:vital-SystolicPressure.interpretation",
         "path": "Observation.component.interpretation",
         "short": "High, low, normal, etc.",
         "definition": "A categorical assessment of an observation value.  For example, high, low, normal.",
@@ -5162,7 +5162,7 @@
         ]
       },
       {
-        "id": "Observation:vital-BloodPressure.component:vital-SystolicPressure.referenceRange",
+        "id": "Observation.component:vital-SystolicPressure.referenceRange",
         "path": "Observation.component.referenceRange",
         "short": "Provides guide for interpretation of component result",
         "definition": "Guidance on how to interpret the value by comparison to a normal or recommended range.",
@@ -5194,7 +5194,7 @@
         ]
       },
       {
-        "id": "Observation:vital-BloodPressure.component:vital-SystolicPressure.referenceRange.id",
+        "id": "Observation.component:vital-SystolicPressure.referenceRange.id",
         "path": "Observation.component.referenceRange.id",
         "representation": [
           "xmlAttr"
@@ -5223,7 +5223,7 @@
         ]
       },
       {
-        "id": "Observation:vital-BloodPressure.component:vital-SystolicPressure.referenceRange.extension",
+        "id": "Observation.component:vital-SystolicPressure.referenceRange.extension",
         "path": "Observation.component.referenceRange.extension",
         "short": "Additional content defined by implementations",
         "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
@@ -5254,7 +5254,7 @@
         ]
       },
       {
-        "id": "Observation:vital-BloodPressure.component:vital-SystolicPressure.referenceRange.modifierExtension",
+        "id": "Observation.component:vital-SystolicPressure.referenceRange.modifierExtension",
         "path": "Observation.component.referenceRange.modifierExtension",
         "short": "Extensions that cannot be ignored even if unrecognized",
         "definition": "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
@@ -5288,7 +5288,7 @@
         ]
       },
       {
-        "id": "Observation:vital-BloodPressure.component:vital-SystolicPressure.referenceRange.low",
+        "id": "Observation.component:vital-SystolicPressure.referenceRange.low",
         "path": "Observation.component.referenceRange.low",
         "short": "Low Range, if relevant",
         "definition": "The value of the low bound of the reference range.  The low bound of the reference range endpoint is inclusive of the value (e.g.  reference range is >=5 - <=9). If the low bound is omitted,  it is assumed to be meaningless (e.g. reference range is <=2.3).",
@@ -5324,7 +5324,7 @@
         ]
       },
       {
-        "id": "Observation:vital-BloodPressure.component:vital-SystolicPressure.referenceRange.high",
+        "id": "Observation.component:vital-SystolicPressure.referenceRange.high",
         "path": "Observation.component.referenceRange.high",
         "short": "High Range, if relevant",
         "definition": "The value of the high bound of the reference range.  The high bound of the reference range endpoint is inclusive of the value (e.g.  reference range is >=5 - <=9). If the high bound is omitted,  it is assumed to be meaningless (e.g. reference range is >= 2.3).",
@@ -5360,7 +5360,7 @@
         ]
       },
       {
-        "id": "Observation:vital-BloodPressure.component:vital-SystolicPressure.referenceRange.type",
+        "id": "Observation.component:vital-SystolicPressure.referenceRange.type",
         "path": "Observation.component.referenceRange.type",
         "short": "Reference range qualifier",
         "definition": "Codes to indicate the what part of the targeted reference population it applies to. For example, the normal or therapeutic range.",
@@ -5407,7 +5407,7 @@
         ]
       },
       {
-        "id": "Observation:vital-BloodPressure.component:vital-SystolicPressure.referenceRange.appliesTo",
+        "id": "Observation.component:vital-SystolicPressure.referenceRange.appliesTo",
         "path": "Observation.component.referenceRange.appliesTo",
         "short": "Reference range population",
         "definition": "Codes to indicate the target population this reference range applies to.  For example, a reference range may be based on the normal population or a particular sex or race.  Multiple `appliesTo`  are interpreted as an \"AND\" of the target populations.  For example, to represent a target population of African American females, both a code of female and a code for African American would be used.",
@@ -5454,7 +5454,7 @@
         ]
       },
       {
-        "id": "Observation:vital-BloodPressure.component:vital-SystolicPressure.referenceRange.age",
+        "id": "Observation.component:vital-SystolicPressure.referenceRange.age",
         "path": "Observation.component.referenceRange.age",
         "short": "Applicable age range, if relevant",
         "definition": "The age at which this reference range is applicable. This is a neonatal age (e.g. number of weeks at term) if the meaning says so.",
@@ -5481,7 +5481,7 @@
         ]
       },
       {
-        "id": "Observation:vital-BloodPressure.component:vital-SystolicPressure.referenceRange.text",
+        "id": "Observation.component:vital-SystolicPressure.referenceRange.text",
         "path": "Observation.component.referenceRange.text",
         "short": "Text based reference range in an observation",
         "definition": "Text based reference range in an observation which may be used when a quantitative range is not appropriate for an observation.  An example would be a reference value of \"Negative\" or a list or table of \"normals\".",
@@ -5511,7 +5511,7 @@
         ]
       },
       {
-        "id": "Observation:vital-BloodPressure.component:vital-DiastolicPressure",
+        "id": "Observation.component:vital-DiastolicPressure",
         "path": "Observation.component",
         "short": "DiastolicPressure: The blood pressure after the contraction of the heart while the chambers of the heart refill with blood, when the pressure is lowest",
         "definition": "The blood pressure after the contraction of the heart while the chambers of the heart refill with blood, when the pressure is lowest.",
@@ -5561,7 +5561,7 @@
         "sliceName": "vital-DiastolicPressure"
       },
       {
-        "id": "Observation:vital-BloodPressure.component:vital-DiastolicPressure.id",
+        "id": "Observation.component:vital-DiastolicPressure.id",
         "path": "Observation.component.id",
         "representation": [
           "xmlAttr"
@@ -5590,7 +5590,7 @@
         ]
       },
       {
-        "id": "Observation:vital-BloodPressure.component:vital-DiastolicPressure.extension",
+        "id": "Observation.component:vital-DiastolicPressure.extension",
         "path": "Observation.component.extension",
         "short": "Additional content defined by implementations",
         "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
@@ -5621,7 +5621,7 @@
         ]
       },
       {
-        "id": "Observation:vital-BloodPressure.component:vital-DiastolicPressure.modifierExtension",
+        "id": "Observation.component:vital-DiastolicPressure.modifierExtension",
         "path": "Observation.component.modifierExtension",
         "short": "Extensions that cannot be ignored even if unrecognized",
         "definition": "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
@@ -5655,7 +5655,7 @@
         ]
       },
       {
-        "id": "Observation:vital-BloodPressure.component:vital-DiastolicPressure.code",
+        "id": "Observation.component:vital-DiastolicPressure.code",
         "path": "Observation.component.code",
         "short": "Type of component observation (code / type)",
         "definition": "Describes what was observed. Sometimes this is called the observation \"code\".",
@@ -5707,7 +5707,7 @@
         ]
       },
       {
-        "id": "Observation:vital-BloodPressure.component:vital-DiastolicPressure.code.id",
+        "id": "Observation.component:vital-DiastolicPressure.code.id",
         "path": "Observation.component.code.id",
         "representation": [
           "xmlAttr"
@@ -5736,7 +5736,7 @@
         ]
       },
       {
-        "id": "Observation:vital-BloodPressure.component:vital-DiastolicPressure.code.extension",
+        "id": "Observation.component:vital-DiastolicPressure.code.extension",
         "path": "Observation.component.code.extension",
         "slicing": {
           "discriminator": [
@@ -5777,7 +5777,7 @@
         ]
       },
       {
-        "id": "Observation:vital-BloodPressure.component:vital-DiastolicPressure.code.coding",
+        "id": "Observation.component:vital-DiastolicPressure.code.coding",
         "path": "Observation.component.code.coding",
         "short": "Code defined by a terminology system",
         "definition": "A reference to a code defined by a terminology system.",
@@ -5824,7 +5824,7 @@
         }
       },
       {
-        "id": "Observation:vital-BloodPressure.component:vital-DiastolicPressure.code.coding:Fixed_8462-4",
+        "id": "Observation.component:vital-DiastolicPressure.code.coding:Fixed_8462-4",
         "path": "Observation.component.code.coding",
         "sliceName": "Fixed_8462-4",
         "short": "Code defined by a terminology system",
@@ -5844,7 +5844,7 @@
         "isSummary": true
       },
       {
-        "id": "Observation:vital-BloodPressure.component:vital-DiastolicPressure.code.coding:Fixed_8462-4.id",
+        "id": "Observation.component:vital-DiastolicPressure.code.coding:Fixed_8462-4.id",
         "path": "Observation.component.code.coding.id",
         "representation": [
           "xmlAttr"
@@ -5873,7 +5873,7 @@
         ]
       },
       {
-        "id": "Observation:vital-BloodPressure.component:vital-DiastolicPressure.code.coding:Fixed_8462-4.extension",
+        "id": "Observation.component:vital-DiastolicPressure.code.coding:Fixed_8462-4.extension",
         "path": "Observation.component.code.coding.extension",
         "slicing": {
           "discriminator": [
@@ -5914,7 +5914,7 @@
         ]
       },
       {
-        "id": "Observation:vital-BloodPressure.component:vital-DiastolicPressure.code.coding:Fixed_8462-4.system",
+        "id": "Observation.component:vital-DiastolicPressure.code.coding:Fixed_8462-4.system",
         "path": "Observation.component.code.coding.system",
         "short": "Identity of the terminology system",
         "definition": "The identification of the code system that defines the meaning of the symbol in the code.",
@@ -5951,7 +5951,7 @@
         "fixedUri": "http://loinc.org"
       },
       {
-        "id": "Observation:vital-BloodPressure.component:vital-DiastolicPressure.code.coding:Fixed_8462-4.version",
+        "id": "Observation.component:vital-DiastolicPressure.code.coding:Fixed_8462-4.version",
         "path": "Observation.component.code.coding.version",
         "short": "Version of the system - if relevant",
         "definition": "The version of the code system which was used when choosing this code. Note that a well-maintained code system does not need the version reported, because the meaning of codes is consistent across versions. However this cannot consistently be assured, and when the meaning is not guaranteed to be consistent, the version SHOULD be exchanged.",
@@ -5986,7 +5986,7 @@
         ]
       },
       {
-        "id": "Observation:vital-BloodPressure.component:vital-DiastolicPressure.code.coding:Fixed_8462-4.code",
+        "id": "Observation.component:vital-DiastolicPressure.code.coding:Fixed_8462-4.code",
         "path": "Observation.component.code.coding.code",
         "short": "Symbol in syntax defined by the system",
         "definition": "A symbol in syntax defined by the system. The symbol may be a predefined code or an expression in a syntax defined by the coding system (e.g. post-coordination).",
@@ -6022,7 +6022,7 @@
         "fixedCode": "8462-4"
       },
       {
-        "id": "Observation:vital-BloodPressure.component:vital-DiastolicPressure.code.coding:Fixed_8462-4.display",
+        "id": "Observation.component:vital-DiastolicPressure.code.coding:Fixed_8462-4.display",
         "extension": [
           {
             "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable",
@@ -6063,7 +6063,7 @@
         ]
       },
       {
-        "id": "Observation:vital-BloodPressure.component:vital-DiastolicPressure.code.coding:Fixed_8462-4.userSelected",
+        "id": "Observation.component:vital-DiastolicPressure.code.coding:Fixed_8462-4.userSelected",
         "path": "Observation.component.code.coding.userSelected",
         "short": "If this coding was chosen directly by the user",
         "definition": "Indicates that this coding was chosen by a user directly - e.g. off a pick list of available items (codes or displays).",
@@ -6099,7 +6099,7 @@
         ]
       },
       {
-        "id": "Observation:vital-BloodPressure.component:vital-DiastolicPressure.code.text",
+        "id": "Observation.component:vital-DiastolicPressure.code.text",
         "extension": [
           {
             "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable",
@@ -6141,7 +6141,7 @@
         ]
       },
       {
-        "id": "Observation:vital-BloodPressure.component:vital-DiastolicPressure.valueQuantity",
+        "id": "Observation.component:vital-DiastolicPressure.valueQuantity",
         "path": "Observation.component.valueQuantity",
         "short": "mmHg",
         "definition": "mmHg",
@@ -6160,7 +6160,7 @@
         "isSummary": true
       },
       {
-        "id": "Observation:vital-BloodPressure.component:vital-DiastolicPressure.valueQuantity.id",
+        "id": "Observation.component:vital-DiastolicPressure.valueQuantity.id",
         "path": "Observation.component.valueQuantity.id",
         "representation": [
           "xmlAttr"
@@ -6189,7 +6189,7 @@
         ]
       },
       {
-        "id": "Observation:vital-BloodPressure.component:vital-DiastolicPressure.valueQuantity.extension",
+        "id": "Observation.component:vital-DiastolicPressure.valueQuantity.extension",
         "path": "Observation.component.valueQuantity.extension",
         "slicing": {
           "discriminator": [
@@ -6230,7 +6230,7 @@
         ]
       },
       {
-        "id": "Observation:vital-BloodPressure.component:vital-DiastolicPressure.valueQuantity.value",
+        "id": "Observation.component:vital-DiastolicPressure.valueQuantity.value",
         "path": "Observation.component.valueQuantity.value",
         "short": "Numerical value (with implicit precision)",
         "definition": "The value of the measured amount. The value includes an implicit precision in the presentation of the value.",
@@ -6262,7 +6262,7 @@
         ]
       },
       {
-        "id": "Observation:vital-BloodPressure.component:vital-DiastolicPressure.valueQuantity.comparator",
+        "id": "Observation.component:vital-DiastolicPressure.valueQuantity.comparator",
         "path": "Observation.component.valueQuantity.comparator",
         "short": "< | <= | >= | > - how to understand the value",
         "definition": "How the value should be understood and represented - whether the actual value is greater or less than the stated value due to measurement issues; e.g. if the comparator is \"<\" , then the real value is < stated value.",
@@ -6306,7 +6306,7 @@
         ]
       },
       {
-        "id": "Observation:vital-BloodPressure.component:vital-DiastolicPressure.valueQuantity.unit",
+        "id": "Observation.component:vital-DiastolicPressure.valueQuantity.unit",
         "extension": [
           {
             "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable",
@@ -6343,7 +6343,7 @@
         ]
       },
       {
-        "id": "Observation:vital-BloodPressure.component:vital-DiastolicPressure.valueQuantity.system",
+        "id": "Observation.component:vital-DiastolicPressure.valueQuantity.system",
         "path": "Observation.component.valueQuantity.system",
         "short": "System that defines coded unit form",
         "definition": "The identification of the system that provides the coded form of the unit.",
@@ -6378,7 +6378,7 @@
         "fixedUri": "http://unitsofmeasure.org"
       },
       {
-        "id": "Observation:vital-BloodPressure.component:vital-DiastolicPressure.valueQuantity.code",
+        "id": "Observation.component:vital-DiastolicPressure.valueQuantity.code",
         "path": "Observation.component.valueQuantity.code",
         "short": "Coded form of the unit",
         "definition": "A computer processable form of the unit in some unit representation system.",
@@ -6411,7 +6411,7 @@
         "fixedCode": "mm[Hg]"
       },
       {
-        "id": "Observation:vital-BloodPressure.component:vital-DiastolicPressure.dataAbsentReason",
+        "id": "Observation.component:vital-DiastolicPressure.dataAbsentReason",
         "path": "Observation.component.dataAbsentReason",
         "short": "Why the component result is missing",
         "definition": "Provides a reason why the expected value in the element Observation.component.value[x] is missing.",
@@ -6458,7 +6458,7 @@
         ]
       },
       {
-        "id": "Observation:vital-BloodPressure.component:vital-DiastolicPressure.interpretation",
+        "id": "Observation.component:vital-DiastolicPressure.interpretation",
         "path": "Observation.component.interpretation",
         "short": "High, low, normal, etc.",
         "definition": "A categorical assessment of an observation value.  For example, high, low, normal.",
@@ -6512,7 +6512,7 @@
         ]
       },
       {
-        "id": "Observation:vital-BloodPressure.component:vital-DiastolicPressure.referenceRange",
+        "id": "Observation.component:vital-DiastolicPressure.referenceRange",
         "path": "Observation.component.referenceRange",
         "short": "Provides guide for interpretation of component result",
         "definition": "Guidance on how to interpret the value by comparison to a normal or recommended range.",
@@ -6544,7 +6544,7 @@
         ]
       },
       {
-        "id": "Observation:vital-BloodPressure.component:vital-DiastolicPressure.referenceRange.id",
+        "id": "Observation.component:vital-DiastolicPressure.referenceRange.id",
         "path": "Observation.component.referenceRange.id",
         "representation": [
           "xmlAttr"
@@ -6573,7 +6573,7 @@
         ]
       },
       {
-        "id": "Observation:vital-BloodPressure.component:vital-DiastolicPressure.referenceRange.extension",
+        "id": "Observation.component:vital-DiastolicPressure.referenceRange.extension",
         "path": "Observation.component.referenceRange.extension",
         "short": "Additional content defined by implementations",
         "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
@@ -6604,7 +6604,7 @@
         ]
       },
       {
-        "id": "Observation:vital-BloodPressure.component:vital-DiastolicPressure.referenceRange.modifierExtension",
+        "id": "Observation.component:vital-DiastolicPressure.referenceRange.modifierExtension",
         "path": "Observation.component.referenceRange.modifierExtension",
         "short": "Extensions that cannot be ignored even if unrecognized",
         "definition": "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
@@ -6638,7 +6638,7 @@
         ]
       },
       {
-        "id": "Observation:vital-BloodPressure.component:vital-DiastolicPressure.referenceRange.low",
+        "id": "Observation.component:vital-DiastolicPressure.referenceRange.low",
         "path": "Observation.component.referenceRange.low",
         "short": "Low Range, if relevant",
         "definition": "The value of the low bound of the reference range.  The low bound of the reference range endpoint is inclusive of the value (e.g.  reference range is >=5 - <=9). If the low bound is omitted,  it is assumed to be meaningless (e.g. reference range is <=2.3).",
@@ -6674,7 +6674,7 @@
         ]
       },
       {
-        "id": "Observation:vital-BloodPressure.component:vital-DiastolicPressure.referenceRange.high",
+        "id": "Observation.component:vital-DiastolicPressure.referenceRange.high",
         "path": "Observation.component.referenceRange.high",
         "short": "High Range, if relevant",
         "definition": "The value of the high bound of the reference range.  The high bound of the reference range endpoint is inclusive of the value (e.g.  reference range is >=5 - <=9). If the high bound is omitted,  it is assumed to be meaningless (e.g. reference range is >= 2.3).",
@@ -6710,7 +6710,7 @@
         ]
       },
       {
-        "id": "Observation:vital-BloodPressure.component:vital-DiastolicPressure.referenceRange.type",
+        "id": "Observation.component:vital-DiastolicPressure.referenceRange.type",
         "path": "Observation.component.referenceRange.type",
         "short": "Reference range qualifier",
         "definition": "Codes to indicate the what part of the targeted reference population it applies to. For example, the normal or therapeutic range.",
@@ -6757,7 +6757,7 @@
         ]
       },
       {
-        "id": "Observation:vital-BloodPressure.component:vital-DiastolicPressure.referenceRange.appliesTo",
+        "id": "Observation.component:vital-DiastolicPressure.referenceRange.appliesTo",
         "path": "Observation.component.referenceRange.appliesTo",
         "short": "Reference range population",
         "definition": "Codes to indicate the target population this reference range applies to.  For example, a reference range may be based on the normal population or a particular sex or race.  Multiple `appliesTo`  are interpreted as an \"AND\" of the target populations.  For example, to represent a target population of African American females, both a code of female and a code for African American would be used.",
@@ -6804,7 +6804,7 @@
         ]
       },
       {
-        "id": "Observation:vital-BloodPressure.component:vital-DiastolicPressure.referenceRange.age",
+        "id": "Observation.component:vital-DiastolicPressure.referenceRange.age",
         "path": "Observation.component.referenceRange.age",
         "short": "Applicable age range, if relevant",
         "definition": "The age at which this reference range is applicable. This is a neonatal age (e.g. number of weeks at term) if the meaning says so.",
@@ -6831,7 +6831,7 @@
         ]
       },
       {
-        "id": "Observation:vital-BloodPressure.component:vital-DiastolicPressure.referenceRange.text",
+        "id": "Observation.component:vital-DiastolicPressure.referenceRange.text",
         "path": "Observation.component.referenceRange.text",
         "short": "Text based reference range in an observation",
         "definition": "Text based reference range in an observation which may be used when a quantitative range is not appropriate for an observation.  An example would be a reference value of \"Negative\" or a list or table of \"normals\".",
@@ -6865,7 +6865,7 @@
   "differential": {
     "element": [
       {
-        "id": "Observation:vital-BloodPressure",
+        "id": "Observation",
         "path": "Observation",
         "short": "vital-BloodPressure",
         "definition": "Records blood pressure measurements, defined as the force of circulating blood on the walls of the arteries.\n\nConformance note: The blood pressure profile is based on the FHIR profile for blood pressure, and adds a set of optional elements that can help clinicians interpret the result. Because these additional elements are optional, any BloodPressure that conforms to the current profile also will conform to the FHIR profile, and vice versa.",
@@ -6873,7 +6873,7 @@
         "isSummary": false
       },
       {
-        "id": "Observation:vital-BloodPressure.extension",
+        "id": "Observation.extension",
         "path": "Observation.extension",
         "slicing": {
           "id": "6",
@@ -6888,7 +6888,7 @@
         }
       },
       {
-        "id": "Observation:vital-BloodPressure.extension:preconditioncode",
+        "id": "Observation.extension:preconditioncode",
         "path": "Observation.extension",
         "definition": "A coded description of the conditions or context of an observation, for example, under sedation, fasting or post-exercise. A qualifier cannot modify the measurement type; for example, a fasting blood sugar is still a blood sugar.",
         "min": 0,
@@ -6911,7 +6911,7 @@
         "sliceName": "preconditioncode"
       },
       {
-        "id": "Observation:vital-BloodPressure.extension:preconditioncode.valueCodeableConcept",
+        "id": "Observation.extension:preconditioncode.valueCodeableConcept",
         "path": "Observation.extension.valueCodeableConcept",
         "binding": {
           "strength": "extensible",
@@ -6919,7 +6919,7 @@
         }
       },
       {
-        "id": "Observation:vital-BloodPressure.extension:bodyposition",
+        "id": "Observation.extension:bodyposition",
         "path": "Observation.extension",
         "definition": "The position or physical attitude of the body.",
         "min": 0,
@@ -6942,7 +6942,7 @@
         "sliceName": "bodyposition"
       },
       {
-        "id": "Observation:vital-BloodPressure.extension:bloodpressurecuffsize",
+        "id": "Observation.extension:bloodpressurecuffsize",
         "path": "Observation.extension",
         "definition": "The size of cuff used, if applicable.",
         "min": 0,
@@ -6965,7 +6965,7 @@
         "sliceName": "bloodpressurecuffsize"
       },
       {
-        "id": "Observation:vital-BloodPressure.basedOn",
+        "id": "Observation.basedOn",
         "path": "Observation.basedOn",
         "type": [
           {
@@ -6978,7 +6978,7 @@
         ]
       },
       {
-        "id": "Observation:vital-BloodPressure.partOf",
+        "id": "Observation.partOf",
         "path": "Observation.partOf",
         "type": [
           {
@@ -6994,17 +6994,17 @@
         "definition": "A larger event of which this particular Observation is a component or step. For example, an observation as part of a procedure."
       },
       {
-        "id": "Observation:vital-BloodPressure.category",
+        "id": "Observation.category",
         "path": "Observation.category",
         "min": 1,
         "max": "1"
       },
       {
-        "id": "Observation:vital-BloodPressure.category:VSCat",
+        "id": "Observation.category:VSCat",
         "path": "Observation.category"
       },
       {
-        "id": "Observation:vital-BloodPressure.category:VSCat.coding",
+        "id": "Observation.category:VSCat.coding",
         "path": "Observation.category.coding",
         "slicing": {
           "id": "1",
@@ -7019,7 +7019,7 @@
         }
       },
       {
-        "id": "Observation:vital-BloodPressure.category:VSCat.coding:Fixed_vital-signs",
+        "id": "Observation.category:VSCat.coding:Fixed_vital-signs",
         "path": "Observation.category.coding",
         "sliceName": "Fixed_vital-signs",
         "short": "Code defined by a terminology system",
@@ -7039,27 +7039,27 @@
         "isSummary": true
       },
       {
-        "id": "Observation:vital-BloodPressure.category:VSCat.coding:Fixed_vital-signs.system",
+        "id": "Observation.category:VSCat.coding:Fixed_vital-signs.system",
         "path": "Observation.category.coding.system",
         "fixedUri": "http://terminology.hl7.org/CodeSystem/observation-category"
       },
       {
-        "id": "Observation:vital-BloodPressure.category:VSCat.coding:Fixed_vital-signs.code",
+        "id": "Observation.category:VSCat.coding:Fixed_vital-signs.code",
         "path": "Observation.category.coding.code",
         "fixedCode": "vital-signs"
       },
       {
-        "id": "Observation:vital-BloodPressure.code",
+        "id": "Observation.code",
         "path": "Observation.code"
       },
       {
-        "id": "Observation:vital-BloodPressure.code.coding",
+        "id": "Observation.code.coding",
         "path": "Observation.code.coding",
         "min": 2,
         "max": "*"
       },
       {
-        "id": "Observation:vital-BloodPressure.code.coding:Fixed_55284-4",
+        "id": "Observation.code.coding:Fixed_55284-4",
         "path": "Observation.code.coding",
         "sliceName": "Fixed_55284-4",
         "short": "Blood pressure systolic and diastolic",
@@ -7079,17 +7079,17 @@
         "isSummary": true
       },
       {
-        "id": "Observation:vital-BloodPressure.code.coding:Fixed_55284-4.system",
+        "id": "Observation.code.coding:Fixed_55284-4.system",
         "path": "Observation.code.coding.system",
         "fixedUri": "http://loinc.org"
       },
       {
-        "id": "Observation:vital-BloodPressure.code.coding:Fixed_55284-4.code",
+        "id": "Observation.code.coding:Fixed_55284-4.code",
         "path": "Observation.code.coding.code",
         "fixedCode": "55284-4"
       },
       {
-        "id": "Observation:vital-BloodPressure.subject",
+        "id": "Observation.subject",
         "path": "Observation.subject",
         "type": [
           {
@@ -7103,7 +7103,7 @@
         "definition": "The subject of an observation."
       },
       {
-        "id": "Observation:vital-BloodPressure.encounter",
+        "id": "Observation.encounter",
         "path": "Observation.encounter",
         "type": [
           {
@@ -7115,7 +7115,7 @@
         ]
       },
       {
-        "id": "Observation:vital-BloodPressure.performer",
+        "id": "Observation.performer",
         "path": "Observation.performer",
         "type": [
           {
@@ -7130,7 +7130,7 @@
         ]
       },
       {
-        "id": "Observation:vital-BloodPressure.valueQuantity",
+        "id": "Observation.valueQuantity",
         "path": "Observation.valueQuantity",
         "type": [
           {
@@ -7139,13 +7139,13 @@
         ]
       },
       {
-        "id": "Observation:vital-BloodPressure.dataAbsentReason",
+        "id": "Observation.dataAbsentReason",
         "path": "Observation.dataAbsentReason",
         "min": 0,
         "max": "0"
       },
       {
-        "id": "Observation:vital-BloodPressure.interpretation",
+        "id": "Observation.interpretation",
         "path": "Observation.interpretation",
         "min": 0,
         "max": "1",
@@ -7155,7 +7155,7 @@
         }
       },
       {
-        "id": "Observation:vital-BloodPressure.bodySite",
+        "id": "Observation.bodySite",
         "path": "Observation.bodySite",
         "binding": {
           "strength": "extensible",
@@ -7163,7 +7163,7 @@
         }
       },
       {
-        "id": "Observation:vital-BloodPressure.method",
+        "id": "Observation.method",
         "path": "Observation.method",
         "binding": {
           "strength": "extensible",
@@ -7171,13 +7171,13 @@
         }
       },
       {
-        "id": "Observation:vital-BloodPressure.specimen",
+        "id": "Observation.specimen",
         "path": "Observation.specimen",
         "min": 0,
         "max": "0"
       },
       {
-        "id": "Observation:vital-BloodPressure.device",
+        "id": "Observation.device",
         "path": "Observation.device",
         "min": 0,
         "max": "0",
@@ -7191,13 +7191,13 @@
         ]
       },
       {
-        "id": "Observation:vital-BloodPressure.referenceRange",
+        "id": "Observation.referenceRange",
         "path": "Observation.referenceRange",
         "min": 0,
         "max": "1"
       },
       {
-        "id": "Observation:vital-BloodPressure.referenceRange.type",
+        "id": "Observation.referenceRange.type",
         "path": "Observation.referenceRange.type",
         "binding": {
           "extension": [
@@ -7212,7 +7212,7 @@
         }
       },
       {
-        "id": "Observation:vital-BloodPressure.referenceRange.appliesTo",
+        "id": "Observation.referenceRange.appliesTo",
         "path": "Observation.referenceRange.appliesTo",
         "min": 0,
         "max": "1",
@@ -7229,7 +7229,7 @@
         }
       },
       {
-        "id": "Observation:vital-BloodPressure.hasMember",
+        "id": "Observation.hasMember",
         "path": "Observation.hasMember",
         "min": 0,
         "max": "0",
@@ -7245,7 +7245,7 @@
         "definition": "Abstract class parent for all vital sign profiles."
       },
       {
-        "id": "Observation:vital-BloodPressure.derivedFrom",
+        "id": "Observation.derivedFrom",
         "path": "Observation.derivedFrom",
         "type": [
           {
@@ -7259,7 +7259,7 @@
         ]
       },
       {
-        "id": "Observation:vital-BloodPressure.component",
+        "id": "Observation.component",
         "path": "Observation.component",
         "slicing": {
           "discriminator": [
@@ -7279,35 +7279,35 @@
         "max": "*"
       },
       {
-        "id": "Observation:vital-BloodPressure.component:SystolicBP",
+        "id": "Observation.component:SystolicBP",
         "path": "Observation.component"
       },
       {
-        "id": "Observation:vital-BloodPressure.component:SystolicBP.code",
+        "id": "Observation.component:SystolicBP.code",
         "path": "Observation.component.code"
       },
       {
-        "id": "Observation:vital-BloodPressure.component:SystolicBP.code.coding",
+        "id": "Observation.component:SystolicBP.code.coding",
         "path": "Observation.component.code.coding",
         "min": 1,
         "max": "*"
       },
       {
-        "id": "Observation:vital-BloodPressure.component:DiastolicBP",
+        "id": "Observation.component:DiastolicBP",
         "path": "Observation.component"
       },
       {
-        "id": "Observation:vital-BloodPressure.component:DiastolicBP.code",
+        "id": "Observation.component:DiastolicBP.code",
         "path": "Observation.component.code"
       },
       {
-        "id": "Observation:vital-BloodPressure.component:DiastolicBP.code.coding",
+        "id": "Observation.component:DiastolicBP.code.coding",
         "path": "Observation.component.code.coding",
         "min": 1,
         "max": "*"
       },
       {
-        "id": "Observation:vital-BloodPressure.component:vital-SystolicPressure",
+        "id": "Observation.component:vital-SystolicPressure",
         "path": "Observation.component",
         "sliceName": "vital-SystolicPressure",
         "short": "SystolicPressure: The blood pressure during the contraction of the left ventricle of the heart, when blood pressure is at its highest",
@@ -7316,11 +7316,11 @@
         "max": "1"
       },
       {
-        "id": "Observation:vital-BloodPressure.component:vital-SystolicPressure.code",
+        "id": "Observation.component:vital-SystolicPressure.code",
         "path": "Observation.component.code"
       },
       {
-        "id": "Observation:vital-BloodPressure.component:vital-SystolicPressure.code.coding",
+        "id": "Observation.component:vital-SystolicPressure.code.coding",
         "path": "Observation.component.code.coding",
         "slicing": {
           "id": "2",
@@ -7337,7 +7337,7 @@
         "max": "*"
       },
       {
-        "id": "Observation:vital-BloodPressure.component:vital-SystolicPressure.code.coding:Fixed_8480-6",
+        "id": "Observation.component:vital-SystolicPressure.code.coding:Fixed_8480-6",
         "path": "Observation.component.code.coding",
         "sliceName": "Fixed_8480-6",
         "short": "Code defined by a terminology system",
@@ -7357,17 +7357,17 @@
         "isSummary": true
       },
       {
-        "id": "Observation:vital-BloodPressure.component:vital-SystolicPressure.code.coding:Fixed_8480-6.system",
+        "id": "Observation.component:vital-SystolicPressure.code.coding:Fixed_8480-6.system",
         "path": "Observation.component.code.coding.system",
         "fixedUri": "http://loinc.org"
       },
       {
-        "id": "Observation:vital-BloodPressure.component:vital-SystolicPressure.code.coding:Fixed_8480-6.code",
+        "id": "Observation.component:vital-SystolicPressure.code.coding:Fixed_8480-6.code",
         "path": "Observation.component.code.coding.code",
         "fixedCode": "8480-6"
       },
       {
-        "id": "Observation:vital-BloodPressure.component:vital-SystolicPressure.valueQuantity",
+        "id": "Observation.component:vital-SystolicPressure.valueQuantity",
         "path": "Observation.component.valueQuantity",
         "base": {
           "path": "Observation.component.value[x]",
@@ -7383,29 +7383,29 @@
         "short": "mmHg"
       },
       {
-        "id": "Observation:vital-BloodPressure.component:vital-SystolicPressure.valueQuantity.system",
+        "id": "Observation.component:vital-SystolicPressure.valueQuantity.system",
         "path": "Observation.component.valueQuantity.system",
         "fixedUri": "http://unitsofmeasure.org"
       },
       {
-        "id": "Observation:vital-BloodPressure.component:vital-SystolicPressure.valueQuantity.code",
+        "id": "Observation.component:vital-SystolicPressure.valueQuantity.code",
         "path": "Observation.component.valueQuantity.code",
         "fixedCode": "mm[Hg]"
       },
       {
-        "id": "Observation:vital-BloodPressure.component:vital-SystolicPressure.interpretation",
+        "id": "Observation.component:vital-SystolicPressure.interpretation",
         "path": "Observation.component.interpretation",
         "min": 0,
         "max": "1"
       },
       {
-        "id": "Observation:vital-BloodPressure.component:vital-SystolicPressure.referenceRange",
+        "id": "Observation.component:vital-SystolicPressure.referenceRange",
         "path": "Observation.component.referenceRange",
         "min": 0,
         "max": "1"
       },
       {
-        "id": "Observation:vital-BloodPressure.component:vital-SystolicPressure.referenceRange.type",
+        "id": "Observation.component:vital-SystolicPressure.referenceRange.type",
         "path": "Observation.component.referenceRange.type",
         "binding": {
           "extension": [
@@ -7420,7 +7420,7 @@
         }
       },
       {
-        "id": "Observation:vital-BloodPressure.component:vital-SystolicPressure.referenceRange.appliesTo",
+        "id": "Observation.component:vital-SystolicPressure.referenceRange.appliesTo",
         "path": "Observation.component.referenceRange.appliesTo",
         "min": 0,
         "max": "1",
@@ -7437,7 +7437,7 @@
         }
       },
       {
-        "id": "Observation:vital-BloodPressure.component:vital-DiastolicPressure",
+        "id": "Observation.component:vital-DiastolicPressure",
         "path": "Observation.component",
         "sliceName": "vital-DiastolicPressure",
         "short": "DiastolicPressure: The blood pressure after the contraction of the heart while the chambers of the heart refill with blood, when the pressure is lowest",
@@ -7446,11 +7446,11 @@
         "max": "1"
       },
       {
-        "id": "Observation:vital-BloodPressure.component:vital-DiastolicPressure.code",
+        "id": "Observation.component:vital-DiastolicPressure.code",
         "path": "Observation.component.code"
       },
       {
-        "id": "Observation:vital-BloodPressure.component:vital-DiastolicPressure.code.coding",
+        "id": "Observation.component:vital-DiastolicPressure.code.coding",
         "path": "Observation.component.code.coding",
         "slicing": {
           "id": "3",
@@ -7467,7 +7467,7 @@
         "max": "*"
       },
       {
-        "id": "Observation:vital-BloodPressure.component:vital-DiastolicPressure.code.coding:Fixed_8462-4",
+        "id": "Observation.component:vital-DiastolicPressure.code.coding:Fixed_8462-4",
         "path": "Observation.component.code.coding",
         "sliceName": "Fixed_8462-4",
         "short": "Code defined by a terminology system",
@@ -7487,17 +7487,17 @@
         "isSummary": true
       },
       {
-        "id": "Observation:vital-BloodPressure.component:vital-DiastolicPressure.code.coding:Fixed_8462-4.system",
+        "id": "Observation.component:vital-DiastolicPressure.code.coding:Fixed_8462-4.system",
         "path": "Observation.component.code.coding.system",
         "fixedUri": "http://loinc.org"
       },
       {
-        "id": "Observation:vital-BloodPressure.component:vital-DiastolicPressure.code.coding:Fixed_8462-4.code",
+        "id": "Observation.component:vital-DiastolicPressure.code.coding:Fixed_8462-4.code",
         "path": "Observation.component.code.coding.code",
         "fixedCode": "8462-4"
       },
       {
-        "id": "Observation:vital-BloodPressure.component:vital-DiastolicPressure.valueQuantity",
+        "id": "Observation.component:vital-DiastolicPressure.valueQuantity",
         "path": "Observation.component.valueQuantity",
         "base": {
           "path": "Observation.component.value[x]",
@@ -7513,29 +7513,29 @@
         "short": "mmHg"
       },
       {
-        "id": "Observation:vital-BloodPressure.component:vital-DiastolicPressure.valueQuantity.system",
+        "id": "Observation.component:vital-DiastolicPressure.valueQuantity.system",
         "path": "Observation.component.valueQuantity.system",
         "fixedUri": "http://unitsofmeasure.org"
       },
       {
-        "id": "Observation:vital-BloodPressure.component:vital-DiastolicPressure.valueQuantity.code",
+        "id": "Observation.component:vital-DiastolicPressure.valueQuantity.code",
         "path": "Observation.component.valueQuantity.code",
         "fixedCode": "mm[Hg]"
       },
       {
-        "id": "Observation:vital-BloodPressure.component:vital-DiastolicPressure.interpretation",
+        "id": "Observation.component:vital-DiastolicPressure.interpretation",
         "path": "Observation.component.interpretation",
         "min": 0,
         "max": "1"
       },
       {
-        "id": "Observation:vital-BloodPressure.component:vital-DiastolicPressure.referenceRange",
+        "id": "Observation.component:vital-DiastolicPressure.referenceRange",
         "path": "Observation.component.referenceRange",
         "min": 0,
         "max": "1"
       },
       {
-        "id": "Observation:vital-BloodPressure.component:vital-DiastolicPressure.referenceRange.type",
+        "id": "Observation.component:vital-DiastolicPressure.referenceRange.type",
         "path": "Observation.component.referenceRange.type",
         "binding": {
           "extension": [
@@ -7550,7 +7550,7 @@
         }
       },
       {
-        "id": "Observation:vital-BloodPressure.component:vital-DiastolicPressure.referenceRange.appliesTo",
+        "id": "Observation.component:vital-DiastolicPressure.referenceRange.appliesTo",
         "path": "Observation.component.referenceRange.appliesTo",
         "min": 0,
         "max": "1",

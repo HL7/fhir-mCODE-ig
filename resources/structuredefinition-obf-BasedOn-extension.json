@@ -9,7 +9,7 @@
   "name": "BasedOn",
   "title": "obf-BasedOn",
   "status": "draft",
-  "date": "2019-07-24",
+  "date": "2019-07-25",
   "publisher": "The MITRE Corporation",
   "contact": [
     {
@@ -37,7 +37,7 @@
   "snapshot": {
     "element": [
       {
-        "id": "Extension:basedon",
+        "id": "Extension",
         "path": "Extension",
         "short": "BasedOn",
         "definition": "The proposal, order, or plan that is partly or wholly fulfilled by this item.",
@@ -81,7 +81,7 @@
         ]
       },
       {
-        "id": "Extension:basedon.id",
+        "id": "Extension.id",
         "path": "Extension.id",
         "representation": [
           "xmlAttr"
@@ -110,7 +110,7 @@
         ]
       },
       {
-        "id": "Extension:basedon.extension",
+        "id": "Extension.extension",
         "path": "Extension.extension",
         "slicing": {
           "discriminator": [
@@ -151,7 +151,7 @@
         ]
       },
       {
-        "id": "Extension:basedon.url",
+        "id": "Extension.url",
         "path": "Extension.url",
         "representation": [
           "xmlAttr"
@@ -182,7 +182,7 @@
         "fixedUri": "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-BasedOn-extension"
       },
       {
-        "id": "Extension:basedon.valueReference",
+        "id": "Extension.valueReference",
         "path": "Extension.valueReference",
         "short": "Value of extension",
         "definition": "Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).",
@@ -216,7 +216,7 @@
   "differential": {
     "element": [
       {
-        "id": "Extension:basedon",
+        "id": "Extension",
         "path": "Extension",
         "short": "BasedOn",
         "definition": "The proposal, order, or plan that is partly or wholly fulfilled by this item.",
@@ -224,13 +224,13 @@
         "max": "*"
       },
       {
-        "id": "Extension:basedon.extension",
+        "id": "Extension.extension",
         "path": "Extension.extension",
         "min": 0,
         "max": "0"
       },
       {
-        "id": "Extension:basedon.url",
+        "id": "Extension.url",
         "path": "Extension.url",
         "type": [
           {
@@ -240,7 +240,7 @@
         "fixedUri": "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-BasedOn-extension"
       },
       {
-        "id": "Extension:basedon.valueReference",
+        "id": "Extension.valueReference",
         "path": "Extension.valueReference",
         "min": 1,
         "type": [

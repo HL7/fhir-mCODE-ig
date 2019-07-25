@@ -9,7 +9,7 @@
   "name": "GenomicsReport",
   "title": "onco-core-GenomicsReport",
   "status": "active",
-  "date": "2019-07-24",
+  "date": "2019-07-25",
   "publisher": "The MITRE Corporation",
   "contact": [
     {
@@ -64,7 +64,7 @@
   "snapshot": {
     "element": [
       {
-        "id": "DiagnosticReport:onco-core-GenomicsReport",
+        "id": "DiagnosticReport",
         "path": "DiagnosticReport",
         "short": "onco-core-GenomicsReport",
         "definition": "Genetic analysis summary report. The report may include one or more tests, with two distinct test types. The first type is a targeted mutation test, where a specific mutation on a specific gene is tested for. The result is either positive or negative for that mutation. The second type is a more general test for variants. This type of test returns the identity of variants found in a certain region of the genome.\n\nThe identity of non-genomic laboratory tests is typically represented by a LOINC code. However, many genetic tests and panels do not have LOINC codes, although some might have an identifier in NCBI Genetic Testing Registry (GTR), a central location for voluntary submission of genetic test information by providers. To identify the diagnostic report, the name of the report must be in the text sub-field of the code structure. If there is a coded identifier from GTR, LOINC, or other source, then it should be included into the the code sub-field of the code structure. If there is no suitable code, the code can be omitted.\n\nConformance note: To be conformant to US Core, the code attribute must be a LOINC code, if available. If there is no suitable code in LOINC, then a code from an alternative code system (such as GTR) can be used.\n\nImplementation note: The performer of the test (organization or practitioner) should be included in the FHIR profile as the performer.actor.\n\nConformance note: The category for this profile is set to GE (Genetics), a code from http://hl7.org/fhir/ValueSet/diagnostic-service-sections. This is contrary to the [Argonaut](http://www.fhir.org/guides/argonaut/r2/) and [US Core](http://hl7.org/fhir/us/core/STU3/index.html) specifications, which require the category 'LAB' in diagnostic reports containing laboratory results. This is assumed to be an oversight in the US Core and Argonaut specifications.",
@@ -161,7 +161,7 @@
         ]
       },
       {
-        "id": "DiagnosticReport:onco-core-GenomicsReport.id",
+        "id": "DiagnosticReport.id",
         "path": "DiagnosticReport.id",
         "short": "Logical id of this artifact",
         "definition": "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.",
@@ -182,7 +182,7 @@
         "isSummary": true
       },
       {
-        "id": "DiagnosticReport:onco-core-GenomicsReport.meta",
+        "id": "DiagnosticReport.meta",
         "path": "DiagnosticReport.meta",
         "short": "Metadata about the resource",
         "definition": "The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.",
@@ -202,7 +202,7 @@
         "isSummary": true
       },
       {
-        "id": "DiagnosticReport:onco-core-GenomicsReport.implicitRules",
+        "id": "DiagnosticReport.implicitRules",
         "path": "DiagnosticReport.implicitRules",
         "short": "A set of rules under which this content was created",
         "definition": "A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.",
@@ -224,7 +224,7 @@
         "isSummary": true
       },
       {
-        "id": "DiagnosticReport:onco-core-GenomicsReport.language",
+        "id": "DiagnosticReport.language",
         "path": "DiagnosticReport.language",
         "short": "Language of the resource content",
         "definition": "The base language in which the resource is written.",
@@ -264,7 +264,7 @@
         }
       },
       {
-        "id": "DiagnosticReport:onco-core-GenomicsReport.text",
+        "id": "DiagnosticReport.text",
         "path": "DiagnosticReport.text",
         "short": "Text summary of the resource, for human interpretation",
         "definition": "A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.",
@@ -297,7 +297,7 @@
         ]
       },
       {
-        "id": "DiagnosticReport:onco-core-GenomicsReport.contained",
+        "id": "DiagnosticReport.contained",
         "path": "DiagnosticReport.contained",
         "short": "Contained, inline Resources",
         "definition": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope.",
@@ -329,7 +329,7 @@
         ]
       },
       {
-        "id": "DiagnosticReport:onco-core-GenomicsReport.extension",
+        "id": "DiagnosticReport.extension",
         "path": "DiagnosticReport.extension",
         "short": "Additional content defined by implementations",
         "definition": "May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
@@ -371,7 +371,7 @@
         }
       },
       {
-        "id": "DiagnosticReport:onco-core-GenomicsReport.extension:specimentype",
+        "id": "DiagnosticReport.extension:specimentype",
         "path": "DiagnosticReport.extension",
         "definition": "The type of material the specimen contains or consists of.",
         "min": 0,
@@ -395,7 +395,7 @@
         "mustSupport": true
       },
       {
-        "id": "DiagnosticReport:onco-core-GenomicsReport.extension:specimentype.id",
+        "id": "DiagnosticReport.extension:specimentype.id",
         "path": "DiagnosticReport.extension.id",
         "representation": [
           "xmlAttr"
@@ -424,7 +424,7 @@
         ]
       },
       {
-        "id": "DiagnosticReport:onco-core-GenomicsReport.extension:specimentype.extension",
+        "id": "DiagnosticReport.extension:specimentype.extension",
         "path": "DiagnosticReport.extension.extension",
         "slicing": {
           "discriminator": [
@@ -465,7 +465,7 @@
         ]
       },
       {
-        "id": "DiagnosticReport:onco-core-GenomicsReport.extension:specimentype.url",
+        "id": "DiagnosticReport.extension:specimentype.url",
         "path": "DiagnosticReport.extension.url",
         "representation": [
           "xmlAttr"
@@ -496,7 +496,7 @@
         "fixedUri": "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-SpecimenType-extension"
       },
       {
-        "id": "DiagnosticReport:onco-core-GenomicsReport.extension:specimentype.valueCodeableConcept",
+        "id": "DiagnosticReport.extension:specimentype.valueCodeableConcept",
         "path": "DiagnosticReport.extension.valueCodeableConcept",
         "short": "Value of extension",
         "definition": "Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).",
@@ -526,7 +526,7 @@
         }
       },
       {
-        "id": "DiagnosticReport:onco-core-GenomicsReport.extension:regionstudied",
+        "id": "DiagnosticReport.extension:regionstudied",
         "path": "DiagnosticReport.extension",
         "definition": "A description of the coverage of the genome that was tested for variants.",
         "min": 0,
@@ -549,7 +549,7 @@
         "sliceName": "regionstudied"
       },
       {
-        "id": "DiagnosticReport:onco-core-GenomicsReport.modifierExtension",
+        "id": "DiagnosticReport.modifierExtension",
         "path": "DiagnosticReport.modifierExtension",
         "short": "Extensions that cannot be ignored",
         "definition": "May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
@@ -582,7 +582,7 @@
         ]
       },
       {
-        "id": "DiagnosticReport:onco-core-GenomicsReport.identifier",
+        "id": "DiagnosticReport.identifier",
         "path": "DiagnosticReport.identifier",
         "short": "Business identifier for report",
         "definition": "Identifiers assigned to this report by the performer or other systems.",
@@ -627,7 +627,7 @@
         ]
       },
       {
-        "id": "DiagnosticReport:onco-core-GenomicsReport.basedOn",
+        "id": "DiagnosticReport.basedOn",
         "path": "DiagnosticReport.basedOn",
         "short": "What was requested",
         "definition": "Details concerning a service requested.",
@@ -670,7 +670,7 @@
         ]
       },
       {
-        "id": "DiagnosticReport:onco-core-GenomicsReport.status",
+        "id": "DiagnosticReport.status",
         "path": "DiagnosticReport.status",
         "short": "registered | partial | preliminary | final +",
         "definition": "The status of the diagnostic report.",
@@ -715,7 +715,7 @@
         ]
       },
       {
-        "id": "DiagnosticReport:onco-core-GenomicsReport.category",
+        "id": "DiagnosticReport.category",
         "path": "DiagnosticReport.category",
         "short": "Service category",
         "definition": "A code that classifies the clinical discipline, department or diagnostic service that created the report (e.g. cardiology, biochemistry, hematology, MRI). This is used for searching, sorting and display purposes.",
@@ -763,7 +763,7 @@
         ]
       },
       {
-        "id": "DiagnosticReport:onco-core-GenomicsReport.category.id",
+        "id": "DiagnosticReport.category.id",
         "path": "DiagnosticReport.category.id",
         "representation": [
           "xmlAttr"
@@ -792,7 +792,7 @@
         ]
       },
       {
-        "id": "DiagnosticReport:onco-core-GenomicsReport.category.extension",
+        "id": "DiagnosticReport.category.extension",
         "path": "DiagnosticReport.category.extension",
         "slicing": {
           "discriminator": [
@@ -833,7 +833,7 @@
         ]
       },
       {
-        "id": "DiagnosticReport:onco-core-GenomicsReport.category.coding",
+        "id": "DiagnosticReport.category.coding",
         "path": "DiagnosticReport.category.coding",
         "short": "Code defined by a terminology system",
         "definition": "A reference to a code defined by a terminology system.",
@@ -880,7 +880,7 @@
         }
       },
       {
-        "id": "DiagnosticReport:onco-core-GenomicsReport.category.coding:Fixed_GE",
+        "id": "DiagnosticReport.category.coding:Fixed_GE",
         "path": "DiagnosticReport.category.coding",
         "sliceName": "Fixed_GE",
         "short": "Code defined by a terminology system",
@@ -900,7 +900,7 @@
         "isSummary": true
       },
       {
-        "id": "DiagnosticReport:onco-core-GenomicsReport.category.coding:Fixed_GE.id",
+        "id": "DiagnosticReport.category.coding:Fixed_GE.id",
         "path": "DiagnosticReport.category.coding.id",
         "representation": [
           "xmlAttr"
@@ -929,7 +929,7 @@
         ]
       },
       {
-        "id": "DiagnosticReport:onco-core-GenomicsReport.category.coding:Fixed_GE.extension",
+        "id": "DiagnosticReport.category.coding:Fixed_GE.extension",
         "path": "DiagnosticReport.category.coding.extension",
         "slicing": {
           "discriminator": [
@@ -970,7 +970,7 @@
         ]
       },
       {
-        "id": "DiagnosticReport:onco-core-GenomicsReport.category.coding:Fixed_GE.system",
+        "id": "DiagnosticReport.category.coding:Fixed_GE.system",
         "path": "DiagnosticReport.category.coding.system",
         "short": "Identity of the terminology system",
         "definition": "The identification of the code system that defines the meaning of the symbol in the code.",
@@ -1007,7 +1007,7 @@
         "fixedUri": "http://terminology.hl7.org/CodeSystem/v2-0074"
       },
       {
-        "id": "DiagnosticReport:onco-core-GenomicsReport.category.coding:Fixed_GE.version",
+        "id": "DiagnosticReport.category.coding:Fixed_GE.version",
         "path": "DiagnosticReport.category.coding.version",
         "short": "Version of the system - if relevant",
         "definition": "The version of the code system which was used when choosing this code. Note that a well-maintained code system does not need the version reported, because the meaning of codes is consistent across versions. However this cannot consistently be assured, and when the meaning is not guaranteed to be consistent, the version SHOULD be exchanged.",
@@ -1042,7 +1042,7 @@
         ]
       },
       {
-        "id": "DiagnosticReport:onco-core-GenomicsReport.category.coding:Fixed_GE.code",
+        "id": "DiagnosticReport.category.coding:Fixed_GE.code",
         "path": "DiagnosticReport.category.coding.code",
         "short": "Symbol in syntax defined by the system",
         "definition": "A symbol in syntax defined by the system. The symbol may be a predefined code or an expression in a syntax defined by the coding system (e.g. post-coordination).",
@@ -1078,7 +1078,7 @@
         "fixedCode": "GE"
       },
       {
-        "id": "DiagnosticReport:onco-core-GenomicsReport.category.coding:Fixed_GE.display",
+        "id": "DiagnosticReport.category.coding:Fixed_GE.display",
         "extension": [
           {
             "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable",
@@ -1119,7 +1119,7 @@
         ]
       },
       {
-        "id": "DiagnosticReport:onco-core-GenomicsReport.category.coding:Fixed_GE.userSelected",
+        "id": "DiagnosticReport.category.coding:Fixed_GE.userSelected",
         "path": "DiagnosticReport.category.coding.userSelected",
         "short": "If this coding was chosen directly by the user",
         "definition": "Indicates that this coding was chosen by a user directly - e.g. off a pick list of available items (codes or displays).",
@@ -1155,7 +1155,7 @@
         ]
       },
       {
-        "id": "DiagnosticReport:onco-core-GenomicsReport.category.text",
+        "id": "DiagnosticReport.category.text",
         "extension": [
           {
             "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable",
@@ -1197,7 +1197,7 @@
         ]
       },
       {
-        "id": "DiagnosticReport:onco-core-GenomicsReport.code",
+        "id": "DiagnosticReport.code",
         "path": "DiagnosticReport.code",
         "short": "US Core Report Code",
         "definition": "The test, panel, report, or note that was ordered.",
@@ -1244,7 +1244,7 @@
         ]
       },
       {
-        "id": "DiagnosticReport:onco-core-GenomicsReport.subject",
+        "id": "DiagnosticReport.subject",
         "path": "DiagnosticReport.subject",
         "short": "The subject of an observation",
         "definition": "The subject of an observation.",
@@ -1294,7 +1294,7 @@
         ]
       },
       {
-        "id": "DiagnosticReport:onco-core-GenomicsReport.encounter",
+        "id": "DiagnosticReport.encounter",
         "path": "DiagnosticReport.encounter",
         "short": "Health care event when test ordered",
         "definition": "The healthcare event  (e.g. a patient and healthcare provider interaction) which this DiagnosticReport is about.",
@@ -1341,7 +1341,7 @@
         ]
       },
       {
-        "id": "DiagnosticReport:onco-core-GenomicsReport.effective[x]",
+        "id": "DiagnosticReport.effective[x]",
         "path": "DiagnosticReport.effective[x]",
         "short": "Time of the report or note",
         "definition": "This is the Datetime or Period when the report or note was written.",
@@ -1390,7 +1390,7 @@
         ]
       },
       {
-        "id": "DiagnosticReport:onco-core-GenomicsReport.issued",
+        "id": "DiagnosticReport.issued",
         "path": "DiagnosticReport.issued",
         "short": "DateTime this version was made",
         "definition": "The date and time that this version of the report was made available to providers, typically after the report was reviewed and verified.",
@@ -1432,7 +1432,7 @@
         ]
       },
       {
-        "id": "DiagnosticReport:onco-core-GenomicsReport.performer",
+        "id": "DiagnosticReport.performer",
         "path": "DiagnosticReport.performer",
         "short": "Responsible Diagnostic Service",
         "definition": "The diagnostic service that is responsible for issuing the report.",
@@ -1486,7 +1486,7 @@
         ]
       },
       {
-        "id": "DiagnosticReport:onco-core-GenomicsReport.resultsInterpreter",
+        "id": "DiagnosticReport.resultsInterpreter",
         "path": "DiagnosticReport.resultsInterpreter",
         "short": "Primary result interpreter",
         "definition": "The practitioner or organization that is responsible for the report's conclusions and interpretations.",
@@ -1534,7 +1534,7 @@
         ]
       },
       {
-        "id": "DiagnosticReport:onco-core-GenomicsReport.specimen",
+        "id": "DiagnosticReport.specimen",
         "path": "DiagnosticReport.specimen",
         "short": "Specimens this report is based on",
         "definition": "Details about the specimens on which this diagnostic report is based.",
@@ -1569,7 +1569,7 @@
         ]
       },
       {
-        "id": "DiagnosticReport:onco-core-GenomicsReport.result",
+        "id": "DiagnosticReport.result",
         "path": "DiagnosticReport.result",
         "short": "Observations",
         "definition": "[Observations](http://hl7.org/fhir/R4/observation.html)  that are part of this diagnostic report.",
@@ -1627,7 +1627,7 @@
         "mustSupport": true
       },
       {
-        "id": "DiagnosticReport:onco-core-GenomicsReport.result:onco-core-GeneticVariantFound",
+        "id": "DiagnosticReport.result:onco-core-GeneticVariantFound",
         "path": "DiagnosticReport.result",
         "short": "GeneticVariantFound: Records an alteration in the most common DNA nucleotide sequence",
         "definition": "Records an alteration in the most common DNA nucleotide sequence. The term variant can be used to describe an alteration that may be benign, pathogenic, or of unknown significance. The term variant is increasingly being used in place of the term mutation. When reporting 'Genetic Variant Found', at least one element out of the following must be reported: 'Variant Found Identifier', 'Variant Found HGVS Name', and 'Variant Found Description'.",
@@ -1673,7 +1673,7 @@
         "mustSupport": true
       },
       {
-        "id": "DiagnosticReport:onco-core-GenomicsReport.result:onco-core-GeneticVariantTested",
+        "id": "DiagnosticReport.result:onco-core-GeneticVariantTested",
         "path": "DiagnosticReport.result",
         "short": "GeneticVariantTested: A test for a specific mutation on a particular gene",
         "definition": "A test for a specific mutation on a particular gene. This profile is used to record whether a single discrete variant tested is present or absent (denoted as positive or negative respectively).",
@@ -1719,7 +1719,7 @@
         "mustSupport": true
       },
       {
-        "id": "DiagnosticReport:onco-core-GenomicsReport.imagingStudy",
+        "id": "DiagnosticReport.imagingStudy",
         "path": "DiagnosticReport.imagingStudy",
         "short": "Reference to full details of imaging associated with the diagnostic report",
         "definition": "One or more links to full details of any imaging performed during the diagnostic investigation. Typically, this is imaging performed by DICOM enabled modalities, but this is not required. A fully enabled PACS viewer can use this information to provide views of the source images.",
@@ -1749,7 +1749,7 @@
         ]
       },
       {
-        "id": "DiagnosticReport:onco-core-GenomicsReport.media",
+        "id": "DiagnosticReport.media",
         "path": "DiagnosticReport.media",
         "short": "Key images associated with this report",
         "definition": "A list of key images associated with this report. The images are generally created during the diagnostic process, and may be directly of the patient, or of treated specimens (i.e. slides of interest).",
@@ -1796,7 +1796,7 @@
         ]
       },
       {
-        "id": "DiagnosticReport:onco-core-GenomicsReport.media.id",
+        "id": "DiagnosticReport.media.id",
         "path": "DiagnosticReport.media.id",
         "representation": [
           "xmlAttr"
@@ -1825,7 +1825,7 @@
         ]
       },
       {
-        "id": "DiagnosticReport:onco-core-GenomicsReport.media.extension",
+        "id": "DiagnosticReport.media.extension",
         "path": "DiagnosticReport.media.extension",
         "short": "Additional content defined by implementations",
         "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
@@ -1856,7 +1856,7 @@
         ]
       },
       {
-        "id": "DiagnosticReport:onco-core-GenomicsReport.media.modifierExtension",
+        "id": "DiagnosticReport.media.modifierExtension",
         "path": "DiagnosticReport.media.modifierExtension",
         "short": "Extensions that cannot be ignored even if unrecognized",
         "definition": "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
@@ -1890,7 +1890,7 @@
         ]
       },
       {
-        "id": "DiagnosticReport:onco-core-GenomicsReport.media.comment",
+        "id": "DiagnosticReport.media.comment",
         "path": "DiagnosticReport.media.comment",
         "short": "Comment about the image (e.g. explanation)",
         "definition": "A comment about the image. Typically, this is used to provide an explanation for why the image is included, or to draw the viewer's attention to important features.",
@@ -1918,7 +1918,7 @@
         ]
       },
       {
-        "id": "DiagnosticReport:onco-core-GenomicsReport.media.link",
+        "id": "DiagnosticReport.media.link",
         "path": "DiagnosticReport.media.link",
         "short": "Reference to the image source",
         "definition": "Reference to the image source.",
@@ -1947,7 +1947,7 @@
         ]
       },
       {
-        "id": "DiagnosticReport:onco-core-GenomicsReport.conclusion",
+        "id": "DiagnosticReport.conclusion",
         "path": "DiagnosticReport.conclusion",
         "short": "Clinical conclusion (interpretation) of test results",
         "definition": "Concise and clinically contextualized summary conclusion (interpretation/impression) of the diagnostic report.",
@@ -1981,7 +1981,7 @@
         ]
       },
       {
-        "id": "DiagnosticReport:onco-core-GenomicsReport.conclusionCode",
+        "id": "DiagnosticReport.conclusionCode",
         "path": "DiagnosticReport.conclusionCode",
         "short": "Codes for the clinical conclusion of test results",
         "definition": "One or more codes that represent the summary conclusion (interpretation/impression) of the diagnostic report.",
@@ -2022,7 +2022,7 @@
         ]
       },
       {
-        "id": "DiagnosticReport:onco-core-GenomicsReport.presentedForm",
+        "id": "DiagnosticReport.presentedForm",
         "path": "DiagnosticReport.presentedForm",
         "short": "Entire report as issued",
         "definition": "Rich text representation of the entire result as issued by the diagnostic service. Multiple formats are allowed but they SHALL be semantically equivalent.",
@@ -2059,7 +2059,7 @@
   "differential": {
     "element": [
       {
-        "id": "DiagnosticReport:onco-core-GenomicsReport",
+        "id": "DiagnosticReport",
         "path": "DiagnosticReport",
         "short": "onco-core-GenomicsReport",
         "definition": "Genetic analysis summary report. The report may include one or more tests, with two distinct test types. The first type is a targeted mutation test, where a specific mutation on a specific gene is tested for. The result is either positive or negative for that mutation. The second type is a more general test for variants. This type of test returns the identity of variants found in a certain region of the genome.\n\nThe identity of non-genomic laboratory tests is typically represented by a LOINC code. However, many genetic tests and panels do not have LOINC codes, although some might have an identifier in NCBI Genetic Testing Registry (GTR), a central location for voluntary submission of genetic test information by providers. To identify the diagnostic report, the name of the report must be in the text sub-field of the code structure. If there is a coded identifier from GTR, LOINC, or other source, then it should be included into the the code sub-field of the code structure. If there is no suitable code, the code can be omitted.\n\nConformance note: To be conformant to US Core, the code attribute must be a LOINC code, if available. If there is no suitable code in LOINC, then a code from an alternative code system (such as GTR) can be used.\n\nImplementation note: The performer of the test (organization or practitioner) should be included in the FHIR profile as the performer.actor.\n\nConformance note: The category for this profile is set to GE (Genetics), a code from http://hl7.org/fhir/ValueSet/diagnostic-service-sections. This is contrary to the [Argonaut](http://www.fhir.org/guides/argonaut/r2/) and [US Core](http://hl7.org/fhir/us/core/STU3/index.html) specifications, which require the category 'LAB' in diagnostic reports containing laboratory results. This is assumed to be an oversight in the US Core and Argonaut specifications.",
@@ -2068,7 +2068,7 @@
         "isSummary": false
       },
       {
-        "id": "DiagnosticReport:onco-core-GenomicsReport.extension",
+        "id": "DiagnosticReport.extension",
         "path": "DiagnosticReport.extension",
         "slicing": {
           "id": "3",
@@ -2083,7 +2083,7 @@
         }
       },
       {
-        "id": "DiagnosticReport:onco-core-GenomicsReport.extension:specimentype",
+        "id": "DiagnosticReport.extension:specimentype",
         "path": "DiagnosticReport.extension",
         "definition": "The type of material the specimen contains or consists of.",
         "min": 0,
@@ -2107,7 +2107,7 @@
         "mustSupport": true
       },
       {
-        "id": "DiagnosticReport:onco-core-GenomicsReport.extension:specimentype.valueCodeableConcept",
+        "id": "DiagnosticReport.extension:specimentype.valueCodeableConcept",
         "path": "DiagnosticReport.extension.valueCodeableConcept",
         "binding": {
           "strength": "extensible",
@@ -2115,7 +2115,7 @@
         }
       },
       {
-        "id": "DiagnosticReport:onco-core-GenomicsReport.extension:regionstudied",
+        "id": "DiagnosticReport.extension:regionstudied",
         "path": "DiagnosticReport.extension",
         "definition": "A description of the coverage of the genome that was tested for variants.",
         "min": 0,
@@ -2138,7 +2138,7 @@
         "sliceName": "regionstudied"
       },
       {
-        "id": "DiagnosticReport:onco-core-GenomicsReport.basedOn",
+        "id": "DiagnosticReport.basedOn",
         "path": "DiagnosticReport.basedOn",
         "type": [
           {
@@ -2151,13 +2151,13 @@
         ]
       },
       {
-        "id": "DiagnosticReport:onco-core-GenomicsReport.category",
+        "id": "DiagnosticReport.category",
         "path": "DiagnosticReport.category",
         "min": 1,
         "max": "1"
       },
       {
-        "id": "DiagnosticReport:onco-core-GenomicsReport.category.coding",
+        "id": "DiagnosticReport.category.coding",
         "path": "DiagnosticReport.category.coding",
         "slicing": {
           "id": "1",
@@ -2174,7 +2174,7 @@
         "max": "*"
       },
       {
-        "id": "DiagnosticReport:onco-core-GenomicsReport.category.coding:Fixed_GE",
+        "id": "DiagnosticReport.category.coding:Fixed_GE",
         "path": "DiagnosticReport.category.coding",
         "sliceName": "Fixed_GE",
         "short": "Code defined by a terminology system",
@@ -2194,17 +2194,17 @@
         "isSummary": true
       },
       {
-        "id": "DiagnosticReport:onco-core-GenomicsReport.category.coding:Fixed_GE.system",
+        "id": "DiagnosticReport.category.coding:Fixed_GE.system",
         "path": "DiagnosticReport.category.coding.system",
         "fixedUri": "http://terminology.hl7.org/CodeSystem/v2-0074"
       },
       {
-        "id": "DiagnosticReport:onco-core-GenomicsReport.category.coding:Fixed_GE.code",
+        "id": "DiagnosticReport.category.coding:Fixed_GE.code",
         "path": "DiagnosticReport.category.coding.code",
         "fixedCode": "GE"
       },
       {
-        "id": "DiagnosticReport:onco-core-GenomicsReport.code",
+        "id": "DiagnosticReport.code",
         "path": "DiagnosticReport.code",
         "binding": {
           "strength": "extensible",
@@ -2212,7 +2212,7 @@
         }
       },
       {
-        "id": "DiagnosticReport:onco-core-GenomicsReport.subject",
+        "id": "DiagnosticReport.subject",
         "path": "DiagnosticReport.subject",
         "type": [
           {
@@ -2226,13 +2226,13 @@
         "definition": "The subject of an observation."
       },
       {
-        "id": "DiagnosticReport:onco-core-GenomicsReport.issued",
+        "id": "DiagnosticReport.issued",
         "path": "DiagnosticReport.issued",
         "min": 1,
         "max": "1"
       },
       {
-        "id": "DiagnosticReport:onco-core-GenomicsReport.performer",
+        "id": "DiagnosticReport.performer",
         "path": "DiagnosticReport.performer",
         "min": 0,
         "max": "1",
@@ -2247,7 +2247,7 @@
         ]
       },
       {
-        "id": "DiagnosticReport:onco-core-GenomicsReport.resultsInterpreter",
+        "id": "DiagnosticReport.resultsInterpreter",
         "path": "DiagnosticReport.resultsInterpreter",
         "min": 0,
         "max": "1",
@@ -2262,7 +2262,7 @@
         ]
       },
       {
-        "id": "DiagnosticReport:onco-core-GenomicsReport.result",
+        "id": "DiagnosticReport.result",
         "path": "DiagnosticReport.result",
         "type": [
           {
@@ -2286,7 +2286,7 @@
         "mustSupport": true
       },
       {
-        "id": "DiagnosticReport:onco-core-GenomicsReport.result:onco-core-GeneticVariantFound",
+        "id": "DiagnosticReport.result:onco-core-GeneticVariantFound",
         "path": "DiagnosticReport.result",
         "type": [
           {
@@ -2304,7 +2304,7 @@
         "mustSupport": true
       },
       {
-        "id": "DiagnosticReport:onco-core-GenomicsReport.result:onco-core-GeneticVariantTested",
+        "id": "DiagnosticReport.result:onco-core-GeneticVariantTested",
         "path": "DiagnosticReport.result",
         "type": [
           {

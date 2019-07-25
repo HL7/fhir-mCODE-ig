@@ -9,7 +9,7 @@
   "name": "IsPrimaryTumor",
   "title": "onco-core-IsPrimaryTumor",
   "status": "draft",
-  "date": "2019-07-24",
+  "date": "2019-07-25",
   "publisher": "The MITRE Corporation",
   "contact": [
     {
@@ -37,7 +37,7 @@
   "snapshot": {
     "element": [
       {
-        "id": "Extension:isprimarytumor",
+        "id": "Extension",
         "path": "Extension",
         "short": "IsPrimaryTumor",
         "definition": "Whether the tumor is the original or first tumor in the body, for a particular cancer.",
@@ -81,7 +81,7 @@
         ]
       },
       {
-        "id": "Extension:isprimarytumor.id",
+        "id": "Extension.id",
         "path": "Extension.id",
         "representation": [
           "xmlAttr"
@@ -110,7 +110,7 @@
         ]
       },
       {
-        "id": "Extension:isprimarytumor.extension",
+        "id": "Extension.extension",
         "path": "Extension.extension",
         "slicing": {
           "discriminator": [
@@ -151,7 +151,7 @@
         ]
       },
       {
-        "id": "Extension:isprimarytumor.url",
+        "id": "Extension.url",
         "path": "Extension.url",
         "representation": [
           "xmlAttr"
@@ -182,7 +182,7 @@
         "fixedUri": "http://hl7.org/fhir/us/mcode/StructureDefinition/onco-core-IsPrimaryTumor-extension"
       },
       {
-        "id": "Extension:isprimarytumor.valueCodeableConcept",
+        "id": "Extension.valueCodeableConcept",
         "path": "Extension.valueCodeableConcept",
         "short": "Value of extension",
         "definition": "Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).",
@@ -208,7 +208,7 @@
         ],
         "binding": {
           "strength": "required",
-          "valueSet": "http://hl7.org/fhir/us/mcode/ValueSet/shr-core-YesNoUnknownVS"
+          "valueSet": "http://hl7.org/fhir/us/mcode/ValueSet/obf-datatype-YesNoUnknownVS"
         }
       }
     ]
@@ -216,7 +216,7 @@
   "differential": {
     "element": [
       {
-        "id": "Extension:isprimarytumor",
+        "id": "Extension",
         "path": "Extension",
         "short": "IsPrimaryTumor",
         "definition": "Whether the tumor is the original or first tumor in the body, for a particular cancer.",
@@ -224,13 +224,13 @@
         "max": "*"
       },
       {
-        "id": "Extension:isprimarytumor.extension",
+        "id": "Extension.extension",
         "path": "Extension.extension",
         "min": 0,
         "max": "0"
       },
       {
-        "id": "Extension:isprimarytumor.url",
+        "id": "Extension.url",
         "path": "Extension.url",
         "type": [
           {
@@ -240,7 +240,7 @@
         "fixedUri": "http://hl7.org/fhir/us/mcode/StructureDefinition/onco-core-IsPrimaryTumor-extension"
       },
       {
-        "id": "Extension:isprimarytumor.valueCodeableConcept",
+        "id": "Extension.valueCodeableConcept",
         "path": "Extension.valueCodeableConcept",
         "min": 1,
         "type": [
@@ -250,7 +250,7 @@
         ],
         "binding": {
           "strength": "required",
-          "valueSet": "http://hl7.org/fhir/us/mcode/ValueSet/shr-core-YesNoUnknownVS"
+          "valueSet": "http://hl7.org/fhir/us/mcode/ValueSet/obf-datatype-YesNoUnknownVS"
         }
       }
     ]

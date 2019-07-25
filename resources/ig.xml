@@ -295,9 +295,9 @@
       <resource>
           <exampleBoolean value="false" />
           <reference>
-            <reference value="StructureDefinition/shr-core-Duration" />
+            <reference value="StructureDefinition/obf-datatype-Duration" />
           </reference>
-          <name value="shr-core-Duration" />
+          <name value="obf-datatype-Duration" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
@@ -624,9 +624,9 @@
       <resource>
           <exampleBoolean value="false" />
           <reference>
-            <reference value="StructureDefinition/shr-core-Money" />
+            <reference value="StructureDefinition/obf-datatype-Money" />
           </reference>
-          <name value="shr-core-Money" />
+          <name value="obf-datatype-Money" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
@@ -862,9 +862,9 @@
       <resource>
           <exampleBoolean value="false" />
           <reference>
-            <reference value="StructureDefinition/shr-core-SampledData" />
+            <reference value="StructureDefinition/obf-datatype-SampledData" />
           </reference>
-          <name value="shr-core-SampledData" />
+          <name value="obf-datatype-SampledData" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
@@ -988,9 +988,9 @@
       <resource>
           <exampleBoolean value="false" />
           <reference>
-            <reference value="StructureDefinition/shr-core-Timing" />
+            <reference value="StructureDefinition/obf-datatype-Timing" />
           </reference>
-          <name value="shr-core-Timing" />
+          <name value="obf-datatype-Timing" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
@@ -1030,9 +1030,9 @@
       <resource>
           <exampleBoolean value="false" />
           <reference>
-            <reference value="StructureDefinition/shr-core-AnatomicalOrientation-extension" />
+            <reference value="StructureDefinition/obf-datatype-AnatomicalOrientation-extension" />
           </reference>
-          <name value="shr-core-AnatomicalOrientation" />
+          <name value="obf-datatype-AnatomicalOrientation" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
@@ -1086,23 +1086,23 @@
       <resource>
           <exampleBoolean value="false" />
           <reference>
-            <reference value="StructureDefinition/shr-core-Category-extension" />
+            <reference value="StructureDefinition/obf-datatype-Category-extension" />
           </reference>
-          <name value="shr-core-Category" />
+          <name value="obf-datatype-Category" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
           <reference>
-            <reference value="StructureDefinition/shr-core-Code-extension" />
+            <reference value="StructureDefinition/obf-datatype-Code-extension" />
           </reference>
-          <name value="shr-core-Code" />
+          <name value="obf-datatype-Code" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
           <reference>
-            <reference value="StructureDefinition/shr-core-Comparator-extension" />
+            <reference value="StructureDefinition/obf-datatype-Comparator-extension" />
           </reference>
-          <name value="shr-core-Comparator" />
+          <name value="obf-datatype-Comparator" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
@@ -1170,9 +1170,9 @@
       <resource>
           <exampleBoolean value="false" />
           <reference>
-            <reference value="StructureDefinition/shr-core-Identifier-extension" />
+            <reference value="StructureDefinition/obf-datatype-Identifier-extension" />
           </reference>
-          <name value="shr-core-Identifier" />
+          <name value="obf-datatype-Identifier" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
@@ -1184,44 +1184,44 @@
       <resource>
           <exampleBoolean value="false" />
           <reference>
-            <reference value="StructureDefinition/shr-core-LandmarkLocation-extension" />
+            <reference value="StructureDefinition/obf-datatype-LandmarkLocation-extension" />
           </reference>
-          <name value="shr-core-LandmarkLocation" />
+          <name value="obf-datatype-LandmarkLocation" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
           <reference>
-            <reference value="StructureDefinition/shr-core-LandmarkToBodyLocationDirection-extension" />
+            <reference value="StructureDefinition/obf-datatype-LandmarkToBodyLocationDirection-extension" />
           </reference>
-          <name value="shr-core-LandmarkToBodyLocationDirection" />
+          <name value="obf-datatype-LandmarkToBodyLocationDirection" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
           <reference>
-            <reference value="StructureDefinition/shr-core-LandmarkToBodyLocationDistance-extension" />
+            <reference value="StructureDefinition/obf-datatype-LandmarkToBodyLocationDistance-extension" />
           </reference>
-          <name value="shr-core-LandmarkToBodyLocationDistance" />
+          <name value="obf-datatype-LandmarkToBodyLocationDistance" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
           <reference>
-            <reference value="StructureDefinition/shr-core-LandmarkType-extension" />
+            <reference value="StructureDefinition/obf-datatype-LandmarkType-extension" />
           </reference>
-          <name value="shr-core-LandmarkType" />
+          <name value="obf-datatype-LandmarkType" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
           <reference>
-            <reference value="StructureDefinition/shr-core-Laterality-extension" />
+            <reference value="StructureDefinition/obf-datatype-Laterality-extension" />
           </reference>
-          <name value="shr-core-Laterality" />
+          <name value="obf-datatype-Laterality" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
           <reference>
-            <reference value="StructureDefinition/shr-core-LowerBound-extension" />
+            <reference value="StructureDefinition/obf-datatype-LowerBound-extension" />
           </reference>
-          <name value="shr-core-LowerBound" />
+          <name value="obf-datatype-LowerBound" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
@@ -1240,16 +1240,16 @@
       <resource>
           <exampleBoolean value="false" />
           <reference>
-            <reference value="StructureDefinition/shr-core-Number-extension" />
+            <reference value="StructureDefinition/obf-datatype-Number-extension" />
           </reference>
-          <name value="shr-core-Number" />
+          <name value="obf-datatype-Number" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
           <reference>
-            <reference value="StructureDefinition/shr-core-OccurrenceTimeOrPeriod-extension" />
+            <reference value="StructureDefinition/obf-datatype-OccurrenceTimeOrPeriod-extension" />
           </reference>
-          <name value="shr-core-OccurrenceTimeOrPeriod" />
+          <name value="obf-datatype-OccurrenceTimeOrPeriod" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
@@ -1317,16 +1317,16 @@
       <resource>
           <exampleBoolean value="false" />
           <reference>
-            <reference value="StructureDefinition/shr-core-PriorityCode-extension" />
+            <reference value="StructureDefinition/obf-datatype-PriorityCode-extension" />
           </reference>
-          <name value="shr-core-PriorityCode" />
+          <name value="obf-datatype-PriorityCode" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
           <reference>
-            <reference value="StructureDefinition/shr-core-PriorityRank-extension" />
+            <reference value="StructureDefinition/obf-datatype-PriorityRank-extension" />
           </reference>
-          <name value="shr-core-PriorityRank" />
+          <name value="obf-datatype-PriorityRank" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
@@ -1373,9 +1373,9 @@
       <resource>
           <exampleBoolean value="false" />
           <reference>
-            <reference value="StructureDefinition/shr-core-RelationToLandmark-extension" />
+            <reference value="StructureDefinition/obf-datatype-RelationToLandmark-extension" />
           </reference>
-          <name value="shr-core-RelationToLandmark" />
+          <name value="obf-datatype-RelationToLandmark" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
@@ -1436,16 +1436,16 @@
       <resource>
           <exampleBoolean value="false" />
           <reference>
-            <reference value="StructureDefinition/shr-core-Text-extension" />
+            <reference value="StructureDefinition/obf-datatype-Text-extension" />
           </reference>
-          <name value="shr-core-Text" />
+          <name value="obf-datatype-Text" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
           <reference>
-            <reference value="StructureDefinition/shr-core-TimePeriod-extension" />
+            <reference value="StructureDefinition/obf-datatype-TimePeriod-extension" />
           </reference>
-          <name value="shr-core-TimePeriod" />
+          <name value="obf-datatype-TimePeriod" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
@@ -1464,23 +1464,23 @@
       <resource>
           <exampleBoolean value="false" />
           <reference>
-            <reference value="StructureDefinition/shr-core-Type-extension" />
+            <reference value="StructureDefinition/obf-datatype-Type-extension" />
           </reference>
-          <name value="shr-core-Type" />
+          <name value="obf-datatype-Type" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
           <reference>
-            <reference value="StructureDefinition/shr-core-Units-extension" />
+            <reference value="StructureDefinition/obf-datatype-Units-extension" />
           </reference>
-          <name value="shr-core-Units" />
+          <name value="obf-datatype-Units" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
           <reference>
-            <reference value="StructureDefinition/shr-core-UpperBound-extension" />
+            <reference value="StructureDefinition/obf-datatype-UpperBound-extension" />
           </reference>
-          <name value="shr-core-UpperBound" />
+          <name value="obf-datatype-UpperBound" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
@@ -1520,14 +1520,14 @@
       <resource>
           <exampleBoolean value="false" />
           <reference>
-            <reference value="ValueSet/shr-core-AnatomicalDirectionVS" />
+            <reference value="ValueSet/obf-datatype-AnatomicalDirectionVS" />
           </reference>
           <name value="AnatomicalDirectionVS" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
           <reference>
-            <reference value="ValueSet/shr-core-AnatomicalOrientationVS" />
+            <reference value="ValueSet/obf-datatype-AnatomicalOrientationVS" />
           </reference>
           <name value="AnatomicalOrientationVS" />
       </resource>
@@ -1576,7 +1576,7 @@
       <resource>
           <exampleBoolean value="false" />
           <reference>
-            <reference value="ValueSet/shr-core-BodyLocationVS" />
+            <reference value="ValueSet/obf-datatype-BodyLocationVS" />
           </reference>
           <name value="BodyLocationVS" />
       </resource>
@@ -1674,7 +1674,7 @@
       <resource>
           <exampleBoolean value="false" />
           <reference>
-            <reference value="ValueSet/shr-core-ConditionStatusTrendVS" />
+            <reference value="ValueSet/obf-datatype-ConditionStatusTrendVS" />
           </reference>
           <name value="ConditionStatusTrendVS" />
       </resource>
@@ -1772,14 +1772,14 @@
       <resource>
           <exampleBoolean value="false" />
           <reference>
-            <reference value="ValueSet/shr-core-LandmarkTypeVS" />
+            <reference value="ValueSet/obf-datatype-LandmarkTypeVS" />
           </reference>
           <name value="LandmarkTypeVS" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
           <reference>
-            <reference value="ValueSet/shr-core-PositiveNegativeVS" />
+            <reference value="ValueSet/obf-datatype-PositiveNegativeVS" />
           </reference>
           <name value="PositiveNegativeVS" />
       </resource>
@@ -1828,7 +1828,7 @@
       <resource>
           <exampleBoolean value="false" />
           <reference>
-            <reference value="ValueSet/shr-core-SettingVS" />
+            <reference value="ValueSet/obf-datatype-SettingVS" />
           </reference>
           <name value="SettingVS" />
       </resource>
@@ -1912,14 +1912,14 @@
       <resource>
           <exampleBoolean value="false" />
           <reference>
-            <reference value="ValueSet/shr-core-UnitsOfLengthVS" />
+            <reference value="ValueSet/obf-datatype-UnitsOfLengthVS" />
           </reference>
           <name value="UnitsOfLengthVS" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
           <reference>
-            <reference value="ValueSet/shr-core-YesNoUnknownVS" />
+            <reference value="ValueSet/obf-datatype-YesNoUnknownVS" />
           </reference>
           <name value="YesNoUnknownVS" />
       </resource>
@@ -1933,7 +1933,7 @@
       <resource>
           <exampleBoolean value="false" />
           <reference>
-            <reference value="CodeSystem/shr-core-SettingCS" />
+            <reference value="CodeSystem/obf-datatype-SettingCS" />
           </reference>
           <name value="SettingCS" />
       </resource>

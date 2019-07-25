@@ -9,7 +9,7 @@
   "name": "ExpectedPerformanceTime",
   "title": "obf-ExpectedPerformanceTime",
   "status": "draft",
-  "date": "2019-07-24",
+  "date": "2019-07-25",
   "publisher": "The MITRE Corporation",
   "contact": [
     {
@@ -37,7 +37,7 @@
   "snapshot": {
     "element": [
       {
-        "id": "Extension:expectedperformancetime",
+        "id": "Extension",
         "path": "Extension",
         "short": "ExpectedPerformanceTime",
         "definition": "When an action should be done. If the action is a series or recurs (e.g. daily blood sugar testing in the morning) then a Timing can be used to describe the periodicity.",
@@ -81,7 +81,7 @@
         ]
       },
       {
-        "id": "Extension:expectedperformancetime.id",
+        "id": "Extension.id",
         "path": "Extension.id",
         "representation": [
           "xmlAttr"
@@ -110,7 +110,7 @@
         ]
       },
       {
-        "id": "Extension:expectedperformancetime.extension",
+        "id": "Extension.extension",
         "path": "Extension.extension",
         "slicing": {
           "discriminator": [
@@ -151,7 +151,7 @@
         ]
       },
       {
-        "id": "Extension:expectedperformancetime.url",
+        "id": "Extension.url",
         "path": "Extension.url",
         "representation": [
           "xmlAttr"
@@ -182,7 +182,7 @@
         "fixedUri": "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-ExpectedPerformanceTime-extension"
       },
       {
-        "id": "Extension:expectedperformancetime.value[x]",
+        "id": "Extension.value[x]",
         "path": "Extension.value[x]",
         "short": "Value of extension",
         "definition": "Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).",
@@ -203,7 +203,7 @@
           {
             "code": "Timing",
             "profile": [
-              "http://hl7.org/fhir/us/mcode/StructureDefinition/shr-core-Timing"
+              "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-datatype-Timing"
             ]
           }
         ],
@@ -221,7 +221,7 @@
   "differential": {
     "element": [
       {
-        "id": "Extension:expectedperformancetime",
+        "id": "Extension",
         "path": "Extension",
         "short": "ExpectedPerformanceTime",
         "definition": "When an action should be done. If the action is a series or recurs (e.g. daily blood sugar testing in the morning) then a Timing can be used to describe the periodicity.",
@@ -229,13 +229,13 @@
         "max": "*"
       },
       {
-        "id": "Extension:expectedperformancetime.extension",
+        "id": "Extension.extension",
         "path": "Extension.extension",
         "min": 0,
         "max": "0"
       },
       {
-        "id": "Extension:expectedperformancetime.url",
+        "id": "Extension.url",
         "path": "Extension.url",
         "type": [
           {
@@ -245,7 +245,7 @@
         "fixedUri": "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-ExpectedPerformanceTime-extension"
       },
       {
-        "id": "Extension:expectedperformancetime.value[x]",
+        "id": "Extension.value[x]",
         "path": "Extension.value[x]",
         "min": 1,
         "type": [
@@ -258,7 +258,7 @@
           {
             "code": "Timing",
             "profile": [
-              "http://hl7.org/fhir/us/mcode/StructureDefinition/shr-core-Timing"
+              "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-datatype-Timing"
             ]
           }
         ]

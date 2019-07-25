@@ -383,10 +383,10 @@ This profiled Condition uses the BodyLocation structure that includes not only a
       <td><a href="http://hl7.org/fhir/R4/domainresource.html">DomainResource</a></td>
       <td>{% capture md_text %}Parent class for any item in clinical or administrative health-related system. A DomainResource can belong to a single person's health record, or represent an entity that surfaces in multiple records, such as organizations, providers, payments, decision support artifacts, etc.
 
-Note to FHIR implementers: SHR includes Status and Identifier fields on DomainResource because these two attributes occur in almost every FHIR resource. The most significant exception are 3 or 4 resources that use an 'active' flag instead of coded status value. There is no apparent pattern to this inconsistency. FHIR resources that use a coded status have active and inactive as status values. In the spirit of providing a consistent object-oriented logical model for FHIR, SHR uses status across all domain resources.{% endcapture %}{{ md_text | markdownify }}</td>
+Note to FHIR implementers: Objective FHIR includes Status and Identifier fields on DomainResource because these two attributes occur in almost every FHIR resource. The most significant exception are 3 or 4 resources that use an 'active' flag instead of coded status value. There is no apparent pattern to this inconsistency. FHIR resources that use a coded status have active and inactive as status values. In the spirit of providing a consistent object-oriented logical model for FHIR, Objective FHIR uses status across all domain resources.{% endcapture %}{{ md_text | markdownify }}</td>
     </tr>
     <tr>
-      <td><a href="StructureDefinition-shr-core-Duration.html">Duration</a></td>
+      <td><a href="StructureDefinition-obf-datatype-Duration.html">Duration</a></td>
       <td><a href="http://hl7.org/fhir/R4/datatypes.html#duration">Duration</a></td>
       <td>{% capture md_text %}The length of time that something continues.{% endcapture %}{{ md_text | markdownify }}</td>
     </tr>
@@ -591,7 +591,7 @@ Note to FHIR implementers: SHR includes Status and Identifier fields on DomainRe
       <td>{% capture md_text %}Metamyelocytes [#/volume] in Blood{% endcapture %}{{ md_text | markdownify }}</td>
     </tr>
     <tr>
-      <td><a href="StructureDefinition-shr-core-Money.html">Money</a></td>
+      <td><a href="StructureDefinition-obf-datatype-Money.html">Money</a></td>
       <td><a href="http://hl7.org/fhir/R4/datatypes.html#money">Money</a></td>
       <td>{% capture md_text %}Representation of an amount of currency or monetary value.{% endcapture %}{{ md_text | markdownify }}</td>
     </tr>
@@ -753,7 +753,7 @@ For an Observation, the Code describes the aspect or property of the subject bei
       <td>{% capture md_text %}Capacity in which an actor is involved in an activity. For instance, 'attending physician'. Note that attributes of the actor (an entity) that remain constant regardless of the role the actor plays should be part of the entity and not the role. For instance, a person may be a practitioner and a patient. In both cases their date of birth will be the same and thus such information should not be part of the role.{% endcapture %}{{ md_text | markdownify }}</td>
     </tr>
     <tr>
-      <td><a href="StructureDefinition-shr-core-SampledData.html">SampledData</a></td>
+      <td><a href="StructureDefinition-obf-datatype-SampledData.html">SampledData</a></td>
       <td><a href="http://hl7.org/fhir/R4/datatypes.html#sampleddata">SampledData</a></td>
       <td>{% capture md_text %}Data that comes from a series of measurements taken by a device, which may have upper and lower limits. The data type also supports more than one dimension in the data.{% endcapture %}{{ md_text | markdownify }}</td>
     </tr>
@@ -800,7 +800,7 @@ Conformance note: If an ICD-10-PCS code is used in the code attribute, and an eq
       <td>{% capture md_text %}Tax identification number for the practitioner.{% endcapture %}{{ md_text | markdownify }}</td>
     </tr>
     <tr>
-      <td><a href="StructureDefinition-shr-core-Timing.html">Timing</a></td>
+      <td><a href="StructureDefinition-obf-datatype-Timing.html">Timing</a></td>
       <td><a href="http://hl7.org/fhir/R4/datatypes.html#timing">Timing</a></td>
       <td>{% capture md_text %}A timing schedule that specifies an event that may occur multiple times.
 Timing offers a choice of multiple OccurrenceTime (used is used to specify specific times), or recurrence patterns.{% endcapture %}{{ md_text | markdownify }}</td>

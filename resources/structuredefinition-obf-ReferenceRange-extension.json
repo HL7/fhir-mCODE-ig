@@ -9,7 +9,7 @@
   "name": "ReferenceRange",
   "title": "obf-ReferenceRange",
   "status": "draft",
-  "date": "2019-07-24",
+  "date": "2019-07-25",
   "publisher": "The MITRE Corporation",
   "contact": [
     {
@@ -37,7 +37,7 @@
   "snapshot": {
     "element": [
       {
-        "id": "Extension:referencerange",
+        "id": "Extension",
         "path": "Extension",
         "short": "ReferenceRange",
         "definition": "The usual or acceptable range for a test result.",
@@ -81,7 +81,7 @@
         ]
       },
       {
-        "id": "Extension:referencerange.id",
+        "id": "Extension.id",
         "path": "Extension.id",
         "representation": [
           "xmlAttr"
@@ -110,7 +110,7 @@
         ]
       },
       {
-        "id": "Extension:referencerange.extension",
+        "id": "Extension.extension",
         "path": "Extension.extension",
         "slicing": {
           "discriminator": [
@@ -151,7 +151,7 @@
         ]
       },
       {
-        "id": "Extension:referencerange.extension:lowerbound",
+        "id": "Extension.extension:lowerbound",
         "path": "Extension.extension",
         "definition": "The lower limit on a range",
         "min": 0,
@@ -165,7 +165,7 @@
           {
             "code": "Extension",
             "profile": [
-              "http://hl7.org/fhir/us/mcode/StructureDefinition/shr-core-LowerBound-extension"
+              "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-datatype-LowerBound-extension"
             ]
           }
         ],
@@ -180,7 +180,7 @@
         "sliceName": "lowerbound"
       },
       {
-        "id": "Extension:referencerange.extension:upperbound",
+        "id": "Extension.extension:upperbound",
         "path": "Extension.extension",
         "definition": "The upper limit on a quantitative value.",
         "min": 0,
@@ -194,7 +194,7 @@
           {
             "code": "Extension",
             "profile": [
-              "http://hl7.org/fhir/us/mcode/StructureDefinition/shr-core-UpperBound-extension"
+              "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-datatype-UpperBound-extension"
             ]
           }
         ],
@@ -209,7 +209,7 @@
         "sliceName": "upperbound"
       },
       {
-        "id": "Extension:referencerange.extension:type",
+        "id": "Extension.extension:type",
         "path": "Extension.extension",
         "definition": "A code describing the item at a greater level of detail.",
         "min": 0,
@@ -223,7 +223,7 @@
           {
             "code": "Extension",
             "profile": [
-              "http://hl7.org/fhir/us/mcode/StructureDefinition/shr-core-Type-extension"
+              "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-datatype-Type-extension"
             ]
           }
         ],
@@ -238,7 +238,7 @@
         "sliceName": "type"
       },
       {
-        "id": "Extension:referencerange.extension:type.id",
+        "id": "Extension.extension:type.id",
         "path": "Extension.extension.id",
         "representation": [
           "xmlAttr"
@@ -267,7 +267,7 @@
         ]
       },
       {
-        "id": "Extension:referencerange.extension:type.extension",
+        "id": "Extension.extension:type.extension",
         "path": "Extension.extension.extension",
         "slicing": {
           "discriminator": [
@@ -308,7 +308,7 @@
         ]
       },
       {
-        "id": "Extension:referencerange.extension:type.url",
+        "id": "Extension.extension:type.url",
         "path": "Extension.extension.url",
         "representation": [
           "xmlAttr"
@@ -336,10 +336,10 @@
             "map": "N/A"
           }
         ],
-        "fixedUri": "http://hl7.org/fhir/us/mcode/StructureDefinition/shr-core-Type-extension"
+        "fixedUri": "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-datatype-Type-extension"
       },
       {
-        "id": "Extension:referencerange.extension:type.valueCodeableConcept",
+        "id": "Extension.extension:type.valueCodeableConcept",
         "path": "Extension.extension.valueCodeableConcept",
         "short": "Value of extension",
         "definition": "Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).",
@@ -369,7 +369,7 @@
         }
       },
       {
-        "id": "Extension:referencerange.extension:applicablesubpopulation",
+        "id": "Extension.extension:applicablesubpopulation",
         "path": "Extension.extension",
         "definition": "Codes to indicate the target population this reference range applies to. For example, a reference range may be based on the normal population or a particular sex or race.",
         "min": 0,
@@ -398,7 +398,7 @@
         "sliceName": "applicablesubpopulation"
       },
       {
-        "id": "Extension:referencerange.extension:applicableagerange",
+        "id": "Extension.extension:applicableagerange",
         "path": "Extension.extension",
         "definition": "The age at which this reference range is applicable. This is a neonatal age (e.g. number of weeks at term) if the meaning says so.",
         "min": 0,
@@ -427,7 +427,7 @@
         "sliceName": "applicableagerange"
       },
       {
-        "id": "Extension:referencerange.extension:text",
+        "id": "Extension.extension:text",
         "path": "Extension.extension",
         "definition": "A simple string.",
         "min": 0,
@@ -441,7 +441,7 @@
           {
             "code": "Extension",
             "profile": [
-              "http://hl7.org/fhir/us/mcode/StructureDefinition/shr-core-Text-extension"
+              "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-datatype-Text-extension"
             ]
           }
         ],
@@ -456,7 +456,7 @@
         "sliceName": "text"
       },
       {
-        "id": "Extension:referencerange.url",
+        "id": "Extension.url",
         "path": "Extension.url",
         "representation": [
           "xmlAttr"
@@ -487,7 +487,7 @@
         "fixedUri": "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-ReferenceRange-extension"
       },
       {
-        "id": "Extension:referencerange.value[x]",
+        "id": "Extension.value[x]",
         "path": "Extension.value[x]",
         "short": "Value of extension",
         "definition": "Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).",
@@ -661,7 +661,7 @@
   "differential": {
     "element": [
       {
-        "id": "Extension:referencerange",
+        "id": "Extension",
         "path": "Extension",
         "short": "ReferenceRange",
         "definition": "The usual or acceptable range for a test result.",
@@ -669,7 +669,7 @@
         "max": "*"
       },
       {
-        "id": "Extension:referencerange.extension:lowerbound",
+        "id": "Extension.extension:lowerbound",
         "path": "Extension.extension",
         "definition": "The lower limit on a range",
         "min": 0,
@@ -683,7 +683,7 @@
           {
             "code": "Extension",
             "profile": [
-              "http://hl7.org/fhir/us/mcode/StructureDefinition/shr-core-LowerBound-extension"
+              "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-datatype-LowerBound-extension"
             ]
           }
         ],
@@ -698,7 +698,7 @@
         "sliceName": "lowerbound"
       },
       {
-        "id": "Extension:referencerange.extension:upperbound",
+        "id": "Extension.extension:upperbound",
         "path": "Extension.extension",
         "definition": "The upper limit on a quantitative value.",
         "min": 0,
@@ -712,7 +712,7 @@
           {
             "code": "Extension",
             "profile": [
-              "http://hl7.org/fhir/us/mcode/StructureDefinition/shr-core-UpperBound-extension"
+              "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-datatype-UpperBound-extension"
             ]
           }
         ],
@@ -727,7 +727,7 @@
         "sliceName": "upperbound"
       },
       {
-        "id": "Extension:referencerange.extension:type",
+        "id": "Extension.extension:type",
         "path": "Extension.extension",
         "definition": "A code describing the item at a greater level of detail.",
         "min": 0,
@@ -741,7 +741,7 @@
           {
             "code": "Extension",
             "profile": [
-              "http://hl7.org/fhir/us/mcode/StructureDefinition/shr-core-Type-extension"
+              "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-datatype-Type-extension"
             ]
           }
         ],
@@ -756,7 +756,7 @@
         "sliceName": "type"
       },
       {
-        "id": "Extension:referencerange.extension:type.valueCodeableConcept",
+        "id": "Extension.extension:type.valueCodeableConcept",
         "path": "Extension.extension.valueCodeableConcept",
         "binding": {
           "strength": "extensible",
@@ -764,7 +764,7 @@
         }
       },
       {
-        "id": "Extension:referencerange.extension:applicablesubpopulation",
+        "id": "Extension.extension:applicablesubpopulation",
         "path": "Extension.extension",
         "definition": "Codes to indicate the target population this reference range applies to. For example, a reference range may be based on the normal population or a particular sex or race.",
         "min": 0,
@@ -793,7 +793,7 @@
         "sliceName": "applicablesubpopulation"
       },
       {
-        "id": "Extension:referencerange.extension:applicableagerange",
+        "id": "Extension.extension:applicableagerange",
         "path": "Extension.extension",
         "definition": "The age at which this reference range is applicable. This is a neonatal age (e.g. number of weeks at term) if the meaning says so.",
         "min": 0,
@@ -822,7 +822,7 @@
         "sliceName": "applicableagerange"
       },
       {
-        "id": "Extension:referencerange.extension:text",
+        "id": "Extension.extension:text",
         "path": "Extension.extension",
         "definition": "A simple string.",
         "min": 0,
@@ -836,7 +836,7 @@
           {
             "code": "Extension",
             "profile": [
-              "http://hl7.org/fhir/us/mcode/StructureDefinition/shr-core-Text-extension"
+              "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-datatype-Text-extension"
             ]
           }
         ],
@@ -851,7 +851,7 @@
         "sliceName": "text"
       },
       {
-        "id": "Extension:referencerange.url",
+        "id": "Extension.url",
         "path": "Extension.url",
         "type": [
           {
@@ -861,7 +861,7 @@
         "fixedUri": "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-ReferenceRange-extension"
       },
       {
-        "id": "Extension:referencerange.value[x]",
+        "id": "Extension.value[x]",
         "path": "Extension.value[x]",
         "min": 0,
         "max": "0"

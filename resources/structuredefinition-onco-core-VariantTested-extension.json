@@ -9,7 +9,7 @@
   "name": "VariantTested",
   "title": "onco-core-VariantTested",
   "status": "draft",
-  "date": "2019-07-24",
+  "date": "2019-07-25",
   "publisher": "The MITRE Corporation",
   "contact": [
     {
@@ -37,7 +37,7 @@
   "snapshot": {
     "element": [
       {
-        "id": "Extension:varianttested",
+        "id": "Extension",
         "path": "Extension",
         "short": "VariantTested",
         "definition": "The specific genetic variant that is targeted by this test.",
@@ -81,7 +81,7 @@
         ]
       },
       {
-        "id": "Extension:varianttested.id",
+        "id": "Extension.id",
         "path": "Extension.id",
         "representation": [
           "xmlAttr"
@@ -110,7 +110,7 @@
         ]
       },
       {
-        "id": "Extension:varianttested.extension",
+        "id": "Extension.extension",
         "path": "Extension.extension",
         "slicing": {
           "discriminator": [
@@ -151,7 +151,7 @@
         ]
       },
       {
-        "id": "Extension:varianttested.extension:variantidentifier",
+        "id": "Extension.extension:variantidentifier",
         "path": "Extension.extension",
         "definition": "The variation ID assigned by HGVS, for example, 360448 is the identifier for NM_005228.4(EGFR):c.-237A>G (single nucleotide variant in EGFR).",
         "min": 0,
@@ -180,7 +180,7 @@
         "sliceName": "variantidentifier"
       },
       {
-        "id": "Extension:varianttested.extension:varianthgvsname",
+        "id": "Extension.extension:varianthgvsname",
         "path": "Extension.extension",
         "definition": "Symbolic representation of the variant used in HGVS, for example, NM_005228.4(EGFR):c.-237A>G for HVGS variation ID 360448.",
         "min": 0,
@@ -209,7 +209,7 @@
         "sliceName": "varianthgvsname"
       },
       {
-        "id": "Extension:varianttested.extension:variantdescription",
+        "id": "Extension.extension:variantdescription",
         "path": "Extension.extension",
         "definition": "A clinician-friendly description for the variant. This could be, but not limited to, the protein change associated with the variation. For example, the protein change associated with Clinvar 3236 is G482V.",
         "min": 0,
@@ -238,7 +238,7 @@
         "sliceName": "variantdescription"
       },
       {
-        "id": "Extension:varianttested.url",
+        "id": "Extension.url",
         "path": "Extension.url",
         "representation": [
           "xmlAttr"
@@ -269,7 +269,7 @@
         "fixedUri": "http://hl7.org/fhir/us/mcode/StructureDefinition/onco-core-VariantTested-extension"
       },
       {
-        "id": "Extension:varianttested.value[x]",
+        "id": "Extension.value[x]",
         "path": "Extension.value[x]",
         "short": "Value of extension",
         "definition": "Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).",
@@ -443,7 +443,7 @@
   "differential": {
     "element": [
       {
-        "id": "Extension:varianttested",
+        "id": "Extension",
         "path": "Extension",
         "short": "VariantTested",
         "definition": "The specific genetic variant that is targeted by this test.",
@@ -451,7 +451,7 @@
         "max": "*"
       },
       {
-        "id": "Extension:varianttested.extension:variantidentifier",
+        "id": "Extension.extension:variantidentifier",
         "path": "Extension.extension",
         "definition": "The variation ID assigned by HGVS, for example, 360448 is the identifier for NM_005228.4(EGFR):c.-237A>G (single nucleotide variant in EGFR).",
         "min": 0,
@@ -480,7 +480,7 @@
         "sliceName": "variantidentifier"
       },
       {
-        "id": "Extension:varianttested.extension:varianthgvsname",
+        "id": "Extension.extension:varianthgvsname",
         "path": "Extension.extension",
         "definition": "Symbolic representation of the variant used in HGVS, for example, NM_005228.4(EGFR):c.-237A>G for HVGS variation ID 360448.",
         "min": 0,
@@ -509,7 +509,7 @@
         "sliceName": "varianthgvsname"
       },
       {
-        "id": "Extension:varianttested.extension:variantdescription",
+        "id": "Extension.extension:variantdescription",
         "path": "Extension.extension",
         "definition": "A clinician-friendly description for the variant. This could be, but not limited to, the protein change associated with the variation. For example, the protein change associated with Clinvar 3236 is G482V.",
         "min": 0,
@@ -538,7 +538,7 @@
         "sliceName": "variantdescription"
       },
       {
-        "id": "Extension:varianttested.url",
+        "id": "Extension.url",
         "path": "Extension.url",
         "type": [
           {
@@ -548,7 +548,7 @@
         "fixedUri": "http://hl7.org/fhir/us/mcode/StructureDefinition/onco-core-VariantTested-extension"
       },
       {
-        "id": "Extension:varianttested.value[x]",
+        "id": "Extension.value[x]",
         "path": "Extension.value[x]",
         "min": 0,
         "max": "0"

@@ -9,7 +9,7 @@
   "name": "RadiationFractionsDelivered",
   "title": "obf-RadiationFractionsDelivered",
   "status": "draft",
-  "date": "2019-07-24",
+  "date": "2019-07-25",
   "publisher": "The MITRE Corporation",
   "contact": [
     {
@@ -37,7 +37,7 @@
   "snapshot": {
     "element": [
       {
-        "id": "Extension:radiationfractionsdelivered",
+        "id": "Extension",
         "path": "Extension",
         "short": "RadiationFractionsDelivered",
         "definition": "Records the total number of treatment sessions (fractions) administered during the first course of therapy. Corresponds to LOINC 21950-2 'Number of radiation treatment' [sic].",
@@ -81,7 +81,7 @@
         ]
       },
       {
-        "id": "Extension:radiationfractionsdelivered.id",
+        "id": "Extension.id",
         "path": "Extension.id",
         "representation": [
           "xmlAttr"
@@ -110,7 +110,7 @@
         ]
       },
       {
-        "id": "Extension:radiationfractionsdelivered.extension",
+        "id": "Extension.extension",
         "path": "Extension.extension",
         "slicing": {
           "discriminator": [
@@ -151,7 +151,7 @@
         ]
       },
       {
-        "id": "Extension:radiationfractionsdelivered.url",
+        "id": "Extension.url",
         "path": "Extension.url",
         "representation": [
           "xmlAttr"
@@ -182,7 +182,7 @@
         "fixedUri": "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-RadiationFractionsDelivered-extension"
       },
       {
-        "id": "Extension:radiationfractionsdelivered.valueQuantity",
+        "id": "Extension.valueQuantity",
         "path": "Extension.valueQuantity",
         "short": "Value of extension",
         "definition": "Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).",
@@ -208,7 +208,7 @@
         ]
       },
       {
-        "id": "Extension:radiationfractionsdelivered.valueQuantity.id",
+        "id": "Extension.valueQuantity.id",
         "path": "Extension.valueQuantity.id",
         "representation": [
           "xmlAttr"
@@ -237,7 +237,7 @@
         ]
       },
       {
-        "id": "Extension:radiationfractionsdelivered.valueQuantity.extension",
+        "id": "Extension.valueQuantity.extension",
         "path": "Extension.valueQuantity.extension",
         "slicing": {
           "discriminator": [
@@ -278,7 +278,7 @@
         ]
       },
       {
-        "id": "Extension:radiationfractionsdelivered.valueQuantity.value",
+        "id": "Extension.valueQuantity.value",
         "path": "Extension.valueQuantity.value",
         "short": "Numerical value (with implicit precision)",
         "definition": "The value of the measured amount. The value includes an implicit precision in the presentation of the value.",
@@ -310,7 +310,7 @@
         ]
       },
       {
-        "id": "Extension:radiationfractionsdelivered.valueQuantity.comparator",
+        "id": "Extension.valueQuantity.comparator",
         "path": "Extension.valueQuantity.comparator",
         "short": "< | <= | >= | > - how to understand the value",
         "definition": "How the value should be understood and represented - whether the actual value is greater or less than the stated value due to measurement issues; e.g. if the comparator is \"<\" , then the real value is < stated value.",
@@ -354,7 +354,7 @@
         ]
       },
       {
-        "id": "Extension:radiationfractionsdelivered.valueQuantity.unit",
+        "id": "Extension.valueQuantity.unit",
         "extension": [
           {
             "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable",
@@ -391,7 +391,7 @@
         ]
       },
       {
-        "id": "Extension:radiationfractionsdelivered.valueQuantity.system",
+        "id": "Extension.valueQuantity.system",
         "path": "Extension.valueQuantity.system",
         "short": "System that defines coded unit form",
         "definition": "The identification of the system that provides the coded form of the unit.",
@@ -426,7 +426,7 @@
         "fixedUri": "http://unitsofmeasure.org"
       },
       {
-        "id": "Extension:radiationfractionsdelivered.valueQuantity.code",
+        "id": "Extension.valueQuantity.code",
         "path": "Extension.valueQuantity.code",
         "short": "Coded form of the unit",
         "definition": "A computer processable form of the unit in some unit representation system.",
@@ -463,7 +463,7 @@
   "differential": {
     "element": [
       {
-        "id": "Extension:radiationfractionsdelivered",
+        "id": "Extension",
         "path": "Extension",
         "short": "RadiationFractionsDelivered",
         "definition": "Records the total number of treatment sessions (fractions) administered during the first course of therapy. Corresponds to LOINC 21950-2 'Number of radiation treatment' [sic].",
@@ -471,13 +471,13 @@
         "max": "*"
       },
       {
-        "id": "Extension:radiationfractionsdelivered.extension",
+        "id": "Extension.extension",
         "path": "Extension.extension",
         "min": 0,
         "max": "0"
       },
       {
-        "id": "Extension:radiationfractionsdelivered.url",
+        "id": "Extension.url",
         "path": "Extension.url",
         "type": [
           {
@@ -487,7 +487,7 @@
         "fixedUri": "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-RadiationFractionsDelivered-extension"
       },
       {
-        "id": "Extension:radiationfractionsdelivered.valueQuantity",
+        "id": "Extension.valueQuantity",
         "path": "Extension.valueQuantity",
         "min": 1,
         "type": [
@@ -497,12 +497,12 @@
         ]
       },
       {
-        "id": "Extension:radiationfractionsdelivered.valueQuantity.system",
+        "id": "Extension.valueQuantity.system",
         "path": "Extension.valueQuantity.system",
         "fixedUri": "http://unitsofmeasure.org"
       },
       {
-        "id": "Extension:radiationfractionsdelivered.valueQuantity.code",
+        "id": "Extension.valueQuantity.code",
         "path": "Extension.valueQuantity.code",
         "fixedCode": "1"
       }

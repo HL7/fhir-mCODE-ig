@@ -1,0 +1,62 @@
+{
+  "resourceType": "ValueSet",
+  "id": "obf-datatype-UnitsOfLengthVS",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n<p><b>UnitsOfLengthVS ValueSet</b></p>\n<p>Units of measure related to length or distance.</p>\n</div>"
+  },
+  "url": "http://hl7.org/fhir/us/mcode/ValueSet/obf-datatype-UnitsOfLengthVS",
+  "name": "UnitsOfLengthVS",
+  "title": "UnitsOfLengthVS",
+  "status": "draft",
+  "publisher": "The MITRE Corporation",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://standardhealthrecord.org"
+        }
+      ]
+    }
+  ],
+  "date": "2019-07-25",
+  "description": "Units of measure related to length or distance.",
+  "compose": {
+    "include": [
+      {
+        "system": "http://unitsofmeasure.org",
+        "concept": [
+          {
+            "code": "pm",
+            "display": "Picometer"
+          },
+          {
+            "code": "nm",
+            "display": "Nanometer"
+          },
+          {
+            "code": "mm",
+            "display": "Millimeter"
+          },
+          {
+            "code": "cm",
+            "display": "Centimeter"
+          },
+          {
+            "code": "m",
+            "display": "Meter"
+          },
+          {
+            "code": "ft-us",
+            "display": "Foot"
+          },
+          {
+            "code": "in-us",
+            "display": "Inch"
+          }
+        ]
+      }
+    ]
+  }
+}

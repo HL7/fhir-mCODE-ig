@@ -8,7 +8,7 @@
   "url": "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-lab-QuantityWithRequiredUnits",
   "name": "QuantityWithRequiredUnits",
   "status": "active",
-  "date": "2019-07-24",
+  "date": "2019-07-25",
   "publisher": "The MITRE Corporation",
   "contact": [
     {
@@ -43,7 +43,7 @@
   "snapshot": {
     "element": [
       {
-        "id": "Quantity:obf-lab-QuantityWithRequiredUnits",
+        "id": "Quantity",
         "extension": [
           {
             "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
@@ -102,7 +102,7 @@
         ]
       },
       {
-        "id": "Quantity:obf-lab-QuantityWithRequiredUnits.id",
+        "id": "Quantity.id",
         "path": "Quantity.id",
         "representation": [
           "xmlAttr"
@@ -131,7 +131,7 @@
         ]
       },
       {
-        "id": "Quantity:obf-lab-QuantityWithRequiredUnits.extension",
+        "id": "Quantity.extension",
         "path": "Quantity.extension",
         "slicing": {
           "discriminator": [
@@ -172,7 +172,7 @@
         ]
       },
       {
-        "id": "Quantity:obf-lab-QuantityWithRequiredUnits.value",
+        "id": "Quantity.value",
         "path": "Quantity.value",
         "short": "Numerical value (with implicit precision)",
         "definition": "The value of the measured amount. The value includes an implicit precision in the presentation of the value.",
@@ -204,7 +204,7 @@
         ]
       },
       {
-        "id": "Quantity:obf-lab-QuantityWithRequiredUnits.comparator",
+        "id": "Quantity.comparator",
         "path": "Quantity.comparator",
         "short": "< | <= | >= | > - how to understand the value",
         "definition": "How the value should be understood and represented - whether the actual value is greater or less than the stated value due to measurement issues; e.g. if the comparator is \"<\" , then the real value is < stated value.",
@@ -248,7 +248,7 @@
         ]
       },
       {
-        "id": "Quantity:obf-lab-QuantityWithRequiredUnits.unit",
+        "id": "Quantity.unit",
         "extension": [
           {
             "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable",
@@ -285,7 +285,7 @@
         ]
       },
       {
-        "id": "Quantity:obf-lab-QuantityWithRequiredUnits.system",
+        "id": "Quantity.system",
         "path": "Quantity.system",
         "short": "System that defines coded unit form",
         "definition": "The identification of the system that provides the coded form of the unit.",
@@ -319,7 +319,7 @@
         ]
       },
       {
-        "id": "Quantity:obf-lab-QuantityWithRequiredUnits.code",
+        "id": "Quantity.code",
         "path": "Quantity.code",
         "short": "Coded form of the unit",
         "definition": "A computer processable form of the unit in some unit representation system.",
@@ -355,14 +355,14 @@
   "differential": {
     "element": [
       {
-        "id": "Quantity:obf-lab-QuantityWithRequiredUnits",
+        "id": "Quantity",
         "path": "Quantity",
         "short": "obf-lab-QuantityWithRequiredUnits",
         "definition": "A quantity that requires a coded unit of measure.",
         "isModifier": false
       },
       {
-        "id": "Quantity:obf-lab-QuantityWithRequiredUnits.code",
+        "id": "Quantity.code",
         "path": "Quantity.code",
         "min": 1,
         "max": "1"

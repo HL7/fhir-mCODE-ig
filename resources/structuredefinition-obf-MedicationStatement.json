@@ -10,7 +10,7 @@
   "title": "obf-MedicationStatement",
   "status": "active",
   "experimental": false,
-  "date": "2019-07-24",
+  "date": "2019-07-25",
   "publisher": "The MITRE Corporation",
   "contact": [
     {
@@ -70,7 +70,7 @@
   "snapshot": {
     "element": [
       {
-        "id": "MedicationStatement:obf-MedicationStatement",
+        "id": "MedicationStatement",
         "path": "MedicationStatement",
         "short": "obf-MedicationStatement",
         "definition": "A record of the use of a medication. The use may be reported by the patient or clinician and adminstration does not have to be directly observed.\n\nFHIR Notes:\n\nAlthough FHIR supports the asserter (information source) and date asserted, it does not have a place for the author (who created and is responsible for the statement) and recorder (who entered the statement). Extensions are provided.\n\nThe treatment of 'not taken' has changed from DSTU2 and STU3 to R4. In R4, status and statusReason are used to indicate medications not taken. For upward compatibility, the 'not taken' attributes are profiled out.\nReasonCode is a choice of CodeableConcept or ref(Condition) in DSTU2, and limited to one reason (pick a type). In STU3 and R4, there can be multiple reason codes, and multiple reason references, simultaneously.\n\nPreference is given to using the National Library of Medicine (NLM) RxNorm terminology for medications. RxNorm is a coding standard established by the Office of the National Coordinator (ONC). However, RxNorm is restricted to FDA-approved drugs and does not include clinical trial drugs. MedicationStatement allows for the inclusion of other coding systems like the NCI Thesaurus (NCIT) to represent clinical trial oncology drugs.",
@@ -157,7 +157,7 @@
         ]
       },
       {
-        "id": "MedicationStatement:obf-MedicationStatement.id",
+        "id": "MedicationStatement.id",
         "path": "MedicationStatement.id",
         "short": "Logical id of this artifact",
         "definition": "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.",
@@ -178,7 +178,7 @@
         "isSummary": true
       },
       {
-        "id": "MedicationStatement:obf-MedicationStatement.meta",
+        "id": "MedicationStatement.meta",
         "path": "MedicationStatement.meta",
         "short": "Metadata about the resource",
         "definition": "The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.",
@@ -198,7 +198,7 @@
         "isSummary": true
       },
       {
-        "id": "MedicationStatement:obf-MedicationStatement.implicitRules",
+        "id": "MedicationStatement.implicitRules",
         "path": "MedicationStatement.implicitRules",
         "short": "A set of rules under which this content was created",
         "definition": "A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.",
@@ -220,7 +220,7 @@
         "isSummary": true
       },
       {
-        "id": "MedicationStatement:obf-MedicationStatement.language",
+        "id": "MedicationStatement.language",
         "path": "MedicationStatement.language",
         "short": "Language of the resource content",
         "definition": "The base language in which the resource is written.",
@@ -260,7 +260,7 @@
         }
       },
       {
-        "id": "MedicationStatement:obf-MedicationStatement.text",
+        "id": "MedicationStatement.text",
         "path": "MedicationStatement.text",
         "short": "Text summary of the resource, for human interpretation",
         "definition": "A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.",
@@ -293,7 +293,7 @@
         ]
       },
       {
-        "id": "MedicationStatement:obf-MedicationStatement.contained",
+        "id": "MedicationStatement.contained",
         "path": "MedicationStatement.contained",
         "short": "Contained, inline Resources",
         "definition": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope.",
@@ -325,7 +325,7 @@
         ]
       },
       {
-        "id": "MedicationStatement:obf-MedicationStatement.extension",
+        "id": "MedicationStatement.extension",
         "path": "MedicationStatement.extension",
         "short": "Additional content defined by implementations",
         "definition": "May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
@@ -367,7 +367,7 @@
         }
       },
       {
-        "id": "MedicationStatement:obf-MedicationStatement.extension:treatmentintent",
+        "id": "MedicationStatement.extension:treatmentintent",
         "path": "MedicationStatement.extension",
         "definition": "The purpose of a treatment.",
         "min": 0,
@@ -391,7 +391,7 @@
         "mustSupport": true
       },
       {
-        "id": "MedicationStatement:obf-MedicationStatement.extension:terminationreason",
+        "id": "MedicationStatement.extension:terminationreason",
         "path": "MedicationStatement.extension",
         "definition": "A code explaining unplanned or premature termination of a plan of treatment, course of medication, or research study.",
         "min": 0,
@@ -415,7 +415,7 @@
         "mustSupport": true
       },
       {
-        "id": "MedicationStatement:obf-MedicationStatement.extension:terminationreason.id",
+        "id": "MedicationStatement.extension:terminationreason.id",
         "path": "MedicationStatement.extension.id",
         "representation": [
           "xmlAttr"
@@ -444,7 +444,7 @@
         ]
       },
       {
-        "id": "MedicationStatement:obf-MedicationStatement.extension:terminationreason.extension",
+        "id": "MedicationStatement.extension:terminationreason.extension",
         "path": "MedicationStatement.extension.extension",
         "slicing": {
           "discriminator": [
@@ -485,7 +485,7 @@
         ]
       },
       {
-        "id": "MedicationStatement:obf-MedicationStatement.extension:terminationreason.url",
+        "id": "MedicationStatement.extension:terminationreason.url",
         "path": "MedicationStatement.extension.url",
         "representation": [
           "xmlAttr"
@@ -516,7 +516,7 @@
         "fixedUri": "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-TerminationReason-extension"
       },
       {
-        "id": "MedicationStatement:obf-MedicationStatement.extension:terminationreason.valueCodeableConcept",
+        "id": "MedicationStatement.extension:terminationreason.valueCodeableConcept",
         "path": "MedicationStatement.extension.valueCodeableConcept",
         "short": "Value of extension",
         "definition": "Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).",
@@ -546,7 +546,7 @@
         }
       },
       {
-        "id": "MedicationStatement:obf-MedicationStatement.modifierExtension",
+        "id": "MedicationStatement.modifierExtension",
         "path": "MedicationStatement.modifierExtension",
         "short": "Extensions that cannot be ignored",
         "definition": "May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
@@ -579,7 +579,7 @@
         ]
       },
       {
-        "id": "MedicationStatement:obf-MedicationStatement.identifier",
+        "id": "MedicationStatement.identifier",
         "path": "MedicationStatement.identifier",
         "short": "External identifier",
         "definition": "Identifiers associated with this Medication Statement that are defined by business processes and/or used to refer to it when a direct URL reference to the resource itself is not appropriate. They are business identifiers assigned to this resource by the performer or other systems and remain constant as the resource is updated and propagates from server to server.",
@@ -614,7 +614,7 @@
         ]
       },
       {
-        "id": "MedicationStatement:obf-MedicationStatement.basedOn",
+        "id": "MedicationStatement.basedOn",
         "path": "MedicationStatement.basedOn",
         "short": "Fulfils plan, proposal or order",
         "definition": "A plan, proposal or order that is fulfilled in whole or in part by this event.",
@@ -649,7 +649,7 @@
         ]
       },
       {
-        "id": "MedicationStatement:obf-MedicationStatement.partOf",
+        "id": "MedicationStatement.partOf",
         "path": "MedicationStatement.partOf",
         "short": "Part of referenced event",
         "definition": "A larger event of which this particular event is a component or step.",
@@ -686,7 +686,7 @@
         ]
       },
       {
-        "id": "MedicationStatement:obf-MedicationStatement.status",
+        "id": "MedicationStatement.status",
         "path": "MedicationStatement.status",
         "short": "active | completed | entered-in-error | intended | stopped | on-hold | unknown | not-taken",
         "definition": "A code representing the patient or other source's judgment about the state of the medication used that this statement is about.  Generally, this will be active or completed.",
@@ -732,7 +732,7 @@
         ]
       },
       {
-        "id": "MedicationStatement:obf-MedicationStatement.statusReason",
+        "id": "MedicationStatement.statusReason",
         "path": "MedicationStatement.statusReason",
         "short": "Reason for current status",
         "definition": "Captures the reason for the current state of the MedicationStatement.",
@@ -774,7 +774,7 @@
         ]
       },
       {
-        "id": "MedicationStatement:obf-MedicationStatement.category",
+        "id": "MedicationStatement.category",
         "path": "MedicationStatement.category",
         "short": "Type of medication usage",
         "definition": "Indicates where the medication is expected to be consumed or administered.",
@@ -815,7 +815,7 @@
         ]
       },
       {
-        "id": "MedicationStatement:obf-MedicationStatement.medication[x]",
+        "id": "MedicationStatement.medication[x]",
         "path": "MedicationStatement.medication[x]",
         "short": "What medication was taken",
         "definition": "Identifies the medication being administered. This is either a link to a resource representing the details of the medication or a simple attribute carrying a code that identifies the medication from a known list of medications.",
@@ -866,7 +866,7 @@
         ]
       },
       {
-        "id": "MedicationStatement:obf-MedicationStatement.subject",
+        "id": "MedicationStatement.subject",
         "path": "MedicationStatement.subject",
         "short": "Who is/was taking  the medication",
         "definition": "The person, animal or group who is/was taking the medication.",
@@ -916,7 +916,7 @@
         ]
       },
       {
-        "id": "MedicationStatement:obf-MedicationStatement.context",
+        "id": "MedicationStatement.context",
         "path": "MedicationStatement.context",
         "short": "Encounter / Episode associated with MedicationStatement",
         "definition": "The encounter or episode of care that establishes the context for this MedicationStatement.",
@@ -950,7 +950,7 @@
         ]
       },
       {
-        "id": "MedicationStatement:obf-MedicationStatement.effective[x]",
+        "id": "MedicationStatement.effective[x]",
         "path": "MedicationStatement.effective[x]",
         "short": "The date/time or interval when the medication is/was/will be taken",
         "definition": "The interval of time during which it is being asserted that the patient is/was/will be taking the medication (or was not taking, when the MedicationStatement.taken element is No).",
@@ -993,7 +993,7 @@
         ]
       },
       {
-        "id": "MedicationStatement:obf-MedicationStatement.dateAsserted",
+        "id": "MedicationStatement.dateAsserted",
         "path": "MedicationStatement.dateAsserted",
         "short": "When the statement was asserted?",
         "definition": "The date when the medication statement was asserted by the information source.",
@@ -1028,7 +1028,7 @@
         ]
       },
       {
-        "id": "MedicationStatement:obf-MedicationStatement.informationSource",
+        "id": "MedicationStatement.informationSource",
         "path": "MedicationStatement.informationSource",
         "short": "Person or organization that provided the information about the taking of this medication",
         "definition": "The person or organization that provided the information about the taking of this medication. Note: Use derivedFrom when a MedicationStatement is derived from other resources, e.g. Claim or MedicationRequest.",
@@ -1064,7 +1064,7 @@
         ]
       },
       {
-        "id": "MedicationStatement:obf-MedicationStatement.derivedFrom",
+        "id": "MedicationStatement.derivedFrom",
         "path": "MedicationStatement.derivedFrom",
         "short": "Additional supporting information",
         "definition": "Allows linking the MedicationStatement to the underlying MedicationRequest, or to other information that supports or is used to derive the MedicationStatement.",
@@ -1099,7 +1099,7 @@
         ]
       },
       {
-        "id": "MedicationStatement:obf-MedicationStatement.reasonCode",
+        "id": "MedicationStatement.reasonCode",
         "path": "MedicationStatement.reasonCode",
         "short": "Reason for why the medication is being/was taken",
         "definition": "A reason for why the medication is being/was taken.",
@@ -1145,7 +1145,7 @@
         ]
       },
       {
-        "id": "MedicationStatement:obf-MedicationStatement.reasonReference",
+        "id": "MedicationStatement.reasonReference",
         "path": "MedicationStatement.reasonReference",
         "short": "Condition or observation that supports why the medication is being/was taken",
         "definition": "Condition or observation that supports why the medication is being/was taken",
@@ -1185,7 +1185,7 @@
         ]
       },
       {
-        "id": "MedicationStatement:obf-MedicationStatement.note",
+        "id": "MedicationStatement.note",
         "path": "MedicationStatement.note",
         "short": "Further information about the statement",
         "definition": "Provides extra information about the medication statement that is not conveyed by the other attributes.",
@@ -1215,7 +1215,7 @@
         ]
       },
       {
-        "id": "MedicationStatement:obf-MedicationStatement.dosage",
+        "id": "MedicationStatement.dosage",
         "path": "MedicationStatement.dosage",
         "short": "Details of how medication is/was taken or should be taken",
         "definition": "Indicates how the medication is/was or should be taken by the patient.",
@@ -1246,7 +1246,7 @@
   "differential": {
     "element": [
       {
-        "id": "MedicationStatement:obf-MedicationStatement",
+        "id": "MedicationStatement",
         "path": "MedicationStatement",
         "short": "obf-MedicationStatement",
         "definition": "A record of the use of a medication. The use may be reported by the patient or clinician and adminstration does not have to be directly observed.\n\nFHIR Notes:\n\nAlthough FHIR supports the asserter (information source) and date asserted, it does not have a place for the author (who created and is responsible for the statement) and recorder (who entered the statement). Extensions are provided.\n\nThe treatment of 'not taken' has changed from DSTU2 and STU3 to R4. In R4, status and statusReason are used to indicate medications not taken. For upward compatibility, the 'not taken' attributes are profiled out.\nReasonCode is a choice of CodeableConcept or ref(Condition) in DSTU2, and limited to one reason (pick a type). In STU3 and R4, there can be multiple reason codes, and multiple reason references, simultaneously.\n\nPreference is given to using the National Library of Medicine (NLM) RxNorm terminology for medications. RxNorm is a coding standard established by the Office of the National Coordinator (ONC). However, RxNorm is restricted to FDA-approved drugs and does not include clinical trial drugs. MedicationStatement allows for the inclusion of other coding systems like the NCI Thesaurus (NCIT) to represent clinical trial oncology drugs.",
@@ -1255,7 +1255,7 @@
         "isSummary": false
       },
       {
-        "id": "MedicationStatement:obf-MedicationStatement.extension",
+        "id": "MedicationStatement.extension",
         "path": "MedicationStatement.extension",
         "slicing": {
           "id": "1",
@@ -1270,7 +1270,7 @@
         }
       },
       {
-        "id": "MedicationStatement:obf-MedicationStatement.extension:treatmentintent",
+        "id": "MedicationStatement.extension:treatmentintent",
         "path": "MedicationStatement.extension",
         "definition": "The purpose of a treatment.",
         "min": 0,
@@ -1294,7 +1294,7 @@
         "mustSupport": true
       },
       {
-        "id": "MedicationStatement:obf-MedicationStatement.extension:terminationreason",
+        "id": "MedicationStatement.extension:terminationreason",
         "path": "MedicationStatement.extension",
         "definition": "A code explaining unplanned or premature termination of a plan of treatment, course of medication, or research study.",
         "min": 0,
@@ -1318,7 +1318,7 @@
         "mustSupport": true
       },
       {
-        "id": "MedicationStatement:obf-MedicationStatement.extension:terminationreason.valueCodeableConcept",
+        "id": "MedicationStatement.extension:terminationreason.valueCodeableConcept",
         "path": "MedicationStatement.extension.valueCodeableConcept",
         "binding": {
           "strength": "required",
@@ -1326,7 +1326,7 @@
         }
       },
       {
-        "id": "MedicationStatement:obf-MedicationStatement.basedOn",
+        "id": "MedicationStatement.basedOn",
         "path": "MedicationStatement.basedOn",
         "type": [
           {
@@ -1339,7 +1339,7 @@
         ]
       },
       {
-        "id": "MedicationStatement:obf-MedicationStatement.partOf",
+        "id": "MedicationStatement.partOf",
         "path": "MedicationStatement.partOf",
         "type": [
           {
@@ -1354,7 +1354,7 @@
         ]
       },
       {
-        "id": "MedicationStatement:obf-MedicationStatement.subject",
+        "id": "MedicationStatement.subject",
         "path": "MedicationStatement.subject",
         "type": [
           {
@@ -1366,7 +1366,7 @@
         ]
       },
       {
-        "id": "MedicationStatement:obf-MedicationStatement.context",
+        "id": "MedicationStatement.context",
         "path": "MedicationStatement.context",
         "type": [
           {
@@ -1379,13 +1379,13 @@
         ]
       },
       {
-        "id": "MedicationStatement:obf-MedicationStatement.effective[x]",
+        "id": "MedicationStatement.effective[x]",
         "path": "MedicationStatement.effective[x]",
         "min": 1,
         "max": "1"
       },
       {
-        "id": "MedicationStatement:obf-MedicationStatement.informationSource",
+        "id": "MedicationStatement.informationSource",
         "path": "MedicationStatement.informationSource",
         "type": [
           {
@@ -1400,13 +1400,13 @@
         ]
       },
       {
-        "id": "MedicationStatement:obf-MedicationStatement.reasonCode",
+        "id": "MedicationStatement.reasonCode",
         "path": "MedicationStatement.reasonCode",
         "min": 0,
         "max": "1"
       },
       {
-        "id": "MedicationStatement:obf-MedicationStatement.reasonReference",
+        "id": "MedicationStatement.reasonReference",
         "path": "MedicationStatement.reasonReference",
         "min": 0,
         "max": "1",
@@ -1423,7 +1423,7 @@
         "definition": "Condition or observation that supports why the medication is being/was taken"
       },
       {
-        "id": "MedicationStatement:obf-MedicationStatement.dosage",
+        "id": "MedicationStatement.dosage",
         "path": "MedicationStatement.dosage",
         "min": 0,
         "max": "1"

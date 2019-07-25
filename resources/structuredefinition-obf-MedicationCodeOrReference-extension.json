@@ -9,7 +9,7 @@
   "name": "MedicationCodeOrReference",
   "title": "obf-MedicationCodeOrReference",
   "status": "draft",
-  "date": "2019-07-24",
+  "date": "2019-07-25",
   "publisher": "The MITRE Corporation",
   "contact": [
     {
@@ -37,7 +37,7 @@
   "snapshot": {
     "element": [
       {
-        "id": "Extension:medicationcodeorreference",
+        "id": "Extension",
         "path": "Extension",
         "short": "MedicationCodeOrReference",
         "definition": "A choice of a medication code or reference.",
@@ -81,7 +81,7 @@
         ]
       },
       {
-        "id": "Extension:medicationcodeorreference.id",
+        "id": "Extension.id",
         "path": "Extension.id",
         "representation": [
           "xmlAttr"
@@ -110,7 +110,7 @@
         ]
       },
       {
-        "id": "Extension:medicationcodeorreference.extension",
+        "id": "Extension.extension",
         "path": "Extension.extension",
         "slicing": {
           "discriminator": [
@@ -151,7 +151,7 @@
         ]
       },
       {
-        "id": "Extension:medicationcodeorreference.url",
+        "id": "Extension.url",
         "path": "Extension.url",
         "representation": [
           "xmlAttr"
@@ -182,7 +182,7 @@
         "fixedUri": "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-MedicationCodeOrReference-extension"
       },
       {
-        "id": "Extension:medicationcodeorreference.valueCodeableConcept",
+        "id": "Extension.valueCodeableConcept",
         "path": "Extension.valueCodeableConcept",
         "short": "Value of extension",
         "definition": "Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).",
@@ -205,7 +205,7 @@
   "differential": {
     "element": [
       {
-        "id": "Extension:medicationcodeorreference",
+        "id": "Extension",
         "path": "Extension",
         "short": "MedicationCodeOrReference",
         "definition": "A choice of a medication code or reference.",
@@ -213,13 +213,13 @@
         "max": "*"
       },
       {
-        "id": "Extension:medicationcodeorreference.extension",
+        "id": "Extension.extension",
         "path": "Extension.extension",
         "min": 0,
         "max": "0"
       },
       {
-        "id": "Extension:medicationcodeorreference.url",
+        "id": "Extension.url",
         "path": "Extension.url",
         "type": [
           {
@@ -229,7 +229,7 @@
         "fixedUri": "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-MedicationCodeOrReference-extension"
       },
       {
-        "id": "Extension:medicationcodeorreference.valueCodeableConcept",
+        "id": "Extension.valueCodeableConcept",
         "path": "Extension.valueCodeableConcept",
         "base": {
           "path": "Extension.value[x]",

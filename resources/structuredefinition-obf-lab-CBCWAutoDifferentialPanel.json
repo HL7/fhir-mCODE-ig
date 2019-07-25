@@ -10,7 +10,7 @@
   "title": "obf-lab-CBCWAutoDifferentialPanel",
   "status": "active",
   "experimental": false,
-  "date": "2019-07-24",
+  "date": "2019-07-25",
   "publisher": "The MITRE Corporation",
   "contact": [
     {
@@ -65,7 +65,7 @@
   "snapshot": {
     "element": [
       {
-        "id": "DiagnosticReport:obf-lab-CBCWAutoDifferentialPanel",
+        "id": "DiagnosticReport",
         "path": "DiagnosticReport",
         "short": "obf-lab-CBCWAutoDifferentialPanel",
         "definition": "Complete blood count (CBC) with auto differential panel. Includes various measures of red blood cells, platelets, and various types of white blood cells and other related measures, such as hemoglobin. The components of this panel are not entirely standardized, so the definition of the CBC includes tests that are optional, or performed by certain laboratories but not others. Instances typically will include a subset of the listed panel members.",
@@ -169,7 +169,7 @@
         ]
       },
       {
-        "id": "DiagnosticReport:obf-lab-CBCWAutoDifferentialPanel.id",
+        "id": "DiagnosticReport.id",
         "path": "DiagnosticReport.id",
         "short": "Logical id of this artifact",
         "definition": "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.",
@@ -190,7 +190,7 @@
         "isSummary": true
       },
       {
-        "id": "DiagnosticReport:obf-lab-CBCWAutoDifferentialPanel.meta",
+        "id": "DiagnosticReport.meta",
         "path": "DiagnosticReport.meta",
         "short": "Metadata about the resource",
         "definition": "The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.",
@@ -210,7 +210,7 @@
         "isSummary": true
       },
       {
-        "id": "DiagnosticReport:obf-lab-CBCWAutoDifferentialPanel.implicitRules",
+        "id": "DiagnosticReport.implicitRules",
         "path": "DiagnosticReport.implicitRules",
         "short": "A set of rules under which this content was created",
         "definition": "A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.",
@@ -232,7 +232,7 @@
         "isSummary": true
       },
       {
-        "id": "DiagnosticReport:obf-lab-CBCWAutoDifferentialPanel.language",
+        "id": "DiagnosticReport.language",
         "path": "DiagnosticReport.language",
         "short": "Language of the resource content",
         "definition": "The base language in which the resource is written.",
@@ -272,7 +272,7 @@
         }
       },
       {
-        "id": "DiagnosticReport:obf-lab-CBCWAutoDifferentialPanel.text",
+        "id": "DiagnosticReport.text",
         "path": "DiagnosticReport.text",
         "short": "Text summary of the resource, for human interpretation",
         "definition": "A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.",
@@ -305,7 +305,7 @@
         ]
       },
       {
-        "id": "DiagnosticReport:obf-lab-CBCWAutoDifferentialPanel.contained",
+        "id": "DiagnosticReport.contained",
         "path": "DiagnosticReport.contained",
         "short": "Contained, inline Resources",
         "definition": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope.",
@@ -337,7 +337,7 @@
         ]
       },
       {
-        "id": "DiagnosticReport:obf-lab-CBCWAutoDifferentialPanel.extension",
+        "id": "DiagnosticReport.extension",
         "path": "DiagnosticReport.extension",
         "short": "Additional content defined by implementations",
         "definition": "May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
@@ -368,7 +368,7 @@
         ]
       },
       {
-        "id": "DiagnosticReport:obf-lab-CBCWAutoDifferentialPanel.modifierExtension",
+        "id": "DiagnosticReport.modifierExtension",
         "path": "DiagnosticReport.modifierExtension",
         "short": "Extensions that cannot be ignored",
         "definition": "May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
@@ -401,7 +401,7 @@
         ]
       },
       {
-        "id": "DiagnosticReport:obf-lab-CBCWAutoDifferentialPanel.identifier",
+        "id": "DiagnosticReport.identifier",
         "path": "DiagnosticReport.identifier",
         "short": "Business identifier for report",
         "definition": "Identifiers assigned to this report by the performer or other systems.",
@@ -446,7 +446,7 @@
         ]
       },
       {
-        "id": "DiagnosticReport:obf-lab-CBCWAutoDifferentialPanel.basedOn",
+        "id": "DiagnosticReport.basedOn",
         "path": "DiagnosticReport.basedOn",
         "short": "What was requested",
         "definition": "Details concerning a service requested.",
@@ -489,7 +489,7 @@
         ]
       },
       {
-        "id": "DiagnosticReport:obf-lab-CBCWAutoDifferentialPanel.status",
+        "id": "DiagnosticReport.status",
         "path": "DiagnosticReport.status",
         "short": "registered | partial | preliminary | final +",
         "definition": "The status of the diagnostic report.",
@@ -534,7 +534,7 @@
         ]
       },
       {
-        "id": "DiagnosticReport:obf-lab-CBCWAutoDifferentialPanel.category",
+        "id": "DiagnosticReport.category",
         "path": "DiagnosticReport.category",
         "slicing": {
           "discriminator": [
@@ -596,7 +596,7 @@
         ]
       },
       {
-        "id": "DiagnosticReport:obf-lab-CBCWAutoDifferentialPanel.category:lab",
+        "id": "DiagnosticReport.category:lab",
         "path": "DiagnosticReport.category",
         "sliceName": "lab",
         "short": "Service category",
@@ -658,7 +658,7 @@
         ]
       },
       {
-        "id": "DiagnosticReport:obf-lab-CBCWAutoDifferentialPanel.code",
+        "id": "DiagnosticReport.code",
         "path": "DiagnosticReport.code",
         "short": "US Core Laboratory Report Order Code",
         "definition": "The test, panel or battery that was ordered.",
@@ -706,7 +706,7 @@
         ]
       },
       {
-        "id": "DiagnosticReport:obf-lab-CBCWAutoDifferentialPanel.code.id",
+        "id": "DiagnosticReport.code.id",
         "path": "DiagnosticReport.code.id",
         "representation": [
           "xmlAttr"
@@ -735,7 +735,7 @@
         ]
       },
       {
-        "id": "DiagnosticReport:obf-lab-CBCWAutoDifferentialPanel.code.extension",
+        "id": "DiagnosticReport.code.extension",
         "path": "DiagnosticReport.code.extension",
         "slicing": {
           "discriminator": [
@@ -776,7 +776,7 @@
         ]
       },
       {
-        "id": "DiagnosticReport:obf-lab-CBCWAutoDifferentialPanel.code.coding",
+        "id": "DiagnosticReport.code.coding",
         "path": "DiagnosticReport.code.coding",
         "short": "Code defined by a terminology system",
         "definition": "A reference to a code defined by a terminology system.",
@@ -823,7 +823,7 @@
         }
       },
       {
-        "id": "DiagnosticReport:obf-lab-CBCWAutoDifferentialPanel.code.coding:Fixed_57021-8",
+        "id": "DiagnosticReport.code.coding:Fixed_57021-8",
         "path": "DiagnosticReport.code.coding",
         "sliceName": "Fixed_57021-8",
         "short": "CBC W Auto Differential panel - Blood",
@@ -843,7 +843,7 @@
         "isSummary": true
       },
       {
-        "id": "DiagnosticReport:obf-lab-CBCWAutoDifferentialPanel.code.coding:Fixed_57021-8.id",
+        "id": "DiagnosticReport.code.coding:Fixed_57021-8.id",
         "path": "DiagnosticReport.code.coding.id",
         "representation": [
           "xmlAttr"
@@ -872,7 +872,7 @@
         ]
       },
       {
-        "id": "DiagnosticReport:obf-lab-CBCWAutoDifferentialPanel.code.coding:Fixed_57021-8.extension",
+        "id": "DiagnosticReport.code.coding:Fixed_57021-8.extension",
         "path": "DiagnosticReport.code.coding.extension",
         "slicing": {
           "discriminator": [
@@ -913,7 +913,7 @@
         ]
       },
       {
-        "id": "DiagnosticReport:obf-lab-CBCWAutoDifferentialPanel.code.coding:Fixed_57021-8.system",
+        "id": "DiagnosticReport.code.coding:Fixed_57021-8.system",
         "path": "DiagnosticReport.code.coding.system",
         "short": "Identity of the terminology system",
         "definition": "The identification of the code system that defines the meaning of the symbol in the code.",
@@ -950,7 +950,7 @@
         "fixedUri": "http://loinc.org"
       },
       {
-        "id": "DiagnosticReport:obf-lab-CBCWAutoDifferentialPanel.code.coding:Fixed_57021-8.version",
+        "id": "DiagnosticReport.code.coding:Fixed_57021-8.version",
         "path": "DiagnosticReport.code.coding.version",
         "short": "Version of the system - if relevant",
         "definition": "The version of the code system which was used when choosing this code. Note that a well-maintained code system does not need the version reported, because the meaning of codes is consistent across versions. However this cannot consistently be assured, and when the meaning is not guaranteed to be consistent, the version SHOULD be exchanged.",
@@ -985,7 +985,7 @@
         ]
       },
       {
-        "id": "DiagnosticReport:obf-lab-CBCWAutoDifferentialPanel.code.coding:Fixed_57021-8.code",
+        "id": "DiagnosticReport.code.coding:Fixed_57021-8.code",
         "path": "DiagnosticReport.code.coding.code",
         "short": "Symbol in syntax defined by the system",
         "definition": "A symbol in syntax defined by the system. The symbol may be a predefined code or an expression in a syntax defined by the coding system (e.g. post-coordination).",
@@ -1021,7 +1021,7 @@
         "fixedCode": "57021-8"
       },
       {
-        "id": "DiagnosticReport:obf-lab-CBCWAutoDifferentialPanel.code.coding:Fixed_57021-8.display",
+        "id": "DiagnosticReport.code.coding:Fixed_57021-8.display",
         "extension": [
           {
             "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable",
@@ -1062,7 +1062,7 @@
         ]
       },
       {
-        "id": "DiagnosticReport:obf-lab-CBCWAutoDifferentialPanel.code.coding:Fixed_57021-8.userSelected",
+        "id": "DiagnosticReport.code.coding:Fixed_57021-8.userSelected",
         "path": "DiagnosticReport.code.coding.userSelected",
         "short": "If this coding was chosen directly by the user",
         "definition": "Indicates that this coding was chosen by a user directly - e.g. off a pick list of available items (codes or displays).",
@@ -1098,7 +1098,7 @@
         ]
       },
       {
-        "id": "DiagnosticReport:obf-lab-CBCWAutoDifferentialPanel.code.text",
+        "id": "DiagnosticReport.code.text",
         "extension": [
           {
             "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable",
@@ -1140,7 +1140,7 @@
         ]
       },
       {
-        "id": "DiagnosticReport:obf-lab-CBCWAutoDifferentialPanel.subject",
+        "id": "DiagnosticReport.subject",
         "path": "DiagnosticReport.subject",
         "short": "The subject of an observation",
         "definition": "The subject of an observation.",
@@ -1190,7 +1190,7 @@
         ]
       },
       {
-        "id": "DiagnosticReport:obf-lab-CBCWAutoDifferentialPanel.encounter",
+        "id": "DiagnosticReport.encounter",
         "path": "DiagnosticReport.encounter",
         "short": "Health care event when test ordered",
         "definition": "The healthcare event  (e.g. a patient and healthcare provider interaction) which this DiagnosticReport is about.",
@@ -1236,7 +1236,7 @@
         ]
       },
       {
-        "id": "DiagnosticReport:obf-lab-CBCWAutoDifferentialPanel.effective[x]",
+        "id": "DiagnosticReport.effective[x]",
         "path": "DiagnosticReport.effective[x]",
         "short": "Specimen Collection Datetime or Period",
         "definition": "This is the Specimen Collection Datetime or Period which is the physically relevent dateTime for laboratory tests.",
@@ -1285,7 +1285,7 @@
         ]
       },
       {
-        "id": "DiagnosticReport:obf-lab-CBCWAutoDifferentialPanel.issued",
+        "id": "DiagnosticReport.issued",
         "path": "DiagnosticReport.issued",
         "short": "DateTime this version was made",
         "definition": "The date and time that this version of the report was made available to providers, typically after the report was reviewed and verified.",
@@ -1327,7 +1327,7 @@
         ]
       },
       {
-        "id": "DiagnosticReport:obf-lab-CBCWAutoDifferentialPanel.performer",
+        "id": "DiagnosticReport.performer",
         "path": "DiagnosticReport.performer",
         "short": "Responsible Diagnostic Service",
         "definition": "The diagnostic service that is responsible for issuing the report.",
@@ -1381,7 +1381,7 @@
         ]
       },
       {
-        "id": "DiagnosticReport:obf-lab-CBCWAutoDifferentialPanel.resultsInterpreter",
+        "id": "DiagnosticReport.resultsInterpreter",
         "path": "DiagnosticReport.resultsInterpreter",
         "short": "Primary result interpreter",
         "definition": "The practitioner or organization that is responsible for the report's conclusions and interpretations.",
@@ -1429,7 +1429,7 @@
         ]
       },
       {
-        "id": "DiagnosticReport:obf-lab-CBCWAutoDifferentialPanel.specimen",
+        "id": "DiagnosticReport.specimen",
         "path": "DiagnosticReport.specimen",
         "short": "Specimens this report is based on",
         "definition": "Details about the specimens on which this diagnostic report is based.",
@@ -1464,7 +1464,7 @@
         ]
       },
       {
-        "id": "DiagnosticReport:obf-lab-CBCWAutoDifferentialPanel.result",
+        "id": "DiagnosticReport.result",
         "path": "DiagnosticReport.result",
         "short": "A coded finding based on a specimen, usually collected from a patient (but possibly from a location)",
         "definition": "A coded finding based on a specimen, usually collected from a patient (but possibly from a location).",
@@ -1531,7 +1531,7 @@
         }
       },
       {
-        "id": "DiagnosticReport:obf-lab-CBCWAutoDifferentialPanel.result:obf-lab-LeukocytesNCncPtBldQnAutoCntLabObs",
+        "id": "DiagnosticReport.result:obf-lab-LeukocytesNCncPtBldQnAutoCntLabObs",
         "path": "DiagnosticReport.result",
         "short": "LeukocytesNCncPtBldQnAutoCntLabObs: Leukocytes [#/​volume] in Blood by Automated count",
         "definition": "Leukocytes [#/​volume] in Blood by Automated count",
@@ -1586,7 +1586,7 @@
         "sliceName": "obf-lab-LeukocytesNCncPtBldQnAutoCntLabObs"
       },
       {
-        "id": "DiagnosticReport:obf-lab-CBCWAutoDifferentialPanel.result:obf-lab-ErythrocytesNCncPtBldQnAutoCntLabObs",
+        "id": "DiagnosticReport.result:obf-lab-ErythrocytesNCncPtBldQnAutoCntLabObs",
         "path": "DiagnosticReport.result",
         "short": "ErythrocytesNCncPtBldQnAutoCntLabObs: Erythrocytes [#/​volume] in Blood by Automated count",
         "definition": "Erythrocytes [#/​volume] in Blood by Automated count.",
@@ -1641,7 +1641,7 @@
         "sliceName": "obf-lab-ErythrocytesNCncPtBldQnAutoCntLabObs"
       },
       {
-        "id": "DiagnosticReport:obf-lab-CBCWAutoDifferentialPanel.result:obf-lab-HemoglobinMCncPtBldQnLabObs",
+        "id": "DiagnosticReport.result:obf-lab-HemoglobinMCncPtBldQnLabObs",
         "path": "DiagnosticReport.result",
         "short": "HemoglobinMCncPtBldQnLabObs: Hemoglobin [Mass/​volume] in Blood",
         "definition": "Hemoglobin [Mass/​volume] in Blood",
@@ -1696,7 +1696,7 @@
         "sliceName": "obf-lab-HemoglobinMCncPtBldQnLabObs"
       },
       {
-        "id": "DiagnosticReport:obf-lab-CBCWAutoDifferentialPanel.result:obf-lab-HematocritVFrPtBldQnAutoCntLabObs",
+        "id": "DiagnosticReport.result:obf-lab-HematocritVFrPtBldQnAutoCntLabObs",
         "path": "DiagnosticReport.result",
         "short": "HematocritVFrPtBldQnAutoCntLabObs: Hematocrit [Volume Fraction] of Blood by Automated count",
         "definition": "Hematocrit [Volume Fraction] of Blood by Automated count",
@@ -1751,7 +1751,7 @@
         "sliceName": "obf-lab-HematocritVFrPtBldQnAutoCntLabObs"
       },
       {
-        "id": "DiagnosticReport:obf-lab-CBCWAutoDifferentialPanel.result:obf-lab-MeanCorpuscularVolumeEntVolPtRBCQnAutoCntLabObs",
+        "id": "DiagnosticReport.result:obf-lab-MeanCorpuscularVolumeEntVolPtRBCQnAutoCntLabObs",
         "path": "DiagnosticReport.result",
         "short": "MeanCorpuscularVolumeEntVolPtRBCQnAutoCntLabObs: MCV [Entitic volume] by Automated count",
         "definition": "MCV [Entitic volume] by Automated count",
@@ -1806,7 +1806,7 @@
         "sliceName": "obf-lab-MeanCorpuscularVolumeEntVolPtRBCQnAutoCntLabObs"
       },
       {
-        "id": "DiagnosticReport:obf-lab-CBCWAutoDifferentialPanel.result:obf-lab-ErythrocyteMCHEntMassPtRBCQnAutoCntLabObs",
+        "id": "DiagnosticReport.result:obf-lab-ErythrocyteMCHEntMassPtRBCQnAutoCntLabObs",
         "path": "DiagnosticReport.result",
         "short": "ErythrocyteMCHEntMassPtRBCQnAutoCntLabObs: MCH [Entitic mass] by Automated count",
         "definition": "MCH [Entitic mass] by Automated count",
@@ -1861,7 +1861,7 @@
         "sliceName": "obf-lab-ErythrocyteMCHEntMassPtRBCQnAutoCntLabObs"
       },
       {
-        "id": "DiagnosticReport:obf-lab-CBCWAutoDifferentialPanel.result:obf-lab-ErythrocyteMCHCMCncPtRBCQnAutoCntLabObs",
+        "id": "DiagnosticReport.result:obf-lab-ErythrocyteMCHCMCncPtRBCQnAutoCntLabObs",
         "path": "DiagnosticReport.result",
         "short": "ErythrocyteMCHCMCncPtRBCQnAutoCntLabObs: MCHC [Mass/​volume] by Automated count",
         "definition": "MCHC [Mass/​volume] by Automated count",
@@ -1916,7 +1916,7 @@
         "sliceName": "obf-lab-ErythrocyteMCHCMCncPtRBCQnAutoCntLabObs"
       },
       {
-        "id": "DiagnosticReport:obf-lab-CBCWAutoDifferentialPanel.result:obf-lab-PlateletsNCncPtBldQnAutoCntLabObs",
+        "id": "DiagnosticReport.result:obf-lab-PlateletsNCncPtBldQnAutoCntLabObs",
         "path": "DiagnosticReport.result",
         "short": "PlateletsNCncPtBldQnAutoCntLabObs: Platelets [#/​volume] in Blood by Automated count",
         "definition": "Platelets [#/​volume] in Blood by Automated count",
@@ -1971,7 +1971,7 @@
         "sliceName": "obf-lab-PlateletsNCncPtBldQnAutoCntLabObs"
       },
       {
-        "id": "DiagnosticReport:obf-lab-CBCWAutoDifferentialPanel.result:obf-lab-Neutrophils100WBCNFrPtBldQnAutoCntLabObs",
+        "id": "DiagnosticReport.result:obf-lab-Neutrophils100WBCNFrPtBldQnAutoCntLabObs",
         "path": "DiagnosticReport.result",
         "short": "Neutrophils100WBCNFrPtBldQnAutoCntLabObs: Neutrophils/​100 leukocytes in Blood by Automated count",
         "definition": "Neutrophils/​100 leukocytes in Blood by Automated count",
@@ -2026,7 +2026,7 @@
         "sliceName": "obf-lab-Neutrophils100WBCNFrPtBldQnAutoCntLabObs"
       },
       {
-        "id": "DiagnosticReport:obf-lab-CBCWAutoDifferentialPanel.result:obf-lab-NeutrophilsNCncPtBldQnAutoCntLabObs",
+        "id": "DiagnosticReport.result:obf-lab-NeutrophilsNCncPtBldQnAutoCntLabObs",
         "path": "DiagnosticReport.result",
         "short": "NeutrophilsNCncPtBldQnAutoCntLabObs: Neutrophils [#/​volume] in Blood by Automated count",
         "definition": "Neutrophils [#/​volume] in Blood by Automated count",
@@ -2081,7 +2081,7 @@
         "sliceName": "obf-lab-NeutrophilsNCncPtBldQnAutoCntLabObs"
       },
       {
-        "id": "DiagnosticReport:obf-lab-CBCWAutoDifferentialPanel.result:obf-lab-ErythrocyteDistributionWidthRatioPtRBCQnAutoCntLabObs",
+        "id": "DiagnosticReport.result:obf-lab-ErythrocyteDistributionWidthRatioPtRBCQnAutoCntLabObs",
         "path": "DiagnosticReport.result",
         "short": "ErythrocyteDistributionWidthRatioPtRBCQnAutoCntLabObs: Erythrocyte distribution width [Ratio] by Automated count",
         "definition": "Erythrocyte distribution width [Ratio] by Automated count",
@@ -2136,7 +2136,7 @@
         "sliceName": "obf-lab-ErythrocyteDistributionWidthRatioPtRBCQnAutoCntLabObs"
       },
       {
-        "id": "DiagnosticReport:obf-lab-CBCWAutoDifferentialPanel.result:obf-lab-Lymphocytes100WBCNFrPtBldQnAutoCntLabObs",
+        "id": "DiagnosticReport.result:obf-lab-Lymphocytes100WBCNFrPtBldQnAutoCntLabObs",
         "path": "DiagnosticReport.result",
         "short": "Lymphocytes100WBCNFrPtBldQnAutoCntLabObs: Lymphocytes/​100 leukocytes in Blood by Automated count",
         "definition": "Lymphocytes/​100 leukocytes in Blood by Automated count",
@@ -2191,7 +2191,7 @@
         "sliceName": "obf-lab-Lymphocytes100WBCNFrPtBldQnAutoCntLabObs"
       },
       {
-        "id": "DiagnosticReport:obf-lab-CBCWAutoDifferentialPanel.result:obf-lab-Monocytes100WBCNFrPtBldQnAutoCntLabObs",
+        "id": "DiagnosticReport.result:obf-lab-Monocytes100WBCNFrPtBldQnAutoCntLabObs",
         "path": "DiagnosticReport.result",
         "short": "Monocytes100WBCNFrPtBldQnAutoCntLabObs: Monocytes/​100 leukocytes in Blood by Automated count",
         "definition": "Monocytes/​100 leukocytes in Blood by Automated count",
@@ -2246,7 +2246,7 @@
         "sliceName": "obf-lab-Monocytes100WBCNFrPtBldQnAutoCntLabObs"
       },
       {
-        "id": "DiagnosticReport:obf-lab-CBCWAutoDifferentialPanel.result:obf-lab-Eosinophils100WBCNFrPtBldQnAutoCntLabObs",
+        "id": "DiagnosticReport.result:obf-lab-Eosinophils100WBCNFrPtBldQnAutoCntLabObs",
         "path": "DiagnosticReport.result",
         "short": "Eosinophils100WBCNFrPtBldQnAutoCntLabObs: Eosinophils/​100 leukocytes in Blood by Automated count",
         "definition": "Eosinophils/​100 leukocytes in Blood by Automated count",
@@ -2301,7 +2301,7 @@
         "sliceName": "obf-lab-Eosinophils100WBCNFrPtBldQnAutoCntLabObs"
       },
       {
-        "id": "DiagnosticReport:obf-lab-CBCWAutoDifferentialPanel.result:obf-lab-Basophils100WBCNFrPtBldQnAutoCntLabObs",
+        "id": "DiagnosticReport.result:obf-lab-Basophils100WBCNFrPtBldQnAutoCntLabObs",
         "path": "DiagnosticReport.result",
         "short": "Basophils100WBCNFrPtBldQnAutoCntLabObs: Basophils/​100 leukocytes in Blood by Automated count",
         "definition": "Basophils/​100 leukocytes in Blood by Automated count",
@@ -2356,7 +2356,7 @@
         "sliceName": "obf-lab-Basophils100WBCNFrPtBldQnAutoCntLabObs"
       },
       {
-        "id": "DiagnosticReport:obf-lab-CBCWAutoDifferentialPanel.result:obf-lab-LymphocytesNCncPtBldQnAutoCntLabObs",
+        "id": "DiagnosticReport.result:obf-lab-LymphocytesNCncPtBldQnAutoCntLabObs",
         "path": "DiagnosticReport.result",
         "short": "LymphocytesNCncPtBldQnAutoCntLabObs: Lymphocytes [#/​volume] in Blood by Automated count",
         "definition": "Lymphocytes [#/​volume] in Blood by Automated count",
@@ -2411,7 +2411,7 @@
         "sliceName": "obf-lab-LymphocytesNCncPtBldQnAutoCntLabObs"
       },
       {
-        "id": "DiagnosticReport:obf-lab-CBCWAutoDifferentialPanel.result:obf-lab-MonocytesNCncPtBldQnAutoCntLabObs",
+        "id": "DiagnosticReport.result:obf-lab-MonocytesNCncPtBldQnAutoCntLabObs",
         "path": "DiagnosticReport.result",
         "short": "MonocytesNCncPtBldQnAutoCntLabObs: Monocytes [#/​volume] in Blood by Automated count",
         "definition": "Monocytes [#/​volume] in Blood by Automated count",
@@ -2466,7 +2466,7 @@
         "sliceName": "obf-lab-MonocytesNCncPtBldQnAutoCntLabObs"
       },
       {
-        "id": "DiagnosticReport:obf-lab-CBCWAutoDifferentialPanel.result:obf-lab-EosinophilsNCncPtBldQnAutoCntLabObs",
+        "id": "DiagnosticReport.result:obf-lab-EosinophilsNCncPtBldQnAutoCntLabObs",
         "path": "DiagnosticReport.result",
         "short": "EosinophilsNCncPtBldQnAutoCntLabObs: Eosinophils [#/​volume] in Blood by Automated count",
         "definition": "Eosinophils [#/​volume] in Blood by Automated count",
@@ -2521,7 +2521,7 @@
         "sliceName": "obf-lab-EosinophilsNCncPtBldQnAutoCntLabObs"
       },
       {
-        "id": "DiagnosticReport:obf-lab-CBCWAutoDifferentialPanel.result:obf-lab-BasophilsNCncPtBldQnAutoCntLabObs",
+        "id": "DiagnosticReport.result:obf-lab-BasophilsNCncPtBldQnAutoCntLabObs",
         "path": "DiagnosticReport.result",
         "short": "BasophilsNCncPtBldQnAutoCntLabObs: Basophils [#/​volume] in Blood by Automated count",
         "definition": "Basophils [#/​volume] in Blood by Automated count",
@@ -2576,7 +2576,7 @@
         "sliceName": "obf-lab-BasophilsNCncPtBldQnAutoCntLabObs"
       },
       {
-        "id": "DiagnosticReport:obf-lab-CBCWAutoDifferentialPanel.result:obf-lab-NeutrophilsBandForm100WBCNFrPtBldQnManCntLabObs",
+        "id": "DiagnosticReport.result:obf-lab-NeutrophilsBandForm100WBCNFrPtBldQnManCntLabObs",
         "path": "DiagnosticReport.result",
         "short": "NeutrophilsBandForm100WBCNFrPtBldQnManCntLabObs: Band form neutrophils/100 leukocytes in Blood by Manual count",
         "definition": "Band form neutrophils/100 leukocytes in Blood by Manual count",
@@ -2631,7 +2631,7 @@
         "sliceName": "obf-lab-NeutrophilsBandForm100WBCNFrPtBldQnManCntLabObs"
       },
       {
-        "id": "DiagnosticReport:obf-lab-CBCWAutoDifferentialPanel.result:obf-lab-Metamyelocytes100WBCNFrPtBldQnManCntLabObs",
+        "id": "DiagnosticReport.result:obf-lab-Metamyelocytes100WBCNFrPtBldQnManCntLabObs",
         "path": "DiagnosticReport.result",
         "short": "Metamyelocytes100WBCNFrPtBldQnManCntLabObs: Metamyelocytes/100 leukocytes in Blood by Manual count",
         "definition": "Metamyelocytes/100 leukocytes in Blood by Manual count",
@@ -2686,7 +2686,7 @@
         "sliceName": "obf-lab-Metamyelocytes100WBCNFrPtBldQnManCntLabObs"
       },
       {
-        "id": "DiagnosticReport:obf-lab-CBCWAutoDifferentialPanel.result:obf-lab-Myelocytes100WBCNFrPtBldQnManCntLabObs",
+        "id": "DiagnosticReport.result:obf-lab-Myelocytes100WBCNFrPtBldQnManCntLabObs",
         "path": "DiagnosticReport.result",
         "short": "Myelocytes100WBCNFrPtBldQnManCntLabObs: Myelocytes/100 leukocytes in Blood by Manual count",
         "definition": "Myelocytes/100 leukocytes in Blood by Manual count",
@@ -2741,7 +2741,7 @@
         "sliceName": "obf-lab-Myelocytes100WBCNFrPtBldQnManCntLabObs"
       },
       {
-        "id": "DiagnosticReport:obf-lab-CBCWAutoDifferentialPanel.result:obf-lab-Promyelocytes100WBCNFrPtBldQnManCntLabObs",
+        "id": "DiagnosticReport.result:obf-lab-Promyelocytes100WBCNFrPtBldQnManCntLabObs",
         "path": "DiagnosticReport.result",
         "short": "Promyelocytes100WBCNFrPtBldQnManCntLabObs: Promyelocytes/100 leukocytes in Blood by Manual count",
         "definition": "Promyelocytes/100 leukocytes in Blood by Manual count",
@@ -2796,7 +2796,7 @@
         "sliceName": "obf-lab-Promyelocytes100WBCNFrPtBldQnManCntLabObs"
       },
       {
-        "id": "DiagnosticReport:obf-lab-CBCWAutoDifferentialPanel.result:obf-lab-PromyelocytesNCncPtBldQnLabObs",
+        "id": "DiagnosticReport.result:obf-lab-PromyelocytesNCncPtBldQnLabObs",
         "path": "DiagnosticReport.result",
         "short": "PromyelocytesNCncPtBldQnLabObs: Promyelocytes [#/volume] in Blood",
         "definition": "Promyelocytes [#/volume] in Blood",
@@ -2851,7 +2851,7 @@
         "sliceName": "obf-lab-PromyelocytesNCncPtBldQnLabObs"
       },
       {
-        "id": "DiagnosticReport:obf-lab-CBCWAutoDifferentialPanel.result:obf-lab-LymphocytesVariant100WBCNFrPtBldQnLabObs",
+        "id": "DiagnosticReport.result:obf-lab-LymphocytesVariant100WBCNFrPtBldQnLabObs",
         "path": "DiagnosticReport.result",
         "short": "LymphocytesVariant100WBCNFrPtBldQnLabObs: Variant lymphocytes/100 leukocytes in Blood",
         "definition": "Variant lymphocytes/100 leukocytes in Blood",
@@ -2906,7 +2906,7 @@
         "sliceName": "obf-lab-LymphocytesVariant100WBCNFrPtBldQnLabObs"
       },
       {
-        "id": "DiagnosticReport:obf-lab-CBCWAutoDifferentialPanel.result:obf-lab-Blasts100WBCNFrPtBldQnManCntLabObs",
+        "id": "DiagnosticReport.result:obf-lab-Blasts100WBCNFrPtBldQnManCntLabObs",
         "path": "DiagnosticReport.result",
         "short": "Blasts100WBCNFrPtBldQnManCntLabObs: Blasts/100 leukocytes in Blood by Manual count",
         "definition": "Blasts/100 leukocytes in Blood by Manual count",
@@ -2961,7 +2961,7 @@
         "sliceName": "obf-lab-Blasts100WBCNFrPtBldQnManCntLabObs"
       },
       {
-        "id": "DiagnosticReport:obf-lab-CBCWAutoDifferentialPanel.result:obf-lab-BlastsNCncPtBldQnLabObs",
+        "id": "DiagnosticReport.result:obf-lab-BlastsNCncPtBldQnLabObs",
         "path": "DiagnosticReport.result",
         "short": "BlastsNCncPtBldQnLabObs: Blasts [#/volume] in Blood. Units not required by LOINC but are strongly recommended.",
         "definition": "Blasts [#/volume] in Blood. Units not required by LOINC but are strongly recommended.",
@@ -3016,7 +3016,7 @@
         "sliceName": "obf-lab-BlastsNCncPtBldQnLabObs"
       },
       {
-        "id": "DiagnosticReport:obf-lab-CBCWAutoDifferentialPanel.result:obf-lab-ErythrocytesNucleated100WBCRatioPtBldQnLabObs",
+        "id": "DiagnosticReport.result:obf-lab-ErythrocytesNucleated100WBCRatioPtBldQnLabObs",
         "path": "DiagnosticReport.result",
         "short": "ErythrocytesNucleated100WBCRatioPtBldQnLabObs: Nucleated erythrocytes/100 leukocytes [Ratio] in Blood.  Units are required.",
         "definition": "Nucleated erythrocytes/100 leukocytes [Ratio] in Blood.  Units are required.",
@@ -3071,7 +3071,7 @@
         "sliceName": "obf-lab-ErythrocytesNucleated100WBCRatioPtBldQnLabObs"
       },
       {
-        "id": "DiagnosticReport:obf-lab-CBCWAutoDifferentialPanel.result:obf-lab-ErythrocytesNucleatedNCncPtBldQnLabObs",
+        "id": "DiagnosticReport.result:obf-lab-ErythrocytesNucleatedNCncPtBldQnLabObs",
         "path": "DiagnosticReport.result",
         "short": "ErythrocytesNucleatedNCncPtBldQnLabObs: Nucleated erythrocytes [#/volume] in Blood. Units not required by LOINC but are strongly recommended.",
         "definition": "Nucleated erythrocytes [#/volume] in Blood. Units not required by LOINC but are strongly recommended.",
@@ -3126,7 +3126,7 @@
         "sliceName": "obf-lab-ErythrocytesNucleatedNCncPtBldQnLabObs"
       },
       {
-        "id": "DiagnosticReport:obf-lab-CBCWAutoDifferentialPanel.result:obf-lab-PlateletMeanVolumeEntVolPtBldQnReesEckerLabObs",
+        "id": "DiagnosticReport.result:obf-lab-PlateletMeanVolumeEntVolPtBldQnReesEckerLabObs",
         "path": "DiagnosticReport.result",
         "short": "PlateletMeanVolumeEntVolPtBldQnReesEckerLabObs: Platelet mean volume [Entitic volume] in Blood by Rees-Ecker",
         "definition": "Platelet mean volume [Entitic volume] in Blood by Rees-Ecker.",
@@ -3181,7 +3181,7 @@
         "sliceName": "obf-lab-PlateletMeanVolumeEntVolPtBldQnReesEckerLabObs"
       },
       {
-        "id": "DiagnosticReport:obf-lab-CBCWAutoDifferentialPanel.result:obf-lab-MyelocytesNCncPtBldQnLabObs",
+        "id": "DiagnosticReport.result:obf-lab-MyelocytesNCncPtBldQnLabObs",
         "path": "DiagnosticReport.result",
         "short": "MyelocytesNCncPtBldQnLabObs: Myelocytes [#/volume] in Blood. Units not required by LOINC but are strongly recommended.",
         "definition": "Myelocytes [#/volume] in Blood. Units not required by LOINC but are strongly recommended.",
@@ -3236,7 +3236,7 @@
         "sliceName": "obf-lab-MyelocytesNCncPtBldQnLabObs"
       },
       {
-        "id": "DiagnosticReport:obf-lab-CBCWAutoDifferentialPanel.result:obf-lab-MetamyelocytesNCncPtBldQnLabObs",
+        "id": "DiagnosticReport.result:obf-lab-MetamyelocytesNCncPtBldQnLabObs",
         "path": "DiagnosticReport.result",
         "short": "MetamyelocytesNCncPtBldQnLabObs: Metamyelocytes [#/volume] in Blood",
         "definition": "Metamyelocytes [#/volume] in Blood",
@@ -3291,7 +3291,7 @@
         "sliceName": "obf-lab-MetamyelocytesNCncPtBldQnLabObs"
       },
       {
-        "id": "DiagnosticReport:obf-lab-CBCWAutoDifferentialPanel.result:obf-lab-NeutrophilsBandFormNCncPtBldQnLabObs",
+        "id": "DiagnosticReport.result:obf-lab-NeutrophilsBandFormNCncPtBldQnLabObs",
         "path": "DiagnosticReport.result",
         "short": "NeutrophilsBandFormNCncPtBldQnLabObs: Band form neutrophils [#/volume] in Blood",
         "definition": "Band form neutrophils [#/volume] in Blood",
@@ -3346,7 +3346,7 @@
         "sliceName": "obf-lab-NeutrophilsBandFormNCncPtBldQnLabObs"
       },
       {
-        "id": "DiagnosticReport:obf-lab-CBCWAutoDifferentialPanel.result:obf-lab-GranulocytesImmature100WBCNFrPtBldQnAutoCntLabObs",
+        "id": "DiagnosticReport.result:obf-lab-GranulocytesImmature100WBCNFrPtBldQnAutoCntLabObs",
         "path": "DiagnosticReport.result",
         "short": "GranulocytesImmature100WBCNFrPtBldQnAutoCntLabObs: Immature granulocytes/100 leukocytes in Blood by Automated count. LOINC does not specify that units are required.",
         "definition": "Immature granulocytes/100 leukocytes in Blood by Automated count. LOINC does not specify that units are required.",
@@ -3401,7 +3401,7 @@
         "sliceName": "obf-lab-GranulocytesImmature100WBCNFrPtBldQnAutoCntLabObs"
       },
       {
-        "id": "DiagnosticReport:obf-lab-CBCWAutoDifferentialPanel.result:obf-lab-GranulocytesImmatureNCncPtBldQnAutoCntLabObs",
+        "id": "DiagnosticReport.result:obf-lab-GranulocytesImmatureNCncPtBldQnAutoCntLabObs",
         "path": "DiagnosticReport.result",
         "short": "GranulocytesImmatureNCncPtBldQnAutoCntLabObs: Immature granulocytes [#/volume] in Blood by Automated count. Units are not required",
         "definition": "Immature granulocytes [#/volume] in Blood by Automated count. Units are not required",
@@ -3456,7 +3456,7 @@
         "sliceName": "obf-lab-GranulocytesImmatureNCncPtBldQnAutoCntLabObs"
       },
       {
-        "id": "DiagnosticReport:obf-lab-CBCWAutoDifferentialPanel.result:obf-lab-ErythrocytesNucleated100WBCRatioPtBldQnAutoCntLabObs",
+        "id": "DiagnosticReport.result:obf-lab-ErythrocytesNucleated100WBCRatioPtBldQnAutoCntLabObs",
         "path": "DiagnosticReport.result",
         "short": "ErythrocytesNucleated100WBCRatioPtBldQnAutoCntLabObs: Nucleated erythrocytes/100 leukocytes [Ratio] in Blood by Automated count. Units not required by LOINC but are strongly recommended.",
         "definition": "Nucleated erythrocytes/100 leukocytes [Ratio] in Blood by Automated count. Units not required by LOINC but are strongly recommended.",
@@ -3511,7 +3511,7 @@
         "sliceName": "obf-lab-ErythrocytesNucleated100WBCRatioPtBldQnAutoCntLabObs"
       },
       {
-        "id": "DiagnosticReport:obf-lab-CBCWAutoDifferentialPanel.result:obf-lab-MorphologyImpPtBldNarLabObs",
+        "id": "DiagnosticReport.result:obf-lab-MorphologyImpPtBldNarLabObs",
         "path": "DiagnosticReport.result",
         "short": "MorphologyImpPtBldNarLabObs: Morphology [Interpretation] in Blood Narrative",
         "definition": "Morphology [Interpretation] in Blood Narrative.",
@@ -3566,7 +3566,7 @@
         "sliceName": "obf-lab-MorphologyImpPtBldNarLabObs"
       },
       {
-        "id": "DiagnosticReport:obf-lab-CBCWAutoDifferentialPanel.result:obf-lab-ErythrocyteDistributionWidthEntVolPtRBCQnLabObs",
+        "id": "DiagnosticReport.result:obf-lab-ErythrocyteDistributionWidthEntVolPtRBCQnLabObs",
         "path": "DiagnosticReport.result",
         "short": "ErythrocyteDistributionWidthEntVolPtRBCQnLabObs: Erythrocyte distribution width [Entitic volume] by Automated count",
         "definition": "Erythrocyte distribution width [Entitic volume] by Automated count",
@@ -3621,7 +3621,7 @@
         "sliceName": "obf-lab-ErythrocyteDistributionWidthEntVolPtRBCQnLabObs"
       },
       {
-        "id": "DiagnosticReport:obf-lab-CBCWAutoDifferentialPanel.result:obf-lab-PlateletDistributionWidthEntVolPtBldQnAutoCntLabObs",
+        "id": "DiagnosticReport.result:obf-lab-PlateletDistributionWidthEntVolPtBldQnAutoCntLabObs",
         "path": "DiagnosticReport.result",
         "short": "PlateletDistributionWidthEntVolPtBldQnAutoCntLabObs: Platelet distribution width [Entitic volume] in Blood by Automated count. Units not required by LOINC but are strongly recommended.",
         "definition": "Platelet distribution width [Entitic volume] in Blood by Automated count. Units not required by LOINC but are strongly recommended.",
@@ -3676,7 +3676,7 @@
         "sliceName": "obf-lab-PlateletDistributionWidthEntVolPtBldQnAutoCntLabObs"
       },
       {
-        "id": "DiagnosticReport:obf-lab-CBCWAutoDifferentialPanel.result:obf-lab-PlateletMeanVolumeEntVolPtBldQnAutoCntLabObs",
+        "id": "DiagnosticReport.result:obf-lab-PlateletMeanVolumeEntVolPtBldQnAutoCntLabObs",
         "path": "DiagnosticReport.result",
         "short": "PlateletMeanVolumeEntVolPtBldQnAutoCntLabObs: Platelet mean volume [Entitic volume] in Blood by Automated count. Units not required by LOINC but are strongly recommended.",
         "definition": "Platelet mean volume [Entitic volume] in Blood by Automated count. Units not required by LOINC but are strongly recommended.",
@@ -3731,7 +3731,7 @@
         "sliceName": "obf-lab-PlateletMeanVolumeEntVolPtBldQnAutoCntLabObs"
       },
       {
-        "id": "DiagnosticReport:obf-lab-CBCWAutoDifferentialPanel.result:obf-lab-NeutrophilsBandForm100WBCNFrPtBldQnAutoCntLabObs",
+        "id": "DiagnosticReport.result:obf-lab-NeutrophilsBandForm100WBCNFrPtBldQnAutoCntLabObs",
         "path": "DiagnosticReport.result",
         "short": "NeutrophilsBandForm100WBCNFrPtBldQnAutoCntLabObs: Band form neutrophils/​100 leukocytes in Blood by Automated count. Units not required by LOINC but are strongly recommended.",
         "definition": "Band form neutrophils/​100 leukocytes in Blood by Automated count. Units not required by LOINC but are strongly recommended.",
@@ -3786,7 +3786,7 @@
         "sliceName": "obf-lab-NeutrophilsBandForm100WBCNFrPtBldQnAutoCntLabObs"
       },
       {
-        "id": "DiagnosticReport:obf-lab-CBCWAutoDifferentialPanel.result:obf-lab-Granulocytes100WBCNFrPtBldQnAutoCntLabObs",
+        "id": "DiagnosticReport.result:obf-lab-Granulocytes100WBCNFrPtBldQnAutoCntLabObs",
         "path": "DiagnosticReport.result",
         "short": "Granulocytes100WBCNFrPtBldQnAutoCntLabObs: Granulocytes/​100 leukocytes in Blood by Automated count",
         "definition": "Granulocytes/​100 leukocytes in Blood by Automated count",
@@ -3841,7 +3841,7 @@
         "sliceName": "obf-lab-Granulocytes100WBCNFrPtBldQnAutoCntLabObs"
       },
       {
-        "id": "DiagnosticReport:obf-lab-CBCWAutoDifferentialPanel.result:obf-lab-LymphocytesVariant100WBCNFrPtBldQnAutoCntLabObs",
+        "id": "DiagnosticReport.result:obf-lab-LymphocytesVariant100WBCNFrPtBldQnAutoCntLabObs",
         "path": "DiagnosticReport.result",
         "short": "LymphocytesVariant100WBCNFrPtBldQnAutoCntLabObs: Variant lymphocytes/​100 leukocytes in Blood by Automated count. Units not required by LOINC but are strongly recommended.",
         "definition": "Variant lymphocytes/​100 leukocytes in Blood by Automated count. Units not required by LOINC but are strongly recommended.",
@@ -3896,7 +3896,7 @@
         "sliceName": "obf-lab-LymphocytesVariant100WBCNFrPtBldQnAutoCntLabObs"
       },
       {
-        "id": "DiagnosticReport:obf-lab-CBCWAutoDifferentialPanel.result:obf-lab-OtherCells100WBCNFrPtBldQnAutoCntLabObs",
+        "id": "DiagnosticReport.result:obf-lab-OtherCells100WBCNFrPtBldQnAutoCntLabObs",
         "path": "DiagnosticReport.result",
         "short": "OtherCells100WBCNFrPtBldQnAutoCntLabObs: Other cells/​100 leukocytes in Blood by Automated count. Units not required by LOINC but are strongly recommended.",
         "definition": "Other cells/​100 leukocytes in Blood by Automated count. Units not required by LOINC but are strongly recommended.",
@@ -3951,7 +3951,7 @@
         "sliceName": "obf-lab-OtherCells100WBCNFrPtBldQnAutoCntLabObs"
       },
       {
-        "id": "DiagnosticReport:obf-lab-CBCWAutoDifferentialPanel.result:obf-lab-NeutrophilsBandFormNCncPtBldQnAutoCntLabObs",
+        "id": "DiagnosticReport.result:obf-lab-NeutrophilsBandFormNCncPtBldQnAutoCntLabObs",
         "path": "DiagnosticReport.result",
         "short": "NeutrophilsBandFormNCncPtBldQnAutoCntLabObs: Band form neutrophils [#/​volume] in Blood by Automated count",
         "definition": "Band form neutrophils [#/​volume] in Blood by Automated count",
@@ -4006,7 +4006,7 @@
         "sliceName": "obf-lab-NeutrophilsBandFormNCncPtBldQnAutoCntLabObs"
       },
       {
-        "id": "DiagnosticReport:obf-lab-CBCWAutoDifferentialPanel.result:obf-lab-LymphocytesVariantNCncPtBldQnAutoCntLabObs",
+        "id": "DiagnosticReport.result:obf-lab-LymphocytesVariantNCncPtBldQnAutoCntLabObs",
         "path": "DiagnosticReport.result",
         "short": "LymphocytesVariantNCncPtBldQnAutoCntLabObs: Variant lymphocytes [#/​volume] in Blood by Automated count. Units not required by LOINC but are strongly recommended.",
         "definition": "Variant lymphocytes [#/​volume] in Blood by Automated count. Units not required by LOINC but are strongly recommended.",
@@ -4061,7 +4061,7 @@
         "sliceName": "obf-lab-LymphocytesVariantNCncPtBldQnAutoCntLabObs"
       },
       {
-        "id": "DiagnosticReport:obf-lab-CBCWAutoDifferentialPanel.result:obf-lab-LeukocytesOtherNCncPtBldQnAutoCntLabObs",
+        "id": "DiagnosticReport.result:obf-lab-LeukocytesOtherNCncPtBldQnAutoCntLabObs",
         "path": "DiagnosticReport.result",
         "short": "LeukocytesOtherNCncPtBldQnAutoCntLabObs: Leukocytes other [#/​volume] in Blood by Automated count. Units not required by LOINC but are strongly recommended.",
         "definition": "Leukocytes other [#/​volume] in Blood by Automated count. Units not required by LOINC but are strongly recommended.",
@@ -4116,7 +4116,7 @@
         "sliceName": "obf-lab-LeukocytesOtherNCncPtBldQnAutoCntLabObs"
       },
       {
-        "id": "DiagnosticReport:obf-lab-CBCWAutoDifferentialPanel.result:obf-lab-OtherCellsNCncPtBldQnAutoCntLabObs",
+        "id": "DiagnosticReport.result:obf-lab-OtherCellsNCncPtBldQnAutoCntLabObs",
         "path": "DiagnosticReport.result",
         "short": "OtherCellsNCncPtBldQnAutoCntLabObs: Other cells [#/​volume] in Blood by Automated count. Units not required by LOINC but are strongly recommended.",
         "definition": "Other cells [#/​volume] in Blood by Automated count. Units not required by LOINC but are strongly recommended.",
@@ -4171,7 +4171,7 @@
         "sliceName": "obf-lab-OtherCellsNCncPtBldQnAutoCntLabObs"
       },
       {
-        "id": "DiagnosticReport:obf-lab-CBCWAutoDifferentialPanel.imagingStudy",
+        "id": "DiagnosticReport.imagingStudy",
         "path": "DiagnosticReport.imagingStudy",
         "short": "Reference to full details of imaging associated with the diagnostic report",
         "definition": "One or more links to full details of any imaging performed during the diagnostic investigation. Typically, this is imaging performed by DICOM enabled modalities, but this is not required. A fully enabled PACS viewer can use this information to provide views of the source images.",
@@ -4201,7 +4201,7 @@
         ]
       },
       {
-        "id": "DiagnosticReport:obf-lab-CBCWAutoDifferentialPanel.media",
+        "id": "DiagnosticReport.media",
         "path": "DiagnosticReport.media",
         "short": "Key images associated with this report",
         "definition": "A list of key images associated with this report. The images are generally created during the diagnostic process, and may be directly of the patient, or of treated specimens (i.e. slides of interest).",
@@ -4248,7 +4248,7 @@
         ]
       },
       {
-        "id": "DiagnosticReport:obf-lab-CBCWAutoDifferentialPanel.media.id",
+        "id": "DiagnosticReport.media.id",
         "path": "DiagnosticReport.media.id",
         "representation": [
           "xmlAttr"
@@ -4277,7 +4277,7 @@
         ]
       },
       {
-        "id": "DiagnosticReport:obf-lab-CBCWAutoDifferentialPanel.media.extension",
+        "id": "DiagnosticReport.media.extension",
         "path": "DiagnosticReport.media.extension",
         "short": "Additional content defined by implementations",
         "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
@@ -4308,7 +4308,7 @@
         ]
       },
       {
-        "id": "DiagnosticReport:obf-lab-CBCWAutoDifferentialPanel.media.modifierExtension",
+        "id": "DiagnosticReport.media.modifierExtension",
         "path": "DiagnosticReport.media.modifierExtension",
         "short": "Extensions that cannot be ignored even if unrecognized",
         "definition": "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
@@ -4342,7 +4342,7 @@
         ]
       },
       {
-        "id": "DiagnosticReport:obf-lab-CBCWAutoDifferentialPanel.media.comment",
+        "id": "DiagnosticReport.media.comment",
         "path": "DiagnosticReport.media.comment",
         "short": "Comment about the image (e.g. explanation)",
         "definition": "A comment about the image. Typically, this is used to provide an explanation for why the image is included, or to draw the viewer's attention to important features.",
@@ -4370,7 +4370,7 @@
         ]
       },
       {
-        "id": "DiagnosticReport:obf-lab-CBCWAutoDifferentialPanel.media.link",
+        "id": "DiagnosticReport.media.link",
         "path": "DiagnosticReport.media.link",
         "short": "Reference to the image source",
         "definition": "Reference to the image source.",
@@ -4399,7 +4399,7 @@
         ]
       },
       {
-        "id": "DiagnosticReport:obf-lab-CBCWAutoDifferentialPanel.conclusion",
+        "id": "DiagnosticReport.conclusion",
         "path": "DiagnosticReport.conclusion",
         "short": "Clinical conclusion (interpretation) of test results",
         "definition": "Concise and clinically contextualized summary conclusion (interpretation/impression) of the diagnostic report.",
@@ -4433,7 +4433,7 @@
         ]
       },
       {
-        "id": "DiagnosticReport:obf-lab-CBCWAutoDifferentialPanel.conclusionCode",
+        "id": "DiagnosticReport.conclusionCode",
         "path": "DiagnosticReport.conclusionCode",
         "short": "Codes for the clinical conclusion of test results",
         "definition": "One or more codes that represent the summary conclusion (interpretation/impression) of the diagnostic report.",
@@ -4474,7 +4474,7 @@
         ]
       },
       {
-        "id": "DiagnosticReport:obf-lab-CBCWAutoDifferentialPanel.presentedForm",
+        "id": "DiagnosticReport.presentedForm",
         "path": "DiagnosticReport.presentedForm",
         "short": "Entire report as issued",
         "definition": "Rich text representation of the entire result as issued by the diagnostic service. Multiple formats are allowed but they SHALL be semantically equivalent.",
@@ -4520,7 +4520,7 @@
   "differential": {
     "element": [
       {
-        "id": "DiagnosticReport:obf-lab-CBCWAutoDifferentialPanel",
+        "id": "DiagnosticReport",
         "path": "DiagnosticReport",
         "short": "obf-lab-CBCWAutoDifferentialPanel",
         "definition": "Complete blood count (CBC) with auto differential panel. Includes various measures of red blood cells, platelets, and various types of white blood cells and other related measures, such as hemoglobin. The components of this panel are not entirely standardized, so the definition of the CBC includes tests that are optional, or performed by certain laboratories but not others. Instances typically will include a subset of the listed panel members.",
@@ -4529,7 +4529,7 @@
         "isSummary": false
       },
       {
-        "id": "DiagnosticReport:obf-lab-CBCWAutoDifferentialPanel.basedOn",
+        "id": "DiagnosticReport.basedOn",
         "path": "DiagnosticReport.basedOn",
         "type": [
           {
@@ -4542,17 +4542,17 @@
         ]
       },
       {
-        "id": "DiagnosticReport:obf-lab-CBCWAutoDifferentialPanel.category",
+        "id": "DiagnosticReport.category",
         "path": "DiagnosticReport.category",
         "min": 1,
         "max": "1"
       },
       {
-        "id": "DiagnosticReport:obf-lab-CBCWAutoDifferentialPanel.code",
+        "id": "DiagnosticReport.code",
         "path": "DiagnosticReport.code"
       },
       {
-        "id": "DiagnosticReport:obf-lab-CBCWAutoDifferentialPanel.code.coding",
+        "id": "DiagnosticReport.code.coding",
         "path": "DiagnosticReport.code.coding",
         "slicing": {
           "id": "1",
@@ -4569,7 +4569,7 @@
         "max": "*"
       },
       {
-        "id": "DiagnosticReport:obf-lab-CBCWAutoDifferentialPanel.code.coding:Fixed_57021-8",
+        "id": "DiagnosticReport.code.coding:Fixed_57021-8",
         "path": "DiagnosticReport.code.coding",
         "sliceName": "Fixed_57021-8",
         "short": "CBC W Auto Differential panel - Blood",
@@ -4589,17 +4589,17 @@
         "isSummary": true
       },
       {
-        "id": "DiagnosticReport:obf-lab-CBCWAutoDifferentialPanel.code.coding:Fixed_57021-8.system",
+        "id": "DiagnosticReport.code.coding:Fixed_57021-8.system",
         "path": "DiagnosticReport.code.coding.system",
         "fixedUri": "http://loinc.org"
       },
       {
-        "id": "DiagnosticReport:obf-lab-CBCWAutoDifferentialPanel.code.coding:Fixed_57021-8.code",
+        "id": "DiagnosticReport.code.coding:Fixed_57021-8.code",
         "path": "DiagnosticReport.code.coding.code",
         "fixedCode": "57021-8"
       },
       {
-        "id": "DiagnosticReport:obf-lab-CBCWAutoDifferentialPanel.subject",
+        "id": "DiagnosticReport.subject",
         "path": "DiagnosticReport.subject",
         "type": [
           {
@@ -4613,7 +4613,7 @@
         "definition": "The subject of an observation."
       },
       {
-        "id": "DiagnosticReport:obf-lab-CBCWAutoDifferentialPanel.encounter",
+        "id": "DiagnosticReport.encounter",
         "path": "DiagnosticReport.encounter",
         "type": [
           {
@@ -4625,7 +4625,7 @@
         ]
       },
       {
-        "id": "DiagnosticReport:obf-lab-CBCWAutoDifferentialPanel.performer",
+        "id": "DiagnosticReport.performer",
         "path": "DiagnosticReport.performer",
         "min": 0,
         "max": "1",
@@ -4640,7 +4640,7 @@
         ]
       },
       {
-        "id": "DiagnosticReport:obf-lab-CBCWAutoDifferentialPanel.resultsInterpreter",
+        "id": "DiagnosticReport.resultsInterpreter",
         "path": "DiagnosticReport.resultsInterpreter",
         "min": 0,
         "max": "1",
@@ -4655,7 +4655,7 @@
         ]
       },
       {
-        "id": "DiagnosticReport:obf-lab-CBCWAutoDifferentialPanel.result",
+        "id": "DiagnosticReport.result",
         "path": "DiagnosticReport.result",
         "type": [
           {
@@ -4680,7 +4680,7 @@
         }
       },
       {
-        "id": "DiagnosticReport:obf-lab-CBCWAutoDifferentialPanel.result:obf-lab-LeukocytesNCncPtBldQnAutoCntLabObs",
+        "id": "DiagnosticReport.result:obf-lab-LeukocytesNCncPtBldQnAutoCntLabObs",
         "path": "DiagnosticReport.result",
         "type": [
           {
@@ -4697,7 +4697,7 @@
         "max": "1"
       },
       {
-        "id": "DiagnosticReport:obf-lab-CBCWAutoDifferentialPanel.result:obf-lab-ErythrocytesNCncPtBldQnAutoCntLabObs",
+        "id": "DiagnosticReport.result:obf-lab-ErythrocytesNCncPtBldQnAutoCntLabObs",
         "path": "DiagnosticReport.result",
         "type": [
           {
@@ -4714,7 +4714,7 @@
         "max": "1"
       },
       {
-        "id": "DiagnosticReport:obf-lab-CBCWAutoDifferentialPanel.result:obf-lab-HemoglobinMCncPtBldQnLabObs",
+        "id": "DiagnosticReport.result:obf-lab-HemoglobinMCncPtBldQnLabObs",
         "path": "DiagnosticReport.result",
         "type": [
           {
@@ -4731,7 +4731,7 @@
         "max": "1"
       },
       {
-        "id": "DiagnosticReport:obf-lab-CBCWAutoDifferentialPanel.result:obf-lab-HematocritVFrPtBldQnAutoCntLabObs",
+        "id": "DiagnosticReport.result:obf-lab-HematocritVFrPtBldQnAutoCntLabObs",
         "path": "DiagnosticReport.result",
         "type": [
           {
@@ -4748,7 +4748,7 @@
         "max": "1"
       },
       {
-        "id": "DiagnosticReport:obf-lab-CBCWAutoDifferentialPanel.result:obf-lab-MeanCorpuscularVolumeEntVolPtRBCQnAutoCntLabObs",
+        "id": "DiagnosticReport.result:obf-lab-MeanCorpuscularVolumeEntVolPtRBCQnAutoCntLabObs",
         "path": "DiagnosticReport.result",
         "type": [
           {
@@ -4765,7 +4765,7 @@
         "max": "1"
       },
       {
-        "id": "DiagnosticReport:obf-lab-CBCWAutoDifferentialPanel.result:obf-lab-ErythrocyteMCHEntMassPtRBCQnAutoCntLabObs",
+        "id": "DiagnosticReport.result:obf-lab-ErythrocyteMCHEntMassPtRBCQnAutoCntLabObs",
         "path": "DiagnosticReport.result",
         "type": [
           {
@@ -4782,7 +4782,7 @@
         "max": "1"
       },
       {
-        "id": "DiagnosticReport:obf-lab-CBCWAutoDifferentialPanel.result:obf-lab-ErythrocyteMCHCMCncPtRBCQnAutoCntLabObs",
+        "id": "DiagnosticReport.result:obf-lab-ErythrocyteMCHCMCncPtRBCQnAutoCntLabObs",
         "path": "DiagnosticReport.result",
         "type": [
           {
@@ -4799,7 +4799,7 @@
         "max": "1"
       },
       {
-        "id": "DiagnosticReport:obf-lab-CBCWAutoDifferentialPanel.result:obf-lab-PlateletsNCncPtBldQnAutoCntLabObs",
+        "id": "DiagnosticReport.result:obf-lab-PlateletsNCncPtBldQnAutoCntLabObs",
         "path": "DiagnosticReport.result",
         "type": [
           {
@@ -4816,7 +4816,7 @@
         "max": "1"
       },
       {
-        "id": "DiagnosticReport:obf-lab-CBCWAutoDifferentialPanel.result:obf-lab-Neutrophils100WBCNFrPtBldQnAutoCntLabObs",
+        "id": "DiagnosticReport.result:obf-lab-Neutrophils100WBCNFrPtBldQnAutoCntLabObs",
         "path": "DiagnosticReport.result",
         "type": [
           {
@@ -4833,7 +4833,7 @@
         "max": "1"
       },
       {
-        "id": "DiagnosticReport:obf-lab-CBCWAutoDifferentialPanel.result:obf-lab-NeutrophilsNCncPtBldQnAutoCntLabObs",
+        "id": "DiagnosticReport.result:obf-lab-NeutrophilsNCncPtBldQnAutoCntLabObs",
         "path": "DiagnosticReport.result",
         "type": [
           {
@@ -4850,7 +4850,7 @@
         "max": "1"
       },
       {
-        "id": "DiagnosticReport:obf-lab-CBCWAutoDifferentialPanel.result:obf-lab-ErythrocyteDistributionWidthRatioPtRBCQnAutoCntLabObs",
+        "id": "DiagnosticReport.result:obf-lab-ErythrocyteDistributionWidthRatioPtRBCQnAutoCntLabObs",
         "path": "DiagnosticReport.result",
         "type": [
           {
@@ -4867,7 +4867,7 @@
         "max": "1"
       },
       {
-        "id": "DiagnosticReport:obf-lab-CBCWAutoDifferentialPanel.result:obf-lab-Lymphocytes100WBCNFrPtBldQnAutoCntLabObs",
+        "id": "DiagnosticReport.result:obf-lab-Lymphocytes100WBCNFrPtBldQnAutoCntLabObs",
         "path": "DiagnosticReport.result",
         "type": [
           {
@@ -4884,7 +4884,7 @@
         "max": "1"
       },
       {
-        "id": "DiagnosticReport:obf-lab-CBCWAutoDifferentialPanel.result:obf-lab-Monocytes100WBCNFrPtBldQnAutoCntLabObs",
+        "id": "DiagnosticReport.result:obf-lab-Monocytes100WBCNFrPtBldQnAutoCntLabObs",
         "path": "DiagnosticReport.result",
         "type": [
           {
@@ -4901,7 +4901,7 @@
         "max": "1"
       },
       {
-        "id": "DiagnosticReport:obf-lab-CBCWAutoDifferentialPanel.result:obf-lab-Eosinophils100WBCNFrPtBldQnAutoCntLabObs",
+        "id": "DiagnosticReport.result:obf-lab-Eosinophils100WBCNFrPtBldQnAutoCntLabObs",
         "path": "DiagnosticReport.result",
         "type": [
           {
@@ -4918,7 +4918,7 @@
         "max": "1"
       },
       {
-        "id": "DiagnosticReport:obf-lab-CBCWAutoDifferentialPanel.result:obf-lab-Basophils100WBCNFrPtBldQnAutoCntLabObs",
+        "id": "DiagnosticReport.result:obf-lab-Basophils100WBCNFrPtBldQnAutoCntLabObs",
         "path": "DiagnosticReport.result",
         "type": [
           {
@@ -4935,7 +4935,7 @@
         "max": "1"
       },
       {
-        "id": "DiagnosticReport:obf-lab-CBCWAutoDifferentialPanel.result:obf-lab-LymphocytesNCncPtBldQnAutoCntLabObs",
+        "id": "DiagnosticReport.result:obf-lab-LymphocytesNCncPtBldQnAutoCntLabObs",
         "path": "DiagnosticReport.result",
         "type": [
           {
@@ -4952,7 +4952,7 @@
         "max": "1"
       },
       {
-        "id": "DiagnosticReport:obf-lab-CBCWAutoDifferentialPanel.result:obf-lab-MonocytesNCncPtBldQnAutoCntLabObs",
+        "id": "DiagnosticReport.result:obf-lab-MonocytesNCncPtBldQnAutoCntLabObs",
         "path": "DiagnosticReport.result",
         "type": [
           {
@@ -4969,7 +4969,7 @@
         "max": "1"
       },
       {
-        "id": "DiagnosticReport:obf-lab-CBCWAutoDifferentialPanel.result:obf-lab-EosinophilsNCncPtBldQnAutoCntLabObs",
+        "id": "DiagnosticReport.result:obf-lab-EosinophilsNCncPtBldQnAutoCntLabObs",
         "path": "DiagnosticReport.result",
         "type": [
           {
@@ -4986,7 +4986,7 @@
         "max": "1"
       },
       {
-        "id": "DiagnosticReport:obf-lab-CBCWAutoDifferentialPanel.result:obf-lab-BasophilsNCncPtBldQnAutoCntLabObs",
+        "id": "DiagnosticReport.result:obf-lab-BasophilsNCncPtBldQnAutoCntLabObs",
         "path": "DiagnosticReport.result",
         "type": [
           {
@@ -5003,7 +5003,7 @@
         "max": "1"
       },
       {
-        "id": "DiagnosticReport:obf-lab-CBCWAutoDifferentialPanel.result:obf-lab-NeutrophilsBandForm100WBCNFrPtBldQnManCntLabObs",
+        "id": "DiagnosticReport.result:obf-lab-NeutrophilsBandForm100WBCNFrPtBldQnManCntLabObs",
         "path": "DiagnosticReport.result",
         "type": [
           {
@@ -5020,7 +5020,7 @@
         "max": "1"
       },
       {
-        "id": "DiagnosticReport:obf-lab-CBCWAutoDifferentialPanel.result:obf-lab-Metamyelocytes100WBCNFrPtBldQnManCntLabObs",
+        "id": "DiagnosticReport.result:obf-lab-Metamyelocytes100WBCNFrPtBldQnManCntLabObs",
         "path": "DiagnosticReport.result",
         "type": [
           {
@@ -5037,7 +5037,7 @@
         "max": "1"
       },
       {
-        "id": "DiagnosticReport:obf-lab-CBCWAutoDifferentialPanel.result:obf-lab-Myelocytes100WBCNFrPtBldQnManCntLabObs",
+        "id": "DiagnosticReport.result:obf-lab-Myelocytes100WBCNFrPtBldQnManCntLabObs",
         "path": "DiagnosticReport.result",
         "type": [
           {
@@ -5054,7 +5054,7 @@
         "max": "1"
       },
       {
-        "id": "DiagnosticReport:obf-lab-CBCWAutoDifferentialPanel.result:obf-lab-Promyelocytes100WBCNFrPtBldQnManCntLabObs",
+        "id": "DiagnosticReport.result:obf-lab-Promyelocytes100WBCNFrPtBldQnManCntLabObs",
         "path": "DiagnosticReport.result",
         "type": [
           {
@@ -5071,7 +5071,7 @@
         "max": "1"
       },
       {
-        "id": "DiagnosticReport:obf-lab-CBCWAutoDifferentialPanel.result:obf-lab-PromyelocytesNCncPtBldQnLabObs",
+        "id": "DiagnosticReport.result:obf-lab-PromyelocytesNCncPtBldQnLabObs",
         "path": "DiagnosticReport.result",
         "type": [
           {
@@ -5088,7 +5088,7 @@
         "max": "1"
       },
       {
-        "id": "DiagnosticReport:obf-lab-CBCWAutoDifferentialPanel.result:obf-lab-LymphocytesVariant100WBCNFrPtBldQnLabObs",
+        "id": "DiagnosticReport.result:obf-lab-LymphocytesVariant100WBCNFrPtBldQnLabObs",
         "path": "DiagnosticReport.result",
         "type": [
           {
@@ -5105,7 +5105,7 @@
         "max": "1"
       },
       {
-        "id": "DiagnosticReport:obf-lab-CBCWAutoDifferentialPanel.result:obf-lab-Blasts100WBCNFrPtBldQnManCntLabObs",
+        "id": "DiagnosticReport.result:obf-lab-Blasts100WBCNFrPtBldQnManCntLabObs",
         "path": "DiagnosticReport.result",
         "type": [
           {
@@ -5122,7 +5122,7 @@
         "max": "1"
       },
       {
-        "id": "DiagnosticReport:obf-lab-CBCWAutoDifferentialPanel.result:obf-lab-BlastsNCncPtBldQnLabObs",
+        "id": "DiagnosticReport.result:obf-lab-BlastsNCncPtBldQnLabObs",
         "path": "DiagnosticReport.result",
         "type": [
           {
@@ -5139,7 +5139,7 @@
         "max": "1"
       },
       {
-        "id": "DiagnosticReport:obf-lab-CBCWAutoDifferentialPanel.result:obf-lab-ErythrocytesNucleated100WBCRatioPtBldQnLabObs",
+        "id": "DiagnosticReport.result:obf-lab-ErythrocytesNucleated100WBCRatioPtBldQnLabObs",
         "path": "DiagnosticReport.result",
         "type": [
           {
@@ -5156,7 +5156,7 @@
         "max": "1"
       },
       {
-        "id": "DiagnosticReport:obf-lab-CBCWAutoDifferentialPanel.result:obf-lab-ErythrocytesNucleatedNCncPtBldQnLabObs",
+        "id": "DiagnosticReport.result:obf-lab-ErythrocytesNucleatedNCncPtBldQnLabObs",
         "path": "DiagnosticReport.result",
         "type": [
           {
@@ -5173,7 +5173,7 @@
         "max": "1"
       },
       {
-        "id": "DiagnosticReport:obf-lab-CBCWAutoDifferentialPanel.result:obf-lab-PlateletMeanVolumeEntVolPtBldQnReesEckerLabObs",
+        "id": "DiagnosticReport.result:obf-lab-PlateletMeanVolumeEntVolPtBldQnReesEckerLabObs",
         "path": "DiagnosticReport.result",
         "type": [
           {
@@ -5190,7 +5190,7 @@
         "max": "1"
       },
       {
-        "id": "DiagnosticReport:obf-lab-CBCWAutoDifferentialPanel.result:obf-lab-MyelocytesNCncPtBldQnLabObs",
+        "id": "DiagnosticReport.result:obf-lab-MyelocytesNCncPtBldQnLabObs",
         "path": "DiagnosticReport.result",
         "type": [
           {
@@ -5207,7 +5207,7 @@
         "max": "1"
       },
       {
-        "id": "DiagnosticReport:obf-lab-CBCWAutoDifferentialPanel.result:obf-lab-MetamyelocytesNCncPtBldQnLabObs",
+        "id": "DiagnosticReport.result:obf-lab-MetamyelocytesNCncPtBldQnLabObs",
         "path": "DiagnosticReport.result",
         "type": [
           {
@@ -5224,7 +5224,7 @@
         "max": "1"
       },
       {
-        "id": "DiagnosticReport:obf-lab-CBCWAutoDifferentialPanel.result:obf-lab-NeutrophilsBandFormNCncPtBldQnLabObs",
+        "id": "DiagnosticReport.result:obf-lab-NeutrophilsBandFormNCncPtBldQnLabObs",
         "path": "DiagnosticReport.result",
         "type": [
           {
@@ -5241,7 +5241,7 @@
         "max": "1"
       },
       {
-        "id": "DiagnosticReport:obf-lab-CBCWAutoDifferentialPanel.result:obf-lab-GranulocytesImmature100WBCNFrPtBldQnAutoCntLabObs",
+        "id": "DiagnosticReport.result:obf-lab-GranulocytesImmature100WBCNFrPtBldQnAutoCntLabObs",
         "path": "DiagnosticReport.result",
         "type": [
           {
@@ -5258,7 +5258,7 @@
         "max": "1"
       },
       {
-        "id": "DiagnosticReport:obf-lab-CBCWAutoDifferentialPanel.result:obf-lab-GranulocytesImmatureNCncPtBldQnAutoCntLabObs",
+        "id": "DiagnosticReport.result:obf-lab-GranulocytesImmatureNCncPtBldQnAutoCntLabObs",
         "path": "DiagnosticReport.result",
         "type": [
           {
@@ -5275,7 +5275,7 @@
         "max": "1"
       },
       {
-        "id": "DiagnosticReport:obf-lab-CBCWAutoDifferentialPanel.result:obf-lab-ErythrocytesNucleated100WBCRatioPtBldQnAutoCntLabObs",
+        "id": "DiagnosticReport.result:obf-lab-ErythrocytesNucleated100WBCRatioPtBldQnAutoCntLabObs",
         "path": "DiagnosticReport.result",
         "type": [
           {
@@ -5292,7 +5292,7 @@
         "max": "1"
       },
       {
-        "id": "DiagnosticReport:obf-lab-CBCWAutoDifferentialPanel.result:obf-lab-MorphologyImpPtBldNarLabObs",
+        "id": "DiagnosticReport.result:obf-lab-MorphologyImpPtBldNarLabObs",
         "path": "DiagnosticReport.result",
         "type": [
           {
@@ -5309,7 +5309,7 @@
         "max": "1"
       },
       {
-        "id": "DiagnosticReport:obf-lab-CBCWAutoDifferentialPanel.result:obf-lab-ErythrocyteDistributionWidthEntVolPtRBCQnLabObs",
+        "id": "DiagnosticReport.result:obf-lab-ErythrocyteDistributionWidthEntVolPtRBCQnLabObs",
         "path": "DiagnosticReport.result",
         "type": [
           {
@@ -5326,7 +5326,7 @@
         "max": "1"
       },
       {
-        "id": "DiagnosticReport:obf-lab-CBCWAutoDifferentialPanel.result:obf-lab-PlateletDistributionWidthEntVolPtBldQnAutoCntLabObs",
+        "id": "DiagnosticReport.result:obf-lab-PlateletDistributionWidthEntVolPtBldQnAutoCntLabObs",
         "path": "DiagnosticReport.result",
         "type": [
           {
@@ -5343,7 +5343,7 @@
         "max": "1"
       },
       {
-        "id": "DiagnosticReport:obf-lab-CBCWAutoDifferentialPanel.result:obf-lab-PlateletMeanVolumeEntVolPtBldQnAutoCntLabObs",
+        "id": "DiagnosticReport.result:obf-lab-PlateletMeanVolumeEntVolPtBldQnAutoCntLabObs",
         "path": "DiagnosticReport.result",
         "type": [
           {
@@ -5360,7 +5360,7 @@
         "max": "1"
       },
       {
-        "id": "DiagnosticReport:obf-lab-CBCWAutoDifferentialPanel.result:obf-lab-NeutrophilsBandForm100WBCNFrPtBldQnAutoCntLabObs",
+        "id": "DiagnosticReport.result:obf-lab-NeutrophilsBandForm100WBCNFrPtBldQnAutoCntLabObs",
         "path": "DiagnosticReport.result",
         "type": [
           {
@@ -5377,7 +5377,7 @@
         "max": "1"
       },
       {
-        "id": "DiagnosticReport:obf-lab-CBCWAutoDifferentialPanel.result:obf-lab-Granulocytes100WBCNFrPtBldQnAutoCntLabObs",
+        "id": "DiagnosticReport.result:obf-lab-Granulocytes100WBCNFrPtBldQnAutoCntLabObs",
         "path": "DiagnosticReport.result",
         "type": [
           {
@@ -5394,7 +5394,7 @@
         "max": "1"
       },
       {
-        "id": "DiagnosticReport:obf-lab-CBCWAutoDifferentialPanel.result:obf-lab-LymphocytesVariant100WBCNFrPtBldQnAutoCntLabObs",
+        "id": "DiagnosticReport.result:obf-lab-LymphocytesVariant100WBCNFrPtBldQnAutoCntLabObs",
         "path": "DiagnosticReport.result",
         "type": [
           {
@@ -5411,7 +5411,7 @@
         "max": "1"
       },
       {
-        "id": "DiagnosticReport:obf-lab-CBCWAutoDifferentialPanel.result:obf-lab-OtherCells100WBCNFrPtBldQnAutoCntLabObs",
+        "id": "DiagnosticReport.result:obf-lab-OtherCells100WBCNFrPtBldQnAutoCntLabObs",
         "path": "DiagnosticReport.result",
         "type": [
           {
@@ -5428,7 +5428,7 @@
         "max": "1"
       },
       {
-        "id": "DiagnosticReport:obf-lab-CBCWAutoDifferentialPanel.result:obf-lab-NeutrophilsBandFormNCncPtBldQnAutoCntLabObs",
+        "id": "DiagnosticReport.result:obf-lab-NeutrophilsBandFormNCncPtBldQnAutoCntLabObs",
         "path": "DiagnosticReport.result",
         "type": [
           {
@@ -5445,7 +5445,7 @@
         "max": "1"
       },
       {
-        "id": "DiagnosticReport:obf-lab-CBCWAutoDifferentialPanel.result:obf-lab-LymphocytesVariantNCncPtBldQnAutoCntLabObs",
+        "id": "DiagnosticReport.result:obf-lab-LymphocytesVariantNCncPtBldQnAutoCntLabObs",
         "path": "DiagnosticReport.result",
         "type": [
           {
@@ -5462,7 +5462,7 @@
         "max": "1"
       },
       {
-        "id": "DiagnosticReport:obf-lab-CBCWAutoDifferentialPanel.result:obf-lab-LeukocytesOtherNCncPtBldQnAutoCntLabObs",
+        "id": "DiagnosticReport.result:obf-lab-LeukocytesOtherNCncPtBldQnAutoCntLabObs",
         "path": "DiagnosticReport.result",
         "type": [
           {
@@ -5479,7 +5479,7 @@
         "max": "1"
       },
       {
-        "id": "DiagnosticReport:obf-lab-CBCWAutoDifferentialPanel.result:obf-lab-OtherCellsNCncPtBldQnAutoCntLabObs",
+        "id": "DiagnosticReport.result:obf-lab-OtherCellsNCncPtBldQnAutoCntLabObs",
         "path": "DiagnosticReport.result",
         "type": [
           {

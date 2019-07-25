@@ -9,7 +9,7 @@
   "name": "Participant",
   "title": "obf-Participant",
   "status": "draft",
-  "date": "2019-07-24",
+  "date": "2019-07-25",
   "publisher": "The MITRE Corporation",
   "contact": [
     {
@@ -37,7 +37,7 @@
   "snapshot": {
     "element": [
       {
-        "id": "Extension:participant",
+        "id": "Extension",
         "path": "Extension",
         "short": "Participant",
         "definition": "An entity (usually a Practitioner, Patient, or Organization but potentially a device or other entity) that participates in a healthcare task or activity. The participant is not necessarily the performer, and the role (ParticipationType), the ParticipationPeriod, and other details of the participation are by the Participation structure.",
@@ -81,7 +81,7 @@
         ]
       },
       {
-        "id": "Extension:participant.id",
+        "id": "Extension.id",
         "path": "Extension.id",
         "representation": [
           "xmlAttr"
@@ -110,7 +110,7 @@
         ]
       },
       {
-        "id": "Extension:participant.extension",
+        "id": "Extension.extension",
         "path": "Extension.extension",
         "slicing": {
           "discriminator": [
@@ -151,7 +151,7 @@
         ]
       },
       {
-        "id": "Extension:participant.url",
+        "id": "Extension.url",
         "path": "Extension.url",
         "representation": [
           "xmlAttr"
@@ -182,7 +182,7 @@
         "fixedUri": "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-Participant-extension"
       },
       {
-        "id": "Extension:participant.valueReference",
+        "id": "Extension.valueReference",
         "path": "Extension.valueReference",
         "short": "Value of extension",
         "definition": "Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).",
@@ -221,7 +221,7 @@
   "differential": {
     "element": [
       {
-        "id": "Extension:participant",
+        "id": "Extension",
         "path": "Extension",
         "short": "Participant",
         "definition": "An entity (usually a Practitioner, Patient, or Organization but potentially a device or other entity) that participates in a healthcare task or activity. The participant is not necessarily the performer, and the role (ParticipationType), the ParticipationPeriod, and other details of the participation are by the Participation structure.",
@@ -229,13 +229,13 @@
         "max": "*"
       },
       {
-        "id": "Extension:participant.extension",
+        "id": "Extension.extension",
         "path": "Extension.extension",
         "min": 0,
         "max": "0"
       },
       {
-        "id": "Extension:participant.url",
+        "id": "Extension.url",
         "path": "Extension.url",
         "type": [
           {
@@ -245,7 +245,7 @@
         "fixedUri": "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-Participant-extension"
       },
       {
-        "id": "Extension:participant.valueReference",
+        "id": "Extension.valueReference",
         "path": "Extension.valueReference",
         "min": 1,
         "type": [

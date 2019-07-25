@@ -9,7 +9,7 @@
   "name": "DiagnosisCode",
   "title": "obf-DiagnosisCode",
   "status": "draft",
-  "date": "2019-07-24",
+  "date": "2019-07-25",
   "publisher": "The MITRE Corporation",
   "contact": [
     {
@@ -37,7 +37,7 @@
   "snapshot": {
     "element": [
       {
-        "id": "Extension:diagnosiscode",
+        "id": "Extension",
         "path": "Extension",
         "short": "DiagnosisCode",
         "definition": "Codes for a diagnosis.",
@@ -81,7 +81,7 @@
         ]
       },
       {
-        "id": "Extension:diagnosiscode.id",
+        "id": "Extension.id",
         "path": "Extension.id",
         "representation": [
           "xmlAttr"
@@ -110,7 +110,7 @@
         ]
       },
       {
-        "id": "Extension:diagnosiscode.extension",
+        "id": "Extension.extension",
         "path": "Extension.extension",
         "slicing": {
           "discriminator": [
@@ -151,7 +151,7 @@
         ]
       },
       {
-        "id": "Extension:diagnosiscode.url",
+        "id": "Extension.url",
         "path": "Extension.url",
         "representation": [
           "xmlAttr"
@@ -182,7 +182,7 @@
         "fixedUri": "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-DiagnosisCode-extension"
       },
       {
-        "id": "Extension:diagnosiscode.valueCodeableConcept",
+        "id": "Extension.valueCodeableConcept",
         "path": "Extension.valueCodeableConcept",
         "short": "Value of extension",
         "definition": "Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).",
@@ -212,7 +212,7 @@
   "differential": {
     "element": [
       {
-        "id": "Extension:diagnosiscode",
+        "id": "Extension",
         "path": "Extension",
         "short": "DiagnosisCode",
         "definition": "Codes for a diagnosis.",
@@ -220,13 +220,13 @@
         "max": "*"
       },
       {
-        "id": "Extension:diagnosiscode.extension",
+        "id": "Extension.extension",
         "path": "Extension.extension",
         "min": 0,
         "max": "0"
       },
       {
-        "id": "Extension:diagnosiscode.url",
+        "id": "Extension.url",
         "path": "Extension.url",
         "type": [
           {
@@ -236,7 +236,7 @@
         "fixedUri": "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-DiagnosisCode-extension"
       },
       {
-        "id": "Extension:diagnosiscode.valueCodeableConcept",
+        "id": "Extension.valueCodeableConcept",
         "path": "Extension.valueCodeableConcept",
         "min": 1,
         "type": [

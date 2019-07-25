@@ -9,7 +9,7 @@
   "name": "Condition",
   "title": "obf-Condition",
   "status": "draft",
-  "date": "2019-07-24",
+  "date": "2019-07-25",
   "publisher": "The MITRE Corporation",
   "contact": [
     {
@@ -37,7 +37,7 @@
   "snapshot": {
     "element": [
       {
-        "id": "Extension:condition",
+        "id": "Extension",
         "path": "Extension",
         "short": "Condition",
         "definition": "A condition that is or may be present in a subject. 'Condition' is interpreted broadly and could be a disorder, abnormality, problem, injury, complaint, functionality, illness, disease, ailment, sickness, affliction, upset, difficulty, disorder, symptom, worry, or trouble.\nThe Observation-based class, ConditionAbsent, should be used to describe conditions that are not present or negative findings.\nThis profiled Condition uses the BodyLocation structure that includes not only a code, but optional laterality, direction, and relation to landmark(s).",
@@ -81,7 +81,7 @@
         ]
       },
       {
-        "id": "Extension:condition.id",
+        "id": "Extension.id",
         "path": "Extension.id",
         "representation": [
           "xmlAttr"
@@ -110,7 +110,7 @@
         ]
       },
       {
-        "id": "Extension:condition.extension",
+        "id": "Extension.extension",
         "path": "Extension.extension",
         "slicing": {
           "discriminator": [
@@ -151,7 +151,7 @@
         ]
       },
       {
-        "id": "Extension:condition.url",
+        "id": "Extension.url",
         "path": "Extension.url",
         "representation": [
           "xmlAttr"
@@ -182,7 +182,7 @@
         "fixedUri": "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-Condition-extension"
       },
       {
-        "id": "Extension:condition.valueReference",
+        "id": "Extension.valueReference",
         "path": "Extension.valueReference",
         "short": "Value of extension",
         "definition": "Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).",
@@ -215,7 +215,7 @@
   "differential": {
     "element": [
       {
-        "id": "Extension:condition",
+        "id": "Extension",
         "path": "Extension",
         "short": "Condition",
         "definition": "A condition that is or may be present in a subject. 'Condition' is interpreted broadly and could be a disorder, abnormality, problem, injury, complaint, functionality, illness, disease, ailment, sickness, affliction, upset, difficulty, disorder, symptom, worry, or trouble.\nThe Observation-based class, ConditionAbsent, should be used to describe conditions that are not present or negative findings.\nThis profiled Condition uses the BodyLocation structure that includes not only a code, but optional laterality, direction, and relation to landmark(s).",
@@ -223,13 +223,13 @@
         "max": "*"
       },
       {
-        "id": "Extension:condition.extension",
+        "id": "Extension.extension",
         "path": "Extension.extension",
         "min": 0,
         "max": "0"
       },
       {
-        "id": "Extension:condition.url",
+        "id": "Extension.url",
         "path": "Extension.url",
         "type": [
           {
@@ -239,7 +239,7 @@
         "fixedUri": "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-Condition-extension"
       },
       {
-        "id": "Extension:condition.valueReference",
+        "id": "Extension.valueReference",
         "path": "Extension.valueReference",
         "min": 1,
         "type": [

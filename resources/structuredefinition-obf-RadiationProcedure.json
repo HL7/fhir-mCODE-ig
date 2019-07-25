@@ -3,14 +3,14 @@
   "id": "obf-RadiationProcedure",
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>RadiationProcedure Profile</b></p>\n  <p>A radiation oncology procedure. The procedure might represent a complete course of treatment, or a single session that is part of a series of treatments. If the treatment is part of a larger course of treatment, the PartOf attribute should indicate that. If the procedure represents the entire course of therapy, the RadiationFractionsDelivered should indicate the number of sessions. If the procedure represents one session, then the RadiationFractionsDelivered would be 1, and the TotalRadiationDoseDelivered will be the same as the RadiationDosePerFraction.</p>\n  <p><b>Mapping Summary</b></p>\n  <p><pre>obf.RadiationProcedure maps to http://hl7.org/fhir/us/core/StructureDefinition/us-core-procedure:\n  Language maps to language\n  ImplicitRules maps to implicitRules\n  Metadata.VersionId maps to meta.versionId\n  Metadata.SourceSystem maps to meta.source\n  Metadata.Profile maps to meta.profile\n  Metadata.LastUpdated maps to meta.lastUpdated\n  Metadata.SecurityLabel maps to meta.security\n  Metadata.Tag maps to meta.tag\n  Narrative maps to text\n  Identifier maps to identifier\n  ProcedureBasedOn maps to basedOn\n  ProcedurePartOf maps to partOf  // add Observation, MedicationAdministration\n  Status maps to status\n  StatusReason maps to statusReason\n  Category maps to category\n  Code maps to code\n  SubjectOfRecord maps to subject\n  CareContext maps to encounter\n  OccurrenceTimeOrPeriod maps to performed[x]  // Types string, Age, Range -- not implemented in SHR\n  PersonAuthor maps to recorder\n  PersonInformationSource maps to asserter\n  Participation maps to performer\n  Participation.Participant maps to performer.actor  // Added Target Type PractitionerRole -- not implemented\n  Participation.ParticipationType maps to performer.function  // renamed role to function in R4\n  Participation.OnBehalfOf maps to performer.onBehalfOf\n  Location maps to location\n  ReasonCode maps to reasonCode\n  ProcedureReasonReference maps to reasonReference\n  BodyLocation.Code maps to bodySite\n  BodyLocation.Laterality maps to bodySite.extension\n  BodyLocation.AnatomicalOrientation maps to bodySite.extension\n  BodyLocation.RelationToLandmark maps to bodySite.extension\n  Annotation maps to note\n  Outcome maps to outcome\n  DiagnosticReport maps to report\n  ComplicationCode maps to complication\n  ComplicationReference maps to complicationDetail\n  FollowUp maps to followUp\n  FocalDevice maps to focalDevice\n  FocalDevice.Device maps to focalDevice.manipulated\n  FocalDevice.FocalDeviceAction maps to focalDevice.action\n  MaterialUsedReference maps to usedReference\n  UsedCode maps to usedCode\n</pre></p>\n</div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>RadiationProcedure Profile</b></p>\n  <p>A radiation oncology procedure. The procedure might represent a complete course of treatment, or a single session that is part of a series of treatments. If the treatment is part of a larger course of treatment, the PartOf attribute should indicate that. If the procedure represents the entire course of therapy, the RadiationFractionsDelivered should indicate the number of sessions. If the procedure represents one session, then the RadiationFractionsDelivered would be 1, and the TotalRadiationDoseDelivered will be the same as the RadiationDosePerFraction.</p>\n  <p><b>Mapping Summary</b></p>\n  <p><pre>obf.RadiationProcedure maps to http://hl7.org/fhir/us/core/StructureDefinition/us-core-procedure:\n  Language maps to language\n  ImplicitRules maps to implicitRules\n  Metadata.VersionId maps to meta.versionId\n  Metadata.SourceSystem maps to meta.source\n  Metadata.Profile maps to meta.profile\n  Metadata.LastUpdated maps to meta.lastUpdated\n  Metadata.SecurityLabel maps to meta.security\n  Metadata.Tag maps to meta.tag\n  Narrative maps to text\n  Identifier maps to identifier\n  ProcedureBasedOn maps to basedOn\n  ProcedurePartOf maps to partOf  // add Observation, MedicationAdministration\n  Status maps to status\n  StatusReason maps to statusReason\n  Category maps to category\n  Code maps to code\n  SubjectOfRecord maps to subject\n  CareContext maps to encounter\n  OccurrenceTimeOrPeriod maps to performed[x]\n  PersonAuthor maps to recorder\n  PersonInformationSource maps to asserter\n  Participation maps to performer\n  Participation.Participant maps to performer.actor  // Added Target Type PractitionerRole -- not implemented\n  Participation.ParticipationType maps to performer.function  // renamed role to function in R4\n  Participation.OnBehalfOf maps to performer.onBehalfOf\n  Location maps to location\n  ReasonCode maps to reasonCode\n  ProcedureReasonReference maps to reasonReference\n  BodyLocation.Code maps to bodySite\n  BodyLocation.Laterality maps to bodySite.extension\n  BodyLocation.AnatomicalOrientation maps to bodySite.extension\n  BodyLocation.RelationToLandmark maps to bodySite.extension\n  Annotation maps to note\n  Outcome maps to outcome\n  DiagnosticReport maps to report\n  ComplicationCode maps to complication\n  ComplicationReference maps to complicationDetail\n  FollowUp maps to followUp\n  FocalDevice maps to focalDevice\n  FocalDevice.Device maps to focalDevice.manipulated\n  FocalDevice.FocalDeviceAction maps to focalDevice.action\n  MaterialUsedReference maps to usedReference\n  UsedCode maps to usedCode\n</pre></p>\n</div>"
   },
   "url": "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-RadiationProcedure",
   "name": "RadiationProcedure",
   "title": "obf-RadiationProcedure",
   "status": "active",
   "experimental": false,
-  "date": "2019-07-24",
+  "date": "2019-07-25",
   "publisher": "The MITRE Corporation",
   "contact": [
     {
@@ -70,7 +70,7 @@
   "snapshot": {
     "element": [
       {
-        "id": "Procedure:obf-RadiationProcedure",
+        "id": "Procedure",
         "path": "Procedure",
         "short": "obf-RadiationProcedure",
         "definition": "A radiation oncology procedure. The procedure might represent a complete course of treatment, or a single session that is part of a series of treatments. If the treatment is part of a larger course of treatment, the PartOf attribute should indicate that. If the procedure represents the entire course of therapy, the RadiationFractionsDelivered should indicate the number of sessions. If the procedure represents one session, then the RadiationFractionsDelivered would be 1, and the TotalRadiationDoseDelivered will be the same as the RadiationDosePerFraction.",
@@ -156,7 +156,7 @@
         ]
       },
       {
-        "id": "Procedure:obf-RadiationProcedure.id",
+        "id": "Procedure.id",
         "path": "Procedure.id",
         "short": "Logical id of this artifact",
         "definition": "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.",
@@ -177,7 +177,7 @@
         "isSummary": true
       },
       {
-        "id": "Procedure:obf-RadiationProcedure.meta",
+        "id": "Procedure.meta",
         "path": "Procedure.meta",
         "short": "Metadata about the resource",
         "definition": "The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.",
@@ -197,7 +197,7 @@
         "isSummary": true
       },
       {
-        "id": "Procedure:obf-RadiationProcedure.implicitRules",
+        "id": "Procedure.implicitRules",
         "path": "Procedure.implicitRules",
         "short": "A set of rules under which this content was created",
         "definition": "A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.",
@@ -219,7 +219,7 @@
         "isSummary": true
       },
       {
-        "id": "Procedure:obf-RadiationProcedure.language",
+        "id": "Procedure.language",
         "path": "Procedure.language",
         "short": "Language of the resource content",
         "definition": "The base language in which the resource is written.",
@@ -259,7 +259,7 @@
         }
       },
       {
-        "id": "Procedure:obf-RadiationProcedure.text",
+        "id": "Procedure.text",
         "path": "Procedure.text",
         "short": "Text summary of the resource, for human interpretation",
         "definition": "A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.",
@@ -292,7 +292,7 @@
         ]
       },
       {
-        "id": "Procedure:obf-RadiationProcedure.contained",
+        "id": "Procedure.contained",
         "path": "Procedure.contained",
         "short": "Contained, inline Resources",
         "definition": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope.",
@@ -324,7 +324,7 @@
         ]
       },
       {
-        "id": "Procedure:obf-RadiationProcedure.extension",
+        "id": "Procedure.extension",
         "path": "Procedure.extension",
         "short": "Additional content defined by implementations",
         "definition": "May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
@@ -366,7 +366,7 @@
         }
       },
       {
-        "id": "Procedure:obf-RadiationProcedure.extension:statementdatetime",
+        "id": "Procedure.extension:statementdatetime",
         "path": "Procedure.extension",
         "definition": "The point in time when the statement was created.",
         "min": 0,
@@ -389,7 +389,7 @@
         "sliceName": "statementdatetime"
       },
       {
-        "id": "Procedure:obf-RadiationProcedure.extension:treatmentintent",
+        "id": "Procedure.extension:treatmentintent",
         "path": "Procedure.extension",
         "definition": "The purpose of a treatment.",
         "min": 0,
@@ -412,7 +412,7 @@
         "sliceName": "treatmentintent"
       },
       {
-        "id": "Procedure:obf-RadiationProcedure.extension:radiationdoseperfraction",
+        "id": "Procedure.extension:radiationdoseperfraction",
         "path": "Procedure.extension",
         "definition": "The amount of radiation administered during a single session (fraction) of radiation therapy therapy.",
         "min": 0,
@@ -435,7 +435,7 @@
         "sliceName": "radiationdoseperfraction"
       },
       {
-        "id": "Procedure:obf-RadiationProcedure.extension:radiationfractionsdelivered",
+        "id": "Procedure.extension:radiationfractionsdelivered",
         "path": "Procedure.extension",
         "definition": "Records the total number of treatment sessions (fractions) administered during the first course of therapy. Corresponds to LOINC 21950-2 'Number of radiation treatment' [sic].",
         "min": 0,
@@ -458,7 +458,7 @@
         "sliceName": "radiationfractionsdelivered"
       },
       {
-        "id": "Procedure:obf-RadiationProcedure.extension:totalradiationdosedelivered",
+        "id": "Procedure.extension:totalradiationdosedelivered",
         "path": "Procedure.extension",
         "definition": "The total amount of radiation dose delivered for the course of therapy. (source: SNOMED, ASTRO)",
         "min": 0,
@@ -481,7 +481,7 @@
         "sliceName": "totalradiationdosedelivered"
       },
       {
-        "id": "Procedure:obf-RadiationProcedure.extension:terminationreason",
+        "id": "Procedure.extension:terminationreason",
         "path": "Procedure.extension",
         "definition": "A code explaining unplanned or premature termination of a plan of treatment, course of medication, or research study.",
         "min": 0,
@@ -504,7 +504,7 @@
         "sliceName": "terminationreason"
       },
       {
-        "id": "Procedure:obf-RadiationProcedure.extension:terminationreason.id",
+        "id": "Procedure.extension:terminationreason.id",
         "path": "Procedure.extension.id",
         "representation": [
           "xmlAttr"
@@ -533,7 +533,7 @@
         ]
       },
       {
-        "id": "Procedure:obf-RadiationProcedure.extension:terminationreason.extension",
+        "id": "Procedure.extension:terminationreason.extension",
         "path": "Procedure.extension.extension",
         "slicing": {
           "discriminator": [
@@ -574,7 +574,7 @@
         ]
       },
       {
-        "id": "Procedure:obf-RadiationProcedure.extension:terminationreason.url",
+        "id": "Procedure.extension:terminationreason.url",
         "path": "Procedure.extension.url",
         "representation": [
           "xmlAttr"
@@ -605,7 +605,7 @@
         "fixedUri": "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-TerminationReason-extension"
       },
       {
-        "id": "Procedure:obf-RadiationProcedure.extension:terminationreason.valueCodeableConcept",
+        "id": "Procedure.extension:terminationreason.valueCodeableConcept",
         "path": "Procedure.extension.valueCodeableConcept",
         "short": "Value of extension",
         "definition": "Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).",
@@ -635,7 +635,7 @@
         }
       },
       {
-        "id": "Procedure:obf-RadiationProcedure.modifierExtension",
+        "id": "Procedure.modifierExtension",
         "path": "Procedure.modifierExtension",
         "short": "Extensions that cannot be ignored",
         "definition": "May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
@@ -668,7 +668,7 @@
         ]
       },
       {
-        "id": "Procedure:obf-RadiationProcedure.identifier",
+        "id": "Procedure.identifier",
         "path": "Procedure.identifier",
         "short": "External Identifiers for this procedure",
         "definition": "Business identifiers assigned to this procedure by the performer or other systems which remain constant as the resource is updated and is propagated from server to server.",
@@ -708,7 +708,7 @@
         ]
       },
       {
-        "id": "Procedure:obf-RadiationProcedure.instantiatesCanonical",
+        "id": "Procedure.instantiatesCanonical",
         "path": "Procedure.instantiatesCanonical",
         "short": "Instantiates FHIR protocol or definition",
         "definition": "The URL pointing to a FHIR-defined protocol, guideline, order set or other definition that is adhered to in whole or in part by this Procedure.",
@@ -745,7 +745,7 @@
         ]
       },
       {
-        "id": "Procedure:obf-RadiationProcedure.instantiatesUri",
+        "id": "Procedure.instantiatesUri",
         "path": "Procedure.instantiatesUri",
         "short": "Instantiates external protocol or definition",
         "definition": "The URL pointing to an externally maintained protocol, guideline, order set or other definition that is adhered to in whole or in part by this Procedure.",
@@ -776,7 +776,7 @@
         ]
       },
       {
-        "id": "Procedure:obf-RadiationProcedure.basedOn",
+        "id": "Procedure.basedOn",
         "path": "Procedure.basedOn",
         "short": "A request for this procedure",
         "definition": "A request for this procedure.",
@@ -812,7 +812,7 @@
         ]
       },
       {
-        "id": "Procedure:obf-RadiationProcedure.partOf",
+        "id": "Procedure.partOf",
         "path": "Procedure.partOf",
         "short": "Part of referenced event",
         "definition": "A larger event of which this particular procedure is a component or step.",
@@ -851,7 +851,7 @@
         ]
       },
       {
-        "id": "Procedure:obf-RadiationProcedure.status",
+        "id": "Procedure.status",
         "path": "Procedure.status",
         "short": "preparation | in-progress | not-done | suspended | aborted | completed | entered-in-error | unknown",
         "definition": "A code specifying the state of the procedure. Generally, this will be the in-progress or completed state.",
@@ -896,7 +896,7 @@
         ]
       },
       {
-        "id": "Procedure:obf-RadiationProcedure.statusReason",
+        "id": "Procedure.statusReason",
         "path": "Procedure.statusReason",
         "short": "Reason for current status",
         "definition": "Captures the reason for the current state of the procedure.",
@@ -942,7 +942,7 @@
         ]
       },
       {
-        "id": "Procedure:obf-RadiationProcedure.category",
+        "id": "Procedure.category",
         "path": "Procedure.category",
         "short": "Classification of the procedure",
         "definition": "A code that classifies the procedure for searching, sorting and display purposes (e.g. \"Surgical Procedure\").",
@@ -983,7 +983,7 @@
         ]
       },
       {
-        "id": "Procedure:obf-RadiationProcedure.code",
+        "id": "Procedure.code",
         "path": "Procedure.code",
         "short": "SNOMED-CT | ICD-10 | CPT-4",
         "definition": "The specific procedure that is performed. Use text if the exact nature of the procedure cannot be coded (e.g. \"Laparoscopic Appendectomy\").",
@@ -1034,7 +1034,7 @@
         ]
       },
       {
-        "id": "Procedure:obf-RadiationProcedure.subject",
+        "id": "Procedure.subject",
         "path": "Procedure.subject",
         "short": "Who the procedure was performed on",
         "definition": "The person, animal or group on which the procedure was performed.",
@@ -1087,7 +1087,7 @@
         ]
       },
       {
-        "id": "Procedure:obf-RadiationProcedure.encounter",
+        "id": "Procedure.encounter",
         "path": "Procedure.encounter",
         "short": "Encounter created as part of",
         "definition": "The Encounter during which this Procedure was created or performed or to which the creation of this record is tightly associated.",
@@ -1129,7 +1129,7 @@
         ]
       },
       {
-        "id": "Procedure:obf-RadiationProcedure.performed[x]",
+        "id": "Procedure.performed[x]",
         "path": "Procedure.performed[x]",
         "short": "When the procedure was performed",
         "definition": "Estimated or actual date, date-time, period, or age when the procedure was performed.  Allows a period to support complex procedures that span more than one date, and also allows for the length of the procedure to be captured.",
@@ -1176,7 +1176,7 @@
         ]
       },
       {
-        "id": "Procedure:obf-RadiationProcedure.recorder",
+        "id": "Procedure.recorder",
         "path": "Procedure.recorder",
         "short": "A human author, patient, practitioner, or related person, as opposed to an organization or device",
         "definition": "A human author, patient, practitioner, or related person, as opposed to an organization or device.",
@@ -1211,7 +1211,7 @@
         ]
       },
       {
-        "id": "Procedure:obf-RadiationProcedure.asserter",
+        "id": "Procedure.asserter",
         "path": "Procedure.asserter",
         "short": "The person who provided the information, not necessarily the patient",
         "definition": "The person who provided the information, not necessarily the patient.",
@@ -1246,7 +1246,7 @@
         ]
       },
       {
-        "id": "Procedure:obf-RadiationProcedure.performer",
+        "id": "Procedure.performer",
         "path": "Procedure.performer",
         "short": "The people who performed the procedure",
         "definition": "Limited to \"real\" people rather than equipment.",
@@ -1286,7 +1286,7 @@
         ]
       },
       {
-        "id": "Procedure:obf-RadiationProcedure.performer.id",
+        "id": "Procedure.performer.id",
         "path": "Procedure.performer.id",
         "representation": [
           "xmlAttr"
@@ -1315,7 +1315,7 @@
         ]
       },
       {
-        "id": "Procedure:obf-RadiationProcedure.performer.extension",
+        "id": "Procedure.performer.extension",
         "path": "Procedure.performer.extension",
         "short": "Additional content defined by implementations",
         "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
@@ -1346,7 +1346,7 @@
         ]
       },
       {
-        "id": "Procedure:obf-RadiationProcedure.performer.modifierExtension",
+        "id": "Procedure.performer.modifierExtension",
         "path": "Procedure.performer.modifierExtension",
         "short": "Extensions that cannot be ignored even if unrecognized",
         "definition": "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
@@ -1380,7 +1380,7 @@
         ]
       },
       {
-        "id": "Procedure:obf-RadiationProcedure.performer.function",
+        "id": "Procedure.performer.function",
         "path": "Procedure.performer.function",
         "short": "Type of performance",
         "definition": "Distinguishes the type of involvement of the performer in the procedure. For example, surgeon, anaesthetist, endoscopist.",
@@ -1426,7 +1426,7 @@
         ]
       },
       {
-        "id": "Procedure:obf-RadiationProcedure.performer.actor",
+        "id": "Procedure.performer.actor",
         "path": "Procedure.performer.actor",
         "short": "Constrains participants to classes that are accepted by FHIR as actors in procedures in STU 3",
         "definition": "Constrains participants to classes that are accepted by FHIR as actors in procedures in STU 3.",
@@ -1468,7 +1468,7 @@
         ]
       },
       {
-        "id": "Procedure:obf-RadiationProcedure.performer.onBehalfOf",
+        "id": "Procedure.performer.onBehalfOf",
         "path": "Procedure.performer.onBehalfOf",
         "short": "Organization the device or practitioner was acting for",
         "definition": "The organization the device or practitioner was acting on behalf of.",
@@ -1498,7 +1498,7 @@
         ]
       },
       {
-        "id": "Procedure:obf-RadiationProcedure.location",
+        "id": "Procedure.location",
         "path": "Procedure.location",
         "short": "Where the procedure happened",
         "definition": "The location where the procedure actually happened.  E.g. a newborn at home, a tracheostomy at a restaurant.",
@@ -1532,7 +1532,7 @@
         ]
       },
       {
-        "id": "Procedure:obf-RadiationProcedure.reasonCode",
+        "id": "Procedure.reasonCode",
         "path": "Procedure.reasonCode",
         "short": "Coded reason procedure performed",
         "definition": "The coded reason why the procedure was performed. This may be a coded entity of some type, or may simply be present as text.",
@@ -1578,7 +1578,7 @@
         ]
       },
       {
-        "id": "Procedure:obf-RadiationProcedure.reasonReference",
+        "id": "Procedure.reasonReference",
         "path": "Procedure.reasonReference",
         "short": "The justification that the procedure was performed",
         "definition": "The justification that the procedure was performed.",
@@ -1620,7 +1620,7 @@
         ]
       },
       {
-        "id": "Procedure:obf-RadiationProcedure.bodySite",
+        "id": "Procedure.bodySite",
         "path": "Procedure.bodySite",
         "short": "Target body sites",
         "definition": "Detailed and structured anatomical location information. Multiple locations are allowed - e.g. multiple punch biopsies of a lesion.",
@@ -1655,7 +1655,7 @@
         ]
       },
       {
-        "id": "Procedure:obf-RadiationProcedure.bodySite.id",
+        "id": "Procedure.bodySite.id",
         "path": "Procedure.bodySite.id",
         "representation": [
           "xmlAttr"
@@ -1684,7 +1684,7 @@
         ]
       },
       {
-        "id": "Procedure:obf-RadiationProcedure.bodySite.extension",
+        "id": "Procedure.bodySite.extension",
         "path": "Procedure.bodySite.extension",
         "slicing": {
           "discriminator": [
@@ -1725,7 +1725,7 @@
         ]
       },
       {
-        "id": "Procedure:obf-RadiationProcedure.bodySite.extension:laterality",
+        "id": "Procedure.bodySite.extension:laterality",
         "path": "Procedure.bodySite.extension",
         "definition": "Body side of the body location, if needed to distinguish from a similar location on the other side of the body.\n\nThe laterality element is part of BodyLocation, a flexible structure that allows the location to be determined by a single code, or a code plus laterality and/or orientation. The body location can also be specified in relation to one or more body landmarks. SNOMED CT is used in all cases.\n\n* Code only: The code should include (precoordinate) laterality and/orientation to the degree necessary to completely specify the body location.\n* Code plus laterality and/or orientation: The basic code augmented by codes specifying the body side and/or anatomical orientation.\n* Relation to landmark: The location relative to a landmark is specified by:\n1. Establishing the location and type of landmark using a body site code and optional laterality/orientation, and\n2. Specifying the direction and distance from the landmark to the body location.\n\nNote that BodyLocation is a data type (a reusable structure), not a stand-alone entity. The concept is similar to how a postal address can apply to a person, location, or organization. This contrasts with FHIR's stand-alone BodySite (aka BodyStructure in r4) which 'is not ... intended for describing the type of anatomical location but rather a specific body site on a specific patient' (FHIR 3.5).",
         "min": 0,
@@ -1739,7 +1739,7 @@
           {
             "code": "Extension",
             "profile": [
-              "http://hl7.org/fhir/us/mcode/StructureDefinition/shr-core-Laterality-extension"
+              "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-datatype-Laterality-extension"
             ]
           }
         ],
@@ -1748,7 +1748,7 @@
         "sliceName": "laterality"
       },
       {
-        "id": "Procedure:obf-RadiationProcedure.bodySite.extension:anatomicalorientation",
+        "id": "Procedure.bodySite.extension:anatomicalorientation",
         "path": "Procedure.bodySite.extension",
         "definition": "AnatomicalOrientation of the body location, if needed to distinguish from a similar location in another orientation.\nThe orientation element is part of BodyLocation, a flexible structure that allows the location to be determined by a single code, or a code plus laterality and/or orientation. The body location can also be specified in relation to one or more body landmarks. SNOMED CT is used in all cases.\n\n* Code only: The code should include (precoordinate) laterality and/orientation to the degree necessary to completely specify the body location.\n* Code plus laterality and/or orientation: The basic code augmented by codes specifying the body side and/or anatomical orientation.\n* Relation to landmark: The location relative to a landmark is specified by:\n1. Establishing the location and type of landmark using a body site code and optional laterality/orientation, and\n2. Specifying the direction and distance from the landmark to the body location.\n\nNote that BodyLocation is a data type (a reusable structure), not a stand-alone entity. The concept is similar to how a postal address can apply to a person, location, or organization. This contrasts with FHIR's stand-alone BodySite (aka BodyStructure in r4) which 'is not ... intended for describing the type of anatomical location but rather a specific body site on a specific patient' (FHIR 3.5).",
         "min": 0,
@@ -1762,7 +1762,7 @@
           {
             "code": "Extension",
             "profile": [
-              "http://hl7.org/fhir/us/mcode/StructureDefinition/shr-core-AnatomicalOrientation-extension"
+              "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-datatype-AnatomicalOrientation-extension"
             ]
           }
         ],
@@ -1771,7 +1771,7 @@
         "sliceName": "anatomicalorientation"
       },
       {
-        "id": "Procedure:obf-RadiationProcedure.bodySite.extension:relationtolandmark",
+        "id": "Procedure.bodySite.extension:relationtolandmark",
         "path": "Procedure.bodySite.extension",
         "definition": "The relationship between a landmark that helps determine a body location and the body location itself. The location relative to a landmark is specified by:\n* Specifying the location and type of landmark using a body site code and optional laterality/orientation,\n* Specifying the direction from the landmark to the body location, and\n* Specifying the distance from the landmark to the body location.\n\nThe RelationToLandmark element is part of BodyLocation, a flexible structure that allows the location to be determined by a single code, or a code plus laterality and/or orientation. The body location can also be specified in relation to one or more body landmarks. SNOMED CT is used in all cases.\n\n* Code only: The code should include (precoordinate) laterality and/orientation to the degree necessary to completely specify the body location.\n* Code plus laterality and/or orientation: The basic code augmented by codes specifying the body side and/or anatomical orientation.\n* Relation to landmark: The location relative to a landmark is specified by:\n1. Establishing the location and type of landmark using a body site code and optional laterality/orientation, and\n2. Specifying the direction and distance from the landmark to the body location.\n\nNote that BodyLocation is a data type (a reusable structure), not a stand-alone entity. The concept is similar to how a postal address can apply to a person, location, or organization. This contrasts with FHIR's stand-alone BodySite (aka BodyStructure in r4) which 'is not ... intended for describing the type of anatomical location but rather a specific body site on a specific patient' (FHIR 3.5).",
         "min": 0,
@@ -1785,7 +1785,7 @@
           {
             "code": "Extension",
             "profile": [
-              "http://hl7.org/fhir/us/mcode/StructureDefinition/shr-core-RelationToLandmark-extension"
+              "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-datatype-RelationToLandmark-extension"
             ]
           }
         ],
@@ -1794,7 +1794,7 @@
         "sliceName": "relationtolandmark"
       },
       {
-        "id": "Procedure:obf-RadiationProcedure.bodySite.coding",
+        "id": "Procedure.bodySite.coding",
         "path": "Procedure.bodySite.coding",
         "short": "Code defined by a terminology system",
         "definition": "A reference to a code defined by a terminology system.",
@@ -1830,7 +1830,7 @@
         ]
       },
       {
-        "id": "Procedure:obf-RadiationProcedure.bodySite.text",
+        "id": "Procedure.bodySite.text",
         "extension": [
           {
             "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable",
@@ -1872,7 +1872,7 @@
         ]
       },
       {
-        "id": "Procedure:obf-RadiationProcedure.outcome",
+        "id": "Procedure.outcome",
         "path": "Procedure.outcome",
         "short": "The result of procedure",
         "definition": "The outcome of the procedure - did it resolve the reasons for the procedure being performed?",
@@ -1910,7 +1910,7 @@
         ]
       },
       {
-        "id": "Procedure:obf-RadiationProcedure.report",
+        "id": "Procedure.report",
         "path": "Procedure.report",
         "short": "Any report resulting from the procedure",
         "definition": "This could be a histology result, pathology report, surgical report, etc.",
@@ -1940,7 +1940,7 @@
         ]
       },
       {
-        "id": "Procedure:obf-RadiationProcedure.complication",
+        "id": "Procedure.complication",
         "path": "Procedure.complication",
         "short": "Complication following the procedure",
         "definition": "Any complications that occurred during the procedure, or in the immediate post-performance period. These are generally tracked separately from the notes, which will typically describe the procedure itself rather than any 'post procedure' issues.",
@@ -1978,7 +1978,7 @@
         ]
       },
       {
-        "id": "Procedure:obf-RadiationProcedure.complicationDetail",
+        "id": "Procedure.complicationDetail",
         "path": "Procedure.complicationDetail",
         "short": "A condition that is a result of the procedure",
         "definition": "Any complications that occurred during the procedure, or in the immediate post-performance period.",
@@ -2008,7 +2008,7 @@
         ]
       },
       {
-        "id": "Procedure:obf-RadiationProcedure.followUp",
+        "id": "Procedure.followUp",
         "path": "Procedure.followUp",
         "short": "Instructions for follow up",
         "definition": "If the procedure required specific follow up - e.g. removal of sutures. The follow up may be represented as a simple note or could potentially be more complex, in which case the CarePlan resource can be used.",
@@ -2045,7 +2045,7 @@
         ]
       },
       {
-        "id": "Procedure:obf-RadiationProcedure.note",
+        "id": "Procedure.note",
         "path": "Procedure.note",
         "short": "Additional information about the procedure",
         "definition": "Any other notes and comments about the procedure.",
@@ -2079,7 +2079,7 @@
         ]
       },
       {
-        "id": "Procedure:obf-RadiationProcedure.focalDevice",
+        "id": "Procedure.focalDevice",
         "path": "Procedure.focalDevice",
         "short": "Manipulated, implanted, or removed device",
         "definition": "A device that is implanted, removed or otherwise manipulated (calibration, battery replacement, fitting a prosthesis, attaching a wound-vac, etc.) as a focal portion of the Procedure.",
@@ -2115,7 +2115,7 @@
         ]
       },
       {
-        "id": "Procedure:obf-RadiationProcedure.focalDevice.id",
+        "id": "Procedure.focalDevice.id",
         "path": "Procedure.focalDevice.id",
         "representation": [
           "xmlAttr"
@@ -2144,7 +2144,7 @@
         ]
       },
       {
-        "id": "Procedure:obf-RadiationProcedure.focalDevice.extension",
+        "id": "Procedure.focalDevice.extension",
         "path": "Procedure.focalDevice.extension",
         "short": "Additional content defined by implementations",
         "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
@@ -2175,7 +2175,7 @@
         ]
       },
       {
-        "id": "Procedure:obf-RadiationProcedure.focalDevice.modifierExtension",
+        "id": "Procedure.focalDevice.modifierExtension",
         "path": "Procedure.focalDevice.modifierExtension",
         "short": "Extensions that cannot be ignored even if unrecognized",
         "definition": "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
@@ -2209,7 +2209,7 @@
         ]
       },
       {
-        "id": "Procedure:obf-RadiationProcedure.focalDevice.action",
+        "id": "Procedure.focalDevice.action",
         "path": "Procedure.focalDevice.action",
         "short": "Kind of change to device",
         "definition": "The kind of change that happened to the device during the procedure.",
@@ -2246,7 +2246,7 @@
         ]
       },
       {
-        "id": "Procedure:obf-RadiationProcedure.focalDevice.manipulated",
+        "id": "Procedure.focalDevice.manipulated",
         "path": "Procedure.focalDevice.manipulated",
         "short": "Device that was changed",
         "definition": "The device that was manipulated (changed) during the procedure.",
@@ -2275,7 +2275,7 @@
         ]
       },
       {
-        "id": "Procedure:obf-RadiationProcedure.usedReference",
+        "id": "Procedure.usedReference",
         "path": "Procedure.usedReference",
         "short": "Items used during procedure",
         "definition": "Identifies medications, devices and any other substance used as part of the procedure.",
@@ -2308,7 +2308,7 @@
         ]
       },
       {
-        "id": "Procedure:obf-RadiationProcedure.usedCode",
+        "id": "Procedure.usedCode",
         "path": "Procedure.usedCode",
         "short": "Coded items used during the procedure",
         "definition": "Identifies coded items that were used as part of the procedure.",
@@ -2350,7 +2350,7 @@
   "differential": {
     "element": [
       {
-        "id": "Procedure:obf-RadiationProcedure",
+        "id": "Procedure",
         "path": "Procedure",
         "short": "obf-RadiationProcedure",
         "definition": "A radiation oncology procedure. The procedure might represent a complete course of treatment, or a single session that is part of a series of treatments. If the treatment is part of a larger course of treatment, the PartOf attribute should indicate that. If the procedure represents the entire course of therapy, the RadiationFractionsDelivered should indicate the number of sessions. If the procedure represents one session, then the RadiationFractionsDelivered would be 1, and the TotalRadiationDoseDelivered will be the same as the RadiationDosePerFraction.",
@@ -2359,7 +2359,7 @@
         "isSummary": false
       },
       {
-        "id": "Procedure:obf-RadiationProcedure.extension",
+        "id": "Procedure.extension",
         "path": "Procedure.extension",
         "slicing": {
           "id": "1",
@@ -2374,7 +2374,7 @@
         }
       },
       {
-        "id": "Procedure:obf-RadiationProcedure.extension:statementdatetime",
+        "id": "Procedure.extension:statementdatetime",
         "path": "Procedure.extension",
         "definition": "The point in time when the statement was created.",
         "min": 0,
@@ -2397,7 +2397,7 @@
         "sliceName": "statementdatetime"
       },
       {
-        "id": "Procedure:obf-RadiationProcedure.extension:treatmentintent",
+        "id": "Procedure.extension:treatmentintent",
         "path": "Procedure.extension",
         "definition": "The purpose of a treatment.",
         "min": 0,
@@ -2420,7 +2420,7 @@
         "sliceName": "treatmentintent"
       },
       {
-        "id": "Procedure:obf-RadiationProcedure.extension:radiationdoseperfraction",
+        "id": "Procedure.extension:radiationdoseperfraction",
         "path": "Procedure.extension",
         "definition": "The amount of radiation administered during a single session (fraction) of radiation therapy therapy.",
         "min": 0,
@@ -2443,7 +2443,7 @@
         "sliceName": "radiationdoseperfraction"
       },
       {
-        "id": "Procedure:obf-RadiationProcedure.extension:radiationfractionsdelivered",
+        "id": "Procedure.extension:radiationfractionsdelivered",
         "path": "Procedure.extension",
         "definition": "Records the total number of treatment sessions (fractions) administered during the first course of therapy. Corresponds to LOINC 21950-2 'Number of radiation treatment' [sic].",
         "min": 0,
@@ -2466,7 +2466,7 @@
         "sliceName": "radiationfractionsdelivered"
       },
       {
-        "id": "Procedure:obf-RadiationProcedure.extension:totalradiationdosedelivered",
+        "id": "Procedure.extension:totalradiationdosedelivered",
         "path": "Procedure.extension",
         "definition": "The total amount of radiation dose delivered for the course of therapy. (source: SNOMED, ASTRO)",
         "min": 0,
@@ -2489,7 +2489,7 @@
         "sliceName": "totalradiationdosedelivered"
       },
       {
-        "id": "Procedure:obf-RadiationProcedure.extension:terminationreason",
+        "id": "Procedure.extension:terminationreason",
         "path": "Procedure.extension",
         "definition": "A code explaining unplanned or premature termination of a plan of treatment, course of medication, or research study.",
         "min": 0,
@@ -2512,7 +2512,7 @@
         "sliceName": "terminationreason"
       },
       {
-        "id": "Procedure:obf-RadiationProcedure.extension:terminationreason.valueCodeableConcept",
+        "id": "Procedure.extension:terminationreason.valueCodeableConcept",
         "path": "Procedure.extension.valueCodeableConcept",
         "binding": {
           "strength": "required",
@@ -2520,7 +2520,7 @@
         }
       },
       {
-        "id": "Procedure:obf-RadiationProcedure.basedOn",
+        "id": "Procedure.basedOn",
         "path": "Procedure.basedOn",
         "min": 0,
         "max": "1",
@@ -2535,7 +2535,7 @@
         "definition": "A request for this procedure."
       },
       {
-        "id": "Procedure:obf-RadiationProcedure.partOf",
+        "id": "Procedure.partOf",
         "path": "Procedure.partOf",
         "min": 0,
         "max": "1",
@@ -2551,7 +2551,7 @@
         ]
       },
       {
-        "id": "Procedure:obf-RadiationProcedure.code",
+        "id": "Procedure.code",
         "path": "Procedure.code",
         "binding": {
           "strength": "extensible",
@@ -2559,7 +2559,7 @@
         }
       },
       {
-        "id": "Procedure:obf-RadiationProcedure.subject",
+        "id": "Procedure.subject",
         "path": "Procedure.subject",
         "type": [
           {
@@ -2571,7 +2571,7 @@
         ]
       },
       {
-        "id": "Procedure:obf-RadiationProcedure.encounter",
+        "id": "Procedure.encounter",
         "path": "Procedure.encounter",
         "type": [
           {
@@ -2583,7 +2583,7 @@
         ]
       },
       {
-        "id": "Procedure:obf-RadiationProcedure.recorder",
+        "id": "Procedure.recorder",
         "path": "Procedure.recorder",
         "type": [
           {
@@ -2599,7 +2599,7 @@
         "definition": "A human author, patient, practitioner, or related person, as opposed to an organization or device."
       },
       {
-        "id": "Procedure:obf-RadiationProcedure.asserter",
+        "id": "Procedure.asserter",
         "path": "Procedure.asserter",
         "type": [
           {
@@ -2615,11 +2615,11 @@
         "definition": "The person who provided the information, not necessarily the patient."
       },
       {
-        "id": "Procedure:obf-RadiationProcedure.performer",
+        "id": "Procedure.performer",
         "path": "Procedure.performer"
       },
       {
-        "id": "Procedure:obf-RadiationProcedure.performer.actor",
+        "id": "Procedure.performer.actor",
         "path": "Procedure.performer.actor",
         "type": [
           {
@@ -2633,7 +2633,7 @@
         "definition": "Constrains participants to classes that are accepted by FHIR as actors in procedures in STU 3."
       },
       {
-        "id": "Procedure:obf-RadiationProcedure.performer.onBehalfOf",
+        "id": "Procedure.performer.onBehalfOf",
         "path": "Procedure.performer.onBehalfOf",
         "type": [
           {
@@ -2645,7 +2645,7 @@
         ]
       },
       {
-        "id": "Procedure:obf-RadiationProcedure.location",
+        "id": "Procedure.location",
         "path": "Procedure.location",
         "type": [
           {
@@ -2657,13 +2657,13 @@
         ]
       },
       {
-        "id": "Procedure:obf-RadiationProcedure.reasonCode",
+        "id": "Procedure.reasonCode",
         "path": "Procedure.reasonCode",
         "min": 0,
         "max": "1"
       },
       {
-        "id": "Procedure:obf-RadiationProcedure.reasonReference",
+        "id": "Procedure.reasonReference",
         "path": "Procedure.reasonReference",
         "min": 0,
         "max": "1",
@@ -2682,7 +2682,7 @@
         "definition": "The justification that the procedure was performed."
       },
       {
-        "id": "Procedure:obf-RadiationProcedure.bodySite",
+        "id": "Procedure.bodySite",
         "path": "Procedure.bodySite",
         "binding": {
           "strength": "extensible",
@@ -2690,7 +2690,7 @@
         }
       },
       {
-        "id": "Procedure:obf-RadiationProcedure.bodySite.extension:laterality",
+        "id": "Procedure.bodySite.extension:laterality",
         "path": "Procedure.bodySite.extension",
         "definition": "Body side of the body location, if needed to distinguish from a similar location on the other side of the body.\n\nThe laterality element is part of BodyLocation, a flexible structure that allows the location to be determined by a single code, or a code plus laterality and/or orientation. The body location can also be specified in relation to one or more body landmarks. SNOMED CT is used in all cases.\n\n* Code only: The code should include (precoordinate) laterality and/orientation to the degree necessary to completely specify the body location.\n* Code plus laterality and/or orientation: The basic code augmented by codes specifying the body side and/or anatomical orientation.\n* Relation to landmark: The location relative to a landmark is specified by:\n1. Establishing the location and type of landmark using a body site code and optional laterality/orientation, and\n2. Specifying the direction and distance from the landmark to the body location.\n\nNote that BodyLocation is a data type (a reusable structure), not a stand-alone entity. The concept is similar to how a postal address can apply to a person, location, or organization. This contrasts with FHIR's stand-alone BodySite (aka BodyStructure in r4) which 'is not ... intended for describing the type of anatomical location but rather a specific body site on a specific patient' (FHIR 3.5).",
         "min": 0,
@@ -2704,7 +2704,7 @@
           {
             "code": "Extension",
             "profile": [
-              "http://hl7.org/fhir/us/mcode/StructureDefinition/shr-core-Laterality-extension"
+              "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-datatype-Laterality-extension"
             ]
           }
         ],
@@ -2713,7 +2713,7 @@
         "sliceName": "laterality"
       },
       {
-        "id": "Procedure:obf-RadiationProcedure.bodySite.extension:anatomicalorientation",
+        "id": "Procedure.bodySite.extension:anatomicalorientation",
         "path": "Procedure.bodySite.extension",
         "definition": "AnatomicalOrientation of the body location, if needed to distinguish from a similar location in another orientation.\nThe orientation element is part of BodyLocation, a flexible structure that allows the location to be determined by a single code, or a code plus laterality and/or orientation. The body location can also be specified in relation to one or more body landmarks. SNOMED CT is used in all cases.\n\n* Code only: The code should include (precoordinate) laterality and/orientation to the degree necessary to completely specify the body location.\n* Code plus laterality and/or orientation: The basic code augmented by codes specifying the body side and/or anatomical orientation.\n* Relation to landmark: The location relative to a landmark is specified by:\n1. Establishing the location and type of landmark using a body site code and optional laterality/orientation, and\n2. Specifying the direction and distance from the landmark to the body location.\n\nNote that BodyLocation is a data type (a reusable structure), not a stand-alone entity. The concept is similar to how a postal address can apply to a person, location, or organization. This contrasts with FHIR's stand-alone BodySite (aka BodyStructure in r4) which 'is not ... intended for describing the type of anatomical location but rather a specific body site on a specific patient' (FHIR 3.5).",
         "min": 0,
@@ -2727,7 +2727,7 @@
           {
             "code": "Extension",
             "profile": [
-              "http://hl7.org/fhir/us/mcode/StructureDefinition/shr-core-AnatomicalOrientation-extension"
+              "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-datatype-AnatomicalOrientation-extension"
             ]
           }
         ],
@@ -2736,7 +2736,7 @@
         "sliceName": "anatomicalorientation"
       },
       {
-        "id": "Procedure:obf-RadiationProcedure.bodySite.extension:relationtolandmark",
+        "id": "Procedure.bodySite.extension:relationtolandmark",
         "path": "Procedure.bodySite.extension",
         "definition": "The relationship between a landmark that helps determine a body location and the body location itself. The location relative to a landmark is specified by:\n* Specifying the location and type of landmark using a body site code and optional laterality/orientation,\n* Specifying the direction from the landmark to the body location, and\n* Specifying the distance from the landmark to the body location.\n\nThe RelationToLandmark element is part of BodyLocation, a flexible structure that allows the location to be determined by a single code, or a code plus laterality and/or orientation. The body location can also be specified in relation to one or more body landmarks. SNOMED CT is used in all cases.\n\n* Code only: The code should include (precoordinate) laterality and/orientation to the degree necessary to completely specify the body location.\n* Code plus laterality and/or orientation: The basic code augmented by codes specifying the body side and/or anatomical orientation.\n* Relation to landmark: The location relative to a landmark is specified by:\n1. Establishing the location and type of landmark using a body site code and optional laterality/orientation, and\n2. Specifying the direction and distance from the landmark to the body location.\n\nNote that BodyLocation is a data type (a reusable structure), not a stand-alone entity. The concept is similar to how a postal address can apply to a person, location, or organization. This contrasts with FHIR's stand-alone BodySite (aka BodyStructure in r4) which 'is not ... intended for describing the type of anatomical location but rather a specific body site on a specific patient' (FHIR 3.5).",
         "min": 0,
@@ -2750,7 +2750,7 @@
           {
             "code": "Extension",
             "profile": [
-              "http://hl7.org/fhir/us/mcode/StructureDefinition/shr-core-RelationToLandmark-extension"
+              "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-datatype-RelationToLandmark-extension"
             ]
           }
         ],
@@ -2759,7 +2759,7 @@
         "sliceName": "relationtolandmark"
       },
       {
-        "id": "Procedure:obf-RadiationProcedure.report",
+        "id": "Procedure.report",
         "path": "Procedure.report",
         "type": [
           {
@@ -2771,7 +2771,7 @@
         ]
       },
       {
-        "id": "Procedure:obf-RadiationProcedure.complicationDetail",
+        "id": "Procedure.complicationDetail",
         "path": "Procedure.complicationDetail",
         "type": [
           {
@@ -2783,13 +2783,13 @@
         ]
       },
       {
-        "id": "Procedure:obf-RadiationProcedure.focalDevice",
+        "id": "Procedure.focalDevice",
         "path": "Procedure.focalDevice",
         "min": 0,
         "max": "0"
       },
       {
-        "id": "Procedure:obf-RadiationProcedure.focalDevice.action",
+        "id": "Procedure.focalDevice.action",
         "path": "Procedure.focalDevice.action",
         "binding": {
           "extension": [
@@ -2804,7 +2804,7 @@
         }
       },
       {
-        "id": "Procedure:obf-RadiationProcedure.focalDevice.manipulated",
+        "id": "Procedure.focalDevice.manipulated",
         "path": "Procedure.focalDevice.manipulated",
         "type": [
           {
@@ -2816,7 +2816,7 @@
         ]
       },
       {
-        "id": "Procedure:obf-RadiationProcedure.usedReference",
+        "id": "Procedure.usedReference",
         "path": "Procedure.usedReference",
         "type": [
           {

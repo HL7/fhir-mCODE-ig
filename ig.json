@@ -193,8 +193,8 @@
     "StructureDefinition/obf-DomainResource": {
       "base": "StructureDefinition-obf-DomainResource.html"
     },
-    "StructureDefinition/shr-core-Duration": {
-      "base": "StructureDefinition-shr-core-Duration.html"
+    "StructureDefinition/obf-datatype-Duration": {
+      "base": "StructureDefinition-obf-datatype-Duration.html"
     },
     "StructureDefinition/obf-ECOGPerformanceStatus": {
       "base": "StructureDefinition-obf-ECOGPerformanceStatus.html"
@@ -334,8 +334,8 @@
     "StructureDefinition/obf-lab-MetamyelocytesNCncPtBldQnLabObs": {
       "base": "StructureDefinition-obf-lab-MetamyelocytesNCncPtBldQnLabObs.html"
     },
-    "StructureDefinition/shr-core-Money": {
-      "base": "StructureDefinition-shr-core-Money.html"
+    "StructureDefinition/obf-datatype-Money": {
+      "base": "StructureDefinition-obf-datatype-Money.html"
     },
     "StructureDefinition/obf-lab-Monocytes100WBCNFrPtBldQnAutoCntLabObs": {
       "base": "StructureDefinition-obf-lab-Monocytes100WBCNFrPtBldQnAutoCntLabObs.html"
@@ -436,8 +436,8 @@
     "StructureDefinition/obf-Role": {
       "base": "StructureDefinition-obf-Role.html"
     },
-    "StructureDefinition/shr-core-SampledData": {
-      "base": "StructureDefinition-shr-core-SampledData.html"
+    "StructureDefinition/obf-datatype-SampledData": {
+      "base": "StructureDefinition-obf-datatype-SampledData.html"
     },
     "StructureDefinition/onco-core-SecondaryCancerCondition": {
       "base": "StructureDefinition-onco-core-SecondaryCancerCondition.html"
@@ -490,8 +490,8 @@
     "StructureDefinition/obf-TaxIdentificationNumber": {
       "base": "StructureDefinition-obf-TaxIdentificationNumber.html"
     },
-    "StructureDefinition/shr-core-Timing": {
-      "base": "StructureDefinition-shr-core-Timing.html"
+    "StructureDefinition/obf-datatype-Timing": {
+      "base": "StructureDefinition-obf-datatype-Timing.html"
     },
     "StructureDefinition/onco-core-Tumor": {
       "base": "StructureDefinition-onco-core-Tumor.html"
@@ -508,8 +508,8 @@
     "StructureDefinition/vital-VitalSign": {
       "base": "StructureDefinition-vital-VitalSign.html"
     },
-    "StructureDefinition/shr-core-AnatomicalOrientation-extension": {
-      "base": "StructureDefinition-shr-core-AnatomicalOrientation-extension.html",
+    "StructureDefinition/obf-datatype-AnatomicalOrientation-extension": {
+      "base": "StructureDefinition-obf-datatype-AnatomicalOrientation-extension.html",
       "template-base": "sd-extension.html"
     },
     "StructureDefinition/obf-Annotation-extension": {
@@ -540,16 +540,16 @@
       "base": "StructureDefinition-obf-CareContext-extension.html",
       "template-base": "sd-extension.html"
     },
-    "StructureDefinition/shr-core-Category-extension": {
-      "base": "StructureDefinition-shr-core-Category-extension.html",
+    "StructureDefinition/obf-datatype-Category-extension": {
+      "base": "StructureDefinition-obf-datatype-Category-extension.html",
       "template-base": "sd-extension.html"
     },
-    "StructureDefinition/shr-core-Code-extension": {
-      "base": "StructureDefinition-shr-core-Code-extension.html",
+    "StructureDefinition/obf-datatype-Code-extension": {
+      "base": "StructureDefinition-obf-datatype-Code-extension.html",
       "template-base": "sd-extension.html"
     },
-    "StructureDefinition/shr-core-Comparator-extension": {
-      "base": "StructureDefinition-shr-core-Comparator-extension.html",
+    "StructureDefinition/obf-datatype-Comparator-extension": {
+      "base": "StructureDefinition-obf-datatype-Comparator-extension.html",
       "template-base": "sd-extension.html"
     },
     "StructureDefinition/obf-Condition-extension": {
@@ -588,36 +588,36 @@
       "base": "StructureDefinition-onco-core-HistologyMorphologyBehavior-extension.html",
       "template-base": "sd-extension.html"
     },
-    "StructureDefinition/shr-core-Identifier-extension": {
-      "base": "StructureDefinition-shr-core-Identifier-extension.html",
+    "StructureDefinition/obf-datatype-Identifier-extension": {
+      "base": "StructureDefinition-obf-datatype-Identifier-extension.html",
       "template-base": "sd-extension.html"
     },
     "StructureDefinition/onco-core-IsPrimaryTumor-extension": {
       "base": "StructureDefinition-onco-core-IsPrimaryTumor-extension.html",
       "template-base": "sd-extension.html"
     },
-    "StructureDefinition/shr-core-LandmarkLocation-extension": {
-      "base": "StructureDefinition-shr-core-LandmarkLocation-extension.html",
+    "StructureDefinition/obf-datatype-LandmarkLocation-extension": {
+      "base": "StructureDefinition-obf-datatype-LandmarkLocation-extension.html",
       "template-base": "sd-extension.html"
     },
-    "StructureDefinition/shr-core-LandmarkToBodyLocationDirection-extension": {
-      "base": "StructureDefinition-shr-core-LandmarkToBodyLocationDirection-extension.html",
+    "StructureDefinition/obf-datatype-LandmarkToBodyLocationDirection-extension": {
+      "base": "StructureDefinition-obf-datatype-LandmarkToBodyLocationDirection-extension.html",
       "template-base": "sd-extension.html"
     },
-    "StructureDefinition/shr-core-LandmarkToBodyLocationDistance-extension": {
-      "base": "StructureDefinition-shr-core-LandmarkToBodyLocationDistance-extension.html",
+    "StructureDefinition/obf-datatype-LandmarkToBodyLocationDistance-extension": {
+      "base": "StructureDefinition-obf-datatype-LandmarkToBodyLocationDistance-extension.html",
       "template-base": "sd-extension.html"
     },
-    "StructureDefinition/shr-core-LandmarkType-extension": {
-      "base": "StructureDefinition-shr-core-LandmarkType-extension.html",
+    "StructureDefinition/obf-datatype-LandmarkType-extension": {
+      "base": "StructureDefinition-obf-datatype-LandmarkType-extension.html",
       "template-base": "sd-extension.html"
     },
-    "StructureDefinition/shr-core-Laterality-extension": {
-      "base": "StructureDefinition-shr-core-Laterality-extension.html",
+    "StructureDefinition/obf-datatype-Laterality-extension": {
+      "base": "StructureDefinition-obf-datatype-Laterality-extension.html",
       "template-base": "sd-extension.html"
     },
-    "StructureDefinition/shr-core-LowerBound-extension": {
-      "base": "StructureDefinition-shr-core-LowerBound-extension.html",
+    "StructureDefinition/obf-datatype-LowerBound-extension": {
+      "base": "StructureDefinition-obf-datatype-LowerBound-extension.html",
       "template-base": "sd-extension.html"
     },
     "StructureDefinition/obf-MedicationCodeOrReference-extension": {
@@ -628,12 +628,12 @@
       "base": "StructureDefinition-obf-Method-extension.html",
       "template-base": "sd-extension.html"
     },
-    "StructureDefinition/shr-core-Number-extension": {
-      "base": "StructureDefinition-shr-core-Number-extension.html",
+    "StructureDefinition/obf-datatype-Number-extension": {
+      "base": "StructureDefinition-obf-datatype-Number-extension.html",
       "template-base": "sd-extension.html"
     },
-    "StructureDefinition/shr-core-OccurrenceTimeOrPeriod-extension": {
-      "base": "StructureDefinition-shr-core-OccurrenceTimeOrPeriod-extension.html",
+    "StructureDefinition/obf-datatype-OccurrenceTimeOrPeriod-extension": {
+      "base": "StructureDefinition-obf-datatype-OccurrenceTimeOrPeriod-extension.html",
       "template-base": "sd-extension.html"
     },
     "StructureDefinition/obf-OnBehalfOf-extension": {
@@ -672,12 +672,12 @@
       "base": "StructureDefinition-onco-core-PrimaryCancerCondition-extension.html",
       "template-base": "sd-extension.html"
     },
-    "StructureDefinition/shr-core-PriorityCode-extension": {
-      "base": "StructureDefinition-shr-core-PriorityCode-extension.html",
+    "StructureDefinition/obf-datatype-PriorityCode-extension": {
+      "base": "StructureDefinition-obf-datatype-PriorityCode-extension.html",
       "template-base": "sd-extension.html"
     },
-    "StructureDefinition/shr-core-PriorityRank-extension": {
-      "base": "StructureDefinition-shr-core-PriorityRank-extension.html",
+    "StructureDefinition/obf-datatype-PriorityRank-extension": {
+      "base": "StructureDefinition-obf-datatype-PriorityRank-extension.html",
       "template-base": "sd-extension.html"
     },
     "StructureDefinition/obf-RadiationDosePerFraction-extension": {
@@ -704,8 +704,8 @@
       "base": "StructureDefinition-onco-core-RegionStudied-extension.html",
       "template-base": "sd-extension.html"
     },
-    "StructureDefinition/shr-core-RelationToLandmark-extension": {
-      "base": "StructureDefinition-shr-core-RelationToLandmark-extension.html",
+    "StructureDefinition/obf-datatype-RelationToLandmark-extension": {
+      "base": "StructureDefinition-obf-datatype-RelationToLandmark-extension.html",
       "template-base": "sd-extension.html"
     },
     "StructureDefinition/obf-RequestIntent-extension": {
@@ -740,12 +740,12 @@
       "base": "StructureDefinition-obf-TerminationReason-extension.html",
       "template-base": "sd-extension.html"
     },
-    "StructureDefinition/shr-core-Text-extension": {
-      "base": "StructureDefinition-shr-core-Text-extension.html",
+    "StructureDefinition/obf-datatype-Text-extension": {
+      "base": "StructureDefinition-obf-datatype-Text-extension.html",
       "template-base": "sd-extension.html"
     },
-    "StructureDefinition/shr-core-TimePeriod-extension": {
-      "base": "StructureDefinition-shr-core-TimePeriod-extension.html",
+    "StructureDefinition/obf-datatype-TimePeriod-extension": {
+      "base": "StructureDefinition-obf-datatype-TimePeriod-extension.html",
       "template-base": "sd-extension.html"
     },
     "StructureDefinition/obf-TotalRadiationDoseDelivered-extension": {
@@ -756,16 +756,16 @@
       "base": "StructureDefinition-obf-TreatmentIntent-extension.html",
       "template-base": "sd-extension.html"
     },
-    "StructureDefinition/shr-core-Type-extension": {
-      "base": "StructureDefinition-shr-core-Type-extension.html",
+    "StructureDefinition/obf-datatype-Type-extension": {
+      "base": "StructureDefinition-obf-datatype-Type-extension.html",
       "template-base": "sd-extension.html"
     },
-    "StructureDefinition/shr-core-Units-extension": {
-      "base": "StructureDefinition-shr-core-Units-extension.html",
+    "StructureDefinition/obf-datatype-Units-extension": {
+      "base": "StructureDefinition-obf-datatype-Units-extension.html",
       "template-base": "sd-extension.html"
     },
-    "StructureDefinition/shr-core-UpperBound-extension": {
-      "base": "StructureDefinition-shr-core-UpperBound-extension.html",
+    "StructureDefinition/obf-datatype-UpperBound-extension": {
+      "base": "StructureDefinition-obf-datatype-UpperBound-extension.html",
       "template-base": "sd-extension.html"
     },
     "StructureDefinition/onco-core-VariantDescription-extension": {
@@ -787,11 +787,11 @@
     "ValueSet/obf-AbnormalBodyStructureVS": {
       "base": "ValueSet-obf-AbnormalBodyStructureVS.html"
     },
-    "ValueSet/shr-core-AnatomicalDirectionVS": {
-      "base": "ValueSet-shr-core-AnatomicalDirectionVS.html"
+    "ValueSet/obf-datatype-AnatomicalDirectionVS": {
+      "base": "ValueSet-obf-datatype-AnatomicalDirectionVS.html"
     },
-    "ValueSet/shr-core-AnatomicalOrientationVS": {
-      "base": "ValueSet-shr-core-AnatomicalOrientationVS.html"
+    "ValueSet/obf-datatype-AnatomicalOrientationVS": {
+      "base": "ValueSet-obf-datatype-AnatomicalOrientationVS.html"
     },
     "ValueSet/vital-BloodPressureBodyLocationVS": {
       "base": "ValueSet-vital-BloodPressureBodyLocationVS.html"
@@ -811,8 +811,8 @@
     "ValueSet/vital-BodyHeightPreconditionVS": {
       "base": "ValueSet-vital-BodyHeightPreconditionVS.html"
     },
-    "ValueSet/shr-core-BodyLocationVS": {
-      "base": "ValueSet-shr-core-BodyLocationVS.html"
+    "ValueSet/obf-datatype-BodyLocationVS": {
+      "base": "ValueSet-obf-datatype-BodyLocationVS.html"
     },
     "ValueSet/vital-BodyPositionVS": {
       "base": "ValueSet-vital-BodyPositionVS.html"
@@ -853,8 +853,8 @@
     "ValueSet/obf-ComorbidConditionVS": {
       "base": "ValueSet-obf-ComorbidConditionVS.html"
     },
-    "ValueSet/shr-core-ConditionStatusTrendVS": {
-      "base": "ValueSet-shr-core-ConditionStatusTrendVS.html"
+    "ValueSet/obf-datatype-ConditionStatusTrendVS": {
+      "base": "ValueSet-obf-datatype-ConditionStatusTrendVS.html"
     },
     "ValueSet/obf-ECOGPerformanceStatusVS": {
       "base": "ValueSet-obf-ECOGPerformanceStatusVS.html"
@@ -895,11 +895,11 @@
     "ValueSet/obf-KarnofskyPerformanceStatusVS": {
       "base": "ValueSet-obf-KarnofskyPerformanceStatusVS.html"
     },
-    "ValueSet/shr-core-LandmarkTypeVS": {
-      "base": "ValueSet-shr-core-LandmarkTypeVS.html"
+    "ValueSet/obf-datatype-LandmarkTypeVS": {
+      "base": "ValueSet-obf-datatype-LandmarkTypeVS.html"
     },
-    "ValueSet/shr-core-PositiveNegativeVS": {
-      "base": "ValueSet-shr-core-PositiveNegativeVS.html"
+    "ValueSet/obf-datatype-PositiveNegativeVS": {
+      "base": "ValueSet-obf-datatype-PositiveNegativeVS.html"
     },
     "ValueSet/onco-core-PrimaryOrUncertainBehaviorCancerDisorderVS": {
       "base": "ValueSet-onco-core-PrimaryOrUncertainBehaviorCancerDisorderVS.html"
@@ -919,8 +919,8 @@
     "ValueSet/onco-core-SecondaryCancerDisorderVS": {
       "base": "ValueSet-onco-core-SecondaryCancerDisorderVS.html"
     },
-    "ValueSet/shr-core-SettingVS": {
-      "base": "ValueSet-shr-core-SettingVS.html"
+    "ValueSet/obf-datatype-SettingVS": {
+      "base": "ValueSet-obf-datatype-SettingVS.html"
     },
     "ValueSet/obf-StudyArmTypeVS": {
       "base": "ValueSet-obf-StudyArmTypeVS.html"
@@ -955,17 +955,17 @@
     "ValueSet/onco-core-TumorMarkerTestVS": {
       "base": "ValueSet-onco-core-TumorMarkerTestVS.html"
     },
-    "ValueSet/shr-core-UnitsOfLengthVS": {
-      "base": "ValueSet-shr-core-UnitsOfLengthVS.html"
+    "ValueSet/obf-datatype-UnitsOfLengthVS": {
+      "base": "ValueSet-obf-datatype-UnitsOfLengthVS.html"
     },
-    "ValueSet/shr-core-YesNoUnknownVS": {
-      "base": "ValueSet-shr-core-YesNoUnknownVS.html"
+    "ValueSet/obf-datatype-YesNoUnknownVS": {
+      "base": "ValueSet-obf-datatype-YesNoUnknownVS.html"
     },
     "CodeSystem/obf-ResearchSubjectTerminationReasonCS": {
       "base": "CodeSystem-obf-ResearchSubjectTerminationReasonCS.html"
     },
-    "CodeSystem/shr-core-SettingCS": {
-      "base": "CodeSystem-shr-core-SettingCS.html"
+    "CodeSystem/obf-datatype-SettingCS": {
+      "base": "CodeSystem-obf-datatype-SettingCS.html"
     },
     "Observation/mCODEGeneticVariantFoundExample01": {
       "base": "Observation-mCODEGeneticVariantFoundExample01.html",

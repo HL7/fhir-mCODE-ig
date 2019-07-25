@@ -36,7 +36,7 @@
   </thead>
   <tbody>
     <tr>
-          <td><a href="ValueSet-shr-core-AnatomicalOrientationVS.html">AnatomicalOrientationVS</a></td>
+          <td><a href="ValueSet-obf-datatype-AnatomicalOrientationVS.html">AnatomicalOrientationVS</a></td>
           <td>{% capture md_text %}Terms that specify anatomical orientation. The orientation value set is part of BodyLocation, a flexible structure that allows the location to be determined by a single code, or a code plus laterality and/or orientation. The body location can also be specified in relation to one or more body landmarks. SNOMED CT is used in all cases.
 
 * Code only: The code should include (precoordinate) laterality and/orientation to the degree necessary to completely specify the body location.
@@ -68,7 +68,7 @@ Note that BodyLocation is a data type (a reusable structure), not a stand-alone 
           <td>{% capture md_text %}Circumstance for measuring body height.{% endcapture %}{{ md_text | markdownify }}</td>
         </tr>
         <tr>
-          <td><a href="ValueSet-shr-core-BodyLocationVS.html">BodyLocationVS</a></td>
+          <td><a href="ValueSet-obf-datatype-BodyLocationVS.html">BodyLocationVS</a></td>
           <td>{% capture md_text %}Codes that describe normal and pathologic anatomic systems, regions, cavities, and spaces. The code set includes codes from the SNOMED CT hierarchy descending from 123037004 'Body Structure'.
 
 Body location is a flexible structure that allows the location to be determined by a single code, or a code plus laterality and/or orientation. The body location can also be specified in relation to one or more body landmarks. SNOMED CT is used in all cases.
@@ -130,7 +130,7 @@ Conformance note: If an ICD-10-PCS code is used, and a semantically equivalent S
 Conformance note: If an ICD-10-CM code is used, and an equivalent SNOMED-CT code is available, the resulting instance will not validate against US Core Profiles.{% endcapture %}{{ md_text | markdownify }}</td>
         </tr>
         <tr>
-          <td><a href="ValueSet-shr-core-ConditionStatusTrendVS.html">ConditionStatusTrendVS</a></td>
+          <td><a href="ValueSet-obf-datatype-ConditionStatusTrendVS.html">ConditionStatusTrendVS</a></td>
           <td>{% capture md_text %}Standardized value set that describes the trend or status of a disease, condition, or ability. Based on LOINC answer lists LL2751-7 and LL4721-8. The value SNOMED-CT 260415000 (Not Detected) should be used to express No Evidence of Disease (NED), condition resolved, or full remission.{% endcapture %}{{ md_text | markdownify }}</td>
         </tr>
         <tr>
@@ -186,7 +186,7 @@ Conformance note: To be conformant to US Core, a LOINC code must be used, if ava
           <td>{% capture md_text %}Value set for Karnofsky Performance Status, with codes for each decade from 100 to 0. Higher scores are associated with better functional status, with 100 representing no symptoms or evidence of disease, and 0 representing death. This value set corresponds to LOINC list LL4986-7{% endcapture %}{{ md_text | markdownify }}</td>
         </tr>
         <tr>
-          <td><a href="ValueSet-shr-core-PositiveNegativeVS.html">PositiveNegativeVS</a></td>
+          <td><a href="ValueSet-obf-datatype-PositiveNegativeVS.html">PositiveNegativeVS</a></td>
           <td>{% capture md_text %}Interpretation of a test result as positive, negative, equivocal, or indeterminate. Consolidates LOINC answer lists LL360-9, LL2329-2, LL2038-9, LL2021-5, LL2010-8, LL2009-0.{% endcapture %}{{ md_text | markdownify }}</td>
         </tr>
         <tr>
@@ -375,11 +375,11 @@ FHIR implementation note: At the current time, profiles for the specific LOINC t
         <td>{% capture md_text %}This value set defines the set of codes that can be used to indicate the marital status of a person.{% endcapture %}{{ md_text | markdownify }}</td>
       </tr>
       <tr>
-        <td><a href="http://hl7.org/fhir/ValueSet/medication-statement-status">Medication Status Codes</a></td>
+        <td><a href="http://hl7.org/fhir/ValueSet/medication-statement-category">Medication Status Codes</a></td>
         <td>{% capture md_text %}Medication Status Codes{% endcapture %}{{ md_text | markdownify }}</td>
       </tr>
       <tr>
-        <td><a href="http://hl7.org/fhir/ValueSet/medication-statement-category">Medication Status Codes</a></td>
+        <td><a href="http://hl7.org/fhir/ValueSet/medication-statement-status">Medication Status Codes</a></td>
         <td>{% capture md_text %}Medication Status Codes{% endcapture %}{{ md_text | markdownify }}</td>
       </tr>
       <tr>

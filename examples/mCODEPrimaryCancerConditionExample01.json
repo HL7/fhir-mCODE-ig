@@ -102,7 +102,7 @@
       ],
       "extension": [
         {
-          "url": "http://hl7.org/fhir/us/mcode/StructureDefinition/shr-core-Laterality-extension",
+          "url": "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-datatype-Laterality-extension",
           "valueCodeableConcept": {
             "coding": [
               {

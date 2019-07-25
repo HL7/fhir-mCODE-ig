@@ -8,7 +8,7 @@
   "url": "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-TaxIdentificationNumber",
   "name": "TaxIdentificationNumber",
   "status": "active",
-  "date": "2019-07-24",
+  "date": "2019-07-25",
   "publisher": "The MITRE Corporation",
   "contact": [
     {
@@ -48,7 +48,7 @@
   "snapshot": {
     "element": [
       {
-        "id": "Identifier:obf-TaxIdentificationNumber",
+        "id": "Identifier",
         "extension": [
           {
             "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
@@ -103,7 +103,7 @@
         ]
       },
       {
-        "id": "Identifier:obf-TaxIdentificationNumber.id",
+        "id": "Identifier.id",
         "path": "Identifier.id",
         "representation": [
           "xmlAttr"
@@ -132,7 +132,7 @@
         ]
       },
       {
-        "id": "Identifier:obf-TaxIdentificationNumber.extension",
+        "id": "Identifier.extension",
         "path": "Identifier.extension",
         "slicing": {
           "discriminator": [
@@ -173,7 +173,7 @@
         ]
       },
       {
-        "id": "Identifier:obf-TaxIdentificationNumber.use",
+        "id": "Identifier.use",
         "path": "Identifier.use",
         "short": "usual | official | temp | secondary | old (If known)",
         "definition": "The purpose of this identifier.",
@@ -217,7 +217,7 @@
         ]
       },
       {
-        "id": "Identifier:obf-TaxIdentificationNumber.type",
+        "id": "Identifier.type",
         "path": "Identifier.type",
         "short": "Description of identifier",
         "definition": "A coded type for the identifier that can be used to determine which identifier to use for a specific purpose.",
@@ -264,7 +264,7 @@
         ]
       },
       {
-        "id": "Identifier:obf-TaxIdentificationNumber.type.id",
+        "id": "Identifier.type.id",
         "path": "Identifier.type.id",
         "representation": [
           "xmlAttr"
@@ -293,7 +293,7 @@
         ]
       },
       {
-        "id": "Identifier:obf-TaxIdentificationNumber.type.extension",
+        "id": "Identifier.type.extension",
         "path": "Identifier.type.extension",
         "slicing": {
           "discriminator": [
@@ -334,7 +334,7 @@
         ]
       },
       {
-        "id": "Identifier:obf-TaxIdentificationNumber.type.coding",
+        "id": "Identifier.type.coding",
         "path": "Identifier.type.coding",
         "short": "Code defined by a terminology system",
         "definition": "A reference to a code defined by a terminology system.",
@@ -381,7 +381,7 @@
         }
       },
       {
-        "id": "Identifier:obf-TaxIdentificationNumber.type.coding:Fixed_TAX",
+        "id": "Identifier.type.coding:Fixed_TAX",
         "path": "Identifier.type.coding",
         "sliceName": "Fixed_TAX",
         "short": "Code defined by a terminology system",
@@ -401,7 +401,7 @@
         "isSummary": true
       },
       {
-        "id": "Identifier:obf-TaxIdentificationNumber.type.coding:Fixed_TAX.id",
+        "id": "Identifier.type.coding:Fixed_TAX.id",
         "path": "Identifier.type.coding.id",
         "representation": [
           "xmlAttr"
@@ -430,7 +430,7 @@
         ]
       },
       {
-        "id": "Identifier:obf-TaxIdentificationNumber.type.coding:Fixed_TAX.extension",
+        "id": "Identifier.type.coding:Fixed_TAX.extension",
         "path": "Identifier.type.coding.extension",
         "slicing": {
           "discriminator": [
@@ -471,7 +471,7 @@
         ]
       },
       {
-        "id": "Identifier:obf-TaxIdentificationNumber.type.coding:Fixed_TAX.system",
+        "id": "Identifier.type.coding:Fixed_TAX.system",
         "path": "Identifier.type.coding.system",
         "short": "Identity of the terminology system",
         "definition": "The identification of the code system that defines the meaning of the symbol in the code.",
@@ -508,7 +508,7 @@
         "fixedUri": "http://terminology.hl7.org/CodeSystem/v2-0203"
       },
       {
-        "id": "Identifier:obf-TaxIdentificationNumber.type.coding:Fixed_TAX.version",
+        "id": "Identifier.type.coding:Fixed_TAX.version",
         "path": "Identifier.type.coding.version",
         "short": "Version of the system - if relevant",
         "definition": "The version of the code system which was used when choosing this code. Note that a well-maintained code system does not need the version reported, because the meaning of codes is consistent across versions. However this cannot consistently be assured, and when the meaning is not guaranteed to be consistent, the version SHOULD be exchanged.",
@@ -543,7 +543,7 @@
         ]
       },
       {
-        "id": "Identifier:obf-TaxIdentificationNumber.type.coding:Fixed_TAX.code",
+        "id": "Identifier.type.coding:Fixed_TAX.code",
         "path": "Identifier.type.coding.code",
         "short": "Symbol in syntax defined by the system",
         "definition": "A symbol in syntax defined by the system. The symbol may be a predefined code or an expression in a syntax defined by the coding system (e.g. post-coordination).",
@@ -579,7 +579,7 @@
         "fixedCode": "TAX"
       },
       {
-        "id": "Identifier:obf-TaxIdentificationNumber.type.coding:Fixed_TAX.display",
+        "id": "Identifier.type.coding:Fixed_TAX.display",
         "extension": [
           {
             "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable",
@@ -620,7 +620,7 @@
         ]
       },
       {
-        "id": "Identifier:obf-TaxIdentificationNumber.type.coding:Fixed_TAX.userSelected",
+        "id": "Identifier.type.coding:Fixed_TAX.userSelected",
         "path": "Identifier.type.coding.userSelected",
         "short": "If this coding was chosen directly by the user",
         "definition": "Indicates that this coding was chosen by a user directly - e.g. off a pick list of available items (codes or displays).",
@@ -656,7 +656,7 @@
         ]
       },
       {
-        "id": "Identifier:obf-TaxIdentificationNumber.type.text",
+        "id": "Identifier.type.text",
         "extension": [
           {
             "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable",
@@ -698,7 +698,7 @@
         ]
       },
       {
-        "id": "Identifier:obf-TaxIdentificationNumber.system",
+        "id": "Identifier.system",
         "path": "Identifier.system",
         "short": "The namespace for the identifier value",
         "definition": "Establishes the namespace for the value - that is, a URL that describes a set values that are unique.",
@@ -734,7 +734,7 @@
         ]
       },
       {
-        "id": "Identifier:obf-TaxIdentificationNumber.value",
+        "id": "Identifier.value",
         "path": "Identifier.value",
         "short": "The value that is unique",
         "definition": "The portion of the identifier typically relevant to the user and which is unique within the context of the system.",
@@ -769,7 +769,7 @@
         ]
       },
       {
-        "id": "Identifier:obf-TaxIdentificationNumber.period",
+        "id": "Identifier.period",
         "path": "Identifier.period",
         "short": "Time period when id is/was valid for use",
         "definition": "Time period during which identifier is/was valid for use.",
@@ -803,7 +803,7 @@
         ]
       },
       {
-        "id": "Identifier:obf-TaxIdentificationNumber.assigner",
+        "id": "Identifier.assigner",
         "path": "Identifier.assigner",
         "short": "Organization that issued id (may be just text)",
         "definition": "Organization that issued/manages the identifier.",
@@ -845,20 +845,20 @@
   "differential": {
     "element": [
       {
-        "id": "Identifier:obf-TaxIdentificationNumber",
+        "id": "Identifier",
         "path": "Identifier",
         "short": "obf-TaxIdentificationNumber",
         "definition": "Tax identification number for the practitioner.",
         "isModifier": false
       },
       {
-        "id": "Identifier:obf-TaxIdentificationNumber.type",
+        "id": "Identifier.type",
         "path": "Identifier.type",
         "min": 1,
         "max": "1"
       },
       {
-        "id": "Identifier:obf-TaxIdentificationNumber.type.coding",
+        "id": "Identifier.type.coding",
         "path": "Identifier.type.coding",
         "slicing": {
           "id": "1",
@@ -875,7 +875,7 @@
         "max": "*"
       },
       {
-        "id": "Identifier:obf-TaxIdentificationNumber.type.coding:Fixed_TAX",
+        "id": "Identifier.type.coding:Fixed_TAX",
         "path": "Identifier.type.coding",
         "sliceName": "Fixed_TAX",
         "short": "Code defined by a terminology system",
@@ -895,12 +895,12 @@
         "isSummary": true
       },
       {
-        "id": "Identifier:obf-TaxIdentificationNumber.type.coding:Fixed_TAX.system",
+        "id": "Identifier.type.coding:Fixed_TAX.system",
         "path": "Identifier.type.coding.system",
         "fixedUri": "http://terminology.hl7.org/CodeSystem/v2-0203"
       },
       {
-        "id": "Identifier:obf-TaxIdentificationNumber.type.coding:Fixed_TAX.code",
+        "id": "Identifier.type.coding:Fixed_TAX.code",
         "path": "Identifier.type.coding.code",
         "fixedCode": "TAX"
       }

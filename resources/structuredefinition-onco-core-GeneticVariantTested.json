@@ -10,7 +10,7 @@
   "title": "onco-core-GeneticVariantTested",
   "status": "active",
   "experimental": false,
-  "date": "2019-07-24",
+  "date": "2019-07-25",
   "publisher": "The MITRE Corporation",
   "contact": [
     {
@@ -80,7 +80,7 @@
   "snapshot": {
     "element": [
       {
-        "id": "Observation:onco-core-GeneticVariantTested",
+        "id": "Observation",
         "path": "Observation",
         "short": "onco-core-GeneticVariantTested",
         "definition": "A test for a specific mutation on a particular gene. This profile is used to record whether a single discrete variant tested is present or absent (denoted as positive or negative respectively).",
@@ -204,7 +204,7 @@
         ]
       },
       {
-        "id": "Observation:onco-core-GeneticVariantTested.id",
+        "id": "Observation.id",
         "path": "Observation.id",
         "short": "Logical id of this artifact",
         "definition": "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.",
@@ -225,7 +225,7 @@
         "isSummary": true
       },
       {
-        "id": "Observation:onco-core-GeneticVariantTested.meta",
+        "id": "Observation.meta",
         "path": "Observation.meta",
         "short": "Metadata about the resource",
         "definition": "The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.",
@@ -245,7 +245,7 @@
         "isSummary": true
       },
       {
-        "id": "Observation:onco-core-GeneticVariantTested.implicitRules",
+        "id": "Observation.implicitRules",
         "path": "Observation.implicitRules",
         "short": "A set of rules under which this content was created",
         "definition": "A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.",
@@ -267,7 +267,7 @@
         "isSummary": true
       },
       {
-        "id": "Observation:onco-core-GeneticVariantTested.language",
+        "id": "Observation.language",
         "path": "Observation.language",
         "short": "Language of the resource content",
         "definition": "The base language in which the resource is written.",
@@ -307,7 +307,7 @@
         }
       },
       {
-        "id": "Observation:onco-core-GeneticVariantTested.text",
+        "id": "Observation.text",
         "path": "Observation.text",
         "short": "Text summary of the resource, for human interpretation",
         "definition": "A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.",
@@ -340,7 +340,7 @@
         ]
       },
       {
-        "id": "Observation:onco-core-GeneticVariantTested.contained",
+        "id": "Observation.contained",
         "path": "Observation.contained",
         "short": "Contained, inline Resources",
         "definition": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope.",
@@ -372,7 +372,7 @@
         ]
       },
       {
-        "id": "Observation:onco-core-GeneticVariantTested.extension",
+        "id": "Observation.extension",
         "path": "Observation.extension",
         "short": "Additional content defined by implementations",
         "definition": "May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
@@ -414,7 +414,7 @@
         }
       },
       {
-        "id": "Observation:onco-core-GeneticVariantTested.extension:genestudied",
+        "id": "Observation.extension:genestudied",
         "path": "Observation.extension",
         "definition": "A gene targeted for mutation analysis, identified in HUGO Gene Nomenclature Committee (HGNC) notation. The required code is HGNC gene ID. Gene IDs are of the format HGNC:n, where n is a unique number. Only the number, n, should be given as the code. For example, the HGNC identifier for the EGFR gene is 3236. The display text associated with the code should be the HGNC official gene symbol. For example, the official gene symbol for epidermal growth factor receptor is EGFR.",
         "min": 0,
@@ -438,7 +438,7 @@
         "mustSupport": true
       },
       {
-        "id": "Observation:onco-core-GeneticVariantTested.extension:varianttested",
+        "id": "Observation.extension:varianttested",
         "path": "Observation.extension",
         "definition": "The specific genetic variant that is targeted by this test.",
         "min": 1,
@@ -462,7 +462,7 @@
         "mustSupport": true
       },
       {
-        "id": "Observation:onco-core-GeneticVariantTested.modifierExtension",
+        "id": "Observation.modifierExtension",
         "path": "Observation.modifierExtension",
         "short": "Extensions that cannot be ignored",
         "definition": "May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
@@ -495,7 +495,7 @@
         ]
       },
       {
-        "id": "Observation:onco-core-GeneticVariantTested.identifier",
+        "id": "Observation.identifier",
         "path": "Observation.identifier",
         "short": "Business Identifier for observation",
         "definition": "A unique identifier assigned to this observation.",
@@ -545,7 +545,7 @@
         }
       },
       {
-        "id": "Observation:onco-core-GeneticVariantTested.identifier:obf-AccessionIdentifier",
+        "id": "Observation.identifier:obf-AccessionIdentifier",
         "path": "Observation.identifier",
         "short": "AccessionIdentifier: Identifier assigned by the lab",
         "definition": "Identifier assigned by the lab",
@@ -587,7 +587,7 @@
         "sliceName": "obf-AccessionIdentifier"
       },
       {
-        "id": "Observation:onco-core-GeneticVariantTested.identifier:obf-FillerOrderNumber",
+        "id": "Observation.identifier:obf-FillerOrderNumber",
         "path": "Observation.identifier",
         "short": "FillerOrderNumber: Identifier assigned by the lab carrying out the test",
         "definition": "Identifier assigned by the lab carrying out the test.",
@@ -629,7 +629,7 @@
         "sliceName": "obf-FillerOrderNumber"
       },
       {
-        "id": "Observation:onco-core-GeneticVariantTested.identifier:obf-PlacerOrderNumber",
+        "id": "Observation.identifier:obf-PlacerOrderNumber",
         "path": "Observation.identifier",
         "short": "PlacerOrderNumber: Identifier assigned by the requester of the lab",
         "definition": "Identifier assigned by the requester of the lab.",
@@ -671,7 +671,7 @@
         "sliceName": "obf-PlacerOrderNumber"
       },
       {
-        "id": "Observation:onco-core-GeneticVariantTested.basedOn",
+        "id": "Observation.basedOn",
         "path": "Observation.basedOn",
         "short": "Fulfills plan, proposal or order",
         "definition": "A plan, proposal or order that is fulfilled in whole or in part by this event.  For example, a MedicationRequest may require a patient to have laboratory test performed before  it is dispensed.",
@@ -713,7 +713,7 @@
         ]
       },
       {
-        "id": "Observation:onco-core-GeneticVariantTested.partOf",
+        "id": "Observation.partOf",
         "path": "Observation.partOf",
         "short": "A larger event of which this particular Observation is a component or step. For example, an observation as part of a procedure.",
         "definition": "A larger event of which this particular Observation is a component or step. For example, an observation as part of a procedure.",
@@ -756,7 +756,7 @@
         ]
       },
       {
-        "id": "Observation:onco-core-GeneticVariantTested.status",
+        "id": "Observation.status",
         "extension": [
           {
             "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-display-hint",
@@ -816,7 +816,7 @@
         ]
       },
       {
-        "id": "Observation:onco-core-GeneticVariantTested.category",
+        "id": "Observation.category",
         "path": "Observation.category",
         "slicing": {
           "discriminator": [
@@ -873,7 +873,7 @@
         ]
       },
       {
-        "id": "Observation:onco-core-GeneticVariantTested.category.extension",
+        "id": "Observation.category.extension",
         "path": "Observation.category.extension",
         "slicing": {
           "discriminator": [
@@ -914,7 +914,7 @@
         ]
       },
       {
-        "id": "Observation:onco-core-GeneticVariantTested.category.coding",
+        "id": "Observation.category.coding",
         "path": "Observation.category.coding",
         "short": "Code defined by a terminology system",
         "definition": "A reference to a code defined by a terminology system.",
@@ -961,7 +961,7 @@
         }
       },
       {
-        "id": "Observation:onco-core-GeneticVariantTested.category.coding:Fixed_laboratory",
+        "id": "Observation.category.coding:Fixed_laboratory",
         "path": "Observation.category.coding",
         "sliceName": "Fixed_laboratory",
         "short": "Code defined by a terminology system",
@@ -981,7 +981,7 @@
         "isSummary": true
       },
       {
-        "id": "Observation:onco-core-GeneticVariantTested.category.coding:Fixed_laboratory.id",
+        "id": "Observation.category.coding:Fixed_laboratory.id",
         "path": "Observation.category.coding.id",
         "representation": [
           "xmlAttr"
@@ -1010,7 +1010,7 @@
         ]
       },
       {
-        "id": "Observation:onco-core-GeneticVariantTested.category.coding:Fixed_laboratory.extension",
+        "id": "Observation.category.coding:Fixed_laboratory.extension",
         "path": "Observation.category.coding.extension",
         "slicing": {
           "discriminator": [
@@ -1051,7 +1051,7 @@
         ]
       },
       {
-        "id": "Observation:onco-core-GeneticVariantTested.category.coding:Fixed_laboratory.system",
+        "id": "Observation.category.coding:Fixed_laboratory.system",
         "path": "Observation.category.coding.system",
         "short": "Identity of the terminology system",
         "definition": "The identification of the code system that defines the meaning of the symbol in the code.",
@@ -1088,7 +1088,7 @@
         "fixedUri": "http://terminology.hl7.org/CodeSystem/observation-category"
       },
       {
-        "id": "Observation:onco-core-GeneticVariantTested.category.coding:Fixed_laboratory.version",
+        "id": "Observation.category.coding:Fixed_laboratory.version",
         "path": "Observation.category.coding.version",
         "short": "Version of the system - if relevant",
         "definition": "The version of the code system which was used when choosing this code. Note that a well-maintained code system does not need the version reported, because the meaning of codes is consistent across versions. However this cannot consistently be assured, and when the meaning is not guaranteed to be consistent, the version SHOULD be exchanged.",
@@ -1123,7 +1123,7 @@
         ]
       },
       {
-        "id": "Observation:onco-core-GeneticVariantTested.category.coding:Fixed_laboratory.code",
+        "id": "Observation.category.coding:Fixed_laboratory.code",
         "path": "Observation.category.coding.code",
         "short": "Symbol in syntax defined by the system",
         "definition": "A symbol in syntax defined by the system. The symbol may be a predefined code or an expression in a syntax defined by the coding system (e.g. post-coordination).",
@@ -1159,7 +1159,7 @@
         "fixedCode": "laboratory"
       },
       {
-        "id": "Observation:onco-core-GeneticVariantTested.category.coding:Fixed_laboratory.display",
+        "id": "Observation.category.coding:Fixed_laboratory.display",
         "extension": [
           {
             "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable",
@@ -1200,7 +1200,7 @@
         ]
       },
       {
-        "id": "Observation:onco-core-GeneticVariantTested.category.coding:Fixed_laboratory.userSelected",
+        "id": "Observation.category.coding:Fixed_laboratory.userSelected",
         "path": "Observation.category.coding.userSelected",
         "short": "If this coding was chosen directly by the user",
         "definition": "Indicates that this coding was chosen by a user directly - e.g. off a pick list of available items (codes or displays).",
@@ -1236,7 +1236,7 @@
         ]
       },
       {
-        "id": "Observation:onco-core-GeneticVariantTested.category.text",
+        "id": "Observation.category.text",
         "extension": [
           {
             "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable",
@@ -1278,7 +1278,7 @@
         ]
       },
       {
-        "id": "Observation:onco-core-GeneticVariantTested.category:laboratory",
+        "id": "Observation.category:laboratory",
         "path": "Observation.category",
         "sliceName": "laboratory",
         "short": "Classification of  type of observation",
@@ -1335,7 +1335,7 @@
         ]
       },
       {
-        "id": "Observation:onco-core-GeneticVariantTested.code",
+        "id": "Observation.code",
         "path": "Observation.code",
         "short": "Laboratory Test Name",
         "definition": "The test that was performed.  A LOINC **SHALL** be used if the concept is present in LOINC.",
@@ -1398,7 +1398,7 @@
         ]
       },
       {
-        "id": "Observation:onco-core-GeneticVariantTested.code.id",
+        "id": "Observation.code.id",
         "path": "Observation.code.id",
         "representation": [
           "xmlAttr"
@@ -1427,7 +1427,7 @@
         ]
       },
       {
-        "id": "Observation:onco-core-GeneticVariantTested.code.extension",
+        "id": "Observation.code.extension",
         "path": "Observation.code.extension",
         "slicing": {
           "discriminator": [
@@ -1468,7 +1468,7 @@
         ]
       },
       {
-        "id": "Observation:onco-core-GeneticVariantTested.code.coding",
+        "id": "Observation.code.coding",
         "path": "Observation.code.coding",
         "short": "Code defined by a terminology system",
         "definition": "A reference to a code defined by a terminology system.",
@@ -1515,7 +1515,7 @@
         }
       },
       {
-        "id": "Observation:onco-core-GeneticVariantTested.code.coding:Fixed_41103-3",
+        "id": "Observation.code.coding:Fixed_41103-3",
         "path": "Observation.code.coding",
         "sliceName": "Fixed_41103-3",
         "short": "Gene XXX mutations found in Blood or Tissue by Molecular genetics method",
@@ -1535,7 +1535,7 @@
         "isSummary": true
       },
       {
-        "id": "Observation:onco-core-GeneticVariantTested.code.coding:Fixed_41103-3.id",
+        "id": "Observation.code.coding:Fixed_41103-3.id",
         "path": "Observation.code.coding.id",
         "representation": [
           "xmlAttr"
@@ -1564,7 +1564,7 @@
         ]
       },
       {
-        "id": "Observation:onco-core-GeneticVariantTested.code.coding:Fixed_41103-3.extension",
+        "id": "Observation.code.coding:Fixed_41103-3.extension",
         "path": "Observation.code.coding.extension",
         "slicing": {
           "discriminator": [
@@ -1605,7 +1605,7 @@
         ]
       },
       {
-        "id": "Observation:onco-core-GeneticVariantTested.code.coding:Fixed_41103-3.system",
+        "id": "Observation.code.coding:Fixed_41103-3.system",
         "path": "Observation.code.coding.system",
         "short": "Identity of the terminology system",
         "definition": "The identification of the code system that defines the meaning of the symbol in the code.",
@@ -1642,7 +1642,7 @@
         "fixedUri": "http://loinc.org"
       },
       {
-        "id": "Observation:onco-core-GeneticVariantTested.code.coding:Fixed_41103-3.version",
+        "id": "Observation.code.coding:Fixed_41103-3.version",
         "path": "Observation.code.coding.version",
         "short": "Version of the system - if relevant",
         "definition": "The version of the code system which was used when choosing this code. Note that a well-maintained code system does not need the version reported, because the meaning of codes is consistent across versions. However this cannot consistently be assured, and when the meaning is not guaranteed to be consistent, the version SHOULD be exchanged.",
@@ -1677,7 +1677,7 @@
         ]
       },
       {
-        "id": "Observation:onco-core-GeneticVariantTested.code.coding:Fixed_41103-3.code",
+        "id": "Observation.code.coding:Fixed_41103-3.code",
         "path": "Observation.code.coding.code",
         "short": "Symbol in syntax defined by the system",
         "definition": "A symbol in syntax defined by the system. The symbol may be a predefined code or an expression in a syntax defined by the coding system (e.g. post-coordination).",
@@ -1713,7 +1713,7 @@
         "fixedCode": "41103-3"
       },
       {
-        "id": "Observation:onco-core-GeneticVariantTested.code.coding:Fixed_41103-3.display",
+        "id": "Observation.code.coding:Fixed_41103-3.display",
         "extension": [
           {
             "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable",
@@ -1754,7 +1754,7 @@
         ]
       },
       {
-        "id": "Observation:onco-core-GeneticVariantTested.code.coding:Fixed_41103-3.userSelected",
+        "id": "Observation.code.coding:Fixed_41103-3.userSelected",
         "path": "Observation.code.coding.userSelected",
         "short": "If this coding was chosen directly by the user",
         "definition": "Indicates that this coding was chosen by a user directly - e.g. off a pick list of available items (codes or displays).",
@@ -1790,7 +1790,7 @@
         ]
       },
       {
-        "id": "Observation:onco-core-GeneticVariantTested.code.text",
+        "id": "Observation.code.text",
         "extension": [
           {
             "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable",
@@ -1832,7 +1832,7 @@
         ]
       },
       {
-        "id": "Observation:onco-core-GeneticVariantTested.subject",
+        "id": "Observation.subject",
         "path": "Observation.subject",
         "short": "The subject of an observation",
         "definition": "The subject of an observation.",
@@ -1884,7 +1884,7 @@
         ]
       },
       {
-        "id": "Observation:onco-core-GeneticVariantTested.focus",
+        "id": "Observation.focus",
         "extension": [
           {
             "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
@@ -1932,7 +1932,7 @@
         ]
       },
       {
-        "id": "Observation:onco-core-GeneticVariantTested.encounter",
+        "id": "Observation.encounter",
         "path": "Observation.encounter",
         "short": "Healthcare event during which this observation is made",
         "definition": "The healthcare event  (e.g. a patient and healthcare provider interaction) during which this observation is made.",
@@ -1978,7 +1978,7 @@
         ]
       },
       {
-        "id": "Observation:onco-core-GeneticVariantTested.effective[x]",
+        "id": "Observation.effective[x]",
         "path": "Observation.effective[x]",
         "short": "Clinically relevant time/time-period for observation",
         "definition": "For lab tests this is the specimen collection date.  For Ask at Order Entry Questions (AOE)'s this is the date the question was asked.",
@@ -2038,7 +2038,7 @@
         ]
       },
       {
-        "id": "Observation:onco-core-GeneticVariantTested.issued",
+        "id": "Observation.issued",
         "path": "Observation.issued",
         "short": "Date/Time this version was made available",
         "definition": "The date and time this version of the observation was made available to providers, typically after the results have been reviewed and verified.",
@@ -2073,7 +2073,7 @@
         ]
       },
       {
-        "id": "Observation:onco-core-GeneticVariantTested.performer",
+        "id": "Observation.performer",
         "path": "Observation.performer",
         "short": "The practitioner that carried out the observation or action",
         "definition": "The practitioner that carried out the observation or action.",
@@ -2116,7 +2116,7 @@
         ]
       },
       {
-        "id": "Observation:onco-core-GeneticVariantTested.value[x]",
+        "id": "Observation.value[x]",
         "path": "Observation.value[x]",
         "short": "Result Value",
         "definition": "The Laboratory result value.  If a coded value,  the valueCodeableConcept.code **SHOULD**  be selected from [SNOMED CT](http://hl7.org/fhir/ValueSet/uslab-obs-codedresults).  If a numeric value, valueQuantity.code **SHALL** be selected from [UCUM](http://unitsofmeasure.org).  A FHIR [UCUM Codes value set](http://hl7.org/fhir/STU3/valueset-ucum-units.html) that defines all UCUM codes is in the FHIR specification.",
@@ -2148,7 +2148,7 @@
           {
             "code": "SampledData",
             "profile": [
-              "http://hl7.org/fhir/us/mcode/StructureDefinition/shr-core-SampledData"
+              "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-datatype-SampledData"
             ]
           },
           {
@@ -2213,11 +2213,11 @@
         ],
         "binding": {
           "strength": "required",
-          "valueSet": "http://hl7.org/fhir/us/mcode/ValueSet/shr-core-PositiveNegativeVS"
+          "valueSet": "http://hl7.org/fhir/us/mcode/ValueSet/obf-datatype-PositiveNegativeVS"
         }
       },
       {
-        "id": "Observation:onco-core-GeneticVariantTested.dataAbsentReason",
+        "id": "Observation.dataAbsentReason",
         "path": "Observation.dataAbsentReason",
         "short": "Why the result is missing",
         "definition": "Provides a reason why the expected value in the element Observation.value[x] is missing.",
@@ -2261,7 +2261,7 @@
         ]
       },
       {
-        "id": "Observation:onco-core-GeneticVariantTested.interpretation",
+        "id": "Observation.interpretation",
         "path": "Observation.interpretation",
         "short": "High, low, normal, etc.",
         "definition": "A categorical assessment of an observation value.  For example, high, low, normal.",
@@ -2315,7 +2315,7 @@
         ]
       },
       {
-        "id": "Observation:onco-core-GeneticVariantTested.note",
+        "id": "Observation.note",
         "path": "Observation.note",
         "short": "Comments about the observation",
         "definition": "Comments about the observation or the results.",
@@ -2347,7 +2347,7 @@
         ]
       },
       {
-        "id": "Observation:onco-core-GeneticVariantTested.bodySite",
+        "id": "Observation.bodySite",
         "path": "Observation.bodySite",
         "short": "Observed body part",
         "definition": "Indicates the site on the subject's body where the observation was made (i.e. the target site).",
@@ -2368,7 +2368,7 @@
         "isSummary": false,
         "binding": {
           "strength": "preferred",
-          "valueSet": "http://hl7.org/fhir/us/mcode/ValueSet/shr-core-BodyLocationVS"
+          "valueSet": "http://hl7.org/fhir/us/mcode/ValueSet/obf-datatype-BodyLocationVS"
         },
         "mapping": [
           {
@@ -2390,7 +2390,7 @@
         ]
       },
       {
-        "id": "Observation:onco-core-GeneticVariantTested.method",
+        "id": "Observation.method",
         "path": "Observation.method",
         "short": "How it was done",
         "definition": "Indicates the mechanism used to perform the observation.",
@@ -2427,7 +2427,7 @@
         "mustSupport": true
       },
       {
-        "id": "Observation:onco-core-GeneticVariantTested.specimen",
+        "id": "Observation.specimen",
         "path": "Observation.specimen",
         "short": "Specimen used for this observation",
         "definition": "The specimen that was used when this observation was made.",
@@ -2469,7 +2469,7 @@
         ]
       },
       {
-        "id": "Observation:onco-core-GeneticVariantTested.device",
+        "id": "Observation.device",
         "path": "Observation.device",
         "short": "(Measurement) Device",
         "definition": "The device used to generate the observation data.",
@@ -2511,7 +2511,7 @@
         ]
       },
       {
-        "id": "Observation:onco-core-GeneticVariantTested.referenceRange",
+        "id": "Observation.referenceRange",
         "path": "Observation.referenceRange",
         "short": "Provides guide for interpretation",
         "definition": "Guidance on how to interpret the value by comparison to a normal or recommended range.  Multiple reference ranges are interpreted as an \"OR\".   In other words, to represent two distinct target populations, two `referenceRange` elements would be used.",
@@ -2560,7 +2560,7 @@
         ]
       },
       {
-        "id": "Observation:onco-core-GeneticVariantTested.referenceRange.id",
+        "id": "Observation.referenceRange.id",
         "path": "Observation.referenceRange.id",
         "representation": [
           "xmlAttr"
@@ -2589,7 +2589,7 @@
         ]
       },
       {
-        "id": "Observation:onco-core-GeneticVariantTested.referenceRange.extension",
+        "id": "Observation.referenceRange.extension",
         "path": "Observation.referenceRange.extension",
         "short": "Additional content defined by implementations",
         "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
@@ -2620,7 +2620,7 @@
         ]
       },
       {
-        "id": "Observation:onco-core-GeneticVariantTested.referenceRange.modifierExtension",
+        "id": "Observation.referenceRange.modifierExtension",
         "path": "Observation.referenceRange.modifierExtension",
         "short": "Extensions that cannot be ignored even if unrecognized",
         "definition": "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
@@ -2654,7 +2654,7 @@
         ]
       },
       {
-        "id": "Observation:onco-core-GeneticVariantTested.referenceRange.low",
+        "id": "Observation.referenceRange.low",
         "path": "Observation.referenceRange.low",
         "short": "Low Range, if relevant",
         "definition": "The value of the low bound of the reference range.  The low bound of the reference range endpoint is inclusive of the value (e.g.  reference range is >=5 - <=9). If the low bound is omitted,  it is assumed to be meaningless (e.g. reference range is <=2.3).",
@@ -2690,7 +2690,7 @@
         ]
       },
       {
-        "id": "Observation:onco-core-GeneticVariantTested.referenceRange.high",
+        "id": "Observation.referenceRange.high",
         "path": "Observation.referenceRange.high",
         "short": "High Range, if relevant",
         "definition": "The value of the high bound of the reference range.  The high bound of the reference range endpoint is inclusive of the value (e.g.  reference range is >=5 - <=9). If the high bound is omitted,  it is assumed to be meaningless (e.g. reference range is >= 2.3).",
@@ -2726,7 +2726,7 @@
         ]
       },
       {
-        "id": "Observation:onco-core-GeneticVariantTested.referenceRange.type",
+        "id": "Observation.referenceRange.type",
         "path": "Observation.referenceRange.type",
         "short": "Reference range qualifier",
         "definition": "Codes to indicate the what part of the targeted reference population it applies to. For example, the normal or therapeutic range.",
@@ -2773,7 +2773,7 @@
         ]
       },
       {
-        "id": "Observation:onco-core-GeneticVariantTested.referenceRange.appliesTo",
+        "id": "Observation.referenceRange.appliesTo",
         "path": "Observation.referenceRange.appliesTo",
         "short": "Reference range population",
         "definition": "Codes to indicate the target population this reference range applies to.  For example, a reference range may be based on the normal population or a particular sex or race.  Multiple `appliesTo`  are interpreted as an \"AND\" of the target populations.  For example, to represent a target population of African American females, both a code of female and a code for African American would be used.",
@@ -2820,7 +2820,7 @@
         ]
       },
       {
-        "id": "Observation:onco-core-GeneticVariantTested.referenceRange.age",
+        "id": "Observation.referenceRange.age",
         "path": "Observation.referenceRange.age",
         "short": "Applicable age range, if relevant",
         "definition": "The age at which this reference range is applicable. This is a neonatal age (e.g. number of weeks at term) if the meaning says so.",
@@ -2847,7 +2847,7 @@
         ]
       },
       {
-        "id": "Observation:onco-core-GeneticVariantTested.referenceRange.text",
+        "id": "Observation.referenceRange.text",
         "path": "Observation.referenceRange.text",
         "short": "Text based reference range in an observation",
         "definition": "Text based reference range in an observation which may be used when a quantitative range is not appropriate for an observation.  An example would be a reference value of \"Negative\" or a list or table of \"normals\".",
@@ -2877,7 +2877,7 @@
         ]
       },
       {
-        "id": "Observation:onco-core-GeneticVariantTested.hasMember",
+        "id": "Observation.hasMember",
         "path": "Observation.hasMember",
         "short": "Related resource that belongs to the Observation group",
         "definition": "This observation is a group observation (e.g. a battery, a panel of tests, a set of vital sign measurements) that includes the target as a member of the group.",
@@ -2911,7 +2911,7 @@
         ]
       },
       {
-        "id": "Observation:onco-core-GeneticVariantTested.derivedFrom",
+        "id": "Observation.derivedFrom",
         "path": "Observation.derivedFrom",
         "short": "Related measurements the observation is made from",
         "definition": "The target resource that represents a measurement from which this observation value is derived. For example, a calculated anion gap or a fetal measurement based on an ultrasound image.",
@@ -2948,7 +2948,7 @@
         ]
       },
       {
-        "id": "Observation:onco-core-GeneticVariantTested.component",
+        "id": "Observation.component",
         "path": "Observation.component",
         "short": "Component results",
         "definition": "Some observations have multiple component observations.  These component observations are expressed as separate code value pairs that share the same attributes.  Examples include systolic and diastolic component observations for blood pressure measurement and multiple component observations for genetics observations.",
@@ -2990,7 +2990,7 @@
         ]
       },
       {
-        "id": "Observation:onco-core-GeneticVariantTested.component.id",
+        "id": "Observation.component.id",
         "path": "Observation.component.id",
         "representation": [
           "xmlAttr"
@@ -3019,7 +3019,7 @@
         ]
       },
       {
-        "id": "Observation:onco-core-GeneticVariantTested.component.extension",
+        "id": "Observation.component.extension",
         "path": "Observation.component.extension",
         "short": "Additional content defined by implementations",
         "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
@@ -3050,7 +3050,7 @@
         ]
       },
       {
-        "id": "Observation:onco-core-GeneticVariantTested.component.modifierExtension",
+        "id": "Observation.component.modifierExtension",
         "path": "Observation.component.modifierExtension",
         "short": "Extensions that cannot be ignored even if unrecognized",
         "definition": "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
@@ -3084,7 +3084,7 @@
         ]
       },
       {
-        "id": "Observation:onco-core-GeneticVariantTested.component.code",
+        "id": "Observation.component.code",
         "path": "Observation.component.code",
         "short": "Type of component observation (code / type)",
         "definition": "Describes what was observed. Sometimes this is called the observation \"code\".",
@@ -3135,7 +3135,7 @@
         ]
       },
       {
-        "id": "Observation:onco-core-GeneticVariantTested.component.value[x]",
+        "id": "Observation.component.value[x]",
         "path": "Observation.component.value[x]",
         "short": "Actual component result",
         "definition": "The information determined as a result of making the observation, if the information has a simple value.",
@@ -3167,7 +3167,7 @@
           {
             "code": "SampledData",
             "profile": [
-              "http://hl7.org/fhir/us/mcode/StructureDefinition/shr-core-SampledData"
+              "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-datatype-SampledData"
             ]
           },
           {
@@ -3202,7 +3202,7 @@
         ]
       },
       {
-        "id": "Observation:onco-core-GeneticVariantTested.component.dataAbsentReason",
+        "id": "Observation.component.dataAbsentReason",
         "path": "Observation.component.dataAbsentReason",
         "short": "Why the component result is missing",
         "definition": "Provides a reason why the expected value in the element Observation.component.value[x] is missing.",
@@ -3248,7 +3248,7 @@
         ]
       },
       {
-        "id": "Observation:onco-core-GeneticVariantTested.component.interpretation",
+        "id": "Observation.component.interpretation",
         "path": "Observation.component.interpretation",
         "short": "High, low, normal, etc.",
         "definition": "A categorical assessment of an observation value.  For example, high, low, normal.",
@@ -3302,7 +3302,7 @@
         ]
       },
       {
-        "id": "Observation:onco-core-GeneticVariantTested.component.referenceRange",
+        "id": "Observation.component.referenceRange",
         "path": "Observation.component.referenceRange",
         "short": "Provides guide for interpretation of component result",
         "definition": "Guidance on how to interpret the value by comparison to a normal or recommended range.",
@@ -3334,7 +3334,7 @@
         ]
       },
       {
-        "id": "Observation:onco-core-GeneticVariantTested.component.referenceRange.id",
+        "id": "Observation.component.referenceRange.id",
         "path": "Observation.component.referenceRange.id",
         "representation": [
           "xmlAttr"
@@ -3363,7 +3363,7 @@
         ]
       },
       {
-        "id": "Observation:onco-core-GeneticVariantTested.component.referenceRange.extension",
+        "id": "Observation.component.referenceRange.extension",
         "path": "Observation.component.referenceRange.extension",
         "short": "Additional content defined by implementations",
         "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
@@ -3394,7 +3394,7 @@
         ]
       },
       {
-        "id": "Observation:onco-core-GeneticVariantTested.component.referenceRange.modifierExtension",
+        "id": "Observation.component.referenceRange.modifierExtension",
         "path": "Observation.component.referenceRange.modifierExtension",
         "short": "Extensions that cannot be ignored even if unrecognized",
         "definition": "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
@@ -3428,7 +3428,7 @@
         ]
       },
       {
-        "id": "Observation:onco-core-GeneticVariantTested.component.referenceRange.low",
+        "id": "Observation.component.referenceRange.low",
         "path": "Observation.component.referenceRange.low",
         "short": "Low Range, if relevant",
         "definition": "The value of the low bound of the reference range.  The low bound of the reference range endpoint is inclusive of the value (e.g.  reference range is >=5 - <=9). If the low bound is omitted,  it is assumed to be meaningless (e.g. reference range is <=2.3).",
@@ -3464,7 +3464,7 @@
         ]
       },
       {
-        "id": "Observation:onco-core-GeneticVariantTested.component.referenceRange.high",
+        "id": "Observation.component.referenceRange.high",
         "path": "Observation.component.referenceRange.high",
         "short": "High Range, if relevant",
         "definition": "The value of the high bound of the reference range.  The high bound of the reference range endpoint is inclusive of the value (e.g.  reference range is >=5 - <=9). If the high bound is omitted,  it is assumed to be meaningless (e.g. reference range is >= 2.3).",
@@ -3500,7 +3500,7 @@
         ]
       },
       {
-        "id": "Observation:onco-core-GeneticVariantTested.component.referenceRange.type",
+        "id": "Observation.component.referenceRange.type",
         "path": "Observation.component.referenceRange.type",
         "short": "Reference range qualifier",
         "definition": "Codes to indicate the what part of the targeted reference population it applies to. For example, the normal or therapeutic range.",
@@ -3547,7 +3547,7 @@
         ]
       },
       {
-        "id": "Observation:onco-core-GeneticVariantTested.component.referenceRange.appliesTo",
+        "id": "Observation.component.referenceRange.appliesTo",
         "path": "Observation.component.referenceRange.appliesTo",
         "short": "Reference range population",
         "definition": "Codes to indicate the target population this reference range applies to.  For example, a reference range may be based on the normal population or a particular sex or race.  Multiple `appliesTo`  are interpreted as an \"AND\" of the target populations.  For example, to represent a target population of African American females, both a code of female and a code for African American would be used.",
@@ -3594,7 +3594,7 @@
         ]
       },
       {
-        "id": "Observation:onco-core-GeneticVariantTested.component.referenceRange.age",
+        "id": "Observation.component.referenceRange.age",
         "path": "Observation.component.referenceRange.age",
         "short": "Applicable age range, if relevant",
         "definition": "The age at which this reference range is applicable. This is a neonatal age (e.g. number of weeks at term) if the meaning says so.",
@@ -3621,7 +3621,7 @@
         ]
       },
       {
-        "id": "Observation:onco-core-GeneticVariantTested.component.referenceRange.text",
+        "id": "Observation.component.referenceRange.text",
         "path": "Observation.component.referenceRange.text",
         "short": "Text based reference range in an observation",
         "definition": "Text based reference range in an observation which may be used when a quantitative range is not appropriate for an observation.  An example would be a reference value of \"Negative\" or a list or table of \"normals\".",
@@ -3655,7 +3655,7 @@
   "differential": {
     "element": [
       {
-        "id": "Observation:onco-core-GeneticVariantTested",
+        "id": "Observation",
         "path": "Observation",
         "short": "onco-core-GeneticVariantTested",
         "definition": "A test for a specific mutation on a particular gene. This profile is used to record whether a single discrete variant tested is present or absent (denoted as positive or negative respectively).",
@@ -3664,7 +3664,7 @@
         "isSummary": false
       },
       {
-        "id": "Observation:onco-core-GeneticVariantTested.extension",
+        "id": "Observation.extension",
         "path": "Observation.extension",
         "slicing": {
           "id": "3",
@@ -3681,7 +3681,7 @@
         "max": "*"
       },
       {
-        "id": "Observation:onco-core-GeneticVariantTested.extension:genestudied",
+        "id": "Observation.extension:genestudied",
         "path": "Observation.extension",
         "definition": "A gene targeted for mutation analysis, identified in HUGO Gene Nomenclature Committee (HGNC) notation. The required code is HGNC gene ID. Gene IDs are of the format HGNC:n, where n is a unique number. Only the number, n, should be given as the code. For example, the HGNC identifier for the EGFR gene is 3236. The display text associated with the code should be the HGNC official gene symbol. For example, the official gene symbol for epidermal growth factor receptor is EGFR.",
         "min": 0,
@@ -3705,7 +3705,7 @@
         "mustSupport": true
       },
       {
-        "id": "Observation:onco-core-GeneticVariantTested.extension:varianttested",
+        "id": "Observation.extension:varianttested",
         "path": "Observation.extension",
         "definition": "The specific genetic variant that is targeted by this test.",
         "min": 1,
@@ -3729,7 +3729,7 @@
         "mustSupport": true
       },
       {
-        "id": "Observation:onco-core-GeneticVariantTested.identifier",
+        "id": "Observation.identifier",
         "path": "Observation.identifier",
         "slicing": {
           "id": "4",
@@ -3744,7 +3744,7 @@
         }
       },
       {
-        "id": "Observation:onco-core-GeneticVariantTested.identifier:obf-AccessionIdentifier",
+        "id": "Observation.identifier:obf-AccessionIdentifier",
         "path": "Observation.identifier",
         "sliceName": "obf-AccessionIdentifier",
         "short": "AccessionIdentifier: Identifier assigned by the lab",
@@ -3761,7 +3761,7 @@
         ]
       },
       {
-        "id": "Observation:onco-core-GeneticVariantTested.identifier:obf-FillerOrderNumber",
+        "id": "Observation.identifier:obf-FillerOrderNumber",
         "path": "Observation.identifier",
         "sliceName": "obf-FillerOrderNumber",
         "short": "FillerOrderNumber: Identifier assigned by the lab carrying out the test",
@@ -3778,7 +3778,7 @@
         ]
       },
       {
-        "id": "Observation:onco-core-GeneticVariantTested.identifier:obf-PlacerOrderNumber",
+        "id": "Observation.identifier:obf-PlacerOrderNumber",
         "path": "Observation.identifier",
         "sliceName": "obf-PlacerOrderNumber",
         "short": "PlacerOrderNumber: Identifier assigned by the requester of the lab",
@@ -3795,7 +3795,7 @@
         ]
       },
       {
-        "id": "Observation:onco-core-GeneticVariantTested.basedOn",
+        "id": "Observation.basedOn",
         "path": "Observation.basedOn",
         "type": [
           {
@@ -3808,7 +3808,7 @@
         ]
       },
       {
-        "id": "Observation:onco-core-GeneticVariantTested.partOf",
+        "id": "Observation.partOf",
         "path": "Observation.partOf",
         "type": [
           {
@@ -3824,13 +3824,13 @@
         "definition": "A larger event of which this particular Observation is a component or step. For example, an observation as part of a procedure."
       },
       {
-        "id": "Observation:onco-core-GeneticVariantTested.category",
+        "id": "Observation.category",
         "path": "Observation.category",
         "min": 1,
         "max": "1"
       },
       {
-        "id": "Observation:onco-core-GeneticVariantTested.category.coding",
+        "id": "Observation.category.coding",
         "path": "Observation.category.coding",
         "slicing": {
           "id": "1",
@@ -3847,7 +3847,7 @@
         "max": "*"
       },
       {
-        "id": "Observation:onco-core-GeneticVariantTested.category.coding:Fixed_laboratory",
+        "id": "Observation.category.coding:Fixed_laboratory",
         "path": "Observation.category.coding",
         "sliceName": "Fixed_laboratory",
         "short": "Code defined by a terminology system",
@@ -3867,21 +3867,21 @@
         "isSummary": true
       },
       {
-        "id": "Observation:onco-core-GeneticVariantTested.category.coding:Fixed_laboratory.system",
+        "id": "Observation.category.coding:Fixed_laboratory.system",
         "path": "Observation.category.coding.system",
         "fixedUri": "http://terminology.hl7.org/CodeSystem/observation-category"
       },
       {
-        "id": "Observation:onco-core-GeneticVariantTested.category.coding:Fixed_laboratory.code",
+        "id": "Observation.category.coding:Fixed_laboratory.code",
         "path": "Observation.category.coding.code",
         "fixedCode": "laboratory"
       },
       {
-        "id": "Observation:onco-core-GeneticVariantTested.code",
+        "id": "Observation.code",
         "path": "Observation.code"
       },
       {
-        "id": "Observation:onco-core-GeneticVariantTested.code.coding",
+        "id": "Observation.code.coding",
         "path": "Observation.code.coding",
         "slicing": {
           "id": "2",
@@ -3898,7 +3898,7 @@
         "max": "*"
       },
       {
-        "id": "Observation:onco-core-GeneticVariantTested.code.coding:Fixed_41103-3",
+        "id": "Observation.code.coding:Fixed_41103-3",
         "path": "Observation.code.coding",
         "sliceName": "Fixed_41103-3",
         "short": "Gene XXX mutations found in Blood or Tissue by Molecular genetics method",
@@ -3918,17 +3918,17 @@
         "isSummary": true
       },
       {
-        "id": "Observation:onco-core-GeneticVariantTested.code.coding:Fixed_41103-3.system",
+        "id": "Observation.code.coding:Fixed_41103-3.system",
         "path": "Observation.code.coding.system",
         "fixedUri": "http://loinc.org"
       },
       {
-        "id": "Observation:onco-core-GeneticVariantTested.code.coding:Fixed_41103-3.code",
+        "id": "Observation.code.coding:Fixed_41103-3.code",
         "path": "Observation.code.coding.code",
         "fixedCode": "41103-3"
       },
       {
-        "id": "Observation:onco-core-GeneticVariantTested.subject",
+        "id": "Observation.subject",
         "path": "Observation.subject",
         "type": [
           {
@@ -3942,7 +3942,7 @@
         "definition": "The subject of an observation."
       },
       {
-        "id": "Observation:onco-core-GeneticVariantTested.encounter",
+        "id": "Observation.encounter",
         "path": "Observation.encounter",
         "type": [
           {
@@ -3954,7 +3954,7 @@
         ]
       },
       {
-        "id": "Observation:onco-core-GeneticVariantTested.performer",
+        "id": "Observation.performer",
         "path": "Observation.performer",
         "type": [
           {
@@ -3969,13 +3969,13 @@
         "definition": "The practitioner that carried out the observation or action."
       },
       {
-        "id": "Observation:onco-core-GeneticVariantTested.value[x]",
+        "id": "Observation.value[x]",
         "path": "Observation.value[x]",
         "min": 1,
         "max": "1",
         "binding": {
           "strength": "required",
-          "valueSet": "http://hl7.org/fhir/us/mcode/ValueSet/shr-core-PositiveNegativeVS"
+          "valueSet": "http://hl7.org/fhir/us/mcode/ValueSet/obf-datatype-PositiveNegativeVS"
         },
         "type": [
           {
@@ -3996,7 +3996,7 @@
           {
             "code": "SampledData",
             "profile": [
-              "http://hl7.org/fhir/us/mcode/StructureDefinition/shr-core-SampledData"
+              "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-datatype-SampledData"
             ]
           },
           {
@@ -4011,29 +4011,29 @@
         ]
       },
       {
-        "id": "Observation:onco-core-GeneticVariantTested.dataAbsentReason",
+        "id": "Observation.dataAbsentReason",
         "path": "Observation.dataAbsentReason",
         "min": 0,
         "max": "0"
       },
       {
-        "id": "Observation:onco-core-GeneticVariantTested.interpretation",
+        "id": "Observation.interpretation",
         "path": "Observation.interpretation",
         "min": 0,
         "max": "1"
       },
       {
-        "id": "Observation:onco-core-GeneticVariantTested.bodySite",
+        "id": "Observation.bodySite",
         "path": "Observation.bodySite",
         "min": 0,
         "max": "0",
         "binding": {
           "strength": "preferred",
-          "valueSet": "http://hl7.org/fhir/us/mcode/ValueSet/shr-core-BodyLocationVS"
+          "valueSet": "http://hl7.org/fhir/us/mcode/ValueSet/obf-datatype-BodyLocationVS"
         }
       },
       {
-        "id": "Observation:onco-core-GeneticVariantTested.method",
+        "id": "Observation.method",
         "path": "Observation.method",
         "binding": {
           "strength": "extensible",
@@ -4042,7 +4042,7 @@
         "mustSupport": true
       },
       {
-        "id": "Observation:onco-core-GeneticVariantTested.device",
+        "id": "Observation.device",
         "path": "Observation.device",
         "type": [
           {
@@ -4054,13 +4054,13 @@
         ]
       },
       {
-        "id": "Observation:onco-core-GeneticVariantTested.referenceRange",
+        "id": "Observation.referenceRange",
         "path": "Observation.referenceRange",
         "min": 0,
         "max": "0"
       },
       {
-        "id": "Observation:onco-core-GeneticVariantTested.referenceRange.type",
+        "id": "Observation.referenceRange.type",
         "path": "Observation.referenceRange.type",
         "binding": {
           "extension": [
@@ -4075,7 +4075,7 @@
         }
       },
       {
-        "id": "Observation:onco-core-GeneticVariantTested.referenceRange.appliesTo",
+        "id": "Observation.referenceRange.appliesTo",
         "path": "Observation.referenceRange.appliesTo",
         "binding": {
           "extension": [
@@ -4090,7 +4090,7 @@
         }
       },
       {
-        "id": "Observation:onco-core-GeneticVariantTested.hasMember",
+        "id": "Observation.hasMember",
         "path": "Observation.hasMember",
         "min": 0,
         "max": "0",
@@ -4104,7 +4104,7 @@
         ]
       },
       {
-        "id": "Observation:onco-core-GeneticVariantTested.derivedFrom",
+        "id": "Observation.derivedFrom",
         "path": "Observation.derivedFrom",
         "type": [
           {
@@ -4119,13 +4119,13 @@
         ]
       },
       {
-        "id": "Observation:onco-core-GeneticVariantTested.component",
+        "id": "Observation.component",
         "path": "Observation.component",
         "min": 0,
         "max": "0"
       },
       {
-        "id": "Observation:onco-core-GeneticVariantTested.component.value[x]",
+        "id": "Observation.component.value[x]",
         "path": "Observation.component.value[x]",
         "type": [
           {
@@ -4146,7 +4146,7 @@
           {
             "code": "SampledData",
             "profile": [
-              "http://hl7.org/fhir/us/mcode/StructureDefinition/shr-core-SampledData"
+              "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-datatype-SampledData"
             ]
           },
           {
@@ -4161,11 +4161,11 @@
         ]
       },
       {
-        "id": "Observation:onco-core-GeneticVariantTested.component.referenceRange",
+        "id": "Observation.component.referenceRange",
         "path": "Observation.component.referenceRange"
       },
       {
-        "id": "Observation:onco-core-GeneticVariantTested.component.referenceRange.type",
+        "id": "Observation.component.referenceRange.type",
         "path": "Observation.component.referenceRange.type",
         "binding": {
           "extension": [
@@ -4180,7 +4180,7 @@
         }
       },
       {
-        "id": "Observation:onco-core-GeneticVariantTested.component.referenceRange.appliesTo",
+        "id": "Observation.component.referenceRange.appliesTo",
         "path": "Observation.component.referenceRange.appliesTo",
         "binding": {
           "extension": [

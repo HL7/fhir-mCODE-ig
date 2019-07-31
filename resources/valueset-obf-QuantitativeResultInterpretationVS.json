@@ -20,7 +20,7 @@
       ]
     }
   ],
-  "date": "2019-07-25",
+  "date": "2019-07-30",
   "description": "Interpretations of abnormal quantitative results.",
   "compose": {
     "include": [
@@ -41,7 +41,7 @@
           },
           {
             "code": "HH",
-            "display": "Panic High. The result for a quantitative observation is above a reference level at which immediate action should be considered for patient safety (as defined for the respective test procedure).\nSynonym: Above upper panic limits."
+            "display": "Panic High. The result for a quantitative observation is above a reference level at which immediate action should be considered for patient safety (as defined for the respective test procedure).\r\nSynonym: Above upper panic limits."
           },
           {
             "code": "LL",

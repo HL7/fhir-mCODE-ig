@@ -291,6 +291,14 @@ FHIR implementation note: At the current time, profiles for the specific LOINC t
   </thead>
   <tbody>
     <tr>
+        <td><a href="http://hl7.org/fhir/ValueSet/address-type">AddressType</a></td>
+        <td>{% capture md_text %}The type of an address (physical / postal).{% endcapture %}{{ md_text | markdownify }}</td>
+      </tr>
+      <tr>
+        <td><a href="http://hl7.org/fhir/ValueSet/address-use">AddressUse</a></td>
+        <td>{% capture md_text %}The use of an address.{% endcapture %}{{ md_text | markdownify }}</td>
+      </tr>
+      <tr>
         <td><a href="http://hl7.org/fhir/ValueSet/administrative-gender">AdministrativeGender</a></td>
         <td>{% capture md_text %}The gender of a person used for administrative purposes.{% endcapture %}{{ md_text | markdownify }}</td>
       </tr>
@@ -335,6 +343,14 @@ FHIR implementation note: At the current time, profiles for the specific LOINC t
         <td>{% capture md_text %}The verification status to support or decline the clinical status of the condition or diagnosis.{% endcapture %}{{ md_text | markdownify }}</td>
       </tr>
       <tr>
+        <td><a href="http://hl7.org/fhir/ValueSet/contact-point-system">ContactPointSystem</a></td>
+        <td>{% capture md_text %}Telecommunications form for contact point.{% endcapture %}{{ md_text | markdownify }}</td>
+      </tr>
+      <tr>
+        <td><a href="http://hl7.org/fhir/ValueSet/contact-point-use">ContactPointUse</a></td>
+        <td>{% capture md_text %}Use of contact point.{% endcapture %}{{ md_text | markdownify }}</td>
+      </tr>
+      <tr>
         <td><a href="http://hl7.org/fhir/ValueSet/data-absent-reason">DataAbsentReason</a></td>
         <td>{% capture md_text %}Used to specify why the normally expected content of the data element is missing.{% endcapture %}{{ md_text | markdownify }}</td>
       </tr>
@@ -353,6 +369,14 @@ FHIR implementation note: At the current time, profiles for the specific LOINC t
       <tr>
         <td><a href="http://hl7.org/fhir/ValueSet/device-kind">FHIRDeviceTypes</a></td>
         <td>{% capture md_text %}Codes used to identify medical devices. Includes concepts from SNOMED CT (http://www.snomed.org/) where concept is-a 49062001 (Device)  and is provided as a suggestive example.{% endcapture %}{{ md_text | markdownify }}</td>
+      </tr>
+      <tr>
+        <td><a href="http://hl7.org/fhir/ValueSet/identifier-type">Identifier Type Codes</a></td>
+        <td>{% capture md_text %}A coded type for an identifier that can be used to determine which identifier to use for a specific purpose.{% endcapture %}{{ md_text | markdownify }}</td>
+      </tr>
+      <tr>
+        <td><a href="http://hl7.org/fhir/ValueSet/identifier-use">IdentifierUse</a></td>
+        <td>{% capture md_text %}Identifies the purpose for this identifier, if known .{% endcapture %}{{ md_text | markdownify }}</td>
       </tr>
       <tr>
         <td><a href="http://hl7.org/fhir/ValueSet/observation-codes">LOINCCodes</a></td>
@@ -375,12 +399,16 @@ FHIR implementation note: At the current time, profiles for the specific LOINC t
         <td>{% capture md_text %}This value set defines the set of codes that can be used to indicate the marital status of a person.{% endcapture %}{{ md_text | markdownify }}</td>
       </tr>
       <tr>
+        <td><a href="http://hl7.org/fhir/ValueSet/medication-statement-status">Medication Status Codes</a></td>
+        <td>{% capture md_text %}Medication Status Codes{% endcapture %}{{ md_text | markdownify }}</td>
+      </tr>
+      <tr>
         <td><a href="http://hl7.org/fhir/ValueSet/medication-statement-category">Medication Status Codes</a></td>
         <td>{% capture md_text %}Medication Status Codes{% endcapture %}{{ md_text | markdownify }}</td>
       </tr>
       <tr>
-        <td><a href="http://hl7.org/fhir/ValueSet/medication-statement-status">Medication Status Codes</a></td>
-        <td>{% capture md_text %}Medication Status Codes{% endcapture %}{{ md_text | markdownify }}</td>
+        <td><a href="http://hl7.org/fhir/ValueSet/name-use">NameUse</a></td>
+        <td>{% capture md_text %}The use of a human name.{% endcapture %}{{ md_text | markdownify }}</td>
       </tr>
       <tr>
         <td><a href="http://hl7.org/fhir/ValueSet/observation-category">ObservationCategoryCodes</a></td>
@@ -469,6 +497,10 @@ FHIR implementation note: At the current time, profiles for the specific LOINC t
       <tr>
         <td><a href="http://www.hl7.org/fhir/us/core/ValueSet-us-core-medication-codes.html">USCoreMedicationCodes</a></td>
         <td>{% capture md_text %}All prescribable medication formulations represented using  either a 'generic' or 'brand-specific' concept. This includes RxNorm codes whose Term Type is SCD (semantic clinical drug), SBD (semantic brand drug), GPCK (generic pack), BPCK (brand pack), SCDG (semantic clinical drug group), SBDG (semantic brand drug group), SCDF (semantic clinical drug form), or SBDF (semantic brand drug form){% endcapture %}{{ md_text | markdownify }}</td>
+      </tr>
+      <tr>
+        <td><a href="http://www.hl7.org/fhir/us/core/ValueSet-us-core-usps-state.html">UspsTwoLetterAlphabeticCodes</a></td>
+        <td>{% capture md_text %}This value set defines two letter USPS alphabetic codes.{% endcapture %}{{ md_text | markdownify }}</td>
       </tr>
       <tr>
         <td><a href="http://hl7.org/fhir/ValueSet/observation-vitalsignresult">VitalSigns</a></td>

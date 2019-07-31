@@ -20,7 +20,7 @@
       ]
     }
   ],
-  "date": "2019-07-25",
+  "date": "2019-07-30",
   "description": "The genomic class of the specimen being analyzed, for example, germline for inherited genome, somatic for cancer genome, and prenatal for fetal genome.",
   "compose": {
     "include": [

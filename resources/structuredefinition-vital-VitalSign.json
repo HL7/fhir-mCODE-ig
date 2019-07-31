@@ -10,7 +10,7 @@
   "title": "vital-VitalSign",
   "status": "draft",
   "experimental": false,
-  "date": "2019-07-25",
+  "date": "2019-07-30",
   "publisher": "The MITRE Corporation",
   "contact": [
     {
@@ -381,7 +381,7 @@
           }
         ],
         "slicing": {
-          "id": "2",
+          "id": "1",
           "discriminator": [
             {
               "type": "value",
@@ -842,41 +842,10 @@
             "identity": "orim",
             "map": "fhir:CodeableConcept.coding rdfs:subPropertyOf dt:CD.coding"
           }
-        ],
-        "slicing": {
-          "id": "1",
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "code"
-            }
-          ],
-          "ordered": false,
-          "rules": "open"
-        }
+        ]
       },
       {
-        "id": "Observation.category:VSCat.coding:Fixed_vital-signs",
-        "path": "Observation.category.coding",
-        "sliceName": "Fixed_vital-signs",
-        "short": "Code defined by a terminology system",
-        "definition": "A reference to a code defined by a terminology system.",
-        "min": 1,
-        "max": "1",
-        "base": {
-          "path": "CodeableConcept.coding",
-          "min": 0,
-          "max": "*"
-        },
-        "type": [
-          {
-            "code": "Coding"
-          }
-        ],
-        "isSummary": true
-      },
-      {
-        "id": "Observation.category:VSCat.coding:Fixed_vital-signs.id",
+        "id": "Observation.category:VSCat.coding.id",
         "path": "Observation.category.coding.id",
         "representation": [
           "xmlAttr"
@@ -905,7 +874,7 @@
         ]
       },
       {
-        "id": "Observation.category:VSCat.coding:Fixed_vital-signs.extension",
+        "id": "Observation.category:VSCat.coding.extension",
         "path": "Observation.category.coding.extension",
         "slicing": {
           "discriminator": [
@@ -946,13 +915,13 @@
         ]
       },
       {
-        "id": "Observation.category:VSCat.coding:Fixed_vital-signs.system",
+        "id": "Observation.category:VSCat.coding.system",
         "path": "Observation.category.coding.system",
         "short": "Identity of the terminology system",
         "definition": "The identification of the code system that defines the meaning of the symbol in the code.",
         "comment": "The URI may be an OID (urn:oid:...) or a UUID (urn:uuid:...).  OIDs and UUIDs SHALL be references to the HL7 OID registry. Otherwise, the URI should come from HL7's list of FHIR defined special URIs or it should reference to some definition that establishes the system clearly and unambiguously.",
         "requirements": "Need to be unambiguous about the source of the definition of the symbol.",
-        "min": 0,
+        "min": 1,
         "max": "1",
         "base": {
           "path": "Coding.system",
@@ -964,6 +933,8 @@
             "code": "uri"
           }
         ],
+        "fixedUri": "http://terminology.hl7.org/CodeSystem/observation-category",
+        "mustSupport": true,
         "isModifier": false,
         "isSummary": true,
         "mapping": [
@@ -979,11 +950,10 @@
             "identity": "orim",
             "map": "fhir:Coding.system rdfs:subPropertyOf dt:CDCoding.codeSystem"
           }
-        ],
-        "fixedUri": "http://terminology.hl7.org/CodeSystem/observation-category"
+        ]
       },
       {
-        "id": "Observation.category:VSCat.coding:Fixed_vital-signs.version",
+        "id": "Observation.category:VSCat.coding.version",
         "path": "Observation.category.coding.version",
         "short": "Version of the system - if relevant",
         "definition": "The version of the code system which was used when choosing this code. Note that a well-maintained code system does not need the version reported, because the meaning of codes is consistent across versions. However this cannot consistently be assured, and when the meaning is not guaranteed to be consistent, the version SHOULD be exchanged.",
@@ -1018,12 +988,12 @@
         ]
       },
       {
-        "id": "Observation.category:VSCat.coding:Fixed_vital-signs.code",
+        "id": "Observation.category:VSCat.coding.code",
         "path": "Observation.category.coding.code",
         "short": "Symbol in syntax defined by the system",
         "definition": "A symbol in syntax defined by the system. The symbol may be a predefined code or an expression in a syntax defined by the coding system (e.g. post-coordination).",
         "requirements": "Need to refer to a particular code in the system.",
-        "min": 0,
+        "min": 1,
         "max": "1",
         "base": {
           "path": "Coding.code",
@@ -1035,6 +1005,8 @@
             "code": "code"
           }
         ],
+        "fixedCode": "vital-signs",
+        "mustSupport": true,
         "isModifier": false,
         "isSummary": true,
         "mapping": [
@@ -1050,11 +1022,10 @@
             "identity": "orim",
             "map": "fhir:Coding.code rdfs:subPropertyOf dt:CDCoding.code"
           }
-        ],
-        "fixedCode": "vital-signs"
+        ]
       },
       {
-        "id": "Observation.category:VSCat.coding:Fixed_vital-signs.display",
+        "id": "Observation.category:VSCat.coding.display",
         "extension": [
           {
             "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable",
@@ -1095,7 +1066,7 @@
         ]
       },
       {
-        "id": "Observation.category:VSCat.coding:Fixed_vital-signs.userSelected",
+        "id": "Observation.category:VSCat.coding.userSelected",
         "path": "Observation.category.coding.userSelected",
         "short": "If this coding was chosen directly by the user",
         "definition": "Indicates that this coding was chosen by a user directly - e.g. off a pick list of available items (codes or displays).",
@@ -3030,7 +3001,7 @@
         "id": "Observation.extension",
         "path": "Observation.extension",
         "slicing": {
-          "id": "2",
+          "id": "1",
           "discriminator": [
             {
               "type": "value",
@@ -3098,55 +3069,6 @@
         "path": "Observation.category",
         "min": 1,
         "max": "1"
-      },
-      {
-        "id": "Observation.category:VSCat",
-        "path": "Observation.category"
-      },
-      {
-        "id": "Observation.category:VSCat.coding",
-        "path": "Observation.category.coding",
-        "slicing": {
-          "id": "1",
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "code"
-            }
-          ],
-          "ordered": false,
-          "rules": "open"
-        }
-      },
-      {
-        "id": "Observation.category:VSCat.coding:Fixed_vital-signs",
-        "path": "Observation.category.coding",
-        "sliceName": "Fixed_vital-signs",
-        "short": "Code defined by a terminology system",
-        "definition": "A reference to a code defined by a terminology system.",
-        "min": 1,
-        "max": "1",
-        "base": {
-          "path": "CodeableConcept.coding",
-          "min": 0,
-          "max": "*"
-        },
-        "type": [
-          {
-            "code": "Coding"
-          }
-        ],
-        "isSummary": true
-      },
-      {
-        "id": "Observation.category:VSCat.coding:Fixed_vital-signs.system",
-        "path": "Observation.category.coding.system",
-        "fixedUri": "http://terminology.hl7.org/CodeSystem/observation-category"
-      },
-      {
-        "id": "Observation.category:VSCat.coding:Fixed_vital-signs.code",
-        "path": "Observation.category.coding.code",
-        "fixedCode": "vital-signs"
       },
       {
         "id": "Observation.subject",

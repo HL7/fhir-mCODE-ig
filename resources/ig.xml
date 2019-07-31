@@ -1,8 +1,8 @@
 <ImplementationGuide xmlns="http://hl7.org/fhir">
     <id value="hl7.fhir.us.mcode-0.9.1" />
     <url value="http://hl7.org/fhir/us/mcode/ImplementationGuide/hl7.fhir.us.mcode-0.9.1" />
-    <name value="HL7_FHIR_Implementation_Guide_minimal_Common_Oncology_Data_Elements_mCODE_v0_9_1" />
-    <title value="HL7 FHIR Implementation Guide: minimal Common Oncology Data Elements (mCODE), v0.9.1" />
+    <name value="HL7_FHIR_Implementation_Guide_minimal_Common_Oncology_Data_Elements_mCODE_Release_1_US_Realm" />
+    <title value="HL7 FHIR Implementation Guide: minimal Common Oncology Data Elements (mCODE) Release 1 - US Realm" />
     <status value="draft" />
     <publisher value="The MITRE Corporation"/>
     <contact>
@@ -2052,7 +2052,7 @@
       
         <page>
             <nameUrl value="index.html" />
-            <title value="HL7 FHIR Implementation Guide: minimal Common Oncology Data Elements (mCODE), v0.9.1" />
+            <title value="HL7 FHIR Implementation Guide: minimal Common Oncology Data Elements (mCODE) Release 1 - US Realm" />
             <generation value="html" />
         </page>
     </definition>

@@ -10,7 +10,7 @@
   "title": "obf-lab-GFR173sqMPredNonBlackArVRatPtSerPlasBldQnMDRDLabObs",
   "status": "active",
   "experimental": false,
-  "date": "2019-07-25",
+  "date": "2019-07-30",
   "publisher": "The MITRE Corporation",
   "contact": [
     {
@@ -810,6 +810,35 @@
           {
             "identity": "argonaut-dq-dstu2",
             "map": "Observation.category"
+          }
+        ]
+      },
+      {
+        "id": "Observation.category.id",
+        "path": "Observation.category.id",
+        "representation": [
+          "xmlAttr"
+        ],
+        "short": "Unique id for inter-element referencing",
+        "definition": "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Element.id",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "isModifier": false,
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
           }
         ]
       },

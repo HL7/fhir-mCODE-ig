@@ -20,7 +20,7 @@
       ]
     }
   ],
-  "date": "2019-07-25",
+  "date": "2019-07-30",
   "description": "The type of specimen analyzed in a genetic test. The values are taken from code system \thttp://terminology.hl7.org/CodeSystem/v2-0487, and represent a subset of HL7 Version 2 Table 0487 (http://hl7.org/fhir/v2/0487).",
   "compose": {
     "include": [

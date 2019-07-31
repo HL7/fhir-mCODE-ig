@@ -9,7 +9,7 @@
   "name": "HistologyMorphologyBehavior",
   "title": "onco-core-HistologyMorphologyBehavior",
   "status": "draft",
-  "date": "2019-07-25",
+  "date": "2019-07-30",
   "publisher": "The MITRE Corporation",
   "contact": [
     {
@@ -207,7 +207,7 @@
           }
         ],
         "binding": {
-          "strength": "preferred",
+          "strength": "extensible",
           "valueSet": "http://hl7.org/fhir/us/mcode/ValueSet/onco-core-HistologyMorphologyBehaviorVS"
         }
       }
@@ -249,7 +249,7 @@
           }
         ],
         "binding": {
-          "strength": "preferred",
+          "strength": "extensible",
           "valueSet": "http://hl7.org/fhir/us/mcode/ValueSet/onco-core-HistologyMorphologyBehaviorVS"
         }
       }

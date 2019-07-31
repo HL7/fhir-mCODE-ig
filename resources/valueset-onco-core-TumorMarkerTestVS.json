@@ -20,7 +20,7 @@
       ]
     }
   ],
-  "date": "2019-07-25",
+  "date": "2019-07-30",
   "description": "Codes representing tests for tumor markers. This value set of LOINC codes is not comprehensive and can be extended. LOINC codes are preferred. Other vocabularies can be used only if the test of interest is not covered by LOINC.\n\nFHIR implementation note: At the current time, profiles for the specific LOINC tests mentioned here do not exist.",
   "compose": {
     "include": [
@@ -84,8 +84,12 @@
             "display": "5-Hydroxyindoleacetate [Presence] in Urine"
           },
           {
-            "code": "44907-4",
-            "display": "5-Hydroxyindoleacetate panel - 24 hour Urine"
+            "code": "11145-0",
+            "display": "5-Hydroxyindoleacetate/​Creatinine [Mass Ratio] in Urine"
+          },
+          {
+            "code": "44909-0",
+            "display": "5-Hydroxyindoleacetate and Creatinine [Interpretation] in Urine"
           },
           {
             "code": "10459-6",
@@ -162,10 +166,6 @@
           {
             "code": "49585-3",
             "display": "Alpha-1-Fetoprotein multiple of the median cutoff [Multiple of the median] in Serum or Plasma"
-          },
-          {
-            "code": "48802-3",
-            "display": "Alpha-1-Fetoprotein panel - Serum or Plasma"
           },
           {
             "code": "53962-7",
@@ -476,10 +476,6 @@
             "display": "Carcinoembryonic Ag [Units/volume] in Serum or Plasma"
           },
           {
-            "code": "2010-7",
-            "display": "Deprecated Cancer Ag 19-9 [Presence] in Serum or Plasma"
-          },
-          {
             "code": "85337-4",
             "display": "Estrogen receptor Ag [Presence] in Breast cancer specimen by Immune stain"
           },
@@ -512,10 +508,6 @@
             "display": "PD-L1 by clone 22C3 [Presence] in Tissue by Immune stain"
           },
           {
-            "code": "85147-7",
-            "display": "PD-L1 by clone 22C3 in Tissue by Immune stain Report"
-          },
-          {
             "code": "83056-2",
             "display": "PD-L1 by clone 28-8 [Interpretation] in Tissue by Immune stain Narrative"
           },
@@ -524,16 +516,8 @@
             "display": "PD-L1 by clone 28-8 [Presence] in Tissue by Immune stain"
           },
           {
-            "code": "85148-5",
-            "display": "PD-L1 by clone 28-8 in Tissue by Immune stain Report"
-          },
-          {
             "code": "83057-0",
             "display": "PD-L1 by clone SP142 [Presence] in Tissue by Immune stain"
-          },
-          {
-            "code": "85149-3",
-            "display": "PD-L1 by clone SP142 in Tissue by Immune stain Report"
           },
           {
             "code": "83053-9",

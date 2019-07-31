@@ -29,13 +29,6 @@
       <resource>
           <exampleBoolean value="false" />
           <reference>
-            <reference value="StructureDefinition/obf-AccessionIdentifier" />
-          </reference>
-          <name value="obf-AccessionIdentifier" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
             <reference value="StructureDefinition/obf-ActionPerformed" />
           </reference>
           <name value="obf-ActionPerformed" />
@@ -295,13 +288,6 @@
       <resource>
           <exampleBoolean value="false" />
           <reference>
-            <reference value="StructureDefinition/obf-datatype-Duration" />
-          </reference>
-          <name value="obf-datatype-Duration" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
             <reference value="StructureDefinition/obf-ECOGPerformanceStatus" />
           </reference>
           <name value="obf-ECOGPerformanceStatus" />
@@ -396,13 +382,6 @@
             <reference value="StructureDefinition/obf-lab-ErythrocytesNucleatedNCncPtBldQnLabObs" />
           </reference>
           <name value="obf-lab-ErythrocytesNucleatedNCncPtBldQnLabObs" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
-            <reference value="StructureDefinition/obf-FillerOrderNumber" />
-          </reference>
-          <name value="obf-FillerOrderNumber" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
@@ -624,13 +603,6 @@
       <resource>
           <exampleBoolean value="false" />
           <reference>
-            <reference value="StructureDefinition/obf-datatype-Money" />
-          </reference>
-          <name value="obf-datatype-Money" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
             <reference value="StructureDefinition/obf-lab-Monocytes100WBCNFrPtBldQnAutoCntLabObs" />
           </reference>
           <name value="obf-lab-Monocytes100WBCNFrPtBldQnAutoCntLabObs" />
@@ -662,13 +634,6 @@
             <reference value="StructureDefinition/obf-lab-MyelocytesNCncPtBldQnLabObs" />
           </reference>
           <name value="obf-lab-MyelocytesNCncPtBldQnLabObs" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
-            <reference value="StructureDefinition/obf-NationalProviderIdentifier" />
-          </reference>
-          <name value="obf-NationalProviderIdentifier" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
@@ -746,13 +711,6 @@
             <reference value="StructureDefinition/obf-Patient" />
           </reference>
           <name value="obf-Patient" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
-            <reference value="StructureDefinition/obf-PlacerOrderNumber" />
-          </reference>
-          <name value="obf-PlacerOrderNumber" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
@@ -841,13 +799,6 @@
       <resource>
           <exampleBoolean value="false" />
           <reference>
-            <reference value="StructureDefinition/obf-lab-QuantityWithRequiredUnits" />
-          </reference>
-          <name value="obf-lab-QuantityWithRequiredUnits" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
             <reference value="StructureDefinition/obf-RadiationProcedure" />
           </reference>
           <name value="obf-RadiationProcedure" />
@@ -858,13 +809,6 @@
             <reference value="StructureDefinition/obf-Role" />
           </reference>
           <name value="obf-Role" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
-            <reference value="StructureDefinition/obf-datatype-SampledData" />
-          </reference>
-          <name value="obf-datatype-SampledData" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
@@ -981,20 +925,6 @@
       <resource>
           <exampleBoolean value="false" />
           <reference>
-            <reference value="StructureDefinition/obf-TaxIdentificationNumber" />
-          </reference>
-          <name value="obf-TaxIdentificationNumber" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
-            <reference value="StructureDefinition/obf-datatype-Timing" />
-          </reference>
-          <name value="obf-datatype-Timing" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
             <reference value="StructureDefinition/onco-core-Tumor" />
           </reference>
           <name value="onco-core-Tumor" />
@@ -1096,13 +1026,6 @@
             <reference value="StructureDefinition/obf-datatype-Code-extension" />
           </reference>
           <name value="obf-datatype-Code" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
-            <reference value="StructureDefinition/obf-datatype-Comparator-extension" />
-          </reference>
-          <name value="obf-datatype-Comparator" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
@@ -1236,13 +1159,6 @@
             <reference value="StructureDefinition/obf-Method-extension" />
           </reference>
           <name value="obf-Method" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
-            <reference value="StructureDefinition/obf-datatype-Number-extension" />
-          </reference>
-          <name value="obf-datatype-Number" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
@@ -1467,13 +1383,6 @@
             <reference value="StructureDefinition/obf-datatype-Type-extension" />
           </reference>
           <name value="obf-datatype-Type" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
-            <reference value="StructureDefinition/obf-datatype-Units-extension" />
-          </reference>
-          <name value="obf-datatype-Units" />
       </resource>
       <resource>
           <exampleBoolean value="false" />

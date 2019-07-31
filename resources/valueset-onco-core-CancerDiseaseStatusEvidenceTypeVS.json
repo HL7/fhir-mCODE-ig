@@ -20,7 +20,7 @@
       ]
     }
   ],
-  "date": "2019-07-30",
+  "date": "2019-07-31",
   "description": "The type of evidence backing up the clinical determination of cancer progression.",
   "compose": {
     "include": [

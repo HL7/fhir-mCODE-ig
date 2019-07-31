@@ -20,7 +20,7 @@
       ]
     }
   ],
-  "date": "2019-07-30",
+  "date": "2019-07-31",
   "description": "The purpose of a treatment. The value set includes 'curative' and 'palliative'. Curative is defined as any treatment meant to reduce or control a disease process, even if a 'cure' is not anticipated. Palliative includes treatments meant to reduce symptoms and side effects, such as antiemetics.",
   "compose": {
     "include": [

@@ -79,9 +79,6 @@
     "StructureDefinition/obf-AbnormalBodyStructure": {
       "base": "StructureDefinition-obf-AbnormalBodyStructure.html"
     },
-    "StructureDefinition/obf-AccessionIdentifier": {
-      "base": "StructureDefinition-obf-AccessionIdentifier.html"
-    },
     "StructureDefinition/obf-ActionPerformed": {
       "base": "StructureDefinition-obf-ActionPerformed.html"
     },
@@ -193,9 +190,6 @@
     "StructureDefinition/obf-DomainResource": {
       "base": "StructureDefinition-obf-DomainResource.html"
     },
-    "StructureDefinition/obf-datatype-Duration": {
-      "base": "StructureDefinition-obf-datatype-Duration.html"
-    },
     "StructureDefinition/obf-ECOGPerformanceStatus": {
       "base": "StructureDefinition-obf-ECOGPerformanceStatus.html"
     },
@@ -237,9 +231,6 @@
     },
     "StructureDefinition/obf-lab-ErythrocytesNucleatedNCncPtBldQnLabObs": {
       "base": "StructureDefinition-obf-lab-ErythrocytesNucleatedNCncPtBldQnLabObs.html"
-    },
-    "StructureDefinition/obf-FillerOrderNumber": {
-      "base": "StructureDefinition-obf-FillerOrderNumber.html"
     },
     "StructureDefinition/obf-lab-GFR173sqMPredArVRatPtSerPlasQnMDRDLabObs": {
       "base": "StructureDefinition-obf-lab-GFR173sqMPredArVRatPtSerPlasQnMDRDLabObs.html"
@@ -334,9 +325,6 @@
     "StructureDefinition/obf-lab-MetamyelocytesNCncPtBldQnLabObs": {
       "base": "StructureDefinition-obf-lab-MetamyelocytesNCncPtBldQnLabObs.html"
     },
-    "StructureDefinition/obf-datatype-Money": {
-      "base": "StructureDefinition-obf-datatype-Money.html"
-    },
     "StructureDefinition/obf-lab-Monocytes100WBCNFrPtBldQnAutoCntLabObs": {
       "base": "StructureDefinition-obf-lab-Monocytes100WBCNFrPtBldQnAutoCntLabObs.html"
     },
@@ -351,9 +339,6 @@
     },
     "StructureDefinition/obf-lab-MyelocytesNCncPtBldQnLabObs": {
       "base": "StructureDefinition-obf-lab-MyelocytesNCncPtBldQnLabObs.html"
-    },
-    "StructureDefinition/obf-NationalProviderIdentifier": {
-      "base": "StructureDefinition-obf-NationalProviderIdentifier.html"
     },
     "StructureDefinition/obf-lab-Neutrophils100WBCNFrPtBldQnAutoCntLabObs": {
       "base": "StructureDefinition-obf-lab-Neutrophils100WBCNFrPtBldQnAutoCntLabObs.html"
@@ -387,9 +372,6 @@
     },
     "StructureDefinition/obf-Patient": {
       "base": "StructureDefinition-obf-Patient.html"
-    },
-    "StructureDefinition/obf-PlacerOrderNumber": {
-      "base": "StructureDefinition-obf-PlacerOrderNumber.html"
     },
     "StructureDefinition/obf-lab-PlateletDistributionWidthEntVolPtBldQnAutoCntLabObs": {
       "base": "StructureDefinition-obf-lab-PlateletDistributionWidthEntVolPtBldQnAutoCntLabObs.html"
@@ -427,17 +409,11 @@
     "StructureDefinition/obf-QuantitativeNonLaboratoryObservation": {
       "base": "StructureDefinition-obf-QuantitativeNonLaboratoryObservation.html"
     },
-    "StructureDefinition/obf-lab-QuantityWithRequiredUnits": {
-      "base": "StructureDefinition-obf-lab-QuantityWithRequiredUnits.html"
-    },
     "StructureDefinition/obf-RadiationProcedure": {
       "base": "StructureDefinition-obf-RadiationProcedure.html"
     },
     "StructureDefinition/obf-Role": {
       "base": "StructureDefinition-obf-Role.html"
-    },
-    "StructureDefinition/obf-datatype-SampledData": {
-      "base": "StructureDefinition-obf-datatype-SampledData.html"
     },
     "StructureDefinition/onco-core-SecondaryCancerCondition": {
       "base": "StructureDefinition-onco-core-SecondaryCancerCondition.html"
@@ -486,12 +462,6 @@
     },
     "StructureDefinition/onco-core-TNMPathologicStageGroup": {
       "base": "StructureDefinition-onco-core-TNMPathologicStageGroup.html"
-    },
-    "StructureDefinition/obf-TaxIdentificationNumber": {
-      "base": "StructureDefinition-obf-TaxIdentificationNumber.html"
-    },
-    "StructureDefinition/obf-datatype-Timing": {
-      "base": "StructureDefinition-obf-datatype-Timing.html"
     },
     "StructureDefinition/onco-core-Tumor": {
       "base": "StructureDefinition-onco-core-Tumor.html"
@@ -546,10 +516,6 @@
     },
     "StructureDefinition/obf-datatype-Code-extension": {
       "base": "StructureDefinition-obf-datatype-Code-extension.html",
-      "template-base": "sd-extension.html"
-    },
-    "StructureDefinition/obf-datatype-Comparator-extension": {
-      "base": "StructureDefinition-obf-datatype-Comparator-extension.html",
       "template-base": "sd-extension.html"
     },
     "StructureDefinition/obf-Condition-extension": {
@@ -626,10 +592,6 @@
     },
     "StructureDefinition/obf-Method-extension": {
       "base": "StructureDefinition-obf-Method-extension.html",
-      "template-base": "sd-extension.html"
-    },
-    "StructureDefinition/obf-datatype-Number-extension": {
-      "base": "StructureDefinition-obf-datatype-Number-extension.html",
       "template-base": "sd-extension.html"
     },
     "StructureDefinition/obf-datatype-OccurrenceTimeOrPeriod-extension": {
@@ -758,10 +720,6 @@
     },
     "StructureDefinition/obf-datatype-Type-extension": {
       "base": "StructureDefinition-obf-datatype-Type-extension.html",
-      "template-base": "sd-extension.html"
-    },
-    "StructureDefinition/obf-datatype-Units-extension": {
-      "base": "StructureDefinition-obf-datatype-Units-extension.html",
       "template-base": "sd-extension.html"
     },
     "StructureDefinition/obf-datatype-UpperBound-extension": {

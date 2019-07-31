@@ -3,7 +3,7 @@
   "id": "obf-datatype-ConditionStatusTrendVS",
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n<p><b>ConditionStatusTrendVS ValueSet</b></p>\n<p>Standardized value set that describes the trend or status of a disease, condition, or ability. Based on LOINC answer lists LL2751-7 and LL4721-8. The value SNOMED-CT 260415000 (Not Detected) should be used to express No Evidence of Disease (NED), condition resolved, or full remission.</p>\n</div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n<p><b>ConditionStatusTrendVS ValueSet</b></p>\n<p>Standardized value set that describes the trend or status of a disease, condition, or ability. Based on LOINC answer lists LL2751-7 and LL4721-8. The value SNOMED CT 260415000 (Not Detected) should be used to express No Evidence of Disease (NED), condition resolved, or full remission.</p>\n</div>"
   },
   "url": "http://hl7.org/fhir/us/mcode/ValueSet/obf-datatype-ConditionStatusTrendVS",
   "name": "ConditionStatusTrendVS",
@@ -20,8 +20,8 @@
       ]
     }
   ],
-  "date": "2019-07-30",
-  "description": "Standardized value set that describes the trend or status of a disease, condition, or ability. Based on LOINC answer lists LL2751-7 and LL4721-8. The value SNOMED-CT 260415000 (Not Detected) should be used to express No Evidence of Disease (NED), condition resolved, or full remission.",
+  "date": "2019-07-31",
+  "description": "Standardized value set that describes the trend or status of a disease, condition, or ability. Based on LOINC answer lists LL2751-7 and LL4721-8. The value SNOMED CT 260415000 (Not Detected) should be used to express No Evidence of Disease (NED), condition resolved, or full remission.",
   "compose": {
     "include": [
       {

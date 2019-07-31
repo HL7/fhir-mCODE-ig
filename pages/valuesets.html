@@ -95,7 +95,7 @@ Note that BodyLocation is a data type (a reusable structure), not a stand-alone 
         </tr>
         <tr>
           <td><a href="ValueSet-onco-core-CancerBodyLocationVS.html">CancerBodyLocationVS</a></td>
-          <td>{% capture md_text %}Codes describing the location(s) of primary or secondary cancer. The value set includes all codes from the SNOMED-CT body structure hierarchy (codes descending from 123037004 'Body Structure'). The cancer body location may also be expressed using ICD-O-3 topography codes, however, those codes are not included here due to intellectual property restrictions. No other code systems are considered conformant.{% endcapture %}{{ md_text | markdownify }}</td>
+          <td>{% capture md_text %}Codes describing the location(s) of primary or secondary cancer. The value set includes all codes from the SNOMED CT body structure hierarchy (codes descending from 123037004 'Body Structure'). The cancer body location may also be expressed using ICD-O-3 topography codes, however, those codes are not included here due to intellectual property restrictions. No other code systems are considered conformant.{% endcapture %}{{ md_text | markdownify }}</td>
         </tr>
         <tr>
           <td><a href="ValueSet-onco-core-CancerDiseaseStatusEvidenceTypeVS.html">CancerDiseaseStatusEvidenceTypeVS</a></td>
@@ -127,11 +127,11 @@ Conformance note: If an ICD-10-PCS code is used, and a semantically equivalent S
           <td><a href="ValueSet-obf-ComorbidConditionVS.html">ComorbidConditionVS</a></td>
           <td>{% capture md_text %}SNOMED and ICD-10-CM codes for common comorbid conditions. Aligns with Elixhauser comorbidity scale. ICD-10 codes are drawn from https://www.hcup-us.ahrq.gov/toolssoftware/comorbidityicd10/comformat_icd10cm_2019_1.txt.
 
-Conformance note: If an ICD-10-CM code is used, and an equivalent SNOMED-CT code is available, the resulting instance will not validate against US Core Profiles.{% endcapture %}{{ md_text | markdownify }}</td>
+Conformance note: If an ICD-10-CM code is used, and an equivalent SNOMED CT code is available, the resulting instance will not validate against US Core Profiles.{% endcapture %}{{ md_text | markdownify }}</td>
         </tr>
         <tr>
           <td><a href="ValueSet-obf-datatype-ConditionStatusTrendVS.html">ConditionStatusTrendVS</a></td>
-          <td>{% capture md_text %}Standardized value set that describes the trend or status of a disease, condition, or ability. Based on LOINC answer lists LL2751-7 and LL4721-8. The value SNOMED-CT 260415000 (Not Detected) should be used to express No Evidence of Disease (NED), condition resolved, or full remission.{% endcapture %}{{ md_text | markdownify }}</td>
+          <td>{% capture md_text %}Standardized value set that describes the trend or status of a disease, condition, or ability. Based on LOINC answer lists LL2751-7 and LL4721-8. The value SNOMED CT 260415000 (Not Detected) should be used to express No Evidence of Disease (NED), condition resolved, or full remission.{% endcapture %}{{ md_text | markdownify }}</td>
         </tr>
         <tr>
           <td><a href="ValueSet-obf-ECOGPerformanceStatusVS.html">ECOGPerformanceStatusVS</a></td>
@@ -179,7 +179,7 @@ Conformance note: To be conformant to US Core, a LOINC code must be used, if ava
         </tr>
         <tr>
           <td><a href="ValueSet-onco-core-HistologyMorphologyBehaviorVS.html">HistologyMorphologyBehaviorVS</a></td>
-          <td>{% capture md_text %}Codes representing the structure, arrangement, and behavioral characteristics of tumors and cancer cells. Codes are preferrably taken from the SNOMED CT hierarchy under 367651003 (Malignant neoplasm of primary, secondary, or uncertain origin (morphologic abnormality)). ICD-O-3 morphology codes (including behavior suffix) can also be used, although they are not included in the value set for intellectual property reasons. For primary cancers, the ICD-O-3 behavior suffix should be /1, /2, or /3. For secondary cancers, the ICD-O-3 behavior suffix should be /6. Only SNOMED CT and ICD-O-3 are considered conformant to the specification. However, to be compliant with [US Core Profiles](http://hl7.org/fhir/us/core/STU3/index.html), ICD-O-3 can only be used if there is no suitable code in SNOMED-CT.{% endcapture %}{{ md_text | markdownify }}</td>
+          <td>{% capture md_text %}Codes representing the structure, arrangement, and behavioral characteristics of tumors and cancer cells. Codes are preferrably taken from the SNOMED CT hierarchy under 367651003 (Malignant neoplasm of primary, secondary, or uncertain origin (morphologic abnormality)). ICD-O-3 morphology codes (including behavior suffix) can also be used, although they are not included in the value set for intellectual property reasons. For primary cancers, the ICD-O-3 behavior suffix should be /1, /2, or /3. For secondary cancers, the ICD-O-3 behavior suffix should be /6. Only SNOMED CT and ICD-O-3 are considered conformant to the specification. However, to be compliant with [US Core Profiles](http://hl7.org/fhir/us/core/STU3/index.html), ICD-O-3 can only be used if there is no suitable code in SNOMED CT.{% endcapture %}{{ md_text | markdownify }}</td>
         </tr>
         <tr>
           <td><a href="ValueSet-obf-KarnofskyPerformanceStatusVS.html">KarnofskyPerformanceStatusVS</a></td>
@@ -199,7 +199,7 @@ For SNOMED CT coding, use a code from the disorder hierarchy under SNOMED CT 363
 
 For ICD-10-CM coding, use one of the codes given in this value set representing primary malignant neoplasms and neoplasms of uncertain or unspecified behavior.
 
-Note that ICD-O-3 specifies morphology and topography, not disorder. If ICD-O-3 is used, the primary cancer disorder code must be specifically be SNOMED-CT 363346000  'Malignant neoplastic disease (disorder)'. The ICD-O-3 morphology and topography codes should be entered in the HistologyMorphologyBehavior and body location fields, respectively.{% endcapture %}{{ md_text | markdownify }}</td>
+Note that ICD-O-3 specifies morphology and topography, not disorder. If ICD-O-3 is used, the primary cancer disorder code must be specifically be SNOMED CT 363346000  'Malignant neoplastic disease (disorder)'. The ICD-O-3 morphology and topography codes should be entered in the HistologyMorphologyBehavior and body location fields, respectively.{% endcapture %}{{ md_text | markdownify }}</td>
         </tr>
         <tr>
           <td><a href="ValueSet-obf-QuantitativeResultInterpretationVS.html">QuantitativeResultInterpretationVS</a></td>
@@ -219,12 +219,12 @@ Conformance note: If an ICD-10-PCS code is used, and a semantically equivalent S
           <td><a href="ValueSet-onco-core-SecondaryCancerDisorderVS.html">SecondaryCancerDisorderVS</a></td>
           <td>{% capture md_text %}Types of secondary malignant neoplastic disease, coded in SNOMED CT or ICD-10-CM.
 
-Conformance note: To be compliant with [US Core Profiles](http://hl7.org/fhir/us/core/STU3/index.html), SNOMED-CT must be used unless there is no suitable code, in which case ICD-10-CM can be used.
+Conformance note: To be compliant with [US Core Profiles](http://hl7.org/fhir/us/core/STU3/index.html), SNOMED CT must be used unless there is no suitable code, in which case ICD-10-CM can be used.
 
-* SNOMED CT coding: Use a code from the disorder hierarchy under secondary malignant neoplastic disease (SNOMED-CT 128462008).
+* SNOMED CT coding: Use a code from the disorder hierarchy under secondary malignant neoplastic disease (SNOMED CT 128462008).
 * ICD-10-CM coding: Use one of the codes given in this value set representing secondary malignant neoplasms and neoplasms of uncertain or unspecified behavior. If body site is not precoordinated (implied by the code), it should be specified separately using the body location.
 
-Note that ICD-O-3 specifies morphology and topography, not disorder; in this case that the disorder code must be SNOMED-CT 128462008 (Secondary malignant neoplastic disease). The ICD-O-3 morphology and topography codes should be entered in the HistologyMorphologyBehavior and bodySite fields, respectively.{% endcapture %}{{ md_text | markdownify }}</td>
+Note that ICD-O-3 specifies morphology and topography, not disorder; in this case that the disorder code must be SNOMED CT 128462008 (Secondary malignant neoplastic disease). The ICD-O-3 morphology and topography codes should be entered in the HistologyMorphologyBehavior and bodySite fields, respectively.{% endcapture %}{{ md_text | markdownify }}</td>
         </tr>
         <tr>
           <td><a href="ValueSet-onco-core-TNMDistantMetastasesCategoryVS.html">TNMDistantMetastasesCategoryVS</a></td>
@@ -232,7 +232,7 @@ Note that ICD-O-3 specifies morphology and topography, not disorder; in this cas
 
 * AJCC terminology: examples of M categories include 'cM0', denoting there is no evidence of distant metastases, and 'pM1', an indication that the cancer has metasticized. The full set of allowable clinical and pathologic M categories, along with its current descriptions, can be accessed through the AJCC Staging Manual and any applicable updates and corrections, as well as the AJCC API.
 
-* SNOMED CT: The SNOMED CT US Edition has content related to the M category under the hierarchy of 385380006 'Metastasis category finding', such as 30893008 'M0 category' and 443841006 'pM1a category'. If using SNOMED-CT to store M category findings, the use of codes that do not contain descriptions of the categories, such as the examples provided, is encouraged, as stage finding codes in SNOMED CT may not be up-to-date with current AJCC guidance. Note that SNOMED CT codes do not always make a distinction between clinical and pathological classifications (e.g. 'cM0' and 'pM0' may be represented by the same SNOMED CT code 30893008 'M0 category'). In addition, SNOMED CT may not have complete TNM staging terminology and may require supplementation with codes from another controlled vocabulary (e.g. NCI Thesaurus).{% endcapture %}{{ md_text | markdownify }}</td>
+* SNOMED CT: The SNOMED CT US Edition has content related to the M category under the hierarchy of 385380006 'Metastasis category finding', such as 30893008 'M0 category' and 443841006 'pM1a category'. If using SNOMED CT to store M category findings, the use of codes that do not contain descriptions of the categories, such as the examples provided, is encouraged, as stage finding codes in SNOMED CT may not be up-to-date with current AJCC guidance. Note that SNOMED CT codes do not always make a distinction between clinical and pathological classifications (e.g. 'cM0' and 'pM0' may be represented by the same SNOMED CT code 30893008 'M0 category'). In addition, SNOMED CT may not have complete TNM staging terminology and may require supplementation with codes from another controlled vocabulary (e.g. NCI Thesaurus).{% endcapture %}{{ md_text | markdownify }}</td>
         </tr>
         <tr>
           <td><a href="ValueSet-onco-core-TNMPrimaryTumorCategoryVS.html">TNMPrimaryTumorCategoryVS</a></td>
@@ -240,7 +240,7 @@ Note that ICD-O-3 specifies morphology and topography, not disorder; in this cas
 
 * AJCC terminology: examples of T categories include 'cTX', used when the tumor primary tumor cannot be evaluated, 'pT0', denoting there is no evidence of a primary tumor, and 'pTis', referencing carcinoma in situ (with some cancer-specific exceptions). Other T categories refer to increasing size of the primary tumor. Please note allowable T categories may vary between clinical and pathologic classifications. The full set of allowable clinical and pathologic T categories, along with its current descriptions, can be accessed through the AJCC Staging Manual and any applicable updates and corrections, as well as the AJCC API.
 
-* SNOMED CT has content related to the T category under the hierarchy of 385356007 'Tumor stage finding', such as 23351008 'T1 category' and 261650005 'Tumor stage T1c'. If using SNOMED-CT to store T category findings, the use of codes that do not contain descriptions of the categories, such as the examples provided, is encouraged, as stage finding codes in SNOMED CT may not be up-to-date with current AJCC guidance. Note that SNOMED CT codes do not always make a distinction between clinical and pathological classifications (e.g. cT1 and pT1 may be represented by the same SNOMED CT code 23351008 'T1 category'). In addition, SNOMED CT may not have complete TNM staging terminology and may require supplementation with codes from another controlled vocabulary (e.g. NCI Thesaurus).{% endcapture %}{{ md_text | markdownify }}</td>
+* SNOMED CT has content related to the T category under the hierarchy of 385356007 'Tumor stage finding', such as 23351008 'T1 category' and 261650005 'Tumor stage T1c'. If using SNOMED CT to store T category findings, the use of codes that do not contain descriptions of the categories, such as the examples provided, is encouraged, as stage finding codes in SNOMED CT may not be up-to-date with current AJCC guidance. Note that SNOMED CT codes do not always make a distinction between clinical and pathological classifications (e.g. cT1 and pT1 may be represented by the same SNOMED CT code 23351008 'T1 category'). In addition, SNOMED CT may not have complete TNM staging terminology and may require supplementation with codes from another controlled vocabulary (e.g. NCI Thesaurus).{% endcapture %}{{ md_text | markdownify }}</td>
         </tr>
         <tr>
           <td><a href="ValueSet-onco-core-TNMRegionalNodesCategoryVS.html">TNMRegionalNodesCategoryVS</a></td>
@@ -248,7 +248,7 @@ Note that ICD-O-3 specifies morphology and topography, not disorder; in this cas
 
 * AJCC terminology: examples of N categories include 'cN0', indicating no evidence of lymph node involvement, and 'pN1', indicating regional lymph node involvement to a small extent, with specific thresholds for the lymph node groups and number of lymph nodes involved. Other N categories refer to increasing lymph node involvement. Please note allowable N categories may vary between clinical and pathologic classifications. The full set of allowable clinical and pathologic N categories, along with its current descriptions, can be accessed through the AJCC Staging Manual and any applicable updates and corrections, as well as the AJCC API.
 
-* SNOMED CT has content related to the N category under the hierarchy of 385382003 'Node category finding', such as 5856006 'N3 category' and 277672002 'Node stage N1a'. If using SNOMED-CT to store N category findings, the use of codes that do not contain descriptions of the categories, such as the examples provided, is encouraged, as stage finding codes in SNOMED CT may not be up-to-date with current AJCC guidance. Note that SNOMED CT codes do not always make a distinction between clinical and pathological classifications (e.g. 'cN1' and 'pN1' may be represented by the same SNOMED CT code 53623008 'N1 category'). In addition, SNOMED CT may not have complete TNM staging terminology and may require supplementation with codes from another controlled vocabulary (e.g. NCI Thesaurus).{% endcapture %}{{ md_text | markdownify }}</td>
+* SNOMED CT has content related to the N category under the hierarchy of 385382003 'Node category finding', such as 5856006 'N3 category' and 277672002 'Node stage N1a'. If using SNOMED CT to store N category findings, the use of codes that do not contain descriptions of the categories, such as the examples provided, is encouraged, as stage finding codes in SNOMED CT may not be up-to-date with current AJCC guidance. Note that SNOMED CT codes do not always make a distinction between clinical and pathological classifications (e.g. 'cN1' and 'pN1' may be represented by the same SNOMED CT code 53623008 'N1 category'). In addition, SNOMED CT may not have complete TNM staging terminology and may require supplementation with codes from another controlled vocabulary (e.g. NCI Thesaurus).{% endcapture %}{{ md_text | markdownify }}</td>
         </tr>
         <tr>
           <td><a href="ValueSet-onco-core-TNMStageGroupVS.html">TNMStageGroupVS</a></td>

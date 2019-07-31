@@ -10,7 +10,7 @@
   "title": "obf-SimpleLaboratoryObservation",
   "status": "active",
   "experimental": false,
-  "date": "2019-07-30",
+  "date": "2019-07-31",
   "publisher": "The MITRE Corporation",
   "contact": [
     {
@@ -499,10 +499,7 @@
         },
         "type": [
           {
-            "code": "Identifier",
-            "profile": [
-              "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-AccessionIdentifier"
-            ]
+            "code": "Identifier"
           }
         ],
         "isModifier": false,
@@ -541,10 +538,7 @@
         },
         "type": [
           {
-            "code": "Identifier",
-            "profile": [
-              "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-FillerOrderNumber"
-            ]
+            "code": "Identifier"
           }
         ],
         "isModifier": false,
@@ -583,10 +577,7 @@
         },
         "type": [
           {
-            "code": "Identifier",
-            "profile": [
-              "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-PlacerOrderNumber"
-            ]
+            "code": "Identifier"
           }
         ],
         "isModifier": false,
@@ -1682,10 +1673,7 @@
             "code": "Ratio"
           },
           {
-            "code": "SampledData",
-            "profile": [
-              "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-datatype-SampledData"
-            ]
+            "code": "SampledData"
           },
           {
             "code": "time"
@@ -2703,10 +2691,7 @@
             "code": "Ratio"
           },
           {
-            "code": "SampledData",
-            "profile": [
-              "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-datatype-SampledData"
-            ]
+            "code": "SampledData"
           },
           {
             "code": "time"
@@ -3223,15 +3208,7 @@
         "short": "AccessionIdentifier: Identifier assigned by the lab",
         "definition": "Identifier assigned by the lab",
         "min": 0,
-        "max": "1",
-        "type": [
-          {
-            "code": "Identifier",
-            "profile": [
-              "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-AccessionIdentifier"
-            ]
-          }
-        ]
+        "max": "1"
       },
       {
         "id": "Observation.identifier:obf-FillerOrderNumber",
@@ -3240,15 +3217,7 @@
         "short": "FillerOrderNumber: Identifier assigned by the lab carrying out the test",
         "definition": "Identifier assigned by the lab carrying out the test.",
         "min": 0,
-        "max": "1",
-        "type": [
-          {
-            "code": "Identifier",
-            "profile": [
-              "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-FillerOrderNumber"
-            ]
-          }
-        ]
+        "max": "1"
       },
       {
         "id": "Observation.identifier:obf-PlacerOrderNumber",
@@ -3257,15 +3226,7 @@
         "short": "PlacerOrderNumber: Identifier assigned by the requester of the lab",
         "definition": "Identifier assigned by the requester of the lab.",
         "min": 0,
-        "max": "1",
-        "type": [
-          {
-            "code": "Identifier",
-            "profile": [
-              "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-PlacerOrderNumber"
-            ]
-          }
-        ]
+        "max": "1"
       },
       {
         "id": "Observation.basedOn",
@@ -3410,10 +3371,7 @@
             "code": "Ratio"
           },
           {
-            "code": "SampledData",
-            "profile": [
-              "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-datatype-SampledData"
-            ]
+            "code": "SampledData"
           },
           {
             "code": "time"
@@ -3547,10 +3505,7 @@
             "code": "Ratio"
           },
           {
-            "code": "SampledData",
-            "profile": [
-              "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-datatype-SampledData"
-            ]
+            "code": "SampledData"
           },
           {
             "code": "time"

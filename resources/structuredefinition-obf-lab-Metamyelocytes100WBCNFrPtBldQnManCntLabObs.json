@@ -10,7 +10,7 @@
   "title": "obf-lab-Metamyelocytes100WBCNFrPtBldQnManCntLabObs",
   "status": "active",
   "experimental": false,
-  "date": "2019-07-30",
+  "date": "2019-07-31",
   "publisher": "The MITRE Corporation",
   "contact": [
     {
@@ -499,10 +499,7 @@
         },
         "type": [
           {
-            "code": "Identifier",
-            "profile": [
-              "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-AccessionIdentifier"
-            ]
+            "code": "Identifier"
           }
         ],
         "isModifier": false,
@@ -541,10 +538,7 @@
         },
         "type": [
           {
-            "code": "Identifier",
-            "profile": [
-              "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-FillerOrderNumber"
-            ]
+            "code": "Identifier"
           }
         ],
         "isModifier": false,
@@ -583,10 +577,7 @@
         },
         "type": [
           {
-            "code": "Identifier",
-            "profile": [
-              "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-PlacerOrderNumber"
-            ]
+            "code": "Identifier"
           }
         ],
         "isModifier": false,
@@ -2356,29 +2347,6 @@
         "fixedCode": "%"
       },
       {
-        "id": "Observation.valueQuantity:obf-lab-QuantityWithRequiredUnits",
-        "path": "Observation.valueQuantity",
-        "sliceName": "obf-lab-QuantityWithRequiredUnits",
-        "short": "Result Value",
-        "definition": "The Laboratory result value.  If a coded value,  the valueCodeableConcept.code **SHOULD**  be selected from [SNOMED CT](http://hl7.org/fhir/ValueSet/uslab-obs-codedresults).  If a numeric value, valueQuantity.code **SHALL** be selected from [UCUM](http://unitsofmeasure.org).  A FHIR [UCUM Codes value set](http://hl7.org/fhir/STU3/valueset-ucum-units.html) that defines all UCUM codes is in the FHIR specification.",
-        "min": 1,
-        "max": "1",
-        "base": {
-          "path": "Observation.value[x]",
-          "min": 1,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "Quantity",
-            "profile": [
-              "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-lab-QuantityWithRequiredUnits"
-            ]
-          }
-        ],
-        "isSummary": true
-      },
-      {
         "id": "Observation.dataAbsentReason",
         "path": "Observation.dataAbsentReason",
         "short": "Why the result is missing",
@@ -3326,10 +3294,7 @@
             "code": "Ratio"
           },
           {
-            "code": "SampledData",
-            "profile": [
-              "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-datatype-SampledData"
-            ]
+            "code": "SampledData"
           },
           {
             "code": "time"
@@ -3846,15 +3811,7 @@
         "short": "AccessionIdentifier: Identifier assigned by the lab",
         "definition": "Identifier assigned by the lab",
         "min": 0,
-        "max": "1",
-        "type": [
-          {
-            "code": "Identifier",
-            "profile": [
-              "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-AccessionIdentifier"
-            ]
-          }
-        ]
+        "max": "1"
       },
       {
         "id": "Observation.identifier:obf-FillerOrderNumber",
@@ -3863,15 +3820,7 @@
         "short": "FillerOrderNumber: Identifier assigned by the lab carrying out the test",
         "definition": "Identifier assigned by the lab carrying out the test.",
         "min": 0,
-        "max": "1",
-        "type": [
-          {
-            "code": "Identifier",
-            "profile": [
-              "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-FillerOrderNumber"
-            ]
-          }
-        ]
+        "max": "1"
       },
       {
         "id": "Observation.identifier:obf-PlacerOrderNumber",
@@ -3880,15 +3829,7 @@
         "short": "PlacerOrderNumber: Identifier assigned by the requester of the lab",
         "definition": "Identifier assigned by the requester of the lab.",
         "min": 0,
-        "max": "1",
-        "type": [
-          {
-            "code": "Identifier",
-            "profile": [
-              "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-PlacerOrderNumber"
-            ]
-          }
-        ]
+        "max": "1"
       },
       {
         "id": "Observation.basedOn",
@@ -4089,23 +4030,6 @@
         "fixedCode": "%"
       },
       {
-        "id": "Observation.valueQuantity:obf-lab-QuantityWithRequiredUnits",
-        "path": "Observation.valueQuantity",
-        "base": {
-          "path": "Observation.value[x]",
-          "min": 1,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "Quantity",
-            "profile": [
-              "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-lab-QuantityWithRequiredUnits"
-            ]
-          }
-        ]
-      },
-      {
         "id": "Observation.dataAbsentReason",
         "path": "Observation.dataAbsentReason",
         "min": 0,
@@ -4236,10 +4160,7 @@
             "code": "Ratio"
           },
           {
-            "code": "SampledData",
-            "profile": [
-              "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-datatype-SampledData"
-            ]
+            "code": "SampledData"
           },
           {
             "code": "time"

@@ -3,14 +3,14 @@
   "id": "obf-SurgicalProcedure",
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>SurgicalProcedure Profile</b></p>\n  <p>A procedure that involves a physical intervention on tissues.\n\nConformance note: If an ICD-10-PCS code is used in the code attribute, and an equivalent SNOMED-CT is available, the resulting Procedure instance will not be compliant with [US Core Profiles](http://hl7.org/fhir/us/core/STU3/index.html).</p>\n  <p><b>Mapping Summary</b></p>\n  <p><pre>obf.SurgicalProcedure maps to http://hl7.org/fhir/us/core/StructureDefinition/us-core-procedure:\n  Language maps to language\n  ImplicitRules maps to implicitRules\n  Metadata.VersionId maps to meta.versionId\n  Metadata.SourceSystem maps to meta.source\n  Metadata.Profile maps to meta.profile\n  Metadata.LastUpdated maps to meta.lastUpdated\n  Metadata.SecurityLabel maps to meta.security\n  Metadata.Tag maps to meta.tag\n  Narrative maps to text\n  Identifier maps to identifier\n  ProcedureBasedOn maps to basedOn\n  ProcedurePartOf maps to partOf  // add Observation, MedicationAdministration\n  Status maps to status\n  StatusReason maps to statusReason\n  Category maps to category\n  Code maps to code\n  SubjectOfRecord maps to subject\n  CareContext maps to encounter\n  OccurrenceTimeOrPeriod maps to performed[x]\n  PersonAuthor maps to recorder\n  PersonInformationSource maps to asserter\n  Participation maps to performer\n  Participation.Participant maps to performer.actor  // Added Target Type PractitionerRole -- not implemented\n  Participation.ParticipationType maps to performer.function  // renamed role to function in R4\n  Participation.OnBehalfOf maps to performer.onBehalfOf\n  Location maps to location\n  ReasonCode maps to reasonCode\n  ProcedureReasonReference maps to reasonReference\n  SurgicalBodyLocation.Code maps to bodySite\n  SurgicalBodyLocation.Laterality maps to bodySite.extension\n  SurgicalBodyLocation.AnatomicalOrientation maps to bodySite.extension\n  SurgicalBodyLocation.RelationToLandmark maps to bodySite.extension\n  Annotation maps to note\n  Outcome maps to outcome\n  DiagnosticReport maps to report\n  ComplicationCode maps to complication\n  ComplicationReference maps to complicationDetail\n  FollowUp maps to followUp\n  FocalDevice maps to focalDevice\n  FocalDevice.Device maps to focalDevice.manipulated\n  FocalDevice.FocalDeviceAction maps to focalDevice.action\n  MaterialUsedReference maps to usedReference\n  UsedCode maps to usedCode\n</pre></p>\n</div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>SurgicalProcedure Profile</b></p>\n  <p>A procedure that involves a physical intervention on tissues.\n\nConformance note: If an ICD-10-PCS code is used in the code attribute, and an equivalent SNOMED CT is available, the resulting Procedure instance will not be compliant with [US Core Profiles](http://hl7.org/fhir/us/core/STU3/index.html).</p>\n  <p><b>Mapping Summary</b></p>\n  <p><pre>obf.SurgicalProcedure maps to http://hl7.org/fhir/us/core/StructureDefinition/us-core-procedure:\n  Language maps to language\n  ImplicitRules maps to implicitRules\n  Metadata.VersionId maps to meta.versionId\n  Metadata.SourceSystem maps to meta.source\n  Metadata.Profile maps to meta.profile\n  Metadata.LastUpdated maps to meta.lastUpdated\n  Metadata.SecurityLabel maps to meta.security\n  Metadata.Tag maps to meta.tag\n  Narrative maps to text\n  Identifier maps to identifier\n  ProcedureBasedOn maps to basedOn\n  ProcedurePartOf maps to partOf  // add Observation, MedicationAdministration\n  Status maps to status\n  StatusReason maps to statusReason\n  Category maps to category\n  Code maps to code\n  SubjectOfRecord maps to subject\n  CareContext maps to encounter\n  OccurrenceTimeOrPeriod maps to performed[x]\n  PersonAuthor maps to recorder\n  PersonInformationSource maps to asserter\n  Participation maps to performer\n  Participation.Participant maps to performer.actor  // Added Target Type PractitionerRole -- not implemented\n  Participation.ParticipationType maps to performer.function  // renamed role to function in R4\n  Participation.OnBehalfOf maps to performer.onBehalfOf\n  Location maps to location\n  ReasonCode maps to reasonCode\n  ProcedureReasonReference maps to reasonReference\n  SurgicalBodyLocation.Code maps to bodySite\n  SurgicalBodyLocation.Laterality maps to bodySite.extension\n  SurgicalBodyLocation.AnatomicalOrientation maps to bodySite.extension\n  SurgicalBodyLocation.RelationToLandmark maps to bodySite.extension\n  Annotation maps to note\n  Outcome maps to outcome\n  DiagnosticReport maps to report\n  ComplicationCode maps to complication\n  ComplicationReference maps to complicationDetail\n  FollowUp maps to followUp\n  FocalDevice maps to focalDevice\n  FocalDevice.Device maps to focalDevice.manipulated\n  FocalDevice.FocalDeviceAction maps to focalDevice.action\n  MaterialUsedReference maps to usedReference\n  UsedCode maps to usedCode\n</pre></p>\n</div>"
   },
   "url": "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-SurgicalProcedure",
   "name": "SurgicalProcedure",
   "title": "obf-SurgicalProcedure",
   "status": "active",
   "experimental": false,
-  "date": "2019-07-30",
+  "date": "2019-07-31",
   "publisher": "The MITRE Corporation",
   "contact": [
     {
@@ -22,7 +22,7 @@
       ]
     }
   ],
-  "description": "A procedure that involves a physical intervention on tissues.\n\nConformance note: If an ICD-10-PCS code is used in the code attribute, and an equivalent SNOMED-CT is available, the resulting Procedure instance will not be compliant with [US Core Profiles](http://hl7.org/fhir/us/core/STU3/index.html).",
+  "description": "A procedure that involves a physical intervention on tissues.\n\nConformance note: If an ICD-10-PCS code is used in the code attribute, and an equivalent SNOMED CT is available, the resulting Procedure instance will not be compliant with [US Core Profiles](http://hl7.org/fhir/us/core/STU3/index.html).",
   "jurisdiction": [
     {
       "coding": [
@@ -73,7 +73,7 @@
         "id": "Procedure",
         "path": "Procedure",
         "short": "obf-SurgicalProcedure",
-        "definition": "A procedure that involves a physical intervention on tissues.\n\nConformance note: If an ICD-10-PCS code is used in the code attribute, and an equivalent SNOMED-CT is available, the resulting Procedure instance will not be compliant with [US Core Profiles](http://hl7.org/fhir/us/core/STU3/index.html).",
+        "definition": "A procedure that involves a physical intervention on tissues.\n\nConformance note: If an ICD-10-PCS code is used in the code attribute, and an equivalent SNOMED CT is available, the resulting Procedure instance will not be compliant with [US Core Profiles](http://hl7.org/fhir/us/core/STU3/index.html).",
         "min": 0,
         "max": "*",
         "base": {
@@ -2130,7 +2130,7 @@
         "id": "Procedure",
         "path": "Procedure",
         "short": "obf-SurgicalProcedure",
-        "definition": "A procedure that involves a physical intervention on tissues.\n\nConformance note: If an ICD-10-PCS code is used in the code attribute, and an equivalent SNOMED-CT is available, the resulting Procedure instance will not be compliant with [US Core Profiles](http://hl7.org/fhir/us/core/STU3/index.html).",
+        "definition": "A procedure that involves a physical intervention on tissues.\n\nConformance note: If an ICD-10-PCS code is used in the code attribute, and an equivalent SNOMED CT is available, the resulting Procedure instance will not be compliant with [US Core Profiles](http://hl7.org/fhir/us/core/STU3/index.html).",
         "mustSupport": false,
         "isModifier": false,
         "isSummary": false

@@ -10,7 +10,7 @@
   "title": "vital-BodyWeight",
   "status": "draft",
   "experimental": false,
-  "date": "2019-07-30",
+  "date": "2019-07-31",
   "publisher": "The MITRE Corporation",
   "contact": [
     {
@@ -3308,10 +3308,7 @@
             "code": "Ratio"
           },
           {
-            "code": "SampledData",
-            "profile": [
-              "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-datatype-SampledData"
-            ]
+            "code": "SampledData"
           },
           {
             "code": "time"
@@ -4107,10 +4104,7 @@
             "code": "Ratio"
           },
           {
-            "code": "SampledData",
-            "profile": [
-              "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-datatype-SampledData"
-            ]
+            "code": "SampledData"
           },
           {
             "code": "time"

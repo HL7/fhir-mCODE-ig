@@ -151,14 +151,14 @@ Compatibility: Lies at the intersection of Argonaut and US Core Patient. Marital
 
 Cancer staging information summarized in this profile should reflect the most recent staging assessment on the patient, and should be updated if and when there is a new staging assessment. Past staging assessments will be preserved in instances of the TNMClinicalStageGroup and/or TNMPathologicalStageGroup, which refer back to PrimaryCancerCondition.
 
-Conformance note: For the code attribute, to be compliant with [US Core Profiles](http://hl7.org/fhir/us/core/STU3/index.html), SNOMED-CT must be used unless there is no suitable code, in which case ICD-10-CM can be used.{% endcapture %}{{ md_text | markdownify }}</td>
+Conformance note: For the code attribute, to be compliant with [US Core Profiles](http://hl7.org/fhir/us/core/STU3/index.html), SNOMED CT must be used unless there is no suitable code, in which case ICD-10-CM can be used.{% endcapture %}{{ md_text | markdownify }}</td>
     </tr>
     <tr>
       <td><a href="StructureDefinition-onco-core-SecondaryCancerCondition.html">SecondaryCancerCondition</a></td>
       <td><a href="http://hl7.org/fhir/R4/condition.html">Condition</a></td>
       <td>{% capture md_text %}Records the history of secondary neoplasms, including location(s) and the date of onset of metastases. A secondary cancer results from the spread (metastasization) of cancer from its original site (reference: https://www.cancer.gov/publications/dictionaries/cancer-terms/def/secondary-tumor).
 
-Conformance note: For the code attribute, to be compliant with [US Core Profiles](http://hl7.org/fhir/us/core/STU3/index.html), SNOMED-CT must be used unless there is no suitable code, in which case ICD-10-CM can be used.{% endcapture %}{{ md_text | markdownify }}</td>
+Conformance note: For the code attribute, to be compliant with [US Core Profiles](http://hl7.org/fhir/us/core/STU3/index.html), SNOMED CT must be used unless there is no suitable code, in which case ICD-10-CM can be used.{% endcapture %}{{ md_text | markdownify }}</td>
     </tr>
     <tr>
       <td><a href="StructureDefinition-onco-core-TNMClinicalDistantMetastasesCategory.html">TNMClinicalDistantMetastasesCategory</a></td>
@@ -233,11 +233,6 @@ Implementation note: The data value for TumorMarkerTest has cardinality is 0..1 
       <td><a href="StructureDefinition-obf-AbnormalBodyStructure.html">AbnormalBodyStructure</a></td>
       <td><a href="http://hl7.org/fhir/R4/condition.html">Condition</a></td>
       <td>{% capture md_text %}A body structure such as wound or tumor, observed to be present in a patient. The body structure is a condition that persists over time. The Code represents the body structure itself (the morphology), while the BodyLocation is the location of that structure. This corresponds to FHIR R4, where the BodyStructure resource has morphology (corresponding to Code) and a location. For example, the Code could be blunt force injury (SCT 3821009) and location left knee.{% endcapture %}{{ md_text | markdownify }}</td>
-    </tr>
-    <tr>
-      <td><a href="StructureDefinition-obf-AccessionIdentifier.html">AccessionIdentifier</a></td>
-      <td><a href="http://hl7.org/fhir/R4/datatypes.html#identifier">Identifier</a></td>
-      <td>{% capture md_text %}Identifier assigned by the lab{% endcapture %}{{ md_text | markdownify }}</td>
     </tr>
     <tr>
       <td><a href="StructureDefinition-obf-ActionPerformed.html">ActionPerformed</a></td>
@@ -384,11 +379,6 @@ This profiled Condition uses the BodyLocation structure that includes not only a
 Note to FHIR implementers: Objective FHIR includes Status and Identifier fields on DomainResource because these two attributes occur in almost every FHIR resource. The most significant exception are 3 or 4 resources that use an 'active' flag instead of coded status value. There is no apparent pattern to this inconsistency. FHIR resources that use a coded status have active and inactive as status values. In the spirit of providing a consistent object-oriented logical model for FHIR, Objective FHIR uses status across all domain resources.{% endcapture %}{{ md_text | markdownify }}</td>
     </tr>
     <tr>
-      <td><a href="StructureDefinition-obf-datatype-Duration.html">Duration</a></td>
-      <td><a href="http://hl7.org/fhir/R4/datatypes.html#duration">Duration</a></td>
-      <td>{% capture md_text %}The length of time that something continues.{% endcapture %}{{ md_text | markdownify }}</td>
-    </tr>
-    <tr>
       <td><a href="StructureDefinition-obf-EncounterOrEpisode.html">EncounterOrEpisode</a></td>
       <td><a href="http://hl7.org/fhir/R4/domainresource.html">DomainResource</a></td>
       <td>{% capture md_text %}Abstract element representing a group of services delivered to a patient.{% endcapture %}{{ md_text | markdownify }}</td>
@@ -452,11 +442,6 @@ Note to FHIR implementers: Objective FHIR includes Status and Identifier fields 
       <td><a href="StructureDefinition-obf-lab-ErythrocytesNucleatedNCncPtBldQnLabObs.html">ErythrocytesNucleatedNCncPtBldQnLabObs</a></td>
       <td><a href="http://hl7.org/fhir/R4/observation.html">Observation</a></td>
       <td>{% capture md_text %}Nucleated erythrocytes [#/volume] in Blood. Units not required by LOINC but are strongly recommended.{% endcapture %}{{ md_text | markdownify }}</td>
-    </tr>
-    <tr>
-      <td><a href="StructureDefinition-obf-FillerOrderNumber.html">FillerOrderNumber</a></td>
-      <td><a href="http://hl7.org/fhir/R4/datatypes.html#identifier">Identifier</a></td>
-      <td>{% capture md_text %}Identifier assigned by the lab carrying out the test.{% endcapture %}{{ md_text | markdownify }}</td>
     </tr>
     <tr>
       <td><a href="StructureDefinition-obf-lab-GFR173sqMPredArVRatPtSerPlasQnMDRDLabObs.html">GFR173sqMPredArVRatPtSerPlasQnMDRDLabObs</a></td>
@@ -589,11 +574,6 @@ Note to FHIR implementers: Objective FHIR includes Status and Identifier fields 
       <td>{% capture md_text %}Metamyelocytes [#/volume] in Blood{% endcapture %}{{ md_text | markdownify }}</td>
     </tr>
     <tr>
-      <td><a href="StructureDefinition-obf-datatype-Money.html">Money</a></td>
-      <td><a href="http://hl7.org/fhir/R4/datatypes.html#money">Money</a></td>
-      <td>{% capture md_text %}Representation of an amount of currency or monetary value.{% endcapture %}{{ md_text | markdownify }}</td>
-    </tr>
-    <tr>
       <td><a href="StructureDefinition-obf-lab-Monocytes100WBCNFrPtBldQnAutoCntLabObs.html">Monocytes100WBCNFrPtBldQnAutoCntLabObs</a></td>
       <td><a href="http://hl7.org/fhir/R4/observation.html">Observation</a></td>
       <td>{% capture md_text %}Monocytes/​100 leukocytes in Blood by Automated count{% endcapture %}{{ md_text | markdownify }}</td>
@@ -617,11 +597,6 @@ Note to FHIR implementers: Objective FHIR includes Status and Identifier fields 
       <td><a href="StructureDefinition-obf-lab-MyelocytesNCncPtBldQnLabObs.html">MyelocytesNCncPtBldQnLabObs</a></td>
       <td><a href="http://hl7.org/fhir/R4/observation.html">Observation</a></td>
       <td>{% capture md_text %}Myelocytes [#/volume] in Blood. Units not required by LOINC but are strongly recommended.{% endcapture %}{{ md_text | markdownify }}</td>
-    </tr>
-    <tr>
-      <td><a href="StructureDefinition-obf-NationalProviderIdentifier.html">NationalProviderIdentifier</a></td>
-      <td><a href="http://hl7.org/fhir/R4/datatypes.html#identifier">Identifier</a></td>
-      <td>{% capture md_text %}NPI: a unique 10 digit number to allow US healthcare providers to identify themselves in a standard way throughout the healthcare industry.{% endcapture %}{{ md_text | markdownify }}</td>
     </tr>
     <tr>
       <td><a href="StructureDefinition-obf-lab-Neutrophils100WBCNFrPtBldQnAutoCntLabObs.html">Neutrophils100WBCNFrPtBldQnAutoCntLabObs</a></td>
@@ -674,11 +649,6 @@ For an Observation, the Code describes the aspect or property of the subject bei
       <td><a href="StructureDefinition-obf-lab-OtherCellsNCncPtBldQnAutoCntLabObs.html">OtherCellsNCncPtBldQnAutoCntLabObs</a></td>
       <td><a href="http://hl7.org/fhir/R4/observation.html">Observation</a></td>
       <td>{% capture md_text %}Other cells [#/​volume] in Blood by Automated count. Units not required by LOINC but are strongly recommended.{% endcapture %}{{ md_text | markdownify }}</td>
-    </tr>
-    <tr>
-      <td><a href="StructureDefinition-obf-PlacerOrderNumber.html">PlacerOrderNumber</a></td>
-      <td><a href="http://hl7.org/fhir/R4/datatypes.html#identifier">Identifier</a></td>
-      <td>{% capture md_text %}Identifier assigned by the requester of the lab.{% endcapture %}{{ md_text | markdownify }}</td>
     </tr>
     <tr>
       <td><a href="StructureDefinition-obf-lab-PlateletDistributionWidthEntVolPtBldQnAutoCntLabObs.html">PlateletDistributionWidthEntVolPtBldQnAutoCntLabObs</a></td>
@@ -736,11 +706,6 @@ For an Observation, the Code describes the aspect or property of the subject bei
       <td>{% capture md_text %}The result of evaluations (measurements, tests, or questions) whose answer is expressed as a code.{% endcapture %}{{ md_text | markdownify }}</td>
     </tr>
     <tr>
-      <td><a href="StructureDefinition-obf-lab-QuantityWithRequiredUnits.html">QuantityWithRequiredUnits</a></td>
-      <td><a href="http://hl7.org/fhir/R4/datatypes.html#quantity">Quantity</a></td>
-      <td>{% capture md_text %}A quantity that requires a coded unit of measure.{% endcapture %}{{ md_text | markdownify }}</td>
-    </tr>
-    <tr>
       <td><a href="StructureDefinition-obf-RadiationProcedure.html">RadiationProcedure</a></td>
       <td><a href="http://hl7.org/fhir/R4/procedure.html">Procedure</a></td>
       <td>{% capture md_text %}A radiation oncology procedure. The procedure might represent a complete course of treatment, or a single session that is part of a series of treatments. If the treatment is part of a larger course of treatment, the PartOf attribute should indicate that. If the procedure represents the entire course of therapy, the RadiationFractionsDelivered should indicate the number of sessions. If the procedure represents one session, then the RadiationFractionsDelivered would be 1, and the TotalRadiationDoseDelivered will be the same as the RadiationDosePerFraction.{% endcapture %}{{ md_text | markdownify }}</td>
@@ -749,11 +714,6 @@ For an Observation, the Code describes the aspect or property of the subject bei
       <td><a href="StructureDefinition-obf-Role.html">Role</a></td>
       <td><a href="http://hl7.org/fhir/R4/domainresource.html">DomainResource</a></td>
       <td>{% capture md_text %}Capacity in which an actor is involved in an activity. For instance, 'attending physician'. Note that attributes of the actor (an entity) that remain constant regardless of the role the actor plays should be part of the entity and not the role. For instance, a person may be a practitioner and a patient. In both cases their date of birth will be the same and thus such information should not be part of the role.{% endcapture %}{{ md_text | markdownify }}</td>
-    </tr>
-    <tr>
-      <td><a href="StructureDefinition-obf-datatype-SampledData.html">SampledData</a></td>
-      <td><a href="http://hl7.org/fhir/R4/datatypes.html#sampleddata">SampledData</a></td>
-      <td>{% capture md_text %}Data that comes from a series of measurements taken by a device, which may have upper and lower limits. The data type also supports more than one dimension in the data.{% endcapture %}{{ md_text | markdownify }}</td>
     </tr>
     <tr>
       <td><a href="StructureDefinition-obf-SimpleCodedNonLaboratoryObservation.html">SimpleCodedNonLaboratoryObservation</a></td>
@@ -790,25 +750,14 @@ For an Observation, the Code describes the aspect or property of the subject bei
       <td><a href="http://hl7.org/fhir/R4/procedure.html">Procedure</a></td>
       <td>{% capture md_text %}A procedure that involves a physical intervention on tissues.
 
-Conformance note: If an ICD-10-PCS code is used in the code attribute, and an equivalent SNOMED-CT is available, the resulting Procedure instance will not be compliant with [US Core Profiles](http://hl7.org/fhir/us/core/STU3/index.html).{% endcapture %}{{ md_text | markdownify }}</td>
-    </tr>
-    <tr>
-      <td><a href="StructureDefinition-obf-TaxIdentificationNumber.html">TaxIdentificationNumber</a></td>
-      <td><a href="http://hl7.org/fhir/R4/datatypes.html#identifier">Identifier</a></td>
-      <td>{% capture md_text %}Tax identification number for the practitioner.{% endcapture %}{{ md_text | markdownify }}</td>
-    </tr>
-    <tr>
-      <td><a href="StructureDefinition-obf-datatype-Timing.html">Timing</a></td>
-      <td><a href="http://hl7.org/fhir/R4/datatypes.html#timing">Timing</a></td>
-      <td>{% capture md_text %}A timing schedule that specifies an event that may occur multiple times.
-Timing offers a choice of multiple OccurrenceTime (used is used to specify specific times), or recurrence patterns.{% endcapture %}{{ md_text | markdownify }}</td>
+Conformance note: If an ICD-10-PCS code is used in the code attribute, and an equivalent SNOMED CT is available, the resulting Procedure instance will not be compliant with [US Core Profiles](http://hl7.org/fhir/us/core/STU3/index.html).{% endcapture %}{{ md_text | markdownify }}</td>
     </tr>
     <tr>
       <td><a href="StructureDefinition-onco-core-Tumor.html">Tumor</a></td>
       <td><a href="http://hl7.org/fhir/R4/condition.html">Condition</a></td>
       <td>{% capture md_text %}The presence of an abnormal mass of tissue (neoplasm) that results when cells divide more than they should or do not die when they should. Tumors may be benign (not cancer), or malignant (cancer). (source: NCI Dictionary).
 
-Conformance note: For the HistologyMorphologyBehavior attribute, to be compliant with [US Core Profiles](http://hl7.org/fhir/us/core/STU3/index.html), SNOMED-CT must be used unless there is no suitable code, in which case ICD-O-3 can be used.{% endcapture %}{{ md_text | markdownify }}</td>
+Conformance note: For the HistologyMorphologyBehavior attribute, to be compliant with [US Core Profiles](http://hl7.org/fhir/us/core/STU3/index.html), SNOMED CT must be used unless there is no suitable code, in which case ICD-O-3 can be used.{% endcapture %}{{ md_text | markdownify }}</td>
     </tr>
     <tr>
       <td><a href="StructureDefinition-obf-lab-UreaNitrogenCreatinineMRtoPtSerPlasQnLabObs.html">UreaNitrogenCreatinineMRtoPtSerPlasQnLabObs</a></td>

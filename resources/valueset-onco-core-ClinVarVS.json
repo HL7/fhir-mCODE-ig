@@ -20,7 +20,7 @@
       ]
     }
   ],
-  "date": "2019-07-30",
+  "date": "2019-07-31",
   "description": "Value set of human genetic variants, drawn from [ClinVar](https://www.ncbi.nlm.nih.gov/clinvar/).",
   "compose": {
     "include": [

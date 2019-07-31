@@ -9,7 +9,7 @@
   "name": "ExpectedPerformanceTime",
   "title": "obf-ExpectedPerformanceTime",
   "status": "draft",
-  "date": "2019-07-30",
+  "date": "2019-07-31",
   "publisher": "The MITRE Corporation",
   "contact": [
     {
@@ -201,10 +201,7 @@
             "code": "Period"
           },
           {
-            "code": "Timing",
-            "profile": [
-              "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-datatype-Timing"
-            ]
+            "code": "Timing"
           }
         ],
         "isModifier": false,
@@ -256,10 +253,7 @@
             "code": "Period"
           },
           {
-            "code": "Timing",
-            "profile": [
-              "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-datatype-Timing"
-            ]
+            "code": "Timing"
           }
         ]
       }

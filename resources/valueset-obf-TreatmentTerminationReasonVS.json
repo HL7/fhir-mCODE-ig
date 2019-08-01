@@ -9,18 +9,18 @@
   "name": "TreatmentTerminationReasonVS",
   "title": "TreatmentTerminationReasonVS",
   "status": "draft",
-  "publisher": "The MITRE Corporation",
+  "publisher": "HL7 International Clinical Interoperability Council",
   "contact": [
     {
       "telecom": [
         {
           "system": "url",
-          "value": "http://standardhealthrecord.org"
+          "value": "http://www.hl7.org/Special/committees/cic"
         }
       ]
     }
   ],
-  "date": "2019-07-31",
+  "date": "2019-08-01",
   "description": "Values used to describe the reasons for stopping a treatment. Includes code for 'treatment completed' as well as codes for unplanned (early) stoppage. Applies to medications and other treatments that take place over a period of time, such as radiation treatments.",
   "compose": {
     "include": [

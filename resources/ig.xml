@@ -1,14 +1,14 @@
 <ImplementationGuide xmlns="http://hl7.org/fhir">
     <id value="hl7.fhir.us.mcode-0.9.1" />
     <url value="http://hl7.org/fhir/us/mcode/ImplementationGuide/hl7.fhir.us.mcode-0.9.1" />
-    <name value="HL7_FHIR_Implementation_Guide_minimal_Common_Oncology_Data_Elements_mCODE_Release_1_US_Realm" />
-    <title value="HL7 FHIR Implementation Guide: minimal Common Oncology Data Elements (mCODE) Release 1 - US Realm" />
+    <name value="HL7_FHIR_Implementation_Guide_minimal_Common_Oncology_Data_Elements_mCODE_Release_1_US_Realm_STU_Ballot_1" />
+    <title value="HL7 FHIR Implementation Guide: minimal Common Oncology Data Elements (mCODE) Release 1 - US Realm | STU Ballot 1" />
     <status value="draft" />
-    <publisher value="The MITRE Corporation"/>
+    <publisher value="HL7 International Clinical Interoperability Council"/>
     <contact>
       <telecom>
         <system value="url"/>
-        <value value="http://standardhealthrecord.org"/>
+        <value value="http://www.hl7.org/Special/committees/cic"/>
       </telecom>
     </contact>
 
@@ -1961,7 +1961,7 @@
       
         <page>
             <nameUrl value="index.html" />
-            <title value="HL7 FHIR Implementation Guide: minimal Common Oncology Data Elements (mCODE) Release 1 - US Realm" />
+            <title value="HL7 FHIR Implementation Guide: minimal Common Oncology Data Elements (mCODE) Release 1 - US Realm | STU Ballot 1" />
             <generation value="html" />
         </page>
     </definition>

@@ -9,18 +9,18 @@
   "name": "PositiveNegativeVS",
   "title": "PositiveNegativeVS",
   "status": "draft",
-  "publisher": "The MITRE Corporation",
+  "publisher": "HL7 International Clinical Interoperability Council",
   "contact": [
     {
       "telecom": [
         {
           "system": "url",
-          "value": "http://standardhealthrecord.org"
+          "value": "http://www.hl7.org/Special/committees/cic"
         }
       ]
     }
   ],
-  "date": "2019-07-31",
+  "date": "2019-08-01",
   "description": "Interpretation of a test result as positive, negative, equivocal, or indeterminate. Consolidates LOINC answer lists LL360-9, LL2329-2, LL2038-9, LL2021-5, LL2010-8, LL2009-0.",
   "compose": {
     "include": [

@@ -9,18 +9,18 @@
   "name": "ComorbidConditionVS",
   "title": "ComorbidConditionVS",
   "status": "draft",
-  "publisher": "The MITRE Corporation",
+  "publisher": "HL7 International Clinical Interoperability Council",
   "contact": [
     {
       "telecom": [
         {
           "system": "url",
-          "value": "http://standardhealthrecord.org"
+          "value": "http://www.hl7.org/Special/committees/cic"
         }
       ]
     }
   ],
-  "date": "2019-07-31",
+  "date": "2019-08-01",
   "description": "SNOMED and ICD-10-CM codes for common comorbid conditions. Aligns with Elixhauser comorbidity scale. ICD-10 codes are drawn from https://www.hcup-us.ahrq.gov/toolssoftware/comorbidityicd10/comformat_icd10cm_2019_1.txt.\n\nConformance note: If an ICD-10-CM code is used, and an equivalent SNOMED CT code is available, the resulting instance will not validate against US Core Profiles.",
   "compose": {
     "include": [

@@ -9,18 +9,18 @@
   "name": "ConditionStatusTrendVS",
   "title": "ConditionStatusTrendVS",
   "status": "draft",
-  "publisher": "The MITRE Corporation",
+  "publisher": "HL7 International Clinical Interoperability Council",
   "contact": [
     {
       "telecom": [
         {
           "system": "url",
-          "value": "http://standardhealthrecord.org"
+          "value": "http://www.hl7.org/Special/committees/cic"
         }
       ]
     }
   ],
-  "date": "2019-07-31",
+  "date": "2019-08-01",
   "description": "Standardized value set that describes the trend or status of a disease, condition, or ability. Based on LOINC answer lists LL2751-7 and LL4721-8. The value SNOMED CT 260415000 (Not Detected) should be used to express No Evidence of Disease (NED), condition resolved, or full remission.",
   "compose": {
     "include": [

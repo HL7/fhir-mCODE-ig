@@ -9,18 +9,18 @@
   "name": "RadiationTargetBodySiteVS",
   "title": "RadiationTargetBodySiteVS",
   "status": "draft",
-  "publisher": "The MITRE Corporation",
+  "publisher": "HL7 International Clinical Interoperability Council",
   "contact": [
     {
       "telecom": [
         {
           "system": "url",
-          "value": "http://standardhealthrecord.org"
+          "value": "http://www.hl7.org/Special/committees/cic"
         }
       ]
     }
   ],
-  "date": "2019-07-31",
+  "date": "2019-08-01",
   "description": "Codes for body sites that can be targets of radiation therapy. This list of sites is based on Commission on Cancer’s 'Standards for Oncology Registry Entry  - STORE 2018'. This value set contains SNOMED CT equivalent terms.",
   "compose": {
     "include": [

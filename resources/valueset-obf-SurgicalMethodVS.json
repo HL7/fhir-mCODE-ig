@@ -9,18 +9,18 @@
   "name": "SurgicalMethodVS",
   "title": "SurgicalMethodVS",
   "status": "draft",
-  "publisher": "The MITRE Corporation",
+  "publisher": "HL7 International Clinical Interoperability Council",
   "contact": [
     {
       "telecom": [
         {
           "system": "url",
-          "value": "http://standardhealthrecord.org"
+          "value": "http://www.hl7.org/Special/committees/cic"
         }
       ]
     }
   ],
-  "date": "2019-07-31",
+  "date": "2019-08-01",
   "description": "Codes describing additional information about the method of the surgery. Includes the technique used to reach the site of the procedure, and actions taken during the surgery. Value set includes SNOMED codes descending from 103379005 'Procedural approach' and descending from 129284003 'Surgical action'.",
   "compose": {
     "include": [

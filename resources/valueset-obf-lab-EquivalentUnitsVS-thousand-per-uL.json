@@ -9,18 +9,18 @@
   "name": "EquivalentUnitsVS_thousand_per_uL",
   "title": "EquivalentUnitsVS-thousand-per-uL",
   "status": "draft",
-  "publisher": "The MITRE Corporation",
+  "publisher": "HL7 International Clinical Interoperability Council",
   "contact": [
     {
       "telecom": [
         {
           "system": "url",
-          "value": "http://standardhealthrecord.org"
+          "value": "http://www.hl7.org/Special/committees/cic"
         }
       ]
     }
   ],
-  "date": "2019-07-31",
+  "date": "2019-08-01",
   "description": "Units equivalent to 10*3/uL",
   "compose": {
     "include": [

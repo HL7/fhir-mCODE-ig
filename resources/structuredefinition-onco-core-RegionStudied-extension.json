@@ -9,14 +9,14 @@
   "name": "RegionStudied",
   "title": "onco-core-RegionStudied",
   "status": "draft",
-  "date": "2019-07-31",
-  "publisher": "The MITRE Corporation",
+  "date": "2019-08-01",
+  "publisher": "HL7 International Clinical Interoperability Council",
   "contact": [
     {
       "telecom": [
         {
           "system": "url",
-          "value": "http://standardhealthrecord.org"
+          "value": "http://www.hl7.org/Special/committees/cic"
         }
       ]
     }

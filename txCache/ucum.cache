@@ -1,0 +1,91 @@
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://unitsofmeasure.org",
+      "concept" : [{
+        "code" : "pm",
+        "display" : "Picometer"
+      },
+      {
+        "code" : "nm",
+        "display" : "Nanometer"
+      },
+      {
+        "code" : "mm",
+        "display" : "Millimeter"
+      },
+      {
+        "code" : "cm",
+        "display" : "Centimeter"
+      },
+      {
+        "code" : "m",
+        "display" : "Meter"
+      },
+      {
+        "code" : "ft-us",
+        "display" : "Foot"
+      },
+      {
+        "code" : "in-us",
+        "display" : "Inch"
+      }]
+    }]
+  }
+}}####
+e: {
+  "valueSet" : {
+  "resourceType" : "ValueSet",
+  "expansion" : {
+    "identifier" : "urn:uuid:3b30303f-9bed-4026-98cc-23ed13b2025a",
+    "timestamp" : "2019-12-17T17:26:52.818Z",
+    "parameter" : [{
+      "name" : "limitedExpansion",
+      "valueString" : "-1"
+    },
+    {
+      "name" : "version",
+      "valueString" : "http://unitsofmeasure.org|2.0.1"
+    }],
+    "contains" : [{
+      "system" : "http://unitsofmeasure.org",
+      "code" : "pm",
+      "display" : "Picometer"
+    },
+    {
+      "system" : "http://unitsofmeasure.org",
+      "code" : "nm",
+      "display" : "Nanometer"
+    },
+    {
+      "system" : "http://unitsofmeasure.org",
+      "code" : "mm",
+      "display" : "Millimeter"
+    },
+    {
+      "system" : "http://unitsofmeasure.org",
+      "code" : "cm",
+      "display" : "Centimeter"
+    },
+    {
+      "system" : "http://unitsofmeasure.org",
+      "code" : "m",
+      "display" : "Meter"
+    },
+    {
+      "system" : "http://unitsofmeasure.org",
+      "code" : "ft-us",
+      "display" : "Foot"
+    },
+    {
+      "system" : "http://unitsofmeasure.org",
+      "code" : "in-us",
+      "display" : "Inch"
+    }]
+  }
+},
+  "error" : ""
+}
+-------------------------------------------------------------------------------------

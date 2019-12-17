@@ -3,7 +3,7 @@
   "id": "onco-core-CancerRelatedMedicationStatement",
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>CancerRelatedMedicationStatement Profile</b></p>\n  <p>A record of the use of a medication (individual administration or entire course) for a condition that is related to a primary or secondary cancer condition. The use may be reported by the patient or clinician and adminstration does not have to be directly observed.</p>\n  <p><b>Mapping Summary</b></p>\n  <p><pre>onco.core.CancerRelatedMedicationStatement maps to http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationstatement:\n  Language maps to language\n  ImplicitRules maps to implicitRules\n  Metadata.VersionId maps to meta.versionId\n  Metadata.SourceSystem maps to meta.source\n  Metadata.Profile maps to meta.profile\n  Metadata.LastUpdated maps to meta.lastUpdated\n  Metadata.SecurityLabel maps to meta.security\n  Metadata.Tag maps to meta.tag\n  Narrative maps to text\n  Identifier maps to identifier\n  MedicationBasedOn maps to basedOn\n  MedicationStatementPartOf maps to partOf\n  Status maps to status\n  StatusReason maps to statusReason\n  Category maps to category\n  MedicationCodeOrReference maps to medication[x]\n  SubjectOfRecord maps to subject\n  CareContext maps to context\n  OccurrenceTimeOrPeriod maps to effective[x]\n  StatementDateTime maps to dateAsserted\n  MedicationInformationSource maps to informationSource\n  SupportingInformation maps to derivedFrom  //erroneous attribute name in FHIR STU3, R4\n  ReasonCode maps to reasonCode\n  CancerRelatedMedicationReasonReference maps to reasonReference\n  Annotation maps to note\n  Dosage maps to dosage\n</pre></p>\n</div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>CancerRelatedMedicationStatement Profile</b></p>\n  <p>A record of the use of a medication (individual administration or entire course) used to treat a primary or secondary cancer condition. The use may be reported by the patient or clinician and adminstration does not have to be directly observed.</p>\n  <p><b>Mapping Summary</b></p>\n  <p><pre>onco.core.CancerRelatedMedicationStatement maps to http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationstatement:\n  Language maps to language\n  ImplicitRules maps to implicitRules\n  Metadata.VersionId maps to meta.versionId\n  Metadata.SourceSystem maps to meta.source\n  Metadata.Profile maps to meta.profile\n  Metadata.LastUpdated maps to meta.lastUpdated\n  Metadata.SecurityLabel maps to meta.security\n  Metadata.Tag maps to meta.tag\n  Narrative maps to text\n  Identifier maps to identifier\n  MedicationBasedOn maps to basedOn\n  MedicationStatementPartOf maps to partOf\n  Status maps to status\n  StatusReason maps to statusReason\n  Category maps to category\n  MedicationCodeOrReference maps to medication[x]\n  SubjectOfRecord maps to subject\n  CareContext maps to context\n  OccurrenceTimeOrPeriod maps to effective[x]\n  StatementDateTime maps to dateAsserted\n  MedicationInformationSource maps to informationSource\n  SupportingInformation maps to derivedFrom  //erroneous attribute name in FHIR STU3, R4\n  ReasonCode maps to reasonCode\n  CancerRelatedMedicationReasonReference maps to reasonReference\n  Annotation maps to note\n  Dosage maps to dosage\n</pre></p>\n</div>"
   },
   "url": "http://hl7.org/fhir/us/mcode/StructureDefinition/onco-core-CancerRelatedMedicationStatement",
   "name": "CancerRelatedMedicationStatement",
@@ -22,7 +22,7 @@
       ]
     }
   ],
-  "description": "A record of the use of a medication (individual administration or entire course) for a condition that is related to a primary or secondary cancer condition. The use may be reported by the patient or clinician and adminstration does not have to be directly observed.",
+  "description": "A record of the use of a medication (individual administration or entire course) used to treat a primary or secondary cancer condition. The use may be reported by the patient or clinician and adminstration does not have to be directly observed.",
   "jurisdiction": [
     {
       "coding": [
@@ -73,7 +73,7 @@
         "id": "MedicationStatement",
         "path": "MedicationStatement",
         "short": "Cancer Related Medication Statement",
-        "definition": "A record of the use of a medication (individual administration or entire course) for a condition that is related to a primary or secondary cancer condition. The use may be reported by the patient or clinician and adminstration does not have to be directly observed.",
+        "definition": "A record of the use of a medication (individual administration or entire course) used to treat a primary or secondary cancer condition. The use may be reported by the patient or clinician and adminstration does not have to be directly observed.",
         "comment": "When interpreting a medicationStatement, the value of the status and NotTaken needed to be considered:\rMedicationStatement.status + MedicationStatement.wasNotTaken\rStatus=Active + NotTaken=T = Not currently taking\rStatus=Completed + NotTaken=T = Not taken in the past\rStatus=Intended + NotTaken=T = No intention of taking\rStatus=Active + NotTaken=F = Taking, but not as prescribed\rStatus=Active + NotTaken=F = Taking\rStatus=Intended +NotTaken= F = Will be taking (not started)\rStatus=Completed + NotTaken=F = Taken in past\rStatus=In Error + NotTaken=N/A = In Error.",
         "min": 0,
         "max": "*",
@@ -1120,15 +1120,8 @@
         "isModifier": false,
         "isSummary": false,
         "binding": {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
-              "valueString": "MedicationReason"
-            }
-          ],
-          "strength": "example",
-          "description": "A coded concept identifying why the medication is being taken.",
-          "valueSet": "http://hl7.org/fhir/ValueSet/condition-code"
+          "strength": "extensible",
+          "valueSet": "http://hl7.org/fhir/us/mcode/ValueSet/onco-core-CancerDisorderVS"
         },
         "mapping": [
           {
@@ -1149,7 +1142,7 @@
         "id": "MedicationStatement.reasonReference",
         "path": "MedicationStatement.reasonReference",
         "short": "Condition or observation that supports why the medication is being/was taken",
-        "definition": "Condition or observation that supports why the medication is being/was taken",
+        "definition": "Condition or observation that supports why the medication is being/was taken.",
         "comment": "This is a reference to a condition that is the reason why the medication is being/was taken.  If only a code exists, use reasonForUseCode.",
         "min": 0,
         "max": "1",
@@ -1163,10 +1156,7 @@
             "code": "Reference",
             "targetProfile": [
               "http://hl7.org/fhir/us/mcode/StructureDefinition/onco-core-PrimaryCancerCondition",
-              "http://hl7.org/fhir/us/mcode/StructureDefinition/onco-core-SecondaryCancerCondition",
-              "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-Observation",
-              "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-DiagnosticReport",
-              "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-ComorbidCondition"
+              "http://hl7.org/fhir/us/mcode/StructureDefinition/onco-core-SecondaryCancerCondition"
             ]
           }
         ],
@@ -1258,7 +1248,7 @@
         "id": "MedicationStatement",
         "path": "MedicationStatement",
         "short": "Cancer Related Medication Statement",
-        "definition": "A record of the use of a medication (individual administration or entire course) for a condition that is related to a primary or secondary cancer condition. The use may be reported by the patient or clinician and adminstration does not have to be directly observed.",
+        "definition": "A record of the use of a medication (individual administration or entire course) used to treat a primary or secondary cancer condition. The use may be reported by the patient or clinician and adminstration does not have to be directly observed.",
         "mustSupport": false,
         "isModifier": false,
         "isSummary": false
@@ -1407,7 +1397,11 @@
         "id": "MedicationStatement.reasonCode",
         "path": "MedicationStatement.reasonCode",
         "min": 0,
-        "max": "1"
+        "max": "1",
+        "binding": {
+          "strength": "extensible",
+          "valueSet": "http://hl7.org/fhir/us/mcode/ValueSet/onco-core-CancerDisorderVS"
+        }
       },
       {
         "id": "MedicationStatement.reasonReference",
@@ -1419,14 +1413,10 @@
             "code": "Reference",
             "targetProfile": [
               "http://hl7.org/fhir/us/mcode/StructureDefinition/onco-core-PrimaryCancerCondition",
-              "http://hl7.org/fhir/us/mcode/StructureDefinition/onco-core-SecondaryCancerCondition",
-              "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-Observation",
-              "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-DiagnosticReport",
-              "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-ComorbidCondition"
+              "http://hl7.org/fhir/us/mcode/StructureDefinition/onco-core-SecondaryCancerCondition"
             ]
           }
-        ],
-        "definition": "Condition or observation that supports why the medication is being/was taken"
+        ]
       },
       {
         "id": "MedicationStatement.note",

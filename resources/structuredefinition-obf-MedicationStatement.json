@@ -387,8 +387,7 @@
         ],
         "isModifier": false,
         "isSummary": false,
-        "sliceName": "treatmentintent",
-        "mustSupport": true
+        "sliceName": "treatmentintent"
       },
       {
         "id": "MedicationStatement.extension:terminationreason",
@@ -411,8 +410,7 @@
         ],
         "isModifier": false,
         "isSummary": false,
-        "sliceName": "terminationreason",
-        "mustSupport": true
+        "sliceName": "terminationreason"
       },
       {
         "id": "MedicationStatement.extension:terminationreason.id",
@@ -1297,8 +1295,7 @@
         ],
         "isModifier": false,
         "isSummary": false,
-        "sliceName": "treatmentintent",
-        "mustSupport": true
+        "sliceName": "treatmentintent"
       },
       {
         "id": "MedicationStatement.extension:terminationreason",
@@ -1321,8 +1318,7 @@
         ],
         "isModifier": false,
         "isSummary": false,
-        "sliceName": "terminationreason",
-        "mustSupport": true
+        "sliceName": "terminationreason"
       },
       {
         "id": "MedicationStatement.extension:terminationreason.valueCodeableConcept",

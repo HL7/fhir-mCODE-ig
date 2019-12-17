@@ -47,7 +47,7 @@
     <tr>
       <td><a href="StructureDefinition-onco-core-CancerRelatedMedicationStatement.html">Cancer Related Medication Statement</a></td>
       <td><a href="http://hl7.org/fhir/R4/medicationstatement.html">MedicationStatement</a></td>
-      <td>{% capture md_text %}A record of the use of a medication (individual administration or entire course) for a condition that is related to a primary or secondary cancer condition. The use may be reported by the patient or clinician and adminstration does not have to be directly observed.{% endcapture %}{{ md_text | markdownify }}</td>
+      <td>{% capture md_text %}A record of the use of a medication (individual administration or entire course) used to treat a primary or secondary cancer condition. The use may be reported by the patient or clinician and adminstration does not have to be directly observed.{% endcapture %}{{ md_text | markdownify }}</td>
     </tr>
     <tr>
       <td><a href="StructureDefinition-onco-core-CancerRelatedRadiationProcedure.html">Cancer Related Radiation Procedure</a></td>
@@ -102,18 +102,6 @@ Conformance note: The category for this profile is set to GE (Genetics), a code 
       <td><a href="StructureDefinition-obf-KarnofskyPerformanceStatus.html">Karnofsky Performance Status</a></td>
       <td><a href="http://hl7.org/fhir/R4/observation.html">Observation</a></td>
       <td>{% capture md_text %}The Karnofsky Performance Status (KPS) is a tool used to measure a patient's functional status. It can be used to compare the effectiveness of different therapies and to help assess the prognosis of certain patients, such as those with certain cancers. The KPS score ranges from 0 to 100 in intervals of 10. Higher scores are associated with better functional status, with 100 representing no symptoms or evidence of disease, and 0 representing death.{% endcapture %}{{ md_text | markdownify }}</td>
-    </tr>
-    <tr>
-      <td><a href="StructureDefinition-obf-MedicationStatement.html">Medication Statement</a></td>
-      <td><a href="http://hl7.org/fhir/R4/medicationstatement.html">MedicationStatement</a></td>
-      <td>{% capture md_text %}A record of the use of a medication (individual administration or entire course). The use may be reported by the patient or clinician and adminstration does not have to be directly observed.
-
-Implementation note: Although FHIR supports the asserter (information source) and date asserted, it does not have a place for the author (who created and is responsible for the statement) and recorder (who entered the statement). Extensions are provided.
-
-Conformance note: The treatment of 'not taken' has changed from DSTU2 and STU3 to R4. In R4, status and statusReason are used to indicate medications not taken. For upward compatibility, the 'not taken' attributes are profiled out.
-ReasonCode is a choice of CodeableConcept or ref(Condition) in DSTU2, and limited to one reason (pick a type). In STU3 and R4, there can be multiple reason codes, and multiple reason references, simultaneously.
-
-Implementation note: Preference is given to using the National Library of Medicine (NLM) RxNorm terminology for medications. RxNorm is a coding standard established by the Office of the National Coordinator (ONC). However, RxNorm is restricted to FDA-approved drugs and does not include clinical trial drugs. MedicationStatement allows for the inclusion of other coding systems like the NCI Thesaurus (NCIT) to represent clinical trial oncology drugs.{% endcapture %}{{ md_text | markdownify }}</td>
     </tr>
     <tr>
       <td><a href="StructureDefinition-obf-Patient.html">Patient</a></td>
@@ -284,6 +272,18 @@ SHR does not allow the 'not given' attributes from DSTU2 and STU3, since they ar
 Value sets for status are in direct conflict between DSTU2 Argonaut and STU3 US-Core.
 Category does not exist in DSTU2 and is provided as an extension.
 Intent was added in STU3 and is provided as an extension with required binding.{% endcapture %}{{ md_text | markdownify }}</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-obf-MedicationStatement.html">Medication Statement</a></td>
+      <td><a href="http://hl7.org/fhir/R4/medicationstatement.html">MedicationStatement</a></td>
+      <td>{% capture md_text %}A record of the use of a medication (individual administration or entire course). The use may be reported by the patient or clinician and adminstration does not have to be directly observed.
+
+Implementation note: Although FHIR supports the asserter (information source) and date asserted, it does not have a place for the author (who created and is responsible for the statement) and recorder (who entered the statement). Extensions are provided.
+
+Conformance note: The treatment of 'not taken' has changed from DSTU2 and STU3 to R4. In R4, status and statusReason are used to indicate medications not taken. For upward compatibility, the 'not taken' attributes are profiled out.
+ReasonCode is a choice of CodeableConcept or ref(Condition) in DSTU2, and limited to one reason (pick a type). In STU3 and R4, there can be multiple reason codes, and multiple reason references, simultaneously.
+
+Implementation note: Preference is given to using the National Library of Medicine (NLM) RxNorm terminology for medications. RxNorm is a coding standard established by the Office of the National Coordinator (ONC). However, RxNorm is restricted to FDA-approved drugs and does not include clinical trial drugs. MedicationStatement allows for the inclusion of other coding systems like the NCI Thesaurus (NCIT) to represent clinical trial oncology drugs.{% endcapture %}{{ md_text | markdownify }}</td>
     </tr>
     <tr>
       <td><a href="StructureDefinition-obf-datatype-Money.html">Money</a></td>

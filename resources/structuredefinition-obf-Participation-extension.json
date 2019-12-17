@@ -7,9 +7,9 @@
   },
   "url": "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-Participation-extension",
   "name": "Participation",
-  "title": "obf-Participation",
+  "title": "Participation",
   "status": "draft",
-  "date": "2019-08-01",
+  "date": "2019-12-17",
   "publisher": "HL7 International Clinical Interoperability Council",
   "contact": [
     {
@@ -163,10 +163,7 @@
         },
         "type": [
           {
-            "code": "Extension",
-            "profile": [
-              "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-Participant-extension"
-            ]
+            "code": "Extension"
           }
         ],
         "isModifier": false,
@@ -180,7 +177,143 @@
         "sliceName": "participant"
       },
       {
-        "id": "Extension.extension:participationtype",
+        "id": "Extension.extension:participant.id",
+        "path": "Extension.extension.id",
+        "representation": [
+          "xmlAttr"
+        ],
+        "short": "Unique id for inter-element referencing",
+        "definition": "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Element.id",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "isModifier": false,
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "id": "Extension.extension:participant.extension",
+        "path": "Extension.extension.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "description": "Extensions are always sliced by (at least) url",
+          "rules": "open"
+        },
+        "short": "Additional content defined by implementations",
+        "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+        "comment": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "alias": [
+          "extensions",
+          "user content"
+        ],
+        "min": 0,
+        "max": "0",
+        "base": {
+          "path": "Element.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ],
+        "isModifier": false,
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "id": "Extension.extension:participant.url",
+        "path": "Extension.extension.url",
+        "representation": [
+          "xmlAttr"
+        ],
+        "short": "identifies the meaning of the extension",
+        "definition": "Source of the definition for the extension code - a logical name or a URL.",
+        "comment": "The definition may point directly to a computable or human-readable definition of the extensibility codes, or it may be a logical URI as declared in some other specification. The definition SHALL be a URI for the Structure Definition defining the extension.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Extension.url",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "uri"
+          }
+        ],
+        "isModifier": false,
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "N/A"
+          }
+        ],
+        "fixedUri": "participant"
+      },
+      {
+        "id": "Extension.extension:participant.valueReference",
+        "path": "Extension.extension.valueReference",
+        "short": "Value of extension",
+        "definition": "Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Extension.value[x]",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-Patient",
+              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner",
+              "http://hl7.org/fhir/StructureDefinition/RelatedPerson",
+              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization",
+              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-device",
+              "http://hl7.org/fhir/StructureDefinition/Group",
+              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-location"
+            ]
+          }
+        ],
+        "isModifier": false,
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "N/A"
+          }
+        ]
+      },
+      {
+        "id": "Extension.extension:participationType",
         "path": "Extension.extension",
         "definition": "The role played by the participant engaged in the action, for example, as the attending physician, surgical assistant, etc.",
         "min": 0,
@@ -192,10 +325,7 @@
         },
         "type": [
           {
-            "code": "Extension",
-            "profile": [
-              "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-ParticipationType-extension"
-            ]
+            "code": "Extension"
           }
         ],
         "isModifier": false,
@@ -206,10 +336,141 @@
             "map": "n/a"
           }
         ],
-        "sliceName": "participationtype"
+        "sliceName": "participationType"
       },
       {
-        "id": "Extension.extension:participationperiod",
+        "id": "Extension.extension:participationType.id",
+        "path": "Extension.extension.id",
+        "representation": [
+          "xmlAttr"
+        ],
+        "short": "Unique id for inter-element referencing",
+        "definition": "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Element.id",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "isModifier": false,
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "id": "Extension.extension:participationType.extension",
+        "path": "Extension.extension.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "description": "Extensions are always sliced by (at least) url",
+          "rules": "open"
+        },
+        "short": "Additional content defined by implementations",
+        "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+        "comment": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "alias": [
+          "extensions",
+          "user content"
+        ],
+        "min": 0,
+        "max": "0",
+        "base": {
+          "path": "Element.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ],
+        "isModifier": false,
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "id": "Extension.extension:participationType.url",
+        "path": "Extension.extension.url",
+        "representation": [
+          "xmlAttr"
+        ],
+        "short": "identifies the meaning of the extension",
+        "definition": "Source of the definition for the extension code - a logical name or a URL.",
+        "comment": "The definition may point directly to a computable or human-readable definition of the extensibility codes, or it may be a logical URI as declared in some other specification. The definition SHALL be a URI for the Structure Definition defining the extension.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Extension.url",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "uri"
+          }
+        ],
+        "isModifier": false,
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "N/A"
+          }
+        ],
+        "fixedUri": "participationType"
+      },
+      {
+        "id": "Extension.extension:participationType.valueCodeableConcept",
+        "path": "Extension.extension.valueCodeableConcept",
+        "short": "Value of extension",
+        "definition": "Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Extension.value[x]",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "isModifier": false,
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "N/A"
+          }
+        ],
+        "binding": {
+          "strength": "example",
+          "valueSet": "http://hl7.org/fhir/ValueSet/performer-role"
+        }
+      },
+      {
+        "id": "Extension.extension:participationPeriod",
         "path": "Extension.extension",
         "definition": "The point in time or span of time the participant is involved.",
         "min": 0,
@@ -221,10 +482,7 @@
         },
         "type": [
           {
-            "code": "Extension",
-            "profile": [
-              "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-ParticipationPeriod-extension"
-            ]
+            "code": "Extension"
           }
         ],
         "isModifier": false,
@@ -235,10 +493,137 @@
             "map": "n/a"
           }
         ],
-        "sliceName": "participationperiod"
+        "sliceName": "participationPeriod"
       },
       {
-        "id": "Extension.extension:onbehalfof",
+        "id": "Extension.extension:participationPeriod.id",
+        "path": "Extension.extension.id",
+        "representation": [
+          "xmlAttr"
+        ],
+        "short": "Unique id for inter-element referencing",
+        "definition": "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Element.id",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "isModifier": false,
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "id": "Extension.extension:participationPeriod.extension",
+        "path": "Extension.extension.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "description": "Extensions are always sliced by (at least) url",
+          "rules": "open"
+        },
+        "short": "Additional content defined by implementations",
+        "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+        "comment": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "alias": [
+          "extensions",
+          "user content"
+        ],
+        "min": 0,
+        "max": "0",
+        "base": {
+          "path": "Element.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ],
+        "isModifier": false,
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "id": "Extension.extension:participationPeriod.url",
+        "path": "Extension.extension.url",
+        "representation": [
+          "xmlAttr"
+        ],
+        "short": "identifies the meaning of the extension",
+        "definition": "Source of the definition for the extension code - a logical name or a URL.",
+        "comment": "The definition may point directly to a computable or human-readable definition of the extensibility codes, or it may be a logical URI as declared in some other specification. The definition SHALL be a URI for the Structure Definition defining the extension.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Extension.url",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "uri"
+          }
+        ],
+        "isModifier": false,
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "N/A"
+          }
+        ],
+        "fixedUri": "participationPeriod"
+      },
+      {
+        "id": "Extension.extension:participationPeriod.valuePeriod",
+        "path": "Extension.extension.valuePeriod",
+        "short": "Value of extension",
+        "definition": "Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Extension.value[x]",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Period"
+          }
+        ],
+        "isModifier": false,
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "N/A"
+          }
+        ]
+      },
+      {
+        "id": "Extension.extension:onBehalfOf",
         "path": "Extension.extension",
         "definition": "The party represented by the actual participant.",
         "min": 0,
@@ -250,10 +635,7 @@
         },
         "type": [
           {
-            "code": "Extension",
-            "profile": [
-              "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-OnBehalfOf-extension"
-            ]
+            "code": "Extension"
           }
         ],
         "isModifier": false,
@@ -264,7 +646,141 @@
             "map": "n/a"
           }
         ],
-        "sliceName": "onbehalfof"
+        "sliceName": "onBehalfOf"
+      },
+      {
+        "id": "Extension.extension:onBehalfOf.id",
+        "path": "Extension.extension.id",
+        "representation": [
+          "xmlAttr"
+        ],
+        "short": "Unique id for inter-element referencing",
+        "definition": "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Element.id",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "isModifier": false,
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "id": "Extension.extension:onBehalfOf.extension",
+        "path": "Extension.extension.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "description": "Extensions are always sliced by (at least) url",
+          "rules": "open"
+        },
+        "short": "Additional content defined by implementations",
+        "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+        "comment": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "alias": [
+          "extensions",
+          "user content"
+        ],
+        "min": 0,
+        "max": "0",
+        "base": {
+          "path": "Element.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ],
+        "isModifier": false,
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "id": "Extension.extension:onBehalfOf.url",
+        "path": "Extension.extension.url",
+        "representation": [
+          "xmlAttr"
+        ],
+        "short": "identifies the meaning of the extension",
+        "definition": "Source of the definition for the extension code - a logical name or a URL.",
+        "comment": "The definition may point directly to a computable or human-readable definition of the extensibility codes, or it may be a logical URI as declared in some other specification. The definition SHALL be a URI for the Structure Definition defining the extension.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Extension.url",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "uri"
+          }
+        ],
+        "isModifier": false,
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "N/A"
+          }
+        ],
+        "fixedUri": "onBehalfOf"
+      },
+      {
+        "id": "Extension.extension:onBehalfOf.valueReference",
+        "path": "Extension.extension.valueReference",
+        "short": "Value of extension",
+        "definition": "Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Extension.value[x]",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner",
+              "http://hl7.org/fhir/StructureDefinition/RelatedPerson",
+              "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-Patient",
+              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-device",
+              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization"
+            ]
+          }
+        ],
+        "isModifier": false,
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "N/A"
+          }
+        ]
       },
       {
         "id": "Extension.url",
@@ -492,10 +1008,7 @@
         },
         "type": [
           {
-            "code": "Extension",
-            "profile": [
-              "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-Participant-extension"
-            ]
+            "code": "Extension"
           }
         ],
         "isModifier": false,
@@ -509,7 +1022,42 @@
         "sliceName": "participant"
       },
       {
-        "id": "Extension.extension:participationtype",
+        "id": "Extension.extension:participant.extension",
+        "path": "Extension.extension.extension",
+        "min": 0,
+        "max": "0"
+      },
+      {
+        "id": "Extension.extension:participant.url",
+        "path": "Extension.extension.url",
+        "type": [
+          {
+            "code": "uri"
+          }
+        ],
+        "fixedUri": "participant"
+      },
+      {
+        "id": "Extension.extension:participant.valueReference",
+        "path": "Extension.extension.valueReference",
+        "min": 1,
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-Patient",
+              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner",
+              "http://hl7.org/fhir/StructureDefinition/RelatedPerson",
+              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization",
+              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-device",
+              "http://hl7.org/fhir/StructureDefinition/Group",
+              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-location"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Extension.extension:participationType",
         "path": "Extension.extension",
         "definition": "The role played by the participant engaged in the action, for example, as the attending physician, surgical assistant, etc.",
         "min": 0,
@@ -521,10 +1069,7 @@
         },
         "type": [
           {
-            "code": "Extension",
-            "profile": [
-              "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-ParticipationType-extension"
-            ]
+            "code": "Extension"
           }
         ],
         "isModifier": false,
@@ -535,10 +1080,40 @@
             "map": "n/a"
           }
         ],
-        "sliceName": "participationtype"
+        "sliceName": "participationType"
       },
       {
-        "id": "Extension.extension:participationperiod",
+        "id": "Extension.extension:participationType.extension",
+        "path": "Extension.extension.extension",
+        "min": 0,
+        "max": "0"
+      },
+      {
+        "id": "Extension.extension:participationType.url",
+        "path": "Extension.extension.url",
+        "type": [
+          {
+            "code": "uri"
+          }
+        ],
+        "fixedUri": "participationType"
+      },
+      {
+        "id": "Extension.extension:participationType.valueCodeableConcept",
+        "path": "Extension.extension.valueCodeableConcept",
+        "min": 1,
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "example",
+          "valueSet": "http://hl7.org/fhir/ValueSet/performer-role"
+        }
+      },
+      {
+        "id": "Extension.extension:participationPeriod",
         "path": "Extension.extension",
         "definition": "The point in time or span of time the participant is involved.",
         "min": 0,
@@ -550,10 +1125,7 @@
         },
         "type": [
           {
-            "code": "Extension",
-            "profile": [
-              "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-ParticipationPeriod-extension"
-            ]
+            "code": "Extension"
           }
         ],
         "isModifier": false,
@@ -564,10 +1136,36 @@
             "map": "n/a"
           }
         ],
-        "sliceName": "participationperiod"
+        "sliceName": "participationPeriod"
       },
       {
-        "id": "Extension.extension:onbehalfof",
+        "id": "Extension.extension:participationPeriod.extension",
+        "path": "Extension.extension.extension",
+        "min": 0,
+        "max": "0"
+      },
+      {
+        "id": "Extension.extension:participationPeriod.url",
+        "path": "Extension.extension.url",
+        "type": [
+          {
+            "code": "uri"
+          }
+        ],
+        "fixedUri": "participationPeriod"
+      },
+      {
+        "id": "Extension.extension:participationPeriod.valuePeriod",
+        "path": "Extension.extension.valuePeriod",
+        "min": 1,
+        "type": [
+          {
+            "code": "Period"
+          }
+        ]
+      },
+      {
+        "id": "Extension.extension:onBehalfOf",
         "path": "Extension.extension",
         "definition": "The party represented by the actual participant.",
         "min": 0,
@@ -579,10 +1177,7 @@
         },
         "type": [
           {
-            "code": "Extension",
-            "profile": [
-              "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-OnBehalfOf-extension"
-            ]
+            "code": "Extension"
           }
         ],
         "isModifier": false,
@@ -593,7 +1188,40 @@
             "map": "n/a"
           }
         ],
-        "sliceName": "onbehalfof"
+        "sliceName": "onBehalfOf"
+      },
+      {
+        "id": "Extension.extension:onBehalfOf.extension",
+        "path": "Extension.extension.extension",
+        "min": 0,
+        "max": "0"
+      },
+      {
+        "id": "Extension.extension:onBehalfOf.url",
+        "path": "Extension.extension.url",
+        "type": [
+          {
+            "code": "uri"
+          }
+        ],
+        "fixedUri": "onBehalfOf"
+      },
+      {
+        "id": "Extension.extension:onBehalfOf.valueReference",
+        "path": "Extension.extension.valueReference",
+        "min": 1,
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner",
+              "http://hl7.org/fhir/StructureDefinition/RelatedPerson",
+              "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-Patient",
+              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-device",
+              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization"
+            ]
+          }
+        ]
       },
       {
         "id": "Extension.url",

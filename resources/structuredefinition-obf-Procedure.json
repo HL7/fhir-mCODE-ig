@@ -7,10 +7,10 @@
   },
   "url": "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-Procedure",
   "name": "Procedure",
-  "title": "obf-Procedure",
+  "title": "Procedure",
   "status": "active",
   "experimental": false,
-  "date": "2019-08-01",
+  "date": "2019-12-17",
   "publisher": "HL7 International Clinical Interoperability Council",
   "contact": [
     {
@@ -72,7 +72,7 @@
       {
         "id": "Procedure",
         "path": "Procedure",
-        "short": "obf-Procedure",
+        "short": "Procedure",
         "definition": "An action that is or was performed on or for a patient. This can be a physical intervention like an operation, or less invasive like long term services, counseling, or hypnotherapy.",
         "min": 0,
         "max": "*",
@@ -571,6 +571,7 @@
           {
             "code": "Reference",
             "targetProfile": [
+              "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-ProcedureRequest",
               "http://hl7.org/fhir/StructureDefinition/ServiceRequest"
             ]
           }
@@ -609,7 +610,7 @@
             "code": "Reference",
             "targetProfile": [
               "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-Procedure",
-              "http://hl7.org/fhir/StructureDefinition/MedicationAdministration",
+              "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-MedicationAdministration",
               "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-Observation"
             ]
           }
@@ -1428,8 +1429,15 @@
         "isModifier": false,
         "isSummary": true,
         "binding": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+              "valueString": "BodySite"
+            }
+          ],
           "strength": "preferred",
-          "valueSet": "http://hl7.org/fhir/us/mcode/ValueSet/obf-datatype-BodyLocationVS"
+          "description": "Codes describing anatomical locations. May include laterality.",
+          "valueSet": "http://hl7.org/fhir/ValueSet/body-site"
         },
         "mapping": [
           {
@@ -1459,7 +1467,13 @@
         },
         "type": [
           {
-            "code": "string"
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type",
+                "valueUrl": "string"
+              }
+            ],
+            "code": "http://hl7.org/fhirpath/System.String"
           }
         ],
         "isModifier": false,
@@ -1503,6 +1517,24 @@
             "code": "Extension"
           }
         ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          },
+          {
+            "key": "ext-1",
+            "severity": "error",
+            "human": "Must have either extensions or value[x], not both",
+            "expression": "extension.exists() != value.exists()",
+            "xpath": "exists(f:extension)!=exists(f:*[starts-with(local-name(.), \"value\")])",
+            "source": "http://hl7.org/fhir/StructureDefinition/Extension"
+          }
+        ],
         "isModifier": false,
         "isSummary": false,
         "mapping": [
@@ -1531,6 +1563,24 @@
             ]
           }
         ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          },
+          {
+            "key": "ext-1",
+            "severity": "error",
+            "human": "Must have either extensions or value[x], not both",
+            "expression": "extension.exists() != value.exists()",
+            "xpath": "exists(f:extension)!=exists(f:*[starts-with(local-name(.), \"value\")])",
+            "source": "http://hl7.org/fhir/StructureDefinition/Extension"
+          }
+        ],
         "isModifier": false,
         "isSummary": false,
         "sliceName": "laterality"
@@ -1552,6 +1602,24 @@
             "profile": [
               "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-datatype-AnatomicalOrientation-extension"
             ]
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          },
+          {
+            "key": "ext-1",
+            "severity": "error",
+            "human": "Must have either extensions or value[x], not both",
+            "expression": "extension.exists() != value.exists()",
+            "xpath": "exists(f:extension)!=exists(f:*[starts-with(local-name(.), \"value\")])",
+            "source": "http://hl7.org/fhir/StructureDefinition/Extension"
           }
         ],
         "isModifier": false,
@@ -1577,6 +1645,24 @@
             ]
           }
         ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          },
+          {
+            "key": "ext-1",
+            "severity": "error",
+            "human": "Must have either extensions or value[x], not both",
+            "expression": "extension.exists() != value.exists()",
+            "xpath": "exists(f:extension)!=exists(f:*[starts-with(local-name(.), \"value\")])",
+            "source": "http://hl7.org/fhir/StructureDefinition/Extension"
+          }
+        ],
         "isModifier": false,
         "isSummary": false,
         "sliceName": "relationtolandmark"
@@ -1598,6 +1684,16 @@
         "type": [
           {
             "code": "Coding"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
         "isModifier": false,
@@ -1640,6 +1736,16 @@
         "type": [
           {
             "code": "string"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
         "isModifier": false,
@@ -1846,7 +1952,10 @@
         },
         "type": [
           {
-            "code": "Annotation"
+            "code": "Annotation",
+            "profile": [
+              "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-Annotation"
+            ]
           }
         ],
         "isModifier": false,
@@ -2140,7 +2249,7 @@
       {
         "id": "Procedure",
         "path": "Procedure",
-        "short": "obf-Procedure",
+        "short": "Procedure",
         "definition": "An action that is or was performed on or for a patient. This can be a physical intervention like an operation, or less invasive like long term services, counseling, or hypnotherapy.",
         "mustSupport": false,
         "isModifier": false,
@@ -2216,6 +2325,7 @@
           {
             "code": "Reference",
             "targetProfile": [
+              "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-ProcedureRequest",
               "http://hl7.org/fhir/StructureDefinition/ServiceRequest"
             ]
           }
@@ -2232,7 +2342,7 @@
             "code": "Reference",
             "targetProfile": [
               "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-Procedure",
-              "http://hl7.org/fhir/StructureDefinition/MedicationAdministration",
+              "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-MedicationAdministration",
               "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-Observation"
             ]
           }
@@ -2369,8 +2479,15 @@
         "id": "Procedure.bodySite",
         "path": "Procedure.bodySite",
         "binding": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+              "valueString": "BodySite"
+            }
+          ],
           "strength": "preferred",
-          "valueSet": "http://hl7.org/fhir/us/mcode/ValueSet/obf-datatype-BodyLocationVS"
+          "description": "Codes describing anatomical locations. May include laterality.",
+          "valueSet": "http://hl7.org/fhir/ValueSet/body-site"
         }
       },
       {
@@ -2390,6 +2507,24 @@
             "profile": [
               "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-datatype-Laterality-extension"
             ]
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          },
+          {
+            "key": "ext-1",
+            "severity": "error",
+            "human": "Must have either extensions or value[x], not both",
+            "expression": "extension.exists() != value.exists()",
+            "xpath": "exists(f:extension)!=exists(f:*[starts-with(local-name(.), \"value\")])",
+            "source": "http://hl7.org/fhir/StructureDefinition/Extension"
           }
         ],
         "isModifier": false,
@@ -2415,6 +2550,24 @@
             ]
           }
         ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          },
+          {
+            "key": "ext-1",
+            "severity": "error",
+            "human": "Must have either extensions or value[x], not both",
+            "expression": "extension.exists() != value.exists()",
+            "xpath": "exists(f:extension)!=exists(f:*[starts-with(local-name(.), \"value\")])",
+            "source": "http://hl7.org/fhir/StructureDefinition/Extension"
+          }
+        ],
         "isModifier": false,
         "isSummary": false,
         "sliceName": "anatomicalorientation"
@@ -2436,6 +2589,24 @@
             "profile": [
               "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-datatype-RelationToLandmark-extension"
             ]
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          },
+          {
+            "key": "ext-1",
+            "severity": "error",
+            "human": "Must have either extensions or value[x], not both",
+            "expression": "extension.exists() != value.exists()",
+            "xpath": "exists(f:extension)!=exists(f:*[starts-with(local-name(.), \"value\")])",
+            "source": "http://hl7.org/fhir/StructureDefinition/Extension"
           }
         ],
         "isModifier": false,
@@ -2462,6 +2633,18 @@
             "code": "Reference",
             "targetProfile": [
               "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-Condition"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Procedure.note",
+        "path": "Procedure.note",
+        "type": [
+          {
+            "code": "Annotation",
+            "profile": [
+              "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-Annotation"
             ]
           }
         ]

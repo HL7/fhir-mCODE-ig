@@ -7,9 +7,9 @@
   },
   "url": "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-Dosage-extension",
   "name": "Dosage",
-  "title": "obf-Dosage",
+  "title": "Dosage",
   "status": "draft",
-  "date": "2019-08-01",
+  "date": "2019-12-17",
   "publisher": "HL7 International Clinical Interoperability Council",
   "contact": [
     {
@@ -195,7 +195,10 @@
         },
         "type": [
           {
-            "code": "Dosage"
+            "code": "Dosage",
+            "profile": [
+              "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-Dosage"
+            ]
           }
         ],
         "isModifier": false,
@@ -241,7 +244,10 @@
         "min": 1,
         "type": [
           {
-            "code": "Dosage"
+            "code": "Dosage",
+            "profile": [
+              "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-Dosage"
+            ]
           }
         ]
       }

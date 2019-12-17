@@ -1,0 +1,38 @@
+<html>
+  <head>
+    <script src="data/tree.js"></script>
+    <link type="text/css" rel="stylesheet" href="style/layout.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div id="entry_list"></div>
+    </div>
+    <script type="text/javascript">
+      const fillTable = (tree, targetOrigin) => {
+        let tableDiv = document.getElementById("entry_list");
+        let table = document.createElement('table');
+        let tableBody = document.createElement('tbody');
+        table.appendChild(tableBody);
+        for (const entry of tree) {
+          let tr = document.createElement('tr');
+          let td = document.createElement('td');
+          td.appendChild(document.createTextNode(entry.title));
+          td.onclick = () => parent.postMessage(entry.name, targetOrigin);
+          td.className = "select_button";
+          tr.appendChild(td);
+          tableBody.appendChild(tr);
+        }
+        tableDiv.appendChild(table);
+      }
+      window.onload = function () {
+        let targetOrigin = "";
+        if (this.location.protocol == "file:") {
+          targetOrigin = "*";
+        } else {
+          targetOrigin = this.location.protocol + "//" + this.location.hostname + (this.location.port ? ":" + this.location.port : "");
+        }
+        fillTable(tree, targetOrigin);
+      }
+    </script>
+  </body>
+</html> 

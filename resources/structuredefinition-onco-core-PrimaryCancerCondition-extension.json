@@ -3,13 +3,13 @@
   "id": "onco-core-PrimaryCancerCondition-extension",
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>PrimaryCancerCondition Extension</b></p>\n  <p>Records the history of the primary cancer condition, the original or first tumor in the body (reference https://www.cancer.gov/publications/dictionaries/cancer-terms/def/primary-tumor). Cancers that are not clearly secondary (i.e., of uncertain origin or behavior) should be documented as primary.\n\nCancer staging information summarized in this profile should reflect the most recent staging assessment on the patient, and should be updated if and when there is a new staging assessment. Past staging assessments will be preserved in instances of the TNMClinicalStageGroup and/or TNMPathologicalStageGroup, which refer back to PrimaryCancerCondition.\n\nConformance note: For the code attribute, to be compliant with [US Core Profiles](http://hl7.org/fhir/us/core/STU3/index.html), SNOMED CT must be used unless there is no suitable code, in which case ICD-10-CM can be used.</p>\n</div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>PrimaryCancerCondition Extension</b></p>\n  <p>Records the history of the primary cancer condition, the original or first tumor in the body (Definition from: [NCI Dictionary of Cancer Terms](https://www.cancer.gov/publications/dictionaries/cancer-terms/def/primary-tumor)). Cancers that are not clearly secondary (i.e., of uncertain origin or behavior) should be documented as primary.\n\nCancer staging information summarized in this profile should reflect the most recent staging assessment on the patient, and should be updated if and when there is a new staging assessment. Past staging assessments will be preserved in instances of the TNMClinicalStageGroup and/or TNMPathologicalStageGroup, which refer back to PrimaryCancerCondition.\n\nConformance note: For the code attribute, to be compliant with [US Core Profiles](http://hl7.org/fhir/us/core/STU3/index.html), SNOMED CT must be used unless there is no suitable code, in which case ICD-10-CM can be used.</p>\n</div>"
   },
   "url": "http://hl7.org/fhir/us/mcode/StructureDefinition/onco-core-PrimaryCancerCondition-extension",
   "name": "PrimaryCancerCondition",
-  "title": "onco-core-PrimaryCancerCondition",
+  "title": "Primary Cancer Condition",
   "status": "draft",
-  "date": "2019-08-01",
+  "date": "2019-12-17",
   "publisher": "HL7 International Clinical Interoperability Council",
   "contact": [
     {
@@ -21,7 +21,7 @@
       ]
     }
   ],
-  "description": "Records the history of the primary cancer condition, the original or first tumor in the body (reference https://www.cancer.gov/publications/dictionaries/cancer-terms/def/primary-tumor). Cancers that are not clearly secondary (i.e., of uncertain origin or behavior) should be documented as primary.\n\nCancer staging information summarized in this profile should reflect the most recent staging assessment on the patient, and should be updated if and when there is a new staging assessment. Past staging assessments will be preserved in instances of the TNMClinicalStageGroup and/or TNMPathologicalStageGroup, which refer back to PrimaryCancerCondition.\n\nConformance note: For the code attribute, to be compliant with [US Core Profiles](http://hl7.org/fhir/us/core/STU3/index.html), SNOMED CT must be used unless there is no suitable code, in which case ICD-10-CM can be used.",
+  "description": "Records the history of the primary cancer condition, the original or first tumor in the body (Definition from: [NCI Dictionary of Cancer Terms](https://www.cancer.gov/publications/dictionaries/cancer-terms/def/primary-tumor)). Cancers that are not clearly secondary (i.e., of uncertain origin or behavior) should be documented as primary.\n\nCancer staging information summarized in this profile should reflect the most recent staging assessment on the patient, and should be updated if and when there is a new staging assessment. Past staging assessments will be preserved in instances of the TNMClinicalStageGroup and/or TNMPathologicalStageGroup, which refer back to PrimaryCancerCondition.\n\nConformance note: For the code attribute, to be compliant with [US Core Profiles](http://hl7.org/fhir/us/core/STU3/index.html), SNOMED CT must be used unless there is no suitable code, in which case ICD-10-CM can be used.",
   "fhirVersion": "4.0.0",
   "kind": "complex-type",
   "abstract": false,
@@ -40,7 +40,7 @@
         "id": "Extension",
         "path": "Extension",
         "short": "PrimaryCancerCondition",
-        "definition": "Records the history of the primary cancer condition, the original or first tumor in the body (reference https://www.cancer.gov/publications/dictionaries/cancer-terms/def/primary-tumor). Cancers that are not clearly secondary (i.e., of uncertain origin or behavior) should be documented as primary.\n\nCancer staging information summarized in this profile should reflect the most recent staging assessment on the patient, and should be updated if and when there is a new staging assessment. Past staging assessments will be preserved in instances of the TNMClinicalStageGroup and/or TNMPathologicalStageGroup, which refer back to PrimaryCancerCondition.\n\nConformance note: For the code attribute, to be compliant with [US Core Profiles](http://hl7.org/fhir/us/core/STU3/index.html), SNOMED CT must be used unless there is no suitable code, in which case ICD-10-CM can be used.",
+        "definition": "Records the history of the primary cancer condition, the original or first tumor in the body (Definition from: [NCI Dictionary of Cancer Terms](https://www.cancer.gov/publications/dictionaries/cancer-terms/def/primary-tumor)). Cancers that are not clearly secondary (i.e., of uncertain origin or behavior) should be documented as primary.\n\nCancer staging information summarized in this profile should reflect the most recent staging assessment on the patient, and should be updated if and when there is a new staging assessment. Past staging assessments will be preserved in instances of the TNMClinicalStageGroup and/or TNMPathologicalStageGroup, which refer back to PrimaryCancerCondition.\n\nConformance note: For the code attribute, to be compliant with [US Core Profiles](http://hl7.org/fhir/us/core/STU3/index.html), SNOMED CT must be used unless there is no suitable code, in which case ICD-10-CM can be used.",
         "min": 0,
         "max": "*",
         "base": {
@@ -218,7 +218,7 @@
         "id": "Extension",
         "path": "Extension",
         "short": "PrimaryCancerCondition",
-        "definition": "Records the history of the primary cancer condition, the original or first tumor in the body (reference https://www.cancer.gov/publications/dictionaries/cancer-terms/def/primary-tumor). Cancers that are not clearly secondary (i.e., of uncertain origin or behavior) should be documented as primary.\n\nCancer staging information summarized in this profile should reflect the most recent staging assessment on the patient, and should be updated if and when there is a new staging assessment. Past staging assessments will be preserved in instances of the TNMClinicalStageGroup and/or TNMPathologicalStageGroup, which refer back to PrimaryCancerCondition.\n\nConformance note: For the code attribute, to be compliant with [US Core Profiles](http://hl7.org/fhir/us/core/STU3/index.html), SNOMED CT must be used unless there is no suitable code, in which case ICD-10-CM can be used.",
+        "definition": "Records the history of the primary cancer condition, the original or first tumor in the body (Definition from: [NCI Dictionary of Cancer Terms](https://www.cancer.gov/publications/dictionaries/cancer-terms/def/primary-tumor)). Cancers that are not clearly secondary (i.e., of uncertain origin or behavior) should be documented as primary.\n\nCancer staging information summarized in this profile should reflect the most recent staging assessment on the patient, and should be updated if and when there is a new staging assessment. Past staging assessments will be preserved in instances of the TNMClinicalStageGroup and/or TNMPathologicalStageGroup, which refer back to PrimaryCancerCondition.\n\nConformance note: For the code attribute, to be compliant with [US Core Profiles](http://hl7.org/fhir/us/core/STU3/index.html), SNOMED CT must be used unless there is no suitable code, in which case ICD-10-CM can be used.",
         "min": 0,
         "max": "*"
       },

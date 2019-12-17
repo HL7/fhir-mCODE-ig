@@ -36,7 +36,7 @@
   </thead>
   <tbody>
     <tr>
-          <td><a href="StructureDefinition-obf-datatype-AnatomicalOrientation-extension.html">AnatomicalOrientation</a></td>
+          <td><a href="StructureDefinition-obf-datatype-AnatomicalOrientation-extension.html">Anatomical Orientation</a></td>
           <td>{% capture md_text %}AnatomicalOrientation of the body location, if needed to distinguish from a similar location in another orientation.
 The orientation element is part of BodyLocation, a flexible structure that allows the location to be determined by a single code, or a code plus laterality and/or orientation. The body location can also be specified in relation to one or more body landmarks. SNOMED CT is used in all cases.
 
@@ -49,19 +49,15 @@ The orientation element is part of BodyLocation, a flexible structure that allow
 Note that BodyLocation is a data type (a reusable structure), not a stand-alone entity. The concept is similar to how a postal address can apply to a person, location, or organization. This contrasts with FHIR's stand-alone BodySite (aka BodyStructure in r4) which 'is not ... intended for describing the type of anatomical location but rather a specific body site on a specific patient' (FHIR 3.5).{% endcapture %}{{ md_text | markdownify }}</td>
         </tr>
         <tr>
-          <td><a href="StructureDefinition-vital-BloodPressureCuffSize-extension.html">BloodPressureCuffSize</a></td>
-          <td>{% capture md_text %}The size of cuff used, if applicable.{% endcapture %}{{ md_text | markdownify }}</td>
-        </tr>
-        <tr>
-          <td><a href="StructureDefinition-vital-BodyPosition-extension.html">BodyPosition</a></td>
-          <td>{% capture md_text %}The position or physical attitude of the body.{% endcapture %}{{ md_text | markdownify }}</td>
-        </tr>
-        <tr>
-          <td><a href="StructureDefinition-onco-core-EvidenceType-extension.html">EvidenceType</a></td>
+          <td><a href="StructureDefinition-onco-core-EvidenceType-extension.html">Evidence Type</a></td>
           <td>{% capture md_text %}Categorization of the kind of evidence used as input to the clinical judgment. This corresponds to both the S and O in SOAP.{% endcapture %}{{ md_text | markdownify }}</td>
         </tr>
         <tr>
-          <td><a href="StructureDefinition-onco-core-HistologyMorphologyBehavior-extension.html">HistologyMorphologyBehavior</a></td>
+          <td><a href="StructureDefinition-obf-HandlingRisk-extension.html">Handling Risk</a></td>
+          <td>{% capture md_text %}Cautions on the handling of this specimen.{% endcapture %}{{ md_text | markdownify }}</td>
+        </tr>
+        <tr>
+          <td><a href="StructureDefinition-onco-core-HistologyMorphologyBehavior-extension.html">Histology Morphology Behavior</a></td>
           <td>{% capture md_text %}A description of the morphologic and behavioral characteristics of the cancer.{% endcapture %}{{ md_text | markdownify }}</td>
         </tr>
         <tr>
@@ -79,31 +75,19 @@ The laterality element is part of BodyLocation, a flexible structure that allows
 Note that BodyLocation is a data type (a reusable structure), not a stand-alone entity. The concept is similar to how a postal address can apply to a person, location, or organization. This contrasts with FHIR's stand-alone BodySite (aka BodyStructure in r4) which 'is not ... intended for describing the type of anatomical location but rather a specific body site on a specific patient' (FHIR 3.5).{% endcapture %}{{ md_text | markdownify }}</td>
         </tr>
         <tr>
-          <td><a href="StructureDefinition-vital-PreconditionCode-extension.html">PreconditionCode</a></td>
-          <td>{% capture md_text %}A coded description of the conditions or context of an observation, for example, under sedation, fasting or post-exercise. A qualifier cannot modify the measurement type; for example, a fasting blood sugar is still a blood sugar.{% endcapture %}{{ md_text | markdownify }}</td>
-        </tr>
-        <tr>
-          <td><a href="StructureDefinition-onco-core-PrimaryCancerCondition-extension.html">PrimaryCancerCondition</a></td>
-          <td>{% capture md_text %}Records the history of the primary cancer condition, the original or first tumor in the body (reference https://www.cancer.gov/publications/dictionaries/cancer-terms/def/primary-tumor). Cancers that are not clearly secondary (i.e., of uncertain origin or behavior) should be documented as primary.
+          <td><a href="StructureDefinition-onco-core-PrimaryCancerCondition-extension.html">Primary Cancer Condition</a></td>
+          <td>{% capture md_text %}Records the history of the primary cancer condition, the original or first tumor in the body (Definition from: [NCI Dictionary of Cancer Terms](https://www.cancer.gov/publications/dictionaries/cancer-terms/def/primary-tumor)). Cancers that are not clearly secondary (i.e., of uncertain origin or behavior) should be documented as primary.
 
 Cancer staging information summarized in this profile should reflect the most recent staging assessment on the patient, and should be updated if and when there is a new staging assessment. Past staging assessments will be preserved in instances of the TNMClinicalStageGroup and/or TNMPathologicalStageGroup, which refer back to PrimaryCancerCondition.
 
 Conformance note: For the code attribute, to be compliant with [US Core Profiles](http://hl7.org/fhir/us/core/STU3/index.html), SNOMED CT must be used unless there is no suitable code, in which case ICD-10-CM can be used.{% endcapture %}{{ md_text | markdownify }}</td>
         </tr>
         <tr>
-          <td><a href="StructureDefinition-obf-RadiationDosePerFraction-extension.html">RadiationDosePerFraction</a></td>
-          <td>{% capture md_text %}The amount of radiation administered during a single session (fraction) of radiation therapy therapy.{% endcapture %}{{ md_text | markdownify }}</td>
+          <td><a href="StructureDefinition-obf-RadiationDose-extension.html">Radiation Dose</a></td>
+          <td>{% capture md_text %}Information related to the dose of radiation received in a RadiationProcedure, including the dose per fraction, the number of fractions delivered, and the total radiation dose delivered.{% endcapture %}{{ md_text | markdownify }}</td>
         </tr>
         <tr>
-          <td><a href="StructureDefinition-obf-RadiationFractionsDelivered-extension.html">RadiationFractionsDelivered</a></td>
-          <td>{% capture md_text %}Records the total number of treatment sessions (fractions) administered during the first course of therapy. Corresponds to LOINC 21950-2 'Number of radiation treatment' [sic].{% endcapture %}{{ md_text | markdownify }}</td>
-        </tr>
-        <tr>
-          <td><a href="StructureDefinition-onco-core-RegionStudied-extension.html">RegionStudied</a></td>
-          <td>{% capture md_text %}A description of the coverage of the genome that was tested for variants.{% endcapture %}{{ md_text | markdownify }}</td>
-        </tr>
-        <tr>
-          <td><a href="StructureDefinition-obf-datatype-RelationToLandmark-extension.html">RelationToLandmark</a></td>
+          <td><a href="StructureDefinition-obf-datatype-RelationToLandmark-extension.html">Relation To Landmark</a></td>
           <td>{% capture md_text %}The relationship between a landmark that helps determine a body location and the body location itself. The location relative to a landmark is specified by:
 * Specifying the location and type of landmark using a body site code and optional laterality/orientation,
 * Specifying the direction from the landmark to the body location, and
@@ -120,28 +104,24 @@ The RelationToLandmark element is part of BodyLocation, a flexible structure tha
 Note that BodyLocation is a data type (a reusable structure), not a stand-alone entity. The concept is similar to how a postal address can apply to a person, location, or organization. This contrasts with FHIR's stand-alone BodySite (aka BodyStructure in r4) which 'is not ... intended for describing the type of anatomical location but rather a specific body site on a specific patient' (FHIR 3.5).{% endcapture %}{{ md_text | markdownify }}</td>
         </tr>
         <tr>
-          <td><a href="StructureDefinition-obf-SpecimenType-extension.html">SpecimenType</a></td>
-          <td>{% capture md_text %}The type of material the specimen contains or consists of.{% endcapture %}{{ md_text | markdownify }}</td>
+          <td><a href="StructureDefinition-obf-SpecialHandling-extension.html">Special Handling</a></td>
+          <td>{% capture md_text %}Information about the proper handling of the specimen.{% endcapture %}{{ md_text | markdownify }}</td>
         </tr>
         <tr>
-          <td><a href="StructureDefinition-obf-StatementDateTime-extension.html">StatementDateTime</a></td>
+          <td><a href="StructureDefinition-obf-SpecimenTreatment-extension.html">Specimen Treatment</a></td>
+          <td>{% capture md_text %}Additives added to the specimen.{% endcapture %}{{ md_text | markdownify }}</td>
+        </tr>
+        <tr>
+          <td><a href="StructureDefinition-obf-StatementDateTime-extension.html">Statement Date Time</a></td>
           <td>{% capture md_text %}The point in time when the statement was created.{% endcapture %}{{ md_text | markdownify }}</td>
         </tr>
         <tr>
-          <td><a href="StructureDefinition-obf-TerminationReason-extension.html">TerminationReason</a></td>
+          <td><a href="StructureDefinition-obf-TerminationReason-extension.html">Termination Reason</a></td>
           <td>{% capture md_text %}A code explaining unplanned or premature termination of a plan of treatment, course of medication, or research study.{% endcapture %}{{ md_text | markdownify }}</td>
         </tr>
         <tr>
-          <td><a href="StructureDefinition-obf-TotalRadiationDoseDelivered-extension.html">TotalRadiationDoseDelivered</a></td>
-          <td>{% capture md_text %}The total amount of radiation dose delivered for the course of therapy. (source: SNOMED, ASTRO){% endcapture %}{{ md_text | markdownify }}</td>
-        </tr>
-        <tr>
-          <td><a href="StructureDefinition-obf-TreatmentIntent-extension.html">TreatmentIntent</a></td>
+          <td><a href="StructureDefinition-obf-TreatmentIntent-extension.html">Treatment Intent</a></td>
           <td>{% capture md_text %}The purpose of a treatment.{% endcapture %}{{ md_text | markdownify }}</td>
-        </tr>
-        <tr>
-          <td><a href="StructureDefinition-onco-core-VariantTested-extension.html">VariantTested</a></td>
-          <td>{% capture md_text %}The specific genetic variant that is targeted by this test.{% endcapture %}{{ md_text | markdownify }}</td>
         </tr>
         
   </tbody>

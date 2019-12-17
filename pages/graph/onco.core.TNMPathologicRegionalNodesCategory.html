@@ -1,0 +1,56 @@
+<html>
+  <head>
+    <script src="jsmind.js"></script>
+    <script src="data/tree.js"></script>
+    <link type="text/css" rel="stylesheet" href="style/jsmind.css" />
+    <link type="text/css" rel="stylesheet" href="style/jsmind_custom.css" />
+    <link type="text/css" rel="stylesheet" href="style/layout.css" />
+  </head>
+  <body>
+    <div>
+      <div id="key" class="overlay">
+        <img src="graph-viewer-key.png" class="key" alt="Graph Viewer Key"/>
+        <br>
+        <button type="button" class="zoom_button" onClick="zoomIn()">Zoom In</button>
+        <button type="button" class="zoom_button" onClick="zoomOut()">Zoom Out</button>
+      </div>
+      <div id="jsmind_container"></div>
+    </div>
+
+    <script src="sketch.js"></script>
+    <script type="text/javascript">
+      const mind = treeToMind(tree[20]);
+      const jmOptions = {
+        container: 'jsmind_container',
+        editable: false,
+        theme: 'orange' 
+      }
+      const jm = new jsMind(jmOptions);
+      // Overriding default handlers with our own
+      jm.view.add_event(this, 'click', clickHandler);
+      // Override the line drawing function with our own
+      jm.view.graph.__proto__.draw_line = drawLine;
+      jm.view.__proto__.show_lines = showLines;
+      // Set zoom parameters
+      const minZoom = 0.4;
+      const maxZoom = 1.0;
+      const defaultZoom = 0.7;
+      jm.view.minZoom = minZoom;
+      jm.view.maxZoom = maxZoom;
+
+      render(jm, mind, defaultZoom);
+
+      window.addEventListener("message", (event) => {
+        render(jm, mind, defaultZoom);
+      });
+
+      function zoomIn() {
+          jm.view.zoomIn();
+      }
+
+      function zoomOut() {
+          jm.view.zoomOut();
+      }
+    </script>
+  </body>
+</html> 

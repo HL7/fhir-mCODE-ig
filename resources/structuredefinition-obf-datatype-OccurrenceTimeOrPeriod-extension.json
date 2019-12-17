@@ -7,9 +7,9 @@
   },
   "url": "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-datatype-OccurrenceTimeOrPeriod-extension",
   "name": "OccurrenceTimeOrPeriod",
-  "title": "obf-datatype-OccurrenceTimeOrPeriod",
+  "title": "Occurrence Time Or Period",
   "status": "draft",
-  "date": "2019-08-01",
+  "date": "2019-12-17",
   "publisher": "HL7 International Clinical Interoperability Council",
   "contact": [
     {

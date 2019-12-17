@@ -7,9 +7,9 @@
   },
   "url": "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-DiagnosticReport",
   "name": "DiagnosticReport",
-  "title": "obf-DiagnosticReport",
+  "title": "Diagnostic Report",
   "status": "active",
-  "date": "2019-08-01",
+  "date": "2019-12-17",
   "publisher": "HL7 International Clinical Interoperability Council",
   "contact": [
     {
@@ -66,7 +66,7 @@
       {
         "id": "DiagnosticReport",
         "path": "DiagnosticReport",
-        "short": "obf-DiagnosticReport",
+        "short": "Diagnostic Report",
         "definition": "The findings and interpretation of diagnostic tests performed on patients, groups of patients, devices, and locations, and/or specimens derived from these. The report includes clinical context such as requesting and provider information, and some mix of atomic results, images, textual and coded interpretations, and formatted representation of diagnostic reports.",
         "comment": "This is intended to capture a single report and is not suitable for use in displaying summary information that covers multiple reports.  For example, this resource has not been designed for laboratory cumulative reporting formats nor detailed structured reports for sequencing.",
         "alias": [
@@ -459,7 +459,9 @@
             "code": "Reference",
             "targetProfile": [
               "http://hl7.org/fhir/StructureDefinition/ServiceRequest",
-              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest"
+              "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-ProcedureRequest",
+              "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-MedicationRequest",
+              "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-CarePlan"
             ]
           }
         ],
@@ -929,7 +931,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/StructureDefinition/Specimen"
+              "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-Specimen"
             ]
           }
         ],
@@ -1335,7 +1337,7 @@
       {
         "id": "DiagnosticReport",
         "path": "DiagnosticReport",
-        "short": "obf-DiagnosticReport",
+        "short": "Diagnostic Report",
         "definition": "The findings and interpretation of diagnostic tests performed on patients, groups of patients, devices, and locations, and/or specimens derived from these. The report includes clinical context such as requesting and provider information, and some mix of atomic results, images, textual and coded interpretations, and formatted representation of diagnostic reports.",
         "mustSupport": false,
         "isModifier": false,
@@ -1349,7 +1351,9 @@
             "code": "Reference",
             "targetProfile": [
               "http://hl7.org/fhir/StructureDefinition/ServiceRequest",
-              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest"
+              "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-ProcedureRequest",
+              "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-MedicationRequest",
+              "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-CarePlan"
             ]
           }
         ]
@@ -1384,16 +1388,7 @@
         "id": "DiagnosticReport.performer",
         "path": "DiagnosticReport.performer",
         "min": 0,
-        "max": "1",
-        "type": [
-          {
-            "code": "Reference",
-            "targetProfile": [
-              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner",
-              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization"
-            ]
-          }
-        ]
+        "max": "1"
       },
       {
         "id": "DiagnosticReport.resultsInterpreter",
@@ -1406,6 +1401,18 @@
             "targetProfile": [
               "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner",
               "http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "DiagnosticReport.specimen",
+        "path": "DiagnosticReport.specimen",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-Specimen"
             ]
           }
         ]

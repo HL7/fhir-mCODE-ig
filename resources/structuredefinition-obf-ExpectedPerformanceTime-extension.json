@@ -7,9 +7,9 @@
   },
   "url": "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-ExpectedPerformanceTime-extension",
   "name": "ExpectedPerformanceTime",
-  "title": "obf-ExpectedPerformanceTime",
+  "title": "Expected Performance Time",
   "status": "draft",
-  "date": "2019-08-01",
+  "date": "2019-12-17",
   "publisher": "HL7 International Clinical Interoperability Council",
   "contact": [
     {
@@ -201,7 +201,10 @@
             "code": "Period"
           },
           {
-            "code": "Timing"
+            "code": "Timing",
+            "profile": [
+              "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-datatype-Timing"
+            ]
           }
         ],
         "isModifier": false,
@@ -253,7 +256,10 @@
             "code": "Period"
           },
           {
-            "code": "Timing"
+            "code": "Timing",
+            "profile": [
+              "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-datatype-Timing"
+            ]
           }
         ]
       }

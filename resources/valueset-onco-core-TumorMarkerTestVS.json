@@ -7,7 +7,7 @@
   },
   "url": "http://hl7.org/fhir/us/mcode/ValueSet/onco-core-TumorMarkerTestVS",
   "name": "TumorMarkerTestVS",
-  "title": "TumorMarkerTestVS",
+  "title": "Tumor Marker Test VS",
   "status": "draft",
   "publisher": "HL7 International Clinical Interoperability Council",
   "contact": [
@@ -20,7 +20,7 @@
       ]
     }
   ],
-  "date": "2019-08-01",
+  "date": "2019-12-17",
   "description": "Codes representing tests for tumor markers. This value set of LOINC codes is not comprehensive and can be extended. LOINC codes are preferred. Other vocabularies can be used only if the test of interest is not covered by LOINC.\n\nFHIR implementation note: At the current time, profiles for the specific LOINC tests mentioned here do not exist.",
   "compose": {
     "include": [
@@ -498,6 +498,58 @@
           {
             "code": "10480-2",
             "display": "Estrogen+Progesterone receptor Ag [Presence] in Tissue by Immune stain"
+          },
+          {
+            "code": "48676-1",
+            "display": "HER2 [Interpretation] in Tissue"
+          },
+          {
+            "code": "32996-1",
+            "display": "HER2 [Mass/volume] in Serum"
+          },
+          {
+            "code": "42914-2",
+            "display": "HER2 [Mass/volume] in Serum by Immunoassay"
+          },
+          {
+            "code": "85318-4",
+            "display": "HER2 [Presence] in Breast cancer specimen by FISH"
+          },
+          {
+            "code": "85319-2",
+            "display": "HER2 [Presence] in Breast cancer specimen by Immune stain"
+          },
+          {
+            "code": "51981-9",
+            "display": "HER2 [Presence] in Serum by Immunoassay"
+          },
+          {
+            "code": "31150-6",
+            "display": "HER2 [Presence] in Tissue by FISH"
+          },
+          {
+            "code": "72383-3",
+            "display": "HER2 [Presence] in Tissue by Immunoassay"
+          },
+          {
+            "code": "72382-5",
+            "display": "HER2 [Units/volume] in Tissue by Immunoassay"
+          },
+          {
+            "code": "18474-7",
+            "display": "HER2 Ag [Presence] in Tissue by Immune stain"
+          },
+          {
+            "code": "49683-6",
+            "display": "HER2 gene copy number/Chromosome 17 copy number in Tissue by FISH"
+          },
+          {
+            "code": "74860-8",
+            "display": "HER2 gene copy number/nucleus in Tissue by FISH"
+          },
+          {
+            "code": "74885-5",
+            "display": "HER2 panel - Tissue by FISH"
           },
           {
             "code": "83054-7",

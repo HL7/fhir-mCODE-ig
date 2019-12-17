@@ -7,9 +7,9 @@
   },
   "url": "http://hl7.org/fhir/us/mcode/StructureDefinition/onco-core-EvidenceType-extension",
   "name": "EvidenceType",
-  "title": "onco-core-EvidenceType",
+  "title": "Evidence Type",
   "status": "draft",
-  "date": "2019-08-01",
+  "date": "2019-12-17",
   "publisher": "HL7 International Clinical Interoperability Council",
   "contact": [
     {

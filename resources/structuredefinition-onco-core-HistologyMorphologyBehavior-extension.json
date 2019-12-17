@@ -7,9 +7,9 @@
   },
   "url": "http://hl7.org/fhir/us/mcode/StructureDefinition/onco-core-HistologyMorphologyBehavior-extension",
   "name": "HistologyMorphologyBehavior",
-  "title": "onco-core-HistologyMorphologyBehavior",
+  "title": "Histology Morphology Behavior",
   "status": "draft",
-  "date": "2019-08-01",
+  "date": "2019-12-17",
   "publisher": "HL7 International Clinical Interoperability Council",
   "contact": [
     {

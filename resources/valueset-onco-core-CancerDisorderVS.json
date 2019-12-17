@@ -7,7 +7,7 @@
   },
   "url": "http://hl7.org/fhir/us/mcode/ValueSet/onco-core-CancerDisorderVS",
   "name": "CancerDisorderVS",
-  "title": "CancerDisorderVS",
+  "title": "Cancer Disorder VS",
   "status": "draft",
   "publisher": "HL7 International Clinical Interoperability Council",
   "contact": [
@@ -20,7 +20,7 @@
       ]
     }
   ],
-  "date": "2019-08-01",
+  "date": "2019-12-17",
   "description": "A broad cancer-related value set containing both primary and secondary tumor types, with codes from ICD-10 and SNOMED CT, including both diagnosis and histology/morphology/behavior codes. ICD-O-3 morphology codes may also be used and are considered conformant to the specification. For SNOMED, the value set includes all codes descending from 363346000 'Malignant neoplastic disease (disorder)' and 108369006 'Neoplasm (morphologic abnormality)'.",
   "compose": {
     "include": [

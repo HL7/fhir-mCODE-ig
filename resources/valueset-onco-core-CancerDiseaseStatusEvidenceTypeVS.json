@@ -3,11 +3,11 @@
   "id": "onco-core-CancerDiseaseStatusEvidenceTypeVS",
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n<p><b>CancerDiseaseStatusEvidenceTypeVS ValueSet</b></p>\n<p>The type of evidence backing up the clinical determination of cancer progression.</p>\n</div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n<p><b>CancerDiseaseStatusEvidenceTypeVS ValueSet</b></p>\n<p>The type of evidence backing up the clinical determination of cancer progression. The code &#039;SCT#252416005 Histopathology test (procedure)&#039; is intended to be used when there is a biopsy that contributes evidence of the cancer disease status.</p>\n</div>"
   },
   "url": "http://hl7.org/fhir/us/mcode/ValueSet/onco-core-CancerDiseaseStatusEvidenceTypeVS",
   "name": "CancerDiseaseStatusEvidenceTypeVS",
-  "title": "CancerDiseaseStatusEvidenceTypeVS",
+  "title": "Cancer Disease Status Evidence Type VS",
   "status": "draft",
   "publisher": "HL7 International Clinical Interoperability Council",
   "contact": [
@@ -20,8 +20,8 @@
       ]
     }
   ],
-  "date": "2019-08-01",
-  "description": "The type of evidence backing up the clinical determination of cancer progression.",
+  "date": "2019-12-17",
+  "description": "The type of evidence backing up the clinical determination of cancer progression. The code 'SCT#252416005 Histopathology test (procedure)' is intended to be used when there is a biopsy that contributes evidence of the cancer disease status.",
   "compose": {
     "include": [
       {

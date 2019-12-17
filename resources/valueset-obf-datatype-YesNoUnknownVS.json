@@ -7,7 +7,7 @@
   },
   "url": "http://hl7.org/fhir/us/mcode/ValueSet/obf-datatype-YesNoUnknownVS",
   "name": "YesNoUnknownVS",
-  "title": "YesNoUnknownVS",
+  "title": "Yes No Unknown VS",
   "status": "draft",
   "publisher": "HL7 International Clinical Interoperability Council",
   "contact": [
@@ -20,7 +20,7 @@
       ]
     }
   ],
-  "date": "2019-08-01",
+  "date": "2019-12-17",
   "description": "A value set containing yes, no, and unknown.",
   "compose": {
     "include": [

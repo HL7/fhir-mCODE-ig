@@ -3,13 +3,13 @@
   "id": "onco-core-GenomicsReport",
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>GenomicsReport Profile</b></p>\n  <p>Genetic analysis summary report. The report may include one or more tests, with two distinct test types. The first type is a targeted mutation test, where a specific mutation on a specific gene is tested for. The result is either positive or negative for that mutation. The second type is a more general test for variants. This type of test returns the identity of variants found in a certain region of the genome.\n\nThe identity of non-genomic laboratory tests is typically represented by a LOINC code. However, many genetic tests and panels do not have LOINC codes, although some might have an identifier in NCBI Genetic Testing Registry (GTR), a central location for voluntary submission of genetic test information by providers. To identify the diagnostic report, the name of the report must be in the text sub-field of the code structure. If there is a coded identifier from GTR, LOINC, or other source, then it should be included into the the code sub-field of the code structure. If there is no suitable code, the code can be omitted.\n\nConformance note: To be conformant to US Core, the code attribute must be a LOINC code, if available. If there is no suitable code in LOINC, then a code from an alternative code system (such as GTR) can be used.\n\nImplementation note: The performer of the test (organization or practitioner) should be included in the FHIR profile as the performer.actor.\n\nConformance note: The category for this profile is set to GE (Genetics), a code from http://hl7.org/fhir/ValueSet/diagnostic-service-sections. This is contrary to the [Argonaut](http://www.fhir.org/guides/argonaut/r2/) and [US Core](http://hl7.org/fhir/us/core/STU3/index.html) specifications, which require the category &#039;LAB&#039; in diagnostic reports containing laboratory results. This is assumed to be an oversight in the US Core and Argonaut specifications.</p>\n  <p><b>Mapping Summary</b></p>\n  <p><pre>onco.core.GenomicsReport maps to http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-note:\n  Language maps to language\n  ImplicitRules maps to implicitRules\n  Metadata.VersionId maps to meta.versionId\n  Metadata.SourceSystem maps to meta.source\n  Metadata.Profile maps to meta.profile\n  Metadata.LastUpdated maps to meta.lastUpdated\n  Metadata.SecurityLabel maps to meta.security\n  Metadata.Tag maps to meta.tag\n  Narrative maps to text\n  Identifier maps to identifier\n  BasedOn maps to basedOn\n  Status maps to status\n  Category maps to category\n  ObservationSubjectOfRecord maps to subject\n  Code maps to code\n  CareContext maps to encounter\n  RelevantTime maps to effective[x]\n  StatementDateTime maps to issued\n  DiagnosticReportPerformer maps to performer\n  ResultsInterpreter maps to resultsInterpreter\n  Specimen maps to specimen\n  Observation maps to result (slice on = $this.resolve().code.coding.code; slice strategy = includes)\n  MediaIncluded.CommentOrDescription maps to media.comment\n  MediaIncluded.Media maps to media.link\n  ConclusionText maps to conclusion\n  ConclusionCode maps to conclusionCode\n  PresentedForm maps to presentedForm\n</pre></p>\n</div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>GenomicsReport Profile</b></p>\n  <p>Genetic analysis summary report. The report may include one or more tests, with two distinct test types. The first type is a targeted mutation test, where a specific mutation on a specific gene is tested for. The result is either positive or negative for that mutation. The second type is a more general test for variants. This type of test returns the identity of variants found in a certain region of the genome.\n\nThe identity of non-genomic laboratory tests is typically represented by a LOINC code. However, many genetic tests and panels do not have LOINC codes, although some might have an identifier in NCBI Genetic Testing Registry (GTR), a central location for voluntary submission of genetic test information by providers. To identify the diagnostic report, the name of the report must be in the text sub-field of the code structure. If there is a coded identifier from GTR, LOINC, or other source, then it should be included into the the code sub-field of the code structure. If there is no suitable code, the code can be omitted.\n\nConformance note: To be conformant to US Core, the code attribute must be a LOINC code, if available. If there is no suitable code in LOINC, then a code from an alternative code system (such as GTR) can be used.\n\nImplementation note: The performer of the test (organization or practitioner) should be included in the FHIR profile as the performer.actor.\n\nConformance note: The category for this profile is set to GE (Genetics), a code from http://hl7.org/fhir/ValueSet/diagnostic-service-sections. This is contrary to the [Argonaut](http://www.fhir.org/guides/argonaut/r2/) and [US Core](http://hl7.org/fhir/us/core/STU3/index.html) specifications, which require the category &#039;LAB&#039; in diagnostic reports containing laboratory results. This is assumed to be an oversight in the US Core and Argonaut specifications.</p>\n  <p><b>Mapping Summary</b></p>\n  <p><pre>onco.core.GenomicsReport maps to http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-note:\n  Language maps to language\n  ImplicitRules maps to implicitRules\n  Metadata.VersionId maps to meta.versionId\n  Metadata.SourceSystem maps to meta.source\n  Metadata.Profile maps to meta.profile\n  Metadata.LastUpdated maps to meta.lastUpdated\n  Metadata.SecurityLabel maps to meta.security\n  Metadata.Tag maps to meta.tag\n  Narrative maps to text\n  Identifier maps to identifier\n  BasedOn maps to basedOn\n  Status maps to status\n  Category maps to category\n  ObservationSubjectOfRecord maps to subject\n  Code maps to code\n  CareContext maps to encounter\n  RelevantTime maps to effective[x]\n  StatementDateTime maps to issued\n  DiagnosticReportPerformer maps to performer\n  ResultsInterpreter maps to resultsInterpreter\n  GeneticSpecimen maps to specimen\n  Observation maps to result (slice on = $this.resolve().code.coding.code; slice strategy = includes)\n  MediaIncluded.CommentOrDescription maps to media.comment\n  MediaIncluded.Media maps to media.link\n  ConclusionText maps to conclusion\n  ConclusionCode maps to conclusionCode\n  PresentedForm maps to presentedForm\n</pre></p>\n</div>"
   },
   "url": "http://hl7.org/fhir/us/mcode/StructureDefinition/onco-core-GenomicsReport",
   "name": "GenomicsReport",
-  "title": "onco-core-GenomicsReport",
+  "title": "Genomics Report",
   "status": "active",
-  "date": "2019-08-01",
+  "date": "2019-12-17",
   "publisher": "HL7 International Clinical Interoperability Council",
   "contact": [
     {
@@ -66,7 +66,7 @@
       {
         "id": "DiagnosticReport",
         "path": "DiagnosticReport",
-        "short": "onco-core-GenomicsReport",
+        "short": "Genomics Report",
         "definition": "Genetic analysis summary report. The report may include one or more tests, with two distinct test types. The first type is a targeted mutation test, where a specific mutation on a specific gene is tested for. The result is either positive or negative for that mutation. The second type is a more general test for variants. This type of test returns the identity of variants found in a certain region of the genome.\n\nThe identity of non-genomic laboratory tests is typically represented by a LOINC code. However, many genetic tests and panels do not have LOINC codes, although some might have an identifier in NCBI Genetic Testing Registry (GTR), a central location for voluntary submission of genetic test information by providers. To identify the diagnostic report, the name of the report must be in the text sub-field of the code structure. If there is a coded identifier from GTR, LOINC, or other source, then it should be included into the the code sub-field of the code structure. If there is no suitable code, the code can be omitted.\n\nConformance note: To be conformant to US Core, the code attribute must be a LOINC code, if available. If there is no suitable code in LOINC, then a code from an alternative code system (such as GTR) can be used.\n\nImplementation note: The performer of the test (organization or practitioner) should be included in the FHIR profile as the performer.actor.\n\nConformance note: The category for this profile is set to GE (Genetics), a code from http://hl7.org/fhir/ValueSet/diagnostic-service-sections. This is contrary to the [Argonaut](http://www.fhir.org/guides/argonaut/r2/) and [US Core](http://hl7.org/fhir/us/core/STU3/index.html) specifications, which require the category 'LAB' in diagnostic reports containing laboratory results. This is assumed to be an oversight in the US Core and Argonaut specifications.",
         "comment": "This is intended to capture a single report and is not suitable for use in displaying summary information that covers multiple reports.  For example, this resource has not been designed for laboratory cumulative reporting formats nor detailed structured reports for sequencing.",
         "alias": [
@@ -357,196 +357,7 @@
             "identity": "rim",
             "map": "N/A"
           }
-        ],
-        "slicing": {
-          "id": "3",
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "url"
-            }
-          ],
-          "ordered": false,
-          "rules": "open"
-        }
-      },
-      {
-        "id": "DiagnosticReport.extension:specimentype",
-        "path": "DiagnosticReport.extension",
-        "definition": "The type of material the specimen contains or consists of.",
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "DomainResource.extension",
-          "min": 0,
-          "max": "*"
-        },
-        "type": [
-          {
-            "code": "Extension",
-            "profile": [
-              "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-SpecimenType-extension"
-            ]
-          }
-        ],
-        "isModifier": false,
-        "isSummary": false,
-        "sliceName": "specimentype",
-        "mustSupport": true
-      },
-      {
-        "id": "DiagnosticReport.extension:specimentype.id",
-        "path": "DiagnosticReport.extension.id",
-        "representation": [
-          "xmlAttr"
-        ],
-        "short": "Unique id for inter-element referencing",
-        "definition": "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "Element.id",
-          "min": 0,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "string"
-          }
-        ],
-        "isModifier": false,
-        "isSummary": false,
-        "mapping": [
-          {
-            "identity": "rim",
-            "map": "n/a"
-          }
         ]
-      },
-      {
-        "id": "DiagnosticReport.extension:specimentype.extension",
-        "path": "DiagnosticReport.extension.extension",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "url"
-            }
-          ],
-          "description": "Extensions are always sliced by (at least) url",
-          "rules": "open"
-        },
-        "short": "Additional content defined by implementations",
-        "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
-        "comment": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
-        "alias": [
-          "extensions",
-          "user content"
-        ],
-        "min": 0,
-        "max": "0",
-        "base": {
-          "path": "Element.extension",
-          "min": 0,
-          "max": "*"
-        },
-        "type": [
-          {
-            "code": "Extension"
-          }
-        ],
-        "isModifier": false,
-        "isSummary": false,
-        "mapping": [
-          {
-            "identity": "rim",
-            "map": "n/a"
-          }
-        ]
-      },
-      {
-        "id": "DiagnosticReport.extension:specimentype.url",
-        "path": "DiagnosticReport.extension.url",
-        "representation": [
-          "xmlAttr"
-        ],
-        "short": "identifies the meaning of the extension",
-        "definition": "Source of the definition for the extension code - a logical name or a URL.",
-        "comment": "The definition may point directly to a computable or human-readable definition of the extensibility codes, or it may be a logical URI as declared in some other specification. The definition SHALL be a URI for the Structure Definition defining the extension.",
-        "min": 1,
-        "max": "1",
-        "base": {
-          "path": "Extension.url",
-          "min": 1,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "uri"
-          }
-        ],
-        "isModifier": false,
-        "isSummary": false,
-        "mapping": [
-          {
-            "identity": "rim",
-            "map": "N/A"
-          }
-        ],
-        "fixedUri": "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-SpecimenType-extension"
-      },
-      {
-        "id": "DiagnosticReport.extension:specimentype.valueCodeableConcept",
-        "path": "DiagnosticReport.extension.valueCodeableConcept",
-        "short": "Value of extension",
-        "definition": "Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).",
-        "min": 1,
-        "max": "1",
-        "base": {
-          "path": "Extension.value[x]",
-          "min": 0,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "CodeableConcept"
-          }
-        ],
-        "isModifier": false,
-        "isSummary": false,
-        "mapping": [
-          {
-            "identity": "rim",
-            "map": "N/A"
-          }
-        ],
-        "binding": {
-          "strength": "extensible",
-          "valueSet": "http://hl7.org/fhir/us/mcode/ValueSet/onco-core-GeneticSpecimenTypeVS"
-        }
-      },
-      {
-        "id": "DiagnosticReport.extension:regionstudied",
-        "path": "DiagnosticReport.extension",
-        "definition": "A description of the coverage of the genome that was tested for variants.",
-        "min": 0,
-        "max": "*",
-        "base": {
-          "path": "DomainResource.extension",
-          "min": 0,
-          "max": "*"
-        },
-        "type": [
-          {
-            "code": "Extension",
-            "profile": [
-              "http://hl7.org/fhir/us/mcode/StructureDefinition/onco-core-RegionStudied-extension"
-            ]
-          }
-        ],
-        "isModifier": false,
-        "isSummary": false,
-        "sliceName": "regionstudied"
       },
       {
         "id": "DiagnosticReport.modifierExtension",
@@ -648,7 +459,9 @@
             "code": "Reference",
             "targetProfile": [
               "http://hl7.org/fhir/StructureDefinition/ServiceRequest",
-              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest"
+              "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-ProcedureRequest",
+              "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-MedicationRequest",
+              "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-CarePlan"
             ]
           }
         ],
@@ -763,8 +576,56 @@
         ]
       },
       {
-        "id": "DiagnosticReport.category.id",
-        "path": "DiagnosticReport.category.id",
+        "id": "DiagnosticReport.code",
+        "path": "DiagnosticReport.code",
+        "short": "US Core Report Code",
+        "definition": "The test, panel, report, or note that was ordered.",
+        "comment": "UsageNote= The typical patterns for codes are:  1)  a LOINC code either as a  translation from a \"local\" code or as a primary code, or 2)  a local code only if no suitable LOINC exists,  or 3)  both the local and the LOINC translation.   Systems SHALL be capable of sending the local code if one exists.",
+        "alias": [
+          "Type"
+        ],
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "DiagnosticReport.code",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mustSupport": true,
+        "isModifier": false,
+        "isSummary": true,
+        "binding": {
+          "strength": "extensible",
+          "description": "LOINC codes",
+          "valueSet": "http://hl7.org/fhir/us/core/ValueSet/us-core-diagnosticreport-report-and-note-codes"
+        },
+        "mapping": [
+          {
+            "identity": "workflow",
+            "map": "Event.code"
+          },
+          {
+            "identity": "w5",
+            "map": "FiveWs.what[x]"
+          },
+          {
+            "identity": "v2",
+            "map": "OBR-4 (HL7 v2 doesn't provide an easy way to indicate both the ordered test and the performed panel)"
+          },
+          {
+            "identity": "rim",
+            "map": "code"
+          }
+        ]
+      },
+      {
+        "id": "DiagnosticReport.code.id",
+        "path": "DiagnosticReport.code.id",
         "representation": [
           "xmlAttr"
         ],
@@ -779,7 +640,13 @@
         },
         "type": [
           {
-            "code": "string"
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type",
+                "valueUrl": "string"
+              }
+            ],
+            "code": "http://hl7.org/fhirpath/System.String"
           }
         ],
         "isModifier": false,
@@ -792,8 +659,8 @@
         ]
       },
       {
-        "id": "DiagnosticReport.category.extension",
-        "path": "DiagnosticReport.category.extension",
+        "id": "DiagnosticReport.code.extension",
+        "path": "DiagnosticReport.code.extension",
         "slicing": {
           "discriminator": [
             {
@@ -823,6 +690,24 @@
             "code": "Extension"
           }
         ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          },
+          {
+            "key": "ext-1",
+            "severity": "error",
+            "human": "Must have either extensions or value[x], not both",
+            "expression": "extension.exists() != value.exists()",
+            "xpath": "exists(f:extension)!=exists(f:*[starts-with(local-name(.), \"value\")])",
+            "source": "http://hl7.org/fhir/StructureDefinition/Extension"
+          }
+        ],
         "isModifier": false,
         "isSummary": false,
         "mapping": [
@@ -833,8 +718,8 @@
         ]
       },
       {
-        "id": "DiagnosticReport.category.coding",
-        "path": "DiagnosticReport.category.coding",
+        "id": "DiagnosticReport.code.coding",
+        "path": "DiagnosticReport.code.coding",
         "short": "Code defined by a terminology system",
         "definition": "A reference to a code defined by a terminology system.",
         "comment": "Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true.",
@@ -849,6 +734,16 @@
         "type": [
           {
             "code": "Coding"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
         "isModifier": false,
@@ -880,11 +775,11 @@
         }
       },
       {
-        "id": "DiagnosticReport.category.coding:Fixed_GE",
-        "path": "DiagnosticReport.category.coding",
-        "sliceName": "Fixed_GE",
-        "short": "Code defined by a terminology system",
-        "definition": "A reference to a code defined by a terminology system.",
+        "id": "DiagnosticReport.code.coding:Fixed_81247-9",
+        "path": "DiagnosticReport.code.coding",
+        "sliceName": "Fixed_81247-9",
+        "short": "Master HL7 genetic variant reporting panel",
+        "definition": "Master HL7 genetic variant reporting panel",
         "min": 1,
         "max": "1",
         "base": {
@@ -900,8 +795,8 @@
         "isSummary": true
       },
       {
-        "id": "DiagnosticReport.category.coding:Fixed_GE.id",
-        "path": "DiagnosticReport.category.coding.id",
+        "id": "DiagnosticReport.code.coding:Fixed_81247-9.id",
+        "path": "DiagnosticReport.code.coding.id",
         "representation": [
           "xmlAttr"
         ],
@@ -916,7 +811,13 @@
         },
         "type": [
           {
-            "code": "string"
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type",
+                "valueUrl": "string"
+              }
+            ],
+            "code": "http://hl7.org/fhirpath/System.String"
           }
         ],
         "isModifier": false,
@@ -929,8 +830,8 @@
         ]
       },
       {
-        "id": "DiagnosticReport.category.coding:Fixed_GE.extension",
-        "path": "DiagnosticReport.category.coding.extension",
+        "id": "DiagnosticReport.code.coding:Fixed_81247-9.extension",
+        "path": "DiagnosticReport.code.coding.extension",
         "slicing": {
           "discriminator": [
             {
@@ -960,6 +861,24 @@
             "code": "Extension"
           }
         ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          },
+          {
+            "key": "ext-1",
+            "severity": "error",
+            "human": "Must have either extensions or value[x], not both",
+            "expression": "extension.exists() != value.exists()",
+            "xpath": "exists(f:extension)!=exists(f:*[starts-with(local-name(.), \"value\")])",
+            "source": "http://hl7.org/fhir/StructureDefinition/Extension"
+          }
+        ],
         "isModifier": false,
         "isSummary": false,
         "mapping": [
@@ -970,13 +889,13 @@
         ]
       },
       {
-        "id": "DiagnosticReport.category.coding:Fixed_GE.system",
-        "path": "DiagnosticReport.category.coding.system",
+        "id": "DiagnosticReport.code.coding:Fixed_81247-9.system",
+        "path": "DiagnosticReport.code.coding.system",
         "short": "Identity of the terminology system",
         "definition": "The identification of the code system that defines the meaning of the symbol in the code.",
         "comment": "The URI may be an OID (urn:oid:...) or a UUID (urn:uuid:...).  OIDs and UUIDs SHALL be references to the HL7 OID registry. Otherwise, the URI should come from HL7's list of FHIR defined special URIs or it should reference to some definition that establishes the system clearly and unambiguously.",
         "requirements": "Need to be unambiguous about the source of the definition of the symbol.",
-        "min": 0,
+        "min": 1,
         "max": "1",
         "base": {
           "path": "Coding.system",
@@ -986,6 +905,16 @@
         "type": [
           {
             "code": "uri"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
         "isModifier": false,
@@ -1004,11 +933,11 @@
             "map": "fhir:Coding.system rdfs:subPropertyOf dt:CDCoding.codeSystem"
           }
         ],
-        "fixedUri": "http://terminology.hl7.org/CodeSystem/v2-0074"
+        "fixedUri": "http://loinc.org"
       },
       {
-        "id": "DiagnosticReport.category.coding:Fixed_GE.version",
-        "path": "DiagnosticReport.category.coding.version",
+        "id": "DiagnosticReport.code.coding:Fixed_81247-9.version",
+        "path": "DiagnosticReport.code.coding.version",
         "short": "Version of the system - if relevant",
         "definition": "The version of the code system which was used when choosing this code. Note that a well-maintained code system does not need the version reported, because the meaning of codes is consistent across versions. However this cannot consistently be assured, and when the meaning is not guaranteed to be consistent, the version SHOULD be exchanged.",
         "comment": "Where the terminology does not clearly define what string should be used to identify code system versions, the recommendation is to use the date (expressed in FHIR date format) on which that version was officially published as the version date.",
@@ -1022,6 +951,16 @@
         "type": [
           {
             "code": "string"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
         "isModifier": false,
@@ -1042,12 +981,12 @@
         ]
       },
       {
-        "id": "DiagnosticReport.category.coding:Fixed_GE.code",
-        "path": "DiagnosticReport.category.coding.code",
+        "id": "DiagnosticReport.code.coding:Fixed_81247-9.code",
+        "path": "DiagnosticReport.code.coding.code",
         "short": "Symbol in syntax defined by the system",
         "definition": "A symbol in syntax defined by the system. The symbol may be a predefined code or an expression in a syntax defined by the coding system (e.g. post-coordination).",
         "requirements": "Need to refer to a particular code in the system.",
-        "min": 0,
+        "min": 1,
         "max": "1",
         "base": {
           "path": "Coding.code",
@@ -1057,6 +996,16 @@
         "type": [
           {
             "code": "code"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
         "isModifier": false,
@@ -1075,17 +1024,17 @@
             "map": "fhir:Coding.code rdfs:subPropertyOf dt:CDCoding.code"
           }
         ],
-        "fixedCode": "GE"
+        "fixedCode": "81247-9"
       },
       {
-        "id": "DiagnosticReport.category.coding:Fixed_GE.display",
+        "id": "DiagnosticReport.code.coding:Fixed_81247-9.display",
         "extension": [
           {
             "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable",
             "valueBoolean": true
           }
         ],
-        "path": "DiagnosticReport.category.coding.display",
+        "path": "DiagnosticReport.code.coding.display",
         "short": "Representation defined by the system",
         "definition": "A representation of the meaning of the code in the system, following the rules of the system.",
         "requirements": "Need to be able to carry a human-readable meaning of the code for readers that do not know  the system.",
@@ -1099,6 +1048,16 @@
         "type": [
           {
             "code": "string"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
         "isModifier": false,
@@ -1119,8 +1078,8 @@
         ]
       },
       {
-        "id": "DiagnosticReport.category.coding:Fixed_GE.userSelected",
-        "path": "DiagnosticReport.category.coding.userSelected",
+        "id": "DiagnosticReport.code.coding:Fixed_81247-9.userSelected",
+        "path": "DiagnosticReport.code.coding.userSelected",
         "short": "If this coding was chosen directly by the user",
         "definition": "Indicates that this coding was chosen by a user directly - e.g. off a pick list of available items (codes or displays).",
         "comment": "Amongst a set of alternatives, a directly chosen code is the most appropriate starting point for new translations. There is some ambiguity about what exactly 'directly chosen' implies, and trading partner agreement may be needed to clarify the use of this element and its consequences more completely.",
@@ -1135,6 +1094,16 @@
         "type": [
           {
             "code": "boolean"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
         "isModifier": false,
@@ -1155,14 +1124,14 @@
         ]
       },
       {
-        "id": "DiagnosticReport.category.text",
+        "id": "DiagnosticReport.code.text",
         "extension": [
           {
             "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable",
             "valueBoolean": true
           }
         ],
-        "path": "DiagnosticReport.category.text",
+        "path": "DiagnosticReport.code.text",
         "short": "Plain text representation of the concept",
         "definition": "A human language representation of the concept as seen/selected/uttered by the user who entered the data and/or which represents the intended meaning of the user.",
         "comment": "Very often the text is the same as a displayName of one of the codings.",
@@ -1179,6 +1148,16 @@
             "code": "string"
           }
         ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ],
         "isModifier": false,
         "isSummary": true,
         "mapping": [
@@ -1193,53 +1172,6 @@
           {
             "identity": "orim",
             "map": "fhir:CodeableConcept.text rdfs:subPropertyOf dt:CD.originalText"
-          }
-        ]
-      },
-      {
-        "id": "DiagnosticReport.code",
-        "path": "DiagnosticReport.code",
-        "short": "US Core Report Code",
-        "definition": "The test, panel, report, or note that was ordered.",
-        "comment": "UsageNote= The typical patterns for codes are:  1)  a LOINC code either as a  translation from a \"local\" code or as a primary code, or 2)  a local code only if no suitable LOINC exists,  or 3)  both the local and the LOINC translation.   Systems SHALL be capable of sending the local code if one exists.",
-        "alias": [
-          "Type"
-        ],
-        "min": 1,
-        "max": "1",
-        "base": {
-          "path": "DiagnosticReport.code",
-          "min": 1,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "CodeableConcept"
-          }
-        ],
-        "mustSupport": true,
-        "isModifier": false,
-        "isSummary": true,
-        "binding": {
-          "strength": "extensible",
-          "valueSet": "http://hl7.org/fhir/us/mcode/ValueSet/onco-core-GeneticTestVS"
-        },
-        "mapping": [
-          {
-            "identity": "workflow",
-            "map": "Event.code"
-          },
-          {
-            "identity": "w5",
-            "map": "FiveWs.what[x]"
-          },
-          {
-            "identity": "v2",
-            "map": "OBR-4 (HL7 v2 doesn't provide an easy way to indicate both the ordered test and the performed panel)"
-          },
-          {
-            "identity": "rim",
-            "map": "code"
           }
         ]
       },
@@ -1536,8 +1468,8 @@
       {
         "id": "DiagnosticReport.specimen",
         "path": "DiagnosticReport.specimen",
-        "short": "Specimens this report is based on",
-        "definition": "Details about the specimens on which this diagnostic report is based.",
+        "short": "A small sample of blood, hair, skin, amniotic fluid (the fluid that surrounds a fetus during pregnancy), or other tissue which is excised from a subject for the purposes of genomics testing or analysis",
+        "definition": "A small sample of blood, hair, skin, amniotic fluid (the fluid that surrounds a fetus during pregnancy), or other tissue which is excised from a subject for the purposes of genomics testing or analysis.",
         "comment": "If the specimen is sufficiently specified with a code in the test result name, then this additional data may be redundant. If there are multiple specimens, these may be represented per observation or group.",
         "requirements": "Need to be able to report information about the collected specimens on which the report is based.",
         "min": 0,
@@ -1551,7 +1483,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/StructureDefinition/Specimen"
+              "http://hl7.org/fhir/us/mcode/StructureDefinition/onco-core-GeneticSpecimen"
             ]
           }
         ],
@@ -1566,7 +1498,8 @@
             "identity": "rim",
             "map": "participation[typeCode=SBJ]"
           }
-        ]
+        ],
+        "mustSupport": true
       },
       {
         "id": "DiagnosticReport.result",
@@ -1627,55 +1560,9 @@
         "mustSupport": true
       },
       {
-        "id": "DiagnosticReport.result:onco-core-GeneticVariantFound",
+        "id": "DiagnosticReport.result:onco-core-GeneticVariant",
         "path": "DiagnosticReport.result",
-        "short": "GeneticVariantFound: Records an alteration in the most common DNA nucleotide sequence",
-        "definition": "Records an alteration in the most common DNA nucleotide sequence. The term variant can be used to describe an alteration that may be benign, pathogenic, or of unknown significance. The term variant is increasingly being used in place of the term mutation. When reporting 'Genetic Variant Found', at least one element out of the following must be reported: 'Variant Found Identifier', 'Variant Found HGVS Name', and 'Variant Found Description'.",
-        "alias": [
-          "Data",
-          "Atomic Value",
-          "Result",
-          "Atomic result",
-          "Data",
-          "Test",
-          "Analyte",
-          "Battery",
-          "Organizer"
-        ],
-        "min": 0,
-        "max": "*",
-        "base": {
-          "path": "DiagnosticReport.result",
-          "min": 0,
-          "max": "*"
-        },
-        "type": [
-          {
-            "code": "Reference",
-            "targetProfile": [
-              "http://hl7.org/fhir/us/mcode/StructureDefinition/onco-core-GeneticVariantFound"
-            ]
-          }
-        ],
-        "isModifier": false,
-        "isSummary": false,
-        "mapping": [
-          {
-            "identity": "v2",
-            "map": "OBXs"
-          },
-          {
-            "identity": "rim",
-            "map": "outboundRelationship[typeCode=COMP].target"
-          }
-        ],
-        "sliceName": "onco-core-GeneticVariantFound",
-        "mustSupport": true
-      },
-      {
-        "id": "DiagnosticReport.result:onco-core-GeneticVariantTested",
-        "path": "DiagnosticReport.result",
-        "short": "GeneticVariantTested: A test for a specific mutation on a particular gene",
+        "short": "GeneticVariant: A test for a specific mutation on a particular gene",
         "definition": "A test for a specific mutation on a particular gene. This profile is used to record whether a single discrete variant tested is present or absent (denoted as positive or negative respectively).",
         "alias": [
           "Data",
@@ -1699,7 +1586,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/us/mcode/StructureDefinition/onco-core-GeneticVariantTested"
+              "http://hl7.org/fhir/us/mcode/StructureDefinition/onco-core-GeneticVariant"
             ]
           }
         ],
@@ -1715,7 +1602,53 @@
             "map": "outboundRelationship[typeCode=COMP].target"
           }
         ],
-        "sliceName": "onco-core-GeneticVariantTested",
+        "sliceName": "onco-core-GeneticVariant",
+        "mustSupport": true
+      },
+      {
+        "id": "DiagnosticReport.result:onco-core-RegionStudied",
+        "path": "DiagnosticReport.result",
+        "short": "RegionStudied: The area of the genome region referenced in testing for variants",
+        "definition": "The area of the genome region referenced in testing for variants.",
+        "alias": [
+          "Data",
+          "Atomic Value",
+          "Result",
+          "Atomic result",
+          "Data",
+          "Test",
+          "Analyte",
+          "Battery",
+          "Organizer"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DiagnosticReport.result",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/us/mcode/StructureDefinition/onco-core-RegionStudied"
+            ]
+          }
+        ],
+        "isModifier": false,
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "OBXs"
+          },
+          {
+            "identity": "rim",
+            "map": "outboundRelationship[typeCode=COMP].target"
+          }
+        ],
+        "sliceName": "onco-core-RegionStudied",
         "mustSupport": true
       },
       {
@@ -2061,81 +1994,11 @@
       {
         "id": "DiagnosticReport",
         "path": "DiagnosticReport",
-        "short": "onco-core-GenomicsReport",
+        "short": "Genomics Report",
         "definition": "Genetic analysis summary report. The report may include one or more tests, with two distinct test types. The first type is a targeted mutation test, where a specific mutation on a specific gene is tested for. The result is either positive or negative for that mutation. The second type is a more general test for variants. This type of test returns the identity of variants found in a certain region of the genome.\n\nThe identity of non-genomic laboratory tests is typically represented by a LOINC code. However, many genetic tests and panels do not have LOINC codes, although some might have an identifier in NCBI Genetic Testing Registry (GTR), a central location for voluntary submission of genetic test information by providers. To identify the diagnostic report, the name of the report must be in the text sub-field of the code structure. If there is a coded identifier from GTR, LOINC, or other source, then it should be included into the the code sub-field of the code structure. If there is no suitable code, the code can be omitted.\n\nConformance note: To be conformant to US Core, the code attribute must be a LOINC code, if available. If there is no suitable code in LOINC, then a code from an alternative code system (such as GTR) can be used.\n\nImplementation note: The performer of the test (organization or practitioner) should be included in the FHIR profile as the performer.actor.\n\nConformance note: The category for this profile is set to GE (Genetics), a code from http://hl7.org/fhir/ValueSet/diagnostic-service-sections. This is contrary to the [Argonaut](http://www.fhir.org/guides/argonaut/r2/) and [US Core](http://hl7.org/fhir/us/core/STU3/index.html) specifications, which require the category 'LAB' in diagnostic reports containing laboratory results. This is assumed to be an oversight in the US Core and Argonaut specifications.",
         "mustSupport": false,
         "isModifier": false,
         "isSummary": false
-      },
-      {
-        "id": "DiagnosticReport.extension",
-        "path": "DiagnosticReport.extension",
-        "slicing": {
-          "id": "3",
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "url"
-            }
-          ],
-          "ordered": false,
-          "rules": "open"
-        }
-      },
-      {
-        "id": "DiagnosticReport.extension:specimentype",
-        "path": "DiagnosticReport.extension",
-        "definition": "The type of material the specimen contains or consists of.",
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "DomainResource.extension",
-          "min": 0,
-          "max": "*"
-        },
-        "type": [
-          {
-            "code": "Extension",
-            "profile": [
-              "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-SpecimenType-extension"
-            ]
-          }
-        ],
-        "isModifier": false,
-        "isSummary": false,
-        "sliceName": "specimentype",
-        "mustSupport": true
-      },
-      {
-        "id": "DiagnosticReport.extension:specimentype.valueCodeableConcept",
-        "path": "DiagnosticReport.extension.valueCodeableConcept",
-        "binding": {
-          "strength": "extensible",
-          "valueSet": "http://hl7.org/fhir/us/mcode/ValueSet/onco-core-GeneticSpecimenTypeVS"
-        }
-      },
-      {
-        "id": "DiagnosticReport.extension:regionstudied",
-        "path": "DiagnosticReport.extension",
-        "definition": "A description of the coverage of the genome that was tested for variants.",
-        "min": 0,
-        "max": "*",
-        "base": {
-          "path": "DomainResource.extension",
-          "min": 0,
-          "max": "*"
-        },
-        "type": [
-          {
-            "code": "Extension",
-            "profile": [
-              "http://hl7.org/fhir/us/mcode/StructureDefinition/onco-core-RegionStudied-extension"
-            ]
-          }
-        ],
-        "isModifier": false,
-        "isSummary": false,
-        "sliceName": "regionstudied"
       },
       {
         "id": "DiagnosticReport.basedOn",
@@ -2145,7 +2008,9 @@
             "code": "Reference",
             "targetProfile": [
               "http://hl7.org/fhir/StructureDefinition/ServiceRequest",
-              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest"
+              "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-ProcedureRequest",
+              "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-MedicationRequest",
+              "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-CarePlan"
             ]
           }
         ]
@@ -2157,8 +2022,12 @@
         "max": "1"
       },
       {
-        "id": "DiagnosticReport.category.coding",
-        "path": "DiagnosticReport.category.coding",
+        "id": "DiagnosticReport.code",
+        "path": "DiagnosticReport.code"
+      },
+      {
+        "id": "DiagnosticReport.code.coding",
+        "path": "DiagnosticReport.code.coding",
         "slicing": {
           "id": "1",
           "discriminator": [
@@ -2174,11 +2043,11 @@
         "max": "*"
       },
       {
-        "id": "DiagnosticReport.category.coding:Fixed_GE",
-        "path": "DiagnosticReport.category.coding",
-        "sliceName": "Fixed_GE",
-        "short": "Code defined by a terminology system",
-        "definition": "A reference to a code defined by a terminology system.",
+        "id": "DiagnosticReport.code.coding:Fixed_81247-9",
+        "path": "DiagnosticReport.code.coding",
+        "sliceName": "Fixed_81247-9",
+        "short": "Master HL7 genetic variant reporting panel",
+        "definition": "Master HL7 genetic variant reporting panel",
         "min": 1,
         "max": "1",
         "base": {
@@ -2194,22 +2063,18 @@
         "isSummary": true
       },
       {
-        "id": "DiagnosticReport.category.coding:Fixed_GE.system",
-        "path": "DiagnosticReport.category.coding.system",
-        "fixedUri": "http://terminology.hl7.org/CodeSystem/v2-0074"
+        "id": "DiagnosticReport.code.coding:Fixed_81247-9.system",
+        "path": "DiagnosticReport.code.coding.system",
+        "fixedUri": "http://loinc.org",
+        "min": 1,
+        "max": "1"
       },
       {
-        "id": "DiagnosticReport.category.coding:Fixed_GE.code",
-        "path": "DiagnosticReport.category.coding.code",
-        "fixedCode": "GE"
-      },
-      {
-        "id": "DiagnosticReport.code",
-        "path": "DiagnosticReport.code",
-        "binding": {
-          "strength": "extensible",
-          "valueSet": "http://hl7.org/fhir/us/mcode/ValueSet/onco-core-GeneticTestVS"
-        }
+        "id": "DiagnosticReport.code.coding:Fixed_81247-9.code",
+        "path": "DiagnosticReport.code.coding.code",
+        "fixedCode": "81247-9",
+        "min": 1,
+        "max": "1"
       },
       {
         "id": "DiagnosticReport.subject",
@@ -2235,16 +2100,7 @@
         "id": "DiagnosticReport.performer",
         "path": "DiagnosticReport.performer",
         "min": 0,
-        "max": "1",
-        "type": [
-          {
-            "code": "Reference",
-            "targetProfile": [
-              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner",
-              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization"
-            ]
-          }
-        ]
+        "max": "1"
       },
       {
         "id": "DiagnosticReport.resultsInterpreter",
@@ -2260,6 +2116,21 @@
             ]
           }
         ]
+      },
+      {
+        "id": "DiagnosticReport.specimen",
+        "path": "DiagnosticReport.specimen",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/us/mcode/StructureDefinition/onco-core-GeneticSpecimen"
+            ]
+          }
+        ],
+        "short": "A small sample of blood, hair, skin, amniotic fluid (the fluid that surrounds a fetus during pregnancy), or other tissue which is excised from a subject for the purposes of genomics testing or analysis",
+        "definition": "A small sample of blood, hair, skin, amniotic fluid (the fluid that surrounds a fetus during pregnancy), or other tissue which is excised from a subject for the purposes of genomics testing or analysis.",
+        "mustSupport": true
       },
       {
         "id": "DiagnosticReport.result",
@@ -2286,37 +2157,37 @@
         "mustSupport": true
       },
       {
-        "id": "DiagnosticReport.result:onco-core-GeneticVariantFound",
+        "id": "DiagnosticReport.result:onco-core-GeneticVariant",
         "path": "DiagnosticReport.result",
         "type": [
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/us/mcode/StructureDefinition/onco-core-GeneticVariantFound"
+              "http://hl7.org/fhir/us/mcode/StructureDefinition/onco-core-GeneticVariant"
             ]
           }
         ],
-        "sliceName": "onco-core-GeneticVariantFound",
-        "short": "GeneticVariantFound: Records an alteration in the most common DNA nucleotide sequence",
-        "definition": "Records an alteration in the most common DNA nucleotide sequence. The term variant can be used to describe an alteration that may be benign, pathogenic, or of unknown significance. The term variant is increasingly being used in place of the term mutation. When reporting 'Genetic Variant Found', at least one element out of the following must be reported: 'Variant Found Identifier', 'Variant Found HGVS Name', and 'Variant Found Description'.",
+        "sliceName": "onco-core-GeneticVariant",
+        "short": "GeneticVariant: A test for a specific mutation on a particular gene",
+        "definition": "A test for a specific mutation on a particular gene. This profile is used to record whether a single discrete variant tested is present or absent (denoted as positive or negative respectively).",
         "min": 0,
         "max": "*",
         "mustSupport": true
       },
       {
-        "id": "DiagnosticReport.result:onco-core-GeneticVariantTested",
+        "id": "DiagnosticReport.result:onco-core-RegionStudied",
         "path": "DiagnosticReport.result",
         "type": [
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/us/mcode/StructureDefinition/onco-core-GeneticVariantTested"
+              "http://hl7.org/fhir/us/mcode/StructureDefinition/onco-core-RegionStudied"
             ]
           }
         ],
-        "sliceName": "onco-core-GeneticVariantTested",
-        "short": "GeneticVariantTested: A test for a specific mutation on a particular gene",
-        "definition": "A test for a specific mutation on a particular gene. This profile is used to record whether a single discrete variant tested is present or absent (denoted as positive or negative respectively).",
+        "sliceName": "onco-core-RegionStudied",
+        "short": "RegionStudied: The area of the genome region referenced in testing for variants",
+        "definition": "The area of the genome region referenced in testing for variants.",
         "min": 0,
         "max": "*",
         "mustSupport": true

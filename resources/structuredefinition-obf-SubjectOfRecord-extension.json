@@ -7,9 +7,9 @@
   },
   "url": "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-SubjectOfRecord-extension",
   "name": "SubjectOfRecord",
-  "title": "obf-SubjectOfRecord",
+  "title": "Subject Of Record",
   "status": "draft",
-  "date": "2019-08-01",
+  "date": "2019-12-17",
   "publisher": "HL7 International Clinical Interoperability Council",
   "contact": [
     {
@@ -201,10 +201,10 @@
               "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner",
               "http://hl7.org/fhir/StructureDefinition/Group",
               "http://hl7.org/fhir/us/core/StructureDefinition/us-core-device",
-              "http://hl7.org/fhir/StructureDefinition/Specimen",
+              "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-Specimen",
               "http://hl7.org/fhir/us/core/StructureDefinition/us-core-location",
               "http://hl7.org/fhir/us/core/StructureDefinition/us-core-medication",
-              "http://hl7.org/fhir/StructureDefinition/ResearchSubject"
+              "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-ResearchSubject"
             ]
           }
         ],
@@ -257,10 +257,10 @@
               "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner",
               "http://hl7.org/fhir/StructureDefinition/Group",
               "http://hl7.org/fhir/us/core/StructureDefinition/us-core-device",
-              "http://hl7.org/fhir/StructureDefinition/Specimen",
+              "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-Specimen",
               "http://hl7.org/fhir/us/core/StructureDefinition/us-core-location",
               "http://hl7.org/fhir/us/core/StructureDefinition/us-core-medication",
-              "http://hl7.org/fhir/StructureDefinition/ResearchSubject"
+              "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-ResearchSubject"
             ]
           }
         ]

@@ -7,10 +7,10 @@
   },
   "url": "http://hl7.org/fhir/us/mcode/StructureDefinition/onco-core-Tumor",
   "name": "Tumor",
-  "title": "onco-core-Tumor",
+  "title": "Tumor",
   "status": "active",
   "experimental": false,
-  "date": "2019-08-01",
+  "date": "2019-12-17",
   "publisher": "HL7 International Clinical Interoperability Council",
   "contact": [
     {
@@ -82,7 +82,7 @@
       {
         "id": "Condition",
         "path": "Condition",
-        "short": "onco-core-Tumor",
+        "short": "Tumor",
         "definition": "The presence of an abnormal mass of tissue (neoplasm) that results when cells divide more than they should or do not die when they should. Tumors may be benign (not cancer), or malignant (cancer). (source: NCI Dictionary).\n\nConformance note: For the HistologyMorphologyBehavior attribute, to be compliant with [US Core Profiles](http://hl7.org/fhir/us/core/STU3/index.html), SNOMED CT must be used unless there is no suitable code, in which case ICD-O-3 can be used.",
         "min": 0,
         "max": "*",
@@ -456,7 +456,7 @@
       {
         "id": "Condition.extension:primarycancercondition",
         "path": "Condition.extension",
-        "definition": "Records the history of the primary cancer condition, the original or first tumor in the body (reference https://www.cancer.gov/publications/dictionaries/cancer-terms/def/primary-tumor). Cancers that are not clearly secondary (i.e., of uncertain origin or behavior) should be documented as primary.\n\nCancer staging information summarized in this profile should reflect the most recent staging assessment on the patient, and should be updated if and when there is a new staging assessment. Past staging assessments will be preserved in instances of the TNMClinicalStageGroup and/or TNMPathologicalStageGroup, which refer back to PrimaryCancerCondition.\n\nConformance note: For the code attribute, to be compliant with [US Core Profiles](http://hl7.org/fhir/us/core/STU3/index.html), SNOMED CT must be used unless there is no suitable code, in which case ICD-10-CM can be used.",
+        "definition": "Records the history of the primary cancer condition, the original or first tumor in the body (Definition from: [NCI Dictionary of Cancer Terms](https://www.cancer.gov/publications/dictionaries/cancer-terms/def/primary-tumor)). Cancers that are not clearly secondary (i.e., of uncertain origin or behavior) should be documented as primary.\n\nCancer staging information summarized in this profile should reflect the most recent staging assessment on the patient, and should be updated if and when there is a new staging assessment. Past staging assessments will be preserved in instances of the TNMClinicalStageGroup and/or TNMPathologicalStageGroup, which refer back to PrimaryCancerCondition.\n\nConformance note: For the code attribute, to be compliant with [US Core Profiles](http://hl7.org/fhir/us/core/STU3/index.html), SNOMED CT must be used unless there is no suitable code, in which case ICD-10-CM can be used.",
         "min": 0,
         "max": "1",
         "base": {
@@ -869,8 +869,15 @@
         "isModifier": false,
         "isSummary": true,
         "binding": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+              "valueString": "BodySite"
+            }
+          ],
           "strength": "preferred",
-          "valueSet": "http://hl7.org/fhir/us/mcode/ValueSet/obf-datatype-BodyLocationVS"
+          "description": "Codes describing anatomical locations. May include laterality.",
+          "valueSet": "http://hl7.org/fhir/ValueSet/body-site"
         },
         "mapping": [
           {
@@ -904,7 +911,13 @@
         },
         "type": [
           {
-            "code": "string"
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type",
+                "valueUrl": "string"
+              }
+            ],
+            "code": "http://hl7.org/fhirpath/System.String"
           }
         ],
         "isModifier": false,
@@ -948,6 +961,24 @@
             "code": "Extension"
           }
         ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          },
+          {
+            "key": "ext-1",
+            "severity": "error",
+            "human": "Must have either extensions or value[x], not both",
+            "expression": "extension.exists() != value.exists()",
+            "xpath": "exists(f:extension)!=exists(f:*[starts-with(local-name(.), \"value\")])",
+            "source": "http://hl7.org/fhir/StructureDefinition/Extension"
+          }
+        ],
         "isModifier": false,
         "isSummary": false,
         "mapping": [
@@ -976,6 +1007,24 @@
             ]
           }
         ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          },
+          {
+            "key": "ext-1",
+            "severity": "error",
+            "human": "Must have either extensions or value[x], not both",
+            "expression": "extension.exists() != value.exists()",
+            "xpath": "exists(f:extension)!=exists(f:*[starts-with(local-name(.), \"value\")])",
+            "source": "http://hl7.org/fhir/StructureDefinition/Extension"
+          }
+        ],
         "isModifier": false,
         "isSummary": false,
         "sliceName": "laterality"
@@ -997,6 +1046,24 @@
             "profile": [
               "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-datatype-AnatomicalOrientation-extension"
             ]
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          },
+          {
+            "key": "ext-1",
+            "severity": "error",
+            "human": "Must have either extensions or value[x], not both",
+            "expression": "extension.exists() != value.exists()",
+            "xpath": "exists(f:extension)!=exists(f:*[starts-with(local-name(.), \"value\")])",
+            "source": "http://hl7.org/fhir/StructureDefinition/Extension"
           }
         ],
         "isModifier": false,
@@ -1022,6 +1089,24 @@
             ]
           }
         ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          },
+          {
+            "key": "ext-1",
+            "severity": "error",
+            "human": "Must have either extensions or value[x], not both",
+            "expression": "extension.exists() != value.exists()",
+            "xpath": "exists(f:extension)!=exists(f:*[starts-with(local-name(.), \"value\")])",
+            "source": "http://hl7.org/fhir/StructureDefinition/Extension"
+          }
+        ],
         "isModifier": false,
         "isSummary": false,
         "sliceName": "relationtolandmark"
@@ -1043,6 +1128,16 @@
         "type": [
           {
             "code": "Coding"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
         "isModifier": false,
@@ -1085,6 +1180,16 @@
         "type": [
           {
             "code": "string"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
         "isModifier": false,
@@ -1348,7 +1453,7 @@
             "code": "Reference",
             "targetProfile": [
               "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner",
-              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole",
+              "http://hl7.org/fhir/StructureDefinition/PractitionerRole",
               "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-Patient",
               "http://hl7.org/fhir/StructureDefinition/RelatedPerson"
             ]
@@ -1894,7 +1999,10 @@
         },
         "type": [
           {
-            "code": "Annotation"
+            "code": "Annotation",
+            "profile": [
+              "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-Annotation"
+            ]
           }
         ],
         "isModifier": false,
@@ -1921,7 +2029,7 @@
       {
         "id": "Condition",
         "path": "Condition",
-        "short": "onco-core-Tumor",
+        "short": "Tumor",
         "definition": "The presence of an abnormal mass of tissue (neoplasm) that results when cells divide more than they should or do not die when they should. Tumors may be benign (not cancer), or malignant (cancer). (source: NCI Dictionary).\n\nConformance note: For the HistologyMorphologyBehavior attribute, to be compliant with [US Core Profiles](http://hl7.org/fhir/us/core/STU3/index.html), SNOMED CT must be used unless there is no suitable code, in which case ICD-O-3 can be used.",
         "mustSupport": false,
         "isModifier": false,
@@ -1968,7 +2076,7 @@
       {
         "id": "Condition.extension:primarycancercondition",
         "path": "Condition.extension",
-        "definition": "Records the history of the primary cancer condition, the original or first tumor in the body (reference https://www.cancer.gov/publications/dictionaries/cancer-terms/def/primary-tumor). Cancers that are not clearly secondary (i.e., of uncertain origin or behavior) should be documented as primary.\n\nCancer staging information summarized in this profile should reflect the most recent staging assessment on the patient, and should be updated if and when there is a new staging assessment. Past staging assessments will be preserved in instances of the TNMClinicalStageGroup and/or TNMPathologicalStageGroup, which refer back to PrimaryCancerCondition.\n\nConformance note: For the code attribute, to be compliant with [US Core Profiles](http://hl7.org/fhir/us/core/STU3/index.html), SNOMED CT must be used unless there is no suitable code, in which case ICD-10-CM can be used.",
+        "definition": "Records the history of the primary cancer condition, the original or first tumor in the body (Definition from: [NCI Dictionary of Cancer Terms](https://www.cancer.gov/publications/dictionaries/cancer-terms/def/primary-tumor)). Cancers that are not clearly secondary (i.e., of uncertain origin or behavior) should be documented as primary.\n\nCancer staging information summarized in this profile should reflect the most recent staging assessment on the patient, and should be updated if and when there is a new staging assessment. Past staging assessments will be preserved in instances of the TNMClinicalStageGroup and/or TNMPathologicalStageGroup, which refer back to PrimaryCancerCondition.\n\nConformance note: For the code attribute, to be compliant with [US Core Profiles](http://hl7.org/fhir/us/core/STU3/index.html), SNOMED CT must be used unless there is no suitable code, in which case ICD-10-CM can be used.",
         "min": 0,
         "max": "1",
         "base": {
@@ -2041,8 +2149,15 @@
         "id": "Condition.bodySite",
         "path": "Condition.bodySite",
         "binding": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+              "valueString": "BodySite"
+            }
+          ],
           "strength": "preferred",
-          "valueSet": "http://hl7.org/fhir/us/mcode/ValueSet/obf-datatype-BodyLocationVS"
+          "description": "Codes describing anatomical locations. May include laterality.",
+          "valueSet": "http://hl7.org/fhir/ValueSet/body-site"
         }
       },
       {
@@ -2062,6 +2177,24 @@
             "profile": [
               "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-datatype-Laterality-extension"
             ]
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          },
+          {
+            "key": "ext-1",
+            "severity": "error",
+            "human": "Must have either extensions or value[x], not both",
+            "expression": "extension.exists() != value.exists()",
+            "xpath": "exists(f:extension)!=exists(f:*[starts-with(local-name(.), \"value\")])",
+            "source": "http://hl7.org/fhir/StructureDefinition/Extension"
           }
         ],
         "isModifier": false,
@@ -2087,6 +2220,24 @@
             ]
           }
         ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          },
+          {
+            "key": "ext-1",
+            "severity": "error",
+            "human": "Must have either extensions or value[x], not both",
+            "expression": "extension.exists() != value.exists()",
+            "xpath": "exists(f:extension)!=exists(f:*[starts-with(local-name(.), \"value\")])",
+            "source": "http://hl7.org/fhir/StructureDefinition/Extension"
+          }
+        ],
         "isModifier": false,
         "isSummary": false,
         "sliceName": "anatomicalorientation"
@@ -2108,6 +2259,24 @@
             "profile": [
               "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-datatype-RelationToLandmark-extension"
             ]
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          },
+          {
+            "key": "ext-1",
+            "severity": "error",
+            "human": "Must have either extensions or value[x], not both",
+            "expression": "extension.exists() != value.exists()",
+            "xpath": "exists(f:extension)!=exists(f:*[starts-with(local-name(.), \"value\")])",
+            "source": "http://hl7.org/fhir/StructureDefinition/Extension"
           }
         ],
         "isModifier": false,
@@ -2146,7 +2315,7 @@
             "code": "Reference",
             "targetProfile": [
               "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner",
-              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole",
+              "http://hl7.org/fhir/StructureDefinition/PractitionerRole",
               "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-Patient",
               "http://hl7.org/fhir/StructureDefinition/RelatedPerson"
             ]
@@ -2197,6 +2366,18 @@
           "strength": "example",
           "valueSet": "http://hl7.org/fhir/ValueSet/clinical-findings"
         }
+      },
+      {
+        "id": "Condition.note",
+        "path": "Condition.note",
+        "type": [
+          {
+            "code": "Annotation",
+            "profile": [
+              "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-Annotation"
+            ]
+          }
+        ]
       }
     ]
   }

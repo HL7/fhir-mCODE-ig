@@ -7,9 +7,9 @@
   },
   "url": "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-Requester-extension",
   "name": "Requester",
-  "title": "obf-Requester",
+  "title": "Requester",
   "status": "draft",
-  "date": "2019-08-01",
+  "date": "2019-12-17",
   "publisher": "HL7 International Clinical Interoperability Council",
   "contact": [
     {
@@ -201,7 +201,8 @@
               "http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization",
               "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-Patient",
               "http://hl7.org/fhir/StructureDefinition/RelatedPerson",
-              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-device"
+              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-device",
+              "http://hl7.org/fhir/StructureDefinition/PractitionerRole"
             ]
           }
         ],
@@ -254,7 +255,8 @@
               "http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization",
               "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-Patient",
               "http://hl7.org/fhir/StructureDefinition/RelatedPerson",
-              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-device"
+              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-device",
+              "http://hl7.org/fhir/StructureDefinition/PractitionerRole"
             ]
           }
         ]

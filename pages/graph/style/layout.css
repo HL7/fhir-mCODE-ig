@@ -1,0 +1,42 @@
+.overlay {
+    position: absolute;
+    z-index: 3;
+}
+.key {
+    border-style: solid;
+    border-width: 1px;
+    border-color: gray;
+    margin-left: 10px;
+    margin-bottom: 5px;
+    width: 250px;
+}
+.select_button {
+    color: #567EBC;
+    font-size: 12px;
+    font-family: Verdana,Arial,Helvetica,sans-serif;
+    white-space: nowrap;
+}
+.select_button:hover {
+    text-decoration: underline;
+} 
+.zoom_button {
+    color: #567EBC;
+    font-size: 12px;
+    font-family: Verdana,Arial,Helvetica,sans-serif;
+    margin-left: 9px;
+    width: 120px;
+}
+.zoom_button:hover {
+    text-decoration: underline;
+}
+.text {
+    color: gray;
+    font-size: 16px;
+    font-family: Verdana,Arial,Helvetica,sans-serif;
+    white-space: nowrap;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

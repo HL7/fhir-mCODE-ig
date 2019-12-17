@@ -7,7 +7,7 @@
   },
   "url": "http://hl7.org/fhir/us/mcode/CodeSystem/obf-ResearchSubjectTerminationReasonCS",
   "name": "ResearchSubjectTerminationReasonCS",
-  "title": "ResearchSubjectTerminationReasonCS",
+  "title": "Research Subject Termination Reason CS",
   "status": "draft",
   "publisher": "HL7 International Clinical Interoperability Council",
   "contact": [
@@ -20,7 +20,7 @@
       ]
     }
   ],
-  "date": "2019-08-01",
+  "date": "2019-12-17",
   "description": "The reason for a research subject leaving a research study.",
   "caseSensitive": true,
   "content": "complete",
@@ -33,8 +33,8 @@
     },
     {
       "code": "died",
-      "definition": "Suject passed away",
-      "display": "Suject passed away"
+      "definition": "Subject passed away",
+      "display": "Subject passed away"
     },
     {
       "code": "ended",

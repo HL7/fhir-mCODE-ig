@@ -1,0 +1,51 @@
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://www.ncbi.nlm.nih.gov/clinvar",
+  "code" : "619728"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code system \"http://www.ncbi.nlm.nih.gov/clinvar\" is not known (encountered paired with code = \"619728\"); The code provided (http://www.ncbi.nlm.nih.gov/clinvar#619728) is not  valid in the value set All codes known to the system"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://www.ncbi.nlm.nih.gov/clinvar",
+  "code" : "619728",
+  "display" : "NC_000019.8:g.1171707G>A"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code system \"http://www.ncbi.nlm.nih.gov/clinvar\" is not known (encountered paired with code = \"619728\"); The code provided (http://www.ncbi.nlm.nih.gov/clinvar#619728) is not  valid in the value set All codes known to the system"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://www.ncbi.nlm.nih.gov/clinvar",
+  "code" : "619728"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://www.ncbi.nlm.nih.gov/clinvar"
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "Unknown code system http://www.ncbi.nlm.nih.gov/clinvar"
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://www.ncbi.nlm.nih.gov/clinvar"
+    }]
+  }
+}}####
+e: {
+  "error" : "Error from server: Unable to provide support for code system http://www.ncbi.nlm.nih.gov/clinvar"
+}
+-------------------------------------------------------------------------------------

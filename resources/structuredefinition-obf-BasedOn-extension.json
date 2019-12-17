@@ -7,9 +7,9 @@
   },
   "url": "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-BasedOn-extension",
   "name": "BasedOn",
-  "title": "obf-BasedOn",
+  "title": "Based On",
   "status": "draft",
-  "date": "2019-08-01",
+  "date": "2019-12-17",
   "publisher": "HL7 International Clinical Interoperability Council",
   "contact": [
     {
@@ -198,7 +198,9 @@
             "code": "Reference",
             "targetProfile": [
               "http://hl7.org/fhir/StructureDefinition/ServiceRequest",
-              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest"
+              "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-ProcedureRequest",
+              "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-MedicationRequest",
+              "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-CarePlan"
             ]
           }
         ],
@@ -248,7 +250,9 @@
             "code": "Reference",
             "targetProfile": [
               "http://hl7.org/fhir/StructureDefinition/ServiceRequest",
-              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest"
+              "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-ProcedureRequest",
+              "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-MedicationRequest",
+              "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-CarePlan"
             ]
           }
         ]

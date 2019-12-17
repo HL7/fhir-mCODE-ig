@@ -1,8 +1,8 @@
 <ImplementationGuide xmlns="http://hl7.org/fhir">
-    <id value="hl7.fhir.us.mcode-0.9.1" />
-    <url value="http://hl7.org/fhir/us/mcode/ImplementationGuide/hl7.fhir.us.mcode-0.9.1" />
-    <name value="HL7_FHIR_Implementation_Guide_minimal_Common_Oncology_Data_Elements_mCODE_Release_1_US_Realm_STU_Ballot_1" />
-    <title value="HL7 FHIR Implementation Guide: minimal Common Oncology Data Elements (mCODE) Release 1 - US Realm | STU Ballot 1" />
+    <id value="hl7.fhir.us.mcode-0.9.2" />
+    <url value="http://hl7.org/fhir/us/mcode/ImplementationGuide/hl7.fhir.us.mcode-0.9.2" />
+    <name value="HL7_FHIR_Implementation_Guide_minimal_Common_Oncology_Data_Elements_mCODE_Release_1_US_Realm_STU1_PreRel_1" />
+    <title value="HL7 FHIR Implementation Guide: minimal Common Oncology Data Elements (mCODE) Release 1 - US Realm | STU1 PreRel#1" />
     <status value="draft" />
     <publisher value="HL7 International Clinical Interoperability Council"/>
     <contact>
@@ -22,1843 +22,933 @@
         <resource>
           <exampleBoolean value="false" />
           <reference>
-            <reference value="StructureDefinition/obf-AbnormalBodyStructure" />
+            <reference value="StructureDefinition/obf-AccessionIdentifier" />
           </reference>
-          <name value="obf-AbnormalBodyStructure" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
-            <reference value="StructureDefinition/obf-ActionPerformed" />
-          </reference>
-          <name value="obf-ActionPerformed" />
+          <name value="Accession Identifier" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
           <reference>
             <reference value="StructureDefinition/obf-ActionRequest" />
           </reference>
-          <name value="obf-ActionRequest" />
+          <name value="Action Request" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
           <reference>
             <reference value="StructureDefinition/obf-ActionStatement" />
           </reference>
-          <name value="obf-ActionStatement" />
+          <name value="Action Statement" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
           <reference>
-            <reference value="StructureDefinition/obf-lab-AlanineAminotransferaseCCncPtSerPlasQnLabObs" />
+            <reference value="StructureDefinition/obf-Annotation" />
           </reference>
-          <name value="obf-lab-AlanineAminotransferaseCCncPtSerPlasQnLabObs" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
-            <reference value="StructureDefinition/obf-lab-AlbuminGlobulinMRtoPtSerPlasQnLabObs" />
-          </reference>
-          <name value="obf-lab-AlbuminGlobulinMRtoPtSerPlasQnLabObs" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
-            <reference value="StructureDefinition/obf-lab-AlbuminMCncPtSerPlasQnLabObs" />
-          </reference>
-          <name value="obf-lab-AlbuminMCncPtSerPlasQnLabObs" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
-            <reference value="StructureDefinition/obf-lab-AlkalinePhosphataseCCncPtSerPlasQnLabObs" />
-          </reference>
-          <name value="obf-lab-AlkalinePhosphataseCCncPtSerPlasQnLabObs" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
-            <reference value="StructureDefinition/obf-lab-AniongapSCncPtSerPlasQnLabObs" />
-          </reference>
-          <name value="obf-lab-AniongapSCncPtSerPlasQnLabObs" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
-            <reference value="StructureDefinition/obf-lab-AspartateAminotransferaseCCncPtSerPlasQnLabObs" />
-          </reference>
-          <name value="obf-lab-AspartateAminotransferaseCCncPtSerPlasQnLabObs" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
-            <reference value="StructureDefinition/obf-lab-Basophils100WBCNFrPtBldQnAutoCntLabObs" />
-          </reference>
-          <name value="obf-lab-Basophils100WBCNFrPtBldQnAutoCntLabObs" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
-            <reference value="StructureDefinition/obf-lab-BasophilsNCncPtBldQnAutoCntLabObs" />
-          </reference>
-          <name value="obf-lab-BasophilsNCncPtBldQnAutoCntLabObs" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
-            <reference value="StructureDefinition/obf-lab-BicarbonateSCncPtSerPlasQnLabObs" />
-          </reference>
-          <name value="obf-lab-BicarbonateSCncPtSerPlasQnLabObs" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
-            <reference value="StructureDefinition/obf-lab-BilirubinDirectMCncPtSerPlasQnLabObs" />
-          </reference>
-          <name value="obf-lab-BilirubinDirectMCncPtSerPlasQnLabObs" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
-            <reference value="StructureDefinition/obf-lab-BilirubinMCncPtSerPlasQnLabObs" />
-          </reference>
-          <name value="obf-lab-BilirubinMCncPtSerPlasQnLabObs" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
-            <reference value="StructureDefinition/obf-lab-Blasts100WBCNFrPtBldQnManCntLabObs" />
-          </reference>
-          <name value="obf-lab-Blasts100WBCNFrPtBldQnManCntLabObs" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
-            <reference value="StructureDefinition/obf-lab-BlastsNCncPtBldQnLabObs" />
-          </reference>
-          <name value="obf-lab-BlastsNCncPtBldQnLabObs" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
-            <reference value="StructureDefinition/vital-BloodPressure" />
-          </reference>
-          <name value="vital-BloodPressure" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
-            <reference value="StructureDefinition/vital-BodyHeight" />
-          </reference>
-          <name value="vital-BodyHeight" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
-            <reference value="StructureDefinition/vital-BodyWeight" />
-          </reference>
-          <name value="vital-BodyWeight" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
-            <reference value="StructureDefinition/obf-lab-CBCWAutoDifferentialPanel" />
-          </reference>
-          <name value="obf-lab-CBCWAutoDifferentialPanel" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
-            <reference value="StructureDefinition/obf-lab-CalciumMCncPtSerPlasQnLabObs" />
-          </reference>
-          <name value="obf-lab-CalciumMCncPtSerPlasQnLabObs" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
-            <reference value="StructureDefinition/onco-core-CancerCondition" />
-          </reference>
-          <name value="onco-core-CancerCondition" />
+          <name value="Annotation" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
           <reference>
             <reference value="StructureDefinition/onco-core-CancerDiseaseStatus" />
           </reference>
-          <name value="onco-core-CancerDiseaseStatus" />
+          <name value="Cancer Disease Status" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/onco-core-CancerRelatedMedicationStatement" />
+          </reference>
+          <name value="Cancer Related Medication Statement" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
           <reference>
             <reference value="StructureDefinition/onco-core-CancerRelatedRadiationProcedure" />
           </reference>
-          <name value="onco-core-CancerRelatedRadiationProcedure" />
+          <name value="Cancer Related Radiation Procedure" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
           <reference>
             <reference value="StructureDefinition/onco-core-CancerRelatedSurgicalProcedure" />
           </reference>
-          <name value="onco-core-CancerRelatedSurgicalProcedure" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
-            <reference value="StructureDefinition/onco-core-CancerStageCategory" />
-          </reference>
-          <name value="onco-core-CancerStageCategory" />
+          <name value="Cancer Related Surgical Procedure" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
           <reference>
             <reference value="StructureDefinition/onco-core-CancerStageGroup" />
           </reference>
-          <name value="onco-core-CancerStageGroup" />
+          <name value="Cancer Stage Group" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
           <reference>
-            <reference value="StructureDefinition/obf-lab-CarbonDioxideSCncPtSerPlasQnLabObs" />
+            <reference value="StructureDefinition/obf-CarePlan" />
           </reference>
-          <name value="obf-lab-CarbonDioxideSCncPtSerPlasQnLabObs" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
-            <reference value="StructureDefinition/obf-lab-ChlorideSCncPtSerPlasQnLabObs" />
-          </reference>
-          <name value="obf-lab-ChlorideSCncPtSerPlasQnLabObs" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
-            <reference value="StructureDefinition/obf-ClinicalStatement" />
-          </reference>
-          <name value="obf-ClinicalStatement" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
-            <reference value="StructureDefinition/obf-CodedNonLaboratoryObservation" />
-          </reference>
-          <name value="obf-CodedNonLaboratoryObservation" />
+          <name value="Care Plan" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
           <reference>
             <reference value="StructureDefinition/obf-ComorbidCondition" />
           </reference>
-          <name value="obf-ComorbidCondition" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
-            <reference value="StructureDefinition/obf-lab-ComprehensiveMetabolic2000SerumOrPlasmaPanel" />
-          </reference>
-          <name value="obf-lab-ComprehensiveMetabolic2000SerumOrPlasmaPanel" />
+          <name value="Comorbid Condition" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
           <reference>
             <reference value="StructureDefinition/obf-Condition" />
           </reference>
-          <name value="obf-Condition" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
-            <reference value="StructureDefinition/obf-lab-CreatinineMCncPtSerPlasQnLabObs" />
-          </reference>
-          <name value="obf-lab-CreatinineMCncPtSerPlasQnLabObs" />
+          <name value="Condition" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
           <reference>
             <reference value="StructureDefinition/obf-DiagnosticReport" />
           </reference>
-          <name value="obf-DiagnosticReport" />
+          <name value="Diagnostic Report" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
           <reference>
-            <reference value="StructureDefinition/obf-DomainResource" />
+            <reference value="StructureDefinition/obf-Dosage" />
           </reference>
-          <name value="obf-DomainResource" />
+          <name value="Dosage" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/obf-datatype-Duration" />
+          </reference>
+          <name value="Duration" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
           <reference>
             <reference value="StructureDefinition/obf-ECOGPerformanceStatus" />
           </reference>
-          <name value="obf-ECOGPerformanceStatus" />
+          <name value="ECOG Performance Status" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
           <reference>
-            <reference value="StructureDefinition/obf-EncounterOrEpisode" />
+            <reference value="StructureDefinition/obf-FillerOrderNumber" />
           </reference>
-          <name value="obf-EncounterOrEpisode" />
+          <name value="Filler Order Number" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
           <reference>
-            <reference value="StructureDefinition/obf-Entity" />
+            <reference value="StructureDefinition/onco-core-GeneticSpecimen" />
           </reference>
-          <name value="obf-Entity" />
+          <name value="Genetic Specimen" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
           <reference>
-            <reference value="StructureDefinition/obf-EntityOrRole" />
+            <reference value="StructureDefinition/onco-core-GeneticVariant" />
           </reference>
-          <name value="obf-EntityOrRole" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
-            <reference value="StructureDefinition/obf-lab-Eosinophils100WBCNFrPtBldQnAutoCntLabObs" />
-          </reference>
-          <name value="obf-lab-Eosinophils100WBCNFrPtBldQnAutoCntLabObs" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
-            <reference value="StructureDefinition/obf-lab-EosinophilsNCncPtBldQnAutoCntLabObs" />
-          </reference>
-          <name value="obf-lab-EosinophilsNCncPtBldQnAutoCntLabObs" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
-            <reference value="StructureDefinition/obf-lab-ErythrocyteDistributionWidthEntVolPtRBCQnLabObs" />
-          </reference>
-          <name value="obf-lab-ErythrocyteDistributionWidthEntVolPtRBCQnLabObs" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
-            <reference value="StructureDefinition/obf-lab-ErythrocyteDistributionWidthRatioPtRBCQnAutoCntLabObs" />
-          </reference>
-          <name value="obf-lab-ErythrocyteDistributionWidthRatioPtRBCQnAutoCntLabObs" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
-            <reference value="StructureDefinition/obf-lab-ErythrocyteMCHCMCncPtRBCQnAutoCntLabObs" />
-          </reference>
-          <name value="obf-lab-ErythrocyteMCHCMCncPtRBCQnAutoCntLabObs" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
-            <reference value="StructureDefinition/obf-lab-ErythrocyteMCHEntMassPtRBCQnAutoCntLabObs" />
-          </reference>
-          <name value="obf-lab-ErythrocyteMCHEntMassPtRBCQnAutoCntLabObs" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
-            <reference value="StructureDefinition/obf-lab-ErythrocytesNCncPtBldQnAutoCntLabObs" />
-          </reference>
-          <name value="obf-lab-ErythrocytesNCncPtBldQnAutoCntLabObs" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
-            <reference value="StructureDefinition/obf-lab-ErythrocytesNucleated100WBCRatioPtBldQnAutoCntLabObs" />
-          </reference>
-          <name value="obf-lab-ErythrocytesNucleated100WBCRatioPtBldQnAutoCntLabObs" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
-            <reference value="StructureDefinition/obf-lab-ErythrocytesNucleated100WBCRatioPtBldQnLabObs" />
-          </reference>
-          <name value="obf-lab-ErythrocytesNucleated100WBCRatioPtBldQnLabObs" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
-            <reference value="StructureDefinition/obf-lab-ErythrocytesNucleatedNCncPtBldQnLabObs" />
-          </reference>
-          <name value="obf-lab-ErythrocytesNucleatedNCncPtBldQnLabObs" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
-            <reference value="StructureDefinition/obf-lab-GFR173sqMPredArVRatPtSerPlasQnMDRDLabObs" />
-          </reference>
-          <name value="obf-lab-GFR173sqMPredArVRatPtSerPlasQnMDRDLabObs" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
-            <reference value="StructureDefinition/obf-lab-GFR173sqMPredBlackArVRatPtSerPlasBldQnMDRDLabObs" />
-          </reference>
-          <name value="obf-lab-GFR173sqMPredBlackArVRatPtSerPlasBldQnMDRDLabObs" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
-            <reference value="StructureDefinition/obf-lab-GFR173sqMPredFemaleArVRatPtSerPlasBldQnMDRDLabObs" />
-          </reference>
-          <name value="obf-lab-GFR173sqMPredFemaleArVRatPtSerPlasBldQnMDRDLabObs" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
-            <reference value="StructureDefinition/obf-lab-GFR173sqMPredNonBlackArVRatPtSerPlasBldQnMDRDLabObs" />
-          </reference>
-          <name value="obf-lab-GFR173sqMPredNonBlackArVRatPtSerPlasBldQnMDRDLabObs" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
-            <reference value="StructureDefinition/onco-core-GeneticVariantFound" />
-          </reference>
-          <name value="onco-core-GeneticVariantFound" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
-            <reference value="StructureDefinition/onco-core-GeneticVariantTested" />
-          </reference>
-          <name value="onco-core-GeneticVariantTested" />
+          <name value="Genetic Variant" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
           <reference>
             <reference value="StructureDefinition/onco-core-GenomicsReport" />
           </reference>
-          <name value="onco-core-GenomicsReport" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
-            <reference value="StructureDefinition/obf-lab-GlobulinMCncPtSerQnCalculatedLabObs" />
-          </reference>
-          <name value="obf-lab-GlobulinMCncPtSerQnCalculatedLabObs" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
-            <reference value="StructureDefinition/obf-lab-GlucoseMCncPtSerPlasQnLabObs" />
-          </reference>
-          <name value="obf-lab-GlucoseMCncPtSerPlasQnLabObs" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
-            <reference value="StructureDefinition/obf-lab-Granulocytes100WBCNFrPtBldQnAutoCntLabObs" />
-          </reference>
-          <name value="obf-lab-Granulocytes100WBCNFrPtBldQnAutoCntLabObs" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
-            <reference value="StructureDefinition/obf-lab-GranulocytesImmature100WBCNFrPtBldQnAutoCntLabObs" />
-          </reference>
-          <name value="obf-lab-GranulocytesImmature100WBCNFrPtBldQnAutoCntLabObs" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
-            <reference value="StructureDefinition/obf-lab-GranulocytesImmatureNCncPtBldQnAutoCntLabObs" />
-          </reference>
-          <name value="obf-lab-GranulocytesImmatureNCncPtBldQnAutoCntLabObs" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
-            <reference value="StructureDefinition/obf-lab-HematocritVFrPtBldQnAutoCntLabObs" />
-          </reference>
-          <name value="obf-lab-HematocritVFrPtBldQnAutoCntLabObs" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
-            <reference value="StructureDefinition/obf-lab-HemoglobinMCncPtBldQnLabObs" />
-          </reference>
-          <name value="obf-lab-HemoglobinMCncPtBldQnLabObs" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
-            <reference value="StructureDefinition/obf-InformationItem" />
-          </reference>
-          <name value="obf-InformationItem" />
+          <name value="Genomics Report" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
           <reference>
             <reference value="StructureDefinition/obf-KarnofskyPerformanceStatus" />
           </reference>
-          <name value="obf-KarnofskyPerformanceStatus" />
+          <name value="Karnofsky Performance Status" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
           <reference>
-            <reference value="StructureDefinition/obf-LaboratoryObservation" />
+            <reference value="StructureDefinition/obf-MedicationAdministration" />
           </reference>
-          <name value="obf-LaboratoryObservation" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
-            <reference value="StructureDefinition/obf-LaboratoryReport" />
-          </reference>
-          <name value="obf-LaboratoryReport" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
-            <reference value="StructureDefinition/obf-lab-LeukocytesNCncPtBldQnAutoCntLabObs" />
-          </reference>
-          <name value="obf-lab-LeukocytesNCncPtBldQnAutoCntLabObs" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
-            <reference value="StructureDefinition/obf-lab-LeukocytesOtherNCncPtBldQnAutoCntLabObs" />
-          </reference>
-          <name value="obf-lab-LeukocytesOtherNCncPtBldQnAutoCntLabObs" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
-            <reference value="StructureDefinition/obf-lab-Lymphocytes100WBCNFrPtBldQnAutoCntLabObs" />
-          </reference>
-          <name value="obf-lab-Lymphocytes100WBCNFrPtBldQnAutoCntLabObs" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
-            <reference value="StructureDefinition/obf-lab-LymphocytesNCncPtBldQnAutoCntLabObs" />
-          </reference>
-          <name value="obf-lab-LymphocytesNCncPtBldQnAutoCntLabObs" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
-            <reference value="StructureDefinition/obf-lab-LymphocytesVariant100WBCNFrPtBldQnAutoCntLabObs" />
-          </reference>
-          <name value="obf-lab-LymphocytesVariant100WBCNFrPtBldQnAutoCntLabObs" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
-            <reference value="StructureDefinition/obf-lab-LymphocytesVariant100WBCNFrPtBldQnLabObs" />
-          </reference>
-          <name value="obf-lab-LymphocytesVariant100WBCNFrPtBldQnLabObs" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
-            <reference value="StructureDefinition/obf-lab-LymphocytesVariantNCncPtBldQnAutoCntLabObs" />
-          </reference>
-          <name value="obf-lab-LymphocytesVariantNCncPtBldQnAutoCntLabObs" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
-            <reference value="StructureDefinition/obf-lab-MeanCorpuscularVolumeEntVolPtRBCQnAutoCntLabObs" />
-          </reference>
-          <name value="obf-lab-MeanCorpuscularVolumeEntVolPtRBCQnAutoCntLabObs" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
-            <reference value="StructureDefinition/obf-MedicationAction" />
-          </reference>
-          <name value="obf-MedicationAction" />
+          <name value="Medication Administration" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
           <reference>
             <reference value="StructureDefinition/obf-MedicationDispense" />
           </reference>
-          <name value="obf-MedicationDispense" />
+          <name value="Medication Dispense" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/obf-MedicationRequest" />
+          </reference>
+          <name value="Medication Request" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
           <reference>
             <reference value="StructureDefinition/obf-MedicationStatement" />
           </reference>
-          <name value="obf-MedicationStatement" />
+          <name value="Medication Statement" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
           <reference>
-            <reference value="StructureDefinition/obf-lab-Metamyelocytes100WBCNFrPtBldQnManCntLabObs" />
+            <reference value="StructureDefinition/obf-datatype-Money" />
           </reference>
-          <name value="obf-lab-Metamyelocytes100WBCNFrPtBldQnManCntLabObs" />
+          <name value="Money" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
           <reference>
-            <reference value="StructureDefinition/obf-lab-MetamyelocytesNCncPtBldQnLabObs" />
+            <reference value="StructureDefinition/obf-NationalProviderIdentifier" />
           </reference>
-          <name value="obf-lab-MetamyelocytesNCncPtBldQnLabObs" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
-            <reference value="StructureDefinition/obf-lab-Monocytes100WBCNFrPtBldQnAutoCntLabObs" />
-          </reference>
-          <name value="obf-lab-Monocytes100WBCNFrPtBldQnAutoCntLabObs" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
-            <reference value="StructureDefinition/obf-lab-MonocytesNCncPtBldQnAutoCntLabObs" />
-          </reference>
-          <name value="obf-lab-MonocytesNCncPtBldQnAutoCntLabObs" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
-            <reference value="StructureDefinition/obf-lab-MorphologyImpPtBldNarLabObs" />
-          </reference>
-          <name value="obf-lab-MorphologyImpPtBldNarLabObs" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
-            <reference value="StructureDefinition/obf-lab-Myelocytes100WBCNFrPtBldQnManCntLabObs" />
-          </reference>
-          <name value="obf-lab-Myelocytes100WBCNFrPtBldQnManCntLabObs" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
-            <reference value="StructureDefinition/obf-lab-MyelocytesNCncPtBldQnLabObs" />
-          </reference>
-          <name value="obf-lab-MyelocytesNCncPtBldQnLabObs" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
-            <reference value="StructureDefinition/obf-lab-Neutrophils100WBCNFrPtBldQnAutoCntLabObs" />
-          </reference>
-          <name value="obf-lab-Neutrophils100WBCNFrPtBldQnAutoCntLabObs" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
-            <reference value="StructureDefinition/obf-lab-NeutrophilsBandForm100WBCNFrPtBldQnAutoCntLabObs" />
-          </reference>
-          <name value="obf-lab-NeutrophilsBandForm100WBCNFrPtBldQnAutoCntLabObs" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
-            <reference value="StructureDefinition/obf-lab-NeutrophilsBandForm100WBCNFrPtBldQnManCntLabObs" />
-          </reference>
-          <name value="obf-lab-NeutrophilsBandForm100WBCNFrPtBldQnManCntLabObs" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
-            <reference value="StructureDefinition/obf-lab-NeutrophilsBandFormNCncPtBldQnAutoCntLabObs" />
-          </reference>
-          <name value="obf-lab-NeutrophilsBandFormNCncPtBldQnAutoCntLabObs" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
-            <reference value="StructureDefinition/obf-lab-NeutrophilsBandFormNCncPtBldQnLabObs" />
-          </reference>
-          <name value="obf-lab-NeutrophilsBandFormNCncPtBldQnLabObs" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
-            <reference value="StructureDefinition/obf-lab-NeutrophilsNCncPtBldQnAutoCntLabObs" />
-          </reference>
-          <name value="obf-lab-NeutrophilsNCncPtBldQnAutoCntLabObs" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
-            <reference value="StructureDefinition/obf-NonLaboratoryObservation" />
-          </reference>
-          <name value="obf-NonLaboratoryObservation" />
+          <name value="National Provider Identifier" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
           <reference>
             <reference value="StructureDefinition/obf-Observation" />
           </reference>
-          <name value="obf-Observation" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
-            <reference value="StructureDefinition/obf-lab-OtherCells100WBCNFrPtBldQnAutoCntLabObs" />
-          </reference>
-          <name value="obf-lab-OtherCells100WBCNFrPtBldQnAutoCntLabObs" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
-            <reference value="StructureDefinition/obf-lab-OtherCellsNCncPtBldQnAutoCntLabObs" />
-          </reference>
-          <name value="obf-lab-OtherCellsNCncPtBldQnAutoCntLabObs" />
+          <name value="Observation" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
           <reference>
             <reference value="StructureDefinition/obf-Patient" />
           </reference>
-          <name value="obf-Patient" />
+          <name value="Patient" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
           <reference>
-            <reference value="StructureDefinition/obf-lab-PlateletDistributionWidthEntVolPtBldQnAutoCntLabObs" />
+            <reference value="StructureDefinition/obf-PlacerOrderNumber" />
           </reference>
-          <name value="obf-lab-PlateletDistributionWidthEntVolPtBldQnAutoCntLabObs" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
-            <reference value="StructureDefinition/obf-lab-PlateletMeanVolumeEntVolPtBldQnAutoCntLabObs" />
-          </reference>
-          <name value="obf-lab-PlateletMeanVolumeEntVolPtBldQnAutoCntLabObs" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
-            <reference value="StructureDefinition/obf-lab-PlateletMeanVolumeEntVolPtBldQnReesEckerLabObs" />
-          </reference>
-          <name value="obf-lab-PlateletMeanVolumeEntVolPtBldQnReesEckerLabObs" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
-            <reference value="StructureDefinition/obf-lab-PlateletsNCncPtBldQnAutoCntLabObs" />
-          </reference>
-          <name value="obf-lab-PlateletsNCncPtBldQnAutoCntLabObs" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
-            <reference value="StructureDefinition/obf-lab-PotassiumSCncPtSerPlasQnLabObs" />
-          </reference>
-          <name value="obf-lab-PotassiumSCncPtSerPlasQnLabObs" />
+          <name value="Placer Order Number" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
           <reference>
             <reference value="StructureDefinition/onco-core-PrimaryCancerCondition" />
           </reference>
-          <name value="onco-core-PrimaryCancerCondition" />
+          <name value="Primary Cancer Condition" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
           <reference>
             <reference value="StructureDefinition/obf-Procedure" />
           </reference>
-          <name value="obf-Procedure" />
+          <name value="Procedure" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
           <reference>
-            <reference value="StructureDefinition/obf-lab-Promyelocytes100WBCNFrPtBldQnManCntLabObs" />
+            <reference value="StructureDefinition/obf-ProcedureRequest" />
           </reference>
-          <name value="obf-lab-Promyelocytes100WBCNFrPtBldQnManCntLabObs" />
+          <name value="Procedure Request" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
           <reference>
-            <reference value="StructureDefinition/obf-lab-PromyelocytesNCncPtBldQnLabObs" />
+            <reference value="StructureDefinition/obf-QuestionnaireResponse" />
           </reference>
-          <name value="obf-lab-PromyelocytesNCncPtBldQnLabObs" />
+          <name value="Questionnaire Response" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
           <reference>
-            <reference value="StructureDefinition/obf-lab-ProteinMCncPtSerPlasQnLabObs" />
+            <reference value="StructureDefinition/onco-core-RegionStudied" />
           </reference>
-          <name value="obf-lab-ProteinMCncPtSerPlasQnLabObs" />
+          <name value="Region Studied" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
           <reference>
-            <reference value="StructureDefinition/obf-QuantitativeLaboratoryObservation" />
+            <reference value="StructureDefinition/obf-ResearchStudy" />
           </reference>
-          <name value="obf-QuantitativeLaboratoryObservation" />
+          <name value="Research Study" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
           <reference>
-            <reference value="StructureDefinition/obf-QuantitativeNonLaboratoryObservation" />
+            <reference value="StructureDefinition/obf-ResearchSubject" />
           </reference>
-          <name value="obf-QuantitativeNonLaboratoryObservation" />
+          <name value="Research Subject" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
           <reference>
-            <reference value="StructureDefinition/obf-RadiationProcedure" />
+            <reference value="StructureDefinition/obf-datatype-SampledData" />
           </reference>
-          <name value="obf-RadiationProcedure" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
-            <reference value="StructureDefinition/obf-Role" />
-          </reference>
-          <name value="obf-Role" />
+          <name value="Sampled Data" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
           <reference>
             <reference value="StructureDefinition/onco-core-SecondaryCancerCondition" />
           </reference>
-          <name value="onco-core-SecondaryCancerCondition" />
+          <name value="Secondary Cancer Condition" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
           <reference>
-            <reference value="StructureDefinition/obf-SimpleCodedNonLaboratoryObservation" />
+            <reference value="StructureDefinition/obf-Specimen" />
           </reference>
-          <name value="obf-SimpleCodedNonLaboratoryObservation" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
-            <reference value="StructureDefinition/obf-SimpleLaboratoryObservation" />
-          </reference>
-          <name value="obf-SimpleLaboratoryObservation" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
-            <reference value="StructureDefinition/obf-lab-SimpleQuantLabWithRequiredUnits" />
-          </reference>
-          <name value="obf-lab-SimpleQuantLabWithRequiredUnits" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
-            <reference value="StructureDefinition/obf-SimpleQuantitativeLaboratoryObservation" />
-          </reference>
-          <name value="obf-SimpleQuantitativeLaboratoryObservation" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
-            <reference value="StructureDefinition/obf-SituationStatement" />
-          </reference>
-          <name value="obf-SituationStatement" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
-            <reference value="StructureDefinition/obf-lab-SodiumSCncPtSerPlasQnLabObs" />
-          </reference>
-          <name value="obf-lab-SodiumSCncPtSerPlasQnLabObs" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
-            <reference value="StructureDefinition/obf-SurgicalProcedure" />
-          </reference>
-          <name value="obf-SurgicalProcedure" />
+          <name value="Specimen" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
           <reference>
             <reference value="StructureDefinition/onco-core-TNMClinicalDistantMetastasesCategory" />
           </reference>
-          <name value="onco-core-TNMClinicalDistantMetastasesCategory" />
+          <name value="TNM Clinical Distant Metastases Category" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
           <reference>
             <reference value="StructureDefinition/onco-core-TNMClinicalPrimaryTumorCategory" />
           </reference>
-          <name value="onco-core-TNMClinicalPrimaryTumorCategory" />
+          <name value="TNM Clinical Primary Tumor Category" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
           <reference>
             <reference value="StructureDefinition/onco-core-TNMClinicalRegionalNodesCategory" />
           </reference>
-          <name value="onco-core-TNMClinicalRegionalNodesCategory" />
+          <name value="TNM Clinical Regional Nodes Category" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
           <reference>
             <reference value="StructureDefinition/onco-core-TNMClinicalStageGroup" />
           </reference>
-          <name value="onco-core-TNMClinicalStageGroup" />
+          <name value="TNM Clinical Stage Group" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
           <reference>
             <reference value="StructureDefinition/onco-core-TNMPathologicDistantMetastasesCategory" />
           </reference>
-          <name value="onco-core-TNMPathologicDistantMetastasesCategory" />
+          <name value="TNM Pathologic Distant Metastases Category" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
           <reference>
             <reference value="StructureDefinition/onco-core-TNMPathologicPrimaryTumorCategory" />
           </reference>
-          <name value="onco-core-TNMPathologicPrimaryTumorCategory" />
+          <name value="TNM Pathologic Primary Tumor Category" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
           <reference>
             <reference value="StructureDefinition/onco-core-TNMPathologicRegionalNodesCategory" />
           </reference>
-          <name value="onco-core-TNMPathologicRegionalNodesCategory" />
+          <name value="TNM Pathologic Regional Nodes Category" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
           <reference>
             <reference value="StructureDefinition/onco-core-TNMPathologicStageGroup" />
           </reference>
-          <name value="onco-core-TNMPathologicStageGroup" />
+          <name value="TNM Pathologic Stage Group" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/obf-TaxIdentificationNumber" />
+          </reference>
+          <name value="Tax Identification Number" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/obf-datatype-Timing" />
+          </reference>
+          <name value="Timing" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
           <reference>
             <reference value="StructureDefinition/onco-core-Tumor" />
           </reference>
-          <name value="onco-core-Tumor" />
+          <name value="Tumor" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
           <reference>
             <reference value="StructureDefinition/onco-core-TumorMarkerTest" />
           </reference>
-          <name value="onco-core-TumorMarkerTest" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
-            <reference value="StructureDefinition/obf-lab-UreaNitrogenCreatinineMRtoPtSerPlasQnLabObs" />
-          </reference>
-          <name value="obf-lab-UreaNitrogenCreatinineMRtoPtSerPlasQnLabObs" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
-            <reference value="StructureDefinition/obf-lab-UreaNitrogenMCncPtSerPlasQnLabObs" />
-          </reference>
-          <name value="obf-lab-UreaNitrogenMCncPtSerPlasQnLabObs" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
-            <reference value="StructureDefinition/vital-VitalSign" />
-          </reference>
-          <name value="vital-VitalSign" />
+          <name value="Tumor Marker Test" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
           <reference>
             <reference value="StructureDefinition/obf-datatype-AnatomicalOrientation-extension" />
           </reference>
-          <name value="obf-datatype-AnatomicalOrientation" />
+          <name value="Anatomical Orientation" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
           <reference>
             <reference value="StructureDefinition/obf-Annotation-extension" />
           </reference>
-          <name value="obf-Annotation" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
-            <reference value="StructureDefinition/obf-ApplicableAgeRange-extension" />
-          </reference>
-          <name value="obf-ApplicableAgeRange" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
-            <reference value="StructureDefinition/obf-ApplicableSubpopulation-extension" />
-          </reference>
-          <name value="obf-ApplicableSubpopulation" />
+          <name value="Annotation" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
           <reference>
             <reference value="StructureDefinition/obf-BasedOn-extension" />
           </reference>
-          <name value="obf-BasedOn" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
-            <reference value="StructureDefinition/vital-BloodPressureCuffSize-extension" />
-          </reference>
-          <name value="vital-BloodPressureCuffSize" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
-            <reference value="StructureDefinition/vital-BodyPosition-extension" />
-          </reference>
-          <name value="vital-BodyPosition" />
+          <name value="Based On" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
           <reference>
             <reference value="StructureDefinition/obf-CareContext-extension" />
           </reference>
-          <name value="obf-CareContext" />
+          <name value="Care Context" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
           <reference>
             <reference value="StructureDefinition/obf-datatype-Category-extension" />
           </reference>
-          <name value="obf-datatype-Category" />
+          <name value="Category" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
           <reference>
             <reference value="StructureDefinition/obf-datatype-Code-extension" />
           </reference>
-          <name value="obf-datatype-Code" />
+          <name value="Code" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
           <reference>
-            <reference value="StructureDefinition/obf-Condition-extension" />
+            <reference value="StructureDefinition/obf-datatype-Comparator-extension" />
           </reference>
-          <name value="obf-Condition" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
-            <reference value="StructureDefinition/obf-DiagnosisCode-extension" />
-          </reference>
-          <name value="obf-DiagnosisCode" />
+          <name value="Comparator" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
           <reference>
             <reference value="StructureDefinition/obf-Dosage-extension" />
           </reference>
-          <name value="obf-Dosage" />
+          <name value="Dosage" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
           <reference>
-            <reference value="StructureDefinition/obf-EncounterDiagnosis-extension" />
+            <reference value="StructureDefinition/obf-DoseSequenceNumber-extension" />
           </reference>
-          <name value="obf-EncounterDiagnosis" />
+          <name value="Dose Sequence Number" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
           <reference>
             <reference value="StructureDefinition/onco-core-EvidenceType-extension" />
           </reference>
-          <name value="onco-core-EvidenceType" />
+          <name value="Evidence Type" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
           <reference>
             <reference value="StructureDefinition/obf-ExpectedPerformanceTime-extension" />
           </reference>
-          <name value="obf-ExpectedPerformanceTime" />
+          <name value="Expected Performance Time" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
           <reference>
             <reference value="StructureDefinition/obf-ExpectedPerformer-extension" />
           </reference>
-          <name value="obf-ExpectedPerformer" />
+          <name value="Expected Performer" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
           <reference>
             <reference value="StructureDefinition/obf-ExpectedPerformerType-extension" />
           </reference>
-          <name value="obf-ExpectedPerformerType" />
+          <name value="Expected Performer Type" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/obf-HandlingRisk-extension" />
+          </reference>
+          <name value="Handling Risk" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
           <reference>
             <reference value="StructureDefinition/onco-core-HistologyMorphologyBehavior-extension" />
           </reference>
-          <name value="onco-core-HistologyMorphologyBehavior" />
+          <name value="Histology Morphology Behavior" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
           <reference>
             <reference value="StructureDefinition/obf-datatype-Identifier-extension" />
           </reference>
-          <name value="obf-datatype-Identifier" />
+          <name value="Identifier" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
           <reference>
             <reference value="StructureDefinition/onco-core-IsPrimaryTumor-extension" />
           </reference>
-          <name value="onco-core-IsPrimaryTumor" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
-            <reference value="StructureDefinition/obf-datatype-LandmarkLocation-extension" />
-          </reference>
-          <name value="obf-datatype-LandmarkLocation" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
-            <reference value="StructureDefinition/obf-datatype-LandmarkToBodyLocationDirection-extension" />
-          </reference>
-          <name value="obf-datatype-LandmarkToBodyLocationDirection" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
-            <reference value="StructureDefinition/obf-datatype-LandmarkToBodyLocationDistance-extension" />
-          </reference>
-          <name value="obf-datatype-LandmarkToBodyLocationDistance" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
-            <reference value="StructureDefinition/obf-datatype-LandmarkType-extension" />
-          </reference>
-          <name value="obf-datatype-LandmarkType" />
+          <name value="Is Primary Tumor" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
           <reference>
             <reference value="StructureDefinition/obf-datatype-Laterality-extension" />
           </reference>
-          <name value="obf-datatype-Laterality" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
-            <reference value="StructureDefinition/obf-datatype-LowerBound-extension" />
-          </reference>
-          <name value="obf-datatype-LowerBound" />
+          <name value="Laterality" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
           <reference>
             <reference value="StructureDefinition/obf-MedicationCodeOrReference-extension" />
           </reference>
-          <name value="obf-MedicationCodeOrReference" />
+          <name value="Medication Code Or Reference" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
           <reference>
             <reference value="StructureDefinition/obf-Method-extension" />
           </reference>
-          <name value="obf-Method" />
+          <name value="Method" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/obf-datatype-Number-extension" />
+          </reference>
+          <name value="Number" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
           <reference>
             <reference value="StructureDefinition/obf-datatype-OccurrenceTimeOrPeriod-extension" />
           </reference>
-          <name value="obf-datatype-OccurrenceTimeOrPeriod" />
+          <name value="Occurrence Time Or Period" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
           <reference>
             <reference value="StructureDefinition/obf-OnBehalfOf-extension" />
           </reference>
-          <name value="obf-OnBehalfOf" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
-            <reference value="StructureDefinition/obf-Organization-extension" />
-          </reference>
-          <name value="obf-Organization" />
+          <name value="On Behalf Of" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
           <reference>
             <reference value="StructureDefinition/obf-PartOf-extension" />
           </reference>
-          <name value="obf-PartOf" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
-            <reference value="StructureDefinition/obf-Participant-extension" />
-          </reference>
-          <name value="obf-Participant" />
+          <name value="Part Of" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
           <reference>
             <reference value="StructureDefinition/obf-Participation-extension" />
           </reference>
-          <name value="obf-Participation" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
-            <reference value="StructureDefinition/obf-ParticipationPeriod-extension" />
-          </reference>
-          <name value="obf-ParticipationPeriod" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
-            <reference value="StructureDefinition/obf-ParticipationType-extension" />
-          </reference>
-          <name value="obf-ParticipationType" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
-            <reference value="StructureDefinition/vital-PreconditionCode-extension" />
-          </reference>
-          <name value="vital-PreconditionCode" />
+          <name value="Participation" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
           <reference>
             <reference value="StructureDefinition/onco-core-PrimaryCancerCondition-extension" />
           </reference>
-          <name value="onco-core-PrimaryCancerCondition" />
+          <name value="Primary Cancer Condition" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
           <reference>
             <reference value="StructureDefinition/obf-datatype-PriorityCode-extension" />
           </reference>
-          <name value="obf-datatype-PriorityCode" />
+          <name value="Priority Code" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
           <reference>
-            <reference value="StructureDefinition/obf-datatype-PriorityRank-extension" />
+            <reference value="StructureDefinition/obf-RadiationDose-extension" />
           </reference>
-          <name value="obf-datatype-PriorityRank" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
-            <reference value="StructureDefinition/obf-RadiationDosePerFraction-extension" />
-          </reference>
-          <name value="obf-RadiationDosePerFraction" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
-            <reference value="StructureDefinition/obf-RadiationFractionsDelivered-extension" />
-          </reference>
-          <name value="obf-RadiationFractionsDelivered" />
+          <name value="Radiation Dose" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
           <reference>
             <reference value="StructureDefinition/obf-ReasonCode-extension" />
           </reference>
-          <name value="obf-ReasonCode" />
+          <name value="Reason Code" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
           <reference>
             <reference value="StructureDefinition/obf-ReasonReference-extension" />
           </reference>
-          <name value="obf-ReasonReference" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
-            <reference value="StructureDefinition/obf-ReferenceRange-extension" />
-          </reference>
-          <name value="obf-ReferenceRange" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
-            <reference value="StructureDefinition/onco-core-RegionStudied-extension" />
-          </reference>
-          <name value="onco-core-RegionStudied" />
+          <name value="Reason Reference" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
           <reference>
             <reference value="StructureDefinition/obf-datatype-RelationToLandmark-extension" />
           </reference>
-          <name value="obf-datatype-RelationToLandmark" />
+          <name value="Relation To Landmark" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
           <reference>
             <reference value="StructureDefinition/obf-RequestIntent-extension" />
           </reference>
-          <name value="obf-RequestIntent" />
+          <name value="Request Intent" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
           <reference>
             <reference value="StructureDefinition/obf-Requester-extension" />
           </reference>
-          <name value="obf-Requester" />
+          <name value="Requester" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
           <reference>
-            <reference value="StructureDefinition/obf-SpecimenType-extension" />
+            <reference value="StructureDefinition/obf-SpecialHandling-extension" />
           </reference>
-          <name value="obf-SpecimenType" />
+          <name value="Special Handling" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/obf-SpecimenTreatment-extension" />
+          </reference>
+          <name value="Specimen Treatment" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
           <reference>
             <reference value="StructureDefinition/obf-StatementDateTime-extension" />
           </reference>
-          <name value="obf-StatementDateTime" />
+          <name value="Statement Date Time" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
           <reference>
             <reference value="StructureDefinition/obf-Status-extension" />
           </reference>
-          <name value="obf-Status" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
-            <reference value="StructureDefinition/obf-StatusHistory-extension" />
-          </reference>
-          <name value="obf-StatusHistory" />
+          <name value="Status" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
           <reference>
             <reference value="StructureDefinition/obf-SubjectOfRecord-extension" />
           </reference>
-          <name value="obf-SubjectOfRecord" />
+          <name value="Subject Of Record" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
           <reference>
             <reference value="StructureDefinition/obf-TerminationReason-extension" />
           </reference>
-          <name value="obf-TerminationReason" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
-            <reference value="StructureDefinition/obf-datatype-Text-extension" />
-          </reference>
-          <name value="obf-datatype-Text" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
-            <reference value="StructureDefinition/obf-datatype-TimePeriod-extension" />
-          </reference>
-          <name value="obf-datatype-TimePeriod" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
-            <reference value="StructureDefinition/obf-TotalRadiationDoseDelivered-extension" />
-          </reference>
-          <name value="obf-TotalRadiationDoseDelivered" />
+          <name value="Termination Reason" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
           <reference>
             <reference value="StructureDefinition/obf-TreatmentIntent-extension" />
           </reference>
-          <name value="obf-TreatmentIntent" />
+          <name value="Treatment Intent" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
           <reference>
-            <reference value="StructureDefinition/obf-datatype-Type-extension" />
+            <reference value="StructureDefinition/obf-datatype-Units-extension" />
           </reference>
-          <name value="obf-datatype-Type" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
-            <reference value="StructureDefinition/obf-datatype-UpperBound-extension" />
-          </reference>
-          <name value="obf-datatype-UpperBound" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
-            <reference value="StructureDefinition/onco-core-VariantDescription-extension" />
-          </reference>
-          <name value="onco-core-VariantDescription" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
-            <reference value="StructureDefinition/onco-core-VariantHGVSName-extension" />
-          </reference>
-          <name value="onco-core-VariantHGVSName" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
-            <reference value="StructureDefinition/onco-core-VariantIdentifier-extension" />
-          </reference>
-          <name value="onco-core-VariantIdentifier" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
-            <reference value="StructureDefinition/onco-core-VariantTested-extension" />
-          </reference>
-          <name value="onco-core-VariantTested" />
+          <name value="Units" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
           <reference>
             <reference value="ValueSet/obf-AbnormalBodyStructureVS" />
           </reference>
-          <name value="AbnormalBodyStructureVS" />
+          <name value="Abnormal Body Structure VS" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
           <reference>
             <reference value="ValueSet/obf-datatype-AnatomicalDirectionVS" />
           </reference>
-          <name value="AnatomicalDirectionVS" />
+          <name value="Anatomical Direction VS" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
           <reference>
             <reference value="ValueSet/obf-datatype-AnatomicalOrientationVS" />
           </reference>
-          <name value="AnatomicalOrientationVS" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
-            <reference value="ValueSet/vital-BloodPressureBodyLocationVS" />
-          </reference>
-          <name value="BloodPressureBodyLocationVS" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
-            <reference value="ValueSet/vital-BloodPressureCuffSizeVS" />
-          </reference>
-          <name value="BloodPressureCuffSizeVS" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
-            <reference value="ValueSet/vital-BloodPressureMethodVS" />
-          </reference>
-          <name value="BloodPressureMethodVS" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
-            <reference value="ValueSet/vital-BodyHeightLengthMethodVS" />
-          </reference>
-          <name value="BodyHeightLengthMethodVS" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
-            <reference value="ValueSet/vital-BodyHeightLengthUnitsVS" />
-          </reference>
-          <name value="BodyHeightLengthUnitsVS" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
-            <reference value="ValueSet/vital-BodyHeightPreconditionVS" />
-          </reference>
-          <name value="BodyHeightPreconditionVS" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
-            <reference value="ValueSet/obf-datatype-BodyLocationVS" />
-          </reference>
-          <name value="BodyLocationVS" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
-            <reference value="ValueSet/vital-BodyPositionVS" />
-          </reference>
-          <name value="BodyPositionVS" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
-            <reference value="ValueSet/vital-BodyWeightMethodVS" />
-          </reference>
-          <name value="BodyWeightMethodVS" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
-            <reference value="ValueSet/vital-BodyWeightPreconditionVS" />
-          </reference>
-          <name value="BodyWeightPreconditionVS" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
-            <reference value="ValueSet/vital-BodyWeightUnitsVS" />
-          </reference>
-          <name value="BodyWeightUnitsVS" />
+          <name value="Anatomical Orientation VS" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
           <reference>
             <reference value="ValueSet/onco-core-CancerBodyLocationVS" />
           </reference>
-          <name value="CancerBodyLocationVS" />
+          <name value="Cancer Body Location VS" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
           <reference>
             <reference value="ValueSet/onco-core-CancerDiseaseStatusEvidenceTypeVS" />
           </reference>
-          <name value="CancerDiseaseStatusEvidenceTypeVS" />
+          <name value="Cancer Disease Status Evidence Type VS" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
           <reference>
             <reference value="ValueSet/onco-core-CancerDisorderVS" />
           </reference>
-          <name value="CancerDisorderVS" />
+          <name value="Cancer Disorder VS" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
           <reference>
             <reference value="ValueSet/onco-core-CancerRelatedSurgicalProcedureVS" />
           </reference>
-          <name value="CancerRelatedSurgicalProcedureVS" />
+          <name value="Cancer Related Surgical Procedure VS" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
           <reference>
             <reference value="ValueSet/onco-core-CancerStagingSystemVS" />
           </reference>
-          <name value="CancerStagingSystemVS" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
-            <reference value="ValueSet/vital-CardiopulmonaryPreconditionVS" />
-          </reference>
-          <name value="CardiopulmonaryPreconditionVS" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
-            <reference value="ValueSet/obf-lab-ChoiceOfUnitsVS-g-per-dL" />
-          </reference>
-          <name value="ChoiceOfUnitsVS-g-per-dL" />
+          <name value="Cancer Staging System VS" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
           <reference>
             <reference value="ValueSet/onco-core-ClinVarVS" />
           </reference>
-          <name value="ClinVarVS" />
+          <name value="Clin Var VS" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
           <reference>
             <reference value="ValueSet/obf-ComorbidConditionVS" />
           </reference>
-          <name value="ComorbidConditionVS" />
+          <name value="Comorbid Condition VS" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
           <reference>
             <reference value="ValueSet/obf-datatype-ConditionStatusTrendVS" />
           </reference>
-          <name value="ConditionStatusTrendVS" />
+          <name value="Condition Status Trend VS" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
           <reference>
             <reference value="ValueSet/obf-ECOGPerformanceStatusVS" />
           </reference>
-          <name value="ECOGPerformanceStatusVS" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
-            <reference value="ValueSet/obf-lab-EquivalentUnitsVS-g-per-L" />
-          </reference>
-          <name value="EquivalentUnitsVS-g-per-L" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
-            <reference value="ValueSet/obf-lab-EquivalentUnitsVS-mL-per-min-filtration-rate" />
-          </reference>
-          <name value="EquivalentUnitsVS-mL-per-min-filtration-rate" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
-            <reference value="ValueSet/obf-lab-EquivalentUnitsVS-million-per-uL" />
-          </reference>
-          <name value="EquivalentUnitsVS-million-per-uL" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
-            <reference value="ValueSet/obf-lab-EquivalentUnitsVS-per-100-WBC" />
-          </reference>
-          <name value="EquivalentUnitsVS-per-100-WBC" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
-            <reference value="ValueSet/obf-lab-EquivalentUnitsVS-thousand-per-uL" />
-          </reference>
-          <name value="EquivalentUnitsVS-thousand-per-uL" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
-            <reference value="ValueSet/obf-lab-EquivalentUnitsVS-volume-fraction" />
-          </reference>
-          <name value="EquivalentUnitsVS-volume-fraction" />
+          <name value="ECOG Performance Status VS" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
           <reference>
             <reference value="ValueSet/onco-core-GeneticSpecimenTypeVS" />
           </reference>
-          <name value="GeneticSpecimenTypeVS" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
-            <reference value="ValueSet/onco-core-GeneticTestMethodVS" />
-          </reference>
-          <name value="GeneticTestMethodVS" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
-            <reference value="ValueSet/onco-core-GeneticTestVS" />
-          </reference>
-          <name value="GeneticTestVS" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
-            <reference value="ValueSet/onco-core-GenomicSourceClassVS" />
-          </reference>
-          <name value="GenomicSourceClassVS" />
+          <name value="Genetic Specimen Type VS" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
           <reference>
             <reference value="ValueSet/onco-core-HistologyMorphologyBehaviorVS" />
           </reference>
-          <name value="HistologyMorphologyBehaviorVS" />
+          <name value="Histology Morphology Behavior VS" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
           <reference>
             <reference value="ValueSet/obf-KarnofskyPerformanceStatusVS" />
           </reference>
-          <name value="KarnofskyPerformanceStatusVS" />
+          <name value="Karnofsky Performance Status VS" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
           <reference>
             <reference value="ValueSet/obf-datatype-LandmarkTypeVS" />
           </reference>
-          <name value="LandmarkTypeVS" />
+          <name value="Landmark Type VS" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
           <reference>
-            <reference value="ValueSet/obf-datatype-PositiveNegativeVS" />
+            <reference value="ValueSet/obf-datatype-LateralityVS" />
           </reference>
-          <name value="PositiveNegativeVS" />
+          <name value="Laterality VS" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
           <reference>
             <reference value="ValueSet/onco-core-PrimaryOrUncertainBehaviorCancerDisorderVS" />
           </reference>
-          <name value="PrimaryOrUncertainBehaviorCancerDisorderVS" />
-      </resource>
-      <resource>
-          <exampleBoolean value="false" />
-          <reference>
-            <reference value="ValueSet/obf-QuantitativeResultInterpretationVS" />
-          </reference>
-          <name value="QuantitativeResultInterpretationVS" />
+          <name value="Primary Or Uncertain Behavior Cancer Disorder VS" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
           <reference>
             <reference value="ValueSet/obf-RadiationProcedureVS" />
           </reference>
-          <name value="RadiationProcedureVS" />
+          <name value="Radiation Procedure VS" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
           <reference>
             <reference value="ValueSet/obf-RadiationTargetBodySiteVS" />
           </reference>
-          <name value="RadiationTargetBodySiteVS" />
+          <name value="Radiation Target Body Site VS" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
           <reference>
             <reference value="ValueSet/obf-ResearchSubjectTerminationReasonVS" />
           </reference>
-          <name value="ResearchSubjectTerminationReasonVS" />
+          <name value="Research Subject Termination Reason VS" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
           <reference>
             <reference value="ValueSet/onco-core-SecondaryCancerDisorderVS" />
           </reference>
-          <name value="SecondaryCancerDisorderVS" />
+          <name value="Secondary Cancer Disorder VS" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
           <reference>
             <reference value="ValueSet/obf-datatype-SettingVS" />
           </reference>
-          <name value="SettingVS" />
+          <name value="Setting VS" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
           <reference>
             <reference value="ValueSet/obf-StudyArmTypeVS" />
           </reference>
-          <name value="StudyArmTypeVS" />
+          <name value="Study Arm Type VS" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
           <reference>
             <reference value="ValueSet/obf-SurgicalBodyLocationRoleVS" />
           </reference>
-          <name value="SurgicalBodyLocationRoleVS" />
+          <name value="Surgical Body Location Role VS" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
           <reference>
             <reference value="ValueSet/obf-SurgicalMethodVS" />
           </reference>
-          <name value="SurgicalMethodVS" />
+          <name value="Surgical Method VS" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
           <reference>
             <reference value="ValueSet/obf-SurgicalProcedureVS" />
           </reference>
-          <name value="SurgicalProcedureVS" />
+          <name value="Surgical Procedure VS" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
           <reference>
             <reference value="ValueSet/onco-core-TNMDistantMetastasesCategoryVS" />
           </reference>
-          <name value="TNMDistantMetastasesCategoryVS" />
+          <name value="TNM Distant Metastases Category VS" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
           <reference>
             <reference value="ValueSet/onco-core-TNMPrimaryTumorCategoryVS" />
           </reference>
-          <name value="TNMPrimaryTumorCategoryVS" />
+          <name value="TNM Primary Tumor Category VS" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
           <reference>
             <reference value="ValueSet/onco-core-TNMRegionalNodesCategoryVS" />
           </reference>
-          <name value="TNMRegionalNodesCategoryVS" />
+          <name value="TNM Regional Nodes Category VS" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
           <reference>
             <reference value="ValueSet/onco-core-TNMStageGroupVS" />
           </reference>
-          <name value="TNMStageGroupVS" />
+          <name value="TNM Stage Group VS" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
           <reference>
             <reference value="ValueSet/obf-TreatmentIntentVS" />
           </reference>
-          <name value="TreatmentIntentVS" />
+          <name value="Treatment Intent VS" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
           <reference>
             <reference value="ValueSet/obf-TreatmentTerminationReasonVS" />
           </reference>
-          <name value="TreatmentTerminationReasonVS" />
+          <name value="Treatment Termination Reason VS" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
           <reference>
             <reference value="ValueSet/onco-core-TumorMarkerTestVS" />
           </reference>
-          <name value="TumorMarkerTestVS" />
+          <name value="Tumor Marker Test VS" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
           <reference>
             <reference value="ValueSet/obf-datatype-UnitsOfLengthVS" />
           </reference>
-          <name value="UnitsOfLengthVS" />
+          <name value="Units Of Length VS" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
           <reference>
             <reference value="ValueSet/obf-datatype-YesNoUnknownVS" />
           </reference>
-          <name value="YesNoUnknownVS" />
+          <name value="Yes No Unknown VS" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
           <reference>
             <reference value="CodeSystem/obf-ResearchSubjectTerminationReasonCS" />
           </reference>
-          <name value="ResearchSubjectTerminationReasonCS" />
+          <name value="Research Subject Termination Reason CS" />
       </resource>
       <resource>
           <exampleBoolean value="false" />
           <reference>
             <reference value="CodeSystem/obf-datatype-SettingCS" />
           </reference>
-          <name value="SettingCS" />
+          <name value="Setting CS" />
       </resource>
       <resource>
           <exampleBoolean value="true" />
           <reference>
-            <reference value="Observation/mCODEGeneticVariantFoundExample01" />
+            <reference value="Observation/mCODEGeneticVariantExample01" />
           </reference>
-          <name value="Example: mCODEGeneticVariantFoundExample01" />
+          <name value="Example: mCODEGeneticVariantExample01" />
       </resource>
       <resource>
           <exampleBoolean value="true" />
           <reference>
-            <reference value="Observation/mCODEGeneticVariantTestedExample01" />
+            <reference value="Observation/mCODEGeneticVariantExample02" />
           </reference>
-          <name value="Example: mCODEGeneticVariantTestedExample01" />
+          <name value="Example: mCODEGeneticVariantExample02" />
       </resource>
       <resource>
           <exampleBoolean value="true" />
@@ -1880,6 +970,13 @@
             <reference value="Patient/mCODEPatientExample01" />
           </reference>
           <name value="Example: mCODEPatientExample01" />
+      </resource>
+      <resource>
+          <exampleBoolean value="true" />
+          <reference>
+            <reference value="Patient/mCODEPatientExample02" />
+          </reference>
+          <name value="Example: mCODEPatientExample02" />
       </resource>
       <resource>
           <exampleBoolean value="true" />
@@ -1961,7 +1058,7 @@
       
         <page>
             <nameUrl value="index.html" />
-            <title value="HL7 FHIR Implementation Guide: minimal Common Oncology Data Elements (mCODE) Release 1 - US Realm | STU Ballot 1" />
+            <title value="HL7 FHIR Implementation Guide: minimal Common Oncology Data Elements (mCODE) Release 1 - US Realm | STU1 PreRel#1" />
             <generation value="html" />
         </page>
     </definition>

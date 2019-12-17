@@ -7,7 +7,7 @@
   },
   "url": "http://hl7.org/fhir/us/mcode/ValueSet/obf-SurgicalBodyLocationRoleVS",
   "name": "SurgicalBodyLocationRoleVS",
-  "title": "SurgicalBodyLocationRoleVS",
+  "title": "Surgical Body Location Role VS",
   "status": "draft",
   "publisher": "HL7 International Clinical Interoperability Council",
   "contact": [
@@ -20,7 +20,7 @@
       ]
     }
   ],
-  "date": "2019-08-01",
+  "date": "2019-12-17",
   "description": "Roles of body site in surgical procedures. Value set includes codes from the SNOMED hierarchy descending from 363704007 'Procedure site' and descending from 272737002 'Site of (attribute)'.",
   "compose": {
     "include": [

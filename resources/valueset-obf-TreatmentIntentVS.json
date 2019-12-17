@@ -7,7 +7,7 @@
   },
   "url": "http://hl7.org/fhir/us/mcode/ValueSet/obf-TreatmentIntentVS",
   "name": "TreatmentIntentVS",
-  "title": "TreatmentIntentVS",
+  "title": "Treatment Intent VS",
   "status": "draft",
   "publisher": "HL7 International Clinical Interoperability Council",
   "contact": [
@@ -20,7 +20,7 @@
       ]
     }
   ],
-  "date": "2019-08-01",
+  "date": "2019-12-17",
   "description": "The purpose of a treatment. The value set includes 'curative' and 'palliative'. Curative is defined as any treatment meant to reduce or control a disease process, even if a 'cure' is not anticipated. Palliative includes treatments meant to reduce symptoms and side effects, such as antiemetics.",
   "compose": {
     "include": [

@@ -1,0 +1,43 @@
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://www.genenames.org/",
+  "code" : "HGNC:11389"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code system \"http://www.genenames.org/\" is not known (encountered paired with code = \"HGNC:11389\"); The code provided (http://www.genenames.org/#HGNC:11389) is not  valid in the value set All codes known to the system"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://www.genenames.org/",
+  "code" : "HGNC:1100"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code system \"http://www.genenames.org/\" is not known (encountered paired with code = \"HGNC:1100\"); The code provided (http://www.genenames.org/#HGNC:1100) is not  valid in the value set All codes known to the system"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://www.genenames.org/",
+  "code" : "HGNC:11389",
+  "display" : "STK11"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code system \"http://www.genenames.org/\" is not known (encountered paired with code = \"HGNC:11389\"); The code provided (http://www.genenames.org/#HGNC:11389) is not  valid in the value set All codes known to the system"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://www.genenames.org/",
+  "code" : "HGNC:1100",
+  "display" : "BRCA1"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code system \"http://www.genenames.org/\" is not known (encountered paired with code = \"HGNC:1100\"); The code provided (http://www.genenames.org/#HGNC:1100) is not  valid in the value set All codes known to the system"
+}
+-------------------------------------------------------------------------------------

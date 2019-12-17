@@ -1,7 +1,7 @@
 {
   "source": "ig.xml",
-  "version": "4.0.0",
-  "fixed-business-version": "0.9.1",
+  "version": "4.0.1",
+  "fixed-business-version": "0.9.2",
   "license": "CC0-1.0",
   "paths": {
     "resources": [
@@ -76,11 +76,8 @@
     "examples"
   ],
   "resources": {
-    "StructureDefinition/obf-AbnormalBodyStructure": {
-      "base": "StructureDefinition-obf-AbnormalBodyStructure.html"
-    },
-    "StructureDefinition/obf-ActionPerformed": {
-      "base": "StructureDefinition-obf-ActionPerformed.html"
+    "StructureDefinition/obf-AccessionIdentifier": {
+      "base": "StructureDefinition-obf-AccessionIdentifier.html"
     },
     "StructureDefinition/obf-ActionRequest": {
       "base": "StructureDefinition-obf-ActionRequest.html"
@@ -88,65 +85,14 @@
     "StructureDefinition/obf-ActionStatement": {
       "base": "StructureDefinition-obf-ActionStatement.html"
     },
-    "StructureDefinition/obf-lab-AlanineAminotransferaseCCncPtSerPlasQnLabObs": {
-      "base": "StructureDefinition-obf-lab-AlanineAminotransferaseCCncPtSerPlasQnLabObs.html"
-    },
-    "StructureDefinition/obf-lab-AlbuminGlobulinMRtoPtSerPlasQnLabObs": {
-      "base": "StructureDefinition-obf-lab-AlbuminGlobulinMRtoPtSerPlasQnLabObs.html"
-    },
-    "StructureDefinition/obf-lab-AlbuminMCncPtSerPlasQnLabObs": {
-      "base": "StructureDefinition-obf-lab-AlbuminMCncPtSerPlasQnLabObs.html"
-    },
-    "StructureDefinition/obf-lab-AlkalinePhosphataseCCncPtSerPlasQnLabObs": {
-      "base": "StructureDefinition-obf-lab-AlkalinePhosphataseCCncPtSerPlasQnLabObs.html"
-    },
-    "StructureDefinition/obf-lab-AniongapSCncPtSerPlasQnLabObs": {
-      "base": "StructureDefinition-obf-lab-AniongapSCncPtSerPlasQnLabObs.html"
-    },
-    "StructureDefinition/obf-lab-AspartateAminotransferaseCCncPtSerPlasQnLabObs": {
-      "base": "StructureDefinition-obf-lab-AspartateAminotransferaseCCncPtSerPlasQnLabObs.html"
-    },
-    "StructureDefinition/obf-lab-Basophils100WBCNFrPtBldQnAutoCntLabObs": {
-      "base": "StructureDefinition-obf-lab-Basophils100WBCNFrPtBldQnAutoCntLabObs.html"
-    },
-    "StructureDefinition/obf-lab-BasophilsNCncPtBldQnAutoCntLabObs": {
-      "base": "StructureDefinition-obf-lab-BasophilsNCncPtBldQnAutoCntLabObs.html"
-    },
-    "StructureDefinition/obf-lab-BicarbonateSCncPtSerPlasQnLabObs": {
-      "base": "StructureDefinition-obf-lab-BicarbonateSCncPtSerPlasQnLabObs.html"
-    },
-    "StructureDefinition/obf-lab-BilirubinDirectMCncPtSerPlasQnLabObs": {
-      "base": "StructureDefinition-obf-lab-BilirubinDirectMCncPtSerPlasQnLabObs.html"
-    },
-    "StructureDefinition/obf-lab-BilirubinMCncPtSerPlasQnLabObs": {
-      "base": "StructureDefinition-obf-lab-BilirubinMCncPtSerPlasQnLabObs.html"
-    },
-    "StructureDefinition/obf-lab-Blasts100WBCNFrPtBldQnManCntLabObs": {
-      "base": "StructureDefinition-obf-lab-Blasts100WBCNFrPtBldQnManCntLabObs.html"
-    },
-    "StructureDefinition/obf-lab-BlastsNCncPtBldQnLabObs": {
-      "base": "StructureDefinition-obf-lab-BlastsNCncPtBldQnLabObs.html"
-    },
-    "StructureDefinition/vital-BloodPressure": {
-      "base": "StructureDefinition-vital-BloodPressure.html"
-    },
-    "StructureDefinition/vital-BodyHeight": {
-      "base": "StructureDefinition-vital-BodyHeight.html"
-    },
-    "StructureDefinition/vital-BodyWeight": {
-      "base": "StructureDefinition-vital-BodyWeight.html"
-    },
-    "StructureDefinition/obf-lab-CBCWAutoDifferentialPanel": {
-      "base": "StructureDefinition-obf-lab-CBCWAutoDifferentialPanel.html"
-    },
-    "StructureDefinition/obf-lab-CalciumMCncPtSerPlasQnLabObs": {
-      "base": "StructureDefinition-obf-lab-CalciumMCncPtSerPlasQnLabObs.html"
-    },
-    "StructureDefinition/onco-core-CancerCondition": {
-      "base": "StructureDefinition-onco-core-CancerCondition.html"
+    "StructureDefinition/obf-Annotation": {
+      "base": "StructureDefinition-obf-Annotation.html"
     },
     "StructureDefinition/onco-core-CancerDiseaseStatus": {
       "base": "StructureDefinition-onco-core-CancerDiseaseStatus.html"
+    },
+    "StructureDefinition/onco-core-CancerRelatedMedicationStatement": {
+      "base": "StructureDefinition-onco-core-CancerRelatedMedicationStatement.html"
     },
     "StructureDefinition/onco-core-CancerRelatedRadiationProcedure": {
       "base": "StructureDefinition-onco-core-CancerRelatedRadiationProcedure.html"
@@ -154,239 +100,71 @@
     "StructureDefinition/onco-core-CancerRelatedSurgicalProcedure": {
       "base": "StructureDefinition-onco-core-CancerRelatedSurgicalProcedure.html"
     },
-    "StructureDefinition/onco-core-CancerStageCategory": {
-      "base": "StructureDefinition-onco-core-CancerStageCategory.html"
-    },
     "StructureDefinition/onco-core-CancerStageGroup": {
       "base": "StructureDefinition-onco-core-CancerStageGroup.html"
     },
-    "StructureDefinition/obf-lab-CarbonDioxideSCncPtSerPlasQnLabObs": {
-      "base": "StructureDefinition-obf-lab-CarbonDioxideSCncPtSerPlasQnLabObs.html"
-    },
-    "StructureDefinition/obf-lab-ChlorideSCncPtSerPlasQnLabObs": {
-      "base": "StructureDefinition-obf-lab-ChlorideSCncPtSerPlasQnLabObs.html"
-    },
-    "StructureDefinition/obf-ClinicalStatement": {
-      "base": "StructureDefinition-obf-ClinicalStatement.html"
-    },
-    "StructureDefinition/obf-CodedNonLaboratoryObservation": {
-      "base": "StructureDefinition-obf-CodedNonLaboratoryObservation.html"
+    "StructureDefinition/obf-CarePlan": {
+      "base": "StructureDefinition-obf-CarePlan.html"
     },
     "StructureDefinition/obf-ComorbidCondition": {
       "base": "StructureDefinition-obf-ComorbidCondition.html"
     },
-    "StructureDefinition/obf-lab-ComprehensiveMetabolic2000SerumOrPlasmaPanel": {
-      "base": "StructureDefinition-obf-lab-ComprehensiveMetabolic2000SerumOrPlasmaPanel.html"
-    },
     "StructureDefinition/obf-Condition": {
       "base": "StructureDefinition-obf-Condition.html"
-    },
-    "StructureDefinition/obf-lab-CreatinineMCncPtSerPlasQnLabObs": {
-      "base": "StructureDefinition-obf-lab-CreatinineMCncPtSerPlasQnLabObs.html"
     },
     "StructureDefinition/obf-DiagnosticReport": {
       "base": "StructureDefinition-obf-DiagnosticReport.html"
     },
-    "StructureDefinition/obf-DomainResource": {
-      "base": "StructureDefinition-obf-DomainResource.html"
+    "StructureDefinition/obf-Dosage": {
+      "base": "StructureDefinition-obf-Dosage.html"
+    },
+    "StructureDefinition/obf-datatype-Duration": {
+      "base": "StructureDefinition-obf-datatype-Duration.html"
     },
     "StructureDefinition/obf-ECOGPerformanceStatus": {
       "base": "StructureDefinition-obf-ECOGPerformanceStatus.html"
     },
-    "StructureDefinition/obf-EncounterOrEpisode": {
-      "base": "StructureDefinition-obf-EncounterOrEpisode.html"
+    "StructureDefinition/obf-FillerOrderNumber": {
+      "base": "StructureDefinition-obf-FillerOrderNumber.html"
     },
-    "StructureDefinition/obf-Entity": {
-      "base": "StructureDefinition-obf-Entity.html"
+    "StructureDefinition/onco-core-GeneticSpecimen": {
+      "base": "StructureDefinition-onco-core-GeneticSpecimen.html"
     },
-    "StructureDefinition/obf-EntityOrRole": {
-      "base": "StructureDefinition-obf-EntityOrRole.html"
-    },
-    "StructureDefinition/obf-lab-Eosinophils100WBCNFrPtBldQnAutoCntLabObs": {
-      "base": "StructureDefinition-obf-lab-Eosinophils100WBCNFrPtBldQnAutoCntLabObs.html"
-    },
-    "StructureDefinition/obf-lab-EosinophilsNCncPtBldQnAutoCntLabObs": {
-      "base": "StructureDefinition-obf-lab-EosinophilsNCncPtBldQnAutoCntLabObs.html"
-    },
-    "StructureDefinition/obf-lab-ErythrocyteDistributionWidthEntVolPtRBCQnLabObs": {
-      "base": "StructureDefinition-obf-lab-ErythrocyteDistributionWidthEntVolPtRBCQnLabObs.html"
-    },
-    "StructureDefinition/obf-lab-ErythrocyteDistributionWidthRatioPtRBCQnAutoCntLabObs": {
-      "base": "StructureDefinition-obf-lab-ErythrocyteDistributionWidthRatioPtRBCQnAutoCntLabObs.html"
-    },
-    "StructureDefinition/obf-lab-ErythrocyteMCHCMCncPtRBCQnAutoCntLabObs": {
-      "base": "StructureDefinition-obf-lab-ErythrocyteMCHCMCncPtRBCQnAutoCntLabObs.html"
-    },
-    "StructureDefinition/obf-lab-ErythrocyteMCHEntMassPtRBCQnAutoCntLabObs": {
-      "base": "StructureDefinition-obf-lab-ErythrocyteMCHEntMassPtRBCQnAutoCntLabObs.html"
-    },
-    "StructureDefinition/obf-lab-ErythrocytesNCncPtBldQnAutoCntLabObs": {
-      "base": "StructureDefinition-obf-lab-ErythrocytesNCncPtBldQnAutoCntLabObs.html"
-    },
-    "StructureDefinition/obf-lab-ErythrocytesNucleated100WBCRatioPtBldQnAutoCntLabObs": {
-      "base": "StructureDefinition-obf-lab-ErythrocytesNucleated100WBCRatioPtBldQnAutoCntLabObs.html"
-    },
-    "StructureDefinition/obf-lab-ErythrocytesNucleated100WBCRatioPtBldQnLabObs": {
-      "base": "StructureDefinition-obf-lab-ErythrocytesNucleated100WBCRatioPtBldQnLabObs.html"
-    },
-    "StructureDefinition/obf-lab-ErythrocytesNucleatedNCncPtBldQnLabObs": {
-      "base": "StructureDefinition-obf-lab-ErythrocytesNucleatedNCncPtBldQnLabObs.html"
-    },
-    "StructureDefinition/obf-lab-GFR173sqMPredArVRatPtSerPlasQnMDRDLabObs": {
-      "base": "StructureDefinition-obf-lab-GFR173sqMPredArVRatPtSerPlasQnMDRDLabObs.html"
-    },
-    "StructureDefinition/obf-lab-GFR173sqMPredBlackArVRatPtSerPlasBldQnMDRDLabObs": {
-      "base": "StructureDefinition-obf-lab-GFR173sqMPredBlackArVRatPtSerPlasBldQnMDRDLabObs.html"
-    },
-    "StructureDefinition/obf-lab-GFR173sqMPredFemaleArVRatPtSerPlasBldQnMDRDLabObs": {
-      "base": "StructureDefinition-obf-lab-GFR173sqMPredFemaleArVRatPtSerPlasBldQnMDRDLabObs.html"
-    },
-    "StructureDefinition/obf-lab-GFR173sqMPredNonBlackArVRatPtSerPlasBldQnMDRDLabObs": {
-      "base": "StructureDefinition-obf-lab-GFR173sqMPredNonBlackArVRatPtSerPlasBldQnMDRDLabObs.html"
-    },
-    "StructureDefinition/onco-core-GeneticVariantFound": {
-      "base": "StructureDefinition-onco-core-GeneticVariantFound.html"
-    },
-    "StructureDefinition/onco-core-GeneticVariantTested": {
-      "base": "StructureDefinition-onco-core-GeneticVariantTested.html"
+    "StructureDefinition/onco-core-GeneticVariant": {
+      "base": "StructureDefinition-onco-core-GeneticVariant.html"
     },
     "StructureDefinition/onco-core-GenomicsReport": {
       "base": "StructureDefinition-onco-core-GenomicsReport.html"
     },
-    "StructureDefinition/obf-lab-GlobulinMCncPtSerQnCalculatedLabObs": {
-      "base": "StructureDefinition-obf-lab-GlobulinMCncPtSerQnCalculatedLabObs.html"
-    },
-    "StructureDefinition/obf-lab-GlucoseMCncPtSerPlasQnLabObs": {
-      "base": "StructureDefinition-obf-lab-GlucoseMCncPtSerPlasQnLabObs.html"
-    },
-    "StructureDefinition/obf-lab-Granulocytes100WBCNFrPtBldQnAutoCntLabObs": {
-      "base": "StructureDefinition-obf-lab-Granulocytes100WBCNFrPtBldQnAutoCntLabObs.html"
-    },
-    "StructureDefinition/obf-lab-GranulocytesImmature100WBCNFrPtBldQnAutoCntLabObs": {
-      "base": "StructureDefinition-obf-lab-GranulocytesImmature100WBCNFrPtBldQnAutoCntLabObs.html"
-    },
-    "StructureDefinition/obf-lab-GranulocytesImmatureNCncPtBldQnAutoCntLabObs": {
-      "base": "StructureDefinition-obf-lab-GranulocytesImmatureNCncPtBldQnAutoCntLabObs.html"
-    },
-    "StructureDefinition/obf-lab-HematocritVFrPtBldQnAutoCntLabObs": {
-      "base": "StructureDefinition-obf-lab-HematocritVFrPtBldQnAutoCntLabObs.html"
-    },
-    "StructureDefinition/obf-lab-HemoglobinMCncPtBldQnLabObs": {
-      "base": "StructureDefinition-obf-lab-HemoglobinMCncPtBldQnLabObs.html"
-    },
-    "StructureDefinition/obf-InformationItem": {
-      "base": "StructureDefinition-obf-InformationItem.html"
-    },
     "StructureDefinition/obf-KarnofskyPerformanceStatus": {
       "base": "StructureDefinition-obf-KarnofskyPerformanceStatus.html"
     },
-    "StructureDefinition/obf-LaboratoryObservation": {
-      "base": "StructureDefinition-obf-LaboratoryObservation.html"
-    },
-    "StructureDefinition/obf-LaboratoryReport": {
-      "base": "StructureDefinition-obf-LaboratoryReport.html"
-    },
-    "StructureDefinition/obf-lab-LeukocytesNCncPtBldQnAutoCntLabObs": {
-      "base": "StructureDefinition-obf-lab-LeukocytesNCncPtBldQnAutoCntLabObs.html"
-    },
-    "StructureDefinition/obf-lab-LeukocytesOtherNCncPtBldQnAutoCntLabObs": {
-      "base": "StructureDefinition-obf-lab-LeukocytesOtherNCncPtBldQnAutoCntLabObs.html"
-    },
-    "StructureDefinition/obf-lab-Lymphocytes100WBCNFrPtBldQnAutoCntLabObs": {
-      "base": "StructureDefinition-obf-lab-Lymphocytes100WBCNFrPtBldQnAutoCntLabObs.html"
-    },
-    "StructureDefinition/obf-lab-LymphocytesNCncPtBldQnAutoCntLabObs": {
-      "base": "StructureDefinition-obf-lab-LymphocytesNCncPtBldQnAutoCntLabObs.html"
-    },
-    "StructureDefinition/obf-lab-LymphocytesVariant100WBCNFrPtBldQnAutoCntLabObs": {
-      "base": "StructureDefinition-obf-lab-LymphocytesVariant100WBCNFrPtBldQnAutoCntLabObs.html"
-    },
-    "StructureDefinition/obf-lab-LymphocytesVariant100WBCNFrPtBldQnLabObs": {
-      "base": "StructureDefinition-obf-lab-LymphocytesVariant100WBCNFrPtBldQnLabObs.html"
-    },
-    "StructureDefinition/obf-lab-LymphocytesVariantNCncPtBldQnAutoCntLabObs": {
-      "base": "StructureDefinition-obf-lab-LymphocytesVariantNCncPtBldQnAutoCntLabObs.html"
-    },
-    "StructureDefinition/obf-lab-MeanCorpuscularVolumeEntVolPtRBCQnAutoCntLabObs": {
-      "base": "StructureDefinition-obf-lab-MeanCorpuscularVolumeEntVolPtRBCQnAutoCntLabObs.html"
-    },
-    "StructureDefinition/obf-MedicationAction": {
-      "base": "StructureDefinition-obf-MedicationAction.html"
+    "StructureDefinition/obf-MedicationAdministration": {
+      "base": "StructureDefinition-obf-MedicationAdministration.html"
     },
     "StructureDefinition/obf-MedicationDispense": {
       "base": "StructureDefinition-obf-MedicationDispense.html"
     },
+    "StructureDefinition/obf-MedicationRequest": {
+      "base": "StructureDefinition-obf-MedicationRequest.html"
+    },
     "StructureDefinition/obf-MedicationStatement": {
       "base": "StructureDefinition-obf-MedicationStatement.html"
     },
-    "StructureDefinition/obf-lab-Metamyelocytes100WBCNFrPtBldQnManCntLabObs": {
-      "base": "StructureDefinition-obf-lab-Metamyelocytes100WBCNFrPtBldQnManCntLabObs.html"
+    "StructureDefinition/obf-datatype-Money": {
+      "base": "StructureDefinition-obf-datatype-Money.html"
     },
-    "StructureDefinition/obf-lab-MetamyelocytesNCncPtBldQnLabObs": {
-      "base": "StructureDefinition-obf-lab-MetamyelocytesNCncPtBldQnLabObs.html"
-    },
-    "StructureDefinition/obf-lab-Monocytes100WBCNFrPtBldQnAutoCntLabObs": {
-      "base": "StructureDefinition-obf-lab-Monocytes100WBCNFrPtBldQnAutoCntLabObs.html"
-    },
-    "StructureDefinition/obf-lab-MonocytesNCncPtBldQnAutoCntLabObs": {
-      "base": "StructureDefinition-obf-lab-MonocytesNCncPtBldQnAutoCntLabObs.html"
-    },
-    "StructureDefinition/obf-lab-MorphologyImpPtBldNarLabObs": {
-      "base": "StructureDefinition-obf-lab-MorphologyImpPtBldNarLabObs.html"
-    },
-    "StructureDefinition/obf-lab-Myelocytes100WBCNFrPtBldQnManCntLabObs": {
-      "base": "StructureDefinition-obf-lab-Myelocytes100WBCNFrPtBldQnManCntLabObs.html"
-    },
-    "StructureDefinition/obf-lab-MyelocytesNCncPtBldQnLabObs": {
-      "base": "StructureDefinition-obf-lab-MyelocytesNCncPtBldQnLabObs.html"
-    },
-    "StructureDefinition/obf-lab-Neutrophils100WBCNFrPtBldQnAutoCntLabObs": {
-      "base": "StructureDefinition-obf-lab-Neutrophils100WBCNFrPtBldQnAutoCntLabObs.html"
-    },
-    "StructureDefinition/obf-lab-NeutrophilsBandForm100WBCNFrPtBldQnAutoCntLabObs": {
-      "base": "StructureDefinition-obf-lab-NeutrophilsBandForm100WBCNFrPtBldQnAutoCntLabObs.html"
-    },
-    "StructureDefinition/obf-lab-NeutrophilsBandForm100WBCNFrPtBldQnManCntLabObs": {
-      "base": "StructureDefinition-obf-lab-NeutrophilsBandForm100WBCNFrPtBldQnManCntLabObs.html"
-    },
-    "StructureDefinition/obf-lab-NeutrophilsBandFormNCncPtBldQnAutoCntLabObs": {
-      "base": "StructureDefinition-obf-lab-NeutrophilsBandFormNCncPtBldQnAutoCntLabObs.html"
-    },
-    "StructureDefinition/obf-lab-NeutrophilsBandFormNCncPtBldQnLabObs": {
-      "base": "StructureDefinition-obf-lab-NeutrophilsBandFormNCncPtBldQnLabObs.html"
-    },
-    "StructureDefinition/obf-lab-NeutrophilsNCncPtBldQnAutoCntLabObs": {
-      "base": "StructureDefinition-obf-lab-NeutrophilsNCncPtBldQnAutoCntLabObs.html"
-    },
-    "StructureDefinition/obf-NonLaboratoryObservation": {
-      "base": "StructureDefinition-obf-NonLaboratoryObservation.html"
+    "StructureDefinition/obf-NationalProviderIdentifier": {
+      "base": "StructureDefinition-obf-NationalProviderIdentifier.html"
     },
     "StructureDefinition/obf-Observation": {
       "base": "StructureDefinition-obf-Observation.html"
     },
-    "StructureDefinition/obf-lab-OtherCells100WBCNFrPtBldQnAutoCntLabObs": {
-      "base": "StructureDefinition-obf-lab-OtherCells100WBCNFrPtBldQnAutoCntLabObs.html"
-    },
-    "StructureDefinition/obf-lab-OtherCellsNCncPtBldQnAutoCntLabObs": {
-      "base": "StructureDefinition-obf-lab-OtherCellsNCncPtBldQnAutoCntLabObs.html"
-    },
     "StructureDefinition/obf-Patient": {
       "base": "StructureDefinition-obf-Patient.html"
     },
-    "StructureDefinition/obf-lab-PlateletDistributionWidthEntVolPtBldQnAutoCntLabObs": {
-      "base": "StructureDefinition-obf-lab-PlateletDistributionWidthEntVolPtBldQnAutoCntLabObs.html"
-    },
-    "StructureDefinition/obf-lab-PlateletMeanVolumeEntVolPtBldQnAutoCntLabObs": {
-      "base": "StructureDefinition-obf-lab-PlateletMeanVolumeEntVolPtBldQnAutoCntLabObs.html"
-    },
-    "StructureDefinition/obf-lab-PlateletMeanVolumeEntVolPtBldQnReesEckerLabObs": {
-      "base": "StructureDefinition-obf-lab-PlateletMeanVolumeEntVolPtBldQnReesEckerLabObs.html"
-    },
-    "StructureDefinition/obf-lab-PlateletsNCncPtBldQnAutoCntLabObs": {
-      "base": "StructureDefinition-obf-lab-PlateletsNCncPtBldQnAutoCntLabObs.html"
-    },
-    "StructureDefinition/obf-lab-PotassiumSCncPtSerPlasQnLabObs": {
-      "base": "StructureDefinition-obf-lab-PotassiumSCncPtSerPlasQnLabObs.html"
+    "StructureDefinition/obf-PlacerOrderNumber": {
+      "base": "StructureDefinition-obf-PlacerOrderNumber.html"
     },
     "StructureDefinition/onco-core-PrimaryCancerCondition": {
       "base": "StructureDefinition-onco-core-PrimaryCancerCondition.html"
@@ -394,50 +172,29 @@
     "StructureDefinition/obf-Procedure": {
       "base": "StructureDefinition-obf-Procedure.html"
     },
-    "StructureDefinition/obf-lab-Promyelocytes100WBCNFrPtBldQnManCntLabObs": {
-      "base": "StructureDefinition-obf-lab-Promyelocytes100WBCNFrPtBldQnManCntLabObs.html"
+    "StructureDefinition/obf-ProcedureRequest": {
+      "base": "StructureDefinition-obf-ProcedureRequest.html"
     },
-    "StructureDefinition/obf-lab-PromyelocytesNCncPtBldQnLabObs": {
-      "base": "StructureDefinition-obf-lab-PromyelocytesNCncPtBldQnLabObs.html"
+    "StructureDefinition/obf-QuestionnaireResponse": {
+      "base": "StructureDefinition-obf-QuestionnaireResponse.html"
     },
-    "StructureDefinition/obf-lab-ProteinMCncPtSerPlasQnLabObs": {
-      "base": "StructureDefinition-obf-lab-ProteinMCncPtSerPlasQnLabObs.html"
+    "StructureDefinition/onco-core-RegionStudied": {
+      "base": "StructureDefinition-onco-core-RegionStudied.html"
     },
-    "StructureDefinition/obf-QuantitativeLaboratoryObservation": {
-      "base": "StructureDefinition-obf-QuantitativeLaboratoryObservation.html"
+    "StructureDefinition/obf-ResearchStudy": {
+      "base": "StructureDefinition-obf-ResearchStudy.html"
     },
-    "StructureDefinition/obf-QuantitativeNonLaboratoryObservation": {
-      "base": "StructureDefinition-obf-QuantitativeNonLaboratoryObservation.html"
+    "StructureDefinition/obf-ResearchSubject": {
+      "base": "StructureDefinition-obf-ResearchSubject.html"
     },
-    "StructureDefinition/obf-RadiationProcedure": {
-      "base": "StructureDefinition-obf-RadiationProcedure.html"
-    },
-    "StructureDefinition/obf-Role": {
-      "base": "StructureDefinition-obf-Role.html"
+    "StructureDefinition/obf-datatype-SampledData": {
+      "base": "StructureDefinition-obf-datatype-SampledData.html"
     },
     "StructureDefinition/onco-core-SecondaryCancerCondition": {
       "base": "StructureDefinition-onco-core-SecondaryCancerCondition.html"
     },
-    "StructureDefinition/obf-SimpleCodedNonLaboratoryObservation": {
-      "base": "StructureDefinition-obf-SimpleCodedNonLaboratoryObservation.html"
-    },
-    "StructureDefinition/obf-SimpleLaboratoryObservation": {
-      "base": "StructureDefinition-obf-SimpleLaboratoryObservation.html"
-    },
-    "StructureDefinition/obf-lab-SimpleQuantLabWithRequiredUnits": {
-      "base": "StructureDefinition-obf-lab-SimpleQuantLabWithRequiredUnits.html"
-    },
-    "StructureDefinition/obf-SimpleQuantitativeLaboratoryObservation": {
-      "base": "StructureDefinition-obf-SimpleQuantitativeLaboratoryObservation.html"
-    },
-    "StructureDefinition/obf-SituationStatement": {
-      "base": "StructureDefinition-obf-SituationStatement.html"
-    },
-    "StructureDefinition/obf-lab-SodiumSCncPtSerPlasQnLabObs": {
-      "base": "StructureDefinition-obf-lab-SodiumSCncPtSerPlasQnLabObs.html"
-    },
-    "StructureDefinition/obf-SurgicalProcedure": {
-      "base": "StructureDefinition-obf-SurgicalProcedure.html"
+    "StructureDefinition/obf-Specimen": {
+      "base": "StructureDefinition-obf-Specimen.html"
     },
     "StructureDefinition/onco-core-TNMClinicalDistantMetastasesCategory": {
       "base": "StructureDefinition-onco-core-TNMClinicalDistantMetastasesCategory.html"
@@ -463,20 +220,17 @@
     "StructureDefinition/onco-core-TNMPathologicStageGroup": {
       "base": "StructureDefinition-onco-core-TNMPathologicStageGroup.html"
     },
+    "StructureDefinition/obf-TaxIdentificationNumber": {
+      "base": "StructureDefinition-obf-TaxIdentificationNumber.html"
+    },
+    "StructureDefinition/obf-datatype-Timing": {
+      "base": "StructureDefinition-obf-datatype-Timing.html"
+    },
     "StructureDefinition/onco-core-Tumor": {
       "base": "StructureDefinition-onco-core-Tumor.html"
     },
     "StructureDefinition/onco-core-TumorMarkerTest": {
       "base": "StructureDefinition-onco-core-TumorMarkerTest.html"
-    },
-    "StructureDefinition/obf-lab-UreaNitrogenCreatinineMRtoPtSerPlasQnLabObs": {
-      "base": "StructureDefinition-obf-lab-UreaNitrogenCreatinineMRtoPtSerPlasQnLabObs.html"
-    },
-    "StructureDefinition/obf-lab-UreaNitrogenMCncPtSerPlasQnLabObs": {
-      "base": "StructureDefinition-obf-lab-UreaNitrogenMCncPtSerPlasQnLabObs.html"
-    },
-    "StructureDefinition/vital-VitalSign": {
-      "base": "StructureDefinition-vital-VitalSign.html"
     },
     "StructureDefinition/obf-datatype-AnatomicalOrientation-extension": {
       "base": "StructureDefinition-obf-datatype-AnatomicalOrientation-extension.html",
@@ -486,24 +240,8 @@
       "base": "StructureDefinition-obf-Annotation-extension.html",
       "template-base": "sd-extension.html"
     },
-    "StructureDefinition/obf-ApplicableAgeRange-extension": {
-      "base": "StructureDefinition-obf-ApplicableAgeRange-extension.html",
-      "template-base": "sd-extension.html"
-    },
-    "StructureDefinition/obf-ApplicableSubpopulation-extension": {
-      "base": "StructureDefinition-obf-ApplicableSubpopulation-extension.html",
-      "template-base": "sd-extension.html"
-    },
     "StructureDefinition/obf-BasedOn-extension": {
       "base": "StructureDefinition-obf-BasedOn-extension.html",
-      "template-base": "sd-extension.html"
-    },
-    "StructureDefinition/vital-BloodPressureCuffSize-extension": {
-      "base": "StructureDefinition-vital-BloodPressureCuffSize-extension.html",
-      "template-base": "sd-extension.html"
-    },
-    "StructureDefinition/vital-BodyPosition-extension": {
-      "base": "StructureDefinition-vital-BodyPosition-extension.html",
       "template-base": "sd-extension.html"
     },
     "StructureDefinition/obf-CareContext-extension": {
@@ -518,20 +256,16 @@
       "base": "StructureDefinition-obf-datatype-Code-extension.html",
       "template-base": "sd-extension.html"
     },
-    "StructureDefinition/obf-Condition-extension": {
-      "base": "StructureDefinition-obf-Condition-extension.html",
-      "template-base": "sd-extension.html"
-    },
-    "StructureDefinition/obf-DiagnosisCode-extension": {
-      "base": "StructureDefinition-obf-DiagnosisCode-extension.html",
+    "StructureDefinition/obf-datatype-Comparator-extension": {
+      "base": "StructureDefinition-obf-datatype-Comparator-extension.html",
       "template-base": "sd-extension.html"
     },
     "StructureDefinition/obf-Dosage-extension": {
       "base": "StructureDefinition-obf-Dosage-extension.html",
       "template-base": "sd-extension.html"
     },
-    "StructureDefinition/obf-EncounterDiagnosis-extension": {
-      "base": "StructureDefinition-obf-EncounterDiagnosis-extension.html",
+    "StructureDefinition/obf-DoseSequenceNumber-extension": {
+      "base": "StructureDefinition-obf-DoseSequenceNumber-extension.html",
       "template-base": "sd-extension.html"
     },
     "StructureDefinition/onco-core-EvidenceType-extension": {
@@ -550,6 +284,10 @@
       "base": "StructureDefinition-obf-ExpectedPerformerType-extension.html",
       "template-base": "sd-extension.html"
     },
+    "StructureDefinition/obf-HandlingRisk-extension": {
+      "base": "StructureDefinition-obf-HandlingRisk-extension.html",
+      "template-base": "sd-extension.html"
+    },
     "StructureDefinition/onco-core-HistologyMorphologyBehavior-extension": {
       "base": "StructureDefinition-onco-core-HistologyMorphologyBehavior-extension.html",
       "template-base": "sd-extension.html"
@@ -562,28 +300,8 @@
       "base": "StructureDefinition-onco-core-IsPrimaryTumor-extension.html",
       "template-base": "sd-extension.html"
     },
-    "StructureDefinition/obf-datatype-LandmarkLocation-extension": {
-      "base": "StructureDefinition-obf-datatype-LandmarkLocation-extension.html",
-      "template-base": "sd-extension.html"
-    },
-    "StructureDefinition/obf-datatype-LandmarkToBodyLocationDirection-extension": {
-      "base": "StructureDefinition-obf-datatype-LandmarkToBodyLocationDirection-extension.html",
-      "template-base": "sd-extension.html"
-    },
-    "StructureDefinition/obf-datatype-LandmarkToBodyLocationDistance-extension": {
-      "base": "StructureDefinition-obf-datatype-LandmarkToBodyLocationDistance-extension.html",
-      "template-base": "sd-extension.html"
-    },
-    "StructureDefinition/obf-datatype-LandmarkType-extension": {
-      "base": "StructureDefinition-obf-datatype-LandmarkType-extension.html",
-      "template-base": "sd-extension.html"
-    },
     "StructureDefinition/obf-datatype-Laterality-extension": {
       "base": "StructureDefinition-obf-datatype-Laterality-extension.html",
-      "template-base": "sd-extension.html"
-    },
-    "StructureDefinition/obf-datatype-LowerBound-extension": {
-      "base": "StructureDefinition-obf-datatype-LowerBound-extension.html",
       "template-base": "sd-extension.html"
     },
     "StructureDefinition/obf-MedicationCodeOrReference-extension": {
@@ -594,6 +312,10 @@
       "base": "StructureDefinition-obf-Method-extension.html",
       "template-base": "sd-extension.html"
     },
+    "StructureDefinition/obf-datatype-Number-extension": {
+      "base": "StructureDefinition-obf-datatype-Number-extension.html",
+      "template-base": "sd-extension.html"
+    },
     "StructureDefinition/obf-datatype-OccurrenceTimeOrPeriod-extension": {
       "base": "StructureDefinition-obf-datatype-OccurrenceTimeOrPeriod-extension.html",
       "template-base": "sd-extension.html"
@@ -602,32 +324,12 @@
       "base": "StructureDefinition-obf-OnBehalfOf-extension.html",
       "template-base": "sd-extension.html"
     },
-    "StructureDefinition/obf-Organization-extension": {
-      "base": "StructureDefinition-obf-Organization-extension.html",
-      "template-base": "sd-extension.html"
-    },
     "StructureDefinition/obf-PartOf-extension": {
       "base": "StructureDefinition-obf-PartOf-extension.html",
       "template-base": "sd-extension.html"
     },
-    "StructureDefinition/obf-Participant-extension": {
-      "base": "StructureDefinition-obf-Participant-extension.html",
-      "template-base": "sd-extension.html"
-    },
     "StructureDefinition/obf-Participation-extension": {
       "base": "StructureDefinition-obf-Participation-extension.html",
-      "template-base": "sd-extension.html"
-    },
-    "StructureDefinition/obf-ParticipationPeriod-extension": {
-      "base": "StructureDefinition-obf-ParticipationPeriod-extension.html",
-      "template-base": "sd-extension.html"
-    },
-    "StructureDefinition/obf-ParticipationType-extension": {
-      "base": "StructureDefinition-obf-ParticipationType-extension.html",
-      "template-base": "sd-extension.html"
-    },
-    "StructureDefinition/vital-PreconditionCode-extension": {
-      "base": "StructureDefinition-vital-PreconditionCode-extension.html",
       "template-base": "sd-extension.html"
     },
     "StructureDefinition/onco-core-PrimaryCancerCondition-extension": {
@@ -638,16 +340,8 @@
       "base": "StructureDefinition-obf-datatype-PriorityCode-extension.html",
       "template-base": "sd-extension.html"
     },
-    "StructureDefinition/obf-datatype-PriorityRank-extension": {
-      "base": "StructureDefinition-obf-datatype-PriorityRank-extension.html",
-      "template-base": "sd-extension.html"
-    },
-    "StructureDefinition/obf-RadiationDosePerFraction-extension": {
-      "base": "StructureDefinition-obf-RadiationDosePerFraction-extension.html",
-      "template-base": "sd-extension.html"
-    },
-    "StructureDefinition/obf-RadiationFractionsDelivered-extension": {
-      "base": "StructureDefinition-obf-RadiationFractionsDelivered-extension.html",
+    "StructureDefinition/obf-RadiationDose-extension": {
+      "base": "StructureDefinition-obf-RadiationDose-extension.html",
       "template-base": "sd-extension.html"
     },
     "StructureDefinition/obf-ReasonCode-extension": {
@@ -656,14 +350,6 @@
     },
     "StructureDefinition/obf-ReasonReference-extension": {
       "base": "StructureDefinition-obf-ReasonReference-extension.html",
-      "template-base": "sd-extension.html"
-    },
-    "StructureDefinition/obf-ReferenceRange-extension": {
-      "base": "StructureDefinition-obf-ReferenceRange-extension.html",
-      "template-base": "sd-extension.html"
-    },
-    "StructureDefinition/onco-core-RegionStudied-extension": {
-      "base": "StructureDefinition-onco-core-RegionStudied-extension.html",
       "template-base": "sd-extension.html"
     },
     "StructureDefinition/obf-datatype-RelationToLandmark-extension": {
@@ -678,8 +364,12 @@
       "base": "StructureDefinition-obf-Requester-extension.html",
       "template-base": "sd-extension.html"
     },
-    "StructureDefinition/obf-SpecimenType-extension": {
-      "base": "StructureDefinition-obf-SpecimenType-extension.html",
+    "StructureDefinition/obf-SpecialHandling-extension": {
+      "base": "StructureDefinition-obf-SpecialHandling-extension.html",
+      "template-base": "sd-extension.html"
+    },
+    "StructureDefinition/obf-SpecimenTreatment-extension": {
+      "base": "StructureDefinition-obf-SpecimenTreatment-extension.html",
       "template-base": "sd-extension.html"
     },
     "StructureDefinition/obf-StatementDateTime-extension": {
@@ -690,10 +380,6 @@
       "base": "StructureDefinition-obf-Status-extension.html",
       "template-base": "sd-extension.html"
     },
-    "StructureDefinition/obf-StatusHistory-extension": {
-      "base": "StructureDefinition-obf-StatusHistory-extension.html",
-      "template-base": "sd-extension.html"
-    },
     "StructureDefinition/obf-SubjectOfRecord-extension": {
       "base": "StructureDefinition-obf-SubjectOfRecord-extension.html",
       "template-base": "sd-extension.html"
@@ -702,44 +388,12 @@
       "base": "StructureDefinition-obf-TerminationReason-extension.html",
       "template-base": "sd-extension.html"
     },
-    "StructureDefinition/obf-datatype-Text-extension": {
-      "base": "StructureDefinition-obf-datatype-Text-extension.html",
-      "template-base": "sd-extension.html"
-    },
-    "StructureDefinition/obf-datatype-TimePeriod-extension": {
-      "base": "StructureDefinition-obf-datatype-TimePeriod-extension.html",
-      "template-base": "sd-extension.html"
-    },
-    "StructureDefinition/obf-TotalRadiationDoseDelivered-extension": {
-      "base": "StructureDefinition-obf-TotalRadiationDoseDelivered-extension.html",
-      "template-base": "sd-extension.html"
-    },
     "StructureDefinition/obf-TreatmentIntent-extension": {
       "base": "StructureDefinition-obf-TreatmentIntent-extension.html",
       "template-base": "sd-extension.html"
     },
-    "StructureDefinition/obf-datatype-Type-extension": {
-      "base": "StructureDefinition-obf-datatype-Type-extension.html",
-      "template-base": "sd-extension.html"
-    },
-    "StructureDefinition/obf-datatype-UpperBound-extension": {
-      "base": "StructureDefinition-obf-datatype-UpperBound-extension.html",
-      "template-base": "sd-extension.html"
-    },
-    "StructureDefinition/onco-core-VariantDescription-extension": {
-      "base": "StructureDefinition-onco-core-VariantDescription-extension.html",
-      "template-base": "sd-extension.html"
-    },
-    "StructureDefinition/onco-core-VariantHGVSName-extension": {
-      "base": "StructureDefinition-onco-core-VariantHGVSName-extension.html",
-      "template-base": "sd-extension.html"
-    },
-    "StructureDefinition/onco-core-VariantIdentifier-extension": {
-      "base": "StructureDefinition-onco-core-VariantIdentifier-extension.html",
-      "template-base": "sd-extension.html"
-    },
-    "StructureDefinition/onco-core-VariantTested-extension": {
-      "base": "StructureDefinition-onco-core-VariantTested-extension.html",
+    "StructureDefinition/obf-datatype-Units-extension": {
+      "base": "StructureDefinition-obf-datatype-Units-extension.html",
       "template-base": "sd-extension.html"
     },
     "ValueSet/obf-AbnormalBodyStructureVS": {
@@ -750,39 +404,6 @@
     },
     "ValueSet/obf-datatype-AnatomicalOrientationVS": {
       "base": "ValueSet-obf-datatype-AnatomicalOrientationVS.html"
-    },
-    "ValueSet/vital-BloodPressureBodyLocationVS": {
-      "base": "ValueSet-vital-BloodPressureBodyLocationVS.html"
-    },
-    "ValueSet/vital-BloodPressureCuffSizeVS": {
-      "base": "ValueSet-vital-BloodPressureCuffSizeVS.html"
-    },
-    "ValueSet/vital-BloodPressureMethodVS": {
-      "base": "ValueSet-vital-BloodPressureMethodVS.html"
-    },
-    "ValueSet/vital-BodyHeightLengthMethodVS": {
-      "base": "ValueSet-vital-BodyHeightLengthMethodVS.html"
-    },
-    "ValueSet/vital-BodyHeightLengthUnitsVS": {
-      "base": "ValueSet-vital-BodyHeightLengthUnitsVS.html"
-    },
-    "ValueSet/vital-BodyHeightPreconditionVS": {
-      "base": "ValueSet-vital-BodyHeightPreconditionVS.html"
-    },
-    "ValueSet/obf-datatype-BodyLocationVS": {
-      "base": "ValueSet-obf-datatype-BodyLocationVS.html"
-    },
-    "ValueSet/vital-BodyPositionVS": {
-      "base": "ValueSet-vital-BodyPositionVS.html"
-    },
-    "ValueSet/vital-BodyWeightMethodVS": {
-      "base": "ValueSet-vital-BodyWeightMethodVS.html"
-    },
-    "ValueSet/vital-BodyWeightPreconditionVS": {
-      "base": "ValueSet-vital-BodyWeightPreconditionVS.html"
-    },
-    "ValueSet/vital-BodyWeightUnitsVS": {
-      "base": "ValueSet-vital-BodyWeightUnitsVS.html"
     },
     "ValueSet/onco-core-CancerBodyLocationVS": {
       "base": "ValueSet-onco-core-CancerBodyLocationVS.html"
@@ -799,12 +420,6 @@
     "ValueSet/onco-core-CancerStagingSystemVS": {
       "base": "ValueSet-onco-core-CancerStagingSystemVS.html"
     },
-    "ValueSet/vital-CardiopulmonaryPreconditionVS": {
-      "base": "ValueSet-vital-CardiopulmonaryPreconditionVS.html"
-    },
-    "ValueSet/obf-lab-ChoiceOfUnitsVS-g-per-dL": {
-      "base": "ValueSet-obf-lab-ChoiceOfUnitsVS-g-per-dL.html"
-    },
     "ValueSet/onco-core-ClinVarVS": {
       "base": "ValueSet-onco-core-ClinVarVS.html"
     },
@@ -817,35 +432,8 @@
     "ValueSet/obf-ECOGPerformanceStatusVS": {
       "base": "ValueSet-obf-ECOGPerformanceStatusVS.html"
     },
-    "ValueSet/obf-lab-EquivalentUnitsVS-g-per-L": {
-      "base": "ValueSet-obf-lab-EquivalentUnitsVS-g-per-L.html"
-    },
-    "ValueSet/obf-lab-EquivalentUnitsVS-mL-per-min-filtration-rate": {
-      "base": "ValueSet-obf-lab-EquivalentUnitsVS-mL-per-min-filtration-rate.html"
-    },
-    "ValueSet/obf-lab-EquivalentUnitsVS-million-per-uL": {
-      "base": "ValueSet-obf-lab-EquivalentUnitsVS-million-per-uL.html"
-    },
-    "ValueSet/obf-lab-EquivalentUnitsVS-per-100-WBC": {
-      "base": "ValueSet-obf-lab-EquivalentUnitsVS-per-100-WBC.html"
-    },
-    "ValueSet/obf-lab-EquivalentUnitsVS-thousand-per-uL": {
-      "base": "ValueSet-obf-lab-EquivalentUnitsVS-thousand-per-uL.html"
-    },
-    "ValueSet/obf-lab-EquivalentUnitsVS-volume-fraction": {
-      "base": "ValueSet-obf-lab-EquivalentUnitsVS-volume-fraction.html"
-    },
     "ValueSet/onco-core-GeneticSpecimenTypeVS": {
       "base": "ValueSet-onco-core-GeneticSpecimenTypeVS.html"
-    },
-    "ValueSet/onco-core-GeneticTestMethodVS": {
-      "base": "ValueSet-onco-core-GeneticTestMethodVS.html"
-    },
-    "ValueSet/onco-core-GeneticTestVS": {
-      "base": "ValueSet-onco-core-GeneticTestVS.html"
-    },
-    "ValueSet/onco-core-GenomicSourceClassVS": {
-      "base": "ValueSet-onco-core-GenomicSourceClassVS.html"
     },
     "ValueSet/onco-core-HistologyMorphologyBehaviorVS": {
       "base": "ValueSet-onco-core-HistologyMorphologyBehaviorVS.html"
@@ -856,14 +444,11 @@
     "ValueSet/obf-datatype-LandmarkTypeVS": {
       "base": "ValueSet-obf-datatype-LandmarkTypeVS.html"
     },
-    "ValueSet/obf-datatype-PositiveNegativeVS": {
-      "base": "ValueSet-obf-datatype-PositiveNegativeVS.html"
+    "ValueSet/obf-datatype-LateralityVS": {
+      "base": "ValueSet-obf-datatype-LateralityVS.html"
     },
     "ValueSet/onco-core-PrimaryOrUncertainBehaviorCancerDisorderVS": {
       "base": "ValueSet-onco-core-PrimaryOrUncertainBehaviorCancerDisorderVS.html"
-    },
-    "ValueSet/obf-QuantitativeResultInterpretationVS": {
-      "base": "ValueSet-obf-QuantitativeResultInterpretationVS.html"
     },
     "ValueSet/obf-RadiationProcedureVS": {
       "base": "ValueSet-obf-RadiationProcedureVS.html"
@@ -925,13 +510,13 @@
     "CodeSystem/obf-datatype-SettingCS": {
       "base": "CodeSystem-obf-datatype-SettingCS.html"
     },
-    "Observation/mCODEGeneticVariantFoundExample01": {
-      "base": "Observation-mCODEGeneticVariantFoundExample01.html",
-      "source": "mCODEGeneticVariantFoundExample01.json"
+    "Observation/mCODEGeneticVariantExample01": {
+      "base": "Observation-mCODEGeneticVariantExample01.html",
+      "source": "mCODEGeneticVariantExample01.json"
     },
-    "Observation/mCODEGeneticVariantTestedExample01": {
-      "base": "Observation-mCODEGeneticVariantTestedExample01.html",
-      "source": "mCODEGeneticVariantTestedExample01.json"
+    "Observation/mCODEGeneticVariantExample02": {
+      "base": "Observation-mCODEGeneticVariantExample02.html",
+      "source": "mCODEGeneticVariantExample02.json"
     },
     "DiagnosticReport/mCODEGenomicsReportExample01": {
       "base": "DiagnosticReport-mCODEGenomicsReportExample01.html",
@@ -944,6 +529,10 @@
     "Patient/mCODEPatientExample01": {
       "base": "Patient-mCODEPatientExample01.html",
       "source": "mCODEPatientExample01.json"
+    },
+    "Patient/mCODEPatientExample02": {
+      "base": "Patient-mCODEPatientExample02.html",
+      "source": "mCODEPatientExample02.json"
     },
     "Practitioner/mCODEPractitionerExample01": {
       "base": "Practitioner-mCODEPractitionerExample01.html",

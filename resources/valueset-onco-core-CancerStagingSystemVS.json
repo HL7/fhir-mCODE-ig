@@ -7,7 +7,7 @@
   },
   "url": "http://hl7.org/fhir/us/mcode/ValueSet/onco-core-CancerStagingSystemVS",
   "name": "CancerStagingSystemVS",
-  "title": "CancerStagingSystemVS",
+  "title": "Cancer Staging System VS",
   "status": "draft",
   "publisher": "HL7 International Clinical Interoperability Council",
   "contact": [
@@ -20,7 +20,7 @@
       ]
     }
   ],
-  "date": "2019-08-01",
+  "date": "2019-12-17",
   "description": "System used for staging. Because SNOMED CT does not currently have a code representing AJCC Version 8, specify the exact text 'AJCC Version 8' in the text sub-field of the code structure, and omit the code.",
   "compose": {
     "include": [

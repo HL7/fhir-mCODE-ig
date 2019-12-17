@@ -1,0 +1,23 @@
+
+<p> </p>
+<p><b>Mapping Source</b></p>
+<p>This structure represents the following mapping definition:</p>
+<pre>
+obf.Dosage maps to Dosage:
+  DoseSequenceNumber maps to sequence
+  InstructionText maps to text
+  InstructionCode maps to additionalInstruction
+  PatientInstruction maps to patientInstruction
+  Timing maps to timing
+  AsNeeded maps to asNeeded[x]
+  AdministrationSite maps to site
+  RouteIntoBody maps to route
+  Method maps to method
+  MaxDosePerPeriod maps to maxDosePerPeriod
+  MaxDosePerAdministration maps to maxDosePerAdministration
+  MaxDosePerLifetime maps to maxDosePerLifetime
+  constrain doseAndRate to 0..1
+  DoseAndRate.DoseAmount maps to doseAndRate.dose[x]
+  DoseAndRate.DoseRate maps to doseAndRate.rate[x]
+
+</pre>

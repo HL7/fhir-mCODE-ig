@@ -7,10 +7,10 @@
   },
   "url": "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-Patient",
   "name": "Patient",
-  "title": "obf-Patient",
+  "title": "Patient",
   "status": "active",
   "experimental": false,
-  "date": "2019-08-01",
+  "date": "2019-12-17",
   "publisher": "HL7 International Clinical Interoperability Council",
   "contact": [
     {
@@ -77,7 +77,7 @@
       {
         "id": "Patient",
         "path": "Patient",
-        "short": "obf-Patient",
+        "short": "Patient",
         "definition": "A person in the role of a patient. Sometimes, the patient is not the subject of information in a clinical statement where the Patient is the SubjectOfRecord.\n\nCompatibility: Lies at the intersection of Argonaut and US Core Patient. MaritalStatus has a required binding in Argonaut, but an extensible binding in US-Core. To be feasible under both DSTU2 Argonaut and STU3 US-Core, the required binding strength is adopted.",
         "alias": [
           "SubjectOfCare Client Resident"
@@ -3332,7 +3332,7 @@
       {
         "id": "Patient",
         "path": "Patient",
-        "short": "obf-Patient",
+        "short": "Patient",
         "definition": "A person in the role of a patient. Sometimes, the patient is not the subject of information in a clinical statement where the Patient is the SubjectOfRecord.\n\nCompatibility: Lies at the intersection of Argonaut and US Core Patient. MaritalStatus has a required binding in Argonaut, but an extensible binding in US-Core. To be feasible under both DSTU2 Argonaut and STU3 US-Core, the required binding strength is adopted.",
         "mustSupport": false,
         "isModifier": false,

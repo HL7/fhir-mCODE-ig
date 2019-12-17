@@ -7,9 +7,9 @@
   },
   "url": "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-datatype-Laterality-extension",
   "name": "Laterality",
-  "title": "obf-datatype-Laterality",
+  "title": "Laterality",
   "status": "draft",
-  "date": "2019-08-01",
+  "date": "2019-12-17",
   "publisher": "HL7 International Clinical Interoperability Council",
   "contact": [
     {
@@ -208,7 +208,7 @@
         ],
         "binding": {
           "strength": "extensible",
-          "valueSet": "http://hl7.org/fhir/ValueSet/bodysite-laterality"
+          "valueSet": "http://hl7.org/fhir/us/mcode/ValueSet/obf-datatype-LateralityVS"
         }
       }
     ]
@@ -250,7 +250,7 @@
         ],
         "binding": {
           "strength": "extensible",
-          "valueSet": "http://hl7.org/fhir/ValueSet/bodysite-laterality"
+          "valueSet": "http://hl7.org/fhir/us/mcode/ValueSet/obf-datatype-LateralityVS"
         }
       }
     ]

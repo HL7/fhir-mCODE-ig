@@ -7,10 +7,10 @@
   },
   "url": "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-MedicationStatement",
   "name": "MedicationStatement",
-  "title": "obf-MedicationStatement",
+  "title": "Medication Statement",
   "status": "active",
   "experimental": false,
-  "date": "2019-08-01",
+  "date": "2019-12-17",
   "publisher": "HL7 International Clinical Interoperability Council",
   "contact": [
     {
@@ -72,7 +72,7 @@
       {
         "id": "MedicationStatement",
         "path": "MedicationStatement",
-        "short": "obf-MedicationStatement",
+        "short": "Medication Statement",
         "definition": "A record of the use of a medication (individual administration or entire course). The use may be reported by the patient or clinician and adminstration does not have to be directly observed.\n\nImplementation note: Although FHIR supports the asserter (information source) and date asserted, it does not have a place for the author (who created and is responsible for the statement) and recorder (who entered the statement). Extensions are provided.\n\nConformance note: The treatment of 'not taken' has changed from DSTU2 and STU3 to R4. In R4, status and statusReason are used to indicate medications not taken. For upward compatibility, the 'not taken' attributes are profiled out.\nReasonCode is a choice of CodeableConcept or ref(Condition) in DSTU2, and limited to one reason (pick a type). In STU3 and R4, there can be multiple reason codes, and multiple reason references, simultaneously.\n\nImplementation note: Preference is given to using the National Library of Medicine (NLM) RxNorm terminology for medications. RxNorm is a coding standard established by the Office of the National Coordinator (ONC). However, RxNorm is restricted to FDA-approved drugs and does not include clinical trial drugs. MedicationStatement allows for the inclusion of other coding systems like the NCI Thesaurus (NCIT) to represent clinical trial oncology drugs.",
         "comment": "When interpreting a medicationStatement, the value of the status and NotTaken needed to be considered:\rMedicationStatement.status + MedicationStatement.wasNotTaken\rStatus=Active + NotTaken=T = Not currently taking\rStatus=Completed + NotTaken=T = Not taken in the past\rStatus=Intended + NotTaken=T = No intention of taking\rStatus=Active + NotTaken=F = Taking, but not as prescribed\rStatus=Active + NotTaken=F = Taking\rStatus=Intended +NotTaken= F = Will be taking (not started)\rStatus=Completed + NotTaken=F = Taken in past\rStatus=In Error + NotTaken=N/A = In Error.",
         "min": 0,
@@ -631,7 +631,8 @@
             "code": "Reference",
             "targetProfile": [
               "http://hl7.org/fhir/StructureDefinition/ServiceRequest",
-              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest"
+              "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-MedicationRequest",
+              "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-ProcedureRequest"
             ]
           }
         ],
@@ -665,7 +666,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/StructureDefinition/MedicationAdministration",
+              "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-MedicationAdministration",
               "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-MedicationStatement",
               "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-Procedure",
               "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-Observation"
@@ -955,7 +956,7 @@
         "short": "The date/time or interval when the medication is/was/will be taken",
         "definition": "The interval of time during which it is being asserted that the patient is/was/will be taking the medication (or was not taking, when the MedicationStatement.taken element is No).",
         "comment": "This attribute reflects the period over which the patient consumed the medication and is expected to be populated on the majority of Medication Statements. If the medication is still being taken at the time the statement is recorded, the \"end\" date will be omitted.  The date/time attribute supports a variety of dates - year, year/month and exact date.  If something more than this is required, this should be conveyed as text.",
-        "min": 1,
+        "min": 0,
         "max": "1",
         "base": {
           "path": "MedicationStatement.effective[x]",
@@ -1198,7 +1199,10 @@
         },
         "type": [
           {
-            "code": "Annotation"
+            "code": "Annotation",
+            "profile": [
+              "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-Annotation"
+            ]
           }
         ],
         "isModifier": false,
@@ -1229,7 +1233,10 @@
         },
         "type": [
           {
-            "code": "Dosage"
+            "code": "Dosage",
+            "profile": [
+              "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-Dosage"
+            ]
           }
         ],
         "isModifier": false,
@@ -1248,7 +1255,7 @@
       {
         "id": "MedicationStatement",
         "path": "MedicationStatement",
-        "short": "obf-MedicationStatement",
+        "short": "Medication Statement",
         "definition": "A record of the use of a medication (individual administration or entire course). The use may be reported by the patient or clinician and adminstration does not have to be directly observed.\n\nImplementation note: Although FHIR supports the asserter (information source) and date asserted, it does not have a place for the author (who created and is responsible for the statement) and recorder (who entered the statement). Extensions are provided.\n\nConformance note: The treatment of 'not taken' has changed from DSTU2 and STU3 to R4. In R4, status and statusReason are used to indicate medications not taken. For upward compatibility, the 'not taken' attributes are profiled out.\nReasonCode is a choice of CodeableConcept or ref(Condition) in DSTU2, and limited to one reason (pick a type). In STU3 and R4, there can be multiple reason codes, and multiple reason references, simultaneously.\n\nImplementation note: Preference is given to using the National Library of Medicine (NLM) RxNorm terminology for medications. RxNorm is a coding standard established by the Office of the National Coordinator (ONC). However, RxNorm is restricted to FDA-approved drugs and does not include clinical trial drugs. MedicationStatement allows for the inclusion of other coding systems like the NCI Thesaurus (NCIT) to represent clinical trial oncology drugs.",
         "mustSupport": false,
         "isModifier": false,
@@ -1333,7 +1340,8 @@
             "code": "Reference",
             "targetProfile": [
               "http://hl7.org/fhir/StructureDefinition/ServiceRequest",
-              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest"
+              "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-MedicationRequest",
+              "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-ProcedureRequest"
             ]
           }
         ]
@@ -1345,7 +1353,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/StructureDefinition/MedicationAdministration",
+              "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-MedicationAdministration",
               "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-MedicationStatement",
               "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-Procedure",
               "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-Observation"
@@ -1377,12 +1385,6 @@
             ]
           }
         ]
-      },
-      {
-        "id": "MedicationStatement.effective[x]",
-        "path": "MedicationStatement.effective[x]",
-        "min": 1,
-        "max": "1"
       },
       {
         "id": "MedicationStatement.informationSource",
@@ -1423,10 +1425,30 @@
         "definition": "Condition or observation that supports why the medication is being/was taken"
       },
       {
+        "id": "MedicationStatement.note",
+        "path": "MedicationStatement.note",
+        "type": [
+          {
+            "code": "Annotation",
+            "profile": [
+              "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-Annotation"
+            ]
+          }
+        ]
+      },
+      {
         "id": "MedicationStatement.dosage",
         "path": "MedicationStatement.dosage",
         "min": 0,
-        "max": "1"
+        "max": "1",
+        "type": [
+          {
+            "code": "Dosage",
+            "profile": [
+              "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-Dosage"
+            ]
+          }
+        ]
       }
     ]
   }

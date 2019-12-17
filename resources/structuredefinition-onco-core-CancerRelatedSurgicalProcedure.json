@@ -3,14 +3,14 @@
   "id": "onco-core-CancerRelatedSurgicalProcedure",
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>CancerRelatedSurgicalProcedure Profile</b></p>\n  <p>A surgical action addressing a cancer condition.\n\nConformance note: If an ICD-10-PCS code is used in the code attribute, and there is a semantically equivalent SNOMED CT or CPT code, the resulting Procedure instance will not be compliant with [US Core Profiles](http://hl7.org/fhir/us/core/STU3/index.html).</p>\n  <p><b>Mapping Summary</b></p>\n  <p><pre>onco.core.CancerRelatedSurgicalProcedure maps to http://hl7.org/fhir/us/core/StructureDefinition/us-core-procedure:\n  Language maps to language\n  ImplicitRules maps to implicitRules\n  Metadata.VersionId maps to meta.versionId\n  Metadata.SourceSystem maps to meta.source\n  Metadata.Profile maps to meta.profile\n  Metadata.LastUpdated maps to meta.lastUpdated\n  Metadata.SecurityLabel maps to meta.security\n  Metadata.Tag maps to meta.tag\n  Narrative maps to text\n  Identifier maps to identifier\n  ProcedureBasedOn maps to basedOn\n  ProcedurePartOf maps to partOf  // add Observation, MedicationAdministration\n  Status maps to status\n  StatusReason maps to statusReason\n  Category maps to category\n  Code maps to code\n  SubjectOfRecord maps to subject\n  CareContext maps to encounter\n  OccurrenceTimeOrPeriod maps to performed[x]\n  PersonAuthor maps to recorder\n  PersonInformationSource maps to asserter\n  Participation maps to performer\n  Participation.Participant maps to performer.actor  // Added Target Type PractitionerRole -- not implemented\n  Participation.ParticipationType maps to performer.function  // renamed role to function in R4\n  Participation.OnBehalfOf maps to performer.onBehalfOf\n  Location maps to location\n  ReasonCode maps to reasonCode\n  CancerProcedureReasonReference maps to reasonReference\n  SurgicalBodyLocation.Code maps to bodySite\n  SurgicalBodyLocation.Laterality maps to bodySite.extension\n  SurgicalBodyLocation.AnatomicalOrientation maps to bodySite.extension\n  SurgicalBodyLocation.RelationToLandmark maps to bodySite.extension\n  Annotation maps to note\n  Outcome maps to outcome\n  DiagnosticReport maps to report\n  ComplicationCode maps to complication\n  ComplicationReference maps to complicationDetail\n  FollowUp maps to followUp\n  FocalDevice maps to focalDevice\n  FocalDevice.Device maps to focalDevice.manipulated\n  FocalDevice.FocalDeviceAction maps to focalDevice.action\n  MaterialUsedReference maps to usedReference\n  UsedCode maps to usedCode\n</pre></p>\n</div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>CancerRelatedSurgicalProcedure Profile</b></p>\n  <p>A surgical action addressing a cancer condition. The scope of this profile has been narrowed to cancer-related procedures by constraining the ReasonReference and ReasonCode to cancer conditions.\n\nConformance note: If an ICD-10-PCS code is used in the code attribute, and there is a semantically equivalent SNOMED CT or CPT code, the resulting Procedure instance will not be compliant with [US Core Profiles](http://hl7.org/fhir/us/core/STU3/index.html).</p>\n  <p><b>Mapping Summary</b></p>\n  <p><pre>onco.core.CancerRelatedSurgicalProcedure maps to http://hl7.org/fhir/us/core/StructureDefinition/us-core-procedure:\n  Language maps to language\n  ImplicitRules maps to implicitRules\n  Metadata.VersionId maps to meta.versionId\n  Metadata.SourceSystem maps to meta.source\n  Metadata.Profile maps to meta.profile\n  Metadata.LastUpdated maps to meta.lastUpdated\n  Metadata.SecurityLabel maps to meta.security\n  Metadata.Tag maps to meta.tag\n  Narrative maps to text\n  Identifier maps to identifier\n  ProcedureBasedOn maps to basedOn\n  ProcedurePartOf maps to partOf  // add Observation, MedicationAdministration\n  Status maps to status\n  StatusReason maps to statusReason\n  Category maps to category\n  Code maps to code\n  SubjectOfRecord maps to subject\n  CareContext maps to encounter\n  OccurrenceTimeOrPeriod maps to performed[x]\n  PersonAuthor maps to recorder\n  PersonInformationSource maps to asserter\n  Participation maps to performer\n  Participation.Participant maps to performer.actor  // Added Target Type PractitionerRole -- not implemented\n  Participation.ParticipationType maps to performer.function  // renamed role to function in R4\n  Participation.OnBehalfOf maps to performer.onBehalfOf\n  Location maps to location\n  ReasonCode maps to reasonCode\n  CancerProcedureReasonReference maps to reasonReference\n  SurgicalBodyLocation.Code maps to bodySite\n  SurgicalBodyLocation.Laterality maps to bodySite.extension\n  SurgicalBodyLocation.AnatomicalOrientation maps to bodySite.extension\n  SurgicalBodyLocation.RelationToLandmark maps to bodySite.extension\n  Annotation maps to note\n  Outcome maps to outcome\n  DiagnosticReport maps to report\n  ComplicationCode maps to complication\n  ComplicationReference maps to complicationDetail\n  FollowUp maps to followUp\n  FocalDevice maps to focalDevice\n  FocalDevice.Device maps to focalDevice.manipulated\n  FocalDevice.FocalDeviceAction maps to focalDevice.action\n  MaterialUsedReference maps to usedReference\n  UsedCode maps to usedCode\n</pre></p>\n</div>"
   },
   "url": "http://hl7.org/fhir/us/mcode/StructureDefinition/onco-core-CancerRelatedSurgicalProcedure",
   "name": "CancerRelatedSurgicalProcedure",
-  "title": "onco-core-CancerRelatedSurgicalProcedure",
+  "title": "Cancer Related Surgical Procedure",
   "status": "active",
   "experimental": false,
-  "date": "2019-08-01",
+  "date": "2019-12-17",
   "publisher": "HL7 International Clinical Interoperability Council",
   "contact": [
     {
@@ -22,7 +22,7 @@
       ]
     }
   ],
-  "description": "A surgical action addressing a cancer condition.\n\nConformance note: If an ICD-10-PCS code is used in the code attribute, and there is a semantically equivalent SNOMED CT or CPT code, the resulting Procedure instance will not be compliant with [US Core Profiles](http://hl7.org/fhir/us/core/STU3/index.html).",
+  "description": "A surgical action addressing a cancer condition. The scope of this profile has been narrowed to cancer-related procedures by constraining the ReasonReference and ReasonCode to cancer conditions.\n\nConformance note: If an ICD-10-PCS code is used in the code attribute, and there is a semantically equivalent SNOMED CT or CPT code, the resulting Procedure instance will not be compliant with [US Core Profiles](http://hl7.org/fhir/us/core/STU3/index.html).",
   "jurisdiction": [
     {
       "coding": [
@@ -72,8 +72,8 @@
       {
         "id": "Procedure",
         "path": "Procedure",
-        "short": "onco-core-CancerRelatedSurgicalProcedure",
-        "definition": "A surgical action addressing a cancer condition.\n\nConformance note: If an ICD-10-PCS code is used in the code attribute, and there is a semantically equivalent SNOMED CT or CPT code, the resulting Procedure instance will not be compliant with [US Core Profiles](http://hl7.org/fhir/us/core/STU3/index.html).",
+        "short": "Cancer Related Surgical Procedure",
+        "definition": "A surgical action addressing a cancer condition. The scope of this profile has been narrowed to cancer-related procedures by constraining the ReasonReference and ReasonCode to cancer conditions.\n\nConformance note: If an ICD-10-PCS code is used in the code attribute, and there is a semantically equivalent SNOMED CT or CPT code, the resulting Procedure instance will not be compliant with [US Core Profiles](http://hl7.org/fhir/us/core/STU3/index.html).",
         "min": 0,
         "max": "*",
         "base": {
@@ -572,6 +572,7 @@
           {
             "code": "Reference",
             "targetProfile": [
+              "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-ProcedureRequest",
               "http://hl7.org/fhir/StructureDefinition/ServiceRequest"
             ]
           }
@@ -610,7 +611,7 @@
             "code": "Reference",
             "targetProfile": [
               "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-Procedure",
-              "http://hl7.org/fhir/StructureDefinition/MedicationAdministration",
+              "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-MedicationAdministration",
               "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-Observation"
             ]
           }
@@ -1346,7 +1347,8 @@
             "identity": "rim",
             "map": ".reasonCode"
           }
-        ]
+        ],
+        "mustSupport": true
       },
       {
         "id": "Procedure.reasonReference",
@@ -1385,7 +1387,8 @@
             "identity": "rim",
             "map": ".reasonCode"
           }
-        ]
+        ],
+        "mustSupport": true
       },
       {
         "id": "Procedure.bodySite",
@@ -1408,8 +1411,15 @@
         "isModifier": false,
         "isSummary": true,
         "binding": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+              "valueString": "BodySite"
+            }
+          ],
           "strength": "preferred",
-          "valueSet": "http://hl7.org/fhir/us/mcode/ValueSet/obf-datatype-BodyLocationVS"
+          "description": "Codes describing anatomical locations. May include laterality.",
+          "valueSet": "http://hl7.org/fhir/ValueSet/body-site"
         },
         "mapping": [
           {
@@ -1439,7 +1449,13 @@
         },
         "type": [
           {
-            "code": "string"
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type",
+                "valueUrl": "string"
+              }
+            ],
+            "code": "http://hl7.org/fhirpath/System.String"
           }
         ],
         "isModifier": false,
@@ -1483,6 +1499,24 @@
             "code": "Extension"
           }
         ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          },
+          {
+            "key": "ext-1",
+            "severity": "error",
+            "human": "Must have either extensions or value[x], not both",
+            "expression": "extension.exists() != value.exists()",
+            "xpath": "exists(f:extension)!=exists(f:*[starts-with(local-name(.), \"value\")])",
+            "source": "http://hl7.org/fhir/StructureDefinition/Extension"
+          }
+        ],
         "isModifier": false,
         "isSummary": false,
         "mapping": [
@@ -1511,6 +1545,24 @@
             ]
           }
         ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          },
+          {
+            "key": "ext-1",
+            "severity": "error",
+            "human": "Must have either extensions or value[x], not both",
+            "expression": "extension.exists() != value.exists()",
+            "xpath": "exists(f:extension)!=exists(f:*[starts-with(local-name(.), \"value\")])",
+            "source": "http://hl7.org/fhir/StructureDefinition/Extension"
+          }
+        ],
         "isModifier": false,
         "isSummary": false,
         "sliceName": "laterality"
@@ -1532,6 +1584,24 @@
             "profile": [
               "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-datatype-AnatomicalOrientation-extension"
             ]
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          },
+          {
+            "key": "ext-1",
+            "severity": "error",
+            "human": "Must have either extensions or value[x], not both",
+            "expression": "extension.exists() != value.exists()",
+            "xpath": "exists(f:extension)!=exists(f:*[starts-with(local-name(.), \"value\")])",
+            "source": "http://hl7.org/fhir/StructureDefinition/Extension"
           }
         ],
         "isModifier": false,
@@ -1557,6 +1627,24 @@
             ]
           }
         ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          },
+          {
+            "key": "ext-1",
+            "severity": "error",
+            "human": "Must have either extensions or value[x], not both",
+            "expression": "extension.exists() != value.exists()",
+            "xpath": "exists(f:extension)!=exists(f:*[starts-with(local-name(.), \"value\")])",
+            "source": "http://hl7.org/fhir/StructureDefinition/Extension"
+          }
+        ],
         "isModifier": false,
         "isSummary": false,
         "sliceName": "relationtolandmark"
@@ -1578,6 +1666,16 @@
         "type": [
           {
             "code": "Coding"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
         "isModifier": false,
@@ -1620,6 +1718,16 @@
         "type": [
           {
             "code": "string"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
         "isModifier": false,
@@ -1826,7 +1934,10 @@
         },
         "type": [
           {
-            "code": "Annotation"
+            "code": "Annotation",
+            "profile": [
+              "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-Annotation"
+            ]
           }
         ],
         "isModifier": false,
@@ -2120,8 +2231,8 @@
       {
         "id": "Procedure",
         "path": "Procedure",
-        "short": "onco-core-CancerRelatedSurgicalProcedure",
-        "definition": "A surgical action addressing a cancer condition.\n\nConformance note: If an ICD-10-PCS code is used in the code attribute, and there is a semantically equivalent SNOMED CT or CPT code, the resulting Procedure instance will not be compliant with [US Core Profiles](http://hl7.org/fhir/us/core/STU3/index.html).",
+        "short": "Cancer Related Surgical Procedure",
+        "definition": "A surgical action addressing a cancer condition. The scope of this profile has been narrowed to cancer-related procedures by constraining the ReasonReference and ReasonCode to cancer conditions.\n\nConformance note: If an ICD-10-PCS code is used in the code attribute, and there is a semantically equivalent SNOMED CT or CPT code, the resulting Procedure instance will not be compliant with [US Core Profiles](http://hl7.org/fhir/us/core/STU3/index.html).",
         "mustSupport": false,
         "isModifier": false,
         "isSummary": false
@@ -2197,6 +2308,7 @@
           {
             "code": "Reference",
             "targetProfile": [
+              "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-ProcedureRequest",
               "http://hl7.org/fhir/StructureDefinition/ServiceRequest"
             ]
           }
@@ -2213,7 +2325,7 @@
             "code": "Reference",
             "targetProfile": [
               "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-Procedure",
-              "http://hl7.org/fhir/StructureDefinition/MedicationAdministration",
+              "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-MedicationAdministration",
               "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-Observation"
             ]
           }
@@ -2333,7 +2445,8 @@
         "binding": {
           "strength": "extensible",
           "valueSet": "http://hl7.org/fhir/us/mcode/ValueSet/onco-core-CancerDisorderVS"
-        }
+        },
+        "mustSupport": true
       },
       {
         "id": "Procedure.reasonReference",
@@ -2350,14 +2463,22 @@
           }
         ],
         "short": "Reference to a primary or secondary cancer condition",
-        "definition": "Reference to a primary or secondary cancer condition."
+        "definition": "Reference to a primary or secondary cancer condition.",
+        "mustSupport": true
       },
       {
         "id": "Procedure.bodySite",
         "path": "Procedure.bodySite",
         "binding": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+              "valueString": "BodySite"
+            }
+          ],
           "strength": "preferred",
-          "valueSet": "http://hl7.org/fhir/us/mcode/ValueSet/obf-datatype-BodyLocationVS"
+          "description": "Codes describing anatomical locations. May include laterality.",
+          "valueSet": "http://hl7.org/fhir/ValueSet/body-site"
         }
       },
       {
@@ -2377,6 +2498,24 @@
             "profile": [
               "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-datatype-Laterality-extension"
             ]
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          },
+          {
+            "key": "ext-1",
+            "severity": "error",
+            "human": "Must have either extensions or value[x], not both",
+            "expression": "extension.exists() != value.exists()",
+            "xpath": "exists(f:extension)!=exists(f:*[starts-with(local-name(.), \"value\")])",
+            "source": "http://hl7.org/fhir/StructureDefinition/Extension"
           }
         ],
         "isModifier": false,
@@ -2402,6 +2541,24 @@
             ]
           }
         ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          },
+          {
+            "key": "ext-1",
+            "severity": "error",
+            "human": "Must have either extensions or value[x], not both",
+            "expression": "extension.exists() != value.exists()",
+            "xpath": "exists(f:extension)!=exists(f:*[starts-with(local-name(.), \"value\")])",
+            "source": "http://hl7.org/fhir/StructureDefinition/Extension"
+          }
+        ],
         "isModifier": false,
         "isSummary": false,
         "sliceName": "anatomicalorientation"
@@ -2423,6 +2580,24 @@
             "profile": [
               "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-datatype-RelationToLandmark-extension"
             ]
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          },
+          {
+            "key": "ext-1",
+            "severity": "error",
+            "human": "Must have either extensions or value[x], not both",
+            "expression": "extension.exists() != value.exists()",
+            "xpath": "exists(f:extension)!=exists(f:*[starts-with(local-name(.), \"value\")])",
+            "source": "http://hl7.org/fhir/StructureDefinition/Extension"
           }
         ],
         "isModifier": false,
@@ -2449,6 +2624,18 @@
             "code": "Reference",
             "targetProfile": [
               "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-Condition"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Procedure.note",
+        "path": "Procedure.note",
+        "type": [
+          {
+            "code": "Annotation",
+            "profile": [
+              "http://hl7.org/fhir/us/mcode/StructureDefinition/obf-Annotation"
             ]
           }
         ]

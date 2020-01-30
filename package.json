@@ -1,0 +1,38 @@
+{
+  "name": "fhir.us.mcode",
+  "version": "0.9.5",
+  "canonical": "http://hl7.org/fhir/us/mcode",
+  "url": "http://hl7.org/fhir/us/mcode/ImplementationGuide/fhir.us.mcode",
+  "title": "HL7 FHIR Implementation Guide: minimal Common Oncology Data Elements (mCODE) Release 1 - US Realm | STU1 PreRel#2",
+  "description": "mCODE™ (short for Minimal Common Oncology Data Elements) is an initiative intended to assemble a core set of structured data elements for oncology electronic health records.",
+  "dependencies": {
+    "hl7.fhir.r4.core": "4.0.1",
+    "hl7.fhir.us.core": "3.1.0"
+  },
+  "keywords": [
+    "US Realm",
+    "Cancer",
+    "Oncology",
+    "FSH"
+  ],
+  "language": "en",
+  "author": "HL7 International Clinical Interoperability Council",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://www.hl7.org/Special/committees/cic"
+        }
+      ]
+    }
+  ],
+  "maintainers": [
+    {
+      "name": "Mark Kramer",
+      "organization": "The MITRE Corporation",
+      "email": "mkramer@mitre.org"
+    }
+  ],
+  "license": "CC0-1.0"
+}

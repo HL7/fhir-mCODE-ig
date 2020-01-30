@@ -1,0 +1,17 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "HGNCVS",
+  "id": "HGNCVS",
+  "title": "HUGO Gene Nomenclature Committee Gene Names Value Set",
+  "description": "HUGO Gene Nomenclature Committee Gene Names Value Set",
+  "version": "0.9.5",
+  "url": "http://hl7.org/fhir/us/mcode/ValueSet/HGNCVS",
+  "compose": {
+    "include": [
+      {
+        "system": "http://www.genenames.org/geneId"
+      }
+    ]
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "CancerStagingSystemVS",
+  "id": "CancerStagingSystemVS",
+  "title": "Cancer Staging System Value Set",
+  "description": "System used for staging. Because SNOMED CT does not currently have a code representing AJCC Version 8, specify the exact text 'AJCC Version 8' in the text sub-field of the code structure, and omit the code.",
+  "version": "0.9.5",
+  "url": "http://hl7.org/fhir/us/mcode/ValueSet/CancerStagingSystemVS",
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "concept": [
+          {
+            "code": "444256004",
+            "display": "American Joint Commission on Cancer, Cancer Staging Manual, 6th edition neoplasm staging system (tumor staging)"
+          },
+          {
+            "code": "443830009",
+            "display": "American Joint Commission on Cancer, Cancer Staging Manual, 7th edition neoplasm staging system (tumor staging)"
+          },
+          {
+            "code": "258235000",
+            "display": "International Union Against Cancer (tumor staging)"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,143 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "GeneticSpecimenTypeVS",
+  "id": "GeneticSpecimenTypeVS",
+  "title": "Genetic Specimen Type Value Set",
+  "description": "The type of specimen analyzed in a genetic test. The values are taken from code system http://terminology.hl7.org/CodeSystem/v2-0487, and represent a subset of HL7 Version 2 Table 0487 (http://hl7.org/fhir/v2/0487).",
+  "version": "0.9.5",
+  "url": "http://hl7.org/fhir/us/mcode/ValueSet/GeneticSpecimenTypeVS",
+  "compose": {
+    "include": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v2-0487",
+        "concept": [
+          {
+            "code": "AMN",
+            "display": "Amniotic fluid"
+          },
+          {
+            "code": "BIFL",
+            "display": "Bile Fluid"
+          },
+          {
+            "code": "BLD",
+            "display": "Whole blood"
+          },
+          {
+            "code": "BLDA",
+            "display": "Blood arterial"
+          },
+          {
+            "code": "BLDCO",
+            "display": "Cord blood"
+          },
+          {
+            "code": "BLDV",
+            "display": "Blood venous"
+          },
+          {
+            "code": "BON",
+            "display": "Bone"
+          },
+          {
+            "code": "CSERU",
+            "display": "Serum, Convalescent"
+          },
+          {
+            "code": "CSF",
+            "display": "Cerebral spinal fluid"
+          },
+          {
+            "code": "CVM",
+            "display": "Cervical Mucus"
+          },
+          {
+            "code": "DUFL",
+            "display": "Duodenal fluid"
+          },
+          {
+            "code": "FBLOOD",
+            "display": "Blood, Fetal"
+          },
+          {
+            "code": "FGA",
+            "display": "Fluid, Abdomen"
+          },
+          {
+            "code": "GENV",
+            "display": "Genital vaginal"
+          },
+          {
+            "code": "HYDC",
+            "display": "Fluid, Hydrocele"
+          },
+          {
+            "code": "JNTFLD",
+            "display": "Fluid, Joint"
+          },
+          {
+            "code": "KIDFLD",
+            "display": "Fluid, Kidney"
+          },
+          {
+            "code": "LSAC",
+            "display": "Fluid, Lumbar Sac"
+          },
+          {
+            "code": "MAR",
+            "display": "Marrow"
+          },
+          {
+            "code": "PAFL",
+            "display": "Pancreatic fluid"
+          },
+          {
+            "code": "PCFL",
+            "display": "Fluid, Pericardial"
+          },
+          {
+            "code": "PLC",
+            "display": "Placenta"
+          },
+          {
+            "code": "PLR",
+            "display": "Pleural fluid (thoracentesis fluid)"
+          },
+          {
+            "code": "SAL",
+            "display": "Saliva"
+          },
+          {
+            "code": "SKN",
+            "display": "Skin"
+          },
+          {
+            "code": "SMN",
+            "display": "Seminal fluid"
+          },
+          {
+            "code": "SNV",
+            "display": "Fluid, synovial (Joint fluid)"
+          },
+          {
+            "code": "SPT",
+            "display": "Sputum"
+          },
+          {
+            "code": "TISS",
+            "display": "Tissue"
+          },
+          {
+            "code": "VITF",
+            "display": "Vitreous Fluid"
+          },
+          {
+            "code": "WND",
+            "display": "Wound"
+          }
+        ]
+      }
+    ]
+  }
+}

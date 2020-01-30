@@ -1,13 +1,7 @@
 .DS_Store
-/org.hl7.fhir.publisher.jar
-/publisher.jar
+Thumbs.db
+/input-cache/org.hl7.fhir.publisher.jar
 /output
-/output/guide
-/qa
+/template
 /temp
 /ig.ini
-/resources/ig-expansion-parameters.json
-/resources/ig-validation-parameters.json
-/resources/ig-expansion-parameters.json
-/resources/ig-new.json
-/resources/ig-new.xml

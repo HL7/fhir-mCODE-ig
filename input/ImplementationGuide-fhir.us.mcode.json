@@ -704,6 +704,10 @@
         {
           "code": "releaselabel",
           "value": "CI Build"
+        },
+        {
+          "code": "find-other-resources",
+          "value": "true"
         }
       ]
     }

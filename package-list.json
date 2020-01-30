@@ -1,23 +1,24 @@
 {
-  "package-id": "hl7.fhir.us.mcode",
-  "title": "HL7 FHIR Implementation Guide: minimal Common Oncology Data Elements (mCODE) Release 1 - US Realm | STU1 PreRel#1",
+  "package-id": "fhir.us.mcode",
+  "title": "HL7 FHIR Implementation Guide: minimal Common Oncology Data Elements (mCODE) Release 1 - US Realm | STU1 PreRel#2",
   "canonical": "http://hl7.org/fhir/us/mcode",
+  "introduction": "mCODE™ (short for Minimal Common Oncology Data Elements) is an initiative intended to assemble a core set of structured data elements for oncology electronic health records.",
   "list": [
     {
       "version": "current",
       "desc": "Continuous Integration Build (latest in version control)",
-      "path": "https://build.fhir.org/ig/HL7/fhir-mCODE-ig",
+      "path": "http://hl7.org/fhir/us/mcode/ImplementationGuide/fhir.us.mcode",
       "status": "ci-build",
       "current": true
     },
     {
-      "version": "0.9.2",
-      "date": "2019-12-09",
-      "desc": "Initial version",
-      "path": "http://hl7.org/fhir/us/mcode/2019Sep",
-      "status": "draft",
-      "sequence": "STU 1",
-      "fhirversion": "4.0.0"
+      "version": "0.9.5",
+      "fhirversion": "4.0.1",
+      "date": "2099-01-01",
+      "desc": "Initial STU ballot (Mmm yyyy Ballot)",
+      "path": "http://hl7.org/fhir/us/mcode/ImplementationGuide/fhir.us.mcode",
+      "status": "ballot",
+      "sequence": "STU 1"
     }
   ]
 }

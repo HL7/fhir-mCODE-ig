@@ -1,0 +1,95 @@
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "urn:ietf:bcp:47",
+  "code" : "en-US"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "English (Region=United States)",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "urn:ietf:bcp:47",
+  "code" : "en-US"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "urn:ietf:bcp:47",
+      "filter" : [{
+        "property" : "ext-lang",
+        "op" : "exists",
+        "value" : "false"
+      },
+      {
+        "property" : "script",
+        "op" : "exists",
+        "value" : "false"
+      },
+      {
+        "property" : "variant",
+        "op" : "exists",
+        "value" : "false"
+      },
+      {
+        "property" : "extension",
+        "op" : "exists",
+        "value" : "false"
+      },
+      {
+        "property" : "private-use",
+        "op" : "exists",
+        "value" : "false"
+      }]
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "English (Region=United States)",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "urn:ietf:bcp:47",
+  "code" : "en-US"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "urn:ietf:bcp:47",
+      "filter" : [{
+        "property" : "ext-lang",
+        "op" : "exists",
+        "value" : "false"
+      },
+      {
+        "property" : "script",
+        "op" : "exists",
+        "value" : "false"
+      },
+      {
+        "property" : "variant",
+        "op" : "exists",
+        "value" : "false"
+      },
+      {
+        "property" : "extension",
+        "op" : "exists",
+        "value" : "false"
+      },
+      {
+        "property" : "private-use",
+        "op" : "exists",
+        "value" : "false"
+      }]
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK"}####
+v: {
+  "display" : "English (Region=United States)",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------

@@ -1,0 +1,149 @@
+-------------------------------------------------------------------------------------
+{"hierarchical" : false, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://unitsofmeasure.org",
+      "concept" : [{
+        "code" : "mm",
+        "display" : "Millimeter"
+      },
+      {
+        "code" : "cm",
+        "display" : "Centimeter"
+      },
+      {
+        "code" : "m",
+        "display" : "Meter"
+      },
+      {
+        "code" : "ft-us",
+        "display" : "Foot"
+      },
+      {
+        "code" : "in-us",
+        "display" : "Inch"
+      }]
+    }]
+  }
+}}####
+e: {
+  "valueSet" : {
+  "resourceType" : "ValueSet",
+  "expansion" : {
+    "identifier" : "urn:uuid:6c8fa75b-4f46-4f28-9816-9ec0b8e3e66c",
+    "timestamp" : "2020-01-30T01:30:18.755Z",
+    "parameter" : [{
+      "name" : "limitedExpansion",
+      "valueString" : "-1"
+    },
+    {
+      "name" : "excludeNested",
+      "valueString" : "-1"
+    },
+    {
+      "name" : "version",
+      "valueString" : "http://unitsofmeasure.org|2.0.1"
+    }],
+    "contains" : [{
+      "system" : "http://unitsofmeasure.org",
+      "code" : "mm",
+      "display" : "Millimeter"
+    },
+    {
+      "system" : "http://unitsofmeasure.org",
+      "code" : "cm",
+      "display" : "Centimeter"
+    },
+    {
+      "system" : "http://unitsofmeasure.org",
+      "code" : "m",
+      "display" : "Meter"
+    },
+    {
+      "system" : "http://unitsofmeasure.org",
+      "code" : "ft-us",
+      "display" : "Foot"
+    },
+    {
+      "system" : "http://unitsofmeasure.org",
+      "code" : "in-us",
+      "display" : "Inch"
+    }]
+  }
+},
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://unitsofmeasure.org",
+      "concept" : [{
+        "code" : "mm",
+        "display" : "Millimeter"
+      },
+      {
+        "code" : "cm",
+        "display" : "Centimeter"
+      },
+      {
+        "code" : "m",
+        "display" : "Meter"
+      },
+      {
+        "code" : "ft-us",
+        "display" : "Foot"
+      },
+      {
+        "code" : "in-us",
+        "display" : "Inch"
+      }]
+    }]
+  }
+}}####
+e: {
+  "valueSet" : {
+  "resourceType" : "ValueSet",
+  "expansion" : {
+    "identifier" : "urn:uuid:a6a5185e-b25e-490e-9afb-f8167314eadb",
+    "timestamp" : "2020-01-30T01:44:46.115Z",
+    "parameter" : [{
+      "name" : "limitedExpansion",
+      "valueString" : "-1"
+    },
+    {
+      "name" : "version",
+      "valueString" : "http://unitsofmeasure.org|2.0.1"
+    }],
+    "contains" : [{
+      "system" : "http://unitsofmeasure.org",
+      "code" : "mm",
+      "display" : "Millimeter"
+    },
+    {
+      "system" : "http://unitsofmeasure.org",
+      "code" : "cm",
+      "display" : "Centimeter"
+    },
+    {
+      "system" : "http://unitsofmeasure.org",
+      "code" : "m",
+      "display" : "Meter"
+    },
+    {
+      "system" : "http://unitsofmeasure.org",
+      "code" : "ft-us",
+      "display" : "Foot"
+    },
+    {
+      "system" : "http://unitsofmeasure.org",
+      "code" : "in-us",
+      "display" : "Inch"
+    }]
+  }
+},
+  "error" : ""
+}
+-------------------------------------------------------------------------------------

@@ -1,0 +1,53 @@
+{
+  "resourceType": "Procedure",
+  "id": "mCODECancerRelatedRadiationProcedureExample01",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/us/mcode/StructureDefinition/CancerRelatedRadiationProcedure"
+    ]
+  },
+  "status": "completed",
+  "code": {
+    "coding": [
+      {
+        "code": "152198000",
+        "system": "http://snomed.info/sct"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/mCODEPatientExample01"
+  },
+  "asserter": {
+    "reference": "Practitioner/mCODEPractitionerExample01"
+  },
+  "performedDateTime": "2019-03-01",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/us/mcode/StructureDefinition/TreatmentIntent",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "code": "373808002",
+            "system": "http://snomed.info/sct"
+          }
+        ]
+      }
+    }
+  ],
+  "reasonReference": [
+    {
+      "reference": "Condition/mCODEPrimaryCancerConditionExample01"
+    }
+  ],
+  "bodySite": [
+    {
+      "coding": [
+        {
+          "code": "41224006",
+          "system": "http://snomed.info/sct"
+        }
+      ]
+    }
+  ]
+}

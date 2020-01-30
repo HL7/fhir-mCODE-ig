@@ -1,0 +1,40 @@
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://www.ncbi.nlm.nih.gov/clinvar",
+  "code" : "619728"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code system \"http://www.ncbi.nlm.nih.gov/clinvar\" is not known (encountered paired with code = \"619728\"); The code provided (http://www.ncbi.nlm.nih.gov/clinvar#619728) is not  valid in the value set All codes known to the system"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://www.ncbi.nlm.nih.gov/clinvar",
+  "code" : "619728"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://www.ncbi.nlm.nih.gov/clinvar"
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "CodeSystem uri 'http://www.ncbi.nlm.nih.gov/clinvar' is unknown"
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://www.ncbi.nlm.nih.gov/clinvar"
+    }]
+  }
+}}####
+e: {
+  "error" : "Error from server: Unable to provide support for code system http://www.ncbi.nlm.nih.gov/clinvar"
+}
+-------------------------------------------------------------------------------------

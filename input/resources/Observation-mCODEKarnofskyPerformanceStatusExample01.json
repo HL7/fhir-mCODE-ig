@@ -1,0 +1,53 @@
+{
+  "resourceType": "Observation",
+  "id": "mCODEKarnofskyPerformanceStatusExample01",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/us/mcode/StructureDefinition/KarnofskyPerformanceStatus"
+    ]
+  },
+  "code": {
+    "coding": [
+      {
+        "code": "89245-5",
+        "system": "http://loinc.org"
+      }
+    ]
+  },
+  "status": "final",
+  "category": [
+    {
+      "coding": [
+        {
+          "code": "survey",
+          "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+        }
+      ]
+    }
+  ],
+  "method": {
+    "coding": [
+      {
+        "code": "5880005",
+        "system": "http://snomed.info/sct"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/mCODEPatientExample01"
+  },
+  "effectiveDateTime": "2019-04-01",
+  "performer": [
+    {
+      "reference": "Practitioner/mCODEPractitionerExample01"
+    }
+  ],
+  "valueCodeableConcept": {
+    "coding": [
+      {
+        "code": "LA29177-5",
+        "system": "http://loinc.org"
+      }
+    ]
+  }
+}

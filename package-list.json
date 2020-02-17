@@ -14,7 +14,7 @@
     {
       "version": "1.0",
       "fhirversion": "4.0.1",
-      "date": "2020-03-06",
+      "date": "2020-02-16",
       "desc": "STU 1 Release",
       "path": "http://hl7.org/fhir/us/mcode/ImplementationGuide/fhir.us.mcode",
       "status": "trial-use",

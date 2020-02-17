@@ -3,7 +3,7 @@
   "id": "mCODETNMClinicalStageGroupExample01",
   "meta": {
     "profile": [
-      "http://hl7.org/fhir/us/mcode/StructureDefinition/TNMClinicalStageGroup"
+      "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-clinical-stage-group"
     ]
   },
   "code": {

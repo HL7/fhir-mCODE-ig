@@ -1,0 +1,27 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "TreatmentIntentVS",
+  "id": "mcode-treatment-intent-vs",
+  "title": "Treatment Intent Value Set",
+  "description": "The purpose of a treatment. The value set includes 'curative' and 'palliative'. Curative is defined as any treatment meant to reduce or control a disease process, even if a 'cure' is not anticipated. Palliative includes treatments meant to reduce symptoms and side effects, such as antiemetics.",
+  "version": "1.0",
+  "url": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-treatment-intent-vs",
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "concept": [
+          {
+            "code": "373808002",
+            "display": "Curative - procedure intent"
+          },
+          {
+            "code": "363676003",
+            "display": "Palliative - procedure intent"
+          }
+        ]
+      }
+    ]
+  }
+}

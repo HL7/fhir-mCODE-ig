@@ -3,7 +3,7 @@
   "id": "mCODESecondaryCancerConditionExample01",
   "meta": {
     "profile": [
-      "http://hl7.org/fhir/us/mcode/StructureDefinition/SecondaryCancerCondition"
+      "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-secondary-cancer-condition"
     ]
   },
   "category": [
@@ -18,7 +18,7 @@
   ],
   "extension": [
     {
-      "url": "http://hl7.org/fhir/us/mcode/StructureDefinition/RelatedPrimaryCancerCondition",
+      "url": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-related-primary-cancer-condition",
       "valueReference": {
         "reference": "Condition/mCODEPrimaryCancerConditionExample01"
       }

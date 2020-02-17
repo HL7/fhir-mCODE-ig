@@ -3,7 +3,7 @@
   "id": "mCODECancerDiseaseStatusExample01",
   "meta": {
     "profile": [
-      "http://hl7.org/fhir/us/mcode/StructureDefinition/CancerDiseaseStatus"
+      "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-disease-status"
     ]
   },
   "code": {
@@ -16,7 +16,7 @@
   },
   "extension": [
     {
-      "url": "http://hl7.org/fhir/us/mcode/StructureDefinition/EvidenceType",
+      "url": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-evidence-type",
       "valueCodeableConcept": {
         "coding": [
           {

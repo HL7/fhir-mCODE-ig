@@ -2,7 +2,7 @@
 
 <h3><a name="ReleaseNotes"></a>mCODE Release Notes / Change Log</h3>
 
-<h4>mCODE 0.9.2 STU1 Pre-Release 1</h4>
+<h4>mCODE 1.0 STU1</h4>
 <p>The following are changes made to the <a href="http://hl7.org/fhir/us/mcode/2019Sep/">mCODE 0.9.1 September 2019 Ballot Release.</a></p>
 
 <h5>Enhancements</h5>
@@ -18,8 +18,10 @@
     <li>Genomics-related profiles GeneticVariantTested and GeneticVariantFound are combined into one profile, GeneticVariant.</li>
     <li>GenomicsReport onco-core-RegionStudied-extension is migrated to a slice under DiagnosticReport.result with a reference to a new profile, RegionStudied.</li>
     <li>GenomicsReport obf-SpecimenType-extension is migrated to a slice under DiagnosticReport.result with a reference to a new profile, GeneticSpecimen.</li>
-    <li>DiagnosticReport.category cardinality changed from 0..1 to 0..*</li>
+    <li>DiagnosticReport.category cardinality changed from 1..1 to 1..*</li>
     <li>Replaced references of CIMPL to references of FHIR Shorthand and SUSHI.</li>
+    <li>ECOGPerformanceStatus Observation.code and Observation.interpretation changed to align with the LOINC equivalent of ECOG score (89247-1) and interpretation (LOINC Answer List LL529-9).</li>
+    <li>KarnofskyPerformanceStatus Observation.code and Observation.interpretation changed to align with the LOINC equivalent of Karnofsky score (89243-0) and interpretation (LOINC Answer List LL4986-7).</li>
 </ul>
 
 

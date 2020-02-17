@@ -3,13 +3,13 @@
   "id": "mCODEKarnofskyPerformanceStatusExample01",
   "meta": {
     "profile": [
-      "http://hl7.org/fhir/us/mcode/StructureDefinition/KarnofskyPerformanceStatus"
+      "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-karnofsky-performance-status"
     ]
   },
   "code": {
     "coding": [
       {
-        "code": "89245-5",
+        "code": "89243-0",
         "system": "http://loinc.org"
       }
     ]
@@ -42,12 +42,15 @@
       "reference": "Practitioner/mCODEPractitionerExample01"
     }
   ],
-  "valueCodeableConcept": {
-    "coding": [
-      {
-        "code": "LA29177-5",
-        "system": "http://loinc.org"
-      }
-    ]
-  }
+  "valueInteger": 90,
+  "interpretation": [
+    {
+      "coding": [
+        {
+          "code": "LA29176-7",
+          "system": "http://loinc.org"
+        }
+      ]
+    }
+  ]
 }

@@ -5,6 +5,404 @@
     "include" : [{
       "system" : "http://hl7.org/fhir/sid/icd-10-cm",
       "concept" : [{
+        "display" : "Secondary carcinoid tumors, unspecified site"
+      },
+      {
+        "display" : "Secondary carcinoid tumors of distant lymph nodes"
+      },
+      {
+        "display" : "Secondary carcinoid tumors of liver"
+      },
+      {
+        "display" : "Secondary carcinoid tumors of bone"
+      },
+      {
+        "display" : "Secondary carcinoid tumors of peritoneum"
+      },
+      {
+        "display" : "Secondary carcinoid tumors of other sites"
+      },
+      {
+        "display" : "Secondary Merkel cell carcinoma"
+      },
+      {
+        "display" : "Other secondary neuroendocrine tumors"
+      },
+      {
+        "display" : "Secondary and unspecified malignant neoplasm of lymph nodes of head, face and neck"
+      },
+      {
+        "display" : "Secondary and unspecified malignant neoplasm of intrathoracic lymph nodes"
+      },
+      {
+        "display" : "Secondary and unspecified malignant neoplasm of intra-abdominal lymph nodes"
+      },
+      {
+        "display" : "Secondary and unspecified malignant neoplasm of axilla and upper limb lymph nodes"
+      },
+      {
+        "display" : "Secondary and unspecified malignant neoplasm of inguinal and lower limb lymph nodes"
+      },
+      {
+        "display" : "Secondary and unspecified malignant neoplasm of intrapelvic lymph nodes"
+      },
+      {
+        "display" : "Secondary and unspecified malignant neoplasm of lymph nodes of multiple regions"
+      },
+      {
+        "display" : "Secondary and unspecified malignant neoplasm of lymph node, unspecified"
+      },
+      {
+        "display" : "Secondary malignant neoplasm of unspecified lung"
+      },
+      {
+        "display" : "Secondary malignant neoplasm of right lung"
+      },
+      {
+        "display" : "Secondary malignant neoplasm of left lung"
+      },
+      {
+        "display" : "Secondary malignant neoplasm of mediastinum"
+      },
+      {
+        "display" : "Secondary malignant neoplasm of pleura"
+      },
+      {
+        "display" : "Secondary malignant neoplasm of unspecified respiratory organ"
+      },
+      {
+        "display" : "Secondary malignant neoplasm of other respiratory organs"
+      },
+      {
+        "display" : "Secondary malignant neoplasm of small intestine"
+      },
+      {
+        "display" : "Secondary malignant neoplasm of large intestine and rectum"
+      },
+      {
+        "display" : "Secondary malignant neoplasm of retroperitoneum and peritoneum"
+      },
+      {
+        "display" : "Secondary malignant neoplasm of liver and intrahepatic bile duct"
+      },
+      {
+        "display" : "Secondary malignant neoplasm of unspecified digestive organ"
+      },
+      {
+        "display" : "Secondary malignant neoplasm of other digestive organs"
+      },
+      {
+        "display" : "Secondary malignant neoplasm of unspecified kidney and renal pelvis"
+      },
+      {
+        "display" : "Secondary malignant neoplasm of right kidney and renal pelvis"
+      },
+      {
+        "display" : "Secondary malignant neoplasm of left kidney and renal pelvis"
+      },
+      {
+        "display" : "Secondary malignant neoplasm of unspecified urinary organs"
+      },
+      {
+        "display" : "Secondary malignant neoplasm of bladder"
+      },
+      {
+        "display" : "Secondary malignant neoplasm of other urinary organs"
+      },
+      {
+        "display" : "Secondary malignant neoplasm of skin"
+      },
+      {
+        "display" : "Secondary malignant neoplasm of brain"
+      },
+      {
+        "display" : "Secondary malignant neoplasm of cerebral meninges"
+      },
+      {
+        "display" : "Secondary malignant neoplasm of unspecified part of nervous system"
+      },
+      {
+        "display" : "Secondary malignant neoplasm of other parts of nervous system"
+      },
+      {
+        "display" : "Secondary malignant neoplasm of bone"
+      },
+      {
+        "display" : "Secondary malignant neoplasm of bone marrow"
+      },
+      {
+        "display" : "Secondary malignant neoplasm of unspecified ovary"
+      },
+      {
+        "display" : "Secondary malignant neoplasm of right ovary"
+      },
+      {
+        "display" : "Secondary malignant neoplasm of left ovary"
+      },
+      {
+        "display" : "Secondary malignant neoplasm of unspecified adrenal gland"
+      },
+      {
+        "display" : "Secondary malignant neoplasm of right adrenal gland"
+      },
+      {
+        "display" : "Secondary malignant neoplasm of left adrenal gland"
+      },
+      {
+        "display" : "Secondary malignant neoplasm of breast"
+      },
+      {
+        "display" : "Secondary malignant neoplasm of genital organs"
+      },
+      {
+        "display" : "Secondary malignant neoplasm of other specified sites"
+      },
+      {
+        "display" : "Secondary malignant neoplasm of unspecified site"
+      },
+      {
+        "display" : "Disseminated malignant neoplasm, unspecified"
+      }]
+    }]
+  }
+}}####
+e: {
+  "valueSet" : {
+  "resourceType" : "ValueSet",
+  "expansion" : {
+    "identifier" : "urn:uuid:3fb03743-d02e-420e-8913-5ae7287993ef",
+    "timestamp" : "2020-01-21T17:16:42.754Z",
+    "parameter" : [{
+      "name" : "limitedExpansion",
+      "valueString" : "-1"
+    },
+    {
+      "name" : "excludeNested",
+      "valueString" : "-1"
+    }],
+    "contains" : [{
+      "system" : "http://hl7.org/fhir/sid/icd-10-cm",
+      "display" : "Secondary carcinoid tumors, unspecified site"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/icd-10-cm",
+      "display" : "Secondary carcinoid tumors of distant lymph nodes"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/icd-10-cm",
+      "display" : "Secondary carcinoid tumors of liver"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/icd-10-cm",
+      "display" : "Secondary carcinoid tumors of bone"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/icd-10-cm",
+      "display" : "Secondary carcinoid tumors of peritoneum"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/icd-10-cm",
+      "display" : "Secondary carcinoid tumors of other sites"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/icd-10-cm",
+      "display" : "Secondary Merkel cell carcinoma"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/icd-10-cm",
+      "display" : "Other secondary neuroendocrine tumors"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/icd-10-cm",
+      "display" : "Secondary and unspecified malignant neoplasm of lymph nodes of head, face and neck"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/icd-10-cm",
+      "display" : "Secondary and unspecified malignant neoplasm of intrathoracic lymph nodes"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/icd-10-cm",
+      "display" : "Secondary and unspecified malignant neoplasm of intra-abdominal lymph nodes"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/icd-10-cm",
+      "display" : "Secondary and unspecified malignant neoplasm of axilla and upper limb lymph nodes"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/icd-10-cm",
+      "display" : "Secondary and unspecified malignant neoplasm of inguinal and lower limb lymph nodes"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/icd-10-cm",
+      "display" : "Secondary and unspecified malignant neoplasm of intrapelvic lymph nodes"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/icd-10-cm",
+      "display" : "Secondary and unspecified malignant neoplasm of lymph nodes of multiple regions"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/icd-10-cm",
+      "display" : "Secondary and unspecified malignant neoplasm of lymph node, unspecified"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/icd-10-cm",
+      "display" : "Secondary malignant neoplasm of unspecified lung"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/icd-10-cm",
+      "display" : "Secondary malignant neoplasm of right lung"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/icd-10-cm",
+      "display" : "Secondary malignant neoplasm of left lung"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/icd-10-cm",
+      "display" : "Secondary malignant neoplasm of mediastinum"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/icd-10-cm",
+      "display" : "Secondary malignant neoplasm of pleura"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/icd-10-cm",
+      "display" : "Secondary malignant neoplasm of unspecified respiratory organ"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/icd-10-cm",
+      "display" : "Secondary malignant neoplasm of other respiratory organs"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/icd-10-cm",
+      "display" : "Secondary malignant neoplasm of small intestine"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/icd-10-cm",
+      "display" : "Secondary malignant neoplasm of large intestine and rectum"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/icd-10-cm",
+      "display" : "Secondary malignant neoplasm of retroperitoneum and peritoneum"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/icd-10-cm",
+      "display" : "Secondary malignant neoplasm of liver and intrahepatic bile duct"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/icd-10-cm",
+      "display" : "Secondary malignant neoplasm of unspecified digestive organ"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/icd-10-cm",
+      "display" : "Secondary malignant neoplasm of other digestive organs"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/icd-10-cm",
+      "display" : "Secondary malignant neoplasm of unspecified kidney and renal pelvis"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/icd-10-cm",
+      "display" : "Secondary malignant neoplasm of right kidney and renal pelvis"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/icd-10-cm",
+      "display" : "Secondary malignant neoplasm of left kidney and renal pelvis"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/icd-10-cm",
+      "display" : "Secondary malignant neoplasm of unspecified urinary organs"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/icd-10-cm",
+      "display" : "Secondary malignant neoplasm of bladder"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/icd-10-cm",
+      "display" : "Secondary malignant neoplasm of other urinary organs"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/icd-10-cm",
+      "display" : "Secondary malignant neoplasm of skin"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/icd-10-cm",
+      "display" : "Secondary malignant neoplasm of brain"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/icd-10-cm",
+      "display" : "Secondary malignant neoplasm of cerebral meninges"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/icd-10-cm",
+      "display" : "Secondary malignant neoplasm of unspecified part of nervous system"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/icd-10-cm",
+      "display" : "Secondary malignant neoplasm of other parts of nervous system"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/icd-10-cm",
+      "display" : "Secondary malignant neoplasm of bone"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/icd-10-cm",
+      "display" : "Secondary malignant neoplasm of bone marrow"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/icd-10-cm",
+      "display" : "Secondary malignant neoplasm of unspecified ovary"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/icd-10-cm",
+      "display" : "Secondary malignant neoplasm of right ovary"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/icd-10-cm",
+      "display" : "Secondary malignant neoplasm of left ovary"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/icd-10-cm",
+      "display" : "Secondary malignant neoplasm of unspecified adrenal gland"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/icd-10-cm",
+      "display" : "Secondary malignant neoplasm of right adrenal gland"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/icd-10-cm",
+      "display" : "Secondary malignant neoplasm of left adrenal gland"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/icd-10-cm",
+      "display" : "Secondary malignant neoplasm of breast"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/icd-10-cm",
+      "display" : "Secondary malignant neoplasm of genital organs"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/icd-10-cm",
+      "display" : "Secondary malignant neoplasm of other specified sites"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/icd-10-cm",
+      "display" : "Secondary malignant neoplasm of unspecified site"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/icd-10-cm",
+      "display" : "Disseminated malignant neoplasm, unspecified"
+    }]
+  }
+},
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : false, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://hl7.org/fhir/sid/icd-10-cm",
+      "concept" : [{
         "code" : "C7B00",
         "display" : "Secondary carcinoid tumors, unspecified site"
       },
@@ -223,8 +621,8 @@ e: {
   "valueSet" : {
   "resourceType" : "ValueSet",
   "expansion" : {
-    "identifier" : "urn:uuid:df945178-5bca-4c78-ba4e-bd64e76ec039",
-    "timestamp" : "2020-01-30T01:12:14.612Z",
+    "identifier" : "urn:uuid:97e78e11-29b9-4667-8480-6e0de0996e82",
+    "timestamp" : "2020-01-21T18:37:00.611Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueString" : "-1"
@@ -5683,8 +6081,8 @@ e: {
       "url" : "http://hl7.org/fhir/StructureDefinition/valueset-toocostly",
       "valueBoolean" : true
     }],
-    "identifier" : "urn:uuid:16cbfd5f-d97a-461d-b4d6-d591f8c1454c",
-    "timestamp" : "2020-01-30T01:12:21.753Z",
+    "identifier" : "urn:uuid:208b30f9-5fd7-4afe-a307-b9836000a2db",
+    "timestamp" : "2020-01-21T18:37:01.673Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueString" : "-1"
@@ -27586,8 +27984,8 @@ e: {
       "url" : "http://hl7.org/fhir/StructureDefinition/valueset-toocostly",
       "valueBoolean" : true
     }],
-    "identifier" : "urn:uuid:8e3fdea7-259e-44d3-af57-afc8da802b8d",
-    "timestamp" : "2020-01-30T01:14:45.691Z",
+    "identifier" : "urn:uuid:bebd8e45-ad28-4f06-8ab3-344b26c71f24",
+    "timestamp" : "2020-01-21T18:38:09.330Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueString" : "-1"
@@ -62499,8 +62897,8 @@ e: {
       "url" : "http://hl7.org/fhir/StructureDefinition/valueset-toocostly",
       "valueBoolean" : true
     }],
-    "identifier" : "urn:uuid:2edb1508-8901-499b-b7b2-feb932b57bde",
-    "timestamp" : "2020-01-30T01:30:08.520Z",
+    "identifier" : "urn:uuid:93cef4f0-f6e1-47c1-b54b-72fa63856ec1",
+    "timestamp" : "2020-01-21T20:00:39.770Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueString" : "-1"

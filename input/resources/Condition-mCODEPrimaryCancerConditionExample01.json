@@ -3,7 +3,7 @@
   "id": "mCODEPrimaryCancerConditionExample01",
   "meta": {
     "profile": [
-      "http://hl7.org/fhir/us/mcode/StructureDefinition/PrimaryCancerCondition"
+      "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-primary-cancer-condition"
     ]
   },
   "category": [

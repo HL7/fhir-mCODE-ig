@@ -3,13 +3,13 @@
   "id": "mCODEECOGPerformanceStatusExample01",
   "meta": {
     "profile": [
-      "http://hl7.org/fhir/us/mcode/StructureDefinition/ECOGPerformanceStatus"
+      "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-ecog-performance-status"
     ]
   },
   "code": {
     "coding": [
       {
-        "code": "89262-0",
+        "code": "89247-1",
         "system": "http://loinc.org"
       }
     ]
@@ -42,12 +42,15 @@
       "reference": "Practitioner/mCODEPractitionerExample01"
     }
   ],
-  "valueCodeableConcept": {
-    "coding": [
-      {
-        "code": "422512005",
-        "system": "http://snomed.info/sct"
-      }
-    ]
-  }
+  "valueInteger": 0,
+  "interpretation": [
+    {
+      "coding": [
+        {
+          "code": "LA9622-7",
+          "system": "http://loinc.org"
+        }
+      ]
+    }
+  ]
 }

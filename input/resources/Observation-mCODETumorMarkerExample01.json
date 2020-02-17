@@ -3,15 +3,15 @@
   "id": "mCODETumorMarkerExample01",
   "meta": {
     "profile": [
-      "http://hl7.org/fhir/us/mcode/StructureDefinition/TumorMarker"
+      "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tumor-marker"
     ]
   },
   "category": [
     {
       "coding": [
         {
-          "code": "laboratory",
-          "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code": "laboratory"
         }
       ]
     }

@@ -3,7 +3,7 @@
   "id": "mCODEPatientExample02",
   "meta": {
     "profile": [
-      "http://hl7.org/fhir/us/mcode/StructureDefinition/CancerPatient"
+      "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-patient"
     ]
   },
   "extension": [

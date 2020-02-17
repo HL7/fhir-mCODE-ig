@@ -3,7 +3,7 @@
   "id": "mCODEGeneticSpecimenExample01",
   "meta": {
     "profile": [
-      "http://hl7.org/fhir/us/mcode/StructureDefinition/GeneticSpecimen"
+      "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genetic-specimen"
     ]
   },
   "status": "available",

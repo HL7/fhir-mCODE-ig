@@ -8,8 +8,8 @@
   },
   "identifier": [
     {
-      "value": "1265714091",
-      "system": "http://hl7.org/fhir/sid/us-npi"
+      "system": "http://hl7.org/fhir/sid/us-npi",
+      "value": "1265714091"
     }
   ],
   "active": true,

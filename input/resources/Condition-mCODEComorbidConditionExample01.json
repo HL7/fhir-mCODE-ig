@@ -3,7 +3,7 @@
   "id": "mCODEComorbidConditionExample01",
   "meta": {
     "profile": [
-      "http://hl7.org/fhir/us/mcode/StructureDefinition/ComorbidCondition"
+      "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-comorbid-condition"
     ]
   },
   "category": [

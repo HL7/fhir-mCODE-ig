@@ -1,0 +1,39 @@
+{
+  "resourceType": "Specimen",
+  "id": "mCODEGeneticSpecimenExample01",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genetic-specimen"
+    ]
+  },
+  "status": "available",
+  "subject": {
+    "reference": "Patient/mCODEPatientExample01"
+  },
+  "processing": [
+    {
+      "timeDateTime": "2019-03-20"
+    }
+  ],
+  "collection": {
+    "collector": {
+      "reference": "Practitioner/mCODEPractitionerExample01"
+    },
+    "bodySite": {
+      "coding": [
+        {
+          "code": "41224006",
+          "system": "http://snomed.info/sct"
+        }
+      ]
+    }
+  },
+  "type": {
+    "coding": [
+      {
+        "code": "TISS",
+        "system": "http://terminology.hl7.org/CodeSystem/v2-0487"
+      }
+    ]
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "UnitsOfLengthVS",
+  "id": "mcode-units-of-length-vs",
+  "title": "Units of Length Value Set",
+  "description": "Units of measure for length or distance on a human scale.",
+  "version": "1.0.0",
+  "url": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-units-of-length-vs",
+  "compose": {
+    "include": [
+      {
+        "system": "http://unitsofmeasure.org",
+        "concept": [
+          {
+            "code": "mm",
+            "display": "Millimeter"
+          },
+          {
+            "code": "cm",
+            "display": "Centimeter"
+          },
+          {
+            "code": "m",
+            "display": "Meter"
+          },
+          {
+            "code": "ft-us",
+            "display": "Foot"
+          },
+          {
+            "code": "in-us",
+            "display": "Inch"
+          }
+        ]
+      }
+    ]
+  }
+}

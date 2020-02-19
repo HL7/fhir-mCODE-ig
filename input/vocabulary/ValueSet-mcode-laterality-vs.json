@@ -1,0 +1,39 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "LateralityVS",
+  "id": "mcode-laterality-vs",
+  "title": "Laterality Value Set",
+  "description": "Body side of the body location, if needed to distinguish from a similar location on the other side of the body.",
+  "version": "1.0.0",
+  "url": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-laterality-vs",
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "concept": [
+          {
+            "code": "51440002",
+            "display": "Right and left (qualifier value)"
+          },
+          {
+            "code": "399488007",
+            "display": "Midline (qualifier value)"
+          },
+          {
+            "code": "24028007",
+            "display": "Right (qualifier value)"
+          },
+          {
+            "code": "7771000",
+            "display": "Left (qualifier value)"
+          },
+          {
+            "code": "66459002",
+            "display": "Unilateral (qualifier value)"
+          }
+        ]
+      }
+    ]
+  }
+}

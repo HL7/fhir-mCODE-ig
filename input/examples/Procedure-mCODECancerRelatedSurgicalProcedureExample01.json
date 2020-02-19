@@ -1,0 +1,53 @@
+{
+  "resourceType": "Procedure",
+  "id": "mCODECancerRelatedSurgicalProcedureExample01",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-related-surgical-procedure"
+    ]
+  },
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-treatment-intent",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "code": "373808002",
+            "system": "http://snomed.info/sct"
+          }
+        ]
+      }
+    }
+  ],
+  "status": "completed",
+  "code": {
+    "coding": [
+      {
+        "code": "359615001",
+        "system": "http://snomed.info/sct"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/mCODEPatientExample01"
+  },
+  "asserter": {
+    "reference": "Practitioner/mCODEPractitionerExample01"
+  },
+  "performedDateTime": "2019-03-01",
+  "reasonReference": [
+    {
+      "reference": "Condition/mCODEPrimaryCancerConditionExample01"
+    }
+  ],
+  "bodySite": [
+    {
+      "coding": [
+        {
+          "code": "41224006",
+          "system": "http://snomed.info/sct"
+        }
+      ]
+    }
+  ]
+}

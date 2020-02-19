@@ -1,0 +1,70 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "mcode-laterality",
+  "url": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-laterality",
+  "version": "1.0.0",
+  "name": "Laterality",
+  "title": "Laterality",
+  "status": "active",
+  "description": "Body side of the body location, if needed to distinguish from a similar location on the other side of the body.",
+  "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "rim",
+      "uri": "http://hl7.org/v3",
+      "name": "RIM Mapping"
+    }
+  ],
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "type": "element",
+      "expression": "Element"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension.extension",
+        "path": "Extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "fixedUri": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-laterality"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "$this"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ]
+      },
+      {
+        "id": "Extension.valueCodeableConcept",
+        "path": "Extension.valueCodeableConcept",
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-laterality-vs"
+        }
+      }
+    ]
+  }
+}

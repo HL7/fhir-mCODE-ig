@@ -1,0 +1,352 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "mcode-genomic-region-studied",
+  "url": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genomic-region-studied",
+  "version": "1.0.0",
+  "name": "GenomicRegionStudied",
+  "title": "Genomic Region Studied",
+  "status": "active",
+  "description": "The area of the genome region referenced in testing for variants.",
+  "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "argonaut-dq-dstu2",
+      "uri": "http://unknown.org/Argonaut-DQ-DSTU2",
+      "name": "Argonaut-DQ-DSTU2"
+    },
+    {
+      "identity": "workflow",
+      "uri": "http://hl7.org/fhir/workflow",
+      "name": "Workflow Pattern"
+    },
+    {
+      "identity": "sct-concept",
+      "uri": "http://snomed.info/conceptdomain",
+      "name": "SNOMED CT Concept Domain Binding"
+    },
+    {
+      "identity": "v2",
+      "uri": "http://hl7.org/v2",
+      "name": "HL7 v2 Mapping"
+    },
+    {
+      "identity": "rim",
+      "uri": "http://hl7.org/v3",
+      "name": "RIM Mapping"
+    },
+    {
+      "identity": "w5",
+      "uri": "http://hl7.org/fhir/fivews",
+      "name": "FiveWs Pattern Mapping"
+    },
+    {
+      "identity": "sct-attr",
+      "uri": "http://snomed.org/attributebinding",
+      "name": "SNOMED CT Attribute Binding"
+    }
+  ],
+  "kind": "resource",
+  "abstract": false,
+  "type": "Observation",
+  "baseDefinition": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Observation.code",
+        "path": "Observation.code",
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "53041-0",
+              "system": "http://loinc.org"
+            }
+          ]
+        }
+      },
+      {
+        "id": "Observation.value[x]",
+        "path": "Observation.value[x]",
+        "max": "0"
+      },
+      {
+        "id": "Observation.component",
+        "path": "Observation.component",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "pattern",
+              "path": "code"
+            }
+          ],
+          "rules": "open",
+          "description": "Slice based on the component.code pattern"
+        }
+      },
+      {
+        "id": "Observation.component:GeneMutations",
+        "path": "Observation.component",
+        "sliceName": "GeneMutations",
+        "short": "Gene mutations tested for in Blood or Tissue by Molecular genetics method Nominal",
+        "definition": "The gene mutations tested for in blood or tissue by molecular genetics methods",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.component:GeneMutations.code",
+        "path": "Observation.component.code",
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "36908-2",
+              "system": "http://loinc.org"
+            }
+          ]
+        }
+      },
+      {
+        "id": "Observation.component:GeneMutations.value[x]",
+        "path": "Observation.component.value[x]",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "$this"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 1,
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ]
+      },
+      {
+        "id": "Observation.component:GeneMutations.valueCodeableConcept",
+        "path": "Observation.component.valueCodeableConcept",
+        "min": 1,
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-hgvs-vs"
+        }
+      },
+      {
+        "id": "Observation.component:GeneStudied",
+        "path": "Observation.component",
+        "sliceName": "GeneStudied",
+        "short": "Gene studied [ID]",
+        "definition": "The ID for the gene studied",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.component:GeneStudied.code",
+        "path": "Observation.component.code",
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "48018-6",
+              "system": "http://loinc.org"
+            }
+          ]
+        }
+      },
+      {
+        "id": "Observation.component:GeneStudied.value[x]",
+        "path": "Observation.component.value[x]",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "$this"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 1,
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ]
+      },
+      {
+        "id": "Observation.component:GeneStudied.valueCodeableConcept",
+        "path": "Observation.component.valueCodeableConcept",
+        "min": 1,
+        "binding": {
+          "strength": "extensible",
+          "valueSet": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-hgnc-vs"
+        }
+      },
+      {
+        "id": "Observation.component:DNARegionDescription",
+        "path": "Observation.component",
+        "sliceName": "DNARegionDescription",
+        "short": "Description of ranges of DNA sequences examined",
+        "definition": "Description for the DNA region studied in the genomics report",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.component:DNARegionDescription.code",
+        "path": "Observation.component.code",
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "81293-3",
+              "system": "http://loinc.org"
+            }
+          ]
+        }
+      },
+      {
+        "id": "Observation.component:DNARegionDescription.value[x]",
+        "path": "Observation.component.value[x]",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "$this"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 1,
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "Observation.component:DNARegionDescription.valueString",
+        "path": "Observation.component.valueString",
+        "min": 1
+      },
+      {
+        "id": "Observation.component:DNARangesExamined",
+        "path": "Observation.component",
+        "sliceName": "DNARangesExamined",
+        "short": "Range(s) of DNA sequence examined",
+        "definition": "The range(s) of the DNA sequence examined",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.component:DNARangesExamined.code",
+        "path": "Observation.component.code",
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "51959-5",
+              "system": "http://loinc.org"
+            }
+          ]
+        }
+      },
+      {
+        "id": "Observation.component:DNARangesExamined.value[x]",
+        "path": "Observation.component.value[x]",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "$this"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 1,
+        "type": [
+          {
+            "code": "Range"
+          }
+        ]
+      },
+      {
+        "id": "Observation.component:DNARangesExamined.valueRange",
+        "path": "Observation.component.valueRange",
+        "min": 1
+      },
+      {
+        "id": "Observation.component:GenomicRegionCoordinateSystem",
+        "path": "Observation.component",
+        "sliceName": "GenomicRegionCoordinateSystem",
+        "short": "Genomic coordinate system [Type].",
+        "definition": "The method of counting along the genome, for example, 0-based interval counting or 0-based character counting.",
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.component:GenomicRegionCoordinateSystem.code",
+        "path": "Observation.component.code",
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "92822-6",
+              "system": "http://loinc.org"
+            }
+          ]
+        }
+      },
+      {
+        "id": "Observation.component:GenomicRegionCoordinateSystem.value[x]",
+        "path": "Observation.component.value[x]",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "$this"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 1,
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ]
+      },
+      {
+        "id": "Observation.component:GenomicRegionCoordinateSystem.valueCodeableConcept",
+        "path": "Observation.component.valueCodeableConcept",
+        "min": 1,
+        "binding": {
+          "strength": "preferred",
+          "valueSet": "http://loinc.org/vs/LL5323-2"
+        }
+      },
+      {
+        "id": "Observation.component:GenomicReferenceSequenceId",
+        "path": "Observation.component",
+        "sliceName": "GenomicReferenceSequenceId",
+        "short": "Genomic reference sequence [ID]",
+        "definition": "Range(s) of DNA sequence examined. The genomic reference sequence is a contiguous stretch of chromosome DNA that spans all of the exons of the gene and includes transcribed and non transcribed stretches. For this ID use either the NCBI genomic nucleotide RefSeq IDs with their version number (see: NCBI.NLM.NIH.Gov/RefSeq) or use the LRG identifiers, without transcript (t or p) extensions -- when they become available. (source: LOINC)",
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.component:GenomicReferenceSequenceId.code",
+        "path": "Observation.component.code",
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "48013-7",
+              "system": "http://loinc.org"
+            }
+          ]
+        }
+      },
+      {
+        "id": "Observation.component:GenomicReferenceSequenceId.value[x]",
+        "path": "Observation.component.value[x]",
+        "min": 1
+      }
+    ]
+  }
+}

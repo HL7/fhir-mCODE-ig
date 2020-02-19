@@ -1,0 +1,77 @@
+{
+  "resourceType": "Condition",
+  "id": "mCODEPrimaryCancerConditionExample01",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-primary-cancer-condition"
+    ]
+  },
+  "category": [
+    {
+      "coding": [
+        {
+          "code": "64572001",
+          "system": "http://snomed.info/sct"
+        }
+      ]
+    }
+  ],
+  "clinicalStatus": {
+    "coding": [
+      {
+        "code": "active",
+        "system": "http://terminology.hl7.org/CodeSystem/condition-clinical"
+      }
+    ]
+  },
+  "verificationStatus": {
+    "coding": [
+      {
+        "code": "confirmed",
+        "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status"
+      }
+    ]
+  },
+  "code": {
+    "coding": [
+      {
+        "code": "254637007",
+        "system": "http://snomed.info/sct"
+      }
+    ]
+  },
+  "bodySite": [
+    {
+      "coding": [
+        {
+          "code": "39607008",
+          "system": "http://snomed.info/sct"
+        }
+      ]
+    }
+  ],
+  "subject": {
+    "reference": "Patient/mCODEPatientExample01"
+  },
+  "onsetDateTime": "2019-04-01",
+  "asserter": {
+    "reference": "Practitioner/mCODEPractitionerExample01"
+  },
+  "stage": [
+    {
+      "summary": {
+        "coding": [
+          {
+            "code": "3C",
+            "system": "http://cancerstaging.org"
+          }
+        ]
+      },
+      "assessment": [
+        {
+          "reference": "Observation/mCODETNMClinicalStageGroupExample01"
+        }
+      ]
+    }
+  ]
+}

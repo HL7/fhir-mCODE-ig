@@ -1,0 +1,159 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "mcode-cancer-genomics-report",
+  "url": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genomics-report",
+  "version": "1.0.0",
+  "name": "CancerGenomicsReport",
+  "title": "Cancer Genomics Report",
+  "status": "active",
+  "description": "Genetic analysis summary report. The report may include one or more tests, with two distinct test types. The first type is a targeted mutation test, where a specific mutation on a specific gene is tested for. The result is either positive or negative for that mutation. The second type is a more general test for variants. This type of test returns the identity of variants found in a certain region of the genome.\r\nThe identity of non-genomic laboratory tests is typically represented by a LOINC code. However, many genetic tests and panels do not have LOINC codes, although some might have an identifier in NCBI Genetic Testing Registry (GTR), a central location for voluntary submission of genetic test information by providers. To identify the diagnostic report, the name of the report must be in the text sub-field of the code structure. If there is a coded identifier from GTR, LOINC, or other source, then it should be included into the the code sub-field of the code structure. If there is no suitable code, the code can be omitted.",
+  "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "workflow",
+      "uri": "http://hl7.org/fhir/workflow",
+      "name": "Workflow Pattern"
+    },
+    {
+      "identity": "v2",
+      "uri": "http://hl7.org/v2",
+      "name": "HL7 v2 Mapping"
+    },
+    {
+      "identity": "rim",
+      "uri": "http://hl7.org/v3",
+      "name": "RIM Mapping"
+    },
+    {
+      "identity": "w5",
+      "uri": "http://hl7.org/fhir/fivews",
+      "name": "FiveWs Pattern Mapping"
+    }
+  ],
+  "kind": "resource",
+  "abstract": false,
+  "type": "DiagnosticReport",
+  "baseDefinition": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-lab",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "DiagnosticReport.basedOn",
+        "path": "DiagnosticReport.basedOn",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/ServiceRequest",
+              "http://hl7.org/fhir/StructureDefinition/CarePlan"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "DiagnosticReport.category",
+        "path": "DiagnosticReport.category",
+        "min": 2
+      },
+      {
+        "id": "DiagnosticReport.category:GenomicsCategory",
+        "path": "DiagnosticReport.category",
+        "sliceName": "GenomicsCategory",
+        "max": "1",
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "GE",
+              "system": "http://terminology.hl7.org/CodeSystem/v2-0074"
+            }
+          ]
+        }
+      },
+      {
+        "id": "DiagnosticReport.code",
+        "path": "DiagnosticReport.code",
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "81247-9",
+              "system": "http://loinc.org"
+            }
+          ]
+        }
+      },
+      {
+        "id": "DiagnosticReport.subject",
+        "path": "DiagnosticReport.subject",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-patient"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "DiagnosticReport.specimen",
+        "path": "DiagnosticReport.specimen",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genetic-specimen"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "DiagnosticReport.result",
+        "path": "DiagnosticReport.result",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "pattern",
+              "path": "$this.resolve().code"
+            }
+          ],
+          "rules": "open",
+          "description": "Slice based on the reference profile and code pattern"
+        }
+      },
+      {
+        "id": "DiagnosticReport.result:CancerGeneticVariant",
+        "path": "DiagnosticReport.result",
+        "sliceName": "CancerGeneticVariant",
+        "short": "Cancer Genetic Variant",
+        "definition": "Records an alteration in the most common DNA nucleotide sequence. The term variant is increasingly being used in place of the term mutation to describe an alteration that may be benign, pathogenic, or of unknown significance.",
+        "comment": "When using this element, the Observation must validate against the specified profile.",
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genetic-variant"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "DiagnosticReport.result:GenomicRegionStudied",
+        "path": "DiagnosticReport.result",
+        "sliceName": "GenomicRegionStudied",
+        "short": "Genomic Region Studied",
+        "definition": "The area of the genome region referenced in testing for variants.",
+        "comment": "When using this element, the Observation must validate against the specified profile.",
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genomic-region-studied"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

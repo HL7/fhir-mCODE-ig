@@ -1,0 +1,31 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "CancerStagingSystemVS",
+  "id": "mcode-cancer-staging-system-vs",
+  "title": "Cancer Staging System Value Set",
+  "description": "System used for staging. If the staging system is AJCC Version 8, use the NCI thesaurus code C146985 (AJCC Cancer Staging Manual 8th Edition) in its place. This is because SNOMED does not have an equivalent concept for AJCC Version 8 at this time.",
+  "version": "1.0.0",
+  "url": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-staging-system-vs",
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "concept": [
+          {
+            "code": "444256004",
+            "display": "American Joint Commission on Cancer, Cancer Staging Manual, 6th edition neoplasm staging system (tumor staging)"
+          },
+          {
+            "code": "443830009",
+            "display": "American Joint Commission on Cancer, Cancer Staging Manual, 7th edition neoplasm staging system (tumor staging)"
+          },
+          {
+            "code": "258235000",
+            "display": "International Union Against Cancer (tumor staging)"
+          }
+        ]
+      }
+    ]
+  }
+}

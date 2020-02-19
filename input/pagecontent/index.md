@@ -7,7 +7,7 @@
     <li><a href="mCODEDataDictionary.xlsx">Data Dictionary (Excel download)</a></li>
     <li><a href="examples.html">FHIR Examples</a></li>
     <li><a href="implementation.html">Implementation Notes</a></li>
-    <li><a href="changelog.html">Change Log</a></li>
+    <li><a href="change_log.html">Change Log</a></li>
     <li><a href="#Disclaimers">Disclaimers and Known Limitations</a></li>
     <li><a href="#Credits">Credits</a></li>
     <li><a href="#Contacts">Contact Information</a></li>
@@ -50,7 +50,7 @@
 <ul>
     <li><b>Provider</b> - the oncologist, or their representitives, who works to treat cancer patients.</li>
     <li><b>Patient</b> - the patient who is suspected to have, or is diagnosed with, cancer.</li>
-    <li><b>Application</b> - EHR systems or lab systems.</li>   
+    <li><b>Application</b> - EHR systems or lab systems.</li>
 </ul>
 
 <p>This implementation guide is a Domain of Knowledge IG. The purpose of this IG is to show how to represent clinical concepts generally, not to have a complete set of agreements for interoperable exchanges.</p>

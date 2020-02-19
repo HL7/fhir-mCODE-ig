@@ -1,0 +1,17 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "TNMRegionalNodesCategoryVS",
+  "id": "mcode-tnm-regional-nodes-category-vs",
+  "title": "TNM Regional Nodes Category Value Set",
+  "description": "This value set is intended to contain allowable values for the N category, according to TNM staging rules. SNOMED CT codes or AJCC codes (preferably, version 8 for current cancers) are allowed, but are not listed here due to AJCC intellectual property restrictions.\r\n\r\n* AJCC terminology: examples of N categories include 'cN0', indicating no evidence of lymph node involvement, and 'pN1', indicating regional lymph node involvement to a small extent, with specific thresholds for the lymph node groups and number of lymph nodes involved. Other N categories refer to increasing lymph node involvement. Please note allowable N categories may vary between clinical and pathologic classifications. The full set of allowable clinical and pathologic N categories, along with its current descriptions, can be accessed through the AJCC Staging Manual and any applicable updates and corrections, as well as the AJCC API.\r\n\r\n* SNOMED CT has content related to the N category under the hierarchy of 385382003 'Node category finding', such as 5856006 'N3 category' and 277672002 'Node stage N1a'. If using SNOMED CT to store N category findings, the use of codes that do not contain descriptions of the categories, such as the examples provided, is encouraged, as stage finding codes in SNOMED CT may not be up-to-date with current AJCC guidance. Note that SNOMED CT codes do not always make a distinction between clinical and pathological classifications (e.g. 'cN1' and 'pN1' may be represented by the same SNOMED CT code 53623008 'N1 category'). In addition, SNOMED CT may not have complete TNM staging terminology and may require supplementation with codes from another controlled vocabulary (e.g. NCI Thesaurus).",
+  "version": "1.0.0",
+  "url": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-tnm-regional-nodes-category-vs",
+  "compose": {
+    "include": [
+      {
+        "system": "http://cancerstaging.org"
+      }
+    ]
+  }
+}

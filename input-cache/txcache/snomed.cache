@@ -110518,6 +110518,10 @@ v: {
 e: {
   "valueSet" : {
   "resourceType" : "ValueSet",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set contains 5 concepts</p><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px\">Expansion based on SNOMED CT International edition 31-Jul 2019</p><p>All codes from system <a href=\"http://hl7.org/fhir/R4/codesystem-snomedct.html\"><code>http://snomed.info/sct</code></a></p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-363679005\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=363679005\">363679005</a></td><td>Imaging (procedure)</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-252416005\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=252416005\">252416005</a></td><td>Histopathology test (procedure)</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-711015009\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=711015009\">711015009</a></td><td>Assessment of symptom control (procedure)</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-5880005\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=5880005\">5880005</a></td><td>Physical examination procedure (procedure)</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-386344002\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=386344002\">386344002</a></td><td>Laboratory data interpretation (procedure)</td><td/></tr></table></div>"
+  },
   "expansion" : {
     "identifier" : "urn:uuid:3ab0f309-6f46-4b93-908e-dc786ac22c44",
     "timestamp" : "2020-02-13T14:38:14.723Z",
@@ -110590,6 +110594,10 @@ e: {
 e: {
   "valueSet" : {
   "resourceType" : "ValueSet",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set contains 5 concepts</p><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px\">Expansion based on SNOMED CT International edition 31-Jul 2019</p><p>All codes from system <a href=\"http://hl7.org/fhir/R4/codesystem-snomedct.html\"><code>http://snomed.info/sct</code></a></p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-260415000\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=260415000\">260415000</a></td><td>Not detected (qualifier)</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-268910001\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=268910001\">268910001</a></td><td>Patient condition improved (finding)</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-359746009\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=359746009\">359746009</a></td><td>Patient's condition stable (finding)</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-271299001\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=271299001\">271299001</a></td><td>Patient's condition worsened (finding)</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-709137006\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=709137006\">709137006</a></td><td>Patient condition undetermined (finding)</td><td/></tr></table></div>"
+  },
   "expansion" : {
     "identifier" : "urn:uuid:9597c771-7f2e-4137-bff3-f8b4c67b1656",
     "timestamp" : "2020-02-13T14:38:16.004Z",
@@ -110625,6 +110633,203 @@ e: {
       "system" : "http://snomed.info/sct",
       "code" : "709137006",
       "display" : "Patient condition undetermined (finding)"
+    }]
+  }
+},
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : false, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://snomed.info/sct",
+      "concept" : [{
+        "code" : "399878004",
+        "display" : "Malignant neoplasm with pilar differentiation (morphologic abnormality)"
+      },
+      {
+        "code" : "253035009",
+        "display" : "In situ melanocytic morphology (morphologic abnormality)"
+      }]
+    }]
+  }
+}}####
+e: {
+  "valueSet" : {
+  "resourceType" : "ValueSet",
+  "expansion" : {
+    "identifier" : "urn:uuid:c6c00c40-b221-4c1c-a485-9e153ed3f5d9",
+    "timestamp" : "2020-02-18T14:08:10.067Z",
+    "parameter" : [{
+      "name" : "limitedExpansion",
+      "valueString" : "-1"
+    },
+    {
+      "name" : "excludeNested",
+      "valueString" : "-1"
+    },
+    {
+      "name" : "version",
+      "valueString" : "http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20190731"
+    }],
+    "contains" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "399878004",
+      "display" : "Malignant neoplasm with pilar differentiation (morphologic abnormality)"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "253035009",
+      "display" : "In situ melanocytic morphology (morphologic abnormality)"
+    }]
+  }
+},
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : false, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://snomed.info/sct",
+      "concept" : [{
+        "code" : "51440002",
+        "display" : "Right and left (qualifier value)"
+      },
+      {
+        "code" : "399488007",
+        "display" : "Midline (qualifier value)"
+      },
+      {
+        "code" : "24028007",
+        "display" : "Right (qualifier value)"
+      },
+      {
+        "code" : "7771000",
+        "display" : "Left (qualifier value)"
+      },
+      {
+        "code" : "66459002",
+        "display" : "Unilateral (qualifier value)"
+      }]
+    }]
+  }
+}}####
+e: {
+  "valueSet" : {
+  "resourceType" : "ValueSet",
+  "expansion" : {
+    "identifier" : "urn:uuid:fd8c8422-3919-421a-9df5-f4d578ff329a",
+    "timestamp" : "2020-02-18T14:08:10.317Z",
+    "parameter" : [{
+      "name" : "limitedExpansion",
+      "valueString" : "-1"
+    },
+    {
+      "name" : "excludeNested",
+      "valueString" : "-1"
+    },
+    {
+      "name" : "version",
+      "valueString" : "http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20190731"
+    }],
+    "contains" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "51440002",
+      "display" : "Right and left (qualifier value)"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "399488007",
+      "display" : "Midline (qualifier value)"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "24028007",
+      "display" : "Right (qualifier value)"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "7771000",
+      "display" : "Left (qualifier value)"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "66459002",
+      "display" : "Unilateral (qualifier value)"
+    }]
+  }
+},
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://snomed.info/sct",
+      "concept" : [{
+        "code" : "51440002",
+        "display" : "Right and left (qualifier value)"
+      },
+      {
+        "code" : "399488007",
+        "display" : "Midline (qualifier value)"
+      },
+      {
+        "code" : "24028007",
+        "display" : "Right (qualifier value)"
+      },
+      {
+        "code" : "7771000",
+        "display" : "Left (qualifier value)"
+      },
+      {
+        "code" : "66459002",
+        "display" : "Unilateral (qualifier value)"
+      }]
+    }]
+  }
+}}####
+e: {
+  "valueSet" : {
+  "resourceType" : "ValueSet",
+  "expansion" : {
+    "identifier" : "urn:uuid:ad13a0d6-f2dd-40fe-bbe7-8aadefab71df",
+    "timestamp" : "2020-02-18T14:08:30.879Z",
+    "parameter" : [{
+      "name" : "limitedExpansion",
+      "valueString" : "-1"
+    },
+    {
+      "name" : "version",
+      "valueString" : "http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20190731"
+    }],
+    "contains" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "51440002",
+      "display" : "Right and left (qualifier value)"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "399488007",
+      "display" : "Midline (qualifier value)"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "24028007",
+      "display" : "Right (qualifier value)"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "7771000",
+      "display" : "Left (qualifier value)"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "66459002",
+      "display" : "Unilateral (qualifier value)"
     }]
   }
 },

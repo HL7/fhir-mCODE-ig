@@ -1,0 +1,39 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "RadiationProcedureVS",
+  "id": "mcode-radiation-procedure-vs",
+  "title": "Radiation Procedure Value Set",
+  "description": "Codes describing radiation therapy procedures. The value set includes a limited set of radiation modality codes from SNOMED CT, however, ICD-10-PCS code from Section D (Radiation Therapy) and appropriate CPT radiation procedure codes are also considered compliant. CPT codes are not explicitly included due to licensing restrictions. ICD-10-PCS codes are not included explicitly because they are not currently supported by the FHIR IG Publishing tool.\r\n\r\nConformance note: If an ICD-10-PCS code is used, and a semantically equivalent SNOMED CT or CPT code is available, the resulting Procedure instance will not be compliant with [US Core Profiles](http://hl7.org/fhir/us/core/index.html).",
+  "version": "1.0.0",
+  "url": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-radiation-procedure-vs",
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "concept": [
+          {
+            "code": "448385000",
+            "display": "Megavoltage radiation therapy using photons (procedure)"
+          },
+          {
+            "code": "45643008",
+            "display": "Teleradiotherapy using electrons (procedure)"
+          },
+          {
+            "code": "10611004",
+            "display": "Teleradiotherapy protons (procedure)"
+          },
+          {
+            "code": "80347004",
+            "display": "Teleradiotherapy neutrons (procedure)"
+          },
+          {
+            "code": "152198000",
+            "display": "Brachytherapy (procedure)"
+          }
+        ]
+      }
+    ]
+  }
+}

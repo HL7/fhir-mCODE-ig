@@ -125,7 +125,7 @@
   </table>
 -->
 
-<img src="CancerDxCodingSystems.png" alt="mCODE Logical Model" width="80%" align="middle"/>
+<img src="CancerDxCodingSystems.png" alt="mCODE Logical Model" width="80%" align="left" style="margin: 0px 250px 0px 0px;" />
 
 <p>Implementers should reference the <a href="StructureDefinition-mcode-primary-cancer-condition.html">PrimaryCancerCondition</a> and <a href="StructureDefinition-mcode-secondary-cancer-condition.html">Secondary Cancer Condition</a> profiles for details on the use of these terminologies and associated value sets.</p>
 
@@ -201,7 +201,15 @@
     <li>Under the <a href="https://www.copyright.gov/fair-use/more-info.html" target="_blank">Fair Use doctrine</a>, this IG provides examples illustrating mCODE's representation of cancer diagnoses and AJCC staging values for the purposes of technical implementation guidance to FHIR developers.</li>
     <li>mCODE elements listed in this IG might vary from the list identified by ASCO in their recent survey. These elements are subject to change based on review from ASCO, CancerLinQ, and other reviewers from the oncology community.
     </li>
-    <li>The Data Dictionary includes a subset of must-support elements in the mCODE specification, intentionally omitting certain elements including in this implementation guide. When there are differences between the Data Dictionary and content of the FHIR implementation guide, the profiles and value sets in the guide should be taken as the source of truth.</li>
+    <li>The Data Dictionary includes a subset of must-support elements in the mCODE specification, intentionally omitting certain elements included in this implementation guide. When there are differences between the Data Dictionary and content of the FHIR implementation guide, the profiles and value sets in the guide should be taken as the source of truth. The metadata elements not included in the Data Dictionary are listed below:</li>
+    <ul>
+            <li>Reference to the patient or subject</li>
+            <li>Time of the event and/or time of the record creation</li>
+            <li>Encounter, if required by US Core</li>
+            <li>Workflow status for observations, conditions, and procedures</li>
+            <li>Any fixed codes that identify the type of measurement or observation</li>
+            <li>The practitioner or organization for observations and conditions, except where this information is specifically important to the interpretation of the result (only in GenomicsReport) </li>
+        </ul>
     <li>Under <a href="https://www.cms.gov/Regulations-and-Guidance/Legislation/CLIA/index.html?redirect=/clia" target="_blank">Clinical Laboratory Improvement Amendments (CLIA)</a> regulations, laboratory tests must include information on the performing technologist, performing laboratory, and performing laboratory medical director. These three roles would ideally appear as <a href="https://www.hl7.org/fhir/profiling.html#slicing" target="_blank">slices</a> on Observation.performer and/or DiagnosticReport.performer. However, slicing requires a <a href="https://www.hl7.org/fhir/profiling.html#discriminator" target="_blank">discriminator</a>, a field that can be checked to determine whether a resource found in Observation.performer or DiagnosticReport.performer corresponds to the performing technologist or the performing laboratory medical director. While the performing laboratory can be determined by its resource type, in the current design of FHIR, there is no indicator that would discriminate the roles of the two Practitioner participants.</li>
     <li>mCODE includes a dedicated FHIR profile, <a href="StructureDefinition-mcode-tumor-marker.html">TumorMarkerTest</a>, for labs involving serum and tissue-based tumor markers. Unlike other laboratory profiles in mCODE, one profile has been created to handle the entire class of tumor marker tests, primarily because of the large number of laboratory tests involved. A value set of approximately 150 tumor marker tests was developed and bound to the Code attribute, using an extensible binding to account for new and overlooked tests and code updates. The <a href="ValueSet-mcode-tumor-marker-test-vs.html">TumorMarkerVS</a> lists some common tests for tumor markers but does not further align by cancer type. The approach of using a single profile for multiple tests is less than ideal, since without specifying units of measure or answer sets on a per-test basis, reporting could vary.</li>
     <li>Not all vocabularies used in mCODE are currently supported by the <a href="http://wiki.hl7.org/index.php?title=IG_Publisher_Documentation" target="_blank">FHIR Implementation Guide Publishing Tool</a>. The <a href="qa.html">error report on this IG</a> reports these references as errors. In truth, they reflect limitations of the FHIR terminology server. Unsupported vocabularies include ClinVar and AJCC.</li>

@@ -6,6 +6,7 @@
   "name": "EvidenceType",
   "title": "Evidence Type",
   "status": "active",
+  "description": "Categorization of the kind of evidence used as input to the clinical judgment. This corresponds to both the S and O in SOAP.",
   "fhirVersion": "4.0.1",
   "mapping": [
     {

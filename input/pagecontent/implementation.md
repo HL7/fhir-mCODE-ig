@@ -2,6 +2,7 @@
 
 <h3><a name="Implementation"></a>Implementation Notes</h3>
 <p>This page contains miscellaneous information on modeling and FHIR implementation. The content is primarily directed at informaticists and implementers of mCODE. The following topics are addressed: </p>
+
 <ul>
     <li><a href="#Conformance">Conformance Requirements</a></li>
     <li><a href="#Terminology">Terminology Preferences</a></li>
@@ -13,6 +14,7 @@
 </ul>
 
 <h4><a name="Conformance"></a>Conformance Requirements</h4>
+
 <h5>Relationship to US Core</h5>
 <p>With one exception (see <a href="#Conformance">below</a>), the profiles presented in this guide conform to <a href="http://hl7.org/fhir/us/core/index.html" target="_blank">US Core Implementation Guide (v3.1.0)</a>. Each mCODE Profile uses a corresponding US Core profiles as its base profile, and thus, cannot break the rules established by that profile in US Core. For example, if US Core has a required element, by virtue of profile inheritance, mCODE cannot make that element optional. However, <em>it is not true that any instance that conforms to an mCODE profile will automatically conform to US Core</em>. In particular, the use of <a href="https://www.hl7.org/fhir/valueset-binding-strength.html" target="_blank">extensible value sets</a> requires caution. Extensibility is only allowed when an appropriate concept is not available in the US Core value set. Please note:</p>
 <ul>

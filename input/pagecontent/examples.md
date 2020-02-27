@@ -1,10 +1,8 @@
 <div xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../input-cache/schemas-r5/fhir-single.xsd">
 
-
 <h3><a name="Examples"></a>mCODE FHIR Examples</h3>
 
 <p>This section provides some examples how mCODE elements may be represented in a FHIR instance which conforms to this implementation guide.</p>
-
 <ul>
     <li><b>Patient</b>: <a href="Patient-mCODEPatientExample01.html">mCODEPatientExample01</a> and <a href="Patient-mCODEPatientExample02.html">mCODEPatientExample02</a>  shows patient demographics like name, address, race, and ethnicity.</li>
     <li><b>Primary Cancer Condition:</b> <a href="Condition-mCODEPrimaryCancerConditionExample01.html">mCODEPrimaryCancerConditionExample01</a> shows an example for a patient diagnosed with non-small cell lung cancer (NSCLC) adenocarcinoma.</li>

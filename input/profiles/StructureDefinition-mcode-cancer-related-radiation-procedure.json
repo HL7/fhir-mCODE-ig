@@ -117,6 +117,18 @@
         }
       },
       {
+        "id": "Procedure.subject",
+        "path": "Procedure.subject",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-patient"
+            ]
+          }
+        ]
+      },
+      {
         "id": "Procedure.recorder",
         "path": "Procedure.recorder",
         "type": [

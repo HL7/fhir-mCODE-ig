@@ -1,0 +1,6 @@
+value should not start or finish with whitespace
+Code System URI "http://ncimeta.nci.nih.gov" is unknown so the code cannot be validated
+Code System URI "http://cancerstaging.org" is unknown so the code cannot be validated
+Code System URI "http://www.genenames.org/geneId" is unknown so the code cannot be validated
+Code System URI "http://varnomen.hgvs.org" is unknown so the code cannot be validated
+Code System URI "http://www.ncbi.nlm.nih.gov/clinvar" is unknown so the code cannot be validated

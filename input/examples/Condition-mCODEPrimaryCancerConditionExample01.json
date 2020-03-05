@@ -16,6 +16,42 @@
       ]
     }
   ],
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-histology-morphology-behavior",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "code": "35917007",
+            "system": "http://snomed.info/sct"
+          }
+        ]
+      }
+    }
+  ],
+  "bodySite": [
+    {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-laterality",
+          "valueCodeableConcept": {
+            "coding": [
+              {
+                "code": "7771000",
+                "system": "http://snomed.info/sct"
+              }
+            ]
+          }
+        }
+      ],
+      "coding": [
+        {
+          "code": "39607008",
+          "system": "http://snomed.info/sct"
+        }
+      ]
+    }
+  ],
   "clinicalStatus": {
     "coding": [
       {
@@ -40,16 +76,6 @@
       }
     ]
   },
-  "bodySite": [
-    {
-      "coding": [
-        {
-          "code": "39607008",
-          "system": "http://snomed.info/sct"
-        }
-      ]
-    }
-  ],
   "subject": {
     "reference": "Patient/mCODEPatientExample01"
   },

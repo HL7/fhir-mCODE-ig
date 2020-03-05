@@ -1,16 +1,4 @@
 -------------------------------------------------------------------------------------
-{"hierarchical" : true, "valueSet" :{
-  "resourceType" : "ValueSet",
-  "compose" : {
-    "include" : [{
-      "system" : "http://www.ncbi.nlm.nih.gov/clinvar"
-    }]
-  }
-}}####
-e: {
-  "error" : "Error from server: Unable to provide support for code system http://www.ncbi.nlm.nih.gov/clinvar"
-}
--------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://www.ncbi.nlm.nih.gov/clinvar",
   "code" : "619728"
@@ -36,5 +24,17 @@ v: {
   "display" : "",
   "severity" : "error",
   "error" : "CodeSystem uri 'http://www.ncbi.nlm.nih.gov/clinvar' is unknown"
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://www.ncbi.nlm.nih.gov/clinvar"
+    }]
+  }
+}}####
+e: {
+  "error" : "Error from server: Unable to provide support for code system http://www.ncbi.nlm.nih.gov/clinvar"
 }
 -------------------------------------------------------------------------------------

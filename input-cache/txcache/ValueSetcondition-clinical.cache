@@ -1,0 +1,11 @@
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://hl7.org/fhir/ValueSet/condition-clinical",
+  "code" : "active"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code system \"http://hl7.org/fhir/ValueSet/condition-clinical\" is not known (encountered paired with code = \"active\"); The code provided (http://hl7.org/fhir/ValueSet/condition-clinical#active) is not  valid in the value set All codes known to the system"
+}
+-------------------------------------------------------------------------------------

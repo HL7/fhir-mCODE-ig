@@ -4,7 +4,7 @@
   "name": "ComorbidConditionVS",
   "id": "mcode-comorbid-condition-vs",
   "title": "Comorbid Condition Value Set",
-  "description": "SNOMED and ICD-10-CM codes for common comorbid conditions. Aligns with Elixhauser comorbidity scale. ICD-10 codes are drawn from https://www.hcup-us.ahrq.gov/toolssoftware/comorbidityicd10/comformat_icd10cm_2019_1.txt. \n\nConformance note: If an ICD-10-CM code is used, and an equivalent SNOMED CT code is available, the resulting instance will not validate against US Core Profiles.",
+  "description": "SNOMED and ICD-10-CM codes for common comorbid conditions. Aligns with Elixhauser comorbidity scale. ICD-10 codes are drawn from https://www.hcup-us.ahrq.gov/toolssoftware/comorbidityicd10/comformat_icd10cm_2019_1.txt. \r\n\r\nConformance note: If an ICD-10-CM code is used, and an equivalent SNOMED CT code is available, the resulting instance will not validate against US Core Profiles.",
   "version": "1.0.0",
   "url": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-comorbid-condition-vs",
   "compose": {

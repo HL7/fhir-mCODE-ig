@@ -1,0 +1,55 @@
+-------------------------------------------------------------------------------------
+{"code" : {
+  "coding" : [{
+    "code" : "survey"
+  }]
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/observation-category"
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"CHECK_MEMERSHIP_ONLY"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code system \"\" is not known (encountered paired with code = \"survey\"); The code provided (#survey) is not  valid in the value set ObservationCategoryCodes"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "coding" : [{
+    "code" : "survey"
+  }]
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://hl7.org/fhir/secondary-finding"
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"CHECK_MEMERSHIP_ONLY"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code system \"\" is not known (encountered paired with code = \"survey\"); The code provided (#survey) is not  valid in the value set ObservationCategoryCodes"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "coding" : [{
+    "code" : "laboratory"
+  }]
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/observation-category"
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"CHECK_MEMERSHIP_ONLY"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code system \"\" is not known (encountered paired with code = \"laboratory\"); The code provided (#laboratory) is not  valid in the value set ObservationCategoryCodes"
+}
+-------------------------------------------------------------------------------------

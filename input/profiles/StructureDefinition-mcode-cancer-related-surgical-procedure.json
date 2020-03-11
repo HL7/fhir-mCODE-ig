@@ -57,9 +57,9 @@
         }
       },
       {
-        "id": "Procedure.extension:TreatmentIntent",
+        "id": "Procedure.extension:treatmentIntent",
         "path": "Procedure.extension",
-        "sliceName": "TreatmentIntent",
+        "sliceName": "treatmentIntent",
         "max": "1",
         "type": [
           {
@@ -170,9 +170,9 @@
         "mustSupport": true
       },
       {
-        "id": "Procedure.bodySite.extension:Laterality",
+        "id": "Procedure.bodySite.extension:laterality",
         "path": "Procedure.bodySite.extension",
-        "sliceName": "Laterality",
+        "sliceName": "laterality",
         "max": "1",
         "type": [
           {

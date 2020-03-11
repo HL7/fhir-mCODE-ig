@@ -86,9 +86,9 @@
         }
       },
       {
-        "id": "Condition.bodySite.extension:Laterality",
+        "id": "Condition.bodySite.extension:laterality",
         "path": "Condition.bodySite.extension",
-        "sliceName": "Laterality",
+        "sliceName": "laterality",
         "max": "1",
         "type": [
           {

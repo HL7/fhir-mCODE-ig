@@ -52,9 +52,9 @@
         }
       },
       {
-        "id": "MedicationStatement.extension:TreatmentIntent",
+        "id": "MedicationStatement.extension:treatmentIntent",
         "path": "MedicationStatement.extension",
-        "sliceName": "TreatmentIntent",
+        "sliceName": "treatmentIntent",
         "max": "1",
         "type": [
           {
@@ -67,9 +67,9 @@
         "mustSupport": true
       },
       {
-        "id": "MedicationStatement.extension:TerminationReason",
+        "id": "MedicationStatement.extension:terminationReason",
         "path": "MedicationStatement.extension",
-        "sliceName": "TerminationReason",
+        "sliceName": "terminationReason",
         "type": [
           {
             "code": "Extension",

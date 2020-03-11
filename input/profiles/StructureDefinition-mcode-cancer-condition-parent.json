@@ -67,9 +67,9 @@
         }
       },
       {
-        "id": "Condition.extension:AssertedDate",
+        "id": "Condition.extension:assertedDate",
         "path": "Condition.extension",
-        "sliceName": "AssertedDate",
+        "sliceName": "assertedDate",
         "max": "1",
         "type": [
           {
@@ -82,9 +82,9 @@
         "mustSupport": true
       },
       {
-        "id": "Condition.extension:HistologyMorphologyBehavior",
+        "id": "Condition.extension:histologyMorphologyBehavior",
         "path": "Condition.extension",
-        "sliceName": "HistologyMorphologyBehavior",
+        "sliceName": "histologyMorphologyBehavior",
         "max": "1",
         "type": [
           {
@@ -123,9 +123,9 @@
         }
       },
       {
-        "id": "Condition.bodySite.extension:Laterality",
+        "id": "Condition.bodySite.extension:laterality",
         "path": "Condition.bodySite.extension",
-        "sliceName": "Laterality",
+        "sliceName": "laterality",
         "max": "1",
         "type": [
           {

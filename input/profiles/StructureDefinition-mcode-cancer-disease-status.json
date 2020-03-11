@@ -62,9 +62,9 @@
         }
       },
       {
-        "id": "Observation.extension:EvidenceType",
+        "id": "Observation.extension:evidenceType",
         "path": "Observation.extension",
-        "sliceName": "EvidenceType",
+        "sliceName": "evidenceType",
         "type": [
           {
             "code": "Extension",
@@ -75,7 +75,7 @@
         ]
       },
       {
-        "id": "Observation.extension:EvidenceType.valueCodeableConcept",
+        "id": "Observation.extension:evidenceType.valueCodeableConcept",
         "path": "Observation.extension.valueCodeableConcept",
         "binding": {
           "strength": "required",

@@ -48,9 +48,9 @@
         "mustSupport": true
       },
       {
-        "id": "Specimen.collection.bodySite.extension:Laterality",
+        "id": "Specimen.collection.bodySite.extension:laterality",
         "path": "Specimen.collection.bodySite.extension",
-        "sliceName": "Laterality",
+        "sliceName": "laterality",
         "max": "1",
         "type": [
           {

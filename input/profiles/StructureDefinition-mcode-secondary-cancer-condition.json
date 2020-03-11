@@ -53,9 +53,9 @@
   "differential": {
     "element": [
       {
-        "id": "Condition.extension:RelatedPrimaryCancerCondition",
+        "id": "Condition.extension:relatedPrimaryCancerCondition",
         "path": "Condition.extension",
-        "sliceName": "RelatedPrimaryCancerCondition",
+        "sliceName": "relatedPrimaryCancerCondition",
         "max": "1",
         "type": [
           {

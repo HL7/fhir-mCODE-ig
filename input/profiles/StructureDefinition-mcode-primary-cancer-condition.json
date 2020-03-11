@@ -67,8 +67,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-clinical-stage-group",
-              "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-pathological-stage-group"
+              "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-stage-parent"
             ]
           }
         ]

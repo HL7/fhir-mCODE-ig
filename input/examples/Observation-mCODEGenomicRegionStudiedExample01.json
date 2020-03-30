@@ -38,7 +38,8 @@
         "coding": [
           {
             "code": "619728",
-            "system": "http://www.genenames.org/geneId"
+            "system": "http://www.genenames.org/geneId",
+            "display": "STK11"
           }
         ]
       }

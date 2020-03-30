@@ -38,7 +38,8 @@
         "coding": [
           {
             "code": "HGNC:1100",
-            "system": "http://www.genenames.org/geneId"
+            "system": "http://www.genenames.org/geneId",
+            "display": "BRCA1"
           }
         ]
       }
@@ -56,7 +57,8 @@
         "coding": [
           {
             "code": "NG_005905.2:g.126148_126152GTAAA[1]",
-            "system": "http://varnomen.hgvs.org"
+            "system": "http://varnomen.hgvs.org",
+            "display": "NG_005905.2:g.126148_126152GTAAA[1]"
           }
         ]
       }
@@ -74,7 +76,8 @@
         "coding": [
           {
             "code": "LA6683-2",
-            "system": "http://loinc.org"
+            "system": "http://loinc.org",
+            "display": "Germline"
           }
         ]
       }
@@ -85,7 +88,8 @@
     "coding": [
       {
         "code": "LA26398-0",
-        "system": "http://loinc.org"
+        "system": "http://loinc.org",
+        "display": "Sequencing"
       }
     ]
   },
@@ -93,7 +97,8 @@
     "coding": [
       {
         "code": "LA9633-4",
-        "system": "http://loinc.org"
+        "system": "http://loinc.org",
+        "display": "Present"
       }
     ]
   },

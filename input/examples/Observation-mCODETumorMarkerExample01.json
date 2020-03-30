@@ -21,7 +21,8 @@
     "coding": [
       {
         "code": "39004-7",
-        "system": "http://loinc.org"
+        "system": "http://loinc.org",
+        "display": "Epidermal growth factor receptor Ag [Presence] in Tissue"
       }
     ]
   },
@@ -38,7 +39,8 @@
     "coding": [
       {
         "code": "10828004",
-        "system": "http://snomed.info/sct"
+        "system": "http://snomed.info/sct",
+        "display": "Positive (qualifier value)"
       }
     ]
   }

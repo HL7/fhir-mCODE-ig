@@ -13,7 +13,8 @@
         "coding": [
           {
             "code": "373808002",
-            "system": "http://snomed.info/sct"
+            "system": "http://snomed.info/sct",
+            "display": "Curative - procedure intent"
           }
         ]
       }
@@ -24,7 +25,8 @@
     "coding": [
       {
         "code": "359615001",
-        "system": "http://snomed.info/sct"
+        "system": "http://snomed.info/sct",
+        "display": "Partial lobectomy of lung (procedure)"
       }
     ]
   },
@@ -45,7 +47,8 @@
       "coding": [
         {
           "code": "41224006",
-          "system": "http://snomed.info/sct"
+          "system": "http://snomed.info/sct",
+          "display": "Structure of lower lobe of left lung (body structure)"
         }
       ]
     }

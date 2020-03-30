@@ -38,7 +38,8 @@
         "coding": [
           {
             "code": "HGNC:11389",
-            "system": "http://www.genenames.org/geneId"
+            "system": "http://www.genenames.org/geneId",
+            "display": "STK11"
           }
         ]
       }
@@ -56,7 +57,8 @@
         "coding": [
           {
             "code": "619728",
-            "system": "http://www.ncbi.nlm.nih.gov/clinvar"
+            "system": "http://www.ncbi.nlm.nih.gov/clinvar",
+            "display": "NC_000019.8:g.1171707G>A"
           }
         ]
       }
@@ -74,7 +76,8 @@
         "coding": [
           {
             "code": "NC_000019.8:g.1171707G>A",
-            "system": "http://varnomen.hgvs.org"
+            "system": "http://varnomen.hgvs.org",
+            "display": "NC_000019.8:g.1171707G>A"
           }
         ]
       }
@@ -92,7 +95,8 @@
         "coding": [
           {
             "code": "LA6684-0",
-            "system": "http://loinc.org"
+            "system": "http://loinc.org",
+            "display": "Somatic"
           }
         ]
       }
@@ -103,7 +107,8 @@
     "coding": [
       {
         "code": "LA26398-0",
-        "system": "http://loinc.org"
+        "system": "http://loinc.org",
+        "display": "Sequencing"
       }
     ]
   },
@@ -111,7 +116,8 @@
     "coding": [
       {
         "code": "LA9633-4",
-        "system": "http://loinc.org"
+        "system": "http://loinc.org",
+        "display": "Present"
       }
     ]
   },

@@ -21,7 +21,8 @@
         "coding": [
           {
             "code": "252416005",
-            "system": "http://snomed.info/sct"
+            "system": "http://snomed.info/sct",
+            "display": "Histopathology test (procedure)"
           }
         ]
       }
@@ -33,7 +34,8 @@
       "coding": [
         {
           "code": "laboratory",
-          "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+          "display": "laboratory"
         }
       ]
     }
@@ -51,7 +53,8 @@
     "coding": [
       {
         "code": "268910001",
-        "system": "http://snomed.info/sct"
+        "system": "http://snomed.info/sct",
+        "display": "Patient condition improved (finding)"
       }
     ]
   }

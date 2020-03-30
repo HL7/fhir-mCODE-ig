@@ -20,7 +20,8 @@
       "coding": [
         {
           "code": "survey",
-          "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+          "display": "Survey"
         }
       ]
     }
@@ -29,7 +30,8 @@
     "coding": [
       {
         "code": "C146985",
-        "system": "http://ncimeta.nci.nih.gov"
+        "system": "http://ncimeta.nci.nih.gov",
+        "display": "AJCC Cancer Staging Manual 8th Edition"
       }
     ]
   },
@@ -41,7 +43,8 @@
     "coding": [
       {
         "code": "3C",
-        "system": "http://cancerstaging.org"
+        "system": "http://cancerstaging.org",
+        "display": "IIIC"
       }
     ]
   },

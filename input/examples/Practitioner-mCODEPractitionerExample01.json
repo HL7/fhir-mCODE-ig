@@ -43,7 +43,8 @@
           {
             "code": "MD",
             "system": "http://terminology.hl7.org/CodeSystem/v2-0360",
-            "version": "2.7"
+            "version": "2.7",
+            "display": "Doctor of Medicine"
           }
         ]
       }

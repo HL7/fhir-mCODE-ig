@@ -23,7 +23,8 @@
         "coding": [
           {
             "code": "35917007",
-            "system": "http://snomed.info/sct"
+            "system": "http://snomed.info/sct",
+            "display": "Adenocarcinoma"
           }
         ]
       }
@@ -38,7 +39,8 @@
             "coding": [
               {
                 "code": "7771000",
-                "system": "http://snomed.info/sct"
+                "system": "http://snomed.info/sct",
+                "display": "Left (qualifier value)"
               }
             ]
           }
@@ -47,7 +49,8 @@
       "coding": [
         {
           "code": "39607008",
-          "system": "http://snomed.info/sct"
+          "system": "http://snomed.info/sct",
+          "display": "Lung structure (body structure)"
         }
       ]
     }
@@ -56,7 +59,8 @@
     "coding": [
       {
         "code": "active",
-        "system": "http://terminology.hl7.org/CodeSystem/condition-clinical"
+        "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+        "display": "Active"
       }
     ]
   },
@@ -64,7 +68,8 @@
     "coding": [
       {
         "code": "confirmed",
-        "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status"
+        "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+        "display": "Confirmed"
       }
     ]
   },
@@ -72,7 +77,8 @@
     "coding": [
       {
         "code": "254637007",
-        "system": "http://snomed.info/sct"
+        "system": "http://snomed.info/sct",
+        "display": "Non-small cell lung cancer (disorder)"
       }
     ]
   },
@@ -89,7 +95,8 @@
         "coding": [
           {
             "code": "3C",
-            "system": "http://cancerstaging.org"
+            "system": "http://cancerstaging.org",
+            "display": "IIIC"
           }
         ]
       },

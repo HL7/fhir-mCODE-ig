@@ -20,7 +20,8 @@
       "coding": [
         {
           "code": "survey",
-          "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+          "display": "survey"
         }
       ]
     }
@@ -29,7 +30,8 @@
     "coding": [
       {
         "code": "5880005",
-        "system": "http://snomed.info/sct"
+        "system": "http://snomed.info/sct",
+        "display": "Clinical examination"
       }
     ]
   },
@@ -48,7 +50,8 @@
       "coding": [
         {
           "code": "LA9622-7",
-          "system": "http://loinc.org"
+          "system": "http://loinc.org",
+          "display": "Fully active, able to carry on all pre-disease performance without restriction"
         }
       ]
     }

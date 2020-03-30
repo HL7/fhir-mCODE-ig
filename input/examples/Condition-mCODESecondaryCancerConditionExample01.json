@@ -28,7 +28,8 @@
     "coding": [
       {
         "code": "active",
-        "system": "http://terminology.hl7.org/CodeSystem/condition-clinical"
+        "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+        "display": "Active"
       }
     ]
   },
@@ -36,7 +37,8 @@
     "coding": [
       {
         "code": "confirmed",
-        "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status"
+        "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+        "display": "Confirmed"
       }
     ]
   },
@@ -44,7 +46,8 @@
     "coding": [
       {
         "code": "94225005",
-        "system": "http://snomed.info/sct"
+        "system": "http://snomed.info/sct",
+        "display": "Secondary malignant neoplasm of brain"
       }
     ]
   },

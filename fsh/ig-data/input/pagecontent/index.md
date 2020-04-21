@@ -66,8 +66,9 @@
     <li><a href="#Outcomes">Outcomes Group</a></li>
 </ul>
 
-<img src="mCodeDiagram.png" alt="mCODE Logical Model" width="1100" />
-
+<br>
+<img src="mCodeDiagram.svg" alt="mCODE Logical Model" width="1100" />
+<br>
 <h4><a name="Patient">Patient Group</a></h4>
 <p>The mCODE <b>Patient</b> group contains the following basic information about the patient:</p>
 <ul>

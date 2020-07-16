@@ -16,12 +16,12 @@ Description:  "Abstract parent class for describing a primary or secondary metas
     HistologyMorphologyBehavior named histologyMorphologyBehavior 0..1
 * bodySite.extension contains
     Laterality named laterality 0..1
-* extension[assertedDate], extension[histologyMorphologyBehavior], bodySite, bodySite.extension[laterality] MS
+* extension[assertedDate] and extension[histologyMorphologyBehavior] and bodySite and bodySite.extension[laterality] MS
 * category = SCT#64572001 //"Disease"
 * severity 0..0
 * bodySite from CancerBodyLocationVS (preferred)
-* asserter only Reference(Practitioner | PractitionerRole)
-* recorder only Reference(Practitioner | PractitionerRole)
+* asserter only Reference(Practitioner or PractitionerRole)
+* recorder only Reference(Practitioner or PractitionerRole)
 
 Profile: PrimaryCancerCondition
 Id: mcode-primary-cancer-condition

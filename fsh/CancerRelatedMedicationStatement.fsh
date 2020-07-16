@@ -12,7 +12,7 @@ Description:    "A record of the use of a medication (individual administration 
 6) informationSource is missing PractitionerRole
 7) not sure why reasonCode has be changed from 0..* to 0..1
 */
-* effective[x], medication[x] MS
+* effective[x] and medication[x] MS
 * extension contains
     TreatmentIntent named treatmentIntent 0..1 MS and
     TerminationReason named terminationReason 0..* MS

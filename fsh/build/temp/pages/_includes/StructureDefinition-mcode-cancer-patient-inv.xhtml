@@ -1,7 +1,0 @@
-{% raw %}<h4>Constraints</h4>
-<table class="list">
-<tr><td width="60"><b>Id</b></td><td><b>Path</b></td><td><b>Details</b></td><td><b>Requirements</b></td></tr>
-<tr><td>us-core-8</td><td>Patient.name</td><td>Patient.name.given or Patient.name.family or both SHALL be present<br/>: family.exists() or given.exists()</td><td></td></tr>
-<tr><td>pat-1</td><td>Patient.contact</td><td>SHALL at least contain a contact's details or a reference to an organization<br/>: name.exists() or telecom.exists() or address.exists() or organization.exists()</td><td></td></tr>
-</table>
-{% endraw %}

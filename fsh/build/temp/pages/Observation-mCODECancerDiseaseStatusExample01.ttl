@@ -1,0 +1,86 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <http://loinc.org/rdf#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/us/mcode/Observation/mCODECancerDiseaseStatusExample01> a fhir:Observation;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "mCODECancerDiseaseStatusExample01"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-disease-status";
+       fhir:index 0;
+       fhir:link <http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-disease-status>
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>id</b>: mCODECancerDiseaseStatusExample01</p><p><b>meta</b>: </p><p></p><p><b>category</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/observation-category laboratory}\">laboratory</span></p><p><b>code</b>: <span title=\"Codes: {http://loinc.org 88040-1}\">Response to cancer treatment</span></p><p><b>subject</b>: <a href=\"Patient-mCODEPatientExample01.html\">Generated Summary: id: mCODEPatientExample01; Medical Record Number = m123 (USUAL); John B. Anyperson ; gender: male; birthDate: 1951-01-20</a></p><p><b>effective</b>: 2019-04-01</p><p><b>performer</b>: <a href=\"Practitioner-mCODEPractitionerExample01.html\">Generated Summary: id: mCODEPractitionerExample01; 9988776655; Kyle Anydoc ; gender: male</a></p><p><b>value</b>: <span title=\"Codes: {http://snomed.info/sct 268910001}\">Patient condition improved (finding)</span></p></div>"
+  ];
+  fhir:DomainResource.extension [
+     fhir:index 0;
+     fhir:Extension.url [ fhir:value "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-evidence-type" ];
+     fhir:Extension.valueCodeableConcept [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         a sct:252416005;
+         fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+         fhir:Coding.code [ fhir:value "252416005" ];
+         fhir:Coding.display [ fhir:value "Histopathology test (procedure)" ]
+       ]
+     ]
+  ];
+  fhir:Observation.status [ fhir:value "final"];
+  fhir:Observation.category [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/observation-category" ];
+       fhir:Coding.code [ fhir:value "laboratory" ];
+       fhir:Coding.display [ fhir:value "laboratory" ]
+     ]
+  ];
+  fhir:Observation.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       a loinc:88040-1;
+       fhir:Coding.system [ fhir:value "http://loinc.org" ];
+       fhir:Coding.code [ fhir:value "88040-1" ]
+     ]
+  ];
+  fhir:Observation.subject [
+     fhir:link <http://hl7.org/fhir/us/mcode/Patient/mCODEPatientExample01>;
+     fhir:Reference.reference [ fhir:value "Patient/mCODEPatientExample01" ]
+  ];
+  fhir:Observation.effectiveDateTime [ fhir:value "2019-04-01"^^xsd:date];
+  fhir:Observation.performer [
+     fhir:index 0;
+     fhir:link <http://hl7.org/fhir/us/mcode/Practitioner/mCODEPractitionerExample01>;
+     fhir:Reference.reference [ fhir:value "Practitioner/mCODEPractitionerExample01" ]
+  ];
+  fhir:Observation.valueCodeableConcept [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       a sct:268910001;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+       fhir:Coding.code [ fhir:value "268910001" ];
+       fhir:Coding.display [ fhir:value "Patient condition improved (finding)" ]
+     ]
+  ] .
+
+<http://hl7.org/fhir/us/mcode/Patient/mCODEPatientExample01> a fhir:us .
+
+<http://hl7.org/fhir/us/mcode/Practitioner/mCODEPractitionerExample01> a fhir:us .
+
+# - ontology header ------------------------------------------------------------
+
+<http://hl7.org/fhir/us/mcode/Observation/mCODECancerDiseaseStatusExample01.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl;
+  owl:versionIRI <http://build.fhir.org/us/mcode/Observation/mCODECancerDiseaseStatusExample01.ttl> .
+
+# -------------------------------------------------------------------------------------
+

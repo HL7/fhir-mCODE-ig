@@ -1,0 +1,898 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>HL7.FHIR.US.MCODE\Artifacts Summary - FHIR v4.0.1</title>
+  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+     
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet"/>
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+  
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+    <!-- Placeholder for child template CSS declarations -->
+    <link href="assets/css/hl7.css" rel="stylesheet"/>
+    <link href="assets/css/fhir.css" rel="stylesheet"/>
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+  
+    <!-- Favicons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png"/>
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body>
+
+    <style type="text/css">h2{--heading-prefix:"7"}
+    h3,h4,h5,h6{--heading-prefix:"7.0"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+        
+        <div id="hl7-nav">
+          <a id="hl7-logo" no-external="true" href="http://hl7.org">
+            <img height="50" alt="Visit the HL7 website" src="assets/images/hl7-logo-header.png"/>
+          </a>
+        </div>
+        <div id="family-nav">
+          <a id="family-logo" no-external="true" href="http://hl7.org/fhir"><img height="50" alt="Visit the FHIR website" src="assets/images/fhir-logo-www.png"/> </a>
+        </div>
+        <div id="hl7-search">
+          <a id="hl7-search-lnk" no-external="true" href="http://hl7.org/fhir/search.cfm"><img alt="Search FHIR" src="assets/images/search.png"/></a>
+        </div>
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">HL7 FHIR Implementation Guide: minimal Common Oncology Data Elements (mCODE) Release 1 - US Realm | STU1</span><br/>1.0.1 - STU1</p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+    
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+    
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Home</a>
+  </li>
+  <li>
+    <a href="artifacts.html#2">Profiles</a>
+  </li>
+  <li>
+    <a href="artifacts.html#3">Extensions</a>
+  </li>
+  <li>
+    <a href="artifacts.html#4">Value Sets</a>
+  </li>
+  <li>
+    <a href="downloads.html">Downloads</a>
+  </li>
+  <li>
+    <a href="examples.html">Examples</a>
+  </li>
+  <li>
+    <a href="http://hl7.org/fhir/us/mcode/history.html">History</a>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->  
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Artifacts Summary</b></li>
+        </ul>  
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+    
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">HL7 FHIR Implementation Guide: minimal Common Oncology Data Elements (mCODE) Release 1 - US Realm | STU1 - Local Development build (v1.0.1). See the <a href="http://hl7.org/fhir/us/mcode/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>Artifacts Summary</h2>
+  
+  <!--DO NOT EDIT THIS FILE - It is generated and any changes made will be overwritten--><div xmlns:html="http://www.w3.org/1999/xhtml"
+     xmlns="http://www.w3.org/1999/xhtml"
+     xmlns:f="http://hl7.org/fhir"
+     class="markdown-toc">
+   <p>Contents:</p>
+   <ul>
+      <li>
+         <a href="#1">Structures: Abstract Profiles</a>
+      </li>
+      <li>
+         <a href="#2">Structures: Resource Profiles</a>
+      </li>
+      <li>
+         <a href="#3">Structures: Extension Definitions</a>
+      </li>
+      <li>
+         <a href="#4">Terminology: Value Sets</a>
+      </li>
+      <li>
+         <a href="#5">Example: Example Instances</a>
+      </li>
+   </ul>
+</div>
+<div xmlns:html="http://www.w3.org/1999/xhtml"
+     xmlns="http://www.w3.org/1999/xhtml"
+     xmlns:f="http://hl7.org/fhir">
+   <p>This page provides a list of the FHIR artifacts defined as part of this implementation guide.</p>
+   <a name="1"> </a>
+   <h3>Structures: Abstract Profiles </h3>
+   <p>These are profiles on resources or data types that describe patterns used by other profiles, but can't be instantiated directly.  I.e. instances can conform to profiles *based* on these abstract profiles, but don't declare conformance to the abstract profiles themselves.</p>
+   <p>
+      <table class="grid">
+         <col style="width:20%"/>
+         <tbody>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="StructureDefinition-mcode-cancer-condition-parent.html"
+                     title="StructureDefinition/mcode-cancer-condition-parent">Cancer Condition Parent</a>
+               </td>
+               <td>Abstract parent class for describing a primary or secondary metastatic neoplastic diseases, or individual tumors.</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="StructureDefinition-mcode-cancer-stage-parent.html"
+                     title="StructureDefinition/mcode-cancer-stage-parent">Cancer Stage Parent</a>
+               </td>
+               <td>Abstract parent class for members of cancer staging panels. Cancer panel members must include a timing element and staging system, and focus on a cancer disorder. Specific realizations will have value sets specific to certain staging systems.</td>
+            </tr>
+         </tbody>
+      </table>
+   </p>
+   <a name="2"> </a>
+   <h3>Structures: Resource Profiles </h3>
+   <p>These define constraints on FHIR resources that need to be complied with by conformant implementations</p>
+   <p>
+      <table class="grid">
+         <col style="width:20%"/>
+         <tbody>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="StructureDefinition-mcode-cancer-disease-status.html"
+                     title="StructureDefinition/mcode-cancer-disease-status">Cancer Disease Status</a>
+               </td>
+               <td>A clinician's qualitative judgment on the current trend of the cancer, e.g., whether it is stable, worsening (progressing), or improving (responding). The judgment may be based a single type or multiple kinds of evidence, such as imaging data, assessment of symptoms, tumor markers, laboratory data, etc.
+
+Note: The LOINC code chosen to represent this observation (LOINC 88040-1, Response to cancer treatment) does not precisely match the meaning of this profile, but it is the closest available LOINC code at the present time. It is acknowledged that the disease status is different than the status of the disease due to treatment, although in the context of an oncologist visit, disease status can mean response to treatment for patients under their care. However, the LOINC code 88041-2 is more granular than the definition of the profile because cancer disease status is observable regardless of whether the patient is under treatment. The plan is to request a new LOINC code that represents cancer disease status, as it is defined here, and replace the current LOINC code with the new code before normative publication of mCODE.</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="StructureDefinition-mcode-cancer-genetic-variant.html"
+                     title="StructureDefinition/mcode-cancer-genetic-variant">Cancer Genetic Variant</a>
+               </td>
+               <td>Records an alteration in the most common DNA nucleotide sequence. The term variant can be used to describe an alteration that may be benign, pathogenic, or of unknown significance. The term variant is increasingly being used in place of the term mutation.</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="StructureDefinition-mcode-cancer-genomics-report.html"
+                     title="StructureDefinition/mcode-cancer-genomics-report">Cancer Genomics Report</a>
+               </td>
+               <td>Genetic analysis summary report. The report may include one or more tests, with two distinct test types. The first type is a targeted mutation test, where a specific mutation on a specific gene is tested for. The result is either positive or negative for that mutation. The second type is a more general test for variants. This type of test returns the identity of variants found in a certain region of the genome.
+The identity of non-genomic laboratory tests is typically represented by a LOINC code. However, many genetic tests and panels do not have LOINC codes, although some might have an identifier in NCBI Genetic Testing Registry (GTR), a central location for voluntary submission of genetic test information by providers. To identify the diagnostic report, the name of the report must be in the text sub-field of the code structure. If there is a coded identifier from GTR, LOINC, or other source, then it should be included into the the code sub-field of the code structure. If there is no suitable code, the code can be omitted.</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="StructureDefinition-mcode-cancer-patient.html"
+                     title="StructureDefinition/mcode-cancer-patient">Cancer Patient</a>
+               </td>
+               <td>A patient who has been diagnosed with or is receiving medical treatment for a malignant growth or tumour.</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="StructureDefinition-mcode-cancer-related-medication-statement.html"
+                     title="StructureDefinition/mcode-cancer-related-medication-statement">Cancer-Related Medication Statement</a>
+               </td>
+               <td>A record of the use of a medication (individual administration or entire course) for a condition that is related to a primary or secondary cancer condition. The use may be reported by the patient or clinician and adminstration does not have to be directly observed.</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="StructureDefinition-mcode-cancer-related-radiation-procedure.html"
+                     title="StructureDefinition/mcode-cancer-related-radiation-procedure">Cancer-Related Radiation Procedure</a>
+               </td>
+               <td>A radiological treatment addressing a cancer condition. The scope of this profile has been narrowed to cancer-related procedures by constraining the ReasonReference and ReasonCode to cancer conditions.
+
+Conformance note: If an ICD-10-PCS code is used in the code attribute, and there is a semantically equivalent SNOMED CT or CPT code, the resulting Procedure instance will not be compliant with [US Core Profiles](http://hl7.org/fhir/us/core/index.html)</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="StructureDefinition-mcode-cancer-related-surgical-procedure.html"
+                     title="StructureDefinition/mcode-cancer-related-surgical-procedure">Cancer-Related Surgical Procedure</a>
+               </td>
+               <td>A surgical action addressing a cancer condition. The scope of this profile has been narrowed to cancer-related procedures by constraining the ReasonReference and ReasonCode to cancer conditions. Conformance note: If an ICD-10-PCS code is used in the code attribute, and there is a semantically equivalent SNOMED CT or CPT code, the resulting Procedure instance will not be compliant with US Core Profiles.</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="StructureDefinition-mcode-comorbid-condition.html"
+                     title="StructureDefinition/mcode-comorbid-condition">Comorbid Condition</a>
+               </td>
+               <td>A comorbidity refers to one or more diseases or conditions that occur along with another condition in the same person at the same time. Conditions considered comorbidities are often long-term or chronic conditions. Comorbidities are defined relative to an index disease and may be categorical, rather than described in full detail. The comorbid condition class provides comorbidity codes corresponding the Elixhauser Comorbidity Index. Conformance note: If an ICD-10-CM code is used for the code attribute, and a semantically equivalent SNOMED code is available, the resulting instance will not be compliant with US Core Profiles.</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="StructureDefinition-mcode-ecog-performance-status.html"
+                     title="StructureDefinition/mcode-ecog-performance-status">ECOG Performance Status</a>
+               </td>
+               <td>The Eastern Cooperative Oncology Group (ECOG) Performance Status represents the patient's functional status and is used to determine their ability to tolerate therapies in serious illness, specifically for chemotherapy. (Definition from: [LOINC](https://loinc.org/89262-0/)).</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="StructureDefinition-mcode-genetic-specimen.html"
+                     title="StructureDefinition/mcode-genetic-specimen">Genetic Specimen</a>
+               </td>
+               <td>A small sample of blood, hair, skin, amniotic fluid (the fluid that surrounds a fetus during pregnancy), or other tissue which is excised from a subject for the purposes of genomics testing or analysis.</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="StructureDefinition-mcode-genomic-region-studied.html"
+                     title="StructureDefinition/mcode-genomic-region-studied">Genomic Region Studied</a>
+               </td>
+               <td>The area of the genome region referenced in testing for variants.</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="StructureDefinition-mcode-karnofsky-performance-status.html"
+                     title="StructureDefinition/mcode-karnofsky-performance-status">Karnofsky Performance Status</a>
+               </td>
+               <td>The Karnofsky Performance Status (KPS) is a tool used to measure a patient's functional status. It can be used to compare the effectiveness of different therapies and to help assess the prognosis of certain patients, such as those with certain cancers. The KPS score ranges from 0 to 100 in intervals of 10. Higher scores are associated with better functional status, with 100 representing no symptoms or evidence of disease, and 0 representing death.</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="StructureDefinition-mcode-primary-cancer-condition.html"
+                     title="StructureDefinition/mcode-primary-cancer-condition">Primary Cancer Condition</a>
+               </td>
+               <td>Records the history of the primary cancer condition, the original or first tumor in the body (Definition from: [NCI Dictionary of Cancer Terms](https://www.cancer.gov/publications/dictionaries/cancer-terms/def/primary-tumor)). Cancers that are not clearly secondary (i.e., of uncertain origin or behavior) should be documented as primary.
+
+Cancer staging information summarized in this profile should reflect the most recent staging assessment on the patient, and should be updated if and when there is a new staging assessment. Past staging assessments will be preserved in instances of the TNMClinicalStageGroup and/or TNMPathologicalStageGroup, which refer back to PrimaryCancerCondition.
+
+Conformance note: For the code attribute, to be compliant with [US Core Profiles](http://hl7.org/fhir/us/core/index.html), SNOMED CT must be used unless there is no suitable code, in which case ICD-10-CM can be used.</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="StructureDefinition-mcode-secondary-cancer-condition.html"
+                     title="StructureDefinition/mcode-secondary-cancer-condition">Secondary Cancer Condition</a>
+               </td>
+               <td>Records the history of secondary neoplasms, including location(s) and the date of onset of metastases. A secondary cancer results from the spread (metastasization) of cancer from its original site (Definition from: NCI Dictionary of Cancer Terms).
+
+Conformance note: For the code attribute, to be compliant with US Core Profiles, SNOMED CT must be used unless there is no suitable code, in which case ICD-10-CM can be used.</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="StructureDefinition-mcode-tnm-clinical-distant-metastases-category.html"
+                     title="StructureDefinition/mcode-tnm-clinical-distant-metastases-category">TNM Clinical Distant Metastases Category</a>
+               </td>
+               <td>Category describing the extent of a tumor metastasis in remote anatomical locations, based on evidence such as physical examination, imaging, and/or biopsy.</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="StructureDefinition-mcode-tnm-clinical-primary-tumor-category.html"
+                     title="StructureDefinition/mcode-tnm-clinical-primary-tumor-category">TNM Clinical Primary Tumor Category</a>
+               </td>
+               <td>Category of the primary tumor, based on its size and extent, based on evidence such as physical examination, imaging, and/or biopsy.</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="StructureDefinition-mcode-tnm-clinical-regional-nodes-category.html"
+                     title="StructureDefinition/mcode-tnm-clinical-regional-nodes-category">TNM Clinical Regional Nodes Category</a>
+               </td>
+               <td>Category of the presence or absence of metastases in regional lymph nodes, based on evidence such as physical examination, imaging, and/or biopsy.</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="StructureDefinition-mcode-tnm-clinical-stage-group.html"
+                     title="StructureDefinition/mcode-tnm-clinical-stage-group">TNM Clinical Stage Group</a>
+               </td>
+               <td>The extent of the cancer in the body, according to the TNM classification system, based on evidence such as physical examination, imaging, and/or biopsy.</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="StructureDefinition-mcode-tnm-pathological-distant-metastases-category.html"
+                     title="StructureDefinition/mcode-tnm-pathological-distant-metastases-category">TNM Pathological Distant Metastases Category</a>
+               </td>
+               <td>Category describing the presence or absence of metastases in remote anatomical locations, assessed through pathologic analysis of a specimen.</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="StructureDefinition-mcode-tnm-pathological-primary-tumor-category.html"
+                     title="StructureDefinition/mcode-tnm-pathological-primary-tumor-category">TNM Pathological Primary Tumor Category</a>
+               </td>
+               <td>Category of the primary tumor, based on its size and extent, assessed through pathologic analysis of a specimen.</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="StructureDefinition-mcode-tnm-pathological-regional-nodes-category.html"
+                     title="StructureDefinition/mcode-tnm-pathological-regional-nodes-category">TNM Pathological Regional Nodes Category</a>
+               </td>
+               <td>Category of the presence or absence of metastases in regional lymph nodes, assessed through pathologic analysis of a specimen.</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="StructureDefinition-mcode-tnm-pathological-stage-group.html"
+                     title="StructureDefinition/mcode-tnm-pathological-stage-group">TNM Pathological Stage Group</a>
+               </td>
+               <td>The extent of the cancer in the body, according to the TNM classification system, assessed through pathologic analysis of a specimen.</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="StructureDefinition-mcode-tumor-marker.html"
+                     title="StructureDefinition/mcode-tumor-marker">Tumor Marker</a>
+               </td>
+               <td>The result of a tumor marker test. Tumor marker tests are generally used to guide cancer treatment decisions and monitor treatment, as well as to predict the chance of recovery and cancer recurrence. A tumor marker is a substance found in tissue or blood or other body fluids that may be a sign of cancer or certain benign (noncancer) conditions. Most tumor markers are made by both normal cells and cancer cells, but they are made in larger amounts by cancer cells. A tumor marker may help to diagnose cancer, plan treatment, or find out how well treatment is working or if cancer has come back. Examples of tumor markers include CA-125 (in ovarian cancer), CA 15-3 (in breast cancer), CEA (in colon cancer), and PSA (in prostate cancer). Tumor markers differ from genetic markers in that they are measured at the levels of the protein and substance post-RNA protein synthesis. (Definition adapted from: [NCI Dictionary of Cancer Terms](https://www.cancer.gov/publications/dictionaries/cancer-terms/def/tumor-marker-test) and [Cancer.Net](https://www.cancer.net/navigating-cancer-care/diagnosing-cancer/tests-and-procedures/tumor-marker-tests)).
+
+Implementation note: The data value for TumorMarker has cardinality is 0..1 (required if known) because when the test result is indeterminate, no quantitative data value will be reported. Instead, the reason for the null value will be reported in the DataAbsentReason field.</td>
+            </tr>
+         </tbody>
+      </table>
+   </p>
+   <a name="3"> </a>
+   <h3>Structures: Extension Definitions </h3>
+   <p>These define constraints on FHIR data types that need to be complied with by conformant implementations</p>
+   <p>
+      <table class="grid">
+         <col style="width:20%"/>
+         <tbody>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="StructureDefinition-mcode-evidence-type.html"
+                     title="StructureDefinition/mcode-evidence-type">Evidence Type</a>
+               </td>
+               <td>Categorization of the kind of evidence used as input to the clinical judgment. This corresponds to both the S and O in SOAP.</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="StructureDefinition-mcode-histology-morphology-behavior.html"
+                     title="StructureDefinition/mcode-histology-morphology-behavior">Histology-Morphology-Behavior</a>
+               </td>
+               <td>A description of the morphologic and behavioral characteristics of the cancer.</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="StructureDefinition-mcode-laterality.html"
+                     title="StructureDefinition/mcode-laterality">Laterality</a>
+               </td>
+               <td>Body side of the body location, if needed to distinguish from a similar location on the other side of the body.</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="StructureDefinition-mcode-related-primary-cancer-condition.html"
+                     title="StructureDefinition/mcode-related-primary-cancer-condition">Related Primary Cancer Condition</a>
+               </td>
+               <td>The primary cancer related to this secondary cancer.</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="StructureDefinition-mcode-termination-reason.html"
+                     title="StructureDefinition/mcode-termination-reason">Termination Reason</a>
+               </td>
+               <td>A code explaining an unplanned or premature termination of a plan of treatment, course of medication, or research study.</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="StructureDefinition-mcode-treatment-intent.html"
+                     title="StructureDefinition/mcode-treatment-intent">Treatment Intent</a>
+               </td>
+               <td>The purpose of a treatment.</td>
+            </tr>
+         </tbody>
+      </table>
+   </p>
+   <a name="4"> </a>
+   <h3>Terminology: Value Sets </h3>
+   <p>These define sets of codes used by systems conforming with this implementation guide</p>
+   <p>
+      <table class="grid">
+         <col style="width:20%"/>
+         <tbody>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="ValueSet-mcode-cancer-body-location-vs.html"
+                     title="ValueSet/mcode-cancer-body-location-vs">Cancer Body Location Value Set</a>
+               </td>
+               <td>Codes describing the location(s) of primary or secondary cancer. The value set includes all codes from the SNOMED CT body structure hierarchy (codes descending from 123037004 'Body Structure'). The cancer body location may also be expressed using ICD-O-3 topography codes, however, those codes are not included here due to intellectual property restrictions. No other code systems are considered conformant.</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="ValueSet-mcode-cancer-disease-status-evidence-type-vs.html"
+                     title="ValueSet/mcode-cancer-disease-status-evidence-type-vs">Cancer Disease Status Evidence Type Value Set</a>
+               </td>
+               <td>The type of evidence backing up the clinical determination of cancer progression. The code '* SCT#252416005 Histopathology test (procedure)' is intended to be used when there is a biopsy that contributes evidence of the cancer disease status.</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="ValueSet-mcode-cancer-disorder-vs.html"
+                     title="ValueSet/mcode-cancer-disorder-vs">Cancer Disorder Value Set</a>
+               </td>
+               <td>A broad cancer-related value set containing both primary and secondary tumor types, with codes from ICD-10 and SNOMED CT, including both diagnosis and histology/morphology/behavior codes. ICD-O-3 morphology codes may also be used and are considered conformant to the specification. For SNOMED, the value set includes all codes descending from 363346000 'Malignant neoplastic disease (disorder)' and 108369006 'Neoplasm (morphologic abnormality)'.</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="ValueSet-mcode-cancer-related-surgical-procedure-vs.html"
+                     title="ValueSet/mcode-cancer-related-surgical-procedure-vs">Cancer-Related Surgical Procedure Value Set</a>
+               </td>
+               <td>Includes selected SNOMED CT codes that may be used in the treatment of cancer tumors. Codes from ICD-10-PCS and CPT are acceptable. CPT codes are not listed here due to intellectual property restrictions. ICD-10-PCS codes are not listed because of a limitation in the FHIR Implementation Guide publisher. For CPT and ICD-10-PCS, only codes representing surgical procedures should be used. 
+
+Conformance note: If an ICD-10-PCS code is used, and a semantically equivalent SNOMED CT code is available, the resulting FHIR Procedure instance will not be compliant with [US Core Profiles](http://hl7.org/fhir/us/core/index.html).</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="ValueSet-mcode-cancer-staging-system-vs.html"
+                     title="ValueSet/mcode-cancer-staging-system-vs">Cancer Staging System Value Set</a>
+               </td>
+               <td>System used for staging. If the staging system is AJCC Version 8, use the NCI thesaurus code C146985 (AJCC Cancer Staging Manual 8th Edition) in its place. This is because SNOMED does not have an equivalent concept for AJCC Version 8 at this time.</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="ValueSet-mcode-clinvar-vs.html" title="ValueSet/mcode-clinvar-vs">ClinVar Value Set</a>
+               </td>
+               <td>Value set of human genetic variants, drawn from [ClinVar](https://www.ncbi.nlm.nih.gov/clinvar/). The codes in this value set refer to the ClinVar Variation ID, or the identifier for the variant or set of variants that were interpreted. [Source: NCBI ClinVar Data Dictionary](https://www.ncbi.nlm.nih.gov/projects/clinvar/ClinVarDataDictionary.pdf)</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="ValueSet-mcode-comorbid-condition-vs.html"
+                     title="ValueSet/mcode-comorbid-condition-vs">Comorbid Condition Value Set</a>
+               </td>
+               <td>SNOMED and ICD-10-CM codes for common comorbid conditions. Aligns with Elixhauser comorbidity scale. ICD-10 codes are drawn from https://www.hcup-us.ahrq.gov/toolssoftware/comorbidityicd10/comformat_icd10cm_2019_1.txt. 
+
+Conformance note: If an ICD-10-CM code is used, and an equivalent SNOMED CT code is available, the resulting instance will not validate against US Core Profiles.</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="ValueSet-mcode-condition-status-trend-vs.html"
+                     title="ValueSet/mcode-condition-status-trend-vs">Condition Status Trend Value Set</a>
+               </td>
+               <td>How patient's given disease, condition, or ability is trending.</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="ValueSet-mcode-genetic-specimen-type-vs.html"
+                     title="ValueSet/mcode-genetic-specimen-type-vs">Genetic Specimen Type Value Set</a>
+               </td>
+               <td>The type of specimen analyzed in a genetic test. The values are taken from code system http://terminology.hl7.org/CodeSystem/v2-0487, and represent a subset of HL7 Version 2 Table 0487 (http://hl7.org/fhir/v2/0487).</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="ValueSet-mcode-hgnc-vs.html" title="ValueSet/mcode-hgnc-vs">HUGO Gene Nomenclature Committee Gene Names Value Set</a>
+               </td>
+               <td>HUGO Gene Nomenclature Committee Gene Names Value Set</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="ValueSet-mcode-hgvs-vs.html" title="ValueSet/mcode-hgvs-vs">Human Genome Variation Society Sequence Variant Nomenclature Value Set</a>
+               </td>
+               <td>HGVS nomenclature is used to report and exchange information regarding variants found in DNA, RNA, and protein sequences.</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="ValueSet-mcode-histology-morphology-behavior-vs.html"
+                     title="ValueSet/mcode-histology-morphology-behavior-vs">Histology Morphology Behavior Value Set</a>
+               </td>
+               <td>Codes representing the structure, arrangement, and behavioral characteristics of malignant neoplasms, and cancer cells. Inclusion criteria: in situ neoplasms and malignant neoplasms. Exclusion criteria: benign neoplasms and neoplasms of unspecified behavior. Note: As the vocabulary binding is extensible within this IG, ICD-O-3 morphology codes (including behavior suffix) may also be used; they are not included in the value set for intellectual property reasons. For primary cancers, the ICD-O-3 behavior suffix should be /1, /2, or /3. For secondary cancers, the ICD-O-3 behavior suffix should be /6. Only SNOMED CT and ICD-O-3 are considered conformant to the specification. However, to be compliant with US Core Profiles, ICD-O-3 may only be used if there is no suitable code in SNOMED CT.</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="ValueSet-mcode-laterality-vs.html"
+                     title="ValueSet/mcode-laterality-vs">Laterality Value Set</a>
+               </td>
+               <td>Body side of the body location, if needed to distinguish from a similar location on the other side of the body.</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="ValueSet-mcode-primary-or-uncertain-behavior-cancer-disorder-vs.html"
+                     title="ValueSet/mcode-primary-or-uncertain-behavior-cancer-disorder-vs">Primary or Uncertain Behavior Cancer Disorder Value Set</a>
+               </td>
+               <td>Types of primary malignant neoplastic disease, coded in SNOMED CT or ICD-10-CM. 
+
+Conformance note: To be compliant with [US Core Profiles](http://hl7.org/fhir/us/core/index.html), ICD-10-CM should only be used if a suitable code is not available from SNOMED.
+
+For SNOMED CT coding, use a code from the disorder hierarchy under SNOMED CT 363346000 'Malignant neoplastic disease (disorder)' excluding codes descending from SNOMED CT 128462008 'Secondary malignant neoplastic disease (disorder)'. If body location is not precoordinated (i.e., implied by the code), the site of the primary tumor should be specified in the body site attribute. 
+
+For ICD-10-CM coding, use one of the codes given in this value set representing primary malignant neoplasms and neoplasms of uncertain or unspecified behavior.
+
+Note that ICD-O-3 specifies morphology and topography, not disorder. If ICD-O-3 is used, the primary cancer disorder code must be specifically be SNOMED CT 363346000  'Malignant neoplastic disease (disorder)'. The ICD-O-3 morphology and topography codes should be entered in the HistologyMorphologyBehavior and body location fields, respectively.</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="ValueSet-mcode-radiation-procedure-vs.html"
+                     title="ValueSet/mcode-radiation-procedure-vs">Radiation Procedure Value Set</a>
+               </td>
+               <td>Codes describing radiation therapy procedures. The value set includes a limited set of radiation modality codes from SNOMED CT, however, ICD-10-PCS code from Section D (Radiation Therapy) and appropriate CPT radiation procedure codes are also considered compliant. CPT codes are not explicitly included due to licensing restrictions. ICD-10-PCS codes are not included explicitly because they are not currently supported by the FHIR IG Publishing tool.
+
+Conformance note: If an ICD-10-PCS code is used, and a semantically equivalent SNOMED CT or CPT code is available, the resulting Procedure instance will not be compliant with [US Core Profiles](http://hl7.org/fhir/us/core/index.html).</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="ValueSet-mcode-radiation-target-body-site-vs.html"
+                     title="ValueSet/mcode-radiation-target-body-site-vs">Radiation Target Body Site Value Set</a>
+               </td>
+               <td>Codes for body sites that can be targets of radiation therapy. This list of sites is based on Commission on Cancer’s 'Standards for Oncology Registry Entry  - STORE 2018'. This value set contains SNOMED CT equivalent terms.</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="ValueSet-mcode-secondary-cancer-disorder-vs.html"
+                     title="ValueSet/mcode-secondary-cancer-disorder-vs">Secondary Cancer Disorder Value Set</a>
+               </td>
+               <td>Types of secondary malignant neoplastic disease, coded in SNOMED CT or ICD-10-CM. 
+
+Conformance note: To be compliant with [US Core Profiles](http://hl7.org/fhir/us/core/index.html), SNOMED CT must be used unless there is no suitable code, in which case ICD-10-CM can be used.
+
+* SNOMED CT coding: Use a code from the disorder hierarchy under secondary malignant neoplastic disease (SNOMED CT 128462008).
+* ICD-10-CM coding: Use one of the codes given in this value set representing secondary malignant neoplasms and neoplasms of uncertain or unspecified behavior. If body site is not precoordinated (implied by the code), it should be specified separately using the body location.
+
+Note that ICD-O-3 specifies morphology and topography, not disorder; in this case that the disorder code must be SNOMED CT 128462008 (Secondary malignant neoplastic disease). The ICD-O-3 morphology and topography codes should be entered in the HistologyMorphologyBehavior and bodySite fields, respectively.</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="ValueSet-mcode-tnm-distant-metastases-category-vs.html"
+                     title="ValueSet/mcode-tnm-distant-metastases-category-vs">TNM Distant Metastases Category Value Set</a>
+               </td>
+               <td>This value set is intended to contain allowable values for the M category, according to TNM staging rules. SNOMED CT codes or AJCC codes (preferably, version 8 for current cancers) are allowed, but are not listed here due to AJCC intellectual property restrictions.
+
+* AJCC terminology: examples of M categories include 'cM0', denoting there is no evidence of distant metastases, and 'pM1', an indication that the cancer has metasticized. The full set of allowable clinical and pathologic M categories, along with its current descriptions, can be accessed through the AJCC Staging Manual and any applicable updates and corrections, as well as the AJCC API.
+
+* SNOMED CT: The SNOMED CT US Edition has content related to the M category under the hierarchy of 385380006 'Metastasis category finding', such as 30893008 'M0 category' and 443841006 'pM1a category'. If using SNOMED CT to store M category findings, the use of codes that do not contain descriptions of the categories, such as the examples provided, is encouraged, as stage finding codes in SNOMED CT may not be up-to-date with current AJCC guidance. Note that SNOMED CT codes do not always make a distinction between clinical and pathological classifications (e.g. 'cM0' and 'pM0' may be represented by the same SNOMED CT code 30893008 'M0 category'). In addition, SNOMED CT may not have complete TNM staging terminology and may require supplementation with codes from another controlled vocabulary (e.g. NCI Thesaurus).</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="ValueSet-mcode-tnm-primary-tumor-category-vs.html"
+                     title="ValueSet/mcode-tnm-primary-tumor-category-vs">TNM Primary Tumor Category Value Set</a>
+               </td>
+               <td>This value set is intended to contain allowable values for the T category, according to TNM staging rules. SNOMED CT codes or AJCC codes (preferably, version 8 for current cancers) are allowed, but are not listed here due to AJCC intellectual property restrictions.
+
+* AJCC terminology: examples of T categories include 'cTX', used when the tumor primary tumor cannot be evaluated, 'pT0', denoting there is no evidence of a primary tumor, and 'pTis', referencing carcinoma in situ (with some cancer-specific exceptions). Other T categories refer to increasing size of the primary tumor. Please note allowable T categories may vary between clinical and pathologic classifications. The full set of allowable clinical and pathologic T categories, along with its current descriptions, can be accessed through the AJCC Staging Manual and any applicable updates and corrections, as well as the AJCC API.
+
+* SNOMED CT has content related to the T category under the hierarchy of 385356007 'Tumor stage finding', such as 23351008 'T1 category' and 261650005 'Tumor stage T1c'. If using SNOMED CT to store T category findings, the use of codes that do not contain descriptions of the categories, such as the examples provided, is encouraged, as stage finding codes in SNOMED CT may not be up-to-date with current AJCC guidance. Note that SNOMED CT codes do not always make a distinction between clinical and pathological classifications (e.g. cT1 and pT1 may be represented by the same SNOMED CT code 23351008 'T1 category'). In addition, SNOMED CT may not have complete TNM staging terminology and may require supplementation with codes from another controlled vocabulary (e.g. NCI Thesaurus).</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="ValueSet-mcode-tnm-regional-nodes-category-vs.html"
+                     title="ValueSet/mcode-tnm-regional-nodes-category-vs">TNM Regional Nodes Category Value Set</a>
+               </td>
+               <td>This value set is intended to contain allowable values for the N category, according to TNM staging rules. SNOMED CT codes or AJCC codes (preferably, version 8 for current cancers) are allowed, but are not listed here due to AJCC intellectual property restrictions.
+
+* AJCC terminology: examples of N categories include 'cN0', indicating no evidence of lymph node involvement, and 'pN1', indicating regional lymph node involvement to a small extent, with specific thresholds for the lymph node groups and number of lymph nodes involved. Other N categories refer to increasing lymph node involvement. Please note allowable N categories may vary between clinical and pathologic classifications. The full set of allowable clinical and pathologic N categories, along with its current descriptions, can be accessed through the AJCC Staging Manual and any applicable updates and corrections, as well as the AJCC API.
+
+* SNOMED CT has content related to the N category under the hierarchy of 385382003 'Node category finding', such as 5856006 'N3 category' and 277672002 'Node stage N1a'. If using SNOMED CT to store N category findings, the use of codes that do not contain descriptions of the categories, such as the examples provided, is encouraged, as stage finding codes in SNOMED CT may not be up-to-date with current AJCC guidance. Note that SNOMED CT codes do not always make a distinction between clinical and pathological classifications (e.g. 'cN1' and 'pN1' may be represented by the same SNOMED CT code 53623008 'N1 category'). In addition, SNOMED CT may not have complete TNM staging terminology and may require supplementation with codes from another controlled vocabulary (e.g. NCI Thesaurus).</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="ValueSet-mcode-tnm-stage-group-vs.html"
+                     title="ValueSet/mcode-tnm-stage-group-vs">TNM Stage Group Value Set</a>
+               </td>
+               <td>This value set is intended to contain allowable values for Stage Group, according to TNM staging rules. SNOMED CT codes or AJCC codes (preferably, version 8 for current cancers) are allowed, but are not listed here due to AJCC intellectual property restrictions.
+
+*AJCC terminology: examples of stage groups include 'Stage 0' and 'Stage IIA'. The full set of stage groups, as well rules on how to assign a stage group, can be accessed through the AJCC Staging Manual and any applicable updates and corrections, as well as the AJCC API.
+
+* SNOMED CT has content representing stage group under the hierarchy of 261612004 'Stages', such as 258215001 'Stage 1' and 261614003 'Stage2A'. In addition, SNOMED CT may not have complete TNM staging terminology and may require supplementation with codes from another controlled vocabulary (e.g. NCI Thesaurus).</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="ValueSet-mcode-treatment-intent-vs.html"
+                     title="ValueSet/mcode-treatment-intent-vs">Treatment Intent Value Set</a>
+               </td>
+               <td>The purpose of a treatment. The value set includes 'curative' and 'palliative'. Curative is defined as any treatment meant to reduce or control a disease process, even if a 'cure' is not anticipated. Palliative includes treatments meant to reduce symptoms and side effects, such as antiemetics.</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="ValueSet-mcode-treatment-termination-reason-vs.html"
+                     title="ValueSet/mcode-treatment-termination-reason-vs">Treatment Termination Reason Value Set</a>
+               </td>
+               <td>Values used to describe the reasons for stopping a treatment. Includes code for 'treatment completed' as well as codes for unplanned (early) stoppage. Applies to medications and other treatments that take place over a period of time, such as radiation treatments.</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="ValueSet-mcode-tumor-marker-test-vs.html"
+                     title="ValueSet/mcode-tumor-marker-test-vs">TumorMarkerTestVS</a>
+               </td>
+               <td>Codes representing tests for tumor markers. This value set of LOINC codes is not comprehensive and can be extended. LOINC codes are preferred. Other vocabularies can be used only if the test of interest is not covered by LOINC.
+
+FHIR implementation note: At the current time, profiles for the specific LOINC tests mentioned here do not exist.</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="ValueSet-mcode-units-of-length-vs.html"
+                     title="ValueSet/mcode-units-of-length-vs">Units of Length Value Set</a>
+               </td>
+               <td>Units of measure for length or distance on a human scale.</td>
+            </tr>
+         </tbody>
+      </table>
+   </p>
+   <a name="5"> </a>
+   <h3>Example: Example Instances </h3>
+   <p>These are example instances that show what data produced and consumed by systems conforming with this implementation guide might look like</p>
+   <p>
+      <table class="grid">
+         <col style="width:20%"/>
+         <tbody>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="Observation-mCODECancerDiseaseStatusExample01.html"
+                     title="Observation/mCODECancerDiseaseStatusExample01">mCODECancerDiseaseStatusExample01</a>
+               </td>
+               <td>mCODE Example for Cancer Disease Status</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="Observation-mCODECancerGeneticVariantExample01.html"
+                     title="Observation/mCODECancerGeneticVariantExample01">mCODECancerGeneticVariantExample01</a>
+               </td>
+               <td>mCODE Example for Cancer Genetic Variant</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="Observation-mCODECancerGeneticVariantExample02.html"
+                     title="Observation/mCODECancerGeneticVariantExample02">mCODECancerGeneticVariantExample02</a>
+               </td>
+               <td>mCODE Example for Cancer Genetic Variant</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="DiagnosticReport-mCODECancerGenomicsReportExample01.html"
+                     title="DiagnosticReport/mCODECancerGenomicsReportExample01">mCODECancerGenomicsReportExample01</a>
+               </td>
+               <td>mCODE Example for Cancer Genomics Report</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="MedicationStatement-mCODECancerRelatedMedicationStatementExample01.html"
+                     title="MedicationStatement/mCODECancerRelatedMedicationStatementExample01">mCODECancerRelatedMedicationStatementExample01</a>
+               </td>
+               <td>mCODE Example for Cancer Related Medication Statement</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="MedicationStatement-mCODECancerRelatedMedicationStatementExample02.html"
+                     title="MedicationStatement/mCODECancerRelatedMedicationStatementExample02">mCODECancerRelatedMedicationStatementExample02</a>
+               </td>
+               <td>mCODE Example for Cancer Related Medication Statement</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="Procedure-mCODECancerRelatedRadiationProcedureExample01.html"
+                     title="Procedure/mCODECancerRelatedRadiationProcedureExample01">mCODECancerRelatedRadiationProcedureExample01</a>
+               </td>
+               <td>mCODE Example for Cancer Related Radiation Procedure</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="Procedure-mCODECancerRelatedSurgicalProcedureExample01.html"
+                     title="Procedure/mCODECancerRelatedSurgicalProcedureExample01">mCODECancerRelatedSurgicalProcedureExample01</a>
+               </td>
+               <td>mCODE Example for Cancer Related Surgical Procedure</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="Condition-mCODEComorbidConditionExample01.html"
+                     title="Condition/mCODEComorbidConditionExample01">mCODEComorbidConditionExample01</a>
+               </td>
+               <td>mCODE Example for Comorbid Condition</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="Observation-mCODEECOGPerformanceStatusExample01.html"
+                     title="Observation/mCODEECOGPerformanceStatusExample01">mCODEECOGPerformanceStatusExample01</a>
+               </td>
+               <td>mCODE Example for ECOG Performance Status</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="Specimen-mCODEGeneticSpecimenExample01.html"
+                     title="Specimen/mCODEGeneticSpecimenExample01">mCODEGeneticSpecimenExample01</a>
+               </td>
+               <td>mCODE Example for Genetic Specimen</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="Observation-mCODEGenomicRegionStudiedExample01.html"
+                     title="Observation/mCODEGenomicRegionStudiedExample01">mCODEGenomicRegionStudiedExample01</a>
+               </td>
+               <td>mCODE Example for Genomic Region Studied</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="Observation-mCODEKarnofskyPerformanceStatusExample01.html"
+                     title="Observation/mCODEKarnofskyPerformanceStatusExample01">mCODEKarnofskyPerformanceStatusExample01</a>
+               </td>
+               <td>mCODE Example for Karnofsky Performance Status</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="Organization-mCODEOrganizationExample01.html"
+                     title="Organization/mCODEOrganizationExample01">mCODEOrganizationExample01</a>
+               </td>
+               <td>mCODE Example for Organization</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="Patient-mCODEPatientExample01.html"
+                     title="Patient/mCODEPatientExample01">mCODEPatientExample01</a>
+               </td>
+               <td>mCODE Example for Patient</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="Patient-mCODEPatientExample02.html"
+                     title="Patient/mCODEPatientExample02">mCODEPatientExample02</a>
+               </td>
+               <td>mCODE Example for Patient</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="Practitioner-mCODEPractitionerExample01.html"
+                     title="Practitioner/mCODEPractitionerExample01">mCODEPractitionerExample01</a>
+               </td>
+               <td>mCODE Example for Practitioner</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="Condition-mCODEPrimaryCancerConditionExample01.html"
+                     title="Condition/mCODEPrimaryCancerConditionExample01">mCODEPrimaryCancerConditionExample01</a>
+               </td>
+               <td>mCODE Example for Primary Cancer Condition</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="Condition-mCODESecondaryCancerConditionExample01.html"
+                     title="Condition/mCODESecondaryCancerConditionExample01">mCODESecondaryCancerConditionExample01</a>
+               </td>
+               <td>mCODE Example for Secondary Cancer Condition</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="Observation-mCODETNMClinicalDistantMetastasesCategoryExample01.html"
+                     title="Observation/mCODETNMClinicalDistantMetastasesCategoryExample01">mCODETNMClinicalDistantMetastasesCategoryExample01</a>
+               </td>
+               <td>mCODE Example for TNM Clinical Distant Metastases Category</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="Observation-mCODETNMClinicalPrimaryTumorCategoryExample01.html"
+                     title="Observation/mCODETNMClinicalPrimaryTumorCategoryExample01">mCODETNMClinicalPrimaryTumorCategoryExample01</a>
+               </td>
+               <td>mCODE Example for TNM Clinical Primary Tumor Category</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="Observation-mCODETNMClinicalRegionalNodesCategoryExample01.html"
+                     title="Observation/mCODETNMClinicalRegionalNodesCategoryExample01">mCODETNMClinicalRegionalNodesCategoryExample01</a>
+               </td>
+               <td>mCODE Example for TNM Clinical Regional Nodes Category</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="Observation-mCODETNMClinicalStageGroupExample01.html"
+                     title="Observation/mCODETNMClinicalStageGroupExample01">mCODETNMClinicalStageGroupExample01</a>
+               </td>
+               <td>mCODE Example for TNM Clinical Stage Group</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="Observation-mCODETNMPathologicalDistantMetastasesCategoryExample01.html"
+                     title="Observation/mCODETNMPathologicalDistantMetastasesCategoryExample01">mCODETNMPathologicalDistantMetastasesCategoryExample01</a>
+               </td>
+               <td>mCODE Example for TNM Pathological Distant Metastases Category</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="Observation-mCODETNMPathologicalPrimaryTumorCategoryExample01.html"
+                     title="Observation/mCODETNMPathologicalPrimaryTumorCategoryExample01">mCODETNMPathologicalPrimaryTumorCategoryExample01</a>
+               </td>
+               <td>mCODE Example for TNM Pathological Primary Tumor Category</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="Observation-mCODETNMPathologicalRegionalNodesCategoryExample01.html"
+                     title="Observation/mCODETNMPathologicalRegionalNodesCategoryExample01">mCODETNMPathologicalRegionalNodesCategoryExample01</a>
+               </td>
+               <td>mCODE Example for TNM Pathological Regional Nodes Category</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="Observation-mCODETNMPathologicalStageGroupExample01.html"
+                     title="Observation/mCODETNMPathologicalStageGroupExample01">mCODETNMPathologicalStageGroupExample01</a>
+               </td>
+               <td>mCODE Example for TNM Pathological Stage Group</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="Observation-mCODETumorMarkerExample01.html"
+                     title="Observation/mCODETumorMarkerExample01">mCODETumorMarkerExample01</a>
+               </td>
+               <td>mCODE Example for Tumor Marker Example</td>
+            </tr>
+         </tbody>
+      </table>
+   </p>
+</div>
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2019+ <a style="color: #81BEF7" href="http://www.hl7.org/Special/committees/cic">HL7 International Clinical Interoperability Council</a>.  Package hl7.fhir.us.mcode#1.0.1 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Jul 17, 2020 16:41-0400">2020-07-17</span>
+          <br/>
+          <span style="color: #FFFF77">
+                      Links: <a style="color: #81BEF7" href="toc.html">Table of Contents</a> |
+                 <a style="color: #81BEF7" href="qa.html">QA Report</a>
+                 | <a style="color: #81BEF7" target="_blank" href="http://hl7.org/fhir/us/mcode/history.html">Version History <img alt="external" style="vertical-align: baseline" src="external.png"/></a> |
+                 <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/R4/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a> |
+                 <!--<a style="color: #81BEF7" href="todo.html">Search</a> | --> 
+                 <a style="color: #81BEF7" target="_blank" href="http://hl7.org/fhir-issues">Propose a change <img alt="external" style="vertical-align: baseline" src="external.png"/></a>
+
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+  
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script>anchors.options.visible = 'hover'
+anchors.add()</script>
+  
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>

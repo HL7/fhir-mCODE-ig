@@ -1,0 +1,18 @@
+{% raw %}<table class="grid">
+ <tbody><tr><td>Defining URL:</td><td>http://hl7.org/fhir/us/mcode/ValueSet/mcode-secondary-cancer-disorder-vs</td></tr>
+ <tr><td>Version:</td><td>1.0.1</td></tr>
+ <tr><td>Name:</td><td>SecondaryCancerDisorderVS</td></tr>
+ <tr><td>Status:</td><td>Active</td></tr>
+ <tr><td>Title:</td><td>Secondary Cancer Disorder Value Set</td></tr>
+ <tr><td>Definition:</td><td><p>Types of secondary malignant neoplastic disease, coded in SNOMED CT or ICD-10-CM.</p>
+<p>Conformance note: To be compliant with <a href="http://hl7.org/fhir/us/core/index.html">US Core Profiles</a>, SNOMED CT must be used unless there is no suitable code, in which case ICD-10-CM can be used.</p>
+<ul>
+<li>SNOMED CT coding: Use a code from the disorder hierarchy under secondary malignant neoplastic disease (SNOMED CT 128462008).</li>
+<li>ICD-10-CM coding: Use one of the codes given in this value set representing secondary malignant neoplasms and neoplasms of uncertain or unspecified behavior. If body site is not precoordinated (implied by the code), it should be specified separately using the body location.</li>
+</ul>
+<p>Note that ICD-O-3 specifies morphology and topography, not disorder; in this case that the disorder code must be SNOMED CT 128462008 (Secondary malignant neoplastic disease). The ICD-O-3 morphology and topography codes should be entered in the HistologyMorphologyBehavior and bodySite fields, respectively.</p>
+</td></tr>
+ <tr><td>Publisher:</td><td>HL7 International Clinical Interoperability Council</td></tr>
+ <tr><td>Source Resource:</td><td><a href="ValueSet-mcode-secondary-cancer-disorder-vs.xml.html">XML</a> / <a href="ValueSet-mcode-secondary-cancer-disorder-vs.json.html">JSON</a> / <a href="ValueSet-mcode-secondary-cancer-disorder-vs.ttl.html">Turtle</a></td></tr>
+</tbody></table>
+{% endraw %}

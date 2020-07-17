@@ -1,0 +1,78 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/us/mcode/Condition/mCODEComorbidConditionExample01> a fhir:Condition;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "mCODEComorbidConditionExample01"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-comorbid-condition";
+       fhir:index 0;
+       fhir:link <http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-comorbid-condition>
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>id</b>: mCODEComorbidConditionExample01</p><p><b>meta</b>: </p><p><b>clinicalStatus</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/condition-clinical active}\">Active</span></p><p><b>verificationStatus</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/condition-ver-status confirmed}\">Confirmed</span></p><p><b>category</b>: <span title=\"Codes: {http://snomed.info/sct 398192003}\">Co-morbid conditions (finding)</span></p><p><b>code</b>: <span title=\"Codes: {http://snomed.info/sct 44054006}\">Type 2 diabetes mellitus</span></p><p><b>subject</b>: <a href=\"Patient-mCODEPatientExample01.html\">Generated Summary: id: mCODEPatientExample01; Medical Record Number = m123 (USUAL); John B. Anyperson ; gender: male; birthDate: 1951-01-20</a></p><p><b>onset</b>: 2018-04-01</p><p><b>asserter</b>: <a href=\"Practitioner-mCODEPractitionerExample01.html\">Generated Summary: id: mCODEPractitionerExample01; 9988776655; Kyle Anydoc ; gender: male</a></p></div>"
+  ];
+  fhir:Condition.clinicalStatus [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/condition-clinical" ];
+       fhir:Coding.code [ fhir:value "active" ];
+       fhir:Coding.display [ fhir:value "Active" ]
+     ]
+  ];
+  fhir:Condition.verificationStatus [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/condition-ver-status" ];
+       fhir:Coding.code [ fhir:value "confirmed" ];
+       fhir:Coding.display [ fhir:value "Confirmed" ]
+     ]
+  ];
+  fhir:Condition.category [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       a sct:398192003;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+       fhir:Coding.code [ fhir:value "398192003" ]
+     ]
+  ];
+  fhir:Condition.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       a sct:44054006;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+       fhir:Coding.code [ fhir:value "44054006" ];
+       fhir:Coding.display [ fhir:value "Type 2 diabetes mellitus" ]
+     ]
+  ];
+  fhir:Condition.subject [
+     fhir:link <http://hl7.org/fhir/us/mcode/Patient/mCODEPatientExample01>;
+     fhir:Reference.reference [ fhir:value "Patient/mCODEPatientExample01" ]
+  ];
+  fhir:Condition.onsetDateTime [ fhir:value "2018-04-01"^^xsd:date];
+  fhir:Condition.asserter [
+     fhir:link <http://hl7.org/fhir/us/mcode/Practitioner/mCODEPractitionerExample01>;
+     fhir:Reference.reference [ fhir:value "Practitioner/mCODEPractitionerExample01" ]
+  ] .
+
+<http://hl7.org/fhir/us/mcode/Patient/mCODEPatientExample01> a fhir:us .
+
+<http://hl7.org/fhir/us/mcode/Practitioner/mCODEPractitionerExample01> a fhir:us .
+
+# - ontology header ------------------------------------------------------------
+
+<http://hl7.org/fhir/us/mcode/Condition/mCODEComorbidConditionExample01.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl;
+  owl:versionIRI <http://build.fhir.org/us/mcode/Condition/mCODEComorbidConditionExample01.ttl> .
+
+# -------------------------------------------------------------------------------------
+

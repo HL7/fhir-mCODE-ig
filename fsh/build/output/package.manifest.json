@@ -1,0 +1,6 @@
+{
+  "version": "1.0.1",
+  "fhirVersion": "[4.0.1]",
+  "date": "20200717164134",
+  "name": "hl7.fhir.us.mcode"
+}

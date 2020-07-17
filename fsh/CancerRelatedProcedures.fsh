@@ -33,7 +33,7 @@ Conformance note: If an ICD-10-PCS code is used in the code attribute, and there
 * bodySite.extension contains
     Laterality named laterality 0..1
 * focalDevice 0..0
-* bodySite and bodySite.extension[laterality] and extension[treatmentIntent] MS
+* bodySite and bodySite.extension[laterality] and extension[treatmentIntent] and extension[terminationReason] MS
 
 
 Profile:  CancerRelatedSurgicalProcedure

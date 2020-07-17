@@ -1,0 +1,2128 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/us/mcode/ImplementationGuide/hl7.fhir.us.mcode> a fhir:ImplementationGuide;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "hl7.fhir.us.mcode"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "extensions" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>HL7FHIRImplementationGuideminimalCommonOncologyDataElementsmCODERelease1USRealmSTU1</h2><p>The official URL for this implementation guide is: </p><pre>http://hl7.org/fhir/us/mcode/ImplementationGuide/hl7.fhir.us.mcode</pre><div><p>mCODE™ (short for Minimal Common Oncology Data Elements) is an initiative intended to assemble a core set of structured data elements for oncology electronic health records.</p>\n</div></div>"
+  ];
+  fhir:ImplementationGuide.url [ fhir:value "http://hl7.org/fhir/us/mcode/ImplementationGuide/hl7.fhir.us.mcode"];
+  fhir:ImplementationGuide.version [ fhir:value "1.0.1"];
+  fhir:ImplementationGuide.name [ fhir:value "HL7FHIRImplementationGuideminimalCommonOncologyDataElementsmCODERelease1USRealmSTU1"];
+  fhir:ImplementationGuide.title [ fhir:value "HL7 FHIR Implementation Guide: minimal Common Oncology Data Elements (mCODE) Release 1 - US Realm | STU1"];
+  fhir:ImplementationGuide.status [ fhir:value "active"];
+  fhir:ImplementationGuide.date [ fhir:value "2020-07-17T16:41:47-04:00"^^xsd:dateTime];
+  fhir:ImplementationGuide.publisher [ fhir:value "HL7 International Clinical Interoperability Council"];
+  fhir:ImplementationGuide.contact [
+     fhir:index 0;
+     fhir:ContactDetail.name [ fhir:value "HL7 International Clinical Interoperability Council" ];
+     fhir:ContactDetail.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value "url" ];
+       fhir:ContactPoint.value [ fhir:value "http://www.hl7.org/Special/committees/cic" ]
+     ], [
+       fhir:index 1;
+       fhir:ContactPoint.system [ fhir:value "email" ];
+       fhir:ContactPoint.value [ fhir:value "ciclist@lists.HL7.org" ]
+     ]
+  ];
+  fhir:ImplementationGuide.description [ fhir:value "mCODE™ (short for Minimal Common Oncology Data Elements) is an initiative intended to assemble a core set of structured data elements for oncology electronic health records."];
+  fhir:ImplementationGuide.jurisdiction [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ];
+       fhir:Coding.code [ fhir:value "US" ];
+       fhir:Coding.display [ fhir:value "United States of America" ]
+     ]
+  ];
+  fhir:ImplementationGuide.packageId [ fhir:value "hl7.fhir.us.mcode"];
+  fhir:ImplementationGuide.license [ fhir:value "CC0-1.0"];
+  fhir:ImplementationGuide.fhirVersion [
+     fhir:value "4.0.1";
+     fhir:index 0
+  ];
+  fhir:ImplementationGuide.dependsOn [
+     fhir:index 0;
+     fhir:Element.id [ fhir:value "hl7_fhir_us_core" ];
+     fhir:ImplementationGuide.dependsOn.uri [
+       fhir:value "http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core";
+       fhir:link <http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core>
+     ];
+     fhir:ImplementationGuide.dependsOn.packageId [ fhir:value "hl7.fhir.us.core" ];
+     fhir:ImplementationGuide.dependsOn.version [ fhir:value "3.1.0" ]
+  ];
+  fhir:ImplementationGuide.definition [
+     fhir:Element.extension [
+       fhir:index 0;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "copyrightyear" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "2019+" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 1;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "releaselabel" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "STU1" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 2;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "show-inherited-invariants" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "false" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 3;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "path-history" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "http://hl7.org/fhir/us/mcode/history.html" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 4;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "path-qa" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "temp/qa" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 5;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "path-temp" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "temp/pages" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 6;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "path-output" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "output" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 7;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "path-suppressed-warnings" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "input/ignoreWarnings.txt" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 8;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "template-html" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "template-page.html" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 9;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "template-md" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "template-page-md.html" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 10;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "apply-contact" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "true" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 11;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "apply-context" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "true" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 12;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "apply-copyright" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "true" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 13;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "apply-jurisdiction" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "true" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 14;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "apply-license" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "true" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 15;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "apply-publisher" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "true" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 16;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "apply-version" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "true" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 17;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "active-tables" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "true" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ];
+     fhir:ImplementationGuide.definition.resource [
+       fhir:index 0;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource:abstract" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-mcode-cancer-condition-parent.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-condition-parent>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/mcode-cancer-condition-parent" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Cancer Condition Parent" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Abstract parent class for describing a primary or secondary metastatic neoplastic diseases, or individual tumors." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 1;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-mcode-cancer-disease-status.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-disease-status>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/mcode-cancer-disease-status" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Cancer Disease Status" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "A clinician's qualitative judgment on the current trend of the cancer, e.g., whether it is stable, worsening (progressing), or improving (responding). The judgment may be based a single type or multiple kinds of evidence, such as imaging data, assessment of symptoms, tumor markers, laboratory data, etc.\n\nNote: The LOINC code chosen to represent this observation (LOINC 88040-1, Response to cancer treatment) does not precisely match the meaning of this profile, but it is the closest available LOINC code at the present time. It is acknowledged that the disease status is different than the status of the disease due to treatment, although in the context of an oncologist visit, disease status can mean response to treatment for patients under their care. However, the LOINC code 88041-2 is more granular than the definition of the profile because cancer disease status is observable regardless of whether the patient is under treatment. The plan is to request a new LOINC code that represents cancer disease status, as it is defined here, and replace the current LOINC code with the new code before normative publication of mCODE." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 2;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-mcode-cancer-genetic-variant.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genetic-variant>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/mcode-cancer-genetic-variant" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Cancer Genetic Variant" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Records an alteration in the most common DNA nucleotide sequence. The term variant can be used to describe an alteration that may be benign, pathogenic, or of unknown significance. The term variant is increasingly being used in place of the term mutation." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 3;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-mcode-cancer-genomics-report.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genomics-report>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/mcode-cancer-genomics-report" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Cancer Genomics Report" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Genetic analysis summary report. The report may include one or more tests, with two distinct test types. The first type is a targeted mutation test, where a specific mutation on a specific gene is tested for. The result is either positive or negative for that mutation. The second type is a more general test for variants. This type of test returns the identity of variants found in a certain region of the genome.\nThe identity of non-genomic laboratory tests is typically represented by a LOINC code. However, many genetic tests and panels do not have LOINC codes, although some might have an identifier in NCBI Genetic Testing Registry (GTR), a central location for voluntary submission of genetic test information by providers. To identify the diagnostic report, the name of the report must be in the text sub-field of the code structure. If there is a coded identifier from GTR, LOINC, or other source, then it should be included into the the code sub-field of the code structure. If there is no suitable code, the code can be omitted." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 4;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-mcode-cancer-patient.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-patient>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/mcode-cancer-patient" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Cancer Patient" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "A patient who has been diagnosed with or is receiving medical treatment for a malignant growth or tumour." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 5;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-mcode-cancer-related-medication-statement.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-related-medication-statement>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/mcode-cancer-related-medication-statement" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Cancer-Related Medication Statement" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "A record of the use of a medication (individual administration or entire course) for a condition that is related to a primary or secondary cancer condition. The use may be reported by the patient or clinician and adminstration does not have to be directly observed." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 6;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-mcode-cancer-related-radiation-procedure.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-related-radiation-procedure>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/mcode-cancer-related-radiation-procedure" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Cancer-Related Radiation Procedure" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "A radiological treatment addressing a cancer condition. The scope of this profile has been narrowed to cancer-related procedures by constraining the ReasonReference and ReasonCode to cancer conditions.\n\nConformance note: If an ICD-10-PCS code is used in the code attribute, and there is a semantically equivalent SNOMED CT or CPT code, the resulting Procedure instance will not be compliant with [US Core Profiles](http://hl7.org/fhir/us/core/index.html)" ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 7;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-mcode-cancer-related-surgical-procedure.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-related-surgical-procedure>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/mcode-cancer-related-surgical-procedure" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Cancer-Related Surgical Procedure" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "A surgical action addressing a cancer condition. The scope of this profile has been narrowed to cancer-related procedures by constraining the ReasonReference and ReasonCode to cancer conditions. Conformance note: If an ICD-10-PCS code is used in the code attribute, and there is a semantically equivalent SNOMED CT or CPT code, the resulting Procedure instance will not be compliant with US Core Profiles." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 8;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource:abstract" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-mcode-cancer-stage-parent.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-stage-parent>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/mcode-cancer-stage-parent" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Cancer Stage Parent" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Abstract parent class for members of cancer staging panels. Cancer panel members must include a timing element and staging system, and focus on a cancer disorder. Specific realizations will have value sets specific to certain staging systems." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 9;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-mcode-comorbid-condition.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-comorbid-condition>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/mcode-comorbid-condition" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Comorbid Condition" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "A comorbidity refers to one or more diseases or conditions that occur along with another condition in the same person at the same time. Conditions considered comorbidities are often long-term or chronic conditions. Comorbidities are defined relative to an index disease and may be categorical, rather than described in full detail. The comorbid condition class provides comorbidity codes corresponding the Elixhauser Comorbidity Index. Conformance note: If an ICD-10-CM code is used for the code attribute, and a semantically equivalent SNOMED code is available, the resulting instance will not be compliant with US Core Profiles." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 10;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-mcode-ecog-performance-status.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-ecog-performance-status>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/mcode-ecog-performance-status" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "ECOG Performance Status" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "The Eastern Cooperative Oncology Group (ECOG) Performance Status represents the patient's functional status and is used to determine their ability to tolerate therapies in serious illness, specifically for chemotherapy. (Definition from: [LOINC](https://loinc.org/89262-0/))." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 11;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-mcode-genetic-specimen.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genetic-specimen>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/mcode-genetic-specimen" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Genetic Specimen" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "A small sample of blood, hair, skin, amniotic fluid (the fluid that surrounds a fetus during pregnancy), or other tissue which is excised from a subject for the purposes of genomics testing or analysis." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 12;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-mcode-genomic-region-studied.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genomic-region-studied>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/mcode-genomic-region-studied" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Genomic Region Studied" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "The area of the genome region referenced in testing for variants." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 13;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-mcode-karnofsky-performance-status.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-karnofsky-performance-status>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/mcode-karnofsky-performance-status" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Karnofsky Performance Status" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "The Karnofsky Performance Status (KPS) is a tool used to measure a patient's functional status. It can be used to compare the effectiveness of different therapies and to help assess the prognosis of certain patients, such as those with certain cancers. The KPS score ranges from 0 to 100 in intervals of 10. Higher scores are associated with better functional status, with 100 representing no symptoms or evidence of disease, and 0 representing death." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 14;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-mcode-primary-cancer-condition.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-primary-cancer-condition>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/mcode-primary-cancer-condition" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Primary Cancer Condition" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Records the history of the primary cancer condition, the original or first tumor in the body (Definition from: [NCI Dictionary of Cancer Terms](https://www.cancer.gov/publications/dictionaries/cancer-terms/def/primary-tumor)). Cancers that are not clearly secondary (i.e., of uncertain origin or behavior) should be documented as primary.\n\nCancer staging information summarized in this profile should reflect the most recent staging assessment on the patient, and should be updated if and when there is a new staging assessment. Past staging assessments will be preserved in instances of the TNMClinicalStageGroup and/or TNMPathologicalStageGroup, which refer back to PrimaryCancerCondition.\n\nConformance note: For the code attribute, to be compliant with [US Core Profiles](http://hl7.org/fhir/us/core/index.html), SNOMED CT must be used unless there is no suitable code, in which case ICD-10-CM can be used." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 15;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-mcode-secondary-cancer-condition.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-secondary-cancer-condition>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/mcode-secondary-cancer-condition" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Secondary Cancer Condition" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Records the history of secondary neoplasms, including location(s) and the date of onset of metastases. A secondary cancer results from the spread (metastasization) of cancer from its original site (Definition from: NCI Dictionary of Cancer Terms).\n\nConformance note: For the code attribute, to be compliant with US Core Profiles, SNOMED CT must be used unless there is no suitable code, in which case ICD-10-CM can be used." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 16;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-mcode-tnm-clinical-distant-metastases-category.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-clinical-distant-metastases-category>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/mcode-tnm-clinical-distant-metastases-category" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "TNM Clinical Distant Metastases Category" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Category describing the extent of a tumor metastasis in remote anatomical locations, based on evidence such as physical examination, imaging, and/or biopsy." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 17;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-mcode-tnm-clinical-primary-tumor-category.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-clinical-primary-tumor-category>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/mcode-tnm-clinical-primary-tumor-category" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "TNM Clinical Primary Tumor Category" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Category of the primary tumor, based on its size and extent, based on evidence such as physical examination, imaging, and/or biopsy." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 18;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-mcode-tnm-clinical-regional-nodes-category.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-clinical-regional-nodes-category>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/mcode-tnm-clinical-regional-nodes-category" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "TNM Clinical Regional Nodes Category" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Category of the presence or absence of metastases in regional lymph nodes, based on evidence such as physical examination, imaging, and/or biopsy." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 19;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-mcode-tnm-clinical-stage-group.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-clinical-stage-group>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/mcode-tnm-clinical-stage-group" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "TNM Clinical Stage Group" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "The extent of the cancer in the body, according to the TNM classification system, based on evidence such as physical examination, imaging, and/or biopsy." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 20;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-mcode-tnm-pathological-distant-metastases-category.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-pathological-distant-metastases-category>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/mcode-tnm-pathological-distant-metastases-category" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "TNM Pathological Distant Metastases Category" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Category describing the presence or absence of metastases in remote anatomical locations, assessed through pathologic analysis of a specimen." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 21;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-mcode-tnm-pathological-primary-tumor-category.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-pathological-primary-tumor-category>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/mcode-tnm-pathological-primary-tumor-category" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "TNM Pathological Primary Tumor Category" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Category of the primary tumor, based on its size and extent, assessed through pathologic analysis of a specimen." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 22;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-mcode-tnm-pathological-regional-nodes-category.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-pathological-regional-nodes-category>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/mcode-tnm-pathological-regional-nodes-category" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "TNM Pathological Regional Nodes Category" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Category of the presence or absence of metastases in regional lymph nodes, assessed through pathologic analysis of a specimen." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 23;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-mcode-tnm-pathological-stage-group.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-pathological-stage-group>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/mcode-tnm-pathological-stage-group" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "TNM Pathological Stage Group" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "The extent of the cancer in the body, according to the TNM classification system, assessed through pathologic analysis of a specimen." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 24;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-mcode-tumor-marker.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tumor-marker>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/mcode-tumor-marker" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Tumor Marker" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "The result of a tumor marker test. Tumor marker tests are generally used to guide cancer treatment decisions and monitor treatment, as well as to predict the chance of recovery and cancer recurrence. A tumor marker is a substance found in tissue or blood or other body fluids that may be a sign of cancer or certain benign (noncancer) conditions. Most tumor markers are made by both normal cells and cancer cells, but they are made in larger amounts by cancer cells. A tumor marker may help to diagnose cancer, plan treatment, or find out how well treatment is working or if cancer has come back. Examples of tumor markers include CA-125 (in ovarian cancer), CA 15-3 (in breast cancer), CEA (in colon cancer), and PSA (in prostate cancer). Tumor markers differ from genetic markers in that they are measured at the levels of the protein and substance post-RNA protein synthesis. (Definition adapted from: [NCI Dictionary of Cancer Terms](https://www.cancer.gov/publications/dictionaries/cancer-terms/def/tumor-marker-test) and [Cancer.Net](https://www.cancer.net/navigating-cancer-care/diagnosing-cancer/tests-and-procedures/tumor-marker-tests)).\n\nImplementation note: The data value for TumorMarker has cardinality is 0..1 (required if known) because when the test result is indeterminate, no quantitative data value will be reported. Instead, the reason for the null value will be reported in the DataAbsentReason field." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 25;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:extension" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-mcode-evidence-type.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-evidence-type>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/mcode-evidence-type" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Evidence Type" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Categorization of the kind of evidence used as input to the clinical judgment. This corresponds to both the S and O in SOAP." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 26;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:extension" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-mcode-histology-morphology-behavior.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-histology-morphology-behavior>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/mcode-histology-morphology-behavior" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Histology-Morphology-Behavior" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "A description of the morphologic and behavioral characteristics of the cancer." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 27;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:extension" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-mcode-laterality.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-laterality>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/mcode-laterality" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Laterality" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Body side of the body location, if needed to distinguish from a similar location on the other side of the body." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 28;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:extension" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-mcode-related-primary-cancer-condition.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-related-primary-cancer-condition>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/mcode-related-primary-cancer-condition" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Related Primary Cancer Condition" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "The primary cancer related to this secondary cancer." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 29;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:extension" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-mcode-termination-reason.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-termination-reason>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/mcode-termination-reason" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Termination Reason" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "A code explaining an unplanned or premature termination of a plan of treatment, course of medication, or research study." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 30;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:extension" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-mcode-treatment-intent.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-treatment-intent>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/mcode-treatment-intent" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Treatment Intent" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "The purpose of a treatment." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 31;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "ValueSet" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "ValueSet-mcode-cancer-body-location-vs.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-body-location-vs>;
+         fhir:Reference.reference [ fhir:value "ValueSet/mcode-cancer-body-location-vs" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Cancer Body Location Value Set" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Codes describing the location(s) of primary or secondary cancer. The value set includes all codes from the SNOMED CT body structure hierarchy (codes descending from 123037004 'Body Structure'). The cancer body location may also be expressed using ICD-O-3 topography codes, however, those codes are not included here due to intellectual property restrictions. No other code systems are considered conformant." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 32;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "ValueSet" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "ValueSet-mcode-cancer-disease-status-evidence-type-vs.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-disease-status-evidence-type-vs>;
+         fhir:Reference.reference [ fhir:value "ValueSet/mcode-cancer-disease-status-evidence-type-vs" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Cancer Disease Status Evidence Type Value Set" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "The type of evidence backing up the clinical determination of cancer progression. The code '* SCT#252416005 Histopathology test (procedure)' is intended to be used when there is a biopsy that contributes evidence of the cancer disease status." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 33;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "ValueSet" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "ValueSet-mcode-cancer-disorder-vs.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-disorder-vs>;
+         fhir:Reference.reference [ fhir:value "ValueSet/mcode-cancer-disorder-vs" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Cancer Disorder Value Set" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "A broad cancer-related value set containing both primary and secondary tumor types, with codes from ICD-10 and SNOMED CT, including both diagnosis and histology/morphology/behavior codes. ICD-O-3 morphology codes may also be used and are considered conformant to the specification. For SNOMED, the value set includes all codes descending from 363346000 'Malignant neoplastic disease (disorder)' and 108369006 'Neoplasm (morphologic abnormality)'." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 34;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "ValueSet" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "ValueSet-mcode-cancer-related-surgical-procedure-vs.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-related-surgical-procedure-vs>;
+         fhir:Reference.reference [ fhir:value "ValueSet/mcode-cancer-related-surgical-procedure-vs" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Cancer-Related Surgical Procedure Value Set" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Includes selected SNOMED CT codes that may be used in the treatment of cancer tumors. Codes from ICD-10-PCS and CPT are acceptable. CPT codes are not listed here due to intellectual property restrictions. ICD-10-PCS codes are not listed because of a limitation in the FHIR Implementation Guide publisher. For CPT and ICD-10-PCS, only codes representing surgical procedures should be used. \n\nConformance note: If an ICD-10-PCS code is used, and a semantically equivalent SNOMED CT code is available, the resulting FHIR Procedure instance will not be compliant with [US Core Profiles](http://hl7.org/fhir/us/core/index.html)." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 35;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "ValueSet" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "ValueSet-mcode-cancer-staging-system-vs.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-staging-system-vs>;
+         fhir:Reference.reference [ fhir:value "ValueSet/mcode-cancer-staging-system-vs" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Cancer Staging System Value Set" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "System used for staging. If the staging system is AJCC Version 8, use the NCI thesaurus code C146985 (AJCC Cancer Staging Manual 8th Edition) in its place. This is because SNOMED does not have an equivalent concept for AJCC Version 8 at this time." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 36;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "ValueSet" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "ValueSet-mcode-clinvar-vs.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/us/mcode/ValueSet/mcode-clinvar-vs>;
+         fhir:Reference.reference [ fhir:value "ValueSet/mcode-clinvar-vs" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "ClinVar Value Set" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Value set of human genetic variants, drawn from [ClinVar](https://www.ncbi.nlm.nih.gov/clinvar/). The codes in this value set refer to the ClinVar Variation ID, or the identifier for the variant or set of variants that were interpreted. [Source: NCBI ClinVar Data Dictionary](https://www.ncbi.nlm.nih.gov/projects/clinvar/ClinVarDataDictionary.pdf)" ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 37;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "ValueSet" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "ValueSet-mcode-comorbid-condition-vs.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/us/mcode/ValueSet/mcode-comorbid-condition-vs>;
+         fhir:Reference.reference [ fhir:value "ValueSet/mcode-comorbid-condition-vs" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Comorbid Condition Value Set" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "SNOMED and ICD-10-CM codes for common comorbid conditions. Aligns with Elixhauser comorbidity scale. ICD-10 codes are drawn from https://www.hcup-us.ahrq.gov/toolssoftware/comorbidityicd10/comformat_icd10cm_2019_1.txt. \n\nConformance note: If an ICD-10-CM code is used, and an equivalent SNOMED CT code is available, the resulting instance will not validate against US Core Profiles." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 38;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "ValueSet" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "ValueSet-mcode-condition-status-trend-vs.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/us/mcode/ValueSet/mcode-condition-status-trend-vs>;
+         fhir:Reference.reference [ fhir:value "ValueSet/mcode-condition-status-trend-vs" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Condition Status Trend Value Set" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "How patient's given disease, condition, or ability is trending." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 39;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "ValueSet" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "ValueSet-mcode-genetic-specimen-type-vs.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/us/mcode/ValueSet/mcode-genetic-specimen-type-vs>;
+         fhir:Reference.reference [ fhir:value "ValueSet/mcode-genetic-specimen-type-vs" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Genetic Specimen Type Value Set" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "The type of specimen analyzed in a genetic test. The values are taken from code system http://terminology.hl7.org/CodeSystem/v2-0487, and represent a subset of HL7 Version 2 Table 0487 (http://hl7.org/fhir/v2/0487)." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 40;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "ValueSet" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "ValueSet-mcode-hgnc-vs.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/us/mcode/ValueSet/mcode-hgnc-vs>;
+         fhir:Reference.reference [ fhir:value "ValueSet/mcode-hgnc-vs" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "HUGO Gene Nomenclature Committee Gene Names Value Set" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "HUGO Gene Nomenclature Committee Gene Names Value Set" ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 41;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "ValueSet" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "ValueSet-mcode-hgvs-vs.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/us/mcode/ValueSet/mcode-hgvs-vs>;
+         fhir:Reference.reference [ fhir:value "ValueSet/mcode-hgvs-vs" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Human Genome Variation Society Sequence Variant Nomenclature Value Set" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "HGVS nomenclature is used to report and exchange information regarding variants found in DNA, RNA, and protein sequences." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 42;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "ValueSet" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "ValueSet-mcode-histology-morphology-behavior-vs.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/us/mcode/ValueSet/mcode-histology-morphology-behavior-vs>;
+         fhir:Reference.reference [ fhir:value "ValueSet/mcode-histology-morphology-behavior-vs" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Histology Morphology Behavior Value Set" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Codes representing the structure, arrangement, and behavioral characteristics of malignant neoplasms, and cancer cells. Inclusion criteria: in situ neoplasms and malignant neoplasms. Exclusion criteria: benign neoplasms and neoplasms of unspecified behavior. Note: As the vocabulary binding is extensible within this IG, ICD-O-3 morphology codes (including behavior suffix) may also be used; they are not included in the value set for intellectual property reasons. For primary cancers, the ICD-O-3 behavior suffix should be /1, /2, or /3. For secondary cancers, the ICD-O-3 behavior suffix should be /6. Only SNOMED CT and ICD-O-3 are considered conformant to the specification. However, to be compliant with US Core Profiles, ICD-O-3 may only be used if there is no suitable code in SNOMED CT." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 43;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "ValueSet" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "ValueSet-mcode-laterality-vs.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/us/mcode/ValueSet/mcode-laterality-vs>;
+         fhir:Reference.reference [ fhir:value "ValueSet/mcode-laterality-vs" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Laterality Value Set" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Body side of the body location, if needed to distinguish from a similar location on the other side of the body." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 44;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "ValueSet" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "ValueSet-mcode-primary-or-uncertain-behavior-cancer-disorder-vs.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/us/mcode/ValueSet/mcode-primary-or-uncertain-behavior-cancer-disorder-vs>;
+         fhir:Reference.reference [ fhir:value "ValueSet/mcode-primary-or-uncertain-behavior-cancer-disorder-vs" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Primary or Uncertain Behavior Cancer Disorder Value Set" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Types of primary malignant neoplastic disease, coded in SNOMED CT or ICD-10-CM. \n\nConformance note: To be compliant with [US Core Profiles](http://hl7.org/fhir/us/core/index.html), ICD-10-CM should only be used if a suitable code is not available from SNOMED.\n\nFor SNOMED CT coding, use a code from the disorder hierarchy under SNOMED CT 363346000 'Malignant neoplastic disease (disorder)' excluding codes descending from SNOMED CT 128462008 'Secondary malignant neoplastic disease (disorder)'. If body location is not precoordinated (i.e., implied by the code), the site of the primary tumor should be specified in the body site attribute. \n\nFor ICD-10-CM coding, use one of the codes given in this value set representing primary malignant neoplasms and neoplasms of uncertain or unspecified behavior.\n\nNote that ICD-O-3 specifies morphology and topography, not disorder. If ICD-O-3 is used, the primary cancer disorder code must be specifically be SNOMED CT 363346000  'Malignant neoplastic disease (disorder)'. The ICD-O-3 morphology and topography codes should be entered in the HistologyMorphologyBehavior and body location fields, respectively." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 45;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "ValueSet" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "ValueSet-mcode-radiation-procedure-vs.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/us/mcode/ValueSet/mcode-radiation-procedure-vs>;
+         fhir:Reference.reference [ fhir:value "ValueSet/mcode-radiation-procedure-vs" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Radiation Procedure Value Set" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Codes describing radiation therapy procedures. The value set includes a limited set of radiation modality codes from SNOMED CT, however, ICD-10-PCS code from Section D (Radiation Therapy) and appropriate CPT radiation procedure codes are also considered compliant. CPT codes are not explicitly included due to licensing restrictions. ICD-10-PCS codes are not included explicitly because they are not currently supported by the FHIR IG Publishing tool.\n\nConformance note: If an ICD-10-PCS code is used, and a semantically equivalent SNOMED CT or CPT code is available, the resulting Procedure instance will not be compliant with [US Core Profiles](http://hl7.org/fhir/us/core/index.html)." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 46;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "ValueSet" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "ValueSet-mcode-radiation-target-body-site-vs.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/us/mcode/ValueSet/mcode-radiation-target-body-site-vs>;
+         fhir:Reference.reference [ fhir:value "ValueSet/mcode-radiation-target-body-site-vs" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Radiation Target Body Site Value Set" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Codes for body sites that can be targets of radiation therapy. This list of sites is based on Commission on Cancer’s 'Standards for Oncology Registry Entry  - STORE 2018'. This value set contains SNOMED CT equivalent terms." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 47;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "ValueSet" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "ValueSet-mcode-secondary-cancer-disorder-vs.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/us/mcode/ValueSet/mcode-secondary-cancer-disorder-vs>;
+         fhir:Reference.reference [ fhir:value "ValueSet/mcode-secondary-cancer-disorder-vs" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Secondary Cancer Disorder Value Set" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Types of secondary malignant neoplastic disease, coded in SNOMED CT or ICD-10-CM. \n\nConformance note: To be compliant with [US Core Profiles](http://hl7.org/fhir/us/core/index.html), SNOMED CT must be used unless there is no suitable code, in which case ICD-10-CM can be used.\n\n* SNOMED CT coding: Use a code from the disorder hierarchy under secondary malignant neoplastic disease (SNOMED CT 128462008).\n* ICD-10-CM coding: Use one of the codes given in this value set representing secondary malignant neoplasms and neoplasms of uncertain or unspecified behavior. If body site is not precoordinated (implied by the code), it should be specified separately using the body location.\n\nNote that ICD-O-3 specifies morphology and topography, not disorder; in this case that the disorder code must be SNOMED CT 128462008 (Secondary malignant neoplastic disease). The ICD-O-3 morphology and topography codes should be entered in the HistologyMorphologyBehavior and bodySite fields, respectively." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 48;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "ValueSet" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "ValueSet-mcode-tnm-distant-metastases-category-vs.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/us/mcode/ValueSet/mcode-tnm-distant-metastases-category-vs>;
+         fhir:Reference.reference [ fhir:value "ValueSet/mcode-tnm-distant-metastases-category-vs" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "TNM Distant Metastases Category Value Set" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "This value set is intended to contain allowable values for the M category, according to TNM staging rules. SNOMED CT codes or AJCC codes (preferably, version 8 for current cancers) are allowed, but are not listed here due to AJCC intellectual property restrictions.\n\n* AJCC terminology: examples of M categories include 'cM0', denoting there is no evidence of distant metastases, and 'pM1', an indication that the cancer has metasticized. The full set of allowable clinical and pathologic M categories, along with its current descriptions, can be accessed through the AJCC Staging Manual and any applicable updates and corrections, as well as the AJCC API.\n\n* SNOMED CT: The SNOMED CT US Edition has content related to the M category under the hierarchy of 385380006 'Metastasis category finding', such as 30893008 'M0 category' and 443841006 'pM1a category'. If using SNOMED CT to store M category findings, the use of codes that do not contain descriptions of the categories, such as the examples provided, is encouraged, as stage finding codes in SNOMED CT may not be up-to-date with current AJCC guidance. Note that SNOMED CT codes do not always make a distinction between clinical and pathological classifications (e.g. 'cM0' and 'pM0' may be represented by the same SNOMED CT code 30893008 'M0 category'). In addition, SNOMED CT may not have complete TNM staging terminology and may require supplementation with codes from another controlled vocabulary (e.g. NCI Thesaurus)." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 49;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "ValueSet" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "ValueSet-mcode-tnm-primary-tumor-category-vs.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/us/mcode/ValueSet/mcode-tnm-primary-tumor-category-vs>;
+         fhir:Reference.reference [ fhir:value "ValueSet/mcode-tnm-primary-tumor-category-vs" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "TNM Primary Tumor Category Value Set" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "This value set is intended to contain allowable values for the T category, according to TNM staging rules. SNOMED CT codes or AJCC codes (preferably, version 8 for current cancers) are allowed, but are not listed here due to AJCC intellectual property restrictions.\n\n* AJCC terminology: examples of T categories include 'cTX', used when the tumor primary tumor cannot be evaluated, 'pT0', denoting there is no evidence of a primary tumor, and 'pTis', referencing carcinoma in situ (with some cancer-specific exceptions). Other T categories refer to increasing size of the primary tumor. Please note allowable T categories may vary between clinical and pathologic classifications. The full set of allowable clinical and pathologic T categories, along with its current descriptions, can be accessed through the AJCC Staging Manual and any applicable updates and corrections, as well as the AJCC API.\n\n* SNOMED CT has content related to the T category under the hierarchy of 385356007 'Tumor stage finding', such as 23351008 'T1 category' and 261650005 'Tumor stage T1c'. If using SNOMED CT to store T category findings, the use of codes that do not contain descriptions of the categories, such as the examples provided, is encouraged, as stage finding codes in SNOMED CT may not be up-to-date with current AJCC guidance. Note that SNOMED CT codes do not always make a distinction between clinical and pathological classifications (e.g. cT1 and pT1 may be represented by the same SNOMED CT code 23351008 'T1 category'). In addition, SNOMED CT may not have complete TNM staging terminology and may require supplementation with codes from another controlled vocabulary (e.g. NCI Thesaurus)." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 50;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "ValueSet" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "ValueSet-mcode-tnm-regional-nodes-category-vs.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/us/mcode/ValueSet/mcode-tnm-regional-nodes-category-vs>;
+         fhir:Reference.reference [ fhir:value "ValueSet/mcode-tnm-regional-nodes-category-vs" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "TNM Regional Nodes Category Value Set" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "This value set is intended to contain allowable values for the N category, according to TNM staging rules. SNOMED CT codes or AJCC codes (preferably, version 8 for current cancers) are allowed, but are not listed here due to AJCC intellectual property restrictions.\n\n* AJCC terminology: examples of N categories include 'cN0', indicating no evidence of lymph node involvement, and 'pN1', indicating regional lymph node involvement to a small extent, with specific thresholds for the lymph node groups and number of lymph nodes involved. Other N categories refer to increasing lymph node involvement. Please note allowable N categories may vary between clinical and pathologic classifications. The full set of allowable clinical and pathologic N categories, along with its current descriptions, can be accessed through the AJCC Staging Manual and any applicable updates and corrections, as well as the AJCC API.\n\n* SNOMED CT has content related to the N category under the hierarchy of 385382003 'Node category finding', such as 5856006 'N3 category' and 277672002 'Node stage N1a'. If using SNOMED CT to store N category findings, the use of codes that do not contain descriptions of the categories, such as the examples provided, is encouraged, as stage finding codes in SNOMED CT may not be up-to-date with current AJCC guidance. Note that SNOMED CT codes do not always make a distinction between clinical and pathological classifications (e.g. 'cN1' and 'pN1' may be represented by the same SNOMED CT code 53623008 'N1 category'). In addition, SNOMED CT may not have complete TNM staging terminology and may require supplementation with codes from another controlled vocabulary (e.g. NCI Thesaurus)." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 51;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "ValueSet" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "ValueSet-mcode-tnm-stage-group-vs.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/us/mcode/ValueSet/mcode-tnm-stage-group-vs>;
+         fhir:Reference.reference [ fhir:value "ValueSet/mcode-tnm-stage-group-vs" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "TNM Stage Group Value Set" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "This value set is intended to contain allowable values for Stage Group, according to TNM staging rules. SNOMED CT codes or AJCC codes (preferably, version 8 for current cancers) are allowed, but are not listed here due to AJCC intellectual property restrictions.\n\n*AJCC terminology: examples of stage groups include 'Stage 0' and 'Stage IIA'. The full set of stage groups, as well rules on how to assign a stage group, can be accessed through the AJCC Staging Manual and any applicable updates and corrections, as well as the AJCC API.\n\n* SNOMED CT has content representing stage group under the hierarchy of 261612004 'Stages', such as 258215001 'Stage 1' and 261614003 'Stage2A'. In addition, SNOMED CT may not have complete TNM staging terminology and may require supplementation with codes from another controlled vocabulary (e.g. NCI Thesaurus)." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 52;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "ValueSet" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "ValueSet-mcode-treatment-intent-vs.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/us/mcode/ValueSet/mcode-treatment-intent-vs>;
+         fhir:Reference.reference [ fhir:value "ValueSet/mcode-treatment-intent-vs" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Treatment Intent Value Set" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "The purpose of a treatment. The value set includes 'curative' and 'palliative'. Curative is defined as any treatment meant to reduce or control a disease process, even if a 'cure' is not anticipated. Palliative includes treatments meant to reduce symptoms and side effects, such as antiemetics." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 53;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "ValueSet" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "ValueSet-mcode-treatment-termination-reason-vs.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/us/mcode/ValueSet/mcode-treatment-termination-reason-vs>;
+         fhir:Reference.reference [ fhir:value "ValueSet/mcode-treatment-termination-reason-vs" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Treatment Termination Reason Value Set" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Values used to describe the reasons for stopping a treatment. Includes code for 'treatment completed' as well as codes for unplanned (early) stoppage. Applies to medications and other treatments that take place over a period of time, such as radiation treatments." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 54;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "ValueSet" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "ValueSet-mcode-tumor-marker-test-vs.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/us/mcode/ValueSet/mcode-tumor-marker-test-vs>;
+         fhir:Reference.reference [ fhir:value "ValueSet/mcode-tumor-marker-test-vs" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "TumorMarkerTestVS" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Codes representing tests for tumor markers. This value set of LOINC codes is not comprehensive and can be extended. LOINC codes are preferred. Other vocabularies can be used only if the test of interest is not covered by LOINC.\n\nFHIR implementation note: At the current time, profiles for the specific LOINC tests mentioned here do not exist." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 55;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "ValueSet" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "ValueSet-mcode-units-of-length-vs.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/us/mcode/ValueSet/mcode-units-of-length-vs>;
+         fhir:Reference.reference [ fhir:value "ValueSet/mcode-units-of-length-vs" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Units of Length Value Set" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Units of measure for length or distance on a human scale." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 56;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Observation" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "Observation-mCODECancerDiseaseStatusExample01.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/us/mcode/Observation/mCODECancerDiseaseStatusExample01>;
+         fhir:Reference.reference [ fhir:value "Observation/mCODECancerDiseaseStatusExample01" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "mCODECancerDiseaseStatusExample01" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "mCODE Example for Cancer Disease Status" ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-disease-status";
+         fhir:link <http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-disease-status>
+       ]
+     ], [
+       fhir:index 57;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Observation" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "Observation-mCODECancerGeneticVariantExample01.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/us/mcode/Observation/mCODECancerGeneticVariantExample01>;
+         fhir:Reference.reference [ fhir:value "Observation/mCODECancerGeneticVariantExample01" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "mCODECancerGeneticVariantExample01" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "mCODE Example for Cancer Genetic Variant" ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genetic-variant";
+         fhir:link <http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genetic-variant>
+       ]
+     ], [
+       fhir:index 58;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Observation" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "Observation-mCODECancerGeneticVariantExample02.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/us/mcode/Observation/mCODECancerGeneticVariantExample02>;
+         fhir:Reference.reference [ fhir:value "Observation/mCODECancerGeneticVariantExample02" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "mCODECancerGeneticVariantExample02" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "mCODE Example for Cancer Genetic Variant" ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genetic-variant";
+         fhir:link <http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genetic-variant>
+       ]
+     ], [
+       fhir:index 59;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "DiagnosticReport" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "DiagnosticReport-mCODECancerGenomicsReportExample01.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/us/mcode/DiagnosticReport/mCODECancerGenomicsReportExample01>;
+         fhir:Reference.reference [ fhir:value "DiagnosticReport/mCODECancerGenomicsReportExample01" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "mCODECancerGenomicsReportExample01" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "mCODE Example for Cancer Genomics Report" ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genomics-report";
+         fhir:link <http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genomics-report>
+       ]
+     ], [
+       fhir:index 60;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "MedicationStatement" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "MedicationStatement-mCODECancerRelatedMedicationStatementExample01.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/us/mcode/MedicationStatement/mCODECancerRelatedMedicationStatementExample01>;
+         fhir:Reference.reference [ fhir:value "MedicationStatement/mCODECancerRelatedMedicationStatementExample01" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "mCODECancerRelatedMedicationStatementExample01" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "mCODE Example for Cancer Related Medication Statement" ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-related-medication-statement";
+         fhir:link <http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-related-medication-statement>
+       ]
+     ], [
+       fhir:index 61;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "MedicationStatement" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "MedicationStatement-mCODECancerRelatedMedicationStatementExample02.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/us/mcode/MedicationStatement/mCODECancerRelatedMedicationStatementExample02>;
+         fhir:Reference.reference [ fhir:value "MedicationStatement/mCODECancerRelatedMedicationStatementExample02" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "mCODECancerRelatedMedicationStatementExample02" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "mCODE Example for Cancer Related Medication Statement" ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-related-medication-statement";
+         fhir:link <http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-related-medication-statement>
+       ]
+     ], [
+       fhir:index 62;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Procedure" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "Procedure-mCODECancerRelatedRadiationProcedureExample01.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/us/mcode/Procedure/mCODECancerRelatedRadiationProcedureExample01>;
+         fhir:Reference.reference [ fhir:value "Procedure/mCODECancerRelatedRadiationProcedureExample01" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "mCODECancerRelatedRadiationProcedureExample01" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "mCODE Example for Cancer Related Radiation Procedure" ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-related-radiation-procedure";
+         fhir:link <http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-related-radiation-procedure>
+       ]
+     ], [
+       fhir:index 63;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Procedure" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "Procedure-mCODECancerRelatedSurgicalProcedureExample01.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/us/mcode/Procedure/mCODECancerRelatedSurgicalProcedureExample01>;
+         fhir:Reference.reference [ fhir:value "Procedure/mCODECancerRelatedSurgicalProcedureExample01" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "mCODECancerRelatedSurgicalProcedureExample01" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "mCODE Example for Cancer Related Surgical Procedure" ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-related-surgical-procedure";
+         fhir:link <http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-related-surgical-procedure>
+       ]
+     ], [
+       fhir:index 64;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Condition" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "Condition-mCODEComorbidConditionExample01.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/us/mcode/Condition/mCODEComorbidConditionExample01>;
+         fhir:Reference.reference [ fhir:value "Condition/mCODEComorbidConditionExample01" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "mCODEComorbidConditionExample01" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "mCODE Example for Comorbid Condition" ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-comorbid-condition";
+         fhir:link <http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-comorbid-condition>
+       ]
+     ], [
+       fhir:index 65;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Observation" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "Observation-mCODEECOGPerformanceStatusExample01.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/us/mcode/Observation/mCODEECOGPerformanceStatusExample01>;
+         fhir:Reference.reference [ fhir:value "Observation/mCODEECOGPerformanceStatusExample01" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "mCODEECOGPerformanceStatusExample01" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "mCODE Example for ECOG Performance Status" ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-ecog-performance-status";
+         fhir:link <http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-ecog-performance-status>
+       ]
+     ], [
+       fhir:index 66;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Specimen" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "Specimen-mCODEGeneticSpecimenExample01.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/us/mcode/Specimen/mCODEGeneticSpecimenExample01>;
+         fhir:Reference.reference [ fhir:value "Specimen/mCODEGeneticSpecimenExample01" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "mCODEGeneticSpecimenExample01" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "mCODE Example for Genetic Specimen" ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genetic-specimen";
+         fhir:link <http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genetic-specimen>
+       ]
+     ], [
+       fhir:index 67;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Observation" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "Observation-mCODEGenomicRegionStudiedExample01.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/us/mcode/Observation/mCODEGenomicRegionStudiedExample01>;
+         fhir:Reference.reference [ fhir:value "Observation/mCODEGenomicRegionStudiedExample01" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "mCODEGenomicRegionStudiedExample01" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "mCODE Example for Genomic Region Studied" ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genomic-region-studied";
+         fhir:link <http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genomic-region-studied>
+       ]
+     ], [
+       fhir:index 68;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Observation" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "Observation-mCODEKarnofskyPerformanceStatusExample01.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/us/mcode/Observation/mCODEKarnofskyPerformanceStatusExample01>;
+         fhir:Reference.reference [ fhir:value "Observation/mCODEKarnofskyPerformanceStatusExample01" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "mCODEKarnofskyPerformanceStatusExample01" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "mCODE Example for Karnofsky Performance Status" ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-karnofsky-performance-status";
+         fhir:link <http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-karnofsky-performance-status>
+       ]
+     ], [
+       fhir:index 69;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Organization" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "Organization-mCODEOrganizationExample01.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/us/mcode/Organization/mCODEOrganizationExample01>;
+         fhir:Reference.reference [ fhir:value "Organization/mCODEOrganizationExample01" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "mCODEOrganizationExample01" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "mCODE Example for Organization" ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 70;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Patient" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "Patient-mCODEPatientExample01.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/us/mcode/Patient/mCODEPatientExample01>;
+         fhir:Reference.reference [ fhir:value "Patient/mCODEPatientExample01" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "mCODEPatientExample01" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "mCODE Example for Patient" ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-patient";
+         fhir:link <http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-patient>
+       ]
+     ], [
+       fhir:index 71;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Patient" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "Patient-mCODEPatientExample02.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/us/mcode/Patient/mCODEPatientExample02>;
+         fhir:Reference.reference [ fhir:value "Patient/mCODEPatientExample02" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "mCODEPatientExample02" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "mCODE Example for Patient" ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-patient";
+         fhir:link <http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-patient>
+       ]
+     ], [
+       fhir:index 72;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Practitioner" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "Practitioner-mCODEPractitionerExample01.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/us/mcode/Practitioner/mCODEPractitionerExample01>;
+         fhir:Reference.reference [ fhir:value "Practitioner/mCODEPractitionerExample01" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "mCODEPractitionerExample01" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "mCODE Example for Practitioner" ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 73;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Condition" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "Condition-mCODEPrimaryCancerConditionExample01.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/us/mcode/Condition/mCODEPrimaryCancerConditionExample01>;
+         fhir:Reference.reference [ fhir:value "Condition/mCODEPrimaryCancerConditionExample01" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "mCODEPrimaryCancerConditionExample01" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "mCODE Example for Primary Cancer Condition" ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-primary-cancer-condition";
+         fhir:link <http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-primary-cancer-condition>
+       ]
+     ], [
+       fhir:index 74;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Condition" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "Condition-mCODESecondaryCancerConditionExample01.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/us/mcode/Condition/mCODESecondaryCancerConditionExample01>;
+         fhir:Reference.reference [ fhir:value "Condition/mCODESecondaryCancerConditionExample01" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "mCODESecondaryCancerConditionExample01" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "mCODE Example for Secondary Cancer Condition" ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-secondary-cancer-condition";
+         fhir:link <http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-secondary-cancer-condition>
+       ]
+     ], [
+       fhir:index 75;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Observation" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "Observation-mCODETNMClinicalDistantMetastasesCategoryExample01.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/us/mcode/Observation/mCODETNMClinicalDistantMetastasesCategoryExample01>;
+         fhir:Reference.reference [ fhir:value "Observation/mCODETNMClinicalDistantMetastasesCategoryExample01" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "mCODETNMClinicalDistantMetastasesCategoryExample01" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "mCODE Example for TNM Clinical Distant Metastases Category" ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-clinical-distant-metastases-category";
+         fhir:link <http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-clinical-distant-metastases-category>
+       ]
+     ], [
+       fhir:index 76;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Observation" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "Observation-mCODETNMClinicalPrimaryTumorCategoryExample01.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/us/mcode/Observation/mCODETNMClinicalPrimaryTumorCategoryExample01>;
+         fhir:Reference.reference [ fhir:value "Observation/mCODETNMClinicalPrimaryTumorCategoryExample01" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "mCODETNMClinicalPrimaryTumorCategoryExample01" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "mCODE Example for TNM Clinical Primary Tumor Category" ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-clinical-primary-tumor-category";
+         fhir:link <http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-clinical-primary-tumor-category>
+       ]
+     ], [
+       fhir:index 77;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Observation" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "Observation-mCODETNMClinicalRegionalNodesCategoryExample01.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/us/mcode/Observation/mCODETNMClinicalRegionalNodesCategoryExample01>;
+         fhir:Reference.reference [ fhir:value "Observation/mCODETNMClinicalRegionalNodesCategoryExample01" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "mCODETNMClinicalRegionalNodesCategoryExample01" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "mCODE Example for TNM Clinical Regional Nodes Category" ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-clinical-regional-nodes-category";
+         fhir:link <http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-clinical-regional-nodes-category>
+       ]
+     ], [
+       fhir:index 78;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Observation" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "Observation-mCODETNMClinicalStageGroupExample01.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/us/mcode/Observation/mCODETNMClinicalStageGroupExample01>;
+         fhir:Reference.reference [ fhir:value "Observation/mCODETNMClinicalStageGroupExample01" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "mCODETNMClinicalStageGroupExample01" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "mCODE Example for TNM Clinical Stage Group" ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-clinical-stage-group";
+         fhir:link <http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-clinical-stage-group>
+       ]
+     ], [
+       fhir:index 79;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Observation" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "Observation-mCODETNMPathologicalDistantMetastasesCategoryExample01.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/us/mcode/Observation/mCODETNMPathologicalDistantMetastasesCategoryExample01>;
+         fhir:Reference.reference [ fhir:value "Observation/mCODETNMPathologicalDistantMetastasesCategoryExample01" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "mCODETNMPathologicalDistantMetastasesCategoryExample01" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "mCODE Example for TNM Pathological Distant Metastases Category" ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-pathological-distant-metastases-category";
+         fhir:link <http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-pathological-distant-metastases-category>
+       ]
+     ], [
+       fhir:index 80;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Observation" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "Observation-mCODETNMPathologicalPrimaryTumorCategoryExample01.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/us/mcode/Observation/mCODETNMPathologicalPrimaryTumorCategoryExample01>;
+         fhir:Reference.reference [ fhir:value "Observation/mCODETNMPathologicalPrimaryTumorCategoryExample01" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "mCODETNMPathologicalPrimaryTumorCategoryExample01" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "mCODE Example for TNM Pathological Primary Tumor Category" ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-pathological-primary-tumor-category";
+         fhir:link <http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-pathological-primary-tumor-category>
+       ]
+     ], [
+       fhir:index 81;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Observation" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "Observation-mCODETNMPathologicalRegionalNodesCategoryExample01.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/us/mcode/Observation/mCODETNMPathologicalRegionalNodesCategoryExample01>;
+         fhir:Reference.reference [ fhir:value "Observation/mCODETNMPathologicalRegionalNodesCategoryExample01" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "mCODETNMPathologicalRegionalNodesCategoryExample01" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "mCODE Example for TNM Pathological Regional Nodes Category" ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-pathological-regional-nodes-category";
+         fhir:link <http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-pathological-regional-nodes-category>
+       ]
+     ], [
+       fhir:index 82;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Observation" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "Observation-mCODETNMPathologicalStageGroupExample01.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/us/mcode/Observation/mCODETNMPathologicalStageGroupExample01>;
+         fhir:Reference.reference [ fhir:value "Observation/mCODETNMPathologicalStageGroupExample01" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "mCODETNMPathologicalStageGroupExample01" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "mCODE Example for TNM Pathological Stage Group" ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-pathological-stage-group";
+         fhir:link <http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-pathological-stage-group>
+       ]
+     ], [
+       fhir:index 83;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Observation" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "Observation-mCODETumorMarkerExample01.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/us/mcode/Observation/mCODETumorMarkerExample01>;
+         fhir:Reference.reference [ fhir:value "Observation/mCODETumorMarkerExample01" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "mCODETumorMarkerExample01" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "mCODE Example for Tumor Marker Example" ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tumor-marker";
+         fhir:link <http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tumor-marker>
+       ]
+     ];
+     fhir:ImplementationGuide.definition.page [
+       fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "toc.html" ];
+       fhir:ImplementationGuide.definition.page.title [ fhir:value "Table of Contents" ];
+       fhir:ImplementationGuide.definition.page.generation [ fhir:value "html" ];
+       fhir:ImplementationGuide.definition.page.page [
+         fhir:index 0;
+         fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "index.html" ];
+         fhir:ImplementationGuide.definition.page.title [ fhir:value "Home" ];
+         fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ]
+       ], [
+         fhir:index 1;
+         fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "implementation.html" ];
+         fhir:ImplementationGuide.definition.page.title [ fhir:value "Implementation" ];
+         fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ]
+       ], [
+         fhir:index 2;
+         fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "examples.html" ];
+         fhir:ImplementationGuide.definition.page.title [ fhir:value "Examples" ];
+         fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ]
+       ], [
+         fhir:index 3;
+         fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "change_log.html" ];
+         fhir:ImplementationGuide.definition.page.title [ fhir:value "Change Log" ];
+         fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ]
+       ], [
+         fhir:index 4;
+         fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "downloads.html" ];
+         fhir:ImplementationGuide.definition.page.title [ fhir:value "Downloads" ];
+         fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ]
+       ], [
+         fhir:index 5;
+         fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "versions.html" ];
+         fhir:ImplementationGuide.definition.page.title [ fhir:value "Versions" ];
+         fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ]
+       ]
+     ];
+     fhir:ImplementationGuide.definition.parameter [
+       fhir:index 0;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-resource" ];
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/capabilities" ]
+     ], [
+       fhir:index 1;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-resource" ];
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/examples" ]
+     ], [
+       fhir:index 2;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-resource" ];
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/extensions" ]
+     ], [
+       fhir:index 3;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-resource" ];
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/models" ]
+     ], [
+       fhir:index 4;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-resource" ];
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/operations" ]
+     ], [
+       fhir:index 5;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-resource" ];
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/profiles" ]
+     ], [
+       fhir:index 6;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-resource" ];
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/resources" ]
+     ], [
+       fhir:index 7;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-resource" ];
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/vocabulary" ]
+     ], [
+       fhir:index 8;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-pages" ];
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "template/config" ]
+     ], [
+       fhir:index 9;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-pages" ];
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/images" ]
+     ], [
+       fhir:index 10;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-tx-cache" ];
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input-cache/txcache" ]
+     ]
+  ] .
+
+<http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-condition-parent> a fhir:us .
+
+<http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-disease-status> a fhir:us .
+
+<http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genetic-variant> a fhir:us .
+
+<http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genomics-report> a fhir:us .
+
+<http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-patient> a fhir:us .
+
+<http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-related-medication-statement> a fhir:us .
+
+<http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-related-radiation-procedure> a fhir:us .
+
+<http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-related-surgical-procedure> a fhir:us .
+
+<http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-stage-parent> a fhir:us .
+
+<http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-comorbid-condition> a fhir:us .
+
+<http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-ecog-performance-status> a fhir:us .
+
+<http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genetic-specimen> a fhir:us .
+
+<http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genomic-region-studied> a fhir:us .
+
+<http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-karnofsky-performance-status> a fhir:us .
+
+<http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-primary-cancer-condition> a fhir:us .
+
+<http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-secondary-cancer-condition> a fhir:us .
+
+<http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-clinical-distant-metastases-category> a fhir:us .
+
+<http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-clinical-primary-tumor-category> a fhir:us .
+
+<http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-clinical-regional-nodes-category> a fhir:us .
+
+<http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-clinical-stage-group> a fhir:us .
+
+<http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-pathological-distant-metastases-category> a fhir:us .
+
+<http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-pathological-primary-tumor-category> a fhir:us .
+
+<http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-pathological-regional-nodes-category> a fhir:us .
+
+<http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-pathological-stage-group> a fhir:us .
+
+<http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tumor-marker> a fhir:us .
+
+<http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-evidence-type> a fhir:us .
+
+<http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-histology-morphology-behavior> a fhir:us .
+
+<http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-laterality> a fhir:us .
+
+<http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-related-primary-cancer-condition> a fhir:us .
+
+<http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-termination-reason> a fhir:us .
+
+<http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-treatment-intent> a fhir:us .
+
+<http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-body-location-vs> a fhir:us .
+
+<http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-disease-status-evidence-type-vs> a fhir:us .
+
+<http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-disorder-vs> a fhir:us .
+
+<http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-related-surgical-procedure-vs> a fhir:us .
+
+<http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-staging-system-vs> a fhir:us .
+
+<http://hl7.org/fhir/us/mcode/ValueSet/mcode-clinvar-vs> a fhir:us .
+
+<http://hl7.org/fhir/us/mcode/ValueSet/mcode-comorbid-condition-vs> a fhir:us .
+
+<http://hl7.org/fhir/us/mcode/ValueSet/mcode-condition-status-trend-vs> a fhir:us .
+
+<http://hl7.org/fhir/us/mcode/ValueSet/mcode-genetic-specimen-type-vs> a fhir:us .
+
+<http://hl7.org/fhir/us/mcode/ValueSet/mcode-hgnc-vs> a fhir:us .
+
+<http://hl7.org/fhir/us/mcode/ValueSet/mcode-hgvs-vs> a fhir:us .
+
+<http://hl7.org/fhir/us/mcode/ValueSet/mcode-histology-morphology-behavior-vs> a fhir:us .
+
+<http://hl7.org/fhir/us/mcode/ValueSet/mcode-laterality-vs> a fhir:us .
+
+<http://hl7.org/fhir/us/mcode/ValueSet/mcode-primary-or-uncertain-behavior-cancer-disorder-vs> a fhir:us .
+
+<http://hl7.org/fhir/us/mcode/ValueSet/mcode-radiation-procedure-vs> a fhir:us .
+
+<http://hl7.org/fhir/us/mcode/ValueSet/mcode-radiation-target-body-site-vs> a fhir:us .
+
+<http://hl7.org/fhir/us/mcode/ValueSet/mcode-secondary-cancer-disorder-vs> a fhir:us .
+
+<http://hl7.org/fhir/us/mcode/ValueSet/mcode-tnm-distant-metastases-category-vs> a fhir:us .
+
+<http://hl7.org/fhir/us/mcode/ValueSet/mcode-tnm-primary-tumor-category-vs> a fhir:us .
+
+<http://hl7.org/fhir/us/mcode/ValueSet/mcode-tnm-regional-nodes-category-vs> a fhir:us .
+
+<http://hl7.org/fhir/us/mcode/ValueSet/mcode-tnm-stage-group-vs> a fhir:us .
+
+<http://hl7.org/fhir/us/mcode/ValueSet/mcode-treatment-intent-vs> a fhir:us .
+
+<http://hl7.org/fhir/us/mcode/ValueSet/mcode-treatment-termination-reason-vs> a fhir:us .
+
+<http://hl7.org/fhir/us/mcode/ValueSet/mcode-tumor-marker-test-vs> a fhir:us .
+
+<http://hl7.org/fhir/us/mcode/ValueSet/mcode-units-of-length-vs> a fhir:us .
+
+<http://hl7.org/fhir/us/mcode/Observation/mCODECancerDiseaseStatusExample01> a fhir:us .
+
+<http://hl7.org/fhir/us/mcode/Observation/mCODECancerGeneticVariantExample01> a fhir:us .
+
+<http://hl7.org/fhir/us/mcode/Observation/mCODECancerGeneticVariantExample02> a fhir:us .
+
+<http://hl7.org/fhir/us/mcode/DiagnosticReport/mCODECancerGenomicsReportExample01> a fhir:us .
+
+<http://hl7.org/fhir/us/mcode/MedicationStatement/mCODECancerRelatedMedicationStatementExample01> a fhir:us .
+
+<http://hl7.org/fhir/us/mcode/MedicationStatement/mCODECancerRelatedMedicationStatementExample02> a fhir:us .
+
+<http://hl7.org/fhir/us/mcode/Procedure/mCODECancerRelatedRadiationProcedureExample01> a fhir:us .
+
+<http://hl7.org/fhir/us/mcode/Procedure/mCODECancerRelatedSurgicalProcedureExample01> a fhir:us .
+
+<http://hl7.org/fhir/us/mcode/Condition/mCODEComorbidConditionExample01> a fhir:us .
+
+<http://hl7.org/fhir/us/mcode/Observation/mCODEECOGPerformanceStatusExample01> a fhir:us .
+
+<http://hl7.org/fhir/us/mcode/Specimen/mCODEGeneticSpecimenExample01> a fhir:us .
+
+<http://hl7.org/fhir/us/mcode/Observation/mCODEGenomicRegionStudiedExample01> a fhir:us .
+
+<http://hl7.org/fhir/us/mcode/Observation/mCODEKarnofskyPerformanceStatusExample01> a fhir:us .
+
+<http://hl7.org/fhir/us/mcode/Organization/mCODEOrganizationExample01> a fhir:us .
+
+<http://hl7.org/fhir/us/mcode/Patient/mCODEPatientExample01> a fhir:us .
+
+<http://hl7.org/fhir/us/mcode/Patient/mCODEPatientExample02> a fhir:us .
+
+<http://hl7.org/fhir/us/mcode/Practitioner/mCODEPractitionerExample01> a fhir:us .
+
+<http://hl7.org/fhir/us/mcode/Condition/mCODEPrimaryCancerConditionExample01> a fhir:us .
+
+<http://hl7.org/fhir/us/mcode/Condition/mCODESecondaryCancerConditionExample01> a fhir:us .
+
+<http://hl7.org/fhir/us/mcode/Observation/mCODETNMClinicalDistantMetastasesCategoryExample01> a fhir:us .
+
+<http://hl7.org/fhir/us/mcode/Observation/mCODETNMClinicalPrimaryTumorCategoryExample01> a fhir:us .
+
+<http://hl7.org/fhir/us/mcode/Observation/mCODETNMClinicalRegionalNodesCategoryExample01> a fhir:us .
+
+<http://hl7.org/fhir/us/mcode/Observation/mCODETNMClinicalStageGroupExample01> a fhir:us .
+
+<http://hl7.org/fhir/us/mcode/Observation/mCODETNMPathologicalDistantMetastasesCategoryExample01> a fhir:us .
+
+<http://hl7.org/fhir/us/mcode/Observation/mCODETNMPathologicalPrimaryTumorCategoryExample01> a fhir:us .
+
+<http://hl7.org/fhir/us/mcode/Observation/mCODETNMPathologicalRegionalNodesCategoryExample01> a fhir:us .
+
+<http://hl7.org/fhir/us/mcode/Observation/mCODETNMPathologicalStageGroupExample01> a fhir:us .
+
+<http://hl7.org/fhir/us/mcode/Observation/mCODETumorMarkerExample01> a fhir:us .
+
+# - ontology header ------------------------------------------------------------
+
+<http://hl7.org/fhir/us/mcode/ImplementationGuide/hl7.fhir.us.mcode.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl;
+  owl:versionIRI <http://build.fhir.org/us/mcode/ImplementationGuide/hl7.fhir.us.mcode.ttl> .
+
+# -------------------------------------------------------------------------------------
+

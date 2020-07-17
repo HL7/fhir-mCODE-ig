@@ -1,0 +1,132 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/us/mcode/Condition/mCODEPrimaryCancerConditionExample01> a fhir:Condition;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "mCODEPrimaryCancerConditionExample01"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-primary-cancer-condition";
+       fhir:index 0;
+       fhir:link <http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-primary-cancer-condition>
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>id</b>: mCODEPrimaryCancerConditionExample01</p><p><b>meta</b>: </p><p><b>clinicalStatus</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/condition-clinical active}\">Active</span></p><p><b>verificationStatus</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/condition-ver-status confirmed}\">Confirmed</span></p><p><b>category</b>: <span title=\"Codes: {http://snomed.info/sct 64572001}\">Disease</span></p><p><b>code</b>: <span title=\"Codes: {http://snomed.info/sct 254637007}\">Non-small cell lung cancer (disorder)</span></p><p><b>bodySite</b>: <span title=\"Codes: {http://snomed.info/sct 39607008}\">Lung structure (body structure)</span></p><p><b>subject</b>: <a href=\"Patient-mCODEPatientExample01.html\">Generated Summary: id: mCODEPatientExample01; Medical Record Number = m123 (USUAL); John B. Anyperson ; gender: male; birthDate: 1951-01-20</a></p><p><b>onset</b>: 2019-04-01</p><p><b>asserter</b>: <a href=\"Practitioner-mCODEPractitionerExample01.html\">Generated Summary: id: mCODEPractitionerExample01; 9988776655; Kyle Anydoc ; gender: male</a></p><h3>Stages</h3><table class=\"grid\"><tr><td>-</td><td><b>Summary</b></td><td><b>Assessment</b></td></tr><tr><td>*</td><td><span title=\"Codes: {http://cancerstaging.org 3C}\">IIIC</span></td><td><a href=\"Observation-mCODETNMClinicalStageGroupExample01.html\">Generated Summary: id: mCODETNMClinicalStageGroupExample01; <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/observation-category survey}\">Survey</span>; <span title=\"Codes: {http://loinc.org 21908-9}\">Stage group.clinical Cancer</span>; effective: 2019-04-01; <span title=\"Codes: {http://cancerstaging.org 3C}\">IIIC</span>; <span title=\"Codes: {http://ncimeta.nci.nih.gov C146985}\">AJCC Cancer Staging Manual 8th Edition</span></a></td></tr></table></div>"
+  ];
+  fhir:DomainResource.extension [
+     fhir:index 0;
+     fhir:Extension.url [ fhir:value "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-histology-morphology-behavior" ];
+     fhir:Extension.valueCodeableConcept [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         a sct:35917007;
+         fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+         fhir:Coding.code [ fhir:value "35917007" ];
+         fhir:Coding.display [ fhir:value "Adenocarcinoma" ]
+       ]
+     ]
+  ];
+  fhir:Condition.clinicalStatus [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/condition-clinical" ];
+       fhir:Coding.code [ fhir:value "active" ];
+       fhir:Coding.display [ fhir:value "Active" ]
+     ]
+  ];
+  fhir:Condition.verificationStatus [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/condition-ver-status" ];
+       fhir:Coding.code [ fhir:value "confirmed" ];
+       fhir:Coding.display [ fhir:value "Confirmed" ]
+     ]
+  ];
+  fhir:Condition.category [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       a sct:64572001;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+       fhir:Coding.code [ fhir:value "64572001" ]
+     ]
+  ];
+  fhir:Condition.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       a sct:254637007;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+       fhir:Coding.code [ fhir:value "254637007" ];
+       fhir:Coding.display [ fhir:value "Non-small cell lung cancer (disorder)" ]
+     ]
+  ];
+  fhir:Condition.bodySite [
+     fhir:index 0;
+     fhir:Element.extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-laterality" ];
+       fhir:Extension.valueCodeableConcept [
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           a sct:7771000;
+           fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+           fhir:Coding.code [ fhir:value "7771000" ];
+           fhir:Coding.display [ fhir:value "Left (qualifier value)" ]
+         ]
+       ]
+     ];
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       a sct:39607008;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+       fhir:Coding.code [ fhir:value "39607008" ];
+       fhir:Coding.display [ fhir:value "Lung structure (body structure)" ]
+     ]
+  ];
+  fhir:Condition.subject [
+     fhir:link <http://hl7.org/fhir/us/mcode/Patient/mCODEPatientExample01>;
+     fhir:Reference.reference [ fhir:value "Patient/mCODEPatientExample01" ]
+  ];
+  fhir:Condition.onsetDateTime [ fhir:value "2019-04-01"^^xsd:date];
+  fhir:Condition.asserter [
+     fhir:link <http://hl7.org/fhir/us/mcode/Practitioner/mCODEPractitionerExample01>;
+     fhir:Reference.reference [ fhir:value "Practitioner/mCODEPractitionerExample01" ]
+  ];
+  fhir:Condition.stage [
+     fhir:index 0;
+     fhir:Condition.stage.summary [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://cancerstaging.org" ];
+         fhir:Coding.code [ fhir:value "3C" ];
+         fhir:Coding.display [ fhir:value "IIIC" ]
+       ]
+     ];
+     fhir:Condition.stage.assessment [
+       fhir:index 0;
+       fhir:link <http://hl7.org/fhir/us/mcode/Observation/mCODETNMClinicalStageGroupExample01>;
+       fhir:Reference.reference [ fhir:value "Observation/mCODETNMClinicalStageGroupExample01" ]
+     ]
+  ] .
+
+<http://hl7.org/fhir/us/mcode/Patient/mCODEPatientExample01> a fhir:us .
+
+<http://hl7.org/fhir/us/mcode/Practitioner/mCODEPractitionerExample01> a fhir:us .
+
+<http://hl7.org/fhir/us/mcode/Observation/mCODETNMClinicalStageGroupExample01> a fhir:us .
+
+# - ontology header ------------------------------------------------------------
+
+<http://hl7.org/fhir/us/mcode/Condition/mCODEPrimaryCancerConditionExample01.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl;
+  owl:versionIRI <http://build.fhir.org/us/mcode/Condition/mCODEPrimaryCancerConditionExample01.ttl> .
+
+# -------------------------------------------------------------------------------------
+

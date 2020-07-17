@@ -1,0 +1,4 @@
+I"à<p>A radiological treatment addressing a cancer condition. The scope of this profile has been narrowed to cancer-related procedures by constraining the ReasonReference and ReasonCode to cancer conditions.</p>
+
+<p>Conformance note: If an ICD-10-PCS code is used in the code attribute, and there is a semantically equivalent SNOMED CT or CPT code, the resulting Procedure instance will not be compliant with <a href="http://hl7.org/fhir/us/core/index.html">US Core Profiles</a></p>
+:ET

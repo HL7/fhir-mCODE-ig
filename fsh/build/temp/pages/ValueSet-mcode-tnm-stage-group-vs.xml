@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="mcode-tnm-stage-group-vs"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><ul><li>Include all codes defined in <code>http://cancerstaging.org</code></li></ul></div>
+  </text>
+  <url value="http://hl7.org/fhir/us/mcode/ValueSet/mcode-tnm-stage-group-vs"/>
+  <version value="1.0.1"/>
+  <name value="TNMStageGroupVS"/>
+  <title value="TNM Stage Group Value Set"/>
+  <status value="active"/>
+  <date value="2020-07-17T16:41:47-04:00"/>
+  <publisher value="HL7 International Clinical Interoperability Council"/>
+  <contact>
+    <name value="HL7 International Clinical Interoperability Council"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://www.hl7.org/Special/committees/cic"/>
+    </telecom>
+    <telecom>
+      <system value="email"/>
+      <value value="ciclist@lists.HL7.org"/>
+    </telecom>
+  </contact>
+  <description value="This value set is intended to contain allowable values for Stage Group, according to TNM staging rules. SNOMED CT codes or AJCC codes (preferably, version 8 for current cancers) are allowed, but are not listed here due to AJCC intellectual property restrictions.&#xA;&#xA;*AJCC terminology: examples of stage groups include &#39;Stage 0&#39; and &#39;Stage IIA&#39;.&#xA0;The full set of stage groups, as well rules on how to assign a stage group, can be accessed through the AJCC Staging Manual and any applicable updates and corrections, as well as the AJCC API.&#xA;&#xA;* SNOMED CT has content representing stage group under the hierarchy of 261612004 &#39;Stages&#39;, such as 258215001 &#39;Stage 1&#39; and 261614003 &#39;Stage2A&#39;.&#xA0;In addition, SNOMED CT may not have complete TNM staging terminology and may require supplementation with codes from another controlled vocabulary (e.g. NCI Thesaurus)."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="US"/>
+      <display value="United States of America"/>
+    </coding>
+  </jurisdiction>
+  <compose>
+    <include>
+      <system value="http://cancerstaging.org"/>
+    </include>
+  </compose>
+</ValueSet>

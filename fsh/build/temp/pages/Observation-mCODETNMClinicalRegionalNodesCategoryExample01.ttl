@@ -1,0 +1,72 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <http://loinc.org/rdf#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/us/mcode/Observation/mCODETNMClinicalRegionalNodesCategoryExample01> a fhir:Observation;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "mCODETNMClinicalRegionalNodesCategoryExample01"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-clinical-regional-nodes-category";
+       fhir:index 0;
+       fhir:link <http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-clinical-regional-nodes-category>
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>id</b>: mCODETNMClinicalRegionalNodesCategoryExample01</p><p><b>meta</b>: </p><p></p><p><b>category</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/observation-category survey}\">Survey</span></p><p><b>code</b>: <span title=\"Codes: {http://loinc.org 21906-3}\">Regional lymph nodes.clinical [Class] Cancer</span></p><p><b>subject</b>: <a href=\"Patient-mCODEPatientExample01.html\">Generated Summary: id: mCODEPatientExample01; Medical Record Number = m123 (USUAL); John B. Anyperson ; gender: male; birthDate: 1951-01-20</a></p><p><b>effective</b>: 2019-04-01</p><p><b>value</b>: <span title=\"Codes: {http://cancerstaging.org cN3}\">N3</span></p><p><b>method</b>: <span title=\"Codes: {http://ncimeta.nci.nih.gov C146985}\">AJCC Cancer Staging Manual 8th Edition</span></p></div>"
+  ];
+  fhir:Observation.status [ fhir:value "final"];
+  fhir:Observation.category [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/observation-category" ];
+       fhir:Coding.code [ fhir:value "survey" ];
+       fhir:Coding.display [ fhir:value "Survey" ]
+     ]
+  ];
+  fhir:Observation.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       a loinc:21906-3;
+       fhir:Coding.system [ fhir:value "http://loinc.org" ];
+       fhir:Coding.code [ fhir:value "21906-3" ]
+     ]
+  ];
+  fhir:Observation.subject [
+     fhir:link <http://hl7.org/fhir/us/mcode/Patient/mCODEPatientExample01>;
+     fhir:Reference.reference [ fhir:value "Patient/mCODEPatientExample01" ]
+  ];
+  fhir:Observation.effectiveDateTime [ fhir:value "2019-04-01"^^xsd:date];
+  fhir:Observation.valueCodeableConcept [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://cancerstaging.org" ];
+       fhir:Coding.code [ fhir:value "cN3" ];
+       fhir:Coding.display [ fhir:value "N3" ]
+     ]
+  ];
+  fhir:Observation.method [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://ncimeta.nci.nih.gov" ];
+       fhir:Coding.code [ fhir:value "C146985" ];
+       fhir:Coding.display [ fhir:value "AJCC Cancer Staging Manual 8th Edition" ]
+     ]
+  ] .
+
+<http://hl7.org/fhir/us/mcode/Patient/mCODEPatientExample01> a fhir:us .
+
+# - ontology header ------------------------------------------------------------
+
+<http://hl7.org/fhir/us/mcode/Observation/mCODETNMClinicalRegionalNodesCategoryExample01.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl;
+  owl:versionIRI <http://build.fhir.org/us/mcode/Observation/mCODETNMClinicalRegionalNodesCategoryExample01.ttl> .
+
+# -------------------------------------------------------------------------------------
+

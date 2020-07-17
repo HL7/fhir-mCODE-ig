@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Specimen xmlns="http://hl7.org/fhir">
+  <id value="mCODEGeneticSpecimenExample01"/>
+  <meta>
+    <profile value="http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genetic-specimen"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><p><b>id</b>: mCODEGeneticSpecimenExample01</p><p><b>meta</b>: </p><p><b>status</b>: available</p><p><b>type</b>: <span title="Codes: {http://terminology.hl7.org/CodeSystem/v2-0487 TISS}">Tissue</span></p><p><b>subject</b>: <a href="Patient-mCODEPatientExample01.html">Generated Summary: id: mCODEPatientExample01; Medical Record Number = m123 (USUAL); John B. Anyperson ; gender: male; birthDate: 1951-01-20</a></p><h3>Collections</h3><table class="grid"><tr><td>-</td><td><b>Collector</b></td><td><b>BodySite</b></td></tr><tr><td>*</td><td><a href="Practitioner-mCODEPractitionerExample01.html">Generated Summary: id: mCODEPractitionerExample01; 9988776655; Kyle Anydoc ; gender: male</a></td><td><span title="Codes: {http://snomed.info/sct 41224006}">Structure of lower lobe of left lung (body structure)</span></td></tr></table><h3>Processings</h3><table class="grid"><tr><td>-</td><td><b>Time[x]</b></td></tr><tr><td>*</td><td>2019-03-20</td></tr></table></div>
+  </text>
+  <status value="available"/>
+  <type>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/v2-0487"/>
+      <code value="TISS"/>
+      <display value="Tissue"/>
+    </coding>
+  </type>
+  <subject>
+    <reference value="Patient/mCODEPatientExample01"/>
+  </subject>
+  <collection>
+    <collector>
+      <reference value="Practitioner/mCODEPractitionerExample01"/>
+    </collector>
+    <bodySite>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="41224006"/>
+        <display value="Structure of lower lobe of left lung (body structure)"/>
+      </coding>
+    </bodySite>
+  </collection>
+  <processing>
+    <timeDateTime value="2019-03-20"/>
+  </processing>
+</Specimen>

@@ -1,0 +1,768 @@
+{
+  "ImplementationGuide/hl7.fhir.us.mcode": {
+    "history": false,
+    "index": 0,
+    "source": "/Users/cpotteiger/HL7-mCODE/fhir-mCODE-ig/fsh/build/input/ImplementationGuide-hl7.fhir.us.mcode.json",
+    "url": "http://hl7.org/fhir/us/mcode/ImplementationGuide/hl7.fhir.us.mcode",
+    "name": "HL7FHIRImplementationGuideminimalCommonOncologyDataElementsmCODERelease1USRealmSTU1",
+    "title": "HL7 FHIR Implementation Guide: minimal Common Oncology Data Elements (mCODE) Release 1 - US Realm | STU1",
+    "version": "1.0.1",
+    "date": "2020-07-17T16:41:47-04:00",
+    "status": "active"
+  },
+  "StructureDefinition/mcode-cancer-condition-parent": {
+    "history": false,
+    "index": 1,
+    "source": "/Users/cpotteiger/HL7-mCODE/fhir-mCODE-ig/fsh/build/input/profiles/structuredefinition-mcode-cancer-condition-parent.json",
+    "url": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-condition-parent",
+    "name": "CancerConditionParent",
+    "title": "Cancer Condition Parent",
+    "version": "1.0.1",
+    "date": "2020-07-17T16:41:47-04:00",
+    "status": "active"
+  },
+  "StructureDefinition/mcode-cancer-disease-status": {
+    "history": false,
+    "index": 2,
+    "source": "/Users/cpotteiger/HL7-mCODE/fhir-mCODE-ig/fsh/build/input/profiles/structuredefinition-mcode-cancer-disease-status.json",
+    "url": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-disease-status",
+    "name": "CancerDiseaseStatus",
+    "title": "Cancer Disease Status",
+    "version": "1.0.1",
+    "date": "2020-07-17T16:41:47-04:00",
+    "status": "active"
+  },
+  "StructureDefinition/mcode-cancer-genetic-variant": {
+    "history": false,
+    "index": 3,
+    "source": "/Users/cpotteiger/HL7-mCODE/fhir-mCODE-ig/fsh/build/input/profiles/structuredefinition-mcode-cancer-genetic-variant.json",
+    "url": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genetic-variant",
+    "name": "CancerGeneticVariant",
+    "title": "Cancer Genetic Variant",
+    "version": "1.0.1",
+    "date": "2020-07-17T16:41:47-04:00",
+    "status": "active"
+  },
+  "StructureDefinition/mcode-cancer-genomics-report": {
+    "history": false,
+    "index": 4,
+    "source": "/Users/cpotteiger/HL7-mCODE/fhir-mCODE-ig/fsh/build/input/profiles/structuredefinition-mcode-cancer-genomics-report.json",
+    "url": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genomics-report",
+    "name": "CancerGenomicsReport",
+    "title": "Cancer Genomics Report",
+    "version": "1.0.1",
+    "date": "2020-07-17T16:41:47-04:00",
+    "status": "active"
+  },
+  "StructureDefinition/mcode-cancer-patient": {
+    "history": false,
+    "index": 5,
+    "source": "/Users/cpotteiger/HL7-mCODE/fhir-mCODE-ig/fsh/build/input/profiles/structuredefinition-mcode-cancer-patient.json",
+    "url": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-patient",
+    "name": "CancerPatient",
+    "title": "Cancer Patient",
+    "version": "1.0.1",
+    "date": "2020-07-17T16:41:47-04:00",
+    "status": "active"
+  },
+  "StructureDefinition/mcode-cancer-related-medication-statement": {
+    "history": false,
+    "index": 6,
+    "source": "/Users/cpotteiger/HL7-mCODE/fhir-mCODE-ig/fsh/build/input/profiles/structuredefinition-mcode-cancer-related-medication-statement.json",
+    "url": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-related-medication-statement",
+    "name": "CancerRelatedMedicationStatement",
+    "title": "Cancer-Related Medication Statement",
+    "version": "1.0.1",
+    "date": "2020-07-17T16:41:47-04:00",
+    "status": "active"
+  },
+  "StructureDefinition/mcode-cancer-related-radiation-procedure": {
+    "history": false,
+    "index": 7,
+    "source": "/Users/cpotteiger/HL7-mCODE/fhir-mCODE-ig/fsh/build/input/profiles/structuredefinition-mcode-cancer-related-radiation-procedure.json",
+    "url": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-related-radiation-procedure",
+    "name": "CancerRelatedRadiationProcedure",
+    "title": "Cancer-Related Radiation Procedure",
+    "version": "1.0.1",
+    "date": "2020-07-17T16:41:47-04:00",
+    "status": "active"
+  },
+  "StructureDefinition/mcode-cancer-related-surgical-procedure": {
+    "history": false,
+    "index": 8,
+    "source": "/Users/cpotteiger/HL7-mCODE/fhir-mCODE-ig/fsh/build/input/profiles/structuredefinition-mcode-cancer-related-surgical-procedure.json",
+    "url": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-related-surgical-procedure",
+    "name": "CancerRelatedSurgicalProcedure",
+    "title": "Cancer-Related Surgical Procedure",
+    "version": "1.0.1",
+    "date": "2020-07-17T16:41:47-04:00",
+    "status": "active"
+  },
+  "StructureDefinition/mcode-cancer-stage-parent": {
+    "history": false,
+    "index": 9,
+    "source": "/Users/cpotteiger/HL7-mCODE/fhir-mCODE-ig/fsh/build/input/profiles/structuredefinition-mcode-cancer-stage-parent.json",
+    "url": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-stage-parent",
+    "name": "CancerStageParent",
+    "title": "Cancer Stage Parent",
+    "version": "1.0.1",
+    "date": "2020-07-17T16:41:47-04:00",
+    "status": "active"
+  },
+  "StructureDefinition/mcode-comorbid-condition": {
+    "history": false,
+    "index": 10,
+    "source": "/Users/cpotteiger/HL7-mCODE/fhir-mCODE-ig/fsh/build/input/profiles/structuredefinition-mcode-comorbid-condition.json",
+    "url": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-comorbid-condition",
+    "name": "ComorbidCondition",
+    "title": "Comorbid Condition",
+    "version": "1.0.1",
+    "date": "2020-07-17T16:41:47-04:00",
+    "status": "active"
+  },
+  "StructureDefinition/mcode-ecog-performance-status": {
+    "history": false,
+    "index": 11,
+    "source": "/Users/cpotteiger/HL7-mCODE/fhir-mCODE-ig/fsh/build/input/profiles/structuredefinition-mcode-ecog-performance-status.json",
+    "url": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-ecog-performance-status",
+    "name": "ECOGPerformanceStatus",
+    "title": "ECOG Performance Status",
+    "version": "1.0.1",
+    "date": "2020-07-17T16:41:47-04:00",
+    "status": "active"
+  },
+  "StructureDefinition/mcode-genetic-specimen": {
+    "history": false,
+    "index": 12,
+    "source": "/Users/cpotteiger/HL7-mCODE/fhir-mCODE-ig/fsh/build/input/profiles/structuredefinition-mcode-genetic-specimen.json",
+    "url": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genetic-specimen",
+    "name": "GeneticSpecimen",
+    "title": "Genetic Specimen",
+    "version": "1.0.1",
+    "date": "2020-07-17T16:41:47-04:00",
+    "status": "active"
+  },
+  "StructureDefinition/mcode-genomic-region-studied": {
+    "history": false,
+    "index": 13,
+    "source": "/Users/cpotteiger/HL7-mCODE/fhir-mCODE-ig/fsh/build/input/profiles/structuredefinition-mcode-genomic-region-studied.json",
+    "url": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genomic-region-studied",
+    "name": "GenomicRegionStudied",
+    "title": "Genomic Region Studied",
+    "version": "1.0.1",
+    "date": "2020-07-17T16:41:47-04:00",
+    "status": "active"
+  },
+  "StructureDefinition/mcode-karnofsky-performance-status": {
+    "history": false,
+    "index": 14,
+    "source": "/Users/cpotteiger/HL7-mCODE/fhir-mCODE-ig/fsh/build/input/profiles/structuredefinition-mcode-karnofsky-performance-status.json",
+    "url": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-karnofsky-performance-status",
+    "name": "KarnofskyPerformanceStatus",
+    "title": "Karnofsky Performance Status",
+    "version": "1.0.1",
+    "date": "2020-07-17T16:41:47-04:00",
+    "status": "active"
+  },
+  "StructureDefinition/mcode-primary-cancer-condition": {
+    "history": false,
+    "index": 15,
+    "source": "/Users/cpotteiger/HL7-mCODE/fhir-mCODE-ig/fsh/build/input/profiles/structuredefinition-mcode-primary-cancer-condition.json",
+    "url": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-primary-cancer-condition",
+    "name": "PrimaryCancerCondition",
+    "title": "Primary Cancer Condition",
+    "version": "1.0.1",
+    "date": "2020-07-17T16:41:47-04:00",
+    "status": "active"
+  },
+  "StructureDefinition/mcode-secondary-cancer-condition": {
+    "history": false,
+    "index": 16,
+    "source": "/Users/cpotteiger/HL7-mCODE/fhir-mCODE-ig/fsh/build/input/profiles/structuredefinition-mcode-secondary-cancer-condition.json",
+    "url": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-secondary-cancer-condition",
+    "name": "SecondaryCancerCondition",
+    "title": "Secondary Cancer Condition",
+    "version": "1.0.1",
+    "date": "2020-07-17T16:41:47-04:00",
+    "status": "active"
+  },
+  "StructureDefinition/mcode-tnm-clinical-distant-metastases-category": {
+    "history": false,
+    "index": 17,
+    "source": "/Users/cpotteiger/HL7-mCODE/fhir-mCODE-ig/fsh/build/input/profiles/structuredefinition-mcode-tnm-clinical-distant-metastases-category.json",
+    "url": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-clinical-distant-metastases-category",
+    "name": "TNMClinicalDistantMetastasesCategory",
+    "title": "TNM Clinical Distant Metastases Category",
+    "version": "1.0.1",
+    "date": "2020-07-17T16:41:47-04:00",
+    "status": "active"
+  },
+  "StructureDefinition/mcode-tnm-clinical-primary-tumor-category": {
+    "history": false,
+    "index": 18,
+    "source": "/Users/cpotteiger/HL7-mCODE/fhir-mCODE-ig/fsh/build/input/profiles/structuredefinition-mcode-tnm-clinical-primary-tumor-category.json",
+    "url": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-clinical-primary-tumor-category",
+    "name": "TNMClinicalPrimaryTumorCategory",
+    "title": "TNM Clinical Primary Tumor Category",
+    "version": "1.0.1",
+    "date": "2020-07-17T16:41:47-04:00",
+    "status": "active"
+  },
+  "StructureDefinition/mcode-tnm-clinical-regional-nodes-category": {
+    "history": false,
+    "index": 19,
+    "source": "/Users/cpotteiger/HL7-mCODE/fhir-mCODE-ig/fsh/build/input/profiles/structuredefinition-mcode-tnm-clinical-regional-nodes-category.json",
+    "url": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-clinical-regional-nodes-category",
+    "name": "TNMClinicalRegionalNodesCategory",
+    "title": "TNM Clinical Regional Nodes Category",
+    "version": "1.0.1",
+    "date": "2020-07-17T16:41:47-04:00",
+    "status": "active"
+  },
+  "StructureDefinition/mcode-tnm-clinical-stage-group": {
+    "history": false,
+    "index": 20,
+    "source": "/Users/cpotteiger/HL7-mCODE/fhir-mCODE-ig/fsh/build/input/profiles/structuredefinition-mcode-tnm-clinical-stage-group.json",
+    "url": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-clinical-stage-group",
+    "name": "TNMClinicalStageGroup",
+    "title": "TNM Clinical Stage Group",
+    "version": "1.0.1",
+    "date": "2020-07-17T16:41:47-04:00",
+    "status": "active"
+  },
+  "StructureDefinition/mcode-tnm-pathological-distant-metastases-category": {
+    "history": false,
+    "index": 21,
+    "source": "/Users/cpotteiger/HL7-mCODE/fhir-mCODE-ig/fsh/build/input/profiles/structuredefinition-mcode-tnm-pathological-distant-metastases-category.json",
+    "url": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-pathological-distant-metastases-category",
+    "name": "TNMPathologicalDistantMetastasesCategory",
+    "title": "TNM Pathological Distant Metastases Category",
+    "version": "1.0.1",
+    "date": "2020-07-17T16:41:47-04:00",
+    "status": "active"
+  },
+  "StructureDefinition/mcode-tnm-pathological-primary-tumor-category": {
+    "history": false,
+    "index": 22,
+    "source": "/Users/cpotteiger/HL7-mCODE/fhir-mCODE-ig/fsh/build/input/profiles/structuredefinition-mcode-tnm-pathological-primary-tumor-category.json",
+    "url": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-pathological-primary-tumor-category",
+    "name": "TNMPathologicalPrimaryTumorCategory",
+    "title": "TNM Pathological Primary Tumor Category",
+    "version": "1.0.1",
+    "date": "2020-07-17T16:41:47-04:00",
+    "status": "active"
+  },
+  "StructureDefinition/mcode-tnm-pathological-regional-nodes-category": {
+    "history": false,
+    "index": 23,
+    "source": "/Users/cpotteiger/HL7-mCODE/fhir-mCODE-ig/fsh/build/input/profiles/structuredefinition-mcode-tnm-pathological-regional-nodes-category.json",
+    "url": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-pathological-regional-nodes-category",
+    "name": "TNMPathologicalRegionalNodesCategory",
+    "title": "TNM Pathological Regional Nodes Category",
+    "version": "1.0.1",
+    "date": "2020-07-17T16:41:47-04:00",
+    "status": "active"
+  },
+  "StructureDefinition/mcode-tnm-pathological-stage-group": {
+    "history": false,
+    "index": 24,
+    "source": "/Users/cpotteiger/HL7-mCODE/fhir-mCODE-ig/fsh/build/input/profiles/structuredefinition-mcode-tnm-pathological-stage-group.json",
+    "url": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-pathological-stage-group",
+    "name": "TNMPathologicalStageGroup",
+    "title": "TNM Pathological Stage Group",
+    "version": "1.0.1",
+    "date": "2020-07-17T16:41:47-04:00",
+    "status": "active"
+  },
+  "StructureDefinition/mcode-tumor-marker": {
+    "history": false,
+    "index": 25,
+    "source": "/Users/cpotteiger/HL7-mCODE/fhir-mCODE-ig/fsh/build/input/profiles/structuredefinition-mcode-tumor-marker.json",
+    "url": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tumor-marker",
+    "name": "TumorMarker",
+    "title": "Tumor Marker",
+    "version": "1.0.1",
+    "date": "2020-07-17T16:41:47-04:00",
+    "status": "active"
+  },
+  "StructureDefinition/mcode-evidence-type": {
+    "history": false,
+    "index": 26,
+    "source": "/Users/cpotteiger/HL7-mCODE/fhir-mCODE-ig/fsh/build/input/extensions/structuredefinition-mcode-evidence-type.json",
+    "url": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-evidence-type",
+    "name": "EvidenceType",
+    "title": "Evidence Type",
+    "version": "1.0.1",
+    "date": "2020-07-17T16:41:47-04:00",
+    "status": "active"
+  },
+  "StructureDefinition/mcode-histology-morphology-behavior": {
+    "history": false,
+    "index": 27,
+    "source": "/Users/cpotteiger/HL7-mCODE/fhir-mCODE-ig/fsh/build/input/extensions/structuredefinition-mcode-histology-morphology-behavior.json",
+    "url": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-histology-morphology-behavior",
+    "name": "HistologyMorphologyBehavior",
+    "title": "Histology-Morphology-Behavior",
+    "version": "1.0.1",
+    "date": "2020-07-17T16:41:47-04:00",
+    "status": "active"
+  },
+  "StructureDefinition/mcode-laterality": {
+    "history": false,
+    "index": 28,
+    "source": "/Users/cpotteiger/HL7-mCODE/fhir-mCODE-ig/fsh/build/input/extensions/structuredefinition-mcode-laterality.json",
+    "url": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-laterality",
+    "name": "Laterality",
+    "title": "Laterality",
+    "version": "1.0.1",
+    "date": "2020-07-17T16:41:47-04:00",
+    "status": "active"
+  },
+  "StructureDefinition/mcode-related-primary-cancer-condition": {
+    "history": false,
+    "index": 29,
+    "source": "/Users/cpotteiger/HL7-mCODE/fhir-mCODE-ig/fsh/build/input/extensions/structuredefinition-mcode-related-primary-cancer-condition.json",
+    "url": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-related-primary-cancer-condition",
+    "name": "RelatedPrimaryCancerCondition",
+    "title": "Related Primary Cancer Condition",
+    "version": "1.0.1",
+    "date": "2020-07-17T16:41:47-04:00",
+    "status": "active"
+  },
+  "StructureDefinition/mcode-termination-reason": {
+    "history": false,
+    "index": 30,
+    "source": "/Users/cpotteiger/HL7-mCODE/fhir-mCODE-ig/fsh/build/input/extensions/structuredefinition-mcode-termination-reason.json",
+    "url": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-termination-reason",
+    "name": "TerminationReason",
+    "title": "Termination Reason",
+    "version": "1.0.1",
+    "date": "2020-07-17T16:41:47-04:00",
+    "status": "active"
+  },
+  "StructureDefinition/mcode-treatment-intent": {
+    "history": false,
+    "index": 31,
+    "source": "/Users/cpotteiger/HL7-mCODE/fhir-mCODE-ig/fsh/build/input/extensions/structuredefinition-mcode-treatment-intent.json",
+    "url": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-treatment-intent",
+    "name": "TreatmentIntent",
+    "title": "Treatment Intent",
+    "version": "1.0.1",
+    "date": "2020-07-17T16:41:47-04:00",
+    "status": "active"
+  },
+  "ValueSet/mcode-cancer-body-location-vs": {
+    "history": false,
+    "index": 32,
+    "source": "/Users/cpotteiger/HL7-mCODE/fhir-mCODE-ig/fsh/build/input/vocabulary/valueset-mcode-cancer-body-location-vs.json",
+    "url": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-body-location-vs",
+    "name": "CancerBodyLocationVS",
+    "title": "Cancer Body Location Value Set",
+    "version": "1.0.1",
+    "date": "2020-07-17T16:41:47-04:00",
+    "status": "active"
+  },
+  "ValueSet/mcode-cancer-disease-status-evidence-type-vs": {
+    "history": false,
+    "index": 33,
+    "source": "/Users/cpotteiger/HL7-mCODE/fhir-mCODE-ig/fsh/build/input/vocabulary/valueset-mcode-cancer-disease-status-evidence-type-vs.json",
+    "url": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-disease-status-evidence-type-vs",
+    "name": "CancerDiseaseStatusEvidenceTypeVS",
+    "title": "Cancer Disease Status Evidence Type Value Set",
+    "version": "1.0.1",
+    "date": "2020-07-17T16:41:47-04:00",
+    "status": "active"
+  },
+  "ValueSet/mcode-cancer-disorder-vs": {
+    "history": false,
+    "index": 34,
+    "source": "/Users/cpotteiger/HL7-mCODE/fhir-mCODE-ig/fsh/build/input/vocabulary/valueset-mcode-cancer-disorder-vs.json",
+    "url": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-disorder-vs",
+    "name": "CancerDisorderVS",
+    "title": "Cancer Disorder Value Set",
+    "version": "1.0.1",
+    "date": "2020-07-17T16:41:47-04:00",
+    "status": "active"
+  },
+  "ValueSet/mcode-cancer-related-surgical-procedure-vs": {
+    "history": false,
+    "index": 35,
+    "source": "/Users/cpotteiger/HL7-mCODE/fhir-mCODE-ig/fsh/build/input/vocabulary/valueset-mcode-cancer-related-surgical-procedure-vs.json",
+    "url": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-related-surgical-procedure-vs",
+    "name": "CancerRelatedSurgicalProcedureVS",
+    "title": "Cancer-Related Surgical Procedure Value Set",
+    "version": "1.0.1",
+    "date": "2020-07-17T16:41:47-04:00",
+    "status": "active"
+  },
+  "ValueSet/mcode-cancer-staging-system-vs": {
+    "history": false,
+    "index": 36,
+    "source": "/Users/cpotteiger/HL7-mCODE/fhir-mCODE-ig/fsh/build/input/vocabulary/valueset-mcode-cancer-staging-system-vs.json",
+    "url": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-staging-system-vs",
+    "name": "CancerStagingSystemVS",
+    "title": "Cancer Staging System Value Set",
+    "version": "1.0.1",
+    "date": "2020-07-17T16:41:47-04:00",
+    "status": "active"
+  },
+  "ValueSet/mcode-clinvar-vs": {
+    "history": false,
+    "index": 37,
+    "source": "/Users/cpotteiger/HL7-mCODE/fhir-mCODE-ig/fsh/build/input/vocabulary/valueset-mcode-clinvar-vs.json",
+    "url": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-clinvar-vs",
+    "name": "ClinVarVS",
+    "title": "ClinVar Value Set",
+    "version": "1.0.1",
+    "date": "2020-07-17T16:41:47-04:00",
+    "status": "active"
+  },
+  "ValueSet/mcode-comorbid-condition-vs": {
+    "history": false,
+    "index": 38,
+    "source": "/Users/cpotteiger/HL7-mCODE/fhir-mCODE-ig/fsh/build/input/vocabulary/valueset-mcode-comorbid-condition-vs.json",
+    "url": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-comorbid-condition-vs",
+    "name": "ComorbidConditionVS",
+    "title": "Comorbid Condition Value Set",
+    "version": "1.0.1",
+    "date": "2020-07-17T16:41:47-04:00",
+    "status": "active"
+  },
+  "ValueSet/mcode-condition-status-trend-vs": {
+    "history": false,
+    "index": 39,
+    "source": "/Users/cpotteiger/HL7-mCODE/fhir-mCODE-ig/fsh/build/input/vocabulary/valueset-mcode-condition-status-trend-vs.json",
+    "url": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-condition-status-trend-vs",
+    "name": "ConditionStatusTrendVS",
+    "title": "Condition Status Trend Value Set",
+    "version": "1.0.1",
+    "date": "2020-07-17T16:41:47-04:00",
+    "status": "active"
+  },
+  "ValueSet/mcode-genetic-specimen-type-vs": {
+    "history": false,
+    "index": 40,
+    "source": "/Users/cpotteiger/HL7-mCODE/fhir-mCODE-ig/fsh/build/input/vocabulary/valueset-mcode-genetic-specimen-type-vs.json",
+    "url": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-genetic-specimen-type-vs",
+    "name": "GeneticSpecimenTypeVS",
+    "title": "Genetic Specimen Type Value Set",
+    "version": "1.0.1",
+    "date": "2020-07-17T16:41:47-04:00",
+    "status": "active"
+  },
+  "ValueSet/mcode-hgnc-vs": {
+    "history": false,
+    "index": 41,
+    "source": "/Users/cpotteiger/HL7-mCODE/fhir-mCODE-ig/fsh/build/input/vocabulary/valueset-mcode-hgnc-vs.json",
+    "url": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-hgnc-vs",
+    "name": "HGNCVS",
+    "title": "HUGO Gene Nomenclature Committee Gene Names Value Set",
+    "version": "1.0.1",
+    "date": "2020-07-17T16:41:47-04:00",
+    "status": "active"
+  },
+  "ValueSet/mcode-hgvs-vs": {
+    "history": false,
+    "index": 42,
+    "source": "/Users/cpotteiger/HL7-mCODE/fhir-mCODE-ig/fsh/build/input/vocabulary/valueset-mcode-hgvs-vs.json",
+    "url": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-hgvs-vs",
+    "name": "HGVSVS",
+    "title": "Human Genome Variation Society Sequence Variant Nomenclature Value Set",
+    "version": "1.0.1",
+    "date": "2020-07-17T16:41:47-04:00",
+    "status": "active"
+  },
+  "ValueSet/mcode-histology-morphology-behavior-vs": {
+    "history": false,
+    "index": 43,
+    "source": "/Users/cpotteiger/HL7-mCODE/fhir-mCODE-ig/fsh/build/input/vocabulary/valueset-mcode-histology-morphology-behavior-vs.json",
+    "url": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-histology-morphology-behavior-vs",
+    "name": "HistologyMorphologyBehaviorVS",
+    "title": "Histology Morphology Behavior Value Set",
+    "version": "1.0.1",
+    "date": "2020-07-17T16:41:47-04:00",
+    "status": "active"
+  },
+  "ValueSet/mcode-laterality-vs": {
+    "history": false,
+    "index": 44,
+    "source": "/Users/cpotteiger/HL7-mCODE/fhir-mCODE-ig/fsh/build/input/vocabulary/valueset-mcode-laterality-vs.json",
+    "url": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-laterality-vs",
+    "name": "LateralityVS",
+    "title": "Laterality Value Set",
+    "version": "1.0.1",
+    "date": "2020-07-17T16:41:47-04:00",
+    "status": "active"
+  },
+  "ValueSet/mcode-primary-or-uncertain-behavior-cancer-disorder-vs": {
+    "history": false,
+    "index": 45,
+    "source": "/Users/cpotteiger/HL7-mCODE/fhir-mCODE-ig/fsh/build/input/vocabulary/valueset-mcode-primary-or-uncertain-behavior-cancer-disorder-vs.json",
+    "url": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-primary-or-uncertain-behavior-cancer-disorder-vs",
+    "name": "PrimaryOrUncertainBehaviorCancerDisorderVS",
+    "title": "Primary or Uncertain Behavior Cancer Disorder Value Set",
+    "version": "1.0.1",
+    "date": "2020-07-17T16:41:47-04:00",
+    "status": "active"
+  },
+  "ValueSet/mcode-radiation-procedure-vs": {
+    "history": false,
+    "index": 46,
+    "source": "/Users/cpotteiger/HL7-mCODE/fhir-mCODE-ig/fsh/build/input/vocabulary/valueset-mcode-radiation-procedure-vs.json",
+    "url": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-radiation-procedure-vs",
+    "name": "RadiationProcedureVS",
+    "title": "Radiation Procedure Value Set",
+    "version": "1.0.1",
+    "date": "2020-07-17T16:41:47-04:00",
+    "status": "active"
+  },
+  "ValueSet/mcode-radiation-target-body-site-vs": {
+    "history": false,
+    "index": 47,
+    "source": "/Users/cpotteiger/HL7-mCODE/fhir-mCODE-ig/fsh/build/input/vocabulary/valueset-mcode-radiation-target-body-site-vs.json",
+    "url": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-radiation-target-body-site-vs",
+    "name": "RadiationTargetBodySiteVS",
+    "title": "Radiation Target Body Site Value Set",
+    "version": "1.0.1",
+    "date": "2020-07-17T16:41:47-04:00",
+    "status": "active"
+  },
+  "ValueSet/mcode-secondary-cancer-disorder-vs": {
+    "history": false,
+    "index": 48,
+    "source": "/Users/cpotteiger/HL7-mCODE/fhir-mCODE-ig/fsh/build/input/vocabulary/valueset-mcode-secondary-cancer-disorder-vs.json",
+    "url": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-secondary-cancer-disorder-vs",
+    "name": "SecondaryCancerDisorderVS",
+    "title": "Secondary Cancer Disorder Value Set",
+    "version": "1.0.1",
+    "date": "2020-07-17T16:41:47-04:00",
+    "status": "active"
+  },
+  "ValueSet/mcode-tnm-distant-metastases-category-vs": {
+    "history": false,
+    "index": 49,
+    "source": "/Users/cpotteiger/HL7-mCODE/fhir-mCODE-ig/fsh/build/input/vocabulary/valueset-mcode-tnm-distant-metastases-category-vs.json",
+    "url": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-tnm-distant-metastases-category-vs",
+    "name": "TNMDistantMetastasesCategoryVS",
+    "title": "TNM Distant Metastases Category Value Set",
+    "version": "1.0.1",
+    "date": "2020-07-17T16:41:47-04:00",
+    "status": "active"
+  },
+  "ValueSet/mcode-tnm-primary-tumor-category-vs": {
+    "history": false,
+    "index": 50,
+    "source": "/Users/cpotteiger/HL7-mCODE/fhir-mCODE-ig/fsh/build/input/vocabulary/valueset-mcode-tnm-primary-tumor-category-vs.json",
+    "url": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-tnm-primary-tumor-category-vs",
+    "name": "TNMPrimaryTumorCategoryVS",
+    "title": "TNM Primary Tumor Category Value Set",
+    "version": "1.0.1",
+    "date": "2020-07-17T16:41:47-04:00",
+    "status": "active"
+  },
+  "ValueSet/mcode-tnm-regional-nodes-category-vs": {
+    "history": false,
+    "index": 51,
+    "source": "/Users/cpotteiger/HL7-mCODE/fhir-mCODE-ig/fsh/build/input/vocabulary/valueset-mcode-tnm-regional-nodes-category-vs.json",
+    "url": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-tnm-regional-nodes-category-vs",
+    "name": "TNMRegionalNodesCategoryVS",
+    "title": "TNM Regional Nodes Category Value Set",
+    "version": "1.0.1",
+    "date": "2020-07-17T16:41:47-04:00",
+    "status": "active"
+  },
+  "ValueSet/mcode-tnm-stage-group-vs": {
+    "history": false,
+    "index": 52,
+    "source": "/Users/cpotteiger/HL7-mCODE/fhir-mCODE-ig/fsh/build/input/vocabulary/valueset-mcode-tnm-stage-group-vs.json",
+    "url": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-tnm-stage-group-vs",
+    "name": "TNMStageGroupVS",
+    "title": "TNM Stage Group Value Set",
+    "version": "1.0.1",
+    "date": "2020-07-17T16:41:47-04:00",
+    "status": "active"
+  },
+  "ValueSet/mcode-treatment-intent-vs": {
+    "history": false,
+    "index": 53,
+    "source": "/Users/cpotteiger/HL7-mCODE/fhir-mCODE-ig/fsh/build/input/vocabulary/valueset-mcode-treatment-intent-vs.json",
+    "url": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-treatment-intent-vs",
+    "name": "TreatmentIntentVS",
+    "title": "Treatment Intent Value Set",
+    "version": "1.0.1",
+    "date": "2020-07-17T16:41:47-04:00",
+    "status": "active"
+  },
+  "ValueSet/mcode-treatment-termination-reason-vs": {
+    "history": false,
+    "index": 54,
+    "source": "/Users/cpotteiger/HL7-mCODE/fhir-mCODE-ig/fsh/build/input/vocabulary/valueset-mcode-treatment-termination-reason-vs.json",
+    "url": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-treatment-termination-reason-vs",
+    "name": "TreatmentTerminationReasonVS",
+    "title": "Treatment Termination Reason Value Set",
+    "version": "1.0.1",
+    "date": "2020-07-17T16:41:47-04:00",
+    "status": "active"
+  },
+  "ValueSet/mcode-tumor-marker-test-vs": {
+    "history": false,
+    "index": 55,
+    "source": "/Users/cpotteiger/HL7-mCODE/fhir-mCODE-ig/fsh/build/input/vocabulary/valueset-mcode-tumor-marker-test-vs.json",
+    "url": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-tumor-marker-test-vs",
+    "name": "TumorMarkerTestVS",
+    "version": "1.0.1",
+    "date": "2020-07-17T16:41:47-04:00",
+    "status": "active"
+  },
+  "ValueSet/mcode-units-of-length-vs": {
+    "history": false,
+    "index": 56,
+    "source": "/Users/cpotteiger/HL7-mCODE/fhir-mCODE-ig/fsh/build/input/vocabulary/valueset-mcode-units-of-length-vs.json",
+    "url": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-units-of-length-vs",
+    "name": "UnitsOfLengthVS",
+    "title": "Units of Length Value Set",
+    "version": "1.0.1",
+    "date": "2020-07-17T16:41:47-04:00",
+    "status": "active"
+  },
+  "Observation/mCODECancerDiseaseStatusExample01": {
+    "history": false,
+    "index": 57,
+    "source": "/Users/cpotteiger/HL7-mCODE/fhir-mCODE-ig/fsh/build/input/examples/observation-mCODECancerDiseaseStatusExample01.json"
+  },
+  "Observation/mCODECancerGeneticVariantExample01": {
+    "history": false,
+    "index": 58,
+    "source": "/Users/cpotteiger/HL7-mCODE/fhir-mCODE-ig/fsh/build/input/examples/observation-mCODECancerGeneticVariantExample01.json"
+  },
+  "Observation/mCODECancerGeneticVariantExample02": {
+    "history": false,
+    "index": 59,
+    "source": "/Users/cpotteiger/HL7-mCODE/fhir-mCODE-ig/fsh/build/input/examples/observation-mCODECancerGeneticVariantExample02.json"
+  },
+  "DiagnosticReport/mCODECancerGenomicsReportExample01": {
+    "history": false,
+    "index": 60,
+    "source": "/Users/cpotteiger/HL7-mCODE/fhir-mCODE-ig/fsh/build/input/examples/diagnosticreport-mCODECancerGenomicsReportExample01.json"
+  },
+  "MedicationStatement/mCODECancerRelatedMedicationStatementExample01": {
+    "history": false,
+    "index": 61,
+    "source": "/Users/cpotteiger/HL7-mCODE/fhir-mCODE-ig/fsh/build/input/examples/medicationstatement-mCODECancerRelatedMedicationStatementExample01.json"
+  },
+  "MedicationStatement/mCODECancerRelatedMedicationStatementExample02": {
+    "history": false,
+    "index": 62,
+    "source": "/Users/cpotteiger/HL7-mCODE/fhir-mCODE-ig/fsh/build/input/examples/medicationstatement-mCODECancerRelatedMedicationStatementExample02.json"
+  },
+  "Procedure/mCODECancerRelatedRadiationProcedureExample01": {
+    "history": false,
+    "index": 63,
+    "source": "/Users/cpotteiger/HL7-mCODE/fhir-mCODE-ig/fsh/build/input/examples/procedure-mCODECancerRelatedRadiationProcedureExample01.json"
+  },
+  "Procedure/mCODECancerRelatedSurgicalProcedureExample01": {
+    "history": false,
+    "index": 64,
+    "source": "/Users/cpotteiger/HL7-mCODE/fhir-mCODE-ig/fsh/build/input/examples/procedure-mCODECancerRelatedSurgicalProcedureExample01.json"
+  },
+  "Condition/mCODEComorbidConditionExample01": {
+    "history": false,
+    "index": 65,
+    "source": "/Users/cpotteiger/HL7-mCODE/fhir-mCODE-ig/fsh/build/input/examples/condition-mCODEComorbidConditionExample01.json"
+  },
+  "Observation/mCODEECOGPerformanceStatusExample01": {
+    "history": false,
+    "index": 66,
+    "source": "/Users/cpotteiger/HL7-mCODE/fhir-mCODE-ig/fsh/build/input/examples/observation-mCODEECOGPerformanceStatusExample01.json"
+  },
+  "Specimen/mCODEGeneticSpecimenExample01": {
+    "history": false,
+    "index": 67,
+    "source": "/Users/cpotteiger/HL7-mCODE/fhir-mCODE-ig/fsh/build/input/examples/specimen-mCODEGeneticSpecimenExample01.json"
+  },
+  "Observation/mCODEGenomicRegionStudiedExample01": {
+    "history": false,
+    "index": 68,
+    "source": "/Users/cpotteiger/HL7-mCODE/fhir-mCODE-ig/fsh/build/input/examples/observation-mCODEGenomicRegionStudiedExample01.json"
+  },
+  "Observation/mCODEKarnofskyPerformanceStatusExample01": {
+    "history": false,
+    "index": 69,
+    "source": "/Users/cpotteiger/HL7-mCODE/fhir-mCODE-ig/fsh/build/input/examples/observation-mCODEKarnofskyPerformanceStatusExample01.json"
+  },
+  "Organization/mCODEOrganizationExample01": {
+    "history": false,
+    "index": 70,
+    "source": "/Users/cpotteiger/HL7-mCODE/fhir-mCODE-ig/fsh/build/input/examples/organization-mCODEOrganizationExample01.json"
+  },
+  "Patient/mCODEPatientExample01": {
+    "history": false,
+    "index": 71,
+    "source": "/Users/cpotteiger/HL7-mCODE/fhir-mCODE-ig/fsh/build/input/examples/patient-mCODEPatientExample01.json"
+  },
+  "Patient/mCODEPatientExample02": {
+    "history": false,
+    "index": 72,
+    "source": "/Users/cpotteiger/HL7-mCODE/fhir-mCODE-ig/fsh/build/input/examples/patient-mCODEPatientExample02.json"
+  },
+  "Practitioner/mCODEPractitionerExample01": {
+    "history": false,
+    "index": 73,
+    "source": "/Users/cpotteiger/HL7-mCODE/fhir-mCODE-ig/fsh/build/input/examples/practitioner-mCODEPractitionerExample01.json"
+  },
+  "Condition/mCODEPrimaryCancerConditionExample01": {
+    "history": false,
+    "index": 74,
+    "source": "/Users/cpotteiger/HL7-mCODE/fhir-mCODE-ig/fsh/build/input/examples/condition-mCODEPrimaryCancerConditionExample01.json"
+  },
+  "Condition/mCODESecondaryCancerConditionExample01": {
+    "history": false,
+    "index": 75,
+    "source": "/Users/cpotteiger/HL7-mCODE/fhir-mCODE-ig/fsh/build/input/examples/condition-mCODESecondaryCancerConditionExample01.json"
+  },
+  "Observation/mCODETNMClinicalDistantMetastasesCategoryExample01": {
+    "history": false,
+    "index": 76,
+    "source": "/Users/cpotteiger/HL7-mCODE/fhir-mCODE-ig/fsh/build/input/examples/observation-mCODETNMClinicalDistantMetastasesCategoryExample01.json"
+  },
+  "Observation/mCODETNMClinicalPrimaryTumorCategoryExample01": {
+    "history": false,
+    "index": 77,
+    "source": "/Users/cpotteiger/HL7-mCODE/fhir-mCODE-ig/fsh/build/input/examples/observation-mCODETNMClinicalPrimaryTumorCategoryExample01.json"
+  },
+  "Observation/mCODETNMClinicalRegionalNodesCategoryExample01": {
+    "history": false,
+    "index": 78,
+    "source": "/Users/cpotteiger/HL7-mCODE/fhir-mCODE-ig/fsh/build/input/examples/observation-mCODETNMClinicalRegionalNodesCategoryExample01.json"
+  },
+  "Observation/mCODETNMClinicalStageGroupExample01": {
+    "history": false,
+    "index": 79,
+    "source": "/Users/cpotteiger/HL7-mCODE/fhir-mCODE-ig/fsh/build/input/examples/observation-mCODETNMClinicalStageGroupExample01.json"
+  },
+  "Observation/mCODETNMPathologicalDistantMetastasesCategoryExample01": {
+    "history": false,
+    "index": 80,
+    "source": "/Users/cpotteiger/HL7-mCODE/fhir-mCODE-ig/fsh/build/input/examples/observation-mCODETNMPathologicalDistantMetastasesCategoryExample01.json"
+  },
+  "Observation/mCODETNMPathologicalPrimaryTumorCategoryExample01": {
+    "history": false,
+    "index": 81,
+    "source": "/Users/cpotteiger/HL7-mCODE/fhir-mCODE-ig/fsh/build/input/examples/observation-mCODETNMPathologicalPrimaryTumorCategoryExample01.json"
+  },
+  "Observation/mCODETNMPathologicalRegionalNodesCategoryExample01": {
+    "history": false,
+    "index": 82,
+    "source": "/Users/cpotteiger/HL7-mCODE/fhir-mCODE-ig/fsh/build/input/examples/observation-mCODETNMPathologicalRegionalNodesCategoryExample01.json"
+  },
+  "Observation/mCODETNMPathologicalStageGroupExample01": {
+    "history": false,
+    "index": 83,
+    "source": "/Users/cpotteiger/HL7-mCODE/fhir-mCODE-ig/fsh/build/input/examples/observation-mCODETNMPathologicalStageGroupExample01.json"
+  },
+  "Observation/mCODETumorMarkerExample01": {
+    "history": false,
+    "index": 84,
+    "source": "/Users/cpotteiger/HL7-mCODE/fhir-mCODE-ig/fsh/build/input/examples/observation-mCODETumorMarkerExample01.json"
+  }
+}

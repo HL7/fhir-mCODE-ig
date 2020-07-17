@@ -1,0 +1,289 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/us/mcode/ValueSet/mcode-secondary-cancer-disorder-vs> a fhir:ValueSet;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "mcode-secondary-cancer-disorder-vs"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set includes codes based on the following rules:</p><ul><li>Include these codes as defined in <a href=\"http://www.snomed.org/\"><code>http://snomed.info/sct</code></a><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=128462008\">128462008</a></td><td>Secondary malignant neoplastic disease (disorder)</td><td/></tr></table></li><li>Include codes from <a href=\"http://www.snomed.org/\"><code>http://snomed.info/sct</code></a> where concept  is-a  128462008 (Metastatic neoplasm (disease))</li><li>Include these codes as defined in <code>http://hl7.org/fhir/sid/icd-10-cm</code><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td>C7B00</td><td>Secondary carcinoid tumors, unspecified site</td><td/></tr><tr><td>C7B01</td><td>Secondary carcinoid tumors of distant lymph nodes</td><td/></tr><tr><td>C7B02</td><td>Secondary carcinoid tumors of liver</td><td/></tr><tr><td>C7B03</td><td>Secondary carcinoid tumors of bone</td><td/></tr><tr><td>C7B04</td><td>Secondary carcinoid tumors of peritoneum</td><td/></tr><tr><td>C7B09</td><td>Secondary carcinoid tumors of other sites</td><td/></tr><tr><td>C7B1</td><td>Secondary Merkel cell carcinoma</td><td/></tr><tr><td>C7B8</td><td>Other secondary neuroendocrine tumors</td><td/></tr><tr><td>C770</td><td>Secondary and unspecified malignant neoplasm of lymph nodes of head, face and neck</td><td/></tr><tr><td>C771</td><td>Secondary and unspecified malignant neoplasm of intrathoracic lymph nodes</td><td/></tr><tr><td>C772</td><td>Secondary and unspecified malignant neoplasm of intra-abdominal lymph nodes</td><td/></tr><tr><td>C773</td><td>Secondary and unspecified malignant neoplasm of axilla and upper limb lymph nodes</td><td/></tr><tr><td>C774</td><td>Secondary and unspecified malignant neoplasm of inguinal and lower limb lymph nodes</td><td/></tr><tr><td>C775</td><td>Secondary and unspecified malignant neoplasm of intrapelvic lymph nodes</td><td/></tr><tr><td>C778</td><td>Secondary and unspecified malignant neoplasm of lymph nodes of multiple regions</td><td/></tr><tr><td>C779</td><td>Secondary and unspecified malignant neoplasm of lymph node, unspecified</td><td/></tr><tr><td>C7800</td><td>Secondary malignant neoplasm of unspecified lung</td><td/></tr><tr><td>C7801</td><td>Secondary malignant neoplasm of right lung</td><td/></tr><tr><td>C7802</td><td>Secondary malignant neoplasm of left lung</td><td/></tr><tr><td>C781</td><td>Secondary malignant neoplasm of mediastinum</td><td/></tr><tr><td>C782</td><td>Secondary malignant neoplasm of pleura</td><td/></tr><tr><td>C7830</td><td>Secondary malignant neoplasm of unspecified respiratory organ</td><td/></tr><tr><td>C7839</td><td>Secondary malignant neoplasm of other respiratory organs</td><td/></tr><tr><td>C784</td><td>Secondary malignant neoplasm of small intestine</td><td/></tr><tr><td>C785</td><td>Secondary malignant neoplasm of large intestine and rectum</td><td/></tr><tr><td>C786</td><td>Secondary malignant neoplasm of retroperitoneum and peritoneum</td><td/></tr><tr><td>C787</td><td>Secondary malignant neoplasm of liver and intrahepatic bile duct</td><td/></tr><tr><td>C7880</td><td>Secondary malignant neoplasm of unspecified digestive organ</td><td/></tr><tr><td>C7889</td><td>Secondary malignant neoplasm of other digestive organs</td><td/></tr><tr><td>C7900</td><td>Secondary malignant neoplasm of unspecified kidney and renal pelvis</td><td/></tr><tr><td>C7901</td><td>Secondary malignant neoplasm of right kidney and renal pelvis</td><td/></tr><tr><td>C7902</td><td>Secondary malignant neoplasm of left kidney and renal pelvis</td><td/></tr><tr><td>C7910</td><td>Secondary malignant neoplasm of unspecified urinary organs</td><td/></tr><tr><td>C7911</td><td>Secondary malignant neoplasm of bladder</td><td/></tr><tr><td>C7919</td><td>Secondary malignant neoplasm of other urinary organs</td><td/></tr><tr><td>C792</td><td>Secondary malignant neoplasm of skin</td><td/></tr><tr><td>C7931</td><td>Secondary malignant neoplasm of brain</td><td/></tr><tr><td>C7932</td><td>Secondary malignant neoplasm of cerebral meninges</td><td/></tr><tr><td>C7940</td><td>Secondary malignant neoplasm of unspecified part of nervous system</td><td/></tr><tr><td>C7949</td><td>Secondary malignant neoplasm of other parts of nervous system</td><td/></tr><tr><td>C7951</td><td>Secondary malignant neoplasm of bone</td><td/></tr><tr><td>C7952</td><td>Secondary malignant neoplasm of bone marrow</td><td/></tr><tr><td>C7960</td><td>Secondary malignant neoplasm of unspecified ovary</td><td/></tr><tr><td>C7961</td><td>Secondary malignant neoplasm of right ovary</td><td/></tr><tr><td>C7962</td><td>Secondary malignant neoplasm of left ovary</td><td/></tr><tr><td>C7970</td><td>Secondary malignant neoplasm of unspecified adrenal gland</td><td/></tr><tr><td>C7971</td><td>Secondary malignant neoplasm of right adrenal gland</td><td/></tr><tr><td>C7972</td><td>Secondary malignant neoplasm of left adrenal gland</td><td/></tr><tr><td>C7981</td><td>Secondary malignant neoplasm of breast</td><td/></tr><tr><td>C7982</td><td>Secondary malignant neoplasm of genital organs</td><td/></tr><tr><td>C7989</td><td>Secondary malignant neoplasm of other specified sites</td><td/></tr><tr><td>C799</td><td>Secondary malignant neoplasm of unspecified site</td><td/></tr><tr><td>C800</td><td>Disseminated malignant neoplasm, unspecified</td><td/></tr></table></li></ul></div>"
+  ];
+  fhir:ValueSet.url [ fhir:value "http://hl7.org/fhir/us/mcode/ValueSet/mcode-secondary-cancer-disorder-vs"];
+  fhir:ValueSet.version [ fhir:value "1.0.1"];
+  fhir:ValueSet.name [ fhir:value "SecondaryCancerDisorderVS"];
+  fhir:ValueSet.title [ fhir:value "Secondary Cancer Disorder Value Set"];
+  fhir:ValueSet.status [ fhir:value "active"];
+  fhir:ValueSet.date [ fhir:value "2020-07-17T16:41:47-04:00"^^xsd:dateTime];
+  fhir:ValueSet.publisher [ fhir:value "HL7 International Clinical Interoperability Council"];
+  fhir:ValueSet.contact [
+     fhir:index 0;
+     fhir:ContactDetail.name [ fhir:value "HL7 International Clinical Interoperability Council" ];
+     fhir:ContactDetail.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value "url" ];
+       fhir:ContactPoint.value [ fhir:value "http://www.hl7.org/Special/committees/cic" ]
+     ], [
+       fhir:index 1;
+       fhir:ContactPoint.system [ fhir:value "email" ];
+       fhir:ContactPoint.value [ fhir:value "ciclist@lists.HL7.org" ]
+     ]
+  ];
+  fhir:ValueSet.description [ fhir:value "Types of secondary malignant neoplastic disease, coded in SNOMED CT or ICD-10-CM. \n\nConformance note: To be compliant with [US Core Profiles](http://hl7.org/fhir/us/core/index.html), SNOMED CT must be used unless there is no suitable code, in which case ICD-10-CM can be used.\n\n* SNOMED CT coding: Use a code from the disorder hierarchy under secondary malignant neoplastic disease (SNOMED CT 128462008).\n* ICD-10-CM coding: Use one of the codes given in this value set representing secondary malignant neoplasms and neoplasms of uncertain or unspecified behavior. If body site is not precoordinated (implied by the code), it should be specified separately using the body location.\n\nNote that ICD-O-3 specifies morphology and topography, not disorder; in this case that the disorder code must be SNOMED CT 128462008 (Secondary malignant neoplastic disease). The ICD-O-3 morphology and topography codes should be entered in the HistologyMorphologyBehavior and bodySite fields, respectively."];
+  fhir:ValueSet.jurisdiction [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ];
+       fhir:Coding.code [ fhir:value "US" ];
+       fhir:Coding.display [ fhir:value "United States of America" ]
+     ]
+  ];
+  fhir:ValueSet.compose [
+     fhir:ValueSet.compose.include [
+       fhir:index 0;
+       fhir:ValueSet.compose.include.system [ fhir:value "http://snomed.info/sct" ];
+       fhir:ValueSet.compose.include.concept [
+         fhir:index 0;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "128462008" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Secondary malignant neoplastic disease (disorder)" ]
+       ]
+     ], [
+       fhir:index 1;
+       fhir:ValueSet.compose.include.system [ fhir:value "http://snomed.info/sct" ];
+       fhir:ValueSet.compose.include.filter [
+         fhir:index 0;
+         fhir:ValueSet.compose.include.filter.property [ fhir:value "concept" ];
+         fhir:ValueSet.compose.include.filter.op [ fhir:value "is-a" ];
+         fhir:ValueSet.compose.include.filter.value [ fhir:value "128462008" ]
+       ]
+     ], [
+       fhir:index 2;
+       fhir:ValueSet.compose.include.system [ fhir:value "http://hl7.org/fhir/sid/icd-10-cm" ];
+       fhir:ValueSet.compose.include.concept [
+         fhir:index 0;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "C7B00" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Secondary carcinoid tumors, unspecified site" ]
+       ], [
+         fhir:index 1;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "C7B01" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Secondary carcinoid tumors of distant lymph nodes" ]
+       ], [
+         fhir:index 2;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "C7B02" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Secondary carcinoid tumors of liver" ]
+       ], [
+         fhir:index 3;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "C7B03" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Secondary carcinoid tumors of bone" ]
+       ], [
+         fhir:index 4;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "C7B04" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Secondary carcinoid tumors of peritoneum" ]
+       ], [
+         fhir:index 5;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "C7B09" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Secondary carcinoid tumors of other sites" ]
+       ], [
+         fhir:index 6;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "C7B1" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Secondary Merkel cell carcinoma" ]
+       ], [
+         fhir:index 7;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "C7B8" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Other secondary neuroendocrine tumors" ]
+       ], [
+         fhir:index 8;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "C770" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Secondary and unspecified malignant neoplasm of lymph nodes of head, face and neck" ]
+       ], [
+         fhir:index 9;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "C771" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Secondary and unspecified malignant neoplasm of intrathoracic lymph nodes" ]
+       ], [
+         fhir:index 10;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "C772" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Secondary and unspecified malignant neoplasm of intra-abdominal lymph nodes" ]
+       ], [
+         fhir:index 11;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "C773" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Secondary and unspecified malignant neoplasm of axilla and upper limb lymph nodes" ]
+       ], [
+         fhir:index 12;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "C774" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Secondary and unspecified malignant neoplasm of inguinal and lower limb lymph nodes" ]
+       ], [
+         fhir:index 13;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "C775" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Secondary and unspecified malignant neoplasm of intrapelvic lymph nodes" ]
+       ], [
+         fhir:index 14;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "C778" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Secondary and unspecified malignant neoplasm of lymph nodes of multiple regions" ]
+       ], [
+         fhir:index 15;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "C779" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Secondary and unspecified malignant neoplasm of lymph node, unspecified" ]
+       ], [
+         fhir:index 16;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "C7800" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Secondary malignant neoplasm of unspecified lung" ]
+       ], [
+         fhir:index 17;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "C7801" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Secondary malignant neoplasm of right lung" ]
+       ], [
+         fhir:index 18;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "C7802" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Secondary malignant neoplasm of left lung" ]
+       ], [
+         fhir:index 19;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "C781" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Secondary malignant neoplasm of mediastinum" ]
+       ], [
+         fhir:index 20;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "C782" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Secondary malignant neoplasm of pleura" ]
+       ], [
+         fhir:index 21;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "C7830" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Secondary malignant neoplasm of unspecified respiratory organ" ]
+       ], [
+         fhir:index 22;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "C7839" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Secondary malignant neoplasm of other respiratory organs" ]
+       ], [
+         fhir:index 23;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "C784" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Secondary malignant neoplasm of small intestine" ]
+       ], [
+         fhir:index 24;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "C785" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Secondary malignant neoplasm of large intestine and rectum" ]
+       ], [
+         fhir:index 25;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "C786" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Secondary malignant neoplasm of retroperitoneum and peritoneum" ]
+       ], [
+         fhir:index 26;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "C787" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Secondary malignant neoplasm of liver and intrahepatic bile duct" ]
+       ], [
+         fhir:index 27;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "C7880" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Secondary malignant neoplasm of unspecified digestive organ" ]
+       ], [
+         fhir:index 28;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "C7889" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Secondary malignant neoplasm of other digestive organs" ]
+       ], [
+         fhir:index 29;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "C7900" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Secondary malignant neoplasm of unspecified kidney and renal pelvis" ]
+       ], [
+         fhir:index 30;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "C7901" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Secondary malignant neoplasm of right kidney and renal pelvis" ]
+       ], [
+         fhir:index 31;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "C7902" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Secondary malignant neoplasm of left kidney and renal pelvis" ]
+       ], [
+         fhir:index 32;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "C7910" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Secondary malignant neoplasm of unspecified urinary organs" ]
+       ], [
+         fhir:index 33;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "C7911" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Secondary malignant neoplasm of bladder" ]
+       ], [
+         fhir:index 34;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "C7919" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Secondary malignant neoplasm of other urinary organs" ]
+       ], [
+         fhir:index 35;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "C792" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Secondary malignant neoplasm of skin" ]
+       ], [
+         fhir:index 36;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "C7931" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Secondary malignant neoplasm of brain" ]
+       ], [
+         fhir:index 37;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "C7932" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Secondary malignant neoplasm of cerebral meninges" ]
+       ], [
+         fhir:index 38;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "C7940" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Secondary malignant neoplasm of unspecified part of nervous system" ]
+       ], [
+         fhir:index 39;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "C7949" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Secondary malignant neoplasm of other parts of nervous system" ]
+       ], [
+         fhir:index 40;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "C7951" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Secondary malignant neoplasm of bone" ]
+       ], [
+         fhir:index 41;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "C7952" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Secondary malignant neoplasm of bone marrow" ]
+       ], [
+         fhir:index 42;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "C7960" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Secondary malignant neoplasm of unspecified ovary" ]
+       ], [
+         fhir:index 43;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "C7961" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Secondary malignant neoplasm of right ovary" ]
+       ], [
+         fhir:index 44;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "C7962" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Secondary malignant neoplasm of left ovary" ]
+       ], [
+         fhir:index 45;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "C7970" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Secondary malignant neoplasm of unspecified adrenal gland" ]
+       ], [
+         fhir:index 46;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "C7971" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Secondary malignant neoplasm of right adrenal gland" ]
+       ], [
+         fhir:index 47;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "C7972" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Secondary malignant neoplasm of left adrenal gland" ]
+       ], [
+         fhir:index 48;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "C7981" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Secondary malignant neoplasm of breast" ]
+       ], [
+         fhir:index 49;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "C7982" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Secondary malignant neoplasm of genital organs" ]
+       ], [
+         fhir:index 50;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "C7989" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Secondary malignant neoplasm of other specified sites" ]
+       ], [
+         fhir:index 51;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "C799" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Secondary malignant neoplasm of unspecified site" ]
+       ], [
+         fhir:index 52;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "C800" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Disseminated malignant neoplasm, unspecified" ]
+       ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://hl7.org/fhir/us/mcode/ValueSet/mcode-secondary-cancer-disorder-vs.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl;
+  owl:versionIRI <http://build.fhir.org/us/mcode/ValueSet/mcode-secondary-cancer-disorder-vs.ttl> .
+
+# -------------------------------------------------------------------------------------
+

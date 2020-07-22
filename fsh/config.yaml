@@ -1,0 +1,72 @@
+# ╭────────────────────────────────────────────────────────────────────────────────────────────────╮
+# │  ACTION REQUIRED: REVIEW AND EDIT THIS FILE TO ENSURE IT ACCURATELY REFLECTS YOUR PROJECT!     │
+# │                                                                                                │
+# │  This file was generated from your existing project files and will be used for SUSHI           │
+# │  configuration from now on. You may delete your package.json as it is no longer needed.        │
+# ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+# ╭───────────────────────────ImplementationGuide-hl7.fhir.us.mcode.json───────────────────────────╮
+# │  The properties below are used to create the ImplementationGuide resource. For a list of       │
+# │  supported properties, see:                                                                    │
+# │  http://build.fhir.org/ig/HL7/fhir-shorthand/branches/beta/sushi.html#ig-development           │
+# ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
+id: hl7.fhir.us.mcode
+canonical: http://hl7.org/fhir/us/mcode
+version: 1.0.1
+name: HL7FHIRImplementationGuideminimalCommonOncologyDataElementsmCODERelease1USRealmSTU1
+title: "HL7 FHIR Implementation Guide: minimal Common Oncology Data Elements (mCODE)
+  Release 1 - US Realm | STU1"
+status: active
+publisher:
+  name: HL7 International Clinical Interoperability Council
+  url: http://www.hl7.org/Special/committees/cic
+  email: ciclist@lists.HL7.org
+description: mCODE™ (short for Minimal Common Oncology Data Elements) is an initiative
+  intended to assemble a core set of structured data elements for oncology
+  electronic health records.
+license: CC0-1.0
+fhirVersion: 4.0.1
+dependencies:
+  hl7.fhir.us.core: 3.1.0
+parameters:
+  show-inherited-invariants: false
+copyrightYear: 2019+
+releaseLabel: STU1
+
+# ╭─────────────────────────────────────────────ig.ini─────────────────────────────────────────────╮
+# │  To control the ig.ini using this config, uncomment and set the "template" property.           │
+# ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
+# template: hl7.fhir.template#0.1.0
+
+# ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
+# │  To control the menu.xml using this config, uncomment and set the "menu" property.             │
+# ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
+# menu:
+#   Home: index.html
+#   Profiles: artifacts.html#2
+#   Extensions: artifacts.html#3
+#   Value Sets: artifacts.html#4
+#   Downloads: downloads.html
+#   Examples: examples.html
+#   History: http://hl7.org/fhir/us/mcode/history.html
+
+# ╭───────────────────────────────────────package-list.json────────────────────────────────────────╮
+# │  To control the package-list.json using this config, uncomment and set the "history" property. │
+# ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
+# history:
+#   current: http://build.fhir.org/ig/HL7/fhir-mCODE-ig/
+#   1.0.1:
+#     fhirversion: 4.0.1
+#     date: 2020-03-06
+#     desc: STU 1 Release
+#     path: http://hl7.org/fhir/us/mcode/STU1
+#     status: trial-use
+#     sequence: STU 1
+#     current: true
+#   0.9.1:
+#     fhirversion: 4.0.0
+#     date: 2019-06-10
+#     desc: Initial STU ballot (Sep 2019 Ballot)
+#     path: http://hl7.org/fhir/us/mcode/2019Sep/
+#     status: ballot
+#     sequence: STU 1

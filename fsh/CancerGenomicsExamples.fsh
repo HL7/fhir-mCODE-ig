@@ -58,7 +58,7 @@ Description: "mCODE Example for Genomic Region Studied"
 * subject = Reference(mCODEPatientExample01)
 * effectiveDateTime = "2019-04-01"
 * issued = "2019-04-01T11:45:33+11:00"
-* component[GeneStudied].valueCodeableConcept = HGNC#8023 "STK11" 
+* component[GeneStudied].valueCodeableConcept = HGNC#HGNC:8023 "STK11" 
 
 Instance: mCODETumorMarkerExample01 
 InstanceOf: TumorMarker

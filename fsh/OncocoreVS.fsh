@@ -48,7 +48,7 @@ Id: mcode-condition-status-trend-vs
 Title: "Condition Status Trend Value Set"
 Description:  "How patient's given disease, condition, or ability is trending."
 * SCT#260415000 "Not detected (qualifier)"
-* SCT#268910001 "Patient condition improved (finding)"
+* SCT#268910001 "Patient's condition improved (finding)"
 * SCT#359746009 "Patient's condition stable (finding)"
 * SCT#271299001 "Patient's condition worsened (finding)"
 * SCT#709137006 "Patient condition undetermined (finding)"

@@ -12,7 +12,7 @@ After you check out mCODE from Github, install SUSHI (the FSH compiler), [as ins
 
 To compile mCODE, open a command window and navigate to the directory where mCODE has been checked out. Issue the following command:
 
-`$ sushi .
+`$ sushi .`
 
 ## Running the IG Publisher
 

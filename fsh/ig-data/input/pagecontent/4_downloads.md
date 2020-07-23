@@ -7,5 +7,6 @@
 * [XML Definitions (zip)](definitions.xml.zip)
 * [XML Examples (zip)](examples.ttl.zip)
 * [Turtle Definitions](definitions.ttl.zip)
+* <a href="mCODEDataDictionary.xlsx">Data Dictionary (Excel download)</a>
 
 </div>

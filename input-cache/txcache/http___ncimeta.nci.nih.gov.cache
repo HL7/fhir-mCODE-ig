@@ -1,0 +1,11 @@
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://ncimeta.nci.nih.gov",
+  "code" : "C146985"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code system \"http://ncimeta.nci.nih.gov\" is not known (encountered paired with code = \"C146985\"); The code provided (http://ncimeta.nci.nih.gov#C146985) is not  valid in the value set All codes known to the system"
+}
+-------------------------------------------------------------------------------------

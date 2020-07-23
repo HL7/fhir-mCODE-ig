@@ -1,38 +1,75 @@
 -------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://unitsofmeasure.org",
-  "code" : "mm"
-}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
-v: {
-  "display" : "mm",
-  "severity" : null,
-  "error" : ""
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://unitsofmeasure.org",
-  "code" : "cm"
-}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
-v: {
-  "display" : "cm",
-  "severity" : null,
-  "error" : ""
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://unitsofmeasure.org",
-  "code" : "m"
-}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
-v: {
-  "display" : "m",
-  "severity" : null,
+{"hierarchical" : false, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://unitsofmeasure.org",
+      "concept" : [{
+        "code" : "mm",
+        "display" : "Millimeter"
+      },
+      {
+        "code" : "cm",
+        "display" : "Centimeter"
+      },
+      {
+        "code" : "m",
+        "display" : "Meter"
+      },
+      {
+        "code" : "ft-us",
+        "display" : "Foot"
+      },
+      {
+        "code" : "in-us",
+        "display" : "Inch"
+      }]
+    }]
+  }
+}}####
+e: {
+  "valueSet" : {
+  "resourceType" : "ValueSet",
+  "status" : "active",
+  "expansion" : {
+    "identifier" : "urn:uuid:3619008b-010b-4235-b10e-62430a14cb0e",
+    "timestamp" : "2020-07-22T18:54:39.747Z",
+    "parameter" : [{
+      "name" : "limitedExpansion",
+      "valueBoolean" : true
+    },
+    {
+      "name" : "excludeNested",
+      "valueBoolean" : true
+    },
+    {
+      "name" : "version",
+      "valueString" : "http://unitsofmeasure.org|2.0.1"
+    }],
+    "contains" : [{
+      "system" : "http://unitsofmeasure.org",
+      "code" : "mm",
+      "display" : "Millimeter"
+    },
+    {
+      "system" : "http://unitsofmeasure.org",
+      "code" : "cm",
+      "display" : "Centimeter"
+    },
+    {
+      "system" : "http://unitsofmeasure.org",
+      "code" : "m",
+      "display" : "Meter"
+    }]
+  }
+},
   "error" : ""
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://unitsofmeasure.org",
   "code" : "ft-us"
-}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
 v: {
   "display" : "",
   "severity" : "error",
@@ -42,21 +79,11 @@ v: {
 {"code" : {
   "system" : "http://unitsofmeasure.org",
   "code" : "in-us"
-}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
 v: {
   "display" : "",
   "severity" : "error",
   "error" : "Error processing Unit: 'in-us': The unit \"in\" is unknown at character 1; The code \"in-us\" is not valid in the system http://unitsofmeasure.org; The code provided (http://unitsofmeasure.org#in-us) is not  valid in the value set All codes known to the system"
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://unitsofmeasure.org",
-  "code" : "mg"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
-v: {
-  "display" : "mg",
-  "severity" : null,
-  "error" : ""
 }
 -------------------------------------------------------------------------------------
 {"hierarchical" : true, "valueSet" :{
@@ -92,8 +119,8 @@ e: {
   "resourceType" : "ValueSet",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:6ee3a6e9-5a55-47a4-9487-2eea761b99d7",
-    "timestamp" : "2020-07-23T16:42:06.893Z",
+    "identifier" : "urn:uuid:9027ca8c-022a-47d8-81d5-d98ce2555dbe",
+    "timestamp" : "2020-07-22T19:28:05.754Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true

@@ -40,7 +40,7 @@ releaseLabel: STU1
 template: hl7.fhir.template#0.1.0
 
 # ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
-# │  To control the menu.xml using this config, uncomment and set the "menu" property.             │
+# │  To control the menu.xml using this config, uncomment and set the "menu" property.              │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 menu:
    Home: index.html

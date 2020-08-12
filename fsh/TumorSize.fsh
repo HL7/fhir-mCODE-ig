@@ -22,7 +22,7 @@ Description:  "Records the dimensions of a tumor"
 // LOINC code indicatign this is a tumor size
 * code = LNC#21889-1 "Size Tumor"
 
-// Store tumor size in component with 3 valueCodableConcepts for each tumor dimension, plus a 4th for size of gross tumor bed
+// Store tumor size in component with 3 valueCodableConcepts for each tumor dimension
 * component ^slicing.discriminator.type = #pattern
 * component ^slicing.discriminator.path = "code"
 * component ^slicing.rules = #open
@@ -31,8 +31,8 @@ Description:  "Records the dimensions of a tumor"
 * component contains
     tumorLongestDimension 1..1 MS and
     tumorDimension2 0..1 MS and
-    tumorDimension3 0..1 MS // and
-    // SizeOfGrossTumorBed 0..1 MS
+    tumorDimension3 0..1 MS
+
 * component[tumorLongestDimension] ^short = "Longest tumor dimension (cm or mm)"
 * component[tumorLongestDimension] ^definition = "The longest tumor dimension in cm or mm."
 * component[tumorLongestDimension].code = LNC#33728-7 "Size.maximum dimension in Tumor"
@@ -52,14 +52,6 @@ Description:  "Records the dimensions of a tumor"
 * component[tumorDimension3].code = LNC#33729-5 "Size additional dimension in Tumor"
 * component[tumorDimension3].value[x] only Quantity
 * component[tumorDimension3].valueQuantity from TumorSizeUnitsVS (required)
-
-// No LOINC code that I could find for this
-// * component[SizeOfGrossTumorBed] ^short = "Gross tumor bed size (cm or mm)"
-// * component[SizeOfGrossTumorBed] ^definition = "The gross tumor bed size in cm or mm."
-// * component[SizeOfGrossTumorBed].code = TBD
-// * component[SizeOfGrossTumorBed].value[x] only Quantity
-// * component[SizeOfGrossTumorBed].valueQuantity 0..1
-// * component[SizeOfGrossTumorBed].valueQuantity from TumorSizeUnitsVS (required)
 
 // Properties that are inherited from Observation but don't make sense for this profile
 * bodySite 0..0

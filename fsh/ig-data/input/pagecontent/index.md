@@ -23,7 +23,7 @@
     <li><b>Use Case 1</b>: <a href="mCODE-UseCase-RCC.docx">Comparative Effectiveness Analysis and Cooperative Decision Making</a></li>
     <li><b>Use Case 2</b>: <a href="mCODE-UseCase-NGS.docx">Comparative Effectiveness Analysis with Next Generation Sequencing (NGS)</a></li>
 </ul>
-<p>While mCODE ultimately is meant to be applicable to across all types of cancer, the initial focus (and both use cases) has been on solid tumors.</p>
+<p>While mCODE ultimately is meant to be applicable across all types of cancer, the initial focus (and both use cases) has been on solid tumors.</p>
 
 <p>In addition to information obtained from subject matter experts, several pre-existing standards, nomenclatures, and guidelines were consulted in the development of this specification, including:</p>
 <ul>
@@ -48,7 +48,7 @@
 
 <p>There are multiple actors recognized in this IG including:</p>
 <ul>
-    <li><b>Provider</b> - the oncologist, or their representitives, who works to treat cancer patients.</li>
+    <li><b>Provider</b> - the oncologist, or their representatives, who works to treat cancer patients.</li>
     <li><b>Patient</b> - the patient who is suspected to have, or is diagnosed with, cancer.</li>
     <li><b>Application</b> - EHR systems or lab systems.</li>
 </ul>
@@ -153,7 +153,7 @@
 
 
 <h5><a name="TumorMarkers">Tumor Marker Tests</a></h5>
-<p>Tumor markers are key prognostic factors in calculating cancer staging, identifying treatment options, and monitoring progression of disease. For example, an abnormal increase in prostate-specific antigen (PSA) levels is a prognostic factor for prostate cancer. Other tumor markers include estrogen receptor (ER) status, progresterone receptor (PR) status, carcinoembryonic antigen (CEA) levels, among others. See the profile <a href="StructureDefinition-mcode-tumor-marker.html">TumorMarkerTest</a> for full details.</p>
+<p>Tumor markers are key prognostic factors in calculating cancer staging, identifying treatment options, and monitoring progression of disease. For example, an abnormal increase in prostate-specific antigen (PSA) levels is a prognostic factor for prostate cancer. Other tumor markers include estrogen receptor (ER) status, progesterone receptor (PR) status, carcinoembryonic antigen (CEA) levels, among others. See the profile <a href="StructureDefinition-mcode-tumor-marker.html">TumorMarkerTest</a> for full details.</p>
 
 <p>We distinguish Tumor Marker Tests from genetic tests that are measured at the DNA, RNA, or chromosomal level, addressed in the <a href="#Genomics">Genomics</a> section.
 </p>

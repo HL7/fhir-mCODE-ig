@@ -209,3 +209,84 @@ v: {
   "error" : ""
 }
 -------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://unitsofmeasure.org",
+  "code" : "cm"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "cm",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://unitsofmeasure.org",
+  "code" : "cm"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://unitsofmeasure.org",
+      "concept" : [{
+        "code" : "mm",
+        "display" : "Millimeter"
+      },
+      {
+        "code" : "cm",
+        "display" : "Centimeter"
+      }]
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "centimeter",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://unitsofmeasure.org",
+      "concept" : [{
+        "code" : "mm",
+        "display" : "Millimeter"
+      },
+      {
+        "code" : "cm",
+        "display" : "Centimeter"
+      }]
+    }]
+  }
+}}####
+e: {
+  "valueSet" : {
+  "resourceType" : "ValueSet",
+  "status" : "active",
+  "expansion" : {
+    "identifier" : "urn:uuid:5ccda7ec-451e-4343-aa9c-1a9e90c38b1d",
+    "timestamp" : "2020-09-02T21:31:01.971Z",
+    "parameter" : [{
+      "name" : "limitedExpansion",
+      "valueBoolean" : true
+    },
+    {
+      "name" : "version",
+      "valueString" : "http://unitsofmeasure.org|2.0.1"
+    }],
+    "contains" : [{
+      "system" : "http://unitsofmeasure.org",
+      "code" : "mm",
+      "display" : "Millimeter"
+    },
+    {
+      "system" : "http://unitsofmeasure.org",
+      "code" : "cm",
+      "display" : "Centimeter"
+    }]
+  }
+},
+  "error" : ""
+}
+-------------------------------------------------------------------------------------

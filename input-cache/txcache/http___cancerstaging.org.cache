@@ -200,3 +200,15 @@ e: {
   "error" : "Error from server: Unable to provide support for code system http://cancerstaging.org"
 }
 -------------------------------------------------------------------------------------
+{"hierarchical" : false, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://cancerstaging.org"
+    }]
+  }
+}}####
+e: {
+  "error" : "Error from server: Unable to provide support for code system http://cancerstaging.org"
+}
+-------------------------------------------------------------------------------------

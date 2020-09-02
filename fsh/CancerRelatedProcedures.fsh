@@ -25,15 +25,15 @@ Conformance note: If an ICD-10-PCS code is used in the code attribute, and there
 * category = SCT#53438000 //"Radiation therapy procedure or service (procedure)"
 * code from RadiationProcedureVS (extensible)
 * subject only Reference(CancerPatient)
-* recorder only Reference(Practitioner | PractitionerRole)
-* performer.actor only Reference(Practitioner | PractitionerRole | Organization)  // include Device?
+* recorder only Reference(Practitioner or PractitionerRole)
+* performer.actor only Reference(Practitioner or PractitionerRole or Organization)  // include Device?
 * reasonCode from CancerDisorderVS (extensible)
 * reasonReference only Reference(CancerConditionParent)
 * bodySite from RadiationTargetBodySiteVS (extensible)
 * bodySite.extension contains
     Laterality named laterality 0..1
 * focalDevice 0..0
-* bodySite, bodySite.extension[laterality], extension[treatmentIntent] MS
+* bodySite and bodySite.extension[laterality] and extension[treatmentIntent] and extension[terminationReason] MS
 
 
 Profile:  CancerRelatedSurgicalProcedure
@@ -49,11 +49,11 @@ Description: "A surgical action addressing a cancer condition. The scope of this
 * reasonCode from CancerDisorderVS (extensible)
 * reasonReference only Reference(CancerConditionParent)  // rather than Primary, Secondary, Tumor
 * partOf only Reference(Procedure)
-* recorder only Reference(Practitioner | PractitionerRole)
-* performer.actor only Reference(Practitioner | PractitionerRole | Organization)
+* recorder only Reference(Practitioner or PractitionerRole)
+* performer.actor only Reference(Practitioner or PractitionerRole or Organization)
 * bodySite.extension contains
     Laterality named laterality 0..1
-* reasonCode, reasonReference, extension[treatmentIntent], bodySite, bodySite.extension[laterality] MS  // other MS will be inherited from USCoreProcedure
+* reasonCode and reasonReference and extension[treatmentIntent] and bodySite and bodySite.extension[laterality] MS  // other MS will be inherited from USCoreProcedure
 
     /* Save for possible later use
 

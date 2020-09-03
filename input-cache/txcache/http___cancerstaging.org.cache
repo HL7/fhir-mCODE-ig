@@ -2,80 +2,35 @@
 {"code" : {
   "system" : "http://cancerstaging.org",
   "code" : "3C"
-<<<<<<< HEAD
-}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
-v: {
-  "display" : "",
-  "severity" : "error",
-  "error" : "Attempt to use Terminology server when no Terminology server is available"
-=======
 }, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
 v: {
   "display" : "",
   "severity" : "error",
   "error" : "The code system \"http://cancerstaging.org\" is not known (encountered paired with code = \"3C\"); The code provided (http://cancerstaging.org#3C) is not  valid in the value set All codes known to the system"
->>>>>>> master
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://cancerstaging.org",
   "code" : "cM0"
-<<<<<<< HEAD
-}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
-v: {
-  "display" : "",
-  "severity" : "error",
-  "error" : "Attempt to use Terminology server when no Terminology server is available"
-=======
 }, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
 v: {
   "display" : "",
   "severity" : "error",
   "error" : "The code system \"http://cancerstaging.org\" is not known (encountered paired with code = \"cM0\"); The code provided (http://cancerstaging.org#cM0) is not  valid in the value set All codes known to the system"
->>>>>>> master
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://cancerstaging.org",
-<<<<<<< HEAD
-  "code" : "cN0"
-}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
-v: {
-  "display" : "",
-  "severity" : "error",
-  "error" : "Attempt to use Terminology server when no Terminology server is available"
-=======
   "code" : "cT3"
 }, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
 v: {
   "display" : "",
   "severity" : "error",
   "error" : "The code system \"http://cancerstaging.org\" is not known (encountered paired with code = \"cT3\"); The code provided (http://cancerstaging.org#cT3) is not  valid in the value set All codes known to the system"
->>>>>>> master
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://cancerstaging.org",
-<<<<<<< HEAD
-  "code" : "cT3"
-}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
-v: {
-  "display" : "",
-  "severity" : "error",
-  "error" : "Attempt to use Terminology server when no Terminology server is available"
-}
--------------------------------------------------------------------------------------
-{"hierarchical" : false, "valueSet" :{
-  "resourceType" : "ValueSet",
-  "compose" : {
-    "include" : [{
-      "system" : "http://cancerstaging.org"
-    }]
-  }
-}}####
-e: {
-  "error" : "Error from server: Unable to provide support for code system http://cancerstaging.org"
-=======
   "code" : "cN3"
 }, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
 v: {
@@ -92,68 +47,31 @@ v: {
   "display" : "",
   "severity" : "error",
   "error" : "The code system \"http://cancerstaging.org\" is not known (encountered paired with code = \"pM0\"); The code provided (http://cancerstaging.org#pM0) is not  valid in the value set All codes known to the system"
->>>>>>> master
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://cancerstaging.org",
-<<<<<<< HEAD
-  "code" : "cM0"
-}, "valueSet" :{
-  "resourceType" : "ValueSet",
-  "compose" : {
-    "include" : [{
-      "system" : "http://cancerstaging.org"
-    }]
-  }
-}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
-v: {
-  "display" : "",
-  "severity" : "error",
-  "error" : "CodeSystem uri 'http://cancerstaging.org' is unknown"
-=======
   "code" : "pT3"
 }, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
 v: {
   "display" : "",
   "severity" : "error",
   "error" : "The code system \"http://cancerstaging.org\" is not known (encountered paired with code = \"pT3\"); The code provided (http://cancerstaging.org#pT3) is not  valid in the value set All codes known to the system"
->>>>>>> master
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://cancerstaging.org",
-<<<<<<< HEAD
-  "code" : "cT3"
-}, "valueSet" :{
-  "resourceType" : "ValueSet",
-  "compose" : {
-    "include" : [{
-      "system" : "http://cancerstaging.org"
-    }]
-  }
-}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
-v: {
-  "display" : "",
-  "severity" : "error",
-  "error" : "CodeSystem uri 'http://cancerstaging.org' is unknown"
-=======
   "code" : "pN3"
 }, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
 v: {
   "display" : "",
   "severity" : "error",
   "error" : "The code system \"http://cancerstaging.org\" is not known (encountered paired with code = \"pN3\"); The code provided (http://cancerstaging.org#pN3) is not  valid in the value set All codes known to the system"
->>>>>>> master
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://cancerstaging.org",
-<<<<<<< HEAD
-  "code" : "cN3"
-=======
   "code" : "cM0"
->>>>>>> master
 }, "valueSet" :{
   "resourceType" : "ValueSet",
   "compose" : {
@@ -170,11 +88,7 @@ v: {
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://cancerstaging.org",
-<<<<<<< HEAD
-  "code" : "3C"
-=======
   "code" : "cT3"
->>>>>>> master
 }, "valueSet" :{
   "resourceType" : "ValueSet",
   "compose" : {
@@ -191,11 +105,7 @@ v: {
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://cancerstaging.org",
-<<<<<<< HEAD
-  "code" : "pM0"
-=======
   "code" : "cN3"
->>>>>>> master
 }, "valueSet" :{
   "resourceType" : "ValueSet",
   "compose" : {
@@ -212,11 +122,7 @@ v: {
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://cancerstaging.org",
-<<<<<<< HEAD
-  "code" : "pT3"
-=======
   "code" : "3C"
->>>>>>> master
 }, "valueSet" :{
   "resourceType" : "ValueSet",
   "compose" : {
@@ -233,11 +139,7 @@ v: {
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://cancerstaging.org",
-<<<<<<< HEAD
-  "code" : "pN3"
-=======
   "code" : "pM0"
->>>>>>> master
 }, "valueSet" :{
   "resourceType" : "ValueSet",
   "compose" : {
@@ -254,11 +156,7 @@ v: {
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://cancerstaging.org",
-<<<<<<< HEAD
-  "code" : "cN0"
-=======
   "code" : "pT3"
->>>>>>> master
 }, "valueSet" :{
   "resourceType" : "ValueSet",
   "compose" : {
@@ -275,11 +173,7 @@ v: {
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://cancerstaging.org",
-<<<<<<< HEAD
-  "code" : "2B"
-=======
   "code" : "pN3"
->>>>>>> master
 }, "valueSet" :{
   "resourceType" : "ValueSet",
   "compose" : {

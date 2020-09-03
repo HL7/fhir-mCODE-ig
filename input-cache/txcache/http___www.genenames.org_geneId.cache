@@ -1,33 +1,4 @@
 -------------------------------------------------------------------------------------
-<<<<<<< HEAD
-{"hierarchical" : false, "valueSet" :{
-  "resourceType" : "ValueSet",
-  "compose" : {
-    "include" : [{
-      "system" : "http://www.genenames.org/geneId"
-    }]
-  }
-}}####
-e: {
-  "error" : "Error from server: Unable to provide support for code system http://www.genenames.org/geneId"
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://www.genenames.org/geneId",
-  "code" : "HGNC:11389"
-}, "valueSet" :{
-  "resourceType" : "ValueSet",
-  "compose" : {
-    "include" : [{
-      "system" : "http://www.genenames.org/geneId"
-    }]
-  }
-}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
-v: {
-  "display" : "",
-  "severity" : "error",
-  "error" : "CodeSystem uri 'http://www.genenames.org/geneId' is unknown"
-=======
 {"code" : {
   "system" : "http://www.genenames.org/geneId",
   "code" : "HGNC:11389"
@@ -36,101 +7,31 @@ v: {
   "display" : "",
   "severity" : "error",
   "error" : "The code system \"http://www.genenames.org/geneId\" is not known (encountered paired with code = \"HGNC:11389\"); The code provided (http://www.genenames.org/geneId#HGNC:11389) is not  valid in the value set All codes known to the system"
->>>>>>> master
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://www.genenames.org/geneId",
   "code" : "HGNC:1100"
-<<<<<<< HEAD
-}, "valueSet" :{
-  "resourceType" : "ValueSet",
-  "compose" : {
-    "include" : [{
-      "system" : "http://www.genenames.org/geneId"
-    }]
-  }
-}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
-v: {
-  "display" : "",
-  "severity" : "error",
-  "error" : "CodeSystem uri 'http://www.genenames.org/geneId' is unknown"
-=======
 }, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
 v: {
   "display" : "",
   "severity" : "error",
   "error" : "The code system \"http://www.genenames.org/geneId\" is not known (encountered paired with code = \"HGNC:1100\"); The code provided (http://www.genenames.org/geneId#HGNC:1100) is not  valid in the value set All codes known to the system"
->>>>>>> master
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://www.genenames.org/geneId",
-<<<<<<< HEAD
-  "code" : "619728"
-}, "valueSet" :{
-  "resourceType" : "ValueSet",
-  "compose" : {
-    "include" : [{
-      "system" : "http://www.genenames.org/geneId"
-    }]
-  }
-}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
-v: {
-  "display" : "",
-  "severity" : "error",
-  "error" : "CodeSystem uri 'http://www.genenames.org/geneId' is unknown"
-=======
   "code" : "8023"
 }, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
 v: {
   "display" : "",
   "severity" : "error",
   "error" : "The code system \"http://www.genenames.org/geneId\" is not known (encountered paired with code = \"8023\"); The code provided (http://www.genenames.org/geneId#8023) is not  valid in the value set All codes known to the system"
->>>>>>> master
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://www.genenames.org/geneId",
-<<<<<<< HEAD
-  "code" : "HGNC:26144"
-}, "valueSet" :{
-  "resourceType" : "ValueSet",
-  "compose" : {
-    "include" : [{
-      "system" : "http://www.genenames.org/geneId"
-    }]
-  }
-}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
-v: {
-  "display" : "",
-  "severity" : "error",
-  "error" : "CodeSystem uri 'http://www.genenames.org/geneId' is unknown"
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://www.genenames.org/geneId",
-  "code" : "1100"
-}, "valueSet" :{
-  "resourceType" : "ValueSet",
-  "compose" : {
-    "include" : [{
-      "system" : "http://www.genenames.org/geneId"
-    }]
-  }
-}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
-v: {
-  "display" : "",
-  "severity" : "error",
-  "error" : "CodeSystem uri 'http://www.genenames.org/geneId' is unknown"
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://www.genenames.org/geneId",
-  "code" : "1101"
-=======
   "code" : "HGNC:11389"
->>>>>>> master
 }, "valueSet" :{
   "resourceType" : "ValueSet",
   "compose" : {
@@ -147,11 +48,7 @@ v: {
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://www.genenames.org/geneId",
-<<<<<<< HEAD
-  "code" : "1748"
-=======
   "code" : "HGNC:1100"
->>>>>>> master
 }, "valueSet" :{
   "resourceType" : "ValueSet",
   "compose" : {
@@ -168,11 +65,7 @@ v: {
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://www.genenames.org/geneId",
-<<<<<<< HEAD
-  "code" : "26144"
-=======
   "code" : "8023"
->>>>>>> master
 }, "valueSet" :{
   "resourceType" : "ValueSet",
   "compose" : {
@@ -187,66 +80,31 @@ v: {
   "error" : "CodeSystem uri 'http://www.genenames.org/geneId' is unknown"
 }
 -------------------------------------------------------------------------------------
-<<<<<<< HEAD
-{"code" : {
-  "system" : "http://www.genenames.org/geneId",
-  "code" : "9588"
-}, "valueSet" :{
-=======
 {"hierarchical" : true, "valueSet" :{
->>>>>>> master
   "resourceType" : "ValueSet",
   "compose" : {
     "include" : [{
       "system" : "http://www.genenames.org/geneId"
     }]
   }
-<<<<<<< HEAD
-}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
-v: {
-  "display" : "",
-  "severity" : "error",
-  "error" : "CodeSystem uri 'http://www.genenames.org/geneId' is unknown"
-=======
 }}####
 e: {
   "error" : "Error from server: Unable to provide support for code system http://www.genenames.org/geneId"
->>>>>>> master
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://www.genenames.org/geneId",
-<<<<<<< HEAD
-  "code" : "11389"
-}, "valueSet" :{
-  "resourceType" : "ValueSet",
-  "compose" : {
-    "include" : [{
-      "system" : "http://www.genenames.org/geneId"
-    }]
-  }
-}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
-v: {
-  "display" : "",
-  "severity" : "error",
-  "error" : "CodeSystem uri 'http://www.genenames.org/geneId' is unknown"
-=======
   "code" : "HGNC:8023"
 }, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
 v: {
   "display" : "",
   "severity" : "error",
   "error" : "The code system \"http://www.genenames.org/geneId\" is not known (encountered paired with code = \"HGNC:8023\"); The code provided (http://www.genenames.org/geneId#HGNC:8023) is not  valid in the value set All codes known to the system"
->>>>>>> master
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://www.genenames.org/geneId",
-<<<<<<< HEAD
-  "code" : "11998"
-=======
   "code" : "HGNC:8023"
->>>>>>> master
 }, "valueSet" :{
   "resourceType" : "ValueSet",
   "compose" : {
@@ -261,18 +119,3 @@ v: {
   "error" : "CodeSystem uri 'http://www.genenames.org/geneId' is unknown"
 }
 -------------------------------------------------------------------------------------
-<<<<<<< HEAD
-{"hierarchical" : true, "valueSet" :{
-  "resourceType" : "ValueSet",
-  "compose" : {
-    "include" : [{
-      "system" : "http://www.genenames.org/geneId"
-    }]
-  }
-}}####
-e: {
-  "error" : "Error from server: Unable to provide support for code system http://www.genenames.org/geneId"
-}
--------------------------------------------------------------------------------------
-=======
->>>>>>> master

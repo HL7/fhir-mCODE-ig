@@ -119,8 +119,6 @@ Description: "Extended example 1: example showing primary cancer condition"
 * verificationStatus = VerStatus#confirmed
 * category = SCT#64572001 "Disease (disorder)"
 * code = SCT#353431000119107 "Primary malignant neoplasm of female left breast (disorder)"
-* bodySite = SCT#80248007 "Left breast structure (body structure)"
-* bodySite.extension[laterality].valueCodeableConcept = SCT#7771000 "Left (qualifier value)"
 * subject = Reference(example1-mcode-cancer-patient)
 * onsetDateTime = "2018-03-15"
 * asserter = Reference(example1-practitioner1-mcode)

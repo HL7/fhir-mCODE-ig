@@ -37,10 +37,10 @@ Description: "Extended example 1: example showing disease status (patient's cond
 * status = #final "final"
 * category = ObsCat#imaging
 * code = LNC#88040-1 "Response to cancer treatment"
-* subject = Reference(Patient/example1-mcode-cancer-patient)
+* subject = Reference(example1-mcode-cancer-patient)
 * effectiveDateTime = "2020-03-01"
-* performer = Reference(Practitioner/example1-practitioner1-mcode)
-* focus = Reference(Condition/example1-mcode-primary-cancer-condition)
+* performer = Reference(example1-practitioner1-mcode)
+* focus = Reference(example1-mcode-primary-cancer-condition)
 * valueCodeableConcept = SCT#268910001 "Patient's condition improved (finding)"
 
 // example1-mcode-comorbid-condition-depression.json
@@ -52,9 +52,9 @@ Description: "Extended example 1: example showing comorbid condition (depression
 * verificationStatus = VerStatus#confirmed
 * category = SCT#398192003 "Co-morbid conditions (finding)"
 * code = SCT#35489007 "Depressive disorder (disorder)"
-* subject = Reference(Patient/example1-mcode-cancer-patient)
+* subject = Reference(example1-mcode-cancer-patient)
 * onsetDateTime = "2000-01-01"
-* asserter = Reference(Practitioner/example1-practitioner1-mcode)
+* asserter = Reference(example1-practitioner1-mcode)
 
 // example1-mcode-comorbid-condition-hyptertension.json
 Instance: example1-mcode-comorbid-condition-hypertension
@@ -65,9 +65,9 @@ Description: "Extended example 1: example showing comorbid condition (hypertensi
 * verificationStatus = VerStatus#confirmed
 * category = SCT#398192003 "Co-morbid conditions (finding)"
 * code = ICD10CM#I119 "Hypertensive heart disease without heart failure"
-* subject = Reference(Patient/example1-mcode-cancer-patient)
+* subject = Reference(example1-mcode-cancer-patient)
 * onsetDateTime = "2000-01-01"
-* asserter = Reference(Practitioner/example1-practitioner1-mcode)
+* asserter = Reference(example1-practitioner1-mcode)
 
 // example1-mcode-ecog-performance-status.json
 Instance: example1-mcode-ecog-performance-status
@@ -77,9 +77,9 @@ Description: "Extended example 1: example showing ECOG performance status"
 * status = #final "final"
 * category = ObsCat#survey
 * code = LNC#89247-1 "ECOG Performance Status score"
-* subject = Reference(Patient/example1-mcode-cancer-patient)
+* subject = Reference(example1-mcode-cancer-patient)
 * effectiveDateTime = "2018-03-01"
-* performer = Reference(Practitioner/example1-practitioner1-mcode)
+* performer = Reference(example1-practitioner1-mcode)
 * valueInteger = 0
 * interpretation = LNC#LA9622-7 "Fully active, able to carry on all pre-disease performance without restriction"
 * method = SCT#5880005 "Physical examination procedure (procedure)"
@@ -92,10 +92,10 @@ Description: "Extended example 1: example showing partial mastectomy surgical pr
 * extension[treatmentIntent].valueCodeableConcept = SCT#373808002 "Curative - procedure intent (qualifier value)"
 * status = #completed "completed"
 * code = SCT#64368001 "Partial mastectomy (procedure)"
-* subject = Reference(Patient/example1-mcode-cancer-patient)
+* subject = Reference(example1-mcode-cancer-patient)
 * performedDateTime = "2019-03-05"
-* asserter = Reference(Practitioner/example1-practitioner1-mcode)
-* reasonReference = Reference(Condition/example1-mcode-primary-cancer-condition)
+* asserter = Reference(example1-practitioner1-mcode)
+* reasonReference = Reference(example1-mcode-primary-cancer-condition)
 * bodySite = SCT#80248007 "Left breast structure (body structure)"
 
 // example1-mcode-cancer-related-radiation-procedure.json
@@ -106,10 +106,10 @@ Description: "Extended example 1: example showing radiation treatment"
 * extension[treatmentIntent].valueCodeableConcept = SCT#373808002 "Curative - procedure intent (qualifier value)"
 * status = #completed "completed"
 * code = SCT#385798007 "Radiation therapy care (regime/therapy)"
-* subject = Reference(Patient/example1-mcode-cancer-patient)
+* subject = Reference(example1-mcode-cancer-patient)
 * performedDateTime = "2018-03-20"
-* asserter = Reference(Practitioner/example1-practitioner1-mcode)
-* reasonReference = Reference(Condition/example1-mcode-primary-cancer-condition)
+* asserter = Reference(example1-practitioner1-mcode)
+* reasonReference = Reference(example1-mcode-primary-cancer-condition)
 * bodySite = SCT#80248007 "Left breast structure (body structure)"
 
 // example1-mcode-primary-cancer-condition.json
@@ -124,11 +124,11 @@ Description: "Extended example 1: example showing primary cancer condition"
 * code = SCT#353431000119107 "Primary malignant neoplasm of female left breast (disorder)"
 * bodySite = SCT#80248007 "Left breast structure (body structure)"
 * bodySite.extension[laterality].valueCodeableConcept = SCT#7771000 "Left (qualifier value)"
-* subject = Reference(Patient/example1-mcode-cancer-patient)
+* subject = Reference(example1-mcode-cancer-patient)
 * onsetDateTime = "2018-03-15"
-* asserter = Reference(Practitioner/example1-practitioner1-mcode)
+* asserter = Reference(example1-practitioner1-mcode)
 * stage.summary = AJCC#3C
-* stage.assessment = Reference(Observation/example1-mcode-tnm-clinical-stage-group)
+* stage.assessment = Reference(example1-mcode-tnm-clinical-stage-group)
 
 // example1-mcode-tnm-clinical-stage-group.json
 Instance: example1-mcode-tnm-clinical-stage-group
@@ -138,13 +138,13 @@ Description: "Extended example 1: example showing TNM staging (stage group)"
 * status = #final "final"
 * category = ObsCat#survey
 * code = LNC#21908-9 "Stage group.clinical Cancer"
-* subject = Reference(Patient/example1-mcode-cancer-patient)
+* subject = Reference(example1-mcode-cancer-patient)
 * effectiveDateTime = "2018-03-10"
 * valueCodeableConcept = AJCC#2B "IIB"
 * method = MTH#C146985 "AJCC Cancer Staging Manual 8th Edition"
-* hasMember[0] = Reference(Observation/example1-mcode-tnm-primary-tumor-category)
-* hasMember[1] = Reference(Observation/example1-mcode-tnm-clinical-regional-nodes-category)
-* hasMember[2] = Reference(Observation/example1-mcode-tnm-clinical-distant-metastases-category)
+* hasMember[0] = Reference(example1-mcode-tnm-primary-tumor-category)
+* hasMember[1] = Reference(example1-mcode-tnm-clinical-regional-nodes-category)
+* hasMember[2] = Reference(example1-mcode-tnm-clinical-distant-metastases-category)
 
 // example1-mcode-tnm-primary-tumor-category.json
 Instance: example1-mcode-tnm-primary-tumor-category
@@ -154,7 +154,7 @@ Description: "Extended example 1: example showing TNM staging (T)"
 * status = #final "final"
 * category = ObsCat#survey
 * code = LNC#21905-5 "Primary tumor.clinical [Class] Cancer"
-* subject = Reference(Patient/example1-mcode-cancer-patient)
+* subject = Reference(example1-mcode-cancer-patient)
 * effectiveDateTime = "2018-03-10"
 * valueCodeableConcept = AJCC#cT3
 * method = MTH#C146985 "AJCC Cancer Staging Manual 8th Edition"
@@ -167,7 +167,7 @@ Description: "Extended example 1: example showing TNM staging (N)"
 * status = #final "final"
 * category = ObsCat#survey
 * code = LNC#21906-3 "Regional lymph nodes.clinical [Class] Cancer"
-* subject = Reference(Patient/example1-mcode-cancer-patient)
+* subject = Reference(example1-mcode-cancer-patient)
 * effectiveDateTime = "2018-03-10"
 * valueCodeableConcept = AJCC#cN0
 * method = MTH#C146985 "AJCC Cancer Staging Manual 8th Edition"
@@ -180,7 +180,7 @@ Description: "Extended example 1: example showing TNM staging (M)"
 * status = #final "final"
 * category = ObsCat#survey
 * code = LNC#21907-1 "Distant metastases.clinical [Class] Cancer"
-* subject = Reference(Patient/example1-mcode-cancer-patient)
+* subject = Reference(example1-mcode-cancer-patient)
 * effectiveDateTime = "2018-03-10"
 * valueCodeableConcept = AJCC#cM0
 * method = MTH#C146985 "AJCC Cancer Staging Manual 8th Edition"
@@ -193,9 +193,9 @@ Description: "Extended example 1: example showing ER status"
 * status = #final "final"
 * category = ObsCat#laboratory
 * code = LNC#85337-4 "Estrogen receptor Ag [Presence] in Breast cancer specimen by Immune stain"
-* subject = Reference(Patient/example1-mcode-cancer-patient)
+* subject = Reference(example1-mcode-cancer-patient)
 * effectiveDateTime = "2018-03-10"
-* performer = Reference(Practitioner/example1-practitioner1-mcode)
+* performer = Reference(example1-practitioner1-mcode)
 * valueCodeableConcept = SCT#10828004 "Positive (qualifier value)"
 
 // example1-mcode-tumor-marker-pr.json
@@ -206,9 +206,9 @@ Description: "Extended example 1: example showing PR status"
 * status = #final "final"
 * category = ObsCat#laboratory
 * code = LNC#85339-0 "Progesterone receptor Ag [Presence] in Breast cancer specimen by Immune stain"
-* subject = Reference(Patient/example1-mcode-cancer-patient)
+* subject = Reference(example1-mcode-cancer-patient)
 * effectiveDateTime = "2018-03-10"
-* performer = Reference(Practitioner/example1-practitioner1-mcode)
+* performer = Reference(example1-practitioner1-mcode)
 * valueCodeableConcept = SCT#260385009 "Negative (qualifier value)"
 
 // example1-mcode-tumor-marker-her2.json
@@ -219,9 +219,9 @@ Description: "Extended example 1: example showing HER2 status"
 * status = #final "final"
 * category = ObsCat#laboratory
 * code = LNC#72382-5 "HER2 [Units/volume] in Tissue by Immunoassay"
-* subject = Reference(Patient/example1-mcode-cancer-patient)
+* subject = Reference(example1-mcode-cancer-patient)
 * effectiveDateTime = "2018-03-10"
-* performer = Reference(Practitioner/example1-practitioner1-mcode)
+* performer = Reference(example1-practitioner1-mcode)
 * valueCodeableConcept = SCT#260385009 "Negative (qualifier value)"
 
 // example1-mcode-tumor-marker-21-gene-panel.json
@@ -232,9 +232,9 @@ Description: "Extended example 1: example showing Oncotype DX breast recurrence 
 * status = #final "final"
 * category = ObsCat#laboratory
 * code = https://www.ncbi.nlm.nih.gov/gtr/tests#509910 "Oncotype DX Breast Recurrence Score Assay"
-* subject = Reference(Patient/example1-mcode-cancer-patient)
+* subject = Reference(example1-mcode-cancer-patient)
 * effectiveDateTime = "2018-03-20"
-* performer = Reference(Practitioner/example1-practitioner1-mcode)
+* performer = Reference(example1-practitioner1-mcode)
 * valueQuantity.unit = "ScoreOf"
 * valueQuantity.value = 37
 
@@ -247,12 +247,12 @@ Description: "Extended example 1: example of gene panel report"
 * category[0] = http://terminology.hl7.org/CodeSystem/v2-0074#LAB
 * category[1] = http://terminology.hl7.org/CodeSystem/v2-0074#GE
 * code = LNC#81247-9 "Master HL7 genetic variant reporting panel"
-* subject = Reference(Patient/example1-mcode-cancer-patient)
+* subject = Reference(example1-mcode-cancer-patient)
 * effectiveDateTime = "2020-03-15"
 * issued = "2020-03-15T00:00:01+00:00"
-* specimen = Reference(Specimen/example1-mcode-genetic-specimen)
-* result[0] = Reference(Observation/example1-mcode-cancer-genetic-variant)
-* result[1] = Reference(Observation/example1-mcode-genomic-region-studied)
+* specimen = Reference(example1-mcode-genetic-specimen)
+* result[0] = Reference(example1-mcode-cancer-genetic-variant)
+* result[1] = Reference(example1-mcode-genomic-region-studied)
 
 // example1-mcode-genomic-region-studied.json
 Instance: example1-mcode-genomic-region-studied
@@ -262,7 +262,7 @@ Description: "Extended example 1: example showing which regions were included in
 * status = #final "final"
 * category = ObsCat#laboratory
 * code = LNC#53041-0 "DNA region of interest panel"
-* subject = Reference(Patient/example1-mcode-cancer-patient)
+* subject = Reference(example1-mcode-cancer-patient)
 * effectiveDateTime = "2018-04-01"
 * issued = "2018-04-01T00:00:01+00:00"
 * component.code = LNC#48018-6 "Gene studied [ID]"
@@ -281,8 +281,8 @@ Description: "Extended example 1: example showing genetic specimen for sequencin
 * id = "example1-mcode-genetic-specimen"
 * status = #available "available"
 * type = http://terminology.hl7.org/CodeSystem/v2-0487#TISS
-* subject = Reference(Patient/example1-mcode-cancer-patient)
-* collection.collector = Reference(Practitioner/example1-practitioner1-mcode)
+* subject = Reference(example1-mcode-cancer-patient)
+* collection.collector = Reference(example1-practitioner1-mcode)
 * collection.bodySite = SCT#80248007 "Left breast structure (body structure)"
 * processing[0].timeDateTime = "2018-03-01"
 
@@ -294,7 +294,7 @@ Description: "Extended example 1: example showing genetic variant found by breas
 * status = #final "final"
 * category = ObsCat#laboratory
 * code = LNC#69548-6 "Genetic variant assessment"
-* subject = Reference(Patient/example1-mcode-cancer-patient)
+* subject = Reference(example1-mcode-cancer-patient)
 * effectiveDateTime = "2018-03-15"
 * valueCodeableConcept = LNC#LA9633-4 "Present"
 * method = LNC#LA26398-0 "Sequencing"
@@ -316,7 +316,7 @@ Description: "Extended example 1: example showing chemotherapy medication"
 * status = #active "active"
 * category = http://terminology.hl7.org/CodeSystem/medication-statement-category#outpatient
 * medicationCodeableConcept = RXN#3639 "DOXOrubicin"
-* subject = Reference(Patient/example1-mcode-cancer-patient)
+* subject = Reference(example1-mcode-cancer-patient)
 * effectiveDateTime = "2019-04-01"
 * dateAsserted = "2019-04-01"
 * dosage.text = "doxorubicin (60 mg/m² IV), 93.26mg"
@@ -333,7 +333,7 @@ Description: "Extended example 1: example showing chemotherapy medication"
 * status = #active "active"
 * category = MedCat#outpatient
 * medicationCodeableConcept = RXN#3002 "cyclophosphamide"
-* subject = Reference(Patient/example1-mcode-cancer-patient)
+* subject = Reference(example1-mcode-cancer-patient)
 * effectiveDateTime = "2018-04-01"
 * dateAsserted = "2018-04-01"
 * dosage.text = "cyclophosphamide (600 mg/m² IV), 932.59mg"
@@ -351,7 +351,7 @@ Description: "Extended example 1: example showing chemotherapy medication"
 * status = #active "active"
 * category = http://terminology.hl7.org/CodeSystem/medication-statement-category#outpatient
 * medicationCodeableConcept = RXN#56946 "PACLitaxel"
-* subject = Reference(Patient/example1-mcode-cancer-patient)
+* subject = Reference(example1-mcode-cancer-patient)
 * effectiveDateTime = "2018-04-01"
 * dateAsserted = "2018-04-01"
 * dosage.text = "doxorubicin (175 mg/m² IV), 272.01mg"
@@ -368,7 +368,7 @@ Description: "Extended example 1: example showing chemotherapy medication"
 * status = #active "active"
 * category = http://terminology.hl7.org/CodeSystem/medication-statement-category#community
 * medicationCodeableConcept = RXN#84857 "anastrozole"
-* subject = Reference(Patient/example1-mcode-cancer-patient)
+* subject = Reference(example1-mcode-cancer-patient)
 * effectiveDateTime = "2018-05-01"
 * dateAsserted = "2018-05-01"
 * dosage.text = "1mg orally once daily"
@@ -402,11 +402,11 @@ Description: "Extended example 1: example biopsy procedure"
 * id = "example1-us-core-procedure-biopsy"
 * status = #completed "completed"
 * code = SCT#723990008 "Biopsy of breast using ultrasonographic guidance (procedure)"
-* subject = Reference(Patient/example1-mcode-cancer-patient)
-* performer.actor = Reference(Practitioner/example1-practitioner1-mcode)
+* subject = Reference(example1-mcode-cancer-patient)
+* performer.actor = Reference(example1-practitioner1-mcode)
 * performedDateTime = "2018-03-01"
-* asserter = Reference(Practitioner/example1-practitioner1-mcode)
-* reasonReference = Reference(Condition/example1-mcode-primary-cancer-condition)
+* asserter = Reference(example1-practitioner1-mcode)
+* reasonReference = Reference(example1-mcode-primary-cancer-condition)
 * bodySite = SCT#80248007 "Left breast structure (body structure)"
 
 // example1-us-core-procedure-mammogram.json
@@ -416,10 +416,10 @@ Description: "Extended example 1: example mammogram"
 * id = "example1-us-core-procedure-mammogram"
 * status = #completed "completed"
 * code = SCT#71651007 "Mammography (procedure)"
-* subject = Reference(Patient/example1-mcode-cancer-patient)
-* performer.actor = Reference(Practitioner/example1-practitioner1-mcode)
+* subject = Reference(example1-mcode-cancer-patient)
+* performer.actor = Reference(example1-practitioner1-mcode)
 * performedDateTime = "2018-03-01"
-* asserter = Reference(Practitioner/example1-practitioner1-mcode)
+* asserter = Reference(example1-practitioner1-mcode)
 
 // example1-us-core-smoking-status.json
 Instance: example1-us-core-smoking-status
@@ -429,7 +429,7 @@ Description: "Extended example 1: example showing smoking status"
 * status = #final "final"
 * category = ObsCat#social-history "Social History"
 * code = LNC#72166-2 "Tobacco smoking status"
-* subject = Reference(Patient/example1-mcode-cancer-patient)
+* subject = Reference(example1-mcode-cancer-patient)
 * issued = "2018-03-01T00:00:00Z"
 * valueCodeableConcept = SCT#449868002 "Smokes tobacco daily (finding)"
 
@@ -441,7 +441,7 @@ Description: "Extended example 1: example showing smoking history"
 * status = #final "final"
 * category = ObsCat#social-history "Social History"
 * code = SCT#401201003 "Cigarette pack-years (observable entity)" // No LOINC available
-* subject = Reference(Patient/example1-mcode-cancer-patient)
+* subject = Reference(example1-mcode-cancer-patient)
 * effectiveDateTime = "2018-03-01T00:00:00Z"
 * valueQuantity = UCUM#{PackYears}
 * valueQuantity.value = 20
@@ -457,7 +457,7 @@ Description: "Extended example 1: example showing comorbid condition (anxiety)"
 * verificationStatus.text = "Confirmed"
 * category = ConditionCategory#problem-list-item "Problem List Item"
 * code = SCT#48694002 "Anxiety (finding)"
-* subject = Reference(Patient/example1-mcode-cancer-patient)
+* subject = Reference(example1-mcode-cancer-patient)
 * onsetDateTime = "2002-01-01"
 
 // example1-family-member-history-aunt.json
@@ -466,7 +466,7 @@ InstanceOf: FamilyMemberHistory
 Description: "Extended example 1: example showing family member history of cancer"
 * id = "example1-family-member-history-aunt"
 * status = #completed "completed"
-* patient = Reference(Patient/example1-mcode-cancer-patient)
+* patient = Reference(example1-mcode-cancer-patient)
 * relationship = http://terminology.hl7.org/CodeSystem/v3-RoleCode#MAUNT "maternal aunt"
 * condition.code = SCT#363443007 "Malignant tumor of ovary (disorder)"
 * condition.onsetAge.value = 69
@@ -481,7 +481,7 @@ InstanceOf: FamilyMemberHistory
 Description: "Extended example 1: example showing family member history of cancer"
 * id = "example1-family-member-history-sister"
 * status = #completed "completed"
-* patient = Reference(Patient/example1-mcode-cancer-patient)
+* patient = Reference(example1-mcode-cancer-patient)
 * relationship = http://terminology.hl7.org/CodeSystem/v3-RoleCode#NSIS "natural sister"
 * condition.code = SCT#254837009 "Malignant neoplasm of breast (disorder)"
 * condition.onsetAge.value = 64
@@ -496,7 +496,7 @@ InstanceOf: FamilyMemberHistory
 Description: "Extended example 1: example showing family member history of cancer"
 * id = "example1-family-member-history-uncle"
 * status = #completed "completed"
-* patient = Reference(Patient/example1-mcode-cancer-patient)
+* patient = Reference(example1-mcode-cancer-patient)
 * relationship = http://terminology.hl7.org/CodeSystem/v3-RoleCode#PUNCLE "paternal uncle"
 * condition.code = SCT#363418001 "Malignant tumor of pancreas (disorder)"
 * condition.contributedToDeath = false
@@ -508,7 +508,7 @@ Description: "Extended example 1: example tumor specimen"
 * id = "example1-specimen-tumor"
 * status = #available "available"
 * type = http://terminology.hl7.org/CodeSystem/v2-0487#TUMOR "Tumor"
-* subject = Reference(Patient/example1-mcode-cancer-patient)
+* subject = Reference(example1-mcode-cancer-patient)
 * receivedTime = "2019-03-05"
 * collection.bodySite = SCT#80248007 "Left breast structure (body structure)"
 
@@ -520,14 +520,14 @@ Description: "Extended example 1: example of pathology findings represnted as a 
 * status = #final "final"
 * category = #SP "Surgical Pathology"
 * code = LNC#22637-3 "Pathology report final diagnosis Narrative"
-* subject = Reference(Patient/example1-mcode-cancer-patient)
+* subject = Reference(example1-mcode-cancer-patient)
 * issued = "2018-03-06T00:00:00Z"
-* specimen = Reference(Specimen/example1-specimen-tumor)
-* result[0] = Reference(Observation/example1-observation-tumor-invasion-negative)
-* result[1] = Reference(Observation/example1-observation-tumor-negative-margins)
-* result[2] = Reference(Observation/example1-observation-tumor-sentinel-nodes)
-* result[3] = Reference(Observation/example1-observation-tumor-size)
-* result[4] = Reference(Observation/example1-observation-tumor-dcis)
+* specimen = Reference(example1-specimen-tumor)
+* result[0] = Reference(example1-observation-tumor-invasion-negative)
+* result[1] = Reference(example1-observation-tumor-negative-margins)
+* result[2] = Reference(example1-observation-tumor-sentinel-nodes)
+* result[3] = Reference(example1-observation-tumor-size)
+* result[4] = Reference(example1-observation-tumor-dcis)
 
 // example1-observation-tumor-invasion-negative.json
 Instance: example1-observation-tumor-invasion-negative
@@ -537,10 +537,10 @@ Description: "Extended example 1: example showing negative invasion for the remo
 * status = #final "final"
 * category = ObsCat#laboratory "Laboratory"
 * code = SCT#370052007 "Status of invasion by tumor (observable entity)" // No LOINC for invasion status
-* subject = Reference(Patient/example1-mcode-cancer-patient)
+* subject = Reference(example1-mcode-cancer-patient)
 * effectiveDateTime = "2018-03-06T00:00:00Z"
 * valueCodeableConcept = SCT#260385009 "Negative (qualifier value)"
-* specimen = Reference(Specimen/example1-specimen-tumor)
+* specimen = Reference(example1-specimen-tumor)
 
 // example1-observation-tumor-negative-margins.json
 Instance: example1-observation-tumor-negative-margins
@@ -550,10 +550,10 @@ Description: "Extended example 1: example showing negative margins for the remov
 * status = #final "final"
 * category = ObsCat#laboratory "Laboratory"
 * code = LNC#44669-0 "Margin involvement in Breast tumor"
-* subject = Reference(Patient/example1-mcode-cancer-patient)
+* subject = Reference(example1-mcode-cancer-patient)
 * effectiveDateTime = "2018-03-06T00:00:00Z"
 * valueCodeableConcept = LNC#LA27151-2 "Uninvolved by invasive carcinoma"
-* specimen = Reference(Specimen/example1-specimen-tumor)
+* specimen = Reference(example1-specimen-tumor)
 
 // example1-observation-tumor-sentinel-nodes.json
 Instance: example1-observation-tumor-sentinel-nodes
@@ -563,12 +563,12 @@ Description: "Extended example 1: example showing 3 sentinel lymph nodes were ex
 * status = #final "final"
 * category = ObsCat#laboratory "Laboratory"
 * code = LNC#92832-5 "Sentinel lymph nodes with metastasis [#] in Cancer specimen"
-* subject = Reference(Patient/example1-mcode-cancer-patient)
+* subject = Reference(example1-mcode-cancer-patient)
 * effectiveDateTime = "2018-03-06T00:00:00Z"
 * component.code = LNC#92833-3 "Lymph nodes examined [#] in Cancer specimen by Light microscopy"
 * component.valueQuantity = UCUM#{Count}
 * component.valueQuantity.value = 3
-* specimen = Reference(Specimen/example1-specimen-tumor)
+* specimen = Reference(example1-specimen-tumor)
 
 // example1-observation-tumor-size.json
 Instance: example1-observation-tumor-size
@@ -578,12 +578,12 @@ Description: "Extended example 1: example showing tumor size"
 * status = #final "final"
 * category = ObsCat#laboratory "Laboratory"
 * code = LNC#21889-1 "Size Tumor"
-* subject = Reference(Patient/example1-mcode-cancer-patient)
+* subject = Reference(example1-mcode-cancer-patient)
 * effectiveDateTime = "2018-03-06T00:00:00Z"
 * component.code = LNC#33728-7 "Size.maximum dimension in Tumor"
 * component.valueQuantity = UCUM#cm
 * component.valueQuantity.value = 2.5
-* specimen = Reference(Specimen/example1-specimen-tumor)
+* specimen = Reference(example1-specimen-tumor)
 
 // example1-observation-dcis.json
 Instance: example1-observation-tumor-dcis
@@ -593,7 +593,7 @@ Description: "Extended example 1: example showing DCIS diagnosis"
 * status = #final "final"
 * category = ObsCat#laboratory "Laboratory"
 * code = LNC#29308-4 "Diagnosis"
-* subject = Reference(Patient/example1-mcode-cancer-patient)
+* subject = Reference(example1-mcode-cancer-patient)
 * effectiveDateTime = "2018-03-06T00:00:00Z"
 * valueCodeableConcept = LNC#85336-6 "DCIS intraductal extension in Breast cancer specimen Qualitative by Light microscopy"
-* specimen = Reference(Specimen/example1-specimen-tumor)
+* specimen = Reference(example1-specimen-tumor)

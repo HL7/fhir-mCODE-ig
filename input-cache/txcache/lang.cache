@@ -2,6 +2,16 @@
 {"code" : {
   "system" : "urn:ietf:bcp:47",
   "code" : "en-US"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "English (Region=United States)",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "urn:ietf:bcp:47",
+  "code" : "en-US"
 }, "valueSet" :{
   "resourceType" : "ValueSet",
   "compose" : {
@@ -78,16 +88,6 @@ v: {
     }]
   }
 }, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK"}####
-v: {
-  "display" : "English (Region=United States)",
-  "severity" : null,
-  "error" : ""
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "urn:ietf:bcp:47",
-  "code" : "en-US"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
 v: {
   "display" : "English (Region=United States)",
   "severity" : null,

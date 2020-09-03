@@ -1,4 +1,5 @@
-value should not start or finish with whitespace
+== Suppressed Messages ==
+# The following code systems are external and not supported by terminology server
 Code System URI "http://ncimeta.nci.nih.gov" is unknown so the code cannot be validated
 Code System URI "http://cancerstaging.org" is unknown so the code cannot be validated
 Code System URI "http://www.genenames.org/geneId" is unknown so the code cannot be validated

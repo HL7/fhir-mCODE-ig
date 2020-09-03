@@ -40,7 +40,7 @@ Description: "mCODE Example for Cancer Disease Status"
 * subject = Reference(mCODEPatientExample01)
 * effectiveDateTime = "2019-04-01"
 * performer = Reference(mCODEPractitionerExample01)
-* valueCodeableConcept = SCT#268910001 "Patient condition improved (finding)"
+* valueCodeableConcept = SCT#268910001 "Patient's condition improved (finding)"
 
 Instance: mCODEComorbidConditionExample01
 InstanceOf: ComorbidCondition

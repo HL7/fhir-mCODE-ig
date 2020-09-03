@@ -23,7 +23,7 @@
     <li><b>Use Case 1</b>: <a href="mCODE-UseCase-RCC.docx">Comparative Effectiveness Analysis and Cooperative Decision Making</a></li>
     <li><b>Use Case 2</b>: <a href="mCODE-UseCase-NGS.docx">Comparative Effectiveness Analysis with Next Generation Sequencing (NGS)</a></li>
 </ul>
-<p>While mCODE ultimately is meant to be applicable to across all types of cancer, the initial focus (and both use cases) has been on solid tumors.</p>
+<p>While mCODE ultimately is meant to be applicable across all types of cancer, the initial focus (and both use cases) has been on solid tumors.</p>
 
 <p>In addition to information obtained from subject matter experts, several pre-existing standards, nomenclatures, and guidelines were consulted in the development of this specification, including:</p>
 <ul>
@@ -48,7 +48,7 @@
 
 <p>There are multiple actors recognized in this IG including:</p>
 <ul>
-    <li><b>Provider</b> - the oncologist, or their representitives, who works to treat cancer patients.</li>
+    <li><b>Provider</b> - the oncologist, or their representatives, who works to treat cancer patients.</li>
     <li><b>Patient</b> - the patient who is suspected to have, or is diagnosed with, cancer.</li>
     <li><b>Application</b> - EHR systems or lab systems.</li>
 </ul>
@@ -66,8 +66,9 @@
     <li><a href="#Outcomes">Outcomes Group</a></li>
 </ul>
 
-<img src="mCodeDiagram.png" alt="mCODE Logical Model" width="1100" />
-
+<br>
+<img src="mCodeDiagram.svg" alt="mCODE Logical Model" width="1100" />
+<br>
 <h4><a name="Patient">Patient Group</a></h4>
 <p>The mCODE <b>Patient</b> group contains the following basic information about the patient:</p>
 <ul>
@@ -95,7 +96,7 @@
     <li><a href="https://codes.iarc.fr/" target="_blank">International Classification of Diseases for Oncology, 3rd version (ICD-O-3)</a></li>
 </ul>
 
-<p>Because the use of these coding systems vary in different institutions, mCODE supports all three. Implementers should be aware, however, that how the cancer diagnosis is coded can affect compliance with <a href="http://hl7.org/fhir/us/core/index.html" target="_blank">US Core</a> (see <a href="implementation.html">Implementation Notes</a> for details). Two attributes and one <a href="https://www.hl7.org/fhir/extensibility.html" target="_blank">FHIR extension</a> of the <a href="https://www.hl7.org/fhir/condition.html" target="_blank">FHIR Condition Resource</a> are involved with coding the cancer diagnosis: the Code, the <a href="StructureDefinition-mcode-histology-morphology-behavior.html">HistologyMorphologyBehavior</a> extension, and the Body Site. How these attributes are used, depending on the coding system, is captured in the table below:</p>
+<p>Because the use of these code systems vary in different institutions, mCODE supports all three. Implementers should be aware, however, that how the cancer diagnosis is coded can affect compliance with <a href="http://hl7.org/fhir/us/core/index.html" target="_blank">US Core</a> (see <a href="implementation.html">Implementation Notes</a> for details). Two attributes and one <a href="https://www.hl7.org/fhir/extensibility.html" target="_blank">FHIR extension</a> of the <a href="https://www.hl7.org/fhir/condition.html" target="_blank">FHIR Condition Resource</a> are involved with coding the cancer diagnosis: the Code, the <a href="StructureDefinition-mcode-histology-morphology-behavior.html">HistologyMorphologyBehavior</a> extension, and the Body Site. How these attributes are used, depending on the code system, is captured in the table below:</p>
 <!--
 <table class="tg">
     <tr>
@@ -152,7 +153,7 @@
 
 
 <h5><a name="TumorMarkers">Tumor Marker Tests</a></h5>
-<p>Tumor markers are key prognostic factors in calculating cancer staging, identifying treatment options, and monitoring progression of disease. For example, an abnormal increase in prostate-specific antigen (PSA) levels is a prognostic factor for prostate cancer. Other tumor markers include estrogen receptor (ER) status, progresterone receptor (PR) status, carcinoembryonic antigen (CEA) levels, among others. See the profile <a href="StructureDefinition-mcode-tumor-marker.html">TumorMarkerTest</a> for full details.</p>
+<p>Tumor markers are key prognostic factors in calculating cancer staging, identifying treatment options, and monitoring progression of disease. For example, an abnormal increase in prostate-specific antigen (PSA) levels is a prognostic factor for prostate cancer. Other tumor markers include estrogen receptor (ER) status, progesterone receptor (PR) status, carcinoembryonic antigen (CEA) levels, among others. See the profile <a href="StructureDefinition-mcode-tumor-marker.html">TumorMarkerTest</a> for full details.</p>
 
 <p>We distinguish Tumor Marker Tests from genetic tests that are measured at the DNA, RNA, or chromosomal level, addressed in the <a href="#Genomics">Genomics</a> section.
 </p>
@@ -172,7 +173,7 @@
         </ul>
     </li>
 </ul>
-<p>Like US Core, mCODE gives preference to representing medications using the National Library of Medicine (NLM) <a href = "https://www.nlm.nih.gov/research/umls/rxnorm/" target="_blank">RxNorm</a> terminology - a coding standard established by the Office of the National Coordinator (ONC) for the exchange of drugs. However, RxNorm is restricted to FDA-approved drugs and does not include clinical trial drugs. To address this limitation, mCODE allows for the inclusion of other coding systems like the <a href="https://ncit.nci.nih.gov/ncitbrowser/" target="_blank">NCI Thesaurus (NCIT)</a> to represent clinical trial oncology drugs.</p>
+<p>Like US Core, mCODE gives preference to representing medications using the National Library of Medicine (NLM) <a href = "https://www.nlm.nih.gov/research/umls/rxnorm/" target="_blank">RxNorm</a> terminology - a coding standard established by the Office of the National Coordinator (ONC) for the exchange of drugs. However, RxNorm is restricted to FDA-approved drugs and does not include clinical trial drugs. To address this limitation, mCODE allows for the inclusion of other code systems like the <a href="https://ncit.nci.nih.gov/ncitbrowser/" target="_blank">NCI Thesaurus (NCIT)</a> to represent clinical trial oncology drugs.</p>
 
 <h4><a name="Genomics">Genomics Group</a></h4>
 <p>mCODE includes the minimal set of genomics related elements relevant to capture in an EHR to inform cancer assessment and treatment options. The approach is based on the <a href="http://hl7.org/fhir/uv/genomics-reporting/index.html" target="_blank">HL7 CGWG Clinical Genomics Reporting Implementation Guide</a>. However, mCODE simplifies genomics reporting to single discrete variants or to variants that were found in a given DNA region. Three profiles relate to the capture of clinical genomics data:</p>

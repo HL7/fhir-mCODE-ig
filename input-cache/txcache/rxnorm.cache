@@ -2,6 +2,16 @@
 {"code" : {
   "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
   "code" : "349472"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "gefitinib 250 MG Oral Tablet",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+  "code" : "349472"
 }, "valueSet" :{
   "resourceType" : "ValueSet",
   "compose" : {
@@ -38,16 +48,6 @@ v: {
     }]
   }
 }, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK"}####
-v: {
-  "display" : "gefitinib 250 MG Oral Tablet",
-  "severity" : null,
-  "error" : ""
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
-  "code" : "349472"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
 v: {
   "display" : "gefitinib 250 MG Oral Tablet",
   "severity" : null,
@@ -115,7 +115,7 @@ v: {
   "display" : "cyclophosphamide"
 }, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
 v: {
-  "display" : "Cyclophosphamide",
+  "display" : "cyclophosphamide",
   "severity" : null,
   "error" : ""
 }
@@ -181,7 +181,7 @@ v: {
   "display" : "PACLitaxel"
 }, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
 v: {
-  "display" : "Paclitaxel",
+  "display" : "PACLitaxel",
   "severity" : null,
   "error" : ""
 }

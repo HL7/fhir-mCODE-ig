@@ -74,7 +74,6 @@ Description: "Extended example 1: example showing ECOG performance status"
 * id = "example1-mcode-ecog-performance-status"
 * status = #final "final"
 * category = ObsCat#survey
-* code = LNC#89247-1 "ECOG Performance Status score"
 * subject = Reference(example1-mcode-cancer-patient)
 * effectiveDateTime = "2018-03-01"
 * performer = Reference(example1-practitioner1-mcode)

@@ -1,6 +1,7 @@
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://varnomen.hgvs.org",
+<<<<<<< HEAD
   "code" : "NC_000016.10:g.23603471G>T"
 }, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
 v: {
@@ -97,22 +98,42 @@ v: {
   "display" : "",
   "severity" : "error",
   "error" : "Expected \"del\" (at char 27), (line:1, col:28); The code \"NG_005905.2:g.126148_126152GTAAA[1]\" is not valid in the system http://varnomen.hgvs.org; The code provided (http://varnomen.hgvs.org#NG_005905.2:g.126148_126152GTAAA[1]) is not valid"
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://varnomen.hgvs.org",
-  "code" : "NG_005905.2:g.126148_126152GTAAA[1]",
-  "display" : "NG_005905.2:g.126148_126152GTAAA[1]"
+=======
+  "code" : "NC_000019.8:g.1171707G>A"
 }, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
 v: {
   "display" : "",
   "severity" : "error",
-  "error" : "Expected \"del\" (at char 27), (line:1, col:28); The code \"NG_005905.2:g.126148_126152GTAAA[1]\" is not valid in the system http://varnomen.hgvs.org; The code provided (http://varnomen.hgvs.org#NG_005905.2:g.126148_126152GTAAA[1]) is not valid in the value set 'All codes known to the system'"
+  "error" : "The code system \"http://varnomen.hgvs.org\" is not known (encountered paired with code = \"NC_000019.8:g.1171707G>A\"); The code provided (http://varnomen.hgvs.org#NC_000019.8:g.1171707G>A) is not  valid in the value set All codes known to the system"
+>>>>>>> master
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://varnomen.hgvs.org",
+<<<<<<< HEAD
+  "code" : "NG_005905.2:g.126148_126152GTAAA[1]",
+  "display" : "NG_005905.2:g.126148_126152GTAAA[1]"
+=======
+  "code" : "NG_005905.2:g.126148_126152GTAAA[1]"
+>>>>>>> master
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+<<<<<<< HEAD
+  "error" : "Expected \"del\" (at char 27), (line:1, col:28); The code \"NG_005905.2:g.126148_126152GTAAA[1]\" is not valid in the system http://varnomen.hgvs.org; The code provided (http://varnomen.hgvs.org#NG_005905.2:g.126148_126152GTAAA[1]) is not valid in the value set 'All codes known to the system'"
+=======
+  "error" : "The code system \"http://varnomen.hgvs.org\" is not known (encountered paired with code = \"NG_005905.2:g.126148_126152GTAAA[1]\"); The code provided (http://varnomen.hgvs.org#NG_005905.2:g.126148_126152GTAAA[1]) is not  valid in the value set All codes known to the system"
+>>>>>>> master
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://varnomen.hgvs.org",
+<<<<<<< HEAD
   "code" : "NC_000016.10:g.23603471G>T"
+=======
+  "code" : "NC_000019.8:g.1171707G>A"
+>>>>>>> master
 }, "valueSet" :{
   "resourceType" : "ValueSet",
   "compose" : {
@@ -122,14 +143,24 @@ v: {
   }
 }, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
 v: {
+<<<<<<< HEAD
   "display" : "NC_000016.10:g.23603471G>T",
   "severity" : null,
   "error" : ""
+=======
+  "display" : "",
+  "severity" : "error",
+  "error" : "CodeSystem uri 'http://varnomen.hgvs.org' is unknown"
+>>>>>>> master
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://varnomen.hgvs.org",
+<<<<<<< HEAD
   "code" : "NC_000016.10:g.23603471G>T"
+=======
+  "code" : "NG_005905.2:g.126148_126152GTAAA[1]"
+>>>>>>> master
 }, "valueSet" :{
   "resourceType" : "ValueSet",
   "compose" : {
@@ -137,6 +168,7 @@ v: {
       "system" : "http://varnomen.hgvs.org"
     }]
   }
+<<<<<<< HEAD
 }, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK"}####
 v: {
   "display" : "NC_000016.10:g.23603471G>T",
@@ -152,6 +184,13 @@ v: {
   "display" : "NC_000016.10:g.23603471G>T",
   "severity" : null,
   "error" : ""
+=======
+}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "CodeSystem uri 'http://varnomen.hgvs.org' is unknown"
+>>>>>>> master
 }
 -------------------------------------------------------------------------------------
 {"hierarchical" : true, "valueSet" :{
@@ -163,6 +202,7 @@ v: {
   }
 }}####
 e: {
+<<<<<<< HEAD
   "valueSet" : {
   "resourceType" : "ValueSet",
   "status" : "active",
@@ -176,5 +216,8 @@ e: {
   }
 },
   "error" : ""
+=======
+  "error" : "Error from server: Unable to provide support for code system http://varnomen.hgvs.org"
+>>>>>>> master
 }
 -------------------------------------------------------------------------------------

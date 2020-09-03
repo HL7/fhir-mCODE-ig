@@ -3,7 +3,7 @@ Parent:     USCoreObservationLab
 Id:         mcode-cancer-genetic-variant
 Title:      "Cancer Genetic Variant"
 Description:    "Records an alteration in the most common DNA nucleotide sequence. The term variant can be used to describe an alteration that may be benign, pathogenic, or of unknown significance. The term variant is increasingly being used in place of the term mutation."
-* status, code, subject, effective[x], valueCodeableConcept, method MS
+* status and code and subject and effective[x] and valueCodeableConcept and method MS
 * bodySite 0..0
 * referenceRange 0..0
 * hasMember 0..0
@@ -94,15 +94,15 @@ Title:          "Tumor Marker"
 Description:    "The result of a tumor marker test. Tumor marker tests are generally used to guide cancer treatment decisions and monitor treatment, as well as to predict the chance of recovery and cancer recurrence. A tumor marker is a substance found in tissue or blood or other body fluids that may be a sign of cancer or certain benign (noncancer) conditions. Most tumor markers are made by both normal cells and cancer cells, but they are made in larger amounts by cancer cells. A tumor marker may help to diagnose cancer, plan treatment, or find out how well treatment is working or if cancer has come back. Examples of tumor markers include CA-125 (in ovarian cancer), CA 15-3 (in breast cancer), CEA (in colon cancer), and PSA (in prostate cancer). Tumor markers differ from genetic markers in that they are measured at the levels of the protein and substance post-RNA protein synthesis. (Definition adapted from: [NCI Dictionary of Cancer Terms](https://www.cancer.gov/publications/dictionaries/cancer-terms/def/tumor-marker-test) and [Cancer.Net](https://www.cancer.net/navigating-cancer-care/diagnosing-cancer/tests-and-procedures/tumor-marker-tests)).
 
 Implementation note: The data value for TumorMarker has cardinality is 0..1 (required if known) because when the test result is indeterminate, no quantitative data value will be reported. Instead, the reason for the null value will be reported in the DataAbsentReason field."
-* status, code, subject, effective[x], value[x] MS
+* status and code and subject and effective[x] and value[x] MS
 * bodySite 0..0
 * referenceRange 0..1
 * hasMember 0..0
 * component 0..0
 * interpretation 0..1
 * subject 1..1
-* basedOn only Reference(ServiceRequest | MedicationRequest)
-* partOf only Reference(MedicationAdministration | MedicationStatement | Procedure)
+* basedOn only Reference(ServiceRequest or MedicationRequest)
+* partOf only Reference(MedicationAdministration or MedicationStatement or Procedure)
 * code from TumorMarkerTestVS (extensible)
 * subject only Reference(CancerPatient)
 * focus only Reference(CancerConditionParent)
@@ -119,7 +119,7 @@ Description:    "A small sample of blood, hair, skin, amniotic fluid (the fluid 
 * type from GeneticSpecimenTypeVS
 * collection.bodySite.extension contains
     Laterality named laterality 0..1
-* collection.bodySite, collection.bodySite.extension[laterality] MS
+* collection.bodySite and collection.bodySite.extension[laterality] MS
 
 
 Profile:    CancerGenomicsReport
@@ -129,7 +129,7 @@ Title:      "Cancer Genomics Report"
 Description:    "Genetic analysis summary report. The report may include one or more tests, with two distinct test types. The first type is a targeted mutation test, where a specific mutation on a specific gene is tested for. The result is either positive or negative for that mutation. The second type is a more general test for variants. This type of test returns the identity of variants found in a certain region of the genome.
 The identity of non-genomic laboratory tests is typically represented by a LOINC code. However, many genetic tests and panels do not have LOINC codes, although some might have an identifier in NCBI Genetic Testing Registry (GTR), a central location for voluntary submission of genetic test information by providers. To identify the diagnostic report, the name of the report must be in the text sub-field of the code structure. If there is a coded identifier from GTR, LOINC, or other source, then it should be included into the the code sub-field of the code structure. If there is no suitable code, the code can be omitted."
 * specimen MS
-* basedOn only Reference (ServiceRequest | CarePlan)
+* basedOn only Reference (ServiceRequest or CarePlan)
 * subject only Reference(CancerPatient)
 * category contains GenomicsCategory 1..1
 * category[GenomicsCategory] = DiagnosticService#GE

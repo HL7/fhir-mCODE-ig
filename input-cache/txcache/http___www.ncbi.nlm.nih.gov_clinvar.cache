@@ -1,4 +1,5 @@
 -------------------------------------------------------------------------------------
+<<<<<<< HEAD
 {"hierarchical" : false, "valueSet" :{
   "resourceType" : "ValueSet",
   "compose" : {
@@ -26,11 +27,25 @@ v: {
   "display" : "",
   "severity" : "error",
   "error" : "CodeSystem uri 'http://www.ncbi.nlm.nih.gov/clinvar' is unknown"
+=======
+{"code" : {
+  "system" : "http://www.ncbi.nlm.nih.gov/clinvar",
+  "code" : "619728"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code system \"http://www.ncbi.nlm.nih.gov/clinvar\" is not known (encountered paired with code = \"619728\"); The code provided (http://www.ncbi.nlm.nih.gov/clinvar#619728) is not  valid in the value set All codes known to the system"
+>>>>>>> master
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://www.ncbi.nlm.nih.gov/clinvar",
+<<<<<<< HEAD
   "code" : "128144"
+=======
+  "code" : "619728"
+>>>>>>> master
 }, "valueSet" :{
   "resourceType" : "ValueSet",
   "compose" : {

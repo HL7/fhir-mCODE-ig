@@ -230,8 +230,9 @@ Description: "Extended example 1: example showing Oncotype DX breast recurrence 
 * subject = Reference(example1-mcode-cancer-patient)
 * effectiveDateTime = "2018-03-20"
 * performer = Reference(example1-practitioner1-mcode)
-* valueQuantity.unit = "ScoreOf"
-* valueQuantity.value = 37
+* valueQuantity = UCUM#{ScoreOf}
+* valueQuantity.value = 47
+* interpretation = #H "High"
 
 // example1-mcode-cancer-genomics-report.json
 Instance: example1-mcode-cancer-genomics-report

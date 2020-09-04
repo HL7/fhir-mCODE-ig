@@ -191,7 +191,7 @@ Description: "Extended example 1: example showing ER status"
 * subject = Reference(example1-mcode-cancer-patient)
 * effectiveDateTime = "2018-03-10"
 * performer = Reference(example1-practitioner1-mcode)
-* valueCodeableConcept = SCT#10828004 "Positive (qualifier value)"
+* valueCodeableConcept = LNC#LA6576-8 "Positive"
 
 // example1-mcode-tumor-marker-pr.json
 Instance: example1-mcode-tumor-marker-pr
@@ -204,7 +204,7 @@ Description: "Extended example 1: example showing PR status"
 * subject = Reference(example1-mcode-cancer-patient)
 * effectiveDateTime = "2018-03-10"
 * performer = Reference(example1-practitioner1-mcode)
-* valueCodeableConcept = SCT#260385009 "Negative (qualifier value)"
+* valueCodeableConcept = LNC#LA6577-6 "Negative"
 
 // example1-mcode-tumor-marker-her2.json
 Instance: example1-mcode-tumor-marker-her2
@@ -217,7 +217,7 @@ Description: "Extended example 1: example showing HER2 status"
 * subject = Reference(example1-mcode-cancer-patient)
 * effectiveDateTime = "2018-03-10"
 * performer = Reference(example1-practitioner1-mcode)
-* valueCodeableConcept = SCT#260385009 "Negative (qualifier value)"
+* valueCodeableConcept = LNC#LA6577-6 "Negative"
 
 // example1-mcode-tumor-marker-21-gene-panel.json
 Instance: example1-mcode-tumor-marker-21-gene-panel

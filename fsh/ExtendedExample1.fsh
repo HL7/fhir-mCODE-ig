@@ -242,7 +242,6 @@ Description: "Extended example 1: example of gene panel report"
 * status = #final "final"
 * category[0] = http://terminology.hl7.org/CodeSystem/v2-0074#LAB
 * category[1] = http://terminology.hl7.org/CodeSystem/v2-0074#GE
-* code = LNC#81247-9 "Master HL7 genetic variant reporting panel"
 * subject = Reference(example1-mcode-cancer-patient)
 * effectiveDateTime = "2020-03-15"
 * issued = "2020-03-15T00:00:01+00:00"

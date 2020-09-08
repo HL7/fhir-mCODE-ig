@@ -319,6 +319,11 @@ Description: "Extended example 1: example showing chemotherapy medication"
 * dosage.doseAndRate.doseQuantity = UCUM#mg
 * dosage.doseAndRate.doseQuantity.value = 93.26
 
+// Once every 3 weeks
+* dosage.maxDosePerPeriod.numerator.value = 1
+* dosage.maxDosePerPeriod.denominator = UCUM#wk "week"
+* dosage.maxDosePerPeriod.denominator.value = 3
+
 // example1-mcode-cancer-related-medication-chemo-cyclophosphamide.json
 Instance: example1-mcode-cancer-related-medication-chemo-cyclophosphamide
 InstanceOf: CancerRelatedMedicationStatement
@@ -335,6 +340,11 @@ Description: "Extended example 1: example showing chemotherapy medication"
 * dosage.route = SCT#47625008 "Intravenous route (qualifier value)"
 * dosage.doseAndRate.doseQuantity = UCUM#mg
 * dosage.doseAndRate.doseQuantity.value = 932.59
+
+// Once every 3 weeks
+* dosage.maxDosePerPeriod.numerator.value = 1
+* dosage.maxDosePerPeriod.denominator = UCUM#wk "week"
+* dosage.maxDosePerPeriod.denominator.value = 3
 
 
 // example1-mcode-cancer-related-medication-chemo-paclitaxel.json
@@ -354,6 +364,11 @@ Description: "Extended example 1: example showing chemotherapy medication"
 * dosage.doseAndRate.doseQuantity = UCUM#mg
 * dosage.doseAndRate.doseQuantity.value = 272.01
 
+// Once every 3 weeks
+* dosage.maxDosePerPeriod.numerator.value = 1
+* dosage.maxDosePerPeriod.denominator = UCUM#wk "week"
+* dosage.maxDosePerPeriod.denominator.value = 3
+
 // example1-mcode-cancer-related-medication-anastrozole.json
 Instance: example1-mcode-cancer-related-medication-anastrozole
 InstanceOf: CancerRelatedMedicationStatement
@@ -370,6 +385,11 @@ Description: "Extended example 1: example showing chemotherapy medication"
 * dosage.route = SCT#26643006 "Oral route (qualifier value)"
 * dosage.doseAndRate.doseQuantity = UCUM#mg
 * dosage.doseAndRate.doseQuantity.value = 1
+
+// Once every 3 weeks
+* dosage.maxDosePerPeriod.numerator.value = 1
+* dosage.maxDosePerPeriod.denominator = UCUM#d "day"
+* dosage.maxDosePerPeriod.denominator.value = 1
 
 // example1-practitioner1-mcode.json
 Instance: example1-practitioner1-mcode

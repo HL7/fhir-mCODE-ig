@@ -309,7 +309,7 @@ Description: "Extended example 1: example showing chemotherapy medication"
 * id = "example1-mcode-cancer-related-medication-chemo-doxorubicin"
 * extension[treatmentIntent].valueCodeableConcept = SCT#373808002 "Curative - procedure intent (qualifier value)"
 * status = #active "active"
-* category = http://terminology.hl7.org/CodeSystem/medication-statement-category#outpatient
+* category = MedCat#outpatient
 * medicationCodeableConcept = RXN#3639 "DOXOrubicin"
 * subject = Reference(example1-mcode-cancer-patient)
 * effectiveDateTime = "2019-04-01"
@@ -344,7 +344,7 @@ Description: "Extended example 1: example showing chemotherapy medication"
 * id = "example1-mcode-cancer-related-medication-chemo-paclitaxel"
 * extension[treatmentIntent].valueCodeableConcept = SCT#373808002 "Curative - procedure intent (qualifier value)"
 * status = #active "active"
-* category = http://terminology.hl7.org/CodeSystem/medication-statement-category#outpatient
+* category = MedCat#outpatient
 * medicationCodeableConcept = RXN#56946 "PACLitaxel"
 * subject = Reference(example1-mcode-cancer-patient)
 * effectiveDateTime = "2018-04-01"
@@ -361,7 +361,7 @@ Description: "Extended example 1: example showing chemotherapy medication"
 * id = "example1-mcode-cancer-related-medication-anastrozole"
 * extension[treatmentIntent].valueCodeableConcept = SCT#373808002 "Curative - procedure intent (qualifier value)"
 * status = #active "active"
-* category = http://terminology.hl7.org/CodeSystem/medication-statement-category#community
+* category = MedCat#community
 * medicationCodeableConcept = RXN#84857 "anastrozole"
 * subject = Reference(example1-mcode-cancer-patient)
 * effectiveDateTime = "2018-05-01"

@@ -491,7 +491,8 @@ Description: "Extended example 1: example showing family member history of cance
 * patient = Reference(example1-mcode-cancer-patient)
 * relationship = http://terminology.hl7.org/CodeSystem/v3-RoleCode#PUNCLE "paternal uncle"
 * condition.code = SCT#363418001 "Malignant tumor of pancreas (disorder)"
-* condition.contributedToDeath = false
+* condition.contributedToDeath = true
+* deceasedBoolean = true
 
 // example1-specimen-tumor.json
 Instance: example1-specimen-tumor

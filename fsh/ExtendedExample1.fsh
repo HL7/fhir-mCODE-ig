@@ -483,9 +483,7 @@ InstanceOf: USCoreCondition
 Description: "Extended example 1: example showing comorbid condition (anxiety)"
 * id = "example1-us-core-condition-anxiety"
 * clinicalStatus = ClinStatus#active "Active"
-* clinicalStatus.text = "Active"
 * verificationStatus = VerStatus#confirmed "Confirmed"
-* verificationStatus.text = "Confirmed"
 * category = ConditionCategory#problem-list-item "Problem List Item"
 * code = SCT#48694002 "Anxiety (finding)"
 * subject = Reference(example1-mcode-cancer-patient)

@@ -380,8 +380,8 @@ Description: "Extended example 1: example practitioner"
 * name.family = "Anydoc"
 * name.given[0] = "Kyle"
 * name.prefix[0] = "Dr."
-* address.use = #home
-* address.line[0] = "567 Healthcare Drive"
+* address.use = #work
+* address.line[0] = "123 Corporate Drive"
 * address.city = "Anytown"
 * address.state = "MA"
 * address.postalCode = "12345"
@@ -389,6 +389,42 @@ Description: "Extended example 1: example practitioner"
 * gender = #male
 * qualification.code = http://terminology.hl7.org/CodeSystem/v2-0360#MD
 * qualification.code.coding[0].version = "2.7"
+
+
+Instance: example1-practitioner2-mcode
+InstanceOf: USCorePractitioner
+Description: "Extended example 1: example practitioner (pathologist)"
+* id = "example1-practitioner1-mcode"
+* identifier[NPI].value = "1122334455"
+* name.family = "Pathologist"
+* name.given[0] = "Sam"
+* name.prefix[0] = "Dr."
+* address.use = #work
+* address.line[0] = "123 Corporate Drive"
+* address.city = "Anytown"
+* address.state = "MA"
+* address.postalCode = "12345"
+* address.country = "US"
+* gender = #female
+* qualification.code = http://terminology.hl7.org/CodeSystem/v2-0360#MD
+* qualification.code.coding[0].version = "2.7"
+
+Instance: example1-organization1-mcode
+InstanceOf: Organization
+Description: "Extended example 1: example organization"
+* id = "example1-organization1-mcode"
+* active = true
+* type = http://hl7.org/fhir/ValueSet/organization-type#prov "Healthcare Provider"
+* name = "Physician Services, Inc."
+* telecom.system = #phone
+* telecom.value = "999-999-9999"
+* telecom.use = #work
+* address.line = "123 Corporate Drive"
+* address.city = "Anytown"
+* address.state = "MA"
+* address.postalCode = "12345"
+* address.country = "US"
+
 
 // example1-us-core-procedure-biopsy.json
 Instance: example1-us-core-procedure-biopsy
@@ -520,6 +556,8 @@ Description: "Extended example 1: example of pathology findings represnted as a 
 * result[2] = Reference(example1-observation-tumor-sentinel-nodes)
 * result[3] = Reference(example1-observation-tumor-size)
 * result[4] = Reference(example1-observation-tumor-dcis)
+* performer = Reference(example1-organization1-mcode)
+* resultsInterpreter = Reference(example1-practitioner2-mcode)
 
 // example1-observation-tumor-invasion-negative.json
 Instance: example1-observation-tumor-invasion-negative

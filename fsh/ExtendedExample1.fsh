@@ -414,7 +414,7 @@ Description: "Extended example 1: example practitioner"
 Instance: example1-practitioner2-mcode
 InstanceOf: USCorePractitioner
 Description: "Extended example 1: example practitioner (pathologist)"
-* id = "example1-practitioner1-mcode"
+* id = "example1-practitioner2-mcode"
 * identifier[NPI].value = "1122334455"
 * name.family = "Pathologist"
 * name.given[0] = "Sam"

@@ -72,7 +72,7 @@ The patient is 2 years out from surgery and has undergone surveillance imaging a
         - [`example1-mcode-tumor-marker-er`](Observation-example1-mcode-tumor-marker-er.html)
         - [`example1-mcode-tumor-marker-pr`](Observation-example1-mcode-tumor-marker-pr.html)
         - [`example1-mcode-tumor-marker-her2`](Observation-example1-mcode-tumor-marker-her2.html)
-        - [`example1-mcode-tumor-marker-21-gene-panel`](Observation-example1-mcode-tumor-marker-21-gene-panel.html)
+        - [`example1-mcode-tumor-marker-oncotype-dx`](Observation-example1-mcode-tumor-marker-oncotype-dx.html)
     - [`example1-mcode-cancer-genomics-report`](DiagnosticReport-example1-mcode-cancer-genomics-report.html) ([CancerGenomicsReport])[^1]
         - [`example1-mcode-genomic-region-studied`](Observation-example1-mcode-genomic-region-studied.html) ([GenomicRegionStudied])
         - [`example1-mcode-genetic-specimen`](Specimen-example1-mcode-genetic-specimen.html) ([GeneticSpecimen])

@@ -219,11 +219,11 @@ Description: "Extended example 1: example showing HER2 status"
 * performer = Reference(example1-practitioner1-mcode)
 * valueCodeableConcept = LNC#LA6577-6 "Negative"
 
-// example1-mcode-tumor-marker-21-gene-panel.json
-Instance: example1-mcode-tumor-marker-21-gene-panel
+// example1-mcode-tumor-marker-oncotype-dx.json
+Instance: example1-mcode-tumor-marker-oncotype-dx
 InstanceOf: TumorMarker
-Description: "Extended example 1: example showing Oncotype DX breast recurrence score"
-* id = "example1-mcode-tumor-marker-21-gene-panel"
+Description: "Extended example 1: example showing Oncotype DX breast recurrence score. Note that this test has no assigned LOINC code, so GTR is being used as a backup. Only the score from the Oncotype DX panel (as opposed to variant data from the genes in the panel) is represented here."
+* id = "example1-mcode-tumor-marker-oncotype-dx"
 * status = #final "final"
 * category = ObsCat#laboratory
 * code = https://www.ncbi.nlm.nih.gov/gtr/tests#509910 "Oncotype DX Breast Recurrence Score Assay"

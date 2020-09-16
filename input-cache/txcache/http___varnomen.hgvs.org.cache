@@ -141,3 +141,31 @@ v: {
   "error" : "Expected \"del\" (at char 27), (line:1, col:28); The code \"NG_005905.2:g.126148_126152GTAAA[1]\" is not valid in the system http://varnomen.hgvs.org; The code provided (http://varnomen.hgvs.org#NG_005905.2:g.126148_126152GTAAA[1]) is not valid in the value set 'All codes known to the system'"
 }
 -------------------------------------------------------------------------------------
+{"hierarchical" : false, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://varnomen.hgvs.org"
+    }]
+  }
+}}####
+e: {
+  "valueSet" : {
+  "resourceType" : "ValueSet",
+  "status" : "active",
+  "expansion" : {
+    "identifier" : "urn:uuid:5cd05d83-5e0a-499f-bbdc-98c54161a4c0",
+    "timestamp" : "2020-09-14T20:16:45.192Z",
+    "parameter" : [{
+      "name" : "limitedExpansion",
+      "valueBoolean" : true
+    },
+    {
+      "name" : "excludeNested",
+      "valueBoolean" : true
+    }]
+  }
+},
+  "error" : ""
+}
+-------------------------------------------------------------------------------------

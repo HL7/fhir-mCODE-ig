@@ -42,7 +42,9 @@ In addition to the examples provided above, we also have developed this extended
 
 Patient M is a 55 year old non-Hispanic white female with a past medical history significant for depression, a 20-pack-year history of smoking (current smoker), anxiety, and hypertension. Her family history was significant for a maternal aunt with ovarian cancer at age 69, a sister with breast cancer at age 64, and deceased paternal uncle due to pancreatic cancer.
 
-She presented for routine screening mammography in March 2018. Performance status was ECOG 0. An abnormality was detected, followed by ultrasound-guided biopsy which revealed a Grade 2 invasive ductal adenocarcinoma, ER positive, PR negative, HER2 negative. Pre-operative workup revealed no other disease in either breast. Genetic counseling ordered a [7 gene panel](https://www.invitae.com/en/physician/tests/50001/), which revealed a [pathogenic variant in PALB2 (`c.3549C>A`)](https://www.ncbi.nlm.nih.gov/clinvar/variation/128144/).
+She presented for routine screening mammography in March 2018. Performance status was ECOG 0. An abnormality was detected, followed by ultrasound-guided biopsy which revealed a Grade 2 invasive ductal adenocarcinoma, ER positive, PR negative, HER2 negative. Pre-operative workup revealed no other disease in either breast. Genetic counseling ordered a [7 gene panel](https://www.invitae.com/en/physician/tests/50001/), which revealed a [pathogenic variant in PALB2 (`c.3549C>A`)](https://www.ncbi.nlm.nih.gov/clinvar/variation/128144/).[^1]
+
+[^1]: For the purposes of this example, we are assuming that a single relevant variant was returned by the clinical genomics laboratory. In practice, genomics testing may return (many) more variants. The standards for representing genomics data are currently under development by the [HL7 Clinical Genomics Work Group](https://confluence.hl7.org/display/CGW/WorkGroup+Home), and should be adopted by mCODE when completed.
 
 A partial mastectomy was performed, revealing a 2.5 cm tumor with no lymph-vascular invasion and negative margins of excision. Ductal carcinoma in situ was noted, also completely excised. Three sentinel lymph nodes were excised and were negative for metastatic carcinoma. The primary tumor was staged as cT3N0.
 
@@ -71,7 +73,7 @@ The patient is 2 years out from surgery and has undergone surveillance imaging a
         - [`example1-mcode-tumor-marker-pr`](Observation-example1-mcode-tumor-marker-pr.html)
         - [`example1-mcode-tumor-marker-her2`](Observation-example1-mcode-tumor-marker-her2.html)
         - [`example1-mcode-tumor-marker-21-gene-panel`](Observation-example1-mcode-tumor-marker-21-gene-panel.html)
-    - [`example1-mcode-cancer-genomics-report`](DiagnosticReport-example1-mcode-cancer-genomics-report.html) ([CancerGenomicsReport])
+    - [`example1-mcode-cancer-genomics-report`](DiagnosticReport-example1-mcode-cancer-genomics-report.html) ([CancerGenomicsReport])[^1]
         - [`example1-mcode-genomic-region-studied`](Observation-example1-mcode-genomic-region-studied.html) ([GenomicRegionStudied])
         - [`example1-mcode-genetic-specimen`](Specimen-example1-mcode-genetic-specimen.html) ([GeneticSpecimen])
         - [`example1-mcode-cancer-genetic-variant`](Observation-example1-mcode-cancer-genetic-variant.html) ([CancerGeneticVariant])

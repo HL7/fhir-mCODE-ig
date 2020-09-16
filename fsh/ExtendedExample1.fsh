@@ -434,7 +434,7 @@ InstanceOf: Organization
 Description: "Extended example 1: example organization"
 * id = "example1-organization1-mcode"
 * active = true
-* type = http://hl7.org/fhir/ValueSet/organization-type#prov "Healthcare Provider"
+* type = http://terminology.hl7.org/CodeSystem/organization-type#prov "Healthcare Provider"
 * name = "Physician Services, Inc."
 * telecom.system = #phone
 * telecom.value = "999-999-9999"

@@ -213,7 +213,7 @@ Description: "Extended example 1: example showing HER2 status"
 * id = "example1-mcode-tumor-marker-her2"
 * status = #final "final"
 * category = ObsCat#laboratory
-* code = LNC#72382-5 "HER2 [Units/volume] in Tissue by Immunoassay"
+* code = LNC#48676-1 "HER2 [Interpretation] in Tissue"
 * subject = Reference(example1-mcode-cancer-patient)
 * effectiveDateTime = "2018-03-10"
 * performer = Reference(example1-practitioner1-mcode)

@@ -1,6 +1,8 @@
 .DS_Store
 Thumbs.db
 /input-cache/org.hl7.fhir.publisher.jar
+/input-cache/schemas
+/input-cache/schemas-r5
 /output
 /template
 /temp
@@ -8,3 +10,4 @@ Thumbs.db
 ig.ini
 package.json
 package-list.json
+SUSHI-GENERATED-FILES.md

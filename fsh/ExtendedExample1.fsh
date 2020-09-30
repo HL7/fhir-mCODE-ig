@@ -518,9 +518,9 @@ Description: "Extended example 1: example showing family member history of cance
 * patient = Reference(example1-mcode-cancer-patient)
 * relationship = http://terminology.hl7.org/CodeSystem/v3-RoleCode#MAUNT "maternal aunt"
 * condition.code = SCT#363443007 "Malignant tumor of ovary (disorder)"
-* condition.onsetAge.value = 69
-* condition.onsetAge = UCUM#a "yr"
-* condition.contributedToDeath = false
+* condition.onsetAge = 69.0 'a'
+//* condition.onsetAge.value = 69.0
+//* condition.onsetAge = UCUM#a "years"
 
 // example1-family-member-history-sister.json
 Instance: example1-family-member-history-sister
@@ -531,8 +531,9 @@ Description: "Extended example 1: example showing family member history of cance
 * patient = Reference(example1-mcode-cancer-patient)
 * relationship = http://terminology.hl7.org/CodeSystem/v3-RoleCode#NSIS "natural sister"
 * condition.code = SCT#254837009 "Malignant neoplasm of breast (disorder)"
-* condition.onsetAge.value = 64
-* condition.onsetAge = UCUM#a "yr"
+* condition.onsetAge = 64.0 'a'
+//* condition.onsetAge.value = 64.0
+//* condition.onsetAge = UCUM#a "years"
 * condition.contributedToDeath = false
 
 // example1-family-member-history-uncle.json

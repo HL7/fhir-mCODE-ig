@@ -519,7 +519,7 @@ Description: "Extended example 1: example showing family member history of cance
 * relationship = http://terminology.hl7.org/CodeSystem/v3-RoleCode#MAUNT "maternal aunt"
 * condition.code = SCT#363443007 "Malignant tumor of ovary (disorder)"
 * condition.onsetAge.value = 69
-* condition.onsetAge.system = UCUM#a "yr"
+* condition.onsetAge = UCUM#a "yr"
 * condition.contributedToDeath = false
 
 // example1-family-member-history-sister.json
@@ -532,7 +532,7 @@ Description: "Extended example 1: example showing family member history of cance
 * relationship = http://terminology.hl7.org/CodeSystem/v3-RoleCode#NSIS "natural sister"
 * condition.code = SCT#254837009 "Malignant neoplasm of breast (disorder)"
 * condition.onsetAge.value = 64
-* condition.onsetAge.system = UCUM#a "yr"
+* condition.onsetAge = UCUM#a "yr"
 * condition.contributedToDeath = false
 
 // example1-family-member-history-uncle.json

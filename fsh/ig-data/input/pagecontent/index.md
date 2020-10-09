@@ -4,6 +4,7 @@
 <ul>
     <li><a href="#Background">Background</a></li>
     <li><a href="#Modeling">Scope and Conceptual Model</a></li>
+    <li><a href="conformance.html">Conformance</a></li>
     <li><a href="mCODEDataDictionary.xlsx">Data Dictionary (Excel download)</a></li>
     <li><a href="examples.html">FHIR Examples</a></li>
     <li><a href="implementation.html">Implementation Notes</a></li>

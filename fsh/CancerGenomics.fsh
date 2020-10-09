@@ -2,7 +2,10 @@ Profile:    CancerGeneticVariant
 Parent:     USCoreObservationLab
 Id:         mcode-cancer-genetic-variant
 Title:      "Cancer Genetic Variant"
-Description:    "Records an alteration in the most common DNA nucleotide sequence. The term variant can be used to describe an alteration that may be benign, pathogenic, or of unknown significance. The term variant is increasingly being used in place of the term mutation."
+Description:    "Records an alteration in the most common DNA nucleotide sequence. The term variant can be used to describe an alteration that may be benign, pathogenic, or of unknown significance. The term variant is increasingly being used in place of the term mutation.
+
+Conformance statement: To be considered mCODE conformant, all Observations associated with an mCODE patient and using LOINC code 69548-6 SHALL conform to this profile."
+
 * status and code and subject and effective[x] and valueCodeableConcept and method MS
 * bodySite 0..0
 * referenceRange 0..0

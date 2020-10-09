@@ -4,7 +4,6 @@
 <p>This page contains miscellaneous information on modeling and FHIR implementation. The content is primarily directed at informaticists and implementers of mCODE. The following topics are addressed: </p>
 
 <ul>
-    <li><a href="#Conformance">Conformance Requirements</a></li>
     <li><a href="#Terminology">Terminology Preferences</a></li>
     <li><a href="#Patient">Patient</a></li>
     <li><a href="#BodyLocations">Body Locations</a></li>
@@ -12,55 +11,6 @@
     <li><a href="#LaboratoryProfiles">Laboratory Profiles</a></li>
     <li><a href="#RepresentingProvenance">Representing Provenance of mCODE Information</a></li>
 </ul>
-
-<h4><a name="Conformance"></a>Conformance Requirements</h4>
-
-<h5>Relationship to US Core</h5>
-<p>With one exception (see <a href="#Conformance">below</a>), the profiles presented in this guide conform to <a href="http://hl7.org/fhir/us/core/index.html" target="_blank">US Core Implementation Guide (v3.1.0)</a>. Each mCODE Profile uses a corresponding US Core profiles as its base profile, and thus, cannot break the rules established by that profile in US Core. For example, if US Core has a required element, by virtue of profile inheritance, mCODE cannot make that element optional. However, <em>it is not true that any instance that conforms to an mCODE profile will automatically conform to US Core</em>. In particular, the use of <a href="https://www.hl7.org/fhir/valueset-binding-strength.html" target="_blank">extensible value sets</a> requires caution. Extensibility is only allowed when an appropriate concept is not available in the US Core value set. Please note:</p>
-<ul>
-    <li>In mCODE Comorbid Conditions, SNOMED-CT is recommended for conformance to the 2015 Certification Rule, however as of US Core v3.1.0, it is possible to also use ICD-10-CM as a primary condition code. </li>
-    <li>In mCODE Procedures, if an ICD-10-PCS code is used, and a semantically equivalent SNOMED CT or CPT code is available, the resulting instance will not confirm to US Core.</li>
-    <li>In GenomicsReport, a LOINC code must be used, if available. If there is no suitable code in LOINC, then a code from an alternative code system (such as a code from the <a href="https://www.ncbi.nlm.nih.gov/gtr/" target="_blank">Genetic Testing Registry</a> or other knowledge base of genomics tests can be used.</li>
-    <li>GenomicsReport.category is bound to <a href="http://hl7.org/fhir/us/core/ValueSet/us-core-diagnosticreport-category" target="_blank">US Core DiagnosticReport Category (extensible)</a>to align with US Core. The value set however does not include an appropriate term for genomics report.  Subsequently, mCODE implementations will fix the LOINC code <em>GE</em> to align with the value constraint specified in the <a href="http://hl7.org/fhir/uv/genomics-reporting/genomics-report.html" target="_blank">Clinical Genomics Reporting IG GenomicsReport profile.</a></li>
-</ul>
-
-<h5>International Version of mCODE</h5>
-<p>Although the current version of mCODE is US-specific, there is a potential for an international version of mCODE. If interested, please contact one of the authors.</p>
-
-<h5>mCODE Roles</h5>
-<p>At present, two roles are defined:</p>
-<ul>
-    <li><strong>mCODE Data Sender</strong> - a participant in exchange of mCODE data who provides mCODE data in response to a data query or autonomously pushes mCODE data to an mCODE receiver. The data sender does not have to be the originator of the data it possesses.</li>
-    <li><strong>mCODE Data Receiver</strong> - a participant in exchange of mCODE data who accepts mCODE data from an mCODE Data Sender.</li>
-</ul>
-<p>In the future, additional roles may be defined.</p>
-
-<h5>"Must Support" Interpretation</h5>
-<p>In FHIR, the <a href="https://www.hl7.org/fhir/conformance-rules.html#mustSupport" target="_blank">MustSupport</a> flag indicates that implementation shall provide "meaningful support" for the element, as defined by its implementation guide. In mCODE, there are two sources of MustSupport elements: those inherited from US Core, and those defined in mCODE. To conform to US Core, the MustSupport elements inherited from US Core must follow <a href="http://hl7.org/fhir/us/core/general-guidance.html#must-support" target="_blank">the interpretation of MustSupport defined in US Core</a>.</p>
-<p> Elements defined as MustSupport in mCODE do not follow the US Core rules. MustSupport elements defined in mCODE shall be interpreted as follows:</p>
-<ul>
-    <li><strong>mCODE Data Sender</strong> - MustSupport is interpreted as "required to be sent if known" (subject to applicable privacy and security rules). That is, every MustSupport element in a profiled mCODE resource SHALL to be provided to an mCODE Data Receiver, if Data Sender has that data.</li>
-    <li>An <strong>mCODE Data Receiver</strong> SHALL be capable of receiving and storing each required and MustSupport element in mCODE, if the profile has been declared as a "supportedProfile" in the receiver's <a href="http://hl7.org/fhir/R4/capabilitystatement.html" target="_blank">capability statement</a>.</li>
-</ul>
-    
-<p>Unfortunately, FHIR does not have the ability to track the source of MustSupport flags, and the only way to know where a MustSupport flag is defined is by direct comparison of US Core and mCODE profiles.</p>
-
-<h5>Required Elements</h5>
-<p>An mCODE data element is required if any of the following criteria are met:</p>
-<ul>
-    <li>The element is a top-level element (a first-level property of the resource) and its minimum cardinality is &gt; 0 in the profile.</li>
-    <li>The element not a top-level element (a second-level property or below), its minimum cardinality is &gt; 0, and all elements directly containing that element have minimum cardinality &gt; 0 in the profile.</li>
-    <li>The element is not a top-level element, its minimum cardinality is &gt; 0, and its immediate higher-level containing element exists in an <em>instance</em> of the profile.</li>
-</ul>
-<p>In other words, a data element may be 1..1, but if it is contained by an optional element, then it is not required unless its containing element is actually present in a given instance of the profile.</p>
-
-<p>mCODE's rules regarding required data elements are the same as <a href="http://hl7.org/fhir/us/core/general-guidance.html#missing-data">US Core's rules</a>. To paraphrase those rules, a Data Sender must provide each required element or an explicit data absent reason for each missing data item.</p>
-
-<h5>Minimum Requirement for "mCODE Conformance"</h5>
-<p>The mCODE IG outlines conformance requirements and expectations for individual mCODE instances in terms of structural constraints and terminology bindings. Any FHIR resources claiming to conform to mCODE must <a href="https://www.hl7.org/fhir/validation.html" target="_blank">validate</a> against the declared mCODE profile.</p>
-
-<p>At present, there are no additional conformance rules on what mCODE data is to be collected, by whom, and when, or when that data is to be exchanged. mCODE Data Senders and Data Receivers may choose the subset of mCODE resources they support, according to their business needs. For example, a Genomics Laboratory may support GenomicsReport, but not vital signs or staging.</p>  
-<p><a href="http://hl7.org/fhir/R4/capabilitystatement.html" target="_blank">FHIR capability statements</a> describe the capabilities of actual implementation or requirements of a desired solution. This IG does not include sample capability statements. The expectation is to use implementation experience collected during the STU period to model the different types of actors (such as medical oncologist, radiologist, genomics laboratory, etc.), and define appropriate capability statements for each, including search parameters and operations.</p>
 
 <h4><a name="Terminology"></a>Terminology Preferences</h4>
 

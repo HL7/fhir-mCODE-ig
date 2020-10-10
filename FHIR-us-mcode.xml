@@ -152,17 +152,16 @@
 <page key="many" name="(many)"/>
 <page deprecated="true" key="profiles" name="(profiles)"/>
 <page key="artifacts" name="Artifacts Summary"/>
-<page key="changelog" name="Change Log"/>
-<page key="1_conformance" name="Conformance"/>
+<page deprecated="true" key="changelog" name="Change Log"/>
+<page key="conformance" name="Conformance"/>
 <page key="downloads" name="Downloads"/>
-<page key="examples" name="Examples"/>
-<page key="7_experimental" name="Experimental"/>
+<page key="examples" name="Examples Overview"/>
+<page key="experimental" name="Experiment Profiles"/>
 <page deprecated="true" key="extensions" name="Extensions"/>
 <page deprecated="true" key="history" name="History"/>
 <page key="index" name="Home"/>
-<page key="3_implementation" name="Implementation"/>
+<page key="implementation" name="Implementation"/>
 <page deprecated="true" key="implementationnotes" name="Implementation Notes"/>
 <page key="toc" name="Table of Contents"/>
 <page deprecated="true" key="valuesets" name="Value Sets"/>
-<page key="6_versions" name="Versions"/>
 </specification>

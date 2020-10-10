@@ -14708,3 +14708,14 @@ e: {
   "error" : ""
 }
 -------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "39004-7",
+  "display" : "Epidermal growth factor receptor Ag [Presence] in Tissue"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "Epidermal growth factor receptor Ag [Presence] in Tissue",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------

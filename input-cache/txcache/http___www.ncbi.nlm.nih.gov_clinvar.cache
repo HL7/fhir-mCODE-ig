@@ -11,3 +11,49 @@ e: {
   "error" : "Error from server: Unable to provide support for code system http://www.ncbi.nlm.nih.gov/clinvar"
 }
 -------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://www.ncbi.nlm.nih.gov/clinvar",
+  "code" : "128144"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://www.ncbi.nlm.nih.gov/clinvar"
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "CodeSystem uri 'http://www.ncbi.nlm.nih.gov/clinvar' is unknown (from http://tx.fhir.org/r4)"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://www.ncbi.nlm.nih.gov/clinvar",
+  "code" : "619728"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://www.ncbi.nlm.nih.gov/clinvar"
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "CodeSystem uri 'http://www.ncbi.nlm.nih.gov/clinvar' is unknown (from http://tx.fhir.org/r4)"
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://www.ncbi.nlm.nih.gov/clinvar"
+    }]
+  }
+}}####
+e: {
+  "error" : "Error from server: Unable to provide support for code system http://www.ncbi.nlm.nih.gov/clinvar"
+}
+-------------------------------------------------------------------------------------

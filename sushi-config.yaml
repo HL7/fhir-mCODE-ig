@@ -39,10 +39,11 @@ releaseLabel: STU1
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 menu:
   Home: index.html
-  Profiles: artifacts.html#2
-  Extensions: artifacts.html#3
-  Value Sets: artifacts.html#4
-  Downloads: downloads.html
+  Conformance: conformance.html
+  Implementation: implementation.html
+  Artifacts: artifacts.html
   Examples: examples.html
+  Downloads: downloads.html
+  Experimental: experimental.html
   History: http://hl7.org/fhir/us/mcode/history.html
 

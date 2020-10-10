@@ -43,4 +43,5 @@
   <workgroup key="templates" name="Templates" deprecated="true"/>
   <workgroup key="us-realm" webcode="usrealm" name="US Realm Task Force"/>
   <workgroup key="vocab" webcode="vocab" name="Vocabulary"/>
+  <workgroup key="v2mg" webcode="v2management" name="V2 Mgmt Group"/>
 </workgroups>

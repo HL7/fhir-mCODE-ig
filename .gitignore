@@ -1,11 +1,9 @@
 .DS_Store
 Thumbs.db
 fsh-generated**
-input-cache/org.hl7.fhir.publisher.jar
 input-cache/schemas
 input-cache/schemas-r5
 input-cache/publisher.jar
 output**
 template**
 temp**
-

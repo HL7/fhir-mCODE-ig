@@ -27,7 +27,7 @@ Conformance note: If an ICD-10-PCS code is used in the code attribute, and there
 * subject only Reference(CancerPatient)
 * recorder only Reference(Practitioner or PractitionerRole)
 * performer.actor only Reference(Practitioner or PractitionerRole or Organization)  // include Device?
-* reasonCode from CancerDisorderVS (extensible)
+* reasonCode from AnyCancerDisorderVS (extensible)
 * reasonReference only Reference(CancerConditionParent)
 * bodySite from RadiationTargetBodySiteVS (extensible)
 * bodySite.extension contains
@@ -46,7 +46,7 @@ Description: "A surgical action addressing a cancer condition. The scope of this
     TreatmentIntent named treatmentIntent 0..1
 * subject only Reference(CancerPatient)
 * category = SCT#387713003 //"Surgical procedure"
-* reasonCode from CancerDisorderVS (extensible)
+* reasonCode from AnyCancerDisorderVS (extensible)
 * reasonReference only Reference(CancerConditionParent)  // rather than Primary, Secondary, Tumor
 * partOf only Reference(Procedure)
 * recorder only Reference(Practitioner or PractitionerRole)

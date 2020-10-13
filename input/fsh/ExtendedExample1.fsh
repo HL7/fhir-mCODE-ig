@@ -45,7 +45,7 @@ Description: "Extended example 1: example showing disease status (patient's cond
 
 // example1-mcode-comorbid-condition-depression.json
 Instance: example1-mcode-comorbid-condition-depression
-InstanceOf: ComorbidCondition
+InstanceOf: ElixhauserDepressionComorbidity
 Description: "Extended example 1: example showing comorbid condition (depression)"
 * id = "example1-mcode-comorbid-condition-depression"
 * clinicalStatus = ClinStatus#active
@@ -57,7 +57,7 @@ Description: "Extended example 1: example showing comorbid condition (depression
 
 // example1-mcode-comorbid-condition-hyptertension.json
 Instance: example1-mcode-comorbid-condition-hypertension
-InstanceOf: ComorbidCondition
+InstanceOf: ElixhauserHypertensionComplicatedComorbidity
 Description: "Extended example 1: example showing comorbid condition (hypertension)"
 * id = "example1-mcode-comorbid-condition-hypertension"
 * clinicalStatus = ClinStatus#active

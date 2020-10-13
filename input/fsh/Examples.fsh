@@ -43,7 +43,7 @@ Description: "mCODE Example for Cancer Disease Status"
 * valueCodeableConcept = SCT#268910001 "Patient's condition improved (finding)"
 
 Instance: mCODEComorbidConditionExample01
-InstanceOf: ComorbidCondition
+InstanceOf: ElixhauserDiabetesUncomplicatedComorbidity
 Description: "mCODE Example for Comorbid Condition"
 * id = "mCODEComorbidConditionExample01"
 * meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-comorbid-condition"
@@ -52,7 +52,7 @@ Description: "mCODE Example for Comorbid Condition"
 * code = SCT#44054006 "Type 2 diabetes mellitus"
 * subject = Reference(mCODEPatientExample01)
 * asserter = Reference(mCODEPractitionerExample01)
-* onsetDateTime = "2018-04-01"
+* onsetDateTime = "2016-04-01"
 
 
 Instance: mCODEPatientExample01

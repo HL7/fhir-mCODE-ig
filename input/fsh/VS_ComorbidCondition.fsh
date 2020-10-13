@@ -6,16 +6,59 @@ Description:    "Elixhauser Comorbid Condition Value Set for . ICD-10 codes are 
 */
 
 
+/*
+ValueSet:   ComorbidConditionVS
+Id: mcode-comorbid-condition-vs
+Title: "Comorbid Condition Value Set"
+Description:    "SNOMED and ICD-10-CM codes for common comorbid conditions. Aligns with Elixhauser comorbidity scale. ICD-10 codes are drawn from https://www.hcup-us.ahrq.gov/toolssoftware/comorbidityicd10/comformat_icd10cm_2019_1.txt."
+* include codes from system SCT where concept is-a #86406008    "Human immunodeficiency virus infection (disorder)"
+* include codes from system SCT where concept is-a #15167005    "Alcohol abuse (disorder)"
+* include codes from system SCT where concept is-a #698247007   "Cardiac arrhythmia (disorder)"
+* include codes from system SCT where concept is-a #267513007 "Deficiency anemias (disorder)"
+* include codes from system SCT where concept is-a #69896004  "Rheumatoid arthritis (disorder)"
+* include codes from system SCT where concept is-a #398049005  "Mixed collagen vascular disease (disorder)"	
+* include codes from system SCT where concept is-a #413532003   "Anemia due to blood loss (disorder)"
+* include codes from system SCT where concept is-a #42343007    "Congestive heart failure (disorder)"
+* include codes from system SCT where concept is-a #413839001   "Chronic lung disease (disorder)"
+* include codes from system SCT where concept is-a #64779008    "Blood coagulation disorder (disorder)"
+* include codes from system SCT where concept is-a #35489007    "Depressive disorder (disorder)"
+* include codes from system SCT where concept is-a #111552007   "Diabetes mellitus without complication (disorder)"
+* include codes from system SCT where concept is-a #73211009 "Diabetes mellitus (disorder)" and concept is-not-a #111552007  "Diabetes mellitus without complication (disorder)"
+* include codes from system SCT where concept is-a #66214007    "Substance abuse (disorder)"
+* include codes from system SCT where concept is-a #38341003 "Hypertensive disorder, systemic arterial (disorder)" 
+* include codes from system SCT where concept is-a #449759005 "Complication of systemic hypertensive disorder (disorder)"
+* include codes from system SCT where concept is-a #40930008    "Hypothyroidism (disorder)"
+* include codes from system SCT where concept is-a #235856003   "Disorder of liver (disorder)"
+* include codes from system SCT where concept is-a #118600007   "Malignant lymphoma (disorder)"
+* include codes from system SCT where concept is-a #76314005 "Disorder of fluid AND/OR electrolyte (disorder)"
+* include codes from system SCT where concept is-a #363346000   "Malignant neoplastic disease (disorder)"
+* include codes from system SCT where concept is-a #118940003 "Disorder of nervous system (disorder)" and is-not-a #29426003  "Paralytic syndrome (disorder)"
+* include codes from system SCT where concept is-a #414916001   "Obesity (disorder)"
+* include codes from system SCT where concept is-a #29426003  "Paralytic syndrome (disorder)"
+* include codes from system SCT where concept is-a #400047006   "Peripheral vascular disease (disorder)"
+* include codes from system SCT where concept is-a #69322001    "Psychotic disorder (disorder)"
+* include codes from system SCT where concept is-a #39785005    "Disorder of pulmonary circulation (disorder)"
+* include codes from system SCT where concept is-a #42399005    "Renal failure syndrome (disorder)"
+* include codes from system SCT where concept is-a #13200003    "Peptic ulcer (disorder)"
+* include codes from system SCT where concept is-a #368009      "Heart valve disorder (disorder)"
+* include codes from system SCT where concept is-a #89362005    "Weight loss (finding)"
+* include codes from system SCT where concept is-a #248342006 "Underweight (finding)"
+* include codes from system SCT where concept is-a #65404009  "Undernutrition (disorder)"
+*/
+
+
 ValueSet:  ElixhauserHIVAIDSVS
 Id: elixhauser-hiv-aids-vs
 Title: "Elixhauser Comorbid Condition Value Set for HIV-AIDS"
 Description:    "Elixhauser Comorbid Condition Value Set for HIV-AIDS. ICD-10 codes are drawn from https://www.hcup-us.ahrq.gov/toolssoftware/comorbidityicd10/comformat_icd10cm_2019_1.txt."
+* include codes from system SCT where concept is-a #86406008    "Human immunodeficiency virus infection (disorder)"
 * ICD10CM#B20    "Human immunodeficiency virus [HIV] disease"
 
 ValueSet:  ElixhauserAlcoholAbuseVS
 Id: elixhauser-alcohol-abuse-vs
 Title: "Elixhauser Comorbid Condition Value Set for Alcohol Abuse"
 Description:    "Elixhauser Comorbid Condition Value Set for Alcohol Abuse. ICD-10 codes are drawn from https://www.hcup-us.ahrq.gov/toolssoftware/comorbidityicd10/comformat_icd10cm_2019_1.txt."
+* include codes from system SCT where concept is-a #15167005    "Alcohol abuse (disorder)"
 * ICD10CM#F1010    "Alcohol abuse, uncomplicated"
 * ICD10CM#F1011    "Alcohol abuse, in remission"
 * ICD10CM#F10120    "Alcohol abuse with intoxication, uncomplicated"
@@ -69,6 +112,7 @@ ValueSet:  ElixhauserCardiacArrhythmiaVS
 Id: elixhauser-cardiac-arrhythmia-vs
 Title: "Elixhauser Comorbid Condition Value Set for Cardiac Arrhythmia"
 Description:    "Elixhauser Comorbid Condition Value Set for Cardiac Arrhythmia. ICD-10 codes are drawn from https://www.hcup-us.ahrq.gov/toolssoftware/comorbidityicd10/comformat_icd10cm_2019_1.txt."
+* include codes from system SCT where concept is-a #698247007   "Cardiac arrhythmia (disorder)"
 * ICD10CM#I441    "Atrioventricular block, second degree"
 * ICD10CM#I442    "Atrioventricular block, complete"
 * ICD10CM#I4430    "Unspecified atrioventricular block"
@@ -107,11 +151,11 @@ Description:    "Elixhauser Comorbid Condition Value Set for Cardiac Arrhythmia.
 * ICD10CM#Z950    "Presence of cardiac pacemaker"
 
 
-
 ValueSet:  ElixhauserDeficiencyAnemiaVS
 Id: elixhauser-deficiency-anemia-vs
 Title: "Elixhauser Comorbid Condition Value Set for Deficiency Anemia"
 Description:    "Elixhauser Comorbid Condition Value Set for Deficiency Anemia. ICD-10 codes are drawn from https://www.hcup-us.ahrq.gov/toolssoftware/comorbidityicd10/comformat_icd10cm_2019_1.txt."
+* include codes from system SCT where concept is-a #267513007 "Deficiency anemias (disorder)"
 * ICD10CM#D501    "Sideropenic dysphagia"
 * ICD10CM#D508    "Other iron deficiency anemias"
 * ICD10CM#D509    "Iron deficiency anemia, unspecified"
@@ -140,6 +184,8 @@ ValueSet:  ElixhauserRheumatoidArthritisVS
 Id: elixhauser-rheumatoid-arthritis-vs
 Title: "Elixhauser Comorbid Condition Value Set for Rheumatoid Arthritis and collagen vascular diseases."
 Description:    "Elixhauser Comorbid Condition Value Set for Rheumatoid Arthritis and collagen vascular diseases. ICD-10 codes are drawn from https://www.hcup-us.ahrq.gov/toolssoftware/comorbidityicd10/comformat_icd10cm_2019_1.txt."
+* include codes from system SCT where concept is-a #69896004  "Rheumatoid arthritis (disorder)"
+* include codes from system SCT where concept is-a #398049005  "Mixed collagen vascular disease (disorder)"	
 * ICD10CM#L900    "Lichen sclerosus et atrophicus"
 * ICD10CM#L940    "Localized scleroderma [morphea]"
 * ICD10CM#L941    "Linear scleroderma"
@@ -751,6 +797,7 @@ ValueSet:  ElixhauserBloodLossAnemiaVS
 Id: elixhauser-blood-loss-anemia-vs
 Title: "Elixhauser Comorbid Condition Value Set for Blood Loss Anemia"
 Description:    "Elixhauser Comorbid Condition Value Set for Blood Loss Anemia. ICD-10 codes are drawn from https://www.hcup-us.ahrq.gov/toolssoftware/comorbidityicd10/comformat_icd10cm_2019_1.txt."
+* include codes from system SCT where concept is-a #413532003   "Anemia due to blood loss (disorder)"
 * ICD10CM#D500    "Iron deficiency anemia secondary to blood loss (chronic)"
 * ICD10CM#O9081    "Anemia of the puerperium"
 * ICD10CM#O99011    "Anemia complicating pregnancy, first trimester"
@@ -765,6 +812,7 @@ ValueSet:  ElixhauserCongestiveHeartFailureVS
 Id: elixhauser-congestive-heart-failure-vs
 Title: "Elixhauser Comorbid Condition Value Set for Congestive Heart Failure"
 Description:    "Elixhauser Comorbid Condition Value Set for CongestiveHeartFailure. ICD-10 codes are drawn from https://www.hcup-us.ahrq.gov/toolssoftware/comorbidityicd10/comformat_icd10cm_2019_1.txt."
+* include codes from system SCT where concept is-a #42343007    "Congestive heart failure (disorder)"
 * ICD10CM#I0981    "Rheumatic heart failure"
 * ICD10CM#I501    "Left ventricular failure, unspecified"
 * ICD10CM#I5020    "Unspecified systolic (congestive) heart failure"
@@ -795,6 +843,7 @@ ValueSet:  ElixhauserChronicPulmonaryDiseaseVS
 Id: elixhauser-chronic-pulmonary-disease-vs
 Title: "Elixhauser Comorbid Condition Value Set for Chronic Pulmonary Disease"
 Description:    "Elixhauser Comorbid Condition Value Set for Chronic Pulmonary Disease. ICD-10 codes are drawn from https://www.hcup-us.ahrq.gov/toolssoftware/comorbidityicd10/comformat_icd10cm_2019_1.txt."
+* include codes from system SCT where concept is-a #413839001   "Chronic lung disease (disorder)"
 * ICD10CM#J40    "Bronchitis, not specified as acute or chronic"
 * ICD10CM#J410    "Simple chronic bronchitis"
 * ICD10CM#J411    "Mucopurulent chronic bronchitis"
@@ -867,6 +916,7 @@ ValueSet:  ElixhauserCoagulationDeficiencyVS
 Id: elixhauser-coagulation-deficiency-vs
 Title: "Elixhauser Comorbid Condition Value Set for Coagulation Deficiency"
 Description:    "Elixhauser Comorbid Condition Value Set for Coagulation Deficiency. ICD-10 codes are drawn from https://www.hcup-us.ahrq.gov/toolssoftware/comorbidityicd10/comformat_icd10cm_2019_1.txt."
+* include codes from system SCT where concept is-a #64779008    "Blood coagulation disorder (disorder)"
 * ICD10CM#D65    "Disseminated intravascular coagulation [defibrination syndrome]"
 * ICD10CM#D66    "Hereditary factor VIII deficiency"
 * ICD10CM#D67    "Hereditary factor IX deficiency"
@@ -908,6 +958,7 @@ ValueSet:  ElixhauserDepressionVS
 Id: elixhauser-depression-vs
 Title: "Elixhauser Comorbid Condition Value Set for Depression"
 Description:    "Elixhauser Comorbid Condition Value Set for Depression. ICD-10 codes are drawn from https://www.hcup-us.ahrq.gov/toolssoftware/comorbidityicd10/comformat_icd10cm_2019_1.txt."
+* include codes from system SCT where concept is-a #35489007  "Depressive disorder (disorder)"
 * ICD10CM#F320    "Major depressive disorder, single episode, mild"
 * ICD10CM#F321    "Major depressive disorder, single episode, moderate"
 * ICD10CM#F322    "Major depressive disorder, single episode, severe without psychotic features"
@@ -930,6 +981,7 @@ ValueSet:  ElixhauserDiabetesUncomplicatedVS
 Id: elixhauser-uncomplicated-diabetes-vs
 Title: "Elixhauser Comorbid Condition Value Set for diabetes without chronic complications"
 Description:    "Elixhauser Comorbid Condition Value Set for diabetes without chronic complications. ICD-10 codes are drawn from https://www.hcup-us.ahrq.gov/toolssoftware/comorbidityicd10/comformat_icd10cm_2019_1.txt."
+* include codes from system SCT where concept is-a #111552007   "Diabetes mellitus without complication (disorder)"
 * ICD10CM#E0800    "Diabetes mellitus due to underlying condition with hyperosmolarity without nonketotic hyperglycemic-hyperosmolar coma (NKHHC)"
 * ICD10CM#E0801    "Diabetes mellitus due to underlying condition with hyperosmolarity with coma"
 * ICD10CM#E0810    "Diabetes mellitus due to underlying condition with ketoacidosis without coma"
@@ -989,6 +1041,7 @@ ValueSet:  ElixhauserDiabetesComplicatedVS
 Id: elixhauser-diabetes-complicated-vs
 Title: "Elixhauser Comorbid Condition Value Set for diabetes with chronic complications"
 Description:    "Elixhauser Comorbid Condition Value Set for diabetes with chronic complications. ICD-10 codes are drawn from https://www.hcup-us.ahrq.gov/toolssoftware/comorbidityicd10/comformat_icd10cm_2019_1.txt."
+* include codes from system SCT where concept is-a #73211009 "Diabetes mellitus (disorder)" and concept is-not-a #111552007  "Diabetes mellitus without complication (disorder)"
 * ICD10CM#E0821    "Diabetes mellitus due to underlying condition with diabetic nephropathy"
 * ICD10CM#E0822    "Diabetes mellitus due to underlying condition with diabetic chronic kidney disease"
 * ICD10CM#E0829    "Diabetes mellitus due to underlying condition with other diabetic kidney complication"
@@ -1232,65 +1285,81 @@ Description:    "Elixhauser Comorbid Condition Value Set for diabetes with chron
 * ICD10CM#E1065    "Type 1 diabetes mellitus with hyperglycemia"
 * ICD10CM#E1069    "Type 1 diabetes mellitus with other specified complication"
 * ICD10CM#E108    "Type 1 diabetes mellitus with unspecified complications"
-* ICD10CM#E1121    "Type 1 diabetes mellitus without complications"
-* ICD10CM#E1122    "Type 2 diabetes mellitus with hyperosmolarity without nonketotic hyperglycemic-hyperosmolar coma (NKHHC)"
-* ICD10CM#E1129    "Type 2 diabetes mellitus with hyperosmolarity with coma"
-* ICD10CM#E11311    "Type 2 diabetes mellitus with ketoacidosis without coma"
-* ICD10CM#E11319    "Type 2 diabetes mellitus with ketoacidosis with coma"
-* ICD10CM#E11321    "Type 2 diabetes mellitus with diabetic nephropathy"
-* ICD10CM#E113211    "Type 2 diabetes mellitus with diabetic chronic kidney disease"
-* ICD10CM#E113212    "Type 2 diabetes mellitus with other diabetic kidney complication"
-* ICD10CM#E113213    "Type 2 diabetes mellitus with unspecified diabetic retinopathy with macular edema"
-* ICD10CM#E113219    "Type 2 diabetes mellitus with unspecified diabetic retinopathy without macular edema"
+* ICD10CM#E1121    "Type 2 diabetes mellitus with diabetic nephropathy"
+* ICD10CM#E1122    "Type 2 diabetes mellitus with diabetic chronic kidney disease"
+* ICD10CM#E1129    "Type 2 diabetes mellitus with other diabetic kidney complication"
+* ICD10CM#E11311    "Type 2 diabetes mellitus with unspecified diabetic retinopathy with macular edema"
+* ICD10CM#E11319    "Type 2 diabetes mellitus with unspecified diabetic retinopathy without macular edema"
+
+* ICD10CM#E113211   "Type 2 diabetes mellitus with mild nonproliferative diabetic retinopathy with macular edema, right eye"
+* ICD10CM#E113212    "Type 2 diabetes mellitus with mild nonproliferative diabetic retinopathy with macular edema, left eye"
+* ICD10CM#E113213    "Type 2 diabetes mellitus with mild nonproliferative diabetic retinopathy with macular edema, bilateral"
+* ICD10CM#E113219    "Type 2 diabetes mellitus with mild nonproliferative diabetic retinopathy with macular edema, unspecified eye"
+
 * ICD10CM#E113291    "Type 2 diabetes mellitus with mild nonproliferative diabetic retinopathy without macular edema, right eye"
 * ICD10CM#E113292    "Type 2 diabetes mellitus with mild nonproliferative diabetic retinopathy without macular edema, left eye"
 * ICD10CM#E113293    "Type 2 diabetes mellitus with mild nonproliferative diabetic retinopathy without macular edema, bilateral"
 * ICD10CM#E113299    "Type 2 diabetes mellitus with mild nonproliferative diabetic retinopathy without macular edema, unspecified eye"
+ 
 * ICD10CM#E113311    "Type 2 diabetes mellitus with moderate nonproliferative diabetic retinopathy with macular edema, right eye"
 * ICD10CM#E113312    "Type 2 diabetes mellitus with moderate nonproliferative diabetic retinopathy with macular edema, left eye"
 * ICD10CM#E113313    "Type 2 diabetes mellitus with moderate nonproliferative diabetic retinopathy with macular edema, bilateral"
 * ICD10CM#E113319    "Type 2 diabetes mellitus with moderate nonproliferative diabetic retinopathy with macular edema, unspecified eye"
+
 * ICD10CM#E113391    "Type 2 diabetes mellitus with moderate nonproliferative diabetic retinopathy without macular edema, right eye"
 * ICD10CM#E113392    "Type 2 diabetes mellitus with moderate nonproliferative diabetic retinopathy without macular edema, left eye"
 * ICD10CM#E113393    "Type 2 diabetes mellitus with moderate nonproliferative diabetic retinopathy without macular edema, bilateral"
 * ICD10CM#E113399    "Type 2 diabetes mellitus with moderate nonproliferative diabetic retinopathy without macular edema, unspecified eye"
+
 * ICD10CM#E113411    "Type 2 diabetes mellitus with severe nonproliferative diabetic retinopathy with macular edema, right eye"
 * ICD10CM#E113412    "Type 2 diabetes mellitus with severe nonproliferative diabetic retinopathy with macular edema, left eye"
 * ICD10CM#E113413    "Type 2 diabetes mellitus with severe nonproliferative diabetic retinopathy with macular edema, bilateral"
 * ICD10CM#E113419    "Type 2 diabetes mellitus with severe nonproliferative diabetic retinopathy with macular edema, unspecified eye"
+
+
 * ICD10CM#E113491    "Type 2 diabetes mellitus with severe nonproliferative diabetic retinopathy without macular edema, right eye"
 * ICD10CM#E113492    "Type 2 diabetes mellitus with severe nonproliferative diabetic retinopathy without macular edema, left eye"
 * ICD10CM#E113493    "Type 2 diabetes mellitus with severe nonproliferative diabetic retinopathy without macular edema, bilateral"
 * ICD10CM#E113499    "Type 2 diabetes mellitus with severe nonproliferative diabetic retinopathy without macular edema, unspecified eye"
+
+
 * ICD10CM#E113511    "Type 2 diabetes mellitus with proliferative diabetic retinopathy with macular edema, right eye"
 * ICD10CM#E113512    "Type 2 diabetes mellitus with proliferative diabetic retinopathy with macular edema, left eye"
 * ICD10CM#E113513    "Type 2 diabetes mellitus with proliferative diabetic retinopathy with macular edema, bilateral"
 * ICD10CM#E113519    "Type 2 diabetes mellitus with proliferative diabetic retinopathy with macular edema, unspecified eye"
+
 * ICD10CM#E113521    "Type 2 diabetes mellitus with proliferative diabetic retinopathy with traction retinal detachment involving the macula, right eye"
 * ICD10CM#E113522    "Type 2 diabetes mellitus with proliferative diabetic retinopathy with traction retinal detachment involving the macula, left eye"
 * ICD10CM#E113523    "Type 2 diabetes mellitus with proliferative diabetic retinopathy with traction retinal detachment involving the macula, bilateral"
 * ICD10CM#E113529    "Type 2 diabetes mellitus with proliferative diabetic retinopathy with traction retinal detachment involving the macula, unspecified eye"
+
 * ICD10CM#E113531    "Type 2 diabetes mellitus with proliferative diabetic retinopathy with traction retinal detachment not involving the macula, right eye"
 * ICD10CM#E113532    "Type 2 diabetes mellitus with proliferative diabetic retinopathy with traction retinal detachment not involving the macula, left eye"
 * ICD10CM#E113533    "Type 2 diabetes mellitus with proliferative diabetic retinopathy with traction retinal detachment not involving the macula, bilateral"
 * ICD10CM#E113539    "Type 2 diabetes mellitus with proliferative diabetic retinopathy with traction retinal detachment not involving the macula, unspecified eye"
+
 * ICD10CM#E113541    "Type 2 diabetes mellitus with proliferative diabetic retinopathy with combined traction retinal detachment and rhegmatogenous retinal detachment, right eye"
 * ICD10CM#E113542    "Type 2 diabetes mellitus with proliferative diabetic retinopathy with combined traction retinal detachment and rhegmatogenous retinal detachment, left eye"
 * ICD10CM#E113543    "Type 2 diabetes mellitus with proliferative diabetic retinopathy with combined traction retinal detachment and rhegmatogenous retinal detachment, bilateral"
 * ICD10CM#E113549    "Type 2 diabetes mellitus with proliferative diabetic retinopathy with combined traction retinal detachment and rhegmatogenous retinal detachment, unspecified eye"
+
 * ICD10CM#E113551    "Type 2 diabetes mellitus with stable proliferative diabetic retinopathy, right eye"
 * ICD10CM#E113552    "Type 2 diabetes mellitus with stable proliferative diabetic retinopathy, left eye"
 * ICD10CM#E113553    "Type 2 diabetes mellitus with stable proliferative diabetic retinopathy, bilateral"
 * ICD10CM#E113559    "Type 2 diabetes mellitus with stable proliferative diabetic retinopathy, unspecified eye"
+
 * ICD10CM#E113591    "Type 2 diabetes mellitus with proliferative diabetic retinopathy without macular edema, right eye"
 * ICD10CM#E113592    "Type 2 diabetes mellitus with proliferative diabetic retinopathy without macular edema, left eye"
 * ICD10CM#E113593    "Type 2 diabetes mellitus with proliferative diabetic retinopathy without macular edema, bilateral"
 * ICD10CM#E113599    "Type 2 diabetes mellitus with proliferative diabetic retinopathy without macular edema, unspecified eye"
+
 * ICD10CM#E1136    "Type 2 diabetes mellitus with diabetic cataract"
+
 * ICD10CM#E1137X1    "Type 2 diabetes mellitus with diabetic macular edema, resolved following treatment, right eye"
 * ICD10CM#E1137X2    "Type 2 diabetes mellitus with diabetic macular edema, resolved following treatment, left eye"
 * ICD10CM#E1137X3    "Type 2 diabetes mellitus with diabetic macular edema, resolved following treatment, bilateral"
 * ICD10CM#E1137X9    "Type 2 diabetes mellitus with diabetic macular edema, resolved following treatment, unspecified eye"
+
 * ICD10CM#E1139    "Type 2 diabetes mellitus with other diabetic ophthalmic complication"
 * ICD10CM#E1140    "Type 2 diabetes mellitus with diabetic neuropathy, unspecified"
 * ICD10CM#E1141    "Type 2 diabetes mellitus with diabetic mononeuropathy"
@@ -1319,34 +1388,42 @@ Description:    "Elixhauser Comorbid Condition Value Set for diabetes with chron
 * ICD10CM#E1329    "Other specified diabetes mellitus with other diabetic kidney complication"
 * ICD10CM#E13311    "Other specified diabetes mellitus with unspecified diabetic retinopathy with macular edema"
 * ICD10CM#E13319    "Other specified diabetes mellitus with unspecified diabetic retinopathy without macular edema"
+
 * ICD10CM#E133211    "Other specified diabetes mellitus with mild nonproliferative diabetic retinopathy with macular edema, right eye"
 * ICD10CM#E133212    "Other specified diabetes mellitus with mild nonproliferative diabetic retinopathy with macular edema, left eye"
 * ICD10CM#E133213    "Other specified diabetes mellitus with mild nonproliferative diabetic retinopathy with macular edema, bilateral"
 * ICD10CM#E133219    "Other specified diabetes mellitus with mild nonproliferative diabetic retinopathy with macular edema, unspecified eye"
+
 * ICD10CM#E133291    "Other specified diabetes mellitus with mild nonproliferative diabetic retinopathy without macular edema, right eye"
 * ICD10CM#E133292    "Other specified diabetes mellitus with mild nonproliferative diabetic retinopathy without macular edema, left eye"
 * ICD10CM#E133293    "Other specified diabetes mellitus with mild nonproliferative diabetic retinopathy without macular edema, bilateral"
 * ICD10CM#E133299    "Other specified diabetes mellitus with mild nonproliferative diabetic retinopathy without macular edema, unspecified eye"
+
 * ICD10CM#E133311    "Other specified diabetes mellitus with moderate nonproliferative diabetic retinopathy with macular edema, right eye"
 * ICD10CM#E133312    "Other specified diabetes mellitus with moderate nonproliferative diabetic retinopathy with macular edema, left eye"
 * ICD10CM#E133313    "Other specified diabetes mellitus with moderate nonproliferative diabetic retinopathy with macular edema, bilateral"
 * ICD10CM#E133319    "Other specified diabetes mellitus with moderate nonproliferative diabetic retinopathy with macular edema, unspecified eye"
+
 * ICD10CM#E133391    "Other specified diabetes mellitus with moderate nonproliferative diabetic retinopathy without macular edema, right eye"
 * ICD10CM#E133392    "Other specified diabetes mellitus with moderate nonproliferative diabetic retinopathy without macular edema, left eye"
 * ICD10CM#E133393    "Other specified diabetes mellitus with moderate nonproliferative diabetic retinopathy without macular edema, bilateral"
 * ICD10CM#E133399    "Other specified diabetes mellitus with moderate nonproliferative diabetic retinopathy without macular edema, unspecified eye"
+
 * ICD10CM#E133411    "Other specified diabetes mellitus with severe nonproliferative diabetic retinopathy with macular edema, right eye"
 * ICD10CM#E133412    "Other specified diabetes mellitus with severe nonproliferative diabetic retinopathy with macular edema, left eye"
 * ICD10CM#E133413    "Other specified diabetes mellitus with severe nonproliferative diabetic retinopathy with macular edema, bilateral"
 * ICD10CM#E133419    "Other specified diabetes mellitus with severe nonproliferative diabetic retinopathy with macular edema, unspecified eye"
+
 * ICD10CM#E133491    "Other specified diabetes mellitus with severe nonproliferative diabetic retinopathy without macular edema, right eye"
 * ICD10CM#E133492    "Other specified diabetes mellitus with severe nonproliferative diabetic retinopathy without macular edema, left eye"
 * ICD10CM#E133493    "Other specified diabetes mellitus with severe nonproliferative diabetic retinopathy without macular edema, bilateral"
 * ICD10CM#E133499    "Other specified diabetes mellitus with severe nonproliferative diabetic retinopathy without macular edema, unspecified eye"
+
 * ICD10CM#E133511    "Other specified diabetes mellitus with proliferative diabetic retinopathy with macular edema, right eye"
 * ICD10CM#E133512    "Other specified diabetes mellitus with proliferative diabetic retinopathy with macular edema, left eye"
 * ICD10CM#E133513    "Other specified diabetes mellitus with proliferative diabetic retinopathy with macular edema, bilateral"
 * ICD10CM#E133519    "Other specified diabetes mellitus with proliferative diabetic retinopathy with macular edema, unspecified eye"
+
 * ICD10CM#E133521    "Other specified diabetes mellitus with proliferative diabetic retinopathy with traction retinal detachment involving the macula, right eye"
 * ICD10CM#E133522    "Other specified diabetes mellitus with proliferative diabetic retinopathy with traction retinal detachment involving the macula, left eye"
 * ICD10CM#E133523    "Other specified diabetes mellitus with proliferative diabetic retinopathy with traction retinal detachment involving the macula, bilateral"
@@ -1359,14 +1436,17 @@ Description:    "Elixhauser Comorbid Condition Value Set for diabetes with chron
 * ICD10CM#E133542    "Other specified diabetes mellitus with proliferative diabetic retinopathy with combined traction retinal detachment and rhegmatogenous retinal detachment, left eye"
 * ICD10CM#E133543    "Other specified diabetes mellitus with proliferative diabetic retinopathy with combined traction retinal detachment and rhegmatogenous retinal detachment, bilateral"
 * ICD10CM#E133549    "Other specified diabetes mellitus with proliferative diabetic retinopathy with combined traction retinal detachment and rhegmatogenous retinal detachment, unspecified eye"
+
 * ICD10CM#E133551    "Other specified diabetes mellitus with stable proliferative diabetic retinopathy, right eye"
 * ICD10CM#E133552    "Other specified diabetes mellitus with stable proliferative diabetic retinopathy, left eye"
 * ICD10CM#E133553    "Other specified diabetes mellitus with stable proliferative diabetic retinopathy, bilateral"
 * ICD10CM#E133559    "Other specified diabetes mellitus with stable proliferative diabetic retinopathy, unspecified eye"
+
 * ICD10CM#E133591    "Other specified diabetes mellitus with proliferative diabetic retinopathy without macular edema, right eye"
 * ICD10CM#E133592    "Other specified diabetes mellitus with proliferative diabetic retinopathy without macular edema, left eye"
 * ICD10CM#E133593    "Other specified diabetes mellitus with proliferative diabetic retinopathy without macular edema, bilateral"
 * ICD10CM#E133599    "Other specified diabetes mellitus with proliferative diabetic retinopathy without macular edema, unspecified eye"
+
 * ICD10CM#E1336    "Other specified diabetes mellitus with diabetic cataract"
 * ICD10CM#E1337X1    "Other specified diabetes mellitus with diabetic macular edema, resolved following treatment, right eye"
 * ICD10CM#E1337X2    "Other specified diabetes mellitus with diabetic macular edema, resolved following treatment, left eye"
@@ -1402,6 +1482,7 @@ ValueSet:  ElixhauserDrugAbuseVS
 Id: elixhauser-drug-abuse-vs
 Title: "Elixhauser Comorbid Condition Value Set for drug abuse"
 Description:    "Elixhauser Comorbid Condition Value Set for drug abuse. ICD-10 codes are drawn from https://www.hcup-us.ahrq.gov/toolssoftware/comorbidityicd10/comformat_icd10cm_2019_1.txt."
+* include codes from system SCT where concept is-a #66214007 "Substance abuse (disorder)"
 * ICD10CM#F1110    "Opioid abuse, uncomplicated"
 * ICD10CM#F1111    "Opioid abuse, in remission"
 * ICD10CM#F11120    "Opioid abuse with intoxication, uncomplicated"
@@ -1656,10 +1737,12 @@ Description:    "Elixhauser Comorbid Condition Value Set for drug abuse. ICD-10 
 * ICD10CM#O99324    "Drug use complicating childbirth"
 * ICD10CM#O99325    "Drug use complicating the puerperium"
 
+
 ValueSet:  ElixhauserHypertensionUncomplicatedVS
 Id: elixhauser-hypertension-uncomplicated-vs
 Title: "Elixhauser Comorbid Condition Value Set for Hypertension, Uncomplicated"
 Description:    "Elixhauser Comorbid Condition Value Set for Hypertension, Uncomplicated. ICD-10 codes are drawn from https://www.hcup-us.ahrq.gov/toolssoftware/comorbidityicd10/comformat_icd10cm_2019_1.txt."
+* include codes from system SCT where concept is-a #38341003 "Hypertensive disorder, systemic arterial (disorder)" 
 * ICD10CM#I10    "Essential (primary) hypertension"
 * ICD10CM#O10011    "Pre-existing essential hypertension complicating pregnancy, first trimester"
 * ICD10CM#O10012    "Pre-existing essential hypertension complicating pregnancy, second trimester"
@@ -1679,6 +1762,7 @@ ValueSet:  ElixhauserHypertensionComplicatedVS
 Id: elixhauser-hypertension-complicated-vs
 Title: "Elixhauser Comorbid Condition Value Set for Hypertension, Complicated"
 Description:    "Elixhauser Comorbid Condition Value Set for Hypertension, Complicated. ICD-10 codes are drawn from https://www.hcup-us.ahrq.gov/toolssoftware/comorbidityicd10/comformat_icd10cm_2019_1.txt."
+* include codes from system SCT where concept is-a #449759005 "Complication of systemic hypertensive disorder (disorder)"
 * ICD10CM#I110    "Hypertensive heart disease with heart failure"
 * ICD10CM#I119    "Hypertensive heart disease without heart failure"
 * ICD10CM#I120    "Hypertensive chronic kidney disease with stage 5 chronic kidney disease or end stage renal disease"
@@ -1738,6 +1822,7 @@ ValueSet:  ElixhauserHypothyroidismVS
 Id: elixhauser-hypothyroidism-vs
 Title: "Elixhauser Comorbid Condition Value Set for Hypothyroidism"
 Description:    "Elixhauser Comorbid Condition Value Set for Hypothyroidism. ICD-10 codes are drawn from https://www.hcup-us.ahrq.gov/toolssoftware/comorbidityicd10/comformat_icd10cm_2019_1.txt."
+* include codes from system SCT where concept is-a #40930008    "Hypothyroidism (disorder)"
 * ICD10CM#E000    "Congenital iodine-deficiency syndrome, neurological type"
 * ICD10CM#E001    "Congenital iodine-deficiency syndrome, myxedematous type"
 * ICD10CM#E002    "Congenital iodine-deficiency syndrome, mixed type"
@@ -1757,6 +1842,7 @@ ValueSet:  ElixhauserLiverDiseaseVS
 Id: elixhauser-liver-disease-vs
 Title: "Elixhauser Comorbid Condition Value Set for Liver Disease"
 Description:    "Elixhauser Comorbid Condition Value Set for Liver Disease. ICD-10 codes are drawn from https://www.hcup-us.ahrq.gov/toolssoftware/comorbidityicd10/comformat_icd10cm_2019_1.txt."
+* include codes from system SCT where concept is-a #235856003   "Disorder of liver (disorder)"
 * ICD10CM#B180    "Chronic viral hepatitis B with delta-agent"
 * ICD10CM#B181    "Chronic viral hepatitis B without delta-agent"
 * ICD10CM#B182    "Chronic viral hepatitis C"
@@ -1801,6 +1887,7 @@ ValueSet:  ElixhauserLymphomaVS
 Id: elixhauser-lymphoma-vs
 Title: "Elixhauser Comorbid Condition Value Set for Lymphoma"
 Description:    "Elixhauser Comorbid Condition Value Set for Lymphoma. ICD-10 codes are drawn from https://www.hcup-us.ahrq.gov/toolssoftware/comorbidityicd10/comformat_icd10cm_2019_1.txt."
+* include codes from system SCT where concept is-a #118600007   "Malignant lymphoma (disorder)"
 * ICD10CM#C8100    "Nodular lymphocyte predominant Hodgkin lymphoma, unspecified site"
 * ICD10CM#C8101    "Nodular lymphocyte predominant Hodgkin lymphoma, lymph nodes of head, face, and neck"
 * ICD10CM#C8102    "Nodular lymphocyte predominant Hodgkin lymphoma, intrathoracic lymph nodes"
@@ -2192,6 +2279,7 @@ ValueSet:  ElixhauserFluidElectrolyteDisordersVS
 Id: elixhauser-fluid-electrolyte-vs
 Title: "Elixhauser Comorbid Condition Value Set for Fluid Electrolyte Disorders"
 Description:    "Elixhauser Comorbid Condition Value Set for Fluid Electrolyte Disorders. ICD-10 codes are drawn from https://www.hcup-us.ahrq.gov/toolssoftware/comorbidityicd10/comformat_icd10cm_2019_1.txt."
+* include codes from system SCT where concept is-a #76314005 "Disorder of fluid AND/OR electrolyte (disorder)"
 * ICD10CM#E860    "Dehydration"
 * ICD10CM#E861    "Hypovolemia"
 * ICD10CM#E869    "Volume depletion, unspecified"
@@ -2212,6 +2300,7 @@ ValueSet:  ElixhauserMetastaticCancerVS
 Id: elixhauser-metastatic-cancer-vs
 Title: "Elixhauser Comorbid Condition Value Set for Metastatic cancer"
 Description:    "Elixhauser Comorbid Condition Value Set for Metastatic cancer. ICD-10 codes are drawn from https://www.hcup-us.ahrq.gov/toolssoftware/comorbidityicd10/comformat_icd10cm_2019_1.txt."
+* include codes from system SCT where concept is-a #363346000   "Malignant neoplastic disease (disorder)"
 * ICD10CM#C770    "Secondary and unspecified malignant neoplasm of lymph nodes of head, face and neck"
 * ICD10CM#C771    "Secondary and unspecified malignant neoplasm of intrathoracic lymph nodes"
 * ICD10CM#C772    "Secondary and unspecified malignant neoplasm of intra-abdominal lymph nodes"
@@ -2272,6 +2361,8 @@ ValueSet:  ElixhauserOtherNeurologicalVS
 Id: elixhauser-other-neurological-vs
 Title: "Elixhauser Comorbid Condition Value Set for Other Neurological Disorders"
 Description:    "Elixhauser Comorbid Condition Value Set for Other Neurological Disorders. ICD-10 codes are drawn from https://www.hcup-us.ahrq.gov/toolssoftware/comorbidityicd10/comformat_icd10cm_2019_1.txt."
+* include codes from system SCT where concept is-a #118940003 "Disorder of nervous system (disorder)" 
+* exclude codes from system SCT where concept is-a #29426003  "Paralytic syndrome (disorder)"
 * ICD10CM#E7500    "GM2 gangliosidosis, unspecified"
 * ICD10CM#E7501    "Sandhoff disease"
 * ICD10CM#E7502    "Tay-Sachs disease"
@@ -2431,6 +2522,7 @@ ValueSet:  ElixhauserObesityVS
 Id: elixhauser-obesity-vs
 Title: "Elixhauser Comorbid Condition Value Set for Obesity"
 Description:    "Elixhauser Comorbid Condition Value Set for Obesity. ICD-10 codes are drawn from https://www.hcup-us.ahrq.gov/toolssoftware/comorbidityicd10/comformat_icd10cm_2019_1.txt."
+* include codes from system SCT where concept is-a #414916001   "Obesity (disorder)"
 * ICD10CM#E6601    "Morbid (severe) obesity due to excess calories"
 * ICD10CM#E6609    "Other obesity due to excess calories"
 * ICD10CM#E661    "Drug-induced obesity"
@@ -2465,6 +2557,7 @@ ValueSet:  ElixhauserParalysisVS
 Id: elixhauser-paralysis-vs
 Title: "Elixhauser Comorbid Condition Value Set for Paralysis"
 Description:    "Elixhauser Comorbid Condition Value Set for Paralysis. ICD-10 codes are drawn from https://www.hcup-us.ahrq.gov/toolssoftware/comorbidityicd10/comformat_icd10cm_2019_1.txt."
+* include codes from system SCT where concept is-a #29426003  "Paralytic syndrome (disorder)"
 * ICD10CM#G041    "Tropical spastic paraplegia"
 * ICD10CM#G800    "Spastic quadriplegic cerebral palsy"
 * ICD10CM#G801    "Spastic diplegic cerebral palsy"
@@ -2651,6 +2744,7 @@ ValueSet:  ElixhauserPeripheralVascularDiseaseVS
 Id: elixhauser-peripheral-vascular-disease-vs
 Title: "Elixhauser Comorbid Condition Value Set for Peripheral vascular disease"
 Description:    "Elixhauser Comorbid Condition Value Set for Peripheral vascular disease. ICD-10 codes are drawn from https://www.hcup-us.ahrq.gov/toolssoftware/comorbidityicd10/comformat_icd10cm_2019_1.txt."
+* include codes from system SCT where concept is-a #400047006   "Peripheral vascular disease (disorder)"
 * ICD10CM#I700    "Atherosclerosis of aorta"
 * ICD10CM#I701    "Atherosclerosis of renal artery"
 * ICD10CM#I70201    "Unspecified atherosclerosis of native arteries of extremities, right leg"
@@ -2951,6 +3045,7 @@ ValueSet:  ElixhauserPsychosesVS
 Id: elixhauser-psychoses-vs
 Title: "Elixhauser Comorbid Condition Value Set for Psychoses"
 Description:    "Elixhauser Comorbid Condition Value Set for Psychoses. ICD-10 codes are drawn from https://www.hcup-us.ahrq.gov/toolssoftware/comorbidityicd10/comformat_icd10cm_2019_1.txt."
+* include codes from system SCT where concept is-a #69322001    "Psychotic disorder (disorder)"
 * ICD10CM#F200    "Paranoid schizophrenia"
 * ICD10CM#F201    "Disorganized schizophrenia"
 * ICD10CM#F202    "Catatonic schizophrenia"
@@ -3023,6 +3118,7 @@ ValueSet:  ElixhauserPulmonaryCirculationDisordersVS
 Id: elixhauser-pulmonary-circulation-disorders-vs
 Title: "Elixhauser Comorbid Condition Value Set for Pulmonary circulation disorders"
 Description:    "Elixhauser Comorbid Condition Value Set for Pulmonary circulation disorders. ICD-10 codes are drawn from https://www.hcup-us.ahrq.gov/toolssoftware/comorbidityicd10/comformat_icd10cm_2019_1.txt."
+* include codes from system SCT where concept is-a #39785005    "Disorder of pulmonary circulation (disorder)"
 * ICD10CM#I2601    "Septic pulmonary embolism with acute cor pulmonale"
 * ICD10CM#I2602    "Saddle embolus of pulmonary artery with acute cor pulmonale"
 * ICD10CM#I2609    "Other pulmonary embolism with acute cor pulmonale"
@@ -3045,6 +3141,7 @@ ValueSet:  ElixhauserRenalFailureVS
 Id: elixhauser-renal-failure-vs
 Title: "Elixhauser Comorbid Condition Value Set for Renal failure"
 Description:    "Elixhauser Comorbid Condition Value Set for Renal failure. ICD-10 codes are drawn from https://www.hcup-us.ahrq.gov/toolssoftware/comorbidityicd10/comformat_icd10cm_2019_1.txt."
+* include codes from system SCT where concept is-a #42399005    "Renal failure syndrome (disorder)"
 * ICD10CM#N183    "Chronic kidney disease, stage 3 (moderate)"
 * ICD10CM#N184    "Chronic kidney disease, stage 4 (severe)"
 * ICD10CM#N185    "Chronic kidney disease, stage 5"
@@ -3064,6 +3161,7 @@ ValueSet:  ElixhauserSolidTumorVS
 Id: elixhauser-solid-tumor-vs
 Title: "Elixhauser Comorbid Condition Value Set for solid tumors without metastases"
 Description:    "Elixhauser Comorbid Condition Value Set for solid tumors without metastases. ICD-10 codes are drawn from https://www.hcup-us.ahrq.gov/toolssoftware/comorbidityicd10/comformat_icd10cm_2019_1.txt."
+* include codes from system SCT where concept is-a #108369006 "Neoplasm (morphologic abnormality)"
 * ICD10CM#C000    "Malignant neoplasm of external upper lip"
 * ICD10CM#C001    "Malignant neoplasm of external lower lip"
 * ICD10CM#C002    "Malignant neoplasm of external lip, unspecified"
@@ -3611,11 +3709,11 @@ Description:    "Elixhauser Comorbid Condition Value Set for solid tumors withou
 * ICD10CM#E3123    "Multiple endocrine neoplasia [MEN] type IIB"
 
 
-
 ValueSet:  ElixhauserUlcerVS
 Id: elixhauser-ulcer-vs
 Title: "Elixhauser Comorbid Condition Value Set for Chronic peptic ulcer disease."
 Description:    "Elixhauser Comorbid Condition Value Set for Chronic peptic ulcer disease. ICD-10 codes are drawn from https://www.hcup-us.ahrq.gov/toolssoftware/comorbidityicd10/comformat_icd10cm_2019_1.txt."
+* include codes from system SCT where concept is-a #13200003    "Peptic ulcer (disorder)"
 * ICD10CM#K254    "Chronic or unspecified gastric ulcer with hemorrhage"
 * ICD10CM#K255    "Chronic or unspecified gastric ulcer with perforation"
 * ICD10CM#K256    "Chronic or unspecified gastric ulcer with both hemorrhage and perforation"
@@ -3642,6 +3740,7 @@ ValueSet:  ElixhauserValvularDiseaseVS
 Id: elixhauser-valvular-disease-vs
 Title: "Elixhauser Comorbid Condition Value Set for Valvular disease"
 Description:    "Elixhauser Comorbid Condition Value Set for Valvular disease. ICD-10 codes are drawn from https://www.hcup-us.ahrq.gov/toolssoftware/comorbidityicd10/comformat_icd10cm_2019_1.txt."
+* include codes from system SCT where concept is-a #368009      "Heart valve disorder (disorder)"
 * ICD10CM#A5203    "Syphilitic endocarditis"
 * ICD10CM#I050    "Rheumatic mitral stenosis"
 * ICD10CM#I051    "Rheumatic mitral insufficiency"
@@ -3704,6 +3803,9 @@ ValueSet:  ElixhauserWeightLossVS
 Id: elixhauser-weight-loss-vs
 Title: "Elixhauser Comorbid Condition Value Set for Weight loss"
 Description:    "Elixhauser Comorbid Condition Value Set for Weight loss. ICD-10 codes are drawn from https://www.hcup-us.ahrq.gov/toolssoftware/comorbidityicd10/comformat_icd10cm_2019_1.txt."
+* include codes from system SCT where concept is-a #89362005    "Weight loss (finding)"
+* include codes from system SCT where concept is-a #248342006 "Underweight (finding)"
+* include codes from system SCT where concept is-a #65404009  "Undernutrition (disorder)"
 * ICD10CM#E40    "Kwashiorkor"
 * ICD10CM#E41    "Nutritional marasmus"
 * ICD10CM#E42    "Marasmic kwashiorkor"
@@ -3716,43 +3818,3 @@ Description:    "Elixhauser Comorbid Condition Value Set for Weight loss. ICD-10
 * ICD10CM#R634    "Abnormal weight loss"
 * ICD10CM#R636    "Underweight"
 
-/*
-ValueSet:   ComorbidConditionVS
-Id: mcode-comorbid-condition-vs
-Title: "Comorbid Condition Value Set"
-Description:    "SNOMED and ICD-10-CM codes for common comorbid conditions. Aligns with Elixhauser comorbidity scale. ICD-10 codes are drawn from https://www.hcup-us.ahrq.gov/toolssoftware/comorbidityicd10/comformat_icd10cm_2019_1.txt."
-* codes from system SCT where concept is-a #42343007    "Congestive heart failure (disorder)"
-* codes from system SCT where concept is-a #698247007   "Cardiac arrhythmia (disorder)"
-* codes from system SCT where concept is-a #368009      "Heart valve disorder (disorder)"
-* codes from system SCT where concept is-a #39785005    "Disorder of pulmonary circulation (disorder)"
-* codes from system SCT where concept is-a #400047006   "Peripheral vascular disease (disorder)"
-// can't see how to differentiate hypertension, uncomplicated from hypertension, complicated
-* codes from system SCT where concept is-a #38341003    "Hypertensive disorder, systemic arterial (disorder)" 
-* codes from system SCT where concept is-a #44695005    "Paralysis (finding)"
-// What is meant by "other" neurological disorders?
-* codes from system SCT where concept is-a #118940003   "Disorder of nervous system (disorder)"
-* codes from system SCT where concept is-a #413839001   "Chronic lung disease (disorder)"
-// Diabetes with and without complications
-// * codes from system SCT where concept is-a #111552007   "Diabetes mellitus without complication (disorder)"
-* codes from system SCT where concept is-a #73211009    "Diabetes mellitus (disorder)"
-* codes from system SCT where concept is-a #40930008    "Hypothyroidism (disorder)"
-* codes from system SCT where concept is-a #42399005    "Renal failure syndrome (disorder)"
-* codes from system SCT where concept is-a #235856003   "Disorder of liver (disorder)"
-* codes from system SCT where concept is-a #13200003    "Peptic ulcer (disorder)"
-* codes from system SCT where concept is-a #86406008    "Human immunodeficiency virus infection (disorder)"
-// looks like all neoplastic diseases are covered, but they aren't comorbid conditions from the mCODE point of view
-// * codes from system SCT where concept is-a #118600007   "Malignant lymphoma (disorder)"
-// * codes from system SCT where concept is-a #363346000   "Malignant neoplastic disease (disorder)"
-// non-malignant solid tumor:  perhaps 424413001 "Sarcoma (disorder) or Carcinoma?
-* codes from system SCT where concept is-a #3723001     "Arthritis (disorder)"
-* codes from system SCT where concept is-a #64779008    "Blood coagulation disorder (disorder)"
-* codes from system SCT where concept is-a #414916001   "Obesity (disorder)"
-* codes from system SCT where concept is-a #89362005    "Weight loss (finding)"
-* codes from system SCT where concept is-a #237840007   "Disorder of electrolytes (disorder)"
-// Both blood loss and deficiency anemia, so just use anemia subtree
-* codes from system SCT where concept is-a #271737000   "Anemia (disorder)"
-* codes from system SCT where concept is-a #15167005    "Alcohol abuse (disorder)"
-* codes from system SCT where concept is-a #66214007    "Substance abuse (disorder)"
-* codes from system SCT where concept is-a #69322001    "Psychotic disorder (disorder)"
-* codes from system SCT where concept is-a #35489007    "Depressive disorder (disorder)"  
-*/

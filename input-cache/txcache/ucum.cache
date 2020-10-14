@@ -209,3 +209,74 @@ e: {
   "error" : ""
 }
 -------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://unitsofmeasure.org",
+  "code" : "cm"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://unitsofmeasure.org",
+      "concept" : [{
+        "code" : "mm",
+        "display" : "Millimeter"
+      },
+      {
+        "code" : "cm",
+        "display" : "Centimeter"
+      }]
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "centimeter",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://unitsofmeasure.org",
+      "concept" : [{
+        "code" : "mm",
+        "display" : "Millimeter"
+      },
+      {
+        "code" : "cm",
+        "display" : "Centimeter"
+      }]
+    }]
+  }
+}}####
+e: {
+  "valueSet" : {
+  "resourceType" : "ValueSet",
+  "status" : "active",
+  "expansion" : {
+    "identifier" : "urn:uuid:27f6e42c-8fe8-4fa8-ab72-ef3bcd2f8140",
+    "timestamp" : "2020-10-14T12:56:10.301Z",
+    "parameter" : [{
+      "name" : "limitedExpansion",
+      "valueBoolean" : true
+    },
+    {
+      "name" : "version",
+      "valueString" : "http://unitsofmeasure.org|2.0.1"
+    }],
+    "contains" : [{
+      "system" : "http://unitsofmeasure.org",
+      "code" : "mm",
+      "display" : "Millimeter"
+    },
+    {
+      "system" : "http://unitsofmeasure.org",
+      "code" : "cm",
+      "display" : "Centimeter"
+    }]
+  }
+},
+  "error" : ""
+}
+-------------------------------------------------------------------------------------

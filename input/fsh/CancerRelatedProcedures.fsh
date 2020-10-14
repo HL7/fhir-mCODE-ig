@@ -4,7 +4,10 @@ Id:       mcode-cancer-related-radiation-procedure
 Title:    "Cancer-Related Radiation Procedure"
 Description: "A radiological treatment addressing a cancer condition. The scope of this profile has been narrowed to cancer-related procedures by constraining the ReasonReference and ReasonCode to cancer conditions.
 
-Conformance note: If an ICD-10-PCS code is used in the code attribute, and there is a semantically equivalent SNOMED CT or CPT code, the resulting Procedure instance will not be compliant with [US Core Profiles](http://hl7.org/fhir/us/core/index.html)"
+Conformance statement:
+
+Procedure resources associated with an mCODE patient with Procedure.category SNOMED-CT 53438000 MAY conform to this profile. Beyond this requirement, a producer of resources SHOULD ensure that any resource instance associated with an mCODE patient that would reasonably be expected to conform to this profile SHOULD be published in this form."
+
 /* Issues relative to mCODE 0.9.x
 1) basedOn should not include ProcedureRequest. No such class in R4.
 2) basedOn should include CarePlan
@@ -40,7 +43,12 @@ Profile:  CancerRelatedSurgicalProcedure
 Parent:   USCoreProcedure
 Id:       mcode-cancer-related-surgical-procedure
 Title:    "Cancer-Related Surgical Procedure"
-Description: "A surgical action addressing a cancer condition. The scope of this profile has been narrowed to cancer-related procedures by constraining the ReasonReference and ReasonCode to cancer conditions. Conformance note: If an ICD-10-PCS code is used in the code attribute, and there is a semantically equivalent SNOMED CT or CPT code, the resulting Procedure instance will not be compliant with US Core Profiles."
+Description: "A surgical action addressing a cancer condition. The scope of this profile has been narrowed to cancer-related procedures by constraining the ReasonReference and ReasonCode to cancer conditions.
+
+Conformance statement:
+
+Procedure resources associated with an mCODE patient with Procedure.category SNOMED-CT 387713003 MAY conform to this profile. Beyond this requirement, a producer of resources SHOULD ensure that any resource instance associated with an mCODE patient that would reasonably be expected to conform to this profile SHOULD be published in this form."
+
 * code from CancerRelatedSurgicalProcedureVS (extensible)
 * extension contains
     TreatmentIntent named treatmentIntent 0..1

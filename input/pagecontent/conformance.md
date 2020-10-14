@@ -68,7 +68,6 @@ The handling of missing or unknown elements in mCODE is functionally identical t
 * In situations where information on a particular data element is missing and the mCODE Data Sender knows the reason for the absence of data, the Data Sender SHALL send the reason for the missing information. The absence reason value SHOULD come first from the element's value set if it exists or otherwise from the dataAbsentReason extension.
 * mCODE Data Receivers SHALL be able to process resource instances containing data elements asserting missing information.
 
-
 #### Required Elements
 
 An mCODE data element is required if any of the following criteria are met:

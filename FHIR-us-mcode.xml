@@ -20,6 +20,7 @@
 <artifact deprecated="true" id="ValueSet/mcode-cancer-related-surgical-procedure-value-set" key="cancer-related-surgical-procedure-value-set" name="Cancer Related Surgical Procedure Value Set"/>
 <artifact id="StructureDefinition/mcode-cancer-stage-parent" key="cancer-stage-parent" name="Cancer Stage Parent"/>
 <artifact id="ValueSet/mcode-cancer-staging-system-vs" key="cancer-staging-system-value-set" name="Cancer Staging System Value Set"/>
+<artifact id="StructureDefinition/mcode-cancer-related-medication-request" key="StructureDefinition-mcode-cancer-related-medication-request" name="Cancer-Related Medication Request"/>
 <artifact id="StructureDefinition/mcode-cancer-related-medication-statement" key="StructureDefinition-mcode-cancer-related-medication-statement" name="Cancer-Related Medication Statement"/>
 <artifact id="StructureDefinition/mcode-cancer-related-radiation-procedure" key="StructureDefinition-mcode-cancer-related-radiation-procedure" name="Cancer-Related Radiation Procedure"/>
 <artifact id="StructureDefinition/mcode-cancer-related-surgical-procedure" key="StructureDefinition-mcode-cancer-related-surgical-procedure" name="Cancer-Related Surgical Procedure"/>
@@ -183,6 +184,7 @@
 <artifact id="Observation/mCODECancerGeneticVariantExample01" key="mcode-cancer-genetic-variant-example-01" name="mCODECancerGeneticVariantExample01"/>
 <artifact id="Observation/mCODECancerGeneticVariantExample02" key="mcode-cancer-genetic-variant-example-02" name="mCODECancerGeneticVariantExample02"/>
 <artifact id="DiagnosticReport/mCODECancerGenomicsReportExample01" key="mcode-cancer-genomics-report-example-01" name="mCODECancerGenomicsReportExample01"/>
+<artifact id="MedicationRequest/mCODECancerRelatedMedicationRequestExample01" key="MedicationRequest-mCODECancerRelatedMedicationRequestExample01" name="mCODECancerRelatedMedicationRequestExample01"/>
 <artifact id="MedicationStatement/mCODECancerRelatedMedicationStatementExample01" key="mcode-cancer-related-medication-statement-example-01" name="mCODECancerRelatedMedicationStatementExample01"/>
 <artifact id="MedicationStatement/mCODECancerRelatedMedicationStatementExample02" key="mcode-cancer-related-medication-statement-example-02" name="mCODECancerRelatedMedicationStatementExample02"/>
 <artifact id="Procedure/mCODECancerRelatedRadiationProcedureExample01" key="mcode-cancer-related-radiation-procedure-example-01" name="mCODECancerRelatedRadiationProcedureExample01"/>

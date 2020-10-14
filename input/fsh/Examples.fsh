@@ -347,3 +347,29 @@ Description: "mCODE Example for TNM Pathological Regional Nodes Category"
 * subject = Reference(mCODEPatientExample01)
 * effectiveDateTime = "2019-04-01"
 * valueCodeableConcept = AJCC#pN3 "N3"
+
+Instance: mCODECancerRelatedMedicationRequestExample01
+InstanceOf: CancerRelatedMedicationRequest
+Description: "mCODE Example for CancerRelatedMedicationRequest"
+* id = "mCODECancerRelatedMedicationRequestExample01"
+* meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-related-medication-request"
+* subject = Reference(mCODEPatientExample01)
+* status = MedRequestStatus#active
+* intent = MedRequestIntent#order
+* authoredOn = "2019-04-01"
+* medicationCodeableConcept = RXN#349472 "gefitinib 250 MG Oral Tablet"
+* reasonCode = SCT#254637007 "Non-small cell lung cancer (disorder)"
+* reasonReference = Reference(mCODEPrimaryCancerConditionExample01)
+* requester = Reference(mCODEPractitionerExample01)
+* extension[treatmentIntent].valueCodeableConcept = SCT#373808002 "Curative - procedure intent"
+* dosageInstruction.text = "250mg orally once daily with or without food"
+* dosageInstruction.route = SCT#26643006 "Oral use"
+* dosageInstruction.doseAndRate.doseQuantity.value = 250.0
+* dosageInstruction.doseAndRate.doseQuantity = UCUM#mg "mg"
+* dosageInstruction.timing.event = "2019-04-01"
+* dosageInstruction.timing.repeat.frequency = 1  // frequency, period and periodUnit to reflect "once per day"
+* dosageInstruction.timing.repeat.period = 1
+* dosageInstruction.timing.repeat.periodUnit = UnitsOfTime#d
+* dosageInstruction.timing.repeat.boundsPeriod.start = "2019-04-01"
+* dosageInstruction.timing.repeat.boundsPeriod.start = "2019-04-30"
+* dosageInstruction.timing.code = TimingAbbreviation#QD // prescriber abbreviation for once daily

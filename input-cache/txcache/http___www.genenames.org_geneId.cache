@@ -1,86 +1,5 @@
 -------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://www.genenames.org/geneId",
-  "code" : "HGNC:11389"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
-v: {
-  "display" : "",
-  "severity" : "error",
-  "error" : "The code system \"http://www.genenames.org/geneId\" is not known (encountered paired with code = \"HGNC:11389\"); The code provided (http://www.genenames.org/geneId#HGNC:11389) is not  valid in the value set All codes known to the system"
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://www.genenames.org/geneId",
-  "code" : "HGNC:1100"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
-v: {
-  "display" : "",
-  "severity" : "error",
-  "error" : "The code system \"http://www.genenames.org/geneId\" is not known (encountered paired with code = \"HGNC:1100\"); The code provided (http://www.genenames.org/geneId#HGNC:1100) is not  valid in the value set All codes known to the system"
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://www.genenames.org/geneId",
-  "code" : "8023"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
-v: {
-  "display" : "",
-  "severity" : "error",
-  "error" : "The code system \"http://www.genenames.org/geneId\" is not known (encountered paired with code = \"8023\"); The code provided (http://www.genenames.org/geneId#8023) is not  valid in the value set All codes known to the system"
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://www.genenames.org/geneId",
-  "code" : "HGNC:11389"
-}, "valueSet" :{
-  "resourceType" : "ValueSet",
-  "compose" : {
-    "include" : [{
-      "system" : "http://www.genenames.org/geneId"
-    }]
-  }
-}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
-v: {
-  "display" : "",
-  "severity" : "error",
-  "error" : "CodeSystem uri 'http://www.genenames.org/geneId' is unknown"
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://www.genenames.org/geneId",
-  "code" : "HGNC:1100"
-}, "valueSet" :{
-  "resourceType" : "ValueSet",
-  "compose" : {
-    "include" : [{
-      "system" : "http://www.genenames.org/geneId"
-    }]
-  }
-}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
-v: {
-  "display" : "",
-  "severity" : "error",
-  "error" : "CodeSystem uri 'http://www.genenames.org/geneId' is unknown"
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://www.genenames.org/geneId",
-  "code" : "8023"
-}, "valueSet" :{
-  "resourceType" : "ValueSet",
-  "compose" : {
-    "include" : [{
-      "system" : "http://www.genenames.org/geneId"
-    }]
-  }
-}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
-v: {
-  "display" : "",
-  "severity" : "error",
-  "error" : "CodeSystem uri 'http://www.genenames.org/geneId' is unknown"
-}
--------------------------------------------------------------------------------------
-{"hierarchical" : true, "valueSet" :{
+{"hierarchical" : false, "valueSet" :{
   "resourceType" : "ValueSet",
   "compose" : {
     "include" : [{
@@ -94,12 +13,137 @@ e: {
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://www.genenames.org/geneId",
-  "code" : "HGNC:8023"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+  "code" : "HGNC:26144"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://www.genenames.org/geneId"
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
 v: {
   "display" : "",
   "severity" : "error",
-  "error" : "The code system \"http://www.genenames.org/geneId\" is not known (encountered paired with code = \"HGNC:8023\"); The code provided (http://www.genenames.org/geneId#HGNC:8023) is not  valid in the value set All codes known to the system"
+  "error" : "CodeSystem uri 'http://www.genenames.org/geneId' is unknown (from http://tx.fhir.org/r4)"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://www.genenames.org/geneId",
+  "code" : "1100"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://www.genenames.org/geneId"
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "CodeSystem uri 'http://www.genenames.org/geneId' is unknown (from http://tx.fhir.org/r4)"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://www.genenames.org/geneId",
+  "code" : "1101"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://www.genenames.org/geneId"
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "CodeSystem uri 'http://www.genenames.org/geneId' is unknown (from http://tx.fhir.org/r4)"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "coding" : [{
+    "system" : "http://www.genenames.org/geneId",
+    "code" : "1100",
+    "display" : "BRCA1"
+  },
+  {
+    "system" : "http://www.genenames.org/geneId",
+    "code" : "1101",
+    "display" : "BRCA2"
+  },
+  {
+    "system" : "http://www.genenames.org/geneId",
+    "code" : "1748",
+    "display" : "CDH1"
+  },
+  {
+    "system" : "http://www.genenames.org/geneId",
+    "code" : "26144",
+    "display" : "PALB2"
+  },
+  {
+    "system" : "http://www.genenames.org/geneId",
+    "code" : "9588",
+    "display" : "PTEN"
+  },
+  {
+    "system" : "http://www.genenames.org/geneId",
+    "code" : "11389",
+    "display" : "STK11"
+  },
+  {
+    "system" : "http://www.genenames.org/geneId",
+    "code" : "11998",
+    "display" : "TP53"
+  }]
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://www.genenames.org/geneId"
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"CHECK_MEMERSHIP_ONLY"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "CodeSystem uri 'http://www.genenames.org/geneId' is unknown (from http://tx.fhir.org/r4)"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://www.genenames.org/geneId",
+  "code" : "HGNC:11389"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://www.genenames.org/geneId"
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "CodeSystem uri 'http://www.genenames.org/geneId' is unknown (from http://tx.fhir.org/r4)"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://www.genenames.org/geneId",
+  "code" : "HGNC:1100"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://www.genenames.org/geneId"
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "CodeSystem uri 'http://www.genenames.org/geneId' is unknown (from http://tx.fhir.org/r4)"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
@@ -116,10 +160,10 @@ v: {
 v: {
   "display" : "",
   "severity" : "error",
-  "error" : "CodeSystem uri 'http://www.genenames.org/geneId' is unknown"
+  "error" : "CodeSystem uri 'http://www.genenames.org/geneId' is unknown (from http://tx.fhir.org/r4)"
 }
 -------------------------------------------------------------------------------------
-{"hierarchical" : false, "valueSet" :{
+{"hierarchical" : true, "valueSet" :{
   "resourceType" : "ValueSet",
   "compose" : {
     "include" : [{

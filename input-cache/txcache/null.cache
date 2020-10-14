@@ -15,6 +15,6 @@
 v: {
   "display" : "",
   "severity" : "error",
-  "error" : "The code system \"\" is not known (encountered paired with code = \"H\"); The code provided (#H) is not valid in the value set 'ObservationInterpretationCodes'"
+  "error" : "The code system \"\" is not known (encountered paired with code = \"H\"); The code provided (#H) is not valid in the value set 'ObservationInterpretationCodes' (from http://tx.fhir.org/r4)"
 }
 -------------------------------------------------------------------------------------

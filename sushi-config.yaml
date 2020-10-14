@@ -30,8 +30,6 @@ pages:
     title: Implementation
   examples.md:
     title: Examples Overview
-  experimental.md:
-    title: Experiment Profiles
   downloads.md:
     title: Downloads
 menu:

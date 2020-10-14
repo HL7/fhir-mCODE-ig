@@ -2,7 +2,7 @@ Profile:  CancerRelatedMedicationStatement
 Parent:   MedicationStatement
 Id:       mcode-cancer-related-medication-statement
 Title:    "Cancer-Related Medication Statement"
-Description:    "A record of the use of a medication (individual administration or entire course) for a condition that is related to a primary or secondary cancer condition. The use may be reported by the patient or clinician and adminstration does not have to be directly observed."
+Description:    "A record of the use of a medication (individual administration or entire course) for a condition that is related to a primary or secondary cancer condition. The use may be reported by the patient or clinician and administration does not have to be directly observed."
 /* Notes on mCODE 0.9.x:
 1) basedOn is missing Reference(CarePlan)
 2) partOf is missing  Reference(MedicationDispense)

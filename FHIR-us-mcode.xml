@@ -212,6 +212,7 @@
 <page deprecated="true" key="profiles" name="(profiles)"/>
 <page key="artifacts" name="Artifacts Summary"/>
 <page deprecated="true" key="changelog" name="Change Log"/>
+<page key="change_log" name="Change log"/>
 <page key="conformance" name="Conformance"/>
 <page key="downloads" name="Downloads"/>
 <page key="examples" name="Examples Overview"/>

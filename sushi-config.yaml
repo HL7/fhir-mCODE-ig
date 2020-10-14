@@ -32,6 +32,8 @@ pages:
     title: Examples Overview
   downloads.md:
     title: Downloads
+  change_log.md:
+    title: Change log
 menu:
   Home: index.html
   Conformance: conformance.html

@@ -18,8 +18,9 @@ MedicationStatement resources associated with an mCODE patient that are prescrib
 6) informationSource is missing PractitionerRole
 7) not sure why reasonCode has be changed from 0..* to 0..1
 */
+* subject 1..1 MS
 * subject only Reference(CancerPatient)
-* effective[x] and medication[x] MS
+* effective[x] and medication[x] and reasonCode and reasonReference MS
 * extension contains
     TreatmentIntent named treatmentIntent 0..1 MS and
     TerminationReason named terminationReason 0..* MS

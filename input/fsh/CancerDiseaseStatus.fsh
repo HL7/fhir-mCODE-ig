@@ -8,7 +8,7 @@ Note: The LOINC code chosen to represent this observation (LOINC 88040-1, Respon
 
 Conformance statement: 
 
-Observation resources associated with an mCODE patient with Observation.code LOINC 88040-1 MUST conform to this profile. Beyond this requirement, a producer of resources SHOULD ensure that any resource instance associated with an mCODE patient that would reasonably be expected to conform to this profile SHOULD be published in this form."
+Observation resources associated with an [mCODE patient](conformance.html#mCODE-Patients) with Observation.code LOINC 88040-1 MUST conform to this profile. Beyond this requirement, a producer of resources SHOULD ensure that any resource instance associated with an mCODE patientthat would reasonably be expected to conform to this profile SHOULD be published in this form."
 
 * extension contains EvidenceType named evidenceType 0..*
 * extension[evidenceType].valueCodeableConcept from CancerDiseaseStatusEvidenceTypeVS (required)

@@ -35,7 +35,7 @@ Description:    "The Eastern Cooperative Oncology Group (ECOG) Performance Statu
 
 Conformance statement: 
 
-Observation resources associated with an mCODE patient with Observation.code LOINC 89247-1 MUST conform to this profile. Beyond this requirement, a producer of resources SHOULD ensure that any resource instance associated with an mCODE patient that would reasonably be expected to conform to this profile SHOULD be published in this form.."
+Observation resources associated with an mCODE patient with Observation.code LOINC 89247-1 MUST conform to this profile. Beyond this requirement, a producer of resources SHOULD ensure that any resource instance associated with an mCODE patient that would reasonably be expected to conform to this profile SHOULD be published in this form."
 * status and code and subject and effective[x] and valueInteger MS
 * subject 1..1
 * value[x] 1..1

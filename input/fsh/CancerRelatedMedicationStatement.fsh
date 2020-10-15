@@ -2,7 +2,7 @@ Profile:  CancerRelatedMedicationStatement
 Parent:   MedicationStatement
 Id:       mcode-cancer-related-medication-statement
 Title:    "Cancer-Related Medication Statement"
-Description:    "A record of the use of a medication (individual administration or entire course) for a condition that is related to a primary or secondary cancer condition. The use may be reported by the patient or clinician and administration does not have to be directly observed.
+Description:    "A record of the use of a medication (individual administration or entire course) for a condition that is related to a primary or secondary cancer condition. The use may be reported by the patient or clinician and administration does not have to be directly observed. The profile includes two extensions, TreatmentIntent and TerminationReason, that capture additional context around the use of the medication. 
 
 Conformance statement:
 
@@ -20,6 +20,7 @@ MedicationStatement resources associated with an mCODE patient SHOULD conform to
 * extension contains
     TreatmentIntent named treatmentIntent 0..1 MS and
     TerminationReason named terminationReason 0..* MS
-* effective[x] 1..1  // change from 0..1 to 1..1
-* dosage 0..1
 * medicationCodeableConcept from http://hl7.org/fhir/us/core/ValueSet/us-core-medication-codes (extensible)
+// MK 10/15/2020 -- The following constraints were in STU 1, but there is no apparent justification on why we added these constraints.
+// * effective[x] 1..1  
+// * dosage 0..1 

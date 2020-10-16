@@ -13,7 +13,12 @@ US Core defines two actors, US Core Requestor and US Core Responder, which are h
 
 ##### Supported Profiles
 
-Each mCODE participant SHOULD support all profiles defined in mCODE unless the participant does not anticipate supplying or consuming a certain type of data, usually by virtue of playing a limited or specialized role in clinical or information workflows. For example, a Genomics Laboratory may support GenomicsReport, but not vital signs or staging.
+Each mCODE participants SHALL support the following profiles, which are core to representing an mCODE patient, UNLESS the necessary data to populate them is typically not available in their system:
+
+* [CancerPatient](StructureDefinition-mcode-cancer-patient.html)
+* [PrimaryCancerCondition](StructureDefinition-mcode-primary-cancer-condition.html)
+
+Additionally, each mCODE participant SHOULD support all profiles defined in mCODE unless the participant does not anticipate supplying or consuming a certain type of data, usually by virtue of playing a limited or specialized role in clinical or information workflows. For example, a Genomics Laboratory may support GenomicsReport, but not vital signs or staging.
 
 Each mCODE participant MUST publish a FHIR CapabilityStatement listing their supported profiles, by declaring the profile in CapabilityStatement.rest.resource.supportedProfile.
 
@@ -35,9 +40,9 @@ To facilitate conformance testing, the testing software must be able to determin
 
 Due to technical, organizational, or legal reasons, mCODE Data Senders MAY exclude some cancer patients from mCODE. In that case, the mCODE Data Sender MUST implement [profile search](https://www.hl7.org/fhir/search.html#profile) indicate which patients fall into the scope of mCODE by populating `Patient.meta.profile` with the mCODE CancerPatient profile (`http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-patient`). Patients not explicitly indicated by this method are assumed to be out of scope, regardless of any cancer diagnosis.
 
-#### mCODE Bundle
+#### mCODE Patient Bundle
 
-An mCODE Bundle is the complete set of data for a particular patient corresponding to the set of supported profiles of an mCODE Data Sender. An mCODE Data Sender MUST be capable of producing a valid mCODE bundle for all of its mCODE patients (as defined above).
+An [mCODE Patient Bundle](StructureDefinition-mcode-patient-bundle-definitions.html) is the complete set of data for a particular patient corresponding to the set of supported profiles of an mCODE Data Sender. An mCODE Data Sender MUST be capable of producing a valid mCODE bundle for all of its mCODE patients (as defined above).
 
 #### mCODE Profiles
 

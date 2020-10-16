@@ -359,7 +359,6 @@ Description: "mCODE Example for CancerRelatedMedicationRequest"
 * authoredOn = "2019-04-01"
 * medicationCodeableConcept = RXN#349472 "gefitinib 250 MG Oral Tablet"
 * reasonCode = SCT#254637007 "Non-small cell lung cancer (disorder)"
-* reasonReference = Reference(mCODEPrimaryCancerConditionExample01)
 * requester = Reference(mCODEPractitionerExample01)
 * extension[treatmentIntent].valueCodeableConcept = SCT#373808002 "Curative - procedure intent"
 * dosageInstruction.text = "250mg orally once daily with or without food"
@@ -369,7 +368,7 @@ Description: "mCODE Example for CancerRelatedMedicationRequest"
 * dosageInstruction.timing.event = "2019-04-01"
 * dosageInstruction.timing.repeat.frequency = 1  // frequency, period and periodUnit to reflect "once per day"
 * dosageInstruction.timing.repeat.period = 1
-* dosageInstruction.timing.repeat.periodUnit = UnitsOfTime#d
+* dosageInstruction.timing.repeat.periodUnit = UCUM#d
 * dosageInstruction.timing.repeat.boundsPeriod.start = "2019-04-01"
 * dosageInstruction.timing.repeat.boundsPeriod.start = "2019-04-30"
 * dosageInstruction.timing.code = TimingAbbreviation#QD // prescriber abbreviation for once daily

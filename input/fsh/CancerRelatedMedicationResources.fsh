@@ -11,7 +11,8 @@ Description:    "A record of the medication prescription or order for a patient 
     TreatmentIntent named treatmentIntent 0..1 MS and
     TerminationReason named terminationReason 0..* MS
 * reasonCode MS
+* reasonCode from AnyCancerDisorderVS (extensible)
 * reasonReference MS
-* reasonReference only Reference(PrimaryCancerCondition or SecondaryCancerCondition or ComorbidConditionParent) // only for cancer-related reasons
+* reasonReference only Reference(CancerConditionParent) // only for cancer-related reasons
 * requester MS
 * requester only Reference(USCorePractitioner or USCoreOrganization or CancerPatient)

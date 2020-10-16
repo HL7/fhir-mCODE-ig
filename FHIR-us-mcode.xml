@@ -156,6 +156,7 @@
 <artifact id="Observation/example1-mcode-ecog-performance-status" key="Observation-example1-mcode-ecog-performance-status" name="example1-mcode-ecog-performance-status"/>
 <artifact id="Specimen/example1-mcode-genetic-specimen" key="Specimen-example1-mcode-genetic-specimen" name="example1-mcode-genetic-specimen"/>
 <artifact id="Observation/example1-mcode-genomic-region-studied" key="Observation-example1-mcode-genomic-region-studied" name="example1-mcode-genomic-region-studied"/>
+<artifact id="Bundle/example1-mcode-patient-bundle" key="Bundle-example1-mcode-patient-bundle" name="example1-mcode-patient-bundle"/>
 <artifact id="Condition/example1-mcode-primary-cancer-condition" key="Condition-example1-mcode-primary-cancer-condition" name="example1-mcode-primary-cancer-condition"/>
 <artifact id="Observation/example1-mcode-tnm-clinical-distant-metastases-category" key="Observation-example1-mcode-tnm-clinical-distant-metastases-category" name="example1-mcode-tnm-clinical-distant-metastases-category"/>
 <artifact id="Observation/example1-mcode-tnm-clinical-regional-nodes-category" key="Observation-example1-mcode-tnm-clinical-regional-nodes-category" name="example1-mcode-tnm-clinical-regional-nodes-category"/>
@@ -179,6 +180,7 @@
 <artifact id="Procedure/example1-us-core-procedure-biopsy" key="Procedure-example1-us-core-procedure-biopsy" name="example1-us-core-procedure-biopsy"/>
 <artifact id="Procedure/example1-us-core-procedure-mammogram" key="Procedure-example1-us-core-procedure-mammogram" name="example1-us-core-procedure-mammogram"/>
 <artifact id="Observation/example1-us-core-smoking-status" key="Observation-example1-us-core-smoking-status" name="example1-us-core-smoking-status"/>
+<artifact id="StructureDefinition/mcode-patient-bundle" key="StructureDefinition-mcode-patient-bundle" name="mCODE Patient Bundle"/>
 <artifact id="Observation/mCODECancerDiseaseStatusExample01" key="mcode-cancer-disease-status-example-01" name="mCODECancerDiseaseStatusExample01"/>
 <artifact id="Observation/mCODECancerGeneticVariantExample01" key="mcode-cancer-genetic-variant-example-01" name="mCODECancerGeneticVariantExample01"/>
 <artifact id="Observation/mCODECancerGeneticVariantExample02" key="mcode-cancer-genetic-variant-example-02" name="mCODECancerGeneticVariantExample02"/>

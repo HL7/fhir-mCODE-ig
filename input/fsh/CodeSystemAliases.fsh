@@ -4,6 +4,7 @@ Alias:   SCT = http://snomed.info/sct
 Alias:   UCUM = http://unitsofmeasure.org
 Alias:   NCIT = http://ncithesaurus-stage.nci.nih.gov
 Alias:   ICD10CM = http://hl7.org/fhir/sid/icd-10-cm
+Alias:   ICDO3 = http://terminology.hl7.org/CodeSystem/icd-o-3
 Alias:   RXN = http://www.nlm.nih.gov/research/umls/rxnorm
 Alias:   CPT = http://www.ama-assn.org/go/cpt
 Alias:   AJCC = http://cancerstaging.org

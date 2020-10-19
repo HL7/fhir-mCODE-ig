@@ -65,21 +65,3 @@ Title: "Related Primary Cancer Condition"
 Description: "The primary cancer related to this secondary cancer."
 * value[x] only Reference
 * valueReference only Reference(PrimaryCancerCondition)
-
-
-// Tumor profile was in mCODE, but not primary (hidden). The way we have used the CancerConditionParent, it is not necessary to list Tumor explicitly in TumorMarker and CancerDiseaseStatus. For example, we have `* focus only Reference(CancerConditionParent)` and not (in CIMPL) `Value only PrimaryCancerCondition or SecondaryCancerCondition or Tumor`
-/*
-Profile: Tumor
-Parent: CancerConditionParent
-Id: mcode-tumor
-Title: "Tumor"
-Description: "The presence of an abnormal mass of tissue (neoplasm) that results when cells divide more than they should or do not die when they should. Tumors may be benign (not cancer), or malignant (cancer). (source: NCI Dictionary).
-
-Conformance note: For the HistologyMorphologyBehavior attribute, to be compliant with US Core Profiles, SNOMED CT must be used unless there is no suitable code, in which case ICD-O-3 can be used."
-* ^abstract = false
-* extension contains
-    RelatedPrimaryCancerCondition 0..1 and
-    IsPrimaryTumor 0..1
-* IsPrimaryTumor ^short = "Whether the tumor is the original or first tumor in the body, for a particular cancer."
-* IsPrimaryTumor.value[x] only CodeableConcept
-*/

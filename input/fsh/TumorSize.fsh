@@ -58,18 +58,14 @@ Title: "Tumor"
 Description:  "Identifies a tumor"
 * ^status = #draft
 * ^experimental = true
-
 // The purpose of this profile is to uniquely identify a tumor, so it follows that there must be at least one identifier value provided
 * identifier 1.. MS
-
 // This VS is used to define the morphology of primary and secondary cancer; rule set here for consistency with these profiles.
 * morphology from HistologyMorphologyBehaviorVS (extensible)
 * morphology MS
-
 // This VS is used for the primary/secondary cancer conditions; rule set here for consistency with these profiles.
 * location from CancerBodyLocationVS (extensible)
 * location 1..1 MS // Tumor is meaningless without a location; parent profile is 0..1
-
 * patient only Reference(CancerPatient)
 
 

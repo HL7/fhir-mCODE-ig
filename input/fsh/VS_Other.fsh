@@ -21,7 +21,7 @@ Id: mcode-cancer-body-location-vs
 Title: "Cancer Body Location Value Set"
 Description:  "Codes describing the location(s) of primary or secondary cancer. The value set includes all codes from the SNOMED CT body structure hierarchy (codes descending from 123037004 'Body Structure'). The cancer body location may also be expressed using ICD-O-3 topography codes, however, those codes are not included here due to intellectual property restrictions. These topography terms have four-character codes that run from C00.0 to C80.9 [ref](https://apps.who.int/iris/bitstream/handle/10665/96612/9789241548496_eng.pdf). Only SNOMED CT and ICD-O-3 are considered conformant."
 * include codes from system SCT where concept is-a #123037004  "Body Structure"
-* include codes from system http://terminology.hl7.org/CodeSystem/icd-o-3
+* include codes from system http://terminology.hl7.org/CodeSystem/icd-o-3  // currently no way to filter to just topology codes (that I know of)
 
 /* 
 ValueSet:  AnatomicalOrientationVS

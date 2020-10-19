@@ -136,7 +136,7 @@ Description: "Extended example 1: example showing TNM staging (stage group)"
 * subject = Reference(example1-mcode-cancer-patient)
 * effectiveDateTime = "2018-03-10"
 * valueCodeableConcept = AJCC#2B "IIB"
-* method = MTH#C146985 "AJCC Cancer Staging Manual 8th Edition"
+* method = NCIT#C146985 "AJCC Cancer Staging Manual 8th Edition"
 * hasMember[0] = Reference(example1-mcode-tnm-primary-tumor-category)
 * hasMember[1] = Reference(example1-mcode-tnm-clinical-regional-nodes-category)
 * hasMember[2] = Reference(example1-mcode-tnm-clinical-distant-metastases-category)
@@ -152,7 +152,7 @@ Description: "Extended example 1: example showing TNM staging (T)"
 * subject = Reference(example1-mcode-cancer-patient)
 * effectiveDateTime = "2018-03-10"
 * valueCodeableConcept = AJCC#cT3
-* method = MTH#C146985 "AJCC Cancer Staging Manual 8th Edition"
+* method = NCIT#C146985 "AJCC Cancer Staging Manual 8th Edition"
 
 // example1-mcode-tnm-clinical-regional-nodes-category.json
 Instance: example1-mcode-tnm-clinical-regional-nodes-category
@@ -165,7 +165,7 @@ Description: "Extended example 1: example showing TNM staging (N)"
 * subject = Reference(example1-mcode-cancer-patient)
 * effectiveDateTime = "2018-03-10"
 * valueCodeableConcept = AJCC#cN0
-* method = MTH#C146985 "AJCC Cancer Staging Manual 8th Edition"
+* method = NCIT#C146985 "AJCC Cancer Staging Manual 8th Edition"
 
 // example1-mcode-tnm-clinical-distant-metastases-category.json
 Instance: example1-mcode-tnm-clinical-distant-metastases-category
@@ -178,7 +178,7 @@ Description: "Extended example 1: example showing TNM staging (M)"
 * subject = Reference(example1-mcode-cancer-patient)
 * effectiveDateTime = "2018-03-10"
 * valueCodeableConcept = AJCC#cM0
-* method = MTH#C146985 "AJCC Cancer Staging Manual 8th Edition"
+* method = NCIT#C146985 "AJCC Cancer Staging Manual 8th Edition"
 
 // example1-mcode-tumor-marker-er.json
 Instance: example1-mcode-tumor-marker-er

@@ -4,7 +4,7 @@ Id: mcode-comorbid-condition
 Title: "Comorbid Condition"
 Description:  "A comorbidity refers to one or more diseases or conditions that occur along with another condition in the same person at the same time. Conditions considered comorbidities are often long-term or chronic conditions. Comorbidities are defined relative to an index disease and may be categorical, rather than described in full detail. 
 
-The comorbid condition class provides comorbidity codes corresponding the Elixhauser Comorbidity Index. A profile is defined for each comorbid condition in the Elixhauser Comorbidity Index to allow implementers to tag relevant resources as conforming to their respective profiles using [`meta.profile`](https://www.hl7.org/fhir/resource-definitions.html#Meta.profile). Value sets are also defined for each comorbid condition in the Index."
+The ComorbidConditionParent profile provides a base profile for specific comorbidity profiles. In mCODE, one profile is defined for each comorbid condition in the Elixhauser Comorbidity Index, with the exception of cancer conditions (the index disease in the context of mCODE). These profiles allow implementers to tag relevant resources as conforming to their respective profiles using [`meta.profile`](https://www.hl7.org/fhir/resource-definitions.html#Meta.profile). Value sets are also defined for each comorbid condition in the Index."
 * ^abstract = true
 * category = SCT#398192003
 * bodySite from http://hl7.org/fhir/ValueSet/body-site (preferred)

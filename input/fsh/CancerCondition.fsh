@@ -31,7 +31,10 @@ Description: "Records the history of the primary cancer condition, the original 
 
 Cancer staging information summarized in this profile should reflect the most recent staging assessment on the patient, and should be updated if and when there is a new staging assessment. Past staging assessments will be preserved in instances of the TNMClinicalStageGroup and/or TNMPathologicalStageGroup, which refer back to PrimaryCancerCondition.
 
-Conformance statement: All Conditions associated with an mCODE patient with a code from value set PrimaryOrUncertainBehaviorCancerDisorderVS (or a code from any other terminology system with equivalent semantics) SHALL conform to this profile."
+Conformance statement:
+
+Condition resources associated with an [mCODE patient](conformance.html#mCODE-Patients)with a Condition.code in the value set PrimaryOrUncertainBehaviorCancerDisorderVS MUST conform to this profile. Beyond this requirement, a producer of resources SHOULD ensure that any resource instance associated with an mCODE patient that would reasonably be expected to conform to this profile SHOULD be published in this form, for example, when employing a code that extends the [PrimaryOrUncertainBehaviorCancerDisorderVS](ValueSet-mcode-primary-or-uncertain-behavior-cancer-disorder-vs.html) value set. Any resource intended to conform to this profile SHOULD populate meta.profile accordingly."
+
 * ^abstract = false
 * code from PrimaryOrUncertainBehaviorCancerDisorderVS (extensible)
 * stage.assessment only Reference(CancerStageParent)
@@ -42,7 +45,9 @@ Id: mcode-secondary-cancer-condition
 Title: "Secondary Cancer Condition"
 Description: "Records the history of secondary neoplasms, including location(s) and the date of onset of metastases. A secondary cancer results from the spread (metastasization) of cancer from its original site (Definition from: NCI Dictionary of Cancer Terms).
 
-Conformance statement: All Conditions associated with an mCODE patient with a code from value set SecondaryCancerDisorderVS (or a code from any other terminology system with equivalent semantics) SHALL conform to this profile."
+Conformance statement:
+
+Condition resources associated with an [mCODE patient](conformance.html#mCODE-Patients) with a Condition.code in the value set SecondaryCancerDisorderVS MUST conform to this profile. Beyond this requirement, a producer of resources SHOULD ensure that any resource instance associated with an mCODE patient that would reasonably be expected to conform to this profile SHOULD be published in this form, for example, when employing a code that extends the * code from SecondaryCancerDisorderVS value set. Any resource intended to conform to this profile SHOULD populate meta.profile accordingly."
 
 * ^abstract = false
 * extension contains

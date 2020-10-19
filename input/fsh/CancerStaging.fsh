@@ -28,7 +28,11 @@ Profile: TNMClinicalStageGroup
 Id: mcode-tnm-clinical-stage-group
 Parent: CancerStageParent
 Title: "TNM Clinical Stage Group"
-Description: "The extent of the cancer in the body, according to the TNM classification system, based on evidence such as physical examination, imaging, and/or biopsy."
+Description: "The extent of the cancer in the body, according to the TNM classification system, based on evidence such as physical examination, imaging, and/or biopsy.
+
+Conformance Statement:
+
+Observation resources associated with an [mCODE patient](conformance.html#mCODE-Patients) with Observation.code LOINC 21908-9 MUST conform to this profile. Beyond this requirement, a producer of resources SHOULD ensure that any resource instance associated with an mCODE patient that would reasonably be expected to conform to this profile SHOULD be published in this form."
 * ^abstract = false
 * hasMember MS
 * code = LNC#21908-9 //"Stage group.clinical Cancer"
@@ -59,7 +63,11 @@ Profile:  TNMClinicalPrimaryTumorCategory
 Id: mcode-tnm-clinical-primary-tumor-category
 Parent: CancerStageParent
 Title: "TNM Clinical Primary Tumor Category"
-Description: "Category of the primary tumor, based on its size and extent, based on evidence such as physical examination, imaging, and/or biopsy."
+Description: "Category of the primary tumor, based on its size and extent, based on evidence such as physical examination, imaging, and/or biopsy.
+
+Conformance Statement:
+
+Observation resources associated with an [mCODE patient](conformance.html#mCODE-Patients) with Observation.code LOINC 21905-5 MUST conform to this profile. Beyond this requirement, a producer of resources SHOULD ensure that any resource instance associated with an mCODE patient that would reasonably be expected to conform to this profile SHOULD be published in this form."
 * ^abstract = false
 * code = LNC#21905-5 //"Primary tumor.clinical [Class] Cancer"
 * valueCodeableConcept from TNMPrimaryTumorCategoryVS (preferred)
@@ -68,7 +76,11 @@ Profile:  TNMClinicalRegionalNodesCategory
 Id: mcode-tnm-clinical-regional-nodes-category
 Parent: CancerStageParent
 Title: "TNM Clinical Regional Nodes Category"
-Description: "Category of the presence or absence of metastases in regional lymph nodes, based on evidence such as physical examination, imaging, and/or biopsy."
+Description: "Category of the presence or absence of metastases in regional lymph nodes, based on evidence such as physical examination, imaging, and/or biopsy.
+
+Conformance Statement:
+
+Observation resources associated with an [mCODE patient](conformance.html#mCODE-Patients) with Observation.code LOINC 21906-3 MUST conform to this profile. Beyond this requirement, a producer of resources SHOULD ensure that any resource instance associated with an mCODE patient that would reasonably be expected to conform to this profile SHOULD be published in this form."
 * ^abstract = false
 * code = LNC#21906-3 //"Regional lymph nodes.clinical [Class] Cancer"
 * valueCodeableConcept from TNMRegionalNodesCategoryVS (preferred)
@@ -88,7 +100,11 @@ Profile: TNMPathologicalStageGroup
 Id: mcode-tnm-pathological-stage-group
 Parent: CancerStageParent
 Title: "TNM Pathological Stage Group"
-Description: "The extent of the cancer in the body, according to the TNM classification system, assessed through pathologic analysis of a specimen."
+Description: "The extent of the cancer in the body, according to the TNM classification system, assessed through pathologic analysis of a specimen.
+
+Conformance Statement:
+
+Observation resources associated with an [mCODE patient](conformance.html#mCODE-Patients) with Observation.code LOINC 21902-2 MUST conform to this profile. Beyond this requirement, a producer of resources SHOULD ensure that any resource instance associated with an mCODE patient that would reasonably be expected to conform to this profile SHOULD be published in this form."
 * ^abstract = false
 * hasMember MS
 * code =  LNC#21902-2 //"Stage group.pathology Cancer"
@@ -118,7 +134,11 @@ Profile:  TNMPathologicalPrimaryTumorCategory
 Id: mcode-tnm-pathological-primary-tumor-category
 Parent: CancerStageParent
 Title: "TNM Pathological Primary Tumor Category"
-Description: "Category of the primary tumor, based on its size and extent, assessed through pathologic analysis of a specimen."
+Description: "Category of the primary tumor, based on its size and extent, assessed through pathologic analysis of a specimen.
+
+Conformance Statement:
+
+Observation resources associated with an [mCODE patient](conformance.html#mCODE-Patients) with Observation.code LOINC 21899-0 MUST conform to this profile. Beyond this requirement, a producer of resources SHOULD ensure that any resource instance associated with an mCODE patient that would reasonably be expected to conform to this profile SHOULD be published in this form."
 * ^abstract = false
 * code = LNC#21899-0 //"Primary tumor.pathology Cancer"
 * valueCodeableConcept from TNMPrimaryTumorCategoryVS (preferred)
@@ -127,7 +147,11 @@ Profile:  TNMPathologicalRegionalNodesCategory
 Id: mcode-tnm-pathological-regional-nodes-category
 Parent: CancerStageParent
 Title: "TNM Pathological Regional Nodes Category"
-Description: "Category of the presence or absence of metastases in regional lymph nodes, assessed through pathologic analysis of a specimen."
+Description: "Category of the presence or absence of metastases in regional lymph nodes, assessed through pathologic analysis of a specimen.
+
+Conformance Statement:
+
+Observation resources associated with an [mCODE patient](conformance.html#mCODE-Patients) with Observation.code LOINC 21900-6 MUST conform to this profile. Beyond this requirement, a producer of resources SHOULD ensure that any resource instance associated with an mCODE patient that would reasonably be expected to conform to this profile SHOULD be published in this form."
 * ^abstract = false
 * code = LNC#21900-6 //"Regional lymph nodes.pathology [Class] Cancer"
 * valueCodeableConcept from TNMRegionalNodesCategoryVS (preferred)
@@ -136,7 +160,11 @@ Profile:  TNMPathologicalDistantMetastasesCategory
 Id: mcode-tnm-pathological-distant-metastases-category
 Parent: CancerStageParent
 Title: "TNM Pathological Distant Metastases Category"
-Description: "Category describing the presence or absence of metastases in remote anatomical locations, assessed through pathologic analysis of a specimen."
+Description: "Category describing the presence or absence of metastases in remote anatomical locations, assessed through pathologic analysis of a specimen.
+
+Conformance Statement:
+
+Observation resources associated with an [mCODE patient](conformance.html#mCODE-Patients) with Observation.code LOINC 21901-4 MUST conform to this profile. Beyond this requirement, a producer of resources SHOULD ensure that any resource instance associated with an mCODE patient that would reasonably be expected to conform to this profile SHOULD be published in this form."
 * ^abstract = false
 * code = LNC#21901-4 //"Distant metastases.pathology [Class] Cancer"
 * valueCodeableConcept from TNMDistantMetastasesCategoryVS (preferred)

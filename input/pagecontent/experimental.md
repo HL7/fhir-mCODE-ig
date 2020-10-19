@@ -1,5 +1,16 @@
 The profiles and value sets on this page are experimental.
 
+### Medication-related
+
+These are medication-related experimental profiles.
+
+| Type    | Name                             | Example                 |
+| ------- | -------------------------------- | ----------------------- |
+| Profile | [CancerRelatedMedicationRequest] | [Example][crmr-example] |
+
+[CancerRelatedMedicationRequest]: StructureDefinition-mcode-cancer-related-medication-request.html
+[crmr-example]: MedicationRequest-mCODECancerRelatedMedicationRequestExample01.html
+
 ### Tumor size
 
 This is a set of experimental profiles for representing the dimensions of a tumor.

@@ -2,7 +2,7 @@ Instance: mcode-tumor-size
 InstanceOf: TumorSize
 Description: "EXPERIMENTAL example of a resource conforming to the tumor size profile."
 * id = "mcode-tumor-size"
-* status = #final "Final"
+* status = #draft"
 * subject = Reference(Patient/mCODEPatientExample01)
 * focus = Reference(BodyStructure/mcode-tumor)
 

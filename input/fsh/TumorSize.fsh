@@ -17,7 +17,7 @@ Description:  "Records the dimensions of a tumor"
 * subject only Reference(CancerPatient)
 
 // LOINC code indicatign this is a tumor size
-* code = LNC#21889-1 "Size Tumor"
+* code = LNC#21889-1 //"Size Tumor"
 * code MS
 
 // Store tumor size in component with 3 valueCodableConcepts for each tumor dimension
@@ -33,19 +33,19 @@ Description:  "Records the dimensions of a tumor"
 
 * component[tumorLongestDimension] ^short = "Longest tumor dimension (cm or mm)"
 * component[tumorLongestDimension] ^definition = "The longest tumor dimension in cm or mm."
-* component[tumorLongestDimension].code = LNC#33728-7 "Size.maximum dimension in Tumor"
+* component[tumorLongestDimension].code = LNC#33728-7 // "Size.maximum dimension in Tumor"
 * component[tumorLongestDimension].value[x] only Quantity
 * component[tumorLongestDimension].valueQuantity from TumorSizeUnitsVS (required)
 
 * component[tumorDimension2] ^short = "2nd tumor dimension (cm or mm)"
-* component[tumorDimension2] ^definition = "The 2nd tumor dimension in cm or mm."
-* component[tumorDimension2].code = SCT#372300005 "Tumor size, dimension 2 (observable entity)"
+* component[tumorDimension2] ^definition = "The second tumor dimension in cm or mm."
+* component[tumorDimension2].code = SCT#372300005 // "Tumor size, dimension 2 (observable entity)"
 * component[tumorDimension2].value[x] only Quantity
 * component[tumorDimension2].valueQuantity from TumorSizeUnitsVS (required)
 
 * component[tumorDimension3] ^short = "3rd tumor dimension (cm or mm)"
-* component[tumorDimension3] ^definition = "The 3rd tumor dimension in cm or mm."
-* component[tumorDimension3].code = SCT#372301009 "Tumor size, dimension 3 (observable entity)"
+* component[tumorDimension3] ^definition = "The third tumor dimension in cm or mm."
+* component[tumorDimension3].code = SCT#372301009 // "Tumor size, dimension 3 (observable entity)"
 * component[tumorDimension3].value[x] only Quantity
 * component[tumorDimension3].valueQuantity from TumorSizeUnitsVS (required)
 
@@ -58,19 +58,14 @@ Title: "Tumor"
 Description:  "Identifies a tumor"
 * ^status = #draft
 * ^experimental = true
-
-
 // The purpose of this profile is to uniquely identify a tumor, so it follows that there must be at least one identifier value provided
 * identifier 1.. MS
-
 // This VS is used to define the morphology of primary and secondary cancer; rule set here for consistency with these profiles.
-* morphology from HistologyMorphologyBehaviorVS (required)
+* morphology from HistologyMorphologyBehaviorVS (extensible)
 * morphology MS
-
 // This VS is used for the primary/secondary cancer conditions; rule set here for consistency with these profiles.
-* location from CancerBodyLocationVS (required)
+* location from CancerBodyLocationVS (extensible)
 * location 1..1 MS // Tumor is meaningless without a location; parent profile is 0..1
-
 * patient only Reference(CancerPatient)
 
 
@@ -79,7 +74,7 @@ Description:  "Identifies a tumor"
 ValueSet:        TumorSizeUnitsVS
 Id:              mcode-tumor-size-units-vs
 Title:           "Units of tumor size value set"
-Description:     "Units of tumor size (cm or mm)"
+Description:     "Acceptable units for measuring tumor size"
 * UCUM#mm        "Millimeter"
 * UCUM#cm        "Centimeter"
 * ^status = #draft

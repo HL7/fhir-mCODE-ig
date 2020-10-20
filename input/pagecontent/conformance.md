@@ -33,11 +33,43 @@ These are requirements in the base FHIR specification, not additional requiremen
 
 ##### mCODE Data Sender
 
-##### Supported Operations
+1. **List mCODE Patients** (defined below). mCODE Data Senders SHALL implement AT LEAST ONE of the following operations UNLESS they are a specialty system that does not implement `CancerPatient` due to unavailable data as described above.
 
-TBD
+  a. For participants where ALL patients with confirmed cancer diagnoses are covered by mCODE:
 
-#### mCODE Patients
+      GET [base]/Condition?code:in=http://hl7.org/fhir/us/mcode/ValueSet/mcode-primary-or-uncertain-behavior-cancer-disorder-vs
+
+    Given the results of this query, `Patient` resources can be retrieved by iterating through the returned Conditions client-side and retrieving Patients from the standard `GET [base]/Patient/:id` endpoint.
+
+    Additionally, participants MAY support `_include` to get the relevant `Patient` resources in a single request:
+
+        GET [base]/Condition?code:in=http://hl7.org/fhir/us/mcode/ValueSet/mcode-primary-or-uncertain-behavior-cancer-disorder-vs&_include=Observation:patient
+
+    Additionally, participants MAY support reverse chaining to get _only_ the `Patient` resources in a single request:
+
+        # TODO not sure if this is actually possible -- remove if it's not.
+
+        GET [base]/Patient?_has:Observation:patient:code:in=http://hl7.org/fhir/us/mcode/ValueSet/mcode-primary-or-uncertain-behavior-cancer-disorder-vs&_include=Observation:patient
+
+  b. For participants identifying mCODE patients with `meta.profile`:
+
+      GET [base]/Patient?_profile=http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-patient
+
+2. **Retrieve mCODE Patient Bundle**. mCODE Data Senders SHALL implement the following operation that retrieves an mCODE Patient Bundle (defined below) for a given Patient ID.
+
+    GET [base]/TBD
+
+#### mCODE Data Receiver
+
+1. **Receive mCODE Patient Bundle**. mCODE Data Receivers SHALL implement the following operation to receive, process, and store data for an mCODE Patient sent as an mCODE Patient Bundle (defined below).
+
+    PUT [base]/TBD
+
+2. **Receive mCODE Patient Resources**. mCODE Data Receivers SHALL receive and store individual `Patient` and `Condition` resources conforming to `CancerPatient` and `PrimaryCancerCondition`, respectively, using the standard `POST` and `GET` endpoints.
+
+Additionally, mCODE Data Receivers SHOULD receive and store individual resources conforming to all mCODE profiles UNLESS the profiles are unsupported as described above under "Supported Profiles".
+
+### mCODE Patients
 
 To facilitate conformance testing, the testing software must be able to determine which patients are "mCODE Patients" -- in scope for mCODE. All patients with confirmed cancer diagnoses SHOULD be covered by mCODE. In FHIR terms, these are patients who have a Condition where Condition.code is a member of the value set `PrimaryOrUncertainBehaviorCancerDisorderVS` and `Condition.verificationStatus` is confirmed.
 

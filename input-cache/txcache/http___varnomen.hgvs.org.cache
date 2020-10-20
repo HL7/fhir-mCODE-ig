@@ -22,8 +22,8 @@ e: {
   "resourceType" : "ValueSet",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:c97c2eeb-2d95-4b34-bc54-638ba7aad1df",
-    "timestamp" : "2020-10-09T22:24:55.937Z",
+    "identifier" : "urn:uuid:89cc6698-bec8-47cc-96c4-c95d65d72642",
+    "timestamp" : "2020-10-20T10:55:21.497Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -128,6 +128,17 @@ v: {
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://varnomen.hgvs.org",
+  "code" : "NC_000019.8:g.1171707G>A",
+  "display" : "NC_000019.8:g.1171707G>A"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "NC_000019.8:g.1171707G>A",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://varnomen.hgvs.org",
   "code" : "NG_005905.2:g.126148_126152GTAAA[1]"
 }, "valueSet" :{
   "resourceType" : "ValueSet",
@@ -171,6 +182,17 @@ v: {
   "error" : "Expected \"del\" (at char 27), (line:1, col:28); The code \"NG_005905.2:g.126148_126152GTAAA[1]\" is not valid in the system http://varnomen.hgvs.org; The code provided (http://varnomen.hgvs.org#NG_005905.2:g.126148_126152GTAAA[1]) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4)"
 }
 -------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://varnomen.hgvs.org",
+  "code" : "NG_005905.2:g.126148_126152GTAAA[1]",
+  "display" : "NG_005905.2:g.126148_126152GTAAA[1]"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "Expected \"del\" (at char 27), (line:1, col:28); The code \"NG_005905.2:g.126148_126152GTAAA[1]\" is not valid in the system http://varnomen.hgvs.org; The code provided (http://varnomen.hgvs.org#NG_005905.2:g.126148_126152GTAAA[1]) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4)"
+}
+-------------------------------------------------------------------------------------
 {"hierarchical" : true, "valueSet" :{
   "resourceType" : "ValueSet",
   "compose" : {
@@ -184,8 +206,8 @@ e: {
   "resourceType" : "ValueSet",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:11721373-d551-4ab8-8d28-845e2683f5f3",
-    "timestamp" : "2020-10-09T22:34:26.156Z",
+    "identifier" : "urn:uuid:4486c907-a81f-4f08-8672-ceb9ab1e42b8",
+    "timestamp" : "2020-10-20T11:04:13.731Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -193,16 +215,5 @@ e: {
   }
 },
   "error" : ""
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://varnomen.hgvs.org",
-  "code" : "NG_005905.2:g.126148_126152GTAAA[1]",
-  "display" : "NG_005905.2:g.126148_126152GTAAA[1]"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
-v: {
-  "display" : "",
-  "severity" : "error",
-  "error" : "Expected \"del\" (at char 27), (line:1, col:28); The code \"NG_005905.2:g.126148_126152GTAAA[1]\" is not valid in the system http://varnomen.hgvs.org; The code provided (http://varnomen.hgvs.org#NG_005905.2:g.126148_126152GTAAA[1]) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4)"
 }
 -------------------------------------------------------------------------------------

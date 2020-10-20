@@ -181,6 +181,26 @@ v: {
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
+  "code" : "21889-1"
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "Size Tumor",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "33728-7"
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "Size.maximum dimension in Tumor",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
   "code" : "1695-6"
 }, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
 v: {
@@ -459,6 +479,26 @@ v: {
   "error" : ""
 }
 -------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "21889-1"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "Size Tumor",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "33728-7"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "Size.maximum dimension in Tumor",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
 {"hierarchical" : false, "valueSet" :{
   "resourceType" : "ValueSet",
   "compose" : {
@@ -511,8 +551,8 @@ e: {
   "resourceType" : "ValueSet",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:e07cfecc-c538-44fe-8596-037889ffd1aa",
-    "timestamp" : "2020-10-09T22:05:13.469Z",
+    "identifier" : "urn:uuid:63c531e0-8ee1-4028-b0f3-d4dfe9ee569e",
+    "timestamp" : "2020-10-20T10:43:15.214Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -612,8 +652,8 @@ e: {
       "url" : "http://hl7.org/fhir/StructureDefinition/valueset-toocostly",
       "valueBoolean" : true
     }],
-    "identifier" : "urn:uuid:182a4e45-a8d6-4096-8ad3-a1b9a1332042",
-    "timestamp" : "2020-10-09T22:05:13.532Z",
+    "identifier" : "urn:uuid:4c6718cc-7aa3-42ab-a107-5e81e6e3ddeb",
+    "timestamp" : "2020-10-20T10:43:15.261Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -5648,8 +5688,8 @@ e: {
   "resourceType" : "ValueSet",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:ac608766-5353-40e9-8cee-f289225ee7fb",
-    "timestamp" : "2020-10-09T22:05:13.751Z",
+    "identifier" : "urn:uuid:02ef514d-b400-45ee-9276-e8d7649e5573",
+    "timestamp" : "2020-10-20T10:43:15.386Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -6325,8 +6365,8 @@ e: {
   "resourceType" : "ValueSet",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:39fd161e-2765-4e51-84ab-e93019a87323",
-    "timestamp" : "2020-10-09T22:29:48.765Z",
+    "identifier" : "urn:uuid:07358694-614e-401c-8304-b738bcec6e8b",
+    "timestamp" : "2020-10-20T10:56:37.278Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -7292,6 +7332,17 @@ v: {
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
+  "code" : "LA9633-4",
+  "display" : "Present"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "Present",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
   "code" : "LA26398-0"
 }, "valueSet" :{
   "resourceType" : "ValueSet",
@@ -7437,6 +7488,17 @@ v: {
 {"code" : {
   "system" : "http://loinc.org",
   "code" : "LA6684-0"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "Somatic",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "LA6684-0",
+  "display" : "Somatic"
 }, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
 v: {
   "display" : "Somatic",
@@ -11830,12 +11892,23 @@ v: {
 v: {
   "display" : "",
   "severity" : "error",
-  "error" : "Unknown ValueSet url: http://loinc.org/vs/LL378-1|null (from http://tx.fhir.org/r4)"
+  "error" : "Unable to resolve value set (from http://tx.fhir.org/r4)"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
   "code" : "LA6683-2"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "Germline",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "LA6683-2",
+  "display" : "Germline"
 }, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
 v: {
   "display" : "Germline",
@@ -13893,8 +13966,8 @@ e: {
   "resourceType" : "ValueSet",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:6fb994a6-3fd8-4b70-9920-aa57148024e1",
-    "timestamp" : "2020-10-09T22:34:46.796Z",
+    "identifier" : "urn:uuid:abb55bc2-0e66-4066-b204-504b4db9c646",
+    "timestamp" : "2020-10-20T11:04:21.638Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true

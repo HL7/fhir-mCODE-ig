@@ -1,4 +1,4 @@
-#### mCODE Roles
+### mCODE Roles
 
 Two roles are defined:
 
@@ -7,11 +7,11 @@ Two roles are defined:
 
 US Core defines two actors, US Core Requestor and US Core Responder, which are highly suggestive of a "pull" architecture. In mCODE, we use the terms sender and receiver, which are more neutral with respect to push and pull. However, for all practical purposes, there is an equivalence between US Core Requestor and mCODE Data Receiver, and similarly between US Core Responder and mCODE Data Sender.
 
-#### Capability Statements
+### Capability Statements
 
 [FHIR capability statements](http://hl7.org/fhir/R4/capabilitystatement.html) describe the capabilities of actual implementation or requirements of a desired solution. This IG provides two requirement capability statements, one for mCODE Data Senders, and one for mCODE Data Receivers.
 
-##### Supported Profiles
+#### Supported Profiles
 
 Each mCODE participants SHALL support the following profiles, which are core to representing an mCODE patient, UNLESS the necessary data to populate them is typically not available in their system:
 
@@ -29,6 +29,9 @@ Supporting a profile requires implementation of certain behaviors. In particular
 
 These are requirements in the base FHIR specification, not additional requirements imposed by mCODE. Refer to the [FHIR Documentation on supported profiles](https://www.hl7.org/fhir/profiling.html#CapabilityStatement.rest.resource.supportedProfile) for details.
 
+#### Supported Operations
+
+##### mCODE Data Sender
 
 ##### Supported Operations
 
@@ -40,23 +43,23 @@ To facilitate conformance testing, the testing software must be able to determin
 
 Due to technical, organizational, or legal reasons, mCODE Data Senders MAY exclude some cancer patients from mCODE. In that case, the mCODE Data Sender MUST implement [profile search](https://www.hl7.org/fhir/search.html#profile) indicate which patients fall into the scope of mCODE by populating `Patient.meta.profile` with the mCODE CancerPatient profile (`http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-patient`). Patients not explicitly indicated by this method are assumed to be out of scope, regardless of any cancer diagnosis.
 
-#### mCODE Patient Bundle
+### mCODE Patient Bundle
 
 An [mCODE Patient Bundle](StructureDefinition-mcode-patient-bundle-definitions.html) is the complete set of data for a particular patient corresponding to the set of supported profiles of an mCODE Data Sender. An mCODE Data Sender MUST be capable of producing a valid mCODE bundle for all of its mCODE patients (as defined above).
 
-#### mCODE Profiles
+### mCODE Profiles
 
 The documentation of each mCODE profile includes criteria for which FHIR resources are expected to comply with that profile. For example, in CancerDiseaseStatus, the conformance criteria states that any resource associated with an mCODE patient (as defined above) that represent an observation of patient's response to cancer treatment SHALL conform to that profile.
 
 Each mCODE profile expresses requirements and expectations for individual mCODE instances in terms of structural constraints and terminology bindings. Any FHIR resources claiming to conform to mCODE must [validate](https://www.hl7.org/fhir/validation.html) against the declared mCODE profile.
 
-#### Conformance to US Core
+### Conformance to US Core
 
 Most mCODE profiles are based on US Core profiles defined in the [US Core Implementation Guide (v3.1.1)](http://hl7.org/fhir/us/core/index.html). For example, the CancerGeneticVariant profile is based on US Core Laboratory Result Observation Profile and CancerPatient is based on the US Core Patient profile. As such, if a resource validates against any of these mCODE profiles, it will also be in compliance with US Core.
 
 Where US Core does not provide an appropriate base profile, mCODE profiles FHIR resources. Examples include such as CancerRelatedMedicationStatement (based on MedicationStatement) and CancerDiseaseStatus (based on Observation). In the latter case, US Core does not provide a profile for non-laboratory observations. In these cases, resources only need to conform to the mCODE profiles.
 
-#### MustSupport Interpretation
+### MustSupport Interpretation
 
 The [MustSupport](https://www.hl7.org/fhir/conformance-rules.html#mustSupport) flag indicates that implementation shall provide "meaningful support" for the element, as defined by its implementation guide. The mCODE definitions of MustSupport encompass the [definitions in US Core](http://hl7.org/fhir/us/core/general-guidance.html#must-support). mCODE defines MustSupport as follows:
 
@@ -64,7 +67,7 @@ The [MustSupport](https://www.hl7.org/fhir/conformance-rules.html#mustSupport) f
 
 * **mCODE Data Receiver** - MustSupport is interpreted as "must display" or "must store". That is, a Data Receiver SHALL be capable of receiving and displaying or storing each required and MustSupport element in an mCODE bundle, provided the corresponding profile has been declared as a "supportedProfile" in the receiver's capability statement.
 
-#### Missing/Unknown Data Elements
+### Missing/Unknown Data Elements
 
 The handling of missing or unknown elements in mCODE is functionally identical to US Core, specifically:
 
@@ -73,8 +76,7 @@ The handling of missing or unknown elements in mCODE is functionally identical t
 * In situations where information on a particular data element is missing and the mCODE Data Sender knows the reason for the absence of data, the Data Sender SHALL send the reason for the missing information. The absence reason value SHOULD come first from the element's value set if it exists or otherwise from the dataAbsentReason extension.
 * mCODE Data Receivers SHALL be able to process resource instances containing data elements asserting missing information.
 
-
-#### Required Elements
+### Required Elements
 
 An mCODE data element is required if any of the following criteria are met:
 

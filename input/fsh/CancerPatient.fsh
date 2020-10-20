@@ -6,7 +6,7 @@ Description: "A patient who has been diagnosed with or is receiving medical trea
 
 Conformance Statement:
 
-Patient resources representing mCODE patients (as defined in [Conformance](conformance.html#mCODE-Patients)) MUST conform to this profile. Any resource intended to conform to this profile MAY populate meta.profile accordingly."
+Patient resources representing mCODE patients (as defined in [Conformance](conformance.html#mCODE-Patients)) MUST conform to this profile. Any resource intended to conform to this profile SHOULD populate meta.profile accordingly."
 
 /* There seem to be several unnecessary or unintended diffs in mCODE Patient:
  1) maritalStatus binding is not changed in US Core; it should be extensible, not required

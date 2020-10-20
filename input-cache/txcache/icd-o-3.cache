@@ -3,7 +3,7 @@
   "resourceType" : "ValueSet",
   "compose" : {
     "include" : [{
-      "system" : "http://varnomen.hgvs.org"
+      "system" : "http://terminology.hl7.org/CodeSystem/icd-o-3"
     }]
   }
 }}####
@@ -12,8 +12,8 @@ e: {
   "resourceType" : "ValueSet",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:5e04e9aa-6c80-4050-b4f8-af068aedbb77",
-    "timestamp" : "2020-10-20T10:55:21.434Z",
+    "identifier" : "urn:uuid:ef9c6085-4324-459f-bdca-7a5af09097fc",
+    "timestamp" : "2020-10-20T10:52:04.277Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true

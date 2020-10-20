@@ -8,7 +8,7 @@ It is important to note that cancer-related medications are not the ONLY medicat
 
 Conformance statement:
 
-MedicationStatement resources associated with an mCODE patient that are prescribed to treat the cancer condition SHOULD conform to this profile. Beyond this requirement, a producer of resources SHOULD ensure that any resource instance associated with an mCODE patient that would reasonably be expected to conform to this profile SHOULD be published in this form."
+MedicationStatement resources associated with an [mCODE patient](conformance.html#mCODE-Patients) SHOULD conform to this profile. Beyond this requirement, a producer of resources SHOULD ensure that any resource instance associated with an mCODE patient that would reasonably be expected to conform to this profile SHOULD be published in this form."
 /* Notes on mCODE 0.9.x:
 1) basedOn is missing Reference(CarePlan)
 2) partOf is missing  Reference(MedicationDispense)

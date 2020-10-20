@@ -248,7 +248,7 @@ Description: "mCODE Example for TNM Clinical Stage Group"
 * meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-clinical-stage-group"
 * status = #final "final"
 * category = ObsCat#survey "Survey"
-* method = MTH#C146985 "AJCC Cancer Staging Manual 8th Edition"
+* method = NCIT#C146985 "AJCC Cancer Staging Manual 8th Edition"
 * subject = Reference(mCODEPatientExample01)
 * effectiveDateTime = "2019-04-01"
 * valueCodeableConcept = AJCC#3C "IIIC"
@@ -263,7 +263,7 @@ Description: "mCODE Example for TNM Clinical Distant Metastases Category"
 * meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-clinical-distant-metastases-category"
 * status = #final "final"
 * category = ObsCat#survey "Survey"
-* method = MTH#C146985 "AJCC Cancer Staging Manual 8th Edition"
+* method = NCIT#C146985 "AJCC Cancer Staging Manual 8th Edition"
 * subject = Reference(mCODEPatientExample01)
 * effectiveDateTime = "2019-04-01"
 * valueCodeableConcept = AJCC#cM0 "M0"
@@ -275,7 +275,7 @@ Description: "mCODE Example for TNM Clinical Primary Tumor Category"
 * meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-clinical-primary-tumor-category"
 * status = #final "final"
 * category = ObsCat#survey "Survey"
-* method = MTH#C146985 "AJCC Cancer Staging Manual 8th Edition"
+* method = NCIT#C146985 "AJCC Cancer Staging Manual 8th Edition"
 * subject = Reference(mCODEPatientExample01)
 * effectiveDateTime = "2019-04-01"
 * valueCodeableConcept = AJCC#cT3 "T3"
@@ -288,7 +288,7 @@ Description: "mCODE Example for TNM Clinical Regional Nodes Category"
 * meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-clinical-regional-nodes-category"
 * status = #final "final"
 * category = ObsCat#survey "Survey"
-* method = MTH#C146985 "AJCC Cancer Staging Manual 8th Edition"
+* method = NCIT#C146985 "AJCC Cancer Staging Manual 8th Edition"
 * subject = Reference(mCODEPatientExample01)
 * effectiveDateTime = "2019-04-01"
 * valueCodeableConcept = AJCC#cN3 "N3"
@@ -301,7 +301,7 @@ Description: "mCODE Example for TNM Pathological Stage Group"
 * meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-pathological-stage-group"
 * status = #final "final"
 * category = ObsCat#laboratory "laboratory"
-* method = MTH#C146985 "AJCC Cancer Staging Manual 8th Edition"
+* method = NCIT#C146985 "AJCC Cancer Staging Manual 8th Edition"
 * subject = Reference(mCODEPatientExample01)
 * effectiveDateTime = "2019-04-01"
 * valueCodeableConcept = AJCC#3C "IIIC"
@@ -317,7 +317,7 @@ Description: "mCODE Example for TNM Pathological Distant Metastases Category"
 * meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-pathological-distant-metastases-category"
 * status = #final "final"
 * category = ObsCat#laboratory "laboratory"
-* method = MTH#C146985 "AJCC Cancer Staging Manual 8th Edition"
+* method = NCIT#C146985 "AJCC Cancer Staging Manual 8th Edition"
 * subject = Reference(mCODEPatientExample01)
 * effectiveDateTime = "2019-04-01"
 * valueCodeableConcept = AJCC#pM0 "M0"
@@ -330,7 +330,7 @@ Description: "mCODE Example for TNM Pathological Primary Tumor Category"
 * meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-pathological-primary-tumor-category"
 * status = #final "final"
 * category = ObsCat#laboratory "laboratory"
-* method = MTH#C146985 "AJCC Cancer Staging Manual 8th Edition"
+* method = NCIT#C146985 "AJCC Cancer Staging Manual 8th Edition"
 * subject = Reference(mCODEPatientExample01)
 * effectiveDateTime = "2019-04-01"
 * valueCodeableConcept = AJCC#pT3 "T3"
@@ -343,7 +343,32 @@ Description: "mCODE Example for TNM Pathological Regional Nodes Category"
 * meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-pathological-regional-nodes-category"
 * status = #final "final"
 * category = ObsCat#laboratory "laboratory"
-* method = MTH#C146985 "AJCC Cancer Staging Manual 8th Edition"
+* method = NCIT#C146985 "AJCC Cancer Staging Manual 8th Edition"
 * subject = Reference(mCODEPatientExample01)
 * effectiveDateTime = "2019-04-01"
 * valueCodeableConcept = AJCC#pN3 "N3"
+
+Instance: mCODECancerRelatedMedicationRequestExample01
+InstanceOf: CancerRelatedMedicationRequest
+Description: "mCODE Example for CancerRelatedMedicationRequest"
+* id = "mCODECancerRelatedMedicationRequestExample01"
+* meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-related-medication-request"
+* subject = Reference(mCODEPatientExample01)
+* status = MedRequestStatus#active
+* intent = MedRequestIntent#order
+* authoredOn = "2019-04-01"
+* medicationCodeableConcept = RXN#349472 "gefitinib 250 MG Oral Tablet"
+* reasonCode = SCT#254637007 "Non-small cell lung cancer (disorder)"
+* requester = Reference(mCODEPractitionerExample01)
+* extension[treatmentIntent].valueCodeableConcept = SCT#373808002 "Curative - procedure intent"
+* dosageInstruction.text = "250mg orally once daily with or without food"
+* dosageInstruction.route = SCT#26643006 "Oral use"
+* dosageInstruction.doseAndRate.doseQuantity.value = 250.0
+* dosageInstruction.doseAndRate.doseQuantity = UCUM#mg "mg"
+* dosageInstruction.timing.event = "2019-04-01"
+* dosageInstruction.timing.repeat.frequency = 1  // frequency, period and periodUnit to reflect "once per day"
+* dosageInstruction.timing.repeat.period = 1
+* dosageInstruction.timing.repeat.periodUnit = UCUM#d
+* dosageInstruction.timing.repeat.boundsPeriod.start = "2019-04-01"
+* dosageInstruction.timing.repeat.boundsPeriod.start = "2019-04-30"
+* dosageInstruction.timing.code = TimingAbbreviation#QD // prescriber abbreviation for once daily

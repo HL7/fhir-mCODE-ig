@@ -6,7 +6,7 @@ Description: "A radiological treatment addressing a cancer condition. The scope 
 
 Conformance statement:
 
-Procedure resources associated with an mCODE patient with Procedure.category SNOMED-CT 53438000 MAY conform to this profile. Beyond this requirement, a producer of resources SHOULD ensure that any resource instance associated with an mCODE patient that would reasonably be expected to conform to this profile SHOULD be published in this form."
+Procedure resources associated with an [mCODE patient](conformance.html#mCODE-Patients) with Procedure.category SNOMED-CT 53438000 MAY conform to this profile. Beyond this requirement, a producer of resources SHOULD ensure that any resource instance associated with an mCODE patient that would reasonably be expected to conform to this profile SHOULD be published in this form. Specifically, we expect that any radiation therapy related to the treatment of a `PrimaryCancerCondition` or `SecondaryCancerCondition` would be published in this form."
 
 /* Issues relative to mCODE 0.9.x
 1) basedOn should not include ProcedureRequest. No such class in R4.
@@ -47,8 +47,7 @@ Description: "A surgical action addressing a cancer condition. The scope of this
 
 Conformance statement:
 
-Procedure resources associated with an mCODE patient with Procedure.category SNOMED-CT 387713003 MAY conform to this profile. Beyond this requirement, a producer of resources SHOULD ensure that any resource instance associated with an mCODE patient that would reasonably be expected to conform to this profile SHOULD be published in this form."
-
+Procedure resources associated with an [mCODE patient](conformance.html#mCODE-Patients) with Procedure.category SNOMED-CT 387713003 MAY conform to this profile. Beyond this requirement, a producer of resources SHOULD ensure that any resource instance associated with an mCODE patient that would reasonably be expected to conform to this profile SHOULD be published in this form. Specifically, we expect that any surgical procedure related to the treatment of a `PrimaryCancerCondition` or `SecondaryCancerCondition` would be published in this form."
 * code from CancerRelatedSurgicalProcedureVS (extensible)
 * extension contains
     TreatmentIntent named treatmentIntent 0..1

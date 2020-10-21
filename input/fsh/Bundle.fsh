@@ -4,59 +4,86 @@ Id: mcode-patient-bundle
 Title: "mCODE Patient Bundle"
 Description: "A collection of data for an mCODE cancer patient.
 
-The goal of this Bundle is to useful out of the box by an mCODE Data Sender to
-collect and send a comprehensive collection of mCODE-related data for an
-_individual patient_ to an mCODE Data Receiver.
+The goal of this Bundle is to useful out of the box by an mCODE Data Sender to collect and send a comprehensive collection of mCODE-related data for an _individual patient_ to an mCODE Data Receiver.
 
-This Bundle may not be useful for specialty use cases. For example, if a
-laboratory does not have enough information to construct a resource conforming to
-[`CancerPatient`], they will not be able to use this Bundle to send data
-back to the ordering clinician. In cases like this, you may want to consider a
-use case-specific IG that defines its own bundle.
+** Requests can be time-boxed. Discuss.
 
-More generally, this Bundle requires inclusion of [`CancerPatient`] and
-`PrimaryCancerCondition`. This parallels the
-[conformance guidance for supported profiles]. Other profiles are not required,
-but SHOULD be included if they exist within the mCODE Data Sender's system.
+This Bundle may not be useful for specialty use cases. For example, if a laboratory does not have enough information to construct a resource conforming to [`CancerPatient`], they will not be able to use this Bundle to send data back to the ordering clinician. In cases like this, existing FHIR operations can be used.
 
-**Including medications in the Bundle**
+In the following, 
 
-The mCODE medication profiles provide the ability to specify the treatment
-intent and termination reason, which may be important information for
-cancer-related medication. However, some medications may be cancer-related even
-without treatment intent or termination reason. Therefore, the mCODE Bundle
-includes _all_ medications, regardless of conformance to a mCODE profile.
+### Required Elements
 
-Depending on the system, medications may be represented by
-MedicationAdministration, MedicationRequest, or MedicationStatement
-resources. mCODE is agnostic as to which is used, so all three are included
-in the Bundle under `medication`.
+The following elements are REQUIRED:
 
-**TODO: Support for comorbidities** -- waiting on decision for how these are profiled**
-**TODO: Support tumor size experimental profile -- waiting for this to be merged in**
+* CancerPatient: Exactly one Patient resource conforming to this profile
+* PrimaryCancerCondition: One or more conforming Condition resource 
 
-**Other included resources that do not conform to mCODE profiles, but are cancer-related:**
+### Must Support Elements
+
+The following elements are labelled MustSupport, indicating that an mCODE Data Sender MUST populate the element if the Data Sender has that data. If multiple instances exist, ALL instances SHOULD be reported. These elements are optional only in the sense that they will not be reported if the Sender does not have that type of data for a particular patient:
+
+
+* CancerDiseaseStatus
+* CancerGeneticVariant
+* CancerGenomicsReport
+* GenomicRegionStudied
+* CancerRelatedMedicationRequest 
+* CancerRelatedRadiationProcedure
+* CancerRelatedSurgicalProcedure
+* Genetic Specimen
+* GenomicRegionStudied
+* PerformanceStatus (ECOGPerformanceStatus and KarnofskyPerformanceStatus)
+* SecondaryCancerCondition 
+* Stage (TNMClinicalStageGroup, TNMClinicalPrimaryTumorCategory, TNMClinicalRegionalNodesCategory, TNMClincalDistantMetastasesCategory, TNMPathologicalStageGroup, TNMPathologicalPrimaryTumorCategory, TNMPathologicalRegionalNodesCategory, TNMPathologicalDistantMetastasesCategory)
+* TumorMarker 
+* Vital Signs, including blood pressure, body height, and body weight. Observations conform to the FHIR vital sign profiles, incorporated by reference into US Core. See implementation.html#vital-sign-profiles.
+* Laboratory Results: Observations included in Complete Blood Count (CBC) and Comprehensive Metabolic Panel (CMP). Individual results must conform to the US Core Laboratory Result Profile. See implementation.html#laboratory-profiles for a list of LOINC codes to be included.
+
+### Optional Elements
+
+mCODE does not exclude other elements in the mCODE bundle.
+
+Additional MedicationRequests -- concomitant drugs may be relevant in the cancer-treatment context. 
+Clinical Notes -- see US Core
 
 - `smokingStatus`: SHOULD include any Observations conforming to
   [`USCoreSmokingStatusProfile`]
-- `procedure`: SHOULD include any procedures related to the diagnosis or
-  treatment of a primary or secondary cancer condition, conforming to
-  [`USCoreProcedureProfile`].
 - `familyHistory`: SHOULD include any FamilyMemberHistory resources that may be
   related to a primary or secondary cancer condition. MAY include other
   FamilyMemberHistory if filtering to only cancer-related family history is not
   possible.
 - `diagnosticReport`: SHOULD include any DiagnosticReport resources that may be
   related to a primary or secondary cancer condition.
-- `observation`: MAY include any Observation resources related to a
+- `observation`: MAY include other Observation resources related to a
   primary or secondary cancer condition. This is a catch-all for any Observation
   resources that do not conform to an mCODE profile, and do not fit in one of
   the other entries in this Bundle. For example, this could include
   [an Observation indicating negative margins] on an excised tumor.
-- `practitioner`: SHOULD include any resources conforming to
-  [`USCorePractitioner`] that are referenced elsewhere in the Bundle.
-- `organization`: SHOULD include any Organization resources referenced elsewhere
-  in the Bundle.
+
+IMAGES?
+
+
+### References
+
+See http://hl7.org/fhir/us/core/all-meds.html#options-for-representing-medication
+
+> Referenced resources may be included in the bundle returned, an external resource, or a contained if the resource can’t stand alone. These options are shown in figure 3 below. The server application MAY choose any combination of these methods, but if an external reference to Resource is used, the server SHALL support the include parameter for searching this element. The client application MUST support all methods. 
+
+
+------------
+
+
+
+
+**TODO: Support for comorbidities** -- waiting on decision for how these are profiled**
+**TODO: Support tumor size experimental profile -- waiting for this to be merged in**
+
+
+
+
+
+
 
 [`CancerPatient`]: StructureDefinition-mcode-cancer-patient.html
 [conformance guidance for supported profiles]: conformance.html#supported-profiles

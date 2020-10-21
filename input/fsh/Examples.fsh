@@ -372,3 +372,42 @@ Description: "mCODE Example for CancerRelatedMedicationRequest"
 * dosageInstruction.timing.repeat.boundsPeriod.start = "2019-04-01"
 * dosageInstruction.timing.repeat.boundsPeriod.start = "2019-04-30"
 * dosageInstruction.timing.code = TimingAbbreviation#QD // prescriber abbreviation for once daily
+
+Instance: mCODECancerRelatedMedicationRequestExample02
+InstanceOf: CancerRelatedMedicationRequest
+Description: "mCODE Example for CancerRelatedMedicationRequest - Chemo Infusion"
+* id = "mCODECancerRelatedMedicationRequestExample02"
+* meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-related-medication-request"
+* subject = Reference(mCODEPatientExample01)
+* status = MedRequestStatus#active
+* intent = MedRequestIntent#order
+* authoredOn = "2019-04-01"
+* medicationCodeableConcept = RXN#309311 "CISplatin 50 MG per 50 ML Injectable Solution"
+* reasonCode = SCT#254637007 "Non-small cell lung cancer (disorder)"
+* requester = Reference(mCODEPractitionerExample01)
+* extension[treatmentIntent].valueCodeableConcept = SCT#373808002 "Curative - procedure intent"
+* dosageInstruction.text = "calculate absolute dose on day of administration."
+* dosageInstruction.route = SCT#47625008 "Intravenous use"
+* dosageInstruction.doseAndRate.doseQuantity.value = 75
+* dosageInstruction.doseAndRate.doseQuantity = UCUM#mg/m2 "mg/m2"
+* dosageInstruction.timing.event = "2019-06-15"
+* dosageInstruction.timing.repeat.count = 1  // frequency is one-time on day 1 of first cycle so there should be no repeat."
+* note.text = "Day 1 of NSCLC regimen: Cisplatin 75 mg/m2 day 1; docetaxel 75 mg/m2 day 1 every 21 days for 4 cycles."
+
+
+Instance: mCODECancerRelatedMedicationAdministrationExample01
+InstanceOf: CancerRelatedMedicationAdministration
+Description: "mCODE Example for CancerRelatedMedicationAdministration"
+* id = "mCODECancerRelatedMedicationAdministrationExample01"
+* meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-related-medication-administration"
+* subject = Reference(mCODEPatientExample01)
+* status = MedAdminStatus#completed
+* category = MedAdminCategory#outpatient
+* medicationCodeableConcept = RXN#309311 "CISplatin 50 MG per 50 ML Injectable Solution"
+* effectiveDateTime = "2019-06-15"
+* performer.actor = Reference(mCODEPractitionerExample01)
+* request = Reference(mCODECancerRelatedMedicationRequestExample02)
+* dosage.route = SCT#47625008 "Intravenous use"
+* dosage.dose.value = 150
+* dosage.dose.unit = UCUM#mg
+* dosage.text = "Day 1 of NSCLC regimen: Cisplatin 75 mg/m2 day 1; docetaxel 75 mg/m2 day 1 every 21 days for 4 cycles. Calculated absolute dosage based on BSA = 2.0"

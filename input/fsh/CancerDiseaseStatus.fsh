@@ -25,7 +25,7 @@ Observation resources associated with an [mCODE patient](conformance.html#mCODE-
 * partOf only Reference(MedicationAdministration or MedicationStatement or Procedure)
 * code = LNC#88040-1 //"Response to cancer treatment"
 * subject only Reference(CancerPatient)
-* focus only Reference(CancerConditionParent)
+* focus only Reference(PrimaryCancerCondition or SecondaryCancerCondition)
 * effective[x] only dateTime or Period
 * performer only Reference(USCorePractitioner)
 * value[x] only CodeableConcept

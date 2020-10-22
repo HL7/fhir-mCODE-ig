@@ -34,6 +34,8 @@ pages:
     title: Downloads
   change_log.md:
     title: Change log
+  mcode-patient-bundle.md:
+    title: mCODE Patient Bundle Implementation Details
 menu:
   Home: index.html
   Conformance: conformance.html

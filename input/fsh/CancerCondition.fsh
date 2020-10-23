@@ -19,7 +19,7 @@ Description:  "Abstract parent class for describing a primary or secondary metas
 * extension[assertedDate] and extension[histologyMorphologyBehavior] and bodySite and bodySite.extension[laterality] MS
 * category = SCT#64572001 //"Disease"
 * severity 0..0
-* bodySite from CancerBodyLocationVS (preferred)
+* bodySite from CancerBodyLocationVS (extensible)
 * asserter only Reference(Practitioner or PractitionerRole)
 * recorder only Reference(Practitioner or PractitionerRole)
 
@@ -31,7 +31,10 @@ Description: "Records the history of the primary cancer condition, the original 
 
 Cancer staging information summarized in this profile should reflect the most recent staging assessment on the patient, and should be updated if and when there is a new staging assessment. Past staging assessments will be preserved in instances of the TNMClinicalStageGroup and/or TNMPathologicalStageGroup, which refer back to PrimaryCancerCondition.
 
-Conformance statement: All Conditions associated with an mCODE patient with a code from value set PrimaryOrUncertainBehaviorCancerDisorderVS (or a code from any other terminology system with equivalent semantics) SHALL conform to this profile."
+Conformance statement:
+
+Condition resources associated with an [mCODE patient](conformance.html#mCODE-Patients)with a Condition.code in the value set PrimaryOrUncertainBehaviorCancerDisorderVS MUST conform to this profile. Beyond this requirement, a producer of resources SHOULD ensure that any resource instance associated with an mCODE patient that would reasonably be expected to conform to this profile SHOULD be published in this form, for example, when employing a code that extends the [PrimaryOrUncertainBehaviorCancerDisorderVS](ValueSet-mcode-primary-or-uncertain-behavior-cancer-disorder-vs.html) value set. Any resource intended to conform to this profile SHOULD populate meta.profile accordingly."
+
 * ^abstract = false
 * code from PrimaryOrUncertainBehaviorCancerDisorderVS (extensible)
 * stage.assessment only Reference(CancerStageParent)
@@ -42,7 +45,9 @@ Id: mcode-secondary-cancer-condition
 Title: "Secondary Cancer Condition"
 Description: "Records the history of secondary neoplasms, including location(s) and the date of onset of metastases. A secondary cancer results from the spread (metastasization) of cancer from its original site (Definition from: NCI Dictionary of Cancer Terms).
 
-Conformance statement: All Conditions associated with an mCODE patient with a code from value set SecondaryCancerDisorderVS (or a code from any other terminology system with equivalent semantics) SHALL conform to this profile."
+Conformance statement:
+
+Condition resources associated with an [mCODE patient](conformance.html#mCODE-Patients) with a Condition.code in the value set SecondaryCancerDisorderVS MUST conform to this profile. Beyond this requirement, a producer of resources SHOULD ensure that any resource instance associated with an mCODE patient that would reasonably be expected to conform to this profile SHOULD be published in this form, for example, when employing a code that extends the * code from SecondaryCancerDisorderVS value set. Any resource intended to conform to this profile SHOULD populate meta.profile accordingly."
 
 * ^abstract = false
 * extension contains
@@ -65,21 +70,3 @@ Title: "Related Primary Cancer Condition"
 Description: "The primary cancer related to this secondary cancer."
 * value[x] only Reference
 * valueReference only Reference(PrimaryCancerCondition)
-
-
-// Tumor profile was in mCODE, but not primary (hidden). The way we have used the CancerConditionParent, it is not necessary to list Tumor explicitly in TumorMarker and CancerDiseaseStatus. For example, we have `* focus only Reference(CancerConditionParent)` and not (in CIMPL) `Value only PrimaryCancerCondition or SecondaryCancerCondition or Tumor`
-/*
-Profile: Tumor
-Parent: CancerConditionParent
-Id: mcode-tumor
-Title: "Tumor"
-Description: "The presence of an abnormal mass of tissue (neoplasm) that results when cells divide more than they should or do not die when they should. Tumors may be benign (not cancer), or malignant (cancer). (source: NCI Dictionary).
-
-Conformance note: For the HistologyMorphologyBehavior attribute, to be compliant with US Core Profiles, SNOMED CT must be used unless there is no suitable code, in which case ICD-O-3 can be used."
-* ^abstract = false
-* extension contains
-    RelatedPrimaryCancerCondition 0..1 and
-    IsPrimaryTumor 0..1
-* IsPrimaryTumor ^short = "Whether the tumor is the original or first tumor in the body, for a particular cancer."
-* IsPrimaryTumor.value[x] only CodeableConcept
-*/

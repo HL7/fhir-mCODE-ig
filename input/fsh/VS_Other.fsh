@@ -16,11 +16,12 @@ Title: "Human Genome Variation Society Sequence Variant Nomenclature Value Set"
 Description: "HGVS nomenclature is used to report and exchange information regarding variants found in DNA, RNA, and protein sequences."
 * codes from system HGVS
 
-ValueSet:     CancerBodyLocationVS
+ValueSet: CancerBodyLocationVS
 Id: mcode-cancer-body-location-vs
 Title: "Cancer Body Location Value Set"
-Description:  "Codes describing the location(s) of primary or secondary cancer. The value set includes all codes from the SNOMED CT body structure hierarchy (codes descending from 123037004 'Body Structure'). The cancer body location may also be expressed using ICD-O-3 topography codes, however, those codes are not included here due to intellectual property restrictions. No other code systems are considered conformant."
-* codes from system SCT where concept is-a #123037004  "Body Structure"
+Description:  "Codes describing the location(s) of primary or secondary cancer. The value set includes all codes from the SNOMED CT body structure hierarchy (codes descending from 123037004 'Body Structure'). The cancer body location may also be expressed using ICD-O-3 topography codes, however, those codes are not included here due to intellectual property restrictions. These topography terms have four-character codes that run from C00.0 to C80.9 [ref](https://apps.who.int/iris/bitstream/handle/10665/96612/9789241548496_eng.pdf). Only SNOMED CT and ICD-O-3 are considered conformant."
+* include codes from system SCT where concept is-a #123037004  "Body Structure"
+* include codes from system ICDO3  // currently no way to filter to just topology codes (that I know of)
 
 /* 
 ValueSet:  AnatomicalOrientationVS
@@ -404,6 +405,9 @@ FHIR implementation note: At the current time, profiles for the specific LOINC t
 * LNC#14130-9       "Estrogen receptor [Moles/mass] in Tissue"
 * LNC#85310-1       "Estrogen receptor fluorescence intensity [Type] in Breast cancer specimen by Immune stain"
 * LNC#10480-2       "Estrogen+Progesterone receptor Ag [Presence] in Tissue by Immune stain"
+* LNC#39004-7       "Epidermal growth factor receptor Ag [Presence] in Tissue"
+* LNC#32581-1	    "Epidermal growth factor receptor Ag [Presence] in Tissue by Immune stain"
+* LNC#42782-3	    "Epidermal growth factor receptor.phosphorylated Ag [Presence] in Tissue by Immune stain"
 * LNC#48676-1       "HER2 [Interpretation] in Tissue"
 * LNC#32996-1       "HER2 [Mass/volume] in Serum"
 * LNC#42914-2       "HER2 [Mass/volume] in Serum by Immunoassay"

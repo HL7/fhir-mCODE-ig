@@ -34,6 +34,8 @@ pages:
     title: Downloads
   change_log.md:
     title: Change log
+  experimental.md:
+      title: Experimental Artifacts
   mcode-patient-bundle.md:
     title: mCODE Patient Bundle Implementation Details
 menu:
@@ -41,6 +43,15 @@ menu:
   Conformance: conformance.html
   Implementation: implementation.html
   Artifacts: artifacts.html
+  Experimental: experimental.html
   Examples: examples.html
   Downloads: downloads.html
   History: http://hl7.org/fhir/us/mcode/history.html
+groups:
+  ExperimentalProfiles:
+    name: Experimental Profiles
+    description: These profiles and value sets are considered experimental.
+    resources:
+    - StructureDefinition/mcode-tumor-size
+    - StructureDefinition/mcode-tumor
+    - ValueSet/mcode-tumor-size-units-vs

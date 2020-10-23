@@ -20,6 +20,7 @@
 <artifact deprecated="true" id="ValueSet/mcode-cancer-related-surgical-procedure-value-set" key="cancer-related-surgical-procedure-value-set" name="Cancer Related Surgical Procedure Value Set"/>
 <artifact id="StructureDefinition/mcode-cancer-stage-parent" key="cancer-stage-parent" name="Cancer Stage Parent"/>
 <artifact id="ValueSet/mcode-cancer-staging-system-vs" key="cancer-staging-system-value-set" name="Cancer Staging System Value Set"/>
+<artifact id="StructureDefinition/mcode-cancer-related-medication-request" key="StructureDefinition-mcode-cancer-related-medication-request" name="Cancer-Related Medication Request"/>
 <artifact id="StructureDefinition/mcode-cancer-related-medication-statement" key="StructureDefinition-mcode-cancer-related-medication-statement" name="Cancer-Related Medication Statement"/>
 <artifact id="StructureDefinition/mcode-cancer-related-radiation-procedure" key="StructureDefinition-mcode-cancer-related-radiation-procedure" name="Cancer-Related Radiation Procedure"/>
 <artifact id="StructureDefinition/mcode-cancer-related-surgical-procedure" key="StructureDefinition-mcode-cancer-related-surgical-procedure" name="Cancer-Related Surgical Procedure"/>
@@ -133,10 +134,13 @@
 <artifact deprecated="true" id="Extension/mcode-treatment-intent-extension" key="treatment-intent-extension" name="Treatment Intent Extension"/>
 <artifact id="ValueSet/mcode-treatment-intent-vs" key="treatment-intent-value-set" name="Treatment Intent Value Set"/>
 <artifact id="ValueSet/mcode-treatment-termination-reason-vs" key="treatment-termination-reason-value-set" name="Treatment Termination Reason Value Set"/>
+<artifact id="StructureDefinition/mcode-tumor" key="StructureDefinition-mcode-tumor" name="Tumor"/>
 <artifact id="StructureDefinition/mcode-tumor-marker" key="tumor-marker" name="Tumor Marker"/>
 <artifact deprecated="true" id="ValueSet/mcode-tumor-marker-test-value-set" key="tumor-marker-test-value-set" name="Tumor Marker Test Value Set"/>
+<artifact id="StructureDefinition/mcode-tumor-size" key="StructureDefinition-mcode-tumor-size" name="Tumor Size"/>
 <artifact id="ValueSet/mcode-tumor-marker-test-vs" key="ValueSet-mcode-tumor-marker-test-vs" name="TumorMarkerTestVS"/>
 <artifact id="ValueSet/mcode-units-of-length-vs" key="units-of-length-value-set" name="Units of Length Value Set"/>
+<artifact id="ValueSet/mcode-tumor-size-units-vs" key="ValueSet-mcode-tumor-size-units-vs" name="Units of tumor size value set"/>
 <artifact deprecated="true" key="ValueSet" name="ValueSet"/>
 <artifact id="DiagnosticReport/example1-diagnosticreport-pathology" key="DiagnosticReport-example1-diagnosticreport-pathology" name="example1-diagnosticreport-pathology"/>
 <artifact id="FamilyMemberHistory/example1-family-member-history-aunt" key="FamilyMemberHistory-example1-family-member-history-aunt" name="example1-family-member-history-aunt"/>
@@ -186,6 +190,7 @@
 <artifact id="Observation/mCODECancerGeneticVariantExample01" key="mcode-cancer-genetic-variant-example-01" name="mCODECancerGeneticVariantExample01"/>
 <artifact id="Observation/mCODECancerGeneticVariantExample02" key="mcode-cancer-genetic-variant-example-02" name="mCODECancerGeneticVariantExample02"/>
 <artifact id="DiagnosticReport/mCODECancerGenomicsReportExample01" key="mcode-cancer-genomics-report-example-01" name="mCODECancerGenomicsReportExample01"/>
+<artifact id="MedicationRequest/mCODECancerRelatedMedicationRequestExample01" key="MedicationRequest-mCODECancerRelatedMedicationRequestExample01" name="mCODECancerRelatedMedicationRequestExample01"/>
 <artifact id="MedicationStatement/mCODECancerRelatedMedicationStatementExample01" key="mcode-cancer-related-medication-statement-example-01" name="mCODECancerRelatedMedicationStatementExample01"/>
 <artifact id="MedicationStatement/mCODECancerRelatedMedicationStatementExample02" key="mcode-cancer-related-medication-statement-example-02" name="mCODECancerRelatedMedicationStatementExample02"/>
 <artifact id="Procedure/mCODECancerRelatedRadiationProcedureExample01" key="mcode-cancer-related-radiation-procedure-example-01" name="mCODECancerRelatedRadiationProcedureExample01"/>
@@ -210,6 +215,8 @@
 <artifact id="Observation/mCODETNMPathologicalRegionalNodesCategoryExample01" key="mcode-tnm-pathological-regional-nodes-category-example-01" name="mCODETNMPathologicalRegionalNodesCategoryExample01"/>
 <artifact id="Observation/mCODETNMPathologicalStageGroupExample01" key="mcode-tnm-pathological-stage-group-example-01" name="mCODETNMPathologicalStageGroupExample01"/>
 <artifact id="Observation/mCODETumorMarkerExample01" key="mcode-tumor-marker-example-01" name="mCODETumorMarkerExample01"/>
+<artifact id="BodyStructure/mcode-tumor" key="BodyStructure-mcode-tumor" name="mcode-tumor"/>
+<artifact id="Observation/mcode-tumor-size" key="Observation-mcode-tumor-size" name="mcode-tumor-size"/>
 <page key="NA" name="(NA)"/>
 <page key="many" name="(many)"/>
 <page deprecated="true" key="profiles" name="(profiles)"/>
@@ -219,6 +226,7 @@
 <page key="conformance" name="Conformance"/>
 <page key="downloads" name="Downloads"/>
 <page key="examples" name="Examples Overview"/>
+<page key="experimental" name="Experimental Artifacts"/>
 <page deprecated="true" key="extensions" name="Extensions"/>
 <page deprecated="true" key="history" name="History"/>
 <page key="index" name="Home"/>

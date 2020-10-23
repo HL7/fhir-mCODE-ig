@@ -10,7 +10,9 @@ Conformance statement:
 
 Observation resources associated with an [mCODE patient](conformance.html#mCODE-Patients) with Observation.code LOINC 88040-1 MUST conform to this profile. Beyond this requirement, a producer of resources SHOULD ensure that any resource instance associated with an mCODE patient that would reasonably be expected to conform to this profile SHOULD be published in this form."
 
-* extension contains EvidenceType named evidenceType 0..*
+* extension contains evidenceType 0..*
+* extension[evidenceType] ^short = "Evidence Type"
+* extension[evidenceType] ^definition = "Categorization of the kind of evidence used as input to the clinical judgment. This corresponds to both the S and O in SOAP."
 * extension[evidenceType].valueCodeableConcept from CancerDiseaseStatusEvidenceTypeVS (required)
 * status and code and subject and effective[x] and valueCodeableConcept MS
 * bodySite 0..0
@@ -30,12 +32,5 @@ Observation resources associated with an [mCODE patient](conformance.html#mCODE-
 * performer only Reference(USCorePractitioner)
 * value[x] only CodeableConcept
 * valueCodeableConcept from ConditionStatusTrendVS (required)
-
-
-Extension: EvidenceType
-Title: "Evidence Type"
-Id:  mcode-evidence-type
-Description: "Categorization of the kind of evidence used as input to the clinical judgment. This corresponds to both the S and O in SOAP."
-* value[x] only CodeableConcept
 
 

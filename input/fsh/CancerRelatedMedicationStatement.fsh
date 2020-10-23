@@ -21,3 +21,10 @@ Description:    "A record of the use of a medication (individual administration 
 * reasonCode 0..1
 * dosage 0..1
 * medicationCodeableConcept from http://hl7.org/fhir/us/core/ValueSet/us-core-medication-codes (extensible)
+
+// Stub for CancerRelatedMedicationRequest
+Profile:  CancerRelatedMedicationRequest
+Parent:   MedicationRequest
+Id:       mcode-cancer-related-medication-request
+Title:    "Stub for Cancer-Related Medication Request"
+Description: "Not yet implemented"

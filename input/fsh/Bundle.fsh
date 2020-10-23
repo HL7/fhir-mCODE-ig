@@ -29,7 +29,7 @@ Description: "A collection of data for an mCODE cancer patient. [Implementation 
     geneticSpecimen 0..* and
     genomicRegionStudied 0..*
     // TODO handle comorbidities, waiting on decision for how these are profiled
-* entry and entry.resource MS 
+* entry and entry.resource MS
 * entry[cancerPatient].resource MS
 * entry[primaryCancerCondition].resource MS
 * entry[secondaryCancerCondition].resource MS
@@ -51,7 +51,7 @@ Description: "A collection of data for an mCODE cancer patient. [Implementation 
 * entry[cancerDiseaseStatus].resource only CancerDiseaseStatus
 * entry[performanceStatus].resource only ECOGPerformanceStatus or KarnofskyPerformanceStatus
 * entry[tumorMarker].resource only TumorMarker
-* entry[cancerRelatedMedicationRequest].resource only cancerRelatedMedicationRequest
+* entry[cancerRelatedMedicationRequest].resource only CancerRelatedMedicationRequest
 * entry[cancerRelatedRadiationProcedure].resource only CancerRelatedRadiationProcedure
 * entry[cancerRelatedSurgicalProcedure].resource only CancerRelatedSurgicalProcedure
 * entry[cancerStage].resource only CancerStageParent
@@ -74,9 +74,8 @@ Description: "A collection of data for an mCODE cancer patient. [Implementation 
 * entry[procedure].resource only USCoreProcedureProfile
 * entry[familyHistory].resource only FamilyMemberHistory
 * entry[diagnosticReport].resource only DiagnosticReport
-* entry[observation].resource only 
+* entry[observation].resource only
 Observation
 * entry[practitioner].resource only USCorePractitioner
 * entry[organization].resource only Organization
 */
-

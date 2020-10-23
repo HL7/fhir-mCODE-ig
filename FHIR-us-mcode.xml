@@ -93,6 +93,7 @@
 <artifact id="StructureDefinition/mcode-genetic-specimen" key="genetic-specimen" name="Genetic Specimen"/>
 <artifact id="ValueSet/mcode-genetic-specimen-type-vs" key="genetic-specimen-type-value-set" name="Genetic Specimen Type Value Set"/>
 <artifact id="StructureDefinition/mcode-genomic-region-studied" key="genomic-region-studied" name="Genomic Region Studied"/>
+<artifact id="OperationDefinition/mcode-get-patient-bundle" key="OperationDefinition-mcode-get-patient-bundle" name="GetPatientBundleOperation"/>
 <artifact deprecated="true" id="ValueSet/mcode-hgvs-sequence-variant-nomenclature-value-set" key="hgvs-sequence-variant-nomenclature-value-set" name="HGVS Sequence Variant Nomenclature Value Set"/>
 <artifact id="ValueSet/mcode-hgnc-vs" key="hugo-gene-nomenclature-committee-gene-names-value-set" name="HUGO Gene Nomenclature Committee Gene Names Value Set"/>
 <artifact deprecated="true" id="Extension/mcode-histology-morphology-behavior-extension" key="histology-morphology-behavior-extension" name="Histology Morphology Behavior Extension"/>
@@ -225,4 +226,5 @@
 <page deprecated="true" key="implementationnotes" name="Implementation Notes"/>
 <page key="toc" name="Table of Contents"/>
 <page deprecated="true" key="valuesets" name="Value Sets"/>
+<page key="mcode-patient-bundle" name="mCODE Patient Bundle Implementation Details"/>
 </specification>

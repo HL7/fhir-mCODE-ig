@@ -21,7 +21,7 @@ The following elements are labelled MustSupport, indicating that an mCODE Data S
 * [`CancerGeneticVariant`]
 * [`CancerGenomicsReport`]
 * [`GenomicRegionStudied`]
-* [`CancerRelatedMedicationRequest`] 
+* [`CancerRelatedMedicationRequest`]
 * [`CancerRelatedRadiationProcedure`]
 * [`CancerRelatedSurgicalProcedure`]
 * [`GeneticSpecimen`]
@@ -35,7 +35,7 @@ The following elements are labelled MustSupport, indicating that an mCODE Data S
 * Vital Signs, including blood pressure, body height, and body weight. Observations conform to the FHIR vital sign profiles, incorporated by reference into US Core. See [Implementation > Vital Sign Profiles](implementation.html#VitalSigns) for details.
 * Laboratory Results: Observations included in Complete Blood Count (CBC) and Comprehensive Metabolic Panel (CMP). Individual results must conform to the [US Core Laboratory Result Profile](http://hl7.org/fhir/us/core/StructureDefinition-us-core-observation-lab.html). See [Implementation > Laboratory Profiles](implementation.html#laboratory-profiles) for a list of LOINC codes to be included.
 
-Note that these elements have a minimum [cardinality](https://www.hl7.org/fhir/conformance-rules.html#cardinality) of `0` **only** to allow them to be unreported if the Sender does not have the necessary data to generate a resource for a particular patient. If the Sender has the data, they SHALL be populated despite this.
+Note that these elements have a minimum [cardinality](https://www.hl7.org/fhir/conformance-rules.html#cardinality) of `0` **only** to allow them to be unreported if the Sender does not have the necessary data to generate a resource for a particular patient.
 
 ## Optional Elements
 
@@ -45,11 +45,11 @@ mCODE does not exclude other elements in the mCODE Bundle. Senders MAY include t
 * Diagnostic imaging related to a primary or secondary cancer condition, represented as [`Media`] or [`ImagingStudy`] resources.
 * `FamilyMemberHistory` resources that may be related to a primary or secondary cancer condition.
 * `Observation` resources that related to the patient or cancer diagnosis. For example, an `Observation` conforming to [`USCoreSmokingStatusProfile`] to indicate smoking status or an [an `Observation` indicating negative margins] on an excised tumor could be included.
-* `MedicationRequest` resources that do not conform to `CancerRelatedMedicationRequest`. Concomitant medications may be relevant in the cancer-treatment context. If any such resources are included, ALL MedicationRequest resources associated with the patient SHALL be included to ensure the absence of a given medication from the Bundle indicates the patient did not receive it.
+* `MedicationRequest` resources that do not conform to `CancerRelatedMedicationRequest`. Concomitant medications may be relevant in the cancer-treatment context. A data receiver cannot assume the medications included in the bundle represent the complete list of active medications available from the data sender.
 
 ## Specifying a time range
 
-By default, this Bundle includes ALL resources described above irrespective of time. For some types of resources, such as vital signs, this may include a very large number of resources.
+By default, this Bundle includes ALL required and Must Support resources described above irrespective of time. For some types of resources, such as vital signs, this may include a very large number of resources.
 
 To avoid this, callers may specify the `date` parameter when requesting a patient's Bundle via the Sender's FHIR API. This operates according to the [FHIR search specification for the `date` parameter](http://hl7.org/fhir/R4/search.html#date): for example, `date=ge2020-01-01&date=le2020-09-01` could be used to request resources within the provided date range.
 

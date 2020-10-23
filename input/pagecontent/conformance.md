@@ -9,11 +9,11 @@ US Core defines two actors, US Core Requestor and US Core Responder, which are h
 
 #### Capability Statements
 
-[FHIR capability statements](http://hl7.org/fhir/R4/capabilitystatement.html) describe the capabilities of actual implementation or requirements of a desired solution. This IG provides two requirement capability statements, one for mCODE Data Senders, and one for mCODE Data Receivers.
+[FHIR capability statements](http://hl7.org/fhir/R4/capabilitystatement.html) describe the capabilities of actual implementation or requirements of a desired solution. This IG provides capability statements that express requirements for mCODE Data Senders and mCODE Data Receivers.
 
 ##### Supported Profiles
 
-Each mCODE participants SHALL support the following profiles, which are core to representing an mCODE patient, UNLESS the necessary data to populate them is typically not available in their system:
+Each mCODE participant SHALL support the following profiles, which are core to representing an mCODE patient, UNLESS the necessary data to populate them is typically not available in their system:
 
 * [CancerPatient](StructureDefinition-mcode-cancer-patient.html)
 * [PrimaryCancerCondition](StructureDefinition-mcode-primary-cancer-condition.html)
@@ -27,7 +27,7 @@ Supporting a profile requires implementation of certain behaviors. In particular
 1. Mark resources with profile assertions documenting the profile(s) they conform to, by populating meta.profile.
 2. Support searching by the _profile parameter for the declared profiles.
 
-These are requirements in the base FHIR specification, not additional requirements imposed by mCODE. Refer to the [FHIR Documentation on supported profiles](https://www.hl7.org/fhir/profiling.html#CapabilityStatement.rest.resource.supportedProfile) for details.
+(These requirements originate from the base FHIR specification, not additional requirements imposed by mCODE. Refer to the [FHIR Documentation on supported profiles](https://www.hl7.org/fhir/profiling.html#CapabilityStatement.rest.resource.supportedProfile) for details.)
 
 
 ##### Supported Operations
@@ -36,25 +36,25 @@ TBD
 
 #### mCODE Patients
 
-To facilitate conformance testing, the testing software must be able to determine which patients are "mCODE Patients" -- in scope for mCODE. All patients with confirmed cancer diagnoses SHOULD be covered by mCODE. In FHIR terms, these are patients who have a Condition where Condition.code is a member of the value set `PrimaryOrUncertainBehaviorCancerDisorderVS` and `Condition.verificationStatus` is confirmed.
+To facilitate conformance testing, the testing software must be able to determine which patients are "mCODE Patients" -- in scope for mCODE. All patients with confirmed cancer diagnoses SHOULD be covered by mCODE. In FHIR terms, these are patients who have a Condition where Condition.code is a member of the value set [`PrimaryOrUncertainBehaviorCancerDisorderVS`](ValueSet-mcode-primary-or-uncertain-behavior-cancer-disorder-vs.html) and `Condition.verificationStatus` is confirmed.
 
-Due to technical, organizational, or legal reasons, mCODE Data Senders MAY exclude some cancer patients from mCODE. In that case, the mCODE Data Sender MUST implement [profile search](https://www.hl7.org/fhir/search.html#profile) indicate which patients fall into the scope of mCODE by populating `Patient.meta.profile` with the mCODE CancerPatient profile (`http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-patient`). Patients not explicitly indicated by this method are assumed to be out of scope, regardless of any cancer diagnosis.
+Due to technical, organizational, or legal reasons, mCODE Data Senders MAY exclude some cancer patients from mCODE. In that case, the mCODE Data Sender MUST implement [profile search](https://www.hl7.org/fhir/search.html#profile) and indicate which patients fall into the scope of mCODE by populating `Patient.meta.profile` with the mCODE CancerPatient profile (`http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-patient`). Patients not explicitly indicated by this method are assumed to be out of scope, independent of any cancer diagnosis.
 
 #### mCODE Patient Bundle
 
-An [mCODE Patient Bundle](StructureDefinition-mcode-patient-bundle-definitions.html) is the complete set of data for a particular patient corresponding to the set of supported profiles of an mCODE Data Sender. An mCODE Data Sender MUST be capable of producing a valid mCODE bundle for all of its mCODE patients (as defined above).
+An [mCODE Patient Bundle](StructureDefinition-mcode-patient-bundle-definitions.html) is the complete set of data for a particular patient corresponding to the set of supported profiles of an mCODE Data Sender. An mCODE Data Sender MUST be capable of producing a valid mCODE bundle for all of its mCODE patients (as [defined above](#mcode-patients)).
 
 #### mCODE Profiles
 
-The documentation of each mCODE profile includes criteria for which FHIR resources are expected to comply with that profile. For example, in CancerDiseaseStatus, the conformance criteria states that any resource associated with an mCODE patient (as defined above) that represent an observation of patient's response to cancer treatment SHALL conform to that profile.
+The documentation of each mCODE profile includes criteria for which FHIR resources are expected to comply with that profile. For example, in CancerDiseaseStatus, the conformance criteria states that any resource associated with an mCODE patient (as [defined above](#mcode-patients)) that represent an observation of patient's response to cancer treatment SHALL conform to that profile.
 
 Each mCODE profile expresses requirements and expectations for individual mCODE instances in terms of structural constraints and terminology bindings. Any FHIR resources claiming to conform to mCODE must [validate](https://www.hl7.org/fhir/validation.html) against the declared mCODE profile.
 
 #### Conformance to US Core
 
-Most mCODE profiles are based on US Core profiles defined in the [US Core Implementation Guide (v3.1.1)](http://hl7.org/fhir/us/core/index.html). For example, the CancerGeneticVariant profile is based on US Core Laboratory Result Observation Profile and CancerPatient is based on the US Core Patient profile. As such, if a resource validates against any of these mCODE profiles, it will also be in compliance with US Core.
+Most mCODE profiles are based on US Core profiles defined in the [US Core Implementation Guide (v3.1.1)](http://hl7.org/fhir/us/core/index.html). For example, the CancerGeneticVariant profile is based on US Core Laboratory Result Observation Profile and CancerPatient is based on the US Core Patient profile. If a resource validates against any of the US Core-based mCODE profiles, it will be in compliance with US Core.
 
-Where US Core does not provide an appropriate base profile, mCODE profiles FHIR resources. Examples include such as CancerRelatedMedicationStatement (based on MedicationStatement) and CancerDiseaseStatus (based on Observation). In the latter case, US Core does not provide a profile for non-laboratory observations. In these cases, resources only need to conform to the mCODE profiles.
+Where US Core does not provide an appropriate base profile, mCODE profiles FHIR resources. An example is CancerDiseaseStatus, based on Observation because US Core does not provide a profile for non-laboratory observations.
 
 #### MustSupport Interpretation
 
@@ -72,7 +72,6 @@ The handling of missing or unknown elements in mCODE is functionally identical t
 * mCODE Data Receivers SHALL interpret missing data elements within resource instances as data not present in the mCODE Data Sender's system.
 * In situations where information on a particular data element is missing and the mCODE Data Sender knows the reason for the absence of data, the Data Sender SHALL send the reason for the missing information. The absence reason value SHOULD come first from the element's value set if it exists or otherwise from the dataAbsentReason extension.
 * mCODE Data Receivers SHALL be able to process resource instances containing data elements asserting missing information.
-
 
 #### Required Elements
 

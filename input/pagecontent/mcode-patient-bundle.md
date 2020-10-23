@@ -27,7 +27,7 @@ The following elements are labelled MustSupport, indicating that an mCODE Data S
 * [`GeneticSpecimen`]
 * [`GenomicRegionStudied`]
 * Performance status ([`ECOGPerformanceStatus`] and [`KarnofskyPerformanceStatus`])
-* [`SecondaryCancerCondition`] 
+* [`SecondaryCancerCondition`]
 * Stage ([`TNMClinicalStageGroup`], [`TNMClinicalPrimaryTumorCategory`], [`TNMClinicalRegionalNodesCategory`], [`TNMClincalDistantMetastasesCategory`], [`TNMPathologicalStageGroup`], [`TNMPathologicalPrimaryTumorCategory`], [`TNMPathologicalRegionalNodesCategory`], [`TNMPathologicalDistantMetastasesCategory`])
 * **TODO: TumorSize support**
 * **TODO: Comorbidity support**
@@ -59,7 +59,11 @@ If the `date` parameter is provided, the following resources SHALL be filtered a
 - Medications (based on the value of `MedicationRequest.dosageInstruction.timing.event`)
 - Vital signs (based on the value of `effective`; if `effectivePeriod` is provided, use the end of the `Period` for date comparisons)
 
-Other resources SHALL NOT be filtered based on the `date` parameter. This is because the behavior must be specified to avoid ambiguous behavior, which would make implementation more difficult with little practical benefit.
+Other resources SHALL NOT be filtered based on the `date` parameter. There are two reasons for this:
+
+1. The primary goal of date filtering is performance optimization: there may be _many_ instances of the resources listed above, and filtering by date avoids sending large amounts of data over the wire that would be immediately discarded via client-side filtering by the Receiver.
+
+2. Resources may have multiple date elements, and the optimal approach for filtering on these may differ by use case. Filtering these elements client-side rather than server-side allows for more flexibility, with no significant downside for resources with few instances.
 
 ## References
 
@@ -98,7 +102,3 @@ For included resources that reference another resource not already in the Bundle
 [`TNMPathologicalPrimaryTumorCategory`]: StructureDefinition-mcode-tnm-pathological-primary-tumor-category.html
 [`TNMPathologicalRegionalNodesCategory`]: StructureDefinition-mcode-tnm-pathological-regional-nodes-category.html
 [`TNMPathologicalDistantMetastasesCategory`]: StructureDefinition-mcode-tnm-pathological-distant-metastases-category.html
-
-
-
-

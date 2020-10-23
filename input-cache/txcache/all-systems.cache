@@ -1,0 +1,2006 @@
+-------------------------------------------------------------------------------------
+{"code" : {
+  "code" : "d"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://unitsofmeasure.org",
+      "concept" : [{
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/valueset-concept-definition",
+          "valueString" : "second"
+        }],
+        "code" : "s",
+        "display" : "second",
+        "designation" : [{
+          "language" : "zh",
+          "value" : "秒"
+        }]
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/valueset-concept-definition",
+          "valueString" : "minute"
+        }],
+        "code" : "min",
+        "display" : "minute",
+        "designation" : [{
+          "language" : "zh",
+          "value" : "分钟"
+        }]
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/valueset-concept-definition",
+          "valueString" : "hour"
+        }],
+        "code" : "h",
+        "display" : "hour",
+        "designation" : [{
+          "language" : "zh",
+          "value" : "小时"
+        }]
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/valueset-concept-definition",
+          "valueString" : "day"
+        }],
+        "code" : "d",
+        "display" : "day",
+        "designation" : [{
+          "language" : "zh",
+          "value" : "天"
+        }]
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/valueset-concept-definition",
+          "valueString" : "week"
+        }],
+        "code" : "wk",
+        "display" : "week",
+        "designation" : [{
+          "language" : "zh",
+          "value" : "星期"
+        }]
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/valueset-concept-definition",
+          "valueString" : "month"
+        }],
+        "code" : "mo",
+        "display" : "month",
+        "designation" : [{
+          "language" : "zh",
+          "value" : "月"
+        }]
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/valueset-concept-definition",
+          "valueString" : "year"
+        }],
+        "code" : "a",
+        "display" : "year",
+        "designation" : [{
+          "language" : "zh",
+          "value" : "年"
+        }]
+      }]
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"true", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "day",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "code" : "MA"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "https://www.usps.com/",
+      "concept" : [{
+        "code" : "AK",
+        "display" : "Alaska"
+      },
+      {
+        "code" : "AL",
+        "display" : "Alabama"
+      },
+      {
+        "code" : "AR",
+        "display" : "Arkansas"
+      },
+      {
+        "code" : "AS",
+        "display" : "American Samoa"
+      },
+      {
+        "code" : "AZ",
+        "display" : "Arizona"
+      },
+      {
+        "code" : "CA",
+        "display" : "California"
+      },
+      {
+        "code" : "CO",
+        "display" : "Colorado"
+      },
+      {
+        "code" : "CT",
+        "display" : "Connecticut"
+      },
+      {
+        "code" : "DC",
+        "display" : "District of Columbia"
+      },
+      {
+        "code" : "DE",
+        "display" : "Delaware"
+      },
+      {
+        "code" : "FL",
+        "display" : "Florida"
+      },
+      {
+        "code" : "FM",
+        "display" : "Federated States of Micronesia"
+      },
+      {
+        "code" : "GA",
+        "display" : "Georgia"
+      },
+      {
+        "code" : "GU",
+        "display" : "Guam"
+      },
+      {
+        "code" : "HI",
+        "display" : "Hawaii"
+      },
+      {
+        "code" : "IA",
+        "display" : "Iowa"
+      },
+      {
+        "code" : "ID",
+        "display" : "Idaho"
+      },
+      {
+        "code" : "IL",
+        "display" : "Illinois"
+      },
+      {
+        "code" : "IN",
+        "display" : "Indiana"
+      },
+      {
+        "code" : "KS",
+        "display" : "Kansas"
+      },
+      {
+        "code" : "KY",
+        "display" : "Kentucky"
+      },
+      {
+        "code" : "LA",
+        "display" : "Louisiana"
+      },
+      {
+        "code" : "MA",
+        "display" : "Massachusetts"
+      },
+      {
+        "code" : "MD",
+        "display" : "Maryland"
+      },
+      {
+        "code" : "ME",
+        "display" : "Maine"
+      },
+      {
+        "code" : "MH",
+        "display" : "Marshall Islands"
+      },
+      {
+        "code" : "MI",
+        "display" : "Michigan"
+      },
+      {
+        "code" : "MN",
+        "display" : "Minnesota"
+      },
+      {
+        "code" : "MO",
+        "display" : "Missouri"
+      },
+      {
+        "code" : "MP",
+        "display" : "Northern Mariana Islands"
+      },
+      {
+        "code" : "MS",
+        "display" : "Mississippi"
+      },
+      {
+        "code" : "MT",
+        "display" : "Montana"
+      },
+      {
+        "code" : "NC",
+        "display" : "North Carolina"
+      },
+      {
+        "code" : "ND",
+        "display" : "North Dakota"
+      },
+      {
+        "code" : "NE",
+        "display" : "Nebraska"
+      },
+      {
+        "code" : "NH",
+        "display" : "New Hampshire"
+      },
+      {
+        "code" : "NJ",
+        "display" : "New Jersey"
+      },
+      {
+        "code" : "NM",
+        "display" : "New Mexico"
+      },
+      {
+        "code" : "NV",
+        "display" : "Nevada"
+      },
+      {
+        "code" : "NY",
+        "display" : "New York"
+      },
+      {
+        "code" : "OH",
+        "display" : "Ohio"
+      },
+      {
+        "code" : "OK",
+        "display" : "Oklahoma"
+      },
+      {
+        "code" : "OR",
+        "display" : "Oregon"
+      },
+      {
+        "code" : "PA",
+        "display" : "Pennsylvania"
+      },
+      {
+        "code" : "PR",
+        "display" : "Puerto Rico"
+      },
+      {
+        "code" : "PW",
+        "display" : "Palau"
+      },
+      {
+        "code" : "RI",
+        "display" : "Rhode Island"
+      },
+      {
+        "code" : "SC",
+        "display" : "South Carolina"
+      },
+      {
+        "code" : "SD",
+        "display" : "South Dakota"
+      },
+      {
+        "code" : "TN",
+        "display" : "Tennessee"
+      },
+      {
+        "code" : "TX",
+        "display" : "Texas"
+      },
+      {
+        "code" : "UM",
+        "display" : "U.S. Minor Outlying Islands"
+      },
+      {
+        "code" : "UT",
+        "display" : "Utah"
+      },
+      {
+        "code" : "VA",
+        "display" : "Virginia"
+      },
+      {
+        "code" : "VI",
+        "display" : "Virgin Islands of the U.S."
+      },
+      {
+        "code" : "VT",
+        "display" : "Vermont"
+      },
+      {
+        "code" : "WA",
+        "display" : "Washington"
+      },
+      {
+        "code" : "WI",
+        "display" : "Wisconsin"
+      },
+      {
+        "code" : "WV",
+        "display" : "West Virginia"
+      },
+      {
+        "code" : "WY",
+        "display" : "Wyoming"
+      }]
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"true", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "Massachusetts",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://snomed.info/sct",
+      "filter" : [{
+        "property" : "concept",
+        "op" : "is-a",
+        "value" : "73211009"
+      },
+      {
+        "property" : "concept",
+        "op" : "is-not-a",
+        "value" : "111552007"
+      }]
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/icd-10-cm",
+      "concept" : [{
+        "code" : "E0821",
+        "display" : "Diabetes mellitus due to underlying condition with diabetic nephropathy"
+      },
+      {
+        "code" : "E0822",
+        "display" : "Diabetes mellitus due to underlying condition with diabetic chronic kidney disease"
+      },
+      {
+        "code" : "E0829",
+        "display" : "Diabetes mellitus due to underlying condition with other diabetic kidney complication"
+      },
+      {
+        "code" : "E08311",
+        "display" : "Diabetes mellitus due to underlying condition with unspecified diabetic retinopathy with macular edema"
+      },
+      {
+        "code" : "E08319",
+        "display" : "Diabetes mellitus due to underlying condition with unspecified diabetic retinopathy without macular edema"
+      },
+      {
+        "code" : "E083211",
+        "display" : "Diabetes mellitus due to underlying condition with mild nonproliferative diabetic retinopathy with macular edema, right eye"
+      },
+      {
+        "code" : "E083212",
+        "display" : "Diabetes mellitus due to underlying condition with mild nonproliferative diabetic retinopathy with macular edema, left eye"
+      },
+      {
+        "code" : "E083213",
+        "display" : "Diabetes mellitus due to underlying condition with mild nonproliferative diabetic retinopathy with macular edema, bilateral"
+      },
+      {
+        "code" : "E083219",
+        "display" : "Diabetes mellitus due to underlying condition with mild nonproliferative diabetic retinopathy with macular edema, unspecified eye"
+      },
+      {
+        "code" : "E083291",
+        "display" : "Diabetes mellitus due to underlying condition with mild nonproliferative diabetic retinopathy without macular edema, right eye"
+      },
+      {
+        "code" : "E083292",
+        "display" : "Diabetes mellitus due to underlying condition with mild nonproliferative diabetic retinopathy without macular edema, left eye"
+      },
+      {
+        "code" : "E083293",
+        "display" : "Diabetes mellitus due to underlying condition with mild nonproliferative diabetic retinopathy without macular edema, bilateral"
+      },
+      {
+        "code" : "E083299",
+        "display" : "Diabetes mellitus due to underlying condition with mild nonproliferative diabetic retinopathy without macular edema, unspecified eye"
+      },
+      {
+        "code" : "E083311",
+        "display" : "Diabetes mellitus due to underlying condition with moderate nonproliferative diabetic retinopathy with macular edema, right eye"
+      },
+      {
+        "code" : "E083312",
+        "display" : "Diabetes mellitus due to underlying condition with moderate nonproliferative diabetic retinopathy with macular edema, left eye"
+      },
+      {
+        "code" : "E083313",
+        "display" : "Diabetes mellitus due to underlying condition with moderate nonproliferative diabetic retinopathy with macular edema, bilateral"
+      },
+      {
+        "code" : "E083319",
+        "display" : "Diabetes mellitus due to underlying condition with moderate nonproliferative diabetic retinopathy with macular edema, unspecified eye"
+      },
+      {
+        "code" : "E083391",
+        "display" : "Diabetes mellitus due to underlying condition with moderate nonproliferative diabetic retinopathy without macular edema, right eye"
+      },
+      {
+        "code" : "E083392",
+        "display" : "Diabetes mellitus due to underlying condition with moderate nonproliferative diabetic retinopathy without macular edema, left eye"
+      },
+      {
+        "code" : "E083393",
+        "display" : "Diabetes mellitus due to underlying condition with moderate nonproliferative diabetic retinopathy without macular edema, bilateral"
+      },
+      {
+        "code" : "E083399",
+        "display" : "Diabetes mellitus due to underlying condition with moderate nonproliferative diabetic retinopathy without macular edema, unspecified eye"
+      },
+      {
+        "code" : "E083411",
+        "display" : "Diabetes mellitus due to underlying condition with severe nonproliferative diabetic retinopathy with macular edema, right eye"
+      },
+      {
+        "code" : "E083412",
+        "display" : "Diabetes mellitus due to underlying condition with severe nonproliferative diabetic retinopathy with macular edema, left eye"
+      },
+      {
+        "code" : "E083413",
+        "display" : "Diabetes mellitus due to underlying condition with severe nonproliferative diabetic retinopathy with macular edema, bilateral"
+      },
+      {
+        "code" : "E083419",
+        "display" : "Diabetes mellitus due to underlying condition with severe nonproliferative diabetic retinopathy with macular edema, unspecified eye"
+      },
+      {
+        "code" : "E083491",
+        "display" : "Diabetes mellitus due to underlying condition with severe nonproliferative diabetic retinopathy without macular edema, right eye"
+      },
+      {
+        "code" : "E083492",
+        "display" : "Diabetes mellitus due to underlying condition with severe nonproliferative diabetic retinopathy without macular edema, left eye"
+      },
+      {
+        "code" : "E083493",
+        "display" : "Diabetes mellitus due to underlying condition with severe nonproliferative diabetic retinopathy without macular edema, bilateral"
+      },
+      {
+        "code" : "E083499",
+        "display" : "Diabetes mellitus due to underlying condition with severe nonproliferative diabetic retinopathy without macular edema, unspecified eye"
+      },
+      {
+        "code" : "E083511",
+        "display" : "Diabetes mellitus due to underlying condition with proliferative diabetic retinopathy with macular edema, right eye"
+      },
+      {
+        "code" : "E083512",
+        "display" : "Diabetes mellitus due to underlying condition with proliferative diabetic retinopathy with macular edema, left eye"
+      },
+      {
+        "code" : "E083513",
+        "display" : "Diabetes mellitus due to underlying condition with proliferative diabetic retinopathy with macular edema, bilateral"
+      },
+      {
+        "code" : "E083519",
+        "display" : "Diabetes mellitus due to underlying condition with proliferative diabetic retinopathy with macular edema, unspecified eye"
+      },
+      {
+        "code" : "E083521",
+        "display" : "Diabetes mellitus due to underlying condition with proliferative diabetic retinopathy with traction retinal detachment involving the macula, right eye"
+      },
+      {
+        "code" : "E083522",
+        "display" : "Diabetes mellitus due to underlying condition with proliferative diabetic retinopathy with traction retinal detachment involving the macula, left eye"
+      },
+      {
+        "code" : "E083523",
+        "display" : "Diabetes mellitus due to underlying condition with proliferative diabetic retinopathy with traction retinal detachment involving the macula, bilateral"
+      },
+      {
+        "code" : "E083529",
+        "display" : "Diabetes mellitus due to underlying condition with proliferative diabetic retinopathy with traction retinal detachment involving the macula, unspecified eye"
+      },
+      {
+        "code" : "E083531",
+        "display" : "Diabetes mellitus due to underlying condition with proliferative diabetic retinopathy with traction retinal detachment not involving the macula, right eye"
+      },
+      {
+        "code" : "E083532",
+        "display" : "Diabetes mellitus due to underlying condition with proliferative diabetic retinopathy with traction retinal detachment not involving the macula, left eye"
+      },
+      {
+        "code" : "E083533",
+        "display" : "Diabetes mellitus due to underlying condition with proliferative diabetic retinopathy with traction retinal detachment not involving the macula, bilateral"
+      },
+      {
+        "code" : "E083539",
+        "display" : "Diabetes mellitus due to underlying condition with proliferative diabetic retinopathy with traction retinal detachment not involving the macula, unspecified eye"
+      },
+      {
+        "code" : "E083541",
+        "display" : "Diabetes mellitus due to underlying condition with proliferative diabetic retinopathy with combined traction retinal detachment and rhegmatogenous retinal detachment, right eye"
+      },
+      {
+        "code" : "E083542",
+        "display" : "Diabetes mellitus due to underlying condition with proliferative diabetic retinopathy with combined traction retinal detachment and rhegmatogenous retinal detachment, left eye"
+      },
+      {
+        "code" : "E083543",
+        "display" : "Diabetes mellitus due to underlying condition with proliferative diabetic retinopathy with combined traction retinal detachment and rhegmatogenous retinal detachment, bilateral"
+      },
+      {
+        "code" : "E083549",
+        "display" : "Diabetes mellitus due to underlying condition with proliferative diabetic retinopathy with combined traction retinal detachment and rhegmatogenous retinal detachment, unspecified eye"
+      },
+      {
+        "code" : "E083551",
+        "display" : "Diabetes mellitus due to underlying condition with stable proliferative diabetic retinopathy, right eye"
+      },
+      {
+        "code" : "E083552",
+        "display" : "Diabetes mellitus due to underlying condition with stable proliferative diabetic retinopathy, left eye"
+      },
+      {
+        "code" : "E083553",
+        "display" : "Diabetes mellitus due to underlying condition with stable proliferative diabetic retinopathy, bilateral"
+      },
+      {
+        "code" : "E083559",
+        "display" : "Diabetes mellitus due to underlying condition with stable proliferative diabetic retinopathy, unspecified eye"
+      },
+      {
+        "code" : "E083591",
+        "display" : "Diabetes mellitus due to underlying condition with proliferative diabetic retinopathy without macular edema, right eye"
+      },
+      {
+        "code" : "E083592",
+        "display" : "Diabetes mellitus due to underlying condition with proliferative diabetic retinopathy without macular edema, left eye"
+      },
+      {
+        "code" : "E083593",
+        "display" : "Diabetes mellitus due to underlying condition with proliferative diabetic retinopathy without macular edema, bilateral"
+      },
+      {
+        "code" : "E083599",
+        "display" : "Diabetes mellitus due to underlying condition with proliferative diabetic retinopathy without macular edema, unspecified eye"
+      },
+      {
+        "code" : "E0836",
+        "display" : "Diabetes mellitus due to underlying condition with diabetic cataract"
+      },
+      {
+        "code" : "E0837X1",
+        "display" : "Diabetes mellitus due to underlying condition with diabetic macular edema, resolved following treatment, right eye"
+      },
+      {
+        "code" : "E0837X2",
+        "display" : "Diabetes mellitus due to underlying condition with diabetic macular edema, resolved following treatment, left eye"
+      },
+      {
+        "code" : "E0837X3",
+        "display" : "Diabetes mellitus due to underlying condition with diabetic macular edema, resolved following treatment, bilateral"
+      },
+      {
+        "code" : "E0837X9",
+        "display" : "Diabetes mellitus due to underlying condition with diabetic macular edema, resolved following treatment, unspecified eye"
+      },
+      {
+        "code" : "E0839",
+        "display" : "Diabetes mellitus due to underlying condition with other diabetic ophthalmic complication"
+      },
+      {
+        "code" : "E0840",
+        "display" : "Diabetes mellitus due to underlying condition with diabetic neuropathy, unspecified"
+      },
+      {
+        "code" : "E0841",
+        "display" : "Diabetes mellitus due to underlying condition with diabetic mononeuropathy"
+      },
+      {
+        "code" : "E0842",
+        "display" : "Diabetes mellitus due to underlying condition with diabetic polyneuropathy"
+      },
+      {
+        "code" : "E0843",
+        "display" : "Diabetes mellitus due to underlying condition with diabetic autonomic (poly)neuropathy"
+      },
+      {
+        "code" : "E0844",
+        "display" : "Diabetes mellitus due to underlying condition with diabetic amyotrophy"
+      },
+      {
+        "code" : "E0849",
+        "display" : "Diabetes mellitus due to underlying condition with other diabetic neurological complication"
+      },
+      {
+        "code" : "E0851",
+        "display" : "Diabetes mellitus due to underlying condition with diabetic peripheral angiopathy without gangrene"
+      },
+      {
+        "code" : "E0852",
+        "display" : "Diabetes mellitus due to underlying condition with diabetic peripheral angiopathy with gangrene"
+      },
+      {
+        "code" : "E0859",
+        "display" : "Diabetes mellitus due to underlying condition with other circulatory complications"
+      },
+      {
+        "code" : "E08610",
+        "display" : "Diabetes mellitus due to underlying condition with diabetic neuropathic arthropathy"
+      },
+      {
+        "code" : "E08618",
+        "display" : "Diabetes mellitus due to underlying condition with other diabetic arthropathy"
+      },
+      {
+        "code" : "E08620",
+        "display" : "Diabetes mellitus due to underlying condition with diabetic dermatitis"
+      },
+      {
+        "code" : "E08621",
+        "display" : "Diabetes mellitus due to underlying condition with foot ulcer"
+      },
+      {
+        "code" : "E08622",
+        "display" : "Diabetes mellitus due to underlying condition with other skin ulcer"
+      },
+      {
+        "code" : "E08628",
+        "display" : "Diabetes mellitus due to underlying condition with other skin complications"
+      },
+      {
+        "code" : "E08630",
+        "display" : "Diabetes mellitus due to underlying condition with periodontal disease"
+      },
+      {
+        "code" : "E08638",
+        "display" : "Diabetes mellitus due to underlying condition with other oral complications"
+      },
+      {
+        "code" : "E08641",
+        "display" : "Diabetes mellitus due to underlying condition with hypoglycemia with coma"
+      },
+      {
+        "code" : "E08649",
+        "display" : "Diabetes mellitus due to underlying condition with hypoglycemia without coma"
+      },
+      {
+        "code" : "E0865",
+        "display" : "Diabetes mellitus due to underlying condition with hyperglycemia"
+      },
+      {
+        "code" : "E0869",
+        "display" : "Diabetes mellitus due to underlying condition with other specified complication"
+      },
+      {
+        "code" : "E088",
+        "display" : "Diabetes mellitus due to underlying condition with unspecified complications"
+      },
+      {
+        "code" : "E0921",
+        "display" : "Drug or chemical induced diabetes mellitus with diabetic nephropathy"
+      },
+      {
+        "code" : "E0922",
+        "display" : "Drug or chemical induced diabetes mellitus with diabetic chronic kidney disease"
+      },
+      {
+        "code" : "E0929",
+        "display" : "Drug or chemical induced diabetes mellitus with other diabetic kidney complication"
+      },
+      {
+        "code" : "E09311",
+        "display" : "Drug or chemical induced diabetes mellitus with unspecified diabetic retinopathy with macular edema"
+      },
+      {
+        "code" : "E09319",
+        "display" : "Drug or chemical induced diabetes mellitus with unspecified diabetic retinopathy without macular edema"
+      },
+      {
+        "code" : "E093211",
+        "display" : "Drug or chemical induced diabetes mellitus with mild nonproliferative diabetic retinopathy with macular edema, right eye"
+      },
+      {
+        "code" : "E093212",
+        "display" : "Drug or chemical induced diabetes mellitus with mild nonproliferative diabetic retinopathy with macular edema, left eye"
+      },
+      {
+        "code" : "E093213",
+        "display" : "Drug or chemical induced diabetes mellitus with mild nonproliferative diabetic retinopathy with macular edema, bilateral"
+      },
+      {
+        "code" : "E093219",
+        "display" : "Drug or chemical induced diabetes mellitus with mild nonproliferative diabetic retinopathy with macular edema, unspecified eye"
+      },
+      {
+        "code" : "E093291",
+        "display" : "Drug or chemical induced diabetes mellitus with mild nonproliferative diabetic retinopathy without macular edema, right eye"
+      },
+      {
+        "code" : "E093292",
+        "display" : "Drug or chemical induced diabetes mellitus with mild nonproliferative diabetic retinopathy without macular edema, left eye"
+      },
+      {
+        "code" : "E093293",
+        "display" : "Drug or chemical induced diabetes mellitus with mild nonproliferative diabetic retinopathy without macular edema, bilateral"
+      },
+      {
+        "code" : "E093299",
+        "display" : "Drug or chemical induced diabetes mellitus with mild nonproliferative diabetic retinopathy without macular edema, unspecified eye"
+      },
+      {
+        "code" : "E093311",
+        "display" : "Drug or chemical induced diabetes mellitus with moderate nonproliferative diabetic retinopathy with macular edema, right eye"
+      },
+      {
+        "code" : "E093312",
+        "display" : "Drug or chemical induced diabetes mellitus with moderate nonproliferative diabetic retinopathy with macular edema, left eye"
+      },
+      {
+        "code" : "E093313",
+        "display" : "Drug or chemical induced diabetes mellitus with moderate nonproliferative diabetic retinopathy with macular edema, bilateral"
+      },
+      {
+        "code" : "E093319",
+        "display" : "Drug or chemical induced diabetes mellitus with moderate nonproliferative diabetic retinopathy with macular edema, unspecified eye"
+      },
+      {
+        "code" : "E093391",
+        "display" : "Drug or chemical induced diabetes mellitus with moderate nonproliferative diabetic retinopathy without macular edema, right eye"
+      },
+      {
+        "code" : "E093392",
+        "display" : "Drug or chemical induced diabetes mellitus with moderate nonproliferative diabetic retinopathy without macular edema, left eye"
+      },
+      {
+        "code" : "E093393",
+        "display" : "Drug or chemical induced diabetes mellitus with moderate nonproliferative diabetic retinopathy without macular edema, bilateral"
+      },
+      {
+        "code" : "E093399",
+        "display" : "Drug or chemical induced diabetes mellitus with moderate nonproliferative diabetic retinopathy without macular edema, unspecified eye"
+      },
+      {
+        "code" : "E093411",
+        "display" : "Drug or chemical induced diabetes mellitus with severe nonproliferative diabetic retinopathy with macular edema, right eye"
+      },
+      {
+        "code" : "E093412",
+        "display" : "Drug or chemical induced diabetes mellitus with severe nonproliferative diabetic retinopathy with macular edema, left eye"
+      },
+      {
+        "code" : "E093413",
+        "display" : "Drug or chemical induced diabetes mellitus with severe nonproliferative diabetic retinopathy with macular edema, bilateral"
+      },
+      {
+        "code" : "E093419",
+        "display" : "Drug or chemical induced diabetes mellitus with severe nonproliferative diabetic retinopathy with macular edema, unspecified eye"
+      },
+      {
+        "code" : "E093491",
+        "display" : "Drug or chemical induced diabetes mellitus with severe nonproliferative diabetic retinopathy without macular edema, right eye"
+      },
+      {
+        "code" : "E093492",
+        "display" : "Drug or chemical induced diabetes mellitus with severe nonproliferative diabetic retinopathy without macular edema, left eye"
+      },
+      {
+        "code" : "E093493",
+        "display" : "Drug or chemical induced diabetes mellitus with severe nonproliferative diabetic retinopathy without macular edema, bilateral"
+      },
+      {
+        "code" : "E093499",
+        "display" : "Drug or chemical induced diabetes mellitus with severe nonproliferative diabetic retinopathy without macular edema, unspecified eye"
+      },
+      {
+        "code" : "E093511",
+        "display" : "Drug or chemical induced diabetes mellitus with proliferative diabetic retinopathy with macular edema, right eye"
+      },
+      {
+        "code" : "E093512",
+        "display" : "Drug or chemical induced diabetes mellitus with proliferative diabetic retinopathy with macular edema, left eye"
+      },
+      {
+        "code" : "E093513",
+        "display" : "Drug or chemical induced diabetes mellitus with proliferative diabetic retinopathy with macular edema, bilateral"
+      },
+      {
+        "code" : "E093519",
+        "display" : "Drug or chemical induced diabetes mellitus with proliferative diabetic retinopathy with macular edema, unspecified eye"
+      },
+      {
+        "code" : "E093521",
+        "display" : "Drug or chemical induced diabetes mellitus with proliferative diabetic retinopathy with traction retinal detachment involving the macula, right eye"
+      },
+      {
+        "code" : "E093522",
+        "display" : "Drug or chemical induced diabetes mellitus with proliferative diabetic retinopathy with traction retinal detachment involving the macula, left eye"
+      },
+      {
+        "code" : "E093523",
+        "display" : "Drug or chemical induced diabetes mellitus with proliferative diabetic retinopathy with traction retinal detachment involving the macula, bilateral"
+      },
+      {
+        "code" : "E093529",
+        "display" : "Drug or chemical induced diabetes mellitus with proliferative diabetic retinopathy with traction retinal detachment involving the macula, unspecified eye"
+      },
+      {
+        "code" : "E093531",
+        "display" : "Drug or chemical induced diabetes mellitus with proliferative diabetic retinopathy with traction retinal detachment not involving the macula, right eye"
+      },
+      {
+        "code" : "E093532",
+        "display" : "Drug or chemical induced diabetes mellitus with proliferative diabetic retinopathy with traction retinal detachment not involving the macula, left eye"
+      },
+      {
+        "code" : "E093533",
+        "display" : "Drug or chemical induced diabetes mellitus with proliferative diabetic retinopathy with traction retinal detachment not involving the macula, bilateral"
+      },
+      {
+        "code" : "E093539",
+        "display" : "Drug or chemical induced diabetes mellitus with proliferative diabetic retinopathy with traction retinal detachment not involving the macula, unspecified eye"
+      },
+      {
+        "code" : "E093541",
+        "display" : "Drug or chemical induced diabetes mellitus with proliferative diabetic retinopathy with combined traction retinal detachment and rhegmatogenous retinal detachment, right eye"
+      },
+      {
+        "code" : "E093542",
+        "display" : "Drug or chemical induced diabetes mellitus with proliferative diabetic retinopathy with combined traction retinal detachment and rhegmatogenous retinal detachment, left eye"
+      },
+      {
+        "code" : "E093543",
+        "display" : "Drug or chemical induced diabetes mellitus with proliferative diabetic retinopathy with combined traction retinal detachment and rhegmatogenous retinal detachment, bilateral"
+      },
+      {
+        "code" : "E093549",
+        "display" : "Drug or chemical induced diabetes mellitus with proliferative diabetic retinopathy with combined traction retinal detachment and rhegmatogenous retinal detachment, unspecified eye"
+      },
+      {
+        "code" : "E093551",
+        "display" : "Drug or chemical induced diabetes mellitus with stable proliferative diabetic retinopathy, right eye"
+      },
+      {
+        "code" : "E093552",
+        "display" : "Drug or chemical induced diabetes mellitus with stable proliferative diabetic retinopathy, left eye"
+      },
+      {
+        "code" : "E093553",
+        "display" : "Drug or chemical induced diabetes mellitus with stable proliferative diabetic retinopathy, bilateral"
+      },
+      {
+        "code" : "E093559",
+        "display" : "Drug or chemical induced diabetes mellitus with stable proliferative diabetic retinopathy, unspecified eye"
+      },
+      {
+        "code" : "E09359",
+        "display" : "Drug or chemical induced diabetes mellitus with proliferative diabetic retinopathy without macular edema, right eye"
+      },
+      {
+        "code" : "E093591",
+        "display" : "Drug or chemical induced diabetes mellitus with proliferative diabetic retinopathy without macular edema, left eye"
+      },
+      {
+        "code" : "E093592",
+        "display" : "Drug or chemical induced diabetes mellitus with proliferative diabetic retinopathy without macular edema, bilateral"
+      },
+      {
+        "code" : "E093593",
+        "display" : "Drug or chemical induced diabetes mellitus with proliferative diabetic retinopathy without macular edema, unspecified eye"
+      },
+      {
+        "code" : "E093599",
+        "display" : "Drug or chemical induced diabetes mellitus with diabetic cataract"
+      },
+      {
+        "code" : "E0937X1",
+        "display" : "Drug or chemical induced diabetes mellitus with diabetic macular edema, resolved following treatment, right eye"
+      },
+      {
+        "code" : "E0937X2",
+        "display" : "Drug or chemical induced diabetes mellitus with diabetic macular edema, resolved following treatment, left eye"
+      },
+      {
+        "code" : "E0937X3",
+        "display" : "Drug or chemical induced diabetes mellitus with diabetic macular edema, resolved following treatment, bilateral"
+      },
+      {
+        "code" : "E0937X9",
+        "display" : "Drug or chemical induced diabetes mellitus with diabetic macular edema, resolved following treatment, unspecified eye"
+      },
+      {
+        "code" : "E0939",
+        "display" : "Drug or chemical induced diabetes mellitus with other diabetic ophthalmic complication"
+      },
+      {
+        "code" : "E0940",
+        "display" : "Drug or chemical induced diabetes mellitus with neurological complications with diabetic neuropathy, unspecified"
+      },
+      {
+        "code" : "E0941",
+        "display" : "Drug or chemical induced diabetes mellitus with neurological complications with diabetic mononeuropathy"
+      },
+      {
+        "code" : "E0942",
+        "display" : "Drug or chemical induced diabetes mellitus with neurological complications with diabetic polyneuropathy"
+      },
+      {
+        "code" : "E0943",
+        "display" : "Drug or chemical induced diabetes mellitus with neurological complications with diabetic autonomic (poly)neuropathy"
+      },
+      {
+        "code" : "E0944",
+        "display" : "Drug or chemical induced diabetes mellitus with neurological complications with diabetic amyotrophy"
+      },
+      {
+        "code" : "E0949",
+        "display" : "Drug or chemical induced diabetes mellitus with neurological complications with other diabetic neurological complication"
+      },
+      {
+        "code" : "E0951",
+        "display" : "Drug or chemical induced diabetes mellitus with diabetic peripheral angiopathy without gangrene"
+      },
+      {
+        "code" : "E0952",
+        "display" : "Drug or chemical induced diabetes mellitus with diabetic peripheral angiopathy with gangrene"
+      },
+      {
+        "code" : "E0959",
+        "display" : "Drug or chemical induced diabetes mellitus with other circulatory complications"
+      },
+      {
+        "code" : "E09610",
+        "display" : "Drug or chemical induced diabetes mellitus with diabetic neuropathic arthropathy"
+      },
+      {
+        "code" : "E09618",
+        "display" : "Drug or chemical induced diabetes mellitus with other diabetic arthropathy"
+      },
+      {
+        "code" : "E09620",
+        "display" : "Drug or chemical induced diabetes mellitus with diabetic dermatitis"
+      },
+      {
+        "code" : "E09621",
+        "display" : "Drug or chemical induced diabetes mellitus with foot ulcer"
+      },
+      {
+        "code" : "E09622",
+        "display" : "Drug or chemical induced diabetes mellitus with other skin ulcer"
+      },
+      {
+        "code" : "E09628",
+        "display" : "Drug or chemical induced diabetes mellitus with other skin complications"
+      },
+      {
+        "code" : "E09630",
+        "display" : "Drug or chemical induced diabetes mellitus with periodontal disease"
+      },
+      {
+        "code" : "E09638",
+        "display" : "Drug or chemical induced diabetes mellitus with other oral complications"
+      },
+      {
+        "code" : "E09641",
+        "display" : "Drug or chemical induced diabetes mellitus with hypoglycemia with coma"
+      },
+      {
+        "code" : "E09649",
+        "display" : "Drug or chemical induced diabetes mellitus with hypoglycemia without coma"
+      },
+      {
+        "code" : "E0965",
+        "display" : "Drug or chemical induced diabetes mellitus with hyperglycemia"
+      },
+      {
+        "code" : "E0969",
+        "display" : "Drug or chemical induced diabetes mellitus with other specified complication"
+      },
+      {
+        "code" : "E098",
+        "display" : "Drug or chemical induced diabetes mellitus with unspecified complications"
+      },
+      {
+        "code" : "E1021",
+        "display" : "Type 1 diabetes mellitus with diabetic nephropathy"
+      },
+      {
+        "code" : "E1022",
+        "display" : "Type 1 diabetes mellitus with diabetic chronic kidney disease"
+      },
+      {
+        "code" : "E1029",
+        "display" : "Type 1 diabetes mellitus with other diabetic kidney complication"
+      },
+      {
+        "code" : "E10311",
+        "display" : "Type 1 diabetes mellitus with unspecified diabetic retinopathy with macular edema"
+      },
+      {
+        "code" : "E10319",
+        "display" : "Type 1 diabetes mellitus with unspecified diabetic retinopathy without macular edema"
+      },
+      {
+        "code" : "E103211",
+        "display" : "Type 1 diabetes mellitus with mild nonproliferative diabetic retinopathy with macular edema, right eye"
+      },
+      {
+        "code" : "E103212",
+        "display" : "Type 1 diabetes mellitus with mild nonproliferative diabetic retinopathy with macular edema, left eye"
+      },
+      {
+        "code" : "E103213",
+        "display" : "Type 1 diabetes mellitus with mild nonproliferative diabetic retinopathy with macular edema, bilateral"
+      },
+      {
+        "code" : "E103219",
+        "display" : "Type 1 diabetes mellitus with mild nonproliferative diabetic retinopathy with macular edema, unspecified eye"
+      },
+      {
+        "code" : "E103291",
+        "display" : "Type 1 diabetes mellitus with mild nonproliferative diabetic retinopathy without macular edema, right eye"
+      },
+      {
+        "code" : "E103292",
+        "display" : "Type 1 diabetes mellitus with mild nonproliferative diabetic retinopathy without macular edema, left eye"
+      },
+      {
+        "code" : "E103293",
+        "display" : "Type 1 diabetes mellitus with mild nonproliferative diabetic retinopathy without macular edema, bilateral"
+      },
+      {
+        "code" : "E103299",
+        "display" : "Type 1 diabetes mellitus with mild nonproliferative diabetic retinopathy without macular edema, unspecified eye"
+      },
+      {
+        "code" : "E103311",
+        "display" : "Type 1 diabetes mellitus with moderate nonproliferative diabetic retinopathy with macular edema, right eye"
+      },
+      {
+        "code" : "E103312",
+        "display" : "Type 1 diabetes mellitus with moderate nonproliferative diabetic retinopathy with macular edema, left eye"
+      },
+      {
+        "code" : "E103313",
+        "display" : "Type 1 diabetes mellitus with moderate nonproliferative diabetic retinopathy with macular edema, bilateral"
+      },
+      {
+        "code" : "E103319",
+        "display" : "Type 1 diabetes mellitus with moderate nonproliferative diabetic retinopathy with macular edema, unspecified eye"
+      },
+      {
+        "code" : "E103391",
+        "display" : "Type 1 diabetes mellitus with moderate nonproliferative diabetic retinopathy without macular edema, right eye"
+      },
+      {
+        "code" : "E103392",
+        "display" : "Type 1 diabetes mellitus with moderate nonproliferative diabetic retinopathy without macular edema, left eye"
+      },
+      {
+        "code" : "E103393",
+        "display" : "Type 1 diabetes mellitus with moderate nonproliferative diabetic retinopathy without macular edema, bilateral"
+      },
+      {
+        "code" : "E103399",
+        "display" : "Type 1 diabetes mellitus with moderate nonproliferative diabetic retinopathy without macular edema, unspecified eye"
+      },
+      {
+        "code" : "E103411",
+        "display" : "Type 1 diabetes mellitus with severe nonproliferative diabetic retinopathy with macular edema, right eye"
+      },
+      {
+        "code" : "E103412",
+        "display" : "Type 1 diabetes mellitus with severe nonproliferative diabetic retinopathy with macular edema, left eye"
+      },
+      {
+        "code" : "E103413",
+        "display" : "Type 1 diabetes mellitus with severe nonproliferative diabetic retinopathy with macular edema, bilateral"
+      },
+      {
+        "code" : "E103419",
+        "display" : "Type 1 diabetes mellitus with severe nonproliferative diabetic retinopathy with macular edema, unspecified eye"
+      },
+      {
+        "code" : "E103491",
+        "display" : "Type 1 diabetes mellitus with severe nonproliferative diabetic retinopathy without macular edema, right eye"
+      },
+      {
+        "code" : "E103492",
+        "display" : "Type 1 diabetes mellitus with severe nonproliferative diabetic retinopathy without macular edema, left eye"
+      },
+      {
+        "code" : "E103493",
+        "display" : "Type 1 diabetes mellitus with severe nonproliferative diabetic retinopathy without macular edema, bilateral"
+      },
+      {
+        "code" : "E103499",
+        "display" : "Type 1 diabetes mellitus with severe nonproliferative diabetic retinopathy without macular edema, unspecified eye"
+      },
+      {
+        "code" : "E103511",
+        "display" : "Type 1 diabetes mellitus with proliferative diabetic retinopathy with macular edema, right eye"
+      },
+      {
+        "code" : "E103512",
+        "display" : "Type 1 diabetes mellitus with proliferative diabetic retinopathy with macular edema, left eye"
+      },
+      {
+        "code" : "E103513",
+        "display" : "Type 1 diabetes mellitus with proliferative diabetic retinopathy with macular edema, bilateral"
+      },
+      {
+        "code" : "E103519",
+        "display" : "Type 1 diabetes mellitus with proliferative diabetic retinopathy with macular edema, unspecified eye"
+      },
+      {
+        "code" : "E103521",
+        "display" : "Type 1 diabetes mellitus with proliferative diabetic retinopathy with traction retinal detachment involving the macula, right eye"
+      },
+      {
+        "code" : "E103522",
+        "display" : "Type 1 diabetes mellitus with proliferative diabetic retinopathy with traction retinal detachment involving the macula, left eye"
+      },
+      {
+        "code" : "E103523",
+        "display" : "Type 1 diabetes mellitus with proliferative diabetic retinopathy with traction retinal detachment involving the macula, bilateral"
+      },
+      {
+        "code" : "E103529",
+        "display" : "Type 1 diabetes mellitus with proliferative diabetic retinopathy with traction retinal detachment involving the macula, unspecified eye"
+      },
+      {
+        "code" : "E103531",
+        "display" : "Type 1 diabetes mellitus with proliferative diabetic retinopathy with traction retinal detachment not involving the macula, right eye"
+      },
+      {
+        "code" : "E103532",
+        "display" : "Type 1 diabetes mellitus with proliferative diabetic retinopathy with traction retinal detachment not involving the macula, left eye"
+      },
+      {
+        "code" : "E103533",
+        "display" : "Type 1 diabetes mellitus with proliferative diabetic retinopathy with traction retinal detachment not involving the macula, bilateral"
+      },
+      {
+        "code" : "E103539",
+        "display" : "Type 1 diabetes mellitus with proliferative diabetic retinopathy with traction retinal detachment not involving the macula, unspecified eye"
+      },
+      {
+        "code" : "E103541",
+        "display" : "Type 1 diabetes mellitus with proliferative diabetic retinopathy with combined traction retinal detachment and rhegmatogenous retinal detachment, right eye"
+      },
+      {
+        "code" : "E103542",
+        "display" : "Type 1 diabetes mellitus with proliferative diabetic retinopathy with combined traction retinal detachment and rhegmatogenous retinal detachment, left eye"
+      },
+      {
+        "code" : "E103543",
+        "display" : "Type 1 diabetes mellitus with proliferative diabetic retinopathy with combined traction retinal detachment and rhegmatogenous retinal detachment, bilateral"
+      },
+      {
+        "code" : "E103549",
+        "display" : "Type 1 diabetes mellitus with proliferative diabetic retinopathy with combined traction retinal detachment and rhegmatogenous retinal detachment, unspecified eye"
+      },
+      {
+        "code" : "E103551",
+        "display" : "Type 1 diabetes mellitus with stable proliferative diabetic retinopathy, right eye"
+      },
+      {
+        "code" : "E103552",
+        "display" : "Type 1 diabetes mellitus with stable proliferative diabetic retinopathy, left eye"
+      },
+      {
+        "code" : "E103553",
+        "display" : "Type 1 diabetes mellitus with stable proliferative diabetic retinopathy, bilateral"
+      },
+      {
+        "code" : "E103559",
+        "display" : "Type 1 diabetes mellitus with stable proliferative diabetic retinopathy, unspecified eye"
+      },
+      {
+        "code" : "E103591",
+        "display" : "Type 1 diabetes mellitus with proliferative diabetic retinopathy without macular edema, right eye"
+      },
+      {
+        "code" : "E103592",
+        "display" : "Type 1 diabetes mellitus with proliferative diabetic retinopathy without macular edema, left eye"
+      },
+      {
+        "code" : "E103593",
+        "display" : "Type 1 diabetes mellitus with proliferative diabetic retinopathy without macular edema, bilateral"
+      },
+      {
+        "code" : "E103599",
+        "display" : "Type 1 diabetes mellitus with proliferative diabetic retinopathy without macular edema, unspecified eye"
+      },
+      {
+        "code" : "E1036",
+        "display" : "Type 1 diabetes mellitus with diabetic cataract"
+      },
+      {
+        "code" : "E1037X1",
+        "display" : "Type 1 diabetes mellitus with diabetic macular edema, resolved following treatment, right eye"
+      },
+      {
+        "code" : "E1037X2",
+        "display" : "Type 1 diabetes mellitus with diabetic macular edema, resolved following treatment, left eye"
+      },
+      {
+        "code" : "E1037X3",
+        "display" : "Type 1 diabetes mellitus with diabetic macular edema, resolved following treatment, bilateral"
+      },
+      {
+        "code" : "E1037X9",
+        "display" : "Type 1 diabetes mellitus with diabetic macular edema, resolved following treatment, unspecified eye"
+      },
+      {
+        "code" : "E1039",
+        "display" : "Type 1 diabetes mellitus with other diabetic ophthalmic complication"
+      },
+      {
+        "code" : "E1040",
+        "display" : "Type 1 diabetes mellitus with diabetic neuropathy, unspecified"
+      },
+      {
+        "code" : "E1041",
+        "display" : "Type 1 diabetes mellitus with diabetic mononeuropathy"
+      },
+      {
+        "code" : "E1042",
+        "display" : "Type 1 diabetes mellitus with diabetic polyneuropathy"
+      },
+      {
+        "code" : "E1043",
+        "display" : "Type 1 diabetes mellitus with diabetic autonomic (poly)neuropathy"
+      },
+      {
+        "code" : "E1044",
+        "display" : "Type 1 diabetes mellitus with diabetic amyotrophy"
+      },
+      {
+        "code" : "E1049",
+        "display" : "Type 1 diabetes mellitus with other diabetic neurological complication"
+      },
+      {
+        "code" : "E1051",
+        "display" : "Type 1 diabetes mellitus with diabetic peripheral angiopathy without gangrene"
+      },
+      {
+        "code" : "E1052",
+        "display" : "Type 1 diabetes mellitus with diabetic peripheral angiopathy with gangrene"
+      },
+      {
+        "code" : "E1059",
+        "display" : "Type 1 diabetes mellitus with other circulatory complications"
+      },
+      {
+        "code" : "E10610",
+        "display" : "Type 1 diabetes mellitus with diabetic neuropathic arthropathy"
+      },
+      {
+        "code" : "E10618",
+        "display" : "Type 1 diabetes mellitus with other diabetic arthropathy"
+      },
+      {
+        "code" : "E10620",
+        "display" : "Type 1 diabetes mellitus with diabetic dermatitis"
+      },
+      {
+        "code" : "E10621",
+        "display" : "Type 1 diabetes mellitus with foot ulcer"
+      },
+      {
+        "code" : "E10622",
+        "display" : "Type 1 diabetes mellitus with other skin ulcer"
+      },
+      {
+        "code" : "E10628",
+        "display" : "Type 1 diabetes mellitus with other skin complications"
+      },
+      {
+        "code" : "E10630",
+        "display" : "Type 1 diabetes mellitus with periodontal disease"
+      },
+      {
+        "code" : "E10638",
+        "display" : "Type 1 diabetes mellitus with other oral complications"
+      },
+      {
+        "code" : "E10641",
+        "display" : "Type 1 diabetes mellitus with hypoglycemia with coma"
+      },
+      {
+        "code" : "E10649",
+        "display" : "Type 1 diabetes mellitus with hypoglycemia without coma"
+      },
+      {
+        "code" : "E1065",
+        "display" : "Type 1 diabetes mellitus with hyperglycemia"
+      },
+      {
+        "code" : "E1069",
+        "display" : "Type 1 diabetes mellitus with other specified complication"
+      },
+      {
+        "code" : "E108",
+        "display" : "Type 1 diabetes mellitus with unspecified complications"
+      },
+      {
+        "code" : "E1121",
+        "display" : "Type 2 diabetes mellitus with diabetic nephropathy"
+      },
+      {
+        "code" : "E1122",
+        "display" : "Type 2 diabetes mellitus with diabetic chronic kidney disease"
+      },
+      {
+        "code" : "E1129",
+        "display" : "Type 2 diabetes mellitus with other diabetic kidney complication"
+      },
+      {
+        "code" : "E11311",
+        "display" : "Type 2 diabetes mellitus with unspecified diabetic retinopathy with macular edema"
+      },
+      {
+        "code" : "E11319",
+        "display" : "Type 2 diabetes mellitus with unspecified diabetic retinopathy without macular edema"
+      },
+      {
+        "code" : "E113211",
+        "display" : "Type 2 diabetes mellitus with mild nonproliferative diabetic retinopathy with macular edema, right eye"
+      },
+      {
+        "code" : "E113212",
+        "display" : "Type 2 diabetes mellitus with mild nonproliferative diabetic retinopathy with macular edema, left eye"
+      },
+      {
+        "code" : "E113213",
+        "display" : "Type 2 diabetes mellitus with mild nonproliferative diabetic retinopathy with macular edema, bilateral"
+      },
+      {
+        "code" : "E113219",
+        "display" : "Type 2 diabetes mellitus with mild nonproliferative diabetic retinopathy with macular edema, unspecified eye"
+      },
+      {
+        "code" : "E113291",
+        "display" : "Type 2 diabetes mellitus with mild nonproliferative diabetic retinopathy without macular edema, right eye"
+      },
+      {
+        "code" : "E113292",
+        "display" : "Type 2 diabetes mellitus with mild nonproliferative diabetic retinopathy without macular edema, left eye"
+      },
+      {
+        "code" : "E113293",
+        "display" : "Type 2 diabetes mellitus with mild nonproliferative diabetic retinopathy without macular edema, bilateral"
+      },
+      {
+        "code" : "E113299",
+        "display" : "Type 2 diabetes mellitus with mild nonproliferative diabetic retinopathy without macular edema, unspecified eye"
+      },
+      {
+        "code" : "E113311",
+        "display" : "Type 2 diabetes mellitus with moderate nonproliferative diabetic retinopathy with macular edema, right eye"
+      },
+      {
+        "code" : "E113312",
+        "display" : "Type 2 diabetes mellitus with moderate nonproliferative diabetic retinopathy with macular edema, left eye"
+      },
+      {
+        "code" : "E113313",
+        "display" : "Type 2 diabetes mellitus with moderate nonproliferative diabetic retinopathy with macular edema, bilateral"
+      },
+      {
+        "code" : "E113319",
+        "display" : "Type 2 diabetes mellitus with moderate nonproliferative diabetic retinopathy with macular edema, unspecified eye"
+      },
+      {
+        "code" : "E113391",
+        "display" : "Type 2 diabetes mellitus with moderate nonproliferative diabetic retinopathy without macular edema, right eye"
+      },
+      {
+        "code" : "E113392",
+        "display" : "Type 2 diabetes mellitus with moderate nonproliferative diabetic retinopathy without macular edema, left eye"
+      },
+      {
+        "code" : "E113393",
+        "display" : "Type 2 diabetes mellitus with moderate nonproliferative diabetic retinopathy without macular edema, bilateral"
+      },
+      {
+        "code" : "E113399",
+        "display" : "Type 2 diabetes mellitus with moderate nonproliferative diabetic retinopathy without macular edema, unspecified eye"
+      },
+      {
+        "code" : "E113411",
+        "display" : "Type 2 diabetes mellitus with severe nonproliferative diabetic retinopathy with macular edema, right eye"
+      },
+      {
+        "code" : "E113412",
+        "display" : "Type 2 diabetes mellitus with severe nonproliferative diabetic retinopathy with macular edema, left eye"
+      },
+      {
+        "code" : "E113413",
+        "display" : "Type 2 diabetes mellitus with severe nonproliferative diabetic retinopathy with macular edema, bilateral"
+      },
+      {
+        "code" : "E113419",
+        "display" : "Type 2 diabetes mellitus with severe nonproliferative diabetic retinopathy with macular edema, unspecified eye"
+      },
+      {
+        "code" : "E113491",
+        "display" : "Type 2 diabetes mellitus with severe nonproliferative diabetic retinopathy without macular edema, right eye"
+      },
+      {
+        "code" : "E113492",
+        "display" : "Type 2 diabetes mellitus with severe nonproliferative diabetic retinopathy without macular edema, left eye"
+      },
+      {
+        "code" : "E113493",
+        "display" : "Type 2 diabetes mellitus with severe nonproliferative diabetic retinopathy without macular edema, bilateral"
+      },
+      {
+        "code" : "E113499",
+        "display" : "Type 2 diabetes mellitus with severe nonproliferative diabetic retinopathy without macular edema, unspecified eye"
+      },
+      {
+        "code" : "E113511",
+        "display" : "Type 2 diabetes mellitus with proliferative diabetic retinopathy with macular edema, right eye"
+      },
+      {
+        "code" : "E113512",
+        "display" : "Type 2 diabetes mellitus with proliferative diabetic retinopathy with macular edema, left eye"
+      },
+      {
+        "code" : "E113513",
+        "display" : "Type 2 diabetes mellitus with proliferative diabetic retinopathy with macular edema, bilateral"
+      },
+      {
+        "code" : "E113519",
+        "display" : "Type 2 diabetes mellitus with proliferative diabetic retinopathy with macular edema, unspecified eye"
+      },
+      {
+        "code" : "E113521",
+        "display" : "Type 2 diabetes mellitus with proliferative diabetic retinopathy with traction retinal detachment involving the macula, right eye"
+      },
+      {
+        "code" : "E113522",
+        "display" : "Type 2 diabetes mellitus with proliferative diabetic retinopathy with traction retinal detachment involving the macula, left eye"
+      },
+      {
+        "code" : "E113523",
+        "display" : "Type 2 diabetes mellitus with proliferative diabetic retinopathy with traction retinal detachment involving the macula, bilateral"
+      },
+      {
+        "code" : "E113529",
+        "display" : "Type 2 diabetes mellitus with proliferative diabetic retinopathy with traction retinal detachment involving the macula, unspecified eye"
+      },
+      {
+        "code" : "E113531",
+        "display" : "Type 2 diabetes mellitus with proliferative diabetic retinopathy with traction retinal detachment not involving the macula, right eye"
+      },
+      {
+        "code" : "E113532",
+        "display" : "Type 2 diabetes mellitus with proliferative diabetic retinopathy with traction retinal detachment not involving the macula, left eye"
+      },
+      {
+        "code" : "E113533",
+        "display" : "Type 2 diabetes mellitus with proliferative diabetic retinopathy with traction retinal detachment not involving the macula, bilateral"
+      },
+      {
+        "code" : "E113539",
+        "display" : "Type 2 diabetes mellitus with proliferative diabetic retinopathy with traction retinal detachment not involving the macula, unspecified eye"
+      },
+      {
+        "code" : "E113541",
+        "display" : "Type 2 diabetes mellitus with proliferative diabetic retinopathy with combined traction retinal detachment and rhegmatogenous retinal detachment, right eye"
+      },
+      {
+        "code" : "E113542",
+        "display" : "Type 2 diabetes mellitus with proliferative diabetic retinopathy with combined traction retinal detachment and rhegmatogenous retinal detachment, left eye"
+      },
+      {
+        "code" : "E113543",
+        "display" : "Type 2 diabetes mellitus with proliferative diabetic retinopathy with combined traction retinal detachment and rhegmatogenous retinal detachment, bilateral"
+      },
+      {
+        "code" : "E113549",
+        "display" : "Type 2 diabetes mellitus with proliferative diabetic retinopathy with combined traction retinal detachment and rhegmatogenous retinal detachment, unspecified eye"
+      },
+      {
+        "code" : "E113551",
+        "display" : "Type 2 diabetes mellitus with stable proliferative diabetic retinopathy, right eye"
+      },
+      {
+        "code" : "E113552",
+        "display" : "Type 2 diabetes mellitus with stable proliferative diabetic retinopathy, left eye"
+      },
+      {
+        "code" : "E113553",
+        "display" : "Type 2 diabetes mellitus with stable proliferative diabetic retinopathy, bilateral"
+      },
+      {
+        "code" : "E113559",
+        "display" : "Type 2 diabetes mellitus with stable proliferative diabetic retinopathy, unspecified eye"
+      },
+      {
+        "code" : "E113591",
+        "display" : "Type 2 diabetes mellitus with proliferative diabetic retinopathy without macular edema, right eye"
+      },
+      {
+        "code" : "E113592",
+        "display" : "Type 2 diabetes mellitus with proliferative diabetic retinopathy without macular edema, left eye"
+      },
+      {
+        "code" : "E113593",
+        "display" : "Type 2 diabetes mellitus with proliferative diabetic retinopathy without macular edema, bilateral"
+      },
+      {
+        "code" : "E113599",
+        "display" : "Type 2 diabetes mellitus with proliferative diabetic retinopathy without macular edema, unspecified eye"
+      },
+      {
+        "code" : "E1136",
+        "display" : "Type 2 diabetes mellitus with diabetic cataract"
+      },
+      {
+        "code" : "E1137X1",
+        "display" : "Type 2 diabetes mellitus with diabetic macular edema, resolved following treatment, right eye"
+      },
+      {
+        "code" : "E1137X2",
+        "display" : "Type 2 diabetes mellitus with diabetic macular edema, resolved following treatment, left eye"
+      },
+      {
+        "code" : "E1137X3",
+        "display" : "Type 2 diabetes mellitus with diabetic macular edema, resolved following treatment, bilateral"
+      },
+      {
+        "code" : "E1137X9",
+        "display" : "Type 2 diabetes mellitus with diabetic macular edema, resolved following treatment, unspecified eye"
+      },
+      {
+        "code" : "E1139",
+        "display" : "Type 2 diabetes mellitus with other diabetic ophthalmic complication"
+      },
+      {
+        "code" : "E1140",
+        "display" : "Type 2 diabetes mellitus with diabetic neuropathy, unspecified"
+      },
+      {
+        "code" : "E1141",
+        "display" : "Type 2 diabetes mellitus with diabetic mononeuropathy"
+      },
+      {
+        "code" : "E1142",
+        "display" : "Type 2 diabetes mellitus with diabetic polyneuropathy"
+      },
+      {
+        "code" : "E1143",
+        "display" : "Type 2 diabetes mellitus with diabetic autonomic (poly)neuropathy"
+      },
+      {
+        "code" : "E1144",
+        "display" : "Type 2 diabetes mellitus with diabetic amyotrophy"
+      },
+      {
+        "code" : "E1149",
+        "display" : "Type 2 diabetes mellitus with other diabetic neurological complication"
+      },
+      {
+        "code" : "E1151",
+        "display" : "Type 2 diabetes mellitus with diabetic peripheral angiopathy without gangrene"
+      },
+      {
+        "code" : "E1152",
+        "display" : "Type 2 diabetes mellitus with diabetic peripheral angiopathy with gangrene"
+      },
+      {
+        "code" : "E1159",
+        "display" : "Type 2 diabetes mellitus with other circulatory complications"
+      },
+      {
+        "code" : "E11610",
+        "display" : "Type 2 diabetes mellitus with diabetic neuropathic arthropathy"
+      },
+      {
+        "code" : "E11618",
+        "display" : "Type 2 diabetes mellitus with other diabetic arthropathy"
+      },
+      {
+        "code" : "E11620",
+        "display" : "Type 2 diabetes mellitus with diabetic dermatitis"
+      },
+      {
+        "code" : "E11621",
+        "display" : "Type 2 diabetes mellitus with foot ulcer"
+      },
+      {
+        "code" : "E11622",
+        "display" : "Type 2 diabetes mellitus with other skin ulcer"
+      },
+      {
+        "code" : "E11628",
+        "display" : "Type 2 diabetes mellitus with other skin complications"
+      },
+      {
+        "code" : "E11630",
+        "display" : "Type 2 diabetes mellitus with periodontal disease"
+      },
+      {
+        "code" : "E11638",
+        "display" : "Type 2 diabetes mellitus with other oral complications"
+      },
+      {
+        "code" : "E11641",
+        "display" : "Type 2 diabetes mellitus with hypoglycemia with coma"
+      },
+      {
+        "code" : "E11649",
+        "display" : "Type 2 diabetes mellitus with hypoglycemia without coma"
+      },
+      {
+        "code" : "E1165",
+        "display" : "Type 2 diabetes mellitus with hyperglycemia"
+      },
+      {
+        "code" : "E1169",
+        "display" : "Type 2 diabetes mellitus with other specified complication"
+      },
+      {
+        "code" : "E118",
+        "display" : "Type 2 diabetes mellitus with unspecified complications"
+      },
+      {
+        "code" : "E1321",
+        "display" : "Other specified diabetes mellitus with diabetic nephropathy"
+      },
+      {
+        "code" : "E1322",
+        "display" : "Other specified diabetes mellitus with diabetic chronic kidney disease"
+      },
+      {
+        "code" : "E1329",
+        "display" : "Other specified diabetes mellitus with other diabetic kidney complication"
+      },
+      {
+        "code" : "E13311",
+        "display" : "Other specified diabetes mellitus with unspecified diabetic retinopathy with macular edema"
+      },
+      {
+        "code" : "E13319",
+        "display" : "Other specified diabetes mellitus with unspecified diabetic retinopathy without macular edema"
+      },
+      {
+        "code" : "E133211",
+        "display" : "Other specified diabetes mellitus with mild nonproliferative diabetic retinopathy with macular edema, right eye"
+      },
+      {
+        "code" : "E133212",
+        "display" : "Other specified diabetes mellitus with mild nonproliferative diabetic retinopathy with macular edema, left eye"
+      },
+      {
+        "code" : "E133213",
+        "display" : "Other specified diabetes mellitus with mild nonproliferative diabetic retinopathy with macular edema, bilateral"
+      },
+      {
+        "code" : "E133219",
+        "display" : "Other specified diabetes mellitus with mild nonproliferative diabetic retinopathy with macular edema, unspecified eye"
+      },
+      {
+        "code" : "E133291",
+        "display" : "Other specified diabetes mellitus with mild nonproliferative diabetic retinopathy without macular edema, right eye"
+      },
+      {
+        "code" : "E133292",
+        "display" : "Other specified diabetes mellitus with mild nonproliferative diabetic retinopathy without macular edema, left eye"
+      },
+      {
+        "code" : "E133293",
+        "display" : "Other specified diabetes mellitus with mild nonproliferative diabetic retinopathy without macular edema, bilateral"
+      },
+      {
+        "code" : "E133299",
+        "display" : "Other specified diabetes mellitus with mild nonproliferative diabetic retinopathy without macular edema, unspecified eye"
+      },
+      {
+        "code" : "E133311",
+        "display" : "Other specified diabetes mellitus with moderate nonproliferative diabetic retinopathy with macular edema, right eye"
+      },
+      {
+        "code" : "E133312",
+        "display" : "Other specified diabetes mellitus with moderate nonproliferative diabetic retinopathy with macular edema, left eye"
+      },
+      {
+        "code" : "E133313",
+        "display" : "Other specified diabetes mellitus with moderate nonproliferative diabetic retinopathy with macular edema, bilateral"
+      },
+      {
+        "code" : "E133319",
+        "display" : "Other specified diabetes mellitus with moderate nonproliferative diabetic retinopathy with macular edema, unspecified eye"
+      },
+      {
+        "code" : "E133391",
+        "display" : "Other specified diabetes mellitus with moderate nonproliferative diabetic retinopathy without macular edema, right eye"
+      },
+      {
+        "code" : "E133392",
+        "display" : "Other specified diabetes mellitus with moderate nonproliferative diabetic retinopathy without macular edema, left eye"
+      },
+      {
+        "code" : "E133393",
+        "display" : "Other specified diabetes mellitus with moderate nonproliferative diabetic retinopathy without macular edema, bilateral"
+      },
+      {
+        "code" : "E133399",
+        "display" : "Other specified diabetes mellitus with moderate nonproliferative diabetic retinopathy without macular edema, unspecified eye"
+      },
+      {
+        "code" : "E133411",
+        "display" : "Other specified diabetes mellitus with severe nonproliferative diabetic retinopathy with macular edema, right eye"
+      },
+      {
+        "code" : "E133412",
+        "display" : "Other specified diabetes mellitus with severe nonproliferative diabetic retinopathy with macular edema, left eye"
+      },
+      {
+        "code" : "E133413",
+        "display" : "Other specified diabetes mellitus with severe nonproliferative diabetic retinopathy with macular edema, bilateral"
+      },
+      {
+        "code" : "E133419",
+        "display" : "Other specified diabetes mellitus with severe nonproliferative diabetic retinopathy with macular edema, unspecified eye"
+      },
+      {
+        "code" : "E133491",
+        "display" : "Other specified diabetes mellitus with severe nonproliferative diabetic retinopathy without macular edema, right eye"
+      },
+      {
+        "code" : "E133492",
+        "display" : "Other specified diabetes mellitus with severe nonproliferative diabetic retinopathy without macular edema, left eye"
+      },
+      {
+        "code" : "E133493",
+        "display" : "Other specified diabetes mellitus with severe nonproliferative diabetic retinopathy without macular edema, bilateral"
+      },
+      {
+        "code" : "E133499",
+        "display" : "Other specified diabetes mellitus with severe nonproliferative diabetic retinopathy without macular edema, unspecified eye"
+      },
+      {
+        "code" : "E133511",
+        "display" : "Other specified diabetes mellitus with proliferative diabetic retinopathy with macular edema, right eye"
+      },
+      {
+        "code" : "E133512",
+        "display" : "Other specified diabetes mellitus with proliferative diabetic retinopathy with macular edema, left eye"
+      },
+      {
+        "code" : "E133513",
+        "display" : "Other specified diabetes mellitus with proliferative diabetic retinopathy with macular edema, bilateral"
+      },
+      {
+        "code" : "E133519",
+        "display" : "Other specified diabetes mellitus with proliferative diabetic retinopathy with macular edema, unspecified eye"
+      },
+      {
+        "code" : "E133521",
+        "display" : "Other specified diabetes mellitus with proliferative diabetic retinopathy with traction retinal detachment involving the macula, right eye"
+      },
+      {
+        "code" : "E133522",
+        "display" : "Other specified diabetes mellitus with proliferative diabetic retinopathy with traction retinal detachment involving the macula, left eye"
+      },
+      {
+        "code" : "E133523",
+        "display" : "Other specified diabetes mellitus with proliferative diabetic retinopathy with traction retinal detachment involving the macula, bilateral"
+      },
+      {
+        "code" : "E133529",
+        "display" : "Other specified diabetes mellitus with proliferative diabetic retinopathy with traction retinal detachment involving the macula, unspecified eye"
+      },
+      {
+        "code" : "E133531",
+        "display" : "Other specified diabetes mellitus with proliferative diabetic retinopathy with traction retinal detachment not involving the macula, right eye"
+      },
+      {
+        "code" : "E133532",
+        "display" : "Other specified diabetes mellitus with proliferative diabetic retinopathy with traction retinal detachment not involving the macula, left eye"
+      },
+      {
+        "code" : "E133533",
+        "display" : "Other specified diabetes mellitus with proliferative diabetic retinopathy with traction retinal detachment not involving the macula, bilateral"
+      },
+      {
+        "code" : "E133539",
+        "display" : "Other specified diabetes mellitus with proliferative diabetic retinopathy with traction retinal detachment not involving the macula, unspecified eye"
+      },
+      {
+        "code" : "E133541",
+        "display" : "Other specified diabetes mellitus with proliferative diabetic retinopathy with combined traction retinal detachment and rhegmatogenous retinal detachment, right eye"
+      },
+      {
+        "code" : "E133542",
+        "display" : "Other specified diabetes mellitus with proliferative diabetic retinopathy with combined traction retinal detachment and rhegmatogenous retinal detachment, left eye"
+      },
+      {
+        "code" : "E133543",
+        "display" : "Other specified diabetes mellitus with proliferative diabetic retinopathy with combined traction retinal detachment and rhegmatogenous retinal detachment, bilateral"
+      },
+      {
+        "code" : "E133549",
+        "display" : "Other specified diabetes mellitus with proliferative diabetic retinopathy with combined traction retinal detachment and rhegmatogenous retinal detachment, unspecified eye"
+      },
+      {
+        "code" : "E133551",
+        "display" : "Other specified diabetes mellitus with stable proliferative diabetic retinopathy, right eye"
+      },
+      {
+        "code" : "E133552",
+        "display" : "Other specified diabetes mellitus with stable proliferative diabetic retinopathy, left eye"
+      },
+      {
+        "code" : "E133553",
+        "display" : "Other specified diabetes mellitus with stable proliferative diabetic retinopathy, bilateral"
+      },
+      {
+        "code" : "E133559",
+        "display" : "Other specified diabetes mellitus with stable proliferative diabetic retinopathy, unspecified eye"
+      },
+      {
+        "code" : "E133591",
+        "display" : "Other specified diabetes mellitus with proliferative diabetic retinopathy without macular edema, right eye"
+      },
+      {
+        "code" : "E133592",
+        "display" : "Other specified diabetes mellitus with proliferative diabetic retinopathy without macular edema, left eye"
+      },
+      {
+        "code" : "E133593",
+        "display" : "Other specified diabetes mellitus with proliferative diabetic retinopathy without macular edema, bilateral"
+      },
+      {
+        "code" : "E133599",
+        "display" : "Other specified diabetes mellitus with proliferative diabetic retinopathy without macular edema, unspecified eye"
+      },
+      {
+        "code" : "E1336",
+        "display" : "Other specified diabetes mellitus with diabetic cataract"
+      },
+      {
+        "code" : "E1337X1",
+        "display" : "Other specified diabetes mellitus with diabetic macular edema, resolved following treatment, right eye"
+      },
+      {
+        "code" : "E1337X2",
+        "display" : "Other specified diabetes mellitus with diabetic macular edema, resolved following treatment, left eye"
+      },
+      {
+        "code" : "E1337X3",
+        "display" : "Other specified diabetes mellitus with diabetic macular edema, resolved following treatment, bilateral"
+      },
+      {
+        "code" : "E1337X9",
+        "display" : "Other specified diabetes mellitus with diabetic macular edema, resolved following treatment, unspecified eye"
+      },
+      {
+        "code" : "E1339",
+        "display" : "Other specified diabetes mellitus with other diabetic ophthalmic complication"
+      },
+      {
+        "code" : "E1340",
+        "display" : "Other specified diabetes mellitus with diabetic neuropathy, unspecified"
+      },
+      {
+        "code" : "E1341",
+        "display" : "Other specified diabetes mellitus with diabetic mononeuropathy"
+      },
+      {
+        "code" : "E1342",
+        "display" : "Other specified diabetes mellitus with diabetic polyneuropathy"
+      },
+      {
+        "code" : "E1343",
+        "display" : "Other specified diabetes mellitus with diabetic autonomic (poly)neuropathy"
+      },
+      {
+        "code" : "E1344",
+        "display" : "Other specified diabetes mellitus with diabetic amyotrophy"
+      },
+      {
+        "code" : "E1349",
+        "display" : "Other specified diabetes mellitus with other diabetic neurological complication"
+      },
+      {
+        "code" : "E1351",
+        "display" : "Other specified diabetes mellitus with diabetic peripheral angiopathy without gangrene"
+      },
+      {
+        "code" : "E1352",
+        "display" : "Other specified diabetes mellitus with diabetic peripheral angiopathy with gangrene"
+      },
+      {
+        "code" : "E1359",
+        "display" : "Other specified diabetes mellitus with other circulatory complications"
+      },
+      {
+        "code" : "E13610",
+        "display" : "Other specified diabetes mellitus with diabetic neuropathic arthropathy"
+      },
+      {
+        "code" : "E13618",
+        "display" : "Other specified diabetes mellitus with other diabetic arthropathy"
+      },
+      {
+        "code" : "E13620",
+        "display" : "Other specified diabetes mellitus with diabetic dermatitis"
+      },
+      {
+        "code" : "E13621",
+        "display" : "Other specified diabetes mellitus with foot ulcer"
+      },
+      {
+        "code" : "E13622",
+        "display" : "Other specified diabetes mellitus with other skin ulcer"
+      },
+      {
+        "code" : "E13628",
+        "display" : "Other specified diabetes mellitus with other skin complications"
+      },
+      {
+        "code" : "E13630",
+        "display" : "Other specified diabetes mellitus with periodontal disease"
+      },
+      {
+        "code" : "E13638",
+        "display" : "Other specified diabetes mellitus with other oral complications"
+      },
+      {
+        "code" : "E13641",
+        "display" : "Other specified diabetes mellitus with hypoglycemia with coma"
+      },
+      {
+        "code" : "E13649",
+        "display" : "Other specified diabetes mellitus with hypoglycemia without coma"
+      },
+      {
+        "code" : "E1365",
+        "display" : "Other specified diabetes mellitus with hyperglycemia"
+      },
+      {
+        "code" : "E1369",
+        "display" : "Other specified diabetes mellitus with other specified complication"
+      },
+      {
+        "code" : "E138",
+        "display" : "Other specified diabetes mellitus with unspecified complications"
+      },
+      {
+        "code" : "P702",
+        "display" : "Neonatal diabetes mellitus"
+      }]
+    }]
+  }
+}}####
+e: {
+  "error" : "Error from server: The filter \"concept is-not-a 111552007\" was not understood in the context of http://snomed.info/sct"
+}
+-------------------------------------------------------------------------------------

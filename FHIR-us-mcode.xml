@@ -114,6 +114,7 @@
 <artifact deprecated="true" id="Extension/mcode-related-primary-cancer-condition-extension" key="related-primary-cancer-condition-extension" name="Related Primary Cancer Condition Extension"/>
 <artifact id="StructureDefinition/mcode-secondary-cancer-condition" key="secondary-cancer-condition" name="Secondary Cancer Condition"/>
 <artifact id="ValueSet/mcode-secondary-cancer-disorder-vs" key="secondary-cancer-disorder-value-set" name="Secondary Cancer Disorder Value Set"/>
+<artifact id="StructureDefinition/mcode-cancer-related-medication-request" key="StructureDefinition-mcode-cancer-related-medication-request" name="Stub for Cancer-Related Medication Request"/>
 <artifact deprecated="true" id="Profile/mcode-tnm-clinical-distant-metastases" key="tnm-clinical-distant-metastases" name="TNM Clinical Distant Metastases"/>
 <artifact id="StructureDefinition/mcode-tnm-clinical-distant-metastases-category" key="StructureDefinition-mcode-tnm-clinical-distant-metastases-category" name="TNM Clinical Distant Metastases Category"/>
 <artifact id="StructureDefinition/mcode-tnm-clinical-primary-tumor-category" key="tnm-clinical-primary-tumor-category" name="TNM Clinical Primary Tumor Category"/>
@@ -160,6 +161,7 @@
 <artifact id="Observation/example1-mcode-ecog-performance-status" key="Observation-example1-mcode-ecog-performance-status" name="example1-mcode-ecog-performance-status"/>
 <artifact id="Specimen/example1-mcode-genetic-specimen" key="Specimen-example1-mcode-genetic-specimen" name="example1-mcode-genetic-specimen"/>
 <artifact id="Observation/example1-mcode-genomic-region-studied" key="Observation-example1-mcode-genomic-region-studied" name="example1-mcode-genomic-region-studied"/>
+<artifact id="Bundle/example1-mcode-patient-bundle" key="Bundle-example1-mcode-patient-bundle" name="example1-mcode-patient-bundle"/>
 <artifact id="Condition/example1-mcode-primary-cancer-condition" key="Condition-example1-mcode-primary-cancer-condition" name="example1-mcode-primary-cancer-condition"/>
 <artifact id="Observation/example1-mcode-tnm-clinical-distant-metastases-category" key="Observation-example1-mcode-tnm-clinical-distant-metastases-category" name="example1-mcode-tnm-clinical-distant-metastases-category"/>
 <artifact id="Observation/example1-mcode-tnm-clinical-regional-nodes-category" key="Observation-example1-mcode-tnm-clinical-regional-nodes-category" name="example1-mcode-tnm-clinical-regional-nodes-category"/>
@@ -183,6 +185,7 @@
 <artifact id="Procedure/example1-us-core-procedure-biopsy" key="Procedure-example1-us-core-procedure-biopsy" name="example1-us-core-procedure-biopsy"/>
 <artifact id="Procedure/example1-us-core-procedure-mammogram" key="Procedure-example1-us-core-procedure-mammogram" name="example1-us-core-procedure-mammogram"/>
 <artifact id="Observation/example1-us-core-smoking-status" key="Observation-example1-us-core-smoking-status" name="example1-us-core-smoking-status"/>
+<artifact id="StructureDefinition/mcode-patient-bundle" key="StructureDefinition-mcode-patient-bundle" name="mCODE Patient Bundle"/>
 <artifact id="Observation/mCODECancerDiseaseStatusExample01" key="mcode-cancer-disease-status-example-01" name="mCODECancerDiseaseStatusExample01"/>
 <artifact id="Observation/mCODECancerGeneticVariantExample01" key="mcode-cancer-genetic-variant-example-01" name="mCODECancerGeneticVariantExample01"/>
 <artifact id="Observation/mCODECancerGeneticVariantExample02" key="mcode-cancer-genetic-variant-example-02" name="mCODECancerGeneticVariantExample02"/>
@@ -231,4 +234,5 @@
 <page deprecated="true" key="implementationnotes" name="Implementation Notes"/>
 <page key="toc" name="Table of Contents"/>
 <page deprecated="true" key="valuesets" name="Value Sets"/>
+<page key="mcode-patient-bundle" name="mCODE Patient Bundle Implementation Details"/>
 </specification>

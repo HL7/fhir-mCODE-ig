@@ -23,3 +23,10 @@ MedicationStatement resources associated with an [mCODE patient](conformance.htm
 * effective[x] 1..1  // change from 0..1 to 1..1
 * dosage 0..1
 * medicationCodeableConcept from http://hl7.org/fhir/us/core/ValueSet/us-core-medication-codes (extensible)
+
+// Stub for CancerRelatedMedicationRequest
+Profile:  CancerRelatedMedicationRequest
+Parent:   MedicationRequest
+Id:       mcode-cancer-related-medication-request
+Title:    "Stub for Cancer-Related Medication Request"
+Description: "Not yet implemented"

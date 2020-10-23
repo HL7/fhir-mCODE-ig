@@ -43,13 +43,40 @@ Description: "Extended example 1: example showing disease status (patient's cond
 * focus = Reference(example1-mcode-primary-cancer-condition)
 * valueCodeableConcept = SCT#268910001 "Patient's condition improved (finding)"
 
+
+Instance: example1-mcode-comorbidity-assessment 
+InstanceOf: CancerComorbidityAssessment
+Description: "mCODE Example for Cancer Comorbidity Assessment"
+* id = "example1-mcode-comorbidity-assessment"
+* meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-comorbidity-assessment"
+* subject = Reference(example1-mcode-cancer-patient)
+* performer = Reference(example1-practitioner1-mcode)
+* status = #final "final"
+* component[depression].valueCodeableConcept = SCT#52101004 "Present (qualifier value)"
+* component[hypertensionComplicated].valueCodeableConcept = SCT#52101004 "Present (qualifier value)"
+* component[rheumatoidArthritis].valueCodeableConcept = SCT#2667000 "Absent (qualifier value)"
+* component[congestiveHeartFailure].valueCodeableConcept = SCT#2667000 "Absent (qualifier value)"
+* component[chronicPulmonaryDisease].valueCodeableConcept = SCT#2667000 "Absent (qualifier value)"
+* component[diabetesUncomplicated].valueCodeableConcept = SCT#2667000 "Absent (qualifier value)" 
+* component[diabetesComplicated].valueCodeableConcept = SCT#2667000 "Absent (qualifier value)"
+* component[obesity].valueCodeableConcept = SCT#2667000 "Absent (qualifier value)"
+* component[peripheralVascularDisease].valueCodeableConcept = SCT#2667000 "Absent (qualifier value)"
+* component[pulmonaryCirculationDisorders].valueCodeableConcept = SCT#2667000 "Absent (qualifier value)"
+* component[renalFailure].valueCodeableConcept = SCT#2667000 "Absent (qualifier value)"
+* component[drugAbuse].valueCodeableConcept = SCT#261665006 "Unknown (qualifier value)"
+* component[hypothyroidism].valueCodeableConcept = SCT#261665006 "Unknown (qualifier value)"
+* component[depression].extension[conditionReference].valueReference = Reference(example1-mcode-comorbid-condition-depression)
+* component[hypertensionComplicated].extension[conditionReference].valueReference = Reference(example1-mcode-comorbid-condition-hypertension)
+
+
 // example1-mcode-comorbid-condition-depression.json
 Instance: example1-mcode-comorbid-condition-depression
-InstanceOf: ElixhauserDepressionComorbidity
+InstanceOf: USCoreCondition
 Description: "Extended example 1: example showing comorbid condition (depression)"
 * id = "example1-mcode-comorbid-condition-depression"
 * clinicalStatus = ClinStatus#active
 * verificationStatus = VerStatus#confirmed
+* category = #problem-list-item
 * code = SCT#35489007 "Depressive disorder (disorder)"
 * subject = Reference(example1-mcode-cancer-patient)
 * onsetDateTime = "2000-01-01"
@@ -57,11 +84,12 @@ Description: "Extended example 1: example showing comorbid condition (depression
 
 // example1-mcode-comorbid-condition-hyptertension.json
 Instance: example1-mcode-comorbid-condition-hypertension
-InstanceOf: ElixhauserHypertensionComplicatedComorbidity
+InstanceOf: USCoreCondition
 Description: "Extended example 1: example showing comorbid condition (hypertension)"
 * id = "example1-mcode-comorbid-condition-hypertension"
 * clinicalStatus = ClinStatus#active
 * verificationStatus = VerStatus#confirmed
+* category = #problem-list-item
 * code = ICD10CM#I119 "Hypertensive heart disease without heart failure"
 * subject = Reference(example1-mcode-cancer-patient)
 * onsetDateTime = "2000-01-01"

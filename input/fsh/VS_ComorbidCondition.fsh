@@ -1,12 +1,5 @@
-ValueSet: ComorbidityCategoryVS
-Id: "mcode-comorbidty-category"
-Title: "Comorbidity Category Value Set"
-Description: "Elixhauser and Charlson comorbidity category codes." 
-* include codes from system ElixhauserComorbidityCategoryVS
-* include codes from system CharlsonComorbidityCategoryVS
-
-CodeSystem: ElixhauserComorbidityCategoryVS
-Id: "mcode-elixhauser-comorbidity-category"
+CodeSystem: ElixhauserCategoryCS
+Id: mcode-elixhauser-category
 Title: "Elixhauser Comorbidity Category"
 Description: "A code system that contains codes representing the comorbidity categories defined by Elixhauser [ref](https://www.ncbi.nlm.nih.gov/pubmed/9431328)"
 * #ALCOHOL  "Alcohol Abuse"
@@ -41,31 +34,8 @@ Description: "A code system that contains codes representing the comorbidity cat
 * #VALVE  "Valvular Disease"
 * #WGHTLOSS "Weight Loss"
 
-CodeSystem: CharlsonComorbidityCategoryVS
-Id: "mcode-charlson-comorbidity-category"
-Title: "Charlson Comorbidity Category"
-Description: "A code system that contains codes representing the comorbidity categories defined by Charlson [ref](https://pubmed.ncbi.nlm.nih.gov/3558716/)"
-* #MI "Prior myocardial infarction"
-* #CHF  "Congestive Heart Failure"
-* #PERIVASC  "Peripheral Vascular Disease"
-* #DEMEN "Dementia"
-* #CVD "Cerebrovascular disease"
-* #CPD "Chronic pulmonary disease"
-* #ARTH "Connective tissue (rheumatologic) disease"
-* #ULCER  "Peptic ulcer disease"
-* #LIV  "Chronic liver disease, mild"
-* #DM  "Diabetes without chronic complications"
-* #HMPG "Cerebrovascular (hemiplegia) event"
-* #RENL  "Kidney disease, moderate or severe"
-* #DMCX  "Diabetes with chronic complication"
-* #LEUK "Leukemia"
-* #LYMPH  "Lymphoma"
-* #LIVSEV "Chronic liver disease, moderate or severe"
-* #METS   "Metastatic solid tumor"
-* #AIDS   "Acquired immuno-deficiency syndrome (AIDS)"
-
 ValueSet: PresentAbsentUnknownVS
-Id: "mcode-present-absent-unknown"
+Id: mcode-present-absent-unknown
 Title: "Present-Absent-Unknown"
 Description: "Value set with answers present, absent, and unknown."
 * SCT#52101004 "Present (qualifier value)"
@@ -3843,3 +3813,34 @@ Description:    "Elixhauser Comorbid Condition Value Set for Weight loss. ICD-10
 * ICD10CM#R634    "Abnormal weight loss"
 * ICD10CM#R636    "Underweight"
 
+/*
+CodeSystem: CharlsonCategoryCS
+Id: mcode-charlson-category
+Title: "Charlson Comorbidity Category"
+Description: "A code system that contains codes representing the comorbidity categories defined by Charlson [ref](https://pubmed.ncbi.nlm.nih.gov/3558716/)"
+* #MI "Prior myocardial infarction"
+* #CHF  "Congestive Heart Failure"
+* #PERIVASC  "Peripheral Vascular Disease"
+* #DEMEN "Dementia"
+* #CVD "Cerebrovascular disease"
+* #CPD "Chronic pulmonary disease"
+* #ARTH "Connective tissue (rheumatologic) disease"
+* #ULCER  "Peptic ulcer disease"
+* #LIV  "Chronic liver disease, mild"
+* #DM  "Diabetes without chronic complications"
+* #HMPG "Cerebrovascular (hemiplegia) event"
+* #RENL  "Kidney disease, moderate or severe"
+* #DMCX  "Diabetes with chronic complication"
+* #LEUK "Leukemia"
+* #LYMPH  "Lymphoma"
+* #LIVSEV "Chronic liver disease, moderate or severe"
+* #METS   "Metastatic solid tumor"
+* #AIDS   "Acquired immuno-deficiency syndrome (AIDS)"
+
+ValueSet: ComorbidityCategoryVS
+Id: mcode-comorbidity-category
+Title: "Comorbidity Category Value Set"
+Description: "Elixhauser and Charlson comorbidity category codes." 
+* include codes from system ElixhauserCategoryCS
+* include codes from system CharlsonCategoryCS
+*/

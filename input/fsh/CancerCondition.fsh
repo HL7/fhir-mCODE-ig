@@ -27,7 +27,7 @@ Profile: PrimaryCancerCondition
 Id: mcode-primary-cancer-condition
 Title: "Primary Cancer Condition"
 Parent: CancerConditionParent
-Description: "Records the history of the primary cancer condition, the original or first tumor in the body (Definition from: [NCI Dictionary of Cancer Terms](https://www.cancer.gov/publications/dictionaries/cancer-terms/def/primary-tumor)). Cancers that are not clearly secondary (i.e., of uncertain origin or behavior) should be documented as primary.
+Description: "Records the the primary cancer condition, the original or first tumor in the body (Definition from: [NCI Dictionary of Cancer Terms](https://www.cancer.gov/publications/dictionaries/cancer-terms/def/primary-tumor)). Cancers that are not clearly secondary (i.e., of uncertain origin or behavior) should be documented as primary.
 
 Cancer staging information summarized in this profile should reflect the most recent staging assessment on the patient, and should be updated if and when there is a new staging assessment. Past staging assessments will be preserved in instances of the TNMClinicalStageGroup and/or TNMPathologicalStageGroup, which refer back to PrimaryCancerCondition.
 
@@ -37,7 +37,7 @@ Condition resources associated with an [mCODE patient](conformance.html#mCODE-Pa
 * ^abstract = false
 * code from PrimaryOrUncertainBehaviorCancerDisorderVS (extensible)
 * stage.assessment only Reference(TNMClinicalStageGroup or TNMClinicalPrimaryTumorCategory or TNMClinicalRegionalNodesCategory or TNMClinicalDistantMetastasesCategory or TNMPathologicalStageGroup or TNMPathologicalPrimaryTumorCategory or TNMPathologicalRegionalNodesCategory or TNMPathologicalDistantMetastasesCategory)
-
+//* extension contains ComorbidConditionExtension named comorbidCondition 0..* MS
 
 Profile: SecondaryCancerCondition
 Parent: CancerConditionParent

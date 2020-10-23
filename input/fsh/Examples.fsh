@@ -42,18 +42,29 @@ Description: "mCODE Example for Cancer Disease Status"
 * performer = Reference(mCODEPractitionerExample01)
 * valueCodeableConcept = SCT#268910001 "Patient's condition improved (finding)"
 
-Instance: mCODEComorbidConditionExample01
-InstanceOf: ElixhauserDiabetesUncomplicatedComorbidity
-Description: "mCODE Example for Comorbid Condition"
-* id = "mCODEComorbidConditionExample01"
-* meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-comorbid-condition"
-* clinicalStatus = ClinStatus#active "Active"
-* verificationStatus = VerStatus#confirmed "Confirmed"
-* code = SCT#44054006 "Type 2 diabetes mellitus"
+Instance: mCODECancerComorbidityAssessmentExample01
+InstanceOf: CancerComorbidityAssessment
+Description: "mCODE Example for Cancer Comorbidity Assessment"
+* id = "mCODECancerComorbidityAssessmentExample01"
+* meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-comorbidity-assessment"
 * subject = Reference(mCODEPatientExample01)
-* asserter = Reference(mCODEPractitionerExample01)
-* onsetDateTime = "2016-04-01"
-
+* performer = Reference(mCODEPractitionerExample01)
+* status = #final "final"
+* component[cardiacArrhythmia].valueCodeableConcept = SCT#52101004 "Present (qualifier value)"
+* component[depression].valueCodeableConcept = SCT#52101004 "Present (qualifier value)"
+* component[rheumatoidArthritis].valueCodeableConcept = SCT#2667000 "Absent (qualifier value)"
+* component[congestiveHeartFailure].valueCodeableConcept = SCT#2667000 "Absent (qualifier value)"
+* component[chronicPulmonaryDisease].valueCodeableConcept = SCT#2667000 "Absent (qualifier value)"
+* component[diabetesUncomplicated].valueCodeableConcept = SCT#2667000 "Absent (qualifier value)" 
+* component[diabetesComplicated].valueCodeableConcept = SCT#2667000 "Absent (qualifier value)"
+* component[obesity].valueCodeableConcept = SCT#2667000 "Absent (qualifier value)"
+* component[peripheralVascularDisease].valueCodeableConcept = SCT#2667000 "Absent (qualifier value)"
+* component[pulmonaryCirculationDisorders].valueCodeableConcept = SCT#2667000 "Absent (qualifier value)"
+* component[renalFailure].valueCodeableConcept = SCT#2667000 "Absent (qualifier value)"
+* component[drugAbuse].valueCodeableConcept = SCT#261665006 "Unknown (qualifier value)"
+* component[hypothyroidism].valueCodeableConcept = SCT#261665006 "Unknown (qualifier value)"
+* component[cardiacArrhythmia].extension[conditionCode].valueCodeableConcept = SCT#82838007 "Irregular tachycardia (disorder)"
+* component[depression].extension[conditionReference].valueReference = Reference(mCODEDepressionExample01)
 
 Instance: mCODEPatientExample01
 InstanceOf: CancerPatient
@@ -118,6 +129,7 @@ Description: "mCODE Example for Patient"
 Instance: mCODEOrganizationExample01
 InstanceOf: USCoreOrganization
 Description: "mCODE Example for Organization"
+Usage: #inline
 * id = "mCODEOrganizationExample01"
 * identifier[NPI].value = "1265714091"
 * active = true
@@ -133,6 +145,7 @@ Description: "mCODE Example for Organization"
 Instance: mCODEPractitionerExample01
 InstanceOf: USCorePractitioner
 Description: "mCODE Example for Practitioner"
+Usage: #inline
 * id = "mCODEPractitionerExample01"
 * identifier[NPI].value = "9988776655"
 * name.family = "Anydoc"
@@ -147,6 +160,18 @@ Description: "mCODE Example for Practitioner"
 * address.country = "US"
 * qualification.code = http://terminology.hl7.org/CodeSystem/v2-0360|2.7#MD "Doctor of Medicine"
 
+Instance: mCODEDepressionExample01
+InstanceOf: USCoreCondition
+Description: "mCODE Example of Depression (as Comorbid condition), part of mCODECancerComorbidityAssessmentExample01"
+Usage: #inline
+* id = "mCODEDepressionExample01"
+* subject = Reference(mCODEPatientExample01)
+* asserter = Reference(mCODEPractitionerExample01)
+* category = #problem-list-item
+* onsetDateTime = "2005-01-01"
+* clinicalStatus = ClinStatus#active "Active"
+* verificationStatus = VerStatus#confirmed "Confirmed"
+* code = SCT#191630001 "Bipolar affective disorder, currently depressed, moderate (disorder)"
 
 Instance: mCODEECOGPerformanceStatusExample01
 InstanceOf: ECOGPerformanceStatus

@@ -46,14 +46,15 @@ A partial mastectomy was performed, revealing a 2.5 cm tumor with no lymph-vascu
 
 A [21-gene RT-PCR assay](https://www.oncotypeiq.com/en-US/breast-cancer/healthcare-professionals/oncotype-dx-breast-recurrence-score/about-the-test) yielded a recurrence score of 47. She received four cycles of doxorubicin (60 mg/m² IV) and cyclophosphamide (600 mg/m² IV) followed by paclitaxel (175 mg/m² IV) (AC-T), administered on a dose-dense schedule. She subsequently received whole breast radiation therapy with regional nodal irradiation. Following RT, she began anastrozole (1 mg daily).
 
-The patient is 2 years out from surgery and has undergone surveillance imaging and has no evidence of recurrent disease or new imaging. She continues to take adjuvant endocrine therapy (anastrozole).
+The patient is two years out from surgery and has undergone surveillance imaging and has no evidence of recurrent disease or new imaging. She continues to take adjuvant endocrine therapy (anastrozole).
 
 #### FHIR instances from mCODE elements
 
 * [`example1-mcode-cancer-patient`](Patient-example1-mcode-cancer-patient.html) ([CancerPatient])
 * [`example1-mcode-cancer-disease-status`](Observation-example1-mcode-cancer-disease-status.html) ([CancerDiseaseStatus])
+* [`example1-mcode-comorbidity-assessment`](Condition-example1-mcode-comorbidity-assessment.html) ([ComorbidCondition])
 * [`example1-mcode-comorbid-condition-depression`](Condition-example1-mcode-comorbid-condition-depression.html) ([ComorbidCondition])
-* [`example1-mcode-comorbid-condition-hyptertension`](Condition-example1-mcode-comorbid-condition-hypertension.html) ([ComorbidCondition])
+* [`example1-mcode-comorbid-condition-hypertension`](Condition-example1-mcode-comorbid-condition-hypertension.html) ([ComorbidCondition])
 * [`example1-mcode-ecog-performance-status`](Observation-example1-mcode-ecog-performance-status.html) ([ECOGPerformanceStatus])
 * [`example1-mcode-cancer-related-surgical-procedure-mastectomy`](Procedure-example1-mcode-cancer-related-surgical-procedure.html) ([CancerRelatedSurgicalProcedure])
 * [`example1-mcode-cancer-related-radiation-procedure`](Procedure-example1-mcode-cancer-related-radiation-procedure.html) ([CancerRelatedRadiationProcedure])
@@ -101,7 +102,7 @@ The patient is 2 years out from surgery and has undergone surveillance imaging a
 [CancerRelatedMedicationStatement]: StructureDefinition-mcode-cancer-related-medication-statement.html
 [CancerRelatedRadiationProcedure]: StructureDefinition-mcode-cancer-related-radiation-procedure.html
 [CancerRelatedSurgicalProcedure]: StructureDefinition-mcode-cancer-related-surgical-procedure.html
-[ComorbidCondition]: StructureDefinition-mcode-comorbid-condition.html
+[ComorbidCondition]: StructureDefinition-mcode-cancer-comorbidity-assessment.html
 [ECOGPerformanceStatus]: StructureDefinition-mcode-ecog-performance-status.html
 [GeneticSpecimen]: StructureDefinition-mcode-genetic-specimen.html
 [GenomicRegionStudied]: StructureDefinition-mcode-genomic-region-studied.html

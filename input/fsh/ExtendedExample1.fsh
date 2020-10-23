@@ -44,7 +44,7 @@ Description: "Extended example 1: example showing disease status (patient's cond
 * valueCodeableConcept = SCT#268910001 "Patient's condition improved (finding)"
 
 
-Instance: example1-mcode-comorbidity-assessment 
+Instance: example1-mcode-comorbidity-assessment
 InstanceOf: CancerComorbidityAssessment
 Description: "mCODE Example for Cancer Comorbidity Assessment"
 * id = "example1-mcode-comorbidity-assessment"

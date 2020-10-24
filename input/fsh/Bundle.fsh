@@ -27,7 +27,8 @@ Description: "A collection of data for an mCODE cancer patient. [Implementation 
     cancerGeneticVariant 0..* and
     cancerGenomicsReport 0..* and
     geneticSpecimen 0..* and
-    genomicRegionStudied 0..*
+    genomicRegionStudied 0..* and
+    other 0..*
     // TODO handle comorbidities, waiting on decision for how these are profiled
 * entry and entry.resource MS
 * entry[cancerPatient].resource MS
@@ -59,6 +60,7 @@ Description: "A collection of data for an mCODE cancer patient. [Implementation 
 * entry[cancerGenomicsReport].resource only CancerGenomicsReport
 * entry[geneticSpecimen].resource only GeneticSpecimen
 * entry[genomicRegionStudied].resource only GenomicRegionStudied
+* entry[other].resource only DomainResource
 
 /* Not restricted to mCODE profiles
     smokingStatus 0..* and
@@ -70,7 +72,7 @@ Description: "A collection of data for an mCODE cancer patient. [Implementation 
     practitioner 0..* and
     organization 0..*
 * entry[smokingStatus].resource only USCoreSmokingStatusProfile
-* entry[medication].resource only MedicationAdministration or MedicationRequest or MedicationStatement
+* entry[medication].resource only MedicationRequest
 * entry[procedure].resource only USCoreProcedureProfile
 * entry[familyHistory].resource only FamilyMemberHistory
 * entry[diagnosticReport].resource only DiagnosticReport

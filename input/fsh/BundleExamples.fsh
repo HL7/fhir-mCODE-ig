@@ -40,11 +40,10 @@ Description: "Extended example 1 as a mCODE Patient Bundle"
 * entry[tumorMarker][1].resource = example1-mcode-tumor-marker-pr
 * entry[tumorMarker][2].resource = example1-mcode-tumor-marker-her2
 * entry[tumorMarker][3].resource = example1-mcode-tumor-marker-oncotype-dx
-
-
-
-
-
+* entry[cancerRelatedMedicationRequest][0].resource = example1-mcode-cancer-related-medication-chemo-doxorubicin
+* entry[cancerRelatedMedicationRequest][1].resource = example1-mcode-cancer-related-medication-chemo-cyclophosphamide
+* entry[cancerRelatedMedicationRequest][2].resource = example1-mcode-cancer-related-medication-chemo-paclitaxel
+* entry[cancerRelatedMedicationRequest][3].resource = example1-mcode-cancer-related-medication-anastrozole
 
 /*
 Example 1 resources not included:
@@ -57,9 +56,4 @@ example1-us-core-condition-anxiety
 example1-mcode-comorbid-condition-depression
 example1-mcode-comorbid-condition-hypertension
 
-// Need to convert to MedicationRequest resources
-* entry[cancerRelatedMedicationRequest][0].resource = example1-mcode-cancer-related-medication-chemo-doxorubicin
-* entry[cancerRelatedMedicationRequest][1].resource = example1-mcode-cancer-related-medication-chemo-cyclophosphamide
-* entry[cancerRelatedMedicationRequest][2].resource = example1-mcode-cancer-related-medication-chemo-paclitaxel
-* entry[cancerRelatedMedicationRequest][3].resource = example1-mcode-cancer-related-medication-anastrozole
 */

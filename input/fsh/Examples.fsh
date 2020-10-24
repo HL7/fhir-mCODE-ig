@@ -176,41 +176,6 @@ Description: "mCODE Example for Karnofsky Performance Status"
 * valueInteger = 90
 * interpretation = LNC#LA29176-7 "Able to carry on normal activity; minor signs or symptoms of disease"
 
-Instance: mCODECancerRelatedMedicationStatementExample01
-InstanceOf: CancerRelatedMedicationStatement
-Description: "mCODE Example for Cancer Related Medication Statement"
-* id = "mCODECancerRelatedMedicationStatementExample01"
-* meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-related-medication-statement"
-* status = MedStatus#active "active"
-* category = MedCat#community "community"
-* medicationCodeableConcept = RXN#349472 "gefitinib 250 MG Oral Tablet"
-* subject = Reference(mCODEPatientExample01)
-* effectiveDateTime = "2019-04-01"
-* dateAsserted = "2019-04-01"
-* extension[treatmentIntent].valueCodeableConcept = SCT#373808002 "Curative - procedure intent"
-* dosage.text = "250mg orally once daily with or without food"
-* dosage.route = SCT#26643006 "Oral use"
-* dosage.doseAndRate.doseQuantity.value = 250.0
-* dosage.doseAndRate.doseQuantity = UCUM#mg "mg"
-
-Instance: mCODECancerRelatedMedicationStatementExample02
-InstanceOf: CancerRelatedMedicationStatement
-Description: "mCODE Example for Cancer Related Medication Statement"
-* id = "mCODECancerRelatedMedicationStatementExample02"
-* meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-related-medication-statement"
-* status = MedStatus#stopped "stopped"
-* category = MedCat#community "community"
-* medicationCodeableConcept = RXN#349472 "gefitinib 250 MG Oral Tablet"
-* subject = Reference(mCODEPatientExample01)
-* effectiveDateTime = "2019-04-01"
-* dateAsserted = "2019-04-01"
-* extension[treatmentIntent].valueCodeableConcept = SCT#373808002 "Curative - procedure intent"
-* extension[terminationReason].valueCodeableConcept = SCT#182992009 "Treatment completed (situation)"
-* dosage.text = "250mg orally once daily with or without food"
-* dosage.route = SCT#26643006 "Oral use"
-* dosage.doseAndRate.doseQuantity.value = 250.0
-* dosage.doseAndRate.doseQuantity = UCUM#mg "mg"
-
 Instance: mCODECancerRelatedSurgicalProcedureExample01
 InstanceOf: CancerRelatedSurgicalProcedure
 Description: "mCODE Example for Cancer Related Surgical Procedure"
@@ -394,7 +359,7 @@ Description: "mCODE Example for CancerRelatedMedicationRequest - Chemo Infusion"
 * dosageInstruction.timing.repeat.count = 1  // frequency is one-time on day 1 of first cycle so there should be no repeat."
 * note.text = "Day 1 of NSCLC regimen: Cisplatin 75 mg/m2 day 1; docetaxel 75 mg/m2 day 1 every 21 days for 4 cycles."
 
-
+/*
 Instance: mCODECancerRelatedMedicationAdministrationExample01
 InstanceOf: CancerRelatedMedicationAdministration
 Description: "mCODE Example for CancerRelatedMedicationAdministration"
@@ -411,3 +376,38 @@ Description: "mCODE Example for CancerRelatedMedicationAdministration"
 * dosage.dose.value = 150
 * dosage.dose.unit = UCUM#mg
 * dosage.text = "Day 1 of NSCLC regimen: Cisplatin 75 mg/m2 day 1; docetaxel 75 mg/m2 day 1 every 21 days for 4 cycles. Calculated absolute dosage based on BSA = 2.0"
+
+Instance: mCODECancerRelatedMedicationStatementExample01
+InstanceOf: CancerRelatedMedicationStatement
+Description: "mCODE Example for Cancer Related Medication Statement"
+* id = "mCODECancerRelatedMedicationStatementExample01"
+* meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-related-medication-statement"
+* status = MedStatus#active "active"
+* category = MedCat#community "community"
+* medicationCodeableConcept = RXN#349472 "gefitinib 250 MG Oral Tablet"
+* subject = Reference(mCODEPatientExample01)
+* effectiveDateTime = "2019-04-01"
+* dateAsserted = "2019-04-01"
+* extension[treatmentIntent].valueCodeableConcept = SCT#373808002 "Curative - procedure intent"
+* dosage.text = "250mg orally once daily with or without food"
+* dosage.route = SCT#26643006 "Oral use"
+* dosage.doseAndRate.doseQuantity.value = 250.0
+* dosage.doseAndRate.doseQuantity = UCUM#mg "mg"
+
+Instance: mCODECancerRelatedMedicationStatementExample02
+InstanceOf: CancerRelatedMedicationStatement
+Description: "mCODE Example for Cancer Related Medication Statement"
+* id = "mCODECancerRelatedMedicationStatementExample02"
+* meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-related-medication-statement"
+* status = MedStatus#stopped "stopped"
+* category = MedCat#community "community"
+* medicationCodeableConcept = RXN#349472 "gefitinib 250 MG Oral Tablet"
+* subject = Reference(mCODEPatientExample01)
+* effectiveDateTime = "2019-04-01"
+* dateAsserted = "2019-04-01"
+* extension[treatmentIntent].valueCodeableConcept = SCT#373808002 "Curative - procedure intent"
+* extension[terminationReason].valueCodeableConcept = SCT#182992009 "Treatment completed (situation)"
+* dosage.text = "250mg orally once daily with or without food"
+* dosage.route = SCT#26643006 "Oral use"
+* dosage.doseAndRate.doseQuantity.value = 250.0
+* dosage.doseAndRate.doseQuantity = UCUM#mg "mg" */

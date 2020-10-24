@@ -6,21 +6,8 @@ Description: "A radiological treatment addressing a cancer condition. The scope 
 
 Conformance statement:
 
-Procedure resources associated with an [mCODE patient](conformance.html#mCODE-Patients) with Procedure.category SNOMED-CT 53438000 MAY conform to this profile. Beyond this requirement, a producer of resources SHOULD ensure that any resource instance associated with an mCODE patient that would reasonably be expected to conform to this profile SHOULD be published in this form. Specifically, we expect that any radiation therapy related to the treatment of a `PrimaryCancerCondition` or `SecondaryCancerCondition` would be published in this form."
+Procedure resources associated with an [mCODE patient](conformance.html#mcode-patients) with Procedure.category SNOMED-CT 53438000 MAY conform to this profile. Beyond this requirement, a producer of resources SHOULD ensure that any resource instance associated with an mCODE patient that would reasonably be expected to conform to this profile SHOULD be published in this form. Specifically, we expect that any radiation therapy related to the treatment of a `PrimaryCancerCondition` or `SecondaryCancerCondition` would be published in this form."
 
-/* Issues relative to mCODE 0.9.x
-1) basedOn should not include ProcedureRequest. No such class in R4.
-2) basedOn should include CarePlan
-3) partOf should probably not include MedicationAdministration or Observation.
-4) recorder should include PractitionerRole and not include RelatedPerson
-5) Practitioner in recorder should not be restricted to US Core Practitioner (US Core doesn't do that)
-6) performer.actor, restricted to Reference(US Core Practitioner Profile) in mCODE, should be relaxed to Practitioner
-7) performer.actor should allow PractitionerRole and Organization, and maybe allow Device (to allow recording of the device used in the radiation procedure)
-8) location should not be restricted to US Core Location (US Core doesn't). Relax to Reference(Location)
-9) Subject should at least be constrained to US Core Patient (US Core does), and maybe constrained to CancerPatient
-10) Encounter should not be constrained to US Core Encounter -- US Core doesn't have this constraint
-11) report should allow Reference(DiagnosticReport | DocumentReference | Composition) -- currently mCODE constrains to DiagnosticReport only.
-*/
 * extension contains
     TreatmentIntent named treatmentIntent 0..1 and
     TerminationReason named terminationReason 0..*
@@ -47,7 +34,7 @@ Description: "A surgical action addressing a cancer condition. The scope of this
 
 Conformance statement:
 
-Procedure resources associated with an [mCODE patient](conformance.html#mCODE-Patients) with Procedure.category SNOMED-CT 387713003 MAY conform to this profile. Beyond this requirement, a producer of resources SHOULD ensure that any resource instance associated with an mCODE patient that would reasonably be expected to conform to this profile SHOULD be published in this form. Specifically, we expect that any surgical procedure related to the treatment of a `PrimaryCancerCondition` or `SecondaryCancerCondition` would be published in this form."
+Procedure resources associated with an [mCODE patient](conformance.html#mcode-patients) with Procedure.category SNOMED-CT 387713003 MAY conform to this profile. Beyond this requirement, a producer of resources SHOULD ensure that any resource instance associated with an mCODE patient that would reasonably be expected to conform to this profile SHOULD be published in this form. Specifically, we expect that any surgical procedure related to the treatment of a `PrimaryCancerCondition` or `SecondaryCancerCondition` would be published in this form."
 * code from CancerRelatedSurgicalProcedureVS (extensible)
 * extension contains
     TreatmentIntent named treatmentIntent 0..1

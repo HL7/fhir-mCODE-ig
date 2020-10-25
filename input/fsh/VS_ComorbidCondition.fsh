@@ -1036,7 +1036,8 @@ ValueSet:  ElixhauserDiabetesComplicatedVS
 Id: elixhauser-diabetes-complicated-vs
 Title: "Elixhauser Comorbid Condition Value Set for diabetes with chronic complications"
 Description:    "Elixhauser Comorbid Condition Value Set for diabetes with chronic complications. ICD-10 codes are drawn from https://www.hcup-us.ahrq.gov/toolssoftware/comorbidityicd10/comformat_icd10cm_2019_1.txt."
-* include codes from system SCT where concept is-a #73211009 "Diabetes mellitus (disorder)" and concept is-not-a #111552007  "Diabetes mellitus without complication (disorder)"
+* include codes from system SCT where concept is-a #73211009 "Diabetes mellitus (disorder)"
+* exclude codes from system SCT where concept is-a #111552007  "Diabetes mellitus without complication (disorder)"
 * ICD10CM#E0821    "Diabetes mellitus due to underlying condition with diabetic nephropathy"
 * ICD10CM#E0822    "Diabetes mellitus due to underlying condition with diabetic chronic kidney disease"
 * ICD10CM#E0829    "Diabetes mellitus due to underlying condition with other diabetic kidney complication"

@@ -25,11 +25,13 @@
 <artifact id="StructureDefinition/mcode-cancer-related-radiation-procedure" key="StructureDefinition-mcode-cancer-related-radiation-procedure" name="Cancer-Related Radiation Procedure"/>
 <artifact id="StructureDefinition/mcode-cancer-related-surgical-procedure" key="StructureDefinition-mcode-cancer-related-surgical-procedure" name="Cancer-Related Surgical Procedure"/>
 <artifact id="ValueSet/mcode-cancer-related-surgical-procedure-vs" key="ValueSet-mcode-cancer-related-surgical-procedure-vs" name="Cancer-Related Surgical Procedure Value Set"/>
-<artifact id="StructureDefinition/mcode-cancer-comorbidity-assessment" key="StructureDefinition-mcode-cancer-comorbidity-assessment" name="CancerComorbidityAssessment"/>
+<artifact id="StructureDefinition/mcode-cancer-related-comorbidities" key="StructureDefinition-mcode-cancer-related-comorbidities" name="CancerRelatedComorbidities"/>
 <artifact id="ValueSet/mcode-clinvar-vs" key="clinvar-value-set" name="ClinVar Value Set"/>
 <artifact deprecated="true" id="Profile/mcode-comorbid-condition" key="comorbid-condition" name="Comorbid Condition"/>
+<artifact id="StructureDefinition/mcode-comorbid-condition-code" key="StructureDefinition-mcode-comorbid-condition-code" name="Comorbid Condition Code"/>
+<artifact id="StructureDefinition/mcode-comorbid-condition-reference" key="StructureDefinition-mcode-comorbid-condition-reference" name="Comorbid Condition Reference"/>
 <artifact deprecated="true" id="ValueSet/mcode-comorbid-condition-value-set" key="comorbid-condition-value-set" name="Comorbid Condition Value Set"/>
-<artifact id="StructureDefinition/mcode-comorbidity-assessment" key="StructureDefinition-mcode-comorbidity-assessment" name="ComorbidityAssessment"/>
+<artifact id="StructureDefinition/mcode-comorbidities-parent" key="StructureDefinition-mcode-comorbidities-parent" name="ComorbiditiesParent"/>
 <artifact id="ValueSet/mcode-condition-status-trend-vs" key="condition-status-trend-value-set" name="Condition Status Trend Value Set"/>
 <artifact id="StructureDefinition/mcode-ecog-performance-status" key="ecog-performance-status" name="ECOG Performance Status"/>
 <artifact id="ValueSet/elixhauser-alcohol-abuse-vs" key="ValueSet-elixhauser-alcohol-abuse-vs" name="Elixhauser Comorbid Condition Value Set for Alcohol Abuse"/>
@@ -128,6 +130,7 @@
 <artifact id="Observation/example1-mcode-cancer-genetic-variant" key="Observation-example1-mcode-cancer-genetic-variant" name="example1-mcode-cancer-genetic-variant"/>
 <artifact id="DiagnosticReport/example1-mcode-cancer-genomics-report" key="DiagnosticReport-example1-mcode-cancer-genomics-report" name="example1-mcode-cancer-genomics-report"/>
 <artifact id="Patient/example1-mcode-cancer-patient" key="Patient-example1-mcode-cancer-patient" name="example1-mcode-cancer-patient"/>
+<artifact id="Observation/example1-mcode-cancer-related-comorbidities" key="Observation-example1-mcode-cancer-related-comorbidities" name="example1-mcode-cancer-related-comorbidities"/>
 <artifact id="MedicationRequest/example1-mcode-cancer-related-medication-anastrozole" key="MedicationRequest-example1-mcode-cancer-related-medication-anastrozole" name="example1-mcode-cancer-related-medication-anastrozole"/>
 <artifact id="MedicationRequest/example1-mcode-cancer-related-medication-chemo-cyclophosphamide" key="MedicationRequest-example1-mcode-cancer-related-medication-chemo-cyclophosphamide" name="example1-mcode-cancer-related-medication-chemo-cyclophosphamide"/>
 <artifact id="MedicationRequest/example1-mcode-cancer-related-medication-chemo-doxorubicin" key="MedicationRequest-example1-mcode-cancer-related-medication-chemo-doxorubicin" name="example1-mcode-cancer-related-medication-chemo-doxorubicin"/>
@@ -136,7 +139,6 @@
 <artifact id="Procedure/example1-mcode-cancer-related-surgical-procedure-mastectomy" key="Procedure-example1-mcode-cancer-related-surgical-procedure-mastectomy" name="example1-mcode-cancer-related-surgical-procedure-mastectomy"/>
 <artifact id="Condition/example1-mcode-comorbid-condition-depression" key="Condition-example1-mcode-comorbid-condition-depression" name="example1-mcode-comorbid-condition-depression"/>
 <artifact id="Condition/example1-mcode-comorbid-condition-hypertension" key="Condition-example1-mcode-comorbid-condition-hypertension" name="example1-mcode-comorbid-condition-hypertension"/>
-<artifact id="Observation/example1-mcode-comorbidity-assessment" key="Observation-example1-mcode-comorbidity-assessment" name="example1-mcode-comorbidity-assessment"/>
 <artifact id="Observation/example1-mcode-ecog-performance-status" key="Observation-example1-mcode-ecog-performance-status" name="example1-mcode-ecog-performance-status"/>
 <artifact id="Specimen/example1-mcode-genetic-specimen" key="Specimen-example1-mcode-genetic-specimen" name="example1-mcode-genetic-specimen"/>
 <artifact id="Observation/example1-mcode-genomic-region-studied" key="Observation-example1-mcode-genomic-region-studied" name="example1-mcode-genomic-region-studied"/>
@@ -165,11 +167,11 @@
 <artifact id="Procedure/example1-us-core-procedure-mammogram" key="Procedure-example1-us-core-procedure-mammogram" name="example1-us-core-procedure-mammogram"/>
 <artifact id="Observation/example1-us-core-smoking-status" key="Observation-example1-us-core-smoking-status" name="example1-us-core-smoking-status"/>
 <artifact id="StructureDefinition/mcode-patient-bundle" key="StructureDefinition-mcode-patient-bundle" name="mCODE Patient Bundle"/>
-<artifact id="Observation/mCODECancerComorbidityAssessmentExample01" key="Observation-mCODECancerComorbidityAssessmentExample01" name="mCODECancerComorbidityAssessmentExample01"/>
 <artifact id="Observation/mCODECancerDiseaseStatusExample01" key="mcode-cancer-disease-status-example-01" name="mCODECancerDiseaseStatusExample01"/>
 <artifact id="Observation/mCODECancerGeneticVariantExample01" key="mcode-cancer-genetic-variant-example-01" name="mCODECancerGeneticVariantExample01"/>
 <artifact id="Observation/mCODECancerGeneticVariantExample02" key="mcode-cancer-genetic-variant-example-02" name="mCODECancerGeneticVariantExample02"/>
 <artifact id="DiagnosticReport/mCODECancerGenomicsReportExample01" key="mcode-cancer-genomics-report-example-01" name="mCODECancerGenomicsReportExample01"/>
+<artifact id="Observation/mCODECancerRelatedComorbiditiesExample01" key="Observation-mCODECancerRelatedComorbiditiesExample01" name="mCODECancerRelatedComorbiditiesExample01"/>
 <artifact id="MedicationRequest/mCODECancerRelatedMedicationRequestExample01" key="MedicationRequest-mCODECancerRelatedMedicationRequestExample01" name="mCODECancerRelatedMedicationRequestExample01"/>
 <artifact id="MedicationRequest/mCODECancerRelatedMedicationRequestExample02" key="MedicationRequest-mCODECancerRelatedMedicationRequestExample02" name="mCODECancerRelatedMedicationRequestExample02"/>
 <artifact deprecated="true" id="Example/mcode-cancer-related-medication-statement-example-01" key="mcode-cancer-related-medication-statement-example-01" name="mCODECancerRelatedMedicationStatementExample01"/>
@@ -177,14 +179,15 @@
 <artifact id="Procedure/mCODECancerRelatedRadiationProcedureExample01" key="mcode-cancer-related-radiation-procedure-example-01" name="mCODECancerRelatedRadiationProcedureExample01"/>
 <artifact id="Procedure/mCODECancerRelatedSurgicalProcedureExample01" key="mcode-cancer-related-surgical-procedure-example-01" name="mCODECancerRelatedSurgicalProcedureExample01"/>
 <artifact deprecated="true" id="Example/mcode-comorbid-condition-example-01" key="mcode-comorbid-condition-example-01" name="mCODEComorbidConditionExample01"/>
+<artifact id="Condition/mCODEDepressionExample01" key="Condition-mCODEDepressionExample01" name="mCODEDepressionExample01"/>
 <artifact id="Observation/mCODEECOGPerformanceStatusExample01" key="mcode-ecog-performance-status-example-01" name="mCODEECOGPerformanceStatusExample01"/>
 <artifact id="Specimen/mCODEGeneticSpecimenExample01" key="mcode-genetic-specimen-example-01" name="mCODEGeneticSpecimenExample01"/>
 <artifact id="Observation/mCODEGenomicRegionStudiedExample01" key="mcode-genomic-region-studied-example-01" name="mCODEGenomicRegionStudiedExample01"/>
 <artifact id="Observation/mCODEKarnofskyPerformanceStatusExample01" key="mcode-karnofsky-performance-status-example-01" name="mCODEKarnofskyPerformanceStatusExample01"/>
-<artifact deprecated="true" id="Example/mcode-organization-example-01" key="mcode-organization-example-01" name="mCODEOrganizationExample01"/>
+<artifact id="Organization/mCODEOrganizationExample01" key="mcode-organization-example-01" name="mCODEOrganizationExample01"/>
 <artifact id="Patient/mCODEPatientExample01" key="mcode-patient-example-01" name="mCODEPatientExample01"/>
 <artifact id="Patient/mCODEPatientExample02" key="mcode-patient-example-02" name="mCODEPatientExample02"/>
-<artifact deprecated="true" id="Example/mcode-practitioner-example-01" key="mcode-practitioner-example-01" name="mCODEPractitionerExample01"/>
+<artifact id="Practitioner/mCODEPractitionerExample01" key="mcode-practitioner-example-01" name="mCODEPractitionerExample01"/>
 <artifact id="Condition/mCODEPrimaryCancerConditionExample01" key="mcode-primary-cancer-condition-example-01" name="mCODEPrimaryCancerConditionExample01"/>
 <artifact id="Condition/mCODESecondaryCancerConditionExample01" key="mcode-secondary-cancer-condition-example-01" name="mCODESecondaryCancerConditionExample01"/>
 <artifact id="Observation/mCODETNMClinicalDistantMetastasesCategoryExample01" key="mcode-tnm-clinical-distant-metastases-category-example-01" name="mCODETNMClinicalDistantMetastasesCategoryExample01"/>

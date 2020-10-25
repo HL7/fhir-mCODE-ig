@@ -3,13 +3,14 @@ InstanceOf: MCODEPatientBundle
 Description: "Extended example 1 as a mCODE Patient Bundle"
 * id = "example1-mcode-patient-bundle"
 
-// Named slices ------------------------------------------------------------------
-* entry[cancerDiseaseStatus].resource = example1-mcode-cancer-disease-status
-* entry[cancerDiseaseStatus].fullUrl = "http://example.org/fhir/Observation/example1-mcode-cancer-disease-status"
-* entry[primaryCancerCondition].resource = example1-mcode-primary-cancer-condition
-* entry[primaryCancerCondition].fullUrl = "http://example.org/fhir/Condition/example1-mcode-primary-cancer-condition"
+// Named slices, required
 * entry[cancerPatient].resource = example1-mcode-cancer-patient
 * entry[cancerPatient].fullUrl = "http://example.org/fhir/Patient/example1-mcode-cancer-patient"
+* entry[primaryCancerCondition].resource = example1-mcode-primary-cancer-condition
+* entry[primaryCancerCondition].fullUrl = "http://example.org/fhir/Condition/example1-mcode-primary-cancer-condition"
+// Other slices
+* entry[cancerDiseaseStatus].resource = example1-mcode-cancer-disease-status
+* entry[cancerDiseaseStatus].fullUrl = "http://example.org/fhir/Observation/example1-mcode-cancer-disease-status"
 * entry[cancerGeneticVariant].resource = example1-mcode-cancer-genetic-variant
 * entry[cancerGeneticVariant].fullUrl = "http://example.org/fhir/Observation/example1-mcode-cancer-genetic-variant"
 * entry[cancerGenomicsReport].resource = example1-mcode-cancer-genomics-report

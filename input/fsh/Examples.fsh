@@ -33,7 +33,7 @@ InstanceOf: CancerDiseaseStatus
 Description: "mCODE Example for Cancer Disease Status"
 * id = "mCODECancerDiseaseStatusExample01"
 * meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-disease-status"
-//* extension[evidenceType].url = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-evidence-type"
+// * extension[evidenceType].url = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-evidence-type"
 * extension[evidenceType].valueCodeableConcept = SCT#252416005 "Histopathology test (procedure)"
 * status = #final "final"
 * category = ObsCat#laboratory "laboratory"
@@ -42,17 +42,18 @@ Description: "mCODE Example for Cancer Disease Status"
 * performer = Reference(mCODEPractitionerExample01)
 * valueCodeableConcept = SCT#268910001 "Patient's condition improved (finding)"
 
-Instance: mCODECancerComorbidityAssessmentExample01
-InstanceOf: CancerComorbidityAssessment
-Description: "mCODE Example for Cancer Comorbidity Assessment"
-* id = "mCODECancerComorbidityAssessmentExample01"
-* meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-comorbidity-assessment"
+Instance: mCODECancerRelatedComorbiditiesExample01
+InstanceOf: CancerRelatedComorbidities
+Description: "mCODE Example for Cancer-Related Comorbidities"
+* id = "mCODECancerRelatedComorbiditiesExample01"
+* meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-related-comorbidities"
 * subject = Reference(mCODEPatientExample01)
 * performer = Reference(mCODEPractitionerExample01)
 * status = #final "final"
 // present
 * component[cardiacArrhythmia].valueCodeableConcept = SCT#52101004 "Present (qualifier value)"
 * component[cardiacArrhythmia].extension[conditionCode].valueCodeableConcept = SCT#82838007 "Irregular tachycardia (disorder)"
+// present
 * component[depression].valueCodeableConcept = SCT#52101004 "Present (qualifier value)"
 * component[depression].extension[conditionReference].valueReference = Reference(mCODEDepressionExample01)
 // absent
@@ -100,10 +101,10 @@ Description: "mCODE Example for Patient"
 * id = "mCODEPatientExample02"
 * meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-patient"
 // The following lines must use the slice names, not the defining URLs
-//* extension[race].url = "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race"
-//* extension[race].extension[ombCategory].url = "ombCategory"
+// * extension[race].url = "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race"
+// * extension[race].extension[ombCategory].url = "ombCategory"
 * extension[race].extension[ombCategory].valueCoding = OmbRaceCat#1002-5 "American Indian or Alaska Native"
-//* extension[race].extension[text].url = "text"
+// * extension[race].extension[text].url = "text"
 * extension[race].extension[text].valueString = "Lakota and Crow"
 * extension[birthsex].valueCode = #F
 * identifier.use = #usual
@@ -131,7 +132,6 @@ Description: "mCODE Example for Patient"
 Instance: mCODEOrganizationExample01
 InstanceOf: USCoreOrganization
 Description: "mCODE Example for Organization"
-Usage: #inline
 * id = "mCODEOrganizationExample01"
 * identifier[NPI].value = "1265714091"
 * active = true
@@ -147,7 +147,6 @@ Usage: #inline
 Instance: mCODEPractitionerExample01
 InstanceOf: USCorePractitioner
 Description: "mCODE Example for Practitioner"
-Usage: #inline
 * id = "mCODEPractitionerExample01"
 * identifier[NPI].value = "9988776655"
 * name.family = "Anydoc"
@@ -164,12 +163,11 @@ Usage: #inline
 
 Instance: mCODEDepressionExample01
 InstanceOf: USCoreCondition
-Description: "mCODE Example of Depression (as Comorbid condition), part of mCODECancerComorbidityAssessmentExample01"
-Usage: #inline
+Description: "mCODE Example of Depression (as Comorbid condition), part of mCODECancerRelatedComorbiditiesExample01"
 * id = "mCODEDepressionExample01"
 * subject = Reference(mCODEPatientExample01)
 * asserter = Reference(mCODEPractitionerExample01)
-* category = #problem-list-item
+* category = ConditionCategory#problem-list-item
 * onsetDateTime = "2005-01-01"
 * clinicalStatus = ClinStatus#active "Active"
 * verificationStatus = VerStatus#confirmed "Confirmed"
@@ -228,8 +226,8 @@ Description: "mCODE Example for Cancer Related Radiation Procedure"
 * asserter = Reference(mCODEPractitionerExample01)
 * performedDateTime = "2019-03-01"
 * extension[treatmentIntent].valueCodeableConcept = SCT#373808002 "Curative - procedure intent"
-//* extension[RadiationDose].extension[TotalRadiationDoseDelivered].valueQuantity = UCUM#cGy
-//* extension[RadiationDose].extension[TotalRadiationDoseDelivered].valueQuantity.value = 1200.0
+// * extension[RadiationDose].extension[TotalRadiationDoseDelivered].valueQuantity = UCUM#cGy
+// * extension[RadiationDose].extension[TotalRadiationDoseDelivered].valueQuantity.value = 1200.0
 * reasonReference = Reference(mCODEPrimaryCancerConditionExample01)
 * bodySite = SCT#41224006 "Structure of lower lobe of left lung (body structure)"
 

@@ -44,11 +44,11 @@ Description: "Extended example 1: example showing disease status (patient's cond
 * valueCodeableConcept = SCT#268910001 "Patient's condition improved (finding)"
 
 
-Instance: example1-mcode-comorbidity-assessment
-InstanceOf: CancerComorbidityAssessment
-Description: "mCODE Example for Cancer Comorbidity Assessment"
-* id = "example1-mcode-comorbidity-assessment"
-* meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-comorbidity-assessment"
+Instance: example1-mcode-cancer-related-comorbidities
+InstanceOf: CancerRelatedComorbidities
+Description: "mCODE Example for Cancer-Related Comorbidities"
+* id = "example1-mcode-cancer-related-comorbidities"
+* meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-related-comorbidities"
 * subject = Reference(example1-mcode-cancer-patient)
 * performer = Reference(example1-practitioner1-mcode)
 * status = #final "final"

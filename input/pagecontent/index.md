@@ -97,7 +97,7 @@
     <li><a href="https://codes.iarc.fr/" target="_blank">International Classification of Diseases for Oncology, 3rd version (ICD-O-3)</a></li>
 </ul>
 
-<p>Because the use of these code systems vary in different institutions, mCODE supports all three. Implementers should be aware, however, that how the cancer diagnosis is coded can affect compliance with <a href="http://hl7.org/fhir/us/core/index.html" target="_blank">US Core</a> (see <a href="implementation.html">Implementation Notes</a> for details). Two attributes and one <a href="https://www.hl7.org/fhir/extensibility.html" target="_blank">FHIR extension</a> of the <a href="https://www.hl7.org/fhir/condition.html" target="_blank">FHIR Condition Resource</a> are involved with coding the cancer diagnosis: the Code, the <a href="StructureDefinition-mcode-histology-morphology-behavior.html">HistologyMorphologyBehavior</a> extension, and the Body Site. How these attributes are used, depending on the code system, is captured in the table below:</p>
+<p>Because the use of these code systems vary in different institutions, mCODE supports all three. Implementers should be aware, however, that how the cancer diagnosis is coded can affect compliance with <a href="http://hl7.org/fhir/us/core/index.html" target="_blank">US Core</a> (see <a href="implementation.html">Implementation Notes</a> for details). Two attributes and one <a href="https://www.hl7.org/fhir/extensibility.html" target="_blank">FHIR extension</a> of the <a href="https://www.hl7.org/fhir/condition.html" target="_blank">FHIR Condition Resource</a> are involved with coding the cancer diagnosis: the Code, the [HistologyMorphologyBehavior extension](StructureDefinition-mcode-histology-morphology-behavior.html), and the Body Site. How these attributes are used, depending on the code system, is captured in the table below:</p>
 <!--
 <table class="tg">
     <tr>
@@ -129,7 +129,7 @@
 
 <img src="CancerDxCodingSystems.png" alt="mCODE Logical Model" width="80%" align="left" style="margin: 0px 250px 0px 0px;" />
 
-<p>Implementers should reference the <a href="StructureDefinition-mcode-primary-cancer-condition.html">PrimaryCancerCondition</a> and <a href="StructureDefinition-mcode-secondary-cancer-condition.html">Secondary Cancer Condition</a> profiles for details on the use of these terminologies and associated value sets.</p>
+<p>Implementers should reference the <a href="StructureDefinitionStructureDefinition-mcode-primary-cancer-condition.html">PrimaryCancerCondition</a> and <a href="StructureDefinition-mcode-secondary-cancer-condition.html">Secondary Cancer Condition</a> profiles for details on the use of these terminologies and associated value sets.</p>
 
 <h5>Representing Cancer Staging Information</h5>
 <p>Cancer stage information is contained in a set of profiles, representing <a href="https://www.cancer.gov/publications/dictionaries/cancer-terms/def/clinical-staging" target="_blank">clinical stage group</a> and <a href="https://www.cancer.gov/publications/dictionaries/cancer-terms/def/pathological-staging" target="_blank">pathologic stage group</a> panels with members representing the primary tumor (T) category, the regional nodes (N) category, and the distant metastases (M) category. </p>

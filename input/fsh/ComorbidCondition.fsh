@@ -1,19 +1,35 @@
-Profile: ComorbidityAssessment
+Profile: ComorbiditiesParent
 Parent: Observation
-Id: mcode-comorbidity-assessment
-Description: "General structure for capturing assessment of comorbid conditions with respect to a primary condition. The specific set of comorbidities of interest in a given context are defined by slicing the components array."
+Id: mcode-comorbidities-parent
+Description: "General structure for capturing comorbid conditions with respect to a primary condition. The specific set of comorbidities of interest in a given context are defined by slicing the components array."
 * ^abstract = true
 * focus only Reference(Condition)
 * code = LNC#78923-0  // Comorbid condition panel
 * component.value[x] only CodeableConcept
 * component.valueCodeableConcept from PresentAbsentUnknownVS (required)
-* component.extension contains conditionCode 0..* and conditionReference 0..*
-* component.extension[conditionCode].value[x] only CodeableConcept
-* component.extension[conditionReference].value[x] only Reference(Condition)
+* component.extension contains ComorbidConditionCode named conditionCode 0..*
+//* component.extension[conditionCode].value[x] only CodeableConcept
+//* component.extension[conditionCode].url = 
+* component.extension contains ComorbidConditionReference named conditionReference 0..*
+//* component.extension[conditionReference].value[x] only Reference
+//* component.extension[conditionReference].valueReference only Reference(Condition)
+//* component.extension[conditionReference].url = 
 
-Profile: CancerComorbidityAssessment
-Parent: ComorbidityAssessment
-Id: mcode-cancer-comorbidity-assessment
+Extension: ComorbidConditionCode
+Id: mcode-comorbid-condition-code
+Title:  "Comorbid Condition Code"
+Description: "An extension representing the condition code for a comorbid condition"
+* value[x] only CodeableConcept
+
+Extension: ComorbidConditionReference
+Id: mcode-comorbid-condition-reference
+Title:  "Comorbid Condition Reference"
+Description: "An extension representing a reference to a comorbid condition"
+* value[x] only Reference(Condition)
+
+Profile: CancerRelatedComorbidities
+Parent: ComorbiditiesParent
+Id: mcode-cancer-related-comorbidities
 Description: "Comorbid conditions for a cancer condition, using Elixhauser comorbidity categories."
 * ^abstract = false
 * focus only Reference(PrimaryCancerCondition)

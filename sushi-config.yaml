@@ -36,6 +36,8 @@ pages:
     title: Change log
   experimental.md:
       title: Experimental Artifacts
+  mcode-patient-bundle.md:
+    title: mCODE Patient Bundle Implementation Details
 menu:
   Home: index.html
   Conformance: conformance.html

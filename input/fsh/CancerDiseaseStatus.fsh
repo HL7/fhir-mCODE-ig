@@ -8,23 +8,19 @@ Note: The LOINC code chosen to represent this observation (LOINC 88040-1, Respon
 
 Conformance statement: 
 
-Observation resources associated with an [mCODE patient](conformance.html#mCODE-Patients) with Observation.code LOINC 88040-1 MUST conform to this profile. Beyond this requirement, a producer of resources SHOULD ensure that any resource instance associated with an mCODE patient that would reasonably be expected to conform to this profile SHOULD be published in this form."
+Observation resources associated with an mCODE patient with Observation.code LOINC 88040-1 MUST conform to this profile. Beyond this requirement, a producer of resources SHOULD ensure that any resource instance associated with an mCODE patient that would reasonably be expected to conform to this profile SHOULD be published in this form."
 
 * extension contains evidenceType 0..*
 * extension[evidenceType] ^short = "Evidence Type"
 * extension[evidenceType] ^definition = "Categorization of the kind of evidence used as input to the clinical judgment. This corresponds to both the S and O in SOAP."
 * extension[evidenceType].valueCodeableConcept from CancerDiseaseStatusEvidenceTypeVS (required)
 * status and code and subject and effective[x] and valueCodeableConcept MS
-* bodySite 0..0
 * specimen 0..0
 * device 0..0
 * referenceRange 0..0
 * hasMember 0..0
 * component 0..0
-* interpretation 0..1
 * subject 1..1
-* basedOn only Reference(ServiceRequest or MedicationRequest)
-* partOf only Reference(MedicationAdministration or MedicationStatement or Procedure)
 * code = LNC#88040-1 //"Response to cancer treatment"
 * subject only Reference(CancerPatient)
 * focus only Reference(CancerConditionParent)

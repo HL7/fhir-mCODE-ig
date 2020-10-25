@@ -5,7 +5,8 @@ Description: "General structure for capturing assessment of comorbid conditions 
 * ^abstract = true
 * focus only Reference(Condition)
 * code = LNC#78923-0  // Comorbid condition panel
-* component.value[x] from PresentAbsentUnknownVS (required)
+* component.value[x] only CodeableConcept
+* component.valueCodeableConcept from PresentAbsentUnknownVS (required)
 * component.extension contains conditionCode 0..* and conditionReference 0..*
 * component.extension[conditionCode].value[x] only CodeableConcept
 * component.extension[conditionReference].value[x] only Reference(Condition)
@@ -68,7 +69,7 @@ Description: "Comorbid conditions for a cancer condition, using Elixhauser comor
 * component[hypertensionComplicated].code = ElixhauserCategoryCS#HTNCX
 * component[hypothyroidism].code = ElixhauserCategoryCS#HYPOTHY
 * component[liverDisease].code = ElixhauserCategoryCS#LIVER
-* component[fluidElectrolyteDisorders].code = ElixhauserCategoryCS#LYTESS
+* component[fluidElectrolyteDisorders].code = ElixhauserCategoryCS#LYTES
 * component[neurological].code = ElixhauserCategoryCS#NEURO
 * component[obesity].code = ElixhauserCategoryCS#OBESE
 * component[paralysis].code = ElixhauserCategoryCS#PARA

@@ -165,6 +165,7 @@
 <artifact id="Procedure/example1-us-core-procedure-mammogram" key="Procedure-example1-us-core-procedure-mammogram" name="example1-us-core-procedure-mammogram"/>
 <artifact id="Observation/example1-us-core-smoking-status" key="Observation-example1-us-core-smoking-status" name="example1-us-core-smoking-status"/>
 <artifact id="StructureDefinition/mcode-patient-bundle" key="StructureDefinition-mcode-patient-bundle" name="mCODE Patient Bundle"/>
+<artifact id="Observation/mCODECancerComorbidityAssessmentExample01" key="Observation-mCODECancerComorbidityAssessmentExample01" name="mCODECancerComorbidityAssessmentExample01"/>
 <artifact id="Observation/mCODECancerDiseaseStatusExample01" key="mcode-cancer-disease-status-example-01" name="mCODECancerDiseaseStatusExample01"/>
 <artifact id="Observation/mCODECancerGeneticVariantExample01" key="mcode-cancer-genetic-variant-example-01" name="mCODECancerGeneticVariantExample01"/>
 <artifact id="Observation/mCODECancerGeneticVariantExample02" key="mcode-cancer-genetic-variant-example-02" name="mCODECancerGeneticVariantExample02"/>

@@ -41,7 +41,7 @@ Description: "mCODE Example for Cancer Disease Status"
 * effectiveDateTime = "2019-04-01"
 * performer = Reference(mCODEPractitionerExample01)
 * valueCodeableConcept = SCT#268910001 "Patient's condition improved (finding)"
-/*
+
 Instance: mCODECancerComorbidityAssessmentExample01
 InstanceOf: CancerComorbidityAssessment
 Description: "mCODE Example for Cancer Comorbidity Assessment"
@@ -50,8 +50,12 @@ Description: "mCODE Example for Cancer Comorbidity Assessment"
 * subject = Reference(mCODEPatientExample01)
 * performer = Reference(mCODEPractitionerExample01)
 * status = #final "final"
+// present
 * component[cardiacArrhythmia].valueCodeableConcept = SCT#52101004 "Present (qualifier value)"
+* component[cardiacArrhythmia].extension[conditionCode].valueCodeableConcept = SCT#82838007 "Irregular tachycardia (disorder)"
 * component[depression].valueCodeableConcept = SCT#52101004 "Present (qualifier value)"
+* component[depression].extension[conditionReference].valueReference = Reference(mCODEDepressionExample01)
+// absent
 * component[rheumatoidArthritis].valueCodeableConcept = SCT#2667000 "Absent (qualifier value)"
 * component[congestiveHeartFailure].valueCodeableConcept = SCT#2667000 "Absent (qualifier value)"
 * component[chronicPulmonaryDisease].valueCodeableConcept = SCT#2667000 "Absent (qualifier value)"
@@ -63,9 +67,7 @@ Description: "mCODE Example for Cancer Comorbidity Assessment"
 * component[renalFailure].valueCodeableConcept = SCT#2667000 "Absent (qualifier value)"
 * component[drugAbuse].valueCodeableConcept = SCT#261665006 "Unknown (qualifier value)"
 * component[hypothyroidism].valueCodeableConcept = SCT#261665006 "Unknown (qualifier value)"
-* component[cardiacArrhythmia].extension[conditionCode].valueCodeableConcept = SCT#82838007 "Irregular tachycardia (disorder)"
-* component[depression].extension[conditionReference].valueReference = Reference(mCODEDepressionExample01)
-*/
+
 Instance: mCODEPatientExample01
 InstanceOf: CancerPatient
 Description: "mCODE Example for Patient"

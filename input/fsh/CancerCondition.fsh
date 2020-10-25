@@ -41,7 +41,6 @@ Condition resources associated with an mCODE patient with a Condition.code in th
 * ^abstract = false
 * code from PrimaryOrUncertainBehaviorCancerDisorderVS (extensible)
 * stage.assessment only Reference(TNMClinicalStageGroup or TNMClinicalPrimaryTumorCategory or TNMClinicalRegionalNodesCategory or TNMClinicalDistantMetastasesCategory or TNMPathologicalStageGroup or TNMPathologicalPrimaryTumorCategory or TNMPathologicalRegionalNodesCategory or TNMPathologicalDistantMetastasesCategory)
-//* extension contains ComorbidConditionExtension named comorbidCondition 0..* MS
 
 
 Profile: SecondaryCancerCondition

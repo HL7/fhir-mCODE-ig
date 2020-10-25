@@ -100,6 +100,7 @@
 <artifact id="StructureDefinition/mcode-histology-morphology-behavior" key="StructureDefinition-mcode-histology-morphology-behavior" name="Histology-Morphology-Behavior"/>
 <artifact id="ValueSet/mcode-hgvs-vs" key="ValueSet-mcode-hgvs-vs" name="Human Genome Variation Society Sequence Variant Nomenclature Value Set"/>
 <artifact id="StructureDefinition/mcode-karnofsky-performance-status" key="karnofsky-performance-status" name="Karnofsky Performance Status"/>
+<artifact id="ValueSet/mcode-loinc-cancer-staging-codes-vs" key="ValueSet-mcode-loinc-cancer-staging-codes-vs" name="LOINC Cancer Staging Codes Value Set"/>
 <artifact id="StructureDefinition/mcode-laterality" key="StructureDefinition-mcode-laterality" name="Laterality"/>
 <artifact deprecated="true" id="Extension/mcode-laterality-extension" key="laterality-extension" name="Laterality Extension"/>
 <artifact id="ValueSet/mcode-laterality-vs" key="laterality-value-set" name="Laterality Value Set"/>

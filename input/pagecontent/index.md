@@ -167,7 +167,7 @@
 <ul>
     <li><a href="StructureDefinition-mcode-cancer-related-surgical-procedure.html">CancerRelatedSurgicalProcedure</a> - representing surgical procedures that involve the removal of cancer tumors from the body. </li>
     <li><a href="StructureDefinition-mcode-cancer-related-radiation-procedure.html">CancerRelatedRadiationProcedure</a> - to document the use of high-energy radiation from x-rays, gamma rays, neutrons, protons, and other sources to all cancer cells and shrink tumors.</li>
-    <li><a href="StructureDefinition-mcode-cancer-related-medication-statement.html">MedicationStatement</a> - recording treatments involving chemotherapy agents, targeted therapy agents, and hormone therapy agents. The mCODE profile of MedicationStatement includes two extensions that distinguish it from FHIR's base resource of the same name:
+    <li><a href="StructureDefinition-mcode-cancer-related-medication-request.html">MedicationRequest</a> - recording treatments involving chemotherapy agents, targeted therapy agents, and hormone therapy agents. The mCODE profile of MedicationRequest includes two extensions that distinguish it from the US Core MedicationRequest profile:
         <ul>
             <li><a href="StructureDefinition-mcode-treatment-intent.html">TreatmentIntent</a> - to record the purpose of the treatment, whether curative or palliative</li>
             <li><a href="StructureDefinition-mcode-termination-reason.html">TerminationReason</a> - to document the reason for unplanned or premature termination of the medication. </li>

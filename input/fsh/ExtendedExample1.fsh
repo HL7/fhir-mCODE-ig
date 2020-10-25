@@ -85,7 +85,7 @@ Description: "Extended example 1: example showing ECOG performance status"
 Instance: example1-mcode-cancer-related-surgical-procedure-mastectomy
 InstanceOf: CancerRelatedSurgicalProcedure
 Description: "Extended example 1: example showing partial mastectomy surgical procedure"
-* id = "example1-mcode-cancer-related-surgical-procedure"
+* id = "example1-mcode-cancer-related-surgical-procedure-mastectomy"
 * extension[treatmentIntent].valueCodeableConcept = SCT#373808002 "Curative - procedure intent (qualifier value)"
 * status = #completed "completed"
 * code = SCT#64368001 "Partial mastectomy (procedure)"

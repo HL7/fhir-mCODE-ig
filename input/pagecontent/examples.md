@@ -13,7 +13,7 @@ This section provides some examples how mCODE elements may be represented in a F
 * **Comorbid Condition**:  <a href="Condition-mCODEComorbidConditionExample01.html">mCODEComorbidConditionExample01</a> shows an example for a patient diagnosed with Type 2 Diabetes Mellitus.
  * **ECOG Performance Status**:  <a href="Observation-mCODEECOGPerformanceStatusExample01.html">mCODEECOGPerformanceStatusExample01</a> shows an example for a patient with an ECOG Performance Status of 1.
  * **Karnofsky Performance Status**: <a href="Observation-mCODEKarnofskyPerformanceStatusExample01.html">mCODEKarnofskyPerformanceStatusExample01</a> shows an example for a patient with a Karnofsky Performance Status of 80.
- * **Cancer Related Medication Statement**: <a href="MedicationStatement-mCODECancerRelatedMedicationStatementExample01.html">mCODECancerRelatedMedicationStatementExample01</a> shows an example for a patient who is currently receiving gefitinib and <a href="MedicationStatement-mCODECancerRelatedMedicationStatementExample02.html">mCODECancerRelatedMedicationStatementExample02</a> shows an example for a patient who completed a treatment of getfitinib.
+ * **Cancer Related Medication Request**: <a href="MedicationRequest-mCODECancerRelatedMedicationRequestExample01.html">mCODECancerRelatedMedicationRequestExample01</a> shows an example for a patient who is currently receiving gefitinib and <a href="MedicationRequest-mCODECancerRelatedMedicationRequestExample02.html">mCODECancerRelatedMedicationRequestExample02</a> shows an example for a patient who completed a treatment of getfitinib.
  * **Cancer Related Surgical Procedure**: <a href="Procedure-mCODECancerRelatedSurgicalProcedureExample01.html">mCODECancerRelatedSurgicalProcedureExample01</a> shows an example for a patient who underwent a partial lobectomy of the lung for cancer treatment.
   * **Cancer Related Radiation Procedure**: <a href="Procedure-mCODECancerRelatedRadiationProcedureExample01.html">mCODECancerRelatedRadiationProcedureExample01</a> shows an example for a patient who went underwent brachytherapy for cancer treatment.
  * **Tumor Marker**: <a href="Observation-mCODETumorMarkerExample01.html">mCODETumorMarkerExample01</a> shows a simple example of an EGFR tumor marker status as positive.
@@ -70,10 +70,10 @@ The patient is 2 years out from surgery and has undergone surveillance imaging a
 * [`example1-mcode-genomic-region-studied`](Observation-example1-mcode-genomic-region-studied.html) ([GenomicRegionStudied])
 * [`example1-mcode-genetic-specimen`](Specimen-example1-mcode-genetic-specimen.html) ([GeneticSpecimen])
 * [`example1-mcode-cancer-genetic-variant`](Observation-example1-mcode-cancer-genetic-variant.html) ([CancerGeneticVariant])
-* [`example1-mcode-cancer-related-medication-chemo-doxorubicin`](MedicationStatement-example1-mcode-cancer-related-medication-chemo-doxorubicin.html) ([CancerRelatedMedicationStatement])
-* [`example1-mcode-cancer-related-medication-chemo-cyclophosphamide`](MedicationStatement-example1-mcode-cancer-related-medication-chemo-cyclophosphamide.html) ([CancerRelatedMedicationStatement])
-* [`example1-mcode-cancer-related-medication-chemo-paclitaxel`](MedicationStatement-example1-mcode-cancer-related-medication-chemo-paclitaxel.html) ([CancerRelatedMedicationStatement])
-* [`example1-mcode-cancer-related-medication-anastrozole`](MedicationStatement-example1-mcode-cancer-related-medication-anastrozole.html) ([CancerRelatedMedicationStatement])
+* [`example1-mcode-cancer-related-medication-chemo-doxorubicin`](MedicationRequest-example1-mcode-cancer-related-medication-chemo-doxorubicin.html) ([CancerRelatedMedicationRequest])
+* [`example1-mcode-cancer-related-medication-chemo-cyclophosphamide`](MedicationRequest-example1-mcode-cancer-related-medication-chemo-cyclophosphamide.html) ([CancerRelatedMedicationRequest])
+* [`example1-mcode-cancer-related-medication-chemo-paclitaxel`](MedicationRequest-example1-mcode-cancer-related-medication-chemo-paclitaxel.html) ([CancerRelatedMedicationRequest])
+* [`example1-mcode-cancer-related-medication-anastrozole`](MedicationRequest-example1-mcode-cancer-related-medication-anastrozole.html) ([CancerRelatedMedicationRequest])
 * [`example1-practitioner1-mcode`](Practitioner-example1-practitioner1-mcode.html) ([StructureDefinition-us-core-practitioner])
 
 #### FHIR instances from _non_-mCODE elements
@@ -98,7 +98,7 @@ The patient is 2 years out from surgery and has undergone surveillance imaging a
 [CancerGeneticVariant]: StructureDefinition-mcode-cancer-genetic-variant.html
 [CancerGenomicsReport]: StructureDefinition-mcode-cancer-genomics-report.html
 [CancerPatient]: StructureDefinition-mcode-cancer-patient.html
-[CancerRelatedMedicationStatement]: StructureDefinition-mcode-cancer-related-medication-statement.html
+[CancerRelatedMedicationRequest]: StructureDefinition-mcode-cancer-related-medication-request.html
 [CancerRelatedRadiationProcedure]: StructureDefinition-mcode-cancer-related-radiation-procedure.html
 [CancerRelatedSurgicalProcedure]: StructureDefinition-mcode-cancer-related-surgical-procedure.html
 [ComorbidCondition]: StructureDefinition-mcode-comorbid-condition.html

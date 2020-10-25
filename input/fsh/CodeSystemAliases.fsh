@@ -24,4 +24,5 @@ Alias:   OmbRaceCat = urn:oid:2.16.840.1.113883.6.238
 Alias:   TimingAbbreviation = http://terminology.hl7.org/CodeSystem/v3-GTSAbbreviation
 Alias:   MedRequestStatus = http://hl7.org/fhir/CodeSystem/medicationrequest-status 
 Alias:   MedRequestIntent = http://hl7.org/fhir/CodeSystem/medicationrequest-intent
-Alias:   MedCat = 	http://hl7.org/fhir/ValueSet/medicationrequest-category
+Alias:   MedCat = 	http://terminology.hl7.org/CodeSystem/medicationrequest-category
+ 

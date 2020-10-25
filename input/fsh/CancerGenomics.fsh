@@ -6,7 +6,7 @@ Description:    "Records an alteration in the most common DNA nucleotide sequenc
 
 Conformance statement:
 
-Observation resources associated with an [mCODE patient](conformance.html#mcode-patients) with Observation.code LOINC 69548-6 MUST conform to this profile. Beyond this requirement, a producer of resources SHOULD ensure that any resource instance associated with an mCODE patient that would reasonably be expected to conform to this profile SHOULD be published in this form."
+Observation resources associated with an mCODE patient with Observation.code LOINC 69548-6 MUST conform to this profile. Beyond this requirement, a producer of resources SHOULD ensure that any resource instance associated with an mCODE patient that would reasonably be expected to conform to this profile SHOULD be published in this form."
 
 * status and code and subject and effective[x] and valueCodeableConcept and method MS
 * bodySite 0..0
@@ -100,7 +100,7 @@ Description:    "The result of a tumor marker test. Tumor marker tests are gener
 
 Conformance statement:
 
-Observation resources associated with an [mCODE patient](conformance.html#mcode-patients) with an Observation.code in the value set TumorMarkerTestVS MUST conform to this profile. Beyond this requirement, a producer of resources SHOULD ensure that any resource instance associated with an mCODE patient that would reasonably be expected to conform to this profile SHOULD be published in this form, for example, when employing a code that extends the TumorMarkerTestVS value set. Any resource intended to conform to this profile SHOULD populate meta.profile accordingly."
+Observation resources associated with an mCODE patient with an Observation.code in the value set TumorMarkerTestVS MUST conform to this profile. Beyond this requirement, a producer of resources SHOULD ensure that any resource instance associated with an mCODE patient that would reasonably be expected to conform to this profile SHOULD be published in this form, for example, when employing a code that extends the TumorMarkerTestVS value set. Any resource intended to conform to this profile SHOULD populate meta.profile accordingly."
 
 * status and code and subject and effective[x] and value[x] MS
 * bodySite 0..0
@@ -124,7 +124,7 @@ Description:    "A small sample of blood, hair, skin, amniotic fluid (the fluid 
 
 Conformance statement:
 
-Specimen resources associated with an [mCODE patient](conformance.html#mcode-patients) with a Specimen.code in the value set GeneticSpecimenTypeVS MUST conform to this profile. Beyond this requirement, a producer of resources SHOULD ensure that any resource instance associated with an mCODE patient that would reasonably be expected to conform to this profile SHOULD be published in this form."
+Specimen resources associated with an mCODE patient with a Specimen.code in the value set GeneticSpecimenTypeVS MUST conform to this profile. Beyond this requirement, a producer of resources SHOULD ensure that any resource instance associated with an mCODE patient that would reasonably be expected to conform to this profile SHOULD be published in this form."
 
 * type 1..1 MS
 * type from GeneticSpecimenTypeVS
@@ -142,7 +142,7 @@ The identity of non-genomic laboratory tests is typically represented by a LOINC
 
 Conformance statement:
 
-DiagnosticReport resources associated with an [mCODE patient](conformance.html#mcode-patients) with DiagnoticReport.code LOINC 81247-9 MUST conform to this profile. Beyond this requirement, a producer of resources SHOULD ensure that any resource instance associated with an mCODE patient that would reasonably be expected to conform to this profile SHOULD be published in this form."
+DiagnosticReport resources associated with an mCODE patient with DiagnoticReport.code LOINC 81247-9 MUST conform to this profile. Beyond this requirement, a producer of resources SHOULD ensure that any resource instance associated with an mCODE patient that would reasonably be expected to conform to this profile SHOULD be published in this form."
 * specimen MS
 * basedOn only Reference (ServiceRequest or CarePlan)
 * subject only Reference(CancerPatient)
@@ -175,7 +175,7 @@ Description:    "The area of the genome region referenced in testing for variant
 
 Conformance Statement:
 
-Observation resources associated with an [mCODE patient](conformance.html#mcode-patients) with DiagnoticReport.code LOINC 53041-0 MUST conform to this profile. Beyond this requirement, a producer of resources SHOULD ensure that any resource instance associated with an mCODE patient that would reasonably be expected to conform to this profile SHOULD be published in this form."
+Observation resources associated with an mCODE patient with DiagnoticReport.code LOINC 53041-0 MUST conform to this profile. Beyond this requirement, a producer of resources SHOULD ensure that any resource instance associated with an mCODE patient that would reasonably be expected to conform to this profile SHOULD be published in this form."
 * code MS
 * code = LNC#53041-0 //"DNA region of interest panel"
 * value[x] 0..0

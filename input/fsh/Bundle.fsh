@@ -2,7 +2,7 @@ Profile: MCODEPatientBundle
 Parent: Bundle
 Id: mcode-patient-bundle
 Title: "mCODE Patient Bundle"
-Description: "A collection of data for an mCODE cancer patient. [Implementation details are available here](mcode-patient-bundle.html)."
+Description: "A collection of data for an mCODE cancer patient."
 
 /* TODO update this file to match the description in `mcode-patient-bundle.md`. */
 * type = #collection
@@ -20,8 +20,7 @@ Description: "A collection of data for an mCODE cancer patient. [Implementation 
     performanceStatus 0..* MS and
     tumorMarker 0..* MS and
     cancerRelatedMedicationRequest 0..* MS and
-    cancerRelatedRadiationProcedure 0..* MS and
-    cancerRelatedSurgicalProcedure 0..* MS and
+    cancerRelatedProcedure 0..* MS and
     // Multiple profiles can be used to represent cancer stage. We will combine them into a single element for simplicity.
     cancerStage 0..* MS and
     // mCODE genomics
@@ -35,11 +34,10 @@ Description: "A collection of data for an mCODE cancer patient. [Implementation 
 * entry[primaryCancerCondition].resource only PrimaryCancerCondition
 * entry[secondaryCancerCondition].resource only SecondaryCancerCondition
 * entry[cancerDiseaseStatus].resource only CancerDiseaseStatus
-* entry[performanceStatus].resource only ECOGPerformanceStatus or KarnofskyPerformanceStatus
+* entry[performanceStatus].resource only PerformanceStatusParent
 * entry[tumorMarker].resource only TumorMarker
 * entry[cancerRelatedMedicationRequest].resource only CancerRelatedMedicationRequest
-* entry[cancerRelatedRadiationProcedure].resource only CancerRelatedRadiationProcedure
-* entry[cancerRelatedSurgicalProcedure].resource only CancerRelatedSurgicalProcedure
+* entry[cancerRelatedProcedure].resource only CancerRelatedProcedureParent
 * entry[cancerStage].resource only CancerStageParent
 * entry[cancerGeneticVariant].resource only CancerGeneticVariant
 * entry[cancerGenomicsReport].resource only CancerGenomicsReport

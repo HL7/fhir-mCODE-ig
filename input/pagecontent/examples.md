@@ -55,7 +55,7 @@ The patient is 2 years out from surgery and has undergone surveillance imaging a
 * [`example1-mcode-comorbid-condition-depression`](Condition-example1-mcode-comorbid-condition-depression.html) ([ComorbidCondition])
 * [`example1-mcode-comorbid-condition-hyptertension`](Condition-example1-mcode-comorbid-condition-hypertension.html) ([ComorbidCondition])
 * [`example1-mcode-ecog-performance-status`](Observation-example1-mcode-ecog-performance-status.html) ([ECOGPerformanceStatus])
-* [`example1-mcode-cancer-related-surgical-procedure-mastectomy`](Procedure-example1-mcode-cancer-related-surgical-procedure.html) ([CancerRelatedSurgicalProcedure])
+* [`example1-mcode-cancer-related-surgical-procedure-mastectomy`](Procedure-example1-mcode-cancer-related-surgical-procedure-mastectomy.html) ([CancerRelatedSurgicalProcedure])
 * [`example1-mcode-cancer-related-radiation-procedure`](Procedure-example1-mcode-cancer-related-radiation-procedure.html) ([CancerRelatedRadiationProcedure])
  * [`example1-mcode-primary-cancer-condition`](Condition-example1-mcode-primary-cancer-condition.html) ([PrimaryCancerCondition])
  * [`example1-mcode-tnm-clinical-stage-group`](Observation-example1-mcode-tnm-clinical-stage-group.html) ([TNMClinicalStageGroup])

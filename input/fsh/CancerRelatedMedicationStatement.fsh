@@ -14,7 +14,7 @@ Description:    "A record of the use of a medication (individual administration 
 
 Conformance statement:
 
-MedicationStatement resources associated with an [mCODE patient](conformance.html#mcode-patients) SHOULD conform to this profile. Beyond this requirement, a producer of resources SHOULD ensure that any resource instance associated with an mCODE patient that would reasonably be expected to conform to this profile SHOULD be published in this form."
+MedicationStatement resources associated with an mCODE patient SHOULD conform to this profile. Beyond this requirement, a producer of resources SHOULD ensure that any resource instance associated with an mCODE patient that would reasonably be expected to conform to this profile SHOULD be published in this form."
 
 * effective[x] and medication[x] MS
 * extension contains

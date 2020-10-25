@@ -226,13 +226,13 @@ Description: "Extended example 1: example showing Oncotype DX breast recurrence 
 * id = "example1-mcode-tumor-marker-oncotype-dx"
 * status = #final "final"
 * category = ObsCat#laboratory
-* code = https://www.ncbi.nlm.nih.gov/gtr/tests#509910 "Oncotype DX Breast Recurrence Score Assay"
+* code = GTR#509910 "Oncotype DX Breast Recurrence Score Assay"
 * subject = Reference(example1-mcode-cancer-patient)
 * effectiveDateTime = "2018-03-20"
 * performer = Reference(example1-practitioner1-mcode)
 * valueQuantity = UCUM#{ScoreOf}
 * valueQuantity.value = 47
-* interpretation = #H "High"
+* interpretation = ObsInt#H "High" 
 
 // example1-mcode-cancer-genomics-report.json
 Instance: example1-mcode-cancer-genomics-report
@@ -240,8 +240,8 @@ InstanceOf: CancerGenomicsReport
 Description: "Extended example 1: example of gene panel report"
 * id = "example1-mcode-cancer-genomics-report"
 * status = #final "final"
-* category[0] = http://terminology.hl7.org/CodeSystem/v2-0074#LAB
-* category[1] = http://terminology.hl7.org/CodeSystem/v2-0074#GE
+* category[0] = DiagnosticService#LAB
+* category[1] = DiagnosticService#GE
 * subject = Reference(example1-mcode-cancer-patient)
 * effectiveDateTime = "2020-03-15"
 * issued = "2020-03-15T00:00:01+00:00"
@@ -569,7 +569,7 @@ InstanceOf: DiagnosticReport
 Description: "Extended example 1: example of pathology findings represnted as a DiagnosticReport"
 * id = "example1-diagnosticreport-pathology"
 * status = #final "final"
-* category = #SP "Surgical Pathology"
+* category = DiagnosticService#SP "Surgical Pathology"
 * code = LNC#22637-3 "Pathology report final diagnosis Narrative"
 * subject = Reference(example1-mcode-cancer-patient)
 * issued = "2018-03-06T00:00:00Z"

@@ -14,10 +14,10 @@ Description: "Extended example 1 as a mCODE Patient Bundle"
 * entry[cancerGeneticVariant].fullUrl = "http://example.org/fhir/Observation/example1-mcode-cancer-genetic-variant"
 * entry[cancerGenomicsReport].resource = example1-mcode-cancer-genomics-report
 * entry[cancerGenomicsReport].fullUrl = "http://example.org/fhir/DiagnosticReport/example1-mcode-cancer-genomics-report"
-* entry[cancerRelatedRadiationProcedure].resource = example1-mcode-cancer-related-surgical-procedure-mastectomy
-* entry[cancerRelatedRadiationProcedure].fullUrl = "http://example.org/fhir/Procedure/example1-mcode-cancer-related-surgical-procedure-mastectomy"
-* entry[cancerRelatedSurgicalProcedure].resource = example1-mcode-cancer-related-radiation-procedure
-* entry[cancerRelatedSurgicalProcedure].fullUrl = "http://example.org/fhir/Procedure/example1-mcode-cancer-related-radiation-procedure"
+* entry[cancerRelatedProcedure][0].resource = example1-mcode-cancer-related-surgical-procedure-mastectomy
+* entry[cancerRelatedProcedure][0].fullUrl = "http://example.org/fhir/Procedure/example1-mcode-cancer-related-surgical-procedure-mastectomy"
+* entry[cancerRelatedProcedure][1].resource = example1-mcode-cancer-related-radiation-procedure
+* entry[cancerRelatedProcedure][1].fullUrl = "http://example.org/fhir/Procedure/example1-mcode-cancer-related-radiation-procedure"
 * entry[cancerStage][0].resource = example1-mcode-tnm-clinical-stage-group
 * entry[cancerStage][0].fullUrl = "http://example.org/fhir/Observation/example1-mcode-tnm-clinical-stage-group"
 * entry[cancerStage][1].resource = example1-mcode-tnm-primary-tumor-category

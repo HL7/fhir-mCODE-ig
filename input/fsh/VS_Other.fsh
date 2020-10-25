@@ -675,3 +675,10 @@ Description: "Value set containing LOINC codes that describe cancer staging, cli
 * LNC#21899-0 "Primary tumor.pathology Cancer"
 * LNC#21900-6 "Regional lymph nodes.pathology [Class] Cancer"
 * LNC#21901-4 "Distant metastases.pathology [Class] Cancer"
+
+ValueSet: LoincPerformanceStatusCodesVS
+Id: mcode-loinc-performance-status-codes-vs
+Title: "LOINC Performance Status Codes Value Set"
+Description: "Value set containing LOINC codes that describe performance status."
+* LNC#89247-1 "ECOG Performance Status score"
+* LNC#89243-0 "Karnofsky Performance Status score"

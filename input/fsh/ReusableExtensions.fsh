@@ -2,6 +2,10 @@ Extension: TreatmentIntent
 Id:  mcode-treatment-intent
 Title: "Treatment Intent"
 Description: "The purpose of a treatment."
+* ^context[0].type = #element
+* ^context[0].expression = "MedicationRequest"
+* ^context[1].type = #element
+* ^context[1].expression = "Procedure"
 * value[x] only CodeableConcept
 * valueCodeableConcept from TreatmentIntentVS (required)
 
@@ -9,6 +13,10 @@ Extension: TerminationReason
 Id:  mcode-termination-reason
 Title: "Termination Reason"
 Description: "A code explaining an unplanned or premature termination of a plan of treatment, course of medication, or research study."
+* ^context[0].type = #element
+* ^context[0].expression = "MedicationRequest"
+* ^context[1].type = #element
+* ^context[1].expression = "Procedure"
 * value[x] only CodeableConcept
 * valueCodeableConcept from TreatmentTerminationReasonVS (required)
 
@@ -16,9 +24,16 @@ Extension: Laterality
 Id:  mcode-laterality
 Title: "Laterality"
 Description: "Body side of the body location, if needed to distinguish from a similar location on the other side of the body."
+* ^context[0].type = #element
+* ^context[0].expression = "Specimen.collection.bodySite"
+* ^context[1].type = #element
+* ^context[1].expression = "Procedure.bodySite"
+* ^context[2].type = #element
+* ^context[2].expression = "Condition.bodySite"
+* ^context[3].type = #element
+* ^context[3].expression = "Observation.bodySite"
 * value[x] only CodeableConcept
 * valueCodeableConcept from LateralityVS (required)
-
 /*
 Extension: AnatomicalOrientation
 Id:  mcode-anatomical-orientation

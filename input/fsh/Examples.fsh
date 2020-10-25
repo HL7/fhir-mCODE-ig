@@ -41,7 +41,7 @@ Description: "mCODE Example for Cancer Disease Status"
 * effectiveDateTime = "2019-04-01"
 * performer = Reference(mCODEPractitionerExample01)
 * valueCodeableConcept = SCT#268910001 "Patient's condition improved (finding)"
-
+/*
 Instance: mCODECancerComorbidityAssessmentExample01
 InstanceOf: CancerComorbidityAssessment
 Description: "mCODE Example for Cancer Comorbidity Assessment"
@@ -65,7 +65,7 @@ Description: "mCODE Example for Cancer Comorbidity Assessment"
 * component[hypothyroidism].valueCodeableConcept = SCT#261665006 "Unknown (qualifier value)"
 * component[cardiacArrhythmia].extension[conditionCode].valueCodeableConcept = SCT#82838007 "Irregular tachycardia (disorder)"
 * component[depression].extension[conditionReference].valueReference = Reference(mCODEDepressionExample01)
-
+*/
 Instance: mCODEPatientExample01
 InstanceOf: CancerPatient
 Description: "mCODE Example for Patient"

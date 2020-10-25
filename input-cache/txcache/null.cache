@@ -42,22 +42,3 @@ v: {
   "error" : "The code system \"\" is not known (encountered paired with code = \"problem-list-item\"); The code provided (#problem-list-item) is not valid in the value set 'USCoreConditionCategoryCodes' (from http://tx.fhir.org/r4)"
 }
 -------------------------------------------------------------------------------------
-{"code" : {
-  "coding" : [{
-    "code" : "H",
-    "display" : "High"
-  }]
-}, "valueSet" :{
-  "resourceType" : "ValueSet",
-  "compose" : {
-    "include" : [{
-      "system" : "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"
-    }]
-  }
-}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"CHECK_MEMERSHIP_ONLY"}####
-v: {
-  "display" : "",
-  "severity" : "error",
-  "error" : "The code system \"\" is not known (encountered paired with code = \"H\"); The code provided (#H) is not valid in the value set 'ObservationInterpretationCodes' (from http://tx.fhir.org/r4)"
-}
--------------------------------------------------------------------------------------

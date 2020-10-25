@@ -195,3 +195,14 @@ e: {
   "error" : ""
 }
 -------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://varnomen.hgvs.org",
+  "code" : "NG_005905.2:g.126148_126152GTAAA[1]",
+  "display" : "NG_005905.2:g.126148_126152GTAAA[1]"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "Expected \"del\" (at char 27), (line:1, col:28); The code \"NG_005905.2:g.126148_126152GTAAA[1]\" is not valid in the system http://varnomen.hgvs.org; The code provided (http://varnomen.hgvs.org#NG_005905.2:g.126148_126152GTAAA[1]) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4)"
+}
+-------------------------------------------------------------------------------------

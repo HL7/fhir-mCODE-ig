@@ -5,10 +5,6 @@ Description: "General structure for capturing assessment of comorbid conditions 
 * ^abstract = true
 * focus only Reference(Condition)
 * code = LNC#78923-0  // Comorbid condition panel
-* component ^slicing.discriminator.type = #pattern
-* component ^slicing.discriminator.path = "code"
-* component ^slicing.rules = #open
-* component ^slicing.description = "Slice based on the component.code pattern"
 * component.value[x] from PresentAbsentUnknownVS (required)
 * component.extension contains conditionCode 0..* and conditionReference 0..*
 * component.extension[conditionCode].value[x] only CodeableConcept
@@ -20,6 +16,10 @@ Id: mcode-cancer-comorbidity-assessment
 Description: "Comorbid conditions for a cancer condition, using Elixhauser comorbidity categories."
 * ^abstract = false
 * focus only Reference(PrimaryCancerCondition)
+* component ^slicing.discriminator.type = #pattern
+* component ^slicing.discriminator.path = "code"
+* component ^slicing.rules = #open
+* component ^slicing.description = "Slice based on the component.code pattern"
 * component and component.extension[conditionCode] and component.extension[conditionReference] MS
 * component contains 
     alcoholAbuse 0..1 and
@@ -108,7 +108,6 @@ Description: "Comorbid conditions for a cancer condition, using Elixhauser comor
 * component[ulcer].extension[conditionCode].valueCodeableConcept from ElixhauserUlcerVS (extensible)
 * component[valvularDisease].extension[conditionCode].valueCodeableConcept from ElixhauserValvularDiseaseVS (extensible)
 * component[weightLoss].extension[conditionCode].valueCodeableConcept from ElixhauserWeightLossVS (extensible)
-
 
 
 /*   A previous modeling attempt I'm keeping around a while, just in case

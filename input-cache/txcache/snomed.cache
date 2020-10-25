@@ -64890,6 +64890,10 @@ e: {
 e: {
   "valueSet" : {
   "resourceType" : "ValueSet",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set contains 5 concepts</p><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion based on SNOMED CT International edition 31-Jul 2020</p><p>All codes from system <a href=\"http://hl7.org/fhir/R4/codesystem-snomedct.html\"><code>http://snomed.info/sct</code></a></p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-363679005\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=363679005\">363679005</a></td><td>Imaging (procedure)</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-252416005\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=252416005\">252416005</a></td><td>Histopathology test (procedure)</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-711015009\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=711015009\">711015009</a></td><td>Assessment of symptom control (procedure)</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-5880005\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=5880005\">5880005</a></td><td>Physical examination procedure (procedure)</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-386344002\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=386344002\">386344002</a></td><td>Laboratory data interpretation (procedure)</td><td/></tr></table></div>"
+  },
   "status" : "active",
   "expansion" : {
     "identifier" : "urn:uuid:5ab04d57-ebe7-43bb-8ae4-1efecf0b072f",
@@ -65591,6 +65595,10 @@ e: {
 e: {
   "valueSet" : {
   "resourceType" : "ValueSet",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set contains 162 concepts</p><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion based on SNOMED CT International edition 31-Jul 2020</p><p>All codes from system <a href=\"http://hl7.org/fhir/R4/codesystem-snomedct.html\"><code>http://snomed.info/sct</code></a></p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-174337000\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=174337000\">174337000</a></td><td>Destruction of lesion of anus</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-49264007\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=49264007\">49264007</a></td><td>Excision of lesion of anus</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-119894003\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=119894003\">119894003</a></td><td>Anus excision</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-24265000\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=24265000\">24265000</a></td><td>Operation on anus [NOS]</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-48185007\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=48185007\">48185007</a></td><td>Destruction of lesion of urinary bladder</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-108034003\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=108034003\">108034003</a></td><td>Urinary bladder excision</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-112902005\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=112902005\">112902005</a></td><td>Partial urinary cystectomy</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-63016009\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=63016009\">63016009</a></td><td>Total resection of urinary bladder</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-64063003\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=64063003\">64063003</a></td><td>Radical Cystectomy</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-287716007\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=287716007\">287716007</a></td><td>Urinary bladder reconstruction</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-52224004\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=52224004\">52224004</a></td><td>Pelvic exenteration</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-287723008\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=287723008\">287723008</a></td><td>Cystectomy - dome of bladder</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-14861000\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=14861000\">14861000</a></td><td>Operation on bladder [NOS]</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-18734000\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=18734000\">18734000</a></td><td>Local destruction of lesion of joint</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-68471001\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=68471001\">68471001</a></td><td>Excision of lesion of bone</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-112705001\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=112705001\">112705001</a></td><td>Musculoskeletal system amputation</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-57168000\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=57168000\">57168000</a></td><td>Operation on bone [NOS]</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-68829005\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=68829005\">68829005</a></td><td>Destruction of lesion of breast</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-64368001\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=64368001\">64368001</a></td><td>Partial mastectomy</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-70183006\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=70183006\">70183006</a></td><td>Subcutaneous mastectomy</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-172043006\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=172043006\">172043006</a></td><td>Simple mastectomy</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-406505007\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=406505007\">406505007</a></td><td>Modified radical mastectomy</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-384723003\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=384723003\">384723003</a></td><td>Radical mastectomy</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-359740003\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=359740003\">359740003</a></td><td>Extended radical mastectomy</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-69031006\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=69031006\">69031006</a></td><td>Excision of breast tissue</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-392090004\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=392090004\">392090004</a></td><td>Operation on breast [NOS]</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-31197001\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=31197001\">31197001</a></td><td>Destruction of lesion of cervix</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-36384005\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=36384005\">36384005</a></td><td>Excision of lesion of uterine cervix</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-116140006\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=116140006\">116140006</a></td><td>Total hysterctomy</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-236886002\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=236886002\">236886002</a></td><td>Hysterectomy</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-116142003\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=116142003\">116142003</a></td><td>Radical hysterectomy</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-406044008\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=406044008\">406044008</a></td><td>Pelvic Exenteration</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-112916000\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=112916000\">112916000</a></td><td>Operation on cervix [NOS]</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-48659009\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=48659009\">48659009</a></td><td>Destruction of lesion of uterus</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-236884004\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=236884004\">236884004</a></td><td>Excision of uterine polyp</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-387643005\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=387643005\">387643005</a></td><td>Partial hysterectomy</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-79876008\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=79876008\">79876008</a></td><td>Operation on uterus  [NOS]</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-18243008\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=18243008\">18243008</a></td><td>Destruction of lesion of esophagus</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-386553005\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=386553005\">386553005</a></td><td>Excision of esophageal lesion</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-3980006\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=3980006\">3980006</a></td><td>Subtotal resection of esophagus</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-14072009\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=14072009\">14072009</a></td><td>Total esophagectomy</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-76443003\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=76443003\">76443003</a></td><td>Total esophagectomy with gastropharyngostomy</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-45900003\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=45900003\">45900003</a></td><td>Esophagectomy</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-48114000\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=48114000\">48114000</a></td><td>Operation on esophagus [NOS]</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-52785004\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=52785004\">52785004</a></td><td>Destruction of lesion of kidney</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-69762004\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=69762004\">69762004</a></td><td>Excision of lesion of kidney</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-81516001\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=81516001\">81516001</a></td><td>Partial nephrectomy</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-175905003\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=175905003\">175905003</a></td><td>Total nephrectomy</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-116033007\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=116033007\">116033007</a></td><td>Radical nephrectomy</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-175898006\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=175898006\">175898006</a></td><td>Kidney operation  [NOS]</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-78923006\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=78923006\">78923006</a></td><td>Destruction of lesion of larynx</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-88623004\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=88623004\">88623004</a></td><td>Excision of lesion of larynx</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-80513001\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=80513001\">80513001</a></td><td>Partial laryngectomy</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-66478002\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=66478002\">66478002</a></td><td>Total laryngectomy</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-60041003\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=60041003\">60041003</a></td><td>Laryngopharyngectomy</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-72791001\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=72791001\">72791001</a></td><td>Laryngectomy</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-387636004\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=387636004\">387636004</a></td><td>Operation on larynx [NOS]</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-5415002\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=5415002\">5415002</a></td><td>Destruction of lesion of liver</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-174431000\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=174431000\">174431000</a></td><td>Wedge resecton of liver</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-85946004\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=85946004\">85946004</a></td><td>Lobectomy of liver</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-15257006\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=15257006\">15257006</a></td><td>Lobectomy of liver with partial exivision of adjacent lobes</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-107963000\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=107963000\">107963000</a></td><td>Liver excision</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-13580001000004101\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=13580001000004101\">13580001000004101</a></td><td>Excision of tumor of liver</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-27280000\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=27280000\">27280000</a></td><td>Liver transplant w/recipient hepatectomy</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-4974007\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=4974007\">4974007</a></td><td>Operation on liver [NOS]</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-450608000\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=450608000\">450608000</a></td><td>Destruction of lesion of lung</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-119746007\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=119746007\">119746007</a></td><td>Lung excision</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-173170008\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=173170008\">173170008</a></td><td>Bilobectomy of lung</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-359623004\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=359623004\">359623004</a></td><td>Total lobectomy of lung</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-49795001\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=49795001\">49795001</a></td><td>Total pneumonectomy</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-91596000\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=91596000\">91596000</a></td><td>Complete excision of lung with mediastinal dissection</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-230859007\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=230859007\">230859007</a></td><td>Destruction of brain tumor</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-230810008\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=230810008\">230810008</a></td><td>Excision of tumor of brain meninges</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-446103006\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=446103006\">446103006</a></td><td>Partial excision of lesion of brain</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-17537007\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=17537007\">17537007</a></td><td>Resection of spinal cord</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-447115003\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=447115003\">447115003</a></td><td>Total excision of lesion of brain tissue</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-67402009\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=67402009\">67402009</a></td><td>Partial lobectomy of brain</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-171443003\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=171443003\">171443003</a></td><td>Total lobectomy of brain</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-70586009\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=70586009\">70586009</a></td><td>Operation on brain [NOS]</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-177018009\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=177018009\">177018009</a></td><td>Open destruction of lesion of ovary</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-35887003\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=35887003\">35887003</a></td><td>Excision of lesion of ovary</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-116028008\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=116028008\">116028008</a></td><td>Salpingo-oophorectomy</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-29827000\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=29827000\">29827000</a></td><td>Bilateral salpingectomy w/oophorectomy</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-78698008\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=78698008\">78698008</a></td><td>Unilateral salpingo-oophorectomy</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-446526009\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=446526009\">446526009</a></td><td>Debulking of neoplasm of ovary</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-55853002\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=55853002\">55853002</a></td><td>Pelvic exenteration, female</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-64887002\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=64887002\">64887002</a></td><td>Operation on ovary [NOS]</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-414158004\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=414158004\">414158004</a></td><td>Excisional biopsy of pancreas</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-287847009\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=287847009\">287847009</a></td><td>Partial pancreatectomy</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-69036001\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=69036001\">69036001</a></td><td>Total pancreaticoduodenectomy</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-9524002\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=9524002\">9524002</a></td><td>Total pancreatectomy</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-265459006\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=265459006\">265459006</a></td><td>Pancreaticoduodenectomy with distal gastrectomy</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-33149006\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=33149006\">33149006</a></td><td>Pancreatectomy</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-29630005\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=29630005\">29630005</a></td><td>Operation on pancreas [NOS]</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-10522005\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=10522005\">10522005</a></td><td>Destruction of lesion of salivary gland</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-37804007\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=37804007\">37804007</a></td><td>Excision of lesion of parotid gland</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-81870009\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=81870009\">81870009</a></td><td>Parotidectomy</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-11150009\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=11150009\">11150009</a></td><td>Partial parotidectomy</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-13358001\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=13358001\">13358001</a></td><td>Complete parotidectomy</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-173486005\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=173486005\">173486005</a></td><td>Radical excision of parotid gland</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-58456002\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=58456002\">58456002</a></td><td>Operation on parotid gland [NOS]</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-107923001\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=107923001\">107923001</a></td><td>Pharynx destructive procedure</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-3786007\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=3786007\">3786007</a></td><td>Excision of lesion of pharynx</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-51265002\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=51265002\">51265002</a></td><td>Pharyngectomy</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-232546000\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=232546000\">232546000</a></td><td>Total pharyngolaryngectomy</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-303621003\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=303621003\">303621003</a></td><td>Total pharyngectomy</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-23136006\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=23136006\">23136006</a></td><td>Operation on pharynx [NOS]</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-450514003\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=450514003\">450514003</a></td><td>Endoscopic destruction of lesion of prostate</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-90199006\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=90199006\">90199006</a></td><td>Transurethral prostactomy</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-30426000\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=30426000\">30426000</a></td><td>Subtotal prostactomy</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-26294005\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=26294005\">26294005</a></td><td>Radical prostatectomy</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-65111004\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=65111004\">65111004</a></td><td>Pelvic exenteration, male</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-90470006\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=90470006\">90470006</a></td><td>Prostactomy</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-741007\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=741007\">741007</a></td><td>Operation on prostate [NOS]</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-177975003\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=177975003\">177975003</a></td><td>Destruction of lesion of mesentery of colon</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-87279008\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=87279008\">87279008</a></td><td>Excision of lesion of colon</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-43075005\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=43075005\">43075005</a></td><td>Partial resection of colon</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-307656000\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=307656000\">307656000</a></td><td>Subtotal colectomy with ileosigmoid anastomosis</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-26390003\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=26390003\">26390003</a></td><td>Total  colectomy</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-174059005\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=174059005\">174059005</a></td><td>Excision of colon and rectum</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-82874003\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=82874003\">82874003</a></td><td>Operation on colon [NOS]</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-52838002\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=52838002\">52838002</a></td><td>Destruction of lesion of rectum</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-79764004\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=79764004\">79764004</a></td><td>Excision of lesion of rectum</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-82035006\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=82035006\">82035006</a></td><td>Resection of polyp</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-116237003\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=116237003\">116237003</a></td><td>Excisional biopsy of lesion of rectum by transanal approach</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-307009004\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=307009004\">307009004</a></td><td>Wedge resection of rectum</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-86789002\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=86789002\">86789002</a></td><td>Abdominoperineal pull through procedure</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-235364003\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=235364003\">235364003</a></td><td>Total Proctectomy</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-118841000\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=118841000\">118841000</a></td><td>Operation on rectosigmoid [NOS]</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-74971002\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=74971002\">74971002</a></td><td>Operation on rectum [NOS]</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-87031008\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=87031008\">87031008</a></td><td>Destruction of lesion of skin</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-67373001\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=67373001\">67373001</a></td><td>Local excision of skin</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-35646002\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=35646002\">35646002</a></td><td>Excision of lesion of skin</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-177302005\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=177302005\">177302005</a></td><td>Wide excision of skin lesion</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-81723002\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=81723002\">81723002</a></td><td>Amputation</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-392011001\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=392011001\">392011001</a></td><td>Operation on skin [NOS]</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-31468007\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=31468007\">31468007</a></td><td>Destruction of lesion of spleen</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-67097003\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=67097003\">67097003</a></td><td>Partial splenectomy</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-174776001\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=174776001\">174776001</a></td><td>Total splenectomy</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-234319005\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=234319005\">234319005</a></td><td>Splenectomy</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-59300005\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=59300005\">59300005</a></td><td>Operation on spleen [NOS]</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-45189000\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=45189000\">45189000</a></td><td>Destruction of lesion of stomach</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-32327002\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=32327002\">32327002</a></td><td>Excision of lesion of stomach</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-49209004\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=49209004\">49209004</a></td><td>Subtotal gastrectomy</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-26452005\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=26452005\">26452005</a></td><td>Total gastrectomy</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-24431004\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=24431004\">24431004</a></td><td>Esophagoduodenostomy w/complete gastrectomy</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-287816003\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=287816003\">287816003</a></td><td>Radical gastrectomy</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-438338008\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=438338008\">438338008</a></td><td>Total gastrecomy w/extended lymphadencectomy</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-53442002\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=53442002\">53442002</a></td><td>Excision of stomach structure</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-16453004\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=16453004\">16453004</a></td><td>Operation on stomach [NOS]</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-12807004\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=12807004\">12807004</a></td><td>Destruction of lesion of testis</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-176430002\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=176430002\">176430002</a></td><td>Excision of lesion of testis</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-120001005\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=120001005\">120001005</a></td><td>Testis excision</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-396692006\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=396692006\">396692006</a></td><td>Radical Orchiectomy</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-236334001\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=236334001\">236334001</a></td><td>Total Orchiectomy</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-71657006\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=71657006\">71657006</a></td><td>Operation on testis [NOS]</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-20470003\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=20470003\">20470003</a></td><td>Destructive procedure on thyroid gland</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-171988007\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=171988007\">171988007</a></td><td>Excision of lesion of thyroid gland</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-13619001\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=13619001\">13619001</a></td><td>Thyroidectomy</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-24443003\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=24443003\">24443003</a></td><td>Total thyroidectomy</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-30956003\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=30956003\">30956003</a></td><td>Subtotal thyroidectomy</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-15463004\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=15463004\">15463004</a></td><td>Operation on thyroid gland [NOS]</td><td/></tr></table></div>"
+  },
   "status" : "active",
   "expansion" : {
     "identifier" : "urn:uuid:e031cef7-6519-4989-b2d7-cb5124655b3b",
@@ -66441,6 +66449,10 @@ e: {
 e: {
   "valueSet" : {
   "resourceType" : "ValueSet",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set contains 3 concepts</p><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion based on SNOMED CT International edition 31-Jul 2020</p><p>All codes from system <a href=\"http://hl7.org/fhir/R4/codesystem-snomedct.html\"><code>http://snomed.info/sct</code></a></p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-444256004\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=444256004\">444256004</a></td><td>American Joint Commission on Cancer, Cancer Staging Manual, 6th edition neoplasm staging system (tumor staging)</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-443830009\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=443830009\">443830009</a></td><td>American Joint Commission on Cancer, Cancer Staging Manual, 7th edition neoplasm staging system (tumor staging)</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-258235000\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=258235000\">258235000</a></td><td>International Union Against Cancer (tumor staging)</td><td/></tr></table></div>"
+  },
   "status" : "active",
   "expansion" : {
     "identifier" : "urn:uuid:16bef376-8638-40e9-a5ff-e276d53a8715",
@@ -66504,6 +66516,10 @@ e: {
 e: {
   "valueSet" : {
   "resourceType" : "ValueSet",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set contains 5 concepts</p><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion based on SNOMED CT International edition 31-Jul 2020</p><p>All codes from system <a href=\"http://hl7.org/fhir/R4/codesystem-snomedct.html\"><code>http://snomed.info/sct</code></a></p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-260415000\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=260415000\">260415000</a></td><td>Not detected (qualifier)</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-268910001\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=268910001\">268910001</a></td><td>Patient's condition improved (finding)</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-359746009\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=359746009\">359746009</a></td><td>Patient's condition stable (finding)</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-271299001\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=271299001\">271299001</a></td><td>Patient's condition worsened (finding)</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-709137006\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=709137006\">709137006</a></td><td>Patient condition undetermined (finding)</td><td/></tr></table></div>"
+  },
   "status" : "active",
   "expansion" : {
     "identifier" : "urn:uuid:53c7be4d-99dd-45c3-bfac-413051c69a9e",
@@ -111073,6 +111089,1259 @@ e: {
       "system" : "http://snomed.info/sct",
       "code" : "309846006",
       "display" : "Treatment not available"
+    }]
+  }
+},
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://snomed.info/sct",
+  "code" : "385798007",
+  "display" : "Radiation therapy care (regime/therapy)"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "Radiation therapy care (regime/therapy)",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://snomed.info/sct",
+  "code" : "353431000119107"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://snomed.info/sct",
+      "concept" : [{
+        "code" : "128462008",
+        "display" : "Secondary malignant neoplastic disease (disorder)"
+      }]
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code provided (http://snomed.info/sct#353431000119107) is not valid (from http://tx.fhir.org/r4)"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://snomed.info/sct",
+  "code" : "353431000119107",
+  "display" : "Primary malignant neoplasm of female left breast (disorder)"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://snomed.info/sct",
+      "concept" : [{
+        "code" : "128462008",
+        "display" : "Secondary malignant neoplastic disease (disorder)"
+      }]
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "filter" : [{
+        "property" : "concept",
+        "op" : "is-a",
+        "value" : "128462008"
+      }]
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/icd-10-cm",
+      "concept" : [{
+        "code" : "C7B00",
+        "display" : "Secondary carcinoid tumors, unspecified site"
+      },
+      {
+        "code" : "C7B01",
+        "display" : "Secondary carcinoid tumors of distant lymph nodes"
+      },
+      {
+        "code" : "C7B02",
+        "display" : "Secondary carcinoid tumors of liver"
+      },
+      {
+        "code" : "C7B03",
+        "display" : "Secondary carcinoid tumors of bone"
+      },
+      {
+        "code" : "C7B04",
+        "display" : "Secondary carcinoid tumors of peritoneum"
+      },
+      {
+        "code" : "C7B09",
+        "display" : "Secondary carcinoid tumors of other sites"
+      },
+      {
+        "code" : "C7B1",
+        "display" : "Secondary Merkel cell carcinoma"
+      },
+      {
+        "code" : "C7B8",
+        "display" : "Other secondary neuroendocrine tumors"
+      },
+      {
+        "code" : "C770",
+        "display" : "Secondary and unspecified malignant neoplasm of lymph nodes of head, face and neck"
+      },
+      {
+        "code" : "C771",
+        "display" : "Secondary and unspecified malignant neoplasm of intrathoracic lymph nodes"
+      },
+      {
+        "code" : "C772",
+        "display" : "Secondary and unspecified malignant neoplasm of intra-abdominal lymph nodes"
+      },
+      {
+        "code" : "C773",
+        "display" : "Secondary and unspecified malignant neoplasm of axilla and upper limb lymph nodes"
+      },
+      {
+        "code" : "C774",
+        "display" : "Secondary and unspecified malignant neoplasm of inguinal and lower limb lymph nodes"
+      },
+      {
+        "code" : "C775",
+        "display" : "Secondary and unspecified malignant neoplasm of intrapelvic lymph nodes"
+      },
+      {
+        "code" : "C778",
+        "display" : "Secondary and unspecified malignant neoplasm of lymph nodes of multiple regions"
+      },
+      {
+        "code" : "C779",
+        "display" : "Secondary and unspecified malignant neoplasm of lymph node, unspecified"
+      },
+      {
+        "code" : "C7800",
+        "display" : "Secondary malignant neoplasm of unspecified lung"
+      },
+      {
+        "code" : "C7801",
+        "display" : "Secondary malignant neoplasm of right lung"
+      },
+      {
+        "code" : "C7802",
+        "display" : "Secondary malignant neoplasm of left lung"
+      },
+      {
+        "code" : "C781",
+        "display" : "Secondary malignant neoplasm of mediastinum"
+      },
+      {
+        "code" : "C782",
+        "display" : "Secondary malignant neoplasm of pleura"
+      },
+      {
+        "code" : "C7830",
+        "display" : "Secondary malignant neoplasm of unspecified respiratory organ"
+      },
+      {
+        "code" : "C7839",
+        "display" : "Secondary malignant neoplasm of other respiratory organs"
+      },
+      {
+        "code" : "C784",
+        "display" : "Secondary malignant neoplasm of small intestine"
+      },
+      {
+        "code" : "C785",
+        "display" : "Secondary malignant neoplasm of large intestine and rectum"
+      },
+      {
+        "code" : "C786",
+        "display" : "Secondary malignant neoplasm of retroperitoneum and peritoneum"
+      },
+      {
+        "code" : "C787",
+        "display" : "Secondary malignant neoplasm of liver and intrahepatic bile duct"
+      },
+      {
+        "code" : "C7880",
+        "display" : "Secondary malignant neoplasm of unspecified digestive organ"
+      },
+      {
+        "code" : "C7889",
+        "display" : "Secondary malignant neoplasm of other digestive organs"
+      },
+      {
+        "code" : "C7900",
+        "display" : "Secondary malignant neoplasm of unspecified kidney and renal pelvis"
+      },
+      {
+        "code" : "C7901",
+        "display" : "Secondary malignant neoplasm of right kidney and renal pelvis"
+      },
+      {
+        "code" : "C7902",
+        "display" : "Secondary malignant neoplasm of left kidney and renal pelvis"
+      },
+      {
+        "code" : "C7910",
+        "display" : "Secondary malignant neoplasm of unspecified urinary organs"
+      },
+      {
+        "code" : "C7911",
+        "display" : "Secondary malignant neoplasm of bladder"
+      },
+      {
+        "code" : "C7919",
+        "display" : "Secondary malignant neoplasm of other urinary organs"
+      },
+      {
+        "code" : "C792",
+        "display" : "Secondary malignant neoplasm of skin"
+      },
+      {
+        "code" : "C7931",
+        "display" : "Secondary malignant neoplasm of brain"
+      },
+      {
+        "code" : "C7932",
+        "display" : "Secondary malignant neoplasm of cerebral meninges"
+      },
+      {
+        "code" : "C7940",
+        "display" : "Secondary malignant neoplasm of unspecified part of nervous system"
+      },
+      {
+        "code" : "C7949",
+        "display" : "Secondary malignant neoplasm of other parts of nervous system"
+      },
+      {
+        "code" : "C7951",
+        "display" : "Secondary malignant neoplasm of bone"
+      },
+      {
+        "code" : "C7952",
+        "display" : "Secondary malignant neoplasm of bone marrow"
+      },
+      {
+        "code" : "C7960",
+        "display" : "Secondary malignant neoplasm of unspecified ovary"
+      },
+      {
+        "code" : "C7961",
+        "display" : "Secondary malignant neoplasm of right ovary"
+      },
+      {
+        "code" : "C7962",
+        "display" : "Secondary malignant neoplasm of left ovary"
+      },
+      {
+        "code" : "C7970",
+        "display" : "Secondary malignant neoplasm of unspecified adrenal gland"
+      },
+      {
+        "code" : "C7971",
+        "display" : "Secondary malignant neoplasm of right adrenal gland"
+      },
+      {
+        "code" : "C7972",
+        "display" : "Secondary malignant neoplasm of left adrenal gland"
+      },
+      {
+        "code" : "C7981",
+        "display" : "Secondary malignant neoplasm of breast"
+      },
+      {
+        "code" : "C7982",
+        "display" : "Secondary malignant neoplasm of genital organs"
+      },
+      {
+        "code" : "C7989",
+        "display" : "Secondary malignant neoplasm of other specified sites"
+      },
+      {
+        "code" : "C799",
+        "display" : "Secondary malignant neoplasm of unspecified site"
+      },
+      {
+        "code" : "C800",
+        "display" : "Disseminated malignant neoplasm, unspecified"
+      }]
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK"}####
+v: {
+  "display" : "Primary malignant neoplasm of female left breast (disorder)",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://snomed.info/sct",
+  "code" : "353431000119107"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://snomed.info/sct",
+      "concept" : [{
+        "code" : "160245001"
+      }]
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code provided (http://snomed.info/sct#353431000119107) is not valid (from http://tx.fhir.org/r4)"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://snomed.info/sct",
+  "code" : "353431000119107"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://snomed.info/sct",
+      "filter" : [{
+        "property" : "concept",
+        "op" : "is-a",
+        "value" : "404684003"
+      }]
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "Primary malignant neoplasm of female left breast (disorder)",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://snomed.info/sct",
+  "code" : "353431000119107",
+  "display" : "Primary malignant neoplasm of female left breast (disorder)"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://snomed.info/sct",
+      "concept" : [{
+        "code" : "160245001"
+      }]
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "filter" : [{
+        "property" : "concept",
+        "op" : "is-a",
+        "value" : "404684003"
+      }]
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "filter" : [{
+        "property" : "concept",
+        "op" : "is-a",
+        "value" : "243796009"
+      }]
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/icd-10-cm"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/icd-9-cm"
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK"}####
+v: {
+  "display" : "Primary malignant neoplasm of female left breast (disorder)",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://snomed.info/sct",
+  "code" : "268910001",
+  "display" : "Patient's condition improved (finding)"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "Patient's condition improved",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://snomed.info/sct",
+  "code" : "64368001"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://snomed.info/sct",
+      "filter" : [{
+        "property" : "concept",
+        "op" : "is-a",
+        "value" : "71388002"
+      }]
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "Partial mastectomy",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://snomed.info/sct",
+  "code" : "64368001",
+  "display" : "Partial mastectomy (procedure)"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://www.ama-assn.org/go/cpt"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "filter" : [{
+        "property" : "concept",
+        "op" : "is-a",
+        "value" : "71388002"
+      }]
+    },
+    {
+      "system" : "urn:oid:2.16.840.1.113883.6.285"
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK"}####
+v: {
+  "display" : "Partial mastectomy",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://snomed.info/sct",
+  "code" : "385798007"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://snomed.info/sct",
+      "filter" : [{
+        "property" : "concept",
+        "op" : "is-a",
+        "value" : "71388002"
+      }]
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "Radiation therapy care (regime/therapy)",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://snomed.info/sct",
+  "code" : "385798007",
+  "display" : "Radiation therapy care (regime/therapy)"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://www.ama-assn.org/go/cpt"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "filter" : [{
+        "property" : "concept",
+        "op" : "is-a",
+        "value" : "71388002"
+      }]
+    },
+    {
+      "system" : "urn:oid:2.16.840.1.113883.6.285"
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK"}####
+v: {
+  "display" : "Radiation therapy care (regime/therapy)",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://snomed.info/sct",
+  "code" : "5880005"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://snomed.info/sct",
+      "concept" : [{
+        "code" : "444256004",
+        "display" : "American Joint Commission on Cancer, Cancer Staging Manual, 6th edition neoplasm staging system (tumor staging)"
+      },
+      {
+        "code" : "443830009",
+        "display" : "American Joint Commission on Cancer, Cancer Staging Manual, 7th edition neoplasm staging system (tumor staging)"
+      },
+      {
+        "code" : "258235000",
+        "display" : "International Union Against Cancer (tumor staging)"
+      }]
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code provided (http://snomed.info/sct#5880005) is not valid (from http://tx.fhir.org/r4)"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://snomed.info/sct",
+  "code" : "5880005",
+  "display" : "Physical examination procedure (procedure)"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://snomed.info/sct",
+      "concept" : [{
+        "code" : "444256004",
+        "display" : "American Joint Commission on Cancer, Cancer Staging Manual, 6th edition neoplasm staging system (tumor staging)"
+      },
+      {
+        "code" : "443830009",
+        "display" : "American Joint Commission on Cancer, Cancer Staging Manual, 7th edition neoplasm staging system (tumor staging)"
+      },
+      {
+        "code" : "258235000",
+        "display" : "International Union Against Cancer (tumor staging)"
+      }]
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK"}####
+v: {
+  "display" : "Clinical examination",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://snomed.info/sct",
+  "code" : "5880005"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "Clinical examination",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://snomed.info/sct",
+  "code" : "47625008",
+  "display" : "Intravenous use"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "Intravenous route",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://snomed.info/sct",
+  "code" : "359615001",
+  "display" : "Partial lobectomy of lung (procedure)"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "Partial lobectomy of lung",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : false, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://snomed.info/sct",
+      "filter" : [{
+        "property" : "concept",
+        "op" : "is-a",
+        "value" : "111552007"
+      }]
+    }]
+  }
+}}####
+e: {
+  "valueSet" : {
+  "resourceType" : "ValueSet",
+  "status" : "active",
+  "expansion" : {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/valueset-unclosed",
+      "valueBoolean" : true
+    }],
+    "identifier" : "urn:uuid:8819c261-5f44-4d93-a3e4-7b31dcb937d5",
+    "timestamp" : "2020-10-25T03:55:39.784Z",
+    "parameter" : [{
+      "name" : "limitedExpansion",
+      "valueBoolean" : true
+    },
+    {
+      "name" : "excludeNested",
+      "valueBoolean" : true
+    },
+    {
+      "name" : "version",
+      "valueString" : "http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20200731"
+    }],
+    "contains" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "111552007",
+      "display" : "Diabetes mellitus without complication"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "313435000",
+      "display" : "Type I diabetes mellitus without complication"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "313436004",
+      "display" : "Type 2 diabetes mellitus without complication"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "1481000119100",
+      "display" : "Diabetes mellitus type 2 without retinopathy"
+    }]
+  }
+},
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : false, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://snomed.info/sct",
+      "filter" : [{
+        "property" : "concept",
+        "op" : "is-a",
+        "value" : "73211009"
+      }]
+    }]
+  }
+}}####
+e: {
+  "valueSet" : {
+  "resourceType" : "ValueSet",
+  "status" : "active",
+  "expansion" : {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/valueset-unclosed",
+      "valueBoolean" : true
+    }],
+    "identifier" : "urn:uuid:be6e99e2-5f8a-4b75-bc43-470601927844",
+    "timestamp" : "2020-10-25T03:55:40.159Z",
+    "parameter" : [{
+      "name" : "limitedExpansion",
+      "valueBoolean" : true
+    },
+    {
+      "name" : "excludeNested",
+      "valueBoolean" : true
+    },
+    {
+      "name" : "version",
+      "valueString" : "http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20200731"
+    }],
+    "contains" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "73211009",
+      "display" : "Diabetes mellitus"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "2751001",
+      "display" : "Fibrocalculous pancreatic diabetes"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "4783006",
+      "display" : "Maternal diabetes mellitus with hypoglycemia affecting fetus OR newborn"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "5368009",
+      "display" : "Drug-induced diabetes mellitus"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "5969009",
+      "display" : "Diabetes mellitus associated with genetic syndrome"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "8801005",
+      "display" : "Secondary diabetes mellitus"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "11687002",
+      "display" : "Gestational diabetes mellitus"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "23045005",
+      "display" : "Insulin dependent diabetes mellitus type IA"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "24203005",
+      "display" : "Extreme insulin resistance with acanthosis nigricans, hirsutism AND abnormal insulin receptors"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "28032008",
+      "display" : "Insulin dependent diabetes mellitus type IB"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "33559001",
+      "display" : "Pineal hyperplasia AND diabetes mellitus syndrome"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "42954008",
+      "display" : "Diabetes mellitus associated with receptor abnormality"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "44054006",
+      "display" : "Diabetes mellitus type II"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "46635009",
+      "display" : "Diabetes mellitus type I"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "46894009",
+      "display" : "Gestational diabetes mellitus, class A>2<"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "49817004",
+      "display" : "Neonatal diabetes mellitus"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "51002006",
+      "display" : "Diabetes mellitus associated with pancreatic disease"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "57886004",
+      "display" : "Protein-deficient diabetes mellitus"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "59079001",
+      "display" : "Diabetes mellitus associated with hormonal etiology"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "70694009",
+      "display" : "Diabetes mellitus AND insipidus with optic atrophy AND deafness"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "75022004",
+      "display" : "Gestational diabetes mellitus, class A>1<"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "75524006",
+      "display" : "Malnutrition related diabetes mellitus"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "75682002",
+      "display" : "Diabetes mellitus due to insulin receptor antibodies"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "76751001",
+      "display" : "Diabetes mellitus in mother complicating pregnancy, childbirth AND/OR puerperium"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "81531005",
+      "display" : "Diabetes mellitus type 2 in obese"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "91352004",
+      "display" : "Insulinopathy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "111307005",
+      "display" : "Leprechaunism syndrome"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "111552007",
+      "display" : "Diabetes mellitus without complication"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "123763000",
+      "display" : "Houssay's syndrome"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "127012008",
+      "display" : "Lipoatrophic diabetes"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "190368000",
+      "display" : "Type I diabetes mellitus with ulcer"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "190372001",
+      "display" : "Type I diabetes mellitus maturity onset"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "190389009",
+      "display" : "Type 2 diabetes mellitus with ulcer"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "190407009",
+      "display" : "Malnutrition-related diabetes mellitus with renal complications"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "190410002",
+      "display" : "Malnutrition-related diabetes mellitus with peripheral circulatory complications"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "190412005",
+      "display" : "Malnutrition-related diabetes mellitus without complications"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "190416008",
+      "display" : "Steroid-induced diabetes mellitus without complication"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "190447002",
+      "display" : "Steroid-induced diabetes"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "199223000",
+      "display" : "Diabetes mellitus during pregnancy, childbirth and the puerperium"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "199225007",
+      "display" : "Diabetes mellitus during pregnancy - baby delivered"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "199226008",
+      "display" : "Diabetes mellitus in the puerperium - baby delivered during current episode of care"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "199227004",
+      "display" : "Diabetes mellitus during pregnancy - baby not yet delivered"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "199228009",
+      "display" : "Diabetes mellitus in the puerperium - baby delivered during previous episode of care"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "199229001",
+      "display" : "Pre-existing type 1 diabetes mellitus"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "199230006",
+      "display" : "Pre-existing type 2 diabetes mellitus"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "199231005",
+      "display" : "Pre-existing malnutrition-related diabetes mellitus"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "237599002",
+      "display" : "Insulin treated Type II diabetes mellitus"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "237600004",
+      "display" : "Malnutrition-related diabetes mellitus - fibrocalculous"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "237601000",
+      "display" : "Secondary endocrine diabetes mellitus"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "237603002",
+      "display" : "Transitory neonatal diabetes mellitus"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "237604008",
+      "display" : "Diabetes mellitus autosomal dominant type II"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "237612000",
+      "display" : "Photomyoclonus, diabetes mellitus, deafness, nephropathy and cerebral dysfunction"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "237613005",
+      "display" : "Hyperproinsulinemia"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "237617006",
+      "display" : "Megaloblastic anemia, thiamine-responsive, with diabetes mellitus and sensorineural deafness"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "237619009",
+      "display" : "Ballinger-Wallace syndrome"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "237627000",
+      "display" : "Pregnancy and type 2 diabetes mellitus"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "237651005",
+      "display" : "Insulin resistance - type A"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "237652003",
+      "display" : "Insulin resistance - type B"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "276560009",
+      "display" : "Diabetes mellitus in neonate small for gestational age"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "313435000",
+      "display" : "Type I diabetes mellitus without complication"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "313436004",
+      "display" : "Type 2 diabetes mellitus without complication"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "359642000",
+      "display" : "Diabetes mellitus type 2 in nonobese"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "408539000",
+      "display" : "Insulin autoimmune syndrome"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "408540003",
+      "display" : "Diabetes mellitus induced by non-steroid drugs"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "413183008",
+      "display" : "Diabetes mellitus induced by non-steroid drugs without complication"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "426705001",
+      "display" : "Diabetes mellitus associated with cystic fibrosis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "426875007",
+      "display" : "Latent autoimmune diabetes mellitus in adult (LADA)"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "427089005",
+      "display" : "Diabetes mellitus due to cystic fibrosis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "445260006",
+      "display" : "Posttransplant diabetes mellitus"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "609561005",
+      "display" : "Maturity-onset diabetes of the young"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "609562003",
+      "display" : "MODY1"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "609563008",
+      "display" : "Pre-existing diabetes mellitus in pregnancy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "609564002",
+      "display" : "Pre-existing type 1 diabetes mellitus in pregnancy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "609565001",
+      "display" : "Permanent diabetes mellitus of infancy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "609566000",
+      "display" : "Pregnancy and type 1 diabetes mellitus"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "609567009",
+      "display" : "Pre-existing type 2 diabetes mellitus in pregnancy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "609568004",
+      "display" : "Diabetes mellitus due to genetic defect in beta cell function"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "609569007",
+      "display" : "Diabetes mellitus due to genetic defect in insulin action"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "609570008",
+      "display" : "MODY3"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "609571007",
+      "display" : "Maturity-onset diabetes of the young, type 4"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "609572000",
+      "display" : "Maturity-onset diabetes of the young, type 5"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "609573005",
+      "display" : "MODY6"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "609574004",
+      "display" : "MODY7"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "609575003",
+      "display" : "MODY8"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "609576002",
+      "display" : "Maturity-onset diabetes of the young, type 9"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "609577006",
+      "display" : "MODY10"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "609578001",
+      "display" : "Maturity-onset diabetes of the young, type 11"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "609579009",
+      "display" : "Diabetes mellitus, transient neonatal 1"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "609580007",
+      "display" : "TNDM2"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "609581006",
+      "display" : "Diabetes mellitus, transient neonatal 3"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "703136005",
+      "display" : "Diabetes mellitus in remission"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "703137001",
+      "display" : "Type I diabetes mellitus in remission"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "703138006",
+      "display" : "Type II diabetes mellitus in remission"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "709147009",
+      "display" : "Gingivitis co-occurrent with diabetes mellitus"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "716362006",
+      "display" : "Gingival disease co-occurrent with diabetes mellitus"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "720519003",
+      "display" : "Atherosclerosis, deafness, diabetes, epilepsy, nephropathy syndrome"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "721088003",
+      "display" : "Developmental delay, epilepsy, neonatal diabetes syndrome"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "722206009",
+      "display" : "Pancreatic hypoplasia, diabetes mellitus, congenital heart disease syndrome"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "722454003",
+      "display" : "Intellectual disability, craniofacial dysmorphism, hypogonadism, diabetes mellitus syndrome"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "724067006",
+      "display" : "Permanent neonatal diabetes mellitus with cerebellar agenesis syndrome"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "733072002",
+      "display" : "Stimmler syndrome"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "734022008",
+      "display" : "Wolfram-like syndrome"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "737212004",
+      "display" : "Diabetes mellitus caused by chemical"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "782755007",
+      "display" : "Primary microcephaly, mild intellectual disability, young-onset diabetes syndrome"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "782825008",
+      "display" : "Primary microcephaly, epilepsy, permanent neonatal diabetes syndrome"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "783722008",
+      "display" : "Myopathy and diabetes mellitus"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "816067005",
+      "display" : "Diabetes, hypogonadism, deafness, intellectual disability syndrome"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "1481000119100",
+      "display" : "Diabetes mellitus type 2 without retinopathy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "31321000119102",
+      "display" : "Diabetes mellitus type 1 without retinopathy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "40791000119105",
+      "display" : "Postpartum gestational diabetes mellitus"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "40801000119106",
+      "display" : "Gestational DM antepartum"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "105401000119101",
+      "display" : "Diabetes mellitus due to pancreatic injury"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "106281000119103",
+      "display" : "Pre-existing diabetes mellitus in childbirth"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "368521000119107",
+      "display" : "Disorder of nerve co-occurrent and due to type 1 diabetes mellitus"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "10753491000119101",
+      "display" : "Gestational diabetes mellitus in childbirth"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "10754881000119104",
+      "display" : "Diabetes mellitus in mother complicating childbirth"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "530558861000132104",
+      "display" : "Atypical diabetes mellitus"
     }]
   }
 },

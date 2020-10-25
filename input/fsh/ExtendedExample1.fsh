@@ -114,7 +114,7 @@ Instance: example1-mcode-primary-cancer-condition
 InstanceOf: PrimaryCancerCondition
 Description: "Extended example 1: example showing primary cancer condition"
 * id = "example1-mcode-primary-cancer-condition"
-* extension[HistologyMorphologyBehavior].valueCodeableConcept = SCT#413448000 "Adenocarcinoma, no subtype, intermediate grade (morphologic abnormality)"
+* extension[histologyMorphologyBehavior].valueCodeableConcept = SCT#413448000 "Adenocarcinoma, no subtype, intermediate grade (morphologic abnormality)"
 * clinicalStatus = ClinStatus#remission
 * verificationStatus = VerStatus#confirmed
 * category = SCT#64572001 "Disease (disorder)"

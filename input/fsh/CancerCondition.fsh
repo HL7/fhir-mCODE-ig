@@ -13,7 +13,10 @@ Description:  "Abstract parent class for describing a primary or secondary metas
 * ^abstract = true
 * extension contains
     AssertedDate named assertedDate 0..1 and
-    HistologyMorphologyBehavior named histologyMorphologyBehavior 0..1
+    histologyMorphologyBehavior 0..1
+* extension[histologyMorphologyBehavior] ^short = "Histology-Morphology-Behavior"
+* extension[histologyMorphologyBehavior] ^definition = "A description of the morphologic and behavioral characteristics of the cancer."
+* extension[histologyMorphologyBehavior].value[x] from HistologyMorphologyBehaviorVS (extensible)
 * bodySite.extension contains
     Laterality named laterality 0..1
 * extension[assertedDate] and extension[histologyMorphologyBehavior] and bodySite and bodySite.extension[laterality] MS
@@ -39,6 +42,7 @@ Condition resources associated with an mCODE patient with a Condition.code in th
 * code from PrimaryOrUncertainBehaviorCancerDisorderVS (extensible)
 * stage.assessment only Reference(CancerStageParent)
 
+
 Profile: SecondaryCancerCondition
 Parent: CancerConditionParent
 Id: mcode-secondary-cancer-condition
@@ -47,26 +51,12 @@ Description: "Records the history of secondary neoplasms, including location(s) 
 
 Conformance statement:
 
-Condition resources associated with an mCODE patient with a Condition.code in the value set SecondaryCancerDisorderVS MUST conform to this profile. Beyond this requirement, a producer of resources SHOULD ensure that any resource instance associated with an mCODE patient that would reasonably be expected to conform to this profile SHOULD be published in this form, for example, when employing a code that extends the * code from SecondaryCancerDisorderVS value set. Any resource intended to conform to this profile SHOULD populate meta.profile accordingly."
+Condition resources associated with an mCODE patient with a Condition.code in the value set SecondaryCancerDisorderVS MUST conform to this profile. Beyond this requirement, a producer of resources SHOULD ensure that any resource instance associated with an mCODE patient that would reasonably be expected to conform to this profile SHOULD be published in this form, for example, when employing a code that extends the code from SecondaryCancerDisorderVS value set. Any resource intended to conform to this profile SHOULD populate meta.profile accordingly."
 
 * ^abstract = false
-* extension contains
-    RelatedPrimaryCancerCondition named relatedPrimaryCancerCondition 0..1
+* extension contains relatedPrimaryCancerCondition 0..1 MS
+* extension[relatedPrimaryCancerCondition] ^short = "Related Primary Cancer Condition"
+* extension[relatedPrimaryCancerCondition] ^definition = "The primary cancer related to this secondary cancer."
+* extension[relatedPrimaryCancerCondition].value[x] only Reference(PrimaryCancerCondition)
 * code from SecondaryCancerDisorderVS
 * stage 0..0
-
-// Extensions
-
-Extension:  HistologyMorphologyBehavior
-Id: mcode-histology-morphology-behavior
-Title: "Histology-Morphology-Behavior"
-Description: "A description of the morphologic and behavioral characteristics of the cancer."
-* value[x] only CodeableConcept
-* valueCodeableConcept from HistologyMorphologyBehaviorVS (extensible)
-
-Extension: RelatedPrimaryCancerCondition
-Id: mcode-related-primary-cancer-condition
-Title: "Related Primary Cancer Condition"
-Description: "The primary cancer related to this secondary cancer."
-* value[x] only Reference
-* valueReference only Reference(PrimaryCancerCondition)

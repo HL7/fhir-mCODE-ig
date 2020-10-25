@@ -775,7 +775,7 @@ Description:    "Elixhauser Comorbid Condition Value Set for Rheumatoid Arthriti
 * ICD10CM#M488X6        "Other specified spondylopathies, lumbar region"
 * ICD10CM#M488X7        "Other specified spondylopathies, lumbosacral region"
 * ICD10CM#M488X8        "Other specified spondylopathies, sacral and sacrococcygeal region"
-* ICD10CM#M488X9        " Other specified spondylopathies, site unspecified"
+* ICD10CM#M488X9        "Other specified spondylopathies, site unspecified"
 * ICD10CM#M4980        "Spondylopathy in diseases classified elsewhere, site unspecified"
 * ICD10CM#M4981        "Spondylopathy in diseases classified elsewhere, occipito-atlanto-axial region"
 * ICD10CM#M4982        "Spondylopathy in diseases classified elsewhere, cervical region"

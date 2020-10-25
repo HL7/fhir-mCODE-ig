@@ -129,7 +129,7 @@
 
 <img src="CancerDxCodingSystems.png" alt="mCODE Logical Model" width="80%" align="left" style="margin: 0px 250px 0px 0px;" />
 
-<p>Implementers should reference the <a href="StructureDefinitionStructureDefinition-mcode-primary-cancer-condition.html">PrimaryCancerCondition</a> and <a href="StructureDefinition-mcode-secondary-cancer-condition.html">Secondary Cancer Condition</a> profiles for details on the use of these terminologies and associated value sets.</p>
+<p>Implementers should reference the <a href="StructureDefinition-mcode-primary-cancer-condition.html">PrimaryCancerCondition</a> and <a href="StructureDefinition-mcode-secondary-cancer-condition.html">Secondary Cancer Condition</a> profiles for details on the use of these terminologies and associated value sets.</p>
 
 <h5>Representing Cancer Staging Information</h5>
 <p>Cancer stage information is contained in a set of profiles, representing <a href="https://www.cancer.gov/publications/dictionaries/cancer-terms/def/clinical-staging" target="_blank">clinical stage group</a> and <a href="https://www.cancer.gov/publications/dictionaries/cancer-terms/def/pathological-staging" target="_blank">pathologic stage group</a> panels with members representing the primary tumor (T) category, the regional nodes (N) category, and the distant metastases (M) category. </p>

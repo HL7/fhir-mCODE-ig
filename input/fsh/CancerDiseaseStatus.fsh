@@ -33,4 +33,6 @@ Extension: EvidenceType
 Id: mcode-evidence-type
 Title: "Evidence Type"
 Description: "Categorization of the kind of evidence used as input to the clinical judgment. This corresponds to both the S and O in SOAP."
+* ^context[0].type = #element
+* ^context[0].expression = "Observation"
 * value[x] from CancerDiseaseStatusEvidenceTypeVS (required)

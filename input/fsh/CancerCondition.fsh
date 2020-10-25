@@ -63,10 +63,14 @@ Extension: HistologyMorphologyBehavior
 Id: mcode-histology-morphology-behavior
 Title: "Histology-Morphology-Behavior"
 Description: "A code describing the morphologic and behavioral characteristics of the cancer."
+* ^context[0].type = #element
+* ^context[0].expression = "Condition"
 * value[x] from HistologyMorphologyBehaviorVS (extensible)
 
 Extension: RelatedPrimaryCancerCondition
 Id: mcode-related-primary-cancer-condition
 Title: "Related Primary Cancer Condition"
 Description: "A reference to the primary cancer condition that provides context for this resource."
+* ^context[0].type = #element
+* ^context[0].expression = "Condition"
 * value[x] only Reference(PrimaryCancerCondition)

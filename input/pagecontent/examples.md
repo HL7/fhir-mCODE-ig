@@ -52,7 +52,7 @@ The patient is two years out from surgery and has undergone surveillance imaging
 
 * [`example1-mcode-cancer-patient`](Patient-example1-mcode-cancer-patient.html) ([CancerPatient])
 * [`example1-mcode-cancer-disease-status`](Observation-example1-mcode-cancer-disease-status.html) ([CancerDiseaseStatus])
-* [`example1-mcode-cancer-related-comorbidities`](Condition-example1-mcode-cancer-related-comorbidities.html) ([ComorbidCondition])
+* [`example1-mcode-cancer-related-comorbidities`](Observation-example1-mcode-cancer-related-comorbidities.html) ([ComorbidCondition])
 * [`example1-mcode-comorbid-condition-depression`](Condition-example1-mcode-comorbid-condition-depression.html) ([ComorbidCondition])
 * [`example1-mcode-comorbid-condition-hypertension`](Condition-example1-mcode-comorbid-condition-hypertension.html) ([ComorbidCondition])
 * [`example1-mcode-ecog-performance-status`](Observation-example1-mcode-ecog-performance-status.html) ([ECOGPerformanceStatus])

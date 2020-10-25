@@ -2,63 +2,48 @@ Profile: MCODEPatientBundle
 Parent: Bundle
 Id: mcode-patient-bundle
 Title: "mCODE Patient Bundle"
-Description: "A collection of data for an mCODE cancer patient. [Implementation details are available here](mcode-patient-bundle.html)."
+Description: "A collection of data for an mCODE cancer patient."
 
 /* TODO update this file to match the description in `mcode-patient-bundle.md`. */
 * type = #collection
 * entry ^slicing.discriminator.type = #profile
 * entry ^slicing.discriminator.path = "resource"
 * entry ^slicing.rules = #open
+* entry and entry.resource MS
 * entry contains
     // These resources are required per Conformance > Supported Profiles.
-    cancerPatient 1..1 and
-    primaryCancerCondition 1..* and
+    cancerPatient 1..1 MS and
+    primaryCancerCondition 1..* MS and
     // Other mCODE profiles
-    secondaryCancerCondition 0..* and
-    cancerDiseaseStatus 0..* and
-    performanceStatus 0..* and
-    tumorMarker 0..* and
-    cancerRelatedMedicationRequest 0..* and
-    cancerRelatedRadiationProcedure 0..* and
-    cancerRelatedSurgicalProcedure 0..* and
+    secondaryCancerCondition 0..* MS and
+    cancerDiseaseStatus 0..* MS and
+    performanceStatus 0..* MS and
+    tumorMarker 0..* MS and
+    cancerRelatedMedicationRequest 0..* MS and
+    cancerRelatedProcedure 0..* MS and
     // Multiple profiles can be used to represent cancer stage. We will combine them into a single element for simplicity.
-    cancerStage 0..* and
+    cancerStage 0..* MS and
     // mCODE genomics
-    cancerGeneticVariant 0..* and
-    cancerGenomicsReport 0..* and
-    geneticSpecimen 0..* and
-    genomicRegionStudied 0..*
+    cancerGeneticVariant 0..* MS and
+    cancerGenomicsReport 0..* MS and
+    geneticSpecimen 0..* MS and
+    genomicRegionStudied 0..* MS
     // TODO handle comorbidities, waiting on decision for how these are profiled
-* entry and entry.resource MS
-* entry[cancerPatient].resource MS
-* entry[primaryCancerCondition].resource MS
-* entry[secondaryCancerCondition].resource MS
-* entry[cancerDiseaseStatus].resource only CancerDiseaseStatus
-* entry[performanceStatus].resource MS
-* entry[tumorMarker].resource MS
-* entry[cancerRelatedMedicationRequest].resource MS
-* entry[cancerRelatedRadiationProcedure].resource MS
-* entry[cancerRelatedSurgicalProcedure].resource MS
-* entry[cancerStage].resource MS
-* entry[cancerGeneticVariant].resource MS
-* entry[cancerGenomicsReport].resource MS
-* entry[geneticSpecimen].resource MS
-* entry[genomicRegionStudied].resource MS
 
 * entry[cancerPatient].resource only CancerPatient
 * entry[primaryCancerCondition].resource only PrimaryCancerCondition
 * entry[secondaryCancerCondition].resource only SecondaryCancerCondition
 * entry[cancerDiseaseStatus].resource only CancerDiseaseStatus
-* entry[performanceStatus].resource only ECOGPerformanceStatus or KarnofskyPerformanceStatus
+* entry[performanceStatus].resource only PerformanceStatusParent
 * entry[tumorMarker].resource only TumorMarker
 * entry[cancerRelatedMedicationRequest].resource only CancerRelatedMedicationRequest
-* entry[cancerRelatedRadiationProcedure].resource only CancerRelatedRadiationProcedure
-* entry[cancerRelatedSurgicalProcedure].resource only CancerRelatedSurgicalProcedure
+* entry[cancerRelatedProcedure].resource only CancerRelatedProcedureParent
 * entry[cancerStage].resource only CancerStageParent
 * entry[cancerGeneticVariant].resource only CancerGeneticVariant
 * entry[cancerGenomicsReport].resource only CancerGenomicsReport
 * entry[geneticSpecimen].resource only GeneticSpecimen
 * entry[genomicRegionStudied].resource only GenomicRegionStudied
+
 
 /* Not restricted to mCODE profiles
     smokingStatus 0..* and
@@ -70,7 +55,7 @@ Description: "A collection of data for an mCODE cancer patient. [Implementation 
     practitioner 0..* and
     organization 0..*
 * entry[smokingStatus].resource only USCoreSmokingStatusProfile
-* entry[medication].resource only MedicationAdministration or MedicationRequest or MedicationStatement
+* entry[medication].resource only MedicationRequest
 * entry[procedure].resource only USCoreProcedureProfile
 * entry[familyHistory].resource only FamilyMemberHistory
 * entry[diagnosticReport].resource only DiagnosticReport

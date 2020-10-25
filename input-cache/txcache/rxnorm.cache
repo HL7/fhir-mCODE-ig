@@ -221,50 +221,6 @@ v: {
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
-  "code" : "3639",
-  "display" : "DOXOrubicin"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
-v: {
-  "display" : "DOXOrubicin",
-  "severity" : null,
-  "error" : ""
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
-  "code" : "3002",
-  "display" : "cyclophosphamide"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
-v: {
-  "display" : "cyclophosphamide",
-  "severity" : null,
-  "error" : ""
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
-  "code" : "56946",
-  "display" : "PACLitaxel"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
-v: {
-  "display" : "PACLitaxel",
-  "severity" : null,
-  "error" : ""
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
-  "code" : "84857",
-  "display" : "anastrozole"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
-v: {
-  "display" : "anastrozole",
-  "severity" : null,
-  "error" : ""
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
   "code" : "349472"
 }, "valueSet" :{
   "resourceType" : "ValueSet",
@@ -311,6 +267,61 @@ v: {
 {"code" : {
   "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
   "code" : "349472"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "gefitinib 250 MG Oral Tablet",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+  "code" : "84857",
+  "display" : "anastrozole"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "anastrozole",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+  "code" : "3002",
+  "display" : "cyclophosphamide"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "cyclophosphamide",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+  "code" : "3639",
+  "display" : "DOXOrubicin"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "DOXOrubicin",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+  "code" : "56946",
+  "display" : "PACLitaxel"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "PACLitaxel",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+  "code" : "349472",
+  "display" : "gefitinib 250 MG Oral Tablet"
 }, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
 v: {
   "display" : "gefitinib 250 MG Oral Tablet",
@@ -369,17 +380,6 @@ v: {
 }, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
 v: {
   "display" : "CISplatin 50 MG per 50 ML Injectable Solution",
-  "severity" : null,
-  "error" : ""
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
-  "code" : "349472",
-  "display" : "gefitinib 250 MG Oral Tablet"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
-v: {
-  "display" : "gefitinib 250 MG Oral Tablet",
   "severity" : null,
   "error" : ""
 }

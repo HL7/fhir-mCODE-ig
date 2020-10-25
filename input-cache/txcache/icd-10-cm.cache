@@ -323,412 +323,6 @@ v: {
   "resourceType" : "ValueSet",
   "compose" : {
     "include" : [{
-      "system" : "http://hl7.org/fhir/sid/icd-10-cm"
-    }]
-  }
-}}####
-e: {
-  "valueSet" : {
-  "resourceType" : "ValueSet",
-  "status" : "active",
-  "expansion" : {
-    "identifier" : "urn:uuid:95792e3a-d60a-43f3-bbc7-4bf5c437c150",
-    "timestamp" : "2020-10-24T13:11:05.505Z",
-    "parameter" : [{
-      "name" : "limitedExpansion",
-      "valueBoolean" : true
-    },
-    {
-      "name" : "excludeNested",
-      "valueBoolean" : true
-    }],
-    "contains" : [{
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/StructureDefinition/valueset-definition",
-        "valueString" : "Endocrine, nutritional and metabolic diseases"
-      }],
-      "system" : "http://hl7.org/fhir/sid/icd-10-cm",
-      "code" : "E00-E89",
-      "display" : "Endocrine, nutritional and metabolic diseases"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/StructureDefinition/valueset-definition",
-        "valueString" : "Metabolic disorders"
-      }],
-      "system" : "http://hl7.org/fhir/sid/icd-10-cm",
-      "code" : "E70-E88",
-      "display" : "Metabolic disorders"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/StructureDefinition/valueset-definition",
-        "valueString" : "Cystic fibrosis"
-      }],
-      "system" : "http://hl7.org/fhir/sid/icd-10-cm",
-      "code" : "E84",
-      "display" : "Cystic fibrosis"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/StructureDefinition/valueset-definition",
-        "valueString" : "Cystic fibrosis with pulmonary manifestations"
-      }],
-      "system" : "http://hl7.org/fhir/sid/icd-10-cm",
-      "code" : "E84.0",
-      "display" : "Cystic fibrosis with pulmonary manifestations"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/StructureDefinition/valueset-definition",
-        "valueString" : "Diseases of the musculoskeletal system and connective tissue"
-      }],
-      "system" : "http://hl7.org/fhir/sid/icd-10-cm",
-      "code" : "M00-M99",
-      "display" : "Diseases of the musculoskeletal system and connective tissue"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/StructureDefinition/valueset-definition",
-        "valueString" : "Dorsopathies"
-      }],
-      "system" : "http://hl7.org/fhir/sid/icd-10-cm",
-      "code" : "M40-M54",
-      "display" : "Dorsopathies"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/StructureDefinition/valueset-definition",
-        "valueString" : "Spondylopathies"
-      }],
-      "system" : "http://hl7.org/fhir/sid/icd-10-cm",
-      "code" : "M45-M49",
-      "display" : "Spondylopathies"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/StructureDefinition/valueset-definition",
-        "valueString" : "Spondylosis"
-      }],
-      "system" : "http://hl7.org/fhir/sid/icd-10-cm",
-      "code" : "M47",
-      "display" : "Spondylosis"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/StructureDefinition/valueset-definition",
-        "valueString" : "Anterior spinal and vertebral artery compression syndromes"
-      }],
-      "system" : "http://hl7.org/fhir/sid/icd-10-cm",
-      "code" : "M47.0†",
-      "display" : "Anterior spinal and vertebral artery compression syndromes"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/StructureDefinition/valueset-definition",
-        "valueString" : "Other spondylosis with myelopathy"
-      }],
-      "system" : "http://hl7.org/fhir/sid/icd-10-cm",
-      "code" : "M47.1",
-      "display" : "Other spondylosis with myelopathy"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/StructureDefinition/valueset-definition",
-        "valueString" : "Other spondylosis with radiculopathy"
-      }],
-      "system" : "http://hl7.org/fhir/sid/icd-10-cm",
-      "code" : "M47.2",
-      "display" : "Other spondylosis with radiculopathy"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/StructureDefinition/valueset-definition",
-        "valueString" : "Other spondylosis"
-      }],
-      "system" : "http://hl7.org/fhir/sid/icd-10-cm",
-      "code" : "M47.8",
-      "display" : "Other spondylosis"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/StructureDefinition/valueset-definition",
-        "valueString" : "Spondylosis without myelopathy or radiculopathy"
-      }],
-      "system" : "http://hl7.org/fhir/sid/icd-10-cm",
-      "code" : "M47.81",
-      "display" : "Spondylosis without myelopathy or radiculopathy"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/StructureDefinition/valueset-definition",
-        "valueString" : "Spondylosis without myelopathy or radiculopathy, lumbar region"
-      }],
-      "system" : "http://hl7.org/fhir/sid/icd-10-cm",
-      "code" : "M47.816",
-      "display" : "Spondylosis without myelopathy or radiculopathy, lumbar region"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/StructureDefinition/valueset-definition",
-        "valueString" : "Spondylosis, unspecified"
-      }],
-      "system" : "http://hl7.org/fhir/sid/icd-10-cm",
-      "code" : "M47.9",
-      "display" : "Spondylosis, unspecified"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/StructureDefinition/valueset-definition",
-        "valueString" : "Other dorsopathies"
-      }],
-      "system" : "http://hl7.org/fhir/sid/icd-10-cm",
-      "code" : "M50-54",
-      "display" : "Other dorsopathies"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/StructureDefinition/valueset-definition",
-        "valueString" : "Other dorsopathies, not elsewhere classified"
-      }],
-      "system" : "http://hl7.org/fhir/sid/icd-10-cm",
-      "code" : "M53",
-      "display" : "Other dorsopathies, not elsewhere classified"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/StructureDefinition/valueset-definition",
-        "valueString" : "Cervicocranial syndrome"
-      }],
-      "system" : "http://hl7.org/fhir/sid/icd-10-cm",
-      "code" : "M53.0",
-      "display" : "Cervicocranial syndrome"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/StructureDefinition/valueset-definition",
-        "valueString" : "Cervicobrachial syndrome"
-      }],
-      "system" : "http://hl7.org/fhir/sid/icd-10-cm",
-      "code" : "M53.1",
-      "display" : "Cervicobrachial syndrome"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/StructureDefinition/valueset-definition",
-        "valueString" : "Spinal instabilities"
-      }],
-      "system" : "http://hl7.org/fhir/sid/icd-10-cm",
-      "code" : "M53.2",
-      "display" : "Spinal instabilities"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/StructureDefinition/valueset-definition",
-        "valueString" : "Sacrococcygeal disorders, not elsewhere classified"
-      }],
-      "system" : "http://hl7.org/fhir/sid/icd-10-cm",
-      "code" : "M53.3",
-      "display" : "Sacrococcygeal disorders, not elsewhere classified"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/StructureDefinition/valueset-definition",
-        "valueString" : "Other specified dorsopathies"
-      }],
-      "system" : "http://hl7.org/fhir/sid/icd-10-cm",
-      "code" : "M53.8",
-      "display" : "Other specified dorsopathies"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/StructureDefinition/valueset-definition",
-        "valueString" : "Other specified dorsopathies, sacral and sacrococcygeal region"
-      }],
-      "system" : "http://hl7.org/fhir/sid/icd-10-cm",
-      "code" : "M53.88",
-      "display" : "Other specified dorsopathies, sacral and sacrococcygeal region"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/StructureDefinition/valueset-definition",
-        "valueString" : "Dorsopathy, unspecified"
-      }],
-      "system" : "http://hl7.org/fhir/sid/icd-10-cm",
-      "code" : "M53.9",
-      "display" : "Dorsopathy, unspecified"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/StructureDefinition/valueset-definition",
-        "valueString" : "Other disorders of the musculoskeletal system and connective tissue"
-      }],
-      "system" : "http://hl7.org/fhir/sid/icd-10-cm",
-      "code" : "M95-M99",
-      "display" : "Other disorders of the musculoskeletal system and connective tissue"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/StructureDefinition/valueset-definition",
-        "valueString" : "Postprocedural musculoskeletal disorders, not elsewhere classified"
-      }],
-      "system" : "http://hl7.org/fhir/sid/icd-10-cm",
-      "code" : "M96",
-      "display" : "Postprocedural musculoskeletal disorders, not elsewhere classified"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/StructureDefinition/valueset-definition",
-        "valueString" : "Pseudarthrosis after fusion or arthrodesis"
-      }],
-      "system" : "http://hl7.org/fhir/sid/icd-10-cm",
-      "code" : "M96.0",
-      "display" : "Pseudarthrosis after fusion or arthrodesis"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/StructureDefinition/valueset-definition",
-        "valueString" : "Postlaminectomy syndrome, not elsewhere classified"
-      }],
-      "system" : "http://hl7.org/fhir/sid/icd-10-cm",
-      "code" : "M96.1",
-      "display" : "Postlaminectomy syndrome, not elsewhere classified"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/StructureDefinition/valueset-definition",
-        "valueString" : "Postradiation kyphosis"
-      }],
-      "system" : "http://hl7.org/fhir/sid/icd-10-cm",
-      "code" : "M96.2",
-      "display" : "Postradiation kyphosis"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/StructureDefinition/valueset-definition",
-        "valueString" : "Postlaminectomy kyphosis"
-      }],
-      "system" : "http://hl7.org/fhir/sid/icd-10-cm",
-      "code" : "M96.3",
-      "display" : "Postlaminectomy kyphosis"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/StructureDefinition/valueset-definition",
-        "valueString" : "Postsurgical lordosis"
-      }],
-      "system" : "http://hl7.org/fhir/sid/icd-10-cm",
-      "code" : "M96.4",
-      "display" : "Postsurgical lordosis"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/StructureDefinition/valueset-definition",
-        "valueString" : "Postradiation scoliosis"
-      }],
-      "system" : "http://hl7.org/fhir/sid/icd-10-cm",
-      "code" : "M96.5",
-      "display" : "Postradiation scoliosis"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/StructureDefinition/valueset-definition",
-        "valueString" : "Fracture of bone following insertion of orthopaedic implant, joint prosthesis, or bone plate"
-      }],
-      "system" : "http://hl7.org/fhir/sid/icd-10-cm",
-      "code" : "M96.6",
-      "display" : "Fracture of bone following insertion of orthopaedic implant, joint prosthesis, or bone plate"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/StructureDefinition/valueset-definition",
-        "valueString" : "Other postprocedural musculoskeletal disorders"
-      }],
-      "system" : "http://hl7.org/fhir/sid/icd-10-cm",
-      "code" : "M96.8",
-      "display" : "Other postprocedural musculoskeletal disorders"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/StructureDefinition/valueset-definition",
-        "valueString" : "Postprocedural musculoskeletal disorder, unspecified"
-      }],
-      "system" : "http://hl7.org/fhir/sid/icd-10-cm",
-      "code" : "M96.9",
-      "display" : "Postprocedural musculoskeletal disorder, unspecified"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/StructureDefinition/valueset-definition",
-        "valueString" : "Diseases of the nervous system"
-      }],
-      "system" : "http://hl7.org/fhir/sid/icd-10-cm",
-      "code" : "G00-99",
-      "display" : "Diseases of the nervous system"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/StructureDefinition/valueset-definition",
-        "valueString" : "Other disorders of the nervous system"
-      }],
-      "system" : "http://hl7.org/fhir/sid/icd-10-cm",
-      "code" : "G89-99",
-      "display" : "Other disorders of the nervous system"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/StructureDefinition/valueset-definition",
-        "valueString" : "Pain, not elsewhere classified"
-      }],
-      "system" : "http://hl7.org/fhir/sid/icd-10-cm",
-      "code" : "G89",
-      "display" : "Pain, not elsewhere classified"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/StructureDefinition/valueset-definition",
-        "valueString" : "Chronic pain syndrome"
-      }],
-      "system" : "http://hl7.org/fhir/sid/icd-10-cm",
-      "code" : "G89.4",
-      "display" : "Chronic pain syndrome"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/StructureDefinition/valueset-definition",
-        "valueString" : "Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified"
-      }],
-      "system" : "http://hl7.org/fhir/sid/icd-10-cm",
-      "code" : "R00-R99",
-      "display" : "Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/StructureDefinition/valueset-definition",
-        "valueString" : "General symptoms and signs"
-      }],
-      "system" : "http://hl7.org/fhir/sid/icd-10-cm",
-      "code" : "R50-R69",
-      "display" : "General symptoms and signs"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/StructureDefinition/valueset-definition",
-        "valueString" : "Pain, unspecified"
-      }],
-      "system" : "http://hl7.org/fhir/sid/icd-10-cm",
-      "code" : "R52",
-      "display" : "Pain, unspecified"
-    }]
-  }
-},
-  "error" : ""
-}
--------------------------------------------------------------------------------------
-{"hierarchical" : false, "valueSet" :{
-  "resourceType" : "ValueSet",
-  "compose" : {
-    "include" : [{
       "system" : "http://hl7.org/fhir/sid/icd-10-cm",
       "concept" : [{
         "code" : "C000",
@@ -5690,8 +5284,8 @@ e: {
   "resourceType" : "ValueSet",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:f99afc0b-12d5-4bad-9bb4-2d64f593f161",
-    "timestamp" : "2020-10-24T13:15:10.552Z",
+    "identifier" : "urn:uuid:926a31cf-e688-4574-b9f3-7abe1d6d85cb",
+    "timestamp" : "2020-10-23T14:25:13.815Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -5930,8 +5524,8 @@ e: {
   "resourceType" : "ValueSet",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:e5f5ebe4-96d8-4d85-86e2-1e6e50723a9c",
-    "timestamp" : "2020-10-24T13:15:10.943Z",
+    "identifier" : "urn:uuid:a106a52d-1d0e-42f1-b3b5-98e2af4ec895",
+    "timestamp" : "2020-10-23T14:25:14.190Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -5947,224 +5541,23 @@ e: {
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://hl7.org/fhir/sid/icd-10-cm",
+  "code" : "I119",
+  "display" : "Hypertensive heart disease without heart failure"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "Code \"I119\" not found; The code \"I119\" is not valid in the system http://hl7.org/fhir/sid/icd-10-cm; The code provided (http://hl7.org/fhir/sid/icd-10-cm#I119) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4)"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://hl7.org/fhir/sid/icd-10-cm",
   "code" : "I119"
 }, "valueSet" :{
   "resourceType" : "ValueSet",
   "compose" : {
     "include" : [{
-      "system" : "http://hl7.org/fhir/sid/icd-10-cm",
-      "concept" : [{
-        "code" : "I110",
-        "display" : "Hypertensive heart disease with heart failure"
-      },
-      {
-        "code" : "I119",
-        "display" : "Hypertensive heart disease without heart failure"
-      },
-      {
-        "code" : "I120",
-        "display" : "Hypertensive chronic kidney disease with stage 5 chronic kidney disease or end stage renal disease"
-      },
-      {
-        "code" : "I129",
-        "display" : "Hypertensive chronic kidney disease with stage 1 through stage 4 chronic kidney disease, or unspecified chronic kidney disease"
-      },
-      {
-        "code" : "I130",
-        "display" : "Hypertensive heart and chronic kidney disease with heart failure and stage 1 through stage 4 chronic kidney disease, or unspecified chronic kidney disease"
-      },
-      {
-        "code" : "I1310",
-        "display" : "Hypertensive heart and chronic kidney disease without heart failure, with stage 1 through stage 4 chronic kidney disease, or unspecified chronic kidney disease"
-      },
-      {
-        "code" : "I1311",
-        "display" : "Hypertensive heart and chronic kidney disease without heart failure, with stage 1 through stage 4 chronic kidney disease, or unspecified chronic kidney disease"
-      },
-      {
-        "code" : "I132",
-        "display" : "Hypertensive heart and chronic kidney disease with heart failure and with stage 5 chronic kidney disease, or end stage renal disease"
-      },
-      {
-        "code" : "I150",
-        "display" : "Renovascular hypertension"
-      },
-      {
-        "code" : "I151",
-        "display" : "Hypertension secondary to other renal disorders"
-      },
-      {
-        "code" : "I152",
-        "display" : "Hypertension secondary to endocrine disorders"
-      },
-      {
-        "code" : "I158",
-        "display" : "Other secondary hypertension"
-      },
-      {
-        "code" : "I159",
-        "display" : "Secondary hypertension, unspecified"
-      },
-      {
-        "code" : "I160",
-        "display" : "Hypertensive urgency"
-      },
-      {
-        "code" : "I161",
-        "display" : "Hypertensive emergency"
-      },
-      {
-        "code" : "I169",
-        "display" : "Hypertensive crisis, unspecified"
-      },
-      {
-        "code" : "I674",
-        "display" : "Hypertensive encephalopathy"
-      },
-      {
-        "code" : "O10111",
-        "display" : "Pre-existing hypertensive heart disease complicating pregnancy, first trimester"
-      },
-      {
-        "code" : "O10112",
-        "display" : "Pre-existing hypertensive heart disease complicating pregnancy, second trimester"
-      },
-      {
-        "code" : "O10113",
-        "display" : "Pre-existing hypertensive heart disease complicating pregnancy, third trimester"
-      },
-      {
-        "code" : "O10119",
-        "display" : "Pre-existing hypertensive heart disease complicating pregnancy, unspecified trimester"
-      },
-      {
-        "code" : "O1012",
-        "display" : "Pre-existing hypertensive heart disease complicating childbirth"
-      },
-      {
-        "code" : "O1013",
-        "display" : "Pre-existing hypertensive heart disease complicating the puerperium"
-      },
-      {
-        "code" : "O10211",
-        "display" : "Pre-existing hypertensive chronic kidney disease complicating pregnancy, first trimester"
-      },
-      {
-        "code" : "O10212",
-        "display" : "Pre-existing hypertensive chronic kidney disease complicating pregnancy, second trimester"
-      },
-      {
-        "code" : "O10213",
-        "display" : "Pre-existing hypertensive chronic kidney disease complicating pregnancy, third trimester"
-      },
-      {
-        "code" : "O10219",
-        "display" : "Pre-existing hypertensive chronic kidney disease complicating pregnancy, unspecified trimester"
-      },
-      {
-        "code" : "O1022",
-        "display" : "Pre-existing hypertensive chronic kidney disease complicating childbirth"
-      },
-      {
-        "code" : "O1023",
-        "display" : "Pre-existing hypertensive chronic kidney disease complicating the puerperium"
-      },
-      {
-        "code" : "O10311",
-        "display" : "Pre-existing hypertensive heart and chronic kidney disease complicating pregnancy, first trimester"
-      },
-      {
-        "code" : "O10312",
-        "display" : "Pre-existing hypertensive heart and chronic kidney disease complicating pregnancy, second trimester"
-      },
-      {
-        "code" : "O10313",
-        "display" : "Pre-existing hypertensive heart and chronic kidney disease complicating pregnancy, third trimester"
-      },
-      {
-        "code" : "O10319",
-        "display" : "Pre-existing hypertensive heart and chronic kidney disease complicating pregnancy, unspecified trimester"
-      },
-      {
-        "code" : "O1032",
-        "display" : "Pre-existing hypertensive heart and chronic kidney disease complicating childbirth"
-      },
-      {
-        "code" : "O1033",
-        "display" : "Pre-existing hypertensive heart and chronic kidney disease complicating the puerperium"
-      },
-      {
-        "code" : "O10411",
-        "display" : "Pre-existing secondary hypertension complicating pregnancy, first trimester"
-      },
-      {
-        "code" : "O10412",
-        "display" : "Pre-existing secondary hypertension complicating pregnancy, second trimester"
-      },
-      {
-        "code" : "O10413",
-        "display" : "Pre-existing secondary hypertension complicating pregnancy, third trimester"
-      },
-      {
-        "code" : "O10419",
-        "display" : "Pre-existing secondary hypertension complicating pregnancy, unspecified trimester"
-      },
-      {
-        "code" : "O1042",
-        "display" : "Pre-existing secondary hypertension complicating childbirth"
-      },
-      {
-        "code" : "O1043",
-        "display" : "Pre-existing secondary hypertension complicating the puerperium"
-      },
-      {
-        "code" : "O111",
-        "display" : "Pre-existing hypertension with pre-eclampsia, first trimester"
-      },
-      {
-        "code" : "O112",
-        "display" : "Pre-existing hypertension with pre-eclampsia, second trimester"
-      },
-      {
-        "code" : "O113",
-        "display" : "Pre-existing hypertension with pre-eclampsia, third trimester"
-      },
-      {
-        "code" : "O114",
-        "display" : "Pre-existing hypertension with pre-eclampsia, complicating childbirth"
-      },
-      {
-        "code" : "O115",
-        "display" : "Pre-existing hypertension with pre-eclampsia, complicating the puerperium"
-      },
-      {
-        "code" : "O119",
-        "display" : "Pre-existing hypertension with pre-eclampsia, unspecified trimester"
-      },
-      {
-        "code" : "O161",
-        "display" : "Unspecified maternal hypertension, first trimester"
-      },
-      {
-        "code" : "O162",
-        "display" : "Unspecified maternal hypertension, second trimester"
-      },
-      {
-        "code" : "O163",
-        "display" : "Unspecified maternal hypertension, third trimester"
-      },
-      {
-        "code" : "O164",
-        "display" : "Unspecified maternal hypertension, complicating childbirth"
-      },
-      {
-        "code" : "O165",
-        "display" : "Unspecified maternal hypertension, complicating the puerperium"
-      },
-      {
-        "code" : "O169",
-        "display" : "Unspecified maternal hypertension, unspecified trimester"
-      }]
+      "system" : "http://hl7.org/fhir/sid/icd-10-cm"
     }]
   }
 }, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
@@ -6183,233 +5576,38 @@ v: {
   "compose" : {
     "include" : [{
       "system" : "http://snomed.info/sct",
-      "filter" : [{
-        "property" : "concept",
-        "op" : "is-a",
-        "value" : "449759005"
+      "concept" : [{
+        "code" : "160245001"
       }]
     },
     {
-      "system" : "http://hl7.org/fhir/sid/icd-10-cm",
-      "concept" : [{
-        "code" : "I110",
-        "display" : "Hypertensive heart disease with heart failure"
-      },
-      {
-        "code" : "I119",
-        "display" : "Hypertensive heart disease without heart failure"
-      },
-      {
-        "code" : "I120",
-        "display" : "Hypertensive chronic kidney disease with stage 5 chronic kidney disease or end stage renal disease"
-      },
-      {
-        "code" : "I129",
-        "display" : "Hypertensive chronic kidney disease with stage 1 through stage 4 chronic kidney disease, or unspecified chronic kidney disease"
-      },
-      {
-        "code" : "I130",
-        "display" : "Hypertensive heart and chronic kidney disease with heart failure and stage 1 through stage 4 chronic kidney disease, or unspecified chronic kidney disease"
-      },
-      {
-        "code" : "I1310",
-        "display" : "Hypertensive heart and chronic kidney disease without heart failure, with stage 1 through stage 4 chronic kidney disease, or unspecified chronic kidney disease"
-      },
-      {
-        "code" : "I1311",
-        "display" : "Hypertensive heart and chronic kidney disease without heart failure, with stage 1 through stage 4 chronic kidney disease, or unspecified chronic kidney disease"
-      },
-      {
-        "code" : "I132",
-        "display" : "Hypertensive heart and chronic kidney disease with heart failure and with stage 5 chronic kidney disease, or end stage renal disease"
-      },
-      {
-        "code" : "I150",
-        "display" : "Renovascular hypertension"
-      },
-      {
-        "code" : "I151",
-        "display" : "Hypertension secondary to other renal disorders"
-      },
-      {
-        "code" : "I152",
-        "display" : "Hypertension secondary to endocrine disorders"
-      },
-      {
-        "code" : "I158",
-        "display" : "Other secondary hypertension"
-      },
-      {
-        "code" : "I159",
-        "display" : "Secondary hypertension, unspecified"
-      },
-      {
-        "code" : "I160",
-        "display" : "Hypertensive urgency"
-      },
-      {
-        "code" : "I161",
-        "display" : "Hypertensive emergency"
-      },
-      {
-        "code" : "I169",
-        "display" : "Hypertensive crisis, unspecified"
-      },
-      {
-        "code" : "I674",
-        "display" : "Hypertensive encephalopathy"
-      },
-      {
-        "code" : "O10111",
-        "display" : "Pre-existing hypertensive heart disease complicating pregnancy, first trimester"
-      },
-      {
-        "code" : "O10112",
-        "display" : "Pre-existing hypertensive heart disease complicating pregnancy, second trimester"
-      },
-      {
-        "code" : "O10113",
-        "display" : "Pre-existing hypertensive heart disease complicating pregnancy, third trimester"
-      },
-      {
-        "code" : "O10119",
-        "display" : "Pre-existing hypertensive heart disease complicating pregnancy, unspecified trimester"
-      },
-      {
-        "code" : "O1012",
-        "display" : "Pre-existing hypertensive heart disease complicating childbirth"
-      },
-      {
-        "code" : "O1013",
-        "display" : "Pre-existing hypertensive heart disease complicating the puerperium"
-      },
-      {
-        "code" : "O10211",
-        "display" : "Pre-existing hypertensive chronic kidney disease complicating pregnancy, first trimester"
-      },
-      {
-        "code" : "O10212",
-        "display" : "Pre-existing hypertensive chronic kidney disease complicating pregnancy, second trimester"
-      },
-      {
-        "code" : "O10213",
-        "display" : "Pre-existing hypertensive chronic kidney disease complicating pregnancy, third trimester"
-      },
-      {
-        "code" : "O10219",
-        "display" : "Pre-existing hypertensive chronic kidney disease complicating pregnancy, unspecified trimester"
-      },
-      {
-        "code" : "O1022",
-        "display" : "Pre-existing hypertensive chronic kidney disease complicating childbirth"
-      },
-      {
-        "code" : "O1023",
-        "display" : "Pre-existing hypertensive chronic kidney disease complicating the puerperium"
-      },
-      {
-        "code" : "O10311",
-        "display" : "Pre-existing hypertensive heart and chronic kidney disease complicating pregnancy, first trimester"
-      },
-      {
-        "code" : "O10312",
-        "display" : "Pre-existing hypertensive heart and chronic kidney disease complicating pregnancy, second trimester"
-      },
-      {
-        "code" : "O10313",
-        "display" : "Pre-existing hypertensive heart and chronic kidney disease complicating pregnancy, third trimester"
-      },
-      {
-        "code" : "O10319",
-        "display" : "Pre-existing hypertensive heart and chronic kidney disease complicating pregnancy, unspecified trimester"
-      },
-      {
-        "code" : "O1032",
-        "display" : "Pre-existing hypertensive heart and chronic kidney disease complicating childbirth"
-      },
-      {
-        "code" : "O1033",
-        "display" : "Pre-existing hypertensive heart and chronic kidney disease complicating the puerperium"
-      },
-      {
-        "code" : "O10411",
-        "display" : "Pre-existing secondary hypertension complicating pregnancy, first trimester"
-      },
-      {
-        "code" : "O10412",
-        "display" : "Pre-existing secondary hypertension complicating pregnancy, second trimester"
-      },
-      {
-        "code" : "O10413",
-        "display" : "Pre-existing secondary hypertension complicating pregnancy, third trimester"
-      },
-      {
-        "code" : "O10419",
-        "display" : "Pre-existing secondary hypertension complicating pregnancy, unspecified trimester"
-      },
-      {
-        "code" : "O1042",
-        "display" : "Pre-existing secondary hypertension complicating childbirth"
-      },
-      {
-        "code" : "O1043",
-        "display" : "Pre-existing secondary hypertension complicating the puerperium"
-      },
-      {
-        "code" : "O111",
-        "display" : "Pre-existing hypertension with pre-eclampsia, first trimester"
-      },
-      {
-        "code" : "O112",
-        "display" : "Pre-existing hypertension with pre-eclampsia, second trimester"
-      },
-      {
-        "code" : "O113",
-        "display" : "Pre-existing hypertension with pre-eclampsia, third trimester"
-      },
-      {
-        "code" : "O114",
-        "display" : "Pre-existing hypertension with pre-eclampsia, complicating childbirth"
-      },
-      {
-        "code" : "O115",
-        "display" : "Pre-existing hypertension with pre-eclampsia, complicating the puerperium"
-      },
-      {
-        "code" : "O119",
-        "display" : "Pre-existing hypertension with pre-eclampsia, unspecified trimester"
-      },
-      {
-        "code" : "O161",
-        "display" : "Unspecified maternal hypertension, first trimester"
-      },
-      {
-        "code" : "O162",
-        "display" : "Unspecified maternal hypertension, second trimester"
-      },
-      {
-        "code" : "O163",
-        "display" : "Unspecified maternal hypertension, third trimester"
-      },
-      {
-        "code" : "O164",
-        "display" : "Unspecified maternal hypertension, complicating childbirth"
-      },
-      {
-        "code" : "O165",
-        "display" : "Unspecified maternal hypertension, complicating the puerperium"
-      },
-      {
-        "code" : "O169",
-        "display" : "Unspecified maternal hypertension, unspecified trimester"
+      "system" : "http://snomed.info/sct",
+      "filter" : [{
+        "property" : "concept",
+        "op" : "is-a",
+        "value" : "404684003"
       }]
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "filter" : [{
+        "property" : "concept",
+        "op" : "is-a",
+        "value" : "243796009"
+      }]
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/icd-10-cm"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/icd-9-cm"
     }]
   }
 }, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK"}####
 v: {
   "display" : "",
   "severity" : "error",
-  "error" : "Code \"I119\" not found; The code \"I119\" is not valid in the system http://hl7.org/fhir/sid/icd-10-cm; The code provided (http://hl7.org/fhir/sid/icd-10-cm#I119) is not valid in the value set 'ElixhauserHypertensionComplicatedVS' (from http://tx.fhir.org/r4)"
+  "error" : "Code \"I119\" not found; The code \"I119\" is not valid in the system http://hl7.org/fhir/sid/icd-10-cm; The code provided (http://hl7.org/fhir/sid/icd-10-cm#I119) is not valid in the value set 'USCoreConditionCode' (from http://tx.fhir.org/r4)"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
@@ -6627,8 +5825,8 @@ e: {
   "resourceType" : "ValueSet",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:9f17bb68-2f79-4300-a1e9-a2f9c8d41816",
-    "timestamp" : "2020-10-24T13:20:04.599Z",
+    "identifier" : "urn:uuid:fc97c90a-be7e-4cd7-8ca4-95729b535edf",
+    "timestamp" : "2020-10-23T14:30:58.143Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -6687,8 +5885,8 @@ e: {
   "resourceType" : "ValueSet",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:e746ef18-722d-4176-add9-fd3496687a72",
-    "timestamp" : "2020-10-24T13:20:05.349Z",
+    "identifier" : "urn:uuid:c046b6cb-5d84-4b66-bf2c-5e2cae44eb38",
+    "timestamp" : "2020-10-23T14:30:59.159Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -6859,8 +6057,8 @@ e: {
   "resourceType" : "ValueSet",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:faf1c4a0-00ab-4345-b2f0-bfa5de2ee8f6",
-    "timestamp" : "2020-10-24T13:20:18.239Z",
+    "identifier" : "urn:uuid:048f3e83-d7c3-4e14-b5c6-430e04ca4ed4",
+    "timestamp" : "2020-10-23T14:31:18.956Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -7151,8 +6349,8 @@ e: {
   "resourceType" : "ValueSet",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:eec56444-3bde-4495-8148-5eca292b9a30",
-    "timestamp" : "2020-10-24T13:20:18.974Z",
+    "identifier" : "urn:uuid:a935f358-77b6-411f-a25b-59955ad5a646",
+    "timestamp" : "2020-10-23T14:31:19.753Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -7319,8 +6517,8 @@ e: {
   "resourceType" : "ValueSet",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:900a94e7-9b67-475d-b3d4-0736ecc961cb",
-    "timestamp" : "2020-10-24T13:20:30.724Z",
+    "identifier" : "urn:uuid:6694dec0-8e96-4ee0-a226-96407e53f9f7",
+    "timestamp" : "2020-10-23T14:31:37.659Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -7443,8 +6641,8 @@ e: {
   "resourceType" : "ValueSet",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:ed9505e5-f08b-4e75-8f54-6920285d431c",
-    "timestamp" : "2020-10-24T13:20:32.474Z",
+    "identifier" : "urn:uuid:d354dc3f-2f53-4d9c-9670-522144723543",
+    "timestamp" : "2020-10-23T14:31:39.884Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -7559,8 +6757,8 @@ e: {
   "resourceType" : "ValueSet",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:2180b0f8-90a9-4aa7-8c51-6a2aa3828cb5",
-    "timestamp" : "2020-10-24T13:20:33.474Z",
+    "identifier" : "urn:uuid:a062cef4-cfd2-4120-85b0-95dc96b993fc",
+    "timestamp" : "2020-10-23T14:31:41.253Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -7655,8 +6853,8 @@ e: {
   "resourceType" : "ValueSet",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:a3ded9f5-4ba3-40c1-949b-6361e450e34f",
-    "timestamp" : "2020-10-24T13:20:39.895Z",
+    "identifier" : "urn:uuid:56ad3199-81f5-4eea-91d9-a15fffc6e509",
+    "timestamp" : "2020-10-23T14:31:50.956Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -7895,8 +7093,8 @@ e: {
   "resourceType" : "ValueSet",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:ae56dcb7-0313-4190-89fa-040cde5ba06a",
-    "timestamp" : "2020-10-24T13:20:42.442Z",
+    "identifier" : "urn:uuid:0b529e06-6265-4161-834b-838c9675383f",
+    "timestamp" : "2020-10-23T14:31:53.878Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -8935,8 +8133,8 @@ e: {
   "resourceType" : "ValueSet",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:670401c7-3db5-4af2-8a0d-854a69af67ef",
-    "timestamp" : "2020-10-24T13:20:47.349Z",
+    "identifier" : "urn:uuid:a02cae1b-7d09-4994-8644-a27cbd715c6a",
+    "timestamp" : "2020-10-23T14:32:01.987Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -9019,8 +8217,8 @@ e: {
   "resourceType" : "ValueSet",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:c2ddb638-2ed7-4af3-8fb1-5399be24033e",
-    "timestamp" : "2020-10-24T13:20:53.942Z",
+    "identifier" : "urn:uuid:d882b3b8-c155-47ae-a1af-e48bbdda64fd",
+    "timestamp" : "2020-10-23T14:32:12.065Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -9051,8 +8249,8 @@ e: {
   "resourceType" : "ValueSet",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:7046a556-4170-4ed4-8d5c-2dfd1c9d8307",
-    "timestamp" : "2020-10-24T13:20:59.552Z",
+    "identifier" : "urn:uuid:ccd31bf0-0d01-4933-b6f6-18656c8b935e",
+    "timestamp" : "2020-10-23T14:32:20.753Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -9291,8 +8489,8 @@ e: {
   "resourceType" : "ValueSet",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:7cfd166a-e411-47f1-9ae4-158c248bcfe1",
-    "timestamp" : "2020-10-24T13:21:04.302Z",
+    "identifier" : "urn:uuid:cb40870f-50f7-4377-a7cb-ea1327b96124",
+    "timestamp" : "2020-10-23T14:32:27.659Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -9371,8 +8569,8 @@ e: {
   "resourceType" : "ValueSet",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:2deb8b64-3d8c-4b19-ab19-372df337e8ed",
-    "timestamp" : "2020-10-24T13:21:10.177Z",
+    "identifier" : "urn:uuid:53a0fcd7-406d-4dfc-aa93-cac36f67737a",
+    "timestamp" : "2020-10-23T14:32:36.893Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -9451,8 +8649,8 @@ e: {
   "resourceType" : "ValueSet",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:01854dfc-9b20-45cb-a6f2-b20aac7859e5",
-    "timestamp" : "2020-10-24T13:21:14.723Z",
+    "identifier" : "urn:uuid:163055fc-bdd4-4319-966f-76d68675d36b",
+    "timestamp" : "2020-10-23T14:32:43.612Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -9631,8 +8829,8 @@ e: {
   "resourceType" : "ValueSet",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:de0edb69-e1a1-4e5a-932e-cdfd101b459f",
-    "timestamp" : "2020-10-24T13:21:40.473Z",
+    "identifier" : "urn:uuid:dcf1d487-f20c-4853-9d0f-d25159ae7bab",
+    "timestamp" : "2020-10-23T14:33:22.659Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -11199,8 +10397,8 @@ e: {
   "resourceType" : "ValueSet",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:f936ad49-4294-4e20-867e-64f1fd28d627",
-    "timestamp" : "2020-10-24T13:22:01.129Z",
+    "identifier" : "urn:uuid:72039e16-884d-4d39-8be4-1b8198787807",
+    "timestamp" : "2020-10-23T14:33:54.706Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -11447,8 +10645,8 @@ e: {
   "resourceType" : "ValueSet",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:c2cff585-cbae-4730-b117-07a861b1b29a",
-    "timestamp" : "2020-10-24T13:22:43.692Z",
+    "identifier" : "urn:uuid:9a2fa4f3-5b1b-4d58-8d2a-0060332d65aa",
+    "timestamp" : "2020-10-23T14:35:04.019Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -11591,8 +10789,8 @@ e: {
   "resourceType" : "ValueSet",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:c1bed02b-fc50-4439-9cac-d27060603c94",
-    "timestamp" : "2020-10-24T13:22:46.942Z",
+    "identifier" : "urn:uuid:aa329484-8ba4-43aa-9d78-8e96454e1406",
+    "timestamp" : "2020-10-23T14:35:09.737Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -12231,8 +11429,8 @@ e: {
   "resourceType" : "ValueSet",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:5d1a2de5-43ba-4e94-9aa3-109a76312354",
-    "timestamp" : "2020-10-24T13:23:45.082Z",
+    "identifier" : "urn:uuid:f8627939-520d-4bfe-bf91-f679682de11e",
+    "timestamp" : "2020-10-23T14:37:20.972Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -12983,8 +12181,8 @@ e: {
   "resourceType" : "ValueSet",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:40b98eec-6c4c-4b25-b5a1-ae165bd7f9e1",
-    "timestamp" : "2020-10-24T13:24:01.160Z",
+    "identifier" : "urn:uuid:98b832b9-c7f6-426b-8ff1-45d046b8c9fc",
+    "timestamp" : "2020-10-23T14:38:05.487Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -14183,8 +13381,8 @@ e: {
   "resourceType" : "ValueSet",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:9047fffd-38db-4290-9e9a-b64c6582cc1a",
-    "timestamp" : "2020-10-24T13:24:11.113Z",
+    "identifier" : "urn:uuid:af18ba43-c7ec-4bb8-bb85-7275854a4a6b",
+    "timestamp" : "2020-10-23T14:38:32.034Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -14479,8 +13677,8 @@ e: {
   "resourceType" : "ValueSet",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:80a5fd07-7d22-426f-8f13-cbab0916c310",
-    "timestamp" : "2020-10-24T13:24:18.488Z",
+    "identifier" : "urn:uuid:7c8316d0-5de8-4ec6-9104-0d1bd5c3b84a",
+    "timestamp" : "2020-10-23T14:38:51.644Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -14575,8 +13773,8 @@ e: {
   "resourceType" : "ValueSet",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:0bc0e305-141d-4615-88a2-018ba044a0b4",
-    "timestamp" : "2020-10-24T13:24:34.269Z",
+    "identifier" : "urn:uuid:02a40a30-c2a8-4298-9316-57f59058b2a2",
+    "timestamp" : "2020-10-23T14:39:21.269Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -14655,8 +13853,8 @@ e: {
   "resourceType" : "ValueSet",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:d6189d2a-9882-45b5-8555-2d0dc9a76dd9",
-    "timestamp" : "2020-10-24T13:24:38.566Z",
+    "identifier" : "urn:uuid:ce895094-7395-4248-9d65-6034ef2551fd",
+    "timestamp" : "2020-10-23T14:39:28.441Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -17103,8 +16301,8 @@ e: {
   "resourceType" : "ValueSet",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:06f2c14e-d493-430c-a519-63023ba4890b",
-    "timestamp" : "2020-10-24T13:24:43.941Z",
+    "identifier" : "urn:uuid:aae78f62-87e8-4e7e-bddb-8792e6a21372",
+    "timestamp" : "2020-10-23T14:39:36.909Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -19311,8 +18509,8 @@ e: {
   "resourceType" : "ValueSet",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:003f71e5-b628-46d9-8a28-d4a1ad797149",
-    "timestamp" : "2020-10-24T13:25:27.722Z",
+    "identifier" : "urn:uuid:4a7a909a-fea1-4f56-894b-ffd1a94e47e2",
+    "timestamp" : "2020-10-23T14:40:30.206Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -19419,8 +18617,8 @@ e: {
   "resourceType" : "ValueSet",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:b1ea0dc1-fbf6-4fd1-8001-077c700c625b",
-    "timestamp" : "2020-10-24T13:25:39.425Z",
+    "identifier" : "urn:uuid:349bf676-4d95-4579-8d3b-dfea6fce61ee",
+    "timestamp" : "2020-10-23T14:40:41.988Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -19671,8 +18869,8 @@ e: {
   "resourceType" : "ValueSet",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:cd24ca44-a072-49e0-bc8f-0cd8d6db40f4",
-    "timestamp" : "2020-10-24T13:26:13.597Z",
+    "identifier" : "urn:uuid:9a741f63-10ab-48a1-846e-d772e690fbea",
+    "timestamp" : "2020-10-23T14:41:16.097Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -19743,8 +18941,8 @@ e: {
   "resourceType" : "ValueSet",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:f9556540-72bd-4919-beb8-80a32e792aa2",
-    "timestamp" : "2020-10-24T13:26:22.003Z",
+    "identifier" : "urn:uuid:d6241094-4665-4130-8271-ab61c45b4710",
+    "timestamp" : "2020-10-23T14:41:24.706Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -19756,17 +18954,6 @@ e: {
   }
 },
   "error" : ""
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://hl7.org/fhir/sid/icd-10-cm",
-  "code" : "I119",
-  "display" : "Hypertensive heart disease without heart failure"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
-v: {
-  "display" : "",
-  "severity" : "error",
-  "error" : "Code \"I119\" not found; The code \"I119\" is not valid in the system http://hl7.org/fhir/sid/icd-10-cm; The code provided (http://hl7.org/fhir/sid/icd-10-cm#I119) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4)"
 }
 -------------------------------------------------------------------------------------
 {"hierarchical" : false, "valueSet" :{
@@ -21406,8 +20593,8 @@ e: {
   "resourceType" : "ValueSet",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:e5f509d3-2415-4e60-90e2-a7c7e878b99f",
-    "timestamp" : "2020-10-25T02:31:07.456Z",
+    "identifier" : "urn:uuid:7aee44e4-dcaa-45d0-9194-0570ff72c698",
+    "timestamp" : "2020-10-25T03:55:45.221Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true

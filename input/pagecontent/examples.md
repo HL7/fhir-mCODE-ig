@@ -10,7 +10,7 @@ This section provides some examples how mCODE elements may be represented in a F
 
 * **Pathological Staging Classification**: <a href="Observation-mCODETNMPathologicalStageGroupExample01.html">mCODETNMPathologicalStageGroupExample01</a>, <a href="Observation-mCODETNMPathologicalPrimaryTumorCategoryExample01.html">mCODETNMPathologicalPrimaryTumorCategoryExample01</a>, <a href="Observation-mCODETNMPathologicalRegionalNodesCategoryExample01.html">mCODETNMPathologicalRegionalNodesCategoryExample01</a> and <a href="Observation-mCODETNMPathologicalDistantMetastasesCategoryExample01.html">mCODETNMPathologicalDistantMetastasesCategoryExample01</a> specify the pathologic T, N, and M categories for <a href="Condition-mCODEPrimaryCancerConditionExample01.html">mCODEPrimaryCancerConditionExample01</a>.
 
-* **Comorbid Condition**:  <a href="Condition-mCODEComorbidConditionExample01.html">mCODEComorbidConditionExample01</a> shows an example for a patient diagnosed with Type 2 Diabetes Mellitus.
+* **Comorbidities**:  <a href="Observation-mCODECancerRelatedComorbiditiesExample01">mCODECancerRelatedComorbiditiesExample01</a> shows an example for a cancer patient with cardiac arrhythmia and depression.
  * **ECOG Performance Status**:  <a href="Observation-mCODEECOGPerformanceStatusExample01.html">mCODEECOGPerformanceStatusExample01</a> shows an example for a patient with an ECOG Performance Status of 1.
  * **Karnofsky Performance Status**: <a href="Observation-mCODEKarnofskyPerformanceStatusExample01.html">mCODEKarnofskyPerformanceStatusExample01</a> shows an example for a patient with a Karnofsky Performance Status of 80.
  * **Cancer Related Medication Request**: <a href="MedicationRequest-mCODECancerRelatedMedicationRequestExample01.html">mCODECancerRelatedMedicationRequestExample01</a> shows an example for a patient who is currently receiving gefitinib and <a href="MedicationRequest-mCODECancerRelatedMedicationRequestExample02.html">mCODECancerRelatedMedicationRequestExample02</a> shows an example for a patient who completed a treatment of getfitinib.
@@ -32,7 +32,7 @@ This section provides some examples how mCODE elements may be represented in a F
 
 ### Extended example: breast cancer
 
-In addition to the examples provided above, we also have developed this extended example description of a hypothetical patient, along with accompanying example instances to demonstrate how mCODE profiles can be used to guide the creation resources representing a clinically realistic scenario. When information in the persona does not map onto mCODE profiles, we provide examples using [USCore](http://hl7.org/fhir/us/core/) or standard FHIR resources.
+In addition to the examples provided above, we also have developed this extended example description of a hypothetical patient, along with accompanying example instances to demonstrate how mCODE profiles can be used to guide the creation resources representing a clinically realistic scenario. When information in the persona does not map onto mCODE profiles, we provide examples using [USCore](http://hl7.org/fhir/us/core/index.html) or standard FHIR resources.
 
 #### Patient description
 
@@ -46,14 +46,15 @@ A partial mastectomy was performed, revealing a 2.5 cm tumor with no lymph-vascu
 
 A [21-gene RT-PCR assay](https://www.oncotypeiq.com/en-US/breast-cancer/healthcare-professionals/oncotype-dx-breast-recurrence-score/about-the-test) yielded a recurrence score of 47. She received four cycles of doxorubicin (60 mg/m² IV) and cyclophosphamide (600 mg/m² IV) followed by paclitaxel (175 mg/m² IV) (AC-T), administered on a dose-dense schedule. She subsequently received whole breast radiation therapy with regional nodal irradiation. Following RT, she began anastrozole (1 mg daily).
 
-The patient is 2 years out from surgery and has undergone surveillance imaging and has no evidence of recurrent disease or new imaging. She continues to take adjuvant endocrine therapy (anastrozole).
+The patient is two years out from surgery and has undergone surveillance imaging and has no evidence of recurrent disease or new imaging. She continues to take adjuvant endocrine therapy (anastrozole).
 
 #### FHIR instances from mCODE elements
 
 * [`example1-mcode-cancer-patient`](Patient-example1-mcode-cancer-patient.html) ([CancerPatient])
 * [`example1-mcode-cancer-disease-status`](Observation-example1-mcode-cancer-disease-status.html) ([CancerDiseaseStatus])
+* [`example1-mcode-cancer-related-comorbidities`](Observation-example1-mcode-cancer-related-comorbidities.html) ([ComorbidCondition])
 * [`example1-mcode-comorbid-condition-depression`](Condition-example1-mcode-comorbid-condition-depression.html) ([ComorbidCondition])
-* [`example1-mcode-comorbid-condition-hyptertension`](Condition-example1-mcode-comorbid-condition-hypertension.html) ([ComorbidCondition])
+* [`example1-mcode-comorbid-condition-hypertension`](Condition-example1-mcode-comorbid-condition-hypertension.html) ([ComorbidCondition])
 * [`example1-mcode-ecog-performance-status`](Observation-example1-mcode-ecog-performance-status.html) ([ECOGPerformanceStatus])
 * [`example1-mcode-cancer-related-surgical-procedure-mastectomy`](Procedure-example1-mcode-cancer-related-surgical-procedure-mastectomy.html) ([CancerRelatedSurgicalProcedure])
 * [`example1-mcode-cancer-related-radiation-procedure`](Procedure-example1-mcode-cancer-related-radiation-procedure.html) ([CancerRelatedRadiationProcedure])
@@ -101,7 +102,7 @@ The patient is 2 years out from surgery and has undergone surveillance imaging a
 [CancerRelatedMedicationRequest]: StructureDefinition-mcode-cancer-related-medication-request.html
 [CancerRelatedRadiationProcedure]: StructureDefinition-mcode-cancer-related-radiation-procedure.html
 [CancerRelatedSurgicalProcedure]: StructureDefinition-mcode-cancer-related-surgical-procedure.html
-[ComorbidCondition]: StructureDefinition-mcode-comorbid-condition.html
+[ComorbidCondition]: StructureDefinition-mcode-cancer-related-comorbidities.html
 [ECOGPerformanceStatus]: StructureDefinition-mcode-ecog-performance-status.html
 [GeneticSpecimen]: StructureDefinition-mcode-genetic-specimen.html
 [GenomicRegionStudied]: StructureDefinition-mcode-genomic-region-studied.html

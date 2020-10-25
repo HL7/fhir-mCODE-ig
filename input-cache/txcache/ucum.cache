@@ -15,6 +15,146 @@ v: {
     "include" : [{
       "system" : "http://unitsofmeasure.org",
       "concept" : [{
+        "code" : "%",
+        "display" : "percent"
+      },
+      {
+        "code" : "cm",
+        "display" : "centimeter"
+      },
+      {
+        "code" : "[in_i]",
+        "display" : "inch (international)"
+      },
+      {
+        "code" : "kg",
+        "display" : "kilogram"
+      },
+      {
+        "code" : "g",
+        "display" : "gram"
+      },
+      {
+        "code" : "[lb_av]",
+        "display" : "pound (US and British)"
+      },
+      {
+        "code" : "Cel",
+        "display" : "degree Celsius"
+      },
+      {
+        "code" : "[degF]",
+        "display" : "degree Fahrenheit"
+      },
+      {
+        "code" : "mm[Hg]",
+        "display" : "millimeter of mercury"
+      },
+      {
+        "code" : "/min",
+        "display" : "per minute"
+      },
+      {
+        "code" : "kg/m2",
+        "display" : "kilogram / (meter ^ 2)"
+      },
+      {
+        "code" : "m2",
+        "display" : "square meter"
+      }]
+    }]
+  }
+}}####
+e: {
+  "valueSet" : {
+  "resourceType" : "ValueSet",
+  "status" : "active",
+  "expansion" : {
+    "identifier" : "urn:uuid:97a2f591-de3a-40e2-a228-94d1521ab7c9",
+    "timestamp" : "2020-10-23T14:16:46.283Z",
+    "parameter" : [{
+      "name" : "limitedExpansion",
+      "valueBoolean" : true
+    },
+    {
+      "name" : "excludeNested",
+      "valueBoolean" : true
+    },
+    {
+      "name" : "version",
+      "valueString" : "http://unitsofmeasure.org|2.0.1"
+    }],
+    "contains" : [{
+      "system" : "http://unitsofmeasure.org",
+      "code" : "%",
+      "display" : "percent"
+    },
+    {
+      "system" : "http://unitsofmeasure.org",
+      "code" : "cm",
+      "display" : "centimeter"
+    },
+    {
+      "system" : "http://unitsofmeasure.org",
+      "code" : "[in_i]",
+      "display" : "inch (international)"
+    },
+    {
+      "system" : "http://unitsofmeasure.org",
+      "code" : "kg",
+      "display" : "kilogram"
+    },
+    {
+      "system" : "http://unitsofmeasure.org",
+      "code" : "g",
+      "display" : "gram"
+    },
+    {
+      "system" : "http://unitsofmeasure.org",
+      "code" : "[lb_av]",
+      "display" : "pound (US and British)"
+    },
+    {
+      "system" : "http://unitsofmeasure.org",
+      "code" : "Cel",
+      "display" : "degree Celsius"
+    },
+    {
+      "system" : "http://unitsofmeasure.org",
+      "code" : "[degF]",
+      "display" : "degree Fahrenheit"
+    },
+    {
+      "system" : "http://unitsofmeasure.org",
+      "code" : "mm[Hg]",
+      "display" : "millimeter of mercury"
+    },
+    {
+      "system" : "http://unitsofmeasure.org",
+      "code" : "/min",
+      "display" : "per minute"
+    },
+    {
+      "system" : "http://unitsofmeasure.org",
+      "code" : "kg/m2",
+      "display" : "kilogram / (meter ^ 2)"
+    },
+    {
+      "system" : "http://unitsofmeasure.org",
+      "code" : "m2",
+      "display" : "square meter"
+    }]
+  }
+},
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : false, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://unitsofmeasure.org",
+      "concept" : [{
         "code" : "mm",
         "display" : "Millimeter"
       },
@@ -42,8 +182,8 @@ e: {
   "resourceType" : "ValueSet",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:0b2a110a-1e75-4088-bf9d-a579a980254e",
-    "timestamp" : "2020-10-24T13:17:20.990Z",
+    "identifier" : "urn:uuid:131c67f8-74df-4b5b-a27d-58daf42bb1b7",
+    "timestamp" : "2020-10-23T14:27:57.456Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -108,26 +248,6 @@ v: {
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://unitsofmeasure.org",
-  "code" : "{Count}"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
-v: {
-  "display" : "{Count}",
-  "severity" : null,
-  "error" : ""
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://unitsofmeasure.org",
-  "code" : "cm"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
-v: {
-  "display" : "cm",
-  "severity" : null,
-  "error" : ""
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://unitsofmeasure.org",
   "code" : "{ScoreOf}"
 }, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
 v: {
@@ -148,10 +268,20 @@ v: {
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://unitsofmeasure.org",
-  "code" : "mg/m2"
+  "code" : "{Count}"
 }, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
 v: {
-  "display" : "mg/m2",
+  "display" : "{Count}",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://unitsofmeasure.org",
+  "code" : "cm"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "cm",
   "severity" : null,
   "error" : ""
 }
@@ -202,8 +332,8 @@ e: {
   "resourceType" : "ValueSet",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:b5b60baf-190f-4c92-914b-0a0d09b89bb8",
-    "timestamp" : "2020-10-24T13:26:33.972Z",
+    "identifier" : "urn:uuid:0800bdbe-3bea-4040-9dc2-1eaec46475e9",
+    "timestamp" : "2020-10-23T14:41:37.285Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -260,8 +390,8 @@ e: {
   "resourceType" : "ValueSet",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:98af04d1-e23b-47ca-b548-2e5d0ca73dff",
-    "timestamp" : "2020-10-24T13:26:34.284Z",
+    "identifier" : "urn:uuid:bf850db0-e694-4d4a-9f89-e9779f365e94",
+    "timestamp" : "2020-10-23T14:41:37.660Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -288,5 +418,52 @@ e: {
   }
 },
   "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://unitsofmeasure.org",
+  "code" : "mg/m2"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "mg/m2",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://unitsofmeasure.org",
+  "code" : "{ScoreOf}"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://snomed.info/sct",
+      "concept" : [{
+        "code" : "260415000",
+        "display" : "Not detected (qualifier)"
+      },
+      {
+        "code" : "268910001",
+        "display" : "Patient's condition improved (finding)"
+      },
+      {
+        "code" : "359746009",
+        "display" : "Patient's condition stable (finding)"
+      },
+      {
+        "code" : "271299001",
+        "display" : "Patient's condition worsened (finding)"
+      },
+      {
+        "code" : "709137006",
+        "display" : "Patient condition undetermined (finding)"
+      }]
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code provided (http://unitsofmeasure.org#{ScoreOf}) is not valid in the value set 'ConditionStatusTrendVS' (from http://tx.fhir.org/r4)"
 }
 -------------------------------------------------------------------------------------

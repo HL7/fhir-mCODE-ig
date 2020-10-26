@@ -659,8 +659,8 @@ Description:		"Units of measure for length or distance on a human scale."
 * UCUM#mm				"Millimeter"
 * UCUM#cm				"Centimeter"
 * UCUM#m				"Meter"
-* UCUM#ft-us			"Foot"
-* UCUM#in-us			"Inch"
+* UCUM#[ft_i]			"Feet"
+* UCUM#[in_i]			"Inch"
 
 // MK 10-24-2020 -- Created this value set for CancerStageParent because the bundle discriminator could not distinguish an instance of CancerDiseaseStatus from CancerStageParent. By limiting the codes that are accepted by CancerStageParent, the profiles no longer overlap.
 ValueSet: LoincCancerStagingCodesVS

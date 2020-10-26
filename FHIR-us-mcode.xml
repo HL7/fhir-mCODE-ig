@@ -122,6 +122,8 @@
 <artifact id="ValueSet/mcode-units-of-length-vs" key="units-of-length-value-set" name="Units of Length Value Set"/>
 <artifact id="ValueSet/mcode-tumor-size-units-vs" key="ValueSet-mcode-tumor-size-units-vs" name="Units of tumor size value set"/>
 <artifact deprecated="true" key="ValueSet" name="ValueSet"/>
+<artifact id="BodyStructure/example1-mcode-tumor" key="BodyStructure-example1-mcode-tumor" name="example1-mcode-tumor"/>
+<artifact id="Observation/example1-mcode-tumor-size" key="Observation-example1-mcode-tumor-size" name="example1-mcode-tumor-size"/>
 <artifact id="StructureDefinition/mcode-patient-bundle" key="StructureDefinition-mcode-patient-bundle" name="mCODE Patient Bundle"/>
 <artifact deprecated="true" id="Example/mcode-cancer-disease-status-example-01" key="mcode-cancer-disease-status-example-01" name="mCODECancerDiseaseStatusExample01"/>
 <artifact id="Observation/mCODECancerDiseaseStatusExample1" key="Observation-mCODECancerDiseaseStatusExample1" name="mCODECancerDiseaseStatusExample1"/>
@@ -180,8 +182,6 @@
 <artifact id="Observation/mCODETNMPathologicalStageGroupExample1" key="Observation-mCODETNMPathologicalStageGroupExample1" name="mCODETNMPathologicalStageGroupExample1"/>
 <artifact deprecated="true" id="Example/mcode-tumor-marker-example-01" key="mcode-tumor-marker-example-01" name="mCODETumorMarkerExample01"/>
 <artifact id="Observation/mCODETumorMarkerExample1" key="Observation-mCODETumorMarkerExample1" name="mCODETumorMarkerExample1"/>
-<artifact id="BodyStructure/mcode-tumor" key="BodyStructure-mcode-tumor" name="mcode-tumor"/>
-<artifact id="Observation/mcode-tumor-size" key="Observation-mcode-tumor-size" name="mcode-tumor-size"/>
 <artifact id="DiagnosticReport/scenario1-diagnosticreport-pathology" key="DiagnosticReport-scenario1-diagnosticreport-pathology" name="scenario1-diagnosticreport-pathology"/>
 <artifact id="FamilyMemberHistory/scenario1-family-member-history-aunt" key="FamilyMemberHistory-scenario1-family-member-history-aunt" name="scenario1-family-member-history-aunt"/>
 <artifact id="FamilyMemberHistory/scenario1-family-member-history-sister" key="FamilyMemberHistory-scenario1-family-member-history-sister" name="scenario1-family-member-history-sister"/>

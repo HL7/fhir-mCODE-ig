@@ -298,8 +298,8 @@ groups:
       - StructureDefinition/mcode-tumor-size
       - StructureDefinition/mcode-tumor
       - ValueSet/mcode-tumor-size-units-vs
-      - Observation/mcode-tumor-size
-      - BodyStructure/mcode-tumor
+      - Observation/example1-mcode-tumor-size
+      - BodyStructure/example1-mcode-tumor
 
   ExperimentalResourcesMedication:
     name: Experimental Resources - Medication-related

@@ -467,3 +467,50 @@ v: {
   "error" : "The code provided (http://unitsofmeasure.org#{ScoreOf}) is not valid in the value set 'ConditionStatusTrendVS' (from http://tx.fhir.org/r4)"
 }
 -------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://unitsofmeasure.org",
+  "code" : "[lb_av]"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "[lb_av]",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://unitsofmeasure.org",
+  "code" : "[lb_av]"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://snomed.info/sct",
+      "concept" : [{
+        "code" : "260415000",
+        "display" : "Not detected (qualifier)"
+      },
+      {
+        "code" : "268910001",
+        "display" : "Patient's condition improved (finding)"
+      },
+      {
+        "code" : "359746009",
+        "display" : "Patient's condition stable (finding)"
+      },
+      {
+        "code" : "271299001",
+        "display" : "Patient's condition worsened (finding)"
+      },
+      {
+        "code" : "709137006",
+        "display" : "Patient condition undetermined (finding)"
+      }]
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code provided (http://unitsofmeasure.org#[lb_av]) is not valid in the value set 'ConditionStatusTrendVS' (from http://tx.fhir.org/r4)"
+}
+-------------------------------------------------------------------------------------

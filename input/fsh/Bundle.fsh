@@ -26,7 +26,8 @@ Description: "A collection of data for an mCODE cancer patient."
     cancerGenomicsReport 0..* MS and
     geneticSpecimen 0..* MS and
     genomicRegionStudied 0..* MS and
-    cancerRelatedComorbities 0..* MS
+    cancerRelatedComorbidities 0..* MS and
+    vitalSigns 0..* MS
 
 * entry[cancerPatient] ^short = "Cancer Patient"
 * entry[primaryCancerCondition] ^short = "Primary Cancer Condition"
@@ -41,7 +42,8 @@ Description: "A collection of data for an mCODE cancer patient."
 * entry[cancerGenomicsReport] ^short = "Cancer Genomics Report(s)"
 * entry[geneticSpecimen] ^short = "Genetic Specimen(s)"
 * entry[genomicRegionStudied] ^short = "Genomic Region(s) Studied"
-* entry[cancerRelatedComorbities] ^short = "Cancer-Related Comorbities"
+* entry[cancerRelatedComorbidities] ^short = "Cancer-Related Comorbities"
+* entry[vitalSigns] ^short = "Vital Signs"
 
 * entry[cancerPatient] ^definition = "The Cancer Patient whose data is included in the bundle (required element)."
 * entry[primaryCancerCondition] ^definition = "The Primary Cancer Condition resource (required element)."
@@ -56,7 +58,8 @@ Description: "A collection of data for an mCODE cancer patient."
 * entry[cancerGenomicsReport] ^definition = "Resource(s) representing Cancer Genomics Reports"
 * entry[geneticSpecimen] ^definition = "Resource(s) representing Genetic Specimens."
 * entry[genomicRegionStudied] ^definition = "Resource(s) representing Genomic Regions Studied"
-* entry[cancerRelatedComorbities] ^definition = "Resource(s) capturing Cancer-Related Comorbities."
+* entry[cancerRelatedComorbidities] ^definition = "Resource(s) capturing Cancer-Related Comorbities."
+* entry[vitalSigns] ^definition = "Vital sign data, including blood pressure, height, and weight."
 
 * entry[cancerPatient].resource only CancerPatient
 * entry[primaryCancerCondition].resource only PrimaryCancerCondition
@@ -71,7 +74,9 @@ Description: "A collection of data for an mCODE cancer patient."
 * entry[cancerGenomicsReport].resource only CancerGenomicsReport
 * entry[geneticSpecimen].resource only GeneticSpecimen
 * entry[genomicRegionStudied].resource only GenomicRegionStudied
-* entry[cancerRelatedComorbities].resource only CancerRelatedComorbities
+* entry[cancerRelatedComorbidities].resource only CancerRelatedComorbidities
+* entry[vitalSigns].resource only VitalSignsDiscriminator
+
 
 /* Not restricted to mCODE profiles
     smokingStatus 0..* and
@@ -92,3 +97,12 @@ Observation
 * entry[practitioner].resource only USCorePractitioner
 * entry[organization].resource only Organization
 */
+
+
+Profile: VitalSignsDiscriminator
+Parent: Observation
+Id: mcode-vital-signs-discriminator
+Title: "Vital Signs Discriminator"
+Description: "A minimal profile that serves to discriminate vital signs for the purpose of the mCODE patient bundle."
+* ^abstract = true
+* category = ObsCat#vital-signs

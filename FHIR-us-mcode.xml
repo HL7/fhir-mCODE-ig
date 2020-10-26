@@ -122,10 +122,12 @@
 <artifact id="ValueSet/mcode-units-of-length-vs" key="units-of-length-value-set" name="Units of Length Value Set"/>
 <artifact id="ValueSet/mcode-tumor-size-units-vs" key="ValueSet-mcode-tumor-size-units-vs" name="Units of tumor size value set"/>
 <artifact deprecated="true" key="ValueSet" name="ValueSet"/>
+<artifact id="StructureDefinition/mcode-vital-signs-discriminator" key="StructureDefinition-mcode-vital-signs-discriminator" name="Vital Signs Discriminator"/>
 <artifact id="DiagnosticReport/example1-diagnosticreport-pathology" key="DiagnosticReport-example1-diagnosticreport-pathology" name="example1-diagnosticreport-pathology"/>
 <artifact id="FamilyMemberHistory/example1-family-member-history-aunt" key="FamilyMemberHistory-example1-family-member-history-aunt" name="example1-family-member-history-aunt"/>
 <artifact id="FamilyMemberHistory/example1-family-member-history-sister" key="FamilyMemberHistory-example1-family-member-history-sister" name="example1-family-member-history-sister"/>
 <artifact id="FamilyMemberHistory/example1-family-member-history-uncle" key="FamilyMemberHistory-example1-family-member-history-uncle" name="example1-family-member-history-uncle"/>
+<artifact id="Observation/example1-mcode-body-weight" key="Observation-example1-mcode-body-weight" name="example1-mcode-body-weight"/>
 <artifact id="Observation/example1-mcode-cancer-disease-status" key="Observation-example1-mcode-cancer-disease-status" name="example1-mcode-cancer-disease-status"/>
 <artifact id="Observation/example1-mcode-cancer-genetic-variant" key="Observation-example1-mcode-cancer-genetic-variant" name="example1-mcode-cancer-genetic-variant"/>
 <artifact id="DiagnosticReport/example1-mcode-cancer-genomics-report" key="DiagnosticReport-example1-mcode-cancer-genomics-report" name="example1-mcode-cancer-genomics-report"/>

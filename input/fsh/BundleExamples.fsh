@@ -49,6 +49,11 @@ Description: "Extended example 1 as a mCODE Patient Bundle"
 * entry[cancerRelatedMedicationRequest][2].fullUrl = "http://example.org/fhir/MedicationRequest/example1-mcode-cancer-related-medication-chemo-paclitaxel"
 * entry[cancerRelatedMedicationRequest][3].resource = example1-mcode-cancer-related-medication-anastrozole
 * entry[cancerRelatedMedicationRequest][3].fullUrl = "http://example.org/fhir/MedicationRequest/example1-mcode-cancer-related-medication-anastrozole"
+* entry[cancerRelatedComorbidities].resource = example1-mcode-cancer-related-comorbidities
+* entry[cancerRelatedComorbidities].fullUrl = "http://example.org/fhir/Observation/example1-mcode-cancer-related-comorbidities"
+* entry[vitalSigns].resource = example1-mcode-body-weight
+* entry[vitalSigns].fullUrl = "http://example.org/fhir/Observation/example1-mcode-body-weight"
+
 
 /*
 // Will be included once we merge in the experimental profile

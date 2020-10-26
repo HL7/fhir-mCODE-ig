@@ -112553,3 +112553,25 @@ v: {
   "error" : ""
 }
 -------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://snomed.info/sct",
+  "code" : "53438000",
+  "display" : "Radiation therapy procedure or service (procedure)"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "Radiation therapy procedure or service",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://snomed.info/sct",
+  "code" : "387713003",
+  "display" : "Surgical procedure"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "Surgical procedure (procedure)",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------

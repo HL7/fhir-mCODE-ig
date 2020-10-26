@@ -681,3 +681,15 @@ Description: "Extended example 1: example showing DCIS diagnosis"
 * effectiveDateTime = "2018-03-06T00:00:00Z"
 * valueCodeableConcept = LNC#85336-6 "DCIS intraductal extension in Breast cancer specimen Qualitative by Light microscopy"
 * specimen = Reference(example1-specimen-tumor)
+
+Instance: example1-mcode-body-weight
+InstanceOf: http://hl7.org/fhir/StructureDefinition/bodyweight
+Description: "Extended example 1: example of body weight vital sign"
+* id = "example1-mcode-body-weight"
+* status = #final "final"
+* category = ObsCat#vital-signs "Vital Signs"
+* subject = Reference(example1-mcode-cancer-patient)
+* effectiveDateTime = "2018-03-06T00:00:00Z"
+* valueQuantity = 155.0 '[lb_av]'
+//* valueQuantity = UCUM#[lb_av] "lb"
+* valueQuantity.unit = "lb"

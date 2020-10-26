@@ -49,13 +49,22 @@ menu:
   History: http://hl7.org/fhir/us/mcode/history.html
 groups:
 
+  mCODEBundle:
+    name: mCODE Patient Bundle
+    description: See [implementation details here](mcode-patient-bundle.html).
+    resources:
+      - StructureDefinition/mcode-patient-bundle
+      - Bundle/example1-mcode-patient-bundle
+
   # Profiles
   Patient:
     name: "Profiles: Patient"
-    description: Profiles in the [mCODE **Patient** Group](index.html#Patient) (except Elixhauser comorbidities).
+    description: Profiles in the [mCODE **Patient** Group](index.html#Patient).
     resources:
       - StructureDefinition/mcode-cancer-patient
-      - StructureDefinition/mcode-comorbid-condition
+      - StructureDefinition/mcode-comorbidities-parent
+      - StructureDefinition/mcode-cancer-related-comorbidities
+      - StructureDefinition/mcode-performance-status-parent
       - StructureDefinition/mcode-ecog-performance-status
       - StructureDefinition/mcode-karnofsky-performance-status
 
@@ -87,9 +96,9 @@ groups:
     name: "Profiles: Treatments"
     description: Profiles in the [mCODE **Treatments** Group](index.html#Treatment).
     resources:
+      - StructureDefinition/mcode-cancer-related-procedure-parent
       - StructureDefinition/mcode-cancer-related-radiation-procedure
       - StructureDefinition/mcode-cancer-related-surgical-procedure
-      - StructureDefinition/mcode-cancer-related-medication-statement
 
   Genomics:
     name: "Profiles: Genomics"
@@ -113,6 +122,8 @@ groups:
     name: Extensions
     description: These define constraints on FHIR data types that need to be complied with by conformant implementations
     resources:
+      - StructureDefinition/mcode-comorbid-condition-code
+      - StructureDefinition/mcode-comorbid-condition-reference
       - StructureDefinition/mcode-evidence-type
       - StructureDefinition/mcode-laterality
       - StructureDefinition/mcode-related-primary-cancer-condition
@@ -122,7 +133,7 @@ groups:
   # Value sets
   ValueSets:
     name: Value Sets
-    description: These define sets of codes used by systems conforming with this implementation guide.
+    description: These define sets of codes used by systems conforming with this implementation guide. Comorbid condition-related value sets appear in a separate section below.
     resources:
       - ValueSet/mcode-cancer-body-location-vs
       - ValueSet/mcode-cancer-disease-status-evidence-type-vs
@@ -136,6 +147,9 @@ groups:
       - ValueSet/mcode-hgvs-vs
       - ValueSet/mcode-histology-morphology-behavior-vs
       - ValueSet/mcode-laterality-vs
+      - ValueSet/mcode-loinc-cancer-staging-codes-vs
+      - ValueSet/mcode-loinc-performance-status-codes-vs
+      - ValueSet/mcode-present-absent-unknown
       - ValueSet/mcode-primary-or-uncertain-behavior-cancer-disorder-vs
       - ValueSet/mcode-radiation-procedure-vs
       - ValueSet/mcode-radiation-target-body-site-vs
@@ -149,8 +163,9 @@ groups:
       - ValueSet/mcode-tumor-marker-test-vs
       - ValueSet/mcode-units-of-length-vs
 
-  ValueSetsElixhauser:
-    name: Value Sets (Elixhauser only)
+
+  ValueSetsComorbidCondition:
+    name: Comorbid Condition-related Value Sets
     description: These define sets of codes used by systems conforming with this implementation guide.
     resources:
       - ValueSet/elixhauser-alcohol-abuse-vs
@@ -185,7 +200,11 @@ groups:
       - ValueSet/elixhauser-valvular-disease-vs
       - ValueSet/elixhauser-weight-loss-vs
 
-
+  CodeSystems:
+    name: Code Systems
+    description: These define new code systems used by systems conforming with this implementation guide
+    resources:
+      - CodeSystem/mcode-elixhauser-category
 
 
   # Examples
@@ -193,15 +212,14 @@ groups:
     name: "Examples: Generic"
     description: Examples of resources conforming to mCODE profiles. These examples are independent (i.e., there is no expectation of consistency of data among the resources).
     resources:
-      # - Condition/mCODEComorbidConditionExample1
+      - Condition/mCODEDepressionExample1
       - Condition/mCODEPrimaryCancerConditionExample1
       - Condition/mCODESecondaryCancerConditionExample1
       - DiagnosticReport/mCODECancerGenomicsReportExample1
-      # - MedicationStatement/mCODECancerRelatedMedicationStatementExample1
-      # - MedicationStatement/mCODECancerRelatedMedicationStatementExample2
       - Observation/mCODECancerDiseaseStatusExample1
       - Observation/mCODECancerGeneticVariantExample1
       - Observation/mCODECancerGeneticVariantExample2
+      - Observation/mCODECancerRelatedComorbiditiesExample1
       - Observation/mCODEECOGPerformanceStatusExample1
       - Observation/mCODEGenomicRegionStudiedExample1
       - Observation/mCODEKarnofskyPerformanceStatusExample1
@@ -235,12 +253,13 @@ groups:
       - FamilyMemberHistory/example1-family-member-history-aunt
       - FamilyMemberHistory/example1-family-member-history-sister
       - FamilyMemberHistory/example1-family-member-history-uncle
-      - MedicationStatement/example1-mcode-cancer-related-medication-anastrozole
-      - MedicationStatement/example1-mcode-cancer-related-medication-chemo-cyclophosphamide
-      - MedicationStatement/example1-mcode-cancer-related-medication-chemo-doxorubicin
-      - MedicationStatement/example1-mcode-cancer-related-medication-chemo-paclitaxel
+      - MedicationRequest/example1-mcode-cancer-related-medication-anastrozole
+      - MedicationRequest/example1-mcode-cancer-related-medication-chemo-cyclophosphamide
+      - MedicationRequest/example1-mcode-cancer-related-medication-chemo-doxorubicin
+      - MedicationRequest/example1-mcode-cancer-related-medication-chemo-paclitaxel
       - Observation/example1-mcode-cancer-disease-status
       - Observation/example1-mcode-cancer-genetic-variant
+      - Observation/example1-mcode-cancer-related-comorbidities
       - Observation/example1-mcode-ecog-performance-status
       - Observation/example1-mcode-genomic-region-studied
       - Observation/example1-mcode-tnm-clinical-distant-metastases-category
@@ -262,8 +281,9 @@ groups:
       - Patient/example1-mcode-cancer-patient
       - Practitioner/example1-practitioner1-mcode
       - Practitioner/example1-practitioner2-mcode
+      - StructureDefinition/mcode-cancer-related-procedure-parent
       - Procedure/example1-mcode-cancer-related-radiation-procedure
-      - Procedure/example1-mcode-cancer-related-surgical-procedure
+      - Procedure/example1-mcode-cancer-related-surgical-procedure-mastectomy
       - Procedure/example1-us-core-procedure-biopsy
       - Procedure/example1-us-core-procedure-mammogram
       - Specimen/example1-mcode-genetic-specimen
@@ -288,3 +308,4 @@ groups:
     resources:
       - StructureDefinition/mcode-cancer-related-medication-request
       - MedicationRequest/mCODECancerRelatedMedicationRequestExample1
+      - MedicationRequest/mCODECancerRelatedMedicationRequestExample2

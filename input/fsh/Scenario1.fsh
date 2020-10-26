@@ -73,7 +73,7 @@ Description: "Extended example 1: example showing comorbid condition (depression
 * id = "scenario1-mcode-comorbid-condition-depression"
 * clinicalStatus = ClinStatus#active
 * verificationStatus = VerStatus#confirmed
-* category = #problem-list-item
+* category = ConditionCategory#problem-list-item
 * code = SCT#35489007 "Depressive disorder (disorder)"
 * subject = Reference(scenario1-mcode-cancer-patient)
 * onsetDateTime = "2000-01-01"
@@ -85,7 +85,7 @@ Description: "Extended example 1: example showing comorbid condition (hypertensi
 * id = "scenario1-mcode-comorbid-condition-hypertension"
 * clinicalStatus = ClinStatus#active
 * verificationStatus = VerStatus#confirmed
-* category = #problem-list-item
+* category = ConditionCategory#problem-list-item
 * code = ICD10CM#I119 "Hypertensive heart disease without heart failure"
 * subject = Reference(scenario1-mcode-cancer-patient)
 * onsetDateTime = "2000-01-01"

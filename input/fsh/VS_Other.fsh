@@ -405,6 +405,9 @@ FHIR implementation note: At the current time, profiles for the specific LOINC t
 * LNC#14130-9       "Estrogen receptor [Moles/mass] in Tissue"
 * LNC#85310-1       "Estrogen receptor fluorescence intensity [Type] in Breast cancer specimen by Immune stain"
 * LNC#10480-2       "Estrogen+Progesterone receptor Ag [Presence] in Tissue by Immune stain"
+* LNC#39004-7       "Epidermal growth factor receptor Ag [Presence] in Tissue"
+* LNC#32581-1	    "Epidermal growth factor receptor Ag [Presence] in Tissue by Immune stain"
+* LNC#42782-3	    "Epidermal growth factor receptor.phosphorylated Ag [Presence] in Tissue by Immune stain"
 * LNC#48676-1       "HER2 [Interpretation] in Tissue"
 * LNC#32996-1       "HER2 [Mass/volume] in Serum"
 * LNC#42914-2       "HER2 [Mass/volume] in Serum by Immunoassay"
@@ -658,3 +661,24 @@ Description:		"Units of measure for length or distance on a human scale."
 * UCUM#m				"Meter"
 * UCUM#ft-us			"Foot"
 * UCUM#in-us			"Inch"
+
+// MK 10-24-2020 -- Created this value set for CancerStageParent because the bundle discriminator could not distinguish an instance of CancerDiseaseStatus from CancerStageParent. By limiting the codes that are accepted by CancerStageParent, the profiles no longer overlap.
+ValueSet: LoincCancerStagingCodesVS
+Id: mcode-loinc-cancer-staging-codes-vs
+Title: "LOINC Cancer Staging Codes Value Set"
+Description: "Value set containing LOINC codes that describe cancer staging, clinical and pathological"
+* LNC#21908-9 "Stage group.clinical Cancer"
+* LNC#21905-5 "Primary tumor.clinical [Class] Cancer"
+* LNC#21906-3 "Regional lymph nodes.clinical [Class] Cancer"
+* LNC#21907-1 "Distant metastases.clinical [Class] Cancer"
+* LNC#21902-2 "Stage group.pathology Cancer"
+* LNC#21899-0 "Primary tumor.pathology Cancer"
+* LNC#21900-6 "Regional lymph nodes.pathology [Class] Cancer"
+* LNC#21901-4 "Distant metastases.pathology [Class] Cancer"
+
+ValueSet: LoincPerformanceStatusCodesVS
+Id: mcode-loinc-performance-status-codes-vs
+Title: "LOINC Performance Status Codes Value Set"
+Description: "Value set containing LOINC codes that describe performance status."
+* LNC#89247-1 "ECOG Performance Status score"
+* LNC#89243-0 "Karnofsky Performance Status score"

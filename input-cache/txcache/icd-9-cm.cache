@@ -12,8 +12,8 @@ e: {
   "resourceType" : "ValueSet",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:022467f7-1a97-4b73-9823-1dc79e97c654",
-    "timestamp" : "2020-10-13T18:10:10.112Z",
+    "identifier" : "urn:uuid:bebb9dba-bf9e-4cbb-b0f0-43f772703af6",
+    "timestamp" : "2020-10-24T13:11:05.599Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true

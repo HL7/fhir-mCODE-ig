@@ -8,7 +8,7 @@
     <li><a href="#Patient">Patient</a></li>
     <li><a href="#BodyLocations">Body Locations</a></li>
     <li><a href="#VitalSigns">Vital Sign Profiles</a></li>
-    <li><a href="#LaboratoryProfiles">Laboratory Profiles</a></li>
+    <li><a href="#laboratory-profiles">Laboratory Profiles</a></li>
     <li><a href="#RepresentingProvenance">Representing Provenance of mCODE Information</a></li>
 </ul>
 
@@ -43,7 +43,7 @@
 <p>The vital signs height, weight, and blood pressure are part of the mCODE data set. However, vital sign profiles are not defined in mCODE. Instead, mCODE uses the <a href="http://hl7.org/fhir/R4/observation-vitalsigns.html" target="_blank">FHIR vital sign profiles</a>, which are incorporated by reference into <a href="http://hl7.org/fhir/us/core/index.html" target="_blank">US Core v3</a>.</p>
  <p>If and when detailed vital signs profiles are standardized in a widely-accepted FHIR IG, mCODE may switch over to those profiles.</p>
 
-<h4><a name="LaboratoryProfiles"></a>Laboratory Profiles</h4>
+<h4><a name="laboratory-profiles"></a>Laboratory Profiles</h4>
 
 <p>Complete Blood Count (CBC) and Comprehensive Metabolic Panel (CMP) are part of the mCODE data set. Reporting these results must conform to the <a href="http://hl7.org/fhir/us/core/StructureDefinition-us-core-observation-lab.html">US Core Laboratory Result Profile</a>. Several examples of laboratory result reporting are given in the <a href="http://hl7.org/fhir/us/core/index.html">US Core IG</a>. For example, see this <a href="http://hl7.org/fhir/us/core/Observation-erythrocytes.html">erythrocytes laboratory reporting example</a>.</p>
 

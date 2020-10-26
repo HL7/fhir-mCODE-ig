@@ -43,13 +43,40 @@ Description: "Extended example 1: example showing disease status (patient's cond
 * focus = Reference(example1-mcode-primary-cancer-condition)
 * valueCodeableConcept = SCT#268910001 "Patient's condition improved (finding)"
 
+
+Instance: example1-mcode-cancer-related-comorbidities
+InstanceOf: CancerRelatedComorbidities
+Description: "mCODE Example for Cancer-Related Comorbidities"
+* id = "example1-mcode-cancer-related-comorbidities"
+* meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-related-comorbidities"
+* subject = Reference(example1-mcode-cancer-patient)
+* performer = Reference(example1-practitioner1-mcode)
+* status = #final "final"
+* component[depression].valueCodeableConcept = SCT#52101004 "Present (qualifier value)"
+* component[hypertensionComplicated].valueCodeableConcept = SCT#52101004 "Present (qualifier value)"
+* component[rheumatoidArthritis].valueCodeableConcept = SCT#2667000 "Absent (qualifier value)"
+* component[congestiveHeartFailure].valueCodeableConcept = SCT#2667000 "Absent (qualifier value)"
+* component[chronicPulmonaryDisease].valueCodeableConcept = SCT#2667000 "Absent (qualifier value)"
+* component[diabetesUncomplicated].valueCodeableConcept = SCT#2667000 "Absent (qualifier value)" 
+* component[diabetesComplicated].valueCodeableConcept = SCT#2667000 "Absent (qualifier value)"
+* component[obesity].valueCodeableConcept = SCT#2667000 "Absent (qualifier value)"
+* component[peripheralVascularDisease].valueCodeableConcept = SCT#2667000 "Absent (qualifier value)"
+* component[pulmonaryCirculationDisorders].valueCodeableConcept = SCT#2667000 "Absent (qualifier value)"
+* component[renalFailure].valueCodeableConcept = SCT#2667000 "Absent (qualifier value)"
+* component[drugAbuse].valueCodeableConcept = SCT#261665006 "Unknown (qualifier value)"
+* component[hypothyroidism].valueCodeableConcept = SCT#261665006 "Unknown (qualifier value)"
+* component[depression].extension[conditionReference].valueReference = Reference(example1-mcode-comorbid-condition-depression)
+* component[hypertensionComplicated].extension[conditionReference].valueReference = Reference(example1-mcode-comorbid-condition-hypertension)
+
+
 // example1-mcode-comorbid-condition-depression.json
 Instance: example1-mcode-comorbid-condition-depression
-InstanceOf: ElixhauserDepressionComorbidity
+InstanceOf: USCoreCondition
 Description: "Extended example 1: example showing comorbid condition (depression)"
 * id = "example1-mcode-comorbid-condition-depression"
 * clinicalStatus = ClinStatus#active
 * verificationStatus = VerStatus#confirmed
+* category = #problem-list-item
 * code = SCT#35489007 "Depressive disorder (disorder)"
 * subject = Reference(example1-mcode-cancer-patient)
 * onsetDateTime = "2000-01-01"
@@ -57,11 +84,12 @@ Description: "Extended example 1: example showing comorbid condition (depression
 
 // example1-mcode-comorbid-condition-hyptertension.json
 Instance: example1-mcode-comorbid-condition-hypertension
-InstanceOf: ElixhauserHypertensionComplicatedComorbidity
+InstanceOf: USCoreCondition
 Description: "Extended example 1: example showing comorbid condition (hypertension)"
 * id = "example1-mcode-comorbid-condition-hypertension"
 * clinicalStatus = ClinStatus#active
 * verificationStatus = VerStatus#confirmed
+* category = #problem-list-item
 * code = ICD10CM#I119 "Hypertensive heart disease without heart failure"
 * subject = Reference(example1-mcode-cancer-patient)
 * onsetDateTime = "2000-01-01"
@@ -85,7 +113,7 @@ Description: "Extended example 1: example showing ECOG performance status"
 Instance: example1-mcode-cancer-related-surgical-procedure-mastectomy
 InstanceOf: CancerRelatedSurgicalProcedure
 Description: "Extended example 1: example showing partial mastectomy surgical procedure"
-* id = "example1-mcode-cancer-related-surgical-procedure"
+* id = "example1-mcode-cancer-related-surgical-procedure-mastectomy"
 * extension[treatmentIntent].valueCodeableConcept = SCT#373808002 "Curative - procedure intent (qualifier value)"
 * status = #completed "completed"
 * code = SCT#64368001 "Partial mastectomy (procedure)"
@@ -114,7 +142,7 @@ Instance: example1-mcode-primary-cancer-condition
 InstanceOf: PrimaryCancerCondition
 Description: "Extended example 1: example showing primary cancer condition"
 * id = "example1-mcode-primary-cancer-condition"
-* extension[HistologyMorphologyBehavior].valueCodeableConcept = SCT#413448000 "Adenocarcinoma, no subtype, intermediate grade (morphologic abnormality)"
+* extension[histologyMorphologyBehavior].valueCodeableConcept = SCT#413448000 "Adenocarcinoma, no subtype, intermediate grade (morphologic abnormality)"
 * clinicalStatus = ClinStatus#remission
 * verificationStatus = VerStatus#confirmed
 * category = SCT#64572001 "Disease (disorder)"
@@ -226,13 +254,13 @@ Description: "Extended example 1: example showing Oncotype DX breast recurrence 
 * id = "example1-mcode-tumor-marker-oncotype-dx"
 * status = #final "final"
 * category = ObsCat#laboratory
-* code = https://www.ncbi.nlm.nih.gov/gtr/tests#509910 "Oncotype DX Breast Recurrence Score Assay"
+* code = GTR#509910 "Oncotype DX Breast Recurrence Score Assay"
 * subject = Reference(example1-mcode-cancer-patient)
 * effectiveDateTime = "2018-03-20"
 * performer = Reference(example1-practitioner1-mcode)
 * valueQuantity = UCUM#{ScoreOf}
 * valueQuantity.value = 47
-* interpretation = #H "High"
+* interpretation = ObsInt#H "High" 
 
 // example1-mcode-cancer-genomics-report.json
 Instance: example1-mcode-cancer-genomics-report
@@ -240,8 +268,8 @@ InstanceOf: CancerGenomicsReport
 Description: "Extended example 1: example of gene panel report"
 * id = "example1-mcode-cancer-genomics-report"
 * status = #final "final"
-* category[0] = http://terminology.hl7.org/CodeSystem/v2-0074#LAB
-* category[1] = http://terminology.hl7.org/CodeSystem/v2-0074#GE
+* category[0] = DiagnosticService#LAB
+* category[1] = DiagnosticService#GE
 * subject = Reference(example1-mcode-cancer-patient)
 * effectiveDateTime = "2020-03-15"
 * issued = "2020-03-15T00:00:01+00:00"
@@ -304,92 +332,96 @@ Description: "Extended example 1: example showing genetic variant found by breas
 
 // example1-mcode-cancer-related-medication-chemo-doxorubicin.json
 Instance: example1-mcode-cancer-related-medication-chemo-doxorubicin
-InstanceOf: CancerRelatedMedicationStatement
+InstanceOf: CancerRelatedMedicationRequest
 Description: "Extended example 1: example showing chemotherapy medication"
 * id = "example1-mcode-cancer-related-medication-chemo-doxorubicin"
 * extension[treatmentIntent].valueCodeableConcept = SCT#373808002 "Curative - procedure intent (qualifier value)"
 * status = #active "active"
 * category = MedCat#outpatient
+* intent = #order
 * medicationCodeableConcept = RXN#3639 "DOXOrubicin"
 * subject = Reference(example1-mcode-cancer-patient)
-* effectiveDateTime = "2019-04-01"
-* dateAsserted = "2019-04-01"
-* dosage.text = "doxorubicin (60 mg/m² IV), 93.26mg"
-* dosage.route = SCT#47625008 "Intravenous route (qualifier value)"
-* dosage.doseAndRate.doseQuantity = UCUM#mg
-* dosage.doseAndRate.doseQuantity.value = 93.26
-
+* requester = Reference(example1-practitioner1-mcode)
+* dosageInstruction.timing.repeat.boundsPeriod.start = "2019-04-01"
+* authoredOn = "2019-04-01"
+* dosageInstruction.text = "doxorubicin (60 mg/m² IV), 93.26mg"
+* dosageInstruction.route = SCT#47625008 "Intravenous route (qualifier value)"
+* dosageInstruction.doseAndRate.doseQuantity = UCUM#mg
+* dosageInstruction.doseAndRate.doseQuantity.value = 93.26
 // Once every 3 weeks
-* dosage.maxDosePerPeriod.numerator.value = 1
-* dosage.maxDosePerPeriod.denominator = UCUM#wk "week"
-* dosage.maxDosePerPeriod.denominator.value = 3
+* dosageInstruction.maxDosePerPeriod.numerator.value = 1
+* dosageInstruction.maxDosePerPeriod.denominator = UCUM#wk "week"
+* dosageInstruction.maxDosePerPeriod.denominator.value = 3
 
 // example1-mcode-cancer-related-medication-chemo-cyclophosphamide.json
 Instance: example1-mcode-cancer-related-medication-chemo-cyclophosphamide
-InstanceOf: CancerRelatedMedicationStatement
+InstanceOf: CancerRelatedMedicationRequest
 Description: "Extended example 1: example showing chemotherapy medication"
 * id = "example1-mcode-cancer-related-medication-chemo-cyclophosphamide"
 * extension[treatmentIntent].valueCodeableConcept = SCT#373808002 "Curative - procedure intent (qualifier value)"
 * status = #active "active"
 * category = MedCat#outpatient
+* intent = #order
 * medicationCodeableConcept = RXN#3002 "cyclophosphamide"
 * subject = Reference(example1-mcode-cancer-patient)
-* effectiveDateTime = "2018-04-01"
-* dateAsserted = "2018-04-01"
-* dosage.text = "cyclophosphamide (600 mg/m² IV), 932.59mg"
-* dosage.route = SCT#47625008 "Intravenous route (qualifier value)"
-* dosage.doseAndRate.doseQuantity = UCUM#mg
-* dosage.doseAndRate.doseQuantity.value = 932.59
-
+* requester = Reference(example1-practitioner1-mcode)
+* dosageInstruction.timing.repeat.boundsPeriod.start = "2018-04-01"
+* authoredOn = "2018-04-01"
+* dosageInstruction.text = "cyclophosphamide (600 mg/m² IV), 932.59mg"
+* dosageInstruction.route = SCT#47625008 "Intravenous route (qualifier value)"
+* dosageInstruction.doseAndRate.doseQuantity = UCUM#mg
+* dosageInstruction.doseAndRate.doseQuantity.value = 932.59
 // Once every 3 weeks
-* dosage.maxDosePerPeriod.numerator.value = 1
-* dosage.maxDosePerPeriod.denominator = UCUM#wk "week"
-* dosage.maxDosePerPeriod.denominator.value = 3
+* dosageInstruction.maxDosePerPeriod.numerator.value = 1
+* dosageInstruction.maxDosePerPeriod.denominator = UCUM#wk "week"
+* dosageInstruction.maxDosePerPeriod.denominator.value = 3
 
 
 // example1-mcode-cancer-related-medication-chemo-paclitaxel.json
 Instance: example1-mcode-cancer-related-medication-chemo-paclitaxel
-InstanceOf: CancerRelatedMedicationStatement
+InstanceOf: CancerRelatedMedicationRequest
 Description: "Extended example 1: example showing chemotherapy medication"
 * id = "example1-mcode-cancer-related-medication-chemo-paclitaxel"
 * extension[treatmentIntent].valueCodeableConcept = SCT#373808002 "Curative - procedure intent (qualifier value)"
 * status = #active "active"
 * category = MedCat#outpatient
+* intent = #order
 * medicationCodeableConcept = RXN#56946 "PACLitaxel"
 * subject = Reference(example1-mcode-cancer-patient)
-* effectiveDateTime = "2018-04-01"
-* dateAsserted = "2018-04-01"
-* dosage.text = "doxorubicin (175 mg/m² IV), 272.01mg"
-* dosage.route = SCT#47625008 "Intravenous route (qualifier value)"
-* dosage.doseAndRate.doseQuantity = UCUM#mg
-* dosage.doseAndRate.doseQuantity.value = 272.01
-
+* requester = Reference(example1-practitioner1-mcode)
+* dosageInstruction.timing.repeat.boundsPeriod.start = "2018-04-01"
+* authoredOn = "2018-04-01"
+* dosageInstruction.text = "doxorubicin (175 mg/m² IV), 272.01mg"
+* dosageInstruction.route = SCT#47625008 "Intravenous route (qualifier value)"
+* dosageInstruction.doseAndRate.doseQuantity = UCUM#mg
+* dosageInstruction.doseAndRate.doseQuantity.value = 272.01
 // Once every 3 weeks
-* dosage.maxDosePerPeriod.numerator.value = 1
-* dosage.maxDosePerPeriod.denominator = UCUM#wk "week"
-* dosage.maxDosePerPeriod.denominator.value = 3
+* dosageInstruction.maxDosePerPeriod.numerator.value = 1
+* dosageInstruction.maxDosePerPeriod.denominator = UCUM#wk "week"
+* dosageInstruction.maxDosePerPeriod.denominator.value = 3
 
 // example1-mcode-cancer-related-medication-anastrozole.json
 Instance: example1-mcode-cancer-related-medication-anastrozole
-InstanceOf: CancerRelatedMedicationStatement
+InstanceOf: CancerRelatedMedicationRequest
 Description: "Extended example 1: example showing chemotherapy medication"
 * id = "example1-mcode-cancer-related-medication-anastrozole"
 * extension[treatmentIntent].valueCodeableConcept = SCT#373808002 "Curative - procedure intent (qualifier value)"
 * status = #active "active"
 * category = MedCat#community
+* intent = #order
 * medicationCodeableConcept = RXN#84857 "anastrozole"
 * subject = Reference(example1-mcode-cancer-patient)
-* effectiveDateTime = "2018-05-01"
-* dateAsserted = "2018-05-01"
-* dosage.text = "1mg orally once daily"
-* dosage.route = SCT#26643006 "Oral route (qualifier value)"
-* dosage.doseAndRate.doseQuantity = UCUM#mg
-* dosage.doseAndRate.doseQuantity.value = 1
-
+* requester = Reference(example1-practitioner1-mcode)
+* dosageInstruction.timing.repeat.boundsPeriod.start = "2018-05-01"
+* authoredOn = "2018-05-01"
+* dosageInstruction.text = "1mg orally once daily"
+* dosageInstruction.route = SCT#26643006 "Oral route (qualifier value)"
+* dosageInstruction.doseAndRate.doseQuantity = UCUM#mg
+* dosageInstruction.doseAndRate.doseQuantity.value = 1
 // Once every 3 weeks
-* dosage.maxDosePerPeriod.numerator.value = 1
-* dosage.maxDosePerPeriod.denominator = UCUM#d "day"
-* dosage.maxDosePerPeriod.denominator.value = 1
+* dosageInstruction.maxDosePerPeriod.numerator.value = 1
+* dosageInstruction.maxDosePerPeriod.denominator = UCUM#d "day"
+* dosageInstruction.maxDosePerPeriod.denominator.value = 1
 
 // example1-practitioner1-mcode.json
 Instance: example1-practitioner1-mcode
@@ -565,7 +597,7 @@ InstanceOf: DiagnosticReport
 Description: "Extended example 1: example of pathology findings represnted as a DiagnosticReport"
 * id = "example1-diagnosticreport-pathology"
 * status = #final "final"
-* category = #SP "Surgical Pathology"
+* category = DiagnosticService#SP "Surgical Pathology"
 * code = LNC#22637-3 "Pathology report final diagnosis Narrative"
 * subject = Reference(example1-mcode-cancer-patient)
 * issued = "2018-03-06T00:00:00Z"

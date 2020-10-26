@@ -1,57 +1,52 @@
-/*
-ValueSet:  ElixhauserVS
-Id: elixhauser--vs
-Title: "Elixhauser Comorbid Condition Value Set for "
-Description:    "Elixhauser Comorbid Condition Value Set for . ICD-10 codes are drawn from https://www.hcup-us.ahrq.gov/toolssoftware/comorbidityicd10/comformat_icd10cm_2019_1.txt."
-*/
+CodeSystem: ElixhauserCategoryCS
+Id: mcode-elixhauser-category
+Title: "Elixhauser Comorbidity Category"
+Description: "A code system that contains codes representing the comorbidity categories defined by Elixhauser [ref](https://www.ncbi.nlm.nih.gov/pubmed/9431328)"
+* #ALCOHOL  "Alcohol Abuse"
+* #ARRHYTH   "Cardiac Arrhythmia"
+* #ANEMDEF "Deficiency Anemia"
+* #ARTH  "Rheumatoid Arthritis"
+* #BLDLOSS  "Blood Loss Anemia"
+* #CHF  "Congestive Heart Failure"
+* #CHRNLUNG  "Chronic Pulmonary Disease"
+* #COAG  "Coagulation Deficiency"
+* #DEPRESS  "Depression"
+* #DM  "Diabetes without chronic complications"
+* #DMCX  "Diabetes with chronic complication"
+* #DRUG  "Drug Abuse"
+* #HIV  "HIV-AIDS"
+* #HTN  "Hypertension without complications"
+* #HTNCX  "Hypertension with complications"
+* #HYPOTHY   "Hypothyroidism"
+* #LIVER  "Liver Disease"
+* #LYMPH  "Lymphoma"
+* #LYTES   "Fluid Electrolyte Disorders"
+* #METS   "Metastatic Cancer"
+* #NEURO "Other Neurological"
+* #OBESE   "Obesity"
+* #PARA   "Paralysis"
+* #PERIVASC  "Peripheral Vascular Disease"
+* #PSYCH  "Psychoses"
+* #PULMCIRC  "Pulmonary Circulation Disorders"
+* #RENLFAIL  "Renal Failure"
+* #TUMOR   "Solid Tumor"
+* #ULCER  "Ulcer"
+* #VALVE  "Valvular Disease"
+* #WGHTLOSS "Weight Loss"
 
-
-/*
-ValueSet:   ComorbidConditionVS
-Id: mcode-comorbid-condition-vs
-Title: "Comorbid Condition Value Set"
-Description:    "SNOMED and ICD-10-CM codes for common comorbid conditions. Aligns with Elixhauser comorbidity scale. ICD-10 codes are drawn from https://www.hcup-us.ahrq.gov/toolssoftware/comorbidityicd10/comformat_icd10cm_2019_1.txt."
-* include codes from system SCT where concept is-a #86406008    "Human immunodeficiency virus infection (disorder)"
-* include codes from system SCT where concept is-a #15167005    "Alcohol abuse (disorder)"
-* include codes from system SCT where concept is-a #698247007   "Cardiac arrhythmia (disorder)"
-* include codes from system SCT where concept is-a #267513007 "Deficiency anemias (disorder)"
-* include codes from system SCT where concept is-a #69896004  "Rheumatoid arthritis (disorder)"
-* include codes from system SCT where concept is-a #398049005  "Mixed collagen vascular disease (disorder)"	
-* include codes from system SCT where concept is-a #413532003   "Anemia due to blood loss (disorder)"
-* include codes from system SCT where concept is-a #42343007    "Congestive heart failure (disorder)"
-* include codes from system SCT where concept is-a #413839001   "Chronic lung disease (disorder)"
-* include codes from system SCT where concept is-a #64779008    "Blood coagulation disorder (disorder)"
-* include codes from system SCT where concept is-a #35489007    "Depressive disorder (disorder)"
-* include codes from system SCT where concept is-a #111552007   "Diabetes mellitus without complication (disorder)"
-* include codes from system SCT where concept is-a #73211009 "Diabetes mellitus (disorder)" and concept is-not-a #111552007  "Diabetes mellitus without complication (disorder)"
-* include codes from system SCT where concept is-a #66214007    "Substance abuse (disorder)"
-* include codes from system SCT where concept is-a #38341003 "Hypertensive disorder, systemic arterial (disorder)" 
-* include codes from system SCT where concept is-a #449759005 "Complication of systemic hypertensive disorder (disorder)"
-* include codes from system SCT where concept is-a #40930008    "Hypothyroidism (disorder)"
-* include codes from system SCT where concept is-a #235856003   "Disorder of liver (disorder)"
-* include codes from system SCT where concept is-a #118600007   "Malignant lymphoma (disorder)"
-* include codes from system SCT where concept is-a #76314005 "Disorder of fluid AND/OR electrolyte (disorder)"
-* include codes from system SCT where concept is-a #363346000   "Malignant neoplastic disease (disorder)"
-* include codes from system SCT where concept is-a #118940003 "Disorder of nervous system (disorder)" and is-not-a #29426003  "Paralytic syndrome (disorder)"
-* include codes from system SCT where concept is-a #414916001   "Obesity (disorder)"
-* include codes from system SCT where concept is-a #29426003  "Paralytic syndrome (disorder)"
-* include codes from system SCT where concept is-a #400047006   "Peripheral vascular disease (disorder)"
-* include codes from system SCT where concept is-a #69322001    "Psychotic disorder (disorder)"
-* include codes from system SCT where concept is-a #39785005    "Disorder of pulmonary circulation (disorder)"
-* include codes from system SCT where concept is-a #42399005    "Renal failure syndrome (disorder)"
-* include codes from system SCT where concept is-a #13200003    "Peptic ulcer (disorder)"
-* include codes from system SCT where concept is-a #368009      "Heart valve disorder (disorder)"
-* include codes from system SCT where concept is-a #89362005    "Weight loss (finding)"
-* include codes from system SCT where concept is-a #248342006 "Underweight (finding)"
-* include codes from system SCT where concept is-a #65404009  "Undernutrition (disorder)"
-*/
-
+ValueSet: PresentAbsentUnknownVS
+Id: mcode-present-absent-unknown
+Title: "Present-Absent-Unknown"
+Description: "Value set with answers present, absent, and unknown."
+* SCT#52101004 "Present (qualifier value)"
+* SCT#2667000 "Absent (qualifier value)"
+* SCT#261665006 "Unknown (qualifier value)"
 
 ValueSet:  ElixhauserHIVAIDSVS
 Id: elixhauser-hiv-aids-vs
 Title: "Elixhauser Comorbid Condition Value Set for HIV-AIDS"
 Description:    "Elixhauser Comorbid Condition Value Set for HIV-AIDS. ICD-10 codes are drawn from https://www.hcup-us.ahrq.gov/toolssoftware/comorbidityicd10/comformat_icd10cm_2019_1.txt."
-* include codes from system SCT where concept is-a #86406008    "Human immunodeficiency virus infection (disorder)"
+* include codes from system SCT where concept is-a #86406008 "Human immunodeficiency virus infection (disorder)"
 * ICD10CM#B20    "Human immunodeficiency virus [HIV] disease"
 
 ValueSet:  ElixhauserAlcoholAbuseVS
@@ -780,7 +775,7 @@ Description:    "Elixhauser Comorbid Condition Value Set for Rheumatoid Arthriti
 * ICD10CM#M488X6        "Other specified spondylopathies, lumbar region"
 * ICD10CM#M488X7        "Other specified spondylopathies, lumbosacral region"
 * ICD10CM#M488X8        "Other specified spondylopathies, sacral and sacrococcygeal region"
-* ICD10CM#M488X9        " Other specified spondylopathies, site unspecified"
+* ICD10CM#M488X9        "Other specified spondylopathies, site unspecified"
 * ICD10CM#M4980        "Spondylopathy in diseases classified elsewhere, site unspecified"
 * ICD10CM#M4981        "Spondylopathy in diseases classified elsewhere, occipito-atlanto-axial region"
 * ICD10CM#M4982        "Spondylopathy in diseases classified elsewhere, cervical region"
@@ -1041,7 +1036,8 @@ ValueSet:  ElixhauserDiabetesComplicatedVS
 Id: elixhauser-diabetes-complicated-vs
 Title: "Elixhauser Comorbid Condition Value Set for diabetes with chronic complications"
 Description:    "Elixhauser Comorbid Condition Value Set for diabetes with chronic complications. ICD-10 codes are drawn from https://www.hcup-us.ahrq.gov/toolssoftware/comorbidityicd10/comformat_icd10cm_2019_1.txt."
-* include codes from system SCT where concept is-a #73211009 "Diabetes mellitus (disorder)" and concept is-not-a #111552007  "Diabetes mellitus without complication (disorder)"
+* include codes from system SCT where concept is-a #73211009 "Diabetes mellitus (disorder)"
+* exclude codes from system SCT where concept is-a #111552007  "Diabetes mellitus without complication (disorder)"
 * ICD10CM#E0821    "Diabetes mellitus due to underlying condition with diabetic nephropathy"
 * ICD10CM#E0822    "Diabetes mellitus due to underlying condition with diabetic chronic kidney disease"
 * ICD10CM#E0829    "Diabetes mellitus due to underlying condition with other diabetic kidney complication"
@@ -3818,3 +3814,34 @@ Description:    "Elixhauser Comorbid Condition Value Set for Weight loss. ICD-10
 * ICD10CM#R634    "Abnormal weight loss"
 * ICD10CM#R636    "Underweight"
 
+/*
+CodeSystem: CharlsonCategoryCS
+Id: mcode-charlson-category
+Title: "Charlson Comorbidity Category"
+Description: "A code system that contains codes representing the comorbidity categories defined by Charlson [ref](https://pubmed.ncbi.nlm.nih.gov/3558716/)"
+* #MI "Prior myocardial infarction"
+* #CHF  "Congestive Heart Failure"
+* #PERIVASC  "Peripheral Vascular Disease"
+* #DEMEN "Dementia"
+* #CVD "Cerebrovascular disease"
+* #CPD "Chronic pulmonary disease"
+* #ARTH "Connective tissue (rheumatologic) disease"
+* #ULCER  "Peptic ulcer disease"
+* #LIV  "Chronic liver disease, mild"
+* #DM  "Diabetes without chronic complications"
+* #HMPG "Cerebrovascular (hemiplegia) event"
+* #RENL  "Kidney disease, moderate or severe"
+* #DMCX  "Diabetes with chronic complication"
+* #LEUK "Leukemia"
+* #LYMPH  "Lymphoma"
+* #LIVSEV "Chronic liver disease, moderate or severe"
+* #METS   "Metastatic solid tumor"
+* #AIDS   "Acquired immuno-deficiency syndrome (AIDS)"
+
+ValueSet: ComorbidityCategoryVS
+Id: mcode-comorbidity-category
+Title: "Comorbidity Category Value Set"
+Description: "Elixhauser and Charlson comorbidity category codes." 
+* include codes from system ElixhauserCategoryCS
+* include codes from system CharlsonCategoryCS
+*/

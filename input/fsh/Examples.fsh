@@ -33,7 +33,7 @@ InstanceOf: CancerDiseaseStatus
 Description: "mCODE Example for Cancer Disease Status"
 * id = "mCODECancerDiseaseStatusExample01"
 * meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-disease-status"
-//* extension[evidenceType].url = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-evidence-type"
+// * extension[evidenceType].url = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-evidence-type"
 * extension[evidenceType].valueCodeableConcept = SCT#252416005 "Histopathology test (procedure)"
 * status = #final "final"
 * category = ObsCat#laboratory "laboratory"
@@ -42,18 +42,32 @@ Description: "mCODE Example for Cancer Disease Status"
 * performer = Reference(mCODEPractitionerExample01)
 * valueCodeableConcept = SCT#268910001 "Patient's condition improved (finding)"
 
-Instance: mCODEComorbidConditionExample01
-InstanceOf: ElixhauserDiabetesUncomplicatedComorbidity
-Description: "mCODE Example for Comorbid Condition"
-* id = "mCODEComorbidConditionExample01"
-* meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-comorbid-condition"
-* clinicalStatus = ClinStatus#active "Active"
-* verificationStatus = VerStatus#confirmed "Confirmed"
-* code = SCT#44054006 "Type 2 diabetes mellitus"
+Instance: mCODECancerRelatedComorbiditiesExample01
+InstanceOf: CancerRelatedComorbidities
+Description: "mCODE Example for Cancer-Related Comorbidities"
+* id = "mCODECancerRelatedComorbiditiesExample01"
+* meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-related-comorbidities"
 * subject = Reference(mCODEPatientExample01)
-* asserter = Reference(mCODEPractitionerExample01)
-* onsetDateTime = "2016-04-01"
-
+* performer = Reference(mCODEPractitionerExample01)
+* status = #final "final"
+// present
+* component[cardiacArrhythmia].valueCodeableConcept = SCT#52101004 "Present (qualifier value)"
+* component[cardiacArrhythmia].extension[conditionCode].valueCodeableConcept = SCT#82838007 "Irregular tachycardia (disorder)"
+// present
+* component[depression].valueCodeableConcept = SCT#52101004 "Present (qualifier value)"
+* component[depression].extension[conditionReference].valueReference = Reference(mCODEDepressionExample01)
+// absent
+* component[rheumatoidArthritis].valueCodeableConcept = SCT#2667000 "Absent (qualifier value)"
+* component[congestiveHeartFailure].valueCodeableConcept = SCT#2667000 "Absent (qualifier value)"
+* component[chronicPulmonaryDisease].valueCodeableConcept = SCT#2667000 "Absent (qualifier value)"
+* component[diabetesUncomplicated].valueCodeableConcept = SCT#2667000 "Absent (qualifier value)" 
+* component[diabetesComplicated].valueCodeableConcept = SCT#2667000 "Absent (qualifier value)"
+* component[obesity].valueCodeableConcept = SCT#2667000 "Absent (qualifier value)"
+* component[peripheralVascularDisease].valueCodeableConcept = SCT#2667000 "Absent (qualifier value)"
+* component[pulmonaryCirculationDisorders].valueCodeableConcept = SCT#2667000 "Absent (qualifier value)"
+* component[renalFailure].valueCodeableConcept = SCT#2667000 "Absent (qualifier value)"
+* component[drugAbuse].valueCodeableConcept = SCT#261665006 "Unknown (qualifier value)"
+* component[hypothyroidism].valueCodeableConcept = SCT#261665006 "Unknown (qualifier value)"
 
 Instance: mCODEPatientExample01
 InstanceOf: CancerPatient
@@ -87,10 +101,10 @@ Description: "mCODE Example for Patient"
 * id = "mCODEPatientExample02"
 * meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-patient"
 // The following lines must use the slice names, not the defining URLs
-//* extension[race].url = "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race"
-//* extension[race].extension[ombCategory].url = "ombCategory"
+// * extension[race].url = "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race"
+// * extension[race].extension[ombCategory].url = "ombCategory"
 * extension[race].extension[ombCategory].valueCoding = OmbRaceCat#1002-5 "American Indian or Alaska Native"
-//* extension[race].extension[text].url = "text"
+// * extension[race].extension[text].url = "text"
 * extension[race].extension[text].valueString = "Lakota and Crow"
 * extension[birthsex].valueCode = #F
 * identifier.use = #usual
@@ -147,6 +161,17 @@ Description: "mCODE Example for Practitioner"
 * address.country = "US"
 * qualification.code = http://terminology.hl7.org/CodeSystem/v2-0360|2.7#MD "Doctor of Medicine"
 
+Instance: mCODEDepressionExample01
+InstanceOf: USCoreCondition
+Description: "mCODE Example of Depression (as Comorbid condition), part of mCODECancerRelatedComorbiditiesExample01"
+* id = "mCODEDepressionExample01"
+* subject = Reference(mCODEPatientExample01)
+* asserter = Reference(mCODEPractitionerExample01)
+* category = ConditionCategory#problem-list-item
+* onsetDateTime = "2005-01-01"
+* clinicalStatus = ClinStatus#active "Active"
+* verificationStatus = VerStatus#confirmed "Confirmed"
+* code = SCT#191630001 "Bipolar affective disorder, currently depressed, moderate (disorder)"
 
 Instance: mCODEECOGPerformanceStatusExample01
 InstanceOf: ECOGPerformanceStatus
@@ -176,41 +201,6 @@ Description: "mCODE Example for Karnofsky Performance Status"
 * valueInteger = 90
 * interpretation = LNC#LA29176-7 "Able to carry on normal activity; minor signs or symptoms of disease"
 
-Instance: mCODECancerRelatedMedicationStatementExample01
-InstanceOf: CancerRelatedMedicationStatement
-Description: "mCODE Example for Cancer Related Medication Statement"
-* id = "mCODECancerRelatedMedicationStatementExample01"
-* meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-related-medication-statement"
-* status = MedStatus#active "active"
-* category = MedCat#community "community"
-* medicationCodeableConcept = RXN#349472 "gefitinib 250 MG Oral Tablet"
-* subject = Reference(mCODEPatientExample01)
-* effectiveDateTime = "2019-04-01"
-* dateAsserted = "2019-04-01"
-* extension[treatmentIntent].valueCodeableConcept = SCT#373808002 "Curative - procedure intent"
-* dosage.text = "250mg orally once daily with or without food"
-* dosage.route = SCT#26643006 "Oral use"
-* dosage.doseAndRate.doseQuantity.value = 250.0
-* dosage.doseAndRate.doseQuantity = UCUM#mg "mg"
-
-Instance: mCODECancerRelatedMedicationStatementExample02
-InstanceOf: CancerRelatedMedicationStatement
-Description: "mCODE Example for Cancer Related Medication Statement"
-* id = "mCODECancerRelatedMedicationStatementExample02"
-* meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-related-medication-statement"
-* status = MedStatus#stopped "stopped"
-* category = MedCat#community "community"
-* medicationCodeableConcept = RXN#349472 "gefitinib 250 MG Oral Tablet"
-* subject = Reference(mCODEPatientExample01)
-* effectiveDateTime = "2019-04-01"
-* dateAsserted = "2019-04-01"
-* extension[treatmentIntent].valueCodeableConcept = SCT#373808002 "Curative - procedure intent"
-* extension[terminationReason].valueCodeableConcept = SCT#182992009 "Treatment completed (situation)"
-* dosage.text = "250mg orally once daily with or without food"
-* dosage.route = SCT#26643006 "Oral use"
-* dosage.doseAndRate.doseQuantity.value = 250.0
-* dosage.doseAndRate.doseQuantity = UCUM#mg "mg"
-
 Instance: mCODECancerRelatedSurgicalProcedureExample01
 InstanceOf: CancerRelatedSurgicalProcedure
 Description: "mCODE Example for Cancer Related Surgical Procedure"
@@ -236,8 +226,8 @@ Description: "mCODE Example for Cancer Related Radiation Procedure"
 * asserter = Reference(mCODEPractitionerExample01)
 * performedDateTime = "2019-03-01"
 * extension[treatmentIntent].valueCodeableConcept = SCT#373808002 "Curative - procedure intent"
-//* extension[RadiationDose].extension[TotalRadiationDoseDelivered].valueQuantity = UCUM#cGy
-//* extension[RadiationDose].extension[TotalRadiationDoseDelivered].valueQuantity.value = 1200.0
+// * extension[RadiationDose].extension[TotalRadiationDoseDelivered].valueQuantity = UCUM#cGy
+// * extension[RadiationDose].extension[TotalRadiationDoseDelivered].valueQuantity.value = 1200.0
 * reasonReference = Reference(mCODEPrimaryCancerConditionExample01)
 * bodySite = SCT#41224006 "Structure of lower lobe of left lung (body structure)"
 
@@ -372,3 +362,77 @@ Description: "mCODE Example for CancerRelatedMedicationRequest"
 * dosageInstruction.timing.repeat.boundsPeriod.start = "2019-04-01"
 * dosageInstruction.timing.repeat.boundsPeriod.start = "2019-04-30"
 * dosageInstruction.timing.code = TimingAbbreviation#QD // prescriber abbreviation for once daily
+
+Instance: mCODECancerRelatedMedicationRequestExample02
+InstanceOf: CancerRelatedMedicationRequest
+Description: "mCODE Example for CancerRelatedMedicationRequest - Chemo Infusion"
+* id = "mCODECancerRelatedMedicationRequestExample02"
+* meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-related-medication-request"
+* subject = Reference(mCODEPatientExample01)
+* status = MedRequestStatus#active
+* intent = MedRequestIntent#order
+* authoredOn = "2019-04-01"
+* medicationCodeableConcept = RXN#309311 "CISplatin 50 MG per 50 ML Injectable Solution"
+* reasonCode = SCT#254637007 "Non-small cell lung cancer (disorder)"
+* requester = Reference(mCODEPractitionerExample01)
+* extension[treatmentIntent].valueCodeableConcept = SCT#373808002 "Curative - procedure intent"
+* dosageInstruction.text = "calculate absolute dose on day of administration."
+* dosageInstruction.route = SCT#47625008 "Intravenous use"
+* dosageInstruction.doseAndRate.doseQuantity.value = 75
+* dosageInstruction.doseAndRate.doseQuantity = UCUM#mg/m2 "mg/m2"
+* dosageInstruction.timing.event = "2019-06-15"
+* dosageInstruction.timing.repeat.count = 1  // frequency is one-time on day 1 of first cycle so there should be no repeat."
+* note.text = "Day 1 of NSCLC regimen: Cisplatin 75 mg/m2 day 1; docetaxel 75 mg/m2 day 1 every 21 days for 4 cycles."
+
+/*
+Instance: mCODECancerRelatedMedicationAdministrationExample01
+InstanceOf: CancerRelatedMedicationAdministration
+Description: "mCODE Example for CancerRelatedMedicationAdministration"
+* id = "mCODECancerRelatedMedicationAdministrationExample01"
+* meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-related-medication-administration"
+* subject = Reference(mCODEPatientExample01)
+* status = MedAdminStatus#completed
+* category = MedAdminCategory#outpatient
+* medicationCodeableConcept = RXN#309311 "CISplatin 50 MG per 50 ML Injectable Solution"
+* effectiveDateTime = "2019-06-15"
+* performer.actor = Reference(mCODEPractitionerExample01)
+* request = Reference(mCODECancerRelatedMedicationRequestExample02)
+* dosage.route = SCT#47625008 "Intravenous use"
+* dosage.dose.value = 150
+* dosage.dose.unit = UCUM#mg
+* dosage.text = "Day 1 of NSCLC regimen: Cisplatin 75 mg/m2 day 1; docetaxel 75 mg/m2 day 1 every 21 days for 4 cycles. Calculated absolute dosage based on BSA = 2.0"
+
+Instance: mCODECancerRelatedMedicationStatementExample01
+InstanceOf: CancerRelatedMedicationStatement
+Description: "mCODE Example for Cancer Related Medication Statement"
+* id = "mCODECancerRelatedMedicationStatementExample01"
+* meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-related-medication-statement"
+* status = MedStatus#active "active"
+* category = MedCat#community "community"
+* medicationCodeableConcept = RXN#349472 "gefitinib 250 MG Oral Tablet"
+* subject = Reference(mCODEPatientExample01)
+* effectiveDateTime = "2019-04-01"
+* dateAsserted = "2019-04-01"
+* extension[treatmentIntent].valueCodeableConcept = SCT#373808002 "Curative - procedure intent"
+* dosage.text = "250mg orally once daily with or without food"
+* dosage.route = SCT#26643006 "Oral use"
+* dosage.doseAndRate.doseQuantity.value = 250.0
+* dosage.doseAndRate.doseQuantity = UCUM#mg "mg"
+
+Instance: mCODECancerRelatedMedicationStatementExample02
+InstanceOf: CancerRelatedMedicationStatement
+Description: "mCODE Example for Cancer Related Medication Statement"
+* id = "mCODECancerRelatedMedicationStatementExample02"
+* meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-related-medication-statement"
+* status = MedStatus#stopped "stopped"
+* category = MedCat#community "community"
+* medicationCodeableConcept = RXN#349472 "gefitinib 250 MG Oral Tablet"
+* subject = Reference(mCODEPatientExample01)
+* effectiveDateTime = "2019-04-01"
+* dateAsserted = "2019-04-01"
+* extension[treatmentIntent].valueCodeableConcept = SCT#373808002 "Curative - procedure intent"
+* extension[terminationReason].valueCodeableConcept = SCT#182992009 "Treatment completed (situation)"
+* dosage.text = "250mg orally once daily with or without food"
+* dosage.route = SCT#26643006 "Oral use"
+* dosage.doseAndRate.doseQuantity.value = 250.0
+* dosage.doseAndRate.doseQuantity = UCUM#mg "mg" */

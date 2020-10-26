@@ -30,9 +30,9 @@ This section provides some examples how mCODE elements may be represented in a F
 * The FHIR examples conform to the HL7 FHIR Argonaut IG where applicable and is subject to change with subsequent releases.
 * Proprietary content like AJCC staging categories may appear in some of these examples solely for the purposes of illustration only. It is expected that all implementers will adhere to licensing requirements as appropriate.
 
-### Extended example: breast cancer
+### Scenario 1: breast cancer patient
 
-In addition to the examples provided above, we also have developed this extended example description of a hypothetical patient, along with accompanying example instances to demonstrate how mCODE profiles can be used to guide the creation resources representing a clinically realistic scenario. When information in the persona does not map onto mCODE profiles, we provide examples using [USCore](http://hl7.org/fhir/us/core/index.html) or standard FHIR resources.
+In addition to the examples provided above, we also have developed this scenario describing a hypothetical patient, along with accompanying example instances to demonstrate how mCODE profiles can be used to guide the creation resources representing a clinically realistic scenario. When information in the persona does not map onto mCODE profiles, we provide examples using [USCore](http://hl7.org/fhir/us/core/index.html) or standard FHIR resources.
 
 #### Patient description
 
@@ -50,50 +50,50 @@ The patient is two years out from surgery and has undergone surveillance imaging
 
 #### FHIR instances from mCODE elements
 
-* [`example1-mcode-cancer-patient`](Patient-example1-mcode-cancer-patient.html) ([CancerPatient])
-* [`example1-mcode-cancer-disease-status`](Observation-example1-mcode-cancer-disease-status.html) ([CancerDiseaseStatus])
-* [`example1-mcode-cancer-related-comorbidities`](Observation-example1-mcode-cancer-related-comorbidities.html) ([ComorbidCondition])
-* [`example1-mcode-comorbid-condition-depression`](Condition-example1-mcode-comorbid-condition-depression.html) ([ComorbidCondition])
-* [`example1-mcode-comorbid-condition-hypertension`](Condition-example1-mcode-comorbid-condition-hypertension.html) ([ComorbidCondition])
-* [`example1-mcode-ecog-performance-status`](Observation-example1-mcode-ecog-performance-status.html) ([ECOGPerformanceStatus])
-* [`example1-mcode-cancer-related-surgical-procedure-mastectomy`](Procedure-example1-mcode-cancer-related-surgical-procedure-mastectomy.html) ([CancerRelatedSurgicalProcedure])
-* [`example1-mcode-cancer-related-radiation-procedure`](Procedure-example1-mcode-cancer-related-radiation-procedure.html) ([CancerRelatedRadiationProcedure])
- * [`example1-mcode-primary-cancer-condition`](Condition-example1-mcode-primary-cancer-condition.html) ([PrimaryCancerCondition])
- * [`example1-mcode-tnm-clinical-stage-group`](Observation-example1-mcode-tnm-clinical-stage-group.html) ([TNMClinicalStageGroup])
-* [`example1-mcode-tnm-primary-tumor-category`](Observation-example1-mcode-tnm-primary-tumor-category.html) ([TNMClinicalPrimaryTumorCategory])
-* [`example1-mcode-tnm-clinical-regional-nodes-category`](Observation-example1-mcode-tnm-clinical-regional-nodes-category.html) ([TNMClinicalRegionalNodesCategory])
-* [`example1-mcode-tnm-clinical-distant-metastases-category`](Observation-example1-mcode-tnm-clinical-distant-metastases-category.html) ([TNMClinicalDistantMetastasesCategory])
-* [`example1-mcode-tumor-marker-er`](Observation-example1-mcode-tumor-marker-er.html)  ([TumorMarker])
-* [`example1-mcode-tumor-marker-pr`](Observation-example1-mcode-tumor-marker-pr.html)  ([TumorMarker])
-* [`example1-mcode-tumor-marker-her2`](Observation-example1-mcode-tumor-marker-her2.html)  ([TumorMarker])
-* [`example1-mcode-tumor-marker-oncotype-dx`](Observation-example1-mcode-tumor-marker-oncotype-dx.html)  ([TumorMarker])
-* [`example1-mcode-cancer-genomics-report`](DiagnosticReport-example1-mcode-cancer-genomics-report.html) ([CancerGenomicsReport])
-* [`example1-mcode-genomic-region-studied`](Observation-example1-mcode-genomic-region-studied.html) ([GenomicRegionStudied])
-* [`example1-mcode-genetic-specimen`](Specimen-example1-mcode-genetic-specimen.html) ([GeneticSpecimen])
-* [`example1-mcode-cancer-genetic-variant`](Observation-example1-mcode-cancer-genetic-variant.html) ([CancerGeneticVariant])
-* [`example1-mcode-cancer-related-medication-chemo-doxorubicin`](MedicationRequest-example1-mcode-cancer-related-medication-chemo-doxorubicin.html) ([CancerRelatedMedicationRequest])
-* [`example1-mcode-cancer-related-medication-chemo-cyclophosphamide`](MedicationRequest-example1-mcode-cancer-related-medication-chemo-cyclophosphamide.html) ([CancerRelatedMedicationRequest])
-* [`example1-mcode-cancer-related-medication-chemo-paclitaxel`](MedicationRequest-example1-mcode-cancer-related-medication-chemo-paclitaxel.html) ([CancerRelatedMedicationRequest])
-* [`example1-mcode-cancer-related-medication-anastrozole`](MedicationRequest-example1-mcode-cancer-related-medication-anastrozole.html) ([CancerRelatedMedicationRequest])
-* [`example1-practitioner1-mcode`](Practitioner-example1-practitioner1-mcode.html) ([StructureDefinition-us-core-practitioner])
+* [`scenario1-mcode-cancer-patient`](Patient-scenario1-mcode-cancer-patient.html) ([CancerPatient])
+* [`scenario1-mcode-cancer-disease-status`](Observation-scenario1-mcode-cancer-disease-status.html) ([CancerDiseaseStatus])
+* [`scenario1-mcode-cancer-related-comorbidities`](Observation-scenario1-mcode-cancer-related-comorbidities.html) ([ComorbidCondition])
+* [`scenario1-mcode-comorbid-condition-depression`](Condition-scenario1-mcode-comorbid-condition-depression.html) ([ComorbidCondition])
+* [`scenario1-mcode-comorbid-condition-hypertension`](Condition-scenario1-mcode-comorbid-condition-hypertension.html) ([ComorbidCondition])
+* [`scenario1-mcode-ecog-performance-status`](Observation-scenario1-mcode-ecog-performance-status.html) ([ECOGPerformanceStatus])
+* [`scenario1-mcode-cancer-related-surgical-procedure-mastectomy`](Procedure-scenario1-mcode-cancer-related-surgical-procedure-mastectomy.html) ([CancerRelatedSurgicalProcedure])
+* [`scenario1-mcode-cancer-related-radiation-procedure`](Procedure-scenario1-mcode-cancer-related-radiation-procedure.html) ([CancerRelatedRadiationProcedure])
+* [`scenario1-mcode-primary-cancer-condition`](Condition-scenario1-mcode-primary-cancer-condition.html) ([PrimaryCancerCondition])
+* [`scenario1-mcode-tnm-clinical-stage-group`](Observation-scenario1-mcode-tnm-clinical-stage-group.html) ([TNMClinicalStageGroup])
+* [`scenario1-mcode-tnm-primary-tumor-category`](Observation-scenario1-mcode-tnm-primary-tumor-category.html) ([TNMClinicalPrimaryTumorCategory])
+* [`scenario1-mcode-tnm-clinical-regional-nodes-category`](Observation-scenario1-mcode-tnm-clinical-regional-nodes-category.html) ([TNMClinicalRegionalNodesCategory])
+* [`scenario1-mcode-tnm-clinical-distant-metastases-category`](Observation-scenario1-mcode-tnm-clinical-distant-metastases-category.html) ([TNMClinicalDistantMetastasesCategory])
+* [`scenario1-mcode-tumor-marker-er`](Observation-scenario1-mcode-tumor-marker-er.html)  ([TumorMarker])
+* [`scenario1-mcode-tumor-marker-pr`](Observation-scenario1-mcode-tumor-marker-pr.html)  ([TumorMarker])
+* [`scenario1-mcode-tumor-marker-her2`](Observation-scenario1-mcode-tumor-marker-her2.html)  ([TumorMarker])
+* [`scenario1-mcode-tumor-marker-oncotype-dx`](Observation-scenario1-mcode-tumor-marker-oncotype-dx.html)  ([TumorMarker])
+* [`scenario1-mcode-cancer-genomics-report`](DiagnosticReport-scenario1-mcode-cancer-genomics-report.html) ([CancerGenomicsReport])
+* [`scenario1-mcode-genomic-region-studied`](Observation-scenario1-mcode-genomic-region-studied.html) ([GenomicRegionStudied])
+* [`scenario1-mcode-genetic-specimen`](Specimen-scenario1-mcode-genetic-specimen.html) ([GeneticSpecimen])
+* [`scenario1-mcode-cancer-genetic-variant`](Observation-scenario1-mcode-cancer-genetic-variant.html) ([CancerGeneticVariant])
+* [`scenario1-mcode-cancer-related-medication-chemo-doxorubicin`](MedicationRequest-scenario1-mcode-cancer-related-medication-chemo-doxorubicin.html) ([CancerRelatedMedicationRequest])
+* [`scenario1-mcode-cancer-related-medication-chemo-cyclophosphamide`](MedicationRequest-scenario1-mcode-cancer-related-medication-chemo-cyclophosphamide.html) ([CancerRelatedMedicationRequest])
+* [`scenario1-mcode-cancer-related-medication-chemo-paclitaxel`](MedicationRequest-scenario1-mcode-cancer-related-medication-chemo-paclitaxel.html) ([CancerRelatedMedicationRequest])
+* [`scenario1-mcode-cancer-related-medication-anastrozole`](MedicationRequest-scenario1-mcode-cancer-related-medication-anastrozole.html) ([CancerRelatedMedicationRequest])
+* [`scenario1-practitioner1-mcode`](Practitioner-scenario1-practitioner1-mcode.html) ([StructureDefinition-us-core-practitioner])
 
 #### FHIR instances from _non_-mCODE elements
 
-* [`example1-us-core-procedure-biopsy`](Procedure-example1-us-core-procedure-biopsy.html) (US Core Procedure)
-* [`example1-us-core-procedure-mammogram`](Procedure-example1-us-core-procedure-mammogram.html) (US Core Procedure)
-* [`example1-us-core-smoking-status`](Observation-example1-us-core-smoking-status.html) (US Core Smoking Status)
-* [`example1-observation-smoking-history`](Observation-example1-observation-smoking-history.html) (Observation)
-* [`example1-us-core-condition-anxiety`](Condition-example1-us-core-condition-anxiety.html) (US Core Condition)
-* [`example1-family-member-history-aunt`](FamilyMemberHistory-example1-family-member-history-aunt.html) (FamilyMemberHistory)
-* [`example1-family-member-history-sister`](FamilyMemberHistory-example1-family-member-history-sister.html) (FamilyMemberHistory)
-* [`example1-family-member-history-uncle`](FamilyMemberHistory-example1-family-member-history-uncle.html) (FamilyMemberHistory)
-* [`example1-specimen-tumor`](Specimen-example1-specimen-tumor.html) (Specimen)
-* [`example1-diagnosticreport-pathology`](DiagnosticReport-example1-diagnosticreport-pathology.html) (DiagnosticReport)
-* [`example1-observation-tumor-invasion-negative`](Observation-example1-observation-tumor-invasion-negative.html) (Observation)
-* [`example1-observation-tumor-negative-margins`](Observation-example1-observation-tumor-negative-margins.html) (Observation)
-* [`example1-observation-tumor-sentinel-nodes`](Observation-example1-observation-tumor-sentinel-nodes.html) (Observation)
-* [`example1-observation-tumor-size`](Observation-example1-observation-tumor-size.html) (Observation)
-* [`example1-observation-dcis`](Observation-example1-observation-tumor-dcis.html) (Observation)
+* [`scenario1-us-core-procedure-biopsy`](Procedure-scenario1-us-core-procedure-biopsy.html) (US Core Procedure)
+* [`scenario1-us-core-procedure-mammogram`](Procedure-scenario1-us-core-procedure-mammogram.html) (US Core Procedure)
+* [`scenario1-us-core-smoking-status`](Observation-scenario1-us-core-smoking-status.html) (US Core Smoking Status)
+* [`scenario1-observation-smoking-history`](Observation-scenario1-observation-smoking-history.html) (Observation)
+* [`scenario1-us-core-condition-anxiety`](Condition-scenario1-us-core-condition-anxiety.html) (US Core Condition)
+* [`scenario1-family-member-history-aunt`](FamilyMemberHistory-scenario1-family-member-history-aunt.html) (FamilyMemberHistory)
+* [`scenario1-family-member-history-sister`](FamilyMemberHistory-scenario1-family-member-history-sister.html) (FamilyMemberHistory)
+* [`scenario1-family-member-history-uncle`](FamilyMemberHistory-scenario1-family-member-history-uncle.html) (FamilyMemberHistory)
+* [`scenario1-specimen-tumor`](Specimen-scenario1-specimen-tumor.html) (Specimen)
+* [`scenario1-diagnosticreport-pathology`](DiagnosticReport-scenario1-diagnosticreport-pathology.html) (DiagnosticReport)
+* [`scenario1-observation-tumor-invasion-negative`](Observation-scenario1-observation-tumor-invasion-negative.html) (Observation)
+* [`scenario1-observation-tumor-negative-margins`](Observation-scenario1-observation-tumor-negative-margins.html) (Observation)
+* [`scenario1-observation-tumor-sentinel-nodes`](Observation-scenario1-observation-tumor-sentinel-nodes.html) (Observation)
+* [`scenario1-observation-tumor-size`](Observation-scenario1-observation-tumor-size.html) (Observation)
+* [`scenario1-observation-dcis`](Observation-scenario1-observation-tumor-dcis.html) (Observation)
 
 [CancerDiseaseStatus]: StructureDefinition-mcode-cancer-disease-status.html
 [CancerGeneticVariant]: StructureDefinition-mcode-cancer-genetic-variant.html

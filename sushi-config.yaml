@@ -54,7 +54,7 @@ groups:
     description: See [implementation details here](mcode-patient-bundle.html).
     resources:
       - StructureDefinition/mcode-patient-bundle
-      - Bundle/example1-mcode-patient-bundle
+      - Bundle/scenario1-mcode-patient-bundle
 
   # Profiles
   Patient:
@@ -240,54 +240,53 @@ groups:
       - Procedure/mCODECancerRelatedSurgicalProcedureExample1
       - Specimen/mCODEGeneticSpecimenExample1
 
-  ExtendedExample1:
-    name: "Examples: Extended Example 1"
-    description: A set of example resources based on [this persona](examples.html#extended-example-breast-cancer).
+  Scenario1:
+    name: "Scenario 1: Breast Cancer Patient"
+    description: A set of example resources based on [this persona](examples.html#scenario-1-breast-cancer-patient).
     resources:
-      - Condition/example1-mcode-comorbid-condition-depression
-      - Condition/example1-mcode-comorbid-condition-hypertension
-      - Condition/example1-mcode-primary-cancer-condition
-      - Condition/example1-us-core-condition-anxiety
-      - DiagnosticReport/example1-diagnosticreport-pathology
-      - DiagnosticReport/example1-mcode-cancer-genomics-report
-      - FamilyMemberHistory/example1-family-member-history-aunt
-      - FamilyMemberHistory/example1-family-member-history-sister
-      - FamilyMemberHistory/example1-family-member-history-uncle
-      - MedicationRequest/example1-mcode-cancer-related-medication-anastrozole
-      - MedicationRequest/example1-mcode-cancer-related-medication-chemo-cyclophosphamide
-      - MedicationRequest/example1-mcode-cancer-related-medication-chemo-doxorubicin
-      - MedicationRequest/example1-mcode-cancer-related-medication-chemo-paclitaxel
-      - Observation/example1-mcode-cancer-disease-status
-      - Observation/example1-mcode-cancer-genetic-variant
-      - Observation/example1-mcode-cancer-related-comorbidities
-      - Observation/example1-mcode-ecog-performance-status
-      - Observation/example1-mcode-genomic-region-studied
-      - Observation/example1-mcode-tnm-clinical-distant-metastases-category
-      - Observation/example1-mcode-tnm-clinical-regional-nodes-category
-      - Observation/example1-mcode-tnm-clinical-stage-group
-      - Observation/example1-mcode-tnm-primary-tumor-category
-      - Observation/example1-mcode-tumor-marker-er
-      - Observation/example1-mcode-tumor-marker-her2
-      - Observation/example1-mcode-tumor-marker-oncotype-dx
-      - Observation/example1-mcode-tumor-marker-pr
-      - Observation/example1-observation-smoking-history
-      - Observation/example1-observation-tumor-dcis
-      - Observation/example1-observation-tumor-invasion-negative
-      - Observation/example1-observation-tumor-negative-margins
-      - Observation/example1-observation-tumor-sentinel-nodes
-      - Observation/example1-observation-tumor-size
-      - Observation/example1-us-core-smoking-status
-      - Organization/example1-organization1-mcode
-      - Patient/example1-mcode-cancer-patient
-      - Practitioner/example1-practitioner1-mcode
-      - Practitioner/example1-practitioner2-mcode
-      - StructureDefinition/mcode-cancer-related-procedure-parent
-      - Procedure/example1-mcode-cancer-related-radiation-procedure
-      - Procedure/example1-mcode-cancer-related-surgical-procedure-mastectomy
-      - Procedure/example1-us-core-procedure-biopsy
-      - Procedure/example1-us-core-procedure-mammogram
-      - Specimen/example1-mcode-genetic-specimen
-      - Specimen/example1-specimen-tumor
+      - Condition/scenario1-mcode-comorbid-condition-depression
+      - Condition/scenario1-mcode-comorbid-condition-hypertension
+      - Condition/scenario1-mcode-primary-cancer-condition
+      - Condition/scenario1-us-core-condition-anxiety
+      - DiagnosticReport/scenario1-diagnosticreport-pathology
+      - DiagnosticReport/scenario1-mcode-cancer-genomics-report
+      - FamilyMemberHistory/scenario1-family-member-history-aunt
+      - FamilyMemberHistory/scenario1-family-member-history-sister
+      - FamilyMemberHistory/scenario1-family-member-history-uncle
+      - MedicationRequest/scenario1-mcode-cancer-related-medication-anastrozole
+      - MedicationRequest/scenario1-mcode-cancer-related-medication-chemo-cyclophosphamide
+      - MedicationRequest/scenario1-mcode-cancer-related-medication-chemo-doxorubicin
+      - MedicationRequest/scenario1-mcode-cancer-related-medication-chemo-paclitaxel
+      - Observation/scenario1-mcode-cancer-disease-status
+      - Observation/scenario1-mcode-cancer-genetic-variant
+      - Observation/scenario1-mcode-cancer-related-comorbidities
+      - Observation/scenario1-mcode-ecog-performance-status
+      - Observation/scenario1-mcode-genomic-region-studied
+      - Observation/scenario1-mcode-tnm-clinical-distant-metastases-category
+      - Observation/scenario1-mcode-tnm-clinical-regional-nodes-category
+      - Observation/scenario1-mcode-tnm-clinical-stage-group
+      - Observation/scenario1-mcode-tnm-primary-tumor-category
+      - Observation/scenario1-mcode-tumor-marker-er
+      - Observation/scenario1-mcode-tumor-marker-her2
+      - Observation/scenario1-mcode-tumor-marker-oncotype-dx
+      - Observation/scenario1-mcode-tumor-marker-pr
+      - Observation/scenario1-observation-smoking-history
+      - Observation/scenario1-observation-tumor-dcis
+      - Observation/scenario1-observation-tumor-invasion-negative
+      - Observation/scenario1-observation-tumor-negative-margins
+      - Observation/scenario1-observation-tumor-sentinel-nodes
+      - Observation/scenario1-observation-tumor-size
+      - Observation/scenario1-us-core-smoking-status
+      - Organization/scenario1-organization1-mcode
+      - Patient/scenario1-mcode-cancer-patient
+      - Practitioner/scenario1-practitioner1-mcode
+      - Practitioner/scenario1-practitioner2-mcode
+      - Procedure/scenario1-mcode-cancer-related-radiation-procedure
+      - Procedure/scenario1-mcode-cancer-related-surgical-procedure-mastectomy
+      - Procedure/scenario1-us-core-procedure-biopsy
+      - Procedure/scenario1-us-core-procedure-mammogram
+      - Specimen/scenario1-mcode-genetic-specimen
+      - Specimen/scenario1-specimen-tumor
 
 
 

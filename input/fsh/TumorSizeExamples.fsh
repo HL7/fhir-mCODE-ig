@@ -3,7 +3,7 @@ InstanceOf: TumorSize
 Description: "EXPERIMENTAL example of a resource conforming to the tumor size profile."
 * id = "mcode-tumor-size"
 * status = #final
-* subject = Reference(Patient/mCODEPatientExample01)
+* subject = Reference(Patient/mCODEPatientExample1)
 * focus = Reference(BodyStructure/mcode-tumor)
 
 * component[tumorLongestDimension].valueQuantity = UCUM#cm
@@ -19,7 +19,7 @@ Instance: mcode-tumor
 InstanceOf: Tumor
 Description: "EXPERIMENTAL example of a resource conforming to the tumor profile."
 * id = "mcode-tumor"
-* patient = Reference(Patient/mCODEPatientExample01)
+* patient = Reference(Patient/mCODEPatientExample1)
 
 // Resources conforming to this profile indicate that the tumor is still in the body.
 // This implies it is being measured by radiology. The identifier here is a hypothetical

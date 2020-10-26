@@ -9,7 +9,7 @@ These are medication-related experimental profiles.
 | Profile | [CancerRelatedMedicationRequest] | [Example][crmr-example] |
 
 [CancerRelatedMedicationRequest]: StructureDefinition-mcode-cancer-related-medication-request.html
-[crmr-example]: MedicationRequest-mCODECancerRelatedMedicationRequestExample01.html
+[crmr-example]: MedicationRequest-mCODECancerRelatedMedicationRequestExample1.html
 
 ### Tumor size
 

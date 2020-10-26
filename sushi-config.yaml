@@ -59,39 +59,6 @@ groups:
       - StructureDefinition/mcode-ecog-performance-status
       - StructureDefinition/mcode-karnofsky-performance-status
 
-  PatientElixhauser:
-    name: "Profiles: Patient (Elixhauser comorbidities)"
-    description: Elixhauser comorbiditiy-related Profiles in the [mCODE **Patient** Group](index.html#Patient).
-    resources:
-      - StructureDefinition/mcode-elixhauser-hiv-aids-comorbidity
-      - StructureDefinition/mcode-elixhauser-alcohol-abuse-comorbidity
-      - StructureDefinition/mcode-elixhauser-cardiac-arrhythmia-comorbidity
-      - StructureDefinition/mcode-elixhauser-deficiency-anemia-comorbidity
-      - StructureDefinition/mcode-elixhauser-rheumatoid-arthritis-comorbidity
-      - StructureDefinition/mcode-elixhauser-blood-loss-anemia-comorbidity
-      - StructureDefinition/mcode-elixhauser-congestive-heart-failure-comorbidity
-      - StructureDefinition/mcode-elixhauser-chronic-pulmonary-disease-comorbidity
-      - StructureDefinition/mcode-elixhauser-coagulation-deficiency-comorbidity
-      - StructureDefinition/mcode-elixhauser-depression-comorbidity
-      - StructureDefinition/mcode-elixhauser-diabetes-uncomplicated-comorbidity
-      - StructureDefinition/mcode-elixhauser-diabetes-complicated-comorbidity
-      - StructureDefinition/mcode-elixhauser-drug-abuse-comorbidity
-      - StructureDefinition/mcode-elixhauser-hypertension-uncomplicated-comorbidity
-      - StructureDefinition/mcode-elixhauser-hypertension-complicated-comorbidity
-      - StructureDefinition/mcode-elixhauser-hypothyroidism-comorbidity
-      - StructureDefinition/mcode-elixhauser-liver-disease-comorbidity
-      - StructureDefinition/mcode-elixhauser-fluid-electrolyte-disorders-comorbidity
-      - StructureDefinition/mcode-elixhauser-other-neurological-comorbidity
-      - StructureDefinition/mcode-elixhauser-obesity-comorbidity
-      - StructureDefinition/mcode-elixhauser-paralysis-comorbidity
-      - StructureDefinition/mcode-elixhauser-peripheral-vascular-disease-comorbidity
-      - StructureDefinition/mcode-elixhauser-Psychoses-comorbidity
-      - StructureDefinition/mcode-elixhauser-pulmonary-circulation-cisorders-comorbidity
-      - StructureDefinition/mcode-elixhauser-renal-failure-comorbidity
-      - StructureDefinition/mcode-elixhauser-ulcer-comorbidity
-      - StructureDefinition/mcode-elixhauser-valvular-disease-comorbidity
-      - StructureDefinition/mcode-elixhauser-weight-loss-comorbidity
-
   Disease:
     name: "Profiles: Disease Characterization"
     description: Profiles in the [mCODE **Disease Characterization** Group](index.html#Disease).
@@ -226,34 +193,34 @@ groups:
     name: "Examples: Generic"
     description: Examples of resources conforming to mCODE profiles. These examples are independent (i.e., there is no expectation of consistency of data among the resources).
     resources:
-      - Condition/mCODEComorbidConditionExample01
-      - Condition/mCODEPrimaryCancerConditionExample01
-      - Condition/mCODESecondaryCancerConditionExample01
-      - DiagnosticReport/mCODECancerGenomicsReportExample01
-      - MedicationStatement/mCODECancerRelatedMedicationStatementExample01
-      - MedicationStatement/mCODECancerRelatedMedicationStatementExample02
-      - Observation/mCODECancerDiseaseStatusExample01
-      - Observation/mCODECancerGeneticVariantExample01
-      - Observation/mCODECancerGeneticVariantExample02
-      - Observation/mCODEECOGPerformanceStatusExample01
-      - Observation/mCODEGenomicRegionStudiedExample01
-      - Observation/mCODEKarnofskyPerformanceStatusExample01
-      - Observation/mCODETNMClinicalDistantMetastasesCategoryExample01
-      - Observation/mCODETNMClinicalPrimaryTumorCategoryExample01
-      - Observation/mCODETNMClinicalRegionalNodesCategoryExample01
-      - Observation/mCODETNMClinicalStageGroupExample01
-      - Observation/mCODETNMPathologicalDistantMetastasesCategoryExample01
-      - Observation/mCODETNMPathologicalPrimaryTumorCategoryExample01
-      - Observation/mCODETNMPathologicalRegionalNodesCategoryExample01
-      - Observation/mCODETNMPathologicalStageGroupExample01
-      - Observation/mCODETumorMarkerExample01
-      - Organization/mCODEOrganizationExample01
-      - Patient/mCODEPatientExample01
-      - Patient/mCODEPatientExample02
-      - Practitioner/mCODEPractitionerExample01
-      - Procedure/mCODECancerRelatedRadiationProcedureExample01
-      - Procedure/mCODECancerRelatedSurgicalProcedureExample01
-      - Specimen/mCODEGeneticSpecimenExample01
+      # - Condition/mCODEComorbidConditionExample1
+      - Condition/mCODEPrimaryCancerConditionExample1
+      - Condition/mCODESecondaryCancerConditionExample1
+      - DiagnosticReport/mCODECancerGenomicsReportExample1
+      # - MedicationStatement/mCODECancerRelatedMedicationStatementExample1
+      # - MedicationStatement/mCODECancerRelatedMedicationStatementExample2
+      - Observation/mCODECancerDiseaseStatusExample1
+      - Observation/mCODECancerGeneticVariantExample1
+      - Observation/mCODECancerGeneticVariantExample2
+      - Observation/mCODEECOGPerformanceStatusExample1
+      - Observation/mCODEGenomicRegionStudiedExample1
+      - Observation/mCODEKarnofskyPerformanceStatusExample1
+      - Observation/mCODETNMClinicalDistantMetastasesCategoryExample1
+      - Observation/mCODETNMClinicalPrimaryTumorCategoryExample1
+      - Observation/mCODETNMClinicalRegionalNodesCategoryExample1
+      - Observation/mCODETNMClinicalStageGroupExample1
+      - Observation/mCODETNMPathologicalDistantMetastasesCategoryExample1
+      - Observation/mCODETNMPathologicalPrimaryTumorCategoryExample1
+      - Observation/mCODETNMPathologicalRegionalNodesCategoryExample1
+      - Observation/mCODETNMPathologicalStageGroupExample1
+      - Observation/mCODETumorMarkerExample1
+      - Organization/mCODEOrganizationExample1
+      - Patient/mCODEPatientExample1
+      - Patient/mCODEPatientExample2
+      - Practitioner/mCODEPractitionerExample1
+      - Procedure/mCODECancerRelatedRadiationProcedureExample1
+      - Procedure/mCODECancerRelatedSurgicalProcedureExample1
+      - Specimen/mCODEGeneticSpecimenExample1
 
   ExtendedExample1:
     name: "Examples: Extended Example 1"
@@ -320,4 +287,4 @@ groups:
     description: These resources related to medications are considered [experimental](experimental.html).
     resources:
       - StructureDefinition/mcode-cancer-related-medication-request
-      - MedicationRequest/mCODECancerRelatedMedicationRequestExample01
+      - MedicationRequest/mCODECancerRelatedMedicationRequestExample1

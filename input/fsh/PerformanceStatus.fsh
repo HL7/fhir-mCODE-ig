@@ -6,12 +6,9 @@ Description:    "Abstract parent class for performance status profiles."
 * ^abstract = true
 * status and code and subject and effective[x] and valueInteger MS
 * subject 1..1
-* value[x] 1..1
-* dataAbsentReason 0..0
 * bodySite 0..0
 * specimen 0..0
 * device 0..0
-* referenceRange 0..0
 * hasMember 0..0
 * component 0..0
 * basedOn only Reference (ServiceRequest or CarePlan)

@@ -19,7 +19,6 @@ Description:  "Abstract parent class for describing a primary or secondary metas
 * extension[assertedDate] and extension[histologyMorphologyBehavior] and bodySite and bodySite.extension[laterality] MS
 // proposing to take out the non-US Core category and allow clinicians to choose
 //* category = SCT#64572001 //"Disease"
-* severity 0..0
 * bodySite from CancerBodyLocationVS (extensible)
 * asserter only Reference(Practitioner or PractitionerRole)
 * recorder only Reference(Practitioner or PractitionerRole)

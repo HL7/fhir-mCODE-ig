@@ -7,11 +7,7 @@ Description:  "Abstract parent class for members of cancer staging panels. Cance
 * status and code and subject and effective[x] and valueCodeableConcept and method MS
 * code from LoincCancerStagingCodesVS (required)
 * value[x] only CodeableConcept
-* valueCodeableConcept 1..1
 * valueCodeableConcept ^comment = ""    // suppress QA error on #notes link
-* dataAbsentReason 0..0
-* bodySite 0..0
-* specimen 0..0
 * device 0..0
 * referenceRange 0..0
 * component 0..0

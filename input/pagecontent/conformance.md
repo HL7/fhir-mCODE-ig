@@ -27,7 +27,9 @@ Supporting a profile requires implementation of certain behaviors. In particular
 1. Mark resources with profile assertions documenting the profile(s) they conform to, by populating meta.profile.
 2. Support searching by the _profile parameter for the declared profiles.
 
-(These requirements originate from the base FHIR specification, not additional requirements imposed by mCODE. Refer to the [FHIR Documentation on supported profiles](https://www.hl7.org/fhir/profiling.html#CapabilityStatement.rest.resource.supportedProfile) for details.)
+These requirements originate from the base FHIR specification, not additional requirements imposed by mCODE. Refer to the [FHIR Documentation on supported profiles](https://www.hl7.org/fhir/profiling.html#CapabilityStatement.rest.resource.supportedProfile) for details.
+
+Additional [conformance requirements from US Core](http://hl7.org/fhir/us/core/capstatements.html) apply to RESTful interactions, searches, and resource formats.
 
 
 ##### Supported Operations

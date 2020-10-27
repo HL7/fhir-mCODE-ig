@@ -3,7 +3,6 @@ Parent: Bundle
 Id: mcode-patient-bundle
 Title: "mCODE Patient Bundle"
 Description: "A collection of data for an mCODE cancer patient."
-
 /* TODO update this file to match the description in `mcode-patient-bundle.md`. */
 * type = #collection
 * entry ^slicing.discriminator.type = #profile
@@ -37,7 +36,7 @@ Description: "A collection of data for an mCODE cancer patient."
 * entry[cancerDiseaseStatus] ^short = "Cancer Disease Status(es)"
 * entry[performanceStatus] ^short = "Performance Status(es) (ECOG or Karnofsky)"
 * entry[tumorMarker] ^short = "Tumor Marker Tests"
-* entry[cancerRelatedMedicationRequest] ^short = "Cancer-RelatedMedicationRequest(s)"
+* entry[cancerRelatedMedicationRequest] ^short = "Cancer-Related Medication Request(s)"
 * entry[cancerRelatedProcedure] ^short = "Cancer-Related Procedure(s)"
 * entry[cancerStage] ^short = "Cancer Stage Data"
 * entry[cancerGeneticVariant] ^short = "Cancer Genetic Variant(s)"
@@ -45,7 +44,7 @@ Description: "A collection of data for an mCODE cancer patient."
 * entry[geneticSpecimen] ^short = "Genetic Specimen(s)"
 * entry[genomicRegionStudied] ^short = "Genomic Region(s) Studied"
 * entry[cancerRelatedComorbidities] ^short = "Cancer-Related Comorbities"
-* entry[vitalSign] ^short = "Vital Sign"
+* entry[vitalSign] ^short = "Vital Sign(s)"
 * entry[coreLaboratory] ^short = "CBC and CMP Laboratory Results"
 * entry[otherResources] ^short = "Other items"
 
@@ -98,28 +97,7 @@ Parent: Bundle
 Id: mcode-other-resources
 Description: "Abstract profile for to define the 'other resources' bundle in the mcode patient bundle."
 * ^abstract = true
+* type = #collection
 
-
-
-
-/* Not restricted to mCODE profiles
-    smokingStatus 0..* and
-    medication 0..* and
-    procedure 0..* and
-    familyHistory 0..* and
-    diagnosticReport 0..* and
-    observation 0..* and
-    practitioner 0..* and
-    organization 0..*
-* entry[smokingStatus].resource only USCoreSmokingStatusProfile
-* entry[medication].resource only MedicationRequest
-* entry[procedure].resource only USCoreProcedureProfile
-* entry[familyHistory].resource only FamilyMemberHistory
-* entry[diagnosticReport].resource only DiagnosticReport
-* entry[observation].resource only
-Observation
-* entry[practitioner].resource only USCorePractitioner
-* entry[organization].resource only Organization
-*/
 
 

@@ -55,34 +55,43 @@ Description: "Extended example 1 as a mCODE Patient Bundle"
 * entry[vitalSign].fullUrl = "http://example.org/fhir/Observation/example1-body-weight"
 * entry[coreLaboratory].resource = example1-neutrophils
 * entry[coreLaboratory].fullUrl = "http://example.org/fhir/Observation/example1-neutrophils"
+* entry[otherResources].resource = example1-other-resources
+* entry[otherResources].fullUrl = "http://example.org/fhir/Observation/example1-other-resources"
 
-/*
-// Will be included once we merge in the experimental profile
-example1-specimen-tumor
 
-// Comorbid conditions - waiting on decision on how these will be profiled
-example1-us-core-condition-anxiety
-example1-mcode-comorbid-condition-depression
-example1-mcode-comorbid-condition-hypertension
-
-*/
-
-// Non-mCODE-conforming resources ------------------------------------------------
-/*
+Instance: example1-other-resources
+InstanceOf: OtherResources
+Title: "example1-other-resources"
+Description: "Other resources pertinent to treatment of patient"
 * entry[0].resource = example1-us-core-smoking-status
+* entry[0].fullUrl = "http://example.org/fhir/Observation/example1-us-core-smoking-status"
 * entry[1].resource = example1-us-core-procedure-biopsy
+* entry[1].fullUrl = "http://example.org/fhir/Observation/example1-us-core-procedure-biopsy"
 * entry[2].resource = example1-us-core-procedure-mammogram
+* entry[02].fullUrl = "http://example.org/fhir/Observation/example1-us-core-procedure-mammogram"
 * entry[3].resource = example1-family-member-history-aunt
-* entry[4].resource = example1-family-member-history-sister
+* entry[3].fullUrl = "http://example.org/fhir/FamilyMemberHistory/example1-family-member-history-aunt"
+* entry[4].resource = example1-us-core-procedure-mammogram
+* entry[4].fullUrl = "http://example.org/fhir/Procedure/example1-us-core-procedure-mammogram"
 * entry[5].resource = example1-family-member-history-uncle
+* entry[5].fullUrl = "http://example.org/fhir/FamilyMemberHistory/example1-family-member-history-uncle"
 * entry[6].resource = example1-diagnosticreport-pathology
+* entry[6].fullUrl = "http://example.org/fhir/DiagnosticReport/example1-diagnosticreport-pathology"
 * entry[7].resource = example1-observation-smoking-history
+* entry[7].fullUrl = "http://example.org/fhir/Observation/example1-diagnosticreport-pathology"
 * entry[8].resource = example1-observation-tumor-invasion-negative
+* entry[8].fullUrl = "http://example.org/fhir/Observation/example1-observation-tumor-invasion-negative"
 * entry[9].resource = example1-observation-tumor-negative-margins
+* entry[9].fullUrl = "http://example.org/fhir/Observation/example1-observation-tumor-negative-margins"
 * entry[10].resource = example1-observation-tumor-sentinel-nodes
+* entry[10].fullUrl = "http://example.org/fhir/Observation/example1-observation-tumor-sentinel-nodes"
 * entry[11].resource = example1-observation-tumor-size
+* entry[11].fullUrl = "http://example.org/fhir/Observation/example1-observation-tumor-size"
 * entry[12].resource = example1-observation-tumor-dcis
+* entry[12].fullUrl = "http://example.org/fhir/Observation/example1-observation-tumor-dcis"
 * entry[13].resource = example1-practitioner1-mcode
+* entry[13].fullUrl = "http://example.org/fhir/Pracititioner/example1-practitioner1-mcode"
 * entry[14].resource = example1-practitioner2-mcode
+* entry[14].fullUrl = "http://example.org/fhir/Pracititioner/example1-practitioner2-mcode"
 * entry[15].resource = example1-organization1-mcode
-*/
+* entry[15].fullUrl = "http://example.org/fhir/Organization/example1-organization1-mcode"

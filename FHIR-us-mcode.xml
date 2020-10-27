@@ -166,6 +166,7 @@
 <artifact id="Observation/example1-observation-tumor-sentinel-nodes" key="Observation-example1-observation-tumor-sentinel-nodes" name="example1-observation-tumor-sentinel-nodes"/>
 <artifact id="Observation/example1-observation-tumor-size" key="Observation-example1-observation-tumor-size" name="example1-observation-tumor-size"/>
 <artifact id="Organization/example1-organization1-mcode" key="Organization-example1-organization1-mcode" name="example1-organization1-mcode"/>
+<artifact id="Bundle/example1-other-resources" key="Bundle-example1-other-resources" name="example1-other-resources"/>
 <artifact id="Practitioner/example1-practitioner1-mcode" key="Practitioner-example1-practitioner1-mcode" name="example1-practitioner1-mcode"/>
 <artifact id="Practitioner/example1-practitioner2-mcode" key="Practitioner-example1-practitioner2-mcode" name="example1-practitioner2-mcode"/>
 <artifact id="Specimen/example1-specimen-tumor" key="Specimen-example1-specimen-tumor" name="example1-specimen-tumor"/>

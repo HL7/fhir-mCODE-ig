@@ -286,7 +286,9 @@ ValueSet:       TumorMarkerTestVS
 Id: mcode-tumor-marker-test-vs
 Description:    "Codes representing tests for tumor markers. This value set of LOINC codes is not comprehensive and can be extended. LOINC codes are preferred. Other vocabularies can be used only if the test of interest is not covered by LOINC.
 
-FHIR implementation note: At the current time, profiles for the specific LOINC tests mentioned here do not exist."
+FHIR implementation note: At the current time, profiles for the specific LOINC tests mentioned here do not exist.
+
+This material contains content from LOINC (http://loinc.org). LOINC is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc."
 * LNC#1695-6		"5-Hydroxyindoleacetate [Mass/time] in 24 hour Urine"
 * LNC#31203-3		"5-Hydroxyindoleacetate [Mass/volume] in 24 hour Urine"
 * LNC#1692-3		"5-Hydroxyindoleacetate [Mass/volume] in Cerebral spinal fluid"
@@ -666,7 +668,9 @@ Description:		"Units of measure for length or distance on a human scale."
 ValueSet: LoincCancerStagingCodesVS
 Id: mcode-loinc-cancer-staging-codes-vs
 Title: "LOINC Cancer Staging Codes Value Set"
-Description: "Value set containing LOINC codes that describe cancer staging, clinical and pathological"
+Description: "Value set containing LOINC codes that describe cancer staging, clinical and pathological.
+
+This material contains content from LOINC (http://loinc.org). LOINC is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc"
 * LNC#21908-9 "Stage group.clinical Cancer"
 * LNC#21905-5 "Primary tumor.clinical [Class] Cancer"
 * LNC#21906-3 "Regional lymph nodes.clinical [Class] Cancer"
@@ -679,7 +683,9 @@ Description: "Value set containing LOINC codes that describe cancer staging, cli
 ValueSet: LoincPerformanceStatusCodesVS
 Id: mcode-loinc-performance-status-codes-vs
 Title: "LOINC Performance Status Codes Value Set"
-Description: "Value set containing LOINC codes that describe performance status."
+Description: "Value set containing LOINC codes that describe performance status.
+
+This material contains content from LOINC (http://loinc.org). LOINC is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc."
 * LNC#89247-1 "ECOG Performance Status score"
 * LNC#89243-0 "Karnofsky Performance Status score"
 
@@ -694,7 +700,9 @@ Description: "Value set containing the LOINC codes that describe the core CBC an
 ValueSet: CBCVS
 Id: mcode-cbc-vs
 Title: "Complete Blood Count Value Set"
-Description: "Value set containing the LOINC codes typical of a Complete Blood Count."
+Description: "Value set containing the LOINC codes typical of a Complete Blood Count.
+
+This material contains content from LOINC (http://loinc.org). LOINC is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc."
 * LNC#20570-8 "Hematocrit [Volume Fraction] of Blood"  
 * LNC#26453-1 "Erythrocytes [#/volume] in Blood"
 * LNC#718-7  "Hemoglobin [Mass/volume] in Blood"
@@ -784,7 +792,9 @@ Description: "Value set containing the LOINC codes typical of a Complete Blood C
 ValueSet: CMPVS
 Id: mcode-cmp-vs
 Title: "Comprehensive Metabolic Panel Value Set"
-Description: "Value set containing the LOINC codes typical of a Comprehensive Metabolic Panel."
+Description: "Value set containing the LOINC codes typical of a Comprehensive Metabolic Panel.
+
+This material contains content from LOINC (http://loinc.org). LOINC is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc"
 * LNC#2345-7 "Glucose [Mass/volume] in Serum or Plasma"
 * LNC#3094-0 "Urea nitrogen [Mass/volume] in Serum or Plasma"
 * LNC#2160-0 "Creatinine [Mass/volume] in Serum or Plasma"

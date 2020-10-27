@@ -45,7 +45,7 @@ Description: "A collection of data for an mCODE cancer patient."
 * entry[geneticSpecimen] ^short = "Genetic Specimen(s)"
 * entry[genomicRegionStudied] ^short = "Genomic Region(s) Studied"
 * entry[cancerRelatedComorbidities] ^short = "Cancer-Related Comorbities"
-* entry[vitalSign] ^short = "Vital Sign"
+* entry[vitalSign] ^short = "Vital Sign(s)"
 * entry[coreLaboratory] ^short = "CBC and CMP Laboratory Results"
 * entry[otherResources] ^short = "Other items"
 
@@ -121,5 +121,4 @@ Observation
 * entry[practitioner].resource only USCorePractitioner
 * entry[organization].resource only Organization
 */
-
 

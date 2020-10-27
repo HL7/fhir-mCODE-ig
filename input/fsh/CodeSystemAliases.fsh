@@ -14,7 +14,7 @@ Alias:   IDTYPE = http://terminology.hl7.org/CodeSystem/v2-0203
 Alias:   HGNC = http://www.genenames.org   // changed by MK 10-19-2020 to align with FHIR (see https://www.hl7.org/fhir/terminologies-systems.html)
 Alias:   HGVS = http://varnomen.hgvs.org
 Alias:   SPTY = http://terminology.hl7.org/CodeSystem/v2-0487
-Alias:   ConditionCategory = http://terminology.hl7.org/CodeSystem/condition-category
+Alias:   CondCat = http://terminology.hl7.org/CodeSystem/condition-category
 Alias:   ClinStatus = http://terminology.hl7.org/CodeSystem/condition-clinical
 Alias:   VerStatus = http://terminology.hl7.org/CodeSystem/condition-ver-status
 Alias:   ObsCat = http://terminology.hl7.org/CodeSystem/observation-category
@@ -25,4 +25,4 @@ Alias:   TimingAbbreviation = http://terminology.hl7.org/CodeSystem/v3-GTSAbbrev
 Alias:   MedRequestStatus = http://hl7.org/fhir/CodeSystem/medicationrequest-status 
 Alias:   MedRequestIntent = http://hl7.org/fhir/CodeSystem/medicationrequest-intent
 Alias:   MedCat = 	http://terminology.hl7.org/CodeSystem/medicationrequest-category
- 
+Alias:   RefMeaning = http://terminology.hl7.org/CodeSystem/referencerange-meaning

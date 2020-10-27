@@ -112553,3 +112553,100 @@ v: {
   "error" : ""
 }
 -------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://snomed.info/sct",
+  "code" : "53438000",
+  "display" : "Radiation therapy procedure or service (procedure)"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "Radiation therapy procedure or service",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://snomed.info/sct",
+  "code" : "387713003",
+  "display" : "Surgical procedure"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "Surgical procedure (procedure)",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://snomed.info/sct",
+  "code" : "449868002"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://snomed.info/sct",
+      "concept" : [{
+        "code" : "260415000",
+        "display" : "Not detected (qualifier)"
+      },
+      {
+        "code" : "268910001",
+        "display" : "Patient's condition improved (finding)"
+      },
+      {
+        "code" : "359746009",
+        "display" : "Patient's condition stable (finding)"
+      },
+      {
+        "code" : "271299001",
+        "display" : "Patient's condition worsened (finding)"
+      },
+      {
+        "code" : "709137006",
+        "display" : "Patient condition undetermined (finding)"
+      }]
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code provided (http://snomed.info/sct#449868002) is not valid (from http://tx.fhir.org/r4)"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://snomed.info/sct",
+  "code" : "449868002",
+  "display" : "Smokes tobacco daily (finding)"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://snomed.info/sct",
+      "concept" : [{
+        "code" : "260415000",
+        "display" : "Not detected (qualifier)"
+      },
+      {
+        "code" : "268910001",
+        "display" : "Patient's condition improved (finding)"
+      },
+      {
+        "code" : "359746009",
+        "display" : "Patient's condition stable (finding)"
+      },
+      {
+        "code" : "271299001",
+        "display" : "Patient's condition worsened (finding)"
+      },
+      {
+        "code" : "709137006",
+        "display" : "Patient condition undetermined (finding)"
+      }]
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK"}####
+v: {
+  "display" : "Smokes tobacco daily",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------

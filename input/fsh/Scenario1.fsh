@@ -50,6 +50,7 @@ Description: "mCODE Example for Cancer-Related Comorbidities"
 * subject = Reference(scenario1-mcode-cancer-patient)
 * performer = Reference(scenario1-practitioner1-mcode)
 * status = #final "final"
+* category = ObsCat#survey
 * component[depression].valueCodeableConcept = SCT#52101004 "Present (qualifier value)"
 * component[hypertensionComplicated].valueCodeableConcept = SCT#52101004 "Present (qualifier value)"
 * component[rheumatoidArthritis].valueCodeableConcept = SCT#2667000 "Absent (qualifier value)"
@@ -73,7 +74,7 @@ Description: "Extended example 1: example showing comorbid condition (depression
 * id = "scenario1-mcode-comorbid-condition-depression"
 * clinicalStatus = ClinStatus#active
 * verificationStatus = VerStatus#confirmed
-* category = ConditionCategory#problem-list-item
+* category = CondCat#problem-list-item
 * code = SCT#35489007 "Depressive disorder (disorder)"
 * subject = Reference(scenario1-mcode-cancer-patient)
 * onsetDateTime = "2000-01-01"
@@ -85,9 +86,9 @@ Description: "Extended example 1: example showing comorbid condition (hypertensi
 * id = "scenario1-mcode-comorbid-condition-hypertension"
 * clinicalStatus = ClinStatus#active
 * verificationStatus = VerStatus#confirmed
-* category = ConditionCategory#problem-list-item
-* code = ICD10CM#I119 "Hypertensive heart disease without heart failure"
-* subject = Reference(scenario1-mcode-cancer-patient)
+* category = CondCat#problem-list-item
+* code = SCT#77970009 "Benign hypertensive heart disease without congestive heart failure (disorder)"  // Changed to avoid IG Publisher error ICD10CM#I119 "Hypertensive heart disease without heart failure"
+* subject = Reference(scenerio1-mcode-cancer-patient)
 * onsetDateTime = "2000-01-01"
 * asserter = Reference(scenario1-practitioner1-mcode)
 
@@ -110,6 +111,7 @@ Description: "Extended example 1: example showing partial mastectomy surgical pr
 * id = "scenario1-mcode-cancer-related-surgical-procedure-mastectomy"
 * extension[treatmentIntent].valueCodeableConcept = SCT#373808002 "Curative - procedure intent (qualifier value)"
 * status = #completed "completed"
+* category = SCT#387713003 "Surgical procedure"
 * code = SCT#64368001 "Partial mastectomy (procedure)"
 * subject = Reference(scenario1-mcode-cancer-patient)
 * performedDateTime = "2019-03-05"
@@ -123,6 +125,7 @@ Description: "Extended example 1: example showing radiation treatment"
 * id = "scenario1-mcode-cancer-related-radiation-procedure"
 * extension[treatmentIntent].valueCodeableConcept = SCT#373808002 "Curative - procedure intent (qualifier value)"
 * status = #completed "completed"
+* category = SCT#53438000 "Radiation therapy procedure or service (procedure)"
 * code = SCT#385798007 "Radiation therapy care (regime/therapy)"
 * subject = Reference(scenario1-mcode-cancer-patient)
 * performedDateTime = "2018-03-20"
@@ -137,7 +140,7 @@ Description: "Extended example 1: example showing primary cancer condition"
 * extension[histologyMorphologyBehavior].valueCodeableConcept = SCT#413448000 "Adenocarcinoma, no subtype, intermediate grade (morphologic abnormality)"
 * clinicalStatus = ClinStatus#remission
 * verificationStatus = VerStatus#confirmed
-* category = SCT#64572001 "Disease (disorder)"
+* category = CondCat#problem-list-item
 * code = SCT#353431000119107 "Primary malignant neoplasm of female left breast (disorder)"
 * subject = Reference(scenario1-mcode-cancer-patient)
 * onsetDateTime = "2018-03-15"
@@ -506,7 +509,7 @@ Description: "Extended example 1: example showing comorbid condition (anxiety)"
 * id = "scenario1-us-core-condition-anxiety"
 * clinicalStatus = ClinStatus#active "Active"
 * verificationStatus = VerStatus#confirmed "Confirmed"
-* category = ConditionCategory#problem-list-item "Problem List Item"
+* category = CondCat#problem-list-item "Problem List Item"
 * code = SCT#48694002 "Anxiety (finding)"
 * subject = Reference(scenario1-mcode-cancer-patient)
 * onsetDateTime = "2002-01-01"
@@ -638,3 +641,27 @@ Description: "Extended example 1: example showing DCIS diagnosis"
 * effectiveDateTime = "2018-03-06T00:00:00Z"
 * valueCodeableConcept = LNC#85336-6 "DCIS intraductal extension in Breast cancer specimen Qualitative by Light microscopy"
 * specimen = Reference(scenario1-specimen-tumor)
+
+Instance: scenario1-body-weight
+InstanceOf: http://hl7.org/fhir/StructureDefinition/bodyweight
+Description: "Extended example 1: example of body weight vital sign"
+* status = #final "final"
+* category = ObsCat#vital-signs "Vital Signs"
+* subject = Reference(scenario1-mcode-cancer-patient)
+* effectiveDateTime = "2018-03-06T00:00:00Z"
+* valueQuantity = 155.0 '[lb_av]'
+//* valueQuantity = UCUM#[lb_av] "lb"
+* valueQuantity.unit = "lb"
+
+Instance: scenario1-neutrophils
+InstanceOf: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab
+Description: "Extended example 1: neutrophils lab test"
+* status = #final "final"
+* category = ObsCat#laboratory "Laboratory"
+* code = LNC#770-8 "Neutrophils/100 leukocytes in Blood by Automated count"
+* subject = Reference(scenario1-mcode-cancer-patient)
+* effectiveDateTime = "2018-03-06T00:00:00Z"
+* valueQuantity = 40.0 '%'
+* referenceRange.low = 37.0 '%'
+* referenceRange.high = 67.0 '%'
+* referenceRange.appliesTo = RefMeaning#normal "Normal Range"

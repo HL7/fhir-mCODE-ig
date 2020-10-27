@@ -2004,3 +2004,28 @@ e: {
   "error" : "Error from server: The filter \"concept is-not-a 111552007\" was not understood in the context of http://snomed.info/sct"
 }
 -------------------------------------------------------------------------------------
+{"code" : {
+  "code" : "[lb_av]"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://unitsofmeasure.org",
+      "concept" : [{
+        "code" : "kg"
+      },
+      {
+        "code" : "[lb_av]"
+      },
+      {
+        "code" : "g"
+      }]
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"true", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "pound (US and British)",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------

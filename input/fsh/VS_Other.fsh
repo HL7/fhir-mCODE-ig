@@ -633,6 +633,7 @@ ValueSet: LateralityVS
 Id: mcode-laterality-vs
 Title: "Laterality Value Set"
 Description: "Body side of the body location, if needed to distinguish from a similar location on the other side of the body."
+* ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
 * SCT#51440002 "Right and left (qualifier value)"
 * SCT#399488007 "Midline (qualifier value)"
 * SCT#24028007 "Right (qualifier value)"

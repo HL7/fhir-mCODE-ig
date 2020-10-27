@@ -27,7 +27,9 @@ Description: "A collection of data for an mCODE cancer patient."
     geneticSpecimen 0..* MS and
     genomicRegionStudied 0..* MS and
     cancerRelatedComorbidities 0..* MS and
-    vitalSigns 0..* MS
+    vitalSign 0..* MS and
+    coreLaboratory 0..* MS and
+    otherResources 0..1
 
 * entry[cancerPatient] ^short = "Cancer Patient"
 * entry[primaryCancerCondition] ^short = "Primary Cancer Condition"
@@ -36,14 +38,16 @@ Description: "A collection of data for an mCODE cancer patient."
 * entry[performanceStatus] ^short = "Performance Status(es) (ECOG or Karnofsky)"
 * entry[tumorMarker] ^short = "Tumor Marker Tests"
 * entry[cancerRelatedMedicationRequest] ^short = "Cancer-RelatedMedicationRequest(s)"
-* entry[cancerRelatedProcedure] ^short = "Cancer-Related Procedure(s) "
+* entry[cancerRelatedProcedure] ^short = "Cancer-Related Procedure(s)"
 * entry[cancerStage] ^short = "Cancer Stage Data"
 * entry[cancerGeneticVariant] ^short = "Cancer Genetic Variant(s)"
 * entry[cancerGenomicsReport] ^short = "Cancer Genomics Report(s)"
 * entry[geneticSpecimen] ^short = "Genetic Specimen(s)"
 * entry[genomicRegionStudied] ^short = "Genomic Region(s) Studied"
 * entry[cancerRelatedComorbidities] ^short = "Cancer-Related Comorbities"
-* entry[vitalSigns] ^short = "Vital Signs"
+* entry[vitalSign] ^short = "Vital Sign"
+* entry[coreLaboratory] ^short = "CBC and CMP Laboratory Results"
+* entry[otherResources] ^short = "Other items"
 
 * entry[cancerPatient] ^definition = "The Cancer Patient whose data is included in the bundle (required element)."
 * entry[primaryCancerCondition] ^definition = "The Primary Cancer Condition resource (required element)."
@@ -54,12 +58,14 @@ Description: "A collection of data for an mCODE cancer patient."
 * entry[cancerRelatedMedicationRequest] ^definition = "Cancer-Related Medication Requests, including both active and inactive medications."
 * entry[cancerRelatedProcedure] ^definition = "Resource(s) capturing Cancer-Related Procedures."
 * entry[cancerStage] ^definition = "Resource(s) representing Cancer Stage Data, including clinical and pathological stage groups, as well as T, N, and M components."
-* entry[cancerGeneticVariant] ^definition = "Resource(s) capturing Cancer Genetic Variants"
+* entry[cancerGeneticVariant] ^definition = "Resource(s) capturing Cancer Genetic Variants."
 * entry[cancerGenomicsReport] ^definition = "Resource(s) representing Cancer Genomics Reports"
 * entry[geneticSpecimen] ^definition = "Resource(s) representing Genetic Specimens."
-* entry[genomicRegionStudied] ^definition = "Resource(s) representing Genomic Regions Studied"
+* entry[genomicRegionStudied] ^definition = "Resource(s) representing Genomic Regions Studied."
 * entry[cancerRelatedComorbidities] ^definition = "Resource(s) capturing Cancer-Related Comorbities."
-* entry[vitalSigns] ^definition = "Vital sign data, including blood pressure, height, and weight."
+* entry[vitalSign] ^definition = "Vital sign data, including blood pressure, height, and weight."
+* entry[coreLaboratory] ^definition = "Complete Blood Count (CBC) and Comprehensive Metabolic Panel (CMP) laboratory results"
+* entry[otherResources] ^definition = "Other items of relevance to the patient, in a bundle."
 
 * entry[cancerPatient].resource only CancerPatient
 * entry[primaryCancerCondition].resource only PrimaryCancerCondition
@@ -75,7 +81,25 @@ Description: "A collection of data for an mCODE cancer patient."
 * entry[geneticSpecimen].resource only GeneticSpecimen
 * entry[genomicRegionStudied].resource only GenomicRegionStudied
 * entry[cancerRelatedComorbidities].resource only CancerRelatedComorbidities
-* entry[vitalSigns].resource only VitalSignsDiscriminator
+* entry[vitalSign].resource only VitalSign
+* entry[coreLaboratory].resource only CoreLaboratory
+* entry[otherResources].resource only OtherResources
+
+
+Profile: CoreLaboratory
+Parent: USCoreObservationLab
+Id: mcode-core-laboratory
+Description: "Abstract profile for discrimination of the core laboratory slice in the mCODE Patient Bundle."
+* ^abstract = true
+* code from CoreLaboratoryVS (required)
+
+Profile: OtherResources
+Parent: Bundle
+Id: mcode-other-resources
+Description: "Abstract profile for to define the 'other resources' bundle in the mcode patient bundle."
+* ^abstract = true
+
+
 
 
 /* Not restricted to mCODE profiles
@@ -99,10 +123,3 @@ Observation
 */
 
 
-Profile: VitalSignsDiscriminator
-Parent: Observation
-Id: mcode-vital-signs-discriminator
-Title: "Vital Signs Discriminator"
-Description: "A minimal profile that serves to discriminate vital signs for the purpose of the mCODE patient bundle."
-* ^abstract = true
-* category = ObsCat#vital-signs

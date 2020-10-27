@@ -32,7 +32,11 @@
 <artifact id="StructureDefinition/mcode-comorbid-condition-reference" key="StructureDefinition-mcode-comorbid-condition-reference" name="Comorbid Condition Reference"/>
 <artifact deprecated="true" id="ValueSet/mcode-comorbid-condition-value-set" key="comorbid-condition-value-set" name="Comorbid Condition Value Set"/>
 <artifact id="StructureDefinition/mcode-comorbidities-parent" key="StructureDefinition-mcode-comorbidities-parent" name="ComorbiditiesParent"/>
+<artifact id="ValueSet/mcode-cbc-vs" key="ValueSet-mcode-cbc-vs" name="Complete Blood Count Value Set"/>
+<artifact id="ValueSet/mcode-cmp-vs" key="ValueSet-mcode-cmp-vs" name="Comprehensive Metabolic Panel Value Set"/>
 <artifact id="ValueSet/mcode-condition-status-trend-vs" key="condition-status-trend-value-set" name="Condition Status Trend Value Set"/>
+<artifact id="ValueSet/mcode-core-laboratory-vs" key="ValueSet-mcode-core-laboratory-vs" name="Core Laboratory Value Set"/>
+<artifact id="StructureDefinition/mcode-core-laboratory" key="StructureDefinition-mcode-core-laboratory" name="CoreLaboratory"/>
 <artifact id="StructureDefinition/mcode-ecog-performance-status" key="ecog-performance-status" name="ECOG Performance Status"/>
 <artifact id="ValueSet/elixhauser-alcohol-abuse-vs" key="ValueSet-elixhauser-alcohol-abuse-vs" name="Elixhauser Comorbid Condition Value Set for Alcohol Abuse"/>
 <artifact id="ValueSet/elixhauser-blood-loss-anemia-vs" key="ValueSet-elixhauser-blood-loss-anemia-vs" name="Elixhauser Comorbid Condition Value Set for Blood Loss Anemia"/>
@@ -84,6 +88,7 @@
 <artifact deprecated="true" id="Extension/mcode-laterality-extension" key="laterality-extension" name="Laterality Extension"/>
 <artifact id="ValueSet/mcode-laterality-vs" key="laterality-value-set" name="Laterality Value Set"/>
 <artifact deprecated="true" key="Observation" name="Observation"/>
+<artifact id="StructureDefinition/mcode-other-resources" key="StructureDefinition-mcode-other-resources" name="OtherResources"/>
 <artifact id="StructureDefinition/mcode-performance-status-parent" key="StructureDefinition-mcode-performance-status-parent" name="Performance Status Parent"/>
 <artifact id="ValueSet/mcode-present-absent-unknown" key="ValueSet-mcode-present-absent-unknown" name="Present-Absent-Unknown"/>
 <artifact id="StructureDefinition/mcode-primary-cancer-condition" key="primary-cancer-condition" name="Primary Cancer Condition"/>
@@ -122,12 +127,11 @@
 <artifact id="ValueSet/mcode-units-of-length-vs" key="units-of-length-value-set" name="Units of Length Value Set"/>
 <artifact id="ValueSet/mcode-tumor-size-units-vs" key="ValueSet-mcode-tumor-size-units-vs" name="Units of tumor size value set"/>
 <artifact deprecated="true" key="ValueSet" name="ValueSet"/>
-<artifact id="StructureDefinition/mcode-vital-signs-discriminator" key="StructureDefinition-mcode-vital-signs-discriminator" name="Vital Signs Discriminator"/>
+<artifact id="Observation/example1-body-weight" key="Observation-example1-body-weight" name="example1-body-weight"/>
 <artifact id="DiagnosticReport/example1-diagnosticreport-pathology" key="DiagnosticReport-example1-diagnosticreport-pathology" name="example1-diagnosticreport-pathology"/>
 <artifact id="FamilyMemberHistory/example1-family-member-history-aunt" key="FamilyMemberHistory-example1-family-member-history-aunt" name="example1-family-member-history-aunt"/>
 <artifact id="FamilyMemberHistory/example1-family-member-history-sister" key="FamilyMemberHistory-example1-family-member-history-sister" name="example1-family-member-history-sister"/>
 <artifact id="FamilyMemberHistory/example1-family-member-history-uncle" key="FamilyMemberHistory-example1-family-member-history-uncle" name="example1-family-member-history-uncle"/>
-<artifact id="Observation/example1-mcode-body-weight" key="Observation-example1-mcode-body-weight" name="example1-mcode-body-weight"/>
 <artifact id="Observation/example1-mcode-cancer-disease-status" key="Observation-example1-mcode-cancer-disease-status" name="example1-mcode-cancer-disease-status"/>
 <artifact id="Observation/example1-mcode-cancer-genetic-variant" key="Observation-example1-mcode-cancer-genetic-variant" name="example1-mcode-cancer-genetic-variant"/>
 <artifact id="DiagnosticReport/example1-mcode-cancer-genomics-report" key="DiagnosticReport-example1-mcode-cancer-genomics-report" name="example1-mcode-cancer-genomics-report"/>
@@ -154,6 +158,7 @@
 <artifact id="Observation/example1-mcode-tumor-marker-her2" key="Observation-example1-mcode-tumor-marker-her2" name="example1-mcode-tumor-marker-her2"/>
 <artifact id="Observation/example1-mcode-tumor-marker-oncotype-dx" key="Observation-example1-mcode-tumor-marker-oncotype-dx" name="example1-mcode-tumor-marker-oncotype-dx"/>
 <artifact id="Observation/example1-mcode-tumor-marker-pr" key="Observation-example1-mcode-tumor-marker-pr" name="example1-mcode-tumor-marker-pr"/>
+<artifact id="Observation/example1-neutrophils" key="Observation-example1-neutrophils" name="example1-neutrophils"/>
 <artifact id="Observation/example1-observation-smoking-history" key="Observation-example1-observation-smoking-history" name="example1-observation-smoking-history"/>
 <artifact id="Observation/example1-observation-tumor-dcis" key="Observation-example1-observation-tumor-dcis" name="example1-observation-tumor-dcis"/>
 <artifact id="Observation/example1-observation-tumor-invasion-negative" key="Observation-example1-observation-tumor-invasion-negative" name="example1-observation-tumor-invasion-negative"/>

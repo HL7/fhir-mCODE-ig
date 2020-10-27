@@ -98,6 +98,3 @@ Id: mcode-other-resources
 Description: "Abstract profile for to define the 'other resources' bundle in the mcode patient bundle."
 * ^abstract = true
 * type = #collection
-
-
-

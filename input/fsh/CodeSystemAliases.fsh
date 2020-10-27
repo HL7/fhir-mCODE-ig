@@ -25,4 +25,4 @@ Alias:   TimingAbbreviation = http://terminology.hl7.org/CodeSystem/v3-GTSAbbrev
 Alias:   MedRequestStatus = http://hl7.org/fhir/CodeSystem/medicationrequest-status 
 Alias:   MedRequestIntent = http://hl7.org/fhir/CodeSystem/medicationrequest-intent
 Alias:   MedCat = 	http://terminology.hl7.org/CodeSystem/medicationrequest-category
- 
+Alias:   RefMeaning = http://terminology.hl7.org/CodeSystem/referencerange-meaning

@@ -681,3 +681,27 @@ Description: "Extended example 1: example showing DCIS diagnosis"
 * effectiveDateTime = "2018-03-06T00:00:00Z"
 * valueCodeableConcept = LNC#85336-6 "DCIS intraductal extension in Breast cancer specimen Qualitative by Light microscopy"
 * specimen = Reference(example1-specimen-tumor)
+
+Instance: example1-body-weight
+InstanceOf: http://hl7.org/fhir/StructureDefinition/bodyweight
+Description: "Extended example 1: example of body weight vital sign"
+* status = #final "final"
+* category = ObsCat#vital-signs "Vital Signs"
+* subject = Reference(example1-mcode-cancer-patient)
+* effectiveDateTime = "2018-03-06T00:00:00Z"
+* valueQuantity = 155.0 '[lb_av]'
+//* valueQuantity = UCUM#[lb_av] "lb"
+* valueQuantity.unit = "lb"
+
+Instance: example1-neutrophils
+InstanceOf: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab
+Description: "Extended example 1: neutrophils lab test"
+* status = #final "final"
+* category = ObsCat#laboratory "Laboratory"
+* code = LNC#770-8 "Neutrophils/100 leukocytes in Blood by Automated count"
+* subject = Reference(example1-mcode-cancer-patient)
+* effectiveDateTime = "2018-03-06T00:00:00Z"
+* valueQuantity = 40.0 '%'
+* referenceRange.low = 37.0 '%'
+* referenceRange.high = 67.0 '%'
+* referenceRange.appliesTo = RefMeaning#normal "Normal Range"

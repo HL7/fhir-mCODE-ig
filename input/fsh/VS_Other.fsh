@@ -659,8 +659,8 @@ Description:		"Units of measure for length or distance on a human scale."
 * UCUM#mm				"Millimeter"
 * UCUM#cm				"Centimeter"
 * UCUM#m				"Meter"
-* UCUM#ft-us			"Foot"
-* UCUM#in-us			"Inch"
+* UCUM#[ft_i]			"Feet"
+* UCUM#[in_i]			"Inch"
 
 // MK 10-24-2020 -- Created this value set for CancerStageParent because the bundle discriminator could not distinguish an instance of CancerDiseaseStatus from CancerStageParent. By limiting the codes that are accepted by CancerStageParent, the profiles no longer overlap.
 ValueSet: LoincCancerStagingCodesVS
@@ -682,3 +682,160 @@ Title: "LOINC Performance Status Codes Value Set"
 Description: "Value set containing LOINC codes that describe performance status."
 * LNC#89247-1 "ECOG Performance Status score"
 * LNC#89243-0 "Karnofsky Performance Status score"
+
+ValueSet: CoreLaboratoryVS
+Id: mcode-core-laboratory-vs
+Title: "Core Laboratory Value Set"
+Description: "Value set containing the LOINC codes that describe the core CBC and CMP labs."
+* include codes from valueset CBCVS 
+* include codes from valueset CMPVS
+
+
+ValueSet: CBCVS
+Id: mcode-cbc-vs
+Title: "Complete Blood Count Value Set"
+Description: "Value set containing the LOINC codes typical of a Complete Blood Count."
+* LNC#20570-8 "Hematocrit [Volume Fraction] of Blood"  
+* LNC#26453-1 "Erythrocytes [#/volume] in Blood"
+* LNC#718-7  "Hemoglobin [Mass/volume] in Blood"
+* LNC#26515-7 "Platelets [#/volume] in Blood"
+* LNC#28539-5 "MCH [Entitic mass]"
+* LNC#28540-3 "MCHC [Mass/volume]"
+* LNC#28542-9 "Platelet mean volume [Entitic volume] in Blood"
+* LNC#30384-2 "Erythrocyte distribution width [Entitic volume]"
+* LNC#30385-9 "Erythrocyte distribution width [Ratio]"
+* LNC#30428-7 "MCV [Entitic volume]"
+* LNC#26464-8 "Leukocytes [#/volume] in Blood"
+* LNC#30180-4 "Basophils/100 leukocytes in Blood"
+* LNC#26444-0 "Basophils [#/volume] in Blood"
+* LNC#34911-8 "Immature basophils/100 leukocytes in Blood"
+* LNC#34910-0 "Immature basophils [#/volume] in Blood"
+* LNC#26446-5 "Blasts/100 leukocytes in Blood"
+* LNC#30376-8 "Blasts [#/volume] in Blood"
+* LNC#26450-7 "Eosinophils/100 leukocytes in Blood"
+* LNC#26449-9 "Eosinophils [#/volume] in Blood"
+* LNC#34913-4 "Immature eosinophils/100 leukocytes in Blood"
+* LNC#34912-6 "Immature eosinophils [#/volume] in Blood"
+* LNC#30395-8 "Granulocytes/100 leukocytes in Blood"
+* LNC#30394-1 "Granulocytes [#/volume] in Blood"
+* LNC#35058-7 "Hairy cells/100 leukocytes in Blood"
+* LNC#30397-4 "Hairy cells [#/volume] in Blood"
+* LNC#26463-0 "Large unstained cells/100 leukocytes in Blood"
+* LNC#26462-2 "Large unstained cells [#/volume] in Blood"
+* LNC#26471-3 "Leukocytes other/100 leukocytes in Blood"
+* LNC#30406-3 "Leukocytes other [#/volume] in Blood"
+* LNC#34922-5 "Lymphoblasts/100 leukocytes in Blood"
+* LNC#35050-4 "Lymphoblasts [#/volume] in Blood"
+* LNC#26478-8 "Lymphocytes/100 leukocytes in Blood"
+* LNC#26474-7 "Lymphocytes [#/volume] in Blood"
+* LNC#30413-9 "Abnormal lymphocytes/100 leukocytes in Blood"
+* LNC#30412-1 "Abnormal lymphocytes [#/volume] in Blood"
+* LNC#13046-8 "Variant lymphocytes/100 leukocytes in Blood"
+* LNC#26477-0 "Variant lymphocytes [#/volume] in Blood"
+* LNC#30420-4 "Large granular lymphocytes/100 leukocytes in Blood"
+* LNC#35082-7 "Large granular lymphocytes [#/volume] in Blood"
+* LNC#34921-7 "Lymphocytes Plasmacytoid/100 leukocytes in Blood"
+* LNC#35039-7 "Lymphocytes Plasmacytoid [#/volume] in Blood"
+* LNC#30423-8 "Lymphoma cells/100 leukocytes in Blood"
+* LNC#30422-0 "Lymphoma cells [#/volume] in Blood"
+* LNC#34915-9 "Malignant cells/100 leukocytes in Blood"
+* LNC#34914-2 "Malignant cells [#/volume] in Blood"
+* LNC#28541-1 "Metamyelocytes/100 leukocytes in Blood"
+* LNC#30433-7 "Metamyelocytes [#/volume] in Blood"
+* LNC#34923-3 "Monoblasts/100 leukocytes in Blood"
+* LNC#35029-8 "Monoblasts [#/volume] in Blood"
+* LNC#26485-3 "Monocytes/100 leukocytes in Blood"
+* LNC#26484-6 "Monocytes [#/volume] in Blood"
+* LNC#30441-0 "Monocytes Abnormal/100 leukocytes in Blood"
+* LNC#30440-2 "Monocytes Abnormal [#/volume] in Blood"
+* LNC#34925-8 "Immature monocytes/100 leukocytes in Blood"
+* LNC#34924-1 "Immature monocytes [#/volume] in Blood"
+* LNC#30445-1 "Myeloblasts/100 leukocytes in Blood"
+* LNC#30444-4 "Myeloblasts [#/volume] in Blood"
+* LNC#26498-6 "Myelocytes/100 leukocytes in Blood"
+* LNC#30446-9 "Myelocytes [#/volume] in Blood"
+* LNC#26511-6 "Neutrophils/100 leukocytes in Blood"
+* LNC#26499-4 "Neutrophils [#/volume] in Blood"
+* LNC#26508-2 "Band form neutrophils/100 leukocytes in Blood"
+* LNC#26507-4 "Band form neutrophils [#/volume] in Blood"
+* LNC#30450-1 "Neutrophils.hypersegmented/100 leukocytes in Blood"
+* LNC#30449-3 "Neutrophils.hypersegmented [#/volume] in Blood"
+* LNC#30451-9 "Segmented neutrophils [#/volume] in Blood"
+* LNC#26505-8 "Segmented neutrophils/100 leukocytes in Blood"
+* LNC#34917-5 "Plasma cell precursor/100 leukocytes in Blood"
+* LNC#34916-7 "Plasma cell precursor [#/volume] in Blood"
+* LNC#13047-6 "Plasma cells/100 leukocytes in Blood"
+* LNC#30458-4 "Plasma cells [#/volume] in Blood"
+* LNC#34999-3 "Polymorphonuclear cells/100 leukocytes in Blood"
+* LNC#35003-3 "Polymorphonuclear cells [#/volume] in Blood"
+* LNC#30465-9 "Prolymphocytes/100 leukocytes in Blood"
+* LNC#30464-2 "Prolymphocytes [#/volume] in Blood"
+* LNC#30466-7 "Promonocytes/100 leukocytes in Blood"
+* LNC#34926-6 "Promonocytes [#/volume] in Blood"
+* LNC#26524-9 "Promyelocytes/100 leukocytes in Blood"
+* LNC#26523-1 "Promyelocytes [#/volume] in Blood"
+* LNC#34919-1 "Sezary cells/100 leukocytes in Blood"
+* LNC#34918-3 "Sezary cells [#/volume] in Blood"
+* LNC#34992-8 "Smudge cells/100 leukocytes in Blood"
+* LNC#34993-6 "Smudge cells [#/volume] in Blood"
+* LNC#33255-1 "Cell Fractions/Differential [Interpretation] in Blood"
+
+
+ValueSet: CMPVS
+Id: mcode-cmp-vs
+Title: "Comprehensive Metabolic Panel Value Set"
+Description: "Value set containing the LOINC codes typical of a Comprehensive Metabolic Panel."
+* LNC#2345-7 "Glucose [Mass/volume] in Serum or Plasma"
+* LNC#3094-0 "Urea nitrogen [Mass/volume] in Serum or Plasma"
+* LNC#2160-0 "Creatinine [Mass/volume] in Serum or Plasma"
+* LNC#3097-3 "Urea nitrogen/Creatinine [Mass Ratio] in Serum or Plasma"
+* LNC#33914-3 "Glomerular filtration rate/1.73 sq M.predicted [Volume Rate/Area] in Serum or Plasma by Creatinine-based formula (MDRD)"
+* LNC#50044-7 "Glomerular filtration rate/1.73 sq M.predicted among females [Volume Rate/Area] in Serum, Plasma or Blood by Creatinine-based formula (MDRD)"
+* LNC#48642-3 "Glomerular filtration rate/1.73 sq M.predicted among non-blacks [Volume Rate/Area] in Serum, Plasma or Blood by Creatinine-based formula (MDRD)"
+* LNC#48643-1 "Glomerular filtration rate/1.73 sq M.predicted among blacks [Volume Rate/Area] in Serum, Plasma or Blood by Creatinine-based formula (MDRD)"
+* LNC#17861-6 "Calcium [Mass/volume] in Serum or Plasma"
+* LNC#2885-2 "Protein [Mass/volume] in Serum or Plasma"
+* LNC#1751-7 "Albumin [Mass/volume] in Serum or Plasma"
+* LNC#10834-0 "Globulin [Mass/volume] in Serum by calculation"
+* LNC#1759-0 "Albumin/Globulin [Mass Ratio] in Serum or Plasma"
+* LNC#1975-2 "Bilirubin.total [Mass/volume] in Serum or Plasma"
+* LNC#6768-6 "Alkaline phosphatase [Enzymatic activity/volume] in Serum or Plasma"
+* LNC#1742-6 "Alanine aminotransferase [Enzymatic activity/volume] in Serum or Plasma"
+* LNC#1920-8 "Aspartate aminotransferase [Enzymatic activity/volume] in Serum or PlasmaActive"
+* LNC#2951-2 "Sodium [Moles/volume] in Serum or Plasma"
+* LNC#2823-3 "Potassium [Moles/volume] in Serum or Plasma"
+* LNC#2075-0 "Chloride [Moles/volume] in Serum or Plasma"
+* LNC#1963-8 "Bicarbonate [Moles/volume] in Serum or Plasma"
+* LNC#2028-9 "Carbon dioxide, total [Moles/volume] in Serum or Plasma"
+* LNC#33037-3 "Anion gap in Serum or Plasma"
+
+
+/* 
+* include codes from LNC
+* exclude codes from valueset TumorMarkerTestVS
+* exclude LNC#53041-0 "DNA region of interest panel"
+* exclude LNC#69548-6 "Genetic variant assessment"
+
+LP15101-6 "Hematocrit"
+LP14304-7  "Erythrocytes"
+LP17689-8   "Erythrocyte mean corpuscular hemoglobin"
+LP17695-5   "Erythrocyte mean corpuscular hemoglobin concentration"
+LP17698-9   Erythrocyte distribution width
+LP15191-7   Erythrocyte mean corpuscular volume
+LP14419-3   Leukocytes
+LP14328-6   Basophils
+LP31542-1   Basophils.immature
+LP15100-8   Blasts
+LP14539-8   Eosinophils
+LP31543-9   Eosinophils.immature
+LP18643-4   Granulocytes
+LP14038-1   Hairy cells
+LP19258-0   Large unstained cell
+LP17393-7   Leukocytes other
+LP14540-6   Lymphocytes
+LP19572-4   Lymphocytes.abnormal
+LP15072-9   Lymphocytes.variant
+LP15193-3   Lymphocytes.large granular
+LP29083-0   Lymphoma cells
+LP31549-6   Malignant cells
+*/

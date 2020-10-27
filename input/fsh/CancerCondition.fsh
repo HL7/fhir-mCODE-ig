@@ -17,7 +17,8 @@ Description:  "Abstract parent class for describing a primary or secondary metas
 * bodySite.extension contains
     Laterality named laterality 0..1
 * extension[assertedDate] and extension[histologyMorphologyBehavior] and bodySite and bodySite.extension[laterality] MS
-* category = SCT#64572001 //"Disease"
+// proposing to take out the non-US Core category and allow clinicians to choose
+//* category = SCT#64572001 //"Disease"
 * severity 0..0
 * bodySite from CancerBodyLocationVS (extensible)
 * asserter only Reference(Practitioner or PractitionerRole)
@@ -52,10 +53,6 @@ Condition resources associated with an mCODE patient with a Condition.code in th
 
 * ^abstract = false
 * extension contains RelatedPrimaryCancerCondition named relatedPrimaryCancerCondition 0..1 MS
-/* extension[relatedPrimaryCancerCondition] ^short = "Related Primary Cancer Condition"
-* extension[relatedPrimaryCancerCondition] ^definition = "The primary cancer related to this secondary cancer."
-* extension[relatedPrimaryCancerCondition].value[x] only Reference(PrimaryCancerCondition)
-*/
 * code from SecondaryCancerDisorderVS
 * stage 0..0
 

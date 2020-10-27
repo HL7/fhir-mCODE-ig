@@ -5,6 +5,7 @@ Description: "mCODE Example for Primary Cancer Condition"
 * meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-primary-cancer-condition"
 * clinicalStatus = ClinStatus#active "Active"
 * verificationStatus = VerStatus#confirmed "Confirmed"
+* category = CondCat#problem-list-item
 * code = SCT#254637007 "Non-small cell lung cancer (disorder)"
 * extension[histologyMorphologyBehavior].valueCodeableConcept = SCT#35917007 "Adenocarcinoma"
 * bodySite = SCT#39607008 "Lung structure (body structure)"
@@ -23,6 +24,7 @@ Description: "mCODE Example for Secondary Cancer Condition"
 * extension[relatedPrimaryCancerCondition].valueReference = Reference(mCODEPrimaryCancerConditionExample01)
 * clinicalStatus = ClinStatus#active "Active"
 * verificationStatus = VerStatus#confirmed "Confirmed"
+* category = CondCat#problem-list-item
 * code = SCT#94225005 "Secondary malignant neoplasm of brain"
 * subject = Reference(mCODEPatientExample01)
 * onsetDateTime = "2019-05-01"
@@ -167,7 +169,7 @@ Description: "mCODE Example of Depression (as Comorbid condition), part of mCODE
 * id = "mCODEDepressionExample01"
 * subject = Reference(mCODEPatientExample01)
 * asserter = Reference(mCODEPractitionerExample01)
-* category = ConditionCategory#problem-list-item
+* category = CondCat#problem-list-item
 * onsetDateTime = "2005-01-01"
 * clinicalStatus = ClinStatus#active "Active"
 * verificationStatus = VerStatus#confirmed "Confirmed"
@@ -207,6 +209,7 @@ Description: "mCODE Example for Cancer Related Surgical Procedure"
 * id = "mCODECancerRelatedSurgicalProcedureExample01"
 * meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-related-surgical-procedure"
 * status = #completed "completed"
+* category = SCT#387713003 "Surgical procedure"
 * code = SCT#359615001 "Partial lobectomy of lung (procedure)"
 * subject = Reference(mCODEPatientExample01)
 * asserter = Reference(mCODEPractitionerExample01)
@@ -222,6 +225,7 @@ Description: "mCODE Example for Cancer Related Radiation Procedure"
 * meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-related-radiation-procedure"
 * status = #completed "completed"
 * code = SCT#152198000 "Brachytherapy (procedure)"
+* category = SCT#53438000 "Radiation therapy procedure or service (procedure)"
 * subject = Reference(mCODEPatientExample01)
 * asserter = Reference(mCODEPractitionerExample01)
 * performedDateTime = "2019-03-01"

@@ -6,6 +6,7 @@ Description: "Abstract parent class for cancer procedure profiles."
 * ^abstract = true
 * extension contains
     TreatmentIntent named treatmentIntent 0..1
+* category 1..1
 * reasonCode from AnyCancerDisorderVS (extensible)
 * reasonReference only Reference(CancerConditionParent)  // rather than Primary, Secondary, Tumor
 * partOf only Reference(Procedure)

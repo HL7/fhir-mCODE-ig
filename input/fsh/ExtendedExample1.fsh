@@ -52,6 +52,7 @@ Description: "mCODE Example for Cancer-Related Comorbidities"
 * subject = Reference(example1-mcode-cancer-patient)
 * performer = Reference(example1-practitioner1-mcode)
 * status = #final "final"
+* category = ObsCat#survey
 * component[depression].valueCodeableConcept = SCT#52101004 "Present (qualifier value)"
 * component[hypertensionComplicated].valueCodeableConcept = SCT#52101004 "Present (qualifier value)"
 * component[rheumatoidArthritis].valueCodeableConcept = SCT#2667000 "Absent (qualifier value)"
@@ -76,7 +77,7 @@ Description: "Extended example 1: example showing comorbid condition (depression
 * id = "example1-mcode-comorbid-condition-depression"
 * clinicalStatus = ClinStatus#active
 * verificationStatus = VerStatus#confirmed
-* category = ConditionCategory#problem-list-item
+* category = CondCat#problem-list-item
 * code = SCT#35489007 "Depressive disorder (disorder)"
 * subject = Reference(example1-mcode-cancer-patient)
 * onsetDateTime = "2000-01-01"
@@ -89,7 +90,7 @@ Description: "Extended example 1: example showing comorbid condition (hypertensi
 * id = "example1-mcode-comorbid-condition-hypertension"
 * clinicalStatus = ClinStatus#active
 * verificationStatus = VerStatus#confirmed
-* category = ConditionCategory#problem-list-item
+* category = CondCat#problem-list-item
 * code = ICD10CM#I119 "Hypertensive heart disease without heart failure"
 * subject = Reference(example1-mcode-cancer-patient)
 * onsetDateTime = "2000-01-01"
@@ -116,6 +117,7 @@ Description: "Extended example 1: example showing partial mastectomy surgical pr
 * id = "example1-mcode-cancer-related-surgical-procedure-mastectomy"
 * extension[treatmentIntent].valueCodeableConcept = SCT#373808002 "Curative - procedure intent (qualifier value)"
 * status = #completed "completed"
+* category = SCT#387713003 "Surgical procedure"
 * code = SCT#64368001 "Partial mastectomy (procedure)"
 * subject = Reference(example1-mcode-cancer-patient)
 * performedDateTime = "2019-03-05"
@@ -130,6 +132,7 @@ Description: "Extended example 1: example showing radiation treatment"
 * id = "example1-mcode-cancer-related-radiation-procedure"
 * extension[treatmentIntent].valueCodeableConcept = SCT#373808002 "Curative - procedure intent (qualifier value)"
 * status = #completed "completed"
+* category = SCT#53438000 "Radiation therapy procedure or service (procedure)"
 * code = SCT#385798007 "Radiation therapy care (regime/therapy)"
 * subject = Reference(example1-mcode-cancer-patient)
 * performedDateTime = "2018-03-20"
@@ -145,7 +148,7 @@ Description: "Extended example 1: example showing primary cancer condition"
 * extension[histologyMorphologyBehavior].valueCodeableConcept = SCT#413448000 "Adenocarcinoma, no subtype, intermediate grade (morphologic abnormality)"
 * clinicalStatus = ClinStatus#remission
 * verificationStatus = VerStatus#confirmed
-* category = SCT#64572001 "Disease (disorder)"
+* category = CondCat#problem-list-item
 * code = SCT#353431000119107 "Primary malignant neoplasm of female left breast (disorder)"
 * subject = Reference(example1-mcode-cancer-patient)
 * onsetDateTime = "2018-03-15"
@@ -536,7 +539,7 @@ Description: "Extended example 1: example showing comorbid condition (anxiety)"
 * id = "example1-us-core-condition-anxiety"
 * clinicalStatus = ClinStatus#active "Active"
 * verificationStatus = VerStatus#confirmed "Confirmed"
-* category = ConditionCategory#problem-list-item "Problem List Item"
+* category = CondCat#problem-list-item "Problem List Item"
 * code = SCT#48694002 "Anxiety (finding)"
 * subject = Reference(example1-mcode-cancer-patient)
 * onsetDateTime = "2002-01-01"

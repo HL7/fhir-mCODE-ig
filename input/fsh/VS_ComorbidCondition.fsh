@@ -38,6 +38,7 @@ ValueSet: PresentAbsentUnknownVS
 Id: mcode-present-absent-unknown
 Title: "Present-Absent-Unknown"
 Description: "Value set with answers present, absent, and unknown."
+* ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
 * SCT#52101004 "Present (qualifier value)"
 * SCT#2667000 "Absent (qualifier value)"
 * SCT#261665006 "Unknown (qualifier value)"
@@ -46,6 +47,7 @@ ValueSet:  ElixhauserHIVAIDSVS
 Id: elixhauser-hiv-aids-vs
 Title: "Elixhauser Comorbid Condition Value Set for HIV-AIDS"
 Description:    "Elixhauser Comorbid Condition Value Set for HIV-AIDS. ICD-10 codes are drawn from https://www.hcup-us.ahrq.gov/toolssoftware/comorbidityicd10/comformat_icd10cm_2019_1.txt."
+* ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
 * include codes from system SCT where concept is-a #86406008 "Human immunodeficiency virus infection (disorder)"
 * ICD10CM#B20    "Human immunodeficiency virus [HIV] disease"
 
@@ -53,6 +55,7 @@ ValueSet:  ElixhauserAlcoholAbuseVS
 Id: elixhauser-alcohol-abuse-vs
 Title: "Elixhauser Comorbid Condition Value Set for Alcohol Abuse"
 Description:    "Elixhauser Comorbid Condition Value Set for Alcohol Abuse. ICD-10 codes are drawn from https://www.hcup-us.ahrq.gov/toolssoftware/comorbidityicd10/comformat_icd10cm_2019_1.txt."
+* ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
 * include codes from system SCT where concept is-a #15167005    "Alcohol abuse (disorder)"
 * ICD10CM#F1010    "Alcohol abuse, uncomplicated"
 * ICD10CM#F1011    "Alcohol abuse, in remission"
@@ -107,6 +110,7 @@ ValueSet:  ElixhauserCardiacArrhythmiaVS
 Id: elixhauser-cardiac-arrhythmia-vs
 Title: "Elixhauser Comorbid Condition Value Set for Cardiac Arrhythmia"
 Description:    "Elixhauser Comorbid Condition Value Set for Cardiac Arrhythmia. ICD-10 codes are drawn from https://www.hcup-us.ahrq.gov/toolssoftware/comorbidityicd10/comformat_icd10cm_2019_1.txt."
+* ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
 * include codes from system SCT where concept is-a #698247007   "Cardiac arrhythmia (disorder)"
 * ICD10CM#I441    "Atrioventricular block, second degree"
 * ICD10CM#I442    "Atrioventricular block, complete"
@@ -150,6 +154,7 @@ ValueSet:  ElixhauserDeficiencyAnemiaVS
 Id: elixhauser-deficiency-anemia-vs
 Title: "Elixhauser Comorbid Condition Value Set for Deficiency Anemia"
 Description:    "Elixhauser Comorbid Condition Value Set for Deficiency Anemia. ICD-10 codes are drawn from https://www.hcup-us.ahrq.gov/toolssoftware/comorbidityicd10/comformat_icd10cm_2019_1.txt."
+* ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
 * include codes from system SCT where concept is-a #267513007 "Deficiency anemias (disorder)"
 * ICD10CM#D501    "Sideropenic dysphagia"
 * ICD10CM#D508    "Other iron deficiency anemias"
@@ -179,6 +184,7 @@ ValueSet:  ElixhauserRheumatoidArthritisVS
 Id: elixhauser-rheumatoid-arthritis-vs
 Title: "Elixhauser Comorbid Condition Value Set for Rheumatoid Arthritis and collagen vascular diseases."
 Description:    "Elixhauser Comorbid Condition Value Set for Rheumatoid Arthritis and collagen vascular diseases. ICD-10 codes are drawn from https://www.hcup-us.ahrq.gov/toolssoftware/comorbidityicd10/comformat_icd10cm_2019_1.txt."
+* ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
 * include codes from system SCT where concept is-a #69896004  "Rheumatoid arthritis (disorder)"
 * include codes from system SCT where concept is-a #398049005  "Mixed collagen vascular disease (disorder)"	
 * ICD10CM#L900    "Lichen sclerosus et atrophicus"
@@ -792,6 +798,7 @@ ValueSet:  ElixhauserBloodLossAnemiaVS
 Id: elixhauser-blood-loss-anemia-vs
 Title: "Elixhauser Comorbid Condition Value Set for Blood Loss Anemia"
 Description:    "Elixhauser Comorbid Condition Value Set for Blood Loss Anemia. ICD-10 codes are drawn from https://www.hcup-us.ahrq.gov/toolssoftware/comorbidityicd10/comformat_icd10cm_2019_1.txt."
+* ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
 * include codes from system SCT where concept is-a #413532003   "Anemia due to blood loss (disorder)"
 * ICD10CM#D500    "Iron deficiency anemia secondary to blood loss (chronic)"
 * ICD10CM#O9081    "Anemia of the puerperium"
@@ -807,6 +814,7 @@ ValueSet:  ElixhauserCongestiveHeartFailureVS
 Id: elixhauser-congestive-heart-failure-vs
 Title: "Elixhauser Comorbid Condition Value Set for Congestive Heart Failure"
 Description:    "Elixhauser Comorbid Condition Value Set for CongestiveHeartFailure. ICD-10 codes are drawn from https://www.hcup-us.ahrq.gov/toolssoftware/comorbidityicd10/comformat_icd10cm_2019_1.txt."
+* ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
 * include codes from system SCT where concept is-a #42343007    "Congestive heart failure (disorder)"
 * ICD10CM#I0981    "Rheumatic heart failure"
 * ICD10CM#I501    "Left ventricular failure, unspecified"
@@ -838,6 +846,7 @@ ValueSet:  ElixhauserChronicPulmonaryDiseaseVS
 Id: elixhauser-chronic-pulmonary-disease-vs
 Title: "Elixhauser Comorbid Condition Value Set for Chronic Pulmonary Disease"
 Description:    "Elixhauser Comorbid Condition Value Set for Chronic Pulmonary Disease. ICD-10 codes are drawn from https://www.hcup-us.ahrq.gov/toolssoftware/comorbidityicd10/comformat_icd10cm_2019_1.txt."
+* ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
 * include codes from system SCT where concept is-a #413839001   "Chronic lung disease (disorder)"
 * ICD10CM#J40    "Bronchitis, not specified as acute or chronic"
 * ICD10CM#J410    "Simple chronic bronchitis"
@@ -911,6 +920,7 @@ ValueSet:  ElixhauserCoagulationDeficiencyVS
 Id: elixhauser-coagulation-deficiency-vs
 Title: "Elixhauser Comorbid Condition Value Set for Coagulation Deficiency"
 Description:    "Elixhauser Comorbid Condition Value Set for Coagulation Deficiency. ICD-10 codes are drawn from https://www.hcup-us.ahrq.gov/toolssoftware/comorbidityicd10/comformat_icd10cm_2019_1.txt."
+* ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
 * include codes from system SCT where concept is-a #64779008    "Blood coagulation disorder (disorder)"
 * ICD10CM#D65    "Disseminated intravascular coagulation [defibrination syndrome]"
 * ICD10CM#D66    "Hereditary factor VIII deficiency"
@@ -953,6 +963,7 @@ ValueSet:  ElixhauserDepressionVS
 Id: elixhauser-depression-vs
 Title: "Elixhauser Comorbid Condition Value Set for Depression"
 Description:    "Elixhauser Comorbid Condition Value Set for Depression. ICD-10 codes are drawn from https://www.hcup-us.ahrq.gov/toolssoftware/comorbidityicd10/comformat_icd10cm_2019_1.txt."
+* ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
 * include codes from system SCT where concept is-a #35489007  "Depressive disorder (disorder)"
 * ICD10CM#F320    "Major depressive disorder, single episode, mild"
 * ICD10CM#F321    "Major depressive disorder, single episode, moderate"
@@ -976,6 +987,7 @@ ValueSet:  ElixhauserDiabetesUncomplicatedVS
 Id: elixhauser-uncomplicated-diabetes-vs
 Title: "Elixhauser Comorbid Condition Value Set for diabetes without chronic complications"
 Description:    "Elixhauser Comorbid Condition Value Set for diabetes without chronic complications. ICD-10 codes are drawn from https://www.hcup-us.ahrq.gov/toolssoftware/comorbidityicd10/comformat_icd10cm_2019_1.txt."
+* ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
 * include codes from system SCT where concept is-a #111552007   "Diabetes mellitus without complication (disorder)"
 * ICD10CM#E0800    "Diabetes mellitus due to underlying condition with hyperosmolarity without nonketotic hyperglycemic-hyperosmolar coma (NKHHC)"
 * ICD10CM#E0801    "Diabetes mellitus due to underlying condition with hyperosmolarity with coma"
@@ -1036,6 +1048,7 @@ ValueSet:  ElixhauserDiabetesComplicatedVS
 Id: elixhauser-diabetes-complicated-vs
 Title: "Elixhauser Comorbid Condition Value Set for diabetes with chronic complications"
 Description:    "Elixhauser Comorbid Condition Value Set for diabetes with chronic complications. ICD-10 codes are drawn from https://www.hcup-us.ahrq.gov/toolssoftware/comorbidityicd10/comformat_icd10cm_2019_1.txt."
+* ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
 * include codes from system SCT where concept is-a #73211009 "Diabetes mellitus (disorder)"
 * exclude codes from system SCT where concept is-a #111552007  "Diabetes mellitus without complication (disorder)"
 * ICD10CM#E0821    "Diabetes mellitus due to underlying condition with diabetic nephropathy"
@@ -1478,6 +1491,7 @@ ValueSet:  ElixhauserDrugAbuseVS
 Id: elixhauser-drug-abuse-vs
 Title: "Elixhauser Comorbid Condition Value Set for drug abuse"
 Description:    "Elixhauser Comorbid Condition Value Set for drug abuse. ICD-10 codes are drawn from https://www.hcup-us.ahrq.gov/toolssoftware/comorbidityicd10/comformat_icd10cm_2019_1.txt."
+* ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
 * include codes from system SCT where concept is-a #66214007 "Substance abuse (disorder)"
 * ICD10CM#F1110    "Opioid abuse, uncomplicated"
 * ICD10CM#F1111    "Opioid abuse, in remission"
@@ -1738,6 +1752,7 @@ ValueSet:  ElixhauserHypertensionUncomplicatedVS
 Id: elixhauser-hypertension-uncomplicated-vs
 Title: "Elixhauser Comorbid Condition Value Set for Hypertension, Uncomplicated"
 Description:    "Elixhauser Comorbid Condition Value Set for Hypertension, Uncomplicated. ICD-10 codes are drawn from https://www.hcup-us.ahrq.gov/toolssoftware/comorbidityicd10/comformat_icd10cm_2019_1.txt."
+* ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
 * include codes from system SCT where concept is-a #38341003 "Hypertensive disorder, systemic arterial (disorder)" 
 * ICD10CM#I10    "Essential (primary) hypertension"
 * ICD10CM#O10011    "Pre-existing essential hypertension complicating pregnancy, first trimester"
@@ -1758,6 +1773,7 @@ ValueSet:  ElixhauserHypertensionComplicatedVS
 Id: elixhauser-hypertension-complicated-vs
 Title: "Elixhauser Comorbid Condition Value Set for Hypertension, Complicated"
 Description:    "Elixhauser Comorbid Condition Value Set for Hypertension, Complicated. ICD-10 codes are drawn from https://www.hcup-us.ahrq.gov/toolssoftware/comorbidityicd10/comformat_icd10cm_2019_1.txt."
+* ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
 * include codes from system SCT where concept is-a #449759005 "Complication of systemic hypertensive disorder (disorder)"
 * ICD10CM#I110    "Hypertensive heart disease with heart failure"
 * ICD10CM#I119    "Hypertensive heart disease without heart failure"
@@ -1818,6 +1834,7 @@ ValueSet:  ElixhauserHypothyroidismVS
 Id: elixhauser-hypothyroidism-vs
 Title: "Elixhauser Comorbid Condition Value Set for Hypothyroidism"
 Description:    "Elixhauser Comorbid Condition Value Set for Hypothyroidism. ICD-10 codes are drawn from https://www.hcup-us.ahrq.gov/toolssoftware/comorbidityicd10/comformat_icd10cm_2019_1.txt."
+* ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
 * include codes from system SCT where concept is-a #40930008    "Hypothyroidism (disorder)"
 * ICD10CM#E000    "Congenital iodine-deficiency syndrome, neurological type"
 * ICD10CM#E001    "Congenital iodine-deficiency syndrome, myxedematous type"
@@ -1838,6 +1855,7 @@ ValueSet:  ElixhauserLiverDiseaseVS
 Id: elixhauser-liver-disease-vs
 Title: "Elixhauser Comorbid Condition Value Set for Liver Disease"
 Description:    "Elixhauser Comorbid Condition Value Set for Liver Disease. ICD-10 codes are drawn from https://www.hcup-us.ahrq.gov/toolssoftware/comorbidityicd10/comformat_icd10cm_2019_1.txt."
+* ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
 * include codes from system SCT where concept is-a #235856003   "Disorder of liver (disorder)"
 * ICD10CM#B180    "Chronic viral hepatitis B with delta-agent"
 * ICD10CM#B181    "Chronic viral hepatitis B without delta-agent"
@@ -1883,6 +1901,7 @@ ValueSet:  ElixhauserLymphomaVS
 Id: elixhauser-lymphoma-vs
 Title: "Elixhauser Comorbid Condition Value Set for Lymphoma"
 Description:    "Elixhauser Comorbid Condition Value Set for Lymphoma. ICD-10 codes are drawn from https://www.hcup-us.ahrq.gov/toolssoftware/comorbidityicd10/comformat_icd10cm_2019_1.txt."
+* ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
 * include codes from system SCT where concept is-a #118600007   "Malignant lymphoma (disorder)"
 * ICD10CM#C8100    "Nodular lymphocyte predominant Hodgkin lymphoma, unspecified site"
 * ICD10CM#C8101    "Nodular lymphocyte predominant Hodgkin lymphoma, lymph nodes of head, face, and neck"
@@ -2275,6 +2294,7 @@ ValueSet:  ElixhauserFluidElectrolyteDisordersVS
 Id: elixhauser-fluid-electrolyte-vs
 Title: "Elixhauser Comorbid Condition Value Set for Fluid Electrolyte Disorders"
 Description:    "Elixhauser Comorbid Condition Value Set for Fluid Electrolyte Disorders. ICD-10 codes are drawn from https://www.hcup-us.ahrq.gov/toolssoftware/comorbidityicd10/comformat_icd10cm_2019_1.txt."
+* ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
 * include codes from system SCT where concept is-a #76314005 "Disorder of fluid AND/OR electrolyte (disorder)"
 * ICD10CM#E860    "Dehydration"
 * ICD10CM#E861    "Hypovolemia"
@@ -2296,6 +2316,7 @@ ValueSet:  ElixhauserMetastaticCancerVS
 Id: elixhauser-metastatic-cancer-vs
 Title: "Elixhauser Comorbid Condition Value Set for Metastatic cancer"
 Description:    "Elixhauser Comorbid Condition Value Set for Metastatic cancer. ICD-10 codes are drawn from https://www.hcup-us.ahrq.gov/toolssoftware/comorbidityicd10/comformat_icd10cm_2019_1.txt."
+* ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
 * include codes from system SCT where concept is-a #363346000   "Malignant neoplastic disease (disorder)"
 * ICD10CM#C770    "Secondary and unspecified malignant neoplasm of lymph nodes of head, face and neck"
 * ICD10CM#C771    "Secondary and unspecified malignant neoplasm of intrathoracic lymph nodes"
@@ -2357,6 +2378,7 @@ ValueSet:  ElixhauserOtherNeurologicalVS
 Id: elixhauser-other-neurological-vs
 Title: "Elixhauser Comorbid Condition Value Set for Other Neurological Disorders"
 Description:    "Elixhauser Comorbid Condition Value Set for Other Neurological Disorders. ICD-10 codes are drawn from https://www.hcup-us.ahrq.gov/toolssoftware/comorbidityicd10/comformat_icd10cm_2019_1.txt."
+* ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
 * include codes from system SCT where concept is-a #118940003 "Disorder of nervous system (disorder)" 
 * exclude codes from system SCT where concept is-a #29426003  "Paralytic syndrome (disorder)"
 * ICD10CM#E7500    "GM2 gangliosidosis, unspecified"
@@ -2518,6 +2540,7 @@ ValueSet:  ElixhauserObesityVS
 Id: elixhauser-obesity-vs
 Title: "Elixhauser Comorbid Condition Value Set for Obesity"
 Description:    "Elixhauser Comorbid Condition Value Set for Obesity. ICD-10 codes are drawn from https://www.hcup-us.ahrq.gov/toolssoftware/comorbidityicd10/comformat_icd10cm_2019_1.txt."
+* ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
 * include codes from system SCT where concept is-a #414916001   "Obesity (disorder)"
 * ICD10CM#E6601    "Morbid (severe) obesity due to excess calories"
 * ICD10CM#E6609    "Other obesity due to excess calories"
@@ -2553,6 +2576,7 @@ ValueSet:  ElixhauserParalysisVS
 Id: elixhauser-paralysis-vs
 Title: "Elixhauser Comorbid Condition Value Set for Paralysis"
 Description:    "Elixhauser Comorbid Condition Value Set for Paralysis. ICD-10 codes are drawn from https://www.hcup-us.ahrq.gov/toolssoftware/comorbidityicd10/comformat_icd10cm_2019_1.txt."
+* ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
 * include codes from system SCT where concept is-a #29426003  "Paralytic syndrome (disorder)"
 * ICD10CM#G041    "Tropical spastic paraplegia"
 * ICD10CM#G800    "Spastic quadriplegic cerebral palsy"
@@ -2740,6 +2764,7 @@ ValueSet:  ElixhauserPeripheralVascularDiseaseVS
 Id: elixhauser-peripheral-vascular-disease-vs
 Title: "Elixhauser Comorbid Condition Value Set for Peripheral vascular disease"
 Description:    "Elixhauser Comorbid Condition Value Set for Peripheral vascular disease. ICD-10 codes are drawn from https://www.hcup-us.ahrq.gov/toolssoftware/comorbidityicd10/comformat_icd10cm_2019_1.txt."
+* ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
 * include codes from system SCT where concept is-a #400047006   "Peripheral vascular disease (disorder)"
 * ICD10CM#I700    "Atherosclerosis of aorta"
 * ICD10CM#I701    "Atherosclerosis of renal artery"
@@ -3041,6 +3066,7 @@ ValueSet:  ElixhauserPsychosesVS
 Id: elixhauser-psychoses-vs
 Title: "Elixhauser Comorbid Condition Value Set for Psychoses"
 Description:    "Elixhauser Comorbid Condition Value Set for Psychoses. ICD-10 codes are drawn from https://www.hcup-us.ahrq.gov/toolssoftware/comorbidityicd10/comformat_icd10cm_2019_1.txt."
+* ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
 * include codes from system SCT where concept is-a #69322001    "Psychotic disorder (disorder)"
 * ICD10CM#F200    "Paranoid schizophrenia"
 * ICD10CM#F201    "Disorganized schizophrenia"
@@ -3114,6 +3140,7 @@ ValueSet:  ElixhauserPulmonaryCirculationDisordersVS
 Id: elixhauser-pulmonary-circulation-disorders-vs
 Title: "Elixhauser Comorbid Condition Value Set for Pulmonary circulation disorders"
 Description:    "Elixhauser Comorbid Condition Value Set for Pulmonary circulation disorders. ICD-10 codes are drawn from https://www.hcup-us.ahrq.gov/toolssoftware/comorbidityicd10/comformat_icd10cm_2019_1.txt."
+* ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
 * include codes from system SCT where concept is-a #39785005    "Disorder of pulmonary circulation (disorder)"
 * ICD10CM#I2601    "Septic pulmonary embolism with acute cor pulmonale"
 * ICD10CM#I2602    "Saddle embolus of pulmonary artery with acute cor pulmonale"
@@ -3137,6 +3164,7 @@ ValueSet:  ElixhauserRenalFailureVS
 Id: elixhauser-renal-failure-vs
 Title: "Elixhauser Comorbid Condition Value Set for Renal failure"
 Description:    "Elixhauser Comorbid Condition Value Set for Renal failure. ICD-10 codes are drawn from https://www.hcup-us.ahrq.gov/toolssoftware/comorbidityicd10/comformat_icd10cm_2019_1.txt."
+* ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
 * include codes from system SCT where concept is-a #42399005    "Renal failure syndrome (disorder)"
 * ICD10CM#N183    "Chronic kidney disease, stage 3 (moderate)"
 * ICD10CM#N184    "Chronic kidney disease, stage 4 (severe)"
@@ -3157,6 +3185,7 @@ ValueSet:  ElixhauserSolidTumorVS
 Id: elixhauser-solid-tumor-vs
 Title: "Elixhauser Comorbid Condition Value Set for solid tumors without metastases"
 Description:    "Elixhauser Comorbid Condition Value Set for solid tumors without metastases. ICD-10 codes are drawn from https://www.hcup-us.ahrq.gov/toolssoftware/comorbidityicd10/comformat_icd10cm_2019_1.txt."
+* ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
 * include codes from system SCT where concept is-a #108369006 "Neoplasm (morphologic abnormality)"
 * ICD10CM#C000    "Malignant neoplasm of external upper lip"
 * ICD10CM#C001    "Malignant neoplasm of external lower lip"
@@ -3709,6 +3738,7 @@ ValueSet:  ElixhauserUlcerVS
 Id: elixhauser-ulcer-vs
 Title: "Elixhauser Comorbid Condition Value Set for Chronic peptic ulcer disease."
 Description:    "Elixhauser Comorbid Condition Value Set for Chronic peptic ulcer disease. ICD-10 codes are drawn from https://www.hcup-us.ahrq.gov/toolssoftware/comorbidityicd10/comformat_icd10cm_2019_1.txt."
+* ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
 * include codes from system SCT where concept is-a #13200003    "Peptic ulcer (disorder)"
 * ICD10CM#K254    "Chronic or unspecified gastric ulcer with hemorrhage"
 * ICD10CM#K255    "Chronic or unspecified gastric ulcer with perforation"
@@ -3736,6 +3766,7 @@ ValueSet:  ElixhauserValvularDiseaseVS
 Id: elixhauser-valvular-disease-vs
 Title: "Elixhauser Comorbid Condition Value Set for Valvular disease"
 Description:    "Elixhauser Comorbid Condition Value Set for Valvular disease. ICD-10 codes are drawn from https://www.hcup-us.ahrq.gov/toolssoftware/comorbidityicd10/comformat_icd10cm_2019_1.txt."
+* ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
 * include codes from system SCT where concept is-a #368009      "Heart valve disorder (disorder)"
 * ICD10CM#A5203    "Syphilitic endocarditis"
 * ICD10CM#I050    "Rheumatic mitral stenosis"
@@ -3799,6 +3830,7 @@ ValueSet:  ElixhauserWeightLossVS
 Id: elixhauser-weight-loss-vs
 Title: "Elixhauser Comorbid Condition Value Set for Weight loss"
 Description:    "Elixhauser Comorbid Condition Value Set for Weight loss. ICD-10 codes are drawn from https://www.hcup-us.ahrq.gov/toolssoftware/comorbidityicd10/comformat_icd10cm_2019_1.txt."
+* ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
 * include codes from system SCT where concept is-a #89362005    "Weight loss (finding)"
 * include codes from system SCT where concept is-a #248342006 "Underweight (finding)"
 * include codes from system SCT where concept is-a #65404009  "Undernutrition (disorder)"

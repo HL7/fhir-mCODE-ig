@@ -16,7 +16,7 @@ Description:    "Abstract parent class for performance status profiles."
 * component 0..0
 * basedOn only Reference (ServiceRequest or CarePlan)
 * partOf only Reference (Procedure)
-* category from http://hl7.org/fhir/ValueSet/observation-category (extensible)
+* category = ObsCat#survey "survey"
 * code from LoincPerformanceStatusCodesVS (required)
 * subject only Reference(USCorePatient)
 * effective[x] only dateTime or Period

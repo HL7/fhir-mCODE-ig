@@ -97,8 +97,8 @@ InstanceOf: ECOGPerformanceStatus
 Description: "Extended example 1: example showing ECOG performance status"
 * id = "scenario1-mcode-ecog-performance-status"
 * status = #final "final"
-* category = ObsCat#survey
 * subject = Reference(scenario1-mcode-cancer-patient)
+* category = ObsCat#survey "survey"
 * effectiveDateTime = "2018-03-01"
 * performer = Reference(scenario1-practitioner1-mcode)
 * valueInteger = 0
@@ -319,7 +319,7 @@ Description: "Extended example 1: example showing chemotherapy medication"
 * id = "scenario1-mcode-cancer-related-medication-chemo-doxorubicin"
 * extension[treatmentIntent].valueCodeableConcept = SCT#373808002 "Curative - procedure intent (qualifier value)"
 * status = #active "active"
-* category = MedCat#outpatient
+* category = MedReqCat#outpatient
 * intent = #order
 * medicationCodeableConcept = RXN#3639 "DOXOrubicin"
 * subject = Reference(scenario1-mcode-cancer-patient)
@@ -341,7 +341,7 @@ Description: "Extended example 1: example showing chemotherapy medication"
 * id = "scenario1-mcode-cancer-related-medication-chemo-cyclophosphamide"
 * extension[treatmentIntent].valueCodeableConcept = SCT#373808002 "Curative - procedure intent (qualifier value)"
 * status = #active "active"
-* category = MedCat#outpatient
+* category = MedReqCat#outpatient
 * intent = #order
 * medicationCodeableConcept = RXN#3002 "cyclophosphamide"
 * subject = Reference(scenario1-mcode-cancer-patient)
@@ -364,7 +364,7 @@ Description: "Extended example 1: example showing chemotherapy medication"
 * id = "scenario1-mcode-cancer-related-medication-chemo-paclitaxel"
 * extension[treatmentIntent].valueCodeableConcept = SCT#373808002 "Curative - procedure intent (qualifier value)"
 * status = #active "active"
-* category = MedCat#outpatient
+* category = MedReqCat#outpatient
 * intent = #order
 * medicationCodeableConcept = RXN#56946 "PACLitaxel"
 * subject = Reference(scenario1-mcode-cancer-patient)
@@ -386,7 +386,7 @@ Description: "Extended example 1: example showing chemotherapy medication"
 * id = "scenario1-mcode-cancer-related-medication-anastrozole"
 * extension[treatmentIntent].valueCodeableConcept = SCT#373808002 "Curative - procedure intent (qualifier value)"
 * status = #active "active"
-* category = MedCat#community
+* category = MedReqCat#community
 * intent = #order
 * medicationCodeableConcept = RXN#84857 "anastrozole"
 * subject = Reference(scenario1-mcode-cancer-patient)

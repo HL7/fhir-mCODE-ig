@@ -181,9 +181,9 @@ Description: "mCODE Example for ECOG Performance Status"
 * id = "mCODEECOGPerformanceStatusExample1"
 * meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-ecog-performance-status"
 * status = #final "final"
-* category = ObsCat#survey "survey"
 * method = SCT#5880005 "Clinical examination"
 * subject = Reference(mCODEPatientExample1)
+* category = ObsCat#survey "survey"
 * effectiveDateTime = "2019-04-01"
 * performer = Reference(mCODEPractitionerExample1)
 * valueInteger = 0
@@ -241,9 +241,9 @@ Description: "mCODE Example for TNM Clinical Stage Group"
 * id = "mCODETNMClinicalStageGroupExample1"
 * meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-clinical-stage-group"
 * status = #final "final"
-* category = ObsCat#survey "Survey"
 * method = NCIT#C146985 "AJCC Cancer Staging Manual 8th Edition"
 * subject = Reference(mCODEPatientExample1)
+* category = ObsCat#survey "survey"
 * effectiveDateTime = "2019-04-01"
 * valueCodeableConcept = AJCC#3C "IIIC"
 * hasMember[TNMClinicalPrimaryTumorCategory] = Reference(mCODETNMClinicalPrimaryTumorCategoryExample1)
@@ -256,9 +256,9 @@ Description: "mCODE Example for TNM Clinical Distant Metastases Category"
 * id = "mCODETNMClinicalDistantMetastasesCategoryExample1"
 * meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-clinical-distant-metastases-category"
 * status = #final "final"
-* category = ObsCat#survey "Survey"
 * method = NCIT#C146985 "AJCC Cancer Staging Manual 8th Edition"
 * subject = Reference(mCODEPatientExample1)
+* category = ObsCat#survey "survey"
 * effectiveDateTime = "2019-04-01"
 * valueCodeableConcept = AJCC#cM0 "M0"
 
@@ -267,8 +267,8 @@ InstanceOf: TNMClinicalPrimaryTumorCategory
 Description: "mCODE Example for TNM Clinical Primary Tumor Category"
 * id = "mCODETNMClinicalPrimaryTumorCategoryExample1"
 * meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-clinical-primary-tumor-category"
+* category = ObsCat#survey "survey"
 * status = #final "final"
-* category = ObsCat#survey "Survey"
 * method = NCIT#C146985 "AJCC Cancer Staging Manual 8th Edition"
 * subject = Reference(mCODEPatientExample1)
 * effectiveDateTime = "2019-04-01"
@@ -280,8 +280,8 @@ InstanceOf: TNMClinicalRegionalNodesCategory
 Description: "mCODE Example for TNM Clinical Regional Nodes Category"
 * id = "mCODETNMClinicalRegionalNodesCategoryExample1"
 * meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-clinical-regional-nodes-category"
+* category = ObsCat#survey "survey"
 * status = #final "final"
-* category = ObsCat#survey "Survey"
 * method = NCIT#C146985 "AJCC Cancer Staging Manual 8th Edition"
 * subject = Reference(mCODEPatientExample1)
 * effectiveDateTime = "2019-04-01"
@@ -348,8 +348,8 @@ Description: "mCODE Example for CancerRelatedMedicationRequest"
 * id = "mCODECancerRelatedMedicationRequestExample1"
 * meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-related-medication-request"
 * subject = Reference(mCODEPatientExample1)
-* status = MedRequestStatus#active
-* intent = MedRequestIntent#order
+* status = MedReqStatus#active
+* intent = MedReqIntent#order
 * authoredOn = "2019-04-01"
 * medicationCodeableConcept = RXN#349472 "gefitinib 250 MG Oral Tablet"
 * reasonCode = SCT#254637007 "Non-small cell lung cancer (disorder)"
@@ -373,8 +373,8 @@ Description: "mCODE Example for CancerRelatedMedicationRequest - Chemo Infusion"
 * id = "mCODECancerRelatedMedicationRequestExample2"
 * meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-related-medication-request"
 * subject = Reference(mCODEPatientExample1)
-* status = MedRequestStatus#active
-* intent = MedRequestIntent#order
+* status = MedReqStatus#active
+* intent = MedReqIntent#order
 * authoredOn = "2019-04-01"
 * medicationCodeableConcept = RXN#309311 "CISplatin 50 MG per 50 ML Injectable Solution"
 * reasonCode = SCT#254637007 "Non-small cell lung cancer (disorder)"
@@ -412,7 +412,7 @@ Description: "mCODE Example for Cancer Related Medication Statement"
 * id = "mCODECancerRelatedMedicationStatementExample1"
 * meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-related-medication-statement"
 * status = MedStatus#active "active"
-* category = MedCat#community "community"
+* category = MedReqCat#community "community"
 * medicationCodeableConcept = RXN#349472 "gefitinib 250 MG Oral Tablet"
 * subject = Reference(mCODEPatientExample1)
 * effectiveDateTime = "2019-04-01"
@@ -429,7 +429,7 @@ Description: "mCODE Example for Cancer Related Medication Statement"
 * id = "mCODECancerRelatedMedicationStatementExample2"
 * meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-related-medication-statement"
 * status = MedStatus#stopped "stopped"
-* category = MedCat#community "community"
+* category = MedReqCat#community "community"
 * medicationCodeableConcept = RXN#349472 "gefitinib 250 MG Oral Tablet"
 * subject = Reference(mCODEPatientExample1)
 * effectiveDateTime = "2019-04-01"

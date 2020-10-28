@@ -16,6 +16,12 @@ Title: "Human Genome Variation Society Sequence Variant Nomenclature Value Set"
 Description: "HGVS nomenclature is used to report and exchange information regarding variants found in DNA, RNA, and protein sequences."
 * codes from system HGVS
 
+ValueSet: DNAChangeTypeVS
+Id: mcode-dna-change-type-vs
+Title: "DNA Change Type Value Set"
+Description: "DNA Change Type of a variant"
+* include codes from system SO where concept descendent-of #SO:0002072
+
 ValueSet: CancerBodyLocationVS
 Id: mcode-cancer-body-location-vs
 Title: "Cancer Body Location Value Set"

@@ -5,6 +5,7 @@ Title:      "Performance Status Parent"
 Description:    "Abstract parent class for performance status profiles."
 * ^abstract = true
 * status and code and subject and effective[x] and valueInteger MS
+* category = ObsCat#survey
 * subject 1..1
 * value[x] 1..1
 * dataAbsentReason 0..0

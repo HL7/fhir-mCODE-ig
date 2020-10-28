@@ -182,6 +182,7 @@ Description: "mCODE Example for ECOG Performance Status"
 * meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-ecog-performance-status"
 * status = #final "final"
 * method = SCT#5880005 "Clinical examination"
+* category = ObsCat#survey "survey"
 * subject = Reference(mCODEPatientExample01)
 * effectiveDateTime = "2019-04-01"
 * performer = Reference(mCODEPractitionerExample01)
@@ -194,6 +195,7 @@ Description: "mCODE Example for Karnofsky Performance Status"
 * id = "mCODEKarnofskyPerformanceStatusExample01"
 * meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-karnofsky-performance-status"
 * status = #final "final"
+* category = ObsCat#survey "survey"
 * method = SCT#5880005 "Clinical examination"
 * subject = Reference(mCODEPatientExample01)
 * effectiveDateTime = "2019-04-01"
@@ -240,6 +242,7 @@ Description: "mCODE Example for TNM Clinical Stage Group"
 * meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-clinical-stage-group"
 * status = #final "final"
 * method = NCIT#C146985 "AJCC Cancer Staging Manual 8th Edition"
+* category = ObsCat#survey "survey"
 * subject = Reference(mCODEPatientExample01)
 * effectiveDateTime = "2019-04-01"
 * valueCodeableConcept = AJCC#3C "IIIC"
@@ -254,6 +257,7 @@ Description: "mCODE Example for TNM Clinical Distant Metastases Category"
 * meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-clinical-distant-metastases-category"
 * status = #final "final"
 * method = NCIT#C146985 "AJCC Cancer Staging Manual 8th Edition"
+* category = ObsCat#survey "survey"
 * subject = Reference(mCODEPatientExample01)
 * effectiveDateTime = "2019-04-01"
 * valueCodeableConcept = AJCC#cM0 "M0"
@@ -263,6 +267,7 @@ InstanceOf: TNMClinicalPrimaryTumorCategory
 Description: "mCODE Example for TNM Clinical Primary Tumor Category"
 * id = "mCODETNMClinicalPrimaryTumorCategoryExample01"
 * meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-clinical-primary-tumor-category"
+* category = ObsCat#survey "survey"
 * status = #final "final"
 * method = NCIT#C146985 "AJCC Cancer Staging Manual 8th Edition"
 * subject = Reference(mCODEPatientExample01)
@@ -275,6 +280,7 @@ InstanceOf: TNMClinicalRegionalNodesCategory
 Description: "mCODE Example for TNM Clinical Regional Nodes Category"
 * id = "mCODETNMClinicalRegionalNodesCategoryExample01"
 * meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-clinical-regional-nodes-category"
+* category = ObsCat#survey "survey"
 * status = #final "final"
 * method = NCIT#C146985 "AJCC Cancer Staging Manual 8th Edition"
 * subject = Reference(mCODEPatientExample01)

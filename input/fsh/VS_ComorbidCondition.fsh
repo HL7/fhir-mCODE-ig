@@ -186,7 +186,7 @@ Title: "Elixhauser Comorbid Condition Value Set for Rheumatoid Arthritis and col
 Description:    "Elixhauser Comorbid Condition Value Set for Rheumatoid Arthritis and collagen vascular diseases. ICD-10 codes are drawn from https://www.hcup-us.ahrq.gov/toolssoftware/comorbidityicd10/comformat_icd10cm_2019_1.txt."
 * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
 * include codes from system SCT where concept is-a #69896004  "Rheumatoid arthritis (disorder)"
-* include codes from system SCT where concept is-a #398049005  "Mixed collagen vascular disease (disorder)"	
+* include codes from system SCT where concept is-a #398049005  "Mixed collagen vascular disease (disorder)"
 * ICD10CM#L900    "Lichen sclerosus et atrophicus"
 * ICD10CM#L940    "Localized scleroderma [morphea]"
 * ICD10CM#L941    "Linear scleroderma"
@@ -1309,7 +1309,7 @@ Description:    "Elixhauser Comorbid Condition Value Set for diabetes with chron
 * ICD10CM#E113292    "Type 2 diabetes mellitus with mild nonproliferative diabetic retinopathy without macular edema, left eye"
 * ICD10CM#E113293    "Type 2 diabetes mellitus with mild nonproliferative diabetic retinopathy without macular edema, bilateral"
 * ICD10CM#E113299    "Type 2 diabetes mellitus with mild nonproliferative diabetic retinopathy without macular edema, unspecified eye"
- 
+
 * ICD10CM#E113311    "Type 2 diabetes mellitus with moderate nonproliferative diabetic retinopathy with macular edema, right eye"
 * ICD10CM#E113312    "Type 2 diabetes mellitus with moderate nonproliferative diabetic retinopathy with macular edema, left eye"
 * ICD10CM#E113313    "Type 2 diabetes mellitus with moderate nonproliferative diabetic retinopathy with macular edema, bilateral"
@@ -1753,7 +1753,7 @@ Id: elixhauser-hypertension-uncomplicated-vs
 Title: "Elixhauser Comorbid Condition Value Set for Hypertension, Uncomplicated"
 Description:    "Elixhauser Comorbid Condition Value Set for Hypertension, Uncomplicated. ICD-10 codes are drawn from https://www.hcup-us.ahrq.gov/toolssoftware/comorbidityicd10/comformat_icd10cm_2019_1.txt."
 * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
-* include codes from system SCT where concept is-a #38341003 "Hypertensive disorder, systemic arterial (disorder)" 
+* include codes from system SCT where concept is-a #38341003 "Hypertensive disorder, systemic arterial (disorder)"
 * ICD10CM#I10    "Essential (primary) hypertension"
 * ICD10CM#O10011    "Pre-existing essential hypertension complicating pregnancy, first trimester"
 * ICD10CM#O10012    "Pre-existing essential hypertension complicating pregnancy, second trimester"
@@ -2289,7 +2289,7 @@ Description:    "Elixhauser Comorbid Condition Value Set for Lymphoma. ICD-10 co
 * ICD10CM#C96Z    "Other specified malignant neoplasms of lymphoid, hematopoietic and related tissue"
 * ICD10CM#D47Z9    "Other specified neoplasms of uncertain behavior of lymphoid, hematopoietic and related tissue"
 
-   
+
 ValueSet:  ElixhauserFluidElectrolyteDisordersVS
 Id: elixhauser-fluid-electrolyte-vs
 Title: "Elixhauser Comorbid Condition Value Set for Fluid Electrolyte Disorders"
@@ -2379,7 +2379,7 @@ Id: elixhauser-other-neurological-vs
 Title: "Elixhauser Comorbid Condition Value Set for Other Neurological Disorders"
 Description:    "Elixhauser Comorbid Condition Value Set for Other Neurological Disorders. ICD-10 codes are drawn from https://www.hcup-us.ahrq.gov/toolssoftware/comorbidityicd10/comformat_icd10cm_2019_1.txt."
 * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
-* include codes from system SCT where concept is-a #118940003 "Disorder of nervous system (disorder)" 
+* include codes from system SCT where concept is-a #118940003 "Disorder of nervous system (disorder)"
 * exclude codes from system SCT where concept is-a #29426003  "Paralytic syndrome (disorder)"
 * ICD10CM#E7500    "GM2 gangliosidosis, unspecified"
 * ICD10CM#E7501    "Sandhoff disease"
@@ -3873,7 +3873,7 @@ Description: "A code system that contains codes representing the comorbidity cat
 ValueSet: ComorbidityCategoryVS
 Id: mcode-comorbidity-category
 Title: "Comorbidity Category Value Set"
-Description: "Elixhauser and Charlson comorbidity category codes." 
+Description: "Elixhauser and Charlson comorbidity category codes."
 * include codes from system ElixhauserCategoryCS
 * include codes from system CharlsonCategoryCS
 */

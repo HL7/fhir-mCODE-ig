@@ -58,7 +58,7 @@ Condition resources associated with an mCODE patient with a Condition.code in th
 Extension: HistologyMorphologyBehavior
 Id: mcode-histology-morphology-behavior
 Title: "Histology-Morphology-Behavior"
-Description: "A code describing the morphologic and behavioral characteristics of the cancer."
+Description: "An extension describing the morphologic and behavioral characteristics of the cancer."
 * ^context[0].type = #element
 * ^context[0].expression = "Condition"
 * value[x] from HistologyMorphologyBehaviorVS (extensible)

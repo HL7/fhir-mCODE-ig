@@ -37,6 +37,7 @@
 <artifact id="ValueSet/mcode-condition-status-trend-vs" key="condition-status-trend-value-set" name="Condition Status Trend Value Set"/>
 <artifact id="ValueSet/mcode-core-laboratory-vs" key="ValueSet-mcode-core-laboratory-vs" name="Core Laboratory Value Set"/>
 <artifact id="StructureDefinition/mcode-core-laboratory" key="StructureDefinition-mcode-core-laboratory" name="CoreLaboratory"/>
+<artifact id="ValueSet/mcode-dna-change-type-vs" key="ValueSet-mcode-dna-change-type-vs" name="DNA Change Type Value Set"/>
 <artifact id="StructureDefinition/mcode-ecog-performance-status" key="ecog-performance-status" name="ECOG Performance Status"/>
 <artifact id="ValueSet/elixhauser-alcohol-abuse-vs" key="ValueSet-elixhauser-alcohol-abuse-vs" name="Elixhauser Comorbid Condition Value Set for Alcohol Abuse"/>
 <artifact id="ValueSet/elixhauser-blood-loss-anemia-vs" key="ValueSet-elixhauser-blood-loss-anemia-vs" name="Elixhauser Comorbid Condition Value Set for Blood Loss Anemia"/>
@@ -127,88 +128,113 @@
 <artifact id="ValueSet/mcode-units-of-length-vs" key="units-of-length-value-set" name="Units of Length Value Set"/>
 <artifact id="ValueSet/mcode-tumor-size-units-vs" key="ValueSet-mcode-tumor-size-units-vs" name="Units of tumor size value set"/>
 <artifact deprecated="true" key="ValueSet" name="ValueSet"/>
-<artifact id="Observation/example1-body-weight" key="Observation-example1-body-weight" name="example1-body-weight"/>
-<artifact id="DiagnosticReport/example1-diagnosticreport-pathology" key="DiagnosticReport-example1-diagnosticreport-pathology" name="example1-diagnosticreport-pathology"/>
-<artifact id="FamilyMemberHistory/example1-family-member-history-aunt" key="FamilyMemberHistory-example1-family-member-history-aunt" name="example1-family-member-history-aunt"/>
-<artifact id="FamilyMemberHistory/example1-family-member-history-sister" key="FamilyMemberHistory-example1-family-member-history-sister" name="example1-family-member-history-sister"/>
-<artifact id="FamilyMemberHistory/example1-family-member-history-uncle" key="FamilyMemberHistory-example1-family-member-history-uncle" name="example1-family-member-history-uncle"/>
-<artifact id="Observation/example1-mcode-cancer-disease-status" key="Observation-example1-mcode-cancer-disease-status" name="example1-mcode-cancer-disease-status"/>
-<artifact id="Observation/example1-mcode-cancer-genetic-variant" key="Observation-example1-mcode-cancer-genetic-variant" name="example1-mcode-cancer-genetic-variant"/>
-<artifact id="DiagnosticReport/example1-mcode-cancer-genomics-report" key="DiagnosticReport-example1-mcode-cancer-genomics-report" name="example1-mcode-cancer-genomics-report"/>
-<artifact id="Patient/example1-mcode-cancer-patient" key="Patient-example1-mcode-cancer-patient" name="example1-mcode-cancer-patient"/>
-<artifact id="Observation/example1-mcode-cancer-related-comorbidities" key="Observation-example1-mcode-cancer-related-comorbidities" name="example1-mcode-cancer-related-comorbidities"/>
-<artifact id="MedicationRequest/example1-mcode-cancer-related-medication-anastrozole" key="MedicationRequest-example1-mcode-cancer-related-medication-anastrozole" name="example1-mcode-cancer-related-medication-anastrozole"/>
-<artifact id="MedicationRequest/example1-mcode-cancer-related-medication-chemo-cyclophosphamide" key="MedicationRequest-example1-mcode-cancer-related-medication-chemo-cyclophosphamide" name="example1-mcode-cancer-related-medication-chemo-cyclophosphamide"/>
-<artifact id="MedicationRequest/example1-mcode-cancer-related-medication-chemo-doxorubicin" key="MedicationRequest-example1-mcode-cancer-related-medication-chemo-doxorubicin" name="example1-mcode-cancer-related-medication-chemo-doxorubicin"/>
-<artifact id="MedicationRequest/example1-mcode-cancer-related-medication-chemo-paclitaxel" key="MedicationRequest-example1-mcode-cancer-related-medication-chemo-paclitaxel" name="example1-mcode-cancer-related-medication-chemo-paclitaxel"/>
-<artifact id="Procedure/example1-mcode-cancer-related-radiation-procedure" key="Procedure-example1-mcode-cancer-related-radiation-procedure" name="example1-mcode-cancer-related-radiation-procedure"/>
-<artifact id="Procedure/example1-mcode-cancer-related-surgical-procedure-mastectomy" key="Procedure-example1-mcode-cancer-related-surgical-procedure-mastectomy" name="example1-mcode-cancer-related-surgical-procedure-mastectomy"/>
-<artifact id="Condition/example1-mcode-comorbid-condition-depression" key="Condition-example1-mcode-comorbid-condition-depression" name="example1-mcode-comorbid-condition-depression"/>
-<artifact id="Condition/example1-mcode-comorbid-condition-hypertension" key="Condition-example1-mcode-comorbid-condition-hypertension" name="example1-mcode-comorbid-condition-hypertension"/>
-<artifact id="Observation/example1-mcode-ecog-performance-status" key="Observation-example1-mcode-ecog-performance-status" name="example1-mcode-ecog-performance-status"/>
-<artifact id="Specimen/example1-mcode-genetic-specimen" key="Specimen-example1-mcode-genetic-specimen" name="example1-mcode-genetic-specimen"/>
-<artifact id="Observation/example1-mcode-genomic-region-studied" key="Observation-example1-mcode-genomic-region-studied" name="example1-mcode-genomic-region-studied"/>
-<artifact id="Bundle/example1-mcode-patient-bundle" key="Bundle-example1-mcode-patient-bundle" name="example1-mcode-patient-bundle"/>
-<artifact id="Condition/example1-mcode-primary-cancer-condition" key="Condition-example1-mcode-primary-cancer-condition" name="example1-mcode-primary-cancer-condition"/>
-<artifact id="Observation/example1-mcode-tnm-clinical-distant-metastases-category" key="Observation-example1-mcode-tnm-clinical-distant-metastases-category" name="example1-mcode-tnm-clinical-distant-metastases-category"/>
-<artifact id="Observation/example1-mcode-tnm-clinical-regional-nodes-category" key="Observation-example1-mcode-tnm-clinical-regional-nodes-category" name="example1-mcode-tnm-clinical-regional-nodes-category"/>
-<artifact id="Observation/example1-mcode-tnm-clinical-stage-group" key="Observation-example1-mcode-tnm-clinical-stage-group" name="example1-mcode-tnm-clinical-stage-group"/>
-<artifact id="Observation/example1-mcode-tnm-primary-tumor-category" key="Observation-example1-mcode-tnm-primary-tumor-category" name="example1-mcode-tnm-primary-tumor-category"/>
-<artifact id="Observation/example1-mcode-tumor-marker-er" key="Observation-example1-mcode-tumor-marker-er" name="example1-mcode-tumor-marker-er"/>
-<artifact id="Observation/example1-mcode-tumor-marker-her2" key="Observation-example1-mcode-tumor-marker-her2" name="example1-mcode-tumor-marker-her2"/>
-<artifact id="Observation/example1-mcode-tumor-marker-oncotype-dx" key="Observation-example1-mcode-tumor-marker-oncotype-dx" name="example1-mcode-tumor-marker-oncotype-dx"/>
-<artifact id="Observation/example1-mcode-tumor-marker-pr" key="Observation-example1-mcode-tumor-marker-pr" name="example1-mcode-tumor-marker-pr"/>
-<artifact id="Observation/example1-neutrophils" key="Observation-example1-neutrophils" name="example1-neutrophils"/>
-<artifact id="Observation/example1-observation-smoking-history" key="Observation-example1-observation-smoking-history" name="example1-observation-smoking-history"/>
-<artifact id="Observation/example1-observation-tumor-dcis" key="Observation-example1-observation-tumor-dcis" name="example1-observation-tumor-dcis"/>
-<artifact id="Observation/example1-observation-tumor-invasion-negative" key="Observation-example1-observation-tumor-invasion-negative" name="example1-observation-tumor-invasion-negative"/>
-<artifact id="Observation/example1-observation-tumor-negative-margins" key="Observation-example1-observation-tumor-negative-margins" name="example1-observation-tumor-negative-margins"/>
-<artifact id="Observation/example1-observation-tumor-sentinel-nodes" key="Observation-example1-observation-tumor-sentinel-nodes" name="example1-observation-tumor-sentinel-nodes"/>
-<artifact id="Observation/example1-observation-tumor-size" key="Observation-example1-observation-tumor-size" name="example1-observation-tumor-size"/>
-<artifact id="Organization/example1-organization1-mcode" key="Organization-example1-organization1-mcode" name="example1-organization1-mcode"/>
-<artifact id="Bundle/example1-other-resources" key="Bundle-example1-other-resources" name="example1-other-resources"/>
-<artifact id="Practitioner/example1-practitioner1-mcode" key="Practitioner-example1-practitioner1-mcode" name="example1-practitioner1-mcode"/>
-<artifact id="Practitioner/example1-practitioner2-mcode" key="Practitioner-example1-practitioner2-mcode" name="example1-practitioner2-mcode"/>
-<artifact id="Specimen/example1-specimen-tumor" key="Specimen-example1-specimen-tumor" name="example1-specimen-tumor"/>
-<artifact id="Condition/example1-us-core-condition-anxiety" key="Condition-example1-us-core-condition-anxiety" name="example1-us-core-condition-anxiety"/>
-<artifact id="Procedure/example1-us-core-procedure-biopsy" key="Procedure-example1-us-core-procedure-biopsy" name="example1-us-core-procedure-biopsy"/>
-<artifact id="Procedure/example1-us-core-procedure-mammogram" key="Procedure-example1-us-core-procedure-mammogram" name="example1-us-core-procedure-mammogram"/>
-<artifact id="Observation/example1-us-core-smoking-status" key="Observation-example1-us-core-smoking-status" name="example1-us-core-smoking-status"/>
+<artifact id="BodyStructure/example1-mcode-tumor" key="BodyStructure-example1-mcode-tumor" name="example1-mcode-tumor"/>
+<artifact id="Observation/example1-mcode-tumor-size" key="Observation-example1-mcode-tumor-size" name="example1-mcode-tumor-size"/>
 <artifact id="StructureDefinition/mcode-patient-bundle" key="StructureDefinition-mcode-patient-bundle" name="mCODE Patient Bundle"/>
-<artifact id="Observation/mCODECancerDiseaseStatusExample01" key="mcode-cancer-disease-status-example-01" name="mCODECancerDiseaseStatusExample01"/>
-<artifact id="Observation/mCODECancerGeneticVariantExample01" key="mcode-cancer-genetic-variant-example-01" name="mCODECancerGeneticVariantExample01"/>
-<artifact id="Observation/mCODECancerGeneticVariantExample02" key="mcode-cancer-genetic-variant-example-02" name="mCODECancerGeneticVariantExample02"/>
-<artifact id="DiagnosticReport/mCODECancerGenomicsReportExample01" key="mcode-cancer-genomics-report-example-01" name="mCODECancerGenomicsReportExample01"/>
-<artifact id="Observation/mCODECancerRelatedComorbiditiesExample01" key="Observation-mCODECancerRelatedComorbiditiesExample01" name="mCODECancerRelatedComorbiditiesExample01"/>
-<artifact id="MedicationRequest/mCODECancerRelatedMedicationRequestExample01" key="MedicationRequest-mCODECancerRelatedMedicationRequestExample01" name="mCODECancerRelatedMedicationRequestExample01"/>
-<artifact id="MedicationRequest/mCODECancerRelatedMedicationRequestExample02" key="MedicationRequest-mCODECancerRelatedMedicationRequestExample02" name="mCODECancerRelatedMedicationRequestExample02"/>
+<artifact deprecated="true" id="Example/mcode-cancer-disease-status-example-01" key="mcode-cancer-disease-status-example-01" name="mCODECancerDiseaseStatusExample01"/>
+<artifact id="Observation/mCODECancerDiseaseStatusExample1" key="Observation-mCODECancerDiseaseStatusExample1" name="mCODECancerDiseaseStatusExample1"/>
+<artifact deprecated="true" id="Example/mcode-cancer-genetic-variant-example-01" key="mcode-cancer-genetic-variant-example-01" name="mCODECancerGeneticVariantExample01"/>
+<artifact deprecated="true" id="Example/mcode-cancer-genetic-variant-example-02" key="mcode-cancer-genetic-variant-example-02" name="mCODECancerGeneticVariantExample02"/>
+<artifact id="Observation/mCODECancerGeneticVariantExample1" key="Observation-mCODECancerGeneticVariantExample1" name="mCODECancerGeneticVariantExample1"/>
+<artifact id="Observation/mCODECancerGeneticVariantExample2" key="Observation-mCODECancerGeneticVariantExample2" name="mCODECancerGeneticVariantExample2"/>
+<artifact deprecated="true" id="Example/mcode-cancer-genomics-report-example-01" key="mcode-cancer-genomics-report-example-01" name="mCODECancerGenomicsReportExample01"/>
+<artifact id="DiagnosticReport/mCODECancerGenomicsReportExample1" key="DiagnosticReport-mCODECancerGenomicsReportExample1" name="mCODECancerGenomicsReportExample1"/>
+<artifact id="Observation/mCODECancerRelatedComorbiditiesExample1" key="Observation-mCODECancerRelatedComorbiditiesExample1" name="mCODECancerRelatedComorbiditiesExample1"/>
+<artifact id="MedicationRequest/mCODECancerRelatedMedicationRequestExample1" key="MedicationRequest-mCODECancerRelatedMedicationRequestExample1" name="mCODECancerRelatedMedicationRequestExample1"/>
+<artifact id="MedicationRequest/mCODECancerRelatedMedicationRequestExample2" key="MedicationRequest-mCODECancerRelatedMedicationRequestExample2" name="mCODECancerRelatedMedicationRequestExample2"/>
 <artifact deprecated="true" id="Example/mcode-cancer-related-medication-statement-example-01" key="mcode-cancer-related-medication-statement-example-01" name="mCODECancerRelatedMedicationStatementExample01"/>
 <artifact deprecated="true" id="Example/mcode-cancer-related-medication-statement-example-02" key="mcode-cancer-related-medication-statement-example-02" name="mCODECancerRelatedMedicationStatementExample02"/>
-<artifact id="Procedure/mCODECancerRelatedRadiationProcedureExample01" key="mcode-cancer-related-radiation-procedure-example-01" name="mCODECancerRelatedRadiationProcedureExample01"/>
-<artifact id="Procedure/mCODECancerRelatedSurgicalProcedureExample01" key="mcode-cancer-related-surgical-procedure-example-01" name="mCODECancerRelatedSurgicalProcedureExample01"/>
+<artifact deprecated="true" id="Example/mcode-cancer-related-radiation-procedure-example-01" key="mcode-cancer-related-radiation-procedure-example-01" name="mCODECancerRelatedRadiationProcedureExample01"/>
+<artifact id="Procedure/mCODECancerRelatedRadiationProcedureExample1" key="Procedure-mCODECancerRelatedRadiationProcedureExample1" name="mCODECancerRelatedRadiationProcedureExample1"/>
+<artifact deprecated="true" id="Example/mcode-cancer-related-surgical-procedure-example-01" key="mcode-cancer-related-surgical-procedure-example-01" name="mCODECancerRelatedSurgicalProcedureExample01"/>
+<artifact id="Procedure/mCODECancerRelatedSurgicalProcedureExample1" key="Procedure-mCODECancerRelatedSurgicalProcedureExample1" name="mCODECancerRelatedSurgicalProcedureExample1"/>
 <artifact deprecated="true" id="Example/mcode-comorbid-condition-example-01" key="mcode-comorbid-condition-example-01" name="mCODEComorbidConditionExample01"/>
-<artifact id="Condition/mCODEDepressionExample01" key="Condition-mCODEDepressionExample01" name="mCODEDepressionExample01"/>
-<artifact id="Observation/mCODEECOGPerformanceStatusExample01" key="mcode-ecog-performance-status-example-01" name="mCODEECOGPerformanceStatusExample01"/>
-<artifact id="Specimen/mCODEGeneticSpecimenExample01" key="mcode-genetic-specimen-example-01" name="mCODEGeneticSpecimenExample01"/>
-<artifact id="Observation/mCODEGenomicRegionStudiedExample01" key="mcode-genomic-region-studied-example-01" name="mCODEGenomicRegionStudiedExample01"/>
-<artifact id="Observation/mCODEKarnofskyPerformanceStatusExample01" key="mcode-karnofsky-performance-status-example-01" name="mCODEKarnofskyPerformanceStatusExample01"/>
-<artifact id="Organization/mCODEOrganizationExample01" key="mcode-organization-example-01" name="mCODEOrganizationExample01"/>
-<artifact id="Patient/mCODEPatientExample01" key="mcode-patient-example-01" name="mCODEPatientExample01"/>
-<artifact id="Patient/mCODEPatientExample02" key="mcode-patient-example-02" name="mCODEPatientExample02"/>
-<artifact id="Practitioner/mCODEPractitionerExample01" key="mcode-practitioner-example-01" name="mCODEPractitionerExample01"/>
-<artifact id="Condition/mCODEPrimaryCancerConditionExample01" key="mcode-primary-cancer-condition-example-01" name="mCODEPrimaryCancerConditionExample01"/>
-<artifact id="Condition/mCODESecondaryCancerConditionExample01" key="mcode-secondary-cancer-condition-example-01" name="mCODESecondaryCancerConditionExample01"/>
-<artifact id="Observation/mCODETNMClinicalDistantMetastasesCategoryExample01" key="mcode-tnm-clinical-distant-metastases-category-example-01" name="mCODETNMClinicalDistantMetastasesCategoryExample01"/>
-<artifact id="Observation/mCODETNMClinicalPrimaryTumorCategoryExample01" key="mcode-tnm-clinical-primary-tumor-category-example-01" name="mCODETNMClinicalPrimaryTumorCategoryExample01"/>
-<artifact id="Observation/mCODETNMClinicalRegionalNodesCategoryExample01" key="mcode-tnm-clinical-regional-nodes-category-example-01" name="mCODETNMClinicalRegionalNodesCategoryExample01"/>
-<artifact id="Observation/mCODETNMClinicalStageGroupExample01" key="mcode-tnm-clinical-stage-group-example-01" name="mCODETNMClinicalStageGroupExample01"/>
-<artifact id="Observation/mCODETNMPathologicalDistantMetastasesCategoryExample01" key="mcode-tnm-pathological-distant-metastases-category-example-01" name="mCODETNMPathologicalDistantMetastasesCategoryExample01"/>
-<artifact id="Observation/mCODETNMPathologicalPrimaryTumorCategoryExample01" key="mcode-tnm-pathological-primary-tumor-category-example-01" name="mCODETNMPathologicalPrimaryTumorCategoryExample01"/>
-<artifact id="Observation/mCODETNMPathologicalRegionalNodesCategoryExample01" key="mcode-tnm-pathological-regional-nodes-category-example-01" name="mCODETNMPathologicalRegionalNodesCategoryExample01"/>
-<artifact id="Observation/mCODETNMPathologicalStageGroupExample01" key="mcode-tnm-pathological-stage-group-example-01" name="mCODETNMPathologicalStageGroupExample01"/>
-<artifact id="Observation/mCODETumorMarkerExample01" key="mcode-tumor-marker-example-01" name="mCODETumorMarkerExample01"/>
-<artifact id="BodyStructure/mcode-tumor" key="BodyStructure-mcode-tumor" name="mcode-tumor"/>
-<artifact id="Observation/mcode-tumor-size" key="Observation-mcode-tumor-size" name="mcode-tumor-size"/>
+<artifact id="Condition/mCODEDepressionExample1" key="Condition-mCODEDepressionExample1" name="mCODEDepressionExample1"/>
+<artifact deprecated="true" id="Example/mcode-ecog-performance-status-example-01" key="mcode-ecog-performance-status-example-01" name="mCODEECOGPerformanceStatusExample01"/>
+<artifact id="Observation/mCODEECOGPerformanceStatusExample1" key="Observation-mCODEECOGPerformanceStatusExample1" name="mCODEECOGPerformanceStatusExample1"/>
+<artifact deprecated="true" id="Example/mcode-genetic-specimen-example-01" key="mcode-genetic-specimen-example-01" name="mCODEGeneticSpecimenExample01"/>
+<artifact id="Specimen/mCODEGeneticSpecimenExample1" key="Specimen-mCODEGeneticSpecimenExample1" name="mCODEGeneticSpecimenExample1"/>
+<artifact deprecated="true" id="Example/mcode-genomic-region-studied-example-01" key="mcode-genomic-region-studied-example-01" name="mCODEGenomicRegionStudiedExample01"/>
+<artifact id="Observation/mCODEGenomicRegionStudiedExample1" key="Observation-mCODEGenomicRegionStudiedExample1" name="mCODEGenomicRegionStudiedExample1"/>
+<artifact deprecated="true" id="Example/mcode-karnofsky-performance-status-example-01" key="mcode-karnofsky-performance-status-example-01" name="mCODEKarnofskyPerformanceStatusExample01"/>
+<artifact id="Observation/mCODEKarnofskyPerformanceStatusExample1" key="Observation-mCODEKarnofskyPerformanceStatusExample1" name="mCODEKarnofskyPerformanceStatusExample1"/>
+<artifact deprecated="true" id="Example/mcode-organization-example-01" key="mcode-organization-example-01" name="mCODEOrganizationExample01"/>
+<artifact id="Organization/mCODEOrganizationExample1" key="Organization-mCODEOrganizationExample1" name="mCODEOrganizationExample1"/>
+<artifact deprecated="true" id="Example/mcode-patient-example-01" key="mcode-patient-example-01" name="mCODEPatientExample01"/>
+<artifact deprecated="true" id="Example/mcode-patient-example-02" key="mcode-patient-example-02" name="mCODEPatientExample02"/>
+<artifact id="Patient/mCODEPatientExample1" key="Patient-mCODEPatientExample1" name="mCODEPatientExample1"/>
+<artifact id="Patient/mCODEPatientExample2" key="Patient-mCODEPatientExample2" name="mCODEPatientExample2"/>
+<artifact deprecated="true" id="Example/mcode-practitioner-example-01" key="mcode-practitioner-example-01" name="mCODEPractitionerExample01"/>
+<artifact id="Practitioner/mCODEPractitionerExample1" key="Practitioner-mCODEPractitionerExample1" name="mCODEPractitionerExample1"/>
+<artifact deprecated="true" id="Example/mcode-primary-cancer-condition-example-01" key="mcode-primary-cancer-condition-example-01" name="mCODEPrimaryCancerConditionExample01"/>
+<artifact id="Condition/mCODEPrimaryCancerConditionExample1" key="Condition-mCODEPrimaryCancerConditionExample1" name="mCODEPrimaryCancerConditionExample1"/>
+<artifact deprecated="true" id="Example/mcode-secondary-cancer-condition-example-01" key="mcode-secondary-cancer-condition-example-01" name="mCODESecondaryCancerConditionExample01"/>
+<artifact id="Condition/mCODESecondaryCancerConditionExample1" key="Condition-mCODESecondaryCancerConditionExample1" name="mCODESecondaryCancerConditionExample1"/>
+<artifact deprecated="true" id="Example/mcode-tnm-clinical-distant-metastases-category-example-01" key="mcode-tnm-clinical-distant-metastases-category-example-01" name="mCODETNMClinicalDistantMetastasesCategoryExample01"/>
+<artifact id="Observation/mCODETNMClinicalDistantMetastasesCategoryExample1" key="Observation-mCODETNMClinicalDistantMetastasesCategoryExample1" name="mCODETNMClinicalDistantMetastasesCategoryExample1"/>
+<artifact deprecated="true" id="Example/mcode-tnm-clinical-primary-tumor-category-example-01" key="mcode-tnm-clinical-primary-tumor-category-example-01" name="mCODETNMClinicalPrimaryTumorCategoryExample01"/>
+<artifact id="Observation/mCODETNMClinicalPrimaryTumorCategoryExample1" key="Observation-mCODETNMClinicalPrimaryTumorCategoryExample1" name="mCODETNMClinicalPrimaryTumorCategoryExample1"/>
+<artifact deprecated="true" id="Example/mcode-tnm-clinical-regional-nodes-category-example-01" key="mcode-tnm-clinical-regional-nodes-category-example-01" name="mCODETNMClinicalRegionalNodesCategoryExample01"/>
+<artifact id="Observation/mCODETNMClinicalRegionalNodesCategoryExample1" key="Observation-mCODETNMClinicalRegionalNodesCategoryExample1" name="mCODETNMClinicalRegionalNodesCategoryExample1"/>
+<artifact deprecated="true" id="Example/mcode-tnm-clinical-stage-group-example-01" key="mcode-tnm-clinical-stage-group-example-01" name="mCODETNMClinicalStageGroupExample01"/>
+<artifact id="Observation/mCODETNMClinicalStageGroupExample1" key="Observation-mCODETNMClinicalStageGroupExample1" name="mCODETNMClinicalStageGroupExample1"/>
+<artifact deprecated="true" id="Example/mcode-tnm-pathological-distant-metastases-category-example-01" key="mcode-tnm-pathological-distant-metastases-category-example-01" name="mCODETNMPathologicalDistantMetastasesCategoryExample01"/>
+<artifact id="Observation/mCODETNMPathologicalDistantMetastasesCategoryExample1" key="Observation-mCODETNMPathologicalDistantMetastasesCategoryExample1" name="mCODETNMPathologicalDistantMetastasesCategoryExample1"/>
+<artifact deprecated="true" id="Example/mcode-tnm-pathological-primary-tumor-category-example-01" key="mcode-tnm-pathological-primary-tumor-category-example-01" name="mCODETNMPathologicalPrimaryTumorCategoryExample01"/>
+<artifact id="Observation/mCODETNMPathologicalPrimaryTumorCategoryExample1" key="Observation-mCODETNMPathologicalPrimaryTumorCategoryExample1" name="mCODETNMPathologicalPrimaryTumorCategoryExample1"/>
+<artifact deprecated="true" id="Example/mcode-tnm-pathological-regional-nodes-category-example-01" key="mcode-tnm-pathological-regional-nodes-category-example-01" name="mCODETNMPathologicalRegionalNodesCategoryExample01"/>
+<artifact id="Observation/mCODETNMPathologicalRegionalNodesCategoryExample1" key="Observation-mCODETNMPathologicalRegionalNodesCategoryExample1" name="mCODETNMPathologicalRegionalNodesCategoryExample1"/>
+<artifact deprecated="true" id="Example/mcode-tnm-pathological-stage-group-example-01" key="mcode-tnm-pathological-stage-group-example-01" name="mCODETNMPathologicalStageGroupExample01"/>
+<artifact id="Observation/mCODETNMPathologicalStageGroupExample1" key="Observation-mCODETNMPathologicalStageGroupExample1" name="mCODETNMPathologicalStageGroupExample1"/>
+<artifact deprecated="true" id="Example/mcode-tumor-marker-example-01" key="mcode-tumor-marker-example-01" name="mCODETumorMarkerExample01"/>
+<artifact id="Observation/mCODETumorMarkerExample1" key="Observation-mCODETumorMarkerExample1" name="mCODETumorMarkerExample1"/>
+<artifact id="Observation/scenario1-body-weight" key="Observation-scenario1-body-weight" name="scenario1-body-weight"/>
+<artifact id="DiagnosticReport/scenario1-diagnosticreport-pathology" key="DiagnosticReport-scenario1-diagnosticreport-pathology" name="scenario1-diagnosticreport-pathology"/>
+<artifact id="FamilyMemberHistory/scenario1-family-member-history-aunt" key="FamilyMemberHistory-scenario1-family-member-history-aunt" name="scenario1-family-member-history-aunt"/>
+<artifact id="FamilyMemberHistory/scenario1-family-member-history-sister" key="FamilyMemberHistory-scenario1-family-member-history-sister" name="scenario1-family-member-history-sister"/>
+<artifact id="FamilyMemberHistory/scenario1-family-member-history-uncle" key="FamilyMemberHistory-scenario1-family-member-history-uncle" name="scenario1-family-member-history-uncle"/>
+<artifact id="Observation/scenario1-mcode-cancer-disease-status" key="Observation-scenario1-mcode-cancer-disease-status" name="scenario1-mcode-cancer-disease-status"/>
+<artifact id="Observation/scenario1-mcode-cancer-genetic-variant" key="Observation-scenario1-mcode-cancer-genetic-variant" name="scenario1-mcode-cancer-genetic-variant"/>
+<artifact id="DiagnosticReport/scenario1-mcode-cancer-genomics-report" key="DiagnosticReport-scenario1-mcode-cancer-genomics-report" name="scenario1-mcode-cancer-genomics-report"/>
+<artifact id="Patient/scenario1-mcode-cancer-patient" key="Patient-scenario1-mcode-cancer-patient" name="scenario1-mcode-cancer-patient"/>
+<artifact id="Observation/scenario1-mcode-cancer-related-comorbidities" key="Observation-scenario1-mcode-cancer-related-comorbidities" name="scenario1-mcode-cancer-related-comorbidities"/>
+<artifact id="MedicationRequest/scenario1-mcode-cancer-related-medication-anastrozole" key="MedicationRequest-scenario1-mcode-cancer-related-medication-anastrozole" name="scenario1-mcode-cancer-related-medication-anastrozole"/>
+<artifact id="MedicationRequest/scenario1-mcode-cancer-related-medication-chemo-cyclophosphamide" key="MedicationRequest-scenario1-mcode-cancer-related-medication-chemo-cyclophosphamide" name="scenario1-mcode-cancer-related-medication-chemo-cyclophosphamide"/>
+<artifact id="MedicationRequest/scenario1-mcode-cancer-related-medication-chemo-doxorubicin" key="MedicationRequest-scenario1-mcode-cancer-related-medication-chemo-doxorubicin" name="scenario1-mcode-cancer-related-medication-chemo-doxorubicin"/>
+<artifact id="MedicationRequest/scenario1-mcode-cancer-related-medication-chemo-paclitaxel" key="MedicationRequest-scenario1-mcode-cancer-related-medication-chemo-paclitaxel" name="scenario1-mcode-cancer-related-medication-chemo-paclitaxel"/>
+<artifact id="Procedure/scenario1-mcode-cancer-related-radiation-procedure" key="Procedure-scenario1-mcode-cancer-related-radiation-procedure" name="scenario1-mcode-cancer-related-radiation-procedure"/>
+<artifact id="Procedure/scenario1-mcode-cancer-related-surgical-procedure-mastectomy" key="Procedure-scenario1-mcode-cancer-related-surgical-procedure-mastectomy" name="scenario1-mcode-cancer-related-surgical-procedure-mastectomy"/>
+<artifact id="Condition/scenario1-mcode-comorbid-condition-depression" key="Condition-scenario1-mcode-comorbid-condition-depression" name="scenario1-mcode-comorbid-condition-depression"/>
+<artifact id="Condition/scenario1-mcode-comorbid-condition-hypertension" key="Condition-scenario1-mcode-comorbid-condition-hypertension" name="scenario1-mcode-comorbid-condition-hypertension"/>
+<artifact id="Observation/scenario1-mcode-ecog-performance-status" key="Observation-scenario1-mcode-ecog-performance-status" name="scenario1-mcode-ecog-performance-status"/>
+<artifact id="Specimen/scenario1-mcode-genetic-specimen" key="Specimen-scenario1-mcode-genetic-specimen" name="scenario1-mcode-genetic-specimen"/>
+<artifact id="Observation/scenario1-mcode-genomic-region-studied" key="Observation-scenario1-mcode-genomic-region-studied" name="scenario1-mcode-genomic-region-studied"/>
+<artifact id="Bundle/scenario1-mcode-patient-bundle" key="Bundle-scenario1-mcode-patient-bundle" name="scenario1-mcode-patient-bundle"/>
+<artifact id="Condition/scenario1-mcode-primary-cancer-condition" key="Condition-scenario1-mcode-primary-cancer-condition" name="scenario1-mcode-primary-cancer-condition"/>
+<artifact id="Observation/scenario1-mcode-tnm-clinical-distant-metastases-category" key="Observation-scenario1-mcode-tnm-clinical-distant-metastases-category" name="scenario1-mcode-tnm-clinical-distant-metastases-category"/>
+<artifact id="Observation/scenario1-mcode-tnm-clinical-regional-nodes-category" key="Observation-scenario1-mcode-tnm-clinical-regional-nodes-category" name="scenario1-mcode-tnm-clinical-regional-nodes-category"/>
+<artifact id="Observation/scenario1-mcode-tnm-clinical-stage-group" key="Observation-scenario1-mcode-tnm-clinical-stage-group" name="scenario1-mcode-tnm-clinical-stage-group"/>
+<artifact id="Observation/scenario1-mcode-tnm-primary-tumor-category" key="Observation-scenario1-mcode-tnm-primary-tumor-category" name="scenario1-mcode-tnm-primary-tumor-category"/>
+<artifact id="Observation/scenario1-mcode-tumor-marker-er" key="Observation-scenario1-mcode-tumor-marker-er" name="scenario1-mcode-tumor-marker-er"/>
+<artifact id="Observation/scenario1-mcode-tumor-marker-her2" key="Observation-scenario1-mcode-tumor-marker-her2" name="scenario1-mcode-tumor-marker-her2"/>
+<artifact id="Observation/scenario1-mcode-tumor-marker-oncotype-dx" key="Observation-scenario1-mcode-tumor-marker-oncotype-dx" name="scenario1-mcode-tumor-marker-oncotype-dx"/>
+<artifact id="Observation/scenario1-mcode-tumor-marker-pr" key="Observation-scenario1-mcode-tumor-marker-pr" name="scenario1-mcode-tumor-marker-pr"/>
+<artifact id="Observation/scenario1-neutrophils" key="Observation-scenario1-neutrophils" name="scenario1-neutrophils"/>
+<artifact id="Observation/scenario1-observation-smoking-history" key="Observation-scenario1-observation-smoking-history" name="scenario1-observation-smoking-history"/>
+<artifact id="Observation/scenario1-observation-tumor-dcis" key="Observation-scenario1-observation-tumor-dcis" name="scenario1-observation-tumor-dcis"/>
+<artifact id="Observation/scenario1-observation-tumor-invasion-negative" key="Observation-scenario1-observation-tumor-invasion-negative" name="scenario1-observation-tumor-invasion-negative"/>
+<artifact id="Observation/scenario1-observation-tumor-negative-margins" key="Observation-scenario1-observation-tumor-negative-margins" name="scenario1-observation-tumor-negative-margins"/>
+<artifact id="Observation/scenario1-observation-tumor-sentinel-nodes" key="Observation-scenario1-observation-tumor-sentinel-nodes" name="scenario1-observation-tumor-sentinel-nodes"/>
+<artifact id="Observation/scenario1-observation-tumor-size" key="Observation-scenario1-observation-tumor-size" name="scenario1-observation-tumor-size"/>
+<artifact id="Organization/scenario1-organization1-mcode" key="Organization-scenario1-organization1-mcode" name="scenario1-organization1-mcode"/>
+<artifact id="Bundle/scenario1-other-resources" key="Bundle-scenario1-other-resources" name="scenario1-other-resources"/>
+<artifact id="Practitioner/scenario1-practitioner1-mcode" key="Practitioner-scenario1-practitioner1-mcode" name="scenario1-practitioner1-mcode"/>
+<artifact id="Practitioner/scenario1-practitioner2-mcode" key="Practitioner-scenario1-practitioner2-mcode" name="scenario1-practitioner2-mcode"/>
+<artifact id="Specimen/scenario1-specimen-tumor" key="Specimen-scenario1-specimen-tumor" name="scenario1-specimen-tumor"/>
+<artifact id="Condition/scenario1-us-core-condition-anxiety" key="Condition-scenario1-us-core-condition-anxiety" name="scenario1-us-core-condition-anxiety"/>
+<artifact id="Procedure/scenario1-us-core-procedure-biopsy" key="Procedure-scenario1-us-core-procedure-biopsy" name="scenario1-us-core-procedure-biopsy"/>
+<artifact id="Procedure/scenario1-us-core-procedure-mammogram" key="Procedure-scenario1-us-core-procedure-mammogram" name="scenario1-us-core-procedure-mammogram"/>
+<artifact id="Observation/scenario1-us-core-smoking-status" key="Observation-scenario1-us-core-smoking-status" name="scenario1-us-core-smoking-status"/>
 <page key="NA" name="(NA)"/>
 <page key="many" name="(many)"/>
 <page deprecated="true" key="profiles" name="(profiles)"/>

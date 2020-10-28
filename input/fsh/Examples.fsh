@@ -348,8 +348,8 @@ Description: "mCODE Example for CancerRelatedMedicationRequest"
 * id = "mCODECancerRelatedMedicationRequestExample01"
 * meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-related-medication-request"
 * subject = Reference(mCODEPatientExample01)
-* status = MedRequestStatus#active
-* intent = MedRequestIntent#order
+* status = MedReqStatus#active
+* intent = MedReqIntent#order
 * authoredOn = "2019-04-01"
 * medicationCodeableConcept = RXN#349472 "gefitinib 250 MG Oral Tablet"
 * reasonCode = SCT#254637007 "Non-small cell lung cancer (disorder)"
@@ -373,8 +373,8 @@ Description: "mCODE Example for CancerRelatedMedicationRequest - Chemo Infusion"
 * id = "mCODECancerRelatedMedicationRequestExample02"
 * meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-related-medication-request"
 * subject = Reference(mCODEPatientExample01)
-* status = MedRequestStatus#active
-* intent = MedRequestIntent#order
+* status = MedReqStatus#active
+* intent = MedReqIntent#order
 * authoredOn = "2019-04-01"
 * medicationCodeableConcept = RXN#309311 "CISplatin 50 MG per 50 ML Injectable Solution"
 * reasonCode = SCT#254637007 "Non-small cell lung cancer (disorder)"
@@ -412,7 +412,7 @@ Description: "mCODE Example for Cancer Related Medication Statement"
 * id = "mCODECancerRelatedMedicationStatementExample01"
 * meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-related-medication-statement"
 * status = MedStatus#active "active"
-* category = MedCat#community "community"
+* category = MedReqCat#community "community"
 * medicationCodeableConcept = RXN#349472 "gefitinib 250 MG Oral Tablet"
 * subject = Reference(mCODEPatientExample01)
 * effectiveDateTime = "2019-04-01"
@@ -429,7 +429,7 @@ Description: "mCODE Example for Cancer Related Medication Statement"
 * id = "mCODECancerRelatedMedicationStatementExample02"
 * meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-related-medication-statement"
 * status = MedStatus#stopped "stopped"
-* category = MedCat#community "community"
+* category = MedReqCat#community "community"
 * medicationCodeableConcept = RXN#349472 "gefitinib 250 MG Oral Tablet"
 * subject = Reference(mCODEPatientExample01)
 * effectiveDateTime = "2019-04-01"

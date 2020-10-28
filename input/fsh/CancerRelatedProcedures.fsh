@@ -44,8 +44,6 @@ Procedure resources associated with an mCODE patient with Procedure.category SNO
 * code from CancerRelatedSurgicalProcedureVS (extensible)
 
 
-
-
 /* Save for possible later use
 
 Extension: RadiationDose

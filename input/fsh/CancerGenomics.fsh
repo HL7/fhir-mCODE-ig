@@ -38,6 +38,7 @@ Observation resources associated with an mCODE patient with Observation.code LOI
     GeneStudied 0..* MS and
     VariationCode 0..* MS and
     GenomicDNAChange 0..1 MS and
+    GenomicDNAChangeType 0..1 MS and
     GenomicSourceClass 0..1 MS and
     AminoAcidChange 0..1 MS and
     AminoAcidChangeType 0..1 MS and
@@ -61,6 +62,14 @@ Observation resources associated with an mCODE patient with Observation.code LOI
 * component[GenomicDNAChange].value[x] only CodeableConcept
 * component[GenomicDNAChange].valueCodeableConcept 1..1
 * component[GenomicDNAChange].valueCodeableConcept from HGVSVS (required)
+
+* component[GenomicDNAChangeType] ^short = "DNA Change Type"
+* component[GenomicDNAChangeType] ^definition = "Codified type for associated DNA Marker. DNA Markers use the HGVS notation which implies the DNA Marker Type, but the concurrent use of this code will allow a standard and explicit type for technical and display convenience."
+* component[GenomicDNAChangeType].code = LNC#48019-4  // DNA change type
+* component[GenomicDNAChangeType].value[x] only CodeableConcept
+* component[GenomicDNAChangeType].valueCodeableConcept 1..1
+* component[GenomicDNAChangeType].valueCodeableConcept from DNAChangeTypeVS (extensible)
+
 * component[GenomicSourceClass] ^short = "Genomic source class [Type]"
 * component[GenomicSourceClass] ^definition = "The genomic class of the specimen being analyzed, for example, germline for inherited genome, somatic for cancer genome, and prenatal for fetal genome."
 * component[GenomicSourceClass].code = LNC#48002-0

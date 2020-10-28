@@ -37,12 +37,11 @@ Observation resources associated with an mCODE patient with Observation.code LOI
 * ^abstract = false
 * hasMember MS
 * code = LNC#21908-9 //"Stage group.clinical Cancer"
-* category = ObsCat#survey "survey"
 * valueCodeableConcept from TNMStageGroupVS (preferred)
 * hasMember ^slicing.discriminator.type = #profile // #pattern
 * hasMember ^slicing.discriminator.path =  "$this.resolve()" // "$this.resolve().code"
 * hasMember ^slicing.rules = #open
-* hasMember contains 
+* hasMember contains
     TNMClinicalPrimaryTumorCategory 0..1 and
     TNMClinicalRegionalNodesCategory 0..1 and
     TNMClinicalDistantMetastasesCategory 0..1
@@ -72,7 +71,6 @@ Conformance Statement:
 Observation resources associated with an mCODE patient with Observation.code LOINC 21905-5 MUST conform to this profile. Beyond this requirement, a producer of resources SHOULD ensure that any resource instance associated with an mCODE patient that would reasonably be expected to conform to this profile SHOULD be published in this form."
 * ^abstract = false
 * code = LNC#21905-5 //"Primary tumor.clinical [Class] Cancer"
-* category = ObsCat#survey "survey"
 * valueCodeableConcept from TNMPrimaryTumorCategoryVS (preferred)
 
 Profile:  TNMClinicalRegionalNodesCategory
@@ -86,7 +84,6 @@ Conformance Statement:
 Observation resources associated with an mCODE patient with Observation.code LOINC 21906-3 MUST conform to this profile. Beyond this requirement, a producer of resources SHOULD ensure that any resource instance associated with an mCODE patient that would reasonably be expected to conform to this profile SHOULD be published in this form."
 * ^abstract = false
 * code = LNC#21906-3 //"Regional lymph nodes.clinical [Class] Cancer"
-* category = ObsCat#survey "survey"
 * valueCodeableConcept from TNMRegionalNodesCategoryVS (preferred)
 
 Profile:  TNMClinicalDistantMetastasesCategory
@@ -96,7 +93,6 @@ Title: "TNM Clinical Distant Metastases Category"
 Description: "Category describing the extent of a tumor metastasis in remote anatomical locations, based on evidence such as physical examination, imaging, and/or biopsy."
 * ^abstract = false
 * code = LNC#21907-1 //"Distant metastases.clinical [Class] Cancer"
-* category = ObsCat#survey "survey"
 * valueCodeableConcept from TNMDistantMetastasesCategoryVS (preferred)
 
 //-------------------- Pathological Staging -------------------------
@@ -118,7 +114,7 @@ Observation resources associated with an mCODE patient with Observation.code LOI
 * hasMember ^slicing.discriminator.type = #profile // #pattern
 * hasMember ^slicing.discriminator.path =  "$this.resolve()" // "$this.resolve().code"
 * hasMember ^slicing.rules = #open
-* hasMember contains 
+* hasMember contains
     TNMPathologicalPrimaryTumorCategory 0..1 and
     TNMPathologicalRegionalNodesCategory 0..1 and
     TNMPathologicalDistantMetastasesCategory 0..1

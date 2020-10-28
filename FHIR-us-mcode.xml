@@ -37,6 +37,7 @@
 <artifact id="ValueSet/mcode-condition-status-trend-vs" key="condition-status-trend-value-set" name="Condition Status Trend Value Set"/>
 <artifact id="ValueSet/mcode-core-laboratory-vs" key="ValueSet-mcode-core-laboratory-vs" name="Core Laboratory Value Set"/>
 <artifact id="StructureDefinition/mcode-core-laboratory" key="StructureDefinition-mcode-core-laboratory" name="CoreLaboratory"/>
+<artifact id="ValueSet/mcode-dna-change-type-vs" key="ValueSet-mcode-dna-change-type-vs" name="DNA Change Type Value Set"/>
 <artifact id="StructureDefinition/mcode-ecog-performance-status" key="ecog-performance-status" name="ECOG Performance Status"/>
 <artifact id="ValueSet/elixhauser-alcohol-abuse-vs" key="ValueSet-elixhauser-alcohol-abuse-vs" name="Elixhauser Comorbid Condition Value Set for Alcohol Abuse"/>
 <artifact id="ValueSet/elixhauser-blood-loss-anemia-vs" key="ValueSet-elixhauser-blood-loss-anemia-vs" name="Elixhauser Comorbid Condition Value Set for Blood Loss Anemia"/>

@@ -111,7 +111,7 @@ groups:
 
   Outcomes:
     name: "Profiles: Outcomes"
-    description: Profiles in the [mCODE **Outcomes** Group](index.html#outcomes-group).
+    description: Profiles in the [mCODE **Outcomes** Group](index.html#Outcomes).
     resources:
       - StructureDefinition/mcode-cancer-disease-status
 

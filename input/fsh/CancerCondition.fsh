@@ -5,11 +5,6 @@ Parent:  USCoreCondition
 Id: mcode-cancer-condition-parent
 Title: "Cancer Condition Parent"
 Description:  "Abstract parent class for describing a primary or secondary metastatic neoplastic diseases, or individual tumors."
-/* Issues relative to mCODE 0.9.x -- Fixed
-1) asserter should include PractitionerRole
-2) recorder should include PractitionerRole
-3) Laterality should be 0..1, not 0..*
-*/
 * ^abstract = true
 * extension contains
     AssertedDate named assertedDate 0..1 and
@@ -17,6 +12,8 @@ Description:  "Abstract parent class for describing a primary or secondary metas
 * bodySite.extension contains
     Laterality named laterality 0..1
 * extension[assertedDate] and extension[histologyMorphologyBehavior] and bodySite and bodySite.extension[laterality] MS
+* extension[histologyMorphologyBehavior] ^definition = "An extension describing the morphologic and behavioral characteristics of the cancer."
+* bodySite.extension[laterality] ^definition = "Body side of the body location, if needed to distinguish from a similar location on the other side of the body."
 // proposing to take out the non-US Core category and allow clinicians to choose
 //* category = SCT#64572001 //"Disease"
 * bodySite from CancerBodyLocationVS (extensible)
@@ -61,7 +58,8 @@ Title: "Histology-Morphology-Behavior"
 Description: "An extension describing the morphologic and behavioral characteristics of the cancer."
 * ^context[0].type = #element
 * ^context[0].expression = "Condition"
-* value[x] from HistologyMorphologyBehaviorVS (extensible)
+* value[x] only CodeableConcept
+* valueCodeableConcept from HistologyMorphologyBehaviorVS (extensible)
 
 Extension: RelatedPrimaryCancerCondition
 Id: mcode-related-primary-cancer-condition

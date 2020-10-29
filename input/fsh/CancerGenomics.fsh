@@ -203,7 +203,6 @@ Observation resources associated with an mCODE patient with DiagnoticReport.code
 * component[GeneMutations].value[x] only CodeableConcept
 * component[GeneMutations].valueCodeableConcept 1..1
 * component[GeneMutations].valueCodeableConcept from HGVSVS (required)
-// MK 1/23/2020 should this be http://www.genenames.org/geneId (extensible)?
 
 * component[GeneStudied] ^short = "Gene studied [ID]"
 * component[GeneStudied] ^definition = "The ID for the gene studied"

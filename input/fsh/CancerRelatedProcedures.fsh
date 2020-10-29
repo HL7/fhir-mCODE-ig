@@ -14,6 +14,7 @@ Description: "Abstract parent class for cancer procedure profiles."
 * performer.actor only Reference(Practitioner or PractitionerRole or Organization)
 * bodySite.extension contains
     Laterality named laterality 0..1
+* bodySite.extension[laterality] ^short = "Laterality"
 * bodySite.extension[laterality] ^definition = "Body side of the body location, if needed to distinguish from a similar location on the other side of the body."
 * reasonCode and reasonReference and extension[treatmentIntent] and bodySite and bodySite.extension[laterality] MS
 * extension[treatmentIntent] ^short = "Treatment Intent"

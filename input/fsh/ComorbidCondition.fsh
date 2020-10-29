@@ -24,7 +24,6 @@ Extension: ComorbidConditionReference
 Id: mcode-comorbid-condition-reference
 Title:  "Comorbid Condition Reference"
 Description: "An extension for representing a reference to a condition resource corresponding to the named comorbid condition."
-
 * value[x] only Reference(Condition)
 
 Profile: CancerRelatedComorbidities
@@ -32,12 +31,13 @@ Parent: ComorbiditiesParent
 Id: mcode-cancer-related-comorbidities
 Description: "Comorbid conditions for a cancer condition, using Elixhauser comorbidity categories."
 * ^abstract = false
+* focus and component and component.extension MS
 * focus only Reference(PrimaryCancerCondition)
 * component ^slicing.discriminator.type = #pattern
 * component ^slicing.discriminator.path = "code"
 * component ^slicing.rules = #open
 * component ^slicing.description = "Slice based on the component.code pattern"
-* component and component.extension[conditionCode] and component.extension[conditionReference] MS
+* focus and component and component.extension[conditionReference] and component.extension[conditionCode] and component.extension[conditionReference] MS
 * component contains 
     alcoholAbuse 0..1 and
     cardiacArrhythmia 0..1 and
@@ -67,7 +67,6 @@ Description: "Comorbid conditions for a cancer condition, using Elixhauser comor
     ulcer 0..1 and
     valvularDisease 0..1 and
     weightLoss 0..1
-
 * component[alcoholAbuse].code = ElixhauserCategoryCS#ALCOHOL
 * component[alcoholAbuse] ^short = "Alcohol Abuse Comorbidity"
 * component[alcoholAbuse] ^definition = "Component representing the presence or absence of the named comorbidity with optional condition code(s) or reference to the actual condition(s)."

@@ -96,7 +96,7 @@ Description: "This value set is intended to contain allowable values for the N c
 * AJCC terminology: examples of N categories include 'cN0', indicating no evidence of lymph node involvement, and 'pN1', indicating regional lymph node involvement to a small extent, with specific thresholds for the lymph node groups and number of lymph nodes involved. Other N categories refer to increasing lymph node involvement. Please note allowable N categories may vary between clinical and pathologic classifications. The full set of allowable clinical and pathologic N categories, along with its current descriptions, can be accessed through the AJCC Staging Manual and any applicable updates and corrections, as well as the AJCC API.
 
 * SNOMED CT has content related to the N category under the hierarchy of 385382003 'Node category finding', such as 5856006 'N3 category' and 277672002 'Node stage N1a'. If using SNOMED CT to store N category findings, the use of codes that do not contain descriptions of the categories, such as the examples provided, is encouraged, as stage finding codes in SNOMED CT may not be up-to-date with current AJCC guidance. Note that SNOMED CT codes do not always make a distinction between clinical and pathological classifications (e.g. 'cN1' and 'pN1' may be represented by the same SNOMED CT code 53623008 'N1 category'). In addition, SNOMED CT may not have complete TNM staging terminology and may require supplementation with codes from another controlled vocabulary (e.g. NCI Thesaurus)."
-* codes from system AJCC
+* include codes from system AJCC
 
 ValueSet: TNMDistantMetastasesCategoryVS
 Id: mcode-tnm-distant-metastases-category-vs
@@ -111,9 +111,7 @@ Description: "This value set is intended to contain allowable values for the M c
 ValueSet: CancerRelatedSurgicalProcedureVS
 Id: mcode-cancer-related-surgical-procedure-vs
 Title: "Cancer-Related Surgical Procedure Value Set"
-Description: "Includes SNOMED CT surgical procedure codes and codes from ICD-10-PCS and CPT. Not all codes in this value set are specific to cancer surgery, but are included because narrowing the set further risks eliminating potentially useful and relevant codes.
-
-Conformance note: If an ICD-10-PCS code is used, and a semantically equivalent SNOMED CT code is available, the resulting FHIR Procedure instance will not be compliant with [US Core Profiles](http://hl7.org/fhir/us/core/index.html)."
+Description: "Includes surgical procedure codes from SNOMED CT, ICD-10-PCS and CPT. The value set may be a superset of cancer surgery codes, but narrowing the set further risks eliminating potentially useful and relevant codes."
 * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
 * include codes from system SCT where concept is-a #387713003 "Surgical procedure (procedure)"
 * include codes from system CPT

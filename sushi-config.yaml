@@ -34,11 +34,277 @@ pages:
     title: Downloads
   change_log.md:
     title: Change log
+  experimental.md:
+      title: Experimental Artifacts
+  mcode-patient-bundle.md:
+    title: mCODE Patient Bundle Implementation Details
 menu:
   Home: index.html
   Conformance: conformance.html
   Implementation: implementation.html
   Artifacts: artifacts.html
+  Experimental: experimental.html
   Examples: examples.html
   Downloads: downloads.html
   History: http://hl7.org/fhir/us/mcode/history.html
+groups:
+
+  mCODEBundle:
+    name: mCODE Patient Bundle
+    description: See [implementation details here](mcode-patient-bundle.html).
+    resources:
+      - StructureDefinition/mcode-patient-bundle
+      - Bundle/scenario1-mcode-patient-bundle
+
+  # Profiles
+  Patient:
+    name: "Profiles: Patient"
+    description: Profiles in the [mCODE **Patient** Group](index.html#Patient).
+    resources:
+      - StructureDefinition/mcode-cancer-patient
+      - StructureDefinition/mcode-comorbidities-parent
+      - StructureDefinition/mcode-cancer-related-comorbidities
+      - StructureDefinition/mcode-performance-status-parent
+      - StructureDefinition/mcode-ecog-performance-status
+      - StructureDefinition/mcode-karnofsky-performance-status
+
+  Disease:
+    name: "Profiles: Disease Characterization"
+    description: Profiles in the [mCODE **Disease Characterization** Group](index.html#Disease).
+    resources:
+      - StructureDefinition/mcode-cancer-condition-parent
+      - StructureDefinition/mcode-primary-cancer-condition
+      - StructureDefinition/mcode-secondary-cancer-condition
+      - StructureDefinition/mcode-histology-morphology-behavior
+      - StructureDefinition/mcode-cancer-stage-parent
+      - StructureDefinition/mcode-tnm-clinical-stage-group
+      - StructureDefinition/mcode-tnm-clinical-primary-tumor-category
+      - StructureDefinition/mcode-tnm-clinical-regional-nodes-category
+      - StructureDefinition/mcode-tnm-clinical-distant-metastases-category
+      - StructureDefinition/mcode-tnm-pathological-stage-group
+      - StructureDefinition/mcode-tnm-pathological-primary-tumor-category
+      - StructureDefinition/mcode-tnm-pathological-regional-nodes-category
+      - StructureDefinition/mcode-tnm-pathological-distant-metastases-category
+
+  LabsVitals:
+    name: "Profiles: Laboratory Results and Vital Signs"
+    description: Profiles in the [mCODE **Laboratory Results and Vital Signs** Group](index.html#LabsVitals).
+    resources:
+      - StructureDefinition/mcode-tumor-marker
+
+  Treatment:
+    name: "Profiles: Treatments"
+    description: Profiles in the [mCODE **Treatments** Group](index.html#Treatment).
+    resources:
+      - StructureDefinition/mcode-cancer-related-procedure-parent
+      - StructureDefinition/mcode-cancer-related-radiation-procedure
+      - StructureDefinition/mcode-cancer-related-surgical-procedure
+
+  Genomics:
+    name: "Profiles: Genomics"
+    description: Profiles in the [mCODE **Genomics** Group](index.html#Genomics).
+    resources:
+      - StructureDefinition/mcode-cancer-genetic-variant
+      - StructureDefinition/mcode-genetic-specimen
+      - StructureDefinition/mcode-cancer-genomics-report
+      - StructureDefinition/mcode-genomic-region-studied
+
+  Outcomes:
+    name: "Profiles: Outcomes"
+    description: Profiles in the [mCODE **Outcomes** Group](index.html#Outcomes).
+    resources:
+      - StructureDefinition/mcode-cancer-disease-status
+
+
+
+  # Extensions
+  Extensions:
+    name: Extensions
+    description: These define constraints on FHIR data types that need to be complied with by conformant implementations
+    resources:
+      - StructureDefinition/mcode-comorbid-condition-code
+      - StructureDefinition/mcode-comorbid-condition-reference
+      - StructureDefinition/mcode-evidence-type
+      - StructureDefinition/mcode-laterality
+      - StructureDefinition/mcode-related-primary-cancer-condition
+      - StructureDefinition/mcode-termination-reason
+      - StructureDefinition/mcode-treatment-intent
+
+  # Value sets
+  ValueSets:
+    name: Value Sets
+    description: These define sets of codes used by systems conforming with this implementation guide. Comorbid condition-related value sets appear in a separate section below.
+    resources:
+      - ValueSet/mcode-cancer-body-location-vs
+      - ValueSet/mcode-cancer-disease-status-evidence-type-vs
+      - ValueSet/mcode-cancer-disorder-vs
+      - ValueSet/mcode-cancer-related-surgical-procedure-vs
+      - ValueSet/mcode-cancer-staging-system-vs
+      - ValueSet/mcode-clinvar-vs
+      - ValueSet/mcode-condition-status-trend-vs
+      - ValueSet/mcode-genetic-specimen-type-vs
+      - ValueSet/mcode-hgnc-vs
+      - ValueSet/mcode-hgvs-vs
+      - ValueSet/mcode-histology-morphology-behavior-vs
+      - ValueSet/mcode-laterality-vs
+      - ValueSet/mcode-loinc-cancer-staging-codes-vs
+      - ValueSet/mcode-loinc-performance-status-codes-vs
+      - ValueSet/mcode-present-absent-unknown
+      - ValueSet/mcode-primary-or-uncertain-behavior-cancer-disorder-vs
+      - ValueSet/mcode-radiation-procedure-vs
+      - ValueSet/mcode-radiation-target-body-site-vs
+      - ValueSet/mcode-secondary-cancer-disorder-vs
+      - ValueSet/mcode-tnm-distant-metastases-category-vs
+      - ValueSet/mcode-tnm-primary-tumor-category-vs
+      - ValueSet/mcode-tnm-regional-nodes-category-vs
+      - ValueSet/mcode-tnm-stage-group-vs
+      - ValueSet/mcode-treatment-intent-vs
+      - ValueSet/mcode-treatment-termination-reason-vs
+      - ValueSet/mcode-tumor-marker-test-vs
+      - ValueSet/mcode-units-of-length-vs
+
+
+  ValueSetsComorbidCondition:
+    name: Comorbid Condition-related Value Sets
+    description: These define sets of codes used by systems conforming with this implementation guide.
+    resources:
+      - ValueSet/elixhauser-alcohol-abuse-vs
+      - ValueSet/elixhauser-blood-loss-anemia-vs
+      - ValueSet/elixhauser-cardiac-arrhythmia-vs
+      - ValueSet/elixhauser-chronic-pulmonary-disease-vs
+      - ValueSet/elixhauser-coagulation-deficiency-vs
+      - ValueSet/elixhauser-congestive-heart-failure-vs
+      - ValueSet/elixhauser-deficiency-anemia-vs
+      - ValueSet/elixhauser-depression-vs
+      - ValueSet/elixhauser-diabetes-complicated-vs
+      - ValueSet/elixhauser-uncomplicated-diabetes-vs
+      - ValueSet/elixhauser-drug-abuse-vs
+      - ValueSet/elixhauser-fluid-electrolyte-vs
+      - ValueSet/elixhauser-hiv-aids-vs
+      - ValueSet/elixhauser-hypertension-complicated-vs
+      - ValueSet/elixhauser-hypertension-uncomplicated-vs
+      - ValueSet/elixhauser-hypothyroidism-vs
+      - ValueSet/elixhauser-liver-disease-vs
+      - ValueSet/elixhauser-lymphoma-vs
+      - ValueSet/elixhauser-metastatic-cancer-vs
+      - ValueSet/elixhauser-obesity-vs
+      - ValueSet/elixhauser-other-neurological-vs
+      - ValueSet/elixhauser-paralysis-vs
+      - ValueSet/elixhauser-peripheral-vascular-disease-vs
+      - ValueSet/elixhauser-psychoses-vs
+      - ValueSet/elixhauser-pulmonary-circulation-disorders-vs
+      - ValueSet/elixhauser-renal-failure-vs
+      - ValueSet/elixhauser-rheumatoid-arthritis-vs
+      - ValueSet/elixhauser-solid-tumor-vs
+      - ValueSet/elixhauser-ulcer-vs
+      - ValueSet/elixhauser-valvular-disease-vs
+      - ValueSet/elixhauser-weight-loss-vs
+
+  CodeSystems:
+    name: Code Systems
+    description: These define new code systems used by systems conforming with this implementation guide
+    resources:
+      - CodeSystem/mcode-elixhauser-category
+
+
+  # Examples
+  GenericExamples:
+    name: "Examples: Generic"
+    description: Examples of resources conforming to mCODE profiles. These examples are independent (i.e., there is no expectation of consistency of data among the resources).
+    resources:
+      - Condition/mCODEDepressionExample1
+      - Condition/mCODEPrimaryCancerConditionExample1
+      - Condition/mCODESecondaryCancerConditionExample1
+      - DiagnosticReport/mCODECancerGenomicsReportExample1
+      - Observation/mCODECancerDiseaseStatusExample1
+      - Observation/mCODECancerGeneticVariantExample1
+      - Observation/mCODECancerGeneticVariantExample2
+      - Observation/mCODECancerRelatedComorbiditiesExample1
+      - Observation/mCODEECOGPerformanceStatusExample1
+      - Observation/mCODEGenomicRegionStudiedExample1
+      - Observation/mCODEKarnofskyPerformanceStatusExample1
+      - Observation/mCODETNMClinicalDistantMetastasesCategoryExample1
+      - Observation/mCODETNMClinicalPrimaryTumorCategoryExample1
+      - Observation/mCODETNMClinicalRegionalNodesCategoryExample1
+      - Observation/mCODETNMClinicalStageGroupExample1
+      - Observation/mCODETNMPathologicalDistantMetastasesCategoryExample1
+      - Observation/mCODETNMPathologicalPrimaryTumorCategoryExample1
+      - Observation/mCODETNMPathologicalRegionalNodesCategoryExample1
+      - Observation/mCODETNMPathologicalStageGroupExample1
+      - Observation/mCODETumorMarkerExample1
+      - Organization/mCODEOrganizationExample1
+      - Patient/mCODEPatientExample1
+      - Patient/mCODEPatientExample2
+      - Practitioner/mCODEPractitionerExample1
+      - Procedure/mCODECancerRelatedRadiationProcedureExample1
+      - Procedure/mCODECancerRelatedSurgicalProcedureExample1
+      - Specimen/mCODEGeneticSpecimenExample1
+
+  Scenario1:
+    name: "Scenario 1: Breast Cancer Patient"
+    description: A set of example resources based on [this persona](examples.html#scenario-1-breast-cancer-patient).
+    resources:
+      - Condition/scenario1-mcode-comorbid-condition-depression
+      - Condition/scenario1-mcode-comorbid-condition-hypertension
+      - Condition/scenario1-mcode-primary-cancer-condition
+      - Condition/scenario1-us-core-condition-anxiety
+      - DiagnosticReport/scenario1-diagnosticreport-pathology
+      - DiagnosticReport/scenario1-mcode-cancer-genomics-report
+      - FamilyMemberHistory/scenario1-family-member-history-aunt
+      - FamilyMemberHistory/scenario1-family-member-history-sister
+      - FamilyMemberHistory/scenario1-family-member-history-uncle
+      - MedicationRequest/scenario1-mcode-cancer-related-medication-anastrozole
+      - MedicationRequest/scenario1-mcode-cancer-related-medication-chemo-cyclophosphamide
+      - MedicationRequest/scenario1-mcode-cancer-related-medication-chemo-doxorubicin
+      - MedicationRequest/scenario1-mcode-cancer-related-medication-chemo-paclitaxel
+      - Observation/scenario1-mcode-cancer-disease-status
+      - Observation/scenario1-mcode-cancer-genetic-variant
+      - Observation/scenario1-mcode-cancer-related-comorbidities
+      - Observation/scenario1-mcode-ecog-performance-status
+      - Observation/scenario1-mcode-genomic-region-studied
+      - Observation/scenario1-mcode-tnm-clinical-distant-metastases-category
+      - Observation/scenario1-mcode-tnm-clinical-regional-nodes-category
+      - Observation/scenario1-mcode-tnm-clinical-stage-group
+      - Observation/scenario1-mcode-tnm-primary-tumor-category
+      - Observation/scenario1-mcode-tumor-marker-er
+      - Observation/scenario1-mcode-tumor-marker-her2
+      - Observation/scenario1-mcode-tumor-marker-oncotype-dx
+      - Observation/scenario1-mcode-tumor-marker-pr
+      - Observation/scenario1-observation-smoking-history
+      - Observation/scenario1-observation-tumor-dcis
+      - Observation/scenario1-observation-tumor-invasion-negative
+      - Observation/scenario1-observation-tumor-negative-margins
+      - Observation/scenario1-observation-tumor-sentinel-nodes
+      - Observation/scenario1-observation-tumor-size
+      - Observation/scenario1-us-core-smoking-status
+      - Organization/scenario1-organization1-mcode
+      - Patient/scenario1-mcode-cancer-patient
+      - Practitioner/scenario1-practitioner1-mcode
+      - Practitioner/scenario1-practitioner2-mcode
+      - Procedure/scenario1-mcode-cancer-related-radiation-procedure
+      - Procedure/scenario1-mcode-cancer-related-surgical-procedure-mastectomy
+      - Procedure/scenario1-us-core-procedure-biopsy
+      - Procedure/scenario1-us-core-procedure-mammogram
+      - Specimen/scenario1-mcode-genetic-specimen
+      - Specimen/scenario1-specimen-tumor
+
+
+
+  # Experimental
+  ExperimentalResourcesTumorSize:
+    name: Experimental Resources - Tumor Size
+    description: These resources related to tumor size are considered [experimental](experimental.html).
+    resources:
+      - StructureDefinition/mcode-tumor-size
+      - StructureDefinition/mcode-tumor
+      - ValueSet/mcode-tumor-size-units-vs
+      - Observation/example1-mcode-tumor-size
+      - BodyStructure/example1-mcode-tumor
+
+  ExperimentalResourcesMedication:
+    name: Experimental Resources - Medication-related
+    description: These resources related to medications are considered [experimental](experimental.html).
+    resources:
+      - StructureDefinition/mcode-cancer-related-medication-request
+      - MedicationRequest/mCODECancerRelatedMedicationRequestExample1
+      - MedicationRequest/mCODECancerRelatedMedicationRequestExample2

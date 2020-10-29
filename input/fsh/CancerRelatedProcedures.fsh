@@ -1,51 +1,12 @@
-Profile:  CancerRelatedRadiationProcedure
-Parent:   USCoreProcedure
-Id:       mcode-cancer-related-radiation-procedure
-Title:    "Cancer-Related Radiation Procedure"
-Description: "A radiological treatment addressing a cancer condition. The scope of this profile has been narrowed to cancer-related procedures by constraining the ReasonReference and ReasonCode to cancer conditions.
-
-Conformance note: If an ICD-10-PCS code is used in the code attribute, and there is a semantically equivalent SNOMED CT or CPT code, the resulting Procedure instance will not be compliant with [US Core Profiles](http://hl7.org/fhir/us/core/index.html)"
-/* Issues relative to mCODE 0.9.x
-1) basedOn should not include ProcedureRequest. No such class in R4.
-2) basedOn should include CarePlan
-3) partOf should probably not include MedicationAdministration or Observation.
-4) recorder should include PractitionerRole and not include RelatedPerson
-5) Practitioner in recorder should not be restricted to US Core Practitioner (US Core doesn't do that)
-6) performer.actor, restricted to Reference(US Core Practitioner Profile) in mCODE, should be relaxed to Practitioner
-7) performer.actor should allow PractitionerRole and Organization, and maybe allow Device (to allow recording of the device used in the radiation procedure)
-8) location should not be restricted to US Core Location (US Core doesn't). Relax to Reference(Location)
-9) Subject should at least be constrained to US Core Patient (US Core does), and maybe constrained to CancerPatient
-10) Encounter should not be constrained to US Core Encounter -- US Core doesn't have this constraint
-11) report should allow Reference(DiagnosticReport | DocumentReference | Composition) -- currently mCODE constrains to DiagnosticReport only.
-*/
-* extension contains
-    TreatmentIntent named treatmentIntent 0..1 and
-    TerminationReason named terminationReason 0..*
-* partOf only Reference(Procedure)
-* category = SCT#53438000 //"Radiation therapy procedure or service (procedure)"
-* code from RadiationProcedureVS (extensible)
-* subject only Reference(CancerPatient)
-* recorder only Reference(Practitioner or PractitionerRole)
-* performer.actor only Reference(Practitioner or PractitionerRole or Organization)  // include Device?
-* reasonCode from AnyCancerDisorderVS (extensible)
-* reasonReference only Reference(CancerConditionParent)
-* bodySite from RadiationTargetBodySiteVS (extensible)
-* bodySite.extension contains
-    Laterality named laterality 0..1
-* focalDevice 0..0
-* bodySite and bodySite.extension[laterality] and extension[treatmentIntent] and extension[terminationReason] MS
-
-
-Profile:  CancerRelatedSurgicalProcedure
-Parent:   USCoreProcedure
-Id:       mcode-cancer-related-surgical-procedure
-Title:    "Cancer-Related Surgical Procedure"
-Description: "A surgical action addressing a cancer condition. The scope of this profile has been narrowed to cancer-related procedures by constraining the ReasonReference and ReasonCode to cancer conditions. Conformance note: If an ICD-10-PCS code is used in the code attribute, and there is a semantically equivalent SNOMED CT or CPT code, the resulting Procedure instance will not be compliant with US Core Profiles."
-* code from CancerRelatedSurgicalProcedureVS (extensible)
+Profile: CancerRelatedProcedureParent
+Parent: USCoreProcedure
+Id:     mcode-cancer-related-procedure-parent
+Title:  "Cancer-Related Procedure Parent"
+Description: "Abstract parent class for cancer procedure profiles."
+* ^abstract = true
 * extension contains
     TreatmentIntent named treatmentIntent 0..1
-* subject only Reference(CancerPatient)
-* category = SCT#387713003 //"Surgical procedure"
+* category 1..1
 * reasonCode from AnyCancerDisorderVS (extensible)
 * reasonReference only Reference(CancerConditionParent)  // rather than Primary, Secondary, Tumor
 * partOf only Reference(Procedure)
@@ -53,9 +14,37 @@ Description: "A surgical action addressing a cancer condition. The scope of this
 * performer.actor only Reference(Practitioner or PractitionerRole or Organization)
 * bodySite.extension contains
     Laterality named laterality 0..1
-* reasonCode and reasonReference and extension[treatmentIntent] and bodySite and bodySite.extension[laterality] MS  // other MS will be inherited from USCoreProcedure
+* reasonCode and reasonReference and extension[treatmentIntent] and bodySite and bodySite.extension[laterality] MS
 
-    /* Save for possible later use
+Profile:  CancerRelatedRadiationProcedure
+Parent:   CancerRelatedProcedureParent
+Id:       mcode-cancer-related-radiation-procedure
+Title:    "Cancer-Related Radiation Procedure"
+Description: "A radiological treatment addressing a cancer condition. The scope of this profile has been narrowed to cancer-related procedures by constraining the ReasonReference and ReasonCode to cancer conditions.
+
+Conformance statement:
+
+Procedure resources associated with an mCODE patient with Procedure.category SNOMED-CT 53438000 MAY conform to this profile. Beyond this requirement, a producer of resources SHOULD ensure that any resource instance associated with an mCODE patient that would reasonably be expected to conform to this profile SHOULD be published in this form. Specifically, we expect that any radiation therapy related to the treatment of a `PrimaryCancerCondition` or `SecondaryCancerCondition` would be published in this form."
+* ^abstract = false
+* category = SCT#53438000 //"Radiation therapy procedure or service (procedure)"
+* code from RadiationProcedureVS (extensible)
+* bodySite from RadiationTargetBodySiteVS (extensible)
+
+Profile:  CancerRelatedSurgicalProcedure
+Parent:   CancerRelatedProcedureParent
+Id:       mcode-cancer-related-surgical-procedure
+Title:    "Cancer-Related Surgical Procedure"
+Description: "A surgical action addressing a cancer condition. The scope of this profile has been narrowed to cancer-related procedures by constraining the ReasonReference and ReasonCode to cancer conditions.
+
+Conformance statement:
+
+Procedure resources associated with an mCODE patient with Procedure.category SNOMED-CT 387713003 MAY conform to this profile. Beyond this requirement, a producer of resources SHOULD ensure that any resource instance associated with an mCODE patient that would reasonably be expected to conform to this profile SHOULD be published in this form. Specifically, we expect that any surgical procedure related to the treatment of a `PrimaryCancerCondition` or `SecondaryCancerCondition` would be published in this form."
+* ^abstract = false
+* category = SCT#387713003 //"Surgical procedure"
+* code from CancerRelatedSurgicalProcedureVS (extensible)
+
+
+/* Save for possible later use
 
 Extension: RadiationDose
 Id: mcode-radiation-dose

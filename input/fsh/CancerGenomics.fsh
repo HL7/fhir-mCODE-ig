@@ -4,7 +4,9 @@ Id:         mcode-cancer-genetic-variant
 Title:      "Cancer Genetic Variant"
 Description:    "Records an alteration in the most common DNA nucleotide sequence. The term variant can be used to describe an alteration that may be benign, pathogenic, or of unknown significance. The term variant is increasingly being used in place of the term mutation.
 
-Conformance statement: To be considered mCODE conformant, all Observations associated with an mCODE patient and using LOINC code 69548-6 SHALL conform to this profile."
+Conformance statement:
+
+Observation resources associated with an mCODE patient with Observation.code LOINC 69548-6 MUST conform to this profile. Beyond this requirement, a producer of resources SHOULD ensure that any resource instance associated with an mCODE patient that would reasonably be expected to conform to this profile SHOULD be published in this form."
 
 * status and code and subject and effective[x] and valueCodeableConcept and method MS
 * bodySite 0..0
@@ -36,6 +38,7 @@ Conformance statement: To be considered mCODE conformant, all Observations assoc
     GeneStudied 0..* MS and
     VariationCode 0..* MS and
     GenomicDNAChange 0..1 MS and
+    GenomicDNAChangeType 0..1 MS and
     GenomicSourceClass 0..1 MS and
     AminoAcidChange 0..1 MS and
     AminoAcidChangeType 0..1 MS and
@@ -59,6 +62,14 @@ Conformance statement: To be considered mCODE conformant, all Observations assoc
 * component[GenomicDNAChange].value[x] only CodeableConcept
 * component[GenomicDNAChange].valueCodeableConcept 1..1
 * component[GenomicDNAChange].valueCodeableConcept from HGVSVS (required)
+
+* component[GenomicDNAChangeType] ^short = "DNA Change Type"
+* component[GenomicDNAChangeType] ^definition = "Codified type for associated DNA Marker. DNA Markers use the HGVS notation which implies the DNA Marker Type, but the concurrent use of this code will allow a standard and explicit type for technical and display convenience."
+* component[GenomicDNAChangeType].code = LNC#48019-4  // DNA change type
+* component[GenomicDNAChangeType].value[x] only CodeableConcept
+* component[GenomicDNAChangeType].valueCodeableConcept 1..1
+* component[GenomicDNAChangeType].valueCodeableConcept from DNAChangeTypeVS (extensible)
+
 * component[GenomicSourceClass] ^short = "Genomic source class [Type]"
 * component[GenomicSourceClass] ^definition = "The genomic class of the specimen being analyzed, for example, germline for inherited genome, somatic for cancer genome, and prenatal for fetal genome."
 * component[GenomicSourceClass].code = LNC#48002-0
@@ -96,16 +107,12 @@ Id:             mcode-tumor-marker
 Title:          "Tumor Marker"
 Description:    "The result of a tumor marker test. Tumor marker tests are generally used to guide cancer treatment decisions and monitor treatment, as well as to predict the chance of recovery and cancer recurrence. A tumor marker is a substance found in tissue or blood or other body fluids that may be a sign of cancer or certain benign (noncancer) conditions. Most tumor markers are made by both normal cells and cancer cells, but they are made in larger amounts by cancer cells. A tumor marker may help to diagnose cancer, plan treatment, or find out how well treatment is working or if cancer has come back. Examples of tumor markers include CA-125 (in ovarian cancer), CA 15-3 (in breast cancer), CEA (in colon cancer), and PSA (in prostate cancer). Tumor markers differ from genetic markers in that they are measured at the levels of the protein and substance post-RNA protein synthesis. (Definition adapted from: [NCI Dictionary of Cancer Terms](https://www.cancer.gov/publications/dictionaries/cancer-terms/def/tumor-marker-test) and [Cancer.Net](https://www.cancer.net/navigating-cancer-care/diagnosing-cancer/tests-and-procedures/tumor-marker-tests)).
 
-Implementation note: The data value for TumorMarker has cardinality is 0..1 (required if known) because when the test result is indeterminate, no quantitative data value will be reported. Instead, the reason for the null value will be reported in the DataAbsentReason field."
+Conformance statement:
+
+Observation resources associated with an mCODE patient with an Observation.code in the value set TumorMarkerTestVS MUST conform to this profile. Beyond this requirement, a producer of resources SHOULD ensure that any resource instance associated with an mCODE patient that would reasonably be expected to conform to this profile SHOULD be published in this form, for example, when employing a code that extends the TumorMarkerTestVS value set. Any resource intended to conform to this profile SHOULD populate meta.profile accordingly."
+
 * status and code and subject and effective[x] and value[x] MS
-* bodySite 0..0
-* referenceRange 0..1
-* hasMember 0..0
-* component 0..0
-* interpretation 0..1
 * subject 1..1
-* basedOn only Reference(ServiceRequest or MedicationRequest)
-* partOf only Reference(MedicationAdministration or MedicationStatement or Procedure)
 * code from TumorMarkerTestVS (extensible)
 * subject only Reference(CancerPatient)
 * focus only Reference(CancerConditionParent)
@@ -117,7 +124,12 @@ Profile:    GeneticSpecimen
 Parent:     Specimen
 Id:         mcode-genetic-specimen
 Title:      "Genetic Specimen"
-Description:    "A small sample of blood, hair, skin, amniotic fluid (the fluid that surrounds a fetus during pregnancy), or other tissue which is excised from a subject for the purposes of genomics testing or analysis."
+Description:    "A small sample of blood, hair, skin, amniotic fluid (the fluid that surrounds a fetus during pregnancy), or other tissue which is excised from a subject for the purposes of genomics testing or analysis.
+
+Conformance statement:
+
+Specimen resources associated with an mCODE patient with a Specimen.code in the value set GeneticSpecimenTypeVS MUST conform to this profile. Beyond this requirement, a producer of resources SHOULD ensure that any resource instance associated with an mCODE patient that would reasonably be expected to conform to this profile SHOULD be published in this form."
+
 * type 1..1 MS
 * type from GeneticSpecimenTypeVS
 * collection.bodySite.extension contains
@@ -130,7 +142,11 @@ Parent:     USCoreDiagnosticReportLab
 Id:         mcode-cancer-genomics-report
 Title:      "Cancer Genomics Report"
 Description:    "Genetic analysis summary report. The report may include one or more tests, with two distinct test types. The first type is a targeted mutation test, where a specific mutation on a specific gene is tested for. The result is either positive or negative for that mutation. The second type is a more general test for variants. This type of test returns the identity of variants found in a certain region of the genome.
-The identity of non-genomic laboratory tests is typically represented by a LOINC code. However, many genetic tests and panels do not have LOINC codes, although some might have an identifier in NCBI Genetic Testing Registry (GTR), a central location for voluntary submission of genetic test information by providers. To identify the diagnostic report, the name of the report must be in the text sub-field of the code structure. If there is a coded identifier from GTR, LOINC, or other source, then it should be included into the the code sub-field of the code structure. If there is no suitable code, the code can be omitted."
+The identity of non-genomic laboratory tests is typically represented by a LOINC code. However, many genetic tests and panels do not have LOINC codes, although some might have an identifier in NCBI Genetic Testing Registry (GTR), a central location for voluntary submission of genetic test information by providers. To identify the diagnostic report, the name of the report must be in the text sub-field of the code structure. If there is a coded identifier from GTR, LOINC, or other source, then it should be included into the the code sub-field of the code structure. If there is no suitable code, the code can be omitted.
+
+Conformance statement:
+
+DiagnosticReport resources associated with an mCODE patient with DiagnoticReport.code LOINC 81247-9 MUST conform to this profile. Beyond this requirement, a producer of resources SHOULD ensure that any resource instance associated with an mCODE patient that would reasonably be expected to conform to this profile SHOULD be published in this form."
 * specimen MS
 * basedOn only Reference (ServiceRequest or CarePlan)
 * subject only Reference(CancerPatient)
@@ -159,7 +175,11 @@ Profile:    GenomicRegionStudied
 Parent:     USCoreObservationLab
 Id:         mcode-genomic-region-studied
 Title:      "Genomic Region Studied"
-Description:    "The area of the genome region referenced in testing for variants."
+Description:    "The area of the genome region referenced in testing for variants.
+
+Conformance Statement:
+
+Observation resources associated with an mCODE patient with DiagnoticReport.code LOINC 53041-0 MUST conform to this profile. Beyond this requirement, a producer of resources SHOULD ensure that any resource instance associated with an mCODE patient that would reasonably be expected to conform to this profile SHOULD be published in this form."
 * code MS
 * code = LNC#53041-0 //"DNA region of interest panel"
 * value[x] 0..0

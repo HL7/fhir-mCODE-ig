@@ -8,7 +8,7 @@
     <li><a href="#Patient">Patient</a></li>
     <li><a href="#BodyLocations">Body Locations</a></li>
     <li><a href="#VitalSigns">Vital Sign Profiles</a></li>
-    <li><a href="#LaboratoryProfiles">Laboratory Profiles</a></li>
+    <li><a href="#laboratory-profiles">Laboratory Profiles</a></li>
     <li><a href="#RepresentingProvenance">Representing Provenance of mCODE Information</a></li>
 </ul>
 
@@ -43,14 +43,14 @@
 <p>The vital signs height, weight, and blood pressure are part of the mCODE data set. However, vital sign profiles are not defined in mCODE. Instead, mCODE uses the <a href="http://hl7.org/fhir/R4/observation-vitalsigns.html" target="_blank">FHIR vital sign profiles</a>, which are incorporated by reference into <a href="http://hl7.org/fhir/us/core/index.html" target="_blank">US Core v3</a>.</p>
  <p>If and when detailed vital signs profiles are standardized in a widely-accepted FHIR IG, mCODE may switch over to those profiles.</p>
 
-<h4><a name="LaboratoryProfiles"></a>Laboratory Profiles</h4>
+<h4><a name="laboratory-profiles"></a>Laboratory Profiles</h4>
 
 <p>Complete Blood Count (CBC) and Comprehensive Metabolic Panel (CMP) are part of the mCODE data set. Reporting these results must conform to the <a href="http://hl7.org/fhir/us/core/StructureDefinition-us-core-observation-lab.html">US Core Laboratory Result Profile</a>. Several examples of laboratory result reporting are given in the <a href="http://hl7.org/fhir/us/core/index.html">US Core IG</a>. For example, see this <a href="http://hl7.org/fhir/us/core/Observation-erythrocytes.html">erythrocytes laboratory reporting example</a>.</p>
 
 <p>In practice, there are different variations on these panels, as exemplified by <a href="https://search.loinc.org/searchLOINC/search.zul?query=CBC">this list of various CBCs</a>. The individual LOINC codes of interest to mCODE are any that are reported as part of the CBC and CMP panels, which include, but are not limited to:</p>
 
 <ul>
-    <li><b>CBC:</b> 20570-8, 26453-1, 718-7, 26515-7, 28539-5, 28540-3, 28542-9, 30384-2, 30385-9, 30428-7, 26464-8, 30180-4, 26444-0, 34911-8, 34910-0, 26446-5, 30376-8, 26450-7, 26449-9, 34913-4, 34912-6, 30395-8, 30394-1, 35058-7, 30397-4, 26463-0, 26462-2, 26471-3, 30406-3, 34922-5, 35050-4, 26478-8, 26474-7, 30413-9, 30412-1, 13046-8, 26477-0, 30420-4, 35082-7, 34921-7, 35039-7, 30423-8, 30422-0, 34915-9, 34914-2, 28541-1, 30433-7, 34923-3, 35029-8, 26485-3, 26484-6, 30441-0, 30440-2, 34925-8, 34924-1, 30445-1, 30444-4, 26498-6, 30446-9, 26511-6, 26499-4, 26508-2, 26507-4, 30450-1, 30449-3, 30451-9,6505-8, 34917-5, 34916-7, 13047-6, 30458-4, 34999-3, 35003-3, 30465-9, 30464-2, 30466-7, 34926-6, 26524-9, 26523-1, 34919-1, 34918-3, 34992-8, 34993-6, 33255-1
+    <li><b>CBC:</b> 20570-8, 26453-1, 718-7, 26515-7, 28539-5, 28540-3, 28542-9, 30384-2, 30385-9, 30428-7, 26464-8, 30180-4, 26444-0, 34911-8, 34910-0, 26446-5, 30376-8, 26450-7, 26449-9, 34913-4, 34912-6, 30395-8, 30394-1, 35058-7, 30397-4, 26463-0, 26462-2, 26471-3, 30406-3, 34922-5, 35050-4, 26478-8, 26474-7, 30413-9, 30412-1, 13046-8, 26477-0, 30420-4, 35082-7, 34921-7, 35039-7, 30423-8, 30422-0, 34915-9, 34914-2, 28541-1, 30433-7, 34923-3, 35029-8, 26485-3, 26484-6, 30441-0, 30440-2, 34925-8, 34924-1, 30445-1, 30444-4, 26498-6, 30446-9, 26511-6, 26499-4, 26508-2, 26507-4, 30450-1, 30449-3, 30451-9, 26505-8, 34917-5, 34916-7, 13047-6, 30458-4, 34999-3, 35003-3, 30465-9, 30464-2, 30466-7, 34926-6, 26524-9, 26523-1, 34919-1, 34918-3, 34992-8, 34993-6, 33255-1
     </li>
     <li><b>CMP:</b> 2345-7, 3094-0, 2160-0, 3097-3, 33914-3, 50044-7, 48642-3, 48643-1, 17861-6, 2885-2, 1751-7, 10834-0, 1759-0, 1975-2, 6768-6, 1742-6, 1920-8, 2951-2, 2823-3, 2075-0, 1963-8, 2028-9, 33037-3</li>
 </ul>

@@ -16,11 +16,19 @@ Title: "Human Genome Variation Society Sequence Variant Nomenclature Value Set"
 Description: "HGVS nomenclature is used to report and exchange information regarding variants found in DNA, RNA, and protein sequences."
 * codes from system HGVS
 
-ValueSet:     CancerBodyLocationVS
+ValueSet: DNAChangeTypeVS
+Id: mcode-dna-change-type-vs
+Title: "DNA Change Type Value Set"
+Description: "DNA Change Type of a variant"
+* include codes from system SO where concept descendent-of #SO:0002072
+
+ValueSet: CancerBodyLocationVS
 Id: mcode-cancer-body-location-vs
 Title: "Cancer Body Location Value Set"
-Description:  "Codes describing the location(s) of primary or secondary cancer. The value set includes all codes from the SNOMED CT body structure hierarchy (codes descending from 123037004 'Body Structure'). The cancer body location may also be expressed using ICD-O-3 topography codes, however, those codes are not included here due to intellectual property restrictions. No other code systems are considered conformant."
-* codes from system SCT where concept is-a #123037004  "Body Structure"
+Description:  "Codes describing the location(s) of primary or secondary cancer. The value set includes all codes from the SNOMED CT body structure hierarchy (codes descending from 123037004 'Body Structure'). The cancer body location may also be expressed using ICD-O-3 topography codes, however, those codes are not included here due to intellectual property restrictions. These topography terms have four-character codes that run from C00.0 to C80.9 [ref](https://apps.who.int/iris/bitstream/handle/10665/96612/9789241548496_eng.pdf). Only SNOMED CT and ICD-O-3 are considered conformant."
+* ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
+* include codes from system SCT where concept is-a #123037004  "Body Structure"
+* include codes from system ICDO3  // currently no way to filter to just topology codes (that I know of)
 
 /* 
 ValueSet:  AnatomicalOrientationVS
@@ -33,6 +41,7 @@ ValueSet:   ConditionStatusTrendVS
 Id: mcode-condition-status-trend-vs
 Title: "Condition Status Trend Value Set"
 Description:  "How patient's given disease, condition, or ability is trending."
+* ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
 * SCT#260415000 "Not detected (qualifier)"
 * SCT#268910001 "Patient's condition improved (finding)"
 * SCT#359746009 "Patient's condition stable (finding)"
@@ -43,6 +52,7 @@ ValueSet: CancerDiseaseStatusEvidenceTypeVS
 Id: mcode-cancer-disease-status-evidence-type-vs
 Title: "Cancer Disease Status Evidence Type Value Set"
 Description:  "The type of evidence backing up the clinical determination of cancer progression. The code '* SCT#252416005 Histopathology test (procedure)' is intended to be used when there is a biopsy that contributes evidence of the cancer disease status."
+* ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
 * SCT#363679005 "Imaging (procedure)"
 * SCT#252416005 "Histopathology test (procedure)"
 * SCT#711015009 "Assessment of symptom control (procedure)"
@@ -53,6 +63,7 @@ ValueSet:   CancerStagingSystemVS
 Id: mcode-cancer-staging-system-vs
 Title: "Cancer Staging System Value Set"
 Description:    "System used for staging. If the staging system is AJCC Version 8, use the NCI thesaurus code C146985 (AJCC Cancer Staging Manual 8th Edition) in its place. This is because SNOMED does not have an equivalent concept for AJCC Version 8 at this time."
+* ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
 * SCT#444256004 "American Joint Commission on Cancer, Cancer Staging Manual, 6th edition neoplasm staging system (tumor staging)"
 * SCT#443830009 "American Joint Commission on Cancer, Cancer Staging Manual, 7th edition neoplasm staging system (tumor staging)"
 * SCT#258235000 "International Union Against Cancer (tumor staging)"
@@ -103,6 +114,7 @@ Title: "Cancer-Related Surgical Procedure Value Set"
 Description: "Includes selected SNOMED CT codes that may be used in the treatment of cancer tumors. Codes from ICD-10-PCS and CPT are acceptable. CPT codes are not listed here due to intellectual property restrictions. ICD-10-PCS codes are not listed because of a limitation in the FHIR Implementation Guide publisher. For CPT and ICD-10-PCS, only codes representing surgical procedures should be used. 
 
 Conformance note: If an ICD-10-PCS code is used, and a semantically equivalent SNOMED CT code is available, the resulting FHIR Procedure instance will not be compliant with [US Core Profiles](http://hl7.org/fhir/us/core/index.html)."
+* ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
 * SCT#174337000    "Destruction of lesion of anus"
 * SCT#49264007    "Excision of lesion of anus"
 * SCT#119894003    "Anus excision"
@@ -286,6 +298,7 @@ Id: mcode-tumor-marker-test-vs
 Description:    "Codes representing tests for tumor markers. This value set of LOINC codes is not comprehensive and can be extended. LOINC codes are preferred. Other vocabularies can be used only if the test of interest is not covered by LOINC.
 
 FHIR implementation note: At the current time, profiles for the specific LOINC tests mentioned here do not exist."
+* ^copyright = "This material contains content from LOINC (http://loinc.org). LOINC is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc"
 * LNC#1695-6		"5-Hydroxyindoleacetate [Mass/time] in 24 hour Urine"
 * LNC#31203-3		"5-Hydroxyindoleacetate [Mass/volume] in 24 hour Urine"
 * LNC#1692-3		"5-Hydroxyindoleacetate [Mass/volume] in Cerebral spinal fluid"
@@ -404,6 +417,9 @@ FHIR implementation note: At the current time, profiles for the specific LOINC t
 * LNC#14130-9       "Estrogen receptor [Moles/mass] in Tissue"
 * LNC#85310-1       "Estrogen receptor fluorescence intensity [Type] in Breast cancer specimen by Immune stain"
 * LNC#10480-2       "Estrogen+Progesterone receptor Ag [Presence] in Tissue by Immune stain"
+* LNC#39004-7       "Epidermal growth factor receptor Ag [Presence] in Tissue"
+* LNC#32581-1	    "Epidermal growth factor receptor Ag [Presence] in Tissue by Immune stain"
+* LNC#42782-3	    "Epidermal growth factor receptor.phosphorylated Ag [Presence] in Tissue by Immune stain"
 * LNC#48676-1       "HER2 [Interpretation] in Tissue"
 * LNC#32996-1       "HER2 [Mass/volume] in Serum"
 * LNC#42914-2       "HER2 [Mass/volume] in Serum by Immunoassay"
@@ -490,6 +506,7 @@ Title: "Radiation Procedure Value Set"
 Description:    "Codes describing radiation therapy procedures. The value set includes a limited set of radiation modality codes from SNOMED CT, however, ICD-10-PCS code from Section D (Radiation Therapy) and appropriate CPT radiation procedure codes are also considered compliant. CPT codes are not explicitly included due to licensing restrictions. ICD-10-PCS codes are not included explicitly because they are not currently supported by the FHIR IG Publishing tool.
 
 Conformance note: If an ICD-10-PCS code is used, and a semantically equivalent SNOMED CT or CPT code is available, the resulting Procedure instance will not be compliant with [US Core Profiles](http://hl7.org/fhir/us/core/index.html)."
+* ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
 * SCT#448385000	"Megavoltage radiation therapy using photons (procedure)"
 * SCT#45643008	"Teleradiotherapy using electrons (procedure)"
 * SCT#10611004    "Teleradiotherapy protons (procedure)"
@@ -501,6 +518,7 @@ ValueSet:       RadiationTargetBodySiteVS
 Id: mcode-radiation-target-body-site-vs
 Title: "Radiation Target Body Site Value Set"
 Description:    "Codes for body sites that can be targets of radiation therapy. This list of sites is based on Commission on Cancer’s 'Standards for Oncology Registry Entry  - STORE 2018'. This value set contains SNOMED CT equivalent terms."
+* ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
 * SCT#81105003       "Cervical lymph node group (body structure)"
 * SCT#196374005       "Entire lymph node of thorax (body structure)"
 * SCT#81105003       "Cervical lymph node group (body structure)"
@@ -621,6 +639,7 @@ ValueSet: LateralityVS
 Id: mcode-laterality-vs
 Title: "Laterality Value Set"
 Description: "Body side of the body location, if needed to distinguish from a similar location on the other side of the body."
+* ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
 * SCT#51440002 "Right and left (qualifier value)"
 * SCT#399488007 "Midline (qualifier value)"
 * SCT#24028007 "Right (qualifier value)"
@@ -632,6 +651,7 @@ ValueSet:   TreatmentTerminationReasonVS
 Id: mcode-treatment-termination-reason-vs
 Title: "Treatment Termination Reason Value Set"
 Description:  "Values used to describe the reasons for stopping a treatment. Includes code for 'treatment completed' as well as codes for unplanned (early) stoppage. Applies to medications and other treatments that take place over a period of time, such as radiation treatments."
+* ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
 * SCT#182992009       "Treatment completed (situation)"  // could more generally be 397943006 "Planned (qualifier value)"
 * SCT#58848006        "Lack of drug action (finding)"  
 // MCODE-106 MK 10-2-2019  replaced SCT#435501000124106 "Medication not effective (finding)"
@@ -645,6 +665,7 @@ ValueSet:		TreatmentIntentVS
 Id: mcode-treatment-intent-vs
 Title: "Treatment Intent Value Set"
 Description:	"The purpose of a treatment. The value set includes 'curative' and 'palliative'. Curative is defined as any treatment meant to reduce or control a disease process, even if a 'cure' is not anticipated. Palliative includes treatments meant to reduce symptoms and side effects, such as antiemetics."
+* ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
 * SCT#373808002   "Curative - procedure intent"
 * SCT#363676003   "Palliative - procedure intent"
 
@@ -655,5 +676,188 @@ Description:		"Units of measure for length or distance on a human scale."
 * UCUM#mm				"Millimeter"
 * UCUM#cm				"Centimeter"
 * UCUM#m				"Meter"
-* UCUM#ft-us			"Foot"
-* UCUM#in-us			"Inch"
+* UCUM#[ft_i]			"Feet"
+* UCUM#[in_i]			"Inch"
+
+// MK 10-24-2020 -- Created this value set for CancerStageParent because the bundle discriminator could not distinguish an instance of CancerDiseaseStatus from CancerStageParent. By limiting the codes that are accepted by CancerStageParent, the profiles no longer overlap.
+ValueSet: LoincCancerStagingCodesVS
+Id: mcode-loinc-cancer-staging-codes-vs
+Title: "LOINC Cancer Staging Codes Value Set"
+Description: "Value set containing LOINC codes that describe cancer staging, clinical and pathological."
+* ^copyright = "This material contains content from LOINC (http://loinc.org). LOINC is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc"
+* LNC#21908-9 "Stage group.clinical Cancer"
+* LNC#21905-5 "Primary tumor.clinical [Class] Cancer"
+* LNC#21906-3 "Regional lymph nodes.clinical [Class] Cancer"
+* LNC#21907-1 "Distant metastases.clinical [Class] Cancer"
+* LNC#21902-2 "Stage group.pathology Cancer"
+* LNC#21899-0 "Primary tumor.pathology Cancer"
+* LNC#21900-6 "Regional lymph nodes.pathology [Class] Cancer"
+* LNC#21901-4 "Distant metastases.pathology [Class] Cancer"
+
+ValueSet: LoincPerformanceStatusCodesVS
+Id: mcode-loinc-performance-status-codes-vs
+Title: "LOINC Performance Status Codes Value Set"
+Description: "Value set containing LOINC codes that describe performance status."
+* ^copyright = "This material contains content from LOINC (http://loinc.org). LOINC is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc"
+* LNC#89247-1 "ECOG Performance Status score"
+* LNC#89243-0 "Karnofsky Performance Status score"
+
+ValueSet: CoreLaboratoryVS
+Id: mcode-core-laboratory-vs
+Title: "Core Laboratory Value Set"
+Description: "Value set containing the LOINC codes that describe the core CBC and CMP labs."
+* ^copyright = "This material contains content from LOINC (http://loinc.org). LOINC is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc"
+* include codes from valueset CBCVS 
+* include codes from valueset CMPVS
+
+
+ValueSet: CBCVS
+Id: mcode-cbc-vs
+Title: "Complete Blood Count Value Set"
+Description: "Value set containing the LOINC codes typical of a Complete Blood Count."
+* ^copyright = "This material contains content from LOINC (http://loinc.org). LOINC is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc"
+* LNC#20570-8 "Hematocrit [Volume Fraction] of Blood"  
+* LNC#26453-1 "Erythrocytes [#/volume] in Blood"
+* LNC#718-7  "Hemoglobin [Mass/volume] in Blood"
+* LNC#26515-7 "Platelets [#/volume] in Blood"
+* LNC#28539-5 "MCH [Entitic mass]"
+* LNC#28540-3 "MCHC [Mass/volume]"
+* LNC#28542-9 "Platelet mean volume [Entitic volume] in Blood"
+* LNC#30384-2 "Erythrocyte distribution width [Entitic volume]"
+* LNC#30385-9 "Erythrocyte distribution width [Ratio]"
+* LNC#30428-7 "MCV [Entitic volume]"
+* LNC#26464-8 "Leukocytes [#/volume] in Blood"
+* LNC#30180-4 "Basophils/100 leukocytes in Blood"
+* LNC#26444-0 "Basophils [#/volume] in Blood"
+* LNC#34911-8 "Immature basophils/100 leukocytes in Blood"
+* LNC#34910-0 "Immature basophils [#/volume] in Blood"
+* LNC#26446-5 "Blasts/100 leukocytes in Blood"
+* LNC#30376-8 "Blasts [#/volume] in Blood"
+* LNC#26450-7 "Eosinophils/100 leukocytes in Blood"
+* LNC#26449-9 "Eosinophils [#/volume] in Blood"
+* LNC#34913-4 "Immature eosinophils/100 leukocytes in Blood"
+* LNC#34912-6 "Immature eosinophils [#/volume] in Blood"
+* LNC#30395-8 "Granulocytes/100 leukocytes in Blood"
+* LNC#30394-1 "Granulocytes [#/volume] in Blood"
+* LNC#35058-7 "Hairy cells/100 leukocytes in Blood"
+* LNC#30397-4 "Hairy cells [#/volume] in Blood"
+* LNC#26463-0 "Large unstained cells/100 leukocytes in Blood"
+* LNC#26462-2 "Large unstained cells [#/volume] in Blood"
+* LNC#26471-3 "Leukocytes other/100 leukocytes in Blood"
+* LNC#30406-3 "Leukocytes other [#/volume] in Blood"
+* LNC#34922-5 "Lymphoblasts/100 leukocytes in Blood"
+* LNC#35050-4 "Lymphoblasts [#/volume] in Blood"
+* LNC#26478-8 "Lymphocytes/100 leukocytes in Blood"
+* LNC#26474-7 "Lymphocytes [#/volume] in Blood"
+* LNC#30413-9 "Abnormal lymphocytes/100 leukocytes in Blood"
+* LNC#30412-1 "Abnormal lymphocytes [#/volume] in Blood"
+* LNC#13046-8 "Variant lymphocytes/100 leukocytes in Blood"
+* LNC#26477-0 "Variant lymphocytes [#/volume] in Blood"
+* LNC#30420-4 "Large granular lymphocytes/100 leukocytes in Blood"
+* LNC#35082-7 "Large granular lymphocytes [#/volume] in Blood"
+* LNC#34921-7 "Lymphocytes Plasmacytoid/100 leukocytes in Blood"
+* LNC#35039-7 "Lymphocytes Plasmacytoid [#/volume] in Blood"
+* LNC#30423-8 "Lymphoma cells/100 leukocytes in Blood"
+* LNC#30422-0 "Lymphoma cells [#/volume] in Blood"
+* LNC#34915-9 "Malignant cells/100 leukocytes in Blood"
+* LNC#34914-2 "Malignant cells [#/volume] in Blood"
+* LNC#28541-1 "Metamyelocytes/100 leukocytes in Blood"
+* LNC#30433-7 "Metamyelocytes [#/volume] in Blood"
+* LNC#34923-3 "Monoblasts/100 leukocytes in Blood"
+* LNC#35029-8 "Monoblasts [#/volume] in Blood"
+* LNC#26485-3 "Monocytes/100 leukocytes in Blood"
+* LNC#26484-6 "Monocytes [#/volume] in Blood"
+* LNC#30441-0 "Monocytes Abnormal/100 leukocytes in Blood"
+* LNC#30440-2 "Monocytes Abnormal [#/volume] in Blood"
+* LNC#34925-8 "Immature monocytes/100 leukocytes in Blood"
+* LNC#34924-1 "Immature monocytes [#/volume] in Blood"
+* LNC#30445-1 "Myeloblasts/100 leukocytes in Blood"
+* LNC#30444-4 "Myeloblasts [#/volume] in Blood"
+* LNC#26498-6 "Myelocytes/100 leukocytes in Blood"
+* LNC#30446-9 "Myelocytes [#/volume] in Blood"
+* LNC#26511-6 "Neutrophils/100 leukocytes in Blood"
+* LNC#26499-4 "Neutrophils [#/volume] in Blood"
+* LNC#26508-2 "Band form neutrophils/100 leukocytes in Blood"
+* LNC#26507-4 "Band form neutrophils [#/volume] in Blood"
+* LNC#30450-1 "Neutrophils.hypersegmented/100 leukocytes in Blood"
+* LNC#30449-3 "Neutrophils.hypersegmented [#/volume] in Blood"
+* LNC#30451-9 "Segmented neutrophils [#/volume] in Blood"
+* LNC#26505-8 "Segmented neutrophils/100 leukocytes in Blood"
+* LNC#34917-5 "Plasma cell precursor/100 leukocytes in Blood"
+* LNC#34916-7 "Plasma cell precursor [#/volume] in Blood"
+* LNC#13047-6 "Plasma cells/100 leukocytes in Blood"
+* LNC#30458-4 "Plasma cells [#/volume] in Blood"
+* LNC#34999-3 "Polymorphonuclear cells/100 leukocytes in Blood"
+* LNC#35003-3 "Polymorphonuclear cells [#/volume] in Blood"
+* LNC#30465-9 "Prolymphocytes/100 leukocytes in Blood"
+* LNC#30464-2 "Prolymphocytes [#/volume] in Blood"
+* LNC#30466-7 "Promonocytes/100 leukocytes in Blood"
+* LNC#34926-6 "Promonocytes [#/volume] in Blood"
+* LNC#26524-9 "Promyelocytes/100 leukocytes in Blood"
+* LNC#26523-1 "Promyelocytes [#/volume] in Blood"
+* LNC#34919-1 "Sezary cells/100 leukocytes in Blood"
+* LNC#34918-3 "Sezary cells [#/volume] in Blood"
+* LNC#34992-8 "Smudge cells/100 leukocytes in Blood"
+* LNC#34993-6 "Smudge cells [#/volume] in Blood"
+* LNC#33255-1 "Cell Fractions/Differential [Interpretation] in Blood"
+
+
+ValueSet: CMPVS
+Id: mcode-cmp-vs
+Title: "Comprehensive Metabolic Panel Value Set"
+Description: "Value set containing the LOINC codes typical of a Comprehensive Metabolic Panel."
+* ^copyright = "This material contains content from LOINC (http://loinc.org). LOINC is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc"
+* LNC#2345-7 "Glucose [Mass/volume] in Serum or Plasma"
+* LNC#3094-0 "Urea nitrogen [Mass/volume] in Serum or Plasma"
+* LNC#2160-0 "Creatinine [Mass/volume] in Serum or Plasma"
+* LNC#3097-3 "Urea nitrogen/Creatinine [Mass Ratio] in Serum or Plasma"
+* LNC#33914-3 "Glomerular filtration rate/1.73 sq M.predicted [Volume Rate/Area] in Serum or Plasma by Creatinine-based formula (MDRD)"
+* LNC#50044-7 "Glomerular filtration rate/1.73 sq M.predicted among females [Volume Rate/Area] in Serum, Plasma or Blood by Creatinine-based formula (MDRD)"
+* LNC#48642-3 "Glomerular filtration rate/1.73 sq M.predicted among non-blacks [Volume Rate/Area] in Serum, Plasma or Blood by Creatinine-based formula (MDRD)"
+* LNC#48643-1 "Glomerular filtration rate/1.73 sq M.predicted among blacks [Volume Rate/Area] in Serum, Plasma or Blood by Creatinine-based formula (MDRD)"
+* LNC#17861-6 "Calcium [Mass/volume] in Serum or Plasma"
+* LNC#2885-2 "Protein [Mass/volume] in Serum or Plasma"
+* LNC#1751-7 "Albumin [Mass/volume] in Serum or Plasma"
+* LNC#10834-0 "Globulin [Mass/volume] in Serum by calculation"
+* LNC#1759-0 "Albumin/Globulin [Mass Ratio] in Serum or Plasma"
+* LNC#1975-2 "Bilirubin.total [Mass/volume] in Serum or Plasma"
+* LNC#6768-6 "Alkaline phosphatase [Enzymatic activity/volume] in Serum or Plasma"
+* LNC#1742-6 "Alanine aminotransferase [Enzymatic activity/volume] in Serum or Plasma"
+* LNC#1920-8 "Aspartate aminotransferase [Enzymatic activity/volume] in Serum or PlasmaActive"
+* LNC#2951-2 "Sodium [Moles/volume] in Serum or Plasma"
+* LNC#2823-3 "Potassium [Moles/volume] in Serum or Plasma"
+* LNC#2075-0 "Chloride [Moles/volume] in Serum or Plasma"
+* LNC#1963-8 "Bicarbonate [Moles/volume] in Serum or Plasma"
+* LNC#2028-9 "Carbon dioxide, total [Moles/volume] in Serum or Plasma"
+* LNC#33037-3 "Anion gap in Serum or Plasma"
+
+
+/* 
+* include codes from LNC
+* exclude codes from valueset TumorMarkerTestVS
+* exclude LNC#53041-0 "DNA region of interest panel"
+* exclude LNC#69548-6 "Genetic variant assessment"
+
+LP15101-6 "Hematocrit"
+LP14304-7  "Erythrocytes"
+LP17689-8   "Erythrocyte mean corpuscular hemoglobin"
+LP17695-5   "Erythrocyte mean corpuscular hemoglobin concentration"
+LP17698-9   Erythrocyte distribution width
+LP15191-7   Erythrocyte mean corpuscular volume
+LP14419-3   Leukocytes
+LP14328-6   Basophils
+LP31542-1   Basophils.immature
+LP15100-8   Blasts
+LP14539-8   Eosinophils
+LP31543-9   Eosinophils.immature
+LP18643-4   Granulocytes
+LP14038-1   Hairy cells
+LP19258-0   Large unstained cell
+LP17393-7   Leukocytes other
+LP14540-6   Lymphocytes
+LP19572-4   Lymphocytes.abnormal
+LP15072-9   Lymphocytes.variant
+LP15193-3   Lymphocytes.large granular
+LP29083-0   Lymphoma cells
+LP31549-6   Malignant cells
+*/

@@ -133,10 +133,10 @@ Specimen resources associated with an mCODE patient with a Specimen.code in the 
 * type 1..1 MS
 * type from GeneticSpecimenTypeVS
 * collection.bodySite.extension contains
-    Laterality named laterality 0..1
-* collection.bodySite.eextension[histologyMorphologyBehavior] ^short = "Laterality"
-* collection.bodySite.extension[laterality] ^definition = "Body side of the body location, if needed to distinguish from a similar location on the other side of the body."
-* collection.bodySite and collection.bodySite.extension[laterality] MS
+    LocationQualifier named locationQualifier 0..1
+* collection.bodySite.extension[locationQualifier] ^short = "LocationQualifier"
+* collection.bodySite.extension[locationQualifier] ^definition = "Body side of the body location, if needed to distinguish from a similar location on the other side of the body."
+* collection.bodySite and collection.bodySite.extension[locationQualifier] MS
 
 
 Profile:    CancerGenomicsReport

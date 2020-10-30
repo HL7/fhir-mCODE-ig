@@ -20,9 +20,9 @@ Description: "A code explaining an unplanned or premature termination of a plan 
 * value[x] only CodeableConcept
 * valueCodeableConcept from TreatmentTerminationReasonVS (required)
 
-Extension: Laterality
-Id:  mcode-laterality
-Title: "Laterality"
+Extension: LocationQualifier
+Id:  mcode-location-qualifier
+Title: "Location Qualifier"
 Description: "Body side of the body location, if needed to distinguish from a similar location on the other side of the body."
 * ^context[0].type = #element
 * ^context[0].expression = "Specimen.collection.bodySite"
@@ -33,7 +33,7 @@ Description: "Body side of the body location, if needed to distinguish from a si
 * ^context[3].type = #element
 * ^context[3].expression = "Observation.bodySite"
 * value[x] only CodeableConcept
-* valueCodeableConcept from LateralityVS (required)
+* valueCodeableConcept from LocationQualifierVS (required)
 /*
 Extension: AnatomicalOrientation
 Id:  mcode-anatomical-orientation
@@ -46,7 +46,7 @@ Extension: RelationToLandmark
 Id:  mcode-relation-to-landmark
 Title: "Relation to Landmark"
 Description: "The relationship between a landmark that helps determine a body location and the body location itself. The location relative to a landmark is specified by:
-* Specifying the location and type of landmark using a body site code and optional laterality/orientation,
+* Specifying the location and type of landmark using a body site code and optional locationQualifier/orientation,
 * Specifying the direction from the landmark to the body location, and
 * Specifying the distance from the landmark to the body location."
 * value[x] 0..0
@@ -66,13 +66,13 @@ Description: "The type of feature that constitutes the landmark, particularly if
 Extension: LandmarkLocation
 Id:  mcode-landmark-location
 Title: "Landmark Location"
-Description: "The body location of the landmark, specified by a location code and optional laterality and orientation."
+Description: "The body location of the landmark, specified by a location code and optional locationQualifier and orientation."
 // change from `code` to BodySiteCode and bind the code to a value set
 // Also change BodySiteCode from 0..1 to 1..1
 * value[x] 0..0
 * extension contains
     BodySiteCode 1..1 and
-    Laterality 0..1 // and
+    LocationQualifier 0..1 // and
 //    AnatomicalOrientation 0..*
 
 Extension: BodySiteCode

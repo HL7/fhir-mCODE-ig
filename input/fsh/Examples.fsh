@@ -9,7 +9,7 @@ Description: "mCODE Example for Primary Cancer Condition"
 * code = SCT#254637007 "Non-small cell lung cancer (disorder)"
 * extension[histologyMorphologyBehavior].valueCodeableConcept = SCT#35917007 "Adenocarcinoma"
 * bodySite = SCT#39607008 "Lung structure (body structure)"
-* bodySite.extension[laterality].valueCodeableConcept = SCT#7771000 "Left (qualifier value)"
+* bodySite.extension[locationQualifier].valueCodeableConcept = SCT#7771000 "Left (qualifier value)"
 * subject = Reference(mCODEPatientExample1)
 * onsetDateTime = "2019-04-01"
 * asserter = Reference(mCODEPractitionerExample1)

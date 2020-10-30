@@ -460,11 +460,13 @@ Description:    "The type of feature that constitutes the landmark, for example,
 * codes from system SCT where concept is-a #40388003 "Implant, device (physical object)"
 */
 
-ValueSet: LateralityVS
-Id: mcode-laterality-vs
-Title: "Laterality Value Set"
-Description: "Body side of the body location, if needed to distinguish from a similar location on the other side of the body."
+ValueSet: LocationQualifierVS
+Id: mcode-location-qualifier-vs
+Title: "Location Qualifier Value Set"
+Description: "Qualifier to refine the anatomical location. These include qualifiers for locationQualifier, relative location, directionality, number, and plane."
 * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
+// TO DO -- expand this set and make it intensional
+// Consider descendants of SCT#06233006 "Topographic Modifier (qualifer)" and SCT#2724244004 "Relative Sites (qualifier)""
 * SCT#51440002 "Right and left (qualifier value)"
 * SCT#399488007 "Midline (qualifier value)"
 * SCT#24028007 "Right (qualifier value)"

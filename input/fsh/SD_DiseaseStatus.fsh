@@ -18,6 +18,7 @@ Observation resources associated with an mCODE patient with Observation.code LOI
 * hasMember 0..0
 * component 0..0
 * subject 1..1
+* value[x] 1..1
 * code = LNC#88040-1 //"Response to cancer treatment"
 * subject only Reference(CancerPatient)
 * focus only Reference(PrimaryCancerCondition or SecondaryCancerCondition)

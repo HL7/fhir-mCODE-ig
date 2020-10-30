@@ -85,9 +85,10 @@
 <artifact id="StructureDefinition/mcode-karnofsky-performance-status" key="karnofsky-performance-status" name="Karnofsky Performance Status"/>
 <artifact id="ValueSet/mcode-loinc-cancer-staging-codes-vs" key="ValueSet-mcode-loinc-cancer-staging-codes-vs" name="LOINC Cancer Staging Codes Value Set"/>
 <artifact id="ValueSet/mcode-loinc-performance-status-codes-vs" key="ValueSet-mcode-loinc-performance-status-codes-vs" name="LOINC Performance Status Codes Value Set"/>
-<artifact id="StructureDefinition/mcode-laterality" key="StructureDefinition-mcode-laterality" name="Laterality"/>
 <artifact deprecated="true" id="Extension/mcode-laterality-extension" key="laterality-extension" name="Laterality Extension"/>
-<artifact id="ValueSet/mcode-laterality-vs" key="laterality-value-set" name="Laterality Value Set"/>
+<artifact deprecated="true" id="ValueSet/mcode-laterality-value-set" key="laterality-value-set" name="Laterality Value Set"/>
+<artifact id="StructureDefinition/mcode-location-qualifier" key="StructureDefinition-mcode-location-qualifier" name="Location Qualifier"/>
+<artifact id="ValueSet/mcode-location-qualifier-vs" key="ValueSet-mcode-location-qualifier-vs" name="Location Qualifier Value Set"/>
 <artifact deprecated="true" key="Observation" name="Observation"/>
 <artifact id="StructureDefinition/mcode-other-resources" key="StructureDefinition-mcode-other-resources" name="OtherResources"/>
 <artifact id="StructureDefinition/mcode-performance-status-parent" key="StructureDefinition-mcode-performance-status-parent" name="Performance Status Parent"/>

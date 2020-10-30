@@ -154,7 +154,7 @@ groups:
       - ValueSet/mcode-hgnc-vs
       - ValueSet/mcode-hgvs-vs
       - ValueSet/mcode-histology-morphology-behavior-vs
-      - ValueSet/mcode-laterality-vs
+      - ValueSet/mcode-location-qualifier-vs
       - ValueSet/mcode-loinc-cancer-staging-codes-vs
       - ValueSet/mcode-loinc-performance-status-codes-vs
       - ValueSet/mcode-present-absent-unknown

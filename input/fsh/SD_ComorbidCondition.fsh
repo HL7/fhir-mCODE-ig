@@ -14,18 +14,6 @@ Description: "General structure for capturing comorbid conditions with respect t
 * component.extension[conditionReference] ^short = "Comorbid Condition Reference"
 * component.extension[conditionReference] ^definition = "An extension for representing a reference to a condition resource corresponding to the named comorbid condition."
 
-Extension: ComorbidConditionCode
-Id: mcode-comorbid-condition-code
-Title:  "Comorbid Condition Code"
-Description: "An extension for representing the condition code corresponding to the named comorbid condition."
-* value[x] only CodeableConcept
-
-Extension: ComorbidConditionReference
-Id: mcode-comorbid-condition-reference
-Title:  "Comorbid Condition Reference"
-Description: "An extension for representing a reference to a condition resource corresponding to the named comorbid condition."
-* value[x] only Reference(Condition)
-
 Profile: CancerRelatedComorbidities
 Parent: ComorbiditiesParent
 Id: mcode-cancer-related-comorbidities
@@ -181,26 +169,3 @@ Description: "Comorbid conditions for a cancer condition, using Elixhauser comor
 * component[valvularDisease].extension[conditionCode].valueCodeableConcept from ElixhauserValvularDiseaseVS (extensible)
 * component[weightLoss].extension[conditionCode].valueCodeableConcept from ElixhauserWeightLossVS (extensible)
 
-
-/*   A previous modeling attempt I'm keeping around a while, just in case
-
-Extension: ComorbidConditionExtension
-Id: mcode-comorbid-condition-extension
-Title:  "Comorbid Condition Extension"
-Description: "An extension that captures the relationship between a primary disease and underlying (comorbid) conditions. A comorbidity refers to one or more diseases or conditions that occur along with another condition in the same person at the same time. Conditions considered comorbidities are often long-term or chronic conditions. Comorbidities are defined relative to an index disease and may be categorical, rather than described in full detail."
-* extension contains comorbidityCategory 1..1
-    * extension[comorbidityCategory] ^short = "Comorbidity category"
-    * extension[comorbidityCategory] ^description = "The type or general category of the reported comorbid condition(s), for example, diabetes, dementia, or prior myocardial infarction."
-    * extension[comorbidityCategory].value[x] only CodeableConcept
-    * extension[comorbidityCategory].valueCodeableConcept from ComorbidityCategoryVS (extensible) (extensible)
-* extension contains isPresent 1..1
-    * extension[isPresent] ^short = "Is present"
-    * extension[isPresent] ^description = "Whether the comorbidity in the specified category is present or absent."
-    * extension[isPresent].value[x] only CodeableConcept
-    * extension[isPresent] from PresentAbsentUnknownVS (extensible)
-* extension contains conditionReference 0..*
-    * extension[conditionReference] ^short = "Comorbid Condition"
-    * extension[comorbidConditionReference] ^description = "A reference to a Condition resource that is considered to be a comorbidity, consistent with the comorbidity category."
-    * extension[conditionReference].value[x] only valueReference
-    * extension[conditionCode].valueCodeableConcept only Reference(USCoreCondition)
-*/

@@ -25,12 +25,3 @@ Observation resources associated with an mCODE patient with Observation.code LOI
 * performer only Reference(USCorePractitioner)
 * value[x] only CodeableConcept
 * valueCodeableConcept from ConditionStatusTrendVS (required)
-
-Extension: EvidenceType
-Id: mcode-evidence-type
-Title: "Evidence Type"
-Description: "Categorization of the kind of evidence used as input to the clinical judgment. This corresponds to both the S and O in SOAP."
-* ^context[0].type = #element
-* ^context[0].expression = "Observation"
-* value[x] only CodeableConcept
-* valueCodeableConcept from CancerDiseaseStatusEvidenceTypeVS (required)

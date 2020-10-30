@@ -1,8 +1,14 @@
 ### Change Log / Release Notes
 
-#### mCODE 1.0 STU1
+#### mCODE Continuous Build (pre-mCODE STU2)
 
-The following are changes made to the [mCODE 0.9.1 September 2019 Ballot Release](http://hl7.org/fhir/us/mcode/2019Sep/).
+The following are changes to [mCODE 1.0.0 STU1 release](http://hl7.org/fhir/us/mcode) reflected in the [continuous build version](http://build.fhir.org/ig/HL7/fhir-mCODE-ig/branches/master/index.html). Many of these changes have been taken in response to comments from the HL7 community. Issue numbers refer to the [HL7 Jira](https://jira.hl7.org) (account registration required).
+
+* 
+
+#### mCODE 1.0.0 STU 1
+
+The following are changes made to the [mCODE 0.9.1 September 2019 Ballot Release](http://hl7.org/fhir/us/mcode/2019Sep/) that are in the  [mCODE 1.0.0 STU1 release](http://hl7.org/fhir/us/mcode).
 
 ##### Enhancements
 
@@ -24,7 +30,7 @@ The following are changes made to the [mCODE 0.9.1 September 2019 Ballot Release
 
 #### mCODE 0.9.1 September 2019 Ballot Release
 
-The following are changes relative to [mCODE 0.9.0](https://mcodeinitiative.github.io/index.html).
+The following are changes relative to [mCODE 0.9.0](https://mcodeinitiative.github.io/index.html) that appear in the [mCODE 0.9.1 September 2019 Ballot Release](http://hl7.org/fhir/us/mcode/2019Sep/)
 
 ##### Enhancements
 

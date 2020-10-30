@@ -58,6 +58,7 @@ groups:
       - StructureDefinition/mcode-cancer-related-comorbidities
       - StructureDefinition/mcode-ecog-performance-status
       - StructureDefinition/mcode-karnofsky-performance-status
+      - StructureDefinition/mcode-patient-bundle
 
   Disease:
     name: "Profiles: Disease Characterization"
@@ -103,12 +104,6 @@ groups:
     resources:
       - StructureDefinition/mcode-cancer-disease-status
 
-  mCODEBundle:
-    name: mCODE Patient Bundle
-    description: See [implementation details here](mcode-patient-bundle.html).
-    resources:
-      - StructureDefinition/mcode-patient-bundle
-      - Bundle/scenario1-mcode-patient-bundle
 
   Abstract:
     name: Abstract Profiles
@@ -256,6 +251,7 @@ groups:
     name: "Scenario 1: Breast Cancer Patient"
     description: A set of example resources based on [this persona](examples.html#scenario-1-breast-cancer-patient).
     resources:
+      - Bundle/scenario1-mcode-patient-bundle
       - Bundle/scenario1-other-resources
       - Condition/scenario1-mcode-comorbid-condition-depression
       - Condition/scenario1-mcode-comorbid-condition-hypertension

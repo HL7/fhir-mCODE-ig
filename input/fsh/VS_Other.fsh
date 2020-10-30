@@ -112,7 +112,7 @@ ValueSet: CancerRelatedSurgicalProcedureVS
 Id: mcode-cancer-related-surgical-procedure-vs
 Title: "Cancer-Related Surgical Procedure Value Set"
 Description: "Includes surgical procedure codes from SNOMED CT, ICD-10-PCS and CPT. The value set may be a superset of cancer surgery codes, but narrowing the set further risks eliminating potentially useful and relevant codes."
-* ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
+* ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement. Current Procedural Terminology (CPT) is copyright 2020 American Medical Association. All rights reserved"
 * include codes from system SCT where concept is-a #387713003 "Surgical procedure (procedure)"
 * include codes from system CPT
 * include codes from system ICD10PCS

@@ -119,6 +119,7 @@ Observation resources associated with an mCODE patient with an Observation.code 
 * effective[x] only dateTime or Period
 * performer only Reference(Practitioner)
 * value[x] only Quantity or Ratio or CodeableConcept
+* component 0..0 // needed to distinguish from cancerGeneticVariant and genomicRegionStudied in bundle MK 10/29/2020
 
 Profile:    GeneticSpecimen
 Parent:     Specimen

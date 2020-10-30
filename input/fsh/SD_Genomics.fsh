@@ -111,7 +111,7 @@ Conformance statement:
 
 Observation resources associated with an mCODE patient with an Observation.code in the value set TumorMarkerTestVS MUST conform to this profile. Beyond this requirement, a producer of resources SHOULD ensure that any resource instance associated with an mCODE patient that would reasonably be expected to conform to this profile SHOULD be published in this form, for example, when employing a code that extends the TumorMarkerTestVS value set. Any resource intended to conform to this profile SHOULD populate meta.profile accordingly."
 
-* status and code and subject and effective[x] and value[x] MS
+* status and code and subject and effective[x] and value[x] and focus MS
 * subject 1..1
 * code from TumorMarkerTestVS (extensible)
 * subject only Reference(CancerPatient)
@@ -119,6 +119,7 @@ Observation resources associated with an mCODE patient with an Observation.code 
 * effective[x] only dateTime or Period
 * performer only Reference(Practitioner)
 * value[x] only Quantity or Ratio or CodeableConcept
+* component 0..0 // needed to distinguish from cancerGeneticVariant and genomicRegionStudied in bundle MK 10/29/2020
 
 Profile:    GeneticSpecimen
 Parent:     Specimen
@@ -133,8 +134,10 @@ Specimen resources associated with an mCODE patient with a Specimen.code in the 
 * type 1..1 MS
 * type from GeneticSpecimenTypeVS
 * collection.bodySite.extension contains
-    Laterality named laterality 0..1
-* collection.bodySite and collection.bodySite.extension[laterality] MS
+    LocationQualifier named locationQualifier 0..1
+* collection.bodySite.extension[locationQualifier] ^short = "Location Qualifier"
+* collection.bodySite.extension[locationQualifier] ^definition = "Qualifier to refine the anatomical location. These include qualifiers for laterality, relative location, directionality, number, and plane."
+* collection.bodySite and collection.bodySite.extension[locationQualifier] MS
 
 
 Profile:    CancerGenomicsReport
@@ -201,7 +204,6 @@ Observation resources associated with an mCODE patient with DiagnoticReport.code
 * component[GeneMutations].value[x] only CodeableConcept
 * component[GeneMutations].valueCodeableConcept 1..1
 * component[GeneMutations].valueCodeableConcept from HGVSVS (required)
-// MK 1/23/2020 should this be http://www.genenames.org/geneId (extensible)?
 
 * component[GeneStudied] ^short = "Gene studied [ID]"
 * component[GeneStudied] ^definition = "The ID for the gene studied"

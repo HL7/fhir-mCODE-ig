@@ -28,11 +28,11 @@ The following elements are labelled MustSupport, indicating that an mCODE Data S
 * [`GenomicRegionStudied`]
 * Performance status ([`ECOGPerformanceStatus`] and [`KarnofskyPerformanceStatus`])
 * [`SecondaryCancerCondition`]
-* Stage ([`TNMClinicalStageGroup`], [`TNMClinicalPrimaryTumorCategory`], [`TNMClinicalRegionalNodesCategory`], [`TNMClincalDistantMetastasesCategory`], [`TNMPathologicalStageGroup`], [`TNMPathologicalPrimaryTumorCategory`], [`TNMPathologicalRegionalNodesCategory`], [`TNMPathologicalDistantMetastasesCategory`])
+* Stage ([`TNMClinicalStageGroup`], [`TNMClinicalPrimaryTumorCategory`], [`TNMClinicalRegionalNodesCategory`], [`TNMClinicalDistantMetastasesCategory`], [`TNMPathologicalStageGroup`], [`TNMPathologicalPrimaryTumorCategory`], [`TNMPathologicalRegionalNodesCategory`], [`TNMPathologicalDistantMetastasesCategory`])
 * **TODO: TumorSize support**
 * **TODO: Comorbidity support**
 * [`TumorMarker`]
-* Vital Signs, including blood pressure, body height, and body weight. Observations conform to the FHIR vital sign profiles, incorporated by reference into US Core. See [Implementation > Vital Sign Profiles](implementation.html#VitalSigns) for details.
+* Vital Signs, including blood pressure, body height, and body weight. Observations conform to the FHIR vital sign profiles, incorporated by reference into US Core. See [Implementation > Vital Sign Profiles](implementation.html#vital-sign-profiles) for details.
 * Laboratory Results: Observations included in Complete Blood Count (CBC) and Comprehensive Metabolic Panel (CMP). Individual results must conform to the [US Core Laboratory Result Profile](http://hl7.org/fhir/us/core/StructureDefinition-us-core-observation-lab.html). See [Implementation > Laboratory Profiles](implementation.html#laboratory-profiles) for a list of LOINC codes to be included.
 
 Note that these elements have a minimum [cardinality](https://www.hl7.org/fhir/conformance-rules.html#cardinality) of `0` **only** to allow them to be unreported if the Sender does not have the necessary data to generate a resource for a particular patient.

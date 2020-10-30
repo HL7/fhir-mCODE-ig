@@ -9,7 +9,7 @@ Description: "mCODE Example for Primary Cancer Condition"
 * code = SCT#254637007 "Non-small cell lung cancer (disorder)"
 * extension[histologyMorphologyBehavior].valueCodeableConcept = SCT#35917007 "Adenocarcinoma"
 * bodySite = SCT#39607008 "Lung structure (body structure)"
-* bodySite.extension[laterality].valueCodeableConcept = SCT#7771000 "Left (qualifier value)"
+* bodySite.extension[locationQualifier].valueCodeableConcept = SCT#7771000 "Left (qualifier value)"
 * subject = Reference(mCODEPatientExample1)
 * onsetDateTime = "2019-04-01"
 * asserter = Reference(mCODEPractitionerExample1)
@@ -357,8 +357,8 @@ Description: "mCODE Example for CancerRelatedMedicationRequest"
 * extension[treatmentIntent].valueCodeableConcept = SCT#373808002 "Curative - procedure intent"
 * dosageInstruction.text = "250mg orally once daily with or without food"
 * dosageInstruction.route = SCT#26643006 "Oral use"
-* dosageInstruction.doseAndRate.doseQuantity.value = 250.0
 * dosageInstruction.doseAndRate.doseQuantity = UCUM#mg "mg"
+* dosageInstruction.doseAndRate.doseQuantity.value = 250.0
 * dosageInstruction.timing.event = "2019-04-01"
 * dosageInstruction.timing.repeat.frequency = 1  // frequency, period and periodUnit to reflect "once per day"
 * dosageInstruction.timing.repeat.period = 1
@@ -382,8 +382,8 @@ Description: "mCODE Example for CancerRelatedMedicationRequest - Chemo Infusion"
 * extension[treatmentIntent].valueCodeableConcept = SCT#373808002 "Curative - procedure intent"
 * dosageInstruction.text = "calculate absolute dose on day of administration."
 * dosageInstruction.route = SCT#47625008 "Intravenous use"
-* dosageInstruction.doseAndRate.doseQuantity.value = 75
 * dosageInstruction.doseAndRate.doseQuantity = UCUM#mg/m2 "mg/m2"
+* dosageInstruction.doseAndRate.doseQuantity.value = 75
 * dosageInstruction.timing.event = "2019-06-15"
 * dosageInstruction.timing.repeat.count = 1  // frequency is one-time on day 1 of first cycle so there should be no repeat."
 * note.text = "Day 1 of NSCLC regimen: Cisplatin 75 mg/m2 day 1; docetaxel 75 mg/m2 day 1 every 21 days for 4 cycles."

@@ -471,6 +471,7 @@ Description: "Value set containing LOINC codes that describe performance status.
 * LNC#89247-1 "ECOG Performance Status score"
 * LNC#89243-0 "Karnofsky Performance Status score"
 
+// MK 10-30-2020: The sole reason for the CoreLaboratoryVS (and CBC and CMP value sets) is because, without it, the Patient Bundle disciminator won't work. The CBC and CMP together limit the LONIC codes a resource can be identified with the laboratory slice of the bundle. The category doesn't help because other slices also have #laboratory as their Observation.category.
 ValueSet: CoreLaboratoryVS
 Id: mcode-core-laboratory-vs
 Title: "Core Laboratory Value Set"
@@ -478,7 +479,6 @@ Description: "Value set containing the LOINC codes that describe the core CBC an
 * ^copyright = "This material contains content from LOINC (http://loinc.org). LOINC is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc"
 * include codes from valueset CBCVS 
 * include codes from valueset CMPVS
-
 
 ValueSet: CBCVS
 Id: mcode-cbc-vs

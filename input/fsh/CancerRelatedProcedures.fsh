@@ -14,8 +14,8 @@ Description: "Abstract parent class for cancer procedure profiles."
 * performer.actor only Reference(Practitioner or PractitionerRole or Organization)
 * bodySite.extension contains
     LocationQualifier named locationQualifier 0..1
-* bodySite.extension[locationQualifier] ^short = "LocationQualifier"
-* bodySite.extension[locationQualifier] ^definition = "Body side of the body location, if needed to distinguish from a similar location on the other side of the body."
+* bodySite.extension[locationQualifier] ^short = "Location Qualifier"
+* bodySite.extension[locationQualifier] ^definition = "Qualifier to refine the anatomical location. These include qualifiers for laterality, relative location, directionality, number, and plane."
 * reasonCode and reasonReference and extension[treatmentIntent] and bodySite and bodySite.extension[locationQualifier] MS
 * extension[treatmentIntent] ^short = "Treatment Intent"
 * extension[treatmentIntent] ^definition = "The purpose of a treatment."

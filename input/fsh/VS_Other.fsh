@@ -463,7 +463,7 @@ Description:    "The type of feature that constitutes the landmark, for example,
 ValueSet: LocationQualifierVS
 Id: mcode-location-qualifier-vs
 Title: "Location Qualifier Value Set"
-Description: "Qualifier to refine the anatomical location. These include qualifiers for locationQualifier, relative location, directionality, number, and plane."
+Description: "Qualifiers to refine the anatomical location. These include qualifiers for laterality, relative location, directionality, number, and plane."
 * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
 // TO DO -- expand this set and make it intensional
 // Consider descendants of SCT#06233006 "Topographic Modifier (qualifer)" and SCT#2724244004 "Relative Sites (qualifier)""

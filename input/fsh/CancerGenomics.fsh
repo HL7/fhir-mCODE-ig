@@ -134,8 +134,8 @@ Specimen resources associated with an mCODE patient with a Specimen.code in the 
 * type from GeneticSpecimenTypeVS
 * collection.bodySite.extension contains
     LocationQualifier named locationQualifier 0..1
-* collection.bodySite.extension[locationQualifier] ^short = "LocationQualifier"
-* collection.bodySite.extension[locationQualifier] ^definition = "Body side of the body location, if needed to distinguish from a similar location on the other side of the body."
+* collection.bodySite.extension[locationQualifier] ^short = "Location Qualifier"
+* collection.bodySite.extension[locationQualifier] ^definition = "Qualifier to refine the anatomical location. These include qualifiers for laterality, relative location, directionality, number, and plane."
 * collection.bodySite and collection.bodySite.extension[locationQualifier] MS
 
 

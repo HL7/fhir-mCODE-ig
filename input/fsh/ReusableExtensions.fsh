@@ -23,7 +23,7 @@ Description: "A code explaining an unplanned or premature termination of a plan 
 Extension: LocationQualifier
 Id:  mcode-location-qualifier
 Title: "Location Qualifier"
-Description: "Body side of the body location, if needed to distinguish from a similar location on the other side of the body."
+Description: "Qualifier to refine the anatomical location. These include qualifiers for laterality, relative location, directionality, number, and plane."
 * ^context[0].type = #element
 * ^context[0].expression = "Specimen.collection.bodySite"
 * ^context[1].type = #element

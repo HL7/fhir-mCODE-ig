@@ -65,7 +65,6 @@ groups:
     resources:
       - StructureDefinition/mcode-primary-cancer-condition
       - StructureDefinition/mcode-secondary-cancer-condition
-      - StructureDefinition/mcode-histology-morphology-behavior
       - StructureDefinition/mcode-tnm-clinical-stage-group
       - StructureDefinition/mcode-tnm-clinical-primary-tumor-category
       - StructureDefinition/mcode-tnm-clinical-regional-nodes-category
@@ -119,7 +118,10 @@ groups:
       - StructureDefinition/mcode-cancer-related-procedure-parent
       - StructureDefinition/mcode-cancer-stage-parent
       - StructureDefinition/mcode-comorbidities-parent
+      - StructureDefinition/mcode-core-laboratory
+      - StructureDefinition/mcode-other-resources
       - StructureDefinition/mcode-performance-status-parent
+
 
   # Extensions
   Extensions:
@@ -129,6 +131,7 @@ groups:
       - StructureDefinition/mcode-comorbid-condition-code
       - StructureDefinition/mcode-comorbid-condition-reference
       - StructureDefinition/mcode-evidence-type
+      - StructureDefinition/mcode-histology-morphology-behavior
       - StructureDefinition/mcode-location-qualifier
       - StructureDefinition/mcode-related-primary-cancer-condition
       - StructureDefinition/mcode-termination-reason

@@ -1,11 +1,11 @@
-#### mCODE Roles
+### mCODE Roles
 
 Two roles are defined:
 
 * **mCODE Data Sender** - a participant in exchange of mCODE data who provides mCODE data in response to a data query or autonomously pushes mCODE data to an mCODE receiver. The data sender does not have to be the originator of the data it possesses.
 * **mCODE Data Receiver** - a participant in exchange of mCODE data who accepts mCODE data from an mCODE Data Sender.
 
-US Core defines two actors, US Core Requestor and US Core Responder, which are highly suggestive of a "pull" architecture. In mCODE, we use the terms sender and receiver, which are more neutral with respect to push and pull. However, for all practical purposes, there is an equivalence between US Core Requestor and mCODE Data Receiver, and similarly between US Core Responder and mCODE Data Sender.
+US Core defines two actors, US Core Requestor and US Core Responder, which are highly suggestive of a "pull" architecture. In mCODE, we use the terms Sender and Receiver, which are more neutral with respect to push and pull. However, for all practical purposes, there is an equivalence between US Core Requestor and mCODE Data Receiver, and similarly between US Core Responder and mCODE Data Sender.
 
 ### Capability Statements
 
@@ -17,6 +17,7 @@ Each mCODE participant SHALL support the following profiles, which are core to r
 
 * [CancerPatient](StructureDefinition-mcode-cancer-patient.html)
 * [PrimaryCancerCondition](StructureDefinition-mcode-primary-cancer-condition.html)
+* [MCODEPatientBundle](StructureDefinition-mcode-patient-bundle.html)
 
 Additionally, each mCODE participant SHOULD support all profiles defined in mCODE unless the participant does not anticipate supplying or consuming a certain type of data, usually by virtue of playing a limited or specialized role in clinical or information workflows. For example, a Genomics Laboratory may support GenomicsReport, but not vital signs or staging.
 
@@ -33,43 +34,90 @@ Additional [conformance requirements from US Core](http://hl7.org/fhir/us/core/c
 
 #### Supported Operations
 
-##### mCODE Data Sender
+mCODE participants MUST support either push OR pull operations. They MAY support both. They MUST publish a FHIR CapabilityStatement indicating which operations they support.
 
-1. **List mCODE Patients** (defined below). mCODE Data Senders SHALL implement AT LEAST ONE of the following operations UNLESS they are a specialty system that does not implement `CancerPatient` due to unavailable data as described above.
+##### Pull Model
 
-  a. For participants where ALL patients with confirmed cancer diagnoses are covered by mCODE:
+**mCODE Data Senders** implementing Pull support SHALL support the following operations:
 
-      GET [base]/Condition?code:in=http://hl7.org/fhir/us/mcode/ValueSet/mcode-primary-or-uncertain-behavior-cancer-disorder-vs
+1. **List mCODE Patients**. mCODE Data Senders implementing the Pull Model SHALL implement AT LEAST ONE of the following operations UNLESS they are a specialty system that does not implement `CancerPatient` due to unavailable data as described above.
 
-    Given the results of this query, `Patient` resources can be retrieved by iterating through the returned Conditions client-side and retrieving Patients from the standard `GET [base]/Patient/:id` endpoint.
+    1. Identify Patient resources conforming to [CancerPatient](StructureDefinition-mcode-cancer-patient.html) via the `meta.profile` element. This is the preferred option, and the only option for systems implementing mCODE for a subset of cancer patients (see below).
 
-    Additionally, participants MAY support `_include` to get the relevant `Patient` resources in a single request:
+        Systems implementing this option MUST respond to the following request with Patient resources for all mCODE Patients:
 
-        GET [base]/Condition?code:in=http://hl7.org/fhir/us/mcode/ValueSet/mcode-primary-or-uncertain-behavior-cancer-disorder-vs&_include=Observation:patient
+            GET [base]/Patient?_profile=http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-patient
 
-    Additionally, participants MAY support reverse chaining to get _only_ the `Patient` resources in a single request:
+    1. Identify Patient resources conforming to [CancerPatient](StructureDefinition-mcode-cancer-patient.html) via identifying associated Conditions with a code in the [Primary or Uncertain Behavior Cancer Disorder Value Set](ValueSet-mcode-primary-or-uncertain-behavior-cancer-disorder-vs.html).
 
-        # TODO not sure if this is actually possible -- remove if it's not.
+        Systems implementing this option MUST respond to the following request with Condition resources that have a code in this value set:
 
-        GET [base]/Patient?_has:Observation:patient:code:in=http://hl7.org/fhir/us/mcode/ValueSet/mcode-primary-or-uncertain-behavior-cancer-disorder-vs&_include=Observation:patient
+            GET [base]/Condition?code:in=http://hl7.org/fhir/us/mcode/ValueSet/mcode-primary-or-uncertain-behavior-cancer-disorder-vs
 
-  b. For participants identifying mCODE patients with `meta.profile`:
+        Given the results of this query, `Patient` resources can be retrieved by iterating through the returned Conditions client-side and retrieving Patients from the standard `GET [base]/Patient/:id` endpoint.
 
-      GET [base]/Patient?_profile=http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-patient
+        Additionally, participants MAY support `_include` to get the relevant `Patient` resources in a single request:
 
-2. **Retrieve mCODE Patient Bundle**. mCODE Data Senders SHALL implement the following operation that retrieves an mCODE Patient Bundle (defined below) for a given Patient ID.
+            GET [base]/Condition?code:in=http://hl7.org/fhir/us/mcode/ValueSet/mcode-primary-or-uncertain-behavior-cancer-disorder-vs&_include=Observation:patient
 
-    GET [base]/TBD
+        Additionally, participants MAY support reverse chaining to get _only_ the `Patient` resources in a single request:
 
-#### mCODE Data Receiver
+            GET [base]/Patient?_has:Observation:patient:code:in=http://hl7.org/fhir/us/mcode/ValueSet/mcode-primary-or-uncertain-behavior-cancer-disorder-vs&_include=Observation:patient
 
-1. **Receive mCODE Patient Bundle**. mCODE Data Receivers SHALL implement the following operation to receive, process, and store data for an mCODE Patient sent as an mCODE Patient Bundle (defined below).
 
-    PUT [base]/TBD
+    The following swimlane diagram depicts the options described above:
 
-2. **Receive mCODE Patient Resources**. mCODE Data Receivers SHALL receive and store individual `Patient` and `Condition` resources conforming to `CancerPatient` and `PrimaryCancerCondition`, respectively, using the standard `POST` and `GET` endpoints.
+    <!-- If the image below is not wrapped in a div tag, the publisher tries to wrap text around the image, which is not desired. -->
+    <div style="text-align: center;"><img src="mcode-patients-pull.svg" alt="UML swimlane diagram showing mCODE Patients operations in the pull model"></div>
 
-Additionally, mCODE Data Receivers SHOULD receive and store individual resources conforming to all mCODE profiles UNLESS the profiles are unsupported as described above under "Supported Profiles".
+2. **Retrieve mCODE Patient Bundle**. mCODE Data Senders SHALL implement the [this operation](OperationDefinition-mcode-get-patient-bundle.html), which retrieves an mCODE Patient Bundle (defined below) for a given Patient ID.
+
+        GET [base]/$mcode-patient-bundle/[id]
+
+    This endpoint SHALL support `start` and `end` parameters [as described here](mcode-patient-bundle.html#specifying-a-time-range).
+
+    The following swimlane diagram depicts the operation described above:
+
+    <!-- If the image below is not wrapped in a div tag, the publisher tries to wrap text around the image, which is not desired. -->
+    <div style="text-align: center;"><img src="mcode-patient-bundle-pull.svg" alt="UML swimlane diagram showing mCODE Patient Bundle operations in the pull model"></div>
+
+**mCODE Data Receivers** implementing Pull support SHALL be able to initiate ALL the requests described above. Additionally, they SHALL be able to read and process ALL individual resources returned by the operations above that conform to mCODE profiles identified as supported by their CapabilityStatements.
+
+##### Push Model
+
+mCODE Data Receivers implementing Push support SHALL support the following operations:
+
+1. **Receive mCODE Patients** (defined below). mCODE Data Receivers implementing the Push Model SHALL accept and process a Patient resource sent in the body of a request made to the following endpoint:
+
+        POST [base]/Patient
+
+    Receivers SHALL allow Patient resources to be updated via the following endpoint:
+
+        PUT [base]/Patient/[id]
+
+    Receivers MAY allow Senders to specify an `id` for a new record using ["Update as Create"](https://www.hl7.org/fhir/http.html#upsert).
+
+   The following swimlane diagram depicts the operation described above:
+
+    <!-- If the image below is not wrapped in a div tag, the publisher tries to wrap text around the image, which is not desired. -->
+    <div style="text-align: center;"><img src="mcode-patients-push.svg" alt="UML swimlane diagram showing mCODE Patients operations in the push model"></div>
+
+    **TODO: Do we want to support a bulk data mechanism to send _all_ mCODE Patients in a single request?**
+
+2. **Receive mCODE Patient Bundle**.  mCODE Data Receivers implementing the Push Model SHALL accept and process an mCODE Patient Bundle sent in the body of a request made to the following endpoint.
+
+        POST [base]/$mcode-patient-bundle
+
+    Receivers SHALL be able to read and process ALL individual resources contained within an mCODE Patient Bundle that conform to mCODE profiles identified as supported by their CapabilityStatements.
+
+    Receivers SHALL allow these resources to be updated via an mCODE Patient Bundle sent to the following endpoint, where `[id]` is the same as the `id` element in the contained CancerPatient-conforming resource:
+
+        PUT [base]/$mcode-patient-bundle/[id]
+
+    <!-- If the image below is not wrapped in a div tag, the publisher tries to wrap text around the image, which is not desired. -->
+    <div style="text-align: center;"><img src="mcode-patient-bundle-push.svg" alt="UML swimlane diagram showing mCODE Patient Bundle operations in the push model"></div>
+
+**mCODE Data Senders** implementing Push support SHALL be able to initiate all the requests described above.
 
 ### mCODE Patients
 
@@ -80,6 +128,8 @@ Due to technical, organizational, or legal reasons, mCODE Data Senders MAY exclu
 ### mCODE Patient Bundle
 
 An [mCODE Patient Bundle](StructureDefinition-mcode-patient-bundle-definitions.html) is the complete set of data for a particular patient corresponding to the set of supported profiles of an mCODE Data Sender. An mCODE Data Sender MUST be capable of producing a valid mCODE bundle for all of its mCODE patients (as [defined above](#mcode-patients)).
+
+mCODE Patient Bundles SHALL be identified by an `id` value that matches the `id` in the contained CancerPatient-conforming resource.
 
 ### mCODE Profiles
 

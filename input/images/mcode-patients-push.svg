@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="170px" preserveAspectRatio="none" style="width:500px;height:170px;" version="1.1" viewBox="0 0 500 170" width="500px" zoomAndPan="magnify"><defs><filter height="300%" id="f1mffa2qkpcl54" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><text fill="#000000" font-family="Arial" font-size="18" lengthAdjust="spacingAndGlyphs" textLength="242" x="126.5" y="28.8838">mCODE Patients: Push Model</text><line style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 5.0,5.0;" x1="200" x2="200" y1="74.7969" y2="163.6431"/><line style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 5.0,5.0;" x1="408" x2="408" y1="74.7969" y2="163.6431"/><rect fill="#FEFECE" filter="url(#f1mffa2qkpcl54)" height="30.0986" style="stroke: #A80036; stroke-width: 1.5;" width="150" x="123" y="39.6982"/><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="136" x="130" y="59.8301">mCODE Data Sender</text><rect fill="#FEFECE" filter="url(#f1mffa2qkpcl54)" height="30.0986" style="stroke: #A80036; stroke-width: 1.5;" width="160" x="326" y="39.6982"/><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="146" x="333" y="59.8301">mCODE Data Receiver</text><polygon fill="#A80036" points="396,129.3528,406,133.3528,396,137.3528,400,133.3528" style="stroke: #A80036; stroke-width: 1.0;"/><line style="stroke: #A80036; stroke-width: 1.0;" x1="200" x2="402" y1="133.3528" y2="133.3528"/><text fill="#000000" font-family="monospace" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="152" x="207" y="113.1541">POST [base]/Patient</text><text fill="#000000" font-family="Arial" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="11" x="363" y="113.4651">or</text><text fill="#000000" font-family="monospace" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="184" x="207" y="128.2869">PUT [base]/Patient/[id]</text><path d="M5,89.7969 L5,143.7969 L191,143.7969 L191,99.7969 L181,89.7969 L5,89.7969 " fill="#FBFB77" filter="url(#f1mffa2qkpcl54)" style="stroke: #A80036; stroke-width: 1.0;"/><path d="M181,89.7969 L181,99.7969 L191,99.7969 L181,89.7969 " fill="#FBFB77" style="stroke: #A80036; stroke-width: 1.0;"/><text fill="#000000" font-family="Arial" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="133" x="11" y="106.9907">Request body contains</text><text fill="#000000" font-family="Arial" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="106" x="11" y="121.9395">a Patient resource</text><text fill="#000000" font-family="Arial" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="165" x="11" y="136.8882">conforming to CancerPatient</text><!--MD5=[fdb9f042c7208a2e3ed98825fa3a3244]
+@startuml
+skinparam defaultFontName Arial
+
+title mCODE Patients: Push Model
+hide footbox
+participant "mCODE Data Sender" as Sender
+participant "mCODE Data Receiver" as Receiver
+
+"Sender" -> "Receiver" : ""POST [base]/Patient"" or\n""PUT [base]/Patient/[id]""
+
+note left
+Request body contains
+a Patient resource
+conforming to CancerPatient
+end note
+
+@enduml
+
+PlantUML version 1.2020.19(Mon Oct 12 11:10:01 EDT 2020)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg>

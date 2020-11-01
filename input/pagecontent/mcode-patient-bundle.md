@@ -47,11 +47,11 @@ mCODE does not exclude other elements in the mCODE Bundle. Senders MAY include t
 * `Observation` resources that related to the patient or cancer diagnosis. For example, an `Observation` conforming to [`USCoreSmokingStatusProfile`] to indicate smoking status or an [an `Observation` indicating negative margins] on an excised tumor could be included.
 * `MedicationRequest` resources that do not conform to `CancerRelatedMedicationRequest`. Concomitant medications may be relevant in the cancer-treatment context. A data receiver cannot assume the medications included in the bundle represent the complete list of active medications available from the data sender.
 
-## Specifying a time range
+## Specifying a date range
 
 By default, this Bundle includes ALL required and Must Support resources described above irrespective of time. For some types of resources, such as vital signs, this may include a very large number of resources.
 
-To avoid this, callers may specify the `date` parameter when requesting a patient's Bundle via the Sender's FHIR API. This operates according to the [FHIR search specification for the `date` parameter](http://hl7.org/fhir/R4/search.html#date): for example, `date=ge2020-01-01&date=le2020-09-01` could be used to request resources within the provided date range.
+To avoid this, callers may specify `start` and `end` parameters when requesting a patient's Bundle via the Sender's FHIR API. This operates the same way as these parameters do [for `Patient/$everything`](https://www.hl7.org/fhir/operation-patient-everything.html): for example, `start=2020-01-01&end=2020-09-01` could be used to request resources during the provided date range (inclusive).
 
 If the `date` parameter is provided, the following resources SHALL be filtered accordingly:
 

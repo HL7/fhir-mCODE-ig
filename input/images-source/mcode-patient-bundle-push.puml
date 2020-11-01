@@ -1,0 +1,15 @@
+@startuml
+skinparam defaultFontName Arial
+
+title mCODE Patient Bundle: Push Model
+hide footbox
+participant "mCODE Data Sender" as Sender
+participant "mCODE Data Receiver" as Receiver
+
+"Sender" -> "Receiver" : ""POST [base]/$mcode-patient-bundle"" or\n""PUT [base]/$mcode-patient-bundle/[id]""
+note left
+Request body contains
+an mCODE Patient Bundle
+end note
+
+@enduml

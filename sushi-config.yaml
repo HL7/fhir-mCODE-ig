@@ -49,34 +49,23 @@ menu:
   History: http://hl7.org/fhir/us/mcode/history.html
 groups:
 
-  mCODEBundle:
-    name: mCODE Patient Bundle
-    description: See [implementation details here](mcode-patient-bundle.html).
-    resources:
-      - StructureDefinition/mcode-patient-bundle
-      - Bundle/scenario1-mcode-patient-bundle
-
   # Profiles
   Patient:
     name: "Profiles: Patient"
     description: Profiles in the [mCODE **Patient** Group](index.html#Patient).
     resources:
       - StructureDefinition/mcode-cancer-patient
-      - StructureDefinition/mcode-comorbidities-parent
       - StructureDefinition/mcode-cancer-related-comorbidities
-      - StructureDefinition/mcode-performance-status-parent
       - StructureDefinition/mcode-ecog-performance-status
       - StructureDefinition/mcode-karnofsky-performance-status
+      - StructureDefinition/mcode-patient-bundle
 
   Disease:
     name: "Profiles: Disease Characterization"
     description: Profiles in the [mCODE **Disease Characterization** Group](index.html#Disease).
     resources:
-      - StructureDefinition/mcode-cancer-condition-parent
       - StructureDefinition/mcode-primary-cancer-condition
       - StructureDefinition/mcode-secondary-cancer-condition
-      - StructureDefinition/mcode-histology-morphology-behavior
-      - StructureDefinition/mcode-cancer-stage-parent
       - StructureDefinition/mcode-tnm-clinical-stage-group
       - StructureDefinition/mcode-tnm-clinical-primary-tumor-category
       - StructureDefinition/mcode-tnm-clinical-regional-nodes-category
@@ -96,7 +85,7 @@ groups:
     name: "Profiles: Treatments"
     description: Profiles in the [mCODE **Treatments** Group](index.html#Treatment).
     resources:
-      - StructureDefinition/mcode-cancer-related-procedure-parent
+      - StructureDefinition/mcode-cancer-related-medication-request
       - StructureDefinition/mcode-cancer-related-radiation-procedure
       - StructureDefinition/mcode-cancer-related-surgical-procedure
 
@@ -116,6 +105,18 @@ groups:
       - StructureDefinition/mcode-cancer-disease-status
 
 
+  Abstract:
+    name: Abstract Profiles
+    description: These are profiles on resources or data types that describe patterns used by other profiles, but cannot be instantiated directly. I.e. instances can conform to profiles based on these abstract profiles, but do not declare conformance to the abstract profiles themselves.
+    resources:
+      - StructureDefinition/mcode-cancer-condition-parent
+      - StructureDefinition/mcode-cancer-related-procedure-parent
+      - StructureDefinition/mcode-cancer-stage-parent
+      - StructureDefinition/mcode-comorbidities-parent
+      - StructureDefinition/mcode-core-laboratory
+      - StructureDefinition/mcode-other-resources
+      - StructureDefinition/mcode-performance-status-parent
+
 
   # Extensions
   Extensions:
@@ -125,7 +126,8 @@ groups:
       - StructureDefinition/mcode-comorbid-condition-code
       - StructureDefinition/mcode-comorbid-condition-reference
       - StructureDefinition/mcode-evidence-type
-      - StructureDefinition/mcode-laterality
+      - StructureDefinition/mcode-histology-morphology-behavior
+      - StructureDefinition/mcode-location-qualifier
       - StructureDefinition/mcode-related-primary-cancer-condition
       - StructureDefinition/mcode-termination-reason
       - StructureDefinition/mcode-treatment-intent
@@ -140,13 +142,17 @@ groups:
       - ValueSet/mcode-cancer-disorder-vs
       - ValueSet/mcode-cancer-related-surgical-procedure-vs
       - ValueSet/mcode-cancer-staging-system-vs
+      - ValueSet/mcode-cbc-vs
       - ValueSet/mcode-clinvar-vs
+      - ValueSet/mcode-cmp-vs
       - ValueSet/mcode-condition-status-trend-vs
+      - ValueSet/mcode-core-laboratory-vs
+      - ValueSet/mcode-dna-change-type-vs
       - ValueSet/mcode-genetic-specimen-type-vs
       - ValueSet/mcode-hgnc-vs
       - ValueSet/mcode-hgvs-vs
       - ValueSet/mcode-histology-morphology-behavior-vs
-      - ValueSet/mcode-laterality-vs
+      - ValueSet/mcode-location-qualifier-vs
       - ValueSet/mcode-loinc-cancer-staging-codes-vs
       - ValueSet/mcode-loinc-performance-status-codes-vs
       - ValueSet/mcode-present-absent-unknown
@@ -206,7 +212,6 @@ groups:
     resources:
       - CodeSystem/mcode-elixhauser-category
 
-
   # Examples
   GenericExamples:
     name: "Examples: Generic"
@@ -216,6 +221,8 @@ groups:
       - Condition/mCODEPrimaryCancerConditionExample1
       - Condition/mCODESecondaryCancerConditionExample1
       - DiagnosticReport/mCODECancerGenomicsReportExample1
+      - MedicationRequest/mCODECancerRelatedMedicationRequestExample1
+      - MedicationRequest/mCODECancerRelatedMedicationRequestExample2
       - Observation/mCODECancerDiseaseStatusExample1
       - Observation/mCODECancerGeneticVariantExample1
       - Observation/mCODECancerGeneticVariantExample2
@@ -244,6 +251,8 @@ groups:
     name: "Scenario 1: Breast Cancer Patient"
     description: A set of example resources based on [this persona](examples.html#scenario-1-breast-cancer-patient).
     resources:
+      - Bundle/scenario1-mcode-patient-bundle
+      - Bundle/scenario1-other-resources
       - Condition/scenario1-mcode-comorbid-condition-depression
       - Condition/scenario1-mcode-comorbid-condition-hypertension
       - Condition/scenario1-mcode-primary-cancer-condition
@@ -257,6 +266,7 @@ groups:
       - MedicationRequest/scenario1-mcode-cancer-related-medication-chemo-cyclophosphamide
       - MedicationRequest/scenario1-mcode-cancer-related-medication-chemo-doxorubicin
       - MedicationRequest/scenario1-mcode-cancer-related-medication-chemo-paclitaxel
+      - Observation/scenario1-body-weight
       - Observation/scenario1-mcode-cancer-disease-status
       - Observation/scenario1-mcode-cancer-genetic-variant
       - Observation/scenario1-mcode-cancer-related-comorbidities
@@ -270,6 +280,7 @@ groups:
       - Observation/scenario1-mcode-tumor-marker-her2
       - Observation/scenario1-mcode-tumor-marker-oncotype-dx
       - Observation/scenario1-mcode-tumor-marker-pr
+      - Observation/scenario1-neutrophils
       - Observation/scenario1-observation-smoking-history
       - Observation/scenario1-observation-tumor-dcis
       - Observation/scenario1-observation-tumor-invasion-negative
@@ -288,8 +299,6 @@ groups:
       - Specimen/scenario1-mcode-genetic-specimen
       - Specimen/scenario1-specimen-tumor
 
-
-
   # Experimental
   ExperimentalResourcesTumorSize:
     name: Experimental Resources - Tumor Size
@@ -301,10 +310,4 @@ groups:
       - Observation/example1-mcode-tumor-size
       - BodyStructure/example1-mcode-tumor
 
-  ExperimentalResourcesMedication:
-    name: Experimental Resources - Medication-related
-    description: These resources related to medications are considered [experimental](experimental.html).
-    resources:
-      - StructureDefinition/mcode-cancer-related-medication-request
-      - MedicationRequest/mCODECancerRelatedMedicationRequestExample1
-      - MedicationRequest/mCODECancerRelatedMedicationRequestExample2
+

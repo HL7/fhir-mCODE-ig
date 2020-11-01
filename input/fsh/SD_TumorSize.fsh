@@ -18,8 +18,8 @@ Description:  "Records the dimensions of a tumor"
 
 // LOINC code indicatign this is a tumor size
 * code = LNC#21889-1 //"Size Tumor"
-* code MS
 
+* code and component and specimen and focus MS
 // Store tumor size in component with 3 valueCodableConcepts for each tumor dimension
 * component ^slicing.discriminator.type = #pattern
 * component ^slicing.discriminator.path = "code"
@@ -30,7 +30,7 @@ Description:  "Records the dimensions of a tumor"
     tumorLongestDimension 1..1 MS and
     tumorDimension2 0..1 and
     tumorDimension3 0..1
-
+    
 * component[tumorLongestDimension] ^short = "Longest tumor dimension (cm or mm)"
 * component[tumorLongestDimension] ^definition = "The longest tumor dimension in cm or mm."
 * component[tumorLongestDimension].code = LNC#33728-7 // "Size.maximum dimension in Tumor"

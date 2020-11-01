@@ -4,7 +4,7 @@ Parent: Observation
 Title: "Cancer Stage Parent"
 Description:  "Abstract parent class for members of cancer staging panels. Cancer panel members must include a timing element and staging system, and focus on a cancer disorder. Specific realizations will have value sets specific to certain staging systems."
 * ^abstract = true
-* status and code and subject and effective[x] and valueCodeableConcept and method MS
+* status and code and subject and effective[x] and valueCodeableConcept and method and focus MS
 * code from LoincCancerStagingCodesVS (required)
 * value[x] only CodeableConcept
 * valueCodeableConcept ^comment = ""    // suppress QA error on #notes link

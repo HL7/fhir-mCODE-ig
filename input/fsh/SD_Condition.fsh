@@ -5,18 +5,17 @@ Parent:  USCoreCondition
 Id: mcode-cancer-condition-parent
 Title: "Cancer Condition Parent"
 Description:  "Abstract parent class for describing a primary or secondary metastatic neoplastic diseases, or individual tumors."
-/* Issues relative to mCODE 0.9.x -- Fixed
-1) asserter should include PractitionerRole
-2) recorder should include PractitionerRole
-3) Laterality should be 0..1, not 0..*
-*/
 * ^abstract = true
 * extension contains
     AssertedDate named assertedDate 0..1 and
     HistologyMorphologyBehavior named histologyMorphologyBehavior 0..1
 * bodySite.extension contains
-    Laterality named laterality 0..1
-* extension[assertedDate] and extension[histologyMorphologyBehavior] and bodySite and bodySite.extension[laterality] MS
+    LocationQualifier named locationQualifier 0..1
+* extension[assertedDate] and extension[histologyMorphologyBehavior] and bodySite and bodySite.extension[locationQualifier] MS
+* extension[histologyMorphologyBehavior] ^short = "Histology Morphology Behavior"
+* extension[histologyMorphologyBehavior] ^definition = "An extension describing the morphologic and behavioral characteristics of the cancer."
+* extension[locationQualifier] ^short = "Location Qualifier"
+* bodySite.extension[locationQualifier] ^definition = "Qualifier to refine the anatomical location. These include qualifiers for laterality, relative location, directionality, number, and plane."
 // proposing to take out the non-US Core category and allow clinicians to choose
 //* category = SCT#64572001 //"Disease"
 * bodySite from CancerBodyLocationVS (extensible)
@@ -54,19 +53,3 @@ Condition resources associated with an mCODE patient with a Condition.code in th
 * extension contains RelatedPrimaryCancerCondition named relatedPrimaryCancerCondition 0..1 MS
 * code from SecondaryCancerDisorderVS
 * stage 0..0
-
-Extension: HistologyMorphologyBehavior
-Id: mcode-histology-morphology-behavior
-Title: "Histology-Morphology-Behavior"
-Description: "An extension describing the morphologic and behavioral characteristics of the cancer."
-* ^context[0].type = #element
-* ^context[0].expression = "Condition"
-* value[x] from HistologyMorphologyBehaviorVS (extensible)
-
-Extension: RelatedPrimaryCancerCondition
-Id: mcode-related-primary-cancer-condition
-Title: "Related Primary Cancer Condition"
-Description: "A reference to the primary cancer condition that provides context for this resource."
-* ^context[0].type = #element
-* ^context[0].expression = "Condition"
-* value[x] only Reference(PrimaryCancerCondition)

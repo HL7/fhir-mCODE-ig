@@ -1,3 +1,6 @@
+// This file is a work in progress - do not review yet
+
+/*
 Instance: GetPatientBundleOperation
 InstanceOf: OperationDefinition
 Description: "Gets an [mCODE Patient Bundle](StructureDefinition-mcode-patient-bundle.html) for a specific patient."
@@ -70,3 +73,5 @@ Usage: #definition
 * parameter[0].max = "1"
 * parameter[0].documentation = "A Bundle conforming to [`MCODEPatientBundle`](StructureDefinition-mcode-patient-bundle.html)."
 * parameter[0].type = #Bundle
+
+*/

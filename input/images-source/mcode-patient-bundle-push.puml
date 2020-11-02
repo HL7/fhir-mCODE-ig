@@ -6,7 +6,7 @@ hide footbox
 participant "mCODE Data Sender" as Sender
 participant "mCODE Data Receiver" as Receiver
 
-"Sender" -> "Receiver" : ""POST [base]/$mcode-patient-bundle"" or\n""PUT [base]/$mcode-patient-bundle/[id]""
+"Sender" -> "Receiver" : ""POST [base]/Bundle"" or\n""PUT [base]/Bundle/[id]""
 note left
 Request body contains
 an mCODE Patient Bundle

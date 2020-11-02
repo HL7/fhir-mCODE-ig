@@ -131,6 +131,7 @@
 <artifact deprecated="true" key="ValueSet" name="ValueSet"/>
 <artifact id="BodyStructure/example1-mcode-tumor" key="BodyStructure-example1-mcode-tumor" name="example1-mcode-tumor"/>
 <artifact id="Observation/example1-mcode-tumor-size" key="Observation-example1-mcode-tumor-size" name="example1-mcode-tumor-size"/>
+<artifact id="StructureDefinition/MCodeCapabilityStatement" key="StructureDefinition-MCodeCapabilityStatement" name="mCODE Capability Statement"/>
 <artifact id="StructureDefinition/mcode-patient-bundle" key="StructureDefinition-mcode-patient-bundle" name="mCODE Patient Bundle"/>
 <artifact deprecated="true" id="Example/mcode-cancer-disease-status-example-01" key="mcode-cancer-disease-status-example-01" name="mCODECancerDiseaseStatusExample01"/>
 <artifact id="Observation/mCODECancerDiseaseStatusExample1" key="Observation-mCODECancerDiseaseStatusExample1" name="mCODECancerDiseaseStatusExample1"/>
@@ -189,6 +190,8 @@
 <artifact id="Observation/mCODETNMPathologicalStageGroupExample1" key="Observation-mCODETNMPathologicalStageGroupExample1" name="mCODETNMPathologicalStageGroupExample1"/>
 <artifact deprecated="true" id="Example/mcode-tumor-marker-example-01" key="mcode-tumor-marker-example-01" name="mCODETumorMarkerExample01"/>
 <artifact id="Observation/mCODETumorMarkerExample1" key="Observation-mCODETumorMarkerExample1" name="mCODETumorMarkerExample1"/>
+<artifact id="CapabilityStatement/mcode-receiver-push" key="CapabilityStatement-mcode-receiver-push" name="mcode-receiver-push"/>
+<artifact id="CapabilityStatement/mcode-sender-push" key="CapabilityStatement-mcode-sender-push" name="mcode-sender-push"/>
 <artifact id="Observation/scenario1-body-weight" key="Observation-scenario1-body-weight" name="scenario1-body-weight"/>
 <artifact id="DiagnosticReport/scenario1-diagnosticreport-pathology" key="DiagnosticReport-scenario1-diagnosticreport-pathology" name="scenario1-diagnosticreport-pathology"/>
 <artifact id="FamilyMemberHistory/scenario1-family-member-history-aunt" key="FamilyMemberHistory-scenario1-family-member-history-aunt" name="scenario1-family-member-history-aunt"/>

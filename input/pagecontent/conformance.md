@@ -106,13 +106,13 @@ mCODE Data Receivers implementing Push support SHALL support the following opera
 
 2. **Receive mCODE Patient Bundle**.  mCODE Data Receivers implementing the Push Model SHALL accept and process an mCODE Patient Bundle sent in the body of a request made to the following endpoint.
 
-        POST [base]/$mcode-patient-bundle
+        POST [base]/Bundle
 
-    Receivers SHALL be able to read and process ALL individual resources contained within an mCODE Patient Bundle that conform to mCODE profiles identified as supported by their CapabilityStatements.
+    Receivers SHALL be able to read and process ALL individual resources contained within an mCODE Patient Bundle that conform to mCODE profiles identified as supported by their CapabilityStatements. The `id` for the Bundle resource should match the `id` of the contained CancerPatient-conforming resource. In other words, there should be a 1:1 relationship between an mCODE Patient Bundle and a CancerPatient-conforming Patient resource.
 
     Receivers SHALL allow these resources to be updated via an mCODE Patient Bundle sent to the following endpoint, where `[id]` is the same as the `id` element in the contained CancerPatient-conforming resource:
 
-        PUT [base]/$mcode-patient-bundle/[id]
+        PUT [base]/Bundle/[id]
 
     <!-- If the image below is not wrapped in a div tag, the publisher tries to wrap text around the image, which is not desired. -->
     <div style="text-align: center;"><img src="mcode-patient-bundle-push.svg" alt="UML swimlane diagram showing mCODE Patient Bundle operations in the push model"></div>

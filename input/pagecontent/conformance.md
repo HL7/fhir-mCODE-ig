@@ -58,11 +58,11 @@ mCODE participants MUST support either push OR pull operations. They MAY support
 
         Additionally, participants MAY support `_include` to get the relevant `Patient` resources in a single request:
 
-            GET [base]/Condition?code:in=http://hl7.org/fhir/us/mcode/ValueSet/mcode-primary-or-uncertain-behavior-cancer-disorder-vs&_include=Observation:patient
+            GET [base]/Condition?code:in=http://hl7.org/fhir/us/mcode/ValueSet/mcode-primary-or-uncertain-behavior-cancer-disorder-vs&_include=Condition:subject
 
         Additionally, participants MAY support reverse chaining to get _only_ the `Patient` resources in a single request:
 
-            GET [base]/Patient?_has:Observation:patient:code:in=http://hl7.org/fhir/us/mcode/ValueSet/mcode-primary-or-uncertain-behavior-cancer-disorder-vs&_include=Observation:patient
+            GET [base]/Patient?_has:Condition:subject:code:in=http://hl7.org/fhir/us/mcode/ValueSet/mcode-primary-or-uncertain-behavior-cancer-disorder-vs
 
 
     The following swimlane diagram depicts the options described above:

@@ -55,8 +55,9 @@ mCODE participants MUST support either push OR pull operations. They MAY support
 
         1. Systems implementing this option SHALL respond to the following request with a Bundle of Patient resources for all mCODE Patients, UNLESS [reverse chaining](https://www.hl7.org/fhir/search.html#has) is not at all supported on the system:
 
-                # Return Bundle of  Patient resources that are referenced in the subset of Condition resources with a `code` in the Primary or Uncertain Behavior Cancer Disorder Value Set
                 GET [base]/Patient?_has:Condition:subject:code:in=http://hl7.org/fhir/us/mcode/ValueSet/mcode-primary-or-uncertain-behavior-cancer-disorder-vs
+
+                # Return Bundle of Patient resources that are referenced in the subset of Condition resources with a `code` in the Primary or Uncertain Behavior Cancer Disorder Value Set
 
             <!-- If the image below is not wrapped in a div tag, the publisher tries to wrap text around the image, which is not desired. -->
             <div style="text-align: center;"><img src="mcode-patients-pull-2_1.svg" alt="UML swimlane diagram showing mCODE Patients operations in the pull model: Option 2.1, fallback."></div>

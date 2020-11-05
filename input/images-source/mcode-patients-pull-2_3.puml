@@ -1,0 +1,23 @@
+@startuml
+skinparam defaultFontName Arial
+
+title mCODE Patients: Pull Model - Implementation Option 2.3 (Fallback)
+hide footbox
+participant "mCODE Data Sender" as Sender
+participant "mCODE Data Receiver" as Receiver
+
+group Get Conditions, then Patients
+    "Receiver" -> "Sender" : ""GET [base]/Condition?code:in=...""
+    "Sender" --> "Receiver" : HTTP response containing Bundle of relevant Conditions
+    ...
+    note over Receiver
+    Receiver extracts unique
+    patient IDs from Conditions to
+    generate a second request:
+    end note
+    "Receiver" -> "Sender" : ""GET [base]/Patient?_id=id_1,id_2,...,id_n""
+    "Sender" --> "Receiver" : HTTP response containing Bundle of Patients
+end
+
+
+@enduml

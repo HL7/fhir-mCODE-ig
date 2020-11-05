@@ -42,44 +42,51 @@ mCODE participants MUST support either push OR pull operations. They MAY support
 
 1. **List mCODE Patients**. mCODE Data Senders implementing the Pull Model SHALL implement AT LEAST ONE of the following operations UNLESS they are a specialty system that does not implement `CancerPatient` due to unavailable data as described above.
 
-    1. Identify Patient resources conforming to [CancerPatient](StructureDefinition-mcode-cancer-patient.html) via the `meta.profile` element. This is the preferred option, and the only option for systems implementing mCODE for a subset of cancer patients (see below).
+    1. **Preferred:** Identify Patient resources conforming to [CancerPatient](StructureDefinition-mcode-cancer-patient.html) via the `meta.profile` element. This is the only option for systems implementing mCODE for a subset of cancer patients (see below).
 
-        Systems implementing this option MUST respond to the following request with Patient resources for all mCODE Patients:
+        Systems implementing this option SHALL respond to the following request with a Bundle of Patient resources for all mCODE Patients:
 
             GET [base]/Patient?_profile=http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-patient
 
-    1. Identify Patient resources conforming to [CancerPatient](StructureDefinition-mcode-cancer-patient.html) via identifying associated Conditions with a code in the [Primary or Uncertain Behavior Cancer Disorder Value Set](ValueSet-mcode-primary-or-uncertain-behavior-cancer-disorder-vs.html).
+        <!-- If the image below is not wrapped in a div tag, the publisher tries to wrap text around the image, which is not desired. -->
+        <div style="text-align: center;"><img src="mcode-patients-pull-1.svg" alt="UML swimlane diagram showing mCODE Patients operations in the pull model: Option 1, preferred."></div>
 
-        Systems implementing this option MUST respond to the following request with Condition resources that have a code in this value set:
+    1. **Fallback:** Identify Patient resources conforming to [CancerPatient](StructureDefinition-mcode-cancer-patient.html) by finding associated Conditions with codes in the [Primary or Uncertain Behavior Cancer Disorder Value Set].
 
-            GET [base]/Condition?code:in=http://hl7.org/fhir/us/mcode/ValueSet/mcode-primary-or-uncertain-behavior-cancer-disorder-vs
+        1. Systems implementing this option SHALL respond to the following request with a Bundle of Patient resources for all mCODE Patients, UNLESS [reverse chaining](https://www.hl7.org/fhir/search.html#has) is not at all supported on the system:
 
-        Given the results of this query, `Patient` resources can be retrieved by iterating through the returned Conditions client-side and retrieving Patients from the standard `GET [base]/Patient/:id` endpoint.
+                # Return Bundle of  Patient resources that are referenced in the subset of Condition resources with a `code` in the Primary or Uncertain Behavior Cancer Disorder Value Set
+                GET [base]/Patient?_has:Condition:subject:code:in=http://hl7.org/fhir/us/mcode/ValueSet/mcode-primary-or-uncertain-behavior-cancer-disorder-vs
 
-        Additionally, participants MAY support `_include` to get the relevant `Patient` resources in a single request:
+            <!-- If the image below is not wrapped in a div tag, the publisher tries to wrap text around the image, which is not desired. -->
+            <div style="text-align: center;"><img src="mcode-patients-pull-2_1.svg" alt="UML swimlane diagram showing mCODE Patients operations in the pull model: Option 2.1, fallback."></div>
 
-            GET [base]/Condition?code:in=http://hl7.org/fhir/us/mcode/ValueSet/mcode-primary-or-uncertain-behavior-cancer-disorder-vs&_include=Condition:subject
+            If the system does not support reverse chaining, the system SHALL support one of the following fallbacks (ordered from most to least preferred).
 
-        Additionally, participants MAY support reverse chaining to get _only_ the `Patient` resources in a single request:
+        1. Use [`_include`](https://www.hl7.org/fhir/search.html#revinclude) to get a Bundle of the relevant `Patient` resources along with the subset of Condition resources with a `code` in [Primary or Uncertain Behavior Cancer Disorder Value Set](ValueSet-mcode-primary-or-uncertain-behavior-cancer-disorder-vs.html) in a single request:
 
-            GET [base]/Patient?_has:Condition:subject:code:in=http://hl7.org/fhir/us/mcode/ValueSet/mcode-primary-or-uncertain-behavior-cancer-disorder-vs
+                GET [base]/Condition?code:in=http://hl7.org/fhir/us/mcode/ValueSet/mcode-primary-or-uncertain-behavior-cancer-disorder-vs&_include=Condition:subject
 
+            <!-- If the image below is not wrapped in a div tag, the publisher tries to wrap text around the image, which is not desired. -->
+            <div style="text-align: center;"><img src="mcode-patients-pull-2_2.svg" alt="UML swimlane diagram showing mCODE Patients operations in the pull model: Option 2.2, fallback."></div>
 
-    The following swimlane diagram depicts the options described above:
+        1. Return a Bundle with the subset of Condition resources with a `code` in [Primary or Uncertain Behavior Cancer Disorder Value Set](ValueSet-mcode-primary-or-uncertain-behavior-cancer-disorder-vs.html) in a single request, AND allow the Requestor to retrieve a Bundle of the Patient resources referenced in the first response using [composite search parameters](https://www.hl7.org/fhir/search.html#combining):
 
-    <!-- If the image below is not wrapped in a div tag, the publisher tries to wrap text around the image, which is not desired. -->
-    <div style="text-align: center;"><img src="mcode-patients-pull.svg" alt="UML swimlane diagram showing mCODE Patients operations in the pull model"></div>
+                GET [base]/Condition?code:in=http://hl7.org/fhir/us/mcode/ValueSet/mcode-primary-or-uncertain-behavior-cancer-disorder-vs
+
+                GET [base]/Patient?_id=some_patient_id_1,some_patient_id_2,...,some_patient_id_n
+
+            <!-- If the image below is not wrapped in a div tag, the publisher tries to wrap text around the image, which is not desired. -->
+            <div style="text-align: center;"><img src="mcode-patients-pull-2_3.svg" alt="UML swimlane diagram showing mCODE Patients operations in the pull model: Option 2.3, fallback."></div>
 
 2. **Retrieve mCODE Patient Bundle**. mCODE Data Senders SHALL implement the [this operation](OperationDefinition-mcode-get-patient-bundle.html), which retrieves an mCODE Patient Bundle (defined below) for a given Patient ID.
 
         GET [base]/$mcode-patient-bundle/[id]
 
-    This endpoint SHALL support `start` and `end` parameters [as described here](mcode-patient-bundle.html#specifying-a-time-range).
-
-    The following swimlane diagram depicts the operation described above:
+    This endpoint SHALL support `start` and `end` parameters which operate the same as in the [`Patient/$everything` operation](https://www.hl7.org/fhir/operation-patient-everything.html).
 
     <!-- If the image below is not wrapped in a div tag, the publisher tries to wrap text around the image, which is not desired. -->
-    <div style="text-align: center;"><img src="mcode-patient-bundle-pull.svg" alt="UML swimlane diagram showing mCODE Patient Bundle operations in the pull model"></div>
+    <div style="text-align: center;"><img src="mcode-patient-bundle-pull.svg" alt="UML swimlane diagram showing mCODE Patient Bundle operations in the push model"></div>
 
 **mCODE Data Receivers** implementing Pull support SHALL be able to initiate ALL the requests described above. Additionally, they SHALL be able to read and process ALL individual resources returned by the operations above that conform to mCODE profiles identified as supported by their CapabilityStatements.
 
@@ -97,12 +104,10 @@ mCODE Data Receivers implementing Push support SHALL support the following opera
 
     Receivers MAY allow Senders to specify an `id` for a new record using ["Update as Create"](https://www.hl7.org/fhir/http.html#upsert).
 
-   The following swimlane diagram depicts the operation described above:
+    The following swimlane diagram depicts the operation described above:
 
     <!-- If the image below is not wrapped in a div tag, the publisher tries to wrap text around the image, which is not desired. -->
     <div style="text-align: center;"><img src="mcode-patients-push.svg" alt="UML swimlane diagram showing mCODE Patients operations in the push model"></div>
-
-    **TODO: Do we want to support a bulk data mechanism to send _all_ mCODE Patients in a single request?**
 
 2. **Receive mCODE Patient Bundle**.  mCODE Data Receivers implementing the Push Model SHALL accept and process an mCODE Patient Bundle sent in the body of a request made to the following endpoint.
 
@@ -171,3 +176,5 @@ An mCODE data element is required if any of the following criteria are met:
 In other words, a data element may be 1..1, but if it is contained by an optional element, then it is not required unless its containing element is actually present in a given instance of the profile.
 
 mCODE's rules regarding required data elements are the same as <a href="http://hl7.org/fhir/us/core/general-guidance.html#missing-data">US Core's rules</a>. To paraphrase, a Data Sender must provide each required element or an explicit data absent reason for each missing data item, and cannot substitute a nonsense or filler value just to satisfy the data requirement.
+
+[Primary or Uncertain Behavior Cancer Disorder Value Set]: ValueSet-mcode-primary-or-uncertain-behavior-cancer-disorder-vs.html

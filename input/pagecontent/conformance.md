@@ -42,7 +42,7 @@ mCODE participants MUST support either push OR pull operations. They MAY support
 
 1. **List mCODE Patients**. mCODE Data Senders implementing the Pull Model SHALL implement AT LEAST ONE of the following operations UNLESS they are a specialty system that does not implement `CancerPatient` due to unavailable data as described above.
 
-    1. **Preferred:** Identify Patient resources conforming to [CancerPatient](StructureDefinition-mcode-cancer-patient.html) via the `meta.profile` element. This is the only option for systems implementing mCODE for a subset of cancer patients (see below).
+    1. **Preferred:** Identify Patient resources conforming to [CancerPatient](StructureDefinition-mcode-cancer-patient.html) via the `meta.profile` element. This is the only option for systems implementing mCODE for a subset of cancer patients (see below), and the preferred option for all mCODE Data Senders.
 
         Systems implementing this option SHALL respond to the following request with a Bundle of Patient resources for all mCODE Patients:
 
@@ -51,9 +51,9 @@ mCODE participants MUST support either push OR pull operations. They MAY support
         <!-- If the image below is not wrapped in a div tag, the publisher tries to wrap text around the image, which is not desired. -->
         <div style="text-align: center;"><img src="mcode-patients-pull-1.svg" alt="UML swimlane diagram showing mCODE Patients operations in the pull model: Option 1, preferred."></div>
 
-    1. **Fallback:** Identify Patient resources conforming to [CancerPatient](StructureDefinition-mcode-cancer-patient.html) by finding associated Conditions with codes in the [Primary or Uncertain Behavior Cancer Disorder Value Set].
+    1. **Fallback:** One of the fallback options below SHALL be supported if both of the following conditions are met: (1) the preferred option described above cannot be used because `meta.profile` and the [`_profile` search parameter](https://www.hl7.org/fhir/search.html#all) are entirely unsupported on the system; AND (2) ALL Patient resources referenced by Conditions with codes in the [Primary or Uncertain Behavior Cancer Disorder Value Set] conform to [CancerPatient](StructureDefinition-mcode-cancer-patient.html). The fallback options are listed in order from most to least preferable.
 
-        1. Systems implementing this option SHALL respond to the following request with a Bundle of Patient resources for all mCODE Patients, UNLESS [reverse chaining](https://www.hl7.org/fhir/search.html#has) is not at all supported on the system:
+        1. Systems implementing this option SHALL respond to the following request with a Bundle of Patient resources for all mCODE Patients, UNLESS [reverse chaining](https://www.hl7.org/fhir/search.html#has) is entirely unsupported on the system:
 
                 GET [base]/Patient?_has:Condition:subject:code:in=http://hl7.org/fhir/us/mcode/ValueSet/mcode-primary-or-uncertain-behavior-cancer-disorder-vs
 
@@ -62,16 +62,14 @@ mCODE participants MUST support either push OR pull operations. They MAY support
             <!-- If the image below is not wrapped in a div tag, the publisher tries to wrap text around the image, which is not desired. -->
             <div style="text-align: center;"><img src="mcode-patients-pull-2_1.svg" alt="UML swimlane diagram showing mCODE Patients operations in the pull model: Option 2.1, fallback."></div>
 
-            If the system does not support reverse chaining, the system SHALL support one of the following fallbacks (ordered from most to least preferred).
-
-        1. Use [`_include`](https://www.hl7.org/fhir/search.html#revinclude) to get a Bundle of the relevant `Patient` resources along with the subset of Condition resources with a `code` in [Primary or Uncertain Behavior Cancer Disorder Value Set](ValueSet-mcode-primary-or-uncertain-behavior-cancer-disorder-vs.html) in a single request:
+        1. Use [`_include`](https://www.hl7.org/fhir/search.html#revinclude) to get a Bundle of the relevant `Patient` resources along with the subset of Condition resources with a `code` in [Primary or Uncertain Behavior Cancer Disorder Value Set] in a single request, unless `_include` is entirely unsupported on the system:
 
                 GET [base]/Condition?code:in=http://hl7.org/fhir/us/mcode/ValueSet/mcode-primary-or-uncertain-behavior-cancer-disorder-vs&_include=Condition:subject
 
             <!-- If the image below is not wrapped in a div tag, the publisher tries to wrap text around the image, which is not desired. -->
             <div style="text-align: center;"><img src="mcode-patients-pull-2_2.svg" alt="UML swimlane diagram showing mCODE Patients operations in the pull model: Option 2.2, fallback."></div>
 
-        1. Return a Bundle with the subset of Condition resources with a `code` in [Primary or Uncertain Behavior Cancer Disorder Value Set](ValueSet-mcode-primary-or-uncertain-behavior-cancer-disorder-vs.html) in a single request, AND allow the Requestor to retrieve a Bundle of the Patient resources referenced in the first response using [composite search parameters](https://www.hl7.org/fhir/search.html#combining):
+        1. Return a Bundle with the subset of Condition resources with a `code` in the [Primary or Uncertain Behavior Cancer Disorder Value Set] in a single request, AND allow the Requestor to retrieve a Bundle of the Patient resources referenced in the first response using [composite search parameters](https://www.hl7.org/fhir/search.html#combining):
 
                 GET [base]/Condition?code:in=http://hl7.org/fhir/us/mcode/ValueSet/mcode-primary-or-uncertain-behavior-cancer-disorder-vs
 

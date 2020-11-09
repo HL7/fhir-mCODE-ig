@@ -76,6 +76,7 @@
 <artifact id="StructureDefinition/mcode-genetic-specimen" key="genetic-specimen" name="Genetic Specimen"/>
 <artifact id="ValueSet/mcode-genetic-specimen-type-vs" key="genetic-specimen-type-value-set" name="Genetic Specimen Type Value Set"/>
 <artifact id="StructureDefinition/mcode-genomic-region-studied" key="genomic-region-studied" name="Genomic Region Studied"/>
+<artifact id="OperationDefinition/mcode-get-patient-bundle" key="OperationDefinition-mcode-get-patient-bundle" name="GetPatientBundleOperation"/>
 <artifact deprecated="true" id="ValueSet/mcode-hgvs-sequence-variant-nomenclature-value-set" key="hgvs-sequence-variant-nomenclature-value-set" name="HGVS Sequence Variant Nomenclature Value Set"/>
 <artifact id="ValueSet/mcode-hgnc-vs" key="hugo-gene-nomenclature-committee-gene-names-value-set" name="HUGO Gene Nomenclature Committee Gene Names Value Set"/>
 <artifact deprecated="true" id="Extension/mcode-histology-morphology-behavior-extension" key="histology-morphology-behavior-extension" name="Histology Morphology Behavior Extension"/>
@@ -190,7 +191,11 @@
 <artifact id="Observation/mCODETNMPathologicalStageGroupExample1" key="Observation-mCODETNMPathologicalStageGroupExample1" name="mCODETNMPathologicalStageGroupExample1"/>
 <artifact deprecated="true" id="Example/mcode-tumor-marker-example-01" key="mcode-tumor-marker-example-01" name="mCODETumorMarkerExample01"/>
 <artifact id="Observation/mCODETumorMarkerExample1" key="Observation-mCODETumorMarkerExample1" name="mCODETumorMarkerExample1"/>
+<artifact id="CapabilityStatement/mcode-receiver-pull" key="CapabilityStatement-mcode-receiver-pull" name="mcode-receiver-pull"/>
+<artifact id="CapabilityStatement/mcode-receiver-pull-fallback" key="CapabilityStatement-mcode-receiver-pull-fallback" name="mcode-receiver-pull-fallback"/>
 <artifact id="CapabilityStatement/mcode-receiver-push" key="CapabilityStatement-mcode-receiver-push" name="mcode-receiver-push"/>
+<artifact id="CapabilityStatement/mcode-sender-pull" key="CapabilityStatement-mcode-sender-pull" name="mcode-sender-pull"/>
+<artifact id="CapabilityStatement/mcode-sender-pull-fallback" key="CapabilityStatement-mcode-sender-pull-fallback" name="mcode-sender-pull-fallback"/>
 <artifact id="CapabilityStatement/mcode-sender-push" key="CapabilityStatement-mcode-sender-push" name="mcode-sender-push"/>
 <artifact id="Observation/scenario1-body-weight" key="Observation-scenario1-body-weight" name="scenario1-body-weight"/>
 <artifact id="DiagnosticReport/scenario1-diagnosticreport-pathology" key="DiagnosticReport-scenario1-diagnosticreport-pathology" name="scenario1-diagnosticreport-pathology"/>

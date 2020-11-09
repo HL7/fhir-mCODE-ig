@@ -299,6 +299,20 @@ groups:
       - Specimen/scenario1-mcode-genetic-specimen
       - Specimen/scenario1-specimen-tumor
 
+  # Conformance
+  Conformance:
+    name: Conformance Resources
+    description: CapabilityStatements and OperationDefinitions
+    resources:
+      - StructureDefinition/MCodeCapabilityStatement
+      - CapabilityStatement/mcode-receiver-pull
+      - CapabilityStatement/mcode-receiver-pull-fallback
+      - CapabilityStatement/mcode-receiver-push
+      - CapabilityStatement/mcode-sender-pull
+      - CapabilityStatement/mcode-sender-pull-fallback
+      - CapabilityStatement/mcode-sender-push
+      - OperationDefinition/mcode-get-patient-bundle
+
   # Experimental
   ExperimentalResourcesTumorSize:
     name: Experimental Resources - Tumor Size
@@ -309,5 +323,3 @@ groups:
       - ValueSet/mcode-tumor-size-units-vs
       - Observation/example1-mcode-tumor-size
       - BodyStructure/example1-mcode-tumor
-
-

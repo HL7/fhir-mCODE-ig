@@ -21,9 +21,9 @@ Each mCODE participant SHALL support the following profiles, which are core to r
 
 Additionally, each mCODE participant SHOULD support all profiles defined in mCODE unless the participant does not anticipate supplying or consuming a certain type of data, usually by virtue of playing a limited or specialized role in clinical or information workflows. For example, a Genomics Laboratory may support GenomicsReport, but not vital signs or staging.
 
-Each mCODE participant MUST publish a FHIR CapabilityStatement listing their supported profiles, by declaring the profile in CapabilityStatement.rest.resource.supportedProfile.
+Each mCODE participant SHALL publish a FHIR CapabilityStatement listing their supported profiles, by declaring the profile in CapabilityStatement.rest.resource.supportedProfile.
 
-Supporting a profile requires implementation of certain behaviors. In particular, mCODE Data Senders MUST:
+Supporting a profile requires implementation of certain behaviors. In particular, mCODE Data Senders SHALL:
 
 1. Mark resources with profile assertions documenting the profile(s) they conform to, by populating meta.profile.
 2. Support searching by the _profile parameter for the declared profiles.
@@ -34,15 +34,24 @@ Additional [conformance requirements from US Core](http://hl7.org/fhir/us/core/c
 
 #### Supported Operations
 
-mCODE participants MUST support either push OR pull operations. They MAY support both. They MUST publish a FHIR CapabilityStatement indicating which operations they support.
+mCODE participants SHALL support AT LEAST one set of role-specific operations defined below, and SHALL publish a FHIR CapabilityStatement indicating the operations they support.
 
-##### Pull Model
+Participants MAY support additional operations for communication between actors, such as for subscription or polling models. The operations described below SHOULD be used within such models whenever possible.
 
-**mCODE Data Senders** implementing Pull support SHALL support the following operations:
+##### Role: mCODE Data Senders
 
-1. **List mCODE Patients**. mCODE Data Senders implementing the Pull Model SHALL implement AT LEAST ONE of the following operations UNLESS they are a specialty system that does not implement `CancerPatient` due to unavailable data as described above.
+mCODE Data Senders SHALL support the following operations:
 
-    1. **Preferred:** Identify Patient resources conforming to [CancerPatient](StructureDefinition-mcode-cancer-patient.html) via the `meta.profile` element. This is the only option for systems implementing mCODE for a subset of cancer patients (see below), and the preferred option for all mCODE Data Senders.
+1. **Retrieve mCODE Patient.** mCODE Data Senders SHALL implement the following operation for retrieving a Patient resource by `id` UNLESS they are a specialty system that does not implement `CancerPatient` due to unavailable data as described above.
+
+        GET [base]/Patient/[id]
+
+    <!-- If the image below is not wrapped in a div tag, the publisher tries to wrap text around the image, which is not desired. -->
+    <div style="text-align: center;"><img src="mcode-patient.svg" alt="UML swimlane diagram showing mCODE Patient operation."></div>
+
+1. **List mCODE Patients**. mCODE Data Senders SHALL implement AT LEAST ONE of the following operations UNLESS they are a specialty system that does not implement `CancerPatient` due to unavailable data as described above.
+
+    1. **Preferred:** Identify Patient resources conforming to [CancerPatient](StructureDefinition-mcode-cancer-patient.html) via the `meta.profile` element. This is the only option for systems implementing mCODE for a subset of cancer patients (see below), and the **preferred** option for all mCODE Data Senders.
 
         Systems implementing this option SHALL respond to the following request with a Bundle of Patient resources for all mCODE Patients:
 
@@ -51,7 +60,7 @@ mCODE participants MUST support either push OR pull operations. They MAY support
         <!-- If the image below is not wrapped in a div tag, the publisher tries to wrap text around the image, which is not desired. -->
         <div style="text-align: center;"><img src="mcode-patients-pull-1.svg" alt="UML swimlane diagram showing mCODE Patients operations in the pull model: Option 1, preferred."></div>
 
-    1. **Fallback:** One of the fallback options below SHALL be supported if both of the following conditions are met: (1) the preferred option described above cannot be used because `meta.profile` and the [`_profile` search parameter](https://www.hl7.org/fhir/search.html#all) are entirely unsupported on the system; AND (2) ALL Patient resources referenced by Conditions with codes in the [Primary or Uncertain Behavior Cancer Disorder Value Set] conform to [CancerPatient](StructureDefinition-mcode-cancer-patient.html). The fallback options are listed in order from most to least preferable.
+    1. **Fallback:** One of the fallback options below SHALL be supported if both of the following conditions are met: (1) the preferred option described above cannot be used because `meta.profile` and the [`_profile` search parameter](https://www.hl7.org/fhir/search.html#all) are entirely unsupported on the system; AND (2) ALL Patient resources referenced by Conditions with codes in the [Primary or Uncertain Behavior Cancer Disorder Value Set] conform to [CancerPatient](StructureDefinition-mcode-cancer-patient.html). **The fallback options are listed in order from most to least preferable.**
 
         1. Systems implementing this option SHALL respond to the following request with a Bundle of Patient resources for all mCODE Patients, UNLESS [reverse chaining](https://www.hl7.org/fhir/search.html#has) is entirely unsupported on the system:
 
@@ -78,7 +87,7 @@ mCODE participants MUST support either push OR pull operations. They MAY support
             <!-- If the image below is not wrapped in a div tag, the publisher tries to wrap text around the image, which is not desired. -->
             <div style="text-align: center;"><img src="mcode-patients-pull-2_3.svg" alt="UML swimlane diagram showing mCODE Patients operations in the pull model: Option 2.3, fallback."></div>
 
-2. **Retrieve mCODE Patient Bundle**. mCODE Data Senders SHALL implement the [this operation](OperationDefinition-mcode-get-patient-bundle.html), which retrieves an mCODE Patient Bundle (defined below) for a given Patient ID.
+1. **Retrieve mCODE Patient Bundle**. mCODE Data Senders SHALL implement the [this operation](OperationDefinition-mcode-get-patient-bundle.html), which retrieves an mCODE Patient Bundle (defined below) for a given Patient ID.
 
         GET [base]/$mcode-patient-bundle/[id]
 
@@ -87,41 +96,35 @@ mCODE participants MUST support either push OR pull operations. They MAY support
     <!-- If the image below is not wrapped in a div tag, the publisher tries to wrap text around the image, which is not desired. -->
     <div style="text-align: center;"><img src="mcode-patient-bundle-pull.svg" alt="UML swimlane diagram showing mCODE Patient Bundle operations in the push model"></div>
 
-**mCODE Data Receivers** implementing Pull support SHALL be able to initiate ALL the requests described above. Additionally, they SHALL be able to read and process ALL individual resources returned by the operations above that conform to mCODE profiles identified as supported by their CapabilityStatements.
+##### Role: mCODE Data Receivers
 
-##### Push Model
+**mCODE Data Receivers** SHALL be able to initiate ALL the requests described above. Additionally, they SHALL be able to read and process ALL individual resources returned by the operations above that conform to mCODE profiles identified as supported by their CapabilityStatements.
 
-mCODE Data Receivers implementing Push support SHALL support the following operations:
+##### CapabilityStatement Resources
 
-1. **Receive mCODE Patients** (defined below). mCODE Data Receivers implementing the Push Model SHALL accept and process a Patient resource sent in the body of a request made to the following endpoint:
+To implement the operations described above, participants SHALL comply with one of the CapabilityStatements below:
 
-        POST [base]/Patient
+* mCODE Data Senders
+    1. [`mcode-sender-preferred`]
+    1. [`mcode-sender-fallback1`]
+    1. [`mcode-sender-fallback2`]
+    1. [`mcode-sender-fallback3`]
+* mCODE Data Receivers
+    1. [`mcode-receiver-preferred`]
+    1. [`mcode-receiver-fallback1`]
+    1. [`mcode-receiver-fallback2`]
+    1. [`mcode-receiver-fallback3`]
 
-    Receivers SHALL allow Patient resources to be updated via the following endpoint:
+[`mcode-sender-preferred`]: CapabilityStatement-mcode-sender-preferred.html
+[`mcode-sender-fallback1`]: CapabilityStatement-mcode-sender-fallback1.html
+[`mcode-sender-fallback2`]: CapabilityStatement-mcode-sender-fallback2.html
+[`mcode-sender-fallback3`]: CapabilityStatement-mcode-sender-fallback3.html
+[`mcode-receiver-preferred`]: CapabilityStatement-mcode-receiver-preferred.html
+[`mcode-receiver-fallback1`]: CapabilityStatement-mcode-receiver-fallback1.html
+[`mcode-receiver-fallback2`]: CapabilityStatement-mcode-receiver-fallback2.html
+[`mcode-receiver-fallback3`]: CapabilityStatement-mcode-receiver-fallback3.html
 
-        PUT [base]/Patient/[id]
-
-    Receivers MAY allow Senders to specify an `id` for a new record using ["Update as Create"](https://www.hl7.org/fhir/http.html#upsert).
-
-    The following swimlane diagram depicts the operation described above:
-
-    <!-- If the image below is not wrapped in a div tag, the publisher tries to wrap text around the image, which is not desired. -->
-    <div style="text-align: center;"><img src="mcode-patients-push.svg" alt="UML swimlane diagram showing mCODE Patients operations in the push model"></div>
-
-2. **Receive mCODE Patient Bundle**.  mCODE Data Receivers implementing the Push Model SHALL accept and process an mCODE Patient Bundle sent in the body of a request made to the following endpoint.
-
-        POST [base]/Bundle
-
-    Receivers SHALL be able to read and process ALL individual resources contained within an mCODE Patient Bundle that conform to mCODE profiles identified as supported by their CapabilityStatements. The `id` for the Bundle resource should match the `id` of the contained CancerPatient-conforming resource. In other words, there should be a 1:1 relationship between an mCODE Patient Bundle and a CancerPatient-conforming Patient resource.
-
-    Receivers SHALL allow these resources to be updated via an mCODE Patient Bundle sent to the following endpoint, where `[id]` is the same as the `id` element in the contained CancerPatient-conforming resource:
-
-        PUT [base]/Bundle/[id]
-
-    <!-- If the image below is not wrapped in a div tag, the publisher tries to wrap text around the image, which is not desired. -->
-    <div style="text-align: center;"><img src="mcode-patient-bundle-push.svg" alt="UML swimlane diagram showing mCODE Patient Bundle operations in the push model"></div>
-
-**mCODE Data Senders** implementing Push support SHALL be able to initiate all the requests described above.
+These map one-to-one onto the operations described above.
 
 ### mCODE Patients
 

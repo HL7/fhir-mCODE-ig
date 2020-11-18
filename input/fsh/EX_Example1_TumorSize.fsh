@@ -3,17 +3,18 @@ InstanceOf: TumorSize
 Description: "EXPERIMENTAL example of a resource conforming to the tumor size profile."
 * id = "example1-mcode-tumor-size"
 * status = #final
+* method = LNC#24419-4 "Pathology report gross observation"
 * subject = Reference(Patient/mCODEPatientExample1)
 * focus = Reference(BodyStructure/example1-mcode-tumor)
 
 * component[tumorLongestDimension].valueQuantity = UCUM#cm
 * component[tumorLongestDimension].valueQuantity.value = 1.2
 
-* component[tumorDimension2].valueQuantity = UCUM#cm
-* component[tumorDimension2].valueQuantity.value = 1.0
+* component[tumorOtherDimensions].valueQuantity = UCUM#cm
+* component[tumorOtherDimensions].valueQuantity.value = 1.0
 
-* component[tumorDimension2].valueQuantity = UCUM#cm
-* component[tumorDimension2].valueQuantity.value = 0.5
+* component[tumorOtherDimensions].valueQuantity = UCUM#cm
+* component[tumorOtherDimensions].valueQuantity.value = 0.5
 
 Instance: example1-mcode-tumor
 InstanceOf: Tumor

@@ -58,6 +58,7 @@ RuleSet: mCODE_CS_Server
 
 * rest[serverSlice].resource[PatientSlice].searchParam[0].name = "_id"
 * rest[serverSlice].resource[PatientSlice].searchParam[0].type = #uri
+* rest[serverSlice].resource[PatientSlice].searchParam[0].definition = ""
 * rest[serverSlice].resource[PatientSlice].searchParam[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest[serverSlice].resource[PatientSlice].searchParam[0].extension.valueCode = #SHALL
 
@@ -81,6 +82,7 @@ RuleSet: mCODE_CS_Server_Fallback
 
 * rest[serverSlice].resource[ConditionSlice].searchParam[0].name = "code:in"
 * rest[serverSlice].resource[ConditionSlice].searchParam[0].type = #uri
+* rest[serverSlice].resource[ConditionSlice].searchParam[0].definition = "http://hl7.org/fhir/us/mcode/SearchParameter/SearchParameter-"
 * rest[serverSlice].resource[ConditionSlice].searchParam[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest[serverSlice].resource[ConditionSlice].searchParam[0].extension.valueCode = #SHALL
 

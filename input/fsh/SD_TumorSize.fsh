@@ -6,45 +6,62 @@ Description:  "Records the dimensions of a tumor"
 * ^status = #draft
 * ^experimental = true
 
-// If tumor is physically removed from the body, use `specimen` to reference it
-// If the tumor is still in the body, use Observation.focus
-// TODO Set rule such that either specimen OR focus must be non-null, but one MUST be null
-* focus 0..1
-* focus only Reference(Tumor)
+// LOINC code indicating this is a tumor size
+* code = LNC#21889-1 //"Size Tumor"
+* code MS
 
-// Require that the tumor size is associated with an mCODE cancer patient
+* subject ^short = "The patient whose tumor was measured."
+* subject ^definition = "The patient whose tumor was measured. SHALL be a `Patient` resource conforming to `CancerPatient`."
 * subject 1..1 MS
 * subject only Reference(CancerPatient)
 
-// LOINC code indicatign this is a tumor size
-* code = LNC#21889-1 //"Size Tumor"
+// TODO: Set rule such that either specimen OR focus must be non-null, but one MUST be null
+* focus 0..1
+* focus only Reference(Tumor)
+* focus ^short = "Use ONLY when tumor HAS NOT been removed from the body"
+* focus ^definition = "Reference to a BodyStructure resource conforming to Tumor."
+* focus ^comment = "Use **only** when the tumor **has not** been removed from the body.
+                    If the tumor has been removed, use `specimen` instead and leave `focus` empty."
+* focus MS
 
-* code and component and specimen and focus MS
-// Store tumor size in component with 3 valueCodableConcepts for each tumor dimension
+* specimen ^short = "Use ONLY when tumor HAS been removed from the body"
+* specimen ^definition = "Reference to a BodyStructure resource conforming to Tumor."
+* specimen ^comment = "Use **only** when the tumor **has** been removed from the body.
+                       If the tumor has been not removed, use `focus` instead and leave `specimen` empty."
+* specimen MS
+
+* method from TumorSizeMethodVS (extensible)
+* method ^short = "Method for measuring the tumor"
+* method ^definition = "Method for measuring the tumor"
+* method ^comment = "Tumors are typically measured via gross pathology after excision, or via diagnostic
+                     imaging or physical exam prior to removal. `TumorSizeMethodVS` provides LOINC codes
+                     for these measurement methods.
+
+                     Therefore, if `specimen` is set, `method` is expected to be a \"gross pathology\" code.
+                     If `focus` is set, `method` is expected to be a type of diagnostic imaging or physical exam.
+                     "
+* method MS
+
+* component MS
 * insert ObservationComponentSlicingRules
-// Require 1 dimension; the other 2 are optional
+// Require 1 dimension; the additional dimensions are optional
 * component contains
     tumorLongestDimension 1..1 MS and
-    tumorDimension2 0..1 and
-    tumorDimension3 0..1
-    
+    tumorOtherDimension 0..2 MS
+
 * component[tumorLongestDimension] ^short = "Longest tumor dimension (cm or mm)"
 * component[tumorLongestDimension] ^definition = "The longest tumor dimension in cm or mm."
 * component[tumorLongestDimension].code = LNC#33728-7 // "Size.maximum dimension in Tumor"
 * component[tumorLongestDimension].value[x] only Quantity
 * component[tumorLongestDimension].valueQuantity from TumorSizeUnitsVS (required)
 
-* component[tumorDimension2] ^short = "2nd tumor dimension (cm or mm)"
-* component[tumorDimension2] ^definition = "The second tumor dimension in cm or mm."
-* component[tumorDimension2].code = SCT#372300005 // "Tumor size, dimension 2 (observable entity)"
-* component[tumorDimension2].value[x] only Quantity
-* component[tumorDimension2].valueQuantity from TumorSizeUnitsVS (required)
+* component[tumorOtherDimension] ^short = "2nd or 3rd tumor dimension (cm or mm)"
+* component[tumorOtherDimension] ^definition = "The second or third tumor dimension in cm or mm."
+* component[tumorOtherDimension] ^comment = "Additional tumor dimensions should be ordered from largest to smallest."
+* component[tumorOtherDimension].code = LNC#33729-5 // "Size additional dimension in Tumor"
+* component[tumorOtherDimension].value[x] only Quantity
+* component[tumorOtherDimension].valueQuantity from TumorSizeUnitsVS (required)
 
-* component[tumorDimension3] ^short = "3rd tumor dimension (cm or mm)"
-* component[tumorDimension3] ^definition = "The third tumor dimension in cm or mm."
-* component[tumorDimension3].code = SCT#372301009 // "Tumor size, dimension 3 (observable entity)"
-* component[tumorDimension3].value[x] only Quantity
-* component[tumorDimension3].valueQuantity from TumorSizeUnitsVS (required)
 
 
 
@@ -52,11 +69,19 @@ Profile: Tumor
 Parent:  BodyStructure
 Id: mcode-tumor
 Title: "Tumor"
-Description:  "Identifies a tumor"
+Description:  "Identifies a tumor. Whenever possible, a single resource conforming to this
+               profile will be used to track a tumor over time (as opposed to creating new
+               Tumor-conforming BodyStructure resources each time that tumor is measured).
+              "
 * ^status = #draft
 * ^experimental = true
 // The purpose of this profile is to uniquely identify a tumor, so it follows that there must be at least one identifier value provided
 * identifier 1.. MS
+* identifier ^short = "Stable identifier of this specific tumor"
+* identifier ^definition = "Stable identifier of this specific tumor, should be unique within the referenced `CancerPatient`."
+* identifier ^comment = "If applicable, this should correspond to the physical tag inserted into the tumor during a procedure
+                         that is used for tracking the tumor by radiology and pathology.
+                        "
 // This VS is used to define the morphology of primary and secondary cancer; rule set here for consistency with these profiles.
 * morphology from HistologyMorphologyBehaviorVS (extensible)
 * morphology MS
@@ -74,5 +99,16 @@ Title:           "Units of tumor size value set"
 Description:     "Acceptable units for measuring tumor size"
 * UCUM#mm        "Millimeter"
 * UCUM#cm        "Centimeter"
+* ^status = #draft
+* ^experimental = true
+
+
+ValueSet:        TumorSizeMethodVS
+Id:              mcode-tumor-size-method-vs
+Title:           "Methods for measuring tumor size"
+Description:     "Methods for measuring tumor size"
+* LNC#24419-4 "Pathology report gross observation"
+* LNC#29544-4 "Physical findings"
+* LNC#18748-4 "Diagnostic imaging study"
 * ^status = #draft
 * ^experimental = true

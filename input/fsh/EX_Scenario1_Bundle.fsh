@@ -89,8 +89,8 @@ Description: "Other resources pertinent to treatment of patient"
 * entry[11].fullUrl = "http://example.org/fhir/Observation/scenario1-observation-tumor-size"
 * entry[12].resource = scenario1-observation-tumor-dcis
 * entry[12].fullUrl = "http://example.org/fhir/Observation/scenario1-observation-tumor-dcis"
-* entry[13].resource = scenario1-practitioner1-mcode
-* entry[13].fullUrl = "http://example.org/fhir/Pracititioner/scenario1-practitioner1-mcode"
+* entry[13].resource = scenario1-us-core-practitioner
+* entry[13].fullUrl = "http://example.org/fhir/Pracititioner/scenario1-us-core-practitioner"
 * entry[14].resource = scenario1-practitioner2-mcode
 * entry[14].fullUrl = "http://example.org/fhir/Pracititioner/scenario1-practitioner2-mcode"
 * entry[15].resource = scenario1-organization1-mcode

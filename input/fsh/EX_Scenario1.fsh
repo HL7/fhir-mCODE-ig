@@ -37,7 +37,7 @@ Description: "Extended example 1: example showing disease status (patient's cond
 * code = LNC#88040-1 "Response to cancer treatment"
 * subject = Reference(scenario1-mcode-cancer-patient)
 * effectiveDateTime = "2020-03-01"
-* performer = Reference(scenario1-practitioner1-mcode)
+* performer = Reference(scenario1-us-core-practitioner)
 * focus = Reference(scenario1-mcode-primary-cancer-condition)
 * valueCodeableConcept = SCT#268910001 "Patient's condition improved (finding)"
 
@@ -48,7 +48,7 @@ Description: "mCODE Example for Cancer-Related Comorbidities"
 * id = "scenario1-mcode-cancer-related-comorbidities"
 * meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-related-comorbidities"
 * subject = Reference(scenario1-mcode-cancer-patient)
-* performer = Reference(scenario1-practitioner1-mcode)
+* performer = Reference(scenario1-us-core-practitioner)
 * status = #final "final"
 * category = ObsCat#survey
 * component[depression].valueCodeableConcept = SCT#52101004 "Present (qualifier value)"
@@ -78,7 +78,7 @@ Description: "Extended example 1: example showing comorbid condition (depression
 * code = SCT#35489007 "Depressive disorder (disorder)"
 * subject = Reference(scenario1-mcode-cancer-patient)
 * onsetDateTime = "2000-01-01"
-* asserter = Reference(scenario1-practitioner1-mcode)
+* asserter = Reference(scenario1-us-core-practitioner)
 
 Instance: scenario1-mcode-comorbid-condition-hypertension
 InstanceOf: USCoreCondition
@@ -90,7 +90,7 @@ Description: "Extended example 1: example showing comorbid condition (hypertensi
 * code = SCT#77970009 "Benign hypertensive heart disease without congestive heart failure (disorder)"  // Changed to avoid IG Publisher error ICD10CM#I119 "Hypertensive heart disease without heart failure"
 * subject = Reference(scenario1-mcode-cancer-patient)
 * onsetDateTime = "2000-01-01"
-* asserter = Reference(scenario1-practitioner1-mcode)
+* asserter = Reference(scenario1-us-core-practitioner)
 
 Instance: scenario1-mcode-ecog-performance-status
 InstanceOf: ECOGPerformanceStatus
@@ -100,7 +100,7 @@ Description: "Extended example 1: example showing ECOG performance status"
 * subject = Reference(scenario1-mcode-cancer-patient)
 * category = ObsCat#survey "survey"
 * effectiveDateTime = "2018-03-01"
-* performer = Reference(scenario1-practitioner1-mcode)
+* performer = Reference(scenario1-us-core-practitioner)
 * valueInteger = 0
 * interpretation = LNC#LA9622-7 "Fully active, able to carry on all pre-disease performance without restriction"
 * method = SCT#5880005 "Physical examination procedure (procedure)"
@@ -115,7 +115,7 @@ Description: "Extended example 1: example showing partial mastectomy surgical pr
 * code = SCT#64368001 "Partial mastectomy (procedure)"
 * subject = Reference(scenario1-mcode-cancer-patient)
 * performedDateTime = "2019-03-05"
-* asserter = Reference(scenario1-practitioner1-mcode)
+* asserter = Reference(scenario1-us-core-practitioner)
 * reasonReference = Reference(scenario1-mcode-primary-cancer-condition)
 * bodySite = SCT#80248007 "Left breast structure (body structure)"
 
@@ -129,7 +129,7 @@ Description: "Extended example 1: example showing radiation treatment"
 * code = SCT#385798007 "Radiation therapy care (regime/therapy)"
 * subject = Reference(scenario1-mcode-cancer-patient)
 * performedDateTime = "2018-03-20"
-* asserter = Reference(scenario1-practitioner1-mcode)
+* asserter = Reference(scenario1-us-core-practitioner)
 * reasonReference = Reference(scenario1-mcode-primary-cancer-condition)
 * bodySite = SCT#80248007 "Left breast structure (body structure)"
 
@@ -144,7 +144,7 @@ Description: "Extended example 1: example showing primary cancer condition"
 * code = SCT#353431000119107 "Primary malignant neoplasm of female left breast (disorder)"
 * subject = Reference(scenario1-mcode-cancer-patient)
 * onsetDateTime = "2018-03-15"
-* asserter = Reference(scenario1-practitioner1-mcode)
+* asserter = Reference(scenario1-us-core-practitioner)
 * stage.summary = AJCC#3C
 * stage.assessment = Reference(scenario1-mcode-tnm-clinical-stage-group)
 
@@ -208,7 +208,7 @@ Description: "Extended example 1: example showing ER status"
 * code = LNC#85337-4 "Estrogen receptor Ag [Presence] in Breast cancer specimen by Immune stain"
 * subject = Reference(scenario1-mcode-cancer-patient)
 * effectiveDateTime = "2018-03-10"
-* performer = Reference(scenario1-practitioner1-mcode)
+* performer = Reference(scenario1-us-core-practitioner)
 * valueCodeableConcept = LNC#LA6576-8 "Positive"
 
 Instance: scenario1-mcode-tumor-marker-pr
@@ -220,7 +220,7 @@ Description: "Extended example 1: example showing PR status"
 * code = LNC#85339-0 "Progesterone receptor Ag [Presence] in Breast cancer specimen by Immune stain"
 * subject = Reference(scenario1-mcode-cancer-patient)
 * effectiveDateTime = "2018-03-10"
-* performer = Reference(scenario1-practitioner1-mcode)
+* performer = Reference(scenario1-us-core-practitioner)
 * valueCodeableConcept = LNC#LA6577-6 "Negative"
 
 Instance: scenario1-mcode-tumor-marker-her2
@@ -232,7 +232,7 @@ Description: "Extended example 1: example showing HER2 status"
 * code = LNC#48676-1 "HER2 [Interpretation] in Tissue"
 * subject = Reference(scenario1-mcode-cancer-patient)
 * effectiveDateTime = "2018-03-10"
-* performer = Reference(scenario1-practitioner1-mcode)
+* performer = Reference(scenario1-us-core-practitioner)
 * valueCodeableConcept = LNC#LA6577-6 "Negative"
 
 Instance: scenario1-mcode-tumor-marker-oncotype-dx
@@ -244,7 +244,7 @@ Description: "Extended example 1: example showing Oncotype DX breast recurrence 
 * code = GTR#509910 "Oncotype DX Breast Recurrence Score Assay"
 * subject = Reference(scenario1-mcode-cancer-patient)
 * effectiveDateTime = "2018-03-20"
-* performer = Reference(scenario1-practitioner1-mcode)
+* performer = Reference(scenario1-us-core-practitioner)
 * valueQuantity = UCUM#{ScoreOf}
 * valueQuantity.value = 47
 * interpretation = ObsInt#H "High"
@@ -289,7 +289,7 @@ Description: "Extended example 1: example showing genetic specimen for sequencin
 * status = #available "available"
 * type = http://terminology.hl7.org/CodeSystem/v2-0487#TISS
 * subject = Reference(scenario1-mcode-cancer-patient)
-* collection.collector = Reference(scenario1-practitioner1-mcode)
+* collection.collector = Reference(scenario1-us-core-practitioner)
 * collection.bodySite = SCT#80248007 "Left breast structure (body structure)"
 * processing[0].timeDateTime = "2018-03-01"
 
@@ -323,7 +323,7 @@ Description: "Extended example 1: example showing chemotherapy medication"
 * intent = #order
 * medicationCodeableConcept = RXN#3639 "DOXOrubicin"
 * subject = Reference(scenario1-mcode-cancer-patient)
-* requester = Reference(scenario1-practitioner1-mcode)
+* requester = Reference(scenario1-us-core-practitioner)
 * dosageInstruction.timing.repeat.boundsPeriod.start = "2019-04-01"
 * authoredOn = "2019-04-01"
 * dosageInstruction.text = "doxorubicin (60 mg/m² IV), 93.26mg"
@@ -345,7 +345,7 @@ Description: "Extended example 1: example showing chemotherapy medication"
 * intent = #order
 * medicationCodeableConcept = RXN#3002 "cyclophosphamide"
 * subject = Reference(scenario1-mcode-cancer-patient)
-* requester = Reference(scenario1-practitioner1-mcode)
+* requester = Reference(scenario1-us-core-practitioner)
 * dosageInstruction.timing.repeat.boundsPeriod.start = "2018-04-01"
 * authoredOn = "2018-04-01"
 * dosageInstruction.text = "cyclophosphamide (600 mg/m² IV), 932.59mg"
@@ -368,7 +368,7 @@ Description: "Extended example 1: example showing chemotherapy medication"
 * intent = #order
 * medicationCodeableConcept = RXN#56946 "PACLitaxel"
 * subject = Reference(scenario1-mcode-cancer-patient)
-* requester = Reference(scenario1-practitioner1-mcode)
+* requester = Reference(scenario1-us-core-practitioner)
 * dosageInstruction.timing.repeat.boundsPeriod.start = "2018-04-01"
 * authoredOn = "2018-04-01"
 * dosageInstruction.text = "doxorubicin (175 mg/m² IV), 272.01mg"
@@ -390,7 +390,7 @@ Description: "Extended example 1: example showing chemotherapy medication"
 * intent = #order
 * medicationCodeableConcept = RXN#84857 "anastrozole"
 * subject = Reference(scenario1-mcode-cancer-patient)
-* requester = Reference(scenario1-practitioner1-mcode)
+* requester = Reference(scenario1-us-core-practitioner)
 * dosageInstruction.timing.repeat.boundsPeriod.start = "2018-05-01"
 * authoredOn = "2018-05-01"
 * dosageInstruction.text = "1mg orally once daily"
@@ -402,10 +402,10 @@ Description: "Extended example 1: example showing chemotherapy medication"
 * dosageInstruction.maxDosePerPeriod.denominator = UCUM#d "day"
 * dosageInstruction.maxDosePerPeriod.denominator.value = 1
 
-Instance: scenario1-practitioner1-mcode
+Instance: scenario1-us-core-practitioner
 InstanceOf: USCorePractitioner
 Description: "Extended example 1: example practitioner"
-* id = "scenario1-practitioner1-mcode"
+* id = "scenario1-us-core-practitioner"
 * identifier[NPI].value = "9988776655"
 * name.family = "Anydoc"
 * name.given[0] = "Kyle"
@@ -463,9 +463,9 @@ Description: "Extended example 1: example biopsy procedure"
 * status = #completed "completed"
 * code = SCT#723990008 "Biopsy of breast using ultrasonographic guidance (procedure)"
 * subject = Reference(scenario1-mcode-cancer-patient)
-* performer.actor = Reference(scenario1-practitioner1-mcode)
+* performer.actor = Reference(scenario1-us-core-practitioner)
 * performedDateTime = "2018-03-01"
-* asserter = Reference(scenario1-practitioner1-mcode)
+* asserter = Reference(scenario1-us-core-practitioner)
 * reasonReference = Reference(scenario1-mcode-primary-cancer-condition)
 * bodySite = SCT#80248007 "Left breast structure (body structure)"
 
@@ -476,9 +476,9 @@ Description: "Extended example 1: example mammogram"
 * status = #completed "completed"
 * code = SCT#71651007 "Mammography (procedure)"
 * subject = Reference(scenario1-mcode-cancer-patient)
-* performer.actor = Reference(scenario1-practitioner1-mcode)
+* performer.actor = Reference(scenario1-us-core-practitioner)
 * performedDateTime = "2018-03-01"
-* asserter = Reference(scenario1-practitioner1-mcode)
+* asserter = Reference(scenario1-us-core-practitioner)
 
 Instance: scenario1-us-core-smoking-status
 InstanceOf: USCoreSmokingStatusProfile

@@ -48,10 +48,10 @@ Description:  "Records the dimensions of a tumor"
 * component ^slicing.discriminator.path = "code"
 * component ^slicing.rules = #open
 * component ^slicing.description = "Slice based on the component.code pattern"
-// Require 1 dimension; the other 2 are optional
+// Require 1 dimension; the additional dimensions are optional
 * component contains
     tumorLongestDimension 1..1 MS and
-    tumorOtherDimensions 0..2 MS
+    tumorOtherDimension 0..2 MS
 
 * component[tumorLongestDimension] ^short = "Longest tumor dimension (cm or mm)"
 * component[tumorLongestDimension] ^definition = "The longest tumor dimension in cm or mm."
@@ -59,12 +59,12 @@ Description:  "Records the dimensions of a tumor"
 * component[tumorLongestDimension].value[x] only Quantity
 * component[tumorLongestDimension].valueQuantity from TumorSizeUnitsVS (required)
 
-* component[tumorOtherDimensions] ^short = "2nd or 3rd tumor dimension (cm or mm)"
-* component[tumorOtherDimensions] ^definition = "The second or third tumor dimension in cm or mm."
-* component[tumorOtherDimensions] ^comment = "Additional tumor dimensions should be ordered from largest to smallest."
-* component[tumorOtherDimensions].code = LNC#33729-5 // "Size additional dimension in Tumor"
-* component[tumorOtherDimensions].value[x] only Quantity
-* component[tumorOtherDimensions].valueQuantity from TumorSizeUnitsVS (required)
+* component[tumorOtherDimension] ^short = "2nd or 3rd tumor dimension (cm or mm)"
+* component[tumorOtherDimension] ^definition = "The second or third tumor dimension in cm or mm."
+* component[tumorOtherDimension] ^comment = "Additional tumor dimensions should be ordered from largest to smallest."
+* component[tumorOtherDimension].code = LNC#33729-5 // "Size additional dimension in Tumor"
+* component[tumorOtherDimension].value[x] only Quantity
+* component[tumorOtherDimension].valueQuantity from TumorSizeUnitsVS (required)
 
 
 

@@ -10,11 +10,11 @@ Description: "EXPERIMENTAL example of a resource conforming to the tumor size pr
 * component[tumorLongestDimension].valueQuantity = UCUM#cm
 * component[tumorLongestDimension].valueQuantity.value = 1.2
 
-* component[tumorOtherDimensions].valueQuantity = UCUM#cm
-* component[tumorOtherDimensions].valueQuantity.value = 1.0
+* component[tumorOtherDimension].valueQuantity = UCUM#cm
+* component[tumorOtherDimension].valueQuantity.value = 1.0
 
-* component[tumorOtherDimensions].valueQuantity = UCUM#cm
-* component[tumorOtherDimensions].valueQuantity.value = 0.5
+* component[tumorOtherDimension].valueQuantity = UCUM#cm
+* component[tumorOtherDimension].valueQuantity.value = 0.5
 
 Instance: example1-mcode-tumor
 InstanceOf: Tumor

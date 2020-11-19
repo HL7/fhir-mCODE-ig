@@ -290,7 +290,7 @@ groups:
       - Observation/scenario1-us-core-smoking-status
       - Organization/scenario1-organization1-mcode
       - Patient/scenario1-mcode-cancer-patient
-      - Practitioner/scenario1-practitioner1-mcode
+      - Practitioner/scenario1-us-core-practitioner
       - Practitioner/scenario1-practitioner2-mcode
       - Procedure/scenario1-mcode-cancer-related-radiation-procedure
       - Procedure/scenario1-mcode-cancer-related-surgical-procedure-mastectomy

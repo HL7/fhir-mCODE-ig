@@ -1,0 +1,33 @@
+-------------------------------------------------------------------------------------
+{"hierarchical" : false, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://ncithesaurus-stage.nci.nih.gov",
+      "concept" : [{
+        "code" : "C146985",
+        "display" : "AJCC Cancer Staging Manual 8th Edition"
+      }]
+    }]
+  }
+}}####
+e: {
+  "valueSet" : {
+  "resourceType" : "ValueSet",
+  "status" : "active",
+  "expansion" : {
+    "identifier" : "urn:uuid:be38389e-96a7-4bb9-8a4e-d643adc57cdd",
+    "timestamp" : "2020-11-19T16:00:15.424Z",
+    "parameter" : [{
+      "name" : "limitedExpansion",
+      "valueBoolean" : true
+    },
+    {
+      "name" : "excludeNested",
+      "valueBoolean" : true
+    }]
+  }
+},
+  "error" : ""
+}
+-------------------------------------------------------------------------------------

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="191px" preserveAspectRatio="none" style="width:635px;height:191px;" version="1.1" viewBox="0 0 635 191" width="635px" zoomAndPan="magnify"><defs><filter height="300%" id="f5tj2x42b6vzv" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><text fill="#000000" font-family="Arial" font-size="18" lengthAdjust="spacingAndGlyphs" textLength="535" x="48" y="28.8838">mCODE Patients: Pull Model - Implementation Option 1 (Preferred)</text><rect fill="#FFFFFF" filter="url(#f5tj2x42b6vzv)" height="75.2144" style="stroke: #000000; stroke-width: 2.0;" width="611" x="10" y="91.7969"/><line style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 5.0,5.0;" x1="97" x2="97" y1="74.7969" y2="184.0112"/><line style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 5.0,5.0;" x1="529" x2="529" y1="74.7969" y2="184.0112"/><rect fill="#FEFECE" filter="url(#f5tj2x42b6vzv)" height="30.0986" style="stroke: #A80036; stroke-width: 1.5;" width="150" x="20" y="39.6982"/><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="136" x="27" y="59.8301">mCODE Data Sender</text><rect fill="#FEFECE" filter="url(#f5tj2x42b6vzv)" height="30.0986" style="stroke: #A80036; stroke-width: 1.5;" width="160" x="447" y="39.6982"/><text fill="#000000" font-family="Arial" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="146" x="454" y="59.8301">mCODE Data Receiver</text><path d="M10,91.7969 L220,91.7969 L220,98.7969 L210,108.7969 L10,108.7969 L10,91.7969 " fill="#EEEEEE" style="stroke: #000000; stroke-width: 1.0;"/><rect fill="none" height="75.2144" style="stroke: #000000; stroke-width: 2.0;" width="611" x="10" y="91.7969"/><text fill="#000000" font-family="Arial" font-size="13" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="97" x="25" y="105.1748">Get Patients via</text><text fill="#000000" font-family="monospace" font-size="13" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="64" x="126" y="104.8638">_profile</text><polygon fill="#A80036" points="108,126.0625,98,130.0625,108,134.0625,104,130.0625" style="stroke: #A80036; stroke-width: 1.0;"/><line style="stroke: #A80036; stroke-width: 1.0;" x1="102" x2="528" y1="130.0625" y2="130.0625"/><text fill="#000000" font-family="monospace" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="408" x="114" y="124.9966">GET [base]/Patient?_profile=...mcode-cancer-patient</text><polygon fill="#A80036" points="517,155.0112,527,159.0112,517,163.0112,521,159.0112" style="stroke: #A80036; stroke-width: 1.0;"/><line style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 2.0,2.0;" x1="97" x2="523" y1="159.0112" y2="159.0112"/><text fill="#000000" font-family="Arial" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="315" x="104" y="154.2563">HTTP response containing Bundle of relevant Patients</text><!--MD5=[f3491b3113d00710869d27c1e476d128]
+@startuml
+skinparam defaultFontName Arial
+
+title mCODE Patients: Pull Model - Implementation Option 1 (Preferred)
+hide footbox
+participant "mCODE Data Sender" as Sender
+participant "mCODE Data Receiver" as Receiver
+
+group Get Patients via ""_profile""
+    "Receiver" -> "Sender" : ""GET [base]/Patient?_profile=...mcode-cancer-patient""
+    "Sender" - -> "Receiver" : HTTP response containing Bundle of relevant Patients
+end
+
+
+@enduml
+
+PlantUML version 1.2020.19(Mon Oct 12 11:10:01 EDT 2020)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg>

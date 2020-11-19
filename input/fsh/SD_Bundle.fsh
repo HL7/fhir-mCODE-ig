@@ -4,10 +4,8 @@ Id: mcode-patient-bundle
 Title: "mCODE Patient Bundle"
 Description: "A collection of data for an mCODE cancer patient."
 /* TODO update this file to match the description in `mcode-patient-bundle.md`. */
-* type = #collection
-* entry ^slicing.discriminator.type = #profile
-* entry ^slicing.discriminator.path = "resource"
-* entry ^slicing.rules = #open
+* type  = #collection
+* insert BundleEntrySlicingRules
 * entry and entry.resource MS
 * entry contains
     // These resources are required per Conformance > Supported Profiles.

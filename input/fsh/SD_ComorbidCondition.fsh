@@ -1,6 +1,7 @@
 Profile: ComorbiditiesParent
 Parent: Observation
 Id: mcode-comorbidities-parent
+Title: "Comorbidities Parent"
 Description: "General structure for capturing comorbid conditions with respect to a primary condition. The specific set of comorbidities of interest in a given context are defined by slicing the components array."
 * ^abstract = true
 * focus only Reference(Condition)
@@ -17,14 +18,12 @@ Description: "General structure for capturing comorbid conditions with respect t
 Profile: CancerRelatedComorbidities
 Parent: ComorbiditiesParent
 Id: mcode-cancer-related-comorbidities
+Title: "Cancer-Related Comorbidities"
 Description: "Comorbid conditions for a cancer condition, using Elixhauser comorbidity categories."
 * ^abstract = false
 * focus and component and component.extension MS
 * focus only Reference(PrimaryCancerCondition)
-* component ^slicing.discriminator.type = #pattern
-* component ^slicing.discriminator.path = "code"
-* component ^slicing.rules = #open
-* component ^slicing.description = "Slice based on the component.code pattern"
+* insert ObservationComponentSlicingRules
 * focus and component and component.extension[conditionReference] and component.extension[conditionCode] and component.extension[conditionReference] MS
 * component contains 
     alcoholAbuse 0..1 and

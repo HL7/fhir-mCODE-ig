@@ -30,13 +30,6 @@ Description:  "Codes describing the location(s) of primary or secondary cancer. 
 * include codes from system SCT where concept is-a #123037004  "Body Structure"
 * include codes from system ICDO3  // currently no way to filter to just topology codes (that I know of)
 
-/* 
-ValueSet:  AnatomicalOrientationVS
-Title: "Anatomical Orientation Value Set"
-Description:  "Terms that specify anatomical orientation."
-* codes from system SCT where concept is-a #272424004 "Relative sites (qualifier value)"
-*/
-
 ValueSet:   ConditionStatusTrendVS
 Id: mcode-condition-status-trend-vs
 Title: "Condition Status Trend Value Set"
@@ -62,50 +55,43 @@ Description:  "The type of evidence backing up the clinical determination of can
 ValueSet:   CancerStagingSystemVS
 Id: mcode-cancer-staging-system-vs
 Title: "Cancer Staging System Value Set"
-Description:    "System used for staging. If the staging system is AJCC Version 8, use the NCI thesaurus code C146985 (AJCC Cancer Staging Manual 8th Edition) in its place. This is because SNOMED does not have an equivalent concept for AJCC Version 8 at this time."
+Description:    "System used for staging."
 * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
 * SCT#444256004 "American Joint Commission on Cancer, Cancer Staging Manual, 6th edition neoplasm staging system (tumor staging)"
 * SCT#443830009 "American Joint Commission on Cancer, Cancer Staging Manual, 7th edition neoplasm staging system (tumor staging)"
+* NCIT#C146985 "AJCC Cancer Staging Manual 8th Edition"
 * SCT#258235000 "International Union Against Cancer (tumor staging)"
 
 ValueSet: TNMStageGroupVS
 Id: mcode-tnm-stage-group-vs
 Title: "TNM Stage Group Value Set"
-Description: "This value set is intended to contain allowable values for Stage Group, according to TNM staging rules. SNOMED CT codes or AJCC codes (preferably, version 8 for current cancers) are allowed, but are not listed here due to AJCC intellectual property restrictions.
+Description: "This value set is intended to contain allowable values for Stage Group, according to TNM staging rules. AJCC codes (preferably, version 8 for current cancers) SHOULD be used.
 
-*AJCC terminology: examples of stage groups include 'Stage 0' and 'Stage IIA'. The full set of stage groups, as well rules on how to assign a stage group, can be accessed through the AJCC Staging Manual and any applicable updates and corrections, as well as the AJCC API.
-
-* SNOMED CT has content representing stage group under the hierarchy of 261612004 'Stages', such as 258215001 'Stage 1' and 261614003 'Stage2A'. In addition, SNOMED CT may not have complete TNM staging terminology and may require supplementation with codes from another controlled vocabulary (e.g. NCI Thesaurus)."
+*AJCC terminology: examples of stage groups include 'Stage 0' and 'Stage IIA'. The full set of stage groups, as well rules on how to assign a stage group, can be accessed through the AJCC Staging Manual and any applicable updates and corrections, as well as the AJCC API."
 * codes from system AJCC
 
 ValueSet: TNMPrimaryTumorCategoryVS
 Id: mcode-tnm-primary-tumor-category-vs
 Title: "TNM Primary Tumor Category Value Set"
-Description: "This value set is intended to contain allowable values for the T category, according to TNM staging rules. SNOMED CT codes or AJCC codes (preferably, version 8 for current cancers) are allowed, but are not listed here due to AJCC intellectual property restrictions.
+Description: "This value set is intended to contain allowable values for the T category, according to TNM staging rules. AJCC codes (preferably, version 8 for current cancers) SHOULD be used.
 
-* AJCC terminology: examples of T categories include 'cTX', used when the tumor primary tumor cannot be evaluated, 'pT0', denoting there is no evidence of a primary tumor, and 'pTis', referencing carcinoma in situ (with some cancer-specific exceptions). Other T categories refer to increasing size of the primary tumor. Please note allowable T categories may vary between clinical and pathologic classifications. The full set of allowable clinical and pathologic T categories, along with its current descriptions, can be accessed through the AJCC Staging Manual and any applicable updates and corrections, as well as the AJCC API.
-
-* SNOMED CT has content related to the T category under the hierarchy of 385356007 'Tumor stage finding', such as 23351008 'T1 category' and 261650005 'Tumor stage T1c'. If using SNOMED CT to store T category findings, the use of codes that do not contain descriptions of the categories, such as the examples provided, is encouraged, as stage finding codes in SNOMED CT may not be up-to-date with current AJCC guidance. Note that SNOMED CT codes do not always make a distinction between clinical and pathological classifications (e.g. cT1 and pT1 may be represented by the same SNOMED CT code 23351008 'T1 category'). In addition, SNOMED CT may not have complete TNM staging terminology and may require supplementation with codes from another controlled vocabulary (e.g. NCI Thesaurus)."
+* AJCC terminology: examples of T categories include 'cTX', used when the tumor primary tumor cannot be evaluated, 'pT0', denoting there is no evidence of a primary tumor, and 'pTis', referencing carcinoma in situ (with some cancer-specific exceptions). Other T categories refer to increasing size of the primary tumor. Please note allowable T categories may vary between clinical and pathologic classifications. The full set of allowable clinical and pathologic T categories, along with its current descriptions, can be accessed through the AJCC Staging Manual and any applicable updates and corrections, as well as the AJCC API."
 * codes from system AJCC
 
 ValueSet: TNMRegionalNodesCategoryVS
 Id: mcode-tnm-regional-nodes-category-vs
 Title: "TNM Regional Nodes Category Value Set"
-Description: "This value set is intended to contain allowable values for the N category, according to TNM staging rules. SNOMED CT codes or AJCC codes (preferably, version 8 for current cancers) are allowed, but are not listed here due to AJCC intellectual property restrictions.
+Description: "This value set is intended to contain allowable values for the N category, according to TNM staging rules. AJCC codes (preferably, version 8 for current cancers) SHOULD be used.
 
-* AJCC terminology: examples of N categories include 'cN0', indicating no evidence of lymph node involvement, and 'pN1', indicating regional lymph node involvement to a small extent, with specific thresholds for the lymph node groups and number of lymph nodes involved. Other N categories refer to increasing lymph node involvement. Please note allowable N categories may vary between clinical and pathologic classifications. The full set of allowable clinical and pathologic N categories, along with its current descriptions, can be accessed through the AJCC Staging Manual and any applicable updates and corrections, as well as the AJCC API.
-
-* SNOMED CT has content related to the N category under the hierarchy of 385382003 'Node category finding', such as 5856006 'N3 category' and 277672002 'Node stage N1a'. If using SNOMED CT to store N category findings, the use of codes that do not contain descriptions of the categories, such as the examples provided, is encouraged, as stage finding codes in SNOMED CT may not be up-to-date with current AJCC guidance. Note that SNOMED CT codes do not always make a distinction between clinical and pathological classifications (e.g. 'cN1' and 'pN1' may be represented by the same SNOMED CT code 53623008 'N1 category'). In addition, SNOMED CT may not have complete TNM staging terminology and may require supplementation with codes from another controlled vocabulary (e.g. NCI Thesaurus)."
+* AJCC terminology: examples of N categories include 'cN0', indicating no evidence of lymph node involvement, and 'pN1', indicating regional lymph node involvement to a small extent, with specific thresholds for the lymph node groups and number of lymph nodes involved. Other N categories refer to increasing lymph node involvement. Please note allowable N categories may vary between clinical and pathologic classifications. The full set of allowable clinical and pathologic N categories, along with its current descriptions, can be accessed through the AJCC Staging Manual and any applicable updates and corrections, as well as the AJCC API."
 * include codes from system AJCC
 
 ValueSet: TNMDistantMetastasesCategoryVS
 Id: mcode-tnm-distant-metastases-category-vs
 Title: "TNM Distant Metastases Category Value Set"
-Description: "This value set is intended to contain allowable values for the M category, according to TNM staging rules. SNOMED CT codes or AJCC codes (preferably, version 8 for current cancers) are allowed, but are not listed here due to AJCC intellectual property restrictions.
+Description: "This value set is intended to contain allowable values for the M category, according to TNM staging rules. AJCC codes (preferably, version 8 for current cancers) SHOULD be used.
 
-* AJCC terminology: examples of M categories include 'cM0', denoting there is no evidence of distant metastases, and 'pM1', an indication that the cancer has metasticized. The full set of allowable clinical and pathologic M categories, along with its current descriptions, can be accessed through the AJCC Staging Manual and any applicable updates and corrections, as well as the AJCC API.
-
-* SNOMED CT: The SNOMED CT US Edition has content related to the M category under the hierarchy of 385380006 'Metastasis category finding', such as 30893008 'M0 category' and 443841006 'pM1a category'. If using SNOMED CT to store M category findings, the use of codes that do not contain descriptions of the categories, such as the examples provided, is encouraged, as stage finding codes in SNOMED CT may not be up-to-date with current AJCC guidance. Note that SNOMED CT codes do not always make a distinction between clinical and pathological classifications (e.g. 'cM0' and 'pM0' may be represented by the same SNOMED CT code 30893008 'M0 category'). In addition, SNOMED CT may not have complete TNM staging terminology and may require supplementation with codes from another controlled vocabulary (e.g. NCI Thesaurus)."
+* AJCC terminology: examples of M categories include 'cM0', denoting there is no evidence of distant metastases, and 'pM1', an indication that the cancer has metasticized. The full set of allowable clinical and pathologic M categories, along with its current descriptions, can be accessed through the AJCC Staging Manual and any applicable updates and corrections, as well as the AJCC API."
 * codes from system AJCC
 
 ValueSet: CancerRelatedSurgicalProcedureVS
@@ -325,12 +311,11 @@ Description:    "The type of specimen analyzed in a genetic test. The values are
 * SPTY#WND       "Wound"
 
 
-ValueSet:       RadiationProcedureVS
+ValueSet:  RadiationProcedureVS
 Id: mcode-radiation-procedure-vs
 Title: "Radiation Procedure Value Set"
-Description:    "Codes describing radiation therapy procedures. The value set includes a limited set of radiation modality codes from SNOMED CT, however, ICD-10-PCS code from Section D (Radiation Therapy) and appropriate CPT radiation procedure codes are also considered compliant. CPT codes are not explicitly included due to licensing restrictions. ICD-10-PCS codes are not included explicitly because they are not currently supported by the FHIR IG Publishing tool.
+Description:    "Codes describing radiation therapy procedures. The value set includes a limited set of radiation modality codes from SNOMED CT, however, ICD-10-PCS code from Section D (Radiation Therapy) and appropriate CPT radiation procedure codes are also considered compliant. CPT codes are not explicitly included due to licensing restrictions. ICD-10-PCS codes are not included explicitly because they are not currently supported by the FHIR IG Publishing tool."
 
-Conformance note: If an ICD-10-PCS code is used, and a semantically equivalent SNOMED CT or CPT code is available, the resulting Procedure instance will not be compliant with [US Core Profiles](http://hl7.org/fhir/us/core/index.html)."
 * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
 * SCT#448385000	"Megavoltage radiation therapy using photons (procedure)"
 * SCT#45643008	"Teleradiotherapy using electrons (procedure)"
@@ -417,49 +402,6 @@ Description:    "Codes for body sites that can be targets of radiation therapy. 
 // no concept for hemibody
 
 
-/*
-ValueSet:       KarnofskyPerformanceStatusVS
-Title: "Karnofsky Performance Status Value Set"
-Description:    "Value set for Karnofsky Performance Status, with codes for each decade from 100 to 0. Higher scores are associated with better functional status, with 100 representing no symptoms or evidence of disease, and 0 representing death. This value set corresponds to LOINC list LL4986-7"
-* LNC#LA29175-9   "KPS 100: Normal; no complaints; no evidence of disease"
-* LNC#LA29176-7   "KPS 90: Able to carry on normal activity; minor signs or symptoms of disease"
-* LNC#LA29177-5   "KPS 80: Normal activity with effort; some signs or symptoms of disease"
-* LNC#LA29178-3   "KPS 70: Cares for self; unable to carry on normal activity or do active work"
-* LNC#LA29179-1   "KPS 60: Requires occasional assistance but is able to care for most needs"
-* LNC#LA29180-9   "KPS 50: Requires considerable assistance and frequent medical care"
-* LNC#LA29181-7   "KPS 40: Disabled; requires special care and assistance"
-* LNC#LA29182-5   "KPS 30: Severely disabled; hospitalization is indicated, although death not imminent"
-* LNC#LA29183-3   "KPS 20: Very sick; hospitalization necessary; active supportive treatment necessary"
-* LNC#LA29184-1   "KPS 10: Moribund; fatal processes progressing rapidly"
-* LNC#LA9627-6    "KPS 0: Dead"
-
-ValueSet:       ECOGPerformanceStatusVS
-Title: "ECOG Performance Status Value Set"
-Description:    "Value set for Eastern Cooperative Oncology Group performance status. Values range from grade 0 (Asymptomatic) to grade 5 (Dead)."
-* SCT#425389002   "ECOG Grade 0: Asymptomatic"
-* SCT#422512005   "ECOG Grade 1: Symptomatic but completely ambulatory"
-* SCT#422894000   "ECOG Grade 2: Symptomatic, <50% in bed during the day"
-* SCT#423053003   "ECOG Grade 3: Symptomatic, >50% in bed, but not bedbound"
-* SCT#423237006   "ECOG Grade 4: Bedbound"
-* SCT#423409001   "ECOG Grade 5: Death"
-
-ValueSet:  AnatomicalDirectionVS
-Title: "Anatomical Direction Value Set"
-Description:       "Terms that specify anatomical direction."
-* codes from system SCT where concept is-a #272424004 "Relative sites (qualifier value)"
-
-ValueSet:       LandmarkTypeVS
-Title: "Landmark Type Value Set"
-Description:    "The type of feature that constitutes the landmark, for example, particularly if the landmark is an acquired body structure or physical object."
-* SCT#361083003       "Normal anatomy (body structure)"
-* SCT#341000119102	"Tattoo of skin"	
-* SCT#275322007	    "Scar"
-* SCT#38033009        "Amputation stump (body structure)"
-* SCT#13136005        "Injection site (morphologic abnormality)"
-* SCT#43526002        "Operative site (morphologic abnormality)"
-* codes from system SCT where concept is-a #40388003 "Implant, device (physical object)"
-*/
-
 ValueSet: LocationQualifierVS
 Id: mcode-location-qualifier-vs
 Title: "Location Qualifier Value Set"
@@ -529,6 +471,7 @@ Description: "Value set containing LOINC codes that describe performance status.
 * LNC#89247-1 "ECOG Performance Status score"
 * LNC#89243-0 "Karnofsky Performance Status score"
 
+// MK 10-30-2020: The sole reason for the CoreLaboratoryVS (and CBC and CMP value sets) is because, without it, the Patient Bundle disciminator won't work. The CBC and CMP together limit the LONIC codes a resource can be identified with the laboratory slice of the bundle. The category doesn't help because other slices also have #laboratory as their Observation.category.
 ValueSet: CoreLaboratoryVS
 Id: mcode-core-laboratory-vs
 Title: "Core Laboratory Value Set"
@@ -536,7 +479,6 @@ Description: "Value set containing the LOINC codes that describe the core CBC an
 * ^copyright = "This material contains content from LOINC (http://loinc.org). LOINC is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc"
 * include codes from valueset CBCVS 
 * include codes from valueset CMPVS
-
 
 ValueSet: CBCVS
 Id: mcode-cbc-vs
@@ -659,7 +601,57 @@ Description: "Value set containing the LOINC codes typical of a Comprehensive Me
 * LNC#33037-3 "Anion gap in Serum or Plasma"
 
 
-/* 
+
+/* SAVE for possible future use
+
+ValueSet:  AnatomicalOrientationVS
+Title: "Anatomical Orientation Value Set"
+Description:  "Terms that specify anatomical orientation."
+* codes from system SCT where concept is-a #272424004 "Relative sites (qualifier value)"
+
+ValueSet:       KarnofskyPerformanceStatusVS
+Title: "Karnofsky Performance Status Value Set"
+Description:    "Value set for Karnofsky Performance Status, with codes for each decade from 100 to 0. Higher scores are associated with better functional status, with 100 representing no symptoms or evidence of disease, and 0 representing death. This value set corresponds to LOINC list LL4986-7"
+* LNC#LA29175-9   "KPS 100: Normal; no complaints; no evidence of disease"
+* LNC#LA29176-7   "KPS 90: Able to carry on normal activity; minor signs or symptoms of disease"
+* LNC#LA29177-5   "KPS 80: Normal activity with effort; some signs or symptoms of disease"
+* LNC#LA29178-3   "KPS 70: Cares for self; unable to carry on normal activity or do active work"
+* LNC#LA29179-1   "KPS 60: Requires occasional assistance but is able to care for most needs"
+* LNC#LA29180-9   "KPS 50: Requires considerable assistance and frequent medical care"
+* LNC#LA29181-7   "KPS 40: Disabled; requires special care and assistance"
+* LNC#LA29182-5   "KPS 30: Severely disabled; hospitalization is indicated, although death not imminent"
+* LNC#LA29183-3   "KPS 20: Very sick; hospitalization necessary; active supportive treatment necessary"
+* LNC#LA29184-1   "KPS 10: Moribund; fatal processes progressing rapidly"
+* LNC#LA9627-6    "KPS 0: Dead"
+
+ValueSet:       ECOGPerformanceStatusVS
+Title: "ECOG Performance Status Value Set"
+Description:    "Value set for Eastern Cooperative Oncology Group performance status. Values range from grade 0 (Asymptomatic) to grade 5 (Dead)."
+* SCT#425389002   "ECOG Grade 0: Asymptomatic"
+* SCT#422512005   "ECOG Grade 1: Symptomatic but completely ambulatory"
+* SCT#422894000   "ECOG Grade 2: Symptomatic, <50% in bed during the day"
+* SCT#423053003   "ECOG Grade 3: Symptomatic, >50% in bed, but not bedbound"
+* SCT#423237006   "ECOG Grade 4: Bedbound"
+* SCT#423409001   "ECOG Grade 5: Death"
+
+ValueSet:  AnatomicalDirectionVS
+Title: "Anatomical Direction Value Set"
+Description:       "Terms that specify anatomical direction."
+* codes from system SCT where concept is-a #272424004 "Relative sites (qualifier value)"
+
+ValueSet:       LandmarkTypeVS
+Title: "Landmark Type Value Set"
+Description:    "The type of feature that constitutes the landmark, for example, particularly if the landmark is an acquired body structure or physical object."
+* SCT#361083003       "Normal anatomy (body structure)"
+* SCT#341000119102	"Tattoo of skin"	
+* SCT#275322007	    "Scar"
+* SCT#38033009        "Amputation stump (body structure)"
+* SCT#13136005        "Injection site (morphologic abnormality)"
+* SCT#43526002        "Operative site (morphologic abnormality)"
+* codes from system SCT where concept is-a #40388003 "Implant, device (physical object)"
+
+
+-------------
 * include codes from LNC
 * exclude codes from valueset TumorMarkerTestVS
 * exclude LNC#53041-0 "DNA region of interest panel"

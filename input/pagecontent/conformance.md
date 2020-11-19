@@ -47,7 +47,7 @@ mCODE Data Senders SHALL support the following operations:
         GET [base]/Patient/[id]
 
     <!-- If the image below is not wrapped in a div tag, the publisher tries to wrap text around the image, which is not desired. -->
-    <div style="text-align: center;"><img src="mcode-patient.svg" alt="UML swimlane diagram showing mCODE Patient operation."></div>
+    <div style="text-align: center;"><img src="mcode-patient-pull.svg" alt="UML swimlane diagram showing mCODE Patient operation."></div>
 
 1. **List mCODE Patients**. mCODE Data Senders SHALL implement AT LEAST ONE of the following operations UNLESS they are a specialty system that does not implement `CancerPatient` due to unavailable data as described above.
 

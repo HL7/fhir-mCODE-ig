@@ -307,7 +307,6 @@ groups:
       - StructureDefinition/mcode-tumor-size
       - StructureDefinition/mcode-tumor
       - ValueSet/mcode-tumor-size-units-vs
+      - ValueSet/mcode-tumor-size-method-vs
       - Observation/example1-mcode-tumor-size
       - BodyStructure/example1-mcode-tumor
-
-

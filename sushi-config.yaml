@@ -314,6 +314,8 @@ groups:
       - CapabilityStatement/mcode-receiver-fallback2
       - CapabilityStatement/mcode-receiver-fallback3
       - OperationDefinition/mcode-get-patient-bundle
+      - SearchParameter/Condition-code
+      - SearchParameter/Patient-id
 
   # Experimental
   ExperimentalResourcesTumorSize:

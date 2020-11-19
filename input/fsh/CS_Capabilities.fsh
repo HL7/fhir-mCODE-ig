@@ -51,14 +51,13 @@ RuleSet: mCODE_CS_Server
 * rest[serverSlice].resource[PatientSlice].supportedProfile[0] = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-patient"
 
 // GET [base]/Patient/[id]
-// TODO: is this the correct way to specify this? Do I need an additional `searchParam` to specify `[id]`?
 * rest[serverSlice].resource[PatientSlice].interaction[0].code = #read
 * rest[serverSlice].resource[PatientSlice].interaction[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest[serverSlice].resource[PatientSlice].interaction[0].extension.valueCode = #SHALL
 
 * rest[serverSlice].resource[PatientSlice].searchParam[0].name = "_id"
 * rest[serverSlice].resource[PatientSlice].searchParam[0].type = #uri
-* rest[serverSlice].resource[PatientSlice].searchParam[0].definition = ""
+* rest[serverSlice].resource[PatientSlice].searchParam[0].definition = "http://hl7.org/fhir/us/mcode/SearchParameter/Patient-id"
 * rest[serverSlice].resource[PatientSlice].searchParam[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest[serverSlice].resource[PatientSlice].searchParam[0].extension.valueCode = #SHALL
 
@@ -82,7 +81,7 @@ RuleSet: mCODE_CS_Server_Fallback
 
 * rest[serverSlice].resource[ConditionSlice].searchParam[0].name = "code:in"
 * rest[serverSlice].resource[ConditionSlice].searchParam[0].type = #uri
-* rest[serverSlice].resource[ConditionSlice].searchParam[0].definition = "http://hl7.org/fhir/us/mcode/SearchParameter/SearchParameter-"
+* rest[serverSlice].resource[ConditionSlice].searchParam[0].definition = "http://hl7.org/fhir/us/mcode/SearchParameter/Condition-code"
 * rest[serverSlice].resource[ConditionSlice].searchParam[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest[serverSlice].resource[ConditionSlice].searchParam[0].extension.valueCode = #SHALL
 
@@ -107,6 +106,7 @@ Description: "Defines the preferred requirements for an mCODE Data Sender"
 
 * rest[serverSlice].resource[PatientSlice].searchParam[0].name = "_profile"
 * rest[serverSlice].resource[PatientSlice].searchParam[0].type = #token
+* rest[serverSlice].resource[PatientSlice].searchParam[0].definition = "http://hl7.org/fhir/SearchParameter/Resource-profile"
 * rest[serverSlice].resource[PatientSlice].searchParam[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest[serverSlice].resource[PatientSlice].searchParam[0].extension.valueCode = #SHALL
 
@@ -187,6 +187,7 @@ RuleSet: mCODE_CS_Client
 
 * rest[clientSlice].resource[PatientSlice].searchParam[0].name = "_id"
 * rest[clientSlice].resource[PatientSlice].searchParam[0].type = #uri
+* rest[clientSlice].resource[PatientSlice].searchParam[0].definition = "http://hl7.org/fhir/us/mcode/SearchParameter/Patient-id"
 * rest[clientSlice].resource[PatientSlice].searchParam[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest[clientSlice].resource[PatientSlice].searchParam[0].extension.valueCode = #SHALL
 
@@ -210,6 +211,7 @@ RuleSet: mCODE_CS_Client_Fallback
 
 * rest[clientSlice].resource[ConditionSlice].searchParam[0].name = "code:in"
 * rest[clientSlice].resource[ConditionSlice].searchParam[0].type = #uri
+* rest[clientSlice].resource[ConditionSlice].searchParam[0].definition = "http://hl7.org/fhir/us/mcode/SearchParameter/Condition-code"
 * rest[clientSlice].resource[ConditionSlice].searchParam[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest[clientSlice].resource[ConditionSlice].searchParam[0].extension.valueCode = #SHALL
 
@@ -234,6 +236,7 @@ Description: "Defines the preferred requirements for an mCODE Data Receiver"
 
 * rest[clientSlice].resource[PatientSlice].searchParam[0].name = "_profile"
 * rest[clientSlice].resource[PatientSlice].searchParam[0].type = #token
+* rest[clientSlice].resource[PatientSlice].searchParam[0].definition = "http://hl7.org/fhir/SearchParameter/Resource-profile"
 * rest[clientSlice].resource[PatientSlice].searchParam[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest[clientSlice].resource[PatientSlice].searchParam[0].extension.valueCode = #SHALL
 

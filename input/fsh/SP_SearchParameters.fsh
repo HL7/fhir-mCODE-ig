@@ -1,17 +1,33 @@
-Instance: SearchParameter-patients-by-profile
+Instance: Patient-id
 InstanceOf: SearchParameter
-Title: "Search by _profile in Patients"
+Title: "Search by _id in Patients with multipleOr"
+* url = "http://hl7.org/fhir/us/mcode/SearchParameter/Patient-id"
+* derivedFrom = "http://hl7.org/fhir/SearchParameter/Resource-id"
+* name = "_id"
 * status = #draft
 * experimental = true
-* url = "http://hl7.org/fhir/us/mcode/SearchParameter/SearchParameter-patients-by-profile"
-* description = "This SearchParameter enables query of patients by meta.profile to identify resources conforming to CancerPatient."
-* name = "patients-by-profile"
-* code = #_profile
-* base[0] = #Encounter
+* description = "This SearchParameter enables query of patients by _id with mutlipleOr enabled."
+* code = #_id
+* base[0] = #Patient
 * type = #token
-* expression = "hospitalization.dispositionCode"
-
-* xpath = "f:hospitalization/f:dispositionCode"
-* xpathUsage = #normal
 * multipleOr = true
-* multipleAnd = true
+* expression = "Resource.id"
+* xpath = "f:Resource/f:id"
+* xpathUsage = #normal
+
+Instance: Condition-code
+InstanceOf: SearchParameter
+Title: "Search by code:in in Conditions"
+* url = "http://hl7.org/fhir/us/mcode/SearchParameter/Condition-code"
+* derivedFrom = "http://hl7.org/fhir/SearchParameter/clinical-code"
+* name = "code"
+* status = #draft
+* experimental = true
+* description = "This SearchParameter enables query of conditions by code with the `in` modifier."
+* code = #code
+* base[0] = #Condition
+* type = #token
+* expression = "Condition.code"
+* xpath = "f:Condition/f:code"
+* xpathUsage = #normal
+* modifier = #in

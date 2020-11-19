@@ -16,7 +16,7 @@ Description:  "Abstract parent class for describing a primary or secondary metas
 * extension[histologyMorphologyBehavior] ^definition = "An extension describing the morphologic and behavioral characteristics of the cancer."
 * bodySite.extension[locationQualifier] ^short = "Location Qualifier"
 * bodySite.extension[locationQualifier] ^definition = "Qualifier to refine the anatomical location. These include qualifiers for laterality, relative location, directionality, number, and plane."
-// proposing to take out the non-US Core category and allow clinicians to choose
+// removed the non-US Core category and allow clinicians to choose MK 11-19-2020
 //* category = SCT#64572001 //"Disease"
 * bodySite from CancerBodyLocationVS (extensible)
 * asserter only Reference(Practitioner or PractitionerRole)

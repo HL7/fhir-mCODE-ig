@@ -6,7 +6,7 @@ Description:  "Records the dimensions of a tumor"
 * ^status = #draft
 * ^experimental = true
 
-// LOINC code indicatign this is a tumor size
+// LOINC code indicating this is a tumor size
 * code = LNC#21889-1 //"Size Tumor"
 * code MS
 

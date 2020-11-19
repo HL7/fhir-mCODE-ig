@@ -12,18 +12,18 @@ Observation resources associated with an mCODE patient with Observation.code LOI
 * bodySite 0..0
 * referenceRange 0..0
 * hasMember 0..0
-/*
-* identifier ^slicing.discriminator.type = #value
-* identifier ^slicing.discriminator.path = "type.coding.code"
-* identifier ^slicing.rules = #open
-* identifier contains
-    AccessionIdentifier 0..1 MS and
-    FillerOrderNumber 0..1 MS and
-    PlacerOrderNumber 0..1 MS
-* identifier[AccessionIdentifier].type = IDTYPE#ACSN
-* identifier[FillerOrderNumber].type = IDTYPE#FILL
-* identifier[PlacerOrderNumber].type = IDTYPE#PLAC
-*/
+
+//* identifier ^slicing.discriminator.type = #value
+//* identifier ^slicing.discriminator.path = "type.coding.code"
+//* identifier ^slicing.rules = #open
+//* identifier contains
+//    AccessionIdentifier 0..1 MS and
+//    FillerOrderNumber 0..1 MS and
+//    PlacerOrderNumber 0..1 MS
+//* identifier[AccessionIdentifier].type = IDTYPE#ACSN
+//* identifier[FillerOrderNumber].type = IDTYPE#FILL
+//* identifier[PlacerOrderNumber].type = IDTYPE#PLAC
+
 * code = LNC#69548-6 //"Genetic variant assessment"
 * method from http://loinc.org/vs/LL4048-6 (extensible)
 * specimen only Reference(GeneticSpecimen)

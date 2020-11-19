@@ -21,10 +21,7 @@ Description:  "Records the dimensions of a tumor"
 
 * code and component and specimen and focus MS
 // Store tumor size in component with 3 valueCodableConcepts for each tumor dimension
-* component ^slicing.discriminator.type = #pattern
-* component ^slicing.discriminator.path = "code"
-* component ^slicing.rules = #open
-* component ^slicing.description = "Slice based on the component.code pattern"
+* insert ObservationComponentSlicingRules
 // Require 1 dimension; the other 2 are optional
 * component contains
     tumorLongestDimension 1..1 MS and

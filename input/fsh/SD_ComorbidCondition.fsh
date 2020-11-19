@@ -23,10 +23,7 @@ Description: "Comorbid conditions for a cancer condition, using Elixhauser comor
 * ^abstract = false
 * focus and component and component.extension MS
 * focus only Reference(PrimaryCancerCondition)
-* component ^slicing.discriminator.type = #pattern
-* component ^slicing.discriminator.path = "code"
-* component ^slicing.rules = #open
-* component ^slicing.description = "Slice based on the component.code pattern"
+* insert ObservationComponentSlicingRules
 * focus and component and component.extension[conditionReference] and component.extension[conditionCode] and component.extension[conditionReference] MS
 * component contains 
     alcoholAbuse 0..1 and

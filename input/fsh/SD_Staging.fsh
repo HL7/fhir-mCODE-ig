@@ -34,9 +34,7 @@ Observation resources associated with an mCODE patient with Observation.code LOI
 * hasMember MS
 * code = LNC#21908-9 //"Stage group.clinical Cancer"
 * valueCodeableConcept from TNMStageGroupVS (preferred)
-* hasMember ^slicing.discriminator.type = #profile // #pattern
-* hasMember ^slicing.discriminator.path =  "$this.resolve()" // "$this.resolve().code"
-* hasMember ^slicing.rules = #open
+* insert ObservationHasMemberSlicingRules
 * hasMember contains
     TNMClinicalPrimaryTumorCategory 0..1 and
     TNMClinicalRegionalNodesCategory 0..1 and
@@ -105,11 +103,10 @@ Observation resources associated with an mCODE patient with Observation.code LOI
 * ^abstract = false
 * hasMember MS
 * code =  LNC#21902-2 //"Stage group.pathology Cancer"
+* insert CategorySlicingRules
 * category = ObsCat#laboratory "laboratory"
 * valueCodeableConcept from TNMStageGroupVS (preferred)
-* hasMember ^slicing.discriminator.type = #profile // #pattern
-* hasMember ^slicing.discriminator.path =  "$this.resolve()" // "$this.resolve().code"
-* hasMember ^slicing.rules = #open
+* insert ObservationHasMemberSlicingRules
 * hasMember contains
     TNMPathologicalPrimaryTumorCategory 0..1 and
     TNMPathologicalRegionalNodesCategory 0..1 and
@@ -139,6 +136,7 @@ Conformance Statement:
 Observation resources associated with an mCODE patient with Observation.code LOINC 21899-0 MUST conform to this profile. Beyond this requirement, a producer of resources SHOULD ensure that any resource instance associated with an mCODE patient that would reasonably be expected to conform to this profile SHOULD be published in this form."
 * ^abstract = false
 * code = LNC#21899-0 //"Primary tumor.pathology Cancer"
+* insert CategorySlicingRules
 * category = ObsCat#laboratory "laboratory"
 * valueCodeableConcept from TNMPrimaryTumorCategoryVS (preferred)
 
@@ -153,6 +151,7 @@ Conformance Statement:
 Observation resources associated with an mCODE patient with Observation.code LOINC 21900-6 MUST conform to this profile. Beyond this requirement, a producer of resources SHOULD ensure that any resource instance associated with an mCODE patient that would reasonably be expected to conform to this profile SHOULD be published in this form."
 * ^abstract = false
 * code = LNC#21900-6 //"Regional lymph nodes.pathology [Class] Cancer"
+* insert CategorySlicingRules
 * category = ObsCat#laboratory "laboratory"
 * valueCodeableConcept from TNMRegionalNodesCategoryVS (preferred)
 
@@ -167,5 +166,6 @@ Conformance Statement:
 Observation resources associated with an mCODE patient with Observation.code LOINC 21901-4 MUST conform to this profile. Beyond this requirement, a producer of resources SHOULD ensure that any resource instance associated with an mCODE patient that would reasonably be expected to conform to this profile SHOULD be published in this form."
 * ^abstract = false
 * code = LNC#21901-4 //"Distant metastases.pathology [Class] Cancer"
+* insert CategorySlicingRules
 * category = ObsCat#laboratory "laboratory"
 * valueCodeableConcept from TNMDistantMetastasesCategoryVS (preferred)

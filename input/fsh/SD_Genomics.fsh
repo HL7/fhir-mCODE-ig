@@ -12,28 +12,25 @@ Observation resources associated with an mCODE patient with Observation.code LOI
 * bodySite 0..0
 * referenceRange 0..0
 * hasMember 0..0
-/*
-* identifier ^slicing.discriminator.type = #value
-* identifier ^slicing.discriminator.path = "type.coding.code"
-* identifier ^slicing.rules = #open
-* identifier contains
-    AccessionIdentifier 0..1 MS and
-    FillerOrderNumber 0..1 MS and
-    PlacerOrderNumber 0..1 MS
-* identifier[AccessionIdentifier].type = IDTYPE#ACSN
-* identifier[FillerOrderNumber].type = IDTYPE#FILL
-* identifier[PlacerOrderNumber].type = IDTYPE#PLAC
-*/
+
+//* identifier ^slicing.discriminator.type = #value
+//* identifier ^slicing.discriminator.path = "type.coding.code"
+//* identifier ^slicing.rules = #open
+//* identifier contains
+//    AccessionIdentifier 0..1 MS and
+//    FillerOrderNumber 0..1 MS and
+//    PlacerOrderNumber 0..1 MS
+//* identifier[AccessionIdentifier].type = IDTYPE#ACSN
+//* identifier[FillerOrderNumber].type = IDTYPE#FILL
+//* identifier[PlacerOrderNumber].type = IDTYPE#PLAC
+
 * code = LNC#69548-6 //"Genetic variant assessment"
 * method from http://loinc.org/vs/LL4048-6 (extensible)
 * specimen only Reference(GeneticSpecimen)
 * value[x] only CodeableConcept
 * value[x] ^definition = "The overall result of the genetic test; specifically, whether a variant is present, absent, no call, or indeterminant."
 * valueCodeableConcept from http://loinc.org/vs/LL1971-2 (required)
-* component ^slicing.discriminator.type = #pattern
-* component ^slicing.discriminator.path = "code"
-* component ^slicing.rules = #open
-* component ^slicing.description = "Slice based on the component.code pattern"
+* insert ObservationComponentSlicingRules
 * component contains
     GeneStudied 0..* MS and
     VariationCode 0..* MS and
@@ -157,10 +154,7 @@ DiagnosticReport resources associated with an mCODE patient with DiagnoticReport
 * category[GenomicsCategory] = DiagnosticService#GE
 * code = LNC#81247-9 //"Master HL7 genetic variant reporting panel"
 * specimen only Reference(GeneticSpecimen)
-* result ^slicing.discriminator.type = #pattern
-* result ^slicing.discriminator.path = "$this.resolve().code"
-* result ^slicing.rules = #open
-* result ^slicing.description = "Slice based on the reference profile and code pattern"
+* insert DiagnosticReportResultSlicingRules
 * result contains
     CancerGeneticVariant 0..1 MS and
     GenomicRegionStudied 0..1 MS
@@ -186,10 +180,7 @@ Observation resources associated with an mCODE patient with DiagnoticReport.code
 * code MS
 * code = LNC#53041-0 //"DNA region of interest panel"
 * value[x] 0..0
-* component ^slicing.discriminator.type = #pattern
-* component ^slicing.discriminator.path = "code"
-* component ^slicing.rules = #open
-* component ^slicing.description = "Slice based on the component.code pattern"
+* insert ObservationComponentSlicingRules
 * component contains
     GeneMutations 0..* MS and
     GeneStudied 0..* MS and

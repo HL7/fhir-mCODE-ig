@@ -30,6 +30,7 @@ Conformance statement:
 
 Procedure resources associated with an mCODE patient with Procedure.category SNOMED-CT 53438000 MAY conform to this profile. Beyond this requirement, a producer of resources SHOULD ensure that any resource instance associated with an mCODE patient that would reasonably be expected to conform to this profile SHOULD be published in this form. Specifically, we expect that any radiation therapy related to the treatment of a `PrimaryCancerCondition` or `SecondaryCancerCondition` would be published in this form."
 * ^abstract = false
+// Do not insert the category slicing rules because Procedure.category is 0..1. 
 * category = SCT#53438000 //"Radiation therapy procedure or service (procedure)"
 * code from RadiationProcedureVS (extensible)
 * bodySite from RadiationTargetBodySiteVS (extensible)
@@ -48,6 +49,7 @@ Conformance statement:
 
 Procedure resources associated with an mCODE patient with Procedure.category SNOMED-CT 387713003 MAY conform to this profile. Beyond this requirement, a producer of resources SHOULD ensure that any resource instance associated with an mCODE patient that would reasonably be expected to conform to this profile SHOULD be published in this form. Specifically, we expect that any surgical procedure related to the treatment of a `PrimaryCancerCondition` or `SecondaryCancerCondition` would be published in this form."
 * ^abstract = false
+// Do not insert the category slicing rules because Procedure.category is 0..1.
 * category = SCT#387713003 //"Surgical procedure"
 * code from CancerRelatedSurgicalProcedureVS (extensible)
 

@@ -139,7 +139,6 @@ groups:
       - ValueSet/mcode-cancer-disease-status-evidence-type-vs
       - ValueSet/mcode-cancer-disorder-vs
       - ValueSet/mcode-cancer-related-surgical-procedure-vs
-      - ValueSet/mcode-cancer-staging-codes-vs
       - ValueSet/mcode-cancer-staging-system-vs
       - ValueSet/mcode-clinvar-vs
       - ValueSet/mcode-condition-status-trend-vs
@@ -149,7 +148,6 @@ groups:
       - ValueSet/mcode-hgvs-vs
       - ValueSet/mcode-histology-morphology-behavior-vs
       - ValueSet/mcode-location-qualifier-vs
-      - ValueSet/mcode-performance-status-codes-vs
       - ValueSet/mcode-present-absent-unknown
       - ValueSet/mcode-primary-or-uncertain-behavior-cancer-disorder-vs
       - ValueSet/mcode-radiation-procedure-vs

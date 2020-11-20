@@ -15,7 +15,6 @@ Description:    "Abstract parent class for performance status profiles."
 * component 0..0
 * basedOn only Reference (ServiceRequest or CarePlan)
 * partOf only Reference (Procedure)
-* code from PerformanceStatusCodesVS (required)
 * subject only Reference(USCorePatient)
 * effective[x] only dateTime or Period
 * performer only Reference(Practitioner)

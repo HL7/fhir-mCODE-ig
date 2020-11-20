@@ -19,7 +19,6 @@
 <artifact deprecated="true" id="Profile/mcode-cancer-related-surgical-procedure" key="cancer-related-surgical-procedure" name="Cancer Related Surgical Procedure"/>
 <artifact deprecated="true" id="ValueSet/mcode-cancer-related-surgical-procedure-value-set" key="cancer-related-surgical-procedure-value-set" name="Cancer Related Surgical Procedure Value Set"/>
 <artifact id="StructureDefinition/mcode-cancer-stage-parent" key="cancer-stage-parent" name="Cancer Stage Parent"/>
-<artifact id="ValueSet/mcode-cancer-staging-codes-vs" key="ValueSet-mcode-cancer-staging-codes-vs" name="Cancer Staging Codes Value Set"/>
 <artifact id="ValueSet/mcode-cancer-staging-system-vs" key="cancer-staging-system-value-set" name="Cancer Staging System Value Set"/>
 <artifact id="StructureDefinition/mcode-cancer-related-comorbidities" key="StructureDefinition-mcode-cancer-related-comorbidities" name="Cancer-Related Comorbidities"/>
 <artifact id="StructureDefinition/mcode-cancer-related-medication-request" key="StructureDefinition-mcode-cancer-related-medication-request" name="Cancer-Related Medication Request"/>
@@ -86,7 +85,6 @@
 <artifact id="ValueSet/mcode-location-qualifier-vs" key="ValueSet-mcode-location-qualifier-vs" name="Location Qualifier Value Set"/>
 <artifact id="ValueSet/mcode-tumor-size-method-vs" key="ValueSet-mcode-tumor-size-method-vs" name="Methods for measuring tumor size"/>
 <artifact deprecated="true" key="Observation" name="Observation"/>
-<artifact id="ValueSet/mcode-performance-status-codes-vs" key="ValueSet-mcode-performance-status-codes-vs" name="Performance Status Codes Value Set"/>
 <artifact id="StructureDefinition/mcode-performance-status-parent" key="StructureDefinition-mcode-performance-status-parent" name="Performance Status Parent"/>
 <artifact id="ValueSet/mcode-present-absent-unknown" key="ValueSet-mcode-present-absent-unknown" name="Present-Absent-Unknown"/>
 <artifact id="StructureDefinition/mcode-primary-cancer-condition" key="primary-cancer-condition" name="Primary Cancer Condition"/>

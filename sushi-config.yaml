@@ -299,6 +299,24 @@ groups:
       - Specimen/scenario1-mcode-genetic-specimen
       - Specimen/scenario1-specimen-tumor
 
+  # Conformance
+  Conformance:
+    name: Conformance Resources
+    description: CapabilityStatements and OperationDefinitions
+    resources:
+      - StructureDefinition/MCodeCapabilityStatement
+      - CapabilityStatement/mcode-sender-preferred
+      - CapabilityStatement/mcode-sender-fallback1
+      - CapabilityStatement/mcode-sender-fallback2
+      - CapabilityStatement/mcode-sender-fallback3
+      - CapabilityStatement/mcode-receiver-preferred
+      - CapabilityStatement/mcode-receiver-fallback1
+      - CapabilityStatement/mcode-receiver-fallback2
+      - CapabilityStatement/mcode-receiver-fallback3
+      - OperationDefinition/mcode-get-patient-bundle
+      - SearchParameter/Condition-code
+      - SearchParameter/Patient-id
+
   # Experimental
   ExperimentalResourcesTumorSize:
     name: Experimental Resources - Tumor Size

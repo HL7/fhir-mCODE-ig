@@ -61,7 +61,7 @@ On macOS:
 1. Install Java if you don't already have it
 2. `brew install graphviz`
 3. Download `plantuml.jar` from <https://plantuml.com/download>
-4. From the `input/images-source/` folder, run `java -jar /path/to/plantuml.jar -tsvg -o ../images/ input/images-source/*.puml`
+4. From the root folder, run `java -jar /path/to/plantuml.jar -tsvg -o ../images/ input/images-source/*.puml`
 
 On Windows:
 

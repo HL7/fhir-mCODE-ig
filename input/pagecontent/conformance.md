@@ -87,11 +87,11 @@ mCODE Data Senders SHALL support the following operations:
             <!-- If the image below is not wrapped in a div tag, the publisher tries to wrap text around the image, which is not desired. -->
             <div style="text-align: center;"><img src="mcode-patients-pull-2_3.svg" alt="UML swimlane diagram showing mCODE Patients operations in the pull model: Option 2.3, fallback."></div>
 
-1. **Retrieve mCODE Patient Bundle**. mCODE Data Senders SHALL implement the [this operation](OperationDefinition-mcode-get-patient-bundle.html), which retrieves an mCODE Patient Bundle (defined below) for a given Patient ID.
+1. **Retrieve mCODE Patient Bundle**. mCODE Data Senders SHALL implement the [this operation](OperationDefinition-mcode-patient-everything.html), which retrieves an mCODE Patient Bundle (defined below) for a given Patient ID.
 
-        GET [base]/$mcode-patient-bundle/[id]
+        GET [base]/Patient/[id]/$mcode-everything
 
-    This endpoint SHALL support `start` and `end` parameters which operate the same as in the [`Patient/$everything` operation](https://www.hl7.org/fhir/operation-patient-everything.html).
+    This endpoint SHALL support `start` and `end` parameters which operate the same as in the [`Patient/[id]/$everything` operation](https://www.hl7.org/fhir/operation-patient-everything.html).
 
     <!-- If the image below is not wrapped in a div tag, the publisher tries to wrap text around the image, which is not desired. -->
     <div style="text-align: center;"><img src="mcode-patient-bundle-pull.svg" alt="UML swimlane diagram showing mCODE Patient Bundle operations in the push model"></div>

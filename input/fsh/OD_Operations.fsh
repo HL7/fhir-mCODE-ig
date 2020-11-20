@@ -1,17 +1,18 @@
-Instance: GetPatientBundleOperation
+Instance: Operation-mcode-patient-everything
 InstanceOf: OperationDefinition
-Description: "Gets an [mCODE Patient Bundle](StructureDefinition-mcode-patient-bundle.html) for a specific patient."
+Description: "Gets an [mCODE Patient Bundle](StructureDefinition-mcode-patient-bundle.html) for a specific patient that contains all of that patient's resources that conform to mCODE Profiles."
 Usage: #definition
 
-* id = "mcode-get-patient-bundle"
-* name = "GetPatientBundle"
-* title = "Retrieve an mCODE Patient Bundle"
+* id = "mcode-patient-everything"
+* name = "Fetch mCODE Patient Bundle for a given Patient"
+* description = "Retrieve all mCODE-conforming resources for a patient as an mCODE Patient Bundle"
 * status = #draft
 * kind = #operation
-* code = #mcode-patient-bundle
-* system = true
+* code = #mcode-everything
+* system = false
 * type = false
-* instance = false
+* instance = true
+* resource[0] = #Patient
 
 // Parameter: Patient ID
 * parameter[0].name = #id

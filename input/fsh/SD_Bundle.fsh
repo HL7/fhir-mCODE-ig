@@ -24,9 +24,9 @@ Description: "A collection of data for an mCODE cancer patient."
     geneticSpecimen 0..* MS and
     genomicRegionStudied 0..* MS and
     cancerRelatedComorbidities 0..* MS and
-    vitalSign 0..* MS and
     coreLaboratory 0..* MS and
-    otherResources 0..1
+    vitalSign 0..* MS
+
 
 * entry[cancerPatient] ^short = "Cancer Patient"
 * entry[primaryCancerCondition] ^short = "Primary Cancer Condition"
@@ -44,7 +44,6 @@ Description: "A collection of data for an mCODE cancer patient."
 * entry[cancerRelatedComorbidities] ^short = "Cancer-Related Comorbities"
 * entry[vitalSign] ^short = "Vital Sign(s)"
 * entry[coreLaboratory] ^short = "CBC and CMP Laboratory Results"
-* entry[otherResources] ^short = "Other items"
 
 * entry[cancerPatient] ^definition = "The Cancer Patient whose data is included in the bundle (required element)."
 * entry[primaryCancerCondition] ^definition = "The Primary Cancer Condition resource (required element)."
@@ -62,7 +61,6 @@ Description: "A collection of data for an mCODE cancer patient."
 * entry[cancerRelatedComorbidities] ^definition = "Resource(s) capturing Cancer-Related Comorbities."
 * entry[vitalSign] ^definition = "Vital sign data, including blood pressure, height, and weight."
 * entry[coreLaboratory] ^definition = "Complete Blood Count (CBC) and Comprehensive Metabolic Panel (CMP) laboratory results"
-* entry[otherResources] ^definition = "Other items of relevance to the patient, in a bundle."
 
 * entry[cancerPatient].resource only CancerPatient
 * entry[primaryCancerCondition].resource only PrimaryCancerCondition
@@ -80,7 +78,6 @@ Description: "A collection of data for an mCODE cancer patient."
 * entry[cancerRelatedComorbidities].resource only CancerRelatedComorbidities
 * entry[vitalSign].resource only VitalSign
 * entry[coreLaboratory].resource only CoreLaboratory
-* entry[otherResources].resource only OtherResources
 
 
 Profile: CoreLaboratory
@@ -90,9 +87,3 @@ Description: "Abstract profile for discrimination of the core laboratory slice i
 * ^abstract = true
 * code from CoreLaboratoryVS (required)
 
-Profile: OtherResources
-Parent: Bundle
-Id: mcode-other-resources
-Description: "Abstract profile for to define the 'other resources' bundle in the mcode patient bundle."
-* ^abstract = true
-* type = #collection

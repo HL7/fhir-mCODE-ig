@@ -114,7 +114,6 @@ groups:
       - StructureDefinition/mcode-cancer-stage-parent
       - StructureDefinition/mcode-comorbidities-parent
       - StructureDefinition/mcode-core-laboratory
-      - StructureDefinition/mcode-other-resources
       - StructureDefinition/mcode-performance-status-parent
 
 
@@ -252,7 +251,6 @@ groups:
     description: A set of example resources based on [this persona](examples.html#scenario-1-breast-cancer-patient).
     resources:
       - Bundle/scenario1-mcode-patient-bundle
-      - Bundle/scenario1-other-resources
       - Condition/scenario1-mcode-comorbid-condition-depression
       - Condition/scenario1-mcode-comorbid-condition-hypertension
       - Condition/scenario1-mcode-primary-cancer-condition

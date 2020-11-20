@@ -24,7 +24,6 @@ Description: "A collection of data for an mCODE cancer patient."
     geneticSpecimen 0..* MS and
     genomicRegionStudied 0..* MS and
     cancerRelatedComorbidities 0..* MS and
-    coreLaboratory 0..* MS and
     vitalSign 0..* MS
 
 
@@ -43,7 +42,6 @@ Description: "A collection of data for an mCODE cancer patient."
 * entry[genomicRegionStudied] ^short = "Genomic Region(s) Studied"
 * entry[cancerRelatedComorbidities] ^short = "Cancer-Related Comorbities"
 * entry[vitalSign] ^short = "Vital Sign(s)"
-* entry[coreLaboratory] ^short = "CBC and CMP Laboratory Results"
 
 * entry[cancerPatient] ^definition = "The Cancer Patient whose data is included in the bundle (required element)."
 * entry[primaryCancerCondition] ^definition = "The Primary Cancer Condition resource (required element)."
@@ -60,7 +58,6 @@ Description: "A collection of data for an mCODE cancer patient."
 * entry[genomicRegionStudied] ^definition = "Resource(s) representing Genomic Regions Studied."
 * entry[cancerRelatedComorbidities] ^definition = "Resource(s) capturing Cancer-Related Comorbities."
 * entry[vitalSign] ^definition = "Vital sign data, including blood pressure, height, and weight."
-* entry[coreLaboratory] ^definition = "Complete Blood Count (CBC) and Comprehensive Metabolic Panel (CMP) laboratory results"
 
 * entry[cancerPatient].resource only CancerPatient
 * entry[primaryCancerCondition].resource only PrimaryCancerCondition
@@ -77,13 +74,7 @@ Description: "A collection of data for an mCODE cancer patient."
 * entry[genomicRegionStudied].resource only GenomicRegionStudied
 * entry[cancerRelatedComorbidities].resource only CancerRelatedComorbidities
 * entry[vitalSign].resource only VitalSign
-* entry[coreLaboratory].resource only CoreLaboratory
 
 
-Profile: CoreLaboratory
-Parent: USCoreObservationLab
-Id: mcode-core-laboratory
-Description: "Abstract profile for discrimination of the core laboratory slice in the mCODE Patient Bundle."
-* ^abstract = true
-* code from CoreLaboratoryVS (required)
+
 

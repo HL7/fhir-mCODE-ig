@@ -449,9 +449,9 @@ Description:		"Units of measure for length or distance on a human scale."
 * UCUM#[in_i]			"Inch"
 
 // MK 10-24-2020 -- Created this value set for CancerStageParent because the bundle discriminator could not distinguish an instance of CancerDiseaseStatus from CancerStageParent. By limiting the codes that are accepted by CancerStageParent, the profiles no longer overlap.
-ValueSet: LoincCancerStagingCodesVS
-Id: mcode-loinc-cancer-staging-codes-vs
-Title: "LOINC Cancer Staging Codes Value Set"
+ValueSet: CancerStagingCodesVS
+Id: mcode-cancer-staging-codes-vs
+Title: "Cancer Staging Codes Value Set"
 Description: "Value set containing LOINC codes that describe cancer staging, clinical and pathological."
 * ^copyright = "This material contains content from LOINC (http://loinc.org). LOINC is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc"
 * LNC#21908-9 "Stage group.clinical Cancer"
@@ -463,23 +463,16 @@ Description: "Value set containing LOINC codes that describe cancer staging, cli
 * LNC#21900-6 "Regional lymph nodes.pathology [Class] Cancer"
 * LNC#21901-4 "Distant metastases.pathology [Class] Cancer"
 
-ValueSet: LoincPerformanceStatusCodesVS
-Id: mcode-loinc-performance-status-codes-vs
-Title: "LOINC Performance Status Codes Value Set"
+ValueSet: PerformanceStatusCodesVS
+Id: mcode-performance-status-codes-vs
+Title: "Performance Status Codes Value Set"
 Description: "Value set containing LOINC codes that describe performance status."
 * ^copyright = "This material contains content from LOINC (http://loinc.org). LOINC is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc"
 * LNC#89247-1 "ECOG Performance Status score"
 * LNC#89243-0 "Karnofsky Performance Status score"
 
-// MK 10-30-2020: The sole reason for the CoreLaboratoryVS (and CBC and CMP value sets) is because, without it, the Patient Bundle disciminator won't work. The CBC and CMP together limit the LONIC codes a resource can be identified with the laboratory slice of the bundle. The category doesn't help because other slices also have #laboratory as their Observation.category.
-ValueSet: CoreLaboratoryVS
-Id: mcode-core-laboratory-vs
-Title: "Core Laboratory Value Set"
-Description: "Value set containing the LOINC codes that describe the core CBC and CMP labs."
-* ^copyright = "This material contains content from LOINC (http://loinc.org). LOINC is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc"
-* include codes from valueset CBCVS 
-* include codes from valueset CMPVS
 
+/* SAVE for possible future use
 ValueSet: CBCVS
 Id: mcode-cbc-vs
 Title: "Complete Blood Count Value Set"
@@ -600,9 +593,6 @@ Description: "Value set containing the LOINC codes typical of a Comprehensive Me
 * LNC#2028-9 "Carbon dioxide, total [Moles/volume] in Serum or Plasma"
 * LNC#33037-3 "Anion gap in Serum or Plasma"
 
-
-
-/* SAVE for possible future use
 
 ValueSet:  AnatomicalOrientationVS
 Title: "Anatomical Orientation Value Set"

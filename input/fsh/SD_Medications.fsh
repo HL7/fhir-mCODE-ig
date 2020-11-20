@@ -7,8 +7,6 @@ Description:    "A record of the medication prescription or order for a patient 
 Conformance statement:
 
  MedicationRequest resources associated with an mCODE patient SHOULD conform to this profile. Beyond this requirement, a producer of resources SHOULD ensure that any resource instance associated with an mCODE patient that would reasonably be expected to conform to this profile SHOULD be published in this form."
-* ^status = #draft
-* ^experimental = true
 * subject 1..1 MS
 * subject only Reference(USCorePatient)
 * extension contains

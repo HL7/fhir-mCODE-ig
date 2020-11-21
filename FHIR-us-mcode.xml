@@ -32,11 +32,7 @@
 <artifact id="StructureDefinition/mcode-comorbid-condition-reference" key="StructureDefinition-mcode-comorbid-condition-reference" name="Comorbid Condition Reference"/>
 <artifact deprecated="true" id="ValueSet/mcode-comorbid-condition-value-set" key="comorbid-condition-value-set" name="Comorbid Condition Value Set"/>
 <artifact id="StructureDefinition/mcode-comorbidities-parent" key="StructureDefinition-mcode-comorbidities-parent" name="Comorbidities Parent"/>
-<artifact id="ValueSet/mcode-cbc-vs" key="ValueSet-mcode-cbc-vs" name="Complete Blood Count Value Set"/>
-<artifact id="ValueSet/mcode-cmp-vs" key="ValueSet-mcode-cmp-vs" name="Comprehensive Metabolic Panel Value Set"/>
 <artifact id="ValueSet/mcode-condition-status-trend-vs" key="condition-status-trend-value-set" name="Condition Status Trend Value Set"/>
-<artifact id="ValueSet/mcode-core-laboratory-vs" key="ValueSet-mcode-core-laboratory-vs" name="Core Laboratory Value Set"/>
-<artifact id="StructureDefinition/mcode-core-laboratory" key="StructureDefinition-mcode-core-laboratory" name="CoreLaboratory"/>
 <artifact id="ValueSet/mcode-dna-change-type-vs" key="ValueSet-mcode-dna-change-type-vs" name="DNA Change Type Value Set"/>
 <artifact id="StructureDefinition/mcode-ecog-performance-status" key="ecog-performance-status" name="ECOG Performance Status"/>
 <artifact id="ValueSet/elixhauser-alcohol-abuse-vs" key="ValueSet-elixhauser-alcohol-abuse-vs" name="Elixhauser Comorbid Condition Value Set for Alcohol Abuse"/>
@@ -83,16 +79,12 @@
 <artifact id="StructureDefinition/mcode-histology-morphology-behavior" key="StructureDefinition-mcode-histology-morphology-behavior" name="Histology-Morphology-Behavior"/>
 <artifact id="ValueSet/mcode-hgvs-vs" key="ValueSet-mcode-hgvs-vs" name="Human Genome Variation Society Sequence Variant Nomenclature Value Set"/>
 <artifact id="StructureDefinition/mcode-karnofsky-performance-status" key="karnofsky-performance-status" name="Karnofsky Performance Status"/>
-<artifact id="ValueSet/mcode-loinc-cancer-staging-codes-vs" key="ValueSet-mcode-loinc-cancer-staging-codes-vs" name="LOINC Cancer Staging Codes Value Set"/>
-<artifact id="ValueSet/mcode-loinc-performance-status-codes-vs" key="ValueSet-mcode-loinc-performance-status-codes-vs" name="LOINC Performance Status Codes Value Set"/>
 <artifact deprecated="true" id="Extension/mcode-laterality-extension" key="laterality-extension" name="Laterality Extension"/>
 <artifact deprecated="true" id="ValueSet/mcode-laterality-value-set" key="laterality-value-set" name="Laterality Value Set"/>
 <artifact id="StructureDefinition/mcode-location-qualifier" key="StructureDefinition-mcode-location-qualifier" name="Location Qualifier"/>
 <artifact id="ValueSet/mcode-location-qualifier-vs" key="ValueSet-mcode-location-qualifier-vs" name="Location Qualifier Value Set"/>
 <artifact id="ValueSet/mcode-tumor-size-method-vs" key="ValueSet-mcode-tumor-size-method-vs" name="Methods for measuring tumor size"/>
 <artifact deprecated="true" key="Observation" name="Observation"/>
-<artifact id="OperationDefinition/mcode-patient-everything" key="OperationDefinition-mcode-patient-everything" name="Operation-mcode-patient-everything"/>
-<artifact id="StructureDefinition/mcode-other-resources" key="StructureDefinition-mcode-other-resources" name="OtherResources"/>
 <artifact id="StructureDefinition/mcode-performance-status-parent" key="StructureDefinition-mcode-performance-status-parent" name="Performance Status Parent"/>
 <artifact id="ValueSet/mcode-present-absent-unknown" key="ValueSet-mcode-present-absent-unknown" name="Present-Absent-Unknown"/>
 <artifact id="StructureDefinition/mcode-primary-cancer-condition" key="primary-cancer-condition" name="Primary Cancer Condition"/>
@@ -241,7 +233,6 @@
 <artifact id="Observation/scenario1-observation-tumor-sentinel-nodes" key="Observation-scenario1-observation-tumor-sentinel-nodes" name="scenario1-observation-tumor-sentinel-nodes"/>
 <artifact id="Observation/scenario1-observation-tumor-size" key="Observation-scenario1-observation-tumor-size" name="scenario1-observation-tumor-size"/>
 <artifact id="Organization/scenario1-organization1-mcode" key="Organization-scenario1-organization1-mcode" name="scenario1-organization1-mcode"/>
-<artifact id="Bundle/scenario1-other-resources" key="Bundle-scenario1-other-resources" name="scenario1-other-resources"/>
 <artifact id="Practitioner/scenario1-practitioner2-mcode" key="Practitioner-scenario1-practitioner2-mcode" name="scenario1-practitioner2-mcode"/>
 <artifact id="Specimen/scenario1-specimen-tumor" key="Specimen-scenario1-specimen-tumor" name="scenario1-specimen-tumor"/>
 <artifact id="Condition/scenario1-us-core-condition-anxiety" key="Condition-scenario1-us-core-condition-anxiety" name="scenario1-us-core-condition-anxiety"/>

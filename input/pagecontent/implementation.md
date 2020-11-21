@@ -39,7 +39,7 @@ Height, weight, and blood pressure are part of the mCODE data set. However, vita
 
 Complete Blood Count (CBC) and Comprehensive Metabolic Panel (CMP) are part of the mCODE data set. Reporting of these results must conform to the [US Core Laboratory Result Profile](http://hl7.org/fhir/us/core/StructureDefinition-us-core-observation-lab.html). Several examples of laboratory result reporting are given in the [US Core IG](http://hl7.org/fhir/us/core/index.html). For example, see this [erythrocytes laboratory reporting example](http://hl7.org/fhir/us/core/Observation-erythrocytes.html).
 
-In practice, there are many variations on these panels, as exemplified by [this list of various CBCs](https://search.loinc.org/searchLOINC/search.zul?query=CBC). The individual LOINC codes of interest to mCODE include any that may be part of CBC and CMP panels. These codes are captured in the [CBC](ValueSet-mcode-cbc-vs.html) and [CMP](ValueSet-mcode-cmp-vs.html) value sets.
+In practice, there are many variations on these panels, as exemplified by [this list of various CBCs](https://search.loinc.org/searchLOINC/search.zul?query=CBC). The individual LOINC codes of interest to mCODE include any that may be part of CBC and CMP panels.
 
 #### Representing Provenance
 

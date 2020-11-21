@@ -107,6 +107,7 @@ ValueSet:        TumorSizeMethodVS
 Id:              mcode-tumor-size-method-vs
 Title:           "Methods for measuring tumor size"
 Description:     "Methods for measuring tumor size"
+* ^copyright = "This material contains content from LOINC (http://loinc.org). LOINC is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc"
 * LNC#24419-4 "Pathology report gross observation"
 * LNC#29544-4 "Physical findings"
 * LNC#18748-4 "Diagnostic imaging study"

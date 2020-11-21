@@ -5,6 +5,6 @@ title mCODE Patient Bundle: Pull Model
 hide footbox
 participant "mCODE Data Sender" as Sender
 participant "mCODE Data Receiver" as Receiver
-"Receiver" -> "Sender" : ""GET [base]/$mcode-patient-bundle""
+"Receiver" -> "Sender" : ""GET [base]/Patient/[id]/$mcode-everything""
 "Sender" --> "Receiver" : HTTP response containing mCODE Patient Bundle
 @enduml

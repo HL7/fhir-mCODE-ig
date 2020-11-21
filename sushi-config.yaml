@@ -305,7 +305,7 @@ groups:
       - CapabilityStatement/mcode-receiver-fallback1
       - CapabilityStatement/mcode-receiver-fallback2
       - CapabilityStatement/mcode-receiver-fallback3
-      - OperationDefinition/mcode-get-patient-bundle
+      - OperationDefinition/mcode-patient-everything
       - SearchParameter/Condition-code
       - SearchParameter/Patient-id
 

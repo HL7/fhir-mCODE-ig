@@ -20,26 +20,18 @@ Description:  "Records the dimensions of a tumor"
 * focus only Reference(Tumor)
 * focus ^short = "Use ONLY when tumor HAS NOT been removed from the body"
 * focus ^definition = "Reference to a BodyStructure resource conforming to Tumor."
-* focus ^comment = "Use **only** when the tumor **has not** been removed from the body.
-                    If the tumor has been removed, use `specimen` instead and leave `focus` empty."
+* focus ^comment = "Use **only** when the tumor **has not** been removed from the body. If the tumor has been removed, use `specimen` instead and leave `focus` empty."
 * focus MS
 
 * specimen ^short = "Use ONLY when tumor HAS been removed from the body"
 * specimen ^definition = "Reference to a BodyStructure resource conforming to Tumor."
-* specimen ^comment = "Use **only** when the tumor **has** been removed from the body.
-                       If the tumor has been not removed, use `focus` instead and leave `specimen` empty."
+* specimen ^comment = "Use **only** when the tumor **has** been removed from the body. If the tumor has been not removed, use `focus` instead and leave `specimen` empty."
 * specimen MS
 
 * method from TumorSizeMethodVS (extensible)
 * method ^short = "Method for measuring the tumor"
 * method ^definition = "Method for measuring the tumor"
-* method ^comment = "Tumors are typically measured via gross pathology after excision, or via diagnostic
-                     imaging or physical exam prior to removal. `TumorSizeMethodVS` provides LOINC codes
-                     for these measurement methods.
-
-                     Therefore, if `specimen` is set, `method` is expected to be a \"gross pathology\" code.
-                     If `focus` is set, `method` is expected to be a type of diagnostic imaging or physical exam.
-                     "
+* method ^comment = "Tumors are typically measured via gross pathology after excision, or via diagnostic imaging or physical exam prior to removal. `TumorSizeMethodVS` provides LOINC codes for these measurement methods. Therefore, if `specimen` is set, `method` is expected to be a \"gross pathology\" code. If `focus` is set, `method` is expected to be a type of diagnostic imaging or physical exam."
 * method MS
 
 * component MS
@@ -69,19 +61,14 @@ Profile: Tumor
 Parent:  BodyStructure
 Id: mcode-tumor
 Title: "Tumor"
-Description:  "Identifies a tumor. Whenever possible, a single resource conforming to this
-               profile will be used to track a tumor over time (as opposed to creating new
-               Tumor-conforming BodyStructure resources each time that tumor is measured).
-              "
+Description:  "Identifies a tumor. Whenever possible, a single resource conforming to this profile will be used to track a tumor over time (as opposed to creating new Tumor-conforming BodyStructure resources each time that tumor is measured)."
 * ^status = #draft
 * ^experimental = true
 // The purpose of this profile is to uniquely identify a tumor, so it follows that there must be at least one identifier value provided
 * identifier 1.. MS
 * identifier ^short = "Stable identifier of this specific tumor"
 * identifier ^definition = "Stable identifier of this specific tumor, should be unique within the referenced `CancerPatient`."
-* identifier ^comment = "If applicable, this should correspond to the physical tag inserted into the tumor during a procedure
-                         that is used for tracking the tumor by radiology and pathology.
-                        "
+* identifier ^comment = "If applicable, this should correspond to the physical tag inserted into the tumor during a procedure that is used for tracking the tumor by radiology and pathology."
 // This VS is used to define the morphology of primary and secondary cancer; rule set here for consistency with these profiles.
 * morphology from HistologyMorphologyBehaviorVS (extensible)
 * morphology MS

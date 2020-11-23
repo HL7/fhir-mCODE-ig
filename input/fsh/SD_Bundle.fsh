@@ -21,7 +21,7 @@ Description: "A collection of data for an mCODE cancer patient. The bundle MUST 
 
 In addition, the bundle MAY contain additional resources relevant to the patient but not part of mCODE, such as smoking status, family member history, and diagnostic procedures.
 
-The bundle itself must validate against the MCODEPatientBundle profile."
+The bundle itself MUST validate against the MCODEPatientBundle profile."
 
 /* TODO update this file to match the description in `mcode-patient-bundle.md`. */
 * type  = #collection

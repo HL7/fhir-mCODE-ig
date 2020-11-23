@@ -10,7 +10,7 @@ Description: "A collection of data for an mCODE cancer patient. The bundle MUST 
 * Observation resources conforming to TumorMarker test results
 * MedicationRequest resources conforming to CancerRelatedMedicationRequests (prescriptions, administrations, and patient-reported medications)
 * Procedure resources conforming to CancerRelatedProcedure (surgical and radiological)
-* Observation resources conforming to CancerStage (Clinical Group and TNM and/or Pathological Group and TNM)
+* Observation resources conforming to CancerStageParent (Clinical Group and TNM and/or Pathological Group and TNM)
 * Observation resources conforming to CancerGeneticVariant
 * DiagnosticReport resources conforming to CancerGenomicsReport
 * Specimen resources conforming to GeneticSpecimen
@@ -38,7 +38,6 @@ The bundle itself must validate against the MCODEPatientBundle profile."
 * entry[primaryCancerCondition].resource only PrimaryCancerCondition
 * entry[primaryCancerCondition] ^short = "Primary Cancer Condition"
 * entry[primaryCancerCondition] ^definition = "The Primary Cancer Condition resource (required element)."
-
 
 
 

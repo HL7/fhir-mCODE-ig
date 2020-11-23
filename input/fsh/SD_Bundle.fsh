@@ -16,7 +16,7 @@ Description: "A collection of data for an mCODE cancer patient. The bundle MUST 
 * Specimen resources conforming to GeneticSpecimen
 * Observation resources conforming to GenomicRegionStudied
 * Observation resource conforming to CancerRelatedComorbidities, and accompanying Condition resources 
-* Observation resources conforming to VitalSigns (height, weight, blood pressure)
+* Observation resources conforming to [VitalSigns](http://hl7.org/fhir/R4/observation-vitalsigns.html) (height, weight, blood pressure)
 * Observation resources conforming to Comprehensive Metabolic Panel (CMP) and Complete Blood Count (CBC) lab results
 
 In addition, the bundle MAY contain additional resources relevant to the patient but not part of mCODE, such as smoking status, family member history, and diagnostic procedures.
@@ -38,6 +38,5 @@ The bundle itself must validate against the MCODEPatientBundle profile."
 * entry[primaryCancerCondition].resource only PrimaryCancerCondition
 * entry[primaryCancerCondition] ^short = "Primary Cancer Condition"
 * entry[primaryCancerCondition] ^definition = "The Primary Cancer Condition resource (required element)."
-
 
 

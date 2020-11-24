@@ -19,7 +19,6 @@ Instance: Condition-code
 InstanceOf: SearchParameter
 Title: "Search by code:in in Conditions"
 * url = "http://hl7.org/fhir/us/mcode/SearchParameter/Condition-code"
-* derivedFrom = "http://hl7.org/fhir/SearchParameter/clinical-code"
 * name = "code"
 * status = #draft
 * experimental = true

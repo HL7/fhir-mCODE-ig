@@ -26,7 +26,7 @@ Title: "Search by code:in in Conditions"
 * description = "This SearchParameter enables query of conditions by code with the `in` modifier."
 * code = #code
 * base[0] = #Condition
-* type = #token
+* type = #uri
 * expression = "Condition.code"
 * xpath = "f:Condition/f:code"
 * xpathUsage = #normal

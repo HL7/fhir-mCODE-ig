@@ -55,12 +55,6 @@ RuleSet: mCODE_CS_Server
 * rest[serverSlice].resource[PatientSlice].interaction[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest[serverSlice].resource[PatientSlice].interaction[0].extension.valueCode = #SHALL
 
-* rest[serverSlice].resource[PatientSlice].searchParam[0].name = "_id"
-* rest[serverSlice].resource[PatientSlice].searchParam[0].type = #uri
-* rest[serverSlice].resource[PatientSlice].searchParam[0].definition = "http://hl7.org/fhir/us/mcode/SearchParameter/Patient-id"
-* rest[serverSlice].resource[PatientSlice].searchParam[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-* rest[serverSlice].resource[PatientSlice].searchParam[0].extension.valueCode = #SHALL
-
 // GET [base]/$mcode-patient-bundle/[id]
 * rest[serverSlice].operation[0].name = "mcode-patient-bundle"
 * rest[serverSlice].operation[0].definition = "http://hl7.org/fhir/us/mcode/OperationDefinition/mcode-patient-everything"
@@ -105,7 +99,7 @@ Description: "Defines the preferred requirements for an mCODE Data Sender"
 * rest[serverSlice].resource[PatientSlice].interaction[1].documentation = "Identify Patient resources conforming to mCODE's CancerPatient profile via tagging with meta.profile."
 
 * rest[serverSlice].resource[PatientSlice].searchParam[0].name = "_profile"
-* rest[serverSlice].resource[PatientSlice].searchParam[0].type = #token
+* rest[serverSlice].resource[PatientSlice].searchParam[0].type = #uri
 * rest[serverSlice].resource[PatientSlice].searchParam[0].definition = "http://hl7.org/fhir/SearchParameter/Resource-profile"
 * rest[serverSlice].resource[PatientSlice].searchParam[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest[serverSlice].resource[PatientSlice].searchParam[0].extension.valueCode = #SHALL
@@ -124,10 +118,10 @@ Description: "Defines the primary fallback requirements for an mCODE Data Sender
 * insert mCODE_CS_Server
 
 // GET [base]/Patient?_has:Condition:subject:code:in=http://hl7.org/fhir/us/mcode/ValueSet/mcode-primary-or-uncertain-behavior-cancer-disorder-vs
-* rest[serverSlice].resource[PatientSlice].interaction[0].code = #search-type
-* rest[serverSlice].resource[PatientSlice].interaction[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-* rest[serverSlice].resource[PatientSlice].interaction[0].extension.valueCode = #SHALL
-* rest[serverSlice].resource[PatientSlice].interaction[0].documentation = "Identify Patient resources conforming to mCODE's CancerPatient profile via reverse chaining searching for conditions in a specific ValueSet."
+* rest[serverSlice].resource[PatientSlice].interaction[1].code = #search-type
+* rest[serverSlice].resource[PatientSlice].interaction[1].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+* rest[serverSlice].resource[PatientSlice].interaction[1].extension.valueCode = #SHALL
+* rest[serverSlice].resource[PatientSlice].interaction[1].documentation = "Identify Patient resources conforming to mCODE's CancerPatient profile via reverse chaining searching for conditions in a specific ValueSet."
 
 * rest[serverSlice].resource[PatientSlice].searchParam[0].name = "_has:Condition:subject:code:in"
 * rest[serverSlice].resource[PatientSlice].searchParam[0].type = #uri
@@ -168,6 +162,13 @@ Description: "Defines the tertiary fallback requirements for an mCODE Data Sende
 // GET [base]/Condition?code:in=http://hl7.org/fhir/us/mcode/ValueSet/mcode-primary-or-uncertain-behavior-cancer-disorder-vs
 * insert mCODE_CS_Server_Fallback
 
+// GET [base]/Patient?_id=id1|id2|id3
+* rest[serverSlice].resource[PatientSlice].searchParam[0].name = "_id"
+* rest[serverSlice].resource[PatientSlice].searchParam[0].type = #token
+* rest[serverSlice].resource[PatientSlice].searchParam[0].definition = "http://hl7.org/fhir/us/mcode/SearchParameter/Patient-id"
+* rest[serverSlice].resource[PatientSlice].searchParam[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+* rest[serverSlice].resource[PatientSlice].searchParam[0].extension.valueCode = #SHALL
+
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////// Client //////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////////
@@ -180,16 +181,9 @@ RuleSet: mCODE_CS_Client
 * rest[clientSlice].resource[PatientSlice].supportedProfile[0] = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-patient"
 
 // GET [base]/Patient/[id]
-// TODO: is this the correct way to specify this? Do I need an additional `searchParam` to specify `[id]`?
 * rest[clientSlice].resource[PatientSlice].interaction[0].code = #read
 * rest[clientSlice].resource[PatientSlice].interaction[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest[clientSlice].resource[PatientSlice].interaction[0].extension.valueCode = #SHALL
-
-* rest[clientSlice].resource[PatientSlice].searchParam[0].name = "_id"
-* rest[clientSlice].resource[PatientSlice].searchParam[0].type = #uri
-* rest[clientSlice].resource[PatientSlice].searchParam[0].definition = "http://hl7.org/fhir/us/mcode/SearchParameter/Patient-id"
-* rest[clientSlice].resource[PatientSlice].searchParam[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-* rest[clientSlice].resource[PatientSlice].searchParam[0].extension.valueCode = #SHALL
 
 // GET [base]/$mcode-patient-bundle/[id]
 * rest[clientSlice].operation[0].name = "mcode-patient-bundle"
@@ -235,7 +229,7 @@ Description: "Defines the preferred requirements for an mCODE Data Receiver"
 * rest[clientSlice].resource[PatientSlice].interaction[1].documentation = "Identify Patient resources conforming to mCODE's CancerPatient profile via tagging with meta.profile."
 
 * rest[clientSlice].resource[PatientSlice].searchParam[0].name = "_profile"
-* rest[clientSlice].resource[PatientSlice].searchParam[0].type = #token
+* rest[clientSlice].resource[PatientSlice].searchParam[0].type = #uri
 * rest[clientSlice].resource[PatientSlice].searchParam[0].definition = "http://hl7.org/fhir/SearchParameter/Resource-profile"
 * rest[clientSlice].resource[PatientSlice].searchParam[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest[clientSlice].resource[PatientSlice].searchParam[0].extension.valueCode = #SHALL
@@ -297,5 +291,12 @@ Description: "Defines the tertiary fallback requirements for an mCODE Data Recei
 
 // GET [base]/Condition?code:in=http://hl7.org/fhir/us/mcode/ValueSet/mcode-primary-or-uncertain-behavior-cancer-disorder-vs
 * insert mCODE_CS_Client_Fallback
+
+// GET [base]/Patient?_id=id1|id2|id3
+* rest[clientSlice].resource[PatientSlice].searchParam[0].name = "_id"
+* rest[clientSlice].resource[PatientSlice].searchParam[0].type = #token
+* rest[clientSlice].resource[PatientSlice].searchParam[0].definition = "http://hl7.org/fhir/us/mcode/SearchParameter/Patient-id"
+* rest[clientSlice].resource[PatientSlice].searchParam[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+* rest[clientSlice].resource[PatientSlice].searchParam[0].extension.valueCode = #SHALL
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////

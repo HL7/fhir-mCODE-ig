@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+cat output/qa.txt | grep ERROR: | sed -E 's/(ERROR: [^ ]*): ([^ ]*) *(.*)/\1\
+\2\
+\3\
+/' | sed s/ERROR:/`printf "\033[31mERROR:\033[0m"`/

@@ -1,0 +1,76 @@
+#!/usr/bin/env bash
+
+# Source for this function: https://unix.stackexchange.com/questions/27013/displaying-seconds-as-days-hours-mins-seconds
+function displaytime {
+	local T=$1
+	local D=$((T/60/60/24))
+	local H=$((T/60/60%24))
+	local M=$((T/60%60))
+	local S=$((T%60))
+	(( $D > 0 )) && printf '%d days ' $D
+	(( $H > 0 )) && printf '%d hours ' $H
+	(( $M > 0 )) && printf '%d minutes ' $M
+	(( $D > 0 || $H > 0 || $M > 0 )) && printf 'and '
+	printf '%d seconds\n' $S
+}
+
+# Load env variables stored in .env
+source .env
+
+# Build UML diagrams if `input/images-source` is "dirty" per git
+if [ -d "input/images-source" ]; then
+    if [ -z "$(git status input/images-source --porcelain=v1 2>/dev/null)" ]
+    then
+        echo "No changes found in input/images-source"
+    else
+        echo "Uncommitted changes found in input/images-source. Building UML..."
+
+        # Check to see if plantuml jar path is set -- if it's not set, script/uml-build will error out
+        if [ -z ${PLANTUML_PATH+x} ]
+        then
+            echo "No PLANTUML_PATH set in .env. Skipping UML build."
+        else
+            script/uml-build || { exit 1; }
+        fi
+    fi
+fi
+
+# Parse parameters passed
+while [[ "$#" -gt 0 ]]; do
+    case $1 in
+        -tx) tx_server="$2"; shift ;;
+        -no-sushi) nosushi="-no-sushi" ;;
+        *) echo "Unknown parameter passed: $1"; exit 1 ;;
+    esac
+    shift
+done
+
+# Set default value for tx server
+#
+# Try to get default from .env file (or other env variable). If that isn't set, default to tx.fhir.org.
+if [ -z ${TX_SERVER_DEFAULT+x} ]; then TX_SERVER_DEFAULT="http://tx.fhir.org"; fi
+# Override default if the -tx parameter was passed
+if [ -z ${tx_server+x} ]; then tx_server=$TX_SERVER_DEFAULT; echo "Defaulting to $tx_server..."; else echo "Using $tx_server..."; fi
+
+# Run _genonce.sh
+start=`date +%s` # Capture start time for runtime calculation
+echo "Running ./_genonce.sh -tx $tx_server $nosushi"
+./_genonce.sh -tx $tx_server $nosushi
+
+if [ $? -eq 0 ] # Error handling for _genonce.sh
+then
+    end=`date +%s`
+    echo "Build success."
+    if [ "$(uname)" == "Darwin" ]; then
+        seconds_running=`expr $end - $start`
+        osascript -e "display notification \"Completed after `displaytime $seconds_running`.\" with title \"`basename "$PWD"` build\""
+    fi
+    script/show-errors
+else
+    end=`date +%s`
+    echo "Build failure."
+    if [ "$(uname)" == "Darwin" ]; then
+        seconds_running=`expr $end - $start`
+        osascript -e "display notification \"Failed after `displaytime $seconds_running`.\" with title \"🚨🚨🚨 `basename "$PWD"` build failure\""
+    fi
+fi

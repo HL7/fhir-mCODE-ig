@@ -7,3 +7,4 @@ input-cache/publisher.jar
 /output
 template/**
 temp/**
+.env

@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+source .env
+
+if [ -z ${PLANTUML_PATH+x} ]; then echo "Set PLANTUML_PATH in .env" && exit 1; fi
+
+java -jar "$PLANTUML_PATH" -tsvg -o ../images/ input/images-source/*.puml
+if [ $? -eq 0 ]
+then
+    echo "UML rebuilt."
+else
+    echo "UML build failure."
+    exit 1
+fi

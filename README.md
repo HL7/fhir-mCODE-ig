@@ -63,6 +63,8 @@ On macOS:
 3. Download `plantuml.jar` from <https://plantuml.com/download>
 4. From the root folder, run `java -jar /path/to/plantuml.jar -tsvg -o ../images/ input/images-source/*.puml`
 
+Additionally, you can build the IG with the [macOS script wrappers](https://github.com/HL7/fhir-mCODE-ig/blob/master/script/README.md), which are a bit more user-friendly and have some nice additional features.
+
 On Windows:
 
 1. Install Java if you don't already have it

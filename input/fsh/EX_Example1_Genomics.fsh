@@ -11,7 +11,7 @@ Description: "mCODE Example for Cancer Genetic Variant"
 * effectiveDateTime = "2019-04-01"
 * valueCodeableConcept = LNC#LA9633-4 "Present"
 * interpretation = SCT#10828004 "Positive (qualifier value)"
-* component[GeneStudied].valueCodeableConcept = HGNC#HGNC:11389 "STK11" 
+* component[GeneStudied].valueCodeableConcept = HGNC#HGNC:11389 "STK11"
 // variant type: single nucleotide variant
 // https://www.ncbi.nlm.nih.gov/clinvar/variation/619728/
 // https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/HGNC:8023
@@ -36,7 +36,7 @@ Description: "mCODE Example for Cancer Genetic Variant"
 * effectiveDateTime = "2019-04-01"
 * valueCodeableConcept = LNC#LA9633-4 "Present"
 * component[GeneStudied].valueCodeableConcept = HGNC#HGNC:1100 "BRCA1" // NOTE: HGNC and HGVS codes have special characters in them so SUSHI needs to handle this.
-* component[GenomicDNAChange].valueCodeableConcept = HGVS#NG_005905.2:g.126148_126152GTAAA[1] "NG_005905.2:g.126148_126152GTAAA[1]"
+* component[GenomicDNAChange].valueCodeableConcept = HGVS#NG_005905.2:g.126148_126152del "NG_005905.2:g.126148_126152del"
 * component[GenomicSourceClass].valueCodeableConcept = LNC#LA6683-2 "Germline"
 
 Instance: mCODECancerGenomicsReportExample1

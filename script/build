@@ -65,7 +65,10 @@ then
         seconds_running=`expr $end - $start`
         osascript -e "display notification \"Completed after `displaytime $seconds_running`.\" with title \"`basename "$PWD"` build\""
     fi
-    script/show-errors
+    if [ "$SHOW_ERRORS_AFTER_IG_BUILD" == "1" ]
+    then
+        script/show-errors
+    fi
 else
     end=`date +%s`
     echo "Build failure."

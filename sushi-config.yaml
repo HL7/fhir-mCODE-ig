@@ -38,6 +38,8 @@ pages:
       title: Experimental Artifacts
   mcode-patient-bundle.md:
     title: mCODE Patient Bundle Implementation Details
+  conformance-use-cases.md:
+    title: Conformance Use Cases
 menu:
   Home: index.html
   Conformance: conformance.html

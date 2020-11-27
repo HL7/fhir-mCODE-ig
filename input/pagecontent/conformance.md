@@ -7,6 +7,8 @@ Two roles are defined:
 
 US Core defines two actors, US Core Requestor and US Core Responder, which are highly suggestive of a "pull" architecture. In mCODE, we use the terms Sender and Receiver, which are more neutral with respect to push and pull. However, for all practical purposes, there is an equivalence between US Core Requestor and mCODE Data Receiver, and similarly between US Core Responder and mCODE Data Sender.
 
+We considered [several use cases](conformance-use-cases.html) when developing this portion of the IG.
+
 ### Capability Statements
 
 [FHIR capability statements](http://hl7.org/fhir/R4/capabilitystatement.html) describe the capabilities of actual implementation or requirements of a desired solution. This IG provides capability statements that express requirements for mCODE Data Senders and mCODE Data Receivers.

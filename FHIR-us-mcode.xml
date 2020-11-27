@@ -248,6 +248,7 @@
 <page deprecated="true" key="changelog" name="Change Log"/>
 <page key="change_log" name="Change log"/>
 <page key="conformance" name="Conformance"/>
+<page key="conformance-use-cases" name="Conformance Use Cases"/>
 <page key="downloads" name="Downloads"/>
 <page key="examples" name="Examples Overview"/>
 <page key="experimental" name="Experimental Artifacts"/>

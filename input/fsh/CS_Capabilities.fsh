@@ -64,7 +64,7 @@ RuleSet: mCODE_CS_Server
 // GET [base]/$mcode-patient-bundle/[id]
 * rest[serverSlice].operation[0].name = "mcode-patient-bundle"
 * rest[serverSlice].operation[0].definition = "http://hl7.org/fhir/us/mcode/OperationDefinition/mcode-patient-everything"
-* rest[serverSlice].operation[0].extension.url = "http://hl7.org/fhir/us/mcode/OperationDefinition/mcode-patient-everything"
+* rest[serverSlice].operation[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest[serverSlice].operation[0].extension.valueCode = #SHALL
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
@@ -194,7 +194,7 @@ RuleSet: mCODE_CS_Client
 // GET [base]/$mcode-patient-bundle/[id]
 * rest[clientSlice].operation[0].name = "mcode-patient-bundle"
 * rest[clientSlice].operation[0].definition = "http://hl7.org/fhir/us/mcode/OperationDefinition/mcode-patient-everything"
-* rest[clientSlice].operation[0].extension.url = "http://hl7.org/fhir/us/mcode/OperationDefinition/mcode-patient-everything"
+* rest[clientSlice].operation[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest[clientSlice].operation[0].extension.valueCode = #SHALL
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////

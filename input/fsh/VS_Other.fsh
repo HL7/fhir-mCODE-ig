@@ -35,7 +35,7 @@ Id: mcode-condition-status-trend-vs
 Title: "Condition Status Trend Value Set"
 Description:  "How patient's given disease, condition, or ability is trending."
 * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
-* SCT#260415000 "Not detected (qualifier)"
+* SCT#281900007 "No abnormality detected (finding)" // better than SCT#260415000 "Not detected (qualifier)"
 * SCT#268910001 "Patient's condition improved (finding)"
 * SCT#359746009 "Patient's condition stable (finding)"
 * SCT#271299001 "Patient's condition worsened (finding)"
@@ -44,10 +44,11 @@ Description:  "How patient's given disease, condition, or ability is trending."
 ValueSet: CancerDiseaseStatusEvidenceTypeVS
 Id: mcode-cancer-disease-status-evidence-type-vs
 Title: "Cancer Disease Status Evidence Type Value Set"
-Description:  "The type of evidence backing up the clinical determination of cancer progression. The code '* SCT#252416005 Histopathology test (procedure)' is intended to be used when there is a biopsy that contributes evidence of the cancer disease status."
+Description:  "The type of evidence backing up the clinical determination of cancer progression." 
+// The code '252416005 Histopathology test (procedure)' is intended to be used when there is a biopsy that contributes evidence of the cancer disease status.
 * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
 * SCT#363679005 "Imaging (procedure)"
-* SCT#252416005 "Histopathology test (procedure)"
+* SCT#108257001 "Anatomic pathology procedure (procedure)" // Broader than SCT#252416005 "Histopathology test (procedure), include microscopy."
 * SCT#711015009 "Assessment of symptom control (procedure)"
 * SCT#5880005   "Physical examination procedure (procedure)"
 * SCT#386344002 "Laboratory data interpretation (procedure)"
@@ -417,14 +418,13 @@ Id: mcode-treatment-termination-reason-vs
 Title: "Treatment Termination Reason Value Set"
 Description:  "Values used to describe the reasons for stopping a treatment. Includes code for 'treatment completed' as well as codes for unplanned (early) stoppage. Applies to medications and other treatments that take place over a period of time, such as radiation treatments."
 * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
-* SCT#182992009       "Treatment completed (situation)"  // could more generally be 397943006 "Planned (qualifier value)"
-* SCT#58848006        "Lack of drug action (finding)"  
-// MCODE-106 MK 10-2-2019  replaced SCT#435501000124106 "Medication not effective (finding)"
-* SCT#281647001       "Adverse reaction (disorder)"  // more general than 62014003 Adverse reaction to drug
-* SCT#160932005       "Financial problem" // better than 454061000124102 "Unable to afford medication (finding)"
-* SCT#105480006       "Refusal of treatment by patient"  // patient choice or decision
-* SCT#107724000       "Patient transfer"
-* SCT#309846006       "Treatment not available"
+* SCT#182992009   "Treatment completed (situation)"  // could more generally be 397943006 "Planned (qualifier value)"
+* SCT#266721009   "No response to treatment (situation)" // more general than SCT#58848006 "Lack of drug action (finding)"  
+* SCT#407563006   "Treatment not tolerated (situation)" // more general than SCT#281647001 "Adverse reaction (disorder)"
+* SCT#160932005   "Financial problem (finding)" // more general than 454061000124102 "Unable to afford medication (finding)"
+* SCT#105480006   "Refusal of treatment by patient (situation)"  // patient choice or decision
+* SCT#184081006   "Patient has moved away (finding)" // better than SCT#107724000 "Patient transfer (procedure)"
+* SCT#309846006   "Treatment not available (situation)"
 
 ValueSet:		TreatmentIntentVS
 Id: mcode-treatment-intent-vs
@@ -434,6 +434,9 @@ Description:	"The purpose of a treatment. The value set includes 'curative' and 
 * SCT#373808002   "Curative - procedure intent"
 * SCT#363676003   "Palliative - procedure intent"
 
+
+
+/* SAVE for possible future use
 ValueSet:			UnitsOfLengthVS
 Id: mcode-units-of-length-vs
 Title:              "Units of Length Value Set"
@@ -445,7 +448,6 @@ Description:		"Units of measure for length or distance on a human scale."
 * UCUM#[in_i]			"Inch"
 
 
-/* SAVE for possible future use
 ValueSet: CBCVS
 Id: mcode-cbc-vs
 Title: "Complete Blood Count Value Set"

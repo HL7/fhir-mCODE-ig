@@ -72,7 +72,6 @@
 <artifact id="StructureDefinition/mcode-genetic-specimen" key="genetic-specimen" name="Genetic Specimen"/>
 <artifact id="ValueSet/mcode-genetic-specimen-type-vs" key="genetic-specimen-type-value-set" name="Genetic Specimen Type Value Set"/>
 <artifact id="StructureDefinition/mcode-genomic-region-studied" key="genomic-region-studied" name="Genomic Region Studied"/>
-<artifact id="OperationDefinition/mcode-patient-everything" key="OperationDefinition-mcode-patient-everything" name="GetPatientBundleOperation"/>
 <artifact deprecated="true" id="ValueSet/mcode-hgvs-sequence-variant-nomenclature-value-set" key="hgvs-sequence-variant-nomenclature-value-set" name="HGVS Sequence Variant Nomenclature Value Set"/>
 <artifact id="ValueSet/mcode-hgnc-vs" key="hugo-gene-nomenclature-committee-gene-names-value-set" name="HUGO Gene Nomenclature Committee Gene Names Value Set"/>
 <artifact deprecated="true" id="Extension/mcode-histology-morphology-behavior-extension" key="histology-morphology-behavior-extension" name="Histology Morphology Behavior Extension"/>
@@ -86,6 +85,7 @@
 <artifact id="ValueSet/mcode-location-qualifier-vs" key="ValueSet-mcode-location-qualifier-vs" name="Location Qualifier Value Set"/>
 <artifact id="ValueSet/mcode-tumor-size-method-vs" key="ValueSet-mcode-tumor-size-method-vs" name="Methods for measuring tumor size"/>
 <artifact deprecated="true" key="Observation" name="Observation"/>
+<artifact id="OperationDefinition/mcode-patient-everything" key="OperationDefinition-mcode-patient-everything" name="Operation-mcode-patient-everything"/>
 <artifact id="StructureDefinition/mcode-performance-status-parent" key="StructureDefinition-mcode-performance-status-parent" name="Performance Status Parent"/>
 <artifact id="ValueSet/mcode-present-absent-unknown" key="ValueSet-mcode-present-absent-unknown" name="Present-Absent-Unknown"/>
 <artifact id="StructureDefinition/mcode-primary-cancer-condition" key="primary-cancer-condition" name="Primary Cancer Condition"/>

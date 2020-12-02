@@ -19,14 +19,13 @@ Instance: Condition-code
 InstanceOf: SearchParameter
 Title: "Search by code:in in Conditions"
 * url = "http://hl7.org/fhir/us/mcode/SearchParameter/Condition-code"
-* derivedFrom = "http://hl7.org/fhir/SearchParameter/clinical-code"
 * name = "code"
 * status = #draft
 * experimental = true
 * description = "This SearchParameter enables query of conditions by code with the `in` modifier."
 * code = #code
 * base[0] = #Condition
-* type = #token
+* type = #uri
 * expression = "Condition.code"
 * xpath = "f:Condition/f:code"
 * xpathUsage = #normal

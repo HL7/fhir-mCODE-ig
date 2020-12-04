@@ -1,29 +1,3 @@
-ValueSet: MedDRAVS
-Id: meddra-value-set
-Title: "MedDRA Value Set"
-Description: "All codes from Medical Dictionary for Regulatory Activities Terminology (MedDRA), American English Equivalents, Version 7.0."
-* include codes from system MDR 
-
-ValueSet: CTCAdverseEventGradeVS
-Id: ctc-adverse-event-grade-value-set
-Title: "CTC Adverse Event Grade Value Set"
-Description: "Common terminology criteria grades associated with the severity of an adverse event. The additional term, 'free of symptoms' (aka grade 0) is used to indicate the patient has been assessed, and the given adverse event has not occurred."
-//* include codes from SCT where concept is-a #446401000124104 "National Cancer Institute common terminology criteria for adverse event grade finding (finding)"
-* SCT#162467007 "Free of symptoms (situation)"
-* SCT#446411000124101 "Common terminology criteria for adverse events grade 1 (finding)"
-* SCT#446421000124109 "Common terminology criteria for adverse events grade 2 (finding)"
-* SCT#446431000124107 "Common terminology criteria for adverse events grade 3 (finding)"
-* SCT#446441000124102 "Common terminology criteria for adverse events grade 4(finding)"
-* SCT#446451000124100 "Common terminology criteria for adverse events grade 5 (finding)"
-
-
-ValueSet: AdverseEventSeriousnessVS
-Id: adverse-event-seriousness-value-set
-Title: "Adverse Event Seriousness Value Set"
-Description: "An adverse event is considered serious if it results in any of the following outcomes: (1) Death, (2) Life-threatening experience 3) Inpatient hospitalization or prolongation of existing hospitalization (for > 24 hours) (4) Persistent or significant incapacity or substantial disruption of the ability to conduct normal life functions, (5) Congenital anomaly/birth defect, or (6) Important Medical Event (IME) that may jeopardize the patient or subject and may require medical or surgical intervention to prevent one of the outcomes listed in this definition. Reference: https://crawb.crab.org/txwb/CRA_MANUAL/Vol1/chapter%2013_Serious%20Adverse%20Events.pdf"
-* AES#non-serious "Non-serious"
-* AES#serious "Serious"
-
 ValueSet:    ClinVarVS
 Id: mcode-clinvar-vs
 Title: "ClinVar Value Set"

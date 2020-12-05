@@ -22,8 +22,8 @@ e: {
   "resourceType" : "ValueSet",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:06951159-c837-4cc6-a021-4c21280a1cf8",
-    "timestamp" : "2020-10-23T14:26:26.409Z",
+    "identifier" : "urn:uuid:aa5bc43c-9b5b-40f2-8a61-a88dcb6f0743",
+    "timestamp" : "2020-12-05T02:34:37.238Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -39,50 +39,6 @@ e: {
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://varnomen.hgvs.org",
-  "code" : "NC_000016.10:g.23603471G>T"
-}, "valueSet" :{
-  "resourceType" : "ValueSet",
-  "compose" : {
-    "include" : [{
-      "system" : "http://varnomen.hgvs.org"
-    }]
-  }
-}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
-v: {
-  "display" : "NC_000016.10:g.23603471G>T",
-  "severity" : null,
-  "error" : ""
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://varnomen.hgvs.org",
-  "code" : "NC_000016.10:g.23603471G>T"
-}, "valueSet" :{
-  "resourceType" : "ValueSet",
-  "compose" : {
-    "include" : [{
-      "system" : "http://varnomen.hgvs.org"
-    }]
-  }
-}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK"}####
-v: {
-  "display" : "NC_000016.10:g.23603471G>T",
-  "severity" : null,
-  "error" : ""
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://varnomen.hgvs.org",
-  "code" : "NC_000016.10:g.23603471G>T"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
-v: {
-  "display" : "NC_000016.10:g.23603471G>T",
-  "severity" : null,
-  "error" : ""
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://varnomen.hgvs.org",
   "code" : "NC_000019.8:g.1171707G>A"
 }, "valueSet" :{
   "resourceType" : "ValueSet",
@@ -128,7 +84,18 @@ v: {
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://varnomen.hgvs.org",
-  "code" : "NG_005905.2:g.126148_126152GTAAA[1]"
+  "code" : "NC_000019.8:g.1171707G>A",
+  "display" : "NC_000019.8:g.1171707G>A"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "NC_000019.8:g.1171707G>A",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://varnomen.hgvs.org",
+  "code" : "NG_005905.2:g.126148_126152del"
 }, "valueSet" :{
   "resourceType" : "ValueSet",
   "compose" : {
@@ -138,15 +105,15 @@ v: {
   }
 }, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
 v: {
-  "display" : "",
-  "severity" : "error",
-  "error" : "Expected \"del\" (at char 27), (line:1, col:28); The code \"NG_005905.2:g.126148_126152GTAAA[1]\" is not valid in the system http://varnomen.hgvs.org; The code provided (http://varnomen.hgvs.org#NG_005905.2:g.126148_126152GTAAA[1]) is not valid (from http://tx.fhir.org/r4)"
+  "display" : "NG_005905.2:g.126148_126152del",
+  "severity" : null,
+  "error" : ""
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://varnomen.hgvs.org",
-  "code" : "NG_005905.2:g.126148_126152GTAAA[1]",
-  "display" : "NG_005905.2:g.126148_126152GTAAA[1]"
+  "code" : "NG_005905.2:g.126148_126152del",
+  "display" : "NG_005905.2:g.126148_126152del"
 }, "valueSet" :{
   "resourceType" : "ValueSet",
   "compose" : {
@@ -156,19 +123,74 @@ v: {
   }
 }, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK"}####
 v: {
-  "display" : "",
-  "severity" : "error",
-  "error" : "Expected \"del\" (at char 27), (line:1, col:28); The code \"NG_005905.2:g.126148_126152GTAAA[1]\" is not valid in the system http://varnomen.hgvs.org; The code provided (http://varnomen.hgvs.org#NG_005905.2:g.126148_126152GTAAA[1]) is not valid in the value set 'HGVSVS' (from http://tx.fhir.org/r4)"
+  "display" : "NG_005905.2:g.126148_126152del",
+  "severity" : null,
+  "error" : ""
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://varnomen.hgvs.org",
-  "code" : "NG_005905.2:g.126148_126152GTAAA[1]"
+  "code" : "NG_005905.2:g.126148_126152del"
 }, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
 v: {
-  "display" : "",
-  "severity" : "error",
-  "error" : "Expected \"del\" (at char 27), (line:1, col:28); The code \"NG_005905.2:g.126148_126152GTAAA[1]\" is not valid in the system http://varnomen.hgvs.org; The code provided (http://varnomen.hgvs.org#NG_005905.2:g.126148_126152GTAAA[1]) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4)"
+  "display" : "NG_005905.2:g.126148_126152del",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://varnomen.hgvs.org",
+  "code" : "NG_005905.2:g.126148_126152del",
+  "display" : "NG_005905.2:g.126148_126152del"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "NG_005905.2:g.126148_126152del",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://varnomen.hgvs.org",
+  "code" : "NC_000016.10:g.23603471G>T"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://varnomen.hgvs.org"
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "NC_000016.10:g.23603471G>T",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://varnomen.hgvs.org",
+  "code" : "NC_000016.10:g.23603471G>T"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://varnomen.hgvs.org"
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK"}####
+v: {
+  "display" : "NC_000016.10:g.23603471G>T",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://varnomen.hgvs.org",
+  "code" : "NC_000016.10:g.23603471G>T"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "NC_000016.10:g.23603471G>T",
+  "severity" : null,
+  "error" : ""
 }
 -------------------------------------------------------------------------------------
 {"hierarchical" : true, "valueSet" :{
@@ -184,36 +206,14 @@ e: {
   "resourceType" : "ValueSet",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:c306e45e-e09d-4ad9-8c4d-25c9a9227f37",
-    "timestamp" : "2020-10-23T14:41:25.191Z",
+    "identifier" : "urn:uuid:d6f0d25c-326d-4a28-8ef9-9b6d9ff7f322",
+    "timestamp" : "2020-12-05T02:56:47.411Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
     }]
   }
 },
-  "error" : ""
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://varnomen.hgvs.org",
-  "code" : "NG_005905.2:g.126148_126152GTAAA[1]",
-  "display" : "NG_005905.2:g.126148_126152GTAAA[1]"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
-v: {
-  "display" : "",
-  "severity" : "error",
-  "error" : "Expected \"del\" (at char 27), (line:1, col:28); The code \"NG_005905.2:g.126148_126152GTAAA[1]\" is not valid in the system http://varnomen.hgvs.org; The code provided (http://varnomen.hgvs.org#NG_005905.2:g.126148_126152GTAAA[1]) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4)"
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://varnomen.hgvs.org",
-  "code" : "NC_000019.8:g.1171707G>A",
-  "display" : "NC_000019.8:g.1171707G>A"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
-v: {
-  "display" : "NC_000019.8:g.1171707G>A",
-  "severity" : null,
   "error" : ""
 }
 -------------------------------------------------------------------------------------

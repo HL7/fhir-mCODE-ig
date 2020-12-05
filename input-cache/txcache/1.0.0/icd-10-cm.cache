@@ -5176,8 +5176,8 @@ e: {
   "resourceType" : "ValueSet",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:f87b6e30-7726-4491-9937-22327a6ca112",
-    "timestamp" : "2020-10-23T14:23:18.783Z",
+    "identifier" : "urn:uuid:299bc9ff-bac2-4ad3-9335-cbc6a1438285",
+    "timestamp" : "2020-12-05T02:22:33.518Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -5185,6 +5185,80 @@ e: {
     {
       "name" : "excludeNested",
       "valueBoolean" : true
+    },
+    {
+      "name" : "version",
+      "valueString" : "http://hl7.org/fhir/sid/icd-10-cm|2021"
+    }],
+    "contains" : [{
+      "system" : "http://hl7.org/fhir/sid/icd-10-cm",
+      "code" : "C01",
+      "display" : "Malignant neoplasm of base of tongue"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/icd-10-cm",
+      "code" : "C07",
+      "display" : "Malignant neoplasm of parotid gland"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/icd-10-cm",
+      "code" : "C12",
+      "display" : "Malignant neoplasm of pyriform sinus"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/icd-10-cm",
+      "code" : "C19",
+      "display" : "Malignant neoplasm of rectosigmoid junction"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/icd-10-cm",
+      "code" : "C20",
+      "display" : "Malignant neoplasm of rectum"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/icd-10-cm",
+      "code" : "C23",
+      "display" : "Malignant neoplasm of gallbladder"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/icd-10-cm",
+      "code" : "C33",
+      "display" : "Malignant neoplasm of trachea"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/icd-10-cm",
+      "code" : "C37",
+      "display" : "Malignant neoplasm of thymus"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/icd-10-cm",
+      "code" : "C52",
+      "display" : "Malignant neoplasm of vagina"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/icd-10-cm",
+      "code" : "C55",
+      "display" : "Malignant neoplasm of uterus, part unspecified"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/icd-10-cm",
+      "code" : "C58",
+      "display" : "Malignant neoplasm of placenta"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/icd-10-cm",
+      "code" : "C61",
+      "display" : "Malignant neoplasm of prostate"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/icd-10-cm",
+      "code" : "C73",
+      "display" : "Malignant neoplasm of thyroid gland"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/icd-10-cm",
+      "code" : "D45",
+      "display" : "Polycythemia vera"
     }]
   }
 },
@@ -10152,262 +10226,6 @@ e: {
   }
 }}####
 e: {
-  "valueSet" : {
-  "resourceType" : "ValueSet",
-  "status" : "active",
-  "expansion" : {
-    "identifier" : "urn:uuid:1f2a2fff-e897-4445-b7f5-3b18fc935cf8",
-    "timestamp" : "2020-10-23T14:27:55.049Z",
-    "parameter" : [{
-      "name" : "limitedExpansion",
-      "valueBoolean" : true
-    },
-    {
-      "name" : "excludeNested",
-      "valueBoolean" : true
-    }]
-  }
-},
-  "error" : ""
-}
--------------------------------------------------------------------------------------
-{"hierarchical" : false, "valueSet" :{
-  "resourceType" : "ValueSet",
-  "compose" : {
-    "include" : [{
-      "system" : "http://hl7.org/fhir/sid/icd-10-cm",
-      "concept" : [{
-        "code" : "C7B00",
-        "display" : "Secondary carcinoid tumors, unspecified site"
-      },
-      {
-        "code" : "C7B01",
-        "display" : "Secondary carcinoid tumors of distant lymph nodes"
-      },
-      {
-        "code" : "C7B02",
-        "display" : "Secondary carcinoid tumors of liver"
-      },
-      {
-        "code" : "C7B03",
-        "display" : "Secondary carcinoid tumors of bone"
-      },
-      {
-        "code" : "C7B04",
-        "display" : "Secondary carcinoid tumors of peritoneum"
-      },
-      {
-        "code" : "C7B09",
-        "display" : "Secondary carcinoid tumors of other sites"
-      },
-      {
-        "code" : "C7B1",
-        "display" : "Secondary Merkel cell carcinoma"
-      },
-      {
-        "code" : "C7B8",
-        "display" : "Other secondary neuroendocrine tumors"
-      },
-      {
-        "code" : "C770",
-        "display" : "Secondary and unspecified malignant neoplasm of lymph nodes of head, face and neck"
-      },
-      {
-        "code" : "C771",
-        "display" : "Secondary and unspecified malignant neoplasm of intrathoracic lymph nodes"
-      },
-      {
-        "code" : "C772",
-        "display" : "Secondary and unspecified malignant neoplasm of intra-abdominal lymph nodes"
-      },
-      {
-        "code" : "C773",
-        "display" : "Secondary and unspecified malignant neoplasm of axilla and upper limb lymph nodes"
-      },
-      {
-        "code" : "C774",
-        "display" : "Secondary and unspecified malignant neoplasm of inguinal and lower limb lymph nodes"
-      },
-      {
-        "code" : "C775",
-        "display" : "Secondary and unspecified malignant neoplasm of intrapelvic lymph nodes"
-      },
-      {
-        "code" : "C778",
-        "display" : "Secondary and unspecified malignant neoplasm of lymph nodes of multiple regions"
-      },
-      {
-        "code" : "C779",
-        "display" : "Secondary and unspecified malignant neoplasm of lymph node, unspecified"
-      },
-      {
-        "code" : "C7800",
-        "display" : "Secondary malignant neoplasm of unspecified lung"
-      },
-      {
-        "code" : "C7801",
-        "display" : "Secondary malignant neoplasm of right lung"
-      },
-      {
-        "code" : "C7802",
-        "display" : "Secondary malignant neoplasm of left lung"
-      },
-      {
-        "code" : "C781",
-        "display" : "Secondary malignant neoplasm of mediastinum"
-      },
-      {
-        "code" : "C782",
-        "display" : "Secondary malignant neoplasm of pleura"
-      },
-      {
-        "code" : "C7830",
-        "display" : "Secondary malignant neoplasm of unspecified respiratory organ"
-      },
-      {
-        "code" : "C7839",
-        "display" : "Secondary malignant neoplasm of other respiratory organs"
-      },
-      {
-        "code" : "C784",
-        "display" : "Secondary malignant neoplasm of small intestine"
-      },
-      {
-        "code" : "C785",
-        "display" : "Secondary malignant neoplasm of large intestine and rectum"
-      },
-      {
-        "code" : "C786",
-        "display" : "Secondary malignant neoplasm of retroperitoneum and peritoneum"
-      },
-      {
-        "code" : "C787",
-        "display" : "Secondary malignant neoplasm of liver and intrahepatic bile duct"
-      },
-      {
-        "code" : "C7880",
-        "display" : "Secondary malignant neoplasm of unspecified digestive organ"
-      },
-      {
-        "code" : "C7889",
-        "display" : "Secondary malignant neoplasm of other digestive organs"
-      },
-      {
-        "code" : "C7900",
-        "display" : "Secondary malignant neoplasm of unspecified kidney and renal pelvis"
-      },
-      {
-        "code" : "C7901",
-        "display" : "Secondary malignant neoplasm of right kidney and renal pelvis"
-      },
-      {
-        "code" : "C7902",
-        "display" : "Secondary malignant neoplasm of left kidney and renal pelvis"
-      },
-      {
-        "code" : "C7910",
-        "display" : "Secondary malignant neoplasm of unspecified urinary organs"
-      },
-      {
-        "code" : "C7911",
-        "display" : "Secondary malignant neoplasm of bladder"
-      },
-      {
-        "code" : "C7919",
-        "display" : "Secondary malignant neoplasm of other urinary organs"
-      },
-      {
-        "code" : "C792",
-        "display" : "Secondary malignant neoplasm of skin"
-      },
-      {
-        "code" : "C7931",
-        "display" : "Secondary malignant neoplasm of brain"
-      },
-      {
-        "code" : "C7932",
-        "display" : "Secondary malignant neoplasm of cerebral meninges"
-      },
-      {
-        "code" : "C7940",
-        "display" : "Secondary malignant neoplasm of unspecified part of nervous system"
-      },
-      {
-        "code" : "C7949",
-        "display" : "Secondary malignant neoplasm of other parts of nervous system"
-      },
-      {
-        "code" : "C7951",
-        "display" : "Secondary malignant neoplasm of bone"
-      },
-      {
-        "code" : "C7952",
-        "display" : "Secondary malignant neoplasm of bone marrow"
-      },
-      {
-        "code" : "C7960",
-        "display" : "Secondary malignant neoplasm of unspecified ovary"
-      },
-      {
-        "code" : "C7961",
-        "display" : "Secondary malignant neoplasm of right ovary"
-      },
-      {
-        "code" : "C7962",
-        "display" : "Secondary malignant neoplasm of left ovary"
-      },
-      {
-        "code" : "C7970",
-        "display" : "Secondary malignant neoplasm of unspecified adrenal gland"
-      },
-      {
-        "code" : "C7971",
-        "display" : "Secondary malignant neoplasm of right adrenal gland"
-      },
-      {
-        "code" : "C7972",
-        "display" : "Secondary malignant neoplasm of left adrenal gland"
-      },
-      {
-        "code" : "C7981",
-        "display" : "Secondary malignant neoplasm of breast"
-      },
-      {
-        "code" : "C7982",
-        "display" : "Secondary malignant neoplasm of genital organs"
-      },
-      {
-        "code" : "C7989",
-        "display" : "Secondary malignant neoplasm of other specified sites"
-      },
-      {
-        "code" : "C799",
-        "display" : "Secondary malignant neoplasm of unspecified site"
-      },
-      {
-        "code" : "C800",
-        "display" : "Disseminated malignant neoplasm, unspecified"
-      }]
-    }]
-  }
-}}####
-e: {
-  "valueSet" : {
-  "resourceType" : "ValueSet",
-  "status" : "active",
-  "expansion" : {
-    "identifier" : "urn:uuid:67cdd431-e62f-4ffb-ba5a-4a5caa98902a",
-    "timestamp" : "2020-10-23T14:27:55.956Z",
-    "parameter" : [{
-      "name" : "limitedExpansion",
-      "valueBoolean" : true
-    },
-    {
-      "name" : "excludeNested",
-      "valueBoolean" : true
-    }]
-  }
-},
   "error" : ""
 }
 -------------------------------------------------------------------------------------

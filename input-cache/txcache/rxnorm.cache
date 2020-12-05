@@ -1,6 +1,116 @@
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+  "code" : "349472"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+      "filter" : [{
+        "property" : "TTY",
+        "op" : "in",
+        "value" : "SCD,SBD,GPCK,BPCK,SCDG,SBDG,SCDF,SBDF"
+      }]
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "Argument out of range (from http://tx.fhir.org/r4)"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+  "code" : "349472",
+  "display" : "gefitinib 250 MG Oral Tablet"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+      "filter" : [{
+        "property" : "TTY",
+        "op" : "in",
+        "value" : "SCD,SBD,GPCK,BPCK,SCDG,SBDG,SCDF,SBDF"
+      }]
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK"}####
+v: {
+  "display" : "gefitinib 250 MG Oral Tablet",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+  "code" : "349472"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "gefitinib 250 MG Oral Tablet",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+  "code" : "309311"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+      "filter" : [{
+        "property" : "TTY",
+        "op" : "in",
+        "value" : "SCD,SBD,GPCK,BPCK,SCDG,SBDG,SCDF,SBDF"
+      }]
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "Argument out of range (from http://tx.fhir.org/r4)"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+  "code" : "309311",
+  "display" : "CISplatin 50 MG per 50 ML Injectable Solution"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+      "filter" : [{
+        "property" : "TTY",
+        "op" : "in",
+        "value" : "SCD,SBD,GPCK,BPCK,SCDG,SBDG,SCDF,SBDF"
+      }]
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK"}####
+v: {
+  "display" : "CISplatin 50 MG per 50 ML Injectable Solution",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+  "code" : "309311"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "CISplatin 50 MG per 50 ML Injectable Solution",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
   "code" : "84857"
 }, "valueSet" :{
   "resourceType" : "ValueSet",
@@ -221,66 +331,11 @@ v: {
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
-  "code" : "349472"
-}, "valueSet" :{
-  "resourceType" : "ValueSet",
-  "compose" : {
-    "include" : [{
-      "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
-      "filter" : [{
-        "property" : "TTY",
-        "op" : "in",
-        "value" : "SCD,SBD,GPCK,BPCK,SCDG,SBDG,SCDF,SBDF"
-      }]
-    }]
-  }
-}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
-v: {
-  "display" : "",
-  "severity" : "error",
-  "error" : "Argument out of range (from http://tx.fhir.org/r4)"
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
-  "code" : "349472",
-  "display" : "gefitinib 250 MG Oral Tablet"
-}, "valueSet" :{
-  "resourceType" : "ValueSet",
-  "compose" : {
-    "include" : [{
-      "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
-      "filter" : [{
-        "property" : "TTY",
-        "op" : "in",
-        "value" : "SCD,SBD,GPCK,BPCK,SCDG,SBDG,SCDF,SBDF"
-      }]
-    }]
-  }
-}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK"}####
-v: {
-  "display" : "gefitinib 250 MG Oral Tablet",
-  "severity" : null,
-  "error" : ""
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
-  "code" : "349472"
+  "code" : "3639",
+  "display" : "DOXOrubicin"
 }, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
 v: {
-  "display" : "gefitinib 250 MG Oral Tablet",
-  "severity" : null,
-  "error" : ""
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
-  "code" : "84857",
-  "display" : "anastrozole"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
-v: {
-  "display" : "anastrozole",
+  "display" : "DOXOrubicin",
   "severity" : null,
   "error" : ""
 }
@@ -298,17 +353,6 @@ v: {
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
-  "code" : "3639",
-  "display" : "DOXOrubicin"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
-v: {
-  "display" : "DOXOrubicin",
-  "severity" : null,
-  "error" : ""
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
   "code" : "56946",
   "display" : "PACLitaxel"
 }, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
@@ -320,77 +364,11 @@ v: {
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
-  "code" : "349472",
-  "display" : "gefitinib 250 MG Oral Tablet"
+  "code" : "84857",
+  "display" : "anastrozole"
 }, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
 v: {
-  "display" : "gefitinib 250 MG Oral Tablet",
-  "severity" : null,
-  "error" : ""
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
-  "code" : "309311"
-}, "valueSet" :{
-  "resourceType" : "ValueSet",
-  "compose" : {
-    "include" : [{
-      "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
-      "filter" : [{
-        "property" : "TTY",
-        "op" : "in",
-        "value" : "SCD,SBD,GPCK,BPCK,SCDG,SBDG,SCDF,SBDF"
-      }]
-    }]
-  }
-}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
-v: {
-  "display" : "",
-  "severity" : "error",
-  "error" : "Argument out of range (from http://tx.fhir.org/r4)"
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
-  "code" : "309311",
-  "display" : "CISplatin 50 MG per 50 ML Injectable Solution"
-}, "valueSet" :{
-  "resourceType" : "ValueSet",
-  "compose" : {
-    "include" : [{
-      "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
-      "filter" : [{
-        "property" : "TTY",
-        "op" : "in",
-        "value" : "SCD,SBD,GPCK,BPCK,SCDG,SBDG,SCDF,SBDF"
-      }]
-    }]
-  }
-}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK"}####
-v: {
-  "display" : "CISplatin 50 MG per 50 ML Injectable Solution",
-  "severity" : null,
-  "error" : ""
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
-  "code" : "309311"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
-v: {
-  "display" : "CISplatin 50 MG per 50 ML Injectable Solution",
-  "severity" : null,
-  "error" : ""
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
-  "code" : "309311",
-  "display" : "CISplatin 50 MG per 50 ML Injectable Solution"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
-v: {
-  "display" : "CISplatin 50 MG per 50 ML Injectable Solution",
+  "display" : "anastrozole",
   "severity" : null,
   "error" : ""
 }

@@ -43,7 +43,8 @@ v: {
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "urn:ietf:bcp:47",
-  "code" : "en-US"
+  "code" : "en-US",
+  "display" : "English (Region=United States)"
 }, "valueSet" :{
   "resourceType" : "ValueSet",
   "compose" : {
@@ -95,8 +96,7 @@ v: {
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "urn:ietf:bcp:47",
-  "code" : "en-US",
-  "display" : "English (Region=United States)"
+  "code" : "en-US"
 }, "valueSet" :{
   "resourceType" : "ValueSet",
   "compose" : {

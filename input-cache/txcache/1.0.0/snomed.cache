@@ -25,8 +25,8 @@ e: {
       "url" : "http://hl7.org/fhir/StructureDefinition/valueset-unclosed",
       "valueBoolean" : true
     }],
-    "identifier" : "urn:uuid:fd6bf083-fd7a-4c22-8f3c-ea58a1027bad",
-    "timestamp" : "2020-10-23T14:18:58.892Z",
+    "identifier" : "urn:uuid:82b24e63-0213-46c6-b137-49127c05c6a2",
+    "timestamp" : "2020-12-05T02:16:35.189Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -5077,8 +5077,8 @@ e: {
   "resourceType" : "ValueSet",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:4f2a5bdc-6eeb-4e60-89e7-67694093a3b4",
-    "timestamp" : "2020-10-23T14:21:07.268Z",
+    "identifier" : "urn:uuid:acc46db5-542b-4a5b-9fe2-0f6f15c16e16",
+    "timestamp" : "2020-12-05T02:18:35.142Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -5147,8 +5147,8 @@ e: {
       "url" : "http://hl7.org/fhir/StructureDefinition/valueset-unclosed",
       "valueBoolean" : true
     }],
-    "identifier" : "urn:uuid:6a398e5e-efdf-4e50-b372-35b817b6cf68",
-    "timestamp" : "2020-10-23T14:21:07.627Z",
+    "identifier" : "urn:uuid:5a11e573-9c60-4805-b497-2e884d360e77",
+    "timestamp" : "2020-12-05T02:18:36.721Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -10192,8 +10192,8 @@ e: {
       "url" : "http://hl7.org/fhir/StructureDefinition/valueset-unclosed",
       "valueBoolean" : true
     }],
-    "identifier" : "urn:uuid:cd552fa0-e265-40f2-b240-f21a25065bd9",
-    "timestamp" : "2020-10-23T14:22:12.971Z",
+    "identifier" : "urn:uuid:d0081074-597f-4777-a28f-6f1d021f26b0",
+    "timestamp" : "2020-12-05T02:20:35.127Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -15932,8 +15932,8 @@ e: {
   "resourceType" : "ValueSet",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:57bc8d45-1486-4996-974d-154120783f4b",
-    "timestamp" : "2020-10-23T14:26:24.549Z",
+    "identifier" : "urn:uuid:7a4d8281-b981-4354-88ce-5d6d048252e3",
+    "timestamp" : "2020-12-05T02:34:31.472Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -16791,8 +16791,8 @@ e: {
   "resourceType" : "ValueSet",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:b2453458-d8b9-4a79-b5ca-24520889a21e",
-    "timestamp" : "2020-10-23T14:26:24.799Z",
+    "identifier" : "urn:uuid:4272cc3c-6aee-46a1-89a6-c26d6ae1d6ca",
+    "timestamp" : "2020-12-05T02:34:32.081Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -16858,8 +16858,8 @@ e: {
   "resourceType" : "ValueSet",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:81200410-ef8a-475e-a4ce-508ae76c2ea7",
-    "timestamp" : "2020-10-23T14:26:25.455Z",
+    "identifier" : "urn:uuid:c6dacba1-e9d0-4a06-aef9-d897baa43e6c",
+    "timestamp" : "2020-12-05T02:34:34.644Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -16924,8 +16924,8 @@ e: {
       "url" : "http://hl7.org/fhir/StructureDefinition/valueset-unclosed",
       "valueBoolean" : true
     }],
-    "identifier" : "urn:uuid:a208e5d7-8948-4ad9-a87a-96cd0d44b3a9",
-    "timestamp" : "2020-10-23T14:26:26.580Z",
+    "identifier" : "urn:uuid:6b697c84-2a20-4802-a298-e82a6db040cb",
+    "timestamp" : "2020-12-05T02:34:37.425Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -16970,8 +16970,8 @@ e: {
       "url" : "http://hl7.org/fhir/StructureDefinition/valueset-unclosed",
       "valueBoolean" : true
     }],
-    "identifier" : "urn:uuid:93faa10b-e25c-48d5-91a2-8a99475aeb84",
-    "timestamp" : "2020-10-23T14:26:26.830Z",
+    "identifier" : "urn:uuid:a808a9ee-a547-45e3-a6b2-939db1b71c79",
+    "timestamp" : "2020-12-05T02:34:37.863Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -17016,8 +17016,8 @@ e: {
       "url" : "http://hl7.org/fhir/StructureDefinition/valueset-unclosed",
       "valueBoolean" : true
     }],
-    "identifier" : "urn:uuid:af7f9543-9a9a-410b-a7e7-2bd2dbaab251",
-    "timestamp" : "2020-10-23T14:26:27.096Z",
+    "identifier" : "urn:uuid:011c5964-fc8a-4505-8f5a-0330bb274cba",
+    "timestamp" : "2020-12-05T02:34:38.222Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -17062,8 +17062,8 @@ e: {
       "url" : "http://hl7.org/fhir/StructureDefinition/valueset-unclosed",
       "valueBoolean" : true
     }],
-    "identifier" : "urn:uuid:875290b0-1660-4048-be08-981ee00b45fe",
-    "timestamp" : "2020-10-23T14:26:27.330Z",
+    "identifier" : "urn:uuid:81a6ae19-e7a9-4209-b4eb-9245ef576b88",
+    "timestamp" : "2020-12-05T02:34:39.066Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -17112,8 +17112,8 @@ e: {
       "url" : "http://hl7.org/fhir/StructureDefinition/valueset-unclosed",
       "valueBoolean" : true
     }],
-    "identifier" : "urn:uuid:639a87e8-ee45-44b5-ae36-062f3387f387",
-    "timestamp" : "2020-10-23T14:26:27.612Z",
+    "identifier" : "urn:uuid:5bfcfc75-1825-4dd5-b977-042a23599075",
+    "timestamp" : "2020-12-05T02:34:39.581Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -22153,8 +22153,8 @@ e: {
       "url" : "http://hl7.org/fhir/StructureDefinition/valueset-unclosed",
       "valueBoolean" : true
     }],
-    "identifier" : "urn:uuid:b0aaf06d-2ce0-47d1-a185-fde7a6adb7c2",
-    "timestamp" : "2020-10-23T14:27:16.721Z",
+    "identifier" : "urn:uuid:ab1482df-8fff-486c-ac1e-6c1d971310b4",
+    "timestamp" : "2020-12-05T02:36:42.238Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -22394,8 +22394,8 @@ e: {
       "url" : "http://hl7.org/fhir/StructureDefinition/valueset-unclosed",
       "valueBoolean" : true
     }],
-    "identifier" : "urn:uuid:23032484-6d9e-4477-bbbf-817a75663711",
-    "timestamp" : "2020-10-23T14:27:18.534Z",
+    "identifier" : "urn:uuid:4593aefe-134d-4da0-b6c4-dc1b1303d6e8",
+    "timestamp" : "2020-12-05T02:36:47.410Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -22504,8 +22504,8 @@ e: {
   "resourceType" : "ValueSet",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:af2e359d-3451-4830-b957-acb4dc1ba308",
-    "timestamp" : "2020-10-23T14:27:19.206Z",
+    "identifier" : "urn:uuid:a524d9c3-4df2-405d-b26b-8845431b1bb8",
+    "timestamp" : "2020-12-05T02:36:49.223Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -22538,83 +22538,6 @@ e: {
   "compose" : {
     "include" : [{
       "system" : "http://snomed.info/sct",
-      "concept" : [{
-        "code" : "51440002",
-        "display" : "Right and left (qualifier value)"
-      },
-      {
-        "code" : "399488007",
-        "display" : "Midline (qualifier value)"
-      },
-      {
-        "code" : "24028007",
-        "display" : "Right (qualifier value)"
-      },
-      {
-        "code" : "7771000",
-        "display" : "Left (qualifier value)"
-      },
-      {
-        "code" : "66459002",
-        "display" : "Unilateral (qualifier value)"
-      }]
-    }]
-  }
-}}####
-e: {
-  "valueSet" : {
-  "resourceType" : "ValueSet",
-  "status" : "active",
-  "expansion" : {
-    "identifier" : "urn:uuid:43e49db2-4b80-4e09-9068-c67d0bd79ad2",
-    "timestamp" : "2020-10-23T14:27:19.393Z",
-    "parameter" : [{
-      "name" : "limitedExpansion",
-      "valueBoolean" : true
-    },
-    {
-      "name" : "excludeNested",
-      "valueBoolean" : true
-    },
-    {
-      "name" : "version",
-      "valueString" : "http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20200731"
-    }],
-    "contains" : [{
-      "system" : "http://snomed.info/sct",
-      "code" : "51440002",
-      "display" : "Right and left (qualifier value)"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "399488007",
-      "display" : "Midline (qualifier value)"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "24028007",
-      "display" : "Right (qualifier value)"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "7771000",
-      "display" : "Left (qualifier value)"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "66459002",
-      "display" : "Unilateral (qualifier value)"
-    }]
-  }
-},
-  "error" : ""
-}
--------------------------------------------------------------------------------------
-{"hierarchical" : false, "valueSet" :{
-  "resourceType" : "ValueSet",
-  "compose" : {
-    "include" : [{
-      "system" : "http://snomed.info/sct",
       "filter" : [{
         "property" : "concept",
         "op" : "is-a",
@@ -22632,8 +22555,8 @@ e: {
       "url" : "http://hl7.org/fhir/StructureDefinition/valueset-unclosed",
       "valueBoolean" : true
     }],
-    "identifier" : "urn:uuid:0422fd33-1b36-4866-bb59-1fd50b2b4f26",
-    "timestamp" : "2020-10-23T14:27:19.799Z",
+    "identifier" : "urn:uuid:bc426eb2-cfbe-49b3-a2f0-ea47acc37126",
+    "timestamp" : "2020-12-05T02:36:49.535Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -26460,911 +26383,6 @@ e: {
       "system" : "http://snomed.info/sct",
       "code" : "16260631000119101",
       "display" : "Secondary malignant neoplasm of lymph node from neoplasm of female breast"
-    }]
-  }
-},
-  "error" : ""
-}
--------------------------------------------------------------------------------------
-{"hierarchical" : false, "valueSet" :{
-  "resourceType" : "ValueSet",
-  "compose" : {
-    "include" : [{
-      "system" : "http://snomed.info/sct",
-      "concept" : [{
-        "code" : "448385000",
-        "display" : "Megavoltage radiation therapy using photons (procedure)"
-      },
-      {
-        "code" : "45643008",
-        "display" : "Teleradiotherapy using electrons (procedure)"
-      },
-      {
-        "code" : "10611004",
-        "display" : "Teleradiotherapy protons (procedure)"
-      },
-      {
-        "code" : "80347004",
-        "display" : "Teleradiotherapy neutrons (procedure)"
-      },
-      {
-        "code" : "152198000",
-        "display" : "Brachytherapy (procedure)"
-      }]
-    }]
-  }
-}}####
-e: {
-  "valueSet" : {
-  "resourceType" : "ValueSet",
-  "status" : "active",
-  "expansion" : {
-    "identifier" : "urn:uuid:e333f339-7beb-4f39-aa0f-13f06fbaacd8",
-    "timestamp" : "2020-10-23T14:27:55.221Z",
-    "parameter" : [{
-      "name" : "limitedExpansion",
-      "valueBoolean" : true
-    },
-    {
-      "name" : "excludeNested",
-      "valueBoolean" : true
-    },
-    {
-      "name" : "version",
-      "valueString" : "http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20200731"
-    }],
-    "contains" : [{
-      "system" : "http://snomed.info/sct",
-      "code" : "448385000",
-      "display" : "Megavoltage radiation therapy using photons (procedure)"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "45643008",
-      "display" : "Teleradiotherapy using electrons (procedure)"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "10611004",
-      "display" : "Teleradiotherapy protons (procedure)"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "80347004",
-      "display" : "Teleradiotherapy neutrons (procedure)"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "152198000",
-      "display" : "Brachytherapy (procedure)"
-    }]
-  }
-},
-  "error" : ""
-}
--------------------------------------------------------------------------------------
-{"hierarchical" : false, "valueSet" :{
-  "resourceType" : "ValueSet",
-  "compose" : {
-    "include" : [{
-      "system" : "http://snomed.info/sct",
-      "concept" : [{
-        "code" : "81105003",
-        "display" : "Cervical lymph node group (body structure)"
-      },
-      {
-        "code" : "196374005",
-        "display" : "Entire lymph node of thorax (body structure)"
-      },
-      {
-        "code" : "81105003",
-        "display" : "Cervical lymph node group (body structure)"
-      },
-      {
-        "code" : "196374005",
-        "display" : "Entire lymph node of thorax (body structure)"
-      },
-      {
-        "code" : "245269009",
-        "display" : "Axillary lymph node group (body structure)"
-      },
-      {
-        "code" : "245265003",
-        "display" : "Supraclavicular lymph node group (body structure)"
-      },
-      {
-        "code" : "245282001",
-        "display" : "Internal mammary lymph node group (body structure)"
-      },
-      {
-        "code" : "245284000",
-        "display" : "Abdominal lymph node group (body structure)"
-      },
-      {
-        "code" : "245294005",
-        "display" : "Pelvic lymph node group (body structure)"
-      },
-      {
-        "code" : "245284000",
-        "display" : "Abdominal lymph node group (body structure)"
-      },
-      {
-        "code" : "245294005",
-        "display" : "Pelvic lymph node group (body structure)"
-      },
-      {
-        "code" : "59441001",
-        "display" : "Structure of lymph node (body structure)"
-      },
-      {
-        "code" : "244486005",
-        "display" : "Entire eye (body structure)"
-      },
-      {
-        "code" : "56329008",
-        "display" : "Pituitary structure (body structure)"
-      },
-      {
-        "code" : "12738006",
-        "display" : "Brain structure (body structure)"
-      },
-      {
-        "code" : "119235005",
-        "display" : "Brain part (body structure)"
-      },
-      {
-        "code" : "2748008",
-        "display" : "Spinal cord structure (body structure)"
-      },
-      {
-        "code" : "71836000",
-        "display" : "Nasopharyngeal structure (body structure)"
-      },
-      {
-        "code" : "74262004",
-        "display" : "Oral cavity structure (body structure)"
-      },
-      {
-        "code" : "31389004",
-        "display" : "Oropharyngeal structure (body structure)"
-      },
-      {
-        "code" : "4596009",
-        "display" : "Laryngeal structure (body structure)"
-      },
-      {
-        "code" : "81502006",
-        "display" : "Hypopharyngeal structure (body structure)"
-      },
-      {
-        "code" : "2095001",
-        "display" : "Nasal sinus structure (body structure)"
-      },
-      {
-        "code" : "385294005",
-        "display" : "Salivary gland structure (body structure)"
-      },
-      {
-        "code" : "69748006",
-        "display" : "Thyroid structure (body structure)"
-      },
-      {
-        "code" : "361355005",
-        "display" : "Entire head and neck (body structure)"
-      },
-      {
-        "code" : "181216001",
-        "display" : "Entire lung (body structure)"
-      },
-      {
-        "code" : "71400007",
-        "display" : "Mesothelium structure (body structure)"
-      },
-      {
-        "code" : "302551006",
-        "display" : "Entire thorax (body structure)"
-      },
-      {
-        "code" : "181131000",
-        "display" : "Entire breast (body structure)"
-      },
-      {
-        "code" : "119184005",
-        "display" : "Breast part (body structure)"
-      },
-      {
-        "code" : "78904004",
-        "display" : "Chest wall structure (body structure)"
-      },
-      {
-        "code" : "181245004",
-        "display" : "Entire esophagus (body structure)"
-      },
-      {
-        "code" : "69695003",
-        "display" : "Stomach structure (body structure)"
-      },
-      {
-        "code" : "30315005",
-        "display" : "Small intestinal structure (body structure)"
-      },
-      {
-        "code" : "71854001",
-        "display" : "Colon structure (body structure)"
-      },
-      {
-        "code" : "34402009",
-        "display" : "Rectum structure (body structure)"
-      },
-      {
-        "code" : "53505006",
-        "display" : "Anal structure (body structure)"
-      },
-      {
-        "code" : "10200004",
-        "display" : "Liver structure (body structure)"
-      },
-      {
-        "code" : "34707002",
-        "display" : "Biliary tract structure (body structure)"
-      },
-      {
-        "code" : "28231008",
-        "display" : "Gallbladder structure (body structure)"
-      },
-      {
-        "code" : "15776009",
-        "display" : "Pancreatic structure (body structure)"
-      },
-      {
-        "code" : "113345001",
-        "display" : "Abdominal structure (body structure)"
-      },
-      {
-        "code" : "302512001",
-        "display" : "Entire urinary bladder (body structure)"
-      },
-      {
-        "code" : "119221008",
-        "display" : "Bladder part (body structure)"
-      },
-      {
-        "code" : "64033007",
-        "display" : "Kidney structure (body structure)"
-      },
-      {
-        "code" : "87953007",
-        "display" : "Ureteric structure (body structure)"
-      },
-      {
-        "code" : "181422007",
-        "display" : "Entire prostate (body structure)"
-      },
-      {
-        "code" : "119231001",
-        "display" : "Prostate part (body structure)"
-      },
-      {
-        "code" : "13648007",
-        "display" : "Urethral structure (body structure)"
-      },
-      {
-        "code" : "18911002",
-        "display" : "Penile structure (body structure)"
-      },
-      {
-        "code" : "40689003",
-        "display" : "Testis structure (body structure)"
-      },
-      {
-        "code" : "20233005",
-        "display" : "Scrotal structure (body structure)"
-      },
-      {
-        "code" : "15497006",
-        "display" : "Ovarian structure (body structure)"
-      },
-      {
-        "code" : "31435000",
-        "display" : "Fallopian tube structure (body structure)"
-      },
-      {
-        "code" : "35039007",
-        "display" : "Uterine structure (body structure)"
-      },
-      {
-        "code" : "71252005",
-        "display" : "Cervix uteri structure (body structure)"
-      },
-      {
-        "code" : "76784001",
-        "display" : "Vaginal structure (body structure)"
-      },
-      {
-        "code" : "45292006",
-        "display" : "Vulval structure (body structure)"
-      },
-      {
-        "code" : "89546000",
-        "display" : "Bone structure of cranium (body structure)"
-      },
-      {
-        "code" : "44300000",
-        "display" : "Entire vertebral column (body structure)"
-      },
-      {
-        "code" : "16982005",
-        "display" : "Shoulder region structure (body structure)"
-      },
-      {
-        "code" : "113197003",
-        "display" : "Bone structure of rib (body structure)"
-      },
-      {
-        "code" : "29836001",
-        "display" : "Hip region structure (body structure)"
-      },
-      {
-        "code" : "46633002",
-        "display" : "Entire bony pelvis (body structure)"
-      },
-      {
-        "code" : "12921003",
-        "display" : "Pelvic structure (body structure)"
-      },
-      {
-        "code" : "48566001",
-        "display" : "Bone structure of extremity (body structure)"
-      },
-      {
-        "code" : "39937001",
-        "display" : "Skin structure (body structure)"
-      },
-      {
-        "code" : "87784001",
-        "display" : "Soft tissues (body structure)"
-      },
-      {
-        "code" : "38266002",
-        "display" : "Entire body as a whole (body structure)"
-      }]
-    }]
-  }
-}}####
-e: {
-  "valueSet" : {
-  "resourceType" : "ValueSet",
-  "status" : "active",
-  "expansion" : {
-    "identifier" : "urn:uuid:78a93f94-b041-417a-af09-82008481f410",
-    "timestamp" : "2020-10-23T14:27:55.581Z",
-    "parameter" : [{
-      "name" : "limitedExpansion",
-      "valueBoolean" : true
-    },
-    {
-      "name" : "excludeNested",
-      "valueBoolean" : true
-    },
-    {
-      "name" : "version",
-      "valueString" : "http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20200731"
-    }],
-    "contains" : [{
-      "system" : "http://snomed.info/sct",
-      "code" : "81105003",
-      "display" : "Cervical lymph node group (body structure)"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "196374005",
-      "display" : "Entire lymph node of thorax (body structure)"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "245269009",
-      "display" : "Axillary lymph node group (body structure)"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "245265003",
-      "display" : "Supraclavicular lymph node group (body structure)"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "245282001",
-      "display" : "Internal mammary lymph node group (body structure)"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "245284000",
-      "display" : "Abdominal lymph node group (body structure)"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "245294005",
-      "display" : "Pelvic lymph node group (body structure)"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "59441001",
-      "display" : "Structure of lymph node (body structure)"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "244486005",
-      "display" : "Entire eye (body structure)"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "56329008",
-      "display" : "Pituitary structure (body structure)"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "12738006",
-      "display" : "Brain structure (body structure)"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "119235005",
-      "display" : "Brain part (body structure)"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "2748008",
-      "display" : "Spinal cord structure (body structure)"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "71836000",
-      "display" : "Nasopharyngeal structure (body structure)"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "74262004",
-      "display" : "Oral cavity structure (body structure)"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "31389004",
-      "display" : "Oropharyngeal structure (body structure)"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "4596009",
-      "display" : "Laryngeal structure (body structure)"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "81502006",
-      "display" : "Hypopharyngeal structure (body structure)"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "2095001",
-      "display" : "Nasal sinus structure (body structure)"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "385294005",
-      "display" : "Salivary gland structure (body structure)"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "69748006",
-      "display" : "Thyroid structure (body structure)"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "361355005",
-      "display" : "Entire head and neck (body structure)"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "181216001",
-      "display" : "Entire lung (body structure)"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "71400007",
-      "display" : "Mesothelium structure (body structure)"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "302551006",
-      "display" : "Entire thorax (body structure)"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "181131000",
-      "display" : "Entire breast (body structure)"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "119184005",
-      "display" : "Breast part (body structure)"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "78904004",
-      "display" : "Chest wall structure (body structure)"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "181245004",
-      "display" : "Entire esophagus (body structure)"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "69695003",
-      "display" : "Stomach structure (body structure)"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "30315005",
-      "display" : "Small intestinal structure (body structure)"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "71854001",
-      "display" : "Colon structure (body structure)"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "34402009",
-      "display" : "Rectum structure (body structure)"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "53505006",
-      "display" : "Anal structure (body structure)"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "10200004",
-      "display" : "Liver structure (body structure)"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "34707002",
-      "display" : "Biliary tract structure (body structure)"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "28231008",
-      "display" : "Gallbladder structure (body structure)"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "15776009",
-      "display" : "Pancreatic structure (body structure)"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "113345001",
-      "display" : "Abdominal structure (body structure)"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "302512001",
-      "display" : "Entire urinary bladder (body structure)"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "119221008",
-      "display" : "Bladder part (body structure)"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "64033007",
-      "display" : "Kidney structure (body structure)"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "87953007",
-      "display" : "Ureteric structure (body structure)"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "181422007",
-      "display" : "Entire prostate (body structure)"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "119231001",
-      "display" : "Prostate part (body structure)"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "13648007",
-      "display" : "Urethral structure (body structure)"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "18911002",
-      "display" : "Penile structure (body structure)"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "40689003",
-      "display" : "Testis structure (body structure)"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "20233005",
-      "display" : "Scrotal structure (body structure)"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "15497006",
-      "display" : "Ovarian structure (body structure)"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "31435000",
-      "display" : "Fallopian tube structure (body structure)"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "35039007",
-      "display" : "Uterine structure (body structure)"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "71252005",
-      "display" : "Cervix uteri structure (body structure)"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "76784001",
-      "display" : "Vaginal structure (body structure)"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "45292006",
-      "display" : "Vulval structure (body structure)"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "89546000",
-      "display" : "Bone structure of cranium (body structure)"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "44300000",
-      "display" : "Entire vertebral column (body structure)"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "16982005",
-      "display" : "Shoulder region structure (body structure)"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "113197003",
-      "display" : "Bone structure of rib (body structure)"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "29836001",
-      "display" : "Hip region structure (body structure)"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "46633002",
-      "display" : "Entire bony pelvis (body structure)"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "12921003",
-      "display" : "Pelvic structure (body structure)"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "48566001",
-      "display" : "Bone structure of extremity (body structure)"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "39937001",
-      "display" : "Skin structure (body structure)"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "87784001",
-      "display" : "Soft tissues (body structure)"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "38266002",
-      "display" : "Entire body as a whole (body structure)"
-    }]
-  }
-},
-  "error" : ""
-}
--------------------------------------------------------------------------------------
-{"hierarchical" : false, "valueSet" :{
-  "resourceType" : "ValueSet",
-  "compose" : {
-    "include" : [{
-      "system" : "http://snomed.info/sct",
-      "concept" : [{
-        "code" : "128462008",
-        "display" : "Secondary malignant neoplastic disease (disorder)"
-      }]
-    }]
-  }
-}}####
-e: {
-  "valueSet" : {
-  "resourceType" : "ValueSet",
-  "status" : "active",
-  "expansion" : {
-    "identifier" : "urn:uuid:17883009-b959-4647-8f04-162d01b09a5c",
-    "timestamp" : "2020-10-23T14:27:55.768Z",
-    "parameter" : [{
-      "name" : "limitedExpansion",
-      "valueBoolean" : true
-    },
-    {
-      "name" : "excludeNested",
-      "valueBoolean" : true
-    },
-    {
-      "name" : "version",
-      "valueString" : "http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20200731"
-    }],
-    "contains" : [{
-      "system" : "http://snomed.info/sct",
-      "code" : "128462008",
-      "display" : "Secondary malignant neoplastic disease (disorder)"
-    }]
-  }
-},
-  "error" : ""
-}
--------------------------------------------------------------------------------------
-{"hierarchical" : false, "valueSet" :{
-  "resourceType" : "ValueSet",
-  "compose" : {
-    "include" : [{
-      "system" : "http://snomed.info/sct",
-      "concept" : [{
-        "code" : "373808002",
-        "display" : "Curative - procedure intent"
-      },
-      {
-        "code" : "363676003",
-        "display" : "Palliative - procedure intent"
-      }]
-    }]
-  }
-}}####
-e: {
-  "valueSet" : {
-  "resourceType" : "ValueSet",
-  "status" : "active",
-  "expansion" : {
-    "identifier" : "urn:uuid:caa456b3-8604-45e6-8664-2f0357341d72",
-    "timestamp" : "2020-10-23T14:27:56.643Z",
-    "parameter" : [{
-      "name" : "limitedExpansion",
-      "valueBoolean" : true
-    },
-    {
-      "name" : "excludeNested",
-      "valueBoolean" : true
-    },
-    {
-      "name" : "version",
-      "valueString" : "http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20200731"
-    }],
-    "contains" : [{
-      "system" : "http://snomed.info/sct",
-      "code" : "373808002",
-      "display" : "Curative - procedure intent"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "363676003",
-      "display" : "Palliative - procedure intent"
-    }]
-  }
-},
-  "error" : ""
-}
--------------------------------------------------------------------------------------
-{"hierarchical" : false, "valueSet" :{
-  "resourceType" : "ValueSet",
-  "compose" : {
-    "include" : [{
-      "system" : "http://snomed.info/sct",
-      "concept" : [{
-        "code" : "182992009",
-        "display" : "Treatment completed (situation)"
-      },
-      {
-        "code" : "58848006",
-        "display" : "Lack of drug action (finding)"
-      },
-      {
-        "code" : "281647001",
-        "display" : "Adverse reaction (disorder)"
-      },
-      {
-        "code" : "160932005",
-        "display" : "Financial problem"
-      },
-      {
-        "code" : "105480006",
-        "display" : "Refusal of treatment by patient"
-      },
-      {
-        "code" : "107724000",
-        "display" : "Patient transfer"
-      },
-      {
-        "code" : "309846006",
-        "display" : "Treatment not available"
-      }]
-    }]
-  }
-}}####
-e: {
-  "valueSet" : {
-  "resourceType" : "ValueSet",
-  "status" : "active",
-  "expansion" : {
-    "identifier" : "urn:uuid:e2d124d1-ea9c-42e2-a148-37e9a2f1cdcc",
-    "timestamp" : "2020-10-23T14:27:57.034Z",
-    "parameter" : [{
-      "name" : "limitedExpansion",
-      "valueBoolean" : true
-    },
-    {
-      "name" : "excludeNested",
-      "valueBoolean" : true
-    },
-    {
-      "name" : "version",
-      "valueString" : "http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20200731"
-    }],
-    "contains" : [{
-      "system" : "http://snomed.info/sct",
-      "code" : "182992009",
-      "display" : "Treatment completed (situation)"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "58848006",
-      "display" : "Lack of drug action (finding)"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "281647001",
-      "display" : "Adverse reaction (disorder)"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "160932005",
-      "display" : "Financial problem"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "105480006",
-      "display" : "Refusal of treatment by patient"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "107724000",
-      "display" : "Patient transfer"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "309846006",
-      "display" : "Treatment not available"
     }]
   }
 },

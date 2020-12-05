@@ -31,3 +31,34 @@ e: {
   "error" : ""
 }
 -------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://ncithesaurus-stage.nci.nih.gov",
+  "code" : "C146985"
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code system \"http://ncithesaurus-stage.nci.nih.gov\" is not known (encountered paired with code = \"C146985\"); The code provided (http://ncithesaurus-stage.nci.nih.gov#C146985) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4)"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://ncithesaurus-stage.nci.nih.gov",
+  "code" : "C146985"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://ncithesaurus-stage.nci.nih.gov",
+      "concept" : [{
+        "code" : "C146985",
+        "display" : "AJCC Cancer Staging Manual 8th Edition"
+      }]
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code \"C146985\" is not valid in the system http://ncithesaurus-stage.nci.nih.gov; The code provided (http://ncithesaurus-stage.nci.nih.gov#C146985) is not valid (from http://tx.fhir.org/r4)"
+}
+-------------------------------------------------------------------------------------

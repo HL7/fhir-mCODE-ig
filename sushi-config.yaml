@@ -19,6 +19,7 @@ dependencies:
   hl7.fhir.us.core: 3.1.0
 parameters:
   show-inherited-invariants: false
+  version-comparison: n/a
 copyrightYear: 2019+
 releaseLabel: STU1
 pages:

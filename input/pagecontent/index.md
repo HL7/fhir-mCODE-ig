@@ -66,7 +66,7 @@ mCODE consists of data elements divided into six groups, illustrated in the foll
 * [Patient Group](#patient-group)
 * [Disease Characterization Group](#disease-characterization-group)
 * [Laboratory Results and Vital Signs Group](#laboratory-results-and-vital-signs-group)
-* [Treatments Group](#treatment-group)
+* [Treatments Group](#treatments-group)
 * [Genomics Group](#genomics-group)
 * [Outcomes Group](#outcomes-group)
 
@@ -190,7 +190,7 @@ The identity of non-genomic laboratory tests is typically represented by a [Logi
 
 #### Outcomes Group
 
-Recording outcomes of cancer treatment in mCODE involves two data elements: disease status and date of death. Other common outcome measures, such as progression-free survival, time to recurrence, and overall survival, can be derived from time-indexed observations of disease status. The date of diagnosis is also required for some derived measures (see [Disease Characterization](#disease-characterization)). At this time, mCODE does not include patient reported outcomes.
+Recording outcomes of cancer treatment in mCODE involves two data elements: disease status and date of death. Other common outcome measures, such as progression-free survival, time to recurrence, and overall survival, can be derived from time-indexed observations of disease status. The date of diagnosis is also required for some derived measures (see [Disease Characterization](#disease-characterization-group)). At this time, mCODE does not include patient reported outcomes.
 
 ##### Disease Status
 

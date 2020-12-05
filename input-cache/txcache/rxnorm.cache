@@ -373,3 +373,25 @@ v: {
   "error" : ""
 }
 -------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+  "code" : "349472",
+  "display" : "gefitinib 250 MG Oral Tablet"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "gefitinib 250 MG Oral Tablet",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+  "code" : "309311",
+  "display" : "CISplatin 50 MG per 50 ML Injectable Solution"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "CISplatin 50 MG per 50 ML Injectable Solution",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------

@@ -23,5 +23,6 @@ Extension: CTCAEGrade
 Id: ctcae-grade
 Title: "CTC Adverse Event Grade"
 Description: "The grade associated with the severity of an adverse event, using CTCAE criteria. See https://ctep.cancer.gov/protocolDevelopment/electronic_applications/ctc.htm"
-* value[x] from CTCAdverseEventGradeVS (required)
+* value[x] only CodeableConcept
+* valueCodeableConcept from CTCAdverseEventGradeVS (required)
 

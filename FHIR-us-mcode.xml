@@ -6,6 +6,12 @@
 <artifactPageExtension value="-definitions"/>
 <artifactPageExtension value="-examples"/>
 <artifactPageExtension value="-mappings"/>
+<artifact id="CodeSystem/adverse-event-numerical-grade-code-system" key="CodeSystem-adverse-event-numerical-grade-code-system" name="Adverse Event Numerical Grade Code System"/>
+<artifact id="ValueSet/adverse-event-numerical-grade-value-set" key="ValueSet-adverse-event-numerical-grade-value-set" name="Adverse Event Numerical Grade Value Set"/>
+<artifact id="ValueSet/adverse-event-seriousness-value-set" key="ValueSet-adverse-event-seriousness-value-set" name="Adverse Event Seriousness Value Set"/>
+<artifact id="StructureDefinition/ctc-adverse-event" key="StructureDefinition-ctc-adverse-event" name="CTC Adverse Event"/>
+<artifact id="StructureDefinition/ctcae-grade" key="StructureDefinition-ctcae-grade" name="CTC Adverse Event Grade"/>
+<artifact id="ValueSet/ctc-adverse-event-grade-value-set" key="ValueSet-ctc-adverse-event-grade-value-set" name="CTC Adverse Event Grade Value Set"/>
 <artifact id="ValueSet/mcode-cancer-body-location-vs" key="cancer-body-location-value-set" name="Cancer Body Location Value Set"/>
 <artifact id="StructureDefinition/mcode-cancer-condition-parent" key="cancer-condition-parent" name="Cancer Condition Parent"/>
 <artifact id="StructureDefinition/mcode-cancer-disease-status" key="cancer-disease-status" name="Cancer Disease Status"/>
@@ -27,6 +33,7 @@
 <artifact id="StructureDefinition/mcode-cancer-related-surgical-procedure" key="StructureDefinition-mcode-cancer-related-surgical-procedure" name="Cancer-Related Surgical Procedure"/>
 <artifact id="ValueSet/mcode-cancer-related-surgical-procedure-vs" key="ValueSet-mcode-cancer-related-surgical-procedure-vs" name="Cancer-Related Surgical Procedure Value Set"/>
 <artifact id="ValueSet/mcode-clinvar-vs" key="clinvar-value-set" name="ClinVar Value Set"/>
+<artifact id="ValueSet/ctcae-primary-term-value-set" key="ValueSet-ctcae-primary-term-value-set" name="Common Terminology Criteria Adverse Event Preferred Terms"/>
 <artifact deprecated="true" id="Profile/mcode-comorbid-condition" key="comorbid-condition" name="Comorbid Condition"/>
 <artifact id="StructureDefinition/mcode-comorbid-condition-code" key="StructureDefinition-mcode-comorbid-condition-code" name="Comorbid Condition Code"/>
 <artifact id="StructureDefinition/mcode-comorbid-condition-reference" key="StructureDefinition-mcode-comorbid-condition-reference" name="Comorbid Condition Reference"/>

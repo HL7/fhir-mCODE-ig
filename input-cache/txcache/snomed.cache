@@ -129476,3 +129476,99 @@ e: {
   "error" : ""
 }
 -------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://snomed.info/sct",
+  "code" : "108257001"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://snomed.info/sct",
+      "concept" : [{
+        "code" : "363679005",
+        "display" : "Imaging (procedure)"
+      },
+      {
+        "code" : "108257001",
+        "display" : "Anatomic pathology procedure (procedure)"
+      },
+      {
+        "code" : "711015009",
+        "display" : "Assessment of symptom control (procedure)"
+      },
+      {
+        "code" : "5880005",
+        "display" : "Physical examination procedure (procedure)"
+      },
+      {
+        "code" : "386344002",
+        "display" : "Laboratory data interpretation (procedure)"
+      }]
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "Anatomic pathology procedure",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://snomed.info/sct",
+  "code" : "108257001",
+  "display" : "Anatomic pathology procedure (procedure)"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://snomed.info/sct",
+      "concept" : [{
+        "code" : "363679005",
+        "display" : "Imaging (procedure)"
+      },
+      {
+        "code" : "108257001",
+        "display" : "Anatomic pathology procedure (procedure)"
+      },
+      {
+        "code" : "711015009",
+        "display" : "Assessment of symptom control (procedure)"
+      },
+      {
+        "code" : "5880005",
+        "display" : "Physical examination procedure (procedure)"
+      },
+      {
+        "code" : "386344002",
+        "display" : "Laboratory data interpretation (procedure)"
+      }]
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK"}####
+v: {
+  "display" : "Anatomic pathology procedure",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://snomed.info/sct",
+  "code" : "108257001"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "Anatomic pathology procedure",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://snomed.info/sct",
+  "code" : "108257001",
+  "display" : "Anatomic pathology procedure (procedure)"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "Anatomic pathology procedure",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------

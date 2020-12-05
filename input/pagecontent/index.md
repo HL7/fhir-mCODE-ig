@@ -233,7 +233,7 @@ Date of death data can be obtained from several sources outside of the clinical 
 
 The authors recognize the leadership and sponsorship of Dr. Monica Bertagnolli, President, ASCO and Dr. Jay Schnitzer, MITRE Chief Technology Officer. Dr. Steven Piantadosi and the Alliance for Clinical Trials in Oncology coordinated real-world data collection in clinical trials, as part of this project. The ASCO/CancerLinQ team was led by Dr. Robert Miller and Dr. Wendy Rubinstein. Lead MITRE contributors were Mark Kramer, Rute Martins, Chris Moesel, Caroline Potteiger, and May Terry. Andre Quina and Dr. Brian Anderson guide the overall mCODE effort at MITRE. HL7 sponsorship and input from [Clinical Interoperability Council](http://www.hl7.org/Special/committees/cic/index.cfm) and [Clinical Information Modeling Initiative](https://www.hl7.org/Special/Committees/cimi/index.cfm) is gratefully acknowledged, with special thanks to Richard Esmond and Laura Heermann Langford.
 
-This IG was authored by the MITRE Corporation using [FHIR Shorthand (FSH)](http://build.fhir.org/ig/HL7/fhir-shorthand/) and [SUSHI](https://github.com/FHIR/sushi), a free, open source toolchain from [MITRE Corporation](https://www.mitre.org/).
+This IG was authored by the MITRE Corporation using [FHIR Shorthand (FSH)](http://hl7.org/fhir/uv/shorthand/) and [SUSHI](https://fshschool.org), a free, open source toolchain from [MITRE Corporation](https://www.mitre.org/).
 
 ### Contact Information
 

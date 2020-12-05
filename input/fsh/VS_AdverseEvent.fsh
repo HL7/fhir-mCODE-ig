@@ -1,6 +1,6 @@
-ValueSet: CTCAdverseEventGradeVS
-Id: ctc-adverse-event-grade-value-set
-Title: "CTC Adverse Event Grade Value Set"
+ValueSet: CTCAEGradeVS
+Id: mcode-ctcae-grade-value-set
+Title: "CTCAE Grade Value Set"
 Description: "Common terminology criteria grades associated with the severity of an adverse event. The additional term, 'Absent Adverse Event' (aka grade 0) is used to indicate the patient has been assessed, and the given adverse event has not occurred. Grade 0 events may not be valid in certain reporting contexts."
 * NCIT#C75533 "Absent Adverse Event"
 * NCIT#C41338 "Mild Adverse Event"
@@ -9,10 +9,10 @@ Description: "Common terminology criteria grades associated with the severity of
 * NCIT#C41337 "Life Threatening or Disabling Adverse Event"
 * NCIT#C48275  "Death Related to Adverse Event"
 
-CodeSystem: AdverseEventNumericalGradeCS
-Id: adverse-event-numerical-grade-code-system
-Title: "Adverse Event Numerical Grade Code System"
-Description: "CTCAE Grades 0 through 5 expressed as numerals."
+CodeSystem: CTCAENumericalGradeCS
+Id: mcode-ctcae-numerical-grade-code-system
+Title: "CTCAE Numerical Grade Code System"
+Description: "Common terminology criteria grades associated with the severity of an adverse event, expressed as numerals, Grades 0 through 5."
 * #0 "0" "Absent Adverse Event"
 * #1 "1" "Mild Adverse Event"
 * #2 "2" "Moderate Adverse Event"
@@ -20,26 +20,56 @@ Description: "CTCAE Grades 0 through 5 expressed as numerals."
 * #4 "4" "Life Threatening or Disabling Adverse Event"
 * #5 "5" "Death Related to Adverse Event"
 
-ValueSet: AdverseEventNumericalGradeVS
-Id: adverse-event-numerical-grade-value-set
-Title: "Adverse Event Numerical Grade Value Set"
+ValueSet: CTCAENumericalGradeVS
+Id: mcode-ctcae-numerical-grade-value-set
+Title: "CTCAE Numerical Grade Value Set"
 Description: "CTCAE Grades 0 through 5 expressed as numerals."
-* include codes from system AdverseEventNumericalGradeCS
+* include codes from system CTCAENumericalGradeCS
 
 ValueSet: AdverseEventSeriousnessVS
-Id: adverse-event-seriousness-value-set
+Id: mcode-adverse-event-seriousness-value-set
 Title: "Adverse Event Seriousness Value Set"
 Description: "An adverse event is considered serious if it results in any of the following outcomes: (1) Death, (2) Life-threatening experience 3) Inpatient hospitalization or prolongation of existing hospitalization (for > 24 hours) (4) Persistent or significant incapacity or substantial disruption of the ability to conduct normal life functions, (5) Congenital anomaly/birth defect, or (6) Important Medical Event (IME) that may jeopardize the patient or subject and may require medical or surgical intervention to prevent one of the outcomes listed in this definition. Reference: https://crawb.crab.org/txwb/CRA_MANUAL/Vol1/chapter%2013_Serious%20Adverse%20Events.pdf"
 * AES#non-serious "Non-serious"
 * AES#serious "Serious"
 
+ValueSet: AdverseEventRelatednessVS
+Id: mcode-adverse-event-relatedness-value-set
+Title: "Adverse Event Relatedness Value Set"
+Description: "Codes qualifying the adverse event's relationship to the medical intervention, according to WHO causality assessment criteria: it is applicable to a clinical event, including laboratory test abnormality, occurs in a plausible time relationship to medical intervention, and cannot be explained by concurrent disease or other interventions."
+* NCIT#C53256 "Adverse Event Unrelated to Intervention"
+* NCIT#C53257 "Adverse Event Unlikely Related to Intervention"
+* NCIT#C53258 "Adverse Event Possibly Related to Intervention"
+* NCIT#C53259 "Adverse Event Probably Related to Intervention"
+* NCIT#C53260 "Adverse Event Definitely Related to Intervention"
+* NCIT#C68618 "Adverse Event Conditionally Related to Intervention"
+
+CodeSystem: AdverseEventRelatednessTextCS
+Id: mcode-adverse-event-relatedness-text-code-system
+Title: "Adverse Event Relatedness Text Code System"
+Description: "Short texts qualifying the adverse event's relationship to the medical intervention."
+* #unrelated "Unrelated"  "Adverse Event Unrelated to Intervention"
+* #unlikely "Unlikely"  "Adverse Event Unlikely Related to Intervention"
+* #possible "Possible"  "Adverse Event Possibly Related to Intervention"
+* #probable "Probable"   "Adverse Event Probably Related to Intervention"
+* #definite "Definite"  "Adverse Event Definitely Related to Intervention"
+* #conditional "Conditional"  "Adverse Event Conditionally Related to Intervention"
+* #related  "Related"  "Adverse Event Related to Intervention, with any unspecified degree of likelihood"
+
+ValueSet: AdverseEventRelatednessTextVS
+Id:  mcode-adverse-event-relatedness-text-value-set
+Title: "Adverse Event Relatedness Text Value Set"
+Description: "Degrees of relatedness expressed as text strings."
+* include codes from system AdverseEventRelatednessTextCS
+
 ValueSet: CTCAEPreferredTermVS
-Id: ctcae-primary-term-value-set
-Title: "Common Terminology Criteria Adverse Event Preferred Terms"
+Id: mcode-ctcae-preferred-term-value-set
+Title: "CTCAE Preferred Terms"
 Description: "The NCI Common Terminology Criteria for Adverse Events is a descriptive terminology which can be
 utilized for Adverse Event (AE) reporting. Each CTCAE term is a MedDRA LLT (Lowest Level Term). The codes are drawn from NCI Thesaurus codes. The data set is CTCAE 5.0 and corresponds to MedDRA version 20.1. See https://evs.nci.nih.gov/ftp1/CTCAE/CTCAE_5.0/NCIt_CTCAE_5.0.xlsx.
 
-**Use of Other, specify**: In the rare event that a suitable CTCAE term cannot be found, the appropriate verbatim term SHALL be captured via the Other, specify mechanism. In this case, the verbatim term is populated into the event.text field, the NCIT code for the body system into the event.coding.code field, and event.coding.display gives the display string corresponding to the code. For example, if reporting a blood disorder with no suitable LLT, it will be reported as: event.text of (verbatim term), event.coding.code of C143323, and event.coding.display of 'Blood and lymphatic system disorders - Other, specify'."* NCIT#C143283  "Anemia"
+**Use of Other, specify**: In the rare event that a suitable CTCAE term cannot be found, the appropriate verbatim term SHALL be captured via the Other, specify mechanism. In this case, the verbatim term is populated into the event.text field, the NCIT code for the body system into the event.coding.code field, and event.coding.display gives the display string corresponding to the code. For example, if reporting a blood disorder with no suitable LLT, it will be reported as: event.text of (verbatim term), event.coding.code of C143323, and event.coding.display of 'Blood and lymphatic system disorders - Other, specify'."
+* NCIT#C143283  "Anemia"
 * NCIT#C143323  "Blood and lymphatic system disorders - Other, specify"
 * NCIT#C143332  "Bone marrow hypocellular"
 * NCIT#C55273  "Disseminated intravascular coagulation"
@@ -877,23 +907,13 @@ utilized for Adverse Event (AE) reporting. Each CTCAE term is a MedDRA LLT (Lowe
 * NCIT#C143930  "Vascular disorders - Other, specify"
 * NCIT#C54741  "Vasculitis"
 
-/* 
-ValueSet: MedDRALowestLevelTermVS
-Id: meddra-lowest-level-term-value-set
-Title: "MedDRA Value Set"
-Description: "Lowest level terms from the Medical Dictionary for Regulatory Activities Terminology (MedDRA), Version 20.1."
+/*
 
-Fooled around with replacing FHIR codes with SNOMED, but gave up 
-ValueSet: AdverseEventAttributionVS
-Id: adverse-event-attribution-value-set
-Title: "Adverse Event Attribution Value Set"
-Description: "Taken from the hierarchy of certainty in SNOMED-CT"
-
-* SCT#428263003 "NOT suspected (qualifier value)"
-* SCT#452161000124108 "Improbable (qualifier value)"
-* SCT#371930009 "Possible (qualifier value)"
-* SCT#452201000124102 "Probable (qualifier value)"
-* SCT#255545003 "Definite (qualifier value)"
+* SCT#428263003 "NOT suspected (qualifier value)"     // should be "UNRELATED"
+* SCT#452161000124108 "Improbable (qualifier value)"  // unlikely in EPIC
+* SCT#371930009 "Possible (qualifier value)"          // possible in EPIC
+* SCT#452201000124102 "Probable (qualifier value)"    // probable in EPIC
+* SCT#255545003 "Definite (qualifier value)"         
 
 * SCT#452161000124108 "Improbable (qualifier value)" // unlikely in EPIC
 * SCT#452171000124101 "Slightly probable (qualifier value)"  // possible in EPIC
@@ -902,8 +922,8 @@ Description: "Taken from the hierarchy of certainty in SNOMED-CT"
 * SCT#255545003 "Definite (qualifier value)"
 
 
-//* include codes from SCT where concept is-a #446401000124104 "National Cancer Institute common terminology criteria for adverse event grade finding (finding)"
-* SCT#162467007 "Free of symptoms (situation)"
+* include codes from SCT where concept is-a #446401000124104 "National Cancer Institute common terminology criteria for adverse event grade finding (finding)"
+
 * SCT#446411000124101 "Common terminology criteria for adverse events grade 1 (finding)"
 * SCT#446421000124109 "Common terminology criteria for adverse events grade 2 (finding)"
 * SCT#446431000124107 "Common terminology criteria for adverse events grade 3 (finding)"

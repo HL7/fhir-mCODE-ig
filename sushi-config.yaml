@@ -50,7 +50,7 @@ groups:
   # Profiles
   Patient:
     name: "Profiles: Patient"
-    description: Profiles in the [mCODE **Patient** Group](index.html#Patient).
+    description: Profiles in the [mCODE **Patient** Group](index.html#patient-group).
     resources:
       - StructureDefinition/mcode-cancer-patient
       - StructureDefinition/mcode-cancer-related-comorbidities
@@ -60,7 +60,7 @@ groups:
 
   Disease:
     name: "Profiles: Disease Characterization"
-    description: Profiles in the [mCODE **Disease Characterization** Group](index.html#Disease).
+    description: Profiles in the [mCODE **Disease Characterization** Group](index.html#disease-characterization-group).
     resources:
       - StructureDefinition/mcode-primary-cancer-condition
       - StructureDefinition/mcode-secondary-cancer-condition
@@ -75,13 +75,13 @@ groups:
 
   LabsVitals:
     name: "Profiles: Laboratory Results and Vital Signs"
-    description: Profiles in the [mCODE **Laboratory Results and Vital Signs** Group](index.html#LabsVitals).
+    description: Profiles in the [mCODE **Laboratory Results and Vital Signs** Group](index.html#laboratory-results-and-vital-signs-group).
     resources:
       - StructureDefinition/mcode-tumor-marker
 
   Treatment:
     name: "Profiles: Treatments"
-    description: Profiles in the [mCODE **Treatments** Group](index.html#Treatment).
+    description: Profiles in the [mCODE **Treatments** Group](index.html#treatments-group).
     resources:
       - StructureDefinition/mcode-cancer-related-medication-request
       - StructureDefinition/mcode-cancer-related-radiation-procedure
@@ -89,7 +89,7 @@ groups:
 
   Genomics:
     name: "Profiles: Genomics"
-    description: Profiles in the [mCODE **Genomics** Group](index.html#Genomics).
+    description: Profiles in the [mCODE **Genomics** Group](index.html#genomics-group).
     resources:
       - StructureDefinition/mcode-cancer-genetic-variant
       - StructureDefinition/mcode-genetic-specimen
@@ -98,7 +98,7 @@ groups:
 
   Outcomes:
     name: "Profiles: Outcomes"
-    description: Profiles in the [mCODE **Outcomes** Group](index.html#Outcomes).
+    description: Profiles in the [mCODE **Outcomes** Group](index.html#outcomes-group).
     resources:
       - StructureDefinition/mcode-cancer-disease-status
 

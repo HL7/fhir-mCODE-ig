@@ -27,7 +27,7 @@ Usage: #definition
 * parameter[1].use = #in
 * parameter[1].min = 0
 * parameter[1].max = "1"
-* parameter[1].documentation = "The date range relates to filtering by date as defined in [the mCODE Patient Bundle implementation details](mcode-patient-bundle.html#specifying-a-date-range) for a subset of resources in the Bundle. If no start date is provided, all records prior to the end date are in scope. Filtering is inclusive (i.e., if `start=2020-01-01`, records from January 1, 2020 are in scope)."
+* parameter[1].documentation = "The date range relates to filtering by date for a subset of resources in the Bundle. If no start date is provided, all records prior to the end date are in scope. Filtering is inclusive (i.e., if `start=2020-01-01`, records from January 1, 2020 are in scope)."
 * parameter[1].type = #date
 
 // Parameter: End
@@ -35,7 +35,7 @@ Usage: #definition
 * parameter[2].use = #in
 * parameter[2].min = 0
 * parameter[2].max = "1"
-* parameter[2].documentation = "The date range relates to filtering by date as defined in [the mCODE Patient Bundle implementation details](mcode-patient-bundle.html#specifying-a-date-range) for a subset of resources in the Bundle. If no end date is provided, all records subsequent to the start date are in scope.  Filtering is inclusive (i.e., if `end=2020-09-01`, records from September 1, 2020 are in scope)."
+* parameter[2].documentation = "The date range relates to filtering by date for a subset of resources in the Bundle. If no end date is provided, all records subsequent to the start date are in scope.  Filtering is inclusive (i.e., if `end=2020-09-01`, records from September 1, 2020 are in scope)."
 * parameter[2].type = #date
 
 // Output

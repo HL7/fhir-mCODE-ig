@@ -7,16 +7,16 @@
 
 <div xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../input-cache/schemas-r5/fhir-single.xsd" markdown="1">
 
-* [Background](#Background)
-* [Scope and Conceptual Model](#Modeling)
+* [Background](#background)
+* [Scope and Conceptual Model](#scope-and-conceptual-model)
 * [Conformance](conformance.html)
 * [Data Dictionary (Excel download)](mCODEDataDictionary.xlsx)
 * [FHIR Examples](examples.html)
 * [Implementation Notes](implementation.html)
 * [Change Log](change_log.html)
-* [Disclaimers and Known Limitations](#Disclaimers)
-* [Credits](#Credits)
-* [Contact Information](#Contacts)
+* [Disclaimers and Known Limitations](#disclaimers-and-known-limitations)
+* [Credits](#credits)
+* [Contact Information](#contact-information)
 
 ### Background
 
@@ -63,12 +63,12 @@ This implementation guide is a Domain of Knowledge IG. The purpose of this IG is
 
 mCODE consists of data elements divided into six groups, illustrated in the following diagram:
 
-* [Patient Group](#Patient)
-* [Disease Characterization Group](#Disease)
-* [Laboratory Results and Vital Signs Group](#LabsVitals)
-* [Treatments Group](#Treatment)
-* [Genomics Group](#Genomics)
-* [Outcomes Group](#Outcomes)
+* [Patient Group](#patient-group)
+* [Disease Characterization Group](#disease-characterization-group)
+* [Laboratory Results and Vital Signs Group](#laboratory-results-and-vital-signs-group)
+* [Treatments Group](#treatment-group)
+* [Genomics Group](#genomics-group)
+* [Outcomes Group](#outcomes-group)
 
 ![mCODE Logical Model](mCodeDiagram.svg)
 
@@ -79,7 +79,7 @@ The mCODE **Patient** group contains the following basic information about the p
 * **Demographics** - including date of birth, gender, zip code, race, and ethnicity.
 * **Comorbid conditions** - the list of comorbid conditions aligned with the [Elixhauer Comorbidity Index](http://mchp-appserv.cpe.umanitoba.ca/concept/Elixhauser%20Comorbidities%20-%20Coding%20Algorithms%20for%20ICD-9-CM%20and%20ICD-10.pdf).
 * **Patient performance status** - [Eastern Cooperative Oncology Group (ECOG) Performance Status](https://ecog-acrin.org/resources/ecog-performance-status) and/or [Karnofsky Performance Status (KPS)](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3722041/). Because performance assessments may be performed more than once over a period of time, multiple instances may exist for a single patient.
-* **Patient Bundle** - the [mCODE patient bundle](mcode-patient-bundle.html) contains all information about the patient defined in mCODE in a single resource that can be sent over the wire.
+* **Patient Bundle** - the [mCODE patient bundle](StructureDefinition-mcode-patient-bundle.html) contains all information about the patient defined in mCODE in a single resource that can be sent over the wire.
 
 [Patient](StructureDefinition-mcode-cancer-patient.html) is the most essential FHIR profile, as all other mCODE major elements reference it. The only difference between the mCODE Patient profile and the [US Core Patient Profile](http://hl7.org/fhir/us/core/StructureDefinition-us-core-patient.html) is that Patient.deceased is a [must-support](https://www.hl7.org/fhir/profiling.html#mustsupport) element in mCODE.
 
@@ -152,15 +152,15 @@ mCODE recommends that the implementers align with AJCC's convention of represent
 
 #### Laboratory Results and Vital Signs Group
 
-##### Core Laboratory Results
+##### US Core Laboratory Results
 
-Many laboratory tests could be relevant to an individual with cancer. The initial mCODE release calls for results from two core laboratory panels, the Complete Blood Count (CBC) (Automatic or Manual Differential) and Comprehensive Metabolic Panel (CMP). CBC and CMP results can be reported as individual laboratory observations or as grouped panels, using the DiagnosticReport resource. If DiagnosticReports are submitted, they must conform to [US Core DiagnosticReport Profile for Laboratory Results Reporting](http://hl7.org/fhir/us/core/StructureDefinition-us-core-diagnosticreport-lab.html). Examples of [CBC reporting](http://hl7.org/fhir/us/core/DiagnosticReport-cbc.html) and [CMP reporting](http://hl7.org/fhir/us/core/DiagnosticReport-metabolic-panel.html) are given in the [US Core IG](http://hl7.org/fhir/us/core/index.html).
+Many laboratory tests could be relevant to an individual with cancer. The initial mCODE release calls for results from two common laboratory panels, the Complete Blood Count (CBC) (Automatic or Manual Differential) and Comprehensive Metabolic Panel (CMP). CBC and CMP results can be reported as individual laboratory observations or as grouped panels, using the DiagnosticReport resource. If DiagnosticReports are submitted, they must conform to [US Core DiagnosticReport Profile for Laboratory Results Reporting](http://hl7.org/fhir/us/core/StructureDefinition-us-core-diagnosticreport-lab.html). Examples of [CBC reporting](http://hl7.org/fhir/us/core/DiagnosticReport-cbc.html) and [CMP reporting](http://hl7.org/fhir/us/core/DiagnosticReport-metabolic-panel.html) are given in the [US Core IG](http://hl7.org/fhir/us/core/index.html).
 
 ##### Tumor Marker Tests
 
 Tumor markers are key prognostic factors in calculating cancer staging, identifying treatment options, and monitoring progression of disease. For example, an abnormal increase in prostate-specific antigen (PSA) levels is a prognostic factor for prostate cancer. Other tumor markers include estrogen receptor (ER) status, progesterone receptor (PR) status, carcinoembryonic antigen (CEA) levels, among others. See the profile [TumorMarkerTest](StructureDefinition-mcode-tumor-marker.html) for full details.
 
-We distinguish Tumor Marker Tests from genetic tests that are measured at the DNA, RNA, or chromosomal level, addressed in the [Genomics](#Genomics) section.
+We distinguish Tumor Marker Tests from genetic tests that are measured at the DNA, RNA, or chromosomal level, addressed in the [Genomics](#genomics-group) section.
 
 ##### Vital Signs
 
@@ -190,7 +190,7 @@ The identity of non-genomic laboratory tests is typically represented by a [Logi
 
 #### Outcomes Group
 
-Recording outcomes of cancer treatment in mCODE involves two data elements: disease status and date of death. Other common outcome measures, such as progression-free survival, time to recurrence, and overall survival, can be derived from time-indexed observations of disease status. The date of diagnosis is also required for some derived measures (see [Disease Characterization](#Disease)). At this time, mCODE does not include patient reported outcomes.
+Recording outcomes of cancer treatment in mCODE involves two data elements: disease status and date of death. Other common outcome measures, such as progression-free survival, time to recurrence, and overall survival, can be derived from time-indexed observations of disease status. The date of diagnosis is also required for some derived measures (see [Disease Characterization](#disease-characterization)). At this time, mCODE does not include patient reported outcomes.
 
 ##### Disease Status
 

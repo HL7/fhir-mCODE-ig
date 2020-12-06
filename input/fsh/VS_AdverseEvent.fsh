@@ -1,30 +1,21 @@
+
+CodeSystem: CTCAEGradeCS
+Id: mcode-ctcae-grade-code-system
+Title: "CTCAE Grade Code System"
+Description: "Common terminology criteria (CTC) grades associated with the severity of an adverse event, expressed as integers, 0 through 5, with 0 representing no adverse event, and 5 representing death."
+* #0 "Absent Adverse Event" "The absence of adverse events or within normal limits or values."
+* #1 "Mild Adverse Event"  "An experience that is usually transient, and requires no special treatment or intervention. The event does not generally interfere with usual daily activities. Includes transient laboratory test alterations."
+* #2 "Moderate Adverse Event"  "An experience that is alleviated with simple therapeutic treatments. The event impacts usual daily activities. Includes laboratory test alterations indicating injury, but without long-term risk."
+* #3 "Severe Adverse Event"  "An adverse event experience that requires intensive therapeutic intervention and interrupts usual daily activities."
+* #4 "Life Threatening or Disabling Adverse Event"  "Any adverse event that places the patient, in the view of the initial reporter, at immediate risk of death from the adverse event as it occurred, i.e., it does not include an adverse experience that, had it occurred in a more severe form, might have caused death."
+* #5 "Death Related to Adverse Event"  "The termination of life associated with an adverse event."
+
+
 ValueSet: CTCAEGradeVS
 Id: mcode-ctcae-grade-value-set
 Title: "CTCAE Grade Value Set"
-Description: "Common terminology criteria grades associated with the severity of an adverse event. The additional term, 'Absent Adverse Event' (aka grade 0) is used to indicate the patient has been assessed, and the given adverse event has not occurred. Grade 0 events may not be valid in certain reporting contexts."
-* NCIT#C75533 "Absent Adverse Event"
-* NCIT#C41338 "Mild Adverse Event"
-* NCIT#C41339 "Moderate Adverse Event" 
-* NCIT#C41340  "Severe Adverse Event"
-* NCIT#C41337 "Life Threatening or Disabling Adverse Event"
-* NCIT#C48275  "Death Related to Adverse Event"
-
-CodeSystem: CTCAENumericalGradeCS
-Id: mcode-ctcae-numerical-grade-code-system
-Title: "CTCAE Numerical Grade Code System"
-Description: "Common terminology criteria (CTC) grades associated with the severity of an adverse event, expressed as integers, 0 through 5, with 0 representing no adverse event, and 5 representing death."
-* #0 "0" "Absent Adverse Event"
-* #1 "1" "Mild Adverse Event"
-* #2 "2" "Moderate Adverse Event"
-* #3 "3" "Severe Adverse Event"
-* #4 "4" "Life Threatening or Disabling Adverse Event"
-* #5 "5" "Death Related to Adverse Event"
-
-ValueSet: CTCAENumericalGradeVS
-Id: mcode-ctcae-numerical-grade-value-set
-Title: "CTCAE Numerical Grade Value Set"
-Description: "CTCAE Grades 0 through 5 expressed as numerals."
-* include codes from system CTCAENumericalGradeCS
+Description: "CTCAE Grades 0 through 5. The grade of the adverse event, determined by CTCAE criteria, where 0 represents confirmation that the given adverse event did NOT occur, and 5 represents death. Note that grade 0 events are generally not reportable, but may be created to give positive confirmation that the clinician assessed or considered a particular AE."
+* include codes from system CTCAEGradeCS
 
 ValueSet: AdverseEventSeriousnessVS
 Id: mcode-adverse-event-seriousness-value-set
@@ -43,24 +34,6 @@ Description: "Codes qualifying the adverse event's relationship to the medical i
 * NCIT#C53259 "Adverse Event Probably Related to Intervention"
 * NCIT#C53260 "Adverse Event Definitely Related to Intervention"
 * NCIT#C68618 "Adverse Event Conditionally Related to Intervention"
-
-CodeSystem: AdverseEventRelatednessTextCS
-Id: mcode-adverse-event-relatedness-text-code-system
-Title: "Adverse Event Relatedness Text Code System"
-Description: "Short texts qualifying the adverse event's relationship to the medical intervention."
-* #unrelated "Unrelated"  "Adverse Event Unrelated to Intervention"
-* #unlikely "Unlikely"  "Adverse Event Unlikely Related to Intervention"
-* #possible "Possible"  "Adverse Event Possibly Related to Intervention"
-* #probable "Probable"   "Adverse Event Probably Related to Intervention"
-* #definite "Definite"  "Adverse Event Definitely Related to Intervention"
-* #conditional "Conditional"  "Adverse Event Conditionally Related to Intervention"
-* #related  "Related"  "Adverse Event Related to Intervention, with any unspecified degree of likelihood"
-
-ValueSet: AdverseEventRelatednessTextVS
-Id:  mcode-adverse-event-relatedness-text-value-set
-Title: "Adverse Event Relatedness Text Value Set"
-Description: "Degrees of relatedness expressed as text strings."
-* include codes from system AdverseEventRelatednessTextCS
 
 ValueSet: CTCAEPreferredTermVS
 Id: mcode-ctcae-preferred-term-value-set
@@ -906,7 +879,36 @@ Description: "The NCI Common Terminology Criteria for Adverse Events (CTCAE) is 
 * NCIT#C143930  "Vascular disorders - Other, specify"
 * NCIT#C54741  "Vasculitis"
 
-/*
+/* Hold for now
+
+ValueSet: CTCAEGradeVS
+Id: mcode-ctcae-grade-value-set
+Title: "CTCAE Grade Value Set"
+Description: "Common terminology criteria grades associated with the severity of an adverse event. The additional term, 'Absent Adverse Event' (aka grade 0) is used to indicate the patient has been assessed, and the given adverse event has not occurred. Grade 0 events may not be valid in certain reporting contexts."
+* NCIT#C75533 "Absent Adverse Event"  
+* NCIT#C41338 "Mild Adverse Event"  ""
+* NCIT#C41339 "Moderate Adverse Event" 
+* NCIT#C41340  "Severe Adverse Event"
+* NCIT#C41337 "Life Threatening or Disabling Adverse Event"
+* NCIT#C48275  "Death Related to Adverse Event"
+
+CodeSystem: AdverseEventRelatednessTextCS
+Id: mcode-adverse-event-relatedness-text-code-system
+Title: "Adverse Event Relatedness Text Code System"
+Description: "Short texts qualifying the adverse event's relationship to the medical intervention."
+* #unrelated "Unrelated"  "Adverse Event Unrelated to Intervention"
+* #unlikely "Unlikely"  "Adverse Event Unlikely Related to Intervention"
+* #possible "Possible"  "Adverse Event Possibly Related to Intervention"
+* #probable "Probable"   "Adverse Event Probably Related to Intervention"
+* #definite "Definite"  "Adverse Event Definitely Related to Intervention"
+* #conditional "Conditional"  "Adverse Event Conditionally Related to Intervention"
+* #related  "Related"  "Adverse Event Related to Intervention, with any unspecified degree of likelihood"
+
+ValueSet: AdverseEventRelatednessTextVS
+Id:  mcode-adverse-event-relatedness-text-value-set
+Title: "Adverse Event Relatedness Text Value Set"
+Description: "Degrees of relatedness expressed as text strings."
+* include codes from system AdverseEventRelatednessTextCS
 
 * SCT#428263003 "NOT suspected (qualifier value)"     // should be "UNRELATED"
 * SCT#452161000124108 "Improbable (qualifier value)"  // unlikely in EPIC

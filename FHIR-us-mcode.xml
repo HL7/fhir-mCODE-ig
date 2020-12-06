@@ -6,15 +6,12 @@
 <artifactPageExtension value="-definitions"/>
 <artifactPageExtension value="-examples"/>
 <artifactPageExtension value="-mappings"/>
-<artifact id="CodeSystem/mcode-adverse-event-relatedness-text-code-system" key="CodeSystem-mcode-adverse-event-relatedness-text-code-system" name="Adverse Event Relatedness Text Code System"/>
-<artifact id="ValueSet/mcode-adverse-event-relatedness-text-value-set" key="ValueSet-mcode-adverse-event-relatedness-text-value-set" name="Adverse Event Relatedness Text Value Set"/>
 <artifact id="ValueSet/mcode-adverse-event-relatedness-value-set" key="ValueSet-mcode-adverse-event-relatedness-value-set" name="Adverse Event Relatedness Value Set"/>
 <artifact id="ValueSet/mcode-adverse-event-seriousness-value-set" key="ValueSet-mcode-adverse-event-seriousness-value-set" name="Adverse Event Seriousness Value Set"/>
 <artifact id="StructureDefinition/mcode-ctc-adverse-event" key="StructureDefinition-mcode-ctc-adverse-event" name="CTC Adverse Event"/>
 <artifact id="StructureDefinition/mcode-ctcae-grade" key="StructureDefinition-mcode-ctcae-grade" name="CTC Adverse Event Grade"/>
+<artifact id="CodeSystem/mcode-ctcae-grade-code-system" key="CodeSystem-mcode-ctcae-grade-code-system" name="CTCAE Grade Code System"/>
 <artifact id="ValueSet/mcode-ctcae-grade-value-set" key="ValueSet-mcode-ctcae-grade-value-set" name="CTCAE Grade Value Set"/>
-<artifact id="CodeSystem/mcode-ctcae-numerical-grade-code-system" key="CodeSystem-mcode-ctcae-numerical-grade-code-system" name="CTCAE Numerical Grade Code System"/>
-<artifact id="ValueSet/mcode-ctcae-numerical-grade-value-set" key="ValueSet-mcode-ctcae-numerical-grade-value-set" name="CTCAE Numerical Grade Value Set"/>
 <artifact id="ValueSet/mcode-ctcae-preferred-term-value-set" key="ValueSet-mcode-ctcae-preferred-term-value-set" name="CTCAE Preferred Terms"/>
 <artifact id="ValueSet/mcode-cancer-body-location-vs" key="cancer-body-location-value-set" name="Cancer Body Location Value Set"/>
 <artifact id="StructureDefinition/mcode-cancer-condition-parent" key="cancer-condition-parent" name="Cancer Condition Parent"/>
@@ -199,7 +196,6 @@
 <artifact id="Observation/mCODETumorMarkerExample1" key="Observation-mCODETumorMarkerExample1" name="mCODETumorMarkerExample1"/>
 <artifact id="AdverseEvent/mcode-ctc-adverse-event-example-1" key="AdverseEvent-mcode-ctc-adverse-event-example-1" name="mcode-ctc-adverse-event-example-1"/>
 <artifact id="AdverseEvent/mcode-ctc-adverse-event-example-2" key="AdverseEvent-mcode-ctc-adverse-event-example-2" name="mcode-ctc-adverse-event-example-2"/>
-<artifact id="AdverseEvent/mcode-ctc-adverse-event-example-3" key="AdverseEvent-mcode-ctc-adverse-event-example-3" name="mcode-ctc-adverse-event-example-3"/>
 <artifact id="CapabilityStatement/mcode-receiver-fallback1" key="CapabilityStatement-mcode-receiver-fallback1" name="mcode-receiver-fallback1"/>
 <artifact id="CapabilityStatement/mcode-receiver-fallback2" key="CapabilityStatement-mcode-receiver-fallback2" name="mcode-receiver-fallback2"/>
 <artifact id="CapabilityStatement/mcode-receiver-fallback3" key="CapabilityStatement-mcode-receiver-fallback3" name="mcode-receiver-fallback3"/>

@@ -25,29 +25,22 @@ This is a set of experimental profiles for representing the dimensions of a tumo
 
 This is a set of experimental profiles for representing adverse events (AE). The definitions are FHIR interpretation of Common Terminology Criteria (CTC). The profiles and value sets and are intended to give sufficient information for FDA reporting.
 
-| Type       | Name                            | Description                   | Example             |
-| ---------- | ------------------------------- | ----------------------------- | ------------------- |
-| Profile    | [CTCAdverseEvent]               | Records an AE                 | [Example 1], [Example 2], [Example 3] |
-| Extension  | [CTCAEGrade]                    | Records the CTC Grade         |                    |
-| ValueSet   | [CTCAEGradeVS]                  | Coded values of CTC Grade     | n/a                 |
-| CodeSystem | [CTCAENumericalGradeCS]         | Defines numerical CTC Grades  | n/a                 |
-| ValueSet   | [CTCAENumericalGradeVS]         | Numerical values of CTC Grade | n/a                 |
-| ValueSet   | [AdverseEventSeriousnessVS]     | Values for seriousness        | n/a                 |
-| ValueSet   | [CTCAEPreferredTermVS]          | CTCAE preferred terms for AE  | n/a                 |
+| Type       | Name                            | Description                    | Example             |
+| ---------- | ------------------------------- | -----------------------------  | ------------------- |
+| Profile    | [CTCAdverseEvent]               | Records an AE                  | [Example 1], [Example 2] |
+| Extension  | [CTCAEGrade]                    | Records the CTC Grade          |                    |
+| CodeSystem | [CTCAEGradeCS]                  | Defines numerical CTC Grades   | n/a                 |
+| ValueSet   | [CTCAEGradeVS]                  | Numerical values for CTC Grade | n/a                 |
+| ValueSet   | [AdverseEventSeriousnessVS]     | Values for seriousness         | n/a                 |
+| ValueSet   | [CTCAEPreferredTermVS]          | CTCAE preferred terms for AE   | n/a                 |
 | ValueSet   | [AdverseEventRelatednessVS]     | Likelihood that AE is related to intervention | n/a |
-| CodeSystem | [AdverseEventRelatednessTextCS] | Defines text values for relatedness  | n/a          |
-| ValueSet   | [AdverseEventRelatednessTextVS] | Text values for relatedness   | n/a                 |
 
 [CTCAdverseEvent]: StructureDefinition-mcode-ctc-adverse-event.html
 [CTCAEGrade]: StructureDefinition-mcode-ctcae-grade.html
-[CTCAENumericalGradeCS]: CodeSystem-mcode-ctcae-numerical-grade-code-system.html
-[CTCAENumericalGradeVS]: ValueSet-mcode-ctcae-numerical-grade-value-set.html
+[CTCAEGradeCS]: CodeSystem-mcode-ctcae-grade-code-system.html
 [CTCAEGradeVS]: ValueSet-mcode-ctcae-grade-value-set.html
 [AdverseEventSeriousnessVS]: ValueSet-mcode-adverse-event-seriousness-value-set.html
 [CTCAEPreferredTermVS]: ValueSet-mcode-ctcae-preferred-term-value-set.html
 [AdverseEventRelatednessVS]: ValueSet-mcode-adverse-event-relatedness-value-set.html
-[AdverseEventRelatednessTextCS]: CodeSystem-mcode-adverse-event-relatedness-text-code-system.html
-[AdverseEventRelatednessTextVS]: ValueSet-mcode-adverse-event-relatedness-text-value-set.html
 [Example 1]: AdverseEvent-mcode-ctc-adverse-event-example-1.html
 [Example 2]: AdverseEvent-mcode-ctc-adverse-event-example-2.html
-[Example 3]: AdverseEvent-mcode-ctc-adverse-event-example-3.html

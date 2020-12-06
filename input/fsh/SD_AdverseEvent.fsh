@@ -31,19 +31,14 @@ Description: "Profile of adverse event, using Common Terminology Criteria (CTC).
 * severity 0..0  // replaced with extension because severity has a required value set we don't want
 * extension contains CTCAEGrade named grade 1..1 MS
 * extension[CTCAEGrade].valueCodeableConcept MS
-* extension[CTCAEGrade].valueCodeableConcept.coding ^short = "Adverse Event Coded Grade"
-* extension[CTCAEGrade].valueCodeableConcept.coding ^definition = "The grade of the adverse event, determined by CTCAE criteria, entered as a NCI Thesaurus code. The code representing no adverse event may be used to provide positive confirmation that the clinician assessed or considered this particular AE, although the absence of an adverse event is generally not reportable."
-* extension[CTCAEGrade].valueCodeableConcept.text MS
-* extension[CTCAEGrade].valueCodeableConcept.text from CTCAENumericalGradeVS (required)
-* extension[CTCAEGrade].valueCodeableConcept.text ^short = "Adverse Event Numerical Grade"
-* extension[CTCAEGrade].valueCodeableConcept.text ^definition = "The grade of the adverse event, determined by CTCAE criteria, entered as an integer number, 0 to 5 inclusive, where 0 represents confirmation that the given adverse event did NOT occur. Note that grade 0 events are generally not reportable, but may be created to give positive confirmation that the clinician assessed or considered this particular AE."
+* extension[CTCAEGrade].valueCodeableConcept.coding ^short = "Adverse Event Grade"
+* extension[CTCAEGrade].valueCodeableConcept.coding ^definition = "The grade of the adverse event, determined by CTCAE criteria. The code '0' representing no adverse event may be used to provide positive confirmation that the clinician assessed or considered this particular AE, although the absence of an adverse event is generally not reportable."
 // ------Seriousness------
 * seriousness 0..1 MS
 * seriousness from AdverseEventSeriousnessVS (required)
 // ------Causality------
 * suspectEntity and suspectEntity.instance and suspectEntity.causality and suspectEntity.causality.assessment and suspectEntity.causality.assessment.text MS
 * suspectEntity.causality.assessment from AdverseEventRelatednessVS (required)
-* suspectEntity.causality.assessment.text from AdverseEventRelatednessTextVS (required)
 
 
 Extension: CTCAEGrade

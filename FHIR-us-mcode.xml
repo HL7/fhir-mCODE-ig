@@ -197,6 +197,9 @@
 <artifact id="Observation/mCODETNMPathologicalStageGroupExample1" key="Observation-mCODETNMPathologicalStageGroupExample1" name="mCODETNMPathologicalStageGroupExample1"/>
 <artifact deprecated="true" id="Example/mcode-tumor-marker-example-01" key="mcode-tumor-marker-example-01" name="mCODETumorMarkerExample01"/>
 <artifact id="Observation/mCODETumorMarkerExample1" key="Observation-mCODETumorMarkerExample1" name="mCODETumorMarkerExample1"/>
+<artifact id="AdverseEvent/mcode-ctc-adverse-event-example-1" key="AdverseEvent-mcode-ctc-adverse-event-example-1" name="mcode-ctc-adverse-event-example-1"/>
+<artifact id="AdverseEvent/mcode-ctc-adverse-event-example-2" key="AdverseEvent-mcode-ctc-adverse-event-example-2" name="mcode-ctc-adverse-event-example-2"/>
+<artifact id="AdverseEvent/mcode-ctc-adverse-event-example-3" key="AdverseEvent-mcode-ctc-adverse-event-example-3" name="mcode-ctc-adverse-event-example-3"/>
 <artifact id="CapabilityStatement/mcode-receiver-fallback1" key="CapabilityStatement-mcode-receiver-fallback1" name="mcode-receiver-fallback1"/>
 <artifact id="CapabilityStatement/mcode-receiver-fallback2" key="CapabilityStatement-mcode-receiver-fallback2" name="mcode-receiver-fallback2"/>
 <artifact id="CapabilityStatement/mcode-receiver-fallback3" key="CapabilityStatement-mcode-receiver-fallback3" name="mcode-receiver-fallback3"/>

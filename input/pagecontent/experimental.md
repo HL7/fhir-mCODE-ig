@@ -27,8 +27,8 @@ This is a set of experimental profiles for representing adverse events (AE). The
 
 | Type       | Name                            | Description                   | Example             |
 | ---------- | ------------------------------- | ----------------------------- | ------------------- |
-| Profile    | [CTCAdverseEvent]               | Records an AE                 |      |
-| Extension  | [CTCAEGrade]                    | Records the CTC Grade         |      |
+| Profile    | [CTCAdverseEvent]               | Records an AE                 | [Example 1], [Example 2], [Example 3] |
+| Extension  | [CTCAEGrade]                    | Records the CTC Grade         |                    |
 | ValueSet   | [CTCAEGradeVS]                  | Coded values of CTC Grade     | n/a                 |
 | CodeSystem | [CTCAENumericalGradeCS]         | Defines numerical CTC Grades  | n/a                 |
 | ValueSet   | [CTCAENumericalGradeVS]         | Numerical values of CTC Grade | n/a                 |
@@ -48,3 +48,6 @@ This is a set of experimental profiles for representing adverse events (AE). The
 [AdverseEventRelatednessVS]: ValueSet-mcode-adverse-event-relatedness-value-set.html
 [AdverseEventRelatednessTextCS]: CodeSystem-mcode-adverse-event-relatedness-text-code-system.html
 [AdverseEventRelatednessTextVS]: ValueSet-mcode-adverse-event-relatedness-text-value-set.html
+[Example 1]: AdverseEvent-mcode-ctc-adverse-event-example-1.html
+[Example 2]: AdverseEvent-mcode-ctc-adverse-event-example-2.html
+[Example 3]: AdverseEvent-mcode-ctc-adverse-event-example-3.html

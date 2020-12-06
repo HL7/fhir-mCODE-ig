@@ -12,7 +12,7 @@ Description: "Common terminology criteria grades associated with the severity of
 CodeSystem: CTCAENumericalGradeCS
 Id: mcode-ctcae-numerical-grade-code-system
 Title: "CTCAE Numerical Grade Code System"
-Description: "Common terminology criteria grades associated with the severity of an adverse event, expressed as numerals, Grades 0 through 5."
+Description: "Common terminology criteria (CTC) grades associated with the severity of an adverse event, expressed as integers, 0 through 5, with 0 representing no adverse event, and 5 representing death."
 * #0 "0" "Absent Adverse Event"
 * #1 "1" "Mild Adverse Event"
 * #2 "2" "Moderate Adverse Event"
@@ -29,9 +29,9 @@ Description: "CTCAE Grades 0 through 5 expressed as numerals."
 ValueSet: AdverseEventSeriousnessVS
 Id: mcode-adverse-event-seriousness-value-set
 Title: "Adverse Event Seriousness Value Set"
-Description: "An adverse event is considered serious if it results in any of the following outcomes: (1) Death, (2) Life-threatening experience 3) Inpatient hospitalization or prolongation of existing hospitalization (for > 24 hours) (4) Persistent or significant incapacity or substantial disruption of the ability to conduct normal life functions, (5) Congenital anomaly/birth defect, or (6) Important Medical Event (IME) that may jeopardize the patient or subject and may require medical or surgical intervention to prevent one of the outcomes listed in this definition. Reference: https://crawb.crab.org/txwb/CRA_MANUAL/Vol1/chapter%2013_Serious%20Adverse%20Events.pdf"
-* AES#non-serious "Non-serious"
-* AES#serious "Serious"
+Description: "An adverse event is classified as serious or non-serious. It is considered serious if it results in any of the following outcomes: (1) Death, (2) Life-threatening experience, 3) Inpatient hospitalization or prolongation of existing hospitalization (for > 24 hours), (4) Persistent or significant incapacity or substantial disruption of the ability to conduct normal life functions, (5) Congenital anomaly/birth defect, or (6) Important Medical Event (IME) that may jeopardize the patient or subject and may require medical or surgical intervention to prevent one of the outcomes listed in this definition (reference: https://crawb.crab.org/txwb/CRA_MANUAL/Vol1/chapter%2013_Serious%20Adverse%20Events.pdf)."
+* NCIT#C41335 "Serious Adverse Event"
+* NCIT#C41336 "Non-serious Adverse Event"
 
 ValueSet: AdverseEventRelatednessVS
 Id: mcode-adverse-event-relatedness-value-set
@@ -65,10 +65,9 @@ Description: "Degrees of relatedness expressed as text strings."
 ValueSet: CTCAEPreferredTermVS
 Id: mcode-ctcae-preferred-term-value-set
 Title: "CTCAE Preferred Terms"
-Description: "The NCI Common Terminology Criteria for Adverse Events is a descriptive terminology which can be
-utilized for Adverse Event (AE) reporting. Each CTCAE term is a MedDRA LLT (Lowest Level Term). The codes are drawn from NCI Thesaurus codes. The data set is CTCAE 5.0 and corresponds to MedDRA version 20.1. See https://evs.nci.nih.gov/ftp1/CTCAE/CTCAE_5.0/NCIt_CTCAE_5.0.xlsx.
+Description: "The NCI Common Terminology Criteria for Adverse Events (CTCAE) is utilized for Adverse Event (AE) reporting. The codes are drawn from the NCI Thesaurus. Each CTCAE term is a MedDRA LLT (Lowest Level Term). The value set is CTCAE 5.0 and corresponds to MedDRA version 20.1. See https://evs.nci.nih.gov/ftp1/CTCAE/CTCAE_5.0/NCIt_CTCAE_5.0.xlsx.
 
-**Use of Other, specify**: In the rare event that a suitable CTCAE term cannot be found, the appropriate verbatim term SHALL be captured via the Other, specify mechanism. In this case, the verbatim term is populated into the event.text field, the NCIT code for the body system into the event.coding.code field, and event.coding.display gives the display string corresponding to the code. For example, if reporting a blood disorder with no suitable LLT, it will be reported as: event.text of (verbatim term), event.coding.code of C143323, and event.coding.display of 'Blood and lymphatic system disorders - Other, specify'."
+**Use of 'Other, specify'**: In the event a suitable CTCAE term cannot be found, the appropriate verbatim term SHALL be captured via the 'Other, specify' mechanism. In this case, the verbatim term is populated into the event.text field, the NCIT code for the body system into the event.coding.code field, and the display string corresponding to the code into the event.coding.display field. For example, if reporting 'green blood coloration' it will be reported as: event.text of 'green blood coloration', event.coding.display of 'Blood and lymphatic system disorders - Other, specify', and event.coding.code of NCIT code C143323."
 * NCIT#C143283  "Anemia"
 * NCIT#C143323  "Blood and lymphatic system disorders - Other, specify"
 * NCIT#C143332  "Bone marrow hypocellular"

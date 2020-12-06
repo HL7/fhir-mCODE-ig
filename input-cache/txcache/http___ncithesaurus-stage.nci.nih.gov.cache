@@ -11995,6 +11995,10 @@ v: {
 e: {
   "valueSet" : {
   "resourceType" : "ValueSet",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set contains 0 concepts</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>System</b></td><td><b>Display</b></td></tr></table></div>"
+  },
   "status" : "active",
   "expansion" : {
     "identifier" : "urn:uuid:27a22388-a67a-4499-9c0f-814ead79d3ed",
@@ -12006,5 +12010,6841 @@ e: {
   }
 },
   "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://ncithesaurus-stage.nci.nih.gov",
+  "code" : "C41335"
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code system \"http://ncithesaurus-stage.nci.nih.gov\" is not known (encountered paired with code = \"C41335\"); The code provided (http://ncithesaurus-stage.nci.nih.gov#C41335) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4)"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://ncithesaurus-stage.nci.nih.gov",
+  "code" : "C41336"
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code system \"http://ncithesaurus-stage.nci.nih.gov\" is not known (encountered paired with code = \"C41336\"); The code provided (http://ncithesaurus-stage.nci.nih.gov#C41336) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4)"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://ncithesaurus-stage.nci.nih.gov",
+  "code" : "C57787"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://ncithesaurus-stage.nci.nih.gov",
+      "concept" : [{
+        "code" : "C143283",
+        "display" : "Anemia"
+      },
+      {
+        "code" : "C143323",
+        "display" : "Blood and lymphatic system disorders - Other, specify"
+      },
+      {
+        "code" : "C143332",
+        "display" : "Bone marrow hypocellular"
+      },
+      {
+        "code" : "C55273",
+        "display" : "Disseminated intravascular coagulation"
+      },
+      {
+        "code" : "C143190",
+        "display" : "Eosinophilia"
+      },
+      {
+        "code" : "C143481",
+        "display" : "Febrile neutropenia"
+      },
+      {
+        "code" : "C55992",
+        "display" : "Hemolysis"
+      },
+      {
+        "code" : "C143536",
+        "display" : "Hemolytic uremic syndrome"
+      },
+      {
+        "code" : "C143647",
+        "display" : "Leukocytosis"
+      },
+      {
+        "code" : "C146773",
+        "display" : "Lymph node pain"
+      },
+      {
+        "code" : "C143191",
+        "display" : "Methemoglobinemia"
+      },
+      {
+        "code" : "C143874",
+        "display" : "Thrombotic thrombocytopenic purpura"
+      },
+      {
+        "code" : "C143290",
+        "display" : "Aortic valve disease"
+      },
+      {
+        "code" : "C146731",
+        "display" : "Asystole"
+      },
+      {
+        "code" : "C54767",
+        "display" : "Atrial fibrillation"
+      },
+      {
+        "code" : "C54768",
+        "display" : "Atrial flutter"
+      },
+      {
+        "code" : "C143308",
+        "display" : "Atrioventricular block complete"
+      },
+      {
+        "code" : "C143309",
+        "display" : "Atrioventricular block first degree"
+      },
+      {
+        "code" : "C54771",
+        "display" : "Mobitz type I"
+      },
+      {
+        "code" : "C54772",
+        "display" : "Mobitz (type) II atrioventricular block"
+      },
+      {
+        "code" : "C143351",
+        "display" : "Cardiac arrest"
+      },
+      {
+        "code" : "C143352",
+        "display" : "Cardiac disorders - Other, specify"
+      },
+      {
+        "code" : "C143364",
+        "display" : "Chest pain - cardiac"
+      },
+      {
+        "code" : "C143380",
+        "display" : "Conduction disorder"
+      },
+      {
+        "code" : "C143192",
+        "display" : "Cyanosis"
+      },
+      {
+        "code" : "C143529",
+        "display" : "Heart failure"
+      },
+      {
+        "code" : "C146719",
+        "display" : "Left ventricular systolic dysfunction"
+      },
+      {
+        "code" : "C143674",
+        "display" : "Mitral valve disease"
+      },
+      {
+        "code" : "C143691",
+        "display" : "Myocardial infarction"
+      },
+      {
+        "code" : "C146695",
+        "display" : "Myocarditis"
+      },
+      {
+        "code" : "C54935",
+        "display" : "Palpitations"
+      },
+      {
+        "code" : "C143738",
+        "display" : "Paroxysmal atrial tachycardia"
+      },
+      {
+        "code" : "C143743",
+        "display" : "Pericardial effusion"
+      },
+      {
+        "code" : "C143744",
+        "display" : "Pericardial tamponade"
+      },
+      {
+        "code" : "C55067",
+        "display" : "Pericarditis"
+      },
+      {
+        "code" : "C143793",
+        "display" : "Pulmonary valve disease"
+      },
+      {
+        "code" : "C55069",
+        "display" : "Restrictive cardiomyopathy"
+      },
+      {
+        "code" : "C55070",
+        "display" : "Right ventricular dysfunction"
+      },
+      {
+        "code" : "C54938",
+        "display" : "Sick sinus syndrome"
+      },
+      {
+        "code" : "C54940",
+        "display" : "Sinus bradycardia"
+      },
+      {
+        "code" : "C146759",
+        "display" : "Sinus tachycardia"
+      },
+      {
+        "code" : "C54945",
+        "display" : "Supraventricular tachycardia"
+      },
+      {
+        "code" : "C143889",
+        "display" : "Tricuspid valve disease"
+      },
+      {
+        "code" : "C146629",
+        "display" : "Ventricular arrhythmia"
+      },
+      {
+        "code" : "C146732",
+        "display" : "Ventricular fibrillation"
+      },
+      {
+        "code" : "C146733",
+        "display" : "Ventricular tachycardia"
+      },
+      {
+        "code" : "C143382",
+        "display" : "Congenital, familial and genetic disorders - Other, specify"
+      },
+      {
+        "code" : "C143429",
+        "display" : "Ear and labyrinth disorders - Other, specify"
+      },
+      {
+        "code" : "C143430",
+        "display" : "Ear pain"
+      },
+      {
+        "code" : "C146745",
+        "display" : "External ear pain"
+      },
+      {
+        "code" : "C143528",
+        "display" : "Hearing impaired"
+      },
+      {
+        "code" : "C143673",
+        "display" : "Middle ear inflammation"
+      },
+      {
+        "code" : "C146690",
+        "display" : "Tinnitus"
+      },
+      {
+        "code" : "C143935",
+        "display" : "Vertigo"
+      },
+      {
+        "code" : "C143936",
+        "display" : "Vestibular disorder"
+      },
+      {
+        "code" : "C55748",
+        "display" : "Adrenal insufficiency"
+      },
+      {
+        "code" : "C143392",
+        "display" : "Cushingoid"
+      },
+      {
+        "code" : "C55742",
+        "display" : "Delayed puberty"
+      },
+      {
+        "code" : "C143442",
+        "display" : "Endocrine disorders - Other, specify"
+      },
+      {
+        "code" : "C143520",
+        "display" : "Growth accelerated"
+      },
+      {
+        "code" : "C143557",
+        "display" : "Hyperparathyroidism"
+      },
+      {
+        "code" : "C143560",
+        "display" : "Hyperthyroidism"
+      },
+      {
+        "code" : "C143572",
+        "display" : "Hypoparathyroidism"
+      },
+      {
+        "code" : "C143193",
+        "display" : "Hypophysitis"
+      },
+      {
+        "code" : "C143194",
+        "display" : "Hypopituitarism"
+      },
+      {
+        "code" : "C143576",
+        "display" : "Hypothyroidism"
+      },
+      {
+        "code" : "C146645",
+        "display" : "Precocious puberty"
+      },
+      {
+        "code" : "C143195",
+        "display" : "Testosterone deficiency"
+      },
+      {
+        "code" : "C143937",
+        "display" : "Virilization"
+      },
+      {
+        "code" : "C55906",
+        "display" : "Blurred vision"
+      },
+      {
+        "code" : "C146674",
+        "display" : "Cataract"
+      },
+      {
+        "code" : "C143387",
+        "display" : "Corneal ulcer"
+      },
+      {
+        "code" : "C143410",
+        "display" : "Dry eye"
+      },
+      {
+        "code" : "C143466",
+        "display" : "Extraocular muscle paresis"
+      },
+      {
+        "code" : "C143468",
+        "display" : "Eye disorders - Other, specify"
+      },
+      {
+        "code" : "C146751",
+        "display" : "Eye pain"
+      },
+      {
+        "code" : "C143471",
+        "display" : "Eyelid function disorder"
+      },
+      {
+        "code" : "C143489",
+        "display" : "Flashing lights"
+      },
+      {
+        "code" : "C143491",
+        "display" : "Floaters"
+      },
+      {
+        "code" : "C55842",
+        "display" : "Glaucoma"
+      },
+      {
+        "code" : "C55847",
+        "display" : "Keratitis"
+      },
+      {
+        "code" : "C143705",
+        "display" : "Night blindness"
+      },
+      {
+        "code" : "C143714",
+        "display" : "Optic nerve disorder"
+      },
+      {
+        "code" : "C143734",
+        "display" : "Papilledema"
+      },
+      {
+        "code" : "C143747",
+        "display" : "Periorbital edema"
+      },
+      {
+        "code" : "C146770",
+        "display" : "Photophobia"
+      },
+      {
+        "code" : "C146729",
+        "display" : "Retinal detachment"
+      },
+      {
+        "code" : "C143814",
+        "display" : "Retinal tear"
+      },
+      {
+        "code" : "C143815",
+        "display" : "Retinal vascular disorder"
+      },
+      {
+        "code" : "C55891",
+        "display" : "Retinopathy"
+      },
+      {
+        "code" : "C143823",
+        "display" : "Scleral disorder"
+      },
+      {
+        "code" : "C55901",
+        "display" : "Uveitis"
+      },
+      {
+        "code" : "C143196",
+        "display" : "Vision decreased"
+      },
+      {
+        "code" : "C146677",
+        "display" : "Vitreous hemorrhage"
+      },
+      {
+        "code" : "C143944",
+        "display" : "Watering eyes"
+      },
+      {
+        "code" : "C143253",
+        "display" : "Abdominal distension"
+      },
+      {
+        "code" : "C143255",
+        "display" : "Abdominal pain"
+      },
+      {
+        "code" : "C143197",
+        "display" : "Anal fissure"
+      },
+      {
+        "code" : "C143275",
+        "display" : "Anal fistula"
+      },
+      {
+        "code" : "C143276",
+        "display" : "Anal hemorrhage"
+      },
+      {
+        "code" : "C143277",
+        "display" : "Anal mucositis"
+      },
+      {
+        "code" : "C143278",
+        "display" : "Anal necrosis"
+      },
+      {
+        "code" : "C143279",
+        "display" : "Anal pain"
+      },
+      {
+        "code" : "C143280",
+        "display" : "Anal stenosis"
+      },
+      {
+        "code" : "C143281",
+        "display" : "Anal ulcer"
+      },
+      {
+        "code" : "C143300",
+        "display" : "Ascites"
+      },
+      {
+        "code" : "C143198",
+        "display" : "Belching"
+      },
+      {
+        "code" : "C143322",
+        "display" : "Bloating"
+      },
+      {
+        "code" : "C143358",
+        "display" : "Cecal hemorrhage"
+      },
+      {
+        "code" : "C57901",
+        "display" : "Cheilitis"
+      },
+      {
+        "code" : "C146788",
+        "display" : "Cholecystitis"
+      },
+      {
+        "code" : "C143199",
+        "display" : "Chylous ascites"
+      },
+      {
+        "code" : "C57134",
+        "display" : "Colitis"
+      },
+      {
+        "code" : "C143373",
+        "display" : "Colonic fistula"
+      },
+      {
+        "code" : "C143374",
+        "display" : "Colonic hemorrhage"
+      },
+      {
+        "code" : "C143375",
+        "display" : "Colonic obstruction"
+      },
+      {
+        "code" : "C143376",
+        "display" : "Colonic perforation"
+      },
+      {
+        "code" : "C143377",
+        "display" : "Colonic stenosis"
+      },
+      {
+        "code" : "C143378",
+        "display" : "Colonic ulcer"
+      },
+      {
+        "code" : "C57141",
+        "display" : "Constipation"
+      },
+      {
+        "code" : "C143402",
+        "display" : "Dental caries"
+      },
+      {
+        "code" : "C57788",
+        "display" : "Diarrhea"
+      },
+      {
+        "code" : "C143411",
+        "display" : "Dry mouth"
+      },
+      {
+        "code" : "C143414",
+        "display" : "Duodenal hemorrhage"
+      },
+      {
+        "code" : "C143416",
+        "display" : "Duodenal obstruction"
+      },
+      {
+        "code" : "C143417",
+        "display" : "Duodenal perforation"
+      },
+      {
+        "code" : "C143418",
+        "display" : "Duodenal stenosis"
+      },
+      {
+        "code" : "C143419",
+        "display" : "Duodenal ulcer"
+      },
+      {
+        "code" : "C57789",
+        "display" : "Duodenal fistula"
+      },
+      {
+        "code" : "C143425",
+        "display" : "Dyspepsia"
+      },
+      {
+        "code" : "C57795",
+        "display" : "Dysphagia"
+      },
+      {
+        "code" : "C143445",
+        "display" : "Enterocolitis"
+      },
+      {
+        "code" : "C143446",
+        "display" : "Enterovesical fistula"
+      },
+      {
+        "code" : "C143453",
+        "display" : "Esophageal hemorrhage"
+      },
+      {
+        "code" : "C143455",
+        "display" : "Esophageal necrosis"
+      },
+      {
+        "code" : "C143456",
+        "display" : "Esophageal obstruction"
+      },
+      {
+        "code" : "C143457",
+        "display" : "Esophageal pain"
+      },
+      {
+        "code" : "C143458",
+        "display" : "Esophageal perforation"
+      },
+      {
+        "code" : "C143459",
+        "display" : "Esophageal stenosis"
+      },
+      {
+        "code" : "C143460",
+        "display" : "Esophageal ulcer"
+      },
+      {
+        "code" : "C146710",
+        "display" : "Esophageal varices hemorrhage"
+      },
+      {
+        "code" : "C57797",
+        "display" : "Esophagitis"
+      },
+      {
+        "code" : "C57798",
+        "display" : "Esophageal fistula"
+      },
+      {
+        "code" : "C143482",
+        "display" : "Fecal incontinence"
+      },
+      {
+        "code" : "C57807",
+        "display" : "Flatulence"
+      },
+      {
+        "code" : "C143499",
+        "display" : "Gastric fistula"
+      },
+      {
+        "code" : "C143500",
+        "display" : "Gastric hemorrhage"
+      },
+      {
+        "code" : "C143501",
+        "display" : "Gastric necrosis"
+      },
+      {
+        "code" : "C143502",
+        "display" : "Gastric perforation"
+      },
+      {
+        "code" : "C143503",
+        "display" : "Gastric stenosis"
+      },
+      {
+        "code" : "C143504",
+        "display" : "Gastric ulcer"
+      },
+      {
+        "code" : "C57812",
+        "display" : "Gastritis"
+      },
+      {
+        "code" : "C143506",
+        "display" : "Gastroesophageal reflux disease"
+      },
+      {
+        "code" : "C143508",
+        "display" : "Gastrointestinal disorders - Other, specify"
+      },
+      {
+        "code" : "C146637",
+        "display" : "Gastrointestinal fistula"
+      },
+      {
+        "code" : "C57814",
+        "display" : "Ileus"
+      },
+      {
+        "code" : "C143510",
+        "display" : "Gastrointestinal pain"
+      },
+      {
+        "code" : "C143512",
+        "display" : "Gastroparesis"
+      },
+      {
+        "code" : "C146626",
+        "display" : "Gingival pain"
+      },
+      {
+        "code" : "C143537",
+        "display" : "Hemorrhoidal hemorrhage"
+      },
+      {
+        "code" : "C146738",
+        "display" : "Hemorrhoids"
+      },
+      {
+        "code" : "C146633",
+        "display" : "Ileal perforation"
+      },
+      {
+        "code" : "C143578",
+        "display" : "Ileal stenosis"
+      },
+      {
+        "code" : "C57821",
+        "display" : "Ileal fistula"
+      },
+      {
+        "code" : "C56542",
+        "display" : "Ileal hemorrhage"
+      },
+      {
+        "code" : "C57823",
+        "display" : "Ileal obstruction"
+      },
+      {
+        "code" : "C57826",
+        "display" : "Ileal ulcer"
+      },
+      {
+        "code" : "C143595",
+        "display" : "Intra-abdominal hemorrhage"
+      },
+      {
+        "code" : "C143622",
+        "display" : "Jejunal perforation"
+      },
+      {
+        "code" : "C143623",
+        "display" : "Jejunal stenosis"
+      },
+      {
+        "code" : "C57827",
+        "display" : "Jejunal fistula"
+      },
+      {
+        "code" : "C56543",
+        "display" : "Jejunal hemorrhage"
+      },
+      {
+        "code" : "C57829",
+        "display" : "Jejunal obstruction"
+      },
+      {
+        "code" : "C57832",
+        "display" : "Jejunal ulcer"
+      },
+      {
+        "code" : "C146761",
+        "display" : "Lip pain"
+      },
+      {
+        "code" : "C143656",
+        "display" : "Lower gastrointestinal hemorrhage"
+      },
+      {
+        "code" : "C57838",
+        "display" : "Malabsorption"
+      },
+      {
+        "code" : "C143679",
+        "display" : "Mucositis oral"
+      },
+      {
+        "code" : "C146764",
+        "display" : "Nausea"
+      },
+      {
+        "code" : "C143710",
+        "display" : "Obstruction gastric"
+      },
+      {
+        "code" : "C143715",
+        "display" : "Oral cavity fistula"
+      },
+      {
+        "code" : "C56551",
+        "display" : "Oral hemorrhage"
+      },
+      {
+        "code" : "C143716",
+        "display" : "Oral dysesthesia"
+      },
+      {
+        "code" : "C146627",
+        "display" : "Oral pain"
+      },
+      {
+        "code" : "C57845",
+        "display" : "Pancreatic fistula"
+      },
+      {
+        "code" : "C56554",
+        "display" : "Pancreatic hemorrhage"
+      },
+      {
+        "code" : "C143730",
+        "display" : "Pancreatic duct stenosis"
+      },
+      {
+        "code" : "C143732",
+        "display" : "Pancreatic necrosis"
+      },
+      {
+        "code" : "C146789",
+        "display" : "Pancreatitis"
+      },
+      {
+        "code" : "C57849",
+        "display" : "Periodontal disease"
+      },
+      {
+        "code" : "C57850",
+        "display" : "Peritoneal necrosis"
+      },
+      {
+        "code" : "C57857",
+        "display" : "Proctitis"
+      },
+      {
+        "code" : "C143200",
+        "display" : "Rectal fissure"
+      },
+      {
+        "code" : "C143802",
+        "display" : "Rectal mucositis"
+      },
+      {
+        "code" : "C146631",
+        "display" : "Rectal pain"
+      },
+      {
+        "code" : "C146634",
+        "display" : "Rectal perforation"
+      },
+      {
+        "code" : "C143803",
+        "display" : "Rectal stenosis"
+      },
+      {
+        "code" : "C57859",
+        "display" : "Rectal fistula"
+      },
+      {
+        "code" : "C56560",
+        "display" : "Rectal hemorrhage"
+      },
+      {
+        "code" : "C57863",
+        "display" : "Rectal necrosis"
+      },
+      {
+        "code" : "C57864",
+        "display" : "Rectal obstruction"
+      },
+      {
+        "code" : "C57867",
+        "display" : "Rectal ulcer"
+      },
+      {
+        "code" : "C146632",
+        "display" : "Retroperitoneal hemorrhage"
+      },
+      {
+        "code" : "C143821",
+        "display" : "Salivary duct inflammation"
+      },
+      {
+        "code" : "C57868",
+        "display" : "Salivary gland fistula"
+      },
+      {
+        "code" : "C143842",
+        "display" : "Small intestinal mucositis"
+      },
+      {
+        "code" : "C143843",
+        "display" : "Small intestinal obstruction"
+      },
+      {
+        "code" : "C146635",
+        "display" : "Small intestinal perforation"
+      },
+      {
+        "code" : "C143844",
+        "display" : "Small intestinal stenosis"
+      },
+      {
+        "code" : "C143846",
+        "display" : "Small intestine ulcer"
+      },
+      {
+        "code" : "C146774",
+        "display" : "Stomach pain"
+      },
+      {
+        "code" : "C143876",
+        "display" : "Tooth development disorder"
+      },
+      {
+        "code" : "C143877",
+        "display" : "Tooth discoloration"
+      },
+      {
+        "code" : "C143879",
+        "display" : "Toothache"
+      },
+      {
+        "code" : "C146730",
+        "display" : "Typhlitis"
+      },
+      {
+        "code" : "C143895",
+        "display" : "Upper gastrointestinal hemorrhage"
+      },
+      {
+        "code" : "C143938",
+        "display" : "Visceral arterial ischemia"
+      },
+      {
+        "code" : "C57896",
+        "display" : "Vomiting"
+      },
+      {
+        "code" : "C143366",
+        "display" : "Chills"
+      },
+      {
+        "code" : "C143395",
+        "display" : "Death neonatal"
+      },
+      {
+        "code" : "C143396",
+        "display" : "Death NOS"
+      },
+      {
+        "code" : "C143201",
+        "display" : "Disease progression"
+      },
+      {
+        "code" : "C143432",
+        "display" : "Edema face"
+      },
+      {
+        "code" : "C143433",
+        "display" : "Edema limbs"
+      },
+      {
+        "code" : "C143434",
+        "display" : "Edema trunk"
+      },
+      {
+        "code" : "C143474",
+        "display" : "Facial pain"
+      },
+      {
+        "code" : "C146753",
+        "display" : "Fatigue"
+      },
+      {
+        "code" : "C143485",
+        "display" : "Fever"
+      },
+      {
+        "code" : "C143492",
+        "display" : "Flu like symptoms"
+      },
+      {
+        "code" : "C143496",
+        "display" : "Gait disturbance"
+      },
+      {
+        "code" : "C143513",
+        "display" : "General disorders and administration site conditions - Other, specify"
+      },
+      {
+        "code" : "C143202",
+        "display" : "Generalized edema"
+      },
+      {
+        "code" : "C55332",
+        "display" : "Hypothermia"
+      },
+      {
+        "code" : "C143584",
+        "display" : "Infusion site extravasation"
+      },
+      {
+        "code" : "C143585",
+        "display" : "Injection site reaction"
+      },
+      {
+        "code" : "C143654",
+        "display" : "Localized edema"
+      },
+      {
+        "code" : "C143665",
+        "display" : "Malaise"
+      },
+      {
+        "code" : "C143680",
+        "display" : "Multi-organ failure"
+      },
+      {
+        "code" : "C143700",
+        "display" : "Neck edema"
+      },
+      {
+        "code" : "C143707",
+        "display" : "Non-cardiac chest pain"
+      },
+      {
+        "code" : "C143725",
+        "display" : "Pain"
+      },
+      {
+        "code" : "C143863",
+        "display" : "Sudden death NOS"
+      },
+      {
+        "code" : "C143203",
+        "display" : "Vaccination site lymphadenopathy"
+      },
+      {
+        "code" : "C143314",
+        "display" : "Bile duct stenosis"
+      },
+      {
+        "code" : "C143316",
+        "display" : "Biliary fistula"
+      },
+      {
+        "code" : "C143204",
+        "display" : "Budd-Chiari syndrome"
+      },
+      {
+        "code" : "C57808",
+        "display" : "Gallbladder fistula"
+      },
+      {
+        "code" : "C146735",
+        "display" : "Gallbladder necrosis"
+      },
+      {
+        "code" : "C57810",
+        "display" : "Gallbladder obstruction"
+      },
+      {
+        "code" : "C146755",
+        "display" : "Gallbladder pain"
+      },
+      {
+        "code" : "C146708",
+        "display" : "Gallbladder perforation"
+      },
+      {
+        "code" : "C143539",
+        "display" : "Hepatic failure"
+      },
+      {
+        "code" : "C143540",
+        "display" : "Hepatic hemorrhage"
+      },
+      {
+        "code" : "C146736",
+        "display" : "Hepatic necrosis"
+      },
+      {
+        "code" : "C143542",
+        "display" : "Hepatic pain"
+      },
+      {
+        "code" : "C143544",
+        "display" : "Hepatobiliary disorders - Other, specify"
+      },
+      {
+        "code" : "C143742",
+        "display" : "Perforation bile duct"
+      },
+      {
+        "code" : "C143769",
+        "display" : "Portal hypertension"
+      },
+      {
+        "code" : "C143770",
+        "display" : "Portal vein thrombosis"
+      },
+      {
+        "code" : "C143205",
+        "display" : "Sinusoidal obstruction syndrome"
+      },
+      {
+        "code" : "C143271",
+        "display" : "Allergic reaction"
+      },
+      {
+        "code" : "C143282",
+        "display" : "Anaphylaxis"
+      },
+      {
+        "code" : "C143310",
+        "display" : "Autoimmune disorder"
+      },
+      {
+        "code" : "C143394",
+        "display" : "Cytokine release syndrome"
+      },
+      {
+        "code" : "C143580",
+        "display" : "Immune system disorders - Other, specify"
+      },
+      {
+        "code" : "C146642",
+        "display" : "Serum sickness"
+      },
+      {
+        "code" : "C143254",
+        "display" : "Abdominal infection"
+      },
+      {
+        "code" : "C143285",
+        "display" : "Anorectal infection"
+      },
+      {
+        "code" : "C143293",
+        "display" : "Appendicitis perforated"
+      },
+      {
+        "code" : "C143294",
+        "display" : "Appendicitis"
+      },
+      {
+        "code" : "C143297",
+        "display" : "Arteritis infective"
+      },
+      {
+        "code" : "C143206",
+        "display" : "Bacteremia"
+      },
+      {
+        "code" : "C143317",
+        "display" : "Biliary tract infection"
+      },
+      {
+        "code" : "C143319",
+        "display" : "Bladder infection"
+      },
+      {
+        "code" : "C143331",
+        "display" : "Bone infection"
+      },
+      {
+        "code" : "C143336",
+        "display" : "Breast infection"
+      },
+      {
+        "code" : "C143339",
+        "display" : "Bronchial infection"
+      },
+      {
+        "code" : "C143356",
+        "display" : "Catheter related infection"
+      },
+      {
+        "code" : "C143359",
+        "display" : "Cecal infection"
+      },
+      {
+        "code" : "C143362",
+        "display" : "Cervicitis infection"
+      },
+      {
+        "code" : "C143383",
+        "display" : "Conjunctivitis infective"
+      },
+      {
+        "code" : "C143384",
+        "display" : "Conjunctivitis"
+      },
+      {
+        "code" : "C143386",
+        "display" : "Corneal infection"
+      },
+      {
+        "code" : "C143390",
+        "display" : "Cranial nerve infection"
+      },
+      {
+        "code" : "C143207",
+        "display" : "Cytomegalovirus infection reactivation"
+      },
+      {
+        "code" : "C143406",
+        "display" : "Device related infection"
+      },
+      {
+        "code" : "C143415",
+        "display" : "Duodenal infection"
+      },
+      {
+        "code" : "C143438",
+        "display" : "Encephalitis infection"
+      },
+      {
+        "code" : "C143439",
+        "display" : "Encephalomyelitis infection"
+      },
+      {
+        "code" : "C143441",
+        "display" : "Endocarditis infective"
+      },
+      {
+        "code" : "C143443",
+        "display" : "Endophthalmitis"
+      },
+      {
+        "code" : "C143444",
+        "display" : "Enterocolitis infectious"
+      },
+      {
+        "code" : "C143208",
+        "display" : "Epstein-Barr virus infection reactivation"
+      },
+      {
+        "code" : "C143454",
+        "display" : "Esophageal infection"
+      },
+      {
+        "code" : "C143469",
+        "display" : "Eye infection"
+      },
+      {
+        "code" : "C143209",
+        "display" : "Folliculitis"
+      },
+      {
+        "code" : "C143210",
+        "display" : "Fungemia"
+      },
+      {
+        "code" : "C143497",
+        "display" : "Gallbladder infection"
+      },
+      {
+        "code" : "C143523",
+        "display" : "Gum infection"
+      },
+      {
+        "code" : "C143541",
+        "display" : "Hepatic infection"
+      },
+      {
+        "code" : "C143211",
+        "display" : "Hepatitis B reactivation"
+      },
+      {
+        "code" : "C143543",
+        "display" : "Hepatitis viral"
+      },
+      {
+        "code" : "C143212",
+        "display" : "Herpes simplex reactivation"
+      },
+      {
+        "code" : "C143581",
+        "display" : "Infections and infestations - Other, specify"
+      },
+      {
+        "code" : "C143582",
+        "display" : "Infective myositis"
+      },
+      {
+        "code" : "C143626",
+        "display" : "Joint infection"
+      },
+      {
+        "code" : "C143632",
+        "display" : "Kidney infection"
+      },
+      {
+        "code" : "C143641",
+        "display" : "Laryngitis"
+      },
+      {
+        "code" : "C143651",
+        "display" : "Lip infection"
+      },
+      {
+        "code" : "C143657",
+        "display" : "Lung infection"
+      },
+      {
+        "code" : "C143658",
+        "display" : "Lymph gland infection"
+      },
+      {
+        "code" : "C143667",
+        "display" : "Mediastinal infection"
+      },
+      {
+        "code" : "C143670",
+        "display" : "Meningitis"
+      },
+      {
+        "code" : "C143678",
+        "display" : "Mucosal infection"
+      },
+      {
+        "code" : "C55459",
+        "display" : "Myelitis"
+      },
+      {
+        "code" : "C143695",
+        "display" : "Nail infection"
+      },
+      {
+        "code" : "C143719",
+        "display" : "Otitis externa"
+      },
+      {
+        "code" : "C143720",
+        "display" : "Otitis media"
+      },
+      {
+        "code" : "C143721",
+        "display" : "Ovarian infection"
+      },
+      {
+        "code" : "C143728",
+        "display" : "Pancreas infection"
+      },
+      {
+        "code" : "C143735",
+        "display" : "Papulopustular rash"
+      },
+      {
+        "code" : "C143737",
+        "display" : "Paronychia"
+      },
+      {
+        "code" : "C143740",
+        "display" : "Pelvic infection"
+      },
+      {
+        "code" : "C143741",
+        "display" : "Penile infection"
+      },
+      {
+        "code" : "C143748",
+        "display" : "Periorbital infection"
+      },
+      {
+        "code" : "C143751",
+        "display" : "Peripheral nerve infection"
+      },
+      {
+        "code" : "C143753",
+        "display" : "Peritoneal infection"
+      },
+      {
+        "code" : "C143758",
+        "display" : "Pharyngitis"
+      },
+      {
+        "code" : "C143760",
+        "display" : "Phlebitis infective"
+      },
+      {
+        "code" : "C143766",
+        "display" : "Pleural infection"
+      },
+      {
+        "code" : "C143783",
+        "display" : "Prostate infection"
+      },
+      {
+        "code" : "C143800",
+        "display" : "Rash pustular"
+      },
+      {
+        "code" : "C143819",
+        "display" : "Rhinitis infective"
+      },
+      {
+        "code" : "C143822",
+        "display" : "Salivary gland infection"
+      },
+      {
+        "code" : "C143825",
+        "display" : "Scrotal infection"
+      },
+      {
+        "code" : "C143827",
+        "display" : "Sepsis"
+      },
+      {
+        "code" : "C143213",
+        "display" : "Shingles"
+      },
+      {
+        "code" : "C143832",
+        "display" : "Sinusitis"
+      },
+      {
+        "code" : "C143838",
+        "display" : "Skin infection"
+      },
+      {
+        "code" : "C143845",
+        "display" : "Small intestine infection"
+      },
+      {
+        "code" : "C143849",
+        "display" : "Soft tissue infection"
+      },
+      {
+        "code" : "C143857",
+        "display" : "Splenic infection"
+      },
+      {
+        "code" : "C143860",
+        "display" : "Stoma site infection"
+      },
+      {
+        "code" : "C143214",
+        "display" : "Thrush"
+      },
+      {
+        "code" : "C143878",
+        "display" : "Tooth infection"
+      },
+      {
+        "code" : "C143884",
+        "display" : "Tracheitis"
+      },
+      {
+        "code" : "C143896",
+        "display" : "Upper respiratory infection"
+      },
+      {
+        "code" : "C143899",
+        "display" : "Urethral infection"
+      },
+      {
+        "code" : "C143904",
+        "display" : "Urinary tract infection"
+      },
+      {
+        "code" : "C143917",
+        "display" : "Uterine infection"
+      },
+      {
+        "code" : "C143924",
+        "display" : "Vaginal infection"
+      },
+      {
+        "code" : "C143215",
+        "display" : "Viremia"
+      },
+      {
+        "code" : "C143943",
+        "display" : "Vulval infection"
+      },
+      {
+        "code" : "C143951",
+        "display" : "Wound infection"
+      },
+      {
+        "code" : "C143284",
+        "display" : "Ankle fracture"
+      },
+      {
+        "code" : "C143289",
+        "display" : "Aortic injury"
+      },
+      {
+        "code" : "C143296",
+        "display" : "Arterial injury"
+      },
+      {
+        "code" : "C143315",
+        "display" : "Biliary anastomotic leak"
+      },
+      {
+        "code" : "C143318",
+        "display" : "Bladder anastomotic leak"
+      },
+      {
+        "code" : "C143345",
+        "display" : "Bruising"
+      },
+      {
+        "code" : "C57900",
+        "display" : "Burn"
+      },
+      {
+        "code" : "C143405",
+        "display" : "Dermatitis radiation"
+      },
+      {
+        "code" : "C143451",
+        "display" : "Esophageal anastomotic leak"
+      },
+      {
+        "code" : "C143475",
+        "display" : "Fall"
+      },
+      {
+        "code" : "C143476",
+        "display" : "Fallopian tube anastomotic leak"
+      },
+      {
+        "code" : "C146714",
+        "display" : "Fallopian tube perforation"
+      },
+      {
+        "code" : "C58382",
+        "display" : "Fracture"
+      },
+      {
+        "code" : "C143498",
+        "display" : "Gastric anastomotic leak"
+      },
+      {
+        "code" : "C143507",
+        "display" : "Gastrointestinal anastomotic leak"
+      },
+      {
+        "code" : "C143511",
+        "display" : "Gastrointestinal stoma necrosis"
+      },
+      {
+        "code" : "C143546",
+        "display" : "Hip fracture"
+      },
+      {
+        "code" : "C56735",
+        "display" : "Injury to inferior vena cava"
+      },
+      {
+        "code" : "C143583",
+        "display" : "Infusion related reaction"
+      },
+      {
+        "code" : "C143586",
+        "display" : "Injury to carotid artery"
+      },
+      {
+        "code" : "C143587",
+        "display" : "Injury to jugular vein"
+      },
+      {
+        "code" : "C143588",
+        "display" : "Injury to superior vena cava"
+      },
+      {
+        "code" : "C143589",
+        "display" : "Injury, poisoning and procedural complications - Other, specify"
+      },
+      {
+        "code" : "C143592",
+        "display" : "Intestinal stoma leak"
+      },
+      {
+        "code" : "C143593",
+        "display" : "Intestinal stoma obstruction"
+      },
+      {
+        "code" : "C143594",
+        "display" : "Intestinal stoma site bleeding"
+      },
+      {
+        "code" : "C143597",
+        "display" : "Intraoperative arterial injury"
+      },
+      {
+        "code" : "C143598",
+        "display" : "Intraoperative breast injury"
+      },
+      {
+        "code" : "C143599",
+        "display" : "Intraoperative cardiac injury"
+      },
+      {
+        "code" : "C143600",
+        "display" : "Intraoperative ear injury"
+      },
+      {
+        "code" : "C143601",
+        "display" : "Intraoperative endocrine injury"
+      },
+      {
+        "code" : "C143602",
+        "display" : "Intraoperative gastrointestinal injury"
+      },
+      {
+        "code" : "C143603",
+        "display" : "Intraoperative head and neck injury"
+      },
+      {
+        "code" : "C143604",
+        "display" : "Intraoperative hemorrhage"
+      },
+      {
+        "code" : "C143605",
+        "display" : "Intraoperative hepatobiliary injury"
+      },
+      {
+        "code" : "C143606",
+        "display" : "Intraoperative musculoskeletal injury"
+      },
+      {
+        "code" : "C143607",
+        "display" : "Intraoperative neurological injury"
+      },
+      {
+        "code" : "C143608",
+        "display" : "Intraoperative ocular injury"
+      },
+      {
+        "code" : "C143609",
+        "display" : "Intraoperative renal injury"
+      },
+      {
+        "code" : "C143610",
+        "display" : "Intraoperative reproductive tract injury"
+      },
+      {
+        "code" : "C143611",
+        "display" : "Intraoperative respiratory injury"
+      },
+      {
+        "code" : "C143612",
+        "display" : "Intraoperative splenic injury"
+      },
+      {
+        "code" : "C143613",
+        "display" : "Intraoperative urinary injury"
+      },
+      {
+        "code" : "C143614",
+        "display" : "Intraoperative venous injury"
+      },
+      {
+        "code" : "C143631",
+        "display" : "Kidney anastomotic leak"
+      },
+      {
+        "code" : "C143635",
+        "display" : "Large intestinal anastomotic leak"
+      },
+      {
+        "code" : "C143729",
+        "display" : "Pancreatic anastomotic leak"
+      },
+      {
+        "code" : "C143755",
+        "display" : "Pharyngeal anastomotic leak"
+      },
+      {
+        "code" : "C143772",
+        "display" : "Postoperative hemorrhage"
+      },
+      {
+        "code" : "C143773",
+        "display" : "Postoperative thoracic procedure complication"
+      },
+      {
+        "code" : "C143781",
+        "display" : "Prolapse of intestinal stoma"
+      },
+      {
+        "code" : "C143782",
+        "display" : "Prolapse of urostomy"
+      },
+      {
+        "code" : "C143796",
+        "display" : "Radiation recall reaction (dermatologic)"
+      },
+      {
+        "code" : "C143801",
+        "display" : "Rectal anastomotic leak"
+      },
+      {
+        "code" : "C58401",
+        "display" : "Seroma"
+      },
+      {
+        "code" : "C143841",
+        "display" : "Small intestinal anastomotic leak"
+      },
+      {
+        "code" : "C143855",
+        "display" : "Spermatic cord anastomotic leak"
+      },
+      {
+        "code" : "C143856",
+        "display" : "Spinal fracture"
+      },
+      {
+        "code" : "C143858",
+        "display" : "Stenosis of gastrointestinal stoma"
+      },
+      {
+        "code" : "C146694",
+        "display" : "Stomal ulcer"
+      },
+      {
+        "code" : "C56567",
+        "display" : "Tracheal hemorrhage"
+      },
+      {
+        "code" : "C143882",
+        "display" : "Tracheal obstruction"
+      },
+      {
+        "code" : "C143885",
+        "display" : "Tracheostomy site bleeding"
+      },
+      {
+        "code" : "C143897",
+        "display" : "Ureteric anastomotic leak"
+      },
+      {
+        "code" : "C143898",
+        "display" : "Urethral anastomotic leak"
+      },
+      {
+        "code" : "C143910",
+        "display" : "Urostomy leak"
+      },
+      {
+        "code" : "C143911",
+        "display" : "Urostomy obstruction"
+      },
+      {
+        "code" : "C143912",
+        "display" : "Urostomy site bleeding"
+      },
+      {
+        "code" : "C143913",
+        "display" : "Urostomy stenosis"
+      },
+      {
+        "code" : "C143915",
+        "display" : "Uterine anastomotic leak"
+      },
+      {
+        "code" : "C143919",
+        "display" : "Uterine perforation"
+      },
+      {
+        "code" : "C143216",
+        "display" : "Vaccination complication"
+      },
+      {
+        "code" : "C143921",
+        "display" : "Vaginal anastomotic leak"
+      },
+      {
+        "code" : "C143928",
+        "display" : "Vas deferens anastomotic leak"
+      },
+      {
+        "code" : "C143929",
+        "display" : "Vascular access complication"
+      },
+      {
+        "code" : "C143933",
+        "display" : "Venous injury"
+      },
+      {
+        "code" : "C143949",
+        "display" : "Wound complication"
+      },
+      {
+        "code" : "C143950",
+        "display" : "Wound dehiscence"
+      },
+      {
+        "code" : "C143952",
+        "display" : "Wrist fracture"
+      },
+      {
+        "code" : "C143261",
+        "display" : "Activated partial thromboplastin time prolonged"
+      },
+      {
+        "code" : "C143267",
+        "display" : "Alanine aminotransferase increased"
+      },
+      {
+        "code" : "C143269",
+        "display" : "Alkaline phosphatase increased"
+      },
+      {
+        "code" : "C143301",
+        "display" : "Aspartate aminotransferase increased"
+      },
+      {
+        "code" : "C143324",
+        "display" : "Blood antidiuretic hormone abnormal"
+      },
+      {
+        "code" : "C143217",
+        "display" : "Blood bicarbonate decreased"
+      },
+      {
+        "code" : "C143325",
+        "display" : "Blood bilirubin increased"
+      },
+      {
+        "code" : "C143326",
+        "display" : "Blood corticotrophin decreased"
+      },
+      {
+        "code" : "C143327",
+        "display" : "Blood gonadotrophin abnormal"
+      },
+      {
+        "code" : "C143218",
+        "display" : "Blood lactate dehydrogenase increased"
+      },
+      {
+        "code" : "C143328",
+        "display" : "Blood prolactin abnormal"
+      },
+      {
+        "code" : "C143350",
+        "display" : "Carbon monoxide diffusing capacity decreased"
+      },
+      {
+        "code" : "C143353",
+        "display" : "Cardiac troponin I increased"
+      },
+      {
+        "code" : "C143354",
+        "display" : "Cardiac troponin T increased"
+      },
+      {
+        "code" : "C143357",
+        "display" : "CD4 lymphocytes decreased"
+      },
+      {
+        "code" : "C143368",
+        "display" : "Cholesterol high"
+      },
+      {
+        "code" : "C143389",
+        "display" : "CPK increased"
+      },
+      {
+        "code" : "C143391",
+        "display" : "Creatinine increased"
+      },
+      {
+        "code" : "C143436",
+        "display" : "Ejection fraction decreased"
+      },
+      {
+        "code" : "C143437",
+        "display" : "Electrocardiogram QT corrected interval prolonged"
+      },
+      {
+        "code" : "C143219",
+        "display" : "Electrocardiogram T wave abnormal"
+      },
+      {
+        "code" : "C143486",
+        "display" : "Fibrinogen decreased"
+      },
+      {
+        "code" : "C143494",
+        "display" : "Forced expiratory volume decreased"
+      },
+      {
+        "code" : "C143516",
+        "display" : "GGT increased"
+      },
+      {
+        "code" : "C143521",
+        "display" : "Growth hormone abnormal"
+      },
+      {
+        "code" : "C143526",
+        "display" : "Haptoglobin decreased"
+      },
+      {
+        "code" : "C143533",
+        "display" : "Hemoglobin increased"
+      },
+      {
+        "code" : "C143590",
+        "display" : "INR increased"
+      },
+      {
+        "code" : "C143615",
+        "display" : "Investigations - Other, specify"
+      },
+      {
+        "code" : "C143652",
+        "display" : "Lipase increased"
+      },
+      {
+        "code" : "C143662",
+        "display" : "Lymphocyte count decreased"
+      },
+      {
+        "code" : "C143663",
+        "display" : "Lymphocyte count increased"
+      },
+      {
+        "code" : "C143704",
+        "display" : "Neutrophil count decreased"
+      },
+      {
+        "code" : "C143731",
+        "display" : "Pancreatic enzymes decreased"
+      },
+      {
+        "code" : "C143764",
+        "display" : "Platelet count decreased"
+      },
+      {
+        "code" : "C143829",
+        "display" : "Serum amylase increased"
+      },
+      {
+        "code" : "C143220",
+        "display" : "Thyroid stimulating hormone increased"
+      },
+      {
+        "code" : "C143909",
+        "display" : "Urine output decreased"
+      },
+      {
+        "code" : "C143939",
+        "display" : "Vital capacity abnormal"
+      },
+      {
+        "code" : "C55338",
+        "display" : "Weight gain"
+      },
+      {
+        "code" : "C55339",
+        "display" : "Weight loss"
+      },
+      {
+        "code" : "C143948",
+        "display" : "White blood cell decreased"
+      },
+      {
+        "code" : "C143259",
+        "display" : "Acidosis"
+      },
+      {
+        "code" : "C143268",
+        "display" : "Alcohol intolerance"
+      },
+      {
+        "code" : "C143270",
+        "display" : "Alkalosis"
+      },
+      {
+        "code" : "C57118",
+        "display" : "Anorexia"
+      },
+      {
+        "code" : "C57787",
+        "display" : "Dehydration"
+      },
+      {
+        "code" : "C143519",
+        "display" : "Glucose intolerance"
+      },
+      {
+        "code" : "C143551",
+        "display" : "Hypercalcemia"
+      },
+      {
+        "code" : "C143552",
+        "display" : "Hyperglycemia"
+      },
+      {
+        "code" : "C143554",
+        "display" : "Hyperkalemia"
+      },
+      {
+        "code" : "C143221",
+        "display" : "Hyperlipidemia"
+      },
+      {
+        "code" : "C143555",
+        "display" : "Hypermagnesemia"
+      },
+      {
+        "code" : "C143556",
+        "display" : "Hypernatremia"
+      },
+      {
+        "code" : "C143222",
+        "display" : "Hyperphosphatemia"
+      },
+      {
+        "code" : "C143562",
+        "display" : "Hypertriglyceridemia"
+      },
+      {
+        "code" : "C143563",
+        "display" : "Hyperuricemia"
+      },
+      {
+        "code" : "C143564",
+        "display" : "Hypoalbuminemia"
+      },
+      {
+        "code" : "C143565",
+        "display" : "Hypocalcemia"
+      },
+      {
+        "code" : "C143567",
+        "display" : "Hypoglycemia"
+      },
+      {
+        "code" : "C143569",
+        "display" : "Hypokalemia"
+      },
+      {
+        "code" : "C143570",
+        "display" : "Hypomagnesemia"
+      },
+      {
+        "code" : "C143571",
+        "display" : "Hyponatremia"
+      },
+      {
+        "code" : "C143573",
+        "display" : "Hypophosphatemia"
+      },
+      {
+        "code" : "C55993",
+        "display" : "Iron overload"
+      },
+      {
+        "code" : "C143672",
+        "display" : "Metabolism and nutrition disorders - Other, specify"
+      },
+      {
+        "code" : "C55334",
+        "display" : "Obesity"
+      },
+      {
+        "code" : "C146688",
+        "display" : "Tumor lysis syndrome"
+      },
+      {
+        "code" : "C143256",
+        "display" : "Abdominal soft tissue necrosis"
+      },
+      {
+        "code" : "C143298",
+        "display" : "Arthralgia"
+      },
+      {
+        "code" : "C143299",
+        "display" : "Arthritis"
+      },
+      {
+        "code" : "C143311",
+        "display" : "Avascular necrosis"
+      },
+      {
+        "code" : "C146739",
+        "display" : "Back pain"
+      },
+      {
+        "code" : "C146741",
+        "display" : "Bone pain"
+      },
+      {
+        "code" : "C146744",
+        "display" : "Buttock pain"
+      },
+      {
+        "code" : "C143223",
+        "display" : "Chest wall necrosis"
+      },
+      {
+        "code" : "C146743",
+        "display" : "Chest wall pain"
+      },
+      {
+        "code" : "C146749",
+        "display" : "Exostosis"
+      },
+      {
+        "code" : "C143487",
+        "display" : "Fibrosis deep connective tissue"
+      },
+      {
+        "code" : "C143488",
+        "display" : "Flank pain"
+      },
+      {
+        "code" : "C143514",
+        "display" : "Generalized muscle weakness"
+      },
+      {
+        "code" : "C143522",
+        "display" : "Growth suppression"
+      },
+      {
+        "code" : "C58383",
+        "display" : "Head soft tissue necrosis"
+      },
+      {
+        "code" : "C146760",
+        "display" : "Joint effusion"
+      },
+      {
+        "code" : "C143627",
+        "display" : "Joint range of motion decreased cervical spine"
+      },
+      {
+        "code" : "C143628",
+        "display" : "Joint range of motion decreased lumbar spine"
+      },
+      {
+        "code" : "C143629",
+        "display" : "Joint range of motion decreased"
+      },
+      {
+        "code" : "C143633",
+        "display" : "Kyphosis"
+      },
+      {
+        "code" : "C143655",
+        "display" : "Lordosis"
+      },
+      {
+        "code" : "C143224",
+        "display" : "Muscle cramp"
+      },
+      {
+        "code" : "C143682",
+        "display" : "Muscle weakness lower limb"
+      },
+      {
+        "code" : "C143684",
+        "display" : "Muscle weakness trunk"
+      },
+      {
+        "code" : "C143685",
+        "display" : "Muscle weakness upper limb"
+      },
+      {
+        "code" : "C143686",
+        "display" : "Musculoskeletal and connective tissue disorder - Other, specify"
+      },
+      {
+        "code" : "C143687",
+        "display" : "Musculoskeletal deformity"
+      },
+      {
+        "code" : "C143688",
+        "display" : "Myalgia"
+      },
+      {
+        "code" : "C146787",
+        "display" : "Myositis"
+      },
+      {
+        "code" : "C146766",
+        "display" : "Neck pain"
+      },
+      {
+        "code" : "C58394",
+        "display" : "Neck soft tissue necrosis"
+      },
+      {
+        "code" : "C143717",
+        "display" : "Osteonecrosis of jaw"
+      },
+      {
+        "code" : "C143225",
+        "display" : "Osteonecrosis"
+      },
+      {
+        "code" : "C146767",
+        "display" : "Osteoporosis"
+      },
+      {
+        "code" : "C143723",
+        "display" : "Pain in extremity"
+      },
+      {
+        "code" : "C58399",
+        "display" : "Pelvic soft tissue necrosis"
+      },
+      {
+        "code" : "C143226",
+        "display" : "Rhabdomyolysis"
+      },
+      {
+        "code" : "C143227",
+        "display" : "Rotator cuff injury"
+      },
+      {
+        "code" : "C143824",
+        "display" : "Scoliosis"
+      },
+      {
+        "code" : "C143850",
+        "display" : "Soft tissue necrosis lower limb"
+      },
+      {
+        "code" : "C143851",
+        "display" : "Soft tissue necrosis upper limb"
+      },
+      {
+        "code" : "C143866",
+        "display" : "Superficial soft tissue fibrosis"
+      },
+      {
+        "code" : "C58404",
+        "display" : "Trismus"
+      },
+      {
+        "code" : "C143894",
+        "display" : "Unequal limb length"
+      },
+      {
+        "code" : "C143646",
+        "display" : "Leukemia secondary to oncology chemotherapy"
+      },
+      {
+        "code" : "C143690",
+        "display" : "Myelodysplastic syndrome"
+      },
+      {
+        "code" : "C143701",
+        "display" : "Neoplasms benign, malignant and unspecified (incl cysts and polyps) - Other, specify"
+      },
+      {
+        "code" : "C143228",
+        "display" : "Skin papilloma"
+      },
+      {
+        "code" : "C143887",
+        "display" : "Treatment related secondary malignancy"
+      },
+      {
+        "code" : "C143229",
+        "display" : "Tumor hemorrhage"
+      },
+      {
+        "code" : "C146782",
+        "display" : "Tumor pain"
+      },
+      {
+        "code" : "C143257",
+        "display" : "Abducens nerve disorder"
+      },
+      {
+        "code" : "C143258",
+        "display" : "Accessory nerve disorder"
+      },
+      {
+        "code" : "C143260",
+        "display" : "Acoustic nerve disorder NOS"
+      },
+      {
+        "code" : "C143266",
+        "display" : "Akathisia"
+      },
+      {
+        "code" : "C143274",
+        "display" : "Amnesia"
+      },
+      {
+        "code" : "C143230",
+        "display" : "Anosmia"
+      },
+      {
+        "code" : "C143291",
+        "display" : "Aphonia"
+      },
+      {
+        "code" : "C143295",
+        "display" : "Arachnoiditis"
+      },
+      {
+        "code" : "C146737",
+        "display" : "Ataxia"
+      },
+      {
+        "code" : "C146754",
+        "display" : "Brachial plexopathy"
+      },
+      {
+        "code" : "C143360",
+        "display" : "Central nervous system necrosis"
+      },
+      {
+        "code" : "C143361",
+        "display" : "Cerebrospinal fluid leakage"
+      },
+      {
+        "code" : "C146746",
+        "display" : "Cognitive disturbance"
+      },
+      {
+        "code" : "C143379",
+        "display" : "Concentration impairment"
+      },
+      {
+        "code" : "C143403",
+        "display" : "Depressed level of consciousness"
+      },
+      {
+        "code" : "C146747",
+        "display" : "Dizziness"
+      },
+      {
+        "code" : "C143420",
+        "display" : "Dysarthria"
+      },
+      {
+        "code" : "C143421",
+        "display" : "Dysesthesia"
+      },
+      {
+        "code" : "C143422",
+        "display" : "Dysgeusia"
+      },
+      {
+        "code" : "C143427",
+        "display" : "Dysphasia"
+      },
+      {
+        "code" : "C143431",
+        "display" : "Edema cerebral"
+      },
+      {
+        "code" : "C146699",
+        "display" : "Encephalopathy"
+      },
+      {
+        "code" : "C143467",
+        "display" : "Extrapyramidal disorder"
+      },
+      {
+        "code" : "C143472",
+        "display" : "Facial muscle weakness"
+      },
+      {
+        "code" : "C143473",
+        "display" : "Facial nerve disorder"
+      },
+      {
+        "code" : "C143518",
+        "display" : "Glossopharyngeal nerve disorder"
+      },
+      {
+        "code" : "C143231",
+        "display" : "Guillain-Barre syndrome"
+      },
+      {
+        "code" : "C143527",
+        "display" : "Headache"
+      },
+      {
+        "code" : "C55401",
+        "display" : "Hydrocephalus"
+      },
+      {
+        "code" : "C143558",
+        "display" : "Hypersomnia"
+      },
+      {
+        "code" : "C143566",
+        "display" : "Hypoglossal nerve disorder"
+      },
+      {
+        "code" : "C143596",
+        "display" : "Intracranial hemorrhage"
+      },
+      {
+        "code" : "C143619",
+        "display" : "Ischemia cerebrovascular"
+      },
+      {
+        "code" : "C143645",
+        "display" : "Lethargy"
+      },
+      {
+        "code" : "C143648",
+        "display" : "Leukoencephalopathy"
+      },
+      {
+        "code" : "C146763",
+        "display" : "Memory impairment"
+      },
+      {
+        "code" : "C143669",
+        "display" : "Meningismus"
+      },
+      {
+        "code" : "C143677",
+        "display" : "Movements involuntary"
+      },
+      {
+        "code" : "C143681",
+        "display" : "Muscle weakness left-sided"
+      },
+      {
+        "code" : "C143683",
+        "display" : "Muscle weakness right-sided"
+      },
+      {
+        "code" : "C143232",
+        "display" : "Myasthenia gravis"
+      },
+      {
+        "code" : "C143702",
+        "display" : "Nervous system disorders - Other, specify"
+      },
+      {
+        "code" : "C143703",
+        "display" : "Neuralgia"
+      },
+      {
+        "code" : "C146775",
+        "display" : "Nystagmus"
+      },
+      {
+        "code" : "C143711",
+        "display" : "Oculomotor nerve disorder"
+      },
+      {
+        "code" : "C143712",
+        "display" : "Olfactory nerve disorder"
+      },
+      {
+        "code" : "C143736",
+        "display" : "Paresthesia"
+      },
+      {
+        "code" : "C143750",
+        "display" : "Peripheral motor neuropathy"
+      },
+      {
+        "code" : "C143752",
+        "display" : "Peripheral sensory neuropathy"
+      },
+      {
+        "code" : "C146682",
+        "display" : "Phantom pain"
+      },
+      {
+        "code" : "C143778",
+        "display" : "Presyncope"
+      },
+      {
+        "code" : "C143795",
+        "display" : "Pyramidal tract syndrome"
+      },
+      {
+        "code" : "C143797",
+        "display" : "Radiculitis"
+      },
+      {
+        "code" : "C143804",
+        "display" : "Recurrent laryngeal nerve palsy"
+      },
+      {
+        "code" : "C143818",
+        "display" : "Reversible posterior leukoencephalopathy syndrome"
+      },
+      {
+        "code" : "C146700",
+        "display" : "Seizure"
+      },
+      {
+        "code" : "C143852",
+        "display" : "Somnolence"
+      },
+      {
+        "code" : "C143854",
+        "display" : "Spasticity"
+      },
+      {
+        "code" : "C143233",
+        "display" : "Spinal cord compression"
+      },
+      {
+        "code" : "C143862",
+        "display" : "Stroke"
+      },
+      {
+        "code" : "C146750",
+        "display" : "Syncope"
+      },
+      {
+        "code" : "C143234",
+        "display" : "Tendon reflex decreased"
+      },
+      {
+        "code" : "C143886",
+        "display" : "Transient ischemic attacks"
+      },
+      {
+        "code" : "C146780",
+        "display" : "Tremor"
+      },
+      {
+        "code" : "C143890",
+        "display" : "Trigeminal nerve disorder"
+      },
+      {
+        "code" : "C143235",
+        "display" : "Trochlear nerve disorder"
+      },
+      {
+        "code" : "C143927",
+        "display" : "Vagus nerve disorder"
+      },
+      {
+        "code" : "C143932",
+        "display" : "Vasovagal reaction"
+      },
+      {
+        "code" : "C143484",
+        "display" : "Fetal growth retardation"
+      },
+      {
+        "code" : "C143236",
+        "display" : "Pregnancy loss"
+      },
+      {
+        "code" : "C143775",
+        "display" : "Pregnancy, puerperium and perinatal conditions - Other, specify"
+      },
+      {
+        "code" : "C143776",
+        "display" : "Premature delivery"
+      },
+      {
+        "code" : "C146777",
+        "display" : "Agitation"
+      },
+      {
+        "code" : "C143287",
+        "display" : "Anorgasmia"
+      },
+      {
+        "code" : "C146778",
+        "display" : "Anxiety"
+      },
+      {
+        "code" : "C146785",
+        "display" : "Confusion"
+      },
+      {
+        "code" : "C143398",
+        "display" : "Delayed orgasm"
+      },
+      {
+        "code" : "C143400",
+        "display" : "Delirium"
+      },
+      {
+        "code" : "C143401",
+        "display" : "Delusions"
+      },
+      {
+        "code" : "C55447",
+        "display" : "Depression"
+      },
+      {
+        "code" : "C146748",
+        "display" : "Euphoria"
+      },
+      {
+        "code" : "C143525",
+        "display" : "Hallucinations"
+      },
+      {
+        "code" : "C146771",
+        "display" : "Insomnia"
+      },
+      {
+        "code" : "C143618",
+        "display" : "Irritability"
+      },
+      {
+        "code" : "C143649",
+        "display" : "Libido decreased"
+      },
+      {
+        "code" : "C143650",
+        "display" : "Libido increased"
+      },
+      {
+        "code" : "C143666",
+        "display" : "Mania"
+      },
+      {
+        "code" : "C143754",
+        "display" : "Personality change"
+      },
+      {
+        "code" : "C143787",
+        "display" : "Psychiatric disorders - Other, specify"
+      },
+      {
+        "code" : "C143788",
+        "display" : "Psychosis"
+      },
+      {
+        "code" : "C143811",
+        "display" : "Restlessness"
+      },
+      {
+        "code" : "C143864",
+        "display" : "Suicidal ideation"
+      },
+      {
+        "code" : "C143865",
+        "display" : "Suicide attempt"
+      },
+      {
+        "code" : "C143262",
+        "display" : "Acute kidney injury"
+      },
+      {
+        "code" : "C146707",
+        "display" : "Bladder perforation"
+      },
+      {
+        "code" : "C146698",
+        "display" : "Bladder spasm"
+      },
+      {
+        "code" : "C143369",
+        "display" : "Chronic kidney disease"
+      },
+      {
+        "code" : "C143393",
+        "display" : "Cystitis noninfective"
+      },
+      {
+        "code" : "C143237",
+        "display" : "Dysuria"
+      },
+      {
+        "code" : "C143238",
+        "display" : "Glucosuria"
+      },
+      {
+        "code" : "C143532",
+        "display" : "Hematuria"
+      },
+      {
+        "code" : "C146768",
+        "display" : "Hemoglobinuria"
+      },
+      {
+        "code" : "C56544",
+        "display" : "Renal hemorrhage"
+      },
+      {
+        "code" : "C143239",
+        "display" : "Nephrotic syndrome"
+      },
+      {
+        "code" : "C146758",
+        "display" : "Proteinuria"
+      },
+      {
+        "code" : "C143805",
+        "display" : "Renal and urinary disorders - Other, specify"
+      },
+      {
+        "code" : "C143806",
+        "display" : "Renal calculi"
+      },
+      {
+        "code" : "C143807",
+        "display" : "Renal colic"
+      },
+      {
+        "code" : "C143900",
+        "display" : "Urinary fistula"
+      },
+      {
+        "code" : "C143901",
+        "display" : "Urinary frequency"
+      },
+      {
+        "code" : "C146786",
+        "display" : "Urinary incontinence"
+      },
+      {
+        "code" : "C57097",
+        "display" : "Urinary retention"
+      },
+      {
+        "code" : "C143905",
+        "display" : "Urinary tract obstruction"
+      },
+      {
+        "code" : "C143906",
+        "display" : "Urinary tract pain"
+      },
+      {
+        "code" : "C143907",
+        "display" : "Urinary urgency"
+      },
+      {
+        "code" : "C143908",
+        "display" : "Urine discoloration"
+      },
+      {
+        "code" : "C143240",
+        "display" : "Amenorrhea"
+      },
+      {
+        "code" : "C143312",
+        "display" : "Azoospermia"
+      },
+      {
+        "code" : "C143335",
+        "display" : "Breast atrophy"
+      },
+      {
+        "code" : "C146742",
+        "display" : "Breast pain"
+      },
+      {
+        "code" : "C143423",
+        "display" : "Dysmenorrhea"
+      },
+      {
+        "code" : "C143424",
+        "display" : "Dyspareunia"
+      },
+      {
+        "code" : "C143435",
+        "display" : "Ejaculation disorder"
+      },
+      {
+        "code" : "C55615",
+        "display" : "Erectile dysfunction"
+      },
+      {
+        "code" : "C146752",
+        "display" : "Fallopian tube obstruction"
+      },
+      {
+        "code" : "C143483",
+        "display" : "Feminization acquired"
+      },
+      {
+        "code" : "C143515",
+        "display" : "Genital edema"
+      },
+      {
+        "code" : "C146685",
+        "display" : "Gynecomastia"
+      },
+      {
+        "code" : "C143531",
+        "display" : "Hematosalpinx"
+      },
+      {
+        "code" : "C143617",
+        "display" : "Irregular menstruation"
+      },
+      {
+        "code" : "C143634",
+        "display" : "Lactation disorder"
+      },
+      {
+        "code" : "C143671",
+        "display" : "Menorrhagia"
+      },
+      {
+        "code" : "C143706",
+        "display" : "Nipple deformity"
+      },
+      {
+        "code" : "C143713",
+        "display" : "Oligospermia"
+      },
+      {
+        "code" : "C143722",
+        "display" : "Ovarian rupture"
+      },
+      {
+        "code" : "C56553",
+        "display" : "Ovarian hemorrhage"
+      },
+      {
+        "code" : "C146769",
+        "display" : "Ovulation pain"
+      },
+      {
+        "code" : "C143739",
+        "display" : "Pelvic floor muscle weakness"
+      },
+      {
+        "code" : "C146679",
+        "display" : "Pelvic pain"
+      },
+      {
+        "code" : "C146680",
+        "display" : "Penile pain"
+      },
+      {
+        "code" : "C146681",
+        "display" : "Perineal pain"
+      },
+      {
+        "code" : "C143777",
+        "display" : "Premature menopause"
+      },
+      {
+        "code" : "C56552",
+        "display" : "Prostatic hemorrhage"
+      },
+      {
+        "code" : "C143784",
+        "display" : "Prostatic obstruction"
+      },
+      {
+        "code" : "C146664",
+        "display" : "Prostatic pain"
+      },
+      {
+        "code" : "C143808",
+        "display" : "Reproductive system and breast disorders - Other, specify"
+      },
+      {
+        "code" : "C146665",
+        "display" : "Scrotal pain"
+      },
+      {
+        "code" : "C56563",
+        "display" : "Spermatic cord hemorrhage"
+      },
+      {
+        "code" : "C146757",
+        "display" : "Spermatic cord obstruction"
+      },
+      {
+        "code" : "C56566",
+        "display" : "Testicular hemorrhage"
+      },
+      {
+        "code" : "C143872",
+        "display" : "Testicular disorder"
+      },
+      {
+        "code" : "C146666",
+        "display" : "Testicular pain"
+      },
+      {
+        "code" : "C143916",
+        "display" : "Uterine fistula"
+      },
+      {
+        "code" : "C143918",
+        "display" : "Uterine obstruction"
+      },
+      {
+        "code" : "C146683",
+        "display" : "Uterine pain"
+      },
+      {
+        "code" : "C56572",
+        "display" : "Uterine hemorrhage"
+      },
+      {
+        "code" : "C57104",
+        "display" : "Vaginal fistula"
+      },
+      {
+        "code" : "C56573",
+        "display" : "Vaginal hemorrhage"
+      },
+      {
+        "code" : "C143922",
+        "display" : "Vaginal discharge"
+      },
+      {
+        "code" : "C146687",
+        "display" : "Vaginal dryness"
+      },
+      {
+        "code" : "C143925",
+        "display" : "Vaginal inflammation"
+      },
+      {
+        "code" : "C146696",
+        "display" : "Vaginal obstruction"
+      },
+      {
+        "code" : "C146684",
+        "display" : "Vaginal pain"
+      },
+      {
+        "code" : "C146697",
+        "display" : "Vaginal perforation"
+      },
+      {
+        "code" : "C143926",
+        "display" : "Vaginal stricture"
+      },
+      {
+        "code" : "C58020",
+        "display" : "Adult respiratory distress syndrome"
+      },
+      {
+        "code" : "C143272",
+        "display" : "Allergic rhinitis"
+      },
+      {
+        "code" : "C55340",
+        "display" : "Apnea"
+      },
+      {
+        "code" : "C28245",
+        "display" : "Aspiration"
+      },
+      {
+        "code" : "C58022",
+        "display" : "Atelectasis"
+      },
+      {
+        "code" : "C143338",
+        "display" : "Bronchial fistula"
+      },
+      {
+        "code" : "C143340",
+        "display" : "Bronchial obstruction"
+      },
+      {
+        "code" : "C143341",
+        "display" : "Bronchial stricture"
+      },
+      {
+        "code" : "C143342",
+        "display" : "Bronchopleural fistula"
+      },
+      {
+        "code" : "C143343",
+        "display" : "Bronchopulmonary hemorrhage"
+      },
+      {
+        "code" : "C143344",
+        "display" : "Bronchospasm"
+      },
+      {
+        "code" : "C58027",
+        "display" : "Chylothorax"
+      },
+      {
+        "code" : "C58028",
+        "display" : "Cough"
+      },
+      {
+        "code" : "C58185",
+        "display" : "Dyspnea"
+      },
+      {
+        "code" : "C143447",
+        "display" : "Epistaxis"
+      },
+      {
+        "code" : "C143545",
+        "display" : "Hiccups"
+      },
+      {
+        "code" : "C143548",
+        "display" : "Hoarseness"
+      },
+      {
+        "code" : "C58188",
+        "display" : "Hypoxia"
+      },
+      {
+        "code" : "C143636",
+        "display" : "Laryngeal edema"
+      },
+      {
+        "code" : "C143637",
+        "display" : "Laryngeal inflammation"
+      },
+      {
+        "code" : "C143638",
+        "display" : "Laryngeal mucositis"
+      },
+      {
+        "code" : "C143639",
+        "display" : "Laryngeal obstruction"
+      },
+      {
+        "code" : "C143640",
+        "display" : "Laryngeal stenosis"
+      },
+      {
+        "code" : "C143642",
+        "display" : "Laryngopharyngeal dysesthesia"
+      },
+      {
+        "code" : "C143643",
+        "display" : "Laryngospasm"
+      },
+      {
+        "code" : "C58190",
+        "display" : "Laryngeal fistula"
+      },
+      {
+        "code" : "C56545",
+        "display" : "Laryngeal hemorrhage"
+      },
+      {
+        "code" : "C56549",
+        "display" : "Mediastinal hemorrhage"
+      },
+      {
+        "code" : "C143698",
+        "display" : "Nasal congestion"
+      },
+      {
+        "code" : "C143241",
+        "display" : "Oropharyngeal pain"
+      },
+      {
+        "code" : "C143756",
+        "display" : "Pharyngeal mucositis"
+      },
+      {
+        "code" : "C143757",
+        "display" : "Pharyngeal stenosis"
+      },
+      {
+        "code" : "C143759",
+        "display" : "Pharyngolaryngeal pain"
+      },
+      {
+        "code" : "C57851",
+        "display" : "Pharyngeal fistula"
+      },
+      {
+        "code" : "C56557",
+        "display" : "Pharyngeal hemorrhage"
+      },
+      {
+        "code" : "C57855",
+        "display" : "Pharyngeal necrosis"
+      },
+      {
+        "code" : "C56558",
+        "display" : "Pleural hemorrhage"
+      },
+      {
+        "code" : "C143765",
+        "display" : "Pleural effusion"
+      },
+      {
+        "code" : "C146663",
+        "display" : "Pleuritic pain"
+      },
+      {
+        "code" : "C143767",
+        "display" : "Pneumonitis"
+      },
+      {
+        "code" : "C58201",
+        "display" : "Pneumothorax"
+      },
+      {
+        "code" : "C143771",
+        "display" : "Postnasal drip"
+      },
+      {
+        "code" : "C143780",
+        "display" : "Productive cough"
+      },
+      {
+        "code" : "C143789",
+        "display" : "Pulmonary edema"
+      },
+      {
+        "code" : "C143790",
+        "display" : "Pulmonary fibrosis"
+      },
+      {
+        "code" : "C143791",
+        "display" : "Pulmonary fistula"
+      },
+      {
+        "code" : "C55068",
+        "display" : "Pulmonary hypertension"
+      },
+      {
+        "code" : "C143809",
+        "display" : "Respiratory failure"
+      },
+      {
+        "code" : "C143810",
+        "display" : "Respiratory, thoracic and mediastinal disorders - Other, specify"
+      },
+      {
+        "code" : "C56635",
+        "display" : "Retinoic acid syndrome"
+      },
+      {
+        "code" : "C143242",
+        "display" : "Rhinorrhea"
+      },
+      {
+        "code" : "C143831",
+        "display" : "Sinus disorder"
+      },
+      {
+        "code" : "C146783",
+        "display" : "Sinus pain"
+      },
+      {
+        "code" : "C143840",
+        "display" : "Sleep apnea"
+      },
+      {
+        "code" : "C143847",
+        "display" : "Sneezing"
+      },
+      {
+        "code" : "C143853",
+        "display" : "Sore throat"
+      },
+      {
+        "code" : "C143861",
+        "display" : "Stridor"
+      },
+      {
+        "code" : "C58205",
+        "display" : "Tracheal fistula"
+      },
+      {
+        "code" : "C143881",
+        "display" : "Tracheal mucositis"
+      },
+      {
+        "code" : "C143883",
+        "display" : "Tracheal stenosis"
+      },
+      {
+        "code" : "C143941",
+        "display" : "Voice alteration"
+      },
+      {
+        "code" : "C143947",
+        "display" : "Wheezing"
+      },
+      {
+        "code" : "C57898",
+        "display" : "Alopecia"
+      },
+      {
+        "code" : "C143330",
+        "display" : "Body odor"
+      },
+      {
+        "code" : "C143346",
+        "display" : "Bullous dermatitis"
+      },
+      {
+        "code" : "C57996",
+        "display" : "Dry skin"
+      },
+      {
+        "code" : "C143243",
+        "display" : "Eczema"
+      },
+      {
+        "code" : "C143449",
+        "display" : "Erythema multiforme"
+      },
+      {
+        "code" : "C143450",
+        "display" : "Erythroderma"
+      },
+      {
+        "code" : "C143479",
+        "display" : "Fat atrophy"
+      },
+      {
+        "code" : "C143244",
+        "display" : "Hair color changes"
+      },
+      {
+        "code" : "C143245",
+        "display" : "Hair texture abnormal"
+      },
+      {
+        "code" : "C143547",
+        "display" : "Hirsutism"
+      },
+      {
+        "code" : "C143553",
+        "display" : "Hyperhidrosis"
+      },
+      {
+        "code" : "C143246",
+        "display" : "Hyperkeratosis"
+      },
+      {
+        "code" : "C143561",
+        "display" : "Hypertrichosis"
+      },
+      {
+        "code" : "C143568",
+        "display" : "Hypohidrosis"
+      },
+      {
+        "code" : "C143653",
+        "display" : "Lipohypertrophy"
+      },
+      {
+        "code" : "C143247",
+        "display" : "Nail changes"
+      },
+      {
+        "code" : "C143694",
+        "display" : "Nail discoloration"
+      },
+      {
+        "code" : "C143696",
+        "display" : "Nail loss"
+      },
+      {
+        "code" : "C143697",
+        "display" : "Nail ridging"
+      },
+      {
+        "code" : "C143724",
+        "display" : "Pain of skin"
+      },
+      {
+        "code" : "C143726",
+        "display" : "Palmar-plantar erythrodysesthesia syndrome"
+      },
+      {
+        "code" : "C58005",
+        "display" : "Photosensitivity"
+      },
+      {
+        "code" : "C58006",
+        "display" : "Pruritus"
+      },
+      {
+        "code" : "C143794",
+        "display" : "Purpura"
+      },
+      {
+        "code" : "C143798",
+        "display" : "Rash acneiform"
+      },
+      {
+        "code" : "C143799",
+        "display" : "Rash maculo-papular"
+      },
+      {
+        "code" : "C146772",
+        "display" : "Scalp pain"
+      },
+      {
+        "code" : "C143833",
+        "display" : "Skin and subcutaneous tissue disorders - Other, specify"
+      },
+      {
+        "code" : "C146644",
+        "display" : "Skin atrophy"
+      },
+      {
+        "code" : "C143835",
+        "display" : "Skin hyperpigmentation"
+      },
+      {
+        "code" : "C143836",
+        "display" : "Skin hypopigmentation"
+      },
+      {
+        "code" : "C143837",
+        "display" : "Skin induration"
+      },
+      {
+        "code" : "C143839",
+        "display" : "Skin ulceration"
+      },
+      {
+        "code" : "C143859",
+        "display" : "Stevens-Johnson syndrome"
+      },
+      {
+        "code" : "C143248",
+        "display" : "Subcutaneous emphysema"
+      },
+      {
+        "code" : "C146740",
+        "display" : "Telangiectasia"
+      },
+      {
+        "code" : "C143880",
+        "display" : "Toxic epidermal necrolysis"
+      },
+      {
+        "code" : "C58019",
+        "display" : "Urticaria"
+      },
+      {
+        "code" : "C143848",
+        "display" : "Social circumstances - Other, specify"
+      },
+      {
+        "code" : "C143869",
+        "display" : "Surgical and medical procedures - Other, specify"
+      },
+      {
+        "code" : "C143249",
+        "display" : "Arterial thromboembolism"
+      },
+      {
+        "code" : "C143349",
+        "display" : "Capillary leak syndrome"
+      },
+      {
+        "code" : "C146643",
+        "display" : "Flushing"
+      },
+      {
+        "code" : "C56539",
+        "display" : "Hematoma"
+      },
+      {
+        "code" : "C143549",
+        "display" : "Hot flashes"
+      },
+      {
+        "code" : "C55060",
+        "display" : "Hypertension"
+      },
+      {
+        "code" : "C55061",
+        "display" : "Hypotension"
+      },
+      {
+        "code" : "C143659",
+        "display" : "Lymph leakage"
+      },
+      {
+        "code" : "C143660",
+        "display" : "Lymphedema"
+      },
+      {
+        "code" : "C55705",
+        "display" : "Lymphocele"
+      },
+      {
+        "code" : "C143749",
+        "display" : "Peripheral ischemia"
+      },
+      {
+        "code" : "C143761",
+        "display" : "Phlebitis"
+      },
+      {
+        "code" : "C143867",
+        "display" : "Superficial thrombophlebitis"
+      },
+      {
+        "code" : "C143868",
+        "display" : "Superior vena cava syndrome"
+      },
+      {
+        "code" : "C143873",
+        "display" : "Thromboembolic event"
+      },
+      {
+        "code" : "C143930",
+        "display" : "Vascular disorders - Other, specify"
+      },
+      {
+        "code" : "C54741",
+        "display" : "Vasculitis"
+      }]
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code \"C57787\" is not valid in the system http://ncithesaurus-stage.nci.nih.gov; The code provided (http://ncithesaurus-stage.nci.nih.gov#C57787) is not valid (from http://tx.fhir.org/r4)"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://ncithesaurus-stage.nci.nih.gov",
+  "code" : "C41336"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://ncithesaurus-stage.nci.nih.gov",
+      "concept" : [{
+        "code" : "C41335",
+        "display" : "Serious Adverse Event"
+      },
+      {
+        "code" : "C41336",
+        "display" : "Non-serious Adverse Event"
+      }]
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code \"C41336\" is not valid in the system http://ncithesaurus-stage.nci.nih.gov; The code provided (http://ncithesaurus-stage.nci.nih.gov#C41336) is not valid (from http://tx.fhir.org/r4)"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://ncithesaurus-stage.nci.nih.gov",
+  "code" : "C41339"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://ncithesaurus-stage.nci.nih.gov",
+      "concept" : [{
+        "code" : "C75533",
+        "display" : "Absent Adverse Event"
+      },
+      {
+        "code" : "C41338",
+        "display" : "Mild Adverse Event"
+      },
+      {
+        "code" : "C41339",
+        "display" : "Moderate Adverse Event"
+      },
+      {
+        "code" : "C41340",
+        "display" : "Severe Adverse Event"
+      },
+      {
+        "code" : "C41337",
+        "display" : "Life Threatening or Disabling Adverse Event"
+      },
+      {
+        "code" : "C48275",
+        "display" : "Death Related to Adverse Event"
+      }]
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code \"C41339\" is not valid in the system http://ncithesaurus-stage.nci.nih.gov; The code provided (http://ncithesaurus-stage.nci.nih.gov#C41339) is not valid (from http://tx.fhir.org/r4)"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://ncithesaurus-stage.nci.nih.gov",
+  "code" : "C143283"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://ncithesaurus-stage.nci.nih.gov",
+      "concept" : [{
+        "code" : "C143283",
+        "display" : "Anemia"
+      },
+      {
+        "code" : "C143323",
+        "display" : "Blood and lymphatic system disorders - Other, specify"
+      },
+      {
+        "code" : "C143332",
+        "display" : "Bone marrow hypocellular"
+      },
+      {
+        "code" : "C55273",
+        "display" : "Disseminated intravascular coagulation"
+      },
+      {
+        "code" : "C143190",
+        "display" : "Eosinophilia"
+      },
+      {
+        "code" : "C143481",
+        "display" : "Febrile neutropenia"
+      },
+      {
+        "code" : "C55992",
+        "display" : "Hemolysis"
+      },
+      {
+        "code" : "C143536",
+        "display" : "Hemolytic uremic syndrome"
+      },
+      {
+        "code" : "C143647",
+        "display" : "Leukocytosis"
+      },
+      {
+        "code" : "C146773",
+        "display" : "Lymph node pain"
+      },
+      {
+        "code" : "C143191",
+        "display" : "Methemoglobinemia"
+      },
+      {
+        "code" : "C143874",
+        "display" : "Thrombotic thrombocytopenic purpura"
+      },
+      {
+        "code" : "C143290",
+        "display" : "Aortic valve disease"
+      },
+      {
+        "code" : "C146731",
+        "display" : "Asystole"
+      },
+      {
+        "code" : "C54767",
+        "display" : "Atrial fibrillation"
+      },
+      {
+        "code" : "C54768",
+        "display" : "Atrial flutter"
+      },
+      {
+        "code" : "C143308",
+        "display" : "Atrioventricular block complete"
+      },
+      {
+        "code" : "C143309",
+        "display" : "Atrioventricular block first degree"
+      },
+      {
+        "code" : "C54771",
+        "display" : "Mobitz type I"
+      },
+      {
+        "code" : "C54772",
+        "display" : "Mobitz (type) II atrioventricular block"
+      },
+      {
+        "code" : "C143351",
+        "display" : "Cardiac arrest"
+      },
+      {
+        "code" : "C143352",
+        "display" : "Cardiac disorders - Other, specify"
+      },
+      {
+        "code" : "C143364",
+        "display" : "Chest pain - cardiac"
+      },
+      {
+        "code" : "C143380",
+        "display" : "Conduction disorder"
+      },
+      {
+        "code" : "C143192",
+        "display" : "Cyanosis"
+      },
+      {
+        "code" : "C143529",
+        "display" : "Heart failure"
+      },
+      {
+        "code" : "C146719",
+        "display" : "Left ventricular systolic dysfunction"
+      },
+      {
+        "code" : "C143674",
+        "display" : "Mitral valve disease"
+      },
+      {
+        "code" : "C143691",
+        "display" : "Myocardial infarction"
+      },
+      {
+        "code" : "C146695",
+        "display" : "Myocarditis"
+      },
+      {
+        "code" : "C54935",
+        "display" : "Palpitations"
+      },
+      {
+        "code" : "C143738",
+        "display" : "Paroxysmal atrial tachycardia"
+      },
+      {
+        "code" : "C143743",
+        "display" : "Pericardial effusion"
+      },
+      {
+        "code" : "C143744",
+        "display" : "Pericardial tamponade"
+      },
+      {
+        "code" : "C55067",
+        "display" : "Pericarditis"
+      },
+      {
+        "code" : "C143793",
+        "display" : "Pulmonary valve disease"
+      },
+      {
+        "code" : "C55069",
+        "display" : "Restrictive cardiomyopathy"
+      },
+      {
+        "code" : "C55070",
+        "display" : "Right ventricular dysfunction"
+      },
+      {
+        "code" : "C54938",
+        "display" : "Sick sinus syndrome"
+      },
+      {
+        "code" : "C54940",
+        "display" : "Sinus bradycardia"
+      },
+      {
+        "code" : "C146759",
+        "display" : "Sinus tachycardia"
+      },
+      {
+        "code" : "C54945",
+        "display" : "Supraventricular tachycardia"
+      },
+      {
+        "code" : "C143889",
+        "display" : "Tricuspid valve disease"
+      },
+      {
+        "code" : "C146629",
+        "display" : "Ventricular arrhythmia"
+      },
+      {
+        "code" : "C146732",
+        "display" : "Ventricular fibrillation"
+      },
+      {
+        "code" : "C146733",
+        "display" : "Ventricular tachycardia"
+      },
+      {
+        "code" : "C143382",
+        "display" : "Congenital, familial and genetic disorders - Other, specify"
+      },
+      {
+        "code" : "C143429",
+        "display" : "Ear and labyrinth disorders - Other, specify"
+      },
+      {
+        "code" : "C143430",
+        "display" : "Ear pain"
+      },
+      {
+        "code" : "C146745",
+        "display" : "External ear pain"
+      },
+      {
+        "code" : "C143528",
+        "display" : "Hearing impaired"
+      },
+      {
+        "code" : "C143673",
+        "display" : "Middle ear inflammation"
+      },
+      {
+        "code" : "C146690",
+        "display" : "Tinnitus"
+      },
+      {
+        "code" : "C143935",
+        "display" : "Vertigo"
+      },
+      {
+        "code" : "C143936",
+        "display" : "Vestibular disorder"
+      },
+      {
+        "code" : "C55748",
+        "display" : "Adrenal insufficiency"
+      },
+      {
+        "code" : "C143392",
+        "display" : "Cushingoid"
+      },
+      {
+        "code" : "C55742",
+        "display" : "Delayed puberty"
+      },
+      {
+        "code" : "C143442",
+        "display" : "Endocrine disorders - Other, specify"
+      },
+      {
+        "code" : "C143520",
+        "display" : "Growth accelerated"
+      },
+      {
+        "code" : "C143557",
+        "display" : "Hyperparathyroidism"
+      },
+      {
+        "code" : "C143560",
+        "display" : "Hyperthyroidism"
+      },
+      {
+        "code" : "C143572",
+        "display" : "Hypoparathyroidism"
+      },
+      {
+        "code" : "C143193",
+        "display" : "Hypophysitis"
+      },
+      {
+        "code" : "C143194",
+        "display" : "Hypopituitarism"
+      },
+      {
+        "code" : "C143576",
+        "display" : "Hypothyroidism"
+      },
+      {
+        "code" : "C146645",
+        "display" : "Precocious puberty"
+      },
+      {
+        "code" : "C143195",
+        "display" : "Testosterone deficiency"
+      },
+      {
+        "code" : "C143937",
+        "display" : "Virilization"
+      },
+      {
+        "code" : "C55906",
+        "display" : "Blurred vision"
+      },
+      {
+        "code" : "C146674",
+        "display" : "Cataract"
+      },
+      {
+        "code" : "C143387",
+        "display" : "Corneal ulcer"
+      },
+      {
+        "code" : "C143410",
+        "display" : "Dry eye"
+      },
+      {
+        "code" : "C143466",
+        "display" : "Extraocular muscle paresis"
+      },
+      {
+        "code" : "C143468",
+        "display" : "Eye disorders - Other, specify"
+      },
+      {
+        "code" : "C146751",
+        "display" : "Eye pain"
+      },
+      {
+        "code" : "C143471",
+        "display" : "Eyelid function disorder"
+      },
+      {
+        "code" : "C143489",
+        "display" : "Flashing lights"
+      },
+      {
+        "code" : "C143491",
+        "display" : "Floaters"
+      },
+      {
+        "code" : "C55842",
+        "display" : "Glaucoma"
+      },
+      {
+        "code" : "C55847",
+        "display" : "Keratitis"
+      },
+      {
+        "code" : "C143705",
+        "display" : "Night blindness"
+      },
+      {
+        "code" : "C143714",
+        "display" : "Optic nerve disorder"
+      },
+      {
+        "code" : "C143734",
+        "display" : "Papilledema"
+      },
+      {
+        "code" : "C143747",
+        "display" : "Periorbital edema"
+      },
+      {
+        "code" : "C146770",
+        "display" : "Photophobia"
+      },
+      {
+        "code" : "C146729",
+        "display" : "Retinal detachment"
+      },
+      {
+        "code" : "C143814",
+        "display" : "Retinal tear"
+      },
+      {
+        "code" : "C143815",
+        "display" : "Retinal vascular disorder"
+      },
+      {
+        "code" : "C55891",
+        "display" : "Retinopathy"
+      },
+      {
+        "code" : "C143823",
+        "display" : "Scleral disorder"
+      },
+      {
+        "code" : "C55901",
+        "display" : "Uveitis"
+      },
+      {
+        "code" : "C143196",
+        "display" : "Vision decreased"
+      },
+      {
+        "code" : "C146677",
+        "display" : "Vitreous hemorrhage"
+      },
+      {
+        "code" : "C143944",
+        "display" : "Watering eyes"
+      },
+      {
+        "code" : "C143253",
+        "display" : "Abdominal distension"
+      },
+      {
+        "code" : "C143255",
+        "display" : "Abdominal pain"
+      },
+      {
+        "code" : "C143197",
+        "display" : "Anal fissure"
+      },
+      {
+        "code" : "C143275",
+        "display" : "Anal fistula"
+      },
+      {
+        "code" : "C143276",
+        "display" : "Anal hemorrhage"
+      },
+      {
+        "code" : "C143277",
+        "display" : "Anal mucositis"
+      },
+      {
+        "code" : "C143278",
+        "display" : "Anal necrosis"
+      },
+      {
+        "code" : "C143279",
+        "display" : "Anal pain"
+      },
+      {
+        "code" : "C143280",
+        "display" : "Anal stenosis"
+      },
+      {
+        "code" : "C143281",
+        "display" : "Anal ulcer"
+      },
+      {
+        "code" : "C143300",
+        "display" : "Ascites"
+      },
+      {
+        "code" : "C143198",
+        "display" : "Belching"
+      },
+      {
+        "code" : "C143322",
+        "display" : "Bloating"
+      },
+      {
+        "code" : "C143358",
+        "display" : "Cecal hemorrhage"
+      },
+      {
+        "code" : "C57901",
+        "display" : "Cheilitis"
+      },
+      {
+        "code" : "C146788",
+        "display" : "Cholecystitis"
+      },
+      {
+        "code" : "C143199",
+        "display" : "Chylous ascites"
+      },
+      {
+        "code" : "C57134",
+        "display" : "Colitis"
+      },
+      {
+        "code" : "C143373",
+        "display" : "Colonic fistula"
+      },
+      {
+        "code" : "C143374",
+        "display" : "Colonic hemorrhage"
+      },
+      {
+        "code" : "C143375",
+        "display" : "Colonic obstruction"
+      },
+      {
+        "code" : "C143376",
+        "display" : "Colonic perforation"
+      },
+      {
+        "code" : "C143377",
+        "display" : "Colonic stenosis"
+      },
+      {
+        "code" : "C143378",
+        "display" : "Colonic ulcer"
+      },
+      {
+        "code" : "C57141",
+        "display" : "Constipation"
+      },
+      {
+        "code" : "C143402",
+        "display" : "Dental caries"
+      },
+      {
+        "code" : "C57788",
+        "display" : "Diarrhea"
+      },
+      {
+        "code" : "C143411",
+        "display" : "Dry mouth"
+      },
+      {
+        "code" : "C143414",
+        "display" : "Duodenal hemorrhage"
+      },
+      {
+        "code" : "C143416",
+        "display" : "Duodenal obstruction"
+      },
+      {
+        "code" : "C143417",
+        "display" : "Duodenal perforation"
+      },
+      {
+        "code" : "C143418",
+        "display" : "Duodenal stenosis"
+      },
+      {
+        "code" : "C143419",
+        "display" : "Duodenal ulcer"
+      },
+      {
+        "code" : "C57789",
+        "display" : "Duodenal fistula"
+      },
+      {
+        "code" : "C143425",
+        "display" : "Dyspepsia"
+      },
+      {
+        "code" : "C57795",
+        "display" : "Dysphagia"
+      },
+      {
+        "code" : "C143445",
+        "display" : "Enterocolitis"
+      },
+      {
+        "code" : "C143446",
+        "display" : "Enterovesical fistula"
+      },
+      {
+        "code" : "C143453",
+        "display" : "Esophageal hemorrhage"
+      },
+      {
+        "code" : "C143455",
+        "display" : "Esophageal necrosis"
+      },
+      {
+        "code" : "C143456",
+        "display" : "Esophageal obstruction"
+      },
+      {
+        "code" : "C143457",
+        "display" : "Esophageal pain"
+      },
+      {
+        "code" : "C143458",
+        "display" : "Esophageal perforation"
+      },
+      {
+        "code" : "C143459",
+        "display" : "Esophageal stenosis"
+      },
+      {
+        "code" : "C143460",
+        "display" : "Esophageal ulcer"
+      },
+      {
+        "code" : "C146710",
+        "display" : "Esophageal varices hemorrhage"
+      },
+      {
+        "code" : "C57797",
+        "display" : "Esophagitis"
+      },
+      {
+        "code" : "C57798",
+        "display" : "Esophageal fistula"
+      },
+      {
+        "code" : "C143482",
+        "display" : "Fecal incontinence"
+      },
+      {
+        "code" : "C57807",
+        "display" : "Flatulence"
+      },
+      {
+        "code" : "C143499",
+        "display" : "Gastric fistula"
+      },
+      {
+        "code" : "C143500",
+        "display" : "Gastric hemorrhage"
+      },
+      {
+        "code" : "C143501",
+        "display" : "Gastric necrosis"
+      },
+      {
+        "code" : "C143502",
+        "display" : "Gastric perforation"
+      },
+      {
+        "code" : "C143503",
+        "display" : "Gastric stenosis"
+      },
+      {
+        "code" : "C143504",
+        "display" : "Gastric ulcer"
+      },
+      {
+        "code" : "C57812",
+        "display" : "Gastritis"
+      },
+      {
+        "code" : "C143506",
+        "display" : "Gastroesophageal reflux disease"
+      },
+      {
+        "code" : "C143508",
+        "display" : "Gastrointestinal disorders - Other, specify"
+      },
+      {
+        "code" : "C146637",
+        "display" : "Gastrointestinal fistula"
+      },
+      {
+        "code" : "C57814",
+        "display" : "Ileus"
+      },
+      {
+        "code" : "C143510",
+        "display" : "Gastrointestinal pain"
+      },
+      {
+        "code" : "C143512",
+        "display" : "Gastroparesis"
+      },
+      {
+        "code" : "C146626",
+        "display" : "Gingival pain"
+      },
+      {
+        "code" : "C143537",
+        "display" : "Hemorrhoidal hemorrhage"
+      },
+      {
+        "code" : "C146738",
+        "display" : "Hemorrhoids"
+      },
+      {
+        "code" : "C146633",
+        "display" : "Ileal perforation"
+      },
+      {
+        "code" : "C143578",
+        "display" : "Ileal stenosis"
+      },
+      {
+        "code" : "C57821",
+        "display" : "Ileal fistula"
+      },
+      {
+        "code" : "C56542",
+        "display" : "Ileal hemorrhage"
+      },
+      {
+        "code" : "C57823",
+        "display" : "Ileal obstruction"
+      },
+      {
+        "code" : "C57826",
+        "display" : "Ileal ulcer"
+      },
+      {
+        "code" : "C143595",
+        "display" : "Intra-abdominal hemorrhage"
+      },
+      {
+        "code" : "C143622",
+        "display" : "Jejunal perforation"
+      },
+      {
+        "code" : "C143623",
+        "display" : "Jejunal stenosis"
+      },
+      {
+        "code" : "C57827",
+        "display" : "Jejunal fistula"
+      },
+      {
+        "code" : "C56543",
+        "display" : "Jejunal hemorrhage"
+      },
+      {
+        "code" : "C57829",
+        "display" : "Jejunal obstruction"
+      },
+      {
+        "code" : "C57832",
+        "display" : "Jejunal ulcer"
+      },
+      {
+        "code" : "C146761",
+        "display" : "Lip pain"
+      },
+      {
+        "code" : "C143656",
+        "display" : "Lower gastrointestinal hemorrhage"
+      },
+      {
+        "code" : "C57838",
+        "display" : "Malabsorption"
+      },
+      {
+        "code" : "C143679",
+        "display" : "Mucositis oral"
+      },
+      {
+        "code" : "C146764",
+        "display" : "Nausea"
+      },
+      {
+        "code" : "C143710",
+        "display" : "Obstruction gastric"
+      },
+      {
+        "code" : "C143715",
+        "display" : "Oral cavity fistula"
+      },
+      {
+        "code" : "C56551",
+        "display" : "Oral hemorrhage"
+      },
+      {
+        "code" : "C143716",
+        "display" : "Oral dysesthesia"
+      },
+      {
+        "code" : "C146627",
+        "display" : "Oral pain"
+      },
+      {
+        "code" : "C57845",
+        "display" : "Pancreatic fistula"
+      },
+      {
+        "code" : "C56554",
+        "display" : "Pancreatic hemorrhage"
+      },
+      {
+        "code" : "C143730",
+        "display" : "Pancreatic duct stenosis"
+      },
+      {
+        "code" : "C143732",
+        "display" : "Pancreatic necrosis"
+      },
+      {
+        "code" : "C146789",
+        "display" : "Pancreatitis"
+      },
+      {
+        "code" : "C57849",
+        "display" : "Periodontal disease"
+      },
+      {
+        "code" : "C57850",
+        "display" : "Peritoneal necrosis"
+      },
+      {
+        "code" : "C57857",
+        "display" : "Proctitis"
+      },
+      {
+        "code" : "C143200",
+        "display" : "Rectal fissure"
+      },
+      {
+        "code" : "C143802",
+        "display" : "Rectal mucositis"
+      },
+      {
+        "code" : "C146631",
+        "display" : "Rectal pain"
+      },
+      {
+        "code" : "C146634",
+        "display" : "Rectal perforation"
+      },
+      {
+        "code" : "C143803",
+        "display" : "Rectal stenosis"
+      },
+      {
+        "code" : "C57859",
+        "display" : "Rectal fistula"
+      },
+      {
+        "code" : "C56560",
+        "display" : "Rectal hemorrhage"
+      },
+      {
+        "code" : "C57863",
+        "display" : "Rectal necrosis"
+      },
+      {
+        "code" : "C57864",
+        "display" : "Rectal obstruction"
+      },
+      {
+        "code" : "C57867",
+        "display" : "Rectal ulcer"
+      },
+      {
+        "code" : "C146632",
+        "display" : "Retroperitoneal hemorrhage"
+      },
+      {
+        "code" : "C143821",
+        "display" : "Salivary duct inflammation"
+      },
+      {
+        "code" : "C57868",
+        "display" : "Salivary gland fistula"
+      },
+      {
+        "code" : "C143842",
+        "display" : "Small intestinal mucositis"
+      },
+      {
+        "code" : "C143843",
+        "display" : "Small intestinal obstruction"
+      },
+      {
+        "code" : "C146635",
+        "display" : "Small intestinal perforation"
+      },
+      {
+        "code" : "C143844",
+        "display" : "Small intestinal stenosis"
+      },
+      {
+        "code" : "C143846",
+        "display" : "Small intestine ulcer"
+      },
+      {
+        "code" : "C146774",
+        "display" : "Stomach pain"
+      },
+      {
+        "code" : "C143876",
+        "display" : "Tooth development disorder"
+      },
+      {
+        "code" : "C143877",
+        "display" : "Tooth discoloration"
+      },
+      {
+        "code" : "C143879",
+        "display" : "Toothache"
+      },
+      {
+        "code" : "C146730",
+        "display" : "Typhlitis"
+      },
+      {
+        "code" : "C143895",
+        "display" : "Upper gastrointestinal hemorrhage"
+      },
+      {
+        "code" : "C143938",
+        "display" : "Visceral arterial ischemia"
+      },
+      {
+        "code" : "C57896",
+        "display" : "Vomiting"
+      },
+      {
+        "code" : "C143366",
+        "display" : "Chills"
+      },
+      {
+        "code" : "C143395",
+        "display" : "Death neonatal"
+      },
+      {
+        "code" : "C143396",
+        "display" : "Death NOS"
+      },
+      {
+        "code" : "C143201",
+        "display" : "Disease progression"
+      },
+      {
+        "code" : "C143432",
+        "display" : "Edema face"
+      },
+      {
+        "code" : "C143433",
+        "display" : "Edema limbs"
+      },
+      {
+        "code" : "C143434",
+        "display" : "Edema trunk"
+      },
+      {
+        "code" : "C143474",
+        "display" : "Facial pain"
+      },
+      {
+        "code" : "C146753",
+        "display" : "Fatigue"
+      },
+      {
+        "code" : "C143485",
+        "display" : "Fever"
+      },
+      {
+        "code" : "C143492",
+        "display" : "Flu like symptoms"
+      },
+      {
+        "code" : "C143496",
+        "display" : "Gait disturbance"
+      },
+      {
+        "code" : "C143513",
+        "display" : "General disorders and administration site conditions - Other, specify"
+      },
+      {
+        "code" : "C143202",
+        "display" : "Generalized edema"
+      },
+      {
+        "code" : "C55332",
+        "display" : "Hypothermia"
+      },
+      {
+        "code" : "C143584",
+        "display" : "Infusion site extravasation"
+      },
+      {
+        "code" : "C143585",
+        "display" : "Injection site reaction"
+      },
+      {
+        "code" : "C143654",
+        "display" : "Localized edema"
+      },
+      {
+        "code" : "C143665",
+        "display" : "Malaise"
+      },
+      {
+        "code" : "C143680",
+        "display" : "Multi-organ failure"
+      },
+      {
+        "code" : "C143700",
+        "display" : "Neck edema"
+      },
+      {
+        "code" : "C143707",
+        "display" : "Non-cardiac chest pain"
+      },
+      {
+        "code" : "C143725",
+        "display" : "Pain"
+      },
+      {
+        "code" : "C143863",
+        "display" : "Sudden death NOS"
+      },
+      {
+        "code" : "C143203",
+        "display" : "Vaccination site lymphadenopathy"
+      },
+      {
+        "code" : "C143314",
+        "display" : "Bile duct stenosis"
+      },
+      {
+        "code" : "C143316",
+        "display" : "Biliary fistula"
+      },
+      {
+        "code" : "C143204",
+        "display" : "Budd-Chiari syndrome"
+      },
+      {
+        "code" : "C57808",
+        "display" : "Gallbladder fistula"
+      },
+      {
+        "code" : "C146735",
+        "display" : "Gallbladder necrosis"
+      },
+      {
+        "code" : "C57810",
+        "display" : "Gallbladder obstruction"
+      },
+      {
+        "code" : "C146755",
+        "display" : "Gallbladder pain"
+      },
+      {
+        "code" : "C146708",
+        "display" : "Gallbladder perforation"
+      },
+      {
+        "code" : "C143539",
+        "display" : "Hepatic failure"
+      },
+      {
+        "code" : "C143540",
+        "display" : "Hepatic hemorrhage"
+      },
+      {
+        "code" : "C146736",
+        "display" : "Hepatic necrosis"
+      },
+      {
+        "code" : "C143542",
+        "display" : "Hepatic pain"
+      },
+      {
+        "code" : "C143544",
+        "display" : "Hepatobiliary disorders - Other, specify"
+      },
+      {
+        "code" : "C143742",
+        "display" : "Perforation bile duct"
+      },
+      {
+        "code" : "C143769",
+        "display" : "Portal hypertension"
+      },
+      {
+        "code" : "C143770",
+        "display" : "Portal vein thrombosis"
+      },
+      {
+        "code" : "C143205",
+        "display" : "Sinusoidal obstruction syndrome"
+      },
+      {
+        "code" : "C143271",
+        "display" : "Allergic reaction"
+      },
+      {
+        "code" : "C143282",
+        "display" : "Anaphylaxis"
+      },
+      {
+        "code" : "C143310",
+        "display" : "Autoimmune disorder"
+      },
+      {
+        "code" : "C143394",
+        "display" : "Cytokine release syndrome"
+      },
+      {
+        "code" : "C143580",
+        "display" : "Immune system disorders - Other, specify"
+      },
+      {
+        "code" : "C146642",
+        "display" : "Serum sickness"
+      },
+      {
+        "code" : "C143254",
+        "display" : "Abdominal infection"
+      },
+      {
+        "code" : "C143285",
+        "display" : "Anorectal infection"
+      },
+      {
+        "code" : "C143293",
+        "display" : "Appendicitis perforated"
+      },
+      {
+        "code" : "C143294",
+        "display" : "Appendicitis"
+      },
+      {
+        "code" : "C143297",
+        "display" : "Arteritis infective"
+      },
+      {
+        "code" : "C143206",
+        "display" : "Bacteremia"
+      },
+      {
+        "code" : "C143317",
+        "display" : "Biliary tract infection"
+      },
+      {
+        "code" : "C143319",
+        "display" : "Bladder infection"
+      },
+      {
+        "code" : "C143331",
+        "display" : "Bone infection"
+      },
+      {
+        "code" : "C143336",
+        "display" : "Breast infection"
+      },
+      {
+        "code" : "C143339",
+        "display" : "Bronchial infection"
+      },
+      {
+        "code" : "C143356",
+        "display" : "Catheter related infection"
+      },
+      {
+        "code" : "C143359",
+        "display" : "Cecal infection"
+      },
+      {
+        "code" : "C143362",
+        "display" : "Cervicitis infection"
+      },
+      {
+        "code" : "C143383",
+        "display" : "Conjunctivitis infective"
+      },
+      {
+        "code" : "C143384",
+        "display" : "Conjunctivitis"
+      },
+      {
+        "code" : "C143386",
+        "display" : "Corneal infection"
+      },
+      {
+        "code" : "C143390",
+        "display" : "Cranial nerve infection"
+      },
+      {
+        "code" : "C143207",
+        "display" : "Cytomegalovirus infection reactivation"
+      },
+      {
+        "code" : "C143406",
+        "display" : "Device related infection"
+      },
+      {
+        "code" : "C143415",
+        "display" : "Duodenal infection"
+      },
+      {
+        "code" : "C143438",
+        "display" : "Encephalitis infection"
+      },
+      {
+        "code" : "C143439",
+        "display" : "Encephalomyelitis infection"
+      },
+      {
+        "code" : "C143441",
+        "display" : "Endocarditis infective"
+      },
+      {
+        "code" : "C143443",
+        "display" : "Endophthalmitis"
+      },
+      {
+        "code" : "C143444",
+        "display" : "Enterocolitis infectious"
+      },
+      {
+        "code" : "C143208",
+        "display" : "Epstein-Barr virus infection reactivation"
+      },
+      {
+        "code" : "C143454",
+        "display" : "Esophageal infection"
+      },
+      {
+        "code" : "C143469",
+        "display" : "Eye infection"
+      },
+      {
+        "code" : "C143209",
+        "display" : "Folliculitis"
+      },
+      {
+        "code" : "C143210",
+        "display" : "Fungemia"
+      },
+      {
+        "code" : "C143497",
+        "display" : "Gallbladder infection"
+      },
+      {
+        "code" : "C143523",
+        "display" : "Gum infection"
+      },
+      {
+        "code" : "C143541",
+        "display" : "Hepatic infection"
+      },
+      {
+        "code" : "C143211",
+        "display" : "Hepatitis B reactivation"
+      },
+      {
+        "code" : "C143543",
+        "display" : "Hepatitis viral"
+      },
+      {
+        "code" : "C143212",
+        "display" : "Herpes simplex reactivation"
+      },
+      {
+        "code" : "C143581",
+        "display" : "Infections and infestations - Other, specify"
+      },
+      {
+        "code" : "C143582",
+        "display" : "Infective myositis"
+      },
+      {
+        "code" : "C143626",
+        "display" : "Joint infection"
+      },
+      {
+        "code" : "C143632",
+        "display" : "Kidney infection"
+      },
+      {
+        "code" : "C143641",
+        "display" : "Laryngitis"
+      },
+      {
+        "code" : "C143651",
+        "display" : "Lip infection"
+      },
+      {
+        "code" : "C143657",
+        "display" : "Lung infection"
+      },
+      {
+        "code" : "C143658",
+        "display" : "Lymph gland infection"
+      },
+      {
+        "code" : "C143667",
+        "display" : "Mediastinal infection"
+      },
+      {
+        "code" : "C143670",
+        "display" : "Meningitis"
+      },
+      {
+        "code" : "C143678",
+        "display" : "Mucosal infection"
+      },
+      {
+        "code" : "C55459",
+        "display" : "Myelitis"
+      },
+      {
+        "code" : "C143695",
+        "display" : "Nail infection"
+      },
+      {
+        "code" : "C143719",
+        "display" : "Otitis externa"
+      },
+      {
+        "code" : "C143720",
+        "display" : "Otitis media"
+      },
+      {
+        "code" : "C143721",
+        "display" : "Ovarian infection"
+      },
+      {
+        "code" : "C143728",
+        "display" : "Pancreas infection"
+      },
+      {
+        "code" : "C143735",
+        "display" : "Papulopustular rash"
+      },
+      {
+        "code" : "C143737",
+        "display" : "Paronychia"
+      },
+      {
+        "code" : "C143740",
+        "display" : "Pelvic infection"
+      },
+      {
+        "code" : "C143741",
+        "display" : "Penile infection"
+      },
+      {
+        "code" : "C143748",
+        "display" : "Periorbital infection"
+      },
+      {
+        "code" : "C143751",
+        "display" : "Peripheral nerve infection"
+      },
+      {
+        "code" : "C143753",
+        "display" : "Peritoneal infection"
+      },
+      {
+        "code" : "C143758",
+        "display" : "Pharyngitis"
+      },
+      {
+        "code" : "C143760",
+        "display" : "Phlebitis infective"
+      },
+      {
+        "code" : "C143766",
+        "display" : "Pleural infection"
+      },
+      {
+        "code" : "C143783",
+        "display" : "Prostate infection"
+      },
+      {
+        "code" : "C143800",
+        "display" : "Rash pustular"
+      },
+      {
+        "code" : "C143819",
+        "display" : "Rhinitis infective"
+      },
+      {
+        "code" : "C143822",
+        "display" : "Salivary gland infection"
+      },
+      {
+        "code" : "C143825",
+        "display" : "Scrotal infection"
+      },
+      {
+        "code" : "C143827",
+        "display" : "Sepsis"
+      },
+      {
+        "code" : "C143213",
+        "display" : "Shingles"
+      },
+      {
+        "code" : "C143832",
+        "display" : "Sinusitis"
+      },
+      {
+        "code" : "C143838",
+        "display" : "Skin infection"
+      },
+      {
+        "code" : "C143845",
+        "display" : "Small intestine infection"
+      },
+      {
+        "code" : "C143849",
+        "display" : "Soft tissue infection"
+      },
+      {
+        "code" : "C143857",
+        "display" : "Splenic infection"
+      },
+      {
+        "code" : "C143860",
+        "display" : "Stoma site infection"
+      },
+      {
+        "code" : "C143214",
+        "display" : "Thrush"
+      },
+      {
+        "code" : "C143878",
+        "display" : "Tooth infection"
+      },
+      {
+        "code" : "C143884",
+        "display" : "Tracheitis"
+      },
+      {
+        "code" : "C143896",
+        "display" : "Upper respiratory infection"
+      },
+      {
+        "code" : "C143899",
+        "display" : "Urethral infection"
+      },
+      {
+        "code" : "C143904",
+        "display" : "Urinary tract infection"
+      },
+      {
+        "code" : "C143917",
+        "display" : "Uterine infection"
+      },
+      {
+        "code" : "C143924",
+        "display" : "Vaginal infection"
+      },
+      {
+        "code" : "C143215",
+        "display" : "Viremia"
+      },
+      {
+        "code" : "C143943",
+        "display" : "Vulval infection"
+      },
+      {
+        "code" : "C143951",
+        "display" : "Wound infection"
+      },
+      {
+        "code" : "C143284",
+        "display" : "Ankle fracture"
+      },
+      {
+        "code" : "C143289",
+        "display" : "Aortic injury"
+      },
+      {
+        "code" : "C143296",
+        "display" : "Arterial injury"
+      },
+      {
+        "code" : "C143315",
+        "display" : "Biliary anastomotic leak"
+      },
+      {
+        "code" : "C143318",
+        "display" : "Bladder anastomotic leak"
+      },
+      {
+        "code" : "C143345",
+        "display" : "Bruising"
+      },
+      {
+        "code" : "C57900",
+        "display" : "Burn"
+      },
+      {
+        "code" : "C143405",
+        "display" : "Dermatitis radiation"
+      },
+      {
+        "code" : "C143451",
+        "display" : "Esophageal anastomotic leak"
+      },
+      {
+        "code" : "C143475",
+        "display" : "Fall"
+      },
+      {
+        "code" : "C143476",
+        "display" : "Fallopian tube anastomotic leak"
+      },
+      {
+        "code" : "C146714",
+        "display" : "Fallopian tube perforation"
+      },
+      {
+        "code" : "C58382",
+        "display" : "Fracture"
+      },
+      {
+        "code" : "C143498",
+        "display" : "Gastric anastomotic leak"
+      },
+      {
+        "code" : "C143507",
+        "display" : "Gastrointestinal anastomotic leak"
+      },
+      {
+        "code" : "C143511",
+        "display" : "Gastrointestinal stoma necrosis"
+      },
+      {
+        "code" : "C143546",
+        "display" : "Hip fracture"
+      },
+      {
+        "code" : "C56735",
+        "display" : "Injury to inferior vena cava"
+      },
+      {
+        "code" : "C143583",
+        "display" : "Infusion related reaction"
+      },
+      {
+        "code" : "C143586",
+        "display" : "Injury to carotid artery"
+      },
+      {
+        "code" : "C143587",
+        "display" : "Injury to jugular vein"
+      },
+      {
+        "code" : "C143588",
+        "display" : "Injury to superior vena cava"
+      },
+      {
+        "code" : "C143589",
+        "display" : "Injury, poisoning and procedural complications - Other, specify"
+      },
+      {
+        "code" : "C143592",
+        "display" : "Intestinal stoma leak"
+      },
+      {
+        "code" : "C143593",
+        "display" : "Intestinal stoma obstruction"
+      },
+      {
+        "code" : "C143594",
+        "display" : "Intestinal stoma site bleeding"
+      },
+      {
+        "code" : "C143597",
+        "display" : "Intraoperative arterial injury"
+      },
+      {
+        "code" : "C143598",
+        "display" : "Intraoperative breast injury"
+      },
+      {
+        "code" : "C143599",
+        "display" : "Intraoperative cardiac injury"
+      },
+      {
+        "code" : "C143600",
+        "display" : "Intraoperative ear injury"
+      },
+      {
+        "code" : "C143601",
+        "display" : "Intraoperative endocrine injury"
+      },
+      {
+        "code" : "C143602",
+        "display" : "Intraoperative gastrointestinal injury"
+      },
+      {
+        "code" : "C143603",
+        "display" : "Intraoperative head and neck injury"
+      },
+      {
+        "code" : "C143604",
+        "display" : "Intraoperative hemorrhage"
+      },
+      {
+        "code" : "C143605",
+        "display" : "Intraoperative hepatobiliary injury"
+      },
+      {
+        "code" : "C143606",
+        "display" : "Intraoperative musculoskeletal injury"
+      },
+      {
+        "code" : "C143607",
+        "display" : "Intraoperative neurological injury"
+      },
+      {
+        "code" : "C143608",
+        "display" : "Intraoperative ocular injury"
+      },
+      {
+        "code" : "C143609",
+        "display" : "Intraoperative renal injury"
+      },
+      {
+        "code" : "C143610",
+        "display" : "Intraoperative reproductive tract injury"
+      },
+      {
+        "code" : "C143611",
+        "display" : "Intraoperative respiratory injury"
+      },
+      {
+        "code" : "C143612",
+        "display" : "Intraoperative splenic injury"
+      },
+      {
+        "code" : "C143613",
+        "display" : "Intraoperative urinary injury"
+      },
+      {
+        "code" : "C143614",
+        "display" : "Intraoperative venous injury"
+      },
+      {
+        "code" : "C143631",
+        "display" : "Kidney anastomotic leak"
+      },
+      {
+        "code" : "C143635",
+        "display" : "Large intestinal anastomotic leak"
+      },
+      {
+        "code" : "C143729",
+        "display" : "Pancreatic anastomotic leak"
+      },
+      {
+        "code" : "C143755",
+        "display" : "Pharyngeal anastomotic leak"
+      },
+      {
+        "code" : "C143772",
+        "display" : "Postoperative hemorrhage"
+      },
+      {
+        "code" : "C143773",
+        "display" : "Postoperative thoracic procedure complication"
+      },
+      {
+        "code" : "C143781",
+        "display" : "Prolapse of intestinal stoma"
+      },
+      {
+        "code" : "C143782",
+        "display" : "Prolapse of urostomy"
+      },
+      {
+        "code" : "C143796",
+        "display" : "Radiation recall reaction (dermatologic)"
+      },
+      {
+        "code" : "C143801",
+        "display" : "Rectal anastomotic leak"
+      },
+      {
+        "code" : "C58401",
+        "display" : "Seroma"
+      },
+      {
+        "code" : "C143841",
+        "display" : "Small intestinal anastomotic leak"
+      },
+      {
+        "code" : "C143855",
+        "display" : "Spermatic cord anastomotic leak"
+      },
+      {
+        "code" : "C143856",
+        "display" : "Spinal fracture"
+      },
+      {
+        "code" : "C143858",
+        "display" : "Stenosis of gastrointestinal stoma"
+      },
+      {
+        "code" : "C146694",
+        "display" : "Stomal ulcer"
+      },
+      {
+        "code" : "C56567",
+        "display" : "Tracheal hemorrhage"
+      },
+      {
+        "code" : "C143882",
+        "display" : "Tracheal obstruction"
+      },
+      {
+        "code" : "C143885",
+        "display" : "Tracheostomy site bleeding"
+      },
+      {
+        "code" : "C143897",
+        "display" : "Ureteric anastomotic leak"
+      },
+      {
+        "code" : "C143898",
+        "display" : "Urethral anastomotic leak"
+      },
+      {
+        "code" : "C143910",
+        "display" : "Urostomy leak"
+      },
+      {
+        "code" : "C143911",
+        "display" : "Urostomy obstruction"
+      },
+      {
+        "code" : "C143912",
+        "display" : "Urostomy site bleeding"
+      },
+      {
+        "code" : "C143913",
+        "display" : "Urostomy stenosis"
+      },
+      {
+        "code" : "C143915",
+        "display" : "Uterine anastomotic leak"
+      },
+      {
+        "code" : "C143919",
+        "display" : "Uterine perforation"
+      },
+      {
+        "code" : "C143216",
+        "display" : "Vaccination complication"
+      },
+      {
+        "code" : "C143921",
+        "display" : "Vaginal anastomotic leak"
+      },
+      {
+        "code" : "C143928",
+        "display" : "Vas deferens anastomotic leak"
+      },
+      {
+        "code" : "C143929",
+        "display" : "Vascular access complication"
+      },
+      {
+        "code" : "C143933",
+        "display" : "Venous injury"
+      },
+      {
+        "code" : "C143949",
+        "display" : "Wound complication"
+      },
+      {
+        "code" : "C143950",
+        "display" : "Wound dehiscence"
+      },
+      {
+        "code" : "C143952",
+        "display" : "Wrist fracture"
+      },
+      {
+        "code" : "C143261",
+        "display" : "Activated partial thromboplastin time prolonged"
+      },
+      {
+        "code" : "C143267",
+        "display" : "Alanine aminotransferase increased"
+      },
+      {
+        "code" : "C143269",
+        "display" : "Alkaline phosphatase increased"
+      },
+      {
+        "code" : "C143301",
+        "display" : "Aspartate aminotransferase increased"
+      },
+      {
+        "code" : "C143324",
+        "display" : "Blood antidiuretic hormone abnormal"
+      },
+      {
+        "code" : "C143217",
+        "display" : "Blood bicarbonate decreased"
+      },
+      {
+        "code" : "C143325",
+        "display" : "Blood bilirubin increased"
+      },
+      {
+        "code" : "C143326",
+        "display" : "Blood corticotrophin decreased"
+      },
+      {
+        "code" : "C143327",
+        "display" : "Blood gonadotrophin abnormal"
+      },
+      {
+        "code" : "C143218",
+        "display" : "Blood lactate dehydrogenase increased"
+      },
+      {
+        "code" : "C143328",
+        "display" : "Blood prolactin abnormal"
+      },
+      {
+        "code" : "C143350",
+        "display" : "Carbon monoxide diffusing capacity decreased"
+      },
+      {
+        "code" : "C143353",
+        "display" : "Cardiac troponin I increased"
+      },
+      {
+        "code" : "C143354",
+        "display" : "Cardiac troponin T increased"
+      },
+      {
+        "code" : "C143357",
+        "display" : "CD4 lymphocytes decreased"
+      },
+      {
+        "code" : "C143368",
+        "display" : "Cholesterol high"
+      },
+      {
+        "code" : "C143389",
+        "display" : "CPK increased"
+      },
+      {
+        "code" : "C143391",
+        "display" : "Creatinine increased"
+      },
+      {
+        "code" : "C143436",
+        "display" : "Ejection fraction decreased"
+      },
+      {
+        "code" : "C143437",
+        "display" : "Electrocardiogram QT corrected interval prolonged"
+      },
+      {
+        "code" : "C143219",
+        "display" : "Electrocardiogram T wave abnormal"
+      },
+      {
+        "code" : "C143486",
+        "display" : "Fibrinogen decreased"
+      },
+      {
+        "code" : "C143494",
+        "display" : "Forced expiratory volume decreased"
+      },
+      {
+        "code" : "C143516",
+        "display" : "GGT increased"
+      },
+      {
+        "code" : "C143521",
+        "display" : "Growth hormone abnormal"
+      },
+      {
+        "code" : "C143526",
+        "display" : "Haptoglobin decreased"
+      },
+      {
+        "code" : "C143533",
+        "display" : "Hemoglobin increased"
+      },
+      {
+        "code" : "C143590",
+        "display" : "INR increased"
+      },
+      {
+        "code" : "C143615",
+        "display" : "Investigations - Other, specify"
+      },
+      {
+        "code" : "C143652",
+        "display" : "Lipase increased"
+      },
+      {
+        "code" : "C143662",
+        "display" : "Lymphocyte count decreased"
+      },
+      {
+        "code" : "C143663",
+        "display" : "Lymphocyte count increased"
+      },
+      {
+        "code" : "C143704",
+        "display" : "Neutrophil count decreased"
+      },
+      {
+        "code" : "C143731",
+        "display" : "Pancreatic enzymes decreased"
+      },
+      {
+        "code" : "C143764",
+        "display" : "Platelet count decreased"
+      },
+      {
+        "code" : "C143829",
+        "display" : "Serum amylase increased"
+      },
+      {
+        "code" : "C143220",
+        "display" : "Thyroid stimulating hormone increased"
+      },
+      {
+        "code" : "C143909",
+        "display" : "Urine output decreased"
+      },
+      {
+        "code" : "C143939",
+        "display" : "Vital capacity abnormal"
+      },
+      {
+        "code" : "C55338",
+        "display" : "Weight gain"
+      },
+      {
+        "code" : "C55339",
+        "display" : "Weight loss"
+      },
+      {
+        "code" : "C143948",
+        "display" : "White blood cell decreased"
+      },
+      {
+        "code" : "C143259",
+        "display" : "Acidosis"
+      },
+      {
+        "code" : "C143268",
+        "display" : "Alcohol intolerance"
+      },
+      {
+        "code" : "C143270",
+        "display" : "Alkalosis"
+      },
+      {
+        "code" : "C57118",
+        "display" : "Anorexia"
+      },
+      {
+        "code" : "C57787",
+        "display" : "Dehydration"
+      },
+      {
+        "code" : "C143519",
+        "display" : "Glucose intolerance"
+      },
+      {
+        "code" : "C143551",
+        "display" : "Hypercalcemia"
+      },
+      {
+        "code" : "C143552",
+        "display" : "Hyperglycemia"
+      },
+      {
+        "code" : "C143554",
+        "display" : "Hyperkalemia"
+      },
+      {
+        "code" : "C143221",
+        "display" : "Hyperlipidemia"
+      },
+      {
+        "code" : "C143555",
+        "display" : "Hypermagnesemia"
+      },
+      {
+        "code" : "C143556",
+        "display" : "Hypernatremia"
+      },
+      {
+        "code" : "C143222",
+        "display" : "Hyperphosphatemia"
+      },
+      {
+        "code" : "C143562",
+        "display" : "Hypertriglyceridemia"
+      },
+      {
+        "code" : "C143563",
+        "display" : "Hyperuricemia"
+      },
+      {
+        "code" : "C143564",
+        "display" : "Hypoalbuminemia"
+      },
+      {
+        "code" : "C143565",
+        "display" : "Hypocalcemia"
+      },
+      {
+        "code" : "C143567",
+        "display" : "Hypoglycemia"
+      },
+      {
+        "code" : "C143569",
+        "display" : "Hypokalemia"
+      },
+      {
+        "code" : "C143570",
+        "display" : "Hypomagnesemia"
+      },
+      {
+        "code" : "C143571",
+        "display" : "Hyponatremia"
+      },
+      {
+        "code" : "C143573",
+        "display" : "Hypophosphatemia"
+      },
+      {
+        "code" : "C55993",
+        "display" : "Iron overload"
+      },
+      {
+        "code" : "C143672",
+        "display" : "Metabolism and nutrition disorders - Other, specify"
+      },
+      {
+        "code" : "C55334",
+        "display" : "Obesity"
+      },
+      {
+        "code" : "C146688",
+        "display" : "Tumor lysis syndrome"
+      },
+      {
+        "code" : "C143256",
+        "display" : "Abdominal soft tissue necrosis"
+      },
+      {
+        "code" : "C143298",
+        "display" : "Arthralgia"
+      },
+      {
+        "code" : "C143299",
+        "display" : "Arthritis"
+      },
+      {
+        "code" : "C143311",
+        "display" : "Avascular necrosis"
+      },
+      {
+        "code" : "C146739",
+        "display" : "Back pain"
+      },
+      {
+        "code" : "C146741",
+        "display" : "Bone pain"
+      },
+      {
+        "code" : "C146744",
+        "display" : "Buttock pain"
+      },
+      {
+        "code" : "C143223",
+        "display" : "Chest wall necrosis"
+      },
+      {
+        "code" : "C146743",
+        "display" : "Chest wall pain"
+      },
+      {
+        "code" : "C146749",
+        "display" : "Exostosis"
+      },
+      {
+        "code" : "C143487",
+        "display" : "Fibrosis deep connective tissue"
+      },
+      {
+        "code" : "C143488",
+        "display" : "Flank pain"
+      },
+      {
+        "code" : "C143514",
+        "display" : "Generalized muscle weakness"
+      },
+      {
+        "code" : "C143522",
+        "display" : "Growth suppression"
+      },
+      {
+        "code" : "C58383",
+        "display" : "Head soft tissue necrosis"
+      },
+      {
+        "code" : "C146760",
+        "display" : "Joint effusion"
+      },
+      {
+        "code" : "C143627",
+        "display" : "Joint range of motion decreased cervical spine"
+      },
+      {
+        "code" : "C143628",
+        "display" : "Joint range of motion decreased lumbar spine"
+      },
+      {
+        "code" : "C143629",
+        "display" : "Joint range of motion decreased"
+      },
+      {
+        "code" : "C143633",
+        "display" : "Kyphosis"
+      },
+      {
+        "code" : "C143655",
+        "display" : "Lordosis"
+      },
+      {
+        "code" : "C143224",
+        "display" : "Muscle cramp"
+      },
+      {
+        "code" : "C143682",
+        "display" : "Muscle weakness lower limb"
+      },
+      {
+        "code" : "C143684",
+        "display" : "Muscle weakness trunk"
+      },
+      {
+        "code" : "C143685",
+        "display" : "Muscle weakness upper limb"
+      },
+      {
+        "code" : "C143686",
+        "display" : "Musculoskeletal and connective tissue disorder - Other, specify"
+      },
+      {
+        "code" : "C143687",
+        "display" : "Musculoskeletal deformity"
+      },
+      {
+        "code" : "C143688",
+        "display" : "Myalgia"
+      },
+      {
+        "code" : "C146787",
+        "display" : "Myositis"
+      },
+      {
+        "code" : "C146766",
+        "display" : "Neck pain"
+      },
+      {
+        "code" : "C58394",
+        "display" : "Neck soft tissue necrosis"
+      },
+      {
+        "code" : "C143717",
+        "display" : "Osteonecrosis of jaw"
+      },
+      {
+        "code" : "C143225",
+        "display" : "Osteonecrosis"
+      },
+      {
+        "code" : "C146767",
+        "display" : "Osteoporosis"
+      },
+      {
+        "code" : "C143723",
+        "display" : "Pain in extremity"
+      },
+      {
+        "code" : "C58399",
+        "display" : "Pelvic soft tissue necrosis"
+      },
+      {
+        "code" : "C143226",
+        "display" : "Rhabdomyolysis"
+      },
+      {
+        "code" : "C143227",
+        "display" : "Rotator cuff injury"
+      },
+      {
+        "code" : "C143824",
+        "display" : "Scoliosis"
+      },
+      {
+        "code" : "C143850",
+        "display" : "Soft tissue necrosis lower limb"
+      },
+      {
+        "code" : "C143851",
+        "display" : "Soft tissue necrosis upper limb"
+      },
+      {
+        "code" : "C143866",
+        "display" : "Superficial soft tissue fibrosis"
+      },
+      {
+        "code" : "C58404",
+        "display" : "Trismus"
+      },
+      {
+        "code" : "C143894",
+        "display" : "Unequal limb length"
+      },
+      {
+        "code" : "C143646",
+        "display" : "Leukemia secondary to oncology chemotherapy"
+      },
+      {
+        "code" : "C143690",
+        "display" : "Myelodysplastic syndrome"
+      },
+      {
+        "code" : "C143701",
+        "display" : "Neoplasms benign, malignant and unspecified (incl cysts and polyps) - Other, specify"
+      },
+      {
+        "code" : "C143228",
+        "display" : "Skin papilloma"
+      },
+      {
+        "code" : "C143887",
+        "display" : "Treatment related secondary malignancy"
+      },
+      {
+        "code" : "C143229",
+        "display" : "Tumor hemorrhage"
+      },
+      {
+        "code" : "C146782",
+        "display" : "Tumor pain"
+      },
+      {
+        "code" : "C143257",
+        "display" : "Abducens nerve disorder"
+      },
+      {
+        "code" : "C143258",
+        "display" : "Accessory nerve disorder"
+      },
+      {
+        "code" : "C143260",
+        "display" : "Acoustic nerve disorder NOS"
+      },
+      {
+        "code" : "C143266",
+        "display" : "Akathisia"
+      },
+      {
+        "code" : "C143274",
+        "display" : "Amnesia"
+      },
+      {
+        "code" : "C143230",
+        "display" : "Anosmia"
+      },
+      {
+        "code" : "C143291",
+        "display" : "Aphonia"
+      },
+      {
+        "code" : "C143295",
+        "display" : "Arachnoiditis"
+      },
+      {
+        "code" : "C146737",
+        "display" : "Ataxia"
+      },
+      {
+        "code" : "C146754",
+        "display" : "Brachial plexopathy"
+      },
+      {
+        "code" : "C143360",
+        "display" : "Central nervous system necrosis"
+      },
+      {
+        "code" : "C143361",
+        "display" : "Cerebrospinal fluid leakage"
+      },
+      {
+        "code" : "C146746",
+        "display" : "Cognitive disturbance"
+      },
+      {
+        "code" : "C143379",
+        "display" : "Concentration impairment"
+      },
+      {
+        "code" : "C143403",
+        "display" : "Depressed level of consciousness"
+      },
+      {
+        "code" : "C146747",
+        "display" : "Dizziness"
+      },
+      {
+        "code" : "C143420",
+        "display" : "Dysarthria"
+      },
+      {
+        "code" : "C143421",
+        "display" : "Dysesthesia"
+      },
+      {
+        "code" : "C143422",
+        "display" : "Dysgeusia"
+      },
+      {
+        "code" : "C143427",
+        "display" : "Dysphasia"
+      },
+      {
+        "code" : "C143431",
+        "display" : "Edema cerebral"
+      },
+      {
+        "code" : "C146699",
+        "display" : "Encephalopathy"
+      },
+      {
+        "code" : "C143467",
+        "display" : "Extrapyramidal disorder"
+      },
+      {
+        "code" : "C143472",
+        "display" : "Facial muscle weakness"
+      },
+      {
+        "code" : "C143473",
+        "display" : "Facial nerve disorder"
+      },
+      {
+        "code" : "C143518",
+        "display" : "Glossopharyngeal nerve disorder"
+      },
+      {
+        "code" : "C143231",
+        "display" : "Guillain-Barre syndrome"
+      },
+      {
+        "code" : "C143527",
+        "display" : "Headache"
+      },
+      {
+        "code" : "C55401",
+        "display" : "Hydrocephalus"
+      },
+      {
+        "code" : "C143558",
+        "display" : "Hypersomnia"
+      },
+      {
+        "code" : "C143566",
+        "display" : "Hypoglossal nerve disorder"
+      },
+      {
+        "code" : "C143596",
+        "display" : "Intracranial hemorrhage"
+      },
+      {
+        "code" : "C143619",
+        "display" : "Ischemia cerebrovascular"
+      },
+      {
+        "code" : "C143645",
+        "display" : "Lethargy"
+      },
+      {
+        "code" : "C143648",
+        "display" : "Leukoencephalopathy"
+      },
+      {
+        "code" : "C146763",
+        "display" : "Memory impairment"
+      },
+      {
+        "code" : "C143669",
+        "display" : "Meningismus"
+      },
+      {
+        "code" : "C143677",
+        "display" : "Movements involuntary"
+      },
+      {
+        "code" : "C143681",
+        "display" : "Muscle weakness left-sided"
+      },
+      {
+        "code" : "C143683",
+        "display" : "Muscle weakness right-sided"
+      },
+      {
+        "code" : "C143232",
+        "display" : "Myasthenia gravis"
+      },
+      {
+        "code" : "C143702",
+        "display" : "Nervous system disorders - Other, specify"
+      },
+      {
+        "code" : "C143703",
+        "display" : "Neuralgia"
+      },
+      {
+        "code" : "C146775",
+        "display" : "Nystagmus"
+      },
+      {
+        "code" : "C143711",
+        "display" : "Oculomotor nerve disorder"
+      },
+      {
+        "code" : "C143712",
+        "display" : "Olfactory nerve disorder"
+      },
+      {
+        "code" : "C143736",
+        "display" : "Paresthesia"
+      },
+      {
+        "code" : "C143750",
+        "display" : "Peripheral motor neuropathy"
+      },
+      {
+        "code" : "C143752",
+        "display" : "Peripheral sensory neuropathy"
+      },
+      {
+        "code" : "C146682",
+        "display" : "Phantom pain"
+      },
+      {
+        "code" : "C143778",
+        "display" : "Presyncope"
+      },
+      {
+        "code" : "C143795",
+        "display" : "Pyramidal tract syndrome"
+      },
+      {
+        "code" : "C143797",
+        "display" : "Radiculitis"
+      },
+      {
+        "code" : "C143804",
+        "display" : "Recurrent laryngeal nerve palsy"
+      },
+      {
+        "code" : "C143818",
+        "display" : "Reversible posterior leukoencephalopathy syndrome"
+      },
+      {
+        "code" : "C146700",
+        "display" : "Seizure"
+      },
+      {
+        "code" : "C143852",
+        "display" : "Somnolence"
+      },
+      {
+        "code" : "C143854",
+        "display" : "Spasticity"
+      },
+      {
+        "code" : "C143233",
+        "display" : "Spinal cord compression"
+      },
+      {
+        "code" : "C143862",
+        "display" : "Stroke"
+      },
+      {
+        "code" : "C146750",
+        "display" : "Syncope"
+      },
+      {
+        "code" : "C143234",
+        "display" : "Tendon reflex decreased"
+      },
+      {
+        "code" : "C143886",
+        "display" : "Transient ischemic attacks"
+      },
+      {
+        "code" : "C146780",
+        "display" : "Tremor"
+      },
+      {
+        "code" : "C143890",
+        "display" : "Trigeminal nerve disorder"
+      },
+      {
+        "code" : "C143235",
+        "display" : "Trochlear nerve disorder"
+      },
+      {
+        "code" : "C143927",
+        "display" : "Vagus nerve disorder"
+      },
+      {
+        "code" : "C143932",
+        "display" : "Vasovagal reaction"
+      },
+      {
+        "code" : "C143484",
+        "display" : "Fetal growth retardation"
+      },
+      {
+        "code" : "C143236",
+        "display" : "Pregnancy loss"
+      },
+      {
+        "code" : "C143775",
+        "display" : "Pregnancy, puerperium and perinatal conditions - Other, specify"
+      },
+      {
+        "code" : "C143776",
+        "display" : "Premature delivery"
+      },
+      {
+        "code" : "C146777",
+        "display" : "Agitation"
+      },
+      {
+        "code" : "C143287",
+        "display" : "Anorgasmia"
+      },
+      {
+        "code" : "C146778",
+        "display" : "Anxiety"
+      },
+      {
+        "code" : "C146785",
+        "display" : "Confusion"
+      },
+      {
+        "code" : "C143398",
+        "display" : "Delayed orgasm"
+      },
+      {
+        "code" : "C143400",
+        "display" : "Delirium"
+      },
+      {
+        "code" : "C143401",
+        "display" : "Delusions"
+      },
+      {
+        "code" : "C55447",
+        "display" : "Depression"
+      },
+      {
+        "code" : "C146748",
+        "display" : "Euphoria"
+      },
+      {
+        "code" : "C143525",
+        "display" : "Hallucinations"
+      },
+      {
+        "code" : "C146771",
+        "display" : "Insomnia"
+      },
+      {
+        "code" : "C143618",
+        "display" : "Irritability"
+      },
+      {
+        "code" : "C143649",
+        "display" : "Libido decreased"
+      },
+      {
+        "code" : "C143650",
+        "display" : "Libido increased"
+      },
+      {
+        "code" : "C143666",
+        "display" : "Mania"
+      },
+      {
+        "code" : "C143754",
+        "display" : "Personality change"
+      },
+      {
+        "code" : "C143787",
+        "display" : "Psychiatric disorders - Other, specify"
+      },
+      {
+        "code" : "C143788",
+        "display" : "Psychosis"
+      },
+      {
+        "code" : "C143811",
+        "display" : "Restlessness"
+      },
+      {
+        "code" : "C143864",
+        "display" : "Suicidal ideation"
+      },
+      {
+        "code" : "C143865",
+        "display" : "Suicide attempt"
+      },
+      {
+        "code" : "C143262",
+        "display" : "Acute kidney injury"
+      },
+      {
+        "code" : "C146707",
+        "display" : "Bladder perforation"
+      },
+      {
+        "code" : "C146698",
+        "display" : "Bladder spasm"
+      },
+      {
+        "code" : "C143369",
+        "display" : "Chronic kidney disease"
+      },
+      {
+        "code" : "C143393",
+        "display" : "Cystitis noninfective"
+      },
+      {
+        "code" : "C143237",
+        "display" : "Dysuria"
+      },
+      {
+        "code" : "C143238",
+        "display" : "Glucosuria"
+      },
+      {
+        "code" : "C143532",
+        "display" : "Hematuria"
+      },
+      {
+        "code" : "C146768",
+        "display" : "Hemoglobinuria"
+      },
+      {
+        "code" : "C56544",
+        "display" : "Renal hemorrhage"
+      },
+      {
+        "code" : "C143239",
+        "display" : "Nephrotic syndrome"
+      },
+      {
+        "code" : "C146758",
+        "display" : "Proteinuria"
+      },
+      {
+        "code" : "C143805",
+        "display" : "Renal and urinary disorders - Other, specify"
+      },
+      {
+        "code" : "C143806",
+        "display" : "Renal calculi"
+      },
+      {
+        "code" : "C143807",
+        "display" : "Renal colic"
+      },
+      {
+        "code" : "C143900",
+        "display" : "Urinary fistula"
+      },
+      {
+        "code" : "C143901",
+        "display" : "Urinary frequency"
+      },
+      {
+        "code" : "C146786",
+        "display" : "Urinary incontinence"
+      },
+      {
+        "code" : "C57097",
+        "display" : "Urinary retention"
+      },
+      {
+        "code" : "C143905",
+        "display" : "Urinary tract obstruction"
+      },
+      {
+        "code" : "C143906",
+        "display" : "Urinary tract pain"
+      },
+      {
+        "code" : "C143907",
+        "display" : "Urinary urgency"
+      },
+      {
+        "code" : "C143908",
+        "display" : "Urine discoloration"
+      },
+      {
+        "code" : "C143240",
+        "display" : "Amenorrhea"
+      },
+      {
+        "code" : "C143312",
+        "display" : "Azoospermia"
+      },
+      {
+        "code" : "C143335",
+        "display" : "Breast atrophy"
+      },
+      {
+        "code" : "C146742",
+        "display" : "Breast pain"
+      },
+      {
+        "code" : "C143423",
+        "display" : "Dysmenorrhea"
+      },
+      {
+        "code" : "C143424",
+        "display" : "Dyspareunia"
+      },
+      {
+        "code" : "C143435",
+        "display" : "Ejaculation disorder"
+      },
+      {
+        "code" : "C55615",
+        "display" : "Erectile dysfunction"
+      },
+      {
+        "code" : "C146752",
+        "display" : "Fallopian tube obstruction"
+      },
+      {
+        "code" : "C143483",
+        "display" : "Feminization acquired"
+      },
+      {
+        "code" : "C143515",
+        "display" : "Genital edema"
+      },
+      {
+        "code" : "C146685",
+        "display" : "Gynecomastia"
+      },
+      {
+        "code" : "C143531",
+        "display" : "Hematosalpinx"
+      },
+      {
+        "code" : "C143617",
+        "display" : "Irregular menstruation"
+      },
+      {
+        "code" : "C143634",
+        "display" : "Lactation disorder"
+      },
+      {
+        "code" : "C143671",
+        "display" : "Menorrhagia"
+      },
+      {
+        "code" : "C143706",
+        "display" : "Nipple deformity"
+      },
+      {
+        "code" : "C143713",
+        "display" : "Oligospermia"
+      },
+      {
+        "code" : "C143722",
+        "display" : "Ovarian rupture"
+      },
+      {
+        "code" : "C56553",
+        "display" : "Ovarian hemorrhage"
+      },
+      {
+        "code" : "C146769",
+        "display" : "Ovulation pain"
+      },
+      {
+        "code" : "C143739",
+        "display" : "Pelvic floor muscle weakness"
+      },
+      {
+        "code" : "C146679",
+        "display" : "Pelvic pain"
+      },
+      {
+        "code" : "C146680",
+        "display" : "Penile pain"
+      },
+      {
+        "code" : "C146681",
+        "display" : "Perineal pain"
+      },
+      {
+        "code" : "C143777",
+        "display" : "Premature menopause"
+      },
+      {
+        "code" : "C56552",
+        "display" : "Prostatic hemorrhage"
+      },
+      {
+        "code" : "C143784",
+        "display" : "Prostatic obstruction"
+      },
+      {
+        "code" : "C146664",
+        "display" : "Prostatic pain"
+      },
+      {
+        "code" : "C143808",
+        "display" : "Reproductive system and breast disorders - Other, specify"
+      },
+      {
+        "code" : "C146665",
+        "display" : "Scrotal pain"
+      },
+      {
+        "code" : "C56563",
+        "display" : "Spermatic cord hemorrhage"
+      },
+      {
+        "code" : "C146757",
+        "display" : "Spermatic cord obstruction"
+      },
+      {
+        "code" : "C56566",
+        "display" : "Testicular hemorrhage"
+      },
+      {
+        "code" : "C143872",
+        "display" : "Testicular disorder"
+      },
+      {
+        "code" : "C146666",
+        "display" : "Testicular pain"
+      },
+      {
+        "code" : "C143916",
+        "display" : "Uterine fistula"
+      },
+      {
+        "code" : "C143918",
+        "display" : "Uterine obstruction"
+      },
+      {
+        "code" : "C146683",
+        "display" : "Uterine pain"
+      },
+      {
+        "code" : "C56572",
+        "display" : "Uterine hemorrhage"
+      },
+      {
+        "code" : "C57104",
+        "display" : "Vaginal fistula"
+      },
+      {
+        "code" : "C56573",
+        "display" : "Vaginal hemorrhage"
+      },
+      {
+        "code" : "C143922",
+        "display" : "Vaginal discharge"
+      },
+      {
+        "code" : "C146687",
+        "display" : "Vaginal dryness"
+      },
+      {
+        "code" : "C143925",
+        "display" : "Vaginal inflammation"
+      },
+      {
+        "code" : "C146696",
+        "display" : "Vaginal obstruction"
+      },
+      {
+        "code" : "C146684",
+        "display" : "Vaginal pain"
+      },
+      {
+        "code" : "C146697",
+        "display" : "Vaginal perforation"
+      },
+      {
+        "code" : "C143926",
+        "display" : "Vaginal stricture"
+      },
+      {
+        "code" : "C58020",
+        "display" : "Adult respiratory distress syndrome"
+      },
+      {
+        "code" : "C143272",
+        "display" : "Allergic rhinitis"
+      },
+      {
+        "code" : "C55340",
+        "display" : "Apnea"
+      },
+      {
+        "code" : "C28245",
+        "display" : "Aspiration"
+      },
+      {
+        "code" : "C58022",
+        "display" : "Atelectasis"
+      },
+      {
+        "code" : "C143338",
+        "display" : "Bronchial fistula"
+      },
+      {
+        "code" : "C143340",
+        "display" : "Bronchial obstruction"
+      },
+      {
+        "code" : "C143341",
+        "display" : "Bronchial stricture"
+      },
+      {
+        "code" : "C143342",
+        "display" : "Bronchopleural fistula"
+      },
+      {
+        "code" : "C143343",
+        "display" : "Bronchopulmonary hemorrhage"
+      },
+      {
+        "code" : "C143344",
+        "display" : "Bronchospasm"
+      },
+      {
+        "code" : "C58027",
+        "display" : "Chylothorax"
+      },
+      {
+        "code" : "C58028",
+        "display" : "Cough"
+      },
+      {
+        "code" : "C58185",
+        "display" : "Dyspnea"
+      },
+      {
+        "code" : "C143447",
+        "display" : "Epistaxis"
+      },
+      {
+        "code" : "C143545",
+        "display" : "Hiccups"
+      },
+      {
+        "code" : "C143548",
+        "display" : "Hoarseness"
+      },
+      {
+        "code" : "C58188",
+        "display" : "Hypoxia"
+      },
+      {
+        "code" : "C143636",
+        "display" : "Laryngeal edema"
+      },
+      {
+        "code" : "C143637",
+        "display" : "Laryngeal inflammation"
+      },
+      {
+        "code" : "C143638",
+        "display" : "Laryngeal mucositis"
+      },
+      {
+        "code" : "C143639",
+        "display" : "Laryngeal obstruction"
+      },
+      {
+        "code" : "C143640",
+        "display" : "Laryngeal stenosis"
+      },
+      {
+        "code" : "C143642",
+        "display" : "Laryngopharyngeal dysesthesia"
+      },
+      {
+        "code" : "C143643",
+        "display" : "Laryngospasm"
+      },
+      {
+        "code" : "C58190",
+        "display" : "Laryngeal fistula"
+      },
+      {
+        "code" : "C56545",
+        "display" : "Laryngeal hemorrhage"
+      },
+      {
+        "code" : "C56549",
+        "display" : "Mediastinal hemorrhage"
+      },
+      {
+        "code" : "C143698",
+        "display" : "Nasal congestion"
+      },
+      {
+        "code" : "C143241",
+        "display" : "Oropharyngeal pain"
+      },
+      {
+        "code" : "C143756",
+        "display" : "Pharyngeal mucositis"
+      },
+      {
+        "code" : "C143757",
+        "display" : "Pharyngeal stenosis"
+      },
+      {
+        "code" : "C143759",
+        "display" : "Pharyngolaryngeal pain"
+      },
+      {
+        "code" : "C57851",
+        "display" : "Pharyngeal fistula"
+      },
+      {
+        "code" : "C56557",
+        "display" : "Pharyngeal hemorrhage"
+      },
+      {
+        "code" : "C57855",
+        "display" : "Pharyngeal necrosis"
+      },
+      {
+        "code" : "C56558",
+        "display" : "Pleural hemorrhage"
+      },
+      {
+        "code" : "C143765",
+        "display" : "Pleural effusion"
+      },
+      {
+        "code" : "C146663",
+        "display" : "Pleuritic pain"
+      },
+      {
+        "code" : "C143767",
+        "display" : "Pneumonitis"
+      },
+      {
+        "code" : "C58201",
+        "display" : "Pneumothorax"
+      },
+      {
+        "code" : "C143771",
+        "display" : "Postnasal drip"
+      },
+      {
+        "code" : "C143780",
+        "display" : "Productive cough"
+      },
+      {
+        "code" : "C143789",
+        "display" : "Pulmonary edema"
+      },
+      {
+        "code" : "C143790",
+        "display" : "Pulmonary fibrosis"
+      },
+      {
+        "code" : "C143791",
+        "display" : "Pulmonary fistula"
+      },
+      {
+        "code" : "C55068",
+        "display" : "Pulmonary hypertension"
+      },
+      {
+        "code" : "C143809",
+        "display" : "Respiratory failure"
+      },
+      {
+        "code" : "C143810",
+        "display" : "Respiratory, thoracic and mediastinal disorders - Other, specify"
+      },
+      {
+        "code" : "C56635",
+        "display" : "Retinoic acid syndrome"
+      },
+      {
+        "code" : "C143242",
+        "display" : "Rhinorrhea"
+      },
+      {
+        "code" : "C143831",
+        "display" : "Sinus disorder"
+      },
+      {
+        "code" : "C146783",
+        "display" : "Sinus pain"
+      },
+      {
+        "code" : "C143840",
+        "display" : "Sleep apnea"
+      },
+      {
+        "code" : "C143847",
+        "display" : "Sneezing"
+      },
+      {
+        "code" : "C143853",
+        "display" : "Sore throat"
+      },
+      {
+        "code" : "C143861",
+        "display" : "Stridor"
+      },
+      {
+        "code" : "C58205",
+        "display" : "Tracheal fistula"
+      },
+      {
+        "code" : "C143881",
+        "display" : "Tracheal mucositis"
+      },
+      {
+        "code" : "C143883",
+        "display" : "Tracheal stenosis"
+      },
+      {
+        "code" : "C143941",
+        "display" : "Voice alteration"
+      },
+      {
+        "code" : "C143947",
+        "display" : "Wheezing"
+      },
+      {
+        "code" : "C57898",
+        "display" : "Alopecia"
+      },
+      {
+        "code" : "C143330",
+        "display" : "Body odor"
+      },
+      {
+        "code" : "C143346",
+        "display" : "Bullous dermatitis"
+      },
+      {
+        "code" : "C57996",
+        "display" : "Dry skin"
+      },
+      {
+        "code" : "C143243",
+        "display" : "Eczema"
+      },
+      {
+        "code" : "C143449",
+        "display" : "Erythema multiforme"
+      },
+      {
+        "code" : "C143450",
+        "display" : "Erythroderma"
+      },
+      {
+        "code" : "C143479",
+        "display" : "Fat atrophy"
+      },
+      {
+        "code" : "C143244",
+        "display" : "Hair color changes"
+      },
+      {
+        "code" : "C143245",
+        "display" : "Hair texture abnormal"
+      },
+      {
+        "code" : "C143547",
+        "display" : "Hirsutism"
+      },
+      {
+        "code" : "C143553",
+        "display" : "Hyperhidrosis"
+      },
+      {
+        "code" : "C143246",
+        "display" : "Hyperkeratosis"
+      },
+      {
+        "code" : "C143561",
+        "display" : "Hypertrichosis"
+      },
+      {
+        "code" : "C143568",
+        "display" : "Hypohidrosis"
+      },
+      {
+        "code" : "C143653",
+        "display" : "Lipohypertrophy"
+      },
+      {
+        "code" : "C143247",
+        "display" : "Nail changes"
+      },
+      {
+        "code" : "C143694",
+        "display" : "Nail discoloration"
+      },
+      {
+        "code" : "C143696",
+        "display" : "Nail loss"
+      },
+      {
+        "code" : "C143697",
+        "display" : "Nail ridging"
+      },
+      {
+        "code" : "C143724",
+        "display" : "Pain of skin"
+      },
+      {
+        "code" : "C143726",
+        "display" : "Palmar-plantar erythrodysesthesia syndrome"
+      },
+      {
+        "code" : "C58005",
+        "display" : "Photosensitivity"
+      },
+      {
+        "code" : "C58006",
+        "display" : "Pruritus"
+      },
+      {
+        "code" : "C143794",
+        "display" : "Purpura"
+      },
+      {
+        "code" : "C143798",
+        "display" : "Rash acneiform"
+      },
+      {
+        "code" : "C143799",
+        "display" : "Rash maculo-papular"
+      },
+      {
+        "code" : "C146772",
+        "display" : "Scalp pain"
+      },
+      {
+        "code" : "C143833",
+        "display" : "Skin and subcutaneous tissue disorders - Other, specify"
+      },
+      {
+        "code" : "C146644",
+        "display" : "Skin atrophy"
+      },
+      {
+        "code" : "C143835",
+        "display" : "Skin hyperpigmentation"
+      },
+      {
+        "code" : "C143836",
+        "display" : "Skin hypopigmentation"
+      },
+      {
+        "code" : "C143837",
+        "display" : "Skin induration"
+      },
+      {
+        "code" : "C143839",
+        "display" : "Skin ulceration"
+      },
+      {
+        "code" : "C143859",
+        "display" : "Stevens-Johnson syndrome"
+      },
+      {
+        "code" : "C143248",
+        "display" : "Subcutaneous emphysema"
+      },
+      {
+        "code" : "C146740",
+        "display" : "Telangiectasia"
+      },
+      {
+        "code" : "C143880",
+        "display" : "Toxic epidermal necrolysis"
+      },
+      {
+        "code" : "C58019",
+        "display" : "Urticaria"
+      },
+      {
+        "code" : "C143848",
+        "display" : "Social circumstances - Other, specify"
+      },
+      {
+        "code" : "C143869",
+        "display" : "Surgical and medical procedures - Other, specify"
+      },
+      {
+        "code" : "C143249",
+        "display" : "Arterial thromboembolism"
+      },
+      {
+        "code" : "C143349",
+        "display" : "Capillary leak syndrome"
+      },
+      {
+        "code" : "C146643",
+        "display" : "Flushing"
+      },
+      {
+        "code" : "C56539",
+        "display" : "Hematoma"
+      },
+      {
+        "code" : "C143549",
+        "display" : "Hot flashes"
+      },
+      {
+        "code" : "C55060",
+        "display" : "Hypertension"
+      },
+      {
+        "code" : "C55061",
+        "display" : "Hypotension"
+      },
+      {
+        "code" : "C143659",
+        "display" : "Lymph leakage"
+      },
+      {
+        "code" : "C143660",
+        "display" : "Lymphedema"
+      },
+      {
+        "code" : "C55705",
+        "display" : "Lymphocele"
+      },
+      {
+        "code" : "C143749",
+        "display" : "Peripheral ischemia"
+      },
+      {
+        "code" : "C143761",
+        "display" : "Phlebitis"
+      },
+      {
+        "code" : "C143867",
+        "display" : "Superficial thrombophlebitis"
+      },
+      {
+        "code" : "C143868",
+        "display" : "Superior vena cava syndrome"
+      },
+      {
+        "code" : "C143873",
+        "display" : "Thromboembolic event"
+      },
+      {
+        "code" : "C143930",
+        "display" : "Vascular disorders - Other, specify"
+      },
+      {
+        "code" : "C54741",
+        "display" : "Vasculitis"
+      }]
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code \"C143283\" is not valid in the system http://ncithesaurus-stage.nci.nih.gov; The code provided (http://ncithesaurus-stage.nci.nih.gov#C143283) is not valid (from http://tx.fhir.org/r4)"
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://ncithesaurus-stage.nci.nih.gov",
+      "concept" : [{
+        "code" : "C41335",
+        "display" : "Serious Adverse Event"
+      },
+      {
+        "code" : "C41336",
+        "display" : "Non-serious Adverse Event"
+      }]
+    }]
+  }
+}}####
+e: {
+  "error" : "Error from server: Unable to provide support for code system http://ncithesaurus-stage.nci.nih.gov"
 }
 -------------------------------------------------------------------------------------

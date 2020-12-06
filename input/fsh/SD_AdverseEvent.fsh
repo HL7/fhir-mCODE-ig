@@ -1,3 +1,8 @@
+// Additional Invariants (Not done):
+// 1) if grade /= 0, seriousness must be specified
+// 2) If grade = 0, seriousness and suspectEntity must not be specified
+
+
 Profile: CTCAdverseEvent
 Parent: AdverseEvent
 Title: "CTC Adverse Event"
@@ -6,6 +11,7 @@ Description: "Profile of adverse event, using Common Terminology Criteria (CTC).
 * ^status = #draft
 * ^experimental = true
 * subject only Reference(Patient)
+* subject and date and outcome and recorder and actuality and category and study MS 
 * actuality = #actual
 // ------Event-----
 * event 1..1 MS
@@ -15,6 +21,8 @@ Description: "Profile of adverse event, using Common Terminology Criteria (CTC).
 * event.coding ^definition = "The preferred term taken from CTCAE."
 * event.coding.code ^short = "NCI Thesaurus code"
 * event.coding.code ^definition = "The NCI Thesaurus code for the CTCAE Preferred Term. The code should not precoordinate the adverse event grade"
+* event.coding.display ^short = "NCI Thesaurus preferred name."
+* event.coding.display ^definition = "The NCI Thesaurus preferred name corresponding to the NCI code."
 * event.coding.version ^short = "CTCAE Version"
 * event.coding.version ^definition = "The version of CTCAE supplying the preferred term."
 * event.text ^short = "Verbatim Text"
@@ -22,6 +30,7 @@ Description: "Profile of adverse event, using Common Terminology Criteria (CTC).
 // ------Grade-----
 * severity 0..0  // replaced with extension because severity has a required value set we don't want
 * extension contains CTCAEGrade named grade 1..1 MS
+* extension[CTCAEGrade].valueCodeableConcept MS
 * extension[CTCAEGrade].valueCodeableConcept.coding ^short = "Adverse Event Coded Grade"
 * extension[CTCAEGrade].valueCodeableConcept.coding ^definition = "The grade of the adverse event, determined by CTCAE criteria, entered as a NCI Thesaurus code. The code representing no adverse event may be used to provide positive confirmation that the clinician assessed or considered this particular AE, although the absence of an adverse event is generally not reportable."
 * extension[CTCAEGrade].valueCodeableConcept.text MS
@@ -29,10 +38,10 @@ Description: "Profile of adverse event, using Common Terminology Criteria (CTC).
 * extension[CTCAEGrade].valueCodeableConcept.text ^short = "Adverse Event Numerical Grade"
 * extension[CTCAEGrade].valueCodeableConcept.text ^definition = "The grade of the adverse event, determined by CTCAE criteria, entered as an integer number, 0 to 5 inclusive, where 0 represents confirmation that the given adverse event did NOT occur. Note that grade 0 events are generally not reportable, but may be created to give positive confirmation that the clinician assessed or considered this particular AE."
 // ------Seriousness------
-* seriousness MS  // should seriousness be required?
+* seriousness 0..1 MS
 * seriousness from AdverseEventSeriousnessVS (required)
 // ------Causality------
-* suspectEntity and suspectEntity.causality and suspectEntity.causality.assessment and suspectEntity.causality.assessment.text MS
+* suspectEntity and suspectEntity.instance and suspectEntity.causality and suspectEntity.causality.assessment and suspectEntity.causality.assessment.text MS
 * suspectEntity.causality.assessment from AdverseEventRelatednessVS (required)
 * suspectEntity.causality.assessment.text from AdverseEventRelatednessTextVS (required)
 
@@ -43,5 +52,7 @@ Title: "CTC Adverse Event Grade"
 Description: "The grade associated with the severity of an adverse event, using CTCAE criteria. See https://ctep.cancer.gov/protocolDevelopment/electronic_applications/ctc.htm"
 * ^status = #draft
 * ^experimental = true
+* ^context[0].type = #element
+* ^context[0].expression = "AdverseEvent"
 * value[x] only CodeableConcept
 * valueCodeableConcept from CTCAEGradeVS (required)

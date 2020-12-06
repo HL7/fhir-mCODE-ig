@@ -36,7 +36,7 @@ Description: "mCODE Example for Cancer Disease Status"
 * id = "mCODECancerDiseaseStatusExample1"
 * meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-disease-status"
 // * extension[evidenceType].url = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-evidence-type"
-* extension[evidenceType].valueCodeableConcept = SCT#252416005 "Histopathology test (procedure)"
+* extension[evidenceType].valueCodeableConcept = SCT#108257001 "Anatomic pathology procedure (procedure)"  // SCT#252416005 "Histopathology test (procedure)"
 * status = #final "final"
 * category = ObsCat#laboratory "laboratory"
 * subject = Reference(mCODEPatientExample1)

@@ -395,14 +395,3 @@ v: {
   "error" : ""
 }
 -------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
-  "code" : "349472",
-  "display" : "Gefitinib"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
-v: {
-  "display" : "gefitinib 250 MG Oral Tablet",
-  "severity" : "warning",
-  "error" : "The display \"Gefitinib\" is not a valid display for the code {http://www.nlm.nih.gov/research/umls/rxnorm}349472 - should be one of [\"gefitinib 250 MG Oral Tablet\"] (from http://tx.fhir.org/r4)"
-}
--------------------------------------------------------------------------------------

@@ -7,7 +7,7 @@ Description: "Abstract parent class for cancer procedure profiles."
 * extension contains
     TreatmentIntent named treatmentIntent 0..1 MS
 * category 1..1
-* reasonCode from AnyCancerDisorderVS (extensible)
+* reasonCode from CancerDisorderVS (extensible)
 * reasonReference only Reference(CancerConditionParent)  // rather than Primary, Secondary, Tumor
 * partOf only Reference(Procedure)
 * recorder only Reference(Practitioner or PractitionerRole)

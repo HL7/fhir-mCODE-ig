@@ -13,7 +13,7 @@ Conformance statement:
     TreatmentIntent named treatmentIntent 0..1 MS and
     TerminationReason named terminationReason 0..* MS
 * reasonCode MS
-* reasonCode from AnyCancerDisorderVS (extensible)
+* reasonCode from CancerDisorderVS (extensible)
 * reasonReference MS
 * reasonReference only Reference(CancerConditionParent) // only for cancer-related reasons
 * requester MS
@@ -42,7 +42,7 @@ Conformance statement:
     TreatmentIntent named treatmentIntent 0..1 MS and
     TerminationReason named terminationReason 0..* MS
 * reasonCode MS
-* reasonCode from AnyCancerDisorderVS (extensible)
+* reasonCode from CancerDisorderVS (extensible)
 * reasonReference MS
 * reasonReference only Reference(CancerConditionParent) // only for cancer-related reasons
 * request MS

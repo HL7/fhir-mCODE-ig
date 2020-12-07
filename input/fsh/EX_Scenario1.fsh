@@ -87,7 +87,7 @@ Description: "Extended example 1: example showing comorbid condition (hypertensi
 * clinicalStatus = ClinStatus#active
 * verificationStatus = VerStatus#confirmed
 * category = CondCat#problem-list-item
-* code = SCT#77970009 "Benign hypertensive heart disease without congestive heart failure (disorder)"  // Changed to avoid IG Publisher error ICD10CM#I119 "Hypertensive heart disease without heart failure"
+* code = SCT#77970009 "Benign hypertensive heart disease without congestive heart failure (disorder)"  // Changed to avoid IG Publisher error ICD10CM#I11.9 "Hypertensive heart disease without heart failure"
 * subject = Reference(scenario1-mcode-cancer-patient)
 * onsetDateTime = "2000-01-01"
 * asserter = Reference(scenario1-us-core-practitioner)

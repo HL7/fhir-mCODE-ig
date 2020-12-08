@@ -20,7 +20,7 @@ dependencies:
 parameters:
   show-inherited-invariants: false
   version-comparison: n/a
-  path-expansion-params: '/input/exp-params.json'  # for using US ed of SNOMED
+  path-expansion-params: '../../input/_resources/exp-params.json' 
 copyrightYear: 2019+
 releaseLabel: STU1
 pages:

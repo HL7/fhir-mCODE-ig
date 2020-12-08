@@ -30,3 +30,4 @@ Alias:   MedReqStatus = http://hl7.org/fhir/CodeSystem/medicationrequest-status
 Alias:   MedReqIntent = http://hl7.org/fhir/CodeSystem/medicationrequest-intent
 Alias:   MedReqCat = 	http://terminology.hl7.org/CodeSystem/medicationrequest-category
 Alias:   RefMeaning = http://terminology.hl7.org/CodeSystem/referencerange-meaning
+Alias:   AEO = http://terminology.hl7.org/CodeSystem/adverse-event-outcome 

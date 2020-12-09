@@ -2,12 +2,14 @@ Extension: ComorbidConditionCode
 Id: mcode-comorbid-condition-code
 Title:  "Comorbid Condition Code"
 Description: "An extension for representing the condition code corresponding to the named comorbid condition."
+* extension 0..0
 * value[x] only CodeableConcept
 
 Extension: ComorbidConditionReference
 Id: mcode-comorbid-condition-reference
 Title:  "Comorbid Condition Reference"
 Description: "An extension for representing a reference to a condition resource corresponding to the named comorbid condition."
+* extension 0..0
 * value[x] only Reference(Condition)
 
 Extension: EvidenceType
@@ -16,8 +18,9 @@ Title: "Evidence Type"
 Description: "Categorization of the kind of evidence used as input to the clinical judgment. This corresponds to both the S and O in SOAP."
 * ^context[0].type = #element
 * ^context[0].expression = "Observation"
+* extension 0..0
 * value[x] only CodeableConcept
-* valueCodeableConcept from CancerDiseaseStatusEvidenceTypeVS (required)
+* value[x] from CancerDiseaseStatusEvidenceTypeVS (required)
 
 Extension: HistologyMorphologyBehavior
 Id: mcode-histology-morphology-behavior
@@ -25,8 +28,9 @@ Title: "Histology-Morphology-Behavior"
 Description: "An extension describing the morphologic and behavioral characteristics of the cancer."
 * ^context[0].type = #element
 * ^context[0].expression = "Condition"
+* extension 0..0
 * value[x] only CodeableConcept
-* valueCodeableConcept from HistologyMorphologyBehaviorVS (extensible)
+* value[x] from HistologyMorphologyBehaviorVS (extensible)
 
 Extension: LocationQualifier
 Id:  mcode-location-qualifier
@@ -40,8 +44,9 @@ Description: "Qualifier to refine the anatomical location. These include qualifi
 * ^context[2].expression = "Condition.bodySite"
 * ^context[3].type = #element
 * ^context[3].expression = "Observation.bodySite"
+* extension 0..0
 * value[x] only CodeableConcept
-* valueCodeableConcept from LocationQualifierVS (required)
+* value[x] from LocationQualifierVS (required)
 
 Extension: RelatedPrimaryCancerCondition
 Id: mcode-related-primary-cancer-condition
@@ -49,6 +54,7 @@ Title: "Related Primary Cancer Condition"
 Description: "A reference to the primary cancer condition that provides context for this resource."
 * ^context[0].type = #element
 * ^context[0].expression = "Condition"
+* extension 0..0
 * value[x] only Reference(PrimaryCancerCondition)
 
 Extension: TerminationReason
@@ -59,8 +65,9 @@ Description: "A code explaining an unplanned or premature termination of a plan 
 * ^context[0].expression = "MedicationRequest"
 * ^context[1].type = #element
 * ^context[1].expression = "Procedure"
+* extension 0..0
 * value[x] only CodeableConcept
-* valueCodeableConcept from TreatmentTerminationReasonVS (required)
+* value[x] from TreatmentTerminationReasonVS (required)
 
 
 Extension: TreatmentIntent
@@ -71,8 +78,9 @@ Description: "The purpose of a treatment."
 * ^context[0].expression = "MedicationRequest"
 * ^context[1].type = #element
 * ^context[1].expression = "Procedure"
+* extension 0..0
 * value[x] only CodeableConcept
-* valueCodeableConcept from TreatmentIntentVS (required)
+* value[x] from TreatmentIntentVS (required)
 
 
 /* Save for possible future use
@@ -82,7 +90,7 @@ Id:  mcode-anatomical-orientation
 Title: "Anatomical Orientation"
 Description: "AnatomicalOrientation of the body location, if needed to distinguish from a similar location in another orientation."
 * value[x] only CodeableConcept
-* valueCodeableConcept from AnatomicalOrientationVS (required)
+* value[x] from AnatomicalOrientationVS (required)
 
 Extension: RelationToLandmark
 Id:  mcode-relation-to-landmark
@@ -103,7 +111,7 @@ Id:  mcode-landmark-type
 Title: "Landmark Type"
 Description: "The type of feature that constitutes the landmark, particularly if the landmark is an acquired body structure or physical object."
 * value[x] only CodeableConcept
-* valueCodeableConcept from LandmarkTypeVS (extensible)
+* value[x] from LandmarkTypeVS (extensible)
 
 Extension: LandmarkLocation
 Id:  mcode-landmark-location
@@ -122,14 +130,14 @@ Id:  mcode-body-site-code
 Title: "Body Site Code"
 Description: "An anatomical location represented as a code."
 * value[x] only CodeableConcept
-* valueCodeableConcept from http://hl7.org/fhir/ValueSet/body-site (example)
+* value[x] from http://hl7.org/fhir/ValueSet/body-site (example)
 
 Extension: LandmarkToBodyLocationDirection
 Id:  mcode-landmark-to-body-location-direction
 Title: "Landmark to Body Location Direction"
 Description: "The direction from the landmark to the body location of interest, given as a clockface direction or anatomical direction."
 * value[x] only CodeableConcept
-* valueCodeableConcept from AnatomicalDirectionVS (preferred)
+* value[x] from AnatomicalDirectionVS (preferred)
 
 Extension: LandmarkToBodyLocationDistance
 Id:  mcode-landmark-to-body-location-distance

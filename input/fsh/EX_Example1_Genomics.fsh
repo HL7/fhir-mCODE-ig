@@ -5,7 +5,7 @@ Description: "mCODE Example for Cancer Genetic Variant"
 * meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genetic-variant"
 * status = #final "Final"
 * method = LNC#LA26398-0 "Sequencing"
-// valueCodeableConcept has alternate codings depending on where to place the interpretation of "Positive or Negative".
+// value[x] has alternate codings depending on where to place the interpretation of "Positive or Negative".
 // * valueCodeableConcept = SCT#10828004 "Positive (qualifier value)"
 * subject = Reference(mCODEPatientExample1)
 * effectiveDateTime = "2019-04-01"
@@ -30,7 +30,7 @@ Description: "mCODE Example for Cancer Genetic Variant"
 * meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genetic-variant"
 * status = #final "Final"
 * method = LNC#LA26398-0 "Sequencing"
-// valueCodeableConcept has alternate codings depending on where to place the interpretation of "Positive or Negative".
+// value[x] has alternate codings depending on where to place the interpretation of "Positive or Negative".
 * valueCodeableConcept = SCT#10828004 "Positive (qualifier value)"
 * subject = Reference(mCODEPatientExample1)
 * effectiveDateTime = "2019-04-01"

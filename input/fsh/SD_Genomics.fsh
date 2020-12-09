@@ -8,7 +8,7 @@ Conformance statement:
 
 Observation resources associated with an mCODE patient with Observation.code LOINC 69548-6 MUST conform to this profile. Beyond this requirement, a producer of resources SHOULD ensure that any resource instance associated with an mCODE patient that would reasonably be expected to conform to this profile SHOULD be published in this form."
 
-* status and code and subject and effective[x] and valueCodeableConcept and method MS
+* status and code and subject and effective[x] and value[x] and method MS
 * bodySite 0..0
 * referenceRange 0..0
 * hasMember 0..0
@@ -29,7 +29,7 @@ Observation resources associated with an mCODE patient with Observation.code LOI
 * specimen only Reference(GeneticSpecimen)
 * value[x] only CodeableConcept
 * value[x] ^definition = "The overall result of the genetic test; specifically, whether a variant is present, absent, no call, or indeterminant."
-* valueCodeableConcept from http://loinc.org/vs/LL1971-2 (required)
+* value[x] from http://loinc.org/vs/LL1971-2 (required)
 * insert ObservationComponentSlicingRules
 * component contains
     GeneStudied 0..* MS and
@@ -45,46 +45,46 @@ Observation resources associated with an mCODE patient with Observation.code LOI
 * component[GeneStudied] ^definition = "A gene targeted for mutation analysis, identified in HUGO Gene Nomenclature Committee (HGNC) notation. The required code is HGNC gene ID. Gene IDs are of the format HGNC:n, where n is a unique number. Only the number, n, should be given as the code. For example, the HGNC identifier for the EGFR gene is 3236. The display text associated with the code should be the HGNC official gene symbol. For example, the official gene symbol for epidermal growth factor receptor is EGFR."
 * component[GeneStudied].code = LNC#48018-6
 * component[GeneStudied].value[x] only CodeableConcept
-* component[GeneStudied].valueCodeableConcept 1..1
-* component[GeneStudied].valueCodeableConcept from HGNCVS (extensible)
+* component[GeneStudied].value[x] 1..1
+* component[GeneStudied].value[x] from HGNCVS (extensible)
 * component[VariationCode] ^short = "Discrete genetic variant"
 * component[VariationCode] ^definition = "The variation ID assigned by ClinVar, for example, 360448 is the identifier which includes the HGVS nomenclature NM_005228.4(EGFR):c.-237A>G (single nucleotide variant in EGFR). Other acceptable variant standards include the Catalogue Of Somatic Mutations In Cancer (COSMIC) and the International System for Human Cytogenetic Nomenclature (ISCN)."
 * component[VariationCode].code = LNC#81252-9
 * component[VariationCode].value[x] only CodeableConcept
-* component[VariationCode].valueCodeableConcept 1..1
-* component[VariationCode].valueCodeableConcept from ClinVarVS (preferred)
+* component[VariationCode].value[x] 1..1
+* component[VariationCode].value[x] from ClinVarVS (preferred)
 * component[GenomicDNAChange] ^short = "Genomic DNA change (gHGVS)"
 * component[GenomicDNAChange] ^definition = "The symbolic representation of a genetic structural variant reported using HGVS nomenclature (gHGVS)"
 * component[GenomicDNAChange].code = LNC#81290-9
 * component[GenomicDNAChange].value[x] only CodeableConcept
-* component[GenomicDNAChange].valueCodeableConcept 1..1
-* component[GenomicDNAChange].valueCodeableConcept from HGVSVS (required)
+* component[GenomicDNAChange].value[x] 1..1
+* component[GenomicDNAChange].value[x] from HGVSVS (required)
 
 * component[GenomicDNAChangeType] ^short = "DNA Change Type"
 * component[GenomicDNAChangeType] ^definition = "Codified type for associated DNA Marker. DNA Markers use the HGVS notation which implies the DNA Marker Type, but the concurrent use of this code will allow a standard and explicit type for technical and display convenience."
 * component[GenomicDNAChangeType].code = LNC#48019-4  // DNA change type
 * component[GenomicDNAChangeType].value[x] only CodeableConcept
-* component[GenomicDNAChangeType].valueCodeableConcept 1..1
-* component[GenomicDNAChangeType].valueCodeableConcept from DNAChangeTypeVS (extensible)
+* component[GenomicDNAChangeType].value[x] 1..1
+* component[GenomicDNAChangeType].value[x] from DNAChangeTypeVS (extensible)
 
 * component[GenomicSourceClass] ^short = "Genomic source class [Type]"
 * component[GenomicSourceClass] ^definition = "The genomic class of the specimen being analyzed, for example, germline for inherited genome, somatic for cancer genome, and prenatal for fetal genome."
 * component[GenomicSourceClass].code = LNC#48002-0
 * component[GenomicSourceClass].value[x] only CodeableConcept
-* component[GenomicSourceClass].valueCodeableConcept 1..1
-* component[GenomicSourceClass].valueCodeableConcept from http://loinc.org/vs/LL378-1 (required)
+* component[GenomicSourceClass].value[x] 1..1
+* component[GenomicSourceClass].value[x] from http://loinc.org/vs/LL378-1 (required)
 * component[AminoAcidChange] ^short = "Amino acid change (pHGVS)"
 * component[AminoAcidChange] ^definition = "The symbolic representation of an amino acid variant reported using HGVS nomenclature (pHGVS)."
 * component[AminoAcidChange].code = LNC#48005-3
 * component[AminoAcidChange].value[x] only CodeableConcept
-* component[AminoAcidChange].valueCodeableConcept 1..1
-* component[AminoAcidChange].valueCodeableConcept from HGVSVS (required)
+* component[AminoAcidChange].value[x] 1..1
+* component[AminoAcidChange].value[x] from HGVSVS (required)
 * component[AminoAcidChangeType] ^short = "Amino acid change [Type]"
 * component[AminoAcidChangeType] ^definition = "The type of change related to the amino acid variant."
 * component[AminoAcidChangeType].code = LNC#48006-1
 * component[AminoAcidChangeType].value[x] only CodeableConcept
-* component[AminoAcidChangeType].valueCodeableConcept 1..1
-* component[AminoAcidChangeType].valueCodeableConcept from http://loinc.org/vs/LL380-7 (required)
+* component[AminoAcidChangeType].value[x] 1..1
+* component[AminoAcidChangeType].value[x] from http://loinc.org/vs/LL380-7 (required)
 * component[CytogeneticLocation] ^short = "Cytogenetic (chromosome) location"
 * component[CytogeneticLocation] ^definition = "The cytogenetic (chromosome) location."
 * component[CytogeneticLocation].code = LNC#48001-2
@@ -94,7 +94,7 @@ Observation resources associated with an mCODE patient with Observation.code LOI
 * component[CytogeneticNomenclature] ^definition = "The cytogenetic (chromosome) location, represented using the International System for Human Cytogenetic Nomenclature (ISCN)"
 * component[CytogeneticNomenclature].code = LNC#81291-7
 * component[CytogeneticNomenclature].value[x] only CodeableConcept
-* component[CytogeneticNomenclature].valueCodeableConcept 1..1
+* component[CytogeneticNomenclature].value[x] 1..1
 // CG Reporting IG does not constrain the CytogeneticNomenclature value type.
 
 
@@ -193,15 +193,15 @@ Observation resources associated with an mCODE patient with DiagnoticReport.code
 * component[GeneMutations] ^definition = "The gene mutations tested for in blood or tissue by molecular genetics methods"
 * component[GeneMutations].code = LNC#36908-2
 * component[GeneMutations].value[x] only CodeableConcept
-* component[GeneMutations].valueCodeableConcept 1..1
-* component[GeneMutations].valueCodeableConcept from HGVSVS (required)
+* component[GeneMutations].value[x] 1..1
+* component[GeneMutations].value[x] from HGVSVS (required)
 
 * component[GeneStudied] ^short = "Gene studied [ID]"
 * component[GeneStudied] ^definition = "The ID for the gene studied"
 * component[GeneStudied].code = LNC#48018-6
 * component[GeneStudied].value[x] only CodeableConcept
-* component[GeneStudied].valueCodeableConcept 1..1
-* component[GeneStudied].valueCodeableConcept from HGNCVS (extensible)
+* component[GeneStudied].value[x] 1..1
+* component[GeneStudied].value[x] from HGNCVS (extensible)
 
 * component[DNARegionDescription] ^short = "Description of ranges of DNA sequences examined"
 * component[DNARegionDescription] ^definition = "Description for the DNA region studied in the genomics report"
@@ -219,8 +219,8 @@ Observation resources associated with an mCODE patient with DiagnoticReport.code
 * component[GenomicRegionCoordinateSystem] ^definition = "The method of counting along the genome, for example, 0-based interval counting or 0-based character counting."
 * component[GenomicRegionCoordinateSystem].code = LNC#92822-6
 * component[GenomicRegionCoordinateSystem].value[x] only CodeableConcept
-* component[GenomicRegionCoordinateSystem].valueCodeableConcept 1..1
-* component[GenomicRegionCoordinateSystem].valueCodeableConcept from http://loinc.org/vs/LL5323-2 (preferred)
+* component[GenomicRegionCoordinateSystem].value[x] 1..1
+* component[GenomicRegionCoordinateSystem].value[x] from http://loinc.org/vs/LL5323-2 (preferred)
 * component[GenomicReferenceSequenceId] ^short = "Genomic reference sequence [ID]"
 * component[GenomicReferenceSequenceId] ^definition = "Range(s) of DNA sequence examined. The genomic reference sequence is a contiguous stretch of chromosome DNA that spans all of the exons of the gene and includes transcribed and non transcribed stretches. For this ID use either the NCBI genomic nucleotide RefSeq IDs with their version number (see: NCBI.NLM.NIH.Gov/RefSeq) or use the LRG identifiers, without transcript (t or p) extensions -- when they become available. (source: LOINC)"
 * component[GenomicReferenceSequenceId].code = LNC#48013-7

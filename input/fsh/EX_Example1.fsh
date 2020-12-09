@@ -243,7 +243,7 @@ Description: "mCODE Example for TNM Clinical Stage Group"
 * status = #final "final"
 * method = NCIT#C146985 "AJCC Cancer Staging Manual 8th Edition"
 * subject = Reference(mCODEPatientExample1)
-* category = ObsCat#survey "survey"
+* category = ObsCat#exam "exam"
 * effectiveDateTime = "2019-04-01"
 * valueCodeableConcept = AJCC#3C "IIIC"
 * hasMember[TNMClinicalPrimaryTumorCategory] = Reference(mCODETNMClinicalPrimaryTumorCategoryExample1)
@@ -258,7 +258,7 @@ Description: "mCODE Example for TNM Clinical Distant Metastases Category"
 * status = #final "final"
 * method = NCIT#C146985 "AJCC Cancer Staging Manual 8th Edition"
 * subject = Reference(mCODEPatientExample1)
-* category = ObsCat#survey "survey"
+* category = ObsCat#exam "exam"
 * effectiveDateTime = "2019-04-01"
 * valueCodeableConcept = AJCC#cM0 "M0"
 
@@ -267,7 +267,7 @@ InstanceOf: TNMClinicalPrimaryTumorCategory
 Description: "mCODE Example for TNM Clinical Primary Tumor Category"
 * id = "mCODETNMClinicalPrimaryTumorCategoryExample1"
 * meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-clinical-primary-tumor-category"
-* category = ObsCat#survey "survey"
+* category = ObsCat#exam "exam"
 * status = #final "final"
 * method = NCIT#C146985 "AJCC Cancer Staging Manual 8th Edition"
 * subject = Reference(mCODEPatientExample1)
@@ -280,7 +280,7 @@ InstanceOf: TNMClinicalRegionalNodesCategory
 Description: "mCODE Example for TNM Clinical Regional Nodes Category"
 * id = "mCODETNMClinicalRegionalNodesCategoryExample1"
 * meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-clinical-regional-nodes-category"
-* category = ObsCat#survey "survey"
+* category = ObsCat#exam "exam"
 * status = #final "final"
 * method = NCIT#C146985 "AJCC Cancer Staging Manual 8th Edition"
 * subject = Reference(mCODEPatientExample1)

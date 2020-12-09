@@ -18848,3 +18848,55 @@ e: {
   "error" : "Error from server: Unable to provide support for code system http://ncithesaurus-stage.nci.nih.gov"
 }
 -------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://ncithesaurus-stage.nci.nih.gov",
+  "code" : "C41333"
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code system \"http://ncithesaurus-stage.nci.nih.gov\" is not known (encountered paired with code = \"C41333\"); The code provided (http://ncithesaurus-stage.nci.nih.gov#C41333) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4)"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://ncithesaurus-stage.nci.nih.gov",
+  "code" : "C41334"
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code system \"http://ncithesaurus-stage.nci.nih.gov\" is not known (encountered paired with code = \"C41334\"); The code provided (http://ncithesaurus-stage.nci.nih.gov#C41334) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4)"
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://ncithesaurus-stage.nci.nih.gov",
+      "concept" : [{
+        "code" : "C41333",
+        "display" : "Expected Adverse Event"
+      },
+      {
+        "code" : "C41334",
+        "display" : "Unexpected Adverse Event"
+      }]
+    }]
+  }
+}}####
+e: {
+  "valueSet" : {
+  "resourceType" : "ValueSet",
+  "status" : "active",
+  "expansion" : {
+    "identifier" : "urn:uuid:8e686afc-e128-46de-a083-e898193d886d",
+    "timestamp" : "2020-12-09T12:00:01.986Z",
+    "parameter" : [{
+      "name" : "limitedExpansion",
+      "valueBoolean" : true
+    }]
+  }
+},
+  "error" : ""
+}
+-------------------------------------------------------------------------------------

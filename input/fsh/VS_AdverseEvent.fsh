@@ -1,6 +1,6 @@
 
 CodeSystem: CTCAEGradeCS
-Id: mcode-ctcae-grade-code-system
+Id: ctcae-grade-code-system
 Title: "CTCAE Grade Code System"
 Description: "Common terminology criteria (CTC) grades associated with the severity of an adverse event, expressed as integers, 0 through 5, with 0 representing no adverse event, and 5 representing death."
 * #0 "Absent Adverse Event" "The absence of adverse events or within normal limits or values."
@@ -12,20 +12,20 @@ Description: "Common terminology criteria (CTC) grades associated with the sever
 
 
 ValueSet: CTCAEGradeVS
-Id: mcode-ctcae-grade-value-set
+Id: ctcae-grade-value-set
 Title: "CTCAE Grade Value Set"
 Description: "CTCAE Grades 0 through 5. The grade of the adverse event, determined by CTCAE criteria, where 0 represents confirmation that the given adverse event did NOT occur, and 5 represents death. Note that grade 0 events are generally not reportable, but may be created to give positive confirmation that the clinician assessed or considered a particular AE."
 * include codes from system CTCAEGradeCS
 
 ValueSet: AdverseEventSeriousnessVS
-Id: mcode-adverse-event-seriousness-value-set
+Id: adverse-event-seriousness-value-set
 Title: "Adverse Event Seriousness Value Set"
 Description: "An adverse event is classified as serious or non-serious. It is considered serious if it results in any of the following outcomes: (1) Death, (2) Life-threatening experience, 3) Inpatient hospitalization or prolongation of existing hospitalization (for > 24 hours), (4) Persistent or significant incapacity or substantial disruption of the ability to conduct normal life functions, (5) Congenital anomaly/birth defect, or (6) Important Medical Event (IME) that may jeopardize the patient or subject and may require medical or surgical intervention to prevent one of the outcomes listed in this definition (reference: https://crawb.crab.org/txwb/CRA_MANUAL/Vol1/chapter%2013_Serious%20Adverse%20Events.pdf)."
 * NCIT#C41335 "Serious Adverse Event"
 * NCIT#C41336 "Non-serious Adverse Event"
 
 ValueSet: AdverseEventRelatednessVS
-Id: mcode-adverse-event-relatedness-value-set
+Id: adverse-event-relatedness-value-set
 Title: "Adverse Event Relatedness Value Set"
 Description: "Codes qualifying the adverse event's relationship to the medical intervention, according to WHO causality assessment criteria: it is applicable to a clinical event, including laboratory test abnormality, occurs in a plausible time relationship to medical intervention, and cannot be explained by concurrent disease or other interventions."
 * NCIT#C53256 "Adverse Event Unrelated to Intervention"
@@ -35,8 +35,15 @@ Description: "Codes qualifying the adverse event's relationship to the medical i
 * NCIT#C53260 "Adverse Event Definitely Related to Intervention"
 * NCIT#C68618 "Adverse Event Conditionally Related to Intervention"
 
+ValueSet: AdverseEventExpectationVS
+Id: adverse-event-expectation-value-set
+Title: "Adverse Event Expectation Value Set"
+Description: "An expected adverse event is one whose nature and severity have been previously observed, identified in nature, severity, or frequency, and documented in the investigator brochure, investigational plan, protocol, current consent form, scientific publication, or in other relevant and reliable document. An unexpected adverse event is one that has not been previously observed, whether or not the event was anticipated because of the pharmacologic properties of the study agent or the nature of the medical procedure. This includes events that are more serious than expected or occur more frequently than expected, particularly, any adverse experience, the nature, severity or frequency of which is not consistent with the product label, or with the current investigator brochure for investigational agent; or with the risk information described in the investigational plan or protocol or consent form (NCI Thesaurus)."
+* NCIT#C41333 "Expected Adverse Event"
+* NCIT#C41334 "Unexpected Adverse Event"
+
 ValueSet: CTCAEPreferredTermVS
-Id: mcode-ctcae-preferred-term-value-set
+Id: ctcae-preferred-term-value-set
 Title: "CTCAE Preferred Terms"
 Description: "The NCI Common Terminology Criteria for Adverse Events (CTCAE) is utilized for Adverse Event (AE) reporting. The codes are drawn from the NCI Thesaurus. Each CTCAE term is a MedDRA LLT (Lowest Level Term). The value set is CTCAE 5.0 and corresponds to MedDRA version 20.1. See https://evs.nci.nih.gov/ftp1/CTCAE/CTCAE_5.0/NCIt_CTCAE_5.0.xlsx.
 
@@ -882,7 +889,7 @@ Description: "The NCI Common Terminology Criteria for Adverse Events (CTCAE) is 
 /* Hold for now
 
 ValueSet: CTCAEGradeVS
-Id: mcode-ctcae-grade-value-set
+Id: ctcae-grade-value-set
 Title: "CTCAE Grade Value Set"
 Description: "Common terminology criteria grades associated with the severity of an adverse event. The additional term, 'Absent Adverse Event' (aka grade 0) is used to indicate the patient has been assessed, and the given adverse event has not occurred. Grade 0 events may not be valid in certain reporting contexts."
 * NCIT#C75533 "Absent Adverse Event"  
@@ -893,7 +900,7 @@ Description: "Common terminology criteria grades associated with the severity of
 * NCIT#C48275  "Death Related to Adverse Event"
 
 CodeSystem: AdverseEventRelatednessTextCS
-Id: mcode-adverse-event-relatedness-text-code-system
+Id: adverse-event-relatedness-text-code-system
 Title: "Adverse Event Relatedness Text Code System"
 Description: "Short texts qualifying the adverse event's relationship to the medical intervention."
 * #unrelated "Unrelated"  "Adverse Event Unrelated to Intervention"
@@ -905,7 +912,7 @@ Description: "Short texts qualifying the adverse event's relationship to the med
 * #related  "Related"  "Adverse Event Related to Intervention, with any unspecified degree of likelihood"
 
 ValueSet: AdverseEventRelatednessTextVS
-Id:  mcode-adverse-event-relatedness-text-value-set
+Id:  adverse-event-relatedness-text-value-set
 Title: "Adverse Event Relatedness Text Value Set"
 Description: "Degrees of relatedness expressed as text strings."
 * include codes from system AdverseEventRelatednessTextCS

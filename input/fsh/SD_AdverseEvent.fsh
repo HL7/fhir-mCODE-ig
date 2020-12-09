@@ -6,7 +6,7 @@
 Profile: CTCAdverseEvent
 Parent: AdverseEvent
 Title: "CTC Adverse Event"
-Id: mcode-ctc-adverse-event
+Id: ctc-adverse-event
 Description: "Profile of adverse event, using Common Terminology Criteria (CTC)."
 * ^status = #draft
 * ^experimental = true
@@ -29,10 +29,16 @@ Description: "Profile of adverse event, using Common Terminology Criteria (CTC).
 * event.text ^definition = "The original, verbatim word or phrase as entered by the clinician describing the advese event. The verbatim text may be different than the CTCAE Preferred Term given in event.coding.display, since the latter is derived, coded version of the verbatim text. If the AE was selected from a pick list, the event.text must be text displayed in the user interface that was selected by the clinician."
 // ------Grade-----
 * severity 0..0  // replaced with extension because severity has a required value set we don't want
-* extension contains CTCAEGrade named grade 1..1 MS
-* extension[CTCAEGrade].valueCodeableConcept MS
-* extension[CTCAEGrade].valueCodeableConcept.coding ^short = "Adverse Event Grade"
-* extension[CTCAEGrade].valueCodeableConcept.coding ^definition = "The grade of the adverse event, determined by CTCAE criteria. The code '0' representing no adverse event may be used to provide positive confirmation that the clinician assessed or considered this particular AE, although the absence of an adverse event is generally not reportable."
+* extension contains 
+    CTCAEGrade named grade 1..1 MS and
+    AdverseEventExpectation named expectation 0..1 MS and
+    AdverseEventResolvedDate named resolvedDate 0..1 MS
+* extension[CTCAEGrade] ^short = "Adverse Event Grade"
+* extension[CTCAEGrade] ^definition = "The grade of the adverse event, determined by CTCAE criteria. The code '0' representing no adverse event may be used to provide positive confirmation that the clinician assessed or considered this particular AE, although the absence of an adverse event is generally not reportable."
+* extension[AdverseEventExpectation] ^short = "Adverse Event Expectation"
+* extension[AdverseEventExpectation] ^definition = "A determination if the adverse event is or is not one whose nature and severity have been previously observed, identified in nature, severity, or frequency, and documented in the investigator brochure, investigational plan, protocol, current consent form, scientific publication, or in other relevant and reliable document."
+* extension[AdverseEventResolvedDate] ^short = "Adverse Resolved Date"
+* extension[AdverseEventResolvedDate] ^definition = "The date (and time) when the adverse event ends or returns to baseline (NCI Thesaurus)."
 // ------Seriousness------
 * seriousness 0..1 MS
 * seriousness from AdverseEventSeriousnessVS (required)
@@ -40,14 +46,33 @@ Description: "Profile of adverse event, using Common Terminology Criteria (CTC).
 * suspectEntity and suspectEntity.instance and suspectEntity.causality and suspectEntity.causality.assessment and suspectEntity.causality.assessment.text MS
 * suspectEntity.causality.assessment from AdverseEventRelatednessVS (required)
 
-
-Extension: CTCAEGrade
-Id: mcode-ctcae-grade
-Title: "CTC Adverse Event Grade"
-Description: "The grade associated with the severity of an adverse event, using CTCAE criteria. See https://ctep.cancer.gov/protocolDevelopment/electronic_applications/ctc.htm"
+RuleSet: AdverseEventExtensionPreamble
 * ^status = #draft
 * ^experimental = true
 * ^context[0].type = #element
 * ^context[0].expression = "AdverseEvent"
+
+
+Extension: CTCAEGrade
+Id: ctcae-grade
+Title: "CTC Adverse Event Grade"
+Description: "The grade associated with the severity of an adverse event, using CTCAE criteria. The code '0' representing no adverse event may be used to provide positive confirmation that the clinician assessed or considered this particular AE, although the absence of an adverse event is generally not reportable. See https://ctep.cancer.gov/protocolDevelopment/electronic_applications/ctc.htm"
+* insert AdverseEventExtensionPreamble 
 * value[x] only CodeableConcept
-* valueCodeableConcept from CTCAEGradeVS (required)
+* value[x] from CTCAEGradeVS (required)
+
+Extension: AdverseEventExpectation
+Id: adverse-event-expectation
+Title: "Adverse Event Expectation"
+Description: "A determination if the adverse event is or is not one whose nature and severity have been previously observed, identified in nature, severity, or frequency, and documented in the investigator brochure, investigational plan, protocol, current consent form, scientific publication, or in other relevant and reliable document."
+* insert AdverseEventExtensionPreamble
+* value[x] only CodeableConcept
+* value[x] from AdverseEventExpectationVS (required)
+
+Extension: AdverseEventResolvedDate
+Id: adverse-event-resolved-date
+Title: "Adverse Event Resolved Date"
+Description: "The date (and time) when the adverse event ends or returns to baseline (NCI Thesaurus)."
+* insert AdverseEventExtensionPreamble
+* value[x] only dateTime
+

@@ -11,7 +11,7 @@ Conformance statement:
 Observation resources associated with an mCODE patient with Observation.code LOINC 88040-1 MUST conform to this profile. Beyond this requirement, a producer of resources SHOULD ensure that any resource instance associated with an mCODE patient that would reasonably be expected to conform to this profile SHOULD be published in this form."
 
 * extension contains EvidenceType named evidenceType 0..* MS
-* status and code and subject and effective[x] and valueCodeableConcept and focus MS
+* status and code and subject and effective[x] and value[x] and focus MS
 * specimen 0..0
 * device 0..0
 * referenceRange 0..0
@@ -24,4 +24,4 @@ Observation resources associated with an mCODE patient with Observation.code LOI
 * effective[x] only dateTime or Period
 * performer only Reference(USCorePractitioner)
 * value[x] only CodeableConcept
-* valueCodeableConcept from ConditionStatusTrendVS (required)
+* value[x] from ConditionStatusTrendVS (required)

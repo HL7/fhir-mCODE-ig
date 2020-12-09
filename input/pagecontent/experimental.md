@@ -35,12 +35,12 @@ This is a set of experimental profiles for representing adverse events (AE). The
 | ValueSet   | [CTCAEPreferredTermVS]          | CTCAE preferred terms for AE   | n/a                 |
 | ValueSet   | [AdverseEventRelatednessVS]     | Likelihood that AE is related to intervention | n/a |
 
-[CTCAdverseEvent]: StructureDefinition-mcode-ctc-adverse-event.html
-[CTCAEGrade]: StructureDefinition-mcode-ctcae-grade.html
-[CTCAEGradeCS]: CodeSystem-mcode-ctcae-grade-code-system.html
-[CTCAEGradeVS]: ValueSet-mcode-ctcae-grade-value-set.html
-[AdverseEventSeriousnessVS]: ValueSet-mcode-adverse-event-seriousness-value-set.html
-[CTCAEPreferredTermVS]: ValueSet-mcode-ctcae-preferred-term-value-set.html
-[AdverseEventRelatednessVS]: ValueSet-mcode-adverse-event-relatedness-value-set.html
-[Example 1]: AdverseEvent-mcode-ctc-adverse-event-example-1.html
-[Example 2]: AdverseEvent-mcode-ctc-adverse-event-example-2.html
+[CTCAdverseEvent]: StructureDefinition-ctc-adverse-event.html
+[CTCAEGrade]: StructureDefinition-ctcae-grade.html
+[CTCAEGradeCS]: CodeSystem-ctcae-grade-code-system.html
+[CTCAEGradeVS]: ValueSet-ctcae-grade-value-set.html
+[AdverseEventSeriousnessVS]: ValueSet-adverse-event-seriousness-value-set.html
+[CTCAEPreferredTermVS]: ValueSet-ctcae-preferred-term-value-set.html
+[AdverseEventRelatednessVS]: ValueSet-adverse-event-relatedness-value-set.html
+[Example 1]: AdverseEvent-ctc-adverse-event-example-1.html
+[Example 2]: AdverseEvent-ctc-adverse-event-example-2.html

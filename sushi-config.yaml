@@ -1,6 +1,6 @@
 id: hl7.fhir.us.mcode
 canonical: http://hl7.org/fhir/us/mcode
-version: 1.0.1
+version: 1.0.2
 name: HL7FHIRImplementationGuideminimalCommonOncologyDataElementsmCODERelease1USRealmSTU1
 title: "HL7 FHIR Implementation Guide: minimal Common Oncology Data Elements (mCODE)
   Release 1 - US Realm | STU1"
@@ -20,7 +20,7 @@ dependencies:
 parameters:
   show-inherited-invariants: false
   version-comparison: n/a
-  system-version: http://snomed.info/sct|http://snomed.info/sct/731000124108
+  path-expansion-params: '../../exp-params.json'  #path is relative to [base]/fsh-generated/resources
 copyrightYear: 2019+
 releaseLabel: STU1
 pages:
@@ -324,13 +324,13 @@ groups:
     name: Experimental Resources - Adverse Event
     description: These resources related to adverse events are considered [experimental](experimental.html).
     resources:
-      - StructureDefinition/mcode-ctc-adverse-event
-      - ValueSet/mcode-ctcae-preferred-term-value-set
-      - ValueSet/mcode-adverse-event-seriousness-value-set
-      - ValueSet/mcode-adverse-event-relatedness-value-set
-      - StructureDefinition/mcode-ctcae-grade
-      - ValueSet/mcode-ctcae-grade-value-set
-      - CodeSystem/mcode-ctcae-grade-code-system
+      - StructureDefinition/ctc-adverse-event
+      - ValueSet/ctcae-preferred-term-value-set
+      - ValueSet/adverse-event-seriousness-value-set
+      - ValueSet/adverse-event-relatedness-value-set
+      - StructureDefinition/ctcae-grade
+      - ValueSet/ctcae-grade-value-set
+      - CodeSystem/ctcae-grade-code-system
 
 
 

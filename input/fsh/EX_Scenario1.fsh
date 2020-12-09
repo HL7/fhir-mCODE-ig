@@ -153,7 +153,7 @@ InstanceOf: TNMClinicalStageGroup
 Description: "Extended example 1: example showing TNM staging (stage group)"
 * id = "scenario1-mcode-tnm-clinical-stage-group"
 * status = #final "final"
-* category = ObsCat#survey
+* category = ObsCat#exam "exam"
 * code = LNC#21908-9 "Stage group.clinical Cancer"
 * subject = Reference(scenario1-mcode-cancer-patient)
 * effectiveDateTime = "2018-03-10"
@@ -168,7 +168,7 @@ InstanceOf: TNMClinicalPrimaryTumorCategory
 Description: "Extended example 1: example showing TNM staging (T)"
 * id = "scenario1-mcode-tnm-primary-tumor-category"
 * status = #final "final"
-* category = ObsCat#survey
+* category = ObsCat#exam "exam"
 * code = LNC#21905-5 "Primary tumor.clinical [Class] Cancer"
 * subject = Reference(scenario1-mcode-cancer-patient)
 * effectiveDateTime = "2018-03-10"
@@ -180,7 +180,7 @@ InstanceOf: TNMClinicalRegionalNodesCategory
 Description: "Extended example 1: example showing TNM staging (N)"
 * id = "scenario1-mcode-tnm-clinical-regional-nodes-category"
 * status = #final "final"
-* category = ObsCat#survey
+* category = ObsCat#exam "exam"
 * code = LNC#21906-3 "Regional lymph nodes.clinical [Class] Cancer"
 * subject = Reference(scenario1-mcode-cancer-patient)
 * effectiveDateTime = "2018-03-10"
@@ -192,7 +192,7 @@ InstanceOf: TNMClinicalDistantMetastasesCategory
 Description: "Extended example 1: example showing TNM staging (M)"
 * id = "scenario1-mcode-tnm-clinical-distant-metastases-category"
 * status = #final "final"
-* category = ObsCat#survey
+* category = ObsCat#exam "exam"
 * code = LNC#21907-1 "Distant metastases.clinical [Class] Cancer"
 * subject = Reference(scenario1-mcode-cancer-patient)
 * effectiveDateTime = "2018-03-10"
@@ -304,14 +304,10 @@ Description: "Extended example 1: example showing genetic variant found by breas
 * effectiveDateTime = "2018-03-15"
 * valueCodeableConcept = LNC#LA9633-4 "Present"
 * method = LNC#LA26398-0 "Sequencing"
-* component[0].code = LNC#48018-6 "Gene studied [ID]"
-* component[0].valueCodeableConcept = HGNC#HGNC:26144 "PALB2"
-* component[1].code = LNC#81252-9 "Discrete genetic variant"
-* component[1].valueCodeableConcept = CLINVAR#128144 "NM_024675.3(PALB2):c.3549C>A (p.Tyr1183Ter)"
-* component[2].code = LNC#81290-9 "Genomic DNA change (gHGVS)"
-* component[2].valueCodeableConcept = HGVS#NC_000016.10:g.23603471G>T
-* component[3].code = LNC#48002-0 "Genomic source class [Type]"
-* component[3].valueCodeableConcept = LNC#LA6684-0 "Somatic"
+* component[GeneStudied].valueCodeableConcept = HGNC#HGNC:26144 "PALB2"
+* component[VariationCode].valueCodeableConcept = CLINVAR#128144 "NM_024675.3(PALB2):c.3549C>A (p.Tyr1183Ter)"
+* component[GenomicDNAChange].valueCodeableConcept = HGVS#NC_000016.10:g.23603471G>T
+* component[GenomicSourceClass].valueCodeableConcept = LNC#LA6684-0 "Somatic"
 
 Instance: scenario1-mcode-cancer-related-medication-chemo-doxorubicin
 InstanceOf: CancerRelatedMedicationRequest

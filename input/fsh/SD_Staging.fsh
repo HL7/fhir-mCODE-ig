@@ -4,9 +4,9 @@ Parent: Observation
 Title: "Cancer Stage Parent"
 Description:  "Abstract parent class for members of cancer staging panels. Cancer panel members must include a timing element and staging system, and focus on a cancer disorder. Specific realizations will have value sets specific to certain staging systems."
 * ^abstract = true
-* status and code and subject and effective[x] and valueCodeableConcept and method and focus MS
+* status and code and subject and effective[x] and value[x] and method and focus MS
 * value[x] only CodeableConcept
-* valueCodeableConcept ^comment = ""    // suppress QA error on #notes link
+* value[x] ^comment = ""    // suppress QA error on #notes link
 * device 0..0
 * referenceRange 0..0
 * component 0..0
@@ -32,7 +32,9 @@ Observation resources associated with an mCODE patient with Observation.code LOI
 * ^abstract = false
 * hasMember MS
 * code = LNC#21908-9 //"Stage group.clinical Cancer"
-* valueCodeableConcept from TNMStageGroupVS (preferred)
+* value[x] from TNMStageGroupVS (preferred)
+* insert CategorySlicingRules
+* category = ObsCat#exam "exam"
 * insert ObservationHasMemberSlicingRules
 * hasMember contains
     TNMClinicalPrimaryTumorCategory 0..1 and
@@ -43,7 +45,6 @@ Observation resources associated with an mCODE patient with Observation.code LOI
 * hasMember[TNMClinicalPrimaryTumorCategory] ^short = "TNM Clinical Primary Tumor Category"
 * hasMember[TNMClinicalPrimaryTumorCategory] ^definition = "Category of the primary tumor, based on its size and extent, and based on evidence such as physical examination, imaging, and/or biopsy."
 * hasMember[TNMClinicalPrimaryTumorCategory] ^comment = "When using this element, the Observation must validate against the specified profile."
-
 * hasMember[TNMClinicalRegionalNodesCategory] only Reference(TNMClinicalRegionalNodesCategory)
 * hasMember[TNMClinicalRegionalNodesCategory] ^short = "TNM Clinical Regional Nodes Category"
 * hasMember[TNMClinicalRegionalNodesCategory] ^definition = "Category of the presence or absence of metastases in regional lymph nodes, based on evidence such as physical examination, imaging, and/or biopsy."
@@ -64,7 +65,9 @@ Conformance Statement:
 Observation resources associated with an mCODE patient with Observation.code LOINC 21905-5 MUST conform to this profile. Beyond this requirement, a producer of resources SHOULD ensure that any resource instance associated with an mCODE patient that would reasonably be expected to conform to this profile SHOULD be published in this form."
 * ^abstract = false
 * code = LNC#21905-5 //"Primary tumor.clinical [Class] Cancer"
-* valueCodeableConcept from TNMPrimaryTumorCategoryVS (preferred)
+* insert CategorySlicingRules
+* category = ObsCat#exam "exam"
+* value[x] from TNMPrimaryTumorCategoryVS (preferred)
 
 Profile:  TNMClinicalRegionalNodesCategory
 Id: mcode-tnm-clinical-regional-nodes-category
@@ -77,16 +80,24 @@ Conformance Statement:
 Observation resources associated with an mCODE patient with Observation.code LOINC 21906-3 MUST conform to this profile. Beyond this requirement, a producer of resources SHOULD ensure that any resource instance associated with an mCODE patient that would reasonably be expected to conform to this profile SHOULD be published in this form."
 * ^abstract = false
 * code = LNC#21906-3 //"Regional lymph nodes.clinical [Class] Cancer"
-* valueCodeableConcept from TNMRegionalNodesCategoryVS (preferred)
+* insert CategorySlicingRules
+* category = ObsCat#exam "exam"
+* value[x] from TNMRegionalNodesCategoryVS (preferred)
 
 Profile:  TNMClinicalDistantMetastasesCategory
 Id: mcode-tnm-clinical-distant-metastases-category
 Parent: CancerStageParent
 Title: "TNM Clinical Distant Metastases Category"
-Description: "Category describing the extent of a tumor metastasis in remote anatomical locations, based on evidence such as physical examination, imaging, and/or biopsy."
+Description: "Category describing the extent of a tumor metastasis in remote anatomical locations, based on evidence such as physical examination, imaging, and/or biopsy.
+
+Conformance Statement:
+
+Observation resources associated with an mCODE patient with Observation.code LOINC 21907-1 MUST conform to this profile. Beyond this requirement, a producer of resources SHOULD ensure that any resource instance associated with an mCODE patient that would reasonably be expected to conform to this profile SHOULD be published in this form."
 * ^abstract = false
 * code = LNC#21907-1 //"Distant metastases.clinical [Class] Cancer"
-* valueCodeableConcept from TNMDistantMetastasesCategoryVS (preferred)
+* insert CategorySlicingRules
+* category = ObsCat#exam "exam"
+* value[x] from TNMDistantMetastasesCategoryVS (preferred)
 
 //-------------------- Pathological Staging -------------------------
 
@@ -104,7 +115,7 @@ Observation resources associated with an mCODE patient with Observation.code LOI
 * code =  LNC#21902-2 //"Stage group.pathology Cancer"
 * insert CategorySlicingRules
 * category = ObsCat#laboratory "laboratory"
-* valueCodeableConcept from TNMStageGroupVS (preferred)
+* value[x] from TNMStageGroupVS (preferred)
 * insert ObservationHasMemberSlicingRules
 * hasMember contains
     TNMPathologicalPrimaryTumorCategory 0..1 and
@@ -137,7 +148,7 @@ Observation resources associated with an mCODE patient with Observation.code LOI
 * code = LNC#21899-0 //"Primary tumor.pathology Cancer"
 * insert CategorySlicingRules
 * category = ObsCat#laboratory "laboratory"
-* valueCodeableConcept from TNMPrimaryTumorCategoryVS (preferred)
+* value[x] from TNMPrimaryTumorCategoryVS (preferred)
 
 Profile:  TNMPathologicalRegionalNodesCategory
 Id: mcode-tnm-pathological-regional-nodes-category
@@ -152,7 +163,7 @@ Observation resources associated with an mCODE patient with Observation.code LOI
 * code = LNC#21900-6 //"Regional lymph nodes.pathology [Class] Cancer"
 * insert CategorySlicingRules
 * category = ObsCat#laboratory "laboratory"
-* valueCodeableConcept from TNMRegionalNodesCategoryVS (preferred)
+* value[x] from TNMRegionalNodesCategoryVS (preferred)
 
 Profile:  TNMPathologicalDistantMetastasesCategory
 Id: mcode-tnm-pathological-distant-metastases-category
@@ -167,4 +178,4 @@ Observation resources associated with an mCODE patient with Observation.code LOI
 * code = LNC#21901-4 //"Distant metastases.pathology [Class] Cancer"
 * insert CategorySlicingRules
 * category = ObsCat#laboratory "laboratory"
-* valueCodeableConcept from TNMDistantMetastasesCategoryVS (preferred)
+* value[x] from TNMDistantMetastasesCategoryVS (preferred)

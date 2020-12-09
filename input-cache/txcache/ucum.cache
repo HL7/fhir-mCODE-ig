@@ -190,3 +190,143 @@ e: {
   "error" : ""
 }
 -------------------------------------------------------------------------------------
+{"hierarchical" : false, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://unitsofmeasure.org",
+      "concept" : [{
+        "code" : "%",
+        "display" : "percent"
+      },
+      {
+        "code" : "cm",
+        "display" : "centimeter"
+      },
+      {
+        "code" : "[in_i]",
+        "display" : "inch (international)"
+      },
+      {
+        "code" : "kg",
+        "display" : "kilogram"
+      },
+      {
+        "code" : "g",
+        "display" : "gram"
+      },
+      {
+        "code" : "[lb_av]",
+        "display" : "pound (US and British)"
+      },
+      {
+        "code" : "Cel",
+        "display" : "degree Celsius"
+      },
+      {
+        "code" : "[degF]",
+        "display" : "degree Fahrenheit"
+      },
+      {
+        "code" : "mm[Hg]",
+        "display" : "millimeter of mercury"
+      },
+      {
+        "code" : "/min",
+        "display" : "per minute"
+      },
+      {
+        "code" : "kg/m2",
+        "display" : "kilogram / (meter ^ 2)"
+      },
+      {
+        "code" : "m2",
+        "display" : "square meter"
+      }]
+    }]
+  }
+}}####
+e: {
+  "valueSet" : {
+  "resourceType" : "ValueSet",
+  "status" : "active",
+  "expansion" : {
+    "identifier" : "urn:uuid:2dcb1e43-b4c6-425f-b6bd-ec2c69078d8b",
+    "timestamp" : "2020-12-09T14:37:36.488Z",
+    "parameter" : [{
+      "name" : "limitedExpansion",
+      "valueBoolean" : true
+    },
+    {
+      "name" : "excludeNested",
+      "valueBoolean" : true
+    },
+    {
+      "name" : "version",
+      "valueString" : "http://unitsofmeasure.org|2.0.1"
+    }],
+    "contains" : [{
+      "system" : "http://unitsofmeasure.org",
+      "code" : "%",
+      "display" : "percent"
+    },
+    {
+      "system" : "http://unitsofmeasure.org",
+      "code" : "cm",
+      "display" : "centimeter"
+    },
+    {
+      "system" : "http://unitsofmeasure.org",
+      "code" : "[in_i]",
+      "display" : "inch (international)"
+    },
+    {
+      "system" : "http://unitsofmeasure.org",
+      "code" : "kg",
+      "display" : "kilogram"
+    },
+    {
+      "system" : "http://unitsofmeasure.org",
+      "code" : "g",
+      "display" : "gram"
+    },
+    {
+      "system" : "http://unitsofmeasure.org",
+      "code" : "[lb_av]",
+      "display" : "pound (US and British)"
+    },
+    {
+      "system" : "http://unitsofmeasure.org",
+      "code" : "Cel",
+      "display" : "degree Celsius"
+    },
+    {
+      "system" : "http://unitsofmeasure.org",
+      "code" : "[degF]",
+      "display" : "degree Fahrenheit"
+    },
+    {
+      "system" : "http://unitsofmeasure.org",
+      "code" : "mm[Hg]",
+      "display" : "millimeter of mercury"
+    },
+    {
+      "system" : "http://unitsofmeasure.org",
+      "code" : "/min",
+      "display" : "per minute"
+    },
+    {
+      "system" : "http://unitsofmeasure.org",
+      "code" : "kg/m2",
+      "display" : "kilogram / (meter ^ 2)"
+    },
+    {
+      "system" : "http://unitsofmeasure.org",
+      "code" : "m2",
+      "display" : "square meter"
+    }]
+  }
+},
+  "error" : ""
+}
+-------------------------------------------------------------------------------------

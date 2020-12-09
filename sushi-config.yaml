@@ -20,7 +20,7 @@ dependencies:
 parameters:
   show-inherited-invariants: false
   version-comparison: n/a
-  system-version: http://snomed.info/sct|http://snomed.info/sct/731000124108
+  path-expansion-params: '../../exp-params.json'  #path is relative to [base]/fsh-generated/resources
 copyrightYear: 2019+
 releaseLabel: STU1
 pages:

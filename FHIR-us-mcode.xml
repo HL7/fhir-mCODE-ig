@@ -6,13 +6,16 @@
 <artifactPageExtension value="-definitions"/>
 <artifactPageExtension value="-examples"/>
 <artifactPageExtension value="-mappings"/>
-<artifact id="ValueSet/mcode-adverse-event-relatedness-value-set" key="ValueSet-mcode-adverse-event-relatedness-value-set" name="Adverse Event Relatedness Value Set"/>
-<artifact id="ValueSet/mcode-adverse-event-seriousness-value-set" key="ValueSet-mcode-adverse-event-seriousness-value-set" name="Adverse Event Seriousness Value Set"/>
-<artifact id="StructureDefinition/mcode-ctc-adverse-event" key="StructureDefinition-mcode-ctc-adverse-event" name="CTC Adverse Event"/>
-<artifact id="StructureDefinition/mcode-ctcae-grade" key="StructureDefinition-mcode-ctcae-grade" name="CTC Adverse Event Grade"/>
-<artifact id="CodeSystem/mcode-ctcae-grade-code-system" key="CodeSystem-mcode-ctcae-grade-code-system" name="CTCAE Grade Code System"/>
-<artifact id="ValueSet/mcode-ctcae-grade-value-set" key="ValueSet-mcode-ctcae-grade-value-set" name="CTCAE Grade Value Set"/>
-<artifact id="ValueSet/mcode-ctcae-preferred-term-value-set" key="ValueSet-mcode-ctcae-preferred-term-value-set" name="CTCAE Preferred Terms"/>
+<artifact id="StructureDefinition/adverse-event-expectation" key="StructureDefinition-adverse-event-expectation" name="Adverse Event Expectation"/>
+<artifact id="ValueSet/adverse-event-expectation-value-set" key="ValueSet-adverse-event-expectation-value-set" name="Adverse Event Expectation Value Set"/>
+<artifact id="ValueSet/adverse-event-relatedness-value-set" key="ValueSet-adverse-event-relatedness-value-set" name="Adverse Event Relatedness Value Set"/>
+<artifact id="StructureDefinition/adverse-event-resolved-date" key="StructureDefinition-adverse-event-resolved-date" name="Adverse Event Resolved Date"/>
+<artifact id="ValueSet/adverse-event-seriousness-value-set" key="ValueSet-adverse-event-seriousness-value-set" name="Adverse Event Seriousness Value Set"/>
+<artifact id="StructureDefinition/ctc-adverse-event" key="StructureDefinition-ctc-adverse-event" name="CTC Adverse Event"/>
+<artifact id="StructureDefinition/ctcae-grade" key="StructureDefinition-ctcae-grade" name="CTC Adverse Event Grade"/>
+<artifact id="CodeSystem/ctcae-grade-code-system" key="CodeSystem-ctcae-grade-code-system" name="CTCAE Grade Code System"/>
+<artifact id="ValueSet/ctcae-grade-value-set" key="ValueSet-ctcae-grade-value-set" name="CTCAE Grade Value Set"/>
+<artifact id="ValueSet/ctcae-preferred-term-value-set" key="ValueSet-ctcae-preferred-term-value-set" name="CTCAE Preferred Terms"/>
 <artifact id="ValueSet/mcode-cancer-body-location-vs" key="cancer-body-location-value-set" name="Cancer Body Location Value Set"/>
 <artifact id="StructureDefinition/mcode-cancer-condition-parent" key="cancer-condition-parent" name="Cancer Condition Parent"/>
 <artifact id="StructureDefinition/mcode-cancer-disease-status" key="cancer-disease-status" name="Cancer Disease Status"/>
@@ -133,6 +136,8 @@
 <artifact deprecated="true" id="ValueSet/mcode-units-of-length-value-set" key="units-of-length-value-set" name="Units of Length Value Set"/>
 <artifact id="ValueSet/mcode-tumor-size-units-vs" key="ValueSet-mcode-tumor-size-units-vs" name="Units of tumor size value set"/>
 <artifact deprecated="true" key="ValueSet" name="ValueSet"/>
+<artifact id="AdverseEvent/ctc-adverse-event-example-1" key="AdverseEvent-ctc-adverse-event-example-1" name="ctc-adverse-event-example-1"/>
+<artifact id="AdverseEvent/ctc-adverse-event-example-2" key="AdverseEvent-ctc-adverse-event-example-2" name="ctc-adverse-event-example-2"/>
 <artifact id="BodyStructure/example1-mcode-tumor" key="BodyStructure-example1-mcode-tumor" name="example1-mcode-tumor"/>
 <artifact id="Observation/example1-mcode-tumor-size" key="Observation-example1-mcode-tumor-size" name="example1-mcode-tumor-size"/>
 <artifact id="StructureDefinition/MCodeCapabilityStatement" key="StructureDefinition-MCodeCapabilityStatement" name="mCODE Capability Statement"/>
@@ -194,8 +199,6 @@
 <artifact id="Observation/mCODETNMPathologicalStageGroupExample1" key="Observation-mCODETNMPathologicalStageGroupExample1" name="mCODETNMPathologicalStageGroupExample1"/>
 <artifact deprecated="true" id="Example/mcode-tumor-marker-example-01" key="mcode-tumor-marker-example-01" name="mCODETumorMarkerExample01"/>
 <artifact id="Observation/mCODETumorMarkerExample1" key="Observation-mCODETumorMarkerExample1" name="mCODETumorMarkerExample1"/>
-<artifact id="AdverseEvent/mcode-ctc-adverse-event-example-1" key="AdverseEvent-mcode-ctc-adverse-event-example-1" name="mcode-ctc-adverse-event-example-1"/>
-<artifact id="AdverseEvent/mcode-ctc-adverse-event-example-2" key="AdverseEvent-mcode-ctc-adverse-event-example-2" name="mcode-ctc-adverse-event-example-2"/>
 <artifact id="CapabilityStatement/mcode-receiver-fallback1" key="CapabilityStatement-mcode-receiver-fallback1" name="mcode-receiver-fallback1"/>
 <artifact id="CapabilityStatement/mcode-receiver-fallback2" key="CapabilityStatement-mcode-receiver-fallback2" name="mcode-receiver-fallback2"/>
 <artifact id="CapabilityStatement/mcode-receiver-fallback3" key="CapabilityStatement-mcode-receiver-fallback3" name="mcode-receiver-fallback3"/>

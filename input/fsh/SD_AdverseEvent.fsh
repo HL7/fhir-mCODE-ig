@@ -6,7 +6,7 @@
 Profile: CTCAdverseEvent
 Parent: AdverseEvent
 Title: "CTC Adverse Event"
-Id: mcode-ctc-adverse-event
+Id: ctc-adverse-event
 Description: "Profile of adverse event, using Common Terminology Criteria (CTC)."
 * ^status = #draft
 * ^experimental = true
@@ -42,7 +42,7 @@ Description: "Profile of adverse event, using Common Terminology Criteria (CTC).
 
 
 Extension: CTCAEGrade
-Id: mcode-ctcae-grade
+Id: ctcae-grade
 Title: "CTC Adverse Event Grade"
 Description: "The grade associated with the severity of an adverse event, using CTCAE criteria. See https://ctep.cancer.gov/protocolDevelopment/electronic_applications/ctc.htm"
 * ^status = #draft
@@ -53,14 +53,14 @@ Description: "The grade associated with the severity of an adverse event, using 
 * valueCodeableConcept from CTCAEGradeVS (required)
 
 Extension: AdverseEventExpectation
-Id: mcode-adverse-event-expectation
+Id: adverse-event-expectation
 Title: "Adverse Event Expectation"
 Description: "A determination if the adverse event is or is not one whose nature and severity have been previously observed, identified in nature, severity, or frequency, and documented in the investigator brochure, investigational plan, protocol, current consent form, scientific publication, or in other relevant and reliable document."
 * value[x] only CodeableConcept
 * valueCodeableConcept from AdverseEventExpectationVS (required)
 
 Extension: AdverseEventResolvedDate
-Id: mcode-adverse-event-resolved-date
+Id: adverse-event-resolved-date
 Title: "Adverse Event Resolved Date"
 Description: "The date (and time) when the adverse event ends or returns to baseline. (NCI Thesaurus)"
 * ^status = #draft

@@ -324,13 +324,13 @@ groups:
     name: Experimental Resources - Adverse Event
     description: These resources related to adverse events are considered [experimental](experimental.html).
     resources:
-      - StructureDefinition/mcode-ctc-adverse-event
-      - ValueSet/mcode-ctcae-preferred-term-value-set
-      - ValueSet/mcode-adverse-event-seriousness-value-set
-      - ValueSet/mcode-adverse-event-relatedness-value-set
-      - StructureDefinition/mcode-ctcae-grade
-      - ValueSet/mcode-ctcae-grade-value-set
-      - CodeSystem/mcode-ctcae-grade-code-system
+      - StructureDefinition/ctc-adverse-event
+      - ValueSet/ctcae-preferred-term-value-set
+      - ValueSet/adverse-event-seriousness-value-set
+      - ValueSet/adverse-event-relatedness-value-set
+      - StructureDefinition/ctcae-grade
+      - ValueSet/ctcae-grade-value-set
+      - CodeSystem/ctcae-grade-code-system
 
 
 

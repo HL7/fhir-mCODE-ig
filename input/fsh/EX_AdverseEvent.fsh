@@ -1,9 +1,9 @@
-Instance: mcode-ctc-adverse-event-example-1
+Instance: ctc-adverse-event-example-1
 InstanceOf: CTCAdverseEvent
 Description: "Grade 2 dehydration attributed to gefitinib"
-* id = "mcode-ctc-adverse-event-example-1"
+* id = "ctc-adverse-event-example-1"
 * contained[0] = mcode-medication-example-1 
-* meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-ctc-adverse-event"
+* meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/ctc-adverse-event"
 * subject = Reference(Patient/mCODEPatientExample1)
 * event = NCIT#C57787  "Dehydration"
 * event.text = "DHN IV given"
@@ -14,11 +14,11 @@ Description: "Grade 2 dehydration attributed to gefitinib"
 * suspectEntity[0].instance = Reference(mcode-medication-example-1)
 * suspectEntity[0].causality[0].productRelatedness = "probable"
 
-Instance: mcode-ctc-adverse-event-example-2
+Instance: ctc-adverse-event-example-2
 InstanceOf: CTCAdverseEvent
 Description: "Non-occurrence of anemia"
-* id = "mcode-ctc-adverse-event-example-2"
-* meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-ctc-adverse-event"
+* id = "ctc-adverse-event-example-2"
+* meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/ctc-adverse-event"
 * subject = Reference(Patient/mCODEPatientExample1)
 * event = NCIT#C143283  "Anemia"
 * event.text = "AIHA NGTD"

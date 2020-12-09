@@ -35,6 +35,13 @@ Description: "Codes qualifying the adverse event's relationship to the medical i
 * NCIT#C53260 "Adverse Event Definitely Related to Intervention"
 * NCIT#C68618 "Adverse Event Conditionally Related to Intervention"
 
+ValueSet: AdverseEventExpectationVS
+Id: mcode-adverse-event-expectation-value-set
+Title: "Adverse Event Expectation Value Set"
+Description: "An expected adverse event is one whose nature and severity have been previously observed, identified in nature, severity, or frequency, and documented in the investigator brochure, investigational plan, protocol, current consent form, scientific publication, or in other relevant and reliable document. An unexpected adverse event is one that has not been previously observed, whether or not the event was anticipated because of the pharmacologic properties of the study agent or the nature of the medical procedure. This includes events that are more serious than expected or occur more frequently than expected, particularly, any adverse experience, the nature, severity or frequency of which is not consistent with the product label, or with the current investigator brochure for investigational agent; or with the risk information described in the investigational plan or protocol or consent form (NCI Thesaurus)."
+* NCIT#C41333 "Expected Adverse Event"
+* NCIT#C41334 "Unexpected Adverse Event"
+
 ValueSet: CTCAEPreferredTermVS
 Id: mcode-ctcae-preferred-term-value-set
 Title: "CTCAE Preferred Terms"

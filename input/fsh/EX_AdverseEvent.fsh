@@ -10,9 +10,12 @@ Description: "Grade 2 dehydration attributed to gefitinib"
 * extension[grade].valueCodeableConcept = CTCAEGradeCS#2 "Moderate Adverse Event" 
 * seriousness = NCIT#C41336 "Non-serious Adverse Event"
 * outcome = AEO#resolved
+* date = "2020-05-20"
 * recorder = Reference(Practitioner/mCODEPractitionerExample1)
 * suspectEntity[0].instance = Reference(mcode-medication-example-1)
 * suspectEntity[0].causality[0].productRelatedness = "probable"
+* extension[expectation].valueCodeableConcept = NCIT#C41333 "Expected Adverse Event"
+* extension[resolvedDate].valueDateTime = "2020-05-21"
 
 Instance: ctc-adverse-event-example-2
 InstanceOf: CTCAdverseEvent

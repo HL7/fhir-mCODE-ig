@@ -28,9 +28,9 @@ This is a set of experimental profiles for representing adverse events (AE). The
 | Type       | Name                            | Description                    | Example             |
 | ---------- | ------------------------------- | -----------------------------  | ------------------- |
 | Profile    | [CTCAdverseEvent]               | Records an AE                  | [Example 1], [Example 2] |
-| Extension  | [CTCAEGrade]                    | Records the CTC Grade          |                    |
-| Extension  | [AdverseEventExpectation]       | Whether event was expected     |                    |
-| Extension  | [AdverseEventResolvedDate]      | Date when the AE ends          |                    |
+| Extension  | [CTCAEGrade]                    | Records the CTC Grade          | [Example 1], [Example 2] |
+| Extension  | [AdverseEventExpectation]       | Whether event was expected     | [Example 1]        |
+| Extension  | [AdverseEventResolvedDate]      | Date when the AE ends          | [Example 1]        |
 | CodeSystem | [CTCAEGradeCS]                  | Defines CTC Grades             | n/a                |
 | ValueSet   | [CTCAEGradeVS]                  | Values for CTC Grade           | n/a                |
 | ValueSet   | [AdverseEventSeriousnessVS]     | Values for seriousness         | n/a                |

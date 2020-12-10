@@ -17,7 +17,7 @@ Error from server: Unable to provide support for code system http://www.ncbi.nlm
 US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles. Comparison with US Core Pediatric Head Occipital-frontal Circumference Percentile Profile. Comparison with US Core Pediatric BMI for Age Observation Profile. Comparison with US Core Pediatric Weight for Height Observation Profile. Comparison with US Core Laboratory Result Observation Profile. Comparison with US Core Pulse Oximetry Profile. Comparison with US Core Smoking Status Observation Profile.
 
 
-# These warnings are just plain wrong -- the codes ARE valid
+# These warnings suppressed because the codes are valid, it is the warning that is in error
 The code C41333 is not valid in the system http://ncithesaurus-stage.nci.nih.gov
 The code C41334 is not valid in the system http://ncithesaurus-stage.nci.nih.gov
 The code C54741 is not valid in the system http://ncithesaurus-stage.nci.nih.gov

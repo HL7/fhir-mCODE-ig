@@ -33,12 +33,6 @@ Description: "Profile of adverse event, using Common Terminology Criteria (CTC).
     CTCAEGrade named grade 1..1 MS and
     AdverseEventExpectation named expectation 0..1 MS and
     AdverseEventResolvedDate named resolvedDate 0..1 MS
-* extension[CTCAEGrade] ^short = "Adverse Event Grade"
-* extension[CTCAEGrade] ^definition = "The grade of the adverse event, determined by CTCAE criteria. The code '0' representing no adverse event may be used to provide positive confirmation that the clinician assessed or considered this particular AE, although the absence of an adverse event is generally not reportable."
-* extension[AdverseEventExpectation] ^short = "Adverse Event Expectation"
-* extension[AdverseEventExpectation] ^definition = "A determination if the adverse event is or is not one whose nature and severity have been previously observed, identified in nature, severity, or frequency, and documented in the investigator brochure, investigational plan, protocol, current consent form, scientific publication, or in other relevant and reliable document."
-* extension[AdverseEventResolvedDate] ^short = "Adverse Resolved Date"
-* extension[AdverseEventResolvedDate] ^definition = "The date (and time) when the adverse event ends or returns to baseline (NCI Thesaurus)."
 // ------Seriousness------
 * seriousness 0..1 MS
 * seriousness from AdverseEventSeriousnessVS (required)

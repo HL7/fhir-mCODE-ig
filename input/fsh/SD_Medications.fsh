@@ -18,10 +18,7 @@ Conformance statement:
 * reasonReference only Reference(CancerConditionParent) // only for cancer-related reasons
 * requester MS
 * requester only Reference(USCorePractitioner or USCoreOrganization or CancerPatient)
-* extension[treatmentIntent] ^short = "Treatment Intent"
-* extension[treatmentIntent] ^definition = "The purpose of a treatment."
-* extension[terminationReason] ^short = "Termination Reason"
-* extension[terminationReason] ^definition = "A code explaining an unplanned or premature termination of a plan of treatment, course of medication, or research study."
+
 
 /*
 Profile:  CancerRelatedMedicationAdministration

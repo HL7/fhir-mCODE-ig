@@ -8,12 +8,10 @@ Description: "General structure for capturing comorbid conditions with respect t
 * code = LNC#78923-0  // Comorbid condition panel
 * component.value[x] only CodeableConcept
 * component.value[x] from PresentAbsentUnknownVS (required)
-* component.extension contains ComorbidConditionCode named conditionCode 0..*
-* component.extension[conditionCode] ^short = "Comorbid Condition Code"
-* component.extension[conditionCode] ^definition = "An extension for representing the condition code corresponding to the named comorbid condition."
-* component.extension contains ComorbidConditionReference named conditionReference 0..*
-* component.extension[conditionReference] ^short = "Comorbid Condition Reference"
-* component.extension[conditionReference] ^definition = "An extension for representing a reference to a condition resource corresponding to the named comorbid condition."
+* component.extension contains 
+     ComorbidConditionCode named conditionCode 0..* and
+     ComorbidConditionReference named conditionReference 0..*
+
 
 Profile: CancerRelatedComorbidities
 Parent: ComorbiditiesParent

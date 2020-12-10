@@ -29,14 +29,18 @@ This is a set of experimental profiles for representing adverse events (AE). The
 | ---------- | ------------------------------- | -----------------------------  | ------------------- |
 | Profile    | [CTCAdverseEvent]               | Records an AE                  | [Example 1], [Example 2] |
 | Extension  | [CTCAEGrade]                    | Records the CTC Grade          |                    |
-| CodeSystem | [CTCAEGradeCS]                  | Defines numerical CTC Grades   | n/a                 |
-| ValueSet   | [CTCAEGradeVS]                  | Numerical values for CTC Grade | n/a                 |
-| ValueSet   | [AdverseEventSeriousnessVS]     | Values for seriousness         | n/a                 |
-| ValueSet   | [CTCAEPreferredTermVS]          | CTCAE preferred terms for AE   | n/a                 |
+| Extension  | [AdverseEventExpectation]       | Whether event was expected     |                    |
+| Extension  | [AdverseEventResolvedDate]      | Date when the AE ends          |                    |
+| CodeSystem | [CTCAEGradeCS]                  | Defines CTC Grades             | n/a                |
+| ValueSet   | [CTCAEGradeVS]                  | Values for CTC Grade           | n/a                |
+| ValueSet   | [AdverseEventSeriousnessVS]     | Values for seriousness         | n/a                |
+| ValueSet   | [CTCAEPreferredTermVS]          | CTCAE preferred terms for AE   | n/a                |
 | ValueSet   | [AdverseEventRelatednessVS]     | Likelihood that AE is related to intervention | n/a |
 
 [CTCAdverseEvent]: StructureDefinition-ctc-adverse-event.html
 [CTCAEGrade]: StructureDefinition-ctcae-grade.html
+[AdverseEventExpectation]: StructureDefinition-adverse-event-expectation
+[AdverseEventResolvedDate]: StructureDefinition-adverse-event-resolved-date
 [CTCAEGradeCS]: CodeSystem-ctcae-grade-code-system.html
 [CTCAEGradeVS]: ValueSet-ctcae-grade-value-set.html
 [AdverseEventSeriousnessVS]: ValueSet-adverse-event-seriousness-value-set.html

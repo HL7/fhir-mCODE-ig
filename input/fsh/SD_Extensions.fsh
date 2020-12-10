@@ -2,6 +2,8 @@ Extension: ComorbidConditionCode
 Id: mcode-comorbid-condition-code
 Title:  "Comorbid Condition Code"
 Description: "An extension for representing the condition code corresponding to the named comorbid condition."
+* . ^short = "Comorbid Condition Code"
+* . ^definition = "An extension for representing the condition code corresponding to the named comorbid condition."
 * extension 0..0
 * value[x] only CodeableConcept
 
@@ -9,6 +11,8 @@ Extension: ComorbidConditionReference
 Id: mcode-comorbid-condition-reference
 Title:  "Comorbid Condition Reference"
 Description: "An extension for representing a reference to a condition resource corresponding to the named comorbid condition."
+* . ^short = "Comorbid Condition Code"
+* . ^definition = "An extension for representing a reference to a condition resource corresponding to the named comorbid condition."
 * extension 0..0
 * value[x] only Reference(Condition)
 
@@ -16,6 +20,8 @@ Extension: EvidenceType
 Id: mcode-evidence-type
 Title: "Evidence Type"
 Description: "Categorization of the kind of evidence used as input to the clinical judgment. This corresponds to both the S and O in SOAP."
+* . ^short = "Evidence Type"
+* . ^definition = "Categorization of the kind of evidence used as input to the clinical judgment. This corresponds to both the S and O in SOAP."
 * ^context[0].type = #element
 * ^context[0].expression = "Observation"
 * extension 0..0
@@ -26,6 +32,8 @@ Extension: HistologyMorphologyBehavior
 Id: mcode-histology-morphology-behavior
 Title: "Histology-Morphology-Behavior"
 Description: "An extension describing the morphologic and behavioral characteristics of the cancer."
+* . ^short = "Histology-Morphology-Behavior"
+* . ^definition = "An extension describing the morphologic and behavioral characteristics of the cancer." 
 * ^context[0].type = #element
 * ^context[0].expression = "Condition"
 * extension 0..0
@@ -36,6 +44,8 @@ Extension: LocationQualifier
 Id:  mcode-location-qualifier
 Title: "Location Qualifier"
 Description: "Qualifier to refine the anatomical location. These include qualifiers for laterality, relative location, directionality, number, and plane."
+* . ^short = "Location Qualifier"
+* . ^definition = "Qualifier to refine the anatomical location. These include qualifiers for laterality, relative location, directionality, number, and plane."
 * ^context[0].type = #element
 * ^context[0].expression = "Specimen.collection.bodySite"
 * ^context[1].type = #element
@@ -52,6 +62,8 @@ Extension: RelatedPrimaryCancerCondition
 Id: mcode-related-primary-cancer-condition
 Title: "Related Primary Cancer Condition"
 Description: "A reference to the primary cancer condition that provides context for this resource."
+* . ^short = "Related Primary Cancer Condition"
+* . ^definition = "A reference to the primary cancer condition that provides context for this resource."
 * ^context[0].type = #element
 * ^context[0].expression = "Condition"
 * extension 0..0
@@ -61,6 +73,8 @@ Extension: TerminationReason
 Id:  mcode-termination-reason
 Title: "Termination Reason"
 Description: "A code explaining an unplanned or premature termination of a plan of treatment, course of medication, or research study."
+* . ^short = "Termination Reason"
+* . ^definition = "A code explaining an unplanned or premature termination of a plan of treatment, course of medication, or research study."
 * ^context[0].type = #element
 * ^context[0].expression = "MedicationRequest"
 * ^context[1].type = #element
@@ -74,6 +88,8 @@ Extension: TreatmentIntent
 Id:  mcode-treatment-intent
 Title: "Treatment Intent"
 Description: "The purpose of a treatment."
+* . ^short = "Treatment Intent"
+* . ^definition = "The purpose of a treatment."
 * ^context[0].type = #element
 * ^context[0].expression = "MedicationRequest"
 * ^context[1].type = #element

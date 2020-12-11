@@ -387,6 +387,7 @@ Description: "mCODE Example for CancerRelatedMedicationRequest - Chemo Infusion"
 * dosageInstruction.timing.event = "2019-06-15"
 * dosageInstruction.timing.repeat.count = 1  // frequency is one-time on day 1 of first cycle so there should be no repeat."
 * note.text = "Day 1 of NSCLC regimen: Cisplatin 75 mg/m2 day 1; docetaxel 75 mg/m2 day 1 every 21 days for 4 cycles."
+* extension[terminationReason].valueCodeableConcept = SCT#182992009  "Treatment completed (situation)"
 
 /*
 Instance: mCODECancerRelatedMedicationAdministrationExample1

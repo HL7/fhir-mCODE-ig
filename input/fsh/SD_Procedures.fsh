@@ -14,11 +14,7 @@ Description: "Abstract parent class for cancer procedure profiles."
 * performer.actor only Reference(Practitioner or PractitionerRole or Organization)
 * bodySite.extension contains
     LocationQualifier named locationQualifier 0..1 MS
-* bodySite.extension[locationQualifier] ^short = "Location Qualifier"
-* bodySite.extension[locationQualifier] ^definition = "Qualifier to refine the anatomical location. These include qualifiers for laterality, relative location, directionality, number, and plane."
 * reasonCode and reasonReference and bodySite MS
-* extension[treatmentIntent] ^short = "Treatment Intent"
-* extension[treatmentIntent] ^definition = "The purpose of a treatment."
 
 Profile:  CancerRelatedRadiationProcedure
 Parent:   CancerRelatedProcedureParent
@@ -36,8 +32,6 @@ Procedure resources associated with an mCODE patient with Procedure.category SNO
 * bodySite from RadiationTargetBodySiteVS (extensible)
 * extension contains
     TerminationReason named terminationReason 0..1 MS
-* extension[terminationReason] ^short = "Termination Reason"
-* extension[terminationReason] ^definition = "A code explaining an unplanned or premature termination of a plan of treatment, course of medication, or research study."
 
 Profile:  CancerRelatedSurgicalProcedure
 Parent:   CancerRelatedProcedureParent

@@ -11,7 +11,7 @@ The bundle MUST also contain following mCODE-conformant resources, if available 
 * Condition resources conforming to [SecondaryCancerCondition](StructureDefinition-mcode-secondary-cancer-condition.html)
 * Observation resources conforming to [CancerDiseaseStatus](StructureDefinition-mcode-cancer-disease-status.html)
 * Observation resources conforming to [PerformanceStatusParent](StructureDefinition-mcode-performance-status-parent.html) ([ECOGPerformanceStatus](StructureDefinition-mcode-ecog-performance-status.html) and [KarnofskyPerformanceStatus](StructureDefinition-mcode-karnofsky-performance-status.html))
-* Observation resources conforming to [TumorMarker](StructureDefinition-mcode-tumor-marker.html) test results
+* Observation resources conforming to [TumorMarkerTest](StructureDefinition-mcode-tumor-marker-test.html) test results
 * MedicationRequest resources conforming to [CancerRelatedMedicationRequest](StructureDefinition-mcode-cancer-related-medication-request.html) (prescriptions, administrations, and patient-reported medications)
 * Procedure resources conforming to [CancerRelatedProcedureParent](StructureDefinition-mcode-cancer-related-procedure-parent.html) ([CancerRelatedSurgicalProcedure](StructureDefinition-mcode-cancer-related-surgical-procedure.html) and [CancerRelatedRadiationProcedure](StructureDefinition-mcode-cancer-related-radiation-procedure.html))
 * Observation resources conforming to [CancerStageParent](StructureDefinition-mcode-cancer-stage-parent.html) (Clinical Group and TNM and/or Pathological Group and TNM)

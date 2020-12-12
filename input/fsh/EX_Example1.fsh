@@ -38,7 +38,6 @@ Description: "mCODE Example for Cancer Disease Status"
 // * extension[evidenceType].url = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-evidence-type"
 * extension[evidenceType].valueCodeableConcept = SCT#108257001 "Anatomic pathology procedure (procedure)"
 * status = #final "final"
-* category = ObsCat#laboratory "laboratory"
 * subject = Reference(mCODEPatientExample1)
 * effectiveDateTime = "2019-04-01"
 * performer = Reference(mCODEPractitionerExample1)
@@ -183,7 +182,6 @@ Description: "mCODE Example for ECOG Performance Status"
 * status = #final "final"
 * method = SCT#5880005 "Clinical examination"
 * subject = Reference(mCODEPatientExample1)
-* category = ObsCat#survey "survey"
 * effectiveDateTime = "2019-04-01"
 * performer = Reference(mCODEPractitionerExample1)
 * valueInteger = 0
@@ -195,7 +193,6 @@ Description: "mCODE Example for Karnofsky Performance Status"
 * id = "mCODEKarnofskyPerformanceStatusExample1"
 * meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-karnofsky-performance-status"
 * status = #final "final"
-* category = ObsCat#survey "survey"
 * method = SCT#5880005 "Clinical examination"
 * subject = Reference(mCODEPatientExample1)
 * effectiveDateTime = "2019-04-01"
@@ -209,7 +206,6 @@ Description: "mCODE Example for Cancer Related Surgical Procedure"
 * id = "mCODECancerRelatedSurgicalProcedureExample1"
 * meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-related-surgical-procedure"
 * status = #completed "completed"
-* category = SCT#387713003 "Surgical procedure"
 * code = SCT#359615001 "Partial lobectomy of lung (procedure)"
 * subject = Reference(mCODEPatientExample1)
 * asserter = Reference(mCODEPractitionerExample1)
@@ -225,7 +221,6 @@ Description: "mCODE Example for Cancer Related Radiation Procedure"
 * meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-related-radiation-procedure"
 * status = #completed "completed"
 * code = SCT#152198000 "Brachytherapy (procedure)"
-* category = SCT#53438000 "Radiation therapy procedure or service (procedure)"
 * subject = Reference(mCODEPatientExample1)
 * asserter = Reference(mCODEPractitionerExample1)
 * performedDateTime = "2019-03-01"
@@ -243,7 +238,6 @@ Description: "mCODE Example for TNM Clinical Stage Group"
 * status = #final "final"
 * method = NCIT#C146985 "AJCC Cancer Staging Manual 8th Edition"
 * subject = Reference(mCODEPatientExample1)
-* category = ObsCat#exam "exam"
 * effectiveDateTime = "2019-04-01"
 * valueCodeableConcept = AJCC#3C "IIIC"
 * hasMember[TNMClinicalPrimaryTumorCategory] = Reference(mCODETNMClinicalPrimaryTumorCategoryExample1)
@@ -258,7 +252,6 @@ Description: "mCODE Example for TNM Clinical Distant Metastases Category"
 * status = #final "final"
 * method = NCIT#C146985 "AJCC Cancer Staging Manual 8th Edition"
 * subject = Reference(mCODEPatientExample1)
-* category = ObsCat#exam "exam"
 * effectiveDateTime = "2019-04-01"
 * valueCodeableConcept = AJCC#cM0 "M0"
 
@@ -267,7 +260,6 @@ InstanceOf: TNMClinicalPrimaryTumorCategory
 Description: "mCODE Example for TNM Clinical Primary Tumor Category"
 * id = "mCODETNMClinicalPrimaryTumorCategoryExample1"
 * meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-clinical-primary-tumor-category"
-* category = ObsCat#exam "exam"
 * status = #final "final"
 * method = NCIT#C146985 "AJCC Cancer Staging Manual 8th Edition"
 * subject = Reference(mCODEPatientExample1)
@@ -280,7 +272,6 @@ InstanceOf: TNMClinicalRegionalNodesCategory
 Description: "mCODE Example for TNM Clinical Regional Nodes Category"
 * id = "mCODETNMClinicalRegionalNodesCategoryExample1"
 * meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-clinical-regional-nodes-category"
-* category = ObsCat#exam "exam"
 * status = #final "final"
 * method = NCIT#C146985 "AJCC Cancer Staging Manual 8th Edition"
 * subject = Reference(mCODEPatientExample1)
@@ -294,7 +285,6 @@ Description: "mCODE Example for TNM Pathological Stage Group"
 * id = "mCODETNMPathologicalStageGroupExample1"
 * meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-pathological-stage-group"
 * status = #final "final"
-* category = ObsCat#laboratory "laboratory"
 * method = NCIT#C146985 "AJCC Cancer Staging Manual 8th Edition"
 * subject = Reference(mCODEPatientExample1)
 * effectiveDateTime = "2019-04-01"
@@ -310,7 +300,6 @@ Description: "mCODE Example for TNM Pathological Distant Metastases Category"
 * id = "mCODETNMPathologicalDistantMetastasesCategoryExample1"
 * meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-pathological-distant-metastases-category"
 * status = #final "final"
-* category = ObsCat#laboratory "laboratory"
 * method = NCIT#C146985 "AJCC Cancer Staging Manual 8th Edition"
 * subject = Reference(mCODEPatientExample1)
 * effectiveDateTime = "2019-04-01"
@@ -323,7 +312,6 @@ Description: "mCODE Example for TNM Pathological Primary Tumor Category"
 * id = "mCODETNMPathologicalPrimaryTumorCategoryExample1"
 * meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-pathological-primary-tumor-category"
 * status = #final "final"
-* category = ObsCat#laboratory "laboratory"
 * method = NCIT#C146985 "AJCC Cancer Staging Manual 8th Edition"
 * subject = Reference(mCODEPatientExample1)
 * effectiveDateTime = "2019-04-01"
@@ -336,7 +324,6 @@ Description: "mCODE Example for TNM Pathological Regional Nodes Category"
 * id = "mCODETNMPathologicalRegionalNodesCategoryExample1"
 * meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-pathological-regional-nodes-category"
 * status = #final "final"
-* category = ObsCat#laboratory "laboratory"
 * method = NCIT#C146985 "AJCC Cancer Staging Manual 8th Edition"
 * subject = Reference(mCODEPatientExample1)
 * effectiveDateTime = "2019-04-01"

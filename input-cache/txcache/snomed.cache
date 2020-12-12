@@ -139959,3 +139959,115 @@ v: {
   "error" : ""
 }
 -------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://snomed.info/sct",
+  "code" : "182992009"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://snomed.info/sct",
+      "concept" : [{
+        "code" : "182992009",
+        "display" : "Treatment completed (situation)"
+      },
+      {
+        "code" : "266721009",
+        "display" : "No response to treatment (situation)"
+      },
+      {
+        "code" : "407563006",
+        "display" : "Treatment not tolerated (situation)"
+      },
+      {
+        "code" : "160932005",
+        "display" : "Financial problem (finding)"
+      },
+      {
+        "code" : "105480006",
+        "display" : "Refusal of treatment by patient (situation)"
+      },
+      {
+        "code" : "184081006",
+        "display" : "Patient has moved away (finding)"
+      },
+      {
+        "code" : "309846006",
+        "display" : "Treatment not available (situation)"
+      }]
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "Treatment completed",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://snomed.info/sct",
+  "code" : "182992009",
+  "display" : "Treatment completed (situation)"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://snomed.info/sct",
+      "concept" : [{
+        "code" : "182992009",
+        "display" : "Treatment completed (situation)"
+      },
+      {
+        "code" : "266721009",
+        "display" : "No response to treatment (situation)"
+      },
+      {
+        "code" : "407563006",
+        "display" : "Treatment not tolerated (situation)"
+      },
+      {
+        "code" : "160932005",
+        "display" : "Financial problem (finding)"
+      },
+      {
+        "code" : "105480006",
+        "display" : "Refusal of treatment by patient (situation)"
+      },
+      {
+        "code" : "184081006",
+        "display" : "Patient has moved away (finding)"
+      },
+      {
+        "code" : "309846006",
+        "display" : "Treatment not available (situation)"
+      }]
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK"}####
+v: {
+  "display" : "Treatment completed",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://snomed.info/sct",
+  "code" : "182992009",
+  "display" : "Treatment completed (situation)"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "Treatment completed",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://snomed.info/sct",
+  "code" : "53438000"
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "Radiation therapy procedure or service",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------

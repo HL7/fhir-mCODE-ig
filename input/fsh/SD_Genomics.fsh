@@ -110,7 +110,7 @@ Observation resources associated with an mCODE patient with an Observation.code 
 
 * status and code and subject and effective[x] and value[x] and focus MS
 * subject 1..1
-* code from TumorMarkerTestVS (extensible)
+* code from TumorMarkerTestVS (required)
 * subject only Reference(CancerPatient)
 * focus only Reference(CancerConditionParent)
 * effective[x] only dateTime or Period

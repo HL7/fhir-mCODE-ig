@@ -20,6 +20,7 @@ Description:  "Types of secondary malignant neoplastic disease, coded in SNOMED 
 
 Note that ICD-O-3 specifies morphology and topography, not disorder; in this case that the disorder code must be SNOMED CT 128462008 (Secondary malignant neoplastic disease). The ICD-O-3 morphology and topography codes should be entered in the HistologyMorphologyBehavior and bodySite fields, respectively."
 * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
+* OtherSpecifyCS#OtherSecondaryCancerCondition "Other Secondary Cancer Condition, Specify"
 * SCT#128462008  "Secondary malignant neoplastic disease (disorder)"
 * codes from system SCT where concept is-a #128462008  "Secondary malignant neoplastic disease (disorder)"
 * ICD10CM#C7B.00       "Secondary carcinoid tumors, unspecified site"
@@ -108,6 +109,7 @@ For ICD-10-CM coding, use one of the codes given in this value set representing 
 Note that ICD-O-3 specifies morphology and topography, not disorder. If ICD-O-3 is used, the primary cancer disorder code must be specifically be SNOMED CT 363346000  'Malignant neoplastic disease (disorder)'. The ICD-O-3 morphology and topography codes should be entered in the HistologyMorphologyBehavior and body location fields, respectively."
 
 * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
+* OtherSpecifyCS#OtherPrimaryCancerCondition "Other Primary Cancer Condition, Specify"
 * include codes from system SCT where concept is-a #363346000 "Malignant neoplastic disease (disorder)"
 * exclude codes from system SCT where concept is-a #128462008  "Secondary malignant neoplastic disease (disorder)"
 * ICD10CM#C00.0       "Malignant neoplasm of external upper lip"

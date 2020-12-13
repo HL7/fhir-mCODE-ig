@@ -542,7 +542,7 @@ Description: "Extended example 1: example tumor specimen"
 
 Instance: scenario1-diagnosticreport-pathology
 InstanceOf: USCoreDiagnosticReportLab
-Description: "Extended example 1: example of pathology findings represnted as a DiagnosticReport"
+Description: "Extended example 1: example of pathology findings represented as a DiagnosticReport resource."
 * id = "scenario1-diagnosticreport-pathology"
 * status = #final "final"
 * category[0] = DiagnosticService#LAB

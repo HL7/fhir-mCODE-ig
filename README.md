@@ -77,11 +77,9 @@ On Windows:
         | Prefix | Description          |
         | ------ | -------------------- |
         | `AL`   | Aliases              |
-        | `CS`   | CapabilityStatements |
+        | `DEF`  | Other Definitions    |
         | `EX`   | Examples             |
-        | `OD`   | OperationDefinitions |
         | `SD`   | StructureDefinitions |
-        | `SP`   | SearchParameters     |
         | `VS`   | ValueSets            |
 
 - The main pages in the built IG are generated from [Markdown](https://daringfireball.net/projects/markdown/) found in `input/pagecontent/`. These pages must also be included in `sushi-config.yaml` to be compiled to HTML by the IG Publisher.

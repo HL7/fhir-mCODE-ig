@@ -28,7 +28,6 @@ Description: "Non-occurrence of anemia"
 * extension[grade].valueCodeableConcept = CTCAEGradeCS#0 "Absent Adverse Event"
 * recorder = Reference(Practitioner/mCODEPractitionerExample1)
 
-
 Instance: mcode-medication-example-1
 InstanceOf: Medication 
 Description: "Gefitinib 250 MG Oral Tablet"

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<specification xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ballotUrl="http://hl7.org/fhir/us/mcode/2019Sep/" ciUrl="http://build.fhir.org/ig/HL7/fhir-mCODE-ig/" defaultVersion="1.0.1" defaultWorkgroup="cic" gitUrl="https://github.com/HL7/fhir-mCODE-ig" xsi:noNamespaceSchemaLocation="../schemas/specification.xsd" url="http://hl7.org/fhir/us/mcode"><version code="current" url="http://build.fhir.org/ig/HL7/fhir-mCODE-ig/"/>
+<specification xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ballotUrl="http://hl7.org/fhir/us/mcode/2019Sep/" ciUrl="http://build.fhir.org/ig/HL7/fhir-mCODE-ig/" defaultVersion="1.0.1" defaultWorkgroup="cic" gitUrl="https://github.com/HL7/fhir-mCODE-ig" url="http://hl7.org/fhir/us/mcode">
+<version code="current" url="http://build.fhir.org/ig/HL7/fhir-mCODE-ig/"/>
 <version code="1.0.1" url="http://hl7.org/fhir/us/mcode/STU1"/>
 <version code="0.9.1" deprecated="true" url="http://hl7.org/fhir/us/mcode/2019Sep/"/>
 <version code="0.1" deprecated="true"/>
@@ -129,7 +130,7 @@
 <artifact id="ValueSet/mcode-treatment-intent-vs" key="treatment-intent-value-set" name="Treatment Intent Value Set"/>
 <artifact id="ValueSet/mcode-treatment-termination-reason-vs" key="treatment-termination-reason-value-set" name="Treatment Termination Reason Value Set"/>
 <artifact id="StructureDefinition/mcode-tumor" key="StructureDefinition-mcode-tumor" name="Tumor"/>
-<artifact id="StructureDefinition/mcode-tumor-marker" key="tumor-marker" name="Tumor Marker"/>
+<artifact id="StructureDefinition/mcode-tumor-marker-test" key="tumor-marker" name="Tumor Marker"/>
 <artifact deprecated="true" id="ValueSet/mcode-tumor-marker-test-value-set" key="tumor-marker-test-value-set" name="Tumor Marker Test Value Set"/>
 <artifact id="StructureDefinition/mcode-tumor-size" key="StructureDefinition-mcode-tumor-size" name="Tumor Size"/>
 <artifact id="ValueSet/mcode-tumor-marker-test-vs" key="ValueSet-mcode-tumor-marker-test-vs" name="TumorMarkerTestVS"/>
@@ -198,7 +199,7 @@
 <artifact deprecated="true" id="Example/mcode-tnm-pathological-stage-group-example-01" key="mcode-tnm-pathological-stage-group-example-01" name="mCODETNMPathologicalStageGroupExample01"/>
 <artifact id="Observation/mCODETNMPathologicalStageGroupExample1" key="Observation-mCODETNMPathologicalStageGroupExample1" name="mCODETNMPathologicalStageGroupExample1"/>
 <artifact deprecated="true" id="Example/mcode-tumor-marker-example-01" key="mcode-tumor-marker-example-01" name="mCODETumorMarkerExample01"/>
-<artifact id="Observation/mCODETumorMarkerExample1" key="Observation-mCODETumorMarkerExample1" name="mCODETumorMarkerExample1"/>
+<artifact id="Observation/mCODETumorMarkerTestExample1" key="Observation-mCODETumorMarkerTestExample1" name="mCODETumorMarkerTestExample1"/>
 <artifact id="CapabilityStatement/mcode-receiver-fallback1" key="CapabilityStatement-mcode-receiver-fallback1" name="mcode-receiver-fallback1"/>
 <artifact id="CapabilityStatement/mcode-receiver-fallback2" key="CapabilityStatement-mcode-receiver-fallback2" name="mcode-receiver-fallback2"/>
 <artifact id="CapabilityStatement/mcode-receiver-fallback3" key="CapabilityStatement-mcode-receiver-fallback3" name="mcode-receiver-fallback3"/>
@@ -234,10 +235,10 @@
 <artifact id="Observation/scenario1-mcode-tnm-clinical-regional-nodes-category" key="Observation-scenario1-mcode-tnm-clinical-regional-nodes-category" name="scenario1-mcode-tnm-clinical-regional-nodes-category"/>
 <artifact id="Observation/scenario1-mcode-tnm-clinical-stage-group" key="Observation-scenario1-mcode-tnm-clinical-stage-group" name="scenario1-mcode-tnm-clinical-stage-group"/>
 <artifact id="Observation/scenario1-mcode-tnm-primary-tumor-category" key="Observation-scenario1-mcode-tnm-primary-tumor-category" name="scenario1-mcode-tnm-primary-tumor-category"/>
-<artifact id="Observation/scenario1-mcode-tumor-marker-er" key="Observation-scenario1-mcode-tumor-marker-er" name="scenario1-mcode-tumor-marker-er"/>
-<artifact id="Observation/scenario1-mcode-tumor-marker-her2" key="Observation-scenario1-mcode-tumor-marker-her2" name="scenario1-mcode-tumor-marker-her2"/>
-<artifact id="Observation/scenario1-mcode-tumor-marker-oncotype-dx" key="Observation-scenario1-mcode-tumor-marker-oncotype-dx" name="scenario1-mcode-tumor-marker-oncotype-dx"/>
-<artifact id="Observation/scenario1-mcode-tumor-marker-pr" key="Observation-scenario1-mcode-tumor-marker-pr" name="scenario1-mcode-tumor-marker-pr"/>
+<artifact id="Observation/scenario1-mcode-tumor-marker-test-er" key="Observation-scenario1-mcode-tumor-marker-test-er" name="scenario1-mcode-tumor-marker-test-er"/>
+<artifact id="Observation/scenario1-mcode-tumor-marker-test-her2" key="Observation-scenario1-mcode-tumor-marker-test-her2" name="scenario1-mcode-tumor-marker-test-her2"/>
+<artifact id="Observation/scenario1-mcode-tumor-marker-test-oncotype-dx" key="Observation-scenario1-mcode-tumor-marker-test-oncotype-dx" name="scenario1-mcode-tumor-marker-test-oncotype-dx"/>
+<artifact id="Observation/scenario1-mcode-tumor-marker-test-pr" key="Observation-scenario1-mcode-tumor-marker-test-pr" name="scenario1-mcode-tumor-marker-test-pr"/>
 <artifact id="Observation/scenario1-neutrophils" key="Observation-scenario1-neutrophils" name="scenario1-neutrophils"/>
 <artifact id="Observation/scenario1-observation-smoking-history" key="Observation-scenario1-observation-smoking-history" name="scenario1-observation-smoking-history"/>
 <artifact id="Observation/scenario1-observation-tumor-dcis" key="Observation-scenario1-observation-tumor-dcis" name="scenario1-observation-tumor-dcis"/>

@@ -18900,3 +18900,28 @@ e: {
   "error" : ""
 }
 -------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://ncithesaurus-stage.nci.nih.gov",
+  "code" : "C41333"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://ncithesaurus-stage.nci.nih.gov",
+      "concept" : [{
+        "code" : "C41333",
+        "display" : "Expected Adverse Event"
+      },
+      {
+        "code" : "C41334",
+        "display" : "Unexpected Adverse Event"
+      }]
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code \"C41333\" is not valid in the system http://ncithesaurus-stage.nci.nih.gov; The code provided (http://ncithesaurus-stage.nci.nih.gov#C41333) is not valid (from http://tx.fhir.org/r4)"
+}
+-------------------------------------------------------------------------------------

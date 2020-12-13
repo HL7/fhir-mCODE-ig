@@ -16,7 +16,7 @@ This section provides some examples how mCODE elements may be represented in a F
  * **Cancer Related Medication Request**: <a href="MedicationRequest-mCODECancerRelatedMedicationRequestExample1.html">mCODECancerRelatedMedicationRequestExample1</a> shows an example for a patient who is currently receiving gefitinib and <a href="MedicationRequest-mCODECancerRelatedMedicationRequestExample2.html">mCODECancerRelatedMedicationRequestExample2</a> shows an example for a patient who completed a treatment of getfitinib.
  * **Cancer Related Surgical Procedure**: <a href="Procedure-mCODECancerRelatedSurgicalProcedureExample1.html">mCODECancerRelatedSurgicalProcedureExample1</a> shows an example for a patient who underwent a partial lobectomy of the lung for cancer treatment.
   * **Cancer Related Radiation Procedure**: <a href="Procedure-mCODECancerRelatedRadiationProcedureExample1.html">mCODECancerRelatedRadiationProcedureExample1</a> shows an example for a patient who went underwent brachytherapy for cancer treatment.
- * **Tumor Marker**: <a href="Observation-mCODETumorMarkerExample1.html">mCODETumorMarkerExample1</a> shows a simple example of an EGFR tumor marker status as positive.
+ * **Tumor Marker**: <a href="Observation-mCODETumorMarkerTestExample1.html">mCODETumorMarkerTestExample1</a> shows a simple example of an EGFR tumor marker status as positive.
  * **Genomics Report**: <a href="DiagnosticReport-mCODECancerGenomicsReportExample1.html">mCODECancerGenomicsReportExample1</a> shows a very small subset elements found in a genomics report which include the test service and test name.
  * **Genetic Variant**: <a href="Observation-mCODECancerGeneticVariantExample1.html">mCODECancerGeneticVariantExample1</a> extends the contents of the Genomics Report by showing the results of a variant found for a specific gene, STK-11. This example differs from the mutation test result in that there was no preconceived test for a specific variant ahead of time.  Rather, it is the result of any variants found for a given DNA region.
  * **Genetic Variant**: - single somatic mutation <a href="Observation-mCODECancerGeneticVariantExample2.html">mCODECancerGeneticVariantExample2</a> extends the contents of the Genomic Report example showing whether a test for a specific mutation for BRCA1 was present.
@@ -63,10 +63,10 @@ The patient is two years out from surgery and has undergone surveillance imaging
 * [`scenario1-mcode-tnm-primary-tumor-category`](Observation-scenario1-mcode-tnm-primary-tumor-category.html) ([TNMClinicalPrimaryTumorCategory])
 * [`scenario1-mcode-tnm-clinical-regional-nodes-category`](Observation-scenario1-mcode-tnm-clinical-regional-nodes-category.html) ([TNMClinicalRegionalNodesCategory])
 * [`scenario1-mcode-tnm-clinical-distant-metastases-category`](Observation-scenario1-mcode-tnm-clinical-distant-metastases-category.html) ([TNMClinicalDistantMetastasesCategory])
-* [`scenario1-mcode-tumor-marker-er`](Observation-scenario1-mcode-tumor-marker-er.html)  ([TumorMarker])
-* [`scenario1-mcode-tumor-marker-pr`](Observation-scenario1-mcode-tumor-marker-pr.html)  ([TumorMarker])
-* [`scenario1-mcode-tumor-marker-her2`](Observation-scenario1-mcode-tumor-marker-her2.html)  ([TumorMarker])
-* [`scenario1-mcode-tumor-marker-oncotype-dx`](Observation-scenario1-mcode-tumor-marker-oncotype-dx.html)  ([TumorMarker])
+* [`scenario1-mcode-tumor-marker-test-er`](Observation-scenario1-mcode-tumor-marker-test-er.html)  ([TumorMarkerTest])
+* [`scenario1-mcode-tumor-marker-test-pr`](Observation-scenario1-mcode-tumor-marker-test-pr.html)  ([TumorMarkerTest])
+* [`scenario1-mcode-tumor-marker-test-her2`](Observation-scenario1-mcode-tumor-marker-test-her2.html)  ([TumorMarkerTest])
+* [`scenario1-mcode-tumor-marker-test-oncotype-dx`](Observation-scenario1-mcode-tumor-marker-test-oncotype-dx.html)  ([TumorMarkerTest])
 * [`scenario1-mcode-cancer-genomics-report`](DiagnosticReport-scenario1-mcode-cancer-genomics-report.html) ([CancerGenomicsReport])
 * [`scenario1-mcode-genomic-region-studied`](Observation-scenario1-mcode-genomic-region-studied.html) ([GenomicRegionStudied])
 * [`scenario1-mcode-genetic-specimen`](Specimen-scenario1-mcode-genetic-specimen.html) ([GeneticSpecimen])
@@ -113,4 +113,4 @@ The patient is two years out from surgery and has undergone surveillance imaging
 [TNMClinicalPrimaryTumorCategory]: StructureDefinition-mcode-tnm-clinical-primary-tumor-category.html
 [TNMClinicalRegionalNodesCategory]: StructureDefinition-mcode-tnm-clinical-regional-nodes-category.html
 [TNMClinicalStageGroup]: StructureDefinition-mcode-tnm-clinical-stage-group.html
-[TumorMarker]: StructureDefinition-mcode-tumor-marker.html
+[TumorMarkerTest]: StructureDefinition-mcode-tumor-marker-test.html

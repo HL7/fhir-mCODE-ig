@@ -79,7 +79,7 @@ groups:
     name: "Profiles: Laboratory Results and Vital Signs"
     description: Profiles in the [mCODE **Laboratory Results and Vital Signs** Group](index.html#laboratory-results-and-vital-signs-group).
     resources:
-      - StructureDefinition/mcode-tumor-marker
+      - StructureDefinition/mcode-tumor-marker-test
 
   Treatment:
     name: "Profiles: Treatments"
@@ -230,7 +230,7 @@ groups:
       - Observation/mCODETNMPathologicalPrimaryTumorCategoryExample1
       - Observation/mCODETNMPathologicalRegionalNodesCategoryExample1
       - Observation/mCODETNMPathologicalStageGroupExample1
-      - Observation/mCODETumorMarkerExample1
+      - Observation/mCODETumorMarkerTestExample1
       - Organization/mCODEOrganizationExample1
       - Patient/mCODEPatientExample1
       - Patient/mCODEPatientExample2
@@ -267,10 +267,10 @@ groups:
       - Observation/scenario1-mcode-tnm-clinical-regional-nodes-category
       - Observation/scenario1-mcode-tnm-clinical-stage-group
       - Observation/scenario1-mcode-tnm-primary-tumor-category
-      - Observation/scenario1-mcode-tumor-marker-er
-      - Observation/scenario1-mcode-tumor-marker-her2
-      - Observation/scenario1-mcode-tumor-marker-oncotype-dx
-      - Observation/scenario1-mcode-tumor-marker-pr
+      - Observation/scenario1-mcode-tumor-marker-test-er
+      - Observation/scenario1-mcode-tumor-marker-test-her2
+      - Observation/scenario1-mcode-tumor-marker-test-oncotype-dx
+      - Observation/scenario1-mcode-tumor-marker-test-pr
       - Observation/scenario1-neutrophils
       - Observation/scenario1-observation-smoking-history
       - Observation/scenario1-observation-tumor-dcis

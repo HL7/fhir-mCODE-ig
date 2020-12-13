@@ -39,8 +39,8 @@ This is a set of experimental profiles for representing adverse events (AE). The
 
 [CTCAdverseEvent]: StructureDefinition-ctc-adverse-event.html
 [CTCAEGrade]: StructureDefinition-ctcae-grade.html
-[AdverseEventExpectation]: StructureDefinition-adverse-event-expectation
-[AdverseEventResolvedDate]: StructureDefinition-adverse-event-resolved-date
+[AdverseEventExpectation]: StructureDefinition-adverse-event-expectation.html
+[AdverseEventResolvedDate]: StructureDefinition-adverse-event-resolved-date.html
 [CTCAEGradeCS]: CodeSystem-ctcae-grade-code-system.html
 [CTCAEGradeVS]: ValueSet-ctcae-grade-value-set.html
 [AdverseEventSeriousnessVS]: ValueSet-adverse-event-seriousness-value-set.html

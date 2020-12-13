@@ -63,11 +63,11 @@ Description: "mCODE Example for Genomic Region Studied"
 * issued = "2019-04-01T11:45:33+11:00"
 * component[GeneStudied].valueCodeableConcept = HGNC#HGNC:11389 "STK11"
 
-Instance: mCODETumorMarkerExample1
-InstanceOf: TumorMarker
-Description: "mCODE Example for Tumor Marker Example"
-* id = "mCODETumorMarkerExample1"
-* meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tumor-marker"
+Instance: mCODETumorMarkerTestExample1
+InstanceOf: TumorMarkerTest
+Description: "mCODE Example for Tumor Marker Test"
+* id = "mCODETumorMarkerTestExample1"
+* meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tumor-marker-test"
 * status = #final "final"
 * code = LNC#39004-7 "Epidermal growth factor receptor Ag [Presence] in Tissue"
 * subject = Reference(mCODEPatientExample1)

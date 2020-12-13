@@ -33,7 +33,6 @@ Description: "Extended example 1: example showing disease status (patient's cond
 * id = "scenario1-mcode-cancer-disease-status"
 * extension[evidenceType].valueCodeableConcept = SCT#363679005 "Imaging (procedure)"
 * status = #final "final"
-* category = ObsCat#imaging
 * code = LNC#88040-1 "Response to cancer treatment"
 * subject = Reference(scenario1-mcode-cancer-patient)
 * effectiveDateTime = "2020-03-01"
@@ -50,7 +49,6 @@ Description: "mCODE Example for Cancer-Related Comorbidities"
 * subject = Reference(scenario1-mcode-cancer-patient)
 * performer = Reference(scenario1-us-core-practitioner)
 * status = #final "final"
-* category = ObsCat#survey
 * component[depression].valueCodeableConcept = SCT#52101004 "Present (qualifier value)"
 * component[hypertensionComplicated].valueCodeableConcept = SCT#52101004 "Present (qualifier value)"
 * component[rheumatoidArthritis].valueCodeableConcept = SCT#2667000 "Absent (qualifier value)"
@@ -98,7 +96,6 @@ Description: "Extended example 1: example showing ECOG performance status"
 * id = "scenario1-mcode-ecog-performance-status"
 * status = #final "final"
 * subject = Reference(scenario1-mcode-cancer-patient)
-* category = ObsCat#survey "survey"
 * effectiveDateTime = "2018-03-01"
 * performer = Reference(scenario1-us-core-practitioner)
 * valueInteger = 0
@@ -111,7 +108,6 @@ Description: "Extended example 1: example showing partial mastectomy surgical pr
 * id = "scenario1-mcode-cancer-related-surgical-procedure-mastectomy"
 * extension[treatmentIntent].valueCodeableConcept = SCT#373808002 "Curative - procedure intent (qualifier value)"
 * status = #completed "completed"
-* category = SCT#387713003 "Surgical procedure"
 * code = SCT#64368001 "Partial mastectomy (procedure)"
 * subject = Reference(scenario1-mcode-cancer-patient)
 * performedDateTime = "2019-03-05"
@@ -125,7 +121,6 @@ Description: "Extended example 1: example showing radiation treatment"
 * id = "scenario1-mcode-cancer-related-radiation-procedure"
 * extension[treatmentIntent].valueCodeableConcept = SCT#373808002 "Curative - procedure intent (qualifier value)"
 * status = #completed "completed"
-* category = SCT#53438000 "Radiation therapy procedure or service (procedure)"
 * code = SCT#385798007 "Radiation therapy care (regime/therapy)"
 * subject = Reference(scenario1-mcode-cancer-patient)
 * performedDateTime = "2018-03-20"
@@ -153,7 +148,6 @@ InstanceOf: TNMClinicalStageGroup
 Description: "Extended example 1: example showing TNM staging (stage group)"
 * id = "scenario1-mcode-tnm-clinical-stage-group"
 * status = #final "final"
-* category = ObsCat#exam "exam"
 * code = LNC#21908-9 "Stage group.clinical Cancer"
 * subject = Reference(scenario1-mcode-cancer-patient)
 * effectiveDateTime = "2018-03-10"
@@ -168,7 +162,6 @@ InstanceOf: TNMClinicalPrimaryTumorCategory
 Description: "Extended example 1: example showing TNM staging (T)"
 * id = "scenario1-mcode-tnm-primary-tumor-category"
 * status = #final "final"
-* category = ObsCat#exam "exam"
 * code = LNC#21905-5 "Primary tumor.clinical [Class] Cancer"
 * subject = Reference(scenario1-mcode-cancer-patient)
 * effectiveDateTime = "2018-03-10"
@@ -180,7 +173,6 @@ InstanceOf: TNMClinicalRegionalNodesCategory
 Description: "Extended example 1: example showing TNM staging (N)"
 * id = "scenario1-mcode-tnm-clinical-regional-nodes-category"
 * status = #final "final"
-* category = ObsCat#exam "exam"
 * code = LNC#21906-3 "Regional lymph nodes.clinical [Class] Cancer"
 * subject = Reference(scenario1-mcode-cancer-patient)
 * effectiveDateTime = "2018-03-10"
@@ -192,55 +184,50 @@ InstanceOf: TNMClinicalDistantMetastasesCategory
 Description: "Extended example 1: example showing TNM staging (M)"
 * id = "scenario1-mcode-tnm-clinical-distant-metastases-category"
 * status = #final "final"
-* category = ObsCat#exam "exam"
 * code = LNC#21907-1 "Distant metastases.clinical [Class] Cancer"
 * subject = Reference(scenario1-mcode-cancer-patient)
 * effectiveDateTime = "2018-03-10"
 * valueCodeableConcept = AJCC#cM0
 * method = NCIT#C146985 "AJCC Cancer Staging Manual 8th Edition"
 
-Instance: scenario1-mcode-tumor-marker-er
-InstanceOf: TumorMarker
+Instance: scenario1-mcode-tumor-marker-test-er
+InstanceOf: TumorMarkerTest
 Description: "Extended example 1: example showing ER status"
-* id = "scenario1-mcode-tumor-marker-er"
+* id = "scenario1-mcode-tumor-marker-test-er"
 * status = #final "final"
-* category = ObsCat#laboratory
 * code = LNC#85337-4 "Estrogen receptor Ag [Presence] in Breast cancer specimen by Immune stain"
 * subject = Reference(scenario1-mcode-cancer-patient)
 * effectiveDateTime = "2018-03-10"
 * performer = Reference(scenario1-us-core-practitioner)
 * valueCodeableConcept = LNC#LA6576-8 "Positive"
 
-Instance: scenario1-mcode-tumor-marker-pr
-InstanceOf: TumorMarker
+Instance: scenario1-mcode-tumor-marker-test-pr
+InstanceOf: TumorMarkerTest
 Description: "Extended example 1: example showing PR status"
-* id = "scenario1-mcode-tumor-marker-pr"
+* id = "scenario1-mcode-tumor-marker-test-pr"
 * status = #final "final"
-* category = ObsCat#laboratory
 * code = LNC#85339-0 "Progesterone receptor Ag [Presence] in Breast cancer specimen by Immune stain"
 * subject = Reference(scenario1-mcode-cancer-patient)
 * effectiveDateTime = "2018-03-10"
 * performer = Reference(scenario1-us-core-practitioner)
 * valueCodeableConcept = LNC#LA6577-6 "Negative"
 
-Instance: scenario1-mcode-tumor-marker-her2
-InstanceOf: TumorMarker
+Instance: scenario1-mcode-tumor-marker-test-her2
+InstanceOf: TumorMarkerTest
 Description: "Extended example 1: example showing HER2 status"
-* id = "scenario1-mcode-tumor-marker-her2"
+* id = "scenario1-mcode-tumor-marker-test-her2"
 * status = #final "final"
-* category = ObsCat#laboratory
 * code = LNC#48676-1 "HER2 [Interpretation] in Tissue"
 * subject = Reference(scenario1-mcode-cancer-patient)
 * effectiveDateTime = "2018-03-10"
 * performer = Reference(scenario1-us-core-practitioner)
 * valueCodeableConcept = LNC#LA6577-6 "Negative"
 
-Instance: scenario1-mcode-tumor-marker-oncotype-dx
-InstanceOf: TumorMarker
+Instance: scenario1-mcode-tumor-marker-test-oncotype-dx
+InstanceOf: TumorMarkerTest
 Description: "Extended example 1: example showing Oncotype DX breast recurrence score. Note that this test has no assigned LOINC code, so GTR is being used as a backup. Only the score from the Oncotype DX panel (as opposed to variant data from the genes in the panel) is represented here."
-* id = "scenario1-mcode-tumor-marker-oncotype-dx"
+* id = "scenario1-mcode-tumor-marker-test-oncotype-dx"
 * status = #final "final"
-* category = ObsCat#laboratory
 * code = GTR#509910 "Oncotype DX Breast Recurrence Score Assay"
 * subject = Reference(scenario1-mcode-cancer-patient)
 * effectiveDateTime = "2018-03-20"
@@ -268,7 +255,6 @@ InstanceOf: GenomicRegionStudied
 Description: "Extended example 1: example showing which regions were included in the genomics panel"
 * id = "scenario1-mcode-genomic-region-studied"
 * status = #final "final"
-* category = ObsCat#laboratory
 * code = LNC#53041-0 "DNA region of interest panel"
 * subject = Reference(scenario1-mcode-cancer-patient)
 * effectiveDateTime = "2018-04-01"
@@ -298,7 +284,6 @@ InstanceOf: CancerGeneticVariant
 Description: "Extended example 1: example showing genetic variant found by breast cancer genomics panel"
 * id = "scenario1-mcode-cancer-genetic-variant"
 * status = #final "final"
-* category = ObsCat#laboratory
 * code = LNC#69548-6 "Genetic variant assessment"
 * subject = Reference(scenario1-mcode-cancer-patient)
 * effectiveDateTime = "2018-03-15"
@@ -481,7 +466,6 @@ InstanceOf: USCoreSmokingStatusProfile
 Description: "Extended example 1: example showing smoking status"
 * id = "scenario1-us-core-smoking-status"
 * status = #final "final"
-* category = ObsCat#social-history "Social History"
 * code = LNC#72166-2 "Tobacco smoking status"
 * subject = Reference(scenario1-mcode-cancer-patient)
 * issued = "2018-03-01T00:00:00Z"
@@ -557,14 +541,16 @@ Description: "Extended example 1: example tumor specimen"
 * collection.bodySite = SCT#80248007 "Left breast structure (body structure)"
 
 Instance: scenario1-diagnosticreport-pathology
-InstanceOf: DiagnosticReport
-Description: "Extended example 1: example of pathology findings represnted as a DiagnosticReport"
+InstanceOf: USCoreDiagnosticReportLab
+Description: "Extended example 1: example of pathology findings represented as a DiagnosticReport resource."
 * id = "scenario1-diagnosticreport-pathology"
 * status = #final "final"
-* category = DiagnosticService#SP "Surgical Pathology"
+* category[0] = DiagnosticService#LAB
+* category[1] = DiagnosticService#SP "Surgical Pathology"
 * code = LNC#22637-3 "Pathology report final diagnosis Narrative"
 * subject = Reference(scenario1-mcode-cancer-patient)
 * issued = "2018-03-06T00:00:00Z"
+* effectiveDateTime = "2018-03-06T00:00:00Z"
 * specimen = Reference(scenario1-specimen-tumor)
 * result[0] = Reference(scenario1-observation-tumor-invasion-negative)
 * result[1] = Reference(scenario1-observation-tumor-negative-margins)
@@ -575,11 +561,10 @@ Description: "Extended example 1: example of pathology findings represnted as a 
 * resultsInterpreter = Reference(scenario1-practitioner2-mcode)
 
 Instance: scenario1-observation-tumor-invasion-negative
-InstanceOf: Observation
+InstanceOf: USCoreObservationLab
 Description: "Extended example 1: example showing negative invasion for the removed tumor"
 * id = "scenario1-observation-tumor-invasion-negative"
 * status = #final "final"
-* category = ObsCat#laboratory "Laboratory"
 * code = SCT#370052007 "Status of invasion by tumor (observable entity)" // No LOINC for invasion status
 * subject = Reference(scenario1-mcode-cancer-patient)
 * effectiveDateTime = "2018-03-06T00:00:00Z"
@@ -587,11 +572,10 @@ Description: "Extended example 1: example showing negative invasion for the remo
 * specimen = Reference(scenario1-specimen-tumor)
 
 Instance: scenario1-observation-tumor-negative-margins
-InstanceOf: Observation
+InstanceOf:  USCoreObservationLab
 Description: "Extended example 1: example showing negative margins for the removed tumor"
 * id = "scenario1-observation-tumor-negative-margins"
 * status = #final "final"
-* category = ObsCat#laboratory "Laboratory"
 * code = LNC#44669-0 "Margin involvement in Breast tumor"
 * subject = Reference(scenario1-mcode-cancer-patient)
 * effectiveDateTime = "2018-03-06T00:00:00Z"
@@ -599,11 +583,10 @@ Description: "Extended example 1: example showing negative margins for the remov
 * specimen = Reference(scenario1-specimen-tumor)
 
 Instance: scenario1-observation-tumor-sentinel-nodes
-InstanceOf: Observation
+InstanceOf:  USCoreObservationLab
 Description: "Extended example 1: example showing 3 sentinel lymph nodes were examined"
 * id = "scenario1-observation-tumor-sentinel-nodes"
 * status = #final "final"
-* category = ObsCat#laboratory "Laboratory"
 * code = LNC#92832-5 "Sentinel lymph nodes with metastasis [#] in Cancer specimen"
 * subject = Reference(scenario1-mcode-cancer-patient)
 * effectiveDateTime = "2018-03-06T00:00:00Z"
@@ -613,11 +596,10 @@ Description: "Extended example 1: example showing 3 sentinel lymph nodes were ex
 * specimen = Reference(scenario1-specimen-tumor)
 
 Instance: scenario1-observation-tumor-size
-InstanceOf: Observation
+InstanceOf:  USCoreObservationLab
 Description: "Extended example 1: example showing tumor size"
 * id = "scenario1-observation-tumor-size"
 * status = #final "final"
-* category = ObsCat#laboratory "Laboratory"
 * code = LNC#21889-1 "Size Tumor"
 * subject = Reference(scenario1-mcode-cancer-patient)
 * effectiveDateTime = "2018-03-06T00:00:00Z"
@@ -627,11 +609,10 @@ Description: "Extended example 1: example showing tumor size"
 * specimen = Reference(scenario1-specimen-tumor)
 
 Instance: scenario1-observation-tumor-dcis
-InstanceOf: Observation
+InstanceOf:  USCoreObservationLab
 Description: "Extended example 1: example showing DCIS diagnosis"
 * id = "scenario1-observation-tumor-dcis"
 * status = #final "final"
-* category = ObsCat#laboratory "Laboratory"
 * code = LNC#29308-4 "Diagnosis"
 * subject = Reference(scenario1-mcode-cancer-patient)
 * effectiveDateTime = "2018-03-06T00:00:00Z"
@@ -642,18 +623,15 @@ Instance: scenario1-body-weight
 InstanceOf: http://hl7.org/fhir/StructureDefinition/bodyweight
 Description: "Extended example 1: example of body weight vital sign"
 * status = #final "final"
-* category = ObsCat#vital-signs "Vital Signs"
 * subject = Reference(scenario1-mcode-cancer-patient)
 * effectiveDateTime = "2018-03-06T00:00:00Z"
 * valueQuantity = 155.0 '[lb_av]'
-//* valueQuantity = UCUM#[lb_av] "lb"
 * valueQuantity.unit = "lb"
 
 Instance: scenario1-neutrophils
-InstanceOf: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab
+InstanceOf: USCoreObservationLab
 Description: "Extended example 1: neutrophils lab test"
 * status = #final "final"
-* category = ObsCat#laboratory "Laboratory"
 * code = LNC#770-8 "Neutrophils/100 leukocytes in Blood by Automated count"
 * subject = Reference(scenario1-mcode-cancer-patient)
 * effectiveDateTime = "2018-03-06T00:00:00Z"

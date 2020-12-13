@@ -1,4 +1,4 @@
-== Suppressed Messages =
+== Suppressed Messages ==
 # The following code systems are external and not supported by terminology server
 Error from server: Unable to provide support for code system http://sequenceontology.org
 Error from server: Unable to provide support for code system http://ncithesaurus-stage.nci.nih.gov
@@ -12,11 +12,8 @@ Error from server: Unable to provide support for code system http://www.ncbi.nlm
 [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/mcode/ValueSet/mcode-tnm-regional-nodes-category-vs because the value set or code system is not known to the validator]
 [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/mcode/ValueSet/mcode-tnm-distant-metastases-category-vs because the value set or code system is not known to the validator]
 [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/mcode/ValueSet/mcode-clinvar-vs because the value set or code system is not known to the validator]
-
 # Suppress message about not using USCoreLaboratoryResult, because not all Observations are laboratories.  (TBD -- THIS IS NOT MATCHING)
 US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles. Comparison with US Core Pediatric Head Occipital-frontal Circumference Percentile Profile. Comparison with US Core Pediatric BMI for Age Observation Profile. Comparison with US Core Pediatric Weight for Height Observation Profile. Comparison with US Core Laboratory Result Observation Profile. Comparison with US Core Pulse Oximetry Profile. Comparison with US Core Smoking Status Observation Profile.
-
-
 # These warnings suppressed because the codes are valid, it is the warning that is in error
 The code C41333 is not valid in the system http://ncithesaurus-stage.nci.nih.gov
 The code C41334 is not valid in the system http://ncithesaurus-stage.nci.nih.gov

@@ -107,7 +107,7 @@ Description: "Includes surgical procedure codes from SNOMED CT, ICD-10-PCS and C
 CodeSystem: OtherSpecifyCS
 Id: mcode-other-specify-code-system
 Title: "Other Specify Code System"
-Description: "A code system containing codes that represent various 'Other ____, Specify' terms, to be used to indicate a value set is being extended beyond the terms provided."
+Description: "A code system containing codes signifying a value set has been extended, using an 'Other ____, Specify' approach."
 * #OtherPrimaryCancerCondition "Other Primary Cancer Condition, Specify" "Code to be used for concepts not represented elsewhere in the value set. Specify the desired concept as an additional coding."
 * #OtherSecondaryCancerCondition "Other Secondary Cancer Condition, Specify" "Code to be used for concepts not represented elsewhere in the value set. Specify the desired concept as an additional coding."
 * #OtherTumorMarkerTest "Other Tumor Marker Test, Specify" "Code to be used for concepts not represented elsewhere in the value set. Specify the desired concept as an additional coding."

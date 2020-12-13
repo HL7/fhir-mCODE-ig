@@ -55,8 +55,6 @@ Description:  "Records the dimensions of a tumor"
 * component[tumorOtherDimension].valueQuantity from TumorSizeUnitsVS (required)
 
 
-
-
 Profile: Tumor
 Parent:  BodyStructure
 Id: mcode-tumor
@@ -70,7 +68,7 @@ Description:  "Identifies a tumor. Whenever possible, a single resource conformi
 * identifier ^definition = "Stable identifier of this specific tumor, should be unique within the referenced `CancerPatient`."
 * identifier ^comment = "If applicable, this should correspond to the physical tag inserted into the tumor during a procedure that is used for tracking the tumor by radiology and pathology."
 // This VS is used to define the morphology of primary and secondary cancer; rule set here for consistency with these profiles.
-* morphology from HistologyMorphologyBehaviorVS (extensible)
+* morphology from HistologyMorphologyBehaviorVS (required)
 * morphology MS
 // This VS is used for the primary/secondary cancer conditions; rule set here for consistency with these profiles.
 * location from CancerBodyLocationVS (extensible)

@@ -112,7 +112,6 @@ Observation resources associated with an mCODE patient with an Observation.code 
 * subject 1..1
 * code from TumorMarkerTestVS (required)
 * subject only Reference(CancerPatient)
-* focus only Reference(CancerConditionParent)
 * effective[x] only dateTime or Period
 * performer only Reference(Practitioner)
 * value[x] only Quantity or Ratio or CodeableConcept

@@ -111,6 +111,8 @@ Description: "A code system containing codes that represent various 'Other ____,
 * #OtherPrimaryCancerCondition "Other Primary Cancer Condition, Specify" "Code to be used for concepts not represented elsewhere in the value set. Specify the desired concept as an additional coding."
 * #OtherSecondaryCancerCondition "Other Secondary Cancer Condition, Specify" "Code to be used for concepts not represented elsewhere in the value set. Specify the desired concept as an additional coding."
 * #OtherTumorMarkerTest "Other Tumor Marker Test, Specify" "Code to be used for concepts not represented elsewhere in the value set. Specify the desired concept as an additional coding."
+* #OtherCancerDisorder "Other Cancer Disorder, Specify" "Code to be used for concepts not represented elsewhere in the value set. Specify the desired concept as an additional coding."
+* #OtherHistologyMorphologyBehavior "Other Histology Morphology Behavior, Specify" "Code to be used for concepts not represented elsewhere in the value set. Specify the desired concept as an additional coding."
 
 ValueSet:       TumorMarkerTestVS
 Id: mcode-tumor-marker-test-vs

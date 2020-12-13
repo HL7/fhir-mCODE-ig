@@ -38,7 +38,7 @@ Description: "An extension describing the morphologic and behavioral characteris
 * ^context[0].expression = "Condition"
 * extension 0..0
 * value[x] only CodeableConcept
-* value[x] from HistologyMorphologyBehaviorVS (extensible)
+* value[x] from HistologyMorphologyBehaviorVS (required)
 
 Extension: LocationQualifier
 Id:  mcode-location-qualifier

@@ -5,6 +5,7 @@ Id: mcode-cancer-disorder-vs
 Title: "Cancer Disorder Value Set"
 Description:   "A broad cancer-related value set containing both primary and secondary tumor types, with codes from ICD-10 and SNOMED CT, including both diagnosis and histology/morphology/behavior codes. ICD-O-3 morphology codes may also be used and are considered conformant to the specification. For SNOMED, the value set includes all codes descending from 363346000 'Malignant neoplastic disease (disorder)' and 108369006 'Neoplasm (morphologic abnormality)'."
 * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
+* OtherSpecifyCS#OtherCancerDisorder "Other Cancer Disorder, Specify"
 * include codes from valueset PrimaryOrUncertainBehaviorCancerDisorderVS
 * include codes from valueset SecondaryCancerDisorderVS
 * include codes from valueset HistologyMorphologyBehaviorVS
@@ -83,6 +84,7 @@ Id: mcode-histology-morphology-behavior-vs
 Title: "Histology Morphology Behavior Value Set"
 Description: "Codes representing the structure, arrangement, and behavioral characteristics of malignant neoplasms, and cancer cells. Inclusion criteria: in situ neoplasms and malignant neoplasms. Exclusion criteria: benign neoplasms and neoplasms of unspecified behavior. Note: As the vocabulary binding is extensible within this IG, ICD-O-3 morphology codes (including behavior suffix) may also be used; they are not included in the value set for intellectual property reasons. For primary cancers, the ICD-O-3 behavior suffix should be /1, /2, or /3. For secondary cancers, the ICD-O-3 behavior suffix should be /6."
 * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
+* OtherSpecifyCS#OtherHistologyMorphologyBehavior "Other Histology Morphology Behavior, Specify"
 * include codes from system ICDO3
 * include codes from system SCT where concept is-a #367651003 "Malignant neoplasm of primary, secondary, or uncertain origin (morphologic abnormality)"
 * include codes from system SCT where concept is-a #399919001 "Carcinoma in situ - category (morphologic abnormality)"

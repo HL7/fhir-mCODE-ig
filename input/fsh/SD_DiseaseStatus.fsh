@@ -20,7 +20,7 @@ Observation resources associated with an mCODE patient with Observation.code LOI
 * subject 1..1
 * code = LNC#88040-1 //"Response to cancer treatment"
 * subject only Reference(CancerPatient)
-* focus only Reference(PrimaryCancerCondition or SecondaryCancerCondition)
+* focus only Reference(PrimaryCancerCondition or SecondaryCancerCondition or Tumor)
 * effective[x] only dateTime or Period
 * performer only Reference(USCorePractitioner)
 * value[x] only CodeableConcept

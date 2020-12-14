@@ -10,6 +10,7 @@ Id: ctc-adverse-event
 Description: "Profile of adverse event, using Common Terminology Criteria (CTC)."
 * ^status = #draft
 * ^experimental = true
+* obeys adverse-event-grade-zero-invariant
 * subject only Reference(Patient)
 * subject and date and outcome and recorder and actuality and category and study MS 
 * actuality = #actual
@@ -39,6 +40,12 @@ Description: "Profile of adverse event, using Common Terminology Criteria (CTC).
 // ------Causality------
 * suspectEntity and suspectEntity.instance and suspectEntity.causality and suspectEntity.causality.assessment and suspectEntity.causality.assessment.text MS
 * suspectEntity.causality.assessment from AdverseEventRelatednessVS (required)
+
+Invariant: adverse-event-grade-zero-invariant
+Description: "If the adverse event grade is 0, seriousness and suspectEntity must not be specified."
+Expression: "extension[CTCAEGrade].valueCodeableConcept.coding.where(code = '#0').exists() implies seriousness.not().exists() and suspectEntity.not().exists()"
+Severity:   #error
+
 
 RuleSet: AdverseEventExtensionPreamble
 * ^status = #draft

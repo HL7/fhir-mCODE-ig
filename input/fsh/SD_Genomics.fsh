@@ -107,15 +107,20 @@ Description:    "The result of a tumor marker test. Tumor marker tests are gener
 Conformance statement:
 
 Observation resources associated with an mCODE patient with an Observation.code in the value set TumorMarkerTestVS MUST conform to this profile. Beyond this requirement, a producer of resources SHOULD ensure that any resource instance associated with an mCODE patient that would reasonably be expected to conform to this profile SHOULD be published in this form, for example, when employing a code that extends the TumorMarkerTestVS value set. Any resource intended to conform to this profile SHOULD populate meta.profile accordingly."
-
 * status and code and subject and effective[x] and value[x] and focus MS
 * subject 1..1
 * code from TumorMarkerTestVS (required)
+* code obeys tumor-marker-test-code-invariant
 * subject only Reference(CancerPatient)
 * effective[x] only dateTime or Period
 * performer only Reference(Practitioner)
 * value[x] only Quantity or Ratio or CodeableConcept
 * component 0..0 // needed to distinguish from cancerGeneticVariant and genomicRegionStudied in bundle MK 10/29/2020
+
+Invariant: tumor-marker-test-code-invariant
+Description: "If the code representing 'Other tumor marker test, specify' is used, a second code from outside the original value set must be present."
+Expression: "code.coding.where(code = '#OtherTumorMarkerTest').exists() implies code.coding.where(code != '#OtherTumorMarkerTest' and $this.memberOf('http://hl7.org/fhir/us/mcode/ValueSet/mcode-tumor-marker-test-vs').not()).exists()"
+Severity:   #error
 
 Profile:    GeneticSpecimen
 Parent:     Specimen

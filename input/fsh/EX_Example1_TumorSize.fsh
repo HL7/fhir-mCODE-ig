@@ -6,22 +6,15 @@ Description: "EXPERIMENTAL example of a resource conforming to the tumor size pr
 * method = LNC#24419-4 "Pathology report gross observation"
 * subject = Reference(Patient/mCODEPatientExample1)
 * focus = Reference(BodyStructure/example1-mcode-tumor)
-
-* component[tumorLongestDimension].valueQuantity = UCUM#cm
-* component[tumorLongestDimension].valueQuantity.value = 1.2
-
-* component[tumorOtherDimension].valueQuantity = UCUM#cm
-* component[tumorOtherDimension].valueQuantity.value = 1.0
-
-* component[tumorOtherDimension].valueQuantity = UCUM#cm
-* component[tumorOtherDimension].valueQuantity.value = 0.5
+* component[tumorLongestDimension].valueQuantity = 1.2 'cm'
+* component[tumorOtherDimension].valueQuantity = 1.0 'cm'
+* component[tumorOtherDimension].valueQuantity = 0.5 'cm'
 
 Instance: example1-mcode-tumor
 InstanceOf: Tumor
 Description: "EXPERIMENTAL example of a resource conforming to the tumor profile."
 * id = "example1-mcode-tumor"
 * patient = Reference(Patient/mCODEPatientExample1)
-
 // Resources conforming to this profile indicate that the tumor is still in the body.
 // This implies it is being measured by radiology. The identifier here is a hypothetical
 // radiology identifier for a specific tumor.

@@ -119,7 +119,8 @@ Id: mcode-tumor-marker-test-vs
 Description:    "Codes representing tests for tumor markers. This value set of LOINC codes is not comprehensive and can be extended. Other vocabularies can be used only if the test of interest is not covered by LOINC. Tumor marker tests differ from genetic tests in that they measure levels of protein or other substances produced downstream from RNA protein synthesis."
 
 * ^copyright = "This material contains content from LOINC (http://loinc.org). LOINC is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc"
-* include codes from system LNC where ancestor = "LP31412-7"
+* OtherSpecifyCS#OtherTumorMarkerTest "Other Tumor Marker Test, Specify"
+* include codes from system LNC where ancestor in "LP101591-8, LP111251-7, LP136073-6, LP14040-7, LP14329-4, LP14543-0, LP14618-0, LP14649-5, LP14650-3, LP14652-9, LP14658-6 , LP14665-1  , LP14694-1, LP14697-4, LP14902-8, LP14907-7, LP15033-1, LP15090-1, LP15097-6, LP15097-6, LP15461-4, LP15463-0, LP15464-8, LP15465-5, LP15466-3, LP15467-1, LP15681-7, LP157499-7, LP15990-2, LP16890-3, LP17730-0, LP17751-6, LP18193-0, LP18274-8, LP18343-1, LP18396-9, LP18515-4, LP18567-5, LP189759-6, LP19423-0, LP19492-5, LP19666-4, LP19732-4, LP20052-4, LP200639-5, LP207485-6, LP220351-3, LP248009-5, LP28442-9, LP28518-6, LP28728-1, LP28852-9, LP31830-0, LP31855-7, LP35767-0, LP36040-1, LP36464-3, LP36477-5, LP36861-0, LP36885-9, LP61778-4, LP62864-1, LP62864-1, LP63490-4, LP64447-3, LP93517-8"
 
 ValueSet:   GeneticSpecimenTypeVS
 Id: mcode-genetic-specimen-type-vs

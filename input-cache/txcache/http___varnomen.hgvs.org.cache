@@ -9,34 +9,6 @@ v: {
   "error" : ""
 }
 -------------------------------------------------------------------------------------
-{"hierarchical" : false, "valueSet" :{
-  "resourceType" : "ValueSet",
-  "compose" : {
-    "include" : [{
-      "system" : "http://varnomen.hgvs.org"
-    }]
-  }
-}}####
-e: {
-  "valueSet" : {
-  "resourceType" : "ValueSet",
-  "status" : "active",
-  "expansion" : {
-    "identifier" : "urn:uuid:aa5bc43c-9b5b-40f2-8a61-a88dcb6f0743",
-    "timestamp" : "2020-12-05T02:34:37.238Z",
-    "parameter" : [{
-      "name" : "limitedExpansion",
-      "valueBoolean" : true
-    },
-    {
-      "name" : "excludeNested",
-      "valueBoolean" : true
-    }]
-  }
-},
-  "error" : ""
-}
--------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://varnomen.hgvs.org",
   "code" : "NC_000019.8:g.1171707G>A"
@@ -190,30 +162,6 @@ v: {
 v: {
   "display" : "NC_000016.10:g.23603471G>T",
   "severity" : null,
-  "error" : ""
-}
--------------------------------------------------------------------------------------
-{"hierarchical" : true, "valueSet" :{
-  "resourceType" : "ValueSet",
-  "compose" : {
-    "include" : [{
-      "system" : "http://varnomen.hgvs.org"
-    }]
-  }
-}}####
-e: {
-  "valueSet" : {
-  "resourceType" : "ValueSet",
-  "status" : "active",
-  "expansion" : {
-    "identifier" : "urn:uuid:d6f0d25c-326d-4a28-8ef9-9b6d9ff7f322",
-    "timestamp" : "2020-12-05T02:56:47.411Z",
-    "parameter" : [{
-      "name" : "limitedExpansion",
-      "valueBoolean" : true
-    }]
-  }
-},
   "error" : ""
 }
 -------------------------------------------------------------------------------------

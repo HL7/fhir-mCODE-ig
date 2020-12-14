@@ -1,32 +1,4 @@
 -------------------------------------------------------------------------------------
-{"hierarchical" : false, "valueSet" :{
-  "resourceType" : "ValueSet",
-  "compose" : {
-    "include" : [{
-      "system" : "http://www.genenames.org"
-    }]
-  }
-}}####
-e: {
-  "valueSet" : {
-  "resourceType" : "ValueSet",
-  "status" : "active",
-  "expansion" : {
-    "identifier" : "urn:uuid:258f9bd9-09c7-4be6-a6a4-3bcd404f3660",
-    "timestamp" : "2020-12-05T02:34:36.613Z",
-    "parameter" : [{
-      "name" : "limitedExpansion",
-      "valueBoolean" : true
-    },
-    {
-      "name" : "excludeNested",
-      "valueBoolean" : true
-    }]
-  }
-},
-  "error" : ""
-}
--------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://www.genenames.org",
   "code" : "HGNC:11389"
@@ -160,17 +132,5 @@ v: {
   "display" : "",
   "severity" : "error",
   "error" : "The code \"1100\" is not valid in the system http://www.genenames.org; The code \"1101\" is not valid in the system http://www.genenames.org; The code \"1748\" is not valid in the system http://www.genenames.org; The code \"26144\" is not valid in the system http://www.genenames.org; The code \"9588\" is not valid in the system http://www.genenames.org; The code \"11389\" is not valid in the system http://www.genenames.org; The code \"11998\" is not valid in the system http://www.genenames.org; None of the codes provided (http://www.genenames.org#1100, http://www.genenames.org#1101, http://www.genenames.org#1748, http://www.genenames.org#26144, http://www.genenames.org#9588, http://www.genenames.org#11389, http://www.genenames.org#11998) are valid in the value set 'HGNCVS' (from http://tx.fhir.org/r4)"
-}
--------------------------------------------------------------------------------------
-{"hierarchical" : true, "valueSet" :{
-  "resourceType" : "ValueSet",
-  "compose" : {
-    "include" : [{
-      "system" : "http://www.genenames.org"
-    }]
-  }
-}}####
-e: {
-  "error" : "Error from server: Unable to provide support for code system http://www.genenames.org"
 }
 -------------------------------------------------------------------------------------

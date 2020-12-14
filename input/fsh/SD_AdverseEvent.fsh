@@ -1,8 +1,3 @@
-// Additional Invariants (Not done):
-// 1) if grade /= 0, seriousness must be specified
-// 2) If grade = 0, seriousness and suspectEntity must not be specified
-
-
 Profile: CTCAdverseEvent
 Parent: AdverseEvent
 Title: "CTC Adverse Event"
@@ -43,7 +38,7 @@ Description: "Profile of adverse event, using Common Terminology Criteria (CTC).
 
 Invariant: adverse-event-grade-zero-invariant
 Description: "If the adverse event grade is 0, seriousness and suspectEntity must not be specified."
-Expression: "extension[CTCAEGrade].valueCodeableConcept.coding.where(code = '#0').exists() implies seriousness.not().exists() and suspectEntity.not().exists()"
+Expression: "extension(http://hl7.org/fhir/us/mcode/StructureDefinition/ctcae-grade).valueCodeableConcept.coding.where(code = '0').exists() implies seriousness.not().exists() and suspectEntity.not().exists()"
 Severity:   #error
 
 

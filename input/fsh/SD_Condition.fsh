@@ -37,7 +37,7 @@ Condition resources associated with an mCODE patient with a Condition.code in th
 
 Invariant: primary-cancer-condition-code-invariant
 Description: "If the code representing 'Other primary cancer condition, specify' is used, a second code from outside the original value set must be present."
-Expression: "code.coding.where(code = '#OtherPrimaryCancerCondition').exists() implies code.coding.where(code != '#OtherPrimaryCancerCondition' and $this.memberOf('http://hl7.org/fhir/us/mcode/ValueSet/mcode-primary-or-uncertain-behavior-cancer-disorder-vs').not()).exists()"
+Expression: "code.coding.where(code = 'OtherPrimaryCancerCondition').exists() implies code.coding.where(code != 'OtherPrimaryCancerCondition' and $this.memberOf('http://hl7.org/fhir/us/mcode/ValueSet/mcode-primary-or-uncertain-behavior-cancer-disorder-vs').not()).exists()"
 Severity: #error
 
 Profile: SecondaryCancerCondition
@@ -58,5 +58,5 @@ Condition resources associated with an mCODE patient with a Condition.code in th
 
 Invariant: secondary-cancer-condition-code-invariant
 Description: "If the code representing 'Other secondary cancer condition, specify' is used, a second code from outside the original value set must be present."
-Expression: "code.coding.where(code = '#OtherSecondaryCancerCondition').exists() implies code.coding.where(code != '#OtherSecondaryCancerCondition' and $this.memberOf('http://hl7.org/fhir/us/mcode/ValueSet/mcode-secondary-cancer-disorder-vs').not()).exists()"
+Expression: "code.coding.where(code = 'OtherSecondaryCancerCondition').exists() implies code.coding.where(code != 'OtherSecondaryCancerCondition' and $this.memberOf('http://hl7.org/fhir/us/mcode/ValueSet/mcode-secondary-cancer-disorder-vs').not()).exists()"
 Severity: #error

@@ -2,12 +2,12 @@ Instance: ctc-adverse-event-example-1
 InstanceOf: CTCAdverseEvent
 Description: "Grade 2 dehydration attributed to gefitinib"
 * id = "ctc-adverse-event-example-1"
-* contained[0] = mcode-medication-example-1 
+* contained[0] = mcode-medication-example-1
 * meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/ctc-adverse-event"
 * subject = Reference(Patient/mCODEPatientExample1)
 * event = NCIT#C57787  "Dehydration"
 * event.text = "DHN IV given"
-* extension[grade].valueCodeableConcept = CTCAEGradeCS#2 "Moderate Adverse Event" 
+* extension[grade].valueCodeableConcept = CTCAEGradeCS#2 "Moderate Adverse Event"
 * seriousness = NCIT#C41336 "Non-serious Adverse Event"
 * outcome = AEO#resolved
 * date = "2020-05-20"
@@ -29,7 +29,7 @@ Description: "Non-occurrence of anemia"
 * recorder = Reference(Practitioner/mCODEPractitionerExample1)
 
 Instance: mcode-medication-example-1
-InstanceOf: Medication 
+InstanceOf: Medication
 Description: "Gefitinib 250 MG Oral Tablet"
 Usage: #inline
 * id = "mcode-medication-example-1"

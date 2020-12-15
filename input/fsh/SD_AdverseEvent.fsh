@@ -36,9 +36,10 @@ Description: "Profile of adverse event, using Common Terminology Criteria (CTC).
 * suspectEntity and suspectEntity.instance and suspectEntity.causality and suspectEntity.causality.assessment and suspectEntity.causality.assessment.text MS
 * suspectEntity.causality.assessment from AdverseEventRelatednessVS (required)
 
+
 Invariant: adverse-event-grade-zero-invariant
 Description: "If the adverse event grade is 0, seriousness and suspectEntity must not be specified."
-Expression: "extension(http://hl7.org/fhir/us/mcode/StructureDefinition/ctcae-grade).valueCodeableConcept.coding.where(code = '0').exists() implies seriousness.not().exists() and suspectEntity.not().exists()"
+Expression: "extension('http://hl7.org/fhir/us/mcode/StructureDefinition/ctcae-grade').value.coding.where(code = '0').exists() implies seriousness.exists().not() and suspectEntity.exists().not()"
 Severity:   #error
 
 

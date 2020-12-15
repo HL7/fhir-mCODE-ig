@@ -2,7 +2,7 @@ Profile:  CancerRelatedMedicationRequest
 Parent:   USCoreMedicationRequest
 Id:       mcode-cancer-related-medication-request
 Title:    "Cancer-Related Medication Request"
-Description:    "A record of a medication prescription, administration, or consumption used to treat cancer. The medication may reported by the prescriber, prescribing organization, or patient, and does not have to be directly observed.
+Description:    "A record of a medication prescription, administration, or consumption used to treat cancer. The medication may reported by the prescriber, prescribing organization, or patient. It does not have to be directly observed.
 
 Conformance statement:
 
@@ -22,4 +22,3 @@ Invariant:  mcode-reason-required
 Description: "reasonCode or reasonReference SHALL be present"
 Expression: "reasonCode.exists() or reasonReference.exists()"
 Severity:   #error
-

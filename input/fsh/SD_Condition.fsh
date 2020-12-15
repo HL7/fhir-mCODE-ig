@@ -32,7 +32,7 @@ Condition resources associated with an mCODE patient with a Condition.code in th
 
 * ^abstract = false
 * code from PrimaryOrUncertainBehaviorCancerDisorderVS (required)
-* code obeys primary-cancer-condition-code-invariant
+* obeys primary-cancer-condition-code-invariant
 * stage.assessment only Reference(CancerStageParent)
 
 Invariant: primary-cancer-condition-code-invariant
@@ -51,9 +51,9 @@ Conformance statement:
 Condition resources associated with an mCODE patient with a Condition.code in the value set SecondaryCancerDisorderVS MUST conform to this profile. Beyond this requirement, a producer of resources SHOULD ensure that any resource instance associated with an mCODE patient that would reasonably be expected to conform to this profile SHOULD be published in this form, for example, when employing a code that extends the SecondaryCancerDisorderVS value set. Any resource intended to conform to this profile SHOULD populate meta.profile accordingly."
 
 * ^abstract = false
+* obeys secondary-cancer-condition-code-invariant
 * extension contains RelatedPrimaryCancerCondition named relatedPrimaryCancerCondition 0..1 MS
 * code from SecondaryCancerDisorderVS (required)
-* code obeys secondary-cancer-condition-code-invariant
 * stage 0..0
 
 Invariant: secondary-cancer-condition-code-invariant

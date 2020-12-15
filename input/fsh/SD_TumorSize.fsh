@@ -69,7 +69,7 @@ Description:  "Identifies a tumor. Whenever possible, a single resource conformi
 * identifier ^comment = "If applicable, this should correspond to the physical tag inserted into the tumor during a procedure that is used for tracking the tumor by radiology and pathology."
 // This VS is used to define the morphology of primary and secondary cancer; rule set here for consistency with these profiles.
 * morphology from HistologyMorphologyBehaviorVS (required)
-* morphology obeys tumor-other-morphology-invariant
+* obeys tumor-other-morphology-invariant
 * morphology MS
 // This VS is used for the primary/secondary cancer conditions; rule set here for consistency with these profiles.
 * location from CancerBodyLocationVS (extensible)

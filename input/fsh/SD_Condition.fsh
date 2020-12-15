@@ -32,12 +32,12 @@ Condition resources associated with an mCODE patient with a Condition.code in th
 
 * ^abstract = false
 * code from PrimaryOrUncertainBehaviorCancerDisorderVS (required)
-* obeys primary-cancer-condition-code-invariant
+* code obeys primary-cancer-condition-code-invariant
 * stage.assessment only Reference(CancerStageParent)
 
 Invariant: primary-cancer-condition-code-invariant
 Description: "If the code representing 'Other primary cancer condition, specify' is used, a second code from outside the original value set must be present."
-Expression: "code.coding.where(code = 'OtherPrimaryCancerCondition').exists() implies code.coding.where(code != 'OtherPrimaryCancerCondition' and $this.memberOf('http://hl7.org/fhir/us/mcode/ValueSet/mcode-primary-or-uncertain-behavior-cancer-disorder-vs').not()).exists()"
+Expression: "coding.where(code = 'OtherPrimaryCancerCondition').exists() implies coding.where(code != 'OtherPrimaryCancerCondition' and $this.memberOf('http://hl7.org/fhir/us/mcode/ValueSet/mcode-primary-or-uncertain-behavior-cancer-disorder-vs').not()).exists()"
 Severity: #error
 
 Profile: SecondaryCancerCondition
@@ -51,12 +51,12 @@ Conformance statement:
 Condition resources associated with an mCODE patient with a Condition.code in the value set SecondaryCancerDisorderVS MUST conform to this profile. Beyond this requirement, a producer of resources SHOULD ensure that any resource instance associated with an mCODE patient that would reasonably be expected to conform to this profile SHOULD be published in this form, for example, when employing a code that extends the SecondaryCancerDisorderVS value set. Any resource intended to conform to this profile SHOULD populate meta.profile accordingly."
 
 * ^abstract = false
-* obeys secondary-cancer-condition-code-invariant
 * extension contains RelatedPrimaryCancerCondition named relatedPrimaryCancerCondition 0..1 MS
 * code from SecondaryCancerDisorderVS (required)
+* code obeys secondary-cancer-condition-code-invariant
 * stage 0..0
 
 Invariant: secondary-cancer-condition-code-invariant
 Description: "If the code representing 'Other secondary cancer condition, specify' is used, a second code from outside the original value set must be present."
-Expression: "code.coding.where(code = 'OtherSecondaryCancerCondition').exists() implies code.coding.where(code != 'OtherSecondaryCancerCondition' and $this.memberOf('http://hl7.org/fhir/us/mcode/ValueSet/mcode-secondary-cancer-disorder-vs').not()).exists()"
+Expression: "coding.where(code = 'OtherSecondaryCancerCondition').exists() implies coding.where(code != 'OtherSecondaryCancerCondition' and $this.memberOf('http://hl7.org/fhir/us/mcode/ValueSet/mcode-secondary-cancer-disorder-vs').not()).exists()"
 Severity: #error

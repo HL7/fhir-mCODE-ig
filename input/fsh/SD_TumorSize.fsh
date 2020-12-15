@@ -69,7 +69,7 @@ Description:  "Identifies a tumor. Whenever possible, a single resource conformi
 * identifier ^comment = "If applicable, this should correspond to the physical tag inserted into the tumor during a procedure that is used for tracking the tumor by radiology and pathology."
 // This VS is used to define the morphology of primary and secondary cancer; rule set here for consistency with these profiles.
 * morphology from HistologyMorphologyBehaviorVS (required)
-* obeys tumor-other-morphology-invariant
+* morphology obeys tumor-other-morphology-invariant
 * morphology MS
 // This VS is used for the primary/secondary cancer conditions; rule set here for consistency with these profiles.
 * location from CancerBodyLocationVS (extensible)
@@ -79,7 +79,7 @@ Description:  "Identifies a tumor. Whenever possible, a single resource conformi
 
 Invariant: tumor-other-morphology-invariant
 Description: "If the code representing 'Other histology morphology behavior, specify' is used, a second code from outside the original value set must be present."
-Expression: "morphology.coding.where(code = 'OtherHistologyMorphologyBehavior').exists() implies morphology.coding.where(code != 'OtherHistologyMorphologyBehavior' and $this.memberOf('http://hl7.org/fhir/us/mcode/ValueSet/mcode-histology-morphology-behavior-vs').not()).exists()"
+Expression: "coding.where(code = 'OtherHistologyMorphologyBehavior').exists() implies coding.where(code != 'OtherHistologyMorphologyBehavior' and $this.memberOf('http://hl7.org/fhir/us/mcode/ValueSet/mcode-histology-morphology-behavior-vs').not()).exists()"
 Severity: #error
 
 

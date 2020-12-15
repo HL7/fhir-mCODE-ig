@@ -110,7 +110,7 @@ Observation resources associated with an mCODE patient with an Observation.code 
 * status and code and subject and effective[x] and value[x] and focus MS
 * subject 1..1
 * code from TumorMarkerTestVS (required)
-* obeys tumor-marker-test-code-invariant
+* code obeys tumor-marker-test-code-invariant
 * subject only Reference(CancerPatient)
 * effective[x] only dateTime or Period
 * performer only Reference(Practitioner)
@@ -119,8 +119,9 @@ Observation resources associated with an mCODE patient with an Observation.code 
 
 Invariant: tumor-marker-test-code-invariant
 Description: "If the code representing 'Other tumor marker test, specify' is used, a second code from outside the original value set must be present."
-Expression: "code.coding.where(code = 'OtherTumorMarkerTest').exists() implies code.coding.where(code != 'OtherTumorMarkerTest' and $this.memberOf('http://hl7.org/fhir/us/mcode/ValueSet/mcode-tumor-marker-test-vs').not()).exists()"
+Expression: "coding.where(code = 'OtherTumorMarkerTest').exists() implies coding.where(code != 'OtherTumorMarkerTest' and $this.memberOf('http://hl7.org/fhir/us/mcode/ValueSet/mcode-tumor-marker-test-vs').not()).exists()"
 Severity:   #error
+
 
 Profile:    GeneticSpecimen
 Parent:     Specimen

@@ -4,7 +4,7 @@ Description: "Gets an [mCODE Patient Bundle](StructureDefinition-mcode-patient-b
 Usage: #definition
 
 * id = "mcode-patient-everything"
-* name = "fetch-mCODE-patient-bundle"
+* name = "Fetch_mCODE_patient_bundle"
 * title = "Fetch mCODE Patient Bundle for a given Patient"
 * status = #draft
 * kind = #operation

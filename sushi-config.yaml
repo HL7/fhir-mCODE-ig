@@ -203,6 +203,7 @@ groups:
     description: These define new code systems used by systems conforming with this implementation guide
     resources:
       - CodeSystem/mcode-elixhauser-category
+      - CodeSystem/mcode-other-specify-code-system
 
   # Examples
   GenericExamples:

@@ -18277,3 +18277,1040 @@ v: {
   "error" : ""
 }
 -------------------------------------------------------------------------------------
+{"hierarchical" : false, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://loinc.org",
+      "filter" : [{
+        "property" : "ancestor",
+        "op" : "=",
+        "value" : "LP31412-7"
+      }]
+    }]
+  }
+}}####
+e: {
+  "valueSet" : {
+  "resourceType" : "ValueSet",
+  "status" : "active",
+  "expansion" : {
+    "identifier" : "urn:uuid:575285d0-cd8b-4f33-945e-de2541d35437",
+    "timestamp" : "2020-12-13T18:09:49.058Z",
+    "parameter" : [{
+      "name" : "limitedExpansion",
+      "valueBoolean" : true
+    },
+    {
+      "name" : "excludeNested",
+      "valueBoolean" : true
+    },
+    {
+      "name" : "version",
+      "valueString" : "http://loinc.org|2.68"
+    }],
+    "contains" : [{
+      "system" : "http://loinc.org",
+      "code" : "10334-1",
+      "display" : "Cancer Ag 125 [Units/volume] in Serum or Plasma"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "10560-1",
+      "display" : "Carcinoembryonic Ag [Units/volume] in Semen"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "10565-0",
+      "display" : "Choriogonadotropin [Units/volume] in Semen"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "10886-0",
+      "display" : "Prostate Specific Ag Free [Mass/volume] in Serum or Plasma"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "11207-8",
+      "display" : "Alpha-1-Fetoprotein [Mass/volume] in Body fluid"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "11210-2",
+      "display" : "Cancer Ag 125 [Units/volume] in Body fluid"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "12184-8",
+      "display" : "Choriogonadotropin [Presence] in Body fluid"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "12515-3",
+      "display" : "Carcinoembryonic Ag [Mass/volume] in Body fluid"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "12776-1",
+      "display" : "Mucin-like carcinoma associated Ag [Units/volume] in Serum or Plasma"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "12841-3",
+      "display" : "Prostate Specific Ag Free/Prostate specific Ag.total in Serum or Plasma"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "13127-6",
+      "display" : "Cancer Ag DM/70K [Units/volume] in Serum or Plasma"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "14120-0",
+      "display" : "Deprecated Prostate Specific Ag Free/Prostate specific Ag.total in Serum or Plasma"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "14179-6",
+      "display" : "Tissue polypeptide Ag [Mass/volume] in Serum or Plasma"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "15019-3",
+      "display" : "Alpha-1-Fetoprotein [Moles/volume] in Amniotic fluid"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "15156-3",
+      "display" : "Cancer Ag 125 [Units/volume] in Body fluid by Dilution"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "15157-1",
+      "display" : "Cancer Ag 125 [Units/volume] in Serum or Plasma by Dilution"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "17247-8",
+      "display" : "Melanin [Units/volume] in Urine"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "17248-6",
+      "display" : "Melanin [Units/volume] in Serum or Plasma"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "17842-6",
+      "display" : "Cancer Ag 27-29 [Units/volume] in Serum or Plasma"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "17843-4",
+      "display" : "Cancer Ag 72-4 [Units/volume] in Serum or Plasma"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "1832-5",
+      "display" : "Alpha-1-Fetoprotein [Mass/volume] in Amniotic fluid"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "1833-3",
+      "display" : "Alpha-1-Fetoprotein [Mass/volume] in Cerebral spinal fluid"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "1834-1",
+      "display" : "Alpha-1-Fetoprotein [Mass/volume] in Serum or Plasma"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "19080-1",
+      "display" : "Choriogonadotropin [Units/volume] in Serum or Plasma"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "19163-5",
+      "display" : "Cancer Ag 19-9 [Units/volume] in Pleural fluid"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "19164-3",
+      "display" : "Cancer Ag 72-4 [Units/volume] in Pleural fluid"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "19165-0",
+      "display" : "Cancer Ag 125 [Units/volume] in Pleural fluid"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "19166-8",
+      "display" : "Carcinoembryonic Ag [Units/volume] in Serum or Plasma"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "19167-6",
+      "display" : "Carcinoembryonic Ag [Moles/volume] in Serum or Plasma"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "19168-4",
+      "display" : "Carcinoembryonic Ag [Units/volume] in Pleural fluid"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "19169-2",
+      "display" : "Carcinoembryonic Ag [Mass/volume] in Pleural fluid"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "19170-0",
+      "display" : "Carcinoembryonic Ag [Moles/volume] in Pleural fluid"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "19171-8",
+      "display" : "Alpha-1-Fetoprotein [Units/volume] in Amniotic fluid"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "19172-6",
+      "display" : "Alpha-1-Fetoprotein [Units/volume] in Pleural fluid"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "19173-4",
+      "display" : "Alpha-1-Fetoprotein [Moles/volume] in Pleural fluid"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "19176-7",
+      "display" : "Alpha-1-Fetoprotein [Units/volume] in Serum or Plasma"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "19177-5",
+      "display" : "Alpha-1-Fetoprotein [Moles/volume] in Serum or Plasma"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "19184-1",
+      "display" : "Tissue polypeptide specific Ag [Units/volume] in Serum or Plasma"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "19185-8",
+      "display" : "Tissue polypeptide specific Ag [Units/volume] in Pleural fluid"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "19186-6",
+      "display" : "Cancer Ag 15-3 [Units/volume] in Pleural fluid"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "19187-4",
+      "display" : "Cancer Ag 27-29 [Units/volume] in Pleural fluid"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "19188-2",
+      "display" : "Mucin-like carcinoma associated Ag [Units/volume] in Pleural fluid"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "19189-0",
+      "display" : "Cancer Ag 549 [Units/volume] in Serum or Plasma"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "19190-8",
+      "display" : "Cancer Ag 549 [Units/volume] in Pleural fluid"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "19195-7",
+      "display" : "Prostate specific Ag [Units/volume] in Serum or Plasma"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "19197-3",
+      "display" : "Prostate specific Ag [Moles/volume] in Serum or Plasma"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "19198-1",
+      "display" : "Prostate specific Ag [Units/volume] in Semen"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "19199-9",
+      "display" : "Prostate specific Ag [Mass/volume] in Semen"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "19200-5",
+      "display" : "Prostate specific Ag [Moles/volume] in Semen"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "19201-3",
+      "display" : "Prostate Specific Ag Free [Units/volume] in Serum or Plasma"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "19203-9",
+      "display" : "Prostate Specific Ag Free [Moles/volume] in Serum or Plasma"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "19204-7",
+      "display" : "Prostate Specific Ag Free [Units/volume] in Semen"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "19205-4",
+      "display" : "Prostate Specific Ag Free [Mass/volume] in Semen"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "19206-2",
+      "display" : "Prostate Specific Ag Free [Moles/volume] in Semen"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "19207-0",
+      "display" : "Squamous cell carcinoma Ag [Units/volume] in Serum or Plasma"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "19208-8",
+      "display" : "Squamous cell carcinoma Ag [Moles/volume] in Serum or Plasma"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "19209-6",
+      "display" : "Squamous cell carcinoma Ag [Units/volume] in Pleural fluid"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "19210-4",
+      "display" : "Squamous cell carcinoma Ag [Moles/volume] in Pleural fluid"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "2006-5",
+      "display" : "Cancer Ag 125 [Presence] in Serum or Plasma"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "2007-3",
+      "display" : "Cancer Ag 15-3 [Presence] in Serum or Plasma"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "2009-9",
+      "display" : "Cancer Ag 19-9 [Presence] in Serum or Plasma"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "2010-7",
+      "display" : "Deprecated Cancer Ag 19-9 [Presence] in Serum or Plasma"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "2011-5",
+      "display" : "Cancer Ag 242 [Presence] in Serum or Plasma"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "2012-3",
+      "display" : "Cancer Ag 27-29 [Presence] in Serum or Plasma"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "2013-1",
+      "display" : "Cancer Ag 50 [Presence] in Serum or Plasma"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "2014-9",
+      "display" : "Cancer Ag 549 [Presence] in Serum or Plasma"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "2015-6",
+      "display" : "Cancer Ag 72-4 [Presence] in Serum or Plasma"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "2037-0",
+      "display" : "Carcinoembryonic Ag [Mass/volume] in Cerebral spinal fluid"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "2038-8",
+      "display" : "Carcinoembryonic Ag [Mass/volume] in Semen"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "2039-6",
+      "display" : "Carcinoembryonic Ag [Mass/volume] in Serum or Plasma"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "20450-3",
+      "display" : "Alpha-1-Fetoprotein [Multiple of the median] in Serum or Plasma"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "20465-1",
+      "display" : "Choriogonadotropin [Multiple of the median] in Serum or Plasma"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "20994-0",
+      "display" : "Choriogonadotropin [Interpretation] in Serum or Plasma"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "2105-5",
+      "display" : "Choriogonadotropin [Moles/volume] in Semen"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "2107-1",
+      "display" : "Choriogonadotropin [Moles/volume] in Urine"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "2119-6",
+      "display" : "Choriogonadotropin [Moles/volume] in Serum or Plasma"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "23811-3",
+      "display" : "Alpha-1-Fetoprotein [Multiple of the median] adjusted in Serum or Plasma"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "23812-1",
+      "display" : "Alpha-1-Fetoprotein [Multiple of the median] unadjusted in Serum or Plasma"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "24108-3",
+      "display" : "Cancer Ag 19-9 [Units/volume] in Serum or Plasma"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "24474-9",
+      "display" : "Cancer associated serum Ag [Units/volume] in Serum"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "25372-4",
+      "display" : "Choriogonadotropin [Units/volume] in Urine"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "25587-7",
+      "display" : "Chromogranin A [Moles/volume] in Serum or Plasma"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "25799-8",
+      "display" : "Tissue polypeptide specific Ag [Units/volume] in Urine"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "26031-5",
+      "display" : "Sialate.lipid bound [Moles/volume] in Serum or Plasma"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "2606-2",
+      "display" : "Melanin [Presence] in Urine"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "2607-0",
+      "display" : "Melanin [Mass/volume] in Urine"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "26845-8",
+      "display" : "Sialate.lipid bound [Mass/volume] in Serum or Plasma"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "26924-1",
+      "display" : "Cancer Ag 19-9 [Units/volume] in Body fluid"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "2857-1",
+      "display" : "Prostate specific Ag [Mass/volume] in Serum or Plasma"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "29153-4",
+      "display" : "Cancer Ag 15-3 [Units/volume] in Body fluid"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "29253-2",
+      "display" : "Alpha-1-Fetoprotein [Multiple of the median] adjusted in Amniotic fluid"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "2943-9",
+      "display" : "Sialate [Mass/volume] in Plasma"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "2944-7",
+      "display" : "Sialate [Mass/volume] in Urine"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "29595-6",
+      "display" : "Alpha-1-Fetoprotein [Multiple of the median] in Amniotic fluid"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "30169-7",
+      "display" : "Chromogranin A [Units/volume] in Serum or Plasma by Immunoassay"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "31993-9",
+      "display" : "Alpha-1-Fetoprotein [Presence] in Serum or Plasma"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "32166-1",
+      "display" : "Choriogonadotropin [Multiple of the median] adjusted in Serum or Plasma"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "33667-7",
+      "display" : "Prostate specific Ag.protein bound [Mass/volume] in Serum or Plasma"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "34161-0",
+      "display" : "Cancer Ag 72-4 [Units/volume] in Body fluid"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "34256-8",
+      "display" : "Cancer Ag 50 [Units/volume] in Serum or Plasma"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "34598-3",
+      "display" : "Sialate [Presence] in Urine"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "34611-4",
+      "display" : "Prostate specific Ag [Mass/volume] in Urine"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "34670-0",
+      "display" : "Choriogonadotropin [Mass/volume] in Serum or Plasma"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "35741-8",
+      "display" : "Prostate specific Ag [Mass/volume] in Serum or Plasma by Detection limit <= 0.01 ng/mL"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "40452-5",
+      "display" : "Sialate/Creatinine [Ratio] in Urine"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "40618-1",
+      "display" : "Cancer Ag 125 [Units/volume] in Peritoneal fluid"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "40621-5",
+      "display" : "Carcinoembryonic Ag [Mass/volume] in Pericardial fluid"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "40622-3",
+      "display" : "Carcinoembryonic Ag [Mass/volume] in Peritoneal fluid"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "42891-2",
+      "display" : "Choriogonadotropin [Units/volume] in Body fluid"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "43798-8",
+      "display" : "Alpha-1-Fetoprotein [Presence] in Amniotic fluid"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "43996-8",
+      "display" : "Alpha-1-Fetoprotein [Multiple of the median] adjusted for diabetes+weight in Serum or Plasma"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "43997-6",
+      "display" : "Alpha-1-Fetoprotein [Multiple of the median] adjusted for weight in Serum or Plasma"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "43998-4",
+      "display" : "Alpha-1-Fetoprotein [Multiple of the median] adjusted for diabetes in Serum or Plasma"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "43999-2",
+      "display" : "Choriogonadotropin [Multiple of the median] in Amniotic fluid"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "44000-8",
+      "display" : "Choriogonadotropin [Units/volume] in Amniotic fluid"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "44001-6",
+      "display" : "Choriogonadotropin [Units/volume] in Cerebral spinal fluid"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "44002-4",
+      "display" : "Choriogonadotropin [Multiple of the median] adjusted in Amniotic fluid"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "44839-9",
+      "display" : "Choriogonadotropin [Presence] in Control Serum"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "44910-8",
+      "display" : "Alpha-1-Fetoprotein [Units/volume] in Body fluid"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "46699-5",
+      "display" : "Fibroblast growth factor 23 [Units/volume] in Plasma"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "47738-0",
+      "display" : "Prostate specific Ag [Mass/volume] in Body fluid"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "47854-5",
+      "display" : "Fibroblast growth factor 23.intact [Units/volume] in Plasma"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "47855-2",
+      "display" : "Fibroblast growth factor 23.C-terminal [Units/volume] in Plasma"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "48165-5",
+      "display" : "Squamous cell carcinoma Ag [Mass/volume] in Body fluid"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "48167-1",
+      "display" : "Prostate specific Ag/Creatinine [Mass Ratio] in Urine"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "48663-9",
+      "display" : "YKL-40 [Mass/volume] in Serum"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "49761-0",
+      "display" : "Alpha-1-Fetoprotein [Mass/volume] in Peritoneal fluid"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "49762-8",
+      "display" : "Alpha-1-Fetoprotein [Mass/volume] in Pleural fluid"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "50610-5",
+      "display" : "Alpha-1-Fetoprotein [Multiple of the median] adjusted for multiple gestations in Serum or Plasma"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "50775-6",
+      "display" : "Cancer Ag 125 [Units/volume] in Cerebral spinal fluid"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "50776-4",
+      "display" : "Cancer Ag 15-3 [Units/volume] in Cerebral spinal fluid"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "50777-2",
+      "display" : "Cancer Ag 15-3 [Units/volume] in Pericardial fluid"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "50778-0",
+      "display" : "Cancer Ag 15-3 [Units/volume] in Peritoneal fluid"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "50779-8",
+      "display" : "Cancer Ag 19-9 [Units/volume] in Cerebral spinal fluid"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "50780-6",
+      "display" : "Cancer Ag 19-9 [Units/volume] in Pericardial fluid"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "50781-4",
+      "display" : "Cancer Ag 19-9 [Units/volume] in Peritoneal fluid"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "50782-2",
+      "display" : "Cancer Ag 27-29 [Units/volume] in Cerebral spinal fluid"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "53047-7",
+      "display" : "Chromogranin A [Mass/volume] in Body fluid"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "53957-7",
+      "display" : "Choriogonadotropin.tumor marker [Mass/volume] in Serum or Plasma"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "53958-5",
+      "display" : "Choriogonadotropin.tumor marker [Moles/volume] in Serum or Plasma"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "53959-3",
+      "display" : "Choriogonadotropin.tumor marker [Units/volume] in Serum or Plasma"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "53960-1",
+      "display" : "Alpha-1-fetoprotein.tumor marker [Moles/volume] in Serum or Plasma"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "53961-9",
+      "display" : "Alpha-1-fetoprotein.tumor marker [Units/volume] in Serum or Plasma"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "53962-7",
+      "display" : "Alpha-1-fetoprotein.tumor marker [Mass/volume] in Serum or Plasma"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "54165-6",
+      "display" : "Tumor necrosis factor binding protein [Units/volume] in Serum"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "54348-8",
+      "display" : "Alpha-1-Fetoprotein [Mass/volume] in Cord blood"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "54390-0",
+      "display" : "Fibroblast growth factor 23.intact [Mass/volume] in Serum or Plasma"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "55180-4",
+      "display" : "Human epididymis protein 4 [Moles/volume] in Serum or Plasma"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "55870-0",
+      "display" : "Choriogonadotropin [Units/volume] in Cord blood"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "59040-6",
+      "display" : "Cancer Ag 125 [Units/volume] in Peritoneal dialysis fluid"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "59220-4",
+      "display" : "Chromogranin A [Units/volume] in Pleural fluid"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "59221-2",
+      "display" : "Prostate specific Ag [Mass/volume] in Pleural fluid"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "59222-0",
+      "display" : "Squamous cell carcinoma Ag [Mass/volume] in Pleural fluid"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "59223-8",
+      "display" : "Prostate specific Ag [Mass/volume] in Peritoneal fluid"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "59224-6",
+      "display" : "Prostate Specific Ag Free [Mass/volume] in Peritoneal fluid"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "59225-3",
+      "display" : "Squamous cell carcinoma Ag [Mass/volume] in Peritoneal fluid"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "59226-1",
+      "display" : "Chromogranin A [Units/volume] in Peritoneal fluid"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "59227-9",
+      "display" : "Chromogranin A [Units/volume] in Cerebral spinal fluid"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "59228-7",
+      "display" : "Squamous cell carcinoma Ag [Mass/volume] in Cerebral spinal fluid"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "59230-3",
+      "display" : "Prostate specific Ag [Mass/volume] in Cerebral spinal fluid"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "59231-1",
+      "display" : "Prostate Specific Ag Free [Mass/volume] in Cerebral spinal fluid"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "59232-9",
+      "display" : "Prostate Specific Ag Free [Mass/volume] in Pleural fluid"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "59235-2",
+      "display" : "Prostate Specific Ag Free/Prostate specific Ag.total in Cerebral spinal fluid"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "59236-0",
+      "display" : "Prostate Specific Ag Free/Prostate specific Ag.total in Peritoneal fluid"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "59237-8",
+      "display" : "Prostate Specific Ag Free/Prostate specific Ag.total in Pleural fluid"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "59238-6",
+      "display" : "Prostate Specific Ag Free/Prostate specific Ag.total in Body fluid"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "59239-4",
+      "display" : "Prostate Specific Ag Free [Mass/volume] in Body fluid"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "59241-0",
+      "display" : "Chromogranin A [Units/volume] in Body fluid"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "59564-5",
+      "display" : "Alpha-1-Fetoprotein [Units/volume] in Cerebral spinal fluid"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "63441-0",
+      "display" : "Tissue polypeptide Ag [Units/volume] in Serum or Plasma"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "67568-6",
+      "display" : "Circulating tumor cells.breast [#/volume] in Blood"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "68123-9",
+      "display" : "Circulating tumor cells.prostate [#/volume] in Blood"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "68124-7",
+      "display" : "Circulating tumor cells.colon [#/volume] in Blood"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "6875-9",
+      "display" : "Cancer Ag 15-3 [Units/volume] in Serum or Plasma"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "68923-2",
+      "display" : "Cancer Ag 125 [Units/volume] in Pericardial fluid"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "68924-0",
+      "display" : "Cancer Ag 72-4 [Units/volume] in Peritoneal fluid"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "68925-7",
+      "display" : "Cancer Ag 72-4 [Units/volume] in Cerebral spinal fluid"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "68926-5",
+      "display" : "Cancer Ag 72-4 [Units/volume] in Pericardial fluid"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "72576-2",
+      "display" : "Prostate Specific Ag Free/Prostate specific Ag.total [Pure mass fraction] in Serum or Plasma"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "75045-5",
+      "display" : "Sialate [Moles/volume] in Amniotic fluid"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "75046-3",
+      "display" : "Sialate [Moles/volume] in Cerebral spinal fluid"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "75047-1",
+      "display" : "Sialate [Moles/volume] in Serum or Plasma"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "76024-9",
+      "display" : "Sialate/Creatinine [Molar ratio] in Urine"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "77191-5",
+      "display" : "Deprecated Human epididymis protein 4 [Moles/volume] in Serum or Plasma by Immunoassay"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "83072-9",
+      "display" : "Alpha-1-Fetoprotein [Units/volume] in Serum or Plasma by Immunoassay"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "83073-7",
+      "display" : "Alpha-1-Fetoprotein [Mass/volume] in Serum or Plasma by Immunoassay"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "83074-5",
+      "display" : "Alpha-1-Fetoprotein [Units/volume] in Amniotic fluid by Immunoassay"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "83075-2",
+      "display" : "Alpha-1-Fetoprotein [Mass/volume] in Amniotic fluid by Immunoassay"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "83082-8",
+      "display" : "Cancer Ag 125 [Units/volume] in Serum or Plasma by Immunoassay"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "83083-6",
+      "display" : "Cancer Ag 15-3 [Units/volume] in Serum or Plasma by Immunoassay"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "83084-4",
+      "display" : "Cancer Ag 19-9 [Units/volume] in Serum or Plasma by Immunoassay"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "83085-1",
+      "display" : "Carcinoembryonic Ag [Mass/volume] in Serum or Plasma by Immunoassay"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "83086-9",
+      "display" : "Choriogonadotropin [Units/volume] in Serum or Plasma by Immunoassay"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "83112-3",
+      "display" : "Prostate specific Ag [Mass/volume] in Serum or Plasma by Immunoassay"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "83113-1",
+      "display" : "Prostate Specific Ag Free [Mass/volume] in Serum or Plasma by Immunoassay"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "87832-2",
+      "display" : "Fibroblast growth factor 21.intact [Mass/volume] in Serum or Plasma"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "88012-0",
+      "display" : "Sialate.lipid bound/Creatinine [Molar ratio] in Urine"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "90740-2",
+      "display" : "Aggressive prostate cancer risk [Likelihood] in Serum or Plasma by Calculated.4Kscore"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "9679-2",
+      "display" : "Squamous cell carcinoma Ag [Mass/volume] in Serum or Plasma"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "9811-1",
+      "display" : "Chromogranin A [Mass/volume] in Serum or Plasma"
+    }]
+  }
+},
+  "error" : ""
+}
+-------------------------------------------------------------------------------------

@@ -228,7 +228,9 @@ InstanceOf: TumorMarkerTest
 Description: "Extended example 1: example showing Oncotype DX breast recurrence score. Note that this test has no assigned LOINC code, so GTR is being used as a backup. Only the score from the Oncotype DX panel (as opposed to variant data from the genes in the panel) is represented here."
 * id = "scenario1-mcode-tumor-marker-test-oncotype-dx"
 * status = #final "final"
-* code = GTR#509910 "Oncotype DX Breast Recurrence Score Assay"
+* code.coding[0] = OtherSpecifyCS#OtherTumorMarkerTest "Other Tumor Marker Test, Specify"
+* code.coding[1] = GTR#509910 "Oncotype DX Breast Recurrence Score Assay"
+* code.text = "Oncotype DX Breast Recurrence Score Assay"
 * subject = Reference(scenario1-mcode-cancer-patient)
 * effectiveDateTime = "2018-03-20"
 * performer = Reference(scenario1-us-core-practitioner)
@@ -305,6 +307,7 @@ Description: "Extended example 1: example showing chemotherapy medication"
 * medicationCodeableConcept = RXN#3639 "DOXOrubicin"
 * subject = Reference(scenario1-mcode-cancer-patient)
 * requester = Reference(scenario1-us-core-practitioner)
+* reasonReference = Reference(scenario1-mcode-primary-cancer-condition)
 * dosageInstruction.timing.repeat.boundsPeriod.start = "2019-04-01"
 * authoredOn = "2019-04-01"
 * dosageInstruction.text = "doxorubicin (60 mg/m² IV), 93.26mg"
@@ -327,6 +330,7 @@ Description: "Extended example 1: example showing chemotherapy medication"
 * medicationCodeableConcept = RXN#3002 "cyclophosphamide"
 * subject = Reference(scenario1-mcode-cancer-patient)
 * requester = Reference(scenario1-us-core-practitioner)
+* reasonReference = Reference(scenario1-mcode-primary-cancer-condition)
 * dosageInstruction.timing.repeat.boundsPeriod.start = "2018-04-01"
 * authoredOn = "2018-04-01"
 * dosageInstruction.text = "cyclophosphamide (600 mg/m² IV), 932.59mg"
@@ -350,6 +354,7 @@ Description: "Extended example 1: example showing chemotherapy medication"
 * medicationCodeableConcept = RXN#56946 "PACLitaxel"
 * subject = Reference(scenario1-mcode-cancer-patient)
 * requester = Reference(scenario1-us-core-practitioner)
+* reasonReference = Reference(scenario1-mcode-primary-cancer-condition)
 * dosageInstruction.timing.repeat.boundsPeriod.start = "2018-04-01"
 * authoredOn = "2018-04-01"
 * dosageInstruction.text = "doxorubicin (175 mg/m² IV), 272.01mg"
@@ -372,6 +377,7 @@ Description: "Extended example 1: example showing chemotherapy medication"
 * medicationCodeableConcept = RXN#84857 "anastrozole"
 * subject = Reference(scenario1-mcode-cancer-patient)
 * requester = Reference(scenario1-us-core-practitioner)
+* reasonReference = Reference(scenario1-mcode-primary-cancer-condition)
 * dosageInstruction.timing.repeat.boundsPeriod.start = "2018-05-01"
 * authoredOn = "2018-05-01"
 * dosageInstruction.text = "1mg orally once daily"
@@ -382,6 +388,7 @@ Description: "Extended example 1: example showing chemotherapy medication"
 * dosageInstruction.maxDosePerPeriod.numerator.value = 1
 * dosageInstruction.maxDosePerPeriod.denominator = UCUM#d "day"
 * dosageInstruction.maxDosePerPeriod.denominator.value = 1
+
 
 Instance: scenario1-us-core-practitioner
 InstanceOf: USCorePractitioner
@@ -604,8 +611,8 @@ Description: "Extended example 1: example showing tumor size"
 * subject = Reference(scenario1-mcode-cancer-patient)
 * effectiveDateTime = "2018-03-06T00:00:00Z"
 * component.code = LNC#33728-7 "Size.maximum dimension in Tumor"
-* component.valueQuantity = UCUM#cm
-* component.valueQuantity.value = 2.5
+* component.valueQuantity = 2.5 'cm' 
+* component.valueQuantity.unit = "centimeters"
 * specimen = Reference(scenario1-specimen-tumor)
 
 Instance: scenario1-observation-tumor-dcis

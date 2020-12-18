@@ -34,6 +34,7 @@ This is a set of experimental profiles for representing adverse events (AE). The
 | CodeSystem | [CTCAEGradeCS]                  | Defines CTC Grades             | n/a                |
 | ValueSet   | [CTCAEGradeVS]                  | Values for CTC Grade           | n/a                |
 | ValueSet   | [AdverseEventSeriousnessVS]     | Values for seriousness         | n/a                |
+| ValueSet   | [AdverseEventExpectationVS]     | Values for expectation         | n/a                |
 | ValueSet   | [CTCAEPreferredTermVS]          | CTCAE preferred terms for AE   | n/a                |
 | ValueSet   | [AdverseEventRelatednessVS]     | Likelihood that AE is related to intervention | n/a |
 
@@ -44,6 +45,7 @@ This is a set of experimental profiles for representing adverse events (AE). The
 [CTCAEGradeCS]: CodeSystem-ctcae-grade-code-system.html
 [CTCAEGradeVS]: ValueSet-ctcae-grade-value-set.html
 [AdverseEventSeriousnessVS]: ValueSet-adverse-event-seriousness-value-set.html
+[AdverseEventExpectationVS]: ValueSet-adverse-event-expectation-value-set.html
 [CTCAEPreferredTermVS]: ValueSet-ctcae-preferred-term-value-set.html
 [AdverseEventRelatednessVS]: ValueSet-adverse-event-relatedness-value-set.html
 [Example 1]: AdverseEvent-ctc-adverse-event-example-1.html

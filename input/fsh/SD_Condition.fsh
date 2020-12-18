@@ -32,8 +32,13 @@ Condition resources associated with an mCODE patient with a Condition.code in th
 
 * ^abstract = false
 * code from PrimaryOrUncertainBehaviorCancerDisorderVS (required)
+* code obeys primary-cancer-condition-code-invariant
 * stage.assessment only Reference(CancerStageParent)
 
+Invariant: primary-cancer-condition-code-invariant
+Description: "If the code representing 'Other primary cancer condition, specify' is used, a second code from outside the original value set must be present."
+Expression: "coding.where(code = 'OtherPrimaryCancerCondition').exists() implies coding.where(code != 'OtherPrimaryCancerCondition' and $this.memberOf('http://hl7.org/fhir/us/mcode/ValueSet/mcode-primary-or-uncertain-behavior-cancer-disorder-vs').not()).exists()"
+Severity: #error
 
 Profile: SecondaryCancerCondition
 Parent: CancerConditionParent
@@ -48,4 +53,10 @@ Condition resources associated with an mCODE patient with a Condition.code in th
 * ^abstract = false
 * extension contains RelatedPrimaryCancerCondition named relatedPrimaryCancerCondition 0..1 MS
 * code from SecondaryCancerDisorderVS (required)
+* code obeys secondary-cancer-condition-code-invariant
 * stage 0..0
+
+Invariant: secondary-cancer-condition-code-invariant
+Description: "If the code representing 'Other secondary cancer condition, specify' is used, a second code from outside the original value set must be present."
+Expression: "coding.where(code = 'OtherSecondaryCancerCondition').exists() implies coding.where(code != 'OtherSecondaryCancerCondition' and $this.memberOf('http://hl7.org/fhir/us/mcode/ValueSet/mcode-secondary-cancer-disorder-vs').not()).exists()"
+Severity: #error

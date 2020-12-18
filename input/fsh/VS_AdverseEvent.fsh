@@ -892,9 +892,9 @@ ValueSet: CTCAEGradeVS
 Id: ctcae-grade-value-set
 Title: "CTCAE Grade Value Set"
 Description: "Common terminology criteria grades associated with the severity of an adverse event. The additional term, 'Absent Adverse Event' (aka grade 0) is used to indicate the patient has been assessed, and the given adverse event has not occurred. Grade 0 events may not be valid in certain reporting contexts."
-* NCIT#C75533 "Absent Adverse Event"  
+* NCIT#C75533 "Absent Adverse Event"
 * NCIT#C41338 "Mild Adverse Event"  ""
-* NCIT#C41339 "Moderate Adverse Event" 
+* NCIT#C41339 "Moderate Adverse Event"
 * NCIT#C41340  "Severe Adverse Event"
 * NCIT#C41337 "Life Threatening or Disabling Adverse Event"
 * NCIT#C48275  "Death Related to Adverse Event"
@@ -921,7 +921,7 @@ Description: "Degrees of relatedness expressed as text strings."
 * SCT#452161000124108 "Improbable (qualifier value)"  // unlikely in EPIC
 * SCT#371930009 "Possible (qualifier value)"          // possible in EPIC
 * SCT#452201000124102 "Probable (qualifier value)"    // probable in EPIC
-* SCT#255545003 "Definite (qualifier value)"         
+* SCT#255545003 "Definite (qualifier value)"
 
 * SCT#452161000124108 "Improbable (qualifier value)" // unlikely in EPIC
 * SCT#452171000124101 "Slightly probable (qualifier value)"  // possible in EPIC

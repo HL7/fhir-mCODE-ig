@@ -19,6 +19,7 @@ Conformance statement:
 * requester only Reference(USCorePractitioner or USCoreOrganization or CancerPatient)
 
 Invariant:  mcode-reason-required
-Description: "reasonCode or reasonReference SHALL be present"
+Description: "One of reasonCode or reasonReference SHALL be present"
 Expression: "reasonCode.exists() or reasonReference.exists()"
 Severity:   #error
+

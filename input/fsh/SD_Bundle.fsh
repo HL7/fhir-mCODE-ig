@@ -13,11 +13,11 @@ The bundle MUST also contain following mCODE-conformant resources, if available 
 * Observation resources representing [ECOGPerformanceStatus](StructureDefinition-mcode-ecog-performance-status.html) and/or [KarnofskyPerformanceStatus](StructureDefinition-mcode-karnofsky-performance-status.html)
 * Observation resources representing any [TumorMarkerTests](StructureDefinition-mcode-tumor-marker-test.html)
 * MedicationRequest resources conforming to [CancerRelatedMedicationRequest](StructureDefinition-mcode-cancer-related-medication-request.html), representing cancer-related prescriptions, administrations, and patient-reported medications
-* Procedure resources reprsenting any [CancerRelatedSurgicalProcedure](StructureDefinition-mcode-cancer-related-surgical-procedure.html) or [CancerRelatedRadiationProcedure](StructureDefinition-mcode-cancer-related-radiation-procedure.html)
-* Observation resources representing staging information
+* Procedure resources representing any [CancerRelatedSurgicalProcedure](StructureDefinition-mcode-cancer-related-surgical-procedure.html) or [CancerRelatedRadiationProcedure](StructureDefinition-mcode-cancer-related-radiation-procedure.html)
+* Observation resources representing the TNM staging information ([see relevant profiles here](artifacts.html#profiles-disease-characterization)
 * Observation resources representing [CancerGeneticVariant](StructureDefinition-mcode-cancer-genetic-variant.html) and [GenomicRegionStudied](StructureDefinition-mcode-genomic-region-studied.html)
 * DiagnosticReport resources representing [CancerGenomicsReport](StructureDefinition-mcode-cancer-genomics-report.html)
-* Specimen resources reprsenting to [GeneticSpecimen](StructureDefinition-mcode-genetic-specimen.html)
+* Specimen resources representing to [GeneticSpecimen](StructureDefinition-mcode-genetic-specimen.html)
 * Observation resource representing to [CancerRelatedComorbidities](StructureDefinition-mcode-cancer-related-comorbidities.html), and accompanying Condition resources
 * Observation resources for patient height, weight, blood pressure
 * Laboratory results from Comprehensive Metabolic Panels (CMP) and Complete Blood Counts (CBC)
@@ -141,5 +141,3 @@ By default, this Bundle includes _all_ required resources described above, irres
 * entry[vitalSignHeight].resource only http://hl7.org/fhir/StructureDefinition/bodyheight
 * entry[vitalSignWeight].resource only http://hl7.org/fhir/StructureDefinition/bodyweight
 * entry[vitalSignBloodPressure].resource only http://hl7.org/fhir/StructureDefinition/bp
-
-

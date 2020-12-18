@@ -2,11 +2,11 @@ Profile:  CancerRelatedMedicationRequest
 Parent:   USCoreMedicationRequest
 Id:       mcode-cancer-related-medication-request
 Title:    "Cancer-Related Medication Request"
-Description:    "A record of a medication prescription, administration, or consumption used to treat cancer. The medication may reported by the prescriber, prescribing organization, or patient, and does not have to be directly observed.
+Description:    "A record of a medication prescription, administration, or consumption used to treat cancer. The medication may reported by the prescriber, prescribing organization, or patient. It does not have to be directly observed.
 
 Conformance statement:
 
- MedicationRequest resources associated with an mCODE patient and associated with cancer treatment SHOULD conform to this profile. Beyond this requirement, a producer of resources SHOULD ensure that any resource instance associated with an mCODE patient that would reasonably be expected to conform to this profile SHOULD be published in this form."
+ MedicationRequest resources associated with an mCODE patient and associated with cancer treatment MUST conform to this profile. Beyond this requirement, a producer of resources SHOULD ensure that any resource instance associated with an mCODE patient that would reasonably be expected to conform to this profile (i.e., a prescription, administration, or medication exposure) SHOULD be published in this form."
 * obeys mcode-reason-required
 * subject 1..1 MS
 * subject only Reference(CancerPatient)

@@ -3,10 +3,10 @@ InstanceOf: SearchParameter
 Title: "Search by _id in Patients with multipleOr"
 * url = "http://hl7.org/fhir/us/mcode/SearchParameter/Patient-id"
 * derivedFrom = "http://hl7.org/fhir/SearchParameter/Resource-id"
-* name = "_id"
+* name = "PatientIdSearchParameter"
 * status = #draft
 * experimental = true
-* description = "This SearchParameter enables query of patients by _id with mutlipleOr enabled."
+* description = "This SearchParameter enables query of patients by `_id` with `mutlipleOr` enabled."
 * code = #_id
 * base[0] = #Patient
 * type = #token
@@ -19,7 +19,7 @@ Instance: Condition-code
 InstanceOf: SearchParameter
 Title: "Search by code:in in Conditions"
 * url = "http://hl7.org/fhir/us/mcode/SearchParameter/Condition-code"
-* name = "code"
+* name = "ConditionCodeSearchParameter"
 * status = #draft
 * experimental = true
 * description = "This SearchParameter enables query of conditions by code with the `in` modifier."

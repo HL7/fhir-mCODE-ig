@@ -85,7 +85,7 @@ Instance: mcode-sender-preferred
 InstanceOf: MCodeCapabilityStatement
 Usage: #definition
 Description: "Defines the preferred requirements for an mCODE Data Sender"
-* name = "mCODESender_preferred"
+* name = "MCODESenderPreferred"
 * title = "mCODE Data Sender"
 * description = "Defines the preferred requirements for the mCODE Data Sender"
 * insert mCODECapabilityStatementRules
@@ -110,7 +110,7 @@ Instance: mcode-sender-fallback1
 InstanceOf: MCodeCapabilityStatement
 Usage: #definition
 Description: "Defines the primary fallback requirements for an mCODE Data Sender"
-* name = "mCODESender_fallback1"
+* name = "MCODESenderFallback1"
 * title = "mCODE Data Sender"
 * description = "Defines the primary fallback requirements for the mCODE Data Sender"
 * insert mCODECapabilityStatementRules
@@ -134,7 +134,7 @@ Instance: mcode-sender-fallback2
 InstanceOf: MCodeCapabilityStatement
 Usage: #definition
 Description: "Defines the secondary fallback requirements for an mCODE Data Sender"
-* name = "mCODESender_fallback2"
+* name = "MCODESenderFallback2"
 * title = "mCODE Data Sender"
 * description = "Defines the secondary fallback requirements for the mCODE Data Sender"
 * insert mCODECapabilityStatementRules
@@ -152,7 +152,7 @@ Instance: mcode-sender-fallback3
 InstanceOf: MCodeCapabilityStatement
 Usage: #definition
 Description: "Defines the tertiary fallback requirements for an mCODE Data Sender"
-* name = "mCODESender_fallback3"
+* name = "MCODESenderFallback3"
 * title = "mCODE Data Sender"
 * description = "Defines the tertiary fallback requirements for the mCODE Data Sender"
 * insert mCODECapabilityStatementRules
@@ -215,7 +215,7 @@ Instance: mcode-receiver-preferred
 InstanceOf: MCodeCapabilityStatement
 Usage: #definition
 Description: "Defines the preferred requirements for an mCODE Data Receiver"
-* name = "mCODEReceiver_preferred"
+* name = "MCODEReceiverPreferred"
 * title = "mCODE Data Receiver"
 * description = "Defines the preferred requirements for the mCODE Data Receiver"
 * insert mCODECapabilityStatementRules
@@ -240,7 +240,7 @@ Instance: mcode-receiver-fallback1
 InstanceOf: MCodeCapabilityStatement
 Usage: #definition
 Description: "Defines the primary fallback requirements for an mCODE Data Receiver"
-* name = "mCODEReceiver_fallback1"
+* name = "MCODEReceiverFallback1"
 * title = "mCODE Data Receiver"
 * description = "Defines the primary fallback requirements for the mCODE Data Receiver"
 * insert mCODECapabilityStatementRules
@@ -264,7 +264,7 @@ Instance: mcode-receiver-fallback2
 InstanceOf: MCodeCapabilityStatement
 Usage: #definition
 Description: "Defines the secondary fallback requirements for an mCODE Data Receiver"
-* name = "mCODEReceiver_fallback2"
+* name = "MCODEReceiverFallback2"
 * title = "mCODE Data Receiver"
 * description = "Defines the secondary fallback requirements for the mCODE Data Receiver"
 * insert mCODECapabilityStatementRules
@@ -282,7 +282,7 @@ Instance: mcode-receiver-fallback3
 InstanceOf: MCodeCapabilityStatement
 Usage: #definition
 Description: "Defines the tertiary fallback requirements for an mCODE Data Receiver"
-* name = "mCODEReceiver_fallback3"
+* name = "MCODEReceiverFallback3"
 * title = "mCODE Data Receiver"
 * description = "Defines the tertiary fallback requirements for the mCODE Data Receiver"
 * insert mCODECapabilityStatementRules

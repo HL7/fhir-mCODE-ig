@@ -8,6 +8,22 @@
   }
 }}####
 e: {
-  "error" : "Error from server: Unable to provide support for code system http://terminology.hl7.org/CodeSystem/icd-o-3"
+  "valueSet" : {
+  "resourceType" : "ValueSet",
+  "status" : "active",
+  "expansion" : {
+    "identifier" : "urn:uuid:598c20b7-d36c-4df3-8519-cb09c915ffdf",
+    "timestamp" : "2020-12-20T18:02:59.593Z",
+    "parameter" : [{
+      "name" : "limitedExpansion",
+      "valueBoolean" : true
+    },
+    {
+      "name" : "excludeNested",
+      "valueBoolean" : true
+    }]
+  }
+},
+  "error" : ""
 }
 -------------------------------------------------------------------------------------

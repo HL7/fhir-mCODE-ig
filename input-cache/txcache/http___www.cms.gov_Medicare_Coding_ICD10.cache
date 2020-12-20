@@ -3,7 +3,7 @@
   "resourceType" : "ValueSet",
   "compose" : {
     "include" : [{
-      "system" : "http://www.ama-assn.org/go/cpt"
+      "system" : "http://www.cms.gov/Medicare/Coding/ICD10"
     }]
   }
 }}####
@@ -12,8 +12,8 @@ e: {
   "resourceType" : "ValueSet",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:47eeb5c5-ae9c-459a-a357-0218182dcc66",
-    "timestamp" : "2020-12-20T18:03:44.234Z",
+    "identifier" : "urn:uuid:c3683bf6-daa7-44ff-9a27-5f1e99432dcf",
+    "timestamp" : "2020-12-20T18:03:44.421Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true

@@ -31398,3 +31398,83 @@ e: {
   "error" : ""
 }
 -------------------------------------------------------------------------------------
+{"hierarchical" : false, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://loinc.org",
+      "concept" : [{
+        "code" : "59576-9"
+      },
+      {
+        "code" : "8289-1"
+      },
+      {
+        "code" : "77606-2"
+      },
+      {
+        "code" : "59408-5"
+      },
+      {
+        "code" : "3150-0"
+      },
+      {
+        "code" : "3151-8"
+      }]
+    }]
+  }
+}}####
+e: {
+  "valueSet" : {
+  "resourceType" : "ValueSet",
+  "status" : "active",
+  "expansion" : {
+    "identifier" : "urn:uuid:45975e0c-effd-4017-b628-217cc17ce488",
+    "timestamp" : "2020-12-18T14:14:17.468Z",
+    "parameter" : [{
+      "name" : "limitedExpansion",
+      "valueBoolean" : true
+    },
+    {
+      "name" : "excludeNested",
+      "valueBoolean" : true
+    },
+    {
+      "name" : "version",
+      "valueString" : "http://loinc.org|2.68"
+    }],
+    "contains" : [{
+      "system" : "http://loinc.org",
+      "code" : "59576-9",
+      "display" : "Body mass index (BMI) [Percentile] Per age and sex"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "8289-1",
+      "display" : "Head Occipital-frontal circumference Percentile"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "77606-2",
+      "display" : "Weight-for-length Per age and sex"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "59408-5",
+      "display" : "Oxygen saturation in Arterial blood by Pulse oximetry"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "3150-0",
+      "display" : "Inhaled oxygen concentration"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "3151-8",
+      "display" : "Inhaled oxygen flow rate"
+    }]
+  }
+},
+  "error" : ""
+}
+-------------------------------------------------------------------------------------

@@ -42350,6 +42350,10 @@ e: {
 e: {
   "valueSet" : {
   "resourceType" : "ValueSet",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set contains 5 concepts</p><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion based on SNOMED CT United States edition 01-Sep 2020</p><p>All codes from system <a href=\"http://hl7.org/fhir/R4/codesystem-snomedct.html\"><code>http://snomed.info/sct</code></a></p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-363679005\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=363679005\">363679005</a></td><td>Imaging (procedure)</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-108257001\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=108257001\">108257001</a></td><td>Anatomic pathology procedure (procedure)</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-711015009\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=711015009\">711015009</a></td><td>Assessment of symptom control (procedure)</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-5880005\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=5880005\">5880005</a></td><td>Physical examination procedure (procedure)</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-386344002\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=386344002\">386344002</a></td><td>Laboratory data interpretation (procedure)</td><td/></tr></table></div>"
+  },
   "status" : "active",
   "expansion" : {
     "identifier" : "urn:uuid:9933a482-7f35-43bb-877d-03ce5ddefb70",
@@ -107514,6 +107518,5530 @@ e: {
       "system" : "http://snomed.info/sct",
       "code" : "309846006",
       "display" : "Treatment not available (situation)"
+    }]
+  }
+},
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : false, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://snomed.info/sct",
+      "concept" : [{
+        "code" : "281900007",
+        "display" : "No abnormality detected (finding)"
+      },
+      {
+        "code" : "268910001",
+        "display" : "Patient's condition improved (finding)"
+      },
+      {
+        "code" : "359746009",
+        "display" : "Patient's condition stable (finding)"
+      },
+      {
+        "code" : "271299001",
+        "display" : "Patient's condition worsened (finding)"
+      },
+      {
+        "code" : "709137006",
+        "display" : "Patient condition undetermined (finding)"
+      }]
+    }]
+  }
+}}####
+e: {
+  "valueSet" : {
+  "resourceType" : "ValueSet",
+  "status" : "active",
+  "expansion" : {
+    "identifier" : "urn:uuid:ec4badc6-5eed-4a17-9bc1-a5dd6a6c37c8",
+    "timestamp" : "2020-12-19T14:12:17.595Z",
+    "parameter" : [{
+      "name" : "limitedExpansion",
+      "valueBoolean" : true
+    },
+    {
+      "name" : "excludeNested",
+      "valueBoolean" : true
+    },
+    {
+      "name" : "version",
+      "valueString" : "http://snomed.info/sct|http://snomed.info/sct/731000124108/version/20200901"
+    }],
+    "contains" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "281900007",
+      "display" : "No abnormality detected (finding)"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "268910001",
+      "display" : "Patient's condition improved (finding)"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "359746009",
+      "display" : "Patient's condition stable (finding)"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "271299001",
+      "display" : "Patient's condition worsened (finding)"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "709137006",
+      "display" : "Patient condition undetermined (finding)"
+    }]
+  }
+},
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : false, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://snomed.info/sct",
+      "filter" : [{
+        "property" : "concept",
+        "op" : "is-a",
+        "value" : "367651003"
+      }]
+    }]
+  }
+}}####
+e: {
+  "valueSet" : {
+  "resourceType" : "ValueSet",
+  "status" : "active",
+  "expansion" : {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/valueset-toocostly",
+      "valueBoolean" : true
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/valueset-unclosed",
+      "valueBoolean" : true
+    }],
+    "identifier" : "urn:uuid:e90bb4f5-1204-476b-8205-bb5ebabcf300",
+    "timestamp" : "2020-12-20T18:03:00.437Z",
+    "parameter" : [{
+      "name" : "limitedExpansion",
+      "valueBoolean" : true
+    },
+    {
+      "name" : "excludeNested",
+      "valueBoolean" : true
+    },
+    {
+      "name" : "version",
+      "valueString" : "http://snomed.info/sct|http://snomed.info/sct/731000124108/version/20200901"
+    }],
+    "contains" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "367651003",
+      "display" : "Malignant Neoplasm (Morphology)"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "354002",
+      "display" : "Triton tumor, malignant"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "835009",
+      "display" : "Peripheral T-cell lymphoma, AILD (Angioimmunoblastic Lymphadenopathy with Dysproteinemia)"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "900006",
+      "display" : "Mucin-producing adenocarcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "915007",
+      "display" : "Malignant melanoma in junctional nevus"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "999000",
+      "display" : "Mixed islet cell and exocrine adenocarcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "1338007",
+      "display" : "Basal cell carcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "1443001",
+      "display" : "Chromophobe carcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "1929004",
+      "display" : "Malignant lymphoma, non-Hodgkin's"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "2092003",
+      "display" : "Malignant melanoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "2142002",
+      "display" : "Nodular melanoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "2221008",
+      "display" : "Mesonephroma, malignant"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "2227007",
+      "display" : "Adrenal cortical carcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "2424003",
+      "display" : "Sarcoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "2735009",
+      "display" : "Papillary cystadenocarcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "2985005",
+      "display" : "Paget's disease, mammary"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "3102004",
+      "display" : "Oligodendroglioma, anaplastic"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "3172003",
+      "display" : "Peripheral T-cell lymphoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "3839000",
+      "display" : "Lipid-rich carcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "4079000",
+      "display" : "Mucoepidermoid carcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "4305004",
+      "display" : "Metastatic signet ring cell carcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "4392007",
+      "display" : "Malignant mixed tumor, osteosarcomatous type"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "4584002",
+      "display" : "Scirrhous adenocarcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "4590003",
+      "display" : "Adenocarcinoma, metastatic"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "4631006",
+      "display" : "Tubular adenocarcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "4797003",
+      "display" : "Papillary adenocarcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "4950009",
+      "display" : "Sezary's disease"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "5052009",
+      "display" : "Merkel cell carcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "5257006",
+      "display" : "Follicular adenocarcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "5600009",
+      "display" : "Schneiderian carcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "5658009",
+      "display" : "Adenocarcinoma in tubulovillous adenoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "5843004",
+      "display" : "Basaloid carcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "5958006",
+      "display" : "Small cell carcinoma, intermediate cell"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "6219000",
+      "display" : "Neoplasm, malignant, uncertain whether primary or metastatic"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "6250003",
+      "display" : "Fibromyxosarcoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "6381009",
+      "display" : "Alpha heavy chain disease"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "6492006",
+      "display" : "Klatskin's tumor"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "6641007",
+      "display" : "Metatypical carcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "7010000",
+      "display" : "Carcinomatosis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "7300000",
+      "display" : "Lymphoepithelial carcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "8145008",
+      "display" : "Mixed tumor, malignant"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "8734000",
+      "display" : "Choriocarcinoma combined with other germ cell elements"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "9294008",
+      "display" : "Spermatocytic seminoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "9395006",
+      "display" : "Sarcomatosis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "9618003",
+      "display" : "Epithelial-myoepithelial carcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "9801004",
+      "display" : "Spindle cell sarcoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "9903002",
+      "display" : "Paraganglioma, malignant"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "10069009",
+      "display" : "Giant cell tumor of bone, malignant"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "10146008",
+      "display" : "Chief cell adenocarcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "10288008",
+      "display" : "Squamous cell carcinoma, spindle cell"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "10639003",
+      "display" : "Plasmacytoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "11073003",
+      "display" : "Mixed liposarcoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "11671000",
+      "display" : "Adenoid cystic carcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "12302002",
+      "display" : "Small cell osteosarcoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "12323008",
+      "display" : "Androblastoma, malignant"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "12354007",
+      "display" : "Retinoblastoma, undifferentiated"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "12400006",
+      "display" : "Papillary transitional cell carcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "12478003",
+      "display" : "Squamous cell carcinoma, microinvasive"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "12622007",
+      "display" : "Clear cell sarcoma (except of Kidney M-89643)"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "12690005",
+      "display" : "Fibroblastic osteosarcoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "12943006",
+      "display" : "Spongioblastoma polare"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "13238004",
+      "display" : "Granular cell tumor, malignant"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "13583002",
+      "display" : "Mast cell sarcoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "13875003",
+      "display" : "Glomangiosarcoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "14269005",
+      "display" : "Embryonal rhabdomyosarcoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "14317002",
+      "display" : "Erythroleukemia"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "14494009",
+      "display" : "Meningeal sarcomatosis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "14537002",
+      "display" : "Hodgkin's disease"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "14799000",
+      "display" : "Neoplasm, metastatic"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "14990007",
+      "display" : "Chondrosarcoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "15176003",
+      "display" : "Adenocarcinoma with squamous metaplasia"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "15619004",
+      "display" : "Hepatocellular carcinoma, fibrolamellar"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "15949004",
+      "display" : "Thymoma, malignant"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "16090008",
+      "display" : "Myxoid leiomyosarcoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "16741004",
+      "display" : "Pleomorphic carcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "16822006",
+      "display" : "Malignant carotid body tumor"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "16893006",
+      "display" : "Hodgkin's disease, lymphocytic depletion, diffuse fibrosis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "16974005",
+      "display" : "Acral lentiginous melanoma, malignant"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "17264009",
+      "display" : "Carcinoma in pleomorphic adenoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "17302008",
+      "display" : "Cerebellar sarcoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "17788007",
+      "display" : "Acute granulocytic leukemia"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "18048008",
+      "display" : "Squamous cell carcinoma, keratinizing"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "18105004",
+      "display" : "Endometrioid adenofibroma, malignant"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "18450009",
+      "display" : "Malignant melanoma in precancerous melanosis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "18588008",
+      "display" : "Synovial sarcoma, biphasic"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "18854008",
+      "display" : "Struma ovarii, malignant"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "18861007",
+      "display" : "Granulosa cell tumor, malignant"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "19134004",
+      "display" : "Fascial fibrosarcoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "19340000",
+      "display" : "Malignant lymphoma, lymphoplasmacytic"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "19467007",
+      "display" : "Teratoma, malignant"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "19756007",
+      "display" : "Gastrinoma, malignant"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "19897006",
+      "display" : "Melanotic psammomatous MPNST"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "19906005",
+      "display" : "Retinoblastoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "20380000",
+      "display" : "Ameloblastic odontosarcoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "20667008",
+      "display" : "Myosarcoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "20955008",
+      "display" : "Insulinoma, malignant"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "21008007",
+      "display" : "Cystadenocarcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "21326004",
+      "display" : "Small cell-large cell carcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "21589007",
+      "display" : "Ependymoma, anaplastic"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "21708004",
+      "display" : "Osteosarcoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "21912003",
+      "display" : "Malignant teratoma, intermediate"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "21964009",
+      "display" : "Malignant lymphoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "21968007",
+      "display" : "Papillary carcinoma, follicular variant"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "22197008",
+      "display" : "Burkitt's cell leukemia"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "22217002",
+      "display" : "Mixed glioma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "22331004",
+      "display" : "Acute monocytic leukemia"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "22687000",
+      "display" : "Large cell carcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "22694002",
+      "display" : "Adenocarcinoma with apocrine metaplasia"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "23109009",
+      "display" : "Pseudosarcomatous carcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "23444003",
+      "display" : "Mixed acidophil-basophil carcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "24007003",
+      "display" : "Clear cell sarcoma of kidney"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "24072005",
+      "display" : "Acute leukemia"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "24505004",
+      "display" : "Carcinoma, diffuse type"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "24604009",
+      "display" : "Medullomyoblastoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "24653009",
+      "display" : "Spindle cell melanoma, type A"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "24762001",
+      "display" : "Pilomatrix carcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "25081006",
+      "display" : "Nephroblastoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "25190001",
+      "display" : "Adenocarcinoma, intestinal type"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "25370001",
+      "display" : "Hepatocellular carcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "25910003",
+      "display" : "Papillary carcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "26019009",
+      "display" : "Retinoblastoma, differentiated"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "26138003",
+      "display" : "Gliomatosis cerebri"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "26211003",
+      "display" : "Juxtacortical chondrosarcoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "26888009",
+      "display" : "Odontogenic tumor, malignant"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "27090000",
+      "display" : "Transitional cell carcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "27092008",
+      "display" : "Ameloblastic fibrosarcoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "27461004",
+      "display" : "Immunoproliferative small intestinal disease"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "27849002",
+      "display" : "Myxoid liposarcoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "28047004",
+      "display" : "Embryonal carcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "28054005",
+      "display" : "Cutaneous lymphoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "28173006",
+      "display" : "Follicular adenocarcinoma, well differentiated"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "28307001",
+      "display" : "Germinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "28325008",
+      "display" : "Polyembryoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "28351005",
+      "display" : "Myxosarcoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "28558000",
+      "display" : "Villous adenocarcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "28655007",
+      "display" : "Liposarcoma, well differentiated"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "28899001",
+      "display" : "Squamous cell carcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "28950004",
+      "display" : "Acute promyelocytic leukemia"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "28953002",
+      "display" : "Angiomyosarcoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "29370006",
+      "display" : "Pheochromocytoma, malignant"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "29792007",
+      "display" : "Trabecular adenocarcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "30156004",
+      "display" : "Cribriform carcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "30289006",
+      "display" : "Endometrioid carcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "30383009",
+      "display" : "Mesothelioma, biphasic, malignant"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "30546008",
+      "display" : "Clear cell adenocarcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "30924005",
+      "display" : "Rhabdomyosarcoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "30962008",
+      "display" : "Acute myelomonocytic leukemia"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "31131002",
+      "display" : "Vipoma, malignant"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "31396002",
+      "display" : "Goblet cell carcinoid"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "31470003",
+      "display" : "Adenosarcoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "31671006",
+      "display" : "Pineoblastoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "32272007",
+      "display" : "Sweat gland adenocarcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "32280000",
+      "display" : "Lymphoid leukemia"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "32456001",
+      "display" : "Desmoplastic medulloblastoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "32512003",
+      "display" : "Extra-adrenal paraganglioma, malignant"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "32844007",
+      "display" : "Mixed germ cell tumor"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "32913002",
+      "display" : "Medullary carcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "32968003",
+      "display" : "Inflammatory carcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "33176006",
+      "display" : "Hemangioendothelioma, malignant"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "33681003",
+      "display" : "Osteosarcoma in Paget's disease of bone"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "34360000",
+      "display" : "Fibrous histiocytoma, malignant"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "34603009",
+      "display" : "Basal cell adenocarcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "35232005",
+      "display" : "Infiltrating duct and lobular carcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "35262004",
+      "display" : "Gliosarcoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "35287006",
+      "display" : "Myeloid sarcoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "35562000",
+      "display" : "Waldenstrom's macroglobulinemia"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "35718007",
+      "display" : "Squamous cell carcinoma, small cell, nonkeratinizing"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "35917007",
+      "display" : "Adenocarcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "36087009",
+      "display" : "Adenocarcinoma in villous adenoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "36310008",
+      "display" : "Alveolar adenocarcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "36741007",
+      "display" : "Seminoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "37138001",
+      "display" : "Epithelioid cell melanoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "37206003",
+      "display" : "Synovial sarcoma, spindle cell"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "37304002",
+      "display" : "Basosquamous carcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "37810007",
+      "display" : "Myeloid leukemia"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "37995004",
+      "display" : "Linitis plastica"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "38549000",
+      "display" : "Carcinoma, undifferentiated"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "38713004",
+      "display" : "Astrocytoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "38958001",
+      "display" : "Mixed cell adenocarcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "39000009",
+      "display" : "Hemangiosarcoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "39005004",
+      "display" : "Medulloepithelioma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "39056008",
+      "display" : "Papillary squamous cell carcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "39086001",
+      "display" : "Hodgkin's disease, nodular sclerosis, cellular phase"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "39274007",
+      "display" : "Balloon cell melanoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "39781001",
+      "display" : "Primitive neuroectodermal tumor"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "39896009",
+      "display" : "Malignant melanoma, regressing"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "40244008",
+      "display" : "Spindle cell melanoma, type B"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "40411000",
+      "display" : "Malignant lymphoma, large cell, follicular"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "40459000",
+      "display" : "Malignant mixed tumor, carcinomatous type"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "41529000",
+      "display" : "Hodgkin's disease, mixed cellularity"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "41607009",
+      "display" : "Renal cell carcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "41919003",
+      "display" : "Juvenile carcinoma of the breast"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "42194009",
+      "display" : "Brenner tumor, malignant"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "42392001",
+      "display" : "Epithelioid leiomyosarcoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "42596004",
+      "display" : "Giant cell carcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "43149009",
+      "display" : "Pulmonary blastoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "43233001",
+      "display" : "Adenocarcinoma in adenomatous polyp"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "43296007",
+      "display" : "Round cell liposarcoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "43369006",
+      "display" : "Basal cell carcinoma, fibroepithelial"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "43985008",
+      "display" : "Hodgkin's disease, nodular sclerosis, lymphocytic depletion"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "44474009",
+      "display" : "Malignant melanoma in Hutchinson's melanotic freckle"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "44529004",
+      "display" : "Giant cell glioblastoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "44769000",
+      "display" : "Choriocarcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "45024009",
+      "display" : "Hepatoblastoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "45410002",
+      "display" : "Acinar cell carcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "45490001",
+      "display" : "Squamous cell carcinoma, large cell, nonkeratinizing"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "45572000",
+      "display" : "Hodgkin's disease, nodular sclerosis, lymphocytic predominance"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "45881000",
+      "display" : "Carcinoma simplex"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "46585005",
+      "display" : "Granulosa cell tumor"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "46710009",
+      "display" : "Esthesioneurocytoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "46732000",
+      "display" : "Malignant lymphoma, histiocytic, diffuse"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "46744002",
+      "display" : "Malignant lymphoma, small cleaved cell, follicular"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "47107000",
+      "display" : "Basophil carcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "47299001",
+      "display" : "Adenocarcinoma in multiple adenomatous polyps"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "48460009",
+      "display" : "Malignant giant cell tumor of soft parts"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "48554007",
+      "display" : "Carcinoid tumor, argentaffin, malignant"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "48952003",
+      "display" : "Astroblastoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "49430005",
+      "display" : "Liposarcoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "49937004",
+      "display" : "Kaposi's sarcoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "50007008",
+      "display" : "Chordoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "50102004",
+      "display" : "Malignant lymphoma, mixed small and large cell, diffuse"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "50150000",
+      "display" : "Malignant mastocytosis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "50422007",
+      "display" : "Bile duct cystadenocarcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "50813003",
+      "display" : "Mixed epithelioid and spindle cell melanoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "51092000",
+      "display" : "Chronic lymphocytic leukemia"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "51217003",
+      "display" : "Acidophil carcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "51465000",
+      "display" : "Composite carcinoid"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "51549004",
+      "display" : "Leiomyosarcoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "51757004",
+      "display" : "Desmoplastic melanoma, malignant"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "52040006",
+      "display" : "Infantile fibrosarcoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "52178006",
+      "display" : "Combined hepatocellular carcinoma and cholangiocarcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "52220008",
+      "display" : "Acute megakaryoblastic leukemia"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "52248008",
+      "display" : "Classical Hodgkin lymphoma, nodular sclerosis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "53237008",
+      "display" : "Anaplastic large cell lymphoma (ALCL) CD30+"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "53618008",
+      "display" : "Pancreatoblastoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "53654007",
+      "display" : "Fibrosarcoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "53968002",
+      "display" : "Olfactory neurogenic tumor"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "54087003",
+      "display" : "Hairy cell leukemia"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "54124005",
+      "display" : "Epithelioid hemangioendothelioma, malignant"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "54443001",
+      "display" : "Fibrous mesothelioma, malignant"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "54666007",
+      "display" : "Paget's disease and intraductal carcinoma of breast"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "54734006",
+      "display" : "Sebaceous adenocarcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "55020008",
+      "display" : "Malignant lymphoma, mixed small cleaved and large cell, follicular"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "55045006",
+      "display" : "Neuroepithelioma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "55094006",
+      "display" : "Protoplasmic astrocytoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "55150002",
+      "display" : "Malignant lymphoma, nodular"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "55320002",
+      "display" : "Superficial spreading melanoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "55353007",
+      "display" : "Astrocytoma, anaplastic"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "55921005",
+      "display" : "Multiple myeloma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "55937004",
+      "display" : "Neuroendocrine carcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "56422000",
+      "display" : "Synovial sarcoma, epithelioid cell"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "56484001",
+      "display" : "Adenocarcinoma with cartilaginous and osseous metaplasia"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "56565002",
+      "display" : "Mesenchymal chondrosarcoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "56665009",
+      "display" : "Infiltrating basal cell carcinoma, sclerosing"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "56763007",
+      "display" : "Adamantinoma of long bones"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "57141000",
+      "display" : "Apocrine adenocarcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "57513006",
+      "display" : "Adenocarcinoma in adenomatous polyposis coli"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "57596004",
+      "display" : "Oxyphilic adenocarcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "57622002",
+      "display" : "Thecoma, malignant"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "58069009",
+      "display" : "Ceruminous adenocarcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "58248003",
+      "display" : "Carcinoma, anaplastic"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "58477004",
+      "display" : "Infiltrating ductular carcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "59238007",
+      "display" : "Epithelioid sarcoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "59367005",
+      "display" : "Adenosquamous carcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "59583009",
+      "display" : "Embryonal sarcoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "60346004",
+      "display" : "Islet cell carcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "60718004",
+      "display" : "Dysgerminoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "61098004",
+      "display" : "Multicentric basal cell carcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "62064005",
+      "display" : "Mesothelioma, malignant"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "62383007",
+      "display" : "Mixed type rhabdomyosarcoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "62512005",
+      "display" : "Malignant aortic body tumor"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "62621002",
+      "display" : "Pigmented dermatofibrosarcoma protuberans"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "62681000",
+      "display" : "Nonencapsulated sclerosing carcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "63211008",
+      "display" : "Synovial sarcoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "63264007",
+      "display" : "Carcinosarcoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "63364005",
+      "display" : "Chronic myeloid leukemia"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "63373002",
+      "display" : "Lymphangiosarcoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "63449009",
+      "display" : "Alveolar rhabdomyosarcoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "63634009",
+      "display" : "Glioblastoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "64000002",
+      "display" : "Skin appendage carcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "64059005",
+      "display" : "Spongioneuroblastoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "64204000",
+      "display" : "Squamous cell carcinoma, metastatic"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "64524002",
+      "display" : "Intraductal papillary adenocarcinoma with invasion"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "64575004",
+      "display" : "Malignant lymphoma, small lymphocytic"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "65140001",
+      "display" : "Periosteal fibrosarcoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "65278006",
+      "display" : "Epithelioid mesothelioma, malignant"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "65646006",
+      "display" : "Malignant teratoma, trophoblastic"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "65692009",
+      "display" : "Spindle cell carcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "66515009",
+      "display" : "Glucagonoma, malignant"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "67159000",
+      "display" : "Blue nevus, malignant"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "67280001",
+      "display" : "Dedifferentiated liposarcoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "67830002",
+      "display" : "Teratocarcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "68358000",
+      "display" : "Adenocarcinoma with spindle cell metaplasia"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "68453008",
+      "display" : "Carcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "68614005",
+      "display" : "Esthesioneuroepithelioma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "68827007",
+      "display" : "Spindle cell melanoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "68880006",
+      "display" : "Papillary mucinous cystadenocarcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "69028005",
+      "display" : "Granular cell carcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "69077002",
+      "display" : "Basophilic leukemia"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "69317001",
+      "display" : "Kupffer cell sarcoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "69515008",
+      "display" : "Ganglioneuroblastoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "70179006",
+      "display" : "Cholangiocarcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "70401000",
+      "display" : "Polygonal cell carcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "70555003",
+      "display" : "Endometrial stromal sarcoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "70594002",
+      "display" : "Amelanotic melanoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "70600005",
+      "display" : "Hodgkin's disease, lymphocytic predominance, nodular"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "71109004",
+      "display" : "Hodgkin's disease, lymphocytic depletion, reticular"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "71298006",
+      "display" : "Epithelioma, malignant"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "71314006",
+      "display" : "Fibrillary astrocytoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "71447003",
+      "display" : "Paget's disease, extramammary (except Paget's disease of bone)"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "72174007",
+      "display" : "Follicular adenocarcinoma, trabecular"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "72495009",
+      "display" : "Mucinous adenocarcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "72907003",
+      "display" : "Seminoma, anaplastic"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "72969003",
+      "display" : "Giant cell and spindle cell carcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "73348003",
+      "display" : "Oligodendroglioma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "73506006",
+      "display" : "Small cell sarcoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "73676002",
+      "display" : "Peripheral neuroectodermal tumor"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "73982001",
+      "display" : "Gemistocytic astrocytoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "74042001",
+      "display" : "Small cell carcinoma, fusiform cell"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "74279005",
+      "display" : "Chondroblastoma, malignant"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "74280008",
+      "display" : "Glycogen-rich carcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "74364000",
+      "display" : "Small cell carcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "74409009",
+      "display" : "Endodermal sinus tumor"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "74532006",
+      "display" : "Glioma, malignant"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "74654000",
+      "display" : "Mantle cell lymphoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "75622000",
+      "display" : "Myxoid chondrosarcoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "75931002",
+      "display" : "Malignant melanoma in giant pigmented nevus"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "75940003",
+      "display" : "Myeloliposarcoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "76060004",
+      "display" : "Esthesioneuroblastoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "76312009",
+      "display" : "Chondroblastic osteosarcoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "76594008",
+      "display" : "Dermatofibrosarcoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "76817009",
+      "display" : "Oat cell carcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "76909002",
+      "display" : "Ewing's sarcoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "77381001",
+      "display" : "Burkitt's lymphoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "77430005",
+      "display" : "Adult T-cell leukemia/lymphoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "77455004",
+      "display" : "Pleomorphic rhabdomyosarcoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "77870005",
+      "display" : "Leydig cell tumor, malignant"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "78303004",
+      "display" : "Meningioma, malignant"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "78453009",
+      "display" : "Telangiectatic osteosarcoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "78838008",
+      "display" : "Pleomorphic xanthoastrocytoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "79143006",
+      "display" : "Mucinous cystadenocarcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "79282002",
+      "display" : "Carcinoma, metastatic"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "80061003",
+      "display" : "Oligodendroblastoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "80091008",
+      "display" : "Sertoli cell carcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "80570006",
+      "display" : "Acute panmyelosis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "80727009",
+      "display" : "Water-clear cell adenocarcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "81446001",
+      "display" : "Superficial spreading adenocarcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "81622000",
+      "display" : "Typical carcinoid"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "81920005",
+      "display" : "Solid carcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "82267002",
+      "display" : "Malignant tumor, small cell type"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "82591005",
+      "display" : "Paget's disease and infiltrating duct carcinoma of breast"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "82711006",
+      "display" : "Infiltrating duct carcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "82993000",
+      "display" : "Malignant mixed tumor, chondrosarcomatous type"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "83118000",
+      "display" : "Rhabdoid sarcoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "83217000",
+      "display" : "Medulloblastoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "83292005",
+      "display" : "Malignant teratoma, undifferentiated"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "83950009",
+      "display" : "Malignant tumor, giant cell type"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "84427001",
+      "display" : "Mullerian mixed tumor"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "84570003",
+      "display" : "Cloacogenic carcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "84664004",
+      "display" : "Hemangiopericytoma, malignant"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "85654004",
+      "display" : "Medullary carcinoma with lymphoid stroma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "85956000",
+      "display" : "Adenoid squamous cell carcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "86049000",
+      "display" : "Neoplasm, malignant"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "86293007",
+      "display" : "Adenocarcinoid tumor"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "86295000",
+      "display" : "Immunoproliferative disease"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "87163000",
+      "display" : "Leukemia"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "87364003",
+      "display" : "Neuroblastoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "87737001",
+      "display" : "Signet ring cell carcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "87913009",
+      "display" : "Phyllodes tumor, malignant"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "87992000",
+      "display" : "Giant cell sarcoma (except of Bone, M-92503)"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "88195001",
+      "display" : "Alveolar soft part sarcoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "88252006",
+      "display" : "Choroid plexus papilloma, malignant"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "88253001",
+      "display" : "Ameloblastoma, malignant"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "88334008",
+      "display" : "Teratoma with malignant transformation"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "88400008",
+      "display" : "Tumor cells, malignant"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "88591002",
+      "display" : "Teratoid medulloepithelioma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "88897007",
+      "display" : "Malignant tumor, fusiform cell type"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "89623007",
+      "display" : "Mesenchymoma, malignant"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "89740008",
+      "display" : "Lobular carcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "89906000",
+      "display" : "Verrucous carcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "90120004",
+      "display" : "Mycosis fungoides"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "90725004",
+      "display" : "Serous cystadenocarcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "103682005",
+      "display" : "Subcutaneous panniculitic T-cell lymphoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "103685007",
+      "display" : "Hepatosplenic gamma-delta cell lymphoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "103686008",
+      "display" : "Intestinal T-cell lymphoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "103688009",
+      "display" : "Acute myelomonocytic leukemia with eosinophils"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "103689001",
+      "display" : "Acute myeloid leukemia, minimal differentiation"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "103690005",
+      "display" : "Acute myeloid leukemia without maturation"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "103691009",
+      "display" : "Acute myeloid leukemia with maturation"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "103692002",
+      "display" : "Meibomian adenocarcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "110457005",
+      "display" : "Angiomyoliposarcoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "110458000",
+      "display" : "Malignant odontogenic ghost cell tumor"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "110459008",
+      "display" : "Malignant lymphoma, metastatic"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "112676006",
+      "display" : "Transitional cell carcinoma, spindle cell"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "112677002",
+      "display" : "Bronchiolo-alveolar adenocarcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "112679004",
+      "display" : "Pseudomyxoma peritonei"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "112683004",
+      "display" : "Pleomorphic liposarcoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "112685006",
+      "display" : "Carcinosarcoma, embryonal"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "112687003",
+      "display" : "Hodgkin's disease, lymphocytic depletion"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "115244002",
+      "display" : "Malignant lymphoma - category"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "115245001",
+      "display" : "Malignant lymphoma, follicular AND/OR nodular"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "115246000",
+      "display" : "Specified cutaneous AND/OR peripheral T cell lymphoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "116061001",
+      "display" : "Solid pseudopapillary carcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "127572005",
+      "display" : "Neuroendocrine carcinoma, grade 1"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "127573000",
+      "display" : "Neuroendocrine carcinoma, grade 2"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "127574006",
+      "display" : "Neuroendocrine carcinoma, grade 3"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "127575007",
+      "display" : "Malignant neuroendocrine neoplasm, epithelial"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "127576008",
+      "display" : "Malignant neuroendocrine neoplasm, neural"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128623006",
+      "display" : "Myelodysplastic syndrome"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128624000",
+      "display" : "Trichilemmal carcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128627007",
+      "display" : "Malignant tumor, clear cell type"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128628002",
+      "display" : "Large cell neuroendocrine carcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128629005",
+      "display" : "Large cell carcinoma with rhabdoid phenotype"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128630000",
+      "display" : "Glassy cell carcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128631001",
+      "display" : "Carcinoma with osteoclast-like giant cells"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128632008",
+      "display" : "Non-small cell carcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128633003",
+      "display" : "Squamous cell carcinoma with horn formation"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128634009",
+      "display" : "Basaloid squamous cell carcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128635005",
+      "display" : "Squamous cell carcinoma, clear cell type"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128636006",
+      "display" : "Basal cell carcinoma, nodular"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128637002",
+      "display" : "Adenoid basal carcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128639004",
+      "display" : "Transitional cell carcinoma, micropapillary"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128643000",
+      "display" : "Somatostatin cell tumor, malignant"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128646008",
+      "display" : "Sclerosing hepatic carcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128648009",
+      "display" : "Hepatocellular carcinoma, sarcomatoid"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128649001",
+      "display" : "Hepatocellular carcinoma, clear cell type"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128650001",
+      "display" : "Hepatocellular carcinoma, pleomorphic type"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128654005",
+      "display" : "Parietal cell adenocarcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128655006",
+      "display" : "Adenocarcinoma of anal ducts"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128657003",
+      "display" : "ECL cell carcinoid, malignant"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128658008",
+      "display" : "Atypical carcinoid tumor"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128659000",
+      "display" : "Bronchiolo-alveolar carcinoma, type II pneumocyte"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128660005",
+      "display" : "Bronchiolo-alveolar carcinoma, goblet cell type"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128661009",
+      "display" : "Bronchiolo-alveolar carcinoma, type II pneumocyte and goblet cell type"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128662002",
+      "display" : "Adenocarcinoma combined with other types of carcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128665000",
+      "display" : "Pituitary carcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128666004",
+      "display" : "Cyst-associated renal cell carcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128667008",
+      "display" : "Chromophobe cell renal carcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128668003",
+      "display" : "Renal cell carcinoma, spindle cell"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128669006",
+      "display" : "Renal carcinoma, collecting duct type"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128671006",
+      "display" : "Follicular carcinoma, minimally invasive"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128673009",
+      "display" : "Insular carcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128674003",
+      "display" : "Papillary microcarcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128675002",
+      "display" : "Papillary carcinoma, oxyphilic cell"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128677005",
+      "display" : "Papillary carcinoma, tall cell"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128678000",
+      "display" : "Mixed medullary-follicular carcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128679008",
+      "display" : "Mixed medullary-papillary carcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128680006",
+      "display" : "Endometrioid adenocarcinoma, secretory variant"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128681005",
+      "display" : "Endometrioid adenocarcinoma, ciliated cell variant"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128682003",
+      "display" : "Adenocarcinoma, endocervical type"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128685001",
+      "display" : "Porocarcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128686000",
+      "display" : "Eccrine adenocarcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128692006",
+      "display" : "Intraductal papillary-mucinous carcinoma, invasive"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128695008",
+      "display" : "Mucinous adenocarcinoma, endocervical type"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128698005",
+      "display" : "Atypical medullary carcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128699002",
+      "display" : "Duct carcinoma, desmoplastic type"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128700001",
+      "display" : "Infiltrating duct and tubular carcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128701002",
+      "display" : "Infiltrating lobular mixed with other types of carcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128702009",
+      "display" : "Terminal duct adenocarcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128703004",
+      "display" : "Acinar cell cystadenocarcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128704005",
+      "display" : "Carcinoma with neuroendocrine differentiation"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128705006",
+      "display" : "Metaplastic carcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128706007",
+      "display" : "Hepatoid carcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128708008",
+      "display" : "Thymoma, spindle cell, malignant"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128710005",
+      "display" : "Thymoma, mixed type, malignant"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128712002",
+      "display" : "Thymoma, predominantly cortical, malignant"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128714001",
+      "display" : "Thymoma, cortical, malignant"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128716004",
+      "display" : "Well differentiated thymic carcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128717008",
+      "display" : "Thymic carcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128719006",
+      "display" : "Spindle epithelial tumor with thymus-like differentiation"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128720000",
+      "display" : "Carcinoma showing thymus-like differentiation"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128726006",
+      "display" : "Stromal myosis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128727002",
+      "display" : "Sertoli-Leydig cell tumor, poorly differentiated, with heterologous elements"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128731008",
+      "display" : "Meningeal melanomatosis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128732001",
+      "display" : "Mucosal lentiginous melanoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128734000",
+      "display" : "Undifferentiated sarcoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128735004",
+      "display" : "Desmoplastic small round cell tumor"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128737007",
+      "display" : "Solitary fibrous tumor, malignant"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128749008",
+      "display" : "Spindle cell rhabdomyosarcoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128750008",
+      "display" : "Ectomesenchymoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128751007",
+      "display" : "Carcinofibroma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128753005",
+      "display" : "Stromal sarcoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128756002",
+      "display" : "Gastrointestinal stromal tumor, malignant"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128759009",
+      "display" : "Malignant multilocular cystic nephroma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128763002",
+      "display" : "Pleuropulmonary blastoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128766005",
+      "display" : "Germ cell tumor, nonseminomatous"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128767001",
+      "display" : "Trophoblastic tumor, epithelioid"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128770002",
+      "display" : "Medullary osteosarcoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128771003",
+      "display" : "Intraosseous low grade osteosarcoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128772005",
+      "display" : "Periosteal osteosarcoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128773000",
+      "display" : "High grade surface osteosarcoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128774006",
+      "display" : "Intracortical osteosarcoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128775007",
+      "display" : "Clear cell chondrosarcoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128776008",
+      "display" : "Dedifferentiated chondrosarcoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128778009",
+      "display" : "Giant cell tumor of tendon sheath, malignant"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128780003",
+      "display" : "Odontogenic carcinosarcoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128783001",
+      "display" : "Askin's tumor"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128784007",
+      "display" : "Chondroid chordoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128785008",
+      "display" : "Dedifferentiated chordoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128790006",
+      "display" : "Large cell medulloblastoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128792003",
+      "display" : "Atypical teratoid/rhabdoid tumor"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128793008",
+      "display" : "Retinoblastoma, diffuse"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128796000",
+      "display" : "Perineurioma, malignant"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128798004",
+      "display" : "Composite Hodgkin and non-Hodgkin lymphoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128799007",
+      "display" : "Classical Hodgkin lymphoma, lymphocyte-rich"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128800006",
+      "display" : "Primary effusion lymphoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128801005",
+      "display" : "Thymic large B-cell lymphoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128802003",
+      "display" : "Splenic marginal zone lymphoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128803008",
+      "display" : "SALT lymphoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128805001",
+      "display" : "T/NK-cell lymphoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128806000",
+      "display" : "Malignant lymphoma, lymphoblastic"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128807009",
+      "display" : "Precursor B-cell lymphoblastic lymphoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128808004",
+      "display" : "Precursor T-cell lymphoblastic lymphoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128809007",
+      "display" : "Langerhans cell histiocytosis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128812005",
+      "display" : "Letterer-Siwe disease"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128813000",
+      "display" : "Histiocytic sarcoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128814006",
+      "display" : "Langerhans cell sarcoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128815007",
+      "display" : "Interdigitating cell sarcoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128816008",
+      "display" : "Follicular dendritic cell tumor"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128818009",
+      "display" : "Acute bilineal leukemia"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128819001",
+      "display" : "T-cell large granular lymphocytosis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128820007",
+      "display" : "Prolymphocytic leukemia, B-cell type"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128821006",
+      "display" : "Prolymphocytic leukemia, T-cell type"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128822004",
+      "display" : "Precursor cell lymphoblastic leukemia, not phenotyped"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128823009",
+      "display" : "c-ALL"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128824003",
+      "display" : "Pro-T ALL"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128825002",
+      "display" : "Chronic myelogenous leukemia, t(9;22)(q34;q11)"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128826001",
+      "display" : "Atypical chronic myeloid leukemia, Philadelphia chromosome (Ph1) negative"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128827005",
+      "display" : "Acute myeloid leukemia without prior myelodysplastic syndrome"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128828000",
+      "display" : "FAB M2, t(8;21)(q22;q22)"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128829008",
+      "display" : "Acute myeloid leukemia, MLL"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128830003",
+      "display" : "Therapy-related acute myeloid leukemia, epipodophyllotoxin-related"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128831004",
+      "display" : "Chronic myelomonocytic leukemia, Type II"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128832006",
+      "display" : "Juvenile chronic myelomonocytic leukemia"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128833001",
+      "display" : "Aggressive NK-cell leukemia"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128834007",
+      "display" : "Chronic neutrophilic leukemia"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128835008",
+      "display" : "Chronic eosinophilic leukemia"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128836009",
+      "display" : "Refractory cytopenia with multilineage dysplasia"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128837000",
+      "display" : "Myelodysplastic syndrome with 5q- syndrome"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128838005",
+      "display" : "Therapy-related myelodysplastic syndrome, epidopophyllotoxin-related"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128839002",
+      "display" : "Papillary ependymoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128840000",
+      "display" : "Rhabdoid meningioma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128841001",
+      "display" : "Proliferative polycythemia"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128842008",
+      "display" : "Chronic myeloproliferative disorder"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128843003",
+      "display" : "Myelofibrosis with myeloid metaplasia"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128844009",
+      "display" : "Idiopathic thrombocythemia"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128845005",
+      "display" : "Refractory anemia without sideroblasts"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128846006",
+      "display" : "Refractory anemia with ringed sideroblasts"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128847002",
+      "display" : "RAEB"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128848007",
+      "display" : "RAEB-T"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128883006",
+      "display" : "Fibroblastic liposarcoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128884000",
+      "display" : "Myoepithelial carcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128886003",
+      "display" : "Serous cystadenocarcinofibroma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128888002",
+      "display" : "Mucinous cystadenocarcinofibroma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128891002",
+      "display" : "Clear cell cystadenocarcinofibroma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128893004",
+      "display" : "Fetal adenocarcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128894005",
+      "display" : "Hidradenocarcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128895006",
+      "display" : "Malignant eccrine spiradenoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128896007",
+      "display" : "Syringomatous carcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128898008",
+      "display" : "Digital papillary adenocarcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128900005",
+      "display" : "Mucinous cystadenocarcinoma, non-invasive"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128902002",
+      "display" : "Intratubular germ cell neoplasia"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128906004",
+      "display" : "Sertoli-Leydig cell tumor, sarcomatoid"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128907008",
+      "display" : "Steroid cell tumor, malignant"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128908003",
+      "display" : "Glomus tumor, malignant"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128912009",
+      "display" : "Ganglioglioma, anaplastic"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128916007",
+      "display" : "Ultimobranchial thyroid tumor"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128918008",
+      "display" : "Juxtacortical osteosarcoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128920006",
+      "display" : "Malignant histiocytosis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128921005",
+      "display" : "Extramedullary plasmacytoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128922003",
+      "display" : "Plasmacytic leukemia"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128923008",
+      "display" : "Prolymphocytic leukemia"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128924002",
+      "display" : "Mast cell leukemia"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128929007",
+      "display" : "Non-Hodgkin lymphoma (category)"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128930002",
+      "display" : "Hodgkin lymphoma (category)"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128931003",
+      "display" : "Leukemia (category)"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128932005",
+      "display" : "Acute leukemia (category)"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128933000",
+      "display" : "Chronic leukemia (category)"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128934006",
+      "display" : "Myeloid leukemia (category)"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128935007",
+      "display" : "Lymphoid leukemia (category)"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "134152008",
+      "display" : "Basal cell carcinoma - morpheic"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "189643000",
+      "display" : "Papillary and follicular adenocarcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "189849004",
+      "display" : "Dermoid cyst with malignant transformation"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "189857001",
+      "display" : "Choriocarcinoma combined with teratoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "189923008",
+      "display" : "Monstrocellular sarcoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "189962004",
+      "display" : "Malignant lymphoma, stem cell type"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "189982000",
+      "display" : "Reticulosarcoma morphology"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "189984004",
+      "display" : "Reticulosarcoma, pleomorphic cell type"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "189985003",
+      "display" : "Reticulosarcoma, nodular"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "190055003",
+      "display" : "Eosinophilic leukemia"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "210233007",
+      "display" : "Tibial adamantinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "232336001",
+      "display" : "Paget's disease of skin"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "252988009",
+      "display" : "Malignant squamous tumor"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "252995000",
+      "display" : "Malignant basal cell tumor"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "253014007",
+      "display" : "Malignant endometrioid tumor"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "253026002",
+      "display" : "Adenocarcinoma with metaplasia"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "253039003",
+      "display" : "Round cell sarcoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "253044005",
+      "display" : "Malignant lipomatous tumor morphology"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "253046007",
+      "display" : "Malignant myomatous tumor"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "253048008",
+      "display" : "Malignant stromal tumor"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "253052008",
+      "display" : "Malignant hemangioma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "253071005",
+      "display" : "Mixed oligoastrocytoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "253072003",
+      "display" : "Anaplastic oligoastrocytoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "253075001",
+      "display" : "Sympathicoblastoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "253077009",
+      "display" : "Melanocytic medullomyoblastoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "253092005",
+      "display" : "Malignant schwannoma with divergent mesenchymal differentiation"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "253093000",
+      "display" : "Epithelioid malignant nerve sheath tumor"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "253094006",
+      "display" : "Melanotic malignant peripheral nerve sheath tumor"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "271944004",
+      "display" : "Malignant melanoma of soft tissue"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "277985001",
+      "display" : "Nonteratoid medulloepithelioma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "277993001",
+      "display" : "Olfactory neuroendocrine carcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "278411006",
+      "display" : "Primary intra-osseous carcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "300987004",
+      "display" : "Disseminated squamous cell carcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "301036008",
+      "display" : "Disseminated adenocarcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "302821007",
+      "display" : "Basal cell carcinoma - sclerosing type"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "302840001",
+      "display" : "Pleomorphic cell sarcoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "314922006",
+      "display" : "B-cell lymphoma morphology"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "314923001",
+      "display" : "Low grade B-cell lymphoma morphology"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "314924007",
+      "display" : "Follicular low grade B-cell lymphoma morphology"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "314925008",
+      "display" : "High grade B-cell lymphoma morphology"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "314926009",
+      "display" : "T-cell lymphoma morphology"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "314927000",
+      "display" : "High grade T-cell lymphoma morphology"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "314929002",
+      "display" : "Diffuse low grade B-cell lymphoma morphology"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "314930007",
+      "display" : "Low grade T-cell lymphoma morphology"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "314931006",
+      "display" : "Nodular high grade B-cell lymphoma morphology"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "314934003",
+      "display" : "Diffuse high grade B-cell lymphoma morphology"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "360331008",
+      "display" : "Rhabdomyosarcoma - category"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "370079006",
+      "display" : "Choriocarcinoma, metastatic"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "372147008",
+      "display" : "Kaposi's sarcoma - category"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "372149006",
+      "display" : "Kaposi's sarcoma, metastatic"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "372151005",
+      "display" : "Sarcoma - category"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "372152003",
+      "display" : "Sarcoma, metastatic"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "372156000",
+      "display" : "Malignant melanocytic lesion"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "372158004",
+      "display" : "Malignant melanoma, metastatic"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "373381004",
+      "display" : "Myelodysplastic syndrome, no ICD-O subtype"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "373395001",
+      "display" : "Invasive ductal carcinoma with an extensive intraductal component"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "384950003",
+      "display" : "Carcinoma with pleomorphic, sarcomatoid or sarcomatous elements"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "384951004",
+      "display" : "Carcinoma of salivary gland type"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "384992008",
+      "display" : "Small cell glioblastoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "388600004",
+      "display" : "Pilomyxoid astrocytoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "388650006",
+      "display" : "Desmoplastic mesothelioma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "388676006",
+      "display" : "Well differentiated adenocarcinoma, gastric foveolar type"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "388986005",
+      "display" : "Minimal deviation adenocarcinoma of endocervical type"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "396891002",
+      "display" : "Mixed acinar-endocrine carcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "396892009",
+      "display" : "Mixed ductal-endocrine carcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "397010005",
+      "display" : "Malignant mast cell neoplasm"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "397079001",
+      "display" : "Mucoepidermoid carcinoma, low grade"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "397080003",
+      "display" : "Mucoepidermoid carcinoma, intermediate grade"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "397081004",
+      "display" : "Mucoepidermoid carcinoma, high grade"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "397082006",
+      "display" : "Salivary duct carcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "397338009",
+      "display" : "Refractory anemia with excess blasts I"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "397339001",
+      "display" : "Refractory anemia with excess blasts II"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "397340004",
+      "display" : "Acute myeloid leukemia with recurrent genetic abnormality"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "397341000",
+      "display" : "Acute myeloid leukemia with multilineage dysplasia following a myelodysplastic syndrome or myelodysplastic syndrome/myeloproliferative disorder"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "397342007",
+      "display" : "Acute myeloid leukemia with multilineage dysplasia without antecedent myelodysplastic syndrome"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "397343002",
+      "display" : "Therapy-related acute myeloid leukemia and myelodysplastic syndrome, alkylating agent-related type"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "397344008",
+      "display" : "Therapy-related acute myeloid leukemia and myelodysplastic syndrome, topoisomerase type II inhibitor-related type"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "397345009",
+      "display" : "Acute leukemia of ambiguous lineage"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "397347001",
+      "display" : "Precursor B-lymphoblastic leukemia/lymphoblastic lymphoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "397348006",
+      "display" : "Precursor T cell lymphoblastic leukemia/lymphoblastic lymphoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "397349003",
+      "display" : "Nodal marginal zone B-cell lymphoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "397350003",
+      "display" : "Extranodal marginal zone B-cell lymphoma of mucosa-associated lymphoid tissue"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "397352006",
+      "display" : "Primary cutaneous anaplastic large cell lymphoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "397355008",
+      "display" : "Dendritic cell sarcoma, no International Classification of Diseases for Oncology subtype"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "397357000",
+      "display" : "Systemic mastocytosis with associated clonal, hematologic non-mast-cell lineage disease"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "397358005",
+      "display" : "Aggressive systemic mastocytosis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "397379005",
+      "display" : "Pineal parenchymal tumor of intermediate differentiation"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "397380008",
+      "display" : "Medulloblastoma, melanotic"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "397381007",
+      "display" : "Diffuse astrocytoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "397400006",
+      "display" : "Burkitt lymphoma/leukemia"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "397467006",
+      "display" : "Follicular lymphoma, cutaneous follicle center sub-type"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "397468001",
+      "display" : "Follicular lymphoma, diffuse follicle center sub-type, grade 1"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "397469009",
+      "display" : "Follicular lymphoma, diffuse follicle center cell sub-type, grade 2"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "399380001",
+      "display" : "Choriocarcinoma, biphasic"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "399399005",
+      "display" : "Spermatocytic seminoma with sarcomatous component"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "399408005",
+      "display" : "Warty (condylomatous) carcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "399449005",
+      "display" : "Mucinous adenocarcinoma, intestinal type"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "399456004",
+      "display" : "Plasma cell myeloma/plasmacytoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "399464005",
+      "display" : "Transitional cell carcinoma with squamous differentiation"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "399469000",
+      "display" : "Meningioma, rhabdoid"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "399470004",
+      "display" : "Basal cell carcinoma with eccrine differentiation"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "399475009",
+      "display" : "Minimal deviation melanoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "399477001",
+      "display" : "Sarcomatoid mesothelioma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "399479003",
+      "display" : "Malignant trophoblastic tumor, type cannot be determined"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "399487002",
+      "display" : "Basal cell carcinoma with adnexal differentiation"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "399494004",
+      "display" : "Squamous cell carcinoma in post-traumatic skin lesion"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "399521000",
+      "display" : "Necrotic melanoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "399523002",
+      "display" : "Regressed germ cell tumor"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "399533005",
+      "display" : "Bartholin's gland carcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "399540006",
+      "display" : "Mucinous eccrine carcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "399547009",
+      "display" : "Keratotic basal cell carcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "399552004",
+      "display" : "Monodermal teratoma, primitive neuroectodermal tumor"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "399560003",
+      "display" : "Diffuse embryoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "399564007",
+      "display" : "Transitional cell carcinoma with glandular differentiation"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "399569002",
+      "display" : "Basal cell carcinoma in basal cell nevus syndrome"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "399582005",
+      "display" : "Squamous cell carcinoma, nonkeratinizing, differentiated"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "399585007",
+      "display" : "Pigmented basal cell carcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "399632009",
+      "display" : "Monodermal teratoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "399634005",
+      "display" : "Choroidal melanoma, diffuse"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "399644007",
+      "display" : "Neurotropic melanoma, malignant"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "399648005",
+      "display" : "Intravascular large B-cell lymphoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "399669007",
+      "display" : "Choriocarcinoma, monophasic"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "399694008",
+      "display" : "Squamous cell carcinoma, nonkeratinizing, mixed differentiated and undifferentiated"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "399702005",
+      "display" : "Monodermal teratoma, carcinoid"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "399712003",
+      "display" : "Seminoma with syncytiotrophoblastic cells"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "399739006",
+      "display" : "Metaplastic squamous cell carcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "399746002",
+      "display" : "Basal cell carcinoma with follicular differentiation"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "399879007",
+      "display" : "Malignant epithelial neoplasm - category"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "399941001",
+      "display" : "Malignant cylindroma of skin"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "399958006",
+      "display" : "Basal cell carcinoma with matrical differentiation"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "399961007",
+      "display" : "Malignant adenomatous neoplasm - category"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "399968001",
+      "display" : "Adenoid cystic eccrine carcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "400011005",
+      "display" : "Leiomyosarcoma - category"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "400071004",
+      "display" : "Basal cell carcinoma, micronodular"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "400087001",
+      "display" : "Basal cell carcinoma with sebaceous differentiation"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "400121000",
+      "display" : "Malignant nerve sheath tumor - category"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "400124008",
+      "display" : "Malignant chondroid syringoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "400134004",
+      "display" : "Small cell eccrine carcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "400137006",
+      "display" : "Basal cell carcinoma - category"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "400147009",
+      "display" : "Clear cell eccrine hidradenocarcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "400155002",
+      "display" : "Squamous cell carcinoma - category"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "400156001",
+      "display" : "Malignant blood vessel neoplasm, primary"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "400163001",
+      "display" : "Malignant fibromatous neoplasm"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "400172009",
+      "display" : "Malignant neoplasm with eccrine differentiation"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "400180002",
+      "display" : "Mucoepidermoid eccrine carcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "400187004",
+      "display" : "Malignant neoplasm with apocrine differentiation"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "400208002",
+      "display" : "Eccrine ductal carcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "400212008",
+      "display" : "Malignant fibrohistiocytic neoplasm - category"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "405937008",
+      "display" : "Nephroblastoma, favorable histology"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "405938003",
+      "display" : "Nephroblastoma, focal anaplasia"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "405939006",
+      "display" : "Nephroblastoma, diffuse anaplasia"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "405943005",
+      "display" : "Botryoid sarcoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "413440007",
+      "display" : "Acute lymphoblastic leukemia - category"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "413443009",
+      "display" : "Acute myeloid leukemia"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "413447005",
+      "display" : "Adenocarcinoma, no subtype, high grade"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "413448000",
+      "display" : "Adenocarcinoma, no subtype, intermediate grade"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "413449008",
+      "display" : "Adenocarcinoma, no subtype, low grade"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "413527004",
+      "display" : "Anaplastic large cell lymphoma, T/Null cell, primary systemic type"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "413836008",
+      "display" : "Chronic eosinophilic leukemia"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "413840004",
+      "display" : "Chronic lymphoid leukemia - category"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "413841000",
+      "display" : "Chronic myeloid leukemia - category"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "413990004",
+      "display" : "Diffuse large B-cell lymphoma - category"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "414450004",
+      "display" : "Idiopathic hypereosinophilic syndrome"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "414644002",
+      "display" : "Malignant hematopoietic neoplasm"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "414645001",
+      "display" : "Malignant histiocytic neoplasm"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "414646000",
+      "display" : "Malignant immunoproliferative neoplasm"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "414647009",
+      "display" : "Malignant meningeal neoplasm"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "415109007",
+      "display" : "Plasma cell myeloma - category"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "415113000",
+      "display" : "Plasmacytoma - category"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "416062005",
+      "display" : "Malignant teratoma - category"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "416500007",
+      "display" : "Malignant glioma - category"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "417057000",
+      "display" : "Gestational choriocarcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "418265009",
+      "display" : "Primary cutaneous B-cell lymphoma - category"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "418628003",
+      "display" : "Follicular mycosis fungoides"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "418789003",
+      "display" : "Primary cutaneous plasmacytoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "419018000",
+      "display" : "Primary cutaneous large T-cell lymphoma - category"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "419094004",
+      "display" : "Immunodeficiency-associated Burkitt's lymphoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "419283005",
+      "display" : "Primary cutaneous T-cell lymphoma - category"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "419386004",
+      "display" : "Pagetoid reticulosis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "419392005",
+      "display" : "Primary cutaneous lymphoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "419586003",
+      "display" : "Primary cutaneous T-cell lymphoma, large cell, CD30-negative"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "419662008",
+      "display" : "Primary cutaneous follicle center cell lymphoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "419770008",
+      "display" : "Endemic Burkitt's lymphoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "419879004",
+      "display" : "Atypical Burkitt's lymphoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "420028002",
+      "display" : "Primary cutaneous marginal zone B-cell lymphoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "420063007",
+      "display" : "Sporadic Burkitt's lymphoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "420301000",
+      "display" : "Follicular carcinoma, widely invasive"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "421414006",
+      "display" : "Papillary carcinoma, macrofollicular"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "421630008",
+      "display" : "Papillary carcinoma, clear cell"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "421658000",
+      "display" : "Papillary carcinoma, Warthin-like"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "421686008",
+      "display" : "Follicular carcinoma, clear cell"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "421918000",
+      "display" : "Papillary carcinoma, diffuse follicular"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "421980000",
+      "display" : "Papillary carcinoma, solid"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "422198004",
+      "display" : "Papillary carcinoma, tall cell"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "422238009",
+      "display" : "Papillary carcinoma, cribriform-morular"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "422350000",
+      "display" : "Follicular carcinoma, grossly encapsulated with angioinvasion"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "423251006",
+      "display" : "Malignant blood vessel neoplasm, metastatic"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "425535000",
+      "display" : "Synovial sarcoma - category"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "426955004",
+      "display" : "Ph+ acute lymphoblastic leukemia"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "443334005",
+      "display" : "Medulloblastoma - category"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "443489009",
+      "display" : "Chondrosarcoma - category"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "443565000",
+      "display" : "Oligodendroglioma - category"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "443677002",
+      "display" : "Seminoma - category"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "443757001",
+      "display" : "Lobular carcinoma in situ with microinvasion"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "443811009",
+      "display" : "Glioblastoma multiforme - category"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "444057000",
+      "display" : "Invasive carcinoma with ductal and lobular features (Mixed type carcinoma)"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "445925008",
+      "display" : "Lymphomatous infiltration"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "446578007",
+      "display" : "Endometrial stromal sarcoma - category"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "446688004",
+      "display" : "Leukemic infiltration"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "447011009",
+      "display" : "Mixed serous and mucinous cystadenocarcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "448406002",
+      "display" : "CIN III with early stromal invasion"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "448546006",
+      "display" : "Combined large cell neuroendocrine carcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "449330007",
+      "display" : "Papillary and solid transitional cell carcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "449778005",
+      "display" : "Undifferentiated nonkeratinizing squamous cell carcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "450594004",
+      "display" : "Primary malignant adenomatous neoplasm"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "450894009",
+      "display" : "Pancreatobiliary-type carcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "450895005",
+      "display" : "Micropapillary carcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "450897002",
+      "display" : "Mixed acinar-ductal carcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "450899004",
+      "display" : "Papillary tumor of the pineal region"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "450906003",
+      "display" : "Systemic EBV positive T-cell lymphoproliferative disease of childhood"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "450908002",
+      "display" : "Primary cutaneous gamma-delta T-cell lymphoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "450909005",
+      "display" : "Plasmablastic lymphoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "450910000",
+      "display" : "Anaplastic lymphoma kinase positive large B-cell lymphoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "450911001",
+      "display" : "Large B-cell lymphoma arising in human herpesvirus type 8 associated multicentric Castleman disease"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "450912008",
+      "display" : "Fibroblastic reticular cell tumor"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "450913003",
+      "display" : "Acute mixed lineage leukemia"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "450914009",
+      "display" : "Mixed phenotype acute leukemia with t(9;22)(q34;q11.2); BCR-ABL1"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "450915005",
+      "display" : "Mixed phenotype acute leukemia with t(v;11q23); MLL rearranged"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "450916006",
+      "display" : "Mixed phenotype acute leukemia with myeloid and B-cell lymphoid phenotypes"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "450917002",
+      "display" : "Mixed phenotype acute leukemia T/myeloid"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "450920005",
+      "display" : "B lymphoblastic leukemia / lymphoma - category"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "450928003",
+      "display" : "Acute myeloid leukemia with t(6;9)(p23;q34); DEK-NUP214"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "450929006",
+      "display" : "Acute myeloid leukemia with inv(3)(q21q26.2) or t(3;3)(q21;q26.2); RPN1-EVI1"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "450935006",
+      "display" : "Myeloid leukemia associated with Down Syndrome"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "450937003",
+      "display" : "Acute myeloid leukemia (megakaryoblastic) with t(1;22)(p13;q13); RBM15-MKL1"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "450940003",
+      "display" : "Myeloid or lymphoid neoplasm with alpha-type platelet-derived growth factor receptor gene rearrangement"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "450945008",
+      "display" : "Refractory cytopenia with unilineage dysplasia"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "450946009",
+      "display" : "Refractory neutropenia"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "450947000",
+      "display" : "Refractory thrombocytopenia"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "450948005",
+      "display" : "Serrated adenocarcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "450949002",
+      "display" : "B lymphoblastic leukemia lymphoma, no ICD-O subtype"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "450950002",
+      "display" : "B lymphoblastic leukemia lymphoma with t(9;22)(q34;q11.2); BCR-ABL1"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "450951003",
+      "display" : "B lymphoblastic leukemia lymphoma with t(v;11q23); MLL rearranged"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "450952005",
+      "display" : "B lymphoblastic leukemia lymphoma with t(12;21)(p13;q22); TEL-AML1 (ETV6-RUNX1)"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "450953000",
+      "display" : "B lymphoblastic leukemia lymphoma with hyperdiploidy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "450954006",
+      "display" : "B lymphoblastic leukemia lymphoma with hypodiploidy (Hypodiploid ALL)"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "450955007",
+      "display" : "B lymphoblastic leukemia lymphoma with t(5;14)(q31;q32); IL3-IGH"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "450956008",
+      "display" : "B lymphoblastic leukemia lymphoma with t(1;19)(q23;p13.3); E2A-PBX1 (TCF3-PBX1)"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "450958009",
+      "display" : "Malignant lymphoma, diffuse large B-cell, immunoblastic"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "450959001",
+      "display" : "T-cell/histiocyte rich large B-cell lymphoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "698255000",
+      "display" : "Intracapsular carcinoma ex pleomorphic adenoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "699229009",
+      "display" : "Intraosseous mucoepidermoid carcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "699658004",
+      "display" : "Glandular malignant peripheral nerve sheath tumor"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "699680001",
+      "display" : "Ependymoastrocytoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "699703008",
+      "display" : "Classic medulloblastoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "703078002",
+      "display" : "Poorly differentiated carcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "703547006",
+      "display" : "Intracystic papillary carcinoma with invasion"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "703549009",
+      "display" : "Small cell carcinoma, hypercalcemic type"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "703551008",
+      "display" : "Villoglandular carcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "703561001",
+      "display" : "Low grade serous carcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "703563003",
+      "display" : "High grade serous carcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "703568007",
+      "display" : "Seromucinous carcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "703569004",
+      "display" : "Mucinous adenocarcinoma, endocervical, gastric type"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "703570003",
+      "display" : "Adenocarcinoma of mammary gland type"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "703577000",
+      "display" : "Papillary carcinoma of the breast"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "703578005",
+      "display" : "Invasive micropapillary carcinoma of breast"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "703594003",
+      "display" : "Solid papillary carcinoma with invasion"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "703595002",
+      "display" : "Medullary-like carcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "703596001",
+      "display" : "Tubulolobular carcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "703605001",
+      "display" : "Perivascular epithelioid tumor, malignant"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "703609007",
+      "display" : "Myxofibrosarcoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "703615007",
+      "display" : "Low grade myofibroblastic sarcoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "703617004",
+      "display" : "Low grade fibromyxoid sarcoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "703618009",
+      "display" : "Sclerosing epithelioid fibrosarcoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "703631004",
+      "display" : "Ossifying fibromyxoid tumor, malignant"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "703644009",
+      "display" : "Malignant adenomyoepithelioma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "703650004",
+      "display" : "Phosphaturic mesenchymal tumor, malignant"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "703653002",
+      "display" : "Periductal stromal tumor, low grade"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "703655009",
+      "display" : "Adenocarcinoma of rete ovarii"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "703661007",
+      "display" : "Intimal sarcoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "703692009",
+      "display" : "Secondary osteosarcoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "703693004",
+      "display" : "Post-radiation osteosarcoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "703694005",
+      "display" : "Low grade central osteosarcoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "703699000",
+      "display" : "Chondrosarcoma, grade 2"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "703700004",
+      "display" : "Chondrosarcoma, grade 3"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "703707001",
+      "display" : "Ewing sarcoma / peripheral neuroectodermal tumor"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "703816006",
+      "display" : "Pancreatic endocrine tumor, nonfunctioning"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "703817002",
+      "display" : "RARS-T"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "703818007",
+      "display" : "Acute monoblastic and monocytic leukemia"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "703819004",
+      "display" : "Acute myeloid leukemia with mutation of CEBPA (CCAAT enhancer binding protein alpha) gene"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "703820005",
+      "display" : "Acute myeloid leukemia with mutated NPM1"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "703821009",
+      "display" : "T lymphoblastic leukemia/lymphoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "703822002",
+      "display" : "Indeterminate dendritic cell tumor"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "704147007",
+      "display" : "Neuroblastoma, metastatic"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "705145009",
+      "display" : "Metastatic osteosarcoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "707146006",
+      "display" : "Metastatic embryonal rhabdomyosarcoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "708937004",
+      "display" : "Metastatic seminoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "708939001",
+      "display" : "Papillary adenocarcinoma, metastatic"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "708973006",
+      "display" : "Metastatic hepatocellular carcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "708974000",
+      "display" : "Metastatic Mullerian mixed tumor"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "708979005",
+      "display" : "Poorly differentiated sarcoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "709190005",
+      "display" : "Metastatic leiomyosarcoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "709191009",
+      "display" : "Metastatic papillary thyroid carcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "709194001",
+      "display" : "Metastatic small cell carcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "709195000",
+      "display" : "Metastatic teratoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "709196004",
+      "display" : "Metastatic thymic carcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "713582000",
+      "display" : "Malignant germ cell neoplasm"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "716789004",
+      "display" : "Epstein-Barr virus positive diffuse large B-cell lymphoma of elderly"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "719105002",
+      "display" : "Small cell neuroendocrine carcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "719952009",
+      "display" : "Primary sarcoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "720346009",
+      "display" : "Primary seminoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "722237009",
+      "display" : "Comedocarcinoma, no International Classification of Diseases for Oncology subtype"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "725391003",
+      "display" : "Acute myeloid leukemia with t(8;16)(p11;p13) translocation"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "725504002",
+      "display" : "Thymic carcinoma with adenoid cystic carcinoma-like features"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "726420002",
+      "display" : "Meningeal melanoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "726421003",
+      "display" : "Metaplastic thymoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "732977002",
+      "display" : "Non-intestinal type adenocarcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "733414001",
+      "display" : "Primary ameloblastic carcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "733602004",
+      "display" : "Tubulocystic renal cell carcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "733607005",
+      "display" : "Papillary renal cell carcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "733832005",
+      "display" : "IDH (isocitrate dehydrogenase) mutant anaplastic astrocytoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "733837004",
+      "display" : "Epithelioid glioblastoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "733838009",
+      "display" : "Cribriform comedo-type adenocarcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "733840004",
+      "display" : "IDH (isocitrate dehydrogenase) wild-type anaplastic astrocytoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "733841000",
+      "display" : "IDH (isocitrate dehydrogenase) wild-type diffuse astrocytoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "733842007",
+      "display" : "IDH (isocitrate dehydrogenase) mutant diffuse astrocytoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "733843002",
+      "display" : "Anaplastic oligodendroglioma with isocitrate dehydrogenase mutant and 1p/19q-codeleted"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "733844008",
+      "display" : "Neuroendocrine type combined small cell carcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "733848006",
+      "display" : "Anaplastic pleomorphic xanthoastrocytoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "733859002",
+      "display" : "Fibrosarcomatous dermatofibrosarcoma protuberans"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "733860007",
+      "display" : "Pediatric nodal marginal zone lymphoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "733862004",
+      "display" : "Diffuse midline glioma, point mutation K27M in histone H3"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "733868000",
+      "display" : "RELA fusion-positive ependymoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "733872001",
+      "display" : "Sonic hedgehog pathway activated and tumor protein p53 mutant medulloblastoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "733874000",
+      "display" : "Sonic hedgehog pathway activated and tumor protein p53 wild-type medulloblastoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "733875004",
+      "display" : "Fibromatosis-like metaplastic carcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "733878002",
+      "display" : "Micropapillary adenocarcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "733881007",
+      "display" : "MiT family translocation renal cell carcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "733884004",
+      "display" : "Mucinous minimally invasive adenocarcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "733885003",
+      "display" : "Non-mucinous minimally invasive adenocarcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "733888001",
+      "display" : "Glioblastoma isocitrate dehydrogenase 1 mutation"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "733889009",
+      "display" : "Glioblastoma IDH (isocitrate dehydrogenase) wildtype"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "733890000",
+      "display" : "Postpubertal type teratoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "733891001",
+      "display" : "Gemistocytic astrocytoma IDH (isocitrate dehydrogenase) mutant"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "733895005",
+      "display" : "Primary cutaneous CD8 positive aggressive epidermotropic cytotoxic T-cell lymphoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "733897002",
+      "display" : "Pseudovascular squamous cell carcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "733902001",
+      "display" : "Medulloblastoma with extensive nodularity"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "733909005",
+      "display" : "Wingless-activated medulloblastoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "733912008",
+      "display" : "Primary intraosseous squamous cell carcinoma derived from odontogenic cyst"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "733913003",
+      "display" : "Primary intraosseous squamous cell carcinoma derived from keratocystic odontogenic neoplasm"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "733917002",
+      "display" : "Pediatric follicular lymphoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "733918007",
+      "display" : "Prepubertal type mixed teratoma and yolk sac neoplasm"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "733922002",
+      "display" : "NUT (nuclear protein in testis) carcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "734014001",
+      "display" : "Clear cell papillary renal cell carcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "734032001",
+      "display" : "Clear cell odontogenic carcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "734033006",
+      "display" : "Hepatoblastoma, mixed epithelial-mesenchymal"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "734035004",
+      "display" : "Hepatoblastoma, epithelial variant"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "734036003",
+      "display" : "Multilocular cystic renal cell neoplasm of low malignant potential"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "734038002",
+      "display" : "Intrapulmonary thymoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "734055003",
+      "display" : "Sebaceous lymphadenocarcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "734058001",
+      "display" : "Mammary analogue secretory carcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "734063002",
+      "display" : "Secondary dedifferentiated peripheral ameloblastic carcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "734064008",
+      "display" : "Secondary dedifferentiated intraosseous ameloblastic carcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "734067001",
+      "display" : "Splenic diffuse red pulp small B-cell lymphoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "734068006",
+      "display" : "Embryonal CNS (central nervous system) neoplasm with rhabdoid feature"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "734070002",
+      "display" : "Germ cell neoplasm with hematological malignancy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "734071003",
+      "display" : "Germ cell neoplasm with somatic-type solid malignancy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "734072005",
+      "display" : "Pulmonary myxoid sarcoma with EWSR1-CREB1 translocation"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "734073000",
+      "display" : "Non-wingless and non-sonic hedgehog medulloblastoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "734074006",
+      "display" : "Mucinous cystic neoplasm with invasive carcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "734075007",
+      "display" : "Intraductal papillary neoplasm with invasive carcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "734076008",
+      "display" : "DLBCL (diffuse large B-cell lymphoma) associated with chronic inflammation"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "734077004",
+      "display" : "Mucinous tubular and spindle cell carcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "734082006",
+      "display" : "Solitary fibrous tumor and hemangiopericytoma grade 3"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "734086009",
+      "display" : "Oligodendroglioma with isocitrate dehydrogenase mutant and 1p/19q-codeleted"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "734087000",
+      "display" : "Embryonal neoplasm with multilayered rosettes with C19MC-altered"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "734093008",
+      "display" : "Embryonal neoplasm with multilayered rosettes"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "734095001",
+      "display" : "Primary solid type intraosseous squamous cell carcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "734141009",
+      "display" : "Splenic B-cell lymphoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "734142002",
+      "display" : "B-cell lymphoma with features intermediate between diffuse large B-cell lymphoma and Burkitt lymphoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "734524001",
+      "display" : "Acute myeloid leukemia with FMS-like tyrosine kinase-3 mutation"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "762691001",
+      "display" : "Classical Hodgkin lymphoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "764991004",
+      "display" : "Renal mucinous tubular and spindle cell carcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "765094003",
+      "display" : "Renal medullary carcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "772292003",
+      "display" : "High-grade glioma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "783017000",
+      "display" : "Acute myeloid leukemia with BCR-ABL1"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "783209004",
+      "display" : "Mixed acinar-endocrine-ductal carcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "783212001",
+      "display" : "Human papillomavirus positive squamous cell carcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "783213006",
+      "display" : "Squamous cell carcinoma, HPV (human papillomavirus) negative"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "783220004",
+      "display" : "Burkitt-like lymphoma with 11q aberration"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "783263001",
+      "display" : "Acute myeloid leukemia with mutated RUNX1"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "783744003",
+      "display" : "B-lymphoblastic leukemia lymphoma BCR-ABL1-like"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "784551004",
+      "display" : "Follicular T-cell lymphoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "785766008",
+      "display" : "Mixed neuroendocrine-non neuroendocrine neoplasm"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "785825000",
+      "display" : "B lymphoblastic leukemia lymphoma with iAMP21"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "786909001",
+      "display" : "High grade B-cell lymphoma with MYC and BCL2 and/or BCL6 rearrangements"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "786960000",
+      "display" : "Large B-cell lymphoma with interferon regulatory factor 4 rearrangement"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "787036009",
+      "display" : "Monomorphic epitheliotropic intestinal T-cell lymphoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "787198005",
+      "display" : "Primary cutaneous acral CD8 positive T-cell lymphoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "787565006",
+      "display" : "Diffuse large B-cell lymphoma activated B-cell subtype"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "787594004",
+      "display" : "Diffuse large B-cell lymphoma germinal center B-cell subtype"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "787941004",
+      "display" : "Myeloid and/or lymphoid neoplasm with PCM1-JAK2"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "788566005",
+      "display" : "Lymphomatoid granulomatosis grade 3"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "788580003",
+      "display" : "Odontogenic ghost cell carcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "788740009",
+      "display" : "Acute myeloid leukemia with biallelic mutation of CEBPA (CCAAT enhancer binding protein alpha) gene"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "789405004",
+      "display" : "Biphenotypic sinonasal sarcoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "789434005",
+      "display" : "Myofibroblastic sarcoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "789435006",
+      "display" : "Myelodysplastic syndrome with ring sideroblasts and multilineage dysplasia"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "789437003",
+      "display" : "Malignant pituitary blastoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "816972004",
+      "display" : "Basal cell carcinoma with sarcomatoid differentiation"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "817952000",
+      "display" : "Composite pheochromocytoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "817953005",
+      "display" : "Composite paraganglioma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "822950002",
+      "display" : "Nodular ganglioneuroblastoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "822951003",
+      "display" : "Ganglioneuroblastoma, intermixed"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "822964002",
+      "display" : "Sclerosing mucoepidermoid carcinoma with eosinophilia"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "822966000",
+      "display" : "Syringocystadenocarcinoma papilliferum"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "822967009",
+      "display" : "Endocrine mucin-producing sweat gland carcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "827161000",
+      "display" : "Malignant immature teratoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "830195005",
+      "display" : "Malignant melanoma with B-Raf proto-oncogene, serine/threonine kinase V600E mutation"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "836276000",
+      "display" : "Hodgkin sarcoma"
+    }]
+  }
+},
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : false, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://snomed.info/sct",
+      "filter" : [{
+        "property" : "concept",
+        "op" : "is-a",
+        "value" : "399919001"
+      }]
+    }]
+  }
+}}####
+e: {
+  "valueSet" : {
+  "resourceType" : "ValueSet",
+  "status" : "active",
+  "expansion" : {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/valueset-unclosed",
+      "valueBoolean" : true
+    }],
+    "identifier" : "urn:uuid:8fca45e8-881c-4cea-97e6-fdda515f13dc",
+    "timestamp" : "2020-12-18T13:19:25.854Z",
+    "parameter" : [{
+      "name" : "limitedExpansion",
+      "valueBoolean" : true
+    },
+    {
+      "name" : "excludeNested",
+      "valueBoolean" : true
+    },
+    {
+      "name" : "version",
+      "valueString" : "http://snomed.info/sct|http://snomed.info/sct/731000124108/version/20200901"
+    }],
+    "contains" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "399919001",
+      "display" : "Carcinoma in situ - category"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "5688000",
+      "display" : "Squamous cell carcinoma in situ with questionable stromal invasion"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "10376009",
+      "display" : "Papillary carcinoma in situ"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "18348002",
+      "display" : "Queyrat's erythroplasia"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "18680006",
+      "display" : "Intraductal carcinoma and lobular carcinoma in situ"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "20365006",
+      "display" : "Cervical intraepithelial neoplasia, grade III"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "30566004",
+      "display" : "Noninfiltrating intraductal papillary adenocarcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "53530009",
+      "display" : "Transitional cell carcinoma in situ"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "59529006",
+      "display" : "Squamous cell carcinoma in situ"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "68956006",
+      "display" : "Carcinoma in situ"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "77284006",
+      "display" : "Lobular carcinoma in situ"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "78197004",
+      "display" : "Comedocarcinoma, noninfiltrating"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "84999002",
+      "display" : "Bowen's disease"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "86616005",
+      "display" : "Intraductal carcinoma, noninfiltrating"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128647004",
+      "display" : "Papillary squamous cell carcinoma in situ"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128691004",
+      "display" : "Intraductal papillary-mucinous carcinoma, non-invasive"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128696009",
+      "display" : "Ductal carcinoma in situ, micropapillary"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128697000",
+      "display" : "Cystic hypersecretory carcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128877008",
+      "display" : "Papillary urothelial carcinoma, non-invasive"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128879006",
+      "display" : "Ductal carcinoma in situ, cribriform type"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128880009",
+      "display" : "Intraductal carcinoma, solid type"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128900005",
+      "display" : "Mucinous cystadenocarcinoma, non-invasive"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "252989001",
+      "display" : "Squamous carcinoma in situ"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "399935008",
+      "display" : "Ductal carcinoma in situ - category"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "444591006",
+      "display" : "Pleomorphic lobular carcinoma in situ"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "444689005",
+      "display" : "Apocrine ductal carcinoma in situ"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "444732004",
+      "display" : "Clinging ductal carcinoma in situ"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "444739008",
+      "display" : "Classic lobular carcinoma in situ"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "448406002",
+      "display" : "CIN III with early stromal invasion"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "703545003",
+      "display" : "Encysted papillary carcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "703546002",
+      "display" : "Solid papillary carcinoma in situ"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "703558002",
+      "display" : "Serous intraepithelial carcinoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "703559005",
+      "display" : "Serous borderline tumor, micropapillary variant"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "703573001",
+      "display" : "Cystic hypersecretory carcinoma, intraductal"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "703576009",
+      "display" : "Intraductal papilloma with ductal carcinoma in situ"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "718396005",
+      "display" : "Basal cell carcinoma in situ"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "734133009",
+      "display" : "Intraductal papillary neoplasm with high grade intraepithelial neoplasia"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "816198009",
+      "display" : "Differentiated intraepithelial neoplasia"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "816978000",
+      "display" : "Porocarcinoma in situ"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "870763009",
+      "display" : "Non-invasive papillary urothelial carcinoma, low-grade"
+    }]
+  }
+},
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : false, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://snomed.info/sct",
+      "filter" : [{
+        "property" : "concept",
+        "op" : "is-a",
+        "value" : "399983006"
+      }]
+    }]
+  }
+}}####
+e: {
+  "valueSet" : {
+  "resourceType" : "ValueSet",
+  "status" : "active",
+  "expansion" : {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/valueset-unclosed",
+      "valueBoolean" : true
+    }],
+    "identifier" : "urn:uuid:fc99121b-e231-4d7e-937a-2fd63edb1d07",
+    "timestamp" : "2020-12-18T13:19:27.667Z",
+    "parameter" : [{
+      "name" : "limitedExpansion",
+      "valueBoolean" : true
+    },
+    {
+      "name" : "excludeNested",
+      "valueBoolean" : true
+    },
+    {
+      "name" : "version",
+      "valueString" : "http://snomed.info/sct|http://snomed.info/sct/731000124108/version/20200901"
+    }],
+    "contains" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "399983006",
+      "display" : "In situ adenomatous neoplasm - category"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "4935000",
+      "display" : "Adenocarcinoma in situ in villous adenoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "51617009",
+      "display" : "Adenocarcinoma in situ in tubulovillous adenoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "51642000",
+      "display" : "Adenocarcinoma in situ"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "60286009",
+      "display" : "Adenocarcinoma in situ in adenomatous polyp"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128879006",
+      "display" : "Ductal carcinoma in situ, cribriform type"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "128880009",
+      "display" : "Intraductal carcinoma, solid type"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "189598002",
+      "display" : "Adenocarcinoma in situ in a polyp"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "396870005",
+      "display" : "Pancreatic intraepithelial neoplasia (PanIN)-3: Flat or papillary mucinous epithelium with severe dysplasia"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "450893003",
+      "display" : "Papillary neoplasm, pancreatobiliary-type, with high grade intraepithelial neoplasia"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "703548001",
+      "display" : "Atypical hyperplasia of the endometrium"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "733882000",
+      "display" : "Mucinous adenocarcinoma in situ"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "733883005",
+      "display" : "Non-mucinous adenocarcinoma in situ"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "818948002",
+      "display" : "High grade flat intraepithelial neoplasia"
+    }]
+  }
+},
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : false, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://snomed.info/sct",
+      "concept" : [{
+        "code" : "399878004",
+        "display" : "Malignant neoplasm with pilar differentiation (morphologic abnormality)"
+      },
+      {
+        "code" : "253035009",
+        "display" : "In situ melanocytic morphology (morphologic abnormality)"
+      }]
+    }]
+  }
+}}####
+e: {
+  "valueSet" : {
+  "resourceType" : "ValueSet",
+  "status" : "active",
+  "expansion" : {
+    "identifier" : "urn:uuid:d7f9f40d-9e5d-4cfa-86d2-95d290ac8881",
+    "timestamp" : "2020-12-18T13:19:28.432Z",
+    "parameter" : [{
+      "name" : "limitedExpansion",
+      "valueBoolean" : true
+    },
+    {
+      "name" : "excludeNested",
+      "valueBoolean" : true
+    },
+    {
+      "name" : "version",
+      "valueString" : "http://snomed.info/sct|http://snomed.info/sct/731000124108/version/20200901"
+    }],
+    "contains" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "399878004",
+      "display" : "Malignant neoplasm with pilar differentiation (morphologic abnormality)"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "253035009",
+      "display" : "In situ melanocytic morphology (morphologic abnormality)"
     }]
   }
 },

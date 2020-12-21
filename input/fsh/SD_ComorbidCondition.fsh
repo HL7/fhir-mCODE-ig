@@ -4,8 +4,9 @@ Id: mcode-comorbidities-parent
 Title: "Comorbidities Parent"
 Description: "General structure for capturing comorbid conditions with respect to a primary condition. The specific set of comorbidities of interest in a given context are defined by slicing the components array."
 * ^abstract = true
-* focus only Reference(Condition)
-* code = LNC#78923-0  // Comorbid condition panel
+* focus only Reference(Condition)  // the index condition
+* focus ^short = "Index Condition"
+* focus ^definition = "The comorbid conditions may be defined with respect to a particular condition. For example, the CDC has a list of comorbid conditions important to COVID-19. In this case, the focus would be COVID-19 and the comorbid condition categories would be those called out by CDC, namely obesity, renal disease, respiratory disease, etc."
 * component.value[x] only CodeableConcept
 * component.value[x] from PresentAbsentUnknownVS (required)
 * component.extension contains 
@@ -22,6 +23,7 @@ Description: "Comorbid conditions for a cancer condition, using Elixhauser comor
 * focus and component and component.extension MS
 * focus only Reference(PrimaryCancerCondition)
 * insert ObservationComponentSlicingRules
+* code = LNC#78923-0  // Comorbid condition panel
 * focus and component and component.extension[conditionReference] and component.extension[conditionCode] and component.extension[conditionReference] MS
 * component contains 
     alcoholAbuse 0..1 and

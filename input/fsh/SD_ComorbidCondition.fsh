@@ -37,15 +37,16 @@ Description: "Comorbid conditions for a cancer condition, using Elixhauser comor
 * component.extension contains 
      ComorbidConditionCode named conditionCode 0..* MS and
      ComorbidConditionReference named conditionReference 0..* MS
-// This shouldn't be necessary because they are defined in ComorbidConditionCode, but the constraints only seem to be copied to the "All Slices" section of the snapshot
+// The following shouldn't be necessary because they are defined in ComorbidConditionCode, but the constraints only seem to be copied to the "All Slices" section of the snapshot
+// This is the set of statements that take a long time to execute and cause the IG Publisher timeout
 * component.extension[conditionCode].value[x] only CodeableConcept
-//* component.extension[conditionCode].extension 0..0
-//* component.extension[conditionCode] ^short = "Comorbid Condition Code"
-//* component.extension[conditionCode] ^definition = "Represents the actual condition that falls into the given comorbid condition category, as a code."
-//* component.extension[conditionReference].value[x] only Reference(Condition)
-//* component.extension[conditionReference].extension 0..0
-//* component.extension[conditionReference] ^short = "Comorbid Condition Reference"
-//* component.extension[conditionReference] ^definition = "Represents the actual condition that falls into the given comorbid condition category, as a reference."
+* component.extension[conditionCode].extension 0..0
+* component.extension[conditionCode] ^short = "Comorbid Condition Code"
+* component.extension[conditionCode] ^definition = "Represents the actual condition that falls into the given comorbid condition category, as a code."
+* component.extension[conditionReference].value[x] only Reference(Condition)
+* component.extension[conditionReference].extension 0..0
+* component.extension[conditionReference] ^short = "Comorbid Condition Reference"
+* component.extension[conditionReference] ^definition = "Represents the actual condition that falls into the given comorbid condition category, as a reference."
 // The comorbid condition categories included in Elixhauser
 * component contains 
     alcoholAbuse 0..1 and

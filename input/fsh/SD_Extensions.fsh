@@ -1,21 +1,3 @@
-Extension: ComorbidConditionCode
-Id: mcode-comorbid-condition-code
-Title:  "Comorbid Condition Code"
-Description: "An extension for representing the condition code corresponding to the named comorbid condition."
-* . ^short = "Comorbid Condition Code"
-* . ^definition = "An extension for representing the condition code corresponding to the named comorbid condition."
-* extension 0..0
-* value[x] only CodeableConcept
-
-Extension: ComorbidConditionReference
-Id: mcode-comorbid-condition-reference
-Title:  "Comorbid Condition Reference"
-Description: "An extension for representing a reference to a condition resource corresponding to the named comorbid condition."
-* . ^short = "Comorbid Condition Code"
-* . ^definition = "An extension for representing a reference to a condition resource corresponding to the named comorbid condition."
-* extension 0..0
-* value[x] only Reference(Condition)
-
 Extension: EvidenceType
 Id: mcode-evidence-type
 Title: "Evidence Type"

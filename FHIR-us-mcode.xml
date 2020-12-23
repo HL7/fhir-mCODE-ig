@@ -41,7 +41,6 @@
 <artifact id="StructureDefinition/mcode-comorbid-condition-code" key="StructureDefinition-mcode-comorbid-condition-code" name="Comorbid Condition Code"/>
 <artifact id="StructureDefinition/mcode-comorbid-condition-reference" key="StructureDefinition-mcode-comorbid-condition-reference" name="Comorbid Condition Reference"/>
 <artifact deprecated="true" id="ValueSet/mcode-comorbid-condition-value-set" key="comorbid-condition-value-set" name="Comorbid Condition Value Set"/>
-<artifact id="StructureDefinition/mcode-comorbidities-parent" key="StructureDefinition-mcode-comorbidities-parent" name="Comorbidities Parent"/>
 <artifact id="ValueSet/mcode-condition-status-trend-vs" key="condition-status-trend-value-set" name="Condition Status Trend Value Set"/>
 <artifact id="ValueSet/mcode-dna-change-type-vs" key="ValueSet-mcode-dna-change-type-vs" name="DNA Change Type Value Set"/>
 <artifact id="StructureDefinition/mcode-ecog-performance-status" key="ecog-performance-status" name="ECOG Performance Status"/>

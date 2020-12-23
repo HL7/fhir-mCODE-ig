@@ -104,14 +104,6 @@ groups:
     resources:
       - StructureDefinition/mcode-cancer-disease-status
 
-
-  Abstract:
-    name: Abstract Profiles
-    description: These are profiles on resources or data types that describe patterns used by other profiles, but cannot be instantiated directly. I.e. instances can conform to profiles based on these abstract profiles, but do not declare conformance to the abstract profiles themselves.
-    resources:
-      - StructureDefinition/mcode-comorbidities-parent
-
-  # Extensions
   Extensions:
     name: Extensions
     description: These define constraints on FHIR data types that need to be complied with by conformant implementations
@@ -125,7 +117,6 @@ groups:
       - StructureDefinition/mcode-termination-reason
       - StructureDefinition/mcode-treatment-intent
 
-  # Value sets
   ValueSets:
     name: Value Sets
     description: These define sets of codes used by systems conforming with this implementation guide. Comorbid condition-related value sets appear in a separate section below.

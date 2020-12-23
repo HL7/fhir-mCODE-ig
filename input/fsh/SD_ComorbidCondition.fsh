@@ -1,30 +1,52 @@
-Profile: ComorbiditiesParent
-Parent: Observation
-Id: mcode-comorbidities-parent
-Title: "Comorbidities Parent"
-Description: "General structure for capturing comorbid conditions with respect to a primary condition. The specific set of comorbidities of interest in a given context are defined by slicing the components array."
-* ^abstract = true
-* focus only Reference(Condition)  // the index condition
-* focus ^short = "Index Condition"
-* focus ^definition = "The comorbid conditions may be defined with respect to a particular condition. For example, the CDC has a list of comorbid conditions important to COVID-19. In this case, the focus would be COVID-19 and the comorbid condition categories would be those called out by CDC, namely obesity, renal disease, respiratory disease, etc."
-* component.value[x] only CodeableConcept
-* component.value[x] from PresentAbsentUnknownVS (required)
-* component.extension contains 
-     ComorbidConditionCode named conditionCode 0..* and
-     ComorbidConditionReference named conditionReference 0..*
+Extension: ComorbidConditionCode
+Id: mcode-comorbid-condition-code
+Title:  "Comorbid Condition Code"
+Description: "An extension for representing the condition code corresponding to the named comorbid condition."
+* . ^short = "Comorbid Condition Code"
+* . ^definition = "An extension for representing the condition code corresponding to the named comorbid condition."
+* extension 0..0
+* value[x] only CodeableConcept
+
+Extension: ComorbidConditionReference
+Id: mcode-comorbid-condition-reference
+Title:  "Comorbid Condition Reference"
+Description: "An extension for representing a reference to a condition resource corresponding to the named comorbid condition."
+* . ^short = "Comorbid Condition Code"
+* . ^definition = "An extension for representing a reference to a condition resource corresponding to the named comorbid condition."
+* extension 0..0
+* value[x] only Reference(Condition)
 
 
 Profile: CancerRelatedComorbidities
-Parent: ComorbiditiesParent
+Parent: Observation
 Id: mcode-cancer-related-comorbidities
 Title: "Cancer-Related Comorbidities"
 Description: "Comorbid conditions for a cancer condition, using Elixhauser comorbidity categories."
-* ^abstract = false
 * focus and component and component.extension MS
+* value[x] only Quantity or CodeableConcept
+* value[x] ^short = "Total comorbid condition index"
+* value[x] ^definition = "A value that summarizes the total burden of comorbid conditions, if defined."
 * focus only Reference(PrimaryCancerCondition)
+* focus ^short = "Index Condition"
+* focus ^definition = "The comorbid conditions may be defined with respect to a particular condition. For example, the CDC has a list of comorbid conditions important to COVID-19. In this case, the focus would be COVID-19 and the comorbid condition categories would be those called out by CDC, namely obesity, renal disease, respiratory disease, etc."
 * insert ObservationComponentSlicingRules
 * code = LNC#78923-0  // Comorbid condition panel
-* focus and component and component.extension[conditionReference] and component.extension[conditionCode] and component.extension[conditionReference] MS
+* component.value[x] only CodeableConcept
+* component.value[x] from PresentAbsentUnknownVS (required)
+* component.modifierExtension 0..0
+* component.extension contains 
+     ComorbidConditionCode named conditionCode 0..* MS and
+     ComorbidConditionReference named conditionReference 0..* MS
+// This shouldn't be necessary because they are defined in ComorbidConditionCode, but the constraints only seem to be copied to the "All Slices" section of the snapshot
+* component.extension[conditionCode].value[x] only CodeableConcept
+//* component.extension[conditionCode].extension 0..0
+//* component.extension[conditionCode] ^short = "Comorbid Condition Code"
+//* component.extension[conditionCode] ^definition = "Represents the actual condition that falls into the given comorbid condition category, as a code."
+//* component.extension[conditionReference].value[x] only Reference(Condition)
+//* component.extension[conditionReference].extension 0..0
+//* component.extension[conditionReference] ^short = "Comorbid Condition Reference"
+//* component.extension[conditionReference] ^definition = "Represents the actual condition that falls into the given comorbid condition category, as a reference."
+// The comorbid condition categories included in Elixhauser
 * component contains 
     alcoholAbuse 0..1 and
     cardiacArrhythmia 0..1 and

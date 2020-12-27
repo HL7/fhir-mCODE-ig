@@ -1,5 +1,5 @@
 RuleSet: PerformanceStatusCommonRules
-* status and code and subject and effective[x] and valueInteger MS
+* status and code and subject and effective[x] and value[x] and interpretation MS
 * insert CategorySlicingRules
 * category = ObsCat#survey
 * subject 1..1
@@ -13,7 +13,7 @@ RuleSet: PerformanceStatusCommonRules
 * subject only Reference(USCorePatient)
 * effective[x] only dateTime or Period
 * performer only Reference(Practitioner)
-* value[x] only integer
+
 
 Profile:    KarnofskyPerformanceStatus
 Parent:     Observation

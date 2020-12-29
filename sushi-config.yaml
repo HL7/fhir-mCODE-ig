@@ -59,6 +59,7 @@ groups:
       - StructureDefinition/mcode-ecog-performance-status
       - StructureDefinition/mcode-karnofsky-performance-status
       - StructureDefinition/mcode-patient-bundle
+      - StructureDefinition/mcode-patient-group
 
   Disease:
     name: "Profiles: Disease Characterization"
@@ -254,6 +255,7 @@ groups:
       - FamilyMemberHistory/scenario1-family-member-history-aunt
       - FamilyMemberHistory/scenario1-family-member-history-sister
       - FamilyMemberHistory/scenario1-family-member-history-uncle
+      - Group/scenario1-mcode-patient-group
       - MedicationRequest/scenario1-mcode-cancer-related-medication-anastrozole
       - MedicationRequest/scenario1-mcode-cancer-related-medication-chemo-cyclophosphamide
       - MedicationRequest/scenario1-mcode-cancer-related-medication-chemo-doxorubicin
@@ -337,6 +339,3 @@ groups:
       - CodeSystem/ctcae-grade-code-system
       - AdverseEvent/ctc-adverse-event-example-1
       - AdverseEvent/ctc-adverse-event-example-2
-
-
-

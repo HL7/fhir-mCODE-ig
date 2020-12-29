@@ -110,12 +110,7 @@ groups:
     name: Abstract Profiles
     description: These are profiles on resources or data types that describe patterns used by other profiles, but cannot be instantiated directly. I.e. instances can conform to profiles based on these abstract profiles, but do not declare conformance to the abstract profiles themselves.
     resources:
-      - StructureDefinition/mcode-cancer-condition-parent
-      - StructureDefinition/mcode-cancer-related-procedure-parent
-      - StructureDefinition/mcode-cancer-stage-parent
       - StructureDefinition/mcode-comorbidities-parent
-      - StructureDefinition/mcode-performance-status-parent
-
 
   # Extensions
   Extensions:

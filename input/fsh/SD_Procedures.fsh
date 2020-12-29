@@ -1,9 +1,4 @@
-Profile: CancerRelatedProcedureParent
-Parent: USCoreProcedure
-Id:     mcode-cancer-related-procedure-parent
-Title:  "Cancer-Related Procedure Parent"
-Description: "Abstract parent class for cancer procedure profiles."
-* ^abstract = true
+RuleSet: CancerRelatedProcedureCommonRuleSet
 * obeys mcode-reason-required
 * extension contains
     TreatmentIntent named treatmentIntent 0..1 MS
@@ -19,7 +14,7 @@ Description: "Abstract parent class for cancer procedure profiles."
 
 
 Profile:  CancerRelatedRadiationProcedure
-Parent:   CancerRelatedProcedureParent
+Parent:   USCoreProcedure
 Id:       mcode-cancer-related-radiation-procedure
 Title:    "Cancer-Related Radiation Procedure"
 Description: "A radiological treatment addressing a cancer condition. The scope of this profile has been narrowed to cancer-related procedures by constraining the reasonReference and reasonCode to cancer conditions, one of which is required.
@@ -27,7 +22,7 @@ Description: "A radiological treatment addressing a cancer condition. The scope 
 Conformance statement:
 
 Procedure resources associated with an mCODE patient with Procedure.category SNOMED-CT 53438000 MAY conform to this profile. Beyond this requirement, a producer of resources SHOULD ensure that any resource instance associated with an mCODE patient that would reasonably be expected to conform to this profile SHOULD be published in this form. Specifically, we expect that any radiation therapy related to the treatment of a `PrimaryCancerCondition` or `SecondaryCancerCondition` would be published in this form."
-* ^abstract = false
+* insert CancerRelatedProcedureCommonRuleSet
 // Do not insert the category slicing rules because Procedure.category is 0..1. 
 * category = SCT#53438000 //"Radiation therapy procedure or service (procedure)"
 * code from RadiationProcedureVS (extensible)
@@ -36,7 +31,7 @@ Procedure resources associated with an mCODE patient with Procedure.category SNO
 
 
 Profile:  CancerRelatedSurgicalProcedure
-Parent:   CancerRelatedProcedureParent
+Parent:   USCoreProcedure
 Id:       mcode-cancer-related-surgical-procedure
 Title:    "Cancer-Related Surgical Procedure"
 Description: "A surgical action addressing a cancer condition. The scope of this profile has been narrowed to cancer-related procedures by constraining the reasonReference and reasonCode to cancer conditions, one of which is required.
@@ -44,7 +39,7 @@ Description: "A surgical action addressing a cancer condition. The scope of this
 Conformance statement:
 
 Procedure resources associated with an mCODE patient with Procedure.category SNOMED-CT 387713003 MAY conform to this profile. Beyond this requirement, a producer of resources SHOULD ensure that any resource instance associated with an mCODE patient that would reasonably be expected to conform to this profile SHOULD be published in this form. Specifically, we expect that any surgical procedure related to the treatment of a `PrimaryCancerCondition` or `SecondaryCancerCondition` would be published in this form."
-* ^abstract = false
+* insert CancerRelatedProcedureCommonRuleSet
 // Do not insert the category slicing rules because Procedure.category is 0..1.
 * category = SCT#387713003 //"Surgical procedure"
 * code from CancerRelatedSurgicalProcedureVS (extensible)

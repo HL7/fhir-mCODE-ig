@@ -13,7 +13,7 @@ This page contains miscellaneous information on modeling and FHIR implementation
 
 The mCODE Implementation Guide was developed using the standard HL7 FHIR publishing tools. The page layouts and symbols are explained [in the FHIR documentation](https://www.hl7.org/fhir/formats.html).
 
-Each profile is shown in multiple views. The "Differential Table" view represents the difference between the current profile and its immediate parent. When interpreting this view, bear in mind that the immediate parent is typically not the base FHIR resource, but it could be a US Core profile or another profile in this guide. The parent is shown as the "Type" in the first line of the Differential Table view. For example, for [ECOG Performance Status](StructureDefinition-mcode-ecog-performance-status.html) the immediate parent is [PerformanceStatusParent](StructureDefinition-mcode-performance-status-parent.html), whose parent is Observation. The "sum" of these two differentials represent the difference between ECOG Performance Status and the base resource, Observation.
+Each profile is shown in multiple views. The "Differential Table" view represents the difference between the current profile and its base resource or profile. When interpreting this view, bear in mind that the immediate parent may not be a base FHIR resource, but it could be a US Core profile or another profile in this guide.
 
 #### Terminology Preferences
 

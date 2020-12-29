@@ -19,6 +19,8 @@ Each mCODE participant SHALL support the following profiles, which are core to r
 * [PrimaryCancerCondition](StructureDefinition-mcode-primary-cancer-condition.html)
 * [MCODEPatientBundle](StructureDefinition-mcode-patient-bundle.html)
 
+mCODE Data Senders that consider only a subset of cancer patients to be mCODE-conforming SHALL also support [MCodePatientGroup](StructureDefinition-mcode-patient-group.html) to identify the subset of Patient resources that conform to CancerPatient.
+
 Additionally, each mCODE participant SHOULD support all profiles defined in mCODE unless the participant does not anticipate supplying or consuming a certain type of data, usually by virtue of playing a limited or specialized role in clinical or information workflows. For example, a Genomics Laboratory may support GenomicsReport, but not vital signs or staging.
 
 Each mCODE participant SHALL publish a FHIR CapabilityStatement listing their supported profiles, by declaring the profile in CapabilityStatement.rest.resource.supportedProfile.
@@ -113,21 +115,21 @@ To implement the operations described above, participants SHALL comply with one 
     1. [`mcode-sender-preferred`]
     1. [`mcode-sender-fallback1`]
     1. [`mcode-sender-fallback2`]
-    1. [`mcode-sender-fallback3`]
+    1. [`mcode-sender-subset`]
 * mCODE Data Receivers
     1. [`mcode-receiver-preferred`]
     1. [`mcode-receiver-fallback1`]
     1. [`mcode-receiver-fallback2`]
-    1. [`mcode-receiver-fallback3`]
+    1. [`mcode-receiver-subset`]
 
 [`mcode-sender-preferred`]: CapabilityStatement-mcode-sender-preferred.html
 [`mcode-sender-fallback1`]: CapabilityStatement-mcode-sender-fallback1.html
 [`mcode-sender-fallback2`]: CapabilityStatement-mcode-sender-fallback2.html
-[`mcode-sender-fallback3`]: CapabilityStatement-mcode-sender-fallback3.html
+[`mcode-sender-subset`]: CapabilityStatement-mcode-sender-subset.html
 [`mcode-receiver-preferred`]: CapabilityStatement-mcode-receiver-preferred.html
 [`mcode-receiver-fallback1`]: CapabilityStatement-mcode-receiver-fallback1.html
 [`mcode-receiver-fallback2`]: CapabilityStatement-mcode-receiver-fallback2.html
-[`mcode-receiver-fallback3`]: CapabilityStatement-mcode-receiver-fallback3.html
+[`mcode-receiver-subset`]: CapabilityStatement-mcode-receiver-subset.html
 
 These map one-to-one onto the operations described above.
 

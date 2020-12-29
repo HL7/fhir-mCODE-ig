@@ -94,7 +94,7 @@
 <artifact deprecated="true" id="ValueSet/mcode-laterality-value-set" key="laterality-value-set" name="Laterality Value Set"/>
 <artifact id="StructureDefinition/mcode-location-qualifier" key="StructureDefinition-mcode-location-qualifier" name="Location Qualifier"/>
 <artifact id="ValueSet/mcode-location-qualifier-vs" key="ValueSet-mcode-location-qualifier-vs" name="Location Qualifier Value Set"/>
-<artifact id="Group/MCODEGroupExample" key="Group-MCODEGroupExample" name="MCODEGroupExample"/>
+<artifact id="Group/scenario1-mcode-patient-group" key="Group-scenario1-mcode-patient-group" name="MCODEGroupExample"/>
 <artifact id="ValueSet/mcode-tumor-size-method-vs" key="ValueSet-mcode-tumor-size-method-vs" name="Methods for measuring tumor size"/>
 <artifact deprecated="true" key="Observation" name="Observation"/>
 <artifact id="OperationDefinition/mcode-patient-everything" key="OperationDefinition-mcode-patient-everything" name="Operation-mcode-patient-everything"/>
@@ -110,6 +110,7 @@
 <artifact deprecated="true" id="Extension/mcode-related-primary-cancer-condition-extension" key="related-primary-cancer-condition-extension" name="Related Primary Cancer Condition Extension"/>
 <artifact id="SearchParameter/Patient-id" key="SearchParameter-Patient-id" name="Search by _id in Patients with multipleOr"/>
 <artifact id="SearchParameter/Condition-code" key="SearchParameter-Condition-code" name="Search by code:in in Conditions"/>
+<artifact id="SearchParameter/Group-value" key="SearchParameter-Group-value" name="Search by value in Groups"/>
 <artifact id="StructureDefinition/mcode-secondary-cancer-condition" key="secondary-cancer-condition" name="Secondary Cancer Condition"/>
 <artifact id="ValueSet/mcode-secondary-cancer-disorder-vs" key="secondary-cancer-disorder-value-set" name="Secondary Cancer Disorder Value Set"/>
 <artifact deprecated="true" id="Profile/mcode-tnm-clinical-distant-metastases" key="tnm-clinical-distant-metastases" name="TNM Clinical Distant Metastases"/>
@@ -205,12 +206,12 @@
 <artifact id="Observation/mCODETumorMarkerTestExample1" key="Observation-mCODETumorMarkerTestExample1" name="mCODETumorMarkerTestExample1"/>
 <artifact id="CapabilityStatement/mcode-receiver-fallback1" key="CapabilityStatement-mcode-receiver-fallback1" name="mcode-receiver-fallback1"/>
 <artifact id="CapabilityStatement/mcode-receiver-fallback2" key="CapabilityStatement-mcode-receiver-fallback2" name="mcode-receiver-fallback2"/>
-<artifact id="CapabilityStatement/mcode-receiver-fallback3" key="CapabilityStatement-mcode-receiver-fallback3" name="mcode-receiver-fallback3"/>
 <artifact id="CapabilityStatement/mcode-receiver-preferred" key="CapabilityStatement-mcode-receiver-preferred" name="mcode-receiver-preferred"/>
+<artifact id="CapabilityStatement/mcode-receiver-subset" key="CapabilityStatement-mcode-receiver-subset" name="mcode-receiver-subset"/>
 <artifact id="CapabilityStatement/mcode-sender-fallback1" key="CapabilityStatement-mcode-sender-fallback1" name="mcode-sender-fallback1"/>
 <artifact id="CapabilityStatement/mcode-sender-fallback2" key="CapabilityStatement-mcode-sender-fallback2" name="mcode-sender-fallback2"/>
-<artifact id="CapabilityStatement/mcode-sender-fallback3" key="CapabilityStatement-mcode-sender-fallback3" name="mcode-sender-fallback3"/>
 <artifact id="CapabilityStatement/mcode-sender-preferred" key="CapabilityStatement-mcode-sender-preferred" name="mcode-sender-preferred"/>
+<artifact id="CapabilityStatement/mcode-sender-subset" key="CapabilityStatement-mcode-sender-subset" name="mcode-sender-subset"/>
 <artifact id="Observation/scenario1-body-weight" key="Observation-scenario1-body-weight" name="scenario1-body-weight"/>
 <artifact id="DiagnosticReport/scenario1-diagnosticreport-pathology" key="DiagnosticReport-scenario1-diagnosticreport-pathology" name="scenario1-diagnosticreport-pathology"/>
 <artifact id="FamilyMemberHistory/scenario1-family-member-history-aunt" key="FamilyMemberHistory-scenario1-family-member-history-aunt" name="scenario1-family-member-history-aunt"/>

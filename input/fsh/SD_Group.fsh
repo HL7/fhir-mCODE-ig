@@ -19,7 +19,7 @@ Patients. These Patient resources therefore MUST conform to [CancerPatient].
 // "Identifies traits whose presence or absence is shared by members of the group."
 // https://www.hl7.org/fhir/group-definitions.html#Group.characteristic.code
 * characteristic 1..*
-* characteristic.code = #disease
+* characteristic.code = #administrative
 * characteristic.valueCodeableConcept = #mcode-cancer-patient "mCODE Cancer Patient"
 * characteristic.exclude = false
 

@@ -30,3 +30,18 @@ Title: "Search by code:in in Conditions"
 * xpath = "f:Condition/f:code"
 * xpathUsage = #normal
 * modifier = #in
+
+Instance: Group-value
+InstanceOf: SearchParameter
+Title: "Search by value in Groups"
+* url = "http://hl7.org/fhir/us/mcode/SearchParameter/Group-value"
+* name = "GroupValueSearchParameter"
+* status = #draft
+* experimental = true
+* description = "This SearchParameter enables query of groups by value."
+* code = #value
+* base[0] = #Group
+* type = #uri
+* expression = "(Group.characteristic.value as CodeableConcept) | (Group.characteristic.value as boolean)"
+* xpath = "f:Group/f:characteristic/f:valueCodeableConcept | f:Group/f:characteristic/f:valueBoolean"
+* xpathUsage = #normal

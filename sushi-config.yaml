@@ -121,7 +121,6 @@ groups:
       - StructureDefinition/mcode-evidence-type
       - StructureDefinition/mcode-histology-morphology-behavior
       - StructureDefinition/mcode-location-qualifier
-      - StructureDefinition/mcode-related-primary-cancer-condition
       - StructureDefinition/mcode-termination-reason
       - StructureDefinition/mcode-treatment-intent
 

@@ -103,7 +103,6 @@
 <artifact deprecated="true" key="Procedure" name="Procedure"/>
 <artifact id="ValueSet/mcode-radiation-procedure-vs" key="radiation-procedure-value-set" name="Radiation Procedure Value Set"/>
 <artifact id="ValueSet/mcode-radiation-target-body-site-vs" key="radiation-target-body-site-value-set" name="Radiation Target Body Site Value Set"/>
-<artifact id="StructureDefinition/mcode-related-primary-cancer-condition" key="StructureDefinition-mcode-related-primary-cancer-condition" name="Related Primary Cancer Condition"/>
 <artifact deprecated="true" id="Extension/mcode-related-primary-cancer-condition-extension" key="related-primary-cancer-condition-extension" name="Related Primary Cancer Condition Extension"/>
 <artifact id="SearchParameter/Patient-id" key="SearchParameter-Patient-id" name="Search by _id in Patients with multipleOr"/>
 <artifact id="SearchParameter/Condition-code" key="SearchParameter-Condition-code" name="Search by code:in in Conditions"/>
@@ -129,7 +128,8 @@
 <artifact id="ValueSet/mcode-treatment-intent-vs" key="treatment-intent-value-set" name="Treatment Intent Value Set"/>
 <artifact id="ValueSet/mcode-treatment-termination-reason-vs" key="treatment-termination-reason-value-set" name="Treatment Termination Reason Value Set"/>
 <artifact id="StructureDefinition/mcode-tumor" key="StructureDefinition-mcode-tumor" name="Tumor"/>
-<artifact id="StructureDefinition/mcode-tumor-marker-test" key="tumor-marker" name="Tumor Marker"/>
+<artifact deprecated="true" id="Profile/mcode-tumor-marker" key="tumor-marker" name="Tumor Marker"/>
+<artifact id="StructureDefinition/mcode-tumor-marker-test" key="StructureDefinition-mcode-tumor-marker-test" name="Tumor Marker Test"/>
 <artifact deprecated="true" id="ValueSet/mcode-tumor-marker-test-value-set" key="tumor-marker-test-value-set" name="Tumor Marker Test Value Set"/>
 <artifact id="StructureDefinition/mcode-tumor-size" key="StructureDefinition-mcode-tumor-size" name="Tumor Size"/>
 <artifact id="ValueSet/mcode-tumor-marker-test-vs" key="ValueSet-mcode-tumor-marker-test-vs" name="TumorMarkerTestVS"/>

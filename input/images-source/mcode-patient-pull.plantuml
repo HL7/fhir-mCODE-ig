@@ -3,8 +3,8 @@ skinparam defaultFontName Arial
 
 title mCODE Patient
 hide footbox
-participant "mCODE Data Sender" as Sender
 participant "mCODE Data Receiver" as Receiver
+participant "mCODE Data Sender" as Sender
 
 group Get Patients
     "Receiver" -> "Sender" : ""GET [base]/Patient/[id]""

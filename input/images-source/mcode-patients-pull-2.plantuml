@@ -3,8 +3,8 @@ skinparam defaultFontName Arial
 
 title mCODE Patients: Pull Model - Implementation Option 2 (Include a subset of cancer patients, preferred)
 hide footbox
-participant "mCODE Data Sender" as Sender
 participant "mCODE Data Receiver" as Receiver
+participant "mCODE Data Sender" as Sender
 
 group Get Patients via ""_profile""
     "Receiver" -> "Sender" : ""GET [base]/Group/mcode-patients""

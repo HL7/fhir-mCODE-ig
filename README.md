@@ -52,22 +52,6 @@ While not normally necessary, you can delete the following folders to get a clea
 - `output/` (IG Publisher output)
 - `input-cache/` (IG Publisher local cache; note that deleting this will dramatically increase the length of the next build)
 
-### Rebuilding UML diagrams
-
-To build the UML diagrams (in `input/images-source/`), you will need to be able to run [PlantUML](https://plantuml.com). This has [Graphviz](https://graphviz.org) as a dependency.
-
-On macOS:
-
-1. Install Java if you don't already have it
-2. `brew install graphviz`
-3. Download `plantuml.jar` from <https://plantuml.com/download>
-4. From the root folder, run `java -jar /path/to/plantuml.jar -tsvg -o ../images/ input/images-source/*.puml`
-
-On Windows:
-
-1. Install Java if you don't already have it
-2. TODO
-
 ## Key folders & files in the IG
 
 - The FHIR Shorthand (`.fsh`) files defining the resources in this IG are found in `input/fsh/`.
@@ -84,8 +68,7 @@ On Windows:
 
 - The main pages in the built IG are generated from [Markdown](https://daringfireball.net/projects/markdown/) found in `input/pagecontent/`. These pages must also be included in `sushi-config.yaml` to be compiled to HTML by the IG Publisher.
 - There are a number of other important configuration options in `sushi-config.yaml` including the menu contents of the built IG and the groupings on the [Artifacts Summary page](https://build.fhir.org/ig/HL7/fhir-mCODE-ig/artifacts.html).
-- The source for the UML diagrams in the IG are found in `input/images-source/`.
-    - The `.puml` files can be edited in any text editor, but you may benefit from using a [JetBrains](https://www.jetbrains.com) editor with [this plugin](https://plugins.jetbrains.com/plugin/7017-plantuml-integration), or [VSCode](https://code.visualstudio.com) with [this extension](https://marketplace.visualstudio.com/items?itemName=jebbs.plantuml) to get realtime previews.
+- The source for the UML diagrams in the IG are found in `input/images-source/` and MUST have a `.plantuml` extension. These are automatically converted to SVG by the IG Publisher, and are inserted inline into Markdown files using `{%include some-diagram.svg%}` (which corresponds to `input/images-source/some-diagram.plantuml`).
 
 ## Contributing to the IG
 

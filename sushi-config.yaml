@@ -42,10 +42,15 @@ menu:
   Home: index.html
   Conformance: conformance.html
   Implementation: implementation.html
-  Artifacts: artifacts.html
-  Examples: examples.html
+  FHIR Artifacts:
+    Profiles: artifacts.html#profiles-patient
+    Extensions: artifacts.html#extensions
+    "Value sets &amp; code systems": artifacts.html#value-sets
+    Examples: examples.html
+    Conformance resources: artifacts.html#conformance-resources
+    Experimental resources: experimental.html
+    All artifacts: artifacts.html
   Downloads: downloads.html
-  Experimental: experimental.html
   History: http://hl7.org/fhir/us/mcode/history.html
 groups:
 

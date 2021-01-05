@@ -1,13 +1,14 @@
-Instance: MCODEGroupExample
-InstanceOf: mcode-patient-group
+Instance: mCODEPatientGroupExample1
+InstanceOf: Group
 Usage: #example
-Title: "MCODEGroupExample"
-Description: "Example of an mCODE Group"
+Title: "mCODE Patient Group Example"
+Description: "Example of a Group identifying mCODE Patients"
 
-* id = "scenario1-mcode-patient-group"
+* id = "mCODEPatientGroupExample1"
+* type = #person
+* actual = true
 
-* characteristic.valueCodeableConcept = #mcode-cancer-patient "mCODE Cancer Patient"
-* characteristic.exclude = false // Required in order to set the characteristic value
+* code = #mcode-patient
 
 * member[0].entity = Reference(Patient/mCODEPatientExample1)
 * member[1].entity = Reference(Patient/mCODEPatientExample2)

@@ -1,7 +1,7 @@
 @startuml
 skinparam defaultFontName Arial
 
-title mCODE Patients: Pull Model - Implementation Option 1.1 (Include all cancer patients, preferred)
+title Identifying mCODE Patients: Patients-with-cancer-condition approach
 hide footbox
 participant "mCODE Data Receiver" as Receiver
 participant "mCODE Data Sender" as Sender

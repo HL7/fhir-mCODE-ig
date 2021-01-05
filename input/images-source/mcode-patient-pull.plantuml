@@ -1,7 +1,7 @@
 @startuml
 skinparam defaultFontName Arial
 
-title mCODE Patient
+title Retrieving an mCODE Patient
 hide footbox
 participant "mCODE Data Receiver" as Receiver
 participant "mCODE Data Sender" as Sender

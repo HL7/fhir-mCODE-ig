@@ -64,7 +64,6 @@ groups:
       - StructureDefinition/mcode-ecog-performance-status
       - StructureDefinition/mcode-karnofsky-performance-status
       - StructureDefinition/mcode-patient-bundle
-      - StructureDefinition/mcode-patient-group
 
   Disease:
     name: "Profiles: Disease Characterization"
@@ -215,6 +214,7 @@ groups:
       - Condition/mCODEPrimaryCancerConditionExample1
       - Condition/mCODESecondaryCancerConditionExample1
       - DiagnosticReport/mCODECancerGenomicsReportExample1
+      - Group/mCODEPatientGroupExample1
       - MedicationRequest/mCODECancerRelatedMedicationRequestExample1
       - MedicationRequest/mCODECancerRelatedMedicationRequestExample2
       - Observation/mCODECancerDiseaseStatusExample1
@@ -255,7 +255,6 @@ groups:
       - FamilyMemberHistory/scenario1-family-member-history-aunt
       - FamilyMemberHistory/scenario1-family-member-history-sister
       - FamilyMemberHistory/scenario1-family-member-history-uncle
-      - Group/scenario1-mcode-patient-group
       - MedicationRequest/scenario1-mcode-cancer-related-medication-anastrozole
       - MedicationRequest/scenario1-mcode-cancer-related-medication-chemo-cyclophosphamide
       - MedicationRequest/scenario1-mcode-cancer-related-medication-chemo-doxorubicin
@@ -298,15 +297,16 @@ groups:
     name: Conformance Resources
     description: CapabilityStatements and OperationDefinitions
     resources:
-      - StructureDefinition/MCodeCapabilityStatement
-      - CapabilityStatement/mcode-sender-preferred
-      - CapabilityStatement/mcode-sender-fallback1
-      - CapabilityStatement/mcode-sender-fallback2
-      - CapabilityStatement/mcode-sender-subset
-      - CapabilityStatement/mcode-receiver-preferred
-      - CapabilityStatement/mcode-receiver-fallback1
-      - CapabilityStatement/mcode-receiver-fallback2
-      - CapabilityStatement/mcode-receiver-subset
+      - CapabilityStatement/mcode-sender-patients-in-group
+      - CapabilityStatement/mcode-sender-patients-with-cancer-condition
+      - CapabilityStatement/mcode-sender-patients-and-cancer-conditions
+      - CapabilityStatement/mcode-sender-cancer-conditions-then-patients
+      - CapabilityStatement/mcode-sender-patient-bundle
+      - CapabilityStatement/mcode-receiver-patients-in-group
+      - CapabilityStatement/mcode-receiver-patients-with-cancer-condition
+      - CapabilityStatement/mcode-receiver-patients-and-cancer-conditions
+      - CapabilityStatement/mcode-receiver-cancer-conditions-then-patients
+      - CapabilityStatement/mcode-receiver-patient-bundle
       - OperationDefinition/mcode-patient-everything
       - SearchParameter/Condition-code
       - SearchParameter/Patient-id

@@ -1,74 +1,14 @@
-ValueSet:  RadiationModalityVS
-Id: mcode-radiation-modality-vs
+ValueSet:  RadiationProcedureVS
+Id: mcode-radiation-procedure-vs
 Title: "Radiation Procedure Value Set"
-Description: "Codes describing the major categories of radiation therapy procedures, for example, external application of beam (teleradiology), internal sealed-source (brachytherapy), or an unsealed-source radiopharmaceutical."
+Description:    "Codes describing radiation therapy procedures. The value set includes a limited set of radiation modality codes from SNOMED CT, however, ICD-10-PCS code from Section D (Radiation Therapy) and appropriate CPT radiation procedure codes are also considered compliant. CPT codes are not explicitly included due to licensing restrictions. ICD-10-PCS codes are not included explicitly because they are not currently supported by the FHIR IG Publishing tool."
+
 * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
-// External Beam
-* SCT#33195004 "Teleradiotherapy procedure (procedure)"
-* SCT#169291001 "X-ray beam therapy (procedure)" // photons
-* SCT#80347004 "Teleradiotherapy neutrons (procedure)"
-* SCT#10611004 "Teleradiotherapy protons (procedure)"
-* SCT#45643008 "Teleradiotherapy using electrons (procedure)"
-* SCT#312248006 "Heavy ion teletherapy (procedure)" // e.g., carbon ion
-// Brachytherapy
-C0454271  Low dose rate brachytherapy  // SCT#228868000 | Low dose rate brachytherapy (observable entity) |
-C0454270  High dose brachytherapy (procedure) SCT#394902000 | High dose brachytherapy (procedure) |
-C3897809  Pulsed-Dose Rate Brachytherapy
-C2584639  High dose rate electronic brachytherapy
-
-// Radiopharmaceutical
-* SCT#440252007 "Administration of radiopharmaceutical (procedure)"
-// potentially include injected radionuclide
-
-
-ValueSet: RadiationTechniqueVS
-// External Beam
-C5236971  Conventional Radiotherapy   // 2D Radiotherapy
-441783000 | Conformal radiotherapy (procedure) |  // 3D
-441799006 | Intensity modulated radiation therapy (procedure) |    // C3489631 Volumetric-Modulated Arc Therapy 
-C3179062  Radiotherapy, Image-Guided  // IGRT
-C3896609  Stereotactic Body Radiation Therapy  // SBRT
-C3846112  Radiosurgery, Stereotactic // SRS
-// Brachytherapy
-* SCT#113120007 "Interstitial brachytherapy (procedure)"
-* SCT#384692006 "Intracavitary brachytherapy (procedure)"
-* MTH#C0338240  "Intraoperative radiation therapy"
-271291003 | Temporary implant radiotherapy (procedure) |
-C2169181   irradiation by permanent brachytherapy implants
-
-
-
-
-
-
-
-/*
-ValueSet:  RadiationTypeVS
-Id: mcode-radiation-type-vs
-Title: "Radiation Type Value Set"
-Description:    "Codes describing the type of radiation used to deliver treatment (e.g., photons, protons, x-rays), often called the modality of treatment."
-* ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
-SCT#82371002 "Proton beam (physical force)"
-SCT#285324001 "Neutron radiation (physical force)"
-SCT#312253001 "Heavy ion radiation (physical force)"  // e.g. carbon-ion
-SCT#73494004 "Electron beam (physical force)"
-SCT#312252006 "Positron beam radiation (physical force)"
-SCT#286630003 "Soft X-radiation (physical force)"
-SCT#286629008 "Hard X-radiation (physical force)"
-SCT#76772003 "Gamma radiation (physical force)"
-SCT#89457008 "Radioactive isotope (substance)"
-*/
-
-/*
-Radiation source -- radioisotope emission (iridium 192, iodine 131, palladium, cesium-137)
-Superficial X-rays – 60  to 150 keV
-Diagnostic X-rays – 20 to 150 keV
-Orthovoltage X-rays – 200 to 500 keV
-Supervoltage X-rays – 500 to 1000 keV
-Megavoltage X-rays – 1 to 25 MeV (High energy photons)
-*/
-
-
+* SCT#448385000	"Megavoltage radiation therapy using photons (procedure)"
+* SCT#45643008	"Teleradiotherapy using electrons (procedure)"
+* SCT#10611004    "Teleradiotherapy protons (procedure)"
+* SCT#80347004	"Teleradiotherapy neutrons (procedure)"
+* SCT#152198000	"Brachytherapy (procedure)"
 
 
 ValueSet:       RadiationTargetBodySiteVS

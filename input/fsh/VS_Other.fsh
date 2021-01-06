@@ -1,27 +1,3 @@
-ValueSet:    ClinVarVS
-Id: mcode-clinvar-vs
-Title: "ClinVar Value Set"
-Description: "Value set of human genetic variants, drawn from [ClinVar](https://www.ncbi.nlm.nih.gov/clinvar/). The codes in this value set refer to the ClinVar Variation ID, or the identifier for the variant or set of variants that were interpreted. [Source: NCBI ClinVar Data Dictionary](https://www.ncbi.nlm.nih.gov/projects/clinvar/ClinVarDataDictionary.pdf)"
-* codes from system CLINVAR
-
-ValueSet:  HGNCVS
-Id: mcode-hgnc-vs
-Title: "HUGO Gene Nomenclature Committee Gene Names Value Set"
-Description: "HUGO Gene Nomenclature Committee Gene Names Value Set"
-* codes from system HGNC
-
-ValueSet: HGVSVS
-Id: mcode-hgvs-vs
-Title: "Human Genome Variation Society Sequence Variant Nomenclature Value Set"
-Description: "HGVS nomenclature is used to report and exchange information regarding variants found in DNA, RNA, and protein sequences."
-* codes from system HGVS
-
-ValueSet: DNAChangeTypeVS
-Id: mcode-dna-change-type-vs
-Title: "DNA Change Type Value Set"
-Description: "DNA Change Type of a variant"
-* include codes from system SO where concept descendent-of #SO:0002072
-
 ValueSet: CancerBodyLocationVS
 Id: mcode-cancer-body-location-vs
 Title: "Cancer Body Location Value Set"
@@ -41,6 +17,7 @@ Description:  "How patient's given disease, condition, or ability is trending."
 * SCT#271299001 "Patient's condition worsened (finding)"
 * SCT#709137006 "Patient condition undetermined (finding)"
 
+
 ValueSet: CancerDiseaseStatusEvidenceTypeVS
 Id: mcode-cancer-disease-status-evidence-type-vs
 Title: "Cancer Disease Status Evidence Type Value Set"
@@ -53,47 +30,6 @@ Description:  "The type of evidence backing up the clinical determination of can
 * SCT#5880005   "Physical examination procedure (procedure)"
 * SCT#386344002 "Laboratory data interpretation (procedure)"
 
-ValueSet:   CancerStagingSystemVS
-Id: mcode-cancer-staging-system-vs
-Title: "Cancer Staging System Value Set"
-Description:    "System used for staging."
-* ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
-* SCT#444256004 "American Joint Commission on Cancer, Cancer Staging Manual, 6th edition neoplasm staging system (tumor staging)"
-* SCT#443830009 "American Joint Commission on Cancer, Cancer Staging Manual, 7th edition neoplasm staging system (tumor staging)"
-* NCIT#C146985 "AJCC Cancer Staging Manual 8th Edition"
-* SCT#258235000 "International Union Against Cancer (tumor staging)"
-
-ValueSet: TNMStageGroupVS
-Id: mcode-tnm-stage-group-vs
-Title: "TNM Stage Group Value Set"
-Description: "This value set is intended to contain allowable values for Stage Group, according to TNM staging rules. AJCC codes (preferably, version 8 for current cancers) SHOULD be used.
-
-*AJCC terminology: examples of stage groups include 'Stage 0' and 'Stage IIA'. The full set of stage groups, as well rules on how to assign a stage group, can be accessed through the AJCC Staging Manual and any applicable updates and corrections, as well as the AJCC API."
-* codes from system AJCC
-
-ValueSet: TNMPrimaryTumorCategoryVS
-Id: mcode-tnm-primary-tumor-category-vs
-Title: "TNM Primary Tumor Category Value Set"
-Description: "This value set is intended to contain allowable values for the T category, according to TNM staging rules. AJCC codes (preferably, version 8 for current cancers) SHOULD be used.
-
-* AJCC terminology: examples of T categories include 'cTX', used when the tumor primary tumor cannot be evaluated, 'pT0', denoting there is no evidence of a primary tumor, and 'pTis', referencing carcinoma in situ (with some cancer-specific exceptions). Other T categories refer to increasing size of the primary tumor. Please note allowable T categories may vary between clinical and pathologic classifications. The full set of allowable clinical and pathologic T categories, along with its current descriptions, can be accessed through the AJCC Staging Manual and any applicable updates and corrections, as well as the AJCC API."
-* codes from system AJCC
-
-ValueSet: TNMRegionalNodesCategoryVS
-Id: mcode-tnm-regional-nodes-category-vs
-Title: "TNM Regional Nodes Category Value Set"
-Description: "This value set is intended to contain allowable values for the N category, according to TNM staging rules. AJCC codes (preferably, version 8 for current cancers) SHOULD be used.
-
-* AJCC terminology: examples of N categories include 'cN0', indicating no evidence of lymph node involvement, and 'pN1', indicating regional lymph node involvement to a small extent, with specific thresholds for the lymph node groups and number of lymph nodes involved. Other N categories refer to increasing lymph node involvement. Please note allowable N categories may vary between clinical and pathologic classifications. The full set of allowable clinical and pathologic N categories, along with its current descriptions, can be accessed through the AJCC Staging Manual and any applicable updates and corrections, as well as the AJCC API."
-* include codes from system AJCC
-
-ValueSet: TNMDistantMetastasesCategoryVS
-Id: mcode-tnm-distant-metastases-category-vs
-Title: "TNM Distant Metastases Category Value Set"
-Description: "This value set is intended to contain allowable values for the M category, according to TNM staging rules. AJCC codes (preferably, version 8 for current cancers) SHOULD be used.
-
-* AJCC terminology: examples of M categories include 'cM0', denoting there is no evidence of distant metastases, and 'pM1', an indication that the cancer has metasticized. The full set of allowable clinical and pathologic M categories, along with its current descriptions, can be accessed through the AJCC Staging Manual and any applicable updates and corrections, as well as the AJCC API."
-* codes from system AJCC
 
 ValueSet: CancerRelatedSurgicalProcedureVS
 Id: mcode-cancer-related-surgical-procedure-vs
@@ -104,6 +40,7 @@ Description: "Includes surgical procedure codes from SNOMED CT, ICD-10-PCS and C
 * include codes from system CPT
 * include codes from system ICD10PCS
 
+
 CodeSystem: OtherSpecifyCS
 Id: mcode-other-specify-code-system
 Title: "Other Specify Code System"
@@ -113,208 +50,6 @@ Description: "A code system containing codes signifying a value set has been ext
 * #OtherTumorMarkerTest "Other Tumor Marker Test, Specify" "Code to be used for concepts not represented elsewhere in the value set. Specify the desired concept as an additional coding."
 * #OtherCancerDisorder "Other Cancer Disorder, Specify" "Code to be used for concepts not represented elsewhere in the value set. Specify the desired concept as an additional coding."
 * #OtherHistologyMorphologyBehavior "Other Histology Morphology Behavior, Specify" "Code to be used for concepts not represented elsewhere in the value set. Specify the desired concept as an additional coding."
-
-ValueSet:       TumorMarkerTestVS
-Id: mcode-tumor-marker-test-vs
-Description:    "Codes representing tests for tumor markers. This value set of LOINC codes is not comprehensive and can be extended. Other vocabularies can be used only if the test of interest is not covered by LOINC. Tumor marker tests differ from genetic tests in that they measure levels of protein or other substances produced downstream from RNA protein synthesis."
-
-* ^copyright = "This material contains content from LOINC (http://loinc.org). LOINC is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc"
-* OtherSpecifyCS#OtherTumorMarkerTest "Other Tumor Marker Test, Specify"
-* include codes from system LNC where ancestor = "LP101591-8"
-* include codes from system LNC where ancestor = "LP111251-7"
-* include codes from system LNC where ancestor = "LP136073-6"
-* include codes from system LNC where ancestor = "LP14040-7"
-* include codes from system LNC where ancestor = "LP14329-4"
-* include codes from system LNC where ancestor = "LP14543-0"
-* include codes from system LNC where ancestor = "LP14618-0"
-* include codes from system LNC where ancestor = "LP14649-5"
-* include codes from system LNC where ancestor = "LP14650-3"
-* include codes from system LNC where ancestor = "LP14652-9"
-* include codes from system LNC where ancestor = "LP14658-6"
-* include codes from system LNC where ancestor = "LP14665-1"
-* include codes from system LNC where ancestor = "LP14694-1"
-* include codes from system LNC where ancestor = "LP14697-4"
-* include codes from system LNC where ancestor = "LP14902-8"
-* include codes from system LNC where ancestor = "LP14907-7"
-* include codes from system LNC where ancestor = "LP15033-1"
-* include codes from system LNC where ancestor = "LP15090-1"
-* include codes from system LNC where ancestor = "LP15097-6"
-* include codes from system LNC where ancestor = "LP15097-6"
-* include codes from system LNC where ancestor = "LP15461-4"
-* include codes from system LNC where ancestor = "LP15463-0"
-* include codes from system LNC where ancestor = "LP15464-8"
-* include codes from system LNC where ancestor = "LP15465-5"
-* include codes from system LNC where ancestor = "LP15466-3"
-* include codes from system LNC where ancestor = "LP15467-1"
-* include codes from system LNC where ancestor = "LP15681-7"
-* include codes from system LNC where ancestor = "LP157499-7"
-* include codes from system LNC where ancestor = "LP15990-2"
-* include codes from system LNC where ancestor = "LP16890-3"
-* include codes from system LNC where ancestor = "LP17730-0"
-* include codes from system LNC where ancestor = "LP17751-6"
-* include codes from system LNC where ancestor = "LP18193-0"
-* include codes from system LNC where ancestor = "LP18274-8"
-* include codes from system LNC where ancestor = "LP18343-1"
-* include codes from system LNC where ancestor = "LP18396-9"
-* include codes from system LNC where ancestor = "LP18515-4"
-* include codes from system LNC where ancestor = "LP18567-5"
-* include codes from system LNC where ancestor = "LP189759-6"
-* include codes from system LNC where ancestor = "LP19423-0"
-* include codes from system LNC where ancestor = "LP19492-5"
-* include codes from system LNC where ancestor = "LP19666-4"
-* include codes from system LNC where ancestor = "LP19732-4"
-* include codes from system LNC where ancestor = "LP20052-4"
-* include codes from system LNC where ancestor = "LP200639-5"
-* include codes from system LNC where ancestor = "LP207485-6"
-* include codes from system LNC where ancestor = "LP220351-3"
-* include codes from system LNC where ancestor = "LP248009-5"
-* include codes from system LNC where ancestor = "LP28442-9"
-* include codes from system LNC where ancestor = "LP28518-6"
-* include codes from system LNC where ancestor = "LP28728-1"
-* include codes from system LNC where ancestor = "LP28852-9"
-* include codes from system LNC where ancestor = "LP31830-0"
-* include codes from system LNC where ancestor = "LP31855-7"
-* include codes from system LNC where ancestor = "LP35767-0"
-* include codes from system LNC where ancestor = "LP36040-1"
-* include codes from system LNC where ancestor = "LP36464-3"
-* include codes from system LNC where ancestor = "LP36477-5"
-* include codes from system LNC where ancestor = "LP36861-0"
-* include codes from system LNC where ancestor = "LP36885-9"
-* include codes from system LNC where ancestor = "LP61778-4"
-* include codes from system LNC where ancestor = "LP62864-1"
-* include codes from system LNC where ancestor = "LP62864-1"
-* include codes from system LNC where ancestor = "LP63490-4"
-* include codes from system LNC where ancestor = "LP64447-3"
-* include codes from system LNC where ancestor = "LP93517-8"
-
-
-ValueSet:   GeneticSpecimenTypeVS
-Id: mcode-genetic-specimen-type-vs
-Title: "Genetic Specimen Type Value Set"
-Description:    "The type of specimen analyzed in a genetic test. The values are taken from code system http://terminology.hl7.org/CodeSystem/v2-0487, and represent a subset of HL7 Version 2 Table 0487 (http://hl7.org/fhir/v2/0487)."
-* SPTY#AMN       "Amniotic fluid"
-* SPTY#BIFL      "Bile Fluid"
-* SPTY#BLD       "Whole blood"
-* SPTY#BLDA      "Blood arterial"
-* SPTY#BLDCO     "Cord blood"
-* SPTY#BLDV      "Blood venous"
-* SPTY#BON       "Bone"
-* SPTY#CSERU     "Serum, Convalescent"
-* SPTY#CSF       "Cerebral spinal fluid"
-* SPTY#CVM       "Cervical Mucus"
-* SPTY#DUFL      "Duodenal fluid"
-* SPTY#FBLOOD    "Blood, Fetal"
-* SPTY#FGA       "Fluid, Abdomen"
-* SPTY#GENV      "Genital vaginal"
-* SPTY#HYDC      "Fluid, Hydrocele"
-* SPTY#JNTFLD    "Fluid, Joint"
-* SPTY#KIDFLD    "Fluid, Kidney"
-* SPTY#LSAC      "Fluid, Lumbar Sac"
-* SPTY#MAR       "Marrow"
-* SPTY#PAFL      "Pancreatic fluid"
-* SPTY#PCFL      "Fluid, Pericardial"
-* SPTY#PLC       "Placenta"
-* SPTY#PLR       "Pleural fluid (thoracentesis fluid)"
-* SPTY#SAL       "Saliva"
-* SPTY#SKN       "Skin"
-* SPTY#SMN       "Seminal fluid"
-* SPTY#SNV       "Fluid, synovial (Joint fluid)"
-* SPTY#SPT       "Sputum"
-* SPTY#TISS      "Tissue"
-* SPTY#VITF      "Vitreous Fluid"
-* SPTY#WND       "Wound"
-
-
-ValueSet:  RadiationProcedureVS
-Id: mcode-radiation-procedure-vs
-Title: "Radiation Procedure Value Set"
-Description:    "Codes describing radiation therapy procedures. The value set includes a limited set of radiation modality codes from SNOMED CT, however, ICD-10-PCS code from Section D (Radiation Therapy) and appropriate CPT radiation procedure codes are also considered compliant. CPT codes are not explicitly included due to licensing restrictions. ICD-10-PCS codes are not included explicitly because they are not currently supported by the FHIR IG Publishing tool."
-
-* ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
-* SCT#448385000	"Megavoltage radiation therapy using photons (procedure)"
-* SCT#45643008	"Teleradiotherapy using electrons (procedure)"
-* SCT#10611004    "Teleradiotherapy protons (procedure)"
-* SCT#80347004	"Teleradiotherapy neutrons (procedure)"
-* SCT#152198000	"Brachytherapy (procedure)"
-
-
-ValueSet:       RadiationTargetBodySiteVS
-Id: mcode-radiation-target-body-site-vs
-Title: "Radiation Target Body Site Value Set"
-Description:    "Codes for body sites that can be targets of radiation therapy. This list of sites is based on Commission on Cancer’s 'Standards for Oncology Registry Entry  - STORE 2018'. This value set contains SNOMED CT equivalent terms."
-* ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
-* SCT#81105003       "Cervical lymph node group (body structure)"
-* SCT#196374005       "Entire lymph node of thorax (body structure)"
-* SCT#81105003       "Cervical lymph node group (body structure)"
-* SCT#196374005       "Entire lymph node of thorax (body structure)"
-* SCT#245269009       "Axillary lymph node group (body structure)"
-* SCT#245265003       "Supraclavicular lymph node group (body structure)"
-* SCT#245282001       "Internal mammary lymph node group (body structure)"
-* SCT#245284000       "Abdominal lymph node group (body structure)"
-* SCT#245294005       "Pelvic lymph node group (body structure)"
-* SCT#245284000       "Abdominal lymph node group (body structure)"
-* SCT#245294005       "Pelvic lymph node group (body structure)"
-* SCT#59441001       "Structure of lymph node (body structure)"
-* SCT#244486005       "Entire eye (body structure)"
-* SCT#56329008       "Pituitary structure (body structure)"
-* SCT#12738006       "Brain structure (body structure)"
-* SCT#119235005       "Brain part (body structure)"
-* SCT#2748008       "Spinal cord structure (body structure)"
-* SCT#71836000       "Nasopharyngeal structure (body structure)"
-* SCT#74262004       "Oral cavity structure (body structure)"
-* SCT#31389004       "Oropharyngeal structure (body structure)"
-* SCT#4596009       "Laryngeal structure (body structure)"
-* SCT#81502006       "Hypopharyngeal structure (body structure)"
-* SCT#2095001       "Nasal sinus structure (body structure)"
-* SCT#385294005       "Salivary gland structure (body structure)"
-* SCT#69748006       "Thyroid structure (body structure)"
-* SCT#361355005       "Entire head and neck (body structure)"
-* SCT#181216001       "Entire lung (body structure)"
-* SCT#71400007       "Mesothelium structure (body structure)"
-* SCT#302551006       "Entire thorax (body structure)"
-* SCT#181131000       "Entire breast (body structure)"
-* SCT#119184005       "Breast part (body structure)"
-* SCT#78904004       "Chest wall structure (body structure)"
-* SCT#181245004       "Entire esophagus (body structure)"
-* SCT#69695003       "Stomach structure (body structure)"
-* SCT#30315005       "Small intestinal structure (body structure)"
-* SCT#71854001       "Colon structure (body structure)"
-* SCT#34402009       "Rectum structure (body structure)"
-* SCT#53505006       "Anal structure (body structure)"
-* SCT#10200004       "Liver structure (body structure)"
-* SCT#34707002       "Biliary tract structure (body structure)"
-* SCT#28231008       "Gallbladder structure (body structure)"
-* SCT#15776009       "Pancreatic structure (body structure)"
-* SCT#113345001       "Abdominal structure (body structure)"
-* SCT#302512001       "Entire urinary bladder (body structure)"
-* SCT#119221008       "Bladder part (body structure)"
-* SCT#64033007       "Kidney structure (body structure)"
-* SCT#87953007       "Ureteric structure (body structure)"
-* SCT#181422007       "Entire prostate (body structure)"
-* SCT#119231001       "Prostate part (body structure)"
-* SCT#13648007       "Urethral structure (body structure)"
-* SCT#18911002       "Penile structure (body structure)"
-* SCT#40689003       "Testis structure (body structure)"
-* SCT#20233005       "Scrotal structure (body structure)"
-* SCT#15497006       "Ovarian structure (body structure)"
-* SCT#31435000       "Fallopian tube structure (body structure)"
-* SCT#35039007       "Uterine structure (body structure)"
-* SCT#71252005       "Cervix uteri structure (body structure)"
-* SCT#76784001       "Vaginal structure (body structure)"
-* SCT#45292006       "Vulval structure (body structure)"
-* SCT#89546000       "Bone structure of cranium (body structure)"
-* SCT#44300000       "Entire vertebral column (body structure)"
-* SCT#16982005       "Shoulder region structure (body structure)"
-* SCT#113197003       "Bone structure of rib (body structure)"
-* SCT#29836001       "Hip region structure (body structure)"
-* SCT#46633002       "Entire bony pelvis (body structure)"
-* SCT#12921003       "Pelvic structure (body structure)"
-* SCT#48566001       "Bone structure of extremity (body structure)"
-* SCT#39937001       "Skin structure (body structure)"
-* SCT#87784001       "Soft tissues (body structure)"
-* SCT#38266002       "Entire body as a whole (body structure)"
-// no concept for hemibody
-
 
 ValueSet: LocationQualifierVS
 Id: mcode-location-qualifier-vs
@@ -346,7 +81,6 @@ Description:	"The purpose of a treatment. The value set includes 'curative' and 
 * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
 * SCT#373808002   "Curative - procedure intent"
 * SCT#363676003   "Palliative - procedure intent"
-
 
 
 /* SAVE for possible future use

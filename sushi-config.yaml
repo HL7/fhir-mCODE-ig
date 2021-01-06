@@ -43,18 +43,21 @@ menu:
   Conformance: conformance.html
   Implementation: implementation.html
   FHIR Artifacts:
-    Profiles: artifacts.html#profiles-patient
-    Extensions: artifacts.html#extensions
-    "Value sets &amp; code systems": artifacts.html#value-sets
-    Examples: examples.html
-    Conformance resources: artifacts.html#conformance-resources
-    Experimental resources: experimental.html
-    All artifacts: artifacts.html
+    Profiles: "artifacts.html#1"
+    Extensions: "artifacts.html#8"
+    "Value sets &amp; code systems": "artifacts.html#9"
+    Examples: "examples.html"
+    "Conformance resources": "artifacts.html#14"
+    "Experimental resources": "experimental.html"
+    All artifacts: "artifacts.html"
   Downloads: downloads.html
   History: http://hl7.org/fhir/us/mcode/history.html
-groups:
 
-  # Profiles
+
+# WARNING! Links in the IG assume a consistent ordering and number of groups. If the group order is
+# changed or a new group is added above an existing group, links like `artifacts.html#1'` will need
+# to be updated via mass search-and-replace.
+groups:
   Patient:
     name: "Profiles: Patient"
     description: Profiles in the [mCODE **Patient** Group](index.html#patient-group).

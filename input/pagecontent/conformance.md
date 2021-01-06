@@ -7,6 +7,10 @@ Two roles for **mCODE Participants** are defined:
 
 US Core defines two actors, US Core Requestor and US Core Responder, which are highly suggestive of a "pull" architecture. In mCODE, we use the terms Sender and Receiver, which are more neutral with respect to push and pull. However, for all practical purposes, there is an equivalence between US Core Requestor and mCODE Data Receiver, and similarly between US Core Responder and mCODE Data Sender.
 
+#### Architecture
+
+Currently, the mCODE Implementation Guide provides CapabilityStatements and documentation for a **pull** architecture. The Implementation Guide does not currently provide specific conformance specifications for other architectures, though these may be added in the future if common use cases arise that do not fit with a pull model. Notwithstanding this, participants implementing a different architecture MUST follow the conformance requirements as defined on this page and elsewhere in the mCODE Implementation Guide EXCEPT for those specifically identified as applying to participants implementing a pull architecture.
+
 ----
 
 ### Requirements for Conformance
@@ -32,7 +36,7 @@ Due to technical, organizational, or legal reasons, mCODE Data Senders MAY exclu
 
 **All** mCODE Data Senders MUST respond to `GET [base]/Group?code=mcode-patient` with either zero or one Group resource. If zero Group resources are returned, all patients with cancer diagnoses (as defined above) will be considered to be "mCODE Patients." If a Group resource is returned, patients not referenced in the Group resource are assumed to be out of scope, independent of any cancer diagnosis. This requirement is reflected in ALL CapabilityStatements referenced in this section.
 
-The following CapabilityStatements define the various methods participants can use to identify mCODE Patients. Participants MUST support at least one of the CapabilityStatements listed from **most to least preferable** below:
+The following CapabilityStatements define the various methods participants can use to identify mCODE Patients. Participants implementing a pull architecture MUST support at least one of the CapabilityStatements listed from **most to least preferable** below:
 
 1. **Patients-in-group** approach (CapabilityStatements for the [sender][mcode-sender-patients-in-group] and [receiver][mcode-receiver-patients-in-group]):
 
@@ -76,7 +80,7 @@ The following CapabilityStatements define the various methods participants can u
 
 #### Retrieve a Patient Resource
 
-Participants shall implement the following operation for retrieving a Patient resource by `id`. This is covered by any of the CapabilityStatements in the [Identify mCODE Patients](#identify-mcode-patients) section above.
+Participants shall implement the following operation for retrieving a Patient resource by `id`. For the pull architecture, this requirement is included in all of the CapabilityStatements in the [Identify mCODE Patients](#identify-mcode-patients) section above.
 
     GET [base]/Patient/[id]
 
@@ -93,7 +97,7 @@ TODO: Provide examples of what this would look like.
 
 #### Support Querying mCODE-Conforming Resources
 
-The following FHIR requests return resources that MUST conform to an mCODE Profile (if the associated Patient is considered an "mCODE Patient" as described above):
+The following FHIR requests return resources that MUST conform to an mCODE profile (if the associated Patient is considered an "mCODE Patient" as described above):
 
 - TODO: Fill in requests.
 
@@ -107,7 +111,7 @@ TODO: Consider merging this and the above section -- this might make sense if th
 
 #### Receivers Read and Process mCODE Resources
 
-mCODE Data Receivers SHALL be able to initiate ALL the requests described above. Additionally, Receivers SHALL be able to read and process ALL individual resources returned by the operations above that conform to mCODE profiles identified as supported by their CapabilityStatements.
+mCODE Data Receivers implementing a pull architecture SHALL be able to initiate ALL the requests described above. Additionally, Receivers MUST be able to read and process ALL individual resources returned by the operations above that conform to mCODE profiles identified as supported by their CapabilityStatements.
 
 ----
 
@@ -118,6 +122,8 @@ mCODE participants SHOULD meet the following requirements for conformance:
 #### Support All mCODE Profiles
 
 In addition to supporting the core profiles as described above, mCODE participants SHOULD support all profiles defined in mCODE UNLESS the participant does not anticipate supplying or consuming a certain type of data, usually by virtue of playing a limited or specialized role in clinical or information workflows. For example, a genomics laboratory may support [CancerGenomicsReport], but not vital signs or staging.
+
+Participants SHOULD also support the non-mCODE-specific profiles that are considered part of an [mCODE Patient Bundle][MCODEPatientBundle], such as [blood pressure](http://hl7.org/fhir/StructureDefinition/bp).
 
 #### Support the mCODE Patient Bundle
 
@@ -142,38 +148,38 @@ These requirements originate from the base FHIR specification, not additional re
 
 #### Use mCODE Operations Whenever Possible
 
-Participants MAY support additional operations for communication between actors, such as for subscription or polling models. The operations described in the mCODE IG SHOULD be used within such models whenever possible.
+Participants MAY support additional operations for communication between actors, such as for subscription or polling models. The operations described in the mCODE Implementation Guide SHOULD be used within such models whenever possible.
 
 ----
 
 ### Conforming with mCODE Profiles
 
-Each [mCODE Profile](artifacts.html#1) includes conformance criteria describing which resources MUST conform to mCODE profiles. For example, in [CancerDiseaseStatus], the conformance criteria states that any resource associated with an mCODE Patient (as [defined above](#identify-mcode-patients)) that represent an observation of patient's response to cancer treatment MUST conform to that profile.
+Each [mCODE profile](artifacts.html#1) includes conformance criteria describing which resources MUST conform to mCODE profiles. For example, in [CancerDiseaseStatus], the conformance criteria states that any resource associated with an mCODE Patient (as [defined above](#identify-mcode-patients)) that represent an observation of patient's response to cancer treatment MUST conform to that profile.
 
 Each mCODE profile expresses requirements and expectations for individual mCODE instances in terms of structural constraints and terminology bindings. Any FHIR resources claiming to conform to mCODE MUST [validate](https://www.hl7.org/fhir/validation.html) against the declared mCODE profile.
 
 #### Conformance to US Core
 
-Most mCODE profiles are based on US Core profiles defined in the [US Core Implementation Guide (v3.1.1)](http://hl7.org/fhir/us/core/index.html). For example, the CancerGeneticVariant profile is based on US Core Laboratory Result Observation Profile and CancerPatient is based on the US Core Patient profile. If a resource validates against any of the US Core-based mCODE profiles, it will be in compliance with US Core.
+Most mCODE profiles are based on US Core profiles defined in the [US Core Implementation Guide (v3.1.1)](http://hl7.org/fhir/us/core/index.html). For example, the [CancerGeneticVariant] profile is based on [US Core Laboratory Result Observation Profile][USCoreLaboratoryResultObservationProfile] and [CancerPatient] is based on the [US Core Patient][USCorePatientProfile] profile. If a resource validates against any of the US Core-based mCODE profiles, it will be in compliance with US Core.
 
-Where US Core does not provide an appropriate base profile, mCODE profiles FHIR resources. An example is CancerDiseaseStatus, based on Observation because US Core does not provide a profile for non-laboratory observations.
+Where US Core does not provide an appropriate base profile, mCODE profiles FHIR resources. An example is [CancerDiseaseStatus], based on Observation because US Core does not provide a profile for non-laboratory observations.
 
 #### MustSupport Interpretation
 
 The [MustSupport](https://www.hl7.org/fhir/conformance-rules.html#mustSupport) flag indicates that implementation shall provide "meaningful support" for the element, as defined by its implementation guide. The mCODE definitions of MustSupport encompass the [definitions in US Core](http://hl7.org/fhir/us/core/general-guidance.html#must-support). mCODE defines MustSupport as follows:
 
-* **mCODE Data Sender** - MustSupport is interpreted as "must populate". That is, every required and MustSupport element in a supported mCODE profile SHALL be populated if the Data Sender has that data.
+* **mCODE Data Sender** - MustSupport is interpreted as "must populate". That is, every required and MustSupport element in a supported mCODE profile MUST be populated if the Data Sender has that data.
 
-* **mCODE Data Receiver** - MustSupport is interpreted as "must display" or "must store". That is, a Data Receiver SHALL be capable of receiving and displaying or storing each required and MustSupport element in an mCODE bundle, provided the corresponding profile has been declared as a "supportedProfile" in the receiver's capability statement.
+* **mCODE Data Receiver** - MustSupport is interpreted as "must display" or "must store". That is, a Data Receiver MUST be capable of receiving and displaying or storing each required and MustSupport element in an mCODE bundle, provided the corresponding profile has been declared as a "supportedProfile" in the receiver's capability statement.
 
 #### Missing/Unknown Data Elements
 
 The handling of missing or unknown elements in mCODE is functionally identical to US Core, specifically:
 
-* In situations where information on a particular data element is not present and the reason for absence is unknown, mCODE Data Senders SHALL NOT include the data elements in the resource instance.
-* mCODE Data Receivers SHALL interpret missing data elements within resource instances as data not present in the mCODE Data Sender's system.
-* In situations where information on a particular data element is missing and the mCODE Data Sender knows the reason for the absence of data, the Data Sender SHALL send the reason for the missing information. The absence reason value SHOULD come first from the element's value set if it exists or otherwise from the dataAbsentReason extension.
-* mCODE Data Receivers SHALL be able to process resource instances containing data elements asserting missing information.
+* In situations where information on a particular data element is not present and the reason for absence is unknown, mCODE Data Senders MUST NOT include the data elements in the resource instance.
+* mCODE Data Receivers MUST interpret missing data elements within resource instances as data not present in the mCODE Data Sender's system.
+* In situations where information on a particular data element is missing and the mCODE Data Sender knows the reason for the absence of data, the Data Sender MUST send the reason for the missing information. The absence reason value SHOULD come first from the element's value set if it exists or otherwise from the `dataAbsentReason` extension.
+* mCODE Data Receivers MUST be able to process resource instances containing data elements asserting missing information.
 
 #### Required Elements
 
@@ -183,8 +189,11 @@ An mCODE data element is required if any of the following criteria are met:
 * The element not a top-level element (a second-level property or below), its minimum cardinality is > 0, and all elements directly containing that element have minimum cardinality > 0 in the profile.
 * The element is not a top-level element, its minimum cardinality is > 0, and its immediate higher-level containing element exists in an _instance_ of the profile.
 
-In other words, a data element may be 1..1, but if it is contained by an optional element, then it is not required unless its containing element is actually present in a given instance of the profile.
+In other words, a data element may be `1..1`, but if it is contained by an optional element, then it is not required unless its containing element is actually present in a given instance of the profile.
 
 For every required element in mCODE, Data Senders MUST either (1) provide data for the element; or (2) follow [US Core's rules](http://hl7.org/fhir/us/core/general-guidance.html#missing-data) for handling missing data for required elements. mCODE Data Senders MUST NOT substitute a nonsense or filler value just to satisfy the cardinality requirement for a required element.
 
 {% include markdown-link-references.md %}
+
+<!-- Provide some spacing around the horizontal lines that separate the main sections. -->
+<style>hr {margin-top: 4em; margin-bottom: 4em;}</style>

@@ -127,3 +127,7 @@
 [mcode-sender-patients-and-cancer-conditions]: CapabilityStatement-mcode-sender-patients-and-cancer-conditions.html
 [mcode-sender-patients-in-group]: CapabilityStatement-mcode-sender-patients-in-group.html
 [mcode-sender-patients-with-cancer-condition]: CapabilityStatement-mcode-sender-patients-with-cancer-condition.html
+
+<!-- US Core -->
+[USCoreLaboratoryResultObservationProfile]: http://hl7.org/fhir/us/core/StructureDefinition-us-core-observation-lab.html
+[USCorePatientProfile]: http://hl7.org/fhir/us/core/StructureDefinition-us-core-patient.html

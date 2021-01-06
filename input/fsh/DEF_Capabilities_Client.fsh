@@ -56,7 +56,6 @@ RuleSet: mCODE_CapabilityStatement_Condition_Client_Common_Rules
 // GET [base]/Group?code=mcode-cancer-patient
 // This must be implemented regardless of the method for identifying mCODE Patients
 * rest[0].resource[2].type = #Group
-* rest[0].resource[2].supportedProfile[0] = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-group"
 
 * rest[0].resource[2].interaction[0].code = #search-type
 * rest[0].resource[2].interaction[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
@@ -64,7 +63,7 @@ RuleSet: mCODE_CapabilityStatement_Condition_Client_Common_Rules
 * rest[0].resource[2].interaction[0].documentation = "Retrieve Group of references to Patient resources conforming to mCODE."
 
 * rest[0].resource[2].searchParam[0].name = "code"
-* rest[0].resource[2].searchParam[0].type = #uri
+* rest[0].resource[2].searchParam[0].type = #token
 * rest[0].resource[2].searchParam[0].definition = "http://hl7.org/fhir/SearchParameter/Group-code"
 * rest[0].resource[2].searchParam[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest[0].resource[2].searchParam[0].extension.valueCode = #SHALL
@@ -82,7 +81,6 @@ Usage: #definition
 
 // GET [base]/Group?code=mcode-cancer-patient
 * rest[0].resource[1].type = #Group
-* rest[0].resource[1].supportedProfile[0] = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-group"
 
 * rest[0].resource[1].interaction[0].code = #search-type
 * rest[0].resource[1].interaction[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
@@ -90,7 +88,7 @@ Usage: #definition
 * rest[0].resource[1].interaction[0].documentation = "Retrieve Group of references to Patient resources conforming to mCODE."
 
 * rest[0].resource[1].searchParam[0].name = "code"
-* rest[0].resource[1].searchParam[0].type = #uri
+* rest[0].resource[1].searchParam[0].type = #token
 * rest[0].resource[1].searchParam[0].definition = "http://hl7.org/fhir/SearchParameter/Group-code"
 * rest[0].resource[1].searchParam[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest[0].resource[1].searchParam[0].extension.valueCode = #SHALL
@@ -129,7 +127,6 @@ Usage: #definition
 // GET [base]/Group?code=mcode-cancer-patient
 // This must be implemented regardless of the method for identifying mCODE Patients
 * rest[0].resource[1].type = #Group
-* rest[0].resource[1].supportedProfile[0] = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-group"
 
 * rest[0].resource[1].interaction[0].code = #search-type
 * rest[0].resource[1].interaction[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
@@ -137,7 +134,7 @@ Usage: #definition
 * rest[0].resource[1].interaction[0].documentation = "Retrieve Group of references to Patient resources conforming to mCODE."
 
 * rest[0].resource[1].searchParam[0].name = "code"
-* rest[0].resource[1].searchParam[0].type = #uri
+* rest[0].resource[1].searchParam[0].type = #token
 * rest[0].resource[1].searchParam[0].definition = "http://hl7.org/fhir/SearchParameter/Group-code"
 * rest[0].resource[1].searchParam[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest[0].resource[1].searchParam[0].extension.valueCode = #SHALL

@@ -220,15 +220,13 @@ Description: "mCODE Example for Cancer Related Radiation Procedure"
 * id = "mCODECancerRelatedRadiationProcedureExample1"
 * meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-related-brachytherapy"
 * status = #completed "completed"
-* code = MTH#C0454271  "Low dose rate brachytherapy"
+* code = NCIT#C85254 "Low-Dose Rate Brachytherapy"  // MTH#C0454271  "Low dose rate brachytherapy"
 * extension[technique].valueCodeableConcept.coding[0] = MTH#C1881237  "Interstitial Radiation Therapy"
 * extension[technique].valueCodeableConcept.coding[1] = MTH#C0436270  "Temporary implant radiotherapy"
 * subject = Reference(mCODEPatientExample1)
 * asserter = Reference(mCODEPractitionerExample1)
 * performedDateTime = "2019-03-01"
 * extension[treatmentIntent].valueCodeableConcept = SCT#373808002 "Curative - procedure intent"
-// * extension[RadiationDose].extension[TotalRadiationDoseDelivered].valueQuantity = UCUM#cGy
-// * extension[RadiationDose].extension[TotalRadiationDoseDelivered].valueQuantity.value = 1200.0
 * reasonReference = Reference(mCODEPrimaryCancerConditionExample1)
 * bodySite = SCT#41224006 "Structure of lower lobe of left lung (body structure)"
 

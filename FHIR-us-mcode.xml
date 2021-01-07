@@ -33,13 +33,13 @@
 <artifact deprecated="true" id="ValueSet/mcode-cancer-related-surgical-procedure-value-set" key="cancer-related-surgical-procedure-value-set" name="Cancer Related Surgical Procedure Value Set"/>
 <artifact deprecated="true" id="Profile/mcode-cancer-stage-parent" key="cancer-stage-parent" name="Cancer Stage Parent"/>
 <artifact id="ValueSet/mcode-cancer-staging-system-vs" key="cancer-staging-system-value-set" name="Cancer Staging System Value Set"/>
-<artifact id="StructureDefinition/mcode-cancer-related-brachytherapy-procedure" key="StructureDefinition-mcode-cancer-related-brachytherapy-procedure" name="Cancer-Related Brachytherapy Procedure"/>
+<artifact id="StructureDefinition/mcode-cancer-related-brachytherapy" key="StructureDefinition-mcode-cancer-related-brachytherapy" name="Cancer-Related Brachytherapy"/>
 <artifact id="StructureDefinition/mcode-cancer-related-comorbidities" key="StructureDefinition-mcode-cancer-related-comorbidities" name="Cancer-Related Comorbidities"/>
 <artifact id="StructureDefinition/mcode-cancer-related-medication-request" key="StructureDefinition-mcode-cancer-related-medication-request" name="Cancer-Related Medication Request"/>
 <artifact id="StructureDefinition/mcode-cancer-related-radiation-course" key="StructureDefinition-mcode-cancer-related-radiation-course" name="Cancer-Related Radiation Therapy Course"/>
 <artifact id="StructureDefinition/mcode-cancer-related-surgical-procedure" key="StructureDefinition-mcode-cancer-related-surgical-procedure" name="Cancer-Related Surgical Procedure"/>
 <artifact id="ValueSet/mcode-cancer-related-surgical-procedure-vs" key="ValueSet-mcode-cancer-related-surgical-procedure-vs" name="Cancer-Related Surgical Procedure Value Set"/>
-<artifact id="StructureDefinition/mcode-cancer-related-teleradiotherapy-procedure" key="StructureDefinition-mcode-cancer-related-teleradiotherapy-procedure" name="Cancer-Related Teleradiotherapy Procedure"/>
+<artifact id="StructureDefinition/mcode-cancer-related-teleradiotherapy-phase" key="StructureDefinition-mcode-cancer-related-teleradiotherapy-phase" name="Cancer-Related Teleradiotherapy Phase"/>
 <artifact id="ValueSet/mcode-clinvar-vs" key="clinvar-value-set" name="ClinVar Value Set"/>
 <artifact deprecated="true" id="Profile/mcode-comorbid-condition" key="comorbid-condition" name="Comorbid Condition"/>
 <artifact id="StructureDefinition/mcode-comorbid-condition-code" key="StructureDefinition-mcode-comorbid-condition-code" name="Comorbid Condition Code"/>

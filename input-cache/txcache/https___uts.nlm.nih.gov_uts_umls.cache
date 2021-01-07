@@ -506,3 +506,285 @@ e: {
   "error" : "Error from server: Unable to provide support for code system https://uts.nlm.nih.gov/uts/umls"
 }
 -------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "https://uts.nlm.nih.gov/uts/umls",
+  "code" : "C0021864"
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code system \"https://uts.nlm.nih.gov/uts/umls\" is not known (encountered paired with code = \"C0021864\"); The code provided (https://uts.nlm.nih.gov/uts/umls#C0021864) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4)"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "https://uts.nlm.nih.gov/uts/umls",
+  "code" : "C1881237"
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code system \"https://uts.nlm.nih.gov/uts/umls\" is not known (encountered paired with code = \"C1881237\"); The code provided (https://uts.nlm.nih.gov/uts/umls#C1881237) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4)"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "https://uts.nlm.nih.gov/uts/umls",
+  "code" : "C0436270"
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code system \"https://uts.nlm.nih.gov/uts/umls\" is not known (encountered paired with code = \"C0436270\"); The code provided (https://uts.nlm.nih.gov/uts/umls#C0436270) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4)"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "https://uts.nlm.nih.gov/uts/umls",
+  "code" : "C2169181"
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code system \"https://uts.nlm.nih.gov/uts/umls\" is not known (encountered paired with code = \"C2169181\"); The code provided (https://uts.nlm.nih.gov/uts/umls#C2169181) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4)"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "https://uts.nlm.nih.gov/uts/umls",
+  "code" : "C2169180"
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code system \"https://uts.nlm.nih.gov/uts/umls\" is not known (encountered paired with code = \"C2169180\"); The code provided (https://uts.nlm.nih.gov/uts/umls#C2169180) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4)"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "https://uts.nlm.nih.gov/uts/umls",
+  "code" : "C3641897"
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code system \"https://uts.nlm.nih.gov/uts/umls\" is not known (encountered paired with code = \"C3641897\"); The code provided (https://uts.nlm.nih.gov/uts/umls#C3641897) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4)"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "https://uts.nlm.nih.gov/uts/umls",
+  "code" : "C5204571"
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code system \"https://uts.nlm.nih.gov/uts/umls\" is not known (encountered paired with code = \"C5204571\"); The code provided (https://uts.nlm.nih.gov/uts/umls#C5204571) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4)"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "https://uts.nlm.nih.gov/uts/umls",
+  "code" : "C2367749"
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code system \"https://uts.nlm.nih.gov/uts/umls\" is not known (encountered paired with code = \"C2367749\"); The code provided (https://uts.nlm.nih.gov/uts/umls#C2367749) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4)"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "coding" : [{
+    "system" : "https://uts.nlm.nih.gov/uts/umls",
+    "code" : "C0596790",
+    "display" : "interstitial"
+  },
+  {
+    "system" : "https://uts.nlm.nih.gov/uts/umls",
+    "code" : "C0205355",
+    "display" : "Permanent"
+  }]
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "https://uts.nlm.nih.gov/uts/umls",
+      "concept" : [{
+        "code" : "C0021864",
+        "display" : "Intracavity Radiotherapy"
+      },
+      {
+        "code" : "C1881237",
+        "display" : "Interstitial Radiation Therapy"
+      },
+      {
+        "code" : "C0436270",
+        "display" : "Temporary implant radiotherapy"
+      },
+      {
+        "code" : "C2169181",
+        "display" : "irradiation by permanent brachytherapy implants"
+      },
+      {
+        "code" : "C3840864",
+        "display" : "Interoperative Radiation"
+      },
+      {
+        "code" : "C2986508",
+        "display" : "Unsealed Internal Radiation Therapy"
+      },
+      {
+        "code" : "C2169180",
+        "display" : "brachytherapy using sealed isotopes"
+      }]
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"CHECK_MEMERSHIP_ONLY"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code system \"https://uts.nlm.nih.gov/uts/umls\" is not known (encountered paired with code = \"C0596790\"); The code system \"https://uts.nlm.nih.gov/uts/umls\" is not known (encountered paired with code = \"C0205355\"); None of the codes provided (https://uts.nlm.nih.gov/uts/umls#C0596790, https://uts.nlm.nih.gov/uts/umls#C0205355) are valid in the value set 'BrachytherapyTechniqueVS' (from http://tx.fhir.org/r4)"
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "https://uts.nlm.nih.gov/uts/umls",
+      "concept" : [{
+        "code" : "C0021864",
+        "display" : "Intracavity Radiotherapy"
+      },
+      {
+        "code" : "C1881237",
+        "display" : "Interstitial Radiation Therapy"
+      },
+      {
+        "code" : "C0436270",
+        "display" : "Temporary implant radiotherapy"
+      },
+      {
+        "code" : "C2169181",
+        "display" : "irradiation by permanent brachytherapy implants"
+      },
+      {
+        "code" : "C3840864",
+        "display" : "Interoperative Radiation"
+      },
+      {
+        "code" : "C2986508",
+        "display" : "Unsealed Internal Radiation Therapy"
+      },
+      {
+        "code" : "C2169180",
+        "display" : "brachytherapy using sealed isotopes"
+      }]
+    }]
+  }
+}}####
+e: {
+  "error" : "Error from server: Unable to provide support for code system https://uts.nlm.nih.gov/uts/umls"
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "https://uts.nlm.nih.gov/uts/umls",
+      "concept" : [{
+        "code" : "C3641897",
+        "display" : "Scanning Proton Beam Therapy"
+      },
+      {
+        "code" : "C5204571",
+        "display" : "Intensity-Modulated Proton Therapy"
+      },
+      {
+        "code" : "C5236971",
+        "display" : "Conventional Radiotherapy"
+      },
+      {
+        "code" : "C0600521",
+        "display" : "Radiotherapy, Conformal"
+      },
+      {
+        "code" : "C3840864",
+        "display" : "Interoperative Radiation"
+      },
+      {
+        "code" : "C1512814",
+        "display" : "Radiotherapy, Intensity-Modulated"
+      },
+      {
+        "code" : "C2367749",
+        "display" : "intracranial stereotactic radiosurgery"
+      },
+      {
+        "code" : "C3896654",
+        "display" : "Image-Guided Adaptive Radiation Therapy"
+      },
+      {
+        "code" : "C3179062",
+        "display" : "Radiotherapy, Image-Guided"
+      },
+      {
+        "code" : "C3896609",
+        "display" : "Stereotactic Body Radiation Therapy"
+      },
+      {
+        "code" : "C3846112",
+        "display" : "Radiosurgery, Stereotactic"
+      }]
+    }]
+  }
+}}####
+e: {
+  "error" : "Error from server: Unable to provide support for code system https://uts.nlm.nih.gov/uts/umls"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "coding" : [{
+    "system" : "https://uts.nlm.nih.gov/uts/umls",
+    "code" : "C1881237",
+    "display" : "Interstitial Radiation Therapy"
+  },
+  {
+    "system" : "https://uts.nlm.nih.gov/uts/umls",
+    "code" : "C0436270",
+    "display" : "Temporary implant radiotherapy"
+  }]
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "https://uts.nlm.nih.gov/uts/umls",
+      "concept" : [{
+        "code" : "C0021864",
+        "display" : "Intracavity Radiotherapy"
+      },
+      {
+        "code" : "C1881237",
+        "display" : "Interstitial Radiation Therapy"
+      },
+      {
+        "code" : "C0436270",
+        "display" : "Temporary implant radiotherapy"
+      },
+      {
+        "code" : "C2169181",
+        "display" : "irradiation by permanent brachytherapy implants"
+      },
+      {
+        "code" : "C3840864",
+        "display" : "Interoperative Radiation"
+      },
+      {
+        "code" : "C2986508",
+        "display" : "Unsealed Internal Radiation Therapy"
+      },
+      {
+        "code" : "C2169180",
+        "display" : "brachytherapy using sealed isotopes"
+      }]
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"CHECK_MEMERSHIP_ONLY"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code system \"https://uts.nlm.nih.gov/uts/umls\" is not known (encountered paired with code = \"C1881237\"); The code system \"https://uts.nlm.nih.gov/uts/umls\" is not known (encountered paired with code = \"C0436270\"); None of the codes provided (https://uts.nlm.nih.gov/uts/umls#C1881237, https://uts.nlm.nih.gov/uts/umls#C0436270) are valid in the value set 'BrachytherapyTechniqueVS' (from http://tx.fhir.org/r4)"
+}
+-------------------------------------------------------------------------------------

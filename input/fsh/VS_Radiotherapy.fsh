@@ -1,16 +1,9 @@
 //----------- MODALITIES -----------------------
 
-ValueSet:  RadiationModalityVS
-Id: mcode-radiation-modality-vs
-Title: "Radiation Modality Value Set"
-Description: "Codes describing the modalities of teleradiotherapy procedures."
-* include codes from valueset TeleradiotherapyModalityVS
-* include codes from valueset BrachytherapyModalityVS
-
 ValueSet:  TeleradiotherapyModalityVS
 Id: mcode-teleradiotherapy-modality-vs
-Title: "External Radiation Modality Value Set"
-Description: "Codes describing the modalities of teleradiotherapy procedures."
+Title: "Teleradiotherapy Modality Value Set"
+Description: "Codes describing the modalities of teleradiotherapy (external beam)procedures."
 * MTH#C1517033  "External Beam Radiation Therapy"
 * MTH#C0436226  "Proton Therapy"
 * MTH#C0454077  "Teleradiotherapy using electrons"
@@ -24,8 +17,8 @@ Description: "Codes describing the modalities of teleradiotherapy procedures."
 
 ValueSet: BrachytherapyModalityVS
 Id: mcode-brachytherapy-modality-vs
-Title: "External Radiation Modality Value Set"
-Description: "Codes describing the modalities of teleradiotherapy procedures."
+Title: "Brachytherapy Modality Value Set"
+Description: "Codes describing the modalities of brachytherapy (internal radiation) procedures."
 * MTH#C0006098  "Brachytherapy"
 * MTH#C0454271  "Low dose rate brachytherapy"
 * MTH#C0454270  "High dose brachytherapy"
@@ -40,8 +33,8 @@ Description: "Codes describing the modalities of teleradiotherapy procedures."
 
 ValueSet: TeleradiotherapyTechniqueVS
 Id: mcode-teleradiotherapy-technique-vs
-Title: "External Radiation Technique Value Set"
-Description: "Codes describing the techniques of teleradiotherapy procedures."
+Title: "Teleradiotherapy Technique Value Set"
+Description: "Codes describing the techniques of teleradiotherapy (external beam) procedures."
 * MTH#C3641897 "Scanning Proton Beam Therapy"
 * MTH#C5204571 "Intensity-Modulated Proton Therapy"
 * MTH#C5236971  "Conventional Radiotherapy"
@@ -68,7 +61,7 @@ Description: "Codes describing the techniques of brachytherapy (internal radiati
 * MTH#C2169180  "brachytherapy using sealed isotopes"
 
 
-ValueSet:       RadiationTargetBodySiteVS
+ValueSet: RadiationTargetBodySiteVS
 Id: mcode-radiation-target-body-site-vs
 Title: "Radiation Target Body Site Value Set"
 Description:    "Codes for body sites that can be targets of radiation therapy. This list of sites is based on Commission on Cancer’s 'Standards for Oncology Registry Entry  - STORE 2018'. This value set contains SNOMED CT equivalent terms."

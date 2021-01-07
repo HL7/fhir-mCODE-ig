@@ -57,7 +57,7 @@ The patient is two years out from surgery and has undergone surveillance imaging
 * [`scenario1-mcode-comorbid-condition-hypertension`](Condition-scenario1-mcode-comorbid-condition-hypertension.html) ([ComorbidCondition])
 * [`scenario1-mcode-ecog-performance-status`](Observation-scenario1-mcode-ecog-performance-status.html) ([ECOGPerformanceStatus])
 * [`scenario1-mcode-cancer-related-surgical-procedure-mastectomy`](Procedure-scenario1-mcode-cancer-related-surgical-procedure-mastectomy.html) ([CancerRelatedSurgicalProcedure])
-* [`scenario1-mcode-cancer-related-radiation-procedure`](Procedure-scenario1-mcode-cancer-related-radiation-procedure.html) ([CancerRelatedTeleradiotherapyProcedure])
+* [`scenario1-mcode-cancer-related-radiation-procedure`](Procedure-scenario1-mcode-cancer-related-radiation-procedure.html) ([CancerRelatedTeleradiotherapyPhase])
 * [`scenario1-mcode-primary-cancer-condition`](Condition-scenario1-mcode-primary-cancer-condition.html) ([PrimaryCancerCondition])
 * [`scenario1-mcode-tnm-clinical-stage-group`](Observation-scenario1-mcode-tnm-clinical-stage-group.html) ([TNMClinicalStageGroup])
 * [`scenario1-mcode-tnm-primary-tumor-category`](Observation-scenario1-mcode-tnm-primary-tumor-category.html) ([TNMClinicalPrimaryTumorCategory])
@@ -101,7 +101,7 @@ The patient is two years out from surgery and has undergone surveillance imaging
 [CancerGenomicsReport]: StructureDefinition-mcode-cancer-genomics-report.html
 [CancerPatient]: StructureDefinition-mcode-cancer-patient.html
 [CancerRelatedMedicationRequest]: StructureDefinition-mcode-cancer-related-medication-request.html
-[CancerRelatedTeleradiotherapyProcedure]: StructureDefinition-mcode-cancer-related-teleradiotherapy-procedure.html
+[CancerRelatedTeleradiotherapyPhase]: StructureDefinition-mcode-cancer-related-teleradiotherapy-phase.html
 [CancerRelatedSurgicalProcedure]: StructureDefinition-mcode-cancer-related-surgical-procedure.html
 [ComorbidCondition]: StructureDefinition-mcode-cancer-related-comorbidities.html
 [ECOGPerformanceStatus]: StructureDefinition-mcode-ecog-performance-status.html

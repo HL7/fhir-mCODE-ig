@@ -86,8 +86,8 @@ groups:
     description: Profiles in the [mCODE **Treatments** Group](index.html#treatments-group).
     resources:
       - StructureDefinition/mcode-cancer-related-medication-request
-      - StructureDefinition/mcode-cancer-related-teleradiotherapy-procedure
-      - StructureDefinition/mcode-cancer-related-brachytherapy-procedure
+      - StructureDefinition/mcode-cancer-related-teleradiotherapy-phase
+      - StructureDefinition/mcode-cancer-related-brachytherapy
       - StructureDefinition/mcode-cancer-related-surgical-procedure
 
   Genomics:

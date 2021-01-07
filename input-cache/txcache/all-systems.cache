@@ -575,3 +575,105 @@ v: {
   "error" : "The code provided (http://unitsofmeasure.org#{PackYears}) is not valid in the value set 'BodyWeightUnits' (from http://tx.fhir.org/r4)"
 }
 -------------------------------------------------------------------------------------
+{"hierarchical" : true, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "https://uts.nlm.nih.gov/uts/umls",
+      "concept" : [{
+        "code" : "C0006098",
+        "display" : "Brachytherapy"
+      },
+      {
+        "code" : "C0454271",
+        "display" : "Low dose rate brachytherapy"
+      },
+      {
+        "code" : "C0454270",
+        "display" : "High dose brachytherapy"
+      },
+      {
+        "code" : "C3897809",
+        "display" : "Pulsed-Dose Rate Brachytherapy"
+      },
+      {
+        "code" : "C2584639",
+        "display" : "High dose rate electronic brachytherapy"
+      },
+      {
+        "code" : "C0182638",
+        "display" : "Radiopharmaceuticals"
+      },
+      {
+        "code" : "C0203608",
+        "display" : "Radionuclide therapy"
+      }]
+    },
+    {
+      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/mcode-other-code-cs",
+      "concept" : [{
+        "code" : "OtherBrachytherapyModality",
+        "display" : "Other Brachytherapy Modality, Specify"
+      }]
+    }]
+  }
+}}####
+e: {
+  "error" : "Error from server: Unable to provide support for code system https://uts.nlm.nih.gov/uts/umls"
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "https://uts.nlm.nih.gov/uts/umls",
+      "concept" : [{
+        "code" : "C1517033",
+        "display" : "External Beam Radiation Therapy"
+      },
+      {
+        "code" : "C0436226",
+        "display" : "Proton Therapy"
+      },
+      {
+        "code" : "C0454077",
+        "display" : "Teleradiotherapy using electrons"
+      },
+      {
+        "code" : "C0599266",
+        "display" : "Neutron beam therapy"
+      },
+      {
+        "code" : "C3494442",
+        "display" : "Carbon Ion Radiotherapy"
+      },
+      {
+        "code" : "C3539769",
+        "display" : "Photon Beam Radiation Therapy"
+      },
+      {
+        "code" : "C0043308",
+        "display" : "X-Ray Therapy"
+      },
+      {
+        "code" : "C0454060",
+        "display" : "Grenz ray therapy"
+      },
+      {
+        "code" : "C0203541",
+        "display" : "Deep radiation therapy, 200-300 KVP"
+      }]
+    },
+    {
+      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/mcode-other-code-cs",
+      "concept" : [{
+        "code" : "OtherTeleradiotherapyModality",
+        "display" : "Other Teleradiotherapy Modality, Specify"
+      }]
+    }]
+  }
+}}####
+e: {
+  "error" : "Error from server: Unable to provide support for code system https://uts.nlm.nih.gov/uts/umls"
+}
+-------------------------------------------------------------------------------------

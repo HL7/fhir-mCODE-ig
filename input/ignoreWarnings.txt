@@ -1,5 +1,6 @@
 == Suppressed Messages ==
 # Suppress warnings about unknown code systems
+Error from server: Unable to provide support for code system https://uts.nlm.nih.gov/uts/umls
 Error from server: Unable to provide support for code system http://sequenceontology.org
 Error from server: Unable to provide support for code system http://ncithesaurus-stage.nci.nih.gov
 Error from server: Unable to provide support for code system http://www.ncbi.nlm.nih.gov/clinvar
@@ -10,6 +11,10 @@ Error from server: Unable to provide support for code system http://www.ama-assn
 Error from server: Unable to provide support for code system http://hl7.org/fhir/us/mcode/CodeSystem/mcode-other-code-cs
 Error from server: Unable to provide support for code system http://terminology.hl7.org/CodeSystem/icd-o-3
 # Suppress "Unable to determine whether the provided codes are in the value set" messages
+WARNING: Bundle/scenario1-mcode-patient-bundle: resource.extension[1].value.ofType(CodeableConcept): [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/mcode/ValueSet/mcode-teleradiotherapy-technique-vs because the value set or code system is not known to the validator]
+WARNING: Bundle/scenario1-mcode-patient-bundle: resource.extension[1].value.ofType(CodeableConcept): [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/mcode/ValueSet/mcode-teleradiotherapy-technique-vs because the value set or code system is not known to the validator]
+WARNING: Procedure/scenario1-mcode-cancer-related-radiation-procedure: Procedure.extension[1].value.ofType(CodeableConcept): [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/mcode/ValueSet/mcode-teleradiotherapy-technique-vs because the value set or code system is not known to the validator]
+[Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/mcode/ValueSet/mcode-teleradiotherapy-modality-vs because the value set or code system is not known to the validator]
 [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/mcode/ValueSet/mcode-tnm-stage-group-vs because the value set or code system is not known to the validator]
 [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/mcode/ValueSet/mcode-clinvar-vs because the value set or code system is not known to the validator]
 [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/mcode/ValueSet/mcode-tnm-primary-tumor-category-vs because the value set or code system is not known to the validator]
@@ -46,10 +51,6 @@ WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/mcode/Structure
 WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-clinical-primary-tumor-category').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
 WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-clinical-regional-nodes-category').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
 WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-clinical-stage-group').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
-WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-pathological-distant-metastases-category').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
-WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-pathological-primary-tumor-category').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
-WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-pathological-regional-nodes-category').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
-WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-pathological-stage-group').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
 WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tumor-size').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
 WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-disease-status').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
 WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-related-comorbidities').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
@@ -58,7 +59,41 @@ WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/mcode/Structure
 WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-ecog-performance-status').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
 # This error is inherited from cpb-15 " not(f:kind/@value='instance') or (not(exists(f:implementation)) and exists(f:software))"
 WARNING: StructureDefinition/MCodeCapabilityStatement: StructureDefinition.snapshot.element[0].constraint[6].xpath: value should not start or finish with whitespace
-# These codes are 100% valid
+# These codes are are valid
+The code C0203608 is not valid in the system https://uts.nlm.nih.gov/uts/umls
+The code C3641897 is not valid in the system https://uts.nlm.nih.gov/uts/umls
+The code C5204571 is not valid in the system https://uts.nlm.nih.gov/uts/umls
+The code C5236971 is not valid in the system https://uts.nlm.nih.gov/uts/umls
+The code C0600521 is not valid in the system https://uts.nlm.nih.gov/uts/umls
+The code C3840864 is not valid in the system https://uts.nlm.nih.gov/uts/umls
+The code C1512814 is not valid in the system https://uts.nlm.nih.gov/uts/umls
+The code C2367749 is not valid in the system https://uts.nlm.nih.gov/uts/umls
+The code C3896654 is not valid in the system https://uts.nlm.nih.gov/uts/umls
+The code C3179062 is not valid in the system https://uts.nlm.nih.gov/uts/umls
+The code C3896609 is not valid in the system https://uts.nlm.nih.gov/uts/umls
+The code C3846112 is not valid in the system https://uts.nlm.nih.gov/uts/umls
+The code C0021864 is not valid in the system https://uts.nlm.nih.gov/uts/umls
+The code C1881237 is not valid in the system https://uts.nlm.nih.gov/uts/umls
+The code C0436270 is not valid in the system https://uts.nlm.nih.gov/uts/umls
+The code C2169181 is not valid in the system https://uts.nlm.nih.gov/uts/umls
+The code C3840864 is not valid in the system https://uts.nlm.nih.gov/uts/umls
+The code C2986508 is not valid in the system https://uts.nlm.nih.gov/uts/umls
+The code C2169180 is not valid in the system https://uts.nlm.nih.gov/uts/umls
+The code C0006098 is not valid in the system https://uts.nlm.nih.gov/uts/umls
+The code C0454271 is not valid in the system https://uts.nlm.nih.gov/uts/umls
+The code C0454270 is not valid in the system https://uts.nlm.nih.gov/uts/umls
+The code C3897809 is not valid in the system https://uts.nlm.nih.gov/uts/umls
+The code C2584639 is not valid in the system https://uts.nlm.nih.gov/uts/umls
+The code C0182638 is not valid in the system https://uts.nlm.nih.gov/uts/umls
+The code C1517033 is not valid in the system https://uts.nlm.nih.gov/uts/umls
+The code C0436226 is not valid in the system https://uts.nlm.nih.gov/uts/umls
+The code C0454077 is not valid in the system https://uts.nlm.nih.gov/uts/umls
+The code C0599266 is not valid in the system https://uts.nlm.nih.gov/uts/umls
+The code C3494442 is not valid in the system https://uts.nlm.nih.gov/uts/umls
+The code C3539769 is not valid in the system https://uts.nlm.nih.gov/uts/umls
+The code C0043308 is not valid in the system https://uts.nlm.nih.gov/uts/umls
+The code C0454060 is not valid in the system https://uts.nlm.nih.gov/uts/umls
+The code C0203541 is not valid in the system https://uts.nlm.nih.gov/uts/umls
 The code C41333 is not valid in the system http://ncithesaurus-stage.nci.nih.gov
 The code C41334 is not valid in the system http://ncithesaurus-stage.nci.nih.gov
 The code C54741 is not valid in the system http://ncithesaurus-stage.nci.nih.gov

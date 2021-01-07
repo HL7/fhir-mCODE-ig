@@ -116,13 +116,16 @@ Description: "Extended example 1: example showing partial mastectomy surgical pr
 * bodySite = SCT#80248007 "Left breast structure (body structure)"
 
 Instance: scenario1-mcode-cancer-related-radiation-procedure
-InstanceOf: CancerRelatedTeleradiotherapyProcedure
+InstanceOf: CancerRelatedTeleradiotherapyPhase
 Description: "Extended example 1: example showing radiation treatment"
 * id = "scenario1-mcode-cancer-related-radiation-procedure"
 * extension[treatmentIntent].valueCodeableConcept = SCT#373808002 "Curative - procedure intent (qualifier value)"
 * status = #completed "completed"
 * code = MTH#C0043308  "X-Ray Therapy"
 * extension[technique].valueCodeableConcept = MTH#C0600521 "Radiotherapy, Conformal"
+* extension[dosePerFraction].valueQuantity = 200 'cGy'
+* extension[fractionsDelivered].valueQuantity = 25 '1'
+* extension[totalDoseDelivered].valueQuantity = 5000 'cGy'
 * subject = Reference(scenario1-mcode-cancer-patient)
 * performedDateTime = "2018-03-20"
 * asserter = Reference(scenario1-us-core-practitioner)

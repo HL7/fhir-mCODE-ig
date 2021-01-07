@@ -1,0 +1,16 @@
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "valueSet" : ["http://hl7.org/fhir/us/mcode/ValueSet/mcode-teleradiotherapy-modality-vs"]
+    },
+    {
+      "valueSet" : ["http://hl7.org/fhir/us/mcode/ValueSet/mcode-brachytherapy-modality-vs"]
+    }]
+  }
+}}####
+e: {
+  "error" : "Error from server: Unable to find value set \"http://hl7.org/fhir/us/mcode/ValueSet/mcode-teleradiotherapy-modality-vs\""
+}
+-------------------------------------------------------------------------------------

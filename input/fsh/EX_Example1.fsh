@@ -215,14 +215,14 @@ Description: "mCODE Example for Cancer Related Surgical Procedure"
 * bodySite = SCT#41224006 "Structure of lower lobe of left lung (body structure)"
 
 Instance: mCODECancerRelatedRadiationProcedureExample1
-InstanceOf: CancerRelatedBrachytherapyProcedure
+InstanceOf: CancerRelatedBrachytherapy
 Description: "mCODE Example for Cancer Related Radiation Procedure"
 * id = "mCODECancerRelatedRadiationProcedureExample1"
-* meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-related-brachytherapy-procedure"
+* meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-related-brachytherapy"
 * status = #completed "completed"
-* code = MTH#C0006098  "Brachytherapy"
-* extension[technique].valueCodeableConcept.coding[0] = MTH#C0596790  "interstitial"
-* extension[technique].valueCodeableConcept.coding[1] = MTH#C0205355  "Permanent"
+* code = MTH#C0454271  "Low dose rate brachytherapy"
+* extension[technique].valueCodeableConcept.coding[0] = MTH#C1881237  "Interstitial Radiation Therapy"
+* extension[technique].valueCodeableConcept.coding[1] = MTH#C0436270  "Temporary implant radiotherapy"
 * subject = Reference(mCODEPatientExample1)
 * asserter = Reference(mCODEPractitionerExample1)
 * performedDateTime = "2019-03-01"

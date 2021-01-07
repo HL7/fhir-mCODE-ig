@@ -1,0 +1,508 @@
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "https://uts.nlm.nih.gov/uts/umls",
+  "code" : "C0006098"
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code system \"https://uts.nlm.nih.gov/uts/umls\" is not known (encountered paired with code = \"C0006098\"); The code provided (https://uts.nlm.nih.gov/uts/umls#C0006098) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4)"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "https://uts.nlm.nih.gov/uts/umls",
+  "code" : "C0454271"
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code system \"https://uts.nlm.nih.gov/uts/umls\" is not known (encountered paired with code = \"C0454271\"); The code provided (https://uts.nlm.nih.gov/uts/umls#C0454271) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4)"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "https://uts.nlm.nih.gov/uts/umls",
+  "code" : "C0454270"
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code system \"https://uts.nlm.nih.gov/uts/umls\" is not known (encountered paired with code = \"C0454270\"); The code provided (https://uts.nlm.nih.gov/uts/umls#C0454270) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4)"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "https://uts.nlm.nih.gov/uts/umls",
+  "code" : "C3897809"
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code system \"https://uts.nlm.nih.gov/uts/umls\" is not known (encountered paired with code = \"C3897809\"); The code provided (https://uts.nlm.nih.gov/uts/umls#C3897809) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4)"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "https://uts.nlm.nih.gov/uts/umls",
+  "code" : "C2584639"
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code system \"https://uts.nlm.nih.gov/uts/umls\" is not known (encountered paired with code = \"C2584639\"); The code provided (https://uts.nlm.nih.gov/uts/umls#C2584639) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4)"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "https://uts.nlm.nih.gov/uts/umls",
+  "code" : "C0182638"
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code system \"https://uts.nlm.nih.gov/uts/umls\" is not known (encountered paired with code = \"C0182638\"); The code provided (https://uts.nlm.nih.gov/uts/umls#C0182638) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4)"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "https://uts.nlm.nih.gov/uts/umls",
+  "code" : "C0203608"
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code system \"https://uts.nlm.nih.gov/uts/umls\" is not known (encountered paired with code = \"C0203608\"); The code provided (https://uts.nlm.nih.gov/uts/umls#C0203608) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4)"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "https://uts.nlm.nih.gov/uts/umls",
+  "code" : "C1298613"
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code system \"https://uts.nlm.nih.gov/uts/umls\" is not known (encountered paired with code = \"C1298613\"); The code provided (https://uts.nlm.nih.gov/uts/umls#C1298613) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4)"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "https://uts.nlm.nih.gov/uts/umls",
+  "code" : "C0596790"
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code system \"https://uts.nlm.nih.gov/uts/umls\" is not known (encountered paired with code = \"C0596790\"); The code provided (https://uts.nlm.nih.gov/uts/umls#C0596790) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4)"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "https://uts.nlm.nih.gov/uts/umls",
+  "code" : "C0205374"
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code system \"https://uts.nlm.nih.gov/uts/umls\" is not known (encountered paired with code = \"C0205374\"); The code provided (https://uts.nlm.nih.gov/uts/umls#C0205374) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4)"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "https://uts.nlm.nih.gov/uts/umls",
+  "code" : "C0205355"
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code system \"https://uts.nlm.nih.gov/uts/umls\" is not known (encountered paired with code = \"C0205355\"); The code provided (https://uts.nlm.nih.gov/uts/umls#C0205355) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4)"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "https://uts.nlm.nih.gov/uts/umls",
+  "code" : "C3840864"
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code system \"https://uts.nlm.nih.gov/uts/umls\" is not known (encountered paired with code = \"C3840864\"); The code provided (https://uts.nlm.nih.gov/uts/umls#C3840864) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4)"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "https://uts.nlm.nih.gov/uts/umls",
+  "code" : "C2986508"
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code system \"https://uts.nlm.nih.gov/uts/umls\" is not known (encountered paired with code = \"C2986508\"); The code provided (https://uts.nlm.nih.gov/uts/umls#C2986508) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4)"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "https://uts.nlm.nih.gov/uts/umls",
+  "code" : "C1517033"
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code system \"https://uts.nlm.nih.gov/uts/umls\" is not known (encountered paired with code = \"C1517033\"); The code provided (https://uts.nlm.nih.gov/uts/umls#C1517033) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4)"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "https://uts.nlm.nih.gov/uts/umls",
+  "code" : "C0436226"
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code system \"https://uts.nlm.nih.gov/uts/umls\" is not known (encountered paired with code = \"C0436226\"); The code provided (https://uts.nlm.nih.gov/uts/umls#C0436226) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4)"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "https://uts.nlm.nih.gov/uts/umls",
+  "code" : "C0454077"
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code system \"https://uts.nlm.nih.gov/uts/umls\" is not known (encountered paired with code = \"C0454077\"); The code provided (https://uts.nlm.nih.gov/uts/umls#C0454077) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4)"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "https://uts.nlm.nih.gov/uts/umls",
+  "code" : "C0599266"
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code system \"https://uts.nlm.nih.gov/uts/umls\" is not known (encountered paired with code = \"C0599266\"); The code provided (https://uts.nlm.nih.gov/uts/umls#C0599266) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4)"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "https://uts.nlm.nih.gov/uts/umls",
+  "code" : "C3494442"
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code system \"https://uts.nlm.nih.gov/uts/umls\" is not known (encountered paired with code = \"C3494442\"); The code provided (https://uts.nlm.nih.gov/uts/umls#C3494442) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4)"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "https://uts.nlm.nih.gov/uts/umls",
+  "code" : "C3539769"
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code system \"https://uts.nlm.nih.gov/uts/umls\" is not known (encountered paired with code = \"C3539769\"); The code provided (https://uts.nlm.nih.gov/uts/umls#C3539769) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4)"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "https://uts.nlm.nih.gov/uts/umls",
+  "code" : "C0043308"
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code system \"https://uts.nlm.nih.gov/uts/umls\" is not known (encountered paired with code = \"C0043308\"); The code provided (https://uts.nlm.nih.gov/uts/umls#C0043308) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4)"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "https://uts.nlm.nih.gov/uts/umls",
+  "code" : "C0454060"
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code system \"https://uts.nlm.nih.gov/uts/umls\" is not known (encountered paired with code = \"C0454060\"); The code provided (https://uts.nlm.nih.gov/uts/umls#C0454060) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4)"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "https://uts.nlm.nih.gov/uts/umls",
+  "code" : "C0203541"
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code system \"https://uts.nlm.nih.gov/uts/umls\" is not known (encountered paired with code = \"C0203541\"); The code provided (https://uts.nlm.nih.gov/uts/umls#C0203541) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4)"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "https://uts.nlm.nih.gov/uts/umls",
+  "code" : "C3896654"
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code system \"https://uts.nlm.nih.gov/uts/umls\" is not known (encountered paired with code = \"C3896654\"); The code provided (https://uts.nlm.nih.gov/uts/umls#C3896654) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4)"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "https://uts.nlm.nih.gov/uts/umls",
+  "code" : "C5236971"
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code system \"https://uts.nlm.nih.gov/uts/umls\" is not known (encountered paired with code = \"C5236971\"); The code provided (https://uts.nlm.nih.gov/uts/umls#C5236971) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4)"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "https://uts.nlm.nih.gov/uts/umls",
+  "code" : "C0600521"
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code system \"https://uts.nlm.nih.gov/uts/umls\" is not known (encountered paired with code = \"C0600521\"); The code provided (https://uts.nlm.nih.gov/uts/umls#C0600521) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4)"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "https://uts.nlm.nih.gov/uts/umls",
+  "code" : "C1512814"
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code system \"https://uts.nlm.nih.gov/uts/umls\" is not known (encountered paired with code = \"C1512814\"); The code provided (https://uts.nlm.nih.gov/uts/umls#C1512814) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4)"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "https://uts.nlm.nih.gov/uts/umls",
+  "code" : "C3179062"
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code system \"https://uts.nlm.nih.gov/uts/umls\" is not known (encountered paired with code = \"C3179062\"); The code provided (https://uts.nlm.nih.gov/uts/umls#C3179062) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4)"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "https://uts.nlm.nih.gov/uts/umls",
+  "code" : "C3896609"
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code system \"https://uts.nlm.nih.gov/uts/umls\" is not known (encountered paired with code = \"C3896609\"); The code provided (https://uts.nlm.nih.gov/uts/umls#C3896609) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4)"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "https://uts.nlm.nih.gov/uts/umls",
+  "code" : "C3846112"
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code system \"https://uts.nlm.nih.gov/uts/umls\" is not known (encountered paired with code = \"C3846112\"); The code provided (https://uts.nlm.nih.gov/uts/umls#C3846112) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4)"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "coding" : [{
+    "system" : "https://uts.nlm.nih.gov/uts/umls",
+    "code" : "C0596790",
+    "display" : "interstitial"
+  },
+  {
+    "system" : "https://uts.nlm.nih.gov/uts/umls",
+    "code" : "C0205355",
+    "display" : "Permanent"
+  }]
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "https://uts.nlm.nih.gov/uts/umls",
+      "concept" : [{
+        "code" : "C1298613",
+        "display" : "intracavitary"
+      },
+      {
+        "code" : "C0596790",
+        "display" : "interstitial"
+      },
+      {
+        "code" : "C0205374",
+        "display" : "Transitory"
+      },
+      {
+        "code" : "C0205355",
+        "display" : "Permanent"
+      },
+      {
+        "code" : "C3840864",
+        "display" : "Interoperative Radiation"
+      },
+      {
+        "code" : "C2986508",
+        "display" : "Unsealed Internal Radiation Therapy"
+      }]
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"CHECK_MEMERSHIP_ONLY"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code system \"https://uts.nlm.nih.gov/uts/umls\" is not known (encountered paired with code = \"C0596790\"); The code system \"https://uts.nlm.nih.gov/uts/umls\" is not known (encountered paired with code = \"C0205355\"); None of the codes provided (https://uts.nlm.nih.gov/uts/umls#C0596790, https://uts.nlm.nih.gov/uts/umls#C0205355) are valid in the value set 'BrachytherapyTechniqueVS' (from http://tx.fhir.org/r4)"
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "https://uts.nlm.nih.gov/uts/umls",
+      "concept" : [{
+        "code" : "C0006098",
+        "display" : "Brachytherapy"
+      },
+      {
+        "code" : "C0454271",
+        "display" : "Low dose rate brachytherapy"
+      },
+      {
+        "code" : "C0454270",
+        "display" : "High dose brachytherapy"
+      },
+      {
+        "code" : "C3897809",
+        "display" : "Pulsed-Dose Rate Brachytherapy"
+      },
+      {
+        "code" : "C2584639",
+        "display" : "High dose rate electronic brachytherapy"
+      },
+      {
+        "code" : "C0182638",
+        "display" : "Radiopharmaceuticals"
+      },
+      {
+        "code" : "C0203608",
+        "display" : "Radionuclide therapy"
+      }]
+    }]
+  }
+}}####
+e: {
+  "error" : "Error from server: Unable to provide support for code system https://uts.nlm.nih.gov/uts/umls"
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "https://uts.nlm.nih.gov/uts/umls",
+      "concept" : [{
+        "code" : "C1298613",
+        "display" : "intracavitary"
+      },
+      {
+        "code" : "C0596790",
+        "display" : "interstitial"
+      },
+      {
+        "code" : "C0205374",
+        "display" : "Transitory"
+      },
+      {
+        "code" : "C0205355",
+        "display" : "Permanent"
+      },
+      {
+        "code" : "C3840864",
+        "display" : "Interoperative Radiation"
+      },
+      {
+        "code" : "C2986508",
+        "display" : "Unsealed Internal Radiation Therapy"
+      }]
+    }]
+  }
+}}####
+e: {
+  "error" : "Error from server: Unable to provide support for code system https://uts.nlm.nih.gov/uts/umls"
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "https://uts.nlm.nih.gov/uts/umls",
+      "concept" : [{
+        "code" : "C1517033",
+        "display" : "External Beam Radiation Therapy"
+      },
+      {
+        "code" : "C0436226",
+        "display" : "Proton Therapy"
+      },
+      {
+        "code" : "C0454077",
+        "display" : "Teleradiotherapy using electrons"
+      },
+      {
+        "code" : "C0599266",
+        "display" : "Neutron beam therapy"
+      },
+      {
+        "code" : "C3494442",
+        "display" : "Carbon Ion Radiotherapy"
+      },
+      {
+        "code" : "C3539769",
+        "display" : "Photon Beam Radiation Therapy"
+      },
+      {
+        "code" : "C0043308",
+        "display" : "X-Ray Therapy"
+      },
+      {
+        "code" : "C0454060",
+        "display" : "Grenz ray therapy"
+      },
+      {
+        "code" : "C0203541",
+        "display" : "Deep radiation therapy, 200-300 KVP"
+      }]
+    }]
+  }
+}}####
+e: {
+  "error" : "Error from server: Unable to provide support for code system https://uts.nlm.nih.gov/uts/umls"
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "https://uts.nlm.nih.gov/uts/umls",
+      "concept" : [{
+        "code" : "C3896654",
+        "display" : "Image-Guided Adaptive Radiation Therapy"
+      },
+      {
+        "code" : "C5236971",
+        "display" : "Conventional Radiotherapy"
+      },
+      {
+        "code" : "C0600521",
+        "display" : "Radiotherapy, Conformal"
+      },
+      {
+        "code" : "C3840864",
+        "display" : "Interoperative Radiation"
+      },
+      {
+        "code" : "C1512814",
+        "display" : "Radiotherapy, Intensity-Modulated"
+      },
+      {
+        "code" : "C3179062",
+        "display" : "Radiotherapy,  Image-Guided"
+      },
+      {
+        "code" : "C3896609",
+        "display" : "Stereotactic Body Radiation Therapy"
+      },
+      {
+        "code" : "C3846112",
+        "display" : "Radiosurgery, Stereotactic"
+      }]
+    }]
+  }
+}}####
+e: {
+  "error" : "Error from server: Unable to provide support for code system https://uts.nlm.nih.gov/uts/umls"
+}
+-------------------------------------------------------------------------------------

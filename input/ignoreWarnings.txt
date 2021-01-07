@@ -7,7 +7,7 @@ Error from server: Unable to provide support for code system http://www.genename
 Error from server: Unable to provide support for code system http://cancerstaging.org
 Error from server: Unable to provide support for code system http://www.ncbi.nlm.nih.gov/clinvar
 Error from server: Unable to provide support for code system http://www.ama-assn.org/go/cpt
-Error from server: Unable to provide support for code system http://hl7.org/fhir/us/mcode/CodeSystem/mcode-other-specify-code-system
+Error from server: Unable to provide support for code system http://hl7.org/fhir/us/mcode/CodeSystem/mcode-other-code-cs
 Error from server: Unable to provide support for code system http://terminology.hl7.org/CodeSystem/icd-o-3
 # Suppress "Unable to determine whether the provided codes are in the value set" messages
 [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/mcode/ValueSet/mcode-tnm-stage-group-vs because the value set or code system is not known to the validator]
@@ -1068,5 +1068,5 @@ Code System URI 'http://www.genenames.org' is unknown so the code cannot be vali
 Code System URI 'http://cancerstaging.org' is unknown so the code cannot be validated
 Code System URI 'http://www.ncbi.nlm.nih.gov/clinvar' is unknown so the code cannot be validated
 Code System URI 'http://www.ama-assn.org/go/cpt' is unknown so the code cannot be validated
-Code System URI 'http://hl7.org/fhir/us/mcode/CodeSystem/mcode-other-specify-code-system' is unknown so the code cannot be validated
+Code System URI 'http://hl7.org/fhir/us/mcode/CodeSystem/mcode-other-code-cs' is unknown so the code cannot be validated
 Code System URI 'http://terminology.hl7.org/CodeSystem/icd-o-3' is unknown so the code cannot be validated

@@ -86,7 +86,8 @@ groups:
     description: Profiles in the [mCODE **Treatments** Group](index.html#treatments-group).
     resources:
       - StructureDefinition/mcode-cancer-related-medication-request
-      - StructureDefinition/mcode-cancer-related-radiation-procedure
+      - StructureDefinition/mcode-cancer-related-teleradiotherapy-procedure
+      - StructureDefinition/mcode-cancer-related-brachytherapy-procedure
       - StructureDefinition/mcode-cancer-related-surgical-procedure
 
   Genomics:
@@ -145,7 +146,10 @@ groups:
       - ValueSet/mcode-location-qualifier-vs
       - ValueSet/mcode-present-absent-unknown
       - ValueSet/mcode-primary-or-uncertain-behavior-cancer-disorder-vs
-      - ValueSet/mcode-radiation-procedure-vs
+      - ValueSet/mcode-teleradiotherapy-modality-vs
+      - ValueSet/mcode-teleradiotherapy-technique-vs
+      - ValueSet/mcode-brachytherapy-modality-vs
+      - ValueSet/mcode-brachytherapy-technique-vs
       - ValueSet/mcode-radiation-target-body-site-vs
       - ValueSet/mcode-secondary-cancer-disorder-vs
       - ValueSet/mcode-tnm-distant-metastases-category-vs
@@ -198,7 +202,7 @@ groups:
     description: These define new code systems used by systems conforming with this implementation guide
     resources:
       - CodeSystem/mcode-elixhauser-category
-      - CodeSystem/mcode-other-specify-code-system
+      - CodeSystem/mcode-other-code-cs
 
   # Examples
   GenericExamples:

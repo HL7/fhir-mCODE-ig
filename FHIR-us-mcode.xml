@@ -12,6 +12,8 @@
 <artifact id="ValueSet/adverse-event-relatedness-value-set" key="ValueSet-adverse-event-relatedness-value-set" name="Adverse Event Relatedness Value Set"/>
 <artifact id="StructureDefinition/adverse-event-resolved-date" key="StructureDefinition-adverse-event-resolved-date" name="Adverse Event Resolved Date"/>
 <artifact id="ValueSet/adverse-event-seriousness-value-set" key="ValueSet-adverse-event-seriousness-value-set" name="Adverse Event Seriousness Value Set"/>
+<artifact id="ValueSet/mcode-brachytherapy-modality-vs" key="ValueSet-mcode-brachytherapy-modality-vs" name="Brachytherapy Modality Value Set"/>
+<artifact id="ValueSet/mcode-brachytherapy-technique-vs" key="ValueSet-mcode-brachytherapy-technique-vs" name="Brachytherapy Technique Value Set"/>
 <artifact id="StructureDefinition/ctc-adverse-event" key="StructureDefinition-ctc-adverse-event" name="CTC Adverse Event"/>
 <artifact id="StructureDefinition/ctcae-grade" key="StructureDefinition-ctcae-grade" name="CTC Adverse Event Grade"/>
 <artifact id="CodeSystem/ctcae-grade-code-system" key="CodeSystem-ctcae-grade-code-system" name="CTCAE Grade Code System"/>
@@ -33,9 +35,10 @@
 <artifact id="ValueSet/mcode-cancer-staging-system-vs" key="cancer-staging-system-value-set" name="Cancer Staging System Value Set"/>
 <artifact id="StructureDefinition/mcode-cancer-related-comorbidities" key="StructureDefinition-mcode-cancer-related-comorbidities" name="Cancer-Related Comorbidities"/>
 <artifact id="StructureDefinition/mcode-cancer-related-medication-request" key="StructureDefinition-mcode-cancer-related-medication-request" name="Cancer-Related Medication Request"/>
-<artifact id="StructureDefinition/mcode-cancer-related-radiation-procedure" key="StructureDefinition-mcode-cancer-related-radiation-procedure" name="Cancer-Related Radiation Procedure"/>
+<artifact id="StructureDefinition/mcode-cancer-related-brachytherapy-procedure" key="StructureDefinition-mcode-cancer-related-brachytherapy-procedure" name="Cancer-Related Radiation Procedure"/>
 <artifact id="StructureDefinition/mcode-cancer-related-surgical-procedure" key="StructureDefinition-mcode-cancer-related-surgical-procedure" name="Cancer-Related Surgical Procedure"/>
 <artifact id="ValueSet/mcode-cancer-related-surgical-procedure-vs" key="ValueSet-mcode-cancer-related-surgical-procedure-vs" name="Cancer-Related Surgical Procedure Value Set"/>
+<artifact id="StructureDefinition/mcode-cancer-related-teleradiotherapy-procedure" key="StructureDefinition-mcode-cancer-related-teleradiotherapy-procedure" name="Cancer-Related Teleradiotherapy Procedure"/>
 <artifact id="ValueSet/mcode-clinvar-vs" key="clinvar-value-set" name="ClinVar Value Set"/>
 <artifact deprecated="true" id="Profile/mcode-comorbid-condition" key="comorbid-condition" name="Comorbid Condition"/>
 <artifact id="StructureDefinition/mcode-comorbid-condition-code" key="StructureDefinition-mcode-comorbid-condition-code" name="Comorbid Condition Code"/>
@@ -79,6 +82,7 @@
 <artifact id="CodeSystem/mcode-elixhauser-category" key="CodeSystem-mcode-elixhauser-category" name="Elixhauser Comorbidity Category"/>
 <artifact id="StructureDefinition/mcode-evidence-type" key="StructureDefinition-mcode-evidence-type" name="Evidence Type"/>
 <artifact deprecated="true" id="Extension/mcode-evidence-type-extension" key="evidence-type-extension" name="Evidence Type Extension"/>
+<artifact id="ValueSet/mcode-teleradiotherapy-modality-vs" key="ValueSet-mcode-teleradiotherapy-modality-vs" name="External Beam Radiation Modality Value Set"/>
 <artifact id="StructureDefinition/mcode-genetic-specimen" key="genetic-specimen" name="Genetic Specimen"/>
 <artifact id="ValueSet/mcode-genetic-specimen-type-vs" key="genetic-specimen-type-value-set" name="Genetic Specimen Type Value Set"/>
 <artifact id="StructureDefinition/mcode-genomic-region-studied" key="genomic-region-studied" name="Genomic Region Studied"/>
@@ -96,12 +100,12 @@
 <artifact id="ValueSet/mcode-tumor-size-method-vs" key="ValueSet-mcode-tumor-size-method-vs" name="Methods for measuring tumor size"/>
 <artifact deprecated="true" key="Observation" name="Observation"/>
 <artifact id="OperationDefinition/mcode-patient-everything" key="OperationDefinition-mcode-patient-everything" name="Operation-mcode-patient-everything"/>
-<artifact id="CodeSystem/mcode-other-specify-code-system" key="CodeSystem-mcode-other-specify-code-system" name="Other Specify Code System"/>
+<artifact id="CodeSystem/mcode-other-code-cs" key="CodeSystem-mcode-other-code-cs" name="Other Specify Code System"/>
 <artifact id="ValueSet/mcode-present-absent-unknown" key="ValueSet-mcode-present-absent-unknown" name="Present-Absent-Unknown"/>
 <artifact id="StructureDefinition/mcode-primary-cancer-condition" key="primary-cancer-condition" name="Primary Cancer Condition"/>
 <artifact id="ValueSet/mcode-primary-or-uncertain-behavior-cancer-disorder-vs" key="primary-or-uncertain-behavior-cancer-disorder-value-set" name="Primary or Uncertain Behavior Cancer Disorder Value Set"/>
 <artifact deprecated="true" key="Procedure" name="Procedure"/>
-<artifact id="ValueSet/mcode-radiation-procedure-vs" key="radiation-procedure-value-set" name="Radiation Procedure Value Set"/>
+<artifact deprecated="true" id="ValueSet/mcode-radiation-procedure-value-set" key="radiation-procedure-value-set" name="Radiation Procedure Value Set"/>
 <artifact id="ValueSet/mcode-radiation-target-body-site-vs" key="radiation-target-body-site-value-set" name="Radiation Target Body Site Value Set"/>
 <artifact id="StructureDefinition/mcode-related-primary-cancer-condition" key="StructureDefinition-mcode-related-primary-cancer-condition" name="Related Primary Cancer Condition"/>
 <artifact deprecated="true" id="Extension/mcode-related-primary-cancer-condition-extension" key="related-primary-cancer-condition-extension" name="Related Primary Cancer Condition Extension"/>
@@ -122,6 +126,7 @@
 <artifact id="ValueSet/mcode-tnm-primary-tumor-category-vs" key="tnm-primary-tumor-category-value-set" name="TNM Primary Tumor Category Value Set"/>
 <artifact id="ValueSet/mcode-tnm-regional-nodes-category-vs" key="tnm-regional-nodes-category-value-set" name="TNM Regional Nodes Category Value Set"/>
 <artifact id="ValueSet/mcode-tnm-stage-group-vs" key="tnm-stage-group-value-set" name="TNM Stage Group Value Set"/>
+<artifact id="ValueSet/mcode-teleradiotherapy-technique-vs" key="ValueSet-mcode-teleradiotherapy-technique-vs" name="Teleradiotherapy Technique Value Set"/>
 <artifact id="StructureDefinition/mcode-termination-reason" key="StructureDefinition-mcode-termination-reason" name="Termination Reason"/>
 <artifact deprecated="true" id="Extension/mcode-termination-reason-extension" key="termination-reason-extension" name="Termination Reason Extension"/>
 <artifact id="StructureDefinition/mcode-treatment-intent" key="StructureDefinition-mcode-treatment-intent" name="Treatment Intent"/>
@@ -129,7 +134,8 @@
 <artifact id="ValueSet/mcode-treatment-intent-vs" key="treatment-intent-value-set" name="Treatment Intent Value Set"/>
 <artifact id="ValueSet/mcode-treatment-termination-reason-vs" key="treatment-termination-reason-value-set" name="Treatment Termination Reason Value Set"/>
 <artifact id="StructureDefinition/mcode-tumor" key="StructureDefinition-mcode-tumor" name="Tumor"/>
-<artifact id="StructureDefinition/mcode-tumor-marker-test" key="tumor-marker" name="Tumor Marker"/>
+<artifact deprecated="true" id="Profile/mcode-tumor-marker" key="tumor-marker" name="Tumor Marker"/>
+<artifact id="StructureDefinition/mcode-tumor-marker-test" key="StructureDefinition-mcode-tumor-marker-test" name="Tumor Marker Test"/>
 <artifact deprecated="true" id="ValueSet/mcode-tumor-marker-test-value-set" key="tumor-marker-test-value-set" name="Tumor Marker Test Value Set"/>
 <artifact id="StructureDefinition/mcode-tumor-size" key="StructureDefinition-mcode-tumor-size" name="Tumor Size"/>
 <artifact id="ValueSet/mcode-tumor-marker-test-vs" key="ValueSet-mcode-tumor-marker-test-vs" name="TumorMarkerTestVS"/>

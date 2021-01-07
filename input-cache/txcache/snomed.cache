@@ -11718,7 +11718,7 @@ v: {
   "resourceType" : "ValueSet",
   "compose" : {
     "include" : [{
-      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/mcode-other-specify-code-system",
+      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/mcode-other-code-cs",
       "concept" : [{
         "code" : "OtherHistologyMorphologyBehavior",
         "display" : "Other Histology Morphology Behavior, Specify"
@@ -11810,7 +11810,7 @@ v: {
   "resourceType" : "ValueSet",
   "compose" : {
     "include" : [{
-      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/mcode-other-specify-code-system",
+      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/mcode-other-code-cs",
       "concept" : [{
         "code" : "OtherHistologyMorphologyBehavior",
         "display" : "Other Histology Morphology Behavior, Specify"
@@ -12700,7 +12700,7 @@ v: {
   "resourceType" : "ValueSet",
   "compose" : {
     "include" : [{
-      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/mcode-other-specify-code-system",
+      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/mcode-other-code-cs",
       "concept" : [{
         "code" : "OtherCancerDisorder",
         "display" : "Other Cancer Disorder, Specify"
@@ -12731,7 +12731,7 @@ v: {
   "resourceType" : "ValueSet",
   "compose" : {
     "include" : [{
-      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/mcode-other-specify-code-system",
+      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/mcode-other-code-cs",
       "concept" : [{
         "code" : "OtherCancerDisorder",
         "display" : "Other Cancer Disorder, Specify"
@@ -13831,7 +13831,7 @@ v: {
   "resourceType" : "ValueSet",
   "compose" : {
     "include" : [{
-      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/mcode-other-specify-code-system",
+      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/mcode-other-code-cs",
       "concept" : [{
         "code" : "OtherHistologyMorphologyBehavior",
         "display" : "Other Histology Morphology Behavior, Specify"
@@ -13923,7 +13923,7 @@ v: {
   "resourceType" : "ValueSet",
   "compose" : {
     "include" : [{
-      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/mcode-other-specify-code-system",
+      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/mcode-other-code-cs",
       "concept" : [{
         "code" : "OtherHistologyMorphologyBehavior",
         "display" : "Other Histology Morphology Behavior, Specify"
@@ -14038,7 +14038,7 @@ v: {
   "resourceType" : "ValueSet",
   "compose" : {
     "include" : [{
-      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/mcode-other-specify-code-system",
+      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/mcode-other-code-cs",
       "concept" : [{
         "code" : "OtherPrimaryCancerCondition",
         "display" : "Other Primary Cancer Condition, Specify"
@@ -19031,7 +19031,7 @@ v: {
   "resourceType" : "ValueSet",
   "compose" : {
     "include" : [{
-      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/mcode-other-specify-code-system",
+      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/mcode-other-code-cs",
       "concept" : [{
         "code" : "OtherPrimaryCancerCondition",
         "display" : "Other Primary Cancer Condition, Specify"
@@ -24199,7 +24199,7 @@ v: {
   "resourceType" : "ValueSet",
   "compose" : {
     "include" : [{
-      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/mcode-other-specify-code-system",
+      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/mcode-other-code-cs",
       "concept" : [{
         "code" : "OtherSecondaryCancerCondition",
         "display" : "Other Secondary Cancer Condition, Specify"
@@ -25670,7 +25670,7 @@ v: {
   "resourceType" : "ValueSet",
   "compose" : {
     "include" : [{
-      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/mcode-other-specify-code-system",
+      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/mcode-other-code-cs",
       "concept" : [{
         "code" : "OtherHistologyMorphologyBehavior",
         "display" : "Other Histology Morphology Behavior, Specify"
@@ -25762,7 +25762,7 @@ v: {
   "resourceType" : "ValueSet",
   "compose" : {
     "include" : [{
-      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/mcode-other-specify-code-system",
+      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/mcode-other-code-cs",
       "concept" : [{
         "code" : "OtherHistologyMorphologyBehavior",
         "display" : "Other Histology Morphology Behavior, Specify"
@@ -25921,7 +25921,7 @@ v: {
   "resourceType" : "ValueSet",
   "compose" : {
     "include" : [{
-      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/mcode-other-specify-code-system",
+      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/mcode-other-code-cs",
       "concept" : [{
         "code" : "OtherPrimaryCancerCondition",
         "display" : "Other Primary Cancer Condition, Specify"
@@ -30914,7 +30914,7 @@ v: {
   "resourceType" : "ValueSet",
   "compose" : {
     "include" : [{
-      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/mcode-other-specify-code-system",
+      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/mcode-other-code-cs",
       "concept" : [{
         "code" : "OtherPrimaryCancerCondition",
         "display" : "Other Primary Cancer Condition, Specify"
@@ -35940,7 +35940,7 @@ v: {
   "resourceType" : "ValueSet",
   "compose" : {
     "include" : [{
-      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/mcode-other-specify-code-system",
+      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/mcode-other-code-cs",
       "concept" : [{
         "code" : "OtherSecondaryCancerCondition",
         "display" : "Other Secondary Cancer Condition, Specify"
@@ -113045,6 +113045,17 @@ e: {
     }]
   }
 },
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://snomed.info/sct",
+  "code" : "152198000",
+  "display" : "Brachytherapy (procedure)"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "Brachytherapy",
+  "severity" : null,
   "error" : ""
 }
 -------------------------------------------------------------------------------------

@@ -16,6 +16,7 @@ Alias:   HGNC = http://www.genenames.org   // MK 10-19-2020: changed to align wi
 Alias:   HGVS = http://varnomen.hgvs.org
 Alias:   SPTY = http://terminology.hl7.org/CodeSystem/v2-0487
 Alias:   SO = http://sequenceontology.org
+Alias:   MTH = https://uts.nlm.nih.gov/uts/umls
 Alias:   OmbRaceCat = urn:oid:2.16.840.1.113883.6.238
 
 // From Terminology.hl7.org

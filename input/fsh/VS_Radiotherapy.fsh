@@ -1,74 +1,71 @@
+//----------- MODALITIES -----------------------
+
 ValueSet:  RadiationModalityVS
 Id: mcode-radiation-modality-vs
-Title: "Radiation Procedure Value Set"
-Description: "Codes describing the major categories of radiation therapy procedures, for example, external application of beam (teleradiology), internal sealed-source (brachytherapy), or an unsealed-source radiopharmaceutical."
-* ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
-// External Beam
-* SCT#33195004 "Teleradiotherapy procedure (procedure)"
-* SCT#169291001 "X-ray beam therapy (procedure)" // photons
-* SCT#80347004 "Teleradiotherapy neutrons (procedure)"
-* SCT#10611004 "Teleradiotherapy protons (procedure)"
-* SCT#45643008 "Teleradiotherapy using electrons (procedure)"
-* SCT#312248006 "Heavy ion teletherapy (procedure)" // e.g., carbon ion
-// Brachytherapy
-C0454271  Low dose rate brachytherapy  // SCT#228868000 | Low dose rate brachytherapy (observable entity) |
-C0454270  High dose brachytherapy (procedure) SCT#394902000 | High dose brachytherapy (procedure) |
-C3897809  Pulsed-Dose Rate Brachytherapy
-C2584639  High dose rate electronic brachytherapy
+Title: "Radiation Modality Value Set"
+Description: "Codes describing the modalities of teleradiotherapy procedures."
+* include codes from valueset TeleradiotherapyModalityVS
+* include codes from valueset BrachytherapyModalityVS
 
-// Radiopharmaceutical
-* SCT#440252007 "Administration of radiopharmaceutical (procedure)"
-// potentially include injected radionuclide
+ValueSet:  TeleradiotherapyModalityVS
+Id: mcode-teleradiotherapy-modality-vs
+Title: "External Radiation Modality Value Set"
+Description: "Codes describing the modalities of teleradiotherapy procedures."
+* MTH#C1517033  "External Beam Radiation Therapy"
+* MTH#C0436226  "Proton Therapy"
+* MTH#C0454077  "Teleradiotherapy using electrons"
+* MTH#C0599266  "Neutron beam therapy"
+* MTH#C3494442  "Carbon Ion Radiotherapy"
+* MTH#C3539769  "Photon Beam Radiation Therapy"
+* MTH#C0043308  "X-Ray Therapy"
+* MTH#C0454060  "Grenz ray therapy"
+* MTH#C0203541  "Deep radiation therapy, 200-300 KVP"
+* OtherCode#OtherTeleradiotherapyModality "Other Teleradiotherapy Modality, Specify"
 
-
-ValueSet: RadiationTechniqueVS
-// External Beam
-C5236971  Conventional Radiotherapy   // 2D Radiotherapy
-441783000 | Conformal radiotherapy (procedure) |  // 3D
-441799006 | Intensity modulated radiation therapy (procedure) |    // C3489631 Volumetric-Modulated Arc Therapy 
-C3179062  Radiotherapy, Image-Guided  // IGRT
-C3896609  Stereotactic Body Radiation Therapy  // SBRT
-C3846112  Radiosurgery, Stereotactic // SRS
-// Brachytherapy
-* SCT#113120007 "Interstitial brachytherapy (procedure)"
-* SCT#384692006 "Intracavitary brachytherapy (procedure)"
-* MTH#C0338240  "Intraoperative radiation therapy"
-271291003 | Temporary implant radiotherapy (procedure) |
-C2169181   irradiation by permanent brachytherapy implants
+ValueSet: BrachytherapyModalityVS
+Id: mcode-brachytherapy-modality-vs
+Title: "External Radiation Modality Value Set"
+Description: "Codes describing the modalities of teleradiotherapy procedures."
+* MTH#C0006098  "Brachytherapy"
+* MTH#C0454271  "Low dose rate brachytherapy"
+* MTH#C0454270  "High dose brachytherapy"
+* MTH#C3897809  "Pulsed-Dose Rate Brachytherapy"
+* MTH#C2584639  "High dose rate electronic brachytherapy"
+* MTH#C0182638  "Radiopharmaceuticals"
+* MTH#C0203608  "Radionuclide therapy"
+* OtherCode#OtherBrachytherapyModality "Other Brachytherapy Modality, Specify"
 
 
+//----------- TECHNIQUES -----------------------
+
+ValueSet: TeleradiotherapyTechniqueVS
+Id: mcode-teleradiotherapy-technique-vs
+Title: "External Radiation Technique Value Set"
+Description: "Codes describing the techniques of teleradiotherapy procedures."
+* MTH#C3641897 "Scanning Proton Beam Therapy"
+* MTH#C5204571 "Intensity-Modulated Proton Therapy"
+* MTH#C5236971  "Conventional Radiotherapy"
+* MTH#C0600521  "Radiotherapy, Conformal"
+* MTH#C3840864  "Interoperative Radiation"
+* MTH#C1512814  "Radiotherapy, Intensity-Modulated"
+* MTH#C2367749  "intracranial stereotactic radiosurgery"
+* MTH#C3896654  "Image-Guided Adaptive Radiation Therapy" 
+* MTH#C3179062  "Radiotherapy, Image-Guided"  // IGRT	
+* MTH#C3896609  "Stereotactic Body Radiation Therapy" // SBRT	
+* MTH#C3846112  "Radiosurgery, Stereotactic" // SRS
 
 
-
-
-
-/*
-ValueSet:  RadiationTypeVS
-Id: mcode-radiation-type-vs
-Title: "Radiation Type Value Set"
-Description:    "Codes describing the type of radiation used to deliver treatment (e.g., photons, protons, x-rays), often called the modality of treatment."
-* ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
-SCT#82371002 "Proton beam (physical force)"
-SCT#285324001 "Neutron radiation (physical force)"
-SCT#312253001 "Heavy ion radiation (physical force)"  // e.g. carbon-ion
-SCT#73494004 "Electron beam (physical force)"
-SCT#312252006 "Positron beam radiation (physical force)"
-SCT#286630003 "Soft X-radiation (physical force)"
-SCT#286629008 "Hard X-radiation (physical force)"
-SCT#76772003 "Gamma radiation (physical force)"
-SCT#89457008 "Radioactive isotope (substance)"
-*/
-
-/*
-Radiation source -- radioisotope emission (iridium 192, iodine 131, palladium, cesium-137)
-Superficial X-rays – 60  to 150 keV
-Diagnostic X-rays – 20 to 150 keV
-Orthovoltage X-rays – 200 to 500 keV
-Supervoltage X-rays – 500 to 1000 keV
-Megavoltage X-rays – 1 to 25 MeV (High energy photons)
-*/
-
-
+ValueSet: BrachytherapyTechniqueVS
+Id: mcode-brachytherapy-technique-vs
+Title: "Brachytherapy Technique Value Set"
+Description: "Codes describing the techniques of brachytherapy (internal radiation) procedures."
+* MTH#C0021864  "Intracavity Radiotherapy"
+* MTH#C1881237  "Interstitial Radiation Therapy"
+* MTH#C0436270  "Temporary implant radiotherapy"
+* MTH#C2169181  "irradiation by permanent brachytherapy implants"
+* MTH#C3840864  "Interoperative Radiation"
+* MTH#C2986508  "Unsealed Internal Radiation Therapy"
+* MTH#C2169180  "brachytherapy using sealed isotopes"
 
 
 ValueSet:       RadiationTargetBodySiteVS

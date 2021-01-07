@@ -41,15 +41,17 @@ Description: "Includes surgical procedure codes from SNOMED CT, ICD-10-PCS and C
 * include codes from system ICD10PCS
 
 
-CodeSystem: OtherSpecifyCS
-Id: mcode-other-specify-code-system
-Title: "Other Specify Code System"
-Description: "A code system containing codes signifying a value set has been extended, using an 'Other ____, Specify' approach."
+CodeSystem: OtherCode
+Id: mcode-other-code-cs
+Title: "OtherCode Code System"
+Description: "A code system containing codes that signify a code outside a specified value set has been used, using an 'Other ____, Specify' approach."
 * #OtherPrimaryCancerCondition "Other Primary Cancer Condition, Specify" "Code to be used for concepts not represented elsewhere in the value set. Specify the desired concept as an additional coding."
 * #OtherSecondaryCancerCondition "Other Secondary Cancer Condition, Specify" "Code to be used for concepts not represented elsewhere in the value set. Specify the desired concept as an additional coding."
 * #OtherTumorMarkerTest "Other Tumor Marker Test, Specify" "Code to be used for concepts not represented elsewhere in the value set. Specify the desired concept as an additional coding."
 * #OtherCancerDisorder "Other Cancer Disorder, Specify" "Code to be used for concepts not represented elsewhere in the value set. Specify the desired concept as an additional coding."
 * #OtherHistologyMorphologyBehavior "Other Histology Morphology Behavior, Specify" "Code to be used for concepts not represented elsewhere in the value set. Specify the desired concept as an additional coding."
+* #OtherBrachytherapyModality "Other Brachytherapy Modality, Specify" "Code to be used for concepts not represented elsewhere in the value set. Specify the desired concept as an additional coding."
+* #OtherTeleradiotherapyModality "Other Teleradiotherapy Modality, Specify" "Code to be used for concepts not represented elsewhere in the value set. Specify the desired concept as an additional coding."
 
 ValueSet: LocationQualifierVS
 Id: mcode-location-qualifier-vs

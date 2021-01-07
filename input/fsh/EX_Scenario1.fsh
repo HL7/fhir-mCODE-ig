@@ -116,12 +116,13 @@ Description: "Extended example 1: example showing partial mastectomy surgical pr
 * bodySite = SCT#80248007 "Left breast structure (body structure)"
 
 Instance: scenario1-mcode-cancer-related-radiation-procedure
-InstanceOf: CancerRelatedRadiationProcedure
+InstanceOf: CancerRelatedTeleradiotherapyProcedure
 Description: "Extended example 1: example showing radiation treatment"
 * id = "scenario1-mcode-cancer-related-radiation-procedure"
 * extension[treatmentIntent].valueCodeableConcept = SCT#373808002 "Curative - procedure intent (qualifier value)"
 * status = #completed "completed"
-* code = SCT#385798007 "Radiation therapy care (regime/therapy)"
+* code = MTH#C0043308  "X-Ray Therapy"
+* extension[technique].valueCodeableConcept = MTH#C0600521 "Radiotherapy, Conformal"
 * subject = Reference(scenario1-mcode-cancer-patient)
 * performedDateTime = "2018-03-20"
 * asserter = Reference(scenario1-us-core-practitioner)
@@ -228,7 +229,7 @@ InstanceOf: TumorMarkerTest
 Description: "Extended example 1: example showing Oncotype DX breast recurrence score. Note that this test has no assigned LOINC code, so GTR is being used as a backup. Only the score from the Oncotype DX panel (as opposed to variant data from the genes in the panel) is represented here."
 * id = "scenario1-mcode-tumor-marker-test-oncotype-dx"
 * status = #final "final"
-* code.coding[0] = OtherSpecifyCS#OtherTumorMarkerTest "Other Tumor Marker Test, Specify"
+* code.coding[0] = OtherCode#OtherTumorMarkerTest "Other Tumor Marker Test, Specify"
 * code.coding[1] = GTR#509910 "Oncotype DX Breast Recurrence Score Assay"
 * code.text = "Oncotype DX Breast Recurrence Score Assay"
 * subject = Reference(scenario1-mcode-cancer-patient)

@@ -14,7 +14,7 @@ The bundle MUST also contain following mCODE-conformant resources, if available 
 * Observation resources representing any [TumorMarkerTests](StructureDefinition-mcode-tumor-marker-test.html)
 * MedicationRequest resources conforming to [CancerRelatedMedicationRequest](StructureDefinition-mcode-cancer-related-medication-request.html), representing cancer-related prescriptions, administrations, and patient-reported medications
 * Procedure resources representing any [CancerRelatedSurgicalProcedure](StructureDefinition-mcode-cancer-related-surgical-procedure.html) or [CancerRelatedRadiationProcedure](StructureDefinition-mcode-cancer-related-radiation-procedure.html)
-* Observation resources representing the TNM staging information ([see Disease Characterization profiles](artifacts.html#2))
+* Observation resources representing the TNM staging information
 * Observation resources representing [CancerGeneticVariant](StructureDefinition-mcode-cancer-genetic-variant.html) and [GenomicRegionStudied](StructureDefinition-mcode-genomic-region-studied.html)
 * DiagnosticReport resources representing [CancerGenomicsReport](StructureDefinition-mcode-cancer-genomics-report.html)
 * Specimen resources representing to [GeneticSpecimen](StructureDefinition-mcode-genetic-specimen.html)

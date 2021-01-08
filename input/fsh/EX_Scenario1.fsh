@@ -102,6 +102,8 @@ Description: "Extended example 1: example showing ECOG performance status"
 * interpretation = LNC#LA9622-7 "Fully active, able to carry on all pre-disease performance without restriction"
 * method = SCT#5880005 "Physical examination procedure (procedure)"
 
+
+
 Instance: scenario1-mcode-cancer-related-surgical-procedure-mastectomy
 InstanceOf: CancerRelatedSurgicalProcedure
 Description: "Extended example 1: example showing partial mastectomy surgical procedure"
@@ -125,6 +127,7 @@ Description: "Extended example 1: example showing radiation treatment"
 * extension[technique].valueCodeableConcept = NCIT#C16035 "3-Dimensional Conformal Radiation Therapy"
 * extension[dosePerFraction].valueQuantity = 200 'cGy'
 * extension[fractionsDelivered].valueInteger = 25
+* extension[totalDosePlanned].valueQuantity = 5000 'cGy'
 * extension[totalDoseDelivered].valueQuantity = 5000 'cGy'
 * subject = Reference(scenario1-mcode-cancer-patient)
 * performedPeriod.start = "2018-03-19"

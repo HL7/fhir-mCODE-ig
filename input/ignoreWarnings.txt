@@ -58,7 +58,25 @@ WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/mcode/Structure
 WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-ecog-performance-status').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
 # This error is inherited from cpb-15 " not(f:kind/@value='instance') or (not(exists(f:implementation)) and exists(f:software))"
 WARNING: StructureDefinition/MCodeCapabilityStatement: StructureDefinition.snapshot.element[0].constraint[6].xpath: value should not start or finish with whitespace
-# These codes are are valid
+# These codes ARE valid
+The code C28049 is not valid in the system http://ncithesaurus-stage.nci.nih.gov
+The code C66891 is not valid in the system http://ncithesaurus-stage.nci.nih.gov
+The code C15623 is not valid in the system http://ncithesaurus-stage.nci.nih.gov
+The code C94420 is not valid in the system http://ncithesaurus-stage.nci.nih.gov
+The code 342092 is not valid in the system http://terminology.hl7.org/CodeSystem/medcin
+The code 195192 is not valid in the system http://terminology.hl7.org/CodeSystem/medcin
+The code 195195 is not valid in the system http://terminology.hl7.org/CodeSystem/medcin
+The code C104941 is not valid in the system http://ncithesaurus-stage.nci.nih.gov
+The code C159611 is not valid in the system http://ncithesaurus-stage.nci.nih.gov
+The code C165189 is not valid in the system http://ncithesaurus-stage.nci.nih.gov
+The code C16035 is not valid in the system http://ncithesaurus-stage.nci.nih.gov
+The code C15623 is not valid in the system http://ncithesaurus-stage.nci.nih.gov
+The code C16135 is not valid in the system http://ncithesaurus-stage.nci.nih.gov
+The code C116432 is not valid in the system http://ncithesaurus-stage.nci.nih.gov
+The code C62727 is not valid in the system http://ncithesaurus-stage.nci.nih.gov
+The code C118286 is not valid in the system http://ncithesaurus-stage.nci.nih.gov
+The code C15358 is not valid in the system http://ncithesaurus-stage.nci.nih.gov
+The code 304003 is not valid in the system http://terminology.hl7.org/CodeSystem/medcin
 The code C15195 is not valid in the system http://ncithesaurus-stage.nci.nih.gov
 The code C85254 is not valid in the system http://ncithesaurus-stage.nci.nih.gov
 The code C15651 is not valid in the system http://ncithesaurus-stage.nci.nih.gov

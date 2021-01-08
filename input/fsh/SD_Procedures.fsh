@@ -33,7 +33,7 @@ Parent:   USCoreProcedure
 Id:       mcode-cancer-related-radiation-course
 Title:    "Cancer-Related Radiation Therapy Course"
 Description: "A course of radiation therapy addressing a cancer condition. A course of therapy consists of a number of phases, where a new phase begins when there is a change in the target volume of a body site, treatment fraction size, modality, or treatment technique. The scope of this profile has been narrowed to cancer-related procedures by constraining the reasonReference and reasonCode to cancer conditions, one of which is required."
-* code = MTH#C1522449 // "Therapeutic radiology procedure"
+* code = NCIT#C15313 // "Radiation Therapy"
 * extension contains 
     TerminationReason named terminationReason 0..1 MS and
     RadiationFractionsPlanned named fractionsPlanned 0..1 MS and

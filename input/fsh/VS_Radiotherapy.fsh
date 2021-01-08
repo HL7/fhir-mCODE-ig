@@ -38,30 +38,30 @@ ValueSet: TeleradiotherapyTechniqueVS
 Id: mcode-teleradiotherapy-technique-vs
 Title: "Teleradiotherapy Technique Value Set"
 Description: "Codes describing the techniques of teleradiotherapy (external beam) procedures."
-* MTH#C3641897  "Scanning Proton Beam Therapy"
-* MTH#C5204571  "Intensity-Modulated Proton Therapy"
-* MTH#C5236971  "Conventional Radiotherapy"
-* MTH#C0600521  "Radiotherapy, Conformal"
-* MTH#C3840864  "Interoperative Radiation"
-* MTH#C1512814  "Radiotherapy, Intensity-Modulated" // IMRT
-* MTH#C2367749  "intracranial stereotactic radiosurgery"
-* MTH#C3896654  "Image-Guided Adaptive Radiation Therapy" 
-* MTH#C3179062  "Radiotherapy, Image-Guided"  // IGRT	
-* MTH#C3896609  "Stereotactic Body Radiation Therapy" // SBRT	
-* MTH#C3846112  "Radiosurgery, Stereotactic" // SRS
+* NCIT#C104941  "Scanning Proton Beam Therapy"
+* NCIT#C159611  "Intensity-Modulated Proton Therapy"
+* NCIT#C165189  "Conventional Radiotherapy"
+* NCIT#C16035   "3-Dimensional Conformal Radiation Therapy"
+* NCIT#C15623   "Intraoperative Radiotherapy"
+* NCIT#C16135    "Intensity-Modulated Radiation Therapy" // IMRT
+* MEDCIN#304003 "intracranial stereotactic radiosurgery"
+* NCIT#C116432  "Image-Guided Adaptive Radiation Therapy" 
+* NCIT#C62727 "Image Guided Radiation Therapy"  // IGRT	
+* NCIT#C118286 "Stereotactic Body Radiation Therapy" // SBRT	
+* NCIT#C15358  "Stereotactic Radiosurgery" // SRS
 
 
 ValueSet: BrachytherapyTechniqueVS
 Id: mcode-brachytherapy-technique-vs
 Title: "Brachytherapy Technique Value Set"
 Description: "Codes describing the techniques of brachytherapy (internal radiation) procedures."
-* MTH#C0021864  "Intracavity Radiotherapy"
-* MTH#C1881237  "Interstitial Radiation Therapy"
-* MTH#C0436270  "Temporary implant radiotherapy"
-* MTH#C2169181  "irradiation by permanent brachytherapy implants"
-* MTH#C3840864  "Interoperative Radiation"
-* MTH#C2986508  "Unsealed Internal Radiation Therapy"
-* MTH#C2169180  "brachytherapy using sealed isotopes"
+* NCIT#C28049  "Intracavitary Radiation Therapy"
+* NCIT#C66891  "Interstitial Radiation Therapy"
+* MEDCIN#342092  "temporary radiation therapy implant"
+* MEDCIN#195192  "irradiation by permanent brachytherapy implants"
+* NCIT#C15623   "Intraoperative Radiotherapy"
+* NCIT#C94420  "Unsealed Internal Radiation Therapy"
+* MEDCIN#195195  "brachytherapy using sealed isotopes"
 
 
 ValueSet: RadiationTargetBodySiteVS

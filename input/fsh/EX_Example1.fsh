@@ -220,9 +220,9 @@ Description: "mCODE Example for Cancer Related Radiation Procedure"
 * id = "mCODECancerRelatedRadiationProcedureExample1"
 * meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-related-brachytherapy"
 * status = #completed "completed"
-* code = NCIT#C85254 "Low-Dose Rate Brachytherapy"  // MTH#C0454271  "Low dose rate brachytherapy"
-* extension[technique].valueCodeableConcept.coding[0] = MTH#C1881237  "Interstitial Radiation Therapy"
-* extension[technique].valueCodeableConcept.coding[1] = MTH#C0436270  "Temporary implant radiotherapy"
+* code = NCIT#C85254 "Low-Dose Rate Brachytherapy" 
+* extension[technique][0].valueCodeableConcept.coding = NCIT#C66891  "Interstitial Radiation Therapy"
+* extension[technique][1].valueCodeableConcept.coding =  MEDCIN#342092  "temporary radiation therapy implant"
 * subject = Reference(mCODEPatientExample1)
 * asserter = Reference(mCODEPractitionerExample1)
 * performedDateTime = "2019-03-01"

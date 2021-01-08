@@ -1,6 +1,5 @@
 == Suppressed Messages ==
 # Suppress warnings about unknown code systems
-Error from server: Unable to provide support for code system https://uts.nlm.nih.gov/uts/umls
 Error from server: Unable to provide support for code system http://sequenceontology.org
 Error from server: Unable to provide support for code system http://ncithesaurus-stage.nci.nih.gov
 Error from server: Unable to provide support for code system http://www.ncbi.nlm.nih.gov/clinvar
@@ -60,40 +59,6 @@ WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/mcode/Structure
 # This error is inherited from cpb-15 " not(f:kind/@value='instance') or (not(exists(f:implementation)) and exists(f:software))"
 WARNING: StructureDefinition/MCodeCapabilityStatement: StructureDefinition.snapshot.element[0].constraint[6].xpath: value should not start or finish with whitespace
 # These codes are are valid
-The code C0203608 is not valid in the system https://uts.nlm.nih.gov/uts/umls
-The code C3641897 is not valid in the system https://uts.nlm.nih.gov/uts/umls
-The code C5204571 is not valid in the system https://uts.nlm.nih.gov/uts/umls
-The code C5236971 is not valid in the system https://uts.nlm.nih.gov/uts/umls
-The code C0600521 is not valid in the system https://uts.nlm.nih.gov/uts/umls
-The code C3840864 is not valid in the system https://uts.nlm.nih.gov/uts/umls
-The code C1512814 is not valid in the system https://uts.nlm.nih.gov/uts/umls
-The code C2367749 is not valid in the system https://uts.nlm.nih.gov/uts/umls
-The code C3896654 is not valid in the system https://uts.nlm.nih.gov/uts/umls
-The code C3179062 is not valid in the system https://uts.nlm.nih.gov/uts/umls
-The code C3896609 is not valid in the system https://uts.nlm.nih.gov/uts/umls
-The code C3846112 is not valid in the system https://uts.nlm.nih.gov/uts/umls
-The code C0021864 is not valid in the system https://uts.nlm.nih.gov/uts/umls
-The code C1881237 is not valid in the system https://uts.nlm.nih.gov/uts/umls
-The code C0436270 is not valid in the system https://uts.nlm.nih.gov/uts/umls
-The code C2169181 is not valid in the system https://uts.nlm.nih.gov/uts/umls
-The code C3840864 is not valid in the system https://uts.nlm.nih.gov/uts/umls
-The code C2986508 is not valid in the system https://uts.nlm.nih.gov/uts/umls
-The code C2169180 is not valid in the system https://uts.nlm.nih.gov/uts/umls
-The code C0006098 is not valid in the system https://uts.nlm.nih.gov/uts/umls
-The code C0454271 is not valid in the system https://uts.nlm.nih.gov/uts/umls
-The code C0454270 is not valid in the system https://uts.nlm.nih.gov/uts/umls
-The code C3897809 is not valid in the system https://uts.nlm.nih.gov/uts/umls
-The code C2584639 is not valid in the system https://uts.nlm.nih.gov/uts/umls
-The code C0182638 is not valid in the system https://uts.nlm.nih.gov/uts/umls
-The code C1517033 is not valid in the system https://uts.nlm.nih.gov/uts/umls
-The code C0436226 is not valid in the system https://uts.nlm.nih.gov/uts/umls
-The code C0454077 is not valid in the system https://uts.nlm.nih.gov/uts/umls
-The code C0599266 is not valid in the system https://uts.nlm.nih.gov/uts/umls
-The code C3494442 is not valid in the system https://uts.nlm.nih.gov/uts/umls
-The code C3539769 is not valid in the system https://uts.nlm.nih.gov/uts/umls
-The code C0043308 is not valid in the system https://uts.nlm.nih.gov/uts/umls
-The code C0454060 is not valid in the system https://uts.nlm.nih.gov/uts/umls
-The code C0203541 is not valid in the system https://uts.nlm.nih.gov/uts/umls
 The code C15195 is not valid in the system http://ncithesaurus-stage.nci.nih.gov
 The code C85254 is not valid in the system http://ncithesaurus-stage.nci.nih.gov
 The code C15651 is not valid in the system http://ncithesaurus-stage.nci.nih.gov

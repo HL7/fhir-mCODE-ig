@@ -11,8 +11,6 @@ US Core defines two actors, US Core Requestor and US Core Responder, which are h
 
 Currently, the mCODE Implementation Guide provides CapabilityStatements and documentation for a **pull** architecture. The Implementation Guide does not currently provide specific conformance specifications for other architectures, though these may be added in the future if common use cases arise that do not fit with a pull model. Notwithstanding this, participants implementing a different architecture MUST follow the conformance requirements as defined on this page and elsewhere in the mCODE Implementation Guide EXCEPT for those specifically identified as applying to participants implementing a pull architecture.
 
-----
-
 ### Requirements for Conformance
 
 mCODE participants MUST meet the following requirements for conformance:
@@ -113,8 +111,6 @@ TODO: Consider merging this and the above section -- this might make sense if th
 
 mCODE Data Receivers implementing a pull architecture SHALL be able to initiate ALL the requests described above. Additionally, Receivers MUST be able to read and process ALL individual resources returned by the operations above that conform to mCODE profiles identified as supported by their CapabilityStatements.
 
-----
-
 ### Recommendations for Conformance
 
 mCODE participants SHOULD meet the following requirements for conformance:
@@ -149,8 +145,6 @@ These requirements originate from the base FHIR specification, not additional re
 #### Use mCODE Operations Whenever Possible
 
 Participants MAY support additional operations for communication between actors, such as for subscription or polling models. The operations described in the mCODE Implementation Guide SHOULD be used within such models whenever possible.
-
-----
 
 ### Conforming with mCODE Profiles
 

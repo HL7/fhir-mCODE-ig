@@ -896,3 +896,105 @@ e: {
   "error" : "Error from server: Unable to provide support for code system http://ncithesaurus-stage.nci.nih.gov"
 }
 -------------------------------------------------------------------------------------
+{"hierarchical" : true, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://ncithesaurus-stage.nci.nih.gov",
+      "concept" : [{
+        "code" : "C28049",
+        "display" : "Intracavitary Radiation Therapy"
+      },
+      {
+        "code" : "C66891",
+        "display" : "Interstitial Radiation Therapy"
+      },
+      {
+        "code" : "C15623",
+        "display" : "Intraoperative Radiotherapy"
+      },
+      {
+        "code" : "C94420",
+        "display" : "Unsealed Internal Radiation Therapy"
+      }]
+    },
+    {
+      "system" : "http://terminology.hl7.org/CodeSystem/medcin",
+      "concept" : [{
+        "code" : "342092",
+        "display" : "temporary radiation therapy implant"
+      },
+      {
+        "code" : "195192",
+        "display" : "irradiation by permanent brachytherapy implants"
+      },
+      {
+        "code" : "195195",
+        "display" : "brachytherapy using sealed isotopes"
+      }]
+    }]
+  }
+}}####
+e: {
+  "error" : "Error from server: Unable to provide support for code system http://ncithesaurus-stage.nci.nih.gov"
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://ncithesaurus-stage.nci.nih.gov",
+      "concept" : [{
+        "code" : "C104941",
+        "display" : "Scanning Proton Beam Therapy"
+      },
+      {
+        "code" : "C159611",
+        "display" : "Intensity-Modulated Proton Therapy"
+      },
+      {
+        "code" : "C165189",
+        "display" : "Conventional Radiotherapy"
+      },
+      {
+        "code" : "C16035",
+        "display" : "3-Dimensional Conformal Radiation Therapy"
+      },
+      {
+        "code" : "C15623",
+        "display" : "Intraoperative Radiotherapy"
+      },
+      {
+        "code" : "C16135",
+        "display" : "Intensity-Modulated Radiation Therapy"
+      },
+      {
+        "code" : "C116432",
+        "display" : "Image-Guided Adaptive Radiation Therapy"
+      },
+      {
+        "code" : "C62727",
+        "display" : "Image Guided Radiation Therapy"
+      },
+      {
+        "code" : "C118286",
+        "display" : "Stereotactic Body Radiation Therapy"
+      },
+      {
+        "code" : "C15358",
+        "display" : "Stereotactic Radiosurgery"
+      }]
+    },
+    {
+      "system" : "http://terminology.hl7.org/CodeSystem/medcin",
+      "concept" : [{
+        "code" : "304003",
+        "display" : "intracranial stereotactic radiosurgery"
+      }]
+    }]
+  }
+}}####
+e: {
+  "error" : "Error from server: Unable to provide support for code system http://ncithesaurus-stage.nci.nih.gov"
+}
+-------------------------------------------------------------------------------------

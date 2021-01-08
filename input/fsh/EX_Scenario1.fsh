@@ -121,7 +121,7 @@ Description: "Extended example 1: example showing radiation treatment"
 * id = "scenario1-mcode-cancer-related-radiation-procedure"
 * extension[treatmentIntent].valueCodeableConcept = SCT#373808002 "Curative - procedure intent (qualifier value)"
 * status = #completed "completed"
-* code = NCIT#C93338 "X-ray Therapy"
+* code = SCT#169291001 "X-ray beam therapy"
 * extension[technique].valueCodeableConcept = NCIT#C16035 "3-Dimensional Conformal Radiation Therapy"
 * extension[dosePerFraction].valueQuantity = 200 'cGy'
 * extension[fractionsDelivered].valueQuantity = 25 '1'

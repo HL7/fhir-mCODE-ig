@@ -9,3 +9,72 @@ v: {
   "error" : "The code system \"http://terminology.hl7.org/CodeSystem/medcin\" is not known (encountered paired with code = \"76787\"); The code provided (http://terminology.hl7.org/CodeSystem/medcin#76787) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4)"
 }
 -------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://terminology.hl7.org/CodeSystem/medcin",
+  "code" : "342092"
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code system \"http://terminology.hl7.org/CodeSystem/medcin\" is not known (encountered paired with code = \"342092\"); The code provided (http://terminology.hl7.org/CodeSystem/medcin#342092) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4)"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://terminology.hl7.org/CodeSystem/medcin",
+  "code" : "195192"
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code system \"http://terminology.hl7.org/CodeSystem/medcin\" is not known (encountered paired with code = \"195192\"); The code provided (http://terminology.hl7.org/CodeSystem/medcin#195192) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4)"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://terminology.hl7.org/CodeSystem/medcin",
+  "code" : "195195"
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code system \"http://terminology.hl7.org/CodeSystem/medcin\" is not known (encountered paired with code = \"195195\"); The code provided (http://terminology.hl7.org/CodeSystem/medcin#195195) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4)"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://terminology.hl7.org/CodeSystem/medcin",
+  "code" : "304003"
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code system \"http://terminology.hl7.org/CodeSystem/medcin\" is not known (encountered paired with code = \"304003\"); The code provided (http://terminology.hl7.org/CodeSystem/medcin#304003) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4)"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://terminology.hl7.org/CodeSystem/medcin",
+  "code" : "342092"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/medcin",
+      "concept" : [{
+        "code" : "342092",
+        "display" : "temporary radiation therapy implant"
+      },
+      {
+        "code" : "195192",
+        "display" : "irradiation by permanent brachytherapy implants"
+      },
+      {
+        "code" : "195195",
+        "display" : "brachytherapy using sealed isotopes"
+      }]
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code \"342092\" is not valid in the system http://terminology.hl7.org/CodeSystem/medcin; The code provided (http://terminology.hl7.org/CodeSystem/medcin#342092) is not valid (from http://tx.fhir.org/r4)"
+}
+-------------------------------------------------------------------------------------

@@ -24,6 +24,7 @@ RuleSet:  CancerRelatedRadiationProcedureRuleSet
     RadiationDosePerFraction named dosePerFraction 0..1 MS and
     RadiationFractionsPlanned named fractionsPlanned 0..1 MS and
     RadiationFractionsDelivered named fractionsDelivered 0..1 MS and
+    TotalRadiationDosePlanned named totalDosePlanned 0..1 MS and
     TotalRadiationDoseDelivered named totalDoseDelivered 0..1 MS
 * bodySite from RadiationTargetBodySiteVS (extensible)
 
@@ -31,18 +32,23 @@ Profile:  CancerRelatedRadiationCourse
 Parent:   USCoreProcedure
 Id:       mcode-cancer-related-radiation-course
 Title:    "Cancer-Related Radiation Therapy Course"
-Description: "A radiation course of treatment addressing a cancer condition consisting of a number of delivered phases or dose levels. The scope of this profile has been narrowed to cancer-related procedures by constraining the reasonReference and reasonCode to cancer conditions, one of which is required."
-* insert CancerRelatedRadiationProcedureRuleSet
+Description: "A course of radiation therapy addressing a cancer condition. A course of therapy consists of a number of phases, where a new phase begins when there is a change in the target volume of a body site, treatment fraction size, modality, or treatment technique. The scope of this profile has been narrowed to cancer-related procedures by constraining the reasonReference and reasonCode to cancer conditions, one of which is required."
 * code = MTH#C1522449 // "Therapeutic radiology procedure"
+* extension contains 
+    TerminationReason named terminationReason 0..1 MS and
+    RadiationFractionsPlanned named fractionsPlanned 0..1 MS and
+    RadiationFractionsDelivered named fractionsDelivered 0..1 MS and
+    TotalRadiationDosePlanned named totalDosePlanned 0..1 MS and
+    TotalRadiationDoseDelivered named totalDoseDelivered 0..1 MS
+* bodySite from RadiationTargetBodySiteVS (extensible)
+
 * performed[x] only Period
 
 Profile:  CancerRelatedTeleradiotherapyPhase
 Parent:   USCoreProcedure
 Id:       mcode-cancer-related-teleradiotherapy-phase
 Title:    "Cancer-Related Teleradiotherapy Phase"
-Description: "A radiological treatment phase addressing a cancer condition using teleradiology (external beam) therapy with one or more fractions. A new phase begins when there is a change in the target volume of a body site, treatment fraction size, modality or treatment technique (ref: STandards for Oncology Registry Entry, Jan. 2018).
-
-The scope of this profile has been narrowed to cancer-related procedures by constraining the reasonReference and reasonCode to cancer conditions, one of which is required.
+Description: "A radiological treatment phase addressing a cancer condition using teleradiology (external beam) therapy with one or more fractions. A new phase begins when there is a change in the target volume of a body site, treatment fraction size, modality, or treatment technique (ref: STandards for Oncology Registry Entry (STORE), Jan. 2018). The scope of this profile has been narrowed to cancer-related procedures by constraining the reasonReference and reasonCode to cancer conditions, one of which is required.
 
 Conformance statement:
 
@@ -62,19 +68,14 @@ Profile:  CancerRelatedBrachytherapy
 Parent:   USCoreProcedure
 Id:       mcode-cancer-related-brachytherapy
 Title:    "Cancer-Related Brachytherapy"
-Description: "A treatment addressing a cancer condition using brachytherapy (interal radiation). 
+Description: "A treatment addressing a cancer condition using brachytherapy (internal radiation). 
 
 The scope of this profile has been narrowed to cancer-related procedures by constraining the reasonReference and reasonCode to cancer conditions, one of which is required.
 
 Conformance statement:
 
 Procedure resources associated with an mCODE patient with Procedure.category SNOMED-CT 53438000 MAY conform to this profile. Beyond this requirement, a producer of resources SHOULD ensure that any resource instance associated with an mCODE patient that would reasonably be expected to conform to this profile SHOULD be published in this form. Specifically, we expect that any brachytherapy related to the treatment of a `PrimaryCancerCondition` or `SecondaryCancerCondition` would be published in this form."
-* insert CancerRelatedProcedureCommonRuleSet
-* category = SCT#53438000 //"Radiation therapy procedure or service (procedure)"
-* extension contains 
-    TerminationReason named terminationReason 0..1 MS and
-    RadiationProcedureTechnique named technique 0..* MS
-* bodySite from RadiationTargetBodySiteVS (extensible)
+* insert CancerRelatedRadiationProcedureRuleSet
 * code from BrachytherapyModalityVS (required)
 * code obeys cancer-related-brachytherapy-code-invariant
 * extension[technique].value[x] from BrachytherapyTechniqueVS (extensible)
@@ -116,6 +117,13 @@ Title: "Radiation Fractions Delivered"
 Description: "The total number of treatment sessions (fractions) administered in a given phase or during a course of therapy."
 * value[x] only Quantity
 * valueQuantity = UCUM#1
+
+Extension: TotalRadiationDosePlanned
+Id: mcode-total-radiation-dose-planned
+Title: "Total Radiation Dose Planned"
+Description: "The total amount of radiation dose planned for the course of therapy. (source: SNOMED, ASTRO)"
+* value[x] only Quantity
+* valueQuantity = UCUM#cGyv
 
 Extension: TotalRadiationDoseDelivered
 Id: mcode-total-radiation-dose-delivered

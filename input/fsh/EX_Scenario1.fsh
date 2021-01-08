@@ -124,10 +124,11 @@ Description: "Extended example 1: example showing radiation treatment"
 * code = SCT#169291001 "X-ray beam therapy"
 * extension[technique].valueCodeableConcept = NCIT#C16035 "3-Dimensional Conformal Radiation Therapy"
 * extension[dosePerFraction].valueQuantity = 200 'cGy'
-* extension[fractionsDelivered].valueQuantity = 25 '1'
+* extension[fractionsDelivered].valueInteger = 25
 * extension[totalDoseDelivered].valueQuantity = 5000 'cGy'
 * subject = Reference(scenario1-mcode-cancer-patient)
-* performedDateTime = "2018-03-20"
+* performedPeriod.start = "2018-03-19"
+* performedPeriod.end = "2018-05-22"
 * asserter = Reference(scenario1-us-core-practitioner)
 * reasonReference = Reference(scenario1-mcode-primary-cancer-condition)
 * bodySite = SCT#80248007 "Left breast structure (body structure)"

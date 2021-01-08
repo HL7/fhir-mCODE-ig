@@ -108,15 +108,13 @@ Extension: RadiationFractionsPlanned
 Id: mcode-radiation-fractions-planned
 Title: "Radiation Fractions Planned"
 Description: "The total number of treatment sessions (fractions) planned in a given phase or during a course of therapy."
-* value[x] only Quantity
-* valueQuantity = UCUM#1
+* value[x] only integer
 
 Extension: RadiationFractionsDelivered
 Id: mcode-radiation-fractions-delivered
 Title: "Radiation Fractions Delivered"
 Description: "The total number of treatment sessions (fractions) administered in a given phase or during a course of therapy."
-* value[x] only Quantity
-* valueQuantity = UCUM#1
+* value[x] only integer
 
 Extension: TotalRadiationDosePlanned
 Id: mcode-total-radiation-dose-planned

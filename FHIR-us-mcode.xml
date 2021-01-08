@@ -108,7 +108,7 @@
 <artifact id="StructureDefinition/mcode-radiation-dose-per-fraction" key="StructureDefinition-mcode-radiation-dose-per-fraction" name="Radiation Dose Per Fraction"/>
 <artifact id="StructureDefinition/mcode-radiation-fractions-delivered" key="StructureDefinition-mcode-radiation-fractions-delivered" name="Radiation Fractions Delivered"/>
 <artifact id="StructureDefinition/mcode-radiation-fractions-planned" key="StructureDefinition-mcode-radiation-fractions-planned" name="Radiation Fractions Planned"/>
-<artifact id="StructureDefinition/radiation-procedure-technique" key="StructureDefinition-radiation-procedure-technique" name="Radiation Procedure Technique"/>
+<artifact id="StructureDefinition/mcode-radiation-procedure-technique" key="StructureDefinition-mcode-radiation-procedure-technique" name="Radiation Procedure Technique"/>
 <artifact deprecated="true" id="ValueSet/mcode-radiation-procedure-value-set" key="radiation-procedure-value-set" name="Radiation Procedure Value Set"/>
 <artifact id="ValueSet/mcode-radiation-target-body-site-vs" key="radiation-target-body-site-value-set" name="Radiation Target Body Site Value Set"/>
 <artifact id="StructureDefinition/mcode-related-primary-cancer-condition" key="StructureDefinition-mcode-related-primary-cancer-condition" name="Related Primary Cancer Condition"/>
@@ -135,6 +135,7 @@
 <artifact id="StructureDefinition/mcode-termination-reason" key="StructureDefinition-mcode-termination-reason" name="Termination Reason"/>
 <artifact deprecated="true" id="Extension/mcode-termination-reason-extension" key="termination-reason-extension" name="Termination Reason Extension"/>
 <artifact id="StructureDefinition/mcode-total-radiation-dose-delivered" key="StructureDefinition-mcode-total-radiation-dose-delivered" name="Total Radiation Dose Delivered"/>
+<artifact id="StructureDefinition/mcode-total-radiation-dose-planned" key="StructureDefinition-mcode-total-radiation-dose-planned" name="Total Radiation Dose Planned"/>
 <artifact id="StructureDefinition/mcode-treatment-intent" key="StructureDefinition-mcode-treatment-intent" name="Treatment Intent"/>
 <artifact deprecated="true" id="Extension/mcode-treatment-intent-extension" key="treatment-intent-extension" name="Treatment Intent Extension"/>
 <artifact id="ValueSet/mcode-treatment-intent-vs" key="treatment-intent-value-set" name="Treatment Intent Value Set"/>

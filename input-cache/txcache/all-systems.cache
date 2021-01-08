@@ -838,3 +838,61 @@ e: {
   "error" : "Error from server: Unable to provide support for code system http://ncithesaurus-stage.nci.nih.gov"
 }
 -------------------------------------------------------------------------------------
+{"hierarchical" : true, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://ncithesaurus-stage.nci.nih.gov",
+      "concept" : [{
+        "code" : "C15751",
+        "display" : "External Beam Radiation Therapy"
+      },
+      {
+        "code" : "C66897",
+        "display" : "Proton Beam Radiation Therapy"
+      },
+      {
+        "code" : "C15650",
+        "display" : "Electron Beam Therapy"
+      },
+      {
+        "code" : "C15440",
+        "display" : "High-LET Neutron Therapy"
+      },
+      {
+        "code" : "C160816",
+        "display" : "Carbon Ion Radiation Therapy"
+      },
+      {
+        "code" : "C104914",
+        "display" : "Photon Beam Radiation Therapy"
+      }]
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "concept" : [{
+        "code" : "169291001",
+        "display" : "X-ray beam therapy"
+      },
+      {
+        "code" : "228661008",
+        "display" : "Grenz ray therapy"
+      },
+      {
+        "code" : "5304008",
+        "display" : "Orthovoltage X-ray therapy"
+      }]
+    },
+    {
+      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/mcode-other-code-cs",
+      "concept" : [{
+        "code" : "OtherTeleradiotherapyModality",
+        "display" : "Other Teleradiotherapy Modality, Specify"
+      }]
+    }]
+  }
+}}####
+e: {
+  "error" : "Error from server: Unable to provide support for code system http://ncithesaurus-stage.nci.nih.gov"
+}
+-------------------------------------------------------------------------------------

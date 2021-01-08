@@ -113309,3 +113309,363 @@ v: {
   "error" : ""
 }
 -------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://snomed.info/sct",
+  "code" : "169291001"
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "X-ray beam therapy",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://snomed.info/sct",
+  "code" : "228661008"
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "Grenz ray therapy",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://snomed.info/sct",
+  "code" : "5304008"
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "Deep radiation therapy, 200-300 KVP",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://snomed.info/sct",
+  "code" : "64368001"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://snomed.info/sct",
+      "concept" : [{
+        "code" : "169291001",
+        "display" : "X-ray beam therapy"
+      },
+      {
+        "code" : "228661008",
+        "display" : "Grenz ray therapy"
+      },
+      {
+        "code" : "5304008",
+        "display" : "Orthovoltage X-ray therapy"
+      }]
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code provided (http://snomed.info/sct#64368001) is not valid (from http://tx.fhir.org/r4)"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://snomed.info/sct",
+  "code" : "64368001",
+  "display" : "Partial mastectomy (procedure)"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://ncithesaurus-stage.nci.nih.gov",
+      "concept" : [{
+        "code" : "C15751",
+        "display" : "External Beam Radiation Therapy"
+      },
+      {
+        "code" : "C66897",
+        "display" : "Proton Beam Radiation Therapy"
+      },
+      {
+        "code" : "C15650",
+        "display" : "Electron Beam Therapy"
+      },
+      {
+        "code" : "C15440",
+        "display" : "High-LET Neutron Therapy"
+      },
+      {
+        "code" : "C160816",
+        "display" : "Carbon Ion Radiation Therapy"
+      },
+      {
+        "code" : "C104914",
+        "display" : "Photon Beam Radiation Therapy"
+      }]
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "concept" : [{
+        "code" : "169291001",
+        "display" : "X-ray beam therapy"
+      },
+      {
+        "code" : "228661008",
+        "display" : "Grenz ray therapy"
+      },
+      {
+        "code" : "5304008",
+        "display" : "Orthovoltage X-ray therapy"
+      }]
+    },
+    {
+      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/mcode-other-code-cs",
+      "concept" : [{
+        "code" : "OtherTeleradiotherapyModality",
+        "display" : "Other Teleradiotherapy Modality, Specify"
+      }]
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK"}####
+v: {
+  "display" : "Partial mastectomy",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://snomed.info/sct",
+  "code" : "723990008"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://snomed.info/sct",
+      "concept" : [{
+        "code" : "169291001",
+        "display" : "X-ray beam therapy"
+      },
+      {
+        "code" : "228661008",
+        "display" : "Grenz ray therapy"
+      },
+      {
+        "code" : "5304008",
+        "display" : "Orthovoltage X-ray therapy"
+      }]
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code provided (http://snomed.info/sct#723990008) is not valid (from http://tx.fhir.org/r4)"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://snomed.info/sct",
+  "code" : "723990008",
+  "display" : "Biopsy of breast using ultrasonographic guidance (procedure)"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://ncithesaurus-stage.nci.nih.gov",
+      "concept" : [{
+        "code" : "C15751",
+        "display" : "External Beam Radiation Therapy"
+      },
+      {
+        "code" : "C66897",
+        "display" : "Proton Beam Radiation Therapy"
+      },
+      {
+        "code" : "C15650",
+        "display" : "Electron Beam Therapy"
+      },
+      {
+        "code" : "C15440",
+        "display" : "High-LET Neutron Therapy"
+      },
+      {
+        "code" : "C160816",
+        "display" : "Carbon Ion Radiation Therapy"
+      },
+      {
+        "code" : "C104914",
+        "display" : "Photon Beam Radiation Therapy"
+      }]
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "concept" : [{
+        "code" : "169291001",
+        "display" : "X-ray beam therapy"
+      },
+      {
+        "code" : "228661008",
+        "display" : "Grenz ray therapy"
+      },
+      {
+        "code" : "5304008",
+        "display" : "Orthovoltage X-ray therapy"
+      }]
+    },
+    {
+      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/mcode-other-code-cs",
+      "concept" : [{
+        "code" : "OtherTeleradiotherapyModality",
+        "display" : "Other Teleradiotherapy Modality, Specify"
+      }]
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK"}####
+v: {
+  "display" : "Biopsy of breast using ultrasonographic guidance (procedure)",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://snomed.info/sct",
+  "code" : "71651007"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://snomed.info/sct",
+      "concept" : [{
+        "code" : "169291001",
+        "display" : "X-ray beam therapy"
+      },
+      {
+        "code" : "228661008",
+        "display" : "Grenz ray therapy"
+      },
+      {
+        "code" : "5304008",
+        "display" : "Orthovoltage X-ray therapy"
+      }]
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code provided (http://snomed.info/sct#71651007) is not valid (from http://tx.fhir.org/r4)"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://snomed.info/sct",
+  "code" : "71651007",
+  "display" : "Mammography (procedure)"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://ncithesaurus-stage.nci.nih.gov",
+      "concept" : [{
+        "code" : "C15751",
+        "display" : "External Beam Radiation Therapy"
+      },
+      {
+        "code" : "C66897",
+        "display" : "Proton Beam Radiation Therapy"
+      },
+      {
+        "code" : "C15650",
+        "display" : "Electron Beam Therapy"
+      },
+      {
+        "code" : "C15440",
+        "display" : "High-LET Neutron Therapy"
+      },
+      {
+        "code" : "C160816",
+        "display" : "Carbon Ion Radiation Therapy"
+      },
+      {
+        "code" : "C104914",
+        "display" : "Photon Beam Radiation Therapy"
+      }]
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "concept" : [{
+        "code" : "169291001",
+        "display" : "X-ray beam therapy"
+      },
+      {
+        "code" : "228661008",
+        "display" : "Grenz ray therapy"
+      },
+      {
+        "code" : "5304008",
+        "display" : "Orthovoltage X-ray therapy"
+      }]
+    },
+    {
+      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/mcode-other-code-cs",
+      "concept" : [{
+        "code" : "OtherTeleradiotherapyModality",
+        "display" : "Other Teleradiotherapy Modality, Specify"
+      }]
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK"}####
+v: {
+  "display" : "Mammography",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://snomed.info/sct",
+  "code" : "64368001"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://snomed.info/sct",
+      "filter" : [{
+        "property" : "concept",
+        "op" : "is-a",
+        "value" : "71388002"
+      }]
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "Partial mastectomy",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://snomed.info/sct",
+  "code" : "64368001",
+  "display" : "Partial mastectomy (procedure)"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://www.ama-assn.org/go/cpt"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "filter" : [{
+        "property" : "concept",
+        "op" : "is-a",
+        "value" : "71388002"
+      }]
+    },
+    {
+      "system" : "urn:oid:2.16.840.1.113883.6.285"
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK"}####
+v: {
+  "display" : "Partial mastectomy",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------

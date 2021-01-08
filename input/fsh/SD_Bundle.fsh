@@ -43,8 +43,9 @@ By default, this Bundle includes _all_ required resources described above, irres
     tumorMarkerTest 0..* MS and
     cancerRelatedMedicationRequest 0..* MS and
     cancerRelatedSurgicalProcedure 0..* MS and
+    cancerRelatedRadiationCourse 0..* MS and
     cancerRelatedBrachytherapy 0..* MS and
-    CancerRelatedTeleradiotherapyPhase 0..* MS and
+    cancerRelatedTeleradiotherapyPhase 0..* MS and
     tnmClinicalStageGroup 0..* MS and
     tnmClinicalPrimaryTumorCategory 0..* MS and
     tnmClinicalRegionalNodesCategory 0..* MS and
@@ -71,7 +72,8 @@ By default, this Bundle includes _all_ required resources described above, irres
 * entry[tumorMarkerTest] ^short = "Tumor Marker Tests"
 * entry[cancerRelatedMedicationRequest] ^short = "Cancer-Related Medication Request(s)"
 * entry[cancerRelatedSurgicalProcedure] ^short = "Cancer-Related Surgical Procedure(s)"
-* entry[CancerRelatedTeleradiotherapyPhase] ^short = "Cancer-Related Teleradiotherapy Phase(s)"
+* entry[cancerRelatedRadiationCourse] ^short = "Cancer-Related Radiation Course(s)"
+* entry[cancerRelatedTeleradiotherapyPhase] ^short = "Cancer-Related Teleradiotherapy Phase(s)"
 * entry[cancerRelatedBrachytherapy] ^short = "Cancer-Related Brachytherapy(s)"
 * entry[tnmClinicalStageGroup] ^short = "TNM Clinical Stage Group(s)"
 * entry[tnmClinicalPrimaryTumorCategory] ^short = "TNM Clinical Primary Tumor Category(-ies)"
@@ -99,7 +101,8 @@ By default, this Bundle includes _all_ required resources described above, irres
 * entry[tumorMarkerTest] ^definition = "Observations resource(s) representing Tumor Marker Tests."
 * entry[cancerRelatedMedicationRequest] ^definition = "Cancer-Related Medication Requests, including both active and inactive medications."
 * entry[cancerRelatedSurgicalProcedure] ^definition = "Procedure resource(s) representing cancer-related surgical procedures."
-* entry[CancerRelatedTeleradiotherapyPhase] ^definition = "Procedure resource(s) representing cancer-related external beam radiology procedures."
+* entry[cancerRelatedRadiationCourse] ^definition = "Procedure resource(s) representing a course of treatment in cancer-related radiology therapy."
+* entry[cancerRelatedTeleradiotherapyPhase] ^definition = "Procedure resource(s) representing a phase in treatment of cancer via external beam radiology procedures."
 * entry[cancerRelatedBrachytherapy] ^definition = "Procedure resource(s) representing cancer-related brachytherapy (internal) radiology procedures."
 * entry[tnmClinicalStageGroup] ^definition = "Observation resource(s) representing clinical stage group"
 * entry[tnmClinicalPrimaryTumorCategory] ^definition = "Observation resource(s) representing clinical T category"
@@ -127,7 +130,8 @@ By default, this Bundle includes _all_ required resources described above, irres
 * entry[tumorMarkerTest].resource only TumorMarkerTest
 * entry[cancerRelatedMedicationRequest].resource only CancerRelatedMedicationRequest
 * entry[cancerRelatedSurgicalProcedure].resource only CancerRelatedSurgicalProcedure
-* entry[CancerRelatedTeleradiotherapyPhase].resource only CancerRelatedTeleradiotherapyPhase
+* entry[cancerRelatedRadiationCourse].resource only CancerRelatedRadiationCourse
+* entry[cancerRelatedTeleradiotherapyPhase].resource only CancerRelatedTeleradiotherapyPhase
 * entry[cancerRelatedBrachytherapy].resource only CancerRelatedBrachytherapy
 * entry[tnmClinicalStageGroup].resource only TNMClinicalStageGroup
 * entry[tnmClinicalPrimaryTumorCategory].resource only TNMClinicalPrimaryTumorCategory

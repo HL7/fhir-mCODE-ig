@@ -4,6 +4,7 @@ ValueSet:  TeleradiotherapyModalityVS
 Id: mcode-teleradiotherapy-modality-vs
 Title: "Teleradiotherapy Modality Value Set"
 Description: "Codes describing the modalities of teleradiotherapy (external beam)procedures."
+* ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
 * NCIT#C15751  "External Beam Radiation Therapy"
 * NCIT#C66897 "Proton Beam Radiation Therapy"
 * NCIT#C15650 "Electron Beam Therapy"
@@ -20,6 +21,7 @@ ValueSet: BrachytherapyModalityVS
 Id: mcode-brachytherapy-modality-vs
 Title: "Brachytherapy Modality Value Set"
 Description: "Codes describing the modalities of brachytherapy (internal radiation) procedures."
+* ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
 * NCIT#C15195 "Brachytherapy"
 * NCIT#C85254 "Low-Dose Rate Brachytherapy"
 * NCIT#C15651  "High dose brachytherapy"

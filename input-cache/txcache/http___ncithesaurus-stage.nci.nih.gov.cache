@@ -19085,3 +19085,90 @@ v: {
   "error" : "The code \"C93338\" is not valid in the system http://ncithesaurus-stage.nci.nih.gov; The code provided (http://ncithesaurus-stage.nci.nih.gov#C93338) is not valid (from http://tx.fhir.org/r4)"
 }
 -------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://ncithesaurus-stage.nci.nih.gov",
+  "code" : "C15440"
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code system \"http://ncithesaurus-stage.nci.nih.gov\" is not known (encountered paired with code = \"C15440\"); The code provided (http://ncithesaurus-stage.nci.nih.gov#C15440) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4)"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://ncithesaurus-stage.nci.nih.gov",
+  "code" : "C93338"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://ncithesaurus-stage.nci.nih.gov",
+      "concept" : [{
+        "code" : "C15751",
+        "display" : "External Beam Radiation Therapy"
+      },
+      {
+        "code" : "C66897",
+        "display" : "Proton Beam Radiation Therapy"
+      },
+      {
+        "code" : "C15650",
+        "display" : "Electron Beam Therapy"
+      },
+      {
+        "code" : "C15440",
+        "display" : "High-LET Neutron Therapy"
+      },
+      {
+        "code" : "C160816",
+        "display" : "Carbon Ion Radiation Therapy"
+      },
+      {
+        "code" : "C104914",
+        "display" : "Photon Beam Radiation Therapy"
+      }]
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code \"C93338\" is not valid in the system http://ncithesaurus-stage.nci.nih.gov; The code provided (http://ncithesaurus-stage.nci.nih.gov#C93338) is not valid (from http://tx.fhir.org/r4)"
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://ncithesaurus-stage.nci.nih.gov",
+      "concept" : [{
+        "code" : "C15751",
+        "display" : "External Beam Radiation Therapy"
+      },
+      {
+        "code" : "C66897",
+        "display" : "Proton Beam Radiation Therapy"
+      },
+      {
+        "code" : "C15650",
+        "display" : "Electron Beam Therapy"
+      },
+      {
+        "code" : "C15440",
+        "display" : "High-LET Neutron Therapy"
+      },
+      {
+        "code" : "C160816",
+        "display" : "Carbon Ion Radiation Therapy"
+      },
+      {
+        "code" : "C104914",
+        "display" : "Photon Beam Radiation Therapy"
+      }]
+    }]
+  }
+}}####
+e: {
+  "error" : "Error from server: Unable to provide support for code system http://ncithesaurus-stage.nci.nih.gov"
+}
+-------------------------------------------------------------------------------------

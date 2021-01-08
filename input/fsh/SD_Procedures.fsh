@@ -88,7 +88,7 @@ Procedure resources associated with an mCODE patient with Procedure.category SNO
 
 // Unfortunately the extension procedure-method cannot be used because it is 0..1
 Extension: RadiationProcedureTechnique
-Id: radiation-procedure-technique
+Id: mcode-radiation-procedure-technique
 Title: "Radiation Procedure Technique"
 Description: "The method by which a radiation modality is applied (e.g., intensity modulated radiation therapy, intraoperative radiation therapy)."
 * . ^short = "Radiation Procedure Technique"
@@ -123,7 +123,7 @@ Id: mcode-total-radiation-dose-planned
 Title: "Total Radiation Dose Planned"
 Description: "The total amount of radiation dose planned for the course of therapy. (source: SNOMED, ASTRO)"
 * value[x] only Quantity
-* valueQuantity = UCUM#cGyv
+* valueQuantity = UCUM#cGy
 
 Extension: TotalRadiationDoseDelivered
 Id: mcode-total-radiation-dose-delivered

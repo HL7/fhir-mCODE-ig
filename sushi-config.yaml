@@ -86,6 +86,7 @@ groups:
     description: Profiles in the [mCODE **Treatments** Group](index.html#treatments-group).
     resources:
       - StructureDefinition/mcode-cancer-related-medication-request
+      - StructureDefinition/mcode-cancer-related-radiation-course
       - StructureDefinition/mcode-cancer-related-teleradiotherapy-phase
       - StructureDefinition/mcode-cancer-related-brachytherapy
       - StructureDefinition/mcode-cancer-related-surgical-procedure
@@ -125,6 +126,13 @@ groups:
       - StructureDefinition/mcode-related-primary-cancer-condition
       - StructureDefinition/mcode-termination-reason
       - StructureDefinition/mcode-treatment-intent
+      - StructureDefinition/mcode-radiation-procedure-technique
+      - StructureDefinition/mcode-radiation-dose-per-fraction
+      - StructureDefinition/mcode-radiation-fractions-planned
+      - StructureDefinition/mcode-radiation-fractions-delivered
+      - StructureDefinition/mcode-total-radiation-dose-planned
+      - StructureDefinition/mcode-total-radiation-dose-delivered
+
 
   # Value sets
   ValueSets:

@@ -28,7 +28,6 @@ The bundle itself MUST validate against the [MCODEPatientBundle](StructureDefini
 
 By default, this Bundle includes _all_ required resources described above, irrespective of care dates associated with the resources. For some types of resources, such as vital signs, a very large number of resources will therefore be included by default. To limit the number of included resources, callers MAY specify `start` and `end` parameters when requesting a patient's mCODE bundle via the Sender's FHIR API, which operate in the same way as for [the Fetch Patient Record operation](https://www.hl7.org/fhir/operation-patient-everything.html)."
 
-/* TODO update this file to match the description in `mcode-patient-bundle.md`. */
 * type  = #collection
 * insert BundleEntrySlicingRules
 * entry and entry.resource MS

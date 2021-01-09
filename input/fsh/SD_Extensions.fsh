@@ -58,17 +58,6 @@ Description: "Qualifier to refine the anatomical location. These include qualifi
 * value[x] only CodeableConcept
 * value[x] from LocationQualifierVS (required)
 
-Extension: RelatedPrimaryCancerCondition
-Id: mcode-related-primary-cancer-condition
-Title: "Related Primary Cancer Condition"
-Description: "A reference to the primary cancer condition that provides context for this resource."
-* . ^short = "Related Primary Cancer Condition"
-* . ^definition = "A reference to the primary cancer condition that provides context for this resource."
-* ^context[0].type = #element
-* ^context[0].expression = "Condition"
-* extension 0..0
-* value[x] only Reference(PrimaryCancerCondition)
-
 Extension: TerminationReason
 Id:  mcode-termination-reason
 Title: "Termination Reason"

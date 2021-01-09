@@ -1,10 +1,10 @@
 @startuml
 skinparam defaultFontName Arial
 
-title mCODE Patients: Pull Model - Implementation Option 2.3 (Fallback)
+title Identifying mCODE Patients: Conditions-then-patients approach
 hide footbox
-participant "mCODE Data Sender" as Sender
 participant "mCODE Data Receiver" as Receiver
+participant "mCODE Data Sender" as Sender
 
 group Get Conditions, then Patients
     "Receiver" -> "Sender" : ""GET [base]/Condition?code:in=...""

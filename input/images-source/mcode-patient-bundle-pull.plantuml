@@ -1,10 +1,10 @@
 @startuml
 skinparam defaultFontName Arial
 
-title mCODE Patient Bundle: Pull Model
+title Retrieving an mCODE Patient Bundle
 hide footbox
-participant "mCODE Data Sender" as Sender
 participant "mCODE Data Receiver" as Receiver
+participant "mCODE Data Sender" as Sender
 "Receiver" -> "Sender" : ""GET [base]/Patient/[id]/$mcode-everything""
 "Sender" --> "Receiver" : HTTP response containing mCODE Patient Bundle
 @enduml

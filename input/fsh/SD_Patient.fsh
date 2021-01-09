@@ -6,5 +6,5 @@ Description: "A patient who has been diagnosed with or is receiving medical trea
 
 Conformance Statement:
 
-Patient resources representing mCODE patients (as defined in Conformance) MUST conform to this profile. Any resource intended to conform to this profile SHOULD populate meta.profile accordingly."
+Patient resources representing mCODE patients (as defined on the [Conformance page](conformance.html)) MUST conform to this profile. Any resource intended to conform to this profile SHOULD populate `meta.profile` accordingly."
 * deceased[x] MS

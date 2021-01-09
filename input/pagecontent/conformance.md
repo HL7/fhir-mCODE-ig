@@ -1,173 +1,177 @@
-### mCODE Roles
+### mCODE Participant Roles
 
-Two roles are defined:
+Two roles for **mCODE Participants** are defined:
 
 * **mCODE Data Sender** - a participant in exchange of mCODE data who provides mCODE data in response to a data query or autonomously pushes mCODE data to an mCODE receiver. The data sender does not have to be the originator of the data it possesses.
 * **mCODE Data Receiver** - a participant in exchange of mCODE data who accepts mCODE data from an mCODE Data Sender.
 
 US Core defines two actors, US Core Requestor and US Core Responder, which are highly suggestive of a "pull" architecture. In mCODE, we use the terms Sender and Receiver, which are more neutral with respect to push and pull. However, for all practical purposes, there is an equivalence between US Core Requestor and mCODE Data Receiver, and similarly between US Core Responder and mCODE Data Sender.
 
-### Capability Statements
+#### Architecture
 
-[FHIR capability statements](http://hl7.org/fhir/R4/capabilitystatement.html) describe the capabilities of actual implementation or requirements of a desired solution. This IG provides capability statements that express requirements for mCODE Data Senders and mCODE Data Receivers.
+Currently, the mCODE Implementation Guide provides CapabilityStatements and documentation for a **pull** architecture. The Implementation Guide does not currently provide specific conformance specifications for other architectures, though these may be added in the future if common use cases arise that do not fit with a pull model. Notwithstanding this, participants implementing a different architecture MUST follow the conformance requirements as defined on this page and elsewhere in the mCODE Implementation Guide EXCEPT for those specifically identified as applying to participants implementing a pull architecture.
 
-#### Supported Profiles
+### Requirements for Conformance
 
-Each mCODE participant SHALL support the following profiles, which are core to representing an mCODE patient, UNLESS the necessary data to populate them is typically not available in their system:
+mCODE participants MUST meet the following requirements for conformance:
 
-* [CancerPatient](StructureDefinition-mcode-cancer-patient.html)
-* [PrimaryCancerCondition](StructureDefinition-mcode-primary-cancer-condition.html)
-* [MCODEPatientBundle](StructureDefinition-mcode-patient-bundle.html)
+#### Support Core Profiles
 
-Additionally, each mCODE participant SHOULD support all profiles defined in mCODE unless the participant does not anticipate supplying or consuming a certain type of data, usually by virtue of playing a limited or specialized role in clinical or information workflows. For example, a Genomics Laboratory may support GenomicsReport, but not vital signs or staging.
+Each mCODE participant MUST support the following profiles, core to representing an mCODE patient:
 
-Each mCODE participant SHALL publish a FHIR CapabilityStatement listing their supported profiles, by declaring the profile in CapabilityStatement.rest.resource.supportedProfile.
+* [CancerPatient]
+* [PrimaryCancerCondition] (a Condition resource with a code in the [PrimaryOrUncertainBehaviorCancerDisorderVS] value set)
 
-Supporting a profile requires implementation of certain behaviors. In particular, mCODE Data Senders SHALL:
+#### Follow Conformance Requirements for Supported Profiles
 
-1. Mark resources with profile assertions documenting the profile(s) they conform to, by populating meta.profile.
-2. Support searching by the _profile parameter for the declared profiles.
+See the ["Conforming with mCODE Profiles" section below](#conforming-with-mcode-profiles) for details.
 
-These requirements originate from the base FHIR specification, not additional requirements imposed by mCODE. Refer to the [FHIR Documentation on supported profiles](https://www.hl7.org/fhir/profiling.html#CapabilityStatement.rest.resource.supportedProfile) for details.
+#### Identify mCODE Patients
+
+To facilitate conformance testing, the testing software must be able to determine which patients are "mCODE Patients" -- meaning that they in scope for mCODE. All patients with confirmed cancer diagnoses SHOULD be covered by mCODE. In FHIR terms, these are patients who have a Condition where `Condition.code` is a member of the value set [PrimaryOrUncertainBehaviorCancerDisorderVS] and `Condition.verificationStatus` is confirmed.
+
+Due to technical, organizational, or legal reasons, mCODE Data Senders MAY exclude some cancer patients from mCODE. In that case, the mCODE Data Sender MUST define a Group resource to identify ALL mCODE patients in their system. This Group resource MUST set `Group.code` to `mcode-patient`. Data Senders that do not exclude any cancer patients from mCODE MAY still populate a `mcode-patient` Group resource.
+
+**All** mCODE Data Senders MUST respond to `GET [base]/Group?code=mcode-patient` with either zero or one Group resource. If zero Group resources are returned, all patients with cancer diagnoses (as defined above) will be considered to be "mCODE Patients." If a Group resource is returned, patients not referenced in the Group resource are assumed to be out of scope, independent of any cancer diagnosis. This requirement is reflected in ALL CapabilityStatements referenced in this section.
+
+The following CapabilityStatements define the various methods participants can use to identify mCODE Patients. Participants implementing a pull architecture MUST support at least one of the CapabilityStatements listed from **most to least preferable** below:
+
+1. **Patients-in-group** approach (CapabilityStatements for the [sender][mcode-sender-patients-in-group] and [receiver][mcode-receiver-patients-in-group]):
+
+    Senders respond to the following request with a Group resource referencing the Patient resources for all mCODE Patients, AND allow the Receiver to retrieve a Bundle of the Patient resources referenced in the first response using [composite search parameters](https://www.hl7.org/fhir/search.html#combining):
+
+        GET [base]/Group?code=mcode-patients
+
+        GET [base]/Patient?_id=some_patient_id_1,some_patient_id_2,...,some_patient_id_n
+
+    <!-- If the image below is not wrapped in a div tag, the publisher tries to wrap text around the image, which is not desired. -->
+    <div style="text-align: center;">{%include patients-in-group.svg%}</div>
+
+1. **Patients-with-cancer-condition** approach (CapabilityStatements for the [sender][mcode-sender-patients-with-cancer-condition] and [receiver][mcode-receiver-patients-with-cancer-condition]):
+
+    Senders respond to the following request with a Bundle of Patient resources for all mCODE Patients. This method is preferred over the approaches below UNLESS [reverse chaining](https://www.hl7.org/fhir/search.html#has) is entirely unsupported on the system.
+
+        GET [base]/Patient?_has:Condition:subject:code:in=http://hl7.org/fhir/us/mcode/ValueSet/mcode-primary-or-uncertain-behavior-cancer-disorder-vs
+
+    <!-- If the image below is not wrapped in a div tag, the publisher tries to wrap text around the image, which is not desired. -->
+    <div style="text-align: center;">{%include patients-with-cancer-condition.svg%}</div>
+
+1.  **Patient-then-cancer-conditions** approach (CapabilityStatements for the [sender][mcode-sender-patients-and-cancer-conditions] and [receiver][mcode-receiver-patients-and-cancer-conditions]):
+
+    Senders can respond to a request using [`_include`](https://www.hl7.org/fhir/search.html#revinclude) to get a Bundle of the relevant Patient resources along with the subset of Condition resources with `Condition.code` in [Primary or Uncertain Behavior Cancer Disorder Value Set][PrimaryOrUncertainBehaviorCancerDisorderVS] in a single request. Preferred over the approach below UNLESS `_include` is entirely unsupported on the system.
+
+        GET [base]/Condition?code:in=http://hl7.org/fhir/us/mcode/ValueSet/mcode-primary-or-uncertain-behavior-cancer-disorder-vs&_include=Condition:subject
+
+    <!-- If the image below is not wrapped in a div tag, the publisher tries to wrap text around the image, which is not desired. -->
+    <div style="text-align: center;">{%include patients-and-cancer-conditions.svg%}</div>
+
+1. **Conditions-then-patients** approach (CapabilityStatements for the [sender][mcode-sender-cancer-conditions-then-patients] and [receiver][mcode-receiver-cancer-conditions-then-patients]):
+
+    Senders return a Bundle with the subset of Condition resources with a `code` in the [Primary or Uncertain Behavior Cancer Disorder Value Set][PrimaryOrUncertainBehaviorCancerDisorderVS] in a single request, AND allow the Receiver to retrieve a Bundle of the Patient resources referenced in the first response using [composite search parameters](https://www.hl7.org/fhir/search.html#combining):
+
+        GET [base]/Condition?code:in=http://hl7.org/fhir/us/mcode/ValueSet/mcode-primary-or-uncertain-behavior-cancer-disorder-vs
+
+        GET [base]/Patient?_id=some_patient_id_1,some_patient_id_2,...,some_patient_id_n
+
+    <!-- If the image below is not wrapped in a div tag, the publisher tries to wrap text around the image, which is not desired. -->
+    <div style="text-align: center;">{%include cancer-conditions-then-patients.svg%}</div>
+
+#### Retrieve a Patient Resource
+
+Participants shall implement the following operation for retrieving a Patient resource by `id`. For the pull architecture, this requirement is included in all of the CapabilityStatements in the [Identify mCODE Patients](#identify-mcode-patients) section above.
+
+    GET [base]/Patient/[id]
+
+<!-- If the image below is not wrapped in a div tag, the publisher tries to wrap text around the image, which is not desired. -->
+<div style="text-align: center;">{%include mcode-patient-pull.svg%}</div>
+
+#### Publish a CapabilityStatement Identifying Supported Profiles and Operations
+
+Each mCODE participant MUST publish a FHIR CapabilityStatement listing their supported profiles, by declaring the profile in `CapabilityStatement.rest.resource.supportedProfile`. The CapabilityStatement SHALL be returned in response to a GET request to `base-url/metadata`.
+
+This MUST include [CancerPatient] and [PrimaryCancerCondition] (unless they are not supported as described [above](#support-core-profiles)), as well as any other mCODE Profiles supported on the system.
+
+<!-- TODO: Provide examples of what this would look like.-->
+
+#### Support Querying mCODE-Conforming Resources
+
+The following FHIR requests return resources that MUST conform to an mCODE profile (if the associated Patient is considered an "mCODE Patient" as described above):
+
+<!-- TODO: Provide examples of what this would look like.-->
+
+mCODE participants MUST support these requests UNLESS they do not support the profile at all (see ["Support All mCODE Profiles"](#support-all-mcode-profiles) below).
+
+#### Support US Core Conformance Requirements
 
 Additional [conformance requirements from US Core](http://hl7.org/fhir/us/core/capstatements.html) apply to RESTful interactions, searches, and resource formats.
 
-#### Supported Operations
+<!-- TODO: Consider merging this and the above section -- this might make sense if the US Core conformance requirements apply to the queries for mCODE-conforming resources.-->
 
-mCODE participants SHALL support AT LEAST one set of role-specific operations defined below, and SHALL publish a FHIR CapabilityStatement indicating the operations they support.
+#### Receivers Meaningfully Process mCODE Resources
 
-Participants MAY support additional operations for communication between actors, such as for subscription or polling models. The operations described below SHOULD be used within such models whenever possible.
+mCODE Data Receivers implementing a pull architecture SHALL be able to initiate ALL the requests described above. Additionally, Receivers MUST be able to meaningfully process the MustSupport ALL individual resources returned by the operations above that conform to mCODE profiles identified as supported by their CapabilityStatements. "Meaningfully Process" is context-specific, and may mean display, store, analyze, or otherwise deal with that data.
 
-##### Role: mCODE Data Senders
+### Recommendations for Conformance
 
-mCODE Data Senders SHALL support the following operations:
+mCODE participants SHOULD meet the following requirements for conformance:
 
-1. **Retrieve mCODE Patient.** mCODE Data Senders SHALL implement the following operation for retrieving a Patient resource by `id` UNLESS they are a specialty system that does not implement `CancerPatient` due to unavailable data as described above.
+#### Support All mCODE Profiles
 
-        GET [base]/Patient/[id]
+In addition to supporting the core profiles as described above, mCODE participants SHOULD support all profiles defined in mCODE UNLESS the participant does not anticipate supplying or consuming a certain type of data, usually by virtue of playing a limited or specialized role in clinical or information workflows. For example, a genomics laboratory may support [CancerGenomicsReport], but not vital signs or staging.
 
-    <!-- If the image below is not wrapped in a div tag, the publisher tries to wrap text around the image, which is not desired. -->
-    <div style="text-align: center;"><img src="mcode-patient-pull.svg" alt="UML swimlane diagram showing mCODE Patient operation."></div>
+Participants SHOULD also support the non-mCODE-specific profiles that are considered part of an [mCODE Patient Bundle][MCODEPatientBundle], such as [blood pressure](http://hl7.org/fhir/StructureDefinition/bp).
 
-1. **List mCODE Patients**. mCODE Data Senders SHALL implement AT LEAST ONE of the following operations UNLESS they are a specialty system that does not implement `CancerPatient` due to unavailable data as described above.
+#### Support the mCODE Patient Bundle
 
-    1. **Preferred:** Identify Patient resources conforming to [CancerPatient](StructureDefinition-mcode-cancer-patient.html) via the `meta.profile` element. This is the only option for systems implementing mCODE for a subset of cancer patients (see below), and the **preferred** option for all mCODE Data Senders.
+The [mCODE Patient Bundle][MCODEPatientBundle] provides a mechanism to retrieve all mCODE-conforming resources for an mCODE Patient. Participants SHOULD support this CapabilityStatement ([sender][mcode-sender-patient-bundle]/[receiver][mcode-receiver-patient-bundle]) for [this operation](OperationDefinition-mcode-patient-everything.html), which retrieves an mCODE Patient Bundle for a given Patient ID.
 
-        Systems implementing this option SHALL respond to the following request with a Bundle of Patient resources for all mCODE Patients:
+    GET [base]/Patient/[id]/$mcode-everything
 
-            GET [base]/Patient?_profile=http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-patient
+This endpoint SHALL support `start` and `end` parameters which operate the same as in the [`Patient/[id]/$everything` operation](https://www.hl7.org/fhir/operation-patient-everything.html).
 
-        <!-- If the image below is not wrapped in a div tag, the publisher tries to wrap text around the image, which is not desired. -->
-        <div style="text-align: center;"><img src="mcode-patients-pull-1.svg" alt="UML swimlane diagram showing mCODE Patients operations in the pull model: Option 1, preferred."></div>
-
-    1. **Fallback:** One of the fallback options below SHALL be supported if both of the following conditions are met: (1) the preferred option described above cannot be used because `meta.profile` and the [`_profile` search parameter](https://www.hl7.org/fhir/search.html#all) are entirely unsupported on the system; AND (2) ALL Patient resources referenced by Conditions with codes in the [Primary or Uncertain Behavior Cancer Disorder Value Set] conform to [CancerPatient](StructureDefinition-mcode-cancer-patient.html). **The fallback options are listed in order from most to least preferable.**
-
-        1. Systems implementing this option SHALL respond to the following request with a Bundle of Patient resources for all mCODE Patients, UNLESS [reverse chaining](https://www.hl7.org/fhir/search.html#has) is entirely unsupported on the system:
-
-                GET [base]/Patient?_has:Condition:subject:code:in=http://hl7.org/fhir/us/mcode/ValueSet/mcode-primary-or-uncertain-behavior-cancer-disorder-vs
-
-                # Return Bundle of Patient resources that are referenced in the subset of Condition resources with a `code` in the Primary or Uncertain Behavior Cancer Disorder Value Set
-
-            <!-- If the image below is not wrapped in a div tag, the publisher tries to wrap text around the image, which is not desired. -->
-            <div style="text-align: center;"><img src="mcode-patients-pull-2_1.svg" alt="UML swimlane diagram showing mCODE Patients operations in the pull model: Option 2.1, fallback."></div>
-
-        1. Use [`_include`](https://www.hl7.org/fhir/search.html#revinclude) to get a Bundle of the relevant `Patient` resources along with the subset of Condition resources with a `code` in [Primary or Uncertain Behavior Cancer Disorder Value Set] in a single request, unless `_include` is entirely unsupported on the system:
-
-                GET [base]/Condition?code:in=http://hl7.org/fhir/us/mcode/ValueSet/mcode-primary-or-uncertain-behavior-cancer-disorder-vs&_include=Condition:subject
-
-            <!-- If the image below is not wrapped in a div tag, the publisher tries to wrap text around the image, which is not desired. -->
-            <div style="text-align: center;"><img src="mcode-patients-pull-2_2.svg" alt="UML swimlane diagram showing mCODE Patients operations in the pull model: Option 2.2, fallback."></div>
-
-        1. Return a Bundle with the subset of Condition resources with a `code` in the [Primary or Uncertain Behavior Cancer Disorder Value Set] in a single request, AND allow the Requestor to retrieve a Bundle of the Patient resources referenced in the first response using [composite search parameters](https://www.hl7.org/fhir/search.html#combining):
-
-                GET [base]/Condition?code:in=http://hl7.org/fhir/us/mcode/ValueSet/mcode-primary-or-uncertain-behavior-cancer-disorder-vs
-
-                GET [base]/Patient?_id=some_patient_id_1,some_patient_id_2,...,some_patient_id_n
-
-            <!-- If the image below is not wrapped in a div tag, the publisher tries to wrap text around the image, which is not desired. -->
-            <div style="text-align: center;"><img src="mcode-patients-pull-2_3.svg" alt="UML swimlane diagram showing mCODE Patients operations in the pull model: Option 2.3, fallback."></div>
-
-1. **Retrieve mCODE Patient Bundle**. mCODE Data Senders SHALL implement the [this operation](OperationDefinition-mcode-patient-everything.html), which retrieves an mCODE Patient Bundle (defined below) for a given Patient ID.
-
-        GET [base]/Patient/[id]/$mcode-everything
-
-    This endpoint SHALL support `start` and `end` parameters which operate the same as in the [`Patient/[id]/$everything` operation](https://www.hl7.org/fhir/operation-patient-everything.html).
-
-    <!-- If the image below is not wrapped in a div tag, the publisher tries to wrap text around the image, which is not desired. -->
-    <div style="text-align: center;"><img src="mcode-patient-bundle-pull.svg" alt="UML swimlane diagram showing mCODE Patient Bundle operations in the push model"></div>
-
-##### Role: mCODE Data Receivers
-
-**mCODE Data Receivers** SHALL be able to initiate ALL the requests described above. Additionally, they SHALL be able to read and process ALL individual resources returned by the operations above that conform to mCODE profiles identified as supported by their CapabilityStatements.
-
-##### CapabilityStatement Resources
-
-To implement the operations described above, participants SHALL comply with one of the CapabilityStatements below:
-
-* mCODE Data Senders
-    1. [`mcode-sender-preferred`]
-    1. [`mcode-sender-fallback1`]
-    1. [`mcode-sender-fallback2`]
-    1. [`mcode-sender-fallback3`]
-* mCODE Data Receivers
-    1. [`mcode-receiver-preferred`]
-    1. [`mcode-receiver-fallback1`]
-    1. [`mcode-receiver-fallback2`]
-    1. [`mcode-receiver-fallback3`]
-
-[`mcode-sender-preferred`]: CapabilityStatement-mcode-sender-preferred.html
-[`mcode-sender-fallback1`]: CapabilityStatement-mcode-sender-fallback1.html
-[`mcode-sender-fallback2`]: CapabilityStatement-mcode-sender-fallback2.html
-[`mcode-sender-fallback3`]: CapabilityStatement-mcode-sender-fallback3.html
-[`mcode-receiver-preferred`]: CapabilityStatement-mcode-receiver-preferred.html
-[`mcode-receiver-fallback1`]: CapabilityStatement-mcode-receiver-fallback1.html
-[`mcode-receiver-fallback2`]: CapabilityStatement-mcode-receiver-fallback2.html
-[`mcode-receiver-fallback3`]: CapabilityStatement-mcode-receiver-fallback3.html
-
-These map one-to-one onto the operations described above.
-
-### mCODE Patients
-
-To facilitate conformance testing, the testing software must be able to determine which patients are "mCODE Patients" -- in scope for mCODE. All patients with confirmed cancer diagnoses SHOULD be covered by mCODE. In FHIR terms, these are patients who have a Condition where Condition.code is a member of the value set [`PrimaryOrUncertainBehaviorCancerDisorderVS`](ValueSet-mcode-primary-or-uncertain-behavior-cancer-disorder-vs.html) and `Condition.verificationStatus` is confirmed.
-
-Due to technical, organizational, or legal reasons, mCODE Data Senders MAY exclude some cancer patients from mCODE. In that case, the mCODE Data Sender MUST implement [profile search](https://www.hl7.org/fhir/search.html#profile) and indicate which patients fall into the scope of mCODE by populating `Patient.meta.profile` with the mCODE CancerPatient profile (`http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-patient`). Patients not explicitly indicated by this method are assumed to be out of scope, independent of any cancer diagnosis.
-
-### mCODE Patient Bundle
-
-An [mCODE Patient Bundle](StructureDefinition-mcode-patient-bundle-definitions.html) is the complete set of data for a particular patient corresponding to the set of supported profiles of an mCODE Data Sender. An mCODE Data Sender MUST be capable of producing a valid mCODE bundle for all of its mCODE patients (as [defined above](#mcode-patients)).
+<!-- If the image below is not wrapped in a div tag, the publisher tries to wrap text around the image, which is not desired. -->
+<div style="text-align: center;">{%include mcode-patient-bundle-pull.svg%}</div>
 
 mCODE Patient Bundles SHALL be identified by an `id` value that matches the `id` in the contained CancerPatient-conforming resource.
 
-### mCODE Profiles
+#### Use `meta.profile` to Signal Conformance
 
-The documentation of each mCODE profile includes criteria for which FHIR resources are expected to comply with that profile. For example, in CancerDiseaseStatus, the conformance criteria states that any resource associated with an mCODE patient (as [defined above](#mcode-patients)) that represent an observation of patient's response to cancer treatment SHALL conform to that profile.
+Participants SHOULD populate `meta.profile` elements for all resources to indicate which profiles the resources should conform to.
 
-Each mCODE profile expresses requirements and expectations for individual mCODE instances in terms of structural constraints and terminology bindings. Any FHIR resources claiming to conform to mCODE must [validate](https://www.hl7.org/fhir/validation.html) against the declared mCODE profile.
+Participants SHOULD also implement [profile search](https://www.hl7.org/fhir/search.html#profile), which allows participants to query using the `_profile` parameter to return resources conforming to the profiles declared in `meta.profile`.
 
-### Conformance to US Core
+The profile search requirement originates from the base FHIR specification. It is not an additional requirement imposed by mCODE. Refer to the [FHIR Documentation on supported profiles](https://www.hl7.org/fhir/profiling.html#CapabilityStatement.rest.resource.supportedProfile) for details.
 
-Most mCODE profiles are based on US Core profiles defined in the [US Core Implementation Guide (v3.1.1)](http://hl7.org/fhir/us/core/index.html). For example, the CancerGeneticVariant profile is based on US Core Laboratory Result Observation Profile and CancerPatient is based on the US Core Patient profile. If a resource validates against any of the US Core-based mCODE profiles, it will be in compliance with US Core.
+### Conforming with mCODE Profiles
 
-Where US Core does not provide an appropriate base profile, mCODE profiles FHIR resources. An example is CancerDiseaseStatus, based on Observation because US Core does not provide a profile for non-laboratory observations.
+Each [mCODE profile](artifacts.html#1) includes conformance criteria describing which resources MUST or SHOULD conform to mCODE profiles. For example, in [CancerDiseaseStatus], the conformance criteria states that any resource associated with an mCODE Patient (as [defined above](#identify-mcode-patients)) that represent an observation of patient's response to cancer treatment MUST conform to that profile.
 
-### MustSupport Interpretation
+Each mCODE profile expresses requirements and expectations for individual mCODE instances in terms of structural constraints and terminology bindings. Any FHIR resources claiming to conform to mCODE MUST [validate](https://www.hl7.org/fhir/validation.html) against the declared mCODE profile.
+
+#### Conformance to US Core
+
+Most mCODE profiles are based on US Core profiles defined in the [US Core Implementation Guide (v3.1.1)](http://hl7.org/fhir/us/core/index.html). For example, the [CancerGeneticVariant] profile is based on [US Core Laboratory Result Observation Profile][USCoreLaboratoryResultObservationProfile] and [CancerPatient] is based on the [US Core Patient][USCorePatientProfile] profile. If a resource validates against any of the mCODE profiles based on US Core, it will be in compliance with US Core.
+
+Where US Core does not provide an appropriate base profile, mCODE profiles FHIR resources. An example is [CancerDiseaseStatus], based on Observation because US Core does not provide a profile for non-laboratory observations.
+
+#### MustSupport Interpretation
 
 The [MustSupport](https://www.hl7.org/fhir/conformance-rules.html#mustSupport) flag indicates that implementation shall provide "meaningful support" for the element, as defined by its implementation guide. The mCODE definitions of MustSupport encompass the [definitions in US Core](http://hl7.org/fhir/us/core/general-guidance.html#must-support). mCODE defines MustSupport as follows:
 
-* **mCODE Data Sender** - MustSupport is interpreted as "must populate". That is, every required and MustSupport element in a supported mCODE profile SHALL be populated if the Data Sender has that data.
+* **mCODE Data Sender** - MustSupport is interpreted as "must populate if known". That is, every required and MustSupport element in a supported mCODE profile MUST be populated if the Data Sender has that data.
 
-* **mCODE Data Receiver** - MustSupport is interpreted as "must display" or "must store". That is, a Data Receiver SHALL be capable of receiving and displaying or storing each required and MustSupport element in an mCODE bundle, provided the corresponding profile has been declared as a "supportedProfile" in the receiver's capability statement.
+* **mCODE Data Receiver** - MustSupport is interpreted as "able to meaningfully process". "Meaningfully Process" is contextual, and for various receivers may mean display, store, analyze, or otherwise deal with that data.
 
-### Missing/Unknown Data Elements
+#### Missing/Unknown Data Elements
 
 The handling of missing or unknown elements in mCODE is functionally identical to US Core, specifically:
 
-* In situations where information on a particular data element is not present and the reason for absence is unknown, mCODE Data Senders SHALL NOT include the data elements in the resource instance.
-* mCODE Data Receivers SHALL interpret missing data elements within resource instances as data not present in the mCODE Data Sender's system.
-* In situations where information on a particular data element is missing and the mCODE Data Sender knows the reason for the absence of data, the Data Sender SHALL send the reason for the missing information. The absence reason value SHOULD come first from the element's value set if it exists or otherwise from the dataAbsentReason extension.
-* mCODE Data Receivers SHALL be able to process resource instances containing data elements asserting missing information.
+* In situations where information on a particular data element is not present and the reason for absence is unknown, mCODE Data Senders MUST NOT include the data elements in the resource instance.
+* mCODE Data Receivers MUST interpret missing data elements within resource instances as data not present in the mCODE Data Sender's system.
+* In situations where information on a particular data element is missing and the mCODE Data Sender knows the reason for the absence of data, the Data Sender MUST send the reason for the missing information. The absence reason value SHOULD come first from the element's value set if it exists or otherwise from the `dataAbsentReason` element (if present) or extension.
+* mCODE Data Receivers MUST be able to process resource instances containing data elements asserting missing information.
 
-### Required Elements
+#### Required Elements
 
 An mCODE data element is required if any of the following criteria are met:
 
@@ -175,8 +179,11 @@ An mCODE data element is required if any of the following criteria are met:
 * The element not a top-level element (a second-level property or below), its minimum cardinality is > 0, and all elements directly containing that element have minimum cardinality > 0 in the profile.
 * The element is not a top-level element, its minimum cardinality is > 0, and its immediate higher-level containing element exists in an _instance_ of the profile.
 
-In other words, a data element may be 1..1, but if it is contained by an optional element, then it is not required unless its containing element is actually present in a given instance of the profile.
+In other words, a data element may be `1..1`, but if it is contained by an optional element, then it is not required unless its containing element is actually present in a given instance of the profile.
 
-mCODE's rules regarding required data elements are the same as <a href="http://hl7.org/fhir/us/core/general-guidance.html#missing-data">US Core's rules</a>. To paraphrase, a Data Sender must provide each required element or an explicit data absent reason for each missing data item, and cannot substitute a nonsense or filler value just to satisfy the data requirement.
+For every required element in mCODE, Data Senders MUST either (1) provide data for the element; or (2) follow [US Core's rules](http://hl7.org/fhir/us/core/general-guidance.html#missing-data) for handling missing data for required elements. mCODE Data Senders MUST NOT substitute a nonsense or filler value just to satisfy the cardinality requirement for a required element.
 
-[Primary or Uncertain Behavior Cancer Disorder Value Set]: ValueSet-mcode-primary-or-uncertain-behavior-cancer-disorder-vs.html
+{% include markdown-link-references.md %}
+
+<!-- Provide some spacing around the horizontal lines that separate the main sections. -->
+<style>hr {margin-top: 4em; margin-bottom: 4em;}</style>

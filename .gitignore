@@ -7,3 +7,5 @@ input-cache/publisher.jar
 /output
 template/**
 temp/**
+.vscode
+.idea

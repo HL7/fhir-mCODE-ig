@@ -1,10 +1,10 @@
 @startuml
 skinparam defaultFontName Arial
 
-title mCODE Patients: Pull Model - Implementation Option 2.2 (Fallback)
+title Identifying mCODE Patients: Patients-with-cancer-condition approach
 hide footbox
-participant "mCODE Data Sender" as Sender
 participant "mCODE Data Receiver" as Receiver
+participant "mCODE Data Sender" as Sender
 
 group Get Patients via reverse chaining
     "Receiver" -> "Sender" : ""GET [base]/Patient?_has:Condition:subject:code:in=...""

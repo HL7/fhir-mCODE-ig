@@ -44,9 +44,11 @@ Description: "Records the history of secondary neoplasms, including location(s) 
 Conformance statement:
 
 Condition resources associated with an mCODE patient with a Condition.code in the value set SecondaryCancerDisorderVS MUST conform to this profile. Beyond this requirement, a producer of resources SHOULD ensure that any resource instance associated with an mCODE patient that would reasonably be expected to conform to this profile SHOULD be published in this form, for example, when employing a code that extends the SecondaryCancerDisorderVS value set. Any resource intended to conform to this profile SHOULD populate meta.profile accordingly."
-
 * insert CancerConditionCommonRules
-* extension contains RelatedPrimaryCancerCondition named relatedPrimaryCancerCondition 0..1 MS
+* extension contains condition-related named relatedPrimaryCancerCondition 0..1 MS
+* extension[relatedPrimaryCancerCondition].value[x] only Reference(PrimaryCancerCondition)
+* extension[relatedPrimaryCancerCondition] ^short = "Related Primary Cancer Condition"
+* extension[relatedPrimaryCancerCondition] ^definition = "A reference to the primary cancer condition that provides context for this resource."
 * code from SecondaryCancerDisorderVS (required)
 * code obeys secondary-cancer-condition-code-invariant
 * stage 0..0

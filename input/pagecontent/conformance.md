@@ -87,7 +87,7 @@ Participants shall implement the following operation for retrieving a Patient re
 
 #### Publish a CapabilityStatement Identifying Supported Profiles and Operations
 
-Each mCODE participant MUST publish a FHIR CapabilityStatement listing their supported profiles, by declaring the profile in `CapabilityStatement.rest.resource.supportedProfile`. The CapabilityStatement SHALL be returned in response to a GET request to `base-url/metadata`.
+Each mCODE participant MUST publish a FHIR CapabilityStatement listing their supported profiles, by declaring the profile in `CapabilityStatement.rest.resource.supportedProfile`. The CapabilityStatement SHALL be returned in response to a `GET [base]/metadata` request.
 
 This MUST include [CancerPatient] and [PrimaryCancerCondition] (unless they are not supported as described [above](#support-core-profiles)), as well as any other mCODE Profiles supported on the system.
 

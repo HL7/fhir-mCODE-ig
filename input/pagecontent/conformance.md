@@ -5,7 +5,7 @@ Two roles for **mCODE Participants** are defined:
 * **mCODE Data Sender** - a participant in exchange of mCODE data who provides mCODE data in response to a data query or autonomously pushes mCODE data to an mCODE receiver. The data sender does not have to be the originator of the data it possesses.
 * **mCODE Data Receiver** - a participant in exchange of mCODE data who accepts mCODE data from an mCODE Data Sender.
 
-US Core defines two actors, US Core Requestor and US Core Responder, which are highly suggestive of a "pull" architecture. In mCODE, we use the terms Sender and Receiver, which are more neutral with respect to push and pull. However, for all practical purposes, there is an equivalence between US Core Requestor and mCODE Data Receiver, and similarly between US Core Responder and mCODE Data Sender.
+[US Core defines two actors](https://www.hl7.org/fhir/us/core/#us-core-actors), US Core Requestor and US Core Responder, which are highly suggestive of a "pull" architecture. In mCODE, we use the terms Sender and Receiver, which are more neutral with respect to push and pull. However, for all practical purposes, there is an equivalence between US Core Requestor and mCODE Data Receiver, and similarly between US Core Responder and mCODE Data Sender.
 
 #### Architecture
 
@@ -123,16 +123,16 @@ Participants SHOULD also support the non-mCODE-specific profiles that are consid
 
 #### Support the mCODE Patient Bundle
 
-The [mCODE Patient Bundle][MCODEPatientBundle] provides a mechanism to retrieve all mCODE-conforming resources for an mCODE Patient. Participants SHOULD support this CapabilityStatement ([sender][mcode-sender-patient-bundle]/[receiver][mcode-receiver-patient-bundle]) for [this operation](OperationDefinition-mcode-patient-everything.html), which retrieves an mCODE Patient Bundle for a given Patient ID.
+The [mCODE Patient Bundle][MCODEPatientBundle] provides a mechanism to retrieve all mCODE-conforming resources for an mCODE Patient. Participants SHOULD support this CapabilityStatement ([sender][mcode-sender-patient-bundle]/[receiver][mcode-receiver-patient-bundle]) for [this operation](OperationDefinition-mcode-patient-everything.html), which retrieves an [mCODE Patient Bundle][MCODEPatientBundle] for a given Patient ID.
 
     GET [base]/Patient/[id]/$mcode-everything
 
-This endpoint SHALL support `start` and `end` parameters which operate the same as in the [`Patient/[id]/$everything` operation](https://www.hl7.org/fhir/operation-patient-everything.html).
+This endpoint MUST support `start` and `end` parameters which operate the same as in the [`Patient/[id]/$everything` operation](https://www.hl7.org/fhir/operation-patient-everything.html).
 
 <!-- If the image below is not wrapped in a div tag, the publisher tries to wrap text around the image, which is not desired. -->
 <div style="text-align: center;">{%include mcode-patient-bundle-pull.svg%}</div>
 
-mCODE Patient Bundles SHALL be identified by an `id` value that matches the `id` in the contained CancerPatient-conforming resource.
+mCODE Patient Bundles MUST be identified by an `id` value that matches the `id` in the contained [CancerPatient]-conforming resource.
 
 #### Use `meta.profile` to Signal Conformance
 
@@ -185,5 +185,5 @@ For every required element in mCODE, Data Senders MUST either (1) provide data f
 
 {% include markdown-link-references.md %}
 
-<!-- Provide some spacing around the horizontal lines that separate the main sections. -->
-<style>hr {margin-top: 4em; margin-bottom: 4em;}</style>
+<!-- Provide some spacing above the primary sections, which happen to be <h3>. -->
+<style>p + h3 { margin-top: 4em; }</style>

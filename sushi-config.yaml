@@ -44,10 +44,10 @@ menu:
   Implementation: implementation.html
   FHIR Artifacts:
     Profiles: "artifacts.html#1"
-    Extensions: "artifacts.html#8"
-    "Value sets &amp; code systems": "artifacts.html#9"
+    Extensions: "artifacts.html#7"
+    "Value sets &amp; code systems": "artifacts.html#8"
     Examples: "examples.html"
-    "Conformance resources": "artifacts.html#14"
+    "Conformance resources": "artifacts.html#13"
     "Experimental resources": "experimental.html"
     All artifacts: "artifacts.html"
   Downloads: downloads.html
@@ -111,13 +111,6 @@ groups:
     description: Profiles in the [mCODE **Outcomes** Group](index.html#outcomes-group).
     resources:
       - StructureDefinition/mcode-cancer-disease-status
-
-
-  Abstract:
-    name: Abstract Profiles
-    description: These are profiles on resources or data types that describe patterns used by other profiles, but cannot be instantiated directly. I.e. instances can conform to profiles based on these abstract profiles, but do not declare conformance to the abstract profiles themselves.
-    resources:
-      - StructureDefinition/mcode-comorbidities-parent
 
   # Extensions
   Extensions:

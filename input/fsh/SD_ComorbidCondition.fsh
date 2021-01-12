@@ -1,30 +1,40 @@
-Profile: ComorbiditiesParent
-Parent: Observation
-Id: mcode-comorbidities-parent
-Title: "Comorbidities Parent"
-Description: "General structure for capturing comorbid conditions with respect to a primary condition. The specific set of comorbidities of interest in a given context are defined by slicing the components array."
-* ^abstract = true
-* focus only Reference(Condition)  // the index condition, i.e. the context of the assessment of comorbidities
-* focus ^short = "Index Condition"
-* focus ^definition = "The comorbid conditions may be defined with respect to a particular condition. For example, the CDC has a list of comorbid conditions important to COVID-19. In this case, the focus would be COVID-19 and the comorbid condition categories would be those called out by CDC, namely obesity, renal disease, respiratory disease, etc."
-* component.value[x] only CodeableConcept
-* component.value[x] from PresentAbsentUnknownVS (required)
-* component.extension contains 
-     ComorbidConditionCode named conditionCode 0..* and
-     ComorbidConditionReference named conditionReference 0..*
-
-
 Profile: CancerRelatedComorbidities
-Parent: ComorbiditiesParent
+Parent: Observation
 Id: mcode-cancer-related-comorbidities
 Title: "Cancer-Related Comorbidities"
 Description: "Comorbid conditions for a cancer condition, using Elixhauser comorbidity categories."
 * ^abstract = false
+* focus ^short = "Index Condition"
+* focus ^definition = "The comorbid conditions may be defined with respect to a particular condition. For example, the CDC has a list of comorbid conditions important to COVID-19. In this case, the focus would be COVID-19 and the comorbid condition categories would be those called out by CDC, namely obesity, renal disease, respiratory disease, etc."
 * focus only Reference(PrimaryCancerCondition)
 * code = LNC#78923-0  // Comorbid condition panel
-* focus and component and component.extension[conditionReference] and component.extension[conditionCode] and component.extension[conditionReference] MS
+* focus MS
+
+/*
+Each comorbidity is defined as an element inside `component`, each with the following elements:
+
+1. `component[].code` fixed to one of the codes specified below (or a different code as the slice is #open)
+2. `component[].valueCodeableConcept` set to a value from PresentAbsentUnknownVS
+3. Two optional extensions inside `component[].extension[]`:
+    a. `ComorbidConditionCode`, where the comorbid condition is further specified with a CodeableConcept
+    b. `ComorbidConditionReference`, where the comorbid condition is further specified with a reference to a Condition
+*/
+
+// WARNING! `component.extension` must be defined before `component` is sliced to avoid SUSHI errors
+* component.extension ^slicing.discriminator.type = #type
+* component.extension ^slicing.discriminator.path = "value[x]"
+* component.extension ^slicing.rules = #open
+* component.extension ^slicing.description = "Slice based on the #type of value[x] pattern"
+* component.extension contains
+    ComorbidConditionReference named conditionReference 0..* and
+    ComorbidConditionCode named conditionCode 0..*
+
+
+* component.value[x] only CodeableConcept
+* component.value[x] from PresentAbsentUnknownVS (required)
+
 * insert ObservationComponentSlicingRules
-* component contains 
+* component contains
     alcoholAbuse 0..1 and
     cardiacArrhythmia 0..1 and
     deficiencyAnemia 0..1 and
@@ -167,3 +177,4 @@ Description: "Comorbid conditions for a cancer condition, using Elixhauser comor
 * component[valvularDisease].extension[conditionCode].value[x] from ElixhauserValvularDiseaseVS (extensible)
 * component[weightLoss].extension[conditionCode].value[x] from ElixhauserWeightLossVS (extensible)
 
+* component and component.extension[conditionReference] and component.extension[conditionCode] and component.extension[conditionReference] MS

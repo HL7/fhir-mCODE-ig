@@ -357,7 +357,7 @@ Description: "Extended example 1: example showing chemotherapy medication"
 * dosageInstruction.doseAndRate.doseQuantity = 272.01 'mg' "mg"
 // Once every 3 weeks
 * dosageInstruction.maxDosePerPeriod.numerator.value = 1
-* dosageInstruction.maxDosePerPeriod.denominator.value = 3 'wk' "week"
+* dosageInstruction.maxDosePerPeriod.denominator = 3 'wk' "week"
 
 Instance: scenario1-mcode-cancer-related-medication-anastrozole
 InstanceOf: CancerRelatedMedicationRequest

@@ -262,13 +262,13 @@ Description: "Extended example 1: example showing which regions were included in
 * effectiveDateTime = "2018-04-01"
 * issued = "2018-04-01T00:00:01+00:00"
 * component.code = LNC#48018-6 "Gene studied [ID]"
-* component[GeneStudied].valueCodeableConcept.coding[0] = HGNC#1100 "BRCA1"
-* component[GeneStudied].valueCodeableConcept.coding[1] = HGNC#1101 "BRCA2"
-* component[GeneStudied].valueCodeableConcept.coding[2] = HGNC#1748 "CDH1"
-* component[GeneStudied].valueCodeableConcept.coding[3] = HGNC#26144 "PALB2"
-* component[GeneStudied].valueCodeableConcept.coding[4] = HGNC#9588 "PTEN"
-* component[GeneStudied].valueCodeableConcept.coding[5] = HGNC#11389 "STK11"
-* component[GeneStudied].valueCodeableConcept.coding[6] = HGNC#11998 "TP53"
+* component[GeneStudied].valueCodeableConcept.coding[+] = HGNC#1100 "BRCA1"
+* component[GeneStudied].valueCodeableConcept.coding[+] = HGNC#1101 "BRCA2"
+* component[GeneStudied].valueCodeableConcept.coding[+] = HGNC#1748 "CDH1"
+* component[GeneStudied].valueCodeableConcept.coding[+] = HGNC#26144 "PALB2"
+* component[GeneStudied].valueCodeableConcept.coding[+] = HGNC#9588 "PTEN"
+* component[GeneStudied].valueCodeableConcept.coding[+] = HGNC#11389 "STK11"
+* component[GeneStudied].valueCodeableConcept.coding[+] = HGNC#11998 "TP53"
 
 Instance: scenario1-mcode-genetic-specimen
 InstanceOf: GeneticSpecimen

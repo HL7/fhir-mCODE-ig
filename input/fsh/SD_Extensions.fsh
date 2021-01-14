@@ -2,8 +2,6 @@ Extension: ComorbidConditionCode
 Id: mcode-comorbid-condition-code
 Title:  "Comorbid Condition Code"
 Description: "An extension for representing the condition code corresponding to the named comorbid condition."
-* . ^short = "Comorbid Condition Code"
-* . ^definition = "An extension for representing the condition code corresponding to the named comorbid condition."
 * extension 0..0
 * value[x] only CodeableConcept
 
@@ -11,32 +9,21 @@ Extension: ComorbidConditionReference
 Id: mcode-comorbid-condition-reference
 Title:  "Comorbid Condition Reference"
 Description: "An extension for representing a reference to a condition resource corresponding to the named comorbid condition."
-* . ^short = "Comorbid Condition Code"
-* . ^definition = "An extension for representing a reference to a condition resource corresponding to the named comorbid condition."
-* extension 0..0
 * value[x] only Reference(Condition)
 
 Extension: EvidenceType
 Id: mcode-evidence-type
 Title: "Evidence Type"
 Description: "Categorization of the kind of evidence used as input to the clinical judgment. This corresponds to both the S and O in SOAP."
-* . ^short = "Evidence Type"
-* . ^definition = "Categorization of the kind of evidence used as input to the clinical judgment. This corresponds to both the S and O in SOAP."
-* ^context[0].type = #element
-* ^context[0].expression = "Observation"
-* extension 0..0
+* insert ExtensionContext(Observation)
 * value[x] only CodeableConcept
 * value[x] from CancerDiseaseStatusEvidenceTypeVS (required)
 
 Extension: HistologyMorphologyBehavior
 Id: mcode-histology-morphology-behavior
 Title: "Histology-Morphology-Behavior"
-Description: "An extension describing the morphologic and behavioral characteristics of the cancer."
-* . ^short = "Histology-Morphology-Behavior"
-* . ^definition = "An extension describing the morphologic and behavioral characteristics of the cancer." 
-* ^context[0].type = #element
-* ^context[0].expression = "Condition"
-* extension 0..0
+Description: "An extension describing the morphologic and behavioral characteristics of the cancer." 
+* insert ExtensionContext(Condition)
 * value[x] only CodeableConcept
 * value[x] from HistologyMorphologyBehaviorVS (required)
 
@@ -44,17 +31,10 @@ Extension: LocationQualifier
 Id:  mcode-location-qualifier
 Title: "Location Qualifier"
 Description: "Qualifier to refine the anatomical location. These include qualifiers for laterality, relative location, directionality, number, and plane."
-* . ^short = "Location Qualifier"
-* . ^definition = "Qualifier to refine the anatomical location. These include qualifiers for laterality, relative location, directionality, number, and plane."
-* ^context[0].type = #element
-* ^context[0].expression = "Specimen.collection.bodySite"
-* ^context[1].type = #element
-* ^context[1].expression = "Procedure.bodySite"
-* ^context[2].type = #element
-* ^context[2].expression = "Condition.bodySite"
-* ^context[3].type = #element
-* ^context[3].expression = "Observation.bodySite"
-* extension 0..0
+* insert ExtensionContext(Specimen.collection.bodySite)
+* insert ExtensionContext(Procedure.bodySite)
+* insert ExtensionContext(Condition.bodySite)
+* insert ExtensionContext(Observation.bodySite)
 * value[x] only CodeableConcept
 * value[x] from LocationQualifierVS (required)
 
@@ -62,13 +42,8 @@ Extension: TerminationReason
 Id:  mcode-termination-reason
 Title: "Termination Reason"
 Description: "A code explaining an unplanned or premature termination of a plan of treatment, course of medication, or research study."
-* . ^short = "Termination Reason"
-* . ^definition = "A code explaining an unplanned or premature termination of a plan of treatment, course of medication, or research study."
-* ^context[0].type = #element
-* ^context[0].expression = "MedicationRequest"
-* ^context[1].type = #element
-* ^context[1].expression = "Procedure"
-* extension 0..0
+* insert ExtensionContext(MedicationRequest)
+* insert ExtensionContext(Procedure)
 * value[x] only CodeableConcept
 * value[x] from TreatmentTerminationReasonVS (required)
 
@@ -77,16 +52,14 @@ Extension: TreatmentIntent
 Id:  mcode-treatment-intent
 Title: "Treatment Intent"
 Description: "The purpose of a treatment."
-* . ^short = "Treatment Intent"
-* . ^definition = "The purpose of a treatment."
-* ^context[0].type = #element
-* ^context[0].expression = "MedicationRequest"
-* ^context[1].type = #element
-* ^context[1].expression = "Procedure"
-* extension 0..0
+* insert ExtensionContext(MedicationRequest)
+* insert ExtensionContext(Procedure)
 * value[x] only CodeableConcept
 * value[x] from TreatmentIntentVS (required)
 
+RuleSet: ExtensionContext(path)
+* ^context[+].type = #element
+* ^context[=].expression = "{path}"
 
 /* Save for possible future use
 

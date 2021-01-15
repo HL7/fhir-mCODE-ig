@@ -2,7 +2,6 @@ Extension: ComorbidConditionCode
 Id: mcode-comorbid-condition-code
 Title:  "Comorbid Condition Code"
 Description: "An extension for representing the condition code corresponding to the named comorbid condition."
-* extension 0..0
 * value[x] only CodeableConcept
 
 Extension: ComorbidConditionReference

@@ -54,8 +54,6 @@ Extension: CTCAEGrade
 Id: ctcae-grade
 Title: "CTC Adverse Event Grade"
 Description: "The grade associated with the severity of an adverse event, using CTCAE criteria. The code '0' representing no adverse event may be used to provide positive confirmation that the clinician assessed or considered this particular AE, although the absence of an adverse event is generally not reportable. See https://ctep.cancer.gov/protocolDevelopment/electronic_applications/ctc.htm"
-* . ^short = "CTC Adverse Event Grade"
-* . ^definition = "The grade associated with the severity of an adverse event, using CTCAE criteria. The code '0' representing no adverse event may be used to provide positive confirmation that the clinician assessed or considered this particular AE, although the absence of an adverse event is generally not reportable. See https://ctep.cancer.gov/protocolDevelopment/electronic_applications/ctc.htm"
 * insert AdverseEventExtensionPreamble 
 * value[x] only CodeableConcept
 * value[x] from CTCAEGradeVS (required)
@@ -63,9 +61,7 @@ Description: "The grade associated with the severity of an adverse event, using 
 Extension: AdverseEventExpectation
 Id: adverse-event-expectation
 Title: "Adverse Event Expectation"
-Description: "A determination if the adverse event is or is not one whose nature and severity have been previously observed, identified in nature, severity, or frequency, and documented in the investigator brochure, investigational plan, protocol, current consent form, scientific publication, or in other relevant and reliable document."
-* . ^short = "Adverse Event Expectation"
-* . ^definition = "A determination if the adverse event is or is not one whose nature and severity have been previously observed, identified in nature, severity, or frequency, and documented in the investigator brochure, investigational plan, protocol, current consent form, scientific publication, or in other relevant and reliable document." 
+Description: "A determination if the adverse event is or is not one whose nature and severity have been previously observed, identified in nature, severity, or frequency, and documented in the investigator brochure, investigational plan, protocol, current consent form, scientific publication, or in other relevant and reliable document." 
 * insert AdverseEventExtensionPreamble
 * value[x] only CodeableConcept
 * value[x] from AdverseEventExpectationVS (required)
@@ -74,8 +70,6 @@ Extension: AdverseEventResolvedDate
 Id: adverse-event-resolved-date
 Title: "Adverse Event Resolved Date"
 Description: "The date (and time) when the adverse event ends or returns to baseline (NCI Thesaurus)."
-* . ^short = "Adverse Event Resolved Date" 
-* . ^definition = "The date (and time) when the adverse event ends or returns to baseline (NCI Thesaurus)."
 * insert AdverseEventExtensionPreamble
 * value[x] only dateTime
 

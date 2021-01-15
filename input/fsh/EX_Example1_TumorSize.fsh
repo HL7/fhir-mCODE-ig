@@ -6,9 +6,9 @@ Description: "EXPERIMENTAL example of a resource conforming to the tumor size pr
 * method = LNC#24419-4 "Pathology report gross observation"
 * subject = Reference(Patient/mCODEPatientExample1)
 * focus = Reference(BodyStructure/example1-mcode-tumor)
-* component[tumorLongestDimension].valueQuantity = 1.2 'cm'
-* component[tumorOtherDimension].valueQuantity = 1.0 'cm'
-* component[tumorOtherDimension].valueQuantity = 0.5 'cm'
+* component[tumorLongestDimension].valueQuantity = 1.2 'cm' "cm"
+* component[tumorOtherDimension].valueQuantity = 1.0 'cm' "cm"
+* component[tumorOtherDimension].valueQuantity = 0.5 'cm' "cm"
 
 Instance: example1-mcode-tumor
 InstanceOf: Tumor

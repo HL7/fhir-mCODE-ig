@@ -129,7 +129,7 @@ By default, this Bundle includes _all_ required resources described above, irres
 * entry[tumorMarkerTest].resource only TumorMarkerTest
 * entry[cancerRelatedMedicationRequest].resource only CancerRelatedMedicationRequest
 * entry[cancerRelatedSurgicalProcedure].resource only CancerRelatedSurgicalProcedure
-// -- Radiation Oncology --
+// -- Radiotherapy --
 * entry[RadiotherapyPrescriptionDelivery].resource only RadiotherapyPrescriptionDelivery
 * entry[teleradiotherapyDeliveryRecord].resource only TeleradiotherapyDeliveryRecord
 * entry[brachytherapyDeliverySummary].resource only BrachytherapyDeliveryRecord

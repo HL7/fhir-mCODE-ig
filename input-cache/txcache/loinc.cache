@@ -31614,3 +31614,13 @@ v: {
   "error" : ""
 }
 -------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "68602-2"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "Radiation oncology Summary note",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------

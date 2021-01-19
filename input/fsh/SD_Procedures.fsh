@@ -14,12 +14,16 @@ Profile:  RadiotherapyPrescriptionDelivery
 Parent:   USCoreProcedure
 Id:       radiotherapy-prescription-delivery
 Title:    "Radiotherapy Prescription Delivery"
-Description: "A summary of treatment progress for a radiotherapy prescription. Whenever new contributions in the scope of the same Prescription are delivered, this resource is updated. Status is changed to complete when the prescription has been delivered."
+Description: "A summary of treatment progress for a radiotherapy prescription. Whenever new contributions in the scope of the same Prescription are delivered, this resource is updated. One prescription can involve multiple treatment modalities and body sites. Modalities and techniques and detailed dose information is captured at the Delivery Record level. Status is changed to complete when the prescription has been fully delivered or to stopped if terminated."
 * insert RadiotherapyCommonRuleSet
-* code = NCIT#C15313 // "Radiation Therapy" 
+* code = LNC#68602-2 // Radiation oncology summary note
 * extension contains 
     TreatmentIntent named treatmentIntent 0..1 MS and
-    TerminationReason named terminationReason 0..1 MS
+    TerminationReason named terminationReason 0..1 MS and
+    RadiotherapyPrescribedFractions named radiotherapyPrescribedFractions 0..1 MS and
+    RadiotherapyDeliveredFractions named radiotherapyDeliveredFractions 0..1 MS and
+    RadiotherapyTotalDosePlanned named radiotherapyTotalDosePlanned 0..1 MS and
+    RadiotherapyTotalDoseDelivered named radiotherapyTotalDoseDelivered 0..1 MS
 
 
 RuleSet:  RadiotherapyDeliveryCommonRuleSet
@@ -42,7 +46,6 @@ Parent:   USCoreProcedure
 Id:       teleradiotherapy-delivery-record
 Title:    "Teleradiotherapy Delivery Record"
 Description: "A record of delivered Radiotherapy treatment. A new delivery record begins when there is a change in the target volume of a body site, treatment fraction size, modality, or treatment technique. This is a single record that is not expected to be updated once recorded. For cumulative treatment records, see RadiotherapyPrescriptionDelivery.
-
 Conformance statement:  TBD"
 * insert RadiotherapyDeliveryCommonRuleSet
 * code from TeleradiotherapyModalityVS (required)
@@ -64,9 +67,7 @@ Parent:   USCoreProcedure
 Id:       brachytherapy-delivery-record
 Title:    "Brachytherapy Delivery Record"
 Description: "Record of delivery of a radiotherapy procedure using brachytherapy (internal radiation). 
-
 Conformance statement: TBD"
-
 * insert RadiotherapyDeliveryCommonRuleSet
 * code from BrachytherapyModalityVS (required)
 * code obeys brachytherapy-code-invariant

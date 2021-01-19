@@ -117,18 +117,18 @@ Description: "Extended example 1: example showing partial mastectomy surgical pr
 * reasonReference = Reference(scenario1-mcode-primary-cancer-condition)
 * bodySite = SCT#80248007 "Left breast structure (body structure)"
 
-Instance: scenario1-mcode-cancer-related-radiation-procedure
-InstanceOf: CancerRelatedTeleradiotherapyPhase
+Instance: scenario1-teleradiotherapy-prescription-delivery
+InstanceOf: TeleradiotherapyPrescriptionDelivery
 Description: "Extended example 1: example showing radiation treatment"
-* id = "scenario1-mcode-cancer-related-radiation-procedure"
+* id = "scenario1-teleradiotherapy-prescription-delivery"
 * extension[treatmentIntent].valueCodeableConcept = SCT#373808002 "Curative - procedure intent (qualifier value)"
 * status = #completed "completed"
 * code = SCT#169291001 "X-ray beam therapy"
-* extension[technique].valueCodeableConcept = NCIT#C16035 "3-Dimensional Conformal Radiation Therapy"
-* extension[dosePerFraction].valueQuantity = 200 'cGy'
-* extension[fractionsDelivered].valueInteger = 25
-* extension[totalDosePlanned].valueQuantity = 5000 'cGy'
-* extension[totalDoseDelivered].valueQuantity = 5000 'cGy'
+* extension[radiotherapyTechnique].valueString = "3D"
+* extension[radiotherapyDosePerFraction].valueQuantity = 200 'cGy'
+* extension[radiotherapyDeliveredFractions].valueUnsignedInt = 25
+* extension[radiotherapyTotalDosePlanned].valueQuantity = 5000 'cGy'
+* extension[radiotherapyTotalDoseDelivered].valueQuantity = 5000 'cGy'
 * subject = Reference(scenario1-mcode-cancer-patient)
 * performedPeriod.start = "2018-03-19"
 * performedPeriod.end = "2018-05-22"

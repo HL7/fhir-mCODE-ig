@@ -218,7 +218,7 @@ Instance: BrachytherapyDeliveryRecordExample1
 InstanceOf: BrachytherapyDeliveryRecord
 Description: "mCODE Example for Cancer Related Radiation Procedure"
 * id = "BrachytherapyDeliveryRecordExample1"
-* meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-related-brachytherapy"
+* meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/brachytherapy-delivery-record"
 * status = #completed "completed"
 * code = NCIT#C85254 "Low-Dose Rate Brachytherapy" 
 * extension[radiotherapyTechnique].valueString = "Interstitial–Temporary"

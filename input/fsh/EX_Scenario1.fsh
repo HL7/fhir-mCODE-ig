@@ -122,7 +122,7 @@ Description: "Extended example 1: example showing radiation treatment"
 * id = "scenario1-teleradiotherapy-delivery-record"
 //* extension[treatmentIntent].valueCodeableConcept = SCT#373808002 "Curative - procedure intent (qualifier value)"
 * status = #completed "completed"
-* code = SCT#169291001 "X-ray beam therapy"
+* code = NCIT#C104914 "Photon Beam Radiation Therapy"
 * extension[radiotherapyTechnique].valueString = "3D"
 * extension[radiotherapyDosePerFraction].valueQuantity = 200 'cGy'
 * extension[radiotherapyDeliveredFractions].valueUnsignedInt = 25

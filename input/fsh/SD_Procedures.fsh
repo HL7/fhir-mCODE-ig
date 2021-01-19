@@ -78,7 +78,7 @@ Conformance statement: TBD"
 
     Invariant: brachytherapy-code-invariant
     Description: "If the code representing 'Other brachytherapy, specify' is used, a second code from outside the original value set must be present."
-    Expression: "coding.where(code = 'OtherBrachytherapyModality').exists() implies coding.where(code != 'OtherBrachytherapyModality' and $this.memberOf('http://hl7.org/fhir/us/mcode/ValueSet/mcode-brachytherapy-modality-vs').not()).exists()"
+    Expression: "coding.where(code = 'OtherBrachytherapyModality').exists() implies coding.where(code != 'OtherBrachytherapyModality' and $this.memberOf('http://hl7.org/fhir/us/mcode/ValueSet/brachytherapy-modality-vs').not()).exists()"
     Severity:   #error
 
 // TO DO: Use standard extension procedure-method IF the cardinality will be 0..1

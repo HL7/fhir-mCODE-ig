@@ -1,0 +1,110 @@
+title: mCODE Data Dictionary
+informationTabContent:
+  General notes: |-
+    **Profiles not shown in data dictionary:** Not all profiles used by mCODE are included in the Data Dictionary. mCODE uses FHIR profiles for Blood Pressure, Height, Weight, and the US Core Laboratory Result Observation Profile for Complete Blood Count (CBC), and Comprehensive Metabolic Panel (CMP). These profiles are not included in the Data Dictionary because they are defined externally to mCODE.
+
+    **Data elements not shown in data dictionary:** Not all data elements required (or required if known) are included in the Data Dictionary. Elements have been omitted when they apply to every profile (metadata elements) or represent information not specifically associated with the mCODE use case (i.e., general FHIR or US Core elements). Examples of the first type are references to the patient or subject, and the relevant time associated with the information. Examples of the second type are workflow status of observations, references to encounters, and fixed codes for observations. Implementers should refer to the mCODE profiles at <http://hl7.org/fhir/us/mcode/artifacts.html#2> for a complete accounting of required, required-if-known, and must-support elements.
+
+  EMPTY-0BCakOkEFj: ''
+  DOCUMENT ORGANIZATION: ''
+  '"Profiles" sheet': |+
+    The 'Profiles' sheet contains a list of profiles within which mCODE data elements are expected to be exchanged. A profile defines a set of related data elements that are reported together as a group. All data elements in a profile share the same context, and are interpreted together. The term 'profile' comes from FHIR, and refers to a specialized model of clinical information. A profile could also be called a class or archetype.
+
+    **Example:** A patient who has their ECOG Performance Status taken multiple times would have an instance of the ECOG Performance Status profile for each individual measurement.
+
+
+  '"Data elements" sheet': |+
+    The 'Data elements' sheet contains the details of individual mCODE elements contained within each profile.
+
+    **Relationship to 'Profiles' sheet:** The name of the profile in which the data element is expected to be exchanged is provided in the column 'Profile Name'.
+
+    **Relationship to 'Value sets' sheet:** coded data elements are associated with sets of allowable "answer" values (value sets). Certain data elements have value sets defined in mCODE. In such cases, the URL of the value set is provided in the column 'Value Set URI'. The 'Value Set Binding' column indicates whether users _must_ choose a value in the set ("required") or _should_ if possible ("extensible").
+
+    Note that the 'Value sets' and `Value set codes' sheets do not provide any information about value sets that are defined outside of mCODE.
+
+    **Example:** 'Secondary Cancer Condition Code' is a data element contained by the 'Secondary Cancer Condition' profile. The 'Secondary Cancer Condition Code' data element is associated with the <http://hl7.org/fhir/us/mcode/ValueSet/mcode-secondary-cancer-disorder-vs> value set in the 'Data elements' sheet, which indicates the value set is defined in mCODE. Additional information on this value set can be found in the 'Value sets' and 'Value set details' sheet; the former includes a description of the value set, and the latter lists the specific codes and descriptions as well as logical definitions for this value set.
+
+  '"Value sets" sheet': |+
+    The 'Value Sets' sheet contains a list of mCODE-defined value sets, as well as high-level information about them.  Externally-defined value sets used by mCODE, such as LOINC answer lists and value sets defined in US Core or FHIR, are not included.
+
+    **Relationship to 'Value Set Details' sheet:** In general, the 'Value Set Details' sheet contains enumerated codes and associated descriptions for a given value set, or a logical definition (when a value set is defined by a rule, rather than an explicit list of codes).
+
+    **Example:** The 'CancerConditionVS' is comprised of both enumerated ICD-10-CM codes, and a logical definition for SNOMED CT codes: "includes all codes descending from includes codes descending from 108369006 'Neoplasm (morphologic abnormality)."
+
+  '"Value set codes" sheet': |+
+    The 'Value set codes' sheet contains individual codes associated with each value set defined by mCODE. Externally-defined value sets are not included.
+
+    Note that not every code that belongs in an mCODE value set may be included in the 'Value set codes' sheet. There are several reasons for this: 1) The value set is logically defined; 2) Intellectual property restrictions associated with certain code systems (e.g. AJCC, ICD-O-3, CPT); or 3) The codes for a particular code system have not been formally restricted due to technical limitations in the tool that automatically manages the publication of the mCODE FHIR Implementation Guide.
+
+  COLUMN KEY: ''
+
+  Profiles: |+
+    **Group**: The general area of mCODE, either Patient, Disease, Genomics, Treatment, or Outcome. For an overview of mCODE domains, consult the diagram included in the mCODE FHIR Implementation Guide.
+
+    **Title**: The name of the profile.
+
+    **Url**: Web address identifying the profile.
+
+    **Description**: The meaning and purpose of the profile.
+
+
+  Data elements: |-
+    **Group**: The general area of mCODE, either Patient, Disease, Genomics, Lab/Vitals, Treatment, or Outcome. For an overview of mCODE domains, consult the diagram included in the mCODE FHIR Implementation Guide.
+
+    **Profile Title**: The profile this data element belongs to.
+
+    **Data Element Name**: This is a human readable name for the data element, as opposed to the FHIR profile element name. It can be read together with the profile name, for example, if the Profile Name is "Patient" and the data element is "Date of Birth", together, the data element represents the "Patient Date of Birth".
+
+    **Definition**: A text description of the element.
+
+    **Required?**: Whether the data element must appear in an instance (a concrete occurrence) of the profile. "Required" implies that every instance of the profile must include the element. "Required if known" means that the element must be included if the information is available.
+
+    **Occurrences Allowed**: The upper bound on the number of repeats of the data element can occur in a single instance of the profile. Either "single" (one) or "multiple" (more than one).
+
+  # Split into separate cell because this is at the max height for a single Excel cell
+  EMPTY-pGF7osvF0m: |+
+    **Data Type**: The kind of data that can be stored in an element, such as a "string" or "code". Data types for each element are defined in mCODE's FHIR profiles, and for more information on what each type means please see <https://www.hl7.org/fhir/datatypes.html>.
+
+    **Value Set URI**:  For coded elements only, the set of "answer" values as a link to where the answer set is defined. Details on mCODE-defined value sets are provided in the 'Value sets' and 'Value set codes' tabs.
+
+    **Value Set Binding**: Whether or not the answer value has to come from the given value set. Binding strengths are defined in FHIR (https://www.hl7.org/fhir/valueset-binding-strength.html). "Required" means the value must come from the value set, with no exceptions. "Extensible" means the value must come from the value set if the value set contains a suitable concept; only if a concept is missing from the value set, should another code or a code from a different terminology be used. "Preferred" means the value should come from the provided value set, but it acceptable to use codes from another terminology system. However, "Preferred" does not imply carte blanche to use any vocabularies whatever; documentation should be consulted to determine what alternative vocabularies are accepted.
+
+    **FHIR Element (R4)**: The FHIR resource and field, using US Core v3.1.0 (STU3) profiles as the baseline. Refer to the FHIR Profiles in the mCODE Implementation Guide for details.
+
+
+  Value sets: |+
+    **Title**: The name of the value set.
+
+    **Url**: Web address identifying the value set.
+
+    **Description**: A text description of the value set.
+
+
+  Value set codes: |+
+    **Value Set Name**: The name of the value set.
+
+    **Code System**: The code system for a particular code that is used in a logical definition for the value set or that is explicitly enumerated as part of the value set.
+
+    **Logical Definition**: The rules used to identify codes that belong in the value set. A value set can have a single or multiple logical definitions, and may also have a combination of logical definitions and enumerated codes. When a logical definition is used, not all the codes that belong to the value set are provided in the Value Set Details tab.
+
+    **Code**: The identifier for the concept in the specified code system. This field is used for enumerated value sets only (those that are not logically defined).
+
+    **Code Description**: The description for the code in the specified code system. For logically defined value sets, the description of the code used in the value set definition.
+
+  Extensions: |+
+    **Title**: The name of the extension. Extensions are a FHIR structure that allow for flexibility in storing use case-specific data in a FHIR resource.
+
+    **Url**: Web address identifying the extension.
+
+    **Description**: A text description of the extension.
+
+
+codeSystems:
+  'http://snomed.info/sct': SNOMED CT
+  'http://hl7.org/fhir/sid/icd-10-cm': ICD-10 CM
+  'http://hl7.org/fhir/us/mcode/CodeSystem/mcode-other-specify-code-system': 'mCODE: other, specify'
+  'http://loinc.org': LOINC
+  'http://ncithesaurus-stage.nci.nih.gov': NCI
+  'http://sequenceontology.org': Sequence Ontology
+  'http://terminology.hl7.org/CodeSystem/v2-0487': SpecimenType (HL7)
+  'http://unitsofmeasure.org': The Unified Code for Units of Measure

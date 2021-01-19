@@ -1,84 +1,86 @@
 //-------- RADIATION THERAPY PROCEDURES -------------
 
-RuleSet:  RadiotherapyCommonRuleSet
-// Do not insert the category slicing rules because Procedure.category is 0..1.
+RuleSet: RadiotherapyCommonRuleSet
 * category 1..
 * category = SCT#108290001 // "Radiation oncology AND/OR radiotherapy (procedure)"
-// TO DO -- specify the MS elements
-* partOf only Reference(Procedure)
-* partOf ^definition = "The procedure that this procedure is a part of. Reference higher level (larger) scope summary where possible."
 * recorder only Reference(Practitioner or PractitionerRole)
 * performer.actor only Reference(Practitioner or PractitionerRole or Organization)
+* bodySite from RadiationTargetBodySiteVS (extensible)
+* bodySite.extension contains
+    LocationQualifier named locationQualifier 0..1 MS
+* performed[x] only Period
+
+Profile:  RadiotherapyPrescriptionDelivery
+Parent:   USCoreProcedure
+Id:       radiotherapy-prescription-delivery
+Title:    "Radiotherapy Prescription Delivery"
+Description: "A summary of treatment progress for a radiotherapy prescription. Whenever new contributions in the scope of the same Prescription are delivered, this resource is updated. Status is changed to complete when the prescription has been delivered."
+* insert RadiotherapyCommonRuleSet
+* code = NCIT#C15313 // "Radiation Therapy" 
 * extension contains 
     TreatmentIntent named treatmentIntent 0..1 MS and
-    TerminationReason named terminationReason 0..1 MS and
+    TerminationReason named terminationReason 0..1 MS
+
+
+RuleSet:  RadiotherapyDeliveryCommonRuleSet
+* insert RadiotherapyCommonRuleSet
+// TO DO -- specify the MS elements
+* partOf only Reference(Procedure)
+* partOf ^definition = "The radiotherapy delivery summary that this delivery record contributes to. Reference higher level (larger) scope summary where possible."
+// TO DO -- does Brachytherapy ever involve fractions and doses? Assume so for now.
+* extension contains
     RadiotherapyTechnique named radiotherapyTechnique 0..1 MS and
     RadiotherapyDosePerFraction named radiotherapyDosePerFraction 0..1 MS and
     RadiotherapyPrescribedFractions named radiotherapyPrescribedFractions 0..1 MS and
     RadiotherapyDeliveredFractions named radiotherapyDeliveredFractions 0..1 MS and
     RadiotherapyTotalDosePlanned named radiotherapyTotalDosePlanned 0..1 MS and
     RadiotherapyTotalDoseDelivered named radiotherapyTotalDoseDelivered 0..1 MS
-* bodySite from RadiationTargetBodySiteVS (extensible)
-* bodySite.extension contains
-    LocationQualifier named locationQualifier 0..1 MS
 
-Profile:  TeleradiotherapyDeliverySummary
+
+Profile:  TeleradiotherapyDeliveryRecord
 Parent:   USCoreProcedure
-Id:       teleradiotherapy-delivery-summary
-Title:    "Radiotherapy Delivery Summary"
-Description: "A Summary of Treatment Progress for a Radiotherapy Prescription. Whenever new contributions in the scope of the same Prescription are delivered, this resource is updated."
-* insert RadiotherapyCommonRuleSet
-* code = NCIT#C15313 // "Radiation Therapy" 
-* performed[x] only Period
+Id:       teleradiotherapy-delivery-record
+Title:    "Teleradiotherapy Delivery Record"
+Description: "A record of delivered Radiotherapy treatment. A new delivery record begins when there is a change in the target volume of a body site, treatment fraction size, modality, or treatment technique. This is a single record that is not expected to be updated once recorded. For cumulative treatment records, see RadiotherapyPrescriptionDelivery.
 
-
-Profile:  TeleradiotherapyPrescriptionDelivery
-Parent:   USCoreProcedure
-Id:       teleradiotherapy-prescription-delivery
-Title:    "Teleradiotherapy Prescription Delivery"
-Description: "A radiological treatment delivered using teleradiology (external beam) therapy, prescribed as a series of equivalent fractions. A new prescription delivery begins when there is a change in the target volume of a body site, treatment fraction size, modality, or treatment technique.
-
-Conformance statement:
-
-Procedure resources associated with an mCODE patient with Procedure.category SNOMED-CT 53438000 MAY conform to this profile. Beyond this requirement, a producer of resources SHOULD ensure that any resource instance associated with an mCODE patient that would reasonably be expected to conform to this profile SHOULD be published in this form. Specifically, we expect that any external beam radiation therapy related to the treatment of a `PrimaryCancerCondition` or `SecondaryCancerCondition` would be published in this form."
-* insert RadiotherapyCommonRuleSet
+Conformance statement:  TBD"
+* insert RadiotherapyDeliveryCommonRuleSet
 * code from TeleradiotherapyModalityVS (required)
 * code ^short = "Modality"
 * code ^definition = "The modality (radiation type) for the external beam procedure."
-* code obeys cancer-related-teleradiotherapy-procedure-code-invariant
+* code obeys teleradiotherapy-procedure-code-invariant
 * extension[radiotherapyTechnique].valueString from TeleradiotherapyTechniqueVS (extensible)
-* partOf only Reference(TeleradiotherapyDeliverySummary)
+* partOf only Reference(RadiotherapyPrescriptionDelivery)
+* usedCode from TeleradiotherapyDeviceVS (extensible)
 
-    Invariant: cancer-related-teleradiotherapy-procedure-code-invariant
+
+    Invariant: teleradiotherapy-procedure-code-invariant
     Description: "If the code 'Other Teleradiotherapy Modality, specify' is used, a second code from outside the original value set must be present."
     Expression: "coding.where(code = 'OtherTeleradiotherapyModality').exists() implies coding.where(code != 'OtherTeleradiotherapyModality' and $this.memberOf('http://hl7.org/fhir/us/mcode/ValueSet/mcode-teleradiotherapy-modality-vs').not()).exists()"
     Severity:   #error
 
-Profile:  BrachytherapyDeliverySummary
+Profile:  BrachytherapyDeliveryRecord
 Parent:   USCoreProcedure
-Id:       brachytherapy-delivery-summary
-Title:    "Cancer-Related Brachytherapy"
-Description: "A treatment addressing a cancer condition using brachytherapy (internal radiation). 
+Id:       brachytherapy-delivery-record
+Title:    "Brachytherapy Delivery Record"
+Description: "Record of delivery of a radiotherapy procedure using brachytherapy (internal radiation). 
 
-The scope of this profile has been narrowed to cancer-related procedures by constraining the reasonReference and reasonCode to cancer conditions, one of which is required.
+Conformance statement: TBD"
 
-Conformance statement:
-
-Procedure resources associated with an mCODE patient with Procedure.category SNOMED-CT 53438000 MAY conform to this profile. Beyond this requirement, a producer of resources SHOULD ensure that any resource instance associated with an mCODE patient that would reasonably be expected to conform to this profile SHOULD be published in this form. Specifically, we expect that any brachytherapy related to the treatment of a `PrimaryCancerCondition` or `SecondaryCancerCondition` would be published in this form."
-* insert RadiotherapyCommonRuleSet
+* insert RadiotherapyDeliveryCommonRuleSet
 * code from BrachytherapyModalityVS (required)
-* code obeys cancer-related-brachytherapy-code-invariant
+* code obeys brachytherapy-code-invariant
 * code ^short = "Brachytherapy Modality"
 * code ^definition = "The modality of the brachytherapy procedure."
 * extension[radiotherapyTechnique].valueString from BrachytherapyTechniqueVS (extensible)
-* partOf only Reference(TeleradiotherapyDeliverySummary)
+* usedCode from BrachytherapyDeviceVS (extensible)
 
-    Invariant: cancer-related-brachytherapy-code-invariant
+    Invariant: brachytherapy-code-invariant
     Description: "If the code representing 'Other brachytherapy, specify' is used, a second code from outside the original value set must be present."
     Expression: "coding.where(code = 'OtherBrachytherapyModality').exists() implies coding.where(code != 'OtherBrachytherapyModality' and $this.memberOf('http://hl7.org/fhir/us/mcode/ValueSet/mcode-brachytherapy-modality-vs').not()).exists()"
     Severity:   #error
 
-// Unfortunately the extension procedure-method cannot be used because it is 0..1
+// TO DO: Use standard extension procedure-method IF the cardinality will be 0..1
 Extension: RadiotherapyTechnique
 Id: radiotherapy-technique
 Title: "Radiation Procedure Technique"

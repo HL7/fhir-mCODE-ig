@@ -91,7 +91,7 @@ Description: "Codes describing the devices used in teleradiotherapy (external be
 * #Robotic "Robotic" "Multiple axis (other than MLCs) are moved under electronic control during delivery of dose from a single beam with linear accelerator based source. e.g. CyberKnife. "
 * #IsotopeMS "IsotopeMS" "Multisource radiation use of multiple sources at different positons using isotope based source e.g. GammaKnife"
 * #kV "kV" "Non-megavoltage, electronically generated photons"
-* #NGLinac ""
+* #NGLinac "Non-gantry based linac, e.g. specialty devices used for IORT e.g. Mobetron"
 * #MS "Multisource radiation" "Multisource radiation use of multiple sources at different positons using linear accelerator-based source"
 
 

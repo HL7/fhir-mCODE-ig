@@ -103,7 +103,6 @@ Description: "Extended example 1: example showing ECOG performance status"
 * method = SCT#5880005 "Physical examination procedure (procedure)"
 
 
-
 Instance: scenario1-mcode-cancer-related-surgical-procedure-mastectomy
 InstanceOf: CancerRelatedSurgicalProcedure
 Description: "Extended example 1: example showing partial mastectomy surgical procedure"
@@ -117,11 +116,11 @@ Description: "Extended example 1: example showing partial mastectomy surgical pr
 * reasonReference = Reference(scenario1-mcode-primary-cancer-condition)
 * bodySite = SCT#80248007 "Left breast structure (body structure)"
 
-Instance: scenario1-teleradiotherapy-prescription-delivery
-InstanceOf: TeleradiotherapyPrescriptionDelivery
+Instance: scenario1-teleradiotherapy-delivery-record
+InstanceOf: TeleradiotherapyDeliveryRecord
 Description: "Extended example 1: example showing radiation treatment"
-* id = "scenario1-teleradiotherapy-prescription-delivery"
-* extension[treatmentIntent].valueCodeableConcept = SCT#373808002 "Curative - procedure intent (qualifier value)"
+* id = "scenario1-teleradiotherapy-delivery-record"
+//* extension[treatmentIntent].valueCodeableConcept = SCT#373808002 "Curative - procedure intent (qualifier value)"
 * status = #completed "completed"
 * code = SCT#169291001 "X-ray beam therapy"
 * extension[radiotherapyTechnique].valueString = "3D"

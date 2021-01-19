@@ -13,7 +13,7 @@ The bundle MUST also contain following mCODE-conformant resources, if available 
 * Observation resources representing [ECOGPerformanceStatus](StructureDefinition-mcode-ecog-performance-status.html) and/or [KarnofskyPerformanceStatus](StructureDefinition-mcode-karnofsky-performance-status.html)
 * Observation resources representing any [TumorMarkerTests](StructureDefinition-mcode-tumor-marker-test.html)
 * MedicationRequest resources conforming to [CancerRelatedMedicationRequest](StructureDefinition-mcode-cancer-related-medication-request.html), representing cancer-related prescriptions, administrations, and patient-reported medications
-* Procedure resources representing any [CancerRelatedSurgicalProcedure](StructureDefinition-mcode-cancer-related-surgical-procedure.html) or [TeleradiotherapyPrescriptionDelivery](StructureDefinition-radiotherapy-presciption-delivery.html) or [BrachytherapyDeliverySummary](StructureDefinition-mcode-cancer-related-brachytherapy.html)
+* Procedure resources representing any [CancerRelatedSurgicalProcedure](StructureDefinition-mcode-cancer-related-surgical-procedure.html) or [TeleradiotherapyDeliveryRecord](StructureDefinition-radiotherapy-presciption-delivery.html) or [BrachytherapyDeliveryRecord](StructureDefinition-mcode-cancer-related-brachytherapy.html)
 * Observation resources representing the TNM staging information ([see Disease Characterization profiles](artifacts.html#profiles-disease-characterization))
 * Observation resources representing [CancerGeneticVariant](StructureDefinition-mcode-cancer-genetic-variant.html) and [GenomicRegionStudied](StructureDefinition-mcode-genomic-region-studied.html)
 * DiagnosticReport resources representing [CancerGenomicsReport](StructureDefinition-mcode-cancer-genomics-report.html)
@@ -42,9 +42,9 @@ By default, this Bundle includes _all_ required resources described above, irres
     tumorMarkerTest 0..* MS and
     cancerRelatedMedicationRequest 0..* MS and
     cancerRelatedSurgicalProcedure 0..* MS and
-    teleradiotherapyDeliverySummary 0..* MS and
+    RadiotherapyPrescriptionDelivery 0..* MS and
     brachytherapyDeliverySummary 0..* MS and
-    teleradiotherapyPrescriptionDelivery 0..* MS and
+    teleradiotherapyDeliveryRecord 0..* MS and
     tnmClinicalStageGroup 0..* MS and
     tnmClinicalPrimaryTumorCategory 0..* MS and
     tnmClinicalRegionalNodesCategory 0..* MS and
@@ -71,8 +71,8 @@ By default, this Bundle includes _all_ required resources described above, irres
 * entry[tumorMarkerTest] ^short = "Tumor Marker Tests"
 * entry[cancerRelatedMedicationRequest] ^short = "Cancer-Related Medication Request(s)"
 * entry[cancerRelatedSurgicalProcedure] ^short = "Cancer-Related Surgical Procedure(s)"
-* entry[teleradiotherapyDeliverySummary] ^short = "Cancer-Related Radiation Course(s)"
-* entry[teleradiotherapyPrescriptionDelivery] ^short = "Radiotherapy Prescription Delivery(-ies)"
+* entry[RadiotherapyPrescriptionDelivery] ^short = "Cancer-Related Radiation Course(s)"
+* entry[teleradiotherapyDeliveryRecord] ^short = "Radiotherapy Prescription Delivery(-ies)"
 * entry[brachytherapyDeliverySummary] ^short = "Brachytherapy Summary(-ies)"
 * entry[tnmClinicalStageGroup] ^short = "TNM Clinical Stage Group(s)"
 * entry[tnmClinicalPrimaryTumorCategory] ^short = "TNM Clinical Primary Tumor Category(-ies)"
@@ -100,8 +100,8 @@ By default, this Bundle includes _all_ required resources described above, irres
 * entry[tumorMarkerTest] ^definition = "Observations resource(s) representing Tumor Marker Tests."
 * entry[cancerRelatedMedicationRequest] ^definition = "Cancer-Related Medication Requests, including both active and inactive medications."
 * entry[cancerRelatedSurgicalProcedure] ^definition = "Procedure resource(s) representing cancer-related surgical procedures."
-* entry[teleradiotherapyDeliverySummary] ^definition = "Procedure resource(s) representing a course of treatment in cancer-related radiology therapy."
-* entry[teleradiotherapyPrescriptionDelivery] ^definition = "Procedure resource(s) representing a phase in treatment of cancer via external beam radiology procedures."
+* entry[RadiotherapyPrescriptionDelivery] ^definition = "Procedure resource(s) representing a course of treatment in cancer-related radiology therapy."
+* entry[teleradiotherapyDeliveryRecord] ^definition = "Procedure resource(s) representing a phase in treatment of cancer via external beam radiology procedures."
 * entry[brachytherapyDeliverySummary] ^definition = "Procedure resource(s) representing cancer-related brachytherapy (internal) radiology procedures."
 * entry[tnmClinicalStageGroup] ^definition = "Observation resource(s) representing clinical stage group"
 * entry[tnmClinicalPrimaryTumorCategory] ^definition = "Observation resource(s) representing clinical T category"
@@ -130,9 +130,9 @@ By default, this Bundle includes _all_ required resources described above, irres
 * entry[cancerRelatedMedicationRequest].resource only CancerRelatedMedicationRequest
 * entry[cancerRelatedSurgicalProcedure].resource only CancerRelatedSurgicalProcedure
 // -- Radiation Oncology --
-* entry[teleradiotherapyDeliverySummary].resource only TeleradiotherapyDeliverySummary
-* entry[teleradiotherapyPrescriptionDelivery].resource only TeleradiotherapyPrescriptionDelivery
-* entry[brachytherapyDeliverySummary].resource only BrachytherapyDeliverySummary
+* entry[RadiotherapyPrescriptionDelivery].resource only RadiotherapyPrescriptionDelivery
+* entry[teleradiotherapyDeliveryRecord].resource only TeleradiotherapyDeliveryRecord
+* entry[brachytherapyDeliverySummary].resource only BrachytherapyDeliveryRecord
 //
 * entry[tnmClinicalStageGroup].resource only TNMClinicalStageGroup
 * entry[tnmClinicalPrimaryTumorCategory].resource only TNMClinicalPrimaryTumorCategory

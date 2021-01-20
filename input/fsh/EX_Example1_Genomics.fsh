@@ -1,8 +1,6 @@
 Instance: mCODECancerGeneticVariantExample1
 InstanceOf: CancerGeneticVariant
 Description: "mCODE Example for Cancer Genetic Variant"
-* id = "mCODECancerGeneticVariantExample1"
-* meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genetic-variant"
 * status = #final "Final"
 * method = LNC#LA26398-0 "Sequencing"
 // value[x] has alternate codings depending on where to place the interpretation of "Positive or Negative".
@@ -26,8 +24,6 @@ Description: "mCODE Example for Cancer Genetic Variant"
 Instance: mCODECancerGeneticVariantExample2
 InstanceOf: CancerGeneticVariant
 Description: "mCODE Example for Cancer Genetic Variant"
-* id = "mCODECancerGeneticVariantExample2"
-* meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genetic-variant"
 * status = #final "Final"
 * method = LNC#LA26398-0 "Sequencing"
 // value[x] has alternate codings depending on where to place the interpretation of "Positive or Negative".
@@ -42,8 +38,6 @@ Description: "mCODE Example for Cancer Genetic Variant"
 Instance: mCODECancerGenomicsReportExample1
 InstanceOf: CancerGenomicsReport
 Description: "mCODE Example for Cancer Genomics Report"
-* id = "mCODECancerGenomicsReportExample1"
-* meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genomics-report"
 * status = #final "Final"
 * subject = Reference(mCODEPatientExample1)
 * effectiveDateTime = "2019-04-01"
@@ -55,8 +49,6 @@ Description: "mCODE Example for Cancer Genomics Report"
 Instance: mCODEGenomicRegionStudiedExample1
 InstanceOf: GenomicRegionStudied
 Description: "mCODE Example for Genomic Region Studied"
-* id = "mCODEGenomicRegionStudiedExample1"
-* meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genomic-region-studied"
 * status = #final "final"
 * subject = Reference(mCODEPatientExample1)
 * effectiveDateTime = "2019-04-01"
@@ -66,8 +58,6 @@ Description: "mCODE Example for Genomic Region Studied"
 Instance: mCODETumorMarkerTestExample1
 InstanceOf: TumorMarkerTest
 Description: "mCODE Example for Tumor Marker Test"
-* id = "mCODETumorMarkerTestExample1"
-* meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tumor-marker-test"
 * status = #final "final"
 * code = LNC#39004-7 "Epidermal growth factor receptor Ag [Presence] in Tissue"
 * subject = Reference(mCODEPatientExample1)
@@ -78,8 +68,6 @@ Description: "mCODE Example for Tumor Marker Test"
 Instance: mCODEGeneticSpecimenExample1
 InstanceOf: GeneticSpecimen
 Description: "mCODE Example for Genetic Specimen"
-* id = "mCODEGeneticSpecimenExample1"
-* meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genetic-specimen"
 * status = #available "Available"
 * subject = Reference(mCODEPatientExample1)
 * processing.timeDateTime = "2019-03-20"

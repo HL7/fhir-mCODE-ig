@@ -234,8 +234,7 @@ Description: "Extended example 1: example showing Oncotype DX breast recurrence 
 * subject = Reference(scenario1-mcode-cancer-patient)
 * effectiveDateTime = "2018-03-20"
 * performer = Reference(scenario1-us-core-practitioner)
-* valueQuantity = UCUM#{ScoreOf}
-* valueQuantity.value = 47
+* valueQuantity = 47 '{ScoreOf}' "Recurrence score"
 * interpretation = ObsInt#H "High"
 
 Instance: scenario1-mcode-cancer-genomics-report
@@ -262,13 +261,13 @@ Description: "Extended example 1: example showing which regions were included in
 * effectiveDateTime = "2018-04-01"
 * issued = "2018-04-01T00:00:01+00:00"
 * component.code = LNC#48018-6 "Gene studied [ID]"
-* component[GeneStudied].valueCodeableConcept.coding[0] = HGNC#1100 "BRCA1"
-* component[GeneStudied].valueCodeableConcept.coding[1] = HGNC#1101 "BRCA2"
-* component[GeneStudied].valueCodeableConcept.coding[2] = HGNC#1748 "CDH1"
-* component[GeneStudied].valueCodeableConcept.coding[3] = HGNC#26144 "PALB2"
-* component[GeneStudied].valueCodeableConcept.coding[4] = HGNC#9588 "PTEN"
-* component[GeneStudied].valueCodeableConcept.coding[5] = HGNC#11389 "STK11"
-* component[GeneStudied].valueCodeableConcept.coding[6] = HGNC#11998 "TP53"
+* component[GeneStudied].valueCodeableConcept.coding[+] = HGNC#1100 "BRCA1"
+* component[GeneStudied].valueCodeableConcept.coding[+] = HGNC#1101 "BRCA2"
+* component[GeneStudied].valueCodeableConcept.coding[+] = HGNC#1748 "CDH1"
+* component[GeneStudied].valueCodeableConcept.coding[+] = HGNC#26144 "PALB2"
+* component[GeneStudied].valueCodeableConcept.coding[+] = HGNC#9588 "PTEN"
+* component[GeneStudied].valueCodeableConcept.coding[+] = HGNC#11389 "STK11"
+* component[GeneStudied].valueCodeableConcept.coding[+] = HGNC#11998 "TP53"
 
 Instance: scenario1-mcode-genetic-specimen
 InstanceOf: GeneticSpecimen
@@ -312,12 +311,10 @@ Description: "Extended example 1: example showing chemotherapy medication"
 * authoredOn = "2019-04-01"
 * dosageInstruction.text = "doxorubicin (60 mg/m² IV), 93.26mg"
 * dosageInstruction.route = SCT#47625008 "Intravenous route (qualifier value)"
-* dosageInstruction.doseAndRate.doseQuantity = UCUM#mg
-* dosageInstruction.doseAndRate.doseQuantity.value = 93.26
+* dosageInstruction.doseAndRate.doseQuantity = 93.26 'mg' "mg"
 // Once every 3 weeks
 * dosageInstruction.maxDosePerPeriod.numerator.value = 1
-* dosageInstruction.maxDosePerPeriod.denominator = UCUM#wk "week"
-* dosageInstruction.maxDosePerPeriod.denominator.value = 3
+* dosageInstruction.maxDosePerPeriod.denominator = 3 'wk' "week"
 
 Instance: scenario1-mcode-cancer-related-medication-chemo-cyclophosphamide
 InstanceOf: CancerRelatedMedicationRequest
@@ -335,12 +332,10 @@ Description: "Extended example 1: example showing chemotherapy medication"
 * authoredOn = "2018-04-01"
 * dosageInstruction.text = "cyclophosphamide (600 mg/m² IV), 932.59mg"
 * dosageInstruction.route = SCT#47625008 "Intravenous route (qualifier value)"
-* dosageInstruction.doseAndRate.doseQuantity = UCUM#mg
-* dosageInstruction.doseAndRate.doseQuantity.value = 932.59
+* dosageInstruction.doseAndRate.doseQuantity = 932.59 'mg' "mg"
 // Once every 3 weeks
 * dosageInstruction.maxDosePerPeriod.numerator.value = 1
-* dosageInstruction.maxDosePerPeriod.denominator = UCUM#wk "week"
-* dosageInstruction.maxDosePerPeriod.denominator.value = 3
+* dosageInstruction.maxDosePerPeriod.denominator = 3 'wk' "week"
 
 
 Instance: scenario1-mcode-cancer-related-medication-chemo-paclitaxel
@@ -359,12 +354,10 @@ Description: "Extended example 1: example showing chemotherapy medication"
 * authoredOn = "2018-04-01"
 * dosageInstruction.text = "doxorubicin (175 mg/m² IV), 272.01mg"
 * dosageInstruction.route = SCT#47625008 "Intravenous route (qualifier value)"
-* dosageInstruction.doseAndRate.doseQuantity = UCUM#mg
-* dosageInstruction.doseAndRate.doseQuantity.value = 272.01
+* dosageInstruction.doseAndRate.doseQuantity = 272.01 'mg' "mg"
 // Once every 3 weeks
 * dosageInstruction.maxDosePerPeriod.numerator.value = 1
-* dosageInstruction.maxDosePerPeriod.denominator = UCUM#wk "week"
-* dosageInstruction.maxDosePerPeriod.denominator.value = 3
+* dosageInstruction.maxDosePerPeriod.denominator = 3 'wk' "week"
 
 Instance: scenario1-mcode-cancer-related-medication-anastrozole
 InstanceOf: CancerRelatedMedicationRequest
@@ -382,12 +375,10 @@ Description: "Extended example 1: example showing chemotherapy medication"
 * authoredOn = "2018-05-01"
 * dosageInstruction.text = "1mg orally once daily"
 * dosageInstruction.route = SCT#26643006 "Oral route (qualifier value)"
-* dosageInstruction.doseAndRate.doseQuantity = UCUM#mg
-* dosageInstruction.doseAndRate.doseQuantity.value = 1
+* dosageInstruction.doseAndRate.doseQuantity = 1 'mg' "mg"
 // Once every 3 weeks
 * dosageInstruction.maxDosePerPeriod.numerator.value = 1
-* dosageInstruction.maxDosePerPeriod.denominator = UCUM#d "day"
-* dosageInstruction.maxDosePerPeriod.denominator.value = 1
+* dosageInstruction.maxDosePerPeriod.denominator = 1 'd' "day"
 
 
 Instance: scenario1-us-core-practitioner
@@ -487,8 +478,7 @@ Description: "Extended example 1: example showing smoking history"
 * code = SCT#401201003 "Cigarette pack-years (observable entity)" // No LOINC available
 * subject = Reference(scenario1-mcode-cancer-patient)
 * effectiveDateTime = "2018-03-01T00:00:00Z"
-* valueQuantity = UCUM#{PackYears}
-* valueQuantity.value = 20
+* valueQuantity = 20 '{PackYears}' "Pack-Years"
 
 Instance: scenario1-us-core-condition-anxiety
 InstanceOf: USCoreCondition
@@ -598,8 +588,7 @@ Description: "Extended example 1: example showing 3 sentinel lymph nodes were ex
 * subject = Reference(scenario1-mcode-cancer-patient)
 * effectiveDateTime = "2018-03-06T00:00:00Z"
 * component.code = LNC#92833-3 "Lymph nodes examined [#] in Cancer specimen by Light microscopy"
-* component.valueQuantity = UCUM#{Count}
-* component.valueQuantity.value = 3
+* component.valueQuantity = 3 '{Count}' "Count"
 * specimen = Reference(scenario1-specimen-tumor)
 
 Instance: scenario1-observation-tumor-size
@@ -642,7 +631,7 @@ Description: "Extended example 1: neutrophils lab test"
 * code = LNC#770-8 "Neutrophils/100 leukocytes in Blood by Automated count"
 * subject = Reference(scenario1-mcode-cancer-patient)
 * effectiveDateTime = "2018-03-06T00:00:00Z"
-* valueQuantity = 40.0 '%'
-* referenceRange.low = 37.0 '%'
-* referenceRange.high = 67.0 '%'
+* valueQuantity = 40.0 '%' "%"
+* referenceRange.low = 37.0 '%' "%"
+* referenceRange.high = 67.0 '%' "%"
 * referenceRange.appliesTo = RefMeaning#normal "Normal Range"

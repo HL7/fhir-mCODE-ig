@@ -1,0 +1,23 @@
+@startuml
+skinparam defaultFontName Arial
+
+title Identifying mCODE Patients: Patients-in-group approach
+hide footbox
+participant "mCODE Data Receiver" as Receiver
+participant "mCODE Data Sender" as Sender
+
+group Get Patients via ""_profile""
+    "Receiver" -> "Sender" : ""GET [base]/Group/mcode-patients""
+    "Sender" --> "Receiver" : HTTP response containing Group referencing relevant Patients
+    ...
+    note over Receiver
+    Receiver extracts references
+    to Patients from Group to
+    generate a second request:
+    end note
+    "Receiver" -> "Sender" : ""GET [base]/Patient?_id=id_1,id_2,...,id_n""
+    "Sender" --> "Receiver" : HTTP response containing Bundle of Patients
+end
+
+
+@enduml

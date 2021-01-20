@@ -76,7 +76,7 @@ The patient is two years out from surgery and has undergone surveillance imaging
 * [`scenario1-mcode-cancer-related-medication-chemo-cyclophosphamide`](MedicationRequest-scenario1-mcode-cancer-related-medication-chemo-cyclophosphamide.html) ([CancerRelatedMedicationRequest])
 * [`scenario1-mcode-cancer-related-medication-chemo-paclitaxel`](MedicationRequest-scenario1-mcode-cancer-related-medication-chemo-paclitaxel.html) ([CancerRelatedMedicationRequest])
 * [`scenario1-mcode-cancer-related-medication-anastrozole`](MedicationRequest-scenario1-mcode-cancer-related-medication-anastrozole.html) ([CancerRelatedMedicationRequest])
-* [`scenario1-teleradiotherapy-delivery-record`](Procedure-sscenario1-teleradiotherapy-delivery-record.html) ([TeleradiotherapyDeliveryRecord])
+* [`scenario1-teleradiotherapy-delivery-record`](Procedure-scenario1-teleradiotherapy-delivery-record.html) ([TeleradiotherapyDeliveryRecord])
 
 
 #### FHIR instances from _non_-mCODE elements

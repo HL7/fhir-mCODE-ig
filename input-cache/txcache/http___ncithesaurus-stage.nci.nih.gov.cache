@@ -19573,3 +19573,98 @@ e: {
   "error" : "Error from server: Unable to provide support for code system http://ncithesaurus-stage.nci.nih.gov"
 }
 -------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://ncithesaurus-stage.nci.nih.gov",
+  "code" : "C85254"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://ncithesaurus-stage.nci.nih.gov",
+      "concept" : [{
+        "code" : "C85254",
+        "display" : "Low-Dose Rate Brachytherapy"
+      },
+      {
+        "code" : "C116542",
+        "display" : "Pulsed-Dose Rate Brachytherapy"
+      },
+      {
+        "code" : "C15651",
+        "display" : "High dose brachytherapy"
+      }]
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code \"C85254\" is not valid in the system http://ncithesaurus-stage.nci.nih.gov; The code provided (http://ncithesaurus-stage.nci.nih.gov#C85254) is not valid (from http://tx.fhir.org/r4)"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://ncithesaurus-stage.nci.nih.gov",
+  "code" : "C104914"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://ncithesaurus-stage.nci.nih.gov",
+      "concept" : [{
+        "code" : "C66897",
+        "display" : "Proton Beam Radiation Therapy"
+      },
+      {
+        "code" : "C15650",
+        "display" : "Electron Beam Therapy"
+      },
+      {
+        "code" : "C15440",
+        "display" : "High-LET Neutron Therapy"
+      },
+      {
+        "code" : "C160816",
+        "display" : "Carbon Ion Radiation Therapy"
+      },
+      {
+        "code" : "C104914",
+        "display" : "Photon Beam Radiation Therapy"
+      }]
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code \"C104914\" is not valid in the system http://ncithesaurus-stage.nci.nih.gov; The code provided (http://ncithesaurus-stage.nci.nih.gov#C104914) is not valid (from http://tx.fhir.org/r4)"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://ncithesaurus-stage.nci.nih.gov",
+  "code" : "C104914"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://ncithesaurus-stage.nci.nih.gov",
+      "concept" : [{
+        "code" : "C85254",
+        "display" : "Low-Dose Rate Brachytherapy"
+      },
+      {
+        "code" : "C116542",
+        "display" : "Pulsed-Dose Rate Brachytherapy"
+      },
+      {
+        "code" : "C15651",
+        "display" : "High dose brachytherapy"
+      }]
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code \"C104914\" is not valid in the system http://ncithesaurus-stage.nci.nih.gov; The code provided (http://ncithesaurus-stage.nci.nih.gov#C104914) is not valid (from http://tx.fhir.org/r4)"
+}
+-------------------------------------------------------------------------------------

@@ -1,6 +1,7 @@
 <!-- mCODE Profiles -->
 [AdverseEventExpectation]: StructureDefinition-adverse-event-expectation.html
 [AdverseEventResolvedDate]: StructureDefinition-adverse-event-resolved-date.html
+[BrachytherapyDeliveryRecord]: StructureDefinition-brachytherapy-delivery-record.html
 [CTCAEGrade]: StructureDefinition-ctcae-grade.html
 [CTCAdverseEvent]: StructureDefinition-ctc-adverse-event.html
 [CancerDiseaseStatus]: StructureDefinition-mcode-cancer-disease-status.html
@@ -9,7 +10,6 @@
 [CancerPatient]: StructureDefinition-mcode-cancer-patient.html
 [CancerRelatedComorbidities]: StructureDefinition-mcode-cancer-related-comorbidities.html
 [CancerRelatedMedicationRequest]: StructureDefinition-mcode-cancer-related-medication-request.html
-[CancerRelatedRadiationProcedure]: StructureDefinition-mcode-cancer-related-radiation-procedure.html
 [CancerRelatedSurgicalProcedure]: StructureDefinition-mcode-cancer-related-surgical-procedure.html
 [ComorbidConditionCode]: StructureDefinition-mcode-comorbid-condition-code.html
 [ComorbidConditionReference]: StructureDefinition-mcode-comorbid-condition-reference.html
@@ -25,8 +25,10 @@
 [MCodeCapabilityStatement]: StructureDefinition-MCodeCapabilityStatement.html
 [MCodePatientGroup]: StructureDefinition-mcode-patient-group.html
 [PrimaryCancerCondition]: StructureDefinition-mcode-primary-cancer-condition.html
+[RadiotherapyPrescriptionDelivery]: StructureDefinition-radiotherapy-prescription-delivery.html
 [RelatedPrimaryCancerCondition]: StructureDefinition-mcode-related-primary-cancer-condition.html
 [SecondaryCancerCondition]: StructureDefinition-mcode-secondary-cancer-condition.html
+[TeleradiotherapyDeliveryRecord]: StructureDefinition-teleradiotherapy-delivery-record.html
 [TNMClinicalDistantMetastasesCategory]: StructureDefinition-mcode-tnm-clinical-distant-metastases-category.html
 [TNMClinicalPrimaryTumorCategory]: StructureDefinition-mcode-tnm-clinical-primary-tumor-category.html
 [TNMClinicalRegionalNodesCategory]: StructureDefinition-mcode-tnm-clinical-regional-nodes-category.html
@@ -93,8 +95,11 @@
 [LocationQualifierVS]: ValueSet-mcode-location-qualifier-vs.html
 [PresentAbsentUnknownVS]: ValueSet-mcode-present-absent-unknown.html
 [PrimaryOrUncertainBehaviorCancerDisorderVS]: ValueSet-mcode-primary-or-uncertain-behavior-cancer-disorder-vs.html
+
 [RadiationProcedureVS]: ValueSet-mcode-radiation-procedure-vs.html
 [RadiationTargetBodySiteVS]: ValueSet-mcode-radiation-target-body-site-vs.html
+
+
 [SecondaryCancerDisorderVS]: ValueSet-mcode-secondary-cancer-disorder-vs.html
 [TNMDistantMetastasesCategoryVS]: ValueSet-mcode-tnm-distant-metastases-category-vs.html
 [TNMPrimaryTumorCategoryVS]: ValueSet-mcode-tnm-primary-tumor-category-vs.html

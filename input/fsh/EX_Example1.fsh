@@ -214,11 +214,11 @@ Description: "mCODE Example for Cancer Related Surgical Procedure"
 * reasonReference = Reference(mCODEPrimaryCancerConditionExample1)
 * bodySite = SCT#41224006 "Structure of lower lobe of left lung (body structure)"
 
-Instance: BrachytherapyDeliveryRecordExample1
-InstanceOf: BrachytherapyDeliveryRecord
+Instance: BrachytherapyPrescriptionDeliveryExample1
+InstanceOf: BrachytherapyPrescriptionDelivery
 Description: "mCODE Example for Cancer Related Radiation Procedure"
-* id = "BrachytherapyDeliveryRecordExample1"
-* meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/brachytherapy-delivery-record"
+* id = "BrachytherapyPrescriptionDeliveryExample1"
+* meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/brachytherapy-prescription-delivery"
 * status = #completed "completed"
 * code = NCIT#C85254 "Low-Dose Rate Brachytherapy" 
 * extension[radiotherapyTechnique].valueString = "Interstitial–Temporary"

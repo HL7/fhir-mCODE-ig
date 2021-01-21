@@ -16,7 +16,7 @@ This section provides some examples how mCODE elements may be represented in a F
  * **Cancer Related Medication Request**: <a href="MedicationRequest-mCODECancerRelatedMedicationRequestExample1.html">mCODECancerRelatedMedicationRequestExample1</a> shows an example for a patient who is currently receiving gefitinib and <a href="MedicationRequest-mCODECancerRelatedMedicationRequestExample2.html">mCODECancerRelatedMedicationRequestExample2</a> shows an example for a patient who completed a treatment of getfitinib.
  * **Cancer Related Surgical Procedure**: <a href="Procedure-mCODECancerRelatedSurgicalProcedureExample1.html">mCODECancerRelatedSurgicalProcedureExample1</a> shows an example for a patient who underwent a partial lobectomy of the lung for cancer treatment.
  ############
-  * **Internal Radiotherapy**: [BrachytherapyDeliveryRecordExample1]</a> shows an example for a patient who went underwent brachytherapy (internal radiation) for cancer treatment.
+  * **Internal Radiotherapy**: [BrachytherapyPrescriptionDeliveryExample1]</a> shows an example for a patient who went underwent brachytherapy (internal radiation) for cancer treatment.
  * **Tumor Marker**: <a href="Observation-mCODETumorMarkerTestExample1.html">mCODETumorMarkerTestExample1</a> shows a simple example of an EGFR tumor marker status as positive.
  * **Genomics Report**: <a href="DiagnosticReport-mCODECancerGenomicsReportExample1.html">mCODECancerGenomicsReportExample1</a> shows a very small subset elements found in a genomics report which include the test service and test name.
  * **Genetic Variant**: <a href="Observation-mCODECancerGeneticVariantExample1.html">mCODECancerGeneticVariantExample1</a> extends the contents of the Genomics Report by showing the results of a variant found for a specific gene, STK-11. This example differs from the mutation test result in that there was no preconceived test for a specific variant ahead of time.  Rather, it is the result of any variants found for a given DNA region.
@@ -76,7 +76,7 @@ The patient is two years out from surgery and has undergone surveillance imaging
 * [`scenario1-mcode-cancer-related-medication-chemo-cyclophosphamide`](MedicationRequest-scenario1-mcode-cancer-related-medication-chemo-cyclophosphamide.html) ([CancerRelatedMedicationRequest])
 * [`scenario1-mcode-cancer-related-medication-chemo-paclitaxel`](MedicationRequest-scenario1-mcode-cancer-related-medication-chemo-paclitaxel.html) ([CancerRelatedMedicationRequest])
 * [`scenario1-mcode-cancer-related-medication-anastrozole`](MedicationRequest-scenario1-mcode-cancer-related-medication-anastrozole.html) ([CancerRelatedMedicationRequest])
-* [`scenario1-teleradiotherapy-delivery-record`](Procedure-scenario1-teleradiotherapy-delivery-record.html) ([TeleradiotherapyDeliveryRecord])
+* [`scenario1-teleradiotherapy-prescription-delivery`](Procedure-scenario1-teleradiotherapy-prescription-delivery.html) ([TeleradiotherapyPrescriptionDelivery])
 
 
 #### FHIR instances from _non_-mCODE elements

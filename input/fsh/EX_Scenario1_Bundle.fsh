@@ -17,8 +17,8 @@ Description: "Extended example 1 as a mCODE Patient Bundle"
 * entry[=].fullUrl = "http://example.org/fhir/DiagnosticReport/scenario1-mcode-cancer-genomics-report"
 * entry[+].resource = scenario1-mcode-cancer-related-surgical-procedure-mastectomy
 * entry[=].fullUrl = "http://example.org/fhir/Procedure/scenario1-mcode-cancer-related-surgical-procedure-mastectomy"
-* entry[+].resource = scenario1-teleradiotherapy-delivery-record
-* entry[=].fullUrl = "http://example.org/fhir/Procedure/scenario1-teleradiotherapy-delivery-record"
+* entry[+].resource = scenario1-teleradiotherapy-prescription-delivery
+* entry[=].fullUrl = "http://example.org/fhir/Procedure/scenario1-teleradiotherapy-prescription-delivery"
 * entry[+].resource = scenario1-mcode-tnm-clinical-stage-group
 * entry[=].fullUrl = "http://example.org/fhir/Observation/scenario1-mcode-tnm-clinical-stage-group"
 * entry[+].resource = scenario1-mcode-tnm-primary-tumor-category

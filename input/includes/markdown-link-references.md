@@ -1,7 +1,7 @@
 <!-- mCODE Profiles -->
 [AdverseEventExpectation]: StructureDefinition-adverse-event-expectation.html
 [AdverseEventResolvedDate]: StructureDefinition-adverse-event-resolved-date.html
-[BrachytherapyDeliveryRecord]: StructureDefinition-brachytherapy-delivery-record.html
+[BrachytherapyPrescriptionDelivery]: StructureDefinition-brachytherapy-prescription-delivery.html
 [CTCAEGrade]: StructureDefinition-ctcae-grade.html
 [CTCAdverseEvent]: StructureDefinition-ctc-adverse-event.html
 [CancerDiseaseStatus]: StructureDefinition-mcode-cancer-disease-status.html
@@ -25,10 +25,10 @@
 [MCodeCapabilityStatement]: StructureDefinition-MCodeCapabilityStatement.html
 [MCodePatientGroup]: StructureDefinition-mcode-patient-group.html
 [PrimaryCancerCondition]: StructureDefinition-mcode-primary-cancer-condition.html
-[RadiotherapyPrescriptionDelivery]: StructureDefinition-radiotherapy-prescription-delivery.html
+[RadiotherapyCourseSummary]: StructureDefinition-radiotherapy-course-summary.html
 [RelatedPrimaryCancerCondition]: StructureDefinition-mcode-related-primary-cancer-condition.html
 [SecondaryCancerCondition]: StructureDefinition-mcode-secondary-cancer-condition.html
-[TeleradiotherapyDeliveryRecord]: StructureDefinition-teleradiotherapy-delivery-record.html
+[TeleradiotherapyPrescriptionDelivery]: StructureDefinition-teleradiotherapy-prescription-delivery.html
 [TNMClinicalDistantMetastasesCategory]: StructureDefinition-mcode-tnm-clinical-distant-metastases-category.html
 [TNMClinicalPrimaryTumorCategory]: StructureDefinition-mcode-tnm-clinical-primary-tumor-category.html
 [TNMClinicalRegionalNodesCategory]: StructureDefinition-mcode-tnm-clinical-regional-nodes-category.html

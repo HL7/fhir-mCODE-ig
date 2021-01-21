@@ -171,9 +171,9 @@ Vital signs are measurements of the most essential, or "vital" body functions. T
 The **Treatment** group includes reporting of procedures and medications used to treat a cancer patient, or relevant to that treatment. Treatments are captured using the following profiles:
 
 * [CancerRelatedSurgicalProcedure](StructureDefinition-mcode-cancer-related-surgical-procedure.html) - representing surgical procedures that involve the removal of cancer tumors from the body.
-* [RadiotherapyPrescriptionDelivery] - to summarize an ongoing or completed course of radiotherapy, which may relate to multiple instances of brachytherapy or teleradiotherapy delivery records.
-* [BrachytherapyDeliveryRecord] - documentation of internal radiation therapy using a particular modality and technique.
-* [TeleradiotherapyDeliveryRecord] - documentation of external beam radiation therapy from photons, neutrons, protons, and other sources using a particular modality and technique.
+* [RadiotherapyCourseSummary] - to summarize an ongoing or completed course of radiotherapy, which may relate to multiple instances of brachytherapy or teleradiotherapy prescription deliverys.
+* [BrachytherapyPrescriptionDelivery] - documentation of internal radiation therapy using a particular modality and technique.
+* [TeleradiotherapyPrescriptionDelivery] - documentation of external beam radiation therapy from photons, neutrons, protons, and other sources using a particular modality and technique.
 * [MedicationRequest](StructureDefinition-mcode-cancer-related-medication-request.html) - recording treatments involving chemotherapy agents, targeted therapy agents, and hormone therapy agents. The mCODE profile of MedicationRequest includes two extensions that distinguish it from the US Core MedicationRequest profile:
     * [TreatmentIntent](StructureDefinition-mcode-treatment-intent.html) - to record the purpose of the treatment, whether curative or palliative
     * [TerminationReason](StructureDefinition-mcode-termination-reason.html) - to document the reason for unplanned or premature termination of the medication.

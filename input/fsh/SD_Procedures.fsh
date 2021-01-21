@@ -1,6 +1,6 @@
 //-------- RADIATION THERAPY PROCEDURES -------------
 
-RuleSet: RadiotherapyCommonRuleSet
+RuleSet: RadiotherapyRS
 * category 1..
 * category = SCT#108290001 // "Radiation oncology AND/OR radiotherapy (procedure)"
 * recorder only Reference(Practitioner or PractitionerRole)
@@ -10,12 +10,12 @@ RuleSet: RadiotherapyCommonRuleSet
     LocationQualifier named locationQualifier 0..1 MS
 * performed[x] only Period
 
-Profile:  RadiotherapyPrescriptionDelivery
+Profile:  RadiotherapyCourseSummary
 Parent:   USCoreProcedure
-Id:       radiotherapy-prescription-delivery
-Title:    "Radiotherapy Prescription Delivery"
-Description: "A summary of treatment progress for a radiotherapy prescription. Whenever new contributions in the scope of the same Prescription are delivered, this resource is updated. One prescription can involve multiple treatment modalities and body sites. Modalities and techniques and detailed dose information is captured at the Delivery Record level. Status is changed to complete when the prescription has been fully delivered or to stopped if terminated."
-* insert RadiotherapyCommonRuleSet
+Id:       radiotherapy-course-summary
+Title:    "Radiotherapy Course Summary"
+Description: "An overall summary of a course of radiotherapy. Whenever new contributions in the scope of the same treatment are delivered, this resource is updated. One course can involve multiple prescriptions. Modalities and techniques and detailed dose information is captured at the prescription delivery level. The status is changed to complete when the course has been fully delivered or changed to stopped if terminated."
+* insert RadiotherapyRS
 * code = LNC#68602-2 // Radiation oncology summary note
 * extension contains 
     TreatmentIntent named treatmentIntent 0..1 MS and
@@ -26,11 +26,11 @@ Description: "A summary of treatment progress for a radiotherapy prescription. W
     RadiotherapyTotalDoseDelivered named radiotherapyTotalDoseDelivered 0..1 MS
 
 
-RuleSet:  RadiotherapyDeliveryCommonRuleSet
-* insert RadiotherapyCommonRuleSet
+RuleSet:  RadiotherapyPrescriptionDeliveryRS
+* insert RadiotherapyRS
 // TO DO -- specify the MS elements
 * partOf only Reference(Procedure)
-* partOf ^definition = "The radiotherapy delivery summary that this delivery record contributes to. Reference higher level (larger) scope summary where possible."
+* partOf ^definition = ". Reference a course summary where possible."
 // TO DO -- does Brachytherapy ever involve fractions and doses? Assume so for now.
 * extension contains
     RadiotherapyTechnique named radiotherapyTechnique 0..1 MS and
@@ -41,19 +41,19 @@ RuleSet:  RadiotherapyDeliveryCommonRuleSet
     RadiotherapyTotalDoseDelivered named radiotherapyTotalDoseDelivered 0..1 MS
 
 
-Profile:  TeleradiotherapyDeliveryRecord
+Profile:  TeleradiotherapyPrescriptionDelivery
 Parent:   USCoreProcedure
-Id:       teleradiotherapy-delivery-record
-Title:    "Teleradiotherapy Delivery Record"
-Description: "A record of delivered Radiotherapy treatment. A new delivery record begins when there is a change in the target volume of a body site, treatment fraction size, modality, or treatment technique. This is a single record that is not expected to be updated once recorded. For cumulative treatment records, see RadiotherapyPrescriptionDelivery.
+Id:       teleradiotherapy-prescription-delivery
+Title:    "Teleradiotherapy Prescription Delivery"
+Description: "A summary of delivered teleradiotherapy treatment. The scope is a prescription consisting of one or multiple Fractions. A prescription delivery instance should end when there is a change in the target volume of a body site, treatment fraction size, modality, or treatment technique.
 Conformance statement:  TBD"
-* insert RadiotherapyDeliveryCommonRuleSet
+* insert RadiotherapyPrescriptionDeliveryRS
 * code from TeleradiotherapyModalityVS (required)
 * code ^short = "Modality"
 * code ^definition = "The modality (radiation type) for the external beam procedure."
 * code obeys teleradiotherapy-procedure-code-invariant
 * extension[radiotherapyTechnique].valueString from TeleradiotherapyTechniqueVS (extensible)
-* partOf only Reference(RadiotherapyPrescriptionDelivery)
+* partOf only Reference(RadiotherapyCourseSummary)
 * usedCode from TeleradiotherapyDeviceVS (extensible)
 
 
@@ -62,13 +62,12 @@ Conformance statement:  TBD"
     Expression: "coding.where(code = 'OtherTeleradiotherapyModality').exists() implies coding.where(code != 'OtherTeleradiotherapyModality' and $this.memberOf('http://hl7.org/fhir/us/mcode/ValueSet/mcode-teleradiotherapy-modality-vs').not()).exists()"
     Severity:   #error
 
-Profile:  BrachytherapyDeliveryRecord
+Profile:  BrachytherapyPrescriptionDelivery
 Parent:   USCoreProcedure
-Id:       brachytherapy-delivery-record
-Title:    "Brachytherapy Delivery Record"
-Description: "Record of delivery of a radiotherapy procedure using brachytherapy (internal radiation). 
-Conformance statement: TBD"
-* insert RadiotherapyDeliveryCommonRuleSet
+Id:       brachytherapy-prescription-delivery
+Title:    "Brachytherapy Prescription Delivery"
+Description: "A summary of delivered brachytherapy treatment. The scope is a prescription consisting of one or multiple fractions. A new prescription delivery begins when there is a change in the target volume of a body site, treatment fraction size, modality, or treatment technique.Conformance statement: TBD"
+* insert RadiotherapyPrescriptionDeliveryRS
 * code from BrachytherapyModalityVS (required)
 * code obeys brachytherapy-code-invariant
 * code ^short = "Brachytherapy Modality"
@@ -129,7 +128,15 @@ Description: "The total amount of radiation dose delivered for the course of the
 
 //--------- SURGICAL PROCEDURE -------------
 
-RuleSet: CancerRelatedProcedureCommonRuleSet
+Profile:  CancerRelatedSurgicalProcedure
+Parent:   USCoreProcedure
+Id:       mcode-cancer-related-surgical-procedure
+Title:    "Cancer-Related Surgical Procedure"
+Description: "A surgical action addressing a cancer condition. The scope of this profile has been narrowed to cancer-related procedures by constraining the reasonReference and reasonCode to cancer conditions, one of which is required.
+
+Conformance statement:
+
+Procedure resources associated with an mCODE patient with Procedure.category SNOMED-CT 387713003 MAY conform to this profile. Beyond this requirement, a producer of resources SHOULD ensure that any resource instance associated with an mCODE patient that would reasonably be expected to conform to this profile SHOULD be published in this form. Specifically, we expect that any surgical procedure related to the treatment of a `PrimaryCancerCondition` or `SecondaryCancerCondition` would be published in this form."
 * obeys mcode-reason-required
 * extension contains
     TreatmentIntent named treatmentIntent 0..1 MS
@@ -143,17 +150,6 @@ RuleSet: CancerRelatedProcedureCommonRuleSet
     LocationQualifier named locationQualifier 0..1 MS
 * reasonCode and reasonReference and bodySite MS
 
-
-Profile:  CancerRelatedSurgicalProcedure
-Parent:   USCoreProcedure
-Id:       mcode-cancer-related-surgical-procedure
-Title:    "Cancer-Related Surgical Procedure"
-Description: "A surgical action addressing a cancer condition. The scope of this profile has been narrowed to cancer-related procedures by constraining the reasonReference and reasonCode to cancer conditions, one of which is required.
-
-Conformance statement:
-
-Procedure resources associated with an mCODE patient with Procedure.category SNOMED-CT 387713003 MAY conform to this profile. Beyond this requirement, a producer of resources SHOULD ensure that any resource instance associated with an mCODE patient that would reasonably be expected to conform to this profile SHOULD be published in this form. Specifically, we expect that any surgical procedure related to the treatment of a `PrimaryCancerCondition` or `SecondaryCancerCondition` would be published in this form."
-* insert CancerRelatedProcedureCommonRuleSet
 // Do not insert the category slicing rules because Procedure.category is 0..1.
 * category = SCT#387713003 //"Surgical procedure"
 * code from CancerRelatedSurgicalProcedureVS (extensible)

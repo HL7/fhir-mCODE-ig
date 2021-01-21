@@ -94,9 +94,9 @@ groups:
     description: Profiles in the [mCODE **Treatments** Group](index.html#treatments-group).
     resources:
       - StructureDefinition/mcode-cancer-related-medication-request
-      - StructureDefinition/radiotherapy-prescription-delivery
-      - StructureDefinition/teleradiotherapy-delivery-record
-      - StructureDefinition/brachytherapy-delivery-record
+      - StructureDefinition/radiotherapy-course-summary
+      - StructureDefinition/teleradiotherapy-prescription-delivery
+      - StructureDefinition/brachytherapy-prescription-delivery
       - StructureDefinition/mcode-cancer-related-surgical-procedure
 
   Genomics:
@@ -251,7 +251,7 @@ groups:
       - Patient/mCODEPatientExample1
       - Patient/mCODEPatientExample2
       - Practitioner/mCODEPractitionerExample1
-      - Procedure/BrachytherapyDeliveryRecordExample1
+      - Procedure/BrachytherapyPrescriptionDeliveryExample1
       - Procedure/mCODECancerRelatedSurgicalProcedureExample1
       - Specimen/mCODEGeneticSpecimenExample1
 
@@ -299,7 +299,7 @@ groups:
       - Patient/scenario1-mcode-cancer-patient
       - Practitioner/scenario1-us-core-practitioner
       - Practitioner/scenario1-practitioner2-mcode
-      - Procedure/scenario1-teleradiotherapy-delivery-record
+      - Procedure/scenario1-teleradiotherapy-prescription-delivery
       - Procedure/scenario1-mcode-cancer-related-surgical-procedure-mastectomy
       - Procedure/scenario1-us-core-procedure-biopsy
       - Procedure/scenario1-us-core-procedure-mammogram

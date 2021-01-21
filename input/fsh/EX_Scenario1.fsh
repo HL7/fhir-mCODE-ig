@@ -116,10 +116,10 @@ Description: "Extended example 1: example showing partial mastectomy surgical pr
 * reasonReference = Reference(scenario1-mcode-primary-cancer-condition)
 * bodySite = SCT#80248007 "Left breast structure (body structure)"
 
-Instance: scenario1-teleradiotherapy-delivery-record
-InstanceOf: TeleradiotherapyDeliveryRecord
+Instance: scenario1-teleradiotherapy-prescription-delivery
+InstanceOf: TeleradiotherapyPrescriptionDelivery
 Description: "Extended example 1: example showing radiation treatment"
-* id = "scenario1-teleradiotherapy-delivery-record"
+* id = "scenario1-teleradiotherapy-prescription-delivery"
 //* extension[treatmentIntent].valueCodeableConcept = SCT#373808002 "Curative - procedure intent (qualifier value)"
 * status = #completed "completed"
 * code = NCIT#C104914 "Photon Beam Radiation Therapy"

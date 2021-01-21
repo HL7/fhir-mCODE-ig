@@ -1,8 +1,6 @@
 Instance: mCODEPrimaryCancerConditionExample1
 InstanceOf: PrimaryCancerCondition
 Description: "mCODE Example for Primary Cancer Condition"
-* id = "mCODEPrimaryCancerConditionExample1"
-* meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-primary-cancer-condition"
 * clinicalStatus = ClinStatus#active "Active"
 * verificationStatus = VerStatus#confirmed "Confirmed"
 * category = CondCat#problem-list-item
@@ -19,8 +17,6 @@ Description: "mCODE Example for Primary Cancer Condition"
 Instance: mCODESecondaryCancerConditionExample1
 InstanceOf: SecondaryCancerCondition
 Description: "mCODE Example for Secondary Cancer Condition"
-* id = "mCODESecondaryCancerConditionExample1"
-* meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-secondary-cancer-condition"
 * extension[relatedPrimaryCancerCondition].valueReference = Reference(mCODEPrimaryCancerConditionExample1)
 * clinicalStatus = ClinStatus#active "Active"
 * verificationStatus = VerStatus#confirmed "Confirmed"
@@ -33,8 +29,6 @@ Description: "mCODE Example for Secondary Cancer Condition"
 Instance: mCODECancerDiseaseStatusExample1
 InstanceOf: CancerDiseaseStatus
 Description: "mCODE Example for Cancer Disease Status"
-* id = "mCODECancerDiseaseStatusExample1"
-* meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-disease-status"
 // * extension[evidenceType].url = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-evidence-type"
 * extension[evidenceType].valueCodeableConcept = SCT#108257001 "Anatomic pathology procedure (procedure)"
 * status = #final "final"
@@ -46,8 +40,6 @@ Description: "mCODE Example for Cancer Disease Status"
 Instance: mCODECancerRelatedComorbiditiesExample1
 InstanceOf: CancerRelatedComorbidities
 Description: "mCODE Example for Cancer-Related Comorbidities"
-* id = "mCODECancerRelatedComorbiditiesExample1"
-* meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-related-comorbidities"
 * subject = Reference(mCODEPatientExample1)
 * performer = Reference(mCODEPractitionerExample1)
 * status = #final "final"
@@ -73,8 +65,6 @@ Description: "mCODE Example for Cancer-Related Comorbidities"
 Instance: mCODEPatientExample1
 InstanceOf: CancerPatient
 Description: "mCODE Example for Patient"
-* id = "mCODEPatientExample1"
-* meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-patient"
 * identifier.use = #usual
 * identifier.type = http://terminology.hl7.org/CodeSystem/v2-0203#MR "Medical Record Number"
 * identifier.system = "http://hospital.example.org"
@@ -99,8 +89,6 @@ Description: "mCODE Example for Patient"
 Instance: mCODEPatientExample2
 InstanceOf: CancerPatient
 Description: "mCODE Example for Patient"
-* id = "mCODEPatientExample2"
-* meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-patient"
 // The following lines must use the slice names, not the defining URLs
 // * extension[race].url = "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race"
 // * extension[race].extension[ombCategory].url = "ombCategory"
@@ -133,7 +121,6 @@ Description: "mCODE Example for Patient"
 Instance: mCODEOrganizationExample1
 InstanceOf: USCoreOrganization
 Description: "mCODE Example for Organization"
-* id = "mCODEOrganizationExample1"
 * identifier[NPI].value = "1265714091"
 * active = true
 * name = "Foundation Medicine"
@@ -148,7 +135,6 @@ Description: "mCODE Example for Organization"
 Instance: mCODEPractitionerExample1
 InstanceOf: USCorePractitioner
 Description: "mCODE Example for Practitioner"
-* id = "mCODEPractitionerExample1"
 * identifier[NPI].value = "9988776655"
 * name.family = "Anydoc"
 * name.given = "Kyle"
@@ -165,7 +151,6 @@ Description: "mCODE Example for Practitioner"
 Instance: mCODEDepressionExample1
 InstanceOf: USCoreCondition
 Description: "mCODE Example of Depression (as Comorbid condition), part of mCODECancerRelatedComorbiditiesExample01"
-* id = "mCODEDepressionExample1"
 * subject = Reference(mCODEPatientExample1)
 * asserter = Reference(mCODEPractitionerExample1)
 * category = CondCat#problem-list-item
@@ -177,8 +162,6 @@ Description: "mCODE Example of Depression (as Comorbid condition), part of mCODE
 Instance: mCODEECOGPerformanceStatusExample1
 InstanceOf: ECOGPerformanceStatus
 Description: "mCODE Example for ECOG Performance Status"
-* id = "mCODEECOGPerformanceStatusExample1"
-* meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-ecog-performance-status"
 * status = #final "final"
 * method = SCT#5880005 "Clinical examination"
 * subject = Reference(mCODEPatientExample1)
@@ -190,8 +173,6 @@ Description: "mCODE Example for ECOG Performance Status"
 Instance: mCODEKarnofskyPerformanceStatusExample1
 InstanceOf: KarnofskyPerformanceStatus
 Description: "mCODE Example for Karnofsky Performance Status"
-* id = "mCODEKarnofskyPerformanceStatusExample1"
-* meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-karnofsky-performance-status"
 * status = #final "final"
 * method = SCT#5880005 "Clinical examination"
 * subject = Reference(mCODEPatientExample1)
@@ -203,8 +184,6 @@ Description: "mCODE Example for Karnofsky Performance Status"
 Instance: mCODECancerRelatedSurgicalProcedureExample1
 InstanceOf: CancerRelatedSurgicalProcedure
 Description: "mCODE Example for Cancer Related Surgical Procedure"
-* id = "mCODECancerRelatedSurgicalProcedureExample1"
-* meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-related-surgical-procedure"
 * status = #completed "completed"
 * code = SCT#359615001 "Partial lobectomy of lung (procedure)"
 * subject = Reference(mCODEPatientExample1)
@@ -217,8 +196,6 @@ Description: "mCODE Example for Cancer Related Surgical Procedure"
 Instance: mCODECancerRelatedRadiationProcedureExample1
 InstanceOf: CancerRelatedRadiationProcedure
 Description: "mCODE Example for Cancer Related Radiation Procedure"
-* id = "mCODECancerRelatedRadiationProcedureExample1"
-* meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-related-radiation-procedure"
 * status = #completed "completed"
 * code = SCT#152198000 "Brachytherapy (procedure)"
 * subject = Reference(mCODEPatientExample1)
@@ -233,8 +210,6 @@ Description: "mCODE Example for Cancer Related Radiation Procedure"
 Instance: mCODETNMClinicalStageGroupExample1
 InstanceOf: TNMClinicalStageGroup
 Description: "mCODE Example for TNM Clinical Stage Group"
-* id = "mCODETNMClinicalStageGroupExample1"
-* meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-clinical-stage-group"
 * status = #final "final"
 * method = NCIT#C146985 "AJCC Cancer Staging Manual 8th Edition"
 * subject = Reference(mCODEPatientExample1)
@@ -247,8 +222,6 @@ Description: "mCODE Example for TNM Clinical Stage Group"
 Instance: mCODETNMClinicalDistantMetastasesCategoryExample1
 InstanceOf: TNMClinicalDistantMetastasesCategory
 Description: "mCODE Example for TNM Clinical Distant Metastases Category"
-* id = "mCODETNMClinicalDistantMetastasesCategoryExample1"
-* meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-clinical-distant-metastases-category"
 * status = #final "final"
 * method = NCIT#C146985 "AJCC Cancer Staging Manual 8th Edition"
 * subject = Reference(mCODEPatientExample1)
@@ -258,8 +231,6 @@ Description: "mCODE Example for TNM Clinical Distant Metastases Category"
 Instance: mCODETNMClinicalPrimaryTumorCategoryExample1
 InstanceOf: TNMClinicalPrimaryTumorCategory
 Description: "mCODE Example for TNM Clinical Primary Tumor Category"
-* id = "mCODETNMClinicalPrimaryTumorCategoryExample1"
-* meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-clinical-primary-tumor-category"
 * status = #final "final"
 * method = NCIT#C146985 "AJCC Cancer Staging Manual 8th Edition"
 * subject = Reference(mCODEPatientExample1)
@@ -270,8 +241,6 @@ Description: "mCODE Example for TNM Clinical Primary Tumor Category"
 Instance: mCODETNMClinicalRegionalNodesCategoryExample1
 InstanceOf: TNMClinicalRegionalNodesCategory
 Description: "mCODE Example for TNM Clinical Regional Nodes Category"
-* id = "mCODETNMClinicalRegionalNodesCategoryExample1"
-* meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-clinical-regional-nodes-category"
 * status = #final "final"
 * method = NCIT#C146985 "AJCC Cancer Staging Manual 8th Edition"
 * subject = Reference(mCODEPatientExample1)
@@ -282,8 +251,6 @@ Description: "mCODE Example for TNM Clinical Regional Nodes Category"
 Instance: mCODETNMPathologicalStageGroupExample1
 InstanceOf: TNMPathologicalStageGroup
 Description: "mCODE Example for TNM Pathological Stage Group"
-* id = "mCODETNMPathologicalStageGroupExample1"
-* meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-pathological-stage-group"
 * status = #final "final"
 * method = NCIT#C146985 "AJCC Cancer Staging Manual 8th Edition"
 * subject = Reference(mCODEPatientExample1)
@@ -297,8 +264,6 @@ Description: "mCODE Example for TNM Pathological Stage Group"
 Instance: mCODETNMPathologicalDistantMetastasesCategoryExample1
 InstanceOf: TNMPathologicalDistantMetastasesCategory
 Description: "mCODE Example for TNM Pathological Distant Metastases Category"
-* id = "mCODETNMPathologicalDistantMetastasesCategoryExample1"
-* meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-pathological-distant-metastases-category"
 * status = #final "final"
 * method = NCIT#C146985 "AJCC Cancer Staging Manual 8th Edition"
 * subject = Reference(mCODEPatientExample1)
@@ -309,8 +274,6 @@ Description: "mCODE Example for TNM Pathological Distant Metastases Category"
 Instance: mCODETNMPathologicalPrimaryTumorCategoryExample1
 InstanceOf: TNMPathologicalPrimaryTumorCategory
 Description: "mCODE Example for TNM Pathological Primary Tumor Category"
-* id = "mCODETNMPathologicalPrimaryTumorCategoryExample1"
-* meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-pathological-primary-tumor-category"
 * status = #final "final"
 * method = NCIT#C146985 "AJCC Cancer Staging Manual 8th Edition"
 * subject = Reference(mCODEPatientExample1)
@@ -321,8 +284,6 @@ Description: "mCODE Example for TNM Pathological Primary Tumor Category"
 Instance: mCODETNMPathologicalRegionalNodesCategoryExample1
 InstanceOf: TNMPathologicalRegionalNodesCategory
 Description: "mCODE Example for TNM Pathological Regional Nodes Category"
-* id = "mCODETNMPathologicalRegionalNodesCategoryExample1"
-* meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-pathological-regional-nodes-category"
 * status = #final "final"
 * method = NCIT#C146985 "AJCC Cancer Staging Manual 8th Edition"
 * subject = Reference(mCODEPatientExample1)
@@ -332,8 +293,6 @@ Description: "mCODE Example for TNM Pathological Regional Nodes Category"
 Instance: mCODECancerRelatedMedicationRequestExample1
 InstanceOf: CancerRelatedMedicationRequest
 Description: "mCODE Example for CancerRelatedMedicationRequest"
-* id = "mCODECancerRelatedMedicationRequestExample1"
-* meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-related-medication-request"
 * subject = Reference(mCODEPatientExample1)
 * status = MedReqStatus#active
 * intent = MedReqIntent#order
@@ -356,8 +315,6 @@ Description: "mCODE Example for CancerRelatedMedicationRequest"
 Instance: mCODECancerRelatedMedicationRequestExample2
 InstanceOf: CancerRelatedMedicationRequest
 Description: "mCODE Example for CancerRelatedMedicationRequest - Chemo Infusion"
-* id = "mCODECancerRelatedMedicationRequestExample2"
-* meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-related-medication-request"
 * subject = Reference(mCODEPatientExample1)
 * status = MedReqStatus#active
 * intent = MedReqIntent#order
@@ -378,8 +335,6 @@ Description: "mCODE Example for CancerRelatedMedicationRequest - Chemo Infusion"
 Instance: mCODECancerRelatedMedicationAdministrationExample1
 InstanceOf: CancerRelatedMedicationAdministration
 Description: "mCODE Example for CancerRelatedMedicationAdministration"
-* id = "mCODECancerRelatedMedicationAdministrationExample1"
-* meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-related-medication-administration"
 * subject = Reference(mCODEPatientExample1)
 * status = MedAdminStatus#completed
 * category = MedAdminCategory#outpatient
@@ -395,8 +350,6 @@ Description: "mCODE Example for CancerRelatedMedicationAdministration"
 Instance: mCODECancerRelatedMedicationStatementExample1
 InstanceOf: CancerRelatedMedicationStatement
 Description: "mCODE Example for Cancer Related Medication Statement"
-* id = "mCODECancerRelatedMedicationStatementExample1"
-* meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-related-medication-statement"
 * status = MedStatus#active "active"
 * category = MedReqCat#community "community"
 * medicationCodeableConcept = RXN#349472 "gefitinib 250 MG Oral Tablet"
@@ -412,8 +365,6 @@ Description: "mCODE Example for Cancer Related Medication Statement"
 Instance: mCODECancerRelatedMedicationStatementExample2
 InstanceOf: CancerRelatedMedicationStatement
 Description: "mCODE Example for Cancer Related Medication Statement"
-* id = "mCODECancerRelatedMedicationStatementExample2"
-* meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-related-medication-statement"
 * status = MedStatus#stopped "stopped"
 * category = MedReqCat#community "community"
 * medicationCodeableConcept = RXN#349472 "gefitinib 250 MG Oral Tablet"

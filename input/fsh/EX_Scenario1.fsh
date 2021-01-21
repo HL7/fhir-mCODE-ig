@@ -3,7 +3,6 @@
 Instance: scenario1-mcode-cancer-patient
 InstanceOf: CancerPatient
 Description: "Extended example 1: example cancer patient"
-* id = "scenario1-mcode-cancer-patient"
 * identifier.use = #usual
 * identifier.type = http://terminology.hl7.org/CodeSystem/v2-0203#MR "Medical Record Number"
 * identifier.system = "http://hospital.example.org"
@@ -30,7 +29,6 @@ Description: "Extended example 1: example cancer patient"
 Instance: scenario1-mcode-cancer-disease-status
 InstanceOf: CancerDiseaseStatus
 Description: "Extended example 1: example showing disease status (patient's condition improved)"
-* id = "scenario1-mcode-cancer-disease-status"
 * extension[evidenceType].valueCodeableConcept = SCT#363679005 "Imaging (procedure)"
 * status = #final "final"
 * code = LNC#88040-1 "Response to cancer treatment"
@@ -44,8 +42,6 @@ Description: "Extended example 1: example showing disease status (patient's cond
 Instance: scenario1-mcode-cancer-related-comorbidities
 InstanceOf: CancerRelatedComorbidities
 Description: "mCODE Example for Cancer-Related Comorbidities"
-* id = "scenario1-mcode-cancer-related-comorbidities"
-* meta.profile = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-related-comorbidities"
 * subject = Reference(scenario1-mcode-cancer-patient)
 * performer = Reference(scenario1-us-core-practitioner)
 * status = #final "final"
@@ -69,7 +65,6 @@ Description: "mCODE Example for Cancer-Related Comorbidities"
 Instance: scenario1-mcode-comorbid-condition-depression
 InstanceOf: USCoreCondition
 Description: "Extended example 1: example showing comorbid condition (depression)"
-* id = "scenario1-mcode-comorbid-condition-depression"
 * clinicalStatus = ClinStatus#active
 * verificationStatus = VerStatus#confirmed
 * category = CondCat#problem-list-item
@@ -81,7 +76,6 @@ Description: "Extended example 1: example showing comorbid condition (depression
 Instance: scenario1-mcode-comorbid-condition-hypertension
 InstanceOf: USCoreCondition
 Description: "Extended example 1: example showing comorbid condition (hypertension)"
-* id = "scenario1-mcode-comorbid-condition-hypertension"
 * clinicalStatus = ClinStatus#active
 * verificationStatus = VerStatus#confirmed
 * category = CondCat#problem-list-item
@@ -93,7 +87,6 @@ Description: "Extended example 1: example showing comorbid condition (hypertensi
 Instance: scenario1-mcode-ecog-performance-status
 InstanceOf: ECOGPerformanceStatus
 Description: "Extended example 1: example showing ECOG performance status"
-* id = "scenario1-mcode-ecog-performance-status"
 * status = #final "final"
 * subject = Reference(scenario1-mcode-cancer-patient)
 * effectiveDateTime = "2018-03-01"
@@ -105,7 +98,6 @@ Description: "Extended example 1: example showing ECOG performance status"
 Instance: scenario1-mcode-cancer-related-surgical-procedure-mastectomy
 InstanceOf: CancerRelatedSurgicalProcedure
 Description: "Extended example 1: example showing partial mastectomy surgical procedure"
-* id = "scenario1-mcode-cancer-related-surgical-procedure-mastectomy"
 * extension[treatmentIntent].valueCodeableConcept = SCT#373808002 "Curative - procedure intent (qualifier value)"
 * status = #completed "completed"
 * code = SCT#64368001 "Partial mastectomy (procedure)"
@@ -118,7 +110,6 @@ Description: "Extended example 1: example showing partial mastectomy surgical pr
 Instance: scenario1-mcode-cancer-related-radiation-procedure
 InstanceOf: CancerRelatedRadiationProcedure
 Description: "Extended example 1: example showing radiation treatment"
-* id = "scenario1-mcode-cancer-related-radiation-procedure"
 * extension[treatmentIntent].valueCodeableConcept = SCT#373808002 "Curative - procedure intent (qualifier value)"
 * status = #completed "completed"
 * code = SCT#385798007 "Radiation therapy care (regime/therapy)"
@@ -131,7 +122,6 @@ Description: "Extended example 1: example showing radiation treatment"
 Instance: scenario1-mcode-primary-cancer-condition
 InstanceOf: PrimaryCancerCondition
 Description: "Extended example 1: example showing primary cancer condition"
-* id = "scenario1-mcode-primary-cancer-condition"
 * extension[histologyMorphologyBehavior].valueCodeableConcept = SCT#413448000 "Adenocarcinoma, no subtype, intermediate grade (morphologic abnormality)"
 * clinicalStatus = ClinStatus#remission
 * verificationStatus = VerStatus#confirmed
@@ -146,7 +136,6 @@ Description: "Extended example 1: example showing primary cancer condition"
 Instance: scenario1-mcode-tnm-clinical-stage-group
 InstanceOf: TNMClinicalStageGroup
 Description: "Extended example 1: example showing TNM staging (stage group)"
-* id = "scenario1-mcode-tnm-clinical-stage-group"
 * status = #final "final"
 * code = LNC#21908-9 "Stage group.clinical Cancer"
 * subject = Reference(scenario1-mcode-cancer-patient)
@@ -160,7 +149,6 @@ Description: "Extended example 1: example showing TNM staging (stage group)"
 Instance: scenario1-mcode-tnm-primary-tumor-category
 InstanceOf: TNMClinicalPrimaryTumorCategory
 Description: "Extended example 1: example showing TNM staging (T)"
-* id = "scenario1-mcode-tnm-primary-tumor-category"
 * status = #final "final"
 * code = LNC#21905-5 "Primary tumor.clinical [Class] Cancer"
 * subject = Reference(scenario1-mcode-cancer-patient)
@@ -171,7 +159,6 @@ Description: "Extended example 1: example showing TNM staging (T)"
 Instance: scenario1-mcode-tnm-clinical-regional-nodes-category
 InstanceOf: TNMClinicalRegionalNodesCategory
 Description: "Extended example 1: example showing TNM staging (N)"
-* id = "scenario1-mcode-tnm-clinical-regional-nodes-category"
 * status = #final "final"
 * code = LNC#21906-3 "Regional lymph nodes.clinical [Class] Cancer"
 * subject = Reference(scenario1-mcode-cancer-patient)
@@ -182,7 +169,6 @@ Description: "Extended example 1: example showing TNM staging (N)"
 Instance: scenario1-mcode-tnm-clinical-distant-metastases-category
 InstanceOf: TNMClinicalDistantMetastasesCategory
 Description: "Extended example 1: example showing TNM staging (M)"
-* id = "scenario1-mcode-tnm-clinical-distant-metastases-category"
 * status = #final "final"
 * code = LNC#21907-1 "Distant metastases.clinical [Class] Cancer"
 * subject = Reference(scenario1-mcode-cancer-patient)
@@ -193,7 +179,6 @@ Description: "Extended example 1: example showing TNM staging (M)"
 Instance: scenario1-mcode-tumor-marker-test-er
 InstanceOf: TumorMarkerTest
 Description: "Extended example 1: example showing ER status"
-* id = "scenario1-mcode-tumor-marker-test-er"
 * status = #final "final"
 * code = LNC#85337-4 "Estrogen receptor Ag [Presence] in Breast cancer specimen by Immune stain"
 * subject = Reference(scenario1-mcode-cancer-patient)
@@ -204,7 +189,6 @@ Description: "Extended example 1: example showing ER status"
 Instance: scenario1-mcode-tumor-marker-test-pr
 InstanceOf: TumorMarkerTest
 Description: "Extended example 1: example showing PR status"
-* id = "scenario1-mcode-tumor-marker-test-pr"
 * status = #final "final"
 * code = LNC#85339-0 "Progesterone receptor Ag [Presence] in Breast cancer specimen by Immune stain"
 * subject = Reference(scenario1-mcode-cancer-patient)
@@ -215,7 +199,6 @@ Description: "Extended example 1: example showing PR status"
 Instance: scenario1-mcode-tumor-marker-test-her2
 InstanceOf: TumorMarkerTest
 Description: "Extended example 1: example showing HER2 status"
-* id = "scenario1-mcode-tumor-marker-test-her2"
 * status = #final "final"
 * code = LNC#48676-1 "HER2 [Interpretation] in Tissue"
 * subject = Reference(scenario1-mcode-cancer-patient)
@@ -226,7 +209,6 @@ Description: "Extended example 1: example showing HER2 status"
 Instance: scenario1-mcode-tumor-marker-test-oncotype-dx
 InstanceOf: TumorMarkerTest
 Description: "Extended example 1: example showing Oncotype DX breast recurrence score. Note that this test has no assigned LOINC code, so GTR is being used as a backup. Only the score from the Oncotype DX panel (as opposed to variant data from the genes in the panel) is represented here."
-* id = "scenario1-mcode-tumor-marker-test-oncotype-dx"
 * status = #final "final"
 * code.coding[0] = OtherSpecifyCS#OtherTumorMarkerTest "Other Tumor Marker Test, Specify"
 * code.coding[1] = GTR#509910 "Oncotype DX Breast Recurrence Score Assay"
@@ -240,7 +222,6 @@ Description: "Extended example 1: example showing Oncotype DX breast recurrence 
 Instance: scenario1-mcode-cancer-genomics-report
 InstanceOf: CancerGenomicsReport
 Description: "Extended example 1: example of gene panel report"
-* id = "scenario1-mcode-cancer-genomics-report"
 * status = #final "final"
 * category[0] = DiagnosticService#LAB
 * category[1] = DiagnosticService#GE
@@ -254,7 +235,6 @@ Description: "Extended example 1: example of gene panel report"
 Instance: scenario1-mcode-genomic-region-studied
 InstanceOf: GenomicRegionStudied
 Description: "Extended example 1: example showing which regions were included in the genomics panel"
-* id = "scenario1-mcode-genomic-region-studied"
 * status = #final "final"
 * code = LNC#53041-0 "DNA region of interest panel"
 * subject = Reference(scenario1-mcode-cancer-patient)
@@ -272,7 +252,6 @@ Description: "Extended example 1: example showing which regions were included in
 Instance: scenario1-mcode-genetic-specimen
 InstanceOf: GeneticSpecimen
 Description: "Extended example 1: example showing genetic specimen for sequencing"
-* id = "scenario1-mcode-genetic-specimen"
 * status = #available "available"
 * type = http://terminology.hl7.org/CodeSystem/v2-0487#TISS
 * subject = Reference(scenario1-mcode-cancer-patient)
@@ -283,7 +262,6 @@ Description: "Extended example 1: example showing genetic specimen for sequencin
 Instance: scenario1-mcode-cancer-genetic-variant
 InstanceOf: CancerGeneticVariant
 Description: "Extended example 1: example showing genetic variant found by breast cancer genomics panel"
-* id = "scenario1-mcode-cancer-genetic-variant"
 * status = #final "final"
 * code = LNC#69548-6 "Genetic variant assessment"
 * subject = Reference(scenario1-mcode-cancer-patient)
@@ -298,7 +276,6 @@ Description: "Extended example 1: example showing genetic variant found by breas
 Instance: scenario1-mcode-cancer-related-medication-chemo-doxorubicin
 InstanceOf: CancerRelatedMedicationRequest
 Description: "Extended example 1: example showing chemotherapy medication"
-* id = "scenario1-mcode-cancer-related-medication-chemo-doxorubicin"
 * extension[treatmentIntent].valueCodeableConcept = SCT#373808002 "Curative - procedure intent (qualifier value)"
 * status = #active "active"
 * category = MedReqCat#outpatient
@@ -319,7 +296,6 @@ Description: "Extended example 1: example showing chemotherapy medication"
 Instance: scenario1-mcode-cancer-related-medication-chemo-cyclophosphamide
 InstanceOf: CancerRelatedMedicationRequest
 Description: "Extended example 1: example showing chemotherapy medication"
-* id = "scenario1-mcode-cancer-related-medication-chemo-cyclophosphamide"
 * extension[treatmentIntent].valueCodeableConcept = SCT#373808002 "Curative - procedure intent (qualifier value)"
 * status = #active "active"
 * category = MedReqCat#outpatient
@@ -341,7 +317,6 @@ Description: "Extended example 1: example showing chemotherapy medication"
 Instance: scenario1-mcode-cancer-related-medication-chemo-paclitaxel
 InstanceOf: CancerRelatedMedicationRequest
 Description: "Extended example 1: example showing chemotherapy medication"
-* id = "scenario1-mcode-cancer-related-medication-chemo-paclitaxel"
 * extension[treatmentIntent].valueCodeableConcept = SCT#373808002 "Curative - procedure intent (qualifier value)"
 * status = #active "active"
 * category = MedReqCat#outpatient
@@ -362,7 +337,6 @@ Description: "Extended example 1: example showing chemotherapy medication"
 Instance: scenario1-mcode-cancer-related-medication-anastrozole
 InstanceOf: CancerRelatedMedicationRequest
 Description: "Extended example 1: example showing chemotherapy medication"
-* id = "scenario1-mcode-cancer-related-medication-anastrozole"
 * extension[treatmentIntent].valueCodeableConcept = SCT#373808002 "Curative - procedure intent (qualifier value)"
 * status = #active "active"
 * category = MedReqCat#community
@@ -384,7 +358,6 @@ Description: "Extended example 1: example showing chemotherapy medication"
 Instance: scenario1-us-core-practitioner
 InstanceOf: USCorePractitioner
 Description: "Extended example 1: example practitioner"
-* id = "scenario1-us-core-practitioner"
 * identifier[NPI].value = "9988776655"
 * name.family = "Anydoc"
 * name.given[0] = "Kyle"
@@ -403,7 +376,6 @@ Description: "Extended example 1: example practitioner"
 Instance: scenario1-practitioner2-mcode
 InstanceOf: USCorePractitioner
 Description: "Extended example 1: example practitioner (pathologist)"
-* id = "scenario1-practitioner2-mcode"
 * identifier[NPI].value = "1122334455"
 * name.family = "Pathologist"
 * name.given[0] = "Sam"
@@ -421,7 +393,6 @@ Description: "Extended example 1: example practitioner (pathologist)"
 Instance: scenario1-organization1-mcode
 InstanceOf: Organization
 Description: "Extended example 1: example organization"
-* id = "scenario1-organization1-mcode"
 * active = true
 * type = http://terminology.hl7.org/CodeSystem/organization-type#prov "Healthcare Provider"
 * name = "Physician Services, Inc."
@@ -438,7 +409,6 @@ Description: "Extended example 1: example organization"
 Instance: scenario1-us-core-procedure-biopsy
 InstanceOf: USCoreProcedure
 Description: "Extended example 1: example biopsy procedure"
-* id = "scenario1-us-core-procedure-biopsy"
 * status = #completed "completed"
 * code = SCT#723990008 "Biopsy of breast using ultrasonographic guidance (procedure)"
 * subject = Reference(scenario1-mcode-cancer-patient)
@@ -451,7 +421,6 @@ Description: "Extended example 1: example biopsy procedure"
 Instance: scenario1-us-core-procedure-mammogram
 InstanceOf: USCoreProcedure
 Description: "Extended example 1: example mammogram"
-* id = "scenario1-us-core-procedure-mammogram"
 * status = #completed "completed"
 * code = SCT#71651007 "Mammography (procedure)"
 * subject = Reference(scenario1-mcode-cancer-patient)
@@ -462,7 +431,6 @@ Description: "Extended example 1: example mammogram"
 Instance: scenario1-us-core-smoking-status
 InstanceOf: USCoreSmokingStatusProfile
 Description: "Extended example 1: example showing smoking status"
-* id = "scenario1-us-core-smoking-status"
 * status = #final "final"
 * code = LNC#72166-2 "Tobacco smoking status"
 * subject = Reference(scenario1-mcode-cancer-patient)
@@ -472,7 +440,6 @@ Description: "Extended example 1: example showing smoking status"
 Instance: scenario1-observation-smoking-history
 InstanceOf: Observation
 Description: "Extended example 1: example showing smoking history"
-* id = "scenario1-observation-smoking-history"
 * status = #final "final"
 * category = ObsCat#social-history "Social History"
 * code = SCT#401201003 "Cigarette pack-years (observable entity)" // No LOINC available
@@ -483,7 +450,6 @@ Description: "Extended example 1: example showing smoking history"
 Instance: scenario1-us-core-condition-anxiety
 InstanceOf: USCoreCondition
 Description: "Extended example 1: example showing comorbid condition (anxiety)"
-* id = "scenario1-us-core-condition-anxiety"
 * clinicalStatus = ClinStatus#active "Active"
 * verificationStatus = VerStatus#confirmed "Confirmed"
 * category = CondCat#problem-list-item "Problem List Item"
@@ -494,7 +460,6 @@ Description: "Extended example 1: example showing comorbid condition (anxiety)"
 Instance: scenario1-family-member-history-aunt
 InstanceOf: FamilyMemberHistory
 Description: "Extended example 1: example showing family member history of cancer"
-* id = "scenario1-family-member-history-aunt"
 * status = #completed "completed"
 * patient = Reference(scenario1-mcode-cancer-patient)
 * relationship = http://terminology.hl7.org/CodeSystem/v3-RoleCode#MAUNT "maternal aunt"
@@ -506,7 +471,6 @@ Description: "Extended example 1: example showing family member history of cance
 Instance: scenario1-family-member-history-sister
 InstanceOf: FamilyMemberHistory
 Description: "Extended example 1: example showing family member history of cancer"
-* id = "scenario1-family-member-history-sister"
 * status = #completed "completed"
 * patient = Reference(scenario1-mcode-cancer-patient)
 * relationship = http://terminology.hl7.org/CodeSystem/v3-RoleCode#NSIS "natural sister"
@@ -519,7 +483,6 @@ Description: "Extended example 1: example showing family member history of cance
 Instance: scenario1-family-member-history-uncle
 InstanceOf: FamilyMemberHistory
 Description: "Extended example 1: example showing family member history of cancer"
-* id = "scenario1-family-member-history-uncle"
 * status = #completed "completed"
 * patient = Reference(scenario1-mcode-cancer-patient)
 * relationship = http://terminology.hl7.org/CodeSystem/v3-RoleCode#PUNCLE "paternal uncle"
@@ -530,7 +493,6 @@ Description: "Extended example 1: example showing family member history of cance
 Instance: scenario1-specimen-tumor
 InstanceOf: Specimen
 Description: "Extended example 1: example tumor specimen"
-* id = "scenario1-specimen-tumor"
 * status = #available "available"
 * type = http://terminology.hl7.org/CodeSystem/v2-0487#TUMOR "Tumor"
 * subject = Reference(scenario1-mcode-cancer-patient)
@@ -540,7 +502,6 @@ Description: "Extended example 1: example tumor specimen"
 Instance: scenario1-diagnosticreport-pathology
 InstanceOf: USCoreDiagnosticReportLab
 Description: "Extended example 1: example of pathology findings represented as a DiagnosticReport resource."
-* id = "scenario1-diagnosticreport-pathology"
 * status = #final "final"
 * category[0] = DiagnosticService#LAB
 * category[1] = DiagnosticService#SP "Surgical Pathology"
@@ -560,7 +521,6 @@ Description: "Extended example 1: example of pathology findings represented as a
 Instance: scenario1-observation-tumor-invasion-negative
 InstanceOf: USCoreObservationLab
 Description: "Extended example 1: example showing negative invasion for the removed tumor"
-* id = "scenario1-observation-tumor-invasion-negative"
 * status = #final "final"
 * code = SCT#370052007 "Status of invasion by tumor (observable entity)" // No LOINC for invasion status
 * subject = Reference(scenario1-mcode-cancer-patient)
@@ -571,7 +531,6 @@ Description: "Extended example 1: example showing negative invasion for the remo
 Instance: scenario1-observation-tumor-negative-margins
 InstanceOf:  USCoreObservationLab
 Description: "Extended example 1: example showing negative margins for the removed tumor"
-* id = "scenario1-observation-tumor-negative-margins"
 * status = #final "final"
 * code = LNC#44669-0 "Margin involvement in Breast tumor"
 * subject = Reference(scenario1-mcode-cancer-patient)
@@ -582,7 +541,6 @@ Description: "Extended example 1: example showing negative margins for the remov
 Instance: scenario1-observation-tumor-sentinel-nodes
 InstanceOf:  USCoreObservationLab
 Description: "Extended example 1: example showing 3 sentinel lymph nodes were examined"
-* id = "scenario1-observation-tumor-sentinel-nodes"
 * status = #final "final"
 * code = LNC#92832-5 "Sentinel lymph nodes with metastasis [#] in Cancer specimen"
 * subject = Reference(scenario1-mcode-cancer-patient)
@@ -594,7 +552,6 @@ Description: "Extended example 1: example showing 3 sentinel lymph nodes were ex
 Instance: scenario1-observation-tumor-size
 InstanceOf:  USCoreObservationLab
 Description: "Extended example 1: example showing tumor size"
-* id = "scenario1-observation-tumor-size"
 * status = #final "final"
 * code = LNC#21889-1 "Size Tumor"
 * subject = Reference(scenario1-mcode-cancer-patient)
@@ -607,7 +564,6 @@ Description: "Extended example 1: example showing tumor size"
 Instance: scenario1-observation-tumor-dcis
 InstanceOf:  USCoreObservationLab
 Description: "Extended example 1: example showing DCIS diagnosis"
-* id = "scenario1-observation-tumor-dcis"
 * status = #final "final"
 * code = LNC#29308-4 "Diagnosis"
 * subject = Reference(scenario1-mcode-cancer-patient)

@@ -195,7 +195,7 @@ Description: "mCODE Example for Cancer Related Surgical Procedure"
 
 Instance: BrachytherapyPrescriptionDeliveryExample1
 InstanceOf: BrachytherapyPrescriptionDelivery
-Description: "mCODE Example for Cancer Related Radiation Procedure"
+Description: "mCODE Example for a brachytherapy procedure."
 * status = #completed "completed"
 * code = NCIT#C85254 "Low-Dose Rate Brachytherapy" 
 * extension[radiotherapyTechnique].valueString = "Interstitial–Temporary"

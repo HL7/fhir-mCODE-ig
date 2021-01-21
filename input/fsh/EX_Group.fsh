@@ -3,8 +3,6 @@ InstanceOf: Group
 Usage: #example
 Title: "mCODE Patient Group Example"
 Description: "Example of a Group identifying mCODE Patients"
-
-* id = "mCODEPatientGroupExample1"
 * type = #person
 * actual = true
 

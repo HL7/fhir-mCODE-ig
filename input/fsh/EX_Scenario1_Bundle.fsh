@@ -1,8 +1,6 @@
 Instance: scenario1-mcode-patient-bundle
 InstanceOf: MCODEPatientBundle
 Description: "Extended example 1 as a mCODE Patient Bundle"
-* id = "scenario1-mcode-patient-bundle"
-
 // Named slices, required
 * entry[cancerPatient].resource = scenario1-mcode-cancer-patient
 * entry[cancerPatient].fullUrl = "http://example.org/fhir/Patient/scenario1-mcode-cancer-patient"

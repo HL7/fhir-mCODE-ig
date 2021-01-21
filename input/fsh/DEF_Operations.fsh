@@ -1,9 +1,8 @@
-Instance: Operation-mcode-patient-everything
+Instance: mcode-patient-everything
 InstanceOf: OperationDefinition
 Description: "Gets an [mCODE Patient Bundle](StructureDefinition-mcode-patient-bundle.html) for a specific patient that contains all of that patient's resources that conform to mCODE Profiles."
 Usage: #definition
 
-* id = "mcode-patient-everything"
 * name = "Fetch_mCODE_patient_bundle"
 * title = "Fetch mCODE Patient Bundle for a given Patient"
 * status = #draft

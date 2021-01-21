@@ -1,8 +1,8 @@
-### STU2 Ballot Preparation
+### mCODE 1.9 STU 2 Ballot Version (May 2021) 
 
 The following changes to [the STU1 release](http://hl7.org/fhir/us/mcode/STU1) are in preparation for the STU2 Ballot (voting anticipated in May 2021).
 
-You can see these changes in the [continuous integration build of mCODE](http://build.fhir.org/ig/HL7/fhir-mCODE-ig/branches/master/index.html).
+These changes are documented in the [continuous integration build of mCODE](http://build.fhir.org/ig/HL7/fhir-mCODE-ig/branches/master/index.html).
 
 Many of these changes have been taken in response to comments from the HL7 community. Issue numbers refer to the [HL7 Jira](https://jira.hl7.org/issues/?filter=13361) (free account registration required).
 

@@ -95,6 +95,7 @@ Description: "Extended example 1: example showing ECOG performance status"
 * interpretation = LNC#LA9622-7 "Fully active, able to carry on all pre-disease performance without restriction"
 * method = SCT#5880005 "Physical examination procedure (procedure)"
 
+
 Instance: scenario1-mcode-cancer-related-surgical-procedure-mastectomy
 InstanceOf: CancerRelatedSurgicalProcedure
 Description: "Extended example 1: example showing partial mastectomy surgical procedure"
@@ -107,14 +108,19 @@ Description: "Extended example 1: example showing partial mastectomy surgical pr
 * reasonReference = Reference(scenario1-mcode-primary-cancer-condition)
 * bodySite = SCT#80248007 "Left breast structure (body structure)"
 
-Instance: scenario1-mcode-cancer-related-radiation-procedure
-InstanceOf: CancerRelatedRadiationProcedure
+Instance: scenario1-teleradiotherapy-prescription-delivery
+InstanceOf: TeleradiotherapyPrescriptionDelivery
 Description: "Extended example 1: example showing radiation treatment"
-* extension[treatmentIntent].valueCodeableConcept = SCT#373808002 "Curative - procedure intent (qualifier value)"
 * status = #completed "completed"
-* code = SCT#385798007 "Radiation therapy care (regime/therapy)"
+* code = NCIT#C104914 "Photon Beam Radiation Therapy"
+* extension[radiotherapyTechnique].valueString = "3D"
+* extension[radiotherapyDosePerFraction].valueQuantity = 200 'cGy'
+* extension[radiotherapyDeliveredFractions].valueUnsignedInt = 25
+* extension[radiotherapyTotalDosePlanned].valueQuantity = 5000 'cGy'
+* extension[radiotherapyTotalDoseDelivered].valueQuantity = 5000 'cGy'
 * subject = Reference(scenario1-mcode-cancer-patient)
-* performedDateTime = "2018-03-20"
+* performedPeriod.start = "2018-03-19"
+* performedPeriod.end = "2018-05-22"
 * asserter = Reference(scenario1-us-core-practitioner)
 * reasonReference = Reference(scenario1-mcode-primary-cancer-condition)
 * bodySite = SCT#80248007 "Left breast structure (body structure)"
@@ -210,7 +216,7 @@ Instance: scenario1-mcode-tumor-marker-test-oncotype-dx
 InstanceOf: TumorMarkerTest
 Description: "Extended example 1: example showing Oncotype DX breast recurrence score. Note that this test has no assigned LOINC code, so GTR is being used as a backup. Only the score from the Oncotype DX panel (as opposed to variant data from the genes in the panel) is represented here."
 * status = #final "final"
-* code.coding[0] = OtherSpecifyCS#OtherTumorMarkerTest "Other Tumor Marker Test, Specify"
+* code.coding[0] = OtherCode#OtherTumorMarkerTest "Other Tumor Marker Test, Specify"
 * code.coding[1] = GTR#509910 "Oncotype DX Breast Recurrence Score Assay"
 * code.text = "Oncotype DX Breast Recurrence Score Assay"
 * subject = Reference(scenario1-mcode-cancer-patient)

@@ -6414,7 +6414,7 @@ v: {
   "resourceType" : "ValueSet",
   "compose" : {
     "include" : [{
-      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/mcode-other-specify-code-system",
+      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/mcode-other-code-cs",
       "concept" : [{
         "code" : "OtherTumorMarkerTest",
         "display" : "Other Tumor Marker Test, Specify"
@@ -6867,7 +6867,7 @@ v: {
   "resourceType" : "ValueSet",
   "compose" : {
     "include" : [{
-      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/mcode-other-specify-code-system",
+      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/mcode-other-code-cs",
       "concept" : [{
         "code" : "OtherTumorMarkerTest",
         "display" : "Other Tumor Marker Test, Specify"
@@ -6951,7 +6951,7 @@ v: {
   "resourceType" : "ValueSet",
   "compose" : {
     "include" : [{
-      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/mcode-other-specify-code-system",
+      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/mcode-other-code-cs",
       "concept" : [{
         "code" : "OtherTumorMarkerTest",
         "display" : "Other Tumor Marker Test, Specify"
@@ -7024,7 +7024,7 @@ v: {
   "resourceType" : "ValueSet",
   "compose" : {
     "include" : [{
-      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/mcode-other-specify-code-system",
+      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/mcode-other-code-cs",
       "concept" : [{
         "code" : "OtherTumorMarkerTest",
         "display" : "Other Tumor Marker Test, Specify"
@@ -7509,7 +7509,7 @@ v: {
   "resourceType" : "ValueSet",
   "compose" : {
     "include" : [{
-      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/mcode-other-specify-code-system",
+      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/mcode-other-code-cs",
       "concept" : [{
         "code" : "OtherTumorMarkerTest",
         "display" : "Other Tumor Marker Test, Specify"
@@ -7561,7 +7561,7 @@ v: {
   "resourceType" : "ValueSet",
   "compose" : {
     "include" : [{
-      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/mcode-other-specify-code-system",
+      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/mcode-other-code-cs",
       "concept" : [{
         "code" : "OtherTumorMarkerTest",
         "display" : "Other Tumor Marker Test, Specify"
@@ -7613,7 +7613,7 @@ v: {
   "resourceType" : "ValueSet",
   "compose" : {
     "include" : [{
-      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/mcode-other-specify-code-system",
+      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/mcode-other-code-cs",
       "concept" : [{
         "code" : "OtherTumorMarkerTest",
         "display" : "Other Tumor Marker Test, Specify"
@@ -7665,7 +7665,7 @@ v: {
   "resourceType" : "ValueSet",
   "compose" : {
     "include" : [{
-      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/mcode-other-specify-code-system",
+      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/mcode-other-code-cs",
       "concept" : [{
         "code" : "OtherTumorMarkerTest",
         "display" : "Other Tumor Marker Test, Specify"
@@ -7717,7 +7717,7 @@ v: {
   "resourceType" : "ValueSet",
   "compose" : {
     "include" : [{
-      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/mcode-other-specify-code-system",
+      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/mcode-other-code-cs",
       "concept" : [{
         "code" : "OtherTumorMarkerTest",
         "display" : "Other Tumor Marker Test, Specify"
@@ -7769,7 +7769,7 @@ v: {
   "resourceType" : "ValueSet",
   "compose" : {
     "include" : [{
-      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/mcode-other-specify-code-system",
+      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/mcode-other-code-cs",
       "concept" : [{
         "code" : "OtherTumorMarkerTest",
         "display" : "Other Tumor Marker Test, Specify"
@@ -7821,7 +7821,7 @@ v: {
   "resourceType" : "ValueSet",
   "compose" : {
     "include" : [{
-      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/mcode-other-specify-code-system",
+      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/mcode-other-code-cs",
       "concept" : [{
         "code" : "OtherTumorMarkerTest",
         "display" : "Other Tumor Marker Test, Specify"
@@ -7872,7 +7872,7 @@ v: {
   "resourceType" : "ValueSet",
   "compose" : {
     "include" : [{
-      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/mcode-other-specify-code-system",
+      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/mcode-other-code-cs",
       "concept" : [{
         "code" : "OtherTumorMarkerTest",
         "display" : "Other Tumor Marker Test, Specify"
@@ -7923,7 +7923,7 @@ v: {
   "resourceType" : "ValueSet",
   "compose" : {
     "include" : [{
-      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/mcode-other-specify-code-system",
+      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/mcode-other-code-cs",
       "concept" : [{
         "code" : "OtherTumorMarkerTest",
         "display" : "Other Tumor Marker Test, Specify"
@@ -7974,7 +7974,7 @@ v: {
   "resourceType" : "ValueSet",
   "compose" : {
     "include" : [{
-      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/mcode-other-specify-code-system",
+      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/mcode-other-code-cs",
       "concept" : [{
         "code" : "OtherTumorMarkerTest",
         "display" : "Other Tumor Marker Test, Specify"
@@ -8026,7 +8026,7 @@ v: {
   "resourceType" : "ValueSet",
   "compose" : {
     "include" : [{
-      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/mcode-other-specify-code-system",
+      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/mcode-other-code-cs",
       "concept" : [{
         "code" : "OtherTumorMarkerTest",
         "display" : "Other Tumor Marker Test, Specify"
@@ -8078,7 +8078,7 @@ v: {
   "resourceType" : "ValueSet",
   "compose" : {
     "include" : [{
-      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/mcode-other-specify-code-system",
+      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/mcode-other-code-cs",
       "concept" : [{
         "code" : "OtherTumorMarkerTest",
         "display" : "Other Tumor Marker Test, Specify"
@@ -8130,7 +8130,7 @@ v: {
   "resourceType" : "ValueSet",
   "compose" : {
     "include" : [{
-      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/mcode-other-specify-code-system",
+      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/mcode-other-code-cs",
       "concept" : [{
         "code" : "OtherTumorMarkerTest",
         "display" : "Other Tumor Marker Test, Specify"
@@ -8182,7 +8182,7 @@ v: {
   "resourceType" : "ValueSet",
   "compose" : {
     "include" : [{
-      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/mcode-other-specify-code-system",
+      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/mcode-other-code-cs",
       "concept" : [{
         "code" : "OtherTumorMarkerTest",
         "display" : "Other Tumor Marker Test, Specify"
@@ -8234,7 +8234,7 @@ v: {
   "resourceType" : "ValueSet",
   "compose" : {
     "include" : [{
-      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/mcode-other-specify-code-system",
+      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/mcode-other-code-cs",
       "concept" : [{
         "code" : "OtherTumorMarkerTest",
         "display" : "Other Tumor Marker Test, Specify"
@@ -8286,7 +8286,7 @@ v: {
   "resourceType" : "ValueSet",
   "compose" : {
     "include" : [{
-      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/mcode-other-specify-code-system",
+      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/mcode-other-code-cs",
       "concept" : [{
         "code" : "OtherTumorMarkerTest",
         "display" : "Other Tumor Marker Test, Specify"
@@ -11913,7 +11913,7 @@ v: {
   "resourceType" : "ValueSet",
   "compose" : {
     "include" : [{
-      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/mcode-other-specify-code-system",
+      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/mcode-other-code-cs",
       "concept" : [{
         "code" : "OtherTumorMarkerTest",
         "display" : "Other Tumor Marker Test, Specify"
@@ -12463,7 +12463,7 @@ v: {
   "resourceType" : "ValueSet",
   "compose" : {
     "include" : [{
-      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/mcode-other-specify-code-system",
+      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/mcode-other-code-cs",
       "concept" : [{
         "code" : "OtherTumorMarkerTest",
         "display" : "Other Tumor Marker Test, Specify"
@@ -13070,7 +13070,7 @@ v: {
   "resourceType" : "ValueSet",
   "compose" : {
     "include" : [{
-      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/mcode-other-specify-code-system",
+      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/mcode-other-code-cs",
       "concept" : [{
         "code" : "OtherTumorMarkerTest",
         "display" : "Other Tumor Marker Test, Specify"
@@ -13620,7 +13620,7 @@ v: {
   "resourceType" : "ValueSet",
   "compose" : {
     "include" : [{
-      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/mcode-other-specify-code-system",
+      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/mcode-other-code-cs",
       "concept" : [{
         "code" : "OtherTumorMarkerTest",
         "display" : "Other Tumor Marker Test, Specify"
@@ -14216,7 +14216,7 @@ v: {
   "resourceType" : "ValueSet",
   "compose" : {
     "include" : [{
-      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/mcode-other-specify-code-system",
+      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/mcode-other-code-cs",
       "concept" : [{
         "code" : "OtherTumorMarkerTest",
         "display" : "Other Tumor Marker Test, Specify"
@@ -14766,7 +14766,7 @@ v: {
   "resourceType" : "ValueSet",
   "compose" : {
     "include" : [{
-      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/mcode-other-specify-code-system",
+      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/mcode-other-code-cs",
       "concept" : [{
         "code" : "OtherTumorMarkerTest",
         "display" : "Other Tumor Marker Test, Specify"
@@ -15362,7 +15362,7 @@ v: {
   "resourceType" : "ValueSet",
   "compose" : {
     "include" : [{
-      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/mcode-other-specify-code-system",
+      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/mcode-other-code-cs",
       "concept" : [{
         "code" : "OtherTumorMarkerTest",
         "display" : "Other Tumor Marker Test, Specify"
@@ -15912,7 +15912,7 @@ v: {
   "resourceType" : "ValueSet",
   "compose" : {
     "include" : [{
-      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/mcode-other-specify-code-system",
+      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/mcode-other-code-cs",
       "concept" : [{
         "code" : "OtherTumorMarkerTest",
         "display" : "Other Tumor Marker Test, Specify"
@@ -16508,7 +16508,7 @@ v: {
   "resourceType" : "ValueSet",
   "compose" : {
     "include" : [{
-      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/mcode-other-specify-code-system",
+      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/mcode-other-code-cs",
       "concept" : [{
         "code" : "OtherTumorMarkerTest",
         "display" : "Other Tumor Marker Test, Specify"
@@ -17104,7 +17104,7 @@ v: {
   "resourceType" : "ValueSet",
   "compose" : {
     "include" : [{
-      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/mcode-other-specify-code-system",
+      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/mcode-other-code-cs",
       "concept" : [{
         "code" : "OtherTumorMarkerTest",
         "display" : "Other Tumor Marker Test, Specify"
@@ -17700,7 +17700,7 @@ v: {
   "resourceType" : "ValueSet",
   "compose" : {
     "include" : [{
-      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/mcode-other-specify-code-system",
+      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/mcode-other-code-cs",
       "concept" : [{
         "code" : "OtherTumorMarkerTest",
         "display" : "Other Tumor Marker Test, Specify"
@@ -18296,7 +18296,7 @@ v: {
   "resourceType" : "ValueSet",
   "compose" : {
     "include" : [{
-      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/mcode-other-specify-code-system",
+      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/mcode-other-code-cs",
       "concept" : [{
         "code" : "OtherTumorMarkerTest",
         "display" : "Other Tumor Marker Test, Specify"
@@ -18892,7 +18892,7 @@ v: {
   "resourceType" : "ValueSet",
   "compose" : {
     "include" : [{
-      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/mcode-other-specify-code-system",
+      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/mcode-other-code-cs",
       "concept" : [{
         "code" : "OtherTumorMarkerTest",
         "display" : "Other Tumor Marker Test, Specify"
@@ -19488,7 +19488,7 @@ v: {
   "resourceType" : "ValueSet",
   "compose" : {
     "include" : [{
-      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/mcode-other-specify-code-system",
+      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/mcode-other-code-cs",
       "concept" : [{
         "code" : "OtherTumorMarkerTest",
         "display" : "Other Tumor Marker Test, Specify"
@@ -20084,7 +20084,7 @@ v: {
   "resourceType" : "ValueSet",
   "compose" : {
     "include" : [{
-      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/mcode-other-specify-code-system",
+      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/mcode-other-code-cs",
       "concept" : [{
         "code" : "OtherTumorMarkerTest",
         "display" : "Other Tumor Marker Test, Specify"
@@ -20679,7 +20679,7 @@ v: {
   "resourceType" : "ValueSet",
   "compose" : {
     "include" : [{
-      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/mcode-other-specify-code-system",
+      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/mcode-other-code-cs",
       "concept" : [{
         "code" : "OtherTumorMarkerTest",
         "display" : "Other Tumor Marker Test, Specify"
@@ -21274,7 +21274,7 @@ v: {
   "resourceType" : "ValueSet",
   "compose" : {
     "include" : [{
-      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/mcode-other-specify-code-system",
+      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/mcode-other-code-cs",
       "concept" : [{
         "code" : "OtherTumorMarkerTest",
         "display" : "Other Tumor Marker Test, Specify"
@@ -21869,7 +21869,7 @@ v: {
   "resourceType" : "ValueSet",
   "compose" : {
     "include" : [{
-      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/mcode-other-specify-code-system",
+      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/mcode-other-code-cs",
       "concept" : [{
         "code" : "OtherTumorMarkerTest",
         "display" : "Other Tumor Marker Test, Specify"
@@ -22465,7 +22465,7 @@ v: {
   "resourceType" : "ValueSet",
   "compose" : {
     "include" : [{
-      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/mcode-other-specify-code-system",
+      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/mcode-other-code-cs",
       "concept" : [{
         "code" : "OtherTumorMarkerTest",
         "display" : "Other Tumor Marker Test, Specify"
@@ -23061,7 +23061,7 @@ v: {
   "resourceType" : "ValueSet",
   "compose" : {
     "include" : [{
-      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/mcode-other-specify-code-system",
+      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/mcode-other-code-cs",
       "concept" : [{
         "code" : "OtherTumorMarkerTest",
         "display" : "Other Tumor Marker Test, Specify"
@@ -23657,7 +23657,7 @@ v: {
   "resourceType" : "ValueSet",
   "compose" : {
     "include" : [{
-      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/mcode-other-specify-code-system",
+      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/mcode-other-code-cs",
       "concept" : [{
         "code" : "OtherTumorMarkerTest",
         "display" : "Other Tumor Marker Test, Specify"
@@ -24253,7 +24253,7 @@ v: {
   "resourceType" : "ValueSet",
   "compose" : {
     "include" : [{
-      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/mcode-other-specify-code-system",
+      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/mcode-other-code-cs",
       "concept" : [{
         "code" : "OtherTumorMarkerTest",
         "display" : "Other Tumor Marker Test, Specify"
@@ -24849,7 +24849,7 @@ v: {
   "resourceType" : "ValueSet",
   "compose" : {
     "include" : [{
-      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/mcode-other-specify-code-system",
+      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/mcode-other-code-cs",
       "concept" : [{
         "code" : "OtherTumorMarkerTest",
         "display" : "Other Tumor Marker Test, Specify"
@@ -25445,7 +25445,7 @@ v: {
   "resourceType" : "ValueSet",
   "compose" : {
     "include" : [{
-      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/mcode-other-specify-code-system",
+      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/mcode-other-code-cs",
       "concept" : [{
         "code" : "OtherTumorMarkerTest",
         "display" : "Other Tumor Marker Test, Specify"
@@ -31610,6 +31610,16 @@ v: {
 }, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK"}####
 v: {
   "display" : "Stage group.pathology Cancer",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "68602-2"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "Radiation oncology Summary note",
   "severity" : null,
   "error" : ""
 }

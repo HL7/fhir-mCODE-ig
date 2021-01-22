@@ -575,3 +575,611 @@ v: {
   "error" : "The code provided (http://unitsofmeasure.org#{PackYears}) is not valid in the value set 'BodyWeightUnits' (from http://tx.fhir.org/r4)"
 }
 -------------------------------------------------------------------------------------
+{"hierarchical" : true, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "https://uts.nlm.nih.gov/uts/umls",
+      "concept" : [{
+        "code" : "C0006098",
+        "display" : "Brachytherapy"
+      },
+      {
+        "code" : "C0454271",
+        "display" : "Low dose rate brachytherapy"
+      },
+      {
+        "code" : "C0454270",
+        "display" : "High dose brachytherapy"
+      },
+      {
+        "code" : "C3897809",
+        "display" : "Pulsed-Dose Rate Brachytherapy"
+      },
+      {
+        "code" : "C2584639",
+        "display" : "High dose rate electronic brachytherapy"
+      },
+      {
+        "code" : "C0182638",
+        "display" : "Radiopharmaceuticals"
+      },
+      {
+        "code" : "C0203608",
+        "display" : "Radionuclide therapy"
+      }]
+    },
+    {
+      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/mcode-other-code-cs",
+      "concept" : [{
+        "code" : "OtherBrachytherapyModality",
+        "display" : "Other Brachytherapy Modality, Specify"
+      }]
+    }]
+  }
+}}####
+e: {
+  "error" : "Error from server: Unable to provide support for code system https://uts.nlm.nih.gov/uts/umls"
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "https://uts.nlm.nih.gov/uts/umls",
+      "concept" : [{
+        "code" : "C1517033",
+        "display" : "External Beam Radiation Therapy"
+      },
+      {
+        "code" : "C0436226",
+        "display" : "Proton Therapy"
+      },
+      {
+        "code" : "C0454077",
+        "display" : "Teleradiotherapy using electrons"
+      },
+      {
+        "code" : "C0599266",
+        "display" : "Neutron beam therapy"
+      },
+      {
+        "code" : "C3494442",
+        "display" : "Carbon Ion Radiotherapy"
+      },
+      {
+        "code" : "C3539769",
+        "display" : "Photon Beam Radiation Therapy"
+      },
+      {
+        "code" : "C0043308",
+        "display" : "X-Ray Therapy"
+      },
+      {
+        "code" : "C0454060",
+        "display" : "Grenz ray therapy"
+      },
+      {
+        "code" : "C0203541",
+        "display" : "Deep radiation therapy, 200-300 KVP"
+      }]
+    },
+    {
+      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/mcode-other-code-cs",
+      "concept" : [{
+        "code" : "OtherTeleradiotherapyModality",
+        "display" : "Other Teleradiotherapy Modality, Specify"
+      }]
+    }]
+  }
+}}####
+e: {
+  "error" : "Error from server: Unable to provide support for code system https://uts.nlm.nih.gov/uts/umls"
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://ncithesaurus-stage.nci.nih.gov",
+      "concept" : [{
+        "code" : "C15751",
+        "display" : "External Beam Radiation Therapy"
+      },
+      {
+        "code" : "C66897",
+        "display" : "Proton Beam Radiation Therapy"
+      },
+      {
+        "code" : "C15650",
+        "display" : "Electron Beam Therapy"
+      },
+      {
+        "code" : "C160816",
+        "display" : "Carbon Ion Radiation Therapy"
+      },
+      {
+        "code" : "C93338",
+        "display" : "X-ray Therapy"
+      }]
+    },
+    {
+      "system" : "https://uts.nlm.nih.gov/uts/umls",
+      "concept" : [{
+        "code" : "C0599266",
+        "display" : "Neutron beam therapy"
+      },
+      {
+        "code" : "C104914",
+        "display" : "Photon Beam Radiation Therapy"
+      },
+      {
+        "code" : "C0454060",
+        "display" : "Grenz ray therapy"
+      },
+      {
+        "code" : "C0203541",
+        "display" : "Deep radiation therapy, 200-300 KVP"
+      }]
+    },
+    {
+      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/mcode-other-code-cs",
+      "concept" : [{
+        "code" : "OtherTeleradiotherapyModality",
+        "display" : "Other Teleradiotherapy Modality, Specify"
+      }]
+    }]
+  }
+}}####
+e: {
+  "error" : "Error from server: Unable to provide support for code system http://ncithesaurus-stage.nci.nih.gov"
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://ncithesaurus-stage.nci.nih.gov",
+      "concept" : [{
+        "code" : "C15195",
+        "display" : "Brachytherapy"
+      },
+      {
+        "code" : "C85254",
+        "display" : "Low-Dose Rate Brachytherapy"
+      },
+      {
+        "code" : "C15651",
+        "display" : "High dose brachytherapy"
+      },
+      {
+        "code" : "C116542",
+        "display" : "Pulsed-Dose Rate Brachytherapy"
+      },
+      {
+        "code" : "C15470",
+        "display" : "Radioisotope Therapy"
+      }]
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "concept" : [{
+        "code" : "438629002",
+        "display" : "High dose rate electronic brachytherapy"
+      }]
+    },
+    {
+      "system" : "http://terminology.hl7.org/CodeSystem/medcin",
+      "concept" : [{
+        "code" : "76787",
+        "display" : "radiopharmaceutical therapy"
+      }]
+    },
+    {
+      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/mcode-other-code-cs",
+      "concept" : [{
+        "code" : "OtherBrachytherapyModality",
+        "display" : "Other Brachytherapy Modality, Specify"
+      }]
+    }]
+  }
+}}####
+e: {
+  "error" : "Error from server: Unable to provide support for code system http://ncithesaurus-stage.nci.nih.gov"
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://ncithesaurus-stage.nci.nih.gov",
+      "concept" : [{
+        "code" : "C15751",
+        "display" : "External Beam Radiation Therapy"
+      },
+      {
+        "code" : "C66897",
+        "display" : "Proton Beam Radiation Therapy"
+      },
+      {
+        "code" : "C15650",
+        "display" : "Electron Beam Therapy"
+      },
+      {
+        "code" : "C160816",
+        "display" : "Carbon Ion Radiation Therapy"
+      },
+      {
+        "code" : "C104914",
+        "display" : "Photon Beam Radiation Therapy"
+      },
+      {
+        "code" : "C93338",
+        "display" : "X-ray Therapy"
+      }]
+    },
+    {
+      "system" : "https://uts.nlm.nih.gov/uts/umls",
+      "concept" : [{
+        "code" : "C0599266",
+        "display" : "Neutron beam therapy"
+      }]
+    },
+    {
+      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/mcode-other-code-cs",
+      "concept" : [{
+        "code" : "OtherTeleradiotherapyModality",
+        "display" : "Other Teleradiotherapy Modality, Specify"
+      }]
+    }]
+  }
+}}####
+e: {
+  "error" : "Error from server: Unable to provide support for code system http://ncithesaurus-stage.nci.nih.gov"
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://ncithesaurus-stage.nci.nih.gov",
+      "concept" : [{
+        "code" : "C15751",
+        "display" : "External Beam Radiation Therapy"
+      },
+      {
+        "code" : "C66897",
+        "display" : "Proton Beam Radiation Therapy"
+      },
+      {
+        "code" : "C15650",
+        "display" : "Electron Beam Therapy"
+      },
+      {
+        "code" : "C15440",
+        "display" : "High-LET Neutron Therapy"
+      },
+      {
+        "code" : "C160816",
+        "display" : "Carbon Ion Radiation Therapy"
+      },
+      {
+        "code" : "C104914",
+        "display" : "Photon Beam Radiation Therapy"
+      }]
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "concept" : [{
+        "code" : "169291001",
+        "display" : "X-ray beam therapy"
+      },
+      {
+        "code" : "228661008",
+        "display" : "Grenz ray therapy"
+      },
+      {
+        "code" : "5304008",
+        "display" : "Orthovoltage X-ray therapy"
+      }]
+    },
+    {
+      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/mcode-other-code-cs",
+      "concept" : [{
+        "code" : "OtherTeleradiotherapyModality",
+        "display" : "Other Teleradiotherapy Modality, Specify"
+      }]
+    }]
+  }
+}}####
+e: {
+  "error" : "Error from server: Unable to provide support for code system http://ncithesaurus-stage.nci.nih.gov"
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://ncithesaurus-stage.nci.nih.gov",
+      "concept" : [{
+        "code" : "C28049",
+        "display" : "Intracavitary Radiation Therapy"
+      },
+      {
+        "code" : "C66891",
+        "display" : "Interstitial Radiation Therapy"
+      },
+      {
+        "code" : "C15623",
+        "display" : "Intraoperative Radiotherapy"
+      },
+      {
+        "code" : "C94420",
+        "display" : "Unsealed Internal Radiation Therapy"
+      }]
+    },
+    {
+      "system" : "http://terminology.hl7.org/CodeSystem/medcin",
+      "concept" : [{
+        "code" : "342092",
+        "display" : "temporary radiation therapy implant"
+      },
+      {
+        "code" : "195192",
+        "display" : "irradiation by permanent brachytherapy implants"
+      },
+      {
+        "code" : "195195",
+        "display" : "brachytherapy using sealed isotopes"
+      }]
+    }]
+  }
+}}####
+e: {
+  "error" : "Error from server: Unable to provide support for code system http://ncithesaurus-stage.nci.nih.gov"
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://ncithesaurus-stage.nci.nih.gov",
+      "concept" : [{
+        "code" : "C104941",
+        "display" : "Scanning Proton Beam Therapy"
+      },
+      {
+        "code" : "C159611",
+        "display" : "Intensity-Modulated Proton Therapy"
+      },
+      {
+        "code" : "C165189",
+        "display" : "Conventional Radiotherapy"
+      },
+      {
+        "code" : "C16035",
+        "display" : "3-Dimensional Conformal Radiation Therapy"
+      },
+      {
+        "code" : "C15623",
+        "display" : "Intraoperative Radiotherapy"
+      },
+      {
+        "code" : "C16135",
+        "display" : "Intensity-Modulated Radiation Therapy"
+      },
+      {
+        "code" : "C116432",
+        "display" : "Image-Guided Adaptive Radiation Therapy"
+      },
+      {
+        "code" : "C62727",
+        "display" : "Image Guided Radiation Therapy"
+      },
+      {
+        "code" : "C118286",
+        "display" : "Stereotactic Body Radiation Therapy"
+      },
+      {
+        "code" : "C15358",
+        "display" : "Stereotactic Radiosurgery"
+      }]
+    },
+    {
+      "system" : "http://terminology.hl7.org/CodeSystem/medcin",
+      "concept" : [{
+        "code" : "304003",
+        "display" : "intracranial stereotactic radiosurgery"
+      }]
+    }]
+  }
+}}####
+e: {
+  "error" : "Error from server: Unable to provide support for code system http://ncithesaurus-stage.nci.nih.gov"
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://ncithesaurus-stage.nci.nih.gov",
+      "concept" : [{
+        "code" : "C66897",
+        "display" : "Proton Beam Radiation Therapy"
+      },
+      {
+        "code" : "C15650",
+        "display" : "Electron Beam Therapy"
+      },
+      {
+        "code" : "C15440",
+        "display" : "High-LET Neutron Therapy"
+      },
+      {
+        "code" : "C160816",
+        "display" : "Carbon Ion Radiation Therapy"
+      },
+      {
+        "code" : "C104914",
+        "display" : "Photon Beam Radiation Therapy"
+      }]
+    },
+    {
+      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/mcode-other-code-cs",
+      "concept" : [{
+        "code" : "OtherTeleradiotherapyModality",
+        "display" : "Other Teleradiotherapy Modality, Specify"
+      }]
+    }]
+  }
+}}####
+e: {
+  "error" : "Error from server: Unable to provide support for code system http://ncithesaurus-stage.nci.nih.gov"
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : false, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://snomed.info/sct",
+      "concept" : [{
+        "code" : "444256004",
+        "display" : "American Joint Commission on Cancer, Cancer Staging Manual, 6th edition neoplasm staging system (tumor staging)"
+      },
+      {
+        "code" : "443830009",
+        "display" : "American Joint Commission on Cancer, Cancer Staging Manual, 7th edition neoplasm staging system (tumor staging)"
+      },
+      {
+        "code" : "258235000",
+        "display" : "International Union Against Cancer (tumor staging)"
+      }]
+    },
+    {
+      "system" : "http://ncithesaurus.nci.nih.gov",
+      "concept" : [{
+        "code" : "C146985",
+        "display" : "AJCC Cancer Staging Manual 8th Edition"
+      }]
+    }]
+  }
+}}####
+e: {
+  "error" : "Error from server: Unable to provide support for code system http://ncithesaurus.nci.nih.gov"
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://ncithesaurus.nci.nih.gov",
+      "concept" : [{
+        "code" : "C85254",
+        "display" : "Low-Dose Rate Brachytherapy"
+      },
+      {
+        "code" : "C116542",
+        "display" : "Pulsed-Dose Rate Brachytherapy"
+      },
+      {
+        "code" : "C15651",
+        "display" : "High dose brachytherapy"
+      }]
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "concept" : [{
+        "code" : "438629002",
+        "display" : "High dose rate electronic brachytherapy"
+      }]
+    },
+    {
+      "system" : "http://terminology.hl7.org/CodeSystem/medcin",
+      "concept" : [{
+        "code" : "76787",
+        "display" : "Radiopharmaceutical therapy"
+      }]
+    },
+    {
+      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/mcode-other-code-cs",
+      "concept" : [{
+        "code" : "OtherBrachytherapyModality",
+        "display" : "Other Brachytherapy Modality, Specify"
+      }]
+    }]
+  }
+}}####
+e: {
+  "error" : "Error from server: Unable to provide support for code system http://ncithesaurus.nci.nih.gov"
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://snomed.info/sct",
+      "concept" : [{
+        "code" : "444256004",
+        "display" : "American Joint Commission on Cancer, Cancer Staging Manual, 6th edition neoplasm staging system (tumor staging)"
+      },
+      {
+        "code" : "443830009",
+        "display" : "American Joint Commission on Cancer, Cancer Staging Manual, 7th edition neoplasm staging system (tumor staging)"
+      },
+      {
+        "code" : "258235000",
+        "display" : "International Union Against Cancer (tumor staging)"
+      }]
+    },
+    {
+      "system" : "http://ncithesaurus.nci.nih.gov",
+      "concept" : [{
+        "code" : "C146985",
+        "display" : "AJCC Cancer Staging Manual 8th Edition"
+      }]
+    }]
+  }
+}}####
+e: {
+  "error" : "Error from server: Unable to provide support for code system http://ncithesaurus.nci.nih.gov"
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://ncithesaurus.nci.nih.gov",
+      "concept" : [{
+        "code" : "C66897",
+        "display" : "Proton Beam Radiation Therapy"
+      },
+      {
+        "code" : "C15650",
+        "display" : "Electron Beam Therapy"
+      },
+      {
+        "code" : "C15440",
+        "display" : "High-LET Neutron Therapy"
+      },
+      {
+        "code" : "C160816",
+        "display" : "Carbon Ion Radiation Therapy"
+      },
+      {
+        "code" : "C104914",
+        "display" : "Photon Beam Radiation Therapy"
+      }]
+    },
+    {
+      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/mcode-other-code-cs",
+      "concept" : [{
+        "code" : "OtherTeleradiotherapyModality",
+        "display" : "Other Teleradiotherapy Modality, Specify"
+      }]
+    }]
+  }
+}}####
+e: {
+  "error" : "Error from server: Unable to provide support for code system http://ncithesaurus.nci.nih.gov"
+}
+-------------------------------------------------------------------------------------

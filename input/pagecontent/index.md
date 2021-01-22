@@ -251,3 +251,5 @@ This IG was authored by the MITRE Corporation using [FHIR Shorthand (FSH)](http:
 MITRE: Approved for Public Release. Distribution Unlimited. Case Number 16-1988
 
 </div>
+
+{% include markdown-link-references.md %}

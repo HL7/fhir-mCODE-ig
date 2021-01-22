@@ -43,7 +43,7 @@ In addition to information obtained from subject matter experts, several pre-exi
 * [The National Center for Biotechnology Genetic Test Registry (GTR)](https://www.ncbi.nlm.nih.gov/gtr)
 * [The Human Genome Variation Society nomenclature for defining genetic variants](https://varnomen.hgvs.org/).
 * [The Human Genome Organization (HUGO) Gene Nomenclature Committee](https://www.genenames.org/)
-* [The CDISC Therapeutic Area User Guides (TAUG)](https://www.cdisc.org/standards/therapeutic-areas/disease-area/oncology/)
+* [The CDISC Therapeutic Area User Guides (TAUG)](https://www.cdisc.org/standards/therapeutic-areas/disease-area)
 
 After initial development, in early 2019, an open survey was conducted to validate and prioritize the data elements from these use cases. Further down-scoping was done based on whether the data would be stored or capture in an electronic health record (EHR), and if it would place undue documentation burden on clinicians.
 

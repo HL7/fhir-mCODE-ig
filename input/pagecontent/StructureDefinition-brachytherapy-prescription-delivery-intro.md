@@ -22,7 +22,7 @@ The following table shows valid combinations of modality, technique, and device 
 
 **Key:**
 
-* IORT: Interoperative Radiotherapy
+* IORT: Intraoperative radiation therapy
 * IMB: Intensity Modulated Brachytherapy
 
 ### Conformance

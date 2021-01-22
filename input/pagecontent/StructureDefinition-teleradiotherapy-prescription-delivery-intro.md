@@ -20,7 +20,7 @@ The following table shows valid combinations of modality, technique, and device 
 
 * IMRT: Intensity Modulated Radiation Therapy
 * VMAT: Volumetric Modulated Radiation Therapy
-* IORT: Interoperative Radiotherapy
+* IORT: Intraoperative radiation therapy
 * PPS: Particle Passive Scattering
 * PSS: Particle Spot Scanning
 * IMNT: Intensity Modulated Neutron Therapy

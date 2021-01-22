@@ -2,12 +2,7 @@ Profile:    CancerGeneticVariant
 Parent:     USCoreObservationLab
 Id:         mcode-cancer-genetic-variant
 Title:      "Cancer Genetic Variant"
-Description:    "Records an alteration in the most common DNA nucleotide sequence. The term variant can be used to describe an alteration that may be benign, pathogenic, or of unknown significance. The term variant is increasingly being used in place of the term mutation.
-
-Conformance statement:
-
-Observation resources associated with an mCODE patient with Observation.code LOINC 69548-6 MUST conform to this profile. Beyond this requirement, a producer of resources SHOULD ensure that any resource instance associated with an mCODE patient that would reasonably be expected to conform to this profile SHOULD be published in this form."
-
+Description:    "Records an alteration in the most common DNA nucleotide sequence. The term variant can be used to describe an alteration that may be benign, pathogenic, or of unknown significance. The term variant is increasingly being used in place of the term mutation."
 * status and code and subject and effective[x] and value[x] and method MS
 * bodySite 0..0
 * referenceRange 0..0
@@ -102,11 +97,7 @@ Profile:        TumorMarkerTest
 Parent:         USCoreObservationLab
 Id:             mcode-tumor-marker-test
 Title:          "Tumor Marker Test"
-Description:    "The result of a tumor marker test. Tumor marker tests are generally used to guide cancer treatment decisions and monitor treatment, as well as to predict the chance of recovery and cancer recurrence. A tumor marker is a substance found in tissue or blood or other body fluids that may be a sign of cancer or certain benign (noncancer) conditions. Most tumor markers are made by both normal cells and cancer cells, but they are made in larger amounts by cancer cells. A tumor marker may help to diagnose cancer, plan treatment, or find out how well treatment is working or if cancer has come back. Examples of tumor markers include CA-125 (in ovarian cancer), CA 15-3 (in breast cancer), CEA (in colon cancer), and PSA (in prostate cancer). Tumor markers differ from genetic markers in that they are measured at the levels of the protein and substance post-RNA protein synthesis. (Definition adapted from: [NCI Dictionary of Cancer Terms](https://www.cancer.gov/publications/dictionaries/cancer-terms/def/tumor-marker-test) and [Cancer.Net](https://www.cancer.net/navigating-cancer-care/diagnosing-cancer/tests-and-procedures/tumor-marker-tests)).
-
-Conformance statement:
-
-Observation resources associated with an mCODE patient with an Observation.code in the value set TumorMarkerTestVS MUST conform to this profile. Beyond this requirement, a producer of resources SHOULD ensure that any resource instance associated with an mCODE patient that would reasonably be expected to conform to this profile SHOULD be published in this form, for example, when employing a code that extends the TumorMarkerTestVS value set. Any resource intended to conform to this profile SHOULD populate meta.profile accordingly."
+Description:    "The result of a tumor marker test. Tumor marker tests are generally used to guide cancer treatment decisions and monitor treatment, as well as to predict the chance of recovery and cancer recurrence."
 * status and code and subject and effective[x] and value[x] and specimen MS
 * subject 1..1
 * code from TumorMarkerTestVS (required)
@@ -127,12 +118,7 @@ Profile:    GeneticSpecimen
 Parent:     Specimen
 Id:         mcode-genetic-specimen
 Title:      "Genetic Specimen"
-Description:    "A small sample of blood, hair, skin, amniotic fluid (the fluid that surrounds a fetus during pregnancy), or other tissue which is excised from a subject for the purposes of genomics testing or analysis.
-
-Conformance statement:
-
-Specimen resources associated with an mCODE patient with a Specimen.code in the value set GeneticSpecimenTypeVS MUST conform to this profile. Beyond this requirement, a producer of resources SHOULD ensure that any resource instance associated with an mCODE patient that would reasonably be expected to conform to this profile SHOULD be published in this form."
-
+Description:    "A small sample of blood, hair, skin, amniotic fluid (the fluid that surrounds a fetus during pregnancy), or other tissue which is excised from a subject for the purposes of genomics testing or analysis."
 * type 1..1 MS
 * type from GeneticSpecimenTypeVS
 * collection.bodySite.extension contains
@@ -144,12 +130,7 @@ Profile:    CancerGenomicsReport
 Parent:     USCoreDiagnosticReportLab
 Id:         mcode-cancer-genomics-report
 Title:      "Cancer Genomics Report"
-Description:    "Genetic analysis summary report. The report may include one or more tests, with two distinct test types. The first type is a targeted mutation test, where a specific mutation on a specific gene is tested for. The result is either positive or negative for that mutation. The second type is a more general test for variants. This type of test returns the identity of variants found in a certain region of the genome.
-The identity of non-genomic laboratory tests is typically represented by a LOINC code. However, many genetic tests and panels do not have LOINC codes, although some might have an identifier in NCBI Genetic Testing Registry (GTR), a central location for voluntary submission of genetic test information by providers. To identify the diagnostic report, the name of the report must be in the text sub-field of the code structure. If there is a coded identifier from GTR, LOINC, or other source, then it should be included into the the code sub-field of the code structure. If there is no suitable code, the code can be omitted.
-
-Conformance statement:
-
-DiagnosticReport resources associated with an mCODE patient with DiagnoticReport.code LOINC 81247-9 MUST conform to this profile. Beyond this requirement, a producer of resources SHOULD ensure that any resource instance associated with an mCODE patient that would reasonably be expected to conform to this profile SHOULD be published in this form."
+Description:    "Genetic analysis summary report. The report may include one or more tests, with two distinct test types. The first type is a targeted mutation test, where a specific mutation on a specific gene is tested for. The result is either positive or negative for that mutation. The second type is a more general test for variants. This type of test returns the identity of variants found in a certain region of the genome."
 * specimen MS
 * basedOn only Reference (ServiceRequest or CarePlan)
 * subject only Reference(CancerPatient)
@@ -175,11 +156,7 @@ Profile:    GenomicRegionStudied
 Parent:     USCoreObservationLab
 Id:         mcode-genomic-region-studied
 Title:      "Genomic Region Studied"
-Description:    "The area of the genome region referenced in testing for variants.
-
-Conformance Statement:
-
-Observation resources associated with an mCODE patient with DiagnoticReport.code LOINC 53041-0 MUST conform to this profile. Beyond this requirement, a producer of resources SHOULD ensure that any resource instance associated with an mCODE patient that would reasonably be expected to conform to this profile SHOULD be published in this form."
+Description:    "The area of the genome region referenced in testing for variants."
 * code MS
 * code = LNC#53041-0 //"DNA region of interest panel"
 * value[x] 0..0

@@ -101,7 +101,6 @@
 <artifact id="ValueSet/mcode-location-qualifier-vs" key="ValueSet-mcode-location-qualifier-vs" name="Location Qualifier Value Set"/>
 <artifact id="ValueSet/mcode-tumor-size-method-vs" key="ValueSet-mcode-tumor-size-method-vs" name="Methods for measuring tumor size"/>
 <artifact deprecated="true" key="Observation" name="Observation"/>
-<artifact id="OperationDefinition/mcode-patient-everything" key="OperationDefinition-mcode-patient-everything" name="Operation-mcode-patient-everything"/>
 <artifact id="CodeSystem/mcode-other-code-cs" key="CodeSystem-mcode-other-code-cs" name="OtherCode Code System"/>
 <artifact id="ValueSet/mcode-present-absent-unknown" key="ValueSet-mcode-present-absent-unknown" name="Present-Absent-Unknown"/>
 <artifact id="StructureDefinition/mcode-primary-cancer-condition" key="primary-cancer-condition" name="Primary Cancer Condition"/>
@@ -216,6 +215,7 @@
 <artifact id="Observation/mCODETNMPathologicalStageGroupExample1" key="Observation-mCODETNMPathologicalStageGroupExample1" name="mCODETNMPathologicalStageGroupExample1"/>
 <artifact deprecated="true" id="Example/mcode-tumor-marker-example-01" key="mcode-tumor-marker-example-01" name="mCODETumorMarkerExample01"/>
 <artifact id="Observation/mCODETumorMarkerTestExample1" key="Observation-mCODETumorMarkerTestExample1" name="mCODETumorMarkerTestExample1"/>
+<artifact id="OperationDefinition/mcode-patient-everything" key="OperationDefinition-mcode-patient-everything" name="mcode-patient-everything"/>
 <artifact id="CapabilityStatement/mcode-receiver-cancer-conditions-then-patients" key="CapabilityStatement-mcode-receiver-cancer-conditions-then-patients" name="mcode-receiver-cancer-conditions-then-patients"/>
 <artifact id="CapabilityStatement/mcode-receiver-patient-bundle" key="CapabilityStatement-mcode-receiver-patient-bundle" name="mcode-receiver-patient-bundle"/>
 <artifact id="CapabilityStatement/mcode-receiver-patients-and-cancer-conditions" key="CapabilityStatement-mcode-receiver-patients-and-cancer-conditions" name="mcode-receiver-patients-and-cancer-conditions"/>

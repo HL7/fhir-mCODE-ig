@@ -44,8 +44,7 @@ Profile:  TeleradiotherapyPrescriptionDelivery
 Parent:   USCoreProcedure
 Id:       teleradiotherapy-prescription-delivery
 Title:    "Teleradiotherapy Prescription Delivery"
-Description: "A summary of delivered teleradiotherapy treatment. The scope is a prescription consisting of one or multiple Fractions. A prescription delivery instance should end when there is a change in the target volume of a body site, treatment fraction size, modality, or treatment technique.
-Conformance statement:  TBD"
+Description: "A summary of delivered teleradiotherapy treatment. The scope is a prescription consisting of one or multiple Fractions. A prescription delivery instance should end when there is a change in the target volume of a body site, treatment fraction size, modality, or treatment technique."
 * insert RadiotherapyPrescriptionDeliveryRS
 * code from TeleradiotherapyModalityVS (required)
 * code ^short = "Modality"
@@ -64,7 +63,7 @@ Profile:  BrachytherapyPrescriptionDelivery
 Parent:   USCoreProcedure
 Id:       brachytherapy-prescription-delivery
 Title:    "Brachytherapy Prescription Delivery"
-Description: "A summary of delivered brachytherapy treatment. The scope is a prescription consisting of one or multiple fractions. A new prescription delivery begins when there is a change in the target volume of a body site, treatment fraction size, modality, or treatment technique.Conformance statement: TBD"
+Description: "A summary of delivered brachytherapy treatment. The scope is a prescription consisting of one or multiple fractions. A new prescription delivery begins when there is a change in the target volume of a body site, treatment fraction size, modality, or treatment technique."
 * insert RadiotherapyPrescriptionDeliveryRS
 * code from BrachytherapyModalityVS (required)
 * code obeys brachytherapy-code-invariant
@@ -130,11 +129,7 @@ Profile:  CancerRelatedSurgicalProcedure
 Parent:   USCoreProcedure
 Id:       mcode-cancer-related-surgical-procedure
 Title:    "Cancer-Related Surgical Procedure"
-Description: "A surgical action addressing a cancer condition. The scope of this profile has been narrowed to cancer-related procedures by constraining the reasonReference and reasonCode to cancer conditions, one of which is required.
-
-Conformance statement:
-
-Procedure resources associated with an mCODE patient with Procedure.category SNOMED-CT 387713003 MAY conform to this profile. Beyond this requirement, a producer of resources SHOULD ensure that any resource instance associated with an mCODE patient that would reasonably be expected to conform to this profile SHOULD be published in this form. Specifically, we expect that any surgical procedure related to the treatment of a `PrimaryCancerCondition` or `SecondaryCancerCondition` would be published in this form."
+Description: "A surgical action addressing a cancer condition. The scope of this profile has been narrowed to cancer-related procedures by constraining the reasonReference and reasonCode to cancer conditions, one of which is required."
 * obeys mcode-reason-required
 * extension contains
     TreatmentIntent named treatmentIntent 0..1 MS
@@ -147,7 +142,6 @@ Procedure resources associated with an mCODE patient with Procedure.category SNO
 * bodySite.extension contains
     LocationQualifier named locationQualifier 0..1 MS
 * reasonCode and reasonReference and bodySite MS
-
 // Do not insert the category slicing rules because Procedure.category is 0..1.
 * category = SCT#387713003 //"Surgical procedure"
 * code from CancerRelatedSurgicalProcedureVS (extensible)

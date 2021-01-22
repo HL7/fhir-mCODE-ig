@@ -29,9 +29,8 @@ Description: "An overall summary of a course of radiotherapy. Whenever new contr
 RuleSet:  RadiotherapyPrescriptionDeliveryRS
 * insert RadiotherapyRS
 // TO DO -- specify the MS elements
-* partOf only Reference(Procedure)
-* partOf ^definition = ". Reference a course summary where possible."
-// TO DO -- does Brachytherapy ever involve fractions and doses? Assume so for now.
+* partOf only Reference(RadiotherapyCourseSummary)
+* partOf ^definition = "PrescriptionDelivery-conforming resources should reference a RadiotherapyCourseSummary-conforming resource."
 * extension contains
     RadiotherapyTechnique named radiotherapyTechnique 0..1 MS and
     RadiotherapyDosePerFraction named radiotherapyDosePerFraction 0..1 MS and
@@ -53,7 +52,6 @@ Conformance statement:  TBD"
 * code ^definition = "The modality (radiation type) for the external beam procedure."
 * code obeys teleradiotherapy-procedure-code-invariant
 * extension[radiotherapyTechnique].valueString from TeleradiotherapyTechniqueVS (extensible)
-* partOf only Reference(RadiotherapyCourseSummary)
 * usedCode from TeleradiotherapyDeviceVS (extensible)
 
 

@@ -17,7 +17,7 @@ Each profile is shown in multiple views. The "Differential Table" view represent
 
 #### Terminology Preferences
 
-This implementation guide supplies terminology bindings drawn primarily from LOINC for "observables", and SNOMED-CT for values, results and findings. When appropriate codes are not available in the preferred vocabulary, alternative vocabularies are used, in the following order of preference: SNOMED-CT (if the element is an observable), NCI Thesaurus, NCI Metathesaurus, and local codes.
+This implementation guide supplies terminology bindings drawn primarily from LOINC for "observables", and SNOMED-CT for values, results and findings. When appropriate codes are not available in the preferred vocabulary, alternative vocabularies are used, in the following general order of preference: SNOMED-CT (if the element is an observable), NCI Thesaurus, and local codes.
 
 Value sets from the FHIR specification and US Core were reused to the extent possible. New value sets where created only when no known existing value sets were deemed to be fit for purpose.
 
@@ -33,7 +33,7 @@ mCODE has adopted an approach that allows the user to add additional code or cod
 
 #### Vital Sign Profiles
 
-Height, weight, and blood pressure are part of the mCODE data set. However, vital sign profiles are not defined in mCODE. Instead, mCODE uses the [FHIR vital sign profiles](http://hl7.org/fhir/R4/observation-vitalsigns.html), which are incorporated by reference into [US Core v3](http://hl7.org/fhir/us/core/index.html).
+Height, weight, and blood pressure are part of the mCODE data set. However, vital sign profiles are not defined in mCODE. Instead, mCODE uses the [FHIR R4 vital sign profile](http://hl7.org/fhir/R4/observation-vitalsigns.html), which is are incorporated into [US Core Version 3.0 and 3.1](http://hl7.org/fhir/us/core/index.html). As of Version 3.2, US Core defines its own set of vital signs profiles. However, these are derived from the same [FHIR base vital sign profile](http://hl7.org/fhir/R4/observation-vitalsigns.html). The US Core profiles include references to other US Core profiles, such as US Core Patient and provides more granularity in terms of MustSupport elements. By referencing the base vital sign profile, mCODE accepts vital sign data conforming to either FHIR or US Core profiles.
 
 #### Laboratory Profiles
 

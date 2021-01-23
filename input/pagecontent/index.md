@@ -133,13 +133,13 @@ Because the use of these code systems vary in different institutions, mCODE supp
 </tbody>
 </table>
 
-Implementers should reference the [PrimaryCancerCondition](StructureDefinition-mcode-primary-cancer-condition.html) and [Secondary Cancer Condition](StructureDefinition-mcode-secondary-cancer-condition.html) profiles for details on the use of these terminologies and associated value sets.
+Implementers should reference the [Primary Cancer Condition](StructureDefinition-mcode-primary-cancer-condition.html) and [Secondary Cancer Condition](StructureDefinition-mcode-secondary-cancer-condition.html) profiles for details on the use of these terminologies and associated value sets.
 
 ##### Representing Cancer Staging Information
 
 Cancer stage information is contained in a set of profiles, representing [clinical stage group](https://www.cancer.gov/publications/dictionaries/cancer-terms/def/clinical-staging) and [pathologic stage group](https://www.cancer.gov/publications/dictionaries/cancer-terms/def/pathological-staging) panels with members representing the primary tumor (T) category, the regional nodes (N) category, and the distant metastases (M) category.
 
-TNM staging systems are specified in the _CancerStagingSystemVS_ extensible value set of SNOMED CT terms. SNOMED CT does not have a concept code to denote AJCC version 8, the most current version used for AJCC for cancer staging. AJCC is actively requesting the addition of new SNOMED CT concept code, although the process to approve and publish the new code could take several months. Until one is available in the SNOMED CT US Edition, we recommend the NCI thesaurus code _C146985 (AJCC Cancer Staging Manual 8th Edition)_.
+Clinicians assign stages to cancers according to rules laid out in various [cancer staging systems](https://www.cancer.gov/about-cancer/diagnosis-staging/staging). TNM staging is used for many types of solid-tumor cancers. Some widely-used TNM staging systems are specified in the [CancerStagingSystemValueSet](ValueSet-mcode-cancer-staging-system-vs.html). The staging system must always be specified alongside the stage, because it establishes the meaning of the stage code(s).
 
 Non-TNM staging systems are not currently represented in mCODE, reflecting mCODE's current focus on solid tumors. In mCODE, a single patient may have more than one staging panel, although this is not common in practice.
 
@@ -164,14 +164,14 @@ We distinguish Tumor Marker Tests from genetic tests that are measured at the DN
 
 ##### Vital Signs
 
-Vital signs are measurements of the most essential, or "vital" body functions. Traditionally, [vital signs include](https://medlineplus.gov/vitalsigns.html) blood pressure, heart rate, respiratory rate, and temperature. More recently, height and weight have been included. For mCODE, blood pressure, body height, and body weight are believed to be most critical to assessment and treatment. mCODE uses the [FHIR vital sign profiles](http://hl7.org/fhir/R4/observation-vitalsigns.html), which are incorporated by reference into [US Core v3](http://hl7.org/fhir/us/core/index.html).
+Vital signs are measurements of the most essential, or "vital" body functions. Traditionally, [vital signs include](https://medlineplus.gov/vitalsigns.html) blood pressure, heart rate, respiratory rate, and temperature. More recently, height and weight have been included. For mCODE, blood pressure, body height, and body weight are believed to be most critical to assessment and treatment. mCODE uses the [FHIR vital sign profile](http://hl7.org/fhir/R4/observation-vitalsigns.html), a general profile representing all vital signs, which is incorporated into [US Core](http://hl7.org/fhir/us/core/index.html).
 
 #### Treatments Group
 
 The **Treatment** group includes reporting of procedures and medications used to treat a cancer patient, or relevant to that treatment. Treatments are captured using the following profiles:
 
 * [CancerRelatedSurgicalProcedure](StructureDefinition-mcode-cancer-related-surgical-procedure.html) - representing surgical procedures that involve the removal of cancer tumors from the body.
-* [RadiotherapyCourseSummary] - to summarize an ongoing or completed course of radiotherapy, which may relate to multiple instances of brachytherapy or teleradiotherapy prescription deliverys.
+* [RadiotherapyCourseSummary] - to summarize an ongoing or completed course of radiotherapy, which may relate to multiple instances of brachytherapy or teleradiotherapy prescription delivers.
 * [BrachytherapyPrescriptionDelivery] - documentation of internal radiation therapy using a particular modality and technique.
 * [TeleradiotherapyPrescriptionDelivery] - documentation of external beam radiation therapy from photons, neutrons, protons, and other sources using a particular modality and technique.
 * [MedicationRequest](StructureDefinition-mcode-cancer-related-medication-request.html) - recording treatments involving chemotherapy agents, targeted therapy agents, and hormone therapy agents. The mCODE profile of MedicationRequest includes two extensions that distinguish it from the US Core MedicationRequest profile:
@@ -210,9 +210,10 @@ Date of death data can be obtained from several sources outside of the clinical 
 
 * Under the [Fair Use doctrine](https://www.copyright.gov/fair-use/more-info.html), this IG provides examples illustrating mCODE's representation of cancer diagnoses and AJCC staging values for the purposes of technical implementation guidance to FHIR developers.
 
-* mCODE elements listed in this IG might vary from the list identified by ASCO in their recent survey. These elements are subject to change based on review from ASCO, CancerLinQ, and other reviewers from the oncology community.
+* The Data Dictionary includes only the must-support elements in the mCODE specification, intentionally omitting certain elements included in this implementation guide. When there are differences between the Data Dictionary and content of the FHIR implementation guide, the profiles and value sets in the guide should be taken as the source of truth.
 
-* The Data Dictionary includes a subset of must-support elements in the mCODE specification, intentionally omitting certain elements included in this implementation guide. When there are differences between the Data Dictionary and content of the FHIR implementation guide, the profiles and value sets in the guide should be taken as the source of truth. The metadata elements not included in the Data Dictionary are listed below:
+****TO DO: REVIEW THIS****
+The metadata elements not included in the Data Dictionary are listed below:
 
     * Reference to the patient or subject
     * Time of the event and/or time of the record creation
@@ -221,15 +222,13 @@ Date of death data can be obtained from several sources outside of the clinical 
     * Any fixed codes that identify the type of measurement or observation
     * The practitioner or organization for observations and conditions, except where this information is specifically important to the interpretation of the result (only in GenomicsReport)
 
+**************************
+
 * Under [Clinical Laboratory Improvement Amendments (CLIA)](https://www.cms.gov/Regulations-and-Guidance/Legislation/CLIA/index.html?redirect=/clia) regulations, laboratory tests must include information on the performing technologist, performing laboratory, and performing laboratory medical director. These three roles would ideally appear as [slices](https://www.hl7.org/fhir/profiling.html#slicing) on Observation.performer and/or DiagnosticReport.performer. However, slicing requires a [discriminator](https://www.hl7.org/fhir/profiling.html#discriminator), a field that can be checked to determine whether a resource found in Observation.performer or DiagnosticReport.performer corresponds to the performing technologist or the performing laboratory medical director. While the performing laboratory can be determined by its resource type, in the current design of FHIR, there is no indicator that would discriminate the roles of the two Practitioner participants.
 
-* mCODE includes a dedicated FHIR profile, [TumorMarkerTest](StructureDefinition-mcode-tumor-marker-test.html), for labs involving serum and tissue-based tumor markers. Unlike other laboratory profiles in mCODE, one profile has been created to handle the entire class of tumor marker tests, primarily because of the large number of laboratory tests involved. A value set of approximately 150 tumor marker tests was developed and bound to the Code attribute, using an extensible binding to account for new and overlooked tests and code updates. The [TumorMarkerTestVS](ValueSet-mcode-tumor-marker-test-vs.html) lists some common tests for tumor markers but does not further align by cancer type. The approach of using a single profile for multiple tests is less than ideal, since without specifying units of measure or answer sets on a per-test basis, reporting could vary.
+* mCODE includes single FHIR profile, [TumorMarkerTest](StructureDefinition-mcode-tumor-marker-test.html), for all labs involving serum and tissue-based tumor markers. This is less than ideal, since without specifying units of measure or answer sets on a per-test basis, reporting could vary. However, given the large number of tests in [TumorMarkerTestVS](ValueSet-mcode-tumor-marker-test-vs.html), creating individual profiles was judged impractical.
 
-* Not all vocabularies used in mCODE are currently supported by the [FHIR Implementation Guide Publishing Tool](https://confluence.hl7.org/display/FHIR/IG+Publisher+Documentation). The [error report on this IG](qa.html) reports these references as errors. In truth, they reflect limitations of the FHIR terminology server. Unsupported vocabularies include ClinVar and AJCC.
-
-* The authors are considering whether it might be more accurate to represent Clinical and Pathologic Staging Groups as DiagnosticReports, rather than Observations. Feedback is welcome.
-
-* The authors are considering NCI Thesaurus as a source vocabulary for [CancerStagingSystemVS](ValueSet-mcode-cancer-staging-system-vs.html), since SNOMED CT lacks the necessary terms (AJCC Version 8, in particular).
+* Not all vocabularies used in mCODE are currently supported by the [FHIR Implementation Guide Publishing Tool](https://confluence.hl7.org/display/FHIR/IG+Publisher+Documentation). The [error report on this IG](qa.html) reports these references as errors. In truth, they reflect limitations of the FHIR terminology server. Unsupported vocabularies include ClinVar, NCI Thesaurus, and AJCC.
 
 ### Credits
 
@@ -240,9 +239,9 @@ This IG was authored by the MITRE Corporation using [FHIR Shorthand (FSH)](http:
 ### Contact Information
 
 
-| **General Inquiries:** | [mcode-info@asco.org]                                            |
-| **Co-Editor:**         | Dr. Robert Miller<br>ASCO CancerLinQ<br>[robert.miller@asco.org] |
-| **Co-Editor:**         | Mark Kramer<br>MITRE Corporation<br>[mkramer@mitre.org]          |
+| **General Inquiries:** | [mcode-info@asco.org]     |
+| **Co-Editor:**  | Dr. Robert Miller<br>ASCO CancerLinQ<br>[robert.miller@asco.org] |
+| **Co-Editor:**  | Mark Kramer<br>MITRE Corporation<br>[mkramer@mitre.org]  |
 
 [robert.miller@asco.org]: mailto:robert.miller@asco.org
 [mcode-info@asco.org]: mailto:mcode-info@asco.org

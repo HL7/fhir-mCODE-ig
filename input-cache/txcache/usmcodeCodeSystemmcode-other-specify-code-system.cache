@@ -3,7 +3,7 @@
   "resourceType" : "ValueSet",
   "compose" : {
     "include" : [{
-      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/mcode-other-specify-code-system",
+      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/mcode-other-code-cs",
       "concept" : [{
         "code" : "OtherCancerDisorder",
         "display" : "Other Cancer Disorder, Specify"

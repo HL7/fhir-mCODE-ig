@@ -95,7 +95,9 @@ groups:
     description: Profiles in the [mCODE **Treatments** Group](index.html#treatments-group).
     resources:
       - StructureDefinition/mcode-cancer-related-medication-request
-      - StructureDefinition/mcode-cancer-related-radiation-procedure
+      - StructureDefinition/radiotherapy-course-summary
+      - StructureDefinition/teleradiotherapy-prescription-delivery
+      - StructureDefinition/brachytherapy-prescription-delivery
       - StructureDefinition/mcode-cancer-related-surgical-procedure
 
   Genomics:
@@ -132,6 +134,13 @@ groups:
       - StructureDefinition/mcode-location-qualifier
       - StructureDefinition/mcode-termination-reason
       - StructureDefinition/mcode-treatment-intent
+      - StructureDefinition/radiotherapy-technique
+      - StructureDefinition/radiotherapy-dose-per-fraction
+      - StructureDefinition/radiotherapy-prescribed-fractions
+      - StructureDefinition/radiotherapy-delivered-fractions
+      - StructureDefinition/radiotherapy-total-dose-planned
+      - StructureDefinition/radiotherapy-total-dose-delivered
+
 
   # Value sets
   ValueSets:
@@ -153,7 +162,10 @@ groups:
       - ValueSet/mcode-location-qualifier-vs
       - ValueSet/mcode-present-absent-unknown
       - ValueSet/mcode-primary-or-uncertain-behavior-cancer-disorder-vs
-      - ValueSet/mcode-radiation-procedure-vs
+      - ValueSet/teleradiotherapy-modality-vs
+      - ValueSet/teleradiotherapy-technique-vs
+      - ValueSet/brachytherapy-modality-vs
+      - ValueSet/brachytherapy-technique-vs
       - ValueSet/mcode-radiation-target-body-site-vs
       - ValueSet/mcode-secondary-cancer-disorder-vs
       - ValueSet/mcode-tnm-distant-metastases-category-vs
@@ -206,7 +218,7 @@ groups:
     description: These define new code systems used by systems conforming with this implementation guide
     resources:
       - CodeSystem/mcode-elixhauser-category
-      - CodeSystem/mcode-other-specify-code-system
+      - CodeSystem/mcode-other-code-cs
 
   # Examples
   GenericExamples:
@@ -240,7 +252,7 @@ groups:
       - Patient/mCODEPatientExample1
       - Patient/mCODEPatientExample2
       - Practitioner/mCODEPractitionerExample1
-      - Procedure/mCODECancerRelatedRadiationProcedureExample1
+      - Procedure/BrachytherapyPrescriptionDeliveryExample1
       - Procedure/mCODECancerRelatedSurgicalProcedureExample1
       - Specimen/mCODEGeneticSpecimenExample1
 
@@ -288,7 +300,7 @@ groups:
       - Patient/scenario1-mcode-cancer-patient
       - Practitioner/scenario1-us-core-practitioner
       - Practitioner/scenario1-practitioner2-mcode
-      - Procedure/scenario1-mcode-cancer-related-radiation-procedure
+      - Procedure/scenario1-teleradiotherapy-prescription-delivery
       - Procedure/scenario1-mcode-cancer-related-surgical-procedure-mastectomy
       - Procedure/scenario1-us-core-procedure-biopsy
       - Procedure/scenario1-us-core-procedure-mammogram

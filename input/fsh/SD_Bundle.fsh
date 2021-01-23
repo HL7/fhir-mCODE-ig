@@ -2,32 +2,7 @@ Profile: MCODEPatientBundle
 Parent: Bundle
 Id: mcode-patient-bundle
 Title: "mCODE Patient Bundle"
-Description: "A collection of data for an mCODE cancer patient.
-
-The bundle MUST contain exactly one Patient resource conforming to the [CancerPatient](StructureDefinition-mcode-cancer-patient.html) profile.
-
-The bundle MUST also contain following mCODE-conformant resources, if available to the server:
-
-* Condition resources representing the [PrimaryCancerCondition](StructureDefinition-mcode-primary-cancer-condition.html) and [SecondaryCancerCondition](StructureDefinition-mcode-secondary-cancer-condition.html), if applicable
-* Observation resources representing [CancerDiseaseStatus](StructureDefinition-mcode-cancer-disease-status.html)
-* Observation resources representing [ECOGPerformanceStatus](StructureDefinition-mcode-ecog-performance-status.html) and/or [KarnofskyPerformanceStatus](StructureDefinition-mcode-karnofsky-performance-status.html)
-* Observation resources representing any [TumorMarkerTests](StructureDefinition-mcode-tumor-marker-test.html)
-* MedicationRequest resources conforming to [CancerRelatedMedicationRequest](StructureDefinition-mcode-cancer-related-medication-request.html), representing cancer-related prescriptions, administrations, and patient-reported medications
-* Procedure resources representing any [CancerRelatedSurgicalProcedure](StructureDefinition-mcode-cancer-related-surgical-procedure.html) or [CancerRelatedRadiationProcedure](StructureDefinition-mcode-cancer-related-radiation-procedure.html)
-* Observation resources representing the TNM staging information
-* Observation resources representing [CancerGeneticVariant](StructureDefinition-mcode-cancer-genetic-variant.html) and [GenomicRegionStudied](StructureDefinition-mcode-genomic-region-studied.html)
-* DiagnosticReport resources representing [CancerGenomicsReport](StructureDefinition-mcode-cancer-genomics-report.html)
-* Specimen resources representing to [GeneticSpecimen](StructureDefinition-mcode-genetic-specimen.html)
-* Observation resource representing to [CancerRelatedComorbidities](StructureDefinition-mcode-cancer-related-comorbidities.html), and accompanying Condition resources
-* Observation resources for patient height, weight, blood pressure
-* Laboratory results from Comprehensive Metabolic Panels (CMP) and Complete Blood Counts (CBC)
-
-In addition, the bundle MAY contain additional resources relevant to the patient but not part of mCODE, such as smoking status, family member history, and diagnostic procedures.
-
-The bundle itself MUST validate against the [MCODEPatientBundle](StructureDefinition-mcode-patient-bundle.html) profile.
-
-By default, this Bundle includes _all_ required resources described above, irrespective of care dates associated with the resources. For some types of resources, such as vital signs, a very large number of resources will therefore be included by default. To limit the number of included resources, callers MAY specify `start` and `end` parameters when requesting a patient's mCODE bundle via the Sender's FHIR API, which operate in the same way as for [the Fetch Patient Record operation](https://www.hl7.org/fhir/operation-patient-everything.html)."
-
+Description: "A collection of data for an mCODE cancer patient."
 * type  = #collection
 * insert BundleEntrySlicingRules
 * entry and entry.resource MS
@@ -42,7 +17,9 @@ By default, this Bundle includes _all_ required resources described above, irres
     tumorMarkerTest 0..* MS and
     cancerRelatedMedicationRequest 0..* MS and
     cancerRelatedSurgicalProcedure 0..* MS and
-    cancerRelatedRadiationProcedure 0..* MS and
+    radiotherapyCourseSummary 0..* MS and
+    brachytherapyPrescriptionDelivery 0..* MS and
+    teleradiotherapyPrescriptionDelivery 0..* MS and
     tnmClinicalStageGroup 0..* MS and
     tnmClinicalPrimaryTumorCategory 0..* MS and
     tnmClinicalRegionalNodesCategory 0..* MS and
@@ -69,7 +46,9 @@ By default, this Bundle includes _all_ required resources described above, irres
 * entry[tumorMarkerTest] ^short = "Tumor Marker Tests"
 * entry[cancerRelatedMedicationRequest] ^short = "Cancer-Related Medication Request(s)"
 * entry[cancerRelatedSurgicalProcedure] ^short = "Cancer-Related Surgical Procedure(s)"
-* entry[cancerRelatedRadiationProcedure] ^short = "Cancer-Related Radiology Procedure(s)"
+* entry[radiotherapyCourseSummary] ^short = "Cancer-Related Radiation Course(s)"
+* entry[teleradiotherapyPrescriptionDelivery] ^short = "Radiotherapy Course Summary(-ies)"
+* entry[brachytherapyPrescriptionDelivery] ^short = "Brachytherapy Summary(-ies)"
 * entry[tnmClinicalStageGroup] ^short = "TNM Clinical Stage Group(s)"
 * entry[tnmClinicalPrimaryTumorCategory] ^short = "TNM Clinical Primary Tumor Category(-ies)"
 * entry[tnmClinicalRegionalNodesCategory] ^short = "TNM Clinical Regional Nodes Category(-ies)"
@@ -96,7 +75,9 @@ By default, this Bundle includes _all_ required resources described above, irres
 * entry[tumorMarkerTest] ^definition = "Observations resource(s) representing Tumor Marker Tests."
 * entry[cancerRelatedMedicationRequest] ^definition = "Cancer-Related Medication Requests, including both active and inactive medications."
 * entry[cancerRelatedSurgicalProcedure] ^definition = "Procedure resource(s) representing cancer-related surgical procedures."
-* entry[cancerRelatedRadiationProcedure] ^definition = "Procedure resource(s) representing cancer-related radiology procedures."
+* entry[radiotherapyCourseSummary] ^definition = "Procedure resource(s) representing a course of treatment in cancer-related radiology therapy."
+* entry[teleradiotherapyPrescriptionDelivery] ^definition = "Procedure resource(s) representing a phase in treatment of cancer via external beam radiology procedures."
+* entry[brachytherapyPrescriptionDelivery] ^definition = "Procedure resource(s) representing cancer-related brachytherapy (internal) radiology procedures."
 * entry[tnmClinicalStageGroup] ^definition = "Observation resource(s) representing clinical stage group"
 * entry[tnmClinicalPrimaryTumorCategory] ^definition = "Observation resource(s) representing clinical T category"
 * entry[tnmClinicalRegionalNodesCategory] ^definition = "Observation resource(s) representing clinical N category"
@@ -123,7 +104,11 @@ By default, this Bundle includes _all_ required resources described above, irres
 * entry[tumorMarkerTest].resource only TumorMarkerTest
 * entry[cancerRelatedMedicationRequest].resource only CancerRelatedMedicationRequest
 * entry[cancerRelatedSurgicalProcedure].resource only CancerRelatedSurgicalProcedure
-* entry[cancerRelatedRadiationProcedure].resource only CancerRelatedRadiationProcedure
+// -- Radiotherapy --
+* entry[radiotherapyCourseSummary].resource only RadiotherapyCourseSummary
+* entry[teleradiotherapyPrescriptionDelivery].resource only TeleradiotherapyPrescriptionDelivery
+* entry[brachytherapyPrescriptionDelivery].resource only BrachytherapyPrescriptionDelivery
+//
 * entry[tnmClinicalStageGroup].resource only TNMClinicalStageGroup
 * entry[tnmClinicalPrimaryTumorCategory].resource only TNMClinicalPrimaryTumorCategory
 * entry[tnmClinicalRegionalNodesCategory].resource only TNMClinicalRegionalNodesCategory

@@ -12,6 +12,13 @@
 <artifact id="ValueSet/adverse-event-relatedness-value-set" key="ValueSet-adverse-event-relatedness-value-set" name="Adverse Event Relatedness Value Set"/>
 <artifact id="StructureDefinition/adverse-event-resolved-date" key="StructureDefinition-adverse-event-resolved-date" name="Adverse Event Resolved Date"/>
 <artifact id="ValueSet/adverse-event-seriousness-value-set" key="ValueSet-adverse-event-seriousness-value-set" name="Adverse Event Seriousness Value Set"/>
+<artifact id="CodeSystem/brachytherapy-device-cs" key="CodeSystem-brachytherapy-device-cs" name="Brachytherapy Device Code System"/>
+<artifact id="ValueSet/mcode-brachytherapy-device-vs" key="ValueSet-mcode-brachytherapy-device-vs" name="Brachytherapy Device Value Set"/>
+<artifact id="ValueSet/brachytherapy-modality-vs" key="ValueSet-brachytherapy-modality-vs" name="Brachytherapy Modality Value Set"/>
+<artifact id="StructureDefinition/brachytherapy-prescription-delivery" key="StructureDefinition-brachytherapy-prescription-delivery" name="Brachytherapy Prescription Delivery"/>
+<artifact id="CodeSystem/brachytherapy-technique-cs" key="CodeSystem-brachytherapy-technique-cs" name="Brachytherapy Technique Code System"/>
+<artifact id="ValueSet/brachytherapy-technique-vs" key="ValueSet-brachytherapy-technique-vs" name="Brachytherapy Technique Value Set"/>
+<artifact id="Procedure/BrachytherapyPrescriptionDeliveryExample1" key="Procedure-BrachytherapyPrescriptionDeliveryExample1" name="BrachytherapyPrescriptionDeliveryExample1"/>
 <artifact id="StructureDefinition/ctc-adverse-event" key="StructureDefinition-ctc-adverse-event" name="CTC Adverse Event"/>
 <artifact id="StructureDefinition/ctcae-grade" key="StructureDefinition-ctcae-grade" name="CTC Adverse Event Grade"/>
 <artifact id="CodeSystem/ctcae-grade-code-system" key="CodeSystem-ctcae-grade-code-system" name="CTCAE Grade Code System"/>
@@ -33,7 +40,6 @@
 <artifact id="ValueSet/mcode-cancer-staging-system-vs" key="cancer-staging-system-value-set" name="Cancer Staging System Value Set"/>
 <artifact id="StructureDefinition/mcode-cancer-related-comorbidities" key="StructureDefinition-mcode-cancer-related-comorbidities" name="Cancer-Related Comorbidities"/>
 <artifact id="StructureDefinition/mcode-cancer-related-medication-request" key="StructureDefinition-mcode-cancer-related-medication-request" name="Cancer-Related Medication Request"/>
-<artifact id="StructureDefinition/mcode-cancer-related-radiation-procedure" key="StructureDefinition-mcode-cancer-related-radiation-procedure" name="Cancer-Related Radiation Procedure"/>
 <artifact id="StructureDefinition/mcode-cancer-related-surgical-procedure" key="StructureDefinition-mcode-cancer-related-surgical-procedure" name="Cancer-Related Surgical Procedure"/>
 <artifact id="ValueSet/mcode-cancer-related-surgical-procedure-vs" key="ValueSet-mcode-cancer-related-surgical-procedure-vs" name="Cancer-Related Surgical Procedure Value Set"/>
 <artifact id="ValueSet/mcode-clinvar-vs" key="clinvar-value-set" name="ClinVar Value Set"/>
@@ -95,13 +101,18 @@
 <artifact id="ValueSet/mcode-location-qualifier-vs" key="ValueSet-mcode-location-qualifier-vs" name="Location Qualifier Value Set"/>
 <artifact id="ValueSet/mcode-tumor-size-method-vs" key="ValueSet-mcode-tumor-size-method-vs" name="Methods for measuring tumor size"/>
 <artifact deprecated="true" key="Observation" name="Observation"/>
-<artifact id="CodeSystem/mcode-other-specify-code-system" key="CodeSystem-mcode-other-specify-code-system" name="Other Specify Code System"/>
+<artifact id="CodeSystem/mcode-other-code-cs" key="CodeSystem-mcode-other-code-cs" name="OtherCode Code System"/>
 <artifact id="ValueSet/mcode-present-absent-unknown" key="ValueSet-mcode-present-absent-unknown" name="Present-Absent-Unknown"/>
 <artifact id="StructureDefinition/mcode-primary-cancer-condition" key="primary-cancer-condition" name="Primary Cancer Condition"/>
 <artifact id="ValueSet/mcode-primary-or-uncertain-behavior-cancer-disorder-vs" key="primary-or-uncertain-behavior-cancer-disorder-value-set" name="Primary or Uncertain Behavior Cancer Disorder Value Set"/>
 <artifact deprecated="true" key="Procedure" name="Procedure"/>
-<artifact id="ValueSet/mcode-radiation-procedure-vs" key="radiation-procedure-value-set" name="Radiation Procedure Value Set"/>
+<artifact id="StructureDefinition/radiotherapy-dose-per-fraction" key="StructureDefinition-radiotherapy-dose-per-fraction" name="Radiation Dose Per Fraction"/>
+<artifact id="StructureDefinition/radiotherapy-delivered-fractions" key="StructureDefinition-radiotherapy-delivered-fractions" name="Radiation Fractions Delivered"/>
+<artifact id="StructureDefinition/radiotherapy-prescribed-fractions" key="StructureDefinition-radiotherapy-prescribed-fractions" name="Radiation Fractions Prescribed"/>
+<artifact id="StructureDefinition/radiotherapy-technique" key="StructureDefinition-radiotherapy-technique" name="Radiation Procedure Technique"/>
+<artifact deprecated="true" id="ValueSet/mcode-radiation-procedure-value-set" key="radiation-procedure-value-set" name="Radiation Procedure Value Set"/>
 <artifact id="ValueSet/mcode-radiation-target-body-site-vs" key="radiation-target-body-site-value-set" name="Radiation Target Body Site Value Set"/>
+<artifact id="StructureDefinition/radiotherapy-course-summary" key="StructureDefinition-radiotherapy-course-summary" name="Radiotherapy Course Summary"/>
 <artifact deprecated="true" id="Extension/mcode-related-primary-cancer-condition-extension" key="related-primary-cancer-condition-extension" name="Related Primary Cancer Condition Extension"/>
 <artifact id="SearchParameter/Patient-id" key="SearchParameter-Patient-id" name="Search by _id in Patients with multipleOr"/>
 <artifact id="SearchParameter/Condition-code" key="SearchParameter-Condition-code" name="Search by code:in in Conditions"/>
@@ -120,8 +131,16 @@
 <artifact id="ValueSet/mcode-tnm-primary-tumor-category-vs" key="tnm-primary-tumor-category-value-set" name="TNM Primary Tumor Category Value Set"/>
 <artifact id="ValueSet/mcode-tnm-regional-nodes-category-vs" key="tnm-regional-nodes-category-value-set" name="TNM Regional Nodes Category Value Set"/>
 <artifact id="ValueSet/mcode-tnm-stage-group-vs" key="tnm-stage-group-value-set" name="TNM Stage Group Value Set"/>
+<artifact id="CodeSystem/teleradiotherapy-device-cs" key="CodeSystem-teleradiotherapy-device-cs" name="Teleradiotherapy Device Code System"/>
+<artifact id="ValueSet/teleradiotherapy-device-vs" key="ValueSet-teleradiotherapy-device-vs" name="Teleradiotherapy Device Value Set"/>
+<artifact id="ValueSet/teleradiotherapy-modality-vs" key="ValueSet-teleradiotherapy-modality-vs" name="Teleradiotherapy Modality Value Set"/>
+<artifact id="StructureDefinition/teleradiotherapy-prescription-delivery" key="StructureDefinition-teleradiotherapy-prescription-delivery" name="Teleradiotherapy Prescription Delivery"/>
+<artifact id="CodeSystem/teleradiotherapy-technique-cs" key="CodeSystem-teleradiotherapy-technique-cs" name="Teleradiotherapy Technique Code System"/>
+<artifact id="ValueSet/teleradiotherapy-technique-vs" key="ValueSet-teleradiotherapy-technique-vs" name="Teleradiotherapy Technique Value Set"/>
 <artifact id="StructureDefinition/mcode-termination-reason" key="StructureDefinition-mcode-termination-reason" name="Termination Reason"/>
 <artifact deprecated="true" id="Extension/mcode-termination-reason-extension" key="termination-reason-extension" name="Termination Reason Extension"/>
+<artifact id="StructureDefinition/radiotherapy-total-dose-delivered" key="StructureDefinition-radiotherapy-total-dose-delivered" name="Total Radiation Dose Delivered"/>
+<artifact id="StructureDefinition/radiotherapy-total-dose-planned" key="StructureDefinition-radiotherapy-total-dose-planned" name="Total Radiation Dose Planned"/>
 <artifact id="StructureDefinition/mcode-treatment-intent" key="StructureDefinition-mcode-treatment-intent" name="Treatment Intent"/>
 <artifact deprecated="true" id="Extension/mcode-treatment-intent-extension" key="treatment-intent-extension" name="Treatment Intent Extension"/>
 <artifact id="ValueSet/mcode-treatment-intent-vs" key="treatment-intent-value-set" name="Treatment Intent Value Set"/>
@@ -154,7 +173,6 @@
 <artifact deprecated="true" id="Example/mcode-cancer-related-medication-statement-example-01" key="mcode-cancer-related-medication-statement-example-01" name="mCODECancerRelatedMedicationStatementExample01"/>
 <artifact deprecated="true" id="Example/mcode-cancer-related-medication-statement-example-02" key="mcode-cancer-related-medication-statement-example-02" name="mCODECancerRelatedMedicationStatementExample02"/>
 <artifact deprecated="true" id="Example/mcode-cancer-related-radiation-procedure-example-01" key="mcode-cancer-related-radiation-procedure-example-01" name="mCODECancerRelatedRadiationProcedureExample01"/>
-<artifact id="Procedure/mCODECancerRelatedRadiationProcedureExample1" key="Procedure-mCODECancerRelatedRadiationProcedureExample1" name="mCODECancerRelatedRadiationProcedureExample1"/>
 <artifact deprecated="true" id="Example/mcode-cancer-related-surgical-procedure-example-01" key="mcode-cancer-related-surgical-procedure-example-01" name="mCODECancerRelatedSurgicalProcedureExample01"/>
 <artifact id="Procedure/mCODECancerRelatedSurgicalProcedureExample1" key="Procedure-mCODECancerRelatedSurgicalProcedureExample1" name="mCODECancerRelatedSurgicalProcedureExample1"/>
 <artifact deprecated="true" id="Example/mcode-comorbid-condition-example-01" key="mcode-comorbid-condition-example-01" name="mCODEComorbidConditionExample01"/>
@@ -222,7 +240,6 @@
 <artifact id="MedicationRequest/scenario1-mcode-cancer-related-medication-chemo-cyclophosphamide" key="MedicationRequest-scenario1-mcode-cancer-related-medication-chemo-cyclophosphamide" name="scenario1-mcode-cancer-related-medication-chemo-cyclophosphamide"/>
 <artifact id="MedicationRequest/scenario1-mcode-cancer-related-medication-chemo-doxorubicin" key="MedicationRequest-scenario1-mcode-cancer-related-medication-chemo-doxorubicin" name="scenario1-mcode-cancer-related-medication-chemo-doxorubicin"/>
 <artifact id="MedicationRequest/scenario1-mcode-cancer-related-medication-chemo-paclitaxel" key="MedicationRequest-scenario1-mcode-cancer-related-medication-chemo-paclitaxel" name="scenario1-mcode-cancer-related-medication-chemo-paclitaxel"/>
-<artifact id="Procedure/scenario1-mcode-cancer-related-radiation-procedure" key="Procedure-scenario1-mcode-cancer-related-radiation-procedure" name="scenario1-mcode-cancer-related-radiation-procedure"/>
 <artifact id="Procedure/scenario1-mcode-cancer-related-surgical-procedure-mastectomy" key="Procedure-scenario1-mcode-cancer-related-surgical-procedure-mastectomy" name="scenario1-mcode-cancer-related-surgical-procedure-mastectomy"/>
 <artifact id="Condition/scenario1-mcode-comorbid-condition-depression" key="Condition-scenario1-mcode-comorbid-condition-depression" name="scenario1-mcode-comorbid-condition-depression"/>
 <artifact id="Condition/scenario1-mcode-comorbid-condition-hypertension" key="Condition-scenario1-mcode-comorbid-condition-hypertension" name="scenario1-mcode-comorbid-condition-hypertension"/>
@@ -249,6 +266,7 @@
 <artifact id="Organization/scenario1-organization1-mcode" key="Organization-scenario1-organization1-mcode" name="scenario1-organization1-mcode"/>
 <artifact id="Practitioner/scenario1-practitioner2-mcode" key="Practitioner-scenario1-practitioner2-mcode" name="scenario1-practitioner2-mcode"/>
 <artifact id="Specimen/scenario1-specimen-tumor" key="Specimen-scenario1-specimen-tumor" name="scenario1-specimen-tumor"/>
+<artifact id="Procedure/scenario1-teleradiotherapy-prescription-delivery" key="Procedure-scenario1-teleradiotherapy-prescription-delivery" name="scenario1-teleradiotherapy-prescription-delivery"/>
 <artifact id="Condition/scenario1-us-core-condition-anxiety" key="Condition-scenario1-us-core-condition-anxiety" name="scenario1-us-core-condition-anxiety"/>
 <artifact id="Practitioner/scenario1-us-core-practitioner" key="Practitioner-scenario1-us-core-practitioner" name="scenario1-us-core-practitioner"/>
 <artifact id="Procedure/scenario1-us-core-procedure-biopsy" key="Procedure-scenario1-us-core-procedure-biopsy" name="scenario1-us-core-procedure-biopsy"/>

@@ -193,17 +193,17 @@ Description: "mCODE Example for Cancer Related Surgical Procedure"
 * reasonReference = Reference(mCODEPrimaryCancerConditionExample1)
 * bodySite = SCT#41224006 "Structure of lower lobe of left lung (body structure)"
 
-Instance: mCODECancerRelatedRadiationProcedureExample1
-InstanceOf: CancerRelatedRadiationProcedure
-Description: "mCODE Example for Cancer Related Radiation Procedure"
+Instance: BrachytherapyPrescriptionDeliveryExample1
+InstanceOf: BrachytherapyPrescriptionDelivery
+Description: "mCODE Example for a brachytherapy procedure."
 * status = #completed "completed"
-* code = SCT#152198000 "Brachytherapy (procedure)"
+* code = NCIT#C85254 "Low-Dose Rate Brachytherapy" 
+* extension[radiotherapyTechnique].valueString = "Interstitial–Temporary"
 * subject = Reference(mCODEPatientExample1)
 * asserter = Reference(mCODEPractitionerExample1)
-* performedDateTime = "2019-03-01"
-* extension[treatmentIntent].valueCodeableConcept = SCT#373808002 "Curative - procedure intent"
-// * extension[RadiationDose].extension[TotalRadiationDoseDelivered].valueQuantity = UCUM#cGy
-// * extension[RadiationDose].extension[TotalRadiationDoseDelivered].valueQuantity.value = 1200.0
+* performedPeriod.start = "2019-03-01"
+* performedPeriod.end = "2019-03-01"
+//* extension[treatmentIntent].valueCodeableConcept = SCT#373808002 "Curative - procedure intent"
 * reasonReference = Reference(mCODEPrimaryCancerConditionExample1)
 * bodySite = SCT#41224006 "Structure of lower lobe of left lung (body structure)"
 

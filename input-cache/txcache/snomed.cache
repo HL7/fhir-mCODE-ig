@@ -11718,7 +11718,7 @@ v: {
   "resourceType" : "ValueSet",
   "compose" : {
     "include" : [{
-      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/mcode-other-specify-code-system",
+      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/mcode-other-code-cs",
       "concept" : [{
         "code" : "OtherHistologyMorphologyBehavior",
         "display" : "Other Histology Morphology Behavior, Specify"
@@ -11810,7 +11810,7 @@ v: {
   "resourceType" : "ValueSet",
   "compose" : {
     "include" : [{
-      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/mcode-other-specify-code-system",
+      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/mcode-other-code-cs",
       "concept" : [{
         "code" : "OtherHistologyMorphologyBehavior",
         "display" : "Other Histology Morphology Behavior, Specify"
@@ -12700,7 +12700,7 @@ v: {
   "resourceType" : "ValueSet",
   "compose" : {
     "include" : [{
-      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/mcode-other-specify-code-system",
+      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/mcode-other-code-cs",
       "concept" : [{
         "code" : "OtherCancerDisorder",
         "display" : "Other Cancer Disorder, Specify"
@@ -12731,7 +12731,7 @@ v: {
   "resourceType" : "ValueSet",
   "compose" : {
     "include" : [{
-      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/mcode-other-specify-code-system",
+      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/mcode-other-code-cs",
       "concept" : [{
         "code" : "OtherCancerDisorder",
         "display" : "Other Cancer Disorder, Specify"
@@ -13831,7 +13831,7 @@ v: {
   "resourceType" : "ValueSet",
   "compose" : {
     "include" : [{
-      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/mcode-other-specify-code-system",
+      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/mcode-other-code-cs",
       "concept" : [{
         "code" : "OtherHistologyMorphologyBehavior",
         "display" : "Other Histology Morphology Behavior, Specify"
@@ -13923,7 +13923,7 @@ v: {
   "resourceType" : "ValueSet",
   "compose" : {
     "include" : [{
-      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/mcode-other-specify-code-system",
+      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/mcode-other-code-cs",
       "concept" : [{
         "code" : "OtherHistologyMorphologyBehavior",
         "display" : "Other Histology Morphology Behavior, Specify"
@@ -14038,7 +14038,7 @@ v: {
   "resourceType" : "ValueSet",
   "compose" : {
     "include" : [{
-      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/mcode-other-specify-code-system",
+      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/mcode-other-code-cs",
       "concept" : [{
         "code" : "OtherPrimaryCancerCondition",
         "display" : "Other Primary Cancer Condition, Specify"
@@ -19031,7 +19031,7 @@ v: {
   "resourceType" : "ValueSet",
   "compose" : {
     "include" : [{
-      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/mcode-other-specify-code-system",
+      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/mcode-other-code-cs",
       "concept" : [{
         "code" : "OtherPrimaryCancerCondition",
         "display" : "Other Primary Cancer Condition, Specify"
@@ -24199,7 +24199,7 @@ v: {
   "resourceType" : "ValueSet",
   "compose" : {
     "include" : [{
-      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/mcode-other-specify-code-system",
+      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/mcode-other-code-cs",
       "concept" : [{
         "code" : "OtherSecondaryCancerCondition",
         "display" : "Other Secondary Cancer Condition, Specify"
@@ -25670,7 +25670,7 @@ v: {
   "resourceType" : "ValueSet",
   "compose" : {
     "include" : [{
-      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/mcode-other-specify-code-system",
+      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/mcode-other-code-cs",
       "concept" : [{
         "code" : "OtherHistologyMorphologyBehavior",
         "display" : "Other Histology Morphology Behavior, Specify"
@@ -25762,7 +25762,7 @@ v: {
   "resourceType" : "ValueSet",
   "compose" : {
     "include" : [{
-      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/mcode-other-specify-code-system",
+      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/mcode-other-code-cs",
       "concept" : [{
         "code" : "OtherHistologyMorphologyBehavior",
         "display" : "Other Histology Morphology Behavior, Specify"
@@ -25921,7 +25921,7 @@ v: {
   "resourceType" : "ValueSet",
   "compose" : {
     "include" : [{
-      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/mcode-other-specify-code-system",
+      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/mcode-other-code-cs",
       "concept" : [{
         "code" : "OtherPrimaryCancerCondition",
         "display" : "Other Primary Cancer Condition, Specify"
@@ -30914,7 +30914,7 @@ v: {
   "resourceType" : "ValueSet",
   "compose" : {
     "include" : [{
-      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/mcode-other-specify-code-system",
+      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/mcode-other-code-cs",
       "concept" : [{
         "code" : "OtherPrimaryCancerCondition",
         "display" : "Other Primary Cancer Condition, Specify"
@@ -35940,7 +35940,7 @@ v: {
   "resourceType" : "ValueSet",
   "compose" : {
     "include" : [{
-      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/mcode-other-specify-code-system",
+      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/mcode-other-code-cs",
       "concept" : [{
         "code" : "OtherSecondaryCancerCondition",
         "display" : "Other Secondary Cancer Condition, Specify"
@@ -113042,6 +113042,984 @@ e: {
       "system" : "http://snomed.info/sct",
       "code" : "253035009",
       "display" : "In situ melanocytic morphology (morphologic abnormality)"
+    }]
+  }
+},
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://snomed.info/sct",
+  "code" : "152198000",
+  "display" : "Brachytherapy (procedure)"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "Brachytherapy",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://snomed.info/sct",
+  "code" : "438629002"
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "High dose rate electronic brachytherapy (procedure)",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://snomed.info/sct",
+  "code" : "64368001"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://snomed.info/sct",
+      "concept" : [{
+        "code" : "438629002",
+        "display" : "High dose rate electronic brachytherapy"
+      }]
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code provided (http://snomed.info/sct#64368001) is not valid (from http://tx.fhir.org/r4)"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://snomed.info/sct",
+  "code" : "64368001",
+  "display" : "Partial mastectomy (procedure)"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://ncithesaurus-stage.nci.nih.gov",
+      "concept" : [{
+        "code" : "C15195",
+        "display" : "Brachytherapy"
+      },
+      {
+        "code" : "C85254",
+        "display" : "Low-Dose Rate Brachytherapy"
+      },
+      {
+        "code" : "C15651",
+        "display" : "High dose brachytherapy"
+      },
+      {
+        "code" : "C116542",
+        "display" : "Pulsed-Dose Rate Brachytherapy"
+      },
+      {
+        "code" : "C15470",
+        "display" : "Radioisotope Therapy"
+      }]
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "concept" : [{
+        "code" : "438629002",
+        "display" : "High dose rate electronic brachytherapy"
+      }]
+    },
+    {
+      "system" : "http://terminology.hl7.org/CodeSystem/medcin",
+      "concept" : [{
+        "code" : "76787",
+        "display" : "radiopharmaceutical therapy"
+      }]
+    },
+    {
+      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/mcode-other-code-cs",
+      "concept" : [{
+        "code" : "OtherBrachytherapyModality",
+        "display" : "Other Brachytherapy Modality, Specify"
+      }]
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK"}####
+v: {
+  "display" : "Partial mastectomy",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://snomed.info/sct",
+  "code" : "723990008"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://snomed.info/sct",
+      "concept" : [{
+        "code" : "438629002",
+        "display" : "High dose rate electronic brachytherapy"
+      }]
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code provided (http://snomed.info/sct#723990008) is not valid (from http://tx.fhir.org/r4)"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://snomed.info/sct",
+  "code" : "723990008",
+  "display" : "Biopsy of breast using ultrasonographic guidance (procedure)"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://ncithesaurus-stage.nci.nih.gov",
+      "concept" : [{
+        "code" : "C15195",
+        "display" : "Brachytherapy"
+      },
+      {
+        "code" : "C85254",
+        "display" : "Low-Dose Rate Brachytherapy"
+      },
+      {
+        "code" : "C15651",
+        "display" : "High dose brachytherapy"
+      },
+      {
+        "code" : "C116542",
+        "display" : "Pulsed-Dose Rate Brachytherapy"
+      },
+      {
+        "code" : "C15470",
+        "display" : "Radioisotope Therapy"
+      }]
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "concept" : [{
+        "code" : "438629002",
+        "display" : "High dose rate electronic brachytherapy"
+      }]
+    },
+    {
+      "system" : "http://terminology.hl7.org/CodeSystem/medcin",
+      "concept" : [{
+        "code" : "76787",
+        "display" : "radiopharmaceutical therapy"
+      }]
+    },
+    {
+      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/mcode-other-code-cs",
+      "concept" : [{
+        "code" : "OtherBrachytherapyModality",
+        "display" : "Other Brachytherapy Modality, Specify"
+      }]
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK"}####
+v: {
+  "display" : "Biopsy of breast using ultrasonographic guidance (procedure)",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://snomed.info/sct",
+  "code" : "71651007"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://snomed.info/sct",
+      "concept" : [{
+        "code" : "438629002",
+        "display" : "High dose rate electronic brachytherapy"
+      }]
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code provided (http://snomed.info/sct#71651007) is not valid (from http://tx.fhir.org/r4)"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://snomed.info/sct",
+  "code" : "71651007",
+  "display" : "Mammography (procedure)"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://ncithesaurus-stage.nci.nih.gov",
+      "concept" : [{
+        "code" : "C15195",
+        "display" : "Brachytherapy"
+      },
+      {
+        "code" : "C85254",
+        "display" : "Low-Dose Rate Brachytherapy"
+      },
+      {
+        "code" : "C15651",
+        "display" : "High dose brachytherapy"
+      },
+      {
+        "code" : "C116542",
+        "display" : "Pulsed-Dose Rate Brachytherapy"
+      },
+      {
+        "code" : "C15470",
+        "display" : "Radioisotope Therapy"
+      }]
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "concept" : [{
+        "code" : "438629002",
+        "display" : "High dose rate electronic brachytherapy"
+      }]
+    },
+    {
+      "system" : "http://terminology.hl7.org/CodeSystem/medcin",
+      "concept" : [{
+        "code" : "76787",
+        "display" : "radiopharmaceutical therapy"
+      }]
+    },
+    {
+      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/mcode-other-code-cs",
+      "concept" : [{
+        "code" : "OtherBrachytherapyModality",
+        "display" : "Other Brachytherapy Modality, Specify"
+      }]
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK"}####
+v: {
+  "display" : "Mammography",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://snomed.info/sct",
+  "code" : "169291001"
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "X-ray beam therapy",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://snomed.info/sct",
+  "code" : "228661008"
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "Grenz ray therapy",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://snomed.info/sct",
+  "code" : "5304008"
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "Deep radiation therapy, 200-300 KVP",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://snomed.info/sct",
+  "code" : "64368001"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://snomed.info/sct",
+      "concept" : [{
+        "code" : "169291001",
+        "display" : "X-ray beam therapy"
+      },
+      {
+        "code" : "228661008",
+        "display" : "Grenz ray therapy"
+      },
+      {
+        "code" : "5304008",
+        "display" : "Orthovoltage X-ray therapy"
+      }]
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code provided (http://snomed.info/sct#64368001) is not valid (from http://tx.fhir.org/r4)"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://snomed.info/sct",
+  "code" : "64368001",
+  "display" : "Partial mastectomy (procedure)"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://ncithesaurus-stage.nci.nih.gov",
+      "concept" : [{
+        "code" : "C15751",
+        "display" : "External Beam Radiation Therapy"
+      },
+      {
+        "code" : "C66897",
+        "display" : "Proton Beam Radiation Therapy"
+      },
+      {
+        "code" : "C15650",
+        "display" : "Electron Beam Therapy"
+      },
+      {
+        "code" : "C15440",
+        "display" : "High-LET Neutron Therapy"
+      },
+      {
+        "code" : "C160816",
+        "display" : "Carbon Ion Radiation Therapy"
+      },
+      {
+        "code" : "C104914",
+        "display" : "Photon Beam Radiation Therapy"
+      }]
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "concept" : [{
+        "code" : "169291001",
+        "display" : "X-ray beam therapy"
+      },
+      {
+        "code" : "228661008",
+        "display" : "Grenz ray therapy"
+      },
+      {
+        "code" : "5304008",
+        "display" : "Orthovoltage X-ray therapy"
+      }]
+    },
+    {
+      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/mcode-other-code-cs",
+      "concept" : [{
+        "code" : "OtherTeleradiotherapyModality",
+        "display" : "Other Teleradiotherapy Modality, Specify"
+      }]
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK"}####
+v: {
+  "display" : "Partial mastectomy",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://snomed.info/sct",
+  "code" : "723990008"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://snomed.info/sct",
+      "concept" : [{
+        "code" : "169291001",
+        "display" : "X-ray beam therapy"
+      },
+      {
+        "code" : "228661008",
+        "display" : "Grenz ray therapy"
+      },
+      {
+        "code" : "5304008",
+        "display" : "Orthovoltage X-ray therapy"
+      }]
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code provided (http://snomed.info/sct#723990008) is not valid (from http://tx.fhir.org/r4)"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://snomed.info/sct",
+  "code" : "723990008",
+  "display" : "Biopsy of breast using ultrasonographic guidance (procedure)"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://ncithesaurus-stage.nci.nih.gov",
+      "concept" : [{
+        "code" : "C15751",
+        "display" : "External Beam Radiation Therapy"
+      },
+      {
+        "code" : "C66897",
+        "display" : "Proton Beam Radiation Therapy"
+      },
+      {
+        "code" : "C15650",
+        "display" : "Electron Beam Therapy"
+      },
+      {
+        "code" : "C15440",
+        "display" : "High-LET Neutron Therapy"
+      },
+      {
+        "code" : "C160816",
+        "display" : "Carbon Ion Radiation Therapy"
+      },
+      {
+        "code" : "C104914",
+        "display" : "Photon Beam Radiation Therapy"
+      }]
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "concept" : [{
+        "code" : "169291001",
+        "display" : "X-ray beam therapy"
+      },
+      {
+        "code" : "228661008",
+        "display" : "Grenz ray therapy"
+      },
+      {
+        "code" : "5304008",
+        "display" : "Orthovoltage X-ray therapy"
+      }]
+    },
+    {
+      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/mcode-other-code-cs",
+      "concept" : [{
+        "code" : "OtherTeleradiotherapyModality",
+        "display" : "Other Teleradiotherapy Modality, Specify"
+      }]
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK"}####
+v: {
+  "display" : "Biopsy of breast using ultrasonographic guidance (procedure)",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://snomed.info/sct",
+  "code" : "71651007"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://snomed.info/sct",
+      "concept" : [{
+        "code" : "169291001",
+        "display" : "X-ray beam therapy"
+      },
+      {
+        "code" : "228661008",
+        "display" : "Grenz ray therapy"
+      },
+      {
+        "code" : "5304008",
+        "display" : "Orthovoltage X-ray therapy"
+      }]
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code provided (http://snomed.info/sct#71651007) is not valid (from http://tx.fhir.org/r4)"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://snomed.info/sct",
+  "code" : "71651007",
+  "display" : "Mammography (procedure)"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://ncithesaurus-stage.nci.nih.gov",
+      "concept" : [{
+        "code" : "C15751",
+        "display" : "External Beam Radiation Therapy"
+      },
+      {
+        "code" : "C66897",
+        "display" : "Proton Beam Radiation Therapy"
+      },
+      {
+        "code" : "C15650",
+        "display" : "Electron Beam Therapy"
+      },
+      {
+        "code" : "C15440",
+        "display" : "High-LET Neutron Therapy"
+      },
+      {
+        "code" : "C160816",
+        "display" : "Carbon Ion Radiation Therapy"
+      },
+      {
+        "code" : "C104914",
+        "display" : "Photon Beam Radiation Therapy"
+      }]
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "concept" : [{
+        "code" : "169291001",
+        "display" : "X-ray beam therapy"
+      },
+      {
+        "code" : "228661008",
+        "display" : "Grenz ray therapy"
+      },
+      {
+        "code" : "5304008",
+        "display" : "Orthovoltage X-ray therapy"
+      }]
+    },
+    {
+      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/mcode-other-code-cs",
+      "concept" : [{
+        "code" : "OtherTeleradiotherapyModality",
+        "display" : "Other Teleradiotherapy Modality, Specify"
+      }]
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK"}####
+v: {
+  "display" : "Mammography",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://snomed.info/sct",
+  "code" : "64368001"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://snomed.info/sct",
+      "filter" : [{
+        "property" : "concept",
+        "op" : "is-a",
+        "value" : "71388002"
+      }]
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "Partial mastectomy",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://snomed.info/sct",
+  "code" : "64368001",
+  "display" : "Partial mastectomy (procedure)"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://www.ama-assn.org/go/cpt"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "filter" : [{
+        "property" : "concept",
+        "op" : "is-a",
+        "value" : "71388002"
+      }]
+    },
+    {
+      "system" : "urn:oid:2.16.840.1.113883.6.285"
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK"}####
+v: {
+  "display" : "Partial mastectomy",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://snomed.info/sct",
+  "code" : "169291001"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://snomed.info/sct",
+      "concept" : [{
+        "code" : "169291001",
+        "display" : "X-ray beam therapy"
+      },
+      {
+        "code" : "228661008",
+        "display" : "Grenz ray therapy"
+      },
+      {
+        "code" : "5304008",
+        "display" : "Orthovoltage X-ray therapy"
+      }]
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "X-ray beam therapy",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://snomed.info/sct",
+  "code" : "169291001",
+  "display" : "X-ray beam therapy"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://ncithesaurus-stage.nci.nih.gov",
+      "concept" : [{
+        "code" : "C15751",
+        "display" : "External Beam Radiation Therapy"
+      },
+      {
+        "code" : "C66897",
+        "display" : "Proton Beam Radiation Therapy"
+      },
+      {
+        "code" : "C15650",
+        "display" : "Electron Beam Therapy"
+      },
+      {
+        "code" : "C15440",
+        "display" : "High-LET Neutron Therapy"
+      },
+      {
+        "code" : "C160816",
+        "display" : "Carbon Ion Radiation Therapy"
+      },
+      {
+        "code" : "C104914",
+        "display" : "Photon Beam Radiation Therapy"
+      }]
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "concept" : [{
+        "code" : "169291001",
+        "display" : "X-ray beam therapy"
+      },
+      {
+        "code" : "228661008",
+        "display" : "Grenz ray therapy"
+      },
+      {
+        "code" : "5304008",
+        "display" : "Orthovoltage X-ray therapy"
+      }]
+    },
+    {
+      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/mcode-other-code-cs",
+      "concept" : [{
+        "code" : "OtherTeleradiotherapyModality",
+        "display" : "Other Teleradiotherapy Modality, Specify"
+      }]
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK"}####
+v: {
+  "display" : "X-ray beam therapy",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://snomed.info/sct",
+  "code" : "169291001"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "X-ray beam therapy",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://snomed.info/sct",
+  "code" : "169291001"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://snomed.info/sct",
+      "filter" : [{
+        "property" : "concept",
+        "op" : "is-a",
+        "value" : "387713003"
+      }]
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code provided (http://snomed.info/sct#169291001) is not valid (from http://tx.fhir.org/r4)"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://snomed.info/sct",
+  "code" : "169291001",
+  "display" : "X-ray beam therapy"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://snomed.info/sct",
+      "filter" : [{
+        "property" : "concept",
+        "op" : "is-a",
+        "value" : "387713003"
+      }]
+    },
+    {
+      "system" : "http://www.ama-assn.org/go/cpt"
+    },
+    {
+      "system" : "http://www.cms.gov/Medicare/Coding/ICD10"
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK"}####
+v: {
+  "display" : "X-ray beam therapy",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://snomed.info/sct",
+  "code" : "169291001"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://snomed.info/sct",
+      "filter" : [{
+        "property" : "concept",
+        "op" : "is-a",
+        "value" : "71388002"
+      }]
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "X-ray beam therapy",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://snomed.info/sct",
+  "code" : "169291001",
+  "display" : "X-ray beam therapy"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://www.ama-assn.org/go/cpt"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "filter" : [{
+        "property" : "concept",
+        "op" : "is-a",
+        "value" : "71388002"
+      }]
+    },
+    {
+      "system" : "urn:oid:2.16.840.1.113883.6.285"
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK"}####
+v: {
+  "display" : "X-ray beam therapy",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://snomed.info/sct",
+  "code" : "169291001"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://snomed.info/sct",
+      "concept" : [{
+        "code" : "438629002",
+        "display" : "High dose rate electronic brachytherapy"
+      }]
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code provided (http://snomed.info/sct#169291001) is not valid (from http://tx.fhir.org/r4)"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://snomed.info/sct",
+  "code" : "169291001",
+  "display" : "X-ray beam therapy"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://ncithesaurus-stage.nci.nih.gov",
+      "concept" : [{
+        "code" : "C15195",
+        "display" : "Brachytherapy"
+      },
+      {
+        "code" : "C85254",
+        "display" : "Low-Dose Rate Brachytherapy"
+      },
+      {
+        "code" : "C15651",
+        "display" : "High dose brachytherapy"
+      },
+      {
+        "code" : "C116542",
+        "display" : "Pulsed-Dose Rate Brachytherapy"
+      },
+      {
+        "code" : "C15470",
+        "display" : "Radioisotope Therapy"
+      }]
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "concept" : [{
+        "code" : "438629002",
+        "display" : "High dose rate electronic brachytherapy"
+      }]
+    },
+    {
+      "system" : "http://terminology.hl7.org/CodeSystem/medcin",
+      "concept" : [{
+        "code" : "76787",
+        "display" : "radiopharmaceutical therapy"
+      }]
+    },
+    {
+      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/mcode-other-code-cs",
+      "concept" : [{
+        "code" : "OtherBrachytherapyModality",
+        "display" : "Other Brachytherapy Modality, Specify"
+      }]
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK"}####
+v: {
+  "display" : "X-ray beam therapy",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://snomed.info/sct",
+  "code" : "169291001",
+  "display" : "X-ray beam therapy"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "X-ray beam therapy",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://snomed.info/sct",
+  "code" : "108290001"
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "Radiation oncology AND/OR radiotherapy",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://snomed.info/sct",
+  "code" : "108290001"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "Radiation oncology AND/OR radiotherapy",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : false, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://snomed.info/sct",
+      "concept" : [{
+        "code" : "438629002",
+        "display" : "High dose rate electronic brachytherapy"
+      }]
+    }]
+  }
+}}####
+e: {
+  "valueSet" : {
+  "resourceType" : "ValueSet",
+  "status" : "active",
+  "expansion" : {
+    "identifier" : "urn:uuid:7d370c66-414a-40d6-9893-87a34bcf7a56",
+    "timestamp" : "2021-01-19T18:29:03.310Z",
+    "parameter" : [{
+      "name" : "limitedExpansion",
+      "valueBoolean" : true
+    },
+    {
+      "name" : "excludeNested",
+      "valueBoolean" : true
+    },
+    {
+      "name" : "version",
+      "valueString" : "http://snomed.info/sct|http://snomed.info/sct/731000124108/version/20200901"
+    }],
+    "contains" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "438629002",
+      "display" : "High dose rate electronic brachytherapy"
     }]
   }
 },

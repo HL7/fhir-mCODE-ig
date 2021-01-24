@@ -3842,9 +3842,9 @@ Description:    "Elixhauser Comorbid Condition Value Set for Weight loss. ICD-10
 * ICD10CM#E44.1    "Mild protein-calorie malnutrition"
 * ICD10CM#E45  "Retarded development following protein-calorie malnutrition"
 * ICD10CM#E46  "Unspecified protein-calorie malnutrition"
-* ICD10CM#E64.0    "Sequelae of protein-calorie malnutrition"
-* ICD10CM#R63.4    "Abnormal weight loss"
-* ICD10CM#R63.6    "Underweight"
+* ICD10CM#E64.0  "Sequelae of protein-calorie malnutrition"
+* ICD10CM#R63.4  "Abnormal weight loss"
+* ICD10CM#R63.6  "Underweight"
 
 /*
 CodeSystem: CharlsonCategoryCS

@@ -33,7 +33,7 @@ Description: "A collection of data for an mCODE cancer patient."
     geneticSpecimen 0..* MS and
     genomicRegionStudied 0..* MS and
     cancerRelatedComorbidities 0..* MS and
-    vitalSign 0..* MS and
+    vitalSign 0..* MS
 
 * entry[cancerPatient] ^short = "Cancer Patient"
 * entry[primaryCancerCondition] ^short = "Primary Cancer Condition(s)"

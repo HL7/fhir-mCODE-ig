@@ -1,8 +1,8 @@
 id: hl7.fhir.us.mcode
 canonical: http://hl7.org/fhir/us/mcode
 version: 1.5.0
-name: minimal Common Oncology Data Elements
-title: "minimal Common Oncology Data Elements Implementation Guide"
+name: minimal_Common_Oncology_Data_Elements_(mCODE)
+title: "minimal Common Oncology Data Elements (mCODE) Implementation Guide"
 status: draft
 publisher:
   name: HL7 International Clinical Interoperability Council
@@ -21,7 +21,7 @@ parameters:
   version-comparison: n/a
   path-expansion-params: '../../exp-params.json'  #path is relative to [base]/fsh-generated/resources
 copyrightYear: 2019+
-releaseLabel: STU2
+releaseLabel: pre-STU2 draft
 pages:
   index.md:
     title: Home

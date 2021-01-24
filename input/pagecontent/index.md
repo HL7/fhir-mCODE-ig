@@ -210,19 +210,9 @@ Date of death data can be obtained from several sources outside of the clinical 
 
 * Under the [Fair Use doctrine](https://www.copyright.gov/fair-use/more-info.html), this IG provides examples illustrating mCODE's representation of cancer diagnoses and AJCC staging values for the purposes of technical implementation guidance to FHIR developers.
 
-* The Data Dictionary includes only the must-support elements in the mCODE specification, intentionally omitting certain elements included in this implementation guide. When there are differences between the Data Dictionary and content of the FHIR implementation guide, the profiles and value sets in the guide should be taken as the source of truth.
+* The DD includes only the must-support elements in the mCODE specification, intentionally omitting certain elements in FHIR that are not expected to be implemented. When there are differences between the DD and content of the FHIR implementation guide, the profiles and value sets in the guide should be taken as the source of truth.
 
-****TO DO: REVIEW THIS****
-The metadata elements not included in the Data Dictionary are listed below:
-
-    * Reference to the patient or subject
-    * Time of the event and/or time of the record creation
-    * Encounter, if required by US Core
-    * Workflow status for observations, conditions, and procedures
-    * Any fixed codes that identify the type of measurement or observation
-    * The practitioner or organization for observations and conditions, except where this information is specifically important to the interpretation of the result (only in GenomicsReport)
-
-**************************
+The STU 2 DD is somewhat different than the STU 1 version. The reader may notice the STU 2 DD has significantly more data elements. In STU 1, some data elements were suppressed because they were common to most or all profiles, such as the reference to patient or subject, or the time of resource creation. However, the redaction of certain elements proved confusing, so the current DD does not continue this practice. Many of the "extra" rows are due to this change.
 
 * Under [Clinical Laboratory Improvement Amendments (CLIA)](https://www.cms.gov/Regulations-and-Guidance/Legislation/CLIA/index.html?redirect=/clia) regulations, laboratory tests must include information on the performing technologist, performing laboratory, and performing laboratory medical director. These three roles would ideally appear as [slices](https://www.hl7.org/fhir/profiling.html#slicing) on Observation.performer and/or DiagnosticReport.performer. However, slicing requires a [discriminator](https://www.hl7.org/fhir/profiling.html#discriminator), a field that can be checked to determine whether a resource found in Observation.performer or DiagnosticReport.performer corresponds to the performing technologist or the performing laboratory medical director. While the performing laboratory can be determined by its resource type, in the current design of FHIR, there is no indicator that would discriminate the roles of the two Practitioner participants.
 
@@ -232,7 +222,7 @@ The metadata elements not included in the Data Dictionary are listed below:
 
 ### Credits
 
-The authors recognize the leadership and sponsorship of Dr. Monica Bertagnolli, President, ASCO and Dr. Jay Schnitzer, MITRE Chief Technology Officer. Dr. Steven Piantadosi and the Alliance for Clinical Trials in Oncology coordinated real-world data collection in clinical trials, as part of this project. The ASCO/CancerLinQ team was led by Dr. Robert Miller and Dr. Wendy Rubinstein. Lead MITRE contributors were Mark Kramer, Rute Martins, Chris Moesel, Caroline Potteiger, and May Terry. Andre Quina and Dr. Brian Anderson guide the overall mCODE effort at MITRE. HL7 sponsorship and input from [Clinical Interoperability Council](http://www.hl7.org/Special/committees/cic/index.cfm) and [Clinical Information Modeling Initiative](https://www.hl7.org/Special/Committees/cimi/index.cfm) is gratefully acknowledged, with special thanks to Richard Esmond and Laura Heermann Langford.
+The authors recognize the leadership and sponsorship of Dr. Monica Bertagnolli, former ASCO President and Dr. Jay Schnitzer, MITRE Chief Technology Officer. Dr. Steven Piantadosi and the Alliance for Clinical Trials in Oncology coordinated real-world data collection in clinical trials, as part of this project. The ASCO/CancerLinQ team was led by Dr. Robert Miller. Lead MITRE contributors were Dr. Mark Kramer, May Terry, Dr. Max Masnick, Rute Martins, Chris Moesel, and Caroline Potteiger. Andre Quina and Dr. Brian Anderson guide the overall mCODE effort at MITRE. HL7 sponsorship and input from [Clinical Interoperability Council](http://www.hl7.org/Special/committees/cic/index.cfm) and [Clinical Information Modeling Initiative](https://www.hl7.org/Special/Committees/cimi/index.cfm) is gratefully acknowledged, with special thanks to Richard Esmond and Laura Heermann Langford.
 
 This IG was authored by the MITRE Corporation using [FHIR Shorthand (FSH)](http://hl7.org/fhir/uv/shorthand/) and [SUSHI](https://fshschool.org), a free, open source toolchain from [MITRE Corporation](https://www.mitre.org/).
 

@@ -13,17 +13,16 @@ Description: "General structure for capturing comorbid conditions with respect t
      ComorbidConditionCode named conditionCode 0..* and
      ComorbidConditionReference named conditionReference 0..*
 
+// SCT#762713009 "Charlson Comorbidity Index (assessment scale)"
 
-Profile: CancerRelatedComorbidities
+Profile: ComorditiesElixhauser
 Parent: ComorbiditiesParent
-Id: mcode-cancer-related-comorbidities
-Title: "Cancer-Related Comorbidities"
-Description: "Comorbid conditions for a cancer condition, using Elixhauser comorbidity categories."
+Id: comorbidities-elixhauser
+Description: "Comorbid condition checklist and optional risk score, using Elixhauser comorbidity categories. The Elixhauser Comorbidity Index is a method of categorizing comorbidities of patients based on the International Classification of Diseases (ICD) diagnosis codes found in administrative data, such as hospital abstracts data. Each comorbidity category is dichotomous -- it is either present or it is not. The Index can be used to predict hospital resource use and in-hospital mortality (Elixhauser et al., 1998)."
 * ^abstract = false
-* focus only Reference(PrimaryCancerCondition)
-* code = LNC#78923-0  // Comorbid condition panel
-* focus and component and component.extension[conditionReference] and component.extension[conditionCode] and component.extension[conditionReference] MS
+* code = LNC#78923-0  // Comorbid condition panel -- not specific to Elixhauser
 * insert ObservationComponentSlicingRules
+// slices
 * component contains 
     alcoholAbuse 0..1 and
     cardiacArrhythmia 0..1 and
@@ -53,6 +52,7 @@ Description: "Comorbid conditions for a cancer condition, using Elixhauser comor
     ulcer 0..1 and
     valvularDisease 0..1 and
     weightLoss 0..1
+// codes and definitions
 * component[alcoholAbuse].code = ElixhauserCategoryCS#ALCOHOL
 * component[alcoholAbuse] ^short = "Alcohol Abuse Comorbidity"
 * component[alcoholAbuse] ^definition = "Component representing the presence or absence of the named comorbidity with optional condition code(s) or reference to the actual condition(s)."
@@ -137,7 +137,7 @@ Description: "Comorbid conditions for a cancer condition, using Elixhauser comor
 * component[weightLoss].code = ElixhauserCategoryCS#WGHTLOSS
 * component[weightLoss] ^short = "Weight Loss Comorbidity"
 * component[weightLoss] ^definition = "Component representing the presence or absence of the named comorbidity with optional condition code(s) or reference to the actual condition(s)."
-
+// value[x] constraints
 * component[alcoholAbuse].extension[conditionCode].value[x] from ElixhauserAlcoholAbuseVS (extensible)
 * component[cardiacArrhythmia].extension[conditionCode].value[x] from ElixhauserCardiacArrhythmiaVS (extensible)
 * component[deficiencyAnemia].extension[conditionCode].value[x] from ElixhauserDeficiencyAnemiaVS (extensible)
@@ -167,3 +167,15 @@ Description: "Comorbid conditions for a cancer condition, using Elixhauser comor
 * component[valvularDisease].extension[conditionCode].value[x] from ElixhauserValvularDiseaseVS (extensible)
 * component[weightLoss].extension[conditionCode].value[x] from ElixhauserWeightLossVS (extensible)
 
+
+
+
+Profile: CancerRelatedComorbidities
+Parent: ComorditiesElixhauser
+Id: mcode-cancer-related-comorbidities
+Title: "Cancer-Related Comorbidities"
+Description: "Comorbid condition checklist and optional risk score, using Elixhauser comorbidity categories. The comorbidities are cancer-related by virtue of restricting the index condition to a PrimaryCancerCondition."
+
+* focus only Reference(PrimaryCancerCondition)
+
+* focus and component and component.extension[conditionReference] and component.extension[conditionCode] and component.extension[conditionReference] MS

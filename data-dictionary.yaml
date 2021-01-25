@@ -3,7 +3,7 @@ informationTabContent:
   General notes: |-
     **Profiles not shown in data dictionary:** Not all profiles used by mCODE are included in the Data Dictionary. mCODE uses FHIR profiles for Blood Pressure, Height, Weight, and the US Core Laboratory Result Observation Profile for Complete Blood Count (CBC), and Comprehensive Metabolic Panel (CMP). These profiles are not included in the Data Dictionary because they are defined externally to mCODE.
 
-    **Data elements not shown in data dictionary:** Only elements marked as "Must Support" in the FHIR Implementation Guide are included in this data dictionary. These are elements that implementers are expected to provide meaningful support for; see https://build.fhir.org/ig/HL7/fhir-mCODE-ig/branches/master/conformance.html#mustsupport-interpretation for more information.
+    **Data elements not shown in data dictionary:** Only elements marked as "Must Support" in the FHIR Implementation Guide are included in this data dictionary. These are elements that implementers are expected to provide meaningful support for; see http://hl7.org/fhir/us/mcode/conformance.html#mustsupport-interpretation for more information.
 
   EMPTY-0BCakOkEFj: ''
   DOCUMENT ORGANIZATION: ''
@@ -43,7 +43,7 @@ informationTabContent:
 
     **Title**: The name of the profile.
 
-    **Url**: Web address identifying the profile.
+    **Url**: Canonical URI identifying the resource. This may not resolve in a web browser; see http://hl7.org/fhir/us/mcode/artifacts.html for the full list of artifacts.
 
     **Description**: The meaning and purpose of the profile.
 
@@ -65,7 +65,7 @@ informationTabContent:
   EMPTY-pGF7osvF0m: |+
     **Data Type**: The kind of data that can be stored in an element, such as a "string" or "code". Data types for each element are defined in mCODE's FHIR profiles, and for more information on what each type means please see <https://www.hl7.org/fhir/datatypes.html>.
 
-    **Value Set URI**:  For coded elements only, the set of "answer" values as a link to where the answer set is defined. Details on mCODE-defined value sets are provided in the 'Value sets' and 'Value set codes' tabs.
+    **Value Set URI**:  For coded elements only, the set of "answer" values as a link to where the answer set is defined. Details on mCODE-defined value sets are provided in the 'Value sets' and 'Value set codes' tabs. This may not resolve in a web browser; see http://hl7.org/fhir/us/mcode/artifacts.html for the full list of artifacts.
 
     **Value Set Binding**: Whether or not the answer value has to come from the given value set. Binding strengths are defined in FHIR (https://www.hl7.org/fhir/valueset-binding-strength.html). "Required" means the value must come from the value set, with no exceptions. "Extensible" means the value must come from the value set if the value set contains a suitable concept; only if a concept is missing from the value set, should another code or a code from a different terminology be used. "Preferred" means the value should come from the provided value set, but it acceptable to use codes from another terminology system. However, "Preferred" does not imply carte blanche to use any vocabularies whatever; documentation should be consulted to determine what alternative vocabularies are accepted.
 
@@ -75,7 +75,7 @@ informationTabContent:
   Value sets: |+
     **Title**: The name of the value set.
 
-    **Url**: Web address identifying the value set.
+    **Url**: Canonical URI identifying the resource. This may not resolve in a web browser; see http://hl7.org/fhir/us/mcode/artifacts.html for the full list of artifacts.
 
     **Description**: A text description of the value set.
 
@@ -94,7 +94,7 @@ informationTabContent:
   Extensions: |+
     **Title**: The name of the extension. Extensions are a FHIR structure that allow for flexibility in storing use case-specific data in a FHIR resource.
 
-    **Url**: Web address identifying the extension.
+    **Url**: Canonical URI identifying the resource. This may not resolve in a web browser; see http://hl7.org/fhir/us/mcode/artifacts.html for the full list of artifacts.
 
     **Description**: A text description of the extension.
 

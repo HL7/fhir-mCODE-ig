@@ -3,7 +3,6 @@
 [AdverseEventResolvedDate]: StructureDefinition-adverse-event-resolved-date.html
 [BrachytherapyPrescriptionDelivery]: StructureDefinition-brachytherapy-prescription-delivery.html
 [CTCAEGrade]: StructureDefinition-ctcae-grade.html
-[CTCAdverseEvent]: StructureDefinition-ctc-adverse-event.html
 [CancerDiseaseStatus]: StructureDefinition-mcode-cancer-disease-status.html
 [CancerGeneticVariant]: StructureDefinition-mcode-cancer-genetic-variant.html
 [CancerGenomicsReport]: StructureDefinition-mcode-cancer-genomics-report.html

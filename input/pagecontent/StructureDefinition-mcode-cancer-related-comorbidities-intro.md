@@ -16,7 +16,7 @@ Over time, there have been changes to the Index. The list of specific ICD diagno
 
 ### FHIR Implementation Overview
 
-In this profile, each comorbidity category is represented by a component (Observation.component). Each component is identified by a code, and has the same set of coded values: present, absent, or unknown.
+In this profile, each comorbidity category is represented by a component (`Observation.component`). Each component is identified by a code, and has the same set of coded values: present, absent, or unknown.
 
 If a comorbidity is present, the user can optionally supply a specific code detailing the disease, or provide link to an existing Condition resource.
 

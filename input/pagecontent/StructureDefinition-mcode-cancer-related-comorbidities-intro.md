@@ -2,7 +2,7 @@
 
 "Comorbidity" speaks to the presence of more than one distinct condition in an individual. Typically, the term refers to *additional* disorders relative to a current "index" disease ([Valderas, et al.](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2713155/)).
 
-Co-occurring disorders are typically treated as high-level categories, for example, "dementia" or "renal disease". The categories should be clinically significant to the prognosis or treatment of the index disease. For example, the comorbidities significant in COVID-19 are different than those for congestive heart failure.
+Co-occurring disorders are typically treated as high-level categories, for example, "dementia" or "renal disease". Comorbidity categories are not universal, but rather, selected because of their clinical significance to the diagnosis, prognosis, or treatment of the index disease. The comorbidities significant in COVID-19 treatment are different than those for congestive heart failure.
 
 Notwithstanding, there are several general models used to note the presence of multiple disease categories in one individual, typically used to calculate a morbidity burden or risk score.The Charlson Index is one of the most widely used indices, but there are dozens of others (DeGroot et al.[https://pubmed.ncbi.nlm.nih.gov/12725876/]).
 

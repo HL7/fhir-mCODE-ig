@@ -2,26 +2,29 @@ Profile: ComorbiditiesParent
 Parent: Observation
 Id: mcode-comorbidities-parent
 Title: "Comorbidities Parent"
-Description: "General structure for capturing comorbid conditions with respect to a primary condition. The specific set of comorbidities of interest in a given context are defined by slicing the components array."
+Description: "General structure for capturing comorbid conditions with respect to a primary ('index') condition. The specific set of comorbidities of interest in a given context are defined by slicing the components array. The same general approach can be applied to any comorbidity category checklist."
 * ^abstract = true
 * focus only Reference(Condition)  // the index condition, i.e. the context of the assessment of comorbidities
 * focus ^short = "Index Condition"
-* focus ^definition = "The comorbid conditions may be defined with respect to a particular condition. For example, the CDC has a list of comorbid conditions important to COVID-19. In this case, the focus would be COVID-19 and the comorbid condition categories would be those called out by CDC, namely obesity, renal disease, respiratory disease, etc."
+* focus ^definition = "The comorbid conditions may be defined with respect to a particular condition. For example, the US Centers for Disease Control (CDC) has a list of comorbid conditions important to COVID-19. In this case, the focus would be COVID-19 and the comorbid condition categories would be those called out by CDC, namely obesity, renal disease, respiratory disease, etc."
 * component.value[x] only CodeableConcept
 * component.value[x] from PresentAbsentUnknownVS (required)
 * component ^definition = "Component representing the presence or absence of the named comorbidity with optional condition code(s) or reference to the actual condition(s)."
 * component.extension contains 
      ComorbidConditionCode named conditionCode 0..* and
      ComorbidConditionReference named conditionReference 0..*
-
-// SCT#762713009 "Charlson Comorbidity Index (assessment scale)"
+* component.modifierExtension 0..0
+* component.code ^short = "Code representing the comorbidity category"
+* component.code ^definition = "The code identifying category of comorbidity, for example, congestive heart failure or severe renal disease. The category typically represents a set of specific diagnosis codes."
+* component.extension ^short = "Extensions to capture specific conditions that fall into the given category."
+* component.extension ^definition = "If more detail about the comorbid condition is desired, elements in this extension can be populated with a specific condition code or a reference to a Condition resource. The extension elements should be used only if the comorbidity category is present."
 
 Profile: ComorbiditiesElixhauser
 Parent: ComorbiditiesParent
 Id: comorbidities-elixhauser
-Description: "Comorbid condition checklist and optional risk score, using Elixhauser comorbidity categories. The Elixhauser Comorbidity Index is a method of categorizing comorbidities of patients based on the International Classification of Diseases (ICD) diagnosis codes found in administrative data, such as hospital abstracts data. Each comorbidity category is dichotomous -- it is either present or it is not. The Index can be used to predict hospital resource use and in-hospital mortality (Elixhauser et al., 1998)."
+Description: "Comorbid condition checklist and optional risk score, using Elixhauser comorbidity categories as defined by the Agency for Healthcare Research and Quality (AHRQ) Healthcare Cost and Utilization Project (H-CUP). The Elixhauser Comorbidity Index is a method of categorizing comorbidities of patients based on the International Classification of Diseases (ICD) diagnosis codes found in administrative data, such as hospital abstracts data. Each comorbidity category is dichotomous -- it is either present or it is not. The Index can be used to predict hospital resource use and in-hospital mortality (Elixhauser et al., 1998)."
 * ^abstract = false
-* code = LNC#78923-0  // Comorbid condition panel -- not specific to Elixhauser
+* code = ElixhauserAHRQ_CS#ElixhauserAHRQ
 * insert ObservationComponentSlicingRules
 // slices
 * component contains 
@@ -64,81 +67,81 @@ Description: "Comorbid condition checklist and optional risk score, using Elixha
     valvularDisease 0..1 and
     weightLoss 0..1
 // codes and definitions
-* component[aids].code = ElixhauserCategoryCS#AIDS
+* component[aids].code = ElixhauserAHRQ_CS#AIDS
 * component[aids] ^short = "Acquired Immune Deficiency Syndrome"
-* component[alcoholAbuse].code = ElixhauserCategoryCS#ALCOHOL
+* component[alcoholAbuse].code = ElixhauserAHRQ_CS#ALCOHOL
 * component[alcoholAbuse] ^short = "Alcohol Abuse"
-* component[deficiencyAnemia].code = ElixhauserCategoryCS#ANEMDF
+* component[deficiencyAnemia].code = ElixhauserAHRQ_CS#ANEMDF
 * component[deficiencyAnemia] ^short = "DeficiencyAnemia"
-* component[arthropathy].code = ElixhauserCategoryCS#ARTH
+* component[arthropathy].code = ElixhauserAHRQ_CS#ARTH
 * component[arthropathy] ^short = "Arthropathy"
-* component[bloodLossAnemia].code = ElixhauserCategoryCS#BLDLOSS
+* component[bloodLossAnemia].code = ElixhauserAHRQ_CS#BLDLOSS
 * component[bloodLossAnemia] ^short = "Chronic Blood Loss Anemia"
-* component[cancerLeukemia].code = ElixhauserCategoryCS#CANCER_LEUK
+* component[cancerLeukemia].code = ElixhauserAHRQ_CS#CANCER_LEUK
 * component[cancerLeukemia] ^short = "Leukemia"
-* component[cancerLymphoma].code = ElixhauserCategoryCS#CANCER_LYMPH
+* component[cancerLymphoma].code = ElixhauserAHRQ_CS#CANCER_LYMPH
 * component[cancerLymphoma] ^short = "Lymphoma"
-* component[cancerMetastatic].code = ElixhauserCategoryCS#CANCER_METS
+* component[cancerMetastatic].code = ElixhauserAHRQ_CS#CANCER_METS
 * component[cancerMetastatic] ^short = "Metastatic Cancer"
-* component[cancerSolidInSitu].code = ElixhauserCategoryCS#CANCER_NSITU
+* component[cancerSolidInSitu].code = ElixhauserAHRQ_CS#CANCER_NSITU
 * component[cancerSolidInSitu] ^short = "Solid tumor without metastasis, in situ"
-* component[cancerSolidMalignant].code = ElixhauserCategoryCS#CANCER_SOLID
+* component[cancerSolidMalignant].code = ElixhauserAHRQ_CS#CANCER_SOLID
 * component[cancerSolidMalignant] ^short = "Solid tumor without metastasis, malignant"
-* component[cerebrovascular].code = ElixhauserCategoryCS#CBVD
+* component[cerebrovascular].code = ElixhauserAHRQ_CS#CBVD
 * component[cerebrovascular] ^short = "Cerebrovascular disease"
-* component[congestiveHeartFailure].code = ElixhauserCategoryCS#CHF
+* component[congestiveHeartFailure].code = ElixhauserAHRQ_CS#CHF
 * component[congestiveHeartFailure] ^short = "CongestiveHeartFailure"
-* component[coagulopathy].code = ElixhauserCategoryCS#COAG
+* component[coagulopathy].code = ElixhauserAHRQ_CS#COAG
 * component[coagulopathy] ^short = "Coagulation Deficiency"
-* component[dementia].code = ElixhauserCategoryCS#DEMENTIA
+* component[dementia].code = ElixhauserAHRQ_CS#DEMENTIA
 * component[dementia] ^short = "Dementia"
-* component[depression].code = ElixhauserCategoryCS#DEPRESS
+* component[depression].code = ElixhauserAHRQ_CS#DEPRESS
 * component[depression] ^short = "Depression"
-* component[diabetesUncomplicated].code = ElixhauserCategoryCS#DIAB_CX
+* component[diabetesUncomplicated].code = ElixhauserAHRQ_CS#DIAB_CX
 * component[diabetesUncomplicated] ^short = "Diabetes with chronic complications"
-* component[diabetesComplicated].code = ElixhauserCategoryCS#DIAB_UNCX
+* component[diabetesComplicated].code = ElixhauserAHRQ_CS#DIAB_UNCX
 * component[diabetesComplicated] ^short = "Diabetes without chronic complications"
-* component[drugAbuse].code = ElixhauserCategoryCS#DRUG_ABUSE
+* component[drugAbuse].code = ElixhauserAHRQ_CS#DRUG_ABUSE
 * component[drugAbuse] ^short = "Drug Abuse"
-* component[hypertensionComplicated].code = ElixhauserCategoryCS#HTN_CX
+* component[hypertensionComplicated].code = ElixhauserAHRQ_CS#HTN_CX
 * component[hypertensionComplicated] ^short = "Hypertension, Complicated"
-* component[hypertensionUncomplicated].code = ElixhauserCategoryCS#HTN_UNCX
+* component[hypertensionUncomplicated].code = ElixhauserAHRQ_CS#HTN_UNCX
 * component[hypertensionUncomplicated] ^short = "Hypertension, Uncomplicated"
-* component[liverDiseaseMild].code = ElixhauserCategoryCS#LIVER_MLD
+* component[liverDiseaseMild].code = ElixhauserAHRQ_CS#LIVER_MLD
 * component[liverDiseaseMild] ^short = "Mild Liver Disease"
-* component[liverDiseaseSevere].code = ElixhauserCategoryCS#LIVER_SEV
+* component[liverDiseaseSevere].code = ElixhauserAHRQ_CS#LIVER_SEV
 * component[liverDiseaseSevere] ^short = "Moderate to Severe Liver Disease"
-* component[chronicPulmonaryDisease].code = ElixhauserCategoryCS#LUNG_CHRONIC
+* component[chronicPulmonaryDisease].code = ElixhauserAHRQ_CS#LUNG_CHRONIC
 * component[chronicPulmonaryDisease] ^short = "Chronic pulmonary disease"
-* component[neurologicalMovement].code = ElixhauserCategoryCS#NEURO_MOVT
+* component[neurologicalMovement].code = ElixhauserAHRQ_CS#NEURO_MOVT
 * component[neurologicalMovement] ^short = "Neurological disorders affecting movement"
-* component[neurologicalOther].code = ElixhauserCategoryCS#NEURO_OTH
+* component[neurologicalOther].code = ElixhauserAHRQ_CS#NEURO_OTH
 * component[neurologicalOther] ^short = "Other neurological disorders"
-* component[neurologicalSeizure].code = ElixhauserCategoryCS#NEURO_SEIZ
+* component[neurologicalSeizure].code = ElixhauserAHRQ_CS#NEURO_SEIZ
 * component[neurologicalSeizure] ^short = "Seizures and epilepsy"
-* component[obesity].code = ElixhauserCategoryCS#OBESE
+* component[obesity].code = ElixhauserAHRQ_CS#OBESE
 * component[obesity] ^short = "Obesity"
-* component[paralysis].code = ElixhauserCategoryCS#PARALYSIS
+* component[paralysis].code = ElixhauserAHRQ_CS#PARALYSIS
 * component[paralysis] ^short = "Paralysis"
-* component[peripheralVascularDisease].code = ElixhauserCategoryCS#PERIVASC
+* component[peripheralVascularDisease].code = ElixhauserAHRQ_CS#PERIVASC
 * component[peripheralVascularDisease] ^short = "Peripheral Vascular Disease"
-* component[psychoses].code = ElixhauserCategoryCS#PSYCH
+* component[psychoses].code = ElixhauserAHRQ_CS#PSYCHOSES
 * component[psychoses] ^short = "Psychoses"
-* component[pulmonaryCirculationDisorders].code = ElixhauserCategoryCS#PULMCIRC
+* component[pulmonaryCirculationDisorders].code = ElixhauserAHRQ_CS#PULMCIRC
 * component[pulmonaryCirculationDisorders] ^short = "Pulmonary Circulation Disorders"
-* component[renalFailureModerate].code = ElixhauserCategoryCS#RENLFL_MOD
+* component[renalFailureModerate].code = ElixhauserAHRQ_CS#RENLFL_MOD
 * component[renalFailureModerate] ^short = "Moderate Renal Failure"
-* component[renalFailureSevere].code = ElixhauserCategoryCS#RENLFL_SEV
+* component[renalFailureSevere].code = ElixhauserAHRQ_CS#RENLFL_SEV
 * component[renalFailureSevere] ^short = "Severe Renal Failure"
-* component[hypothyroidism].code = ElixhauserCategoryCS#THYROID_HYPO
+* component[hypothyroidism].code = ElixhauserAHRQ_CS#THYROID_HYPO
 * component[hypothyroidism] ^short = "Hypothyroidism"
-* component[thyroidOther].code = ElixhauserCategoryCS#THYROID_OTHER
+* component[thyroidOther].code = ElixhauserAHRQ_CS#THYROID_OTH
 * component[thyroidOther] ^short = "Other Thyroid Disease"
-* component[ulcer].code = ElixhauserCategoryCS#ULCER_PEPTIC
+* component[ulcer].code = ElixhauserAHRQ_CS#ULCER_PEPTIC
 * component[ulcer] ^short = "Ulcer"
-* component[valvularDisease].code = ElixhauserCategoryCS#VALVE
+* component[valvularDisease].code = ElixhauserAHRQ_CS#VALVE
 * component[valvularDisease] ^short = "Valvular Disease"
-* component[weightLoss].code = ElixhauserCategoryCS#WGHTLOSS
+* component[weightLoss].code = ElixhauserAHRQ_CS#WGHTLOSS
 * component[weightLoss] ^short = "Weight Loss"
 
 
@@ -190,3 +193,6 @@ Description: "Comorbid condition checklist and optional risk score, using Elixha
 * focus only Reference(PrimaryCancerCondition)
 * focus and component and component.extension[conditionReference] and component.extension[conditionCode] and component.extension[conditionReference] MS
 
+
+
+// SCT#762713009 "Charlson Comorbidity Index (assessment scale)"

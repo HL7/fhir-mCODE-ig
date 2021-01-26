@@ -1,7 +1,8 @@
-CodeSystem: ElixhauserCategoryCS
+CodeSystem: ElixhauserAHRQ_CS
 Id: mcode-elixhauser-category
 Title: "Elixhauser Comorbidity Category"
-Description: "A code system that contains codes representing the comorbidity categories originally defined by Elixhauser, and updated by the Agency for Healthcare Research and Quality (AHRQ) Healthcare Cost and Utilization Project (H-CUP). The specific version of Elixhauser represented by these categories is defined in v2021.1, released October 2020, valid for ICD-10-CM diagnosis codes through September 2021."
+Description: "A code system that contains codes representing the comorbidity categories originally defined by Elixhauser, and updated by the Agency for Healthcare Research and Quality (AHRQ) Healthcare Cost and Utilization Project (H-CUP)."
+* #ElixhauserAHRQ "Elixhauser comorbidities as defined by Agency for Healthcare Research and Quality (AHRQ) Healthcare Cost and Utilization Project (H-CUP)"
 * #AIDS    "Acquired immune deficiency syndrome"
 * #ALCOHOL    "Alcohol abuse"
 * #ANEMDF    "Deficiency anemias"
@@ -4908,6 +4909,6 @@ ValueSet: ComorbidityCategoryVS
 Id: mcode-comorbidity-category
 Title: "Comorbidity Category Value Set"
 Description: "Elixhauser and Charlson comorbidity category codes."
-* include codes from system ElixhauserCategoryCS
+* include codes from system ElixhauserAHRQ_CS
 * include codes from system CharlsonCategoryCS
 */

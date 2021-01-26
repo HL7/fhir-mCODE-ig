@@ -2,7 +2,7 @@ Profile: ComorbiditiesParent
 Parent: Observation
 Id: mcode-comorbidities-parent
 Title: "Comorbidities Parent"
-Description: "General structure for capturing comorbid conditions with respect to a primary ('index') condition. The specific set of comorbidities of interest in a given context are defined by slicing the components array. The same general approach can be applied to any comorbidity category checklist."
+Description: "General structure for capturing comorbid conditions with respect to a primary (\”index\”) condition. The specific set of comorbidities of interest in a given context are defined by slicing the components array. The same general approach can be applied to any comorbidity category checklist."
 * ^abstract = true
 * focus only Reference(Condition)  // the index condition, i.e. the context of the assessment of comorbidities
 * focus ^short = "Index Condition"

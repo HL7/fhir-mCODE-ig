@@ -8,7 +8,7 @@
 [CancerGeneticVariant]: StructureDefinition-mcode-cancer-genetic-variant.html
 [CancerGenomicsReport]: StructureDefinition-mcode-cancer-genomics-report.html
 [CancerPatient]: StructureDefinition-mcode-cancer-patient.html
-[CancerRelatedComorbidities]: StructureDefinition-mcode-cancer-related-comorbidities.html
+[CancerRelatedElixhauserComorbidities]: StructureDefinition-mcode-cancer-related-elixhauser-comorbidities.html
 [CancerRelatedMedicationRequest]: StructureDefinition-mcode-cancer-related-medication-request.html
 [CancerRelatedSurgicalProcedure]: StructureDefinition-mcode-cancer-related-surgical-procedure.html
 [ComorbidConditionCode]: StructureDefinition-mcode-comorbid-condition-code.html

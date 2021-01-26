@@ -47,8 +47,8 @@ Description: "Extended example 1 as a mCODE Patient Bundle"
 * entry[=].fullUrl = "http://example.org/fhir/MedicationRequest/scenario1-mcode-cancer-related-medication-chemo-paclitaxel"
 * entry[+].resource = scenario1-mcode-cancer-related-medication-anastrozole
 * entry[=].fullUrl = "http://example.org/fhir/MedicationRequest/scenario1-mcode-cancer-related-medication-anastrozole"
-* entry[+].resource = scenario1-mcode-cancer-related-comorbidities
-* entry[=].fullUrl = "http://example.org/fhir/Observation/scenario1-mcode-cancer-related-comorbidities"
+* entry[+].resource = scenario1-mcode-cancer-related-elixhauser-comorbidities
+* entry[=].fullUrl = "http://example.org/fhir/Observation/scenario1-mcode-cancer-related-elixhauser-comorbidities"
 * entry[+].resource = scenario1-body-weight
 * entry[=].fullUrl = "http://example.org/fhir/Observation/scenario1-body-weight"
 * entry[+].resource = scenario1-neutrophils

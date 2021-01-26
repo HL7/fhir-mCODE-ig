@@ -16,7 +16,7 @@ Description: "General structure for capturing comorbid conditions with respect t
 
 // SCT#762713009 "Charlson Comorbidity Index (assessment scale)"
 
-Profile: ComorditiesElixhauser
+Profile: ComorbiditiesElixhauser
 Parent: ComorbiditiesParent
 Id: comorbidities-elixhauser
 Description: "Comorbid condition checklist and optional risk score, using Elixhauser comorbidity categories. The Elixhauser Comorbidity Index is a method of categorizing comorbidities of patients based on the International Classification of Diseases (ICD) diagnosis codes found in administrative data, such as hospital abstracts data. Each comorbidity category is dichotomous -- it is either present or it is not. The Index can be used to predict hospital resource use and in-hospital mortality (Elixhauser et al., 1998)."
@@ -182,10 +182,11 @@ Description: "Comorbid condition checklist and optional risk score, using Elixha
 * component[valvularDisease].extension[conditionCode].value[x] from ElixhauserValvularDiseaseVS (extensible)
 * component[weightLoss].extension[conditionCode].value[x] from ElixhauserWeightLossVS (extensible)
 
-Profile: CancerRelatedComorbidities
-Parent: ComorditiesElixhauser
-Id: mcode-cancer-related-comorbidities
+Profile: CancerRelatedElixhauserComorbidities
+Parent: ComorbiditiesElixhauser
+Id: mcode-cancer-related-elixhauser-comorbidities
 Title: "Cancer-Related Comorbidities"
 Description: "Comorbid condition checklist and optional risk score, using Elixhauser comorbidity categories. The comorbidities are cancer-related by virtue of restricting the index condition to a PrimaryCancerCondition."
 * focus only Reference(PrimaryCancerCondition)
 * focus and component and component.extension[conditionReference] and component.extension[conditionCode] and component.extension[conditionReference] MS
+

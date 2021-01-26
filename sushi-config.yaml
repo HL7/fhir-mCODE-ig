@@ -64,7 +64,7 @@ groups:
     description: Profiles in the [mCODE **Patient** Group](index.html#patient-group).
     resources:
       - StructureDefinition/mcode-cancer-patient
-      - StructureDefinition/mcode-cancer-related-comorbidities
+      - StructureDefinition/mcode-cancer-related-elixhauser-comorbidities
       - StructureDefinition/mcode-ecog-performance-status
       - StructureDefinition/mcode-karnofsky-performance-status
       - StructureDefinition/mcode-patient-bundle
@@ -242,7 +242,7 @@ groups:
       - Observation/mCODECancerDiseaseStatusExample1
       - Observation/mCODECancerGeneticVariantExample1
       - Observation/mCODECancerGeneticVariantExample2
-      - Observation/mCODECancerRelatedComorbiditiesExample1
+      - Observation/mCODECancerRelatedElixhauserComorbiditiesExample1
       - Observation/mCODEECOGPerformanceStatusExample1
       - Observation/mCODEGenomicRegionStudiedExample1
       - Observation/mCODEKarnofskyPerformanceStatusExample1
@@ -284,7 +284,7 @@ groups:
       - Observation/scenario1-body-weight
       - Observation/scenario1-mcode-cancer-disease-status
       - Observation/scenario1-mcode-cancer-genetic-variant
-      - Observation/scenario1-mcode-cancer-related-comorbidities
+      - Observation/scenario1-mcode-cancer-related-elixhauser-comorbidities
       - Observation/scenario1-mcode-ecog-performance-status
       - Observation/scenario1-mcode-genomic-region-studied
       - Observation/scenario1-mcode-tnm-clinical-distant-metastases-category

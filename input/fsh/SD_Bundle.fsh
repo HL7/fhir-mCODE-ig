@@ -121,7 +121,7 @@ Description: "A collection of data for an mCODE cancer patient."
 * entry[cancerGenomicsReport].resource only CancerGenomicsReport
 * entry[geneticSpecimen].resource only GeneticSpecimen
 * entry[genomicRegionStudied].resource only GenomicRegionStudied
-* entry[cancerRelatedComorbidities].resource only CancerRelatedComorbidities
+* entry[cancerRelatedComorbidities].resource only CancerRelatedElixhauserComorbidities
 * entry[vitalSignHeight].resource only http://hl7.org/fhir/StructureDefinition/bodyheight
 * entry[vitalSignWeight].resource only http://hl7.org/fhir/StructureDefinition/bodyweight
 * entry[vitalSignBloodPressure].resource only http://hl7.org/fhir/StructureDefinition/bp

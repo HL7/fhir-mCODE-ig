@@ -39,8 +39,8 @@ Description: "Extended example 1: example showing disease status (patient's cond
 * valueCodeableConcept = SCT#268910001 "Patient's condition improved (finding)"
 
 
-Instance: scenario1-mcode-cancer-related-comorbidities
-InstanceOf: CancerRelatedComorbidities
+Instance: scenario1-mcode-cancer-related-elixhauser-comorbidities
+InstanceOf: CancerRelatedElixhauserComorbidities
 Description: "mCODE Example for Cancer-Related Comorbidities"
 * subject = Reference(scenario1-mcode-cancer-patient)
 * performer = Reference(scenario1-us-core-practitioner)

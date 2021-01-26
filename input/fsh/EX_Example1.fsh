@@ -37,8 +37,8 @@ Description: "mCODE Example for Cancer Disease Status"
 * performer = Reference(mCODEPractitionerExample1)
 * valueCodeableConcept = SCT#268910001 "Patient's condition improved (finding)"
 
-Instance: mCODECancerRelatedComorbiditiesExample1
-InstanceOf: CancerRelatedComorbidities
+Instance: mCODECancerRelatedElixhauserComorbiditiesExample1
+InstanceOf: CancerRelatedElixhauserComorbidities
 Description: "mCODE Example for Cancer-Related Comorbidities"
 * subject = Reference(mCODEPatientExample1)
 * performer = Reference(mCODEPractitionerExample1)
@@ -143,7 +143,7 @@ Description: "mCODE Example for Practitioner"
 
 Instance: mCODEDepressionExample1
 InstanceOf: USCoreCondition
-Description: "mCODE Example of Depression (as Comorbid condition), part of mCODECancerRelatedComorbiditiesExample01"
+Description: "mCODE Example of Depression (as Comorbid condition), part of mCODECancerRelatedElixhauserComorbiditiesExample01"
 * subject = Reference(mCODEPatientExample1)
 * asserter = Reference(mCODEPractitionerExample1)
 * category = CondCat#problem-list-item

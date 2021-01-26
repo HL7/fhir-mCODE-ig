@@ -14,7 +14,7 @@ The bundle MUST also contain following mCODE-conformant resources, if available 
 * Observation resources representing [CancerGeneticVariant](StructureDefinition-mcode-cancer-genetic-variant.html) and [GenomicRegionStudied](StructureDefinition-mcode-genomic-region-studied.html)
 * DiagnosticReport resources representing [CancerGenomicsReport](StructureDefinition-mcode-cancer-genomics-report.html)
 * Specimen resources representing to [GeneticSpecimen](StructureDefinition-mcode-genetic-specimen.html)
-* Observation resource representing to [CancerRelatedComorbidities](StructureDefinition-mcode-cancer-related-comorbidities.html), and accompanying Condition resources
+* Observation resource representing to [CancerRelatedElixhauserComorbidities](StructureDefinition-mcode-cancer-related-elixhauser-comorbidities.html), and accompanying Condition resources
 * Observation resources for patient height, weight, blood pressure
 * Laboratory results from Comprehensive Metabolic Panels (CMP) and Complete Blood Counts (CBC)
 

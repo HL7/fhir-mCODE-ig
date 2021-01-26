@@ -345,19 +345,3 @@ groups:
       - Observation/example1-mcode-tumor-size
       - BodyStructure/example1-mcode-tumor
 
-  ExperimentalResourcesAdverseEvent:
-    name: Experimental Resources - Adverse Event
-    description: These resources related to adverse events are considered [experimental](experimental.html).
-    resources:
-      - StructureDefinition/ctc-adverse-event
-      - StructureDefinition/adverse-event-expectation
-      - StructureDefinition/adverse-event-resolved-date
-      - StructureDefinition/ctcae-grade
-      - ValueSet/ctcae-preferred-term-value-set
-      - ValueSet/adverse-event-expectation-value-set
-      - ValueSet/adverse-event-seriousness-value-set
-      - ValueSet/adverse-event-relatedness-value-set
-      - ValueSet/ctcae-grade-value-set
-      - CodeSystem/ctcae-grade-code-system
-      - AdverseEvent/ctc-adverse-event-example-1
-      - AdverseEvent/ctc-adverse-event-example-2

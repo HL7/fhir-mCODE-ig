@@ -7,11 +7,6 @@
 <artifactPageExtension value="-definitions"/>
 <artifactPageExtension value="-examples"/>
 <artifactPageExtension value="-mappings"/>
-<artifact id="StructureDefinition/adverse-event-expectation" key="StructureDefinition-adverse-event-expectation" name="Adverse Event Expectation"/>
-<artifact id="ValueSet/adverse-event-expectation-value-set" key="ValueSet-adverse-event-expectation-value-set" name="Adverse Event Expectation Value Set"/>
-<artifact id="ValueSet/adverse-event-relatedness-value-set" key="ValueSet-adverse-event-relatedness-value-set" name="Adverse Event Relatedness Value Set"/>
-<artifact id="StructureDefinition/adverse-event-resolved-date" key="StructureDefinition-adverse-event-resolved-date" name="Adverse Event Resolved Date"/>
-<artifact id="ValueSet/adverse-event-seriousness-value-set" key="ValueSet-adverse-event-seriousness-value-set" name="Adverse Event Seriousness Value Set"/>
 <artifact id="CodeSystem/brachytherapy-device-cs" key="CodeSystem-brachytherapy-device-cs" name="Brachytherapy Device Code System"/>
 <artifact id="ValueSet/mcode-brachytherapy-device-vs" key="ValueSet-mcode-brachytherapy-device-vs" name="Brachytherapy Device Value Set"/>
 <artifact id="ValueSet/brachytherapy-modality-vs" key="ValueSet-brachytherapy-modality-vs" name="Brachytherapy Modality Value Set"/>
@@ -19,11 +14,6 @@
 <artifact id="CodeSystem/brachytherapy-technique-cs" key="CodeSystem-brachytherapy-technique-cs" name="Brachytherapy Technique Code System"/>
 <artifact id="ValueSet/brachytherapy-technique-vs" key="ValueSet-brachytherapy-technique-vs" name="Brachytherapy Technique Value Set"/>
 <artifact id="Procedure/BrachytherapyPrescriptionDeliveryExample1" key="Procedure-BrachytherapyPrescriptionDeliveryExample1" name="BrachytherapyPrescriptionDeliveryExample1"/>
-<artifact id="StructureDefinition/ctc-adverse-event" key="StructureDefinition-ctc-adverse-event" name="CTC Adverse Event"/>
-<artifact id="StructureDefinition/ctcae-grade" key="StructureDefinition-ctcae-grade" name="CTC Adverse Event Grade"/>
-<artifact id="CodeSystem/ctcae-grade-code-system" key="CodeSystem-ctcae-grade-code-system" name="CTCAE Grade Code System"/>
-<artifact id="ValueSet/ctcae-grade-value-set" key="ValueSet-ctcae-grade-value-set" name="CTCAE Grade Value Set"/>
-<artifact id="ValueSet/ctcae-preferred-term-value-set" key="ValueSet-ctcae-preferred-term-value-set" name="CTCAE Preferred Terms"/>
 <artifact id="ValueSet/mcode-cancer-body-location-vs" key="cancer-body-location-value-set" name="Cancer Body Location Value Set"/>
 <artifact deprecated="true" id="Profile/mcode-cancer-condition-parent" key="cancer-condition-parent" name="Cancer Condition Parent"/>
 <artifact id="StructureDefinition/mcode-cancer-disease-status" key="cancer-disease-status" name="Cancer Disease Status"/>
@@ -161,8 +151,6 @@
 <artifact deprecated="true" id="ValueSet/mcode-units-of-length-value-set" key="units-of-length-value-set" name="Units of Length Value Set"/>
 <artifact id="ValueSet/mcode-tumor-size-units-vs" key="ValueSet-mcode-tumor-size-units-vs" name="Units of tumor size value set"/>
 <artifact deprecated="true" key="ValueSet" name="ValueSet"/>
-<artifact id="AdverseEvent/ctc-adverse-event-example-1" key="AdverseEvent-ctc-adverse-event-example-1" name="ctc-adverse-event-example-1"/>
-<artifact id="AdverseEvent/ctc-adverse-event-example-2" key="AdverseEvent-ctc-adverse-event-example-2" name="ctc-adverse-event-example-2"/>
 <artifact id="BodyStructure/example1-mcode-tumor" key="BodyStructure-example1-mcode-tumor" name="example1-mcode-tumor"/>
 <artifact id="Observation/example1-mcode-tumor-size" key="Observation-example1-mcode-tumor-size" name="example1-mcode-tumor-size"/>
 <artifact id="StructureDefinition/mcode-patient-bundle" key="StructureDefinition-mcode-patient-bundle" name="mCODE Patient Bundle"/>

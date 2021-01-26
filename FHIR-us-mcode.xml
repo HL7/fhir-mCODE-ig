@@ -38,7 +38,7 @@
 <artifact deprecated="true" id="ValueSet/mcode-cancer-related-surgical-procedure-value-set" key="cancer-related-surgical-procedure-value-set" name="Cancer Related Surgical Procedure Value Set"/>
 <artifact deprecated="true" id="Profile/mcode-cancer-stage-parent" key="cancer-stage-parent" name="Cancer Stage Parent"/>
 <artifact id="ValueSet/mcode-cancer-staging-system-vs" key="cancer-staging-system-value-set" name="Cancer Staging System Value Set"/>
-<artifact id="StructureDefinition/mcode-cancer-related-comorbidities" key="StructureDefinition-mcode-cancer-related-comorbidities" name="Cancer-Related Comorbidities"/>
+<artifact id="StructureDefinition/mcode-cancer-related-elixhauser-comorbidities" key="StructureDefinition-mcode-cancer-related-elixhauser-comorbidities" name="Cancer-Related Comorbidities"/>
 <artifact id="StructureDefinition/mcode-cancer-related-medication-request" key="StructureDefinition-mcode-cancer-related-medication-request" name="Cancer-Related Medication Request"/>
 <artifact id="StructureDefinition/mcode-cancer-related-surgical-procedure" key="StructureDefinition-mcode-cancer-related-surgical-procedure" name="Cancer-Related Surgical Procedure"/>
 <artifact id="ValueSet/mcode-cancer-related-surgical-procedure-vs" key="ValueSet-mcode-cancer-related-surgical-procedure-vs" name="Cancer-Related Surgical Procedure Value Set"/>
@@ -48,40 +48,48 @@
 <artifact id="StructureDefinition/mcode-comorbid-condition-reference" key="StructureDefinition-mcode-comorbid-condition-reference" name="Comorbid Condition Reference"/>
 <artifact deprecated="true" id="ValueSet/mcode-comorbid-condition-value-set" key="comorbid-condition-value-set" name="Comorbid Condition Value Set"/>
 <artifact id="StructureDefinition/mcode-comorbidities-parent" key="StructureDefinition-mcode-comorbidities-parent" name="Comorbidities Parent"/>
+<artifact id="StructureDefinition/comorbidities-elixhauser" key="StructureDefinition-comorbidities-elixhauser" name="ComorbiditiesElixhauser"/>
 <artifact id="ValueSet/mcode-condition-status-trend-vs" key="condition-status-trend-value-set" name="Condition Status Trend Value Set"/>
 <artifact id="ValueSet/mcode-dna-change-type-vs" key="ValueSet-mcode-dna-change-type-vs" name="DNA Change Type Value Set"/>
 <artifact id="StructureDefinition/mcode-ecog-performance-status" key="ecog-performance-status" name="ECOG Performance Status"/>
 <artifact id="ValueSet/elixhauser-alcohol-abuse-vs" key="ValueSet-elixhauser-alcohol-abuse-vs" name="Elixhauser Comorbid Condition Value Set for Alcohol Abuse"/>
 <artifact id="ValueSet/elixhauser-blood-loss-anemia-vs" key="ValueSet-elixhauser-blood-loss-anemia-vs" name="Elixhauser Comorbid Condition Value Set for Blood Loss Anemia"/>
-<artifact id="ValueSet/elixhauser-cardiac-arrhythmia-vs" key="ValueSet-elixhauser-cardiac-arrhythmia-vs" name="Elixhauser Comorbid Condition Value Set for Cardiac Arrhythmia"/>
+<artifact id="ValueSet/elixhauser-cerebrovascular-disease-vs" key="ValueSet-elixhauser-cerebrovascular-disease-vs" name="Elixhauser Comorbid Condition Value Set for Cerebrovascular Disease"/>
 <artifact id="ValueSet/elixhauser-chronic-pulmonary-disease-vs" key="ValueSet-elixhauser-chronic-pulmonary-disease-vs" name="Elixhauser Comorbid Condition Value Set for Chronic Pulmonary Disease"/>
 <artifact id="ValueSet/elixhauser-ulcer-vs" key="ValueSet-elixhauser-ulcer-vs" name="Elixhauser Comorbid Condition Value Set for Chronic peptic ulcer disease."/>
 <artifact id="ValueSet/elixhauser-coagulation-deficiency-vs" key="ValueSet-elixhauser-coagulation-deficiency-vs" name="Elixhauser Comorbid Condition Value Set for Coagulation Deficiency"/>
 <artifact id="ValueSet/elixhauser-congestive-heart-failure-vs" key="ValueSet-elixhauser-congestive-heart-failure-vs" name="Elixhauser Comorbid Condition Value Set for Congestive Heart Failure"/>
 <artifact id="ValueSet/elixhauser-deficiency-anemia-vs" key="ValueSet-elixhauser-deficiency-anemia-vs" name="Elixhauser Comorbid Condition Value Set for Deficiency Anemia"/>
+<artifact id="ValueSet/elixhauser-dementia-vs" key="ValueSet-elixhauser-dementia-vs" name="Elixhauser Comorbid Condition Value Set for Dementia"/>
 <artifact id="ValueSet/elixhauser-depression-vs" key="ValueSet-elixhauser-depression-vs" name="Elixhauser Comorbid Condition Value Set for Depression"/>
-<artifact id="ValueSet/elixhauser-fluid-electrolyte-vs" key="ValueSet-elixhauser-fluid-electrolyte-vs" name="Elixhauser Comorbid Condition Value Set for Fluid Electrolyte Disorders"/>
-<artifact id="ValueSet/elixhauser-hiv-aids-vs" key="ValueSet-elixhauser-hiv-aids-vs" name="Elixhauser Comorbid Condition Value Set for HIV-AIDS"/>
+<artifact id="ValueSet/elixhauser-aids-vs" key="ValueSet-elixhauser-aids-vs" name="Elixhauser Comorbid Condition Value Set for HIV-AIDS"/>
 <artifact id="ValueSet/elixhauser-hypertension-complicated-vs" key="ValueSet-elixhauser-hypertension-complicated-vs" name="Elixhauser Comorbid Condition Value Set for Hypertension, Complicated"/>
 <artifact id="ValueSet/elixhauser-hypertension-uncomplicated-vs" key="ValueSet-elixhauser-hypertension-uncomplicated-vs" name="Elixhauser Comorbid Condition Value Set for Hypertension, Uncomplicated"/>
 <artifact id="ValueSet/elixhauser-hypothyroidism-vs" key="ValueSet-elixhauser-hypothyroidism-vs" name="Elixhauser Comorbid Condition Value Set for Hypothyroidism"/>
-<artifact id="ValueSet/elixhauser-liver-disease-vs" key="ValueSet-elixhauser-liver-disease-vs" name="Elixhauser Comorbid Condition Value Set for Liver Disease"/>
-<artifact id="ValueSet/elixhauser-lymphoma-vs" key="ValueSet-elixhauser-lymphoma-vs" name="Elixhauser Comorbid Condition Value Set for Lymphoma"/>
-<artifact id="ValueSet/elixhauser-metastatic-cancer-vs" key="ValueSet-elixhauser-metastatic-cancer-vs" name="Elixhauser Comorbid Condition Value Set for Metastatic cancer"/>
+<artifact id="ValueSet/elixhauser-cancer-leukemia-vs" key="ValueSet-elixhauser-cancer-leukemia-vs" name="Elixhauser Comorbid Condition Value Set for Leukemia"/>
+<artifact id="ValueSet/elixhauser-cancer-lymphoma-vs" key="ValueSet-elixhauser-cancer-lymphoma-vs" name="Elixhauser Comorbid Condition Value Set for Lymphoma"/>
+<artifact id="ValueSet/elixhauser-cancer-metastatic-vs" key="ValueSet-elixhauser-cancer-metastatic-vs" name="Elixhauser Comorbid Condition Value Set for Metastatic cancer"/>
+<artifact id="ValueSet/elixhauser-liver-disease-mild-vs" key="ValueSet-elixhauser-liver-disease-mild-vs" name="Elixhauser Comorbid Condition Value Set for Mild Liver Disease"/>
+<artifact id="ValueSet/elixhauser-renal-failure-moderate-vs" key="ValueSet-elixhauser-renal-failure-moderate-vs" name="Elixhauser Comorbid Condition Value Set for Moderate Renal Failure"/>
+<artifact id="ValueSet/elixhauser-liver-disease-severe-vs" key="ValueSet-elixhauser-liver-disease-severe-vs" name="Elixhauser Comorbid Condition Value Set for Moderate to Severe Liver Disease"/>
+<artifact id="ValueSet/elixhauser-neurological-movement-disorder-vs" key="ValueSet-elixhauser-neurological-movement-disorder-vs" name="Elixhauser Comorbid Condition Value Set for Neurological Movement Disorders"/>
+<artifact id="ValueSet/elixhauser-neurological-seizure-disorder-vs" key="ValueSet-elixhauser-neurological-seizure-disorder-vs" name="Elixhauser Comorbid Condition Value Set for Neurological Seizure Disorders"/>
 <artifact id="ValueSet/elixhauser-obesity-vs" key="ValueSet-elixhauser-obesity-vs" name="Elixhauser Comorbid Condition Value Set for Obesity"/>
 <artifact id="ValueSet/elixhauser-other-neurological-vs" key="ValueSet-elixhauser-other-neurological-vs" name="Elixhauser Comorbid Condition Value Set for Other Neurological Disorders"/>
+<artifact id="ValueSet/elixhauser-other-thyroid-disorder-vs" key="ValueSet-elixhauser-other-thyroid-disorder-vs" name="Elixhauser Comorbid Condition Value Set for Other Thyroid Disorder"/>
 <artifact id="ValueSet/elixhauser-paralysis-vs" key="ValueSet-elixhauser-paralysis-vs" name="Elixhauser Comorbid Condition Value Set for Paralysis"/>
 <artifact id="ValueSet/elixhauser-peripheral-vascular-disease-vs" key="ValueSet-elixhauser-peripheral-vascular-disease-vs" name="Elixhauser Comorbid Condition Value Set for Peripheral vascular disease"/>
 <artifact id="ValueSet/elixhauser-psychoses-vs" key="ValueSet-elixhauser-psychoses-vs" name="Elixhauser Comorbid Condition Value Set for Psychoses"/>
 <artifact id="ValueSet/elixhauser-pulmonary-circulation-disorders-vs" key="ValueSet-elixhauser-pulmonary-circulation-disorders-vs" name="Elixhauser Comorbid Condition Value Set for Pulmonary circulation disorders"/>
-<artifact id="ValueSet/elixhauser-renal-failure-vs" key="ValueSet-elixhauser-renal-failure-vs" name="Elixhauser Comorbid Condition Value Set for Renal failure"/>
 <artifact id="ValueSet/elixhauser-rheumatoid-arthritis-vs" key="ValueSet-elixhauser-rheumatoid-arthritis-vs" name="Elixhauser Comorbid Condition Value Set for Rheumatoid Arthritis and collagen vascular diseases."/>
+<artifact id="ValueSet/elixhauser-renal-failure-severe-vs" key="ValueSet-elixhauser-renal-failure-severe-vs" name="Elixhauser Comorbid Condition Value Set for Severe Renal Failure"/>
 <artifact id="ValueSet/elixhauser-valvular-disease-vs" key="ValueSet-elixhauser-valvular-disease-vs" name="Elixhauser Comorbid Condition Value Set for Valvular disease"/>
 <artifact id="ValueSet/elixhauser-weight-loss-vs" key="ValueSet-elixhauser-weight-loss-vs" name="Elixhauser Comorbid Condition Value Set for Weight loss"/>
 <artifact id="ValueSet/elixhauser-diabetes-complicated-vs" key="ValueSet-elixhauser-diabetes-complicated-vs" name="Elixhauser Comorbid Condition Value Set for diabetes with chronic complications"/>
-<artifact id="ValueSet/elixhauser-uncomplicated-diabetes-vs" key="ValueSet-elixhauser-uncomplicated-diabetes-vs" name="Elixhauser Comorbid Condition Value Set for diabetes without chronic complications"/>
+<artifact id="ValueSet/elixhauser-diabetes-uncomplicated-vs" key="ValueSet-elixhauser-diabetes-uncomplicated-vs" name="Elixhauser Comorbid Condition Value Set for diabetes without chronic complications"/>
 <artifact id="ValueSet/elixhauser-drug-abuse-vs" key="ValueSet-elixhauser-drug-abuse-vs" name="Elixhauser Comorbid Condition Value Set for drug abuse"/>
-<artifact id="ValueSet/elixhauser-solid-tumor-vs" key="ValueSet-elixhauser-solid-tumor-vs" name="Elixhauser Comorbid Condition Value Set for solid tumors without metastases"/>
+<artifact id="ValueSet/elixhauser-cancer-solid-tumor-in-situ-vs" key="ValueSet-elixhauser-cancer-solid-tumor-in-situ-vs" name="Elixhauser Comorbid Condition Value Set for malignant solid tumors in situ"/>
+<artifact id="ValueSet/elixhauser-cancer-solid-tumor-malignant-vs" key="ValueSet-elixhauser-cancer-solid-tumor-malignant-vs" name="Elixhauser Comorbid Condition Value Set for malignant solid tumors without metastases"/>
 <artifact id="CodeSystem/mcode-elixhauser-category" key="CodeSystem-mcode-elixhauser-category" name="Elixhauser Comorbidity Category"/>
 <artifact id="StructureDefinition/mcode-evidence-type" key="StructureDefinition-mcode-evidence-type" name="Evidence Type"/>
 <artifact deprecated="true" id="Extension/mcode-evidence-type-extension" key="evidence-type-extension" name="Evidence Type Extension"/>
@@ -167,7 +175,7 @@
 <artifact id="Observation/mCODECancerGeneticVariantExample2" key="Observation-mCODECancerGeneticVariantExample2" name="mCODECancerGeneticVariantExample2"/>
 <artifact deprecated="true" id="Example/mcode-cancer-genomics-report-example-01" key="mcode-cancer-genomics-report-example-01" name="mCODECancerGenomicsReportExample01"/>
 <artifact id="DiagnosticReport/mCODECancerGenomicsReportExample1" key="DiagnosticReport-mCODECancerGenomicsReportExample1" name="mCODECancerGenomicsReportExample1"/>
-<artifact id="Observation/mCODECancerRelatedComorbiditiesExample1" key="Observation-mCODECancerRelatedComorbiditiesExample1" name="mCODECancerRelatedComorbiditiesExample1"/>
+<artifact id="Observation/mCODECancerRelatedElixhauserComorbiditiesExample1" key="Observation-mCODECancerRelatedElixhauserComorbiditiesExample1" name="mCODECancerRelatedElixhauserComorbiditiesExample1"/>
 <artifact id="MedicationRequest/mCODECancerRelatedMedicationRequestExample1" key="MedicationRequest-mCODECancerRelatedMedicationRequestExample1" name="mCODECancerRelatedMedicationRequestExample1"/>
 <artifact id="MedicationRequest/mCODECancerRelatedMedicationRequestExample2" key="MedicationRequest-mCODECancerRelatedMedicationRequestExample2" name="mCODECancerRelatedMedicationRequestExample2"/>
 <artifact deprecated="true" id="Example/mcode-cancer-related-medication-statement-example-01" key="mcode-cancer-related-medication-statement-example-01" name="mCODECancerRelatedMedicationStatementExample01"/>
@@ -235,7 +243,7 @@
 <artifact id="Observation/scenario1-mcode-cancer-genetic-variant" key="Observation-scenario1-mcode-cancer-genetic-variant" name="scenario1-mcode-cancer-genetic-variant"/>
 <artifact id="DiagnosticReport/scenario1-mcode-cancer-genomics-report" key="DiagnosticReport-scenario1-mcode-cancer-genomics-report" name="scenario1-mcode-cancer-genomics-report"/>
 <artifact id="Patient/scenario1-mcode-cancer-patient" key="Patient-scenario1-mcode-cancer-patient" name="scenario1-mcode-cancer-patient"/>
-<artifact id="Observation/scenario1-mcode-cancer-related-comorbidities" key="Observation-scenario1-mcode-cancer-related-comorbidities" name="scenario1-mcode-cancer-related-comorbidities"/>
+<artifact id="Observation/scenario1-mcode-cancer-related-elixhauser-comorbidities" key="Observation-scenario1-mcode-cancer-related-elixhauser-comorbidities" name="scenario1-mcode-cancer-related-elixhauser-comorbidities"/>
 <artifact id="MedicationRequest/scenario1-mcode-cancer-related-medication-anastrozole" key="MedicationRequest-scenario1-mcode-cancer-related-medication-anastrozole" name="scenario1-mcode-cancer-related-medication-anastrozole"/>
 <artifact id="MedicationRequest/scenario1-mcode-cancer-related-medication-chemo-cyclophosphamide" key="MedicationRequest-scenario1-mcode-cancer-related-medication-chemo-cyclophosphamide" name="scenario1-mcode-cancer-related-medication-chemo-cyclophosphamide"/>
 <artifact id="MedicationRequest/scenario1-mcode-cancer-related-medication-chemo-doxorubicin" key="MedicationRequest-scenario1-mcode-cancer-related-medication-chemo-doxorubicin" name="scenario1-mcode-cancer-related-medication-chemo-doxorubicin"/>

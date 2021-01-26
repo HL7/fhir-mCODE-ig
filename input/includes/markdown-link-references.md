@@ -8,7 +8,7 @@
 [CancerGeneticVariant]: StructureDefinition-mcode-cancer-genetic-variant.html
 [CancerGenomicsReport]: StructureDefinition-mcode-cancer-genomics-report.html
 [CancerPatient]: StructureDefinition-mcode-cancer-patient.html
-[CancerRelatedComorbidities]: StructureDefinition-mcode-cancer-related-comorbidities.html
+[CancerRelatedElixhauserComorbidities]: StructureDefinition-mcode-cancer-related-elixhauser-comorbidities.html
 [CancerRelatedMedicationRequest]: StructureDefinition-mcode-cancer-related-medication-request.html
 [CancerRelatedSurgicalProcedure]: StructureDefinition-mcode-cancer-related-surgical-procedure.html
 [ComorbidConditionCode]: StructureDefinition-mcode-comorbid-condition-code.html
@@ -75,7 +75,7 @@
 [ElixhauserHypothyroidismVS]: ValueSet-elixhauser-hypothyroidism-vs.html
 [ElixhauserLiverDiseaseVS]: ValueSet-elixhauser-liver-disease-vs.html
 [ElixhauserLymphomaVS]: ValueSet-elixhauser-lymphoma-vs.html
-[ElixhauserMetastaticCancerVS]: ValueSet-elixhauser-metastatic-cancer-vs.html
+[ElixhauserCancerMetastaticVS]: ValueSet-elixhauser-cancer-metastatic-vs.html
 [ElixhauserObesityVS]: ValueSet-elixhauser-obesity-vs.html
 [ElixhauserOtherNeurologicalVS]: ValueSet-elixhauser-other-neurological-vs.html
 [ElixhauserParalysisVS]: ValueSet-elixhauser-paralysis-vs.html
@@ -84,7 +84,8 @@
 [ElixhauserPulmonaryCirculationDisordersVS]: ValueSet-elixhauser-pulmonary-circulation-disorders-vs.html
 [ElixhauserRenalFailureVS]: ValueSet-elixhauser-renal-failure-vs.html
 [ElixhauserRheumatoidArthritisVS]: ValueSet-elixhauser-rheumatoid-arthritis-vs.html
-[ElixhauserSolidTumorVS]: ValueSet-elixhauser-solid-tumor-vs.html
+[ElixhauserCancerSolidTumorInSituVS]: ValueSet-elixhauser-cancer-solid-tumor-in-situ-vs.html
+[ElixhauserCancerSolidTumorMalignantVS]: ValueSet-elixhauser-cancer-solid-tumor-malignant-vs.html
 [ElixhauserUlcerVS]: ValueSet-elixhauser-ulcer-vs.html
 [ElixhauserValvularDiseaseVS]: ValueSet-elixhauser-valvular-disease-vs.html
 [ElixhauserWeightLossVS]: ValueSet-elixhauser-weight-loss-vs.html

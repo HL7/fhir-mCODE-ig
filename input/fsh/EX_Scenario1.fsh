@@ -39,15 +39,15 @@ Description: "Extended example 1: example showing disease status (patient's cond
 * valueCodeableConcept = SCT#268910001 "Patient's condition improved (finding)"
 
 
-Instance: scenario1-mcode-cancer-related-comorbidities
-InstanceOf: CancerRelatedComorbidities
+Instance: scenario1-mcode-cancer-related-elixhauser-comorbidities
+InstanceOf: CancerRelatedElixhauserComorbidities
 Description: "mCODE Example for Cancer-Related Comorbidities"
 * subject = Reference(scenario1-mcode-cancer-patient)
 * performer = Reference(scenario1-us-core-practitioner)
 * status = #final "final"
 * component[depression].valueCodeableConcept = SCT#52101004 "Present (qualifier value)"
 * component[hypertensionComplicated].valueCodeableConcept = SCT#52101004 "Present (qualifier value)"
-* component[rheumatoidArthritis].valueCodeableConcept = SCT#2667000 "Absent (qualifier value)"
+* component[arthropathy].valueCodeableConcept = SCT#2667000 "Absent (qualifier value)"
 * component[congestiveHeartFailure].valueCodeableConcept = SCT#2667000 "Absent (qualifier value)"
 * component[chronicPulmonaryDisease].valueCodeableConcept = SCT#2667000 "Absent (qualifier value)"
 * component[diabetesUncomplicated].valueCodeableConcept = SCT#2667000 "Absent (qualifier value)"
@@ -55,7 +55,7 @@ Description: "mCODE Example for Cancer-Related Comorbidities"
 * component[obesity].valueCodeableConcept = SCT#2667000 "Absent (qualifier value)"
 * component[peripheralVascularDisease].valueCodeableConcept = SCT#2667000 "Absent (qualifier value)"
 * component[pulmonaryCirculationDisorders].valueCodeableConcept = SCT#2667000 "Absent (qualifier value)"
-* component[renalFailure].valueCodeableConcept = SCT#2667000 "Absent (qualifier value)"
+* component[renalFailureModerate].valueCodeableConcept = SCT#2667000 "Absent (qualifier value)"
 * component[drugAbuse].valueCodeableConcept = SCT#261665006 "Unknown (qualifier value)"
 * component[hypothyroidism].valueCodeableConcept = SCT#261665006 "Unknown (qualifier value)"
 * component[depression].extension[conditionReference].valueReference = Reference(scenario1-mcode-comorbid-condition-depression)

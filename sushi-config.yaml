@@ -45,10 +45,11 @@ menu:
   FHIR Artifacts:
     Profiles: "artifacts.html#1"
     Extensions: "artifacts.html#8"
-    "Value sets &amp; code systems": "artifacts.html#9"
+    Value Sets: "artifacts.html#9"
+    Code Systems: "artifacts.html#11"
     Examples: "examples.html"
-    "Conformance resources": "artifacts.html#14"
-    "Experimental resources": "experimental.html"
+    Conformance Resources: "artifacts.html#14"
+    Experimental Resources: "experimental.html"
     All artifacts: "artifacts.html"
   Downloads: downloads.html
   Change Log: change_log.html
@@ -64,6 +65,7 @@ groups:
     description: Profiles in the [mCODE **Patient** Group](index.html#patient-group).
     resources:
       - StructureDefinition/mcode-cancer-patient
+      - StructureDefinition/comorbidities-elixhauser
       - StructureDefinition/mcode-cancer-related-elixhauser-comorbidities
       - StructureDefinition/mcode-ecog-performance-status
       - StructureDefinition/mcode-karnofsky-performance-status
@@ -147,6 +149,9 @@ groups:
     name: Value Sets
     description: These define sets of codes used by systems conforming with this implementation guide. Comorbid condition-related value sets appear in a separate section below.
     resources:
+      - ValueSet/brachytherapy-device-vs
+      - ValueSet/brachytherapy-modality-vs
+      - ValueSet/brachytherapy-technique-vs
       - ValueSet/mcode-cancer-body-location-vs
       - ValueSet/mcode-cancer-disease-status-evidence-type-vs
       - ValueSet/mcode-cancer-disorder-vs
@@ -162,10 +167,6 @@ groups:
       - ValueSet/mcode-location-qualifier-vs
       - ValueSet/mcode-present-absent-unknown
       - ValueSet/mcode-primary-or-uncertain-behavior-cancer-disorder-vs
-      - ValueSet/teleradiotherapy-modality-vs
-      - ValueSet/teleradiotherapy-technique-vs
-      - ValueSet/brachytherapy-modality-vs
-      - ValueSet/brachytherapy-technique-vs
       - ValueSet/mcode-radiation-target-body-site-vs
       - ValueSet/mcode-secondary-cancer-disorder-vs
       - ValueSet/mcode-tnm-distant-metastases-category-vs
@@ -175,6 +176,10 @@ groups:
       - ValueSet/mcode-treatment-intent-vs
       - ValueSet/mcode-treatment-termination-reason-vs
       - ValueSet/mcode-tumor-marker-test-vs
+      - ValueSet/teleradiotherapy-device-vs
+      - ValueSet/teleradiotherapy-modality-vs
+      - ValueSet/teleradiotherapy-technique-vs
+
 
 
   ValueSetsComorbidCondition:
@@ -224,8 +229,12 @@ groups:
     name: Code Systems
     description: These define new code systems used by systems conforming with this implementation guide
     resources:
+      - CodeSystem/brachytherapy-device-cs
+      - CodeSystem/brachytherapy-technique-cs
       - CodeSystem/mcode-elixhauser-category
       - CodeSystem/mcode-other-code-cs
+      - CodeSystem/teleradiotherapy-device-cs
+      - CodeSystem/teleradiotherapy-technique-cs
 
   # Examples
   GenericExamples:

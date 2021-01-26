@@ -22,7 +22,7 @@ Description: "General structure for capturing comorbid conditions with respect t
 Profile: ComorbiditiesElixhauser
 Parent: ComorbiditiesParent
 Id: comorbidities-elixhauser
-Description: "Comorbid condition checklist and optional risk score, using Elixhauser comorbidity categories as defined by the Agency for Healthcare Research and Quality (AHRQ) Healthcare Cost and Utilization Project (H-CUP). The Elixhauser Comorbidity Index is a method of categorizing comorbidities of patients based on the International Classification of Diseases (ICD) diagnosis codes found in administrative data, such as hospital abstracts data. Each comorbidity category is dichotomous -- it is either present or it is not. The Index can be used to predict hospital resource use and in-hospital mortality (Elixhauser et al., 1998)."
+Description: "Comorbid condition checklist and optional risk score, using Elixhauser comorbidity categories as defined by the Agency for Healthcare Research and Quality (AHRQ) Healthcare Cost and Utilization Project (H-CUP). The Elixhauser Comorbidity Index is a method of categorizing comorbidities of patients based on the International Classification of Diseases (ICD) diagnosis codes found in administrative data, such as hospital abstracts data. Each comorbidity category is dichotomous -- it is either present or it is not. The Index can be used to predict hospital resource use and in-hospital mortality (see <https://pubmed.ncbi.nlm.nih.gov/9431328> for details)."
 * ^abstract = false
 * code = ElixhauserAHRQ_CS#ElixhauserAHRQ
 * insert ObservationComponentSlicingRules

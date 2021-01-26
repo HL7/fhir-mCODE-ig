@@ -143,7 +143,7 @@ Description: "mCODE Example for Practitioner"
 
 Instance: mCODEDepressionExample1
 InstanceOf: USCoreCondition
-Description: "mCODE Example of Depression (as Comorbid condition), part of mCODECancerRelatedElixhauserComorbiditiesExample01"
+Description: "mCODE Example of Depression (as Comorbid condition), part of mCODECancerRelatedElixhauserComorbiditiesExample1"
 * subject = Reference(mCODEPatientExample1)
 * asserter = Reference(mCODEPractitionerExample1)
 * category = CondCat#problem-list-item

@@ -9,7 +9,7 @@ Description: "General structure for capturing comorbid conditions with respect t
 * focus ^definition = "The comorbid conditions may be defined with respect to a particular condition. For example, the US Centers for Disease Control (CDC) has a list of comorbid conditions important to COVID-19. In this case, the focus would be COVID-19 and the comorbid condition categories would be those called out by CDC, namely obesity, renal disease, respiratory disease, etc."
 * component.value[x] only CodeableConcept
 * component.value[x] from PresentAbsentUnknownVS (required)
-* component ^definition = "Component representing the presence or absence of the named comorbidity with optional condition code(s) or reference to the actual condition(s)."
+* component ^definition = "Component representing the presence or absence of the named comorbidity, with optional condition code(s) or reference to the actual condition(s)."
 * component.extension contains 
      ComorbidConditionCode named conditionCode 0..* and
      ComorbidConditionReference named conditionReference 0..*

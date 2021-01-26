@@ -51,8 +51,8 @@ Description: "Value set with answers present, absent, and unknown."
 * SCT#2667000 "Absent (qualifier value)"
 * SCT#261665006 "Unknown (qualifier value)"
 
-ValueSet:  ElixhauserHIVAIDSVS
-Id: elixhauser-hiv-aids-vs
+ValueSet:  ElixhauserAidsVS
+Id: elixhauser-aids-vs
 Title: "Elixhauser Comorbid Condition Value Set for HIV-AIDS"
 Description:    "Elixhauser Comorbid Condition Value Set for HIV-AIDS. ICD-10 codes are drawn from https://www.hcup-us.ahrq.gov/toolssoftware/comorbidityicd10/comorbidity_icd10.jsp, version 2021.1"
 * ICD10CM#O98711 "Human immunodeficiency virus [HIV] disease complicating pregnancy, first trimester"
@@ -1099,7 +1099,7 @@ Description:    "Elixhauser Comorbid Condition Value Set for Coagulation Deficie
 
 
 ValueSet:  ElixhauserCerebrovascularDiseaseVS
-Id: elixhauser-cerebrovascular disease-vs
+Id: elixhauser-cerebrovascular-disease-vs
 Title: "Elixhauser Comorbid Condition Value Set for Cerebrovascular Disease"
 Description:    "Elixhauser Comorbid Condition Value Set for cerebrovascular disease. ICD-10 codes are drawn from https://www.hcup-us.ahrq.gov/toolssoftware/comorbidityicd10/comorbidity_icd10.jsp, version 2021.1"
 * ICD10CM#G450 "Vertebro-basilar artery syndrome"
@@ -1441,7 +1441,7 @@ Description:    "Elixhauser Comorbid Condition Value Set for Depression. ICD-10 
 
 
 ValueSet:  ElixhauserDiabetesUncomplicatedVS
-Id: elixhauser-uncomplicated-diabetes-vs
+Id: elixhauser-diabetes-uncomplicated-vs
 Title: "Elixhauser Comorbid Condition Value Set for diabetes without chronic complications"
 Description:    "Elixhauser Comorbid Condition Value Set for diabetes without chronic complications. ICD-10 codes are drawn from https://www.hcup-us.ahrq.gov/toolssoftware/comorbidityicd10/comorbidity_icd10.jsp, version 2021.1"
 * ICD10CM#E0800 "Diabetes mellitus due to underlying condition with hyperosmolarity without nonketotic hyperglycemic-hyperosmolar coma (NKHHC"
@@ -2915,8 +2915,8 @@ Description:    "Elixhauser Comorbid Condition Value Set for Leukemia. ICD-10 co
 * ICD10CM#C9591 "Leukemia, unspecified, in remission"
 * ICD10CM#C9592 "Leukemia, unspecified, in relapse"
 
-ValueSet:  ElixhauserMetastaticCancerVS
-Id: elixhauser-metastatic-cancer-vs
+ValueSet:  ElixhauserCancerMetastaticVS
+Id: elixhauser-cancer-metastatic-vs
 Title: "Elixhauser Comorbid Condition Value Set for Metastatic cancer"
 Description:    "Elixhauser Comorbid Condition Value Set for Metastatic cancer. ICD-10 codes are drawn from https://www.hcup-us.ahrq.gov/toolssoftware/comorbidityicd10/comorbidity_icd10.jsp, version 2021.1"
 * ICD10CM#C770 "Sec and unsp malig neoplasm of nodes of head, face and neck"
@@ -3988,8 +3988,8 @@ Description:    "Elixhauser Comorbid Condition Value Set for Severe Renal Failur
 * ICD10CM#Z992 "Dependence on renal dialysis"
 
 
-ValueSet:  ElixhauserSolidTumorMalignantVS
-Id: elixhauser-solid-tumor-malignant-vs
+ValueSet:  ElixhauserCancerSolidTumorMalignantVS
+Id: elixhauser-cancer-solid-tumor-malignant-vs
 Title: "Elixhauser Comorbid Condition Value Set for malignant solid tumors without metastases"
 Description:    "Elixhauser Comorbid Condition Value Set for malignant solid tumors without metastases. ICD-10 codes are drawn from https://www.hcup-us.ahrq.gov/toolssoftware/comorbidityicd10/comorbidity_icd10.jsp, version 2021.1"
 * ICD10CM#C000 "Malignant neoplasm of external upper lip"
@@ -4590,8 +4590,8 @@ Description:    "Elixhauser Comorbid Condition Value Set for malignant solid tum
 * ICD10CM#E3122 "Multiple endocrine neoplasia [MEN] type IIA"
 * ICD10CM#E3123 "Multiple endocrine neoplasia [MEN] type IIB"
 
-ValueSet:  ElixhauserSolidTumorInSituVS
-Id: elixhauser-solid-tumor-in-situ-vs
+ValueSet:  ElixhauserCancerSolidTumorInSituVS
+Id: elixhauser-cancer-solid-tumor-in-situ-vs
 Title: "Elixhauser Comorbid Condition Value Set for malignant solid tumors in situ"
 Description:    "Elixhauser Comorbid Condition Value Set for malignant solid tumors in situ. ICD-10 codes are drawn from https://www.hcup-us.ahrq.gov/toolssoftware/comorbidityicd10/comorbidity_icd10.jsp, version 2021.1"
 * ICD10CM#D0000 "Carcinoma in situ of oral cavity, unspecified site"

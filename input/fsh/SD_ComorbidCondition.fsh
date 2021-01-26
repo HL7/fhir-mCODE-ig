@@ -9,6 +9,7 @@ Description: "General structure for capturing comorbid conditions with respect t
 * focus ^definition = "The comorbid conditions may be defined with respect to a particular condition. For example, the CDC has a list of comorbid conditions important to COVID-19. In this case, the focus would be COVID-19 and the comorbid condition categories would be those called out by CDC, namely obesity, renal disease, respiratory disease, etc."
 * component.value[x] only CodeableConcept
 * component.value[x] from PresentAbsentUnknownVS (required)
+* component ^definition = "Component representing the presence or absence of the named comorbidity with optional condition code(s) or reference to the actual condition(s)."
 * component.extension contains 
      ComorbidConditionCode named conditionCode 0..* and
      ComorbidConditionReference named conditionReference 0..*
@@ -24,158 +25,167 @@ Description: "Comorbid condition checklist and optional risk score, using Elixha
 * insert ObservationComponentSlicingRules
 // slices
 * component contains 
+    aids 0..1 and
     alcoholAbuse 0..1 and
-    cardiacArrhythmia 0..1 and
     deficiencyAnemia 0..1 and
-    rheumatoidArthritis 0..1 and
+    arthropathy 0..1 and
     bloodLossAnemia 0..1 and
+    cancerLeukemia 0..1 and
+    cancerLymphoma 0..1 and
+    cancerMetastatic 0..1 and
+    cancerSolidInSitu 0..1 and
+    cancerSolidMalignant 0..1 and
+    cerebrovascular 0..1 and
     congestiveHeartFailure 0..1 and
-    chronicPulmonaryDisease 0..1 and
-    coagulationDeficiency 0..1 and
+    coagulopathy 0..1 and
+    dementia 0..1 and
     depression 0..1 and
-    diabetesUncomplicated 0..1 and
     diabetesComplicated 0..1 and
+    diabetesUncomplicated 0..1 and
     drugAbuse 0..1 and
-    hIVAIDS 0..1 and
-    hypertensionUncomplicated 0..1 and
     hypertensionComplicated 0..1 and
-    hypothyroidism 0..1 and
-    liverDisease 0..1 and
-    fluidElectrolyteDisorders 0..1 and
-    neurological 0..1 and
+    hypertensionUncomplicated 0..1 and
+    liverDiseaseMild 0..1 and
+    liverDiseaseSevere 0..1 and
+    chronicPulmonaryDisease 0..1 and
+    neurologicalMovement 0..1 and
+    neurologicalOther 0..1 and
+    neurologicalSeizure 0..1 and
     obesity 0..1 and
     paralysis 0..1 and
     peripheralVascularDisease 0..1 and
     psychoses 0..1 and
     pulmonaryCirculationDisorders 0..1 and
-    renalFailure 0..1 and
+    renalFailureModerate 0..1 and
+    renalFailureSevere 0..1 and
+    hypothyroidism 0..1 and
+    thyroidOther 0..1 and
     ulcer 0..1 and
     valvularDisease 0..1 and
     weightLoss 0..1
 // codes and definitions
+* component[aids].code = ElixhauserCategoryCS#AIDS
+* component[aids] ^short = "Acquired Immune Deficiency Syndrome"
 * component[alcoholAbuse].code = ElixhauserCategoryCS#ALCOHOL
-* component[alcoholAbuse] ^short = "Alcohol Abuse Comorbidity"
-* component[alcoholAbuse] ^definition = "Component representing the presence or absence of the named comorbidity with optional condition code(s) or reference to the actual condition(s)."
-* component[cardiacArrhythmia].code = ElixhauserCategoryCS#ARRHYTH
-* component[cardiacArrhythmia] ^short = "Cardiac Arrhythmia Comorbidity"
-* component[cardiacArrhythmia] ^definition = "Component representing the presence or absence of the named comorbidity with optional condition code(s) or reference to the actual condition(s)."
-* component[deficiencyAnemia].code = ElixhauserCategoryCS#ANEMDEF
-* component[deficiencyAnemia] ^short = "DeficiencyAnemia Comorbidity"
-* component[deficiencyAnemia] ^definition = "Component representing the presence or absence of the named comorbidity with optional condition code(s) or reference to the actual condition(s)."
-* component[rheumatoidArthritis].code = ElixhauserCategoryCS#ARTH
-* component[rheumatoidArthritis] ^short = "Rheumatoid Arthritis Comorbidity"
-* component[rheumatoidArthritis] ^definition = "Component representing the presence or absence of the named comorbidity with optional condition code(s) or reference to the actual condition(s)."
+* component[alcoholAbuse] ^short = "Alcohol Abuse"
+* component[deficiencyAnemia].code = ElixhauserCategoryCS#ANEMDF
+* component[deficiencyAnemia] ^short = "DeficiencyAnemia"
+* component[arthropathy].code = ElixhauserCategoryCS#ARTH
+* component[arthropathy] ^short = "Arthropathy"
 * component[bloodLossAnemia].code = ElixhauserCategoryCS#BLDLOSS
-* component[bloodLossAnemia] ^short = "Blood Loss Anemia Comorbidity"
-* component[bloodLossAnemia] ^definition = "Component representing the presence or absence of the named comorbidity with optional condition code(s) or reference to the actual condition(s)."
+* component[bloodLossAnemia] ^short = "Chronic Blood Loss Anemia"
+* component[cancerLeukemia].code = ElixhauserCategoryCS#CANCER_LEUK
+* component[cancerLeukemia] ^short = "Leukemia"
+* component[cancerLymphoma].code = ElixhauserCategoryCS#CANCER_LYMPH
+* component[cancerLymphoma] ^short = "Lymphoma"
+* component[cancerMetastatic].code = ElixhauserCategoryCS#CANCER_METS
+* component[cancerMetastatic] ^short = "Metastatic Cancer"
+* component[cancerSolidInSitu].code = ElixhauserCategoryCS#CANCER_NSITU
+* component[cancerSolidInSitu] ^short = "Solid tumor without metastasis, in situ"
+* component[cancerSolidMalignant].code = ElixhauserCategoryCS#CANCER_SOLID
+* component[cancerSolidMalignant] ^short = "Solid tumor without metastasis, malignant"
+* component[cerebrovascular].code = ElixhauserCategoryCS#CBVD
+* component[cerebrovascular] ^short = "Cerebrovascular disease"
 * component[congestiveHeartFailure].code = ElixhauserCategoryCS#CHF
-* component[congestiveHeartFailure] ^short = "CongestiveHeartFailure Comorbidity"
-* component[congestiveHeartFailure] ^definition = "Component representing the presence or absence of the named comorbidity with optional condition code(s) or reference to the actual condition(s)."
-* component[chronicPulmonaryDisease].code = ElixhauserCategoryCS#CHRNLUNG
-* component[chronicPulmonaryDisease] ^short = "ChronicPulmonaryDisease Comorbidity"
-* component[chronicPulmonaryDisease] ^definition = "Component representing the presence or absence of the named comorbidity with optional condition code(s) or reference to the actual condition(s)."
-* component[coagulationDeficiency].code = ElixhauserCategoryCS#COAG
-* component[coagulationDeficiency] ^short = "Coagulation Deficiency Comorbidity"
-* component[coagulationDeficiency] ^definition = "Component representing the presence or absence of the named comorbidity with optional condition code(s) or reference to the actual condition(s)."
+* component[congestiveHeartFailure] ^short = "CongestiveHeartFailure"
+* component[coagulopathy].code = ElixhauserCategoryCS#COAG
+* component[coagulopathy] ^short = "Coagulation Deficiency"
+* component[dementia].code = ElixhauserCategoryCS#DEMENTIA
+* component[dementia] ^short = "Dementia"
 * component[depression].code = ElixhauserCategoryCS#DEPRESS
-* component[depression] ^short = "Depression Comorbidity"
-* component[depression] ^definition = "Component representing the presence or absence of the named comorbidity with optional condition code(s) or reference to the actual condition(s)."
-* component[diabetesUncomplicated].code = ElixhauserCategoryCS#DM
-* component[diabetesUncomplicated] ^short = "Diabetes Uncomplicated Comorbidity"
-* component[diabetesUncomplicated] ^definition = "Component representing the presence or absence of the named comorbidity with optional condition code(s) or reference to the actual condition(s)."
-* component[diabetesComplicated].code = ElixhauserCategoryCS#DMCX
-* component[diabetesComplicated] ^short = "Diabetes Complicated Comorbidity"
-* component[diabetesComplicated] ^definition = "Component representing the presence or absence of the named comorbidity with optional condition code(s) or reference to the actual condition(s)."
-* component[drugAbuse].code = ElixhauserCategoryCS#DRUG
-* component[drugAbuse] ^short = "Drug Abuse Comorbidity"
-* component[drugAbuse] ^definition = "Component representing the presence or absence of the named comorbidity with optional condition code(s) or reference to the actual condition(s)."
-* component[hIVAIDS].code = ElixhauserCategoryCS#HIV
-* component[hIVAIDS] ^short = "HIV-AIDS Comorbidity"
-* component[hIVAIDS] ^definition = "Component representing the presence or absence of the named comorbidity with optional condition code(s) or reference to the actual condition(s)."
-* component[hypertensionUncomplicated].code = ElixhauserCategoryCS#HTN
-* component[hypertensionUncomplicated] ^short = "Hypertension Uncomplicated Comorbidity"
-* component[hypertensionUncomplicated] ^definition = "Component representing the presence or absence of the named comorbidity with optional condition code(s) or reference to the actual condition(s)."
-* component[hypertensionComplicated].code = ElixhauserCategoryCS#HTNCX
-* component[hypertensionComplicated] ^short = "Hypertension Complicated Comorbidity"
-* component[hypertensionComplicated] ^definition = "Component representing the presence or absence of the named comorbidity with optional condition code(s) or reference to the actual condition(s)."
-* component[hypothyroidism].code = ElixhauserCategoryCS#HYPOTHY
-* component[hypothyroidism] ^short = "Hypothyroidism Comorbidity"
-* component[hypothyroidism] ^definition = "Component representing the presence or absence of the named comorbidity with optional condition code(s) or reference to the actual condition(s)."
-* component[liverDisease].code = ElixhauserCategoryCS#LIVER
-* component[liverDisease] ^short = "Liver Disease Comorbidity"
-* component[liverDisease] ^definition = "Component representing the presence or absence of the named comorbidity with optional condition code(s) or reference to the actual condition(s)."
-* component[fluidElectrolyteDisorders].code = ElixhauserCategoryCS#LYTES
-* component[fluidElectrolyteDisorders] ^short = "Fluid Electrolyte Disorders Comorbidity"
-* component[fluidElectrolyteDisorders] ^definition = "Component representing the presence or absence of the named comorbidity with optional condition code(s) or reference to the actual condition(s)."
-* component[neurological].code = ElixhauserCategoryCS#NEURO
-* component[neurological] ^short = "Neurological Comorbidity"
-* component[neurological] ^definition = "Component representing the presence or absence of the named comorbidity with optional condition code(s) or reference to the actual condition(s)."
+* component[depression] ^short = "Depression"
+* component[diabetesUncomplicated].code = ElixhauserCategoryCS#DIAB_CX
+* component[diabetesUncomplicated] ^short = "Diabetes with chronic complications"
+* component[diabetesComplicated].code = ElixhauserCategoryCS#DIAB_UNCX
+* component[diabetesComplicated] ^short = "Diabetes without chronic complications"
+* component[drugAbuse].code = ElixhauserCategoryCS#DRUG_ABUSE
+* component[drugAbuse] ^short = "Drug Abuse"
+* component[hypertensionComplicated].code = ElixhauserCategoryCS#HTN_CX
+* component[hypertensionComplicated] ^short = "Hypertension, Complicated"
+* component[hypertensionUncomplicated].code = ElixhauserCategoryCS#HTN_UNCX
+* component[hypertensionUncomplicated] ^short = "Hypertension, Uncomplicated"
+* component[liverDiseaseMild].code = ElixhauserCategoryCS#LIVER_MLD
+* component[liverDiseaseMild] ^short = "Mild Liver Disease"
+* component[liverDiseaseSevere].code = ElixhauserCategoryCS#LIVER_SEV
+* component[liverDiseaseSevere] ^short = "Moderate to Severe Liver Disease"
+* component[chronicPulmonaryDisease].code = ElixhauserCategoryCS#LUNG_CHRONIC
+* component[chronicPulmonaryDisease] ^short = "Chronic pulmonary disease"
+* component[neurologicalMovement].code = ElixhauserCategoryCS#NEURO_MOVT
+* component[neurologicalMovement] ^short = "Neurological disorders affecting movement"
+* component[neurologicalOther].code = ElixhauserCategoryCS#NEURO_OTH
+* component[neurologicalOther] ^short = "Other neurological disorders"
+* component[neurologicalSeizure].code = ElixhauserCategoryCS#NEURO_SEIZ
+* component[neurologicalSeizure] ^short = "Seizures and epilepsy"
 * component[obesity].code = ElixhauserCategoryCS#OBESE
-* component[obesity] ^short = "Obesity Comorbidity"
-* component[obesity] ^definition = "Component representing the presence or absence of the named comorbidity with optional condition code(s) or reference to the actual condition(s)."
-* component[paralysis].code = ElixhauserCategoryCS#PARA
-* component[paralysis] ^short = "Paralysis Comorbidity"
-* component[paralysis] ^definition = "Component representing the presence or absence of the named comorbidity with optional condition code(s) or reference to the actual condition(s)."
+* component[obesity] ^short = "Obesity"
+* component[paralysis].code = ElixhauserCategoryCS#PARALYSIS
+* component[paralysis] ^short = "Paralysis"
 * component[peripheralVascularDisease].code = ElixhauserCategoryCS#PERIVASC
-* component[peripheralVascularDisease] ^short = "Peripheral Vascular Disease Comorbidity"
-* component[peripheralVascularDisease] ^definition = "Component representing the presence or absence of the named comorbidity with optional condition code(s) or reference to the actual condition(s)."
+* component[peripheralVascularDisease] ^short = "Peripheral Vascular Disease"
 * component[psychoses].code = ElixhauserCategoryCS#PSYCH
-* component[psychoses] ^short = "Psychoses Comorbidity"
-* component[psychoses] ^definition = "Component representing the presence or absence of the named comorbidity with optional condition code(s) or reference to the actual condition(s)."
+* component[psychoses] ^short = "Psychoses"
 * component[pulmonaryCirculationDisorders].code = ElixhauserCategoryCS#PULMCIRC
-* component[pulmonaryCirculationDisorders] ^short = "Pulmonary Circulation Disorders Comorbidity"
-* component[pulmonaryCirculationDisorders] ^definition = "Component representing the presence or absence of the named comorbidity with optional condition code(s) or reference to the actual condition(s)."
-* component[renalFailure].code = ElixhauserCategoryCS#RENLFAIL
-* component[renalFailure] ^short = "Renal Failure Comorbidity"
-* component[renalFailure] ^definition = "Component representing the presence or absence of the named comorbidity with optional condition code(s) or reference to the actual condition(s)."
-* component[ulcer].code = ElixhauserCategoryCS#ULCER
-* component[ulcer] ^short = "Ulcer Comorbidity"
-* component[ulcer] ^definition = "Component representing the presence or absence of the named comorbidity with optional condition code(s) or reference to the actual condition(s)."
+* component[pulmonaryCirculationDisorders] ^short = "Pulmonary Circulation Disorders"
+* component[renalFailureModerate].code = ElixhauserCategoryCS#RENLFL_MOD
+* component[renalFailureModerate] ^short = "Moderate Renal Failure"
+* component[renalFailureSevere].code = ElixhauserCategoryCS#RENLFL_SEV
+* component[renalFailureSevere] ^short = "Severe Renal Failure"
+* component[hypothyroidism].code = ElixhauserCategoryCS#THYROID_HYPO
+* component[hypothyroidism] ^short = "Hypothyroidism"
+* component[thyroidOther].code = ElixhauserCategoryCS#THYROID_OTHER
+* component[thyroidOther] ^short = "Other Thyroid Disease"
+* component[ulcer].code = ElixhauserCategoryCS#ULCER_PEPTIC
+* component[ulcer] ^short = "Ulcer"
 * component[valvularDisease].code = ElixhauserCategoryCS#VALVE
-* component[valvularDisease] ^short = "Valvular Disease Comorbidity"
-* component[valvularDisease] ^definition = "Component representing the presence or absence of the named comorbidity with optional condition code(s) or reference to the actual condition(s)."
+* component[valvularDisease] ^short = "Valvular Disease"
 * component[weightLoss].code = ElixhauserCategoryCS#WGHTLOSS
-* component[weightLoss] ^short = "Weight Loss Comorbidity"
-* component[weightLoss] ^definition = "Component representing the presence or absence of the named comorbidity with optional condition code(s) or reference to the actual condition(s)."
+* component[weightLoss] ^short = "Weight Loss"
+
+
 // value[x] constraints
+* component[aids].extension[conditionCode].value[x] from ElixhauserAidsVS (extensible)
 * component[alcoholAbuse].extension[conditionCode].value[x] from ElixhauserAlcoholAbuseVS (extensible)
-* component[cardiacArrhythmia].extension[conditionCode].value[x] from ElixhauserCardiacArrhythmiaVS (extensible)
 * component[deficiencyAnemia].extension[conditionCode].value[x] from ElixhauserDeficiencyAnemiaVS (extensible)
-* component[rheumatoidArthritis].extension[conditionCode].value[x] from ElixhauserRheumatoidArthritisVS (extensible)
+* component[arthropathy].extension[conditionCode].value[x] from ElixhauserRheumatoidArthritisVS (extensible)
 * component[bloodLossAnemia].extension[conditionCode].value[x] from ElixhauserBloodLossAnemiaVS (extensible)
+* component[cancerLeukemia].extension[conditionCode].value[x] from ElixhauserCancerLeukemiaVS (extensible)
+* component[cancerLymphoma].extension[conditionCode].value[x] from ElixhauserCancerLymphomaVS (extensible)
+* component[cancerMetastatic].extension[conditionCode].value[x] from ElixhauserCancerMetastaticVS (extensible)
+* component[cancerSolidInSitu].extension[conditionCode].value[x] from ElixhauserCancerSolidTumorInSituVS (extensible)
+* component[cancerSolidMalignant].extension[conditionCode].value[x] from ElixhauserCancerSolidTumorMalignantVS (extensible)
+* component[cerebrovascular].extension[conditionCode].value[x] from ElixhauserCerebrovascularDiseaseVS (extensible)
 * component[congestiveHeartFailure].extension[conditionCode].value[x] from ElixhauserCongestiveHeartFailureVS (extensible)
 * component[chronicPulmonaryDisease].extension[conditionCode].value[x] from ElixhauserChronicPulmonaryDiseaseVS (extensible)
-* component[coagulationDeficiency].extension[conditionCode].value[x] from ElixhauserCoagulationDeficiencyVS (extensible)
+* component[coagulopathy].extension[conditionCode].value[x] from ElixhauserCoagulationDeficiencyVS (extensible)
+* component[dementia].extension[conditionCode].value[x] from ElixhauserDementiaVS (extensible)
 * component[depression].extension[conditionCode].value[x] from ElixhauserDepressionVS (extensible)
-* component[diabetesUncomplicated].extension[conditionCode].value[x] from ElixhauserDiabetesUncomplicatedVS (extensible)
 * component[diabetesComplicated].extension[conditionCode].value[x] from ElixhauserDiabetesComplicatedVS (extensible)
+* component[diabetesUncomplicated].extension[conditionCode].value[x] from ElixhauserDiabetesUncomplicatedVS (extensible)
 * component[drugAbuse].extension[conditionCode].value[x] from ElixhauserDrugAbuseVS (extensible)
-* component[hIVAIDS].extension[conditionCode].value[x] from ElixhauserHIVAIDSVS (extensible)
-* component[hypertensionUncomplicated].extension[conditionCode].value[x] from ElixhauserHypertensionUncomplicatedVS (extensible)
 * component[hypertensionComplicated].extension[conditionCode].value[x] from ElixhauserHypertensionComplicatedVS (extensible)
-* component[hypothyroidism].extension[conditionCode].value[x] from ElixhauserHypothyroidismVS (extensible)
-* component[liverDisease].extension[conditionCode].value[x] from ElixhauserLiverDiseaseVS (extensible)
-* component[fluidElectrolyteDisorders].extension[conditionCode].value[x] from ElixhauserFluidElectrolyteDisordersVS (extensible)
-* component[neurological].extension[conditionCode].value[x] from ElixhauserOtherNeurologicalVS (extensible)
+* component[hypertensionUncomplicated].extension[conditionCode].value[x] from ElixhauserHypertensionUncomplicatedVS (extensible)
+* component[liverDiseaseMild].extension[conditionCode].value[x] from ElixhauserLiverDiseaseMildVS (extensible)
+* component[liverDiseaseSevere].extension[conditionCode].value[x] from ElixhauserLiverDiseaseSevereVS (extensible)
+* component[neurologicalMovement].extension[conditionCode].value[x] from ElixhauserNeurologicalMovementDisorderVS (extensible)
+* component[neurologicalOther].extension[conditionCode].value[x] from ElixhauserOtherNeurologicalVS (extensible)
+* component[neurologicalSeizure].extension[conditionCode].value[x] from ElixhauserNeurologicalSeizureDisorderVS (extensible)
 * component[obesity].extension[conditionCode].value[x] from ElixhauserObesityVS (extensible)
 * component[paralysis].extension[conditionCode].value[x] from ElixhauserParalysisVS (extensible)
 * component[peripheralVascularDisease].extension[conditionCode].value[x] from ElixhauserPeripheralVascularDiseaseVS (extensible)
 * component[psychoses].extension[conditionCode].value[x] from ElixhauserPsychosesVS (extensible)
 * component[pulmonaryCirculationDisorders].extension[conditionCode].value[x] from ElixhauserPulmonaryCirculationDisordersVS (extensible)
-* component[renalFailure].extension[conditionCode].value[x] from ElixhauserRenalFailureVS (extensible)
+* component[renalFailureModerate].extension[conditionCode].value[x] from ElixhauserRenalFailureModerateVS (extensible)
+* component[renalFailureSevere].extension[conditionCode].value[x] from ElixhauserRenalFailureSevereVS (extensible)
+* component[hypothyroidism].extension[conditionCode].value[x] from ElixhauserHypothyroidismVS (extensible)
+* component[thyroidOther].extension[conditionCode].value[x] from ElixhauserOtherThyroidDisorderVS (extensible)
 * component[ulcer].extension[conditionCode].value[x] from ElixhauserUlcerVS (extensible)
 * component[valvularDisease].extension[conditionCode].value[x] from ElixhauserValvularDiseaseVS (extensible)
 * component[weightLoss].extension[conditionCode].value[x] from ElixhauserWeightLossVS (extensible)
-
-
-
 
 Profile: CancerRelatedComorbidities
 Parent: ComorditiesElixhauser
 Id: mcode-cancer-related-comorbidities
 Title: "Cancer-Related Comorbidities"
 Description: "Comorbid condition checklist and optional risk score, using Elixhauser comorbidity categories. The comorbidities are cancer-related by virtue of restricting the index condition to a PrimaryCancerCondition."
-
 * focus only Reference(PrimaryCancerCondition)
-
 * focus and component and component.extension[conditionReference] and component.extension[conditionCode] and component.extension[conditionReference] MS

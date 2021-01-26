@@ -181,34 +181,41 @@ groups:
     name: Comorbid Condition-related Value Sets
     description: These define sets of codes used by systems conforming with this implementation guide.
     resources:
+      - ValueSet/elixhauser-aids-vs
       - ValueSet/elixhauser-alcohol-abuse-vs
-      - ValueSet/elixhauser-blood-loss-anemia-vs
-      - ValueSet/elixhauser-cardiac-arrhythmia-vs
-      - ValueSet/elixhauser-chronic-pulmonary-disease-vs
-      - ValueSet/elixhauser-coagulation-deficiency-vs
-      - ValueSet/elixhauser-congestive-heart-failure-vs
       - ValueSet/elixhauser-deficiency-anemia-vs
+      - ValueSet/elixhauser-rheumatoid-arthritis-vs
+      - ValueSet/elixhauser-blood-loss-anemia-vs
+      - ValueSet/elixhauser-cancer-leukemia-vs
+      - ValueSet/elixhauser-cancer-lymphoma-vs
+      - ValueSet/elixhauser-cancer-metastatic-vs
+      - ValueSet/elixhauser-cancer-solid-tumor-in-situ-vs
+      - ValueSet/elixhauser-cancer-solid-tumor-malignant-vs
+      - ValueSet/elixhauser-cerebrovascular-disease-vs
+      - ValueSet/elixhauser-congestive-heart-failure-vs
+      - ValueSet/elixhauser-coagulation-deficiency-vs
+      - ValueSet/elixhauser-dementia-vs
       - ValueSet/elixhauser-depression-vs
       - ValueSet/elixhauser-diabetes-complicated-vs
-      - ValueSet/elixhauser-uncomplicated-diabetes-vs
+      - ValueSet/elixhauser-diabetes-uncomplicated-vs
       - ValueSet/elixhauser-drug-abuse-vs
-      - ValueSet/elixhauser-fluid-electrolyte-vs
-      - ValueSet/elixhauser-hiv-aids-vs
       - ValueSet/elixhauser-hypertension-complicated-vs
       - ValueSet/elixhauser-hypertension-uncomplicated-vs
-      - ValueSet/elixhauser-hypothyroidism-vs
-      - ValueSet/elixhauser-liver-disease-vs
-      - ValueSet/elixhauser-lymphoma-vs
-      - ValueSet/elixhauser-metastatic-cancer-vs
-      - ValueSet/elixhauser-obesity-vs
+      - ValueSet/elixhauser-liver-disease-mild-vs
+      - ValueSet/elixhauser-liver-disease-severe-vs
+      - ValueSet/elixhauser-chronic-pulmonary-disease-vs
+      - ValueSet/elixhauser-neurological-movement-disorder-vs
       - ValueSet/elixhauser-other-neurological-vs
+      - ValueSet/elixhauser-neurological-seizure-disorder-vs
+      - ValueSet/elixhauser-obesity-vs
       - ValueSet/elixhauser-paralysis-vs
       - ValueSet/elixhauser-peripheral-vascular-disease-vs
       - ValueSet/elixhauser-psychoses-vs
       - ValueSet/elixhauser-pulmonary-circulation-disorders-vs
-      - ValueSet/elixhauser-renal-failure-vs
-      - ValueSet/elixhauser-rheumatoid-arthritis-vs
-      - ValueSet/elixhauser-solid-tumor-vs
+      - ValueSet/elixhauser-renal-failure-moderate-vs
+      - ValueSet/elixhauser-renal-failure-severe-vs
+      - ValueSet/elixhauser-hypothyroidism-vs
+      - ValueSet/elixhauser-other-thyroid-disorder-vs
       - ValueSet/elixhauser-ulcer-vs
       - ValueSet/elixhauser-valvular-disease-vs
       - ValueSet/elixhauser-weight-loss-vs

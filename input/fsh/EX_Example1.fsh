@@ -44,21 +44,14 @@ Description: "mCODE Example for Cancer-Related Comorbidities"
 * performer = Reference(mCODEPractitionerExample1)
 * status = #final "final"
 // present
-* component[cardiacArrhythmia].valueCodeableConcept = SCT#52101004 "Present (qualifier value)"
-* component[cardiacArrhythmia].extension[conditionCode].valueCodeableConcept = SCT#82838007 "Irregular tachycardia (disorder)"
-// present
 * component[depression].valueCodeableConcept = SCT#52101004 "Present (qualifier value)"
 * component[depression].extension[conditionReference].valueReference = Reference(mCODEDepressionExample1)
+* component[congestiveHeartFailure].valueCodeableConcept = SCT#52101004 "Present (qualifier value)"
 // absent
-* component[rheumatoidArthritis].valueCodeableConcept = SCT#2667000 "Absent (qualifier value)"
-* component[congestiveHeartFailure].valueCodeableConcept = SCT#2667000 "Absent (qualifier value)"
+* component[arthropathy].valueCodeableConcept = SCT#2667000 "Absent (qualifier value)"
 * component[chronicPulmonaryDisease].valueCodeableConcept = SCT#2667000 "Absent (qualifier value)"
-* component[diabetesUncomplicated].valueCodeableConcept = SCT#2667000 "Absent (qualifier value)"
-* component[diabetesComplicated].valueCodeableConcept = SCT#2667000 "Absent (qualifier value)"
 * component[obesity].valueCodeableConcept = SCT#2667000 "Absent (qualifier value)"
 * component[peripheralVascularDisease].valueCodeableConcept = SCT#2667000 "Absent (qualifier value)"
-* component[pulmonaryCirculationDisorders].valueCodeableConcept = SCT#2667000 "Absent (qualifier value)"
-* component[renalFailure].valueCodeableConcept = SCT#2667000 "Absent (qualifier value)"
 * component[drugAbuse].valueCodeableConcept = SCT#261665006 "Unknown (qualifier value)"
 * component[hypothyroidism].valueCodeableConcept = SCT#261665006 "Unknown (qualifier value)"
 

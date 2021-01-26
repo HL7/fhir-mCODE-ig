@@ -17,7 +17,7 @@ Description: "General structure for capturing comorbid conditions with respect t
 * component.code ^short = "Code representing the comorbidity category"
 * component.code ^definition = "The code identifying category of comorbidity, for example, congestive heart failure or severe renal disease. The category typically represents a set of specific diagnosis codes."
 * component.extension ^short = "Extensions to capture specific conditions that fall into the given category."
-* component.extension ^definition = "If more detail about the comorbid condition is desired, elements in this extension can be populated with a specific condition code or a reference to a Condition resource. The extension elements should be used only if the comorbidity category is present."
+* component.extension ^definition = "If more detail about the comorbid condition is desired, elements in this extension can be populated with a specific condition code or a reference to a Condition resource. The extension elements SHALL be used only if the comorbidity category is present."
 
 Profile: ComorbiditiesElixhauser
 Parent: ComorbiditiesParent

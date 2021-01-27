@@ -76,6 +76,17 @@ Description:  "Identifies a tumor. Whenever possible, a single resource conformi
 * location 1..1 MS // Tumor is meaningless without a location; parent profile is 0..1
 * patient only Reference(CancerPatient)
 
+// Use locationQualifier to identify a multifocal tumor, in addition to modifying body site
+* locationQualifier from http://hl7.org/fhir/ValueSet/bodystructure-relative-location (example)
+* locationQualifier ^short = "Body site modifier, and/or code identifying multifocal tumor"
+* locationQualifier ^slicing.discriminator.type = #pattern
+* locationQualifier ^slicing.discriminator.path = "$this.resolve().coding.code"
+* locationQualifier ^slicing.rules = #open
+* locationQualifier ^slicing.description = "Slicing by code to identify multifocal tumors"
+* locationQualifier contains multifocalTumor 0..* MS
+* locationQualifier[multifocalTumor].coding.code = SCT#524008 "Multifocal (qualifier value)"
+* locationQualifier[multifocalTumor] ^short = "Use to identify a multifocal tumor"
+* locationQualifier[multifocalTumor].coding.code ^short = "SNOMED 524008 \"Multifocal (qualifier value)\""
 
 Invariant: tumor-other-morphology-invariant
 Description: "If the code representing 'Other histology morphology behavior, specify' is used, a second code from outside the original value set must be present."

@@ -44,10 +44,11 @@ menu:
   FHIR Artifacts:
     Profiles: "artifacts.html#1"
     Extensions: "artifacts.html#8"
-    "Value sets &amp; code systems": "artifacts.html#9"
+    Value Sets: "artifacts.html#9"
+    Code Systems: "artifacts.html#11"
     Examples: "examples.html"
-    "Conformance resources": "artifacts.html#14"
-    "Experimental resources": "experimental.html"
+    Conformance Resources: "artifacts.html#14"
+    Experimental Resources: "experimental.html"
     All artifacts: "artifacts.html"
   Downloads: downloads.html
   Change Log: change_log.html
@@ -63,7 +64,8 @@ groups:
     description: Profiles in the [mCODE **Patient** Group](index.html#patient-group).
     resources:
       - StructureDefinition/mcode-cancer-patient
-      - StructureDefinition/mcode-cancer-related-comorbidities
+      - StructureDefinition/comorbidities-elixhauser
+      - StructureDefinition/mcode-cancer-related-elixhauser-comorbidities
       - StructureDefinition/mcode-ecog-performance-status
       - StructureDefinition/mcode-karnofsky-performance-status
       - StructureDefinition/mcode-patient-bundle
@@ -146,6 +148,9 @@ groups:
     name: Value Sets
     description: These define sets of codes used by systems conforming with this implementation guide. Comorbid condition-related value sets appear in a separate section below.
     resources:
+      - ValueSet/brachytherapy-device-vs
+      - ValueSet/brachytherapy-modality-vs
+      - ValueSet/brachytherapy-technique-vs
       - ValueSet/mcode-cancer-body-location-vs
       - ValueSet/mcode-cancer-disease-status-evidence-type-vs
       - ValueSet/mcode-cancer-disorder-vs
@@ -161,10 +166,6 @@ groups:
       - ValueSet/mcode-location-qualifier-vs
       - ValueSet/mcode-present-absent-unknown
       - ValueSet/mcode-primary-or-uncertain-behavior-cancer-disorder-vs
-      - ValueSet/teleradiotherapy-modality-vs
-      - ValueSet/teleradiotherapy-technique-vs
-      - ValueSet/brachytherapy-modality-vs
-      - ValueSet/brachytherapy-technique-vs
       - ValueSet/mcode-radiation-target-body-site-vs
       - ValueSet/mcode-secondary-cancer-disorder-vs
       - ValueSet/mcode-tnm-distant-metastases-category-vs
@@ -174,40 +175,51 @@ groups:
       - ValueSet/mcode-treatment-intent-vs
       - ValueSet/mcode-treatment-termination-reason-vs
       - ValueSet/mcode-tumor-marker-test-vs
+      - ValueSet/teleradiotherapy-device-vs
+      - ValueSet/teleradiotherapy-modality-vs
+      - ValueSet/teleradiotherapy-technique-vs
+
 
 
   ValueSetsComorbidCondition:
     name: Comorbid Condition-related Value Sets
     description: These define sets of codes used by systems conforming with this implementation guide.
     resources:
+      - ValueSet/elixhauser-aids-vs
       - ValueSet/elixhauser-alcohol-abuse-vs
-      - ValueSet/elixhauser-blood-loss-anemia-vs
-      - ValueSet/elixhauser-cardiac-arrhythmia-vs
-      - ValueSet/elixhauser-chronic-pulmonary-disease-vs
-      - ValueSet/elixhauser-coagulation-deficiency-vs
-      - ValueSet/elixhauser-congestive-heart-failure-vs
       - ValueSet/elixhauser-deficiency-anemia-vs
+      - ValueSet/elixhauser-rheumatoid-arthritis-vs
+      - ValueSet/elixhauser-blood-loss-anemia-vs
+      - ValueSet/elixhauser-cancer-leukemia-vs
+      - ValueSet/elixhauser-cancer-lymphoma-vs
+      - ValueSet/elixhauser-cancer-metastatic-vs
+      - ValueSet/elixhauser-cancer-solid-tumor-in-situ-vs
+      - ValueSet/elixhauser-cancer-solid-tumor-malignant-vs
+      - ValueSet/elixhauser-cerebrovascular-disease-vs
+      - ValueSet/elixhauser-congestive-heart-failure-vs
+      - ValueSet/elixhauser-coagulation-deficiency-vs
+      - ValueSet/elixhauser-dementia-vs
       - ValueSet/elixhauser-depression-vs
       - ValueSet/elixhauser-diabetes-complicated-vs
-      - ValueSet/elixhauser-uncomplicated-diabetes-vs
+      - ValueSet/elixhauser-diabetes-uncomplicated-vs
       - ValueSet/elixhauser-drug-abuse-vs
-      - ValueSet/elixhauser-fluid-electrolyte-vs
-      - ValueSet/elixhauser-hiv-aids-vs
       - ValueSet/elixhauser-hypertension-complicated-vs
       - ValueSet/elixhauser-hypertension-uncomplicated-vs
-      - ValueSet/elixhauser-hypothyroidism-vs
-      - ValueSet/elixhauser-liver-disease-vs
-      - ValueSet/elixhauser-lymphoma-vs
-      - ValueSet/elixhauser-metastatic-cancer-vs
-      - ValueSet/elixhauser-obesity-vs
+      - ValueSet/elixhauser-liver-disease-mild-vs
+      - ValueSet/elixhauser-liver-disease-severe-vs
+      - ValueSet/elixhauser-chronic-pulmonary-disease-vs
+      - ValueSet/elixhauser-neurological-movement-disorder-vs
       - ValueSet/elixhauser-other-neurological-vs
+      - ValueSet/elixhauser-neurological-seizure-disorder-vs
+      - ValueSet/elixhauser-obesity-vs
       - ValueSet/elixhauser-paralysis-vs
       - ValueSet/elixhauser-peripheral-vascular-disease-vs
       - ValueSet/elixhauser-psychoses-vs
       - ValueSet/elixhauser-pulmonary-circulation-disorders-vs
-      - ValueSet/elixhauser-renal-failure-vs
-      - ValueSet/elixhauser-rheumatoid-arthritis-vs
-      - ValueSet/elixhauser-solid-tumor-vs
+      - ValueSet/elixhauser-renal-failure-moderate-vs
+      - ValueSet/elixhauser-renal-failure-severe-vs
+      - ValueSet/elixhauser-hypothyroidism-vs
+      - ValueSet/elixhauser-other-thyroid-disorder-vs
       - ValueSet/elixhauser-ulcer-vs
       - ValueSet/elixhauser-valvular-disease-vs
       - ValueSet/elixhauser-weight-loss-vs
@@ -216,8 +228,12 @@ groups:
     name: Code Systems
     description: These define new code systems used by systems conforming with this implementation guide
     resources:
+      - CodeSystem/brachytherapy-device-cs
+      - CodeSystem/brachytherapy-technique-cs
       - CodeSystem/mcode-elixhauser-category
       - CodeSystem/mcode-other-code-cs
+      - CodeSystem/teleradiotherapy-device-cs
+      - CodeSystem/teleradiotherapy-technique-cs
 
   # Examples
   GenericExamples:
@@ -234,7 +250,7 @@ groups:
       - Observation/mCODECancerDiseaseStatusExample1
       - Observation/mCODECancerGeneticVariantExample1
       - Observation/mCODECancerGeneticVariantExample2
-      - Observation/mCODECancerRelatedComorbiditiesExample1
+      - Observation/mCODECancerRelatedElixhauserComorbiditiesExample1
       - Observation/mCODEECOGPerformanceStatusExample1
       - Observation/mCODEGenomicRegionStudiedExample1
       - Observation/mCODEKarnofskyPerformanceStatusExample1
@@ -276,7 +292,7 @@ groups:
       - Observation/scenario1-body-weight
       - Observation/scenario1-mcode-cancer-disease-status
       - Observation/scenario1-mcode-cancer-genetic-variant
-      - Observation/scenario1-mcode-cancer-related-comorbidities
+      - Observation/scenario1-mcode-cancer-related-elixhauser-comorbidities
       - Observation/scenario1-mcode-ecog-performance-status
       - Observation/scenario1-mcode-genomic-region-studied
       - Observation/scenario1-mcode-tnm-clinical-distant-metastases-category
@@ -337,19 +353,3 @@ groups:
       - Observation/example1-mcode-tumor-size
       - BodyStructure/example1-mcode-tumor
 
-  ExperimentalResourcesAdverseEvent:
-    name: Experimental Resources - Adverse Event
-    description: These resources related to adverse events are considered [experimental](experimental.html).
-    resources:
-      - StructureDefinition/ctc-adverse-event
-      - StructureDefinition/adverse-event-expectation
-      - StructureDefinition/adverse-event-resolved-date
-      - StructureDefinition/ctcae-grade
-      - ValueSet/ctcae-preferred-term-value-set
-      - ValueSet/adverse-event-expectation-value-set
-      - ValueSet/adverse-event-seriousness-value-set
-      - ValueSet/adverse-event-relatedness-value-set
-      - ValueSet/ctcae-grade-value-set
-      - CodeSystem/ctcae-grade-code-system
-      - AdverseEvent/ctc-adverse-event-example-1
-      - AdverseEvent/ctc-adverse-event-example-2

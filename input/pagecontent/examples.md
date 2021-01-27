@@ -10,7 +10,7 @@ This section provides some examples how mCODE elements may be represented in a F
 
 * **Pathological Staging Classification**: <a href="Observation-mCODETNMPathologicalStageGroupExample1.html">mCODETNMPathologicalStageGroupExample1</a>, <a href="Observation-mCODETNMPathologicalPrimaryTumorCategoryExample1.html">mCODETNMPathologicalPrimaryTumorCategoryExample1</a>, <a href="Observation-mCODETNMPathologicalRegionalNodesCategoryExample1.html">mCODETNMPathologicalRegionalNodesCategoryExample1</a> and <a href="Observation-mCODETNMPathologicalDistantMetastasesCategoryExample1.html">mCODETNMPathologicalDistantMetastasesCategoryExample1</a> specify the pathologic T, N, and M categories for <a href="Condition-mCODEPrimaryCancerConditionExample1.html">mCODEPrimaryCancerConditionExample1</a>.
 
-* **Comorbidities**:  <a href="Observation-mCODECancerRelatedComorbiditiesExample1.html">mCODECancerRelatedComorbiditiesExample1</a> shows an example for a cancer patient with cardiac arrhythmia and depression.
+* **Comorbidities**:  <a href="Observation-mCODECancerRelatedElixhauserComorbiditiesExample1.html">mCODECancerRelatedElixhauserComorbiditiesExample1</a> shows an example for a cancer patient with cardiac arrhythmia and depression.
  * **ECOG Performance Status**:  <a href="Observation-mCODEECOGPerformanceStatusExample1.html">mCODEECOGPerformanceStatusExample1</a> shows an example for a patient with an ECOG Performance Status of 1.
  * **Karnofsky Performance Status**: <a href="Observation-mCODEKarnofskyPerformanceStatusExample1.html">mCODEKarnofskyPerformanceStatusExample1</a> shows an example for a patient with a Karnofsky Performance Status of 80.
  * **Cancer Related Medication Request**: <a href="MedicationRequest-mCODECancerRelatedMedicationRequestExample1.html">mCODECancerRelatedMedicationRequestExample1</a> shows an example for a patient who is currently receiving gefitinib and <a href="MedicationRequest-mCODECancerRelatedMedicationRequestExample2.html">mCODECancerRelatedMedicationRequestExample2</a> shows an example for a patient who completed a treatment of getfitinib.
@@ -53,7 +53,7 @@ The patient is two years out from surgery and has undergone surveillance imaging
 
 * [`scenario1-mcode-cancer-patient`](Patient-scenario1-mcode-cancer-patient.html) ([CancerPatient])
 * [`scenario1-mcode-cancer-disease-status`](Observation-scenario1-mcode-cancer-disease-status.html) ([CancerDiseaseStatus])
-* [`scenario1-mcode-cancer-related-comorbidities`](Observation-scenario1-mcode-cancer-related-comorbidities.html) ([ComorbidCondition])
+* [`scenario1-mcode-cancer-related-elixhauser-comorbidities`](Observation-scenario1-mcode-cancer-related-elixhauser-comorbidities.html) ([ComorbidCondition])
 * [`scenario1-mcode-comorbid-condition-depression`](Condition-scenario1-mcode-comorbid-condition-depression.html) ([ComorbidCondition])
 * [`scenario1-mcode-comorbid-condition-hypertension`](Condition-scenario1-mcode-comorbid-condition-hypertension.html) ([ComorbidCondition])
 * [`scenario1-mcode-ecog-performance-status`](Observation-scenario1-mcode-ecog-performance-status.html) ([ECOGPerformanceStatus])
@@ -105,7 +105,7 @@ The patient is two years out from surgery and has undergone surveillance imaging
 [CancerRelatedMedicationRequest]: StructureDefinition-mcode-cancer-related-medication-request.html
 [CancerRelatedTeleradiotherapyPhase]: StructureDefinition-mcode-cancer-related-teleradiotherapy-phase.html
 [CancerRelatedSurgicalProcedure]: StructureDefinition-mcode-cancer-related-surgical-procedure.html
-[ComorbidCondition]: StructureDefinition-mcode-cancer-related-comorbidities.html
+[ComorbidCondition]: StructureDefinition-mcode-cancer-related-elixhauser-comorbidities.html
 [ECOGPerformanceStatus]: StructureDefinition-mcode-ecog-performance-status.html
 [GeneticSpecimen]: StructureDefinition-mcode-genetic-specimen.html
 [GenomicRegionStudied]: StructureDefinition-mcode-genomic-region-studied.html

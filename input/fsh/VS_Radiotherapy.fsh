@@ -95,7 +95,7 @@ Description: "Codes describing the devices used in teleradiotherapy (external be
 
 
 ValueSet: BrachytherapyDeviceVS
-Id: mcode-brachytherapy-device-vs
+Id: brachytherapy-device-vs
 Title: "Brachytherapy Device Value Set"
 Description: "Codes describing the devices used in brachytherapy (internal radiation) procedures."
 * include codes from system BrachytherapyDeviceCS

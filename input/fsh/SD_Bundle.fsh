@@ -33,9 +33,7 @@ Description: "A collection of data for an mCODE cancer patient."
     geneticSpecimen 0..* MS and
     genomicRegionStudied 0..* MS and
     cancerRelatedComorbidities 0..* MS and
-    vitalSignHeight 0..* MS and
-    vitalSignWeight 0..* MS and
-    vitalSignBloodPressure 0..* MS
+    vitalSign 0..* MS
 
 * entry[cancerPatient] ^short = "Cancer Patient"
 * entry[primaryCancerCondition] ^short = "Primary Cancer Condition(s)"
@@ -62,9 +60,7 @@ Description: "A collection of data for an mCODE cancer patient."
 * entry[geneticSpecimen] ^short = "Genetic Specimen(s)"
 * entry[genomicRegionStudied] ^short = "Genomic Region(s) Studied"
 * entry[cancerRelatedComorbidities] ^short = "Cancer-Related Comorbities"
-* entry[vitalSignHeight] ^short = "Patient Height(s)"
-* entry[vitalSignWeight] ^short = "Patient Weight(s)"
-* entry[vitalSignBloodPressure] ^short = "Patient Blood Pressure(s)"
+* entry[vitalSign] ^short = "Patient Height(s), Weight(s), Blood Pressure(s), or other vital signs"
 
 * entry[cancerPatient] ^definition = "The Cancer Patient whose data is included in the bundle (required element)."
 * entry[primaryCancerCondition] ^definition = "Condition resource(s) representing the Primary Cancer Condition."
@@ -91,9 +87,7 @@ Description: "A collection of data for an mCODE cancer patient."
 * entry[geneticSpecimen] ^definition = "Specimen resource(s) representing Genetic Specimens."
 * entry[genomicRegionStudied] ^definition = "Observation resource(s) representing Genomic Regions Studied."
 * entry[cancerRelatedComorbidities] ^definition = "Observation resource(s) representing Cancer-Related Comorbities."
-* entry[vitalSignHeight] ^definition = "Observation resource(s) representing patient height."
-* entry[vitalSignWeight] ^definition = "Observation resource(s) representing patient weight."
-* entry[vitalSignBloodPressure] ^definition = "Observation resource(s) representing patient blood pressure."
+* entry[vitalSign] ^definition = "Observation resource(s) representing patient height, weight, blood pressure, and other vital signs."
 
 * entry[cancerPatient].resource only CancerPatient
 * entry[primaryCancerCondition].resource only PrimaryCancerCondition
@@ -121,7 +115,6 @@ Description: "A collection of data for an mCODE cancer patient."
 * entry[cancerGenomicsReport].resource only CancerGenomicsReport
 * entry[geneticSpecimen].resource only GeneticSpecimen
 * entry[genomicRegionStudied].resource only GenomicRegionStudied
-* entry[cancerRelatedComorbidities].resource only CancerRelatedElixhauserComorbidities
-* entry[vitalSignHeight].resource only http://hl7.org/fhir/StructureDefinition/bodyheight
-* entry[vitalSignWeight].resource only http://hl7.org/fhir/StructureDefinition/bodyweight
-* entry[vitalSignBloodPressure].resource only http://hl7.org/fhir/StructureDefinition/bp
+* entry[cancerRelatedComorbidities].resource only CancerRelatedComorbidities
+* entry[vitalSign].resource only http://hl7.org/fhir/StructureDefinition/vitalsigns
+

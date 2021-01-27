@@ -1,13 +1,13 @@
 Extension: ComorbidConditionCode
 Id: mcode-comorbid-condition-code
-Title:  "Specific Condition Code for the Comorbidity"
+Title:  "Specific Condition Code for Comorbidity"
 Description: "An extension for representing a specific condition code corresponding to the comorbid condition category."
 * value[x] only CodeableConcept
 * value[x] ^short = "Code for a specific condition in the named comorbidity category."
 
 Extension: ComorbidConditionReference
 Id: mcode-comorbid-condition-reference
-Title:  "Specific Condition Reference for the Comorbidity"
+Title:  "Specific Condition Reference for Comorbidity"
 Description: "An extension for representing a reference to a condition resource corresponding to the comorbid condition category."
 * value[x] only Reference(Condition)
 

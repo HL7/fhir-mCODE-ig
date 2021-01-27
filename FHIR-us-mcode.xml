@@ -8,7 +8,7 @@
 <artifactPageExtension value="-examples"/>
 <artifactPageExtension value="-mappings"/>
 <artifact id="CodeSystem/brachytherapy-device-cs" key="CodeSystem-brachytherapy-device-cs" name="Brachytherapy Device Code System"/>
-<artifact id="ValueSet/mcode-brachytherapy-device-vs" key="ValueSet-mcode-brachytherapy-device-vs" name="Brachytherapy Device Value Set"/>
+<artifact id="ValueSet/brachytherapy-device-vs" key="ValueSet-brachytherapy-device-vs" name="Brachytherapy Device Value Set"/>
 <artifact id="ValueSet/brachytherapy-modality-vs" key="ValueSet-brachytherapy-modality-vs" name="Brachytherapy Modality Value Set"/>
 <artifact id="StructureDefinition/brachytherapy-prescription-delivery" key="StructureDefinition-brachytherapy-prescription-delivery" name="Brachytherapy Prescription Delivery"/>
 <artifact id="CodeSystem/brachytherapy-technique-cs" key="CodeSystem-brachytherapy-technique-cs" name="Brachytherapy Technique Code System"/>
@@ -34,8 +34,6 @@
 <artifact id="ValueSet/mcode-cancer-related-surgical-procedure-vs" key="ValueSet-mcode-cancer-related-surgical-procedure-vs" name="Cancer-Related Surgical Procedure Value Set"/>
 <artifact id="ValueSet/mcode-clinvar-vs" key="clinvar-value-set" name="ClinVar Value Set"/>
 <artifact deprecated="true" id="Profile/mcode-comorbid-condition" key="comorbid-condition" name="Comorbid Condition"/>
-<artifact id="StructureDefinition/mcode-comorbid-condition-code" key="StructureDefinition-mcode-comorbid-condition-code" name="Comorbid Condition Code"/>
-<artifact id="StructureDefinition/mcode-comorbid-condition-reference" key="StructureDefinition-mcode-comorbid-condition-reference" name="Comorbid Condition Reference"/>
 <artifact deprecated="true" id="ValueSet/mcode-comorbid-condition-value-set" key="comorbid-condition-value-set" name="Comorbid Condition Value Set"/>
 <artifact id="StructureDefinition/mcode-comorbidities-parent" key="StructureDefinition-mcode-comorbidities-parent" name="Comorbidities Parent"/>
 <artifact id="StructureDefinition/comorbidities-elixhauser" key="StructureDefinition-comorbidities-elixhauser" name="ComorbiditiesElixhauser"/>
@@ -116,6 +114,8 @@
 <artifact id="SearchParameter/Condition-code" key="SearchParameter-Condition-code" name="Search by code:in in Conditions"/>
 <artifact id="StructureDefinition/mcode-secondary-cancer-condition" key="secondary-cancer-condition" name="Secondary Cancer Condition"/>
 <artifact id="ValueSet/mcode-secondary-cancer-disorder-vs" key="secondary-cancer-disorder-value-set" name="Secondary Cancer Disorder Value Set"/>
+<artifact id="StructureDefinition/mcode-comorbid-condition-code" key="StructureDefinition-mcode-comorbid-condition-code" name="Specific Condition Code for the Comorbidity"/>
+<artifact id="StructureDefinition/mcode-comorbid-condition-reference" key="StructureDefinition-mcode-comorbid-condition-reference" name="Specific Condition Reference for the Comorbidity"/>
 <artifact deprecated="true" id="Profile/mcode-tnm-clinical-distant-metastases" key="tnm-clinical-distant-metastases" name="TNM Clinical Distant Metastases"/>
 <artifact id="StructureDefinition/mcode-tnm-clinical-distant-metastases-category" key="StructureDefinition-mcode-tnm-clinical-distant-metastases-category" name="TNM Clinical Distant Metastases Category"/>
 <artifact id="StructureDefinition/mcode-tnm-clinical-primary-tumor-category" key="tnm-clinical-primary-tumor-category" name="TNM Clinical Primary Tumor Category"/>

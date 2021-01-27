@@ -32,7 +32,7 @@ Description: "A collection of data for an mCODE cancer patient."
     cancerGenomicsReport 0..* MS and
     geneticSpecimen 0..* MS and
     genomicRegionStudied 0..* MS and
-    cancerRelatedComorbidities 0..* MS and
+    cancerRelatedElixhauserComorbidities 0..* MS and
     vitalSign 0..* MS
 
 * entry[cancerPatient] ^short = "Cancer Patient"
@@ -59,7 +59,7 @@ Description: "A collection of data for an mCODE cancer patient."
 * entry[cancerGenomicsReport] ^short = "Cancer Genomics Report(s)"
 * entry[geneticSpecimen] ^short = "Genetic Specimen(s)"
 * entry[genomicRegionStudied] ^short = "Genomic Region(s) Studied"
-* entry[cancerRelatedComorbidities] ^short = "Cancer-Related Comorbities"
+* entry[cancerRelatedElixhauserComorbidities] ^short = "Cancer-Related Comorbities"
 * entry[vitalSign] ^short = "Patient Height(s), Weight(s), Blood Pressure(s), or other vital signs"
 
 * entry[cancerPatient] ^definition = "The Cancer Patient whose data is included in the bundle (required element)."
@@ -86,7 +86,7 @@ Description: "A collection of data for an mCODE cancer patient."
 * entry[cancerGenomicsReport] ^definition = "DiagnosticReport resource(s) representing Cancer Genomics Reports"
 * entry[geneticSpecimen] ^definition = "Specimen resource(s) representing Genetic Specimens."
 * entry[genomicRegionStudied] ^definition = "Observation resource(s) representing Genomic Regions Studied."
-* entry[cancerRelatedComorbidities] ^definition = "Observation resource(s) representing Cancer-Related Comorbities."
+* entry[cancerRelatedElixhauserComorbidities] ^definition = "Observation resource(s) representing Cancer-Related Comorbities."
 * entry[vitalSign] ^definition = "Observation resource(s) representing patient height, weight, blood pressure, and other vital signs."
 
 * entry[cancerPatient].resource only CancerPatient
@@ -115,6 +115,6 @@ Description: "A collection of data for an mCODE cancer patient."
 * entry[cancerGenomicsReport].resource only CancerGenomicsReport
 * entry[geneticSpecimen].resource only GeneticSpecimen
 * entry[genomicRegionStudied].resource only GenomicRegionStudied
-* entry[cancerRelatedComorbidities].resource only CancerRelatedComorbidities
+* entry[cancerRelatedElixhauserComorbidities].resource only CancerRelatedElixhauserComorbidities
 * entry[vitalSign].resource only http://hl7.org/fhir/StructureDefinition/vitalsigns
 

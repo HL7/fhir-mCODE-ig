@@ -13,6 +13,16 @@ RuleSet: CancerConditionCommonRules
 * asserter only Reference(Practitioner or PractitionerRole)
 * recorder only Reference(Practitioner or PractitionerRole)
 
+* evidence ^slicing.discriminator.type = #profile
+* evidence ^slicing.discriminator.path = "details.resolve()"
+* evidence ^slicing.rules = #open
+* evidence ^slicing.description = "Slicing based on the profile conformance in the detail reference"
+* evidence contains tumorReference 0..*
+* evidence[tumorReference].detail only Reference(Tumor)
+* evidence[tumorReference].detail MS
+* evidence[tumorReference].detail ^short = "Reference to a BodyStructure resource conforming to Tumor"
+
+
 Profile: PrimaryCancerCondition
 Id: mcode-primary-cancer-condition
 Title: "Primary Cancer Condition"

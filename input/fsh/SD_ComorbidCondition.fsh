@@ -192,9 +192,15 @@ Profile: CancerRelatedElixhauserComorbidities
 Parent: ComorbiditiesElixhauser
 Id: mcode-cancer-related-elixhauser-comorbidities
 Title: "Cancer-Related Comorbidities"
-Description: "Comorbid condition checklist and optional risk score, using Elixhauser comorbidity categories. The comorbidities are cancer-related by virtue of restricting the index condition to a PrimaryCancerCondition."
+Description: "Comorbid conditions using the Elixhauser comorbidity categories, from the perspective of the primary cancer condition." 
 * focus only Reference(PrimaryCancerCondition)
 * focus and component and component.extension[conditionReference] and component.extension[conditionCode] and component.extension[conditionReference] MS
+* value[x] 0..0
+* component[cancerLeukemia] 0..0
+* component[cancerLymphoma] 0..0
+* component[cancerMetastatic] 0..0
+* component[cancerSolidInSitu] 0..0
+* component[cancerSolidMalignant] 0..0
 
 
 

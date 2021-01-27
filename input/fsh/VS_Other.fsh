@@ -50,8 +50,6 @@ Description: "A code system containing codes that signify a code outside a speci
 * #OtherTumorMarkerTest "Other Tumor Marker Test, Specify" "Code to be used for concepts not represented elsewhere in the value set. Specify the desired concept as an additional coding."
 * #OtherCancerDisorder "Other Cancer Disorder, Specify" "Code to be used for concepts not represented elsewhere in the value set. Specify the desired concept as an additional coding."
 * #OtherHistologyMorphologyBehavior "Other Histology Morphology Behavior, Specify" "Code to be used for concepts not represented elsewhere in the value set. Specify the desired concept as an additional coding."
-* #OtherBrachytherapyModality "Other Brachytherapy Modality, Specify" "Code to be used for concepts not represented elsewhere in the value set. Specify the desired concept as an additional coding."
-* #OtherTeleradiotherapyModality "Other Teleradiotherapy Modality, Specify" "Code to be used for concepts not represented elsewhere in the value set. Specify the desired concept as an additional coding."
 
 ValueSet: LocationQualifierVS
 Id: mcode-location-qualifier-vs

@@ -3,13 +3,19 @@
 ValueSet:  TeleradiotherapyModalityVS
 Id: teleradiotherapy-modality-vs
 Title: "Teleradiotherapy Modality Value Set"
-Description: "Codes describing the modalities of teleradiotherapy (external beam)procedures."
+Description: "Codes describing the modalities of teleradiotherapy (external beam) procedures."
 * NCIT#C66897 "Proton Beam Radiation Therapy"
 * NCIT#C15650 "Electron Beam Therapy"
 * NCIT#C15440 "High-LET Neutron Therapy"
 * NCIT#C160816  "Carbon Ion Radiation Therapy"
 * NCIT#C104914 "Photon Beam Radiation Therapy"
-* OtherCode#OtherTeleradiotherapyModality "Other Teleradiotherapy Modality, Specify"
+
+
+Teleradiotherapy using electrons (procedure) SCTID: 45643008
+
+Teleradiotherapy protons (procedure) SCTID: 10611004
+
+Teleradiotherapy neutrons (procedure) SCTID: 80347004
 
 
 ValueSet: BrachytherapyModalityVS
@@ -21,9 +27,7 @@ Description: "Codes describing the modalities of brachytherapy (internal radiati
 * NCIT#C116542 "Pulsed-Dose Rate Brachytherapy"
 * NCIT#C15651  "High dose brachytherapy"
 * SCT#438629002 "High dose rate electronic brachytherapy"
-* MEDCIN#76787  "Radiopharmaceutical therapy"
-//* NCIT#C15470 "Radioisotope Therapy"
-* OtherCode#OtherBrachytherapyModality "Other Brachytherapy Modality, Specify"
+* SCT#440252007  "Administration of radiopharmaceutical (procedure)"
 
 
 //----------- TECHNIQUES -----------------------

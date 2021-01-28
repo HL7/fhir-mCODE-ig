@@ -1,3 +1,4 @@
+
 ### Mapping from Other Vocabularies
 
 The modalities in this value set are drawn from the [radiotherapy code system](CodeSystem-radiotherapy-cs.html) defined in this Implementation Guide. Existing terminology systems do not have all the necessary codes.
@@ -17,3 +18,4 @@ The following table shows mappings from SNOMED-CT and NCI Thesaurus to teleradio
 **Notes:**
 
 1. This a broader term and should be mapped only if it is known from context to represent carbon ion teleradiotherapy.
+<br>

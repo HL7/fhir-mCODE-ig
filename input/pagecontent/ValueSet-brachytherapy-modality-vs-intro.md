@@ -1,3 +1,4 @@
+
 ### Mapping from Other Vocabularies
 
 The modalities in this value set are drawn from the [radiotherapy code system](CodeSystem-radiotherapy-cs.html) defined in this Implementation Guide. Existing terminology systems do not have all the necessary codes.
@@ -17,3 +18,4 @@ The following table shows mappings from SNOMED-CT and NCI Thesaurus to of brachy
 
 1. The sound-alike term, *228868000 Low dose rate brachytherapy (observable entity)*, should not be mapped because it represents the dose rate quantity, not the procedure.
 2. The sound-alike term, *C69290 Radiopharmaceutical Volume Administered*, should not be mapped because it refers to the *amount* of radiopharmaceutical given to a subject, not the procedure.
+<br>

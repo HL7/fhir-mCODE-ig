@@ -1,9 +1,10 @@
 
 ### Usage
 
-When using this value set, the most specific term should be selected. For example, a permanent interstitial implant should be reported as Interstitial–Permanent, never as Interstitial.
+The following rules apply to this value set:
 
-The technique used in real life can be more specific than the code used to describe it. For example, interstitial brachytherapy using iridium wire should be reported as interstitial-temporary because that category most closely aligns with the actual technique.
+1. Select the most specific term appropriate for a given situation. For example, a permanent interstitial implant should be reported as INSTIT-PERM, not as INSTIT.
+2. Select the term that best describes the technique used, even if that term does not capture every detail of the technique. For example, interstitial brachytherapy using iridium wire should be reported as INSTIT-TEMP because that category most closely aligns with the actual technique.
 
 ### Mapping from Other Vocabularies
 
@@ -23,3 +24,4 @@ The following table shows mappings from SNOMED-CT and NCI Thesaurus to of brachy
 | SURF | 14473006 Surface brachytherapy (procedure) | none |
 | SURF-TEMP | none | none |
 | ORAL | 69568002 Oral radiation (procedure) <br><br>  16560241000119104 Oral radionuclide therapy (procedure) | none | |
+<br>

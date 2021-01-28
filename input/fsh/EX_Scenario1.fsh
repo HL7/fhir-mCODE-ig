@@ -112,8 +112,8 @@ Instance: scenario1-teleradiotherapy-prescription-delivery
 InstanceOf: TeleradiotherapyPrescriptionDelivery
 Description: "Extended example 1: example showing radiation treatment"
 * status = #completed "completed"
-* code = NCIT#C104914 "Photon Beam Radiation Therapy"
-* extension[radiotherapyTechnique].valueString = "3D"
+* code = RO#PHOTON "Photon Beam Radiation Therapy"
+* extension[radiotherapyTechnique].valueCodeableConcept = RO#3D "3 Dimensional"
 * extension[radiotherapyDosePerFraction].valueQuantity = 200 'cGy'
 * extension[radiotherapyDeliveredFractions].valueUnsignedInt = 25
 * extension[radiotherapyTotalDosePlanned].valueQuantity = 5000 'cGy'

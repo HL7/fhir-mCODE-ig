@@ -5,8 +5,8 @@ The following table shows valid combinations of modality, technique, and device 
 | **Brachytherapy Modality**    | **Technique (Delivery Method)**                  | **Delivery Device**                          |
 | ----------------------------- | ------------------------------------------------ | -------------------------------------------- |
 | Low Dose Rate                 | Intracavitary                                    | Tandem, Cylinder, Ovoids, Ring               |
-| Low Dose Rate                 | Interstitial – Permanent                         | Seeds                                        |
-| Low Dose Rate                 | Interstitial – Temporary                         | Catheter                                     |
+| Low Dose Rate                 | Interstitial - Permanent                         | Seeds                                        |
+| Low Dose Rate                 | Interstitial - Temporary                         | Catheter                                     |
 | Low Dose Rate                 | Surface - Temporary                              | Eye Plaque                                   |
 | Pulse Dose Rate               | Intracavitary                                    | Tandem, Cylinder, Ovoids, Ring,  Catheter    |
 | Pulse Dose Rate               | Interstitial                                     | Catheter, Hybrid (e.g., ring+tandem+needles) |

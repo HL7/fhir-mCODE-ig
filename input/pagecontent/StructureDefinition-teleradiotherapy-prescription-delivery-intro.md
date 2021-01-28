@@ -1,6 +1,6 @@
 ### Usage
 
-The following table shows valid combinations of modality, technique, and device for external beam radiotherapy. They are not enforced in the profile. Other combinations and additional techniques may be possible. The modality is represented by Procedure.code, techique using the radiotherapyTechnique extension, and device by Procedure.usedCode.
+The following table shows valid combinations of modality, technique, and device for external beam radiotherapy. They are not enforced in the profile. Other combinations and additional techniques may be possible. The modality is represented by Procedure.code, technique using the radiotherapyTechnique extension, and device by Procedure.usedCode.
 
 | **External Beam Modality (Radiation Type)** | **Technique (Delivery Method)** | **Delivery Device**                            |
 | ------------------------------------------- | ------------------------------- | ---------------------------------------------- |

@@ -1,6 +1,6 @@
 ### Usage
 
-The following table shows valid combinations of modality, technique, and device for brachytherapy. They are not enforced in the profile. Other combinations and additional techniques may be possible. The modality is represented by Procedure.code, techique using the radiotherapyTechnique extension, and device by Procedure.usedCode.
+The following table shows valid combinations of modality, technique, and device for brachytherapy. They are not enforced in the profile. Other combinations and additional techniques may be possible. The modality is represented by Procedure.code, technique using the radiotherapyTechnique extension, and device by Procedure.usedCode.
 
 | **Brachytherapy Modality**    | **Technique (Delivery Method)**                  | **Delivery Device**                          |
 | ----------------------------- | ------------------------------------------------ | -------------------------------------------- |

@@ -56754,6 +56754,10 @@ e: {
 e: {
   "valueSet" : {
   "resourceType" : "ValueSet",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set contains 5 concepts</p><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion based on SNOMED CT United States edition 01-Sep 2020</p><p>All codes from system <a href=\"http://hl7.org/fhir/R4/codesystem-snomedct.html\"><code>http://snomed.info/sct</code></a></p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-281900007\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=281900007\">281900007</a></td><td>No abnormality detected (finding)</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-268910001\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=268910001\">268910001</a></td><td>Patient's condition improved (finding)</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-359746009\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=359746009\">359746009</a></td><td>Patient's condition stable (finding)</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-271299001\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=271299001\">271299001</a></td><td>Patient's condition worsened (finding)</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-709137006\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=709137006\">709137006</a></td><td>Patient condition undetermined (finding)</td><td/></tr></table></div>"
+  },
   "status" : "active",
   "expansion" : {
     "identifier" : "urn:uuid:9a79eda9-faff-4107-af54-67a1ad5301e3",
@@ -106644,6 +106648,10 @@ e: {
 e: {
   "valueSet" : {
   "resourceType" : "ValueSet",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set contains 3 concepts</p><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion based on SNOMED CT United States edition 01-Sep 2020</p><p>All codes from system <a href=\"http://hl7.org/fhir/R4/codesystem-snomedct.html\"><code>http://snomed.info/sct</code></a></p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-52101004\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=52101004\">52101004</a></td><td>Present (qualifier value)</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-2667000\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=2667000\">2667000</a></td><td>Absent (qualifier value)</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-261665006\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=261665006\">261665006</a></td><td>Unknown (qualifier value)</td><td/></tr></table></div>"
+  },
   "status" : "active",
   "expansion" : {
     "identifier" : "urn:uuid:2db6a73f-8346-44cd-ad5e-4c8f3fa7a033",
@@ -114020,6 +114028,1754 @@ e: {
       "system" : "http://snomed.info/sct",
       "code" : "438629002",
       "display" : "High dose rate electronic brachytherapy"
+    }]
+  }
+},
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://snomed.info/sct",
+  "code" : "41224006"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://snomed.info/sct",
+      "concept" : [{
+        "code" : "81105003",
+        "display" : "Cervical lymph node group (body structure)"
+      },
+      {
+        "code" : "196374005",
+        "display" : "Entire lymph node of thorax (body structure)"
+      },
+      {
+        "code" : "245269009",
+        "display" : "Axillary lymph node group (body structure)"
+      },
+      {
+        "code" : "245265003",
+        "display" : "Supraclavicular lymph node group (body structure)"
+      },
+      {
+        "code" : "245282001",
+        "display" : "Internal mammary lymph node group (body structure)"
+      },
+      {
+        "code" : "245284000",
+        "display" : "Abdominal lymph node group (body structure)"
+      },
+      {
+        "code" : "245294005",
+        "display" : "Pelvic lymph node group (body structure)"
+      },
+      {
+        "code" : "59441001",
+        "display" : "Structure of lymph node (body structure)"
+      },
+      {
+        "code" : "244486005",
+        "display" : "Entire eye (body structure)"
+      },
+      {
+        "code" : "56329008",
+        "display" : "Pituitary structure (body structure)"
+      },
+      {
+        "code" : "12738006",
+        "display" : "Brain structure (body structure)"
+      },
+      {
+        "code" : "119235005",
+        "display" : "Brain part (body structure)"
+      },
+      {
+        "code" : "2748008",
+        "display" : "Spinal cord structure (body structure)"
+      },
+      {
+        "code" : "71836000",
+        "display" : "Nasopharyngeal structure (body structure)"
+      },
+      {
+        "code" : "74262004",
+        "display" : "Oral cavity structure (body structure)"
+      },
+      {
+        "code" : "31389004",
+        "display" : "Oropharyngeal structure (body structure)"
+      },
+      {
+        "code" : "4596009",
+        "display" : "Laryngeal structure (body structure)"
+      },
+      {
+        "code" : "81502006",
+        "display" : "Hypopharyngeal structure (body structure)"
+      },
+      {
+        "code" : "2095001",
+        "display" : "Nasal sinus structure (body structure)"
+      },
+      {
+        "code" : "385294005",
+        "display" : "Salivary gland structure (body structure)"
+      },
+      {
+        "code" : "69748006",
+        "display" : "Thyroid structure (body structure)"
+      },
+      {
+        "code" : "361355005",
+        "display" : "Entire head and neck (body structure)"
+      },
+      {
+        "code" : "181216001",
+        "display" : "Entire lung (body structure)"
+      },
+      {
+        "code" : "71400007",
+        "display" : "Mesothelium structure (body structure)"
+      },
+      {
+        "code" : "302551006",
+        "display" : "Entire thorax (body structure)"
+      },
+      {
+        "code" : "181131000",
+        "display" : "Entire breast (body structure)"
+      },
+      {
+        "code" : "119184005",
+        "display" : "Breast part (body structure)"
+      },
+      {
+        "code" : "78904004",
+        "display" : "Chest wall structure (body structure)"
+      },
+      {
+        "code" : "181245004",
+        "display" : "Entire esophagus (body structure)"
+      },
+      {
+        "code" : "69695003",
+        "display" : "Stomach structure (body structure)"
+      },
+      {
+        "code" : "30315005",
+        "display" : "Small intestinal structure (body structure)"
+      },
+      {
+        "code" : "71854001",
+        "display" : "Colon structure (body structure)"
+      },
+      {
+        "code" : "34402009",
+        "display" : "Rectum structure (body structure)"
+      },
+      {
+        "code" : "53505006",
+        "display" : "Anal structure (body structure)"
+      },
+      {
+        "code" : "10200004",
+        "display" : "Liver structure (body structure)"
+      },
+      {
+        "code" : "34707002",
+        "display" : "Biliary tract structure (body structure)"
+      },
+      {
+        "code" : "28231008",
+        "display" : "Gallbladder structure (body structure)"
+      },
+      {
+        "code" : "15776009",
+        "display" : "Pancreatic structure (body structure)"
+      },
+      {
+        "code" : "113345001",
+        "display" : "Abdominal structure (body structure)"
+      },
+      {
+        "code" : "302512001",
+        "display" : "Entire urinary bladder (body structure)"
+      },
+      {
+        "code" : "119221008",
+        "display" : "Bladder part (body structure)"
+      },
+      {
+        "code" : "64033007",
+        "display" : "Kidney structure (body structure)"
+      },
+      {
+        "code" : "87953007",
+        "display" : "Ureteric structure (body structure)"
+      },
+      {
+        "code" : "181422007",
+        "display" : "Entire prostate (body structure)"
+      },
+      {
+        "code" : "119231001",
+        "display" : "Prostate part (body structure)"
+      },
+      {
+        "code" : "13648007",
+        "display" : "Urethral structure (body structure)"
+      },
+      {
+        "code" : "18911002",
+        "display" : "Penile structure (body structure)"
+      },
+      {
+        "code" : "40689003",
+        "display" : "Testis structure (body structure)"
+      },
+      {
+        "code" : "20233005",
+        "display" : "Scrotal structure (body structure)"
+      },
+      {
+        "code" : "15497006",
+        "display" : "Ovarian structure (body structure)"
+      },
+      {
+        "code" : "31435000",
+        "display" : "Fallopian tube structure (body structure)"
+      },
+      {
+        "code" : "35039007",
+        "display" : "Uterine structure (body structure)"
+      },
+      {
+        "code" : "71252005",
+        "display" : "Cervix uteri structure (body structure)"
+      },
+      {
+        "code" : "76784001",
+        "display" : "Vaginal structure (body structure)"
+      },
+      {
+        "code" : "45292006",
+        "display" : "Vulval structure (body structure)"
+      },
+      {
+        "code" : "89546000",
+        "display" : "Bone structure of cranium (body structure)"
+      },
+      {
+        "code" : "44300000",
+        "display" : "Entire vertebral column (body structure)"
+      },
+      {
+        "code" : "16982005",
+        "display" : "Shoulder region structure (body structure)"
+      },
+      {
+        "code" : "113197003",
+        "display" : "Bone structure of rib (body structure)"
+      },
+      {
+        "code" : "29836001",
+        "display" : "Hip region structure (body structure)"
+      },
+      {
+        "code" : "46633002",
+        "display" : "Entire bony pelvis (body structure)"
+      },
+      {
+        "code" : "12921003",
+        "display" : "Pelvic structure (body structure)"
+      },
+      {
+        "code" : "48566001",
+        "display" : "Bone structure of extremity (body structure)"
+      },
+      {
+        "code" : "39937001",
+        "display" : "Skin structure (body structure)"
+      },
+      {
+        "code" : "87784001",
+        "display" : "Soft tissues (body structure)"
+      },
+      {
+        "code" : "38266002",
+        "display" : "Entire body as a whole (body structure)"
+      }]
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code provided (http://snomed.info/sct#41224006) is not valid (from http://tx.fhir.org/r4)"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://snomed.info/sct",
+  "code" : "41224006",
+  "display" : "Structure of lower lobe of left lung (body structure)"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://snomed.info/sct",
+      "concept" : [{
+        "code" : "81105003",
+        "display" : "Cervical lymph node group (body structure)"
+      },
+      {
+        "code" : "196374005",
+        "display" : "Entire lymph node of thorax (body structure)"
+      },
+      {
+        "code" : "245269009",
+        "display" : "Axillary lymph node group (body structure)"
+      },
+      {
+        "code" : "245265003",
+        "display" : "Supraclavicular lymph node group (body structure)"
+      },
+      {
+        "code" : "245282001",
+        "display" : "Internal mammary lymph node group (body structure)"
+      },
+      {
+        "code" : "245284000",
+        "display" : "Abdominal lymph node group (body structure)"
+      },
+      {
+        "code" : "245294005",
+        "display" : "Pelvic lymph node group (body structure)"
+      },
+      {
+        "code" : "59441001",
+        "display" : "Structure of lymph node (body structure)"
+      },
+      {
+        "code" : "244486005",
+        "display" : "Entire eye (body structure)"
+      },
+      {
+        "code" : "56329008",
+        "display" : "Pituitary structure (body structure)"
+      },
+      {
+        "code" : "12738006",
+        "display" : "Brain structure (body structure)"
+      },
+      {
+        "code" : "119235005",
+        "display" : "Brain part (body structure)"
+      },
+      {
+        "code" : "2748008",
+        "display" : "Spinal cord structure (body structure)"
+      },
+      {
+        "code" : "71836000",
+        "display" : "Nasopharyngeal structure (body structure)"
+      },
+      {
+        "code" : "74262004",
+        "display" : "Oral cavity structure (body structure)"
+      },
+      {
+        "code" : "31389004",
+        "display" : "Oropharyngeal structure (body structure)"
+      },
+      {
+        "code" : "4596009",
+        "display" : "Laryngeal structure (body structure)"
+      },
+      {
+        "code" : "81502006",
+        "display" : "Hypopharyngeal structure (body structure)"
+      },
+      {
+        "code" : "2095001",
+        "display" : "Nasal sinus structure (body structure)"
+      },
+      {
+        "code" : "385294005",
+        "display" : "Salivary gland structure (body structure)"
+      },
+      {
+        "code" : "69748006",
+        "display" : "Thyroid structure (body structure)"
+      },
+      {
+        "code" : "361355005",
+        "display" : "Entire head and neck (body structure)"
+      },
+      {
+        "code" : "181216001",
+        "display" : "Entire lung (body structure)"
+      },
+      {
+        "code" : "71400007",
+        "display" : "Mesothelium structure (body structure)"
+      },
+      {
+        "code" : "302551006",
+        "display" : "Entire thorax (body structure)"
+      },
+      {
+        "code" : "181131000",
+        "display" : "Entire breast (body structure)"
+      },
+      {
+        "code" : "119184005",
+        "display" : "Breast part (body structure)"
+      },
+      {
+        "code" : "78904004",
+        "display" : "Chest wall structure (body structure)"
+      },
+      {
+        "code" : "181245004",
+        "display" : "Entire esophagus (body structure)"
+      },
+      {
+        "code" : "69695003",
+        "display" : "Stomach structure (body structure)"
+      },
+      {
+        "code" : "30315005",
+        "display" : "Small intestinal structure (body structure)"
+      },
+      {
+        "code" : "71854001",
+        "display" : "Colon structure (body structure)"
+      },
+      {
+        "code" : "34402009",
+        "display" : "Rectum structure (body structure)"
+      },
+      {
+        "code" : "53505006",
+        "display" : "Anal structure (body structure)"
+      },
+      {
+        "code" : "10200004",
+        "display" : "Liver structure (body structure)"
+      },
+      {
+        "code" : "34707002",
+        "display" : "Biliary tract structure (body structure)"
+      },
+      {
+        "code" : "28231008",
+        "display" : "Gallbladder structure (body structure)"
+      },
+      {
+        "code" : "15776009",
+        "display" : "Pancreatic structure (body structure)"
+      },
+      {
+        "code" : "113345001",
+        "display" : "Abdominal structure (body structure)"
+      },
+      {
+        "code" : "302512001",
+        "display" : "Entire urinary bladder (body structure)"
+      },
+      {
+        "code" : "119221008",
+        "display" : "Bladder part (body structure)"
+      },
+      {
+        "code" : "64033007",
+        "display" : "Kidney structure (body structure)"
+      },
+      {
+        "code" : "87953007",
+        "display" : "Ureteric structure (body structure)"
+      },
+      {
+        "code" : "181422007",
+        "display" : "Entire prostate (body structure)"
+      },
+      {
+        "code" : "119231001",
+        "display" : "Prostate part (body structure)"
+      },
+      {
+        "code" : "13648007",
+        "display" : "Urethral structure (body structure)"
+      },
+      {
+        "code" : "18911002",
+        "display" : "Penile structure (body structure)"
+      },
+      {
+        "code" : "40689003",
+        "display" : "Testis structure (body structure)"
+      },
+      {
+        "code" : "20233005",
+        "display" : "Scrotal structure (body structure)"
+      },
+      {
+        "code" : "15497006",
+        "display" : "Ovarian structure (body structure)"
+      },
+      {
+        "code" : "31435000",
+        "display" : "Fallopian tube structure (body structure)"
+      },
+      {
+        "code" : "35039007",
+        "display" : "Uterine structure (body structure)"
+      },
+      {
+        "code" : "71252005",
+        "display" : "Cervix uteri structure (body structure)"
+      },
+      {
+        "code" : "76784001",
+        "display" : "Vaginal structure (body structure)"
+      },
+      {
+        "code" : "45292006",
+        "display" : "Vulval structure (body structure)"
+      },
+      {
+        "code" : "89546000",
+        "display" : "Bone structure of cranium (body structure)"
+      },
+      {
+        "code" : "44300000",
+        "display" : "Entire vertebral column (body structure)"
+      },
+      {
+        "code" : "16982005",
+        "display" : "Shoulder region structure (body structure)"
+      },
+      {
+        "code" : "113197003",
+        "display" : "Bone structure of rib (body structure)"
+      },
+      {
+        "code" : "29836001",
+        "display" : "Hip region structure (body structure)"
+      },
+      {
+        "code" : "46633002",
+        "display" : "Entire bony pelvis (body structure)"
+      },
+      {
+        "code" : "12921003",
+        "display" : "Pelvic structure (body structure)"
+      },
+      {
+        "code" : "48566001",
+        "display" : "Bone structure of extremity (body structure)"
+      },
+      {
+        "code" : "39937001",
+        "display" : "Skin structure (body structure)"
+      },
+      {
+        "code" : "87784001",
+        "display" : "Soft tissues (body structure)"
+      },
+      {
+        "code" : "38266002",
+        "display" : "Entire body as a whole (body structure)"
+      }]
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK"}####
+v: {
+  "display" : "Left lower lobe of lung",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://snomed.info/sct",
+  "code" : "80248007"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://snomed.info/sct",
+      "concept" : [{
+        "code" : "81105003",
+        "display" : "Cervical lymph node group (body structure)"
+      },
+      {
+        "code" : "196374005",
+        "display" : "Entire lymph node of thorax (body structure)"
+      },
+      {
+        "code" : "245269009",
+        "display" : "Axillary lymph node group (body structure)"
+      },
+      {
+        "code" : "245265003",
+        "display" : "Supraclavicular lymph node group (body structure)"
+      },
+      {
+        "code" : "245282001",
+        "display" : "Internal mammary lymph node group (body structure)"
+      },
+      {
+        "code" : "245284000",
+        "display" : "Abdominal lymph node group (body structure)"
+      },
+      {
+        "code" : "245294005",
+        "display" : "Pelvic lymph node group (body structure)"
+      },
+      {
+        "code" : "59441001",
+        "display" : "Structure of lymph node (body structure)"
+      },
+      {
+        "code" : "244486005",
+        "display" : "Entire eye (body structure)"
+      },
+      {
+        "code" : "56329008",
+        "display" : "Pituitary structure (body structure)"
+      },
+      {
+        "code" : "12738006",
+        "display" : "Brain structure (body structure)"
+      },
+      {
+        "code" : "119235005",
+        "display" : "Brain part (body structure)"
+      },
+      {
+        "code" : "2748008",
+        "display" : "Spinal cord structure (body structure)"
+      },
+      {
+        "code" : "71836000",
+        "display" : "Nasopharyngeal structure (body structure)"
+      },
+      {
+        "code" : "74262004",
+        "display" : "Oral cavity structure (body structure)"
+      },
+      {
+        "code" : "31389004",
+        "display" : "Oropharyngeal structure (body structure)"
+      },
+      {
+        "code" : "4596009",
+        "display" : "Laryngeal structure (body structure)"
+      },
+      {
+        "code" : "81502006",
+        "display" : "Hypopharyngeal structure (body structure)"
+      },
+      {
+        "code" : "2095001",
+        "display" : "Nasal sinus structure (body structure)"
+      },
+      {
+        "code" : "385294005",
+        "display" : "Salivary gland structure (body structure)"
+      },
+      {
+        "code" : "69748006",
+        "display" : "Thyroid structure (body structure)"
+      },
+      {
+        "code" : "361355005",
+        "display" : "Entire head and neck (body structure)"
+      },
+      {
+        "code" : "181216001",
+        "display" : "Entire lung (body structure)"
+      },
+      {
+        "code" : "71400007",
+        "display" : "Mesothelium structure (body structure)"
+      },
+      {
+        "code" : "302551006",
+        "display" : "Entire thorax (body structure)"
+      },
+      {
+        "code" : "181131000",
+        "display" : "Entire breast (body structure)"
+      },
+      {
+        "code" : "119184005",
+        "display" : "Breast part (body structure)"
+      },
+      {
+        "code" : "78904004",
+        "display" : "Chest wall structure (body structure)"
+      },
+      {
+        "code" : "181245004",
+        "display" : "Entire esophagus (body structure)"
+      },
+      {
+        "code" : "69695003",
+        "display" : "Stomach structure (body structure)"
+      },
+      {
+        "code" : "30315005",
+        "display" : "Small intestinal structure (body structure)"
+      },
+      {
+        "code" : "71854001",
+        "display" : "Colon structure (body structure)"
+      },
+      {
+        "code" : "34402009",
+        "display" : "Rectum structure (body structure)"
+      },
+      {
+        "code" : "53505006",
+        "display" : "Anal structure (body structure)"
+      },
+      {
+        "code" : "10200004",
+        "display" : "Liver structure (body structure)"
+      },
+      {
+        "code" : "34707002",
+        "display" : "Biliary tract structure (body structure)"
+      },
+      {
+        "code" : "28231008",
+        "display" : "Gallbladder structure (body structure)"
+      },
+      {
+        "code" : "15776009",
+        "display" : "Pancreatic structure (body structure)"
+      },
+      {
+        "code" : "113345001",
+        "display" : "Abdominal structure (body structure)"
+      },
+      {
+        "code" : "302512001",
+        "display" : "Entire urinary bladder (body structure)"
+      },
+      {
+        "code" : "119221008",
+        "display" : "Bladder part (body structure)"
+      },
+      {
+        "code" : "64033007",
+        "display" : "Kidney structure (body structure)"
+      },
+      {
+        "code" : "87953007",
+        "display" : "Ureteric structure (body structure)"
+      },
+      {
+        "code" : "181422007",
+        "display" : "Entire prostate (body structure)"
+      },
+      {
+        "code" : "119231001",
+        "display" : "Prostate part (body structure)"
+      },
+      {
+        "code" : "13648007",
+        "display" : "Urethral structure (body structure)"
+      },
+      {
+        "code" : "18911002",
+        "display" : "Penile structure (body structure)"
+      },
+      {
+        "code" : "40689003",
+        "display" : "Testis structure (body structure)"
+      },
+      {
+        "code" : "20233005",
+        "display" : "Scrotal structure (body structure)"
+      },
+      {
+        "code" : "15497006",
+        "display" : "Ovarian structure (body structure)"
+      },
+      {
+        "code" : "31435000",
+        "display" : "Fallopian tube structure (body structure)"
+      },
+      {
+        "code" : "35039007",
+        "display" : "Uterine structure (body structure)"
+      },
+      {
+        "code" : "71252005",
+        "display" : "Cervix uteri structure (body structure)"
+      },
+      {
+        "code" : "76784001",
+        "display" : "Vaginal structure (body structure)"
+      },
+      {
+        "code" : "45292006",
+        "display" : "Vulval structure (body structure)"
+      },
+      {
+        "code" : "89546000",
+        "display" : "Bone structure of cranium (body structure)"
+      },
+      {
+        "code" : "44300000",
+        "display" : "Entire vertebral column (body structure)"
+      },
+      {
+        "code" : "16982005",
+        "display" : "Shoulder region structure (body structure)"
+      },
+      {
+        "code" : "113197003",
+        "display" : "Bone structure of rib (body structure)"
+      },
+      {
+        "code" : "29836001",
+        "display" : "Hip region structure (body structure)"
+      },
+      {
+        "code" : "46633002",
+        "display" : "Entire bony pelvis (body structure)"
+      },
+      {
+        "code" : "12921003",
+        "display" : "Pelvic structure (body structure)"
+      },
+      {
+        "code" : "48566001",
+        "display" : "Bone structure of extremity (body structure)"
+      },
+      {
+        "code" : "39937001",
+        "display" : "Skin structure (body structure)"
+      },
+      {
+        "code" : "87784001",
+        "display" : "Soft tissues (body structure)"
+      },
+      {
+        "code" : "38266002",
+        "display" : "Entire body as a whole (body structure)"
+      }]
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code provided (http://snomed.info/sct#80248007) is not valid (from http://tx.fhir.org/r4)"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://snomed.info/sct",
+  "code" : "80248007",
+  "display" : "Left breast structure (body structure)"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://snomed.info/sct",
+      "concept" : [{
+        "code" : "81105003",
+        "display" : "Cervical lymph node group (body structure)"
+      },
+      {
+        "code" : "196374005",
+        "display" : "Entire lymph node of thorax (body structure)"
+      },
+      {
+        "code" : "245269009",
+        "display" : "Axillary lymph node group (body structure)"
+      },
+      {
+        "code" : "245265003",
+        "display" : "Supraclavicular lymph node group (body structure)"
+      },
+      {
+        "code" : "245282001",
+        "display" : "Internal mammary lymph node group (body structure)"
+      },
+      {
+        "code" : "245284000",
+        "display" : "Abdominal lymph node group (body structure)"
+      },
+      {
+        "code" : "245294005",
+        "display" : "Pelvic lymph node group (body structure)"
+      },
+      {
+        "code" : "59441001",
+        "display" : "Structure of lymph node (body structure)"
+      },
+      {
+        "code" : "244486005",
+        "display" : "Entire eye (body structure)"
+      },
+      {
+        "code" : "56329008",
+        "display" : "Pituitary structure (body structure)"
+      },
+      {
+        "code" : "12738006",
+        "display" : "Brain structure (body structure)"
+      },
+      {
+        "code" : "119235005",
+        "display" : "Brain part (body structure)"
+      },
+      {
+        "code" : "2748008",
+        "display" : "Spinal cord structure (body structure)"
+      },
+      {
+        "code" : "71836000",
+        "display" : "Nasopharyngeal structure (body structure)"
+      },
+      {
+        "code" : "74262004",
+        "display" : "Oral cavity structure (body structure)"
+      },
+      {
+        "code" : "31389004",
+        "display" : "Oropharyngeal structure (body structure)"
+      },
+      {
+        "code" : "4596009",
+        "display" : "Laryngeal structure (body structure)"
+      },
+      {
+        "code" : "81502006",
+        "display" : "Hypopharyngeal structure (body structure)"
+      },
+      {
+        "code" : "2095001",
+        "display" : "Nasal sinus structure (body structure)"
+      },
+      {
+        "code" : "385294005",
+        "display" : "Salivary gland structure (body structure)"
+      },
+      {
+        "code" : "69748006",
+        "display" : "Thyroid structure (body structure)"
+      },
+      {
+        "code" : "361355005",
+        "display" : "Entire head and neck (body structure)"
+      },
+      {
+        "code" : "181216001",
+        "display" : "Entire lung (body structure)"
+      },
+      {
+        "code" : "71400007",
+        "display" : "Mesothelium structure (body structure)"
+      },
+      {
+        "code" : "302551006",
+        "display" : "Entire thorax (body structure)"
+      },
+      {
+        "code" : "181131000",
+        "display" : "Entire breast (body structure)"
+      },
+      {
+        "code" : "119184005",
+        "display" : "Breast part (body structure)"
+      },
+      {
+        "code" : "78904004",
+        "display" : "Chest wall structure (body structure)"
+      },
+      {
+        "code" : "181245004",
+        "display" : "Entire esophagus (body structure)"
+      },
+      {
+        "code" : "69695003",
+        "display" : "Stomach structure (body structure)"
+      },
+      {
+        "code" : "30315005",
+        "display" : "Small intestinal structure (body structure)"
+      },
+      {
+        "code" : "71854001",
+        "display" : "Colon structure (body structure)"
+      },
+      {
+        "code" : "34402009",
+        "display" : "Rectum structure (body structure)"
+      },
+      {
+        "code" : "53505006",
+        "display" : "Anal structure (body structure)"
+      },
+      {
+        "code" : "10200004",
+        "display" : "Liver structure (body structure)"
+      },
+      {
+        "code" : "34707002",
+        "display" : "Biliary tract structure (body structure)"
+      },
+      {
+        "code" : "28231008",
+        "display" : "Gallbladder structure (body structure)"
+      },
+      {
+        "code" : "15776009",
+        "display" : "Pancreatic structure (body structure)"
+      },
+      {
+        "code" : "113345001",
+        "display" : "Abdominal structure (body structure)"
+      },
+      {
+        "code" : "302512001",
+        "display" : "Entire urinary bladder (body structure)"
+      },
+      {
+        "code" : "119221008",
+        "display" : "Bladder part (body structure)"
+      },
+      {
+        "code" : "64033007",
+        "display" : "Kidney structure (body structure)"
+      },
+      {
+        "code" : "87953007",
+        "display" : "Ureteric structure (body structure)"
+      },
+      {
+        "code" : "181422007",
+        "display" : "Entire prostate (body structure)"
+      },
+      {
+        "code" : "119231001",
+        "display" : "Prostate part (body structure)"
+      },
+      {
+        "code" : "13648007",
+        "display" : "Urethral structure (body structure)"
+      },
+      {
+        "code" : "18911002",
+        "display" : "Penile structure (body structure)"
+      },
+      {
+        "code" : "40689003",
+        "display" : "Testis structure (body structure)"
+      },
+      {
+        "code" : "20233005",
+        "display" : "Scrotal structure (body structure)"
+      },
+      {
+        "code" : "15497006",
+        "display" : "Ovarian structure (body structure)"
+      },
+      {
+        "code" : "31435000",
+        "display" : "Fallopian tube structure (body structure)"
+      },
+      {
+        "code" : "35039007",
+        "display" : "Uterine structure (body structure)"
+      },
+      {
+        "code" : "71252005",
+        "display" : "Cervix uteri structure (body structure)"
+      },
+      {
+        "code" : "76784001",
+        "display" : "Vaginal structure (body structure)"
+      },
+      {
+        "code" : "45292006",
+        "display" : "Vulval structure (body structure)"
+      },
+      {
+        "code" : "89546000",
+        "display" : "Bone structure of cranium (body structure)"
+      },
+      {
+        "code" : "44300000",
+        "display" : "Entire vertebral column (body structure)"
+      },
+      {
+        "code" : "16982005",
+        "display" : "Shoulder region structure (body structure)"
+      },
+      {
+        "code" : "113197003",
+        "display" : "Bone structure of rib (body structure)"
+      },
+      {
+        "code" : "29836001",
+        "display" : "Hip region structure (body structure)"
+      },
+      {
+        "code" : "46633002",
+        "display" : "Entire bony pelvis (body structure)"
+      },
+      {
+        "code" : "12921003",
+        "display" : "Pelvic structure (body structure)"
+      },
+      {
+        "code" : "48566001",
+        "display" : "Bone structure of extremity (body structure)"
+      },
+      {
+        "code" : "39937001",
+        "display" : "Skin structure (body structure)"
+      },
+      {
+        "code" : "87784001",
+        "display" : "Soft tissues (body structure)"
+      },
+      {
+        "code" : "38266002",
+        "display" : "Entire body as a whole (body structure)"
+      }]
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK"}####
+v: {
+  "display" : "Left breast",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://snomed.info/sct",
+      "concept" : [{
+        "code" : "81105003",
+        "display" : "Cervical lymph node group (body structure)"
+      },
+      {
+        "code" : "196374005",
+        "display" : "Entire lymph node of thorax (body structure)"
+      },
+      {
+        "code" : "245269009",
+        "display" : "Axillary lymph node group (body structure)"
+      },
+      {
+        "code" : "245265003",
+        "display" : "Supraclavicular lymph node group (body structure)"
+      },
+      {
+        "code" : "245282001",
+        "display" : "Internal mammary lymph node group (body structure)"
+      },
+      {
+        "code" : "245284000",
+        "display" : "Abdominal lymph node group (body structure)"
+      },
+      {
+        "code" : "245294005",
+        "display" : "Pelvic lymph node group (body structure)"
+      },
+      {
+        "code" : "59441001",
+        "display" : "Structure of lymph node (body structure)"
+      },
+      {
+        "code" : "244486005",
+        "display" : "Entire eye (body structure)"
+      },
+      {
+        "code" : "56329008",
+        "display" : "Pituitary structure (body structure)"
+      },
+      {
+        "code" : "12738006",
+        "display" : "Brain structure (body structure)"
+      },
+      {
+        "code" : "119235005",
+        "display" : "Brain part (body structure)"
+      },
+      {
+        "code" : "2748008",
+        "display" : "Spinal cord structure (body structure)"
+      },
+      {
+        "code" : "71836000",
+        "display" : "Nasopharyngeal structure (body structure)"
+      },
+      {
+        "code" : "74262004",
+        "display" : "Oral cavity structure (body structure)"
+      },
+      {
+        "code" : "31389004",
+        "display" : "Oropharyngeal structure (body structure)"
+      },
+      {
+        "code" : "4596009",
+        "display" : "Laryngeal structure (body structure)"
+      },
+      {
+        "code" : "81502006",
+        "display" : "Hypopharyngeal structure (body structure)"
+      },
+      {
+        "code" : "2095001",
+        "display" : "Nasal sinus structure (body structure)"
+      },
+      {
+        "code" : "385294005",
+        "display" : "Salivary gland structure (body structure)"
+      },
+      {
+        "code" : "69748006",
+        "display" : "Thyroid structure (body structure)"
+      },
+      {
+        "code" : "361355005",
+        "display" : "Entire head and neck (body structure)"
+      },
+      {
+        "code" : "181216001",
+        "display" : "Entire lung (body structure)"
+      },
+      {
+        "code" : "71400007",
+        "display" : "Mesothelium structure (body structure)"
+      },
+      {
+        "code" : "302551006",
+        "display" : "Entire thorax (body structure)"
+      },
+      {
+        "code" : "181131000",
+        "display" : "Entire breast (body structure)"
+      },
+      {
+        "code" : "119184005",
+        "display" : "Breast part (body structure)"
+      },
+      {
+        "code" : "78904004",
+        "display" : "Chest wall structure (body structure)"
+      },
+      {
+        "code" : "181245004",
+        "display" : "Entire esophagus (body structure)"
+      },
+      {
+        "code" : "69695003",
+        "display" : "Stomach structure (body structure)"
+      },
+      {
+        "code" : "30315005",
+        "display" : "Small intestinal structure (body structure)"
+      },
+      {
+        "code" : "71854001",
+        "display" : "Colon structure (body structure)"
+      },
+      {
+        "code" : "34402009",
+        "display" : "Rectum structure (body structure)"
+      },
+      {
+        "code" : "53505006",
+        "display" : "Anal structure (body structure)"
+      },
+      {
+        "code" : "10200004",
+        "display" : "Liver structure (body structure)"
+      },
+      {
+        "code" : "34707002",
+        "display" : "Biliary tract structure (body structure)"
+      },
+      {
+        "code" : "28231008",
+        "display" : "Gallbladder structure (body structure)"
+      },
+      {
+        "code" : "15776009",
+        "display" : "Pancreatic structure (body structure)"
+      },
+      {
+        "code" : "113345001",
+        "display" : "Abdominal structure (body structure)"
+      },
+      {
+        "code" : "302512001",
+        "display" : "Entire urinary bladder (body structure)"
+      },
+      {
+        "code" : "119221008",
+        "display" : "Bladder part (body structure)"
+      },
+      {
+        "code" : "64033007",
+        "display" : "Kidney structure (body structure)"
+      },
+      {
+        "code" : "87953007",
+        "display" : "Ureteric structure (body structure)"
+      },
+      {
+        "code" : "181422007",
+        "display" : "Entire prostate (body structure)"
+      },
+      {
+        "code" : "119231001",
+        "display" : "Prostate part (body structure)"
+      },
+      {
+        "code" : "13648007",
+        "display" : "Urethral structure (body structure)"
+      },
+      {
+        "code" : "18911002",
+        "display" : "Penile structure (body structure)"
+      },
+      {
+        "code" : "40689003",
+        "display" : "Testis structure (body structure)"
+      },
+      {
+        "code" : "20233005",
+        "display" : "Scrotal structure (body structure)"
+      },
+      {
+        "code" : "15497006",
+        "display" : "Ovarian structure (body structure)"
+      },
+      {
+        "code" : "31435000",
+        "display" : "Fallopian tube structure (body structure)"
+      },
+      {
+        "code" : "35039007",
+        "display" : "Uterine structure (body structure)"
+      },
+      {
+        "code" : "71252005",
+        "display" : "Cervix uteri structure (body structure)"
+      },
+      {
+        "code" : "76784001",
+        "display" : "Vaginal structure (body structure)"
+      },
+      {
+        "code" : "45292006",
+        "display" : "Vulval structure (body structure)"
+      },
+      {
+        "code" : "89546000",
+        "display" : "Bone structure of cranium (body structure)"
+      },
+      {
+        "code" : "44300000",
+        "display" : "Entire vertebral column (body structure)"
+      },
+      {
+        "code" : "16982005",
+        "display" : "Shoulder region structure (body structure)"
+      },
+      {
+        "code" : "113197003",
+        "display" : "Bone structure of rib (body structure)"
+      },
+      {
+        "code" : "29836001",
+        "display" : "Hip region structure (body structure)"
+      },
+      {
+        "code" : "46633002",
+        "display" : "Entire bony pelvis (body structure)"
+      },
+      {
+        "code" : "12921003",
+        "display" : "Pelvic structure (body structure)"
+      },
+      {
+        "code" : "48566001",
+        "display" : "Bone structure of extremity (body structure)"
+      },
+      {
+        "code" : "39937001",
+        "display" : "Skin structure (body structure)"
+      },
+      {
+        "code" : "87784001",
+        "display" : "Soft tissues (body structure)"
+      },
+      {
+        "code" : "38266002",
+        "display" : "Entire body as a whole (body structure)"
+      }]
+    }]
+  }
+}}####
+e: {
+  "valueSet" : {
+  "resourceType" : "ValueSet",
+  "status" : "active",
+  "expansion" : {
+    "identifier" : "urn:uuid:a7a8b326-9c16-457b-93b1-7300c2700c89",
+    "timestamp" : "2021-01-28T02:08:36.669Z",
+    "parameter" : [{
+      "name" : "limitedExpansion",
+      "valueBoolean" : true
+    },
+    {
+      "name" : "version",
+      "valueString" : "http://snomed.info/sct|http://snomed.info/sct/731000124108/version/20200901"
+    }],
+    "contains" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "81105003",
+      "display" : "Cervical lymph node group (body structure)"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "196374005",
+      "display" : "Entire lymph node of thorax (body structure)"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "245269009",
+      "display" : "Axillary lymph node group (body structure)"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "245265003",
+      "display" : "Supraclavicular lymph node group (body structure)"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "245282001",
+      "display" : "Internal mammary lymph node group (body structure)"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "245284000",
+      "display" : "Abdominal lymph node group (body structure)"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "245294005",
+      "display" : "Pelvic lymph node group (body structure)"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "59441001",
+      "display" : "Structure of lymph node (body structure)"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "244486005",
+      "display" : "Entire eye (body structure)"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "56329008",
+      "display" : "Pituitary structure (body structure)"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "12738006",
+      "display" : "Brain structure (body structure)"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "119235005",
+      "display" : "Brain part (body structure)"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "2748008",
+      "display" : "Spinal cord structure (body structure)"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "71836000",
+      "display" : "Nasopharyngeal structure (body structure)"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "74262004",
+      "display" : "Oral cavity structure (body structure)"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "31389004",
+      "display" : "Oropharyngeal structure (body structure)"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "4596009",
+      "display" : "Laryngeal structure (body structure)"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "81502006",
+      "display" : "Hypopharyngeal structure (body structure)"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "2095001",
+      "display" : "Nasal sinus structure (body structure)"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "385294005",
+      "display" : "Salivary gland structure (body structure)"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "69748006",
+      "display" : "Thyroid structure (body structure)"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "361355005",
+      "display" : "Entire head and neck (body structure)"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "181216001",
+      "display" : "Entire lung (body structure)"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "71400007",
+      "display" : "Mesothelium structure (body structure)"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "302551006",
+      "display" : "Entire thorax (body structure)"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "181131000",
+      "display" : "Entire breast (body structure)"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "119184005",
+      "display" : "Breast part (body structure)"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "78904004",
+      "display" : "Chest wall structure (body structure)"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "181245004",
+      "display" : "Entire esophagus (body structure)"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "69695003",
+      "display" : "Stomach structure (body structure)"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "30315005",
+      "display" : "Small intestinal structure (body structure)"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "71854001",
+      "display" : "Colon structure (body structure)"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "34402009",
+      "display" : "Rectum structure (body structure)"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "53505006",
+      "display" : "Anal structure (body structure)"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "10200004",
+      "display" : "Liver structure (body structure)"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "34707002",
+      "display" : "Biliary tract structure (body structure)"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "28231008",
+      "display" : "Gallbladder structure (body structure)"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "15776009",
+      "display" : "Pancreatic structure (body structure)"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "113345001",
+      "display" : "Abdominal structure (body structure)"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "302512001",
+      "display" : "Entire urinary bladder (body structure)"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "119221008",
+      "display" : "Bladder part (body structure)"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "64033007",
+      "display" : "Kidney structure (body structure)"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "87953007",
+      "display" : "Ureteric structure (body structure)"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "181422007",
+      "display" : "Entire prostate (body structure)"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "119231001",
+      "display" : "Prostate part (body structure)"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "13648007",
+      "display" : "Urethral structure (body structure)"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "18911002",
+      "display" : "Penile structure (body structure)"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "40689003",
+      "display" : "Testis structure (body structure)"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "20233005",
+      "display" : "Scrotal structure (body structure)"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "15497006",
+      "display" : "Ovarian structure (body structure)"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "31435000",
+      "display" : "Fallopian tube structure (body structure)"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "35039007",
+      "display" : "Uterine structure (body structure)"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "71252005",
+      "display" : "Cervix uteri structure (body structure)"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "76784001",
+      "display" : "Vaginal structure (body structure)"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "45292006",
+      "display" : "Vulval structure (body structure)"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "89546000",
+      "display" : "Bone structure of cranium (body structure)"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "44300000",
+      "display" : "Entire vertebral column (body structure)"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "16982005",
+      "display" : "Shoulder region structure (body structure)"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "113197003",
+      "display" : "Bone structure of rib (body structure)"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "29836001",
+      "display" : "Hip region structure (body structure)"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "46633002",
+      "display" : "Entire bony pelvis (body structure)"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "12921003",
+      "display" : "Pelvic structure (body structure)"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "48566001",
+      "display" : "Bone structure of extremity (body structure)"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "39937001",
+      "display" : "Skin structure (body structure)"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "87784001",
+      "display" : "Soft tissues (body structure)"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "38266002",
+      "display" : "Entire body as a whole (body structure)"
     }]
   }
 },

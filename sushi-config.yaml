@@ -228,12 +228,9 @@ groups:
     name: Code Systems
     description: These define new code systems used by systems conforming with this implementation guide
     resources:
-      - CodeSystem/brachytherapy-device-cs
-      - CodeSystem/brachytherapy-technique-cs
+      - CodeSystem/radiotherapy-cs
       - CodeSystem/mcode-elixhauser-category
       - CodeSystem/mcode-other-code-cs
-      - CodeSystem/teleradiotherapy-device-cs
-      - CodeSystem/teleradiotherapy-technique-cs
 
   # Examples
   GenericExamples:

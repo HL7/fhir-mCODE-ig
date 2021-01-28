@@ -191,7 +191,7 @@ InstanceOf: BrachytherapyPrescriptionDelivery
 Description: "mCODE Example for a brachytherapy procedure."
 * status = #completed "completed"
 * code = RO#LDR "Low Dose Rate Brachytherapy"
-* extension[radiotherapyTechnique].valueString = RO#INSTIT-TEMP "Interstitial-Temporary"
+* extension[radiotherapyTechnique].valueCodeableConcept = RO#INSTIT-TEMP "Interstitial-Temporary"
 * subject = Reference(mCODEPatientExample1)
 * asserter = Reference(mCODEPractitionerExample1)
 * performedPeriod.start = "2019-03-01"

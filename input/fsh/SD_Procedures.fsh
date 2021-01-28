@@ -50,7 +50,7 @@ Description: "A summary of delivered teleradiotherapy treatment. The scope is a 
 * code ^short = "Modality"
 * code ^definition = "The modality (radiation type) for the external beam procedure."
 * code obeys teleradiotherapy-procedure-code-invariant
-* extension[radiotherapyTechnique].valueString from TeleradiotherapyTechniqueVS (extensible)
+* extension[radiotherapyTechnique].valueCodeableConcept from TeleradiotherapyTechniqueVS (extensible)
 * usedCode from TeleradiotherapyDeviceVS (extensible)
 
 
@@ -69,7 +69,7 @@ Description: "A summary of delivered brachytherapy treatment. The scope is a pre
 * code obeys brachytherapy-code-invariant
 * code ^short = "Brachytherapy Modality"
 * code ^definition = "The modality of the brachytherapy procedure."
-* extension[radiotherapyTechnique].valueString from BrachytherapyTechniqueVS (extensible)
+* extension[radiotherapyTechnique].valueCodeableConcept from BrachytherapyTechniqueVS (extensible)
 * usedCode from BrachytherapyDeviceVS (extensible)
 
     Invariant: brachytherapy-code-invariant
@@ -80,13 +80,11 @@ Description: "A summary of delivered brachytherapy treatment. The scope is a pre
 // TO DO: Use standard extension procedure-method IF the cardinality will be 0..1
 Extension: RadiotherapyTechnique
 Id: radiotherapy-technique
-Title: "Radiation Procedure Technique"
+Title: "Radiotherapy Technique"
 Description: "The method by which a radiation modality is applied (e.g., intensity modulated radiation therapy, intraoperative radiation therapy)."
-* . ^short = "Radiation Procedure Technique"
-* . ^definition = "The method by which a radiation modality is applied (e.g., intensity modulated radiation therapy, intraoperative radiation therapy)."
 * ^context[0].type = #element
 * ^context[0].expression = "Procedure"
-* value[x] only string
+* value[x] only CodeableConcept
 
 
 Extension: RadiotherapyDosePerFraction

@@ -43,9 +43,8 @@ The valueSet reference http://loinc.org/vs/LL4986-7 on element Observation.inter
 The valueSet reference http://loinc.org/vs/LL529-9 on element Observation.interpretation could not be resolved
 # Suppress more "Unknown System" messages
 Unknown System specified, so Concepts and Filters can''t be checked
-# Suppress these messages about not using USCoreLaboratoryResult, because not all Observations are laboratories
+# Suppress these messages about not using USCoreLaboratoryResult, because not all Observations are laboratories. Deviation was approved by Cross-Group Projects Work Group on 1/28/2021 Floyd Eisenberg/Brett Marquard 28-0-1. See https://jira.hl7.org/browse/FHIR-30707
 WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-karnofsky-performance-status').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
-WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-performance-status-parent').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
 WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-clinical-distant-metastases-category').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
 WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-clinical-primary-tumor-category').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
 WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-clinical-regional-nodes-category').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
@@ -56,6 +55,8 @@ WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/mcode/Structure
 WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-stage-parent').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
 WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-comorbidities-parent').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
 WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-ecog-performance-status').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
+WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/comorbidities-elixhauser').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
+WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-related-elixhauser-comorbidities.json').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
 # This error is inherited from cpb-15 " not(f:kind/@value='instance') or (not(exists(f:implementation)) and exists(f:software))"
 WARNING: StructureDefinition/MCodeCapabilityStatement: StructureDefinition.snapshot.element[0].constraint[6].xpath: value should not start or finish with whitespace
 # These codes ARE valid
@@ -63,9 +64,6 @@ The code C28049 is not valid in the system http://ncithesaurus.nci.nih.gov
 The code C66891 is not valid in the system http://ncithesaurus.nci.nih.gov
 The code C15623 is not valid in the system http://ncithesaurus.nci.nih.gov
 The code C94420 is not valid in the system http://ncithesaurus.nci.nih.gov
-The code 342092 is not valid in the system http://terminology.hl7.org/CodeSystem/medcin
-The code 195192 is not valid in the system http://terminology.hl7.org/CodeSystem/medcin
-The code 195195 is not valid in the system http://terminology.hl7.org/CodeSystem/medcin
 The code C104941 is not valid in the system http://ncithesaurus.nci.nih.gov
 The code C159611 is not valid in the system http://ncithesaurus.nci.nih.gov
 The code C165189 is not valid in the system http://ncithesaurus.nci.nih.gov
@@ -76,13 +74,11 @@ The code C116432 is not valid in the system http://ncithesaurus.nci.nih.gov
 The code C62727 is not valid in the system http://ncithesaurus.nci.nih.gov
 The code C118286 is not valid in the system http://ncithesaurus.nci.nih.gov
 The code C15358 is not valid in the system http://ncithesaurus.nci.nih.gov
-The code 304003 is not valid in the system http://terminology.hl7.org/CodeSystem/medcin
 The code C15195 is not valid in the system http://ncithesaurus.nci.nih.gov
 The code C85254 is not valid in the system http://ncithesaurus.nci.nih.gov
 The code C15651 is not valid in the system http://ncithesaurus.nci.nih.gov
 The code C116542 is not valid in the system http://ncithesaurus.nci.nih.gov
 The code C15470 is not valid in the system http://ncithesaurus.nci.nih.gov
-The code 76787 is not valid in the system http://terminology.hl7.org/CodeSystem/medcin
 The code C15751 is not valid in the system http://ncithesaurus.nci.nih.gov
 The code C66897 is not valid in the system http://ncithesaurus.nci.nih.gov
 The code C15650 is not valid in the system http://ncithesaurus.nci.nih.gov

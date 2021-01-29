@@ -96,6 +96,7 @@ groups:
     description: Profiles in the [mCODE **Treatments** Group](index.html#treatments-group).
     resources:
       - StructureDefinition/mcode-cancer-related-medication-request
+      - StructureDefinition/mcode-cancer-related-medication-administration
       - StructureDefinition/radiotherapy-course-summary
       - StructureDefinition/teleradiotherapy-prescription-delivery
       - StructureDefinition/brachytherapy-prescription-delivery

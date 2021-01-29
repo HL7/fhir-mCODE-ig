@@ -15,7 +15,6 @@ Description:  "Records the dimensions of a tumor"
 * subject 1..1 MS
 * subject only Reference(CancerPatient)
 
-// TODO: Set rule such that either specimen OR focus must be non-null, but one MUST be null
 * focus 0..1
 * focus only Reference(Tumor)
 * focus ^short = "Use ONLY when tumor HAS NOT been removed from the body"
@@ -27,6 +26,8 @@ Description:  "Records the dimensions of a tumor"
 * specimen ^definition = "Reference to a BodyStructure resource conforming to Tumor."
 * specimen ^comment = "Use **only** when the tumor **has** been removed from the body. If the tumor has been not removed, use `focus` instead and leave `specimen` empty."
 * specimen MS
+
+* obeys must-have-focus-or-specimen-invariant
 
 * method from TumorSizeMethodVS (extensible)
 * method ^short = "Method for measuring the tumor"
@@ -53,6 +54,13 @@ Description:  "Records the dimensions of a tumor"
 * component[tumorOtherDimension].code = LNC#33729-5 // "Size additional dimension in Tumor"
 * component[tumorOtherDimension].value[x] only Quantity
 * component[tumorOtherDimension].valueQuantity from TumorSizeUnitsVS (required)
+
+// This invariant has been exhaustively tested with the FHIR validator
+Invariant: must-have-focus-or-specimen-invariant
+Description: "Either `focus` OR `specimen` MUST be populated"
+Expression: "(focus.exists() or specimen.exists()) and (focus.exists() and specimen.exists()).not()"
+Severity: #error
+
 
 
 Profile: Tumor

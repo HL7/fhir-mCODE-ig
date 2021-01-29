@@ -50,7 +50,7 @@ Description: "A summary of delivered teleradiotherapy treatment. The scope is a 
 * code ^short = "Modality"
 * code ^definition = "The modality (radiation type) for the external beam procedure."
 * code obeys teleradiotherapy-procedure-code-invariant
-* extension[radiotherapyTechnique].valueCodeableConcept from TeleradiotherapyTechniqueVS (extensible)
+* extension[radiotherapyTechnique].value[x] from TeleradiotherapyTechniqueVS (extensible)
 * usedCode from TeleradiotherapyDeviceVS (extensible)
 
 
@@ -69,7 +69,7 @@ Description: "A summary of delivered brachytherapy treatment. The scope is a pre
 * code obeys brachytherapy-code-invariant
 * code ^short = "Brachytherapy Modality"
 * code ^definition = "The modality of the brachytherapy procedure."
-* extension[radiotherapyTechnique].valueCodeableConcept from BrachytherapyTechniqueVS (extensible)
+* extension[radiotherapyTechnique].value[x] from BrachytherapyTechniqueVS (extensible)
 * usedCode from BrachytherapyDeviceVS (extensible)
 
     Invariant: brachytherapy-code-invariant

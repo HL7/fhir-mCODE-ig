@@ -1,76 +1,60 @@
+Alias: RO = http://hl7.org/fhir/us/mcode/CodeSystem/radiotherapy-cs
+
 //----------- MODALITIES -----------------------
 
 ValueSet:  TeleradiotherapyModalityVS
 Id: teleradiotherapy-modality-vs
 Title: "Teleradiotherapy Modality Value Set"
-Description: "Codes describing the modalities of teleradiotherapy (external beam)procedures."
-* NCIT#C66897 "Proton Beam Radiation Therapy"
-* NCIT#C15650 "Electron Beam Therapy"
-* NCIT#C15440 "High-LET Neutron Therapy"
-* NCIT#C160816  "Carbon Ion Radiation Therapy"
-* NCIT#C104914 "Photon Beam Radiation Therapy"
-* OtherCode#OtherTeleradiotherapyModality "Other Teleradiotherapy Modality, Specify"
-
+Description: "Codes describing the modalities of teleradiotherapy (external beam) procedures."
+* RO#PROTON
+* RO#ELECTRON
+* RO#NEUTRON
+* RO#CARBON
+* RO#PHOTON
 
 ValueSet: BrachytherapyModalityVS
 Id: brachytherapy-modality-vs
 Title: "Brachytherapy Modality Value Set"
 Description: "Codes describing the modalities of brachytherapy (internal radiation) procedures."
-* ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
-* NCIT#C85254 "Low-Dose Rate Brachytherapy"
-* NCIT#C116542 "Pulsed-Dose Rate Brachytherapy"
-* NCIT#C15651  "High dose brachytherapy"
-* SCT#438629002 "High dose rate electronic brachytherapy"
-* MEDCIN#76787  "Radiopharmaceutical therapy"
-//* NCIT#C15470 "Radioisotope Therapy"
-* OtherCode#OtherBrachytherapyModality "Other Brachytherapy Modality, Specify"
-
+* RO#LDR
+* RO#PDR
+* RO#HDR
+* RO#ELEC
+* RO#PHARM
 
 //----------- TECHNIQUES -----------------------
-
-CodeSystem: TeleradiotherapyTechniqueCS
-Id: teleradiotherapy-technique-cs
-Title: "Teleradiotherapy Technique Code System"
-Description: "Codes describing the techniques of teleradiotherapy (external beam) procedures."
-* #IMRT "Intensity Modulated Radiation Therapy"
-* #VMAT "Volumetric Modulated Radiation Therapy"
-* #3D "3 Dimensional"  "Dose calculated with projection onto 3D imaging (e.g. CT or MR) delivered with either static aperture (Collimator, SRS Cone, Static MLC, blocks, etc) or Non-IMRT/VMAT dynamic apertures (e.g. Field-in-Field, dynamic arc) using either single gantry angles or arcs."
-* #2D "2 Dimensional" "Dose calculated without projection onto 3D imaging (e.g. CT or MR) delivered with either static aperture (Collimator, SRS Cone, Static MLC, blocks, etc) or Non-IMRT/VMAT dynamic apertures (e.g. Field-in-Field, dynamic arc) using either single gantry angles or arcs."
-* #IORT "Intraoperative Radiation Therapy"
-* #Compensator "Compensator" "Applied to EBRT Electron, a thickness varied device is used to modulate both energy and intensity of electron"
-* #PPS  "Particle Passive Scattering"
-* #PSS "Particle Spot Scanning"
-* #Mixed "Mixed" "Both Photon and Particle based beams are used to deliver the therapeutic dose"
-* #IMNT "Intensity Modulated Neutron Therapy"
-* #NCT "Neutron Capture Therapy"
-
-CodeSystem: BrachytherapyTechniqueCS
-Id: brachytherapy-technique-cs
-Title: "Brachytherapy Technique Code System"
-Description: "Codes describing the techniques of brachytherapy (internal radiation) procedures."
-* #Intracavitary "Intracavitary"
-* #Intracavitary-IMB "Intracavitary Intensity Modulated Brachytherapy"
-* #Interstitial "Interstitial"
-* #Interstitial–Permanent "Interstitial–Permanent"
-* #Interstitial–Temporary "Interstitial–Temporary"
-* #Intravascular "Intravascular"
-* #Intraluminal "Intraluminal"
-* #IORT  "Intraoperative Radiation Therapy"
-* #Surface "Surface"
-* #Surface-Temporary "Surface-Temporary"
-* #Oral "Oral"
 
 ValueSet: TeleradiotherapyTechniqueVS
 Id: teleradiotherapy-technique-vs
 Title: "Teleradiotherapy Technique Value Set"
 Description: "Codes describing the techniques of teleradiotherapy (external beam) procedures."
-* include codes from system TeleradiotherapyTechniqueCS
+* RO#IMRT
+* RO#VMAT
+* RO#3D
+* RO#2D
+* RO#IORT
+* RO#COMP
+* RO#PPS
+* RO#PSS
+* RO#MIX
+* RO#IMNT
+* RO#NCT
 
 ValueSet: BrachytherapyTechniqueVS
 Id: brachytherapy-technique-vs
 Title: "Brachytherapy Technique Value Set"
 Description: "Codes describing the techniques of brachytherapy (internal radiation) procedures."
-* include codes from system BrachytherapyTechniqueCS
+* RO#CAV
+* RO#CAV-IMB
+* RO#INSTIT
+* RO#INSTIT-PERM
+* RO#INSTIT-TEMP
+* RO#VASC
+* RO#LUM
+* RO#IORT
+* RO#SURF
+* RO#SURF-TEMP
+* RO#ORAL
 
 //----------- DEVICES -----------------------
 
@@ -78,12 +62,71 @@ ValueSet: TeleradiotherapyDeviceVS
 Id: teleradiotherapy-device-vs
 Title: "Teleradiotherapy Device Value Set"
 Description: "Codes describing the devices used in teleradiotherapy (external beam) procedures."
-* include codes from system TeleradiotherapyDeviceCS
+* RO#Linac
+* RO#RLinac
+* RO#MRLinac
+* RO#Robotic
+* RO#IsotopeMS
+* RO#kV
+* RO#NGLinac
+* RO#MS
 
-CodeSystem: TeleradiotherapyDeviceCS
-Id: teleradiotherapy-device-cs
-Title: "Teleradiotherapy Device Code System"
-Description: "Codes describing the devices used in teleradiotherapy (external beam) procedures."
+ValueSet: BrachytherapyDeviceVS
+Id: brachytherapy-device-vs
+Title: "Brachytherapy Device Value Set"
+Description: "Codes describing the devices used in brachytherapy (internal radiation) procedures."
+* RO#Tandem
+* RO#Cylinder
+* RO#Ovoids
+* RO#Ring
+* RO#Seeds 
+* RO#Eye-plaque
+* RO#Hybrid
+* RO#Targeted 
+* RO#NonTargeted 
+
+//---------RADIOTHERAPY CODE SYSTEM-------
+
+CodeSystem: RadiotherapyCS
+Id: radiotherapy-cs
+Title: "Radiotherapy Code System"
+Description: "Codes describing the modalities, techniques, and devices used in external beam radiotherapy and brachytherapy (internal radiation) procedures."
+//-- Teleradiotherapy Modalities
+* #PROTON "Proton Beam Radiation Therapy"
+* #ELECTRON "Electron Beam Radiation Therapy"
+* #NEUTRON "Neutron Beam Radiation Therapy"
+* #CARBON  "Carbon Ion Beam Radiation Therapy"
+* #PHOTON "Photon Beam Radiation Therapy"
+//-- Brachytherapy Modalities
+* #LDR "Low-Dose Rate Brachytherapy"
+* #PDR "Pulsed-Dose Rate Brachytherapy"
+* #HDR  "High dose brachytherapy"
+* #ELEC "High dose rate electronic brachytherapy"
+* #PHARM "Radiopharmaceutical"
+//-- Teleradiotherapy Techniques
+* #IMRT "Intensity Modulated Radiation Therapy"
+* #VMAT "Volumetric Modulated Radiation Therapy"
+* #3D "3 Dimensional"  "Dose calculated with projection onto 3D imaging (e.g. CT or MR) delivered with either static aperture (Collimator, SRS Cone, Static MLC, blocks, etc) or Non-IMRT/VMAT dynamic apertures (e.g. Field-in-Field, dynamic arc) using either single gantry angles or arcs."
+* #2D "2 Dimensional" "Dose calculated without projection onto 3D imaging (e.g. CT or MR) delivered with either static aperture (Collimator, SRS Cone, Static MLC, blocks, etc) or Non-IMRT/VMAT dynamic apertures (e.g. Field-in-Field, dynamic arc) using either single gantry angles or arcs."
+* #IORT "Intraoperative Radiation Therapy"
+* #COMP "Compensator" "Applied to EBRT Electron, a thickness varied device is used to modulate both energy and intensity of electron"
+* #PPS  "Particle Passive Scattering"
+* #PSS "Particle Spot Scanning"
+* #MIX "Mixed" "Both Photon and Particle based beams are used to deliver the therapeutic dose"
+* #IMNT "Intensity Modulated Neutron Therapy"
+* #NCT "Neutron Capture Therapy"
+//-- Brachytherapy Techniques
+* #CAV "Intracavitary"
+* #CAV-IMB "Intracavitary, Intensity Modulated"
+* #INSTIT "Interstitial"
+* #INSTIT-PERM "Interstitial-Permanent"
+* #INSTIT-TEMP "Interstitial-Temporary"
+* #VASC "Intravascular"
+* #LUM "Intraluminal"
+* #SURF "Surface"
+* #SURF-TEMP "Surface-Temporary"
+* #ORAL "Oral"
+//-- Teleradiotherapy Devices
 * #Linac "Linac" "Gantry based delivery with linear accelerator based source"
 * #RLinac "RLinac" "Ring Gantry based delivery with linear accelerator based source e.g. Ethos, Tomotherapy"
 * #MRLinac "MRLinac" "Gantry based delivery with linear accelerator based source with onboard MRI for patient positioning."
@@ -92,29 +135,16 @@ Description: "Codes describing the devices used in teleradiotherapy (external be
 * #kV "kV" "Non-megavoltage, electronically generated photons"
 * #NGLinac "Non-gantry based linac, e.g. specialty devices used for IORT e.g. Mobetron"
 * #MS "Multisource radiation" "Multisource radiation use of multiple sources at different positons using linear accelerator-based source"
-
-
-ValueSet: BrachytherapyDeviceVS
-Id: brachytherapy-device-vs
-Title: "Brachytherapy Device Value Set"
-Description: "Codes describing the devices used in brachytherapy (internal radiation) procedures."
-* include codes from system BrachytherapyDeviceCS
-
-CodeSystem: BrachytherapyDeviceCS
-Id: brachytherapy-device-cs
-Title: "Brachytherapy Device Code System"
-Description: "Codes describing the devices used in brachytherapy (internal radiation) procedures."
-* #Tandem
-* #Cylinder
-* #Ovoids
-* #Ring
-* #Seeds 
-* #Eye-plaque
-* #Hybrid
-* #Targeted 
-* #NonTargeted 
-
-
+//-- Brachytherapy Devices
+* #Tandem  "Tandem" "Tandem Brachytherapy Device"
+* #Cylinder  "Cylinder" "Cylinder Brachytherapy Device"
+* #Ovoids  "Ovoids" "Ovoid Brachytherapy Device"
+* #Ring  "Ring" "Ring Brachytherapy Device"
+* #Seeds  "Seeds" "Seeds Brachytherapy Device"
+* #Eye-plaque  "Eye-plaque" "Eye-plaque Brachytherapy Device"  //SCTID: 420529003 Radiotherapy using radioactive plaque on eye (procedure)
+* #Hybrid   "Hybrid"  "Hybrid Brachytherapy Device"
+* #Targeted  "Targeted" "Targeted Brachytherapy Device"
+* #NonTargeted  "NonTargeted" "NonTargeted Brachytherapy Device"
 
 //----------BODY SITE------------
 
@@ -125,13 +155,9 @@ Description:    "Codes for body sites that can be targets of radiation therapy. 
 * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
 * SCT#81105003       "Cervical lymph node group (body structure)"
 * SCT#196374005       "Entire lymph node of thorax (body structure)"
-* SCT#81105003       "Cervical lymph node group (body structure)"
-* SCT#196374005       "Entire lymph node of thorax (body structure)"
 * SCT#245269009       "Axillary lymph node group (body structure)"
 * SCT#245265003       "Supraclavicular lymph node group (body structure)"
 * SCT#245282001       "Internal mammary lymph node group (body structure)"
-* SCT#245284000       "Abdominal lymph node group (body structure)"
-* SCT#245294005       "Pelvic lymph node group (body structure)"
 * SCT#245284000       "Abdominal lymph node group (body structure)"
 * SCT#245294005       "Pelvic lymph node group (body structure)"
 * SCT#59441001       "Structure of lymph node (body structure)"
@@ -194,27 +220,3 @@ Description:    "Codes for body sites that can be targets of radiation therapy. 
 * SCT#87784001       "Soft tissues (body structure)"
 * SCT#38266002       "Entire body as a whole (body structure)"
 // no concept for hemibody
-
-
-/* Hold
-* NCIT#C28049  "Intracavitary Radiation Therapy"
-* NCIT#C66891  "Interstitial Radiation Therapy"
-* MEDCIN#342092  "temporary radiation therapy implant"
-* MEDCIN#195192  "irradiation by permanent brachytherapy implants"
-* NCIT#C15623   "Intraoperative Radiotherapy"
-* NCIT#C94420  "Unsealed Internal Radiation Therapy"
-* MEDCIN#195195  "brachytherapy using sealed isotopes"
-
-
-* NCIT#C104941  "Scanning Proton Beam Therapy"
-* NCIT#C159611  "Intensity-Modulated Proton Therapy"
-* NCIT#C165189  "Conventional Radiotherapy"
-* NCIT#C16035   "3-Dimensional Conformal Radiation Therapy"
-* NCIT#C15623   "Intraoperative Radiotherapy"
-* NCIT#C16135    "Intensity-Modulated Radiation Therapy"  // IMRT
-* MEDCIN#304003 "intracranial stereotactic radiosurgery"
-* NCIT#C116432  "Image-Guided Adaptive Radiation Therapy" 
-* NCIT#C62727 "Image Guided Radiation Therapy"  // IGRT	
-* NCIT#C118286 "Stereotactic Body Radiation Therapy"  // SBRT	
-* NCIT#C15358  "Stereotactic Radiosurgery" // SRS
-*/

@@ -4,4 +4,4 @@ This profile assumes the current focus or "index" condition is the patient's can
 
 ### Conformance
 
-TBD
+Observation resources associated with an mCODE patient with Observation.code LOINC 88040-1 MUST conform to this profile. Beyond this requirement, a producer of resources SHOULD ensure that any resource instance associated with an mCODE patient that would reasonably be expected to conform to this profile SHOULD be published in this form.

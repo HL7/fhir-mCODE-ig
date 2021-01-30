@@ -26,4 +26,4 @@ If an overall score is calculated, it should be recorded in `Observation.value[x
 
 ### Conformance
 
-TBD
+This profile is not meant to be used in mCODE. It is the parent profile for the CancerRelatedElixhauserComorbidities profile. Because it may be useful for other applications, it is not marked 'abstract'.

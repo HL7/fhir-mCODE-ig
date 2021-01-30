@@ -7,11 +7,9 @@
 <artifactPageExtension value="-definitions"/>
 <artifactPageExtension value="-examples"/>
 <artifactPageExtension value="-mappings"/>
-<artifact id="CodeSystem/brachytherapy-device-cs" key="CodeSystem-brachytherapy-device-cs" name="Brachytherapy Device Code System"/>
 <artifact id="ValueSet/brachytherapy-device-vs" key="ValueSet-brachytherapy-device-vs" name="Brachytherapy Device Value Set"/>
 <artifact id="ValueSet/brachytherapy-modality-vs" key="ValueSet-brachytherapy-modality-vs" name="Brachytherapy Modality Value Set"/>
 <artifact id="StructureDefinition/brachytherapy-prescription-delivery" key="StructureDefinition-brachytherapy-prescription-delivery" name="Brachytherapy Prescription Delivery"/>
-<artifact id="CodeSystem/brachytherapy-technique-cs" key="CodeSystem-brachytherapy-technique-cs" name="Brachytherapy Technique Code System"/>
 <artifact id="ValueSet/brachytherapy-technique-vs" key="ValueSet-brachytherapy-technique-vs" name="Brachytherapy Technique Value Set"/>
 <artifact id="Procedure/BrachytherapyPrescriptionDeliveryExample1" key="Procedure-BrachytherapyPrescriptionDeliveryExample1" name="BrachytherapyPrescriptionDeliveryExample1"/>
 <artifact id="ValueSet/mcode-cancer-body-location-vs" key="cancer-body-location-value-set" name="Cancer Body Location Value Set"/>
@@ -106,10 +104,11 @@
 <artifact id="StructureDefinition/radiotherapy-dose-per-fraction" key="StructureDefinition-radiotherapy-dose-per-fraction" name="Radiation Dose Per Fraction"/>
 <artifact id="StructureDefinition/radiotherapy-delivered-fractions" key="StructureDefinition-radiotherapy-delivered-fractions" name="Radiation Fractions Delivered"/>
 <artifact id="StructureDefinition/radiotherapy-prescribed-fractions" key="StructureDefinition-radiotherapy-prescribed-fractions" name="Radiation Fractions Prescribed"/>
-<artifact id="StructureDefinition/radiotherapy-technique" key="StructureDefinition-radiotherapy-technique" name="Radiation Procedure Technique"/>
 <artifact deprecated="true" id="ValueSet/mcode-radiation-procedure-value-set" key="radiation-procedure-value-set" name="Radiation Procedure Value Set"/>
 <artifact id="ValueSet/mcode-radiation-target-body-site-vs" key="radiation-target-body-site-value-set" name="Radiation Target Body Site Value Set"/>
+<artifact id="CodeSystem/radiotherapy-cs" key="CodeSystem-radiotherapy-cs" name="Radiotherapy Code System"/>
 <artifact id="StructureDefinition/radiotherapy-course-summary" key="StructureDefinition-radiotherapy-course-summary" name="Radiotherapy Course Summary"/>
+<artifact id="StructureDefinition/radiotherapy-technique" key="StructureDefinition-radiotherapy-technique" name="Radiotherapy Technique"/>
 <artifact deprecated="true" id="Extension/mcode-related-primary-cancer-condition-extension" key="related-primary-cancer-condition-extension" name="Related Primary Cancer Condition Extension"/>
 <artifact id="SearchParameter/Patient-id" key="SearchParameter-Patient-id" name="Search by _id in Patients with multipleOr"/>
 <artifact id="SearchParameter/Condition-code" key="SearchParameter-Condition-code" name="Search by code:in in Conditions"/>
@@ -130,11 +129,9 @@
 <artifact id="ValueSet/mcode-tnm-primary-tumor-category-vs" key="tnm-primary-tumor-category-value-set" name="TNM Primary Tumor Category Value Set"/>
 <artifact id="ValueSet/mcode-tnm-regional-nodes-category-vs" key="tnm-regional-nodes-category-value-set" name="TNM Regional Nodes Category Value Set"/>
 <artifact id="ValueSet/mcode-tnm-stage-group-vs" key="tnm-stage-group-value-set" name="TNM Stage Group Value Set"/>
-<artifact id="CodeSystem/teleradiotherapy-device-cs" key="CodeSystem-teleradiotherapy-device-cs" name="Teleradiotherapy Device Code System"/>
 <artifact id="ValueSet/teleradiotherapy-device-vs" key="ValueSet-teleradiotherapy-device-vs" name="Teleradiotherapy Device Value Set"/>
 <artifact id="ValueSet/teleradiotherapy-modality-vs" key="ValueSet-teleradiotherapy-modality-vs" name="Teleradiotherapy Modality Value Set"/>
 <artifact id="StructureDefinition/teleradiotherapy-prescription-delivery" key="StructureDefinition-teleradiotherapy-prescription-delivery" name="Teleradiotherapy Prescription Delivery"/>
-<artifact id="CodeSystem/teleradiotherapy-technique-cs" key="CodeSystem-teleradiotherapy-technique-cs" name="Teleradiotherapy Technique Code System"/>
 <artifact id="ValueSet/teleradiotherapy-technique-vs" key="ValueSet-teleradiotherapy-technique-vs" name="Teleradiotherapy Technique Value Set"/>
 <artifact id="StructureDefinition/mcode-termination-reason" key="StructureDefinition-mcode-termination-reason" name="Termination Reason"/>
 <artifact deprecated="true" id="Extension/mcode-termination-reason-extension" key="termination-reason-extension" name="Termination Reason Extension"/>

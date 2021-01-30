@@ -96,6 +96,7 @@ groups:
     description: Profiles in the [mCODE **Treatments** Group](index.html#treatments-group).
     resources:
       - StructureDefinition/mcode-cancer-related-medication-request
+      - StructureDefinition/mcode-cancer-related-medication-administration
       - StructureDefinition/radiotherapy-course-summary
       - StructureDefinition/teleradiotherapy-prescription-delivery
       - StructureDefinition/brachytherapy-prescription-delivery
@@ -228,12 +229,9 @@ groups:
     name: Code Systems
     description: These define new code systems used by systems conforming with this implementation guide
     resources:
-      - CodeSystem/brachytherapy-device-cs
-      - CodeSystem/brachytherapy-technique-cs
+      - CodeSystem/radiotherapy-cs
       - CodeSystem/mcode-elixhauser-category
       - CodeSystem/mcode-other-code-cs
-      - CodeSystem/teleradiotherapy-device-cs
-      - CodeSystem/teleradiotherapy-technique-cs
 
   # Examples
   GenericExamples:

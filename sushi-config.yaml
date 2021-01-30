@@ -1,7 +1,7 @@
 id: hl7.fhir.us.mcode
 canonical: http://hl7.org/fhir/us/mcode
 version: 1.5.0
-name: minimal_Common_Oncology_Data_Elements_(mCODE)
+name: MinimalCommonOncologyDataElements
 title: "minimal Common Oncology Data Elements (mCODE) Implementation Guide"
 status: draft
 publisher:
@@ -65,7 +65,7 @@ groups:
     resources:
       - StructureDefinition/mcode-cancer-patient
       - StructureDefinition/comorbidities-elixhauser
-      - StructureDefinition/mcode-cancer-related-elixhauser-comorbidities
+      - StructureDefinition/mcode-cancer-related-comorbidities-elixhauser
       - StructureDefinition/mcode-ecog-performance-status
       - StructureDefinition/mcode-karnofsky-performance-status
       - StructureDefinition/mcode-patient-bundle
@@ -238,87 +238,86 @@ groups:
     name: "Examples: Generic"
     description: Examples of resources conforming to mCODE profiles. These examples are independent (i.e., there is no expectation of consistency of data among the resources).
     resources:
-      - Condition/mCODEDepressionExample1
-      - Condition/mCODEPrimaryCancerConditionExample1
-      - Condition/mCODESecondaryCancerConditionExample1
-      - DiagnosticReport/mCODECancerGenomicsReportExample1
-      - Group/mCODEPatientGroupExample1
-      - MedicationRequest/mCODECancerRelatedMedicationRequestExample1
-      - MedicationRequest/mCODECancerRelatedMedicationRequestExample2
-      - Observation/mCODECancerDiseaseStatusExample1
-      - Observation/mCODECancerGeneticVariantExample1
-      - Observation/mCODECancerGeneticVariantExample2
-      - Observation/mCODECancerRelatedElixhauserComorbiditiesExample1
-      - Observation/mCODEECOGPerformanceStatusExample1
-      - Observation/mCODEGenomicRegionStudiedExample1
-      - Observation/mCODEKarnofskyPerformanceStatusExample1
-      - Observation/mCODETNMClinicalDistantMetastasesCategoryExample1
-      - Observation/mCODETNMClinicalPrimaryTumorCategoryExample1
-      - Observation/mCODETNMClinicalRegionalNodesCategoryExample1
-      - Observation/mCODETNMClinicalStageGroupExample1
-      - Observation/mCODETNMPathologicalDistantMetastasesCategoryExample1
-      - Observation/mCODETNMPathologicalPrimaryTumorCategoryExample1
-      - Observation/mCODETNMPathologicalRegionalNodesCategoryExample1
-      - Observation/mCODETNMPathologicalStageGroupExample1
-      - Observation/mCODETumorMarkerTestExample1
-      - Organization/mCODEOrganizationExample1
-      - Patient/mCODEPatientExample1
-      - Patient/mCODEPatientExample2
-      - Practitioner/mCODEPractitionerExample1
-      - Procedure/BrachytherapyPrescriptionDeliveryExample1
-      - Procedure/mCODECancerRelatedSurgicalProcedureExample1
-      - Specimen/mCODEGeneticSpecimenExample1
+      - Condition/primary-cancer-condition-nsclc
+      - Condition/secondary-cancer-condition-brain-mets
+      - DiagnosticReport/cancer-genomics-report-john-anyperson
+      - Group/group-mcode-patients
+      - MedicationRequest/cancer-related-medication-request-gefitinib
+      - MedicationRequest/cancer-related-medication-request-cisplatin
+      - Observation/cancer-disease-status-improved
+      - Observation/cancer-genetic-variant-somatic-single-nucleotide
+      - Observation/cancer-genetic-variant-germline-deletion
+      - Observation/cancer-related-comorbidities-elixhauser-john-anyperson
+      - Observation/ecog-performance-status-fully-active
+      - Observation/genomic-region-studied-stk11
+      - Observation/karnofsky-performance-status-normal-activity
+      - Observation/tnm-clinical-distant-metastases-category-cM0
+      - Observation/tnm-clinical-primary-tumor-category-cT3
+      - Observation/tnm-clinical-regional-nodes-category-cN3
+      - Observation/tnm-clinical-stage-group-3c
+      - Observation/tnm-pathological-distant-metastases-category-pM0
+      - Observation/tnm-pathological-primary-tumor-category-pT3
+      - Observation/tnm-pathological-regional-nodes-category-pN3
+      - Observation/tnm-pathological-stage-group-3C
+      - Observation/tumor-marker-test-egf
+      - Patient/cancer-patient-john-anyperson
+      - Patient/cancer-patient-eve-anyperson
+      - Practitioner/us-core-practitioner-kyle-anydoc
+      - Procedure/brachytherapy-prescription-delivery-ldr
+      - Procedure/cancer-related-surgical-procedure-lobectomy
+      - Specimen/genetic-specimen-lung
 
   Scenario1:
     name: "Scenario 1: Breast Cancer Patient"
-    description: A set of example resources based on [this persona](examples.html#scenario-1-breast-cancer-patient).
+    description: A set of example resources based on [this persona](examples.html#extended-example).
     resources:
-      - Bundle/scenario1-mcode-patient-bundle
-      - Condition/scenario1-mcode-comorbid-condition-depression
-      - Condition/scenario1-mcode-comorbid-condition-hypertension
-      - Condition/scenario1-mcode-primary-cancer-condition
-      - Condition/scenario1-us-core-condition-anxiety
-      - DiagnosticReport/scenario1-diagnosticreport-pathology
-      - DiagnosticReport/scenario1-mcode-cancer-genomics-report
-      - FamilyMemberHistory/scenario1-family-member-history-aunt
-      - FamilyMemberHistory/scenario1-family-member-history-sister
-      - FamilyMemberHistory/scenario1-family-member-history-uncle
-      - MedicationRequest/scenario1-mcode-cancer-related-medication-anastrozole
-      - MedicationRequest/scenario1-mcode-cancer-related-medication-chemo-cyclophosphamide
-      - MedicationRequest/scenario1-mcode-cancer-related-medication-chemo-doxorubicin
-      - MedicationRequest/scenario1-mcode-cancer-related-medication-chemo-paclitaxel
-      - Observation/scenario1-body-weight
-      - Observation/scenario1-mcode-cancer-disease-status
-      - Observation/scenario1-mcode-cancer-genetic-variant
-      - Observation/scenario1-mcode-cancer-related-elixhauser-comorbidities
-      - Observation/scenario1-mcode-ecog-performance-status
-      - Observation/scenario1-mcode-genomic-region-studied
-      - Observation/scenario1-mcode-tnm-clinical-distant-metastases-category
-      - Observation/scenario1-mcode-tnm-clinical-regional-nodes-category
-      - Observation/scenario1-mcode-tnm-clinical-stage-group
-      - Observation/scenario1-mcode-tnm-primary-tumor-category
-      - Observation/scenario1-mcode-tumor-marker-test-er
-      - Observation/scenario1-mcode-tumor-marker-test-her2
-      - Observation/scenario1-mcode-tumor-marker-test-oncotype-dx
-      - Observation/scenario1-mcode-tumor-marker-test-pr
-      - Observation/scenario1-neutrophils
-      - Observation/scenario1-observation-smoking-history
-      - Observation/scenario1-observation-tumor-dcis
-      - Observation/scenario1-observation-tumor-invasion-negative
-      - Observation/scenario1-observation-tumor-negative-margins
-      - Observation/scenario1-observation-tumor-sentinel-nodes
-      - Observation/scenario1-observation-tumor-size
-      - Observation/scenario1-us-core-smoking-status
-      - Organization/scenario1-organization1-mcode
-      - Patient/scenario1-mcode-cancer-patient
-      - Practitioner/scenario1-us-core-practitioner
-      - Practitioner/scenario1-practitioner2-mcode
-      - Procedure/scenario1-teleradiotherapy-prescription-delivery
-      - Procedure/scenario1-mcode-cancer-related-surgical-procedure-mastectomy
-      - Procedure/scenario1-us-core-procedure-biopsy
-      - Procedure/scenario1-us-core-procedure-mammogram
-      - Specimen/scenario1-mcode-genetic-specimen
-      - Specimen/scenario1-specimen-tumor
+      - Bundle/mcode-patient-bundle-jenny-m
+      - Condition/us-core-condition-depression-jenny-m
+      - Condition/us-core-condition-hypertension-jenny-m
+      - Condition/primary-cancer-condition-jenny-m
+      - Condition/us-core-condition-anxiety-jenny-m
+      - DiagnosticReport/us-core-diagnosticreport-lab-jenny-m
+      - DiagnosticReport/cancer-genomics-report-jenny-m
+      - FamilyMemberHistory/family-member-history-aunt-jenny-m
+      - FamilyMemberHistory/family-member-history-sister-jenny-m
+      - FamilyMemberHistory/family-member-history-uncle-jenny-m
+      - MedicationRequest/cancer-related-medication-request-anastrozole-jenny-m
+      - MedicationRequest/cancer-related-medication-request-cyclophosphamide-jenny-m
+      - MedicationRequest/cancer-related-medication-request-doxorubicin-jenny-m
+      - MedicationRequest/cancer-related-medication-request-paclitaxel-jenny-m
+      - Observation/bodyweight-jenny-m-2018-03-06
+      - Observation/cancer-disease-status-jenny-m
+      - Observation/cancer-genetic-variant-jenny-m
+      - Observation/cancer-related-comorbidities-elixhauser-jenny-m
+      - Observation/ecog-performance-status-jenny-m
+      - Observation/genomic-region-studied-jenny-m
+      - Observation/tnm-clinical-distant-metastases-category-jenny-m
+      - Observation/tnm-clinical-regional-nodes-category-jenny-m
+      - Observation/tnm-clinical-stage-group-jenny-m
+      - Observation/tnm-primary-tumor-category-jenny-m
+      - Observation/tumor-marker-test-er-jenny-m
+      - Observation/tumor-marker-test-her2-jenny-m
+      - Observation/tumor-marker-test-oncotype-dx-jenny-m
+      - Observation/tumor-marker-test-pr-jenny-m
+      - Observation/us-core-observation-lab-neutrophils-jenny-m
+      - Observation/observation-smoking-history-jenny-m
+      - Observation/us-core-observation-lab-tumor-dcis
+      - Observation/us-core-observation-lab-tumor-invasion-jenny-m
+      - Observation/us-core-observation-lab-tumor-margins-jenny-m
+      - Observation/us-core-observation-lab-sentinel-nodes-jenny-m
+      - Observation/tumor-size-jenny-m
+      - Observation/us-core-smokingstatus-jenny-m
+      - Organization/us-core-organization-bedrock-medicine
+      - Organization/us-core-organization-physician-services-inc
+      - Patient/cancer-patient-jenny-m
+      - Practitioner/us-core-practitioner-owen-oncologist
+      - Practitioner/us-core-practitioner-peter-pathologist
+      - Procedure/teleradiotherapy-prescription-delivery-jenny-m
+      - Procedure/cancer-related-surgical-procedure-jenny-m
+      - Procedure/us-core-procedure-biopsy-jenny-m
+      - Procedure/us-core-procedure-mammogram-jenny-m
+      - Specimen/genetic-specimen-left-breast-jenny-m
+      - Specimen/specimen-left-breast-jenny-m
 
   # Conformance
   Conformance:
@@ -348,6 +347,6 @@ groups:
       - StructureDefinition/mcode-tumor
       - ValueSet/mcode-tumor-size-units-vs
       - ValueSet/mcode-tumor-size-method-vs
-      - Observation/example1-mcode-tumor-size
-      - BodyStructure/example1-mcode-tumor
+      - Observation/tumor-size-pathology
+      - BodyStructure/tumor-lobular-carcinoma-left-breast
 

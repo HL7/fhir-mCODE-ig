@@ -130,7 +130,7 @@ Description: "Codes describing the modalities, techniques, and devices used in e
 * #Linac "Linac" "Gantry based delivery with linear accelerator based source"
 * #RLinac "RLinac" "Ring Gantry based delivery with linear accelerator based source e.g. Ethos, Tomotherapy"
 * #MRLinac "MRLinac" "Gantry based delivery with linear accelerator based source with onboard MRI for patient positioning."
-* #Robotic "Robotic" "Multiple axis (other than MLCs) are moved under electronic control during delivery of dose from a single beam with linear accelerator based source. e.g. CyberKnife. "
+* #Robotic "Robotic" "Multiple axis (other than MLCs) are moved under electronic control during delivery of dose from a single beam with linear accelerator based source. e.g. CyberKnife."
 * #IsotopeMS "IsotopeMS" "Multisource radiation use of multiple sources at different positons using isotope based source e.g. GammaKnife"
 * #kV "kV" "Non-megavoltage, electronically generated photons"
 * #NGLinac "Non-gantry based linac, e.g. specialty devices used for IORT e.g. Mobetron"

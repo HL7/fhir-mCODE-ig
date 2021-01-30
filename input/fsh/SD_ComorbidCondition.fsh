@@ -193,9 +193,9 @@ Description: "Comorbid condition checklist and optional risk score, using Elixha
 * component[valvularDisease].extension[conditionCode].value[x] from ElixhauserValvularDiseaseVS
 * component[weightLoss].extension[conditionCode].value[x] from ElixhauserWeightLossVS
 
-Profile: CancerRelatedElixhauserComorbidities
+Profile: CancerRelatedComorbiditiesElixhauser
 Parent: ComorbiditiesElixhauser
-Id: mcode-cancer-related-elixhauser-comorbidities
+Id: mcode-cancer-related-comorbidities-elixhauser
 Title: "Cancer-Related Elixhauser Comorbidities"
 Description: "Comorbid conditions using the Elixhauser comorbidity categories, from the perspective of the primary cancer condition." 
 * focus only Reference(PrimaryCancerCondition)

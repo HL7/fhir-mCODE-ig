@@ -7,7 +7,7 @@
 [CancerGeneticVariant]: StructureDefinition-mcode-cancer-genetic-variant.html
 [CancerGenomicsReport]: StructureDefinition-mcode-cancer-genomics-report.html
 [CancerPatient]: StructureDefinition-mcode-cancer-patient.html
-[CancerRelatedElixhauserComorbidities]: StructureDefinition-mcode-cancer-related-elixhauser-comorbidities.html
+[CancerRelatedComorbiditiesElixhauser]: StructureDefinition-mcode-cancer-related-comorbidities-elixhauser.html
 [CancerRelatedMedicationRequest]: StructureDefinition-mcode-cancer-related-medication-request.html
 [CancerRelatedSurgicalProcedure]: StructureDefinition-mcode-cancer-related-surgical-procedure.html
 [ComorbidConditionCode]: StructureDefinition-mcode-comorbid-condition-code.html
@@ -22,7 +22,7 @@
 [LocationQualifier]: StructureDefinition-mcode-location-qualifier.html
 [MCODEPatientBundle]: StructureDefinition-mcode-patient-bundle.html
 [MCodeCapabilityStatement]: StructureDefinition-MCodeCapabilityStatement.html
-[MCodePatientGroup]: StructureDefinition-mcode-patient-group.html
+[MCodePatientGroup]: StructureDefinition-group-mcode-patients.html
 [PrimaryCancerCondition]: StructureDefinition-mcode-primary-cancer-condition.html
 [RadiotherapyCourseSummary]: StructureDefinition-radiotherapy-course-summary.html
 [RelatedPrimaryCancerCondition]: StructureDefinition-mcode-related-primary-cancer-condition.html

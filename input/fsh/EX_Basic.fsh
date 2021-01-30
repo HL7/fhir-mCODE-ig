@@ -129,20 +129,6 @@ Description: "mCODE Example for Patient"
 * communication.language = urn:ietf:bcp:47#en-US "English (Region=United States)"
 * communication.language.text = "English"
 
-Instance: us-core-organization-bedrock-medicine
-InstanceOf: USCoreOrganization
-Description: "Example of US Core Organization"
-* identifier[NPI].value = "1265710000"
-* active = true
-* name = "Bedrock Medicine"
-* contact.telecom.system = #phone
-* contact.telecom.value = "617-555-2200"
-* address.line = "55 Secant Street"
-* address.city = "Cambridge"
-* address.state = "MA"
-* address.postalCode = "02141"
-* address.country = "USA"
-
 Instance: us-core-practitioner-kyle-anydoc
 InstanceOf: USCorePractitioner
 Description: "mCODE Example for Practitioner"

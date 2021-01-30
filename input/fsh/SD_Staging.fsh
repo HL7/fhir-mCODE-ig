@@ -10,7 +10,7 @@ RuleSet: CancerStageCommonRules
 * focus only Reference(PrimaryCancerCondition)
 * subject only Reference(CancerPatient)
 * method from CancerStagingSystemVS (extensible)
-* performer only Reference(Practitioner)
+
 
 
 //-------------------- Clinical Staging -------------------------

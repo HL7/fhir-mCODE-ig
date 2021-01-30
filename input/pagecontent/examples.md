@@ -15,8 +15,7 @@ This section provides some examples how mCODE elements may be represented in a F
  * **Karnofsky Performance Status**: <a href="Observation-karnofsky-performance-status-normal-activity.html">karnofsky-performance-status-normal-activity</a> shows an example for a patient with a Karnofsky Performance Status of 80.
  * **Cancer Related Medication Request**: <a href="MedicationRequest-cancer-related-medication-request-gefitinib.html">cancer-related-medication-request-gefitinib</a> shows an example for a patient who is currently receiving gefitinib and <a href="MedicationRequest-cancer-related-medication-request-cisplatin.html">cancer-related-medication-request-cisplatin</a> shows an example for a patient who completed a treatment of getfitinib.
  * **Cancer Related Surgical Procedure**: <a href="Procedure-cancer-related-surgical-procedure-lobectomy.html">cancer-related-surgical-procedure-lobectomy</a> shows an example for a patient who underwent a partial lobectomy of the lung for cancer treatment.
- ############
-  * **Internal Radiotherapy**: [brachytherapy-prescription-delivery-ldr]</a> shows an example for a patient who went underwent brachytherapy (internal radiation) for cancer treatment.
+  * **Brachytherapy**: [brachytherapy-prescription-delivery-ldr]</a> shows an example for a patient who went underwent brachytherapy (internal radiation) for cancer treatment.
  * **Tumor Marker**: <a href="Observation-tumor-marker-test-egf.html">tumor-marker-test-egf</a> shows a simple example of an EGFR tumor marker status as positive.
  * **Genomics Report**: <a href="DiagnosticReport-cancer-genomics-report-john-anyperson.html">cancer-genomics-report-john-anyperson</a> shows a very small subset elements found in a genomics report which include the test service and test name.
  * **Genetic Variant**: <a href="Observation-cancer-genetic-variant-somatic-single-nucleotide.html">cancer-genetic-variant-somatic-single-nucleotide</a> extends the contents of the Genomics Report by showing the results of a variant found for a specific gene, STK-11. This example differs from the mutation test result in that there was no preconceived test for a specific variant ahead of time.  Rather, it is the result of any variants found for a given DNA region.
@@ -31,17 +30,17 @@ This section provides some examples how mCODE elements may be represented in a F
 * The FHIR examples conform to the HL7 FHIR Argonaut IG where applicable and is subject to change with subsequent releases.
 * Proprietary content like AJCC staging categories may appear in some of these examples solely for the purposes of illustration only. It is expected that all implementers will adhere to licensing requirements as appropriate.
 
-### Extended Example: Breast Cancer Patient Susan M.
+### Extended Example
 
 In addition to the examples provided above, we also have developed this scenario describing a hypothetical patient, along with accompanying example instances to demonstrate how mCODE profiles can be used to guide the creation resources representing a clinically realistic scenario. When information in the persona does not map onto mCODE profiles, we provide examples using [USCore](http://hl7.org/fhir/us/core/index.html) or standard FHIR resources.
 
 #### Patient description
 
-Patient Susan M. is a 55 year old non-Hispanic white female with a past medical history significant for depression, a 20-pack-year history of smoking (current smoker), anxiety, and hypertension. Her family history was significant for a maternal aunt with ovarian cancer at age 69, a sister with breast cancer at age 64, and deceased paternal uncle due to pancreatic cancer.
+Patient Jenny M. is a 55 year old non-Hispanic white female with a past medical history significant for depression, a 20-pack-year history of smoking (current smoker), anxiety, and hypertension. Her family history was significant for a maternal aunt with ovarian cancer at age 69, a sister with breast cancer at age 64, and deceased paternal uncle due to pancreatic cancer.
 
 She presented for routine screening mammography in March 2018. Performance status was ECOG 0. An abnormality was detected, followed by ultrasound-guided biopsy which revealed a Grade 2 invasive ductal adenocarcinoma, ER positive, PR negative, HER2 negative. Pre-operative workup revealed no other disease in either breast. Genetic counseling ordered a [7 gene panel](https://www.invitae.com/en/physician/tests/50001/), which revealed a [pathogenic variant in PALB2 (`c.3549C>A`)](https://www.ncbi.nlm.nih.gov/clinvar/variation/128144/).[^1]
 
-[^1]: For the purposes of this example, we are assuming that a single relevant variant was returned by the clinical genomics laboratory. In practice, genomics testing may return (many) more variants. The standards for representing genomics data are currently under development by the [HL7 Clinical Genomics Work Group](https://confluence.hl7.org/display/CGW/WorkGroup+Home), and should be adopted by mCODE when completed.
+[^1]: For the purposes of this example, we are assuming that a single relevant variant was returned by the clinical genomics laboratory. In practice, genomics testing may return (many) more variants. The standards for representing genomics data are currently under development by the [HL7 Clinical Genomics Work Group](https://confluence.hl7.org/display/CGW/WorkGroup+Home). The expectation is that mCODE will adopt those standards when they are completed.
 
 A partial mastectomy was performed, revealing a 2.5 cm tumor with no lymph-vascular invasion and negative margins of excision. Ductal carcinoma in situ was noted, also completely excised. Three sentinel lymph nodes were excised and were negative for metastatic carcinoma. The primary tumor was staged as cT3N0.
 
@@ -51,51 +50,51 @@ The patient is two years out from surgery and has undergone surveillance imaging
 
 #### FHIR instances from mCODE elements
 
-* [`cancer-patient-susan-m`](Patient-cancer-patient-susan-m.html) ([CancerPatient])
-* [`cancer-disease-status-susan-m-2020-03-01`](Observation-cancer-disease-status-susan-m-2020-03-01.html) ([CancerDiseaseStatus])
-* [`cancer-related-comorbidities-elixhauser-susan-m`](Observation-cancer-related-comorbidities-elixhauser-susan-m.html) ([ComorbidCondition])
-* [`us-core-condition-depression-susan-m`](Condition-us-core-condition-depression-susan-m.html) ([ComorbidCondition])
-* [`us-core-condition-hypertension-susan-m`](Condition-us-core-condition-hypertension-susan-m.html) ([ComorbidCondition])
-* [`ecog-performance-status-susan-m`](Observation-ecog-performance-status-susan-m.html) ([ECOGPerformanceStatus])
-* [`cancer-related-surgical-procedure-susan-m`](Procedure-cancer-related-surgical-procedure-susan-m.html) ([CancerRelatedSurgicalProcedure])
-* [`mcode-patient-bundle-susan-m`](Bundle-mcode-patient-bundle-susan-m.html) ([MCODEPatientBundle])
-* [`primary-cancer-condition-susan-m`](Condition-primary-cancer-condition-susan-m.html) ([PrimaryCancerCondition])
-* [`tnm-clinical-stage-group-susan-m`](Observation-tnm-clinical-stage-group-susan-m.html) ([TNMClinicalStageGroup])
-* [`tnm-primary-tumor-category-susan-m`](Observation-tnm-primary-tumor-category-susan-m.html) ([TNMClinicalPrimaryTumorCategory])
-* [`tnm-clinical-regional-nodes-category-susan-m`](Observation-tnm-clinical-regional-nodes-category-susan-m.html) ([TNMClinicalRegionalNodesCategory])
-* [`tnm-clinical-distant-metastases-category-susan-m`](Observation-tnm-clinical-distant-metastases-category-susan-m.html) ([TNMClinicalDistantMetastasesCategory])
-* [`tumor-marker-test-er-susan-m`](Observation-tumor-marker-test-er-susan-m.html)  ([TumorMarkerTest])
-* [`tumor-marker-test-pr-susan-m`](Observation-tumor-marker-test-pr-susan-m.html)  ([TumorMarkerTest])
-* [`tumor-marker-test-her2-susan-m`](Observation-tumor-marker-test-her2-susan-m.html)  ([TumorMarkerTest])
-* [`tumor-marker-test-oncotype-dx-susan-m`](Observation-tumor-marker-test-oncotype-dx-susan-m.html)  ([TumorMarkerTest])
-* [`cancer-genomics-report-susan-m`](DiagnosticReport-cancer-genomics-report-susan-m.html) ([CancerGenomicsReport])
-* [`genomic-region-studied-susan-m`](Observation-genomic-region-studied-susan-m.html) ([GenomicRegionStudied])
-* [`genetic-specimen-left-breast-susan-m`](Specimen-genetic-specimen-left-breast-susan-m.html) ([GeneticSpecimen])
-* [`cancer-genetic-variant-susan-m`](Observation-cancer-genetic-variant-susan-m.html) ([CancerGeneticVariant])
-* [`cancer-related-medication-request-doxorubicin-susan-m`](MedicationRequest-cancer-related-medication-request-doxorubicin-susan-m.html) ([CancerRelatedMedicationRequest])
-* [`cancer-related-medication-request-cyclophosphamide-susan-m`](MedicationRequest-cancer-related-medication-request-cyclophosphamide-susan-m.html) ([CancerRelatedMedicationRequest])
-* [`cancer-related-medication-request-paclitaxel-susan-m`](MedicationRequest-cancer-related-medication-request-paclitaxel-susan-m.html) ([CancerRelatedMedicationRequest])
-* [`cancer-related-medication-request-anastrozole-susan-m`](MedicationRequest-cancer-related-medication-request-anastrozole-susan-m.html) ([CancerRelatedMedicationRequest])
-* [`teleradiotherapy-prescription-delivery-susan-m`](Procedure-teleradiotherapy-prescription-delivery-susan-m.html) ([TeleradiotherapyPrescriptionDelivery])
+* [`cancer-patient-jenny-m`](Patient-cancer-patient-jenny-m.html) ([CancerPatient])
+* [`cancer-disease-status-jenny-m`](Observation-cancer-disease-status-jenny-m.html) ([CancerDiseaseStatus])
+* [`cancer-related-comorbidities-elixhauser-jenny-m`](Observation-cancer-related-comorbidities-elixhauser-jenny-m.html) ([ComorbidCondition])
+* [`us-core-condition-depression-jenny-m`](Condition-us-core-condition-depression-jenny-m.html) ([ComorbidCondition])
+* [`us-core-condition-hypertension-jenny-m`](Condition-us-core-condition-hypertension-jenny-m.html) ([ComorbidCondition])
+* [`ecog-performance-status-jenny-m`](Observation-ecog-performance-status-jenny-m.html) ([ECOGPerformanceStatus])
+* [`cancer-related-surgical-procedure-jenny-m`](Procedure-cancer-related-surgical-procedure-jenny-m.html) ([CancerRelatedSurgicalProcedure])
+* [`mcode-patient-bundle-jenny-m`](Bundle-mcode-patient-bundle-jenny-m.html) ([MCODEPatientBundle])
+* [`primary-cancer-condition-jenny-m`](Condition-primary-cancer-condition-jenny-m.html) ([PrimaryCancerCondition])
+* [`tnm-clinical-stage-group-jenny-m`](Observation-tnm-clinical-stage-group-jenny-m.html) ([TNMClinicalStageGroup])
+* [`tnm-primary-tumor-category-jenny-m`](Observation-tnm-primary-tumor-category-jenny-m.html) ([TNMClinicalPrimaryTumorCategory])
+* [`tnm-clinical-regional-nodes-category-jenny-m`](Observation-tnm-clinical-regional-nodes-category-jenny-m.html) ([TNMClinicalRegionalNodesCategory])
+* [`tnm-clinical-distant-metastases-category-jenny-m`](Observation-tnm-clinical-distant-metastases-category-jenny-m.html) ([TNMClinicalDistantMetastasesCategory])
+* [`tumor-marker-test-er-jenny-m`](Observation-tumor-marker-test-er-jenny-m.html)  ([TumorMarkerTest])
+* [`tumor-marker-test-pr-jenny-m`](Observation-tumor-marker-test-pr-jenny-m.html)  ([TumorMarkerTest])
+* [`tumor-marker-test-her2-jenny-m`](Observation-tumor-marker-test-her2-jenny-m.html)  ([TumorMarkerTest])
+* [`tumor-marker-test-oncotype-dx-jenny-m`](Observation-tumor-marker-test-oncotype-dx-jenny-m.html)  ([TumorMarkerTest])
+* [`cancer-genomics-report-jenny-m`](DiagnosticReport-cancer-genomics-report-jenny-m.html) ([CancerGenomicsReport])
+* [`genomic-region-studied-jenny-m`](Observation-genomic-region-studied-jenny-m.html) ([GenomicRegionStudied])
+* [`genetic-specimen-left-breast-jenny-m`](Specimen-genetic-specimen-left-breast-jenny-m.html) ([GeneticSpecimen])
+* [`cancer-genetic-variant-jenny-m`](Observation-cancer-genetic-variant-jenny-m.html) ([CancerGeneticVariant])
+* [`cancer-related-medication-request-doxorubicin-jenny-m`](MedicationRequest-cancer-related-medication-request-doxorubicin-jenny-m.html) ([CancerRelatedMedicationRequest])
+* [`cancer-related-medication-request-cyclophosphamide-jenny-m`](MedicationRequest-cancer-related-medication-request-cyclophosphamide-jenny-m.html) ([CancerRelatedMedicationRequest])
+* [`cancer-related-medication-request-paclitaxel-jenny-m`](MedicationRequest-cancer-related-medication-request-paclitaxel-jenny-m.html) ([CancerRelatedMedicationRequest])
+* [`cancer-related-medication-request-anastrozole-jenny-m`](MedicationRequest-cancer-related-medication-request-anastrozole-jenny-m.html) ([CancerRelatedMedicationRequest])
+* [`teleradiotherapy-prescription-delivery-jenny-m`](Procedure-teleradiotherapy-prescription-delivery-jenny-m.html) ([TeleradiotherapyPrescriptionDelivery])
 
 
 #### FHIR instances from _non_-mCODE elements
 
 * [`us-core-practitioner-owen-oncologist`](Practitioner-us-core-practitioner-owen-oncologist.html) (US Core Practitioner)
-* [`us-core-procedure-biopsy-susan-m`](Procedure-us-core-procedure-biopsy-susan-m.html) (US Core Procedure)
-* [`us-core-procedure-mammogram-susan-m`](Procedure-us-core-procedure-mammogram-susan-m.html) (US Core Procedure)
-* [`us-core-smokingstatus-susan-m`](Observation-us-core-smokingstatus-susan-m.html) (US Core Smoking Status)
-* [`observation-smoking-history-susan-m`](Observation-observation-smoking-history-susan-m.html) (Observation)
-* [`us-core-condition-anxiety-susan-m`](Condition-us-core-condition-anxiety-susan-m.html) (US Core Condition)
-* [`family-member-history-aunt-susan-m`](FamilyMemberHistory-family-member-history-aunt-susan-m.html) (FamilyMemberHistory)
-* [`family-member-history-sister-susan-m`](FamilyMemberHistory-family-member-history-sister-susan-m.html) (FamilyMemberHistory)
-* [`family-member-history-uncle-susan-m`](FamilyMemberHistory-family-member-history-uncle-susan-m.html) (FamilyMemberHistory)
-* [`specimen-left-breast-susan-m`](Specimen-specimen-left-breast-susan-m.html) (Specimen)
-* [`us-core-diagnosticreport-lab-susan-m`](DiagnosticReport-us-core-diagnosticreport-lab-susan-m.html) (DiagnosticReport)
-* [`us-core-observation-lab-tumor-invasion-susan-m`](Observation-us-core-observation-lab-tumor-invasion-susan-m.html) (Observation)
-* [`us-core-observation-lab-tumor-margins-susan-m`](Observation-us-core-observation-lab-tumor-margins-susan-m.html) (Observation)
-* [`us-core-observation-lab-sentinel-nodes-susan-m`](Observation-us-core-observation-lab-sentinel-nodes-susan-m.html) (Observation)
-* [`tumor-size-susan-m-2018-03-06`](Observation-tumor-size-susan-m-2018-03-06.html) (Observation)
+* [`us-core-procedure-biopsy-jenny-m`](Procedure-us-core-procedure-biopsy-jenny-m.html) (US Core Procedure)
+* [`us-core-procedure-mammogram-jenny-m`](Procedure-us-core-procedure-mammogram-jenny-m.html) (US Core Procedure)
+* [`us-core-smokingstatus-jenny-m`](Observation-us-core-smokingstatus-jenny-m.html) (US Core Smoking Status)
+* [`observation-smoking-history-jenny-m`](Observation-observation-smoking-history-jenny-m.html) (Observation)
+* [`us-core-condition-anxiety-jenny-m`](Condition-us-core-condition-anxiety-jenny-m.html) (US Core Condition)
+* [`family-member-history-aunt-jenny-m`](FamilyMemberHistory-family-member-history-aunt-jenny-m.html) (FamilyMemberHistory)
+* [`family-member-history-sister-jenny-m`](FamilyMemberHistory-family-member-history-sister-jenny-m.html) (FamilyMemberHistory)
+* [`family-member-history-uncle-jenny-m`](FamilyMemberHistory-family-member-history-uncle-jenny-m.html) (FamilyMemberHistory)
+* [`specimen-left-breast-jenny-m`](Specimen-specimen-left-breast-jenny-m.html) (Specimen)
+* [`us-core-diagnosticreport-lab-jenny-m`](DiagnosticReport-us-core-diagnosticreport-lab-jenny-m.html) (DiagnosticReport)
+* [`us-core-observation-lab-tumor-invasion-jenny-m`](Observation-us-core-observation-lab-tumor-invasion-jenny-m.html) (Observation)
+* [`us-core-observation-lab-tumor-margins-jenny-m`](Observation-us-core-observation-lab-tumor-margins-jenny-m.html) (Observation)
+* [`us-core-observation-lab-sentinel-nodes-jenny-m`](Observation-us-core-observation-lab-sentinel-nodes-jenny-m.html) (Observation)
+* [`jenny-m-2018-03-06`](Observation-tumor-size-jenny-m.html) (Observation)
 * [`scenario1-observation-dcis`](Observation-us-core-observation-lab-tumor-dcis.html) (Observation)
 
 [CancerDiseaseStatus]: StructureDefinition-mcode-cancer-disease-status.html

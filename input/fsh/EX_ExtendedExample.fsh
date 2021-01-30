@@ -1,0 +1,660 @@
+/* Order of Events
+2018-03-01  MammogramDate
+2018-03-06  Initial Oncologist visit 
+   - Medical History
+   - Family History
+   - Vital Signs
+2018-03-06  Biopsy Performed
+2018-03-10  Diagnosis and Clinical Staging
+2018-03-10  Tumor Marker Test Results
+2018-03-15  7-Gene Panel Results
+2018-04-01  Partial Mastectomy
+2018-04-05  Parthology Results
+2018-04-12  21-Gene Panel Results
+2018-04-12  Chemo begins
+2018-05-01  Radiation begins
+2018-06-22  Radiation ends
+2021-03-01  Disease status recorded
+*/
+
+// Mammogram 3/1/2018
+
+Instance: us-core-procedure-mammogram-jenny-m
+InstanceOf: USCoreProcedure
+Description: "Extended example: example mammogram"
+* status = #completed "completed"
+* code = SCT#71651007 "Mammography (procedure)"
+* subject = Reference(cancer-patient-jenny-m)
+* performer.actor = Reference(us-core-practitioner-owen-oncologist)
+* performedDateTime = 2018-03-01
+* asserter = Reference(us-core-practitioner-owen-oncologist)
+// TODO - Add outcome, interpretation
+
+// Initial Oncologist Appointment 3/6/2018
+
+Instance: us-core-smokingstatus-jenny-m
+InstanceOf: USCoreSmokingStatusProfile
+Description: "Extended example: example showing smoking status"
+* status = #final "final"
+* code = LNC#72166-2 "Tobacco smoking status"
+* subject = Reference(cancer-patient-jenny-m)
+* issued = "2018-03-06T00:00:00Z"
+* valueCodeableConcept = SCT#449868002 "Smokes tobacco daily (finding)"
+
+Instance: observation-smoking-history-jenny-m
+InstanceOf: Observation
+Description: "Extended example: example showing smoking history"
+* status = #final "final"
+* category = ObsCat#social-history "Social History"
+* code = SCT#401201003 "Cigarette pack-years (observable entity)" // No LOINC available
+* subject = Reference(cancer-patient-jenny-m)
+* effectiveDateTime = "2018-03-06"
+* valueQuantity = 20 '{PackYears}' "Pack-Years"
+
+Instance: us-core-condition-anxiety-jenny-m
+InstanceOf: USCoreCondition
+Description: "Extended example: example showing comorbid condition (anxiety)"
+* clinicalStatus = ClinStatus#active "Active"
+* verificationStatus = VerStatus#confirmed "Confirmed"
+* category = CondCat#problem-list-item "Problem List Item"
+* code = SCT#48694002 "Anxiety (finding)"
+* subject = Reference(cancer-patient-jenny-m)
+* onsetDateTime = "2005-01-01"
+
+Instance: us-core-condition-depression-jenny-m
+InstanceOf: USCoreCondition
+Description: "Extended example: example showing comorbid condition (depression)"
+* clinicalStatus = ClinStatus#active
+* verificationStatus = VerStatus#confirmed
+* category = CondCat#problem-list-item
+* code = SCT#35489007 "Depressive disorder (disorder)"
+* subject = Reference(cancer-patient-jenny-m)
+* onsetDateTime = "2005-01-01"
+* asserter = Reference(us-core-practitioner-owen-oncologist)
+
+Instance: us-core-condition-hypertension-jenny-m
+InstanceOf: USCoreCondition
+Description: "Extended example: example showing comorbid condition (hypertension)"
+* clinicalStatus = ClinStatus#active
+* verificationStatus = VerStatus#confirmed
+* category = CondCat#problem-list-item
+* code = SCT#77970009 "Benign hypertensive heart disease without congestive heart failure (disorder)"  // Changed to avoid IG Publisher error ICD10CM#I11.9 "Hypertensive heart disease without heart failure"
+* subject = Reference(cancer-patient-jenny-m)
+* onsetDateTime = "2012-01-01"
+* asserter = Reference(us-core-practitioner-owen-oncologist)
+
+// Family History
+
+Instance: family-member-history-aunt-jenny-m
+InstanceOf: FamilyMemberHistory
+Description: "Extended example: example showing family member history of cancer"
+* status = #completed "completed"
+* patient = Reference(cancer-patient-jenny-m)
+* relationship = http://terminology.hl7.org/CodeSystem/v3-RoleCode#MAUNT "maternal aunt"
+* condition.code = SCT#363443007 "Malignant tumor of ovary (disorder)"
+* condition.onsetAge = 69.0 'a'
+
+Instance: family-member-history-sister-jenny-m
+InstanceOf: FamilyMemberHistory
+Description: "Extended example: example showing family member history of cancer"
+* status = #completed "completed"
+* patient = Reference(cancer-patient-jenny-m)
+* relationship = http://terminology.hl7.org/CodeSystem/v3-RoleCode#NSIS "natural sister"
+* condition.code = SCT#254837009 "Malignant neoplasm of breast (disorder)"
+* condition.onsetAge = 64.0 'a'
+* condition.contributedToDeath = false
+
+Instance: family-member-history-uncle-jenny-m
+InstanceOf: FamilyMemberHistory
+Description: "Extended example: example showing family member history of cancer"
+* status = #completed "completed"
+* patient = Reference(cancer-patient-jenny-m)
+* relationship = http://terminology.hl7.org/CodeSystem/v3-RoleCode#PUNCLE "paternal uncle"
+* condition.code = SCT#363418001 "Malignant tumor of pancreas (disorder)"
+* condition.contributedToDeath = true
+* deceasedBoolean = true
+
+Instance: cancer-related-comorbidities-elixhauser-jenny-m
+InstanceOf: CancerRelatedComorbiditiesElixhauser
+Description: "mCODE Example for Cancer-Related Comorbidities"
+* subject = Reference(cancer-patient-jenny-m)
+* performer = Reference(us-core-practitioner-owen-oncologist)
+* status = #final "final"
+* effectiveDateTime = "2018-03-06"
+* component[depression].valueCodeableConcept = SCT#52101004 "Present (qualifier value)"
+* component[depression].extension[conditionReference].valueReference = Reference(us-core-condition-depression-jenny-m)
+* component[hypertensionComplicated].valueCodeableConcept = SCT#52101004 "Present (qualifier value)"
+* component[hypertensionComplicated].extension[conditionReference].valueReference = Reference(us-core-condition-hypertension-jenny-m)
+* component[arthropathy].valueCodeableConcept = SCT#2667000 "Absent (qualifier value)"
+* component[congestiveHeartFailure].valueCodeableConcept = SCT#2667000 "Absent (qualifier value)"
+* component[chronicPulmonaryDisease].valueCodeableConcept = SCT#2667000 "Absent (qualifier value)"
+* component[diabetesUncomplicated].valueCodeableConcept = SCT#2667000 "Absent (qualifier value)"
+* component[diabetesComplicated].valueCodeableConcept = SCT#2667000 "Absent (qualifier value)"
+* component[obesity].valueCodeableConcept = SCT#2667000 "Absent (qualifier value)"
+* component[peripheralVascularDisease].valueCodeableConcept = SCT#2667000 "Absent (qualifier value)"
+* component[pulmonaryCirculationDisorders].valueCodeableConcept = SCT#2667000 "Absent (qualifier value)"
+* component[renalFailureModerate].valueCodeableConcept = SCT#2667000 "Absent (qualifier value)"
+* component[drugAbuse].valueCodeableConcept = SCT#261665006 "Unknown (qualifier value)"
+
+
+Instance: ecog-performance-status-jenny-m
+InstanceOf: ECOGPerformanceStatus
+Description: "Extended example: example showing ECOG performance status"
+* status = #final "final"
+* subject = Reference(cancer-patient-jenny-m)
+* effectiveDateTime = "2018-03-06"
+* performer = Reference(us-core-practitioner-owen-oncologist)
+* valueInteger = 0
+* interpretation = LNC#LA9622-7 "Fully active, able to carry on all pre-disease performance without restriction"
+* method = SCT#5880005 "Physical examination procedure (procedure)"
+
+Instance: bodyweight-jenny-m-2018-03-06
+InstanceOf: http://hl7.org/fhir/StructureDefinition/bodyweight
+Description: "Extended example: example of body weight vital sign"
+* status = #final "final"
+* subject = Reference(cancer-patient-jenny-m)
+* effectiveDateTime = "2018-03-06"
+* valueQuantity = 155.0 '[lb_av]'
+* valueQuantity.unit = "lb"
+
+// TODO -- Add height and BP?
+
+// Biopsy Procedure - 3/6/2018
+
+Instance: us-core-procedure-biopsy-jenny-m
+InstanceOf: USCoreProcedure
+Description: "Extended example: example biopsy procedure"
+* status = #completed "completed"
+* code = SCT#723990008 "Biopsy of breast using ultrasonographic guidance (procedure)"
+* subject = Reference(cancer-patient-jenny-m)
+* performer.actor = Reference(us-core-practitioner-owen-oncologist)
+* performedDateTime = "2018-03-06"
+* asserter = Reference(us-core-practitioner-owen-oncologist)
+* reasonReference = Reference(primary-cancer-condition-jenny-m)
+* bodySite = SCT#80248007 "Left breast structure (body structure)"
+
+Instance: genetic-specimen-left-breast-jenny-m
+InstanceOf: GeneticSpecimen
+Description: "Extended example: example showing genetic specimen for sequencing"
+* status = #available "available"
+* type = http://terminology.hl7.org/CodeSystem/v2-0487#TISS
+* subject = Reference(cancer-patient-jenny-m)
+* collection.collector = Reference(us-core-practitioner-owen-oncologist)
+* collection.bodySite = SCT#80248007 "Left breast structure (body structure)"
+* processing[0].timeDateTime = "2018-03-06"
+
+
+// Diagnosis and Clinical Staging 3/10/2018
+
+Instance: primary-cancer-condition-jenny-m
+InstanceOf: PrimaryCancerCondition
+Description: "Extended example: example showing primary cancer condition"
+* extension[histologyMorphologyBehavior].valueCodeableConcept = SCT#413448000 "Adenocarcinoma, no subtype, intermediate grade (morphologic abnormality)"
+* clinicalStatus = ClinStatus#remission
+* verificationStatus = VerStatus#confirmed
+* category = CondCat#problem-list-item
+* code = SCT#353431000119107 "Primary malignant neoplasm of female left breast (disorder)"
+* subject = Reference(cancer-patient-jenny-m)
+* onsetDateTime = "2018-03-10"
+* asserter = Reference(us-core-practitioner-owen-oncologist)
+* stage.summary = AJCC#3C
+* stage.assessment = Reference(tnm-clinical-stage-group-jenny-m)
+
+Instance: tnm-clinical-stage-group-jenny-m
+InstanceOf: TNMClinicalStageGroup
+Description: "Extended example: example showing TNM staging (stage group)"
+* status = #final "final"
+* code = LNC#21908-9 "Stage group.clinical Cancer"
+* subject = Reference(cancer-patient-jenny-m)
+* effectiveDateTime = "2018-03-10"
+* valueCodeableConcept = AJCC#2B "IIB"
+* method = NCIT#C146985 "AJCC Cancer Staging Manual 8th Edition"
+* hasMember[0] = Reference(tnm-primary-tumor-category-jenny-m)
+* hasMember[1] = Reference(tnm-clinical-regional-nodes-category-jenny-m)
+* hasMember[2] = Reference(tnm-clinical-distant-metastases-category-jenny-m)
+
+Instance: tnm-primary-tumor-category-jenny-m
+InstanceOf: TNMClinicalPrimaryTumorCategory
+Description: "Extended example: example showing TNM staging (T)"
+* status = #final "final"
+* code = LNC#21905-5 "Primary tumor.clinical [Class] Cancer"
+* subject = Reference(cancer-patient-jenny-m)
+* effectiveDateTime = "2018-03-10"
+* valueCodeableConcept = AJCC#cT3
+* method = NCIT#C146985 "AJCC Cancer Staging Manual 8th Edition"
+
+Instance: tnm-clinical-regional-nodes-category-jenny-m
+InstanceOf: TNMClinicalRegionalNodesCategory
+Description: "Extended example: example showing TNM staging (N)"
+* status = #final "final"
+* code = LNC#21906-3 "Regional lymph nodes.clinical [Class] Cancer"
+* subject = Reference(cancer-patient-jenny-m)
+* effectiveDateTime = "2018-03-10"
+* valueCodeableConcept = AJCC#cN0
+* method = NCIT#C146985 "AJCC Cancer Staging Manual 8th Edition"
+
+Instance: tnm-clinical-distant-metastases-category-jenny-m
+InstanceOf: TNMClinicalDistantMetastasesCategory
+Description: "Extended example: example showing TNM staging (M)"
+* status = #final "final"
+* code = LNC#21907-1 "Distant metastases.clinical [Class] Cancer"
+* subject = Reference(cancer-patient-jenny-m)
+* effectiveDateTime = "2018-03-10"
+* valueCodeableConcept = AJCC#cM0
+* method = NCIT#C146985 "AJCC Cancer Staging Manual 8th Edition"
+
+// Tumor marker test results 3-10-2018
+
+Instance: tumor-marker-test-er-jenny-m
+InstanceOf: TumorMarkerTest
+Description: "Extended example: example showing ER status"
+* status = #final "final"
+* code = LNC#85337-4 "Estrogen receptor Ag [Presence] in Breast cancer specimen by Immune stain"
+* subject = Reference(cancer-patient-jenny-m)
+* effectiveDateTime = "2018-03-10"
+* performer = Reference(us-core-practitioner-owen-oncologist)
+* valueCodeableConcept = LNC#LA6576-8 "Positive"
+
+Instance: tumor-marker-test-pr-jenny-m
+InstanceOf: TumorMarkerTest
+Description: "Extended example: example showing PR status"
+* status = #final "final"
+* code = LNC#85339-0 "Progesterone receptor Ag [Presence] in Breast cancer specimen by Immune stain"
+* subject = Reference(cancer-patient-jenny-m)
+* effectiveDateTime = "2018-03-10"
+* performer = Reference(us-core-practitioner-owen-oncologist)
+* valueCodeableConcept = LNC#LA6577-6 "Negative"
+
+Instance: tumor-marker-test-her2-jenny-m
+InstanceOf: TumorMarkerTest
+Description: "Extended example: example showing HER2 status"
+* status = #final "final"
+* code = LNC#48676-1 "HER2 [Interpretation] in Tissue"
+* subject = Reference(cancer-patient-jenny-m)
+* effectiveDateTime = "2018-03-10"
+* performer = Reference(us-core-practitioner-owen-oncologist)
+* valueCodeableConcept = LNC#LA6577-6 "Negative"
+
+// 7-Gene Panel
+
+Instance: cancer-genomics-report-jenny-m
+InstanceOf: CancerGenomicsReport
+Description: "Extended example: example of gene panel report"
+* status = #final "final"
+* category[0] = DiagnosticService#LAB
+* category[1] = DiagnosticService#GE
+* subject = Reference(cancer-patient-jenny-m)
+* effectiveDateTime = "2018-03-15"
+* issued = "2020-03-15T00:00:01+00:00"
+* specimen = Reference(genetic-specimen-left-breast-jenny-m)
+* result[0] = Reference(cancer-genetic-variant-jenny-m)
+* result[1] = Reference(genomic-region-studied-jenny-m)
+
+Instance: genomic-region-studied-jenny-m
+InstanceOf: GenomicRegionStudied
+Description: "Extended example: example showing which regions were included in the genomics panel"
+* status = #final "final"
+* code = LNC#53041-0 "DNA region of interest panel"
+* subject = Reference(cancer-patient-jenny-m)
+* effectiveDateTime = "2018-03-15"
+* issued = "2018-03-15T00:00:01+00:00"
+* component.code = LNC#48018-6 "Gene studied [ID]"
+* component[GeneStudied].valueCodeableConcept.coding[+] = HGNC#1100 "BRCA1"
+* component[GeneStudied].valueCodeableConcept.coding[+] = HGNC#1101 "BRCA2"
+* component[GeneStudied].valueCodeableConcept.coding[+] = HGNC#1748 "CDH1"
+* component[GeneStudied].valueCodeableConcept.coding[+] = HGNC#26144 "PALB2"
+* component[GeneStudied].valueCodeableConcept.coding[+] = HGNC#9588 "PTEN"
+* component[GeneStudied].valueCodeableConcept.coding[+] = HGNC#11389 "STK11"
+* component[GeneStudied].valueCodeableConcept.coding[+] = HGNC#11998 "TP53"
+
+Instance: cancer-genetic-variant-jenny-m
+InstanceOf: CancerGeneticVariant
+Description: "Extended example: example showing genetic variant found by breast cancer genomics panel"
+* status = #final "final"
+* code = LNC#69548-6 "Genetic variant assessment"
+* subject = Reference(cancer-patient-jenny-m)
+* effectiveDateTime = "2018-03-15"
+* valueCodeableConcept = LNC#LA9633-4 "Present"
+* method = LNC#LA26398-0 "Sequencing"
+* component[GeneStudied].valueCodeableConcept = HGNC#HGNC:26144 "PALB2"
+* component[VariationCode].valueCodeableConcept = CLINVAR#128144 "NM_024675.3(PALB2):c.3549C>A (p.Tyr1183Ter)"
+* component[GenomicDNAChange].valueCodeableConcept = HGVS#NC_000016.10:g.23603471G>T
+* component[GenomicSourceClass].valueCodeableConcept = LNC#LA6684-0 "Somatic"
+
+
+// Partial Mastectomy
+
+Instance: cancer-related-surgical-procedure-jenny-m
+InstanceOf: CancerRelatedSurgicalProcedure
+Description: "Extended example: example showing partial mastectomy surgical procedure"
+* extension[treatmentIntent].valueCodeableConcept = SCT#373808002 "Curative - procedure intent (qualifier value)"
+* status = #completed "completed"
+* code = SCT#64368001 "Partial mastectomy (procedure)"
+* subject = Reference(cancer-patient-jenny-m)
+* performedDateTime = "2018-04-01"
+* asserter = Reference(us-core-practitioner-owen-oncologist)
+* reasonReference = Reference(primary-cancer-condition-jenny-m)
+* bodySite = SCT#80248007 "Left breast structure (body structure)"
+
+Instance: specimen-left-breast-jenny-m
+InstanceOf: Specimen
+Description: "Extended example: example tumor specimen"
+* status = #available "available"
+* type = http://terminology.hl7.org/CodeSystem/v2-0487#TUMOR "Tumor"
+* subject = Reference(cancer-patient-jenny-m)
+* receivedTime = "2019-04-01"
+* collection.bodySite = SCT#80248007 "Left breast structure (body structure)"
+
+// Pathology Results
+
+Instance: us-core-diagnosticreport-lab-jenny-m
+InstanceOf: USCoreDiagnosticReportLab
+Description: "Extended example: example of pathology findings represented as a DiagnosticReport resource."
+* status = #final "final"
+* category[0] = DiagnosticService#LAB
+* category[1] = DiagnosticService#SP "Surgical Pathology"
+* code = LNC#22637-3 "Pathology report final diagnosis Narrative"
+* subject = Reference(cancer-patient-jenny-m)
+* issued = "2018-04-05T00:00:00Z"
+* effectiveDateTime = "2018-04-01T00:00:00Z"
+* specimen = Reference(specimen-left-breast-jenny-m)
+* result[0] = Reference(us-core-observation-lab-tumor-invasion-jenny-m)
+* result[1] = Reference(us-core-observation-lab-tumor-margins-jenny-m)
+* result[2] = Reference(us-core-observation-lab-sentinel-nodes-jenny-m)
+* result[3] = Reference(tumor-size-jenny-m)
+* result[4] = Reference(us-core-observation-lab-tumor-dcis)
+* performer = Reference(us-core-organization-physician-services-inc)
+* resultsInterpreter = Reference(us-core-practitioner-peter-pathologist)
+
+Instance: us-core-observation-lab-tumor-invasion-jenny-m
+InstanceOf: USCoreObservationLab
+Description: "Extended example: example showing negative invasion for the removed tumor"
+* status = #final "final"
+* code = SCT#370052007 "Status of invasion by tumor (observable entity)" // No LOINC for invasion status
+* subject = Reference(cancer-patient-jenny-m)
+* effectiveDateTime = "2018-04-01T00:00:00Z"
+* valueCodeableConcept = SCT#260385009 "Negative (qualifier value)"
+* specimen = Reference(specimen-left-breast-jenny-m)
+
+Instance: us-core-observation-lab-tumor-margins-jenny-m
+InstanceOf:  USCoreObservationLab
+Description: "Extended example: example showing negative margins for the removed tumor"
+* status = #final "final"
+* code = LNC#44669-0 "Margin involvement in Breast tumor"
+* subject = Reference(cancer-patient-jenny-m)
+* effectiveDateTime = "2018-04-01T00:00:00Z"
+* valueCodeableConcept = LNC#LA27151-2 "Uninvolved by invasive carcinoma"
+* specimen = Reference(specimen-left-breast-jenny-m)
+
+Instance: us-core-observation-lab-sentinel-nodes-jenny-m
+InstanceOf:  USCoreObservationLab
+Description: "Extended example: example showing 3 sentinel lymph nodes were examined"
+* status = #final "final"
+* code = LNC#92832-5 "Sentinel lymph nodes with metastasis [#] in Cancer specimen"
+* subject = Reference(cancer-patient-jenny-m)
+* effectiveDateTime = "2018-04-01T00:00:00Z"
+* component.code = LNC#92833-3 "Lymph nodes examined [#] in Cancer specimen by Light microscopy"
+* component.valueQuantity = 3 '{Count}' "Count"
+* specimen = Reference(specimen-left-breast-jenny-m)
+
+Instance: tumor-size-jenny-m
+InstanceOf:  TumorSize
+Description: "Extended example: example showing tumor size"
+* status = #final "final"
+* code = LNC#21889-1 "Size Tumor"
+* category = ObsCat#laboratory
+* method = LNC#24419-4 "Pathology report gross observation"
+* subject = Reference(cancer-patient-jenny-m)
+* effectiveDateTime = "2018-04-01T00:00:00Z"
+* component.code = LNC#33728-7 "Size.maximum dimension in Tumor"
+* component.valueQuantity = 2.5 'cm' 
+* component.valueQuantity.unit = "centimeters"
+* specimen = Reference(specimen-left-breast-jenny-m)
+
+Instance: us-core-observation-lab-tumor-dcis
+InstanceOf:  USCoreObservationLab
+Description: "Extended example: example showing DCIS diagnosis"
+* status = #final "final"
+* code = LNC#29308-4 "Diagnosis"
+* subject = Reference(cancer-patient-jenny-m)
+* effectiveDateTime = "2018-04-01T00:00:00Z"
+* valueCodeableConcept = LNC#85336-6 "DCIS intraductal extension in Breast cancer specimen Qualitative by Light microscopy"
+* specimen = Reference(specimen-left-breast-jenny-m)
+
+
+// 21-Gene Assay
+
+Instance: tumor-marker-test-oncotype-dx-jenny-m
+InstanceOf: TumorMarkerTest
+Description: "Extended example: example showing Oncotype DX breast recurrence score. Note that this test has no assigned LOINC code, so GTR is being used as a backup. Only the score from the Oncotype DX panel (as opposed to variant data from the genes in the panel) is represented here."
+* status = #final "final"
+* code.coding[0] = OtherCode#OtherTumorMarkerTest "Other Tumor Marker Test, Specify"
+* code.coding[1] = GTR#509910 "Oncotype DX Breast Recurrence Score Assay"
+* code.text = "Oncotype DX Breast Recurrence Score Assay"
+* subject = Reference(cancer-patient-jenny-m)
+* effectiveDateTime = "2019-04-12"
+* performer = Reference(us-core-organization-bedrock-medicine)
+* valueQuantity = 47 '{ScoreOf}' "Recurrence score"
+* interpretation = ObsInt#H "High"
+
+
+// Initial Chemotherapy
+
+Instance: cancer-related-medication-request-doxorubicin-jenny-m
+InstanceOf: CancerRelatedMedicationRequest
+Description: "Extended example: example showing chemotherapy medication"
+* extension[treatmentIntent].valueCodeableConcept = SCT#373808002 "Curative - procedure intent (qualifier value)"
+* status = #active "active"
+* category = MedReqCat#outpatient
+* intent = #order
+* medicationCodeableConcept = RXN#3639 "DOXOrubicin"
+* subject = Reference(cancer-patient-jenny-m)
+* requester = Reference(us-core-practitioner-owen-oncologist)
+* reasonReference = Reference(primary-cancer-condition-jenny-m)
+* dosageInstruction.timing.repeat.boundsPeriod.start = "2019-04-01"
+* authoredOn = "2019-04-12"
+* dosageInstruction.text = "doxorubicin (60 mg/m² IV), 93.26mg"
+* dosageInstruction.route = SCT#47625008 "Intravenous route (qualifier value)"
+* dosageInstruction.doseAndRate.doseQuantity = 93.26 'mg' "mg"
+// Once every 3 weeks
+* dosageInstruction.maxDosePerPeriod.numerator.value = 1
+* dosageInstruction.maxDosePerPeriod.denominator = 3 'wk' "week"
+
+Instance: cancer-related-medication-request-cyclophosphamide-jenny-m
+InstanceOf: CancerRelatedMedicationRequest
+Description: "Extended example: example showing chemotherapy medication"
+* extension[treatmentIntent].valueCodeableConcept = SCT#373808002 "Curative - procedure intent (qualifier value)"
+* status = #active "active"
+* category = MedReqCat#outpatient
+* intent = #order
+* medicationCodeableConcept = RXN#3002 "cyclophosphamide"
+* subject = Reference(cancer-patient-jenny-m)
+* requester = Reference(us-core-practitioner-owen-oncologist)
+* reasonReference = Reference(primary-cancer-condition-jenny-m)
+* dosageInstruction.timing.repeat.boundsPeriod.start = "2018-04-01"
+* authoredOn = "2019-04-12"
+* dosageInstruction.text = "cyclophosphamide (600 mg/m² IV), 932.59mg"
+* dosageInstruction.route = SCT#47625008 "Intravenous route (qualifier value)"
+* dosageInstruction.doseAndRate.doseQuantity = 932.59 'mg' "mg"
+// Once every 3 weeks
+* dosageInstruction.maxDosePerPeriod.numerator.value = 1
+* dosageInstruction.maxDosePerPeriod.denominator = 3 'wk' "week"
+
+Instance: cancer-related-medication-request-paclitaxel-jenny-m
+InstanceOf: CancerRelatedMedicationRequest
+Description: "Extended example: example showing chemotherapy medication"
+* extension[treatmentIntent].valueCodeableConcept = SCT#373808002 "Curative - procedure intent (qualifier value)"
+* status = #active "active"
+* category = MedReqCat#outpatient
+* intent = #order
+* medicationCodeableConcept = RXN#56946 "PACLitaxel"
+* subject = Reference(cancer-patient-jenny-m)
+* requester = Reference(us-core-practitioner-owen-oncologist)
+* reasonReference = Reference(primary-cancer-condition-jenny-m)
+* dosageInstruction.timing.repeat.boundsPeriod.start = "2019-04-12"
+* authoredOn = "2019-04-12"
+* dosageInstruction.text = "doxorubicin (175 mg/m² IV), 272.01mg"
+* dosageInstruction.route = SCT#47625008 "Intravenous route (qualifier value)"
+* dosageInstruction.doseAndRate.doseQuantity = 272.01 'mg' "mg"
+// Once every 3 weeks
+* dosageInstruction.maxDosePerPeriod.numerator.value = 1
+* dosageInstruction.maxDosePerPeriod.denominator = 3 'wk' "week"
+
+// Radiotherapy
+
+Instance: teleradiotherapy-prescription-delivery-jenny-m
+InstanceOf: TeleradiotherapyPrescriptionDelivery
+Description: "Extended example: example showing radiation treatment"
+* status = #completed "completed"
+* code = RO#PHOTON "Photon Beam Radiation Therapy"
+* extension[radiotherapyTechnique].valueCodeableConcept = RO#3D "3 Dimensional"
+* extension[radiotherapyDosePerFraction].valueQuantity = 200 'cGy'
+* extension[radiotherapyDeliveredFractions].valueUnsignedInt = 25
+* extension[radiotherapyTotalDosePlanned].valueQuantity = 5000 'cGy'
+* extension[radiotherapyTotalDoseDelivered].valueQuantity = 5000 'cGy'
+* subject = Reference(cancer-patient-jenny-m)
+* performedPeriod.start = "2018-05-01"
+* performedPeriod.end = "2018-06-22"
+* asserter = Reference(us-core-practitioner-owen-oncologist)
+* reasonReference = Reference(primary-cancer-condition-jenny-m)
+* bodySite = SCT#80248007 "Left breast structure (body structure)"
+
+Instance: cancer-related-medication-request-anastrozole-jenny-m
+InstanceOf: CancerRelatedMedicationRequest
+Description: "Extended example: example showing chemotherapy medication"
+* extension[treatmentIntent].valueCodeableConcept = SCT#373808002 "Curative - procedure intent (qualifier value)"
+* status = #active "active"
+* category = MedReqCat#community
+* intent = #order
+* medicationCodeableConcept = RXN#84857 "anastrozole"
+* subject = Reference(cancer-patient-jenny-m)
+* requester = Reference(us-core-practitioner-owen-oncologist)
+* reasonReference = Reference(primary-cancer-condition-jenny-m)
+* dosageInstruction.timing.repeat.boundsPeriod.start = "2019-04-01"
+* authoredOn = "2019-06-22"
+* dosageInstruction.text = "1mg orally once daily"
+* dosageInstruction.route = SCT#26643006 "Oral route (qualifier value)"
+* dosageInstruction.doseAndRate.doseQuantity = 1 'mg' "mg"
+* dosageInstruction.maxDosePerPeriod.numerator.value = 1
+* dosageInstruction.maxDosePerPeriod.denominator = 1 'd' "day"
+
+// Check side effects
+
+Instance: us-core-observation-lab-neutrophils-jenny-m
+InstanceOf: USCoreObservationLab
+Description: "Extended example: neutrophils lab test"
+* status = #final "final"
+* code = LNC#770-8 "Neutrophils/100 leukocytes in Blood by Automated count"
+* subject = Reference(cancer-patient-jenny-m)
+* effectiveDateTime = "2018-05-20T00:00:00Z"
+* valueQuantity = 40.0 '%' "%"
+* referenceRange.low = 37.0 '%' "%"
+* referenceRange.high = 67.0 '%' "%"
+* referenceRange.appliesTo = RefMeaning#normal "Normal Range"
+
+// Two years later
+
+Instance: cancer-disease-status-jenny-m
+InstanceOf: CancerDiseaseStatus
+Description: "Extended example: example showing disease status (patient's condition improved)"
+* extension[evidenceType].valueCodeableConcept = SCT#363679005 "Imaging (procedure)"
+* status = #final "final"
+* code = LNC#88040-1 "Response to cancer treatment"
+* subject = Reference(cancer-patient-jenny-m)
+* effectiveDateTime = "2020-03-01"
+* performer = Reference(us-core-practitioner-owen-oncologist)
+* focus = Reference(primary-cancer-condition-jenny-m)
+* valueCodeableConcept = SCT#268910001 "Patient's condition improved (finding)"
+
+
+// Actors
+
+Instance: cancer-patient-jenny-m
+InstanceOf: CancerPatient
+Description: "Extended example: example cancer patient"
+* identifier.use = #usual
+* identifier.type = http://terminology.hl7.org/CodeSystem/v2-0203#MR "Medical Record Number"
+* identifier.system = "http://hospital.example.org"
+* identifier.value = "MRN1234"
+* name.family = "M"
+* name.given[0] = "Jenny"
+* gender = #female
+* birthDate = "1965-01-01"
+* address.line = "123 Main St"
+* address.city = "Anytown"
+* address.postalCode = "12345"
+* address.country = "United States"
+* contact.telecom[0].system = #phone
+* contact.telecom[0].value = "555-555-5555"
+* contact.telecom[0].use = #home
+* contact.telecom[1].system = #email
+* contact.telecom[1].value = "example@example.com"
+* communication.language = urn:ietf:bcp:47#en-US
+* communication.language.text = "English"
+* extension[USCoreRace].extension[ombCategory].valueCoding = OmbRaceCat#2106-3 "White"
+* extension[USCoreRace].extension[text].valueString = "White"
+* extension[USCoreEthnicity].extension[ombCategory].valueCoding = OmbRaceCat#2186-5 "Not Hispanic or Latino"
+* extension[USCoreEthnicity].extension[text].valueString = "Not Hispanic or Latino"
+
+Instance: us-core-practitioner-owen-oncologist
+InstanceOf: USCorePractitioner
+Description: "Extended example: example practitioner"
+* identifier[NPI].value = "9988776655"
+* name.family = "Oncologist"
+* name.given[0] = "Owen"
+* name.prefix[0] = "Dr."
+* address.use = #work
+* address.line[0] = "123 Corporate Drive"
+* address.city = "Anytown"
+* address.state = "MA"
+* address.postalCode = "12345"
+* address.country = "US"
+* gender = #male
+* qualification.code = http://terminology.hl7.org/CodeSystem/v2-0360#MD
+* qualification.code.coding[0].version = "2.7"
+
+Instance: us-core-practitioner-peter-pathologist
+InstanceOf: USCorePractitioner
+Description: "Extended example: example practitioner (pathologist)"
+* identifier[NPI].value = "1122334455"
+* name.family = "Pathologist"
+* name.given[0] = "Peter"
+* name.prefix[0] = "Dr."
+* address.use = #work
+* address.line[0] = "123 Corporate Drive"
+* address.city = "Anytown"
+* address.state = "MA"
+* address.postalCode = "12345"
+* address.country = "US"
+* gender = #female
+* qualification.code = http://terminology.hl7.org/CodeSystem/v2-0360#MD
+* qualification.code.coding[0].version = "2.7"
+
+Instance: us-core-organization-physician-services-inc
+InstanceOf: USCoreOrganization
+Description: "Extended example: example organization"
+* active = true
+* type = http://terminology.hl7.org/CodeSystem/organization-type#prov "Healthcare Provider"
+* name = "Physician Services, Inc."
+* telecom.system = #phone
+* telecom.value = "999-999-9999"
+* telecom.use = #work
+* address.line = "123 Corporate Drive"
+* address.city = "Anytown"
+* address.state = "MA"
+* address.postalCode = "12345"
+* address.country = "US"
+
+Instance: us-core-organization-bedrock-medicine
+InstanceOf: USCoreOrganization
+Description: "Example of US Core Organization"
+* identifier[NPI].value = "1265710000"
+* active = true
+* name = "Bedrock Medicine"
+* contact.telecom.system = #phone
+* contact.telecom.value = "617-555-2200"
+* address.line = "55 Secant Street"
+* address.city = "Cambridge"
+* address.state = "MA"
+* address.postalCode = "02141"
+* address.country = "USA"

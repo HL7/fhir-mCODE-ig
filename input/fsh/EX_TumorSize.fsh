@@ -3,6 +3,7 @@ InstanceOf: TumorSize
 Description: "EXPERIMENTAL example of a resource conforming to the tumor size profile."
 * status = #final
 * method = LNC#24419-4 "Pathology report gross observation"
+* category = ObsCat#laboratory
 * subject = Reference(Patient/cancer-patient-john-anyperson)
 * focus = Reference(BodyStructure/tumor-lobular-carcinoma-left-breast)
 * component[tumorLongestDimension].valueQuantity = 1.2 'cm' "cm"

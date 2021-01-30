@@ -1,7 +1,7 @@
 id: hl7.fhir.us.mcode
 canonical: http://hl7.org/fhir/us/mcode
 version: 1.5.0
-name: minimal_Common_Oncology_Data_Elements_(mCODE)
+name: MinimalCommonOncologyDataElements
 title: "minimal Common Oncology Data Elements (mCODE) Implementation Guide"
 status: draft
 publisher:
@@ -260,7 +260,6 @@ groups:
       - Observation/tnm-pathological-regional-nodes-category-pN3
       - Observation/tnm-pathological-stage-group-3C
       - Observation/tumor-marker-test-egf
-      - Organization/us-core-organization-bedrock-medicine
       - Patient/cancer-patient-john-anyperson
       - Patient/cancer-patient-eve-anyperson
       - Practitioner/us-core-practitioner-kyle-anydoc
@@ -270,54 +269,55 @@ groups:
 
   Scenario1:
     name: "Scenario 1: Breast Cancer Patient"
-    description: A set of example resources based on [this persona](examples.html#scenario-1-breast-cancer-patient).
+    description: A set of example resources based on [this persona](examples.html#extended-example).
     resources:
-      - Bundle/mcode-patient-bundle-susan-m
-      - Condition/us-core-condition-depression-susan-m
-      - Condition/us-core-condition-hypertension-susan-m
-      - Condition/primary-cancer-condition-susan-m
-      - Condition/us-core-condition-anxiety-susan-m
-      - DiagnosticReport/us-core-diagnosticreport-lab-susan-m
-      - DiagnosticReport/cancer-genomics-report-susan-m
-      - FamilyMemberHistory/family-member-history-aunt-susan-m
-      - FamilyMemberHistory/family-member-history-sister-susan-m
-      - FamilyMemberHistory/family-member-history-uncle-susan-m
-      - MedicationRequest/cancer-related-medication-request-anastrozole-susan-m
-      - MedicationRequest/cancer-related-medication-request-cyclophosphamide-susan-m
-      - MedicationRequest/cancer-related-medication-request-doxorubicin-susan-m
-      - MedicationRequest/cancer-related-medication-request-paclitaxel-susan-m
-      - Observation/bodyweight-susan-m-2018-03-06
-      - Observation/cancer-disease-status-susan-m-2020-03-01
-      - Observation/cancer-genetic-variant-susan-m
-      - Observation/cancer-related-comorbidities-elixhauser-susan-m
-      - Observation/ecog-performance-status-susan-m
-      - Observation/genomic-region-studied-susan-m
-      - Observation/tnm-clinical-distant-metastases-category-susan-m
-      - Observation/tnm-clinical-regional-nodes-category-susan-m
-      - Observation/tnm-clinical-stage-group-susan-m
-      - Observation/tnm-primary-tumor-category-susan-m
-      - Observation/tumor-marker-test-er-susan-m
-      - Observation/tumor-marker-test-her2-susan-m
-      - Observation/tumor-marker-test-oncotype-dx-susan-m
-      - Observation/tumor-marker-test-pr-susan-m
-      - Observation/us-core-observation-lab-neutrophils-susan-m-2018-03-06
-      - Observation/observation-smoking-history-susan-m
+      - Bundle/mcode-patient-bundle-jenny-m
+      - Condition/us-core-condition-depression-jenny-m
+      - Condition/us-core-condition-hypertension-jenny-m
+      - Condition/primary-cancer-condition-jenny-m
+      - Condition/us-core-condition-anxiety-jenny-m
+      - DiagnosticReport/us-core-diagnosticreport-lab-jenny-m
+      - DiagnosticReport/cancer-genomics-report-jenny-m
+      - FamilyMemberHistory/family-member-history-aunt-jenny-m
+      - FamilyMemberHistory/family-member-history-sister-jenny-m
+      - FamilyMemberHistory/family-member-history-uncle-jenny-m
+      - MedicationRequest/cancer-related-medication-request-anastrozole-jenny-m
+      - MedicationRequest/cancer-related-medication-request-cyclophosphamide-jenny-m
+      - MedicationRequest/cancer-related-medication-request-doxorubicin-jenny-m
+      - MedicationRequest/cancer-related-medication-request-paclitaxel-jenny-m
+      - Observation/bodyweight-jenny-m-2018-03-06
+      - Observation/cancer-disease-status-jenny-m
+      - Observation/cancer-genetic-variant-jenny-m
+      - Observation/cancer-related-comorbidities-elixhauser-jenny-m
+      - Observation/ecog-performance-status-jenny-m
+      - Observation/genomic-region-studied-jenny-m
+      - Observation/tnm-clinical-distant-metastases-category-jenny-m
+      - Observation/tnm-clinical-regional-nodes-category-jenny-m
+      - Observation/tnm-clinical-stage-group-jenny-m
+      - Observation/tnm-primary-tumor-category-jenny-m
+      - Observation/tumor-marker-test-er-jenny-m
+      - Observation/tumor-marker-test-her2-jenny-m
+      - Observation/tumor-marker-test-oncotype-dx-jenny-m
+      - Observation/tumor-marker-test-pr-jenny-m
+      - Observation/us-core-observation-lab-neutrophils-jenny-m
+      - Observation/observation-smoking-history-jenny-m
       - Observation/us-core-observation-lab-tumor-dcis
-      - Observation/us-core-observation-lab-tumor-invasion-susan-m
-      - Observation/us-core-observation-lab-tumor-margins-susan-m
-      - Observation/us-core-observation-lab-sentinel-nodes-susan-m
-      - Observation/tumor-size-susan-m-2018-03-06
-      - Observation/us-core-smokingstatus-susan-m
+      - Observation/us-core-observation-lab-tumor-invasion-jenny-m
+      - Observation/us-core-observation-lab-tumor-margins-jenny-m
+      - Observation/us-core-observation-lab-sentinel-nodes-jenny-m
+      - Observation/tumor-size-jenny-m
+      - Observation/us-core-smokingstatus-jenny-m
+      - Organization/us-core-organization-bedrock-medicine
       - Organization/us-core-organization-physician-services-inc
-      - Patient/cancer-patient-susan-m
+      - Patient/cancer-patient-jenny-m
       - Practitioner/us-core-practitioner-owen-oncologist
       - Practitioner/us-core-practitioner-peter-pathologist
-      - Procedure/teleradiotherapy-prescription-delivery-susan-m
-      - Procedure/cancer-related-surgical-procedure-susan-m
-      - Procedure/us-core-procedure-biopsy-susan-m
-      - Procedure/us-core-procedure-mammogram-susan-m
-      - Specimen/genetic-specimen-left-breast-susan-m
-      - Specimen/specimen-left-breast-susan-m
+      - Procedure/teleradiotherapy-prescription-delivery-jenny-m
+      - Procedure/cancer-related-surgical-procedure-jenny-m
+      - Procedure/us-core-procedure-biopsy-jenny-m
+      - Procedure/us-core-procedure-mammogram-jenny-m
+      - Specimen/genetic-specimen-left-breast-jenny-m
+      - Specimen/specimen-left-breast-jenny-m
 
   # Conformance
   Conformance:

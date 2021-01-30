@@ -115,6 +115,6 @@ Description: "A collection of data for an mCODE cancer patient."
 * entry[cancerGenomicsReport].resource only CancerGenomicsReport
 * entry[geneticSpecimen].resource only GeneticSpecimen
 * entry[genomicRegionStudied].resource only GenomicRegionStudied
-* entry[cancerRelatedElixhauserComorbidities].resource only CancerRelatedElixhauserComorbidities
+* entry[cancerRelatedElixhauserComorbidities].resource only CancerRelatedComorbiditiesElixhauser
 * entry[vitalSign].resource only http://hl7.org/fhir/StructureDefinition/vitalsigns
 

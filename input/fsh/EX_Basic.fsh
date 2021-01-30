@@ -1,4 +1,4 @@
-Instance: mCODEPrimaryCancerConditionExample1
+Instance: primary-cancer-condition-nsclc
 InstanceOf: PrimaryCancerCondition
 Description: "mCODE Example for Primary Cancer Condition"
 * clinicalStatus = ClinStatus#active "Active"
@@ -8,45 +8,43 @@ Description: "mCODE Example for Primary Cancer Condition"
 * extension[histologyMorphologyBehavior].valueCodeableConcept = SCT#35917007 "Adenocarcinoma"
 * bodySite = SCT#39607008 "Lung structure (body structure)"
 * bodySite.extension[locationQualifier].valueCodeableConcept = SCT#7771000 "Left (qualifier value)"
-* subject = Reference(mCODEPatientExample1)
+* subject = Reference(cancer-patient-john-anyperson)
 * onsetDateTime = "2019-04-01"
-* asserter = Reference(mCODEPractitionerExample1)
+* asserter = Reference(us-core-practitioner-kyle-anydoc)
 * stage.summary = AJCC#3C "IIIC"
-* stage.assessment = Reference(mCODETNMClinicalStageGroupExample1)
+* stage.assessment = Reference(tnm-clinical-stage-group-3c)
 
-Instance: mCODESecondaryCancerConditionExample1
+Instance: secondary-cancer-condition-brain-mets
 InstanceOf: SecondaryCancerCondition
 Description: "mCODE Example for Secondary Cancer Condition"
-* extension[relatedPrimaryCancerCondition].valueReference = Reference(mCODEPrimaryCancerConditionExample1)
+* extension[relatedPrimaryCancerCondition].valueReference = Reference(primary-cancer-condition-nsclc)
 * clinicalStatus = ClinStatus#active "Active"
 * verificationStatus = VerStatus#confirmed "Confirmed"
 * category = CondCat#problem-list-item
 * code = SCT#94225005 "Secondary malignant neoplasm of brain"
-* subject = Reference(mCODEPatientExample1)
+* subject = Reference(cancer-patient-john-anyperson)
 * onsetDateTime = "2019-05-01"
-* asserter = Reference(mCODEPractitionerExample1)
+* asserter = Reference(us-core-practitioner-kyle-anydoc)
 
-Instance: mCODECancerDiseaseStatusExample1
+Instance: cancer-disease-status-improved
 InstanceOf: CancerDiseaseStatus
 Description: "mCODE Example for Cancer Disease Status"
 // * extension[evidenceType].url = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-evidence-type"
 * extension[evidenceType].valueCodeableConcept = SCT#108257001 "Anatomic pathology procedure (procedure)"
 * status = #final "final"
-* subject = Reference(mCODEPatientExample1)
+* subject = Reference(cancer-patient-john-anyperson)
 * effectiveDateTime = "2019-04-01"
-* performer = Reference(mCODEPractitionerExample1)
+* performer = Reference(us-core-practitioner-kyle-anydoc)
 * valueCodeableConcept = SCT#268910001 "Patient's condition improved (finding)"
 
-Instance: mCODECancerRelatedElixhauserComorbiditiesExample1
-InstanceOf: CancerRelatedElixhauserComorbidities
+Instance: cancer-related-comorbidities-elixhauser-john-anyperson
+InstanceOf: CancerRelatedComorbiditiesElixhauser
 Description: "mCODE Example for Cancer-Related Comorbidities"
-* subject = Reference(mCODEPatientExample1)
-* performer = Reference(mCODEPractitionerExample1)
-* focus = Reference(mCODEPrimaryCancerConditionExample1)
+* subject = Reference(cancer-patient-john-anyperson)
+* performer = Reference(us-core-practitioner-kyle-anydoc)
+* focus = Reference(primary-cancer-condition-nsclc)
 * status = #final "final"
 // present
-* component[depression].valueCodeableConcept = SCT#52101004 "Present (qualifier value)"
-* component[depression].extension[conditionReference].valueReference = Reference(mCODEDepressionExample1)
 * component[congestiveHeartFailure].valueCodeableConcept = SCT#52101004 "Present (qualifier value)"
 * component[congestiveHeartFailure].extension[conditionCode].valueCodeableConcept = ICD10CM#I50.32 "Chronic diastolic (congestive) heart failure"
 // absent
@@ -54,18 +52,15 @@ Description: "mCODE Example for Cancer-Related Comorbidities"
 * component[chronicPulmonaryDisease].valueCodeableConcept = SCT#2667000 "Absent (qualifier value)"
 * component[obesity].valueCodeableConcept = SCT#2667000 "Absent (qualifier value)"
 * component[peripheralVascularDisease].valueCodeableConcept = SCT#2667000 "Absent (qualifier value)"
-* component[drugAbuse].valueCodeableConcept = SCT#261665006 "Unknown (qualifier value)"
-* component[hypothyroidism].valueCodeableConcept = SCT#261665006 "Unknown (qualifier value)"
 
-Instance: ComorbiditiesElixhauserExample1
+
+Instance: comorbidities-elixhauser-john-anyperson
 InstanceOf: ComorbiditiesElixhauser
 Description: "Example of Elixhauser Comorbidity List without index disease."
-* subject = Reference(mCODEPatientExample1)
-* performer = Reference(mCODEPractitionerExample1)
+* subject = Reference(cancer-patient-john-anyperson)
+* performer = Reference(us-core-practitioner-kyle-anydoc)
 * status = #final "final"
 // present
-* component[depression].valueCodeableConcept = SCT#52101004 "Present (qualifier value)"
-* component[depression].extension[conditionReference].valueReference = Reference(mCODEDepressionExample1)
 * component[congestiveHeartFailure].valueCodeableConcept = SCT#52101004 "Present (qualifier value)"
 * component[congestiveHeartFailure].extension[conditionCode].valueCodeableConcept = ICD10CM#I50.32 "Chronic diastolic (congestive) heart failure"
 * component[cancerLeukemia].valueCodeableConcept = SCT#52101004 "Present (qualifier value)"
@@ -78,7 +73,7 @@ Description: "Example of Elixhauser Comorbidity List without index disease."
 * component[drugAbuse].valueCodeableConcept = SCT#261665006 "Unknown (qualifier value)"
 * component[hypothyroidism].valueCodeableConcept = SCT#261665006 "Unknown (qualifier value)"
 
-Instance: mCODEPatientExample1
+Instance: cancer-patient-john-anyperson
 InstanceOf: CancerPatient
 Description: "mCODE Example for Patient"
 * identifier.use = #usual
@@ -102,7 +97,7 @@ Description: "mCODE Example for Patient"
 * communication.language = urn:ietf:bcp:47#en-US "English (Region=United States)"
 * communication.language.text = "English"
 
-Instance: mCODEPatientExample2
+Instance: cancer-patient-eve-anyperson
 InstanceOf: CancerPatient
 Description: "mCODE Example for Patient"
 // The following lines must use the slice names, not the defining URLs
@@ -134,21 +129,21 @@ Description: "mCODE Example for Patient"
 * communication.language = urn:ietf:bcp:47#en-US "English (Region=United States)"
 * communication.language.text = "English"
 
-Instance: mCODEOrganizationExample1
+Instance: us-core-organization-bedrock-medicine
 InstanceOf: USCoreOrganization
-Description: "mCODE Example for Organization"
-* identifier[NPI].value = "1265714091"
+Description: "Example of US Core Organization"
+* identifier[NPI].value = "1265710000"
 * active = true
-* name = "Foundation Medicine"
+* name = "Bedrock Medicine"
 * contact.telecom.system = #phone
-* contact.telecom.value = "617-418-2200"
-* address.line = "150 Second Street"
+* contact.telecom.value = "617-555-2200"
+* address.line = "55 Secant Street"
 * address.city = "Cambridge"
 * address.state = "MA"
 * address.postalCode = "02141"
 * address.country = "USA"
 
-Instance: mCODEPractitionerExample1
+Instance: us-core-practitioner-kyle-anydoc
 InstanceOf: USCorePractitioner
 Description: "mCODE Example for Practitioner"
 * identifier[NPI].value = "9988776655"
@@ -164,158 +159,147 @@ Description: "mCODE Example for Practitioner"
 * address.country = "US"
 * qualification.code = http://terminology.hl7.org/CodeSystem/v2-0360|2.7#MD "Doctor of Medicine"
 
-Instance: mCODEDepressionExample1
-InstanceOf: USCoreCondition
-Description: "mCODE Example of Depression (as Comorbid condition), part of mCODECancerRelatedElixhauserComorbiditiesExample1"
-* subject = Reference(mCODEPatientExample1)
-* asserter = Reference(mCODEPractitionerExample1)
-* category = CondCat#problem-list-item
-* onsetDateTime = "2005-01-01"
-* clinicalStatus = ClinStatus#active "Active"
-* verificationStatus = VerStatus#confirmed "Confirmed"
-* code = SCT#191630001 "Bipolar affective disorder, currently depressed, moderate (disorder)"
-
-Instance: mCODEECOGPerformanceStatusExample1
+Instance: ecog-performance-status-fully-active
 InstanceOf: ECOGPerformanceStatus
 Description: "mCODE Example for ECOG Performance Status"
 * status = #final "final"
 * method = SCT#5880005 "Clinical examination"
-* subject = Reference(mCODEPatientExample1)
+* subject = Reference(cancer-patient-john-anyperson)
 * effectiveDateTime = "2019-04-01"
-* performer = Reference(mCODEPractitionerExample1)
+* performer = Reference(us-core-practitioner-kyle-anydoc)
 * valueInteger = 0
 * interpretation = LNC#LA9622-7 "Fully active, able to carry on all pre-disease performance without restriction"
 
-Instance: mCODEKarnofskyPerformanceStatusExample1
+Instance: karnofsky-performance-status-normal-activity
 InstanceOf: KarnofskyPerformanceStatus
 Description: "mCODE Example for Karnofsky Performance Status"
 * status = #final "final"
 * method = SCT#5880005 "Clinical examination"
-* subject = Reference(mCODEPatientExample1)
+* subject = Reference(cancer-patient-john-anyperson)
 * effectiveDateTime = "2019-04-01"
-* performer = Reference(mCODEPractitionerExample1)
+* performer = Reference(us-core-practitioner-kyle-anydoc)
 * valueInteger = 90
 * interpretation = LNC#LA29176-7 "Able to carry on normal activity; minor signs or symptoms of disease"
 
-Instance: mCODECancerRelatedSurgicalProcedureExample1
+Instance: cancer-related-surgical-procedure-lobectomy
 InstanceOf: CancerRelatedSurgicalProcedure
 Description: "mCODE Example for Cancer Related Surgical Procedure"
 * status = #completed "completed"
 * code = SCT#359615001 "Partial lobectomy of lung (procedure)"
-* subject = Reference(mCODEPatientExample1)
-* asserter = Reference(mCODEPractitionerExample1)
+* subject = Reference(cancer-patient-john-anyperson)
+* asserter = Reference(us-core-practitioner-kyle-anydoc)
 * performedDateTime = "2019-03-01"
 * extension[treatmentIntent].valueCodeableConcept = SCT#373808002 "Curative - procedure intent"
-* reasonReference = Reference(mCODEPrimaryCancerConditionExample1)
+* reasonReference = Reference(primary-cancer-condition-nsclc)
 * bodySite = SCT#41224006 "Structure of lower lobe of left lung (body structure)"
 
-Instance: BrachytherapyPrescriptionDeliveryExample1
+Instance: brachytherapy-prescription-delivery-ldr
 InstanceOf: BrachytherapyPrescriptionDelivery
 Description: "mCODE Example for a brachytherapy procedure."
 * status = #completed "completed"
 * code = RO#LDR "Low-Dose Rate Brachytherapy"
 * extension[radiotherapyTechnique].valueCodeableConcept = RO#INSTIT-TEMP "Interstitial-Temporary"
-* subject = Reference(mCODEPatientExample1)
-* asserter = Reference(mCODEPractitionerExample1)
+* subject = Reference(cancer-patient-john-anyperson)
+* asserter = Reference(us-core-practitioner-kyle-anydoc)
 * performedPeriod.start = "2019-03-01"
 * performedPeriod.end = "2019-03-01"
 //* extension[treatmentIntent].valueCodeableConcept = SCT#373808002 "Curative - procedure intent"
-* reasonReference = Reference(mCODEPrimaryCancerConditionExample1)
+* reasonReference = Reference(primary-cancer-condition-nsclc)
 * bodySite = SCT#41224006 "Structure of lower lobe of left lung (body structure)"
 
-Instance: mCODETNMClinicalStageGroupExample1
+Instance: tnm-clinical-stage-group-3c
 InstanceOf: TNMClinicalStageGroup
 Description: "mCODE Example for TNM Clinical Stage Group"
 * status = #final "final"
 * method = NCIT#C146985 "AJCC Cancer Staging Manual 8th Edition"
-* subject = Reference(mCODEPatientExample1)
+* subject = Reference(cancer-patient-john-anyperson)
 * effectiveDateTime = "2019-04-01"
 * valueCodeableConcept = AJCC#3C "IIIC"
-* hasMember[TNMClinicalPrimaryTumorCategory] = Reference(mCODETNMClinicalPrimaryTumorCategoryExample1)
-* hasMember[TNMClinicalRegionalNodesCategory] = Reference(mCODETNMClinicalRegionalNodesCategoryExample1)
-* hasMember[TNMClinicalDistantMetastasesCategory] = Reference(mCODETNMClinicalDistantMetastasesCategoryExample1)
+* hasMember[TNMClinicalPrimaryTumorCategory] = Reference(tnm-clinical-primary-tumor-category-cT3)
+* hasMember[TNMClinicalRegionalNodesCategory] = Reference(tnm-clinical-regional-nodes-category-cN3)
+* hasMember[TNMClinicalDistantMetastasesCategory] = Reference(tnm-clinical-distant-metastases-category-cM0)
 
-Instance: mCODETNMClinicalDistantMetastasesCategoryExample1
+Instance: tnm-clinical-distant-metastases-category-cM0
 InstanceOf: TNMClinicalDistantMetastasesCategory
 Description: "mCODE Example for TNM Clinical Distant Metastases Category"
 * status = #final "final"
 * method = NCIT#C146985 "AJCC Cancer Staging Manual 8th Edition"
-* subject = Reference(mCODEPatientExample1)
+* subject = Reference(cancer-patient-john-anyperson)
 * effectiveDateTime = "2019-04-01"
 * valueCodeableConcept = AJCC#cM0 "M0"
 
-Instance: mCODETNMClinicalPrimaryTumorCategoryExample1
+Instance: tnm-clinical-primary-tumor-category-cT3
 InstanceOf: TNMClinicalPrimaryTumorCategory
 Description: "mCODE Example for TNM Clinical Primary Tumor Category"
 * status = #final "final"
 * method = NCIT#C146985 "AJCC Cancer Staging Manual 8th Edition"
-* subject = Reference(mCODEPatientExample1)
+* subject = Reference(cancer-patient-john-anyperson)
 * effectiveDateTime = "2019-04-01"
 * valueCodeableConcept = AJCC#cT3 "T3"
 
 
-Instance: mCODETNMClinicalRegionalNodesCategoryExample1
+Instance: tnm-clinical-regional-nodes-category-cN3
 InstanceOf: TNMClinicalRegionalNodesCategory
 Description: "mCODE Example for TNM Clinical Regional Nodes Category"
 * status = #final "final"
 * method = NCIT#C146985 "AJCC Cancer Staging Manual 8th Edition"
-* subject = Reference(mCODEPatientExample1)
+* subject = Reference(cancer-patient-john-anyperson)
 * effectiveDateTime = "2019-04-01"
 * valueCodeableConcept = AJCC#cN3 "N3"
 
 
-Instance: mCODETNMPathologicalStageGroupExample1
+Instance: tnm-pathological-stage-group-3C
 InstanceOf: TNMPathologicalStageGroup
 Description: "mCODE Example for TNM Pathological Stage Group"
 * status = #final "final"
 * method = NCIT#C146985 "AJCC Cancer Staging Manual 8th Edition"
-* subject = Reference(mCODEPatientExample1)
+* subject = Reference(cancer-patient-john-anyperson)
 * effectiveDateTime = "2019-04-01"
 * valueCodeableConcept = AJCC#3C "IIIC"
-* hasMember[TNMPathologicalPrimaryTumorCategory] = Reference(mCODETNMPathologicalPrimaryTumorCategoryExample1)
-* hasMember[TNMPathologicalRegionalNodesCategory] = Reference(mCODETNMPathologicalRegionalNodesCategoryExample1)
-* hasMember[TNMPathologicalDistantMetastasesCategory] = Reference(mCODETNMPathologicalDistantMetastasesCategoryExample1)
+* hasMember[TNMPathologicalPrimaryTumorCategory] = Reference(tnm-pathological-primary-tumor-category-pT3)
+* hasMember[TNMPathologicalRegionalNodesCategory] = Reference(tnm-pathological-regional-nodes-category-pN3)
+* hasMember[TNMPathologicalDistantMetastasesCategory] = Reference(tnm-pathological-distant-metastases-category-pM0)
 
 
-Instance: mCODETNMPathologicalDistantMetastasesCategoryExample1
+Instance: tnm-pathological-distant-metastases-category-pM0
 InstanceOf: TNMPathologicalDistantMetastasesCategory
 Description: "mCODE Example for TNM Pathological Distant Metastases Category"
 * status = #final "final"
 * method = NCIT#C146985 "AJCC Cancer Staging Manual 8th Edition"
-* subject = Reference(mCODEPatientExample1)
+* subject = Reference(cancer-patient-john-anyperson)
 * effectiveDateTime = "2019-04-01"
 * valueCodeableConcept = AJCC#pM0 "M0"
 
 
-Instance: mCODETNMPathologicalPrimaryTumorCategoryExample1
+Instance: tnm-pathological-primary-tumor-category-pT3
 InstanceOf: TNMPathologicalPrimaryTumorCategory
 Description: "mCODE Example for TNM Pathological Primary Tumor Category"
 * status = #final "final"
 * method = NCIT#C146985 "AJCC Cancer Staging Manual 8th Edition"
-* subject = Reference(mCODEPatientExample1)
+* subject = Reference(cancer-patient-john-anyperson)
 * effectiveDateTime = "2019-04-01"
 * valueCodeableConcept = AJCC#pT3 "T3"
 
 
-Instance: mCODETNMPathologicalRegionalNodesCategoryExample1
+Instance: tnm-pathological-regional-nodes-category-pN3
 InstanceOf: TNMPathologicalRegionalNodesCategory
 Description: "mCODE Example for TNM Pathological Regional Nodes Category"
 * status = #final "final"
 * method = NCIT#C146985 "AJCC Cancer Staging Manual 8th Edition"
-* subject = Reference(mCODEPatientExample1)
+* subject = Reference(cancer-patient-john-anyperson)
 * effectiveDateTime = "2019-04-01"
 * valueCodeableConcept = AJCC#pN3 "N3"
 
-Instance: mCODECancerRelatedMedicationRequestExample1
+Instance: cancer-related-medication-request-gefitinib
 InstanceOf: CancerRelatedMedicationRequest
 Description: "mCODE Example for CancerRelatedMedicationRequest"
-* subject = Reference(mCODEPatientExample1)
+* subject = Reference(cancer-patient-john-anyperson)
 * status = MedReqStatus#active
 * intent = MedReqIntent#order
 * authoredOn = "2019-04-01"
 * medicationCodeableConcept = RXN#349472 "gefitinib 250 MG Oral Tablet"
 * reasonCode = SCT#254637007 "Non-small cell lung cancer (disorder)"
-* requester = Reference(mCODEPractitionerExample1)
+* requester = Reference(us-core-practitioner-kyle-anydoc)
 * extension[treatmentIntent].valueCodeableConcept = SCT#373808002 "Curative - procedure intent"
 * dosageInstruction.text = "250mg orally once daily with or without food"
 * dosageInstruction.route = SCT#26643006 "Oral use"
@@ -328,16 +312,16 @@ Description: "mCODE Example for CancerRelatedMedicationRequest"
 * dosageInstruction.timing.repeat.boundsPeriod.start = "2019-04-30"
 * dosageInstruction.timing.code = TimingAbbreviation#QD // prescriber abbreviation for once daily
 
-Instance: mCODECancerRelatedMedicationRequestExample2
+Instance: cancer-related-medication-request-cisplatin
 InstanceOf: CancerRelatedMedicationRequest
 Description: "mCODE Example for CancerRelatedMedicationRequest - Chemo Infusion"
-* subject = Reference(mCODEPatientExample1)
+* subject = Reference(cancer-patient-john-anyperson)
 * status = MedReqStatus#active
 * intent = MedReqIntent#order
 * authoredOn = "2019-04-01"
 * medicationCodeableConcept = RXN#309311 "CISplatin 50 MG per 50 ML Injectable Solution"
 * reasonCode = SCT#254637007 "Non-small cell lung cancer (disorder)"
-* requester = Reference(mCODEPractitionerExample1)
+* requester = Reference(us-core-practitioner-kyle-anydoc)
 * extension[treatmentIntent].valueCodeableConcept = SCT#373808002 "Curative - procedure intent"
 * dosageInstruction.text = "calculate absolute dose on day of administration."
 * dosageInstruction.route = SCT#47625008 "Intravenous use"
@@ -346,50 +330,3 @@ Description: "mCODE Example for CancerRelatedMedicationRequest - Chemo Infusion"
 * dosageInstruction.timing.repeat.count = 1  // frequency is one-time on day 1 of first cycle so there should be no repeat."
 * note.text = "Day 1 of NSCLC regimen: Cisplatin 75 mg/m2 day 1; docetaxel 75 mg/m2 day 1 every 21 days for 4 cycles."
 * extension[terminationReason].valueCodeableConcept = SCT#182992009  "Treatment completed (situation)"
-
-/*
-Instance: mCODECancerRelatedMedicationAdministrationExample1
-InstanceOf: CancerRelatedMedicationAdministration
-Description: "mCODE Example for CancerRelatedMedicationAdministration"
-* subject = Reference(mCODEPatientExample1)
-* status = MedAdminStatus#completed
-* category = MedAdminCategory#outpatient
-* medicationCodeableConcept = RXN#309311 "CISplatin 50 MG per 50 ML Injectable Solution"
-* effectiveDateTime = "2019-06-15"
-* performer.actor = Reference(mCODEPractitionerExample1)
-* request = Reference(mCODECancerRelatedMedicationRequestExample2)
-* dosage.route = SCT#47625008 "Intravenous use"
-* dosage.dose.value = 150
-* dosage.dose.unit = UCUM#mg
-* dosage.text = "Day 1 of NSCLC regimen: Cisplatin 75 mg/m2 day 1; docetaxel 75 mg/m2 day 1 every 21 days for 4 cycles. Calculated absolute dosage based on BSA = 2.0"
-
-Instance: mCODECancerRelatedMedicationStatementExample1
-InstanceOf: CancerRelatedMedicationStatement
-Description: "mCODE Example for Cancer Related Medication Statement"
-* status = MedStatus#active "active"
-* category = MedReqCat#community "community"
-* medicationCodeableConcept = RXN#349472 "gefitinib 250 MG Oral Tablet"
-* subject = Reference(mCODEPatientExample1)
-* effectiveDateTime = "2019-04-01"
-* dateAsserted = "2019-04-01"
-* extension[treatmentIntent].valueCodeableConcept = SCT#373808002 "Curative - procedure intent"
-* dosage.text = "250mg orally once daily with or without food"
-* dosage.route = SCT#26643006 "Oral use"
-* dosage.doseAndRate.doseQuantity.value = 250.0
-* dosage.doseAndRate.doseQuantity = UCUM#mg "mg"
-
-Instance: mCODECancerRelatedMedicationStatementExample2
-InstanceOf: CancerRelatedMedicationStatement
-Description: "mCODE Example for Cancer Related Medication Statement"
-* status = MedStatus#stopped "stopped"
-* category = MedReqCat#community "community"
-* medicationCodeableConcept = RXN#349472 "gefitinib 250 MG Oral Tablet"
-* subject = Reference(mCODEPatientExample1)
-* effectiveDateTime = "2019-04-01"
-* dateAsserted = "2019-04-01"
-* extension[treatmentIntent].valueCodeableConcept = SCT#373808002 "Curative - procedure intent"
-* extension[terminationReason].valueCodeableConcept = SCT#182992009 "Treatment completed (situation)"
-* dosage.text = "250mg orally once daily with or without food"
-* dosage.route = SCT#26643006 "Oral use"
-* dosage.doseAndRate.doseQuantity.value = 250.0
-* dosage.doseAndRate.doseQuantity = UCUM#mg "mg" */

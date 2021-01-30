@@ -2,42 +2,42 @@
 
 This section provides some examples how mCODE elements may be represented in a FHIR instance which conforms to this implementation guide.
 
-* **Patient**: <a href="Patient-mCODEPatientExample1.html">mCODEPatientExample1</a> and <a href="Patient-mCODEPatientExample2.html">mCODEPatientExample2</a>  shows patient demographics like name, address, race, and ethnicity.
-* **Primary Cancer Condition**: <a href="Condition-mCODEPrimaryCancerConditionExample1.html">mCODEPrimaryCancerConditionExample1</a> shows an example for a patient diagnosed with non-small cell lung cancer (NSCLC) adenocarcinoma.
-* **Secondary Cancer Condition**: <a href="Condition-mCODESecondaryCancerConditionExample1.html">mCODESecondaryCancerConditionExample1</a> shows an example for a patient diagnosed with secondary malignant neoplasm of the brain.
-* **Cancer Disease Status**: <a href="Observation-mCODECancerDiseaseStatusExample1.html">mCODECancerDiseaseStatusExample1</a> shows an example for a patient whose cancer disease status is improving.
-* **Clinical Staging Classification**: <a href="Observation-mCODETNMClinicalStageGroupExample1.html">mCODETNMClinicalStageGroupExample1</a>, <a href="Observation-mCODETNMClinicalPrimaryTumorCategoryExample1.html">mCODETNMClinicalPrimaryTumorCategoryExample1</a>, <a href="Observation-mCODETNMClinicalRegionalNodesCategoryExample1.html">mCODETNMClinicalRegionalNodesCategoryExample1</a> and <a href="Observation-mCODETNMClinicalDistantMetastasesCategoryExample1.html">mCODETNMClinicalDistantMetastasesCategoryExample1</a> specify the clinical T, N, and M categories for <a href="Condition-mCODEPrimaryCancerConditionExample1.html">mCODEPrimaryCancerConditionExample1</a>.
+* **Patient**: <a href="Patient-cancer-patient-john-anyperson.html">cancer-patient-john-anyperson</a> and <a href="Patient-cancer-patient-eve-anyperson.html">cancer-patient-eve-anyperson</a>  shows patient demographics like name, address, race, and ethnicity.
+* **Primary Cancer Condition**: <a href="Condition-primary-cancer-condition-nsclc.html">primary-cancer-condition-nsclc</a> shows an example for a patient diagnosed with non-small cell lung cancer (NSCLC) adenocarcinoma.
+* **Secondary Cancer Condition**: <a href="Condition-secondary-cancer-condition-brain-mets.html">secondary-cancer-condition-brain-mets</a> shows an example for a patient diagnosed with secondary malignant neoplasm of the brain.
+* **Cancer Disease Status**: <a href="Observation-cancer-disease-status-improved.html">cancer-disease-status-improved</a> shows an example for a patient whose cancer disease status is improving.
+* **Clinical Staging Classification**: <a href="Observation-tnm-clinical-stage-group-3c.html">tnm-clinical-stage-group-3c</a>, <a href="Observation-tnm-clinical-primary-tumor-category-cT3.html">tnm-clinical-primary-tumor-category-cT3</a>, <a href="Observation-tnm-clinical-regional-nodes-category-cN3.html">tnm-clinical-regional-nodes-category-cN3</a> and <a href="Observation-tnm-clinical-distant-metastases-category-cM0.html">tnm-clinical-distant-metastases-category-cM0</a> specify the clinical T, N, and M categories for <a href="Condition-primary-cancer-condition-nsclc.html">primary-cancer-condition-nsclc</a>.
 
-* **Pathological Staging Classification**: <a href="Observation-mCODETNMPathologicalStageGroupExample1.html">mCODETNMPathologicalStageGroupExample1</a>, <a href="Observation-mCODETNMPathologicalPrimaryTumorCategoryExample1.html">mCODETNMPathologicalPrimaryTumorCategoryExample1</a>, <a href="Observation-mCODETNMPathologicalRegionalNodesCategoryExample1.html">mCODETNMPathologicalRegionalNodesCategoryExample1</a> and <a href="Observation-mCODETNMPathologicalDistantMetastasesCategoryExample1.html">mCODETNMPathologicalDistantMetastasesCategoryExample1</a> specify the pathologic T, N, and M categories for <a href="Condition-mCODEPrimaryCancerConditionExample1.html">mCODEPrimaryCancerConditionExample1</a>.
+* **Pathological Staging Classification**: <a href="Observation-tnm-pathological-stage-group-3C.html">tnm-pathological-stage-group-3C</a>, <a href="Observation-tnm-pathological-primary-tumor-category-pT3.html">tnm-pathological-primary-tumor-category-pT3</a>, <a href="Observation-tnm-pathological-regional-nodes-category-pN3.html">tnm-pathological-regional-nodes-category-pN3</a> and <a href="Observation-tnm-pathological-distant-metastases-category-pM0.html">tnm-pathological-distant-metastases-category-pM0</a> specify the pathologic T, N, and M categories for <a href="Condition-primary-cancer-condition-nsclc.html">primary-cancer-condition-nsclc</a>.
 
-* **Comorbidities**:  <a href="Observation-mCODECancerRelatedElixhauserComorbiditiesExample1.html">mCODECancerRelatedElixhauserComorbiditiesExample1</a> shows an example for a cancer patient with cardiac arrhythmia and depression.
- * **ECOG Performance Status**:  <a href="Observation-mCODEECOGPerformanceStatusExample1.html">mCODEECOGPerformanceStatusExample1</a> shows an example for a patient with an ECOG Performance Status of 1.
- * **Karnofsky Performance Status**: <a href="Observation-mCODEKarnofskyPerformanceStatusExample1.html">mCODEKarnofskyPerformanceStatusExample1</a> shows an example for a patient with a Karnofsky Performance Status of 80.
- * **Cancer Related Medication Request**: <a href="MedicationRequest-mCODECancerRelatedMedicationRequestExample1.html">mCODECancerRelatedMedicationRequestExample1</a> shows an example for a patient who is currently receiving gefitinib and <a href="MedicationRequest-mCODECancerRelatedMedicationRequestExample2.html">mCODECancerRelatedMedicationRequestExample2</a> shows an example for a patient who completed a treatment of getfitinib.
- * **Cancer Related Surgical Procedure**: <a href="Procedure-mCODECancerRelatedSurgicalProcedureExample1.html">mCODECancerRelatedSurgicalProcedureExample1</a> shows an example for a patient who underwent a partial lobectomy of the lung for cancer treatment.
+* **Comorbidities**:  <a href="Observation-cancer-related-comorbidities-elixhauser-john-anyperson.html">cancer-related-comorbidities-elixhauser-john-anyperson</a> shows an example for a cancer patient with cardiac arrhythmia and depression.
+ * **ECOG Performance Status**:  <a href="Observation-ecog-performance-status-fully-active.html">ecog-performance-status-fully-active</a> shows an example for a patient with an ECOG Performance Status of 1.
+ * **Karnofsky Performance Status**: <a href="Observation-karnofsky-performance-status-normal-activity.html">karnofsky-performance-status-normal-activity</a> shows an example for a patient with a Karnofsky Performance Status of 80.
+ * **Cancer Related Medication Request**: <a href="MedicationRequest-cancer-related-medication-request-gefitinib.html">cancer-related-medication-request-gefitinib</a> shows an example for a patient who is currently receiving gefitinib and <a href="MedicationRequest-cancer-related-medication-request-cisplatin.html">cancer-related-medication-request-cisplatin</a> shows an example for a patient who completed a treatment of getfitinib.
+ * **Cancer Related Surgical Procedure**: <a href="Procedure-cancer-related-surgical-procedure-lobectomy.html">cancer-related-surgical-procedure-lobectomy</a> shows an example for a patient who underwent a partial lobectomy of the lung for cancer treatment.
  ############
-  * **Internal Radiotherapy**: [BrachytherapyPrescriptionDeliveryExample1]</a> shows an example for a patient who went underwent brachytherapy (internal radiation) for cancer treatment.
- * **Tumor Marker**: <a href="Observation-mCODETumorMarkerTestExample1.html">mCODETumorMarkerTestExample1</a> shows a simple example of an EGFR tumor marker status as positive.
- * **Genomics Report**: <a href="DiagnosticReport-mCODECancerGenomicsReportExample1.html">mCODECancerGenomicsReportExample1</a> shows a very small subset elements found in a genomics report which include the test service and test name.
- * **Genetic Variant**: <a href="Observation-mCODECancerGeneticVariantExample1.html">mCODECancerGeneticVariantExample1</a> extends the contents of the Genomics Report by showing the results of a variant found for a specific gene, STK-11. This example differs from the mutation test result in that there was no preconceived test for a specific variant ahead of time.  Rather, it is the result of any variants found for a given DNA region.
- * **Genetic Variant**: - single somatic mutation <a href="Observation-mCODECancerGeneticVariantExample2.html">mCODECancerGeneticVariantExample2</a> extends the contents of the Genomic Report example showing whether a test for a specific mutation for BRCA1 was present.
- * **Genetic Specimen**: <a href="Specimen-mCODEGeneticSpecimenExample1.html">mCODEGeneticSpecimenExample1</a> shows the lower left lobe of the lung being used as a genetic specimen.
- * **Genomic Region Studied**: <a href="Observation-mCODEGenomicRegionStudiedExample1.html">mCODEGenomicRegionStudiedExample1</a> shows the STK-11 gene region being studied.
+  * **Internal Radiotherapy**: [brachytherapy-prescription-delivery-ldr]</a> shows an example for a patient who went underwent brachytherapy (internal radiation) for cancer treatment.
+ * **Tumor Marker**: <a href="Observation-tumor-marker-test-egf.html">tumor-marker-test-egf</a> shows a simple example of an EGFR tumor marker status as positive.
+ * **Genomics Report**: <a href="DiagnosticReport-cancer-genomics-report-john-anyperson.html">cancer-genomics-report-john-anyperson</a> shows a very small subset elements found in a genomics report which include the test service and test name.
+ * **Genetic Variant**: <a href="Observation-cancer-genetic-variant-somatic-single-nucleotide.html">cancer-genetic-variant-somatic-single-nucleotide</a> extends the contents of the Genomics Report by showing the results of a variant found for a specific gene, STK-11. This example differs from the mutation test result in that there was no preconceived test for a specific variant ahead of time.  Rather, it is the result of any variants found for a given DNA region.
+ * **Genetic Variant**: - single somatic mutation <a href="Observation-cancer-genetic-variant-germline-deletion.html">cancer-genetic-variant-germline-deletion</a> extends the contents of the Genomic Report example showing whether a test for a specific mutation for BRCA1 was present.
+ * **Genetic Specimen**: <a href="Specimen-genetic-specimen-lung.html">genetic-specimen-lung</a> shows the lower left lobe of the lung being used as a genetic specimen.
+ * **Genomic Region Studied**: <a href="Observation-genomic-region-studied-stk11.html">genomic-region-studied-stk11</a> shows the STK-11 gene region being studied.
 
 #### Additional Notes
 
 * The narrative rendering of the FHIR examples may not exactly match the wording or order of the structured portion of the FHIR examples. This is on purpose since it is allowed for an implementation to present the data in a way that is understandable to the end user so long as the meaning and context of the structured and coded content is preserved.
-* The narrative rendering might also contain data not explicitly appearing in the structured section of the FHIR example.  In this case, rather than including contained resources, our example assumes this content is generated implicitly by the backend application retrieving and parsing data from the FHIR references included in the structured section of the example.  For example, in <a href="DiagnosticReport-mCODECancerGenomicsReportExample1.html">mCODEGenomicsReportExample1</a>, the narrative section contains information about the genetic mutation tested and variant found, however the coded section just includes the external references to each.
+* The narrative rendering might also contain data not explicitly appearing in the structured section of the FHIR example.  In this case, rather than including contained resources, our example assumes this content is generated implicitly by the backend application retrieving and parsing data from the FHIR references included in the structured section of the example.  For example, in <a href="DiagnosticReport-cancer-genomics-report-john-anyperson.html">mCODEGenomicsReportExample1</a>, the narrative section contains information about the genetic mutation tested and variant found, however the coded section just includes the external references to each.
 * The FHIR examples conform to the HL7 FHIR Argonaut IG where applicable and is subject to change with subsequent releases.
 * Proprietary content like AJCC staging categories may appear in some of these examples solely for the purposes of illustration only. It is expected that all implementers will adhere to licensing requirements as appropriate.
 
-### Scenario 1: breast cancer patient
+### Extended Example: Breast Cancer Patient Susan M.
 
 In addition to the examples provided above, we also have developed this scenario describing a hypothetical patient, along with accompanying example instances to demonstrate how mCODE profiles can be used to guide the creation resources representing a clinically realistic scenario. When information in the persona does not map onto mCODE profiles, we provide examples using [USCore](http://hl7.org/fhir/us/core/index.html) or standard FHIR resources.
 
 #### Patient description
 
-Patient M is a 55 year old non-Hispanic white female with a past medical history significant for depression, a 20-pack-year history of smoking (current smoker), anxiety, and hypertension. Her family history was significant for a maternal aunt with ovarian cancer at age 69, a sister with breast cancer at age 64, and deceased paternal uncle due to pancreatic cancer.
+Patient Susan M. is a 55 year old non-Hispanic white female with a past medical history significant for depression, a 20-pack-year history of smoking (current smoker), anxiety, and hypertension. Her family history was significant for a maternal aunt with ovarian cancer at age 69, a sister with breast cancer at age 64, and deceased paternal uncle due to pancreatic cancer.
 
 She presented for routine screening mammography in March 2018. Performance status was ECOG 0. An abnormality was detected, followed by ultrasound-guided biopsy which revealed a Grade 2 invasive ductal adenocarcinoma, ER positive, PR negative, HER2 negative. Pre-operative workup revealed no other disease in either breast. Genetic counseling ordered a [7 gene panel](https://www.invitae.com/en/physician/tests/50001/), which revealed a [pathogenic variant in PALB2 (`c.3549C>A`)](https://www.ncbi.nlm.nih.gov/clinvar/variation/128144/).[^1]
 
@@ -51,52 +51,52 @@ The patient is two years out from surgery and has undergone surveillance imaging
 
 #### FHIR instances from mCODE elements
 
-* [`scenario1-mcode-cancer-patient`](Patient-scenario1-mcode-cancer-patient.html) ([CancerPatient])
-* [`scenario1-mcode-cancer-disease-status`](Observation-scenario1-mcode-cancer-disease-status.html) ([CancerDiseaseStatus])
-* [`scenario1-mcode-cancer-related-elixhauser-comorbidities`](Observation-scenario1-mcode-cancer-related-elixhauser-comorbidities.html) ([ComorbidCondition])
-* [`scenario1-mcode-comorbid-condition-depression`](Condition-scenario1-mcode-comorbid-condition-depression.html) ([ComorbidCondition])
-* [`scenario1-mcode-comorbid-condition-hypertension`](Condition-scenario1-mcode-comorbid-condition-hypertension.html) ([ComorbidCondition])
-* [`scenario1-mcode-ecog-performance-status`](Observation-scenario1-mcode-ecog-performance-status.html) ([ECOGPerformanceStatus])
-* [`scenario1-mcode-cancer-related-surgical-procedure-mastectomy`](Procedure-scenario1-mcode-cancer-related-surgical-procedure-mastectomy.html) ([CancerRelatedSurgicalProcedure])
-* [`scenario1-mcode-patient-bundle`](Bundle-scenario1-mcode-patient-bundle.html) ([MCODEPatientBundle])
-* [`scenario1-mcode-primary-cancer-condition`](Condition-scenario1-mcode-primary-cancer-condition.html) ([PrimaryCancerCondition])
-* [`scenario1-mcode-tnm-clinical-stage-group`](Observation-scenario1-mcode-tnm-clinical-stage-group.html) ([TNMClinicalStageGroup])
-* [`scenario1-mcode-tnm-primary-tumor-category`](Observation-scenario1-mcode-tnm-primary-tumor-category.html) ([TNMClinicalPrimaryTumorCategory])
-* [`scenario1-mcode-tnm-clinical-regional-nodes-category`](Observation-scenario1-mcode-tnm-clinical-regional-nodes-category.html) ([TNMClinicalRegionalNodesCategory])
-* [`scenario1-mcode-tnm-clinical-distant-metastases-category`](Observation-scenario1-mcode-tnm-clinical-distant-metastases-category.html) ([TNMClinicalDistantMetastasesCategory])
-* [`scenario1-mcode-tumor-marker-test-er`](Observation-scenario1-mcode-tumor-marker-test-er.html)  ([TumorMarkerTest])
-* [`scenario1-mcode-tumor-marker-test-pr`](Observation-scenario1-mcode-tumor-marker-test-pr.html)  ([TumorMarkerTest])
-* [`scenario1-mcode-tumor-marker-test-her2`](Observation-scenario1-mcode-tumor-marker-test-her2.html)  ([TumorMarkerTest])
-* [`scenario1-mcode-tumor-marker-test-oncotype-dx`](Observation-scenario1-mcode-tumor-marker-test-oncotype-dx.html)  ([TumorMarkerTest])
-* [`scenario1-mcode-cancer-genomics-report`](DiagnosticReport-scenario1-mcode-cancer-genomics-report.html) ([CancerGenomicsReport])
-* [`scenario1-mcode-genomic-region-studied`](Observation-scenario1-mcode-genomic-region-studied.html) ([GenomicRegionStudied])
-* [`scenario1-mcode-genetic-specimen`](Specimen-scenario1-mcode-genetic-specimen.html) ([GeneticSpecimen])
-* [`scenario1-mcode-cancer-genetic-variant`](Observation-scenario1-mcode-cancer-genetic-variant.html) ([CancerGeneticVariant])
-* [`scenario1-mcode-cancer-related-medication-chemo-doxorubicin`](MedicationRequest-scenario1-mcode-cancer-related-medication-chemo-doxorubicin.html) ([CancerRelatedMedicationRequest])
-* [`scenario1-mcode-cancer-related-medication-chemo-cyclophosphamide`](MedicationRequest-scenario1-mcode-cancer-related-medication-chemo-cyclophosphamide.html) ([CancerRelatedMedicationRequest])
-* [`scenario1-mcode-cancer-related-medication-chemo-paclitaxel`](MedicationRequest-scenario1-mcode-cancer-related-medication-chemo-paclitaxel.html) ([CancerRelatedMedicationRequest])
-* [`scenario1-mcode-cancer-related-medication-anastrozole`](MedicationRequest-scenario1-mcode-cancer-related-medication-anastrozole.html) ([CancerRelatedMedicationRequest])
-* [`scenario1-teleradiotherapy-prescription-delivery`](Procedure-scenario1-teleradiotherapy-prescription-delivery.html) ([TeleradiotherapyPrescriptionDelivery])
+* [`cancer-patient-susan-m`](Patient-cancer-patient-susan-m.html) ([CancerPatient])
+* [`cancer-disease-status-susan-m-2020-03-01`](Observation-cancer-disease-status-susan-m-2020-03-01.html) ([CancerDiseaseStatus])
+* [`cancer-related-comorbidities-elixhauser-susan-m`](Observation-cancer-related-comorbidities-elixhauser-susan-m.html) ([ComorbidCondition])
+* [`us-core-condition-depression-susan-m`](Condition-us-core-condition-depression-susan-m.html) ([ComorbidCondition])
+* [`us-core-condition-hypertension-susan-m`](Condition-us-core-condition-hypertension-susan-m.html) ([ComorbidCondition])
+* [`ecog-performance-status-susan-m`](Observation-ecog-performance-status-susan-m.html) ([ECOGPerformanceStatus])
+* [`cancer-related-surgical-procedure-susan-m`](Procedure-cancer-related-surgical-procedure-susan-m.html) ([CancerRelatedSurgicalProcedure])
+* [`mcode-patient-bundle-susan-m`](Bundle-mcode-patient-bundle-susan-m.html) ([MCODEPatientBundle])
+* [`primary-cancer-condition-susan-m`](Condition-primary-cancer-condition-susan-m.html) ([PrimaryCancerCondition])
+* [`tnm-clinical-stage-group-susan-m`](Observation-tnm-clinical-stage-group-susan-m.html) ([TNMClinicalStageGroup])
+* [`tnm-primary-tumor-category-susan-m`](Observation-tnm-primary-tumor-category-susan-m.html) ([TNMClinicalPrimaryTumorCategory])
+* [`tnm-clinical-regional-nodes-category-susan-m`](Observation-tnm-clinical-regional-nodes-category-susan-m.html) ([TNMClinicalRegionalNodesCategory])
+* [`tnm-clinical-distant-metastases-category-susan-m`](Observation-tnm-clinical-distant-metastases-category-susan-m.html) ([TNMClinicalDistantMetastasesCategory])
+* [`tumor-marker-test-er-susan-m`](Observation-tumor-marker-test-er-susan-m.html)  ([TumorMarkerTest])
+* [`tumor-marker-test-pr-susan-m`](Observation-tumor-marker-test-pr-susan-m.html)  ([TumorMarkerTest])
+* [`tumor-marker-test-her2-susan-m`](Observation-tumor-marker-test-her2-susan-m.html)  ([TumorMarkerTest])
+* [`tumor-marker-test-oncotype-dx-susan-m`](Observation-tumor-marker-test-oncotype-dx-susan-m.html)  ([TumorMarkerTest])
+* [`cancer-genomics-report-susan-m`](DiagnosticReport-cancer-genomics-report-susan-m.html) ([CancerGenomicsReport])
+* [`genomic-region-studied-susan-m`](Observation-genomic-region-studied-susan-m.html) ([GenomicRegionStudied])
+* [`genetic-specimen-left-breast-susan-m`](Specimen-genetic-specimen-left-breast-susan-m.html) ([GeneticSpecimen])
+* [`cancer-genetic-variant-susan-m`](Observation-cancer-genetic-variant-susan-m.html) ([CancerGeneticVariant])
+* [`cancer-related-medication-request-doxorubicin-susan-m`](MedicationRequest-cancer-related-medication-request-doxorubicin-susan-m.html) ([CancerRelatedMedicationRequest])
+* [`cancer-related-medication-request-cyclophosphamide-susan-m`](MedicationRequest-cancer-related-medication-request-cyclophosphamide-susan-m.html) ([CancerRelatedMedicationRequest])
+* [`cancer-related-medication-request-paclitaxel-susan-m`](MedicationRequest-cancer-related-medication-request-paclitaxel-susan-m.html) ([CancerRelatedMedicationRequest])
+* [`cancer-related-medication-request-anastrozole-susan-m`](MedicationRequest-cancer-related-medication-request-anastrozole-susan-m.html) ([CancerRelatedMedicationRequest])
+* [`teleradiotherapy-prescription-delivery-susan-m`](Procedure-teleradiotherapy-prescription-delivery-susan-m.html) ([TeleradiotherapyPrescriptionDelivery])
 
 
 #### FHIR instances from _non_-mCODE elements
 
-* [`scenario1-us-core-practitioner`](Practitioner-scenario1-us-core-practitioner.html) (US Core Practitioner)
-* [`scenario1-us-core-procedure-biopsy`](Procedure-scenario1-us-core-procedure-biopsy.html) (US Core Procedure)
-* [`scenario1-us-core-procedure-mammogram`](Procedure-scenario1-us-core-procedure-mammogram.html) (US Core Procedure)
-* [`scenario1-us-core-smoking-status`](Observation-scenario1-us-core-smoking-status.html) (US Core Smoking Status)
-* [`scenario1-observation-smoking-history`](Observation-scenario1-observation-smoking-history.html) (Observation)
-* [`scenario1-us-core-condition-anxiety`](Condition-scenario1-us-core-condition-anxiety.html) (US Core Condition)
-* [`scenario1-family-member-history-aunt`](FamilyMemberHistory-scenario1-family-member-history-aunt.html) (FamilyMemberHistory)
-* [`scenario1-family-member-history-sister`](FamilyMemberHistory-scenario1-family-member-history-sister.html) (FamilyMemberHistory)
-* [`scenario1-family-member-history-uncle`](FamilyMemberHistory-scenario1-family-member-history-uncle.html) (FamilyMemberHistory)
-* [`scenario1-specimen-tumor`](Specimen-scenario1-specimen-tumor.html) (Specimen)
-* [`scenario1-diagnosticreport-pathology`](DiagnosticReport-scenario1-diagnosticreport-pathology.html) (DiagnosticReport)
-* [`scenario1-observation-tumor-invasion-negative`](Observation-scenario1-observation-tumor-invasion-negative.html) (Observation)
-* [`scenario1-observation-tumor-negative-margins`](Observation-scenario1-observation-tumor-negative-margins.html) (Observation)
-* [`scenario1-observation-tumor-sentinel-nodes`](Observation-scenario1-observation-tumor-sentinel-nodes.html) (Observation)
-* [`scenario1-observation-tumor-size`](Observation-scenario1-observation-tumor-size.html) (Observation)
-* [`scenario1-observation-dcis`](Observation-scenario1-observation-tumor-dcis.html) (Observation)
+* [`us-core-practitioner-owen-oncologist`](Practitioner-us-core-practitioner-owen-oncologist.html) (US Core Practitioner)
+* [`us-core-procedure-biopsy-susan-m`](Procedure-us-core-procedure-biopsy-susan-m.html) (US Core Procedure)
+* [`us-core-procedure-mammogram-susan-m`](Procedure-us-core-procedure-mammogram-susan-m.html) (US Core Procedure)
+* [`us-core-smokingstatus-susan-m`](Observation-us-core-smokingstatus-susan-m.html) (US Core Smoking Status)
+* [`observation-smoking-history-susan-m`](Observation-observation-smoking-history-susan-m.html) (Observation)
+* [`us-core-condition-anxiety-susan-m`](Condition-us-core-condition-anxiety-susan-m.html) (US Core Condition)
+* [`family-member-history-aunt-susan-m`](FamilyMemberHistory-family-member-history-aunt-susan-m.html) (FamilyMemberHistory)
+* [`family-member-history-sister-susan-m`](FamilyMemberHistory-family-member-history-sister-susan-m.html) (FamilyMemberHistory)
+* [`family-member-history-uncle-susan-m`](FamilyMemberHistory-family-member-history-uncle-susan-m.html) (FamilyMemberHistory)
+* [`specimen-left-breast-susan-m`](Specimen-specimen-left-breast-susan-m.html) (Specimen)
+* [`us-core-diagnosticreport-lab-susan-m`](DiagnosticReport-us-core-diagnosticreport-lab-susan-m.html) (DiagnosticReport)
+* [`us-core-observation-lab-tumor-invasion-susan-m`](Observation-us-core-observation-lab-tumor-invasion-susan-m.html) (Observation)
+* [`us-core-observation-lab-tumor-margins-susan-m`](Observation-us-core-observation-lab-tumor-margins-susan-m.html) (Observation)
+* [`us-core-observation-lab-sentinel-nodes-susan-m`](Observation-us-core-observation-lab-sentinel-nodes-susan-m.html) (Observation)
+* [`tumor-size-susan-m-2018-03-06`](Observation-tumor-size-susan-m-2018-03-06.html) (Observation)
+* [`scenario1-observation-dcis`](Observation-us-core-observation-lab-tumor-dcis.html) (Observation)
 
 [CancerDiseaseStatus]: StructureDefinition-mcode-cancer-disease-status.html
 [CancerGeneticVariant]: StructureDefinition-mcode-cancer-genetic-variant.html
@@ -105,7 +105,7 @@ The patient is two years out from surgery and has undergone surveillance imaging
 [CancerRelatedMedicationRequest]: StructureDefinition-mcode-cancer-related-medication-request.html
 [CancerRelatedTeleradiotherapyPhase]: StructureDefinition-mcode-cancer-related-teleradiotherapy-phase.html
 [CancerRelatedSurgicalProcedure]: StructureDefinition-mcode-cancer-related-surgical-procedure.html
-[ComorbidCondition]: StructureDefinition-mcode-cancer-related-elixhauser-comorbidities.html
+[ComorbidCondition]: StructureDefinition-mcode-cancer-related-comorbidities-elixhauser.html
 [ECOGPerformanceStatus]: StructureDefinition-mcode-ecog-performance-status.html
 [GeneticSpecimen]: StructureDefinition-mcode-genetic-specimen.html
 [GenomicRegionStudied]: StructureDefinition-mcode-genomic-region-studied.html

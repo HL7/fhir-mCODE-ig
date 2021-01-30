@@ -4,20 +4,24 @@ Id: mcode-comorbidities-parent
 Title: "Comorbidities Parent"
 Description: "General structure for capturing comorbid conditions with respect to a primary ('index') condition. The specific set of comorbidities of interest in a given context are defined by slicing the components array. The same general approach can be applied to any comorbidity category checklist."
 * ^abstract = true
-* focus only Reference(Condition)  // the index condition, i.e. the context of the assessment of comorbidities
-* focus ^short = "Index Condition"
-* focus ^definition = "The comorbid conditions may be defined with respect to a particular condition. For example, the US Centers for Disease Control (CDC) has a list of comorbid conditions important to COVID-19. In this case, the focus would be COVID-19 and the comorbid condition categories would be those called out by CDC, namely obesity, renal disease, respiratory disease, etc."
+* focus only Reference(Condition)
+* focus ^short = "The Index Condition"
+* focus ^definition = "The comorbid conditions may be defined with respect to a specific 'index' condition. For example, the US Centers for Disease Control (CDC) has a list of comorbid conditions important to COVID-19. In this case, the focus would be COVID-19 and the comorbid condition categories would be those called out by CDC, namely obesity, renal disease, respiratory disease, etc."
 * component.value[x] only CodeableConcept
 * component.value[x] from PresentAbsentUnknownVS (required)
 * component ^definition = "Component representing the presence or absence of the named comorbidity, with optional condition code(s) or reference to the actual condition(s)."
 * component.extension contains 
-     ComorbidConditionCode named conditionCode 0..* and
-     ComorbidConditionReference named conditionReference 0..*
+     ComorbidConditionCode named conditionCode 0..* MS and
+     ComorbidConditionReference named conditionReference 0..* MS
 * component.modifierExtension 0..0
 * component.code ^short = "Code representing the comorbidity category"
 * component.code ^definition = "The code identifying category of comorbidity, for example, congestive heart failure or severe renal disease. The category typically represents a set of specific diagnosis codes."
 * component.extension ^short = "Extensions to capture specific conditions that fall into the given category."
 * component.extension ^definition = "If more detail about the comorbid condition is desired, elements in this extension can be populated with a specific condition code or a reference to a Condition resource. The extension elements SHALL be used only if the comorbidity category is present."
+* subject and value[x] and code and effective[x] and performer and status and component and component.code and component.extension and component.value[x] MS
+* bodySite 0..0
+* specimen 0..0
+* device 0..0
 
 Profile: ComorbiditiesElixhauser
 Parent: ComorbiditiesParent
@@ -192,10 +196,11 @@ Description: "Comorbid condition checklist and optional risk score, using Elixha
 Profile: CancerRelatedElixhauserComorbidities
 Parent: ComorbiditiesElixhauser
 Id: mcode-cancer-related-elixhauser-comorbidities
-Title: "Cancer-Related Comorbidities"
+Title: "Cancer-Related Elixhauser Comorbidities"
 Description: "Comorbid conditions using the Elixhauser comorbidity categories, from the perspective of the primary cancer condition." 
 * focus only Reference(PrimaryCancerCondition)
-* focus and component and component.extension[conditionReference] and component.extension[conditionCode] and component.extension[conditionReference] MS
+* focus MS
+* focus ^definition = "A reference to the cancer condition that is the context for the current list of comorbid conditions."
 * value[x] 0..0
 * component[cancerLeukemia] 0..0
 * component[cancerLymphoma] 0..0

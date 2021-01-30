@@ -42,12 +42,35 @@ InstanceOf: CancerRelatedElixhauserComorbidities
 Description: "mCODE Example for Cancer-Related Comorbidities"
 * subject = Reference(mCODEPatientExample1)
 * performer = Reference(mCODEPractitionerExample1)
+* focus = Reference(mCODEPrimaryCancerConditionExample1)
 * status = #final "final"
 // present
 * component[depression].valueCodeableConcept = SCT#52101004 "Present (qualifier value)"
 * component[depression].extension[conditionReference].valueReference = Reference(mCODEDepressionExample1)
 * component[congestiveHeartFailure].valueCodeableConcept = SCT#52101004 "Present (qualifier value)"
+* component[congestiveHeartFailure].extension[conditionCode].valueCodeableConcept = ICD10CM#I50.32 "Chronic diastolic (congestive) heart failure"
 // absent
+* component[arthropathy].valueCodeableConcept = SCT#2667000 "Absent (qualifier value)"
+* component[chronicPulmonaryDisease].valueCodeableConcept = SCT#2667000 "Absent (qualifier value)"
+* component[obesity].valueCodeableConcept = SCT#2667000 "Absent (qualifier value)"
+* component[peripheralVascularDisease].valueCodeableConcept = SCT#2667000 "Absent (qualifier value)"
+* component[drugAbuse].valueCodeableConcept = SCT#261665006 "Unknown (qualifier value)"
+* component[hypothyroidism].valueCodeableConcept = SCT#261665006 "Unknown (qualifier value)"
+
+Instance: ComorbiditiesElixhauserExample1
+InstanceOf: ComorbiditiesElixhauser
+Description: "Example of Elixhauser Comorbidity List without index disease."
+* subject = Reference(mCODEPatientExample1)
+* performer = Reference(mCODEPractitionerExample1)
+* status = #final "final"
+// present
+* component[depression].valueCodeableConcept = SCT#52101004 "Present (qualifier value)"
+* component[depression].extension[conditionReference].valueReference = Reference(mCODEDepressionExample1)
+* component[congestiveHeartFailure].valueCodeableConcept = SCT#52101004 "Present (qualifier value)"
+* component[congestiveHeartFailure].extension[conditionCode].valueCodeableConcept = ICD10CM#I50.32 "Chronic diastolic (congestive) heart failure"
+* component[cancerLeukemia].valueCodeableConcept = SCT#52101004 "Present (qualifier value)"
+* component[cancerLeukemia].extension[conditionCode].valueCodeableConcept = ICD10CM#C91.01  "Acute lymphoblastic leukemia, in remission"
+// absent or unknown
 * component[arthropathy].valueCodeableConcept = SCT#2667000 "Absent (qualifier value)"
 * component[chronicPulmonaryDisease].valueCodeableConcept = SCT#2667000 "Absent (qualifier value)"
 * component[obesity].valueCodeableConcept = SCT#2667000 "Absent (qualifier value)"

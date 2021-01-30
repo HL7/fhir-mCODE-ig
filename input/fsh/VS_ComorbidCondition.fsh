@@ -1142,6 +1142,7 @@ Description:    "Elixhauser Comorbid Condition Value Set for cerebrovascular dis
 * ICD10CM#I60.11 "Ntrm subarach hemorrhage from right middle cerebral artery"
 * ICD10CM#I60.12 "Ntrm subarach hemorrhage from left middle cerebral artery"
 * ICD10CM#I60.2 "Ntrm subarach hemorrhage from anterior communicating artery"
+// These three codes are included in ARHQ HCUP but are not recognized by the IG Publisher as valid ICD10CM codes
 //* ICD10CM#I60.20 "Nontraumatic subarachnoid hemorrhage from unspecified anteri"
 //* ICD10CM#I60.21 "Nontraumatic subarachnoid hemorrhage from right anterior com"
 //* ICD10CM#I60.22 "Nontraumatic subarachnoid hemorrhage from left anterior comm"

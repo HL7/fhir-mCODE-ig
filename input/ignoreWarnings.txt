@@ -51,12 +51,12 @@ WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/mcode/Structure
 WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-clinical-stage-group').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
 WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tumor-size').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
 WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-disease-status').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
+WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-related-elixhauser-comorbidities').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
+WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/comorbidities-elixhauser').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
 WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-stage-parent').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
 WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-comorbidities-parent').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
 WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-ecog-performance-status').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
-WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/comorbidities-elixhauser').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
-WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-related-elixhauser-comorbidities.json').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
-# This error is inherited from cpb-15 " not(f:kind/@value='instance') or (not(exists(f:implementation)) and exists(f:software))"
+# This error is inherited from FHIR's invariant cpb-15 " not(f:kind/@value='instance') or (not(exists(f:implementation)) and exists(f:software))", which begins with whitespace
 WARNING: StructureDefinition/MCodeCapabilityStatement: StructureDefinition.snapshot.element[0].constraint[6].xpath: value should not start or finish with whitespace
 # These codes ARE valid
 The code C28049 is not valid in the system http://ncithesaurus.nci.nih.gov
@@ -1047,9 +1047,9 @@ INFORMATION: Bundle/scenario1-mcode-patient-bundle: Bundle.entry[20].resource.of
 INFORMATION: Bundle/scenario1-mcode-patient-bundle: Bundle.entry[21].resource.ofType(MedicationRequest): Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-related-medication-request
 INFORMATION: Bundle/scenario1-mcode-patient-bundle: Bundle.entry[21].resource.ofType(MedicationRequest): Validate resource against profile http://hl7.org/fhir/StructureDefinition/MedicationRequest
 INFORMATION: Bundle/scenario1-mcode-patient-bundle: Bundle.entry[21].resource.ofType(MedicationRequest): Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-related-medication-request - listed in meta
-INFORMATION: Bundle/scenario1-mcode-patient-bundle: Bundle.entry[22].resource.ofType(Observation): Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-related-comorbidities
+INFORMATION: Bundle/scenario1-mcode-patient-bundle: Bundle.entry[22].resource.ofType(Observation): Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-related-elixhauser-comorbidities
 INFORMATION: Bundle/scenario1-mcode-patient-bundle: Bundle.entry[22].resource.ofType(Observation): Validate resource against profile http://hl7.org/fhir/StructureDefinition/Observation
-INFORMATION: Bundle/scenario1-mcode-patient-bundle: Bundle.entry[22].resource.ofType(Observation): Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-related-comorbidities - listed in meta
+INFORMATION: Bundle/scenario1-mcode-patient-bundle: Bundle.entry[22].resource.ofType(Observation): Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-related-elixhauser-comorbidities - listed in meta
 INFORMATION: Bundle/scenario1-mcode-patient-bundle: Bundle.entry[23].resource.ofType(Observation): Validate resource against profile http://hl7.org/fhir/StructureDefinition/bodyweight
 INFORMATION: Bundle/scenario1-mcode-patient-bundle: Bundle.entry[23].resource.ofType(Observation): Validate resource against profile http://hl7.org/fhir/StructureDefinition/Observation
 INFORMATION: Bundle/scenario1-mcode-patient-bundle: Bundle.entry[23].resource.ofType(Observation): Validate resource against profile http://hl7.org/fhir/StructureDefinition/bodyweight - listed in meta

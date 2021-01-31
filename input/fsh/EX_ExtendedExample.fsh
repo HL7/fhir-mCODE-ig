@@ -509,6 +509,7 @@ Description: "Extended example: example showing radiation treatment"
 * code = RO#PHOTON "Photon Beam Radiation Therapy"
 * extension[radiotherapyTechnique].valueCodeableConcept = RO#3D "3 Dimensional"
 * extension[radiotherapyDosePerFraction].valueQuantity = 200 'cGy'
+* extension[radiotherapyPrescribedFractions].valuePositiveInt = 25
 * extension[radiotherapyDeliveredFractions].valueUnsignedInt = 25
 * extension[radiotherapyTotalDosePlanned].valueQuantity = 5000 'cGy'
 * extension[radiotherapyTotalDoseDelivered].valueQuantity = 5000 'cGy'

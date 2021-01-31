@@ -107,7 +107,6 @@
 <artifact id="ValueSet/mcode-radiation-target-body-site-vs" key="radiation-target-body-site-value-set" name="Radiation Target Body Site Value Set"/>
 <artifact id="CodeSystem/radiotherapy-cs" key="CodeSystem-radiotherapy-cs" name="Radiotherapy Code System"/>
 <artifact id="StructureDefinition/radiotherapy-course-summary" key="StructureDefinition-radiotherapy-course-summary" name="Radiotherapy Course Summary"/>
-<artifact id="StructureDefinition/radiotherapy-technique" key="StructureDefinition-radiotherapy-technique" name="Radiotherapy Technique"/>
 <artifact deprecated="true" id="Extension/mcode-related-primary-cancer-condition-extension" key="related-primary-cancer-condition-extension" name="Related Primary Cancer Condition Extension"/>
 <artifact id="SearchParameter/Patient-id" key="SearchParameter-Patient-id" name="Search by _id in Patients with multipleOr"/>
 <artifact id="SearchParameter/Condition-code" key="SearchParameter-Condition-code" name="Search by code:in in Conditions"/>

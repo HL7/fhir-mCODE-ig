@@ -136,7 +136,6 @@ groups:
       - StructureDefinition/mcode-location-qualifier
       - StructureDefinition/mcode-termination-reason
       - StructureDefinition/mcode-treatment-intent
-      - StructureDefinition/radiotherapy-technique
       - StructureDefinition/radiotherapy-dose-per-fraction
       - StructureDefinition/radiotherapy-prescribed-fractions
       - StructureDefinition/radiotherapy-delivered-fractions

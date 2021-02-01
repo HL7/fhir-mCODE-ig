@@ -1,23 +1,3 @@
-<style>
-    table.mcode-table, .mcode-table tr, .mcode-table td {
-        border: 1px solid #ccc;
-        border-collapse: collapse;
-    }
-</style>
-
-<div xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../input-cache/schemas-r5/fhir-single.xsd" markdown="1">
-
-* [Background](#background)
-* [Scope and Conceptual Model](#scope-and-conceptual-model)
-* [Conformance](conformance.html)
-* [Data Dictionary (Excel download)](mCODEDataDictionary.xlsx)
-* [FHIR Examples](examples.html)
-* [Implementation Notes](implementation.html)
-* [Change Log](change_log.html)
-* [Disclaimers and Known Limitations](#disclaimers-and-known-limitations)
-* [Credits](#credits)
-* [Contact Information](#contact-information)
-
 ### Background
 
 According to the National Cancer Institute, 38.5 percent of men and women will be diagnosed with cancer at some point during their lifetimes. In 2014, an estimated 14.7M people were living with cancer in the United States. While these numbers are staggering, the silver lining in the wide prevalence of cancer is the potential to learn from treatment of millions of patients. If we had research-quality data from all cancer patients, it would enable higher quality health outcomes. Today, we lack the data models, technologies, and methods to capture that data.
@@ -47,19 +27,17 @@ In addition to information obtained from subject matter experts, several pre-exi
 
 After initial development, in early 2019, an open survey was conducted to validate and prioritize the data elements from these use cases. Further down-scoping was done based on whether the data would be stored or capture in an electronic health record (EHR), and if it would place undue documentation burden on clinicians.
 
-The data elements identified in this process were modeled using [FHIR Shorthand (FSH)](http://build.fhir.org/ig/HL7/fhir-shorthand/) and [SUSHI](https://github.com/FHIR/sushi) and exported as FHIR Profiles. [The profiles](artifacts.html#2), related FHIR artifacts, and other [technical implementation information](implementation.html), constitute the bulk of this IG. What follows is an overview of mCODE, directed primarily at clinical readers. Readers should also take note of the [Data Dictionary (Excel download)](mCODEDataDictionary.xlsx), a simplified, flattened list of mCODE elements.
+What follows is an overview of mCODE, directed primarily at clinical readers. Readers should also take note of the [Data Dictionary (Excel download)](mCODEDataDictionary.xlsx), a simplified, flattened list of mCODE elements.
 
-Currently, there are two defined mCODE roles involving the exchange of mCODE data. However, this may change in the future. The first role is the "mCODE Data Sender". This participant provides mCODE data in response to a data query or autonomously pushes mCODE data to an mCODE receiver. The data sender does not have to be the originator of the data it possesses. The second mCODE data exchange role is the "mCODE Data Receiver". This participant accepts mCODE data from an mCODE Data Sender.
+### Understanding this Guide
 
-There are multiple actors recognized in this IG including:
+The mCODE Implementation Guide was developed using the standard HL7 FHIR publishing tools. The page layouts and symbols are explained [in the FHIR documentation](https://www.hl7.org/fhir/formats.html).
 
-* **Provider** - the oncologist, or their representatives, who works to treat cancer patients.
-* **Patient** - the patient who is suspected to have, or is diagnosed with, cancer.
-* **Application** - EHR systems or lab systems.
-
-This implementation guide is a Domain of Knowledge IG. The purpose of this IG is to show how to represent clinical concepts generally, not to have a complete set of agreements for interoperable exchanges.
+Each profile is shown in multiple views. The "Differential Table" view represents the difference between the current profile and its base resource or profile. When interpreting this view, bear in mind that the immediate parent may not be a base FHIR resource, but it could be a US Core profile or another profile in this guide.
 
 ### Scope and Conceptual Model
+
+This implementation guide is a Domain of Knowledge IG. The purpose of this IG is to show how to represent clinical concepts generally, not to have a complete set of agreements for interoperable exchanges.
 
 mCODE consists of data elements divided into six loosely-arranged groups. Refer to the links below for details on the content and artifacts in each group:
 
@@ -76,13 +54,19 @@ The groups are illustrated in the following diagram:
 
 ### Data Dictionary
 
-The [Data Dictionary (DD)]() includes only the must-support elements in the mCODE specification, intentionally omitting certain elements in FHIR that are not expected to be implemented. When there are differences between the DD and content of the FHIR implementation guide, the profiles and value sets in the guide should be taken as the source of truth.
+The [Data Dictionary (DD)](mCODEDataDictionary.xlsx) includes only the must-support elements in the mCODE specification, intentionally omitting certain elements in FHIR that are not expected to be implemented. When there are differences between the DD and content of the FHIR implementation guide, the profiles and value sets in the guide should be taken as the source of truth.
 
 The STU 2 DD is somewhat different than the STU 1 version. The reader may notice the STU 2 DD lists significantly more data elements. In STU 1, some data elements were suppressed because they were common to most or all profiles, such as the reference to patient or subject, or the time of resource creation. However, the redaction of certain elements proved confusing, so the current DD does not continue this practice. Many of the "extra" rows are due to this change.
 
-### Limitations
+### Terminology Preferences
 
-* Not all vocabularies used in mCODE are currently supported by the [FHIR Implementation Guide Publishing Tool](https://confluence.hl7.org/display/FHIR/IG+Publisher+Documentation). Unsupported vocabularies include ClinVar, NCI Thesaurus, and AJCC.
+This implementation guide supplies terminology bindings drawn primarily from LOINC for "observables", and SNOMED-CT for values, results and findings. When appropriate codes are not available in the preferred vocabulary, alternative vocabularies are used, in the following general order of preference: SNOMED-CT (if the element is an observable), NCI Thesaurus, and local codes.
+
+Value sets from the FHIR specification and US Core were reused to the extent possible. New value sets where created only when no known existing value sets were deemed to be fit for purpose.
+
+mCODE genomics-related elements in the GenomicsReport and GeneticVariant profiles use the same code systems as the [HL7 Clinical Genomics Reporting FHIR IG, STU1 Release](http://hl7.org/fhir/uv/genomics-reporting/codings.html).
+
+Not all vocabularies used in mCODE are currently supported by the [FHIR Implementation Guide Publishing Tool](https://confluence.hl7.org/display/FHIR/IG+Publisher+Documentation). Unsupported vocabularies include ClinVar, NCI Thesaurus, and AJCC.
 
 ### Credits
 
@@ -101,7 +85,5 @@ This IG was authored by the MITRE Corporation using [FHIR Shorthand (FSH)](http:
 [mkramer@mitre.org]: mailto:mkramer@mitre.org
 
 MITRE: Approved for Public Release. Distribution Unlimited. Case Number 16-1988
-
-</div>
 
 {% include markdown-link-references.md %}

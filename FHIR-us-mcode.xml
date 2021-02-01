@@ -64,8 +64,8 @@
 <artifact id="ValueSet/elixhauser-other-thyroid-disorder-vs" key="ValueSet-elixhauser-other-thyroid-disorder-vs" name="Elixhauser Comorbid Condition Value Set for Other Thyroid Disorder"/>
 <artifact id="ValueSet/elixhauser-paralysis-vs" key="ValueSet-elixhauser-paralysis-vs" name="Elixhauser Comorbid Condition Value Set for Paralysis"/>
 <artifact id="ValueSet/elixhauser-peripheral-vascular-disease-vs" key="ValueSet-elixhauser-peripheral-vascular-disease-vs" name="Elixhauser Comorbid Condition Value Set for Peripheral vascular disease"/>
-<artifact id="ValueSet/elixhauser-psychoses-vs" key="ValueSet-elixhauser-psychoses-vs" name="Elixhauser Comorbid Condition Value Set for Psychoses"/>
-<artifact id="ValueSet/elixhauser-pulmonary-circulation-disorders-vs" key="ValueSet-elixhauser-pulmonary-circulation-disorders-vs" name="Elixhauser Comorbid Condition Value Set for Pulmonary circulation disorders"/>
+<artifact id="ValueSet/elixhauser-psychosis-vs" key="ValueSet-elixhauser-psychosis-vs" name="Elixhauser Comorbid Condition Value Set for Psychosis"/>
+<artifact id="ValueSet/elixhauser-pulmonary-circulation-disorder-vs" key="ValueSet-elixhauser-pulmonary-circulation-disorder-vs" name="Elixhauser Comorbid Condition Value Set for Pulmonary circulation disorders"/>
 <artifact id="ValueSet/elixhauser-rheumatoid-arthritis-vs" key="ValueSet-elixhauser-rheumatoid-arthritis-vs" name="Elixhauser Comorbid Condition Value Set for Rheumatoid Arthritis and collagen vascular diseases."/>
 <artifact id="ValueSet/elixhauser-renal-failure-severe-vs" key="ValueSet-elixhauser-renal-failure-severe-vs" name="Elixhauser Comorbid Condition Value Set for Severe Renal Failure"/>
 <artifact id="ValueSet/elixhauser-valvular-disease-vs" key="ValueSet-elixhauser-valvular-disease-vs" name="Elixhauser Comorbid Condition Value Set for Valvular disease"/>

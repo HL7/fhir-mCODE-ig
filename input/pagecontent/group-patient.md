@@ -5,8 +5,6 @@ The mCODE **Patient Information** group contains the following information about
 * **Performance status** - [Eastern Cooperative Oncology Group (ECOG) Performance Status](https://ecogAcrin.org/resources/ecog-performanceStatus) and/or [Karnofsky Performance Status (KPS)](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3722041/). Because performance assessments may be performed more than once over a period of time, multiple instances may exist for a single patient.
 * **Patient bundle** - the complete set of mCODE information about a patient that can be sent over the wire as one resource.
 
-In addition, mCODE defines a Group resource that is used to return the set of patients the mCODE cohort.
-
 ### Profiles
 
 * [CancerPatient]
@@ -18,7 +16,6 @@ In addition, mCODE defines a Group resource that is used to return the set of pa
   * [ECOGPerformanceStatus]
   * [KarnofskyPerformanceStatus]
 * [MCODEPatientBundle]
-* [MCodePatientGroup]
 
 ### Extensions
 
@@ -26,7 +23,7 @@ In addition, mCODE defines a Group resource that is used to return the set of pa
 * [ComorbidConditionReference]
 
 ### Value Sets
-* PresentAbsentUnknown
+* [PresentAbsentUnknown]
 * **Comorbid Condition Categories**
   * [ElixhauserAidsVS]
   * [ElixhauserAlcoholAbuseVS]
@@ -58,8 +55,8 @@ In addition, mCODE defines a Group resource that is used to return the set of pa
   * [ElixhauserOtherThyroidDisorderVS]
   * [ElixhauserParalysisVS]
   * [ElixhauserPeripheralVascularDiseaseVS]
-  * [ElixhauserPsychosesVS]
-  * [ElixhauserPulmonaryCirculationDisordersVS]
+  * [ElixhauserPsychosisVS]
+  * [ElixhauserPulmonaryCirculationDisorderVS]
   * [ElixhauserRenalFailureModerateVS]
   * [ElixhauserRenalFailureSevereVS]
   * [ElixhauserRheumatoidArthritisVS]

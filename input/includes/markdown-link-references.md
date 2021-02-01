@@ -10,7 +10,7 @@
 [CancerRelatedSurgicalProcedure]: StructureDefinition-mcode-cancer-related-surgical-procedure.html
 [ComorbidConditionCode]: StructureDefinition-mcode-comorbid-condition-code.html
 [ComorbidConditionReference]: StructureDefinition-mcode-comorbid-condition-reference.html
-[ComorbiditiesElixhauser]: StructureDefinition-comorbidities-elixhauser
+[ComorbiditiesElixhauser]: StructureDefinition-comorbidities-elixhauser.html
 [ComorbiditiesParent]: StructureDefinition-mcode-comorbidities-parent.html
 [ECOGPerformanceStatus]: StructureDefinition-mcode-ecog-performance-status.html
 [EvidenceType]: StructureDefinition-mcode-evidence-type.html
@@ -21,7 +21,6 @@
 [LocationQualifier]: StructureDefinition-mcode-location-qualifier.html
 [MCODEPatientBundle]: StructureDefinition-mcode-patient-bundle.html
 [MCodeCapabilityStatement]: StructureDefinition-MCodeCapabilityStatement.html
-[MCodePatientGroup]: StructureDefinition-group-mcode-patients.html
 [PrimaryCancerCondition]: StructureDefinition-mcode-primary-cancer-condition.html
 [RadiotherapyCourseSummary]: StructureDefinition-radiotherapy-course-summary.html
 [RadiotherapyDosePerFraction]: StructureDefinition-radiotherapy-dose-per-fraction.html
@@ -75,7 +74,7 @@
 [ElixhauserDeficiencyAnemiaVS]: ValueSet-elixhauser-deficiency-anemia-vs.html
 [ElixhauserDepressionVS]: ValueSet-elixhauser-depression-vs.html
 [ElixhauserDiabetesComplicatedVS]: ValueSet-elixhauser-diabetes-complicated-vs.html
-[ElixhauserDiabetesUncomplicatedVS]: ValueSet-elixhauser-uncomplicated-diabetes-vs.html
+[ElixhauserDiabetesUncomplicatedVS]: ValueSet-elixhauser-diabetes-uncomplicated-vs.html
 [ElixhauserDrugAbuseVS]: ValueSet-elixhauser-drug-abuse-vs.html
 [ElixhauserFluidElectrolyteDisordersVS]: ValueSet-elixhauser-fluid-electrolyte-vs.html
 [ElixhauserHypertensionComplicatedVS]: ValueSet-elixhauser-hypertension-complicated-vs.html
@@ -90,7 +89,7 @@
 [ElixhauserOtherThyroidDisorderVS]: ValueSet-elixhauser-other-thyroid-disorder-vs.html
 [ElixhauserParalysisVS]: ValueSet-elixhauser-paralysis-vs.html
 [ElixhauserPeripheralVascularDiseaseVS]: ValueSet-elixhauser-peripheral-vascular-disease-vs.html
-[ElixhauserPsychosesVS]: ValueSet-elixhauser-psychoses-vs.html
+[ElixhauserPsychosisVS]: ValueSet-elixhauser-psychosis-vs.html
 [ElixhauserPulmonaryCirculationDisorderVS]: ValueSet-elixhauser-pulmonary-circulation-disorder-vs.html
 [ElixhauserRenalFailureModerateVS]: ValueSet-elixhauser-renal-failure-moderate-vs.html
 [ElixhauserRenalFailureSevereVS]: ValueSet-elixhauser-renal-failure-severe-vs.html
@@ -121,7 +120,7 @@
 [TumorSizeUnitsVS]: ValueSet-mcode-tumor-size-units-vs.html
 
 <!-- mCODE Code Systems -->
-[ElixhauserCategoryCS]: CodeSystem-elixhauser-category-cs.html
+[ElixhauserCategoryCS]: CodeSystem-elixhauser-ahrq-cs.html
 [RadiotherapyCS]: CodeSystem-radiotherapy-cs.html
 
 <!-- mCODE CapabilityStatements -->

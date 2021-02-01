@@ -1,5 +1,5 @@
 CodeSystem: ElixhauserAHRQ_CS
-Id: mcode-elixhauser-category-cs
+Id: elixhauser-ahrq-cs
 Title: "Elixhauser Comorbidity Category"
 Description: "A code system that contains codes representing the comorbidity categories originally defined by Elixhauser, and updated by the Agency for Healthcare Research and Quality (AHRQ) Healthcare Cost and Utilization Project (H-CUP)."
 * #ElixhauserAHRQ "Elixhauser comorbidities as defined by Agency for Healthcare Research and Quality (AHRQ) Healthcare Cost and Utilization Project (H-CUP)"
@@ -32,7 +32,7 @@ Description: "A code system that contains codes representing the comorbidity cat
 * #OBESE    "Obesity"
 * #PARALYSIS    "Paralysis"
 * #PERIVASC    "Peripheral vascular disease"
-* #PSYCHOSES    "Psychoses"
+* #PSYCHOSIS    "Psychosis"
 * #PULMCIRC    "Pulmonary circulation disease"
 * #RENLFL_MOD    "Renal failure, moderate"
 * #RENLFL_SEV    "Renal failure, severe"
@@ -3785,10 +3785,10 @@ Description:    "Elixhauser Comorbid Condition Value Set for Peripheral vascular
 * ICD10CM#Z95.828 "Presence of other vascular implants and grafts"
 
 
-ValueSet:  ElixhauserPsychosesVS
-Id: elixhauser-psychoses-vs
-Title: "Elixhauser Comorbid Condition Value Set for Psychoses"
-Description:    "Elixhauser Comorbid Condition Value Set for Psychoses. ICD-10 codes are drawn from https://www.hcup-us.ahrq.gov/toolssoftware/comorbidityicd10/comorbidity_icd10.jsp, version 2021.1"
+ValueSet:  ElixhauserPsychosisVS
+Id: elixhauser-psychosis-vs
+Title: "Elixhauser Comorbid Condition Value Set for Psychosis"
+Description:    "Elixhauser Comorbid Condition Value Set for Psychosis. ICD-10 codes are drawn from https://www.hcup-us.ahrq.gov/toolssoftware/comorbidityicd10/comorbidity_icd10.jsp, version 2021.1"
 * ICD10CM#F06.0 "Psychotic disorder w hallucin due to known physiol condition"
 * ICD10CM#F06.1 "Catatonic disorder due to known physiological condition"
 * ICD10CM#F06.2 "Psychotic disorder w delusions due to known physiol cond"

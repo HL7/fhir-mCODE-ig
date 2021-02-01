@@ -22,7 +22,7 @@ Because the use of these code systems vary in different institutions, mCODE supp
 
 Implementers should reference the [PrimaryCancerCondition] and [SecondaryCancerCondition] profiles for further details on the use of these terminologies and associated value sets.
 
-##### Representing Staging Information
+### Representing Staging Information
 
 Cancer stage information is contained in a set of profiles, representing [clinical stage group](https://www.cancer.gov/publications/dictionaries/cancer-terms/def/clinical-staging) and [pathologic stage group](https://www.cancer.gov/publications/dictionaries/cancer-terms/def/pathological-staging) panels with members representing the primary tumor (T), regional nodes (N), and distant metastases (M) categories.
 
@@ -40,6 +40,12 @@ mCODE recommends that the implementers align with AJCC's convention of represent
 Several widely-used terminologies in the cancer domain, including ICD-O-3 and AJCC staging, are proprietary and cannot be reproduced in this guide. As such, some elements related to staging do not include required terminology codes. The guide does, however, indicate where it is appropriate to use codes from such terminologies.
 
 Under the [Fair Use doctrine](https://www.copyright.gov/fair-use/more-info.html), the IG includes examples illustrating mCODE's representation of cancer diagnoses and AJCC staging values for the purposes of technical implementation guidance to FHIR developers.
+
+### Body Locations
+
+Body locations in FHIR are typically represented using a single code. However, a single code is often insufficient to describe where a tumor is located, where a surgery is targeted, or where a radiation treatment is focused. When a single code is insufficient, FHIR recommends using a BodyStructure. This is appropriate when the BodyStructure is something to be tracked over time, for example, in the case of [Tumor]. But generally, it is better to describe a body location without using an additional resource.
+
+mCODE has adopted an approach that allows the user to add additional code or codes to further define the body site, without the need to create an independent resource. This takes the form of a [LocationQualifier] extension. This extension can be used to specify laterality, directionality, and plane. It appears in mCODE wherever a body site code is found.
 
 ### Profiles
 

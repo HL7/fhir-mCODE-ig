@@ -1,4 +1,4 @@
-Recording patient outcomes in mCODE involves disease status, tumor size, and date of death. Other common outcome measures, such as progression-free survival, time to recurrence, and overall survival, can be derived from time-indexed observations of disease status. The date of diagnosis is also required for some derived measures (see [Disease Characterization](#group-disease.html)). At this time, mCODE does not include patient reported outcomes.
+Recording patient outcomes in mCODE involves disease status, tumor size, and date of death. Other common outcome measures, such as progression-free survival, time to recurrence, and overall survival, can be derived from time-indexed observations of disease status. The date of diagnosis is also required for some derived measures (see [Disease Characterization](group-disease.html)). At this time, mCODE does not include patient reported outcomes.
 
 ### Disease Status
 

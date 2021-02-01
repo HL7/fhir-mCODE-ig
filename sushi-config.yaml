@@ -230,7 +230,7 @@ groups:
       - ValueSet/elixhauser-obesity-vs
       - ValueSet/elixhauser-paralysis-vs
       - ValueSet/elixhauser-peripheral-vascular-disease-vs
-      - ValueSet/elixhauser-psychoses-vs
+      - ValueSet/elixhauser-psychosis-vs
       - ValueSet/elixhauser-pulmonary-circulation-disorder-vs
       - ValueSet/elixhauser-renal-failure-moderate-vs
       - ValueSet/elixhauser-renal-failure-severe-vs
@@ -245,7 +245,7 @@ groups:
     description: These define new code systems used by systems conforming with this implementation guide
     resources:
       - CodeSystem/radiotherapy-cs
-      - CodeSystem/mcode-elixhauser-category-cs
+      - CodeSystem/elixhauser-ahrq-cs
       - CodeSystem/mcode-cs
 
   # Examples

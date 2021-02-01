@@ -1,5 +1,5 @@
 CodeSystem: ElixhauserAHRQ_CS
-Id: mcode-elixhauser-category
+Id: mcode-elixhauser-category-cs
 Title: "Elixhauser Comorbidity Category"
 Description: "A code system that contains codes representing the comorbidity categories originally defined by Elixhauser, and updated by the Agency for Healthcare Research and Quality (AHRQ) Healthcare Cost and Utilization Project (H-CUP)."
 * #ElixhauserAHRQ "Elixhauser comorbidities as defined by Agency for Healthcare Research and Quality (AHRQ) Healthcare Cost and Utilization Project (H-CUP)"

@@ -428,7 +428,7 @@ Instance: tumor-marker-test-oncotype-dx-jenny-m
 InstanceOf: TumorMarkerTest
 Description: "Extended example: example showing Oncotype DX breast recurrence score. Note that this test has no assigned LOINC code, so GTR is being used as a backup. Only the score from the Oncotype DX panel (as opposed to variant data from the genes in the panel) is represented here."
 * status = #final "final"
-* code.coding[0] = OtherCode#OtherTumorMarkerTest "Other Tumor Marker Test, Specify"
+* code.coding[0] = MCODE#TMT-OTHER "Other Tumor Marker Test, Specify"
 * code.coding[1] = GTR#509910 "Oncotype DX Breast Recurrence Score Assay"
 * code.text = "Oncotype DX Breast Recurrence Score Assay"
 * subject = Reference(cancer-patient-jenny-m)
@@ -507,7 +507,7 @@ InstanceOf: TeleradiotherapyPrescriptionDelivery
 Description: "Extended example: example showing radiation treatment"
 * status = #completed "completed"
 * code = RO#PHOTON "Photon Beam Radiation Therapy"
-* extension[radiotherapyTechnique].valueCodeableConcept = RO#3D "3 Dimensional"
+* extension[radiotherapyTechnique].valueCodeableConcept = RO#3D "Three Dimensional"
 * extension[radiotherapyDosePerFraction].valueQuantity = 200 'cGy'
 * extension[radiotherapyPrescribedFractions].valuePositiveInt = 25
 * extension[radiotherapyDeliveredFractions].valueUnsignedInt = 25

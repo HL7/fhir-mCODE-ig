@@ -5,12 +5,12 @@ The following table shows valid combinations of modality, technique, and device 
 
 | **External Beam Modality (Radiation Type)** | **Technique (Delivery Method)** | **Delivery Device**                            |
 | ------------------------------------------- | ------------------------------- | ---------------------------------------------- |
-| Photons                                     | IMRT, VMAT                      | Linac, RLinac, MRLinac, Robotic                |
-| Photons                                     | 3D                              | Linac, RLinac, MRLinac, Robotic, IsotopeMS, kV |
-| Photons                                     | 2D                              | Linac, kV                                      |
-| Photons                                     | IORT                            | Linac, NGLinac                                 |
-| Electrons                                   | 3D                              | Linac, RLinac, Robotic, MS                     |
-| Electrons                                   | 2D, IORT                        | Linac                                          |
+| Photons                                     | IMRT, VMAT                      | LINAC, RLINAC, MRLINAC, ROBOTIC                |
+| Photons                                     | 3D                              | LINAC, RLINAC, MRLINAC, ROBOTIC, IsotopeMS, kV |
+| Photons                                     | 2D                              | LINAC, kV                                      |
+| Photons                                     | IORT                            | LINAC, NGLINAC                                 |
+| Electrons                                   | 3D                              | LINAC, RLINAC, ROBOTIC, MS                     |
+| Electrons                                   | 2D, IORT                        | LINAC                                          |
 | Electrons                                   | Compensator                     |                                                |
 | Protons                                     | PPS, PSS, Mixed                 |                                                |
 | Carbon                                      | PPS, PSS, Mixed                 |                                                |
@@ -26,11 +26,11 @@ The following table shows valid combinations of modality, technique, and device 
 * PSS: Particle Spot Scanning
 * IMNT: Intensity Modulated Neutron Therapy
 * NCT: Neutron Capture Therapy
-* Linac: Gantry based delivery with linear accelerator based source
-* RLinac: Ring Gantry based delivery with linear accelerator based source, e.g., Ethos, Tomotherapy
-* NGLinac: Non-gantry based linac, e.g. specialty devices used for IORT, e.g., Mobetron
-* MRLinac: Gantry based delivery with linear accelerator based source with onboard MRI for patient positioning
-* Robotic: Multiple axis (other than MLCs) are moved under electronic control during delivery of dose from a single beam with linear accelerator based source, e.g., CyberKnife
+* LINAC: Gantry based delivery with linear accelerator based source
+* RLINAC: Ring Gantry based delivery with linear accelerator based source, e.g., Ethos, Tomotherapy
+* NGLINAC: Non-gantry based linac, e.g. specialty devices used for IORT, e.g., Mobetron
+* MRLINAC: Gantry based delivery with linear accelerator based source with onboard MRI for patient positioning
+* ROBOTIC: Multiple axis (other than MLCs) are moved under electronic control during delivery of dose from a single beam with linear accelerator based source, e.g., CyberKnife
 * MS: Multisource radiation use of multiple sources at different positions using linear accelerator-based source
 * kV: Non-megavoltage, electronically generated photons
 * Mixed: Both Photon and Particle based beams are used to deliver the therapeutic dose

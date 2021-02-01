@@ -229,8 +229,8 @@ groups:
     description: These define new code systems used by systems conforming with this implementation guide
     resources:
       - CodeSystem/radiotherapy-cs
-      - CodeSystem/mcode-elixhauser-category
-      - CodeSystem/mcode-other-code-cs
+      - CodeSystem/mcode-elixhauser-category-cs
+      - CodeSystem/mcode-cs
 
   # Examples
   GenericExamples:

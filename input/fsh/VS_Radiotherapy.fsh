@@ -77,7 +77,7 @@ Title: "Brachytherapy Device Value Set"
 Description: "Codes describing the devices used in brachytherapy (internal radiation) procedures."
 * RO#TANDEM
 * RO#CYL
-* RO#Ovoids
+* RO#OVOID
 * RO#RING
 * RO#SEED 
 * RO#EYE

@@ -76,7 +76,7 @@
 <artifact id="ValueSet/elixhauser-cancer-solid-tumor-in-situ-vs" key="ValueSet-elixhauser-cancer-solid-tumor-in-situ-vs" name="Elixhauser Comorbid Condition Value Set for malignant solid tumors in situ"/>
 <artifact id="ValueSet/elixhauser-cancer-solid-tumor-malignant-vs" key="ValueSet-elixhauser-cancer-solid-tumor-malignant-vs" name="Elixhauser Comorbid Condition Value Set for malignant solid tumors without metastases"/>
 <artifact id="StructureDefinition/comorbidities-elixhauser" key="StructureDefinition-comorbidities-elixhauser" name="Elixhauser Comorbidities"/>
-<artifact id="CodeSystem/mcode-elixhauser-category" key="CodeSystem-mcode-elixhauser-category" name="Elixhauser Comorbidity Category"/>
+<artifact id="CodeSystem/mcode-elixhauser-category-cs" key="CodeSystem-mcode-elixhauser-category-cs" name="Elixhauser Comorbidity Category"/>
 <artifact id="StructureDefinition/mcode-evidence-type" key="StructureDefinition-mcode-evidence-type" name="Evidence Type"/>
 <artifact deprecated="true" id="Extension/mcode-evidence-type-extension" key="evidence-type-extension" name="Evidence Type Extension"/>
 <artifact id="StructureDefinition/mcode-genetic-specimen" key="genetic-specimen" name="Genetic Specimen"/>
@@ -95,7 +95,6 @@
 <artifact id="ValueSet/mcode-location-qualifier-vs" key="ValueSet-mcode-location-qualifier-vs" name="Location Qualifier Value Set"/>
 <artifact id="ValueSet/mcode-tumor-size-method-vs" key="ValueSet-mcode-tumor-size-method-vs" name="Methods for measuring tumor size"/>
 <artifact deprecated="true" key="Observation" name="Observation"/>
-<artifact id="CodeSystem/mcode-other-code-cs" key="CodeSystem-mcode-other-code-cs" name="OtherCode Code System"/>
 <artifact id="ValueSet/mcode-present-absent-unknown" key="ValueSet-mcode-present-absent-unknown" name="Present-Absent-Unknown"/>
 <artifact id="StructureDefinition/mcode-primary-cancer-condition" key="primary-cancer-condition" name="Primary Cancer Condition"/>
 <artifact id="ValueSet/mcode-primary-or-uncertain-behavior-cancer-disorder-vs" key="primary-or-uncertain-behavior-cancer-disorder-value-set" name="Primary or Uncertain Behavior Cancer Disorder Value Set"/>
@@ -180,6 +179,7 @@
 <artifact id="Observation/genomic-region-studied-jenny-m" key="Observation-genomic-region-studied-jenny-m" name="genomic-region-studied-jenny-m"/>
 <artifact id="Observation/genomic-region-studied-stk11" key="Observation-genomic-region-studied-stk11" name="genomic-region-studied-stk11"/>
 <artifact id="Observation/karnofsky-performance-status-normal-activity" key="Observation-karnofsky-performance-status-normal-activity" name="karnofsky-performance-status-normal-activity"/>
+<artifact id="CodeSystem/mcode-cs" key="CodeSystem-mcode-cs" name="mCODE Code System"/>
 <artifact id="StructureDefinition/mcode-patient-bundle" key="StructureDefinition-mcode-patient-bundle" name="mCODE Patient Bundle"/>
 <artifact id="Group/group-mcode-patients" key="Group-group-mcode-patients" name="mCODE Patient Group"/>
 <artifact deprecated="true" id="Example/mcode-cancer-disease-status-example-01" key="mcode-cancer-disease-status-example-01" name="mCODECancerDiseaseStatusExample01"/>

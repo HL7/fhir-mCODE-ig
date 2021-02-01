@@ -1,4 +1,3 @@
-### Implementation Notes
 
 This page contains miscellaneous information on modeling and FHIR implementation. The content is primarily directed at informaticists and implementers of mCODE. The following topics are addressed:
 
@@ -9,13 +8,13 @@ This page contains miscellaneous information on modeling and FHIR implementation
 * [Laboratory Profiles](#laboratory-profiles)
 * [Representing Provenance](#representing-provenance)
 
-#### Understanding this Guide
+### Understanding this Guide
 
 The mCODE Implementation Guide was developed using the standard HL7 FHIR publishing tools. The page layouts and symbols are explained [in the FHIR documentation](https://www.hl7.org/fhir/formats.html).
 
 Each profile is shown in multiple views. The "Differential Table" view represents the difference between the current profile and its base resource or profile. When interpreting this view, bear in mind that the immediate parent may not be a base FHIR resource, but it could be a US Core profile or another profile in this guide.
 
-#### Terminology Preferences
+### Terminology Preferences
 
 This implementation guide supplies terminology bindings drawn primarily from LOINC for "observables", and SNOMED-CT for values, results and findings. When appropriate codes are not available in the preferred vocabulary, alternative vocabularies are used, in the following general order of preference: SNOMED-CT (if the element is an observable), NCI Thesaurus, and local codes.
 
@@ -23,7 +22,7 @@ Value sets from the FHIR specification and US Core were reused to the extent pos
 
 mCODE genomics-related elements in the GenomicsReport and GeneticVariant profiles use the same code systems as the [HL7 Clinical Genomics Reporting FHIR IG, STU1 Release](http://hl7.org/fhir/uv/genomics-reporting/codings.html).
 
-#### Body Locations
+### Body Locations
 
 Body locations in FHIR are typically represented using a single code. However, a single code is often insufficient to describe where a tumor is located, where a surgery is targeted, or where a radiation treatment is focused. In breast cancer, the location of a tumor could be described in terms of the radial position (clock face direction) and distance relative to the left or right nipple.
 
@@ -31,16 +30,3 @@ FHIR recommends using a BodyStructure resource whenever a single code is insuffi
 
 mCODE has adopted an approach that allows the user to add additional code or codes to further define the body site, without the need to create an independent resource. This takes the form of a [LocationQualifier extension](StructureDefinition-mcode-location-qualifier.html). It appears wherever a body site code is found.
 
-#### Vital Sign Profiles
-
-Height, weight, and blood pressure are part of the mCODE data set. However, vital sign profiles are not defined in mCODE. Instead, mCODE uses the [FHIR R4 vital sign profile](http://hl7.org/fhir/R4/observation-vitalsigns.html), which is are incorporated into [US Core Version 3.0 and 3.1](http://hl7.org/fhir/us/core/index.html). As of Version 3.2, US Core defines its own set of vital signs profiles. However, these are derived from the same [FHIR base vital sign profile](http://hl7.org/fhir/R4/observation-vitalsigns.html). The US Core profiles include references to other US Core profiles, such as US Core Patient and provides more granularity in terms of MustSupport elements. By referencing the base vital sign profile, mCODE accepts vital sign data conforming to either FHIR or US Core profiles.
-
-#### Laboratory Profiles
-
-Complete Blood Count (CBC) and Comprehensive Metabolic Panel (CMP) are part of the mCODE data set. Reporting of these results must conform to the [US Core Laboratory Result Profile](http://hl7.org/fhir/us/core/StructureDefinition-us-core-observation-lab.html). Several examples of laboratory result reporting are given in the [US Core IG](http://hl7.org/fhir/us/core/index.html). For example, see this [erythrocytes laboratory reporting example](http://hl7.org/fhir/us/core/Observation-erythrocytes.html).
-
-In practice, there are many variations on these panels, as exemplified by [this list of various CBCs](https://search.loinc.org/searchLOINC/search.zul?query=CBC). The individual LOINC codes of interest to mCODE include any that may be part of CBC and CMP panels.
-
-#### Representing Provenance
-
-Provenance information includes the "who, what, when, where, why" associated with collection, transfer, and updating of clinical information. mCODE relies on FHIR's native mechanisms for recording and tracking provenance. As such, mCODE shares all the capabilities and limitations of FHIR provenance tracking. The user should refer to the [FHIR specification](https://www.hl7.org/fhir/provenance.html) for more information.

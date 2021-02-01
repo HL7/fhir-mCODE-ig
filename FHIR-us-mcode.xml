@@ -272,14 +272,19 @@
 <page deprecated="true" key="changelog" name="Change Log"/>
 <page key="change_log" name="Change log"/>
 <page key="conformance" name="Conformance"/>
+<page key="group-disease" name="Disease Characterization"/>
 <page key="downloads" name="Downloads"/>
 <page key="examples" name="Examples Overview"/>
 <page key="experimental" name="Experimental Artifacts"/>
 <page deprecated="true" key="extensions" name="Extensions"/>
+<page key="group-genomics" name="Genomics"/>
 <page deprecated="true" key="history" name="History"/>
 <page key="index" name="Home"/>
-<page key="implementation" name="Implementation"/>
 <page deprecated="true" key="implementationnotes" name="Implementation Notes"/>
+<page key="group-labvital" name="Laboratory Results and Vital Signs"/>
+<page key="group-outcome" name="Outcomes"/>
+<page key="group-patient" name="Patient Information"/>
 <page key="toc" name="Table of Contents"/>
+<page key="group-treatment" name="Treatments"/>
 <page deprecated="true" key="valuesets" name="Value Sets"/>
 </specification>

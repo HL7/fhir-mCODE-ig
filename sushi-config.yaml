@@ -27,8 +27,18 @@ pages:
     title: Home
   conformance.md:
     title: Conformance
-  implementation.md:
-    title: Implementation
+  group-patient.md:
+    title: Patient Information
+  group-disease.md:
+    title: Disease Characterization
+  group-genomics.md:
+    title: Genomics
+  group-labvital.md:
+    title: Laboratory Results and Vital Signs
+  group-treatment.md:
+    title: Treatments
+  group-outcome.md:
+    title: Outcomes 
   examples.md:
     title: Examples Overview
   downloads.md:
@@ -39,9 +49,15 @@ pages:
       title: Experimental Artifacts
 menu:
   Home: index.html
+  Content Details:
+    Patient: group-patient.html
+    Disease: group-disease.html
+    Laboratory: group-labvital.html
+    Genomics: group-genomics.html
+    Treatment: group-treatment.html
+    Outcome: group-outcome.html
   Conformance: conformance.html
-  Implementation: implementation.html
-  FHIR Artifacts:
+  All Artifacts:
     Profiles: "artifacts.html#1"
     Extensions: "artifacts.html#8"
     Value Sets: "artifacts.html#9"
@@ -61,7 +77,7 @@ menu:
 groups:
   Patient:
     name: "Profiles: Patient"
-    description: Profiles in the [mCODE **Patient** Group](index.html#patient-group).
+    description: Profiles in the [mCODE **Patient** Group](group-patient.html).
     resources:
       - StructureDefinition/mcode-cancer-patient
       - StructureDefinition/comorbidities-elixhauser
@@ -72,7 +88,7 @@ groups:
 
   Disease:
     name: "Profiles: Disease Characterization"
-    description: Profiles in the [mCODE **Disease Characterization** Group](index.html#disease-characterization-group).
+    description: Profiles in the [mCODE **Disease Characterization** Group](group-disease.html).
     resources:
       - StructureDefinition/mcode-primary-cancer-condition
       - StructureDefinition/mcode-secondary-cancer-condition
@@ -87,13 +103,13 @@ groups:
 
   LabsVitals:
     name: "Profiles: Laboratory Results and Vital Signs"
-    description: Profiles in the [mCODE **Laboratory Results and Vital Signs** Group](index.html#laboratory-results-and-vital-signs-group).
+    description: Profiles in the [mCODE **Laboratory Results and Vital Signs** Group](group-labvital.html).
     resources:
       - StructureDefinition/mcode-tumor-marker-test
 
   Treatment:
     name: "Profiles: Treatments"
-    description: Profiles in the [mCODE **Treatments** Group](index.html#treatments-group).
+    description: Profiles in the [mCODE **Treatments** Group](group-treatment.html).
     resources:
       - StructureDefinition/mcode-cancer-related-medication-request
       - StructureDefinition/mcode-cancer-related-medication-administration
@@ -104,7 +120,7 @@ groups:
 
   Genomics:
     name: "Profiles: Genomics"
-    description: Profiles in the [mCODE **Genomics** Group](index.html#genomics-group).
+    description: Profiles in the [mCODE **Genomics** Group](group-genomics.html).
     resources:
       - StructureDefinition/mcode-cancer-genetic-variant
       - StructureDefinition/mcode-genetic-specimen
@@ -113,7 +129,7 @@ groups:
 
   Outcomes:
     name: "Profiles: Outcomes"
-    description: Profiles in the [mCODE **Outcomes** Group](index.html#outcomes-group).
+    description: Profiles in the [mCODE **Outcomes** Group](group-outcome.html).
     resources:
       - StructureDefinition/mcode-cancer-disease-status
 
@@ -215,7 +231,7 @@ groups:
       - ValueSet/elixhauser-paralysis-vs
       - ValueSet/elixhauser-peripheral-vascular-disease-vs
       - ValueSet/elixhauser-psychoses-vs
-      - ValueSet/elixhauser-pulmonary-circulation-disorders-vs
+      - ValueSet/elixhauser-pulmonary-circulation-disorder-vs
       - ValueSet/elixhauser-renal-failure-moderate-vs
       - ValueSet/elixhauser-renal-failure-severe-vs
       - ValueSet/elixhauser-hypothyroidism-vs

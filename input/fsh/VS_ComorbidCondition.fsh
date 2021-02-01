@@ -3935,8 +3935,8 @@ Description:    "Elixhauser Comorbid Condition Value Set for Psychoses. ICD-10 c
 * ICD10CM#F44.89 "Other dissociative and conversion disorders"
 * ICD10CM#F84.3 "Other childhood disintegrative disorder"
 
-ValueSet:  ElixhauserPulmonaryCirculationDisordersVS
-Id: elixhauser-pulmonary-circulation-disorders-vs
+ValueSet:  ElixhauserPulmonaryCirculationDisorderVS
+Id: elixhauser-pulmonary-circulation-disorder-vs
 Title: "Elixhauser Comorbid Condition Value Set for Pulmonary circulation disorders"
 Description:    "Elixhauser Comorbid Condition Value Set for Pulmonary circulation disorders. ICD-10 codes are drawn from https://www.hcup-us.ahrq.gov/toolssoftware/comorbidityicd10/comorbidity_icd10.jsp, version 2021.1"
 * ICD10CM#I27.0 "Primary pulmonary hypertension"

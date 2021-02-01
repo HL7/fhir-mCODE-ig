@@ -1,0 +1,79 @@
+The mCODE **Disease Characterization** group includes data elements specific to the diagnosis and staging of cancer. This includes:
+
+* **Cancer Diagnosis** - the date and location (body site/position and laterality) of the cancer diagnosis.
+* **Tumor Characteristics** - the shape (histologic type) and behavior of the tumor cell, compared to that of a normal cell.
+* **Cancer Stage** - describes the severity of an individual's cancer based on the magnitude of the original (primary) tumor as well as on the extent cancer has spread in the body. Understanding the stage of the cancer helps doctors to develop a prognosis and design a treatment plan for individual patients. Staging calculations leverage results from the previous two categories, along with prognostic factors relevant to the cancer type, in order to assess an overall cancer stage group (source: [AJCC](https://cancerstaging.org/references-tools/Pages/What-is-Cancer-Staging.aspx)).
+
+### Representing the Cancer Diagnosis
+
+The cancer diagnosis combines the type, site, and certain characteristics of the cancer. Depending on the EHR and provider organization, different code systems may be used, such as:
+
+* [Systematized Nomenclature of Medicine - Clinical Terms (SNOMED CT)](https://www.snomed.org/)
+* [International Classification of Diseases, 10th version, Clinical Modifications (ICD-10-CM)](https://www.cdc.gov/nchs/icd/icd10cm.htm)
+* [International Classification of Diseases for Oncology, 3rd version (ICD-O-3)](https://codes.iarc.fr/)
+
+Because the use of these code systems vary in different institutions, mCODE supports all three. Two elements and one [extension](https://www.hl7.org/fhir/extensibility.html) of the [FHIR Condition Resource](https://www.hl7.org/fhir/condition.html) are involved with coding the cancer diagnosis: `Condition.code`, `Condition.bodySite`, and the [HistologyMorphologyBehavior] extension. How these attributes are used, depending on the code system, is captured in the table below:
+
+| Encoding | Code  | Histology Morphology Behavior Extension| Body Site |
+|----------|-------|-----------------------------|----------|
+| **SNOMED Encoded** | Any descendant of `363346000` "Malignant neoplastic disease (disorder)" | Any descendant of `367651003` "Malignant neoplasm of primary, secondary, or uncertain origin (morphologic abnormality)" | Any descendant of `123037004` "Body structure" |
+| **ICD-10-CM Encoded** | Any ICD-10-CM primary code (precoodinated) | n/a | n/a |
+| **ICD-O-3 Encoded** | The code `363346000` "Malignant neoplastic disease (disorder)" | Any ICD-O-3 Morphology Code (including /1, /2, or /3 suffix for primary cancers, and /6 suffix for secondary cancers) | Any ICD-O-3 Topology Code |
+
+Implementers should reference the [PrimaryCancerCondition] and [SecondaryCancerCondition] profiles for further details on the use of these terminologies and associated value sets.
+
+##### Representing Staging Information
+
+Cancer stage information is contained in a set of profiles, representing [clinical stage group](https://www.cancer.gov/publications/dictionaries/cancer-terms/def/clinical-staging) and [pathologic stage group](https://www.cancer.gov/publications/dictionaries/cancer-terms/def/pathological-staging) panels with members representing the primary tumor (T), regional nodes (N), and distant metastases (M) categories.
+
+Clinicians assign stages to cancers according to rules defined in various [cancer staging systems](https://www.cancer.gov/about-cancer/diagnosis-staging/staging). TNM staging is used for many types of solid-tumor cancers. The staging system must always be specified alongside the stage, because it establishes the meaning of the stage code(s).
+
+Non-TNM staging systems are not currently represented in mCODE, reflecting mCODE's current focus on solid tumors. In mCODE, a single patient may have more than one staging panel, although this is not common in practice.
+
+Clinical applications vary in their representation of T, N, and M staging category values, falling into one of two naming conventions:
+
+* Prefixed with a staging classification abbreviation (e.g.: _cT3_). This is the coding convention returned by American Joint Commission on Cancer (AJCC) in their digital data content retrieved via the [AJCC Application Programming Interface (API)](https://ajcc.3scale.net/).
+* Without a prefixed staging classification abbreviation (e.g.: _T3_).
+
+mCODE recommends that the implementers align with AJCC's convention of representing the staging category value _including the classification prefix_. This code convention is aligned with the AJCC's digital data and clearly distinguishes the staging classification as clinical, pathologic, or neoadjuvant without having to retrieve further context from the model. Nonetheless, separate profiles for clinical and pathological staging were developed, with an eye toward future extensibility, in particular, the ability to additional prognostic factors relevant to particular types of cancers.
+
+Several widely-used terminologies in the cancer domain, including ICD-O-3 and AJCC staging, are proprietary and cannot be reproduced in this guide. As such, some elements related to staging do not include required terminology codes. The guide does, however, indicate where it is appropriate to use codes from such terminologies.
+
+Under the [Fair Use doctrine](https://www.copyright.gov/fair-use/more-info.html), the IG includes examples illustrating mCODE's representation of cancer diagnoses and AJCC staging values for the purposes of technical implementation guidance to FHIR developers.
+
+### Profiles
+
+* Diagnosis
+  * [PrimaryCancerCondition]
+  * [SecondaryCancerCondition]
+* Staging
+  * [TNMClinicalStageGroup]
+  * [TNMClinicalPrimaryTumorCategory]
+  * [TNMClinicalRegionalNodesCategory]
+  * [TNMClinicalDistantMetastasesCategory]
+  * [TNMPathologicalStageGroup]
+  * [TNMPathologicalRegionalNodesCategory]
+  * [TNMPathologicalDistantMetastasesCategory]
+  * [TNMPathologicalDistantMetastasesCategory]
+
+### Extensions
+
+* [HistologyMorphologyBehavior]
+* [LocationQualifier]
+
+### Value Sets
+
+* **Diagnosis**
+  * [PrimaryOrUncertainBehaviorCancerDisorderVS]
+  * [SecondaryCancerDisorderVS]
+  * [CancerDisorderVS]
+  * [CancerBodyLocationVS]
+  * [LocationQualifierVS]
+  * [HistologyMorphologyBehaviorVS]
+* **Staging**
+  * [TNMStageGroupVS]
+  * [TNMPrimaryTumorCategoryVS]
+  * [TNMRegionalNodesCategoryVS]
+  * [TNMDistantMetastasesCategoryVS]
+
+{% include markdown-link-references.md %}

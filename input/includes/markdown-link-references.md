@@ -1,17 +1,16 @@
-<!-- mCODE Profiles -->
-[AdverseEventExpectation]: StructureDefinition-adverse-event-expectation.html
-[AdverseEventResolvedDate]: StructureDefinition-adverse-event-resolved-date.html
+<!-- mCODE Profiles and Extensions -->
 [BrachytherapyPrescriptionDelivery]: StructureDefinition-brachytherapy-prescription-delivery.html
-[CTCAEGrade]: StructureDefinition-ctcae-grade.html
 [CancerDiseaseStatus]: StructureDefinition-mcode-cancer-disease-status.html
 [CancerGeneticVariant]: StructureDefinition-mcode-cancer-genetic-variant.html
 [CancerGenomicsReport]: StructureDefinition-mcode-cancer-genomics-report.html
 [CancerPatient]: StructureDefinition-mcode-cancer-patient.html
 [CancerRelatedComorbiditiesElixhauser]: StructureDefinition-mcode-cancer-related-comorbidities-elixhauser.html
+[CancerRelatedMedicationAdministration]: StructureDefinition-mcode-cancer-related-medication-administration.html
 [CancerRelatedMedicationRequest]: StructureDefinition-mcode-cancer-related-medication-request.html
 [CancerRelatedSurgicalProcedure]: StructureDefinition-mcode-cancer-related-surgical-procedure.html
 [ComorbidConditionCode]: StructureDefinition-mcode-comorbid-condition-code.html
 [ComorbidConditionReference]: StructureDefinition-mcode-comorbid-condition-reference.html
+[ComorbiditiesElixhauser]: StructureDefinition-comorbidities-elixhauser
 [ComorbiditiesParent]: StructureDefinition-mcode-comorbidities-parent.html
 [ECOGPerformanceStatus]: StructureDefinition-mcode-ecog-performance-status.html
 [EvidenceType]: StructureDefinition-mcode-evidence-type.html
@@ -25,6 +24,11 @@
 [MCodePatientGroup]: StructureDefinition-group-mcode-patients.html
 [PrimaryCancerCondition]: StructureDefinition-mcode-primary-cancer-condition.html
 [RadiotherapyCourseSummary]: StructureDefinition-radiotherapy-course-summary.html
+[RadiotherapyDosePerFraction]: StructureDefinition-radiotherapy-dose-per-fraction.html
+[RadiotherapyPrescribedFractions]: StructureDefinition-radiotherapy-prescribed-fractions.html
+[RadiotherapyDeliveredFractions]: StructureDefinition-radiotherapy-delivered-fractions.html
+[RadiotherapyTotalDosePlanned]: StructureDefinition-radiotherapy-total-dose-planned.html
+[RadiotherapyTotalDoseDelivered]: StructureDefinition-radiotherapy-total-dose-delivered.html
 [RelatedPrimaryCancerCondition]: StructureDefinition-mcode-related-primary-cancer-condition.html
 [SecondaryCancerCondition]: StructureDefinition-mcode-secondary-cancer-condition.html
 [TeleradiotherapyPrescriptionDelivery]: StructureDefinition-teleradiotherapy-prescription-delivery.html
@@ -43,9 +47,9 @@
 [Tumor]: StructureDefinition-mcode-tumor.html
 
 <!-- mCODE Value Sets -->
-[AdverseEventExpectationVS]: ValueSet-adverse-event-expectation-value-set.html
-[AdverseEventRelatednessVS]: ValueSet-adverse-event-relatedness-value-set.html
-[AdverseEventSeriousnessVS]: ValueSet-adverse-event-seriousness-value-set.html
+[BrachytherapyModalityVS]: ValueSet-brachytherapy-modality-vs.html
+[BrachytherapyTechiqueVS]: ValueSet-brachytherapy-technique-vs.html
+[BrachytherapyDeviceVS]: ValueSet-brachytherapy-device-vs.html
 [CTCAEGradeVS]: ValueSet-ctcae-grade-value-set.html
 [CTCAEPreferredTermVS]: ValueSet-ctcae-preferred-term-value-set.html
 [CancerBodyLocationVS]: ValueSet-mcode-cancer-body-location-vs.html
@@ -56,9 +60,15 @@
 [ClinVarVS]: ValueSet-mcode-clinvar-vs.html
 [ConditionStatusTrendVS]: ValueSet-mcode-condition-status-trend-vs.html
 [DNAChangeTypeVS]: ValueSet-mcode-dna-change-type-vs.html
+[ElixhauserAIDSVS]: ValueSet-elixhauser-aids-vs.html
 [ElixhauserAlcoholAbuseVS]: ValueSet-elixhauser-alcohol-abuse-vs.html
 [ElixhauserBloodLossAnemiaVS]: ValueSet-elixhauser-blood-loss-anemia-vs.html
-[ElixhauserCardiacArrhythmiaVS]: ValueSet-elixhauser-cardiac-arrhythmia-vs.html
+[ElixhauserCancerLeukemiaVS]: ValueSet-elixhauser-cancer-leukemia-vs.html
+[ElixhauserCancerLymphomaVS]: ValueSet-elixhauser-cancer-lymphoma-vs.html
+[ElixhauserCancerMetastaticVS]: ValueSet-elixhauser-cancer-metastatic-vs.html
+[ElixhauserCancerSolidTumorInSituVS]: ValueSet-elixhauser-cancer-solid-tumor-in-situ-vs.html
+[ElixhauserCancerSolidTumorMalignantVS]: ValueSet-elixhauser-cancer-solid-tumor-malignant-vs.html
+[ElixhauserCerebrovascularDiseaseVS]: ValueSet-elixhauser-cerebrovascular-disease-vs.html
 [ElixhauserChronicPulmonaryDiseaseVS]: ValueSet-elixhauser-chronic-pulmonary-disease-vs.html
 [ElixhauserCoagulationDeficiencyVS]: ValueSet-elixhauser-coagulation-deficiency-vs.html
 [ElixhauserCongestiveHeartFailureVS]: ValueSet-elixhauser-congestive-heart-failure-vs.html
@@ -68,23 +78,23 @@
 [ElixhauserDiabetesUncomplicatedVS]: ValueSet-elixhauser-uncomplicated-diabetes-vs.html
 [ElixhauserDrugAbuseVS]: ValueSet-elixhauser-drug-abuse-vs.html
 [ElixhauserFluidElectrolyteDisordersVS]: ValueSet-elixhauser-fluid-electrolyte-vs.html
-[ElixhauserHIVAIDSVS]: ValueSet-elixhauser-hiv-aids-vs.html
 [ElixhauserHypertensionComplicatedVS]: ValueSet-elixhauser-hypertension-complicated-vs.html
 [ElixhauserHypertensionUncomplicatedVS]: ValueSet-elixhauser-hypertension-uncomplicated-vs.html
 [ElixhauserHypothyroidismVS]: ValueSet-elixhauser-hypothyroidism-vs.html
-[ElixhauserLiverDiseaseVS]: ValueSet-elixhauser-liver-disease-vs.html
-[ElixhauserLymphomaVS]: ValueSet-elixhauser-lymphoma-vs.html
-[ElixhauserCancerMetastaticVS]: ValueSet-elixhauser-cancer-metastatic-vs.html
+[ElixhauserLiverDiseaseMildVS]: ValueSet-elixhauser-liver-disease-mild-vs.html
+[ElixhauserLiverDiseaseSevereVS]: ValueSet-elixhauser-liver-disease-severe-vs.html
+[ElixhauserNeurologicalMovementDisorderVS]: ValueSet-elixhauser-neurological-movement-disorder-vs.html
+[ElixhauserNeurologicalSeizureDisorderVS]: ValueSet-elixhauser-neurological-seizure-disorder-vs.html
 [ElixhauserObesityVS]: ValueSet-elixhauser-obesity-vs.html
 [ElixhauserOtherNeurologicalVS]: ValueSet-elixhauser-other-neurological-vs.html
+[ElixhauserOtherThyroidDisorderVS]: ValueSet-elixhauser-other-thyroid-disorder-vs.html
 [ElixhauserParalysisVS]: ValueSet-elixhauser-paralysis-vs.html
 [ElixhauserPeripheralVascularDiseaseVS]: ValueSet-elixhauser-peripheral-vascular-disease-vs.html
 [ElixhauserPsychosesVS]: ValueSet-elixhauser-psychoses-vs.html
-[ElixhauserPulmonaryCirculationDisordersVS]: ValueSet-elixhauser-pulmonary-circulation-disorders-vs.html
-[ElixhauserRenalFailureVS]: ValueSet-elixhauser-renal-failure-vs.html
+[ElixhauserPulmonaryCirculationDisorderVS]: ValueSet-elixhauser-pulmonary-circulation-disorder-vs.html
+[ElixhauserRenalFailureModerateVS]: ValueSet-elixhauser-renal-failure-moderate-vs.html
+[ElixhauserRenalFailureSevereVS]: ValueSet-elixhauser-renal-failure-severe-vs.html
 [ElixhauserRheumatoidArthritisVS]: ValueSet-elixhauser-rheumatoid-arthritis-vs.html
-[ElixhauserCancerSolidTumorInSituVS]: ValueSet-elixhauser-cancer-solid-tumor-in-situ-vs.html
-[ElixhauserCancerSolidTumorMalignantVS]: ValueSet-elixhauser-cancer-solid-tumor-malignant-vs.html
 [ElixhauserUlcerVS]: ValueSet-elixhauser-ulcer-vs.html
 [ElixhauserValvularDiseaseVS]: ValueSet-elixhauser-valvular-disease-vs.html
 [ElixhauserWeightLossVS]: ValueSet-elixhauser-weight-loss-vs.html
@@ -95,12 +105,11 @@
 [LocationQualifierVS]: ValueSet-mcode-location-qualifier-vs.html
 [PresentAbsentUnknownVS]: ValueSet-mcode-present-absent-unknown.html
 [PrimaryOrUncertainBehaviorCancerDisorderVS]: ValueSet-mcode-primary-or-uncertain-behavior-cancer-disorder-vs.html
-
-[RadiationProcedureVS]: ValueSet-mcode-radiation-procedure-vs.html
 [RadiationTargetBodySiteVS]: ValueSet-mcode-radiation-target-body-site-vs.html
-
-
 [SecondaryCancerDisorderVS]: ValueSet-mcode-secondary-cancer-disorder-vs.html
+[TeleradiotherapyModalityVS]: ValueSet-teleradiotherapy-modality-vs.html
+[TeleradiotherapyTechiqueVS]: ValueSet-teleradiotherapy-technique-vs.html
+[TeleradiotherapyDeviceVS]: ValueSet-teleradiotherapy-device-vs.html
 [TNMDistantMetastasesCategoryVS]: ValueSet-mcode-tnm-distant-metastases-category-vs.html
 [TNMPrimaryTumorCategoryVS]: ValueSet-mcode-tnm-primary-tumor-category-vs.html
 [TNMRegionalNodesCategoryVS]: ValueSet-mcode-tnm-regional-nodes-category-vs.html
@@ -110,6 +119,10 @@
 [TumorMarkerTestVS]: ValueSet-mcode-tumor-marker-test-vs.html
 [TumorSizeMethodVS]: ValueSet-mcode-tumor-size-method-vs.html
 [TumorSizeUnitsVS]: ValueSet-mcode-tumor-size-units-vs.html
+
+<!-- mCODE Code Systems -->
+[ElixhauserCategoryCS]: CodeSystem-elixhauser-category-cs.html
+[RadiotherapyCS]: CodeSystem-radiotherapy-cs.html
 
 <!-- mCODE CapabilityStatements -->
 [MCODECapabilityStatementPatientBundle]: CapabilityStatement-mcode-receiver-patient-bundle.html

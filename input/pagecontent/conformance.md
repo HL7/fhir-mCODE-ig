@@ -183,6 +183,10 @@ In other words, a data element may be `1..1`, but if it is contained by an optio
 
 For every required element in mCODE, Data Senders MUST either (1) provide data for the element; or (2) follow [US Core's rules](http://hl7.org/fhir/us/core/general-guidance.html#missing-data) for handling missing data for required elements. mCODE Data Senders MUST NOT substitute a nonsense or filler value just to satisfy the cardinality requirement for a required element.
 
+### Representing Provenance
+
+Provenance information includes the "who, what, when, where, why" associated with collection, transfer, and updating of clinical information. mCODE relies on FHIR's native mechanisms for recording and tracking provenance. As such, mCODE shares all the capabilities and limitations of FHIR provenance tracking. The user should refer to the [FHIR specification](https://www.hl7.org/fhir/provenance.html) for more information.
+
 {% include markdown-link-references.md %}
 
 <!-- Provide some spacing around the horizontal lines that separate the main sections. -->

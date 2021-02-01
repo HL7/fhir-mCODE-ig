@@ -23,7 +23,8 @@ The mCODE **Patient Information** group contains the following information about
 * [ComorbidConditionReference]
 
 ### Value Sets
-* [PresentAbsentUnknown]
+
+* [PresentAbsentUnknownVS]
 * **Comorbid Condition Categories**
   * [ElixhauserAidsVS]
   * [ElixhauserAlcoholAbuseVS]

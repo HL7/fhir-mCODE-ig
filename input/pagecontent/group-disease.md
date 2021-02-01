@@ -19,6 +19,7 @@ Because the use of these code systems vary in different institutions, mCODE supp
 | **SNOMED Encoded** | Any descendant of `363346000` "Malignant neoplastic disease (disorder)" | Any descendant of `367651003` "Malignant neoplasm of primary, secondary, or uncertain origin (morphologic abnormality)" | Any descendant of `123037004` "Body structure" |
 | **ICD-10-CM Encoded** | Any ICD-10-CM primary code (precoodinated) | n/a | n/a |
 | **ICD-O-3 Encoded** | The code `363346000` "Malignant neoplastic disease (disorder)" | Any ICD-O-3 Morphology Code (including /1, /2, or /3 suffix for primary cancers, and /6 suffix for secondary cancers) | Any ICD-O-3 Topology Code |
+{: .grid }
 
 Implementers should reference the [PrimaryCancerCondition] and [SecondaryCancerCondition] profiles for further details on the use of these terminologies and associated value sets.
 

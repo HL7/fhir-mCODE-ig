@@ -20,7 +20,7 @@
 [KarnofskyPerformanceStatus]: StructureDefinition-mcode-karnofsky-performance-status.html
 [LocationQualifier]: StructureDefinition-mcode-location-qualifier.html
 [MCODEPatientBundle]: StructureDefinition-mcode-patient-bundle.html
-[MCodeCapabilityStatement]: StructureDefinition-MCodeCapabilityStatement.html
+[CapabilityStatement]: StructureDefinition-CapabilityStatement.html
 [PrimaryCancerCondition]: StructureDefinition-mcode-primary-cancer-condition.html
 [RadiotherapyCourseSummary]: StructureDefinition-radiotherapy-course-summary.html
 [RadiotherapyDosePerFraction]: StructureDefinition-radiotherapy-dose-per-fraction.html
@@ -72,6 +72,7 @@
 [ElixhauserCoagulationDeficiencyVS]: ValueSet-elixhauser-coagulation-deficiency-vs.html
 [ElixhauserCongestiveHeartFailureVS]: ValueSet-elixhauser-congestive-heart-failure-vs.html
 [ElixhauserDeficiencyAnemiaVS]: ValueSet-elixhauser-deficiency-anemia-vs.html
+[ElixhauserDementiaVS]: ValueSet-elixhauser-dementia-vs.html
 [ElixhauserDepressionVS]: ValueSet-elixhauser-depression-vs.html
 [ElixhauserDiabetesComplicatedVS]: ValueSet-elixhauser-diabetes-complicated-vs.html
 [ElixhauserDiabetesUncomplicatedVS]: ValueSet-elixhauser-diabetes-uncomplicated-vs.html
@@ -107,7 +108,7 @@
 [RadiationTargetBodySiteVS]: ValueSet-mcode-radiation-target-body-site-vs.html
 [SecondaryCancerDisorderVS]: ValueSet-mcode-secondary-cancer-disorder-vs.html
 [TeleradiotherapyModalityVS]: ValueSet-teleradiotherapy-modality-vs.html
-[TeleradiotherapyTechiqueVS]: ValueSet-teleradiotherapy-technique-vs.html
+[TeleradiotherapyTechniqueVS]: ValueSet-teleradiotherapy-technique-vs.html
 [TeleradiotherapyDeviceVS]: ValueSet-teleradiotherapy-device-vs.html
 [TNMDistantMetastasesCategoryVS]: ValueSet-mcode-tnm-distant-metastases-category-vs.html
 [TNMPrimaryTumorCategoryVS]: ValueSet-mcode-tnm-primary-tumor-category-vs.html
@@ -124,16 +125,6 @@
 [RadiotherapyCS]: CodeSystem-radiotherapy-cs.html
 
 <!-- mCODE CapabilityStatements -->
-[MCODECapabilityStatementPatientBundle]: CapabilityStatement-mcode-receiver-patient-bundle.html
-[MCODECapabilityStatementPatientBundle]: CapabilityStatement-mcode-sender-patient-bundle.html
-[MCODECapabilityStatementReceiverConditionsThenPatients]: CapabilityStatement-mcode-receiver-cancer-conditions-then-patients.html
-[MCODECapabilityStatementReceiverPatientsAndCancerConditions]: CapabilityStatement-mcode-receiver-patients-and-cancer-conditions.html
-[MCODECapabilityStatementReceiverPatientsInGroup]: CapabilityStatement-mcode-receiver-patients-in-group.html
-[MCODECapabilityStatementReceiverPatientsWithCancerCondition]: CapabilityStatement-mcode-receiver-patients-with-cancer-condition.html
-[MCODECapabilityStatementSenderConditionsThenPatients]: CapabilityStatement-mcode-sender-cancer-conditions-then-patients.html
-[MCODECapabilityStatementSenderPatientsAndCancerConditions]: CapabilityStatement-mcode-sender-patients-and-cancer-conditions.html
-[MCODECapabilityStatementSenderPatientsInGroup]: CapabilityStatement-mcode-sender-patients-in-group.html
-[MCODECapabilityStatementSenderPatientsWithCancerCondition]: CapabilityStatement-mcode-sender-patients-with-cancer-condition.html
 [mcode-receiver-cancer-conditions-then-patients]: CapabilityStatement-mcode-receiver-cancer-conditions-then-patients.html
 [mcode-receiver-patient-bundle]: CapabilityStatement-mcode-receiver-patient-bundle.html
 [mcode-receiver-patients-and-cancer-conditions]: CapabilityStatement-mcode-receiver-patients-and-cancer-conditions.html
@@ -144,6 +135,9 @@
 [mcode-sender-patients-and-cancer-conditions]: CapabilityStatement-mcode-sender-patients-and-cancer-conditions.html
 [mcode-sender-patients-in-group]: CapabilityStatement-mcode-sender-patients-in-group.html
 [mcode-sender-patients-with-cancer-condition]: CapabilityStatement-mcode-sender-patients-with-cancer-condition.html
+
+<!-- Operations -->
+[mcode-patient-everything]: OperationDefinition-mcode-patient-everything
 
 <!-- US Core -->
 [USCoreLaboratoryResultObservationProfile]: http://hl7.org/fhir/us/core/StructureDefinition-us-core-observation-lab.html

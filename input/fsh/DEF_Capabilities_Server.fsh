@@ -64,7 +64,7 @@ Instance: mcode-sender-patients-in-group
 InstanceOf: CapabilityStatement
 Usage: #definition
 * description = "Capabilities for an mCODE Data Sender where not all cancer patients conform to mCODE. Retrieves a Group of references to Patient resources that conform to mCODE, and allows for the full Patient resources to be retrieved in a subsequent request."
-* name = "MCODECapabilityStatementSenderPatientsInGroup"
+* name = "CapabilityStatementSenderPatientsInGroup"
 * title = "mCODE Data Sender: Get Patients in Group"
 
 * insert mCODE_CapabilityStatement_Server_Common
@@ -97,7 +97,7 @@ Instance: mcode-sender-patients-with-cancer-condition
 InstanceOf: CapabilityStatement
 Usage: #definition
 * description = "Uses reverse chaining to retrieve a Bundle of Patient resources with a condition code in mCODE's cancer condition value set."
-* name = "MCODECapabilityStatementSenderPatientsWithCancerCondition"
+* name = "CapabilityStatementSenderPatientsWithCancerCondition"
 * title = "mCODE Data Sender CapabilityStatement: Get mCODE Patients using reverse chaining"
 
 * insert mCODE_CapabilityStatement_Server_Common
@@ -135,7 +135,7 @@ Instance: mcode-sender-patients-and-cancer-conditions
 InstanceOf: CapabilityStatement
 Usage: #definition
 * description = "Uses `_include` to retrieve a Bundle of Condition resources with a code in mCODE's cancer condition value set, along with the associated Patient resources. Use ONLY when reverse chaining is not available on the system."
-* name = "MCODECapabilityStatementSenderPatientsAndCancerConditions"
+* name = "CapabilityStatementSenderPatientsAndCancerConditions"
 * title = "mCODE Data Sender CapabilityStatement: Get mCODE Patients (and associated Conditions) using _include"
 
 * insert mCODE_CapabilityStatement_Server_Common
@@ -154,7 +154,7 @@ Instance: mcode-sender-cancer-conditions-then-patients
 InstanceOf: CapabilityStatement
 Usage: #definition
 * description = "Retrieves a Bundle of Condition resources with a code in mCODE's cancer condition value set, and allows for associated Patient resources to be retrieved in a subsequent request. Use ONLY when reverse chaining AND `_include` are not available on the system."
-* name = "MCODECapabilityStatementSenderConditionsThenPatients"
+* name = "CapabilityStatementSenderConditionsThenPatients"
 * title = "mCODE Data Sender: Get Conditions then Patients"
 
 * insert mCODE_CapabilityStatement_Server_Common
@@ -179,7 +179,7 @@ Instance: mcode-sender-patient-bundle
 InstanceOf: CapabilityStatement
 Usage: #definition
 * description = "Retrieves a Bundle of Condition resources with a code in mCODE's cancer condition value set, and allows for associated Patient resources to be retrieved in a subsequent request. Use ONLY when reverse chaining AND `_include` are not available on the system."
-* name = "MCODECapabilityStatementPatientBundle"
+* name = "CapabilityStatementPatientBundle"
 * title = "mCODE Data Sender: Get Bundle for a Patient"
 
 * insert mCODE_CapabilityStatement_Server_Common

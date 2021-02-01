@@ -1,12 +1,12 @@
 ### Usage
 
-The following table shows valid combinations of modality, technique, and device for brachytherapy. They are not enforced in the profile. Other combinations and additional techniques may be possible. The modality is represented by Procedure.code, techique using the radiotherapyTechnique extension, and device by Procedure.usedCode.
+The following table shows valid combinations of modality, technique, and device for brachytherapy. They are not enforced in the profile. Other combinations and additional techniques may be possible. The modality is represented by Procedure.code, technique using the radiotherapyTechnique extension, and device by Procedure.usedCode.
 
 | **Brachytherapy Modality**    | **Technique (Delivery Method)**                  | **Delivery Device**                          |
 | ----------------------------- | ------------------------------------------------ | -------------------------------------------- |
 | Low Dose Rate                 | Intracavitary                                    | Tandem, Cylinder, Ovoids, Ring               |
-| Low Dose Rate                 | Interstitial – Permanent                         | Seeds                                        |
-| Low Dose Rate                 | Interstitial – Temporary                         | Catheter                                     |
+| Low Dose Rate                 | Interstitial - Permanent                         | Seeds                                        |
+| Low Dose Rate                 | Interstitial - Temporary                         | Catheter                                     |
 | Low Dose Rate                 | Surface - Temporary                              | Eye Plaque                                   |
 | Pulse Dose Rate               | Intracavitary                                    | Tandem, Cylinder, Ovoids, Ring,  Catheter    |
 | Pulse Dose Rate               | Interstitial                                     | Catheter, Hybrid (e.g., ring+tandem+needles) |

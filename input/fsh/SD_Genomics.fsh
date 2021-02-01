@@ -104,13 +104,12 @@ Description:    "The result of a tumor marker test. Tumor marker tests are gener
 * code obeys tumor-marker-test-code-invariant
 * subject only Reference(CancerPatient)
 * effective[x] only dateTime or Period
-* performer only Reference(Practitioner)
 * value[x] only Quantity or Ratio or CodeableConcept
 * component 0..0 // needed to distinguish from cancerGeneticVariant and genomicRegionStudied in bundle MK 10/29/2020
 
 Invariant: tumor-marker-test-code-invariant
 Description: "If the code representing 'Other tumor marker test, specify' is used, a second code from outside the original value set must be present."
-Expression: "coding.where(code = 'OtherTumorMarkerTest').exists() implies coding.where(code != 'OtherTumorMarkerTest' and $this.memberOf('http://hl7.org/fhir/us/mcode/ValueSet/mcode-tumor-marker-test-vs').not()).exists()"
+Expression: "coding.where(code = 'TMT-OTHER').exists() implies coding.where(code != 'TMT-OTHER' and $this.memberOf('http://hl7.org/fhir/us/mcode/ValueSet/mcode-tumor-marker-test-vs').not()).exists()"
 Severity:   #error
 
 

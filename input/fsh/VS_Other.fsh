@@ -41,17 +41,16 @@ Description: "Includes surgical procedure codes from SNOMED CT, ICD-10-PCS and C
 * include codes from system ICD10PCS
 
 
-CodeSystem: OtherCode
-Id: mcode-other-code-cs
-Title: "OtherCode Code System"
-Description: "A code system containing codes that signify a code outside a specified value set has been used, using an 'Other ____, Specify' approach."
-* #OtherPrimaryCancerCondition "Other Primary Cancer Condition, Specify" "Code to be used for concepts not represented elsewhere in the value set. Specify the desired concept as an additional coding."
-* #OtherSecondaryCancerCondition "Other Secondary Cancer Condition, Specify" "Code to be used for concepts not represented elsewhere in the value set. Specify the desired concept as an additional coding."
-* #OtherTumorMarkerTest "Other Tumor Marker Test, Specify" "Code to be used for concepts not represented elsewhere in the value set. Specify the desired concept as an additional coding."
-* #OtherCancerDisorder "Other Cancer Disorder, Specify" "Code to be used for concepts not represented elsewhere in the value set. Specify the desired concept as an additional coding."
-* #OtherHistologyMorphologyBehavior "Other Histology Morphology Behavior, Specify" "Code to be used for concepts not represented elsewhere in the value set. Specify the desired concept as an additional coding."
-* #OtherBrachytherapyModality "Other Brachytherapy Modality, Specify" "Code to be used for concepts not represented elsewhere in the value set. Specify the desired concept as an additional coding."
-* #OtherTeleradiotherapyModality "Other Teleradiotherapy Modality, Specify" "Code to be used for concepts not represented elsewhere in the value set. Specify the desired concept as an additional coding."
+CodeSystem: MCODE
+Id: mcode-cs
+Title: "mCODE Code System"
+Description: "Codes defined by mCODE."
+* #PCC-OTHER "Other Primary Cancer Condition, Specify" "Code to be used when the desired concept is not represented base value set. This code represents the equivalent of 'Other, specify: _________'. Specify the additional concept as the second coding."
+* #SCC-OTHER "Other Secondary Cancer Condition, Specify" "Code to be used when the desired concept is not represented base value set. This code represents the equivalent of 'Other, specify: _________'. Specify the additional concept as the second coding."
+* #TMT-OTHER "Other Tumor Marker Test, Specify" "Code to be used when the desired concept is not represented base value set. This code represents the equivalent of 'Other, specify: _________'. Specify the additional concept as the second coding."
+* #CD-OTHER "Other Cancer Disorder, Specify" "Code to be used when the desired concept is not represented base value set. This code represents the equivalent of 'Other, specify: _________'. Specify the additional concept as the second coding."
+* #HMB-OTHER "Other Histology Morphology Behavior, Specify" "Code to be used when the desired concept is not represented base value set. This code represents the equivalent of 'Other, specify: _________'. Specify the additional concept as the second coding."
+
 
 ValueSet: LocationQualifierVS
 Id: mcode-location-qualifier-vs

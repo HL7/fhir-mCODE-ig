@@ -11,9 +11,9 @@ This is a set of experimental profiles for representing the dimensions of a tumo
 | ValueSet | [TumorSizeUnitsVS] | Limits units to `mm` or `cm`  | n/a                 |
 
 [TumorSize]: StructureDefinition-mcode-tumor-size.html
-[TumorSize example]: Observation-example1-mcode-tumor-size.html
+[TumorSize example]: Observation-tumor-size-pathology.html
 [Tumor]: StructureDefinition-mcode-tumor.html
-[Tumor example]: BodyStructure-example1-mcode-tumor.html
+[Tumor example]: BodyStructure-tumor-lobular-carcinoma-left-breast.html
 [TumorSizeUnitsVS]: ValueSet-mcode-tumor-size-units-vs.html
 
 #### Usage notes

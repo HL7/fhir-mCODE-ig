@@ -32,13 +32,14 @@ RuleSet:  RadiotherapyPrescriptionDeliveryRS
 * partOf only Reference(RadiotherapyCourseSummary)
 * partOf ^definition = "PrescriptionDelivery-conforming resources should reference a RadiotherapyCourseSummary-conforming resource."
 * extension contains
-    RadiotherapyTechnique named radiotherapyTechnique 0..1 MS and
+    procedure-method named radiotherapyTechnique 0..1 MS and
     RadiotherapyDosePerFraction named radiotherapyDosePerFraction 0..1 MS and
     RadiotherapyPrescribedFractions named radiotherapyPrescribedFractions 0..1 MS and
     RadiotherapyDeliveredFractions named radiotherapyDeliveredFractions 0..1 MS and
     RadiotherapyTotalDosePlanned named radiotherapyTotalDosePlanned 0..1 MS and
     RadiotherapyTotalDoseDelivered named radiotherapyTotalDoseDelivered 0..1 MS
-
+* extension[radiotherapyTechnique] ^short = "Radiotherapy Technique"
+* extension[radiotherapyTechnique] ^definition =  "The method by which a radiation modality is applied (e.g., intensity modulated radiation therapy, intraoperative radiation therapy)."
 
 Profile:  TeleradiotherapyPrescriptionDelivery
 Parent:   USCoreProcedure
@@ -50,9 +51,8 @@ Description: "A summary of delivered teleradiotherapy treatment. The scope is a 
 * code ^short = "Modality"
 * code ^definition = "The modality (radiation type) for the external beam procedure."
 * code obeys teleradiotherapy-procedure-code-invariant
-* extension[radiotherapyTechnique].valueString from TeleradiotherapyTechniqueVS (extensible)
+* extension[radiotherapyTechnique].value[x] from TeleradiotherapyTechniqueVS (extensible)
 * usedCode from TeleradiotherapyDeviceVS (extensible)
-
 
     Invariant: teleradiotherapy-procedure-code-invariant
     Description: "If the code 'Other Teleradiotherapy Modality, specify' is used, a second code from outside the original value set must be present."
@@ -69,7 +69,7 @@ Description: "A summary of delivered brachytherapy treatment. The scope is a pre
 * code obeys brachytherapy-code-invariant
 * code ^short = "Brachytherapy Modality"
 * code ^definition = "The modality of the brachytherapy procedure."
-* extension[radiotherapyTechnique].valueString from BrachytherapyTechniqueVS (extensible)
+* extension[radiotherapyTechnique].value[x] from BrachytherapyTechniqueVS (extensible)
 * usedCode from BrachytherapyDeviceVS (extensible)
 
     Invariant: brachytherapy-code-invariant
@@ -77,17 +77,16 @@ Description: "A summary of delivered brachytherapy treatment. The scope is a pre
     Expression: "coding.where(code = 'OtherBrachytherapyModality').exists() implies coding.where(code != 'OtherBrachytherapyModality' and $this.memberOf('http://hl7.org/fhir/us/mcode/ValueSet/brachytherapy-modality-vs').not()).exists()"
     Severity:   #error
 
-// TO DO: Use standard extension procedure-method IF the cardinality will be 0..1
+// TO DO: 
+/* Replaced with standard extension 'procedure-method'. If the cardinality needs to be changed to 0..* later, we will need this extension
 Extension: RadiotherapyTechnique
 Id: radiotherapy-technique
-Title: "Radiation Procedure Technique"
+Title: "Radiotherapy Technique"
 Description: "The method by which a radiation modality is applied (e.g., intensity modulated radiation therapy, intraoperative radiation therapy)."
-* . ^short = "Radiation Procedure Technique"
-* . ^definition = "The method by which a radiation modality is applied (e.g., intensity modulated radiation therapy, intraoperative radiation therapy)."
 * ^context[0].type = #element
 * ^context[0].expression = "Procedure"
-* value[x] only string
-
+* value[x] only CodeableConcept
+*/
 
 Extension: RadiotherapyDosePerFraction
 Id: radiotherapy-dose-per-fraction

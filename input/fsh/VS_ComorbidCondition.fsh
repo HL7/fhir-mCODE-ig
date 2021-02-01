@@ -1,5 +1,5 @@
 CodeSystem: ElixhauserAHRQ_CS
-Id: mcode-elixhauser-category
+Id: mcode-elixhauser-category-cs
 Title: "Elixhauser Comorbidity Category"
 Description: "A code system that contains codes representing the comorbidity categories originally defined by Elixhauser, and updated by the Agency for Healthcare Research and Quality (AHRQ) Healthcare Cost and Utilization Project (H-CUP)."
 * #ElixhauserAHRQ "Elixhauser comorbidities as defined by Agency for Healthcare Research and Quality (AHRQ) Healthcare Cost and Utilization Project (H-CUP)"
@@ -1142,9 +1142,10 @@ Description:    "Elixhauser Comorbid Condition Value Set for cerebrovascular dis
 * ICD10CM#I60.11 "Ntrm subarach hemorrhage from right middle cerebral artery"
 * ICD10CM#I60.12 "Ntrm subarach hemorrhage from left middle cerebral artery"
 * ICD10CM#I60.2 "Ntrm subarach hemorrhage from anterior communicating artery"
-* ICD10CM#I60.20 "Nontraumatic subarachnoid hemorrhage from unspecified anteri"
-* ICD10CM#I60.21 "Nontraumatic subarachnoid hemorrhage from right anterior com"
-* ICD10CM#I60.22 "Nontraumatic subarachnoid hemorrhage from left anterior comm"
+// These three codes are included in ARHQ HCUP but are not recognized by the IG Publisher as valid ICD10CM codes
+//* ICD10CM#I60.20 "Nontraumatic subarachnoid hemorrhage from unspecified anteri"
+//* ICD10CM#I60.21 "Nontraumatic subarachnoid hemorrhage from right anterior com"
+//* ICD10CM#I60.22 "Nontraumatic subarachnoid hemorrhage from left anterior comm"
 * ICD10CM#I60.30 "Ntrm subarach hemor from unsp posterior communicating artery"
 * ICD10CM#I60.31 "Ntrm subarach hemor from right post communicating artery"
 * ICD10CM#I60.32 "Ntrm subarach hemor from left posterior communicating artery"

@@ -12,7 +12,6 @@ RuleSet: PerformanceStatusCommonRules
 * partOf only Reference (Procedure)
 * subject only Reference(USCorePatient)
 * effective[x] only dateTime or Period
-* performer only Reference(Practitioner)
 
 
 Profile:    KarnofskyPerformanceStatus

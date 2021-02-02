@@ -66,10 +66,10 @@ Description: "Codes describing the devices used in teleradiotherapy (external be
 * RO#RLINAC
 * RO#MRLINAC
 * RO#ROBOTIC
-* RO#ISOMS
+* RO#ISOMULTI
 * RO#KV
 * RO#NGLINAC
-* RO#MS
+* RO#MULTI
 
 ValueSet: BrachytherapyDeviceVS
 Id: brachytherapy-device-vs
@@ -132,9 +132,9 @@ Description: "Codes describing the modalities, techniques, and devices used in e
 * #MRLINAC "MRLinac" "Gantry based delivery with linear accelerator based source with onboard MRI for patient positioning."
 * #NGLINAC "Non-gantry based linear accelerator, e.g. specialty devices used for IORT, e.g. Mobetron."
 * #ROBOTIC "Robotic" "Multiple axis (other than MLCs) are moved under electronic control during delivery of dose from a single beam with linear accelerator based source. e.g. CyberKnife."
-* #ISOMS "IsotopeMS" "Multisource radiation use of multiple sources at different positons using isotope based source e.g. GammaKnife"
+* #ISOMULTI "Isotope Multisource" "Multisource radiation use of multiple sources at different positons using isotope based source e.g. GammaKnife"
 * #KV "Kilovolt" "Non-megavoltage, electronically generated photons"
-* #MS "Multisource radiation" "Multisource radiation use of multiple sources at different positons using linear accelerator-based source"
+* #MULTI "Multisource radiation" "Multisource radiation use of multiple sources at different positons using linear accelerator-based source"
 //-- Brachytherapy Devices
 * #TANDEM  "Tandem" "Tandem Brachytherapy Device"
 * #CYL  "Cylinder" "Cylinder Brachytherapy Device"
@@ -151,7 +151,7 @@ Description: "Codes describing the modalities, techniques, and devices used in e
 ValueSet: RadiationTargetBodySiteVS
 Id: mcode-radiation-target-body-site-vs
 Title: "Radiation Target Body Site Value Set"
-Description:    "Codes for body sites that can be targets of radiation therapy. This list of sites is based on Commission on Cancer’s 'Standards for Oncology Registry Entry  - STORE 2018'. This value set contains SNOMED CT equivalent terms."
+Description: "Codes for body sites that can be targets of radiation therapy. This list of sites is based on Commission on Cancer’s 'Standards for Oncology Registry Entry  - STORE 2018'. This value set contains SNOMED CT equivalent terms."
 * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
 * SCT#81105003       "Cervical lymph node group (body structure)"
 * SCT#196374005       "Entire lymph node of thorax (body structure)"

@@ -65,8 +65,8 @@ Description: "Comorbid condition checklist and optional risk score, using Elixha
     obesity 0..1 and
     paralysis 0..1 and
     peripheralVascularDisease 0..1 and
-    psychoses 0..1 and
-    pulmonaryCirculationDisorders 0..1 and
+    psychosis 0..1 and
+    pulmonaryCirculationDisorder 0..1 and
     renalFailureModerate 0..1 and
     renalFailureSevere 0..1 and
     hypothyroidism 0..1 and
@@ -133,10 +133,10 @@ Description: "Comorbid condition checklist and optional risk score, using Elixha
 * component[paralysis] ^short = "Paralysis"
 * component[peripheralVascularDisease].code = ElixhauserAHRQ_CS#PERIVASC
 * component[peripheralVascularDisease] ^short = "Peripheral Vascular Disease"
-* component[psychoses].code = ElixhauserAHRQ_CS#PSYCHOSES
-* component[psychoses] ^short = "Psychoses"
-* component[pulmonaryCirculationDisorders].code = ElixhauserAHRQ_CS#PULMCIRC
-* component[pulmonaryCirculationDisorders] ^short = "Pulmonary Circulation Disorders"
+* component[psychosis].code = ElixhauserAHRQ_CS#PSYCHOSIS
+* component[psychosis] ^short = "Psychosis"
+* component[pulmonaryCirculationDisorder].code = ElixhauserAHRQ_CS#PULMCIRC
+* component[pulmonaryCirculationDisorder] ^short = "Pulmonary Circulation Disorders"
 * component[renalFailureModerate].code = ElixhauserAHRQ_CS#RENLFL_MOD
 * component[renalFailureModerate] ^short = "Moderate Renal Failure"
 * component[renalFailureSevere].code = ElixhauserAHRQ_CS#RENLFL_SEV
@@ -183,8 +183,8 @@ Description: "Comorbid condition checklist and optional risk score, using Elixha
 * component[obesity].extension[conditionCode].value[x] from ElixhauserObesityVS
 * component[paralysis].extension[conditionCode].value[x] from ElixhauserParalysisVS
 * component[peripheralVascularDisease].extension[conditionCode].value[x] from ElixhauserPeripheralVascularDiseaseVS
-* component[psychoses].extension[conditionCode].value[x] from ElixhauserPsychosesVS
-* component[pulmonaryCirculationDisorders].extension[conditionCode].value[x] from ElixhauserPulmonaryCirculationDisordersVS
+* component[psychosis].extension[conditionCode].value[x] from ElixhauserPsychosisVS
+* component[pulmonaryCirculationDisorder].extension[conditionCode].value[x] from ElixhauserPulmonaryCirculationDisorderVS
 * component[renalFailureModerate].extension[conditionCode].value[x] from ElixhauserRenalFailureModerateVS
 * component[renalFailureSevere].extension[conditionCode].value[x] from ElixhauserRenalFailureSevereVS
 * component[hypothyroidism].extension[conditionCode].value[x] from ElixhauserHypothyroidismVS

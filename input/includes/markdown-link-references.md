@@ -137,7 +137,7 @@
 [mcode-sender-patients-with-cancer-condition]: CapabilityStatement-mcode-sender-patients-with-cancer-condition.html
 
 <!-- Operations -->
-[mcode-patient-everything]: OperationDefinition-mcode-patient-everything
+[mcode-patient-everything]: OperationDefinition-mcode-patient-everything.html
 
 <!-- US Core -->
 [USCoreLaboratoryResultObservationProfile]: http://hl7.org/fhir/us/core/StructureDefinition-us-core-observation-lab.html

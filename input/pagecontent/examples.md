@@ -1,6 +1,6 @@
 In addition to individual examples of each profile, this extended example demonstrates how mCODE can be used to represent a clinically realistic scenario. When information in the scenario does not map onto mCODE profiles, we provide examples using [USCore](http://hl7.org/fhir/us/core/index.html) or standard FHIR resources.
 
-#### Patient description
+### Patient description
 
 Patient Jenny M. is a 55 year old non-Hispanic white female with a past medical history significant for depression, a 20-pack-year history of smoking (current smoker), anxiety, and hypertension. Her family history was significant for a maternal aunt with ovarian cancer at age 69, a sister with breast cancer at age 64, and deceased paternal uncle due to pancreatic cancer.
 
@@ -14,7 +14,7 @@ A [21-gene RT-PCR assay](https://www.oncotypeiq.com/en-US/breast-cancer/healthca
 
 The patient is two years out from surgery and has undergone surveillance imaging and has no evidence of recurrent disease or new imaging. She continues to take adjuvant endocrine therapy (anastrozole).
 
-#### FHIR instances from mCODE elements
+### FHIR instances from mCODE elements
 
 * [`cancer-patient-jenny-m`](Patient-cancer-patient-jenny-m.html) ([CancerPatient])
 * [`cancer-disease-status-jenny-m`](Observation-cancer-disease-status-jenny-m.html) ([CancerDiseaseStatus])
@@ -44,7 +44,7 @@ The patient is two years out from surgery and has undergone surveillance imaging
 * [`teleradiotherapy-prescription-delivery-jenny-m`](Procedure-teleradiotherapy-prescription-delivery-jenny-m.html) ([TeleradiotherapyPrescriptionDelivery])
 
 
-#### FHIR instances from _non_-mCODE elements
+### FHIR instances from _non_-mCODE elements
 
 * [`us-core-practitioner-owen-oncologist`](Practitioner-us-core-practitioner-owen-oncologist.html) (US Core Practitioner)
 * [`us-core-procedure-biopsy-jenny-m`](Procedure-us-core-procedure-biopsy-jenny-m.html) (US Core Procedure)
@@ -62,5 +62,3 @@ The patient is two years out from surgery and has undergone surveillance imaging
 * [`us-core-observation-lab-sentinel-nodes-jenny-m`](Observation-us-core-observation-lab-sentinel-nodes-jenny-m.html) (Observation)
 * [`jenny-m-2018-03-06`](Observation-tumor-size-jenny-m.html) (Observation)
 * [`scenario1-observation-dcis`](Observation-us-core-observation-lab-tumor-dcis.html) (Observation)
-
-

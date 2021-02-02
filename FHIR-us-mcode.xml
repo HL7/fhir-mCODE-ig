@@ -274,8 +274,7 @@
 <page key="conformance" name="Conformance"/>
 <page key="group-disease" name="Disease Characterization"/>
 <page key="downloads" name="Downloads"/>
-<page key="examples" name="Examples Overview"/>
-<page key="experimental" name="Experimental Artifacts"/>
+<page key="examples" name="Extended Example"/>
 <page deprecated="true" key="extensions" name="Extensions"/>
 <page key="group-genomics" name="Genomics"/>
 <page deprecated="true" key="history" name="History"/>

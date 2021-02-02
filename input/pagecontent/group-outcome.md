@@ -12,6 +12,9 @@ In addition, the history of tumor size is indicative of treatment efficacy. Prof
 
 Date of death data can be obtained from several sources outside of the clinical setting. If available in the EHR, it can be reported through via mCODE, but more likely, it will be filled in from vital records, after the last clinical interaction.
 
+### Tumor Size
+
+Changes in tumor size provide an objective measure of disease progression. Tumors must be identified and tracked for comparisons to be made, over time. The [Tumor] profile provides persistent identification of a tumor that can be related to more than one [TumorSize] measurement, if the tumor is still in the body. However, if a tumor has been removed from the body, a [Specimen](http://hl7.org/fhir/R4/specimen.html) resource should be used to record details of the tumor source.
 
 ### Profiles
 

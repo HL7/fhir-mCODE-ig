@@ -21,7 +21,7 @@ Vital signs are measurements of the most essential, or "vital" body functions. F
 ### Profiles
 
 * [FHIR Vital Signs](https://www.hl7.org/fhir/observation-vitalsigns.html)
-* [US Core Vital Signs](http://hl7.org/fhir/us/core/2021Jan/StructureDefinition-us-core-vital-signs.html) (version 3.2 and higher)
+* [US Core Vital Signs](https://hl7.org/fhir/us/core/2021Jan/StructureDefinition-us-core-vital-signs.html) (version 3.2 and higher)
 * [TumorMarkerTest]
 
 ### Value Set

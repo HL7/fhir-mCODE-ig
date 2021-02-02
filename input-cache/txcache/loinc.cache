@@ -44606,3 +44606,62 @@ v: {
   "error" : ""
 }
 -------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "LA26398-0"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://loinc.org",
+      "concept" : [{
+        "code" : "24419-4",
+        "display" : "Pathology report gross observation"
+      },
+      {
+        "code" : "29544-4",
+        "display" : "Physical findings"
+      },
+      {
+        "code" : "18748-4",
+        "display" : "Diagnostic imaging study"
+      }]
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code provided (http://loinc.org#LA26398-0) is not valid (from http://tx.fhir.org/r4)"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "LA26398-0",
+  "display" : "Sequencing"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://loinc.org",
+      "concept" : [{
+        "code" : "24419-4",
+        "display" : "Pathology report gross observation"
+      },
+      {
+        "code" : "29544-4",
+        "display" : "Physical findings"
+      },
+      {
+        "code" : "18748-4",
+        "display" : "Diagnostic imaging study"
+      }]
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK"}####
+v: {
+  "display" : "Sequencing",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------

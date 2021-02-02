@@ -62,3 +62,5 @@ The patient is two years out from surgery and has undergone surveillance imaging
 * [`us-core-observation-lab-sentinel-nodes-jenny-m`](Observation-us-core-observation-lab-sentinel-nodes-jenny-m.html) (Observation)
 * [`jenny-m-2018-03-06`](Observation-tumor-size-jenny-m.html) (Observation)
 * [`scenario1-observation-dcis`](Observation-us-core-observation-lab-tumor-dcis.html) (Observation)
+
+{% include markdown-link-references.md %}

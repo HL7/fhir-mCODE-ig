@@ -58,7 +58,7 @@ This implementation guide draws on a variety of formal terminologies (code syste
 
 The following table presents the code systems used in this guide:
 
-| Code System | Application | Supported by [FHIR IG Publishing Tool](https://confluence.hl7.org/display/FHIR/IG+Publisher+Documentation)? |
+| Code System | Application | [FHIR IG Publishing Tool](https://confluence.hl7.org/display/FHIR/IG+Publisher+Documentation) support? |
 |--------------|-------------|------------------|
 | LOINC | Observation and laboratory codes, answer codes | Yes |
 | SNOMED-CT | Disorders, body structures, findings, qualifiers | Yes |
@@ -76,17 +76,19 @@ The following table presents the code systems used in this guide:
 | Human Genome Variation Society Sequence Variant Nomenclature | Variants in DNA, RNA, and protein sequences | No |
 | Sequence Ontology | DNA change types | No |
 | Office of Management and Budget (OMB) Race and Ethnicity | Race and ethnicity codes | Yes |
-| Health Level 7 | HL7 V2 and FHIR-specific codes | Yes |
+| HL7 Terminology Authority  | HL7 V2 and FHIR-specific codes | Yes |
 {: .grid }
 
 New code systems were created when no existing value sets were deemed fit for purpose. The following code systems were created:
 
-|  Code System | Application | Supported by [FHIR IG Publishing Tool](https://confluence.hl7.org/display/FHIR/IG+Publisher+Documentation)? |
+|  Code System | Application | [FHIR IG Publishing Tool](https://confluence.hl7.org/display/FHIR/IG+Publisher+Documentation) support? |
 |--------------|-------------|------------------|
 | Radiotherapy Code System | Radiotherapy modalities, techniques, and devices | No |
 | Elixhauser Code System | Codes for the comorbidity categories originally defined by Elixhauser, updated by the Agency for Healthcare Research and Quality (AHRQ) Healthcare Cost and Utilization Project (H-CUP) | No |
-| mCODE Codes | Codes needed for positive identification of certain types of instances | No |
+| Catch Codes | Codes needed for positive identification of certain types of instances | No |
 {: .grid }
+
+In the case of radiotherapy, significantly less than 50% of the required concepts could be found in established sources such as SNOMED-CT and NCI Thesaurus. The CodeX FHIR Accelerator radiation oncology stakeholder group, comprised of radiation oncologists, representatives of professional societies, vendors, and information specialists, considered several options. It was decided, at least for trial use, to create a custom code system that could be directly controlled, similar to other medical specialty organizations such as AJCC for cancer staging, NCBI for genetic variants, and HGNC for gene identification. This decision does not rule out future coordination with terminology SDOs.
 
 ### Understanding this Guide
 

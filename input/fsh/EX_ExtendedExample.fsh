@@ -132,7 +132,7 @@ Description: "mCODE Example for Cancer-Related Comorbidities"
 * component[diabetesComplicated].valueCodeableConcept = SCT#2667000 "Absent (qualifier value)"
 * component[obesity].valueCodeableConcept = SCT#2667000 "Absent (qualifier value)"
 * component[peripheralVascularDisease].valueCodeableConcept = SCT#2667000 "Absent (qualifier value)"
-* component[pulmonaryCirculationDisorders].valueCodeableConcept = SCT#2667000 "Absent (qualifier value)"
+* component[pulmonaryCirculationDisorder].valueCodeableConcept = SCT#2667000 "Absent (qualifier value)"
 * component[renalFailureModerate].valueCodeableConcept = SCT#2667000 "Absent (qualifier value)"
 * component[drugAbuse].valueCodeableConcept = SCT#261665006 "Unknown (qualifier value)"
 

@@ -1,11 +1,28 @@
-.DS_Store
-Thumbs.db
-fsh-generated/**
-input-cache/schemas
-input-cache/schemas-r5
+# Temporary folders #
+#####################
+fsh-generated
+temp
+template
+output
+
+# Ignore large files and frequently changed files in input-cache #
+##################################################################
+input-cache/org.hl7.fhir.publisher.jar
 input-cache/publisher.jar
-/output
-template/**
-temp/**
+input-cache/schemas/
+input-cache/txcache/
+
+# OS generated files #
+######################
+Thumbs.db
+.DS_Store
+.DS_Store?
+
+# backup files #
+################
+*.bak
+
+# IDE generated files #
+#######################
 .vscode
 .idea

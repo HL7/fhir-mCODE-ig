@@ -33,7 +33,9 @@ Description: "A collection of data for an mCODE cancer patient."
     geneticSpecimen 0..* MS and
     genomicRegionStudied 0..* MS and
     cancerRelatedComorbiditiesElixhauser 0..* MS and
-    vitalSign 0..* MS
+    vitalSign 0..* MS and
+    tumor 0..* MS and
+    tumorSize 0..* MS
 
 * entry[cancerPatient] ^short = "Cancer Patient"
 * entry[primaryCancerCondition] ^short = "Primary Cancer Condition(s)"
@@ -61,6 +63,9 @@ Description: "A collection of data for an mCODE cancer patient."
 * entry[genomicRegionStudied] ^short = "Genomic Region(s) Studied"
 * entry[cancerRelatedComorbiditiesElixhauser] ^short = "Cancer-Related Comorbidities"
 * entry[vitalSign] ^short = "Patient Height(s), Weight(s), Blood Pressure(s), or other vital signs"
+* entry[tumor] ^short = "Identified Tumors"
+* entry[tumorSize] ^short = "Tumor Size Measurements"
+
 
 * entry[cancerPatient] ^definition = "The Cancer Patient whose data is included in the bundle (required element)."
 * entry[primaryCancerCondition] ^definition = "Condition resource(s) representing the Primary Cancer Condition."
@@ -88,6 +93,8 @@ Description: "A collection of data for an mCODE cancer patient."
 * entry[genomicRegionStudied] ^definition = "Observation resource(s) representing Genomic Regions Studied."
 * entry[cancerRelatedComorbiditiesElixhauser] ^definition = "Observation resource(s) representing Cancer-Related Comorbidities."
 * entry[vitalSign] ^definition = "Observation resource(s) representing patient height, weight, blood pressure, and other vital signs."
+* entry[tumor] ^definition = "Any tumor(s) being tracked over time."
+* entry[tumorSize] ^definition = "Tumor size measurement(s)."
 
 * entry[cancerPatient].resource only CancerPatient
 * entry[primaryCancerCondition].resource only PrimaryCancerCondition
@@ -117,4 +124,5 @@ Description: "A collection of data for an mCODE cancer patient."
 * entry[genomicRegionStudied].resource only GenomicRegionStudied
 * entry[cancerRelatedComorbiditiesElixhauser].resource only CancerRelatedComorbiditiesElixhauser
 * entry[vitalSign].resource only http://hl7.org/fhir/StructureDefinition/vitalsigns
-
+* entry[tumor].resource only Tumor
+* entry[tumorSize].resource only TumorSize

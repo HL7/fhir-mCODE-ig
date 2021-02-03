@@ -41,10 +41,10 @@ Description: "Includes surgical procedure codes from SNOMED CT, ICD-10-PCS and C
 * include codes from system ICD10PCS
 
 
-CodeSystem: MCODE
-Id: mcode-cs
-Title: "mCODE Code System"
-Description: "Codes defined by mCODE."
+CodeSystem: CatchCodeCS
+Id: mcode-catch-code-cs
+Title: "mCODE Catch Codes"
+Description: "Codes needed for positive identification of certain types of instances."
 * #PCC-OTHER "Other Primary Cancer Condition, Specify" "Code to be used when the desired concept is not represented base value set. This code represents the equivalent of 'Other, specify: _________'. Specify the additional concept as the second coding."
 * #SCC-OTHER "Other Secondary Cancer Condition, Specify" "Code to be used when the desired concept is not represented base value set. This code represents the equivalent of 'Other, specify: _________'. Specify the additional concept as the second coding."
 * #TMT-OTHER "Other Tumor Marker Test, Specify" "Code to be used when the desired concept is not represented base value set. This code represents the equivalent of 'Other, specify: _________'. Specify the additional concept as the second coding."

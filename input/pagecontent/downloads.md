@@ -1,3 +1,4 @@
+* [mCODE Data Dictionary (Excel download)](mCODEDataDictionary.xlsx)
 * [Full Specification (zip)](full-ig.zip)
 * [Package (tgz)](package.tgz)
 * [JSON Definitions (zip)](definitions.json.zip)
@@ -5,4 +6,3 @@
 * [XML Definitions (zip)](definitions.xml.zip)
 * [XML Examples (zip)](examples.ttl.zip)
 * [Turtle Definitions](definitions.ttl.zip)
-* [Data Dictionary (Excel download)](mCODEDataDictionary.xlsx)

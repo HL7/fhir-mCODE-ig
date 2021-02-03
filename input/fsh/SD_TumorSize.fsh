@@ -113,13 +113,28 @@ Description:     "Acceptable units for measuring tumor size"
 * ^experimental = true
 
 
+CodeSystem: TumorSizeMethodTemporaryCS
+Id: tumor-size-method-temporary-cs
+Title: "Tumor size method temporary code system"
+Description: "Temporary code system to describe methods for measuring tumor size."
+* #lightmicroscopy "Light microscopy"
+
 ValueSet:        TumorSizeMethodVS
 Id:              mcode-tumor-size-method-vs
 Title:           "Methods for measuring tumor size"
-Description:     "Methods for measuring tumor size"
-* ^copyright = "This material contains content from LOINC (http://loinc.org). LOINC is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc"
-* LNC#24419-4 "Pathology report gross observation"
-* LNC#29544-4 "Physical findings"
-* LNC#18748-4 "Diagnostic imaging study"
+Description:     "There are 3 broad categories of tumor size measurement methods:
+
+1. Pathology
+    - Macroscopic size from pathology report is represented by LOINC `24419-4` (\"Pathology report gross observation\")
+    - Microscopic size from pathology report is represented by `TumorSizeTemp#lightmicroscopy` until a LOINC code is created
+
+2. Physical exam, represented by LOINC `29544-4` (\"Physical findings\")
+
+3. Diagnostic imaging, represented by descendants of LOINC part code `LP29684-5` (\"Radiology\")"
 * ^status = #draft
 * ^experimental = true
+* ^copyright = "This material contains content from LOINC (http://loinc.org). LOINC is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc"
+* LNC#24419-4 "Pathology report gross observation"
+* TumorSizeMethodTemporaryCS#lightmicroscopy
+* LNC#29544-4 "Physical findings"
+* codes from system LNC where concept descendent-of #LP29684-5  "Radiology"

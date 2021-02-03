@@ -50,17 +50,43 @@ The groups are illustrated in the following diagram:
 
 The [Data Dictionary (DD)](mCODEDataDictionary.xlsx) includes only the must-support elements in the mCODE specification, intentionally omitting certain elements in FHIR that are not expected to be implemented. When there are differences between the DD and content of the FHIR implementation guide, the profiles and value sets in the guide should be taken as the source of truth.
 
-The STU 2 DD is somewhat different than the STU 1 version. The reader may notice the STU 2 DD lists significantly more data elements. In STU 1, some data elements were suppressed because they were common to most or all profiles, such as the reference to patient or subject, or the time of resource creation. However, the redaction of certain elements proved confusing, so the current DD does not continue this practice. Many of the "extra" rows are due to this change.
+The STU 2 DD is somewhat different than the STU 1 version. The STU 2 DD lists significantly more data elements. In STU 1, some data elements were suppressed because they were common to most or all profiles, such as the reference to patient or subject, or the time of resource creation. However, the redaction of certain elements proved confusing, so the current DD does not continue this practice. Many of the "extra" rows are due to this change.
 
-### Terminology Preferences
+### Terminology
 
-This implementation guide supplies terminology bindings drawn primarily from LOINC for "observables", and SNOMED-CT for values, results and findings. When appropriate codes are not available in the preferred vocabulary, alternative vocabularies are used, in the following general order of preference: SNOMED-CT (if the element is an observable), NCI Thesaurus, and local codes.
+This implementation guide draws on a variety of formal terminologies (code systems). Three guiding principles in selecting terminologies for mCODE were (1) fit for purpose, (2) appearance in US rules and regulations, and (3) use in current EHR systems. Some terminology choices were dictated by the FHIR specification or the US Core IG. Others were adopted in consultation from other HL7 Work Groups, in particular, code systems for genomics from [HL7 Clinical Genomics Reporting FHIR IG, STU1 Release](http://hl7.org/fhir/uv/genomics-reporting/codings.html).
 
-Value sets from the FHIR specification and US Core were reused to the extent possible. New value sets where created only when no known existing value sets were deemed to be fit for purpose.
+The following table presents the code systems used in this guide:
 
-mCODE genomics-related elements in the GenomicsReport and GeneticVariant profiles use the same code systems as the [HL7 Clinical Genomics Reporting FHIR IG, STU1 Release](http://hl7.org/fhir/uv/genomics-reporting/codings.html).
+| Code System | Application | Supported by [FHIR IG Publishing Tool](https://confluence.hl7.org/display/FHIR/IG+Publisher+Documentation)? |
+|--------------|-------------|------------------|
+| LOINC | Observation and laboratory codes, answer codes | Yes |
+| SNOMED-CT | Disorders, body structures, findings, qualifiers | Yes |
+| Unified Code for Units of Measure (UCUM) | Units of measure | Yes |
+| National Cancer Institute (NCI) Thesaurus | Editions of the AJCC Staging Manual | No |
+| ICD-10-CM | Diagnosis codes | Yes |
+| ICD-10-PCS | Procedure codes | Yes? |
+| ICD-O-3 | Cancer morphology and topology codes | No |
+| RxNorm | Medication codes | Yes |
+| Current Procedural Terminology (CPT) | Procedure codes | No? |
+| American Joint Committee on Cancer (AJCC) | Cancer staging codes | No |
+| National Center for Biotechnology Information (NCBI) Genetic Testing Registry (GTR) | Genetic test codes | No |
+| NCBI ClinVar | Genetic variations | No |
+| HUGO Gene Nomenclature Committee (HGNC)  | Gene identification | No |
+| Human Genome Variation Society Sequence Variant Nomenclature | Variants in DNA, RNA, and protein sequences | No |
+| Sequence Ontology | DNA change types | No |
+| Office of Management and Budget (OMB) Race and Ethnicity | Race and ethnicity codes | Yes |
+| Health Level 7 | HL7 V2 and FHIR-specific codes | Yes |
+{: .grid }
 
-Not all vocabularies used in mCODE are currently supported by the [FHIR Implementation Guide Publishing Tool](https://confluence.hl7.org/display/FHIR/IG+Publisher+Documentation). Unsupported vocabularies include ClinVar, NCI Thesaurus, and AJCC.
+New code systems were created when no existing value sets were deemed fit for purpose. The following code systems were created:
+
+|  Code System | Application | Supported by [FHIR IG Publishing Tool](https://confluence.hl7.org/display/FHIR/IG+Publisher+Documentation)? |
+|--------------|-------------|------------------|
+| Radiotherapy Code System | Radiotherapy modalities, techniques, and devices | No |
+| Elixhauser Code System | Codes for the comorbidity categories originally defined by Elixhauser, updated by the Agency for Healthcare Research and Quality (AHRQ) Healthcare Cost and Utilization Project (H-CUP) | No |
+| mCODE Codes | Codes needed for positive identification of certain types of instances | No |
+{: .grid }
 
 ### Understanding this Guide
 

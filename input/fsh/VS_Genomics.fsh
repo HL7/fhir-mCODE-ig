@@ -28,7 +28,7 @@ Title: "Tumor Marker Test Value Set"
 Description:    "Codes representing tests for tumor markers. This value set of LOINC codes is not comprehensive and can be extended. Other vocabularies can be used only if the test of interest is not covered by LOINC. Tumor marker tests differ from genetic tests in that they measure levels of protein or other substances produced downstream from RNA protein synthesis."
 
 * ^copyright = "This material contains content from LOINC (http://loinc.org). LOINC is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc"
-* MCODE#TMT-OTHER "Other Tumor Marker Test, Specify"
+* CatchCodeCS#TMT-OTHER "Other Tumor Marker Test, Specify"
 * include codes from system LNC where ancestor = "LP101591-8"
 * include codes from system LNC where ancestor = "LP111251-7"
 * include codes from system LNC where ancestor = "LP136073-6"

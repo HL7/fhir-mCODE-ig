@@ -131,9 +131,9 @@ Description: "Codes describing the modalities, techniques, and devices used in e
 * #RLINAC "RLinac" "Ring Gantry based delivery with linear accelerator based source e.g. Ethos, Tomotherapy"
 * #MRLINAC "MRLinac" "Gantry based delivery with linear accelerator based source with onboard MRI for patient positioning."
 * #NGLINAC "Non-gantry based linear accelerator, e.g. specialty devices used for IORT, e.g. Mobetron."
-* #ROBOTIC "Robotic" "Multiple axis (other than MLCs) are moved under electronic control during delivery of dose from a single beam with linear accelerator based source. e.g. CyberKnife."
+* #ROBOTIC "Robotic" "Multiple axis (other than MLCs) moved under electronic control during delivery of dose from a single beam with linear accelerator based source. e.g. CyberKnife."
 * #ISOMULTI "Isotope Multisource" "Multisource radiation use of multiple sources at different positons using isotope based source e.g. GammaKnife"
-* #KV "Kilovolt" "Non-megavoltage, electronically generated photons"
+* #KV "Kilovolt (kV)" "Non-megavoltage, electronically generated photons"
 * #MULTI "Multisource radiation" "Multisource radiation use of multiple sources at different positons using linear accelerator-based source"
 //-- Brachytherapy Devices
 * #TANDEM  "Tandem" "Tandem Brachytherapy Device"
@@ -141,7 +141,7 @@ Description: "Codes describing the modalities, techniques, and devices used in e
 * #OVOID "Ovoids" "Ovoid Brachytherapy Device"
 * #RING  "Ring" "Ring Brachytherapy Device"
 * #SEED  "Seeds" "Seeds Brachytherapy Device"
-* #EYE  "Eye-plaque" "Eye-plaque Brachytherapy Device"  //SCTID: 420529003 Radiotherapy using radioactive plaque on eye (procedure)
+* #EYE  "Eye-plaque" "Eye-plaque Brachytherapy Device"  
 * #HYBRID   "Hybrid"  "Hybrid Brachytherapy Device"
 * #TARG  "Targeted" "Targeted Brachytherapy Device"
 * #NONTARG  "NonTargeted" "NonTargeted Brachytherapy Device"

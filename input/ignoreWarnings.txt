@@ -11,6 +11,9 @@ WARNING: ValueSet.where(id = 'mcode-tnm-distant-metastases-category-vs'): Error 
 WARNING: ValueSet.where(id = 'mcode-hgnc-vs'): Error from server: Unable to provide support for code system http://www.genenames.org
 WARNING: ValueSet.where(id = 'mcode-clinvar-vs'): Error from server: Unable to provide support for code system http://www.ncbi.nlm.nih.gov/clinvar
 WARNING: ValueSet.where(id = 'mcode-cancer-staging-system-vs'): Error from server: Unable to provide support for code system http://ncithesaurus.nci.nih.gov
+WARNING: ValueSet.where(id = 'mcode-cancer-body-location-vs'): Error from server: Unable to provide support for code system http://terminology.hl7.org/CodeSystem/icd-o-3
+WARNING: ValueSet.where(id = 'mcode-cancer-related-surgical-procedure-vs'): Error from server: Unable to provide support for code system http://www.ama-assn.org/go/cpt
+WARNING: ValueSet.where(id = 'mcode-histology-morphology-behavior-vs'): Error from server: Unable to provide support for code system http://hl7.org/fhir/us/mcode/CodeSystem/mcode-catch-code-cs
 # SUPPRESS MESSAGES ABOUT LOINC LIST ELEMENTS THAT ARE KNOWN TO EXIST.
 WARNING: StructureDefinition/mcode-karnofsky-performance-status: StructureDefinition.snapshot.element[23].binding: The valueSet reference http://loinc.org/vs/LL4986-7 on element Observation.interpretation could not be resolved
 WARNING: StructureDefinition/mcode-karnofsky-performance-status: StructureDefinition.differential.element[9].binding: The valueSet reference http://loinc.org/vs/LL4986-7 on element Observation.interpretation could not be resolved

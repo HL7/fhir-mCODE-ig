@@ -79,25 +79,18 @@ Description:  "Identifies a tumor. Whenever possible, a single resource conformi
 // This VS is used for the primary/secondary cancer conditions; rule set here for consistency with these profiles.
 * location from CancerBodyLocationVS (extensible)
 * location 1..1 MS // Tumor is meaningless without a location; parent profile is 0..1
+* locationQualifier from LocationQualifierVS (example)
+
 * patient only Reference(CancerPatient)
 
-// Use locationQualifier to identify a multifocal tumor, in addition to modifying body site
-* locationQualifier from http://hl7.org/fhir/ValueSet/bodystructure-relative-location (example)
-* locationQualifier ^short = "Body site modifier, and/or code identifying multifocal tumor"
-* locationQualifier ^slicing.discriminator.type = #pattern
-* locationQualifier ^slicing.discriminator.path = "$this.resolve().coding.code"
-* locationQualifier ^slicing.rules = #open
-* locationQualifier ^slicing.description = "Slicing by code to identify multifocal tumors"
-* locationQualifier contains multifocalTumor 0..* MS
-* locationQualifier[multifocalTumor].coding.code = SCT#524008 "Multifocal (qualifier value)"
-* locationQualifier[multifocalTumor] ^short = "Use to identify a multifocal tumor"
-* locationQualifier[multifocalTumor].coding.code ^short = "SNOMED 524008 \"Multifocal (qualifier value)\""
+////////////////////////////////////////////////////////////////////////////////////////////////////
 
 Invariant: tumor-other-morphology-invariant
 Description: "If the code representing 'Other histology morphology behavior, specify' is used, a second code from outside the original value set must be present. The second code MUST NOT represent a concept in or subsumed by any concept in the original value set."
 Expression: "coding.where(code = 'HMB-OTHER').exists() implies coding.where(code != 'HMB-OTHER' and $this.memberOf('http://hl7.org/fhir/us/mcode/ValueSet/mcode-histology-morphology-behavior-vs').not()).exists()"
 Severity: #error
 
+////////////////////////////////////////////////////////////////////////////////////////////////////
 
 // Based on UnitsOfLengthVS, but limited to just mm and cm. In theory we could just use UnitsOfLengthVS if we don't care about restricting to just cm/mm.
 ValueSet:        TumorSizeUnitsVS

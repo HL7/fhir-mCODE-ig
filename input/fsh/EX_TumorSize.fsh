@@ -1,8 +1,8 @@
 Instance: tumor-size-pathology
 InstanceOf: TumorSize
-Description: "EXPERIMENTAL example of a resource conforming to the tumor size profile."
+Description: "Example of a resource conforming to the tumor size profile."
 * status = #final
-* method = LNC#24419-4 "Pathology report gross observation"
+* method = SCT#168455000 "Gross pathology (finding)"
 * category = ObsCat#laboratory
 * subject = Reference(Patient/cancer-patient-john-anyperson)
 * focus = Reference(BodyStructure/tumor-lobular-carcinoma-left-breast)
@@ -15,7 +15,7 @@ InstanceOf: Tumor
 Description: "Example of a resource conforming to the tumor profile."
 * patient = Reference(Patient/cancer-patient-john-anyperson)
 // Resources conforming to this profile indicate that the tumor is still in the body.
-// This implies it is being measured by radiology. The identifier here is a hypothetical
+// This implies it is being measured by imaging or physical exam. The identifier here is a hypothetical
 // radiology identifier for a specific tumor.
 //
 // The generic "resource identifier" type is used here because there does not seem to be

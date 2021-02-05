@@ -108,7 +108,7 @@ Description:    "The result of a tumor marker test. Tumor marker tests are gener
 * component 0..0 // needed to distinguish from cancerGeneticVariant and genomicRegionStudied in bundle MK 10/29/2020
 
 Invariant: tumor-marker-test-code-invariant
-Description: "If the code representing 'Other tumor marker test, specify' is used, a second code from outside the original value set must be present."
+Description: "If the code representing 'Other tumor marker test, specify' is used, a second code from outside the original value set must be present. The second code MUST NOT represent a concept in or subsumed by any concept in the original value set."
 Expression: "coding.where(code = 'TMT-OTHER').exists() implies coding.where(code != 'TMT-OTHER' and $this.memberOf('http://hl7.org/fhir/us/mcode/ValueSet/mcode-tumor-marker-test-vs').not()).exists()"
 Severity:   #error
 

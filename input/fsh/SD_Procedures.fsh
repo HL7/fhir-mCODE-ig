@@ -28,7 +28,6 @@ Description: "An overall summary of a course of radiotherapy. Whenever new contr
 
 RuleSet:  RadiotherapyPrescriptionDeliveryRS
 * insert RadiotherapyRS
-// TO DO -- specify the MS elements
 * partOf only Reference(RadiotherapyCourseSummary)
 * partOf ^definition = "PrescriptionDelivery-conforming resources should reference a RadiotherapyCourseSummary-conforming resource."
 * extension contains
@@ -55,7 +54,7 @@ Description: "A summary of delivered teleradiotherapy treatment. The scope is a 
 * usedCode from TeleradiotherapyDeviceVS (extensible)
 
     Invariant: teleradiotherapy-procedure-code-invariant
-    Description: "If the code 'Other Teleradiotherapy Modality, specify' is used, a second code from outside the original value set must be present."
+    Description: "If the code 'Other Teleradiotherapy Modality, specify' is used, a second code from outside the original value set must be present. The second code MUST NOT represent a concept in or subsumed by any concept in the original value set."
     Expression: "coding.where(code = 'OtherTeleradiotherapyModality').exists() implies coding.where(code != 'OtherTeleradiotherapyModality' and $this.memberOf('http://hl7.org/fhir/us/mcode/ValueSet/mcode-teleradiotherapy-modality-vs').not()).exists()"
     Severity:   #error
 
@@ -71,14 +70,23 @@ Description: "A summary of delivered brachytherapy treatment. The scope is a pre
 * code ^definition = "The modality of the brachytherapy procedure."
 * extension[radiotherapyTechnique].value[x] from BrachytherapyTechniqueVS (extensible)
 * usedCode from BrachytherapyDeviceVS (extensible)
+* focalDevice.manipulated only Reference(BrachytherapyImplantableDevice)
+* usedCode and focalDevice.manipulated MS
 
     Invariant: brachytherapy-code-invariant
-    Description: "If the code representing 'Other brachytherapy, specify' is used, a second code from outside the original value set must be present."
+    Description: "If the code representing 'Other brachytherapy, specify' is used, a second code from outside the original value set must be present. The second code MUST NOT represent a concept in or subsumed by any concept in the original value set."
     Expression: "coding.where(code = 'OtherBrachytherapyModality').exists() implies coding.where(code != 'OtherBrachytherapyModality' and $this.memberOf('http://hl7.org/fhir/us/mcode/ValueSet/brachytherapy-modality-vs').not()).exists()"
     Severity:   #error
 
-// TO DO: 
-/* Replaced with standard extension 'procedure-method'. If the cardinality needs to be changed to 0..* later, we will need this extension
+Profile: BrachytherapyImplantableDevice
+Parent:  USCoreImplantableDeviceProfile
+Id: brachytherapy-implantable-device
+Title: "Brachytherapy Implantable Device"
+Description: "A radioactive source device implanted into the body and remaining there temporarily or permanently."
+* type from BrachytherapyDeviceVS (extensible)
+
+/* Currently to represent RadiotherapyTechnique, mCODE uses the standard 'procedure-method' extension. But if the cardinality needs to be changed to 0..*, we will need the RadiotherapyTechnique extension, below, unless there is a change to 'procedure-method' (see https://jira.hl7.org/browse/FHIR-30769 "Change cardinality of procedure-method extension").
+
 Extension: RadiotherapyTechnique
 Id: radiotherapy-technique
 Title: "Radiotherapy Technique"

@@ -1,4 +1,5 @@
 <!-- mCODE Profiles and Extensions -->
+[BrachytherapyImplantableDevice]: StructureDefinition-brachytherapy-implantable-device.html
 [BrachytherapyPrescriptionDelivery]: StructureDefinition-brachytherapy-prescription-delivery.html
 [CancerDiseaseStatus]: StructureDefinition-mcode-cancer-disease-status.html
 [CancerGeneticVariant]: StructureDefinition-mcode-cancer-genetic-variant.html
@@ -123,6 +124,7 @@
 <!-- mCODE Code Systems -->
 [ElixhauserCategoryCS]: CodeSystem-elixhauser-ahrq-cs.html
 [RadiotherapyCS]: CodeSystem-radiotherapy-cs.html
+[CatchCodeCS]: CodeSystem-mcode-catch-code-cs.html
 
 <!-- mCODE CapabilityStatements -->
 [mcode-receiver-cancer-conditions-then-patients]: CapabilityStatement-mcode-receiver-cancer-conditions-then-patients.html

@@ -38,7 +38,9 @@ pages:
   group-treatment.md:
     title: Treatments
   group-outcome.md:
-    title: Outcomes 
+    title: Outcomes
+  terminology.md:
+    title: Terminology
   examples.md:
     title: Extended Example
   downloads.md:
@@ -54,9 +56,10 @@ menu:
     Genomics: group-genomics.html
     Treatment: group-treatment.html
     Outcome: group-outcome.html
-  All Artifacts: artifacts.html
-  Extended Example: examples.html
+  Terminology: terminology.html
   Conformance: conformance.html
+  Extended Example: examples.html
+  All Artifacts: artifacts.html
   Downloads: downloads.html
   Change Log: change_log.html
   History: http://hl7.org/fhir/us/mcode/history.html

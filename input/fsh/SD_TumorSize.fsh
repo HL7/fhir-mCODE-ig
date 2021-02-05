@@ -85,6 +85,12 @@ Description:  "Identifies a tumor. Whenever possible, a single resource conformi
 
 * patient only Reference(CancerPatient)
 
+* extension contains ConditionRelatedToBodyStructure named conditionAssociatedWithTumor 0..1 MS
+* extension[conditionAssociatedWithTumor].value[x] only Reference(PrimaryCancerCondition or SecondaryCancerCondition)
+* extension[conditionAssociatedWithTumor] ^short = "Reference to cancer condition associated with this tumor"
+* extension[conditionAssociatedWithTumor] ^definition = "Associates this tumor with a cancer condition. This could be a causal association (e.g., this is believed to be the primary tumor causing the cancer) or a different type of relationship (e.g., this tumor is a metastasis "
+
+
 
 Invariant: tumor-other-morphology-invariant
 Description: "If the code representing 'Other histology morphology behavior, specify' is used, a second code from outside the original value set must be present. The second code MUST NOT represent a concept in or subsumed by any concept in the original value set."

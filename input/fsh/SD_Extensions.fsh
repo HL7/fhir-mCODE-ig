@@ -11,6 +11,12 @@ Title:  "Specific Condition Reference for Comorbidity"
 Description: "An extension for representing a reference to a condition resource corresponding to the comorbid condition category."
 * value[x] only Reference(Condition)
 
+Extension: ConditionRelatedToBodyStructure
+Id: mcode-condition-related-to-bodystructure
+Title:  "Condition related to a BodyStructure"
+Description: "This BodyStructure has an unspecified relationship with a Condition."
+* value[x] only Reference(Condition)
+
 Extension: EvidenceType
 Id: mcode-evidence-type
 Title: "Evidence Type"

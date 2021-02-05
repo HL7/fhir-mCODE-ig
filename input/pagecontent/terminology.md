@@ -2,7 +2,7 @@ This implementation guide draws on a variety of formal terminologies (code syste
 
 The following table presents the external code systems used in this guide, and their primary purpose:
 
-| Code System | Application | * [FHIR IG Publishing](https://confluence.hl7.org/display/FHIR/IG+Publisher+Documentation) support? |
+| Code System | Application | [FHIR IG Publishing](https://confluence.hl7.org/display/FHIR/IG+Publisher+Documentation) support? |
 |--------------|-------------|------------------|
 | LOINC | Observation and laboratory codes, answer codes | Yes |
 | SNOMED-CT | Disorders, body structures, findings, qualifiers | Yes |
@@ -26,7 +26,7 @@ The following table presents the external code systems used in this guide, and t
 
 New code systems were created when no existing code systems were deemed fit for purpose. The following code systems were created:
 
-|  Code System | Application | * [FHIR IG Publishing](https://confluence.hl7.org/display/FHIR/IG+Publisher+Documentation) support? |
+|  Code System | Application | [FHIR IG Publishing](https://confluence.hl7.org/display/FHIR/IG+Publisher+Documentation) support? |
 |--------------|-------------|------------------|
 | Radiotherapy Code System | Radiotherapy modalities, techniques, and devices | No |
 | Elixhauser Code System | Codes for the comorbidity categories originally defined by Elixhauser, updated by the Agency for Healthcare Research and Quality (AHRQ) Healthcare Cost and Utilization Project (H-CUP) | No |

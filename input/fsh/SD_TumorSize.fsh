@@ -78,7 +78,7 @@ Description:  "Identifies a tumor. Whenever possible, a single resource conformi
 
 
 Invariant: tumor-other-morphology-invariant
-Description: "If the code representing 'Other histology morphology behavior, specify' is used, a second code from outside the original value set must be present."
+Description: "If the code representing 'Other histology morphology behavior, specify' is used, a second code from outside the original value set must be present. The second code MUST NOT represent a concept in or subsumed by any concept in the original value set."
 Expression: "coding.where(code = 'HMB-OTHER').exists() implies coding.where(code != 'HMB-OTHER' and $this.memberOf('http://hl7.org/fhir/us/mcode/ValueSet/mcode-histology-morphology-behavior-vs').not()).exists()"
 Severity: #error
 

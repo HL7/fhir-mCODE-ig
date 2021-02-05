@@ -8,6 +8,7 @@
 <artifactPageExtension value="-examples"/>
 <artifactPageExtension value="-mappings"/>
 <artifact id="ValueSet/brachytherapy-device-vs" key="ValueSet-brachytherapy-device-vs" name="Brachytherapy Device Value Set"/>
+<artifact id="StructureDefinition/brachytherapy-implantable-device" key="StructureDefinition-brachytherapy-implantable-device" name="Brachytherapy Implantable Device"/>
 <artifact id="ValueSet/brachytherapy-modality-vs" key="ValueSet-brachytherapy-modality-vs" name="Brachytherapy Modality Value Set"/>
 <artifact id="StructureDefinition/brachytherapy-prescription-delivery" key="StructureDefinition-brachytherapy-prescription-delivery" name="Brachytherapy Prescription Delivery"/>
 <artifact id="ValueSet/brachytherapy-technique-vs" key="ValueSet-brachytherapy-technique-vs" name="Brachytherapy Technique Value Set"/>
@@ -284,6 +285,7 @@
 <page key="group-outcome" name="Outcomes"/>
 <page key="group-patient" name="Patient Information"/>
 <page key="toc" name="Table of Contents"/>
+<page key="terminology" name="Terminology"/>
 <page key="group-treatment" name="Treatments"/>
 <page deprecated="true" key="valuesets" name="Value Sets"/>
 </specification>

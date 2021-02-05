@@ -23,6 +23,7 @@ A radiology work group convened under [CodeX FHIR Accelerator](https://confluenc
   * [BrachytherapyPrescriptionDelivery] (internal radiotherapy)
   * [TeleradiotherapyPrescriptionDelivery] (external beam radiotherapy)
   * [RadiotherapyCourseSummary]
+  * [BrachytherapyImplantableDevice]
 
 ### Extensions
 

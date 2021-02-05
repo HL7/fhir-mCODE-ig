@@ -1,4 +1,5 @@
 <!-- mCODE Profiles and Extensions -->
+[BrachytherapyImplantableDevice]: StructureDefinition-brachytherapy-implantable-device.html
 [BrachytherapyPrescriptionDelivery]: StructureDefinition-brachytherapy-prescription-delivery.html
 [CancerDiseaseStatus]: StructureDefinition-mcode-cancer-disease-status.html
 [CancerGeneticVariant]: StructureDefinition-mcode-cancer-genetic-variant.html

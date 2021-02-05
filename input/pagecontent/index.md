@@ -52,44 +52,6 @@ The [Data Dictionary (DD)](mCODEDataDictionary.xlsx) includes only the must-supp
 
 The STU 2 DD is somewhat different than the STU 1 version. The STU 2 DD lists significantly more data elements. In STU 1, some data elements were suppressed because they were common to most or all profiles, such as the reference to patient or subject, or the time of resource creation. However, the redaction of certain elements proved confusing, so the current DD does not continue this practice. Many of the "extra" rows are due to this change.
 
-### Terminology
-
-This implementation guide draws on a variety of formal terminologies (code systems). Three guiding principles in selecting terminologies for mCODE were (1) fit for purpose, (2) appearance in US rules and regulations, and (3) use in current EHR systems. Some terminology choices were dictated by the FHIR specification or the US Core IG. Others were adopted in consultation from other HL7 Work Groups, in particular, code systems for genomics from [HL7 Clinical Genomics Reporting FHIR IG, STU1 Release](http://hl7.org/fhir/uv/genomics-reporting/codings.html).
-
-The following table presents the code systems used in this guide:
-
-| Code System | Application | [FHIR IG Publishing Tool](https://confluence.hl7.org/display/FHIR/IG+Publisher+Documentation) support? |
-|--------------|-------------|------------------|
-| LOINC | Observation and laboratory codes, answer codes | Yes |
-| SNOMED-CT | Disorders, body structures, findings, qualifiers | Yes |
-| Unified Code for Units of Measure (UCUM) | Units of measure | Yes |
-| National Cancer Institute (NCI) Thesaurus | Editions of the AJCC Staging Manual | No |
-| ICD-10-CM | Diagnosis codes | Yes |
-| ICD-10-PCS | Procedure codes | Yes? |
-| ICD-O-3 | Cancer morphology and topology codes | No |
-| RxNorm | Medication codes | Yes |
-| Current Procedural Terminology (CPT) | Procedure codes | No? |
-| American Joint Committee on Cancer (AJCC) | Cancer staging codes | No |
-| National Center for Biotechnology Information (NCBI) Genetic Testing Registry (GTR) | Genetic test codes | No |
-| NCBI ClinVar | Genetic variations | No |
-| HUGO Gene Nomenclature Committee (HGNC)  | Gene identification | No |
-| Human Genome Variation Society Sequence Variant Nomenclature | Variants in DNA, RNA, and protein sequences | No |
-| Sequence Ontology | DNA change types | No |
-| Office of Management and Budget (OMB) Race and Ethnicity | Race and ethnicity codes | Yes |
-| HL7 Terminology Authority  | HL7 V2 and FHIR-specific codes | Yes |
-{: .grid }
-
-New code systems were created when no existing value sets were deemed fit for purpose. The following code systems were created:
-
-|  Code System | Application | [FHIR IG Publishing Tool](https://confluence.hl7.org/display/FHIR/IG+Publisher+Documentation) support? |
-|--------------|-------------|------------------|
-| Radiotherapy Code System | Radiotherapy modalities, techniques, and devices | No |
-| Elixhauser Code System | Codes for the comorbidity categories originally defined by Elixhauser, updated by the Agency for Healthcare Research and Quality (AHRQ) Healthcare Cost and Utilization Project (H-CUP) | No |
-| Catch Codes | Codes needed for positive identification of certain types of instances | No |
-{: .grid }
-
-In the case of radiotherapy, significantly less than 50% of the required concepts could be found in established sources such as SNOMED-CT and NCI Thesaurus. The CodeX FHIR Accelerator radiation oncology stakeholder group, comprised of radiation oncologists, representatives of professional societies, vendors, and information specialists, considered several options. It was decided, at least for trial use, to create a custom code system that could be directly controlled, similar to other medical specialty organizations such as AJCC for cancer staging, NCBI for genetic variants, and HGNC for gene identification. This decision does not rule out future coordination with terminology SDOs.
-
 ### Understanding this Guide
 
 The mCODE Implementation Guide was developed using the standard HL7 FHIR publishing tools. The page layouts and symbols are explained [in the FHIR documentation](https://www.hl7.org/fhir/formats.html). In viewing a profile page, note that there are multiple views. The "Differential Table" view represents the difference between the current profile and its base resource or profile. When interpreting this view, bear in mind that the immediate parent may not be a base FHIR resource, but it could be a US Core profile or another profile in this guide. The "Snapshot Table" represents the entire profile, with all elements.

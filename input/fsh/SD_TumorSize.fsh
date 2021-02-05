@@ -55,11 +55,13 @@ Description:  "Records the dimensions of a tumor"
 * component[tumorOtherDimension].value[x] only Quantity
 * component[tumorOtherDimension].valueQuantity from TumorSizeUnitsVS (required)
 
+
 // This invariant has been exhaustively tested with the FHIR validator
 Invariant: must-have-focus-or-specimen-invariant
 Description: "Either `focus` OR `specimen` MUST be populated"
 Expression: "(focus.exists() or specimen.exists()) and (focus.exists() and specimen.exists()).not()"
 Severity: #error
+
 
 
 
@@ -83,50 +85,8 @@ Description:  "Identifies a tumor. Whenever possible, a single resource conformi
 
 * patient only Reference(CancerPatient)
 
-////////////////////////////////////////////////////////////////////////////////////////////////////
 
 Invariant: tumor-other-morphology-invariant
 Description: "If the code representing 'Other histology morphology behavior, specify' is used, a second code from outside the original value set must be present. The second code MUST NOT represent a concept in or subsumed by any concept in the original value set."
 Expression: "coding.where(code = 'HMB-OTHER').exists() implies coding.where(code != 'HMB-OTHER' and $this.memberOf('http://hl7.org/fhir/us/mcode/ValueSet/mcode-histology-morphology-behavior-vs').not()).exists()"
 Severity: #error
-
-////////////////////////////////////////////////////////////////////////////////////////////////////
-
-// Based on UnitsOfLengthVS, but limited to just mm and cm. In theory we could just use UnitsOfLengthVS if we don't care about restricting to just cm/mm.
-ValueSet:        TumorSizeUnitsVS
-Id:              mcode-tumor-size-units-vs
-Title:           "Units of tumor size value set"
-Description:     "Acceptable units for measuring tumor size"
-* UCUM#mm        "Millimeter"
-* UCUM#cm        "Centimeter"
-* ^status = #draft
-* ^experimental = true
-
-ValueSet:        TumorSizeMethodVS
-Id:              mcode-tumor-size-method-vs
-Title:           "Methods for measuring tumor size"
-Description:     "There are 3 broad categories of tumor size measurement methods:
-
-1. Pathology
-    - Macroscopic size from pathology report is represented by SCT `168455000` (\"Gross pathology (finding)\")
-    - Microscopic size from pathology report is represented by SCT `104157003` (\"Light microscopy (procedure)\")
-
-2. Physical exam, represented by SCT `5880005` (\"Physical examination procedure (procedure)\")
-
-3. Diagnostic imaging, represented by descendants of LOINC part code `LP29684-5` (\"Radiology\")"
-* ^status = #draft
-* ^experimental = true
-
-// Pathology
-* SCT#168455000 "Gross pathology (finding)"
-* SCT#104157003 "Light microscopy (procedure)"
-
-// Physical exam
-* SCT#5880005 "Physical examination procedure (procedure)"
-
-// Diagnostic imaging
-* SCT#363679005 "Imaging (procedure)"
-* SCT#16310003 "Diagnostic ultrasonography (procedure)"
-* SCT#113091000 "Magnetic resonance imaging (procedure)"
-* SCT#77477000 "Computerized axial tomography (procedure)"
-* SCT#44491008 "Fluoroscopy (procedure)"

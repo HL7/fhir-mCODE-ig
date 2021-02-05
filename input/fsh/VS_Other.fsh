@@ -92,6 +92,45 @@ Description:	"The purpose of a treatment. The value set includes 'curative' and 
 * SCT#129428001 "Preventive"
 */
 
+// Based on UnitsOfLengthVS, but limited to just mm and cm. In theory we could just use UnitsOfLengthVS if we don't care about restricting to just cm/mm.
+ValueSet:        TumorSizeUnitsVS
+Id:              mcode-tumor-size-units-vs
+Title:           "Units of tumor size value set"
+Description:     "Acceptable units for measuring tumor size"
+* UCUM#mm        "Millimeter"
+* UCUM#cm        "Centimeter"
+* ^status = #draft
+* ^experimental = true
+
+ValueSet:        TumorSizeMethodVS
+Id:              mcode-tumor-size-method-vs
+Title:           "Methods for measuring tumor size"
+Description:     "There are 3 broad categories of tumor size measurement methods:
+
+1. Pathology
+    - Macroscopic size from pathology report is represented by SCT `168455000` (\"Gross pathology (finding)\")
+    - Microscopic size from pathology report is represented by SCT `104157003` (\"Light microscopy (procedure)\")
+
+2. Physical exam, represented by SCT `5880005` (\"Physical examination procedure (procedure)\")
+
+3. Diagnostic imaging, represented by descendants of LOINC part code `LP29684-5` (\"Radiology\")"
+* ^status = #draft
+* ^experimental = true
+
+// Pathology
+* SCT#168455000 "Gross pathology (finding)"
+* SCT#104157003 "Light microscopy (procedure)"
+
+// Physical exam
+* SCT#5880005 "Physical examination procedure (procedure)"
+
+// Diagnostic imaging
+* SCT#363679005 "Imaging (procedure)"
+* SCT#16310003 "Diagnostic ultrasonography (procedure)"
+* SCT#113091000 "Magnetic resonance imaging (procedure)"
+* SCT#77477000 "Computerized axial tomography (procedure)"
+* SCT#44491008 "Fluoroscopy (procedure)"
+
 
 /* SAVE for possible future use
 ValueSet:			UnitsOfLengthVS

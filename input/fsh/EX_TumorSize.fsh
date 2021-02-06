@@ -55,5 +55,17 @@ Description: "Example of a TumorSpecimen linked to [this Tumor](BodyStructure-tu
 * identifier.type = TumorIdentifierCS#tumor-identifier
 * identifier.value = "894e51f5-f5ab-41f2-80bc-2917c995e137"
 * extension[conditionAssociatedWithTumor].valueReference = Reference(Condition/primary-cancer-condition-breast)
-* receivedTime = "2020-04-01"
+* receivedTime = "2020-05-01"
 * collection.bodySite = SCT#80248007 "Left breast structure (body structure)"
+
+Instance: multifocal-tumor-lobular-carcinoma
+InstanceOf: MultifocalTumor
+Usage: #example
+Title: "multifocal-tumor-lobular-carcinoma"
+Description: "Example of an Observation indicating a tumor is multifocal based on gross pathology."
+* code = LNC#24419-4 "Pathology report gross observation"
+* focus[+] = Reference(tumor-lobular-carcinoma-left-breast)
+* focus[+] = Reference(tumor-specimen-lobular-carcinoma-left-breast)
+* subject = Reference(Patient/cancer-patient-eve-anyperson)
+* status = #final "final"
+* effectiveDateTime = "2019-05-01"

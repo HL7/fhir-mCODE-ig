@@ -18,9 +18,17 @@ Two profiles are provided for persistently identifying tumors, which is necessar
 
 If both [Tumor] and [TumorSpecimen] are used to represent the same tumor, `identifier` MUST be used to associate them: a persistent identifier from [Tumor] that is unique within the context of the Patient MUST appear in [TumorSpecimen] with `identifier.type` set to [`tumor-identifier`](CodeSystem-mcode-tumor-identifier-cs.html).
 
-#### Tumor size
+#### Tumor Size
 
 The [TumorSize] profile provides a mechanism for recording the dimensions of a tumor. It MUST reference a [Tumor] if the measurement is made while the tumor is still in the body, or [TumorSpecimen] if the tumor has been removed.
+
+#### Multifocal and Multicentric Tumors
+
+In the context of breast cancer, multifocal tumors refer to "multiple foci of the same tumor" while multicentric tumors are "different primary tumors in the same breast" ([Andea 2002](https://pubmed.ncbi.nlm.nih.gov/11920492/)).
+
+For multifocal tumors, each foci may be separately tracked and measured. Therefore, each foci should be represented by a separate [Tumor] or [TumorSpecimen], and grouped with a [MultifocalTumor] Observation. [MultifocalTumor] SHOULD be referenced in `hasMember` of [TNMClinicalStageGroup] or [TNMPathologicalStageGroup] if relevant.
+
+Multicentric tumors should also each be represented by a separate [Tumor] or [TumorSpecimen], which can be associated with separate [PrimaryCancerCondition]-conforming resources using `extension[mcode-condition-related]` in [Tumor] or [TumorSpecimen].
 
 ### Profiles
 
@@ -29,6 +37,7 @@ The [TumorSize] profile provides a mechanism for recording the dimensions of a t
 * [Tumor]
 * [TumorSpecimen]
 * [TumorSize]
+* [MultifocalTumor]
 
 ### Extension
 

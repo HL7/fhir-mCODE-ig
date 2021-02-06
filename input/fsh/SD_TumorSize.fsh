@@ -133,3 +133,22 @@ Description: "Represents a tumor after it has been removed from the body. Prior 
 * extension[conditionAssociatedWithTumor].value[x] only Reference(PrimaryCancerCondition or SecondaryCancerCondition)
 * extension[conditionAssociatedWithTumor] ^short = "Reference to the cancer condition associated with this tumor"
 * extension[conditionAssociatedWithTumor] ^definition = "Associates this tumor with a cancer condition."
+
+
+Profile: MultifocalTumor
+Parent: Observation
+Id: mcode-multifocal-tumor
+Title: "Multifocal Tumor Observation"
+Description: "Identifies multiple [Tumor](StructureDefinition-mcode-tumor.html) or [TumorSpecimen](StructureDefinition-mcode-tumor-specimen.html)-conforming resources as part of a multifocal tumor."
+* ^status = #draft
+* ^experimental = true
+* valueCodeableConcept = SCT#399506006 "Multifocal tumor (finding)"
+* focus only Reference(Tumor or TumorSpecimen)
+* focus MS
+* focus ^short = "References individual masses that comprise the multifocal tumor"
+* focus ^definition = "If [Tumor](StructureDefinition-mcode-tumor.html) or [TumorSpecimen](StructureDefinition-mcode-tumor-specimen.html) are used to represent this multifocal tumor, or are used to represent multiple masses that comprise the multifocal tumor, they SHOULD be referenced here. If the same tumor is represented by both [Tumor](StructureDefinition-mcode-tumor.html) and [TumorSpecimen](StructureDefinition-mcode-tumor-specimen.html) at the time the multifocal observation was made, both resources SHOULD be referenced in `focus`."
+* subject only Reference(CancerPatient)
+* subject MS
+* status MS
+* effective[x] only dateTime or Period
+* effective[x] MS

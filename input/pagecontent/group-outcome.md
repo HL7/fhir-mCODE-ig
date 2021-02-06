@@ -14,7 +14,7 @@ Date of death data can be obtained from several sources outside of the clinical 
 
 ### Tumor
 
-Two profiles are provided for persistently identifying tumors, which is necessary for comparisons of tumor characteristics over time. The [Tumor] profile provides persistent identification of a tumor that has not been removed from the body. After a tumor has been removed from the body, it MUST be represented by [TumorSpecimen] rather than [Tumor].
+Two profiles are provided for persistently identifying tumors, which is necessary for comparisons of tumor characteristics over time. The [Tumor] profile provides persistent identification of a tumor that has not been removed from the body. After a tumor has been removed from the body, it MUST be represented by [TumorSpecimen] rather than [Tumor]. Because [Tumor] designed to be a persistent identifier of a tumor, only time-invariant information should be stored in resources conforming to [Tumor].
 
 If both [Tumor] and [TumorSpecimen] are used to represent the same tumor, `identifier` MUST be used to associate them: a persistent identifier from [Tumor] that is unique within the context of the Patient MUST appear in [TumorSpecimen] with `identifier.type` set to [`tumor-identifier`](CodeSystem-mcode-tumor-identifier-cs.html).
 

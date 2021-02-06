@@ -77,7 +77,7 @@ Description:  "Identifies a tumor that has not been removed from the body. Whene
 // The purpose of this profile is to uniquely identify a tumor, so it follows that there must be at least one identifier value provided
 * identifier 1.. MS
 * identifier ^short = "Stable identifier of this specific tumor"
-* identifier ^definition = "Stable identifier of this specific tumor, should be unique within the referenced `CancerPatient`."
+* identifier ^definition = "Stable identifier of this specific tumor, MUST be unique within the context of the referenced `CancerPatient`."
 * identifier ^comment = "If applicable, this should correspond to the physical tag inserted into the tumor during a procedure that is used for tracking the tumor by radiology and pathology."
 * morphology = SCT#367651003 "Malignant neoplasm of primary, secondary, or uncertain origin (morphologic abnormality)"
 // This VS is used for the primary/secondary cancer conditions; rule set here for consistency with these profiles.

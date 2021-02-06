@@ -12,7 +12,7 @@
 [ComorbidConditionCode]: StructureDefinition-mcode-comorbid-condition-code.html
 [ComorbidConditionReference]: StructureDefinition-mcode-comorbid-condition-reference.html
 [ComorbiditiesElixhauser]: StructureDefinition-comorbidities-elixhauser.html
-[ComorbiditiesParent]: StructureDefinition-mcode-comorbidities-parent.html
+[ComorbiditiesParent]: StructureDefinition-comorbidities-parent.html
 [ECOGPerformanceStatus]: StructureDefinition-mcode-ecog-performance-status.html
 [EvidenceType]: StructureDefinition-mcode-evidence-type.html
 [GeneticSpecimen]: StructureDefinition-mcode-genetic-specimen.html

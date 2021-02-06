@@ -7,8 +7,10 @@ RuleSet: RadiotherapyRS
 * performer.actor only Reference(Practitioner or PractitionerRole or Organization)
 * bodySite from RadiationTargetBodySiteVS (extensible)
 * bodySite.extension contains
-    LocationQualifier named locationQualifier 0..1 MS
+    LocationQualifier named locationQualifier 0..1
 * performed[x] only Period
+// ADDITIONAL MUST SUPPORTS
+* bodySite and bodySite.extension[locationQualifier] MS
 
 Profile:  RadiotherapyCourseSummary
 Parent:   USCoreProcedure
@@ -20,10 +22,10 @@ Description: "An overall summary of a course of radiotherapy. Whenever new contr
 * extension contains 
     TreatmentIntent named treatmentIntent 0..1 MS and
     TerminationReason named terminationReason 0..1 MS and
-    RadiotherapyPrescribedFractions named radiotherapyPrescribedFractions 0..1 MS and
-    RadiotherapyDeliveredFractions named radiotherapyDeliveredFractions 0..1 MS and
-    RadiotherapyTotalDosePlanned named radiotherapyTotalDosePlanned 0..1 MS and
-    RadiotherapyTotalDoseDelivered named radiotherapyTotalDoseDelivered 0..1 MS
+    RadiotherapyPrescribedFractions named radiotherapyPrescribedFractions 0..1 and
+    RadiotherapyDeliveredFractions named radiotherapyDeliveredFractions 0..1 and
+    RadiotherapyTotalDosePlanned named radiotherapyTotalDosePlanned 0..1 and
+    RadiotherapyTotalDoseDelivered named radiotherapyTotalDoseDelivered 0..1
 
 
 RuleSet:  RadiotherapyPrescriptionDeliveryRS
@@ -32,13 +34,14 @@ RuleSet:  RadiotherapyPrescriptionDeliveryRS
 * partOf ^definition = "PrescriptionDelivery-conforming resources should reference a RadiotherapyCourseSummary-conforming resource."
 * extension contains
     procedure-method named radiotherapyTechnique 0..1 MS and
-    RadiotherapyDosePerFraction named radiotherapyDosePerFraction 0..1 MS and
-    RadiotherapyPrescribedFractions named radiotherapyPrescribedFractions 0..1 MS and
-    RadiotherapyDeliveredFractions named radiotherapyDeliveredFractions 0..1 MS and
-    RadiotherapyTotalDosePlanned named radiotherapyTotalDosePlanned 0..1 MS and
-    RadiotherapyTotalDoseDelivered named radiotherapyTotalDoseDelivered 0..1 MS
+    RadiotherapyDosePerFraction named radiotherapyDosePerFraction 0..1 and
+    RadiotherapyPrescribedFractions named radiotherapyPrescribedFractions 0..1 and
+    RadiotherapyDeliveredFractions named radiotherapyDeliveredFractions 0..1 and
+    RadiotherapyTotalDosePlanned named radiotherapyTotalDosePlanned 0..1 and
+    RadiotherapyTotalDoseDelivered named radiotherapyTotalDoseDelivered 0..1
 * extension[radiotherapyTechnique] ^short = "Radiotherapy Technique"
 * extension[radiotherapyTechnique] ^definition =  "The method by which a radiation modality is applied (e.g., intensity modulated radiation therapy, intraoperative radiation therapy)."
+* usedCode MS
 
 Profile:  TeleradiotherapyPrescriptionDelivery
 Parent:   USCoreProcedure
@@ -71,7 +74,8 @@ Description: "A summary of delivered brachytherapy treatment. The scope is a pre
 * extension[radiotherapyTechnique].value[x] from BrachytherapyTechniqueVS (extensible)
 * usedCode from BrachytherapyDeviceVS (extensible)
 * focalDevice.manipulated only Reference(BrachytherapyImplantableDevice)
-* usedCode and focalDevice.manipulated MS
+// ADDITIONAL MUST SUPPORTS
+* focalDevice and focalDevice.manipulated MS
 
     Invariant: brachytherapy-code-invariant
     Description: "If the code representing 'Other brachytherapy, specify' is used, a second code from outside the original value set must be present. The second code MUST NOT represent a concept in or subsumed by any concept in the original value set."
@@ -84,17 +88,6 @@ Id: brachytherapy-implantable-device
 Title: "Brachytherapy Implantable Device"
 Description: "A radioactive source device implanted into the body and remaining there temporarily or permanently."
 * type from BrachytherapyDeviceVS (extensible)
-
-/* Currently to represent RadiotherapyTechnique, mCODE uses the standard 'procedure-method' extension. But if the cardinality needs to be changed to 0..*, we will need the RadiotherapyTechnique extension, below, unless there is a change to 'procedure-method' (see https://jira.hl7.org/browse/FHIR-30769 "Change cardinality of procedure-method extension").
-
-Extension: RadiotherapyTechnique
-Id: radiotherapy-technique
-Title: "Radiotherapy Technique"
-Description: "The method by which a radiation modality is applied (e.g., intensity modulated radiation therapy, intraoperative radiation therapy)."
-* ^context[0].type = #element
-* ^context[0].expression = "Procedure"
-* value[x] only CodeableConcept
-*/
 
 Extension: RadiotherapyDosePerFraction
 Id: radiotherapy-dose-per-fraction
@@ -152,3 +145,15 @@ Description: "A surgical action addressing a cancer condition. The scope of this
 // Do not insert the category slicing rules because Procedure.category is 0..1.
 * category = SCT#387713003 //"Surgical procedure"
 * code from CancerRelatedSurgicalProcedureVS (extensible)
+
+
+/* Currently to represent RadiotherapyTechnique, mCODE uses the standard 'procedure-method' extension. But if the cardinality needs to be changed to 0..*, we will need the RadiotherapyTechnique extension, below, unless there is a change to 'procedure-method' (see https://jira.hl7.org/browse/FHIR-30769 "Change cardinality of procedure-method extension").
+
+Extension: RadiotherapyTechnique
+Id: radiotherapy-technique
+Title: "Radiotherapy Technique"
+Description: "The method by which a radiation modality is applied (e.g., intensity modulated radiation therapy, intraoperative radiation therapy)."
+* ^context[0].type = #element
+* ^context[0].expression = "Procedure"
+* value[x] only CodeableConcept
+*/

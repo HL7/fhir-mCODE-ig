@@ -3,11 +3,11 @@ RuleSet: PerformanceStatusCommonRules
 * insert CategorySlicingRules
 * category = ObsCat#survey
 * subject 1..1
-* bodySite 0..0
-* specimen 0..0
-* device 0..0
-* hasMember 0..0
-* component 0..0
+* bodySite ^short = "Not used in this profile"
+* specimen ^short = "Not used in this profile"
+* device ^short = "Not used in this profile"
+* hasMember ^short = "Not used in this profile"
+* component ^short = "Not used in this profile"
 * basedOn only Reference (ServiceRequest or CarePlan)
 * partOf only Reference (Procedure)
 * subject only Reference(USCorePatient)

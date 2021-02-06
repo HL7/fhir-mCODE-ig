@@ -27,3 +27,13 @@ RuleSet: BundleEntrySlicingRules
 * entry ^slicing.discriminator.path = "resource"
 * entry ^slicing.rules = #open
 * entry ^slicing.description = "Slicing based on the profile conformance of the entry"
+
+RuleSet: MustSupportOnReference(path, refNumber)
+* {path} ^type[0].targetProfile[{refNumber}].extension[0].url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
+* {path} ^type[0].targetProfile[{refNumber}].extension[0].valueBoolean = true
+
+/* Example of how the RuleSet is applied:
+* basedOn MS
+* insert MustSupportOnReference(basedOn, 1)
+* insert MustSupportOnReference(basedOn, 3)
+*/

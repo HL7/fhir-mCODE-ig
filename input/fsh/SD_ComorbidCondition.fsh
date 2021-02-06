@@ -1,6 +1,6 @@
 Profile: ComorbiditiesParent
 Parent: Observation
-Id: mcode-comorbidities-parent
+Id: comorbidities-parent
 Title: "Comorbidities Parent"
 Description: "General structure for capturing comorbid conditions with respect to a primary ('index') condition. The specific set of comorbidities of interest in a given context are defined by slicing the components array. The same general approach can be applied to any comorbidity category checklist."
 * ^abstract = true
@@ -10,18 +10,20 @@ Description: "General structure for capturing comorbid conditions with respect t
 * component.value[x] only CodeableConcept
 * component.value[x] from PresentAbsentUnknownVS (required)
 * component ^definition = "Component representing the presence or absence of the named comorbidity, with optional condition code(s) or reference to the actual condition(s)."
+* component and component.extension MS
 * component.extension contains 
-     ComorbidConditionCode named conditionCode 0..* MS and
-     ComorbidConditionReference named conditionReference 0..* MS
+     ComorbidConditionCode named conditionCode 0..* and
+     ComorbidConditionReference named conditionReference 0..*
 * component.modifierExtension 0..0
 * component.code ^short = "Code representing the comorbidity category"
 * component.code ^definition = "The code identifying category of comorbidity, for example, congestive heart failure or severe renal disease. The category typically represents a set of specific diagnosis codes."
 * component.extension ^short = "Extensions to capture specific conditions that fall into the given category."
 * component.extension ^definition = "If more detail about the comorbid condition is desired, elements in this extension can be populated with a specific condition code or a reference to a Condition resource. The extension elements SHALL be used only if the comorbidity category is present."
-* subject and value[x] and code and effective[x] and performer and status and component and component.code and component.extension and component.value[x] MS
-* bodySite 0..0
-* specimen 0..0
-* device 0..0
+* bodySite ^short = "Not used in this profile"
+* specimen ^short = "Not used in this profile"
+* device ^short = "Not used in this profile"
+// No Must Suppports in the abstract profile
+
 
 Profile: ComorbiditiesElixhauser
 Parent: ComorbiditiesParent
@@ -192,6 +194,7 @@ Description: "Comorbid condition checklist and optional risk score, using Elixha
 * component[ulcer].extension[conditionCode].value[x] from ElixhauserUlcerVS
 * component[valvularDisease].extension[conditionCode].value[x] from ElixhauserValvularDiseaseVS
 * component[weightLoss].extension[conditionCode].value[x] from ElixhauserWeightLossVS
+// MS flags omitted since this profile is not associated with mCODE use cases
 
 Profile: CancerRelatedComorbiditiesElixhauser
 Parent: ComorbiditiesElixhauser
@@ -199,15 +202,56 @@ Id: mcode-cancer-related-comorbidities-elixhauser
 Title: "Cancer-Related Elixhauser Comorbidities"
 Description: "Comorbid conditions using the Elixhauser comorbidity categories, from the perspective of the primary cancer condition." 
 * focus only Reference(PrimaryCancerCondition)
-* focus MS
 * focus ^definition = "A reference to the cancer condition that is the context for the current list of comorbid conditions."
-* value[x] 0..0
-* component[cancerLeukemia] 0..0
-* component[cancerLymphoma] 0..0
-* component[cancerMetastatic] 0..0
-* component[cancerSolidInSitu] 0..0
-* component[cancerSolidMalignant] 0..0
-
-
+* value[x] ^short = "Not used in this profile"
+* component[cancerLeukemia] ^short = "Not used in this profile"
+* component[cancerLymphoma] ^short = "Not used in this profile"
+* component[cancerMetastatic] ^short = "Not used in this profile"
+* component[cancerSolidInSitu] ^short = "Not used in this profile"
+* component[cancerSolidMalignant] ^short = "Not used in this profile"
+// Must Supports -- none are inherited
+* component and status and code and subject and focus and effective[x] MS
+* insert ComorbidityMustSupports(aids)
+* insert ComorbidityMustSupports(alcoholAbuse)
+* insert ComorbidityMustSupports(deficiencyAnemia)
+* insert ComorbidityMustSupports(arthropathy)
+* insert ComorbidityMustSupports(bloodLossAnemia)
+* insert ComorbidityMustSupports(cerebrovascular)
+* insert ComorbidityMustSupports(congestiveHeartFailure)
+* insert ComorbidityMustSupports(coagulopathy)
+* insert ComorbidityMustSupports(dementia)
+* insert ComorbidityMustSupports(depression)
+* insert ComorbidityMustSupports(diabetesUncomplicated)
+* insert ComorbidityMustSupports(diabetesComplicated)
+* insert ComorbidityMustSupports(drugAbuse)
+* insert ComorbidityMustSupports(hypertensionComplicated)
+* insert ComorbidityMustSupports(hypertensionUncomplicated)
+* insert ComorbidityMustSupports(liverDiseaseMild)
+* insert ComorbidityMustSupports(liverDiseaseSevere)
+* insert ComorbidityMustSupports(chronicPulmonaryDisease)
+* insert ComorbidityMustSupports(neurologicalMovement)
+* insert ComorbidityMustSupports(neurologicalOther)
+* insert ComorbidityMustSupports(neurologicalSeizure)
+* insert ComorbidityMustSupports(obesity)
+* insert ComorbidityMustSupports(paralysis)
+* insert ComorbidityMustSupports(peripheralVascularDisease)
+* insert ComorbidityMustSupports(psychosis)
+* insert ComorbidityMustSupports(pulmonaryCirculationDisorder)
+* insert ComorbidityMustSupports(renalFailureModerate)
+* insert ComorbidityMustSupports(renalFailureSevere)
+* insert ComorbidityMustSupports(hypothyroidism)
+* insert ComorbidityMustSupports(thyroidOther)
+* insert ComorbidityMustSupports(ulcer)
+* insert ComorbidityMustSupports(valvularDisease)
+* insert ComorbidityMustSupports(weightLoss)
 
 // SCT#762713009 "Charlson Comorbidity Index (assessment scale)"
+
+RuleSet: ComorbidityMustSupports(sliceName)
+* component[{sliceName}] MS
+* component[{sliceName}].code MS
+* component[{sliceName}].value[x] MS
+* component[{sliceName}].dataAbsentReason MS
+* component[{sliceName}].extension MS
+* component[{sliceName}].extension[conditionCode] MS
+* component[{sliceName}].extension[conditionReference] MS

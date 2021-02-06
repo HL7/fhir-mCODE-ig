@@ -41,7 +41,7 @@ Description: "Records the history of secondary neoplasms, including location(s) 
 * extension[relatedPrimaryCancerCondition] ^definition = "A reference to the primary cancer condition that provides context for this resource."
 * code from SecondaryCancerDisorderVS (required)
 * code obeys secondary-cancer-condition-code-invariant
-* stage 0..0
+* stage ^short = "Not used in this profile"
 
 Invariant: secondary-cancer-condition-code-invariant
 Description: "If the code representing 'Other secondary cancer condition, specify' is used, a second code from outside the original value set must be present. The second code MUST NOT represent a concept in or subsumed by any concept in the original value set."

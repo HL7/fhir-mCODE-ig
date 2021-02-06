@@ -55,6 +55,8 @@ Description:  "Records the dimensions of a tumor"
 * component[tumorOtherDimension].value[x] only Quantity
 * component[tumorOtherDimension].valueQuantity from TumorSizeUnitsVS (required)
 
+* effective[x] MS
+
 
 // This invariant has been exhaustively tested with the FHIR validator
 Invariant: must-have-focus-or-specimen-invariant

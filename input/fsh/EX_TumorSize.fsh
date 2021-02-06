@@ -25,6 +25,7 @@ Description: "Example of a resource conforming to the tumor size profile."
 * component[tumorLongestDimension].valueQuantity = 1.2 'cm' "cm"
 * component[tumorOtherDimension].valueQuantity = 1.0 'cm' "cm"
 * component[tumorOtherDimension].valueQuantity = 0.5 'cm' "cm"
+* effectiveDateTime = "2019-05-01"
 
 Instance: tumor-lobular-carcinoma-left-breast
 InstanceOf: Tumor
@@ -54,5 +55,5 @@ Description: "Example of a TumorSpecimen linked to [this Tumor](BodyStructure-tu
 * identifier.type = TumorIdentifierCS#tumor-identifier
 * identifier.value = "894e51f5-f5ab-41f2-80bc-2917c995e137"
 * extension[conditionAssociatedWithTumor].valueReference = Reference(Condition/primary-cancer-condition-breast)
-* receivedTime = "2019-04-01"
+* receivedTime = "2020-04-01"
 * collection.bodySite = SCT#80248007 "Left breast structure (body structure)"

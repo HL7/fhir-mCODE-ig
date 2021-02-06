@@ -36,7 +36,7 @@
 <artifact deprecated="true" id="ValueSet/mcode-comorbid-condition-value-set" key="comorbid-condition-value-set" name="Comorbid Condition Value Set"/>
 <artifact id="StructureDefinition/mcode-comorbidities-parent" key="StructureDefinition-mcode-comorbidities-parent" name="Comorbidities Parent"/>
 <artifact id="ValueSet/mcode-condition-status-trend-vs" key="condition-status-trend-value-set" name="Condition Status Trend Value Set"/>
-<artifact id="StructureDefinition/mcode-condition-related-to-bodystructure" key="StructureDefinition-mcode-condition-related-to-bodystructure" name="Condition related to a BodyStructure"/>
+<artifact id="StructureDefinition/mcode-condition-related" key="StructureDefinition-mcode-condition-related" name="Condition related to resource"/>
 <artifact id="ValueSet/mcode-dna-change-type-vs" key="ValueSet-mcode-dna-change-type-vs" name="DNA Change Type Value Set"/>
 <artifact id="StructureDefinition/mcode-ecog-performance-status" key="ecog-performance-status" name="ECOG Performance Status"/>
 <artifact id="ValueSet/elixhauser-alcohol-abuse-vs" key="ValueSet-elixhauser-alcohol-abuse-vs" name="Elixhauser Comorbid Condition Value Set for Alcohol Abuse"/>

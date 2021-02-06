@@ -11,10 +11,10 @@ Title:  "Specific Condition Reference for Comorbidity"
 Description: "An extension for representing a reference to a condition resource corresponding to the comorbid condition category."
 * value[x] only Reference(Condition)
 
-Extension: ConditionRelatedToBodyStructure
-Id: mcode-condition-related-to-bodystructure
-Title:  "Condition related to a BodyStructure"
-Description: "This BodyStructure has an unspecified relationship with a Condition."
+Extension: ConditionRelated
+Id: mcode-condition-related
+Title:  "Condition related to resource"
+Description: "This resource has an unspecified relationship with a Condition."
 * value[x] only Reference(Condition)
 
 Extension: EvidenceType
@@ -28,7 +28,7 @@ Description: "Categorization of the kind of evidence used as input to the clinic
 Extension: HistologyMorphologyBehavior
 Id: mcode-histology-morphology-behavior
 Title: "Histology-Morphology-Behavior"
-Description: "An extension describing the morphologic and behavioral characteristics of the cancer." 
+Description: "An extension describing the morphologic and behavioral characteristics of the cancer."
 * insert ExtensionContext(Condition)
 * value[x] only CodeableConcept
 * value[x] from HistologyMorphologyBehaviorVS (required)

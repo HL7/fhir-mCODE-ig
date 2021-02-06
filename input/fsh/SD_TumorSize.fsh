@@ -85,7 +85,7 @@ Description:  "Identifies a tumor that has not been removed from the body. Whene
 
 * patient only Reference(CancerPatient)
 
-* extension contains ConditionRelatedToBodyStructure named conditionAssociatedWithTumor 0..1 MS
+* extension contains ConditionRelated named conditionAssociatedWithTumor 0..1 MS
 * extension[conditionAssociatedWithTumor].value[x] only Reference(PrimaryCancerCondition or SecondaryCancerCondition)
 * extension[conditionAssociatedWithTumor] ^short = "Reference to cancer condition associated with this tumor"
 * extension[conditionAssociatedWithTumor] ^definition = "Associates this tumor with a cancer condition. This could be a causal association (e.g., this is believed to be the primary tumor causing the cancer) or a different type of relationship (e.g., this tumor is a metastasis "
@@ -127,7 +127,7 @@ Description: "Represents a tumor after it has been removed from the body. Prior 
 * identifier[tumorIdentifier].value 1..1 MS
 * identifier[tumorIdentifier].value ^short = "Identifer matching Tumor's identifier value"
 * identifier[tumorIdentifier].value ^definition = "If this Specimen is a tumor that was represented by a BodyStructure resource conforming to [Tumor](StructureDefinition-mcode-tumor.html) before removal, this value MUST match an `identifier` value from that BodyStructure resource that is persistent over time and unique with in the context of the Patient."
-* extension contains ConditionRelatedToBodyStructure named conditionAssociatedWithTumor 0..1 MS
+* extension contains ConditionRelated named conditionAssociatedWithTumor 0..1 MS
 * extension[conditionAssociatedWithTumor].value[x] only Reference(PrimaryCancerCondition or SecondaryCancerCondition)
 * extension[conditionAssociatedWithTumor] ^short = "Reference to the cancer condition associated with this tumor"
 * extension[conditionAssociatedWithTumor] ^definition = "Associates this tumor with a cancer condition."

@@ -17,12 +17,12 @@ Description:  "Records the dimensions of a tumor"
 
 * focus 0..1
 * focus only Reference(Tumor)
-* focus ^short = "Identifies a tumor that has not been excised"
+* focus ^short = "Identifies a tumor that has NOT been removed from the body"
 * focus ^definition = "Reference to a BodyStructure resource conforming to Tumor."
 * focus ^comment = "Use **only** when the tumor **has not** been removed from the body. If the tumor has been removed, use `specimen` instead and leave `focus` empty."
 * focus MS
 
-* specimen ^short = "Identifiers a tumor that has been excised"
+* specimen ^short = "Identifiers a tumor that has been removed from the body"
 * specimen ^definition = "Reference to a BodyStructure resource conforming to Tumor."
 * specimen ^comment = "Use **only** when the tumor **has** been removed from the body. If the tumor has been not removed, use `focus` instead and leave `specimen` empty."
 * specimen MS

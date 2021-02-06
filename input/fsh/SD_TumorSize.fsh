@@ -69,7 +69,7 @@ Profile: Tumor
 Parent:  BodyStructure
 Id: mcode-tumor
 Title: "Tumor"
-Description:  "Identifies a tumor. Whenever possible, a single resource conforming to this profile will be used to track a tumor over time (as opposed to creating new Tumor-conforming BodyStructure resources each time that tumor is measured)."
+Description:  "Identifies a tumor that has not been removed from the body. Whenever possible, a single resource conforming to this profile will be used to track a tumor over time (as opposed to creating new Tumor-conforming BodyStructure resources each time that tumor is measured). Use [TumorSpecimen](StructureDefinition-mcode-tumor-specimen.html) to represent the tumor after removal from the body."
 * ^status = #draft
 * ^experimental = true
 // The purpose of this profile is to uniquely identify a tumor, so it follows that there must be at least one identifier value provided
@@ -96,3 +96,38 @@ Invariant: tumor-other-morphology-invariant
 Description: "If the code representing 'Other histology morphology behavior, specify' is used, a second code from outside the original value set must be present. The second code MUST NOT represent a concept in or subsumed by any concept in the original value set."
 Expression: "coding.where(code = 'HMB-OTHER').exists() implies coding.where(code != 'HMB-OTHER' and $this.memberOf('http://hl7.org/fhir/us/mcode/ValueSet/mcode-histology-morphology-behavior-vs').not()).exists()"
 Severity: #error
+
+
+
+CodeSystem: TumorIdentifierCS
+Id: mcode-tumor-identifier-cs
+Title: "mCODE Tumor Identifier Code"
+Description: "Code used to specify that a given identifier is for a tumor."
+* #tumor-identifier
+
+Profile: TumorSpecimen
+Parent: Specimen
+Id: mcode-tumor-specimen
+Title: "Tumor Specimen"
+Description: "Represents a tumor after it has been removed from the body. Prior to excision, use [Tumor](StructureDefinition-mcode-tumor.html) (a BodyStructure) instead. If this tumor was represented by [Tumor](StructureDefinition-mcode-tumor.html) while still in the body, use `identifier` to associate with that resource."
+* ^status = #draft
+* ^experimental = true
+* type = SCT#108369006 "Neoplasm (morphologic abnormality)"
+* subject only Reference(CancerPatient)
+* collection.bodySite MS
+* identifier ^slicing.discriminator.type = #pattern
+* identifier ^slicing.discriminator.path = "type.coding.code"
+* identifier ^slicing.rules = #open
+* identifier ^slicing.description = "Slicing by code to identify tumor identifier"
+* identifier contains tumorIdentifier 0..* MS
+* identifier[tumorIdentifier].type.coding.code = TumorIdentifierCS#tumor-identifier
+* identifier[tumorIdentifier] ^short = "Identifier to associate this resource with a specific Tumor"
+* identifier[tumorIdentifier] ^definition = "To associate this with a specific BodyStructure conforming to the Tumor profile, add an identifier with a value that matches a persistent identifier from `BodyStructure.identifier.value` that is unique in the context of the Patient."
+* identifier[tumorIdentifier].type.coding.code ^short = "Fixed to \"tumor-identifier\""
+* identifier[tumorIdentifier].value 1..1 MS
+* identifier[tumorIdentifier].value ^short = "Identifer matching Tumor's identifier value"
+* identifier[tumorIdentifier].value ^definition = "If this Specimen is a tumor that was represented by a BodyStructure resource conforming to [Tumor](StructureDefinition-mcode-tumor.html) before removal, this value MUST match an `identifier` value from that BodyStructure resource that is persistent over time and unique with in the context of the Patient."
+* extension contains ConditionRelatedToBodyStructure named conditionAssociatedWithTumor 0..1 MS
+* extension[conditionAssociatedWithTumor].value[x] only Reference(PrimaryCancerCondition or SecondaryCancerCondition)
+* extension[conditionAssociatedWithTumor] ^short = "Reference to the cancer condition associated with this tumor"
+* extension[conditionAssociatedWithTumor] ^definition = "Associates this tumor with a cancer condition."

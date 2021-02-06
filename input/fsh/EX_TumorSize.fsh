@@ -6,7 +6,7 @@ Description: "mCODE Example for Primary Cancer Condition (breast)"
 * verificationStatus = VerStatus#confirmed "Confirmed"
 * category = CondCat#problem-list-item
 * code = SCT#254837009 "Malignant neoplasm of breast (disorder)"
-* extension[histologyMorphologyBehavior].valueCodeableConcept = SCT#278054005 "Lobular carcinoma of breast (disorder)"
+* extension[histologyMorphologyBehavior].valueCodeableConcept = ICDO3#8520/2 "Lobular carcinoma in situ"
 * bodySite = SCT#80248007 "Left breast structure (body structure)"
 * subject = Reference(cancer-patient-eve-anyperson)
 * onsetDateTime = "2019-04-01"
@@ -39,6 +39,20 @@ Description: "Example of a resource conforming to the tumor profile."
 * identifier.use = #usual
 * identifier.type = http://terminology.hl7.org/CodeSystem/v2-0203#RI "Resource identifier"
 * identifier.system = "http://radiology.hospital.example.org"
-* identifier.value = "1234"
+* identifier.value = "894e51f5-f5ab-41f2-80bc-2917c995e137"
 * location = SCT#80248007 "Left breast structure (body structure)"
-* extension[conditionAssociatedWithTumor].value[x] = Reference(Condition/primary-cancer-condition-breast)
+* extension[conditionAssociatedWithTumor].valueReference = Reference(Condition/primary-cancer-condition-breast)
+
+
+Instance: tumor-specimen-lobular-carcinoma-left-breast
+InstanceOf: TumorSpecimen
+Description: "Example of a TumorSpecimen linked to [this Tumor](BodyStructure-tumor-lobular-carcinoma-left-breast.html) via `identifier`."
+* subject = Reference(Patient/cancer-patient-eve-anyperson)
+* status = #available "available"
+* type = SCT#108369006 "Neoplasm (morphologic abnormality)"
+* identifier.use = #usual
+* identifier.type = TumorIdentifierCS#tumor-identifier
+* identifier.value = "894e51f5-f5ab-41f2-80bc-2917c995e137"
+* extension[conditionAssociatedWithTumor].valueReference = Reference(Condition/primary-cancer-condition-breast)
+* receivedTime = "2019-04-01"
+* collection.bodySite = SCT#80248007 "Left breast structure (body structure)"

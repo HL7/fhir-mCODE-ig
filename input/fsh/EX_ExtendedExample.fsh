@@ -1,6 +1,6 @@
 /* Order of Events
 2018-03-01  MammogramDate
-2018-03-06  Initial Oncologist visit 
+2018-03-06  Initial Oncologist visit
    - Medical History
    - Family History
    - Vital Signs
@@ -336,11 +336,11 @@ Description: "Extended example: example showing partial mastectomy surgical proc
 * reasonReference = Reference(primary-cancer-condition-jenny-m)
 * bodySite = SCT#80248007 "Left breast structure (body structure)"
 
-Instance: specimen-left-breast-jenny-m
-InstanceOf: Specimen
+Instance: tumor-specimen-left-breast-jenny-m
+InstanceOf: TumorSpecimen
 Description: "Extended example: example tumor specimen"
 * status = #available "available"
-* type = http://terminology.hl7.org/CodeSystem/v2-0487#TUMOR "Tumor"
+* type = SCT#108369006 "Neoplasm (morphologic abnormality)"
 * subject = Reference(cancer-patient-jenny-m)
 * receivedTime = "2019-04-01"
 * collection.bodySite = SCT#80248007 "Left breast structure (body structure)"
@@ -357,7 +357,7 @@ Description: "Extended example: example of pathology findings represented as a D
 * subject = Reference(cancer-patient-jenny-m)
 * issued = "2018-04-05T00:00:00Z"
 * effectiveDateTime = "2018-04-01T00:00:00Z"
-* specimen = Reference(specimen-left-breast-jenny-m)
+* specimen = Reference(tumor-specimen-left-breast-jenny-m)
 * result[0] = Reference(us-core-observation-lab-tumor-invasion-jenny-m)
 * result[1] = Reference(us-core-observation-lab-tumor-margins-jenny-m)
 * result[2] = Reference(us-core-observation-lab-sentinel-nodes-jenny-m)
@@ -374,7 +374,7 @@ Description: "Extended example: example showing negative invasion for the remove
 * subject = Reference(cancer-patient-jenny-m)
 * effectiveDateTime = "2018-04-01T00:00:00Z"
 * valueCodeableConcept = SCT#260385009 "Negative (qualifier value)"
-* specimen = Reference(specimen-left-breast-jenny-m)
+* specimen = Reference(tumor-specimen-left-breast-jenny-m)
 
 Instance: us-core-observation-lab-tumor-margins-jenny-m
 InstanceOf:  USCoreObservationLab
@@ -384,7 +384,7 @@ Description: "Extended example: example showing negative margins for the removed
 * subject = Reference(cancer-patient-jenny-m)
 * effectiveDateTime = "2018-04-01T00:00:00Z"
 * valueCodeableConcept = LNC#LA27151-2 "Uninvolved by invasive carcinoma"
-* specimen = Reference(specimen-left-breast-jenny-m)
+* specimen = Reference(tumor-specimen-left-breast-jenny-m)
 
 Instance: us-core-observation-lab-sentinel-nodes-jenny-m
 InstanceOf:  USCoreObservationLab
@@ -395,7 +395,7 @@ Description: "Extended example: example showing 3 sentinel lymph nodes were exam
 * effectiveDateTime = "2018-04-01T00:00:00Z"
 * component.code = LNC#92833-3 "Lymph nodes examined [#] in Cancer specimen by Light microscopy"
 * component.valueQuantity = 3 '{Count}' "Count"
-* specimen = Reference(specimen-left-breast-jenny-m)
+* specimen = Reference(tumor-specimen-left-breast-jenny-m)
 
 Instance: tumor-size-jenny-m
 InstanceOf:  TumorSize
@@ -407,9 +407,9 @@ Description: "Extended example: example showing tumor size"
 * subject = Reference(cancer-patient-jenny-m)
 * effectiveDateTime = "2018-04-01T00:00:00Z"
 * component.code = LNC#33728-7 "Size.maximum dimension in Tumor"
-* component.valueQuantity = 2.5 'cm' 
+* component.valueQuantity = 2.5 'cm'
 * component.valueQuantity.unit = "centimeters"
-* specimen = Reference(specimen-left-breast-jenny-m)
+* specimen = Reference(tumor-specimen-left-breast-jenny-m)
 
 Instance: us-core-observation-lab-tumor-dcis
 InstanceOf:  USCoreObservationLab
@@ -419,7 +419,7 @@ Description: "Extended example: example showing DCIS diagnosis"
 * subject = Reference(cancer-patient-jenny-m)
 * effectiveDateTime = "2018-04-01T00:00:00Z"
 * valueCodeableConcept = LNC#85336-6 "DCIS intraductal extension in Breast cancer specimen Qualitative by Light microscopy"
-* specimen = Reference(specimen-left-breast-jenny-m)
+* specimen = Reference(tumor-specimen-left-breast-jenny-m)
 
 
 // 21-Gene Assay

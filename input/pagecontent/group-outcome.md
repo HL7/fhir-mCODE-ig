@@ -12,15 +12,22 @@ In addition, the history of tumor size is indicative of treatment efficacy. Prof
 
 Date of death data can be obtained from several sources outside of the clinical setting. If available in the EHR, it can be reported through via mCODE, but more likely, it will be filled in from vital records, after the last clinical interaction.
 
-### Tumor Size
+### Tumor
 
-Changes in tumor size provide an objective measure of disease progression. Tumors must be identified and tracked for comparisons to be made, over time. The [Tumor] profile provides persistent identification of a tumor that can be related to more than one [TumorSize] measurement, if the tumor is still in the body. However, if a tumor has been removed from the body, a [Specimen](http://hl7.org/fhir/R4/specimen.html) resource should be used to record details of the tumor source.
+Two profiles are provided for persistently identifying tumors, which is necessary for comparisons of tumor characteristics over time. The [Tumor] profile provides persistent identification of a tumor that has not been removed from the body. After a tumor has been removed from the body, it MUST be represented by [TumorSpecimen] rather than [Tumor].
+
+If both [Tumor] and [TumorSpecimen] are used to represent the same tumor, `identifier` MUST be used to associate them: a persistent identifier from [Tumor] that is unique within the context of the Patient MUST appear in [TumorSpecimen] with `identifier.type` set to [`tumor-identifier`](CodeSystem-mcode-tumor-identifier-cs.html).
+
+#### Tumor size
+
+The [TumorSize] profile provides a mechanism for recording the dimensions of a tumor. It MUST reference a [Tumor] if the measurement is made while the tumor is still in the body, or [TumorSpecimen] if the tumor has been removed.
 
 ### Profiles
 
 * [CancerPatient] (for death date)
 * [CancerDiseaseStatus]
 * [Tumor]
+* [TumorSpecimen]
 * [TumorSize]
 
 ### Extension

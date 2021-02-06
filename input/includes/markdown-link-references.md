@@ -45,6 +45,7 @@
 [TumorMarkerTest]: StructureDefinition-mcode-tumor-marker-test.html
 [TumorSize]: StructureDefinition-mcode-tumor-size.html
 [Tumor]: StructureDefinition-mcode-tumor.html
+[TumorSpecimen]: StructureDefinition-mcode-tumor-specimen.html
 
 <!-- mCODE Value Sets -->
 [BrachytherapyModalityVS]: ValueSet-brachytherapy-modality-vs.html

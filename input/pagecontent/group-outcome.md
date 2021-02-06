@@ -19,7 +19,7 @@ To track and compare tumor characteristics over time, it is necessary to have a 
 1. [Tumor] MUST be used when identifying tumors prior to removal from the body
 1. [TumorSpecimen] MUST be used when identifying tumors after removal
 
-A single [Tumor]-conforming resource SHOULD be created for a tumor when it is first identified, and this resource SHOULD be referenced in Observations of this tumor or other resources that refer to a specific tumor until the tumor is removed from the body. After removal, a single [TumorSpecimen]-conforming resource SHOULD be created and used in the same manner. A tumor MUST NOT have more than one [Tumor] and one [TumorSpecimen] at any time.
+A single [Tumor]-conforming resource SHOULD be created for a tumor when it is first identified, and this resource SHOULD be referenced in Observations of this tumor or other resources that refer to a specific tumor until the tumor is removed from the body. After removal, a single [TumorSpecimen]-conforming resource SHOULD be created and used in the same manner. A tumor SHOULD NOT have more than one [Tumor] and one [TumorSpecimen] at any time.
 
 If both [Tumor] and [TumorSpecimen] are used to represent the same tumor, `identifier` MUST be used to associate them: a persistent identifier from [Tumor] that is unique within the context of the Patient MUST appear in [TumorSpecimen] with `identifier.type` set to [`tumor-identifier`](CodeSystem-mcode-tumor-identifier-cs.html).
 

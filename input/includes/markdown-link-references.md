@@ -11,8 +11,8 @@
 [CancerRelatedSurgicalProcedure]: StructureDefinition-mcode-cancer-related-surgical-procedure.html
 [ComorbidConditionCode]: StructureDefinition-mcode-comorbid-condition-code.html
 [ComorbidConditionReference]: StructureDefinition-mcode-comorbid-condition-reference.html
-[ComorbiditiesElixhauser]: StructureDefinition-comorbidities-elixhauser.html
-[ComorbiditiesParent]: StructureDefinition-comorbidities-parent.html
+[ComorbiditiesElixhauser]: StructureDefinition-mcode-comorbidities-elixhauser.html
+[ComorbiditiesParent]: StructureDefinition-mcode-comorbidities-parent.html
 [ECOGPerformanceStatus]: StructureDefinition-mcode-ecog-performance-status.html
 [EvidenceType]: StructureDefinition-mcode-evidence-type.html
 [GeneticSpecimen]: StructureDefinition-mcode-genetic-specimen.html
@@ -23,12 +23,12 @@
 [MCODEPatientBundle]: StructureDefinition-mcode-patient-bundle.html
 [CapabilityStatement]: StructureDefinition-CapabilityStatement.html
 [PrimaryCancerCondition]: StructureDefinition-mcode-primary-cancer-condition.html
-[RadiotherapyCourseSummary]: StructureDefinition-radiotherapy-course-summary.html
-[RadiotherapyDosePerFraction]: StructureDefinition-radiotherapy-dose-per-fraction.html
-[RadiotherapyPrescribedFractions]: StructureDefinition-radiotherapy-prescribed-fractions.html
-[RadiotherapyDeliveredFractions]: StructureDefinition-radiotherapy-delivered-fractions.html
-[RadiotherapyTotalDosePlanned]: StructureDefinition-radiotherapy-total-dose-planned.html
-[RadiotherapyTotalDoseDelivered]: StructureDefinition-radiotherapy-total-dose-delivered.html
+[RadiotherapyCourseSummary]: StructureDefinition-mcode-radiotherapy-course-summary.html
+[RadiotherapyDosePerFraction]: StructureDefinition-mcode-radiotherapy-dose-per-fraction.html
+[RadiotherapyPrescribedFractions]: StructureDefinition-mcode-radiotherapy-prescribed-fractions.html
+[RadiotherapyDeliveredFractions]: StructureDefinition-mcode-radiotherapy-delivered-fractions.html
+[RadiotherapyTotalDosePlanned]: StructureDefinition-mcode-radiotherapy-total-dose-planned.html
+[RadiotherapyTotalDoseDelivered]: StructureDefinition-mcode-radiotherapy-total-dose-delivered.html
 [RelatedPrimaryCancerCondition]: StructureDefinition-mcode-related-primary-cancer-condition.html
 [SecondaryCancerCondition]: StructureDefinition-mcode-secondary-cancer-condition.html
 [TeleradiotherapyPrescriptionDelivery]: StructureDefinition-teleradiotherapy-prescription-delivery.html
@@ -122,8 +122,8 @@
 [TumorSizeUnitsVS]: ValueSet-mcode-tumor-size-units-vs.html
 
 <!-- mCODE Code Systems -->
-[ElixhauserCategoryCS]: CodeSystem-elixhauser-ahrq-cs.html
-[RadiotherapyCS]: CodeSystem-radiotherapy-cs.html
+[ElixhauserCategoryCS]: CodeSystem-mcode-comorbidities-elixhauser-ahrq-cs.html
+[RadiotherapyCS]: CodeSystem-mcode-radiotherapy-cs.html
 [CatchCodeCS]: CodeSystem-mcode-catch-code-cs.html
 
 <!-- mCODE CapabilityStatements -->

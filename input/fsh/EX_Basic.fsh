@@ -37,7 +37,7 @@ Description: "mCODE Example for Cancer Disease Status"
 * performer = Reference(us-core-practitioner-kyle-anydoc)
 * valueCodeableConcept = SCT#268910001 "Patient's condition improved (finding)"
 
-Instance: cancer-related-comorbidities-elixhauser-john-anyperson
+Instance: cancer-related-mcode-comorbidities-elixhauser-john-anyperson
 InstanceOf: CancerRelatedComorbiditiesElixhauser
 Description: "mCODE Example for Cancer-Related Comorbidities"
 * subject = Reference(cancer-patient-john-anyperson)
@@ -54,7 +54,7 @@ Description: "mCODE Example for Cancer-Related Comorbidities"
 * component[peripheralVascularDisease].valueCodeableConcept = SCT#2667000 "Absent (qualifier value)"
 
 
-Instance: comorbidities-elixhauser-john-anyperson
+Instance: mcode-comorbidities-elixhauser-john-anyperson
 InstanceOf: ComorbiditiesElixhauser
 Description: "Example of Elixhauser Comorbidity List without index disease."
 * subject = Reference(cancer-patient-john-anyperson)

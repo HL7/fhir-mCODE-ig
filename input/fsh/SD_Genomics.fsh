@@ -1,6 +1,6 @@
 Profile:    CancerGeneticVariant
 Parent:     USCoreObservationLab
-Id:         mcode-cancer-genetic-variant
+Id: mcode-cancer-genetic-variant
 Title:      "Cancer Genetic Variant"
 Description:    "Records an alteration in the most common DNA nucleotide sequence. The term variant can be used to describe an alteration that may be benign, pathogenic, or of unknown significance. The term variant is increasingly being used in place of the term mutation."
 * insert NotUsed(bodySite)
@@ -84,7 +84,7 @@ Description:    "Records an alteration in the most common DNA nucleotide sequenc
 
 Profile:        TumorMarkerTest
 Parent:         USCoreObservationLab
-Id:             mcode-tumor-marker-test
+Id: mcode-tumor-marker-test
 Title:          "Tumor Marker Test"
 Description:    "The result of a tumor marker test. Tumor marker tests are generally used to guide cancer treatment decisions and monitor treatment, as well as to predict the chance of recovery and cancer recurrence."
 * subject 1..1
@@ -105,19 +105,20 @@ Severity:   #error
 
 Profile:    GeneticSpecimen
 Parent:     Specimen
-Id:         mcode-genetic-specimen
+Id: mcode-genetic-specimen
 Title:      "Genetic Specimen"
 Description:    "A small sample of blood, hair, skin, amniotic fluid (the fluid that surrounds a fetus during pregnancy), or other tissue which is excised from a subject for the purposes of genomics testing or analysis."
 * type 1..1
 * type from GeneticSpecimenTypeVS
 * collection.bodySite.extension contains
     LocationQualifier named locationQualifier 0..1
+// No inherited MS
 * subject and status and type and collection and collection.bodySite and collection.bodySite.extension[locationQualifier] MS
 
 
 Profile:    CancerGenomicsReport
 Parent:     USCoreDiagnosticReportLab
-Id:         mcode-cancer-genomics-report
+Id: mcode-cancer-genomics-report
 Title:      "Cancer Genomics Report"
 Description:    "Genetic analysis summary report. The report may include one or more tests, with two distinct test types. The first type is a targeted mutation test, where a specific mutation on a specific gene is tested for. The result is either positive or negative for that mutation. The second type is a more general test for variants. This type of test returns the identity of variants found in a certain region of the genome."
 * subject only Reference(CancerPatient)
@@ -142,7 +143,7 @@ Description:    "Genetic analysis summary report. The report may include one or 
 
 Profile:    GenomicRegionStudied
 Parent:     USCoreObservationLab
-Id:         mcode-genomic-region-studied
+Id: mcode-genomic-region-studied
 Title:      "Genomic Region Studied"
 Description:    "The area of the genome region referenced in testing for variants."
 * code = LNC#53041-0 //"DNA region of interest panel"
@@ -187,7 +188,7 @@ Description:    "The area of the genome region referenced in testing for variant
 * component[GenomicReferenceSequenceId] ^short = "Genomic reference sequence [ID]"
 * component[GenomicReferenceSequenceId] ^definition = "Range(s) of DNA sequence examined. The genomic reference sequence is a contiguous stretch of chromosome DNA that spans all of the exons of the gene and includes transcribed and non transcribed stretches. For this ID use either the NCBI genomic nucleotide RefSeq IDs with their version number (see: NCBI.NLM.NIH.Gov/RefSeq) or use the LRG identifiers, without transcript (t or p) extensions -- when they become available. (source: LOINC)"
 * component[GenomicReferenceSequenceId].code = LNC#48013-7
-
+// These are the additional MS on top of US Core Lab Observation
 * component and component.code and component.value[x] and component.dataAbsentReason MS
 
 

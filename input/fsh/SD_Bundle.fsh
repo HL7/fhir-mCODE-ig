@@ -9,32 +9,32 @@ Description: "A collection of data for an mCODE cancer patient."
     // These resources are required per Conformance > Supported Profiles.
     cancerPatient 1..1 MS and
     primaryCancerCondition 0..* MS and
-    secondaryCancerCondition 0..* MS and
-    cancerDiseaseStatus 0..* MS and
-    ecogPerformanceStatus 0..* MS and
-    karnofskyPerformanceStatus 0..* MS and
-    tumorMarkerTest 0..* MS and
-    cancerRelatedMedicationRequest 0..* MS and
-    cancerRelatedSurgicalProcedure 0..* MS and
-    radiotherapyCourseSummary 0..* MS and
-    brachytherapyPrescriptionDelivery 0..* MS and
-    teleradiotherapyPrescriptionDelivery 0..* MS and
-    tnmClinicalStageGroup 0..* MS and
-    tnmClinicalPrimaryTumorCategory 0..* MS and
-    tnmClinicalRegionalNodesCategory 0..* MS and
-    tnmClinicalDistantMetastasesCategory 0..* MS and
-    tnmPathologicalStageGroup 0..* MS and
-    tnmPathologicalPrimaryTumorCategory 0..* MS and
-    tnmPathologicalRegionalNodesCategory 0..* MS and
-    tnmPathologicalDistantMetastasesCategory 0..* MS and
-    cancerGeneticVariant 0..* MS and
-    cancerGenomicsReport 0..* MS and
-    geneticSpecimen 0..* MS and
-    genomicRegionStudied 0..* MS and
-    cancerRelatedComorbiditiesElixhauser 0..* MS and
-    vitalSign 0..* MS and
-    tumor 0..* MS and
-    tumorSize 0..* MS
+    secondaryCancerCondition 0..* and
+    cancerDiseaseStatus 0..* and
+    ecogPerformanceStatus 0..* and
+    karnofskyPerformanceStatus 0..* and
+    tumorMarkerTest 0..* and
+    cancerRelatedMedicationRequest 0..* and
+    cancerRelatedSurgicalProcedure 0..* and
+    radiotherapyCourseSummary 0..* and
+    brachytherapyPrescriptionDelivery 0..* and
+    teleradiotherapyPrescriptionDelivery 0..* and
+    tnmClinicalStageGroup 0..* and
+    tnmClinicalPrimaryTumorCategory 0..* and
+    tnmClinicalRegionalNodesCategory 0..* and
+    tnmClinicalDistantMetastasesCategory 0..* and
+    tnmPathologicalStageGroup 0..* and
+    tnmPathologicalPrimaryTumorCategory 0..* and
+    tnmPathologicalRegionalNodesCategory 0..* and
+    tnmPathologicalDistantMetastasesCategory 0..* and
+    cancerGeneticVariant 0..* and
+    cancerGenomicsReport 0..* and
+    geneticSpecimen 0..* and
+    genomicRegionStudied 0..* and
+    cancerRelatedComorbiditiesElixhauser 0..* and
+    vitalSign 0..* and
+    tumor 0..* and
+    tumorSize 0..*
 
 * entry[cancerPatient] ^short = "Cancer Patient"
 * entry[primaryCancerCondition] ^short = "Primary Cancer Condition(s)"

@@ -1,0 +1,120 @@
+
+This section outlines important definitions, interpretations, and requirements common to all US Core actors used in this guide. The conformance verbs - SHALL or MUST, SHOULD, and MAY - are defined in [FHIR Conformance Rules](http://hl7.org/fhir/R4/conformance-rules.html).
+
+### mCODE Participant Roles
+
+Two roles for **mCODE Participants** are defined:
+
+* **mCODE Data Sender** - a participant in exchange of mCODE data who provides mCODE data in response to a data query or autonomously pushes mCODE data to an mCODE receiver. The data sender does not have to be the originator of the data it possesses.
+* **mCODE Data Receiver** - a participant in exchange of mCODE data who accepts mCODE data from an mCODE Data Sender.
+
+US Core defines two actors, US Core Requestor and US Core Responder, which are highly suggestive of a "pull" architecture (initiated by requestor, answered by responder). In mCODE, we use the terms Receiver and Sender, which are more neutral with respect to push and pull (a Sender may initiate an exchange). However, for all practical purposes, there is an equivalence between Requestor/Receiver and Responder/Sender.
+
+Currently, the mCODE Implementation Guide provides CapabilityStatements and documentation only for "pull" architectures. Participants implementing a different architecture MUST follow the conformance requirements in this Implementation Guide **except** for those specifically identified as applying pull architectures.
+
+### "MUST" Requirements for Conformance
+
+mCODE participants MUST meet the following requirements for conformance:
+
+1. [Identify mCODE patients](#identify-mcode-patients)
+1. [Follow conformance requirements for supported profiles](#follow-conformance-requirements-for-supported-profiles)
+1. [Support querying mCODE-conforming resources](#support-querying-mcode-conforming-resources)
+1. [Publish a CapabilityStatement identifying supported profiles and operations](#publish-a-capabilitystatement-identifying-supported-profiles-and-operations)
+1. [Populate and meaningfully process mCODE resources](#populate-and-meaningfully-process-mcode-resources)
+1. [Support US Core conformance requirements](#support-us-core-conformance-requirements)
+
+
+#### Identify mCODE Patients
+
+To facilitate conformance testing, testing software must be able to determine which patients are "mCODE Patients" -- those in scope for mCODE. In general, all patients with confirmed cancer diagnoses SHOULD be covered by mCODE, but mCODE provides several ways to to identify mCODE patients. See the [Declaring Scope](conformance-patients.html) page for details.
+
+#### Follow Conformance Requirements for Supported Profiles
+
+The information produced and consumed by mCODE participants is defined by a set of profiles. Both senders and receivers must conform to the expectations set by these profiles. See the [Profile Conformance](conformance-profiles.html) page for details.
+
+#### Support Querying mCODE-Conforming Resources
+
+mCODE defines operations that senders and receivers use to exchange mCODE information. The following FHIR requests return resources that MUST conform to an mCODE profile (if the associated Patient is considered an "mCODE Patient" as described above):
+
+<!-- TODO: Provide examples of what this would look like.-->
+
+mCODE participants MUST support these requests UNLESS they do not support the profile at all (see ["Support All mCODE Profiles"](#support-all-mcode-profiles) below).
+
+#### Publish a CapabilityStatement Identifying Supported Profiles and Operations
+
+Each mCODE participant MUST publish a FHIR CapabilityStatement listing their supported profiles, by declaring the profile in `CapabilityStatement.rest.resource.supportedProfile`. The CapabilityStatement SHALL be returned in response to a `GET [base]/metadata` request.
+
+Each mCODE participant MUST at minimum support the [CancerPatient] and [PrimaryCancerCondition] profiles.
+
+<!-- TODO: Provide examples of what this would look like.-->
+
+#### Populate and Meaningfully Process mCODE Resources
+
+mCODE senders MUST be able to populate data elements designated as "must support" in profiles, for all profiles they support (as declared in their CapabilityStatement). Receivers MUST be able to meaningfully process the MustSupport elements of the profiles they support (as declared in their CapabilityStatement). "Able to Populate" and "Meaningfully Process" have particular meanings discussed on the [Profile Conformance](conformance-profiles.html) page.
+
+#### Support US Core Conformance Requirements
+
+Additional [conformance requirements from US Core](http://hl7.org/fhir/us/core/capstatements.html) apply to RESTful interactions, searches, and resource formats.
+
+Most mCODE profiles are based on US Core profiles defined in the [US Core Implementation Guide (v3.1.1)](http://hl7.org/fhir/us/core/index.html). For example, the [CancerGeneticVariant] profile is based on [US Core Laboratory Result Observation Profile][USCoreLaboratoryResultObservationProfile] and [CancerPatient] is based on the [US Core Patient][USCorePatientProfile] profile. If a resource validates against any of the mCODE profiles based on US Core, it will be in compliance with US Core.
+
+Where US Core does not provide an appropriate base profile, mCODE profiles FHIR resources. An example is [CancerDiseaseStatus], based on Observation because US Core does not provide a profile for non-laboratory observations.
+
+US Core outlines expectations for handling of missing or unknown data elements. The mCODE requirements are identical to those in US Core. Likewise, US Core outlines how to associate provenance information associated with collection, transfer, and updating of clinical information. mCODE relies on US Core's approach and recommendations regarding provenance information.
+
+### "SHOULD" Recommendations for Conformance
+
+mCODE participants SHOULD meet the following requirements for conformance:
+
+1. [Support all mCODE Profiles](#support-all-mcode-profiles)
+1. [Support the mCODE Bundle](#support-the-mcode-bundle)
+1. [Use `meta.profile` to Signal Conformance](#use-meta-profile-to-signal-conformance)
+
+#### Support All mCODE Profiles
+
+In addition to supporting the core profiles as described above, mCODE participants SHOULD support all profiles defined in mCODE UNLESS the participant does not anticipate supplying or consuming a certain type of data, usually by virtue of playing a limited or specialized role in clinical or information workflows. For example, a genomics laboratory may support [CancerGenomicsReport], but not vital signs or staging.
+
+Participants SHOULD also support the non-mCODE-specific profiles that are considered part of an [mCODE Patient Bundle][MCODEPatientBundle], such as [blood pressure](http://hl7.org/fhir/StructureDefinition/bp).
+
+#### Support the mCODE Patient Bundle
+
+The [mCODE Patient Bundle][MCODEPatientBundle] provides a mechanism to retrieve all mCODE-conforming resources for an mCODE Patient. Participants SHOULD support this CapabilityStatement ([sender][mcode-sender-patient-bundle]/[receiver][mcode-receiver-patient-bundle]) for the [mcode-patient-everything] operation, which retrieves an mCODE Patient Bundle for a given Patient ID.
+
+    GET [base]/Patient/[id]/$mcode-everything
+
+This endpoint SHALL support `start` and `end` parameters which operate the same as in the [`Patient/[id]/$everything` operation](https://www.hl7.org/fhir/operation-patient-everything.html).
+
+<!-- If the image below is not wrapped in a div tag, the publisher tries to wrap text around the image, which is not desired. -->
+<div style="text-align: center;">{%include mcode-patient-bundle-pull.svg%}</div>
+
+mCODE Patient Bundles SHALL be identified by an `id` value that matches the `id` in the contained CancerPatient-conforming resource.
+
+#### Use `meta.profile` to Signal Conformance
+
+Participants SHOULD populate `meta.profile` elements for all resources to indicate which profiles the resources should conform to.
+
+Participants SHOULD also implement [profile search](https://www.hl7.org/fhir/search.html#profile), which allows participants to query using the `_profile` parameter to return resources conforming to the profiles declared in `meta.profile`.
+
+The profile search requirement originates from the base FHIR specification. It is not an additional requirement imposed by mCODE. Refer to the [FHIR Documentation on supported profiles](https://www.hl7.org/fhir/profiling.html#CapabilityStatement.rest.resource.supportedProfile) for details.
+
+### Capability Statements
+
+* **Receiver**
+  * [mcode-receiver-cancer-conditions-then-patients]
+  * [mcode-receiver-patient-bundle]
+  * [mcode-receiver-patients-and-cancer-conditions]
+  * [mcode-receiver-patients-in-group]
+  * [mcode-receiver-patients-with-cancer-condition]
+* **Sender**  
+  * [mcode-sender-cancer-conditions-then-patients]
+  * [mcode-sender-patient-bundle]
+  * [mcode-sender-patients-and-cancer-conditions]
+  * [mcode-sender-patients-in-group]
+  * [mcode-sender-patients-with-cancer-condition]
+
+### Operations
+
+* [mcode-patient-everything]
+
+{% include markdown-link-references.md %}
+

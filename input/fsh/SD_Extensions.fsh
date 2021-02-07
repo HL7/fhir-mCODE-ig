@@ -77,7 +77,7 @@ Description: "The relationship between a landmark that helps determine a body lo
 * Specifying the location and type of landmark using a body site code and optional locationQualifier/orientation,
 * Specifying the direction from the landmark to the body location, and
 * Specifying the distance from the landmark to the body location."
-* value[x] ^short = "Not used in this profile"
+* insert NotUsed(value[x])
 * extension contains
     LandmarkType 0..1 and
     LandmarkLocation 0..1 and
@@ -97,7 +97,7 @@ Title: "Landmark Location"
 Description: "The body location of the landmark, specified by a location code and optional locationQualifier and orientation."
 // change from `code` to BodySiteCode and bind the code to a value set
 // Also change BodySiteCode from 0..1 to 1..1
-* value[x] ^short = "Not used in this profile"
+* insert NotUsed(value[x])
 * extension contains
     BodySiteCode 1..1 and
     LocationQualifier 0..1 // and

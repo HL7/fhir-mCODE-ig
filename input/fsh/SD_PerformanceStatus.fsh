@@ -1,18 +1,17 @@
 RuleSet: PerformanceStatusCommonRules
-* status and code and subject and effective[x] and value[x] and interpretation MS
 * insert CategorySlicingRules
 * category = ObsCat#survey
 * subject 1..1
-* bodySite ^short = "Not used in this profile"
-* specimen ^short = "Not used in this profile"
-* device ^short = "Not used in this profile"
-* hasMember ^short = "Not used in this profile"
-* component ^short = "Not used in this profile"
+* insert NotUsed(bodySite)
+* insert NotUsed(specimen)
+* insert NotUsed(device)
+* insert NotUsed(hasMember)
+* insert NotUsed(component)
 * basedOn only Reference (ServiceRequest or CarePlan)
 * partOf only Reference (Procedure)
 * subject only Reference(USCorePatient)
 * effective[x] only dateTime or Period
-
+* status and code and subject and effective[x] and value[x] and interpretation MS
 
 Profile:    KarnofskyPerformanceStatus
 Parent:     Observation
@@ -23,6 +22,7 @@ Description:    "The Karnofsky Performance Status (KPS) is a tool used to measur
 * code = LNC#89243-0 //"Karnofsky Performance Status score"
 * value[x] only integer
 * interpretation from http://loinc.org/vs/LL4986-7 (required)
+
 
 Profile:    ECOGPerformanceStatus
 Parent:     Observation

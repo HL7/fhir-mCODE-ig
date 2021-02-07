@@ -136,15 +136,13 @@ Description: "A surgical action addressing a cancer condition. The scope of this
 * category 1..  // upper cardinality is already 1
 * reasonCode from CancerDisorderVS (required)
 * reasonReference only Reference(PrimaryCancerCondition or SecondaryCancerCondition)
-* partOf only Reference(Procedure)
-* recorder only Reference(Practitioner or PractitionerRole)
-* performer.actor only Reference(Practitioner or PractitionerRole or Organization)
 * bodySite.extension contains
     LocationQualifier named locationQualifier 0..1 MS
-* reasonCode and reasonReference and bodySite MS
 // Do not insert the category slicing rules because Procedure.category is 0..1.
 * category = SCT#387713003 //"Surgical procedure"
 * code from CancerRelatedSurgicalProcedureVS (extensible)
+// MUST SUPPORTS -- US Core Procedure sets status, code, subject, performed[x]
+* bodySite and bodySite.extension and extension and reasonCode and reasonReference MS
 
 
 /* Currently to represent RadiotherapyTechnique, mCODE uses the standard 'procedure-method' extension. But if the cardinality needs to be changed to 0..*, we will need the RadiotherapyTechnique extension, below, unless there is a change to 'procedure-method' (see https://jira.hl7.org/browse/FHIR-30769 "Change cardinality of procedure-method extension").

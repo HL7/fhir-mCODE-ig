@@ -5,7 +5,6 @@ Title: "mCODE Patient Bundle"
 Description: "A collection of data for an mCODE cancer patient."
 * type  = #collection
 * insert BundleEntrySlicingRules
-* entry and entry.resource MS
 * entry contains
     // These resources are required per Conformance > Supported Profiles.
     cancerPatient 1..1 MS and
@@ -126,3 +125,5 @@ Description: "A collection of data for an mCODE cancer patient."
 * entry[vitalSign].resource only http://hl7.org/fhir/StructureDefinition/vitalsigns
 * entry[tumor].resource only Tumor
 * entry[tumorSize].resource only TumorSize
+// It is necessary to put the MS for entry.resource LAST, otherwise it doesn't "take" for some reason
+* timestamp and entry and entry.resource MS

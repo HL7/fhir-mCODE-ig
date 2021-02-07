@@ -19,9 +19,9 @@ Description: "General structure for capturing comorbid conditions with respect t
 * component.code ^definition = "The code identifying category of comorbidity, for example, congestive heart failure or severe renal disease. The category typically represents a set of specific diagnosis codes."
 * component.extension ^short = "Extensions to capture specific conditions that fall into the given category."
 * component.extension ^definition = "If more detail about the comorbid condition is desired, elements in this extension can be populated with a specific condition code or a reference to a Condition resource. The extension elements SHALL be used only if the comorbidity category is present."
-* bodySite ^short = "Not used in this profile"
-* specimen ^short = "Not used in this profile"
-* device ^short = "Not used in this profile"
+* insert NotUsed(bodySite)
+* insert NotUsed(specimen)
+* insert NotUsed(device)
 // No Must Suppports in the abstract profile
 
 
@@ -203,12 +203,12 @@ Title: "Cancer-Related Elixhauser Comorbidities"
 Description: "Comorbid conditions using the Elixhauser comorbidity categories, from the perspective of the primary cancer condition." 
 * focus only Reference(PrimaryCancerCondition)
 * focus ^definition = "A reference to the cancer condition that is the context for the current list of comorbid conditions."
-* value[x] ^short = "Not used in this profile"
-* component[cancerLeukemia] ^short = "Not used in this profile"
-* component[cancerLymphoma] ^short = "Not used in this profile"
-* component[cancerMetastatic] ^short = "Not used in this profile"
-* component[cancerSolidInSitu] ^short = "Not used in this profile"
-* component[cancerSolidMalignant] ^short = "Not used in this profile"
+* insert NotUsed(value[x])
+* insert NotUsed(component[cancerLeukemia])
+* insert NotUsed(component[cancerLymphoma])
+* insert NotUsed(component[cancerMetastatic])
+* insert NotUsed(component[cancerSolidInSitu])
+* insert NotUsed(component[cancerSolidMalignant])
 // Must Supports -- none are inherited
 * component and status and code and subject and focus and effective[x] MS
 * insert ComorbidityMustSupports(aids)

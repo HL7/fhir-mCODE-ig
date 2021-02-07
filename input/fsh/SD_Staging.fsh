@@ -2,9 +2,9 @@ RuleSet: CancerStageCommonRules
 * status and code and subject and effective[x] and value[x] and method and focus MS
 * value[x] only CodeableConcept
 * value[x] ^comment = ""    // suppress QA error on #notes link
-* device ^short = "Not used in this profile"
-* referenceRange ^short = "Not used in this profile"
-* component ^short = "Not used in this profile"
+* insert NotUsed(device)
+* insert NotUsed(referenceRange)
+* insert NotUsed(component)
 * partOf only Reference(Procedure)
 * basedOn only Reference(ServiceRequest)
 * focus only Reference(PrimaryCancerCondition)

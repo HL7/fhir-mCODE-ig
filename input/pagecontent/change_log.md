@@ -9,8 +9,9 @@ Many of these changes have been taken in response to comments from the HL7 commu
 #### General
 
 {:.new-content #GeneralChanges}
-  * **mCODE Bundle** - Added specification and example which includes all mCODE data within the bundle.
-  * **Conformance** - Defined mCODE compliance in a testable way.
+  * Capability Statements which specifies the contents for the [sender] and [receiver] of an [mCODE Patient Bundle](StructureDefinition-mcode-patient-bundle.html).
+  * OperationDefinition [mcode-patient-everything] for retrieving an mCODE bundle.
+  * [Conformance](conformance.html) - Defined mCODE compliance in a testable way.
 
 #### Patient
   * Elixhauser comorbities have been redesigned to further specify groupings by category.

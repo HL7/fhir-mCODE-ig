@@ -2,9 +2,9 @@
 
 The modalities in this value set are drawn from the [radiotherapy code system](CodeSystem-mcode-radiotherapy-cs.html) defined in this Implementation Guide. Existing terminology systems do not have all the necessary codes.
 
-The following table shows mappings from SNOMED-CT and NCI Thesaurus to teleradiotherapy modality codes. More specific (child) terms in the respective hierarchies also can be mapped to the code in the leftmost column. **This table may not be exhaustive and additional valid mappings may exist.**
+The following table shows mappings from SNOMED CT and NCI Thesaurus to teleradiotherapy modality codes. More specific (child) terms in the respective hierarchies also can be mapped to the code in the leftmost column. **This table may not be exhaustive and additional valid mappings may exist.**
 
-| **Code As**    | **SNOMED-CT Term**             | **NCI Thesaurus Term**            |
+| **Code As**    | **SNOMED CT Term**             | **NCI Thesaurus Term**            |
 | ---------------|--------------------------------|-----------------------------------|
 | PROTON    | 10611004 Teleradiotherapy protons (procedure) | C66897 Proton Beam Radiation Therapy |
 | ELECTRON  | 45643008 Teleradiotherapy using electrons (procedure) | C15650 Electron Beam Therapy |

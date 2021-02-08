@@ -7,8 +7,7 @@ Description: "General structure for capturing comorbid conditions with respect t
 * focus only Reference(Condition)
 * focus ^short = "The Index Condition"
 * focus ^definition = "The comorbid conditions may be defined with respect to a specific 'index' condition. For example, the US Centers for Disease Control (CDC) has a list of comorbid conditions important to COVID-19. In this case, the focus would be COVID-19 and the comorbid condition categories would be those called out by CDC, namely obesity, renal disease, respiratory disease, etc."
-* component.value[x] only CodeableConcept
-* component.value[x] from PresentAbsentUnknownVS (required)
+* component.value[x] only CodeableConcept // do not bind to present/absent value set because some comorbidity scales use grades 1, 2, 3 (see Adult Comorbidity Evaluation-27)
 * component ^definition = "Component representing the presence or absence of the named comorbidity, with optional condition code(s) or reference to the actual condition(s)."
 * component.extension contains 
      ComorbidConditionCode named conditionCode 0..* and
@@ -29,9 +28,10 @@ Profile: ComorbiditiesElixhauser
 Parent: ComorbiditiesParent
 Id: mcode-comorbidities-elixhauser
 Title: "Elixhauser Comorbidities"
-Description: "Comorbid condition checklist and optional risk score, using Elixhauser comorbidity categories as defined by the Agency for Healthcare Research and Quality (AHRQ) Healthcare Cost and Utilization Project (H-CUP). The Elixhauser Comorbidity Index is a method of categorizing comorbidities of patients based on the International Classification of Diseases (ICD) diagnosis codes found in administrative data, such as hospital abstracts data. Each comorbidity category is dichotomous -- it is either present or it is not. The Index can be used to predict hospital resource use and in-hospital mortality (see <https://pubmed.ncbi.nlm.nih.gov/9431328> for details)."
+Description: "Comorbid condition checklist and optional risk score, using Elixhauser comorbidity categories as defined by the Agency for Healthcare Research and Quality (AHRQ) Healthcare Cost and Utilization Project (H-CUP)."
 * ^abstract = false
 * code = COMORB#ElixhauserAHRQ
+* component.value[x] from PresentAbsentUnknownVS (required)
 * component ^slicing.discriminator.type = #pattern
 * component ^slicing.discriminator.path = "code"
 * component ^slicing.rules = #closed
@@ -200,7 +200,7 @@ Profile: CancerRelatedComorbiditiesElixhauser
 Parent: ComorbiditiesElixhauser
 Id: mcode-cancer-related-comorbidities-elixhauser
 Title: "Cancer-Related Elixhauser Comorbidities"
-Description: "Comorbid conditions using the Elixhauser comorbidity categories, from the perspective of the primary cancer condition." 
+Description: "Comorbid conditions using the Elixhauser comorbidity categories, defined by the Agency for Healthcare Research and Quality (AHRQ) Healthcare Cost and Utilization Project (H-CUP), from the perspective of the primary cancer condition."
 * focus only Reference(PrimaryCancerCondition)
 * focus ^definition = "A reference to the cancer condition that is the context for the current list of comorbid conditions."
 * insert NotUsed(value[x])

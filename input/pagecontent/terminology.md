@@ -1,43 +1,64 @@
-This implementation guide draws on a variety of formal terminologies (code systems). Three guiding principles in selecting terminologies for mCODE were 
+This implementation guide draws on a number of formal terminologies (code systems). Several guiding principles were applied in selecting terminologies for mCODE:
 
-The following table presents the external code systems used in this guide, and their primary purpose:
+1. Fit for purpose
+2. Conformance with US Core and FHIR
+3. Commonly used in practice
 
-| Code System | Application | * [FHIR IG Publishing](https://confluence.hl7.org/display/FHIR/IG+Publisher+Documentation) support? |
+The following table presents the external code systems (and naming conventions) adopted in mCODE, and their primary purpose:
+
+| Code System | Application | [FHIR IG Publishing](https://confluence.hl7.org/display/FHIR/IG+Publisher+Documentation) support? |
 |--------------|-------------|------------------|
 | LOINC | Observation and laboratory codes, answer codes | Yes |
-| SNOMED-CT | Disorders, body structures, findings, qualifiers | Yes |
-| Unified Code for Units of Measure (UCUM) | Units of measure | Yes |
-| National Cancer Institute (NCI) Thesaurus | Editions of the AJCC Staging Manual | No |
+| SNOMED CT | Disorders, body structures, findings, qualifiers | Yes |
+| UCUM | Units of measure | Yes |
+| NCI Thesaurus | Editions of the AJCC Staging Manual | No |
 | ICD-10-CM | Diagnosis codes | Yes |
 | ICD-10-PCS | Procedure codes | No |
 | ICD-O-3 | Cancer morphology and topology codes | No |
 | RxNorm | Medication codes | Yes |
-| Current Procedural Terminology (CPT) | Procedure codes | No |
-| American Joint Committee on Cancer (AJCC) | Cancer staging codes | No |
-| National Center for Biotechnology Information (NCBI) Genetic Testing Registry (GTR) | Genetic test codes | No |
+| CPT | Procedure codes | No |
+| AJCC | Cancer staging codes | No |
+| NCBI GTR | Genetic test codes | No |
 | NCBI ClinVar | Genetic variations | No |
-| HUGO Gene Nomenclature Committee (HGNC)  | Gene identification | No |
-| Human Genome Variation Society (HGVS) Sequence Variant Nomenclature | Variants in DNA, RNA, and protein sequences | Yes |
+| HGNC | Gene identification | No |
+| HGVS | Sequence variant nomenclature | Yes |
 | Sequence Ontology | DNA change types | No |
-| Office of Management and Budget (OMB) Race and Ethnicity | Race and ethnicity codes | Yes |
+| OMB Race and Ethnicity | Race and ethnicity codes | Yes |
 | HL7 Terminology Authority  | HL7 V2 and FHIR-specific codes | Yes |
 {: .grid }
 
+**Key:**
+* LOINC - Logical Observation Identifiers Names and Codes
+* SNOMED CT - Systematized Nomenclature of Medicine Clinical Terms
+* UCUM - Unified Code for Units of Measure
+* NCI - National Cancer Institute (US)
+* ICD - International Classification of Diseases (World Health Organization)
+  * ICD-10-CM - Clinical Modification, 10th revision
+  * ICD-10-PCS - Procedure Coding System, 10th revision
+  * ICD-O-3 - Oncology, 3rd revision
+* RxNorm - From National Library of Medicine (US)
+* CPT - Current Procedural Terminology (American Medical Association)
+* AJCC - American Joint Committee on Cancer
+* NCBI - National Center for Biotechnology Information (National Institutes of Health) (US)
+  * NCBI GTR - Genetic Testing Registry
+* HGNC - Human Genome Organisation (HUGO) Gene Nomenclature Committee
+* HGVS - Human Genome Variation Society
+* OMB - Office of Management and Budget (US)
 
 New code systems were created when no existing code systems were deemed fit for purpose. The following code systems were created:
 
-|  Code System | Application | * [FHIR IG Publishing](https://confluence.hl7.org/display/FHIR/IG+Publisher+Documentation) support? |
+|  Code System | Application | [FHIR IG Publishing](https://confluence.hl7.org/display/FHIR/IG+Publisher+Documentation) support? |
 |--------------|-------------|------------------|
 | Radiotherapy Code System | Radiotherapy modalities, techniques, and devices | No |
-| Elixhauser Code System | Codes for the comorbidity categories originally defined by Elixhauser, updated by the Agency for Healthcare Research and Quality (AHRQ) Healthcare Cost and Utilization Project (H-CUP) | No |
-| Catch Codes | Codes needed for positive identification of certain types of instances | No |
+| Elixhauser Code System | Codes for comorbidity categories | No |
+| Catch Codes | Codes for positive identification of FHIR instances | No |
 {: .grid }
 
-In the case of radiotherapy, significantly less than 50% of the required concepts could be found in established sources such as SNOMED-CT and NCI Thesaurus. The CodeX FHIR Accelerator radiation oncology stakeholder group, comprised of radiation oncologists, representatives of professional societies, vendors, and information specialists, considered several options. It was decided, at least for trial use, to create a custom code system that could be directly controlled, similar to other medical specialty organizations such as AJCC for cancer staging, NCBI for genetic variants, and HGNC for gene identification. This decision does not rule out future coordination with terminology SDOs.
+In the case of radiotherapy, significantly less than 50% of the required concepts exist in established sources such as SNOMED CT and NCI Thesaurus. The CodeX FHIR Accelerator radiation oncology stakeholder group, comprised of radiation oncologists, representatives of professional societies, vendors, and information specialists, considered several options. It was decided, at least for trial use, to create a custom code system that could be directly controlled, similar to other medical specialty organizations such as AJCC for cancer staging, NCBI for genetic variants, and HGNC for gene identification. This decision does not rule out future coordination with terminology SDOs.
 
-Similarly, there is no established code system representing the Elixhauser comorbidity categories. In the AHRQ/H-CUP version of Elixhauser, "depression" is defined as a set of 18 ICD-10-CM codes. SNOMED-CT concept 35489007 Depressive disorder is likely similar, but without detailed analysis, there is no assurance the two concepts are the same.
+Similarly, there is no established code system that represents the 30+ Elixhauser comorbidity categories. These are codes that identify a _category_ of comorbidity, such as "Drug abuse". Although it would be preferable to use existing code systems to identify these categories, there is no terminology with terms for each comorbidity category. For example, there are no SNOMED CT concepts for "Liver disease, mild", "Renal failure, moderate", or "Thyroid disorders other than hypothyroidism". Note that the problem is not to collect disorders codes that fit the categories, but rather, to code the _categories themselves_.
 
-Finally, the "catch code" code system was established as a way to know, positively, what a FHIR resource is supposed to represent in terms of mCODE-defined profiles. This relates to technical issues in FHIR, rather than clinical terminology gaps. More details are found [here][CatchCodeCS].
+Finally, the "catch code" code system was established as a way to know, positively, what a FHIR resource is supposed to represent in terms of mCODE-defined profiles. This relates to technical issues in FHIR, rather than clinical terminology gaps. A detailed explanation is found [here][CatchCodeCS].
 
 ### Code Systems Defined
 

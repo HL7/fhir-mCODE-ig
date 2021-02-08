@@ -54,7 +54,7 @@ The following are changes relative to [mCODE 0.9.0](https://mcodeinitiative.gith
 * Changed profile name from GeneticMutationTested to GeneticVariant.
 * Corrected mapping so the reference to PrimaryCancerCondition in all staging-related observations uses the existing 'focus' attribute.
 * Eliminated AnatomicalOrientation.
-* Eliminated ClockDirection as a separate value set because values are incorporated in logically-defined SNOMED-CT AnatomicalOrientationVS.
+* Eliminated ClockDirection as a separate value set because values are incorporated in logically-defined SNOMED CT AnatomicalOrientationVS.
 * Re-wrote the introductory narratives to consolidate multiple pages.
 * Changed clinicalStatus on PrimaryCancerCondition and SecondaryCancerCondition from `1..1` to `0..1`.
 * Typographical fixes to multiple documentation pages.

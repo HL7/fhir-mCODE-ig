@@ -32,13 +32,12 @@ Many of these changes have been taken in response to comments from the HL7 commu
 
 
 #### Outcomes
-* {:.new-content #Tumor}Two new profiles further specify the location and size of a tumor: [Tumor] and [TumorSize].
 
-<div markdown="1" class="other-changes-pending">
-We are in the progress of updating this list to reflect all the changes currently in the continuous integration build.
-</div>
+{:.new-content #Tumor}
+* Two new profiles further specify the location and size of a tumor: [Tumor] and [TumorSize].
 
-<p style="background-color: #fce4ff; padding: 0.5em; border: 1px solid #be86c5;">If you have questions or comments about these changes, please reach out on <a href="https://chat.fhir.org/#narrow/stream/179234-Cancer-Interoperability/topic/mCODE">chat.fhir.org</a> (free account registration required) or on the <a href="https://jira.hl7.org/issues/?filter=13361">HL7 Jira</a>.</p>
+
+<p style="background-color: #fce4ff; padding: 0.5em; border: 1px solid #be86c5;">We are in the progress of updating this list to reflect all the changes currently in the continuous integration build. If you have questions or comments about these changes, please reach out on <a href="https://chat.fhir.org/#narrow/stream/179234-Cancer-Interoperability/topic/mCODE">chat.fhir.org</a> (free account registration required) or on the <a href="https://jira.hl7.org/issues/?filter=13361">HL7 Jira</a>.</p>
 
 ### mCODE 1.0.0 STU 1
 

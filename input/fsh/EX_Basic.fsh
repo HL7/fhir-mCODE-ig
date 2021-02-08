@@ -194,20 +194,22 @@ Description: "mCODE Example for a brachytherapy procedure."
 * bodySite = SCT#41224006 "Structure of lower lobe of left lung (body structure)"
 
 Instance: tnm-clinical-stage-group-3c
-InstanceOf: TNMClinicalStageGroup
+InstanceOf: TNMStageGroup
 Description: "mCODE Example for TNM Clinical Stage Group"
+* code = LNC#21908-9 "Stage group.clinical Cancer"
 * status = #final "final"
 * method = NCIT#C146985 "AJCC Cancer Staging Manual 8th Edition"
 * subject = Reference(cancer-patient-john-anyperson)
 * effectiveDateTime = "2019-04-01"
 * valueCodeableConcept = AJCC#3C "IIIC"
-* hasMember[TNMClinicalPrimaryTumorCategory] = Reference(tnm-clinical-primary-tumor-category-cT3)
-* hasMember[TNMClinicalRegionalNodesCategory] = Reference(tnm-clinical-regional-nodes-category-cN3)
-* hasMember[TNMClinicalDistantMetastasesCategory] = Reference(tnm-clinical-distant-metastases-category-cM0)
+* hasMember[TNMPrimaryTumorCategory] = Reference(tnm-clinical-primary-tumor-category-cT3)
+* hasMember[TNMRegionalNodesCategory] = Reference(tnm-clinical-regional-nodes-category-cN3)
+* hasMember[TNMDistantMetastasesCategory] = Reference(tnm-clinical-distant-metastases-category-cM0)
 
 Instance: tnm-clinical-distant-metastases-category-cM0
-InstanceOf: TNMClinicalDistantMetastasesCategory
+InstanceOf: TNMDistantMetastasesCategory
 Description: "mCODE Example for TNM Clinical Distant Metastases Category"
+* code = LNC#21907-1 "Distant metastases.clinical [Class] Cancer"
 * status = #final "final"
 * method = NCIT#C146985 "AJCC Cancer Staging Manual 8th Edition"
 * subject = Reference(cancer-patient-john-anyperson)
@@ -215,66 +217,24 @@ Description: "mCODE Example for TNM Clinical Distant Metastases Category"
 * valueCodeableConcept = AJCC#cM0 "M0"
 
 Instance: tnm-clinical-primary-tumor-category-cT3
-InstanceOf: TNMClinicalPrimaryTumorCategory
+InstanceOf: TNMPrimaryTumorCategory
 Description: "mCODE Example for TNM Clinical Primary Tumor Category"
+* code = LNC#21905-5 "Primary tumor.clinical [Class] Cancer"
 * status = #final "final"
 * method = NCIT#C146985 "AJCC Cancer Staging Manual 8th Edition"
 * subject = Reference(cancer-patient-john-anyperson)
 * effectiveDateTime = "2019-04-01"
 * valueCodeableConcept = AJCC#cT3 "T3"
 
-
 Instance: tnm-clinical-regional-nodes-category-cN3
-InstanceOf: TNMClinicalRegionalNodesCategory
+InstanceOf: TNMRegionalNodesCategory
 Description: "mCODE Example for TNM Clinical Regional Nodes Category"
+* code = LNC#21906-3 "Regional lymph nodes.clinical [Class] Cancer"
 * status = #final "final"
 * method = NCIT#C146985 "AJCC Cancer Staging Manual 8th Edition"
 * subject = Reference(cancer-patient-john-anyperson)
 * effectiveDateTime = "2019-04-01"
 * valueCodeableConcept = AJCC#cN3 "N3"
-
-
-Instance: tnm-pathological-stage-group-3C
-InstanceOf: TNMPathologicalStageGroup
-Description: "mCODE Example for TNM Pathological Stage Group"
-* status = #final "final"
-* method = NCIT#C146985 "AJCC Cancer Staging Manual 8th Edition"
-* subject = Reference(cancer-patient-john-anyperson)
-* effectiveDateTime = "2019-04-01"
-* valueCodeableConcept = AJCC#3C "IIIC"
-* hasMember[TNMPathologicalPrimaryTumorCategory] = Reference(tnm-pathological-primary-tumor-category-pT3)
-* hasMember[TNMPathologicalRegionalNodesCategory] = Reference(tnm-pathological-regional-nodes-category-pN3)
-* hasMember[TNMPathologicalDistantMetastasesCategory] = Reference(tnm-pathological-distant-metastases-category-pM0)
-
-
-Instance: tnm-pathological-distant-metastases-category-pM0
-InstanceOf: TNMPathologicalDistantMetastasesCategory
-Description: "mCODE Example for TNM Pathological Distant Metastases Category"
-* status = #final "final"
-* method = NCIT#C146985 "AJCC Cancer Staging Manual 8th Edition"
-* subject = Reference(cancer-patient-john-anyperson)
-* effectiveDateTime = "2019-04-01"
-* valueCodeableConcept = AJCC#pM0 "M0"
-
-
-Instance: tnm-pathological-primary-tumor-category-pT3
-InstanceOf: TNMPathologicalPrimaryTumorCategory
-Description: "mCODE Example for TNM Pathological Primary Tumor Category"
-* status = #final "final"
-* method = NCIT#C146985 "AJCC Cancer Staging Manual 8th Edition"
-* subject = Reference(cancer-patient-john-anyperson)
-* effectiveDateTime = "2019-04-01"
-* valueCodeableConcept = AJCC#pT3 "T3"
-
-
-Instance: tnm-pathological-regional-nodes-category-pN3
-InstanceOf: TNMPathologicalRegionalNodesCategory
-Description: "mCODE Example for TNM Pathological Regional Nodes Category"
-* status = #final "final"
-* method = NCIT#C146985 "AJCC Cancer Staging Manual 8th Edition"
-* subject = Reference(cancer-patient-john-anyperson)
-* effectiveDateTime = "2019-04-01"
-* valueCodeableConcept = AJCC#pN3 "N3"
 
 Instance: cancer-related-medication-request-gefitinib
 InstanceOf: CancerRelatedMedicationRequest

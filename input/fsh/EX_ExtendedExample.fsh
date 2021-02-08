@@ -201,7 +201,7 @@ Description: "Extended example: example showing primary cancer condition"
 * stage.assessment = Reference(tnm-clinical-stage-group-jenny-m)
 
 Instance: tnm-clinical-stage-group-jenny-m
-InstanceOf: TNMClinicalStageGroup
+InstanceOf: TNMStageGroup
 Description: "Extended example: example showing TNM staging (stage group)"
 * status = #final "final"
 * code = LNC#21908-9 "Stage group.clinical Cancer"
@@ -214,7 +214,7 @@ Description: "Extended example: example showing TNM staging (stage group)"
 * hasMember[2] = Reference(tnm-clinical-distant-metastases-category-jenny-m)
 
 Instance: tnm-primary-tumor-category-jenny-m
-InstanceOf: TNMClinicalPrimaryTumorCategory
+InstanceOf: TNMPrimaryTumorCategory
 Description: "Extended example: example showing TNM staging (T)"
 * status = #final "final"
 * code = LNC#21905-5 "Primary tumor.clinical [Class] Cancer"
@@ -224,7 +224,7 @@ Description: "Extended example: example showing TNM staging (T)"
 * method = NCIT#C146985 "AJCC Cancer Staging Manual 8th Edition"
 
 Instance: tnm-clinical-regional-nodes-category-jenny-m
-InstanceOf: TNMClinicalRegionalNodesCategory
+InstanceOf: TNMRegionalNodesCategory
 Description: "Extended example: example showing TNM staging (N)"
 * status = #final "final"
 * code = LNC#21906-3 "Regional lymph nodes.clinical [Class] Cancer"
@@ -234,7 +234,7 @@ Description: "Extended example: example showing TNM staging (N)"
 * method = NCIT#C146985 "AJCC Cancer Staging Manual 8th Edition"
 
 Instance: tnm-clinical-distant-metastases-category-jenny-m
-InstanceOf: TNMClinicalDistantMetastasesCategory
+InstanceOf: TNMDistantMetastasesCategory
 Description: "Extended example: example showing TNM staging (M)"
 * status = #final "final"
 * code = LNC#21907-1 "Distant metastases.clinical [Class] Cancer"

@@ -22,7 +22,7 @@ Description: "Records the the primary cancer condition, the original or first tu
 * insert CancerConditionCommonRules
 * code from PrimaryOrUncertainBehaviorCancerDisorderVS (required)
 * code obeys primary-cancer-condition-code-invariant
-* stage.assessment only Reference(TNMClinicalStageGroup or TNMClinicalPrimaryTumorCategory or TNMClinicalRegionalNodesCategory or TNMClinicalDistantMetastasesCategory or TNMPathologicalStageGroup or TNMPathologicalPrimaryTumorCategory or TNMPathologicalRegionalNodesCategory or TNMPathologicalDistantMetastasesCategory)
+* stage.assessment only Reference(TNMStageGroup or TNMPrimaryTumorCategory or TNMRegionalNodesCategory or TNMDistantMetastasesCategory)
 
 Invariant: primary-cancer-condition-code-invariant
 Description: "If the code representing 'Other primary cancer condition, specify' is used, a second code from outside the original value set must be present. The second code MUST NOT represent a concept in or subsumed by any concept in the original value set."

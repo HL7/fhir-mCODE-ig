@@ -82,7 +82,7 @@ The following are changes relative to [mCODE 0.9.0](https://mcodeinitiative.gith
 * Improved definition of onco-core-EvidenceType-extension.
 * Replaced obf-dateOfDiagnosis-extension with condition-assertedDate standard extension in PrimaryCancerCondition and SecondaryCancerCondition.
 * Added logical definition to TNM-related value sets to include all codes from AJCC staging systems.
-* Removed references to MedicationRequest on basedOn attribute for TNMClinicalPrimaryTumorCategory, TNMClinicalRegionalNodesCategory, TNMClinicalDistantMetastasesCategory, KarnofskyPerformanceStatus and ECOGPerformanceStatus.
+* Removed references to MedicationRequest on basedOn attribute for TNMPrimaryTumorCategory, TNMRegionalNodesCategory, TNMDistantMetastasesCategory, KarnofskyPerformanceStatus and ECOGPerformanceStatus.
 
 
 {% include markdown-link-references.md %}

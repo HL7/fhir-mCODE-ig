@@ -46,4 +46,17 @@ The following CapabilityStatements define the various methods participants can u
     <!-- If the image below is not wrapped in a div tag, the publisher tries to wrap text around the image, which is not desired. -->
     <div style="text-align: center;">{%include cancer-conditions-then-patients.svg%}</div>
 
+### Capability Statements
+
+* **Receiver**
+  * [mcode-receiver-cancer-conditions-then-patients]
+  * [mcode-receiver-patients-and-cancer-conditions]
+  * [mcode-receiver-patients-in-group]
+  * [mcode-receiver-patients-with-cancer-condition]
+* **Sender**  
+  * [mcode-sender-cancer-conditions-then-patients]
+  * [mcode-sender-patients-and-cancer-conditions]
+  * [mcode-sender-patients-in-group]
+  * [mcode-sender-patients-with-cancer-condition]
+
     {% include markdown-link-references.md %}

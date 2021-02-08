@@ -1,16 +1,14 @@
 
-This section outlines important definitions, interpretations, and requirements common to all US Core actors used in this guide. The conformance verbs - SHALL or MUST, SHOULD, and MAY - are defined in [FHIR Conformance Rules](http://hl7.org/fhir/R4/conformance-rules.html).
+This section outlines requirements and recommendations for mCODE participants. The conformance verbs - SHALL or MUST, SHOULD, and MAY - are defined in [FHIR Conformance Rules](http://hl7.org/fhir/R4/conformance-rules.html).
 
 ### mCODE Participant Roles
 
 Two roles for **mCODE Participants** are defined:
 
-* **mCODE Data Sender** - a participant in exchange of mCODE data who provides mCODE data in response to a data query or autonomously pushes mCODE data to an mCODE receiver. The data sender does not have to be the originator of the data it possesses.
-* **mCODE Data Receiver** - a participant in exchange of mCODE data who accepts mCODE data from an mCODE Data Sender.
+* **mCODE Data Sender** - a participant in exchange of mCODE data who provides mCODE data in response to a data query or autonomously pushes mCODE data to an mCODE receiver. The data sender does not have to be the originator of the data it possesses. The data sender role is similar to a [US Core Responder](https://www.hl7.org/fhir/us/core/#us-core-actors), except the data sent is not assumed to be a response to a query.
+* **mCODE Data Receiver** - a participant in exchange of mCODE data who accepts mCODE data from an mCODE Data Sender. The data receiver may receive data as part of a predetermined workflow, or initiate the exchange via a query or on a regular basis via subscription. The receiver role is similar to a [US Core Requestor](https://www.hl7.org/fhir/us/core/#us-core-actors), except the data does not have to be explicitly requested.
 
-US Core defines two actors, US Core Requestor and US Core Responder, which are highly suggestive of a "pull" architecture (initiated by requestor, answered by responder). In mCODE, we use the terms Receiver and Sender, which are more neutral with respect to push and pull (a Sender may initiate an exchange). However, for all practical purposes, there is an equivalence between Requestor/Receiver and Responder/Sender.
-
-Currently, the mCODE Implementation Guide provides CapabilityStatements and documentation only for "pull" architectures. Participants implementing a different architecture MUST follow the conformance requirements in this Implementation Guide **except** for those specifically identified as applying pull architectures.
+This IG currenty only provides CapabilityStatements and documentation for "pull" (query-response) architectures, however, regardless how exchanges occur, all participants MUST follow the conformance requirements in this IG, **except** those specifically identified as applying only to pull architectures.
 
 ### "MUST" Requirements for Conformance
 
@@ -26,7 +24,7 @@ mCODE participants MUST meet the following requirements for conformance:
 
 #### Identify mCODE Patients
 
-To facilitate conformance testing, testing software must be able to determine which patients are "mCODE Patients" -- those in scope for mCODE. In general, all patients with confirmed cancer diagnoses SHOULD be covered by mCODE, but mCODE provides several ways to to identify mCODE patients. See the [Declaring Scope](conformance-patients.html) page for details.
+To facilitate conformance testing, testing software must be able to determine which patients are "mCODE Patients" -- those in scope for mCODE. In general, all patients with confirmed cancer diagnoses SHOULD be covered by mCODE, but mCODE provides several ways to to identify the group of mCODE patients. See the [Identifying mCODE Patients](conformance-patients.html) page for details.
 
 #### Follow Conformance Requirements for Supported Profiles
 
@@ -34,33 +32,27 @@ The information produced and consumed by mCODE participants is defined by a set 
 
 #### Support Querying mCODE-Conforming Resources
 
-mCODE defines operations that senders and receivers use to exchange mCODE information. The following FHIR requests return resources that MUST conform to an mCODE profile (if the associated Patient is considered an "mCODE Patient" as described above):
+mCODE defines operations that senders and receivers use to exchange mCODE information. mCODE participants MUST support these requests UNLESS they do not support the profile at all (see ["Support All mCODE Profiles"](#support-all-mcode-profiles) below):
 
-<!-- TODO: Provide examples of what this would look like.-->
-
-mCODE participants MUST support these requests UNLESS they do not support the profile at all (see ["Support All mCODE Profiles"](#support-all-mcode-profiles) below).
+<!-- TODO: Provide examples of what this would look like. NOTE: We can create a separate page for the queries if this gets lengthy -->
 
 #### Publish a CapabilityStatement Identifying Supported Profiles and Operations
 
 Each mCODE participant MUST publish a FHIR CapabilityStatement listing their supported profiles, by declaring the profile in `CapabilityStatement.rest.resource.supportedProfile`. The CapabilityStatement SHALL be returned in response to a `GET [base]/metadata` request.
 
-Each mCODE participant MUST at minimum support the [CancerPatient] and [PrimaryCancerCondition] profiles.
+ALL mCODE participants MUST at minimum support the [CancerPatient] and [PrimaryCancerCondition] profiles.
 
 <!-- TODO: Provide examples of what this would look like.-->
 
 #### Populate and Meaningfully Process mCODE Resources
 
-mCODE senders MUST be able to populate data elements designated as "must support" in profiles, for all profiles they support (as declared in their CapabilityStatement). Receivers MUST be able to meaningfully process the MustSupport elements of the profiles they support (as declared in their CapabilityStatement). "Able to Populate" and "Meaningfully Process" have particular meanings discussed on the [Profile Conformance](conformance-profiles.html) page.
+mCODE senders MUST be able to populate data elements designated as MustSupport in profiles, for all profiles they support (as declared in their CapabilityStatement). Receivers MUST be able to meaningfully process the MustSupport elements of the profiles they support (as declared in their CapabilityStatement). "Able to Populate" and "Meaningfully Process" have particular meanings, as discussed on the [Profile Conformance](conformance-profiles.html) page.
 
 #### Support US Core Conformance Requirements
 
-Additional [conformance requirements from US Core](http://hl7.org/fhir/us/core/capstatements.html) apply to RESTful interactions, searches, and resource formats.
+Additional [conformance requirements from US Core](http://hl7.org/fhir/us/core/capstatements.html) apply to RESTful interactions, searches, and resource formats in mCODE. mCODE "inherits" all US Core conformance requirements. US Core provides base profiles for many (but not all) mCODE profiles, defines the meaning of MustSupport, and outlines expectations for handling of missing or unknown data elements. Likewise, US Core outlines how to associate provenance information associated with collection, transfer, and updating of clinical information.
 
-Most mCODE profiles are based on US Core profiles defined in the [US Core Implementation Guide (v3.1.1)](http://hl7.org/fhir/us/core/index.html). For example, the [CancerGeneticVariant] profile is based on [US Core Laboratory Result Observation Profile][USCoreLaboratoryResultObservationProfile] and [CancerPatient] is based on the [US Core Patient][USCorePatientProfile] profile. If a resource validates against any of the mCODE profiles based on US Core, it will be in compliance with US Core.
-
-Where US Core does not provide an appropriate base profile, mCODE profiles FHIR resources. An example is [CancerDiseaseStatus], based on Observation because US Core does not provide a profile for non-laboratory observations.
-
-US Core outlines expectations for handling of missing or unknown data elements. The mCODE requirements are identical to those in US Core. Likewise, US Core outlines how to associate provenance information associated with collection, transfer, and updating of clinical information. mCODE relies on US Core's approach and recommendations regarding provenance information.
+International users of mCODE may find US Core an impediment to implementation. Application of mCODE to other countries is open to further discussion.
 
 ### "SHOULD" Recommendations for Conformance
 
@@ -91,26 +83,16 @@ mCODE Patient Bundles SHALL be identified by an `id` value that matches the `id`
 
 #### Use `meta.profile` to Signal Conformance
 
-Participants SHOULD populate `meta.profile` elements for all resources to indicate which profiles the resources should conform to.
+Participants SHOULD populate `meta.profile` elements for all resources to indicate which profiles the resources should conform to. Participants SHOULD also implement [profile search](https://www.hl7.org/fhir/search.html#profile), which allows participants to query using the `_profile` parameter to return resources conforming to the profiles declared in `meta.profile`.
 
-Participants SHOULD also implement [profile search](https://www.hl7.org/fhir/search.html#profile), which allows participants to query using the `_profile` parameter to return resources conforming to the profiles declared in `meta.profile`.
-
-The profile search requirement originates from the base FHIR specification. It is not an additional requirement imposed by mCODE. Refer to the [FHIR Documentation on supported profiles](https://www.hl7.org/fhir/profiling.html#CapabilityStatement.rest.resource.supportedProfile) for details.
+Profile search and population of `meta.profile` originate as "SHALL" requirements in the base FHIR specification; they are not an additional requirements imposed by mCODE. However, in practice, few implementations have followed these requirements. Refer to the [FHIR Documentation on supported profiles](https://www.hl7.org/fhir/profiling.html#CapabilityStatement.rest.resource.supportedProfile) for details.
 
 ### Capability Statements
 
 * **Receiver**
-  * [mcode-receiver-cancer-conditions-then-patients]
   * [mcode-receiver-patient-bundle]
-  * [mcode-receiver-patients-and-cancer-conditions]
-  * [mcode-receiver-patients-in-group]
-  * [mcode-receiver-patients-with-cancer-condition]
 * **Sender**  
-  * [mcode-sender-cancer-conditions-then-patients]
   * [mcode-sender-patient-bundle]
-  * [mcode-sender-patients-and-cancer-conditions]
-  * [mcode-sender-patients-in-group]
-  * [mcode-sender-patients-with-cancer-condition]
 
 ### Operations
 

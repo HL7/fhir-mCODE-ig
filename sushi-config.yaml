@@ -60,11 +60,11 @@ menu:
     Genomics: group-genomics.html
     Treatment: group-treatment.html
     Outcome: group-outcome.html
-  Terminology: terminology.html
   Conformance:
-    Conformance Expectations: conformance-general.html
-    Declaring Scope: conformance-patients.html
+    General Expectations: conformance-general.html
+    Identifying mCODE Patients: conformance-patients.html
     Profile Conformance: conformance-profiles.html
+  Terminology: terminology.html
   Extended Example: examples.html
   All Artifacts: artifacts.html
   Downloads: downloads.html

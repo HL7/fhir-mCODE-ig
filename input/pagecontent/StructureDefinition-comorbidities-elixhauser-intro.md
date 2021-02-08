@@ -10,9 +10,9 @@ Notwithstanding, there are several general models used to note the presence of m
 
 The current profile captures comorbidities in the form of a checklist, based on one of these general models, the Elixhauser Comorbidity Index.
 
-The Elixhauser Index categorizes comorbidities using International Classification of Diseases (ICD) diagnosis codes. Each comorbidity category is dichotomous -- it is either present or it is not. The Index can be used to predict hospital resource use and in-hospital mortality (Elixhauser et al., 1998).
+The Elixhauser Index categorizes comorbidities using International Classification of Diseases (ICD) diagnosis codes. Each comorbidity category is dichotomous -- it is either present or it is not. The Index can be used to predict hospital resource use and in-hospital mortality (see <https://pubmed.ncbi.nlm.nih.gov/9431328> for details).
 
-Over time, there have been changes to the Index. The list of specific ICD diagnosis codes was updated from ICD-9-CM to ICD-10, and categories have been been revised. As a result, there are different versions of the categories and associated ICD-10 codes.
+Over time, there have been changes to the Index. The list of specific ICD diagnosis codes was updated from ICD-9-CM to ICD-10, and categories have been been revised. As a result, there are different versions of the categories and associated ICD-10 codes. The particular version used here ws defined by the Agency for Healthcare Research and Quality (AHRQ) Healthcare Cost and Utilization Project (H-CUP).
 
 ### FHIR Implementation Overview
 

@@ -1,3 +1,10 @@
+<!-- Temporary changes to fix formatting for changelog -->
+<style>
+  ul.new-content {
+    padding-left: 25px !important;
+  }
+</style>
+
 <!-- mCODE Profiles and Extensions -->
 [BrachytherapyImplantableDevice]: StructureDefinition-brachytherapy-implantable-device.html
 [BrachytherapyPrescriptionDelivery]: StructureDefinition-brachytherapy-prescription-delivery.html

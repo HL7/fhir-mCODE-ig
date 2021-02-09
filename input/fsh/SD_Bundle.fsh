@@ -9,32 +9,28 @@ Description: "A collection of data for an mCODE cancer patient."
     // These resources are required per Conformance > Supported Profiles.
     cancerPatient 1..1 MS and
     primaryCancerCondition 0..* MS and
-    secondaryCancerCondition 0..* and
-    cancerDiseaseStatus 0..* and
-    ecogPerformanceStatus 0..* and
-    karnofskyPerformanceStatus 0..* and
-    tumorMarkerTest 0..* and
-    cancerRelatedMedicationRequest 0..* and
-    cancerRelatedSurgicalProcedure 0..* and
-    radiotherapyCourseSummary 0..* and
-    brachytherapyPrescriptionDelivery 0..* and
-    teleradiotherapyPrescriptionDelivery 0..* and
-    tnmClinicalStageGroup 0..* and
-    tnmClinicalPrimaryTumorCategory 0..* and
-    tnmClinicalRegionalNodesCategory 0..* and
-    tnmClinicalDistantMetastasesCategory 0..* and
-    tnmPathologicalStageGroup 0..* and
-    tnmPathologicalPrimaryTumorCategory 0..* and
-    tnmPathologicalRegionalNodesCategory 0..* and
-    tnmPathologicalDistantMetastasesCategory 0..* and
-    cancerGeneticVariant 0..* and
-    cancerGenomicsReport 0..* and
-    geneticSpecimen 0..* and
-    genomicRegionStudied 0..* and
-    cancerRelatedComorbiditiesElixhauser 0..* and
-    vitalSign 0..* and
-    tumor 0..* and
-    tumorSize 0..*
+    secondaryCancerCondition 0..* MS and
+    cancerDiseaseStatus 0..* MS and
+    ecogPerformanceStatus 0..* MS and
+    karnofskyPerformanceStatus 0..* MS and
+    tumorMarkerTest 0..* MS and
+    cancerRelatedMedicationRequest 0..* MS and
+    cancerRelatedSurgicalProcedure 0..* MS and
+    radiotherapyCourseSummary 0..* MS and
+    brachytherapyPrescriptionDelivery 0..* MS and
+    teleradiotherapyPrescriptionDelivery 0..* MS and
+    tnmStageGroup 0..* MS and
+    tnmPrimaryTumorCategory 0..* MS and
+    tnmRegionalNodesCategory 0..* MS and
+    tnmDistantMetastasesCategory 0..* MS and
+    cancerGeneticVariant 0..* MS and
+    cancerGenomicsReport 0..* MS and
+    geneticSpecimen 0..* MS and
+    genomicRegionStudied 0..* MS and
+    cancerRelatedComorbiditiesElixhauser 0..* MS and
+    vitalSign 0..* MS and
+    tumor 0..* MS and
+    tumorSize 0..* MS
 
 * entry[cancerPatient] ^short = "Cancer Patient"
 * entry[primaryCancerCondition] ^short = "Primary Cancer Condition(s)"
@@ -48,14 +44,10 @@ Description: "A collection of data for an mCODE cancer patient."
 * entry[radiotherapyCourseSummary] ^short = "Cancer-Related Radiation Course(s)"
 * entry[teleradiotherapyPrescriptionDelivery] ^short = "Radiotherapy Course Summary(-ies)"
 * entry[brachytherapyPrescriptionDelivery] ^short = "Brachytherapy Summary(-ies)"
-* entry[tnmClinicalStageGroup] ^short = "TNM Clinical Stage Group(s)"
-* entry[tnmClinicalPrimaryTumorCategory] ^short = "TNM Clinical Primary Tumor Category(-ies)"
-* entry[tnmClinicalRegionalNodesCategory] ^short = "TNM Clinical Regional Nodes Category(-ies)"
-* entry[tnmClinicalDistantMetastasesCategory] ^short = "TNM Clinical Distant Metastases Category(-ies)"
-* entry[tnmPathologicalStageGroup] ^short = "TNM Pathological Stage Group"
-* entry[tnmPathologicalPrimaryTumorCategory] ^short = "TNM Pathological Primary Tumor Category(-ies)"
-* entry[tnmPathologicalRegionalNodesCategory] ^short = "TNM Pathological Regional Nodes Category(-ies)"
-* entry[tnmPathologicalDistantMetastasesCategory] ^short = "TNM Pathological Distant Metastases Category(-ies)"
+* entry[tnmStageGroup] ^short = "TNM Stage Group(s)"
+* entry[tnmPrimaryTumorCategory] ^short = "TNM Primary Tumor Category(-ies)"
+* entry[tnmRegionalNodesCategory] ^short = "TNM Regional Nodes Category(-ies)"
+* entry[tnmDistantMetastasesCategory] ^short = "TNM Distant Metastases Category(-ies)"
 * entry[cancerGeneticVariant] ^short = "Cancer Genetic Variant(s)"
 * entry[cancerGenomicsReport] ^short = "Cancer Genomics Report(s)"
 * entry[geneticSpecimen] ^short = "Genetic Specimen(s)"
@@ -78,14 +70,10 @@ Description: "A collection of data for an mCODE cancer patient."
 * entry[radiotherapyCourseSummary] ^definition = "Procedure resource(s) representing a course of treatment in cancer-related radiology therapy."
 * entry[teleradiotherapyPrescriptionDelivery] ^definition = "Procedure resource(s) representing a phase in treatment of cancer via external beam radiology procedures."
 * entry[brachytherapyPrescriptionDelivery] ^definition = "Procedure resource(s) representing cancer-related brachytherapy (internal) radiology procedures."
-* entry[tnmClinicalStageGroup] ^definition = "Observation resource(s) representing clinical stage group"
-* entry[tnmClinicalPrimaryTumorCategory] ^definition = "Observation resource(s) representing clinical T category"
-* entry[tnmClinicalRegionalNodesCategory] ^definition = "Observation resource(s) representing clinical N category"
-* entry[tnmClinicalDistantMetastasesCategory] ^definition = "Observation resource(s) representing clinical M category"
-* entry[tnmPathologicalStageGroup] ^definition = "Observation resource(s) representing pathological stage group"
-* entry[tnmPathologicalPrimaryTumorCategory] ^definition = "Observation resource(s) representing pathological T category"
-* entry[tnmPathologicalRegionalNodesCategory] ^definition = "Observation resource(s) representing pathological N category"
-* entry[tnmPathologicalDistantMetastasesCategory] ^definition = "Observation resource(s) representing pathological M category"
+* entry[tnmStageGroup] ^definition = "Observation resource(s) representing stage group"
+* entry[tnmPrimaryTumorCategory] ^definition = "Observation resource(s) representing T category"
+* entry[tnmRegionalNodesCategory] ^definition = "Observation resource(s) representing N category"
+* entry[tnmDistantMetastasesCategory] ^definition = "Observation resource(s) representing M category"
 * entry[cancerGeneticVariant] ^definition = "Observation resource(s) representing Cancer Genetic Variants."
 * entry[cancerGenomicsReport] ^definition = "DiagnosticReport resource(s) representing Cancer Genomics Reports"
 * entry[geneticSpecimen] ^definition = "Specimen resource(s) representing Genetic Specimens."
@@ -109,14 +97,10 @@ Description: "A collection of data for an mCODE cancer patient."
 * entry[teleradiotherapyPrescriptionDelivery].resource only TeleradiotherapyPrescriptionDelivery
 * entry[brachytherapyPrescriptionDelivery].resource only BrachytherapyPrescriptionDelivery
 //
-* entry[tnmClinicalStageGroup].resource only TNMClinicalStageGroup
-* entry[tnmClinicalPrimaryTumorCategory].resource only TNMClinicalPrimaryTumorCategory
-* entry[tnmClinicalRegionalNodesCategory].resource only TNMClinicalRegionalNodesCategory
-* entry[tnmClinicalDistantMetastasesCategory].resource only TNMClinicalDistantMetastasesCategory
-* entry[tnmPathologicalStageGroup].resource only TNMPathologicalStageGroup
-* entry[tnmPathologicalPrimaryTumorCategory].resource only TNMPathologicalPrimaryTumorCategory
-* entry[tnmPathologicalRegionalNodesCategory].resource only TNMPathologicalRegionalNodesCategory
-* entry[tnmPathologicalDistantMetastasesCategory].resource only TNMPathologicalDistantMetastasesCategory
+* entry[tnmStageGroup].resource only TNMStageGroup
+* entry[tnmPrimaryTumorCategory].resource only TNMPrimaryTumorCategory
+* entry[tnmRegionalNodesCategory].resource only TNMRegionalNodesCategory
+* entry[tnmDistantMetastasesCategory].resource only TNMDistantMetastasesCategory
 * entry[cancerGeneticVariant].resource only CancerGeneticVariant
 * entry[cancerGenomicsReport].resource only CancerGenomicsReport
 * entry[geneticSpecimen].resource only GeneticSpecimen

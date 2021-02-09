@@ -6,13 +6,38 @@ These changes are documented in the [continuous integration build of mCODE](http
 
 Many of these changes have been taken in response to comments from the HL7 community. Issue numbers refer to the [HL7 Jira](https://jira.hl7.org/issues/?filter=13361) (free account registration required).
 
-* [CancerRelatedMedicationStatement](http://hl7.org/fhir/us/mcode/STU1/StructureDefinition-mcode-cancer-related-medication-statement.html) was replaced with [CancerRelatedMedicationRequest].
+#### General
 
-  This decision was prompted by US Core STU Release 3.1.1, which replaced MedicationStatement with MedicationRequest. [Its guidance for fetching medications in different contexts is provided here.](http://hl7.org/fhir/us/core/all-meds.html)
+{:.new-content #GeneralChanges}
+  * Capability Statements which specifies the contents for the [sender] and [receiver] of an [mCODE Patient Bundle](StructureDefinition-mcode-patient-bundle.html).
+  * OperationDefinition [mcode-patient-everything] for retrieving an mCODE bundle.
+  * [Conformance](conformance.html) - Defined mCODE compliance in a testable way.
 
-* **Other changes pending** (we are in the progress of updating this list to reflect all the changes currently in the continuous integration build)
+#### Patient
+  * Elixhauser comorbities have been redesigned to further specify groupings by category.
 
-<p style="background-color: #fce4ff; padding: 0.5em; border: 1px solid #be86c5;">If you have questions or comments about these changes, please reach out on <a href="https://chat.fhir.org/#narrow/stream/179234-Cancer-Interoperability/topic/mCODE">chat.fhir.org</a> (free account registration required) or on the <a href="https://jira.hl7.org/issues/?filter=13361">HL7 Jira</a>.</p>
+
+#### Treatment
+
+{:.new-content #TreatmentChanges}
+  * [CancerRelatedMedicationStatement](http://hl7.org/fhir/us/mcode/STU1/StructureDefinition-mcode-cancer-related-medication-statement.html) was replaced with [CancerRelatedMedicationRequest] and [CancerRelatedMedicationAdministration].
+
+    This decision was prompted by US Core STU Release 3.1.1, which replaced MedicationStatement with MedicationRequest. [Its guidance for fetching medications in different contexts is provided here.](http://hl7.org/fhir/us/core/all-meds.html)
+
+  * Radiation therapy is expanded to include element requirements from the American Society for Radiation Oncology (ASTRO), resulting in additional profiles: [RadiotherapyCourseSummary] and [TeleradiotherapyPrescriptionDelivery]
+
+#### Genomics
+
+  * [CancerGeneticVariant] contains an additional component for DNA change type.
+
+
+#### Outcomes
+
+{:.new-content #Tumor}
+* Two new profiles further specify the location and size of a tumor: [Tumor] and [TumorSize].
+
+
+<p style="background-color: #fce4ff; padding: 0.5em; border: 1px solid #be86c5;">We are in the progress of updating this list to reflect all the changes currently in the continuous integration build. If you have questions or comments about these changes, please reach out on <a href="https://chat.fhir.org/#narrow/stream/179234-Cancer-Interoperability/topic/mCODE">chat.fhir.org</a> (free account registration required) or on the <a href="https://jira.hl7.org/issues/?filter=13361">HL7 Jira</a>.</p>
 
 ### mCODE 1.0.0 STU 1
 
@@ -82,7 +107,7 @@ The following are changes relative to [mCODE 0.9.0](https://mcodeinitiative.gith
 * Improved definition of onco-core-EvidenceType-extension.
 * Replaced obf-dateOfDiagnosis-extension with condition-assertedDate standard extension in PrimaryCancerCondition and SecondaryCancerCondition.
 * Added logical definition to TNM-related value sets to include all codes from AJCC staging systems.
-* Removed references to MedicationRequest on basedOn attribute for TNMClinicalPrimaryTumorCategory, TNMClinicalRegionalNodesCategory, TNMClinicalDistantMetastasesCategory, KarnofskyPerformanceStatus and ECOGPerformanceStatus.
+* Removed references to MedicationRequest on basedOn attribute for TNMPrimaryTumorCategory, TNMRegionalNodesCategory, TNMDistantMetastasesCategory, KarnofskyPerformanceStatus and ECOGPerformanceStatus.
 
 
 {% include markdown-link-references.md %}

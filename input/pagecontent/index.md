@@ -1,3 +1,10 @@
+<div markdown="1" class="note-to-balloters">
+New and updated content will be highlighted with green text and background where applicable.
+{:.new-content}
+
+Please review the STU2 changes listed in the [mCODE FHIR IG Change Log](change_log.html).
+</div>
+
 ### Background
 
 According to the National Cancer Institute, 38.5 percent of men and women will be diagnosed with cancer at some point during their lifetimes. In 2014, an estimated 14.7M people were living with cancer in the United States. While these numbers are staggering, the silver lining in the wide prevalence of cancer is the potential to learn from treatment of millions of patients. If we had research-quality data from all cancer patients, it would enable higher quality health outcomes. Today, we lack the data models, technologies, and methods to capture that data.

@@ -96,7 +96,6 @@
 <artifact id="StructureDefinition/mcode-location-qualifier" key="StructureDefinition-mcode-location-qualifier" name="Location Qualifier"/>
 <artifact id="ValueSet/mcode-location-qualifier-vs" key="ValueSet-mcode-location-qualifier-vs" name="Location Qualifier Value Set"/>
 <artifact id="ValueSet/mcode-tumor-size-method-vs" key="ValueSet-mcode-tumor-size-method-vs" name="Methods for measuring tumor size"/>
-<artifact id="StructureDefinition/mcode-multifocal-tumor" key="StructureDefinition-mcode-multifocal-tumor" name="Multifocal Tumor Observation"/>
 <artifact deprecated="true" key="Observation" name="Observation"/>
 <artifact id="ValueSet/mcode-present-absent-unknown" key="ValueSet-mcode-present-absent-unknown" name="Present-Absent-Unknown"/>
 <artifact id="StructureDefinition/mcode-primary-cancer-condition" key="primary-cancer-condition" name="Primary Cancer Condition"/>
@@ -186,7 +185,6 @@
 <artifact id="CodeSystem/mcode-catch-code-cs" key="CodeSystem-mcode-catch-code-cs" name="mCODE Catch Codes"/>
 <artifact id="StructureDefinition/mcode-patient-bundle" key="StructureDefinition-mcode-patient-bundle" name="mCODE Patient Bundle"/>
 <artifact id="Group/group-mcode-patients" key="Group-group-mcode-patients" name="mCODE Patient Group"/>
-<artifact id="CodeSystem/mcode-tumor-identifier-cs" key="CodeSystem-mcode-tumor-identifier-cs" name="mCODE Tumor Identifier Code"/>
 <artifact deprecated="true" id="Example/mcode-cancer-disease-status-example-01" key="mcode-cancer-disease-status-example-01" name="mCODECancerDiseaseStatusExample01"/>
 <artifact deprecated="true" id="Example/mcode-cancer-genetic-variant-example-01" key="mcode-cancer-genetic-variant-example-01" name="mCODECancerGeneticVariantExample01"/>
 <artifact deprecated="true" id="Example/mcode-cancer-genetic-variant-example-02" key="mcode-cancer-genetic-variant-example-02" name="mCODECancerGeneticVariantExample02"/>
@@ -227,7 +225,6 @@
 <artifact id="CapabilityStatement/mcode-sender-patients-and-cancer-conditions" key="CapabilityStatement-mcode-sender-patients-and-cancer-conditions" name="mcode-sender-patients-and-cancer-conditions"/>
 <artifact id="CapabilityStatement/mcode-sender-patients-in-group" key="CapabilityStatement-mcode-sender-patients-in-group" name="mcode-sender-patients-in-group"/>
 <artifact id="CapabilityStatement/mcode-sender-patients-with-cancer-condition" key="CapabilityStatement-mcode-sender-patients-with-cancer-condition" name="mcode-sender-patients-with-cancer-condition"/>
-<artifact id="Observation/multifocal-tumor-lobular-carcinoma" key="Observation-multifocal-tumor-lobular-carcinoma" name="multifocal-tumor-lobular-carcinoma"/>
 <artifact id="Observation/observation-smoking-history-jenny-m" key="Observation-observation-smoking-history-jenny-m" name="observation-smoking-history-jenny-m"/>
 <artifact id="Condition/primary-cancer-condition-breast" key="Condition-primary-cancer-condition-breast" name="primary-cancer-condition-breast"/>
 <artifact id="Condition/primary-cancer-condition-jenny-m" key="Condition-primary-cancer-condition-jenny-m" name="primary-cancer-condition-jenny-m"/>

@@ -38,11 +38,11 @@ Description: "Example of a resource conforming to the tumor profile."
 // The generic "resource identifier" type is used here because there does not seem to be
 // a more suitable type at http://hl7.org/fhir/R4/v2/0203/index.html.
 * identifier.use = #usual
-* identifier.type = http://terminology.hl7.org/CodeSystem/v2-0203#RI "Resource identifier"
+* identifier.type = IDTYPE#RI "Resource identifier"
 * identifier.system = "http://radiology.hospital.example.org"
 * identifier.value = "894e51f5-f5ab-41f2-80bc-2917c995e137"
 * location = SCT#80248007 "Left breast structure (body structure)"
-* extension[conditionAssociatedWithTumor].valueReference = Reference(Condition/primary-cancer-condition-breast)
+* extension[relatedCondition].valueReference = Reference(Condition/primary-cancer-condition-breast)
 
 
 Instance: tumor-specimen-lobular-carcinoma-left-breast
@@ -50,14 +50,15 @@ InstanceOf: TumorSpecimen
 Description: "Example of a TumorSpecimen linked to [this Tumor](BodyStructure-tumor-lobular-carcinoma-left-breast.html) via `identifier`."
 * subject = Reference(Patient/cancer-patient-eve-anyperson)
 * status = #available "available"
-* type = SCT#108369006 "Neoplasm (morphologic abnormality)"
+* type = SPTY#TUMOR
 * identifier.use = #usual
-* identifier.type = TumorIdentifierCS#tumor-identifier
+* identifier.type = IDTYPE#RI "Resource identifier"
 * identifier.value = "894e51f5-f5ab-41f2-80bc-2917c995e137"
-* extension[conditionAssociatedWithTumor].valueReference = Reference(Condition/primary-cancer-condition-breast)
+* extension[relatedCondition].valueReference = Reference(Condition/primary-cancer-condition-breast)
 * receivedTime = "2020-05-01"
 * collection.bodySite = SCT#80248007 "Left breast structure (body structure)"
 
+/*
 Instance: multifocal-tumor-lobular-carcinoma
 InstanceOf: MultifocalTumor
 Usage: #example
@@ -69,3 +70,4 @@ Description: "Example of an Observation indicating a tumor is multifocal based o
 * subject = Reference(Patient/cancer-patient-eve-anyperson)
 * status = #final "final"
 * effectiveDateTime = "2019-05-01"
+*/

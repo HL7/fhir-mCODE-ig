@@ -36,35 +36,37 @@ Where US Core does not provide an appropriate base profile, mCODE profiles FHIR 
 | Tumor Size | no | Observation |
 {: .grid }
 
-### Profile-Level Expectations
+### Conformance to mCODE Profiles
 
-Each mCODE profile expresses requirements and expectations for FHIR instances in terms of structural constraints and terminology bindings. If an instance is expected to conform with an mCODE profile, it MUST [validate](https://www.hl7.org/fhir/validation.html) against that profile. Only FHIR instances associated an [mCODE Patient](conformance-patients.html) carry mCODE conformance expectations.
+Each mCODE profile expresses requirements and expectations for FHIR instances in terms of structural constraints and terminology bindings. If an instance is required to conform with an mCODE profile, it MUST [validate](https://www.hl7.org/fhir/validation.html) against that profile. Only certain FHIR instances associated with an [mCODE Patient](conformance-patients.html) carry mCODE conformance expectations.
 
 #### Data Sender Expectations
 
-Each mCODE profile has a conformance statement describing what data or resource instances MUST or SHOULD conform to it. For example, in [PrimaryCancerCondition], the conformance requirements are expressed in two parts:
+Each mCODE profile has a conformance statement describing what data or FHIR instances MUST or SHOULD conform to it. For example, in [PrimaryCancerCondition], the conformance requirements are expressed in two parts:
 
 1. Any Condition resource associated with an [mCODE Patient](conformance-patients.html) whose `Condition.code` is in the value set `[PrimaryOrUncertainBehaviorCancerDisorderVS]` MUST conform to the profile.
 2. Any resource instance that would reasonably be expected to conform to the profile SHOULD conform to the profile.
 
-The second statement is intended to discourage an mCODE Data Sender from creating a different representation of a primary cancer condition that would not be found when querying for Condition resources that possess an mCODE-specified code. It is essentially non-computable and non-enforceable, so it is expressed as a SHOULD.
+The second statement is intended to discourage an mCODE Data Sender from creating different representation for data that *should* fall into the scope of mCODE. Compliance to this kind of condition is admittedly difficult to enforce, so it is expressed as a SHOULD.
 
 #### Data Receiver Expectations
 
-An mCODE Data Receiver SHOULD perform validation on instances it receives. To do this, the Receiver needs to identify which profile to use for validation. There four ways to identify the correct profile:
+An mCODE Data Receiver SHOULD perform validation on instances it receives. The Receiver first of all needs to identify which profile to use for validation. There four ways to identify the correct profile:
 
 1. The instance is received in response to a [profile search](https://www.hl7.org/fhir/search.html#profile), so the validating profile is known in advance.
-2. The instance self-identifies using `meta.profile`. The Data Sender SHOULD populate this element.
+2. The instance self-identifies using `meta.profile`. Every Data Sender SHOULD populate this element.
 3. The Data Receiver can examine the contents of the instance to associate it with a profile (in particular, by looking for identifying code or category).
 4. The Data Receiver can iteratively attempt to validate the instance against each of the Data Receiver's supported profiles.
+
+If an instance fails validation, the Receiver may reject the instance.
 
 ### Element-Level Expectations
 
 #### Sender and Receiver Expectations
 
-For every element that is [required](#required-elements) and/or [Must Support](#must-support) (MS):
+For every element that is [required](#required-elements) and/or [Must Support](#must-support) (MS) in mCODE:
 
-* mCODE Data Senders SHALL be capable of populating the element, if the Sender supports the profile (as indicated by its CapabilityStatement).
+* mCODE Data Senders SHALL be capable of populating the element, provided the Sender supports the profile (as indicated by its CapabilityStatement).
 * If the Sender lacks the data necessary to populate the element:
   * If the element is required, the [US Core rules on missing data](http://hl7.org/fhir/us/core/general-guidance.html#missing-data) MUST be followed.
   * If the element is not required (but is MS), the element SHOULD be entirely omitted. If there is a specific reason the data is missing, a data absent reason MAY be substituted.
@@ -73,7 +75,7 @@ For every element that is [required](#required-elements) and/or [Must Support](#
 
 #### Required Elements
 
-An mCODE data element is required if any of the following criteria are met:
+An mCODE data element is **required** if any of the following criteria are met:
 
 * The element is a top-level element (a first-level property of the resource) and its minimum cardinality is > 0 in the profile.
 * The element not a top-level element (a second-level property or below), its minimum cardinality is > 0, and all elements directly containing that element have minimum cardinality > 0 in the profile.
@@ -83,7 +85,7 @@ In other words, a data element may be `1..1`, but if it is contained by an optio
 
 #### Must Support
 
-mCODE inherits the US Core interpretation of MS, in particular, the [US Core version 3.2 interpretation](http://hl7.org/fhir/us/core/2021Jan/conformance-expectations.html#must-support-elements). Interpretation of MS is not straightforward. Depending on the type of element it is attached to and where that element occurs, an MS flag (shown as <span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" >S</span> in this guide) has different interpretations.
+mCODE inherits the US Core interpretation of MS, in particular, the [US Core version 3.2 interpretation](http://hl7.org/fhir/us/core/2021Jan/conformance-expectations.html#must-support-elements). Interpretation of MS is not straightforward. Depending on the type of element it is attached to and where that element occurs, the flags that indicate supported elements (shown as <span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" >S</span> in this guide) have different interpretations.
 
 ##### Viewing Must Support Flags
 To see which elements have <span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" >S</span> flags, consult the "Snapshot Table" view of the profile. The "Differential Table" view hides <span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" >S</span> flags inherited from the parent profile. The "Snapshot Table (Must Support)" view reflects the IG Publisher's interpretation of <span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" >S</span> flags, which may or may not coincide with the US Core/mCODE interpretation.
@@ -106,8 +108,10 @@ The following is guidance how to interpret <span style="padding-left: 3px; paddi
 | MS element, [Sliced array](https://www.hl7.org/fhir/profiling.html#slicing) type | No MS expectation on sliced array elements unless specifically <span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" >S</span>-flagged | same |
 | Non-MS [Required Element](#required-elements) | MS | not MS [^1] |
 | Forbidden element (maximum cardinality = 0) [^2] | Not MS | Not MS |
+{: .grid }
 
-[^1]: An example is a client that does not process a required element even though it is populated by the server.
+
+[^1]: An example is a Receiver that does not meaningfully process a required element even though it was populated by the Sender.
 
 [^2]: When inheriting from another profile, it is possible to set the upper cardinality to zero on an element that was MS in the parent profile. For example, you could inherit from US Core Patient, but forbid the patient’s name for privacy reasons.  In this case, neither Sender nor Receiver are expected to populate or support the element – in fact, it would be an error if the element were present.
 

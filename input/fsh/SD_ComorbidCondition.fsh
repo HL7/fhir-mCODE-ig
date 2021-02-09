@@ -30,7 +30,7 @@ Id: mcode-comorbidities-elixhauser
 Title: "Elixhauser Comorbidities"
 Description: "Comorbid condition checklist and optional risk score, using Elixhauser comorbidity categories as defined by the Agency for Healthcare Research and Quality (AHRQ) Healthcare Cost and Utilization Project (H-CUP)."
 * ^abstract = false
-* code = COMORB#ElixhauserAHRQ
+* code = COMORB#COMORBID_OBS
 * component.value[x] from PresentAbsentUnknownVS (required)
 * component ^slicing.discriminator.type = #pattern
 * component ^slicing.discriminator.path = "code"

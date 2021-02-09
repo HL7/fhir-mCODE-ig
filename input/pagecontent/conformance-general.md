@@ -59,8 +59,8 @@ International users of mCODE may find US Core an impediment to implementation. A
 mCODE participants SHOULD meet the following requirements for conformance:
 
 1. [Support all mCODE Profiles](#support-all-mcode-profiles)
-1. [Support the mCODE Bundle](#support-the-mcode-bundle)
-1. [Use `meta.profile` to Signal Conformance](#use-meta-profile-to-signal-conformance)
+1. [Support the mCODE Pateint Bundle](#support-the-mcode-patient-bundle)
+1. [Use `meta.profile` to Signal Conformance](#use-metaprofile-to-signal-conformance)
 
 #### Support All mCODE Profiles
 

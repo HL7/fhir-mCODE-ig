@@ -74,6 +74,10 @@ mCODE has adopted an approach that allows the user to add additional code or cod
   * [LocationQualifierVS]
   * [HistologyMorphologyBehaviorVS]
 * **Staging**
+  * [ObservationCodesStageGroupVS]
+  * [ObservationCodesPrimaryTumorVS]
+  * [ObservationCodesRegionalNodesVS]
+  * [ObservationCodesDistantMetastasesVS]
   * [TNMStageGroupVS]
   * [TNMPrimaryTumorCategoryVS]
   * [TNMRegionalNodesCategoryVS]

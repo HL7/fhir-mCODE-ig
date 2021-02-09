@@ -24,7 +24,7 @@ Description: "Identifying codes based on the timing of classification for primar
 * LNC#21899-0 "Primary tumor.pathology Cancer"
 * LNC#21911-3 "Primary tumor.other [Class] Cancer"
 
-ValueSet: ObservationCodesRegionalNodesTumorVS
+ValueSet: ObservationCodesRegionalNodesVS
 Id: mcode-observation-codes-regional-nodes-vs
 Title: "Observation Codes for Regional Node Category"
 Description: "Identifying codes based on the timing of classification for regional node (N) staging observations."

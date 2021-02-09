@@ -32,10 +32,10 @@
 [RelatedPrimaryCancerCondition]: StructureDefinition-mcode-related-primary-cancer-condition.html
 [SecondaryCancerCondition]: StructureDefinition-mcode-secondary-cancer-condition.html
 [TeleradiotherapyPrescriptionDelivery]: StructureDefinition-teleradiotherapy-prescription-delivery.html
-[TNMDistantMetastasesCategory]: StructureDefinition-mcode-tnm-clinical-distant-metastases-category.html
-[TNMPrimaryTumorCategory]: StructureDefinition-mcode-tnm-clinical-primary-tumor-category.html
-[TNMRegionalNodesCategory]: StructureDefinition-mcode-tnm-clinical-regional-nodes-category.html
-[TNMStageGroup]: StructureDefinition-mcode-tnm-clinical-stage-group.html
+[TNMDistantMetastasesCategory]: StructureDefinition-mcode-tnm-distant-metastases-category.html
+[TNMPrimaryTumorCategory]: StructureDefinition-mcode-tnm-primary-tumor-category.html
+[TNMRegionalNodesCategory]: StructureDefinition-mcode-tnm-regional-nodes-category.html
+[TNMStageGroup]: StructureDefinition-mcode-tnm-stage-group.html
 [TerminationReason]: StructureDefinition-mcode-termination-reason.html
 [TreatmentIntent]: StructureDefinition-mcode-treatment-intent.html
 [TumorMarkerTest]: StructureDefinition-mcode-tumor-marker-test.html
@@ -100,6 +100,10 @@
 [HGVSVS]: ValueSet-mcode-hgvs-vs.html
 [HistologyMorphologyBehaviorVS]: ValueSet-mcode-histology-morphology-behavior-vs.html
 [LocationQualifierVS]: ValueSet-mcode-location-qualifier-vs.html
+[ObservationCodesStageGroupVS]: ValueSet-mcode-observation-codes-stage-group-vs.html
+[ObservationCodesPrimaryTumorVS]: ValueSet-mcode-observation-codes-primary-tumor-vs.html
+[ObservationCodesRegionalNodesVS]: ValueSet-mcode-observation-codes-regional-nodes-vs.html
+[ObservationCodesDistantMetastasesVS]: ValueSet-mcode-observation-codes-distant-metastases-vs.html
 [PresentAbsentUnknownVS]: ValueSet-mcode-present-absent-unknown.html
 [PrimaryOrUncertainBehaviorCancerDisorderVS]: ValueSet-mcode-primary-or-uncertain-behavior-cancer-disorder-vs.html
 [RadiationTargetBodySiteVS]: ValueSet-mcode-radiation-target-body-site-vs.html

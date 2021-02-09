@@ -22,22 +22,22 @@ Description: "The extent of the cancer in the body, according to the TNM classif
 * value[x] from TNMStageGroupVS (preferred)
 * insert ObservationHasMemberSlicingRules
 * hasMember contains
-    TNMPrimaryTumorCategory 0..1 and
-    TNMRegionalNodesCategory 0..1 and
-    TNMDistantMetastasesCategory 0..1
+    tnmPrimaryTumorCategory 0..1 and
+    tnmRegionalNodesCategory 0..1 and
+    tnmDistantMetastasesCategory 0..1
 // Set metadata attributes that show up in the IG
-* hasMember[TNMPrimaryTumorCategory] only Reference(TNMPrimaryTumorCategory)
-* hasMember[TNMPrimaryTumorCategory] ^short = "TNM Primary Tumor Category"
-* hasMember[TNMPrimaryTumorCategory] ^definition = "Category of the primary tumor, based on its size and extent, and based on evidence such as physical examination, imaging, and/or biopsy."
-* hasMember[TNMPrimaryTumorCategory] ^comment = "When using this element, the Observation must validate against the specified profile."
-* hasMember[TNMRegionalNodesCategory] only Reference(TNMRegionalNodesCategory)
-* hasMember[TNMRegionalNodesCategory] ^short = "TNM  Regional Nodes Category"
-* hasMember[TNMRegionalNodesCategory] ^definition = "Category of the presence or absence of metastases in regional lymph nodes, based on evidence such as physical examination, imaging, and/or biopsy."
-* hasMember[TNMRegionalNodesCategory] ^comment = "When using this element, the Observation must validate against the specified profile."
-* hasMember[TNMDistantMetastasesCategory] only Reference(TNMDistantMetastasesCategory)
-* hasMember[TNMDistantMetastasesCategory] ^short = "TNM  Distant Metastases Category"
-* hasMember[TNMDistantMetastasesCategory] ^definition = "Category describing the presence or absence of metastases in remote anatomical locations, based on evidence such as physical examination, imaging, and/or biopsy."
-* hasMember[TNMDistantMetastasesCategory] ^comment = "When using this element, the Observation must validate against the specified profile."
+* hasMember[tnmPrimaryTumorCategory] only Reference(TNMPrimaryTumorCategory)
+* hasMember[tnmPrimaryTumorCategory] ^short = "TNM Primary Tumor Category"
+* hasMember[tnmPrimaryTumorCategory] ^definition = "Category of the primary tumor, based on its size and extent, and based on evidence such as physical examination, imaging, and/or biopsy."
+* hasMember[tnmPrimaryTumorCategory] ^comment = "When using this element, the Observation must validate against the specified profile."
+* hasMember[tnmRegionalNodesCategory] only Reference(TNMRegionalNodesCategory)
+* hasMember[tnmRegionalNodesCategory] ^short = "TNM  Regional Nodes Category"
+* hasMember[tnmRegionalNodesCategory] ^definition = "Category of the presence or absence of metastases in regional lymph nodes, based on evidence such as physical examination, imaging, and/or biopsy."
+* hasMember[tnmRegionalNodesCategory] ^comment = "When using this element, the Observation must validate against the specified profile."
+* hasMember[tnmDistantMetastasesCategory] only Reference(TNMDistantMetastasesCategory)
+* hasMember[tnmDistantMetastasesCategory] ^short = "TNM  Distant Metastases Category"
+* hasMember[tnmDistantMetastasesCategory] ^definition = "Category describing the presence or absence of metastases in remote anatomical locations, based on evidence such as physical examination, imaging, and/or biopsy."
+* hasMember[tnmDistantMetastasesCategory] ^comment = "When using this element, the Observation must validate against the specified profile."
 
 Profile:  TNMPrimaryTumorCategory
 Id: mcode-tnm-primary-tumor-category
@@ -54,13 +54,11 @@ Parent: Observation
 Title: "TNM Regional Nodes Category"
 Description: "Category of the presence or absence of metastases in regional lymph nodes, based on evidence such as physical examination, imaging, and/or biopsy."
 * insert CancerStageCommonRules
-* code from ObservationCodesRegionalNodesTumorVS (required)
-* insert CategorySlicingRules
-* category = ObsCat#exam "exam"
+* code from ObservationCodesRegionalNodesVS (required)
 * value[x] from TNMRegionalNodesCategoryVS (preferred)
 
 Profile:  TNMDistantMetastasesCategory
-Id: mcode-tnm--distant-metastases-category
+Id: mcode-tnm-distant-metastases-category
 Parent: Observation
 Title: "TNM Distant Metastases Category"
 Description: "Category describing the extent of a tumor metastasis in remote anatomical locations, based on evidence such as physical examination, imaging, and/or biopsy."

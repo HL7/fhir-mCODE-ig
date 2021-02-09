@@ -96,6 +96,10 @@
 <artifact id="ValueSet/mcode-location-qualifier-vs" key="ValueSet-mcode-location-qualifier-vs" name="Location Qualifier Value Set"/>
 <artifact id="ValueSet/mcode-tumor-size-method-vs" key="ValueSet-mcode-tumor-size-method-vs" name="Methods for measuring tumor size"/>
 <artifact deprecated="true" key="Observation" name="Observation"/>
+<artifact id="ValueSet/mcode-observation-codes-distant-metastases-vs" key="ValueSet-mcode-observation-codes-distant-metastases-vs" name="Observation Codes for Distant Metastases Category"/>
+<artifact id="ValueSet/mcode-observation-codes-primary-tumor-vs" key="ValueSet-mcode-observation-codes-primary-tumor-vs" name="Observation Codes for Primary Tumor Category"/>
+<artifact id="ValueSet/mcode-observation-codes-regional-nodes-vs" key="ValueSet-mcode-observation-codes-regional-nodes-vs" name="Observation Codes for Regional Node Category"/>
+<artifact id="ValueSet/mcode-observation-codes-stage-group-vs" key="ValueSet-mcode-observation-codes-stage-group-vs" name="Observation Codes for Stage Group Category"/>
 <artifact id="ValueSet/mcode-present-absent-unknown" key="ValueSet-mcode-present-absent-unknown" name="Present-Absent-Unknown"/>
 <artifact id="StructureDefinition/mcode-primary-cancer-condition" key="primary-cancer-condition" name="Primary Cancer Condition"/>
 <artifact id="ValueSet/mcode-primary-or-uncertain-behavior-cancer-disorder-vs" key="primary-or-uncertain-behavior-cancer-disorder-value-set" name="Primary or Uncertain Behavior Cancer Disorder Value Set"/>
@@ -115,17 +119,20 @@
 <artifact id="StructureDefinition/mcode-comorbid-condition-code" key="StructureDefinition-mcode-comorbid-condition-code" name="Specific Condition Code for Comorbidity"/>
 <artifact id="StructureDefinition/mcode-comorbid-condition-reference" key="StructureDefinition-mcode-comorbid-condition-reference" name="Specific Condition Reference for Comorbidity"/>
 <artifact deprecated="true" id="Profile/mcode-tnm-clinical-distant-metastases" key="tnm-clinical-distant-metastases" name="TNM Clinical Distant Metastases"/>
-<artifact id="StructureDefinition/mcode-tnm-clinical-distant-metastases-category" key="StructureDefinition-mcode-tnm-clinical-distant-metastases-category" name="TNM Clinical Distant Metastases Category"/>
-<artifact id="StructureDefinition/mcode-tnm-clinical-primary-tumor-category" key="tnm-clinical-primary-tumor-category" name="TNM Clinical Primary Tumor Category"/>
-<artifact id="StructureDefinition/mcode-tnm-clinical-regional-nodes-category" key="tnm-clinical-regional-nodes-category" name="TNM Clinical Regional Nodes Category"/>
-<artifact id="StructureDefinition/mcode-tnm-clinical-stage-group" key="tnm-clinical-stage-group" name="TNM Clinical Stage Group"/>
+<artifact deprecated="true" id="Profile/mcode-tnm-clinical-primary-tumor-category" key="tnm-clinical-primary-tumor-category" name="TNM Clinical Primary Tumor Category"/>
+<artifact deprecated="true" id="Profile/mcode-tnm-clinical-regional-nodes-category" key="tnm-clinical-regional-nodes-category" name="TNM Clinical Regional Nodes Category"/>
+<artifact deprecated="true" id="Profile/mcode-tnm-clinical-stage-group" key="tnm-clinical-stage-group" name="TNM Clinical Stage Group"/>
+<artifact id="StructureDefinition/mcode-tnm-distant-metastases-category" key="StructureDefinition-mcode-tnm-distant-metastases-category" name="TNM Distant Metastases Category"/>
 <artifact id="ValueSet/mcode-tnm-distant-metastases-category-vs" key="tnm-distant-metastases-category-value-set" name="TNM Distant Metastases Category Value Set"/>
-<artifact id="StructureDefinition/mcode-tnm-pathological-distant-metastases-category" key="tnm-pathological-distant-metastases-category" name="TNM Pathological Distant Metastases Category"/>
-<artifact id="StructureDefinition/mcode-tnm-pathological-primary-tumor-category" key="tnm-pathological-primary-tumor-category" name="TNM Pathological Primary Tumor Category"/>
-<artifact id="StructureDefinition/mcode-tnm-pathological-regional-nodes-category" key="tnm-pathological-regional-nodes-category" name="TNM Pathological Regional Nodes Category"/>
-<artifact id="StructureDefinition/mcode-tnm-pathological-stage-group" key="tnm-pathological-stage-group" name="TNM Pathological Stage Group"/>
+<artifact deprecated="true" id="Profile/mcode-tnm-pathological-distant-metastases-category" key="tnm-pathological-distant-metastases-category" name="TNM Pathological Distant Metastases Category"/>
+<artifact deprecated="true" id="Profile/mcode-tnm-pathological-primary-tumor-category" key="tnm-pathological-primary-tumor-category" name="TNM Pathological Primary Tumor Category"/>
+<artifact deprecated="true" id="Profile/mcode-tnm-pathological-regional-nodes-category" key="tnm-pathological-regional-nodes-category" name="TNM Pathological Regional Nodes Category"/>
+<artifact deprecated="true" id="Profile/mcode-tnm-pathological-stage-group" key="tnm-pathological-stage-group" name="TNM Pathological Stage Group"/>
+<artifact id="StructureDefinition/mcode-tnm-primary-tumor-category" key="StructureDefinition-mcode-tnm-primary-tumor-category" name="TNM Primary Tumor Category"/>
 <artifact id="ValueSet/mcode-tnm-primary-tumor-category-vs" key="tnm-primary-tumor-category-value-set" name="TNM Primary Tumor Category Value Set"/>
+<artifact id="StructureDefinition/mcode-tnm-regional-nodes-category" key="StructureDefinition-mcode-tnm-regional-nodes-category" name="TNM Regional Nodes Category"/>
 <artifact id="ValueSet/mcode-tnm-regional-nodes-category-vs" key="tnm-regional-nodes-category-value-set" name="TNM Regional Nodes Category Value Set"/>
+<artifact id="StructureDefinition/mcode-tnm-stage-group" key="StructureDefinition-mcode-tnm-stage-group" name="TNM Stage Group"/>
 <artifact id="ValueSet/mcode-tnm-stage-group-vs" key="tnm-stage-group-value-set" name="TNM Stage Group Value Set"/>
 <artifact id="ValueSet/teleradiotherapy-device-vs" key="ValueSet-teleradiotherapy-device-vs" name="Teleradiotherapy Device Value Set"/>
 <artifact id="ValueSet/teleradiotherapy-modality-vs" key="ValueSet-teleradiotherapy-modality-vs" name="Teleradiotherapy Modality Value Set"/>
@@ -236,10 +243,6 @@
 <artifact id="Observation/tnm-clinical-regional-nodes-category-jenny-m" key="Observation-tnm-clinical-regional-nodes-category-jenny-m" name="tnm-clinical-regional-nodes-category-jenny-m"/>
 <artifact id="Observation/tnm-clinical-stage-group-3c" key="Observation-tnm-clinical-stage-group-3c" name="tnm-clinical-stage-group-3c"/>
 <artifact id="Observation/tnm-clinical-stage-group-jenny-m" key="Observation-tnm-clinical-stage-group-jenny-m" name="tnm-clinical-stage-group-jenny-m"/>
-<artifact id="Observation/tnm-pathological-distant-metastases-category-pM0" key="Observation-tnm-pathological-distant-metastases-category-pM0" name="tnm-pathological-distant-metastases-category-pM0"/>
-<artifact id="Observation/tnm-pathological-primary-tumor-category-pT3" key="Observation-tnm-pathological-primary-tumor-category-pT3" name="tnm-pathological-primary-tumor-category-pT3"/>
-<artifact id="Observation/tnm-pathological-regional-nodes-category-pN3" key="Observation-tnm-pathological-regional-nodes-category-pN3" name="tnm-pathological-regional-nodes-category-pN3"/>
-<artifact id="Observation/tnm-pathological-stage-group-3C" key="Observation-tnm-pathological-stage-group-3C" name="tnm-pathological-stage-group-3C"/>
 <artifact id="Observation/tnm-primary-tumor-category-jenny-m" key="Observation-tnm-primary-tumor-category-jenny-m" name="tnm-primary-tumor-category-jenny-m"/>
 <artifact id="BodyStructure/tumor-lobular-carcinoma-left-breast" key="BodyStructure-tumor-lobular-carcinoma-left-breast" name="tumor-lobular-carcinoma-left-breast"/>
 <artifact id="Observation/tumor-marker-test-egf" key="Observation-tumor-marker-test-egf" name="tumor-marker-test-egf"/>

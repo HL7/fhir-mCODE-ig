@@ -202,9 +202,9 @@ Description: "mCODE Example for TNM Clinical Stage Group"
 * subject = Reference(cancer-patient-john-anyperson)
 * effectiveDateTime = "2019-04-01"
 * valueCodeableConcept = AJCC#3C "IIIC"
-* hasMember[TNMPrimaryTumorCategory] = Reference(tnm-clinical-primary-tumor-category-cT3)
-* hasMember[TNMRegionalNodesCategory] = Reference(tnm-clinical-regional-nodes-category-cN3)
-* hasMember[TNMDistantMetastasesCategory] = Reference(tnm-clinical-distant-metastases-category-cM0)
+* hasMember[tnmPrimaryTumorCategory] = Reference(tnm-clinical-primary-tumor-category-cT3)
+* hasMember[tnmRegionalNodesCategory] = Reference(tnm-clinical-regional-nodes-category-cN3)
+* hasMember[tnmDistantMetastasesCategory] = Reference(tnm-clinical-distant-metastases-category-cM0)
 
 Instance: tnm-clinical-distant-metastases-category-cM0
 InstanceOf: TNMDistantMetastasesCategory

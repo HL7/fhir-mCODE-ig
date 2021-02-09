@@ -5,10 +5,10 @@ Id: mcode-cancer-disorder-vs
 Title: "Cancer Disorder Value Set"
 Description:   "A broad cancer-related value set containing both primary and secondary tumor types, with codes from ICD-10 and SNOMED CT, including both diagnosis and histology/morphology/behavior codes. ICD-O-3 morphology codes may also be used and are considered conformant to the specification. For SNOMED, the value set includes all codes descending from 363346000 'Malignant neoplastic disease (disorder)' and 108369006 'Neoplasm (morphologic abnormality)'."
 * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
-* CatchCodeCS#CD-OTHER "Other Cancer Disorder, Specify"
 * include codes from valueset PrimaryOrUncertainBehaviorCancerDisorderVS
 * include codes from valueset SecondaryCancerDisorderVS
 * include codes from valueset HistologyMorphologyBehaviorVS
+* CatchCodeCS#CD-OTHER "Other Cancer Disorder, Specify"
 
 
 ValueSet:   SecondaryCancerDisorderVS

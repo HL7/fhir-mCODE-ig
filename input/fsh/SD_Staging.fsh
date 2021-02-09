@@ -5,8 +5,6 @@ RuleSet: CancerStageCommonRules
 * device 0..0
 * referenceRange 0..0
 * component 0..0
-* partOf only Reference(Procedure)
-* basedOn only Reference(ServiceRequest)
 * focus only Reference(PrimaryCancerCondition)
 * subject only Reference(CancerPatient)
 * method from CancerStagingSystemVS (extensible)

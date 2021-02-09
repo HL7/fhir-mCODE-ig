@@ -3,16 +3,13 @@ Parent:  Observation
 Id: mcode-tumor-size
 Title: "Tumor Size"
 Description:  "Records the dimensions of a tumor"
-* ^status = #draft
-* ^experimental = true
 
 // LOINC code indicating this is a tumor size
 * code = LNC#21889-1 //"Size Tumor"
-* code MS
 
 * subject ^short = "The patient whose tumor was measured."
 * subject ^definition = "The patient whose tumor was measured. SHALL be a `Patient` resource conforming to `CancerPatient`."
-* subject 1..1 MS
+* subject 1..1
 * subject only Reference(CancerPatient)
 
 * focus 0..1
@@ -20,12 +17,10 @@ Description:  "Records the dimensions of a tumor"
 * focus ^short = "Identifies a tumor that has NOT been removed from the body"
 * focus ^definition = "Reference to a BodyStructure resource conforming to Tumor."
 * focus ^comment = "Use **only** when the tumor **has not** been removed from the body. If the tumor has been removed, use `specimen` instead and leave `focus` empty."
-* focus MS
 
 * specimen ^short = "Identifiers a tumor that has been removed from the body"
 * specimen ^definition = "Reference to a BodyStructure resource conforming to Tumor."
 * specimen ^comment = "Use **only** when the tumor **has** been removed from the body. If the tumor has been not removed, use `focus` instead and leave `specimen` empty."
-* specimen MS
 
 * obeys must-have-focus-or-specimen-invariant
 
@@ -33,9 +28,7 @@ Description:  "Records the dimensions of a tumor"
 * method ^short = "Method for measuring the tumor"
 * method ^definition = "Method for measuring the tumor"
 * method ^comment = "Tumors are typically measured via gross pathology after excision, or via diagnostic imaging or physical exam prior to removal. `TumorSizeMethodVS` provides LOINC codes for these measurement methods. Therefore, if `specimen` is set, `method` is expected to be a \"gross pathology\" code. If `focus` is set, `method` is expected to be a type of diagnostic imaging or physical exam."
-* method MS
 
-* component MS
 * insert ObservationComponentSlicingRules
 // Require 1 dimension; the additional dimensions are optional
 * component contains
@@ -55,7 +48,8 @@ Description:  "Records the dimensions of a tumor"
 * component[tumorOtherDimension].value[x] only Quantity
 * component[tumorOtherDimension].valueQuantity from TumorSizeUnitsVS (required)
 
-* effective[x] MS
+// Group the Must Support to make it easier to see what's what
+* subject and code and effective[x] and component and component.code and component.value and method and specimen and focus MS
 
 
 // This invariant has been exhaustively tested with the FHIR validator
@@ -63,8 +57,6 @@ Invariant: must-have-focus-or-specimen-invariant
 Description: "Either `focus` OR `specimen` MUST be populated"
 Expression: "(focus.exists() or specimen.exists()) and (focus.exists() and specimen.exists()).not()"
 Severity: #error
-
-
 
 
 Profile: Tumor

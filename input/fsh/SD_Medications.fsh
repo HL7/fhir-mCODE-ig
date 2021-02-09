@@ -13,6 +13,7 @@ Id:       mcode-cancer-related-medication-administration
 Title:    "Cancer-Related Medication Administration"
 Description:    "An episode of medication administration for a patient whose condition is related to a primary or secondary cancer condition. In the context of chemotherapy drugs, the medication administration in most cases is performed and documented by the provider."
 * insert MedicationResourcesRS
+* medication[x] from http://hl7.org/fhir/us/core/ValueSet/us-core-medication-codes (extensible)
 
 RuleSet: MedicationResourcesRS
 * obeys mcode-reason-required

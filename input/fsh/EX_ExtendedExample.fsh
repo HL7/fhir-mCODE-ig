@@ -148,6 +148,8 @@ Description: "Extended example: example showing ECOG performance status"
 * interpretation = LNC#LA9622-7 "Fully active, able to carry on all pre-disease performance without restriction"
 * method = SCT#5880005 "Physical examination procedure (procedure)"
 
+// body weight and height added to calculate BSA needed to convert chemotherapy relative dose orders to absolute doses for CancerRelatedMedicationAdministration
+
 Instance: bodyweight-jenny-m-2018-03-06
 InstanceOf: http://hl7.org/fhir/StructureDefinition/bodyweight
 Description: "Extended example: example of body weight vital sign"
@@ -157,7 +159,14 @@ Description: "Extended example: example of body weight vital sign"
 * valueQuantity = 155.0 '[lb_av]'
 * valueQuantity.unit = "lb"
 
-// TODO -- Add height and BP?
+Instance: bodyheight-jenny-m-2018-03-06
+InstanceOf: http://hl7.org/fhir/StructureDefinition/bodyheight
+Description: "Extended example: example of body height vital sign"
+* status = #final "final"
+* subject = Reference(cancer-patient-jenny-m)
+* effectiveDateTime = "2018-03-06"
+* valueQuantity = 65 '[in_i]'
+* valueQuantity.unit = "in"
 
 // Biopsy Procedure - 3/6/2018
 
@@ -453,9 +462,9 @@ Description: "Extended example: example showing chemotherapy medication"
 * reasonReference = Reference(primary-cancer-condition-jenny-m)
 * dosageInstruction.timing.repeat.boundsPeriod.start = "2019-04-01"
 * authoredOn = "2019-04-12"
-* dosageInstruction.text = "doxorubicin (60 mg/m² IV), 93.26mg"
+* dosageInstruction.text = "doxorubicin (60 mg/m² IV)"
 * dosageInstruction.route = SCT#47625008 "Intravenous route (qualifier value)"
-* dosageInstruction.doseAndRate.doseQuantity = 93.26 'mg' "mg"
+* dosageInstruction.doseAndRate.rateQuantity = 60 'mg/m2' "mg/m2"
 // Once every 3 weeks
 * dosageInstruction.maxDosePerPeriod.numerator.value = 1
 * dosageInstruction.maxDosePerPeriod.denominator = 3 'wk' "week"
@@ -499,6 +508,38 @@ Description: "Extended example: example showing chemotherapy medication"
 // Once every 3 weeks
 * dosageInstruction.maxDosePerPeriod.numerator.value = 1
 * dosageInstruction.maxDosePerPeriod.denominator = 3 'wk' "week"
+
+
+// The order, placed on 4/12/19 was administered on Day 1 chemotherapy admin on 4/22/19.
+// A new weight was obtained to calculate the absolute chemotherapy dose for administration.
+Instance: bodyweight-jenny-m-2019-04-22
+InstanceOf: http://hl7.org/fhir/StructureDefinition/bodyweight
+Description: "Extended example: body weight vital sign at the time of chemotherapy administration"
+* status = #final "final"
+* subject = Reference(cancer-patient-jenny-m)
+* effectiveDateTime = "2019-04-22"
+* valueQuantity = 150.0 '[lb_av]'
+* valueQuantity.unit = "lb"
+
+// Based on the relative dose, height, and current weight, we calculate the absolute dose to be 105.96 mg of doxorubicin.
+// Chemotherapy preparation details (e.g.: number of vials used for the absolute dose, IV mixing solution, etc.) 
+// have been omitted for simplicity.
+Instance: cancer-related-medication-administration-doxorubicin-jenny-m
+InstanceOf: CancerRelatedMedicationAdministration
+Description: "Extended example: example showing chemotherapy medication"
+* status = #completed "completed"
+* category = MedReqCat#outpatient
+* medicationCodeableConcept = RXN#3639 "DOXOrubicin"
+* subject = Reference(cancer-patient-jenny-m)
+* performer.actor = Reference(us-core-practitioner-nancy-oncology-nurse)
+* reasonReference = Reference(primary-cancer-condition-jenny-m)
+* request = Reference(cancer-related-medication-request-doxorubicin-jenny-m)
+* effectiveDateTime = "2019-04-22"
+* note.authorReference = Reference(us-core-practitioner-nancy-oncology-nurse)
+* note.time = "2019-04-22"
+* note.text = "doxorubicin (60 mg/m² IV), 105.96 mg in 50 ml 0.9% normal saline administered by continuous infusion. Patient tolerated infusion without side effects."
+* dosage.dose = 105.96 'mg' "mg"
+* dosage.route = SCT#47625008 "Intravenous route (qualifier value)"
 
 // Radiotherapy
 
@@ -629,6 +670,23 @@ Description: "Extended example: example practitioner (pathologist)"
 * address.country = "US"
 * gender = #female
 * qualification.code = http://terminology.hl7.org/CodeSystem/v2-0360#MD
+* qualification.code.coding[0].version = "2.7"
+
+Instance: us-core-practitioner-nancy-oncology-nurse
+InstanceOf: USCorePractitioner
+Description: "Extended example: example RN practitioner"
+* identifier[NPI].value = "55667788"
+* name.family = "Nurse"
+* name.given[0] = "Nancy"
+* name.prefix[0] = "Ms."
+* address.use = #work
+* address.line[0] = "123 Corporate Drive"
+* address.city = "Anytown"
+* address.state = "MA"
+* address.postalCode = "12345"
+* address.country = "US"
+* gender = #female
+* qualification.code = http://terminology.hl7.org/CodeSystem/v2-0360#RN
 * qualification.code.coding[0].version = "2.7"
 
 Instance: us-core-organization-physician-services-inc

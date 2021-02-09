@@ -14,7 +14,7 @@ Description: "An extension for representing a reference to a condition resource 
 Extension: ConditionRelated
 Id: mcode-condition-related
 Title:  "Condition related to resource"
-Description: "This resource has an unspecified relationship with a Condition."
+Description: "The resource has an unspecified relationship with a Condition."
 * value[x] only Reference(Condition)
 
 Extension: EvidenceType

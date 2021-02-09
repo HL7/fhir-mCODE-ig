@@ -340,7 +340,7 @@ Instance: tumor-specimen-left-breast-jenny-m
 InstanceOf: TumorSpecimen
 Description: "Extended example: example tumor specimen"
 * status = #available "available"
-* type = SCT#108369006 "Neoplasm (morphologic abnormality)"
+* type = SPTY#TUMOR
 * subject = Reference(cancer-patient-jenny-m)
 * receivedTime = "2019-04-01"
 * collection.bodySite = SCT#80248007 "Left breast structure (body structure)"
@@ -574,7 +574,7 @@ Instance: cancer-patient-jenny-m
 InstanceOf: CancerPatient
 Description: "Extended example: example cancer patient"
 * identifier.use = #usual
-* identifier.type = http://terminology.hl7.org/CodeSystem/v2-0203#MR "Medical Record Number"
+* identifier.type = IDTYPE#MR "Medical Record Number"
 * identifier.system = "http://hospital.example.org"
 * identifier.value = "MRN1234"
 * name.family = "M"

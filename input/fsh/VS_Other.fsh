@@ -49,7 +49,6 @@ Description: "Codes needed for positive identification of certain types of insta
 * #SCC-OTHER "Other Secondary Cancer Condition, Specify" "Code to be used when the desired concept is not represented base value set. This code represents the equivalent of 'Other, specify: _________'. Specify the additional concept as the second coding."
 * #TMT-OTHER "Other Tumor Marker Test, Specify" "Code to be used when the desired concept is not represented base value set. This code represents the equivalent of 'Other, specify: _________'. Specify the additional concept as the second coding."
 * #CD-OTHER "Other Cancer Disorder, Specify" "Code to be used when the desired concept is not represented base value set. This code represents the equivalent of 'Other, specify: _________'. Specify the additional concept as the second coding."
-* #HMB-OTHER "Other Histology Morphology Behavior, Specify" "Code to be used when the desired concept is not represented base value set. This code represents the equivalent of 'Other, specify: _________'. Specify the additional concept as the second coding."
 
 
 ValueSet: LocationQualifierVS
@@ -99,37 +98,22 @@ Title:           "Units of tumor size value set"
 Description:     "Acceptable units for measuring tumor size"
 * UCUM#mm        "Millimeter"
 * UCUM#cm        "Centimeter"
-* ^status = #draft
-* ^experimental = true
 
 ValueSet:        TumorSizeMethodVS
 Id:              mcode-tumor-size-method-vs
 Title:           "Methods for measuring tumor size"
-Description:     "There are 3 broad categories of tumor size measurement methods:
-
-1. Pathology
-    - Macroscopic size from pathology report is represented by SCT `168455000` (\"Gross pathology (finding)\")
-    - Microscopic size from pathology report is represented by SCT `104157003` (\"Light microscopy (procedure)\")
-
-2. Physical exam, represented by SCT `5880005` (\"Physical examination procedure (procedure)\")
-
-3. Diagnostic imaging, represented by descendants of LOINC part code `LP29684-5` (\"Radiology\")"
-* ^status = #draft
-* ^experimental = true
-
+Description:     "Code for methods of measuring tumor size, including physical examination, pathology, and imaging."
+* ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
 // Pathology
 * SCT#168455000 "Gross pathology (finding)"
 * SCT#104157003 "Light microscopy (procedure)"
-
 // Physical exam
 * SCT#5880005 "Physical examination procedure (procedure)"
-
 // Diagnostic imaging
 * SCT#363679005 "Imaging (procedure)"
 * SCT#16310003 "Diagnostic ultrasonography (procedure)"
 * SCT#113091000 "Magnetic resonance imaging (procedure)"
 * SCT#77477000 "Computerized axial tomography (procedure)"
-* SCT#44491008 "Fluoroscopy (procedure)"
 
 
 /* SAVE for possible future use

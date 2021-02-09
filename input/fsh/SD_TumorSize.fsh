@@ -4,7 +4,7 @@ Id: mcode-tumor-size
 Title: "Tumor Size"
 Description:  "Records the dimensions of a tumor"
 
-// LOINC code indicating this is a tumor size
+// LOINC code indicating this is a tumor size observation
 * code = LNC#21889-1 //"Size Tumor"
 
 * subject ^short = "The patient whose tumor was measured."
@@ -27,13 +27,13 @@ Description:  "Records the dimensions of a tumor"
 * method from TumorSizeMethodVS (extensible)
 * method ^short = "Method for measuring the tumor"
 * method ^definition = "Method for measuring the tumor"
-* method ^comment = "Tumors are typically measured via gross pathology after excision, or via diagnostic imaging or physical exam prior to removal. `TumorSizeMethodVS` provides LOINC codes for these measurement methods. Therefore, if `specimen` is set, `method` is expected to be a \"gross pathology\" code. If `focus` is set, `method` is expected to be a type of diagnostic imaging or physical exam."
+* method ^comment = "Tumors are typically measured via gross pathology after excision, or via diagnostic imaging or physical exam prior to removal. If `specimen` is set, `method` is expected to be a \"gross pathology\" code. If `focus` is set, `method` is expected to be a type of diagnostic imaging or physical exam."
 
 * insert ObservationComponentSlicingRules
 // Require 1 dimension; the additional dimensions are optional
 * component contains
-    tumorLongestDimension 1..1 MS and
-    tumorOtherDimension 0..2 MS
+    tumorLongestDimension 1..1 and
+    tumorOtherDimension 0..2
 
 * component[tumorLongestDimension] ^short = "Longest tumor dimension (cm or mm)"
 * component[tumorLongestDimension] ^definition = "The longest tumor dimension in cm or mm."
@@ -49,7 +49,16 @@ Description:  "Records the dimensions of a tumor"
 * component[tumorOtherDimension].valueQuantity from TumorSizeUnitsVS (required)
 
 // Group the Must Support to make it easier to see what's what
-* subject and code and effective[x] and component and component.code and component.value and method and specimen and focus MS
+* subject and code and effective[x] and component and method and specimen and focus MS
+* insert ObservationComponentMustSupport(tumorLongestDimension)
+* insert ObservationComponentMustSupport(tumorOtherDimension)
+
+// Move this to DEF_RuleSets later
+RuleSet: ObservationComponentMustSupport(sliceName)
+* component[{sliceName}] MS
+* component[{sliceName}].code MS
+* component[{sliceName}].value[x] MS
+* component[{sliceName}].dataAbsentReason MS  // US Core rules
 
 
 // This invariant has been exhaustively tested with the FHIR validator
@@ -59,73 +68,73 @@ Expression: "(focus.exists() or specimen.exists()) and (focus.exists() and speci
 Severity: #error
 
 
+// OPEN QUESTION: How do we indicate that a tracked tumor has been surgically removed? Some sort of status? Specimen.active is the only possibility in BodyStructure, but the definition doesn't lend itself to this purpose.
 Profile: Tumor
 Parent:  BodyStructure
 Id: mcode-tumor
 Title: "Tumor"
 Description:  "Identifies a tumor that has not been removed from the body. Whenever possible, a single resource conforming to this profile will be used to track a tumor over time (as opposed to creating new Tumor-conforming BodyStructure resources each time that tumor is measured). Use [TumorSpecimen](StructureDefinition-mcode-tumor-specimen.html) to represent the tumor after removal from the body."
-* ^status = #draft
-* ^experimental = true
+* patient only Reference(CancerPatient)
 // The purpose of this profile is to uniquely identify a tumor, so it follows that there must be at least one identifier value provided
-* identifier 1.. MS
+* identifier 1..
 * identifier ^short = "Stable identifier of this specific tumor"
 * identifier ^definition = "Stable identifier of this specific tumor, MUST be unique within the context of the referenced `CancerPatient`."
 * identifier ^comment = "If applicable, this should correspond to the physical tag inserted into the tumor during a procedure that is used for tracking the tumor by radiology and pathology."
+// force the type to ensure consistency with references from TumorSpecimen.identifier[tumorIdentifier].type.coding.code
+* identifier.type.coding.code = IDTYPE#RI
 * morphology = SCT#367651003 "Malignant neoplasm of primary, secondary, or uncertain origin (morphologic abnormality)"
 // This VS is used for the primary/secondary cancer conditions; rule set here for consistency with these profiles.
 * location from CancerBodyLocationVS (extensible)
-* location 1..1 MS // Tumor is meaningless without a location; parent profile is 0..1
+* location 1..1 // Tumor is meaningless without a location; parent profile is 0..1
 * locationQualifier from LocationQualifierVS (example)
 
-* patient only Reference(CancerPatient)
+* extension contains ConditionRelated named relatedCondition 0..1
+* extension[relatedCondition].value[x] only Reference(PrimaryCancerCondition or SecondaryCancerCondition)
+* extension[relatedCondition] ^short = "Reference to cancer condition associated with this tumor"
+* extension[relatedCondition] ^definition = "Associates this tumor with a cancer condition. This could be a causal association (e.g., this is believed to be the primary tumor causing the cancer) or a different type of relationship (e.g., this tumor is a metastasis)"
+// Gather MS in one place
+* identifier and location and morphology and locationQualifier and patient and extension and extension[relatedCondition] and extension[relatedCondition].value[x] MS
 
-* extension contains ConditionRelated named conditionAssociatedWithTumor 0..1 MS
-* extension[conditionAssociatedWithTumor].value[x] only Reference(PrimaryCancerCondition or SecondaryCancerCondition)
-* extension[conditionAssociatedWithTumor] ^short = "Reference to cancer condition associated with this tumor"
-* extension[conditionAssociatedWithTumor] ^definition = "Associates this tumor with a cancer condition. This could be a causal association (e.g., this is believed to be the primary tumor causing the cancer) or a different type of relationship (e.g., this tumor is a metastasis "
-
-
-
-Invariant: tumor-other-morphology-invariant
-Description: "If the code representing 'Other histology morphology behavior, specify' is used, a second code from outside the original value set must be present. The second code MUST NOT represent a concept in or subsumed by any concept in the original value set."
-Expression: "coding.where(code = 'HMB-OTHER').exists() implies coding.where(code != 'HMB-OTHER' and $this.memberOf('http://hl7.org/fhir/us/mcode/ValueSet/mcode-histology-morphology-behavior-vs').not()).exists()"
-Severity: #error
-
-
-
-CodeSystem: TumorIdentifierCS
-Id: mcode-tumor-identifier-cs
-Title: "mCODE Tumor Identifier Code"
-Description: "Code used to specify that a given identifier is for a tumor."
-* #tumor-identifier
 
 Profile: TumorSpecimen
 Parent: Specimen
 Id: mcode-tumor-specimen
 Title: "Tumor Specimen"
 Description: "Represents a tumor after it has been removed from the body. Prior to excision, use [Tumor](StructureDefinition-mcode-tumor.html) (a BodyStructure) instead. If this tumor was represented by [Tumor](StructureDefinition-mcode-tumor.html) while still in the body, use `identifier` to associate with that resource."
-* ^status = #draft
-* ^experimental = true
-* type = SCT#108369006 "Neoplasm (morphologic abnormality)"
+// We took the GeneticSpecimen.type from code system http://terminology.hl7.org/CodeSystem/v2-0487 (alias SPTY) so I suggest doing the same here
+* type = SPTY#TUMOR
 * subject only Reference(CancerPatient)
-* collection.bodySite MS
+* collection.bodySite.extension contains
+    LocationQualifier named locationQualifier 0..1
 * identifier ^slicing.discriminator.type = #pattern
 * identifier ^slicing.discriminator.path = "type.coding.code"
 * identifier ^slicing.rules = #open
 * identifier ^slicing.description = "Slicing by code to identify tumor identifier"
-* identifier contains tumorIdentifier 0..* MS
-* identifier[tumorIdentifier].type.coding.code = TumorIdentifierCS#tumor-identifier
+* identifier contains tumorIdentifier 0..*
+* identifier[tumorIdentifier].type.coding.code = IDTYPE#RI
 * identifier[tumorIdentifier] ^short = "Identifier to associate this resource with a specific Tumor"
 * identifier[tumorIdentifier] ^definition = "To associate this with a specific BodyStructure conforming to the Tumor profile, add an identifier with a value that matches a persistent identifier from `BodyStructure.identifier.value` that is unique in the context of the Patient."
 * identifier[tumorIdentifier].type.coding.code ^short = "Fixed to \"tumor-identifier\""
-* identifier[tumorIdentifier].value 1..1 MS
+* identifier[tumorIdentifier].value 1..1
 * identifier[tumorIdentifier].value ^short = "Identifer matching Tumor's identifier value"
 * identifier[tumorIdentifier].value ^definition = "If this Specimen is a tumor that was represented by a BodyStructure resource conforming to [Tumor](StructureDefinition-mcode-tumor.html) before removal, this value MUST match an `identifier` value from that BodyStructure resource that is persistent over time and unique with in the context of the Patient."
-* extension contains ConditionRelated named conditionAssociatedWithTumor 0..1 MS
-* extension[conditionAssociatedWithTumor].value[x] only Reference(PrimaryCancerCondition or SecondaryCancerCondition)
-* extension[conditionAssociatedWithTumor] ^short = "Reference to the cancer condition associated with this tumor"
-* extension[conditionAssociatedWithTumor] ^definition = "Associates this tumor with a cancer condition."
+// It would be nice to reuse the existing condition-related extension (see Jira https://jira.hl7.org/projects/FHIR/issues/FHIR-31027)
+* extension contains ConditionRelated named relatedCondition 0..1 MS
+* extension[relatedCondition].value[x] only Reference(PrimaryCancerCondition or SecondaryCancerCondition)
+* extension[relatedCondition] ^short = "Reference to the cancer condition associated with this tumor"
+* extension[relatedCondition] ^definition = "Associates this tumor with a cancer condition."
+// Must Supports -- there is no US Core 
+* type and subject and collection and collection.bodySite and collection.bodySite and collection.bodySite.extension and collection.bodySite.extension[locationQualifier] and identifier and identifier[tumorIdentifier] and identifier[tumorIdentifier].type and identifier[tumorIdentifier].value and extension and extension[relatedCondition] MS
 
+
+/* Commenting out MultifocalTumor observation for now
+
+Issues to consider further: 
+1) Does this rise to the level of "minimal"?
+2) You were missing Observation.code that says what is being observed.
+3) Is this an Observation or a Condition? Conditions are uni-valued findings, while Observations need a question (code) and an answer set (value[x]). Observations on a TumorSpecimen are not Conditions although it is arguable that a multifocal tumor in the body could be modeled as a Condition.
+4) If this is modeled as an Observation, then what is the question and what are the possible answers? Are we playing Jeopardy where the answer is "multi-focal"? Or is the question something about morphology, and "multi-focal" is among the possible answers? 
+5) I know we convinced ourselves otherwise, but we shouldn't forget the option of allowing a value set for Tumor.morphology (perhaps by slicing Tumor.morphology and fixing the first code.)
 
 Profile: MultifocalTumor
 Parent: Observation
@@ -142,5 +151,6 @@ Description: "Identifies multiple [Tumor](StructureDefinition-mcode-tumor.html) 
 * subject only Reference(CancerPatient)
 * subject MS
 * status MS
-* effective[x] only dateTime or Period
+* effective[x] only dateTime
 * effective[x] MS
+*/

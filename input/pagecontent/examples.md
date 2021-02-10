@@ -41,6 +41,7 @@ The patient is two years out from surgery and has undergone surveillance imaging
 * [`cancer-related-medication-request-cyclophosphamide-jenny-m`](MedicationRequest-cancer-related-medication-request-cyclophosphamide-jenny-m.html) ([CancerRelatedMedicationRequest])
 * [`cancer-related-medication-request-paclitaxel-jenny-m`](MedicationRequest-cancer-related-medication-request-paclitaxel-jenny-m.html) ([CancerRelatedMedicationRequest])
 * [`cancer-related-medication-request-anastrozole-jenny-m`](MedicationRequest-cancer-related-medication-request-anastrozole-jenny-m.html) ([CancerRelatedMedicationRequest])
+* [`cancer-related-medication-administration-doxorubicin-jenny-m`](MedicationAdministration-cancer-related-medication-administration-doxorubicin-jenny-m.html) ([CancerRelatedMedicationAdministration])
 * [`teleradiotherapy-prescription-delivery-jenny-m`](Procedure-teleradiotherapy-prescription-delivery-jenny-m.html) ([TeleradiotherapyPrescriptionDelivery])
 
 

@@ -6,7 +6,7 @@ Where US Core does not provide an appropriate base profile, mCODE profiles FHIR 
 
 | Profile | Based on US Core?  | Immediate Parent Profile |
 |---------|--------------------|--------------------------|
-| Brachytherapy Implantable Device | no | Device |
+| Brachytherapy Implantable Device | yes | US Core Implantable Device |
 | Brachytherapy Prescription Delivery | yes | US Core Procedure |
 | Cancer Disease Status | no | Observation |
 | Cancer Genetic Variant | no | US Core Laboratory Result Observation |
@@ -34,6 +34,7 @@ Where US Core does not provide an appropriate base profile, mCODE profiles FHIR 
 | Tumor | no | BodyStructure |
 | Tumor Marker Test | yes | US Core Laboratory Result Observation |
 | Tumor Size | no | Observation |
+| Tumor Specimen | no | Specimen |
 {: .grid }
 
 ### Conformance to mCODE Profiles
@@ -85,32 +86,33 @@ In other words, a data element may be `1..1`, but if it is contained by an optio
 
 #### Must Support
 
-mCODE inherits the US Core interpretation of MS, in particular, the [US Core version 3.2 interpretation](http://hl7.org/fhir/us/core/2021Jan/conformance-expectations.html#must-support-elements). Interpretation of MS is not straightforward, as the following two statements make clear:
+mCODE inherits the US Core interpretation of MS, in particular, the [US Core version 3.2 interpretation](http://hl7.org/fhir/us/core/2021Jan/conformance-expectations.html). Interpretation of MS is not straightforward, as the following two statements make clear:
+
 * <span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" >S</span> does not necessarily mean the element must be supported.
-* Lack of an <span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" >S</span> does not necessarily imply the element does not have to be supported.
+* Lack of an <span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" >S</span> does not necessarily mean the element does not have to be supported.
 
 Regarding the first point, an element marked with an <span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" >S</span> in a profile does **not** have to be supported if it is nested and any one of the elements directly containing that element does **not** have an <span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" >S</span> flag. There is also the case of an element whose cardinality is 0..0 and yet has an <span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" >S</span> flag, which again does not require support [^1]. 
 
-Regarding the second point, a required element must be supported by a Data Sender, regardless of the presence or absence of an <span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" >S</span> flag. On the other hand, the same element not have to be supported by the Data Receiver [^2].  
+Regarding the second point, a required element must be supported by a Data Sender, regardless of the presence or absence of an <span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" >S</span> flag. On the other hand, the same element does not have to be supported by the Data Receiver [^2].  
 
 ##### Viewing Must Support Flags
 To see which elements have <span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" >S</span> flags, consult the "Snapshot Table" view of the profile. The "Differential Table" view hides <span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" >S</span> flags inherited from the parent profile. The "Snapshot Table (Must Support)" view reflects the IG Publisher's interpretation of how <span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" >S</span> flags translate to support requirements, which may or may not coincide with the US Core/mCODE interpretation.
 
 #### Interpretation of <span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" >S</span> Flags
 
-The following is guidance how to interpret <span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" >S</span> flags when there may be implicit meanings. MS means the element must be supported, as [defined above](#sender-and-receiver-expectations). These rules, deduced from US Core, apply only when the element in the first column must be supported.
+The following is guidance how to interpret <span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" >S</span> flags when there may be implicit meanings. Must support obligations are [defined above](#sender-and-receiver-expectations). These rules, deduced from US Core, apply only when the element in the first column must be supported.
 
 | Supported Element | Implied Data Sender Requirement  | Implied Data Receiver Requirement |
 |--------------|--------------|---------------|
-| [Complex data type](https://www.hl7.org/fhir/datatypes.html#complex), no <span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" >S</span> on any immediate subelement  | MS at least one sub-elements | MS **all** sub-elements |
-| [Complex data type](https://www.hl7.org/fhir/datatypes.html#complex), <span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" >S</span> on one or more immediate subelement  | MS only the <span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" >S</span> subelements | same |
-| [Choice \[x\] type](https://www.hl7.org/fhir/stu3/formats.html#choice), no <span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" >S</span> on any choice | MS at least one datatype choice | MS **all** datatype choices |
-| [Choice \[x\] type](https://www.hl7.org/fhir/stu3/formats.html#choice), <span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" >S</span> on one or more choice | MS only the <span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" >S</span> datatype choice(s) | same |
-| [Reference data type](https://www.hl7.org/fhir/references.html#2.3.0), no <span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" >S</span> on any referenced resource or profile | MS at least one referenced resource or profile | MS **all** referenced resources and profiles |
-| [Reference data type](https://www.hl7.org/fhir/references.html#2.3.0), <span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" >S</span> on one or more referenced types | MS only the <span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" >S</span> resources or profiles | same |
-| [Backbone data type](https://www.hl7.org/fhir/backboneelement.html#2.29.0) | No MS expectation on subelements unless specifically <span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" >S</span>  | same |
-| [Sliced array](https://www.hl7.org/fhir/profiling.html#slicing) type | No MS expectation on sliced array elements unless specifically <span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" >S</span> | same |
-
+| [Complex data type](https://www.hl7.org/fhir/datatypes.html#complex), no <span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" >S</span> on any immediate sub-element  | Must support at least one sub-elements | Must support **all** sub-elements |
+| [Complex data type](https://www.hl7.org/fhir/datatypes.html#complex), <span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" >S</span> on one or more immediate sub-element  | Must support only the <span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" >S</span> sub-elements | same |
+| [Choice \[x\] type](https://www.hl7.org/fhir/stu3/formats.html#choice), no <span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" >S</span> on any choice | Must support at least one datatype choice | Must support **all** datatype choices |
+| [Choice \[x\] type](https://www.hl7.org/fhir/stu3/formats.html#choice), <span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" >S</span> on one or more choice | Must support only the <span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" >S</span> datatype choice(s) | same |
+| [Reference data type](https://www.hl7.org/fhir/references.html#2.3.0), no <span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" >S</span> on any referenced resource or profile | Must support at least one referenced resource or profile | Must support **all** referenced resources and profiles |
+| [Reference data type](https://www.hl7.org/fhir/references.html#2.3.0), <span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" >S</span> on one or more referenced types | Must support only the <span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" >S</span> resources or profiles | same |
+| [Backbone data type](https://www.hl7.org/fhir/backboneelement.html#2.29.0) | No support expectation on sub-elements unless specifically <span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" >S</span>  | same |
+| [Sliced array](https://www.hl7.org/fhir/profiling.html#slicing) type | No support expectation on sliced array elements unless specifically <span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" >S</span> | same |
+{: .grid }
 
 [^1]: When inheriting from another profile, it is possible to set the upper cardinality to zero on an element that was MS in the parent profile. For example, you could inherit from US Core Patient, but forbid the patient’s name for privacy reasons.  In this case, neither Sender nor Receiver are expected to populate or support the element – in fact, it would be an error if the element were present.
 

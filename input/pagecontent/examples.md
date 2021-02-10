@@ -55,7 +55,7 @@ The patient is two years out from surgery and has undergone surveillance imaging
 * [`family-member-history-aunt-jenny-m`](FamilyMemberHistory-family-member-history-aunt-jenny-m.html) (FamilyMemberHistory)
 * [`family-member-history-sister-jenny-m`](FamilyMemberHistory-family-member-history-sister-jenny-m.html) (FamilyMemberHistory)
 * [`family-member-history-uncle-jenny-m`](FamilyMemberHistory-family-member-history-uncle-jenny-m.html) (FamilyMemberHistory)
-* [`specimen-left-breast-jenny-m`](Specimen-specimen-left-breast-jenny-m.html) (Specimen)
+* [`tumor-specimen-left-breast-jenny-m`](Specimen-tumor-specimen-left-breast-jenny-m.html) (Specimen)
 * [`us-core-diagnosticreport-lab-jenny-m`](DiagnosticReport-us-core-diagnosticreport-lab-jenny-m.html) (DiagnosticReport)
 * [`us-core-observation-lab-tumor-invasion-jenny-m`](Observation-us-core-observation-lab-tumor-invasion-jenny-m.html) (Observation)
 * [`us-core-observation-lab-tumor-margins-jenny-m`](Observation-us-core-observation-lab-tumor-margins-jenny-m.html) (Observation)

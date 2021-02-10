@@ -518,8 +518,7 @@ Description: "Extended example: body weight vital sign at the time of chemothera
 * status = #final "final"
 * subject = Reference(cancer-patient-jenny-m)
 * effectiveDateTime = "2019-04-22"
-* valueQuantity = 150.0 '[lb_av]'
-* valueQuantity.unit = "lb"
+* valueQuantity = 150.0 '[lb_av]' "lb"
 
 // Based on the relative dose, height, and current weight, we calculate the absolute dose to be 105.96 mg of doxorubicin.
 // Chemotherapy preparation details (e.g.: number of vials used for the absolute dose, IV mixing solution, etc.) 

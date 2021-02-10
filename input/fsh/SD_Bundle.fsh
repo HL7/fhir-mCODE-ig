@@ -5,7 +5,6 @@ Title: "mCODE Patient Bundle"
 Description: "A collection of data for an mCODE cancer patient."
 * type  = #collection
 * insert BundleEntrySlicingRules
-* entry and entry.resource MS
 * entry contains
     // These resources are required per Conformance > Supported Profiles.
     cancerPatient 1..1 MS and
@@ -45,10 +44,10 @@ Description: "A collection of data for an mCODE cancer patient."
 * entry[radiotherapyCourseSummary] ^short = "Cancer-Related Radiation Course(s)"
 * entry[teleradiotherapyPrescriptionDelivery] ^short = "Radiotherapy Course Summary(-ies)"
 * entry[brachytherapyPrescriptionDelivery] ^short = "Brachytherapy Summary(-ies)"
-* entry[tnmStageGroup] ^short = "TNM Clinical Stage Group(s)"
-* entry[tnmPrimaryTumorCategory] ^short = "TNM Clinical Primary Tumor Category(-ies)"
-* entry[tnmRegionalNodesCategory] ^short = "TNM Clinical Regional Nodes Category(-ies)"
-* entry[tnmDistantMetastasesCategory] ^short = "TNM Clinical Distant Metastases Category(-ies)"
+* entry[tnmStageGroup] ^short = "TNM Stage Group(s)"
+* entry[tnmPrimaryTumorCategory] ^short = "TNM Primary Tumor Category(-ies)"
+* entry[tnmRegionalNodesCategory] ^short = "TNM Regional Nodes Category(-ies)"
+* entry[tnmDistantMetastasesCategory] ^short = "TNM Distant Metastases Category(-ies)"
 * entry[cancerGeneticVariant] ^short = "Cancer Genetic Variant(s)"
 * entry[cancerGenomicsReport] ^short = "Cancer Genomics Report(s)"
 * entry[geneticSpecimen] ^short = "Genetic Specimen(s)"
@@ -71,10 +70,10 @@ Description: "A collection of data for an mCODE cancer patient."
 * entry[radiotherapyCourseSummary] ^definition = "Procedure resource(s) representing a course of treatment in cancer-related radiology therapy."
 * entry[teleradiotherapyPrescriptionDelivery] ^definition = "Procedure resource(s) representing a phase in treatment of cancer via external beam radiology procedures."
 * entry[brachytherapyPrescriptionDelivery] ^definition = "Procedure resource(s) representing cancer-related brachytherapy (internal) radiology procedures."
-* entry[tnmStageGroup] ^definition = "Observation resource(s) representing clinical stage group"
-* entry[tnmPrimaryTumorCategory] ^definition = "Observation resource(s) representing clinical T category"
-* entry[tnmRegionalNodesCategory] ^definition = "Observation resource(s) representing clinical N category"
-* entry[tnmDistantMetastasesCategory] ^definition = "Observation resource(s) representing clinical M category"
+* entry[tnmStageGroup] ^definition = "Observation resource(s) representing stage group"
+* entry[tnmPrimaryTumorCategory] ^definition = "Observation resource(s) representing T category"
+* entry[tnmRegionalNodesCategory] ^definition = "Observation resource(s) representing N category"
+* entry[tnmDistantMetastasesCategory] ^definition = "Observation resource(s) representing M category"
 * entry[cancerGeneticVariant] ^definition = "Observation resource(s) representing Cancer Genetic Variants."
 * entry[cancerGenomicsReport] ^definition = "DiagnosticReport resource(s) representing Cancer Genomics Reports"
 * entry[geneticSpecimen] ^definition = "Specimen resource(s) representing Genetic Specimens."
@@ -110,3 +109,5 @@ Description: "A collection of data for an mCODE cancer patient."
 * entry[vitalSign].resource only http://hl7.org/fhir/StructureDefinition/vitalsigns
 * entry[tumor].resource only Tumor
 * entry[tumorSize].resource only TumorSize
+// It is necessary to put the MS for entry.resource LAST, otherwise it doesn't "take" for some reason
+* timestamp and entry and entry.resource MS

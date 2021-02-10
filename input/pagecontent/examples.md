@@ -18,7 +18,7 @@ The patient is two years out from surgery and has undergone surveillance imaging
 
 * [`cancer-patient-jenny-m`](Patient-cancer-patient-jenny-m.html) ([CancerPatient])
 * [`cancer-disease-status-jenny-m`](Observation-cancer-disease-status-jenny-m.html) ([CancerDiseaseStatus])
-* [`cancer-related-comorbidities-elixhauser-jenny-m`](Observation-cancer-related-comorbidities-elixhauser-jenny-m.html) ([ComorbidCondition])
+* [`cancer-related-mcode-comorbidities-elixhauser-jenny-m`](Observation-cancer-related-mcode-comorbidities-elixhauser-jenny-m.html) ([ComorbidCondition])
 * [`us-core-condition-depression-jenny-m`](Condition-us-core-condition-depression-jenny-m.html) ([ComorbidCondition])
 * [`us-core-condition-hypertension-jenny-m`](Condition-us-core-condition-hypertension-jenny-m.html) ([ComorbidCondition])
 * [`ecog-performance-status-jenny-m`](Observation-ecog-performance-status-jenny-m.html) ([ECOGPerformanceStatus])

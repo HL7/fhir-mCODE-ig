@@ -20,8 +20,8 @@ A radiology work group convened under [CodeX FHIR Accelerator](https://confluenc
 * [CancerRelatedMedicationAdministration]
 * [CancerRelatedSurgicalProcedure]
 * **Radiotherapy**
-  * [BrachytherapyPrescriptionDelivery] (internal radiotherapy)
-  * [TeleradiotherapyPrescriptionDelivery] (external beam radiotherapy)
+  * [BrachytherapyPrescriptionDelivery]
+  * [TeleradiotherapyPrescriptionDelivery]
   * [RadiotherapyCourseSummary]
   * [BrachytherapyImplantableDevice]
 

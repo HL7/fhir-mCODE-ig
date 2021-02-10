@@ -1,4 +1,4 @@
-Alias: RO = http://hl7.org/fhir/us/mcode/CodeSystem/radiotherapy-cs
+Alias: RO = http://hl7.org/fhir/us/mcode/CodeSystem/mcode-radiotherapy-cs
 
 //----------- MODALITIES -----------------------
 
@@ -88,9 +88,11 @@ Description: "Codes describing the devices used in brachytherapy (internal radia
 //---------RADIOTHERAPY CODE SYSTEM-------
 
 CodeSystem: RadiotherapyCS
-Id: radiotherapy-cs
+Id: mcode-radiotherapy-cs
 Title: "Radiotherapy Code System"
 Description: "Codes describing the modalities, techniques, and devices used in external beam radiotherapy and brachytherapy (internal radiation) procedures."
+//-- Code for Radiotherapy Course Summary -- should ask for a LOINC code
+* #COURSE-SUMMARY "Radiotherapy Course Summary" "Identifying code for an observation that summarizes a course of radiotherapy treatment. A course of treatment may contain multiple teleradiotherapy and/or brachytherapy prescriptions, embracing multiple modalities and techniques, and multiple body sites."
 //-- Teleradiotherapy Modalities
 * #PROTON "Proton Beam Radiation Therapy" "A type of external beam radiation therapy using a beam of proton particles." 
 * #ELECTRON "Electron Beam Radiation Therapy"  "Radiation therapy using electron (beta particle) beam."

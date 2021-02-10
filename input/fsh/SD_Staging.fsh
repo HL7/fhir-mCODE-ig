@@ -1,13 +1,14 @@
 RuleSet: CancerStageCommonRules
-* status and code and subject and effective[x] and value[x] and method and focus MS
 * value[x] only CodeableConcept
 * value[x] ^comment = ""    // suppress QA error on #notes link
-* device 0..0
-* referenceRange 0..0
-* component 0..0
+* insert NotUsed(device)
+* insert NotUsed(referenceRange)
+* insert NotUsed(component)
 * focus only Reference(PrimaryCancerCondition)
 * subject only Reference(CancerPatient)
 * method from CancerStagingSystemVS (extensible)
+// MS flags -- for Pathological staging, they might be redundant with US Core Lab Observation (but that's harmless)
+* status and code and subject and effective[x] and value[x] and method and focus MS
 
 Profile: TNMStageGroup
 Id: mcode-tnm-stage-group

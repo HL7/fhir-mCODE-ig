@@ -25,8 +25,12 @@ releaseLabel: pre-STU2 draft
 pages:
   index.md:
     title: Home
-  conformance.md:
-    title: Conformance
+  conformance-general.md:
+    title: Conformance Expectations
+  conformance-patients.md:
+    title: Identifying mCODE Patients
+  conformance-profiles.md:
+    title: Profile Conformance
   group-patient.md:
     title: Patient Information
   group-disease.md:
@@ -56,11 +60,13 @@ menu:
     Genomics: group-genomics.html
     Treatment: group-treatment.html
     Outcome: group-outcome.html
+  Conformance:
+    General Expectations: conformance-general.html
+    Identifying mCODE Patients: conformance-patients.html
+    Profile Conformance: conformance-profiles.html
   Terminology: terminology.html
-  Conformance: conformance.html
   Extended Example: examples.html
   All Artifacts: artifacts.html
   Downloads: downloads.html
   Change Log: change_log.html
   History: http://hl7.org/fhir/us/mcode/history.html
-

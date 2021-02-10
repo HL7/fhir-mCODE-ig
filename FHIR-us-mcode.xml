@@ -77,8 +77,8 @@
 <artifact id="ValueSet/elixhauser-drug-abuse-vs" key="ValueSet-elixhauser-drug-abuse-vs" name="Elixhauser Comorbid Condition Value Set for drug abuse"/>
 <artifact id="ValueSet/elixhauser-cancer-solid-tumor-in-situ-vs" key="ValueSet-elixhauser-cancer-solid-tumor-in-situ-vs" name="Elixhauser Comorbid Condition Value Set for malignant solid tumors in situ"/>
 <artifact id="ValueSet/elixhauser-cancer-solid-tumor-malignant-vs" key="ValueSet-elixhauser-cancer-solid-tumor-malignant-vs" name="Elixhauser Comorbid Condition Value Set for malignant solid tumors without metastases"/>
-<artifact id="StructureDefinition/comorbidities-elixhauser" key="StructureDefinition-comorbidities-elixhauser" name="Elixhauser Comorbidities"/>
-<artifact id="CodeSystem/elixhauser-ahrq-cs" key="CodeSystem-elixhauser-ahrq-cs" name="Elixhauser Comorbidity Category"/>
+<artifact id="StructureDefinition/mcode-comorbidities-elixhauser" key="StructureDefinition-mcode-comorbidities-elixhauser" name="Elixhauser Comorbidities"/>
+<artifact id="CodeSystem/mcode-comorbidities-elixhauser-ahrq-cs" key="CodeSystem-mcode-comorbidities-elixhauser-ahrq-cs" name="Elixhauser Comorbidity Category"/>
 <artifact id="StructureDefinition/mcode-evidence-type" key="StructureDefinition-mcode-evidence-type" name="Evidence Type"/>
 <artifact deprecated="true" id="Extension/mcode-evidence-type-extension" key="evidence-type-extension" name="Evidence Type Extension"/>
 <artifact id="StructureDefinition/mcode-genetic-specimen" key="genetic-specimen" name="Genetic Specimen"/>
@@ -105,13 +105,13 @@
 <artifact id="StructureDefinition/mcode-primary-cancer-condition" key="primary-cancer-condition" name="Primary Cancer Condition"/>
 <artifact id="ValueSet/mcode-primary-or-uncertain-behavior-cancer-disorder-vs" key="primary-or-uncertain-behavior-cancer-disorder-value-set" name="Primary or Uncertain Behavior Cancer Disorder Value Set"/>
 <artifact deprecated="true" key="Procedure" name="Procedure"/>
-<artifact id="StructureDefinition/radiotherapy-dose-per-fraction" key="StructureDefinition-radiotherapy-dose-per-fraction" name="Radiation Dose Per Fraction"/>
-<artifact id="StructureDefinition/radiotherapy-delivered-fractions" key="StructureDefinition-radiotherapy-delivered-fractions" name="Radiation Fractions Delivered"/>
-<artifact id="StructureDefinition/radiotherapy-prescribed-fractions" key="StructureDefinition-radiotherapy-prescribed-fractions" name="Radiation Fractions Prescribed"/>
+<artifact id="StructureDefinition/mcode-radiotherapy-dose-per-fraction" key="StructureDefinition-mcode-radiotherapy-dose-per-fraction" name="Radiation Dose Per Fraction"/>
+<artifact id="StructureDefinition/mcode-radiotherapy-delivered-fractions" key="StructureDefinition-mcode-radiotherapy-delivered-fractions" name="Radiation Fractions Delivered"/>
+<artifact id="StructureDefinition/mcode-radiotherapy-prescribed-fractions" key="StructureDefinition-mcode-radiotherapy-prescribed-fractions" name="Radiation Fractions Prescribed"/>
 <artifact deprecated="true" id="ValueSet/mcode-radiation-procedure-value-set" key="radiation-procedure-value-set" name="Radiation Procedure Value Set"/>
 <artifact id="ValueSet/mcode-radiation-target-body-site-vs" key="radiation-target-body-site-value-set" name="Radiation Target Body Site Value Set"/>
-<artifact id="CodeSystem/radiotherapy-cs" key="CodeSystem-radiotherapy-cs" name="Radiotherapy Code System"/>
-<artifact id="StructureDefinition/radiotherapy-course-summary" key="StructureDefinition-radiotherapy-course-summary" name="Radiotherapy Course Summary"/>
+<artifact id="CodeSystem/mcode-radiotherapy-cs" key="CodeSystem-mcode-radiotherapy-cs" name="Radiotherapy Code System"/>
+<artifact id="StructureDefinition/mcode-radiotherapy-course-summary" key="StructureDefinition-mcode-radiotherapy-course-summary" name="Radiotherapy Course Summary"/>
 <artifact deprecated="true" id="Extension/mcode-related-primary-cancer-condition-extension" key="related-primary-cancer-condition-extension" name="Related Primary Cancer Condition Extension"/>
 <artifact id="SearchParameter/Patient-id" key="SearchParameter-Patient-id" name="Search by _id in Patients with multipleOr"/>
 <artifact id="SearchParameter/Condition-code" key="SearchParameter-Condition-code" name="Search by code:in in Conditions"/>
@@ -141,8 +141,8 @@
 <artifact id="ValueSet/teleradiotherapy-technique-vs" key="ValueSet-teleradiotherapy-technique-vs" name="Teleradiotherapy Technique Value Set"/>
 <artifact id="StructureDefinition/mcode-termination-reason" key="StructureDefinition-mcode-termination-reason" name="Termination Reason"/>
 <artifact deprecated="true" id="Extension/mcode-termination-reason-extension" key="termination-reason-extension" name="Termination Reason Extension"/>
-<artifact id="StructureDefinition/radiotherapy-total-dose-delivered" key="StructureDefinition-radiotherapy-total-dose-delivered" name="Total Radiation Dose Delivered"/>
-<artifact id="StructureDefinition/radiotherapy-total-dose-planned" key="StructureDefinition-radiotherapy-total-dose-planned" name="Total Radiation Dose Planned"/>
+<artifact id="StructureDefinition/mcode-radiotherapy-total-dose-delivered" key="StructureDefinition-mcode-radiotherapy-total-dose-delivered" name="Total Radiation Dose Delivered"/>
+<artifact id="StructureDefinition/mcode-radiotherapy-total-dose-planned" key="StructureDefinition-mcode-radiotherapy-total-dose-planned" name="Total Radiation Dose Planned"/>
 <artifact id="StructureDefinition/mcode-treatment-intent" key="StructureDefinition-mcode-treatment-intent" name="Treatment Intent"/>
 <artifact deprecated="true" id="Extension/mcode-treatment-intent-extension" key="treatment-intent-extension" name="Treatment Intent Extension"/>
 <artifact id="ValueSet/mcode-treatment-intent-vs" key="treatment-intent-value-set" name="Treatment Intent Value Set"/>
@@ -168,8 +168,8 @@
 <artifact id="Patient/cancer-patient-eve-anyperson" key="Patient-cancer-patient-eve-anyperson" name="cancer-patient-eve-anyperson"/>
 <artifact id="Patient/cancer-patient-jenny-m" key="Patient-cancer-patient-jenny-m" name="cancer-patient-jenny-m"/>
 <artifact id="Patient/cancer-patient-john-anyperson" key="Patient-cancer-patient-john-anyperson" name="cancer-patient-john-anyperson"/>
-<artifact id="Observation/cancer-related-comorbidities-elixhauser-jenny-m" key="Observation-cancer-related-comorbidities-elixhauser-jenny-m" name="cancer-related-comorbidities-elixhauser-jenny-m"/>
-<artifact id="Observation/cancer-related-comorbidities-elixhauser-john-anyperson" key="Observation-cancer-related-comorbidities-elixhauser-john-anyperson" name="cancer-related-comorbidities-elixhauser-john-anyperson"/>
+<artifact id="Observation/cancer-related-mcode-comorbidities-elixhauser-jenny-m" key="Observation-cancer-related-mcode-comorbidities-elixhauser-jenny-m" name="cancer-related-mcode-comorbidities-elixhauser-jenny-m"/>
+<artifact id="Observation/cancer-related-mcode-comorbidities-elixhauser-john-anyperson" key="Observation-cancer-related-mcode-comorbidities-elixhauser-john-anyperson" name="cancer-related-mcode-comorbidities-elixhauser-john-anyperson"/>
 <artifact id="MedicationRequest/cancer-related-medication-request-anastrozole-jenny-m" key="MedicationRequest-cancer-related-medication-request-anastrozole-jenny-m" name="cancer-related-medication-request-anastrozole-jenny-m"/>
 <artifact id="MedicationRequest/cancer-related-medication-request-cisplatin" key="MedicationRequest-cancer-related-medication-request-cisplatin" name="cancer-related-medication-request-cisplatin"/>
 <artifact id="MedicationRequest/cancer-related-medication-request-cyclophosphamide-jenny-m" key="MedicationRequest-cancer-related-medication-request-cyclophosphamide-jenny-m" name="cancer-related-medication-request-cyclophosphamide-jenny-m"/>
@@ -178,7 +178,6 @@
 <artifact id="MedicationRequest/cancer-related-medication-request-paclitaxel-jenny-m" key="MedicationRequest-cancer-related-medication-request-paclitaxel-jenny-m" name="cancer-related-medication-request-paclitaxel-jenny-m"/>
 <artifact id="Procedure/cancer-related-surgical-procedure-jenny-m" key="Procedure-cancer-related-surgical-procedure-jenny-m" name="cancer-related-surgical-procedure-jenny-m"/>
 <artifact id="Procedure/cancer-related-surgical-procedure-lobectomy" key="Procedure-cancer-related-surgical-procedure-lobectomy" name="cancer-related-surgical-procedure-lobectomy"/>
-<artifact id="Observation/comorbidities-elixhauser-john-anyperson" key="Observation-comorbidities-elixhauser-john-anyperson" name="comorbidities-elixhauser-john-anyperson"/>
 <artifact id="Observation/ecog-performance-status-fully-active" key="Observation-ecog-performance-status-fully-active" name="ecog-performance-status-fully-active"/>
 <artifact id="Observation/ecog-performance-status-jenny-m" key="Observation-ecog-performance-status-jenny-m" name="ecog-performance-status-jenny-m"/>
 <artifact id="FamilyMemberHistory/family-member-history-aunt-jenny-m" key="FamilyMemberHistory-family-member-history-aunt-jenny-m" name="family-member-history-aunt-jenny-m"/>
@@ -220,6 +219,7 @@
 <artifact deprecated="true" id="Example/mcode-tnm-pathological-regional-nodes-category-example-01" key="mcode-tnm-pathological-regional-nodes-category-example-01" name="mCODETNMPathologicalRegionalNodesCategoryExample01"/>
 <artifact deprecated="true" id="Example/mcode-tnm-pathological-stage-group-example-01" key="mcode-tnm-pathological-stage-group-example-01" name="mCODETNMPathologicalStageGroupExample01"/>
 <artifact deprecated="true" id="Example/mcode-tumor-marker-example-01" key="mcode-tumor-marker-example-01" name="mCODETumorMarkerExample01"/>
+<artifact id="Observation/mcode-comorbidities-elixhauser-john-anyperson" key="Observation-mcode-comorbidities-elixhauser-john-anyperson" name="mcode-comorbidities-elixhauser-john-anyperson"/>
 <artifact id="Bundle/mcode-patient-bundle-jenny-m" key="Bundle-mcode-patient-bundle-jenny-m" name="mcode-patient-bundle-jenny-m"/>
 <artifact id="OperationDefinition/mcode-patient-everything" key="OperationDefinition-mcode-patient-everything" name="mcode-patient-everything"/>
 <artifact id="CapabilityStatement/mcode-receiver-cancer-conditions-then-patients" key="CapabilityStatement-mcode-receiver-cancer-conditions-then-patients" name="mcode-receiver-cancer-conditions-then-patients"/>
@@ -279,7 +279,7 @@
 <page key="artifacts" name="Artifacts Summary"/>
 <page deprecated="true" key="changelog" name="Change Log"/>
 <page key="change_log" name="Change log"/>
-<page key="conformance" name="Conformance"/>
+<page key="conformance-general" name="Conformance Expectations"/>
 <page key="group-disease" name="Disease Characterization"/>
 <page key="downloads" name="Downloads"/>
 <page key="examples" name="Extended Example"/>
@@ -287,10 +287,12 @@
 <page key="group-genomics" name="Genomics"/>
 <page deprecated="true" key="history" name="History"/>
 <page key="index" name="Home"/>
+<page key="conformance-patients" name="Identifying mCODE Patients"/>
 <page deprecated="true" key="implementationnotes" name="Implementation Notes"/>
 <page key="group-labvital" name="Laboratory Results and Vital Signs"/>
 <page key="group-outcome" name="Outcomes"/>
 <page key="group-patient" name="Patient Information"/>
+<page key="conformance-profiles" name="Profile Conformance"/>
 <page key="toc" name="Table of Contents"/>
 <page key="terminology" name="Terminology"/>
 <page key="group-treatment" name="Treatments"/>

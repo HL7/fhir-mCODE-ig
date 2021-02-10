@@ -16,6 +16,9 @@ license: CC0-1.0
 fhirVersion: 4.0.1
 dependencies:
   hl7.fhir.us.core: 3.1.0
+  hl7.terminology.r4:
+    uri: https://terminology.hl7.org/hl7.terminology.r4.tgz
+    version: 2.0.0
 parameters:
   show-inherited-invariants: false
   version-comparison: n/a

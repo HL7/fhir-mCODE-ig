@@ -218,11 +218,11 @@ Description: "Extended example: example showing TNM staging (stage group)"
 * effectiveDateTime = "2018-03-10"
 * valueCodeableConcept = AJCC#2B "IIB"
 * method = NCIT#C146985 "AJCC Cancer Staging Manual 8th Edition"
-* hasMember[0] = Reference(tnm-primary-tumor-category-jenny-m)
+* hasMember[0] = Reference(tnm-clinical-primary-tumor-category-jenny-m)
 * hasMember[1] = Reference(tnm-clinical-regional-nodes-category-jenny-m)
 * hasMember[2] = Reference(tnm-clinical-distant-metastases-category-jenny-m)
 
-Instance: tnm-primary-tumor-category-jenny-m
+Instance: tnm-clinical-primary-tumor-category-jenny-m
 InstanceOf: TNMPrimaryTumorCategory
 Description: "Extended example: example showing TNM staging (T)"
 * status = #final "final"

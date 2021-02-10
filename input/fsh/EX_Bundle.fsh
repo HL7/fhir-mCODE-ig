@@ -30,8 +30,8 @@ Description: "Extended example as a mCODE Patient Bundle"
 * entry[=].fullUrl = "http://example.org/fhir/Procedure/teleradiotherapy-prescription-delivery-jenny-m"
 * entry[+].resource = tnm-clinical-stage-group-jenny-m
 * entry[=].fullUrl = "http://example.org/fhir/Observation/tnm-clinical-stage-group-jenny-m"
-* entry[+].resource = tnm-primary-tumor-category-jenny-m
-* entry[=].fullUrl = "http://example.org/fhir/Observation/tnm-primary-tumor-category-jenny-m"
+* entry[+].resource = tnm-clinical-primary-tumor-category-jenny-m
+* entry[=].fullUrl = "http://example.org/fhir/Observation/tnm-clinical-primary-tumor-category-jenny-m"
 * entry[+].resource = tnm-clinical-regional-nodes-category-jenny-m
 * entry[=].fullUrl = "http://example.org/fhir/Observation/tnm-clinical-regional-nodes-category-jenny-m"
 * entry[+].resource = tnm-clinical-distant-metastases-category-jenny-m

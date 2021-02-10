@@ -19,6 +19,7 @@ Description: "The extent of the cancer in the body, according to the TNM classif
 * code from ObservationCodesStageGroupVS (required)
 * value[x] from TNMStageGroupVS (preferred)
 * hasMember MS
+* hasMember only Reference(Observation)
 * insert ObservationHasMemberSlicingRules
 * hasMember contains
     tnmPrimaryTumorCategory 0..1 MS and

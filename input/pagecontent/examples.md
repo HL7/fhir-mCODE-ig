@@ -26,7 +26,7 @@ The patient is two years out from surgery and has undergone surveillance imaging
 * [`mcode-patient-bundle-jenny-m`](Bundle-mcode-patient-bundle-jenny-m.html) ([MCODEPatientBundle])
 * [`primary-cancer-condition-jenny-m`](Condition-primary-cancer-condition-jenny-m.html) ([PrimaryCancerCondition])
 * [`tnm-clinical-stage-group-jenny-m`](Observation-tnm-clinical-stage-group-jenny-m.html) ([TNMStageGroup])
-* [`tnm-primary-tumor-category-jenny-m`](Observation-tnm-primary-tumor-category-jenny-m.html) ([TNMPrimaryTumorCategory])
+* [`tnm-clinical-primary-tumor-category-jenny-m`](Observation-tnm-clinical-primary-tumor-category-jenny-m.html) ([TNMPrimaryTumorCategory])
 * [`tnm-clinical-regional-nodes-category-jenny-m`](Observation-tnm-clinical-regional-nodes-category-jenny-m.html) ([TNMRegionalNodesCategory])
 * [`tnm-clinical-distant-metastases-category-jenny-m`](Observation-tnm-clinical-distant-metastases-category-jenny-m.html) ([TNMDistantMetastasesCategory])
 * [`tumor-marker-test-er-jenny-m`](Observation-tumor-marker-test-er-jenny-m.html)  ([TumorMarkerTest])

@@ -16,14 +16,14 @@ Parent: Observation
 Title: "TNM Stage Group"
 Description: "The extent of the cancer in the body, according to the TNM classification system, based on evidence such as physical examination, imaging, and/or biopsy or based on pathologic analysis of a specimen."
 * insert CancerStageCommonRules
-* hasMember MS
 * code from ObservationCodesStageGroupVS (required)
 * value[x] from TNMStageGroupVS (preferred)
+* hasMember MS
 * insert ObservationHasMemberSlicingRules
 * hasMember contains
-    tnmPrimaryTumorCategory 0..1 and
-    tnmRegionalNodesCategory 0..1 and
-    tnmDistantMetastasesCategory 0..1
+    tnmPrimaryTumorCategory 0..1 MS and
+    tnmRegionalNodesCategory 0..1 MS and
+    tnmDistantMetastasesCategory 0..1 MS
 // Set metadata attributes that show up in the IG
 * hasMember[tnmPrimaryTumorCategory] only Reference(TNMPrimaryTumorCategory)
 * hasMember[tnmPrimaryTumorCategory] ^short = "TNM Primary Tumor Category"

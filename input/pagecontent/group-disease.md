@@ -54,14 +54,10 @@ mCODE has adopted an approach that allows the user to add additional code or cod
   * [PrimaryCancerCondition]
   * [SecondaryCancerCondition]
 * Staging
-  * [TNMClinicalStageGroup]
-  * [TNMClinicalPrimaryTumorCategory]
-  * [TNMClinicalRegionalNodesCategory]
-  * [TNMClinicalDistantMetastasesCategory]
-  * [TNMPathologicalStageGroup]
-  * [TNMPathologicalRegionalNodesCategory]
-  * [TNMPathologicalDistantMetastasesCategory]
-  * [TNMPathologicalDistantMetastasesCategory]
+  * [TNMStageGroup]
+  * [TNMPrimaryTumorCategory]
+  * [TNMRegionalNodesCategory]
+  * [TNMDistantMetastasesCategory]
 
 ### Extensions
 
@@ -78,6 +74,10 @@ mCODE has adopted an approach that allows the user to add additional code or cod
   * [LocationQualifierVS]
   * [HistologyMorphologyBehaviorVS]
 * **Staging**
+  * [ObservationCodesStageGroupVS]
+  * [ObservationCodesPrimaryTumorVS]
+  * [ObservationCodesRegionalNodesVS]
+  * [ObservationCodesDistantMetastasesVS]
   * [TNMStageGroupVS]
   * [TNMPrimaryTumorCategoryVS]
   * [TNMRegionalNodesCategoryVS]

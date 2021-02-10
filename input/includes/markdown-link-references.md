@@ -18,7 +18,7 @@
 [CancerRelatedSurgicalProcedure]: StructureDefinition-mcode-cancer-related-surgical-procedure.html
 [ComorbidConditionCode]: StructureDefinition-mcode-comorbid-condition-code.html
 [ComorbidConditionReference]: StructureDefinition-mcode-comorbid-condition-reference.html
-[ComorbiditiesElixhauser]: StructureDefinition-comorbidities-elixhauser.html
+[ComorbiditiesElixhauser]: StructureDefinition-mcode-comorbidities-elixhauser.html
 [ComorbiditiesParent]: StructureDefinition-mcode-comorbidities-parent.html
 [ECOGPerformanceStatus]: StructureDefinition-mcode-ecog-performance-status.html
 [EvidenceType]: StructureDefinition-mcode-evidence-type.html
@@ -30,28 +30,26 @@
 [MCODEPatientBundle]: StructureDefinition-mcode-patient-bundle.html
 [CapabilityStatement]: StructureDefinition-CapabilityStatement.html
 [PrimaryCancerCondition]: StructureDefinition-mcode-primary-cancer-condition.html
-[RadiotherapyCourseSummary]: StructureDefinition-radiotherapy-course-summary.html
-[RadiotherapyDosePerFraction]: StructureDefinition-radiotherapy-dose-per-fraction.html
-[RadiotherapyPrescribedFractions]: StructureDefinition-radiotherapy-prescribed-fractions.html
-[RadiotherapyDeliveredFractions]: StructureDefinition-radiotherapy-delivered-fractions.html
-[RadiotherapyTotalDosePlanned]: StructureDefinition-radiotherapy-total-dose-planned.html
-[RadiotherapyTotalDoseDelivered]: StructureDefinition-radiotherapy-total-dose-delivered.html
+[RadiotherapyCourseSummary]: StructureDefinition-mcode-radiotherapy-course-summary.html
+[RadiotherapyDosePerFraction]: StructureDefinition-mcode-radiotherapy-dose-per-fraction.html
+[RadiotherapyPrescribedFractions]: StructureDefinition-mcode-radiotherapy-prescribed-fractions.html
+[RadiotherapyDeliveredFractions]: StructureDefinition-mcode-radiotherapy-delivered-fractions.html
+[RadiotherapyTotalDosePlanned]: StructureDefinition-mcode-radiotherapy-total-dose-planned.html
+[RadiotherapyTotalDoseDelivered]: StructureDefinition-mcode-radiotherapy-total-dose-delivered.html
 [RelatedPrimaryCancerCondition]: StructureDefinition-mcode-related-primary-cancer-condition.html
 [SecondaryCancerCondition]: StructureDefinition-mcode-secondary-cancer-condition.html
 [TeleradiotherapyPrescriptionDelivery]: StructureDefinition-teleradiotherapy-prescription-delivery.html
-[TNMClinicalDistantMetastasesCategory]: StructureDefinition-mcode-tnm-clinical-distant-metastases-category.html
-[TNMClinicalPrimaryTumorCategory]: StructureDefinition-mcode-tnm-clinical-primary-tumor-category.html
-[TNMClinicalRegionalNodesCategory]: StructureDefinition-mcode-tnm-clinical-regional-nodes-category.html
-[TNMClinicalStageGroup]: StructureDefinition-mcode-tnm-clinical-stage-group.html
-[TNMPathologicalDistantMetastasesCategory]: StructureDefinition-mcode-tnm-pathological-distant-metastases-category.html
-[TNMPathologicalPrimaryTumorCategory]: StructureDefinition-mcode-tnm-pathological-primary-tumor-category.html
-[TNMPathologicalRegionalNodesCategory]: StructureDefinition-mcode-tnm-pathological-regional-nodes-category.html
-[TNMPathologicalStageGroup]: StructureDefinition-mcode-tnm-pathological-stage-group.html
+[TNMDistantMetastasesCategory]: StructureDefinition-mcode-tnm-distant-metastases-category.html
+[TNMPrimaryTumorCategory]: StructureDefinition-mcode-tnm-primary-tumor-category.html
+[TNMRegionalNodesCategory]: StructureDefinition-mcode-tnm-regional-nodes-category.html
+[TNMStageGroup]: StructureDefinition-mcode-tnm-stage-group.html
 [TerminationReason]: StructureDefinition-mcode-termination-reason.html
 [TreatmentIntent]: StructureDefinition-mcode-treatment-intent.html
 [TumorMarkerTest]: StructureDefinition-mcode-tumor-marker-test.html
 [TumorSize]: StructureDefinition-mcode-tumor-size.html
 [Tumor]: StructureDefinition-mcode-tumor.html
+[TumorSpecimen]: StructureDefinition-mcode-tumor-specimen.html
+[MultifocalTumor]: StructureDefinition-mcode-multifocal-tumor.html
 
 <!-- mCODE Value Sets -->
 [BrachytherapyModalityVS]: ValueSet-brachytherapy-modality-vs.html
@@ -111,6 +109,10 @@
 [HGVSVS]: ValueSet-mcode-hgvs-vs.html
 [HistologyMorphologyBehaviorVS]: ValueSet-mcode-histology-morphology-behavior-vs.html
 [LocationQualifierVS]: ValueSet-mcode-location-qualifier-vs.html
+[ObservationCodesStageGroupVS]: ValueSet-mcode-observation-codes-stage-group-vs.html
+[ObservationCodesPrimaryTumorVS]: ValueSet-mcode-observation-codes-primary-tumor-vs.html
+[ObservationCodesRegionalNodesVS]: ValueSet-mcode-observation-codes-regional-nodes-vs.html
+[ObservationCodesDistantMetastasesVS]: ValueSet-mcode-observation-codes-distant-metastases-vs.html
 [PresentAbsentUnknownVS]: ValueSet-mcode-present-absent-unknown.html
 [PrimaryOrUncertainBehaviorCancerDisorderVS]: ValueSet-mcode-primary-or-uncertain-behavior-cancer-disorder-vs.html
 [RadiationTargetBodySiteVS]: ValueSet-mcode-radiation-target-body-site-vs.html
@@ -129,8 +131,8 @@
 [TumorSizeUnitsVS]: ValueSet-mcode-tumor-size-units-vs.html
 
 <!-- mCODE Code Systems -->
-[ElixhauserCategoryCS]: CodeSystem-elixhauser-ahrq-cs.html
-[RadiotherapyCS]: CodeSystem-radiotherapy-cs.html
+[ElixhauserCategoryCS]: CodeSystem-mcode-comorbidities-elixhauser-ahrq-cs.html
+[RadiotherapyCS]: CodeSystem-mcode-radiotherapy-cs.html
 [CatchCodeCS]: CodeSystem-mcode-catch-code-cs.html
 
 <!-- mCODE CapabilityStatements -->

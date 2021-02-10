@@ -3,6 +3,7 @@
 URL:https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C146985
 WARNING: ValueSet/mcode-cancer-staging-system-vs: ValueSet.compose[0].include[1].concept[0]: The code C146985 is not valid in the system http://ncithesaurus.nci.nih.gov
 # SUPPRESS MESSAGES ABOUT BEING UNABLE TO SUPPORT CERTAIN CODE SYSTEMS
+WARNING: ValueSet.where(id = 'mcode-histology-morphology-behavior-vs'): Error from server: Unable to provide support for code system http://terminology.hl7.org/CodeSystem/icd-o-3
 WARNING: ValueSet.where(id = 'mcode-dna-change-type-vs'): Error from server: Unable to provide support for code system http://sequenceontology.org
 WARNING: ValueSet.where(id = 'mcode-tnm-stage-group-vs'): Error from server: Unable to provide support for code system http://cancerstaging.org
 WARNING: ValueSet.where(id = 'mcode-tnm-regional-nodes-category-vs'): Error from server: Unable to provide support for code system http://cancerstaging.org
@@ -15,6 +16,10 @@ WARNING: ValueSet.where(id = 'mcode-cancer-body-location-vs'): Error from server
 WARNING: ValueSet.where(id = 'mcode-cancer-related-surgical-procedure-vs'): Error from server: Unable to provide support for code system http://www.ama-assn.org/go/cpt
 WARNING: ValueSet.where(id = 'mcode-histology-morphology-behavior-vs'): Error from server: Unable to provide support for code system http://hl7.org/fhir/us/mcode/CodeSystem/mcode-catch-code-cs
 # SUPPRESS MESSAGES ABOUT LOINC LIST ELEMENTS THAT ARE KNOWN TO EXIST.
+WARNING: StructureDefinition/mcode-genomic-region-studied: StructureDefinition.differential.element[25].binding: The valueSet reference http://loinc.org/vs/LL5323-2 on element Observation.component.value[x] could not be resolved
+WARNING: StructureDefinition/mcode-genomic-region-studied: StructureDefinition.snapshot.element[92].binding: The valueSet reference http://loinc.org/vs/LL5323-2 on element Observation.component.value[x] could not be resolved
+WARNING: StructureDefinition/mcode-cancer-genetic-variant: StructureDefinition.differential.element[38].binding: The valueSet reference http://loinc.org/vs/LL380-7 on element Observation.component.value[x] could not be resolved
+WARNING: StructureDefinition/mcode-cancer-genetic-variant: StructureDefinition.differential.element[30].binding: The valueSet reference http://loinc.org/vs/LL378-1 on element Observation.component.value[x] could not be resolved
 WARNING: StructureDefinition/mcode-karnofsky-performance-status: StructureDefinition.snapshot.element[23].binding: The valueSet reference http://loinc.org/vs/LL4986-7 on element Observation.interpretation could not be resolved
 WARNING: StructureDefinition/mcode-karnofsky-performance-status: StructureDefinition.differential.element[9].binding: The valueSet reference http://loinc.org/vs/LL4986-7 on element Observation.interpretation could not be resolved
 WARNING: StructureDefinition/mcode-genomic-region-studied: StructureDefinition.snapshot.element[94].binding: The valueSet reference http://loinc.org/vs/LL5323-2 on element Observation.component.value[x] could not be resolved
@@ -30,11 +35,12 @@ WARNING: StructureDefinition/mcode-cancer-genetic-variant: StructureDefinition.d
 WARNING: StructureDefinition/mcode-cancer-genetic-variant: StructureDefinition.differential.element[23].binding: The valueSet reference http://loinc.org/vs/LL378-1 on element Observation.component.value[x] could not be resolved
 WARNING: StructureDefinition/mcode-cancer-genetic-variant: StructureDefinition.differential.element[2].binding: The valueSet reference http://loinc.org/vs/LL1971-2 on element Observation.value[x] could not be resolved
 # SUPPRESS US CORE OBSERVATION MESSAGES. Deviation was approved by Cross-Group Projects Work Group on 1/28/2021 Floyd Eisenberg/Brett Marquard 28-0-1. See https://jira.hl7.org/browse/FHIR-30707
+WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-comorbidities-elixhauser').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
 WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tumor-size').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
-WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-clinical-stage-group').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
-WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-clinical-regional-nodes-category').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
-WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-clinical-primary-tumor-category').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
-WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-clinical-distant-metastases-category').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
+WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-stage-group').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
+WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-regional-nodes-category').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
+WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-primary-tumor-category').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
+WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-distant-metastases-category').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
 WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-karnofsky-performance-status').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
 WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-ecog-performance-status').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
 WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-comorbidities-parent').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
@@ -173,14 +179,10 @@ INFORMATION: StructureDefinition/mcode-tumor-size: StructureDefinition: Validate
 INFORMATION: StructureDefinition/mcode-tumor-marker-test: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
 INFORMATION: StructureDefinition/mcode-tumor: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
 INFORMATION: StructureDefinition/mcode-treatment-intent: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
-INFORMATION: StructureDefinition/mcode-tnm-pathological-stage-group: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
-INFORMATION: StructureDefinition/mcode-tnm-pathological-regional-nodes-category: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
-INFORMATION: StructureDefinition/mcode-tnm-pathological-primary-tumor-category: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
-INFORMATION: StructureDefinition/mcode-tnm-pathological-distant-metastases-category: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
-INFORMATION: StructureDefinition/mcode-tnm-clinical-stage-group: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
-INFORMATION: StructureDefinition/mcode-tnm-clinical-regional-nodes-category: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
-INFORMATION: StructureDefinition/mcode-tnm-clinical-primary-tumor-category: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
-INFORMATION: StructureDefinition/mcode-tnm-clinical-distant-metastases-category: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
+INFORMATION: StructureDefinition/mcode-tnm-stage-group: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
+INFORMATION: StructureDefinition/mcode-tnm-regional-nodes-category: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
+INFORMATION: StructureDefinition/mcode-tnm-primary-tumor-category: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
+INFORMATION: StructureDefinition/mcode-tnm-distant-metastases-category: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
 INFORMATION: StructureDefinition/mcode-termination-reason: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
 INFORMATION: StructureDefinition/mcode-secondary-cancer-condition: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
 INFORMATION: StructureDefinition/mcode-primary-cancer-condition: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
@@ -253,40 +255,40 @@ INFORMATION: Observation/tumor-marker-test-oncotype-dx-jenny-m: Observation.code
 INFORMATION: Observation/tumor-marker-test-her2-jenny-m: Observation: Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tumor-marker-test
 INFORMATION: Observation/tumor-marker-test-er-jenny-m: Observation: Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tumor-marker-test
 INFORMATION: Observation/tumor-marker-test-egf: Observation: Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tumor-marker-test
-INFORMATION: Observation/tnm-primary-tumor-category-jenny-m: Observation: Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-clinical-primary-tumor-category
+INFORMATION: Observation/tnm-primary-tumor-category-jenny-m: Observation: Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-primary-tumor-category
 INFORMATION: Observation/tnm-primary-tumor-category-jenny-m: Observation.value.ofType(CodeableConcept).coding[0]: Code System URI 'http://cancerstaging.org' is unknown so the code cannot be validated
 INFORMATION: Observation/tnm-primary-tumor-category-jenny-m: Observation.method.coding[0]: Code System URI 'http://ncithesaurus.nci.nih.gov' is unknown so the code cannot be validated
-INFORMATION: Observation/tnm-pathological-stage-group-3C: Observation: Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-pathological-stage-group
+INFORMATION: Observation/tnm-pathological-stage-group-3C: Observation: Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-stage-group
 INFORMATION: Observation/tnm-pathological-stage-group-3C: Observation.value.ofType(CodeableConcept).coding[0]: Code System URI 'http://cancerstaging.org' is unknown so the code cannot be validated
 INFORMATION: Observation/tnm-pathological-stage-group-3C: Observation.method.coding[0]: Code System URI 'http://ncithesaurus.nci.nih.gov' is unknown so the code cannot be validated
-INFORMATION: Observation/tnm-pathological-regional-nodes-category-pN3: Observation: Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-pathological-regional-nodes-category
+INFORMATION: Observation/tnm-pathological-regional-nodes-category-pN3: Observation: Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-regional-nodes-category
 INFORMATION: Observation/tnm-pathological-regional-nodes-category-pN3: Observation.value.ofType(CodeableConcept).coding[0]: Code System URI 'http://cancerstaging.org' is unknown so the code cannot be validated
 INFORMATION: Observation/tnm-pathological-regional-nodes-category-pN3: Observation.method.coding[0]: Code System URI 'http://ncithesaurus.nci.nih.gov' is unknown so the code cannot be validated
-INFORMATION: Observation/tnm-pathological-primary-tumor-category-pT3: Observation: Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-pathological-primary-tumor-category
+INFORMATION: Observation/tnm-pathological-primary-tumor-category-pT3: Observation: Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-primary-tumor-category
 INFORMATION: Observation/tnm-pathological-primary-tumor-category-pT3: Observation.value.ofType(CodeableConcept).coding[0]: Code System URI 'http://cancerstaging.org' is unknown so the code cannot be validated
 INFORMATION: Observation/tnm-pathological-primary-tumor-category-pT3: Observation.method.coding[0]: Code System URI 'http://ncithesaurus.nci.nih.gov' is unknown so the code cannot be validated
-INFORMATION: Observation/tnm-pathological-distant-metastases-category-pM0: Observation: Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-pathological-distant-metastases-category
+INFORMATION: Observation/tnm-pathological-distant-metastases-category-pM0: Observation: Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-distant-metastases-category
 INFORMATION: Observation/tnm-pathological-distant-metastases-category-pM0: Observation.value.ofType(CodeableConcept).coding[0]: Code System URI 'http://cancerstaging.org' is unknown so the code cannot be validated
 INFORMATION: Observation/tnm-pathological-distant-metastases-category-pM0: Observation.method.coding[0]: Code System URI 'http://ncithesaurus.nci.nih.gov' is unknown so the code cannot be validated
-INFORMATION: Observation/tnm-clinical-stage-group-jenny-m: Observation: Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-clinical-stage-group
+INFORMATION: Observation/tnm-clinical-stage-group-jenny-m: Observation: Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-stage-group
 INFORMATION: Observation/tnm-clinical-stage-group-jenny-m: Observation.value.ofType(CodeableConcept).coding[0]: Code System URI 'http://cancerstaging.org' is unknown so the code cannot be validated
 INFORMATION: Observation/tnm-clinical-stage-group-jenny-m: Observation.method.coding[0]: Code System URI 'http://ncithesaurus.nci.nih.gov' is unknown so the code cannot be validated
-INFORMATION: Observation/tnm-clinical-stage-group-3c: Observation: Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-clinical-stage-group
+INFORMATION: Observation/tnm-clinical-stage-group-3c: Observation: Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-stage-group
 INFORMATION: Observation/tnm-clinical-stage-group-3c: Observation.value.ofType(CodeableConcept).coding[0]: Code System URI 'http://cancerstaging.org' is unknown so the code cannot be validated
 INFORMATION: Observation/tnm-clinical-stage-group-3c: Observation.method.coding[0]: Code System URI 'http://ncithesaurus.nci.nih.gov' is unknown so the code cannot be validated
-INFORMATION: Observation/tnm-clinical-regional-nodes-category-jenny-m: Observation: Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-clinical-regional-nodes-category
+INFORMATION: Observation/tnm-clinical-regional-nodes-category-jenny-m: Observation: Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-regional-nodes-category
 INFORMATION: Observation/tnm-clinical-regional-nodes-category-jenny-m: Observation.value.ofType(CodeableConcept).coding[0]: Code System URI 'http://cancerstaging.org' is unknown so the code cannot be validated
 INFORMATION: Observation/tnm-clinical-regional-nodes-category-jenny-m: Observation.method.coding[0]: Code System URI 'http://ncithesaurus.nci.nih.gov' is unknown so the code cannot be validated
-INFORMATION: Observation/tnm-clinical-regional-nodes-category-cN3: Observation: Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-clinical-regional-nodes-category
+INFORMATION: Observation/tnm-clinical-regional-nodes-category-cN3: Observation: Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-regional-nodes-category
 INFORMATION: Observation/tnm-clinical-regional-nodes-category-cN3: Observation.value.ofType(CodeableConcept).coding[0]: Code System URI 'http://cancerstaging.org' is unknown so the code cannot be validated
 INFORMATION: Observation/tnm-clinical-regional-nodes-category-cN3: Observation.method.coding[0]: Code System URI 'http://ncithesaurus.nci.nih.gov' is unknown so the code cannot be validated
-INFORMATION: Observation/tnm-clinical-primary-tumor-category-cT3: Observation: Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-clinical-primary-tumor-category
+INFORMATION: Observation/tnm-clinical-primary-tumor-category-cT3: Observation: Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-primary-tumor-category
 INFORMATION: Observation/tnm-clinical-primary-tumor-category-cT3: Observation.value.ofType(CodeableConcept).coding[0]: Code System URI 'http://cancerstaging.org' is unknown so the code cannot be validated
 INFORMATION: Observation/tnm-clinical-primary-tumor-category-cT3: Observation.method.coding[0]: Code System URI 'http://ncithesaurus.nci.nih.gov' is unknown so the code cannot be validated
-INFORMATION: Observation/tnm-clinical-distant-metastases-category-jenny-m: Observation: Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-clinical-distant-metastases-category
+INFORMATION: Observation/tnm-clinical-distant-metastases-category-jenny-m: Observation: Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-distant-metastases-category
 INFORMATION: Observation/tnm-clinical-distant-metastases-category-jenny-m: Observation.value.ofType(CodeableConcept).coding[0]: Code System URI 'http://cancerstaging.org' is unknown so the code cannot be validated
 INFORMATION: Observation/tnm-clinical-distant-metastases-category-jenny-m: Observation.method.coding[0]: Code System URI 'http://ncithesaurus.nci.nih.gov' is unknown so the code cannot be validated
-INFORMATION: Observation/tnm-clinical-distant-metastases-category-cM0: Observation: Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-clinical-distant-metastases-category
+INFORMATION: Observation/tnm-clinical-distant-metastases-category-cM0: Observation: Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-distant-metastases-category
 INFORMATION: Observation/tnm-clinical-distant-metastases-category-cM0: Observation.value.ofType(CodeableConcept).coding[0]: Code System URI 'http://cancerstaging.org' is unknown so the code cannot be validated
 INFORMATION: Observation/tnm-clinical-distant-metastases-category-cM0: Observation.method.coding[0]: Code System URI 'http://ncithesaurus.nci.nih.gov' is unknown so the code cannot be validated
 INFORMATION: Observation/observation-smoking-history-jenny-m: Observation: Validate resource against profile http://hl7.org/fhir/StructureDefinition/Observation
@@ -374,23 +376,23 @@ INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle: Validate resource agai
 INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[9].resource.ofType(Specimen): Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genetic-specimen - listed in meta
 INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[9].resource.ofType(Specimen): Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genetic-specimen
 INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[9].resource.ofType(Specimen): Validate resource against profile http://hl7.org/fhir/StructureDefinition/Specimen
-INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[8].resource.ofType(Observation): Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-clinical-distant-metastases-category - listed in meta
-INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[8].resource.ofType(Observation): Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-clinical-distant-metastases-category
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[8].resource.ofType(Observation): Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-distant-metastases-category - listed in meta
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[8].resource.ofType(Observation): Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-distant-metastases-category
 INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[8].resource.ofType(Observation): Validate resource against profile http://hl7.org/fhir/StructureDefinition/Observation
 INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[8].resource.ofType(Observation).value.ofType(CodeableConcept).coding[0]: Code System URI 'http://cancerstaging.org' is unknown so the code cannot be validated
 INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[8].resource.ofType(Observation).method.coding[0]: Code System URI 'http://ncithesaurus.nci.nih.gov' is unknown so the code cannot be validated
-INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[7].resource.ofType(Observation): Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-clinical-regional-nodes-category - listed in meta
-INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[7].resource.ofType(Observation): Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-clinical-regional-nodes-category
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[7].resource.ofType(Observation): Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-regional-nodes-category - listed in meta
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[7].resource.ofType(Observation): Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-regional-nodes-category
 INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[7].resource.ofType(Observation): Validate resource against profile http://hl7.org/fhir/StructureDefinition/Observation
 INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[7].resource.ofType(Observation).value.ofType(CodeableConcept).coding[0]: Code System URI 'http://cancerstaging.org' is unknown so the code cannot be validated
 INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[7].resource.ofType(Observation).method.coding[0]: Code System URI 'http://ncithesaurus.nci.nih.gov' is unknown so the code cannot be validated
-INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[6].resource.ofType(Observation): Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-clinical-primary-tumor-category - listed in meta
-INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[6].resource.ofType(Observation): Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-clinical-primary-tumor-category
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[6].resource.ofType(Observation): Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-primary-tumor-category - listed in meta
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[6].resource.ofType(Observation): Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-primary-tumor-category
 INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[6].resource.ofType(Observation): Validate resource against profile http://hl7.org/fhir/StructureDefinition/Observation
 INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[6].resource.ofType(Observation).value.ofType(CodeableConcept).coding[0]: Code System URI 'http://cancerstaging.org' is unknown so the code cannot be validated
 INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[6].resource.ofType(Observation).method.coding[0]: Code System URI 'http://ncithesaurus.nci.nih.gov' is unknown so the code cannot be validated
-INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[5].resource.ofType(Observation): Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-clinical-stage-group - listed in meta
-INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[5].resource.ofType(Observation): Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-clinical-stage-group
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[5].resource.ofType(Observation): Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-stage-group - listed in meta
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[5].resource.ofType(Observation): Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-stage-group
 INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[5].resource.ofType(Observation): Validate resource against profile http://hl7.org/fhir/StructureDefinition/Observation
 INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[5].resource.ofType(Observation).value.ofType(CodeableConcept).coding[0]: Code System URI 'http://cancerstaging.org' is unknown so the code cannot be validated
 INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[5].resource.ofType(Observation).method.coding[0]: Code System URI 'http://ncithesaurus.nci.nih.gov' is unknown so the code cannot be validated

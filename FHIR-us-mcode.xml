@@ -36,6 +36,7 @@
 <artifact deprecated="true" id="ValueSet/mcode-comorbid-condition-value-set" key="comorbid-condition-value-set" name="Comorbid Condition Value Set"/>
 <artifact id="StructureDefinition/mcode-comorbidities-parent" key="StructureDefinition-mcode-comorbidities-parent" name="Comorbidities Parent"/>
 <artifact id="ValueSet/mcode-condition-status-trend-vs" key="condition-status-trend-value-set" name="Condition Status Trend Value Set"/>
+<artifact id="StructureDefinition/mcode-condition-related" key="StructureDefinition-mcode-condition-related" name="Condition related to resource"/>
 <artifact id="ValueSet/mcode-dna-change-type-vs" key="ValueSet-mcode-dna-change-type-vs" name="DNA Change Type Value Set"/>
 <artifact id="StructureDefinition/mcode-ecog-performance-status" key="ecog-performance-status" name="ECOG Performance Status"/>
 <artifact id="ValueSet/elixhauser-alcohol-abuse-vs" key="ValueSet-elixhauser-alcohol-abuse-vs" name="Elixhauser Comorbid Condition Value Set for Alcohol Abuse"/>
@@ -76,8 +77,8 @@
 <artifact id="ValueSet/elixhauser-drug-abuse-vs" key="ValueSet-elixhauser-drug-abuse-vs" name="Elixhauser Comorbid Condition Value Set for drug abuse"/>
 <artifact id="ValueSet/elixhauser-cancer-solid-tumor-in-situ-vs" key="ValueSet-elixhauser-cancer-solid-tumor-in-situ-vs" name="Elixhauser Comorbid Condition Value Set for malignant solid tumors in situ"/>
 <artifact id="ValueSet/elixhauser-cancer-solid-tumor-malignant-vs" key="ValueSet-elixhauser-cancer-solid-tumor-malignant-vs" name="Elixhauser Comorbid Condition Value Set for malignant solid tumors without metastases"/>
-<artifact id="StructureDefinition/comorbidities-elixhauser" key="StructureDefinition-comorbidities-elixhauser" name="Elixhauser Comorbidities"/>
-<artifact id="CodeSystem/elixhauser-ahrq-cs" key="CodeSystem-elixhauser-ahrq-cs" name="Elixhauser Comorbidity Category"/>
+<artifact id="StructureDefinition/mcode-comorbidities-elixhauser" key="StructureDefinition-mcode-comorbidities-elixhauser" name="Elixhauser Comorbidities"/>
+<artifact id="CodeSystem/mcode-comorbidities-elixhauser-ahrq-cs" key="CodeSystem-mcode-comorbidities-elixhauser-ahrq-cs" name="Elixhauser Comorbidity Category"/>
 <artifact id="StructureDefinition/mcode-evidence-type" key="StructureDefinition-mcode-evidence-type" name="Evidence Type"/>
 <artifact deprecated="true" id="Extension/mcode-evidence-type-extension" key="evidence-type-extension" name="Evidence Type Extension"/>
 <artifact id="StructureDefinition/mcode-genetic-specimen" key="genetic-specimen" name="Genetic Specimen"/>
@@ -96,17 +97,21 @@
 <artifact id="ValueSet/mcode-location-qualifier-vs" key="ValueSet-mcode-location-qualifier-vs" name="Location Qualifier Value Set"/>
 <artifact id="ValueSet/mcode-tumor-size-method-vs" key="ValueSet-mcode-tumor-size-method-vs" name="Methods for measuring tumor size"/>
 <artifact deprecated="true" key="Observation" name="Observation"/>
+<artifact id="ValueSet/mcode-observation-codes-distant-metastases-vs" key="ValueSet-mcode-observation-codes-distant-metastases-vs" name="Observation Codes for Distant Metastases Category"/>
+<artifact id="ValueSet/mcode-observation-codes-primary-tumor-vs" key="ValueSet-mcode-observation-codes-primary-tumor-vs" name="Observation Codes for Primary Tumor Category"/>
+<artifact id="ValueSet/mcode-observation-codes-regional-nodes-vs" key="ValueSet-mcode-observation-codes-regional-nodes-vs" name="Observation Codes for Regional Node Category"/>
+<artifact id="ValueSet/mcode-observation-codes-stage-group-vs" key="ValueSet-mcode-observation-codes-stage-group-vs" name="Observation Codes for Stage Group Category"/>
 <artifact id="ValueSet/mcode-present-absent-unknown" key="ValueSet-mcode-present-absent-unknown" name="Present-Absent-Unknown"/>
 <artifact id="StructureDefinition/mcode-primary-cancer-condition" key="primary-cancer-condition" name="Primary Cancer Condition"/>
 <artifact id="ValueSet/mcode-primary-or-uncertain-behavior-cancer-disorder-vs" key="primary-or-uncertain-behavior-cancer-disorder-value-set" name="Primary or Uncertain Behavior Cancer Disorder Value Set"/>
 <artifact deprecated="true" key="Procedure" name="Procedure"/>
-<artifact id="StructureDefinition/radiotherapy-dose-per-fraction" key="StructureDefinition-radiotherapy-dose-per-fraction" name="Radiation Dose Per Fraction"/>
-<artifact id="StructureDefinition/radiotherapy-delivered-fractions" key="StructureDefinition-radiotherapy-delivered-fractions" name="Radiation Fractions Delivered"/>
-<artifact id="StructureDefinition/radiotherapy-prescribed-fractions" key="StructureDefinition-radiotherapy-prescribed-fractions" name="Radiation Fractions Prescribed"/>
+<artifact id="StructureDefinition/mcode-radiotherapy-dose-per-fraction" key="StructureDefinition-mcode-radiotherapy-dose-per-fraction" name="Radiation Dose Per Fraction"/>
+<artifact id="StructureDefinition/mcode-radiotherapy-delivered-fractions" key="StructureDefinition-mcode-radiotherapy-delivered-fractions" name="Radiation Fractions Delivered"/>
+<artifact id="StructureDefinition/mcode-radiotherapy-prescribed-fractions" key="StructureDefinition-mcode-radiotherapy-prescribed-fractions" name="Radiation Fractions Prescribed"/>
 <artifact deprecated="true" id="ValueSet/mcode-radiation-procedure-value-set" key="radiation-procedure-value-set" name="Radiation Procedure Value Set"/>
 <artifact id="ValueSet/mcode-radiation-target-body-site-vs" key="radiation-target-body-site-value-set" name="Radiation Target Body Site Value Set"/>
-<artifact id="CodeSystem/radiotherapy-cs" key="CodeSystem-radiotherapy-cs" name="Radiotherapy Code System"/>
-<artifact id="StructureDefinition/radiotherapy-course-summary" key="StructureDefinition-radiotherapy-course-summary" name="Radiotherapy Course Summary"/>
+<artifact id="CodeSystem/mcode-radiotherapy-cs" key="CodeSystem-mcode-radiotherapy-cs" name="Radiotherapy Code System"/>
+<artifact id="StructureDefinition/mcode-radiotherapy-course-summary" key="StructureDefinition-mcode-radiotherapy-course-summary" name="Radiotherapy Course Summary"/>
 <artifact deprecated="true" id="Extension/mcode-related-primary-cancer-condition-extension" key="related-primary-cancer-condition-extension" name="Related Primary Cancer Condition Extension"/>
 <artifact id="SearchParameter/Patient-id" key="SearchParameter-Patient-id" name="Search by _id in Patients with multipleOr"/>
 <artifact id="SearchParameter/Condition-code" key="SearchParameter-Condition-code" name="Search by code:in in Conditions"/>
@@ -115,17 +120,20 @@
 <artifact id="StructureDefinition/mcode-comorbid-condition-code" key="StructureDefinition-mcode-comorbid-condition-code" name="Specific Condition Code for Comorbidity"/>
 <artifact id="StructureDefinition/mcode-comorbid-condition-reference" key="StructureDefinition-mcode-comorbid-condition-reference" name="Specific Condition Reference for Comorbidity"/>
 <artifact deprecated="true" id="Profile/mcode-tnm-clinical-distant-metastases" key="tnm-clinical-distant-metastases" name="TNM Clinical Distant Metastases"/>
-<artifact id="StructureDefinition/mcode-tnm-clinical-distant-metastases-category" key="StructureDefinition-mcode-tnm-clinical-distant-metastases-category" name="TNM Clinical Distant Metastases Category"/>
-<artifact id="StructureDefinition/mcode-tnm-clinical-primary-tumor-category" key="tnm-clinical-primary-tumor-category" name="TNM Clinical Primary Tumor Category"/>
-<artifact id="StructureDefinition/mcode-tnm-clinical-regional-nodes-category" key="tnm-clinical-regional-nodes-category" name="TNM Clinical Regional Nodes Category"/>
-<artifact id="StructureDefinition/mcode-tnm-clinical-stage-group" key="tnm-clinical-stage-group" name="TNM Clinical Stage Group"/>
+<artifact deprecated="true" id="Profile/mcode-tnm-clinical-primary-tumor-category" key="tnm-clinical-primary-tumor-category" name="TNM Clinical Primary Tumor Category"/>
+<artifact deprecated="true" id="Profile/mcode-tnm-clinical-regional-nodes-category" key="tnm-clinical-regional-nodes-category" name="TNM Clinical Regional Nodes Category"/>
+<artifact deprecated="true" id="Profile/mcode-tnm-clinical-stage-group" key="tnm-clinical-stage-group" name="TNM Clinical Stage Group"/>
+<artifact id="StructureDefinition/mcode-tnm-distant-metastases-category" key="StructureDefinition-mcode-tnm-distant-metastases-category" name="TNM Distant Metastases Category"/>
 <artifact id="ValueSet/mcode-tnm-distant-metastases-category-vs" key="tnm-distant-metastases-category-value-set" name="TNM Distant Metastases Category Value Set"/>
-<artifact id="StructureDefinition/mcode-tnm-pathological-distant-metastases-category" key="tnm-pathological-distant-metastases-category" name="TNM Pathological Distant Metastases Category"/>
-<artifact id="StructureDefinition/mcode-tnm-pathological-primary-tumor-category" key="tnm-pathological-primary-tumor-category" name="TNM Pathological Primary Tumor Category"/>
-<artifact id="StructureDefinition/mcode-tnm-pathological-regional-nodes-category" key="tnm-pathological-regional-nodes-category" name="TNM Pathological Regional Nodes Category"/>
-<artifact id="StructureDefinition/mcode-tnm-pathological-stage-group" key="tnm-pathological-stage-group" name="TNM Pathological Stage Group"/>
+<artifact deprecated="true" id="Profile/mcode-tnm-pathological-distant-metastases-category" key="tnm-pathological-distant-metastases-category" name="TNM Pathological Distant Metastases Category"/>
+<artifact deprecated="true" id="Profile/mcode-tnm-pathological-primary-tumor-category" key="tnm-pathological-primary-tumor-category" name="TNM Pathological Primary Tumor Category"/>
+<artifact deprecated="true" id="Profile/mcode-tnm-pathological-regional-nodes-category" key="tnm-pathological-regional-nodes-category" name="TNM Pathological Regional Nodes Category"/>
+<artifact deprecated="true" id="Profile/mcode-tnm-pathological-stage-group" key="tnm-pathological-stage-group" name="TNM Pathological Stage Group"/>
+<artifact id="StructureDefinition/mcode-tnm-primary-tumor-category" key="StructureDefinition-mcode-tnm-primary-tumor-category" name="TNM Primary Tumor Category"/>
 <artifact id="ValueSet/mcode-tnm-primary-tumor-category-vs" key="tnm-primary-tumor-category-value-set" name="TNM Primary Tumor Category Value Set"/>
+<artifact id="StructureDefinition/mcode-tnm-regional-nodes-category" key="StructureDefinition-mcode-tnm-regional-nodes-category" name="TNM Regional Nodes Category"/>
 <artifact id="ValueSet/mcode-tnm-regional-nodes-category-vs" key="tnm-regional-nodes-category-value-set" name="TNM Regional Nodes Category Value Set"/>
+<artifact id="StructureDefinition/mcode-tnm-stage-group" key="StructureDefinition-mcode-tnm-stage-group" name="TNM Stage Group"/>
 <artifact id="ValueSet/mcode-tnm-stage-group-vs" key="tnm-stage-group-value-set" name="TNM Stage Group Value Set"/>
 <artifact id="ValueSet/teleradiotherapy-device-vs" key="ValueSet-teleradiotherapy-device-vs" name="Teleradiotherapy Device Value Set"/>
 <artifact id="ValueSet/teleradiotherapy-modality-vs" key="ValueSet-teleradiotherapy-modality-vs" name="Teleradiotherapy Modality Value Set"/>
@@ -133,8 +141,8 @@
 <artifact id="ValueSet/teleradiotherapy-technique-vs" key="ValueSet-teleradiotherapy-technique-vs" name="Teleradiotherapy Technique Value Set"/>
 <artifact id="StructureDefinition/mcode-termination-reason" key="StructureDefinition-mcode-termination-reason" name="Termination Reason"/>
 <artifact deprecated="true" id="Extension/mcode-termination-reason-extension" key="termination-reason-extension" name="Termination Reason Extension"/>
-<artifact id="StructureDefinition/radiotherapy-total-dose-delivered" key="StructureDefinition-radiotherapy-total-dose-delivered" name="Total Radiation Dose Delivered"/>
-<artifact id="StructureDefinition/radiotherapy-total-dose-planned" key="StructureDefinition-radiotherapy-total-dose-planned" name="Total Radiation Dose Planned"/>
+<artifact id="StructureDefinition/mcode-radiotherapy-total-dose-delivered" key="StructureDefinition-mcode-radiotherapy-total-dose-delivered" name="Total Radiation Dose Delivered"/>
+<artifact id="StructureDefinition/mcode-radiotherapy-total-dose-planned" key="StructureDefinition-mcode-radiotherapy-total-dose-planned" name="Total Radiation Dose Planned"/>
 <artifact id="StructureDefinition/mcode-treatment-intent" key="StructureDefinition-mcode-treatment-intent" name="Treatment Intent"/>
 <artifact deprecated="true" id="Extension/mcode-treatment-intent-extension" key="treatment-intent-extension" name="Treatment Intent Extension"/>
 <artifact id="ValueSet/mcode-treatment-intent-vs" key="treatment-intent-value-set" name="Treatment Intent Value Set"/>
@@ -144,12 +152,11 @@
 <artifact id="StructureDefinition/mcode-tumor-marker-test" key="StructureDefinition-mcode-tumor-marker-test" name="Tumor Marker Test"/>
 <artifact id="ValueSet/mcode-tumor-marker-test-vs" key="tumor-marker-test-value-set" name="Tumor Marker Test Value Set"/>
 <artifact id="StructureDefinition/mcode-tumor-size" key="StructureDefinition-mcode-tumor-size" name="Tumor Size"/>
+<artifact id="StructureDefinition/mcode-tumor-specimen" key="StructureDefinition-mcode-tumor-specimen" name="Tumor Specimen"/>
 <artifact deprecated="true" id="ValueSet/mcode-units-of-length-value-set" key="units-of-length-value-set" name="Units of Length Value Set"/>
 <artifact id="ValueSet/mcode-tumor-size-units-vs" key="ValueSet-mcode-tumor-size-units-vs" name="Units of tumor size value set"/>
 <artifact deprecated="true" key="ValueSet" name="ValueSet"/>
-<artifact id="Observation/bodyheight-jenny-m-2018-03-06" key="Observation-bodyheight-jenny-m-2018-03-06" name="bodyheight-jenny-m-2018-03-06"/>
 <artifact id="Observation/bodyweight-jenny-m-2018-03-06" key="Observation-bodyweight-jenny-m-2018-03-06" name="bodyweight-jenny-m-2018-03-06"/>
-<artifact id="Observation/bodyweight-jenny-m-2019-04-22" key="Observation-bodyweight-jenny-m-2019-04-22" name="bodyweight-jenny-m-2019-04-22"/>
 <artifact id="Procedure/brachytherapy-prescription-delivery-ldr" key="Procedure-brachytherapy-prescription-delivery-ldr" name="brachytherapy-prescription-delivery-ldr"/>
 <artifact id="Observation/cancer-disease-status-improved" key="Observation-cancer-disease-status-improved" name="cancer-disease-status-improved"/>
 <artifact id="Observation/cancer-disease-status-jenny-m" key="Observation-cancer-disease-status-jenny-m" name="cancer-disease-status-jenny-m"/>
@@ -161,9 +168,8 @@
 <artifact id="Patient/cancer-patient-eve-anyperson" key="Patient-cancer-patient-eve-anyperson" name="cancer-patient-eve-anyperson"/>
 <artifact id="Patient/cancer-patient-jenny-m" key="Patient-cancer-patient-jenny-m" name="cancer-patient-jenny-m"/>
 <artifact id="Patient/cancer-patient-john-anyperson" key="Patient-cancer-patient-john-anyperson" name="cancer-patient-john-anyperson"/>
-<artifact id="Observation/cancer-related-comorbidities-elixhauser-jenny-m" key="Observation-cancer-related-comorbidities-elixhauser-jenny-m" name="cancer-related-comorbidities-elixhauser-jenny-m"/>
-<artifact id="Observation/cancer-related-comorbidities-elixhauser-john-anyperson" key="Observation-cancer-related-comorbidities-elixhauser-john-anyperson" name="cancer-related-comorbidities-elixhauser-john-anyperson"/>
-<artifact id="MedicationAdministration/cancer-related-medication-administration-doxorubicin-jenny-m" key="MedicationAdministration-cancer-related-medication-administration-doxorubicin-jenny-m" name="cancer-related-medication-administration-doxorubicin-jenny-m"/>
+<artifact id="Observation/cancer-related-mcode-comorbidities-elixhauser-jenny-m" key="Observation-cancer-related-mcode-comorbidities-elixhauser-jenny-m" name="cancer-related-mcode-comorbidities-elixhauser-jenny-m"/>
+<artifact id="Observation/cancer-related-mcode-comorbidities-elixhauser-john-anyperson" key="Observation-cancer-related-mcode-comorbidities-elixhauser-john-anyperson" name="cancer-related-mcode-comorbidities-elixhauser-john-anyperson"/>
 <artifact id="MedicationRequest/cancer-related-medication-request-anastrozole-jenny-m" key="MedicationRequest-cancer-related-medication-request-anastrozole-jenny-m" name="cancer-related-medication-request-anastrozole-jenny-m"/>
 <artifact id="MedicationRequest/cancer-related-medication-request-cisplatin" key="MedicationRequest-cancer-related-medication-request-cisplatin" name="cancer-related-medication-request-cisplatin"/>
 <artifact id="MedicationRequest/cancer-related-medication-request-cyclophosphamide-jenny-m" key="MedicationRequest-cancer-related-medication-request-cyclophosphamide-jenny-m" name="cancer-related-medication-request-cyclophosphamide-jenny-m"/>
@@ -172,7 +178,6 @@
 <artifact id="MedicationRequest/cancer-related-medication-request-paclitaxel-jenny-m" key="MedicationRequest-cancer-related-medication-request-paclitaxel-jenny-m" name="cancer-related-medication-request-paclitaxel-jenny-m"/>
 <artifact id="Procedure/cancer-related-surgical-procedure-jenny-m" key="Procedure-cancer-related-surgical-procedure-jenny-m" name="cancer-related-surgical-procedure-jenny-m"/>
 <artifact id="Procedure/cancer-related-surgical-procedure-lobectomy" key="Procedure-cancer-related-surgical-procedure-lobectomy" name="cancer-related-surgical-procedure-lobectomy"/>
-<artifact id="Observation/comorbidities-elixhauser-john-anyperson" key="Observation-comorbidities-elixhauser-john-anyperson" name="comorbidities-elixhauser-john-anyperson"/>
 <artifact id="Observation/ecog-performance-status-fully-active" key="Observation-ecog-performance-status-fully-active" name="ecog-performance-status-fully-active"/>
 <artifact id="Observation/ecog-performance-status-jenny-m" key="Observation-ecog-performance-status-jenny-m" name="ecog-performance-status-jenny-m"/>
 <artifact id="FamilyMemberHistory/family-member-history-aunt-jenny-m" key="FamilyMemberHistory-family-member-history-aunt-jenny-m" name="family-member-history-aunt-jenny-m"/>
@@ -214,6 +219,7 @@
 <artifact deprecated="true" id="Example/mcode-tnm-pathological-regional-nodes-category-example-01" key="mcode-tnm-pathological-regional-nodes-category-example-01" name="mCODETNMPathologicalRegionalNodesCategoryExample01"/>
 <artifact deprecated="true" id="Example/mcode-tnm-pathological-stage-group-example-01" key="mcode-tnm-pathological-stage-group-example-01" name="mCODETNMPathologicalStageGroupExample01"/>
 <artifact deprecated="true" id="Example/mcode-tumor-marker-example-01" key="mcode-tumor-marker-example-01" name="mCODETumorMarkerExample01"/>
+<artifact id="Observation/mcode-comorbidities-elixhauser-john-anyperson" key="Observation-mcode-comorbidities-elixhauser-john-anyperson" name="mcode-comorbidities-elixhauser-john-anyperson"/>
 <artifact id="Bundle/mcode-patient-bundle-jenny-m" key="Bundle-mcode-patient-bundle-jenny-m" name="mcode-patient-bundle-jenny-m"/>
 <artifact id="OperationDefinition/mcode-patient-everything" key="OperationDefinition-mcode-patient-everything" name="mcode-patient-everything"/>
 <artifact id="CapabilityStatement/mcode-receiver-cancer-conditions-then-patients" key="CapabilityStatement-mcode-receiver-cancer-conditions-then-patients" name="mcode-receiver-cancer-conditions-then-patients"/>
@@ -227,10 +233,10 @@
 <artifact id="CapabilityStatement/mcode-sender-patients-in-group" key="CapabilityStatement-mcode-sender-patients-in-group" name="mcode-sender-patients-in-group"/>
 <artifact id="CapabilityStatement/mcode-sender-patients-with-cancer-condition" key="CapabilityStatement-mcode-sender-patients-with-cancer-condition" name="mcode-sender-patients-with-cancer-condition"/>
 <artifact id="Observation/observation-smoking-history-jenny-m" key="Observation-observation-smoking-history-jenny-m" name="observation-smoking-history-jenny-m"/>
+<artifact id="Condition/primary-cancer-condition-breast" key="Condition-primary-cancer-condition-breast" name="primary-cancer-condition-breast"/>
 <artifact id="Condition/primary-cancer-condition-jenny-m" key="Condition-primary-cancer-condition-jenny-m" name="primary-cancer-condition-jenny-m"/>
 <artifact id="Condition/primary-cancer-condition-nsclc" key="Condition-primary-cancer-condition-nsclc" name="primary-cancer-condition-nsclc"/>
 <artifact id="Condition/secondary-cancer-condition-brain-mets" key="Condition-secondary-cancer-condition-brain-mets" name="secondary-cancer-condition-brain-mets"/>
-<artifact id="Specimen/specimen-left-breast-jenny-m" key="Specimen-specimen-left-breast-jenny-m" name="specimen-left-breast-jenny-m"/>
 <artifact id="Procedure/teleradiotherapy-prescription-delivery-jenny-m" key="Procedure-teleradiotherapy-prescription-delivery-jenny-m" name="teleradiotherapy-prescription-delivery-jenny-m"/>
 <artifact id="Observation/tnm-clinical-distant-metastases-category-cM0" key="Observation-tnm-clinical-distant-metastases-category-cM0" name="tnm-clinical-distant-metastases-category-cM0"/>
 <artifact id="Observation/tnm-clinical-distant-metastases-category-jenny-m" key="Observation-tnm-clinical-distant-metastases-category-jenny-m" name="tnm-clinical-distant-metastases-category-jenny-m"/>
@@ -239,10 +245,6 @@
 <artifact id="Observation/tnm-clinical-regional-nodes-category-jenny-m" key="Observation-tnm-clinical-regional-nodes-category-jenny-m" name="tnm-clinical-regional-nodes-category-jenny-m"/>
 <artifact id="Observation/tnm-clinical-stage-group-3c" key="Observation-tnm-clinical-stage-group-3c" name="tnm-clinical-stage-group-3c"/>
 <artifact id="Observation/tnm-clinical-stage-group-jenny-m" key="Observation-tnm-clinical-stage-group-jenny-m" name="tnm-clinical-stage-group-jenny-m"/>
-<artifact id="Observation/tnm-pathological-distant-metastases-category-pM0" key="Observation-tnm-pathological-distant-metastases-category-pM0" name="tnm-pathological-distant-metastases-category-pM0"/>
-<artifact id="Observation/tnm-pathological-primary-tumor-category-pT3" key="Observation-tnm-pathological-primary-tumor-category-pT3" name="tnm-pathological-primary-tumor-category-pT3"/>
-<artifact id="Observation/tnm-pathological-regional-nodes-category-pN3" key="Observation-tnm-pathological-regional-nodes-category-pN3" name="tnm-pathological-regional-nodes-category-pN3"/>
-<artifact id="Observation/tnm-pathological-stage-group-3C" key="Observation-tnm-pathological-stage-group-3C" name="tnm-pathological-stage-group-3C"/>
 <artifact id="Observation/tnm-primary-tumor-category-jenny-m" key="Observation-tnm-primary-tumor-category-jenny-m" name="tnm-primary-tumor-category-jenny-m"/>
 <artifact id="BodyStructure/tumor-lobular-carcinoma-left-breast" key="BodyStructure-tumor-lobular-carcinoma-left-breast" name="tumor-lobular-carcinoma-left-breast"/>
 <artifact id="Observation/tumor-marker-test-egf" key="Observation-tumor-marker-test-egf" name="tumor-marker-test-egf"/>
@@ -252,6 +254,8 @@
 <artifact id="Observation/tumor-marker-test-pr-jenny-m" key="Observation-tumor-marker-test-pr-jenny-m" name="tumor-marker-test-pr-jenny-m"/>
 <artifact id="Observation/tumor-size-jenny-m" key="Observation-tumor-size-jenny-m" name="tumor-size-jenny-m"/>
 <artifact id="Observation/tumor-size-pathology" key="Observation-tumor-size-pathology" name="tumor-size-pathology"/>
+<artifact id="Specimen/tumor-specimen-left-breast-jenny-m" key="Specimen-tumor-specimen-left-breast-jenny-m" name="tumor-specimen-left-breast-jenny-m"/>
+<artifact id="Specimen/tumor-specimen-lobular-carcinoma-left-breast" key="Specimen-tumor-specimen-lobular-carcinoma-left-breast" name="tumor-specimen-lobular-carcinoma-left-breast"/>
 <artifact id="Condition/us-core-condition-anxiety-jenny-m" key="Condition-us-core-condition-anxiety-jenny-m" name="us-core-condition-anxiety-jenny-m"/>
 <artifact id="Condition/us-core-condition-depression-jenny-m" key="Condition-us-core-condition-depression-jenny-m" name="us-core-condition-depression-jenny-m"/>
 <artifact id="Condition/us-core-condition-hypertension-jenny-m" key="Condition-us-core-condition-hypertension-jenny-m" name="us-core-condition-hypertension-jenny-m"/>
@@ -264,7 +268,6 @@
 <artifact id="Organization/us-core-organization-bedrock-medicine" key="Organization-us-core-organization-bedrock-medicine" name="us-core-organization-bedrock-medicine"/>
 <artifact id="Organization/us-core-organization-physician-services-inc" key="Organization-us-core-organization-physician-services-inc" name="us-core-organization-physician-services-inc"/>
 <artifact id="Practitioner/us-core-practitioner-kyle-anydoc" key="Practitioner-us-core-practitioner-kyle-anydoc" name="us-core-practitioner-kyle-anydoc"/>
-<artifact id="Practitioner/us-core-practitioner-nancy-oncology-nurse" key="Practitioner-us-core-practitioner-nancy-oncology-nurse" name="us-core-practitioner-nancy-oncology-nurse"/>
 <artifact id="Practitioner/us-core-practitioner-owen-oncologist" key="Practitioner-us-core-practitioner-owen-oncologist" name="us-core-practitioner-owen-oncologist"/>
 <artifact id="Practitioner/us-core-practitioner-peter-pathologist" key="Practitioner-us-core-practitioner-peter-pathologist" name="us-core-practitioner-peter-pathologist"/>
 <artifact id="Procedure/us-core-procedure-biopsy-jenny-m" key="Procedure-us-core-procedure-biopsy-jenny-m" name="us-core-procedure-biopsy-jenny-m"/>
@@ -276,7 +279,7 @@
 <page key="artifacts" name="Artifacts Summary"/>
 <page deprecated="true" key="changelog" name="Change Log"/>
 <page key="change_log" name="Change log"/>
-<page key="conformance" name="Conformance"/>
+<page key="conformance-general" name="Conformance Expectations"/>
 <page key="group-disease" name="Disease Characterization"/>
 <page key="downloads" name="Downloads"/>
 <page key="examples" name="Extended Example"/>
@@ -284,10 +287,12 @@
 <page key="group-genomics" name="Genomics"/>
 <page deprecated="true" key="history" name="History"/>
 <page key="index" name="Home"/>
+<page key="conformance-patients" name="Identifying mCODE Patients"/>
 <page deprecated="true" key="implementationnotes" name="Implementation Notes"/>
 <page key="group-labvital" name="Laboratory Results and Vital Signs"/>
 <page key="group-outcome" name="Outcomes"/>
 <page key="group-patient" name="Patient Information"/>
+<page key="conformance-profiles" name="Profile Conformance"/>
 <page key="toc" name="Table of Contents"/>
 <page key="terminology" name="Terminology"/>
 <page key="group-treatment" name="Treatments"/>

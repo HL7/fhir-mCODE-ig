@@ -1,6 +1,6 @@
 /* Order of Events
 2018-03-01  MammogramDate
-2018-03-06  Initial Oncologist visit 
+2018-03-06  Initial Oncologist visit
    - Medical History
    - Family History
    - Vital Signs
@@ -114,7 +114,7 @@ Description: "Extended example: example showing family member history of cancer"
 * condition.contributedToDeath = true
 * deceasedBoolean = true
 
-Instance: cancer-related-comorbidities-elixhauser-jenny-m
+Instance: cancer-related-mcode-comorbidities-elixhauser-jenny-m
 InstanceOf: CancerRelatedComorbiditiesElixhauser
 Description: "mCODE Example for Cancer-Related Comorbidities"
 * subject = Reference(cancer-patient-jenny-m)
@@ -210,7 +210,7 @@ Description: "Extended example: example showing primary cancer condition"
 * stage.assessment = Reference(tnm-clinical-stage-group-jenny-m)
 
 Instance: tnm-clinical-stage-group-jenny-m
-InstanceOf: TNMClinicalStageGroup
+InstanceOf: TNMStageGroup
 Description: "Extended example: example showing TNM staging (stage group)"
 * status = #final "final"
 * code = LNC#21908-9 "Stage group.clinical Cancer"
@@ -223,7 +223,7 @@ Description: "Extended example: example showing TNM staging (stage group)"
 * hasMember[2] = Reference(tnm-clinical-distant-metastases-category-jenny-m)
 
 Instance: tnm-primary-tumor-category-jenny-m
-InstanceOf: TNMClinicalPrimaryTumorCategory
+InstanceOf: TNMPrimaryTumorCategory
 Description: "Extended example: example showing TNM staging (T)"
 * status = #final "final"
 * code = LNC#21905-5 "Primary tumor.clinical [Class] Cancer"
@@ -233,7 +233,7 @@ Description: "Extended example: example showing TNM staging (T)"
 * method = NCIT#C146985 "AJCC Cancer Staging Manual 8th Edition"
 
 Instance: tnm-clinical-regional-nodes-category-jenny-m
-InstanceOf: TNMClinicalRegionalNodesCategory
+InstanceOf: TNMRegionalNodesCategory
 Description: "Extended example: example showing TNM staging (N)"
 * status = #final "final"
 * code = LNC#21906-3 "Regional lymph nodes.clinical [Class] Cancer"
@@ -243,7 +243,7 @@ Description: "Extended example: example showing TNM staging (N)"
 * method = NCIT#C146985 "AJCC Cancer Staging Manual 8th Edition"
 
 Instance: tnm-clinical-distant-metastases-category-jenny-m
-InstanceOf: TNMClinicalDistantMetastasesCategory
+InstanceOf: TNMDistantMetastasesCategory
 Description: "Extended example: example showing TNM staging (M)"
 * status = #final "final"
 * code = LNC#21907-1 "Distant metastases.clinical [Class] Cancer"
@@ -345,11 +345,11 @@ Description: "Extended example: example showing partial mastectomy surgical proc
 * reasonReference = Reference(primary-cancer-condition-jenny-m)
 * bodySite = SCT#80248007 "Left breast structure (body structure)"
 
-Instance: specimen-left-breast-jenny-m
-InstanceOf: Specimen
+Instance: tumor-specimen-left-breast-jenny-m
+InstanceOf: TumorSpecimen
 Description: "Extended example: example tumor specimen"
 * status = #available "available"
-* type = http://terminology.hl7.org/CodeSystem/v2-0487#TUMOR "Tumor"
+* type = SPTY#TUMOR
 * subject = Reference(cancer-patient-jenny-m)
 * receivedTime = "2019-04-01"
 * collection.bodySite = SCT#80248007 "Left breast structure (body structure)"
@@ -366,7 +366,7 @@ Description: "Extended example: example of pathology findings represented as a D
 * subject = Reference(cancer-patient-jenny-m)
 * issued = "2018-04-05T00:00:00Z"
 * effectiveDateTime = "2018-04-01T00:00:00Z"
-* specimen = Reference(specimen-left-breast-jenny-m)
+* specimen = Reference(tumor-specimen-left-breast-jenny-m)
 * result[0] = Reference(us-core-observation-lab-tumor-invasion-jenny-m)
 * result[1] = Reference(us-core-observation-lab-tumor-margins-jenny-m)
 * result[2] = Reference(us-core-observation-lab-sentinel-nodes-jenny-m)
@@ -383,7 +383,7 @@ Description: "Extended example: example showing negative invasion for the remove
 * subject = Reference(cancer-patient-jenny-m)
 * effectiveDateTime = "2018-04-01T00:00:00Z"
 * valueCodeableConcept = SCT#260385009 "Negative (qualifier value)"
-* specimen = Reference(specimen-left-breast-jenny-m)
+* specimen = Reference(tumor-specimen-left-breast-jenny-m)
 
 Instance: us-core-observation-lab-tumor-margins-jenny-m
 InstanceOf:  USCoreObservationLab
@@ -393,7 +393,7 @@ Description: "Extended example: example showing negative margins for the removed
 * subject = Reference(cancer-patient-jenny-m)
 * effectiveDateTime = "2018-04-01T00:00:00Z"
 * valueCodeableConcept = LNC#LA27151-2 "Uninvolved by invasive carcinoma"
-* specimen = Reference(specimen-left-breast-jenny-m)
+* specimen = Reference(tumor-specimen-left-breast-jenny-m)
 
 Instance: us-core-observation-lab-sentinel-nodes-jenny-m
 InstanceOf:  USCoreObservationLab
@@ -404,7 +404,7 @@ Description: "Extended example: example showing 3 sentinel lymph nodes were exam
 * effectiveDateTime = "2018-04-01T00:00:00Z"
 * component.code = LNC#92833-3 "Lymph nodes examined [#] in Cancer specimen by Light microscopy"
 * component.valueQuantity = 3 '{Count}' "Count"
-* specimen = Reference(specimen-left-breast-jenny-m)
+* specimen = Reference(tumor-specimen-left-breast-jenny-m)
 
 Instance: tumor-size-jenny-m
 InstanceOf:  TumorSize
@@ -416,9 +416,9 @@ Description: "Extended example: example showing tumor size"
 * subject = Reference(cancer-patient-jenny-m)
 * effectiveDateTime = "2018-04-01T00:00:00Z"
 * component.code = LNC#33728-7 "Size.maximum dimension in Tumor"
-* component.valueQuantity = 2.5 'cm' 
+* component.valueQuantity = 2.5 'cm'
 * component.valueQuantity.unit = "centimeters"
-* specimen = Reference(specimen-left-breast-jenny-m)
+* specimen = Reference(tumor-specimen-left-breast-jenny-m)
 
 Instance: us-core-observation-lab-tumor-dcis
 InstanceOf:  USCoreObservationLab
@@ -428,7 +428,7 @@ Description: "Extended example: example showing DCIS diagnosis"
 * subject = Reference(cancer-patient-jenny-m)
 * effectiveDateTime = "2018-04-01T00:00:00Z"
 * valueCodeableConcept = LNC#85336-6 "DCIS intraductal extension in Breast cancer specimen Qualitative by Light microscopy"
-* specimen = Reference(specimen-left-breast-jenny-m)
+* specimen = Reference(tumor-specimen-left-breast-jenny-m)
 
 
 // 21-Gene Assay
@@ -614,7 +614,7 @@ Instance: cancer-patient-jenny-m
 InstanceOf: CancerPatient
 Description: "Extended example: example cancer patient"
 * identifier.use = #usual
-* identifier.type = http://terminology.hl7.org/CodeSystem/v2-0203#MR "Medical Record Number"
+* identifier.type = IDTYPE#MR "Medical Record Number"
 * identifier.system = "http://hospital.example.org"
 * identifier.value = "MRN1234"
 * name.family = "M"

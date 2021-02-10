@@ -11,7 +11,7 @@ Many of these changes have been taken in response to comments from the HL7 commu
 {:.new-content #GeneralChanges}
   * Capability Statements which specifies the contents for the [sender] and [receiver] of an [mCODE Patient Bundle](StructureDefinition-mcode-patient-bundle.html).
   * OperationDefinition [mcode-patient-everything] for retrieving an mCODE bundle.
-  * [Conformance](conformance.html) - Defined mCODE compliance in a testable way.
+  * [Conformance](conformance-general.html) - Defined mCODE compliance in a testable way.
 
 #### Patient
   * Elixhauser comorbities have been redesigned to further specify groupings by category.
@@ -107,7 +107,7 @@ The following are changes relative to [mCODE 0.9.0](https://mcodeinitiative.gith
 * Improved definition of onco-core-EvidenceType-extension.
 * Replaced obf-dateOfDiagnosis-extension with condition-assertedDate standard extension in PrimaryCancerCondition and SecondaryCancerCondition.
 * Added logical definition to TNM-related value sets to include all codes from AJCC staging systems.
-* Removed references to MedicationRequest on basedOn attribute for TNMClinicalPrimaryTumorCategory, TNMClinicalRegionalNodesCategory, TNMClinicalDistantMetastasesCategory, KarnofskyPerformanceStatus and ECOGPerformanceStatus.
+* Removed references to MedicationRequest on basedOn attribute for TNMPrimaryTumorCategory, TNMRegionalNodesCategory, TNMDistantMetastasesCategory, KarnofskyPerformanceStatus and ECOGPerformanceStatus.
 
 
 {% include markdown-link-references.md %}

@@ -49,7 +49,6 @@ Description: "Codes needed for positive identification of certain types of insta
 * #SCC-OTHER "Other Secondary Cancer Condition, Specify" "Code to be used when the desired concept is not represented base value set. This code represents the equivalent of 'Other, specify: _________'. Specify the additional concept as the second coding."
 * #TMT-OTHER "Other Tumor Marker Test, Specify" "Code to be used when the desired concept is not represented base value set. This code represents the equivalent of 'Other, specify: _________'. Specify the additional concept as the second coding."
 * #CD-OTHER "Other Cancer Disorder, Specify" "Code to be used when the desired concept is not represented base value set. This code represents the equivalent of 'Other, specify: _________'. Specify the additional concept as the second coding."
-* #HMB-OTHER "Other Histology Morphology Behavior, Specify" "Code to be used when the desired concept is not represented base value set. This code represents the equivalent of 'Other, specify: _________'. Specify the additional concept as the second coding."
 
 
 ValueSet: LocationQualifierVS
@@ -91,6 +90,30 @@ Description:	"The purpose of a treatment. The value set includes 'curative' and 
 * SCT#373846009 "Adjuvant"
 * SCT#129428001 "Preventive"
 */
+
+// Based on UnitsOfLengthVS, but limited to just mm and cm. In theory we could just use UnitsOfLengthVS if we don't care about restricting to just cm/mm.
+ValueSet:        TumorSizeUnitsVS
+Id:              mcode-tumor-size-units-vs
+Title:           "Units of tumor size value set"
+Description:     "Acceptable units for measuring tumor size"
+* UCUM#mm        "Millimeter"
+* UCUM#cm        "Centimeter"
+
+ValueSet:        TumorSizeMethodVS
+Id:              mcode-tumor-size-method-vs
+Title:           "Methods for measuring tumor size"
+Description:     "Code for methods of measuring tumor size, including physical examination, pathology, and imaging."
+* ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
+// Pathology
+* SCT#168455000 "Gross pathology (finding)"
+* SCT#104157003 "Light microscopy (procedure)"
+// Physical exam
+* SCT#5880005 "Physical examination procedure (procedure)"
+// Diagnostic imaging
+* SCT#363679005 "Imaging (procedure)"
+* SCT#16310003 "Diagnostic ultrasonography (procedure)"
+* SCT#113091000 "Magnetic resonance imaging (procedure)"
+* SCT#77477000 "Computerized axial tomography (procedure)"
 
 
 /* SAVE for possible future use

@@ -36,6 +36,7 @@
 <artifact deprecated="true" id="ValueSet/mcode-comorbid-condition-value-set" key="comorbid-condition-value-set" name="Comorbid Condition Value Set"/>
 <artifact id="StructureDefinition/mcode-comorbidities-parent" key="StructureDefinition-mcode-comorbidities-parent" name="Comorbidities Parent"/>
 <artifact id="ValueSet/mcode-condition-status-trend-vs" key="condition-status-trend-value-set" name="Condition Status Trend Value Set"/>
+<artifact id="StructureDefinition/mcode-condition-related" key="StructureDefinition-mcode-condition-related" name="Condition related to resource"/>
 <artifact id="ValueSet/mcode-dna-change-type-vs" key="ValueSet-mcode-dna-change-type-vs" name="DNA Change Type Value Set"/>
 <artifact id="StructureDefinition/mcode-ecog-performance-status" key="ecog-performance-status" name="ECOG Performance Status"/>
 <artifact id="ValueSet/elixhauser-alcohol-abuse-vs" key="ValueSet-elixhauser-alcohol-abuse-vs" name="Elixhauser Comorbid Condition Value Set for Alcohol Abuse"/>
@@ -151,6 +152,7 @@
 <artifact id="StructureDefinition/mcode-tumor-marker-test" key="StructureDefinition-mcode-tumor-marker-test" name="Tumor Marker Test"/>
 <artifact id="ValueSet/mcode-tumor-marker-test-vs" key="tumor-marker-test-value-set" name="Tumor Marker Test Value Set"/>
 <artifact id="StructureDefinition/mcode-tumor-size" key="StructureDefinition-mcode-tumor-size" name="Tumor Size"/>
+<artifact id="StructureDefinition/mcode-tumor-specimen" key="StructureDefinition-mcode-tumor-specimen" name="Tumor Specimen"/>
 <artifact deprecated="true" id="ValueSet/mcode-units-of-length-value-set" key="units-of-length-value-set" name="Units of Length Value Set"/>
 <artifact id="ValueSet/mcode-tumor-size-units-vs" key="ValueSet-mcode-tumor-size-units-vs" name="Units of tumor size value set"/>
 <artifact deprecated="true" key="ValueSet" name="ValueSet"/>
@@ -231,10 +233,10 @@
 <artifact id="CapabilityStatement/mcode-sender-patients-in-group" key="CapabilityStatement-mcode-sender-patients-in-group" name="mcode-sender-patients-in-group"/>
 <artifact id="CapabilityStatement/mcode-sender-patients-with-cancer-condition" key="CapabilityStatement-mcode-sender-patients-with-cancer-condition" name="mcode-sender-patients-with-cancer-condition"/>
 <artifact id="Observation/observation-smoking-history-jenny-m" key="Observation-observation-smoking-history-jenny-m" name="observation-smoking-history-jenny-m"/>
+<artifact id="Condition/primary-cancer-condition-breast" key="Condition-primary-cancer-condition-breast" name="primary-cancer-condition-breast"/>
 <artifact id="Condition/primary-cancer-condition-jenny-m" key="Condition-primary-cancer-condition-jenny-m" name="primary-cancer-condition-jenny-m"/>
 <artifact id="Condition/primary-cancer-condition-nsclc" key="Condition-primary-cancer-condition-nsclc" name="primary-cancer-condition-nsclc"/>
 <artifact id="Condition/secondary-cancer-condition-brain-mets" key="Condition-secondary-cancer-condition-brain-mets" name="secondary-cancer-condition-brain-mets"/>
-<artifact id="Specimen/specimen-left-breast-jenny-m" key="Specimen-specimen-left-breast-jenny-m" name="specimen-left-breast-jenny-m"/>
 <artifact id="Procedure/teleradiotherapy-prescription-delivery-jenny-m" key="Procedure-teleradiotherapy-prescription-delivery-jenny-m" name="teleradiotherapy-prescription-delivery-jenny-m"/>
 <artifact id="Observation/tnm-clinical-distant-metastases-category-cM0" key="Observation-tnm-clinical-distant-metastases-category-cM0" name="tnm-clinical-distant-metastases-category-cM0"/>
 <artifact id="Observation/tnm-clinical-distant-metastases-category-jenny-m" key="Observation-tnm-clinical-distant-metastases-category-jenny-m" name="tnm-clinical-distant-metastases-category-jenny-m"/>
@@ -252,6 +254,8 @@
 <artifact id="Observation/tumor-marker-test-pr-jenny-m" key="Observation-tumor-marker-test-pr-jenny-m" name="tumor-marker-test-pr-jenny-m"/>
 <artifact id="Observation/tumor-size-jenny-m" key="Observation-tumor-size-jenny-m" name="tumor-size-jenny-m"/>
 <artifact id="Observation/tumor-size-pathology" key="Observation-tumor-size-pathology" name="tumor-size-pathology"/>
+<artifact id="Specimen/tumor-specimen-left-breast-jenny-m" key="Specimen-tumor-specimen-left-breast-jenny-m" name="tumor-specimen-left-breast-jenny-m"/>
+<artifact id="Specimen/tumor-specimen-lobular-carcinoma-left-breast" key="Specimen-tumor-specimen-lobular-carcinoma-left-breast" name="tumor-specimen-lobular-carcinoma-left-breast"/>
 <artifact id="Condition/us-core-condition-anxiety-jenny-m" key="Condition-us-core-condition-anxiety-jenny-m" name="us-core-condition-anxiety-jenny-m"/>
 <artifact id="Condition/us-core-condition-depression-jenny-m" key="Condition-us-core-condition-depression-jenny-m" name="us-core-condition-depression-jenny-m"/>
 <artifact id="Condition/us-core-condition-hypertension-jenny-m" key="Condition-us-core-condition-hypertension-jenny-m" name="us-core-condition-hypertension-jenny-m"/>

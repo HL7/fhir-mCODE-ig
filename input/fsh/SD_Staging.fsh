@@ -44,6 +44,7 @@ Parent: Observation
 Title: "TNM Primary Tumor Category"
 Description: "Category of the primary tumor, based on its size and extent, based on evidence such as physical examination, imaging, and/or biopsy."
 * insert CancerStageCommonRules
+* insert NotUsed(hasMember)
 * code from ObservationCodesPrimaryTumorVS (required)
 * value[x] from TNMPrimaryTumorCategoryVS (preferred)
 
@@ -53,6 +54,7 @@ Parent: Observation
 Title: "TNM Regional Nodes Category"
 Description: "Category of the presence or absence of metastases in regional lymph nodes, based on evidence such as physical examination, imaging, and/or biopsy."
 * insert CancerStageCommonRules
+* insert NotUsed(hasMember)
 * code from ObservationCodesRegionalNodesVS (required)
 * value[x] from TNMRegionalNodesCategoryVS (preferred)
 
@@ -62,5 +64,6 @@ Parent: Observation
 Title: "TNM Distant Metastases Category"
 Description: "Category describing the extent of a tumor metastasis in remote anatomical locations, based on evidence such as physical examination, imaging, and/or biopsy."
 * insert CancerStageCommonRules
+* insert NotUsed(hasMember)
 * code from ObservationCodesDistantMetastasesVS (required)
 * value[x] from TNMDistantMetastasesCategoryVS (preferred)

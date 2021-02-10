@@ -86,7 +86,7 @@ In other words, a data element may be `1..1`, but if it is contained by an optio
 
 #### Must Support
 
-mCODE inherits the US Core interpretation of MS, in particular, the [US Core version 3.2 interpretation](http://hl7.org/fhir/us/core/2021Jan/conformance-expectations.html). Interpretation of MS is not straightforward, as the following two statements make clear:
+mCODE inherits the US Core interpretation of MS, in particular, the [US Core version 3.2 interpretation](https://hl7.org/fhir/us/core/2021jan/conformance-expectations.html). Interpretation of MS is not straightforward, as the following two statements make clear:
 
 * <span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" >S</span> does not necessarily mean the element must be supported.
 * Lack of an <span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" >S</span> does not necessarily mean the element does not have to be supported.

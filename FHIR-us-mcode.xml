@@ -156,7 +156,9 @@
 <artifact deprecated="true" id="ValueSet/mcode-units-of-length-value-set" key="units-of-length-value-set" name="Units of Length Value Set"/>
 <artifact id="ValueSet/mcode-tumor-size-units-vs" key="ValueSet-mcode-tumor-size-units-vs" name="Units of tumor size value set"/>
 <artifact deprecated="true" key="ValueSet" name="ValueSet"/>
+<artifact id="Observation/bodyheight-jenny-m-2018-03-06" key="Observation-bodyheight-jenny-m-2018-03-06" name="bodyheight-jenny-m-2018-03-06"/>
 <artifact id="Observation/bodyweight-jenny-m-2018-03-06" key="Observation-bodyweight-jenny-m-2018-03-06" name="bodyweight-jenny-m-2018-03-06"/>
+<artifact id="Observation/bodyweight-jenny-m-2019-04-22" key="Observation-bodyweight-jenny-m-2019-04-22" name="bodyweight-jenny-m-2019-04-22"/>
 <artifact id="Procedure/brachytherapy-prescription-delivery-ldr" key="Procedure-brachytherapy-prescription-delivery-ldr" name="brachytherapy-prescription-delivery-ldr"/>
 <artifact id="Observation/cancer-disease-status-improved" key="Observation-cancer-disease-status-improved" name="cancer-disease-status-improved"/>
 <artifact id="Observation/cancer-disease-status-jenny-m" key="Observation-cancer-disease-status-jenny-m" name="cancer-disease-status-jenny-m"/>
@@ -170,6 +172,7 @@
 <artifact id="Patient/cancer-patient-john-anyperson" key="Patient-cancer-patient-john-anyperson" name="cancer-patient-john-anyperson"/>
 <artifact id="Observation/cancer-related-mcode-comorbidities-elixhauser-jenny-m" key="Observation-cancer-related-mcode-comorbidities-elixhauser-jenny-m" name="cancer-related-mcode-comorbidities-elixhauser-jenny-m"/>
 <artifact id="Observation/cancer-related-mcode-comorbidities-elixhauser-john-anyperson" key="Observation-cancer-related-mcode-comorbidities-elixhauser-john-anyperson" name="cancer-related-mcode-comorbidities-elixhauser-john-anyperson"/>
+<artifact id="MedicationAdministration/cancer-related-medication-administration-doxorubicin-jenny-m" key="MedicationAdministration-cancer-related-medication-administration-doxorubicin-jenny-m" name="cancer-related-medication-administration-doxorubicin-jenny-m"/>
 <artifact id="MedicationRequest/cancer-related-medication-request-anastrozole-jenny-m" key="MedicationRequest-cancer-related-medication-request-anastrozole-jenny-m" name="cancer-related-medication-request-anastrozole-jenny-m"/>
 <artifact id="MedicationRequest/cancer-related-medication-request-cisplatin" key="MedicationRequest-cancer-related-medication-request-cisplatin" name="cancer-related-medication-request-cisplatin"/>
 <artifact id="MedicationRequest/cancer-related-medication-request-cyclophosphamide-jenny-m" key="MedicationRequest-cancer-related-medication-request-cyclophosphamide-jenny-m" name="cancer-related-medication-request-cyclophosphamide-jenny-m"/>
@@ -268,6 +271,7 @@
 <artifact id="Organization/us-core-organization-bedrock-medicine" key="Organization-us-core-organization-bedrock-medicine" name="us-core-organization-bedrock-medicine"/>
 <artifact id="Organization/us-core-organization-physician-services-inc" key="Organization-us-core-organization-physician-services-inc" name="us-core-organization-physician-services-inc"/>
 <artifact id="Practitioner/us-core-practitioner-kyle-anydoc" key="Practitioner-us-core-practitioner-kyle-anydoc" name="us-core-practitioner-kyle-anydoc"/>
+<artifact id="Practitioner/us-core-practitioner-nancy-oncology-nurse" key="Practitioner-us-core-practitioner-nancy-oncology-nurse" name="us-core-practitioner-nancy-oncology-nurse"/>
 <artifact id="Practitioner/us-core-practitioner-owen-oncologist" key="Practitioner-us-core-practitioner-owen-oncologist" name="us-core-practitioner-owen-oncologist"/>
 <artifact id="Practitioner/us-core-practitioner-peter-pathologist" key="Practitioner-us-core-practitioner-peter-pathologist" name="us-core-practitioner-peter-pathologist"/>
 <artifact id="Procedure/us-core-procedure-biopsy-jenny-m" key="Procedure-us-core-procedure-biopsy-jenny-m" name="us-core-procedure-biopsy-jenny-m"/>

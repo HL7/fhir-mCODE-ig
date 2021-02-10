@@ -16,14 +16,14 @@ Parent: Observation
 Title: "TNM Stage Group"
 Description: "The extent of the cancer in the body, according to the TNM classification system, based on evidence such as physical examination, imaging, and/or biopsy or based on pathologic analysis of a specimen."
 * insert CancerStageCommonRules
-* hasMember MS
 * code from ObservationCodesStageGroupVS (required)
 * value[x] from TNMStageGroupVS (preferred)
+* hasMember MS
 * insert ObservationHasMemberSlicingRules
 * hasMember contains
-    tnmPrimaryTumorCategory 0..1 and
-    tnmRegionalNodesCategory 0..1 and
-    tnmDistantMetastasesCategory 0..1
+    tnmPrimaryTumorCategory 0..1 MS and
+    tnmRegionalNodesCategory 0..1 MS and
+    tnmDistantMetastasesCategory 0..1 MS
 // Set metadata attributes that show up in the IG
 * hasMember[tnmPrimaryTumorCategory] only Reference(TNMPrimaryTumorCategory)
 * hasMember[tnmPrimaryTumorCategory] ^short = "TNM Primary Tumor Category"
@@ -44,6 +44,7 @@ Parent: Observation
 Title: "TNM Primary Tumor Category"
 Description: "Category of the primary tumor, based on its size and extent, based on evidence such as physical examination, imaging, and/or biopsy."
 * insert CancerStageCommonRules
+* insert NotUsed(hasMember)
 * code from ObservationCodesPrimaryTumorVS (required)
 * value[x] from TNMPrimaryTumorCategoryVS (preferred)
 
@@ -53,6 +54,7 @@ Parent: Observation
 Title: "TNM Regional Nodes Category"
 Description: "Category of the presence or absence of metastases in regional lymph nodes, based on evidence such as physical examination, imaging, and/or biopsy."
 * insert CancerStageCommonRules
+* insert NotUsed(hasMember)
 * code from ObservationCodesRegionalNodesVS (required)
 * value[x] from TNMRegionalNodesCategoryVS (preferred)
 
@@ -62,5 +64,6 @@ Parent: Observation
 Title: "TNM Distant Metastases Category"
 Description: "Category describing the extent of a tumor metastasis in remote anatomical locations, based on evidence such as physical examination, imaging, and/or biopsy."
 * insert CancerStageCommonRules
+* insert NotUsed(hasMember)
 * code from ObservationCodesDistantMetastasesVS (required)
 * value[x] from TNMDistantMetastasesCategoryVS (preferred)

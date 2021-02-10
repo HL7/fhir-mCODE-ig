@@ -12,9 +12,10 @@ RuleSet: CategorySlicingRules
 * category ^slicing.description = "Slicing requires the given value but allows additional categories"
 
 RuleSet: ObservationHasMemberSlicingRules
-* hasMember ^slicing.discriminator.type = #profile // #pattern
-* hasMember ^slicing.discriminator.path =  "$this.resolve()" // "$this.resolve().code"
-* hasMember ^slicing.rules = #open
+* hasMember ^slicing.discriminator.type = #pattern  // #profile  
+* hasMember ^slicing.discriminator.path = "$this.resolve().code" // "$this.resolve()" 
+* hasMember ^slicing.rules = #closed // this might not be general
+* hasMember ^slicing.description = "Slicing based on referenced resource code attribute."
 
 RuleSet: DiagnosticReportResultSlicingRules
 * result ^slicing.discriminator.type = #pattern
@@ -28,10 +29,10 @@ RuleSet: BundleEntrySlicingRules
 * entry ^slicing.rules = #open
 * entry ^slicing.description = "Slicing based on the profile conformance of the entry"
 
+// In some cases, this might better than using an "only" rule
 RuleSet: MustSupportOnReference(path, refNumber)
 * {path} ^type[0].targetProfile[{refNumber}].extension[0].url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
 * {path} ^type[0].targetProfile[{refNumber}].extension[0].valueBoolean = true
-
 
 /* Example of how the RuleSet is applied:
 * basedOn MS

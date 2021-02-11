@@ -16,6 +16,7 @@ Id: mcode-primary-cancer-condition
 Title: "Primary Cancer Condition"
 Parent: USCoreCondition
 Description: "Records the the primary cancer condition, the original or first tumor in the body (Definition from: [NCI Dictionary of Cancer Terms](https://www.cancer.gov/publications/dictionaries/cancer-terms/def/primary-tumor)). Cancers that are not clearly secondary (i.e., of uncertain origin or behavior) should be documented as primary."
+* . MS
 * insert CancerConditionCommonRules
 * code from PrimaryOrUncertainBehaviorCancerDisorderVS (required)
 * code obeys primary-cancer-condition-code-invariant

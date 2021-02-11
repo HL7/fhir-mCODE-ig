@@ -8,7 +8,7 @@ Two roles for **mCODE Participants** are defined:
 * **mCODE Data Sender** - a participant in exchange of mCODE data who provides mCODE data in response to a data query or autonomously pushes mCODE data to an mCODE receiver. The data sender does not have to be the originator of the data it possesses. The data sender role is similar to a [US Core Responder](https://www.hl7.org/fhir/us/core/#us-core-actors), except the data sent is not assumed to be a response to a query.
 * **mCODE Data Receiver** - a participant in exchange of mCODE data who accepts mCODE data from an mCODE Data Sender. The data receiver may receive data as part of a predetermined workflow, or initiate the exchange via a query or on a regular basis via subscription. The receiver role is similar to a [US Core Requestor](https://www.hl7.org/fhir/us/core/#us-core-actors), except the data does not have to be explicitly requested.
 
-This IG currenty only provides CapabilityStatements and documentation for "pull" (query-response) architectures, however, regardless how exchanges occur, all participants MUST follow the conformance requirements in this IG, **except** those specifically identified as applying only to pull architectures.
+This IG currently only provides CapabilityStatements and documentation for "pull" (query-response) architectures, however, regardless how exchanges occur, all participants MUST follow the conformance requirements in this IG, **except** those specifically identified as applying only to pull architectures.
 
 ### "MUST" Requirements for Conformance
 
@@ -99,4 +99,3 @@ Profile search and population of `meta.profile` originate as "SHALL" requirement
 * [mcode-patient-everything]
 
 {% include markdown-link-references.md %}
-

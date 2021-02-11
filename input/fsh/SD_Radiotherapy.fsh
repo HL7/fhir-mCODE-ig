@@ -86,7 +86,7 @@ Title:    "Radiotherapy Modality"
 Description: "Extension capturing a modality of external beam or brachytherapy radiation procedures."
 * insert ExtensionContext(Procedure)
 * value[x] only CodeableConcept
-* value[x] from RadiotherapyModalityVS
+* value[x] from RadiotherapyModalityVS (required)
 
 Extension: RadiotherapyTechnique
 Id:        mcode-radiotherapy-technique
@@ -94,7 +94,7 @@ Title:     "Radiotherapy Modality"
 Description: "Extension capturing a technique of external beam or brachytherapy radiation procedures."
 * insert ExtensionContext(Procedure)
 * value[x] only CodeableConcept
-* value[x] from RadiotherapyTechniqueVS
+* value[x] from RadiotherapyTechniqueVS (extensible)
 
 Extension: RadiotherapyDoseDeliveredToVolume
 Id: mcode-radiotherapy-dose-delivered-to-volume

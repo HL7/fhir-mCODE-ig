@@ -546,8 +546,9 @@ Instance: teleradiotherapy-prescription-delivery-jenny-m
 InstanceOf: TeleradiotherapyPrescriptionDelivery
 Description: "Extended example: example showing radiation treatment"
 * status = #completed "completed"
-* code = RO#PHOTON "Photon Beam Radiation Therapy"
-* extension[radiotherapyTechnique].valueCodeableConcept = RO#3D "Three Dimensional"
+* code = RO#EBRT
+* extension[modality].valueCodeableConcept = RO#PHOTON "Photon Beam Radiation Therapy"
+* extension[technique].valueCodeableConcept = RO#3D "Three Dimensional"
 * extension[doseDelivered].extension[targetVolume].valueString = "Left breast PTV-1"
 * extension[doseDelivered].extension[dosePerFraction].valueQuantity = 200 'cGy'
 * extension[doseDelivered].extension[prescribedFractions].valuePositiveInt = 25

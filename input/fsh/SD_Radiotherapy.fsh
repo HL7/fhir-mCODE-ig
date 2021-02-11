@@ -1,40 +1,57 @@
+RuleSet: RadiotherapySummaryCommon
+* category 1.. MS
+* category = SCT#108290001 // "Radiation oncology AND/OR radiotherapy (procedure)"
+* performed[x] only Period
+* extension contains
+    TreatmentIntent named treatmentIntent 0..1 MS and
+    TreatmentTerminationReason named terminationReason 0..1 MS and
+    RadiotherapyModality named modality 0..* MS and
+    RadiotherapyTechnique named technique 0..* MS and
+    RadiotherapyDoseDeliveredToVolume named doseDelivered 0..* MS
+* extension and category MS
+
+RuleSet: RadiotherapyPrescriptionCommon
+* insert RadiotherapySummaryCommon
+* extension[modality] 0..1
+* extension[technique] 0..1
+* partOf only Reference(RadiotherapyTherapySummary)
+* partOf ^definition = "The partOf element, if present, MUST reference a RadiotherapyTherapySummary-conforming Procedure resource."
+* insert NotUsed(bodySite)
+* bodySite ^definition = "The target volumes at the prescription-delivery level are too complex to be described by typical codes. Instead, enter a text description of the treatment volume in the RadiotherapyDoseDeliveredToVolume.targetVolume extension."
+
+
 // ------------- Overall Treatment Summary -----------------
 Profile:  RadiotherapyTherapySummary
 Parent:   USCoreProcedure  // considered one procedure with multiple parts
 Id:       mcode-radiotherapy-therapy-summary
 Title:    "Radiotherapy Therapy Summary"
 Description: "A summary of radiotherapy delivered to a patient. Whenever new contributions in the scope of the same treatment are delivered, this resource is updated. One therapy can involve multiple prescriptions. The status is changed to complete when the course has been fully delivered or changed to stopped if terminated. To describe the treatment in more detail, use either TeleradiotherapyPrescriptionDelivery or BrachytherapyPrescriptionDelivery, which can reference this summary through the partOf element."
-* category 1.. 
-* category = SCT#108290001 // "Radiation oncology AND/OR radiotherapy (procedure)"
+* insert RadiotherapySummaryCommon
+// Summary-specific
+* code = RO#SUMMARY
+* extension[modality].value[x] from RadiotherapyModalityVS (required)
+* extension[technique].value[x] from RadiotherapyTechniqueVS (extensible)
 * bodySite from RadiationTargetBodySiteVS (extensible)
 * bodySite.extension contains
     LocationQualifier named locationQualifier 0..1
-* bodySite ^definition = "The high level description of the body site where the treatment was directed, based on Commission on Cancer’s 'Standards for Oncology Registry Entry  - STORE 2018' "    
-// Procedure.code could potentially be changed to SCT#108290001
-* code = RO#SUMMARY
-* performed[x] only Period or dateTime
-* extension contains 
-    TreatmentIntent named treatmentIntent 0..1 MS and
-    TreatmentTerminationReason named terminationReason 0..1 MS and
-    RadiotherapyModality named modality 0..* MS and
-    RadiotherapyTechnique named technique 0..* MS and
-    RadiotherapyDoseDeliveredToVolume named doseDelivered 0..* MS
-* extension and category and bodySite and bodySite.extension[locationQualifier] MS
+* bodySite ^definition = "The high level description of the body site where the treatment was directed, based on Commission on Cancer’s 'Standards for Oncology Registry Entry  - STORE 2018' " 
+* bodySite and bodySite.extension[locationQualifier] MS  
 
-//---------- Profiles and extensions at the detailed, prescription level----------------
 
 Profile:  TeleradiotherapyPrescriptionDelivery
 Parent:   USCoreProcedure
 Id:       mcode-teleradiotherapy-prescription-delivery
 Title: "Teleradiotherapy Prescription Delivery"
 Description: "A summary of delivered teleradiotherapy treatment. The scope is a prescription consisting of one or multiple Fractions. A prescription delivery instance should end when there is a change in the target volume of a body site, treatment fraction size, modality, or treatment technique."
-* insert PrescriptionDeliveryCommon
+* insert RadiotherapyPrescriptionCommon
 // Teleradiotherapy specific:
-* code from TeleradiotherapyModalityVS (required)
-* code ^definition = "The modality (radiation type) for the external beam procedure."
-* extension[radiotherapyTechnique].value[x] from TeleradiotherapyTechniqueVS (extensible)
-* extension[radiotherapyTechnique] ^short = "Radiotherapy Technique"
-* extension[radiotherapyTechnique] ^definition = "The method by which a radiation modality is applied (e.g., intensity modulated radiation therapy, intraoperative radiation therapy)."
+* code = RO#EBRT
+* extension[modality].value[x] from TeleradiotherapyModalityVS (required)
+* extension[modality] ^short = "Teleradiotherapy (EBRT) Modality"
+* extension[modality]  ^definition = "The modality (radiation type) for the external beam radiation therapy."
+* extension[technique].value[x] from TeleradiotherapyTechniqueVS (extensible)
+* extension[technique] ^short = "Teleradiotherapy (EBRT) Technique"
+* extension[technique] ^definition = "The method by which a radiation modality is applied (e.g., intensity modulated radiation therapy, intraoperative radiation therapy)."
 * usedCode from TeleradiotherapyDeviceVS (extensible)
 
 
@@ -43,31 +60,17 @@ Parent:   USCoreProcedure
 Id:       mcode-brachytherapy-prescription-delivery
 Title:    "Brachytherapy Prescription Delivery"
 Description: "A summary of delivered brachytherapy treatment. The scope is a prescription consisting of one or multiple fractions. A new prescription delivery begins when there is a change in the target volume of a body site, treatment fraction size, modality, or treatment technique."
-* insert PrescriptionDeliveryCommon
+* insert RadiotherapyPrescriptionCommon
 // Specific to Brachytherapy:
-* code from BrachytherapyModalityVS (required)
-* code ^definition = "The modality for the Brachytherapy procedure."
-* extension[radiotherapyTechnique].value[x] from BrachytherapyTechniqueVS (extensible)
-* extension[radiotherapyTechnique] ^short = "Brachytherapy Technique"
-* extension[radiotherapyTechnique] ^definition = "The method by which the brachytherapy modality is applied."
-* extension[radiotherapyTechnique].value[x] from BrachytherapyTechniqueVS (extensible)
+* code = RO#BRACHY
+* extension[modality].value[x] from  BrachytherapyModalityVS (required)
+* extension[modality] ^short = "Brachytherapy Modality"
+* extension[modality] ^definition = "The modality for the Brachytherapy procedure."
+* extension[technique].value[x] from BrachytherapyTechniqueVS (extensible)
+* extension[technique] ^short = "Brachytherapy Technique"
+* extension[technique] ^definition = "The method by which the brachytherapy modality is applied."
 * usedCode from BrachytherapyDeviceVS (extensible)
 * focalDevice.manipulated only Reference(BrachytherapyImplantableDevice)
-
-
-RuleSet: PrescriptionDeliveryCommon
-* category 1.. MS
-* category = SCT#108290001 // "Radiation oncology AND/OR radiotherapy (procedure)"
-* insert NotUsed(bodySite)
-* bodySite ^definition = "The target volumes at the prescription-delivery level are too complex to be described by typical codes. Instead, enter a text description of the treatment volume in the RadiotherapyDoseDeliveredToVolume.targetVolume extension."
-* partOf only Reference(RadiotherapyTherapySummary)
-* partOf ^definition = "The partOf element, if present, MUST reference a RadiotherapyTherapySummary-conforming Procedure resource."
-// Modality goes into Procedure.code
-* code ^short = "Modality"
-* extension MS
-* extension contains
-    procedure-method named radiotherapyTechnique 0..1 MS and
-    RadiotherapyDoseDeliveredToVolume named doseDelivered 0..* MS
 
 
 Profile: BrachytherapyImplantableDevice
@@ -86,7 +89,6 @@ Title:    "Radiotherapy Modality"
 Description: "Extension capturing a modality of external beam or brachytherapy radiation procedures."
 * insert ExtensionContext(Procedure)
 * value[x] only CodeableConcept
-* value[x] from RadiotherapyModalityVS (required)
 
 Extension: RadiotherapyTechnique
 Id:        mcode-radiotherapy-technique
@@ -94,7 +96,6 @@ Title:     "Radiotherapy Modality"
 Description: "Extension capturing a technique of external beam or brachytherapy radiation procedures."
 * insert ExtensionContext(Procedure)
 * value[x] only CodeableConcept
-* value[x] from RadiotherapyTechniqueVS (extensible)
 
 Extension: RadiotherapyDoseDeliveredToVolume
 Id: mcode-radiotherapy-dose-delivered-to-volume

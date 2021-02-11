@@ -548,17 +548,17 @@ Description: "Extended example: example showing radiation treatment"
 * status = #completed "completed"
 * code = RO#PHOTON "Photon Beam Radiation Therapy"
 * extension[radiotherapyTechnique].valueCodeableConcept = RO#3D "Three Dimensional"
-* extension[radiotherapyDosePerFraction].valueQuantity = 200 'cGy'
-* extension[radiotherapyPrescribedFractions].valuePositiveInt = 25
-* extension[radiotherapyDeliveredFractions].valueUnsignedInt = 25
-* extension[radiotherapyTotalDosePlanned].valueQuantity = 5000 'cGy'
-* extension[radiotherapyTotalDoseDelivered].valueQuantity = 5000 'cGy'
+* extension[doseDelivered].extension[targetVolume].valueString = "Left breast PTV-1"
+* extension[doseDelivered].extension[dosePerFraction].valueQuantity = 200 'cGy'
+* extension[doseDelivered].extension[prescribedFractions].valuePositiveInt = 25
+* extension[doseDelivered].extension[deliveredFractions].valueUnsignedInt = 25
+* extension[doseDelivered].extension[totalDoseDelivered].valueQuantity = 5000 'cGy' "Centigray"
 * subject = Reference(cancer-patient-jenny-m)
 * performedPeriod.start = "2018-05-01"
 * performedPeriod.end = "2018-06-22"
 * asserter = Reference(us-core-practitioner-owen-oncologist)
 * reasonReference = Reference(primary-cancer-condition-jenny-m)
-* bodySite = SCT#80248007 "Left breast structure (body structure)"
+//* bodySite = SCT#80248007 "Left breast structure (body structure)"
 
 Instance: cancer-related-medication-request-anastrozole-jenny-m
 InstanceOf: CancerRelatedMedicationRequest

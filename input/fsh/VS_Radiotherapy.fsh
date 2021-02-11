@@ -3,9 +3,9 @@ Alias: RO = http://hl7.org/fhir/us/mcode/CodeSystem/mcode-radiotherapy-cs
 //----------- MODALITIES -----------------------
 
 ValueSet:  TeleradiotherapyModalityVS
-Id: teleradiotherapy-modality-vs
+Id: mcode-teleradiotherapy-modality-vs
 Title: "Teleradiotherapy Modality Value Set"
-Description: "Codes describing the modalities of teleradiotherapy (external beam) procedures."
+Description: "Codes describing the modalities of teleradiotherapy (external beam) procedures. This value set is considered closed (not extensible on ad hoc basis by the implementer)."
 * RO#PROTON
 * RO#ELECTRON
 * RO#NEUTRON
@@ -13,21 +13,28 @@ Description: "Codes describing the modalities of teleradiotherapy (external beam
 * RO#PHOTON
 
 ValueSet: BrachytherapyModalityVS
-Id: brachytherapy-modality-vs
+Id: mcode-brachytherapy-modality-vs
 Title: "Brachytherapy Modality Value Set"
-Description: "Codes describing the modalities of brachytherapy (internal radiation) procedures."
+Description: "Codes describing the modalities of brachytherapy procedures. This value set is considered closed (not extensible on ad hoc basis by the implementer)."
 * RO#LDR
 * RO#PDR
 * RO#HDR
 * RO#ELEC
 * RO#PHARM
 
+ValueSet: RadiotherapyModalityVS
+Id: mcode-radiotherapy-modality-vs
+Title: "Radiotherapy Modality Value Set"
+Description: "Codes describing the modalities of external beam and brachytherapy radiation procedures."
+* include codes from valueset TeleradiotherapyModalityVS
+* include codes from valueset BrachytherapyModalityVS
+
 //----------- TECHNIQUES -----------------------
 
 ValueSet: TeleradiotherapyTechniqueVS
-Id: teleradiotherapy-technique-vs
+Id: mcode-teleradiotherapy-technique-vs
 Title: "Teleradiotherapy Technique Value Set"
-Description: "Codes describing the techniques of teleradiotherapy (external beam) procedures."
+Description: "Codes describing the techniques of teleradiotherapy (external beam) procedures. This vallue set is considered extensible."
 * RO#IMRT
 * RO#VMAT
 * RO#3D
@@ -41,9 +48,9 @@ Description: "Codes describing the techniques of teleradiotherapy (external beam
 * RO#NCT
 
 ValueSet: BrachytherapyTechniqueVS
-Id: brachytherapy-technique-vs
+Id: mcode-brachytherapy-technique-vs
 Title: "Brachytherapy Technique Value Set"
-Description: "Codes describing the techniques of brachytherapy (internal radiation) procedures."
+Description: "Codes describing the techniques of brachytherapy (internal or surface radiation) procedures. This vallue set is considered extensible."
 * RO#CAV
 * RO#CAV-IMB
 * RO#INSTIT
@@ -56,10 +63,17 @@ Description: "Codes describing the techniques of brachytherapy (internal radiati
 * RO#SURF-TEMP
 * RO#ORAL
 
+ValueSet: RadiotherapyTechniqueVS
+Id: mcode-radiotherapy-technique-vs
+Title: "Radiotherapy Technique Value Set"
+Description: "Codes describing the techniques of external beam and brachytherapy radiation procedures."
+* include codes from valueset TeleradiotherapyTechniqueVS
+* include codes from valueset BrachytherapyTechniqueVS
+
 //----------- DEVICES -----------------------
 
 ValueSet: TeleradiotherapyDeviceVS
-Id: teleradiotherapy-device-vs
+Id: mcode-teleradiotherapy-device-vs
 Title: "Teleradiotherapy Device Value Set"
 Description: "Codes describing the devices used in teleradiotherapy (external beam) procedures."
 * RO#LINAC
@@ -72,9 +86,9 @@ Description: "Codes describing the devices used in teleradiotherapy (external be
 * RO#MULTI
 
 ValueSet: BrachytherapyDeviceVS
-Id: brachytherapy-device-vs
+Id: mcode-brachytherapy-device-vs
 Title: "Brachytherapy Device Value Set"
-Description: "Codes describing the devices used in brachytherapy (internal radiation) procedures."
+Description: "Codes describing the devices used in brachytherapy (internal or surface radiation) procedures."
 * RO#TANDEM
 * RO#CYL
 * RO#OVOID
@@ -90,9 +104,9 @@ Description: "Codes describing the devices used in brachytherapy (internal radia
 CodeSystem: RadiotherapyCS
 Id: mcode-radiotherapy-cs
 Title: "Radiotherapy Code System"
-Description: "Codes describing the modalities, techniques, and devices used in external beam radiotherapy and brachytherapy (internal radiation) procedures."
-//-- Code for Radiotherapy Course Summary -- should ask for a LOINC code
-* #COURSE-SUMMARY "Radiotherapy Course Summary" "Identifying code for an observation that summarizes a course of radiotherapy treatment. A course of treatment may contain multiple teleradiotherapy and/or brachytherapy prescriptions, embracing multiple modalities and techniques, and multiple body sites."
+Description: "Codes describing the modalities, techniques, and devices used in external beam radiotherapy and brachytherapy procedures."
+//-- Code for Radiotherapy Therapy Summary -- should ask for a LOINC code
+* #SUMMARY "Radiotherapy Course Summary" "Identifying code for an observation that summarizes a course of radiotherapy treatment. A course of treatment may contain multiple teleradiotherapy and/or brachytherapy prescriptions, embracing multiple modalities and techniques, and multiple body sites."
 //-- Teleradiotherapy Modalities
 * #PROTON "Proton Beam Radiation Therapy" "A type of external beam radiation therapy using a beam of proton particles." 
 * #ELECTRON "Electron Beam Radiation Therapy"  "Radiation therapy using electron (beta particle) beam."
@@ -100,10 +114,10 @@ Description: "Codes describing the modalities, techniques, and devices used in e
 * #CARBON  "Carbon Ion Beam Radiation Therapy"  "Ion beam radiation therapy that uses charged carbon particle. Compared to proton beam therapy, the larger mass of carbon results in decreased beam scattering, yielding a sharper dose distribution border with minimal penumbra and two to three times the relative biological effect. [NCI]"
 * #PHOTON "Photon Beam Radiation Therapy" "Radiation therapy that uses photons (electromagnetic radiation) to treat tumors, including gamma rays and x-rays."
 //-- Brachytherapy Modalities
-* #LDR "Low-Dose Rate Brachytherapy" "Internal radiation treatment that targets a cancerous tissue with low doses of radiation through the use of inserted temporary or permanent implants. [NCI]"
-* #PDR "Pulsed-Dose Rate Brachytherapy" "Internal radiation using a stronger radiation source than low-dose rate brachytherapy and producing series of short exposures of 10 to 30 minutes in every hour."
-* #HDR  "High dose brachytherapy" "Internal radiation treatment that targets a cancerous tissue with accurate, high doses of radiation through the use of inserted temporary implants."
-* #ELEC "High dose rate electronic brachytherapy" "A modality of internal radiation that uses miniaturized X-ray sources instead of radionuclides to deliver high doses of radiation."
+* #LDR "Low-Dose Rate Brachytherapy" "Internal or surface radiation treatment that targets a cancerous tissue with low doses of radiation through the use of inserted temporary or permanent implants. [NCI]"
+* #PDR "Pulsed-Dose Rate Brachytherapy" "Internal or surface radiation using a stronger radiation source than low-dose rate brachytherapy and producing series of short exposures of 10 to 30 minutes in every hour."
+* #HDR  "High dose brachytherapy" "Internal or surface radiation treatment that targets a cancerous tissue with accurate, high doses of radiation through the use of inserted temporary implants."
+* #ELEC "High dose rate electronic brachytherapy" "A modality of internal or surface radiation that uses miniaturized X-ray sources instead of radionuclides to deliver high doses of radiation."
 * #PHARM "Radiopharmaceutical therapy" "The use of radioactive drugs that can be given by mouth or injected."
 //-- Teleradiotherapy Techniques
 * #IMRT "Intensity Modulated Radiation Therapy" "A technique of high-precision radiotherapy that uses computer control to deliver precise radiation doses that conform to a three-dimensional (3-D) shape by modulating the intensity of the radiation beam in multiple small volumes."

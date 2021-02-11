@@ -6,8 +6,8 @@
 </style>
 
 <!-- mCODE Profiles and Extensions -->
-[BrachytherapyImplantableDevice]: StructureDefinition-brachytherapy-implantable-device.html
-[BrachytherapyPrescriptionDelivery]: StructureDefinition-brachytherapy-prescription-delivery.html
+[BrachytherapyImplantableDevice]: StructureDefinition-mcode-brachytherapy-implantable-device.html
+[BrachytherapyPrescriptionDelivery]: StructureDefinition-mcode-brachytherapy-prescription-delivery.html
 [CancerDiseaseStatus]: StructureDefinition-mcode-cancer-disease-status.html
 [CancerGeneticVariant]: StructureDefinition-mcode-cancer-genetic-variant.html
 [CancerGenomicsReport]: StructureDefinition-mcode-cancer-genomics-report.html
@@ -30,33 +30,28 @@
 [MCODEPatientBundle]: StructureDefinition-mcode-patient-bundle.html
 [CapabilityStatement]: StructureDefinition-CapabilityStatement.html
 [PrimaryCancerCondition]: StructureDefinition-mcode-primary-cancer-condition.html
-[RadiotherapyCourseSummary]: StructureDefinition-mcode-radiotherapy-course-summary.html
-[RadiotherapyDosePerFraction]: StructureDefinition-mcode-radiotherapy-dose-per-fraction.html
-[RadiotherapyPrescribedFractions]: StructureDefinition-mcode-radiotherapy-prescribed-fractions.html
-[RadiotherapyDeliveredFractions]: StructureDefinition-mcode-radiotherapy-delivered-fractions.html
-[RadiotherapyTotalDosePlanned]: StructureDefinition-mcode-radiotherapy-total-dose-planned.html
-[RadiotherapyTotalDoseDelivered]: StructureDefinition-mcode-radiotherapy-total-dose-delivered.html
+[RadiotherapyTherapySummary]: StructureDefinition-mcode-radiotherapy-therapy-summary.html
+[RadiotherapyDoseDeliveredToVolume]: StructureDefinition-mcode-radiotherapy-dose-delivered-to-volume.html
+[RadiotherapyModality]: StructureDefinition-mcode-radiotherapy-modality.html
+[RadiotherapyTechnique]: StructureDefinition-mcode-radiotherapy-technique.html
 [RelatedPrimaryCancerCondition]: StructureDefinition-mcode-related-primary-cancer-condition.html
 [SecondaryCancerCondition]: StructureDefinition-mcode-secondary-cancer-condition.html
-[TeleradiotherapyPrescriptionDelivery]: StructureDefinition-teleradiotherapy-prescription-delivery.html
+[TeleradiotherapyPrescriptionDelivery]: StructureDefinition-mcode-teleradiotherapy-prescription-delivery.html
 [TNMDistantMetastasesCategory]: StructureDefinition-mcode-tnm-distant-metastases-category.html
 [TNMPrimaryTumorCategory]: StructureDefinition-mcode-tnm-primary-tumor-category.html
 [TNMRegionalNodesCategory]: StructureDefinition-mcode-tnm-regional-nodes-category.html
 [TNMStageGroup]: StructureDefinition-mcode-tnm-stage-group.html
-[TerminationReason]: StructureDefinition-mcode-termination-reason.html
+[TreatmentTerminationReason]: StructureDefinition-mcode-treatment-termination-reason.html
 [TreatmentIntent]: StructureDefinition-mcode-treatment-intent.html
 [TumorMarkerTest]: StructureDefinition-mcode-tumor-marker-test.html
 [TumorSize]: StructureDefinition-mcode-tumor-size.html
 [Tumor]: StructureDefinition-mcode-tumor.html
 [TumorSpecimen]: StructureDefinition-mcode-tumor-specimen.html
-[MultifocalTumor]: StructureDefinition-mcode-multifocal-tumor.html
 
 <!-- mCODE Value Sets -->
-[BrachytherapyModalityVS]: ValueSet-brachytherapy-modality-vs.html
-[BrachytherapyTechiqueVS]: ValueSet-brachytherapy-technique-vs.html
-[BrachytherapyDeviceVS]: ValueSet-brachytherapy-device-vs.html
-[CTCAEGradeVS]: ValueSet-ctcae-grade-value-set.html
-[CTCAEPreferredTermVS]: ValueSet-ctcae-preferred-term-value-set.html
+[BrachytherapyModalityVS]: ValueSet-mcode-brachytherapy-modality-vs.html
+[BrachytherapyTechniqueVS]: ValueSet-mcode-brachytherapy-technique-vs.html
+[BrachytherapyDeviceVS]: ValueSet-mcode-brachytherapy-device-vs.html
 [CancerBodyLocationVS]: ValueSet-mcode-cancer-body-location-vs.html
 [CancerDiseaseStatusEvidenceTypeVS]: ValueSet-mcode-cancer-disease-status-evidence-type-vs.html
 [CancerDisorderVS]: ValueSet-mcode-cancer-disorder-vs.html
@@ -117,9 +112,9 @@
 [PrimaryOrUncertainBehaviorCancerDisorderVS]: ValueSet-mcode-primary-or-uncertain-behavior-cancer-disorder-vs.html
 [RadiationTargetBodySiteVS]: ValueSet-mcode-radiation-target-body-site-vs.html
 [SecondaryCancerDisorderVS]: ValueSet-mcode-secondary-cancer-disorder-vs.html
-[TeleradiotherapyModalityVS]: ValueSet-teleradiotherapy-modality-vs.html
-[TeleradiotherapyTechniqueVS]: ValueSet-teleradiotherapy-technique-vs.html
-[TeleradiotherapyDeviceVS]: ValueSet-teleradiotherapy-device-vs.html
+[TeleradiotherapyModalityVS]: ValueSet-mcode-teleradiotherapy-modality-vs.html
+[TeleradiotherapyTechniqueVS]: ValueSet-mcode-teleradiotherapy-technique-vs.html
+[TeleradiotherapyDeviceVS]: ValueSet-mcode-teleradiotherapy-device-vs.html
 [TNMDistantMetastasesCategoryVS]: ValueSet-mcode-tnm-distant-metastases-category-vs.html
 [TNMPrimaryTumorCategoryVS]: ValueSet-mcode-tnm-primary-tumor-category-vs.html
 [TNMRegionalNodesCategoryVS]: ValueSet-mcode-tnm-regional-nodes-category-vs.html

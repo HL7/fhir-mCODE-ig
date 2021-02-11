@@ -20,21 +20,19 @@ A radiology work group convened under [CodeX FHIR Accelerator](https://confluenc
 * [CancerRelatedMedicationAdministration]
 * [CancerRelatedSurgicalProcedure]
 * **Radiotherapy**
+  * [RadiotherapyTherapySummary]
   * [BrachytherapyPrescriptionDelivery]
   * [TeleradiotherapyPrescriptionDelivery]
-  * [RadiotherapyCourseSummary]
   * [BrachytherapyImplantableDevice]
 
 ### Extensions
 
-* [TerminationReason]
+* [TreatmentTerminationReason]
 * [TreatmentIntent]
 * **Radiotherapy**
-  * [RadiotherapyDosePerFraction]
-  * [RadiotherapyPrescribedFractions]
-  * [RadiotherapyDeliveredFractions]
-  * [RadiotherapyTotalDosePlanned]
-  * [RadiotherapyTotalDoseDelivered]
+  * [RadiotherapyModality]
+  * [RadiotherapyTechnique]
+  * [RadiotherapyDoseDeliveredToVolume]
 
 ### Value Sets
 
@@ -43,7 +41,7 @@ A radiology work group convened under [CodeX FHIR Accelerator](https://confluenc
 * [CancerRelatedSurgicalProcedureVS]
 * **Radiotherapy**
   * [BrachytherapyModalityVS]
-  * [BrachytherapyTechiqueVS]
+  * [BrachytherapyTechniqueVS]
   * [BrachytherapyDeviceVS]
   * [TeleradiotherapyModalityVS]
   * [TeleradiotherapyTechniqueVS]  

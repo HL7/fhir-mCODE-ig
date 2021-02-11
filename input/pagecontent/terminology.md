@@ -69,7 +69,7 @@ Finally, the "catch code" code system was established as a way to know, positive
 ### Value Sets Defined
 
 * [BrachytherapyModalityVS]
-* [BrachytherapyTechiqueVS]
+* [BrachytherapyTechniqueVS]
 * [BrachytherapyDeviceVS]
 * [CancerBodyLocationVS]
 * [CancerDiseaseStatusEvidenceTypeVS]

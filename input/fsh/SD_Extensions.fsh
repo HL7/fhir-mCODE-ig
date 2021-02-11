@@ -44,8 +44,8 @@ Description: "Qualifier to refine the anatomical location. These include qualifi
 * value[x] only CodeableConcept
 * value[x] from LocationQualifierVS (required)
 
-Extension: TerminationReason
-Id: mcode-termination-reason
+Extension: TreatmentTerminationReason
+Id: mcode-treatment-termination-reason
 Title: "Termination Reason"
 Description: "A code explaining an unplanned or premature termination of a plan of treatment, course of medication, or research study."
 * insert ExtensionContext(MedicationRequest)

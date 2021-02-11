@@ -86,14 +86,18 @@ In other words, a data element may be `1..1`, but if it is contained by an optio
 
 #### Must Support
 
-mCODE inherits the US Core interpretation of MS, in particular, the [US Core version 3.2 interpretation](https://hl7.org/fhir/us/core/2021jan/conformance-expectations.html). Interpretation of MS is not straightforward, as the following two statements make clear:
+mCODE inherits the US Core interpretation of MS, in particular, the more detailed [US Core version 3.2 interpretation](https://hl7.org/fhir/us/core/2021jan/conformance-expectations.html). Interpretation of MS is not straightforward, as the following two statements make clear:
 
 * <span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" >S</span> does not necessarily mean the element must be supported.
 * Lack of an <span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" >S</span> does not necessarily mean the element does not have to be supported.
 
 Regarding the first point, an element marked with an <span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" >S</span> in a profile does **not** have to be supported if it is nested and any one of the elements directly containing that element does **not** have an <span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" >S</span> flag. There is also the case of an element whose cardinality is 0..0 and yet has an <span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" >S</span> flag, which again does not require support [^1]. 
 
-Regarding the second point, a required element must be supported by a Data Sender, regardless of the presence or absence of an <span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" >S</span> flag. On the other hand, the same element does not have to be supported by the Data Receiver [^2].  
+Regarding the second point, a required element must be supported by a Data Sender, regardless of the presence or absence of an <span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" >S</span> flag. On the other hand, the same element does not have to be supported by the Data Receiver [^2].
+
+#### Non-Must Support Elements
+
+Data elements in mCODE that do not *have to be* supported still MAY be supported. If an element that MAY be supported is supported, the implementation of that element MUST conform to the profile. Moreover, any data element that would reasonably be expected to conform to an mCODE data element SHOULD conform to that element.
 
 ##### Viewing Must Support Flags
 To see which elements have <span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" >S</span> flags, consult the "Snapshot Table" view of the profile. The "Differential Table" view hides <span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" >S</span> flags inherited from the parent profile. The "Snapshot Table (Must Support)" view reflects the IG Publisher's interpretation of how <span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" >S</span> flags translate to support requirements, which may or may not coincide with the US Core/mCODE interpretation.

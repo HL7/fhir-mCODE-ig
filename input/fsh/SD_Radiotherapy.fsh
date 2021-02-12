@@ -24,7 +24,7 @@ RuleSet: RadiotherapyPrescriptionCommon
 Profile:  RadiotherapySummary
 Parent:   USCoreProcedure  // considered one procedure with multiple parts
 Id:       mcode-radiotherapy-summary
-Title:    "Radiotherapy Therapy Summary"
+Title:    "Radiotherapy Summary"
 Description: "A summary of radiotherapy delivered to a patient. Whenever new contributions in the scope of the same treatment are delivered, this resource is updated. One therapy can involve multiple prescriptions. The status is changed to complete when the course has been fully delivered or changed to stopped if terminated. To describe the treatment in more detail, use either TeleradiotherapyPrescriptionDelivery or BrachytherapyPrescriptionDelivery, which can reference this summary through the partOf element."
 * insert RadiotherapySummaryCommon
 // Summary-specific

@@ -113,7 +113,7 @@
 <artifact id="StructureDefinition/mcode-radiotherapy-technique" key="StructureDefinition-mcode-radiotherapy-technique" name="Radiotherapy Modality"/>
 <artifact id="ValueSet/mcode-radiotherapy-modality-vs" key="ValueSet-mcode-radiotherapy-modality-vs" name="Radiotherapy Modality Value Set"/>
 <artifact id="ValueSet/mcode-radiotherapy-technique-vs" key="ValueSet-mcode-radiotherapy-technique-vs" name="Radiotherapy Technique Value Set"/>
-<artifact id="StructureDefinition/mcode-radiotherapy-therapy-summary" key="StructureDefinition-mcode-radiotherapy-therapy-summary" name="Radiotherapy Therapy Summary"/>
+<artifact id="StructureDefinition/mcode-radiotherapy-summary" key="StructureDefinition-mcode-radiotherapy-summary" name="Radiotherapy Therapy Summary"/>
 <artifact deprecated="true" id="Extension/mcode-related-primary-cancer-condition-extension" key="related-primary-cancer-condition-extension" name="Related Primary Cancer Condition Extension"/>
 <artifact id="SearchParameter/Patient-id" key="SearchParameter-Patient-id" name="Search by _id in Patients with multipleOr"/>
 <artifact id="SearchParameter/Condition-code" key="SearchParameter-Condition-code" name="Search by code:in in Conditions"/>

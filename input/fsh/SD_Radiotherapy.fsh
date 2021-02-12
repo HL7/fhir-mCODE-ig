@@ -14,16 +14,16 @@ RuleSet: RadiotherapyPrescriptionCommon
 * insert RadiotherapySummaryCommon
 * extension[modality] 0..1
 * extension[technique] 0..1
-* partOf only Reference(RadiotherapyTherapySummary)
-* partOf ^definition = "The partOf element, if present, MUST reference a RadiotherapyTherapySummary-conforming Procedure resource."
+* partOf only Reference(RadiotherapySummary)
+* partOf ^definition = "The partOf element, if present, MUST reference a RadiotherapySummary-conforming Procedure resource."
 * insert NotUsed(bodySite)
 * bodySite ^definition = "The target volumes at the prescription-delivery level are too complex to be described by typical codes. Instead, enter a text description of the treatment volume in the RadiotherapyDoseDeliveredToVolume.targetVolume extension."
 
 
 // ------------- Overall Treatment Summary -----------------
-Profile:  RadiotherapyTherapySummary
+Profile:  RadiotherapySummary
 Parent:   USCoreProcedure  // considered one procedure with multiple parts
-Id:       mcode-radiotherapy-therapy-summary
+Id:       mcode-radiotherapy-summary
 Title:    "Radiotherapy Therapy Summary"
 Description: "A summary of radiotherapy delivered to a patient. Whenever new contributions in the scope of the same treatment are delivered, this resource is updated. One therapy can involve multiple prescriptions. The status is changed to complete when the course has been fully delivered or changed to stopped if terminated. To describe the treatment in more detail, use either TeleradiotherapyPrescriptionDelivery or BrachytherapyPrescriptionDelivery, which can reference this summary through the partOf element."
 * insert RadiotherapySummaryCommon

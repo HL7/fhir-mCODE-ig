@@ -30,7 +30,7 @@
 [MCODEPatientBundle]: StructureDefinition-mcode-patient-bundle.html
 [CapabilityStatement]: StructureDefinition-CapabilityStatement.html
 [PrimaryCancerCondition]: StructureDefinition-mcode-primary-cancer-condition.html
-[RadiotherapyTherapySummary]: StructureDefinition-mcode-radiotherapy-therapy-summary.html
+[RadiotherapySummary]: StructureDefinition-mcode-radiotherapy-summary.html
 [RadiotherapyDoseDeliveredToVolume]: StructureDefinition-mcode-radiotherapy-dose-delivered-to-volume.html
 [RadiotherapyModality]: StructureDefinition-mcode-radiotherapy-modality.html
 [RadiotherapyTechnique]: StructureDefinition-mcode-radiotherapy-technique.html

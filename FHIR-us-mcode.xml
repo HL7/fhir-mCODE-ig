@@ -106,7 +106,7 @@
 <artifact deprecated="true" id="ValueSet/mcode-radiation-procedure-value-set" key="radiation-procedure-value-set" name="Radiation Procedure Value Set"/>
 <artifact id="ValueSet/mcode-radiation-target-body-site-vs" key="radiation-target-body-site-value-set" name="Radiation Target Body Site Value Set"/>
 <artifact id="CodeSystem/mcode-radiotherapy-cs" key="CodeSystem-mcode-radiotherapy-cs" name="Radiotherapy Code System"/>
-<artifact id="StructureDefinition/mcode-radiotherapy-dose-delivered-to-volume" key="StructureDefinition-mcode-radiotherapy-dose-delivered-to-volume" name="Radiotherapy Dose Delivered to One Target Volume"/>
+<artifact id="StructureDefinition/mcode-radiotherapy-dose" key="StructureDefinition-mcode-radiotherapy-dose" name="Radiotherapy Dose"/>
 <artifact id="StructureDefinition/mcode-radiotherapy-modality" key="StructureDefinition-mcode-radiotherapy-modality" name="Radiotherapy Modality"/>
 <artifact id="StructureDefinition/mcode-radiotherapy-technique" key="StructureDefinition-mcode-radiotherapy-technique" name="Radiotherapy Modality"/>
 <artifact id="ValueSet/mcode-radiotherapy-modality-vs" key="ValueSet-mcode-radiotherapy-modality-vs" name="Radiotherapy Modality Value Set"/>

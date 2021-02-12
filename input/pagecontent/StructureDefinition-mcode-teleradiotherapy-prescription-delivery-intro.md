@@ -5,16 +5,11 @@ The following table shows valid combinations of modality and technique for exter
 
 | **External Beam Modality ** | **Technique** |
 | ------------------- | ------------------ |
-| Photons  | IMRT, VMAT   |
-| Photons  | 3D   |
-| Photons  | 2D   |
-| Photons  | IORT |
-| Electrons| 3D   |
-| Electrons| 2D, IORT|
-| Electrons| COMP   |
+| Photons  | IMRT, VMAT, 3D, 2D, IORT |
+| Electrons| 3D, 2D, IORT, COMP |
 | Protons  | PPS, PSS, MIX |
 | Carbon   | PPS, PSS, MIX |
-| Neutrons | 3D, IMNT, NCT   |
+| Neutrons | 3D, IMNT, NCT |
 {: .grid }
 
 **Key:**

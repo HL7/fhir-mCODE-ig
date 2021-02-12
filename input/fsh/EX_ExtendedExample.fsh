@@ -115,7 +115,7 @@ Description: "Extended example: example showing family member history of cancer"
 * deceasedBoolean = true
 
 Instance: cancer-related-mcode-comorbidities-elixhauser-jenny-m
-InstanceOf: CancerRelatedComorbiditiesElixhauser
+InstanceOf: ComorbiditiesElixhauser
 Description: "mCODE Example for Cancer-Related Comorbidities"
 * subject = Reference(cancer-patient-jenny-m)
 * performer = Reference(us-core-practitioner-owen-oncologist)
@@ -551,7 +551,6 @@ Description: "Extended example: example showing radiation treatment"
 * extension[technique].valueCodeableConcept = RO#3D "Three Dimensional"
 * extension[doseDelivered].extension[targetVolume].valueString = "Left breast PTV-1"
 * extension[doseDelivered].extension[dosePerFraction].valueQuantity = 200 'cGy'
-* extension[doseDelivered].extension[prescribedFractions].valuePositiveInt = 25
 * extension[doseDelivered].extension[deliveredFractions].valueUnsignedInt = 25
 * extension[doseDelivered].extension[totalDoseDelivered].valueQuantity = 5000 'cGy' "Centigray"
 * subject = Reference(cancer-patient-jenny-m)

@@ -7,7 +7,7 @@ The following table shows valid combinations of modality and technique for brach
 
 | **Brachytherapy Modality**  | **Technique (Delivery Method)**|
 | ----------------------------- | ------------------------------ |
-| Low Dose Rate | Intracavitary, Interstitial-Permanent, Interstitial-Temporary, Surface-Temporary |
+| Low Dose Rate | Intracavitary, Interstitial-Permanent, Interstitial-Temporary, Surface |
 | Pulse Dose Rate | Intracavitary, Interstitial, Intravascular, Intraluminal, IORT|
 | High Dose Rate  | Intracavitary, Intracavitary-IMB, Interstitial, Intravascular, Intraluminal, IORT, Surface |
 | Electronic  | Intracavitary, Intracavitary-IMB, Interstitial, Intraluminal, Surface, IORT |

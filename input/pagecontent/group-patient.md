@@ -8,14 +8,13 @@ The mCODE **Patient Information** group contains the following information about
 ### Profiles
 
 * [CancerPatient]
+* [MCODEPatientBundle]
 * **Comorbidities**
   * [ComorbiditiesParent] (abstract profile)
   * [ComorbiditiesElixhauser]
-  * [CancerRelatedComorbiditiesElixhauser]
 * **Performance Status**
   * [ECOGPerformanceStatus]
   * [KarnofskyPerformanceStatus]
-* [MCODEPatientBundle]
 
 ### Extensions
 

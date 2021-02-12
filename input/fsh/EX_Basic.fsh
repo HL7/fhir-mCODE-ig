@@ -38,7 +38,7 @@ Description: "mCODE Example for Cancer Disease Status"
 * valueCodeableConcept = SCT#268910001 "Patient's condition improved (finding)"
 
 Instance: cancer-related-mcode-comorbidities-elixhauser-john-anyperson
-InstanceOf: CancerRelatedComorbiditiesElixhauser
+InstanceOf: ComorbiditiesElixhauser
 Description: "mCODE Example for Cancer-Related Comorbidities"
 * subject = Reference(cancer-patient-john-anyperson)
 * performer = Reference(us-core-practitioner-kyle-anydoc)
@@ -52,26 +52,6 @@ Description: "mCODE Example for Cancer-Related Comorbidities"
 * component[chronicPulmonaryDisease].valueCodeableConcept = SCT#2667000 "Absent (qualifier value)"
 * component[obesity].valueCodeableConcept = SCT#2667000 "Absent (qualifier value)"
 * component[peripheralVascularDisease].valueCodeableConcept = SCT#2667000 "Absent (qualifier value)"
-
-
-Instance: mcode-comorbidities-elixhauser-john-anyperson
-InstanceOf: ComorbiditiesElixhauser
-Description: "Example of Elixhauser Comorbidity List without index disease."
-* subject = Reference(cancer-patient-john-anyperson)
-* performer = Reference(us-core-practitioner-kyle-anydoc)
-* status = #final "final"
-// present
-* component[congestiveHeartFailure].valueCodeableConcept = SCT#52101004 "Present (qualifier value)"
-* component[congestiveHeartFailure].extension[conditionCode].valueCodeableConcept = ICD10CM#I50.32 "Chronic diastolic (congestive) heart failure"
-* component[cancerLeukemia].valueCodeableConcept = SCT#52101004 "Present (qualifier value)"
-* component[cancerLeukemia].extension[conditionCode].valueCodeableConcept = ICD10CM#C91.01  "Acute lymphoblastic leukemia, in remission"
-// absent or unknown
-* component[arthropathy].valueCodeableConcept = SCT#2667000 "Absent (qualifier value)"
-* component[chronicPulmonaryDisease].valueCodeableConcept = SCT#2667000 "Absent (qualifier value)"
-* component[obesity].valueCodeableConcept = SCT#2667000 "Absent (qualifier value)"
-* component[peripheralVascularDisease].valueCodeableConcept = SCT#2667000 "Absent (qualifier value)"
-* component[drugAbuse].valueCodeableConcept = SCT#261665006 "Unknown (qualifier value)"
-* component[hypothyroidism].valueCodeableConcept = SCT#261665006 "Unknown (qualifier value)"
 
 Instance: cancer-patient-john-anyperson
 InstanceOf: CancerPatient

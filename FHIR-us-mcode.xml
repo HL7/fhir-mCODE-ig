@@ -24,7 +24,6 @@
 <artifact deprecated="true" id="ValueSet/mcode-cancer-related-surgical-procedure-value-set" key="cancer-related-surgical-procedure-value-set" name="Cancer Related Surgical Procedure Value Set"/>
 <artifact deprecated="true" id="Profile/mcode-cancer-stage-parent" key="cancer-stage-parent" name="Cancer Stage Parent"/>
 <artifact id="ValueSet/mcode-cancer-staging-system-vs" key="cancer-staging-system-value-set" name="Cancer Staging System Value Set"/>
-<artifact id="StructureDefinition/mcode-cancer-related-comorbidities-elixhauser" key="StructureDefinition-mcode-cancer-related-comorbidities-elixhauser" name="Cancer-Related Elixhauser Comorbidities"/>
 <artifact id="StructureDefinition/mcode-cancer-related-medication-administration" key="StructureDefinition-mcode-cancer-related-medication-administration" name="Cancer-Related Medication Administration"/>
 <artifact id="StructureDefinition/mcode-cancer-related-medication-request" key="StructureDefinition-mcode-cancer-related-medication-request" name="Cancer-Related Medication Request"/>
 <artifact id="StructureDefinition/mcode-cancer-related-surgical-procedure" key="StructureDefinition-mcode-cancer-related-surgical-procedure" name="Cancer-Related Surgical Procedure"/>
@@ -219,7 +218,6 @@
 <artifact deprecated="true" id="Example/mcode-tnm-pathological-regional-nodes-category-example-01" key="mcode-tnm-pathological-regional-nodes-category-example-01" name="mCODETNMPathologicalRegionalNodesCategoryExample01"/>
 <artifact deprecated="true" id="Example/mcode-tnm-pathological-stage-group-example-01" key="mcode-tnm-pathological-stage-group-example-01" name="mCODETNMPathologicalStageGroupExample01"/>
 <artifact deprecated="true" id="Example/mcode-tumor-marker-example-01" key="mcode-tumor-marker-example-01" name="mCODETumorMarkerExample01"/>
-<artifact id="Observation/mcode-comorbidities-elixhauser-john-anyperson" key="Observation-mcode-comorbidities-elixhauser-john-anyperson" name="mcode-comorbidities-elixhauser-john-anyperson"/>
 <artifact id="Bundle/mcode-patient-bundle-jenny-m" key="Bundle-mcode-patient-bundle-jenny-m" name="mcode-patient-bundle-jenny-m"/>
 <artifact id="OperationDefinition/mcode-patient-everything" key="OperationDefinition-mcode-patient-everything" name="mcode-patient-everything"/>
 <artifact id="CapabilityStatement/mcode-receiver-cancer-conditions-then-patients" key="CapabilityStatement-mcode-receiver-cancer-conditions-then-patients" name="mcode-receiver-cancer-conditions-then-patients"/>

@@ -92,18 +92,16 @@ Description: "Extension capturing a technique of external beam or brachytherapy 
 Extension: RadiotherapyDose
 Id: mcode-radiotherapy-dose
 Title: "Radiotherapy Dose"
-Description: "Dose parameters for one target volume, including dose per fraction, number of fractions prescribed and delivered, and total dose delivered."
+Description: "Dose parameters for one target volume, including dose per fraction, number of fractions delivered, and total dose delivered."
 * insert ExtensionContext(Procedure)
 * extension contains
     targetVolume 0..1 and 
     dosePerFraction 0..1 and
-    prescribedFractions 0..1 and
     deliveredFractions 0..1 and
     totalDoseDelivered 0..1
 * extension[targetVolume].value[x] only string
 * extension[dosePerFraction].value[x] only Quantity
 * extension[dosePerFraction].valueQuantity = UCUM#cGy
-* extension[prescribedFractions].value[x] only positiveInt
 * extension[deliveredFractions].value[x] only unsignedInt
 * extension[totalDoseDelivered].value[x] only Quantity
 * extension[totalDoseDelivered].valueQuantity = UCUM#cGy
@@ -112,8 +110,8 @@ Description: "Dose parameters for one target volume, including dose per fraction
 * extension[targetVolume] ^definition = "Text description of the body structure targeted, for example, Chest Wall Lymph Nodes PTV-2. The planning target volume (PTV) identifier MAY be included as a reference to the treatment plan."
 * extension[dosePerFraction] ^short = "Radiation Dose Per Fraction"
 * extension[dosePerFraction] ^definition = "The amount of radiation administered during a single fraction (dose division) of radiation therapy."
-* extension[prescribedFractions] ^short = "Radiation Fractions Prescribed"
-* extension[prescribedFractions] ^definition = "The total number of fractions (treatment divisions) planned for this target volume."
+//* extension[prescribedFractions] ^short = "Radiation Fractions Prescribed"
+//* extension[prescribedFractions] ^definition = "The total number of fractions (treatment divisions) planned for this target volume."
 * extension[deliveredFractions] ^short = "Radiation Fractions Delivered"
 * extension[deliveredFractions] ^definition = "The total number of fractions (treatment divisions) actually delivered for this target volume."
 * extension[totalDoseDelivered] ^short = "Total Radiation Dose Delivered"

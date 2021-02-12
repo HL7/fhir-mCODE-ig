@@ -31,12 +31,13 @@ Title: "Elixhauser Comorbidities"
 Description: "Comorbid condition checklist and optional risk score, using Elixhauser comorbidity categories as defined by the Agency for Healthcare Research and Quality (AHRQ) Healthcare Cost and Utilization Project (H-CUP)."
 * ^abstract = false
 * code = COMORB#COMORBID_OBS
+* focus only Reference(PrimaryCancerCondition)
+* focus ^definition = "A reference to the cancer condition that is the context for the current list of comorbid conditions."
 * component.value[x] from PresentAbsentUnknownVS (required)
 * component ^slicing.discriminator.type = #pattern
 * component ^slicing.discriminator.path = "code"
 * component ^slicing.rules = #closed
 * component ^slicing.description = "Slice based on the component.code pattern"
-// slices
 * component contains 
     aids 0..1 and
     alcoholAbuse 0..1 and
@@ -153,8 +154,6 @@ Description: "Comorbid condition checklist and optional risk score, using Elixha
 * component[valvularDisease] ^short = "Valvular Disease"
 * component[weightLoss].code = COMORB#WGHTLOSS
 * component[weightLoss] ^short = "Weight Loss"
-
-
 // value[x] constraints
 * component[aids].extension[conditionCode].value[x] from ElixhauserAidsVS
 * component[alcoholAbuse].extension[conditionCode].value[x] from ElixhauserAlcoholAbuseVS
@@ -194,28 +193,18 @@ Description: "Comorbid condition checklist and optional risk score, using Elixha
 * component[ulcer].extension[conditionCode].value[x] from ElixhauserUlcerVS
 * component[valvularDisease].extension[conditionCode].value[x] from ElixhauserValvularDiseaseVS
 * component[weightLoss].extension[conditionCode].value[x] from ElixhauserWeightLossVS
-// MS flags omitted since this profile is not associated with mCODE use cases
-
-Profile: CancerRelatedComorbiditiesElixhauser
-Parent: ComorbiditiesElixhauser
-Id: mcode-cancer-related-comorbidities-elixhauser
-Title: "Cancer-Related Elixhauser Comorbidities"
-Description: "Comorbid conditions using the Elixhauser comorbidity categories, defined by the Agency for Healthcare Research and Quality (AHRQ) Healthcare Cost and Utilization Project (H-CUP), from the perspective of the primary cancer condition."
-* focus only Reference(PrimaryCancerCondition)
-* focus ^definition = "A reference to the cancer condition that is the context for the current list of comorbid conditions."
-* insert NotUsed(value[x])
-* insert NotUsed(component[cancerLeukemia])
-* insert NotUsed(component[cancerLymphoma])
-* insert NotUsed(component[cancerMetastatic])
-* insert NotUsed(component[cancerSolidInSitu])
-* insert NotUsed(component[cancerSolidMalignant])
-// Must Supports -- none are inherited
+// Must Supports -- none inherited
 * component and status and code and subject and focus and effective[x] MS
 * insert ComorbidityMustSupports(aids)
 * insert ComorbidityMustSupports(alcoholAbuse)
 * insert ComorbidityMustSupports(deficiencyAnemia)
 * insert ComorbidityMustSupports(arthropathy)
 * insert ComorbidityMustSupports(bloodLossAnemia)
+* insert ComorbidityMustSupports(cancerLeukemia)
+* insert ComorbidityMustSupports(cancerLymphoma)
+* insert ComorbidityMustSupports(cancerMetastatic)
+* insert ComorbidityMustSupports(cancerSolidInSitu)
+* insert ComorbidityMustSupports(cancerSolidMalignant)
 * insert ComorbidityMustSupports(cerebrovascular)
 * insert ComorbidityMustSupports(congestiveHeartFailure)
 * insert ComorbidityMustSupports(coagulopathy)
@@ -245,7 +234,6 @@ Description: "Comorbid conditions using the Elixhauser comorbidity categories, d
 * insert ComorbidityMustSupports(valvularDisease)
 * insert ComorbidityMustSupports(weightLoss)
 
-// SCT#762713009 "Charlson Comorbidity Index (assessment scale)"
 
 RuleSet: ComorbidityMustSupports(sliceName)
 * component[{sliceName}] MS

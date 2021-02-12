@@ -18,7 +18,6 @@ The following table shows mappings from SNOMED CT and NCI Thesaurus to of brachy
 | 3D | 434131000124108 Three dimensional conformal radiotherapy (procedure) | C16035 3-Dimensional Conformal Radiation Therapy |
 | 2D | 5304008 Conventional X-ray therapy | C165189 Conventional Radiotherapy |
 | IORT | 168524008 Radiotherapy - intraoperative control (procedure) | C15623 Intraoperative Radiotherapy |
-| Compensator | none | none |
 | PPS | none | none |
 | PSS | none | none |
 | MIX | none | none |

@@ -6,35 +6,33 @@ Where US Core does not provide an appropriate base profile, mCODE profiles FHIR 
 
 | Profile | Based on US Core?  | Immediate Parent Profile |
 |---------|--------------------|--------------------------|
-| Brachytherapy Implantable Device | yes | US Core Implantable Device |
-| Brachytherapy Prescription Delivery | yes | US Core Procedure |
-| Cancer Disease Status | no | Observation |
-| Cancer Genetic Variant | no | US Core Laboratory Result Observation |
-| Cancer Genomics Report | yes | US Core Diagnostic Report Lab |
-| Cancer Patient | yes | US Core Patient |
-| Cancer-Related Elixhauser Comorbidities | no | Elixhauser Comorbidities |
-| Cancer-Related Medication Administration | no | Medication Administration |
-| Cancer-Related Medication Request | yes | US Core Medication Request |
-| Cancer-Related Surgical Procedure | yes | US Core Procedure |
-| Comorbidities Parent  | no | Observation |
-| Elixhauser Comorbidities | no  | Comorbidities Parent |
-| ECOG Performance Status | no | Observation |
-| Genetic Specimen | no | Specimen |
-| Genomic Region Studied | yes | US Core Laboratory Result Observation |
-| Karnofsky Performance Status | no | Observation |
-| mCODE Patient Bundle | no | Bundle  |
-| Primary Cancer Condition | yes | US Core Condition |
-| Radiotherapy Summary | yes | US Core Procedure |
-| Secondary Cancer Condition | yes | US Core Condition |
-| Teleradiotherapy Prescription Delivery | yes | US Core Procedure |
-| TNM Distant Metastases Category | no | Observation |
-| TNM Primary Tumor Category | no | Observation |
-| TNM Regional Nodes Category | no | Observation |
-| TNM Stage Group | no | Observation |
-| Tumor | no | BodyStructure |
-| Tumor Marker Test | yes | US Core Laboratory Result Observation |
-| Tumor Size | no | Observation |
-| Tumor Specimen | no | Specimen |
+| [Brachytherapy Prescription Delivery][BrachytherapyPrescriptionDelivery]| yes | US Core Procedure |
+| [Cancer Disease Status][CancerDiseaseStatus] | no | Observation |
+| [Cancer Genetic Variant][CanceGeneticVariant] | no | US Core Laboratory Result Observation |
+| [Cancer Genomics Report][CancerGenomicsReport] | yes | US Core Diagnostic Report Lab |
+| [Cancer Patient][CancerPatient] | yes | US Core Patient |
+| [Cancer-Related Medication Administration][CancerRelatedMedicationAdministration] | no | Medication Administration |
+| [Cancer-Related Medication Request][CancerRelatedMedicationRequest] | yes | US Core Medication Request |
+| [Cancer-Related Surgical Procedure][CancerRelatedSurgicalProcedure] | yes | US Core Procedure |
+| [Comorbidities Parent][ComorbiditiesParent]  | no | Observation |
+| [Elixhauser Comorbidities][ComorbiditiesElixhauser] | no | Comorbidities Parent |
+| [ECOG Performance Status][ECOGPerformanceStatus] | no | Observation |
+| [Genetic Specimen][GeneticSpecimen] | no | Specimen |
+| [Genomic Region Studied][GenomicRegionStudied] | yes | US Core Laboratory Result Observation |
+| [Karnofsky Performance Status][KarnofskyPerformanceStatus] | no | Observation |
+| [mCODE Patient Bundle][MCODEPatientBundle] | no | Bundle  |
+| [Primary Cancer Condition][PrimaryCancerCondition] | yes | US Core Condition |
+| [Radiotherapy Summary][RadiotherapySummary] | yes | US Core Procedure |
+| [Secondary Cancer Condition][SecondaryCancerCondition] | yes | US Core Condition |
+| [Teleradiotherapy Prescription Delivery][TeleradiotherapyPrescriptionDelivery] | yes | US Core Procedure |
+| [TNM Distant Metastases Category][TNMDistantMetastasesCategory] | no | Observation |
+| [TNM Primary Tumor Category][TNMPrimaryTumorCategory] | no | Observation |
+| [TNM Regional Nodes Category][TNMRegionalNodesCategory] | no | Observation |
+| [TNM Stage Group][TNMStageGroup] | no | Observation |
+| [Tumor][Tumor] | no | BodyStructure |
+| [Tumor Marker Test][TumorMarkerTest] | yes | US Core Laboratory Result Observation |
+| [Tumor Size][TumorSize] | no | Observation |
+| [Tumor Specimen][TumorSpecimen] | no | Specimen |
 {: .grid }
 
 ### Conformance to mCODE Profiles

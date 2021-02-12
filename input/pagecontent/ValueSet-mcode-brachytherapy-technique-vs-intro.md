@@ -21,7 +21,6 @@ The following table shows mappings from SNOMED CT and NCI Thesaurus to of brachy
 | VASC | none | none |
 | LUM | 384691004 Intraluminal brachytherapy (procedure) | none |
 | SURF | 14473006 Surface brachytherapy (procedure) | none |
-| SURF-TEMP | none | none |
-| ORAL | 69568002 Oral radiation (procedure) _or_ 16560241000119104 Oral radionuclide therapy (procedure) | none |
+| ORAL | 16560241000119104 Oral radionuclide therapy (procedure) | none |
 {: .grid }
 

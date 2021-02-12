@@ -16,7 +16,7 @@ Description: "A collection of data for an mCODE cancer patient."
     tumorMarkerTest 0..* MS and
     cancerRelatedMedicationRequest 0..* MS and
     cancerRelatedSurgicalProcedure 0..* MS and
-    radiotherapyTherapySummary 0..* MS and
+    radiotherapySummary 0..* MS and
     brachytherapyPrescriptionDelivery 0..* MS and
     teleradiotherapyPrescriptionDelivery 0..* MS and
     tnmStageGroup 0..* MS and
@@ -41,7 +41,7 @@ Description: "A collection of data for an mCODE cancer patient."
 * entry[tumorMarkerTest] ^short = "Tumor Marker Tests"
 * entry[cancerRelatedMedicationRequest] ^short = "Cancer-Related Medication Request(s)"
 * entry[cancerRelatedSurgicalProcedure] ^short = "Cancer-Related Surgical Procedure(s)"
-* entry[radiotherapyTherapySummary] ^short = "Radiation Therapy Summary(-ies)"
+* entry[radiotherapySummary] ^short = "Radiation Therapy Summary(-ies)"
 * entry[teleradiotherapyPrescriptionDelivery] ^short = "Delivery of Teleradiotherapy Prescription"
 * entry[brachytherapyPrescriptionDelivery] ^short = "Delivery of Brachytherapy Prescription"
 * entry[tnmStageGroup] ^short = "TNM Stage Group(s)"
@@ -67,7 +67,7 @@ Description: "A collection of data for an mCODE cancer patient."
 * entry[tumorMarkerTest] ^definition = "Observations resource(s) representing Tumor Marker Tests."
 * entry[cancerRelatedMedicationRequest] ^definition = "Cancer-Related Medication Requests, including both active and inactive medications."
 * entry[cancerRelatedSurgicalProcedure] ^definition = "Procedure resource(s) representing cancer-related surgical procedures."
-* entry[radiotherapyTherapySummary] ^definition = "Procedure resource(s) representing a course of treatment in cancer-related radiology therapy."
+* entry[radiotherapySummary] ^definition = "Procedure resource(s) representing a course of treatment in cancer-related radiology therapy."
 * entry[teleradiotherapyPrescriptionDelivery] ^definition = "Procedure resource(s) representing a phase in treatment of cancer via external beam radiology procedures."
 * entry[brachytherapyPrescriptionDelivery] ^definition = "Procedure resource(s) representing cancer-related brachytherapy (internal) radiology procedures."
 * entry[tnmStageGroup] ^definition = "Observation resource(s) representing stage group"
@@ -93,7 +93,7 @@ Description: "A collection of data for an mCODE cancer patient."
 * entry[cancerRelatedMedicationRequest].resource only CancerRelatedMedicationRequest
 * entry[cancerRelatedSurgicalProcedure].resource only CancerRelatedSurgicalProcedure
 // -- Radiotherapy --
-* entry[radiotherapyTherapySummary].resource only RadiotherapyTherapySummary
+* entry[radiotherapySummary].resource only RadiotherapySummary
 * entry[teleradiotherapyPrescriptionDelivery].resource only TeleradiotherapyPrescriptionDelivery
 * entry[brachytherapyPrescriptionDelivery].resource only BrachytherapyPrescriptionDelivery
 //

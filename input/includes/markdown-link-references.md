@@ -6,7 +6,6 @@
 </style>
 
 <!-- mCODE Profiles and Extensions -->
-[BrachytherapyImplantableDevice]: StructureDefinition-mcode-brachytherapy-implantable-device.html
 [BrachytherapyPrescriptionDelivery]: StructureDefinition-mcode-brachytherapy-prescription-delivery.html
 [CancerDiseaseStatus]: StructureDefinition-mcode-cancer-disease-status.html
 [CancerGeneticVariant]: StructureDefinition-mcode-cancer-genetic-variant.html
@@ -31,7 +30,7 @@
 [CapabilityStatement]: StructureDefinition-CapabilityStatement.html
 [PrimaryCancerCondition]: StructureDefinition-mcode-primary-cancer-condition.html
 [RadiotherapySummary]: StructureDefinition-mcode-radiotherapy-summary.html
-[RadiotherapyDoseDeliveredToVolume]: StructureDefinition-mcode-radiotherapy-dose-delivered-to-volume.html
+[RadiotherapyDose]: StructureDefinition-mcode-radiotherapy-dose.html
 [RadiotherapyModality]: StructureDefinition-mcode-radiotherapy-modality.html
 [RadiotherapyTechnique]: StructureDefinition-mcode-radiotherapy-technique.html
 [RelatedPrimaryCancerCondition]: StructureDefinition-mcode-related-primary-cancer-condition.html
@@ -51,7 +50,6 @@
 <!-- mCODE Value Sets -->
 [BrachytherapyModalityVS]: ValueSet-mcode-brachytherapy-modality-vs.html
 [BrachytherapyTechniqueVS]: ValueSet-mcode-brachytherapy-technique-vs.html
-[BrachytherapyDeviceVS]: ValueSet-mcode-brachytherapy-device-vs.html
 [CancerBodyLocationVS]: ValueSet-mcode-cancer-body-location-vs.html
 [CancerDiseaseStatusEvidenceTypeVS]: ValueSet-mcode-cancer-disease-status-evidence-type-vs.html
 [CancerDisorderVS]: ValueSet-mcode-cancer-disorder-vs.html
@@ -114,7 +112,6 @@
 [SecondaryCancerDisorderVS]: ValueSet-mcode-secondary-cancer-disorder-vs.html
 [TeleradiotherapyModalityVS]: ValueSet-mcode-teleradiotherapy-modality-vs.html
 [TeleradiotherapyTechniqueVS]: ValueSet-mcode-teleradiotherapy-technique-vs.html
-[TeleradiotherapyDeviceVS]: ValueSet-mcode-teleradiotherapy-device-vs.html
 [TNMDistantMetastasesCategoryVS]: ValueSet-mcode-tnm-distant-metastases-category-vs.html
 [TNMPrimaryTumorCategoryVS]: ValueSet-mcode-tnm-primary-tumor-category-vs.html
 [TNMRegionalNodesCategoryVS]: ValueSet-mcode-tnm-regional-nodes-category-vs.html

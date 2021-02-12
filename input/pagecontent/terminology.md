@@ -70,7 +70,6 @@ Finally, the "catch code" code system was established as a way to know, positive
 
 * [BrachytherapyModalityVS]
 * [BrachytherapyTechniqueVS]
-* [BrachytherapyDeviceVS]
 * [CancerBodyLocationVS]
 * [CancerDiseaseStatusEvidenceTypeVS]
 * [CancerDisorderVS]
@@ -128,7 +127,6 @@ Finally, the "catch code" code system was established as a way to know, positive
 * [SecondaryCancerDisorderVS]
 * [TeleradiotherapyModalityVS]
 * [TeleradiotherapyTechniqueVS]
-* [TeleradiotherapyDeviceVS]
 * [TNMDistantMetastasesCategoryVS]
 * [TNMPrimaryTumorCategoryVS]
 * [TNMRegionalNodesCategoryVS]

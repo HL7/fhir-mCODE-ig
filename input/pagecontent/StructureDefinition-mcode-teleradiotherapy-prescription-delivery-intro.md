@@ -1,20 +1,20 @@
 
 ### Usage
 
-The following table shows valid combinations of modality, technique, and device for external beam radiotherapy. They are not enforced in the profile. Other combinations and additional techniques may be possible. The modality is represented by `Procedure.code`, technique using the `procedure-method` extension, and device in `Procedure.usedCode`.
+The following table shows valid combinations of modality and technique for external beam radiotherapy. They are not enforced in the profile. Other combinations and additional techniques may be possible. The modality is represented by `mcode-radiotherapy-modality` extension, technique using the `mcode-radiotherapy-technique` extension.
 
-| **External Beam Modality (Radiation Type)** | **Technique (Delivery Method)** | **Delivery Device** |
-| ------------------- | ------------------ | --------------------- |
-| Photons  | IMRT, VMAT   | LINAC, RLINAC, MRLINAC, ROBOTIC|
-| Photons  | 3D   | LINAC, RLINAC, MRLINAC, ROBOTIC, ISOMULTI, KV |
-| Photons  | 2D   | LINAC, KV   |
-| Photons  | IORT | LINAC, NGLINAC      |
-| Electrons| 3D   | LINAC, RLINAC, ROBOTIC, MULTI   |
-| Electrons| 2D, IORT| LINAC       |
-| Electrons| COMP   |     |
-| Protons  | PPS, PSS, MIX |     |
-| Carbon   | PPS, PSS, MIX |     |
-| Neutrons | 3D, IMNT, NCT   |     |
+| **External Beam Modality ** | **Technique** |
+| ------------------- | ------------------ |
+| Photons  | IMRT, VMAT   |
+| Photons  | 3D   |
+| Photons  | 2D   |
+| Photons  | IORT |
+| Electrons| 3D   |
+| Electrons| 2D, IORT|
+| Electrons| COMP   |
+| Protons  | PPS, PSS, MIX |
+| Carbon   | PPS, PSS, MIX |
+| Neutrons | 3D, IMNT, NCT   |
 {: .grid }
 
 **Key:**
@@ -26,17 +26,7 @@ The following table shows valid combinations of modality, technique, and device 
 * PSS: Particle Spot Scanning
 * IMNT: Intensity Modulated Neutron Therapy
 * NCT: Neutron Capture Therapy
-* LINAC: Gantry based delivery with linear accelerator based source
-* RLINAC: Ring Gantry based delivery with linear accelerator based source, e.g., Ethos, Tomotherapy
-* NGLINAC: Non-gantry based linac, e.g. specialty devices used for IORT, e.g., Mobetron
-* MRLINAC: Gantry based delivery with linear accelerator based source with onboard MRI for patient positioning
-* ROBOTIC: Multiple axis (other than MLCs) are moved under electronic control during delivery of dose from a single beam with linear accelerator based source, e.g., CyberKnife
-* MULTI: Multisource radiation use of multiple sources at different positions using linear accelerator-based source
-* ISOMULTI: Isotope Multisource
-* KV: Non-megavoltage, electronically generated photons
-* MIX: Both photon and particle-based beams are used to deliver the therapeutic dose
 
 ### Conformance
 
-Procedure resources associated with an mCODE patient whose code comes from the TeleradiotherapyModalityVS value set MUST conform to this profile. Beyond this requirement, a producer of resources SHOULD ensure that any resource instance associated with an mCODE patient that would reasonably be expected to conform to this profile SHOULD be published in this form. Any resource intended to conform to this profile SHOULD populate meta.profile accordingly.
-
+Procedure resources associated with an mCODE patient whose code is EBRT (code system http://hl7.org/fhir/us/mcode/CodeSystem/mcode-radiotherapy-cs) MUST conform to this profile. Beyond this requirement, a producer of resources SHOULD ensure that any resource instance associated with an mCODE patient that would reasonably be expected to conform to this profile SHOULD be published in this form. Any resource intended to conform to this profile SHOULD populate meta.profile accordingly.

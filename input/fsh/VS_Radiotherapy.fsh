@@ -25,7 +25,7 @@ Description: "Codes describing the modalities of brachytherapy procedures. This 
 ValueSet: RadiotherapyModalityVS
 Id: mcode-radiotherapy-modality-vs
 Title: "Radiotherapy Modality Value Set"
-Description: "Codes describing the modalities of external beam and brachytherapy radiation procedures."
+Description: "Codes describing the modalities of external beam and brachytherapy radiation procedures, for use with radiotherapy summaries."
 * include codes from valueset TeleradiotherapyModalityVS
 * include codes from valueset BrachytherapyModalityVS
 
@@ -66,38 +66,11 @@ Description: "Codes describing the techniques of brachytherapy (internal or surf
 ValueSet: RadiotherapyTechniqueVS
 Id: mcode-radiotherapy-technique-vs
 Title: "Radiotherapy Technique Value Set"
-Description: "Codes describing the techniques of external beam and brachytherapy radiation procedures."
+Description: "Codes describing the techniques of external beam and brachytherapy radiation procedures, for use with radiotherapy summaries."
 * include codes from valueset TeleradiotherapyTechniqueVS
 * include codes from valueset BrachytherapyTechniqueVS
 
-//----------- DEVICES -----------------------
 
-ValueSet: TeleradiotherapyDeviceVS
-Id: mcode-teleradiotherapy-device-vs
-Title: "Teleradiotherapy Device Value Set"
-Description: "Codes describing the devices used in teleradiotherapy (external beam) procedures."
-* RO#LINAC
-* RO#RLINAC
-* RO#MRLINAC
-* RO#ROBOTIC
-* RO#ISOMULTI
-* RO#KV
-* RO#NGLINAC
-* RO#MULTI
-
-ValueSet: BrachytherapyDeviceVS
-Id: mcode-brachytherapy-device-vs
-Title: "Brachytherapy Device Value Set"
-Description: "Codes describing the devices used in brachytherapy (internal or surface radiation) procedures."
-* RO#TANDEM
-* RO#CYL
-* RO#OVOID
-* RO#RING
-* RO#SEED 
-* RO#EYE
-* RO#HYBRID
-* RO#TARG 
-* RO#NONTARG 
 
 //---------RADIOTHERAPY CODE SYSTEM-------
 
@@ -144,25 +117,7 @@ Description: "Codes describing the modalities, techniques, and devices used in e
 * #SURF "Surface" "Placement of a radioactive source on the skin."
 * #SURF-TEMP "Surface-Temporary" "Placement of a radioactive source on the skin, to be removed after a period of time." 
 * #ORAL "Oral"  "Placement of a radioactive source into the oral cavity." 
-//-- Teleradiotherapy Devices
-* #LINAC "Linac" "Gantry based delivery with linear accelerator based source"
-* #RLINAC "RLinac" "Ring Gantry based delivery with linear accelerator based source e.g. Ethos, Tomotherapy"
-* #MRLINAC "MRLinac" "Gantry based delivery with linear accelerator based source with onboard MRI for patient positioning."
-* #NGLINAC "Non-gantry based linear accelerator, e.g. specialty devices used for IORT, e.g. Mobetron."
-* #ROBOTIC "Robotic" "Multiple axis (other than MLCs) moved under electronic control during delivery of dose from a single beam with linear accelerator based source. e.g. CyberKnife."
-* #ISOMULTI "Isotope Multisource" "Multisource radiation use of multiple sources at different positons using isotope based source e.g. GammaKnife"
-* #KV "Kilovolt (kV)" "Non-megavoltage, electronically generated photons"
-* #MULTI "Multisource radiation" "Multisource radiation use of multiple sources at different positons using linear accelerator-based source"
-//-- Brachytherapy Devices
-* #TANDEM  "Tandem" "Tandem Brachytherapy Device"
-* #CYL  "Cylinder" "Cylinder Brachytherapy Device"
-* #OVOID "Ovoids" "Ovoid Brachytherapy Device"
-* #RING  "Ring" "Ring Brachytherapy Device"
-* #SEED  "Seeds" "Seeds Brachytherapy Device"
-* #EYE  "Eye-plaque" "Eye-plaque Brachytherapy Device"  
-* #HYBRID   "Hybrid"  "Hybrid Brachytherapy Device"
-* #TARG  "Targeted" "Targeted Brachytherapy Device"
-* #NONTARG  "NonTargeted" "NonTargeted Brachytherapy Device"
+
 
 //----------BODY SITE------------
 
@@ -238,3 +193,55 @@ Description: "Codes for body sites that can be targets of radiation therapy. Thi
 * SCT#87784001       "Soft tissues (body structure)"
 * SCT#38266002       "Entire body as a whole (body structure)"
 // no concept for hemibody
+
+
+/*  SAVE
+//----------- DEVICES -----------------------
+
+ValueSet: TeleradiotherapyDeviceVS
+Id: mcode-teleradiotherapy-device-vs
+Title: "Teleradiotherapy Device Value Set"
+Description: "Codes describing the devices used in teleradiotherapy (external beam) procedures."
+* RO#LINAC
+* RO#RLINAC
+* RO#MRLINAC
+* RO#ROBOTIC
+* RO#ISOMULTI
+* RO#KV
+* RO#NGLINAC
+* RO#MULTI
+
+ValueSet: BrachytherapyDeviceVS
+Id: mcode-brachytherapy-device-vs
+Title: "Brachytherapy Device Value Set"
+Description: "Codes describing the devices used in brachytherapy (internal or surface radiation) procedures."
+* RO#TANDEM
+* RO#CYL
+* RO#OVOID
+* RO#RING
+* RO#SEED 
+* RO#EYE
+* RO#HYBRID
+* RO#TARG 
+* RO#NONTARG 
+
+//-- Teleradiotherapy Devices
+* #LINAC "Linac" "Gantry based delivery with linear accelerator based source"
+* #RLINAC "RLinac" "Ring Gantry based delivery with linear accelerator based source e.g. Ethos, Tomotherapy"
+* #MRLINAC "MRLinac" "Gantry based delivery with linear accelerator based source with onboard MRI for patient positioning."
+* #NGLINAC "Non-gantry based linear accelerator, e.g. specialty devices used for IORT, e.g. Mobetron."
+* #ROBOTIC "Robotic" "Multiple axis (other than MLCs) moved under electronic control during delivery of dose from a single beam with linear accelerator based source. e.g. CyberKnife."
+* #ISOMULTI "Isotope Multisource" "Multisource radiation use of multiple sources at different positons using isotope based source e.g. GammaKnife"
+* #KV "Kilovolt (kV)" "Non-megavoltage, electronically generated photons"
+* #MULTI "Multisource radiation" "Multisource radiation use of multiple sources at different positons using linear accelerator-based source"
+//-- Brachytherapy Devices
+* #TANDEM  "Tandem" "Tandem Brachytherapy Device"
+* #CYL  "Cylinder" "Cylinder Brachytherapy Device"
+* #OVOID "Ovoids" "Ovoid Brachytherapy Device"
+* #RING  "Ring" "Ring Brachytherapy Device"
+* #SEED  "Seeds" "Seeds Brachytherapy Device"
+* #EYE  "Eye-plaque" "Eye-plaque Brachytherapy Device"  
+* #HYBRID   "Hybrid"  "Hybrid Brachytherapy Device"
+* #TARG  "Targeted" "Targeted Brachytherapy Device"
+* #NONTARG  "NonTargeted" "NonTargeted Brachytherapy Device"
+*/

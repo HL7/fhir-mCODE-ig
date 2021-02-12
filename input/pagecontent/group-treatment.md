@@ -23,7 +23,6 @@ A radiology work group convened under [CodeX FHIR Accelerator](https://confluenc
   * [RadiotherapySummary]
   * [BrachytherapyPrescriptionDelivery]
   * [TeleradiotherapyPrescriptionDelivery]
-  * [BrachytherapyImplantableDevice]
 
 ### Extensions
 
@@ -32,7 +31,7 @@ A radiology work group convened under [CodeX FHIR Accelerator](https://confluenc
 * **Radiotherapy**
   * [RadiotherapyModality]
   * [RadiotherapyTechnique]
-  * [RadiotherapyDoseDeliveredToVolume]
+  * [RadiotherapyDose]
 
 ### Value Sets
 
@@ -42,10 +41,8 @@ A radiology work group convened under [CodeX FHIR Accelerator](https://confluenc
 * **Radiotherapy**
   * [BrachytherapyModalityVS]
   * [BrachytherapyTechniqueVS]
-  * [BrachytherapyDeviceVS]
   * [TeleradiotherapyModalityVS]
   * [TeleradiotherapyTechniqueVS]  
-  * [TeleradiotherapyDeviceVS]
   * [RadiationTargetBodySiteVS]  
 
 ### Code Systems

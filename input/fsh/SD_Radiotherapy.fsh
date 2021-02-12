@@ -7,7 +7,7 @@ RuleSet: RadiotherapySummaryCommon
     TreatmentTerminationReason named terminationReason 0..1 MS and
     RadiotherapyModality named modality 0..* MS and
     RadiotherapyTechnique named technique 0..* MS and
-    RadiotherapyDoseDeliveredToVolume named doseDelivered 0..* MS
+    RadiotherapyDose named doseDelivered 0..* MS
 * extension and category MS
 
 RuleSet: RadiotherapyPrescriptionCommon
@@ -17,7 +17,7 @@ RuleSet: RadiotherapyPrescriptionCommon
 * partOf only Reference(RadiotherapySummary)
 * partOf ^definition = "The partOf element, if present, MUST reference a RadiotherapySummary-conforming Procedure resource."
 * insert NotUsed(bodySite)
-* bodySite ^definition = "The target volumes at the prescription-delivery level are too complex to be described by typical codes. Instead, enter a text description of the treatment volume in the RadiotherapyDoseDeliveredToVolume.targetVolume extension."
+* bodySite ^definition = "The target volumes at the prescription-delivery level are too complex to be described by typical codes. Instead, enter a text description of the treatment volume in the RadiotherapyDose.targetVolume extension."
 
 
 // ------------- Overall Treatment Summary -----------------
@@ -52,7 +52,7 @@ Description: "A summary of delivered teleradiotherapy treatment. The scope is a 
 * extension[technique].value[x] from TeleradiotherapyTechniqueVS (extensible)
 * extension[technique] ^short = "Teleradiotherapy (EBRT) Technique"
 * extension[technique] ^definition = "The method by which a radiation modality is applied (e.g., intensity modulated radiation therapy, intraoperative radiation therapy)."
-* usedCode from TeleradiotherapyDeviceVS (extensible)
+//* usedCode from TeleradiotherapyDeviceVS (extensible)
 
 
 Profile:  BrachytherapyPrescriptionDelivery
@@ -69,16 +69,8 @@ Description: "A summary of delivered brachytherapy treatment. The scope is a pre
 * extension[technique].value[x] from BrachytherapyTechniqueVS (extensible)
 * extension[technique] ^short = "Brachytherapy Technique"
 * extension[technique] ^definition = "The method by which the brachytherapy modality is applied."
-* usedCode from BrachytherapyDeviceVS (extensible)
-* focalDevice.manipulated only Reference(BrachytherapyImplantableDevice)
-
-
-Profile: BrachytherapyImplantableDevice
-Parent:  USCoreImplantableDeviceProfile
-Id:      mcode-brachytherapy-implantable-device
-Title: "Brachytherapy Implantable Device"
-Description: "A radioactive source device implanted into the body and remaining there temporarily or permanently."
-* type from BrachytherapyDeviceVS (extensible)
+//* usedCode from BrachytherapyDeviceVS (extensible)
+//* focalDevice.manipulated only Reference(BrachytherapyImplantableDevice)
 
 
 //---------- Extensions -------------------------
@@ -97,9 +89,9 @@ Description: "Extension capturing a technique of external beam or brachytherapy 
 * insert ExtensionContext(Procedure)
 * value[x] only CodeableConcept
 
-Extension: RadiotherapyDoseDeliveredToVolume
-Id: mcode-radiotherapy-dose-delivered-to-volume
-Title: "Radiotherapy Dose Delivered to One Target Volume"
+Extension: RadiotherapyDose
+Id: mcode-radiotherapy-dose
+Title: "Radiotherapy Dose"
 Description: "Dose parameters for one target volume, including dose per fraction, number of fractions prescribed and delivered, and total dose delivered."
 * insert ExtensionContext(Procedure)
 * extension contains
@@ -142,7 +134,7 @@ If either Modality value set needs to be extended, here are the invariants;
     Expression: "coding.where(code = 'OtherBrachytherapyModality').exists() implies coding.where(code != 'OtherBrachytherapyModality' and $this.memberOf('http://hl7.org/fhir/us/mcode/ValueSet/brachytherapy-modality-vs').not()).exists()"
     Severity:   #error
 
-These extensions have been grouped under RadiotherapyDoseDeliveredToVolume:
+These extensions have been grouped under RadiotherapyDose:
 
 Extension: RadiotherapyDosePerFraction
 Id: mcode-radiotherapy-dose-per-fraction
@@ -176,6 +168,13 @@ Title: "Total Radiation Dose Delivered"
 Description: "The total amount of radiation dose delivered for the course of therapy. (source: SNOMED, ASTRO)"
 * value[x] only SimpleQuantity
 * valueQuantity = UCUM#cGy
+
+Profile: BrachytherapyImplantableDevice
+Parent:  USCoreImplantableDeviceProfile
+Id:      mcode-brachytherapy-implantable-device
+Title: "Brachytherapy Implantable Device"
+Description: "A radioactive source device implanted into the body and remaining there temporarily or permanently."
+* type from BrachytherapyDeviceVS (extensible)
 
 
 */

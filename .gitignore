@@ -10,7 +10,7 @@ output
 input-cache/org.hl7.fhir.publisher.jar
 input-cache/publisher.jar
 input-cache/schemas/
-input-cache/txcache/
+# input-cache/txcache/
 
 # OS generated files #
 ######################

@@ -30,7 +30,7 @@ Description: "General structure for capturing comorbid conditions with respect t
 Profile: ComorbiditiesElixhauser
 Parent: ComorbiditiesParent
 Id: mcode-comorbidities-elixhauser
-Title: "Elixhauser Comorbidities"
+Title: "Comorbidities Elixhauser"
 Description: "Comorbid condition checklist and optional risk score, using Elixhauser comorbidity categories as defined by the Agency for Healthcare Research and Quality (AHRQ) Healthcare Cost and Utilization Project (H-CUP)."
 * insert ReduceText
 * ^abstract = false

@@ -65,29 +65,43 @@ Parent:  BodyStructure
 Id: mcode-tumor
 Title: "Tumor"
 Description:  "Identifies a tumor that has not been removed from the body. Whenever possible, a single resource conforming to this profile will be used to track a tumor over time (as opposed to creating new Tumor-conforming BodyStructure resources each time that tumor is measured). Use [TumorSpecimen](StructureDefinition-mcode-tumor-specimen.html) to represent the tumor after removal from the body."
-* insert ReduceText
-* insert ReduceText2(identifier)
 * patient only Reference(CancerPatient)
 // The purpose of this profile is to uniquely identify a tumor, so it follows that there must be at least one identifier value provided
-* identifier 1..
-* identifier ^short = "Stable identifier of this specific tumor"
-* identifier ^definition = "Stable identifier of this specific tumor, MUST be unique within the context of the referenced `CancerPatient`."
-* identifier ^comment = "If applicable, this should correspond to the physical tag inserted into the tumor during a procedure that is used for tracking the tumor by radiology and pathology."
-// force the type to ensure consistency with references from TumorSpecimen.identifier[tumorIdentifier].type
-* identifier.type = IDTYPE#RI
+* identifier ^short = "Stable identifier(s) for this tumor"
+* identifier ^definition = "Stable identifier(s) for this specific tumor. The identifiers MUST be unique within the context of the referenced `CancerPatient`."
+* identifier ^comment = "If applicable, an identifier should correspond to the physical tag inserted into the tumor during a procedure that is used for tracking the tumor by radiology and pathology."
+* identifier ^slicing.discriminator.type = #pattern
+* identifier ^slicing.discriminator.path = "type"
+* identifier ^slicing.rules = #open
+* identifier ^slicing.description = "Slice containing at least one tumor identifier"
+* identifier contains tumorIdentifier 1..*
+* identifier[tumorIdentifier] only BodyStructureIdentifier
+* identifier[tumorIdentifier] ^short = "Identifier to associate this specimen with a specific Tumor"
+* identifier[tumorIdentifier] ^definition = "To associate this with a specific BodyStructure conforming to the Tumor profile, add an identifier with a value that matches a persistent identifier from `BodyStructure.identifier.value` that is unique in the context of the Patient."
+
 * morphology = SCT#367651003 "Malignant neoplasm of primary, secondary, or uncertain origin (morphologic abnormality)"
 // This VS is used for the primary/secondary cancer conditions; rule set here for consistency with these profiles.
 * location from CancerBodyLocationVS (extensible)
 * location 1..1 // Tumor is meaningless without a location; parent profile is 0..1
 * locationQualifier from LocationQualifierVS (example)
-
+// Related cancer condition
 * extension contains ConditionRelated named relatedCondition 0..1
 * extension[relatedCondition].value[x] only Reference(PrimaryCancerCondition or SecondaryCancerCondition)
 * extension[relatedCondition] ^short = "Reference to cancer condition associated with this tumor"
 * extension[relatedCondition] ^definition = "Associates this tumor with a cancer condition. This could be a causal association (e.g., this is believed to be the primary tumor causing the cancer) or a different type of relationship (e.g., this tumor is a metastasis)"
+* insert ReduceText
+* insert ReduceText2(identifier)
 // Gather MS in one place
 * identifier and location and morphology and locationQualifier and patient and extension and extension[relatedCondition] and extension[relatedCondition].value[x] MS
 
+Profile: BodyStructureIdentifier
+Parent: Identifier
+Id: mcode-body-structure-identifier
+Title: "Body Structure Identifier"
+Description: "An Identifier that identifies a body structure such as a tumor."
+* type = http://hl7.org/fhir/resource-types#BodyStructure
+* value 1..1
+* use = #usual
 
 Profile: TumorSpecimen
 Parent: Specimen
@@ -95,34 +109,31 @@ Id: mcode-tumor-specimen
 Title: "Tumor Specimen"
 Description: "Represents a tumor after it has been removed from the body. Prior to excision, use [Tumor](StructureDefinition-mcode-tumor.html) (a BodyStructure) instead. If this tumor was represented by [Tumor](StructureDefinition-mcode-tumor.html) while still in the body, use `identifier` to associate with that resource."
 // We took the GeneticSpecimen.type from code system http://terminology.hl7.org/CodeSystem/v2-0487 (alias SPTY) so I suggest doing the same here
+* type = SPTY#TUMOR
+* subject only Reference(CancerPatient)
+* collection.bodySite.extension contains
+    LocationQualifier named locationQualifier 0..1
+* identifier ^slicing.discriminator.type = #pattern
+* identifier ^slicing.discriminator.path = "type"
+* identifier ^slicing.rules = #open
+* identifier ^slicing.description = "Slicing by identifier.type to identify tumor identifier"
+* identifier contains tumorIdentifier 0..*
+* identifier[tumorIdentifier] only BodyStructureIdentifier
+* identifier[tumorIdentifier] ^short = "Identifier to associate this specimen with a specific Tumor"
+* identifier[tumorIdentifier] ^definition = "To associate this with a specific BodyStructure conforming to the Tumor profile, add an identifier with a value that matches a persistent identifier from `BodyStructure.identifier.value` that is unique in the context of the Patient."
+
+// It would be nice to reuse the existing condition-related extension (see Jira https://jira.hl7.org/projects/FHIR/issues/FHIR-31027)
+* extension contains ConditionRelated named relatedCondition 0..1 MS
+* extension[relatedCondition].value[x] only Reference(PrimaryCancerCondition or SecondaryCancerCondition)
+* extension[relatedCondition] ^short = "Reference to the cancer condition associated with this tumor"
+* extension[relatedCondition] ^definition = "Associates this tumor with a cancer condition."
 * insert ReduceText
 * insert ReduceText2(identifier)
 * insert ReduceText(collection)
 * insert ReduceText2(collection.bodySite)
 * insert ReduceText(processing)
 * insert ReduceText(container)
-* type = SPTY#TUMOR
-* subject only Reference(CancerPatient)
-* collection.bodySite.extension contains
-    LocationQualifier named locationQualifier 0..1
-* identifier ^slicing.discriminator.type = #pattern
-* identifier ^slicing.discriminator.path = "type.coding"
-* identifier ^slicing.rules = #open
-* identifier ^slicing.description = "Slicing by code to identify tumor identifier"
-* identifier contains tumorIdentifier 0..*
-* identifier[tumorIdentifier].type = IDTYPE#RI
-* identifier[tumorIdentifier] ^short = "Identifier to associate this resource with a specific Tumor"
-* identifier[tumorIdentifier] ^definition = "To associate this with a specific BodyStructure conforming to the Tumor profile, add an identifier with a value that matches a persistent identifier from `BodyStructure.identifier.value` that is unique in the context of the Patient."
-* identifier[tumorIdentifier].type ^short = "Fixed to \"tumor-identifier\""
-* identifier[tumorIdentifier].value 1..1
-* identifier[tumorIdentifier].value ^short = "Identifer matching Tumor's identifier value"
-* identifier[tumorIdentifier].value ^definition = "If this Specimen is a tumor that was represented by a BodyStructure resource conforming to [Tumor](StructureDefinition-mcode-tumor.html) before removal, this value MUST match an `identifier` value from that BodyStructure resource that is persistent over time and unique with in the context of the Patient."
-// It would be nice to reuse the existing condition-related extension (see Jira https://jira.hl7.org/projects/FHIR/issues/FHIR-31027)
-* extension contains ConditionRelated named relatedCondition 0..1 MS
-* extension[relatedCondition].value[x] only Reference(PrimaryCancerCondition or SecondaryCancerCondition)
-* extension[relatedCondition] ^short = "Reference to the cancer condition associated with this tumor"
-* extension[relatedCondition] ^definition = "Associates this tumor with a cancer condition."
-// Must Supports -- there is no US Core 
+// Must Supports -- there is no US Core fallback
 * type and subject and collection and collection.bodySite and collection.bodySite and collection.bodySite.extension and collection.bodySite.extension[locationQualifier] and identifier and identifier[tumorIdentifier] and identifier[tumorIdentifier].type and identifier[tumorIdentifier].value and extension and extension[relatedCondition] MS
 
 

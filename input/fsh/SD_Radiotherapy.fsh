@@ -17,7 +17,7 @@ RuleSet: RadiotherapyPrescriptionCommon
 * partOf only Reference(RadiotherapySummary)
 * partOf ^definition = "The partOf element, if present, MUST reference a RadiotherapySummary-conforming Procedure resource."
 * insert NotUsed(bodySite)
-* bodySite ^definition = "The target volumes at the prescription-delivery level are too complex to be described by typical codes. Instead, enter a text description of the treatment volume in the RadiotherapyDose.targetVolume extension."
+* bodySite ^definition = "The target volumes at the prescription-delivery level are too complex to be described by typical codes. Instead, enter a text description of the treatment volume in the RadiotherapyDose.targetVolumeDescription extension."
 
 
 // ------------- Overall Treatment Summary -----------------
@@ -104,20 +104,23 @@ Title: "Radiotherapy Dose"
 Description: "Dose parameters for one target volume, including dose per fraction, number of fractions delivered, and total dose delivered."
 * insert ExtensionContext(Procedure)
 * extension contains
-    targetVolume 0..1 and
+    targetVolumeDescription 0..1 and
     targetVolumeId 0..1 and
     dosePerFraction 0..1 and
     deliveredFractions 0..1 and
     totalDoseDelivered 0..1
-* extension[targetVolume].value[x] only string
+* extension[targetVolumeDescription].value[x] only string
+* extension[targetVolumeId].value[x] only string
 * extension[dosePerFraction].value[x] only Quantity
 * extension[dosePerFraction].valueQuantity = UCUM#cGy
 * extension[deliveredFractions].value[x] only unsignedInt
 * extension[totalDoseDelivered].value[x] only Quantity
 * extension[totalDoseDelivered].valueQuantity = UCUM#cGy
 // Definitions of in-line extensions
-* extension[targetVolume] ^short = "Target volume where radiation was delivered"
-* extension[targetVolume] ^definition = "Text description of the body structure targeted, for example, Chest Wall Lymph Nodes PTV-2. The planning target volume (PTV) identifier MAY be included as a reference to the treatment plan."
+* extension[targetVolumeDescription] ^short = "Target volume where radiation was delivered"
+* extension[targetVolumeDescription] ^definition = "Text description of the body structure targeted, for example, Chest Wall Lymph Nodes."
+* extension[targetVolumeId] ^short = "Optional identifier for the target volume."
+* extension[targetVolumeId] ^definition = "Identifier of the target volume where radiation was delivered, for example, PTV-2 (planning target volume 2). May be included as a reference to the treatment plan."
 * extension[dosePerFraction] ^short = "Radiation Dose Per Fraction"
 * extension[dosePerFraction] ^definition = "The amount of radiation administered during a single fraction (dose division) of radiation therapy."
 //* extension[prescribedFractions] ^short = "Radiation Fractions Prescribed"

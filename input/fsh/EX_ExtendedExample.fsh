@@ -350,6 +350,10 @@ InstanceOf: TumorSpecimen
 Description: "Extended example: example tumor specimen"
 * status = #available "available"
 * type = SPTY#TUMOR
+* identifier[tumorIdentifier].use = #usual
+* identifier[tumorIdentifier].type = http://hl7.org/fhir/resource-types#BodyStructure
+* identifier[tumorIdentifier].system = "http://radiology.hospital.example.org"
+* identifier[tumorIdentifier].value = "Tumor 1234"
 * subject = Reference(cancer-patient-jenny-m)
 * receivedTime = "2019-04-01"
 * collection.bodySite = SCT#80248007 "Left breast structure (body structure)"
@@ -549,7 +553,7 @@ Description: "Extended example: example showing radiation treatment"
 * code = RO#EBRT
 * extension[modality].valueCodeableConcept = RO#PHOTON "Photon Beam Radiation Therapy"
 * extension[technique].valueCodeableConcept = RO#3D "Three Dimensional"
-* extension[doseDelivered].extension[targetVolume].valueString = "Left breast PTV-1"
+* extension[doseDelivered].extension[targetVolumeDescription].valueString = "Left breast PTV-1"
 * extension[doseDelivered].extension[dosePerFraction].valueQuantity = 200 'cGy'
 * extension[doseDelivered].extension[deliveredFractions].valueUnsignedInt = 25
 * extension[doseDelivered].extension[totalDoseDelivered].valueQuantity = 5000 'cGy' "Centigray"

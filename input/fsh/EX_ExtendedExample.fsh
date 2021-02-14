@@ -308,13 +308,13 @@ Description: "Extended example: example showing which regions were included in t
 * effectiveDateTime = "2018-03-15"
 * issued = "2018-03-15T00:00:01+00:00"
 * component.code = LNC#48018-6 "Gene studied [ID]"
-* component[GeneStudied].valueCodeableConcept.coding[+] = HGNC#1100 "BRCA1"
-* component[GeneStudied].valueCodeableConcept.coding[+] = HGNC#1101 "BRCA2"
-* component[GeneStudied].valueCodeableConcept.coding[+] = HGNC#1748 "CDH1"
-* component[GeneStudied].valueCodeableConcept.coding[+] = HGNC#26144 "PALB2"
-* component[GeneStudied].valueCodeableConcept.coding[+] = HGNC#9588 "PTEN"
-* component[GeneStudied].valueCodeableConcept.coding[+] = HGNC#11389 "STK11"
-* component[GeneStudied].valueCodeableConcept.coding[+] = HGNC#11998 "TP53"
+* component[geneStudied].valueCodeableConcept.coding[+] = HGNC#1100 "BRCA1"
+* component[geneStudied].valueCodeableConcept.coding[+] = HGNC#1101 "BRCA2"
+* component[geneStudied].valueCodeableConcept.coding[+] = HGNC#1748 "CDH1"
+* component[geneStudied].valueCodeableConcept.coding[+] = HGNC#26144 "PALB2"
+* component[geneStudied].valueCodeableConcept.coding[+] = HGNC#9588 "PTEN"
+* component[geneStudied].valueCodeableConcept.coding[+] = HGNC#11389 "STK11"
+* component[geneStudied].valueCodeableConcept.coding[+] = HGNC#11998 "TP53"
 
 Instance: cancer-genetic-variant-jenny-m
 InstanceOf: CancerGeneticVariant
@@ -325,10 +325,10 @@ Description: "Extended example: example showing genetic variant found by breast 
 * effectiveDateTime = "2018-03-15"
 * valueCodeableConcept = LNC#LA9633-4 "Present"
 * method = LNC#LA26398-0 "Sequencing"
-* component[GeneStudied].valueCodeableConcept = HGNC#HGNC:26144 "PALB2"
-* component[VariationCode].valueCodeableConcept = CLINVAR#128144 "NM_024675.3(PALB2):c.3549C>A (p.Tyr1183Ter)"
-* component[GenomicDNAChange].valueCodeableConcept = HGVS#NC_000016.10:g.23603471G>T
-* component[GenomicSourceClass].valueCodeableConcept = LNC#LA6684-0 "Somatic"
+* component[geneStudied].valueCodeableConcept = HGNC#HGNC:26144 "PALB2"
+* component[variationCode].valueCodeableConcept = CLINVAR#128144 "NM_024675.3(PALB2):c.3549C>A (p.Tyr1183Ter)"
+* component[genomicDNAChange].valueCodeableConcept = HGVS#NC_000016.10:g.23603471G>T
+* component[genomicSourceClass].valueCodeableConcept = LNC#LA6684-0 "Somatic"
 
 
 // Partial Mastectomy

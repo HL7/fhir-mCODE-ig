@@ -16,9 +16,9 @@ mCODE participants MUST meet the following requirements for conformance:
 
 1. [Identify mCODE patients](#identify-mcode-patients)
 1. [Follow conformance requirements for supported profiles](#follow-conformance-requirements-for-supported-profiles)
+1. [Populate and meaningfully process mCODE resources](#populate-and-meaningfully-process-mcode-resources)
 1. [Support querying mCODE-conforming resources](#support-querying-mcode-conforming-resources)
 1. [Publish a CapabilityStatement identifying supported profiles and operations](#publish-a-capabilitystatement-identifying-supported-profiles-and-operations)
-1. [Populate and meaningfully process mCODE resources](#populate-and-meaningfully-process-mcode-resources)
 1. [Support US Core conformance requirements](#support-us-core-conformance-requirements)
 
 
@@ -30,11 +30,15 @@ To facilitate conformance testing, testing software must be able to determine wh
 
 The information produced and consumed by mCODE participants is defined by a set of profiles. Both senders and receivers must conform to the expectations set by these profiles. See the [Profile Conformance](conformance-profiles.html) page for details.
 
+#### Populate and Meaningfully Process mCODE Resources
+
+mCODE senders MUST be able to populate data elements that have Must Support (MS) obligations, for all profiles they support (as declared in their CapabilityStatement). Receivers MUST be able to meaningfully process elements with MS obligations for each profiles they support (as declared in their CapabilityStatement). "Able to Populate" and "Meaningfully Process" have particular meanings, as discussed on the [Profile Conformance](conformance-profiles.html) page.
+
 #### Support Querying mCODE-Conforming Resources
 
 mCODE defines operations that senders and receivers use to exchange mCODE information. mCODE participants MUST support these requests UNLESS they do not support the profile at all (see ["Support All mCODE Profiles"](#support-all-mcode-profiles) below):
 
-<!-- TODO: Provide examples of what this would look like. NOTE: We can create a separate page for the queries if this gets lengthy -->
+<!-- @Max -- TODO: Provide examples of what this would look like. We can create a separate page for the queries if this gets lengthy -->
 
 #### Publish a CapabilityStatement Identifying Supported Profiles and Operations
 
@@ -42,11 +46,7 @@ Each mCODE participant MUST publish a FHIR CapabilityStatement listing their sup
 
 ALL mCODE participants MUST at minimum support the [CancerPatient] and [PrimaryCancerCondition] profiles.
 
-<!-- TODO: Provide examples of what this would look like.-->
-
-#### Populate and Meaningfully Process mCODE Resources
-
-mCODE senders MUST be able to populate data elements designated as MustSupport in profiles, for all profiles they support (as declared in their CapabilityStatement). Receivers MUST be able to meaningfully process the MustSupport elements of the profiles they support (as declared in their CapabilityStatement). "Able to Populate" and "Meaningfully Process" have particular meanings, as discussed on the [Profile Conformance](conformance-profiles.html) page.
+<!-- @Max -- TODO: Provide examples of what this would look like.-->
 
 #### Support US Core Conformance Requirements
 
@@ -59,7 +59,7 @@ International users of mCODE may find US Core an impediment to implementation. A
 mCODE participants SHOULD meet the following requirements for conformance:
 
 1. [Support all mCODE Profiles](#support-all-mcode-profiles)
-1. [Support the mCODE Pateint Bundle](#support-the-mcode-patient-bundle)
+1. [Support the mCODE Patient Bundle](#support-the-mcode-patient-bundle)
 1. [Use `meta.profile` to Signal Conformance](#use-metaprofile-to-signal-conformance)
 
 #### Support All mCODE Profiles

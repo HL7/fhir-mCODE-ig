@@ -46,7 +46,7 @@ The following are changes made to the [mCODE 0.9.1 September 2019 Ballot Release
 #### Enhancements
 
 * The following profiles have been added: **GeneticSpecimen, RegionStudied** to support greater alignment between mCODE and the [Clinical Genomics Reporting FHIR IG STU1.](http://hl7.org/fhir/uv/genomics-reporting/index.html).
-* The GeneticVariant profile has additional components which conform to equivalent components in the CG Reporting IG Variant profile: GeneStudied, VariationCode, GenomicDNAChange, GenomicSourceClass, AminoAcidChange, AminoAcidChangeType, CytogeneticLocation, and CytogeneticNomenclature.
+* The GeneticVariant profile has additional components which conform to equivalent components in the CG Reporting IG Variant profile: geneStudied, variationCode, genomicDNAChange, genomicSourceClass, aminoAcidChange, aminoAcidChangeType, cytogeneticLocation, and cytogeneticNomenclature.
 * The MedicationStatement profile name has changed to **CancerRelatedMedicationStatement**. This profile now constrains the reason reference to only primary and secondary cancer conditions.
 
 #### Corrections and Modifications to Existing Content
@@ -99,7 +99,7 @@ The following are changes relative to [mCODE 0.9.0](https://mcodeinitiative.gith
 * Updated Data Dictionary to reflect FHIR R4 and other changes to the Implementation Guide.
 * Renamed PrimaryCancerConditionVS to PrimaryOrUncertainBehaviorCancerDisorderVS, for greater alignment with value set content.
 * Renamed extension prefixes from `shr-core` to `obf-datatype`.
-* Replaced onco-core-GeneStudied-extension with observation-geneticsGene standard extension in GeneticVariant.
+* Replaced onco-core-geneStudied-extension with observation-geneticsGene standard extension in GeneticVariant.
 * Corrected the definition of obf-RadiationDosePerFraction-extension.
 * Renamed vital-precondition-extension to vital-preconditionCode-extension to distinguish from precondition whose datatype is Reference().
 * Improved the definition for obf-RadiationFractionsDelivered-extension.

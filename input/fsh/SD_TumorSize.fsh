@@ -3,10 +3,8 @@ Parent:  Observation
 Id: mcode-tumor-size
 Title: "Tumor Size"
 Description:  "Records the dimensions of a tumor"
-
 // LOINC code indicating this is a tumor size observation
 * code = LNC#21889-1 //"Size Tumor"
-
 * subject ^short = "The patient whose tumor was measured."
 * subject ^definition = "The patient whose tumor was measured. SHALL be a `Patient` resource conforming to `CancerPatient`."
 * subject 1..1
@@ -31,9 +29,8 @@ Description:  "Records the dimensions of a tumor"
 
 * insert ObservationComponentSlicingRules
 // Require 1 dimension; the additional dimensions are optional
-* component contains
-    tumorLongestDimension 1..1 and
-    tumorOtherDimension 0..2
+* insert CreateComponent(tumorLongestDimension, 1, 1)
+* insert CreateComponent(tumorOtherDimension, 0, 2)
 
 * component[tumorLongestDimension] ^short = "Longest tumor dimension (cm or mm)"
 * component[tumorLongestDimension] ^definition = "The longest tumor dimension in cm or mm."
@@ -50,15 +47,9 @@ Description:  "Records the dimensions of a tumor"
 
 // Group the Must Support to make it easier to see what's what
 * subject and code and effective[x] and component and method and specimen and focus MS
-* insert ObservationComponentMustSupport(tumorLongestDimension)
-* insert ObservationComponentMustSupport(tumorOtherDimension)
-
-// Move this to DEF_RuleSets later
-RuleSet: ObservationComponentMustSupport(sliceName)
-* component[{sliceName}] MS
-* component[{sliceName}].code MS
-* component[{sliceName}].value[x] MS
-* component[{sliceName}].dataAbsentReason MS  // US Core rules
+* insert ReduceText
+* insert ReduceText(referenceRange)
+* insert ReduceText(component)
 
 
 // This invariant has been exhaustively tested with the FHIR validator
@@ -74,14 +65,16 @@ Parent:  BodyStructure
 Id: mcode-tumor
 Title: "Tumor"
 Description:  "Identifies a tumor that has not been removed from the body. Whenever possible, a single resource conforming to this profile will be used to track a tumor over time (as opposed to creating new Tumor-conforming BodyStructure resources each time that tumor is measured). Use [TumorSpecimen](StructureDefinition-mcode-tumor-specimen.html) to represent the tumor after removal from the body."
+* insert ReduceText
+* insert ReduceText2(identifier)
 * patient only Reference(CancerPatient)
 // The purpose of this profile is to uniquely identify a tumor, so it follows that there must be at least one identifier value provided
 * identifier 1..
 * identifier ^short = "Stable identifier of this specific tumor"
 * identifier ^definition = "Stable identifier of this specific tumor, MUST be unique within the context of the referenced `CancerPatient`."
 * identifier ^comment = "If applicable, this should correspond to the physical tag inserted into the tumor during a procedure that is used for tracking the tumor by radiology and pathology."
-// force the type to ensure consistency with references from TumorSpecimen.identifier[tumorIdentifier].type.coding.code
-* identifier.type.coding.code = IDTYPE#RI
+// force the type to ensure consistency with references from TumorSpecimen.identifier[tumorIdentifier].type
+* identifier.type = IDTYPE#RI
 * morphology = SCT#367651003 "Malignant neoplasm of primary, secondary, or uncertain origin (morphologic abnormality)"
 // This VS is used for the primary/secondary cancer conditions; rule set here for consistency with these profiles.
 * location from CancerBodyLocationVS (extensible)
@@ -102,19 +95,25 @@ Id: mcode-tumor-specimen
 Title: "Tumor Specimen"
 Description: "Represents a tumor after it has been removed from the body. Prior to excision, use [Tumor](StructureDefinition-mcode-tumor.html) (a BodyStructure) instead. If this tumor was represented by [Tumor](StructureDefinition-mcode-tumor.html) while still in the body, use `identifier` to associate with that resource."
 // We took the GeneticSpecimen.type from code system http://terminology.hl7.org/CodeSystem/v2-0487 (alias SPTY) so I suggest doing the same here
+* insert ReduceText
+* insert ReduceText2(identifier)
+* insert ReduceText(collection)
+* insert ReduceText2(collection.bodySite)
+* insert ReduceText(processing)
+* insert ReduceText(container)
 * type = SPTY#TUMOR
 * subject only Reference(CancerPatient)
 * collection.bodySite.extension contains
     LocationQualifier named locationQualifier 0..1
 * identifier ^slicing.discriminator.type = #pattern
-* identifier ^slicing.discriminator.path = "type.coding.code"
+* identifier ^slicing.discriminator.path = "type.coding"
 * identifier ^slicing.rules = #open
 * identifier ^slicing.description = "Slicing by code to identify tumor identifier"
 * identifier contains tumorIdentifier 0..*
-* identifier[tumorIdentifier].type.coding.code = IDTYPE#RI
+* identifier[tumorIdentifier].type = IDTYPE#RI
 * identifier[tumorIdentifier] ^short = "Identifier to associate this resource with a specific Tumor"
 * identifier[tumorIdentifier] ^definition = "To associate this with a specific BodyStructure conforming to the Tumor profile, add an identifier with a value that matches a persistent identifier from `BodyStructure.identifier.value` that is unique in the context of the Patient."
-* identifier[tumorIdentifier].type.coding.code ^short = "Fixed to \"tumor-identifier\""
+* identifier[tumorIdentifier].type ^short = "Fixed to \"tumor-identifier\""
 * identifier[tumorIdentifier].value 1..1
 * identifier[tumorIdentifier].value ^short = "Identifer matching Tumor's identifier value"
 * identifier[tumorIdentifier].value ^definition = "If this Specimen is a tumor that was represented by a BodyStructure resource conforming to [Tumor](StructureDefinition-mcode-tumor.html) before removal, this value MUST match an `identifier` value from that BodyStructure resource that is persistent over time and unique with in the context of the Patient."

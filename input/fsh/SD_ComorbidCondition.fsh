@@ -3,6 +3,9 @@ Parent: Observation
 Id: mcode-comorbidities-parent
 Title: "Comorbidities Parent"
 Description: "General structure for capturing comorbid conditions with respect to a primary ('index') condition. The specific set of comorbidities of interest in a given context are defined by slicing the components array. The same general approach can be applied to any comorbidity category checklist."
+* insert ReduceText
+* insert ReduceText(referenceRange)
+* insert ReduceText(component)
 * ^abstract = true
 * focus only Reference(Condition)
 * focus ^short = "The Index Condition"
@@ -29,6 +32,7 @@ Parent: ComorbiditiesParent
 Id: mcode-comorbidities-elixhauser
 Title: "Elixhauser Comorbidities"
 Description: "Comorbid condition checklist and optional risk score, using Elixhauser comorbidity categories as defined by the Agency for Healthcare Research and Quality (AHRQ) Healthcare Cost and Utilization Project (H-CUP)."
+* insert ReduceText
 * ^abstract = false
 * code = COMORB#COMORBID_OBS
 * focus only Reference(PrimaryCancerCondition)
@@ -38,45 +42,44 @@ Description: "Comorbid condition checklist and optional risk score, using Elixha
 * component ^slicing.discriminator.path = "code"
 * component ^slicing.rules = #closed
 * component ^slicing.description = "Slice based on the component.code pattern"
-* component contains 
-    aids 0..1 and
-    alcoholAbuse 0..1 and
-    deficiencyAnemia 0..1 and
-    arthropathy 0..1 and
-    bloodLossAnemia 0..1 and
-    cancerLeukemia 0..1 and
-    cancerLymphoma 0..1 and
-    cancerMetastatic 0..1 and
-    cancerSolidInSitu 0..1 and
-    cancerSolidMalignant 0..1 and
-    cerebrovascular 0..1 and
-    congestiveHeartFailure 0..1 and
-    coagulopathy 0..1 and
-    dementia 0..1 and
-    depression 0..1 and
-    diabetesComplicated 0..1 and
-    diabetesUncomplicated 0..1 and
-    drugAbuse 0..1 and
-    hypertensionComplicated 0..1 and
-    hypertensionUncomplicated 0..1 and
-    liverDiseaseMild 0..1 and
-    liverDiseaseSevere 0..1 and
-    chronicPulmonaryDisease 0..1 and
-    neurologicalMovement 0..1 and
-    neurologicalOther 0..1 and
-    neurologicalSeizure 0..1 and
-    obesity 0..1 and
-    paralysis 0..1 and
-    peripheralVascularDisease 0..1 and
-    psychosis 0..1 and
-    pulmonaryCirculationDisorder 0..1 and
-    renalFailureModerate 0..1 and
-    renalFailureSevere 0..1 and
-    hypothyroidism 0..1 and
-    thyroidOther 0..1 and
-    ulcer 0..1 and
-    valvularDisease 0..1 and
-    weightLoss 0..1
+* insert CreateComorbidityComponent(aids)
+* insert CreateComorbidityComponent(alcoholAbuse)
+* insert CreateComorbidityComponent(deficiencyAnemia)
+* insert CreateComorbidityComponent(arthropathy)
+* insert CreateComorbidityComponent(bloodLossAnemia)
+* insert CreateComorbidityComponent(cancerLeukemia)
+* insert CreateComorbidityComponent(cancerLymphoma)
+* insert CreateComorbidityComponent(cancerMetastatic)
+* insert CreateComorbidityComponent(cancerSolidInSitu)
+* insert CreateComorbidityComponent(cancerSolidMalignant)
+* insert CreateComorbidityComponent(cerebrovascular)
+* insert CreateComorbidityComponent(congestiveHeartFailure)
+* insert CreateComorbidityComponent(coagulopathy)
+* insert CreateComorbidityComponent(dementia)
+* insert CreateComorbidityComponent(depression)
+* insert CreateComorbidityComponent(diabetesUncomplicated)
+* insert CreateComorbidityComponent(diabetesComplicated)
+* insert CreateComorbidityComponent(drugAbuse)
+* insert CreateComorbidityComponent(hypertensionComplicated)
+* insert CreateComorbidityComponent(hypertensionUncomplicated)
+* insert CreateComorbidityComponent(liverDiseaseMild)
+* insert CreateComorbidityComponent(liverDiseaseSevere)
+* insert CreateComorbidityComponent(chronicPulmonaryDisease)
+* insert CreateComorbidityComponent(neurologicalMovement)
+* insert CreateComorbidityComponent(neurologicalOther)
+* insert CreateComorbidityComponent(neurologicalSeizure)
+* insert CreateComorbidityComponent(obesity)
+* insert CreateComorbidityComponent(paralysis)
+* insert CreateComorbidityComponent(peripheralVascularDisease)
+* insert CreateComorbidityComponent(psychosis)
+* insert CreateComorbidityComponent(pulmonaryCirculationDisorder)
+* insert CreateComorbidityComponent(renalFailureModerate)
+* insert CreateComorbidityComponent(renalFailureSevere)
+* insert CreateComorbidityComponent(hypothyroidism)
+* insert CreateComorbidityComponent(thyroidOther)
+* insert CreateComorbidityComponent(ulcer)
+* insert CreateComorbidityComponent(valvularDisease)
+* insert CreateComorbidityComponent(weightLoss)
 // codes and definitions
 * component[aids].code = COMORB#AIDS
 * component[aids] ^short = "Acquired Immune Deficiency Syndrome"
@@ -195,51 +198,5 @@ Description: "Comorbid condition checklist and optional risk score, using Elixha
 * component[weightLoss].extension[conditionCode].value[x] from ElixhauserWeightLossVS
 // Must Supports -- none inherited
 * component and status and code and subject and focus and effective[x] MS
-* insert ComorbidityMustSupports(aids)
-* insert ComorbidityMustSupports(alcoholAbuse)
-* insert ComorbidityMustSupports(deficiencyAnemia)
-* insert ComorbidityMustSupports(arthropathy)
-* insert ComorbidityMustSupports(bloodLossAnemia)
-* insert ComorbidityMustSupports(cancerLeukemia)
-* insert ComorbidityMustSupports(cancerLymphoma)
-* insert ComorbidityMustSupports(cancerMetastatic)
-* insert ComorbidityMustSupports(cancerSolidInSitu)
-* insert ComorbidityMustSupports(cancerSolidMalignant)
-* insert ComorbidityMustSupports(cerebrovascular)
-* insert ComorbidityMustSupports(congestiveHeartFailure)
-* insert ComorbidityMustSupports(coagulopathy)
-* insert ComorbidityMustSupports(dementia)
-* insert ComorbidityMustSupports(depression)
-* insert ComorbidityMustSupports(diabetesUncomplicated)
-* insert ComorbidityMustSupports(diabetesComplicated)
-* insert ComorbidityMustSupports(drugAbuse)
-* insert ComorbidityMustSupports(hypertensionComplicated)
-* insert ComorbidityMustSupports(hypertensionUncomplicated)
-* insert ComorbidityMustSupports(liverDiseaseMild)
-* insert ComorbidityMustSupports(liverDiseaseSevere)
-* insert ComorbidityMustSupports(chronicPulmonaryDisease)
-* insert ComorbidityMustSupports(neurologicalMovement)
-* insert ComorbidityMustSupports(neurologicalOther)
-* insert ComorbidityMustSupports(neurologicalSeizure)
-* insert ComorbidityMustSupports(obesity)
-* insert ComorbidityMustSupports(paralysis)
-* insert ComorbidityMustSupports(peripheralVascularDisease)
-* insert ComorbidityMustSupports(psychosis)
-* insert ComorbidityMustSupports(pulmonaryCirculationDisorder)
-* insert ComorbidityMustSupports(renalFailureModerate)
-* insert ComorbidityMustSupports(renalFailureSevere)
-* insert ComorbidityMustSupports(hypothyroidism)
-* insert ComorbidityMustSupports(thyroidOther)
-* insert ComorbidityMustSupports(ulcer)
-* insert ComorbidityMustSupports(valvularDisease)
-* insert ComorbidityMustSupports(weightLoss)
 
 
-RuleSet: ComorbidityMustSupports(sliceName)
-* component[{sliceName}] MS
-* component[{sliceName}].code MS
-* component[{sliceName}].value[x] MS
-* component[{sliceName}].dataAbsentReason MS
-* component[{sliceName}].extension MS
-* component[{sliceName}].extension[conditionCode] MS
-* component[{sliceName}].extension[conditionReference] MS

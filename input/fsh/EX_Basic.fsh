@@ -164,7 +164,7 @@ InstanceOf: BrachytherapyPrescriptionDelivery
 Description: "mCODE Example for a brachytherapy procedure."
 * status = #completed "completed"
 * code = RO#BRACHY
-* extension[modality].valueCodeableConcept = RO#LDR "Low-Dose Rate Brachytherapy" 
+* extension[modality].valueCodeableConcept = RO#LDR "Low Dose Rate Brachytherapy" 
 * extension[technique].valueCodeableConcept = RO#INSTIT-TEMP "Interstitial-Temporary"
 * subject = Reference(cancer-patient-john-anyperson)
 * asserter = Reference(us-core-practitioner-kyle-anydoc)
@@ -172,7 +172,7 @@ Description: "mCODE Example for a brachytherapy procedure."
 * performedPeriod.end = "2019-03-01"
 //* extension[treatmentIntent].valueCodeableConcept = SCT#373808002 "Curative - procedure intent"
 * reasonReference = Reference(primary-cancer-condition-nsclc)
-* extension[doseDelivered].extension[targetVolume].valueString = "Structure of lower lobe of left lung"
+* extension[doseDelivered].extension[targetVolumeDescription].valueString = "Structure of lower lobe of left lung"
 
 Instance: tnm-clinical-stage-group-3c
 InstanceOf: TNMStageGroup

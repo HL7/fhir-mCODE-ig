@@ -24,4 +24,5 @@ By default, this Bundle includes _all_ required resources described above, irres
 
 ### Conformance
 
-The bundle itself MUST validate against the [MCODEPatientBundle](StructureDefinition-mcode-patient-bundle.html) profile.
+The bundle itself MUST validate against the current profile.
+

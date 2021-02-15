@@ -8,14 +8,14 @@ Where US Core does not provide an appropriate base profile, mCODE profiles FHIR 
 |---------|--------------------|--------------------------|
 | [Brachytherapy Prescription Delivery][BrachytherapyPrescriptionDelivery]| yes | US Core Procedure |
 | [Cancer Disease Status][CancerDiseaseStatus] | no | Observation |
-| [Cancer Genetic Variant][CanceGeneticVariant] | no | US Core Laboratory Result Observation |
+| [Cancer Genetic Variant][CancerGeneticVariant] | no | US Core Laboratory Result Observation |
 | [Cancer Genomics Report][CancerGenomicsReport] | yes | US Core Diagnostic Report Lab |
 | [Cancer Patient][CancerPatient] | yes | US Core Patient |
 | [Cancer-Related Medication Administration][CancerRelatedMedicationAdministration] | no | Medication Administration |
 | [Cancer-Related Medication Request][CancerRelatedMedicationRequest] | yes | US Core Medication Request |
 | [Cancer-Related Surgical Procedure][CancerRelatedSurgicalProcedure] | yes | US Core Procedure |
 | [Comorbidities Parent][ComorbiditiesParent]  | no | Observation |
-| [Elixhauser Comorbidities][ComorbiditiesElixhauser] | no | Comorbidities Parent |
+| [Comorbidities Elixhauser][ComorbiditiesElixhauser] | no | Comorbidities Parent |
 | [ECOG Performance Status][ECOGPerformanceStatus] | no | Observation |
 | [Genetic Specimen][GeneticSpecimen] | no | Specimen |
 | [Genomic Region Studied][GenomicRegionStudied] | yes | US Core Laboratory Result Observation |
@@ -63,7 +63,7 @@ If an instance fails validation, the Receiver may reject the instance.
 
 #### Sender and Receiver Expectations
 
-For every element that is [required](#required-elements) and/or [Must Support](#must-support) (MS) in mCODE:
+For every element that is [required](#required-elements) and/or carries a [Must Support obligation](#must-support-obligations) (MS):
 
 * mCODE Data Senders SHALL be capable of populating the element, provided the Sender supports the profile (as indicated by its CapabilityStatement).
 * If the Sender lacks the data necessary to populate the element:
@@ -82,42 +82,46 @@ An mCODE data element is **required** if any of the following criteria are met:
 
 In other words, a data element may be `1..1`, but if it is contained by an optional element, then it is not required unless its containing element is actually present.
 
-#### Must Support
+#### Must Support Obligations
 
-mCODE inherits the US Core interpretation of MS, in particular, the more detailed [US Core version 3.2 interpretation](https://hl7.org/fhir/us/core/2021jan/conformance-expectations.html). Interpretation of MS is not straightforward, as the following two statements make clear:
+Interpretation of MS is not straightforward, as there is a difference between a MS *obligation* and a MS *flag*. The MS *flag* is the red S displayed on profile pages: <span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" >S</span>. A MS *obligation* means the element must be treated as described in [Sender and Receiver Expectations](#sender-and-receiver-expectations). Significantly, an MS *flag* (<span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" >S</span>) does not necessarily imply an MS *obligation*, and MS *obligations* may be attached to elements lacking MS *flags*.
 
-* <span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" >S</span> does not necessarily mean the element must be supported.
-* Lack of an <span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" >S</span> does not necessarily mean the element does not have to be supported.
+To see which elements have MS flags, consult the "Snapshot Table" view of the profile. The "Differential Table" view hides MS flags inherited from the parent profile. The "Snapshot Table (Must Support)" view reflects the IG Publisher's interpretation of how MS flags translate to MS obligations, which may or may not coincide with the US Core/mCODE interpretation.
 
-Regarding the first point, an element marked with an <span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" >S</span> in a profile does **not** have to be supported if it is nested and any one of the elements directly containing that element does **not** have an <span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" >S</span> flag. There is also the case of an element whose cardinality is 0..0 and yet has an <span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" >S</span> flag, which again does not require support [^1]. 
+The following rules apply in mCODE:
 
-Regarding the second point, a required element must be supported by a Data Sender, regardless of the presence or absence of an <span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" >S</span> flag. On the other hand, the same element does not have to be supported by the Data Receiver [^2].
+* A profile without a MS flag does not have to be supported [^1]. A participant MUST declare support for optional profiles in its CapabilityStatement.
+* Any MS flag or flags on an unsupported profile (as stated in participant's CapabilityStatement) do not carry MS obligations.
+* An element with an MS flag does not carry an MS obligation if it is nested and any one of the elements directly containing that element lacks an MS flag. However, if the participant *elects* to support the unflagged element or elements in that hierarchy, the elements below the gap then carry an MS obligation.
+* An element with an MS flag whose cardinality is 0..0 does not carry an MS obligation [^2].
+* A [required element](#required-elements) carries a MS obligation on the part of a Data Sender, regardless of whether that element has an MS flag. 
+* A [required element](#required-elements) without an MS flag does not carry an MS obligation for the Data Receiver [^3].
+
+The following explains how to interpret MS flags in certain cases involving complex elements. Requirements for Senders and Receivers for elements with MS obligations are [defined above](#sender-and-receiver-expectations). **The following rules apply only when the element in the first column has a MS obligation.**
+
+| # | Element with MS obligation | Data Sender (Responder) Obligation  | Data Receiver (Requestor) Obligation |
+|---|--------------|--------------|---------------|
+| 1 | Element is part of a profile that is not supported | No obligation to support | same |
+| 2 | Element is a nested (child) element and there is no MS flag on its parent element | Must be supported only if the sender/receiver chooses to support the parent element | same |
+| 3 | Element is a [complex data type](https://www.hl7.org/fhir/datatypes.html#complex) (such as CodeableConcept) with no MS flag on any immediate sub-element  | [MUST support at least one sub-element](http://hl7.org/fhir/us/core/2021Jan/conformance-expectations.html#must-support---complex-elements), and SHOULD support every sub-element the sender has data for | MUST support every sub-element (since the Receiver cannot anticipate which sub-elements might be populated) |
+| 4 | Element is a [complex data type](https://www.hl7.org/fhir/datatypes.html#complex) with an MS flag on one or more immediate sub-elements  | MUST support [only the sub-elements that are explicitly flagged](http://hl7.org/fhir/us/core/2021Jan/conformance-expectations.html#must-support---complex-elements) | same |
+| 5 | Element is a [choice \[x\] type](https://www.hl7.org/fhir/stu3/formats.html#choice) with no MS flag on any choice | MUST support at least one datatype choice, and SHOULD populate every datatype for which the server might possess data | MUST support **all** datatype choices (since the Receiver cannot anticipate which sub-elements might be populated)|
+| 6 | Element is a [choice \[x\] type](https://www.hl7.org/fhir/stu3/formats.html#choice) with an MS flag on one or more choice | MUST support only the datatype choice(s) that are explicitly flagged | same |
+| 7 | Element is a [Reference() data type](https://www.hl7.org/fhir/references.html#2.3.0) with no MS flag on any referenced resource or profile | MUST support all resources or profiles in the reference that are in Sender's capability statement | MUST support all resources or profiles in the reference unless outside the scope of the Receiver's capability statement |
+| 8 | Element is a [Reference() data type](https://www.hl7.org/fhir/references.html#2.3.0) with an MS flag on one or more of the referenced types | MUST support only the resources or profiles in the reference that are explicitly flagged, and only if they are in the Sender's capability statement | MUST support only the resources or profiles in the reference that are explicitly flagged, and only if they are in the Receiver's capability statement |
+| 9 | Element is a [backbone data type](https://www.hl7.org/fhir/backboneelement.html#2.29.0) | No support expectation on sub-elements unless they are explicitly flagged  | same |
+| 10 | Element is an [array that is sliced](https://www.hl7.org/fhir/profiling.html#slicing), with no MS flag on any slice | MUST support populating the array, but [no obligation to support any particular slice](https://confluence.hl7.org/pages/viewpage.action?pageId=35718826#GuidetoDesigningResources-HowdoIinterpret'MustSupport'withrespecttoslicing?) | MUST support arbitrary array contents, including any and all populated slices |
+| 111 | Element is an [array that is sliced](https://www.hl7.org/fhir/profiling.html#slicing), with MS flags on one or more slices | MUST support only the slices that have MS flags | same |
+{: .grid }
 
 #### Non-Must Support Elements
 
-Data elements in mCODE that do not *have to be* supported still MAY be supported. If an element that MAY be supported is supported, the implementation of that element MUST conform to the profile. Moreover, any data element that would reasonably be expected to conform to an mCODE data element SHOULD conform to that element.
+Data elements in mCODE that *do not have* MS obligations still MAY be supported. If an element is supported, whether it has a MS flag or not, the profile must be interpreted as if the MS flag were present. For example, `TumorMarkerTest.performer` does not have an MS flag, but a data receiver may have the capability to display it. In such a case, by virtue of the fact this element is a Reference() data type with no MS flag on any referenced resource or profile (case #7 above), the receiver would be obligated to support all resources or profiles in the Reference unless outside the scope of the Receiver's capability statement, namely, Practitioner, PractitionerRole, Organization, CareTeam, Patient, and RelatedPerson.
 
-##### Viewing Must Support Flags
-To see which elements have <span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" >S</span> flags, consult the "Snapshot Table" view of the profile. The "Differential Table" view hides <span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" >S</span> flags inherited from the parent profile. The "Snapshot Table (Must Support)" view reflects the IG Publisher's interpretation of how <span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" >S</span> flags translate to support requirements, which may or may not coincide with the US Core/mCODE interpretation.
+[^1]: Although not common practice, profiles can have MS flags at the very top level (see [CancerPatient] for example).
 
-#### Interpretation of <span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" >S</span> Flags
+[^2]: When inheriting from another profile, it is possible to set the upper cardinality to zero on an element that was MS in the parent profile. For example, you could inherit from US Core Patient, but forbid the patient’s name for privacy reasons.  In this case, neither Sender nor Receiver are expected to populate or support the element – in fact, it would be an error if the element were present.
 
-The following is guidance how to interpret <span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" >S</span> flags when there may be implicit meanings. Must support obligations are [defined above](#sender-and-receiver-expectations). These rules, deduced from US Core, apply only when the element in the first column must be supported.
-
-| Supported Element | Implied Data Sender Requirement  | Implied Data Receiver Requirement |
-|--------------|--------------|---------------|
-| [Complex data type](https://www.hl7.org/fhir/datatypes.html#complex), no <span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" >S</span> on any immediate sub-element  | Must support at least one sub-elements | Must support **all** sub-elements |
-| [Complex data type](https://www.hl7.org/fhir/datatypes.html#complex), <span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" >S</span> on one or more immediate sub-element  | Must support only the <span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" >S</span> sub-elements | same |
-| [Choice \[x\] type](https://www.hl7.org/fhir/stu3/formats.html#choice), no <span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" >S</span> on any choice | Must support at least one datatype choice | Must support **all** datatype choices |
-| [Choice \[x\] type](https://www.hl7.org/fhir/stu3/formats.html#choice), <span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" >S</span> on one or more choice | Must support only the <span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" >S</span> datatype choice(s) | same |
-| [Reference data type](https://www.hl7.org/fhir/references.html#2.3.0), no <span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" >S</span> on any referenced resource or profile | Must support at least one referenced resource or profile | Must support **all** referenced resources and profiles |
-| [Reference data type](https://www.hl7.org/fhir/references.html#2.3.0), <span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" >S</span> on one or more referenced types | Must support only the <span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" >S</span> resources or profiles | same |
-| [Backbone data type](https://www.hl7.org/fhir/backboneelement.html#2.29.0) | No support expectation on sub-elements unless specifically <span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" >S</span>  | same |
-| [Sliced array](https://www.hl7.org/fhir/profiling.html#slicing) type | No support expectation on sliced array elements unless specifically <span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" >S</span> | same |
-{: .grid }
-
-[^1]: When inheriting from another profile, it is possible to set the upper cardinality to zero on an element that was MS in the parent profile. For example, you could inherit from US Core Patient, but forbid the patient’s name for privacy reasons.  In this case, neither Sender nor Receiver are expected to populate or support the element – in fact, it would be an error if the element were present.
-
-[^2]: An example is a Receiver that does not meaningfully process a required element even though it was populated by the Sender.
+[^3]: An example is a Receiver that does not meaningfully process a required element even though it was populated by the Sender.
 
 {% include markdown-link-references.md %}

@@ -9,13 +9,13 @@ Description: "mCODE Example for Cancer Genetic Variant"
 * effectiveDateTime = "2019-04-01"
 * valueCodeableConcept = LNC#LA9633-4 "Present"
 * interpretation = SCT#10828004 "Positive (qualifier value)"
-* component[GeneStudied].valueCodeableConcept = HGNC#HGNC:11389 "STK11"
+* component[geneStudied].valueCodeableConcept = HGNC#HGNC:11389 "STK11"
 // variant type: single nucleotide variant
 // https://www.ncbi.nlm.nih.gov/clinvar/variation/619728/
 // https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/HGNC:8023
-* component[VariationCode].valueCodeableConcept = CLINVAR#619728 "NC_000019.8:g.1171707G>A"
-* component[GenomicDNAChange].valueCodeableConcept = HGVS#NC_000019.8:g.1171707G>A "NC_000019.8:g.1171707G>A"
-* component[GenomicSourceClass].valueCodeableConcept = LNC#LA6684-0 "Somatic"
+* component[variationCode].valueCodeableConcept = CLINVAR#619728 "NC_000019.8:g.1171707G>A"
+* component[genomicDNAChange].valueCodeableConcept = HGVS#NC_000019.8:g.1171707G>A "NC_000019.8:g.1171707G>A"
+* component[genomicSourceClass].valueCodeableConcept = LNC#LA6684-0 "Somatic"
 
 /* cancer-genetic-variant-germline-deletion is an example of the
  * CancerGeneticVariant to represent a single mutation test.
@@ -31,9 +31,9 @@ Description: "mCODE Example for Cancer Genetic Variant"
 * subject = Reference(cancer-patient-john-anyperson)
 * effectiveDateTime = "2019-04-01"
 * valueCodeableConcept = LNC#LA9633-4 "Present"
-* component[GeneStudied].valueCodeableConcept = HGNC#HGNC:1100 "BRCA1" // NOTE: HGNC and HGVS codes have special characters in them so SUSHI needs to handle this.
-* component[GenomicDNAChange].valueCodeableConcept = HGVS#NG_005905.2:g.126148_126152del "NG_005905.2:g.126148_126152del"
-* component[GenomicSourceClass].valueCodeableConcept = LNC#LA6683-2 "Germline"
+* component[geneStudied].valueCodeableConcept = HGNC#HGNC:1100 "BRCA1" // NOTE: HGNC and HGVS codes have special characters in them so SUSHI needs to handle this.
+* component[genomicDNAChange].valueCodeableConcept = HGVS#NG_005905.2:g.126148_126152del "NG_005905.2:g.126148_126152del"
+* component[genomicSourceClass].valueCodeableConcept = LNC#LA6683-2 "Germline"
 
 Instance: cancer-genomics-report-john-anyperson
 InstanceOf: CancerGenomicsReport
@@ -53,7 +53,7 @@ Description: "mCODE Example for Genomic Region Studied"
 * subject = Reference(cancer-patient-john-anyperson)
 * effectiveDateTime = "2019-04-01"
 * issued = "2019-04-01T11:45:33+11:00"
-* component[GeneStudied].valueCodeableConcept = HGNC#HGNC:11389 "STK11"
+* component[geneStudied].valueCodeableConcept = HGNC#HGNC:11389 "STK11"
 
 Instance: tumor-marker-test-egf
 InstanceOf: TumorMarkerTest

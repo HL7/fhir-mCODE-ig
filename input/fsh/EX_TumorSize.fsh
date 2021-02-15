@@ -34,13 +34,10 @@ Description: "Example of a resource conforming to the tumor profile."
 // Resources conforming to this profile indicate that the tumor is still in the body.
 // This implies it is being measured by imaging or physical exam. The identifier here is a hypothetical
 // radiology identifier for a specific tumor.
-//
-// The generic "resource identifier" type is used here because there does not seem to be
-// a more suitable type at http://hl7.org/fhir/R4/v2/0203/index.html.
-* identifier.use = #usual
-* identifier.type = IDTYPE#RI "Resource identifier"
-* identifier.system = "http://radiology.hospital.example.org"
-* identifier.value = "894e51f5-f5ab-41f2-80bc-2917c995e137"
+* identifier[tumorIdentifier].use = #usual
+* identifier[tumorIdentifier].type = http://hl7.org/fhir/resource-types#BodyStructure
+* identifier[tumorIdentifier].system = "http://radiology.hospital.example.org"
+* identifier[tumorIdentifier].value = "Tumor 1234"
 * location = SCT#80248007 "Left breast structure (body structure)"
 * extension[relatedCondition].valueReference = Reference(Condition/primary-cancer-condition-breast)
 
@@ -51,9 +48,10 @@ Description: "Example of a TumorSpecimen linked to [this Tumor](BodyStructure-tu
 * subject = Reference(Patient/cancer-patient-eve-anyperson)
 * status = #available "available"
 * type = SPTY#TUMOR
-* identifier.use = #usual
-* identifier.type = IDTYPE#RI "Resource identifier"
-* identifier.value = "894e51f5-f5ab-41f2-80bc-2917c995e137"
+* identifier[tumorIdentifier].use = #usual
+* identifier[tumorIdentifier].type = http://hl7.org/fhir/resource-types#BodyStructure
+* identifier.system = "http://radiology.hospital.example.org"
+* identifier[tumorIdentifier].value = "Tumor 1234"
 * extension[relatedCondition].valueReference = Reference(Condition/primary-cancer-condition-breast)
 * receivedTime = "2020-05-01"
 * collection.bodySite = SCT#80248007 "Left breast structure (body structure)"

@@ -277,6 +277,7 @@
 <page key="many" name="(many)"/>
 <page deprecated="true" key="profiles" name="(profiles)"/>
 <page key="artifacts" name="Artifacts Summary"/>
+<page key="group-assessment" name="Assessment"/>
 <page deprecated="true" key="changelog" name="Change Log"/>
 <page key="change_log" name="Change log"/>
 <page key="conformance-general" name="Conformance Expectations"/>
@@ -289,7 +290,6 @@
 <page key="index" name="Home"/>
 <page key="conformance-patients" name="Identifying mCODE Patients"/>
 <page deprecated="true" key="implementationnotes" name="Implementation Notes"/>
-<page key="group-labvital" name="Laboratory Results and Vital Signs"/>
 <page key="group-outcome" name="Outcomes"/>
 <page key="group-patient" name="Patient Information"/>
 <page key="conformance-profiles" name="Profile Conformance"/>

@@ -44,7 +44,7 @@ mCODE consists of data elements divided into six loosely-arranged groups. Refer 
 
 * [Patient Information Group](group-patient.html)
 * [Disease Characterization Group](group-disease.html)
-* [Laboratory Results and Vital Signs Group](group-labvital.html)
+* [Laboratory Results and Vital Signs Group](group-assessment.html)
 * [Genomics Group](group-genomics.html)
 * [Cancer Treatments Group](group-treatment.html)
 * [Outcomes Group](group-outcome.html)

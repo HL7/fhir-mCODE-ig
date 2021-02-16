@@ -1,3 +1,13 @@
+The mCODE **Assessment** group contains information related to the patient's general health, before and during treatment.
+
+### Comorbidities
+
+Comorbidities are important in the prognosis and treatment. Comorbid conditions in mCODE are aligned with the [Elixhauser Comorbidity Index](https://www.hcup-us.ahrq.gov/toolssoftware/comorbidityicd10/comorbidity_icd10.jsp).
+
+### Performance Assessments
+
+mCODE supports the [Eastern Cooperative Oncology Group (ECOG) Performance Status](https://ecogAcrin.org/resources/ecog-performanceStatus) and [Karnofsky Performance Status (KPS)](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3722041/). Because performance assessments may be performed more than once over a period of time, multiple instances may exist for a single patient
+
 ### Laboratory Tests
 
 Many laboratory tests could be relevant to an individual with cancer. mCODE includes results from two common laboratory panels, the Complete Blood Count (CBC) (Automatic or Manual Differential) and Comprehensive Metabolic Panel (CMP). In practice, there are many variations on these panels, as exemplified by [this list of various CBCs](https://search.loinc.org/searchLOINC/search.zul?query=CBC). The individual LOINC codes of interest to mCODE are broadly any that may be part of various CBC and CMP panels.  
@@ -14,8 +24,64 @@ Vital signs are measurements of the most essential, or "vital" body functions. F
 
 ### Profiles
 
+* [ComorbiditiesParent] (abstract profile)
+* [ComorbiditiesElixhauser]
+* [ECOGPerformanceStatus]
+* [KarnofskyPerformanceStatus]
 * [FHIR Vital Signs](https://www.hl7.org/fhir/observation-vitalsigns.html)
 * [US Core Vital Signs](https://hl7.org/fhir/us/core/2021Jan/StructureDefinition-us-core-vital-signs.html) (version 3.2 and higher)
+* [US Core DiagnosticReport Profile for Laboratory Results Reporting](http://hl7.org/fhir/us/core/StructureDefinition-us-core-diagnosticreport-lab.html)
+* [US Core Laboratory Result Profile](http://hl7.org/fhir/us/core/StructureDefinition-us-core-observation-lab.html)
 
+### Extensions
+
+* [ComorbidConditionCode]
+* [ComorbidConditionReference]
+
+### Value Sets
+
+* [PresentAbsentUnknownVS]
+* [ElixhauserAidsVS]
+* [ElixhauserAlcoholAbuseVS]
+* [ElixhauserBloodLossAnemiaVS]
+* [ElixhauserCancerLeukemiaVS]
+* [ElixhauserCancerLymphomaVS]
+* [ElixhauserCancerMetastaticVS]
+* [ElixhauserCancerSolidTumorInSituVS]
+* [ElixhauserCancerSolidTumorMalignantVS]
+* [ElixhauserCerebrovascularDiseaseVS]
+* [ElixhauserChronicPulmonaryDiseaseVS]
+* [ElixhauserCongestiveHeartFailureVS]
+* [ElixhauserCoagulationDeficiencyVS]
+* [ElixhauserDeficiencyAnemiaVS]
+* [ElixhauserDementiaVS]
+* [ElixhauserDepressionVS]
+* [ElixhauserDiabetesComplicatedVS]
+* [ElixhauserDiabetesUncomplicatedVS]
+* [ElixhauserDrugAbuseVS]
+* [ElixhauserHypertensionComplicatedVS]
+* [ElixhauserHypertensionUncomplicatedVS]
+* [ElixhauserHypothyroidismVS]
+* [ElixhauserLiverDiseaseMildVS]
+* [ElixhauserLiverDiseaseSevereVS]
+* [ElixhauserNeurologicalMovementDisorderVS]
+* [ElixhauserNeurologicalSeizureDisorderVS]
+* [ElixhauserObesityVS]
+* [ElixhauserOtherNeurologicalVS]
+* [ElixhauserOtherThyroidDisorderVS]
+* [ElixhauserParalysisVS]
+* [ElixhauserPeripheralVascularDiseaseVS]
+* [ElixhauserPsychosisVS]
+* [ElixhauserPulmonaryCirculationDisorderVS]
+* [ElixhauserRenalFailureModerateVS]
+* [ElixhauserRenalFailureSevereVS]
+* [ElixhauserRheumatoidArthritisVS]
+* [ElixhauserUlcerVS]
+* [ElixhauserValvularDiseaseVS]
+* [ElixhauserWeightLossVS]
+
+### Code Systems
+
+* [ElixhauserCategoryCS]
 
 {% include markdown-link-references.md %}

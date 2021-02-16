@@ -4,15 +4,15 @@
 
 Co-occurring disorders are typically treated as high-level categories, for example, "dementia" or "renal disease". Comorbidity categories are not universal, but rather, selected because of their clinical significance to the diagnosis, prognosis, or treatment of the index disease. The comorbidities significant in COVID-19 treatment are different than those for congestive heart failure.
 
-Notwithstanding, there are several general models used to note the presence of multiple disease categories in one individual, typically used to calculate a morbidity burden or risk score.The Charlson Index is one of the most widely used indices, but there are dozens of others (DeGroot et al.[https://pubmed.ncbi.nlm.nih.gov/12725876/]).
+Notwithstanding, there are several general models used to note the presence of multiple disease categories in one individual, typically used to calculate a morbidity burden or risk score.The Charlson Index is one of the most widely used indices, but there are dozens of others ([DeGroot et al.](https://pubmed.ncbi.nlm.nih.gov/12725876/)).
 
 ### Elixhauser Comorbidities
 
 The current profile captures comorbidities in the form of a checklist, based on one of these general models, the Elixhauser Comorbidity Index.
 
-The Elixhauser Index categorizes comorbidities using International Classification of Diseases (ICD) diagnosis codes. Each comorbidity category is dichotomous -- it is either present or it is not. The Index can be used to predict hospital resource use and in-hospital mortality (see <https://pubmed.ncbi.nlm.nih.gov/9431328> for details).
+The Elixhauser Index categorizes comorbidities using International Classification of Diseases (ICD) diagnosis codes. Each comorbidity category is dichotomous -- it is either present or it is not. The Index can be used to predict hospital resource use and in-hospital mortality (see <https://pubmed.ncbi.nlm.nih.gov/9431328>).
 
-Over time, there have been changes to the Index. The list of specific ICD diagnosis codes was updated from ICD-9-CM to ICD-10, and categories have been been revised. As a result, there are different versions of the categories and associated ICD-10 codes. The particular version used here ws defined by the Agency for Healthcare Research and Quality (AHRQ) Healthcare Cost and Utilization Project (H-CUP).
+Over time, there have been changes to the Index. The list of specific ICD diagnosis codes was updated from ICD-9-CM to ICD-10, and categories have been been revised. As a result, there are different versions of the categories and associated ICD-10 codes. The particular version used here was defined by the Agency for Healthcare Research and Quality (AHRQ) Healthcare Cost and Utilization Project (H-CUP) (see <https://www.hcup-us.ahrq.gov/toolssoftware/comorbidityicd10/comorbidity_icd10.jsp>).
 
 ### FHIR Implementation Overview
 

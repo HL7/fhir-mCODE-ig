@@ -38,7 +38,7 @@ Description: "A summary of radiotherapy delivered to a patient. Whenever new con
 * bodySite.extension contains
     LocationQualifier named locationQualifier 0..1
 * bodySite ^definition = "The high level description of the body site where the treatment was directed, based on Commission on Cancer’s 'Standards for Oncology Registry Entry  - STORE 2018' " 
-* bodySite and bodySite.extension[locationQualifier] MS  
+* bodySite and bodySite.extension and bodySite.extension[locationQualifier] MS  
 
 
 Profile:  TeleradiotherapyPrescriptionDelivery

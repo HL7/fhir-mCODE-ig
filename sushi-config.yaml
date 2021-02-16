@@ -40,8 +40,8 @@ pages:
     title: Disease Characterization
   group-genomics.md:
     title: Genomics
-  group-labvital.md:
-    title: Laboratory Results and Vital Signs
+  group-assessment.md:
+    title: Assessment
   group-treatment.md:
     title: Treatments
   group-outcome.md:
@@ -59,7 +59,7 @@ menu:
   Content by Group:
     Patient: group-patient.html
     Disease: group-disease.html
-    Laboratory: group-labvital.html
+    Assessment: group-assessment.html
     Genomics: group-genomics.html
     Treatment: group-treatment.html
     Outcome: group-outcome.html

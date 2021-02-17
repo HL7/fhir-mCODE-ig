@@ -48,6 +48,12 @@ Body locations in FHIR are typically represented using a single code. However, a
 
 mCODE has adopted an approach that allows the user to add additional code or codes to further define the body site, without the need to create an independent resource. This takes the form of a [LocationQualifier] extension. This extension can be used to specify laterality, directionality, and plane. It appears in mCODE wherever a body site code is found.
 
+### Tumor Marker Tests
+
+Tumor markers are key prognostic factors in calculating cancer staging, identifying treatment options, and monitoring progression of disease. For example, an abnormal increase in prostate-specific antigen (PSA) levels is a prognostic factor for prostate cancer. Other tumor markers include estrogen receptor (ER) status, progesterone receptor (PR) status, carcinoembryonic antigen (CEA) levels, among others. mCODE distinguishes tumor marker tests from sequencing-based genomic tests measured at the DNA, RNA, or chromosomal level. The latter are addressed in the [Genomics](group-genomics.html) section.
+
+mCODE includes single FHIR profile, [TumorMarkerTest], for all labs involving serum and tissue-based tumor markers. This is less than ideal, since without specifying units of measure or answer sets on a per-test basis, reporting could vary. However, given the large number of tumor marker tests, creating individual profiles was judged impractical.
+
 ### Profiles
 
 * Diagnosis
@@ -58,6 +64,8 @@ mCODE has adopted an approach that allows the user to add additional code or cod
   * [TNMPrimaryTumorCategory]
   * [TNMRegionalNodesCategory]
   * [TNMDistantMetastasesCategory]
+* Characterization
+  * [TumorMarkerTest]
 
 ### Extensions
 
@@ -82,5 +90,7 @@ mCODE has adopted an approach that allows the user to add additional code or cod
   * [TNMPrimaryTumorCategoryVS]
   * [TNMRegionalNodesCategoryVS]
   * [TNMDistantMetastasesCategoryVS]
+* **Characterization**
+  * [TumorMarkerTestVS]
 
 {% include markdown-link-references.md %}

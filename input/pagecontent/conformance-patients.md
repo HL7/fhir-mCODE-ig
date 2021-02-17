@@ -6,62 +6,68 @@ All mCODE Data Senders MUST respond to `GET [base]/Group?code=mcode-patient` wit
 
 The following CapabilityStatements define the various methods participants can use to identify mCODE Patients. Participants implementing a pull architecture MUST support at least one of the CapabilityStatements listed from **most to least preferable**, below.
 
-### Patients-in-group Approach
+### Patients-in-Group Approach
 
-Senders respond to the following request with a Group resource referencing the Patient resources for all mCODE Patients, AND allow the Receiver to retrieve a Bundle of the Patient resources referenced in the first response using [composite search parameters](https://www.hl7.org/fhir/search.html#combining):
+In this approach, Senders respond to the following request with a Group resource referencing the Patient resources for all mCODE Patients, AND allow the Receiver to retrieve a Bundle of the Patient resources referenced in the first response using [composite search parameters](https://www.hl7.org/fhir/search.html#combining):
 
     GET [base]/Group?code=mcode-patients
 
     GET [base]/Patient?_id=some_patient_id_1,some_patient_id_2,...,some_patient_id_n
 
-<!-- If the image below is not wrapped in a div tag, the publisher tries to wrap text around the image, which is not desired. -->
-<div style="text-align: center;">{%include patients-in-group.svg%}</div>
-
 **CapabilityStatements:**
 * Sender: [mcode-sender-patients-in-group]
 * Receiver: [mcode-receiver-patients-in-group]
 
-### Patients-with-cancer-condition Approach
+<!-- If the image below is not wrapped in a div tag, the publisher tries to wrap text around the image, which is not desired. -->
+<div style="text-align: center;">{%include patients-in-group.svg%}</div>
 
-Senders respond to the following request with a Bundle of Patient resources for all mCODE Patients. This method is preferred over the approaches below UNLESS [reverse chaining](https://www.hl7.org/fhir/search.html#has) is entirely unsupported on the system.
+
+### Patients-With-Cancer-Condition Approach
+
+In this approach, Senders respond to the following request with a FHIR Bundle of Patient resources for all mCODE Patients. This method is preferred over the approaches below UNLESS [reverse chaining](https://www.hl7.org/fhir/search.html#has) is entirely unsupported on the system.
 
     GET [base]/Patient?_has:Condition:subject:code:in=http://hl7.org/fhir/us/mcode/ValueSet/mcode-primary-or-uncertain-behavior-cancer-disorder-vs
+
+**Capability Statements:**
+
+* Sender: [mcode-sender-patients-with-cancer-condition]
+* Receiver: [mcode-receiver-patients-with-cancer-condition]
 
 <!-- If the image below is not wrapped in a div tag, the publisher tries to wrap text around the image, which is not desired. -->
 <div style="text-align: center;">{%include patients-with-cancer-condition.svg%}</div>
 
-**Capability Statements:**
-* Sender: [mcode-sender-patients-with-cancer-condition]
-* Receiver: [mcode-receiver-patients-with-cancer-condition]
 
+### Patient-Then-Cancer-Conditions Approach
 
-### Patient-then-cancer-conditions Approach
-
-Senders can respond to a request using [`_include`](https://www.hl7.org/fhir/search.html#revinclude) to get a Bundle of the relevant Patient resources along with the subset of Condition resources with `Condition.code` in [Primary or Uncertain Behavior Cancer Disorder Value Set][PrimaryOrUncertainBehaviorCancerDisorderVS] in a single request. Preferred over the approach below UNLESS `_include` is entirely unsupported on the system.
+In this approach, Senders can respond to a request using [`_include`](https://www.hl7.org/fhir/search.html#revinclude) to get a Bundle of the relevant Patient resources along with the subset of Condition resources with `Condition.code` in [Primary or Uncertain Behavior Cancer Disorder Value Set][PrimaryOrUncertainBehaviorCancerDisorderVS] in a single request. Preferred over the approach below UNLESS `_include` is entirely unsupported on the system.
 
     GET [base]/Condition?code:in=http://hl7.org/fhir/us/mcode/ValueSet/mcode-primary-or-uncertain-behavior-cancer-disorder-vs&_include=Condition:subject
+
+
+**Capability Statements:**
+
+* Sender: [mcode-sender-patients-and-cancer-conditions]
+* Receiver: [mcode-receiver-patients-and-cancer-conditions]
 
 <!-- If the image below is not wrapped in a div tag, the publisher tries to wrap text around the image, which is not desired. -->
 <div style="text-align: center;">{%include patients-and-cancer-conditions.svg%}</div>
 
-**Capability Statements:**
-* Sender: [mcode-sender-patients-and-cancer-conditions]
-* Receiver: [mcode-receiver-patients-and-cancer-conditions]
 
-### Conditions-then-patients Approach
+### Conditions-Then-Patients Approach
 
-Senders return a Bundle with the subset of Condition resources with a `code` in the [Primary or Uncertain Behavior Cancer Disorder Value Set][PrimaryOrUncertainBehaviorCancerDisorderVS] in a single request, AND allow the Receiver to retrieve a Bundle of the Patient resources referenced in the first response using [composite search parameters](https://www.hl7.org/fhir/search.html#combining):
+In this approach, Senders return a Bundle with the subset of Condition resources with a `code` in the [Primary or Uncertain Behavior Cancer Disorder Value Set][PrimaryOrUncertainBehaviorCancerDisorderVS] in a single request, AND allow the Receiver to retrieve a Bundle of the Patient resources referenced in the first response using [composite search parameters](https://www.hl7.org/fhir/search.html#combining):
 
     GET [base]/Condition?code:in=http://hl7.org/fhir/us/mcode/ValueSet/mcode-primary-or-uncertain-behavior-cancer-disorder-vs
 
     GET [base]/Patient?_id=some_patient_id_1,some_patient_id_2,...,some_patient_id_n
 
-<!-- If the image below is not wrapped in a div tag, the publisher tries to wrap text around the image, which is not desired. -->
-<div style="text-align: center;">{%include cancer-conditions-then-patients.svg%}</div>
-
 **Capability Statements:**
 
 * Sender: [mcode-sender-cancer-conditions-then-patients]
 * Receiver: [mcode-receiver-cancer-conditions-then-patients]
+
+<!-- If the image below is not wrapped in a div tag, the publisher tries to wrap text around the image, which is not desired. -->
+<div style="text-align: center;">{%include cancer-conditions-then-patients.svg%}</div>
+
 
 {% include markdown-link-references.md %}

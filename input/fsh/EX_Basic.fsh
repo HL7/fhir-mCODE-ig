@@ -163,7 +163,7 @@ Instance: brachytherapy-prescription-delivery-ldr
 InstanceOf: BrachytherapyPrescriptionDelivery
 Description: "mCODE Example for a brachytherapy procedure."
 * status = #completed "completed"
-* code = RO#BRACHY
+* code = LNO#mcode-radiotherapy-brachy
 * extension[modality].valueCodeableConcept = RO#LDR "Low Dose Rate Brachytherapy" 
 * extension[technique].valueCodeableConcept = RO#INSTIT-TEMP "Interstitial-Temporary"
 * subject = Reference(cancer-patient-john-anyperson)

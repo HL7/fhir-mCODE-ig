@@ -76,10 +76,6 @@ CodeSystem: RadiotherapyCS
 Id: mcode-radiotherapy-cs
 Title: "Radiotherapy Code System"
 Description: "Codes describing the modalities, techniques, and devices used in external beam radiotherapy and brachytherapy procedures."
-//-- Codes for Observations -- should ask for a LOINC code
-* #SUMMARY "Radiotherapy Summary" "Identifying code for an observation that summarizes an entire radiotherapy treatment. A course of treatment may contain multiple teleradiotherapy and/or brachytherapy prescriptions, embracing multiple modalities and techniques, and multiple body sites."
-* #EBRT "Teleradiotherapy Prescription Delivery" "Identifying code for an observation that describes delivery of a teleradiotherapy (external beam) prescription. The scope is a prescription consisting of one or more identical fractions. A new prescription delivery begins when there is a change in the target volume of a body site, treatment fraction size, modality, or treatment technique."
-* #BRACHY "Brachytherapy Prescription Delivery" "Identifying code for an observation that describes delivery of brachytherapy prescription. The scope is one prescription consisting of one or more identical fractions. A new prescription delivery begins when there is a change in the target volume of a body site, treatment fraction size, modality, or treatment technique."
 //-- Teleradiotherapy Modalities
 * #PROTON "Proton Beam Radiation Therapy" "A type of external beam radiation therapy using a beam of proton particles." 
 * #ELECTRON "Electron Beam Radiation Therapy"  "Radiation therapy using electron (beta particle) beam."

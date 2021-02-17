@@ -26,6 +26,7 @@
 [KarnofskyPerformanceStatus]: StructureDefinition-mcode-karnofsky-performance-status.html
 [LocationQualifier]: StructureDefinition-mcode-location-qualifier.html
 [MCODEPatientBundle]: StructureDefinition-mcode-patient-bundle.html
+[MCODEPatientGroup]: StructureDefinition-mcode-patient-group.html
 [CapabilityStatement]: StructureDefinition-CapabilityStatement.html
 [PrimaryCancerCondition]: StructureDefinition-mcode-primary-cancer-condition.html
 [RadiotherapySummary]: StructureDefinition-mcode-radiotherapy-summary.html

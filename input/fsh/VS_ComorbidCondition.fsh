@@ -4,7 +4,6 @@ CodeSystem: ComorbiditiesElixhauserAHRQCS
 Id: mcode-comorbidities-elixhauser-ahrq-cs
 Title: "Elixhauser Comorbidity Category"
 Description: "A code system that contains codes representing the comorbidity categories originally defined by Elixhauser, and updated by the Agency for Healthcare Research and Quality (AHRQ) Healthcare Cost and Utilization Project (H-CUP)."
-* #COMORBID_OBS "Elixhauser Comorbidities" "Elixhauser comorbidities as defined by Agency for Healthcare Research and Quality (AHRQ) Healthcare Cost and Utilization Project (H-CUP)"
 * #AIDS    "Acquired immune deficiency syndrome"
 * #ALCOHOL    "Alcohol abuse" 
 * #ANEMDF    "Deficiency anemias"

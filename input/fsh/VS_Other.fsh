@@ -1,3 +1,15 @@
+Alias: LNO = http://hl7.org/fhir/us/mcode/CodeSystem/mcode-resource-identifier-cs
+
+CodeSystem: ResourceIdentifierCS
+Id: mcode-resource-identifier-cs
+Title: "mCODE Resource Identifier Code System"
+Description: "Codes describing types of instances, typically to populate a 'code' element. Local codes are used where LOINC codes are not available."
+* #mcode-patient "mCODE Patients" "Identifies a Group resource containing mCODE cancer patients"
+* #mcode-comorbidity  "Elixhauser Comorbidities" "Identifies an Observation resource representing Elixhauser comorbidities as defined by Agency for Healthcare Research and Quality (AHRQ) Healthcare Cost and Utilization Project (H-CUP)"
+* #mcode-radiotherapy-summary "Radiotherapy Summary" "Identifying code for an observation that summarizes an entire radiotherapy treatment. A course of treatment may contain multiple teleradiotherapy and/or brachytherapy prescriptions, embracing multiple modalities and techniques, and multiple body sites."
+* #mcode-radiotherapy-ebrt "Teleradiotherapy Prescription Delivery" "Identifying code for an observation that describes delivery of a teleradiotherapy (external beam) prescription. The scope is a prescription consisting of one or more identical fractions. A new prescription delivery begins when there is a change in the target volume of a body site, treatment fraction size, modality, or treatment technique."
+* #mcode-radiotherapy-brachy "Brachytherapy Prescription Delivery" "Identifying code for an observation that describes delivery of brachytherapy prescription. The scope is one prescription consisting of one or more identical fractions. A new prescription delivery begins when there is a change in the target volume of a body site, treatment fraction size, modality, or treatment technique."
+
 ValueSet: CancerBodyLocationVS
 Id: mcode-cancer-body-location-vs
 Title: "Cancer Body Location Value Set"

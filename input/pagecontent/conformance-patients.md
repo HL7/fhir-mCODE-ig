@@ -1,6 +1,6 @@
 To facilitate conformance testing, testing software must be able to determine which patients are "mCODE Patients" -- those in scope for mCODE. In general, all patients with confirmed cancer diagnoses SHOULD be covered by mCODE. In FHIR terms, these are patients who have a Condition where `Condition.code` is a member of the value set [PrimaryOrUncertainBehaviorCancerDisorderVS] and `Condition.verificationStatus` is confirmed.
 
-However, due to technical, organizational, or legal reasons, mCODE Data Senders MAY exclude some cancer patients from mCODE. In that case, the mCODE Data Sender MUST define a Group resource to identify ALL mCODE patients in their system. This Group resource MUST set `Group.code` to `mcode-patient` (no code system). Data Senders that do not exclude any cancer patients from mCODE MAY still populate a `mcode-patient` Group resource.
+However, due to technical, organizational, or legal reasons, mCODE Data Senders MAY exclude some cancer patients from mCODE. In that case, the mCODE Data Sender MUST define a Group resource to identify ALL mCODE patients in their system. This Group resource MUST set `Group.code` to `mcode-patient` with code system `http://hl7.org/fhir/us/mcode/CodeSystem/mcode-resource-identifier-cs`. Data Senders that do not exclude any cancer patients from mCODE MAY still populate a `mcode-patient` Group resource.
 
 All mCODE Data Senders MUST respond to `GET [base]/Group?code=mcode-patient` with either zero or one Group resource. If no Group resource is returned, all patients with cancer diagnoses (as defined above) will be considered to be "mCODE Patients." If a Group resource is returned, patients not referenced in the Group resource are assumed to be out of scope, independent of any cancer diagnosis. This requirement is reflected in ALL CapabilityStatements referenced in this section.
 
@@ -8,7 +8,7 @@ The following CapabilityStatements define the various methods participants can u
 
 1. **Patients-in-group** approach (CapabilityStatements for the [sender][mcode-sender-patients-in-group] and [receiver][mcode-receiver-patients-in-group]):
 
-    Senders respond to the following request with a Group resource referencing the Patient resources for all mCODE Patients, AND allow the Receiver to retrieve a Bundle of the Patient resources referenced in the first response using [composite search parameters](https://www.hl7.org/fhir/search.html#combining):
+    Senders respond to the following request with a Group resource conforming to the [MCODEPatientGroup] profile referencing the Patient resources for all mCODE Patients, AND allow the Receiver to retrieve a Bundle of the Patient resources referenced in the first response using [composite search parameters](https://www.hl7.org/fhir/search.html#combining):
 
         GET [base]/Group?code=mcode-patients
 

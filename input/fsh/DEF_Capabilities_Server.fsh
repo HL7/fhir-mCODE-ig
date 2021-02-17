@@ -1,4 +1,11 @@
-///////////////////////////////////////////////////////////////////////////////////////////////////
+Profile: MCODEPatientGroup
+Parent: Group
+Id: mcode-patient-group
+Title: "mCODE Patient Group"
+Description: "A group of patients included in the scope of mCODE, whose cancer-related resource conform to mCODE profiles."
+* code = LNO#mcode-patient
+* member.entity only Reference(CancerPatient)
+
 
 // Defines common operations for the server role
 RuleSet: mCODE_CapabilityStatement_Server_Common
@@ -10,8 +17,6 @@ RuleSet: mCODE_CapabilityStatement_Server_Common
 * format[1] = #json
 * fhirVersion = #4.0.1
 * implementationGuide = "http://hl7.org/fhir/us/mcode/ImplementationGuide/hl7.fhir.us.mcode"
-
-
 * rest[0].mode = #server
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
@@ -171,7 +176,6 @@ Usage: #definition
 * rest[0].resource[0].searchParam[0].definition = "http://hl7.org/fhir/us/mcode/SearchParameter/Patient-id"
 * rest[0].resource[0].searchParam[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest[0].resource[0].searchParam[0].extension.valueCode = #SHALL
-
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 

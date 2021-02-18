@@ -1,0 +1,19 @@
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "valueSet" : ["http://hl7.org/fhir/us/mcode/ValueSet/mcode-primary-or-uncertain-behavior-cancer-disorder-vs"]
+    },
+    {
+      "valueSet" : ["http://hl7.org/fhir/us/mcode/ValueSet/mcode-secondary-cancer-disorder-vs"]
+    },
+    {
+      "valueSet" : ["http://hl7.org/fhir/us/mcode/ValueSet/mcode-histology-morphology-behavior-vs"]
+    }]
+  }
+}}####
+e: {
+  "error" : "Error from server: Unable to find value set \"http://hl7.org/fhir/us/mcode/ValueSet/mcode-primary-or-uncertain-behavior-cancer-disorder-vs\""
+}
+-------------------------------------------------------------------------------------

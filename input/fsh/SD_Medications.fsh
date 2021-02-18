@@ -33,7 +33,7 @@ RuleSet: MedicationResourcesRS
 * extension contains
     TreatmentIntent named treatmentIntent 0..1 MS and
     TreatmentTerminationReason named terminationReason 0..* MS
-* reasonCode from CancerDisorderVS (required)
+* reasonCode from CancerDisorderVS (extensible)
 * reasonReference only Reference(PrimaryCancerCondition or SecondaryCancerCondition) // only for cancer-related reasons
 * reasonCode and reasonReference and extension MS
 

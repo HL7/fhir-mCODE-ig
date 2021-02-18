@@ -8,7 +8,7 @@ Description:   "A broad cancer-related value set containing both primary and sec
 * include codes from valueset PrimaryOrUncertainBehaviorCancerDisorderVS
 * include codes from valueset SecondaryCancerDisorderVS
 * include codes from valueset HistologyMorphologyBehaviorVS
-* CatchCodeCS#CD-OTHER "Other Cancer Disorder, Specify"
+//* CatchCodeCS#CD-OTHER "Other Cancer Disorder, Specify"
 
 
 ValueSet:   SecondaryCancerDisorderVS

@@ -6,7 +6,7 @@
 </style>
 
 <!-- mCODE Profiles and Extensions -->
-[BrachytherapyPrescriptionDelivery]: StructureDefinition-mcode-brachytherapy-prescription-delivery.html
+[BrachytherapyTreatmentPhase]: StructureDefinition-mcode-brachytherapy-treatment-phase.html
 [CancerDiseaseStatus]: StructureDefinition-mcode-cancer-disease-status.html
 [CancerGeneticVariant]: StructureDefinition-mcode-cancer-genetic-variant.html
 [CancerGenomicsReport]: StructureDefinition-mcode-cancer-genomics-report.html
@@ -30,12 +30,12 @@
 [CapabilityStatement]: StructureDefinition-CapabilityStatement.html
 [PrimaryCancerCondition]: StructureDefinition-mcode-primary-cancer-condition.html
 [RadiotherapySummary]: StructureDefinition-mcode-radiotherapy-summary.html
-[RadiotherapyDose]: StructureDefinition-mcode-radiotherapy-dose.html
+[RadiotherapyDoseDelivered]: StructureDefinition-mcode-radiotherapy-dose.html
 [RadiotherapyModality]: StructureDefinition-mcode-radiotherapy-modality.html
 [RadiotherapyTechnique]: StructureDefinition-mcode-radiotherapy-technique.html
 [RelatedPrimaryCancerCondition]: StructureDefinition-mcode-related-primary-cancer-condition.html
 [SecondaryCancerCondition]: StructureDefinition-mcode-secondary-cancer-condition.html
-[TeleradiotherapyPrescriptionDelivery]: StructureDefinition-mcode-teleradiotherapy-prescription-delivery.html
+[TeleradiotherapyTreatmentPhase]: StructureDefinition-mcode-teleradiotherapy-treatment-phase.html
 [TNMDistantMetastasesCategory]: StructureDefinition-mcode-tnm-distant-metastases-category.html
 [TNMPrimaryTumorCategory]: StructureDefinition-mcode-tnm-primary-tumor-category.html
 [TNMRegionalNodesCategory]: StructureDefinition-mcode-tnm-regional-nodes-category.html

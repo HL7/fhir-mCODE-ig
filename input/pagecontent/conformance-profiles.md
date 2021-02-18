@@ -6,7 +6,7 @@ Where US Core does not provide an appropriate base profile, mCODE profiles FHIR 
 
 | Profile | Based on US Core?  | Immediate Parent Profile |
 |---------|--------------------|--------------------------|
-| [Brachytherapy Prescription Delivery][BrachytherapyPrescriptionDelivery]| yes | US Core Procedure |
+| [Brachytherapy Prescription Delivery][BrachytherapyTreatmentPhase]| yes | US Core Procedure |
 | [Cancer Disease Status][CancerDiseaseStatus] | no | Observation |
 | [Cancer Genetic Variant][CancerGeneticVariant] | no | US Core Laboratory Result Observation |
 | [Cancer Genomics Report][CancerGenomicsReport] | yes | US Core Diagnostic Report Lab |
@@ -24,7 +24,7 @@ Where US Core does not provide an appropriate base profile, mCODE profiles FHIR 
 | [Primary Cancer Condition][PrimaryCancerCondition] | yes | US Core Condition |
 | [Radiotherapy Summary][RadiotherapySummary] | yes | US Core Procedure |
 | [Secondary Cancer Condition][SecondaryCancerCondition] | yes | US Core Condition |
-| [Teleradiotherapy Prescription Delivery][TeleradiotherapyPrescriptionDelivery] | yes | US Core Procedure |
+| [Teleradiotherapy Prescription Delivery][TeleradiotherapyTreatmentPhase] | yes | US Core Procedure |
 | [TNM Distant Metastases Category][TNMDistantMetastasesCategory] | no | Observation |
 | [TNM Primary Tumor Category][TNMPrimaryTumorCategory] | no | Observation |
 | [TNM Regional Nodes Category][TNMRegionalNodesCategory] | no | Observation |

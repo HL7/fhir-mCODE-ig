@@ -547,15 +547,15 @@ Description: "Extended example: example showing chemotherapy medication"
 // Radiotherapy
 
 Instance: teleradiotherapy-prescription-delivery-jenny-m
-InstanceOf: TeleradiotherapyPrescriptionDelivery
+InstanceOf: TeleradiotherapyTreatmentPhase
 Description: "Extended example: example showing radiation treatment"
 * status = #completed "completed"
 * code = LNO#mcode-radiotherapy-ebrt
 * extension[modality].valueCodeableConcept = RO#PHOTON "Photon Beam Radiation Therapy"
 * extension[technique].valueCodeableConcept = RO#3D "Three Dimensional"
-* extension[doseDelivered].extension[targetVolumeDescription].valueString = "Left breast PTV-1"
-* extension[doseDelivered].extension[dosePerFraction].valueQuantity = 200 'cGy'
-* extension[doseDelivered].extension[deliveredFractions].valueUnsignedInt = 25
+* extension[fractionsDelivered].valueUnsignedInt = 25
+* extension[doseDelivered].extension[volumeDescription].valueString = "Left breast"
+* extension[doseDelivered].extension[volumeId].valueString = "PTV-1"
 * extension[doseDelivered].extension[totalDoseDelivered].valueQuantity = 5000 'cGy' "Centigray"
 * subject = Reference(cancer-patient-jenny-m)
 * performedPeriod.start = "2018-05-01"

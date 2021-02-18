@@ -5,10 +5,10 @@ Id: mcode-cancer-disorder-vs
 Title: "Cancer Disorder Value Set"
 Description:   "A broad cancer-related value set containing both primary and secondary tumor types, with codes from ICD-10 and SNOMED CT, including both diagnosis and histology/morphology/behavior codes. ICD-O-3 morphology codes may also be used and are considered conformant to the specification. For SNOMED, the value set includes all codes descending from 363346000 'Malignant neoplastic disease (disorder)' and 108369006 'Neoplasm (morphologic abnormality)'."
 * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
+* CatchCodeCS#CD-OTHER "Other Cancer Disorder, Specify"
 * include codes from valueset PrimaryOrUncertainBehaviorCancerDisorderVS
 * include codes from valueset SecondaryCancerDisorderVS
 * include codes from valueset HistologyMorphologyBehaviorVS
-* CatchCodeCS#CD-OTHER "Other Cancer Disorder, Specify"
 
 
 ValueSet:   SecondaryCancerDisorderVS
@@ -23,7 +23,7 @@ Note that ICD-O-3 specifies morphology and topography, not disorder; in this cas
 * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
 * CatchCodeCS#SCC-OTHER "Other Secondary Cancer Condition, Specify"
 * SCT#128462008  "Secondary malignant neoplastic disease (disorder)"
-* codes from system SCT where concept is-a #128462008  "Secondary malignant neoplastic disease (disorder)"
+* include codes from system SCT where concept is-a #128462008  "Secondary malignant neoplastic disease (disorder)"
 * ICD10CM#C7B.00       "Secondary carcinoid tumors, unspecified site"
 * ICD10CM#C7B.01       "Secondary carcinoid tumors of distant lymph nodes"
 * ICD10CM#C7B.02       "Secondary carcinoid tumors of liver"

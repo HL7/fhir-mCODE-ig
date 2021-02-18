@@ -1,3 +1,6 @@
+RuleSet: ExpandValueSet
+* ^expansion.parameter.name = "sushi-generated"
+* ^expansion.parameter.valueBoolean = true
 
 RuleSet: ObservationComponentSlicingRules
 * component ^slicing.discriminator.type = #pattern

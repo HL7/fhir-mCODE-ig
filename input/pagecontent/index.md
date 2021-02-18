@@ -7,7 +7,7 @@ Please review the STU2 changes listed in the [mCODE FHIR IG Change Log](change_l
 
 ### Background
 
-According to the National Cancer Institute, 38.5 percent of men and women will be diagnosed with cancer at some point during their lifetimes. In 2014, an estimated 14.7M people were living with cancer in the United States. While these numbers are staggering, the silver lining in the wide prevalence of cancer is the potential to learn from treatment of millions of patients. If we had research-quality data from all cancer patients, it would enable higher quality health outcomes. Today, we lack the data models, technologies, and methods to capture that data.
+Cancer is among the leading causes of death worldwide. According to the National Cancer Institute, in the United States, 39.5 percent of men and women will be diagnosed with cancer at some point during their lifetimes. In 2020, an estimated 1,806,590 new cases of cancer will be diagnosed in the United States and 606,520 people will die from the disease. While these numbers are staggering, the silver lining in the wide prevalence of cancer is the potential to learn from treatment of millions of patients. If we had research-quality data from all cancer patients, it would enable higher quality health outcomes. Today, we lack the data models, technologies, and methods to capture that data.
 
 [mCODE™](https://mcodeinitiative.org/) (short for Minimal Common Oncology Data Elements) is an initiative intended to assemble a core set of structured data elements for oncology electronic health records (EHRs). mCODE is a step towards capturing research-quality data from the treatment of all cancer patients. This would enable the treatment of every cancer patient to contribute to [comparative effectiveness analysis (CEA)](https://en.wikipedia.org/wiki/Comparative_effectiveness_research) of cancer treatments by allowing for easier methods of data exchange between health systems. mCODE has been created and is being supported by the [American Society of Clinical Oncology (ASCO®)](https://www.asco.org/)in collaboration with the MITRE Corporation.
 
@@ -34,8 +34,6 @@ In addition to information obtained from subject matter experts, several pre-exi
 
 After initial development, in early 2019, an open survey was conducted to validate and prioritize the data elements from these use cases. Further down-scoping was done based on whether the data would be stored or capture in an electronic health record (EHR), and if it would place undue documentation burden on clinicians.
 
-What follows is an overview of mCODE, directed primarily at clinical readers. Readers should also take note of the [Data Dictionary (Excel download)](mCODEDataDictionary.xlsx), a simplified, flattened list of mCODE elements.
-
 ### Scope and Conceptual Model
 
 This implementation guide is a Domain of Knowledge IG. The purpose of this IG is to show how to represent clinical concepts generally, not to have a complete set of agreements for interoperable exchanges.
@@ -57,9 +55,10 @@ The groups are illustrated in the following diagram:
 
 ### Data Dictionary
 
-The [Data Dictionary (DD)](mCODEDataDictionary.xlsx) includes only the must-support elements in the mCODE specification, intentionally omitting certain elements in FHIR that are not expected to be implemented. In the event there are differences between the DD and the FHIR implementation guide, the FHIR artifacts in the IG should be taken as the source of truth.
+In addition to the FHIR artifacts, readers should also take note of the [Data Dictionary (Excel download)](mCODEDataDictionary.xlsx), a simplified, flattened list of mCODE elements.
 
-The STU 2 DD is somewhat different than the STU 1 version. The STU 2 DD lists significantly more data elements. In STU 1, some data elements were suppressed because they were common to most or all profiles, such as the reference to patient or subject, or the time of resource creation. However, the redaction of certain elements proved confusing, so the current DD does not continue this practice. Many of the "extra" rows are not new at all, but are due to this change.
+The STU 2 DD is somewhat different than the STU 1 version. In STU 1, some data elements were suppressed because they were common to most or all profiles, such as the patient, provider, status, and date. However, the redaction of certain elements proved confusing, so the current DD does not continue this practice. As a result, the STU 2 DD lists significantly more data elements.  Many of the "extra" rows are not new at all, but reflect the inclusion of elements redacted in STU 1.
+{:.new-content}
 
 ### Understanding this Guide
 
@@ -71,7 +70,7 @@ In the event there are differences between the page renderings in this IG and th
 
 The authors recognize the leadership and sponsorship of Dr. Monica Bertagnolli, former ASCO President and Dr. Jay Schnitzer, MITRE Chief Technology Officer. Dr. Steven Piantadosi and the Alliance for Clinical Trials in Oncology coordinated real-world data collection in clinical trials, as part of this project. The ASCO/CancerLinQ team was led by Dr. Robert Miller. Lead MITRE contributors were Mark Kramer, May Terry, Max Masnick, Rute Martins, Chris Moesel, and Caroline Potteiger. Andre Quina and Dr. Brian Anderson guided the overall mCODE effort at MITRE. HL7 sponsorship and input from [Clinical Interoperability Council](http://www.hl7.org/Special/committees/cic/index.cfm) and [Clinical Information Modeling Initiative](https://www.hl7.org/Special/Committees/cimi/index.cfm) is gratefully acknowledged, with special thanks to Richard Esmond and Laura Heermann Langford.
 
-This IG was authored by the MITRE Corporation using [FHIR Shorthand (FSH)](http://hl7.org/fhir/uv/shorthand/) and [SUSHI](https://fshschool.org), a free, open source toolchain from [MITRE Corporation](https://www.mitre.org/).
+This IG was authored by the MITRE Corporation using [FHIR Shorthand (FSH)](http://hl7.org/fhir/uv/shorthand/) and [SUSHI](https://fshschool.org), a free, open source tool-chain from [MITRE Corporation](https://www.mitre.org/).
 
 ### Contact Information
 

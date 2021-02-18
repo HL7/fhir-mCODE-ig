@@ -1,5 +1,5 @@
 Instance: group-mcode-patients
-InstanceOf: Group
+InstanceOf: MCODEPatientGroup
 Usage: #example
 Title: "mCODE Patient Group"
 Description: "Example of a Group identifying mCODE Patients"

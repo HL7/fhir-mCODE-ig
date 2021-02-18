@@ -2,10 +2,9 @@ Profile: MCODEPatientGroup
 Parent: Group
 Id: mcode-patient-group
 Title: "mCODE Patient Group"
-Description: "A group of patients included in the scope of mCODE, whose cancer-related resource conform to mCODE profiles."
+Description: "A group of patients included in the scope of mCODE, whose cancer-related resources conform to mCODE profiles."
 * code = LNO#mcode-patient
 * member.entity only Reference(CancerPatient)
-
 
 // Defines common operations for the server role
 RuleSet: mCODE_CapabilityStatement_Server_Common

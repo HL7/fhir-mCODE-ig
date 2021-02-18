@@ -20,8 +20,8 @@ Description: "A collection of data for an mCODE cancer patient."
 * insert CreateBundleEntry(cancerRelatedMedicationRequest, 0, *, Cancer-Related Medication Request(s\), Cancer-Related Medication Requests\, including both active and inactive medications., CancerRelatedMedicationRequest)
 * insert CreateBundleEntry(cancerRelatedSurgicalProcedure, 0, *, Cancer-Related Surgical Procedure(s\),  Procedure resource(s\) representing cancer-related surgical procedures., CancerRelatedSurgicalProcedure)
 * insert CreateBundleEntry(radiotherapySummary, 0, *, Radiation Summary(-ies\), Procedure resource(s\) representing a course of treatment in cancer-related radiology therapy., RadiotherapySummary)
-* insert CreateBundleEntry(brachytherapyPrescriptionDelivery, 0, *, Delivery of Brachytherapy Prescription, Procedure resource(s\) representing cancer-related brachytherapy radiology procedures., BrachytherapyPrescriptionDelivery)
-* insert CreateBundleEntry(teleradiotherapyPrescriptionDelivery, 0, *, Delivery of Teleradiotherapy Prescription, Procedure resource(s\) representing a phase in treatment of cancer via external beam radiology procedures., TeleradiotherapyPrescriptionDelivery)
+* insert CreateBundleEntry(brachytherapyPrescriptionDelivery, 0, *, Delivery of Brachytherapy Prescription, Procedure resource(s\) representing cancer-related brachytherapy radiology procedures., BrachytherapyTreatmentPhase)
+* insert CreateBundleEntry(teleradiotherapyPrescriptionDelivery, 0, *, Delivery of Teleradiotherapy Prescription, Procedure resource(s\) representing a phase in treatment of cancer via external beam radiology procedures., TeleradiotherapyTreatmentPhase)
 * insert CreateBundleEntry(tnmStageGroup, 0, *, TNM Stage Group(s\), Observation resource(s\) representing stage group, TNMStageGroup)
 * insert CreateBundleEntry(tnmPrimaryTumorCategory, 0, *, TNM Primary Tumor Category(-ies\), Observation resource(s\) representing T category, TNMPrimaryTumorCategory)
 * insert CreateBundleEntry(tnmRegionalNodesCategory, 0, *, TNM Regional Node Category(-ies\), Observation resource(s\) representing N category, TNMRegionalNodesCategory)
@@ -167,8 +167,8 @@ RuleSet: CreateBundleEntry(name, min, max, short, def, class)
 * entry[cancerRelatedSurgicalProcedure].resource only CancerRelatedSurgicalProcedure
 // -- Radiotherapy --
 * entry[radiotherapySummary].resource only RadiotherapySummary
-* entry[teleradiotherapyPrescriptionDelivery].resource only TeleradiotherapyPrescriptionDelivery
-* entry[brachytherapyPrescriptionDelivery].resource only BrachytherapyPrescriptionDelivery
+* entry[teleradiotherapyPrescriptionDelivery].resource only TeleradiotherapyTreatmentPhase
+* entry[brachytherapyPrescriptionDelivery].resource only BrachytherapyTreatmentPhase
 //
 * entry[tnmStageGroup].resource only TNMStageGroup
 * entry[tnmPrimaryTumorCategory].resource only TNMPrimaryTumorCategory

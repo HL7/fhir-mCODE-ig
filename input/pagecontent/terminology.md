@@ -63,7 +63,7 @@ Finally, the "catch code" code system was established as a way to know, positive
 
 ### Code Systems Defined
 
-* [ElixhauserCategoryCS]
+* [ComorbiditiesElixhauserCS]
 * [RadiotherapyCS]
 * [CatchCodeCS]
 * [ResourceIdentifierCS]

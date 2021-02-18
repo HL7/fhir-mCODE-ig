@@ -7,17 +7,18 @@ RuleSet: RadiotherapySummaryCommon
     TreatmentTerminationReason named terminationReason 0..1 MS and
     RadiotherapyModality named modality 0..* MS and
     RadiotherapyTechnique named technique 0..* MS and
-    RadiotherapyDose named doseDelivered 0..* MS
+    RadiotherapyFractionsDelivered named fractionsDelivered 0..1 MS and
+    RadiotherapyDoseDelivered named doseDelivered 0..* MS
 * extension and category MS
 
-RuleSet: RadiotherapyPrescriptionCommon
+RuleSet: RadiotherapyPhaseCommon
 * insert RadiotherapySummaryCommon
 * extension[modality] 0..1
 * extension[technique] 0..1
 * partOf only Reference(RadiotherapySummary)
 * partOf ^definition = "The partOf element, if present, MUST reference a RadiotherapySummary-conforming Procedure resource."
 * insert NotUsed(bodySite)
-* bodySite ^definition = "The target volumes at the prescription-delivery level are too complex to be described by typical codes. Instead, enter a text description of the treatment volume in the RadiotherapyDose.targetVolumeDescription extension."
+* bodySite ^definition = "The target volumes at the prescription-delivery level are too complex to be described by typical codes. Instead, enter a text description of the treatment volume in the RadiotherapyDoseDelivered.volumeDescription extension."
 
 
 // ------------- Overall Treatment Summary -----------------
@@ -25,13 +26,13 @@ Profile:  RadiotherapySummary
 Parent:   USCoreProcedure  // considered one procedure with multiple parts
 Id:       mcode-radiotherapy-summary
 Title:    "Radiotherapy Summary"
-Description: "A summary of radiotherapy delivered to a patient. Whenever new contributions in the scope of the same treatment are delivered, this resource is updated. One therapy can involve multiple prescriptions. The status is changed to complete when the course has been fully delivered or changed to stopped if terminated. To describe the treatment in more detail, use either TeleradiotherapyPrescriptionDelivery or BrachytherapyPrescriptionDelivery, which can reference this summary through the partOf element."
+Description: "A summary of radiotherapy delivered to a patient. Whenever new contributions in the scope of the same treatment are delivered, this resource is updated. One therapy can involve multiple prescriptions. The status is changed to complete when the course has been fully delivered or changed to stopped if terminated. To describe the treatment in more detail, use either TeleradiotherapyTreatmentPhase or BrachytherapyTreatmentPhase, which can reference this summary through the partOf element."
 * insert ReduceText
 * insert ReduceText(performer)
 * insert ReduceText(focalDevice)
 * insert RadiotherapySummaryCommon
 // Summary-specific
-* code = LNO#mcode-radiotherapy-summary
+* code = RID#mcode-radiotherapy-summary
 * extension[modality].value[x] from RadiotherapyModalityVS (required)
 * extension[technique].value[x] from RadiotherapyTechniqueVS (extensible)
 * bodySite from RadiationTargetBodySiteVS (extensible)
@@ -41,17 +42,17 @@ Description: "A summary of radiotherapy delivered to a patient. Whenever new con
 * bodySite and bodySite.extension and bodySite.extension[locationQualifier] MS  
 
 
-Profile:  TeleradiotherapyPrescriptionDelivery
+Profile:  TeleradiotherapyTreatmentPhase
 Parent:   USCoreProcedure
-Id:       mcode-teleradiotherapy-prescription-delivery
-Title: "Teleradiotherapy Prescription Delivery"
-Description: "A summary of delivered teleradiotherapy treatment. The scope is a prescription consisting of one or multiple Fractions. A prescription delivery instance should end when there is a change in the target volume of a body site, treatment fraction size, modality, or treatment technique."
+Id:       mcode-teleradiotherapy-treatment-phase
+Title: "Teleradiotherapy Treatment Phase"
+Description: "A summary of a phase of teleradiotherapy treatment that has been delivered. The scope is a treatment consisting of one or multiple identical fractions. A phase ends when there is a change in the treatment volume, treatment fraction size, modality, or treatment technique."
 * insert ReduceText
 * insert ReduceText(performer)
 * insert ReduceText(focalDevice)
-* insert RadiotherapyPrescriptionCommon
+* insert RadiotherapyPhaseCommon
 // Teleradiotherapy specific:
-* code = LNO#mcode-radiotherapy-ebrt
+* code = RID#mcode-radiotherapy-ebrt
 * extension[modality].value[x] from TeleradiotherapyModalityVS (required)
 * extension[modality] ^short = "Teleradiotherapy (EBRT) Modality"
 * extension[modality]  ^definition = "The modality (radiation type) for the external beam radiation therapy."
@@ -61,17 +62,17 @@ Description: "A summary of delivered teleradiotherapy treatment. The scope is a 
 //* usedCode from TeleradiotherapyDeviceVS (extensible)
 
 
-Profile:  BrachytherapyPrescriptionDelivery
+Profile:  BrachytherapyTreatmentPhase
 Parent:   USCoreProcedure
-Id:       mcode-brachytherapy-prescription-delivery
-Title:    "Brachytherapy Prescription Delivery"
-Description: "A summary of delivered brachytherapy treatment. The scope is a prescription consisting of one or multiple fractions. A new prescription delivery begins when there is a change in the target volume of a body site, treatment fraction size, modality, or treatment technique."
+Id:       mcode-brachytherapy-treatment-phase
+Title:    "Brachytherapy Treatment Phase"
+Description: "A summary of a phase of brachytherapy treatment that has been delivered. The scope is a treatment consisting of one or multiple identical fractions. A phase ends when there is a change in the treatment volume, treatment fraction size, modality, or treatment technique."
 * insert ReduceText
 * insert ReduceText(performer)
 * insert ReduceText(focalDevice)
-* insert RadiotherapyPrescriptionCommon
+* insert RadiotherapyPhaseCommon
 // Specific to Brachytherapy:
-* code = LNO#mcode-radiotherapy-brachy
+* code = RID#mcode-radiotherapy-brachy
 * extension[modality].value[x] from  BrachytherapyModalityVS (required)
 * extension[modality] ^short = "Brachytherapy Modality"
 * extension[modality] ^definition = "The modality for the Brachytherapy procedure."
@@ -98,35 +99,36 @@ Description: "Extension capturing a technique of external beam or brachytherapy 
 * insert ExtensionContext(Procedure)
 * value[x] only CodeableConcept
 
-Extension: RadiotherapyDose
+Extension: RadiotherapyFractionsDelivered
+Id:        mcode-radiotherapy-fractions-delivered
+Title:     "Radiotherapy Fractions Delivered"
+Description: "The total number of fractions (treatment divisions) actually delivered for this volume."
+* insert ExtensionContext(Procedure)
+* value[x] only unsignedInt
+
+Extension: RadiotherapyDoseDelivered
 Id: mcode-radiotherapy-dose
 Title: "Radiotherapy Dose"
 Description: "Dose parameters for one target volume, including dose per fraction, number of fractions delivered, and total dose delivered."
 * insert ExtensionContext(Procedure)
 * extension contains
-    targetVolumeDescription 0..1 and
-    targetVolumeId 0..1 and
-    dosePerFraction 0..1 and
-    deliveredFractions 0..1 and
+    volumeDescription 0..1 and
+    volumeId 0..1 and
+//    dosePerFraction 0..1 and
     totalDoseDelivered 0..1
-* extension[targetVolumeDescription].value[x] only string
-* extension[targetVolumeId].value[x] only string
-* extension[dosePerFraction].value[x] only Quantity
-* extension[dosePerFraction].valueQuantity = UCUM#cGy
-* extension[deliveredFractions].value[x] only unsignedInt
+* extension[volumeDescription].value[x] only string
+* extension[volumeId].value[x] only string
+//* extension[dosePerFraction].value[x] only Quantity
+//* extension[dosePerFraction].valueQuantity = UCUM#cGy
 * extension[totalDoseDelivered].value[x] only Quantity
 * extension[totalDoseDelivered].valueQuantity = UCUM#cGy
 // Definitions of in-line extensions
-* extension[targetVolumeDescription] ^short = "Target volume where radiation was delivered"
-* extension[targetVolumeDescription] ^definition = "Text description of the body structure targeted, for example, Chest Wall Lymph Nodes."
-* extension[targetVolumeId] ^short = "Optional identifier for the target volume."
-* extension[targetVolumeId] ^definition = "Identifier of the target volume where radiation was delivered, for example, PTV-2 (planning target volume 2). May be included as a reference to the treatment plan."
-* extension[dosePerFraction] ^short = "Radiation Dose Per Fraction"
-* extension[dosePerFraction] ^definition = "The amount of radiation administered during a single fraction (dose division) of radiation therapy."
-//* extension[prescribedFractions] ^short = "Radiation Fractions Prescribed"
-//* extension[prescribedFractions] ^definition = "The total number of fractions (treatment divisions) planned for this target volume."
-* extension[deliveredFractions] ^short = "Radiation Fractions Delivered"
-* extension[deliveredFractions] ^definition = "The total number of fractions (treatment divisions) actually delivered for this target volume."
+* extension[volumeDescription] ^short = "Target volume where radiation was delivered"
+* extension[volumeDescription] ^definition = "Text description of the body structure targeted, for example, Chest Wall Lymph Nodes."
+* extension[volumeId] ^short = "Optional identifier for the target volume."
+* extension[volumeId] ^definition = "Identifier of the target volume where radiation was delivered, for example, PTV-2 (planning target volume 2). May be included as a reference to the treatment plan."
+//* extension[dosePerFraction] ^short = "Radiation Dose Per Fraction"
+//* extension[dosePerFraction] ^definition = "The amount of radiation administered during a single fraction (dose division) of radiation therapy."
 * extension[totalDoseDelivered] ^short = "Total Radiation Dose Delivered"
 * extension[totalDoseDelivered] ^definition = "The total amount of radiation delivered to this target volume within the scope of this dose delivery."
 
@@ -145,7 +147,7 @@ If either Modality value set needs to be extended, here are the invariants;
     Expression: "coding.where(code = 'OtherBrachytherapyModality').exists() implies coding.where(code != 'OtherBrachytherapyModality' and $this.memberOf('http://hl7.org/fhir/us/mcode/ValueSet/brachytherapy-modality-vs').not()).exists()"
     Severity:   #error
 
-These extensions have been grouped under RadiotherapyDose:
+These extensions have been grouped under RadiotherapyDoseDelivered:
 
 Extension: RadiotherapyDosePerFraction
 Id: mcode-radiotherapy-dose-per-fraction

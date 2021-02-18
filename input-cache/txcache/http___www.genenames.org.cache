@@ -13,7 +13,7 @@
 v: {
   "display" : "",
   "severity" : "error",
-  "error" : "The code \"HGNC:1100\" is not valid in the system http://www.genenames.org; The code provided (http://www.genenames.org#HGNC:1100) is not valid (from http://mcode-spec.mitre.org:4567)"
+  "error" : "The code \"HGNC:1100\" is not valid in the system http://www.genenames.org; The code provided (http://www.genenames.org#HGNC:1100) is not valid (from http://tx.fhir.org/r4)"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
@@ -30,7 +30,7 @@ v: {
 v: {
   "display" : "",
   "severity" : "error",
-  "error" : "The code \"HGNC:26144\" is not valid in the system http://www.genenames.org; The code provided (http://www.genenames.org#HGNC:26144) is not valid (from http://mcode-spec.mitre.org:4567)"
+  "error" : "The code \"HGNC:26144\" is not valid in the system http://www.genenames.org; The code provided (http://www.genenames.org#HGNC:26144) is not valid (from http://tx.fhir.org/r4)"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
@@ -47,7 +47,7 @@ v: {
 v: {
   "display" : "",
   "severity" : "error",
-  "error" : "The code \"HGNC:11389\" is not valid in the system http://www.genenames.org; The code provided (http://www.genenames.org#HGNC:11389) is not valid (from http://mcode-spec.mitre.org:4567)"
+  "error" : "The code \"HGNC:11389\" is not valid in the system http://www.genenames.org; The code provided (http://www.genenames.org#HGNC:11389) is not valid (from http://tx.fhir.org/r4)"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
@@ -64,7 +64,7 @@ v: {
 v: {
   "display" : "",
   "severity" : "error",
-  "error" : "The code \"1100\" is not valid in the system http://www.genenames.org; The code provided (http://www.genenames.org#1100) is not valid (from http://mcode-spec.mitre.org:4567)"
+  "error" : "The code \"1100\" is not valid in the system http://www.genenames.org; The code provided (http://www.genenames.org#1100) is not valid (from http://tx.fhir.org/r4)"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
@@ -81,7 +81,7 @@ v: {
 v: {
   "display" : "",
   "severity" : "error",
-  "error" : "The code \"1101\" is not valid in the system http://www.genenames.org; The code provided (http://www.genenames.org#1101) is not valid (from http://mcode-spec.mitre.org:4567)"
+  "error" : "The code \"1101\" is not valid in the system http://www.genenames.org; The code provided (http://www.genenames.org#1101) is not valid (from http://tx.fhir.org/r4)"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
@@ -131,7 +131,7 @@ v: {
 v: {
   "display" : "",
   "severity" : "error",
-  "error" : "The code \"1100\" is not valid in the system http://www.genenames.org; The code \"1101\" is not valid in the system http://www.genenames.org; The code \"1748\" is not valid in the system http://www.genenames.org; The code \"26144\" is not valid in the system http://www.genenames.org; The code \"9588\" is not valid in the system http://www.genenames.org; The code \"11389\" is not valid in the system http://www.genenames.org; The code \"11998\" is not valid in the system http://www.genenames.org; None of the codes provided (http://www.genenames.org#1100, http://www.genenames.org#1101, http://www.genenames.org#1748, http://www.genenames.org#26144, http://www.genenames.org#9588, http://www.genenames.org#11389, http://www.genenames.org#11998) are valid in the value set 'HGNCVS' (from http://mcode-spec.mitre.org:4567)"
+  "error" : "The code \"1100\" is not valid in the system http://www.genenames.org; The code \"1101\" is not valid in the system http://www.genenames.org; The code \"1748\" is not valid in the system http://www.genenames.org; The code \"26144\" is not valid in the system http://www.genenames.org; The code \"9588\" is not valid in the system http://www.genenames.org; The code \"11389\" is not valid in the system http://www.genenames.org; The code \"11998\" is not valid in the system http://www.genenames.org; None of the codes provided (http://www.genenames.org#1100, http://www.genenames.org#1101, http://www.genenames.org#1748, http://www.genenames.org#26144, http://www.genenames.org#9588, http://www.genenames.org#11389, http://www.genenames.org#11998) are valid in the value set 'HGNCVS' (from http://tx.fhir.org/r4)"
 }
 -------------------------------------------------------------------------------------
 {"hierarchical" : true, "valueSet" :{

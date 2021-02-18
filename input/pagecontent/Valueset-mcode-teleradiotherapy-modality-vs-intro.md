@@ -1,6 +1,6 @@
 ### Mapping from Other Vocabularies
 
-The modalities in this value set are drawn from the [radiotherapy code system](CodeSystem-mcode-radiotherapy-cs.html) defined in this Implementation Guide. Existing terminology systems do not have all the necessary codes.
+The modalities in this value set are drawn from the [radiotherapy code system][RadiotherapyCS] defined in this Implementation Guide. Existing terminology systems do not have all the necessary codes.
 
 The following table shows mappings from SNOMED CT and NCI Thesaurus to teleradiotherapy modality codes. More specific (child) terms in the respective hierarchies also can be mapped to the code in the leftmost column. **This table may not be exhaustive and additional valid mappings may exist.**
 

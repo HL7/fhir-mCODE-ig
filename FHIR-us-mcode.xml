@@ -9,8 +9,8 @@
 <artifactPageExtension value="-mappings"/>
 <artifact id="StructureDefinition/mcode-body-structure-identifier" key="StructureDefinition-mcode-body-structure-identifier" name="Body Structure Identifier"/>
 <artifact id="ValueSet/mcode-brachytherapy-modality-vs" key="ValueSet-mcode-brachytherapy-modality-vs" name="Brachytherapy Modality Value Set"/>
-<artifact id="StructureDefinition/mcode-brachytherapy-prescription-delivery" key="StructureDefinition-mcode-brachytherapy-prescription-delivery" name="Brachytherapy Prescription Delivery"/>
 <artifact id="ValueSet/mcode-brachytherapy-technique-vs" key="ValueSet-mcode-brachytherapy-technique-vs" name="Brachytherapy Technique Value Set"/>
+<artifact id="StructureDefinition/mcode-brachytherapy-treatment-phase" key="StructureDefinition-mcode-brachytherapy-treatment-phase" name="Brachytherapy Treatment Phase"/>
 <artifact id="ValueSet/mcode-cancer-body-location-vs" key="cancer-body-location-value-set" name="Cancer Body Location Value Set"/>
 <artifact deprecated="true" id="Profile/mcode-cancer-condition-parent" key="cancer-condition-parent" name="Cancer Condition Parent"/>
 <artifact id="StructureDefinition/mcode-cancer-disease-status" key="cancer-disease-status" name="Cancer Disease Status"/>
@@ -76,7 +76,7 @@
 <artifact id="ValueSet/elixhauser-drug-abuse-vs" key="ValueSet-elixhauser-drug-abuse-vs" name="Elixhauser Comorbid Condition Value Set for drug abuse"/>
 <artifact id="ValueSet/elixhauser-cancer-solid-tumor-in-situ-vs" key="ValueSet-elixhauser-cancer-solid-tumor-in-situ-vs" name="Elixhauser Comorbid Condition Value Set for malignant solid tumors in situ"/>
 <artifact id="ValueSet/elixhauser-cancer-solid-tumor-malignant-vs" key="ValueSet-elixhauser-cancer-solid-tumor-malignant-vs" name="Elixhauser Comorbid Condition Value Set for malignant solid tumors without metastases"/>
-<artifact id="CodeSystem/mcode-comorbidities-elixhauser-ahrq-cs" key="CodeSystem-mcode-comorbidities-elixhauser-ahrq-cs" name="Elixhauser Comorbidity Category"/>
+<artifact id="CodeSystem/comorbidities-elixhauser" key="CodeSystem-comorbidities-elixhauser" name="Elixhauser Comorbidity Category"/>
 <artifact id="StructureDefinition/mcode-evidence-type" key="StructureDefinition-mcode-evidence-type" name="Evidence Type"/>
 <artifact deprecated="true" id="Extension/mcode-evidence-type-extension" key="evidence-type-extension" name="Evidence Type Extension"/>
 <artifact id="StructureDefinition/mcode-genetic-specimen" key="genetic-specimen" name="Genetic Specimen"/>
@@ -105,8 +105,9 @@
 <artifact deprecated="true" key="Procedure" name="Procedure"/>
 <artifact deprecated="true" id="ValueSet/mcode-radiation-procedure-value-set" key="radiation-procedure-value-set" name="Radiation Procedure Value Set"/>
 <artifact id="ValueSet/mcode-radiation-target-body-site-vs" key="radiation-target-body-site-value-set" name="Radiation Target Body Site Value Set"/>
-<artifact id="CodeSystem/mcode-radiotherapy-cs" key="CodeSystem-mcode-radiotherapy-cs" name="Radiotherapy Code System"/>
+<artifact id="CodeSystem/radiotherapy" key="CodeSystem-radiotherapy" name="Radiotherapy Code System"/>
 <artifact id="StructureDefinition/mcode-radiotherapy-dose" key="StructureDefinition-mcode-radiotherapy-dose" name="Radiotherapy Dose"/>
+<artifact id="StructureDefinition/mcode-radiotherapy-fractions-delivered" key="StructureDefinition-mcode-radiotherapy-fractions-delivered" name="Radiotherapy Fractions Delivered"/>
 <artifact id="StructureDefinition/mcode-radiotherapy-modality" key="StructureDefinition-mcode-radiotherapy-modality" name="Radiotherapy Modality"/>
 <artifact id="StructureDefinition/mcode-radiotherapy-technique" key="StructureDefinition-mcode-radiotherapy-technique" name="Radiotherapy Modality"/>
 <artifact id="ValueSet/mcode-radiotherapy-modality-vs" key="ValueSet-mcode-radiotherapy-modality-vs" name="Radiotherapy Modality Value Set"/>
@@ -136,8 +137,8 @@
 <artifact id="StructureDefinition/mcode-tnm-stage-group" key="StructureDefinition-mcode-tnm-stage-group" name="TNM Stage Group"/>
 <artifact id="ValueSet/mcode-tnm-stage-group-vs" key="tnm-stage-group-value-set" name="TNM Stage Group Value Set"/>
 <artifact id="ValueSet/mcode-teleradiotherapy-modality-vs" key="ValueSet-mcode-teleradiotherapy-modality-vs" name="Teleradiotherapy Modality Value Set"/>
-<artifact id="StructureDefinition/mcode-teleradiotherapy-prescription-delivery" key="StructureDefinition-mcode-teleradiotherapy-prescription-delivery" name="Teleradiotherapy Prescription Delivery"/>
 <artifact id="ValueSet/mcode-teleradiotherapy-technique-vs" key="ValueSet-mcode-teleradiotherapy-technique-vs" name="Teleradiotherapy Technique Value Set"/>
+<artifact id="StructureDefinition/mcode-teleradiotherapy-treatment-phase" key="StructureDefinition-mcode-teleradiotherapy-treatment-phase" name="Teleradiotherapy Treatment Phase"/>
 <artifact id="StructureDefinition/mcode-treatment-termination-reason" key="StructureDefinition-mcode-treatment-termination-reason" name="Termination Reason"/>
 <artifact deprecated="true" id="Extension/mcode-termination-reason-extension" key="termination-reason-extension" name="Termination Reason Extension"/>
 <artifact id="StructureDefinition/mcode-treatment-intent" key="StructureDefinition-mcode-treatment-intent" name="Treatment Intent"/>

@@ -160,19 +160,19 @@ Description: "mCODE Example for Cancer Related Surgical Procedure"
 * bodySite = SCT#41224006 "Structure of lower lobe of left lung (body structure)"
 
 Instance: brachytherapy-prescription-delivery-ldr
-InstanceOf: BrachytherapyPrescriptionDelivery
+InstanceOf: BrachytherapyTreatmentPhase
 Description: "mCODE Example for a brachytherapy procedure."
 * status = #completed "completed"
-* code = LNO#mcode-radiotherapy-brachy
-* extension[modality].valueCodeableConcept = RO#LDR "Low Dose Rate Brachytherapy" 
-* extension[technique].valueCodeableConcept = RO#INSTIT-TEMP "Interstitial-Temporary"
+* code = RID#mcode-radiotherapy-brachy
+* extension[modality].valueCodeableConcept = RT#LDR "Low Dose Rate Brachytherapy" 
+* extension[technique].valueCodeableConcept = RT#INSTIT-TEMP "Interstitial-Temporary"
 * subject = Reference(cancer-patient-john-anyperson)
 * asserter = Reference(us-core-practitioner-kyle-anydoc)
 * performedPeriod.start = "2019-03-01"
 * performedPeriod.end = "2019-03-01"
 //* extension[treatmentIntent].valueCodeableConcept = SCT#373808002 "Curative - procedure intent"
 * reasonReference = Reference(primary-cancer-condition-nsclc)
-* extension[doseDelivered].extension[targetVolumeDescription].valueString = "Structure of lower lobe of left lung"
+* extension[doseDelivered].extension[volumeDescription].valueString = "Structure of lower lobe of left lung"
 
 Instance: tnm-clinical-stage-group-3c
 InstanceOf: TNMStageGroup

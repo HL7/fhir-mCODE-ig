@@ -65,6 +65,7 @@ Finally, the "catch code" code system was established as a way to know, positive
 * [ElixhauserCategoryCS]
 * [RadiotherapyCS]
 * [CatchCodeCS]
+* [ResourceIdentifierCS]
 
 ### Value Sets Defined
 

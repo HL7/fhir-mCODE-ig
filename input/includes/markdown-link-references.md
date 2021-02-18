@@ -126,7 +126,7 @@
 [ElixhauserCategoryCS]: CodeSystem-mcode-comorbidities-elixhauser-ahrq-cs.html
 [RadiotherapyCS]: CodeSystem-mcode-radiotherapy-cs.html
 [CatchCodeCS]: CodeSystem-mcode-catch-code-cs.html
-[ResourceIdentifierCS]: mcode-resource-identifier-cs
+[ResourceIdentifierCS]: CodeSystem-mcode-resource-identifier-cs.html
 
 <!-- mCODE CapabilityStatements -->
 [mcode-receiver-cancer-conditions-then-patients]: CapabilityStatement-mcode-receiver-cancer-conditions-then-patients.html

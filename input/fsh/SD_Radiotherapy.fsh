@@ -32,7 +32,7 @@ Description: "A summary of radiotherapy delivered to a patient. Whenever new con
 * insert ReduceText(focalDevice)
 * insert RadiotherapySummaryCommon
 // Summary-specific
-* code = LNO#mcode-radiotherapy-summary
+* code = RID#mcode-radiotherapy-summary
 * extension[modality].value[x] from RadiotherapyModalityVS (required)
 * extension[technique].value[x] from RadiotherapyTechniqueVS (extensible)
 * bodySite from RadiationTargetBodySiteVS (extensible)
@@ -52,7 +52,7 @@ Description: "A summary of a phase of teleradiotherapy treatment that has been d
 * insert ReduceText(focalDevice)
 * insert RadiotherapyPhaseCommon
 // Teleradiotherapy specific:
-* code = LNO#mcode-radiotherapy-ebrt
+* code = RID#mcode-radiotherapy-ebrt
 * extension[modality].value[x] from TeleradiotherapyModalityVS (required)
 * extension[modality] ^short = "Teleradiotherapy (EBRT) Modality"
 * extension[modality]  ^definition = "The modality (radiation type) for the external beam radiation therapy."
@@ -72,7 +72,7 @@ Description: "A summary of a phase of brachytherapy treatment that has been deli
 * insert ReduceText(focalDevice)
 * insert RadiotherapyPhaseCommon
 // Specific to Brachytherapy:
-* code = LNO#mcode-radiotherapy-brachy
+* code = RID#mcode-radiotherapy-brachy
 * extension[modality].value[x] from  BrachytherapyModalityVS (required)
 * extension[modality] ^short = "Brachytherapy Modality"
 * extension[modality] ^definition = "The modality for the Brachytherapy procedure."

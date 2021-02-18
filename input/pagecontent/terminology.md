@@ -52,6 +52,7 @@ New code systems were created when no existing code systems were deemed fit for 
 | Radiotherapy Code System | Radiotherapy modalities, techniques, and devices | No |
 | Elixhauser Code System | Codes for comorbidity categories | No |
 | Catch Codes | Codes for positive identification of FHIR instances | No |
+| Resource Identifier Codes | Codes describing types of instances, to be used in the 'code' element | No |
 {: .grid }
 
 In the case of radiotherapy, significantly less than 50% of the required concepts exist in established sources such as SNOMED CT and NCI Thesaurus. The CodeX FHIR Accelerator radiation oncology stakeholder group, comprised of radiation oncologists, representatives of professional societies, vendors, and information specialists, considered several options. It was decided, at least for trial use, to create a custom code system that could be directly controlled, similar to other medical specialty organizations such as AJCC for cancer staging, NCBI for genetic variants, and HGNC for gene identification. This decision does not rule out future coordination with terminology SDOs.
@@ -65,6 +66,7 @@ Finally, the "catch code" code system was established as a way to know, positive
 * [ElixhauserCategoryCS]
 * [RadiotherapyCS]
 * [CatchCodeCS]
+* [ResourceIdentifierCS]
 
 ### Value Sets Defined
 

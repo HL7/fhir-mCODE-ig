@@ -1,11 +1,11 @@
 Instance: group-mcode-patients
-InstanceOf: Group
+InstanceOf: MCODEPatientGroup
 Usage: #example
 Title: "mCODE Patient Group"
 Description: "Example of a Group identifying mCODE Patients"
 * type = #person
 * actual = true
-* code = #mcode-patient
+* code = LNO#mcode-patient
 * member[0].entity = Reference(Patient/cancer-patient-john-anyperson)
 * member[1].entity = Reference(Patient/cancer-patient-eve-anyperson)
 

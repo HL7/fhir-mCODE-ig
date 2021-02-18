@@ -1,10 +1,22 @@
+Alias: LNO = http://hl7.org/fhir/us/mcode/CodeSystem/mcode-resource-identifier-cs
+
+CodeSystem: ResourceIdentifierCS
+Id: mcode-resource-identifier-cs
+Title: "mCODE Resource Identifier Code System"
+Description: "Concepts describing types of instances, to be used in the 'code' element of an instance."
+* #mcode-patient "mCODE Patient Group Resource" "Identifies a Group resource containing mCODE cancer patients that conforms to the MCODEPatientGroup profile."
+* #mcode-comorbidity  "Elixhauser Comorbidity Resource" "Identifies an Observation resource representing Elixhauser comorbidities that conforms to the ComorbiditiesElixhauser profile."
+* #mcode-radiotherapy-summary "Radiotherapy Summary Resource" "Identifies an Observation resource that summarizes a radiotherapy course of treatment that conforms to the RadiotherapySummary profile."
+* #mcode-radiotherapy-ebrt "Teleradiotherapy Prescription Delivery Resource" "Identifies an Observation resource that describes delivery of a teleradiotherapy (external beam) prescription and conforms to the TeleradiotherapyPrescriptionDelivery profile."
+* #mcode-radiotherapy-brachy "Brachytherapy Prescription Delivery Resource" "Identifies an Observation resource that describes delivery of a brachytherapy (external beam) prescription and conforms to the BrachytherapyPrescriptionDelivery profile."
+
 ValueSet: CancerBodyLocationVS
 Id: mcode-cancer-body-location-vs
 Title: "Cancer Body Location Value Set"
 Description:  "Codes describing the location(s) of primary or secondary cancer. The value set includes all codes from the SNOMED CT body structure hierarchy (codes descending from 123037004 'Body Structure'). The cancer body location may also be expressed using ICD-O-3 topography codes, however, those codes are not included here due to intellectual property restrictions. These topography terms have four-character codes that run from C00.0 to C80.9 [ref](https://apps.who.int/iris/bitstream/handle/10665/96612/9789241548496_eng.pdf). Only SNOMED CT and ICD-O-3 are considered conformant."
 * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
 * include codes from system SCT where concept is-a #123037004  "Body Structure"
-* include codes from system ICDO3  // currently no way to filter to just topology codes (that I know of)
+* include codes from system ICDO3  // currently no way to filter down to just topology codes (that I know of)
 
 ValueSet:   ConditionStatusTrendVS
 Id: mcode-condition-status-trend-vs
@@ -44,7 +56,7 @@ Description: "Includes surgical procedure codes from SNOMED CT, ICD-10-PCS and C
 CodeSystem: CatchCodeCS
 Id: mcode-catch-code-cs
 Title: "mCODE Catch Codes"
-Description: "Codes needed for positive identification of certain types of instances."
+Description: "Codes needed for positive identification of certain types of instances, more specifically, to uniquely associate instances with slices when they are used in bundles. The codes in this code system are used when a concept falls outside of the defined set of codes. They make it possible to use 'required' bindings where 'extensible' bindings would result an instance matching multiple slices and thus trigger a validation error."
 * #PCC-OTHER "Other Primary Cancer Condition, Specify" "Code to be used when the desired concept is not represented base value set. This code represents the equivalent of 'Other, specify: _________'. Specify the additional concept as the second coding."
 * #SCC-OTHER "Other Secondary Cancer Condition, Specify" "Code to be used when the desired concept is not represented base value set. This code represents the equivalent of 'Other, specify: _________'. Specify the additional concept as the second coding."
 * #TMT-OTHER "Other Tumor Marker Test, Specify" "Code to be used when the desired concept is not represented base value set. This code represents the equivalent of 'Other, specify: _________'. Specify the additional concept as the second coding."

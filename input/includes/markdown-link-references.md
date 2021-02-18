@@ -26,6 +26,7 @@
 [KarnofskyPerformanceStatus]: StructureDefinition-mcode-karnofsky-performance-status.html
 [LocationQualifier]: StructureDefinition-mcode-location-qualifier.html
 [MCODEPatientBundle]: StructureDefinition-mcode-patient-bundle.html
+[MCODEPatientGroup]: StructureDefinition-mcode-patient-group.html
 [CapabilityStatement]: StructureDefinition-CapabilityStatement.html
 [PrimaryCancerCondition]: StructureDefinition-mcode-primary-cancer-condition.html
 [RadiotherapySummary]: StructureDefinition-mcode-radiotherapy-summary.html
@@ -125,6 +126,7 @@
 [ElixhauserCategoryCS]: CodeSystem-mcode-comorbidities-elixhauser-ahrq-cs.html
 [RadiotherapyCS]: CodeSystem-mcode-radiotherapy-cs.html
 [CatchCodeCS]: CodeSystem-mcode-catch-code-cs.html
+[ResourceIdentifierCS]: mcode-resource-identifier-cs
 
 <!-- mCODE CapabilityStatements -->
 [mcode-receiver-cancer-conditions-then-patients]: CapabilityStatement-mcode-receiver-cancer-conditions-then-patients.html

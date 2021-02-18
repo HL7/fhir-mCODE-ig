@@ -28,3 +28,54 @@ v: {
   "error" : "The code \"8520/2\" is not valid in the system http://terminology.hl7.org/CodeSystem/icd-o-3; The code provided (http://terminology.hl7.org/CodeSystem/icd-o-3#8520/2) is not valid (from http://mcode-spec.mitre.org:4567)"
 }
 -------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://terminology.hl7.org/CodeSystem/icd-o-3",
+  "code" : "8520/2"
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code system \"http://terminology.hl7.org/CodeSystem/icd-o-3\" is not known (encountered paired with code = \"8520/2\"); The code provided (http://terminology.hl7.org/CodeSystem/icd-o-3#8520/2) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4)"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://terminology.hl7.org/CodeSystem/icd-o-3",
+  "code" : "8520/2"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/icd-o-3",
+      "concept" : [{
+        "code" : "8520/2"
+      }]
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code \"8520/2\" is not valid in the system http://terminology.hl7.org/CodeSystem/icd-o-3; The code provided (http://terminology.hl7.org/CodeSystem/icd-o-3#8520/2) is not valid (from http://tx.fhir.org/r4)"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://terminology.hl7.org/CodeSystem/icd-o-3",
+  "code" : "8520/2"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/icd-o-3",
+      "concept" : [{
+        "code" : "8520/2",
+        "display" : "Lobular carcinoma in situ"
+      }]
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code \"8520/2\" is not valid in the system http://terminology.hl7.org/CodeSystem/icd-o-3; The code provided (http://terminology.hl7.org/CodeSystem/icd-o-3#8520/2) is not valid (from http://tx.fhir.org/r4)"
+}
+-------------------------------------------------------------------------------------

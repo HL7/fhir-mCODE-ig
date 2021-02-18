@@ -1,7 +1,7 @@
-Alias: COMORB = http://hl7.org/fhir/us/mcode/CodeSystem/mcode-comorbidities-elixhauser-ahrq-cs
+Alias: COMORB =  http://terminology.hl7.org/CodeSystem/comorbidities-elixhauser
 Alias: RID = http://hl7.org/fhir/us/mcode/CodeSystem/mcode-resource-identifier-cs
 Alias: CC = http://hl7.org/fhir/us/mcode/CodeSystem/mcode-catch-code-cs
-Alias: RT = http://hl7.org/fhir/us/mcode/CodeSystem/mcode-radiotherapy-cs
+Alias: RT = http://terminology.hl7.org/CodeSystem/radiotherapy
 
 CodeSystem: CatchCodeCS
 Id: mcode-catch-code-cs
@@ -23,9 +23,10 @@ Description: "Concepts describing types of instances, to be used in the 'code' e
 * #mcode-radiotherapy-brachy "Brachytherapy Prescription Delivery Resource" "Identifies an Observation resource that describes delivery of a brachytherapy (external beam) prescription and conforms to the BrachytherapyPrescriptionDelivery profile."
 
 CodeSystem: RadiotherapyCS
-Id: mcode-radiotherapy-cs
+Id: radiotherapy
 Title: "Radiotherapy Code System"
 Description: "Codes describing the modalities, techniques, and devices used in external beam radiotherapy and brachytherapy procedures."
+* ^url =  http://terminology.hl7.org/CodeSystem/radiotherapy
 //-- Teleradiotherapy Modalities
 * #PROTON "Proton Beam Radiation Therapy" "A type of external beam radiation therapy using a beam of proton particles." 
 * #ELECTRON "Electron Beam Radiation Therapy"  "Radiation therapy using electron (beta particle) beam."
@@ -60,10 +61,11 @@ Description: "Codes describing the modalities, techniques, and devices used in e
 * #VASC "Intravascular" "Placement of a radioactive source into a blood vessel or blood vascular system or vascular injection of radiopharaceutical."
 * #ORAL "Oral"  "Ingestion of radiopharaceutical via oral route."
 
-CodeSystem: ComorbiditiesElixhauserAHRQCS
-Id: mcode-comorbidities-elixhauser-ahrq-cs
-Title: "Elixhauser Comorbidity Category"
+CodeSystem: ComorbiditiesElixhauserCS
+Id: comorbidities-elixhauser
+Title: "Elixhauser Comorbidity Categories"
 Description: "A code system that contains codes representing the comorbidity categories originally defined by Elixhauser, and updated by the Agency for Healthcare Research and Quality (AHRQ) Healthcare Cost and Utilization Project (H-CUP)."
+* ^url =  http://terminology.hl7.org/CodeSystem/comorbidities-elixhauser
 * #AIDS    "Acquired immune deficiency syndrome"
 * #ALCOHOL    "Alcohol abuse" 
 * #ANEMDF    "Deficiency anemias"

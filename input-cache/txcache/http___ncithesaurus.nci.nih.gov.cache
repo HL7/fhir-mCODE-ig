@@ -6,7 +6,7 @@
 v: {
   "display" : "",
   "severity" : "error",
-  "error" : "The code system \"http://ncithesaurus.nci.nih.gov\" is not known (encountered paired with code = \"C146985\"); The code provided (http://ncithesaurus.nci.nih.gov#C146985) is not valid in the value set 'All codes known to the system' (from http://mcode-spec.mitre.org:4567)"
+  "error" : "The code system \"http://ncithesaurus.nci.nih.gov\" is not known (encountered paired with code = \"C146985\"); The code provided (http://ncithesaurus.nci.nih.gov#C146985) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4)"
 }
 -------------------------------------------------------------------------------------
 {"hierarchical" : false, "valueSet" :{

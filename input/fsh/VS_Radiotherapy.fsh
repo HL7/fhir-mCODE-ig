@@ -4,29 +4,29 @@ ValueSet:  TeleradiotherapyModalityVS
 Id: mcode-teleradiotherapy-modality-vs
 Title: "Teleradiotherapy Modality Value Set"
 Description: "Codes describing the modalities of teleradiotherapy (external beam) procedures. This value set is considered closed (not extensible on ad hoc basis by the implementer)."
-* insert ExpandValueSet
-* RO#PROTON
-* RO#ELECTRON
-* RO#NEUTRON
-* RO#CARBON
-* RO#PHOTON
+// * insert ExpandValueSet
+* RT#PROTON
+* RT#ELECTRON
+* RT#NEUTRON
+* RT#CARBON
+* RT#PHOTON
 
 ValueSet: BrachytherapyModalityVS
 Id: mcode-brachytherapy-modality-vs
 Title: "Brachytherapy Modality Value Set"
 Description: "Codes describing the modalities of brachytherapy procedures. This value set is considered closed (not extensible on ad hoc basis by the implementer)."
-* insert ExpandValueSet
-* RO#LDR
-* RO#PDR
-* RO#HDR
-* RO#ELEC
-* RO#PHARM
+// * insert ExpandValueSet
+* RT#LDR
+* RT#PDR
+* RT#HDR
+* RT#ELEC
+* RT#PHARM
 
 ValueSet: RadiotherapyModalityVS
 Id: mcode-radiotherapy-modality-vs
 Title: "Radiotherapy Modality Value Set"
 Description: "Codes describing the modalities of external beam and brachytherapy radiation procedures, for use with radiotherapy summaries."
-* insert ExpandValueSet
+// * insert ExpandValueSet
 * include codes from valueset TeleradiotherapyModalityVS
 * include codes from valueset BrachytherapyModalityVS
 
@@ -36,39 +36,39 @@ ValueSet: TeleradiotherapyTechniqueVS
 Id: mcode-teleradiotherapy-technique-vs
 Title: "Teleradiotherapy Technique Value Set"
 Description: "Codes describing the techniques of teleradiotherapy (external beam) procedures. This vallue set is considered extensible."
-* insert ExpandValueSet
-* RO#IMRT
-* RO#VMAT
-* RO#3D
-* RO#2D
-* RO#IORT
-* RO#PPS
-* RO#PSS
-* RO#MIX
-* RO#IMNT
-* RO#NCT
+// * insert ExpandValueSet
+* RT#IMRT
+* RT#VMAT
+* RT#3D
+* RT#2D
+* RT#IORT
+* RT#PPS
+* RT#PSS
+* RT#MIX
+* RT#IMNT
+* RT#NCT
 
 ValueSet: BrachytherapyTechniqueVS
 Id: mcode-brachytherapy-technique-vs
 Title: "Brachytherapy Technique Value Set"
 Description: "Codes describing the techniques of brachytherapy (internal or surface radiation) procedures. This vallue set is considered extensible."
-* insert ExpandValueSet
-* RO#CAV
-* RO#CAV-IMB
-* RO#INSTIT
-* RO#INSTIT-PERM
-* RO#INSTIT-TEMP
-* RO#VASC
-* RO#LUM
-* RO#IORT
-* RO#SURF
-* RO#ORAL
+// * insert ExpandValueSet
+* RT#CAV
+* RT#CAV-IMB
+* RT#INSTIT
+* RT#INSTIT-PERM
+* RT#INSTIT-TEMP
+* RT#VASC
+* RT#LUM
+* RT#IORT
+* RT#SURF
+* RT#ORAL
 
 ValueSet: RadiotherapyTechniqueVS
 Id: mcode-radiotherapy-technique-vs
 Title: "Radiotherapy Technique Value Set"
 Description: "Codes describing the techniques of external beam and brachytherapy radiation procedures, for use with radiotherapy summaries."
-* insert ExpandValueSet
+// * insert ExpandValueSet
 * include codes from valueset TeleradiotherapyTechniqueVS
 * include codes from valueset BrachytherapyTechniqueVS
 

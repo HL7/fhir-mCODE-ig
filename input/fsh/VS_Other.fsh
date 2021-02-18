@@ -283,12 +283,6 @@ Description:    "The type of feature that constitutes the landmark, for example,
 * codes from system SCT where concept is-a #40388003 "Implant, device (physical object)"
 
 
--------------
-* include codes from LNC
-* exclude codes from valueset TumorMarkerTestVS
-* exclude LNC#53041-0 "DNA region of interest panel"
-* exclude LNC#69548-6 "Genetic variant assessment"
-
 LP15101-6 "Hematocrit"
 LP14304-7  "Erythrocytes"
 LP17689-8   "Erythrocyte mean corpuscular hemoglobin"

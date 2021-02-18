@@ -5,7 +5,7 @@ Title: "mCODE Patient Group"
 Description: "Example of a Group identifying mCODE Patients"
 * type = #person
 * actual = true
-* code = LNO#mcode-patient
+* code = RID#mcode-patient
 * member[0].entity = Reference(Patient/cancer-patient-john-anyperson)
 * member[1].entity = Reference(Patient/cancer-patient-eve-anyperson)
 

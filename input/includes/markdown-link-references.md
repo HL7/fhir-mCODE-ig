@@ -123,7 +123,7 @@
 [TumorSizeUnitsVS]: ValueSet-mcode-tumor-size-units-vs.html
 
 <!-- mCODE Code Systems -->
-[ElixhauserCategoryCS]: CodeSystem-comorbidities-elixhauser.html
+[ComorbiditiesElixhauserCS]: CodeSystem-comorbidities-elixhauser.html
 [RadiotherapyCS]: CodeSystem-radiotherapy.html
 [CatchCodeCS]: CodeSystem-mcode-catch-code-cs.html
 [ResourceIdentifierCS]: CodeSystem-mcode-resource-identifier-cs.html

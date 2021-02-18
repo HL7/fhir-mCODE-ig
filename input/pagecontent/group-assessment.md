@@ -82,6 +82,6 @@ Vital signs are measurements of the most essential, or "vital" body functions. F
 
 ### Code Systems
 
-* [ElixhauserCategoryCS]
+* [ComorbiditiesElixhauserCS]
 
 {% include markdown-link-references.md %}

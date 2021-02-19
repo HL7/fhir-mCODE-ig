@@ -17,7 +17,7 @@ RuleSet: CategorySlicingRules
 RuleSet: ObservationHasMemberSlicingRules
 * hasMember ^slicing.discriminator.type = #pattern  // #profile  
 * hasMember ^slicing.discriminator.path = "$this.resolve().code" // "$this.resolve()" 
-* hasMember ^slicing.rules = #closed // this might not be general but good for TNM components
+* hasMember ^slicing.rules = #open
 * hasMember ^slicing.description = "Slicing based on referenced resource code attribute."
 
 RuleSet: DiagnosticReportResultSlicingRules
@@ -49,12 +49,12 @@ RuleSet: CreateComponent(sliceName, min, max)
 * component[{sliceName}].code MS
 * component[{sliceName}].value[x] MS
 * component[{sliceName}].dataAbsentReason MS  // US Core wants dataAbsentReason retained
-* component[{sliceName}].extension ^definition = "-"
-* component[{sliceName}].extension ^comment = "-"
-* component[{sliceName}].extension ^requirements = "-"
-* component[{sliceName}].modifierExtension ^definition = "-"
-* component[{sliceName}].modifierExtension ^comment = "-"
-* component[{sliceName}].modifierExtension ^requirements = "-"
+* component[{sliceName}].extension ^definition = "~"
+* component[{sliceName}].extension ^comment = "~"
+* component[{sliceName}].extension ^requirements = "~"
+* component[{sliceName}].modifierExtension ^definition = "~"
+* component[{sliceName}].modifierExtension ^comment = "~"
+* component[{sliceName}].modifierExtension ^requirements = "~"
 * component[{sliceName}].modifierExtension 0..0
 
 RuleSet: CreateComorbidityComponent(sliceName)
@@ -67,25 +67,25 @@ RuleSet: CreateComorbidityComponent(sliceName)
 * component[{sliceName}].extension[conditionReference] MS
 
 RuleSet: ReduceText
-* extension ^definition = "-"
-* extension ^comment = "-"
-* extension ^requirements = "-"
-* modifierExtension ^definition = "-"
-* modifierExtension ^comment = "-"
-* modifierExtension ^requirements = "-"
+* extension ^definition = "~"
+* extension ^comment = "~"
+* extension ^requirements = "~"
+* modifierExtension ^definition = "~"
+* modifierExtension ^comment = "~"
+* modifierExtension ^requirements = "~"
 * modifierExtension 0..0 
 
 RuleSet: ReduceText(path)
-* {path}.extension ^definition = "-"
-* {path}.extension ^comment = "-"
-* {path}.extension ^requirements = "-"
-* {path}.modifierExtension ^definition = "-"
-* {path}.modifierExtension ^comment = "-"
-* {path}.modifierExtension ^requirements = "-"
+* {path}.extension ^definition = "~"
+* {path}.extension ^comment = "~"
+* {path}.extension ^requirements = "~"
+* {path}.modifierExtension ^definition = "~"
+* {path}.modifierExtension ^comment = "~"
+* {path}.modifierExtension ^requirements = "~"
 * {path}.modifierExtension 0..0
 
 RuleSet: ReduceText2(path)
-* {path}.extension ^definition = "-"
-* {path}.extension ^comment = "-"
-* {path}.extension ^requirements = "-"
+* {path}.extension ^definition = "~"
+* {path}.extension ^comment = "~"
+* {path}.extension ^requirements = "~"
 

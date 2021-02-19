@@ -20,7 +20,7 @@ A radiology work group convened under [CodeX FHIR Accelerator](https://confluenc
 * [CancerRelatedMedicationAdministration]
 * [CancerRelatedSurgicalProcedure]
 * **Radiotherapy**
-  * [RadiotherapySummary]
+  * [RadiotherapyTreatmentSummary]
   * [BrachytherapyTreatmentPhase]
   * [TeleradiotherapyTreatmentPhase]
 

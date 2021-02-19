@@ -29,8 +29,8 @@
 [MCODEPatientGroup]: StructureDefinition-mcode-patient-group.html
 [CapabilityStatement]: StructureDefinition-CapabilityStatement.html
 [PrimaryCancerCondition]: StructureDefinition-mcode-primary-cancer-condition.html
-[RadiotherapySummary]: StructureDefinition-mcode-radiotherapy-summary.html
-[RadiotherapyDoseDelivered]: StructureDefinition-mcode-radiotherapy-dose.html
+[RadiotherapyTreatmentSummary]: StructureDefinition-mcode-radiotherapy-treatment-summary.html
+[RadiotherapyDoseDelivered]: StructureDefinition-mcode-radiotherapy-dose-delivered.html
 [RadiotherapyModality]: StructureDefinition-mcode-radiotherapy-modality.html
 [RadiotherapyTechnique]: StructureDefinition-mcode-radiotherapy-technique.html
 [RelatedPrimaryCancerCondition]: StructureDefinition-mcode-related-primary-cancer-condition.html

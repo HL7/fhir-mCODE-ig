@@ -43,7 +43,6 @@ For both supplemental files **please read the first tab for important informatio
 
 #### Outcomes
 
-{:.new-content}
 * Three new profiles further specify the location and size of a tumor: [Tumor], [TumorSpecimen], and [TumorSize].
 
 ----

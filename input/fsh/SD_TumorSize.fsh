@@ -47,9 +47,9 @@ Description:  "Records the dimensions of a tumor"
 
 // Group the Must Support to make it easier to see what's what
 * subject and code and effective[x] and component and method and specimen and focus MS
-* insert ReduceText
-* insert ReduceText(referenceRange)
-* insert ReduceText(component)
+// * insert ReduceText
+// * insert ReduceText(referenceRange)
+// * insert ReduceText(component)
 
 
 // This invariant has been exhaustively tested with the FHIR validator
@@ -89,8 +89,8 @@ Description:  "Identifies a tumor that has not been removed from the body. Whene
 * extension[relatedCondition].value[x] only Reference(PrimaryCancerCondition or SecondaryCancerCondition)
 * extension[relatedCondition] ^short = "Reference to cancer condition associated with this tumor"
 * extension[relatedCondition] ^definition = "Associates this tumor with a cancer condition. This could be a causal association (e.g., this is believed to be the primary tumor causing the cancer) or a different type of relationship (e.g., this tumor is a metastasis)"
-* insert ReduceText
-* insert ReduceText2(identifier)
+// * insert ReduceText
+// * insert ReduceText2(identifier)
 // Gather MS in one place
 * identifier and location and morphology and locationQualifier and patient and extension and extension[relatedCondition] and extension[relatedCondition].value[x] MS
 
@@ -127,12 +127,12 @@ Description: "Represents a tumor after it has been removed from the body. Prior 
 * extension[relatedCondition].value[x] only Reference(PrimaryCancerCondition or SecondaryCancerCondition)
 * extension[relatedCondition] ^short = "Reference to the cancer condition associated with this tumor"
 * extension[relatedCondition] ^definition = "Associates this tumor with a cancer condition."
-* insert ReduceText
-* insert ReduceText2(identifier)
-* insert ReduceText(collection)
-* insert ReduceText2(collection.bodySite)
-* insert ReduceText(processing)
-* insert ReduceText(container)
+// * insert ReduceText
+// * insert ReduceText2(identifier)
+// * insert ReduceText(collection)
+// * insert ReduceText2(collection.bodySite)
+// * insert ReduceText(processing)
+// * insert ReduceText(container)
 // Must Supports -- there is no US Core fallback
 * type and subject and collection and collection.bodySite and collection.bodySite and collection.bodySite.extension and collection.bodySite.extension[locationQualifier] and identifier and identifier[tumorIdentifier] and identifier[tumorIdentifier].type and identifier[tumorIdentifier].value and extension and extension[relatedCondition] MS
 

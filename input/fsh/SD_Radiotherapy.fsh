@@ -15,7 +15,7 @@ RuleSet: RadiotherapyTreatmentSummaryCommon
 RuleSet: RadiotherapyPhaseCommon
 * insert RadiotherapyTreatmentSummaryCommon
 * extension[modality] 0..1
-* extension[technique] 0..1
+* extension[technique] 0..1 // potentially eliminate (leaving technique as 0..*)
 * partOf only Reference(RadiotherapyTreatmentSummary)
 * partOf ^definition = "The partOf element, if present, MUST reference a RadiotherapyTreatmentSummary-conforming Procedure resource."
 * bodySite ^definition = "The body site where the radiation was delivered. The target volumes level are too complex to be described by typical body site codes. A more detailed description of the treatment volume should be entered in the RadiotherapyDoseDelivered.volumeDescription."
@@ -27,14 +27,14 @@ Parent:   USCoreProcedure  // considered one procedure with multiple parts
 Id:       mcode-radiotherapy-treatment-summary
 Title:    "Radiotherapy Summary"
 Description: "A summary of radiotherapy delivered to a patient. Whenever new contributions in the scope of the same treatment are delivered, this resource is updated. One therapy can involve multiple prescriptions. The status is changed to complete when the course has been fully delivered or changed to stopped if terminated. To describe the treatment in more detail, use either TeleradiotherapyTreatmentPhase or BrachytherapyTreatmentPhase, which can reference this summary through the partOf element."
-* insert ReduceText
-* insert ReduceText(performer)
-* insert ReduceText(focalDevice)
+// * insert ReduceText
+// * insert ReduceText(performer)
+// * insert ReduceText(focalDevice)
 * insert RadiotherapyTreatmentSummaryCommon
 // Summary-specific
 * code = RID#mcode-radiotherapy-treatment-summary
 * extension[modality].value[x] from RadiotherapyModalityVS (required)
-* extension[technique].value[x] from RadiotherapyTechniqueVS (extensible)
+* extension[technique].value[x] from RadiotherapyTechniqueVS (required)
 * bodySite from RadiationTargetBodySiteVS (extensible)
 * bodySite.extension contains
     LocationQualifier named locationQualifier 0..1
@@ -47,16 +47,16 @@ Parent:   USCoreProcedure
 Id:       mcode-teleradiotherapy-treatment-phase
 Title: "Teleradiotherapy Treatment Phase"
 Description: "A summary of a phase of teleradiotherapy treatment that has been delivered. The scope is a treatment consisting of one or multiple identical fractions. A phase ends when there is a change in the treatment volume, treatment fraction size, modality, or treatment technique."
-* insert ReduceText
-* insert ReduceText(performer)
-* insert ReduceText(focalDevice)
+// * insert ReduceText
+// * insert ReduceText(performer)
+// * insert ReduceText(focalDevice)
 * insert RadiotherapyPhaseCommon
 // Teleradiotherapy specific:
 * code = RID#mcode-radiotherapy-ebrt
 * extension[modality].value[x] from TeleradiotherapyModalityVS (required)
 * extension[modality] ^short = "Teleradiotherapy (EBRT) Modality"
 * extension[modality]  ^definition = "The modality (radiation type) for the external beam radiation therapy."
-* extension[technique].value[x] from TeleradiotherapyTechniqueVS (extensible)
+* extension[technique].value[x] from TeleradiotherapyTechniqueVS (required)
 * extension[technique] ^short = "Teleradiotherapy (EBRT) Technique"
 * extension[technique] ^definition = "The method by which a radiation modality is applied (e.g., intensity modulated radiation therapy, intraoperative radiation therapy)."
 //* usedCode from TeleradiotherapyDeviceVS (extensible)
@@ -67,9 +67,9 @@ Parent:   USCoreProcedure
 Id:       mcode-brachytherapy-treatment-phase
 Title:    "Brachytherapy Treatment Phase"
 Description: "A summary of a phase of brachytherapy treatment that has been delivered. The scope is a treatment consisting of one or multiple identical fractions. A phase ends when there is a change in the treatment volume, treatment fraction size, modality, or treatment technique."
-* insert ReduceText
-* insert ReduceText(performer)
-* insert ReduceText(focalDevice)
+// * insert ReduceText
+// * insert ReduceText(performer)
+// * insert ReduceText(focalDevice)
 * insert RadiotherapyPhaseCommon
 // Specific to Brachytherapy:
 * code = RID#mcode-radiotherapy-brachy

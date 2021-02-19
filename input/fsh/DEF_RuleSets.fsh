@@ -26,12 +26,6 @@ RuleSet: DiagnosticReportResultSlicingRules
 * result ^slicing.rules = #open
 * result ^slicing.description = "Slice based on the reference profile and code pattern"
 
-RuleSet: SliceOnProfile(slicedElementPath, discriminatorPath)
-* {slicedElementPath} ^slicing.discriminator.type = #profile
-* {slicedElementPath} ^slicing.discriminator.path = "{discriminatorPath}"
-* {slicedElementPath} ^slicing.rules = #open
-* {slicedElementPath} ^slicing.description = "Slicing based on the profile conformance of the sliced element"
-
 /* MustSupportOnReference applies an MS flag to a selected reference. For example in Reference(Patient or Practitioner), an MS can be put on Practitioner without a MS on Patient. In some cases, this might better than using an "only" rule
 For example, given that Practitioner is element [1] in the element "recorder":
 * insert MustSupportOnReference(recorder, 1)
@@ -49,13 +43,13 @@ RuleSet: CreateComponent(sliceName, min, max)
 * component[{sliceName}].code MS
 * component[{sliceName}].value[x] MS
 * component[{sliceName}].dataAbsentReason MS  // US Core wants dataAbsentReason retained
-* component[{sliceName}].extension ^definition = "~"
-* component[{sliceName}].extension ^comment = "~"
-* component[{sliceName}].extension ^requirements = "~"
-* component[{sliceName}].modifierExtension ^definition = "~"
-* component[{sliceName}].modifierExtension ^comment = "~"
-* component[{sliceName}].modifierExtension ^requirements = "~"
-* component[{sliceName}].modifierExtension 0..0
+//* component[{sliceName}].extension ^definition = "~"
+//* component[{sliceName}].extension ^comment = "~"
+//* component[{sliceName}].extension ^requirements = "~"
+//* component[{sliceName}].modifierExtension ^definition = "~"
+//* component[{sliceName}].modifierExtension ^comment = "~"
+//* component[{sliceName}].modifierExtension ^requirements = "~"
+//* component[{sliceName}].modifierExtension 0..0
 
 RuleSet: CreateComorbidityComponent(sliceName)
 * component contains {sliceName} 0..1 MS
@@ -65,6 +59,48 @@ RuleSet: CreateComorbidityComponent(sliceName)
 * component[{sliceName}].extension MS
 * component[{sliceName}].extension[conditionCode] MS
 * component[{sliceName}].extension[conditionReference] MS
+
+
+
+RuleSet: CreateBundleEntry(name, min, max, short, def, class)
+* entry contains {name} {min}..{max} MS
+* entry[{name}] ^short = "{short}"
+* entry[{name}] ^definition = "{def}"
+* entry[{name}].resource only {class}
+
+
+// Get rid of all the crap that gets repeated hundreds of times in a StructureDefinition for no reason
+/* entry[{name}].extension ^definition = "~"
+* entry[{name}].extension ^comment = "~"
+* entry[{name}].modifierExtension ^short = "~"
+* entry[{name}].modifierExtension ^definition = "~"
+* entry[{name}].modifierExtension ^comment = "~"
+* entry[{name}].modifierExtension ^requirements = "~"
+* entry[{name}].modifierExtension 0..0
+* entry[{name}].search.extension ^definition = "~"
+* entry[{name}].search.extension ^comment = "~"
+* entry[{name}].search.modifierExtension ^short = "~"
+* entry[{name}].search.modifierExtension ^definition = "~"
+* entry[{name}].search.modifierExtension ^comment = "~"
+* entry[{name}].search.modifierExtension ^requirements = "~"
+* entry[{name}].search.modifierExtension 0..0
+* entry[{name}].request.extension ^definition = "~"
+* entry[{name}].request.extension ^comment = "~"
+* entry[{name}].request.modifierExtension ^short = "~"
+* entry[{name}].request.modifierExtension ^definition = "~"
+* entry[{name}].request.modifierExtension ^comment = "~"
+* entry[{name}].request.modifierExtension ^requirements = "~"
+* entry[{name}].request.modifierExtension 0..0
+* entry[{name}].response.extension ^definition = "~"
+* entry[{name}].response.extension ^comment = "~"
+* entry[{name}].response.modifierExtension ^short = "~"
+* entry[{name}].response.modifierExtension ^definition = "~"
+* entry[{name}].response.modifierExtension ^comment = "~"
+* entry[{name}].response.modifierExtension ^requirements = "~"
+* entry[{name}].response.modifierExtension 0..0
+* entry[{name}].fullUrl ^definition = "~"
+* entry[{name}].fullUrl ^comment = "~" 
+
 
 RuleSet: ReduceText
 * extension ^definition = "~"
@@ -89,3 +125,4 @@ RuleSet: ReduceText2(path)
 * {path}.extension ^comment = "~"
 * {path}.extension ^requirements = "~"
 
+*/

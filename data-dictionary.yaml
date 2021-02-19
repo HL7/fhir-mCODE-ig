@@ -108,3 +108,9 @@ codeSystems:
   'http://sequenceontology.org': Sequence Ontology
   'http://terminology.hl7.org/CodeSystem/v2-0487': SpecimenType (HL7)
   'http://unitsofmeasure.org': The Unified Code for Units of Measure
+
+touchUpHumanizedElementNames:
+  Aids: AIDS
+  DNAChange: DNA Change
+  DNARegion: DNA Region
+  Tnm: TNM

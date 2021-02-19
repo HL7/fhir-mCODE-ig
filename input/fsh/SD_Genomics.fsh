@@ -78,9 +78,9 @@ Description:    "Records an alteration in the most common DNA nucleotide sequenc
 * component[cytogeneticLocation] ^definition = "The cytogenetic (chromosome) location."
 
 // ReduceText(component) must come AFTER the slices, otherwise SUSHI assumes the text of all component extensions and modifier extensions has already been reduced
-* insert ReduceText
-* insert ReduceText(referenceRange)
-* insert ReduceText(component)
+// * insert ReduceText
+// * insert ReduceText(referenceRange)
+// * insert ReduceText(component)
 
 // ADDITIONAL MUST SUPPORTS (MS on status, category, category[Laboratory], codes, subject, effective[x], value[x] are inherited from US Core Lab Observation)
 * method and specimen and component and component.code and component.value[x] and component.dataAbsentReason MS
@@ -99,9 +99,9 @@ Description:    "The result of a tumor marker test. Tumor marker tests are gener
 * value[x] only Quantity or Ratio or string or CodeableConcept
 // Already MS in US Core Obs Lab: status, category, code, subject, effective[x], value[x], dataAbsentReason
 * specimen MS
-* insert ReduceText
-* insert ReduceText(referenceRange)
-* insert ReduceText(component)
+// * insert ReduceText
+// * insert ReduceText(referenceRange)
+// * insert ReduceText(component)
 
 
 Invariant: tumor-marker-test-code-invariant
@@ -121,12 +121,12 @@ Description:    "A small sample of blood, hair, skin, amniotic fluid (the fluid 
     LocationQualifier named locationQualifier 0..1
 // No inherited MS
 * subject and status and type and collection and collection.bodySite and collection.bodySite.extension[locationQualifier] MS
-* insert ReduceText
-* insert ReduceText2(identifier)
-* insert ReduceText(collection)
-* insert ReduceText2(collection.bodySite)
-* insert ReduceText(processing)
-* insert ReduceText(container)
+// * insert ReduceText
+// * insert ReduceText2(identifier)
+// * insert ReduceText(collection)
+// * insert ReduceText2(collection.bodySite)
+// * insert ReduceText(processing)
+// * insert ReduceText(container)
 
 
 Profile:    CancerGenomicsReport
@@ -134,8 +134,8 @@ Parent:     USCoreDiagnosticReportLab
 Id: mcode-cancer-genomics-report
 Title:      "Cancer Genomics Report"
 Description:    "Genetic analysis summary report. The report may include one or more tests, with two distinct test types. The first type is a targeted mutation test, where a specific mutation on a specific gene is tested for. The result is either positive or negative for that mutation. The second type is a more general test for variants. This type of test returns the identity of variants found in a certain region of the genome."
-* insert ReduceText
-* insert ReduceText(media)
+// * insert ReduceText
+// * insert ReduceText(media)
 * subject only Reference(CancerPatient)
 * category contains GenomicsCategory 1..1
 * category[GenomicsCategory] = DiagnosticService#GE
@@ -205,9 +205,9 @@ Description:    "The area of the genome region referenced in testing for variant
 * component[genomicReferenceSequenceId] ^definition = "Range(s) of DNA sequence examined. The genomic reference sequence is a contiguous stretch of chromosome DNA that spans all of the exons of the gene and includes transcribed and non transcribed stretches. For this ID use either the NCBI genomic nucleotide RefSeq IDs with their version number (see: NCBI.NLM.NIH.Gov/RefSeq) or use the LRG identifiers, without transcript (t or p) extensions -- when they become available. (source: LOINC)"
 * component[genomicReferenceSequenceId].code = LNC#48013-7
 
-* insert ReduceText
-* insert ReduceText(referenceRange)
-* insert ReduceText(component)
+// * insert ReduceText
+// * insert ReduceText(referenceRange)
+// * insert ReduceText(component)
 // These are the additional MS on top of US Core Lab Observation
 * component and component.code and component.value[x] and component.dataAbsentReason MS
 

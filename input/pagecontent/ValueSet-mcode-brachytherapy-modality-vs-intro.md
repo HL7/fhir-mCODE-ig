@@ -11,7 +11,7 @@ The following table shows mappings from SNOMED CT and NCI Thesaurus to of brachy
 | PDR | none | C116542 Pulsed-Dose Rate Brachytherapy |
 | HDR |  394902000  High dose brachytherapy (procedure)   | C15651 High dose brachytherapy  |
 | ELECT  | 438629002 High dose rate electronic brachytherapy (procedure) | none   |
-| PHARM  | 440252007 Administration of radiopharmaceutical (procedure) | none [2] |
+| RADPHARM  | 440252007 Administration of radiopharmaceutical (procedure) | none [2] |
 {: .grid }
 
 **Notes:**

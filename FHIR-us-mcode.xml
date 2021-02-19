@@ -76,7 +76,7 @@
 <artifact id="ValueSet/elixhauser-drug-abuse-vs" key="ValueSet-elixhauser-drug-abuse-vs" name="Elixhauser Comorbid Condition Value Set for drug abuse"/>
 <artifact id="ValueSet/elixhauser-cancer-solid-tumor-in-situ-vs" key="ValueSet-elixhauser-cancer-solid-tumor-in-situ-vs" name="Elixhauser Comorbid Condition Value Set for malignant solid tumors in situ"/>
 <artifact id="ValueSet/elixhauser-cancer-solid-tumor-malignant-vs" key="ValueSet-elixhauser-cancer-solid-tumor-malignant-vs" name="Elixhauser Comorbid Condition Value Set for malignant solid tumors without metastases"/>
-<artifact id="CodeSystem/comorbidities-elixhauser" key="CodeSystem-comorbidities-elixhauser" name="Elixhauser Comorbidity Category"/>
+<artifact id="CodeSystem/comorbidities-elixhauser" key="CodeSystem-comorbidities-elixhauser" name="Elixhauser Comorbidity Categories"/>
 <artifact id="StructureDefinition/mcode-evidence-type" key="StructureDefinition-mcode-evidence-type" name="Evidence Type"/>
 <artifact deprecated="true" id="Extension/mcode-evidence-type-extension" key="evidence-type-extension" name="Evidence Type Extension"/>
 <artifact id="StructureDefinition/mcode-genetic-specimen" key="genetic-specimen" name="Genetic Specimen"/>

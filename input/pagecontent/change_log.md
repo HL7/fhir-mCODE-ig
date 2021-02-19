@@ -12,7 +12,7 @@ Many of these changes have been taken in response to comments from the HL7 commu
   * Capability Statements which specifies the contents for the [sender] and [receiver] of an [mCODE Patient Bundle](StructureDefinition-mcode-patient-bundle.html).
   * OperationDefinition [mcode-patient-everything] for retrieving an mCODE bundle.
   * [Conformance](conformance-general.html) - Defined mCODE compliance in a testable way.
-  * The six mCODE groups (Patient, Disease, Genomics, Labs/Vitals, Outcomes) have been re-aligned. Labs/Vitals has been renamed "Assessments" and some profiles formerly in the Patient Group have been moved into that group. TumorMarkerTest has been moved from Labs/Vitals to the Genomics group.
+  * The six mCODE groups (Patient, Disease, Genomics, Labs/Vitals, Outcomes) have been re-aligned. Labs/Vitals has been renamed "Assessments" and some profiles formerly in the Patient Group have been moved into that group. TumorMarkerTest has been moved from Labs/Vitals to the Disease group. The mCODE concept diagram has ben updated to reflect these changes.
 
 #### Patient
   * Elixhauser comorbities have been redesigned to further specify groupings by category.

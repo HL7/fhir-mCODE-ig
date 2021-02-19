@@ -17,7 +17,7 @@ RuleSet: CategorySlicingRules
 RuleSet: ObservationHasMemberSlicingRules
 * hasMember ^slicing.discriminator.type = #pattern  // #profile  
 * hasMember ^slicing.discriminator.path = "$this.resolve().code" // "$this.resolve()" 
-* hasMember ^slicing.rules = #closed // this might not be general but good for TNM components
+* hasMember ^slicing.rules = #open
 * hasMember ^slicing.description = "Slicing based on referenced resource code attribute."
 
 RuleSet: DiagnosticReportResultSlicingRules

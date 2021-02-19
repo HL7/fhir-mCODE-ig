@@ -1,4 +1,4 @@
-RuleSet: RadiotherapySummaryCommon
+RuleSet: RadiotherapyTreatmentSummaryCommon
 * category 1.. MS
 * category = SCT#108290001 // "Radiation oncology AND/OR radiotherapy (procedure)"
 * performed[x] only Period
@@ -10,29 +10,29 @@ RuleSet: RadiotherapySummaryCommon
     RadiotherapyFractionsDelivered named fractionsDelivered 0..1 MS and
     RadiotherapyDoseDelivered named doseDelivered 0..* MS
 * extension and category MS
+* bodySite ^definition = "The body site where the radiation was delivered."
 
 RuleSet: RadiotherapyPhaseCommon
-* insert RadiotherapySummaryCommon
+* insert RadiotherapyTreatmentSummaryCommon
 * extension[modality] 0..1
 * extension[technique] 0..1
-* partOf only Reference(RadiotherapySummary)
-* partOf ^definition = "The partOf element, if present, MUST reference a RadiotherapySummary-conforming Procedure resource."
-* insert NotUsed(bodySite)
-* bodySite ^definition = "The target volumes at the prescription-delivery level are too complex to be described by typical codes. Instead, enter a text description of the treatment volume in the RadiotherapyDoseDelivered.volumeDescription extension."
+* partOf only Reference(RadiotherapyTreatmentSummary)
+* partOf ^definition = "The partOf element, if present, MUST reference a RadiotherapyTreatmentSummary-conforming Procedure resource."
+* bodySite ^definition = "The body site where the radiation was delivered. The target volumes level are too complex to be described by typical body site codes. A more detailed description of the treatment volume should be entered in the RadiotherapyDoseDelivered.volumeDescription."
 
 
 // ------------- Overall Treatment Summary -----------------
-Profile:  RadiotherapySummary
+Profile:  RadiotherapyTreatmentSummary
 Parent:   USCoreProcedure  // considered one procedure with multiple parts
-Id:       mcode-radiotherapy-summary
+Id:       mcode-radiotherapy-treatment-summary
 Title:    "Radiotherapy Summary"
 Description: "A summary of radiotherapy delivered to a patient. Whenever new contributions in the scope of the same treatment are delivered, this resource is updated. One therapy can involve multiple prescriptions. The status is changed to complete when the course has been fully delivered or changed to stopped if terminated. To describe the treatment in more detail, use either TeleradiotherapyTreatmentPhase or BrachytherapyTreatmentPhase, which can reference this summary through the partOf element."
 * insert ReduceText
 * insert ReduceText(performer)
 * insert ReduceText(focalDevice)
-* insert RadiotherapySummaryCommon
+* insert RadiotherapyTreatmentSummaryCommon
 // Summary-specific
-* code = RID#mcode-radiotherapy-summary
+* code = RID#mcode-radiotherapy-treatment-summary
 * extension[modality].value[x] from RadiotherapyModalityVS (required)
 * extension[technique].value[x] from RadiotherapyTechniqueVS (extensible)
 * bodySite from RadiationTargetBodySiteVS (extensible)
@@ -107,10 +107,11 @@ Description: "The total number of fractions (treatment divisions) actually deliv
 * value[x] only unsignedInt
 
 Extension: RadiotherapyDoseDelivered
-Id: mcode-radiotherapy-dose
+Id: mcode-radiotherapy-dose-delivered
 Title: "Radiotherapy Dose"
 Description: "Dose parameters for one target volume, including dose per fraction, number of fractions delivered, and total dose delivered."
 * insert ExtensionContext(Procedure)
+//* extension obeys mcode-volume-description-or-id-required
 * extension contains
     volumeDescription 0..1 and
     volumeId 0..1 and
@@ -132,6 +133,12 @@ Description: "Dose parameters for one target volume, including dose per fraction
 * extension[totalDoseDelivered] ^short = "Total Radiation Dose Delivered"
 * extension[totalDoseDelivered] ^definition = "The total amount of radiation delivered to this target volume within the scope of this dose delivery."
 
+/*
+Invariant:  mcode-volume-description-or-id-required
+Description: "One of reasonCode or reasonReference SHALL be present"
+Expression: "volumeDescription.exists() or volumeId.exists()"
+Severity:   #error
+*/
 
 /* HOLD
 

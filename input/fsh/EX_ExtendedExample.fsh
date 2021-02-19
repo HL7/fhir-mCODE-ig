@@ -546,7 +546,7 @@ Description: "Extended example: example showing chemotherapy medication"
 
 // Radiotherapy
 
-Instance: teleradiotherapy-prescription-delivery-jenny-m
+Instance: teleradiotherapy-treatment-phase-jenny-m
 InstanceOf: TeleradiotherapyTreatmentPhase
 Description: "Extended example: example showing radiation treatment"
 * status = #completed "completed"

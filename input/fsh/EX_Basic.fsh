@@ -159,7 +159,7 @@ Description: "mCODE Example for Cancer Related Surgical Procedure"
 * reasonReference = Reference(primary-cancer-condition-nsclc)
 * bodySite = SCT#41224006 "Structure of lower lobe of left lung (body structure)"
 
-Instance: brachytherapy-prescription-delivery-ldr
+Instance: brachytherapy-treatment-phase-ldr
 InstanceOf: BrachytherapyTreatmentPhase
 Description: "mCODE Example for a brachytherapy procedure."
 * status = #completed "completed"

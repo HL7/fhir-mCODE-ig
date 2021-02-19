@@ -18,9 +18,9 @@ Title: "mCODE Resource Identifier Code System"
 Description: "Concepts describing types of instances, to be used in the 'code' element of an instance."
 * #mcode-patient "mCODE Patient Group Resource" "Identifies a Group resource containing mCODE cancer patients that conforms to the MCODEPatientGroup profile."
 * #mcode-comorbidity  "Elixhauser Comorbidity Resource" "Identifies an Observation resource representing Elixhauser comorbidities that conforms to the ComorbiditiesElixhauser profile."
-* #mcode-radiotherapy-summary "Radiotherapy Summary Resource" "Identifies an Observation resource that summarizes a radiotherapy course of treatment that conforms to the RadiotherapySummary profile."
-* #mcode-radiotherapy-ebrt "Teleradiotherapy Prescription Delivery Resource" "Identifies an Observation resource that describes delivery of a teleradiotherapy (external beam) prescription and conforms to the TeleradiotherapyPrescriptionDelivery profile."
-* #mcode-radiotherapy-brachy "Brachytherapy Prescription Delivery Resource" "Identifies an Observation resource that describes delivery of a brachytherapy (external beam) prescription and conforms to the BrachytherapyPrescriptionDelivery profile."
+* #mcode-radiotherapy-treatment-summary "Radiotherapy Summary Resource" "Identifies a Procedure resource that summarizes a radiotherapy treatment that conforms to the RadiotherapyTreatmentSummary profile."
+* #mcode-radiotherapy-ebrt "Teleradiotherapy Prescription Delivery Resource" "Identifies a Procedure resource that describes delivery of teleradiotherapy (external beam radiation) and conforms to the TeleradiotherapyTreatmentPhase profile."
+* #mcode-radiotherapy-brachy "Brachytherapy Prescription Delivery Resource" "Identifies a Procedure resource that describes delivery of brachytherapy (internal or surface radiation) and conforms to the BrachytherapyTreatmentPhase profile."
 
 CodeSystem: RadiotherapyCS
 Id: radiotherapy

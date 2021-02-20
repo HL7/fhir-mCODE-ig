@@ -34,8 +34,8 @@ Description: "Codes describing the modalities, techniques, and devices used in e
 * #CARBON  "Carbon Ion Beam Radiation Therapy"  "A type of external beam radiation therapy using carbon ions."
 * #PHOTON "Photon Beam Radiation Therapy" "A type of external beam radiation therapy using photons."
 //-- Brachytherapy Modalities
-* #LDR-PERM "Permanent Low Dose Rate Brachytherapy" "Permanently placed or implanted low dose rate radiation sources (typically less than or equal to 2 Gy/hour)."
-* #LDR-TEMP "Temporary Low Dose Rate Brachytherapy" "Temporarily placed or implanted low dose rate radiation sources (typically less than or equal to 2 Gy/hour)."
+* #LDR-PERM "Low Dose Rate Brachytherapy - Permanent Placemet" "Radiation treatment that irradiates a treatment volume with permanently placed low dose rates of radiation (typically less than or equal to 2 Gy/hour)."
+* #LDR-TEMP "Low Dose Rate Brachytherapy - Temporary Placement" "Radiation treatment that irradiates a treatment volume with temporarily placed low dose rates of radiation (typically less than or equal to 2 Gy/hour)."
 * #PDR "Pulsed Dose Rate Brachytherapy" "Internal or surface radiation treatment that irradiates a treatment volume in short pulses (typically 10 to 30 minutes in every hour) with a stronger source than low dose rate brachytherapy (typically treatment rates up to 3 Gy/hour)."
 * #HDR  "High Dose Rate Brachytherapy" "Internal or surface radiation treatment that irradiates a treatement volume with high dose rates of radiation (typically greater than 12 Gy/hour)."
 * #EBRACHY "Electronic Brachytherapy"  "A modality of internal or surface radiation that uses X-ray sources instead of radionuclides to deliver high rates of radiation."

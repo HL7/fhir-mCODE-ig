@@ -1,4 +1,4 @@
-### mCODE 1.9 STU 2 Ballot Version (May 2021)
+### mCODE 1.8 STU 2 Ballot Version (May 2021)
 
 The following changes to [the STU1 release](http://hl7.org/fhir/us/mcode/STU1) are in preparation for the STU2 Ballot (voting anticipated in May 2021).
 
@@ -15,11 +15,11 @@ For both supplemental files **please read the first tab for important informatio
 
 #### General
 
-* Capability Statements which specifies the contents for the [sender] and [receiver] of an [mCODE Patient Bundle][MCODEPatientBundle].
-* A new profile ([MCODEPatientGroup]) to provide a mechanism for receivers to request all mCODE patients from a sender.
-* OperationDefinition [mcode-patient-everything] for retrieving an mCODE bundle.
-* [Conformance](conformance-general.html) - Defined mCODE compliance in a testable way.
-* The six mCODE groups (Patient, Disease, Genomics, Labs/Vitals, Outcomes) have been re-aligned. Labs/Vitals has been renamed "Assessments" and some profiles formerly in the Patient Group have been moved into that group. TumorMarkerTest has been moved from Labs/Vitals to the Genomics group.
+{:.new-content #GeneralChanges}
+  * Capability Statements which specifies the contents for the [sender] and [receiver] of an [mCODE Patient Bundle](StructureDefinition-mcode-patient-bundle.html).
+  * OperationDefinition [mcode-patient-everything] for retrieving an mCODE bundle.
+  * [Conformance](conformance-general.html) - Defined mCODE compliance in a testable way.
+  * The six mCODE groups (Patient, Disease, Genomics, Labs/Vitals, Outcomes) have been re-aligned. Labs/Vitals has been renamed "Assessments" and some profiles formerly in the Patient Group have been moved into that group. TumorMarkerTest has been moved from Labs/Vitals to the Disease group. The mCODE concept diagram has ben updated to reflect these changes.
 
 #### Patient
 

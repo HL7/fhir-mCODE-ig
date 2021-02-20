@@ -1,12 +1,12 @@
 // Add a breast cancer diagnosis to make the breast-related tumor size examples make sense
 Instance: primary-cancer-condition-breast
 InstanceOf: PrimaryCancerCondition
-Description: "mCODE Example for Primary Cancer Condition (breast)"
+Description: "mCODE Example for Primary Cancer Condition (breast), SNOMED encoded. The example shows optional coding for morphology, which could be omitted since the primary code pre-coordinates the morphology. In this case the bodySiteis required since the primary code does not indicate laterality."
 * clinicalStatus = ClinStatus#active "Active"
 * verificationStatus = VerStatus#confirmed "Confirmed"
 * category = CondCat#problem-list-item
-* code = SCT#254837009 "Malignant neoplasm of breast (disorder)"
-* extension[histologyMorphologyBehavior].valueCodeableConcept = ICDO3#8520/2 "Lobular carcinoma in situ"
+* code = SCT#363346000 "Malignant neoplastic disease (disorder)" //SCT#109888004 "Lobular carcinoma in situ of breast (disorder)"
+* extension[histologyMorphologyBehavior].valueCodeableConcept = SCT#77284006 "Lobular carcinoma in situ (morphologic abnormality)"
 * bodySite = SCT#80248007 "Left breast structure (body structure)"
 * subject = Reference(cancer-patient-eve-anyperson)
 * onsetDateTime = "2019-04-01"

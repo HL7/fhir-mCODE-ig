@@ -52,7 +52,7 @@ Description: "A summary of a phase of teleradiotherapy treatment that has been d
 // * insert ReduceText(focalDevice)
 * insert RadiotherapyPhaseCommon
 // Teleradiotherapy specific:
-* code = RID#mcode-radiotherapy-ebrt
+* code = RID#mcode-teleradiotherapy-treatment-phase
 * extension[modality].value[x] from TeleradiotherapyModalityVS (required)
 * extension[modality] ^short = "Teleradiotherapy (EBRT) Modality"
 * extension[modality]  ^definition = "The modality (radiation type) for the external beam radiation therapy."
@@ -72,7 +72,7 @@ Description: "A summary of a phase of brachytherapy treatment that has been deli
 // * insert ReduceText(focalDevice)
 * insert RadiotherapyPhaseCommon
 // Specific to Brachytherapy:
-* code = RID#mcode-radiotherapy-brachy
+* code = RID#mcode-brachytherapy-treatment-phase
 * extension[modality].value[x] from  BrachytherapyModalityVS (required)
 * extension[modality] ^short = "Brachytherapy Modality"
 * extension[modality] ^definition = "The modality for the Brachytherapy procedure."
@@ -190,6 +190,5 @@ Id:      mcode-brachytherapy-implantable-device
 Title: "Brachytherapy Implantable Device"
 Description: "A radioactive source device implanted into the body and remaining there temporarily or permanently."
 * type from BrachytherapyDeviceVS (extensible)
-
 
 */

@@ -19,8 +19,8 @@ Description: "Concepts describing types of instances, to be used in the 'code' e
 * #mcode-patient "mCODE Patient Group Resource" "Identifies a Group resource containing mCODE cancer patients that conforms to the MCODEPatientGroup profile."
 * #mcode-comorbidity  "Elixhauser Comorbidity Resource" "Identifies an Observation resource representing Elixhauser comorbidities that conforms to the ComorbiditiesElixhauser profile."
 * #mcode-radiotherapy-treatment-summary "Radiotherapy Summary Resource" "Identifies a Procedure resource that summarizes a radiotherapy treatment that conforms to the RadiotherapyTreatmentSummary profile."
-* #mcode-radiotherapy-ebrt "Teleradiotherapy Prescription Delivery Resource" "Identifies a Procedure resource that describes delivery of teleradiotherapy (external beam radiation) and conforms to the TeleradiotherapyTreatmentPhase profile."
-* #mcode-radiotherapy-brachy "Brachytherapy Prescription Delivery Resource" "Identifies a Procedure resource that describes delivery of brachytherapy (internal or surface radiation) and conforms to the BrachytherapyTreatmentPhase profile."
+* #mcode-teleradiotherapy-treatment-phase "Teleradiotherapy Treatment Phase Resource" "Identifies a Procedure resource that describes delivery of teleradiotherapy (external beam radiation) and conforms to the TeleradiotherapyTreatmentPhase profile."
+* #mcode-brachytherapy-treatment-phase "Brachytherapy Treatment Phase Resource" "Identifies a Procedure resource that describes delivery of brachytherapy (internal or surface radiation) and conforms to the BrachytherapyTreatmentPhase profile."
 
 CodeSystem: RadiotherapyCS
 Id: radiotherapy

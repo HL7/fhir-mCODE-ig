@@ -52,7 +52,7 @@ Description: "A summary of a phase of teleradiotherapy treatment that has been d
 // * insert ReduceText(focalDevice)
 * insert RadiotherapyPhaseCommon
 // Teleradiotherapy specific:
-* code = RID#mcode-radiotherapy-ebrt
+* code = RID#mcode-teleradiotherapy-treatment-phase
 * extension[modality].value[x] from TeleradiotherapyModalityVS (required)
 * extension[modality] ^short = "Teleradiotherapy (EBRT) Modality"
 * extension[modality]  ^definition = "The modality (radiation type) for the external beam radiation therapy."
@@ -72,7 +72,7 @@ Description: "A summary of a phase of brachytherapy treatment that has been deli
 // * insert ReduceText(focalDevice)
 * insert RadiotherapyPhaseCommon
 // Specific to Brachytherapy:
-* code = RID#mcode-radiotherapy-brachy
+* code = RID#mcode-brachytherapy-treatment-phase
 * extension[modality].value[x] from  BrachytherapyModalityVS (required)
 * extension[modality] ^short = "Brachytherapy Modality"
 * extension[modality] ^definition = "The modality for the Brachytherapy procedure."
@@ -111,16 +111,13 @@ Id: mcode-radiotherapy-dose-delivered
 Title: "Radiotherapy Dose"
 Description: "Dose parameters for one target volume, including dose per fraction, number of fractions delivered, and total dose delivered."
 * insert ExtensionContext(Procedure)
-//* extension obeys mcode-volume-description-or-id-required
+* obeys mcode-volume-description-or-id-required
 * extension contains
     volumeDescription 0..1 and
     volumeId 0..1 and
-//    dosePerFraction 0..1 and
     totalDoseDelivered 0..1
 * extension[volumeDescription].value[x] only string
 * extension[volumeId].value[x] only string
-//* extension[dosePerFraction].value[x] only Quantity
-//* extension[dosePerFraction].valueQuantity = UCUM#cGy
 * extension[totalDoseDelivered].value[x] only Quantity
 * extension[totalDoseDelivered].valueQuantity = UCUM#cGy
 // Definitions of in-line extensions
@@ -128,17 +125,15 @@ Description: "Dose parameters for one target volume, including dose per fraction
 * extension[volumeDescription] ^definition = "Text description of the body structure targeted, for example, Chest Wall Lymph Nodes."
 * extension[volumeId] ^short = "Optional identifier for the target volume."
 * extension[volumeId] ^definition = "Identifier of the target volume where radiation was delivered, for example, PTV-2 (planning target volume 2). May be included as a reference to the treatment plan."
-//* extension[dosePerFraction] ^short = "Radiation Dose Per Fraction"
-//* extension[dosePerFraction] ^definition = "The amount of radiation administered during a single fraction (dose division) of radiation therapy."
 * extension[totalDoseDelivered] ^short = "Total Radiation Dose Delivered"
 * extension[totalDoseDelivered] ^definition = "The total amount of radiation delivered to this target volume within the scope of this dose delivery."
 
-/*
+
 Invariant:  mcode-volume-description-or-id-required
 Description: "One of reasonCode or reasonReference SHALL be present"
-Expression: "volumeDescription.exists() or volumeId.exists()"
+Expression: "extension('volumeDescription').value.exists() or extension('volumeId').value.exists()"
 Severity:   #error
-*/
+
 
 /* HOLD
 
@@ -195,6 +190,5 @@ Id:      mcode-brachytherapy-implantable-device
 Title: "Brachytherapy Implantable Device"
 Description: "A radioactive source device implanted into the body and remaining there temporarily or permanently."
 * type from BrachytherapyDeviceVS (extensible)
-
 
 */

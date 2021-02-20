@@ -1,10 +1,17 @@
-### mCODE 1.9 STU 2 Ballot Version (May 2021) 
+### mCODE 1.8 STU 2 Ballot Version (May 2021)
 
 The following changes to [the STU1 release](http://hl7.org/fhir/us/mcode/STU1) are in preparation for the STU2 Ballot (voting anticipated in May 2021).
 
-These changes are documented in the [continuous integration build of mCODE](http://build.fhir.org/ig/HL7/fhir-mCODE-ig/branches/master/index.html).
-
 Many of these changes have been taken in response to comments from the HL7 community. Issue numbers refer to the [HL7 Jira](https://jira.hl7.org/issues/?filter=13361) (free account registration required).
+
+These changes can be seen in the [continuous integration build of mCODE](http://build.fhir.org/ig/HL7/fhir-mCODE-ig/branches/master/index.html), or summarized in these supplemental files:
+
+1. [**STU2 Preview Data Dictionary** (.xlsx)](data-dictionary/mCODE_data_dictionary_STU2_preview_2021-02-19.xlsx): Describes profiles and their key elements (flagged with MustSupport in the IG), along with value sets.
+1. [**STU1 vs. STU2 Preview Diff** (.xlsx)](data-dictionary/mCODE_STU1_vs_STU2_preview_2021-02-19.xlsx): Compares all profiles and elements in STU1 and the proposed STU2.
+
+For both supplemental files **please read the first tab for important information on how to interpret their contents.** These files are meant to supplement rather than replace the content in this Implementation Guide, and the Implementation Guide takes precedence in any cases where the supplemental files appear to conflict with it.
+
+<p style="background-color: #fce4ff; margin-top: 2rem; margin-bottom: 2rem; padding: 0.5em; border: 1px solid #be86c5;">If you have questions or comments about these changes, please reach out on <a href="https://chat.fhir.org/#narrow/stream/179234-Cancer-Interoperability/topic/mCODE">chat.fhir.org</a> (free account registration required) or on the <a href="https://jira.hl7.org/issues/?filter=13361">HL7 Jira</a>.</p>
 
 #### General
 
@@ -15,30 +22,30 @@ Many of these changes have been taken in response to comments from the HL7 commu
   * The six mCODE groups (Patient, Disease, Genomics, Labs/Vitals, Outcomes) have been re-aligned. Labs/Vitals has been renamed "Assessments" and some profiles formerly in the Patient Group have been moved into that group. TumorMarkerTest has been moved from Labs/Vitals to the Disease group. The mCODE concept diagram has ben updated to reflect these changes.
 
 #### Patient
-  * Elixhauser comorbities have been redesigned to further specify groupings by category.
 
+* Elixhauser comorbities have been redesigned to further specify groupings by category.
+
+#### Disease
+
+* The separate sets of profiles for TNM Clinical and TNM Pathologic staging were combined into a single set of profiles: [TNMStageGroup], [TNMPrimaryTumorCategory], [TNMRegionalNodesCategory], and [TNMDistantMetastasesCategory]. The new profiles can be used for both clinical and pathologic TNM staging, or for other types of TNM staging; these are differentiated by the value of `Observation.code` in TNMStageGroup, which is bound do [ObservationCodesPrimaryTumorVS].
 
 #### Treatment
 
-{:.new-content #TreatmentChanges}
-  * [CancerRelatedMedicationStatement](http://hl7.org/fhir/us/mcode/STU1/StructureDefinition-mcode-cancer-related-medication-statement.html) was replaced with [CancerRelatedMedicationRequest] and [CancerRelatedMedicationAdministration].
+* [CancerRelatedMedicationStatement](http://hl7.org/fhir/us/mcode/STU1/StructureDefinition-mcode-cancer-related-medication-statement.html) was replaced with [CancerRelatedMedicationRequest] and [CancerRelatedMedicationAdministration].
 
-    This decision was prompted by US Core STU Release 3.1.1, which replaced MedicationStatement with MedicationRequest. [Its guidance for fetching medications in different contexts is provided here.](http://hl7.org/fhir/us/core/all-meds.html)
+  This decision was prompted by US Core STU Release 3.1.1, which replaced MedicationStatement with MedicationRequest. [Its guidance for fetching medications in different contexts is provided here.](http://hl7.org/fhir/us/core/all-meds.html)
 
-  * Radiation therapy is expanded to include element requirements from the American Society for Radiation Oncology (ASTRO), resulting in additional profiles: [RadiotherapyTreatmentSummary] and [TeleradiotherapyTreatmentPhase]
+* Radiation therapy is expanded to include element requirements from the American Society for Radiation Oncology (ASTRO), resulting in additional profiles: [RadiotherapyTreatmentSummary] and [TeleradiotherapyTreatmentPhase]
 
 #### Genomics
 
-  * [CancerGeneticVariant] contains an additional component for DNA change type.
-
+* [CancerGeneticVariant] contains an additional component for DNA change type.
 
 #### Outcomes
 
-{:.new-content #Tumor}
-* Two new profiles further specify the location and size of a tumor: [Tumor] and [TumorSize].
+* Three new profiles further specify the location and size of a tumor: [Tumor], [TumorSpecimen], and [TumorSize].
 
-
-<p style="background-color: #fce4ff; padding: 0.5em; border: 1px solid #be86c5;">We are in the progress of updating this list to reflect all the changes currently in the continuous integration build. If you have questions or comments about these changes, please reach out on <a href="https://chat.fhir.org/#narrow/stream/179234-Cancer-Interoperability/topic/mCODE">chat.fhir.org</a> (free account registration required) or on the <a href="https://jira.hl7.org/issues/?filter=13361">HL7 Jira</a>.</p>
+----
 
 ### mCODE 1.0.0 STU 1
 

@@ -1,0 +1,211 @@
+/*
+  Uses system typography for better readability.
+
+  Increases font sizes to industry standard base of 16px.
+*/
+body, p,
+li, td, tr {
+  font-size: 16px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+    "Helvetica Neue", sans-serif !important;
+}
+
+ul.dict li {
+  font-size: 16px;
+  line-height: 1.4em;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+    "Helvetica Neue", sans-serif;
+}
+
+table.dict td {
+  font-size: 16px;
+  line-height: 1.4em;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+    "Helvetica Neue", sans-serif;
+}
+
+table.dict p {
+  font-size: 16px;
+}
+
+table.dict td.structure {
+  font-size: 16px;
+  line-height: 1.4em;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+    "Helvetica Neue", sans-serif;
+}
+
+table.codes td {
+  font-size: 16px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+    "Helvetica Neue", sans-serif;
+}
+
+table.grid th {
+  font-size: 16px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+    "Helvetica Neue", sans-serif;
+}
+
+table.grid td {
+  font-size: 16px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+    "Helvetica Neue", sans-serif;
+}
+
+h1 {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+    "Helvetica Neue", sans-serif;
+}
+
+h2 {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+    "Helvetica Neue", sans-serif;
+  line-height: 1.4em;
+  font-size: 3rem;
+  margin-top: 2rem;
+}
+
+h3 {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+    "Helvetica Neue", sans-serif;
+  line-height: 1.4em;
+  font-size: 2.5rem;
+  margin-top: 2rem;
+}
+
+h2 + h3 {
+  margin-top: 0;
+}
+
+h4 {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+    "Helvetica Neue", sans-serif;
+  line-height: 1.2em;
+  font-size: 2.2rem;
+  margin-top: 2rem;
+}
+
+h3 + h4 {
+  margin-top: 0;
+}
+
+div.mapping {
+  font-size: 0.75em;
+}
+
+div.example {
+  font-size: 0.75em;
+}
+
+div.sidebar h2 {
+  font-size: 16px;
+}
+
+div.sidebar p {
+  font-size: 16px;
+}
+
+div.sidebar ul {
+  font-size: 16px;
+}
+
+div.sidebar li {
+  font-size: 16px;
+}
+pre.spec {
+  font-size: 16px;
+}
+
+pre.json {
+  font-size: 16px;
+}
+
+pre.rdf {
+  font-size: 16px;
+}
+
+pre.fhirpath {
+  font-size: 16px;
+}
+
+pre.graphql {
+  font-size: 16px;
+}
+
+pre.xml {
+  font-family: "Courier New";
+  font-size: 12pt;
+}
+
+p.example {
+  background: #fff2e6;
+  padding: 5px;
+  border: 1px solid #dcdcdc;
+}
+
+ul.navtop {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+    "Helvetica Neue", sans-serif;
+}
+
+ul.navtop a {
+  font-size: 16px;
+}
+
+ul.navtop span {
+  font-size: 16px;
+}
+
+div.sidebar p.note {
+  font-size: 16px;
+}
+
+div.itoc p {
+  font-size: 16px;
+}
+
+div.itoc p.link {
+  font-size: 16px;
+}
+
+.hierarchy {
+  font-size: 16px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+    "Helvetica Neue", sans-serif;
+}
+
+tr.hierarchy {
+  font-size: 16px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+    "Helvetica Neue", sans-serif;
+}
+
+table.lmap th {
+  font-size: 16px;
+  line-height: 1.4em;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+    "Helvetica Neue", sans-serif;
+}
+
+table.lmap td {
+  font-size: 16px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+    "Helvetica Neue", sans-serif;
+}

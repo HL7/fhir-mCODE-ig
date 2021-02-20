@@ -164,6 +164,7 @@ Description:    "The area of the genome region referenced in testing for variant
 * code = LNC#53041-0 //"DNA region of interest panel"
 //* insert NotUsed(value[x])
 * value[x] 0..0 // remove the must-support obligation imposed by US Core (MK 2/16/2021)
+* value[x] ^definition = "Not used in this profile. MustSupport is inherited from the parent profile (USCoreObservationLab) and should be ignored by implementers for this element."
 * insert ObservationComponentSlicingRules
 * insert CreateComponent(geneMutations, 0, *)
 * insert CreateComponent(geneStudied, 0, *)

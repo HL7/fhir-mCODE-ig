@@ -1,7 +1,7 @@
 // Add a breast cancer diagnosis to make the breast-related tumor size examples make sense
 Instance: primary-cancer-condition-breast
 InstanceOf: PrimaryCancerCondition
-Description: "mCODE Example for Primary Cancer Condition (breast), SNOMED encoded. The example shows optional coding for morphology, which could be omitted since the primary code pre-coordinates the morphology. In this case the bodySiteis required since the primary code does not indicate laterality."
+Description: "mCODE Example for Primary Cancer Condition (breast). The example shows post-coordinated coding using SNOMED-CT, with separate codes for morphology and bodySite."
 * clinicalStatus = ClinStatus#active "Active"
 * verificationStatus = VerStatus#confirmed "Confirmed"
 * category = CondCat#problem-list-item
@@ -14,7 +14,7 @@ Description: "mCODE Example for Primary Cancer Condition (breast), SNOMED encode
 * stage.summary = AJCC#3C "IIIC"
 * stage.assessment = Reference(tnm-clinical-stage-group-3c)
 
-Instance: tumor-size-pathology
+Instance: tumor-size-pathology 
 InstanceOf: TumorSize
 Description: "Example of a resource conforming to the tumor size profile."
 * status = #final

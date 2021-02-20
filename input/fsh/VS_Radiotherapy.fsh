@@ -16,11 +16,12 @@ Id: mcode-brachytherapy-modality-vs
 Title: "Brachytherapy Modality Value Set"
 Description: "Codes describing the modalities of brachytherapy procedures. This value set is considered closed (not extensible on ad hoc basis by the implementer)."
 // * insert ExpandValueSet
-* RT#LDR
+* RT#LDR-TEMP
+* RT#LDR-PERM
 * RT#PDR
 * RT#HDR
-* RT#ELEC
-* RT#PHARM
+* RT#EBRACHY
+* RT#RADPHARM
 
 ValueSet: RadiotherapyModalityVS
 Id: mcode-radiotherapy-modality-vs
@@ -56,8 +57,6 @@ Description: "Codes describing the techniques of brachytherapy (internal or surf
 * RT#CAV
 * RT#CAV-IMB
 * RT#INSTIT
-* RT#INSTIT-PERM
-* RT#INSTIT-TEMP
 * RT#VASC
 * RT#LUM
 * RT#IORT

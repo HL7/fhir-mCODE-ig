@@ -1,6 +1,6 @@
 Instance: primary-cancer-condition-nsclc
 InstanceOf: PrimaryCancerCondition
-Description: "mCODE Example for Primary Cancer Condition"
+Description: "Example of Primary Cancer Condition"
 * clinicalStatus = ClinStatus#active "Active"
 * verificationStatus = VerStatus#confirmed "Confirmed"
 * category = CondCat#problem-list-item
@@ -16,7 +16,7 @@ Description: "mCODE Example for Primary Cancer Condition"
 
 Instance: secondary-cancer-condition-brain-mets
 InstanceOf: SecondaryCancerCondition
-Description: "mCODE Example for Secondary Cancer Condition"
+Description: "Example of Secondary Cancer Condition"
 * extension[relatedPrimaryCancerCondition].valueReference = Reference(primary-cancer-condition-nsclc)
 * clinicalStatus = ClinStatus#active "Active"
 * verificationStatus = VerStatus#confirmed "Confirmed"
@@ -28,7 +28,7 @@ Description: "mCODE Example for Secondary Cancer Condition"
 
 Instance: cancer-disease-status-improved
 InstanceOf: CancerDiseaseStatus
-Description: "mCODE Example for Cancer Disease Status"
+Description: "Example of Cancer Disease Status"
 // * extension[evidenceType].url = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-evidence-type"
 * extension[evidenceType].valueCodeableConcept = SCT#108257001 "Anatomic pathology procedure (procedure)"
 * status = #final "final"
@@ -39,7 +39,7 @@ Description: "mCODE Example for Cancer Disease Status"
 
 Instance: cancer-related-mcode-comorbidities-elixhauser-john-anyperson
 InstanceOf: ComorbiditiesElixhauser
-Description: "mCODE Example for Cancer-Related Comorbidities"
+Description: "Example of Cancer-Related Comorbidities"
 * subject = Reference(cancer-patient-john-anyperson)
 * performer = Reference(us-core-practitioner-kyle-anydoc)
 * focus = Reference(primary-cancer-condition-nsclc)
@@ -55,7 +55,7 @@ Description: "mCODE Example for Cancer-Related Comorbidities"
 
 Instance: cancer-patient-john-anyperson
 InstanceOf: CancerPatient
-Description: "mCODE Example for Patient"
+Description: "Example of Patient"
 * identifier.use = #usual
 * identifier.type = IDTYPE#MR "Medical Record Number"
 * identifier.system = "http://hospital.example.org"
@@ -79,7 +79,7 @@ Description: "mCODE Example for Patient"
 
 Instance: cancer-patient-eve-anyperson
 InstanceOf: CancerPatient
-Description: "mCODE Example for Patient"
+Description: "Example of Patient"
 // The following lines must use the slice names, not the defining URLs
 // * extension[race].url = "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race"
 // * extension[race].extension[ombCategory].url = "ombCategory"
@@ -111,7 +111,7 @@ Description: "mCODE Example for Patient"
 
 Instance: us-core-practitioner-kyle-anydoc
 InstanceOf: USCorePractitioner
-Description: "mCODE Example for Practitioner"
+Description: "Example of Practitioner"
 * identifier[NPI].value = "9988776655"
 * name.family = "Anydoc"
 * name.given = "Kyle"
@@ -127,7 +127,7 @@ Description: "mCODE Example for Practitioner"
 
 Instance: ecog-performance-status-fully-active
 InstanceOf: ECOGPerformanceStatus
-Description: "mCODE Example for ECOG Performance Status"
+Description: "Example of ECOG Performance Status"
 * status = #final "final"
 * method = SCT#5880005 "Clinical examination"
 * subject = Reference(cancer-patient-john-anyperson)
@@ -138,7 +138,7 @@ Description: "mCODE Example for ECOG Performance Status"
 
 Instance: karnofsky-performance-status-normal-activity
 InstanceOf: KarnofskyPerformanceStatus
-Description: "mCODE Example for Karnofsky Performance Status"
+Description: "Example of Karnofsky Performance Status"
 * status = #final "final"
 * method = SCT#5880005 "Clinical examination"
 * subject = Reference(cancer-patient-john-anyperson)
@@ -149,7 +149,7 @@ Description: "mCODE Example for Karnofsky Performance Status"
 
 Instance: cancer-related-surgical-procedure-lobectomy
 InstanceOf: CancerRelatedSurgicalProcedure
-Description: "mCODE Example for Cancer Related Surgical Procedure"
+Description: "Example of Cancer Related Surgical Procedure"
 * status = #completed "completed"
 * code = SCT#359615001 "Partial lobectomy of lung (procedure)"
 * subject = Reference(cancer-patient-john-anyperson)
@@ -159,24 +159,23 @@ Description: "mCODE Example for Cancer Related Surgical Procedure"
 * reasonReference = Reference(primary-cancer-condition-nsclc)
 * bodySite = SCT#41224006 "Structure of lower lobe of left lung (body structure)"
 
-Instance: brachytherapy-prescription-delivery-ldr
+Instance: brachytherapy-treatment-phase-low-dose-rate-temporary
 InstanceOf: BrachytherapyTreatmentPhase
-Description: "mCODE Example for a brachytherapy procedure."
+Description: "Example of a brachytherapy therapy phase."
 * status = #completed "completed"
-* code = RID#mcode-radiotherapy-brachy
-* extension[modality].valueCodeableConcept = RT#LDR "Low Dose Rate Brachytherapy" 
-* extension[technique].valueCodeableConcept = RT#INSTIT-TEMP "Interstitial-Temporary"
+* code = RID#mcode-brachytherapy-treatment-phase
+* extension[modality].valueCodeableConcept = RT#LDR-TEMP "Low Dose Rate Brachytherapy - Temporary Placement"
+* extension[technique].valueCodeableConcept = RT#INSTIT "Interstitial"
 * subject = Reference(cancer-patient-john-anyperson)
 * asserter = Reference(us-core-practitioner-kyle-anydoc)
 * performedPeriod.start = "2019-03-01"
 * performedPeriod.end = "2019-03-01"
-//* extension[treatmentIntent].valueCodeableConcept = SCT#373808002 "Curative - procedure intent"
 * reasonReference = Reference(primary-cancer-condition-nsclc)
 * extension[doseDelivered].extension[volumeDescription].valueString = "Structure of lower lobe of left lung"
 
 Instance: tnm-clinical-stage-group-3c
 InstanceOf: TNMStageGroup
-Description: "mCODE Example for TNM Clinical Stage Group"
+Description: "Example of TNM Clinical Stage Group"
 * code = LNC#21908-9 "Stage group.clinical Cancer"
 * status = #final "final"
 * method = NCIT#C146985 "AJCC Cancer Staging Manual 8th Edition"
@@ -189,7 +188,7 @@ Description: "mCODE Example for TNM Clinical Stage Group"
 
 Instance: tnm-clinical-distant-metastases-category-cM0
 InstanceOf: TNMDistantMetastasesCategory
-Description: "mCODE Example for TNM Clinical Distant Metastases Category"
+Description: "Example of TNM Clinical Distant Metastases Category"
 * code = LNC#21907-1 "Distant metastases.clinical [Class] Cancer"
 * status = #final "final"
 * method = NCIT#C146985 "AJCC Cancer Staging Manual 8th Edition"
@@ -199,7 +198,7 @@ Description: "mCODE Example for TNM Clinical Distant Metastases Category"
 
 Instance: tnm-clinical-primary-tumor-category-cT3
 InstanceOf: TNMPrimaryTumorCategory
-Description: "mCODE Example for TNM Clinical Primary Tumor Category"
+Description: "Example of TNM Clinical Primary Tumor Category"
 * code = LNC#21905-5 "Primary tumor.clinical [Class] Cancer"
 * status = #final "final"
 * method = NCIT#C146985 "AJCC Cancer Staging Manual 8th Edition"
@@ -209,7 +208,7 @@ Description: "mCODE Example for TNM Clinical Primary Tumor Category"
 
 Instance: tnm-clinical-regional-nodes-category-cN3
 InstanceOf: TNMRegionalNodesCategory
-Description: "mCODE Example for TNM Clinical Regional Nodes Category"
+Description: "Example of TNM Clinical Regional Nodes Category"
 * code = LNC#21906-3 "Regional lymph nodes.clinical [Class] Cancer"
 * status = #final "final"
 * method = NCIT#C146985 "AJCC Cancer Staging Manual 8th Edition"
@@ -219,7 +218,7 @@ Description: "mCODE Example for TNM Clinical Regional Nodes Category"
 
 Instance: cancer-related-medication-request-gefitinib
 InstanceOf: CancerRelatedMedicationRequest
-Description: "mCODE Example for CancerRelatedMedicationRequest"
+Description: "Example of CancerRelatedMedicationRequest"
 * subject = Reference(cancer-patient-john-anyperson)
 * status = MedReqStatus#active
 * intent = MedReqIntent#order
@@ -241,7 +240,7 @@ Description: "mCODE Example for CancerRelatedMedicationRequest"
 
 Instance: cancer-related-medication-request-cisplatin
 InstanceOf: CancerRelatedMedicationRequest
-Description: "mCODE Example for CancerRelatedMedicationRequest - Chemo Infusion"
+Description: "Example of CancerRelatedMedicationRequest - Chemo Infusion"
 * subject = Reference(cancer-patient-john-anyperson)
 * status = MedReqStatus#active
 * intent = MedReqIntent#order

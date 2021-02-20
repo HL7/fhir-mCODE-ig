@@ -106,12 +106,12 @@
 <artifact deprecated="true" id="ValueSet/mcode-radiation-procedure-value-set" key="radiation-procedure-value-set" name="Radiation Procedure Value Set"/>
 <artifact id="ValueSet/mcode-radiation-target-body-site-vs" key="radiation-target-body-site-value-set" name="Radiation Target Body Site Value Set"/>
 <artifact id="CodeSystem/radiotherapy" key="CodeSystem-radiotherapy" name="Radiotherapy Code System"/>
-<artifact id="StructureDefinition/mcode-radiotherapy-dose" key="StructureDefinition-mcode-radiotherapy-dose" name="Radiotherapy Dose"/>
+<artifact id="StructureDefinition/mcode-radiotherapy-dose-delivered" key="StructureDefinition-mcode-radiotherapy-dose-delivered" name="Radiotherapy Dose"/>
 <artifact id="StructureDefinition/mcode-radiotherapy-fractions-delivered" key="StructureDefinition-mcode-radiotherapy-fractions-delivered" name="Radiotherapy Fractions Delivered"/>
 <artifact id="StructureDefinition/mcode-radiotherapy-modality" key="StructureDefinition-mcode-radiotherapy-modality" name="Radiotherapy Modality"/>
 <artifact id="StructureDefinition/mcode-radiotherapy-technique" key="StructureDefinition-mcode-radiotherapy-technique" name="Radiotherapy Modality"/>
 <artifact id="ValueSet/mcode-radiotherapy-modality-vs" key="ValueSet-mcode-radiotherapy-modality-vs" name="Radiotherapy Modality Value Set"/>
-<artifact id="StructureDefinition/mcode-radiotherapy-summary" key="StructureDefinition-mcode-radiotherapy-summary" name="Radiotherapy Summary"/>
+<artifact id="StructureDefinition/mcode-radiotherapy-treatment-summary" key="StructureDefinition-mcode-radiotherapy-treatment-summary" name="Radiotherapy Summary"/>
 <artifact id="ValueSet/mcode-radiotherapy-technique-vs" key="ValueSet-mcode-radiotherapy-technique-vs" name="Radiotherapy Technique Value Set"/>
 <artifact deprecated="true" id="Extension/mcode-related-primary-cancer-condition-extension" key="related-primary-cancer-condition-extension" name="Related Primary Cancer Condition Extension"/>
 <artifact id="SearchParameter/Patient-id" key="SearchParameter-Patient-id" name="Search by _id in Patients with multipleOr"/>
@@ -157,7 +157,7 @@
 <artifact id="Observation/bodyheight-jenny-m-2018-03-06" key="Observation-bodyheight-jenny-m-2018-03-06" name="bodyheight-jenny-m-2018-03-06"/>
 <artifact id="Observation/bodyweight-jenny-m-2018-03-06" key="Observation-bodyweight-jenny-m-2018-03-06" name="bodyweight-jenny-m-2018-03-06"/>
 <artifact id="Observation/bodyweight-jenny-m-2019-04-22" key="Observation-bodyweight-jenny-m-2019-04-22" name="bodyweight-jenny-m-2019-04-22"/>
-<artifact id="Procedure/brachytherapy-prescription-delivery-ldr" key="Procedure-brachytherapy-prescription-delivery-ldr" name="brachytherapy-prescription-delivery-ldr"/>
+<artifact id="Procedure/brachytherapy-treatment-phase-low-dose-rate-temporary" key="Procedure-brachytherapy-treatment-phase-low-dose-rate-temporary" name="brachytherapy-treatment-phase-low-dose-rate-temporary"/>
 <artifact id="Observation/cancer-disease-status-improved" key="Observation-cancer-disease-status-improved" name="cancer-disease-status-improved"/>
 <artifact id="Observation/cancer-disease-status-jenny-m" key="Observation-cancer-disease-status-jenny-m" name="cancer-disease-status-jenny-m"/>
 <artifact id="Observation/cancer-genetic-variant-germline-deletion" key="Observation-cancer-genetic-variant-germline-deletion" name="cancer-genetic-variant-germline-deletion"/>
@@ -238,8 +238,10 @@
 <artifact id="Condition/primary-cancer-condition-breast" key="Condition-primary-cancer-condition-breast" name="primary-cancer-condition-breast"/>
 <artifact id="Condition/primary-cancer-condition-jenny-m" key="Condition-primary-cancer-condition-jenny-m" name="primary-cancer-condition-jenny-m"/>
 <artifact id="Condition/primary-cancer-condition-nsclc" key="Condition-primary-cancer-condition-nsclc" name="primary-cancer-condition-nsclc"/>
+<artifact id="Procedure/radiotherapy-treatment-summary-chest-wall-jenny-m" key="Procedure-radiotherapy-treatment-summary-chest-wall-jenny-m" name="radiotherapy-treatment-summary-chest-wall-jenny-m"/>
 <artifact id="Condition/secondary-cancer-condition-brain-mets" key="Condition-secondary-cancer-condition-brain-mets" name="secondary-cancer-condition-brain-mets"/>
-<artifact id="Procedure/teleradiotherapy-prescription-delivery-jenny-m" key="Procedure-teleradiotherapy-prescription-delivery-jenny-m" name="teleradiotherapy-prescription-delivery-jenny-m"/>
+<artifact id="Procedure/teleradiotherapy-treatment-phase-boost-jenny-m" key="Procedure-teleradiotherapy-treatment-phase-boost-jenny-m" name="teleradiotherapy-treatment-phase-boost-jenny-m"/>
+<artifact id="Procedure/teleradiotherapy-treatment-phase-chest-wall-jenny-m" key="Procedure-teleradiotherapy-treatment-phase-chest-wall-jenny-m" name="teleradiotherapy-treatment-phase-chest-wall-jenny-m"/>
 <artifact id="Observation/tnm-clinical-distant-metastases-category-cM0" key="Observation-tnm-clinical-distant-metastases-category-cM0" name="tnm-clinical-distant-metastases-category-cM0"/>
 <artifact id="Observation/tnm-clinical-distant-metastases-category-jenny-m" key="Observation-tnm-clinical-distant-metastases-category-jenny-m" name="tnm-clinical-distant-metastases-category-jenny-m"/>
 <artifact id="Observation/tnm-clinical-primary-tumor-category-cT3" key="Observation-tnm-clinical-primary-tumor-category-cT3" name="tnm-clinical-primary-tumor-category-cT3"/>

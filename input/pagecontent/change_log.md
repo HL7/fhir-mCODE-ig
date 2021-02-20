@@ -25,7 +25,7 @@ Many of these changes have been taken in response to comments from the HL7 commu
 
     This decision was prompted by US Core STU Release 3.1.1, which replaced MedicationStatement with MedicationRequest. [Its guidance for fetching medications in different contexts is provided here.](http://hl7.org/fhir/us/core/all-meds.html)
 
-  * Radiation therapy is expanded to include element requirements from the American Society for Radiation Oncology (ASTRO), resulting in additional profiles: [RadiotherapySummary] and [TeleradiotherapyTreatmentPhase]
+  * Radiation therapy is expanded to include element requirements from the American Society for Radiation Oncology (ASTRO), resulting in additional profiles: [RadiotherapyTreatmentSummary] and [TeleradiotherapyTreatmentPhase]
 
 #### Genomics
 

@@ -6,8 +6,8 @@ Many of these changes have been taken in response to comments from the HL7 commu
 
 These changes can be seen in the [continuous integration build of mCODE](http://build.fhir.org/ig/HL7/fhir-mCODE-ig/branches/master/index.html), or summarized in these supplemental files:
 
-1. [**STU2 Preview Data Dictionary** (.xlsx)](data-dictionary/mCODE_data_dictionary_STU2_preview_2021-02-19.xlsx): Describes profiles and their key elements (flagged with MustSupport in the IG), along with value sets.
-1. [**STU1 vs. STU2 Preview Diff** (.xlsx)](data-dictionary/mCODE_STU1_vs_STU2_preview_2021-02-19.xlsx): Compares all profiles and elements in STU1 and the proposed STU2.
+1. [**STU2 Ballot Data Dictionary** (.xlsx)](data-dictionary/mCODEDataDictionary-STU2.xlsx): Describes profiles and their key elements (flagged with MustSupport in the IG), along with value sets.
+1. [**STU1 vs. STU2 Ballot Diff** (.xlsx)](data-dictionary/mCODEDataDictionary-STU2-vs-STU1.xlsx): Compares all profiles and elements in STU1 and the proposed STU2.
 
 For both supplemental files **please read the first tab for important information on how to interpret their contents.** These files are meant to supplement rather than replace the content in this Implementation Guide, and the Implementation Guide takes precedence in any cases where the supplemental files appear to conflict with it.
 

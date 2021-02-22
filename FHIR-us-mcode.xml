@@ -109,9 +109,9 @@
 <artifact id="StructureDefinition/mcode-radiotherapy-dose-delivered" key="StructureDefinition-mcode-radiotherapy-dose-delivered" name="Radiotherapy Dose"/>
 <artifact id="StructureDefinition/mcode-radiotherapy-fractions-delivered" key="StructureDefinition-mcode-radiotherapy-fractions-delivered" name="Radiotherapy Fractions Delivered"/>
 <artifact id="StructureDefinition/mcode-radiotherapy-modality" key="StructureDefinition-mcode-radiotherapy-modality" name="Radiotherapy Modality"/>
-<artifact id="StructureDefinition/mcode-radiotherapy-technique" key="StructureDefinition-mcode-radiotherapy-technique" name="Radiotherapy Modality"/>
 <artifact id="ValueSet/mcode-radiotherapy-modality-vs" key="ValueSet-mcode-radiotherapy-modality-vs" name="Radiotherapy Modality Value Set"/>
 <artifact id="StructureDefinition/mcode-radiotherapy-treatment-summary" key="StructureDefinition-mcode-radiotherapy-treatment-summary" name="Radiotherapy Summary"/>
+<artifact id="StructureDefinition/mcode-radiotherapy-technique" key="StructureDefinition-mcode-radiotherapy-technique" name="Radiotherapy Technique"/>
 <artifact id="ValueSet/mcode-radiotherapy-technique-vs" key="ValueSet-mcode-radiotherapy-technique-vs" name="Radiotherapy Technique Value Set"/>
 <artifact deprecated="true" id="Extension/mcode-related-primary-cancer-condition-extension" key="related-primary-cancer-condition-extension" name="Related Primary Cancer Condition Extension"/>
 <artifact id="SearchParameter/Patient-id" key="SearchParameter-Patient-id" name="Search by _id in Patients with multipleOr"/>

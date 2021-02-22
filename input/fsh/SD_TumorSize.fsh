@@ -98,7 +98,7 @@ Profile: BodyStructureIdentifier
 Parent: Identifier
 Id: mcode-body-structure-identifier
 Title: "Body Structure Identifier"
-Description: "An Identifier that identifies a body structure such as a tumor."
+Description: "An identifier that designates a body structure such as a tumor and can be used for tracking the structure over time."
 * type = http://hl7.org/fhir/resource-types#BodyStructure
 * value 1..1
 * use = #usual

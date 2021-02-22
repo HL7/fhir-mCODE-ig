@@ -94,7 +94,7 @@ Description: "Extension capturing a modality of external beam or brachytherapy r
 
 Extension: RadiotherapyTechnique
 Id:        mcode-radiotherapy-technique
-Title:     "Radiotherapy Modality"
+Title:     "Radiotherapy Technique"
 Description: "Extension capturing a technique of external beam or brachytherapy radiation procedures."
 * insert ExtensionContext(Procedure)
 * value[x] only CodeableConcept

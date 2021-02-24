@@ -14,6 +14,21 @@ Description: "Example of Primary Cancer Condition"
 * stage.summary = AJCC#3C "IIIC"
 * stage.assessment = Reference(tnm-clinical-stage-group-3c)
 
+Instance: primary-cancer-condition-cll
+InstanceOf: PrimaryCancerCondition
+Description: "Example of Primary Cancer Condition - hematologic cancer"
+* clinicalStatus = ClinStatus#active "Active"
+* verificationStatus = VerStatus#confirmed "Confirmed"
+* category = CondCat#problem-list-item
+* code = SCT#92814006 "Chronic lymphoid leukemia, disease (disorder)"
+// * bodySite = SCT#39607008 "Lung structure (body structure)"
+// * bodySite.extension[locationQualifier].valueCodeableConcept = SCT#7771000 "Left (qualifier value)"
+* subject = Reference(cancer-patient-adam-everyman)
+* onsetDateTime = "2020-05-12"
+* asserter = Reference(us-core-practitioner-kyle-anydoc)
+* stage.summary = NCIT#C80134 "Binet Stage A"
+* stage.assessment = Reference(binet-stage-group-A)
+
 Instance: secondary-cancer-condition-brain-mets
 InstanceOf: SecondaryCancerCondition
 Description: "Example of Secondary Cancer Condition"
@@ -109,6 +124,30 @@ Description: "Example of Patient"
 * communication.language = urn:ietf:bcp:47#en-US "English (Region=United States)"
 * communication.language.text = "English"
 
+Instance: cancer-patient-adam-everyman
+InstanceOf: CancerPatient
+Description: "Example of Patient"
+* identifier.use = #usual
+* identifier.type = IDTYPE#MR "Medical Record Number"
+* identifier.system = "http://hospital.example.org"
+* identifier.value = "m123"
+* name.family = "Everyman"
+* name.given[0] = "Adam"
+* name.given[1] = "A."
+* contact.telecom[0].system = #phone
+* contact.telecom[0].value = "333-555-5555"
+* contact.telecom[0].use = #home
+* contact.telecom[1].system = #email
+* contact.telecom[1].value = "adam.everyman@example.com"
+* gender = #male
+* birthDate = "1962-02-05"
+* address.line = "234 Anyway St"
+* address.city = "Anytown"
+* address.postalCode = "12345"
+* address.country = "US"
+* communication.language = urn:ietf:bcp:47#en-US "English (Region=United States)"
+* communication.language.text = "English"
+
 Instance: us-core-practitioner-kyle-anydoc
 InstanceOf: USCorePractitioner
 Description: "Example of Practitioner"
@@ -173,8 +212,18 @@ Description: "Example of a brachytherapy therapy phase."
 * reasonReference = Reference(primary-cancer-condition-nsclc)
 * extension[doseDelivered].extension[volumeDescription].valueString = "Structure of lower lobe of left lung"
 
+Instance: binet-stage-group-A
+InstanceOf: CancerStageGroup
+Description: "Example of a non-TNM Stage Group (Binet staging for CLL)"
+* code = LNC#21914-7 "Stage group.other Cancer"
+* status = #final "final"
+* method = NCIT#C141212 "Binet Staging"
+* subject = Reference(cancer-patient-adam-everyman)
+* effectiveDateTime = "2020-05-18"
+* valueCodeableConcept = NCIT#C80134 "Binet Stage A"
+
 Instance: tnm-clinical-stage-group-3c
-InstanceOf: TNMStageGroup
+InstanceOf: CancerStageGroup
 Description: "Example of TNM Clinical Stage Group"
 * code = LNC#21908-9 "Stage group.clinical Cancer"
 * status = #final "final"

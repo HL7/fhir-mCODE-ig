@@ -29,7 +29,9 @@ Cancer stage information is contained in a set of profiles, representing [clinic
 
 Clinicians assign stages to cancers according to rules defined in various [cancer staging systems](https://www.cancer.gov/about-cancer/diagnosis-staging/staging). TNM staging is used for many types of solid-tumor cancers. The staging system must always be specified alongside the stage, because it establishes the meaning of the stage code(s).
 
-Non-TNM staging systems are not currently represented in mCODE, reflecting mCODE's current focus on solid tumors. In mCODE, a single patient may have more than one staging panel, although this is not common in practice.
+Support for non-TNM staging systems in mCODE are limited to [CancerStageGroup]. Use the NCI thesaurus code for specifying cancer staging systems which do not have a SNOMED code. 
+
+In mCODE, a single patient may have more than one staging panel, although this is not common in practice.
 
 Clinical applications vary in their representation of T, N, and M staging category values, falling into one of two naming conventions:
 
@@ -60,7 +62,7 @@ mCODE includes single FHIR profile, [TumorMarkerTest], for all labs involving se
   * [PrimaryCancerCondition]
   * [SecondaryCancerCondition]
 * Staging
-  * [TNMStageGroup]
+  * [CancerStageGroup]
   * [TNMPrimaryTumorCategory]
   * [TNMRegionalNodesCategory]
   * [TNMDistantMetastasesCategory]
@@ -86,7 +88,7 @@ mCODE includes single FHIR profile, [TumorMarkerTest], for all labs involving se
   * [ObservationCodesPrimaryTumorVS]
   * [ObservationCodesRegionalNodesVS]
   * [ObservationCodesDistantMetastasesVS]
-  * [TNMStageGroupVS]
+  * [CancerStageGroupVS]
   * [TNMPrimaryTumorCategoryVS]
   * [TNMRegionalNodesCategoryVS]
   * [TNMDistantMetastasesCategoryVS]

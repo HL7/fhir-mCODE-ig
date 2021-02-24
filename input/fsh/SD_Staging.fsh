@@ -13,14 +13,14 @@ RuleSet: CancerStageCommonRules
 // MS flags -- for Pathological staging, they might be redundant with US Core Lab Observation (but that's harmless)
 * status and code and subject and effective[x] and value[x] and method and focus MS
 
-Profile: TNMStageGroup
-Id: mcode-tnm-stage-group
+Profile: CancerStageGroup
+Id: mcode-cancer-stage-group
 Parent: Observation
-Title: "TNM Stage Group"
-Description: "The extent of the cancer in the body, according to the TNM classification system, based on evidence such as physical examination, imaging, and/or biopsy or based on pathologic analysis of a specimen."
+Title: "Cancer Stage Group"
+Description: "The extent of the cancer in the body, according to a given cancer staging classification system, based on evidence such as physical examination, imaging, and/or biopsy or based on pathologic analysis of a specimen."
 * insert CancerStageCommonRules
 * code from ObservationCodesStageGroupVS (required)
-* value[x] from TNMStageGroupVS (preferred)
+* value[x] from CancerStageGroupVS (preferred)
 * hasMember MS
 * hasMember only Reference(Observation)
 * insert ObservationHasMemberSlicingRules

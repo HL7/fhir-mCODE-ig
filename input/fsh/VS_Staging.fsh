@@ -7,6 +7,10 @@ Description: "System used for staging."
 * SCT#443830009 "American Joint Commission on Cancer, Cancer Staging Manual, 7th edition neoplasm staging system (tumor staging)"
 * NCIT#C146985 "AJCC Cancer Staging Manual 8th Edition"
 * SCT#258235000 "International Union Against Cancer (tumor staging)"
+* NCIT#C141138 "Ann Arbor Stage"
+* NCIT#C141212 "Binet Stage"
+* NCIT#C125738 "FIGO Stage"
+* NCIT#C141147 "Lugano Stage"
 
 ValueSet: ObservationCodesStageGroupVS
 Id: mcode-observation-codes-stage-group-vs
@@ -44,8 +48,8 @@ Description: "Identifying codes based on the timing of classification for distan
 * LNC#21901-4 "Distant metastases.pathology [Class] Cancer"
 * LNC#21913-9 "Distant metastases.other [Class] Cancer"
 
-ValueSet: TNMStageGroupVS
-Id: mcode-tnm-stage-group-vs
+ValueSet: CancerStageGroupVS
+Id: mcode-cancer-stage-group-vs
 Title: "TNM Stage Group Value Set"
 Description: "This value set is intended to contain allowable values for Stage Group, according to TNM staging rules. AJCC codes (preferably, version 8 for current cancers) SHOULD be used."
 * codes from system AJCC

@@ -53,7 +53,7 @@ The groups are illustrated in the following diagram:
 
 ### Data Dictionary
 
-In addition to the FHIR artifacts, readers should also take note of the [Data Dictionary (Excel download)](mCODEDataDictionary.xlsx), a simplified, flattened list of mCODE elements.
+In addition to the FHIR artifacts, readers should also take note of the [Data Dictionary (Excel download)](data-dictionary/mCODEDataDictionary-STU2.xlsx), a simplified, flattened list of mCODE elements.
 
 The STU 2 DD is somewhat different than the STU 1 version. In STU 1, some data elements were suppressed because they were common to most or all profiles, such as the patient, provider, status, and date. However, the redaction of certain elements proved confusing, so the current DD does not continue this practice. As a result, the STU 2 DD lists significantly more data elements.  Many of the "extra" rows are not new at all, but reflect the inclusion of elements redacted in STU 1.
 {:.new-content}

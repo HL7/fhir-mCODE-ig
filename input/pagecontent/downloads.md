@@ -15,7 +15,9 @@ The Data Dictionary Differential provides a detailed comparison of mCODE STU 1 t
 The Data Dictionary Differential is provided for convenience in understanding the changes between STU 1 and STU 2, and is not a formal part of the specification.
 ### Download Links
 
-* [mCODE Data Dictionary (Excel download)](mCODEDataDictionary.xlsx)
+* [Current mCODE Data Dictionary - STU 2 (Excel download)](data-dictionary/mCODEDataDictionary-STU2.xlsx)
+* [mCODE Data Dictionary Differential STU2 versus STU1 (Excel download)](data-dictionary/mCODEDataDictionary-STU2-vs-STU1.xlsx)
+* [Former mCODE Data Dictionary - STU 1 (Excel download)](data-dictionary/mCODEDataDictionary-STU1.xlsx)
 * [Full Specification (zip)](full-ig.zip)
 * [Package (tgz)](package.tgz)
 * [JSON Definitions (zip)](definitions.json.zip)

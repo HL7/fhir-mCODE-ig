@@ -676,7 +676,7 @@ Description: "Extended example: example cancer patient"
 * address.postalCode = "12345"
 * address.country = "United States"
 * contact.telecom[0].system = #phone
-* contact.telecom[0].value = "555-555-5555"
+* contact.telecom[0].value = "555-867-5309"
 * contact.telecom[0].use = #home
 * contact.telecom[1].system = #email
 * contact.telecom[1].value = "example@example.com"

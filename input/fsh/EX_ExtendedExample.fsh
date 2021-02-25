@@ -210,7 +210,7 @@ Description: "Extended example: example showing primary cancer condition"
 * stage.assessment = Reference(tnm-clinical-stage-group-jenny-m)
 
 Instance: tnm-clinical-stage-group-jenny-m
-InstanceOf: TNMStageGroup
+InstanceOf: CancerStageGroup
 Description: "Extended example: example showing TNM staging (stage group)"
 * status = #final "final"
 * code = LNC#21908-9 "Stage group.clinical Cancer"

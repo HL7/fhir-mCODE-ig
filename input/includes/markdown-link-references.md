@@ -39,7 +39,7 @@
 [TNMDistantMetastasesCategory]: StructureDefinition-mcode-tnm-distant-metastases-category.html
 [TNMPrimaryTumorCategory]: StructureDefinition-mcode-tnm-primary-tumor-category.html
 [TNMRegionalNodesCategory]: StructureDefinition-mcode-tnm-regional-nodes-category.html
-[TNMStageGroup]: StructureDefinition-mcode-tnm-stage-group.html
+[CancerStageGroup]: StructureDefinition-mcode-cancer-stage-group.html
 [TreatmentTerminationReason]: StructureDefinition-mcode-treatment-termination-reason.html
 [TreatmentIntent]: StructureDefinition-mcode-treatment-intent.html
 [TumorMarkerTest]: StructureDefinition-mcode-tumor-marker-test.html
@@ -115,7 +115,7 @@
 [TNMDistantMetastasesCategoryVS]: ValueSet-mcode-tnm-distant-metastases-category-vs.html
 [TNMPrimaryTumorCategoryVS]: ValueSet-mcode-tnm-primary-tumor-category-vs.html
 [TNMRegionalNodesCategoryVS]: ValueSet-mcode-tnm-regional-nodes-category-vs.html
-[TNMStageGroupVS]: ValueSet-mcode-tnm-stage-group-vs.html
+[CancerStageGroupVS]: ValueSet-mcode-cancer-stage-group-vs.html
 [TreatmentIntentVS]: ValueSet-mcode-treatment-intent-vs.html
 [TreatmentTerminationReasonVS]: ValueSet-mcode-treatment-termination-reason-vs.html
 [TumorMarkerTestVS]: ValueSet-mcode-tumor-marker-test-vs.html

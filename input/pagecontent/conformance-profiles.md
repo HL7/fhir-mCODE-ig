@@ -28,7 +28,7 @@ Where US Core does not provide an appropriate base profile, mCODE profiles FHIR 
 | [TNM Distant Metastases Category][TNMDistantMetastasesCategory] | no | Observation |
 | [TNM Primary Tumor Category][TNMPrimaryTumorCategory] | no | Observation |
 | [TNM Regional Nodes Category][TNMRegionalNodesCategory] | no | Observation |
-| [TNM Stage Group][TNMStageGroup] | no | Observation |
+| [Cancer Stage Group][CancerStageGroup] | no | Observation |
 | [Tumor][Tumor] | no | BodyStructure |
 | [Tumor Marker Test][TumorMarkerTest] | yes | US Core Laboratory Result Observation |
 | [Tumor Size][TumorSize] | no | Observation |
@@ -111,7 +111,7 @@ The following table explains how to interpret MS flags in certain cases involvin
 | 8 | Element is a [Reference() data type](https://www.hl7.org/fhir/references.html#2.3.0) with an MS flag on one or more of the referenced types | MUST support only the resources or profiles in the reference that are explicitly flagged, and only if they are in the Sender's capability statement | MUST support only the resources or profiles in the reference that are explicitly flagged, and only if they are in the Receiver's capability statement | [US Core DocumentReference Profile version 3.2](https://bit.ly/us-core-2021Jan-StructureDefinition-us-core-documentreference) DocumentReference.author |
 | 9 | Element is a [backbone data type](https://www.hl7.org/fhir/backboneelement.html#2.29.0) | No support expectation on sub-elements unless they are explicitly flagged  | same |
 | 10 | Element is an [array that is sliced](https://www.hl7.org/fhir/profiling.html#slicing), with no MS flag on any slice | MUST support populating the array, but [no obligation to support any particular slice](https://confluence.hl7.org/pages/viewpage.action?pageId=35718826#GuidetoDesigningResources-HowdoIinterpret'MustSupport'withrespecttoslicing?) | MUST support arbitrary array contents, including any and all populated slices |
-| 11 | Element is an [array that is sliced](https://www.hl7.org/fhir/profiling.html#slicing), with MS flags on one or more slices | MUST support only the slices that have MS flags | same | [TNMStageGroup].hasMember |
+| 11 | Element is an [array that is sliced](https://www.hl7.org/fhir/profiling.html#slicing), with MS flags on one or more slices | MUST support only the slices that have MS flags | same | [CancerStageGroup].hasMember |
 | 12 | Element that has MS flag is a slice and the containing array does not have an MS flag | No support expectation for the slice | same | [US Core Patient Profile version 3.1.1](http://hl7.org/fhir/us/core/StructureDefinition-us-core-patient.html) Patient.extension:us-core-race (because Patient.extension is not MS) |
 {: .grid }
 

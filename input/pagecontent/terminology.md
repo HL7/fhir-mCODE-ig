@@ -132,7 +132,7 @@ Finally, the "catch code" code system was established as a way to know, positive
 * [TNMDistantMetastasesCategoryVS]
 * [TNMPrimaryTumorCategoryVS]
 * [TNMRegionalNodesCategoryVS]
-* [TNMStageGroupVS]
+* [CancerStageGroupVS]
 * [TreatmentIntentVS]
 * [TreatmentTerminationReasonVS]
 * [TumorMarkerTestVS]

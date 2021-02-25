@@ -14,6 +14,19 @@ Description: "Example of Primary Cancer Condition"
 * stage.summary = AJCC#3C "IIIC"
 * stage.assessment = Reference(tnm-clinical-stage-group-3c)
 
+Instance: primary-cancer-condition-cll
+InstanceOf: PrimaryCancerCondition
+Description: "Example of Primary Cancer Condition - hematologic cancer"
+* clinicalStatus = ClinStatus#active "Active"
+* verificationStatus = VerStatus#confirmed "Confirmed"
+* category = CondCat#problem-list-item
+* code = SCT#92814006 "Chronic lymphoid leukemia, disease (disorder)"
+* subject = Reference(cancer-patient-adam-everyman)
+* onsetDateTime = "2020-05-12"
+* asserter = Reference(us-core-practitioner-kyle-anydoc)
+* stage.summary = NCIT#C80134 "Binet Stage A"
+* stage.assessment = Reference(binet-stage-group-A)
+
 Instance: secondary-cancer-condition-brain-mets
 InstanceOf: SecondaryCancerCondition
 Description: "Example of Secondary Cancer Condition"
@@ -109,6 +122,30 @@ Description: "Example of Patient"
 * communication.language = urn:ietf:bcp:47#en-US "English (Region=United States)"
 * communication.language.text = "English"
 
+Instance: cancer-patient-adam-everyman
+InstanceOf: CancerPatient
+Description: "Example of Patient"
+* identifier.use = #usual
+* identifier.type = IDTYPE#MR "Medical Record Number"
+* identifier.system = "http://hospital.example.org"
+* identifier.value = "m123"
+* name.family = "Everyman"
+* name.given[0] = "Adam"
+* name.given[1] = "A."
+* contact.telecom[0].system = #phone
+* contact.telecom[0].value = "333-555-5555"
+* contact.telecom[0].use = #home
+* contact.telecom[1].system = #email
+* contact.telecom[1].value = "adam.everyman@example.com"
+* gender = #male
+* birthDate = "1962-02-05"
+* address.line = "234 Anyway St"
+* address.city = "Anytown"
+* address.postalCode = "12345"
+* address.country = "US"
+* communication.language = urn:ietf:bcp:47#en-US "English (Region=United States)"
+* communication.language.text = "English"
+
 Instance: us-core-practitioner-kyle-anydoc
 InstanceOf: USCorePractitioner
 Description: "Example of Practitioner"
@@ -173,8 +210,19 @@ Description: "Example of a brachytherapy therapy phase."
 * reasonReference = Reference(primary-cancer-condition-nsclc)
 * extension[doseDelivered].extension[volumeDescription].valueString = "Structure of lower lobe of left lung"
 
+Instance: binet-stage-group-A
+InstanceOf: CancerStageGroup
+Description: "Example of a non-TNM Stage Group (Binet staging for CLL)"
+* code = LNC#21914-7 "Stage group.other Cancer"
+* status = #final "final"
+* method = NCIT#C141212 "Binet Staging"
+* subject = Reference(cancer-patient-adam-everyman)
+* effectiveDateTime = "2020-05-18"
+* derivedFrom = Reference(lab-result-observation-hemoglobin)
+* valueCodeableConcept = NCIT#C80134 "Binet Stage A"
+
 Instance: tnm-clinical-stage-group-3c
-InstanceOf: TNMStageGroup
+InstanceOf: CancerStageGroup
 Description: "Example of TNM Clinical Stage Group"
 * code = LNC#21908-9 "Stage group.clinical Cancer"
 * status = #final "final"
@@ -256,3 +304,13 @@ Description: "Example of CancerRelatedMedicationRequest - Chemo Infusion"
 * dosageInstruction.timing.repeat.count = 1  // frequency is one-time on day 1 of first cycle so there should be no repeat."
 * note.text = "Day 1 of NSCLC regimen: Cisplatin 75 mg/m2 day 1; docetaxel 75 mg/m2 day 1 every 21 days for 4 cycles."
 * extension[terminationReason].valueCodeableConcept = SCT#182992009  "Treatment completed (situation)"
+
+Instance: lab-result-observation-hemoglobin
+InstanceOf: USCoreLaboratoryResultObservationProfile
+Description: "Hemoglobin lab result to support CancerStageGroup example"
+* subject = Reference(cancer-patient-adam-everyman)
+* status = ObsStatus#final
+* code = LNC#718-7 "Hemoglobin [Mass/volume] in Blood"
+* effectiveDateTime = "2020-03-06"
+* performer = Reference(us-core-practitioner-owen-oncologist)
+* valueQuantity = 13.5 'g/dl' "g/dl"

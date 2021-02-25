@@ -220,6 +220,7 @@ Description: "Example of a non-TNM Stage Group (Binet staging for CLL)"
 * method = NCIT#C141212 "Binet Staging"
 * subject = Reference(cancer-patient-adam-everyman)
 * effectiveDateTime = "2020-05-18"
+* derivedFrom = Reference(lab-result-observation-hemoglobin)
 * valueCodeableConcept = NCIT#C80134 "Binet Stage A"
 
 Instance: tnm-clinical-stage-group-3c
@@ -305,3 +306,13 @@ Description: "Example of CancerRelatedMedicationRequest - Chemo Infusion"
 * dosageInstruction.timing.repeat.count = 1  // frequency is one-time on day 1 of first cycle so there should be no repeat."
 * note.text = "Day 1 of NSCLC regimen: Cisplatin 75 mg/m2 day 1; docetaxel 75 mg/m2 day 1 every 21 days for 4 cycles."
 * extension[terminationReason].valueCodeableConcept = SCT#182992009  "Treatment completed (situation)"
+
+Instance: lab-result-observation-hemoglobin
+InstanceOf: USCoreLaboratoryResultObservationProfile
+Description: "Hemoglobin lab result to support CancerStageGroup example"
+* subject = Reference(cancer-patient-adam-everyman)
+* status = ObsStatus#final
+* code = LNC#718-7 "Hemoglobin [Mass/volume] in Blood"
+* effectiveDateTime = "2020-03-06"
+* performer = Reference(us-core-practitioner-owen-oncologist)
+* valueQuantity = 13.5 'g/dl' "g/dl"

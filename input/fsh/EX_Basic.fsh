@@ -21,8 +21,6 @@ Description: "Example of Primary Cancer Condition - hematologic cancer"
 * verificationStatus = VerStatus#confirmed "Confirmed"
 * category = CondCat#problem-list-item
 * code = SCT#92814006 "Chronic lymphoid leukemia, disease (disorder)"
-// * bodySite = SCT#39607008 "Lung structure (body structure)"
-// * bodySite.extension[locationQualifier].valueCodeableConcept = SCT#7771000 "Left (qualifier value)"
 * subject = Reference(cancer-patient-adam-everyman)
 * onsetDateTime = "2020-05-12"
 * asserter = Reference(us-core-practitioner-kyle-anydoc)

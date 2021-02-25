@@ -11,6 +11,8 @@ Description: "System used for staging."
 * NCIT#C141212 "Binet Stage"
 * NCIT#C125738 "FIGO Stage"
 * NCIT#C141147 "Lugano Stage"
+* NCIT#C141207 "Rai Stage"
+* NCIT#C54179 "Ann Arbor Lymphoma Staging System"
 
 ValueSet: ObservationCodesStageGroupVS
 Id: mcode-observation-codes-stage-group-vs

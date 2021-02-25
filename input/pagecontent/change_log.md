@@ -27,7 +27,7 @@ For both supplemental files **please read the first tab for important informatio
 
 #### Disease
 
-* The separate sets of profiles for TNM Clinical and TNM Pathologic staging were combined into a single set of profiles: [CancerStageGroup], [TNMPrimaryTumorCategory], [TNMRegionalNodesCategory], and [TNMDistantMetastasesCategory]. The new profiles can be used for both clinical and pathologic TNM staging, or for other types of TNM staging; these are differentiated by the value of `Observation.code` in CancerStageGroup, which is bound do [ObservationCodesPrimaryTumorVS].
+* The separate sets of profiles for TNM Clinical and TNM Pathologic staging were combined into a single set of profiles: [CancerStageGroup], [TNMPrimaryTumorCategory], [TNMRegionalNodesCategory], and [TNMDistantMetastasesCategory]. The new profiles can be used for both clinical and pathologic TNM staging, or for other types of TNM staging; these are differentiated by the value of `Observation.code` in CancerStageGroup, which is bound to [ObservationCodesPrimaryTumorVS].
 
 {:.new-content #CancerStageGroup}
   * The profile TNMStageGroup is now renamed [CancerStageGroup] in order to support non-TNM staging systems such as Rai, Binet, and Revised International Staging System (R-ISS).

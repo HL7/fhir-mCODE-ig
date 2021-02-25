@@ -21,7 +21,7 @@ Description: "A collection of data for an mCODE cancer patient."
     radiotherapyTreatmentSummary 0..* MS and
     brachytherapyTreatmentPhase 0..* MS and
     teleradiotherapyTreatmentPhase 0..* MS and
-    CancerStageGroup 0..* MS and
+    cancerStageGroup 0..* MS and
     tnmPrimaryTumorCategory 0..* MS and
     tnmRegionalNodesCategory 0..* MS and
     tnmDistantMetastasesCategory 0..* MS and
@@ -46,7 +46,7 @@ Description: "A collection of data for an mCODE cancer patient."
 * entry[radiotherapyTreatmentSummary] ^short = "Radiation Treatment Summary(-ies)"
 * entry[teleradiotherapyTreatmentPhase] ^short = "Delivery of Teleradiotherapy"
 * entry[brachytherapyTreatmentPhase] ^short = "Delivery of Brachytherapy"
-* entry[CancerStageGroup] ^short = "TNM Stage Group(s)"
+* entry[cancerStageGroup] ^short = "TNM Stage Group(s)"
 * entry[tnmPrimaryTumorCategory] ^short = "TNM Primary Tumor Category(-ies)"
 * entry[tnmRegionalNodesCategory] ^short = "TNM Regional Nodes Category(-ies)"
 * entry[tnmDistantMetastasesCategory] ^short = "TNM Distant Metastases Category(-ies)"
@@ -72,7 +72,7 @@ Description: "A collection of data for an mCODE cancer patient."
 * entry[radiotherapyTreatmentSummary] ^definition = "Procedure resource(s) representing a course of treatment in cancer-related radiology therapy."
 * entry[teleradiotherapyTreatmentPhase] ^definition = "Procedure resource(s) representing a phase in treatment of cancer via external beam radiology procedures."
 * entry[brachytherapyTreatmentPhase] ^definition = "Procedure resource(s) representing cancer-related brachytherapy (internal) radiology procedures."
-* entry[CancerStageGroup] ^definition = "Observation resource(s) representing stage group"
+* entry[cancerStageGroup] ^definition = "Observation resource(s) representing stage group"
 * entry[tnmPrimaryTumorCategory] ^definition = "Observation resource(s) representing T category"
 * entry[tnmRegionalNodesCategory] ^definition = "Observation resource(s) representing N category"
 * entry[tnmDistantMetastasesCategory] ^definition = "Observation resource(s) representing M category"
@@ -99,7 +99,7 @@ Description: "A collection of data for an mCODE cancer patient."
 * entry[teleradiotherapyTreatmentPhase].resource only TeleradiotherapyTreatmentPhase
 * entry[brachytherapyTreatmentPhase].resource only BrachytherapyTreatmentPhase
 //
-* entry[CancerStageGroup].resource only CancerStageGroup
+* entry[cancerStageGroup].resource only CancerStageGroup
 * entry[tnmPrimaryTumorCategory].resource only TNMPrimaryTumorCategory
 * entry[tnmRegionalNodesCategory].resource only TNMRegionalNodesCategory
 * entry[tnmDistantMetastasesCategory].resource only TNMDistantMetastasesCategory

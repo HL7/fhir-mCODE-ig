@@ -47,7 +47,7 @@ Under the [Fair Use doctrine](https://www.copyright.gov/fair-use/more-info.html)
 Not all cancer types are staged with a TNM-based staging system, including hematological cancers like leukemias, multiple myeloma, and some lymphomas. Some specialized solid tumors like gynecologic tumors are staged using the FIGO (International Federation of Gynecology and Obstetrics) staging system. Other non-TNM staging systems include Rai, Binet, and Cottswold.
 Support for non-TNM staging systems in mCODE is limited to [CancerStageGroup]. Use NCI thesaurus codes for specifying cancer staging systems which do not have an equivalent SNOMED code. 
 
-Prognostic factors related to the cancer stage group can be specified with the Observation._derivedFrom_ element. For example, a hemoglobin lab result which was evaluated in the  staging of chronic lymphocytic leukemia using the Binet staging system can be referenced under Observation.derivedFrom element. The mCODE example [`binet-stage-group-A`](Observation-binet-stage-group-A.html) illustrates how this could be represented.
+Prognostic factors related to the cancer stage group can be specified with the `Observation.derivedFrom` element. For example, a hemoglobin lab result which was evaluated in the  staging of chronic lymphocytic leukemia using the Binet staging system can be referenced under `Observation.derivedFrom` element. [This example](Observation-binet-stage-group-A.html) illustrates how this could be represented.
 
 ### Body Locations
 

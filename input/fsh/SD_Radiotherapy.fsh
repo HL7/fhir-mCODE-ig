@@ -76,7 +76,7 @@ Description: "A summary of a phase of brachytherapy treatment that has been deli
 * extension[modality].value[x] from  BrachytherapyModalityVS (required)
 * extension[modality] ^short = "Brachytherapy Modality"
 * extension[modality] ^definition = "The modality for the Brachytherapy procedure."
-* extension[technique].value[x] from BrachytherapyTechniqueVS (extensible)
+* extension[technique].value[x] from BrachytherapyTechniqueVS (required)
 * extension[technique] ^short = "Brachytherapy Technique"
 * extension[technique] ^definition = "The method by which the brachytherapy modality is applied."
 //* usedCode from BrachytherapyDeviceVS (extensible)

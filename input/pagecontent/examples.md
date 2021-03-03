@@ -4,15 +4,19 @@ In addition to individual examples of each profile, this extended example demons
 
 Patient Jenny M. is a 55 year old non-Hispanic white female with a past medical history significant for depression, a 20-pack-year history of smoking (current smoker), anxiety, and hypertension. Her family history was significant for a maternal aunt with ovarian cancer at age 69, a sister with breast cancer at age 64, and deceased paternal uncle due to pancreatic cancer.
 
-She presented for routine screening mammography in March 2018. Performance status was ECOG 0. An abnormality was detected, followed by ultrasound-guided biopsy which revealed a Grade 2 invasive ductal adenocarcinoma, ER positive, PR negative, HER2 negative. Pre-operative workup revealed no other disease in either breast. Genetic counseling ordered a [7 gene panel](https://www.invitae.com/en/physician/tests/50001/), which revealed a [pathogenic variant in PALB2 (`c.3549C>A`)](https://www.ncbi.nlm.nih.gov/clinvar/variation/128144/).[^1]
+During a routine screening mammography in March 2018, an abnormality was detected as a possible mass and suspected breast cancer. The gynecologist performing the biopsy refers the patient to an oncologist for further workup. An ultrasound-guided biopsy was performed along with prognostic tumor marker tests with ER positive, PR negative, and HER2 negative. The oncologist clinically reviews the mammogram and tumor marker results, and clinical staged as cT3N0. 
+
+Genetic counseling ordered a [7 gene panel](https://www.invitae.com/en/physician/tests/50001/), which revealed a [pathogenic variant in PALB2 (`c.3549C>A`)](https://www.ncbi.nlm.nih.gov/clinvar/variation/128144/).[^1]
 
 [^1]: For the purposes of this example, we are assuming that a single relevant variant was returned by the clinical genomics laboratory. In practice, genomics testing may return (many) more variants. The standards for representing genomics data are currently under development by the [HL7 Clinical Genomics Work Group](https://confluence.hl7.org/display/CGW/WorkGroup+Home). The expectation is that mCODE will adopt those standards when they are completed.
 
-A partial mastectomy was performed, revealing a 2.5 cm tumor with no lymph-vascular invasion and negative margins of excision. Ductal carcinoma in situ was noted, also completely excised. Three sentinel lymph nodes were excised and were negative for metastatic carcinoma. The primary tumor was staged as cT3N0.
+A partial mastectomy was performed, revealing a 2.5 cm tumor with no lymph-vascular invasion and negative margins of excision. Three sentinel lymph nodes were excised and were negative for metastatic carcinoma.  The tumor specimen was sent to the pathologist. The pathology report revealed a 2.5cm malignant tumor histological grade 2 invasive ductal adenocarcinoma with prognostic tumor markers ER positive, PR negative, and HER2 negative. The patient is pathologically staged as pT3N0M0, stage group IIB. 
 
-A [21-gene RT-PCR assay](https://www.oncotypeiq.com/en-US/breast-cancer/healthcare-professionals/oncotype-dx-breast-recurrence-score/about-the-test) yielded a recurrence score of 47. She received four cycles of doxorubicin (60 mg/m² IV) and cyclophosphamide (600 mg/m² IV) followed by paclitaxel (175 mg/m² IV) (AC-T), administered on a dose-dense schedule. She subsequently received whole breast radiation therapy with regional nodal irradiation. Following RT, she began anastrozole (1 mg daily).
+A [21-gene RT-PCR assay](https://www.oncotypeiq.com/en-US/breast-cancer/healthcare-professionals/oncotype-dx-breast-recurrence-score/about-the-test) yielded a recurrence score of 47. 
 
-The patient is two years out from surgery and has undergone surveillance imaging and has no evidence of recurrent disease or new imaging. She continues to take adjuvant endocrine therapy (anastrozole).
+Treatment options were discussed between the patient and the medical oncologist. With an ECOG performance score of 0, the patient agrees to receive an AC-T chemotherapy regimen. She received four cycles of doxorubicin (60 mg/m² IV) and cyclophosphamide (600 mg/m² IV) followed by paclitaxel (175 mg/m² IV) (AC-T), administered on a dose-dense schedule. She subsequently received whole breast radiation therapy with regional nodal irradiation. Following RT, she began anastrozole (1 mg daily).
+
+One month following the completion of first-line therapy, the patient is evaluated and with her disease status improving.  The patient will under surveillance imaging and monitoring. She continues to take adjuvant endocrine therapy (anastrozole).
 
 ### FHIR instances from mCODE elements
 
@@ -29,6 +33,10 @@ The patient is two years out from surgery and has undergone surveillance imaging
 * [`tnm-clinical-primary-tumor-category-jenny-m`](Observation-tnm-clinical-primary-tumor-category-jenny-m.html) ([TNMPrimaryTumorCategory])
 * [`tnm-clinical-regional-nodes-category-jenny-m`](Observation-tnm-clinical-regional-nodes-category-jenny-m.html) ([TNMRegionalNodesCategory])
 * [`tnm-clinical-distant-metastases-category-jenny-m`](Observation-tnm-clinical-distant-metastases-category-jenny-m.html) ([TNMDistantMetastasesCategory])
+* [`tnm-pathologic-stage-group-jenny-m`](Observation-tnm-pathologic-stage-group-jenny-m.html) ([CancerStageGroup])
+* [`tnm-pathologic-primary-tumor-category-jenny-m`](Observation-tnm-pathologic-primary-tumor-category-jenny-m.html) ([TNMPrimaryTumorCategory])
+* [`tnm-pathologic-regional-nodes-category-jenny-m`](Observation-tnm-pathologic-regional-nodes-category-jenny-m.html) ([TNMRegionalNodesCategory])
+* [`tnm-pathologic-distant-metastases-category-jenny-m`](Observation-tnm-pathologic-distant-metastases-category-jenny-m.html) ([TNMDistantMetastasesCategory])
 * [`tumor-marker-test-er-jenny-m`](Observation-tumor-marker-test-er-jenny-m.html)  ([TumorMarkerTest])
 * [`tumor-marker-test-pr-jenny-m`](Observation-tumor-marker-test-pr-jenny-m.html)  ([TumorMarkerTest])
 * [`tumor-marker-test-her2-jenny-m`](Observation-tumor-marker-test-her2-jenny-m.html)  ([TumorMarkerTest])

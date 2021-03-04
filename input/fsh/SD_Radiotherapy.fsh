@@ -10,7 +10,8 @@ RuleSet: RadiotherapyTreatmentSummaryCommon
     RadiotherapyFractionsDelivered named fractionsDelivered 0..1 MS and
     RadiotherapyDoseDelivered named doseDelivered 0..* MS
 * extension and category MS
-* bodySite ^definition = "The body site where the radiation was delivered."
+* extension[fractionsDelivered] ^definition = "The sum total of all fractions delivered in all phases covered by this summary."
+* bodySite ^definition = "The region of the body where the radiation was delivered."
 
 RuleSet: RadiotherapyPhaseCommon
 * insert RadiotherapyTreatmentSummaryCommon

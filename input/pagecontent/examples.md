@@ -1,4 +1,6 @@
-In addition to individual examples of each profile, this extended example demonstrates how mCODE can be used to represent a clinically realistic scenario. When information in the scenario does not map onto mCODE profiles, we provide examples using [USCore](http://hl7.org/fhir/us/core/index.html) or standard FHIR resources.
+In addition to individual examples of each profile, this extended example demonstrates how mCODE can be used to represent a clinically realistic scenario. 
+* When information in the scenario does not map on to mCODE profiles, we provide examples using [USCore](http://hl7.org/fhir/us/core/index.html) or standard FHIR resources.
+* For the sake of brevity, only a subset of examples will be shown in cases where the FHIR representation patter is the same. For example, we only show one example of MedicationAdministration when in reality, there could be 4 cycles, of 3 medications that could be repeated over a 28 day cycle. Since the only difference would be the day of the administration, then we omit it assuming that the implementer understands that the representation pattern is the same except for timestamps.
 
 ### Patient description
 
@@ -14,9 +16,15 @@ A partial mastectomy was performed, revealing a 2.5 cm tumor with no lymph-vascu
 
 A [21-gene RT-PCR assay](https://www.oncotypeiq.com/en-US/breast-cancer/healthcare-professionals/oncotype-dx-breast-recurrence-score/about-the-test) yielded a recurrence score of 47. 
 
-Treatment options were discussed between the patient and the medical oncologist. With an [`ECOG performance score`](Observation-ecog-performance-status-jenny-m.html) of 0, the patient agrees to receive an AC-T chemotherapy regimen. She received four cycles of doxorubicin (60 mg/m² IV) and cyclophosphamide (600 mg/m² IV) followed by paclitaxel (175 mg/m² IV) (AC-T), administered on a dose-dense schedule. She subsequently received whole breast radiation therapy with regional nodal irradiation. Following RT, she began taking [`anastrozole (1 mg daily)`](MedicationRequest-cancer-related-medication-request-anastrozole-jenny-m.html).
+Treatment options were discussed between the patient and the medical oncologist. With an [`ECOG performance score`](Observation-ecog-performance-status-jenny-m.html) of 0, the patient agrees to receive an AC-T chemotherapy regimen. She received four cycles of doxorubicin (60 mg/m² IV) and cyclophosphamide (600 mg/m² IV) followed by paclitaxel (175 mg/m² IV) (AC-T), administered on a dose-dense schedule. She subsequently received whole breast radiation therapy with regional nodal irradiation.
 
-One month following the completion of first-line therapy, the patient is evaluated and with her disease status improving.  The patient will under surveillance imaging and monitoring. She continues to take adjuvant endocrine therapy (anastrozole).
+One month following the completion of first-line therapy, the patient is evaluated and with her disease status improving.  The patient will under surveillance imaging and monitoring. 
+
+A timeline of the narrative is illustrated in the following diagram:
+
+<div style="text-align: center;">
+<img src="mCODE-PersonaExample.svg" alt="Example Timeline" />
+</div>
 
 ### FHIR instances from mCODE elements
 
@@ -48,7 +56,6 @@ One month following the completion of first-line therapy, the patient is evaluat
 * [`cancer-related-medication-request-doxorubicin-jenny-m`](MedicationRequest-cancer-related-medication-request-doxorubicin-jenny-m.html) ([CancerRelatedMedicationRequest])
 * [`cancer-related-medication-request-cyclophosphamide-jenny-m`](MedicationRequest-cancer-related-medication-request-cyclophosphamide-jenny-m.html) ([CancerRelatedMedicationRequest])
 * [`cancer-related-medication-request-paclitaxel-jenny-m`](MedicationRequest-cancer-related-medication-request-paclitaxel-jenny-m.html) ([CancerRelatedMedicationRequest])
-* [`cancer-related-medication-request-anastrozole-jenny-m`](MedicationRequest-cancer-related-medication-request-anastrozole-jenny-m.html) ([CancerRelatedMedicationRequest])
 * [`cancer-related-medication-administration-doxorubicin-jenny-m`](MedicationAdministration-cancer-related-medication-administration-doxorubicin-jenny-m.html) ([CancerRelatedMedicationAdministration])
 * [`radiotherapy-treatment-summary-chest-wall-jenny-m`](Procedure-radiotherapy-treatment-summary-chest-wall-jenny-m.html) ([RadiotherapyTreatmentSummary])
 * [`teleradiotherapy-treatment-phase-chest-wall-jenny-m`](Procedure-teleradiotherapy-treatment-phase-chest-wall-jenny-m.html) ([TeleradiotherapyTreatmentPhase])

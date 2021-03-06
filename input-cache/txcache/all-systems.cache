@@ -54,6 +54,30 @@ v: {
       "concept" : [{
         "code" : "C146985",
         "display" : "AJCC Cancer Staging Manual 8th Edition"
+      },
+      {
+        "code" : "C141138",
+        "display" : "Ann Arbor Stage"
+      },
+      {
+        "code" : "C141212",
+        "display" : "Binet Stage"
+      },
+      {
+        "code" : "C125738",
+        "display" : "FIGO Stage"
+      },
+      {
+        "code" : "C141147",
+        "display" : "Lugano Stage"
+      },
+      {
+        "code" : "C141207",
+        "display" : "Rai Stage"
+      },
+      {
+        "code" : "C54179",
+        "display" : "Ann Arbor Lymphoma Staging System"
       }]
     }]
   }
@@ -531,6 +555,30 @@ e: {
       "concept" : [{
         "code" : "C146985",
         "display" : "AJCC Cancer Staging Manual 8th Edition"
+      },
+      {
+        "code" : "C141138",
+        "display" : "Ann Arbor Stage"
+      },
+      {
+        "code" : "C141212",
+        "display" : "Binet Stage"
+      },
+      {
+        "code" : "C125738",
+        "display" : "FIGO Stage"
+      },
+      {
+        "code" : "C141147",
+        "display" : "Lugano Stage"
+      },
+      {
+        "code" : "C141207",
+        "display" : "Rai Stage"
+      },
+      {
+        "code" : "C54179",
+        "display" : "Ann Arbor Lymphoma Staging System"
       }]
     }]
   }

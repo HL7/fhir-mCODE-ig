@@ -18,7 +18,7 @@ Title: "mCODE Resource Identifier Code System"
 Description: "Concepts describing types of instances, to be used in the 'code' element of an instance."
 * #mcode-patient "mCODE Patient Group Resource" "Identifies a Group resource containing mCODE cancer patients that conforms to the MCODEPatientGroup profile."
 * #mcode-comorbidity  "Elixhauser Comorbidity Resource" "Identifies an Observation resource representing Elixhauser comorbidities that conforms to the ComorbiditiesElixhauser profile."
-* #mcode-radiotherapy-treatment-summary "Radiotherapy Summary Resource" "Identifies a Procedure resource that summarizes a radiotherapy treatment that conforms to the RadiotherapyTreatmentSummary profile."
+* #mcode-radiotherapy-course-summary "Radiotherapy Summary Resource" "Identifies a Procedure resource that summarizes a radiotherapy treatment that conforms to the RadiotherapyCourseSummary profile."
 * #mcode-teleradiotherapy-treatment-phase "Teleradiotherapy Treatment Phase Resource" "Identifies a Procedure resource that describes delivery of teleradiotherapy (external beam radiation) and conforms to the TeleradiotherapyTreatmentPhase profile."
 * #mcode-brachytherapy-treatment-phase "Brachytherapy Treatment Phase Resource" "Identifies a Procedure resource that describes delivery of brachytherapy (internal or surface radiation) and conforms to the BrachytherapyTreatmentPhase profile."
 
@@ -34,7 +34,7 @@ Description: "Codes describing the modalities, techniques, and devices used in e
 * #CARBON  "Carbon Ion Beam Radiation Therapy"  "A type of external beam radiation therapy using carbon ions."
 * #PHOTON "Photon Beam Radiation Therapy" "A type of external beam radiation therapy using photons."
 //-- Brachytherapy Modalities
-* #LDR-PERM "Low Dose Rate Brachytherapy - Permanent Placemet" "Radiation treatment that irradiates a treatment volume with permanently placed radiation sources delivering low dose rates (typically less than or equal to 2 Gy/hour)."
+* #LDR-PERM "Low Dose Rate Brachytherapy - Permanent Placement" "Radiation treatment that irradiates a treatment volume with permanently placed radiation sources delivering low dose rates (typically less than or equal to 2 Gy/hour)."
 * #LDR-TEMP "Low Dose Rate Brachytherapy - Temporary Placement" "Radiation treatment that irradiates a treatment volume with temporarily placed radiation sources delivering low dose rates (typically less than or equal to 2 Gy/hour)."
 * #PDR "Pulsed Dose Rate Brachytherapy" "Internal or surface radiation treatment that irradiates a treatment volume in short pulses (typically 10 to 30 minutes in every hour) with a stronger source than low dose rate brachytherapy (typically treatment rates up to 3 Gy/hour)."
 * #HDR  "High Dose Rate Brachytherapy" "Internal or surface radiation treatment that irradiates a treatement volume with high dose rates of radiation (typically greater than 12 Gy/hour)."

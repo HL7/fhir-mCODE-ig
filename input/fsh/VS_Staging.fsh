@@ -3,6 +3,8 @@ Id: mcode-cancer-staging-system-vs
 Title: "Cancer Staging System Value Set"
 Description: "System used for staging."
 * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
+* ^expansion.parameter.name = "sushi-generated"
+* ^expansion.parameter.valueBoolean = true
 * SCT#444256004 "American Joint Commission on Cancer, Cancer Staging Manual, 6th edition neoplasm staging system (tumor staging)"
 * SCT#443830009 "American Joint Commission on Cancer, Cancer Staging Manual, 7th edition neoplasm staging system (tumor staging)"
 * NCIT#C146985 "AJCC Cancer Staging Manual 8th Edition"

@@ -1,4 +1,5 @@
-RuleSet: RadiotherapyTreatmentSummaryCommon
+// ------------- Overall Course Summary -----------------
+RuleSet: RadiotherapyCommon
 * category 1.. MS
 * category = SCT#108290001 // "Radiation oncology AND/OR radiotherapy (procedure)"
 * performed[x] only Period
@@ -7,52 +8,47 @@ RuleSet: RadiotherapyTreatmentSummaryCommon
     TreatmentTerminationReason named terminationReason 0..1 MS and
     RadiotherapyModality named modality 0..* MS and
     RadiotherapyTechnique named technique 0..* MS and
+    RadiotherapySessions named actualNumberOfSessions 0..1 and
     RadiotherapyFractionsDelivered named fractionsDelivered 0..1 MS and
     RadiotherapyDoseDelivered named doseDelivered 0..* MS
 * extension and category MS
-* extension[fractionsDelivered] ^definition = "The sum total of all fractions delivered in all phases covered by this summary."
-* bodySite ^definition = "The region of the body where the radiation was delivered."
 
-RuleSet: RadiotherapyPhaseCommon
-* insert RadiotherapyTreatmentSummaryCommon
-* extension[modality] 0..1
-* extension[technique] 0..1 // potentially eliminate (leaving technique as 0..*)
-* partOf only Reference(RadiotherapyTreatmentSummary)
-* partOf ^definition = "The partOf element, if present, MUST reference a RadiotherapyTreatmentSummary-conforming Procedure resource."
-* bodySite ^definition = "The body site where the radiation was delivered. The target volumes level are too complex to be described by typical body site codes. A more detailed description of the treatment volume should be entered in the RadiotherapyDoseDelivered.volumeDescription."
-
-
-// ------------- Overall Treatment Summary -----------------
-Profile:  RadiotherapyTreatmentSummary
+Profile:  RadiotherapyCourseSummary
 Parent:   USCoreProcedure  // considered one procedure with multiple parts
-Id:       mcode-radiotherapy-treatment-summary
-Title:    "Radiotherapy Summary"
-Description: "A summary of radiotherapy delivered to a patient. Whenever new contributions in the scope of the same treatment are delivered, this resource is updated. One therapy can involve multiple prescriptions. The status is changed to complete when the course has been fully delivered or changed to stopped if terminated. To describe the treatment in more detail, use either TeleradiotherapyTreatmentPhase or BrachytherapyTreatmentPhase, which can reference this summary through the partOf element."
-// * insert ReduceText
-// * insert ReduceText(performer)
-// * insert ReduceText(focalDevice)
-* insert RadiotherapyTreatmentSummaryCommon
-// Summary-specific
-* code = RID#mcode-radiotherapy-treatment-summary
+Id:       mcode-radiotherapy-course-summary
+Title:    "Radiotherapy Course Summary"
+Description: "A summary of a course of radiotherapy delivered to a patient. One course of treatment can involve multiple phases applied to multiple treatment volumes. The status is changed to complete when the course has been fully delivered or changed to stopped if terminated. To describe the treatment in more detail, use either TeleradiotherapyTreatmentPhase or BrachytherapyTreatmentPhase, which should reference this summary through their partOf elements."
+* insert RadiotherapyCommon
+// Summary-specific content
+* code = RID#mcode-radiotherapy-course-summary
 * extension[modality].value[x] from RadiotherapyModalityVS (required)
 * extension[technique].value[x] from RadiotherapyTechniqueVS (required)
-* bodySite from RadiationTargetBodySiteVS (extensible)
+* bodySite from RadiotherapyBodySiteVS (extensible)
 * bodySite.extension contains
-    LocationQualifier named locationQualifier 0..1
-* bodySite ^definition = "The high level description of the body site where the treatment was directed, based on Commission on Cancer’s 'Standards for Oncology Registry Entry  - STORE 2018' " 
-* bodySite and bodySite.extension and bodySite.extension[locationQualifier] MS  
+    LocationQualifier named locationQualifier 0..*
+* bodySite ^short = "Body region treated"
+* bodySite ^definition = "The high level description of the body region where the treatment was directed, based on Commission on Cancer’s 'Standards for Oncology Registry Entry  - STORE 2018'" 
+* extension[fractionsDelivered] ^definition = "The total number of all fractions delivered in all phases covered by this summary."
+* bodySite and bodySite.extension and bodySite.extension[locationQualifier] MS
+
+// ------------- Phase Summaries -----------------
+RuleSet: RadiotherapyPhaseCommon
+* insert RadiotherapyCommon
+* extension[modality] 0..1
+* extension[technique] 0..1 // potentially eliminate (leaving technique as 0..*)
+* partOf only Reference(RadiotherapyCourseSummary)
+* partOf ^definition = "The partOf element, if present, MUST reference a RadiotherapyCourseSummary-conforming Procedure resource."
+* bodySite ^definition = "Not used in this profile. A more detailed description of the treatment volume should be entered in the RadiotherapyDoseDelivered.volumeDescription."
+* extension[fractionsDelivered] ^definition = "The number of fractions delivered during this phase."
 
 
 Profile:  TeleradiotherapyTreatmentPhase
 Parent:   USCoreProcedure
 Id:       mcode-teleradiotherapy-treatment-phase
 Title: "Teleradiotherapy Treatment Phase"
-Description: "A summary of a phase of teleradiotherapy treatment that has been delivered. The scope is a treatment consisting of one or multiple identical fractions. A phase ends when there is a change in the treatment volume, treatment fraction size, modality, or treatment technique."
-// * insert ReduceText
-// * insert ReduceText(performer)
-// * insert ReduceText(focalDevice)
+Description: "A summary of a phase of teleradiotherapy treatment that has been delivered. The scope is a treatment consisting of one or multiple identical fractions. A phase ends and a new phase begins whenever there is a change in the treatment volume, dose per fraction, modality, or technique."
 * insert RadiotherapyPhaseCommon
-// Teleradiotherapy specific:
+// Teleradiotherapy specific content:
 * code = RID#mcode-teleradiotherapy-treatment-phase
 * extension[modality].value[x] from TeleradiotherapyModalityVS (required)
 * extension[modality] ^short = "Teleradiotherapy (EBRT) Modality"
@@ -60,7 +56,7 @@ Description: "A summary of a phase of teleradiotherapy treatment that has been d
 * extension[technique].value[x] from TeleradiotherapyTechniqueVS (required)
 * extension[technique] ^short = "Teleradiotherapy (EBRT) Technique"
 * extension[technique] ^definition = "The method by which a radiation modality is applied (e.g., intensity modulated radiation therapy, intraoperative radiation therapy)."
-//* usedCode from TeleradiotherapyDeviceVS (extensible)
+//* usedCode from TeleradiotherapyDeviceVS (extensible) // device-related, defer
 
 
 Profile:  BrachytherapyTreatmentPhase
@@ -68,11 +64,8 @@ Parent:   USCoreProcedure
 Id:       mcode-brachytherapy-treatment-phase
 Title:    "Brachytherapy Treatment Phase"
 Description: "A summary of a phase of brachytherapy treatment that has been delivered. The scope is a treatment consisting of one or multiple identical fractions. A phase ends when there is a change in the treatment volume, treatment fraction size, modality, or treatment technique."
-// * insert ReduceText
-// * insert ReduceText(performer)
-// * insert ReduceText(focalDevice)
 * insert RadiotherapyPhaseCommon
-// Specific to Brachytherapy:
+// Content specific to Brachytherapy:
 * code = RID#mcode-brachytherapy-treatment-phase
 * extension[modality].value[x] from  BrachytherapyModalityVS (required)
 * extension[modality] ^short = "Brachytherapy Modality"
@@ -80,8 +73,8 @@ Description: "A summary of a phase of brachytherapy treatment that has been deli
 * extension[technique].value[x] from BrachytherapyTechniqueVS (required)
 * extension[technique] ^short = "Brachytherapy Technique"
 * extension[technique] ^definition = "The method by which the brachytherapy modality is applied."
-//* usedCode from BrachytherapyDeviceVS (extensible)
-//* focalDevice.manipulated only Reference(BrachytherapyImplantableDevice)
+//* usedCode from BrachytherapyDeviceVS (extensible)  // device-related, defer
+//* focalDevice.manipulated only Reference(BrachytherapyImplantableDevice)   // device-related, defer
 
 
 //---------- Extensions -------------------------
@@ -107,10 +100,17 @@ Description: "The total number of fractions (treatment divisions) actually deliv
 * insert ExtensionContext(Procedure)
 * value[x] only unsignedInt
 
+Extension: RadiotherapySessions
+Id:        mcode-radiotherapy-sessions
+Title:     "Radiotherapy Number of Sessions"
+Description: "The number of sessions in a course of radiotherapy."
+* insert ExtensionContext(Procedure)
+* value[x] only unsignedInt
+
 Extension: RadiotherapyDoseDelivered
 Id: mcode-radiotherapy-dose-delivered
-Title: "Radiotherapy Dose"
-Description: "Dose parameters for one target volume, including dose per fraction, number of fractions delivered, and total dose delivered."
+Title: "Radiotherapy Dose Delivered"
+Description: "Dose parameters for one treatment volume, including dose per fraction, number of fractions delivered, and total dose delivered."
 * insert ExtensionContext(Procedure)
 * obeys mcode-volume-description-or-id-required
 * extension contains
@@ -122,12 +122,12 @@ Description: "Dose parameters for one target volume, including dose per fraction
 * extension[totalDoseDelivered].value[x] only Quantity
 * extension[totalDoseDelivered].valueQuantity = UCUM#cGy
 // Definitions of in-line extensions
-* extension[volumeDescription] ^short = "Target volume where radiation was delivered"
-* extension[volumeDescription] ^definition = "Text description of the body structure targeted, for example, Chest Wall Lymph Nodes."
-* extension[volumeId] ^short = "Optional identifier for the target volume."
-* extension[volumeId] ^definition = "Identifier of the target volume where radiation was delivered, for example, PTV-2 (planning target volume 2). May be included as a reference to the treatment plan."
+* extension[volumeDescription] ^short = "Treatment volume where radiation was delivered"
+* extension[volumeDescription] ^definition = "Text description of the body structure treated, for example, Chest Wall Lymph Nodes."
+* extension[volumeId] ^short = "Optional identifier for the treatment volume."
+* extension[volumeId] ^definition = "Identifier of the treatment volume where radiation was delivered, for example, PTV-2 (planning target volume 2). May be included as a reference to the treatment plan."
 * extension[totalDoseDelivered] ^short = "Total Radiation Dose Delivered"
-* extension[totalDoseDelivered] ^definition = "The total amount of radiation delivered to this target volume within the scope of this dose delivery."
+* extension[totalDoseDelivered] ^definition = "The total amount of radiation delivered to this treatment volume within the scope of this dose delivery."
 
 
 Invariant:  mcode-volume-description-or-id-required

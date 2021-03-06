@@ -70,17 +70,20 @@ ValueSet:		TreatmentIntentVS
 Id: mcode-treatment-intent-vs
 Title: "Treatment Intent Value Set"
 Description:	"The purpose of a treatment."
-// The value set includes 'curative' and 'palliative'. Curative is defined as any treatment meant to reduce or control a disease process, even if a 'cure' is not anticipated. Palliative includes treatments meant to reduce symptoms and side effects, such as antiemetics.
 * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
-* SCT#373808002  "Curative - procedure intent"
-* SCT#363676003  "Palliative - procedure intent"
+* SCT#373808002 "Curative - procedure intent"
+* SCT#363676003 "Palliative - procedure intent"
 * SCT#261004008 "Diagnostic intent"
-* SCT#360271000 "Prophylaxis - procedure intent"
-* SCT#421974008 "Adjunct - intent"
-* SCT#73847000  "Neo-adjuvant - intent"
-* SCT#399707004 "Supportive - procedure intent"
-* SCT#373846009 "Adjuvant - intent"
 * SCT#129428001 "Preventive - intent"
+* SCT#429892002 "Guidance intent"
+* SCT#360156006 "Screening - procedure intent"
+* SCT#447295008 "Forensic intent"
+
+//* SCT#399707004 "Supportive - procedure intent" // a bit more general than palliative, but very close in meaning. See https://en.wikipedia.org/wiki/Therapy#Supportive_therapy
+//* SCT#360271000 "Prophylaxis - procedure intent"  // redundant with preventive. See https://en.wikipedia.org/wiki/Preventive_healthcare for the (slight) distinction between these terms.
+//* SCT#73847000  "Neo-adjuvant - intent"  // relates to timing, not intent
+//* SCT#373846009 "Adjuvant - intent"   // relates to timing, not intent
+//* SCT#421974008 "Adjunct - intent"  // simply means accompanying or in support of another therapy. It is not an intent.
 
 // Based on UnitsOfLengthVS, but limited to just mm and cm. In theory we could just use UnitsOfLengthVS if we don't care about restricting to just cm/mm.
 ValueSet:        TumorSizeUnitsVS

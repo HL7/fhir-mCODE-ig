@@ -125,7 +125,7 @@ Finally, the "catch code" code system was established as a way to know, positive
 * [LocationQualifierVS]
 * [PresentAbsentUnknownVS]
 * [PrimaryOrUncertainBehaviorCancerDisorderVS]
-* [RadiationTargetBodySiteVS]
+* [RadiotherapyBodySiteVS]
 * [SecondaryCancerDisorderVS]
 * [TeleradiotherapyModalityVS]
 * [TeleradiotherapyTechniqueVS]

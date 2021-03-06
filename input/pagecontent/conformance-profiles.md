@@ -22,7 +22,7 @@ Where US Core does not provide an appropriate base profile, mCODE profiles FHIR 
 | [Karnofsky Performance Status][KarnofskyPerformanceStatus] | no | Observation |
 | [mCODE Patient Bundle][MCODEPatientBundle] | no | Bundle  |
 | [Primary Cancer Condition][PrimaryCancerCondition] | yes | US Core Condition |
-| [Radiotherapy Summary][RadiotherapyTreatmentSummary] | yes | US Core Procedure |
+| [Radiotherapy Summary][RadiotherapyCourseSummary] | yes | US Core Procedure |
 | [Secondary Cancer Condition][SecondaryCancerCondition] | yes | US Core Condition |
 | [Teleradiotherapy Prescription Delivery][TeleradiotherapyTreatmentPhase] | yes | US Core Procedure |
 | [TNM Distant Metastases Category][TNMDistantMetastasesCategory] | no | Observation |

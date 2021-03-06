@@ -118,7 +118,7 @@ Description:    "A small sample of blood, hair, skin, amniotic fluid (the fluid 
 * type 1..1
 * type from GeneticSpecimenTypeVS
 * collection.bodySite.extension contains
-    LocationQualifier named locationQualifier 0..1
+    LocationQualifier named locationQualifier 0..*
 // No inherited MS
 * subject and status and type and collection and collection.bodySite and collection.bodySite.extension[locationQualifier] MS
 // * insert ReduceText

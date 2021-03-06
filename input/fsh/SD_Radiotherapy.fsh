@@ -8,7 +8,7 @@ RuleSet: RadiotherapyCommon
     TreatmentTerminationReason named terminationReason 0..1 MS and
     RadiotherapyModality named modality 0..* MS and
     RadiotherapyTechnique named technique 0..* MS and
-    RadiotherapySessions named actualNumberOfSessions 0..1 and
+    RadiotherapySessions named actualNumberOfSessions 0..1 MS and
     RadiotherapyFractionsDelivered named fractionsDelivered 0..1 MS and
     RadiotherapyDoseDelivered named doseDelivered 0..* MS
 * extension and category MS
@@ -40,6 +40,7 @@ RuleSet: RadiotherapyPhaseCommon
 * partOf ^definition = "The partOf element, if present, MUST reference a RadiotherapyCourseSummary-conforming Procedure resource."
 * bodySite ^definition = "Not used in this profile. A more detailed description of the treatment volume should be entered in the RadiotherapyDoseDelivered.volumeDescription."
 * extension[fractionsDelivered] ^definition = "The number of fractions delivered during this phase."
+* extension[doseDelivered].extension[fractionsDelivered] 0..0
 
 
 Profile:  TeleradiotherapyTreatmentPhase
@@ -110,17 +111,19 @@ Description: "The number of sessions in a course of radiotherapy."
 Extension: RadiotherapyDoseDelivered
 Id: mcode-radiotherapy-dose-delivered
 Title: "Radiotherapy Dose Delivered"
-Description: "Dose parameters for one treatment volume, including dose per fraction, number of fractions delivered, and total dose delivered."
+Description: "Dose parameters for one treatment volume."
 * insert ExtensionContext(Procedure)
 * obeys mcode-volume-description-or-id-required
 * extension contains
-    volumeDescription 0..1 and
-    volumeId 0..1 and
-    totalDoseDelivered 0..1
+    volumeDescription 0..1 MS and
+    volumeId 0..1 MS and
+    totalDoseDelivered 0..1 MS and
+    fractionsDelivered 0..1 MS
 * extension[volumeDescription].value[x] only string
 * extension[volumeId].value[x] only string
 * extension[totalDoseDelivered].value[x] only Quantity
 * extension[totalDoseDelivered].valueQuantity = UCUM#cGy
+* extension[fractionsDelivered].value[x] only unsignedInt
 // Definitions of in-line extensions
 * extension[volumeDescription] ^short = "Treatment volume where radiation was delivered"
 * extension[volumeDescription] ^definition = "Text description of the body structure treated, for example, Chest Wall Lymph Nodes."
@@ -128,6 +131,8 @@ Description: "Dose parameters for one treatment volume, including dose per fract
 * extension[volumeId] ^definition = "Identifier of the treatment volume where radiation was delivered, for example, PTV-2 (planning target volume 2). May be included as a reference to the treatment plan."
 * extension[totalDoseDelivered] ^short = "Total Radiation Dose Delivered"
 * extension[totalDoseDelivered] ^definition = "The total amount of radiation delivered to this treatment volume within the scope of this dose delivery."
+* extension[fractionsDelivered] ^short = "Fractions Delivered"
+* extension[fractionsDelivered] ^definition = "Number of fractions delivered to this treatment volume."
 
 
 Invariant:  mcode-volume-description-or-id-required

@@ -1,7 +1,7 @@
 The mCODE **Disease Characterization** group includes data elements specific to the diagnosis and staging of cancer. This includes:
 
 * **Cancer Diagnosis** - the date and location (body site/position and laterality) of the cancer diagnosis.
-* **Tumor Characteristics** - the shape (histologic type) and behavior of the tumor cell, compared to that of a normal cell.
+* **Tumor Characteristics** - histological classification, morphology, and behavior of the tumor cell, compared to that of a normal cell.
 * **Cancer Stage** - describes the severity of an individual's cancer based on the magnitude of the original (primary) tumor as well as on the extent cancer has spread in the body. Understanding the stage of the cancer helps doctors to develop a prognosis and design a treatment plan for individual patients. Staging calculations leverage results from the previous two categories, along with prognostic factors relevant to the cancer type, in order to assess an overall cancer stage group (source: [AJCC](https://cancerstaging.org/references-tools/Pages/What-is-Cancer-Staging.aspx)).
 
 ### Representing the Cancer Diagnosis
@@ -23,31 +23,30 @@ Because the use of these code systems vary in different institutions, mCODE supp
 
 Implementers should reference the [PrimaryCancerCondition] and [SecondaryCancerCondition] profiles for further details on the use of these terminologies and associated value sets.
 
-### Representing TNM Staging Information
+### Representing Staging Information
 
-Cancer stage information is contained in a set of profiles, representing [clinical stage group](https://www.cancer.gov/publications/dictionaries/cancer-terms/def/clinical-staging) and [pathologic stage group](https://www.cancer.gov/publications/dictionaries/cancer-terms/def/pathological-staging) panels with members representing the primary tumor (T), regional nodes (N), and distant metastases (M) categories.
+Clinicians assign stages to cancers according to rules defined in various [cancer staging systems](https://www.cancer.gov/about-cancer/diagnosis-staging/staging). The staging system must always be specified alongside the stage, because it establishes the meaning of the stage code(s).
 
-Clinicians assign stages to cancers according to rules defined in various [cancer staging systems](https://www.cancer.gov/about-cancer/diagnosis-staging/staging). TNM staging is used for many types of solid-tumor cancers. The staging system must always be specified alongside the stage, because it establishes the meaning of the stage code(s).
+Cancer stage information is contained in a set of profiles. One profile represents the [stage group][CancerStageGroup], either [clinical](https://www.cancer.gov/publications/dictionaries/cancer-terms/def/clinical-staging) or [pathological](https://www.cancer.gov/publications/dictionaries/cancer-terms/def/pathological-staging). The stage group contains optional references to additional profiles representing the primary tumor (T), regional nodes (N), and distant metastases (M) categories. These references are used only in conjunction with TNM staging systems.
 
 In mCODE, a single patient may have more than one staging panel, although this is not common in practice.
 
-Clinical applications vary in their representation of T, N, and M staging category values, falling into one of two naming conventions:
+#### TNM Staging Information
+
+TNM staging is used for many types of solid-tumor cancers. Clinical applications vary in their representation of T, N, and M staging category values, falling into one of two naming conventions:
 
 * Prefixed with a staging classification abbreviation (e.g.: _cT3_). This is the coding convention returned by American Joint Commission on Cancer (AJCC) in their digital data content retrieved via the [AJCC Application Programming Interface (API)](https://ajcc.3scale.net/).
 * Without a prefixed staging classification abbreviation (e.g.: _T3_).
 
 mCODE recommends that the implementers align with AJCC's convention of representing the staging category value _including the classification prefix_. This code convention is aligned with the AJCC's digital data and clearly distinguishes the staging classification as clinical, pathologic, or neoadjuvant without having to retrieve further context from the model. Nonetheless, separate profiles for clinical and pathological staging were developed, with an eye toward future extensibility, in particular, the ability to additional prognostic factors relevant to particular types of cancers.
 
-Several widely-used terminologies in the cancer domain, including ICD-O-3 and AJCC staging, are proprietary and cannot be reproduced in this guide. As such, some elements related to staging do not include required terminology codes. The guide does, however, indicate where it is appropriate to use codes from such terminologies.
+Several widely-used terminologies in the cancer domain, including ICD-O-3 and AJCC staging, are proprietary and cannot be reproduced in this guide. As such, some elements related to staging do not include required terminology codes. The guide does, however, indicate where it is appropriate to use codes from such terminologies. Under the [Fair Use doctrine](https://www.copyright.gov/fair-use/more-info.html), the IG includes examples illustrating mCODE's representation of cancer diagnoses and AJCC staging values for the purposes of technical implementation guidance to FHIR developers.
 
-Under the [Fair Use doctrine](https://www.copyright.gov/fair-use/more-info.html), the IG includes examples illustrating mCODE's representation of cancer diagnoses and AJCC staging values for the purposes of technical implementation guidance to FHIR developers.
+#### Non-TNM Staging Information
 
-### Representing non-TNM Staging Information
+Not all cancer types are staged with a TNM-based staging system, including hematological cancers like leukemias, multiple myeloma, and some lymphomas. Some specialized solid tumors like gynecologic tumors are staged using the FIGO (International Federation of Gynecology and Obstetrics) staging system. Other non-TNM staging systems include Rai, Binet, and Cottswold. The staging system should be represented with a code from the [CancerStagingSystemVS] value set, if available.
 
-Not all cancer types are staged with a TNM-based staging system, including hematological cancers like leukemias, multiple myeloma, and some lymphomas. Some specialized solid tumors like gynecologic tumors are staged using the FIGO (International Federation of Gynecology and Obstetrics) staging system. Other non-TNM staging systems include Rai, Binet, and Cottswold.
-Support for non-TNM staging systems in mCODE is limited to [CancerStageGroup]. Use NCI thesaurus codes for specifying cancer staging systems which do not have an equivalent SNOMED code. 
-
-Prognostic factors related to the cancer stage group can be specified with the `Observation.derivedFrom` element. For example, a hemoglobin lab result which was evaluated in the  staging of chronic lymphocytic leukemia using the Binet staging system can be referenced under `Observation.derivedFrom` element. [This example](Observation-binet-stage-group-A.html) illustrates how this could be represented.
+Support for non-TNM staging systems in mCODE is limited to [CancerStageGroup]. T, N, and M profiles are not used. Prognostic factors related to the cancer stage group can be specified with the `Observation.derivedFrom` element. For example, a hemoglobin lab result which was evaluated in the  staging of chronic lymphocytic leukemia using the Binet staging system can be referenced under `Observation.derivedFrom` element. [This example of Binet staging](Observation-binet-stage-group-A.html) illustrates how this could be represented.
 
 ### Body Locations
 

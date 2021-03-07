@@ -1,20 +1,20 @@
 ### Usage
 
-The bundle MUST contain exactly one Patient resource conforming to the [CancerPatient](StructureDefinition-mcode-cancer-patient.html) profile.
+The bundle MUST contain exactly one Patient resource conforming to the [CancerPatient] profile. The bundle MUST also contain following mCODE-conformant resources, if available to the server:
 
-The bundle MUST also contain following mCODE-conformant resources, if available to the server:
-
-* Condition resources representing the [PrimaryCancerCondition](StructureDefinition-mcode-primary-cancer-condition.html) and [SecondaryCancerCondition](StructureDefinition-mcode-secondary-cancer-condition.html), if applicable
-* Observation resources representing [CancerDiseaseStatus](StructureDefinition-mcode-cancer-disease-status.html)
-* Observation resources representing [ECOGPerformanceStatus](StructureDefinition-mcode-ecog-performance-status.html) and/or [KarnofskyPerformanceStatus](StructureDefinition-mcode-karnofsky-performance-status.html)
-* Observation resources representing any [TumorMarkerTests](StructureDefinition-mcode-tumor-marker-test.html)
-* MedicationRequest resources conforming to [CancerRelatedMedicationRequest](StructureDefinition-mcode-cancer-related-medication-request.html), representing cancer-related prescriptions, administrations, and patient-reported medications
-* Procedure resources representing any [CancerRelatedSurgicalProcedure](StructureDefinition-mcode-cancer-related-surgical-procedure.html) or [RadiotherapyCourseSummary](StructureDefinition-mcode-radiotherapy-course-summary.html) or [BrachytherapyTreatmentPhase](StructureDefinition-mcode-brachytherapy-treatment-phase.html) or [TeleradiotherapyTreatmentPhase](StructureDefinition-mcode-teleradiotherapy-treatment-phase.html)
-* Observation resources representing the TNM staging information
-* Observation resources representing [CancerGeneticVariant](StructureDefinition-mcode-cancer-genetic-variant.html) and [GenomicRegionStudied](StructureDefinition-mcode-genomic-region-studied.html)
-* DiagnosticReport resources representing [CancerGenomicsReport](StructureDefinition-mcode-cancer-genomics-report.html)
-* Specimen resources representing to [GeneticSpecimen](StructureDefinition-mcode-genetic-specimen.html)
-* Observation resource representing to [ComorbiditiesElixhauser](StructureDefinition-mcode-comorbidities-elixhauser.html), and accompanying Condition resources
+* Condition resources representing the [PrimaryCancerCondition] and [SecondaryCancerCondition], if applicable
+* Observation resources representing [CancerDiseaseStatus]
+* Observation resources representing [ECOGPerformanceStatus] and/or [KarnofskyPerformanceStatus]
+* Observation resources representing any [TumorMarkerTests]
+* MedicationRequest resources conforming to [CancerRelatedMedicationRequest] and [CancerRelatedMedicationAdministration], representing any cancer-related prescriptions, administrations, and patient-reported medications
+* Procedure resources representing any [CancerRelatedSurgicalProcedure], [RadiotherapyCourseSummary], [BrachytherapyTreatmentPhase], and [TeleradiotherapyTreatmentPhase]
+* Observation resources representing the staging information: [CancerStageGroup], [TNMDistantMetastasesCategory], [TNMPrimaryTumorCategory], and [TNMRegionalNodesCategory]
+* Observation resources representing [CancerGeneticVariant] and [GenomicRegionStudied]
+* DiagnosticReport resources representing [CancerGenomicsReport]
+* Specimen resources representing to [GeneticSpecimen] and [TumorSpecimen]
+* BodyStructure resources representing [Tumor]
+* Observation resources representing [TumorSize]
+* Observation resource representing to [ComorbiditiesElixhauser], and any referenced Condition resources
 * Observation resources for patient height, weight, blood pressure
 * Laboratory results from Comprehensive Metabolic Panels (CMP) and Complete Blood Counts (CBC)
 
@@ -26,3 +26,4 @@ By default, this Bundle includes _all_ required resources described above, irres
 
 The bundle itself MUST validate against the current profile.
 
+{% include markdown-link-references.md %}

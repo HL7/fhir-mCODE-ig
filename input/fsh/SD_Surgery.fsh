@@ -13,7 +13,7 @@ Description: "A surgical action addressing a cancer condition. The scope of this
 * reasonCode from CancerDisorderVS (required)
 * reasonReference only Reference(PrimaryCancerCondition or SecondaryCancerCondition)
 * bodySite.extension contains
-    LocationQualifier named locationQualifier 0..1 MS
+    LocationQualifier named locationQualifier 0..* MS
 // Do not insert the category slicing rules because Procedure.category is 0..1.
 * category = SCT#387713003 //"Surgical procedure"
 * code from CancerRelatedSurgicalProcedureVS (extensible)

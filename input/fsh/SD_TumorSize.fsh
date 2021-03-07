@@ -83,7 +83,7 @@ Description:  "Identifies a tumor that has not been removed from the body. Whene
 // This VS is used for the primary/secondary cancer conditions; rule set here for consistency with these profiles.
 * location from CancerBodyLocationVS (extensible)
 * location 1..1 // Tumor is meaningless without a location; parent profile is 0..1
-* locationQualifier from LocationQualifierVS (example)
+* locationQualifier from LocationQualifierVS (required)
 // Related cancer condition
 * extension contains ConditionRelated named relatedCondition 0..1
 * extension[relatedCondition].value[x] only Reference(PrimaryCancerCondition or SecondaryCancerCondition)
@@ -112,7 +112,7 @@ Description: "Represents a tumor after it has been removed from the body. Prior 
 * type = SPTY#TUMOR
 * subject only Reference(CancerPatient)
 * collection.bodySite.extension contains
-    LocationQualifier named locationQualifier 0..1
+    LocationQualifier named locationQualifier 0..*
 * identifier ^slicing.discriminator.type = #pattern
 * identifier ^slicing.discriminator.path = "type"
 * identifier ^slicing.rules = #open
@@ -127,18 +127,11 @@ Description: "Represents a tumor after it has been removed from the body. Prior 
 * extension[relatedCondition].value[x] only Reference(PrimaryCancerCondition or SecondaryCancerCondition)
 * extension[relatedCondition] ^short = "Reference to the cancer condition associated with this tumor"
 * extension[relatedCondition] ^definition = "Associates this tumor with a cancer condition."
-// * insert ReduceText
-// * insert ReduceText2(identifier)
-// * insert ReduceText(collection)
-// * insert ReduceText2(collection.bodySite)
-// * insert ReduceText(processing)
-// * insert ReduceText(container)
 // Must Supports -- there is no US Core fallback
 * type and subject and collection and collection.bodySite and collection.bodySite and collection.bodySite.extension and collection.bodySite.extension[locationQualifier] and identifier and identifier[tumorIdentifier] and identifier[tumorIdentifier].type and identifier[tumorIdentifier].value and extension and extension[relatedCondition] MS
 
 
 /* Commenting out MultifocalTumor observation for now
-
 Issues to consider further: 
 1) Does this rise to the level of "minimal"?
 2) You were missing Observation.code that says what is being observed.

@@ -16,34 +16,31 @@ A radiology work group convened under [CodeX FHIR Accelerator](https://confluenc
 
 ### Profiles
 
+* [BrachytherapyTreatmentPhase]
 * [CancerRelatedMedicationRequest]
 * [CancerRelatedMedicationAdministration]
 * [CancerRelatedSurgicalProcedure]
-* **Radiotherapy**
-  * [RadiotherapyTreatmentSummary]
-  * [BrachytherapyTreatmentPhase]
-  * [TeleradiotherapyTreatmentPhase]
+* [RadiotherapyCourseSummary]
+* [TeleradiotherapyTreatmentPhase]
 
 ### Extensions
 
+* [RadiotherapyDoseDelivered]
+* [RadiotherapyModality]
+* [RadiotherapyTechnique]
 * [TreatmentTerminationReason]
 * [TreatmentIntent]
-* **Radiotherapy**
-  * [RadiotherapyModality]
-  * [RadiotherapyTechnique]
-  * [RadiotherapyDoseDelivered]
 
 ### Value Sets
 
+* [BrachytherapyModalityVS]
+* [BrachytherapyTechniqueVS]
+* [CancerRelatedSurgicalProcedureVS]
+* [RadiotherapyBodySiteVS]
+* [TeleradiotherapyModalityVS]
+* [TeleradiotherapyTechniqueVS]  
 * [TreatmentTerminationReasonVS]
 * [TreatmentIntentVS]
-* [CancerRelatedSurgicalProcedureVS]
-* **Radiotherapy**
-  * [BrachytherapyModalityVS]
-  * [BrachytherapyTechniqueVS]
-  * [TeleradiotherapyModalityVS]
-  * [TeleradiotherapyTechniqueVS]  
-  * [RadiationTargetBodySiteVS]  
 
 ### Code Systems
 

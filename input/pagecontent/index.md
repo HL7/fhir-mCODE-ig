@@ -66,19 +66,17 @@ In the event there are differences between the page renderings in this IG and th
 
 ### Credits
 
-The authors recognize the leadership and sponsorship of Dr. Monica Bertagnolli, former ASCO President and Dr. Jay Schnitzer, MITRE Chief Technology Officer. Dr. Steven Piantadosi and the Alliance for Clinical Trials in Oncology coordinated real-world data collection in clinical trials, as part of this project. The ASCO/CancerLinQ team was led by Dr. Robert Miller. Lead MITRE contributors were Mark Kramer, May Terry, Max Masnick, Rute Martins, Chris Moesel, and Caroline Potteiger. Andre Quina and Dr. Brian Anderson guided the overall mCODE effort at MITRE. HL7 sponsorship and input from [Clinical Interoperability Council](http://www.hl7.org/Special/committees/cic/index.cfm) and [Clinical Information Modeling Initiative](https://www.hl7.org/Special/Committees/cimi/index.cfm) is gratefully acknowledged, with special thanks to Richard Esmond and Laura Heermann Langford.
+The authors recognize the leadership and sponsorship of Dr. Monica Bertagnolli, former ASCO President and Dr. Jay Schnitzer, MITRE Chief Technology Officer. Dr. Steven Piantadosi and the Alliance for Clinical Trials in Oncology coordinated real-world data collection in clinical trials, as part of this project. The ASCO/CancerLinQ team was led by Dr. Robert Miller. Lead MITRE contributors were Mark Kramer, May Terry, Max Masnick, Rute Martins, Chris Moesel, and Caroline Potteiger. Andre Quina guided the overall mCODE effort at MITRE. HL7 sponsorship and input from [Clinical Interoperability Council](http://www.hl7.org/Special/committees/cic/index.cfm) and [Clinical Information Modeling Initiative](https://www.hl7.org/Special/Committees/cimi/index.cfm) is gratefully acknowledged, with special thanks to Richard Esmond and Laura Heermann Langford.
 
 This IG was authored by the MITRE Corporation using [FHIR Shorthand (FSH)](http://hl7.org/fhir/uv/shorthand/) and [SUSHI](https://fshschool.org), a free, open source tool-chain from [MITRE Corporation](https://www.mitre.org/).
 
 ### Contact Information
 
-| **General Inquiries:** | [mcode-info@asco.org]     |
-| **Co-Editor:**  | Dr. Robert Miller<br>ASCO CancerLinQ<br>[robert.miller@asco.org] |
-| **Co-Editor:**  | Mark Kramer<br>MITRE Corporation<br>[mkramer@mitre.org]  |
-
-[robert.miller@asco.org]: mailto:robert.miller@asco.org
-[mcode-info@asco.org]: mailto:mcode-info@asco.org
-[mkramer@mitre.org]: mailto:mkramer@mitre.org
+| Topic| Who | Role | Email |
+|----|---|---|------|
+| General Inquiries  | Steve Bratt | CodeX Accelerator Program Manager | sbratt@mitre.org |
+| Domain Content | Dr. Travis Osterman | Chair, mCODE Technical Review Group | travis.osterman@vumc.org |
+| IG and FHIR Issues | Mark Kramer | Modeling Lead | mkramer@mitre.org |
 
 MITRE: Approved for Public Release. Distribution Unlimited. Case Number 16-1988
 

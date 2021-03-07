@@ -590,10 +590,10 @@ Description: "Extended example: example showing chemotherapy medication"
 
 
 Instance: radiotherapy-treatment-summary-chest-wall-jenny-m
-InstanceOf: RadiotherapyTreatmentSummary
+InstanceOf: RadiotherapyCourseSummary
 Description: "Example of radiotherapy treatment summary involving external beam radiation to chest wall and regional node radiation with a chest wall boost"
 * status = #completed "completed"
-* code = RID#mcode-radiotherapy-treatment-summary
+* code = RID#mcode-radiotherapy-course-summary
 * category = SCT#108290001 "Radiation oncology AND/OR radiotherapy (procedure)"
 * bodySite = SCT#78904004 "Chest Wall Structure (body structure)"
 * reasonCode = ICD10CM#C50.811 "Malignant neoplasm of overlapping sites of right female breast"
@@ -603,12 +603,15 @@ Description: "Example of radiotherapy treatment summary involving external beam 
 * extension[modality][0].valueCodeableConcept = RT#PHOTON "Photon Beam Radiation Therapy"
 * extension[modality][1].valueCodeableConcept = RT#ELECTRON "Electron Beam Radiation Therapy"
 * extension[technique][0].valueCodeableConcept = RT#VMAT "Volumetric Modulated Arc Therapy"
-* extension[technique][0].valueCodeableConcept = RT#3D "Three Dimensional"
-* extension[fractionsDelivered].valueUnsignedInt = 30
+* extension[technique][1].valueCodeableConcept = RT#3D "Three Dimensional"
 * extension[doseDelivered][0].extension[volumeDescription].valueString = "Chest Wall"
+* extension[doseDelivered][0].extension[volumeId].valueString = "1.2.246.352…1"
 * extension[doseDelivered][0].extension[totalDoseDelivered].valueQuantity = 6000 'cGy'
+* extension[doseDelivered][0].extension[fractionsDelivered].valueUnsignedInt = 30
 * extension[doseDelivered][1].extension[volumeDescription].valueString = "Chest Wall Lymph Nodes"
+* extension[doseDelivered][1].extension[volumeId].valueString = "1.2.246.352…2"
 * extension[doseDelivered][1].extension[totalDoseDelivered].valueQuantity = 5000 'cGy'
+* extension[doseDelivered][1].extension[fractionsDelivered].valueUnsignedInt = 25
 * subject = Reference(cancer-patient-eve-anyperson)
 * asserter = Reference(us-core-practitioner-kyle-anydoc)
 
@@ -624,10 +627,13 @@ Description: "Example of teleradiotherapy treatment phase involving external bea
 * extension[modality].valueCodeableConcept = RT#PHOTON "Photon Beam Radiation Therapy"
 * extension[technique].valueCodeableConcept = RT#VMAT "Volumetric Modulated Arc Therapy"
 * extension[fractionsDelivered].valueUnsignedInt = 25
+* extension[actualNumberOfSessions].valueUnsignedInt = 25
 * extension[doseDelivered][0].extension[volumeDescription].valueString = "Chest Wall"
 * extension[doseDelivered][0].extension[totalDoseDelivered].valueQuantity = 5000 'cGy'
+* extension[doseDelivered][0].extension[volumeId].valueString = "1.2.246.352…1"
 * extension[doseDelivered][1].extension[volumeDescription].valueString = "Chest Wall Lymph Nodes"
 * extension[doseDelivered][1].extension[totalDoseDelivered].valueQuantity = 5000 'cGy'
+* extension[doseDelivered][1].extension[volumeId].valueString = "1.2.246.352…2"
 * subject = Reference(cancer-patient-eve-anyperson)
 * asserter = Reference(us-core-practitioner-kyle-anydoc)
 
@@ -644,6 +650,7 @@ Description: "Example of teleradiotherapy treatment boost phase"
 * extension[technique].valueCodeableConcept = RT#3D "Three Dimensional"
 * extension[fractionsDelivered].valueUnsignedInt = 5
 * extension[doseDelivered].extension[volumeDescription].valueString = "Chest Wall"
+* extension[doseDelivered].extension[volumeId].valueString = "1.2.246.352…1"
 * extension[doseDelivered].extension[totalDoseDelivered].valueQuantity = 1000 'cGy'
 * subject = Reference(cancer-patient-eve-anyperson)
 * asserter = Reference(us-core-practitioner-kyle-anydoc)

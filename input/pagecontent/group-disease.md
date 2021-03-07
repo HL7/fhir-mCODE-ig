@@ -27,7 +27,14 @@ Implementers should reference the [PrimaryCancerCondition] and [SecondaryCancerC
 
 Clinicians assign stages to cancers according to rules defined in various [cancer staging systems](https://www.cancer.gov/about-cancer/diagnosis-staging/staging). The staging system must always be specified alongside the stage, because it establishes the meaning of the stage code(s).
 
-Cancer stage information is contained in a set of profiles. One profile represents the [stage group][CancerStageGroup], either [clinical](https://www.cancer.gov/publications/dictionaries/cancer-terms/def/clinical-staging) or [pathological](https://www.cancer.gov/publications/dictionaries/cancer-terms/def/pathological-staging). The stage group contains optional references to additional profiles representing the primary tumor (T), regional nodes (N), and distant metastases (M) categories. These references are used only in conjunction with TNM staging systems.
+Cancer stage information is contained in a set of profiles. One profile on Observation represents the [stage group][CancerStageGroup]. The stage group contains optional references to additional profiles representing the primary tumor (T), regional nodes (N), and distant metastases (M) categories. These references are used only in conjunction with TNM staging systems.
+
+The `Observation.code` element value is used to distinguish the method of staging, e.g., [clinical](https://www.cancer.gov/publications/dictionaries/cancer-terms/def/clinical-staging) or [pathologic](https://www.cancer.gov/publications/dictionaries/cancer-terms/def/pathologic-staging). For other types staging (e.g., retreatment (r) or autopsy (a)), a code indicating "other" staging type must be used. The staging type codes for the `Observation.code` element are found in these value sets:
+
+* [ObservationCodesStageGroupVS]
+* [ObservationCodesPrimaryTumorVS]
+* [ObservationCodesRegionalNodesVS]
+* [ObservationCodesDistantMetastasesVS]
 
 In mCODE, a single patient may have more than one staging panel, although this is not common in practice.
 
@@ -35,10 +42,10 @@ In mCODE, a single patient may have more than one staging panel, although this i
 
 TNM staging is used for many types of solid-tumor cancers. Clinical applications vary in their representation of T, N, and M staging category values, falling into one of two naming conventions:
 
-* Prefixed with a staging classification abbreviation (e.g.: _cT3_). This is the coding convention returned by American Joint Commission on Cancer (AJCC) in their digital data content retrieved via the [AJCC Application Programming Interface (API)](https://ajcc.3scale.net/).
+* Prefixed with a staging classification abbreviation (e.g.: _cT3_, _ypT3_). This is the coding convention returned by American Joint Commission on Cancer (AJCC) in their digital data content retrieved via the [AJCC Application Programming Interface (API)](https://ajcc.3scale.net/).
 * Without a prefixed staging classification abbreviation (e.g.: _T3_).
 
-mCODE recommends that the implementers align with AJCC's convention of representing the staging category value _including the classification prefix_. This code convention is aligned with the AJCC's digital data and clearly distinguishes the staging classification as clinical, pathologic, or neoadjuvant without having to retrieve further context from the model. Nonetheless, separate profiles for clinical and pathological staging were developed, with an eye toward future extensibility, in particular, the ability to additional prognostic factors relevant to particular types of cancers.
+mCODE strongly recommends that the implementers align with AJCC's convention of representing the staging category value _including the classification prefix_. This code convention is aligned with the AJCC's digital data and clearly distinguishes the staging classification as clinical (c), pathologic (p), or neoadjuvant (yc or yp) without having to retrieve further context from the model. The selected prefix MUST be consistent with the `Observation.code` value.
 
 Several widely-used terminologies in the cancer domain, including ICD-O-3 and AJCC staging, are proprietary and cannot be reproduced in this guide. As such, some elements related to staging do not include required terminology codes. The guide does, however, indicate where it is appropriate to use codes from such terminologies. Under the [Fair Use doctrine](https://www.copyright.gov/fair-use/more-info.html), the IG includes examples illustrating mCODE's representation of cancer diagnoses and AJCC staging values for the purposes of technical implementation guidance to FHIR developers.
 
@@ -88,11 +95,11 @@ mCODE includes single FHIR profile, [TumorMarkerTest], for all labs involving se
   * [LocationQualifierVS]
   * [HistologyMorphologyBehaviorVS]
 * **Staging**
+  * [CancerStageGroupVS]
   * [ObservationCodesStageGroupVS]
   * [ObservationCodesPrimaryTumorVS]
   * [ObservationCodesRegionalNodesVS]
   * [ObservationCodesDistantMetastasesVS]
-  * [CancerStageGroupVS]
   * [TNMPrimaryTumorCategoryVS]
   * [TNMRegionalNodesCategoryVS]
   * [TNMDistantMetastasesCategoryVS]

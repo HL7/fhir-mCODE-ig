@@ -34,6 +34,7 @@ A radiology work group convened under [CodeX FHIR Accelerator](https://confluenc
 * **Radiotherapy**
   * [RadiotherapyDoseDelivered]
   * [RadiotherapyModality]
+  * [RadiotherapySessions]
   * [RadiotherapyTechnique]
 
 ### Value Sets

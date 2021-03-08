@@ -32,6 +32,7 @@
 [RadiotherapyCourseSummary]: StructureDefinition-mcode-radiotherapy-course-summary.html
 [RadiotherapyDoseDelivered]: StructureDefinition-mcode-radiotherapy-dose-delivered.html
 [RadiotherapyModality]: StructureDefinition-mcode-radiotherapy-modality.html
+[RadiotherapySessions]: StructureDefinition-mcode-radiotherapy-sessions.html
 [RadiotherapyTechnique]: StructureDefinition-mcode-radiotherapy-technique.html
 [RelatedPrimaryCancerCondition]: StructureDefinition-mcode-related-primary-cancer-condition.html
 [SecondaryCancerCondition]: StructureDefinition-mcode-secondary-cancer-condition.html

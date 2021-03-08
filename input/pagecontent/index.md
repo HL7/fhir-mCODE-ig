@@ -77,6 +77,7 @@ This IG was authored by the MITRE Corporation using [FHIR Shorthand (FSH)](http:
 | General Inquiries  | Steve Bratt | CodeX Accelerator Program Manager | sbratt@mitre.org |
 | Domain Content | Dr. Travis Osterman | Chair, mCODE Technical Review Group | travis.osterman@vumc.org |
 | IG and FHIR Issues | Mark Kramer | Modeling Lead | mkramer@mitre.org |
+{: .grid }
 
 MITRE: Approved for Public Release. Distribution Unlimited. Case Number 16-1988
 

@@ -14,6 +14,7 @@ Where US Core does not provide an appropriate base profile, mCODE profiles FHIR 
 | [Cancer-Related Medication Administration][CancerRelatedMedicationAdministration] | no | Medication Administration |
 | [Cancer-Related Medication Request][CancerRelatedMedicationRequest] | yes | US Core Medication Request |
 | [Cancer-Related Surgical Procedure][CancerRelatedSurgicalProcedure] | yes | US Core Procedure |
+| [Cancer Stage Group][CancerStageGroup] | no | Observation |
 | [Comorbidities Parent][ComorbiditiesParent]  | no | Observation |
 | [Comorbidities Elixhauser][ComorbiditiesElixhauser] | no | Comorbidities Parent |
 | [ECOG Performance Status][ECOGPerformanceStatus] | no | Observation |
@@ -28,7 +29,6 @@ Where US Core does not provide an appropriate base profile, mCODE profiles FHIR 
 | [TNM Distant Metastases Category][TNMDistantMetastasesCategory] | no | Observation |
 | [TNM Primary Tumor Category][TNMPrimaryTumorCategory] | no | Observation |
 | [TNM Regional Nodes Category][TNMRegionalNodesCategory] | no | Observation |
-| [Cancer Stage Group][CancerStageGroup] | no | Observation |
 | [Tumor][Tumor] | no | BodyStructure |
 | [Tumor Marker Test][TumorMarkerTest] | yes | US Core Laboratory Result Observation |
 | [Tumor Size][TumorSize] | no | Observation |

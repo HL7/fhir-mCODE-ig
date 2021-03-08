@@ -73,8 +73,8 @@ Description: "Codes describing the techniques of external beam and brachytherapy
 
 //----------BODY SITE------------
 
-ValueSet: RadiationTargetBodySiteVS
-Id: mcode-radiation-target-body-site-vs
+ValueSet: RadiotherapyBodySiteVS
+Id: mcode-radiotherapy-body-site-vs
 Title: "Radiation Target Body Site Value Set"
 Description: "Codes for body sites that can be targets of radiation therapy. This list of sites is based on Commission on Cancer’s 'Standards for Oncology Registry Entry  - STORE 2018'. This value set contains SNOMED CT equivalent terms."
 * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"

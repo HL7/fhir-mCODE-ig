@@ -18,7 +18,7 @@ Description: "A collection of data for an mCODE cancer patient."
     tumorMarkerTest 0..* MS and
     cancerRelatedMedicationRequest 0..* MS and
     cancerRelatedSurgicalProcedure 0..* MS and
-    radiotherapyTreatmentSummary 0..* MS and
+    RadiotherapyCourseSummary 0..* MS and
     brachytherapyTreatmentPhase 0..* MS and
     teleradiotherapyTreatmentPhase 0..* MS and
     cancerStageGroup 0..* MS and
@@ -43,7 +43,7 @@ Description: "A collection of data for an mCODE cancer patient."
 * entry[tumorMarkerTest] ^short = "Tumor Marker Tests"
 * entry[cancerRelatedMedicationRequest] ^short = "Cancer-Related Medication Request(s)"
 * entry[cancerRelatedSurgicalProcedure] ^short = "Cancer-Related Surgical Procedure(s)"
-* entry[radiotherapyTreatmentSummary] ^short = "Radiation Treatment Summary(-ies)"
+* entry[RadiotherapyCourseSummary] ^short = "Radiation Treatment Summary(-ies)"
 * entry[teleradiotherapyTreatmentPhase] ^short = "Delivery of Teleradiotherapy"
 * entry[brachytherapyTreatmentPhase] ^short = "Delivery of Brachytherapy"
 * entry[cancerStageGroup] ^short = "TNM Stage Group(s)"
@@ -69,7 +69,7 @@ Description: "A collection of data for an mCODE cancer patient."
 * entry[tumorMarkerTest] ^definition = "Observations resource(s) representing Tumor Marker Tests."
 * entry[cancerRelatedMedicationRequest] ^definition = "Cancer-Related Medication Requests, including both active and inactive medications."
 * entry[cancerRelatedSurgicalProcedure] ^definition = "Procedure resource(s) representing cancer-related surgical procedures."
-* entry[radiotherapyTreatmentSummary] ^definition = "Procedure resource(s) representing a course of treatment in cancer-related radiology therapy."
+* entry[RadiotherapyCourseSummary] ^definition = "Procedure resource(s) representing a course of treatment in cancer-related radiology therapy."
 * entry[teleradiotherapyTreatmentPhase] ^definition = "Procedure resource(s) representing a phase in treatment of cancer via external beam radiology procedures."
 * entry[brachytherapyTreatmentPhase] ^definition = "Procedure resource(s) representing cancer-related brachytherapy (internal) radiology procedures."
 * entry[cancerStageGroup] ^definition = "Observation resource(s) representing stage group"
@@ -95,7 +95,7 @@ Description: "A collection of data for an mCODE cancer patient."
 * entry[cancerRelatedMedicationRequest].resource only CancerRelatedMedicationRequest
 * entry[cancerRelatedSurgicalProcedure].resource only CancerRelatedSurgicalProcedure
 // -- Radiotherapy --
-* entry[radiotherapyTreatmentSummary].resource only RadiotherapyTreatmentSummary
+* entry[RadiotherapyCourseSummary].resource only RadiotherapyCourseSummary
 * entry[teleradiotherapyTreatmentPhase].resource only TeleradiotherapyTreatmentPhase
 * entry[brachytherapyTreatmentPhase].resource only BrachytherapyTreatmentPhase
 //
@@ -127,7 +127,7 @@ Description: "A collection of data for an mCODE cancer patient."
 * insert CreateBundleEntry(tumorMarkerTest, 0, *, Tumor Marker Tests, Observations resource(s\) representing Tumor Marker Tests., TumorMarkerTest)
 * insert CreateBundleEntry(cancerRelatedMedicationRequest, 0, *, Cancer-Related Medication Request(s\), Cancer-Related Medication Requests\, including both active and inactive medications., CancerRelatedMedicationRequest)
 * insert CreateBundleEntry(cancerRelatedSurgicalProcedure, 0, *, Cancer-Related Surgical Procedure(s\),  Procedure resource(s\) representing cancer-related surgical procedures., CancerRelatedSurgicalProcedure)
-* insert CreateBundleEntry(radiotherapyTreatmentSummary, 0, *, Radiation Summary(-ies\), Procedure resource(s\) representing a course of treatment in cancer-related radiology therapy., RadiotherapyTreatmentSummary)
+* insert CreateBundleEntry(RadiotherapyCourseSummary, 0, *, Radiation Summary(-ies\), Procedure resource(s\) representing a course of treatment in cancer-related radiology therapy., RadiotherapyCourseSummary)
 * insert CreateBundleEntry(brachytherapyTreatmentPhase, 0, *, Delivery of Brachytherapy , Procedure resource(s\) representing cancer-related brachytherapy radiology procedures., BrachytherapyTreatmentPhase)
 * insert CreateBundleEntry(teleradiotherapyTreatmentPhase, 0, *, Delivery of Teleradiotherapy , Procedure resource(s\) representing a phase in treatment of cancer via external beam radiology procedures., TeleradiotherapyTreatmentPhase)
 * insert CreateBundleEntry(CancerStageGroup, 0, *, TNM Stage Group(s\), Observation resource(s\) representing stage group, CancerStageGroup)

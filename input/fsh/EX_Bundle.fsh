@@ -64,8 +64,8 @@ Description: "Extended example as a mCODE Patient Bundle"
 * entry[=].fullUrl = "http://example.org/fhir/MedicationRequest/cancer-related-medication-request-anastrozole-jenny-m"
 * entry[+].resource = cancer-related-mcode-comorbidities-elixhauser-jenny-m
 * entry[=].fullUrl = "http://example.org/fhir/Observation/cancer-related-mcode-comorbidities-elixhauser-jenny-m"
-* entry[+].resource = bodyweight-jenny-m-2018-03-06
-* entry[=].fullUrl = "http://example.org/fhir/Observation/bodyweight-jenny-m-2018-03-06"
+* entry[+].resource = bodyweight-jenny-m-2018-03-16
+* entry[=].fullUrl = "http://example.org/fhir/Observation/bodyweight-jenny-m-2018-03-16"
 * entry[+].resource = us-core-observation-lab-neutrophils-jenny-m
 * entry[=].fullUrl = "http://example.org/fhir/Observation/us-core-observation-lab-neutrophils-jenny-m"
 * entry[+].resource = us-core-organization-physician-services-inc

@@ -8,17 +8,23 @@ The DD intentionally omits certain elements in FHIR that are not expected to be 
 
 * **Data elements not shown in data dictionary:** Only elements marked as "Must Support"(MS) are included in data dictionary. These are elements that implementers may be expected to provide meaningful support for; see [Must Support Obligations](conformance-profiles.html#must-support-obligations) for more information. Some of the MS elements are inherited from US Core.
 
+Download links:
+
+* [Current mCODE Data Dictionary - STU 2 (Excel download)](data-dictionary/mCODEDataDictionary-STU2.xlsx)
+* [Former mCODE Data Dictionary - STU 1 (Excel download)](data-dictionary/mCODEDataDictionary-STU1.xlsx)
+
 ### Data Dictionary Differential
 
 The Data Dictionary Differential provides a detailed comparison between mCODE STU 1 and mCODE STU 2.
 
 The Data Dictionary Differential is provided for convenience in understanding the changes between STU 1 and STU 2, and is not a formal part of the specification.
 
-### Download Links
+Download link:
 
-* [Current mCODE Data Dictionary - STU 2 (Excel download)](data-dictionary/mCODEDataDictionary-STU2.xlsx)
 * [mCODE Data Dictionary Differential STU2 versus STU1 (Excel download)](data-dictionary/mCODEDataDictionary-STU2-vs-STU1.xlsx)
-* [Former mCODE Data Dictionary - STU 1 (Excel download)](data-dictionary/mCODEDataDictionary-STU1.xlsx)
+
+### Other Download Links
+
 * [Full Specification (zip)](full-ig.zip)
 * [Package (tgz)](package.tgz)
 * [JSON Definitions (zip)](definitions.json.zip)

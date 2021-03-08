@@ -1,7 +1,7 @@
 title: mCODE Data Dictionary
 informationTabContent:
   General notes: |-
-    **Profiles not shown in data dictionary:** Not all profiles used by mCODE are included in the Data Dictionary. mCODE uses FHIR profiles for Blood Pressure, Height, Weight, and the US Core Laboratory Result Observation Profile for Complete Blood Count (CBC), and Comprehensive Metabolic Panel (CMP). These profiles are not included in the Data Dictionary because they are defined externally to mCODE.
+    **Profiles not shown in data dictionary:** Profiles that are used by mCODE but defined externally to mCODE, such as vital signs (defined by FHIR or US Core), are not included in the Data Dictionary.
 
     **Data elements not shown in data dictionary:** Only elements marked as "Must Support" in the FHIR Implementation Guide are included in this data dictionary. These are elements that implementers are expected to provide meaningful support for; see http://hl7.org/fhir/us/mcode/conformance.html#mustsupport-interpretation for more information.
 

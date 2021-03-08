@@ -219,9 +219,9 @@ Description: "Extended example: example showing TNM staging (stage group)"
 * effectiveDateTime = "2018-03-16"
 * valueCodeableConcept = AJCC#2B "IIB"
 * method = NCIT#C146985 "AJCC Cancer Staging Manual 8th Edition"
-* hasMember[0] = Reference(tnm-clinical-primary-tumor-category-jenny-m)
-* hasMember[1] = Reference(tnm-clinical-regional-nodes-category-jenny-m)
-* hasMember[2] = Reference(tnm-clinical-distant-metastases-category-jenny-m)
+* hasMember[0] = Reference(tnm-pathologic-primary-tumor-category-jenny-m)
+* hasMember[1] = Reference(tnm-pathologic-regional-nodes-category-jenny-m)
+* hasMember[2] = Reference(tnm-pathologic-distant-metastases-category-jenny-m)
 
 Instance: tnm-clinical-primary-tumor-category-jenny-m
 InstanceOf: TNMPrimaryTumorCategory
@@ -576,7 +576,7 @@ InstanceOf: CancerRelatedMedicationAdministration
 Description: "Extended example: example showing chemotherapy medication"
 * status = #completed "completed"
 * category = MedReqCat#outpatient
-* medicationCodeableConcept = RXN#1790099 "10 ML doxorubicin hydrochloride 2 MG/ML Injection"
+* medicationCodeableConcept = RXN#1790099 "doxorubicin hydrochloride 20 MG per 10 ML Injection"
 * subject = Reference(cancer-patient-jenny-m)
 * performer.actor = Reference(us-core-practitioner-nancy-oncology-nurse)
 * reasonReference = Reference(primary-cancer-condition-jenny-m)

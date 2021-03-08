@@ -395,3 +395,69 @@ v: {
   "error" : ""
 }
 -------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+  "code" : "1790099"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+      "filter" : [{
+        "property" : "TTY",
+        "op" : "in",
+        "value" : "SCD,SBD,GPCK,BPCK,SCDG,SBDG,SCDF,SBDF"
+      }]
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "Argument out of range (from http://tx.fhir.org/r4)"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+  "code" : "1790099",
+  "display" : "10 ML doxorubicin hydrochloride 2 MG/ML Injection"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+      "filter" : [{
+        "property" : "TTY",
+        "op" : "in",
+        "value" : "SCD,SBD,GPCK,BPCK,SCDG,SBDG,SCDF,SBDF"
+      }]
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK"}####
+v: {
+  "display" : "DOXOrubicin hydrochloride 20 MG per 10 ML Injection",
+  "severity" : "warning",
+  "error" : "The display \"10 ML doxorubicin hydrochloride 2 MG/ML Injection\" is not a valid display for the code {http://www.nlm.nih.gov/research/umls/rxnorm}1790099 - should be one of [\"DOXOrubicin hydrochloride 20 MG per 10 ML Injection\",\"doxorubicin hydrochloride 20 MG per 10 ML Injection\"] (from http://tx.fhir.org/r4)"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+  "code" : "1790099"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "DOXOrubicin hydrochloride 20 MG per 10 ML Injection",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+  "code" : "1790099",
+  "display" : "doxorubicin hydrochloride 20 MG per 10 ML Injection"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "DOXOrubicin hydrochloride 20 MG per 10 ML Injection",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------

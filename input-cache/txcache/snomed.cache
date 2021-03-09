@@ -81833,3 +81833,262 @@ e: {
   "error" : ""
 }
 -------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://snomed.info/sct",
+  "code" : "399707004"
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "Supportive - procedure intent (qualifier value)",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://snomed.info/sct",
+  "code" : "373808002"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://snomed.info/sct",
+      "concept" : [{
+        "code" : "373808002",
+        "display" : "Curative - procedure intent"
+      },
+      {
+        "code" : "363676003",
+        "display" : "Palliative - procedure intent"
+      },
+      {
+        "code" : "399707004",
+        "display" : "Supportive - procedure intent"
+      },
+      {
+        "code" : "261004008",
+        "display" : "Diagnostic intent"
+      },
+      {
+        "code" : "129428001",
+        "display" : "Preventive - intent"
+      },
+      {
+        "code" : "429892002",
+        "display" : "Guidance intent"
+      },
+      {
+        "code" : "360156006",
+        "display" : "Screening - procedure intent"
+      },
+      {
+        "code" : "447295008",
+        "display" : "Forensic intent"
+      }]
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "Curative procedure",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://snomed.info/sct",
+  "code" : "373808002",
+  "display" : "Curative - procedure intent (qualifier value)"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://snomed.info/sct",
+      "concept" : [{
+        "code" : "373808002",
+        "display" : "Curative - procedure intent"
+      },
+      {
+        "code" : "363676003",
+        "display" : "Palliative - procedure intent"
+      },
+      {
+        "code" : "399707004",
+        "display" : "Supportive - procedure intent"
+      },
+      {
+        "code" : "261004008",
+        "display" : "Diagnostic intent"
+      },
+      {
+        "code" : "129428001",
+        "display" : "Preventive - intent"
+      },
+      {
+        "code" : "429892002",
+        "display" : "Guidance intent"
+      },
+      {
+        "code" : "360156006",
+        "display" : "Screening - procedure intent"
+      },
+      {
+        "code" : "447295008",
+        "display" : "Forensic intent"
+      }]
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK"}####
+v: {
+  "display" : "Curative procedure",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://snomed.info/sct",
+  "code" : "373808002",
+  "display" : "Curative - procedure intent"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://snomed.info/sct",
+      "concept" : [{
+        "code" : "373808002",
+        "display" : "Curative - procedure intent"
+      },
+      {
+        "code" : "363676003",
+        "display" : "Palliative - procedure intent"
+      },
+      {
+        "code" : "399707004",
+        "display" : "Supportive - procedure intent"
+      },
+      {
+        "code" : "261004008",
+        "display" : "Diagnostic intent"
+      },
+      {
+        "code" : "129428001",
+        "display" : "Preventive - intent"
+      },
+      {
+        "code" : "429892002",
+        "display" : "Guidance intent"
+      },
+      {
+        "code" : "360156006",
+        "display" : "Screening - procedure intent"
+      },
+      {
+        "code" : "447295008",
+        "display" : "Forensic intent"
+      }]
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK"}####
+v: {
+  "display" : "Curative procedure",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://snomed.info/sct",
+      "concept" : [{
+        "code" : "373808002",
+        "display" : "Curative - procedure intent"
+      },
+      {
+        "code" : "363676003",
+        "display" : "Palliative - procedure intent"
+      },
+      {
+        "code" : "399707004",
+        "display" : "Supportive - procedure intent"
+      },
+      {
+        "code" : "261004008",
+        "display" : "Diagnostic intent"
+      },
+      {
+        "code" : "129428001",
+        "display" : "Preventive - intent"
+      },
+      {
+        "code" : "429892002",
+        "display" : "Guidance intent"
+      },
+      {
+        "code" : "360156006",
+        "display" : "Screening - procedure intent"
+      },
+      {
+        "code" : "447295008",
+        "display" : "Forensic intent"
+      }]
+    }]
+  }
+}}####
+e: {
+  "valueSet" : {
+  "resourceType" : "ValueSet",
+  "status" : "active",
+  "expansion" : {
+    "identifier" : "urn:uuid:c4e7684e-6188-49a8-8014-470995c9a26a",
+    "timestamp" : "2021-03-09T22:00:48.167Z",
+    "parameter" : [{
+      "name" : "limitedExpansion",
+      "valueBoolean" : true
+    },
+    {
+      "name" : "version",
+      "valueString" : "http://snomed.info/sct|http://snomed.info/sct/731000124108/version/20200901"
+    }],
+    "contains" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "373808002",
+      "display" : "Curative - procedure intent"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "363676003",
+      "display" : "Palliative - procedure intent"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "399707004",
+      "display" : "Supportive - procedure intent"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "261004008",
+      "display" : "Diagnostic intent"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "129428001",
+      "display" : "Preventive - intent"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "429892002",
+      "display" : "Guidance intent"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "360156006",
+      "display" : "Screening - procedure intent"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "447295008",
+      "display" : "Forensic intent"
+    }]
+  }
+},
+  "error" : ""
+}
+-------------------------------------------------------------------------------------

@@ -109,25 +109,27 @@ Description: "If the code representing 'Other tumor marker test, specify' is use
 Expression: "coding.where(code = 'TMT-OTHER').exists() implies coding.where(code != 'TMT-OTHER' and $this.memberOf('http://hl7.org/fhir/us/mcode/ValueSet/mcode-tumor-marker-test-vs').not()).exists()"
 Severity:   #error
 
+RuleSet: CancerRelatedSpecimenRules
+* type 1..1
+* type from GeneticSpecimenTypeVS (extensible)
+* subject only Reference(CancerPatient)
+* collection.bodySite.extension contains
+    LocationQualifier named locationQualifier 0..*
+// It would be nice to reuse the existing condition-related extension (see Jira https://jira.hl7.org/projects/FHIR/issues/FHIR-31027) but it doesn't apply to Specimen
+* extension contains ConditionRelated named relatedCondition 0..1 MS
+* extension[relatedCondition].value[x] only Reference(PrimaryCancerCondition or SecondaryCancerCondition)
+* extension[relatedCondition] ^short = "Cancer condition associated with this sample."
+* extension[relatedCondition] ^definition = "A reference that associates this sample with a cancer condition."
+// No inherited MS
+* subject and status and type and collection and collection.bodySite and collection.bodySite.extension and collection.bodySite.extension[locationQualifier] MS
 
-Profile:    GeneticSpecimen
+
+Profile:    GeneticSpecimen 
 Parent:     Specimen
 Id: mcode-genetic-specimen
 Title:      "Genetic Specimen"
 Description:    "A small sample of blood, hair, skin, amniotic fluid (the fluid that surrounds a fetus during pregnancy), or other tissue which is excised from a subject for the purposes of genomics testing or analysis."
-* type 1..1
-* type from GeneticSpecimenTypeVS
-* collection.bodySite.extension contains
-    LocationQualifier named locationQualifier 0..*
-// No inherited MS
-* subject and status and type and collection and collection.bodySite and collection.bodySite.extension[locationQualifier] MS
-// * insert ReduceText
-// * insert ReduceText2(identifier)
-// * insert ReduceText(collection)
-// * insert ReduceText2(collection.bodySite)
-// * insert ReduceText(processing)
-// * insert ReduceText(container)
-
+* insert CancerRelatedSpecimenRules
 
 Profile:    CancerGenomicsReport
 Parent:     USCoreDiagnosticReportLab

@@ -5,16 +5,16 @@ Description: "System used for staging."
 * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
 * ^expansion.parameter.name = "sushi-generated"
 * ^expansion.parameter.valueBoolean = true
-* SCT#444256004 "American Joint Commission on Cancer, Cancer Staging Manual, 6th edition neoplasm staging system (tumor staging)"
-* SCT#443830009 "American Joint Commission on Cancer, Cancer Staging Manual, 7th edition neoplasm staging system (tumor staging)"
 * NCIT#C146985 "AJCC Cancer Staging Manual 8th Edition"
-* SCT#258235000 "International Union Against Cancer (tumor staging)"
 * NCIT#C141138 "Ann Arbor Stage"
 * NCIT#C141212 "Binet Stage"
 * NCIT#C125738 "FIGO Stage"
 * NCIT#C141147 "Lugano Stage"
 * NCIT#C141207 "Rai Stage"
 * NCIT#C54179 "Ann Arbor Lymphoma Staging System"
+* SCT#444256004 "American Joint Commission on Cancer, Cancer Staging Manual, 6th edition neoplasm staging system (tumor staging)"
+* SCT#443830009 "American Joint Commission on Cancer, Cancer Staging Manual, 7th edition neoplasm staging system (tumor staging)"
+* SCT#258235000 "International Union Against Cancer (tumor staging)"
 
 ValueSet: ObservationCodesStageGroupVS
 Id: mcode-observation-codes-stage-group-vs

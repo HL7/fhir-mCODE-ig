@@ -294,11 +294,11 @@
 <page deprecated="true" key="profiles" name="(profiles)"/>
 <page key="artifacts" name="Artifacts Summary"/>
 <page key="group-assessment" name="Assessment"/>
-<page deprecated="true" key="changelog" name="Change Log"/>
-<page key="change_log" name="Change log"/>
+<page key="changelog" name="Change Log"/>
 <page key="conformance-general" name="Conformance Expectations"/>
+<page key="dictionary" name="Data Dictionary"/>
 <page key="group-disease" name="Disease Characterization"/>
-<page key="downloads" name="Downloads"/>
+<page key="downloads" name="Download Specification"/>
 <page key="examples" name="Extended Example"/>
 <page deprecated="true" key="extensions" name="Extensions"/>
 <page key="group-genomics" name="Genomics"/>

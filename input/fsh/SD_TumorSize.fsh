@@ -108,11 +108,9 @@ Parent: Specimen
 Id: mcode-tumor-specimen
 Title: "Tumor Specimen"
 Description: "Represents a tumor after it has been removed from the body. Prior to excision, use [Tumor](StructureDefinition-mcode-tumor.html) (a BodyStructure) instead. If this tumor was represented by [Tumor](StructureDefinition-mcode-tumor.html) while still in the body, use `identifier` to associate with that resource."
-// We took the GeneticSpecimen.type from code system http://terminology.hl7.org/CodeSystem/v2-0487 (alias SPTY) so I suggest doing the same here
+* insert CancerRelatedSpecimenRules
+// These rules are above and beyond GeneticSpecimen
 * type = SPTY#TUMOR
-* subject only Reference(CancerPatient)
-* collection.bodySite.extension contains
-    LocationQualifier named locationQualifier 0..*
 * identifier ^slicing.discriminator.type = #pattern
 * identifier ^slicing.discriminator.path = "type"
 * identifier ^slicing.rules = #open
@@ -121,14 +119,7 @@ Description: "Represents a tumor after it has been removed from the body. Prior 
 * identifier[tumorIdentifier] only BodyStructureIdentifier
 * identifier[tumorIdentifier] ^short = "Identifier to associate this specimen with a specific Tumor"
 * identifier[tumorIdentifier] ^definition = "To associate this with a specific BodyStructure conforming to the Tumor profile, add an identifier with a value that matches a persistent identifier from `BodyStructure.identifier.value` that is unique in the context of the Patient."
-
-// It would be nice to reuse the existing condition-related extension (see Jira https://jira.hl7.org/projects/FHIR/issues/FHIR-31027)
-* extension contains ConditionRelated named relatedCondition 0..1 MS
-* extension[relatedCondition].value[x] only Reference(PrimaryCancerCondition or SecondaryCancerCondition)
-* extension[relatedCondition] ^short = "Reference to the cancer condition associated with this tumor"
-* extension[relatedCondition] ^definition = "Associates this tumor with a cancer condition."
-// Must Supports -- there is no US Core fallback
-* type and subject and collection and collection.bodySite and collection.bodySite and collection.bodySite.extension and collection.bodySite.extension[locationQualifier] and identifier and identifier[tumorIdentifier] and identifier[tumorIdentifier].type and identifier[tumorIdentifier].value and extension and extension[relatedCondition] MS
+* identifier and identifier[tumorIdentifier] and identifier[tumorIdentifier].type and identifier[tumorIdentifier].value MS
 
 
 /* Commenting out MultifocalTumor observation for now

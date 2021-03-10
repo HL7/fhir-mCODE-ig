@@ -1,8 +1,16 @@
 <div markdown="1" class="note-to-balloters">
-New and updated content will be highlighted with green text and background where applicable.
-{:.new-content}
+Please review the areas where major changes have occurred since STU 1. These include:
 
-Please review the STU2 changes listed in the [mCODE FHIR IG Change Log](change_log.html).
+* Improved [Data Dictionary](dictionary.html): Is it understandable? Does it include the elements that address your use case?
+* Improved [Conformance Criteria](conformance-general.html): Is it clear what “mCODE conformant” means after reading this?
+* New [mCODE Patient Bundle][MCODEPatientBundle] to return all mCODE information for a given patient: Any comments?
+* New [capability statements and search parameters](conformance-patients.html): Does the API make sense? Meet your needs?
+* New [Tumor size observation][TumorSize]: Does the profile satisfy use cases that need this information?
+* Revised radiotherapy profiles, [RadiotherapyCourseSummary], [TeleradiotherapyTreatmentPhase] and [BrachytherapyTreatmentPhase]: Do these profiles satisfy an oncologist's need for information about radiotherapy treatments at the right level of detail?
+* Revised design for [Comorbidities][ComorbiditiesElixhauser]: Is it clear how to use this profile?
+* New [extended patient journey example](examples.html): Does this help readers understand how mCODE might be applied to the real world?
+
+A complete list of STU2 changes are listed in the [change log](change_log.html).
 </div>
 
 ### Background
@@ -53,16 +61,19 @@ The groups are illustrated in the following diagram:
 
 ### Data Dictionary
 
-In addition to the FHIR artifacts, readers should also take note of the [Data Dictionary (Excel download)](data-dictionary/mCODEDataDictionary-STU2.xlsx), a simplified, flattened list of mCODE elements.
+In addition to the FHIR artifacts, readers should also take note of the [Data Dictionary ](dictionary.html), a simplified, flattened list of mCODE elements in MS-Excel format.
 
-The STU 2 DD is somewhat different than the STU 1 version. In STU 1, some data elements were suppressed because they were common to most or all profiles, such as the patient, provider, status, and date. However, the redaction of certain elements proved confusing, so the current DD does not continue this practice. As a result, the STU 2 DD lists significantly more data elements.  Many of the "extra" rows are not new at all, but reflect the inclusion of elements redacted in STU 1.
-{:.new-content}
+There is also a [Data Dictionary Differential](dictionary.html#data-dictionary-differential) that compares STU 1 with STU 2 on an element-by-element basis.
 
 ### Understanding this Guide
 
 The mCODE Implementation Guide was developed using the standard HL7 FHIR publishing tools. The page layouts and symbols are explained [in the FHIR documentation](https://www.hl7.org/fhir/formats.html). In viewing a profile page, note that there are multiple views. The "Differential Table" view represents the difference between the current profile and its base resource or profile. When interpreting this view, bear in mind that the immediate parent may not be a base FHIR resource, but it could be a US Core profile or another profile in this guide. The "Snapshot Table" represents the entire profile, with all elements.
 
 In the event there are differences between the page renderings in this IG and the associated FHIR artifacts, the FHIR artifacts should be taken as the source of truth. In the unlikely event that an artifact's snapshot is inconsistent with its differential, the differential should be taken as the source of truth.
+
+### Providing Feedback
+
+<p style="background-color: #fce4ff; margin-top: 2rem; margin-bottom: 2rem; padding: 0.5em; border: 1px solid #be86c5;">If you have questions or comments about this guide, please reach out on <a href="https://chat.fhir.org/#narrow/stream/179234-Cancer-Interoperability/topic/mCODE">chat.fhir.org</a> or create an issue in the <a href="https://jira.hl7.org/issues/?filter=13361">HL7 Jira</a>.</p>
 
 ### Credits
 

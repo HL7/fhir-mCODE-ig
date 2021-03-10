@@ -30,9 +30,9 @@ A timeline of the narrative is illustrated in the following diagram:
 
 * [`cancer-patient-jenny-m`](Patient-cancer-patient-jenny-m.html) ([CancerPatient])
 * [`cancer-disease-status-jenny-m`](Observation-cancer-disease-status-jenny-m.html) ([CancerDiseaseStatus])
-* [`cancer-related-mcode-comorbidities-elixhauser-jenny-m`](Observation-cancer-related-mcode-comorbidities-elixhauser-jenny-m.html) ([ComorbidCondition])
-* [`us-core-condition-depression-jenny-m`](Condition-us-core-condition-depression-jenny-m.html) ([ComorbidCondition])
-* [`us-core-condition-hypertension-jenny-m`](Condition-us-core-condition-hypertension-jenny-m.html) ([ComorbidCondition])
+* [`cancer-related-mcode-comorbidities-elixhauser-jenny-m`](Observation-cancer-related-mcode-comorbidities-elixhauser-jenny-m.html) ([ComorbiditiesElixhauser])
+* [`us-core-condition-depression-jenny-m`](Condition-us-core-condition-depression-jenny-m.html) ([ComorbiditiesElixhauser])
+* [`us-core-condition-hypertension-jenny-m`](Condition-us-core-condition-hypertension-jenny-m.html) ([ComorbiditiesElixhauser])
 * [`ecog-performance-status-jenny-m`](Observation-ecog-performance-status-jenny-m.html) ([ECOGPerformanceStatus])
 * [`cancer-related-surgical-procedure-jenny-m`](Procedure-cancer-related-surgical-procedure-jenny-m.html) ([CancerRelatedSurgicalProcedure])
 * [`mcode-patient-bundle-jenny-m`](Bundle-mcode-patient-bundle-jenny-m.html) ([MCODEPatientBundle])

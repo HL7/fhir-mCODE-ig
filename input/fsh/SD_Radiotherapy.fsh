@@ -17,7 +17,7 @@ Profile:  RadiotherapyCourseSummary
 Parent:   USCoreProcedure  // considered one procedure with multiple parts
 Id:       mcode-radiotherapy-course-summary
 Title:    "Radiotherapy Course Summary"
-Description: "A summary of a course of radiotherapy delivered to a patient. One course of treatment can involve multiple phases applied to multiple treatment volumes. The status is changed to complete when the course has been fully delivered or changed to stopped if terminated. To describe the treatment in more detail, use either TeleradiotherapyTreatmentPhase or BrachytherapyTreatmentPhase, which should reference this summary through their partOf elements."
+Description: "A summary of a course of radiotherapy delivered to a patient. The status is changed to complete when the course has been fully delivered or changed to stopped if terminated. To describe the treatment in more detail, use either TeleradiotherapyTreatmentPhase or BrachytherapyTreatmentPhase, which should reference this summary through their partOf elements."
 * insert RadiotherapyCommon
 // Summary-specific content
 * code = RID#mcode-radiotherapy-course-summary

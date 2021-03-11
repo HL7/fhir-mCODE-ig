@@ -1,44 +1,35 @@
-### mCODE 1.8 STU 2 Ballot Version (May 2021)
+### mCODE STU 2 Ballot Version (May 2021)
 
-The following changes to [the STU1 release](http://hl7.org/fhir/us/mcode/STU1) are in preparation for the STU2 Ballot (voting anticipated in May 2021).
+The following summarizes changes to [the STU1 release](http://hl7.org/fhir/us/mcode/STU1) for the STU2 Ballot (May 2021). Many of these changes have been taken in response to input from the HL7 community. Issue numbers refer to the [HL7 Jira](https://jira.hl7.org/issues/?filter=13361) (free account registration required).
 
-Many of these changes have been taken in response to comments from the HL7 community. Issue numbers refer to the [HL7 Jira](https://jira.hl7.org/issues/?filter=13361) (free account registration required).
+A comprehensive listing of differences in FHIR artifacts between STU 1 and STU 2 is given in the [Data Dictionary Differential](dictionary.html#data-dictionary-differential) (DDD) spreadsheet. This file is meant to supplement rather than replace the content in this Implementation Guide, and the Implementation Guide takes precedence in any cases where the DDD appears to conflict with it.
 
-These changes can be seen in the [continuous integration build of mCODE](http://build.fhir.org/ig/HL7/fhir-mCODE-ig/branches/master/index.html), or summarized in these supplemental files:
+#### General Changes
 
-1. [**STU2 Ballot Data Dictionary** (.xlsx)](data-dictionary/mCODEDataDictionary-STU2.xlsx): Describes profiles and their key elements (flagged with MustSupport in the IG), along with value sets.
-1. [**STU1 vs. STU2 Ballot Diff** (.xlsx)](data-dictionary/mCODEDataDictionary-STU2-vs-STU1.xlsx): Compares all profiles and elements in STU1 and the proposed STU2.
 
-For both supplemental files **please read the first tab for important information on how to interpret their contents.** These files are meant to supplement rather than replace the content in this Implementation Guide, and the Implementation Guide takes precedence in any cases where the supplemental files appear to conflict with it.
+* Improved [Data Dictionary](dictionary.html)
+* New and improved [Conformance Criteria](conformance-general.html)
+* New [OperationDefinition][mcode-patient-everything] for retrieving an mCODE bundle.
+* New [CapabilityStatements and SearchParameters](conformance-patients.html) defined for mCODE Data Sender and mCODE Data Receiver roles
+* New [extended patient journey example](examples.html)
+* Extended [conformance criteria](conformance-general.html) to allow compliance to be tested in a more objective way
+* Realignment of the six mCODE groups (Patient, Disease, Genomics, Labs/Vitals, Outcomes): Labs/Vitals has been renamed "Assessments" and some profiles formerly in the Patient Group have been moved into that group. TumorMarkerTest has been moved from Labs/Vitals to the Disease group. The [mCODE concept diagram](index.html#scope-and-conceptual-model) has been updated to reflect these changes.
 
-<p style="background-color: #fce4ff; margin-top: 2rem; margin-bottom: 2rem; padding: 0.5em; border: 1px solid #be86c5;">If you have questions or comments about these changes, please reach out on <a href="https://chat.fhir.org/#narrow/stream/179234-Cancer-Interoperability/topic/mCODE">chat.fhir.org</a> (free account registration required) or on the <a href="https://jira.hl7.org/issues/?filter=13361">HL7 Jira</a>.</p>
+#### Patient Group Changes
 
-#### General
-
-{:.new-content #GeneralChanges}
-  * Capability Statements which specifies the contents for the [sender] and [receiver] of an [mCODE Patient Bundle](StructureDefinition-mcode-patient-bundle.html).
-  * OperationDefinition [mcode-patient-everything] for retrieving an mCODE bundle.
-  * [Conformance](conformance-general.html) - Defined mCODE compliance in a testable way.
-  * The six mCODE groups (Patient, Disease, Genomics, Labs/Vitals, Outcomes) have been re-aligned. Labs/Vitals has been renamed "Assessments" and some profiles formerly in the Patient Group have been moved into that group. TumorMarkerTest has been moved from Labs/Vitals to the Disease group. The mCODE concept diagram has ben updated to reflect these changes.
-
-#### Patient
-
-* Elixhauser comorbities have been redesigned to further specify groupings by category.
+* [Comorbidities][ComorbiditiesElixhauser] have been redesigned to capture the presence or absence of all comorbidities in one Observation.
+* A new profile, [MCODEPatientGroup], has been added to represent the patients to be considered in scope for mCODE.
+* A new profile, [MCODEPatientBundle], has been added for the purpose of returning all mCODE resources related to a [CancerPatient].
 
 #### Disease
 
 * The separate sets of profiles for TNM Clinical and TNM Pathologic staging were combined into a single set of profiles: [CancerStageGroup], [TNMPrimaryTumorCategory], [TNMRegionalNodesCategory], and [TNMDistantMetastasesCategory]. The new profiles can be used for both clinical and pathologic TNM staging, or for other types of TNM staging; these are differentiated by the value of `Observation.code` in CancerStageGroup, which is bound to [ObservationCodesPrimaryTumorVS].
-
-{:.new-content #CancerStageGroup}
-  * The profile TNMStageGroup is now renamed [CancerStageGroup] in order to support non-TNM staging systems such as Rai, Binet, and Revised International Staging System (R-ISS).
+* The profile TNMStageGroup is now renamed [CancerStageGroup] in order to support non-TNM staging systems such as Rai, Binet, and Revised International Staging System (R-ISS).
 
 #### Treatment
 
-* [CancerRelatedMedicationStatement](http://hl7.org/fhir/us/mcode/STU1/StructureDefinition-mcode-cancer-related-medication-statement.html) was replaced with [CancerRelatedMedicationRequest] and [CancerRelatedMedicationAdministration].
-
-  This decision was prompted by US Core STU Release 3.1.1, which replaced MedicationStatement with MedicationRequest. [Its guidance for fetching medications in different contexts is provided here.](http://hl7.org/fhir/us/core/all-meds.html)
-
-* Radiation therapy is expanded to include element requirements from the American Society for Radiation Oncology (ASTRO), resulting in additional profiles: [RadiotherapyCourseSummary] and [TeleradiotherapyTreatmentPhase]
+* [CancerRelatedMedicationStatement](http://hl7.org/fhir/us/mcode/STU1/StructureDefinition-mcode-cancer-related-medication-statement.html) was replaced with [CancerRelatedMedicationRequest] and [CancerRelatedMedicationAdministration]. This decision was prompted by US Core STU Release 3.1.1, which replaced MedicationStatement with MedicationRequest. [Its guidance for fetching medications in different contexts is provided here.](http://hl7.org/fhir/us/core/all-meds.html)
+* Radiotherapy procedure area was expanded to include new requirements, resulting in additional profiles: [RadiotherapyCourseSummary], [RadiotherapyCourseSummary], and [TeleradiotherapyTreatmentPhase]
 
 #### Genomics
 

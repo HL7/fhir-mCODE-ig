@@ -130,5 +130,6 @@ Description:    "The type of specimen analyzed in a genetic test. The values are
 * SPTY#SNV       "Fluid, synovial (Joint fluid)"
 * SPTY#SPT       "Sputum"
 * SPTY#TISS      "Tissue"
+* SPTY#TUMOR     "Tumor"
 * SPTY#VITF      "Vitreous Fluid"
 * SPTY#WND       "Wound"

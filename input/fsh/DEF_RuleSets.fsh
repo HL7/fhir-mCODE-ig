@@ -61,7 +61,7 @@ RuleSet: CreateComorbidityComponent(sliceName)
 * component[{sliceName}].extension[conditionCode] MS
 * component[{sliceName}].extension[conditionReference] MS
 
-RuleSet: CreateBundleEntry(name, min, max, short, def, class)
+RuleSet: BundleEntry(name, min, max, short, def, class)
 * entry contains {name} {min}..{max} MS
 * entry[{name}] ^short = "{short}"
 * entry[{name}] ^definition = "{def}"

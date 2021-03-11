@@ -5,7 +5,7 @@ The bundle MUST contain exactly one Patient resource conforming to the [CancerPa
 * Condition resources representing the [PrimaryCancerCondition] and [SecondaryCancerCondition], if applicable
 * Observation resources representing [CancerDiseaseStatus]
 * Observation resources representing [ECOGPerformanceStatus] and/or [KarnofskyPerformanceStatus]
-* Observation resources representing any [TumorMarkerTests]
+* Observation resources representing any [TumorMarkerTest]
 * MedicationRequest resources conforming to [CancerRelatedMedicationRequest] and [CancerRelatedMedicationAdministration], representing any cancer-related prescriptions, administrations, and patient-reported medications
 * Procedure resources representing any [CancerRelatedSurgicalProcedure], [RadiotherapyCourseSummary], [BrachytherapyTreatmentPhase], and [TeleradiotherapyTreatmentPhase]
 * Observation resources representing the staging information: [CancerStageGroup], [TNMDistantMetastasesCategory], [TNMPrimaryTumorCategory], and [TNMRegionalNodesCategory]

@@ -17,9 +17,14 @@ A comprehensive listing of differences in FHIR artifacts between STU 1 and STU 2
 
 #### Patient Group Changes
 
-* [Comorbidities][ComorbiditiesElixhauser] have been redesigned to capture the presence or absence of all comorbidities in one Observation.
+* Certain profiles have been moved to the Assessments group
 * A new profile, [MCODEPatientGroup], has been added to represent the patients to be considered in scope for mCODE.
 * A new profile, [MCODEPatientBundle], has been added for the purpose of returning all mCODE resources related to a [CancerPatient].
+
+### Assessment
+
+* Changed the name of this group from Labs & Vital to Assessment and moved Performance Assessments and Comorbidities into this group.
+* [Comorbidities][ComorbiditiesElixhauser] have been redesigned to capture the presence or absence of all comorbidities in one Observation.
 
 #### Disease
 
@@ -61,7 +66,6 @@ The following are changes made to the [mCODE 0.9.1 September 2019 Ballot Release
 * Replaced references of CIMPL to references of FHIR Shorthand and SUSHI.
 * ECOGPerformanceStatus Observation.code and Observation.interpretation changed to align with the LOINC equivalent of ECOG score (89247-1) and interpretation (LOINC Answer List LL529-9).
 * KarnofskyPerformanceStatus Observation.code and Observation.interpretation changed to align with the LOINC equivalent of Karnofsky score (89243-0) and interpretation (LOINC Answer List LL4986-7).
-
 
 ### mCODE 0.9.1 September 2019 Ballot Release
 

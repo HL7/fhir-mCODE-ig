@@ -1,4 +1,4 @@
-### Categories and Codes
+### Usage
 
 Since formal terminologies do not provide codes for individual Elixhauser categories, mCODE provides them. The Elixhauser comorbidity categories represented here and corresponding codes are defined by [Elixhauser Comorbidity Software Refined for ICD-10-CM v2021.1](https://www.hcup-us.ahrq.gov/toolssoftware/comorbidityicd10/comorbidity_icd10.jsp). A total of 38 categories are defined.
 

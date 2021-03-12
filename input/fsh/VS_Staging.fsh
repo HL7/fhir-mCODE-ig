@@ -54,7 +54,7 @@ Description: "Identifying codes based on the timing of classification for distan
 
 ValueSet: CancerStageGroupVS
 Id: mcode-cancer-stage-group-vs
-Title: "TNM Stage Group Value Set"
+Title: "Stage Group Value Set"
 Description: "This value set is intended to contain allowable values for Stage Group, according to TNM staging rules. AJCC codes (preferably, version 8 for current cancers) SHOULD be used."
 * codes from system AJCC
 

@@ -23,7 +23,7 @@ Description: "Concepts describing types of instances, to be used in the 'code' e
 * #mcode-brachytherapy-treatment-phase "Brachytherapy Treatment Phase Resource" "Identifies a Procedure resource that describes delivery of brachytherapy (internal or surface radiation) and conforms to the BrachytherapyTreatmentPhase profile."
 
 CodeSystem: RadiotherapyCS
-Id: radiotherapy
+Id: radiotherapy-cs
 Title: "Radiotherapy Code System"
 Description: "Codes describing the modalities, techniques, and devices used in external beam radiotherapy and brachytherapy procedures."
 * ^url =  http://terminology.hl7.org/CodeSystem/radiotherapy
@@ -61,7 +61,7 @@ Description: "Codes describing the modalities, techniques, and devices used in e
 * #ORAL "Oral"  "Delivery of radiopharaceutical by oral intake."
 
 CodeSystem: ComorbiditiesElixhauserCS
-Id: comorbidities-elixhauser
+Id: comorbidities-elixhauser-cs
 Title: "Elixhauser Comorbidity Categories"
 Description: "A code system that contains codes representing the comorbidity categories originally defined by Elixhauser, and updated by the Agency for Healthcare Research and Quality (AHRQ) Healthcare Cost and Utilization Project (H-CUP)."
 * ^url =  http://terminology.hl7.org/CodeSystem/comorbidities-elixhauser

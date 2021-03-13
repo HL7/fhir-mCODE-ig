@@ -35,44 +35,66 @@ Where US Core does not provide an appropriate base profile, mCODE profiles FHIR 
 | [Tumor Specimen][TumorSpecimen] | no | Specimen |
 {: .grid }
 
-### Conformance to mCODE Profiles
+### Profile-Level Conformance Expectations
 
-Each mCODE profile expresses requirements and expectations for FHIR instances in terms of structural constraints and terminology bindings. If an instance is required to conform with an mCODE profile, it MUST [validate](https://www.hl7.org/fhir/validation.html) against that profile.
+Each mCODE profile expresses requirements and expectations for FHIR instances in terms of structural constraints and terminology bindings.
 
-#### Data Sender Expectations
+#### Expectations for the Data Sender
 
-Each mCODE profile has a conformance statement describing what data or FHIR instances MUST or SHOULD conform to it. The Data Sender has the responsibility for creating conformant instances. For example, in [PrimaryCancerCondition], the conformance requirements are expressed in two parts:
+1. A Data Sender MUST support all mCODE profiles that have a top-level Must Support (MS) flag.
+2. A Data Sender SHOULD support all profiles defined in mCODE UNLESS the participant does not anticipate supplying or consuming a certain type of data, usually by virtue of playing a limited or specialized role in clinical or information workflows.
+3. The Sender's list of supported profiles MUST be published in a CapabilityStatement.
+4. For each supported profile, the data sender MUST follow that profile's conformance statement describing what data MUST or SHOULD conform to that profile.
+5. When the appropriate profile has been determined, the Data Sender has the responsibility for creating instances that conform to that profile. The instance must pass [validation](https://www.hl7.org/fhir/validation.html).
 
-1. Any Condition resource associated with an [mCODE Patient](conformance-patients.html) whose `Condition.code` is in the value set `[PrimaryOrUncertainBehaviorCancerDisorderVS]` MUST conform to the profile.
-2. Any resource instance that would reasonably be expected to conform to the profile SHOULD conform to the profile.
+As an example of #4, in [PrimaryCancerCondition], the conformance requirements are expressed in two parts:
+
+* Any Condition resource associated with an [mCODE Patient](conformance-patients.html) whose `Condition.code` is in the value set `[PrimaryOrUncertainBehaviorCancerDisorderVS]` MUST conform to the profile.
+* Any resource instance that would reasonably be expected to conform to the profile SHOULD conform to the profile.
 
 The second statement is intended to discourage an mCODE Data Sender from creating different representation for data that *should* fall into the scope of mCODE. Compliance to this kind of condition is difficult to enforce, so it is expressed as a SHOULD.
 
-#### Data Receiver Expectations
+#### Expectations for the Data Receiver
 
-An mCODE Data Receiver SHOULD perform validation on instances it receives. There are four ways the Receiver can identify the profile to use for validation:
+1. A Data Receiver MUST support all mCODE profiles that have a top-level Must Support (MS) flag.
+2. A data receiver SHOULD support all profiles defined in mCODE UNLESS the participant does not anticipate supplying or consuming a certain type of data, usually by virtue of playing a limited or specialized role in clinical or information workflows.
+3. The Receiver's list of supported profiles MUST be published in a CapabilityStatement.
+4. A Receiver SHOULD perform validation on instances it receives.
 
-1. The instance is received in response to a [profile search](https://www.hl7.org/fhir/search.html#profile), so the validating profile is known in advance.
-2. The instance self-identifies an mCODE profile using `meta.profile`. Every Data Sender SHOULD populate this element.
-3. The Data Receiver examines the contents of the instance to associate it with a profile (in particular, by looking for an identifying code or category).
-4. The Data Receiver iteratively tries to validate against each of its supported profiles applicable to the instance's resource type.
+There are four ways the Receiver can identify the correct profile to use for validation:
+
+* The instance is received in response to a [profile search](https://www.hl7.org/fhir/search.html#profile), so the validating profile is known in advance.
+* The instance self-identifies an mCODE profile using `meta.profile`. Every Data Sender SHOULD populate this element.
+* The Data Receiver examines the contents of the instance to associate it with a profile. Often, there is an identifying code or category that can be used to associate an instance with a profile.
+* The Data Receiver iteratively tries to validate against each of its supported profiles applicable to the instance's resource type.
 
 If an instance fails validation, the Receiver may reject the instance.
 
-### Element-Level Expectations
+### Data Element-Level Conformance Expectations
 
-#### Sender and Receiver Expectations
+The following requirements for Sender and Receiver apply to every data element that carries a [Support Obligation](#element-support-obligations). Support Obligations do not necessarily align with Must Support (MS) **flags**, as explained in that section.
 
-For every element that is [required](#required-elements) and/or carries a [Must Support (MS) obligation](#must-support-obligations):
+#### Expectations for Data Sender
 
-* mCODE Data Senders SHALL be capable of populating the element, provided the Sender supports the profile (as indicated in its CapabilityStatement).
-* If the Sender lacks the data necessary to populate the element:
-  * If the element is required, the [US Core rules on missing data](http://hl7.org/fhir/us/core/general-guidance.html#missing-data) MUST be followed.
-  * If the element is not required but must be supported, the element SHOULD be entirely omitted. If there is a specific reason the data is missing, a data absent reason MAY be substituted.
-  * Senders MUST NOT substitute nonsense or filler values just to satisfy [MS obligations](#must-support-obligations) or cardinality requirements.
-* mCODE Data Receivers SHALL be capable of meaningfully processing elements with [MS obligations](#must-support-obligations), provided the Receiver supports the profile. Depending on context, "meaningfully process" might mean displaying the data element for human use, reacting to it, or storing it for other purposes.
+1. Data Senders SHALL be capable of populating every element with a Support Obligation.
+2. If the Sender lacks the data necessary to populate the element:
 
-#### Required Elements
+* If the element is not required (minimum cardinality = 0), the element SHOULD be entirely omitted. If there is a specific reason the data is missing, a data absent reason MAY be substituted.
+* If the element is required (minimum cardinality > 0), the [US Core rules on missing data](http://hl7.org/fhir/us/core/general-guidance.html#missing-data) MUST be followed.
+
+3. Senders MUST NOT substitute nonsense or filler values just to satisfy [MS obligations](#element-support-obligations) or cardinality requirements.
+
+#### Expectations for Data Receiver
+
+1. mCODE Data Receivers SHALL be capable of meaningfully processing all elements with [Support Obligations](#element-support-obligations). Depending on context, "meaningful processing" might mean displaying the data element for human use, reacting to it, or storing it for other purposes.
+
+### Element Support Obligations
+
+1. Only data elements in supported profiles, declared in the Sender or Receiver's CapabilityStatement, carry Support Obligations. In other words, if the profile itself is not supported, then none of the element of that profile need to be supported.
+
+
+
+
 
 An mCODE data element is **required** if any of the following criteria are met:
 
@@ -88,14 +110,6 @@ Interpretation of MS is not straightforward, since there is a difference between
 
 To see which elements have MS flags, consult the "Snapshot Table" view of the profile. The "Differential Table" view hides MS flags inherited from the parent profile. The "Snapshot Table (Must Support)" view reflects the IG Publisher's interpretation of how MS flags translate to MS obligations, which may or may not coincide with the US Core/mCODE interpretation.
 
-The following rules apply in mCODE:
-
-* A profile without an MS flag does not have to be supported [^1]. A participant MUST declare support for optional profiles in its CapabilityStatement.
-* Any MS flag or flags on an unsupported profile (as stated in participant's CapabilityStatement) do not carry MS obligations.
-* An element with an MS flag does not carry an MS obligation if it is nested and any one of the elements directly containing that element lacks an MS flag. However, if the participant *elects* to support the unflagged element or elements in that hierarchy, the elements below the gap then carry an MS obligation.
-* An element with an MS flag whose cardinality is 0..0 does not carry an MS obligation [^2].
-* A [required element](#required-elements) carries an MS obligation on the part of a Data Sender, regardless of whether that element has an MS flag.
-* A [required element](#required-elements) without an MS flag does not carry an MS obligation for the Data Receiver [^3].
 
 The following table explains how to interpret MS flags in certain cases involving complex elements. Requirements for Senders and Receivers for elements with MS obligations are [defined above](#sender-and-receiver-expectations). For the sake of completeness, this table covers certain cases not seen in mCODE.
 

@@ -6,7 +6,7 @@ The DD intentionally omits certain elements in FHIR that are not expected to be 
 
 * **Profiles not shown in the DD:** Not all profiles used by mCODE are included in the Data Dictionary. mCODE uses external profiles for vital signs and routine laboratory results. These profiles are not included in the DD because they are defined externally to mCODE.
 
-* **Data elements not shown in the DD:** Only elements marked as "Must Support"(MS) are included in data dictionary. These are elements that implementers may be expected to provide meaningful support for; see [Must Support Obligations](conformance-profiles.html#must-support-obligations) for more information. Some of the MS elements are inherited from US Core.
+* **Data elements not shown in the DD:** Only elements marked as "Must Support"(MS) are included in data dictionary. These are elements that implementers may be expected to provide meaningful support for; see [Profile-Level Conformance Expectations](conformance-profiles.html#profile-level-conformance-expectations) for more information. Some of the MS elements are inherited from US Core.
 
 <div markdown="1" class="note-to-balloters">
 The STU 2 DD is somewhat different than the STU 1 version. In STU 1, some data elements were suppressed because they were common to most or all profiles, such as the patient, provider, status, and date. However, the redaction of certain elements proved confusing, so the current DD does not continue this practice. As a result, the STU 2 DD lists significantly more data elements.  Many of the "extra" rows are not new at all, but reflect the inclusion of elements redacted in STU 1.

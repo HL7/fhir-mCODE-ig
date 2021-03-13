@@ -37,27 +37,29 @@ Where US Core does not provide an appropriate base profile, mCODE profiles FHIR 
 
 ### Profile-Level Conformance Expectations
 
-Each mCODE profile expresses requirements and expectations for FHIR instances in terms of structural constraints and terminology bindings.
+#### Expectations for Data Senders
 
-#### Expectations for the Data Sender
+The following rules apply to Senders:
 
 1. A Data Sender MUST implement all mCODE profiles that have a top-level Must Support (MS) flag [^1].
 2. A Data Sender SHOULD implement **all** profiles defined in mCODE UNLESS the participant does not anticipate supplying or consuming a certain type of data, usually by virtue of playing a limited or specialized role in clinical or information workflows.
 3. The Sender's list of implemented profiles MUST be published in a CapabilityStatement.
-4. For each implemented profile, the data sender MUST follow that profile's conformance statement describing what data MUST or SHOULD conform to that profile.
-5. When the appropriate profile for a certain type of data has been determined, the Sender has the responsibility for creating instances that conform to that profile. All such instances must pass [validation](https://www.hl7.org/fhir/validation.html).
+4. For each implemented profile, the Data Sender MUST follow that profile's conformance statement describing what data MUST or SHOULD conform to that profile.
+5. When the appropriate profile for a certain type of data has been determined, the Sender has the responsibility for creating instances that conform to that profile. All such instances must pass [validation](https://www.hl7.org/fhir/validation.html) against the selected profile.
 
-As an example of #4, in [PrimaryCancerCondition], the conformance requirements are expressed in two parts:
+As an example of #4, the conformance requirements for [PrimaryCancerCondition] are:
 
 * Any Condition resource associated with an [mCODE Patient](conformance-patients.html) whose `Condition.code` is in the value set `[PrimaryOrUncertainBehaviorCancerDisorderVS]` MUST conform to the profile.
 * Any resource instance that would reasonably be expected to conform to the profile SHOULD conform to the profile.
 
 The second statement is intended to discourage an mCODE Data Sender from creating different representation for data that *should* fall into the scope of mCODE. Compliance to this kind of condition is difficult to enforce, so it is expressed as a SHOULD.
 
-#### Expectations for the Data Receiver
+#### Expectations for Data Receivers
+
+The following rules apply to Receivers:
 
 1. A Data Receiver MUST implement all mCODE profiles that have a top-level MS flag [^1].
-2. A data receiver SHOULD implement **all** profiles defined in mCODE UNLESS the participant does not anticipate supplying or consuming a certain type of data, usually by virtue of playing a limited or specialized role in clinical or information workflows.
+2. A Data Receiver SHOULD implement **all** profiles defined in mCODE UNLESS the participant does not anticipate supplying or consuming a certain type of data, usually by virtue of playing a limited or specialized role in clinical or information workflows.
 3. The Receiver's list of implemented profiles MUST be published in a CapabilityStatement.
 4. A Receiver SHOULD perform validation on instances it receives.
 
@@ -72,16 +74,20 @@ If an instance fails validation, the Receiver may reject the instance.
 
 ### Data Element-Level Conformance Expectations
 
-The following requirements apply to every data element that is implemented (supported) by an implementation. For definition of what mCODE data elements must be implemented, see [Obligation to Implement](#obligation-to-implement).
+Each mCODE profile expresses requirements and expectations for FHIR instances on the level of individual data elements. The following requirements apply to every data element that is implemented (supported) by an implementation. For definition of what mCODE data elements must be implemented, see [Obligation to Implement](#obligation-to-implement).
 
-#### Expectations for Data Sender
+#### Expectations for Data Senders
+
+The following rules apply to Senders:
 
 1. The Data Sender SHALL be capable of populating every element it has implemented.
 2. For any element that is required (minimum cardinality > 0), if the Sender lacks the data necessary to populate the element, the [US Core rules on missing data](http://hl7.org/fhir/us/core/general-guidance.html#missing-data) MUST be followed.
 3. For any non-required element (minimum cardinality = 0), the element SHOULD be entirely omitted. If there is a specific reason the data is missing, a data absent reason MAY be substituted.
 4. Senders MUST NOT substitute nonsense or filler values for missing values.
 
-#### Expectations for Data Receiver
+#### Expectations for Data Receivers
+
+The following rule applies to Receivers:
 
 1. mCODE Data Receivers SHALL be capable of meaningfully processing all implemented elements. Depending on context, "meaningful processing" might mean displaying the data element for human use, reacting to it, or storing it for other purposes.
 
@@ -101,7 +107,7 @@ The following rules determine which data elements are OTI:
 
 #### Non-OTI Elements
 
-Data elements in mCODE that are not OTI still MAY be implemented. If an element is implemented, whether it is OTI or not, the profile must be interpreted as if an MS flag were present on that element. For example,(`TumorMarkerTest.performer`)[TumorMarkerTest] does not have an MS flag, but a Receiver may implement the capability to display it. In such a case, by virtue of the fact this element is a Reference( ) data type with no MS flag on any referenced resource or profile (case #7 in the [tabular summary](#obligation-to-implement-summary), below), the receiver would be obligated to implement all resources or profiles in the Reference unless outside the scope of the Receiver's capability statement, namely, Practitioner, PractitionerRole, Organization, CareTeam, Patient, and RelatedPerson.
+Data elements in mCODE that are not OTI still MAY be implemented. If an element is implemented, whether it is OTI or not, the profile must be interpreted as if an MS flag were present on that element. For example,(`TumorMarkerTest.performer`)[TumorMarkerTest] does not have an MS flag, but a Receiver may implement the capability to display it. In such a case, by virtue of the fact this element is a Reference( ) data type with no MS flag on any referenced resource or profile (case #7 in the [tabular summary](#obligation-to-implement-summary), below), the Receiver would be obligated to implement all resources or profiles in the Reference unless outside the scope of the Receiver's capability statement, namely, Practitioner, PractitionerRole, Organization, CareTeam, Patient, and RelatedPerson.
 
 #### Definition of Required
 
@@ -120,7 +126,7 @@ The following table summarizes how Obligations to Implement (OTI) derive from MS
 | # | MS-Flagged Element  | Data Sender (Server) OTI?  | Data Receiver (Client) OTI? | Example |
 |---|--------------|--------------|---------------|---|
 | 1 | Top level element, or nested element whose parents are all MS | Yes | Yes | [CancerDiseaseStatus.focus][CancerDiseaseStatus] or [CancerRelatedMedicationRequest.dosageInstruction.text][CancerRelatedMedicationRequest] |
-| 2 | Element is a nested (child) element and there is no MS flag on its parent element | OTI only if the sender/receiver chooses to implement the parent element | same | [US Core Patient version 3.2](https://bit.ly/us-core-2021Jan-StructureDefinition-us-core-patient) Patient.telecom.system |
+| 2 | Element is a nested (child) element and there is no MS flag on its parent element | OTI only if the Sender elects to implement the parent element | OTI only if the Receiver elects to implement the parent element | [US Core Patient version 3.2](https://bit.ly/us-core-2021Jan-StructureDefinition-us-core-patient) Patient.telecom.system |
 | 3 | Element is a [complex data type](https://www.hl7.org/fhir/datatypes.html#complex) (such as CodeableConcept) with no MS flag on any immediate sub-element  | MUST implement [at least one sub-element](https://bit.ly/us-core-2021Jan-conformance-expectations-must-support), and SHOULD implement every sub-element for which the server might possess data | MUST implement every sub-element (since the Receiver cannot anticipate which sub-elements might be populated) | [PrimaryCancerCondition.code][PrimaryCancerCondition] |
 | 4 | Element is a [complex data type](https://www.hl7.org/fhir/datatypes.html#complex) with an MS flag on one or more immediate sub-elements  | MUST implement [only the sub-elements that are explicitly flagged](https://bit.ly/us-core-2021Jan-conformance-expectations-must-support) | same | [CancerPatient.name][CancerPatient] |
 | 5 | Element is a [choice \[x\] type](https://www.hl7.org/fhir/stu3/formats.html#choice) with no MS flag on any choice | MUST implement at least one datatype choice, and SHOULD implement every datatype for which the server might possess data | MUST support **all** datatype choices (since the Receiver cannot anticipate which sub-elements might be populated)| [CancerPatient.deceased\[x\]][CancerPatient] |

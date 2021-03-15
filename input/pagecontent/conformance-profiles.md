@@ -79,6 +79,8 @@ Regarding #4, there are several ways the Receiver can identify the correct profi
 
 ### Obligation to Implement
 
+This section describes conformance requirements in terms of which profiles and data elements must (or should or may) be implemented by adopters of mCODE.
+
 #### Obligation to Implement Versus Must Support
 
 mCODE defines Obligation to Implement (OTI) as follows:

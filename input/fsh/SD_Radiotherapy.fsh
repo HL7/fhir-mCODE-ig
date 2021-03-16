@@ -4,6 +4,8 @@ RuleSet: RadiotherapyCommon
 * category = SCT#108290001 // "Radiation oncology AND/OR radiotherapy (procedure)"
 * performed[x] only Period
 * extension and category MS
+* bodySite ^short = "Not used in this profile."
+* bodySite ^definition = "A more detailed description of the treatment volume should be entered in the RadiotherapyDoseDelivered.volumeDescription."
 
 Profile:  RadiotherapyCourseSummary
 Parent:   USCoreProcedure  // considered one procedure with multiple parts
@@ -30,7 +32,6 @@ Description: "A summary of a course of radiotherapy delivered to a patient. The 
 * bodySite ^definition = "The high level description of the body region where the treatment was directed, based on Commission on Cancer’s 'Standards for Oncology Registry Entry  - STORE 2018'" 
 * bodySite and bodySite.extension and bodySite.extension[locationQualifier] MS
 */
-* bodySite ^definition = "Not used in this profile. A more detailed description of the treatment volume should be entered in the RadiotherapyDoseDelivered.volumeDescription."
 
 // ------------- Phase Summaries -----------------
 RuleSet: RadiotherapyPhaseCommon

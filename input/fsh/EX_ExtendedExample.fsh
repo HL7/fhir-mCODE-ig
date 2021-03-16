@@ -597,6 +597,7 @@ Description: "Example of radiotherapy treatment summary involving external beam 
 * category = SCT#108290001 "Radiation oncology AND/OR radiotherapy (procedure)"
 * bodySite = SCT#78904004 "Chest Wall Structure (body structure)"
 * reasonCode = ICD10CM#C50.811 "Malignant neoplasm of overlapping sites of right female breast"
+* extension[actualNumberOfSessions].valueUnsignedInt = 31
 * extension[treatmentIntent].valueCodeableConcept = SCT#373808002 "Curative - procedure intent"
 * performedPeriod.start = "2018-05-01"
 * performedPeriod.end = "2018-06-29"
@@ -627,7 +628,6 @@ Description: "Example of teleradiotherapy treatment phase involving external bea
 * extension[modality].valueCodeableConcept = RT#PHOTON "Photon Beam Radiation Therapy"
 * extension[technique].valueCodeableConcept = RT#VMAT "Volumetric Modulated Arc Therapy"
 * extension[fractionsDelivered].valueUnsignedInt = 25
-* extension[actualNumberOfSessions].valueUnsignedInt = 25
 * extension[doseDelivered][0].extension[volumeDescription].valueString = "Chest Wall"
 * extension[doseDelivered][0].extension[totalDoseDelivered].valueQuantity = 5000 'cGy'
 * extension[doseDelivered][0].extension[volumeId].valueString = "1.2.246.352…1"

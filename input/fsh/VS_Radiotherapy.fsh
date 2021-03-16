@@ -71,7 +71,7 @@ Description: "Codes describing the techniques of external beam and brachytherapy
 * include codes from valueset TeleradiotherapyTechniqueVS
 * include codes from valueset BrachytherapyTechniqueVS
 
-//----------BODY SITE------------
+/*  SAVE
 
 ValueSet: RadiotherapyBodySiteVS
 Id: mcode-radiotherapy-body-site-vs
@@ -147,7 +147,6 @@ Description: "Codes for body sites that can be targets of radiation therapy. Thi
 // no concept for hemibody
 
 
-/*  SAVE
 //----------- DEVICES -----------------------
 
 ValueSet: TeleradiotherapyDeviceVS

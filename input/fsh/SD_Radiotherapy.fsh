@@ -24,6 +24,8 @@ Description: "A summary of a course of radiotherapy delivered to a patient. The 
     RadiotherapyDoseDelivered named doseDelivered 0..* MS
 * extension[modality].value[x] from RadiotherapyModalityVS (required)
 * extension[technique].value[x] from RadiotherapyTechniqueVS (required)
+* reasonCode and reasonReference MS
+* obeys mcode-reason-required
 /* All bodySite stuff removed
 * bodySite from RadiotherapyBodySiteVS (extensible)
 * bodySite.extension contains

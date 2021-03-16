@@ -1,6 +1,6 @@
 ### Usage
 
-This profile is used to capture a course of radiotherapy delivered to a patient. A course of therapy systematically addresses a condition or set of related conditions. It can include multiple sessions, divided into multiple phases, and can last for several months. A course of treatment has a distinct beginning and end. While the Radiotherapy Course Summary can be incrementally updated as the treatment progresses, the primary purpose is to capture the entire course of treatment when it is over. The status element in
+This profile is used to capture a course of radiotherapy delivered to a patient. A course of therapy systematically addresses a condition or set of related conditions. It can include multiple sessions, divided into multiple phases, and can last for several months. A course of treatment has a distinct beginning and end. While the Radiotherapy Course Summary can be incrementally updated as the treatment progresses, the primary purpose is to capture the entire course of treatment from beginning to end. The status element indicates whether the treatment is in progress or complete.
 
 In radiotherapy, a _phase_ is a subset of a course. A phase is defined as a treatment consisting of one or multiple identical fractions. A phase ends and a new phase begins whenever there is a change in the treatment volume(s), dose per fraction, modality, or technique. Phases are represented by different profiles, [TeleradiotherapyTreatmentPhase] and [BrachytherapyTreatmentPhase].
 

@@ -20,19 +20,17 @@ Description: "A summary of a course of radiotherapy delivered to a patient. The 
     RadiotherapyTechnique named technique 0..* MS and
     RadiotherapySessions named actualNumberOfSessions 0..1 MS and
     RadiotherapyDoseDelivered named doseDelivered 0..* MS
-// now add fractionsDelivered at the dose/volume level
-* extension[doseDelivered].extension contains RadiotherapyFractionsDelivered named fractionsDelivered 0..1 MS
-* extension[doseDelivered].extension[fractionsDelivered] ^definition = "The total number of fractions delivered to this treatment volume."
 * extension[modality].value[x] from RadiotherapyModalityVS (required)
 * extension[technique].value[x] from RadiotherapyTechniqueVS (required)
-// All bodySite stuff
+/* All bodySite stuff removed
 * bodySite from RadiotherapyBodySiteVS (extensible)
 * bodySite.extension contains
     LocationQualifier named locationQualifier 0..*
 * bodySite ^short = "Body region treated"
 * bodySite ^definition = "The high level description of the body region where the treatment was directed, based on Commission on Cancer’s 'Standards for Oncology Registry Entry  - STORE 2018'" 
 * bodySite and bodySite.extension and bodySite.extension[locationQualifier] MS
-
+*/
+* bodySite ^definition = "Not used in this profile. A more detailed description of the treatment volume should be entered in the RadiotherapyDoseDelivered.volumeDescription."
 
 // ------------- Phase Summaries -----------------
 RuleSet: RadiotherapyPhaseCommon
@@ -44,6 +42,11 @@ RuleSet: RadiotherapyPhaseCommon
     RadiotherapyTechnique named technique 0..1 MS and
     RadiotherapyFractionsDelivered named fractionsDelivered 0..1 MS and
     RadiotherapyDoseDelivered named doseDelivered 0..* MS
+* extension[doseDelivered].extension[fractionsDelivered] 0..0
+* extension[doseDelivered].extension[fractionsDelivered] ^short = "Not used in this profile."
+* extension[doseDelivered].extension[fractionsDelivered] ^definition = "Record the fractions delivered in this phase in the top-level extension by the same name."
+* extension[doseDelivered].extension[fractionsDelivered] ^definition = " "
+* extension[fractionsDelivered] ^short = "Number of Fractions Delivered"
 * extension[fractionsDelivered] ^definition = "The number of fractions delivered during this phase."
 * bodySite ^definition = "Not used in this profile. A more detailed description of the treatment volume should be entered in the RadiotherapyDoseDelivered.volumeDescription."
 
@@ -121,11 +124,13 @@ Description: "Dose parameters for one treatment volume."
 * extension contains
     volumeDescription 0..1 MS and
     volumeId 0..1 MS and
-    totalDoseDelivered 0..1 MS
+    totalDoseDelivered 0..1 MS and
+    fractionsDelivered 0..1 MS
 * extension[volumeDescription].value[x] only string
 * extension[volumeId].value[x] only string
 * extension[totalDoseDelivered].value[x] only Quantity
 * extension[totalDoseDelivered].valueQuantity = UCUM#cGy
+* extension[fractionsDelivered].value[x] only unsignedInt
 // Definitions of in-line extensions
 * extension[volumeDescription] ^short = "Treatment volume where radiation was delivered"
 * extension[volumeDescription] ^definition = "Text description of the body structure treated, for example, Chest Wall Lymph Nodes."
@@ -133,10 +138,12 @@ Description: "Dose parameters for one treatment volume."
 * extension[volumeId] ^definition = "Identifier of the treatment volume where radiation was delivered, for example, PTV-2 (planning target volume 2). May be included as a reference to the treatment plan."
 * extension[totalDoseDelivered] ^short = "Total Radiation Dose Delivered"
 * extension[totalDoseDelivered] ^definition = "The total amount of radiation delivered to this treatment volume within the scope of this dose delivery."
+* extension[fractionsDelivered] ^short = "Number of Fractions Delivered"
+* extension[fractionsDelivered] ^definition = "The number of fractions delivered to this treatment volume."
 
 
 Invariant:  mcode-volume-description-or-id-required
-Description: "One of reasonCode or reasonReference SHALL be present"
+Description: "One of volumeDescription or volumeId MUST be present"
 Expression: "extension('volumeDescription').value.exists() or extension('volumeId').value.exists()"
 Severity:   #error
 

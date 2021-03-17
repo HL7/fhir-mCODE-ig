@@ -1,3 +1,4 @@
+
 ### Mapping from Other Vocabularies
 
 The modalities in this value set are drawn from the [radiotherapy code system][RadiotherapyCS] defined in this Implementation Guide. Existing terminology systems do not have all the necessary codes.
@@ -9,8 +10,8 @@ The following table shows mappings from SNOMED CT and NCI Thesaurus to teleradio
 | PROTON    | 10611004 Teleradiotherapy protons (procedure) | C66897 Proton Beam Radiation Therapy |
 | ELECTRON  | 45643008 Teleradiotherapy using electrons (procedure) | C15650 Electron Beam Therapy |
 | NEUTRON   | 80347004 Teleradiotherapy neutrons (procedure) | C15440 High-LET Neutron Therapy |
-| CARBON    | 312248006 Heavy ion teletherapy (procedure) (note 1)| C160816 Carbon Ion Radiation Therapy |
-| PHOTON    | 448385000 Megavoltage radiation therapy using photons (procedure) _or_ 169291001 X-ray beam therapy (procedure) (note 2) | C93337 High-energy Photon Therapy _or_ C104914 Photon Beam Radiation Therapy |
+| CARBON    | 312248006 Heavy ion teletherapy (procedure) [1] | C160816 Carbon Ion Radiation Therapy |
+| PHOTON    | 448385000 Megavoltage radiation therapy using photons (procedure) _or_ 169291001 X-ray beam therapy (procedure) [2] | C93337 High-energy Photon Therapy _or_ C104914 Photon Beam Radiation Therapy |
 {: .grid }
 
 **Notes:**

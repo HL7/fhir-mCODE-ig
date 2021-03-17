@@ -24,3 +24,4 @@ The following table shows mappings from SNOMED CT and NCI Thesaurus to of brachy
 | ORAL | 16560241000119104 Oral radionuclide therapy (procedure) | none |
 {: .grid }
 
+{% include markdown-link-references.md %}

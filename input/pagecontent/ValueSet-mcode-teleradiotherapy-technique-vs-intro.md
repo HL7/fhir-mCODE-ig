@@ -25,3 +25,4 @@ The following table shows mappings from SNOMED CT and NCI Thesaurus to of brachy
 | NCT | 169317000 Neutron capture therapy (procedure) | C15378 Boron Neutron Capture Therapy |
 {: .grid }
 
+{% include markdown-link-references.md %}

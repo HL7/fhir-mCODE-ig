@@ -17,3 +17,4 @@ The following table shows mappings from SNOMED CT and NCI Thesaurus to teleradio
 
 1. This a broader term and should be mapped only if it is known from context to represent carbon ion teleradiotherapy.
 
+{% include markdown-link-references.md %}

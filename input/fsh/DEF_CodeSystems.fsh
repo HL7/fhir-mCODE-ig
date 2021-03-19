@@ -63,7 +63,7 @@ Description: "Codes describing the modalities, techniques, and devices used in e
 CodeSystem: ComorbiditiesElixhauserCS
 Id: comorbidities-elixhauser-cs
 Title: "Elixhauser Comorbidity Categories"
-Description: "A code system that contains codes representing the comorbidity categories originally defined by Elixhauser, and updated by the Agency for Healthcare Research and Quality (AHRQ) Healthcare Cost and Utilization Project (H-CUP)."
+Description: "A set of codes representing the comorbidity categories originally defined by Elixhauser, and updated by the Agency for Healthcare Research and Quality (AHRQ) Healthcare Cost and Utilization Project (H-CUP)."
 * ^url =  http://terminology.hl7.org/CodeSystem/comorbidities-elixhauser
 * #AIDS    "Acquired immune deficiency syndrome"
 * #ALCOHOL    "Alcohol abuse" 

@@ -14,6 +14,7 @@ The following table shows valid combinations of modality and technique for exter
 
 **Key:**
 
+* 3D: Three Dimensional Conformal Therapy
 * IMRT: Intensity Modulated Radiation Therapy
 * VMAT: Volumetric Modulated Radiation Therapy
 * IORT: Intraoperative radiation therapy

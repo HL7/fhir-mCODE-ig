@@ -16,7 +16,7 @@ The following table shows mappings from SNOMED CT and NCI Thesaurus to of brachy
 | IMRT | 441799006 Intensity modulated radiation therapy (procedure) | C16135 Intensity-Modulated Radiation Therapy |
 | VMAT | none | none |
 | 3D | 434131000124108 Three dimensional conformal radiotherapy (procedure) | C16035 3-Dimensional Conformal Radiation Therapy |
-| 2D | 5304008 Conventional X-ray therapy | C165189 Conventional Radiotherapy |
+| 2D | none [1] | C165189 Conventional Radiotherapy |
 | IORT | 168524008 Radiotherapy - intraoperative control (procedure) | C15623 Intraoperative Radiotherapy |
 | PPS | none | none |
 | PSS | none | none |
@@ -24,5 +24,9 @@ The following table shows mappings from SNOMED CT and NCI Thesaurus to of brachy
 | IMNT | none | none |
 | NCT | 169317000 Neutron capture therapy (procedure) | C15378 Boron Neutron Capture Therapy |
 {: .grid }
+
+**Notes:**
+
+1. 5304008 Conventional X-ray therapy is two-dimensional but more specific in terms of modality
 
 {% include markdown-link-references.md %}

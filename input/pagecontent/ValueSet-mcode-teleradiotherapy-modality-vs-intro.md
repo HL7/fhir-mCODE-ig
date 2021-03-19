@@ -10,13 +10,13 @@ The following table shows mappings from SNOMED CT and NCI Thesaurus to teleradio
 | PROTON    | 10611004 Teleradiotherapy protons (procedure) | C66897 Proton Beam Radiation Therapy |
 | ELECTRON  | 45643008 Teleradiotherapy using electrons (procedure) | C15650 Electron Beam Therapy |
 | NEUTRON   | 80347004 Teleradiotherapy neutrons (procedure) | C15440 High-LET Neutron Therapy |
-| CARBON    | 312248006 Heavy ion teletherapy (procedure) [1] | C160816 Carbon Ion Radiation Therapy |
-| PHOTON    | 448385000 Megavoltage radiation therapy using photons (procedure) _or_ 169291001 X-ray beam therapy (procedure) [2] | C93337 High-energy Photon Therapy _or_ C104914 Photon Beam Radiation Therapy |
+| CARBON    | none [1] | C160816 Carbon Ion Radiation Therapy |
+| PHOTON    | none [2] | C93337 High-energy Photon Therapy _or_ C104914 Photon Beam Radiation Therapy |
 {: .grid }
 
 **Notes:**
 
-1. This a broader term and should be mapped only if it is known from context to represent carbon ion teleradiotherapy.
-2. These are narrower terms and there may be treatment situations involving photons that cannot be described by either term.
+1. 312248006 Heavy ion teletherapy (procedure) is a broader term, although today, carbon ions are the predominant heavy ions used in EBRT.
+2. 448385000 Megavoltage radiation therapy using photons (procedure) and 169291001 X-ray beam therapy (procedure) are narrower terms and there may be treatment situations involving photons that cannot be described by either term.
 
 {% include markdown-link-references.md %}

@@ -1,15 +1,15 @@
 
-### Mapping from Other Vocabularies
+### Mapping Between Vocabularies
 
-The modalities in this value set are drawn from the [radiotherapy code system][RadiotherapyCS] defined in this Implementation Guide. Existing terminology systems do not have all the necessary codes.
+The concepts in this value set are drawn from SNOMED CT or the [radiotherapy code system][RadiotherapyCS] defined in this Implementation Guide. Additional SNOMED CT codes have been submitted for approval. NCI Thesaurus terms are shown for informational purposes.
 
-The following table shows mappings from SNOMED CT and NCI Thesaurus to teleradiotherapy modality codes. More specific (child) terms in the respective hierarchies also can be mapped to the code in the leftmost column. **This table may not be exhaustive and additional valid mappings may exist.**
+The following table shows potential mappings. **This table may not be exhaustive and additional valid mappings may exist.**
 
-| **Code As**    | **SNOMED CT Term**             | **NCI Thesaurus Term**            |
+| **Radiotherapy Code System**    | **SNOMED CT Term**             | **NCI Thesaurus Term**            |
 | ---------------|--------------------------------|-----------------------------------|
-| PROTON    | 10611004 Teleradiotherapy protons (procedure) | C66897 Proton Beam Radiation Therapy |
-| ELECTRON  | 45643008 Teleradiotherapy using electrons (procedure) | C15650 Electron Beam Therapy |
-| NEUTRON   | 80347004 Teleradiotherapy neutrons (procedure) | C15440 High-LET Neutron Therapy |
+| none   | 10611004 Teleradiotherapy protons (procedure) | C66897 Proton Beam Radiation Therapy |
+| none  | 45643008 Teleradiotherapy using electrons (procedure) | C15650 Electron Beam Therapy |
+| none   | 80347004 Teleradiotherapy neutrons (procedure) | C15440 High-LET Neutron Therapy |
 | CARBON    | none [1] | C160816 Carbon Ion Radiation Therapy |
 | PHOTON    | none [2] | C93337 High-energy Photon Therapy _or_ C104914 Photon Beam Radiation Therapy |
 {: .grid }

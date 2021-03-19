@@ -5,9 +5,9 @@ Id: mcode-teleradiotherapy-modality-vs
 Title: "Teleradiotherapy Modality Value Set"
 Description: "Codes describing the modalities of teleradiotherapy (external beam) procedures. This value set is considered closed (not extensible on ad hoc basis by the implementer)."
 // * insert ExpandValueSet
-* RT#PROTON
-* RT#ELECTRON
-* RT#NEUTRON
+* SCT#10611004 "Teleradiotherapy protons (procedure)"
+* SCT#45643008 "Teleradiotherapy using electrons (procedure)"
+* SCT#80347004 "Teleradiotherapy neutrons (procedure)"
 * RT#CARBON
 * RT#PHOTON
 
@@ -19,9 +19,9 @@ Description: "Codes describing the modalities of brachytherapy procedures. This 
 * RT#LDR-TEMP
 * RT#LDR-PERM
 * RT#PDR
-* RT#HDR
+* SCT#394902000 "High dose brachytherapy (procedure)"
 * RT#EBRACHY
-* RT#RADPHARM
+* SCT#440252007 "Administration of radiopharmaceutical (procedure)"
 
 ValueSet: RadiotherapyModalityVS
 Id: mcode-radiotherapy-modality-vs
@@ -38,41 +38,39 @@ Id: mcode-teleradiotherapy-technique-vs
 Title: "Teleradiotherapy Technique Value Set"
 Description: "Codes describing the techniques of teleradiotherapy (external beam) procedures. This vallue set is considered extensible."
 // * insert ExpandValueSet
-* RT#IMRT
+* SCT#441799006 "Intensity modulated radiation therapy (procedure)"
 * RT#VMAT
-* RT#3D
+* SCT#434131000124108 "Three dimensional conformal radiotherapy (procedure)"	
 * RT#2D
 * RT#IORT
 * RT#PPS
 * RT#PSS
 * RT#MIX
 * RT#IMNT
-* RT#NCT
+* SCT#169317000 "Neutron capture therapy (procedure)"
 
 ValueSet: BrachytherapyTechniqueVS
 Id: mcode-brachytherapy-technique-vs
 Title: "Brachytherapy Technique Value Set"
 Description: "Codes describing the techniques of brachytherapy (internal or surface radiation) procedures. This vallue set is considered extensible."
-// * insert ExpandValueSet
-* RT#CAV
+* SCT#384692006 "Intracavitary brachytherapy (procedure)"
 * RT#CAV-IMB
-* RT#INSTIT
+* SCT#113120007 "Interstitial brachytherapy (procedure)"
 * RT#VASC
-* RT#LUM
+* SCT#384691004 "Intraluminal brachytherapy (procedure)"
 * RT#IORT
-* RT#SURF
-* RT#ORAL
+* SCT#14473006 "Surface brachytherapy (procedure)"
+* SCT#16560241000119104 "Oral radionuclide therapy (procedure)"
 
 ValueSet: RadiotherapyTechniqueVS
 Id: mcode-radiotherapy-technique-vs
 Title: "Radiotherapy Technique Value Set"
 Description: "Codes describing the techniques of external beam and brachytherapy radiation procedures, for use with radiotherapy summaries."
-// * insert ExpandValueSet
 * include codes from valueset TeleradiotherapyTechniqueVS
 * include codes from valueset BrachytherapyTechniqueVS
 
-/*  SAVE
 
+/*  SAVE
 ValueSet: RadiotherapyBodySiteVS
 Id: mcode-radiotherapy-body-site-vs
 Title: "Radiation Target Body Site Value Set"

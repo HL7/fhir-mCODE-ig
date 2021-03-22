@@ -47,7 +47,6 @@ A radiology work group convened under [CodeX FHIR Accelerator](https://confluenc
 * **Radiotherapy**
   * [BrachytherapyModalityVS]
   * [BrachytherapyTechniqueVS]
-  * [RadiotherapyBodySiteVS]
   * [TeleradiotherapyModalityVS]
   * [TeleradiotherapyTechniqueVS]  
 

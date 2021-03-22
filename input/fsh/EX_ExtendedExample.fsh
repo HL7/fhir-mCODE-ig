@@ -597,13 +597,14 @@ Description: "Example of radiotherapy treatment summary involving external beam 
 * category = SCT#108290001 "Radiation oncology AND/OR radiotherapy (procedure)"
 * bodySite = SCT#78904004 "Chest Wall Structure (body structure)"
 * reasonCode = ICD10CM#C50.811 "Malignant neoplasm of overlapping sites of right female breast"
+* extension[actualNumberOfSessions].valueUnsignedInt = 31
 * extension[treatmentIntent].valueCodeableConcept = SCT#373808002 "Curative - procedure intent"
 * performedPeriod.start = "2018-05-01"
 * performedPeriod.end = "2018-06-29"
 * extension[modality][0].valueCodeableConcept = RT#PHOTON "Photon Beam Radiation Therapy"
-* extension[modality][1].valueCodeableConcept = RT#ELECTRON "Electron Beam Radiation Therapy"
+* extension[modality][1].valueCodeableConcept = SCT#45643008  "Teleradiotherapy using electrons (procedure)"
 * extension[technique][0].valueCodeableConcept = RT#VMAT "Volumetric Modulated Arc Therapy"
-* extension[technique][1].valueCodeableConcept = RT#3D "Three Dimensional"
+* extension[technique][1].valueCodeableConcept = SCT#434131000124108 "Three dimensional conformal radiotherapy (procedure)"
 * extension[doseDelivered][0].extension[volumeDescription].valueString = "Chest Wall"
 * extension[doseDelivered][0].extension[volumeId].valueString = "1.2.246.352…1"
 * extension[doseDelivered][0].extension[totalDoseDelivered].valueQuantity = 6000 'cGy'
@@ -627,7 +628,6 @@ Description: "Example of teleradiotherapy treatment phase involving external bea
 * extension[modality].valueCodeableConcept = RT#PHOTON "Photon Beam Radiation Therapy"
 * extension[technique].valueCodeableConcept = RT#VMAT "Volumetric Modulated Arc Therapy"
 * extension[fractionsDelivered].valueUnsignedInt = 25
-* extension[actualNumberOfSessions].valueUnsignedInt = 25
 * extension[doseDelivered][0].extension[volumeDescription].valueString = "Chest Wall"
 * extension[doseDelivered][0].extension[totalDoseDelivered].valueQuantity = 5000 'cGy'
 * extension[doseDelivered][0].extension[volumeId].valueString = "1.2.246.352…1"
@@ -646,8 +646,8 @@ Description: "Example of teleradiotherapy treatment boost phase"
 * partOf = Reference(radiotherapy-treatment-summary-chest-wall-jenny-m)
 * performedPeriod.start = "2018-08-01"
 * performedPeriod.end = "2018-09-30"
-* extension[modality].valueCodeableConcept = RT#ELECTRON "Electron Beam Radiation Therapy"
-* extension[technique].valueCodeableConcept = RT#3D "Three Dimensional"
+* extension[modality].valueCodeableConcept = SCT#45643008  "Teleradiotherapy using electrons (procedure)"
+* extension[technique].valueCodeableConcept = SCT#434131000124108 "Three dimensional conformal radiotherapy (procedure)"
 * extension[fractionsDelivered].valueUnsignedInt = 5
 * extension[doseDelivered].extension[volumeDescription].valueString = "Chest Wall"
 * extension[doseDelivered].extension[volumeId].valueString = "1.2.246.352…1"

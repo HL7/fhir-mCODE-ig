@@ -78,6 +78,6 @@ A timeline of the narrative is illustrated in the following diagram:
 * [`us-core-observation-lab-tumor-margins-jenny-m`](Observation-us-core-observation-lab-tumor-margins-jenny-m.html) (Observation)
 * [`us-core-observation-lab-sentinel-nodes-jenny-m`](Observation-us-core-observation-lab-sentinel-nodes-jenny-m.html) (Observation)
 * [`Observation-tumor-size-jenny-m.html`](Observation-tumor-size-jenny-m.html) (Observation)
-* [`scenario1-observation-dcis`](Observation-us-core-observation-lab-tumor-dcis.html) (Observation)
+* [`scenario1-observation-dcis`](Observation-us-core-observation-lab-tumor-dcis-jenny-m.html) (Observation)
 
 {% include markdown-link-references.md %}

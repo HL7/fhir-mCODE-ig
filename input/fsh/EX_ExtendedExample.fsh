@@ -376,7 +376,7 @@ Description: "Extended example: example of pathology findings represented as a D
 * result[1] = Reference(us-core-observation-lab-tumor-margins-jenny-m)
 * result[2] = Reference(us-core-observation-lab-sentinel-nodes-jenny-m)
 * result[3] = Reference(tumor-size-jenny-m)
-* result[4] = Reference(us-core-observation-lab-tumor-dcis)
+* result[4] = Reference(us-core-observation-lab-tumor-dcis-jenny-m)
 * result[5] = Reference(tumor-marker-test-her2-jenny-m)
 * performer = Reference(us-core-organization-physician-services-inc)
 * resultsInterpreter = Reference(us-core-practitioner-peter-pathologist)
@@ -426,7 +426,7 @@ Description: "Extended example: example showing tumor size"
 * component.valueQuantity.unit = "centimeters"
 * specimen = Reference(tumor-specimen-left-breast-jenny-m)
 
-Instance: us-core-observation-lab-tumor-dcis
+Instance: us-core-observation-lab-tumor-dcis-jenny-m
 InstanceOf:  USCoreObservationLab
 Description: "Extended example: example showing DCIS diagnosis"
 * status = #final "final"
@@ -569,7 +569,7 @@ Description: "Extended example: body weight vital sign at the time of chemothera
 * valueQuantity = 150.0 '[lb_av]' "lb"
 
 // Based on the relative dose, height, and current weight, we calculate the absolute dose to be 105.96 mg of doxorubicin.
-// Chemotherapy preparation details (e.g.: number of vials used for the absolute dose, IV mixing solution, etc.) 
+// Chemotherapy preparation details (e.g.: number of vials used for the absolute dose, IV mixing solution, etc.)
 // have been omitted for simplicity.
 Instance: cancer-related-medication-administration-doxorubicin-jenny-m
 InstanceOf: CancerRelatedMedicationAdministration

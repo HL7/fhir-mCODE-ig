@@ -27,9 +27,9 @@ Description: "Records the the primary cancer condition, the original or first tu
 * stage.assessment only Reference(CancerStageGroup)
 * stage and stage.assessment MS
 * stage.summary ^short = "Most recent Stage Group"
-* stage.summary ^definition = "In mCODE, staging information MUST be captured in an Observation that conforms to the CancerStageGroup profile. For convenience, the stage group MAY appear in this element, copied from the CancerStageGroup, but mCODE Data Senders and Receivers are free to ignore it."
+* stage.summary ^definition = "In mCODE, staging information MUST be captured in an Observation that conforms to the CancerStageGroup profile. For convenience, the stage group MAY appear in this element, copied from the CancerStageGroup, but mCODE Data Senders and Receivers MAY ignore it."
 * stage.type ^short = "Staging system used."
-* stage.type ^definition = "In mCODE, staging information MUST be captured in an Observation that conforms to the CancerStageGroup profile. For convenience, the staging system MAY appear in this element, but mCODE Data Senders and Receivers are free to ignore it."
+* stage.type ^definition = "In mCODE, staging information MUST be captured in an Observation that conforms to the CancerStageGroup profile. For convenience, the staging system MAY appear in this element, but mCODE Data Senders and Receivers MAY ignore it."
 * stage.type from ObservationCodesStageGroupVS (required)
 
 Invariant: primary-cancer-condition-code-invariant

@@ -24,6 +24,7 @@ Description: "Identifying codes based on the timing of classification for stage 
 * LNC#21908-9 "Stage group.clinical Cancer"
 * LNC#21902-2 "Stage group.pathology Cancer"
 * LNC#21914-7 "Stage group.other Cancer"
+// Keep in sync with the intro .md page for this ValueSet, which lists these codes.
 
 ValueSet: ObservationCodesPrimaryTumorVS
 Id: mcode-observation-codes-primary-tumor-vs
@@ -33,6 +34,7 @@ Description: "Identifying codes based on the timing of classification for primar
 * LNC#21905-5 "Primary tumor.clinical [Class] Cancer"
 * LNC#21899-0 "Primary tumor.pathology Cancer"
 * LNC#21911-3 "Primary tumor.other [Class] Cancer"
+// Keep in sync with the intro .md page for this ValueSet, which lists these codes.
 
 ValueSet: ObservationCodesRegionalNodesVS
 Id: mcode-observation-codes-regional-nodes-vs
@@ -42,6 +44,7 @@ Description: "Identifying codes based on the timing of classification for region
 * LNC#21906-3 "Regional lymph nodes.clinical [Class] Cancer"
 * LNC#21900-6 "Regional lymph nodes.pathology [Class] Cancer"
 * LNC#21912-1 "Regional lymph nodes.other [Class] Cancer"
+// Keep in sync with the intro .md page for this ValueSet, which lists these codes.
 
 ValueSet: ObservationCodesDistantMetastasesVS
 Id: mcode-observation-codes-distant-metastases-vs
@@ -51,6 +54,7 @@ Description: "Identifying codes based on the timing of classification for distan
 * LNC#21907-1 "Distant metastases.clinical [Class] Cancer"
 * LNC#21901-4 "Distant metastases.pathology [Class] Cancer"
 * LNC#21913-9 "Distant metastases.other [Class] Cancer"
+// Keep in sync with the intro .md page for this ValueSet, which lists these codes.
 
 ValueSet: CancerStageGroupVS
 Id: mcode-cancer-stage-group-vs

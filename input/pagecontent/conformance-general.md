@@ -38,6 +38,8 @@ mCODE Senders MUST be able to populate data elements that have Must Support (MS)
 
 mCODE defines operations that Senders and Receivers use to exchange mCODE information. In a "pull" (query-response) architecture, Senders MUST support the requests below for retrieving all resources conforming to a given mCODE Profile, UNLESS they do not support the profile at all (see ["Support All mCODE Profiles"](#support-all-mcode-profiles) below). For more details on the conformance requirements for Senders and Receivers, see [Profile Conformance](conformance-profiles.html).
 
+Note that the requests below may return resources associated with patients who are not [mCODE patients]. These resources MAY not conform to mCODE profiles.
+
 * Patient
   * [CancerPatient]\: see [Identifying mCODE Patients](conformance-patients.html) for the options to retrieve all conforming resources
   * [MCODEPatientBundle]\: see [Support the mCODE Bundle](#support-the-mcode-patient-bundle)
@@ -65,14 +67,14 @@ mCODE defines operations that Senders and Receivers use to exchange mCODE inform
 
 * Genomics
   * [CancerGeneticVariant]\: `GET [base]/Observation?code=http://loinc.org|69548-6`
-  * [GeneticSpecimen]\: Not identifiable as there are no required elements with fixed values or required value sets in this profile. Note that `Specimen.type` is extensibly bound to [GeneticSpecimenTypeVS], so this may be use to identify some but not all Specimens conforming to this profile.
-  * [CancerGenomicsReport]\: `GET [base]/DiagnosticReport?code=http://loinc.org|81247-9&category=http://terminology.hl7.org/CodeSystem/v2-0074|GE`
+  * [GeneticSpecimen]\: Resources referenced in the `specimen` element in resources conforming to [CancerGeneticVariant] or [CancerGenomicsReport]
+  * [CancerGenomicsReport]\: `GET [base]/DiagnosticReport?code=http://loinc.org|81247-9`
   * [GenomicRegionStudied]\: `GET [base]/Observation?code=http://loinc.org|53041-0`
 
 * Treatment
   * Medication
-    * [CancerRelatedMedicationRequest]\: Not identifiable as there are no required elements with fixed values or required value sets in this profile.
-    * [CancerRelatedMedicationAdministration]\: Not identifiable as there are no required elements with fixed values or required value sets in this profile.
+    * [CancerRelatedMedicationRequest]\: Resources conforming to this profile MAY be identified by (1) a code from [CancerDisorderVS] in the `reasonCode` element, and/or (2) a reference to a resource conforming to [PrimaryCancerCondition] or [SecondaryCancerCondition] in the `reasonReference` element. Because these elements are not required, these criteria may not identify all conforming resources.
+    * [CancerRelatedMedicationAdministration]\: Same as [CancerRelatedMedicationRequest] as described above.
   * Surgery
     * [CancerRelatedSurgicalProcedure]\: `GET [base]/Procedure?code=http://snomed.info/sct|387713003` will identify all surgical procedures. `Procedure.code` is extensibly bound to [CancerRelatedSurgicalProcedureVS], so further filtering to include only Procedures with `code` in this value set will identify some but not necessarily all cancer-related surgical procedures.
   * Radiotherapy
@@ -84,7 +86,7 @@ mCODE defines operations that Senders and Receivers use to exchange mCODE inform
   * [CancerDiseaseStatus]\: `GET [base]/Observation?code=http://loinc.org|88040-1`
   * [Tumor]\: Not identifiable as there are no required elements with fixed values or required value sets in this profile. Note that `BodyStructure.morphology` is fixed to `http://snomed.info/sct|367651003`, but this is not a required element. This may therefore be used to identify some but not all BodyStructure resources conforming to this profile.
   * [TumorSpecimen]\: `GET [base]/Specimen?type=http://terminology.hl7.org/CodeSystem/v2-0487|TUMOR` (note that `TUMOR` MUST be capitalized)
-  * [TumorSize]\: `GET [base]/Observation?code=http://loinc.org|21889-1&component-code=http://loinc.org|33728-7`
+  * [TumorSize]\: `GET [base]/Observation?code=http://loinc.org|21889-1`
 
 #### Publish a CapabilityStatement Identifying Supported Profiles and Operations
 

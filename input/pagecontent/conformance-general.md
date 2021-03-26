@@ -94,8 +94,6 @@ Each mCODE participant MUST publish a FHIR CapabilityStatement listing their sup
 
 ALL mCODE participants MUST at minimum support the [CancerPatient] and [PrimaryCancerCondition] profiles.
 
-<!-- @Max -- TODO: Provide examples of what this would look like.-->
-
 #### Support US Core Conformance Requirements
 
 Additional [conformance requirements from US Core](http://hl7.org/fhir/us/core/capstatements.html) apply to RESTful interactions, searches, and resource formats in mCODE. mCODE "inherits" all US Core conformance requirements. US Core provides base profiles for many (but not all) mCODE profiles, outlines expectations for handling of missing or unknown data elements, and outlines how to associate provenance information associated with collection, transfer, and updating of clinical information.

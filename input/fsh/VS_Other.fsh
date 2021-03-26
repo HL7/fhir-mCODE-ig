@@ -108,6 +108,7 @@ Description:     "Code for methods of measuring tumor size, including physical e
 * SCT#16310003 "Diagnostic ultrasonography (procedure)"
 * SCT#113091000 "Magnetic resonance imaging (procedure)"
 * SCT#77477000 "Computerized axial tomography (procedure)"
+// * include codes from system LNC where concept is-a #LP29684-5
 
 
 /* SAVE for possible future use

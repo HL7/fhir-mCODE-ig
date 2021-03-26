@@ -16,7 +16,7 @@ Description:  "Records the dimensions of a tumor"
 * focus ^definition = "Reference to a BodyStructure resource conforming to Tumor."
 * focus ^comment = "Use **only** when the tumor **has not** been removed from the body. If the tumor has been removed, use `specimen` instead and leave `focus` empty."
 
-* specimen ^short = "Identifiers a tumor that has been removed from the body"
+* specimen ^short = "Identifies a tumor that has been removed from the body"
 * specimen ^definition = "Reference to a BodyStructure resource conforming to Tumor."
 * specimen ^comment = "Use **only** when the tumor **has** been removed from the body. If the tumor has been not removed, use `focus` instead and leave `specimen` empty."
 

@@ -1,6 +1,6 @@
 ### Usage
 
-Used to represent a tumor that has been removed from the body.
+Used to represent a tumor or portion of a tumor that has been removed from the body.
 
 ### Conformance
 

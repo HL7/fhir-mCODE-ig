@@ -20,7 +20,7 @@ In this profile, each comorbidity category is represented by a component (`Obser
 
 If a comorbidity is present, the user can optionally supply a specific code detailing the disease, or provide link to an existing Condition resource.
 
-For any component, "present" or "absent" refers back to a comorbidity category defined by Observation.component.code. Since there are no existing codes for individual Elixhauser categories, mCODE provides them. For example, a component relating to congestive heart failure (CHF) will have `component.code.coding.system` of `http://hl7.org/fhir/us/mcode/CodeSystem/mcode-elixhauser-category-cs` and `component.code.coding.code` "CHF". The implication is that the patient has a disease found in the *specific version* of Elixhauser CHF codes corresponding to the definition of the "CHF" code; in this case, one of the codes in [Elixhauser Comorbid Condition Value Set for Congestive Heart Failure](ValueSet-elixhauser-congestive-heart-failure-vs.html).
+For any component, "present" or "absent" refers back to a comorbidity category defined by `Observation.component`.code. Since there are no existing codes for individual Elixhauser categories, mCODE provides them. For example, a component relating to congestive heart failure (CHF) will have `component.code.coding.system` of `http://hl7.org/fhir/us/mcode/CodeSystem/mcode-elixhauser-category-cs` and `component.code.coding.code` "CHF". The implication is that the patient has a disease found in the *specific version* of Elixhauser CHF codes corresponding to the definition of the "CHF" code; in this case, one of the codes in [Elixhauser Comorbid Condition Value Set for Congestive Heart Failure](ValueSet-elixhauser-congestive-heart-failure-vs.html).
 
 If an overall score is calculated, it should be recorded in `Observation.value[x]`. This is not required.
 
@@ -30,5 +30,6 @@ This profile assumes the current focus or "index" condition is the patient's can
 
 ### Conformance
 
-Observation resources associated with an mCODE patient with Observation.code LOINC 88040-1 MUST conform to this profile. Beyond this requirement, a producer of resources SHOULD ensure that any resource instance associated with an mCODE patient that would reasonably be expected to conform to this profile SHOULD be published in this form.
+Observation resources associated with an [mCODE patient] with `Observation.code` of `mcode-comorbidity` MUST conform to this profile. Beyond this requirement, a producer of resources SHOULD ensure that any resource instance associated with an [mCODE patient] that would reasonably be expected to conform to this profile SHOULD be published in this form.
 
+{% include markdown-link-references.md %}

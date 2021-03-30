@@ -94,10 +94,9 @@ Description: "Extended example as a mCODE Patient Bundle"
 * entry[=].fullUrl = "http://example.org/fhir/Observation/us-core-observation-lab-sentinel-nodes-jenny-m"
 * entry[+].resource = tumor-size-jenny-m
 * entry[=].fullUrl = "http://example.org/fhir/Observation/tumor-size-jenny-m"
-* entry[+].resource = us-core-observation-lab-tumor-dcis
-* entry[=].fullUrl = "http://example.org/fhir/Observation/us-core-observation-lab-tumor-dcis"
+* entry[+].resource = us-core-observation-lab-tumor-dcis-jenny-m
+* entry[=].fullUrl = "http://example.org/fhir/Observation/us-core-observation-lab-tumor-dcis-jenny-m"
 * entry[+].resource = us-core-practitioner-owen-oncologist
 * entry[=].fullUrl = "http://example.org/fhir/Pracititioner/us-core-practitioner-owen-oncologist"
 * entry[+].resource = us-core-practitioner-peter-pathologist
 * entry[=].fullUrl = "http://example.org/fhir/Pracititioner/us-core-practitioner-peter-pathologist"
-

@@ -1,6 +1,6 @@
 id: hl7.fhir.us.mcode
 canonical: http://hl7.org/fhir/us/mcode
-version: 1.12.1
+version: 1.13.1
 name: MinimalCommonOncologyDataElements
 title: "minimal Common Oncology Data Elements (mCODE) Implementation Guide"
 status: draft
@@ -21,32 +21,34 @@ parameters:
   version-comparison: n/a
   path-expansion-params: '../../exp-params.json'  #path is relative to [base]/fsh-generated/resources
 copyrightYear: 2019+
-releaseLabel: pre-STU2 draft
+releaseLabel: pre-STU2 Ballot
 pages:
   index.md:
     title: Home
+  group-patient.md:
+    title: Patient Information
+  group-disease.md:
+    title: Disease Characterization
+  group-assessment.md:
+    title: Assessment
+  group-genomics.md:
+    title: Genomics
+  group-treatment.md:
+    title: Treatments
+  group-outcome.md:
+    title: Outcomes
   conformance-general.md:
     title: Conformance Expectations
   conformance-patients.md:
     title: Identifying mCODE Patients
   conformance-profiles.md:
     title: Profile Conformance
-  group-patient.md:
-    title: Patient Information
-  group-disease.md:
-    title: Disease Characterization
-  group-genomics.md:
-    title: Genomics
-  group-assessment.md:
-    title: Assessment
-  group-treatment.md:
-    title: Treatments
-  group-outcome.md:
-    title: Outcomes
   terminology.md:
     title: Terminology
   examples.md:
     title: Extended Example
+  artifacts.html:
+    title: Artifacts Summary
   dictionary.md:
     title: Data Dictionary
   downloads.md:

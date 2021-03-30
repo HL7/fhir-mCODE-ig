@@ -146,3 +146,7 @@
 <!-- US Core -->
 [USCoreLaboratoryResultObservationProfile]: http://hl7.org/fhir/us/core/StructureDefinition-us-core-observation-lab.html
 [USCorePatientProfile]: http://hl7.org/fhir/us/core/StructureDefinition-us-core-patient.html
+
+<!-- Other links -->
+[mCODE patient]: conformance-patients.html
+[mCODE patients]: conformance-patients.html

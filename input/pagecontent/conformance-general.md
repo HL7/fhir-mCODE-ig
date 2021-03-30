@@ -36,9 +36,57 @@ mCODE Senders MUST be able to populate data elements that have Must Support (MS)
 
 #### Support Querying mCODE-Conforming Resources
 
-mCODE defines operations that Senders and Receivers use to exchange mCODE information. mCODE participants MUST support these requests UNLESS they do not support the profile at all (see ["Support All mCODE Profiles"](#support-all-mcode-profiles) below):
+mCODE defines operations that Senders and Receivers use to exchange mCODE information. In a "pull" (query-response) architecture, Senders MUST support the requests below for retrieving all resources conforming to a given mCODE Profile, UNLESS they do not support the profile at all (see ["Support All mCODE Profiles"](#support-all-mcode-profiles) below). For more details on the conformance requirements for Senders and Receivers, see [Profile Conformance](conformance-profiles.html).
 
-<!-- @Max -- TODO: Provide examples of what this would look like. We can create a separate page for the queries if this gets lengthy -->
+Note that the requests below may return resources associated with patients who are not [mCODE patients]. These resources MAY not conform to mCODE profiles.
+
+* Patient
+  * [CancerPatient]\: see [Identifying mCODE Patients](conformance-patients.html) for the options to retrieve all conforming resources
+  * [MCODEPatientBundle]\: see [Support the mCODE Bundle](#support-the-mcode-patient-bundle)
+  * [MCODEPatientGroup]\: n/a
+
+* Disease
+  * Diagnosis
+    * [PrimaryCancerCondition]\: `GET [base]/Condition?code:in=http://hl7.org/fhir/us/mcode/ValueSet/mcode-primary-or-uncertain-behavior-cancer-disorder-vs`
+    * [SecondaryCancerCondition]\: `GET [base]/Condition?code:in=http://hl7.org/fhir/us/mcode/ValueSet/mcode-secondary-cancer-disorder-vs`
+  * Staging
+    * [CancerStageGroup]\: `GET [base]/Observation?code:in=http://hl7.org/fhir/us/mcode/ValueSet/mcode-observation-codes-stage-group-vs`
+    * [TNMPrimaryTumorCategory]\: `GET [base]/Observation?code:in=http://hl7.org/fhir/us/mcode/ValueSet/mcode-observation-codes-primary-tumor-vs`
+    * [TNMRegionalNodesCategory]\: `GET [base]/Observation?code:in=http://hl7.org/fhir/us/mcode/ValueSet/mcode-observation-codes-regional-nodes-vs`
+    * [TNMDistantMetastasesCategory]\: `GET [base]/Observation?code:in=http://hl7.org/fhir/us/mcode/ValueSet/mcode-observation-codes-distant-metastases-vs`
+  * Characterization
+    * [TumorMarkerTest]\: `GET [base]/Observation?code:in=http://hl7.org/fhir/us/mcode/ValueSet/mcode-tumor-marker-test-vs`
+
+* Assessment
+  * [ComorbiditiesElixhauser]\: `GET [base]/Observation?code=mcode-comorbidity`
+  * [ECOGPerformanceStatus]\: `GET [base]/Observation?code=http://loinc.org|89247-1`
+  * [KarnofskyPerformanceStatus]\: `GET [base]/Observation?code=http://loinc.org|89243-0`
+  * [FHIR Vital Signs](https://www.hl7.org/fhir/observation-vitalsigns.html) and [US Core Vital Signs](https://hl7.org/fhir/us/core/3.2.0/StructureDefinition-us-core-vital-signs.html): `GET [base]/Observation?category=vital-signs`
+  * [US Core DiagnosticReport Profile for Laboratory Results Reporting](http://hl7.org/fhir/us/core/StructureDefinition-us-core-diagnosticreport-lab.html): `GET [base]/DiagnosticReport?category=LAB` (note that `LAB` MUST be capitalized)
+  * [US Core Laboratory Result Profile](http://hl7.org/fhir/us/core/StructureDefinition-us-core-observation-lab.html): `GET [base]/Observation?category=laboratory`
+
+* Genomics
+  * [CancerGeneticVariant]\: `GET [base]/Observation?code=http://loinc.org|69548-6`
+  * [GeneticSpecimen]\: Resources referenced in the `specimen` element in resources conforming to [CancerGeneticVariant] or [CancerGenomicsReport]
+  * [CancerGenomicsReport]\: `GET [base]/DiagnosticReport?code=http://loinc.org|81247-9`
+  * [GenomicRegionStudied]\: `GET [base]/Observation?code=http://loinc.org|53041-0`
+
+* Treatment
+  * Medication
+    * [CancerRelatedMedicationRequest]\: Resources conforming to this profile MAY be identified by (1) a code from [CancerDisorderVS] in the `reasonCode` element, and/or (2) a reference to a resource conforming to [PrimaryCancerCondition] or [SecondaryCancerCondition] in the `reasonReference` element. Because these elements are not required, these criteria may not identify all conforming resources.
+    * [CancerRelatedMedicationAdministration]\: Same as [CancerRelatedMedicationRequest] as described above.
+  * Surgery
+    * [CancerRelatedSurgicalProcedure]\: `GET [base]/Procedure?code=http://snomed.info/sct|387713003` will identify all surgical procedures. `Procedure.code` is extensibly bound to [CancerRelatedSurgicalProcedureVS], so further filtering to include only Procedures with `code` in this value set will identify some but not necessarily all cancer-related surgical procedures.
+  * Radiotherapy
+    * [BrachytherapyTreatmentPhase]\: `GET [base]/Procedure?code=mcode-brachytherapy-treatment-phase`
+    * [RadiotherapyCourseSummary]\: `GET [base]/Procedure?code=mcode-radiotherapy-course-summary`
+    * [TeleradiotherapyTreatmentPhase]\: `GET [base]/Procedure?code=mcode-teleradiotherapy-treatment-phase`
+
+* Outcome
+  * [CancerDiseaseStatus]\: `GET [base]/Observation?code=http://loinc.org|88040-1`
+  * [Tumor]\: Not identifiable as there are no required elements with fixed values or required value sets in this profile. Note that `BodyStructure.morphology` is fixed to `http://snomed.info/sct|367651003`, but this is not a required element. This may therefore be used to identify some but not all BodyStructure resources conforming to this profile.
+  * [TumorSpecimen]\: `GET [base]/Specimen?type=http://terminology.hl7.org/CodeSystem/v2-0487|TUMOR` (note that `TUMOR` MUST be capitalized)
+  * [TumorSize]\: `GET [base]/Observation?code=http://loinc.org|21889-1`
 
 #### Publish a CapabilityStatement Identifying Supported Profiles and Operations
 
@@ -91,7 +139,7 @@ Profile search and population of `meta.profile` originate as "SHALL" requirement
 
 * **Receiver**
   * [mcode-receiver-patient-bundle]
-* **Sender**  
+* **Sender**
   * [mcode-sender-patient-bundle]
 
 ### Operations

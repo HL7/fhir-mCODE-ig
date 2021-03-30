@@ -16,8 +16,9 @@ Description:  "Records the dimensions of a tumor"
 * focus ^definition = "Reference to a BodyStructure resource conforming to Tumor."
 * focus ^comment = "Use **only** when the tumor **has not** been removed from the body. If the tumor has been removed, use `specimen` instead and leave `focus` empty."
 
-* specimen ^short = "Identifies a tumor that has been removed from the body"
-* specimen ^definition = "Reference to a BodyStructure resource conforming to Tumor."
+* specimen only Reference(TumorSpecimen)
+* specimen ^short = "Identifiers a tumor that has been removed from the body"
+* specimen ^definition = "Reference to a Specimen resource conforming to TumorSpecimen."
 * specimen ^comment = "Use **only** when the tumor **has** been removed from the body. If the tumor has been not removed, use `focus` instead and leave `specimen` empty."
 
 * obeys must-have-focus-or-specimen-invariant
@@ -123,11 +124,11 @@ Description: "Represents a tumor after it has been removed from the body. Prior 
 
 
 /* Commenting out MultifocalTumor observation for now
-Issues to consider further: 
+Issues to consider further:
 1) Does this rise to the level of "minimal"?
 2) You were missing Observation.code that says what is being observed.
 3) Is this an Observation or a Condition? Conditions are uni-valued findings, while Observations need a question (code) and an answer set (value[x]). Observations on a TumorSpecimen are not Conditions although it is arguable that a multifocal tumor in the body could be modeled as a Condition.
-4) If this is modeled as an Observation, then what is the question and what are the possible answers? Are we playing Jeopardy where the answer is "multi-focal"? Or is the question something about morphology, and "multi-focal" is among the possible answers? 
+4) If this is modeled as an Observation, then what is the question and what are the possible answers? Are we playing Jeopardy where the answer is "multi-focal"? Or is the question something about morphology, and "multi-focal" is among the possible answers?
 5) I know we convinced ourselves otherwise, but we shouldn't forget the option of allowing a value set for Tumor.morphology (perhaps by slicing Tumor.morphology and fixing the first code.)
 
 Profile: MultifocalTumor

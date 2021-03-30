@@ -40691,7 +40691,7 @@
       "Value set name": "Cancer Staging System Value Set",
       "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-staging-system-vs",
       "Code system": "http://ncithesaurus.nci.nih.gov",
-      "Code": "C146985",
+      "Code": "SCT#897275008",
       "Code description": "AJCC Cancer Staging Manual 8th Edition"
     },
     {

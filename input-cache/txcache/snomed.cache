@@ -83015,3 +83015,149 @@ v: {
   "error" : ""
 }
 -------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://snomed.info/sct",
+  "code" : "897275008"
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "Unable to find code 897275008 in http://snomed.info/sct (version http://snomed.info/sct/731000124108/version/20200901); The code \"897275008\" is not valid in the system http://snomed.info/sct; The code provided (http://snomed.info/sct#897275008) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4)"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://snomed.info/sct",
+  "code" : "897275008",
+  "display" : "American Joint Commission on Cancer, Cancer Staging Manual, 8th edition neoplasm staging system (tumor staging)"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://ncithesaurus-stage.nci.nih.gov",
+      "concept" : [{
+        "code" : "C141138",
+        "display" : "Ann Arbor Stage"
+      },
+      {
+        "code" : "C141212",
+        "display" : "Binet Stage"
+      },
+      {
+        "code" : "C125738",
+        "display" : "FIGO Stage"
+      },
+      {
+        "code" : "C141147",
+        "display" : "Lugano Stage"
+      },
+      {
+        "code" : "C141207",
+        "display" : "Rai Stage"
+      },
+      {
+        "code" : "C54179",
+        "display" : "Ann Arbor Lymphoma Staging System"
+      },
+      {
+        "code" : "C139007",
+        "display" : "International Staging System Stage"
+      }]
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "concept" : [{
+        "code" : "444256004",
+        "display" : "American Joint Commission on Cancer, Cancer Staging Manual, 6th edition neoplasm staging system (tumor staging)"
+      },
+      {
+        "code" : "443830009",
+        "display" : "American Joint Commission on Cancer, Cancer Staging Manual, 7th edition neoplasm staging system (tumor staging)"
+      },
+      {
+        "code" : "897275008",
+        "display" : "American Joint Commission on Cancer, Cancer Staging Manual, 8th edition neoplasm staging system (tumor staging)"
+      },
+      {
+        "code" : "258235000",
+        "display" : "International Union Against Cancer (tumor staging)"
+      }]
+    }]
+  },
+  "expansion" : {
+    "parameter" : [{
+      "name" : "sushi-generated",
+      "valueBoolean" : true
+    }],
+    "contains" : [{
+      "system" : "http://ncithesaurus-stage.nci.nih.gov",
+      "code" : "C141138",
+      "display" : "Ann Arbor Stage"
+    },
+    {
+      "system" : "http://ncithesaurus-stage.nci.nih.gov",
+      "code" : "C141212",
+      "display" : "Binet Stage"
+    },
+    {
+      "system" : "http://ncithesaurus-stage.nci.nih.gov",
+      "code" : "C125738",
+      "display" : "FIGO Stage"
+    },
+    {
+      "system" : "http://ncithesaurus-stage.nci.nih.gov",
+      "code" : "C141147",
+      "display" : "Lugano Stage"
+    },
+    {
+      "system" : "http://ncithesaurus-stage.nci.nih.gov",
+      "code" : "C141207",
+      "display" : "Rai Stage"
+    },
+    {
+      "system" : "http://ncithesaurus-stage.nci.nih.gov",
+      "code" : "C54179",
+      "display" : "Ann Arbor Lymphoma Staging System"
+    },
+    {
+      "system" : "http://ncithesaurus-stage.nci.nih.gov",
+      "code" : "C139007",
+      "display" : "International Staging System Stage"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "444256004",
+      "display" : "American Joint Commission on Cancer, Cancer Staging Manual, 6th edition neoplasm staging system (tumor staging)"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "443830009",
+      "display" : "American Joint Commission on Cancer, Cancer Staging Manual, 7th edition neoplasm staging system (tumor staging)"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "897275008",
+      "display" : "American Joint Commission on Cancer, Cancer Staging Manual, 8th edition neoplasm staging system (tumor staging)"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "258235000",
+      "display" : "International Union Against Cancer (tumor staging)"
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "Unable to find code 897275008 in http://snomed.info/sct (version http://snomed.info/sct/731000124108/version/20200901); The code \"897275008\" is not valid in the system http://snomed.info/sct; The code provided (http://snomed.info/sct#897275008) is not valid in the value set 'CancerStagingSystemVS' (from http://tx.fhir.org/r4)"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://snomed.info/sct",
+  "code" : "897275008"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "Unable to find code 897275008 in http://snomed.info/sct (version http://snomed.info/sct/731000124108/version/20200901); The code \"897275008\" is not valid in the system http://snomed.info/sct; The code provided (http://snomed.info/sct#897275008) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4)"
+}
+-------------------------------------------------------------------------------------

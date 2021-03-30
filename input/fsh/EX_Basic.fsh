@@ -226,7 +226,7 @@ InstanceOf: CancerStageGroup
 Description: "Example of TNM Clinical Stage Group"
 * code = LNC#21908-9 "Stage group.clinical Cancer"
 * status = #final "final"
-* method = NCIT#C146985 "AJCC Cancer Staging Manual 8th Edition"
+* method = SCT#897275008 "American Joint Commission on Cancer, Cancer Staging Manual, 8th edition neoplasm staging system (tumor staging)"
 * subject = Reference(cancer-patient-john-anyperson)
 * effectiveDateTime = "2019-04-01"
 * valueCodeableConcept = AJCC#3C "IIIC"
@@ -239,7 +239,7 @@ InstanceOf: TNMDistantMetastasesCategory
 Description: "Example of TNM Clinical Distant Metastases Category"
 * code = LNC#21907-1 "Distant metastases.clinical [Class] Cancer"
 * status = #final "final"
-* method = NCIT#C146985 "AJCC Cancer Staging Manual 8th Edition"
+* method = SCT#897275008 "American Joint Commission on Cancer, Cancer Staging Manual, 8th edition neoplasm staging system (tumor staging)"
 * subject = Reference(cancer-patient-john-anyperson)
 * effectiveDateTime = "2019-04-01"
 * valueCodeableConcept = AJCC#cM0 "M0"
@@ -249,7 +249,7 @@ InstanceOf: TNMPrimaryTumorCategory
 Description: "Example of TNM Clinical Primary Tumor Category"
 * code = LNC#21905-5 "Primary tumor.clinical [Class] Cancer"
 * status = #final "final"
-* method = NCIT#C146985 "AJCC Cancer Staging Manual 8th Edition"
+* method = SCT#897275008 "American Joint Commission on Cancer, Cancer Staging Manual, 8th edition neoplasm staging system (tumor staging)"
 * subject = Reference(cancer-patient-john-anyperson)
 * effectiveDateTime = "2019-04-01"
 * valueCodeableConcept = AJCC#cT3 "T3"
@@ -259,7 +259,7 @@ InstanceOf: TNMRegionalNodesCategory
 Description: "Example of TNM Clinical Regional Nodes Category"
 * code = LNC#21906-3 "Regional lymph nodes.clinical [Class] Cancer"
 * status = #final "final"
-* method = NCIT#C146985 "AJCC Cancer Staging Manual 8th Edition"
+* method = SCT#897275008 "American Joint Commission on Cancer, Cancer Staging Manual, 8th edition neoplasm staging system (tumor staging)"
 * subject = Reference(cancer-patient-john-anyperson)
 * effectiveDateTime = "2019-04-01"
 * valueCodeableConcept = AJCC#cN3 "N3"

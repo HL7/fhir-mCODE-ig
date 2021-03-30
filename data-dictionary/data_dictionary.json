@@ -98,9 +98,9 @@
     },
     {
       "group": "Default",
-      "title": "Radiotherapy Summary",
-      "url": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-treatment-summary",
-      "description": "A summary of radiotherapy delivered to a patient. Whenever new contributions in the scope of the same treatment are delivered, this resource is updated. One therapy can involve multiple prescriptions. The status is changed to complete when the course has been fully delivered or changed to stopped if terminated. To describe the treatment in more detail, use either TeleradiotherapyTreatmentPhase or BrachytherapyTreatmentPhase, which can reference this summary through the partOf element."
+      "title": "Radiotherapy Course Summary",
+      "url": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-course-summary",
+      "description": "A summary of a course of radiotherapy delivered to a patient. The status is changed to complete when the course has been fully delivered or changed to stopped if terminated. To describe the treatment in more detail, use either TeleradiotherapyTreatmentPhase or BrachytherapyTreatmentPhase, which should reference this summary through their partOf elements."
     },
     {
       "group": "Default",
@@ -130,7 +130,7 @@
       "group": "Default",
       "title": "Teleradiotherapy Treatment Phase",
       "url": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-teleradiotherapy-treatment-phase",
-      "description": "A summary of a phase of teleradiotherapy treatment that has been delivered. The scope is a treatment consisting of one or multiple identical fractions. A phase ends when there is a change in the treatment volume, treatment fraction size, modality, or treatment technique."
+      "description": "A summary of a phase of teleradiotherapy treatment that has been delivered. The scope is a treatment consisting of one or multiple identical fractions. A phase ends and a new phase begins whenever there is a change in the treatment volume, dose per fraction, modality, or technique."
     },
     {
       "group": "Default",
@@ -177,38 +177,10 @@
       "Definition": "An Extension",
       "Required?": "Required if known",
       "Occurrences Allowed": "Multiple",
-      "Data Type": "Extension (simple)",
+      "Data Type": "Quantity",
       "Value Set URI": "",
       "Value Set Binding": "",
       "FHIR Element (R4)": "Procedure.extension",
-      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-brachytherapy-treatment-phase",
-      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-brachytherapy-treatment-phase"
-    },
-    {
-      "Group": "Default",
-      "Profile Title": "Brachytherapy Treatment Phase",
-      "Data Element Name": "Extension > Treatment Intent",
-      "Definition": "The purpose of a treatment.",
-      "Required?": "Required if known",
-      "Occurrences Allowed": "Single",
-      "Data Type": "CodeableConcept",
-      "Value Set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-treatment-intent-vs",
-      "Value Set Binding": "required",
-      "FHIR Element (R4)": "Procedure.extension:treatmentIntent",
-      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-brachytherapy-treatment-phase",
-      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-brachytherapy-treatment-phase"
-    },
-    {
-      "Group": "Default",
-      "Profile Title": "Brachytherapy Treatment Phase",
-      "Data Element Name": "Extension > Termination Reason",
-      "Definition": "A code explaining an unplanned or premature termination of a plan of treatment, course of medication, or research study.",
-      "Required?": "Required if known",
-      "Occurrences Allowed": "Single",
-      "Data Type": "CodeableConcept",
-      "Value Set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-treatment-termination-reason-vs",
-      "Value Set Binding": "required",
-      "FHIR Element (R4)": "Procedure.extension:terminationReason",
       "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-brachytherapy-treatment-phase",
       "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-brachytherapy-treatment-phase"
     },
@@ -244,7 +216,7 @@
       "Group": "Default",
       "Profile Title": "Brachytherapy Treatment Phase",
       "Data Element Name": "Extension > Fractions Delivered",
-      "Definition": "The total number of fractions (treatment divisions) actually delivered for this volume.",
+      "Definition": "The number of fractions delivered during this phase.",
       "Required?": "Required if known",
       "Occurrences Allowed": "Single",
       "Data Type": "unsignedInt",
@@ -258,13 +230,125 @@
       "Group": "Default",
       "Profile Title": "Brachytherapy Treatment Phase",
       "Data Element Name": "Extension > Dose Delivered",
-      "Definition": "Dose parameters for one target volume, including dose per fraction, number of fractions delivered, and total dose delivered.",
+      "Definition": "Dose parameters for one treatment volume.",
       "Required?": "Required if known",
       "Occurrences Allowed": "Multiple",
-      "Data Type": "Extension: Radiotherapy Dose",
+      "Data Type": "Extension: Radiotherapy Dose Delivered",
       "Value Set URI": "",
       "Value Set Binding": "",
       "FHIR Element (R4)": "Procedure.extension:doseDelivered",
+      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-brachytherapy-treatment-phase",
+      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-brachytherapy-treatment-phase"
+    },
+    {
+      "Group": "Default",
+      "Profile Title": "Brachytherapy Treatment Phase",
+      "Data Element Name": "Dose Delivered > Volume Description",
+      "Definition": "Text description of the body structure treated, for example, Chest Wall Lymph Nodes.",
+      "Required?": "Required if known",
+      "Occurrences Allowed": "Single",
+      "Data Type": "string",
+      "Value Set URI": "",
+      "Value Set Binding": "",
+      "FHIR Element (R4)": "Extension.extension:volumeDescription",
+      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-brachytherapy-treatment-phase",
+      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-dose-delivered"
+    },
+    {
+      "Group": "Default",
+      "Profile Title": "Brachytherapy Treatment Phase",
+      "Data Element Name": "Dose Delivered > Volume Id",
+      "Definition": "Unique identifier to reliably identify the same target volume in different requests and procedures, for example, the Conceptual Volume UID used in DICOM.",
+      "Required?": "Required if known",
+      "Occurrences Allowed": "Single",
+      "Data Type": "string",
+      "Value Set URI": "",
+      "Value Set Binding": "",
+      "FHIR Element (R4)": "Extension.extension:volumeId",
+      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-brachytherapy-treatment-phase",
+      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-dose-delivered"
+    },
+    {
+      "Group": "Default",
+      "Profile Title": "Brachytherapy Treatment Phase",
+      "Data Element Name": "Dose Delivered > Total Dose Delivered",
+      "Definition": "The total amount of radiation delivered to this treatment volume within the scope of this dose delivery.",
+      "Required?": "Required if known",
+      "Occurrences Allowed": "Single",
+      "Data Type": "Quantity",
+      "Value Set URI": "",
+      "Value Set Binding": "",
+      "FHIR Element (R4)": "Extension.extension:totalDoseDelivered",
+      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-brachytherapy-treatment-phase",
+      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-dose-delivered"
+    },
+    {
+      "Group": "Default",
+      "Profile Title": "Brachytherapy Treatment Phase",
+      "Data Element Name": "Dose Delivered > Fractions Delivered",
+      "Definition": "The number of fractions delivered to this treatment volume.",
+      "Required?": "Required if known",
+      "Occurrences Allowed": "Single",
+      "Data Type": "unsignedInt",
+      "Value Set URI": "",
+      "Value Set Binding": "",
+      "FHIR Element (R4)": "Extension.extension:fractionsDelivered",
+      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-brachytherapy-treatment-phase",
+      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-dose-delivered"
+    },
+    {
+      "Group": "Default",
+      "Profile Title": "Brachytherapy Treatment Phase",
+      "Data Element Name": "Extension > Volume Description",
+      "Definition": "Text description of the body structure treated, for example, Chest Wall Lymph Nodes.",
+      "Required?": "Required if known (conditional on Extension)",
+      "Occurrences Allowed": "Single",
+      "Data Type": "string",
+      "Value Set URI": "",
+      "Value Set Binding": "",
+      "FHIR Element (R4)": "Procedure.extension:doseDelivered.extension:volumeDescription",
+      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-brachytherapy-treatment-phase",
+      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-brachytherapy-treatment-phase"
+    },
+    {
+      "Group": "Default",
+      "Profile Title": "Brachytherapy Treatment Phase",
+      "Data Element Name": "Extension > Volume Id",
+      "Definition": "Unique identifier to reliably identify the same target volume in different requests and procedures, for example, the Conceptual Volume UID used in DICOM.",
+      "Required?": "Required if known (conditional on Extension)",
+      "Occurrences Allowed": "Single",
+      "Data Type": "string",
+      "Value Set URI": "",
+      "Value Set Binding": "",
+      "FHIR Element (R4)": "Procedure.extension:doseDelivered.extension:volumeId",
+      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-brachytherapy-treatment-phase",
+      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-brachytherapy-treatment-phase"
+    },
+    {
+      "Group": "Default",
+      "Profile Title": "Brachytherapy Treatment Phase",
+      "Data Element Name": "Extension > Total Dose Delivered",
+      "Definition": "The total amount of radiation delivered to this treatment volume within the scope of this dose delivery.",
+      "Required?": "Required if known (conditional on Extension)",
+      "Occurrences Allowed": "Single",
+      "Data Type": "Quantity",
+      "Value Set URI": "",
+      "Value Set Binding": "",
+      "FHIR Element (R4)": "Procedure.extension:doseDelivered.extension:totalDoseDelivered",
+      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-brachytherapy-treatment-phase",
+      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-brachytherapy-treatment-phase"
+    },
+    {
+      "Group": "Default",
+      "Profile Title": "Brachytherapy Treatment Phase",
+      "Data Element Name": "Extension > Fractions Delivered",
+      "Definition": "An Extension",
+      "Required?": "Required if known (conditional on Extension)",
+      "Occurrences Allowed": "None",
+      "Data Type": "unsignedInt",
+      "Value Set URI": "",
+      "Value Set Binding": "",
+      "FHIR Element (R4)": "Procedure.extension:doseDelivered.extension:fractionsDelivered",
       "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-brachytherapy-treatment-phase",
       "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-brachytherapy-treatment-phase"
     },
@@ -1772,7 +1856,7 @@
       "Data Element Name": "Body Site > Location Qualifier",
       "Definition": "Qualifier to refine the anatomical location. These include qualifiers for laterality, relative location, directionality, number, and plane.",
       "Required?": "Required if known (conditional on Body Site)",
-      "Occurrences Allowed": "Single",
+      "Occurrences Allowed": "Multiple",
       "Data Type": "CodeableConcept",
       "Value Set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-location-qualifier-vs",
       "Value Set Binding": "required",
@@ -5255,6 +5339,20 @@
     {
       "Group": "Default",
       "Profile Title": "Genetic Specimen",
+      "Data Element Name": "Related Condition",
+      "Definition": "A reference that associates this sample with a cancer condition.",
+      "Required?": "Required if known",
+      "Occurrences Allowed": "Single",
+      "Data Type": "Reference: Condition",
+      "Value Set URI": "",
+      "Value Set Binding": "",
+      "FHIR Element (R4)": "Specimen.extension:relatedCondition",
+      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genetic-specimen",
+      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genetic-specimen"
+    },
+    {
+      "Group": "Default",
+      "Profile Title": "Genetic Specimen",
       "Data Element Name": "Status",
       "Definition": "The availability of the specimen.",
       "Required?": "Required if known",
@@ -5275,7 +5373,7 @@
       "Occurrences Allowed": "Single",
       "Data Type": "CodeableConcept",
       "Value Set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-genetic-specimen-type-vs",
-      "Value Set Binding": "required",
+      "Value Set Binding": "extensible",
       "FHIR Element (R4)": "Specimen.type",
       "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genetic-specimen",
       "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genetic-specimen"
@@ -5287,7 +5385,7 @@
       "Definition": "Where the specimen came from. This may be from patient(s), from a location (e.g., the source of an environmental sample), or a sampling of a substance or a device.",
       "Required?": "Required if known",
       "Occurrences Allowed": "Single",
-      "Data Type": "Reference: Patient, Group, Device, Substance, or Location",
+      "Data Type": "Reference: CancerPatient",
       "Value Set URI": "",
       "Value Set Binding": "",
       "FHIR Element (R4)": "Specimen.subject",
@@ -5328,7 +5426,7 @@
       "Data Element Name": "Collection > Body Site > Location Qualifier",
       "Definition": "Qualifier to refine the anatomical location. These include qualifiers for laterality, relative location, directionality, number, and plane.",
       "Required?": "Required if known (conditional on Collection > Body Site)",
-      "Occurrences Allowed": "Single",
+      "Occurrences Allowed": "Multiple",
       "Data Type": "CodeableConcept",
       "Value Set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-location-qualifier-vs",
       "Value Set Binding": "required",
@@ -5787,288 +5885,8 @@
     {
       "Group": "Default",
       "Profile Title": "mCODE Patient Bundle",
-      "Data Element Name": "Entry > Cancer Patient",
-      "Definition": "The Cancer Patient whose data is included in the bundle (required element).",
-      "Required?": "Required",
-      "Occurrences Allowed": "Single",
-      "Data Type": "BackboneElement",
-      "Value Set URI": "",
-      "Value Set Binding": "",
-      "FHIR Element (R4)": "Bundle.entry:cancerPatient",
-      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle",
-      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle"
-    },
-    {
-      "Group": "Default",
-      "Profile Title": "mCODE Patient Bundle",
-      "Data Element Name": "Entry > Cancer Patient > Resource",
-      "Definition": "The US Core Patient Profile is based upon the core FHIR Patient Resource and designed to meet the applicable patient demographic data elements from the 2015 Edition Common Clinical Data Set.",
-      "Required?": "Required if known (conditional on Entry)",
-      "Occurrences Allowed": "Single",
-      "Data Type": "Patient",
-      "Value Set URI": "",
-      "Value Set Binding": "",
-      "FHIR Element (R4)": "Bundle.entry:cancerPatient.resource",
-      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle",
-      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle"
-    },
-    {
-      "Group": "Default",
-      "Profile Title": "mCODE Patient Bundle",
-      "Data Element Name": "Entry > Primary Cancer Condition",
-      "Definition": "Condition resource(s) representing the Primary Cancer Condition.",
-      "Required?": "Required if known",
-      "Occurrences Allowed": "Multiple",
-      "Data Type": "BackboneElement",
-      "Value Set URI": "",
-      "Value Set Binding": "",
-      "FHIR Element (R4)": "Bundle.entry:primaryCancerCondition",
-      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle",
-      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle"
-    },
-    {
-      "Group": "Default",
-      "Profile Title": "mCODE Patient Bundle",
-      "Data Element Name": "Entry > Primary Cancer Condition > Resource",
-      "Definition": "The US Core Condition Profile is based upon the core FHIR Condition Resource and created to meet the 2015 Edition Common Clinical Data Set 'Problems' and 'Health Concerns' requirements.",
-      "Required?": "Required if known (conditional on Entry)",
-      "Occurrences Allowed": "Single",
-      "Data Type": "Condition",
-      "Value Set URI": "",
-      "Value Set Binding": "",
-      "FHIR Element (R4)": "Bundle.entry:primaryCancerCondition.resource",
-      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle",
-      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle"
-    },
-    {
-      "Group": "Default",
-      "Profile Title": "mCODE Patient Bundle",
-      "Data Element Name": "Entry > Secondary Cancer Condition",
-      "Definition": "Condition resource(s) representing the Secondary Cancer Condition.",
-      "Required?": "Required if known",
-      "Occurrences Allowed": "Multiple",
-      "Data Type": "BackboneElement",
-      "Value Set URI": "",
-      "Value Set Binding": "",
-      "FHIR Element (R4)": "Bundle.entry:secondaryCancerCondition",
-      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle",
-      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle"
-    },
-    {
-      "Group": "Default",
-      "Profile Title": "mCODE Patient Bundle",
-      "Data Element Name": "Entry > Secondary Cancer Condition > Resource",
-      "Definition": "The US Core Condition Profile is based upon the core FHIR Condition Resource and created to meet the 2015 Edition Common Clinical Data Set 'Problems' and 'Health Concerns' requirements.",
-      "Required?": "Required if known (conditional on Entry)",
-      "Occurrences Allowed": "Single",
-      "Data Type": "Condition",
-      "Value Set URI": "",
-      "Value Set Binding": "",
-      "FHIR Element (R4)": "Bundle.entry:secondaryCancerCondition.resource",
-      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle",
-      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle"
-    },
-    {
-      "Group": "Default",
-      "Profile Title": "mCODE Patient Bundle",
-      "Data Element Name": "Entry > Cancer Disease Status",
-      "Definition": "Observations resource(s) representing Cancer Disease Status. Include past assessments if available.",
-      "Required?": "Required if known",
-      "Occurrences Allowed": "Multiple",
-      "Data Type": "BackboneElement",
-      "Value Set URI": "",
-      "Value Set Binding": "",
-      "FHIR Element (R4)": "Bundle.entry:cancerDiseaseStatus",
-      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle",
-      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle"
-    },
-    {
-      "Group": "Default",
-      "Profile Title": "mCODE Patient Bundle",
-      "Data Element Name": "Entry > Cancer Disease Status > Resource",
-      "Definition": "Measurements and simple assertions made about a patient, device or other subject.",
-      "Required?": "Required if known (conditional on Entry)",
-      "Occurrences Allowed": "Single",
-      "Data Type": "Observation",
-      "Value Set URI": "",
-      "Value Set Binding": "",
-      "FHIR Element (R4)": "Bundle.entry:cancerDiseaseStatus.resource",
-      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle",
-      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle"
-    },
-    {
-      "Group": "Default",
-      "Profile Title": "mCODE Patient Bundle",
-      "Data Element Name": "Entry > Ecog Performance Status",
-      "Definition": "Observations resource(s) representing ECOG Performance Status assessment. Include past assessments if available.",
-      "Required?": "Required if known",
-      "Occurrences Allowed": "Multiple",
-      "Data Type": "BackboneElement",
-      "Value Set URI": "",
-      "Value Set Binding": "",
-      "FHIR Element (R4)": "Bundle.entry:ecogPerformanceStatus",
-      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle",
-      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle"
-    },
-    {
-      "Group": "Default",
-      "Profile Title": "mCODE Patient Bundle",
-      "Data Element Name": "Entry > Ecog Performance Status > Resource",
-      "Definition": "Measurements and simple assertions made about a patient, device or other subject.",
-      "Required?": "Required if known (conditional on Entry)",
-      "Occurrences Allowed": "Single",
-      "Data Type": "Observation",
-      "Value Set URI": "",
-      "Value Set Binding": "",
-      "FHIR Element (R4)": "Bundle.entry:ecogPerformanceStatus.resource",
-      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle",
-      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle"
-    },
-    {
-      "Group": "Default",
-      "Profile Title": "mCODE Patient Bundle",
-      "Data Element Name": "Entry > Karnofsky Performance Status",
-      "Definition": "Observations resource(s) representing Karnofsky Performance Status assessment. Include past assessments if available.",
-      "Required?": "Required if known",
-      "Occurrences Allowed": "Multiple",
-      "Data Type": "BackboneElement",
-      "Value Set URI": "",
-      "Value Set Binding": "",
-      "FHIR Element (R4)": "Bundle.entry:karnofskyPerformanceStatus",
-      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle",
-      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle"
-    },
-    {
-      "Group": "Default",
-      "Profile Title": "mCODE Patient Bundle",
-      "Data Element Name": "Entry > Karnofsky Performance Status > Resource",
-      "Definition": "Measurements and simple assertions made about a patient, device or other subject.",
-      "Required?": "Required if known (conditional on Entry)",
-      "Occurrences Allowed": "Single",
-      "Data Type": "Observation",
-      "Value Set URI": "",
-      "Value Set Binding": "",
-      "FHIR Element (R4)": "Bundle.entry:karnofskyPerformanceStatus.resource",
-      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle",
-      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle"
-    },
-    {
-      "Group": "Default",
-      "Profile Title": "mCODE Patient Bundle",
-      "Data Element Name": "Entry > Tumor Marker Test",
-      "Definition": "Observations resource(s) representing Tumor Marker Tests.",
-      "Required?": "Required if known",
-      "Occurrences Allowed": "Multiple",
-      "Data Type": "BackboneElement",
-      "Value Set URI": "",
-      "Value Set Binding": "",
-      "FHIR Element (R4)": "Bundle.entry:tumorMarkerTest",
-      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle",
-      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle"
-    },
-    {
-      "Group": "Default",
-      "Profile Title": "mCODE Patient Bundle",
-      "Data Element Name": "Entry > Tumor Marker Test > Resource",
-      "Definition": "This profile is  created to meet the 2015 Edition Common Clinical Data Set 'Laboratory test(s) and Laboratory value(s)/result(s)' requirements.",
-      "Required?": "Required if known (conditional on Entry)",
-      "Occurrences Allowed": "Single",
-      "Data Type": "Observation",
-      "Value Set URI": "",
-      "Value Set Binding": "",
-      "FHIR Element (R4)": "Bundle.entry:tumorMarkerTest.resource",
-      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle",
-      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle"
-    },
-    {
-      "Group": "Default",
-      "Profile Title": "mCODE Patient Bundle",
-      "Data Element Name": "Entry > Cancer Related Medication Request",
-      "Definition": "Cancer-Related Medication Requests, including both active and inactive medications.",
-      "Required?": "Required if known",
-      "Occurrences Allowed": "Multiple",
-      "Data Type": "BackboneElement",
-      "Value Set URI": "",
-      "Value Set Binding": "",
-      "FHIR Element (R4)": "Bundle.entry:cancerRelatedMedicationRequest",
-      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle",
-      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle"
-    },
-    {
-      "Group": "Default",
-      "Profile Title": "mCODE Patient Bundle",
-      "Data Element Name": "Entry > Cancer Related Medication Request > Resource",
-      "Definition": "The US Core Medication Request (Order) Profile is based upon the core FHIR MedicationRequest Resource and created to meet the 2015 Edition Common Clinical Data Set 'Medications' requirements.",
-      "Required?": "Required if known (conditional on Entry)",
-      "Occurrences Allowed": "Single",
-      "Data Type": "MedicationRequest",
-      "Value Set URI": "",
-      "Value Set Binding": "",
-      "FHIR Element (R4)": "Bundle.entry:cancerRelatedMedicationRequest.resource",
-      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle",
-      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle"
-    },
-    {
-      "Group": "Default",
-      "Profile Title": "mCODE Patient Bundle",
-      "Data Element Name": "Entry > Cancer Related Surgical Procedure",
-      "Definition": "Procedure resource(s) representing cancer-related surgical procedures.",
-      "Required?": "Required if known",
-      "Occurrences Allowed": "Multiple",
-      "Data Type": "BackboneElement",
-      "Value Set URI": "",
-      "Value Set Binding": "",
-      "FHIR Element (R4)": "Bundle.entry:cancerRelatedSurgicalProcedure",
-      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle",
-      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle"
-    },
-    {
-      "Group": "Default",
-      "Profile Title": "mCODE Patient Bundle",
-      "Data Element Name": "Entry > Cancer Related Surgical Procedure > Resource",
-      "Definition": "The US Core Condition Profile is based upon the core FHIR Procedure Resource and created to meet the 2015 Edition Common Clinical Data Set 'Procedures' requirements.",
-      "Required?": "Required if known (conditional on Entry)",
-      "Occurrences Allowed": "Single",
-      "Data Type": "Procedure",
-      "Value Set URI": "",
-      "Value Set Binding": "",
-      "FHIR Element (R4)": "Bundle.entry:cancerRelatedSurgicalProcedure.resource",
-      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle",
-      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle"
-    },
-    {
-      "Group": "Default",
-      "Profile Title": "mCODE Patient Bundle",
-      "Data Element Name": "Entry > Radiotherapy Treatment Summary",
-      "Definition": "Procedure resource(s) representing a course of treatment in cancer-related radiology therapy.",
-      "Required?": "Required if known",
-      "Occurrences Allowed": "Multiple",
-      "Data Type": "BackboneElement",
-      "Value Set URI": "",
-      "Value Set Binding": "",
-      "FHIR Element (R4)": "Bundle.entry:radiotherapyTreatmentSummary",
-      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle",
-      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle"
-    },
-    {
-      "Group": "Default",
-      "Profile Title": "mCODE Patient Bundle",
-      "Data Element Name": "Entry > Radiotherapy Treatment Summary > Resource",
-      "Definition": "The US Core Condition Profile is based upon the core FHIR Procedure Resource and created to meet the 2015 Edition Common Clinical Data Set 'Procedures' requirements.",
-      "Required?": "Required if known (conditional on Entry)",
-      "Occurrences Allowed": "Single",
-      "Data Type": "Procedure",
-      "Value Set URI": "",
-      "Value Set Binding": "",
-      "FHIR Element (R4)": "Bundle.entry:radiotherapyTreatmentSummary.resource",
-      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle",
-      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle"
-    },
-    {
-      "Group": "Default",
-      "Profile Title": "mCODE Patient Bundle",
       "Data Element Name": "Entry > Brachytherapy Treatment Phase",
-      "Definition": "Procedure resource(s) representing cancer-related brachytherapy (internal) radiology procedures.",
+      "Definition": "Procedure resource representing one phase in cancer-related brachytherapy radiology procedures.",
       "Required?": "Required if known",
       "Occurrences Allowed": "Multiple",
       "Data Type": "BackboneElement",
@@ -6095,140 +5913,28 @@
     {
       "Group": "Default",
       "Profile Title": "mCODE Patient Bundle",
-      "Data Element Name": "Entry > Teleradiotherapy Treatment Phase",
-      "Definition": "Procedure resource(s) representing a phase in treatment of cancer via external beam radiology procedures.",
+      "Data Element Name": "Entry > Cancer Disease Status",
+      "Definition": "Observations resource representing Cancer Disease Status. Include past assessments if available.",
       "Required?": "Required if known",
       "Occurrences Allowed": "Multiple",
       "Data Type": "BackboneElement",
       "Value Set URI": "",
       "Value Set Binding": "",
-      "FHIR Element (R4)": "Bundle.entry:teleradiotherapyTreatmentPhase",
+      "FHIR Element (R4)": "Bundle.entry:cancerDiseaseStatus",
       "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle",
       "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle"
     },
     {
       "Group": "Default",
       "Profile Title": "mCODE Patient Bundle",
-      "Data Element Name": "Entry > Teleradiotherapy Treatment Phase > Resource",
-      "Definition": "The US Core Condition Profile is based upon the core FHIR Procedure Resource and created to meet the 2015 Edition Common Clinical Data Set 'Procedures' requirements.",
-      "Required?": "Required if known (conditional on Entry)",
-      "Occurrences Allowed": "Single",
-      "Data Type": "Procedure",
-      "Value Set URI": "",
-      "Value Set Binding": "",
-      "FHIR Element (R4)": "Bundle.entry:teleradiotherapyTreatmentPhase.resource",
-      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle",
-      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle"
-    },
-    {
-      "Group": "Default",
-      "Profile Title": "mCODE Patient Bundle",
-      "Data Element Name": "Entry > Cancer Stage Group",
-      "Definition": "Observation resource(s) representing stage group",
-      "Required?": "Required if known",
-      "Occurrences Allowed": "Multiple",
-      "Data Type": "BackboneElement",
-      "Value Set URI": "",
-      "Value Set Binding": "",
-      "FHIR Element (R4)": "Bundle.entry:cancerStageGroup",
-      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle",
-      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle"
-    },
-    {
-      "Group": "Default",
-      "Profile Title": "mCODE Patient Bundle",
-      "Data Element Name": "Entry > Cancer Stage Group > Resource",
+      "Data Element Name": "Entry > Cancer Disease Status > Resource",
       "Definition": "Measurements and simple assertions made about a patient, device or other subject.",
       "Required?": "Required if known (conditional on Entry)",
       "Occurrences Allowed": "Single",
       "Data Type": "Observation",
       "Value Set URI": "",
       "Value Set Binding": "",
-      "FHIR Element (R4)": "Bundle.entry:cancerStageGroup.resource",
-      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle",
-      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle"
-    },
-    {
-      "Group": "Default",
-      "Profile Title": "mCODE Patient Bundle",
-      "Data Element Name": "Entry > TNM Primary Tumor Category",
-      "Definition": "Observation resource(s) representing T category",
-      "Required?": "Required if known",
-      "Occurrences Allowed": "Multiple",
-      "Data Type": "BackboneElement",
-      "Value Set URI": "",
-      "Value Set Binding": "",
-      "FHIR Element (R4)": "Bundle.entry:tnmPrimaryTumorCategory",
-      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle",
-      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle"
-    },
-    {
-      "Group": "Default",
-      "Profile Title": "mCODE Patient Bundle",
-      "Data Element Name": "Entry > TNM Primary Tumor Category > Resource",
-      "Definition": "Measurements and simple assertions made about a patient, device or other subject.",
-      "Required?": "Required if known (conditional on Entry)",
-      "Occurrences Allowed": "Single",
-      "Data Type": "Observation",
-      "Value Set URI": "",
-      "Value Set Binding": "",
-      "FHIR Element (R4)": "Bundle.entry:tnmPrimaryTumorCategory.resource",
-      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle",
-      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle"
-    },
-    {
-      "Group": "Default",
-      "Profile Title": "mCODE Patient Bundle",
-      "Data Element Name": "Entry > TNM Regional Nodes Category",
-      "Definition": "Observation resource(s) representing N category",
-      "Required?": "Required if known",
-      "Occurrences Allowed": "Multiple",
-      "Data Type": "BackboneElement",
-      "Value Set URI": "",
-      "Value Set Binding": "",
-      "FHIR Element (R4)": "Bundle.entry:tnmRegionalNodesCategory",
-      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle",
-      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle"
-    },
-    {
-      "Group": "Default",
-      "Profile Title": "mCODE Patient Bundle",
-      "Data Element Name": "Entry > TNM Regional Nodes Category > Resource",
-      "Definition": "Measurements and simple assertions made about a patient, device or other subject.",
-      "Required?": "Required if known (conditional on Entry)",
-      "Occurrences Allowed": "Single",
-      "Data Type": "Observation",
-      "Value Set URI": "",
-      "Value Set Binding": "",
-      "FHIR Element (R4)": "Bundle.entry:tnmRegionalNodesCategory.resource",
-      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle",
-      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle"
-    },
-    {
-      "Group": "Default",
-      "Profile Title": "mCODE Patient Bundle",
-      "Data Element Name": "Entry > TNM Distant Metastases Category",
-      "Definition": "Observation resource(s) representing M category",
-      "Required?": "Required if known",
-      "Occurrences Allowed": "Multiple",
-      "Data Type": "BackboneElement",
-      "Value Set URI": "",
-      "Value Set Binding": "",
-      "FHIR Element (R4)": "Bundle.entry:tnmDistantMetastasesCategory",
-      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle",
-      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle"
-    },
-    {
-      "Group": "Default",
-      "Profile Title": "mCODE Patient Bundle",
-      "Data Element Name": "Entry > TNM Distant Metastases Category > Resource",
-      "Definition": "Measurements and simple assertions made about a patient, device or other subject.",
-      "Required?": "Required if known (conditional on Entry)",
-      "Occurrences Allowed": "Single",
-      "Data Type": "Observation",
-      "Value Set URI": "",
-      "Value Set Binding": "",
-      "FHIR Element (R4)": "Bundle.entry:tnmDistantMetastasesCategory.resource",
+      "FHIR Element (R4)": "Bundle.entry:cancerDiseaseStatus.resource",
       "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle",
       "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle"
     },
@@ -6236,7 +5942,7 @@
       "Group": "Default",
       "Profile Title": "mCODE Patient Bundle",
       "Data Element Name": "Entry > Cancer Genetic Variant",
-      "Definition": "Observation resource(s) representing Cancer Genetic Variants.",
+      "Definition": "Observation resource representing genetic variants.",
       "Required?": "Required if known",
       "Occurrences Allowed": "Multiple",
       "Data Type": "BackboneElement",
@@ -6264,7 +5970,7 @@
       "Group": "Default",
       "Profile Title": "mCODE Patient Bundle",
       "Data Element Name": "Entry > Cancer Genomics Report",
-      "Definition": "DiagnosticReport resource(s) representing Cancer Genomics Reports",
+      "Definition": "DiagnosticReport resource representing cancer genomics reports.",
       "Required?": "Required if known",
       "Occurrences Allowed": "Multiple",
       "Data Type": "BackboneElement",
@@ -6291,56 +5997,140 @@
     {
       "Group": "Default",
       "Profile Title": "mCODE Patient Bundle",
-      "Data Element Name": "Entry > Genetic Specimen",
-      "Definition": "Specimen resource(s) representing Genetic Specimens.",
-      "Required?": "Required if known",
-      "Occurrences Allowed": "Multiple",
+      "Data Element Name": "Entry > Cancer Patient",
+      "Definition": "The Cancer Patient whose data is included in the bundle.",
+      "Required?": "Required",
+      "Occurrences Allowed": "Single",
       "Data Type": "BackboneElement",
       "Value Set URI": "",
       "Value Set Binding": "",
-      "FHIR Element (R4)": "Bundle.entry:geneticSpecimen",
+      "FHIR Element (R4)": "Bundle.entry:cancerPatient",
       "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle",
       "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle"
     },
     {
       "Group": "Default",
       "Profile Title": "mCODE Patient Bundle",
-      "Data Element Name": "Entry > Genetic Specimen > Resource",
-      "Definition": "A sample to be used for analysis.",
+      "Data Element Name": "Entry > Cancer Patient > Resource",
+      "Definition": "The US Core Patient Profile is based upon the core FHIR Patient Resource and designed to meet the applicable patient demographic data elements from the 2015 Edition Common Clinical Data Set.",
       "Required?": "Required if known (conditional on Entry)",
       "Occurrences Allowed": "Single",
-      "Data Type": "Specimen",
+      "Data Type": "Patient",
       "Value Set URI": "",
       "Value Set Binding": "",
-      "FHIR Element (R4)": "Bundle.entry:geneticSpecimen.resource",
+      "FHIR Element (R4)": "Bundle.entry:cancerPatient.resource",
       "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle",
       "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle"
     },
     {
       "Group": "Default",
       "Profile Title": "mCODE Patient Bundle",
-      "Data Element Name": "Entry > Genomic Region Studied",
-      "Definition": "Observation resource(s) representing Genomic Regions Studied.",
+      "Data Element Name": "Entry > Cancer Stage Group",
+      "Definition": "Observation resource representing the cancer stage group.",
       "Required?": "Required if known",
       "Occurrences Allowed": "Multiple",
       "Data Type": "BackboneElement",
       "Value Set URI": "",
       "Value Set Binding": "",
-      "FHIR Element (R4)": "Bundle.entry:genomicRegionStudied",
+      "FHIR Element (R4)": "Bundle.entry:cancerStageGroup",
       "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle",
       "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle"
     },
     {
       "Group": "Default",
       "Profile Title": "mCODE Patient Bundle",
-      "Data Element Name": "Entry > Genomic Region Studied > Resource",
-      "Definition": "This profile is  created to meet the 2015 Edition Common Clinical Data Set 'Laboratory test(s) and Laboratory value(s)/result(s)' requirements.",
+      "Data Element Name": "Entry > Cancer Stage Group > Resource",
+      "Definition": "Measurements and simple assertions made about a patient, device or other subject.",
       "Required?": "Required if known (conditional on Entry)",
       "Occurrences Allowed": "Single",
       "Data Type": "Observation",
       "Value Set URI": "",
       "Value Set Binding": "",
-      "FHIR Element (R4)": "Bundle.entry:genomicRegionStudied.resource",
+      "FHIR Element (R4)": "Bundle.entry:cancerStageGroup.resource",
+      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle",
+      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle"
+    },
+    {
+      "Group": "Default",
+      "Profile Title": "mCODE Patient Bundle",
+      "Data Element Name": "Entry > Cancer Related Medication Administration",
+      "Definition": "MedicationAdministration resource representing medication administrations.",
+      "Required?": "Required if known",
+      "Occurrences Allowed": "Multiple",
+      "Data Type": "BackboneElement",
+      "Value Set URI": "",
+      "Value Set Binding": "",
+      "FHIR Element (R4)": "Bundle.entry:cancerRelatedMedicationAdministration",
+      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle",
+      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle"
+    },
+    {
+      "Group": "Default",
+      "Profile Title": "mCODE Patient Bundle",
+      "Data Element Name": "Entry > Cancer Related Medication Administration > Resource",
+      "Definition": "Describes the event of a patient consuming or otherwise being administered a medication.  This may be as simple as swallowing a tablet or it may be a long running infusion.  Related resources tie this event to the authorizing prescription, and the specific encounter between patient and health care practitioner.",
+      "Required?": "Required if known (conditional on Entry)",
+      "Occurrences Allowed": "Single",
+      "Data Type": "MedicationAdministration",
+      "Value Set URI": "",
+      "Value Set Binding": "",
+      "FHIR Element (R4)": "Bundle.entry:cancerRelatedMedicationAdministration.resource",
+      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle",
+      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle"
+    },
+    {
+      "Group": "Default",
+      "Profile Title": "mCODE Patient Bundle",
+      "Data Element Name": "Entry > Cancer Related Medication Request",
+      "Definition": "MedicationRequest resources representing cancer-related medications, including both active and inactive medications.",
+      "Required?": "Required if known",
+      "Occurrences Allowed": "Multiple",
+      "Data Type": "BackboneElement",
+      "Value Set URI": "",
+      "Value Set Binding": "",
+      "FHIR Element (R4)": "Bundle.entry:cancerRelatedMedicationRequest",
+      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle",
+      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle"
+    },
+    {
+      "Group": "Default",
+      "Profile Title": "mCODE Patient Bundle",
+      "Data Element Name": "Entry > Cancer Related Medication Request > Resource",
+      "Definition": "The US Core Medication Request (Order) Profile is based upon the core FHIR MedicationRequest Resource and created to meet the 2015 Edition Common Clinical Data Set 'Medications' requirements.",
+      "Required?": "Required if known (conditional on Entry)",
+      "Occurrences Allowed": "Single",
+      "Data Type": "MedicationRequest",
+      "Value Set URI": "",
+      "Value Set Binding": "",
+      "FHIR Element (R4)": "Bundle.entry:cancerRelatedMedicationRequest.resource",
+      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle",
+      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle"
+    },
+    {
+      "Group": "Default",
+      "Profile Title": "mCODE Patient Bundle",
+      "Data Element Name": "Entry > Cancer Related Surgical Procedure",
+      "Definition": "Procedure resource representing cancer-related surgical procedures.",
+      "Required?": "Required if known",
+      "Occurrences Allowed": "Multiple",
+      "Data Type": "BackboneElement",
+      "Value Set URI": "",
+      "Value Set Binding": "",
+      "FHIR Element (R4)": "Bundle.entry:cancerRelatedSurgicalProcedure",
+      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle",
+      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle"
+    },
+    {
+      "Group": "Default",
+      "Profile Title": "mCODE Patient Bundle",
+      "Data Element Name": "Entry > Cancer Related Surgical Procedure > Resource",
+      "Definition": "The US Core Condition Profile is based upon the core FHIR Procedure Resource and created to meet the 2015 Edition Common Clinical Data Set 'Procedures' requirements.",
+      "Required?": "Required if known (conditional on Entry)",
+      "Occurrences Allowed": "Single",
+      "Data Type": "Procedure",
+      "Value Set URI": "",
+      "Value Set Binding": "",
+      "FHIR Element (R4)": "Bundle.entry:cancerRelatedSurgicalProcedure.resource",
       "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle",
       "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle"
     },
@@ -6375,28 +6165,308 @@
     {
       "Group": "Default",
       "Profile Title": "mCODE Patient Bundle",
-      "Data Element Name": "Entry > Vital Sign",
-      "Definition": "Observation resource(s) representing patient height, weight, blood pressure, and other vital signs.",
+      "Data Element Name": "Entry > Ecog Performance Status",
+      "Definition": "Observations resource representing ECOG performance status assessment. Include past assessments if available.",
       "Required?": "Required if known",
       "Occurrences Allowed": "Multiple",
       "Data Type": "BackboneElement",
       "Value Set URI": "",
       "Value Set Binding": "",
-      "FHIR Element (R4)": "Bundle.entry:vitalSign",
+      "FHIR Element (R4)": "Bundle.entry:ecogPerformanceStatus",
       "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle",
       "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle"
     },
     {
       "Group": "Default",
       "Profile Title": "mCODE Patient Bundle",
-      "Data Element Name": "Entry > Vital Sign > Resource",
-      "Definition": "The FHIR Vitals Signs profile sets minimum expectations for the Observation Resource to record, search and fetch the vital signs associated with a patient.",
+      "Data Element Name": "Entry > Ecog Performance Status > Resource",
+      "Definition": "Measurements and simple assertions made about a patient, device or other subject.",
       "Required?": "Required if known (conditional on Entry)",
       "Occurrences Allowed": "Single",
       "Data Type": "Observation",
       "Value Set URI": "",
       "Value Set Binding": "",
-      "FHIR Element (R4)": "Bundle.entry:vitalSign.resource",
+      "FHIR Element (R4)": "Bundle.entry:ecogPerformanceStatus.resource",
+      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle",
+      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle"
+    },
+    {
+      "Group": "Default",
+      "Profile Title": "mCODE Patient Bundle",
+      "Data Element Name": "Entry > Genetic Specimen",
+      "Definition": "Specimen resource representing a specimen obtained for genomic analysis.",
+      "Required?": "Required if known",
+      "Occurrences Allowed": "Multiple",
+      "Data Type": "BackboneElement",
+      "Value Set URI": "",
+      "Value Set Binding": "",
+      "FHIR Element (R4)": "Bundle.entry:geneticSpecimen",
+      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle",
+      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle"
+    },
+    {
+      "Group": "Default",
+      "Profile Title": "mCODE Patient Bundle",
+      "Data Element Name": "Entry > Genetic Specimen > Resource",
+      "Definition": "A sample to be used for analysis.",
+      "Required?": "Required if known (conditional on Entry)",
+      "Occurrences Allowed": "Single",
+      "Data Type": "Specimen",
+      "Value Set URI": "",
+      "Value Set Binding": "",
+      "FHIR Element (R4)": "Bundle.entry:geneticSpecimen.resource",
+      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle",
+      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle"
+    },
+    {
+      "Group": "Default",
+      "Profile Title": "mCODE Patient Bundle",
+      "Data Element Name": "Entry > Genomic Region Studied",
+      "Definition": "Observation resource representing regions of the genome analyzed for variants.",
+      "Required?": "Required if known",
+      "Occurrences Allowed": "Multiple",
+      "Data Type": "BackboneElement",
+      "Value Set URI": "",
+      "Value Set Binding": "",
+      "FHIR Element (R4)": "Bundle.entry:genomicRegionStudied",
+      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle",
+      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle"
+    },
+    {
+      "Group": "Default",
+      "Profile Title": "mCODE Patient Bundle",
+      "Data Element Name": "Entry > Genomic Region Studied > Resource",
+      "Definition": "This profile is  created to meet the 2015 Edition Common Clinical Data Set 'Laboratory test(s) and Laboratory value(s)/result(s)' requirements.",
+      "Required?": "Required if known (conditional on Entry)",
+      "Occurrences Allowed": "Single",
+      "Data Type": "Observation",
+      "Value Set URI": "",
+      "Value Set Binding": "",
+      "FHIR Element (R4)": "Bundle.entry:genomicRegionStudied.resource",
+      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle",
+      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle"
+    },
+    {
+      "Group": "Default",
+      "Profile Title": "mCODE Patient Bundle",
+      "Data Element Name": "Entry > Karnofsky Performance Status",
+      "Definition": "Observation resource representing Karnofsky performance status assessment. Include past assessments if available.",
+      "Required?": "Required if known",
+      "Occurrences Allowed": "Multiple",
+      "Data Type": "BackboneElement",
+      "Value Set URI": "",
+      "Value Set Binding": "",
+      "FHIR Element (R4)": "Bundle.entry:karnofskyPerformanceStatus",
+      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle",
+      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle"
+    },
+    {
+      "Group": "Default",
+      "Profile Title": "mCODE Patient Bundle",
+      "Data Element Name": "Entry > Karnofsky Performance Status > Resource",
+      "Definition": "Measurements and simple assertions made about a patient, device or other subject.",
+      "Required?": "Required if known (conditional on Entry)",
+      "Occurrences Allowed": "Single",
+      "Data Type": "Observation",
+      "Value Set URI": "",
+      "Value Set Binding": "",
+      "FHIR Element (R4)": "Bundle.entry:karnofskyPerformanceStatus.resource",
+      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle",
+      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle"
+    },
+    {
+      "Group": "Default",
+      "Profile Title": "mCODE Patient Bundle",
+      "Data Element Name": "Entry > Primary Cancer Condition",
+      "Definition": "Condition resource representing the Primary Cancer Condition.",
+      "Required?": "Required if known",
+      "Occurrences Allowed": "Multiple",
+      "Data Type": "BackboneElement",
+      "Value Set URI": "",
+      "Value Set Binding": "",
+      "FHIR Element (R4)": "Bundle.entry:primaryCancerCondition",
+      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle",
+      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle"
+    },
+    {
+      "Group": "Default",
+      "Profile Title": "mCODE Patient Bundle",
+      "Data Element Name": "Entry > Primary Cancer Condition > Resource",
+      "Definition": "The US Core Condition Profile is based upon the core FHIR Condition Resource and created to meet the 2015 Edition Common Clinical Data Set 'Problems' and 'Health Concerns' requirements.",
+      "Required?": "Required if known (conditional on Entry)",
+      "Occurrences Allowed": "Single",
+      "Data Type": "Condition",
+      "Value Set URI": "",
+      "Value Set Binding": "",
+      "FHIR Element (R4)": "Bundle.entry:primaryCancerCondition.resource",
+      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle",
+      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle"
+    },
+    {
+      "Group": "Default",
+      "Profile Title": "mCODE Patient Bundle",
+      "Data Element Name": "Entry > Radiotherapy Course Summary",
+      "Definition": "Procedure resource representing a course of treatment in cancer-related radiotherapy.",
+      "Required?": "Required if known",
+      "Occurrences Allowed": "Multiple",
+      "Data Type": "BackboneElement",
+      "Value Set URI": "",
+      "Value Set Binding": "",
+      "FHIR Element (R4)": "Bundle.entry:radiotherapyCourseSummary",
+      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle",
+      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle"
+    },
+    {
+      "Group": "Default",
+      "Profile Title": "mCODE Patient Bundle",
+      "Data Element Name": "Entry > Radiotherapy Course Summary > Resource",
+      "Definition": "The US Core Condition Profile is based upon the core FHIR Procedure Resource and created to meet the 2015 Edition Common Clinical Data Set 'Procedures' requirements.",
+      "Required?": "Required if known (conditional on Entry)",
+      "Occurrences Allowed": "Single",
+      "Data Type": "Procedure",
+      "Value Set URI": "",
+      "Value Set Binding": "",
+      "FHIR Element (R4)": "Bundle.entry:radiotherapyCourseSummary.resource",
+      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle",
+      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle"
+    },
+    {
+      "Group": "Default",
+      "Profile Title": "mCODE Patient Bundle",
+      "Data Element Name": "Entry > Secondary Cancer Condition",
+      "Definition": "Condition resource representing the Secondary Cancer Condition.",
+      "Required?": "Required if known",
+      "Occurrences Allowed": "Multiple",
+      "Data Type": "BackboneElement",
+      "Value Set URI": "",
+      "Value Set Binding": "",
+      "FHIR Element (R4)": "Bundle.entry:secondaryCancerCondition",
+      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle",
+      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle"
+    },
+    {
+      "Group": "Default",
+      "Profile Title": "mCODE Patient Bundle",
+      "Data Element Name": "Entry > Secondary Cancer Condition > Resource",
+      "Definition": "The US Core Condition Profile is based upon the core FHIR Condition Resource and created to meet the 2015 Edition Common Clinical Data Set 'Problems' and 'Health Concerns' requirements.",
+      "Required?": "Required if known (conditional on Entry)",
+      "Occurrences Allowed": "Single",
+      "Data Type": "Condition",
+      "Value Set URI": "",
+      "Value Set Binding": "",
+      "FHIR Element (R4)": "Bundle.entry:secondaryCancerCondition.resource",
+      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle",
+      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle"
+    },
+    {
+      "Group": "Default",
+      "Profile Title": "mCODE Patient Bundle",
+      "Data Element Name": "Entry > Teleradiotherapy Treatment Phase",
+      "Definition": "Procedure resource representing one phase in cancer-related external beam radiology procedures.",
+      "Required?": "Required if known",
+      "Occurrences Allowed": "Multiple",
+      "Data Type": "BackboneElement",
+      "Value Set URI": "",
+      "Value Set Binding": "",
+      "FHIR Element (R4)": "Bundle.entry:teleradiotherapyTreatmentPhase",
+      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle",
+      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle"
+    },
+    {
+      "Group": "Default",
+      "Profile Title": "mCODE Patient Bundle",
+      "Data Element Name": "Entry > Teleradiotherapy Treatment Phase > Resource",
+      "Definition": "The US Core Condition Profile is based upon the core FHIR Procedure Resource and created to meet the 2015 Edition Common Clinical Data Set 'Procedures' requirements.",
+      "Required?": "Required if known (conditional on Entry)",
+      "Occurrences Allowed": "Single",
+      "Data Type": "Procedure",
+      "Value Set URI": "",
+      "Value Set Binding": "",
+      "FHIR Element (R4)": "Bundle.entry:teleradiotherapyTreatmentPhase.resource",
+      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle",
+      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle"
+    },
+    {
+      "Group": "Default",
+      "Profile Title": "mCODE Patient Bundle",
+      "Data Element Name": "Entry > TNM Primary Tumor Category",
+      "Definition": "Observation resource representing T category.",
+      "Required?": "Required if known",
+      "Occurrences Allowed": "Multiple",
+      "Data Type": "BackboneElement",
+      "Value Set URI": "",
+      "Value Set Binding": "",
+      "FHIR Element (R4)": "Bundle.entry:tnmPrimaryTumorCategory",
+      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle",
+      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle"
+    },
+    {
+      "Group": "Default",
+      "Profile Title": "mCODE Patient Bundle",
+      "Data Element Name": "Entry > TNM Primary Tumor Category > Resource",
+      "Definition": "Measurements and simple assertions made about a patient, device or other subject.",
+      "Required?": "Required if known (conditional on Entry)",
+      "Occurrences Allowed": "Single",
+      "Data Type": "Observation",
+      "Value Set URI": "",
+      "Value Set Binding": "",
+      "FHIR Element (R4)": "Bundle.entry:tnmPrimaryTumorCategory.resource",
+      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle",
+      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle"
+    },
+    {
+      "Group": "Default",
+      "Profile Title": "mCODE Patient Bundle",
+      "Data Element Name": "Entry > TNM Regional Nodes Category",
+      "Definition": "Observation resource representing N category.",
+      "Required?": "Required if known",
+      "Occurrences Allowed": "Multiple",
+      "Data Type": "BackboneElement",
+      "Value Set URI": "",
+      "Value Set Binding": "",
+      "FHIR Element (R4)": "Bundle.entry:tnmRegionalNodesCategory",
+      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle",
+      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle"
+    },
+    {
+      "Group": "Default",
+      "Profile Title": "mCODE Patient Bundle",
+      "Data Element Name": "Entry > TNM Regional Nodes Category > Resource",
+      "Definition": "Measurements and simple assertions made about a patient, device or other subject.",
+      "Required?": "Required if known (conditional on Entry)",
+      "Occurrences Allowed": "Single",
+      "Data Type": "Observation",
+      "Value Set URI": "",
+      "Value Set Binding": "",
+      "FHIR Element (R4)": "Bundle.entry:tnmRegionalNodesCategory.resource",
+      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle",
+      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle"
+    },
+    {
+      "Group": "Default",
+      "Profile Title": "mCODE Patient Bundle",
+      "Data Element Name": "Entry > TNM Distant Metastases Category",
+      "Definition": "Observation resource representing M category.",
+      "Required?": "Required if known",
+      "Occurrences Allowed": "Multiple",
+      "Data Type": "BackboneElement",
+      "Value Set URI": "",
+      "Value Set Binding": "",
+      "FHIR Element (R4)": "Bundle.entry:tnmDistantMetastasesCategory",
+      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle",
+      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle"
+    },
+    {
+      "Group": "Default",
+      "Profile Title": "mCODE Patient Bundle",
+      "Data Element Name": "Entry > TNM Distant Metastases Category > Resource",
+      "Definition": "Measurements and simple assertions made about a patient, device or other subject.",
+      "Required?": "Required if known (conditional on Entry)",
+      "Occurrences Allowed": "Single",
+      "Data Type": "Observation",
+      "Value Set URI": "",
+      "Value Set Binding": "",
+      "FHIR Element (R4)": "Bundle.entry:tnmDistantMetastasesCategory.resource",
       "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle",
       "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle"
     },
@@ -6404,7 +6474,7 @@
       "Group": "Default",
       "Profile Title": "mCODE Patient Bundle",
       "Data Element Name": "Entry > Tumor",
-      "Definition": "Any tumor(s) being tracked over time.",
+      "Definition": "BodyStructure resource representing a tumor having an identifier and being tracked over time.",
       "Required?": "Required if known",
       "Occurrences Allowed": "Multiple",
       "Data Type": "BackboneElement",
@@ -6431,8 +6501,36 @@
     {
       "Group": "Default",
       "Profile Title": "mCODE Patient Bundle",
+      "Data Element Name": "Entry > Tumor Marker Test",
+      "Definition": "Observations resource representing tumor marker tests.",
+      "Required?": "Required if known",
+      "Occurrences Allowed": "Multiple",
+      "Data Type": "BackboneElement",
+      "Value Set URI": "",
+      "Value Set Binding": "",
+      "FHIR Element (R4)": "Bundle.entry:tumorMarkerTest",
+      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle",
+      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle"
+    },
+    {
+      "Group": "Default",
+      "Profile Title": "mCODE Patient Bundle",
+      "Data Element Name": "Entry > Tumor Marker Test > Resource",
+      "Definition": "This profile is  created to meet the 2015 Edition Common Clinical Data Set 'Laboratory test(s) and Laboratory value(s)/result(s)' requirements.",
+      "Required?": "Required if known (conditional on Entry)",
+      "Occurrences Allowed": "Single",
+      "Data Type": "Observation",
+      "Value Set URI": "",
+      "Value Set Binding": "",
+      "FHIR Element (R4)": "Bundle.entry:tumorMarkerTest.resource",
+      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle",
+      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle"
+    },
+    {
+      "Group": "Default",
+      "Profile Title": "mCODE Patient Bundle",
       "Data Element Name": "Entry > Tumor Size",
-      "Definition": "Tumor size measurement(s).",
+      "Definition": "Observation resource representing a tumor size measurement.",
       "Required?": "Required if known",
       "Occurrences Allowed": "Multiple",
       "Data Type": "BackboneElement",
@@ -6453,6 +6551,34 @@
       "Value Set URI": "",
       "Value Set Binding": "",
       "FHIR Element (R4)": "Bundle.entry:tumorSize.resource",
+      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle",
+      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle"
+    },
+    {
+      "Group": "Default",
+      "Profile Title": "mCODE Patient Bundle",
+      "Data Element Name": "Entry > Vital Sign",
+      "Definition": "Observation resource representing patient height, weight, blood pressure, and other vital signs.",
+      "Required?": "Required if known",
+      "Occurrences Allowed": "Multiple",
+      "Data Type": "BackboneElement",
+      "Value Set URI": "",
+      "Value Set Binding": "",
+      "FHIR Element (R4)": "Bundle.entry:vitalSign",
+      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle",
+      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle"
+    },
+    {
+      "Group": "Default",
+      "Profile Title": "mCODE Patient Bundle",
+      "Data Element Name": "Entry > Vital Sign > Resource",
+      "Definition": "The FHIR Vitals Signs profile sets minimum expectations for the Observation Resource to record, search and fetch the vital signs associated with a patient.",
+      "Required?": "Required if known (conditional on Entry)",
+      "Occurrences Allowed": "Single",
+      "Data Type": "Observation",
+      "Value Set URI": "",
+      "Value Set Binding": "",
+      "FHIR Element (R4)": "Bundle.entry:vitalSign.resource",
       "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle",
       "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle"
     },
@@ -6560,7 +6686,7 @@
       "Data Element Name": "Body Site > Location Qualifier",
       "Definition": "Qualifier to refine the anatomical location. These include qualifiers for laterality, relative location, directionality, number, and plane.",
       "Required?": "Required if known (conditional on Body Site)",
-      "Occurrences Allowed": "Single",
+      "Occurrences Allowed": "Multiple",
       "Data Type": "CodeableConcept",
       "Value Set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-location-qualifier-vs",
       "Value Set Binding": "required",
@@ -6612,7 +6738,7 @@
     },
     {
       "Group": "Default",
-      "Profile Title": "Radiotherapy Summary",
+      "Profile Title": "Radiotherapy Course Summary",
       "Data Element Name": "Extension",
       "Definition": "An Extension",
       "Required?": "Required if known",
@@ -6621,12 +6747,12 @@
       "Value Set URI": "",
       "Value Set Binding": "",
       "FHIR Element (R4)": "Procedure.extension",
-      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-treatment-summary",
-      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-treatment-summary"
+      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-course-summary",
+      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-course-summary"
     },
     {
       "Group": "Default",
-      "Profile Title": "Radiotherapy Summary",
+      "Profile Title": "Radiotherapy Course Summary",
       "Data Element Name": "Extension > Treatment Intent",
       "Definition": "The purpose of a treatment.",
       "Required?": "Required if known",
@@ -6635,12 +6761,12 @@
       "Value Set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-treatment-intent-vs",
       "Value Set Binding": "required",
       "FHIR Element (R4)": "Procedure.extension:treatmentIntent",
-      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-treatment-summary",
-      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-treatment-summary"
+      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-course-summary",
+      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-course-summary"
     },
     {
       "Group": "Default",
-      "Profile Title": "Radiotherapy Summary",
+      "Profile Title": "Radiotherapy Course Summary",
       "Data Element Name": "Extension > Termination Reason",
       "Definition": "A code explaining an unplanned or premature termination of a plan of treatment, course of medication, or research study.",
       "Required?": "Required if known",
@@ -6649,12 +6775,12 @@
       "Value Set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-treatment-termination-reason-vs",
       "Value Set Binding": "required",
       "FHIR Element (R4)": "Procedure.extension:terminationReason",
-      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-treatment-summary",
-      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-treatment-summary"
+      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-course-summary",
+      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-course-summary"
     },
     {
       "Group": "Default",
-      "Profile Title": "Radiotherapy Summary",
+      "Profile Title": "Radiotherapy Course Summary",
       "Data Element Name": "Extension > Modality",
       "Definition": "Extension capturing a modality of external beam or brachytherapy radiation procedures.",
       "Required?": "Required if known",
@@ -6663,12 +6789,12 @@
       "Value Set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-radiotherapy-modality-vs",
       "Value Set Binding": "required",
       "FHIR Element (R4)": "Procedure.extension:modality",
-      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-treatment-summary",
-      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-treatment-summary"
+      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-course-summary",
+      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-course-summary"
     },
     {
       "Group": "Default",
-      "Profile Title": "Radiotherapy Summary",
+      "Profile Title": "Radiotherapy Course Summary",
       "Data Element Name": "Extension > Technique",
       "Definition": "Extension capturing a technique of external beam or brachytherapy radiation procedures.",
       "Required?": "Required if known",
@@ -6677,40 +6803,96 @@
       "Value Set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-radiotherapy-technique-vs",
       "Value Set Binding": "required",
       "FHIR Element (R4)": "Procedure.extension:technique",
-      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-treatment-summary",
-      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-treatment-summary"
+      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-course-summary",
+      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-course-summary"
     },
     {
       "Group": "Default",
-      "Profile Title": "Radiotherapy Summary",
-      "Data Element Name": "Extension > Fractions Delivered",
-      "Definition": "The total number of fractions (treatment divisions) actually delivered for this volume.",
+      "Profile Title": "Radiotherapy Course Summary",
+      "Data Element Name": "Extension > Actual Number of Sessions",
+      "Definition": "The number of sessions in a course of radiotherapy.",
       "Required?": "Required if known",
       "Occurrences Allowed": "Single",
       "Data Type": "unsignedInt",
       "Value Set URI": "",
       "Value Set Binding": "",
-      "FHIR Element (R4)": "Procedure.extension:fractionsDelivered",
-      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-treatment-summary",
-      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-treatment-summary"
+      "FHIR Element (R4)": "Procedure.extension:actualNumberOfSessions",
+      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-course-summary",
+      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-course-summary"
     },
     {
       "Group": "Default",
-      "Profile Title": "Radiotherapy Summary",
+      "Profile Title": "Radiotherapy Course Summary",
       "Data Element Name": "Extension > Dose Delivered",
-      "Definition": "Dose parameters for one target volume, including dose per fraction, number of fractions delivered, and total dose delivered.",
+      "Definition": "Dose parameters for one treatment volume.",
       "Required?": "Required if known",
       "Occurrences Allowed": "Multiple",
-      "Data Type": "Extension: Radiotherapy Dose",
+      "Data Type": "Extension: Radiotherapy Dose Delivered",
       "Value Set URI": "",
       "Value Set Binding": "",
       "FHIR Element (R4)": "Procedure.extension:doseDelivered",
-      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-treatment-summary",
-      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-treatment-summary"
+      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-course-summary",
+      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-course-summary"
     },
     {
       "Group": "Default",
-      "Profile Title": "Radiotherapy Summary",
+      "Profile Title": "Radiotherapy Course Summary",
+      "Data Element Name": "Dose Delivered > Volume Description",
+      "Definition": "Text description of the body structure treated, for example, Chest Wall Lymph Nodes.",
+      "Required?": "Required if known",
+      "Occurrences Allowed": "Single",
+      "Data Type": "string",
+      "Value Set URI": "",
+      "Value Set Binding": "",
+      "FHIR Element (R4)": "Extension.extension:volumeDescription",
+      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-course-summary",
+      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-dose-delivered"
+    },
+    {
+      "Group": "Default",
+      "Profile Title": "Radiotherapy Course Summary",
+      "Data Element Name": "Dose Delivered > Volume Id",
+      "Definition": "Unique identifier to reliably identify the same target volume in different requests and procedures, for example, the Conceptual Volume UID used in DICOM.",
+      "Required?": "Required if known",
+      "Occurrences Allowed": "Single",
+      "Data Type": "string",
+      "Value Set URI": "",
+      "Value Set Binding": "",
+      "FHIR Element (R4)": "Extension.extension:volumeId",
+      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-course-summary",
+      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-dose-delivered"
+    },
+    {
+      "Group": "Default",
+      "Profile Title": "Radiotherapy Course Summary",
+      "Data Element Name": "Dose Delivered > Total Dose Delivered",
+      "Definition": "The total amount of radiation delivered to this treatment volume within the scope of this dose delivery.",
+      "Required?": "Required if known",
+      "Occurrences Allowed": "Single",
+      "Data Type": "Quantity",
+      "Value Set URI": "",
+      "Value Set Binding": "",
+      "FHIR Element (R4)": "Extension.extension:totalDoseDelivered",
+      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-course-summary",
+      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-dose-delivered"
+    },
+    {
+      "Group": "Default",
+      "Profile Title": "Radiotherapy Course Summary",
+      "Data Element Name": "Dose Delivered > Fractions Delivered",
+      "Definition": "The number of fractions delivered to this treatment volume.",
+      "Required?": "Required if known",
+      "Occurrences Allowed": "Single",
+      "Data Type": "unsignedInt",
+      "Value Set URI": "",
+      "Value Set Binding": "",
+      "FHIR Element (R4)": "Extension.extension:fractionsDelivered",
+      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-course-summary",
+      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-dose-delivered"
+    },
+    {
+      "Group": "Default",
+      "Profile Title": "Radiotherapy Course Summary",
       "Data Element Name": "Status",
       "Definition": "A code specifying the state of the procedure. Generally, this will be the in-progress or completed state.",
       "Required?": "Required",
@@ -6719,12 +6901,12 @@
       "Value Set URI": "http://hl7.org/fhir/ValueSet/event-status",
       "Value Set Binding": "required",
       "FHIR Element (R4)": "Procedure.status",
-      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-treatment-summary",
-      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-treatment-summary"
+      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-course-summary",
+      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-course-summary"
     },
     {
       "Group": "Default",
-      "Profile Title": "Radiotherapy Summary",
+      "Profile Title": "Radiotherapy Course Summary",
       "Data Element Name": "Subject",
       "Definition": "The person, animal or group on which the procedure was performed.",
       "Required?": "Required",
@@ -6733,12 +6915,12 @@
       "Value Set URI": "",
       "Value Set Binding": "",
       "FHIR Element (R4)": "Procedure.subject",
-      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-treatment-summary",
-      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-treatment-summary"
+      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-course-summary",
+      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-course-summary"
     },
     {
       "Group": "Default",
-      "Profile Title": "Radiotherapy Summary",
+      "Profile Title": "Radiotherapy Course Summary",
       "Data Element Name": "Performed",
       "Definition": "Estimated or actual date, date-time, period, or age when the procedure was performed.  Allows a period to support complex procedures that span more than one date, and also allows for the length of the procedure to be captured.",
       "Required?": "Required",
@@ -6747,36 +6929,36 @@
       "Value Set URI": "",
       "Value Set Binding": "",
       "FHIR Element (R4)": "Procedure.performed[x]",
-      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-treatment-summary",
-      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-treatment-summary"
+      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-course-summary",
+      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-course-summary"
     },
     {
       "Group": "Default",
-      "Profile Title": "Radiotherapy Summary",
-      "Data Element Name": "Body Site",
-      "Definition": "The high level description of the body site where the treatment was directed, based on Commission on Cancer’s 'Standards for Oncology Registry Entry  - STORE 2018' ",
+      "Profile Title": "Radiotherapy Course Summary",
+      "Data Element Name": "Reason Code",
+      "Definition": "The coded reason why the procedure was performed. This may be a coded entity of some type, or may simply be present as text.",
       "Required?": "Required if known",
       "Occurrences Allowed": "Multiple",
       "Data Type": "CodeableConcept",
-      "Value Set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-radiation-target-body-site-vs",
-      "Value Set Binding": "extensible",
-      "FHIR Element (R4)": "Procedure.bodySite",
-      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-treatment-summary",
-      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-treatment-summary"
+      "Value Set URI": "http://hl7.org/fhir/ValueSet/procedure-reason",
+      "Value Set Binding": "example",
+      "FHIR Element (R4)": "Procedure.reasonCode",
+      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-course-summary",
+      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-course-summary"
     },
     {
       "Group": "Default",
-      "Profile Title": "Radiotherapy Summary",
-      "Data Element Name": "Body Site > Location Qualifier",
-      "Definition": "Qualifier to refine the anatomical location. These include qualifiers for laterality, relative location, directionality, number, and plane.",
-      "Required?": "Required if known (conditional on Body Site)",
-      "Occurrences Allowed": "Single",
-      "Data Type": "CodeableConcept",
-      "Value Set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-location-qualifier-vs",
-      "Value Set Binding": "required",
-      "FHIR Element (R4)": "Procedure.bodySite.extension:locationQualifier",
-      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-treatment-summary",
-      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-treatment-summary"
+      "Profile Title": "Radiotherapy Course Summary",
+      "Data Element Name": "Reason Reference",
+      "Definition": "The justification of why the procedure was performed.",
+      "Required?": "Required if known",
+      "Occurrences Allowed": "Multiple",
+      "Data Type": "Reference: Condition, Observation, Procedure, DiagnosticReport, or DocumentReference",
+      "Value Set URI": "",
+      "Value Set Binding": "",
+      "FHIR Element (R4)": "Procedure.reasonReference",
+      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-course-summary",
+      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-course-summary"
     },
     {
       "Group": "Default",
@@ -6910,7 +7092,7 @@
       "Data Element Name": "Body Site > Location Qualifier",
       "Definition": "Qualifier to refine the anatomical location. These include qualifiers for laterality, relative location, directionality, number, and plane.",
       "Required?": "Required if known (conditional on Body Site)",
-      "Occurrences Allowed": "Single",
+      "Occurrences Allowed": "Multiple",
       "Data Type": "CodeableConcept",
       "Value Set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-location-qualifier-vs",
       "Value Set Binding": "required",
@@ -6939,38 +7121,10 @@
       "Definition": "An Extension",
       "Required?": "Required if known",
       "Occurrences Allowed": "Multiple",
-      "Data Type": "Extension (simple)",
+      "Data Type": "Quantity",
       "Value Set URI": "",
       "Value Set Binding": "",
       "FHIR Element (R4)": "Procedure.extension",
-      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-teleradiotherapy-treatment-phase",
-      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-teleradiotherapy-treatment-phase"
-    },
-    {
-      "Group": "Default",
-      "Profile Title": "Teleradiotherapy Treatment Phase",
-      "Data Element Name": "Extension > Treatment Intent",
-      "Definition": "The purpose of a treatment.",
-      "Required?": "Required if known",
-      "Occurrences Allowed": "Single",
-      "Data Type": "CodeableConcept",
-      "Value Set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-treatment-intent-vs",
-      "Value Set Binding": "required",
-      "FHIR Element (R4)": "Procedure.extension:treatmentIntent",
-      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-teleradiotherapy-treatment-phase",
-      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-teleradiotherapy-treatment-phase"
-    },
-    {
-      "Group": "Default",
-      "Profile Title": "Teleradiotherapy Treatment Phase",
-      "Data Element Name": "Extension > Termination Reason",
-      "Definition": "A code explaining an unplanned or premature termination of a plan of treatment, course of medication, or research study.",
-      "Required?": "Required if known",
-      "Occurrences Allowed": "Single",
-      "Data Type": "CodeableConcept",
-      "Value Set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-treatment-termination-reason-vs",
-      "Value Set Binding": "required",
-      "FHIR Element (R4)": "Procedure.extension:terminationReason",
       "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-teleradiotherapy-treatment-phase",
       "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-teleradiotherapy-treatment-phase"
     },
@@ -7006,7 +7160,7 @@
       "Group": "Default",
       "Profile Title": "Teleradiotherapy Treatment Phase",
       "Data Element Name": "Extension > Fractions Delivered",
-      "Definition": "The total number of fractions (treatment divisions) actually delivered for this volume.",
+      "Definition": "The number of fractions delivered during this phase.",
       "Required?": "Required if known",
       "Occurrences Allowed": "Single",
       "Data Type": "unsignedInt",
@@ -7020,13 +7174,125 @@
       "Group": "Default",
       "Profile Title": "Teleradiotherapy Treatment Phase",
       "Data Element Name": "Extension > Dose Delivered",
-      "Definition": "Dose parameters for one target volume, including dose per fraction, number of fractions delivered, and total dose delivered.",
+      "Definition": "Dose parameters for one treatment volume.",
       "Required?": "Required if known",
       "Occurrences Allowed": "Multiple",
-      "Data Type": "Extension: Radiotherapy Dose",
+      "Data Type": "Extension: Radiotherapy Dose Delivered",
       "Value Set URI": "",
       "Value Set Binding": "",
       "FHIR Element (R4)": "Procedure.extension:doseDelivered",
+      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-teleradiotherapy-treatment-phase",
+      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-teleradiotherapy-treatment-phase"
+    },
+    {
+      "Group": "Default",
+      "Profile Title": "Teleradiotherapy Treatment Phase",
+      "Data Element Name": "Dose Delivered > Volume Description",
+      "Definition": "Text description of the body structure treated, for example, Chest Wall Lymph Nodes.",
+      "Required?": "Required if known",
+      "Occurrences Allowed": "Single",
+      "Data Type": "string",
+      "Value Set URI": "",
+      "Value Set Binding": "",
+      "FHIR Element (R4)": "Extension.extension:volumeDescription",
+      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-teleradiotherapy-treatment-phase",
+      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-dose-delivered"
+    },
+    {
+      "Group": "Default",
+      "Profile Title": "Teleradiotherapy Treatment Phase",
+      "Data Element Name": "Dose Delivered > Volume Id",
+      "Definition": "Unique identifier to reliably identify the same target volume in different requests and procedures, for example, the Conceptual Volume UID used in DICOM.",
+      "Required?": "Required if known",
+      "Occurrences Allowed": "Single",
+      "Data Type": "string",
+      "Value Set URI": "",
+      "Value Set Binding": "",
+      "FHIR Element (R4)": "Extension.extension:volumeId",
+      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-teleradiotherapy-treatment-phase",
+      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-dose-delivered"
+    },
+    {
+      "Group": "Default",
+      "Profile Title": "Teleradiotherapy Treatment Phase",
+      "Data Element Name": "Dose Delivered > Total Dose Delivered",
+      "Definition": "The total amount of radiation delivered to this treatment volume within the scope of this dose delivery.",
+      "Required?": "Required if known",
+      "Occurrences Allowed": "Single",
+      "Data Type": "Quantity",
+      "Value Set URI": "",
+      "Value Set Binding": "",
+      "FHIR Element (R4)": "Extension.extension:totalDoseDelivered",
+      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-teleradiotherapy-treatment-phase",
+      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-dose-delivered"
+    },
+    {
+      "Group": "Default",
+      "Profile Title": "Teleradiotherapy Treatment Phase",
+      "Data Element Name": "Dose Delivered > Fractions Delivered",
+      "Definition": "The number of fractions delivered to this treatment volume.",
+      "Required?": "Required if known",
+      "Occurrences Allowed": "Single",
+      "Data Type": "unsignedInt",
+      "Value Set URI": "",
+      "Value Set Binding": "",
+      "FHIR Element (R4)": "Extension.extension:fractionsDelivered",
+      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-teleradiotherapy-treatment-phase",
+      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-dose-delivered"
+    },
+    {
+      "Group": "Default",
+      "Profile Title": "Teleradiotherapy Treatment Phase",
+      "Data Element Name": "Extension > Volume Description",
+      "Definition": "Text description of the body structure treated, for example, Chest Wall Lymph Nodes.",
+      "Required?": "Required if known (conditional on Extension)",
+      "Occurrences Allowed": "Single",
+      "Data Type": "string",
+      "Value Set URI": "",
+      "Value Set Binding": "",
+      "FHIR Element (R4)": "Procedure.extension:doseDelivered.extension:volumeDescription",
+      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-teleradiotherapy-treatment-phase",
+      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-teleradiotherapy-treatment-phase"
+    },
+    {
+      "Group": "Default",
+      "Profile Title": "Teleradiotherapy Treatment Phase",
+      "Data Element Name": "Extension > Volume Id",
+      "Definition": "Unique identifier to reliably identify the same target volume in different requests and procedures, for example, the Conceptual Volume UID used in DICOM.",
+      "Required?": "Required if known (conditional on Extension)",
+      "Occurrences Allowed": "Single",
+      "Data Type": "string",
+      "Value Set URI": "",
+      "Value Set Binding": "",
+      "FHIR Element (R4)": "Procedure.extension:doseDelivered.extension:volumeId",
+      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-teleradiotherapy-treatment-phase",
+      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-teleradiotherapy-treatment-phase"
+    },
+    {
+      "Group": "Default",
+      "Profile Title": "Teleradiotherapy Treatment Phase",
+      "Data Element Name": "Extension > Total Dose Delivered",
+      "Definition": "The total amount of radiation delivered to this treatment volume within the scope of this dose delivery.",
+      "Required?": "Required if known (conditional on Extension)",
+      "Occurrences Allowed": "Single",
+      "Data Type": "Quantity",
+      "Value Set URI": "",
+      "Value Set Binding": "",
+      "FHIR Element (R4)": "Procedure.extension:doseDelivered.extension:totalDoseDelivered",
+      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-teleradiotherapy-treatment-phase",
+      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-teleradiotherapy-treatment-phase"
+    },
+    {
+      "Group": "Default",
+      "Profile Title": "Teleradiotherapy Treatment Phase",
+      "Data Element Name": "Extension > Fractions Delivered",
+      "Definition": "An Extension",
+      "Required?": "Required if known (conditional on Extension)",
+      "Occurrences Allowed": "None",
+      "Data Type": "unsignedInt",
+      "Value Set URI": "",
+      "Value Set Binding": "",
+      "FHIR Element (R4)": "Procedure.extension:doseDelivered.extension:fractionsDelivered",
       "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-teleradiotherapy-treatment-phase",
       "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-teleradiotherapy-treatment-phase"
     },
@@ -7524,10 +7790,10 @@
       "Group": "Default",
       "Profile Title": "Tumor Size",
       "Data Element Name": "Specimen",
-      "Definition": "Reference to a BodyStructure resource conforming to Tumor.",
+      "Definition": "Reference to a Specimen resource conforming to TumorSpecimen.",
       "Required?": "Required if known",
       "Occurrences Allowed": "Single",
-      "Data Type": "Reference: Specimen",
+      "Data Type": "Reference: TumorSpecimen",
       "Value Set URI": "",
       "Value Set Binding": "",
       "FHIR Element (R4)": "Observation.specimen",
@@ -7635,22 +7901,8 @@
     {
       "Group": "Default",
       "Profile Title": "Tumor Specimen",
-      "Data Element Name": "Extension",
-      "Definition": "An Extension",
-      "Required?": "Required if known",
-      "Occurrences Allowed": "Multiple",
-      "Data Type": "Reference: Condition",
-      "Value Set URI": "",
-      "Value Set Binding": "",
-      "FHIR Element (R4)": "Specimen.extension",
-      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tumor-specimen",
-      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tumor-specimen"
-    },
-    {
-      "Group": "Default",
-      "Profile Title": "Tumor Specimen",
       "Data Element Name": "Related Condition",
-      "Definition": "Associates this tumor with a cancer condition.",
+      "Definition": "A reference that associates this sample with a cancer condition.",
       "Required?": "Required if known",
       "Occurrences Allowed": "Single",
       "Data Type": "Reference: Condition",
@@ -7705,6 +7957,20 @@
     {
       "Group": "Default",
       "Profile Title": "Tumor Specimen",
+      "Data Element Name": "Status",
+      "Definition": "The availability of the specimen.",
+      "Required?": "Required if known",
+      "Occurrences Allowed": "Single",
+      "Data Type": "code",
+      "Value Set URI": "http://hl7.org/fhir/ValueSet/specimen-status|4.0.1",
+      "Value Set Binding": "required",
+      "FHIR Element (R4)": "Specimen.status",
+      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tumor-specimen",
+      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tumor-specimen"
+    },
+    {
+      "Group": "Default",
+      "Profile Title": "Tumor Specimen",
       "Data Element Name": "Subject",
       "Definition": "Where the specimen came from. This may be from patient(s), from a location (e.g., the source of an environmental sample), or a sampling of a substance or a device.",
       "Required?": "Required if known",
@@ -7750,7 +8016,7 @@
       "Data Element Name": "Collection > Body Site > Location Qualifier",
       "Definition": "Qualifier to refine the anatomical location. These include qualifiers for laterality, relative location, directionality, number, and plane.",
       "Required?": "Required if known (conditional on Collection > Body Site)",
-      "Occurrences Allowed": "Single",
+      "Occurrences Allowed": "Multiple",
       "Data Type": "CodeableConcept",
       "Value Set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-location-qualifier-vs",
       "Value Set Binding": "required",
@@ -7837,7 +8103,7 @@
       "Occurrences Allowed": "Multiple",
       "Data Type": "CodeableConcept",
       "Value Set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-location-qualifier-vs",
-      "Value Set Binding": "example",
+      "Value Set Binding": "required",
       "FHIR Element (R4)": "BodyStructure.locationQualifier",
       "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tumor",
       "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tumor"
@@ -8079,7 +8345,7 @@
       "description": "Includes surgical procedure codes from SNOMED CT, ICD-10-PCS and CPT. The value set may be a superset of cancer surgery codes, but narrowing the set further risks eliminating potentially useful and relevant codes."
     },
     {
-      "title": "TNM Stage Group Value Set",
+      "title": "Stage Group Value Set",
       "url": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-stage-group-vs",
       "description": "This value set is intended to contain allowable values for Stage Group, according to TNM staging rules. AJCC codes (preferably, version 8 for current cancers) SHOULD be used."
     },
@@ -8159,11 +8425,6 @@
       "description": "Types of primary malignant neoplastic disease, coded in SNOMED CT or ICD-10-CM. \n\nFor SNOMED CT coding, use a code from the disorder hierarchy under SNOMED CT 363346000 'Malignant neoplastic disease (disorder)' excluding codes descending from SNOMED CT 128462008 'Secondary malignant neoplastic disease (disorder)'. If body location is not precoordinated (i.e., implied by the code), the site of the primary tumor should be specified in the body site attribute. \n\nFor ICD-10-CM coding, use one of the codes given in this value set representing primary malignant neoplasms and neoplasms of uncertain or unspecified behavior.\n\nNote that ICD-O-3 specifies morphology and topography, not disorder. If ICD-O-3 is used, the primary cancer disorder code must be specifically be SNOMED CT 363346000  'Malignant neoplastic disease (disorder)'. The ICD-O-3 morphology and topography codes should be entered in the HistologyMorphologyBehavior and body location fields, respectively."
     },
     {
-      "title": "Radiation Target Body Site Value Set",
-      "url": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-radiation-target-body-site-vs",
-      "description": "Codes for body sites that can be targets of radiation therapy. This list of sites is based on Commission on Cancer’s 'Standards for Oncology Registry Entry  - STORE 2018'. This value set contains SNOMED CT equivalent terms."
-    },
-    {
       "title": "Radiotherapy Modality Value Set",
       "url": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-radiotherapy-modality-vs",
       "description": "Codes describing the modalities of external beam and brachytherapy radiation procedures, for use with radiotherapy summaries."
@@ -8206,7 +8467,7 @@
     {
       "title": "Treatment Intent Value Set",
       "url": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-treatment-intent-vs",
-      "description": "The purpose of a treatment. The value set includes 'curative' and 'palliative'. Curative is defined as any treatment meant to reduce or control a disease process, even if a 'cure' is not anticipated. Palliative includes treatments meant to reduce symptoms and side effects, such as antiemetics."
+      "description": "The purpose of a treatment."
     },
     {
       "title": "Treatment Termination Reason Value Set",
@@ -40496,14 +40757,22 @@
     {
       "Value set name": "Brachytherapy Modality Value Set",
       "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-brachytherapy-modality-vs",
-      "Code system": "http://terminology.hl7.org/CodeSystem/radiotherapy",
-      "Code": "EBRACHY"
+      "Code system": "SNOMED CT",
+      "Code": "394902000",
+      "Code description": "High dose brachytherapy (procedure)"
+    },
+    {
+      "Value set name": "Brachytherapy Modality Value Set",
+      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-brachytherapy-modality-vs",
+      "Code system": "SNOMED CT",
+      "Code": "440252007",
+      "Code description": "Administration of radiopharmaceutical (procedure)"
     },
     {
       "Value set name": "Brachytherapy Modality Value Set",
       "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-brachytherapy-modality-vs",
       "Code system": "http://terminology.hl7.org/CodeSystem/radiotherapy",
-      "Code": "HDR"
+      "Code": "EBRACHY"
     },
     {
       "Value set name": "Brachytherapy Modality Value Set",
@@ -40524,16 +40793,39 @@
       "Code": "PDR"
     },
     {
-      "Value set name": "Brachytherapy Modality Value Set",
-      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-brachytherapy-modality-vs",
-      "Code system": "http://terminology.hl7.org/CodeSystem/radiotherapy",
-      "Code": "RADPHARM"
+      "Value set name": "Brachytherapy Technique Value Set",
+      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-brachytherapy-technique-vs",
+      "Code system": "SNOMED CT",
+      "Code": "113120007",
+      "Code description": "Interstitial brachytherapy (procedure)"
     },
     {
       "Value set name": "Brachytherapy Technique Value Set",
       "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-brachytherapy-technique-vs",
-      "Code system": "http://terminology.hl7.org/CodeSystem/radiotherapy",
-      "Code": "CAV"
+      "Code system": "SNOMED CT",
+      "Code": "14473006",
+      "Code description": "Surface brachytherapy (procedure)"
+    },
+    {
+      "Value set name": "Brachytherapy Technique Value Set",
+      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-brachytherapy-technique-vs",
+      "Code system": "SNOMED CT",
+      "Code": "16560241000119104",
+      "Code description": "Oral radionuclide therapy (procedure)"
+    },
+    {
+      "Value set name": "Brachytherapy Technique Value Set",
+      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-brachytherapy-technique-vs",
+      "Code system": "SNOMED CT",
+      "Code": "384691004",
+      "Code description": "Intraluminal brachytherapy (procedure)"
+    },
+    {
+      "Value set name": "Brachytherapy Technique Value Set",
+      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-brachytherapy-technique-vs",
+      "Code system": "SNOMED CT",
+      "Code": "384692006",
+      "Code description": "Intracavitary brachytherapy (procedure)"
     },
     {
       "Value set name": "Brachytherapy Technique Value Set",
@@ -40545,31 +40837,7 @@
       "Value set name": "Brachytherapy Technique Value Set",
       "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-brachytherapy-technique-vs",
       "Code system": "http://terminology.hl7.org/CodeSystem/radiotherapy",
-      "Code": "INSTIT"
-    },
-    {
-      "Value set name": "Brachytherapy Technique Value Set",
-      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-brachytherapy-technique-vs",
-      "Code system": "http://terminology.hl7.org/CodeSystem/radiotherapy",
       "Code": "IORT"
-    },
-    {
-      "Value set name": "Brachytherapy Technique Value Set",
-      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-brachytherapy-technique-vs",
-      "Code system": "http://terminology.hl7.org/CodeSystem/radiotherapy",
-      "Code": "LUM"
-    },
-    {
-      "Value set name": "Brachytherapy Technique Value Set",
-      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-brachytherapy-technique-vs",
-      "Code system": "http://terminology.hl7.org/CodeSystem/radiotherapy",
-      "Code": "ORAL"
-    },
-    {
-      "Value set name": "Brachytherapy Technique Value Set",
-      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-brachytherapy-technique-vs",
-      "Code system": "http://terminology.hl7.org/CodeSystem/radiotherapy",
-      "Code": "SURF"
     },
     {
       "Value set name": "Brachytherapy Technique Value Set",
@@ -40634,6 +40902,55 @@
     {
       "Value set name": "Cancer Staging System Value Set",
       "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-staging-system-vs",
+      "Code system": "NCI",
+      "Code": "C125738",
+      "Code description": "FIGO Stage"
+    },
+    {
+      "Value set name": "Cancer Staging System Value Set",
+      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-staging-system-vs",
+      "Code system": "NCI",
+      "Code": "C141138",
+      "Code description": "Ann Arbor Stage"
+    },
+    {
+      "Value set name": "Cancer Staging System Value Set",
+      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-staging-system-vs",
+      "Code system": "NCI",
+      "Code": "C141147",
+      "Code description": "Lugano Stage"
+    },
+    {
+      "Value set name": "Cancer Staging System Value Set",
+      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-staging-system-vs",
+      "Code system": "NCI",
+      "Code": "C141207",
+      "Code description": "Rai Stage"
+    },
+    {
+      "Value set name": "Cancer Staging System Value Set",
+      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-staging-system-vs",
+      "Code system": "NCI",
+      "Code": "C141212",
+      "Code description": "Binet Stage"
+    },
+    {
+      "Value set name": "Cancer Staging System Value Set",
+      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-staging-system-vs",
+      "Code system": "NCI",
+      "Code": "C146985",
+      "Code description": "AJCC Cancer Staging Manual 8th Edition"
+    },
+    {
+      "Value set name": "Cancer Staging System Value Set",
+      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-staging-system-vs",
+      "Code system": "NCI",
+      "Code": "C54179",
+      "Code description": "Ann Arbor Lymphoma Staging System"
+    },
+    {
+      "Value set name": "Cancer Staging System Value Set",
+      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-staging-system-vs",
       "Code system": "SNOMED CT",
       "Code": "258235000",
       "Code description": "International Union Against Cancer (tumor staging)"
@@ -40651,55 +40968,6 @@
       "Code system": "SNOMED CT",
       "Code": "444256004",
       "Code description": "American Joint Commission on Cancer, Cancer Staging Manual, 6th edition neoplasm staging system (tumor staging)"
-    },
-    {
-      "Value set name": "Cancer Staging System Value Set",
-      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-staging-system-vs",
-      "Code system": "http://ncithesaurus.nci.nih.gov",
-      "Code": "C125738",
-      "Code description": "FIGO Stage"
-    },
-    {
-      "Value set name": "Cancer Staging System Value Set",
-      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-staging-system-vs",
-      "Code system": "http://ncithesaurus.nci.nih.gov",
-      "Code": "C141138",
-      "Code description": "Ann Arbor Stage"
-    },
-    {
-      "Value set name": "Cancer Staging System Value Set",
-      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-staging-system-vs",
-      "Code system": "http://ncithesaurus.nci.nih.gov",
-      "Code": "C141147",
-      "Code description": "Lugano Stage"
-    },
-    {
-      "Value set name": "Cancer Staging System Value Set",
-      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-staging-system-vs",
-      "Code system": "http://ncithesaurus.nci.nih.gov",
-      "Code": "C141207",
-      "Code description": "Rai Stage"
-    },
-    {
-      "Value set name": "Cancer Staging System Value Set",
-      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-staging-system-vs",
-      "Code system": "http://ncithesaurus.nci.nih.gov",
-      "Code": "C141212",
-      "Code description": "Binet Stage"
-    },
-    {
-      "Value set name": "Cancer Staging System Value Set",
-      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-staging-system-vs",
-      "Code system": "http://ncithesaurus.nci.nih.gov",
-      "Code": "C146985",
-      "Code description": "AJCC Cancer Staging Manual 8th Edition"
-    },
-    {
-      "Value set name": "Cancer Staging System Value Set",
-      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-staging-system-vs",
-      "Code system": "http://ncithesaurus.nci.nih.gov",
-      "Code": "C54179",
-      "Code description": "Ann Arbor Lymphoma Staging System"
     },
     {
       "Value set name": "Condition Status Trend Value Set",
@@ -40944,6 +41212,13 @@
       "Code system": "SpecimenType (HL7)",
       "Code": "TISS",
       "Code description": "Tissue"
+    },
+    {
+      "Value set name": "Genetic Specimen Type Value Set",
+      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-genetic-specimen-type-vs",
+      "Code system": "SpecimenType (HL7)",
+      "Code": "TUMOR",
+      "Code description": "Tumor"
     },
     {
       "Value set name": "Genetic Specimen Type Value Set",
@@ -49770,468 +50045,6 @@
       "Code description": "Other Primary Cancer Condition, Specify"
     },
     {
-      "Value set name": "Radiation Target Body Site Value Set",
-      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-radiation-target-body-site-vs",
-      "Code system": "SNOMED CT",
-      "Code": "10200004",
-      "Code description": "Liver structure (body structure)"
-    },
-    {
-      "Value set name": "Radiation Target Body Site Value Set",
-      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-radiation-target-body-site-vs",
-      "Code system": "SNOMED CT",
-      "Code": "113197003",
-      "Code description": "Bone structure of rib (body structure)"
-    },
-    {
-      "Value set name": "Radiation Target Body Site Value Set",
-      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-radiation-target-body-site-vs",
-      "Code system": "SNOMED CT",
-      "Code": "113345001",
-      "Code description": "Abdominal structure (body structure)"
-    },
-    {
-      "Value set name": "Radiation Target Body Site Value Set",
-      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-radiation-target-body-site-vs",
-      "Code system": "SNOMED CT",
-      "Code": "119184005",
-      "Code description": "Breast part (body structure)"
-    },
-    {
-      "Value set name": "Radiation Target Body Site Value Set",
-      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-radiation-target-body-site-vs",
-      "Code system": "SNOMED CT",
-      "Code": "119221008",
-      "Code description": "Bladder part (body structure)"
-    },
-    {
-      "Value set name": "Radiation Target Body Site Value Set",
-      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-radiation-target-body-site-vs",
-      "Code system": "SNOMED CT",
-      "Code": "119231001",
-      "Code description": "Prostate part (body structure)"
-    },
-    {
-      "Value set name": "Radiation Target Body Site Value Set",
-      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-radiation-target-body-site-vs",
-      "Code system": "SNOMED CT",
-      "Code": "119235005",
-      "Code description": "Brain part (body structure)"
-    },
-    {
-      "Value set name": "Radiation Target Body Site Value Set",
-      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-radiation-target-body-site-vs",
-      "Code system": "SNOMED CT",
-      "Code": "12738006",
-      "Code description": "Brain structure (body structure)"
-    },
-    {
-      "Value set name": "Radiation Target Body Site Value Set",
-      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-radiation-target-body-site-vs",
-      "Code system": "SNOMED CT",
-      "Code": "12921003",
-      "Code description": "Pelvic structure (body structure)"
-    },
-    {
-      "Value set name": "Radiation Target Body Site Value Set",
-      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-radiation-target-body-site-vs",
-      "Code system": "SNOMED CT",
-      "Code": "13648007",
-      "Code description": "Urethral structure (body structure)"
-    },
-    {
-      "Value set name": "Radiation Target Body Site Value Set",
-      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-radiation-target-body-site-vs",
-      "Code system": "SNOMED CT",
-      "Code": "15497006",
-      "Code description": "Ovarian structure (body structure)"
-    },
-    {
-      "Value set name": "Radiation Target Body Site Value Set",
-      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-radiation-target-body-site-vs",
-      "Code system": "SNOMED CT",
-      "Code": "15776009",
-      "Code description": "Pancreatic structure (body structure)"
-    },
-    {
-      "Value set name": "Radiation Target Body Site Value Set",
-      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-radiation-target-body-site-vs",
-      "Code system": "SNOMED CT",
-      "Code": "16982005",
-      "Code description": "Shoulder region structure (body structure)"
-    },
-    {
-      "Value set name": "Radiation Target Body Site Value Set",
-      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-radiation-target-body-site-vs",
-      "Code system": "SNOMED CT",
-      "Code": "181131000",
-      "Code description": "Entire breast (body structure)"
-    },
-    {
-      "Value set name": "Radiation Target Body Site Value Set",
-      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-radiation-target-body-site-vs",
-      "Code system": "SNOMED CT",
-      "Code": "181216001",
-      "Code description": "Entire lung (body structure)"
-    },
-    {
-      "Value set name": "Radiation Target Body Site Value Set",
-      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-radiation-target-body-site-vs",
-      "Code system": "SNOMED CT",
-      "Code": "181245004",
-      "Code description": "Entire esophagus (body structure)"
-    },
-    {
-      "Value set name": "Radiation Target Body Site Value Set",
-      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-radiation-target-body-site-vs",
-      "Code system": "SNOMED CT",
-      "Code": "181422007",
-      "Code description": "Entire prostate (body structure)"
-    },
-    {
-      "Value set name": "Radiation Target Body Site Value Set",
-      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-radiation-target-body-site-vs",
-      "Code system": "SNOMED CT",
-      "Code": "18911002",
-      "Code description": "Penile structure (body structure)"
-    },
-    {
-      "Value set name": "Radiation Target Body Site Value Set",
-      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-radiation-target-body-site-vs",
-      "Code system": "SNOMED CT",
-      "Code": "196374005",
-      "Code description": "Entire lymph node of thorax (body structure)"
-    },
-    {
-      "Value set name": "Radiation Target Body Site Value Set",
-      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-radiation-target-body-site-vs",
-      "Code system": "SNOMED CT",
-      "Code": "20233005",
-      "Code description": "Scrotal structure (body structure)"
-    },
-    {
-      "Value set name": "Radiation Target Body Site Value Set",
-      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-radiation-target-body-site-vs",
-      "Code system": "SNOMED CT",
-      "Code": "2095001",
-      "Code description": "Nasal sinus structure (body structure)"
-    },
-    {
-      "Value set name": "Radiation Target Body Site Value Set",
-      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-radiation-target-body-site-vs",
-      "Code system": "SNOMED CT",
-      "Code": "244486005",
-      "Code description": "Entire eye (body structure)"
-    },
-    {
-      "Value set name": "Radiation Target Body Site Value Set",
-      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-radiation-target-body-site-vs",
-      "Code system": "SNOMED CT",
-      "Code": "245265003",
-      "Code description": "Supraclavicular lymph node group (body structure)"
-    },
-    {
-      "Value set name": "Radiation Target Body Site Value Set",
-      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-radiation-target-body-site-vs",
-      "Code system": "SNOMED CT",
-      "Code": "245269009",
-      "Code description": "Axillary lymph node group (body structure)"
-    },
-    {
-      "Value set name": "Radiation Target Body Site Value Set",
-      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-radiation-target-body-site-vs",
-      "Code system": "SNOMED CT",
-      "Code": "245282001",
-      "Code description": "Internal mammary lymph node group (body structure)"
-    },
-    {
-      "Value set name": "Radiation Target Body Site Value Set",
-      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-radiation-target-body-site-vs",
-      "Code system": "SNOMED CT",
-      "Code": "245284000",
-      "Code description": "Abdominal lymph node group (body structure)"
-    },
-    {
-      "Value set name": "Radiation Target Body Site Value Set",
-      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-radiation-target-body-site-vs",
-      "Code system": "SNOMED CT",
-      "Code": "245294005",
-      "Code description": "Pelvic lymph node group (body structure)"
-    },
-    {
-      "Value set name": "Radiation Target Body Site Value Set",
-      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-radiation-target-body-site-vs",
-      "Code system": "SNOMED CT",
-      "Code": "2748008",
-      "Code description": "Spinal cord structure (body structure)"
-    },
-    {
-      "Value set name": "Radiation Target Body Site Value Set",
-      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-radiation-target-body-site-vs",
-      "Code system": "SNOMED CT",
-      "Code": "28231008",
-      "Code description": "Gallbladder structure (body structure)"
-    },
-    {
-      "Value set name": "Radiation Target Body Site Value Set",
-      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-radiation-target-body-site-vs",
-      "Code system": "SNOMED CT",
-      "Code": "29836001",
-      "Code description": "Hip region structure (body structure)"
-    },
-    {
-      "Value set name": "Radiation Target Body Site Value Set",
-      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-radiation-target-body-site-vs",
-      "Code system": "SNOMED CT",
-      "Code": "302512001",
-      "Code description": "Entire urinary bladder (body structure)"
-    },
-    {
-      "Value set name": "Radiation Target Body Site Value Set",
-      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-radiation-target-body-site-vs",
-      "Code system": "SNOMED CT",
-      "Code": "302551006",
-      "Code description": "Entire thorax (body structure)"
-    },
-    {
-      "Value set name": "Radiation Target Body Site Value Set",
-      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-radiation-target-body-site-vs",
-      "Code system": "SNOMED CT",
-      "Code": "30315005",
-      "Code description": "Small intestinal structure (body structure)"
-    },
-    {
-      "Value set name": "Radiation Target Body Site Value Set",
-      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-radiation-target-body-site-vs",
-      "Code system": "SNOMED CT",
-      "Code": "31389004",
-      "Code description": "Oropharyngeal structure (body structure)"
-    },
-    {
-      "Value set name": "Radiation Target Body Site Value Set",
-      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-radiation-target-body-site-vs",
-      "Code system": "SNOMED CT",
-      "Code": "31435000",
-      "Code description": "Fallopian tube structure (body structure)"
-    },
-    {
-      "Value set name": "Radiation Target Body Site Value Set",
-      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-radiation-target-body-site-vs",
-      "Code system": "SNOMED CT",
-      "Code": "34402009",
-      "Code description": "Rectum structure (body structure)"
-    },
-    {
-      "Value set name": "Radiation Target Body Site Value Set",
-      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-radiation-target-body-site-vs",
-      "Code system": "SNOMED CT",
-      "Code": "34707002",
-      "Code description": "Biliary tract structure (body structure)"
-    },
-    {
-      "Value set name": "Radiation Target Body Site Value Set",
-      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-radiation-target-body-site-vs",
-      "Code system": "SNOMED CT",
-      "Code": "35039007",
-      "Code description": "Uterine structure (body structure)"
-    },
-    {
-      "Value set name": "Radiation Target Body Site Value Set",
-      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-radiation-target-body-site-vs",
-      "Code system": "SNOMED CT",
-      "Code": "361355005",
-      "Code description": "Entire head and neck (body structure)"
-    },
-    {
-      "Value set name": "Radiation Target Body Site Value Set",
-      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-radiation-target-body-site-vs",
-      "Code system": "SNOMED CT",
-      "Code": "38266002",
-      "Code description": "Entire body as a whole (body structure)"
-    },
-    {
-      "Value set name": "Radiation Target Body Site Value Set",
-      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-radiation-target-body-site-vs",
-      "Code system": "SNOMED CT",
-      "Code": "385294005",
-      "Code description": "Salivary gland structure (body structure)"
-    },
-    {
-      "Value set name": "Radiation Target Body Site Value Set",
-      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-radiation-target-body-site-vs",
-      "Code system": "SNOMED CT",
-      "Code": "39937001",
-      "Code description": "Skin structure (body structure)"
-    },
-    {
-      "Value set name": "Radiation Target Body Site Value Set",
-      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-radiation-target-body-site-vs",
-      "Code system": "SNOMED CT",
-      "Code": "40689003",
-      "Code description": "Testis structure (body structure)"
-    },
-    {
-      "Value set name": "Radiation Target Body Site Value Set",
-      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-radiation-target-body-site-vs",
-      "Code system": "SNOMED CT",
-      "Code": "44300000",
-      "Code description": "Entire vertebral column (body structure)"
-    },
-    {
-      "Value set name": "Radiation Target Body Site Value Set",
-      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-radiation-target-body-site-vs",
-      "Code system": "SNOMED CT",
-      "Code": "45292006",
-      "Code description": "Vulval structure (body structure)"
-    },
-    {
-      "Value set name": "Radiation Target Body Site Value Set",
-      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-radiation-target-body-site-vs",
-      "Code system": "SNOMED CT",
-      "Code": "4596009",
-      "Code description": "Laryngeal structure (body structure)"
-    },
-    {
-      "Value set name": "Radiation Target Body Site Value Set",
-      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-radiation-target-body-site-vs",
-      "Code system": "SNOMED CT",
-      "Code": "46633002",
-      "Code description": "Entire bony pelvis (body structure)"
-    },
-    {
-      "Value set name": "Radiation Target Body Site Value Set",
-      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-radiation-target-body-site-vs",
-      "Code system": "SNOMED CT",
-      "Code": "48566001",
-      "Code description": "Bone structure of extremity (body structure)"
-    },
-    {
-      "Value set name": "Radiation Target Body Site Value Set",
-      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-radiation-target-body-site-vs",
-      "Code system": "SNOMED CT",
-      "Code": "53505006",
-      "Code description": "Anal structure (body structure)"
-    },
-    {
-      "Value set name": "Radiation Target Body Site Value Set",
-      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-radiation-target-body-site-vs",
-      "Code system": "SNOMED CT",
-      "Code": "56329008",
-      "Code description": "Pituitary structure (body structure)"
-    },
-    {
-      "Value set name": "Radiation Target Body Site Value Set",
-      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-radiation-target-body-site-vs",
-      "Code system": "SNOMED CT",
-      "Code": "59441001",
-      "Code description": "Structure of lymph node (body structure)"
-    },
-    {
-      "Value set name": "Radiation Target Body Site Value Set",
-      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-radiation-target-body-site-vs",
-      "Code system": "SNOMED CT",
-      "Code": "64033007",
-      "Code description": "Kidney structure (body structure)"
-    },
-    {
-      "Value set name": "Radiation Target Body Site Value Set",
-      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-radiation-target-body-site-vs",
-      "Code system": "SNOMED CT",
-      "Code": "69695003",
-      "Code description": "Stomach structure (body structure)"
-    },
-    {
-      "Value set name": "Radiation Target Body Site Value Set",
-      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-radiation-target-body-site-vs",
-      "Code system": "SNOMED CT",
-      "Code": "69748006",
-      "Code description": "Thyroid structure (body structure)"
-    },
-    {
-      "Value set name": "Radiation Target Body Site Value Set",
-      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-radiation-target-body-site-vs",
-      "Code system": "SNOMED CT",
-      "Code": "71252005",
-      "Code description": "Cervix uteri structure (body structure)"
-    },
-    {
-      "Value set name": "Radiation Target Body Site Value Set",
-      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-radiation-target-body-site-vs",
-      "Code system": "SNOMED CT",
-      "Code": "71400007",
-      "Code description": "Mesothelium structure (body structure)"
-    },
-    {
-      "Value set name": "Radiation Target Body Site Value Set",
-      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-radiation-target-body-site-vs",
-      "Code system": "SNOMED CT",
-      "Code": "71836000",
-      "Code description": "Nasopharyngeal structure (body structure)"
-    },
-    {
-      "Value set name": "Radiation Target Body Site Value Set",
-      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-radiation-target-body-site-vs",
-      "Code system": "SNOMED CT",
-      "Code": "71854001",
-      "Code description": "Colon structure (body structure)"
-    },
-    {
-      "Value set name": "Radiation Target Body Site Value Set",
-      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-radiation-target-body-site-vs",
-      "Code system": "SNOMED CT",
-      "Code": "74262004",
-      "Code description": "Oral cavity structure (body structure)"
-    },
-    {
-      "Value set name": "Radiation Target Body Site Value Set",
-      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-radiation-target-body-site-vs",
-      "Code system": "SNOMED CT",
-      "Code": "76784001",
-      "Code description": "Vaginal structure (body structure)"
-    },
-    {
-      "Value set name": "Radiation Target Body Site Value Set",
-      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-radiation-target-body-site-vs",
-      "Code system": "SNOMED CT",
-      "Code": "78904004",
-      "Code description": "Chest wall structure (body structure)"
-    },
-    {
-      "Value set name": "Radiation Target Body Site Value Set",
-      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-radiation-target-body-site-vs",
-      "Code system": "SNOMED CT",
-      "Code": "81105003",
-      "Code description": "Cervical lymph node group (body structure)"
-    },
-    {
-      "Value set name": "Radiation Target Body Site Value Set",
-      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-radiation-target-body-site-vs",
-      "Code system": "SNOMED CT",
-      "Code": "81502006",
-      "Code description": "Hypopharyngeal structure (body structure)"
-    },
-    {
-      "Value set name": "Radiation Target Body Site Value Set",
-      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-radiation-target-body-site-vs",
-      "Code system": "SNOMED CT",
-      "Code": "87784001",
-      "Code description": "Soft tissues (body structure)"
-    },
-    {
-      "Value set name": "Radiation Target Body Site Value Set",
-      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-radiation-target-body-site-vs",
-      "Code system": "SNOMED CT",
-      "Code": "87953007",
-      "Code description": "Ureteric structure (body structure)"
-    },
-    {
-      "Value set name": "Radiation Target Body Site Value Set",
-      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-radiation-target-body-site-vs",
-      "Code system": "SNOMED CT",
-      "Code": "89546000",
-      "Code description": "Bone structure of cranium (body structure)"
-    },
-    {
       "Value set name": "Secondary Cancer Disorder Value Set",
       "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-secondary-cancer-disorder-vs",
       "Code system": "ICD-10 CM",
@@ -50625,20 +50438,29 @@
     {
       "Value set name": "Teleradiotherapy Modality Value Set",
       "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-teleradiotherapy-modality-vs",
+      "Code system": "SNOMED CT",
+      "Code": "10611004",
+      "Code description": "Teleradiotherapy protons (procedure)"
+    },
+    {
+      "Value set name": "Teleradiotherapy Modality Value Set",
+      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-teleradiotherapy-modality-vs",
+      "Code system": "SNOMED CT",
+      "Code": "45643008",
+      "Code description": "Teleradiotherapy using electrons (procedure)"
+    },
+    {
+      "Value set name": "Teleradiotherapy Modality Value Set",
+      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-teleradiotherapy-modality-vs",
+      "Code system": "SNOMED CT",
+      "Code": "80347004",
+      "Code description": "Teleradiotherapy neutrons (procedure)"
+    },
+    {
+      "Value set name": "Teleradiotherapy Modality Value Set",
+      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-teleradiotherapy-modality-vs",
       "Code system": "http://terminology.hl7.org/CodeSystem/radiotherapy",
       "Code": "CARBON"
-    },
-    {
-      "Value set name": "Teleradiotherapy Modality Value Set",
-      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-teleradiotherapy-modality-vs",
-      "Code system": "http://terminology.hl7.org/CodeSystem/radiotherapy",
-      "Code": "ELECTRON"
-    },
-    {
-      "Value set name": "Teleradiotherapy Modality Value Set",
-      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-teleradiotherapy-modality-vs",
-      "Code system": "http://terminology.hl7.org/CodeSystem/radiotherapy",
-      "Code": "NEUTRON"
     },
     {
       "Value set name": "Teleradiotherapy Modality Value Set",
@@ -50647,10 +50469,25 @@
       "Code": "PHOTON"
     },
     {
-      "Value set name": "Teleradiotherapy Modality Value Set",
-      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-teleradiotherapy-modality-vs",
-      "Code system": "http://terminology.hl7.org/CodeSystem/radiotherapy",
-      "Code": "PROTON"
+      "Value set name": "Teleradiotherapy Technique Value Set",
+      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-teleradiotherapy-technique-vs",
+      "Code system": "SNOMED CT",
+      "Code": "169317000",
+      "Code description": "Neutron capture therapy (procedure)"
+    },
+    {
+      "Value set name": "Teleradiotherapy Technique Value Set",
+      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-teleradiotherapy-technique-vs",
+      "Code system": "SNOMED CT",
+      "Code": "434131000124108",
+      "Code description": "Three dimensional conformal radiotherapy (procedure)"
+    },
+    {
+      "Value set name": "Teleradiotherapy Technique Value Set",
+      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-teleradiotherapy-technique-vs",
+      "Code system": "SNOMED CT",
+      "Code": "441799006",
+      "Code description": "Intensity modulated radiation therapy (procedure)"
     },
     {
       "Value set name": "Teleradiotherapy Technique Value Set",
@@ -50662,19 +50499,7 @@
       "Value set name": "Teleradiotherapy Technique Value Set",
       "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-teleradiotherapy-technique-vs",
       "Code system": "http://terminology.hl7.org/CodeSystem/radiotherapy",
-      "Code": "3D"
-    },
-    {
-      "Value set name": "Teleradiotherapy Technique Value Set",
-      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-teleradiotherapy-technique-vs",
-      "Code system": "http://terminology.hl7.org/CodeSystem/radiotherapy",
       "Code": "IMNT"
-    },
-    {
-      "Value set name": "Teleradiotherapy Technique Value Set",
-      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-teleradiotherapy-technique-vs",
-      "Code system": "http://terminology.hl7.org/CodeSystem/radiotherapy",
-      "Code": "IMRT"
     },
     {
       "Value set name": "Teleradiotherapy Technique Value Set",
@@ -50687,12 +50512,6 @@
       "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-teleradiotherapy-technique-vs",
       "Code system": "http://terminology.hl7.org/CodeSystem/radiotherapy",
       "Code": "MIX"
-    },
-    {
-      "Value set name": "Teleradiotherapy Technique Value Set",
-      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-teleradiotherapy-technique-vs",
-      "Code system": "http://terminology.hl7.org/CodeSystem/radiotherapy",
-      "Code": "NCT"
     },
     {
       "Value set name": "Teleradiotherapy Technique Value Set",
@@ -50716,6 +50535,27 @@
       "Value set name": "Treatment Intent Value Set",
       "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-treatment-intent-vs",
       "Code system": "SNOMED CT",
+      "Code": "129428001",
+      "Code description": "Preventive - intent"
+    },
+    {
+      "Value set name": "Treatment Intent Value Set",
+      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-treatment-intent-vs",
+      "Code system": "SNOMED CT",
+      "Code": "261004008",
+      "Code description": "Diagnostic intent"
+    },
+    {
+      "Value set name": "Treatment Intent Value Set",
+      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-treatment-intent-vs",
+      "Code system": "SNOMED CT",
+      "Code": "360156006",
+      "Code description": "Screening - procedure intent"
+    },
+    {
+      "Value set name": "Treatment Intent Value Set",
+      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-treatment-intent-vs",
+      "Code system": "SNOMED CT",
       "Code": "363676003",
       "Code description": "Palliative - procedure intent"
     },
@@ -50725,6 +50565,27 @@
       "Code system": "SNOMED CT",
       "Code": "373808002",
       "Code description": "Curative - procedure intent"
+    },
+    {
+      "Value set name": "Treatment Intent Value Set",
+      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-treatment-intent-vs",
+      "Code system": "SNOMED CT",
+      "Code": "399707004",
+      "Code description": "Supportive - procedure intent"
+    },
+    {
+      "Value set name": "Treatment Intent Value Set",
+      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-treatment-intent-vs",
+      "Code system": "SNOMED CT",
+      "Code": "429892002",
+      "Code description": "Guidance intent"
+    },
+    {
+      "Value set name": "Treatment Intent Value Set",
+      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-treatment-intent-vs",
+      "Code system": "SNOMED CT",
+      "Code": "447295008",
+      "Code description": "Forensic intent"
     },
     {
       "Value set name": "Treatment Termination Reason Value Set",
@@ -50891,9 +50752,9 @@
       "description": "Qualifier to refine the anatomical location. These include qualifiers for laterality, relative location, directionality, number, and plane."
     },
     {
-      "title": "Radiotherapy Dose",
+      "title": "Radiotherapy Dose Delivered",
       "url": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-dose-delivered",
-      "description": "Dose parameters for one target volume, including dose per fraction, number of fractions delivered, and total dose delivered."
+      "description": "Dose parameters for one treatment volume."
     },
     {
       "title": "Radiotherapy Fractions Delivered",
@@ -50904,6 +50765,11 @@
       "title": "Radiotherapy Modality",
       "url": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-modality",
       "description": "Extension capturing a modality of external beam or brachytherapy radiation procedures."
+    },
+    {
+      "title": "Radiotherapy Number of Sessions",
+      "url": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-sessions",
+      "description": "The number of sessions in a course of radiotherapy."
     },
     {
       "title": "Radiotherapy Technique",
@@ -50925,7 +50791,7 @@
     {
       "title": "Elixhauser Comorbidity Categories",
       "url": "http://terminology.hl7.org/CodeSystem/comorbidities-elixhauser",
-      "description": "A code system that contains codes representing the comorbidity categories originally defined by Elixhauser, and updated by the Agency for Healthcare Research and Quality (AHRQ) Healthcare Cost and Utilization Project (H-CUP)."
+      "description": "A set of codes representing the comorbidity categories originally defined by Elixhauser, and updated by the Agency for Healthcare Research and Quality (AHRQ) Healthcare Cost and Utilization Project (H-CUP)."
     },
     {
       "title": "mCODE Catch Codes",
@@ -50945,6 +50811,6 @@
   ],
   "metadata": {
     "title": "minimal Common Oncology Data Elements (mCODE) Implementation Guide",
-    "version": "1.9.0"
+    "version": "1.13.1"
   }
 }

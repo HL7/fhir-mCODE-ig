@@ -111,7 +111,6 @@ Severity:   #error
 
 RuleSet: CancerRelatedSpecimenRules
 * type 1..1
-* type from GeneticSpecimenTypeVS (extensible)
 * subject only Reference(CancerPatient)
 * collection.bodySite.extension contains
     LocationQualifier named locationQualifier 0..*
@@ -124,12 +123,14 @@ RuleSet: CancerRelatedSpecimenRules
 * subject and status and type and collection and collection.bodySite and collection.bodySite.extension and collection.bodySite.extension[locationQualifier] MS
 
 
-Profile:    GeneticSpecimen 
+Profile:    GeneticSpecimen
 Parent:     Specimen
 Id: mcode-genetic-specimen
 Title:      "Genetic Specimen"
 Description:    "A small sample of blood, hair, skin, amniotic fluid (the fluid that surrounds a fetus during pregnancy), or other tissue which is excised from a subject for the purposes of genomics testing or analysis."
 * insert CancerRelatedSpecimenRules
+* type from GeneticSpecimenTypeVS (extensible)
+
 
 Profile:    CancerGenomicsReport
 Parent:     USCoreDiagnosticReportLab

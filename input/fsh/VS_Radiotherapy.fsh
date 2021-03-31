@@ -22,7 +22,7 @@ Description: "Codes describing the modalities of brachytherapy procedures. This 
 * RT#LDR-PERM
 * RT#PDR
 * SCT#394902000 "High dose brachytherapy (procedure)"
-* RT#EBRACHY
+* SCT#438629002 "High dose rate electronic brachytherapy (procedure)"
 * SCT#440252007 "Administration of radiopharmaceutical (procedure)"
 
 ValueSet: RadiotherapyModalityVS
@@ -44,13 +44,12 @@ Description: "Codes describing the techniques of teleradiotherapy (external beam
 * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
 * SCT#441799006 "Intensity modulated radiation therapy (procedure)"
 * RT#VMAT
-* SCT#434131000124108 "Three dimensional conformal radiotherapy (procedure)"	
+* RT#3D
 * RT#2D
-* RT#IORT
+* SCT#168524008 "Radiotherapy - intraoperative control (procedure)"
 * RT#PPS
 * RT#PSS
 * RT#MIX
-* RT#IMNT
 * SCT#169317000 "Neutron capture therapy (procedure)"
 
 ValueSet: BrachytherapyTechniqueVS
@@ -63,7 +62,7 @@ Description: "Codes describing the techniques of brachytherapy (internal or surf
 * SCT#113120007 "Interstitial brachytherapy (procedure)"
 * RT#VASC
 * SCT#384691004 "Intraluminal brachytherapy (procedure)"
-* RT#IORT
+* SCT#168524008 "Radiotherapy - intraoperative control (procedure)"
 * SCT#14473006 "Surface brachytherapy (procedure)"
 * SCT#16560241000119104 "Oral radionuclide therapy (procedure)"
 

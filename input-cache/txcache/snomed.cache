@@ -83161,3 +83161,382 @@ v: {
   "error" : "Unable to find code 897275008 in http://snomed.info/sct (version http://snomed.info/sct/731000124108/version/20200901); The code \"897275008\" is not valid in the system http://snomed.info/sct; The code provided (http://snomed.info/sct#897275008) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4)"
 }
 -------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://snomed.info/sct",
+  "code" : "438629002"
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "High dose rate electronic brachytherapy (procedure)",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://snomed.info/sct",
+  "code" : "168524008"
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "Radiotherapy - intraoperative control",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://snomed.info/sct",
+  "code" : "113120007"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://snomed.info/sct",
+      "concept" : [{
+        "code" : "384692006",
+        "display" : "Intracavitary brachytherapy (procedure)"
+      },
+      {
+        "code" : "113120007",
+        "display" : "Interstitial brachytherapy (procedure)"
+      },
+      {
+        "code" : "384691004",
+        "display" : "Intraluminal brachytherapy (procedure)"
+      },
+      {
+        "code" : "168524008",
+        "display" : "Radiotherapy - intraoperative control (procedure)"
+      },
+      {
+        "code" : "14473006",
+        "display" : "Surface brachytherapy (procedure)"
+      },
+      {
+        "code" : "16560241000119104",
+        "display" : "Oral radionuclide therapy (procedure)"
+      }]
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "Interstitial brachytherapy",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://snomed.info/sct",
+  "code" : "113120007",
+  "display" : "Interstitial brachytherapy (procedure)"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://snomed.info/sct",
+      "concept" : [{
+        "code" : "384692006",
+        "display" : "Intracavitary brachytherapy (procedure)"
+      },
+      {
+        "code" : "113120007",
+        "display" : "Interstitial brachytherapy (procedure)"
+      },
+      {
+        "code" : "384691004",
+        "display" : "Intraluminal brachytherapy (procedure)"
+      },
+      {
+        "code" : "168524008",
+        "display" : "Radiotherapy - intraoperative control (procedure)"
+      },
+      {
+        "code" : "14473006",
+        "display" : "Surface brachytherapy (procedure)"
+      },
+      {
+        "code" : "16560241000119104",
+        "display" : "Oral radionuclide therapy (procedure)"
+      }]
+    },
+    {
+      "system" : "http://terminology.hl7.org/CodeSystem/radiotherapy",
+      "concept" : [{
+        "code" : "CAV-IMB"
+      },
+      {
+        "code" : "VASC"
+      }]
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK"}####
+v: {
+  "display" : "Interstitial brachytherapy",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://snomed.info/sct",
+  "code" : "45643008"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://snomed.info/sct",
+      "concept" : [{
+        "code" : "394902000",
+        "display" : "High dose brachytherapy (procedure)"
+      },
+      {
+        "code" : "438629002",
+        "display" : "High dose rate electronic brachytherapy (procedure)"
+      },
+      {
+        "code" : "440252007",
+        "display" : "Administration of radiopharmaceutical (procedure)"
+      }]
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code provided (http://snomed.info/sct#45643008) is not valid (from http://tx.fhir.org/r4)"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://snomed.info/sct",
+  "code" : "45643008",
+  "display" : "Teleradiotherapy using electrons (procedure)"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/radiotherapy",
+      "concept" : [{
+        "code" : "LDR-TEMP"
+      },
+      {
+        "code" : "LDR-PERM"
+      },
+      {
+        "code" : "PDR"
+      }]
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "concept" : [{
+        "code" : "394902000",
+        "display" : "High dose brachytherapy (procedure)"
+      },
+      {
+        "code" : "438629002",
+        "display" : "High dose rate electronic brachytherapy (procedure)"
+      },
+      {
+        "code" : "440252007",
+        "display" : "Administration of radiopharmaceutical (procedure)"
+      }]
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK"}####
+v: {
+  "display" : "Teleradiotherapy using electrons",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : false, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://snomed.info/sct",
+      "concept" : [{
+        "code" : "394902000",
+        "display" : "High dose brachytherapy (procedure)"
+      },
+      {
+        "code" : "438629002",
+        "display" : "High dose rate electronic brachytherapy (procedure)"
+      },
+      {
+        "code" : "440252007",
+        "display" : "Administration of radiopharmaceutical (procedure)"
+      }]
+    }]
+  }
+}}####
+e: {
+  "valueSet" : {
+  "resourceType" : "ValueSet",
+  "status" : "active",
+  "expansion" : {
+    "identifier" : "urn:uuid:d6b70a7d-748e-426b-9bbf-42bc40319029",
+    "timestamp" : "2021-03-31T20:29:17.888Z",
+    "parameter" : [{
+      "name" : "limitedExpansion",
+      "valueBoolean" : true
+    },
+    {
+      "name" : "excludeNested",
+      "valueBoolean" : true
+    },
+    {
+      "name" : "version",
+      "valueString" : "http://snomed.info/sct|http://snomed.info/sct/731000124108/version/20200901"
+    }],
+    "contains" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "394902000",
+      "display" : "High dose brachytherapy (procedure)"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "438629002",
+      "display" : "High dose rate electronic brachytherapy (procedure)"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "440252007",
+      "display" : "Administration of radiopharmaceutical (procedure)"
+    }]
+  }
+},
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://snomed.info/sct",
+      "concept" : [{
+        "code" : "384692006",
+        "display" : "Intracavitary brachytherapy (procedure)"
+      },
+      {
+        "code" : "113120007",
+        "display" : "Interstitial brachytherapy (procedure)"
+      },
+      {
+        "code" : "384691004",
+        "display" : "Intraluminal brachytherapy (procedure)"
+      },
+      {
+        "code" : "168524008",
+        "display" : "Radiotherapy - intraoperative control (procedure)"
+      },
+      {
+        "code" : "14473006",
+        "display" : "Surface brachytherapy (procedure)"
+      },
+      {
+        "code" : "16560241000119104",
+        "display" : "Oral radionuclide therapy (procedure)"
+      }]
+    }]
+  }
+}}####
+e: {
+  "valueSet" : {
+  "resourceType" : "ValueSet",
+  "status" : "active",
+  "expansion" : {
+    "identifier" : "urn:uuid:d42afdfb-8523-4ecd-b63b-7e1072968492",
+    "timestamp" : "2021-03-31T20:29:18.498Z",
+    "parameter" : [{
+      "name" : "limitedExpansion",
+      "valueBoolean" : true
+    },
+    {
+      "name" : "version",
+      "valueString" : "http://snomed.info/sct|http://snomed.info/sct/731000124108/version/20200901"
+    }],
+    "contains" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "384692006",
+      "display" : "Intracavitary brachytherapy (procedure)"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "113120007",
+      "display" : "Interstitial brachytherapy (procedure)"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "384691004",
+      "display" : "Intraluminal brachytherapy (procedure)"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "168524008",
+      "display" : "Radiotherapy - intraoperative control (procedure)"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "14473006",
+      "display" : "Surface brachytherapy (procedure)"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "16560241000119104",
+      "display" : "Oral radionuclide therapy (procedure)"
+    }]
+  }
+},
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://snomed.info/sct",
+      "concept" : [{
+        "code" : "441799006",
+        "display" : "Intensity modulated radiation therapy (procedure)"
+      },
+      {
+        "code" : "168524008",
+        "display" : "Radiotherapy - intraoperative control (procedure)"
+      },
+      {
+        "code" : "169317000",
+        "display" : "Neutron capture therapy (procedure)"
+      }]
+    }]
+  }
+}}####
+e: {
+  "valueSet" : {
+  "resourceType" : "ValueSet",
+  "status" : "active",
+  "expansion" : {
+    "identifier" : "urn:uuid:9dc6c3d5-8401-49c4-bc75-fa53ca1b3935",
+    "timestamp" : "2021-03-31T20:29:27.498Z",
+    "parameter" : [{
+      "name" : "limitedExpansion",
+      "valueBoolean" : true
+    },
+    {
+      "name" : "version",
+      "valueString" : "http://snomed.info/sct|http://snomed.info/sct/731000124108/version/20200901"
+    }],
+    "contains" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "441799006",
+      "display" : "Intensity modulated radiation therapy (procedure)"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "168524008",
+      "display" : "Radiotherapy - intraoperative control (procedure)"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "169317000",
+      "display" : "Neutron capture therapy (procedure)"
+    }]
+  }
+},
+  "error" : ""
+}
+-------------------------------------------------------------------------------------

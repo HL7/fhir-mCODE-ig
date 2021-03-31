@@ -41,7 +41,7 @@ Description: "Includes surgical procedure codes from SNOMED CT, ICD-10-PCS and C
 * include codes from system ICD10PCS
 
 
-ValueSet: LocationQualifierVS
+ValueSet: BodyLocationQualifierVS
 Id: mcode-location-qualifier-vs
 Title: "Location Qualifier Value Set"
 Description: "Qualifiers to refine the anatomical location. These include qualifiers for laterality, relative location, directionality, number, and plane."

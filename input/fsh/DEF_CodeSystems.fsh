@@ -6,7 +6,7 @@ Alias: RT = http://terminology.hl7.org/CodeSystem/radiotherapy
 CodeSystem: CatchCodeCS
 Id: mcode-catch-code-cs
 Title: "mCODE Catch Codes"
-Description: "Codes needed for positive identification of certain types of instances, more specifically, to uniquely associate instances with slices when they are used in bundles. The codes in this code system are used when a concept falls outside of the defined set of codes. They make it possible to use 'required' bindings where 'extensible' bindings would result an instance matching multiple slices and thus trigger a validation error."
+Description: "Codes needed for positive identification of certain types of instances, more specifically, to uniquely associate instances with slices when they are used in bundles. The codes in this code system are used when a concept falls outside of the defined set of codes. They make it possible to use 'required' bindings where 'extensible' bindings would result an instance matching multiple slices and thus trigger validation errors."
 * #PCC-OTHER "Other Primary Cancer Condition, Specify" "Code to be used when the desired concept is not represented base value set. This code represents the equivalent of 'Other, specify: _________'. Specify the additional concept as the second coding."
 * #SCC-OTHER "Other Secondary Cancer Condition, Specify" "Code to be used when the desired concept is not represented base value set. This code represents the equivalent of 'Other, specify: _________'. Specify the additional concept as the second coding."
 * #TMT-OTHER "Other Tumor Marker Test, Specify" "Code to be used when the desired concept is not represented base value set. This code represents the equivalent of 'Other, specify: _________'. Specify the additional concept as the second coding."
@@ -15,72 +15,48 @@ Description: "Codes needed for positive identification of certain types of insta
 CodeSystem: ResourceIdentifierCS
 Id: mcode-resource-identifier-cs
 Title: "mCODE Resource Identifier Code System"
-Description: "Concepts describing types of instances, to be used in the 'code' element of an instance."
+Description: "Concepts describing instance types, to be used in the 'code' element of instances. These codes were created because no appropriate existing code could be found. These concepts are analogous to LOINC codes for laboratory observations: they identify the type of thing an instance represents. The code is not to be confused with the profile, although one may imply the other. Procedure.code, Observation.code, and Group.code elements require a CodeableConcept, not a Canonical URL data type. A profile's canonical URL belongs in the meta.profile element, whereas the codes in this code system belong in Resource.code elements."
 * #mcode-patient "mCODE Patient Group Resource" "Identifies a Group resource containing mCODE cancer patients that conforms to the MCODEPatientGroup profile."
 * #mcode-comorbidity  "Elixhauser Comorbidity Resource" "Identifies an Observation resource representing Elixhauser comorbidities that conforms to the ComorbiditiesElixhauser profile."
-* #mcode-radiotherapy-course-summary "Radiotherapy Summary Resource" "Identifies a Procedure resource that summarizes a radiotherapy treatment that conforms to the RadiotherapyCourseSummary profile."
+* #mcode-radiotherapy-course-summary "Radiotherapy Course Summary Resource" "Identifies a Procedure resource that summarizes a radiotherapy treatment that conforms to the RadiotherapyCourseSummary profile."
 * #mcode-teleradiotherapy-treatment-phase "Teleradiotherapy Treatment Phase Resource" "Identifies a Procedure resource that describes delivery of teleradiotherapy (external beam radiation) and conforms to the TeleradiotherapyTreatmentPhase profile."
 * #mcode-brachytherapy-treatment-phase "Brachytherapy Treatment Phase Resource" "Identifies a Procedure resource that describes delivery of brachytherapy (internal or surface radiation) and conforms to the BrachytherapyTreatmentPhase profile."
 
 CodeSystem: RadiotherapyCS
 Id: radiotherapy-cs
 Title: "Radiotherapy Code System"
-Description: "Codes describing the modalities, techniques, and devices used in external beam radiotherapy and brachytherapy procedures."
+Description: "Concepts used in association with radiotherapy profiles in mCODE, where terms could not be found in standard sources such as SNOMED CT."
 * ^url =  http://terminology.hl7.org/CodeSystem/radiotherapy
-//-- Teleradiotherapy Modalities
-//* #PROTON "Proton Beam Radiation Therapy" "A type of external beam radiation therapy using protons." 
-//* #ELECTRON "Electron Beam Radiation Therapy"  "A type of external beam radiation therapy using electrons."
-//* #NEUTRON "Neutron Beam Radiation Therapy" "A type of external beam radiation therapy using neutrons."
 * #CARBON  "Carbon Ion Beam Radiation Therapy"  "A type of external beam radiation therapy using carbon ions."
 * #PHOTON "Photon Beam Radiation Therapy" "A type of external beam radiation therapy using photons."
-//-- Brachytherapy Modalities
 * #LDR-PERM "Low Dose Rate Brachytherapy - Permanent Placement" "Radiation treatment that irradiates a treatment volume with permanently placed radiation sources delivering low dose rates (typically less than or equal to 2 Gy/hour)."
 * #LDR-TEMP "Low Dose Rate Brachytherapy - Temporary Placement" "Radiation treatment that irradiates a treatment volume with temporarily placed radiation sources delivering low dose rates (typically less than or equal to 2 Gy/hour)."
 * #PDR "Pulsed Dose Rate Brachytherapy" "Internal or surface radiation treatment that irradiates a treatment volume in short pulses (typically 10 to 30 minutes in every hour) with a stronger source than low dose rate brachytherapy (typically treatment rates up to 3 Gy/hour)."
-//* #HDR  "High Dose Rate Brachytherapy" "Internal or surface radiation treatment that irradiates a treatment volume with high dose rates of radiation (typically greater than 12 Gy/hour)."
-//* #EBRACHY "Electronic Brachytherapy"  "A modality of internal or surface radiation that uses X-ray sources instead of radionuclides to deliver high rates of radiation."
-//* #RADPHARM "Radiopharmaceutical Therapy" "The use of radioactive drugs that can be given by mouth, infused, or injected."
-//-- Teleradiotherapy Techniques
-//* #IMRT "Intensity Modulated Radiation Therapy" "A technique of high-precision radiotherapy that uses computer control to deliver precise radiation doses that conform to a three-dimensional (3-D) shape by modulating the intensity of the radiation beam across the areas irradiated by each of the beams, with patterns designed under computer control to optimize the dose distribution according to a set of limits specified for target, organ at risk, and other structures."
 * #VMAT "Volumetric Modulated Arc Therapy" "A type of IMRT technique where the radiotherapy machine rotates around the patient, radiating the target in a complete three-dimensional manner with variable speed and/or dose rate."
 * #3D "Three Dimensional"  "Dose calculated with projection onto 3D imaging (e.g., CT or MR) delivered with either static aperture (Collimator, SRS Cone, Static MLC, blocks, etc) or non-IMRT/VMAT dynamic apertures (e.g., field-in-field, dynamic arc) using either single gantry angles or arcs."
 * #2D "Two Dimensional" "Dose calculated without projection onto 3D imaging and delivered without 3D techniques."
-//* #IORT "Intraoperative Radiation Therapy" "A radiation treatment administered during surgery."
 * #PPS  "Particle Passive Scattering" "In proton or carbon ion beam therapy, a technique where the beam is spread out to larger dimension using a scattering device such as lead foil."
 * #PSS "Particle Spot Scanning"  "In proton or carbon ion beam therapy, a technique where accelerated particles are focused into a small beam and then moved (scanned) over target regions in the patient."
 * #MIX "Mixed" "Both photon and particle based beams are used to deliver the radiation therapy."
-//* #IMNT "Intensity Modulated Neutron Therapy" "A technique of conformal application of neutron beams that resuts in substantial reduction in normal tissue dose."
-//* #NCT "Neutron Capture Therapy" "A technique where the patient is injected with a tumor-localizing drug containing a neutron absorber (e.g., boron-10), and then radiated with neutrons, which are captured, releasing high-energy alpha particles."
-//-- Brachytherapy Techniques
-//* #CAV "Intracavitary" "Placement of a radiation source within an open cavity of the body."
 * #CAV-IMB "Intracavitary, Intensity Modulated" "A technique of brachytherapy that dynamically directs the radiation into the tumours and away from healthy tissue, for example, by incorporation of metallic shields inside brachytherapy applicators."
-//* #INSTIT "Interstitial"  "Placement of a radiation source into tissue."
-//* #LUM "Intraluminal"  "Placement of a radiation source into a lumen, usually understood to mean the gastrointestinal, esophageal, endobrochial, or less commonly, within the bile duct or urinary bladder."
-//* #SURF "Surface" "Use of a radiation source to deliver dose to the surface of a target (e.g., skin or eye)." 
 * #VASC "Intravascular" "Placement of a radiation source into a blood vessel or blood vascular system or vascular injection of radiopharmaceutical."
-//* #ORAL "Oral"  "Delivery of radiopharaceutical by oral intake."
-/* Codes to add
-NON-ADJACENT "Non-Adjacent" "Non-Adjacent (qualifier value)"
-Buccal Lymph Nodes
-Level 1 Axillary Lymph Nodes
-Level 2 Axillary Lymph Nodes
-Level 3 Axillary Lymph Nodes
-Level IA (Submental) neck node
-Level IB (Submandibular) neck node
-Level IIA (Upper Jugular) neck node
-Level IIB (Upper Jugular) neck node
-Level III (Middle Jugular) neck node
-Level IV neck (Lower Jugular) node
-Level VA (Posterior Triangle) neck node
-Level VB (Posterior Triangle) neck node
-Level VC (Posterior Triangle) neck node
-Level VI (Anterior Triangle) neck node
-Level VII (Upper Mediastinal) neck node
-Surgical Bed
-Tumor Bed
-Structure of body of thirteenth thoracic vertebra (body structure)
-Bone structure of thirteenth rib (body structure)
-*/
+* #C0223388 "Structure of body of thirteenth thoracic vertebra (body structure)"
+* #C0222987 "Bone structure of thirteenth rib (body structure)"
+* #NON-ADJACENT "Non-Adjacent (qualifier value)"
+* #LN_AX_L1  "Level 1 Axillary Lymph Nodes"
+* #LN_Ax_L2  "Level 2 Axillary Lymph Nodes"
+* #LN_Ax_L3  "Level 3 Axillary Lymph Nodes"
+* #LN_Neck_IA  "Level IA (Submental) neck node"
+* #LN_Neck_IB  "Level IB (Submandibular) neck node"
+* #LN_Neck_IIA  "Level IIA (Upper Jugular) neck node"
+* #LN_Neck_IIB  "Level IIB (Upper Jugular) neck node"
+* #LN_Neck_III  "Level III (Middle Jugular) neck node"
+* #LN_Neck_IV  "Level IV neck (Lower Jugular) node"
+* #LN_Neck_VA  "Level VA (Posterior Triangle) neck node"
+* #LN_Neck_VB  "Level VB (Posterior Triangle) neck node"
+* #LN_Neck_VC  "Level VC (Posterior Triangle) neck node"
+* #LN_Neck_VI  "Level VI (Anterior Triangle) neck node"
+* #LN_Neck_VII  "Level VII (Upper Mediastinal) neck node"
 
 CodeSystem: ComorbiditiesElixhauserCS
 Id: comorbidities-elixhauser-cs

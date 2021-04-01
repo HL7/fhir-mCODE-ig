@@ -57,7 +57,7 @@ Description: "A summary of a phase of teleradiotherapy treatment that has been d
 * code = RID#mcode-teleradiotherapy-treatment-phase
 * extension[modality].value[x] from TeleradiotherapyModalityVS (required)
 * extension[modality] ^short = "Teleradiotherapy (EBRT) Modality"
-* extension[modality]  ^definition = "The modality (radiation type) for the external beam radiation therapy."
+* extension[modality] ^definition = "The modality (radiation type) for the external beam radiation therapy."
 * extension[technique].value[x] from TeleradiotherapyTechniqueVS (required)
 * extension[technique] ^short = "Teleradiotherapy (EBRT) Technique"
 * extension[technique] ^definition = "The method by which a radiation modality is applied (e.g., intensity modulated radiation therapy, intraoperative radiation therapy)."

@@ -95,6 +95,7 @@ Description: "Various modifiers that can be applied to anatomical locations wher
 * SCT#51440002    "Right and left (qualifier value)"
 * SCT#14414005  "Peripheral (qualifier value)"
 * SCT#26216008  "Central (qualifier value)"
+* RT#NON-ADJACENT "Non-Adjacent (qualifier value)"
 
 ValueSet: RadiotherapyTreatmentLocationVS
 Id: mcode-radiotherapy-treatment-location-vs
@@ -310,6 +311,10 @@ Description: "Codes describing the anatomical locations where radiotherapy treat
 * SCT#85050009    "Bone structure of the humerus (body structure)"
 * SCT#32764006    "Portal vein structure (body structure)"
 * SCT#91381003    "Pleural cavity structure (body structure)"
+// NEW 4-1-2021
+* NCIT#C101558    "Tumor Bed"
+* SCT#16227691000119107 "Post-surgical excision site (morphologic abnormality)"
+* SCT#143925009   "Structure of buccinator lymph node (body structure)"
 
 
 /*  SAVE

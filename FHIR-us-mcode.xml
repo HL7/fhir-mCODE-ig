@@ -115,6 +115,9 @@
 <artifact id="StructureDefinition/mcode-radiotherapy-sessions" key="StructureDefinition-mcode-radiotherapy-sessions" name="Radiotherapy Number of Sessions"/>
 <artifact id="StructureDefinition/mcode-radiotherapy-technique" key="StructureDefinition-mcode-radiotherapy-technique" name="Radiotherapy Technique"/>
 <artifact id="ValueSet/mcode-radiotherapy-technique-vs" key="ValueSet-mcode-radiotherapy-technique-vs" name="Radiotherapy Technique Value Set"/>
+<artifact id="ValueSet/mcode-radiotherapy-treatment-location-qualifier-vs" key="ValueSet-mcode-radiotherapy-treatment-location-qualifier-vs" name="Radiotherapy Treatment Location Qualifier Value Set"/>
+<artifact id="ValueSet/mcode-radiotherapy-treatment-location-vs" key="ValueSet-mcode-radiotherapy-treatment-location-vs" name="Radiotherapy Treatment Location Value Set"/>
+<artifact id="StructureDefinition/mcode-radiotherapy-treatment-volume" key="StructureDefinition-mcode-radiotherapy-treatment-volume" name="Radiotherapy Treatment Volume"/>
 <artifact deprecated="true" id="Extension/mcode-related-primary-cancer-condition-extension" key="related-primary-cancer-condition-extension" name="Related Primary Cancer Condition Extension"/>
 <artifact id="SearchParameter/Patient-id" key="SearchParameter-Patient-id" name="Search by _id in Patients with multipleOr"/>
 <artifact id="SearchParameter/Condition-code" key="SearchParameter-Condition-code" name="Search by code:in in Conditions"/>
@@ -192,6 +195,9 @@
 <artifact id="Specimen/genetic-specimen-lung" key="Specimen-genetic-specimen-lung" name="genetic-specimen-lung"/>
 <artifact id="Observation/genomic-region-studied-jenny-m" key="Observation-genomic-region-studied-jenny-m" name="genomic-region-studied-jenny-m"/>
 <artifact id="Observation/genomic-region-studied-stk11" key="Observation-genomic-region-studied-stk11" name="genomic-region-studied-stk11"/>
+<artifact id="BodyStructure/jenny-m-chest-wall" key="BodyStructure-jenny-m-chest-wall" name="jenny-m-chest-wall"/>
+<artifact id="BodyStructure/jenny-m-chest-wall-lymph-nodes" key="BodyStructure-jenny-m-chest-wall-lymph-nodes" name="jenny-m-chest-wall-lymph-nodes"/>
+<artifact id="BodyStructure/john-anyperson-treatment-volume" key="BodyStructure-john-anyperson-treatment-volume" name="john-anyperson-treatment-volume"/>
 <artifact id="Observation/karnofsky-performance-status-normal-activity" key="Observation-karnofsky-performance-status-normal-activity" name="karnofsky-performance-status-normal-activity"/>
 <artifact id="Observation/lab-result-observation-hemoglobin" key="Observation-lab-result-observation-hemoglobin" name="lab-result-observation-hemoglobin"/>
 <artifact id="CodeSystem/mcode-catch-code-cs" key="CodeSystem-mcode-catch-code-cs" name="mCODE Catch Codes"/>

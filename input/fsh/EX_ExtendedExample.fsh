@@ -627,7 +627,8 @@ Description: "Example of teleradiotherapy treatment phase involving external bea
 * extension[technique].valueCodeableConcept = RT#VMAT "Volumetric Modulated Arc Therapy"
 * extension[fractionsDelivered].valueUnsignedInt = 25
 * extension[doseDelivered][0].extension[treatmentVolume].valueReference = Reference(jenny-m-chest-wall)
-* extension[doseDelivered][0].extension[treatmentVolume].valueReference = Reference(jenny-m-chest-wall-lymph-nodes)
+* extension[doseDelivered][0].extension[totalDoseDelivered].valueQuantity = 5000 'cGy'
+* extension[doseDelivered][1].extension[treatmentVolume].valueReference = Reference(jenny-m-chest-wall-lymph-nodes)
 * extension[doseDelivered][1].extension[totalDoseDelivered].valueQuantity = 5000 'cGy'
 * subject = Reference(cancer-patient-jenny-m)
 * asserter = Reference(us-core-practitioner-kyle-anydoc)
@@ -651,22 +652,21 @@ Description: "Example of teleradiotherapy treatment boost phase"
 
 Instance: jenny-m-chest-wall
 InstanceOf: RadiotherapyTreatmentVolume
-Description: "Treatment volume for Jenny M's teleradiotherapy."
+Description: "Treatment volume 1 for Jenny M's teleradiotherapy."
 * patient = Reference(cancer-patient-jenny-m)
 * description = "Chest Wall"
 * identifier.value = "1.2.246.352…1"
 * location = SCT#78904004 "Chest wall structure (body structure)"
 * locationQualifier = SCT#255503000 "Entire (qualifier value)"
 
-Instance: jenny-m-chest-wall-nymph-nodes
+Instance: jenny-m-chest-wall-lymph-nodes
 InstanceOf: RadiotherapyTreatmentVolume
-Description: "Treatment volume for Jenny M's teleradiotherapy."
+Description: "Treatment volume 2 for Jenny M's teleradiotherapy."
 * patient = Reference(cancer-patient-jenny-m)
 * description = "Chest Wall Lymph Nodes"
 * identifier.value = "1.2.246.352…2"
 * location = SCT#245276004 "Mediastinal lymph node group (body structure)"
-* locationQualifier = SCT#1440002  "Right and left (qualifier value)"
-
+* locationQualifier = SCT#51440002  "Right and left (qualifier value)"
 
 Instance: cancer-related-medication-request-anastrozole-jenny-m
 InstanceOf: CancerRelatedMedicationRequest

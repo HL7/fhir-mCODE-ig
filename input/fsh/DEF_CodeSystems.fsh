@@ -59,6 +59,28 @@ Description: "Codes describing the modalities, techniques, and devices used in e
 //* #SURF "Surface" "Use of a radiation source to deliver dose to the surface of a target (e.g., skin or eye)." 
 * #VASC "Intravascular" "Placement of a radiation source into a blood vessel or blood vascular system or vascular injection of radiopharmaceutical."
 //* #ORAL "Oral"  "Delivery of radiopharaceutical by oral intake."
+/* Codes to add
+NON-ADJACENT "Non-Adjacent" "Non-Adjacent (qualifier value)"
+Buccal Lymph Nodes
+Level 1 Axillary Lymph Nodes
+Level 2 Axillary Lymph Nodes
+Level 3 Axillary Lymph Nodes
+Level IA (Submental) neck node
+Level IB (Submandibular) neck node
+Level IIA (Upper Jugular) neck node
+Level IIB (Upper Jugular) neck node
+Level III (Middle Jugular) neck node
+Level IV neck (Lower Jugular) node
+Level VA (Posterior Triangle) neck node
+Level VB (Posterior Triangle) neck node
+Level VC (Posterior Triangle) neck node
+Level VI (Anterior Triangle) neck node
+Level VII (Upper Mediastinal) neck node
+Surgical Bed
+Tumor Bed
+Structure of body of thirteenth thoracic vertebra (body structure)
+Bone structure of thirteenth rib (body structure)
+*/
 
 CodeSystem: ComorbiditiesElixhauserCS
 Id: comorbidities-elixhauser-cs

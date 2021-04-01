@@ -217,7 +217,7 @@ Description: "Treatment volume for John Anyperson's brachytherapy."
 * description = "Structure of lower lobe of left lung"
 * location = SCT#31094006  "Structure of lobe of lung (body structure)"
 * locationQualifier[0] = SCT#7771000 "Left (qualifier value)"
-* locationQualifier[1] = SCT#61122009 "Lower (qualifier value)"
+* locationQualifier[1] = SCT#261122009 "Lower (qualifier value)"
 
 Instance: binet-stage-group-A
 InstanceOf: CancerStageGroup

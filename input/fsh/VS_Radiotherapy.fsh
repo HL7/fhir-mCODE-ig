@@ -75,6 +75,26 @@ Description: "Codes describing the techniques of external beam and brachytherapy
 * include codes from valueset TeleradiotherapyTechniqueVS
 * include codes from valueset BrachytherapyTechniqueVS
 
+ValueSet: RadiotherapyTreatmentLocationQualifierVS
+Id: mcode-radiotherapy-treatment-location-qualifier-vs
+Title: "Radiotherapy Treatment Location Qualifier Value Set"
+Description: "Various modifiers that can be applied to anatomical locations where radiotherapy treatments can be directed."
+* ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
+* SCT#7771000    "Left (qualifier value)"
+* SCT#24028007    "Right (qualifier value)"
+* SCT#255549009    "Anterior (qualifier value)"
+* SCT#255551008    "Posterior (qualifier value)"
+* SCT#261089000    "Inferior (qualifier value)"
+* SCT#264217000    "Superior (qualifier value)"
+* SCT#261183002    "Upper (qualifier value)"
+* SCT#261122009    "Lower (qualifier value)"
+* SCT#260528009    "Middle (qualifier value)"
+* SCT#46053002    "Distal (qualifier value)"
+* SCT#40415009    "Proximal (qualifier value)"
+* SCT#255503000    "Entire (qualifier value)"
+* SCT#255609007    "Partial (qualifier value)"
+* SCT#51440002    "Right and left (qualifier value)"
+
 ValueSet: RadiotherapyTreatmentLocationVS
 Id: mcode-radiotherapy-treatment-location-vs
 Title: "Radiotherapy Treatment Location Value Set"
@@ -248,7 +268,7 @@ Description: "Codes describing the anatomical locations where radiotherapy treat
 * SCT#245258006    "Submental lymph node group (body structure)"
 * SCT#245265003    "Supraclavicular lymph node group (body structure)"
 * SCT#56094003    "Structure of body of first thoracic vertebra (body structure)"
-* SCT#8405002    "Structure of body of tenth thoracic vertebra (body structure)"
+* SCT#48405002    "Structure of body of tenth thoracic vertebra (body structure)"
 * SCT#52120002    "Structure of body of eleventh thoracic vertebra (body structure)"
 * SCT#280849005    "Structure of body of twelfth thoracic vertebra (body structure)"
 * SCT#50060007    "Structure of body of second thoracic vertebra (body structure)"
@@ -279,33 +299,11 @@ Description: "Codes describing the anatomical locations where radiotherapy treat
 * SCT#35039007    "Uterine structure (body structure)"
 * SCT#76784001    "Vaginal structure (body structure)"
 * SCT#263355003    "Vaginal wall (body structure)"
-* SCT#5764002    "Brain ventricle structure (body structure)"
+* SCT#35764002    "Brain ventricle structure (body structure)"
 * SCT#45292006    "Vulval structure (body structure)"
 * SCT#17861009    "Waldeyer's ring structure (body structure)"
 * SCT#38266002    "Entire body as a whole (body structure)"
 
-
-
-
-ValueSet: RadiotherapyTreatmentLocationQualifierVS
-Id: mcode-radiotherapy-treatment-location-qualifier-vs
-Title: "Radiotherapy Treatment Location Qualifier Value Set"
-Description: "Various modifiers that can be applied to anatomical locations where radiotherapy treatments can be directed."
-* ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
-* SCT#7771000    "Left (qualifier value)"
-* SCT#24028007    "Right (qualifier value)"
-* SCT#255549009    "Anterior (qualifier value)"
-* SCT#255551008    "Posterior (qualifier value)"
-* SCT#261089000    "Inferior (qualifier value)"
-* SCT#264217000    "Superior (qualifier value)"
-* SCT#261183002    "Upper (qualifier value)"
-* SCT#61122009    "Lower (qualifier value)"
-* SCT#260528009    "Middle (qualifier value)"
-* SCT#46053002    "Distal (qualifier value)"
-* SCT#40415009    "Proximal (qualifier value)"
-* SCT#255503000    "Entire (qualifier value)"
-* SCT#255609007    "Partial (qualifier value)"
-* SCT#1440002    "Right and left (qualifier value)"
 
 
 /*  SAVE

@@ -24,6 +24,7 @@ A radiation oncology work group convened under [CodeX FHIR Accelerator](https://
 * **Radiotherapy**
   * [BrachytherapyTreatmentPhase]
   * [RadiotherapyCourseSummary]
+  * [RadiotherapyTreatmentVolume]
   * [TeleradiotherapyTreatmentPhase]
 
 ### Extensions
@@ -48,7 +49,9 @@ A radiation oncology work group convened under [CodeX FHIR Accelerator](https://
   * [BrachytherapyModalityVS]
   * [BrachytherapyTechniqueVS]
   * [TeleradiotherapyModalityVS]
-  * [TeleradiotherapyTechniqueVS]  
+  * [TeleradiotherapyTechniqueVS]
+  * [RadiotherapyTreatmentLocationVS]
+  * [RadiotherapyTreatmentLocationQualifierVS]
 
 ### Code Systems
 

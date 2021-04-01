@@ -101045,3 +101045,14 @@ v: {
   "error" : "Unable to provide support for code system http://snomed.info/sct version http://snomed.info/sct/731000124108/version/20210301 (from http://tx.fhir.org/r4)"
 }
 -------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://snomed.info/sct",
+  "code" : "787377000",
+  "display" : "Gross examination and sampling of tissue specimen (procedure)"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "Unable to provide support for code system http://snomed.info/sct version http://snomed.info/sct/731000124108/version/20210301 (from http://tx.fhir.org/r4)"
+}
+-------------------------------------------------------------------------------------

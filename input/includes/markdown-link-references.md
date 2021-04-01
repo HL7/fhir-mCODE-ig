@@ -104,7 +104,7 @@
 [HGNCVS]: ValueSet-mcode-hgnc-vs.html
 [HGVSVS]: ValueSet-mcode-hgvs-vs.html
 [HistologyMorphologyBehaviorVS]: ValueSet-mcode-histology-morphology-behavior-vs.html
-[LocationQualifierVS]: ValueSet-mcode-location-qualifier-vs.html
+[BodyLocationQualifierVS]: ValueSet-mcode-location-qualifier-vs.html
 [ObservationCodesStageGroupVS]: ValueSet-mcode-observation-codes-stage-group-vs.html
 [ObservationCodesPrimaryTumorVS]: ValueSet-mcode-observation-codes-primary-tumor-vs.html
 [ObservationCodesRegionalNodesVS]: ValueSet-mcode-observation-codes-regional-nodes-vs.html

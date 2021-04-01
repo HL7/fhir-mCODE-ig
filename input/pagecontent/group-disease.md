@@ -92,7 +92,7 @@ mCODE includes single FHIR profile, [TumorMarkerTest], for all labs involving se
   * [SecondaryCancerDisorderVS]
   * [CancerDisorderVS]
   * [CancerBodyLocationVS]
-  * [LocationQualifierVS]
+  * [BodyLocationQualifierVS]
   * [HistologyMorphologyBehaviorVS]
 * **Staging**
   * [CancerStageGroupVS]

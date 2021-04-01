@@ -9,7 +9,7 @@ The following table shows valid combinations of modality and technique for exter
 | Electrons| 3D, 2D, IORT, COMP |
 | Protons  | PPS, PSS, MIX |
 | Carbon   | PPS, PSS, MIX |
-| Neutrons | 3D, IMNT, NCT |
+| Neutrons | 3D, NCT |
 {: .grid }
 
 **Key:**
@@ -20,7 +20,6 @@ The following table shows valid combinations of modality and technique for exter
 * IORT: Intraoperative radiation therapy
 * PPS: Particle Passive Scattering
 * PSS: Particle Spot Scanning
-* IMNT: Intensity Modulated Neutron Therapy
 * NCT: Neutron Capture Therapy
 
 ### Conformance

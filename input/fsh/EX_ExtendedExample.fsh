@@ -643,7 +643,7 @@ Description: "Example of teleradiotherapy treatment boost phase"
 * performedPeriod.start = "2018-08-01"
 * performedPeriod.end = "2018-09-30"
 * extension[modality].valueCodeableConcept = SCT#45643008  "Teleradiotherapy using electrons (procedure)"
-* extension[technique].valueCodeableConcept = SCT#434131000124108 "Three dimensional conformal radiotherapy (procedure)"
+* extension[technique].valueCodeableConcept = RT#3D "Three dimensional"
 * extension[fractionsDelivered].valueUnsignedInt = 5
 * extension[doseDelivered].extension[treatmentVolume].valueReference = Reference(jenny-m-chest-wall)
 * extension[doseDelivered].extension[totalDoseDelivered].valueQuantity = 1000 'cGy'

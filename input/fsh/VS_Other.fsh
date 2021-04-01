@@ -41,7 +41,7 @@ Description: "Includes surgical procedure codes from SNOMED CT, ICD-10-PCS and C
 * include codes from system ICD10PCS
 
 
-ValueSet: LocationQualifierVS
+ValueSet: BodyLocationQualifierVS
 Id: mcode-location-qualifier-vs
 Title: "Location Qualifier Value Set"
 Description: "Qualifiers to refine the anatomical location. These include qualifiers for laterality, relative location, directionality, number, and plane."
@@ -99,7 +99,7 @@ Title:           "Methods for measuring tumor size"
 Description:     "Code for methods of measuring tumor size, including physical examination, pathology, and imaging."
 * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
 // Pathology
-* SCT#168455000 "Gross pathology (finding)"
+* SCT#787377000 "Gross examination and sampling of tissue specimen (procedure)"
 * SCT#104157003 "Light microscopy (procedure)"
 // Physical exam
 * SCT#5880005 "Physical examination procedure (procedure)"

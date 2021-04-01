@@ -20,6 +20,7 @@ The following table shows potential mappings. **This table may not be exhaustive
 | none | 384691004 Intraluminal brachytherapy (procedure) | none |
 | none | 14473006 Surface brachytherapy (procedure) | none |
 | none | 16560241000119104 Oral radionuclide therapy (procedure) | none |
+| none | 168524008 Radiotherapy - intraoperative control (procedure)  | none |
 {: .grid }
 
 {% include markdown-link-references.md %}

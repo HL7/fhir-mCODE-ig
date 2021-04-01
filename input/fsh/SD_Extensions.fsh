@@ -42,7 +42,7 @@ Description: "Qualifier to refine the anatomical location. These include qualifi
 * insert ExtensionContext(Condition.bodySite)
 * insert ExtensionContext(Observation.bodySite)
 * value[x] only CodeableConcept
-* value[x] from LocationQualifierVS (required)
+* value[x] from BodyLocationQualifierVS (required)
 
 Extension: TreatmentTerminationReason
 Id: mcode-treatment-termination-reason

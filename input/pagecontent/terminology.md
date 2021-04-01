@@ -122,7 +122,7 @@ Finally, the "catch code" code system was established as a way to know, positive
 * [HGNCVS]
 * [HGVSVS]
 * [HistologyMorphologyBehaviorVS]
-* [LocationQualifierVS]
+* [BodyLocationQualifierVS]
 * [PresentAbsentUnknownVS]
 * [PrimaryOrUncertainBehaviorCancerDisorderVS]
 * [SecondaryCancerDisorderVS]

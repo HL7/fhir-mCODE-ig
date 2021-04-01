@@ -17,7 +17,7 @@ Description:  "Records the dimensions of a tumor"
 * focus ^comment = "Use **only** when the tumor **has not** been removed from the body. If the tumor has been removed, use `specimen` instead and leave `focus` empty."
 
 * specimen only Reference(TumorSpecimen)
-* specimen ^short = "Identifiers a tumor that has been removed from the body"
+* specimen ^short = "Identifies a tumor that has been removed from the body"
 * specimen ^definition = "Reference to a Specimen resource conforming to TumorSpecimen."
 * specimen ^comment = "Use **only** when the tumor **has** been removed from the body. If the tumor has been not removed, use `focus` instead and leave `specimen` empty."
 
@@ -84,7 +84,7 @@ Description:  "Identifies a tumor that has not been removed from the body. Whene
 // This VS is used for the primary/secondary cancer conditions; rule set here for consistency with these profiles.
 * location from CancerBodyLocationVS (extensible)
 * location 1..1 // Tumor is meaningless without a location; parent profile is 0..1
-* locationQualifier from LocationQualifierVS (required)
+* locationQualifier from BodyLocationQualifierVS (required)
 // Related cancer condition
 * extension contains ConditionRelated named relatedCondition 0..1
 * extension[relatedCondition].value[x] only Reference(PrimaryCancerCondition or SecondaryCancerCondition)

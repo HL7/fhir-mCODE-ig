@@ -15,19 +15,19 @@ The following table shows potential mappings. **This table may not be exhaustive
 | --------- | -------------------- | --------------------- |
 | none | 441799006 Intensity modulated radiation therapy (procedure) | C16135 Intensity-Modulated Radiation Therapy |
 | VMAT | none | none |
-| none | 434131000124108 Three dimensional conformal radiotherapy (procedure) | C16035 3-Dimensional Conformal Radiation Therapy |
-| 2D | none [1] | C165189 Conventional Radiotherapy |
-| IORT | none [2] | C15623 Intraoperative Radiotherapy |
+| 3D | none [1] | C16035 3-Dimensional Conformal Radiation Therapy |
+| 2D | none [2] | C165189 Conventional Radiotherapy |
+| none | 168524008 Radiotherapy - intraoperative control (procedure) | C15623 Intraoperative Radiotherapy |
 | PPS | none | none |
 | PSS | none | none |
 | MIX | none | none |
-| IMNT | none | none |
 | none | 169317000 Neutron capture therapy (procedure) | C15378 Boron Neutron Capture Therapy |
 {: .grid }
 
 **Notes:**
 
-1. 5304008 Conventional X-ray therapy is two-dimensional but more specific in terms of modality
-2. 168524008 Radiotherapy - intraoperative control (procedure) is a potential match, but the fully specified name suggests that the concept must involve the act of "control".
+1. 434131000124108 Three dimensional conformal radiotherapy (procedure) is not a match. 3D does not necessarily imply conformal dose distribution.
+2. 5304008 Conventional X-ray therapy is two-dimensional but more specific in terms of modality
+3. 168524008 Radiotherapy - intraoperative control (procedure) is a potential match, but the fully specified name suggests that the concept must involve the act of "control".
 
 {% include markdown-link-references.md %}

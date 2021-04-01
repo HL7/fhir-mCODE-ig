@@ -68,7 +68,7 @@ The following rules apply to Receivers:
 2. A Data Receiver SHOULD implement **all** profiles defined in mCODE UNLESS the participant does not anticipate supplying or consuming a certain type of data, usually by virtue of playing a limited or specialized role in clinical or information workflows.
 3. The Receiver's list of implemented profiles MUST be published in a CapabilityStatement.
 4. A Receiver SHOULD perform validation on instances it receives. If an instance fails validation, the Receiver may reject the instance.
-5. Receivers SHALL be capable of meaningfully processing (at minimum) all [Obligation To Implement elements](#obligation-to-implement-data-elements). Depending on context, "meaningful processing" might mean displaying the data element for human use, reacting to it, or storing it for other purposes.
+5. Receivers SHALL be capable of meaningfully processing (at minimum) all [Obligation To Implement elements](#obligation-to-implement). Depending on context, "meaningful processing" might mean displaying the data element for human use, reacting to it, or storing it for other purposes.
 
 Regarding #4, there are several ways the Receiver can identify the correct profile to use for validation:
 

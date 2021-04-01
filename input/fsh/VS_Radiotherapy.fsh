@@ -110,14 +110,14 @@ Description: "Codes describing the anatomical locations where radiotherapy treat
 * SCT#34707002    "Biliary tract structure (body structure)"
 * SCT#89837001    "Urinary bladder structure (body structure)"
 * SCT#48566001    "Bone structure of extremity (body structure)"
-* SCT#46633002    "Entire bony pelvis (body structure) "
+* SCT#46633002    "Entire bony pelvis (body structure)"
 * SCT#118645006    "Structure of innominate bone and/or sacrum and/or coccyx (body structure)"
 * SCT#113276009    "Intestinal structure (body structure)"
 * SCT#12738006    "Brain structure (body structure)"
 * SCT#389079005    "Brain and spinal cord structure (body structure)"
 * SCT#15926001    "Brainstem structure (body structure)"
 * SCT#76752008    "Breast structure (body structure)"
-* SCT#14806007    "Bone structure of atlas (body structure) "
+* SCT#14806007    "Bone structure of atlas (body structure)"
 * SCT#39976000    "Bone structure of axis (body structure)"
 * SCT#91116008    "Structure of body of third cervical vertebra (body structure)"
 * SCT#14705001    "Structure of body of fourth cervical vertebra (body structure)"
@@ -302,7 +302,6 @@ Description: "Codes describing the anatomical locations where radiotherapy treat
 * SCT#45292006    "Vulval structure (body structure)"
 * SCT#17861009    "Waldeyer's ring structure (body structure)"
 * SCT#38266002    "Entire body as a whole (body structure)"
-
 
 
 /*  SAVE

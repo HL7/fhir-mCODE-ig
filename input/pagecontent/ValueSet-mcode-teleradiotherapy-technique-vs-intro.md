@@ -7,27 +7,26 @@ The following rules apply to this value set:
 
 ### Mapping Between Vocabularies
 
-The concepts in this value set are drawn from SNOMED CT or the [radiotherapy code system][RadiotherapyCS] defined in this Implementation Guide. Additional SNOMED CT codes have been submitted for approval. NCI Thesaurus terms are shown for informational purposes.
+The concepts in this value set are drawn from SNOMED CT (SCT) or the [radiotherapy code system][RadiotherapyCS] defined in this Implementation Guide. Additional SNOMED CT codes have been submitted for approval. NCI Thesaurus terms are shown for informational purposes.
 
 The following table shows potential mappings. **This table may not be exhaustive and additional valid mappings may exist.**
 
 | **Radiotherapy Code System** | **SNOMED CT**   | **NCI Thesaurus**   |
 | --------- | -------------------- | --------------------- |
-| none | 441799006 Intensity modulated radiation therapy (procedure) | C16135 Intensity-Modulated Radiation Therapy |
+| not needed | 441799006 "Intensity modulated radiation therapy (procedure)" | C16135 "Intensity-Modulated Radiation Therapy" |
 | VMAT | none | none |
-| 3D | none [1] | C16035 3-Dimensional Conformal Radiation Therapy |
-| 2D | none [2] | C165189 Conventional Radiotherapy |
-| none | 168524008 Radiotherapy - intraoperative control (procedure) | C15623 Intraoperative Radiotherapy |
+| 3D | none [1] | C16035 "3-Dimensional Conformal Radiation Therapy" |
+| 2D | none [2] | C165189 "Conventional Radiotherapy" |
+| not needed  | 168524008 "Radiotherapy - intraoperative control (procedure)" | C15623 "Intraoperative Radiotherapy" |
 | PPS | none | none |
 | PSS | none | none |
 | MIX | none | none |
-| none | 169317000 Neutron capture therapy (procedure) | C15378 Boron Neutron Capture Therapy |
+| not needed | 169317000 "Neutron capture therapy (procedure)" | C15378 "Boron Neutron Capture Therapy" |
 {: .grid }
 
 **Notes:**
 
-1. 434131000124108 Three dimensional conformal radiotherapy (procedure) is not a match. 3D does not necessarily imply conformal dose distribution.
-2. 5304008 Conventional X-ray therapy is two-dimensional but more specific in terms of modality
-3. 168524008 Radiotherapy - intraoperative control (procedure) is a potential match, but the fully specified name suggests that the concept must involve the act of "control".
+1. SCT#434131000124108 "Three dimensional conformal radiotherapy (procedure)" is not a match. 3D does not necessarily imply conformal dose distribution.
+2. SCT#5304008 "Conventional X-ray therapy" is two-dimensional but more specific in terms of modality
 
 {% include markdown-link-references.md %}

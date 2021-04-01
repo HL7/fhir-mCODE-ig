@@ -666,3 +666,129 @@ e: {
   "error" : "Error from server: Unable to provide support for code system http://terminology.hl7.org/CodeSystem/icd-o-3"
 }
 -------------------------------------------------------------------------------------
+{"hierarchical" : true, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/radiotherapy",
+      "concept" : [{
+        "code" : "LDR-TEMP"
+      },
+      {
+        "code" : "LDR-PERM"
+      },
+      {
+        "code" : "PDR"
+      }]
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "concept" : [{
+        "code" : "394902000",
+        "display" : "High dose brachytherapy (procedure)"
+      },
+      {
+        "code" : "438629002",
+        "display" : "High dose rate electronic brachytherapy (procedure)"
+      },
+      {
+        "code" : "440252007",
+        "display" : "Administration of radiopharmaceutical (procedure)"
+      }]
+    }]
+  }
+}}####
+e: {
+  "error" : "Error from server: Unable to provide support for code system http://terminology.hl7.org/CodeSystem/radiotherapy"
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://snomed.info/sct",
+      "concept" : [{
+        "code" : "384692006",
+        "display" : "Intracavitary brachytherapy (procedure)"
+      },
+      {
+        "code" : "113120007",
+        "display" : "Interstitial brachytherapy (procedure)"
+      },
+      {
+        "code" : "384691004",
+        "display" : "Intraluminal brachytherapy (procedure)"
+      },
+      {
+        "code" : "168524008",
+        "display" : "Radiotherapy - intraoperative control (procedure)"
+      },
+      {
+        "code" : "14473006",
+        "display" : "Surface brachytherapy (procedure)"
+      },
+      {
+        "code" : "16560241000119104",
+        "display" : "Oral radionuclide therapy (procedure)"
+      }]
+    },
+    {
+      "system" : "http://terminology.hl7.org/CodeSystem/radiotherapy",
+      "concept" : [{
+        "code" : "CAV-IMB"
+      },
+      {
+        "code" : "VASC"
+      }]
+    }]
+  }
+}}####
+e: {
+  "error" : "Error from server: Unable to provide support for code system http://snomed.info/sct version http://snomed.info/sct/731000124108/version/20210301"
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://snomed.info/sct",
+      "concept" : [{
+        "code" : "441799006",
+        "display" : "Intensity modulated radiation therapy (procedure)"
+      },
+      {
+        "code" : "168524008",
+        "display" : "Radiotherapy - intraoperative control (procedure)"
+      },
+      {
+        "code" : "169317000",
+        "display" : "Neutron capture therapy (procedure)"
+      }]
+    },
+    {
+      "system" : "http://terminology.hl7.org/CodeSystem/radiotherapy",
+      "concept" : [{
+        "code" : "VMAT"
+      },
+      {
+        "code" : "3D"
+      },
+      {
+        "code" : "2D"
+      },
+      {
+        "code" : "PPS"
+      },
+      {
+        "code" : "PSS"
+      },
+      {
+        "code" : "MIX"
+      }]
+    }]
+  }
+}}####
+e: {
+  "error" : "Error from server: Unable to provide support for code system http://snomed.info/sct version http://snomed.info/sct/731000124108/version/20210301"
+}
+-------------------------------------------------------------------------------------

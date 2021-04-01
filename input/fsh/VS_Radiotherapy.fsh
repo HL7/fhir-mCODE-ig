@@ -93,6 +93,8 @@ Description: "Various modifiers that can be applied to anatomical locations wher
 * SCT#255503000    "Entire (qualifier value)"
 * SCT#255609007    "Partial (qualifier value)"
 * SCT#51440002    "Right and left (qualifier value)"
+* SCT#14414005  "Peripheral (qualifier value)"
+* SCT#26216008  "Central (qualifier value)"
 
 ValueSet: RadiotherapyTreatmentLocationVS
 Id: mcode-radiotherapy-treatment-location-vs
@@ -302,6 +304,12 @@ Description: "Codes describing the anatomical locations where radiotherapy treat
 * SCT#45292006    "Vulval structure (body structure)"
 * SCT#17861009    "Waldeyer's ring structure (body structure)"
 * SCT#38266002    "Entire body as a whole (body structure)"
+* SCT#27612005    "Bone structure of fibula (body structure)"
+* SCT#87342007    "Trigeminal nerve structure (body structure)"
+* SCT#361351001    "All lymph nodes (body structure)"
+* SCT#85050009    "Bone structure of the humerus (body structure)"
+* SCT#32764006    "Portal vein structure (body structure)"
+* SCT#91381003    "Pleural cavity structure (body structure)"
 
 
 /*  SAVE

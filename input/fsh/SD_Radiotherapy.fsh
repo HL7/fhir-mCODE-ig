@@ -4,8 +4,6 @@ RuleSet: RadiotherapyCommon
 * category = SCT#108290001 // "Radiation oncology AND/OR radiotherapy (procedure)"
 * performed[x] only Period
 * extension and category MS
-* bodySite ^short = "Not used in this profile."
-* bodySite ^definition = "Not used in this profile. The treatment volume must be represented by a BodyStructure resource that conforms to the RadiotherapyTreatmentVolume profile, and referenced in the extension RadiotherapyDoseDelivered.treatmentVolume."
 
 
 Profile:  RadiotherapyCourseSummary
@@ -25,7 +23,10 @@ Description: "A summary of a course of radiotherapy delivered to a patient. It r
     RadiotherapyDoseDelivered named doseDelivered 0..* MS
 * extension[modality].value[x] from RadiotherapyModalityVS (required)
 * extension[technique].value[x] from RadiotherapyTechniqueVS (required)
-* reasonCode and reasonReference MS
+* bodySite from RadiotherapyTreatmentLocationVS (required)
+* bodySite ^short = "Body structure(s) treated"
+* bodySite ^definition = "Coded body structure(s) treated in this course of radiotherapy. These codes represent general locations. For additional detail, refer to the BodyStructures references in the doseDelivered extension."
+* reasonCode and reasonReference and bodySite MS
 * obeys mcode-reason-required
 
 // ------------- Phase Summaries -----------------
@@ -43,7 +44,8 @@ RuleSet: RadiotherapyPhaseCommon
 * extension[doseDelivered].extension[fractionsDelivered] ^definition = "Record the fractions delivered in this phase in the top-level extension also named fractionDelivered."
 * extension[fractionsDelivered] ^short = "Number of Fractions Delivered"
 * extension[fractionsDelivered] ^definition = "The number of fractions delivered during this phase."
-* bodySite ^definition = "Not used in this profile. The treatment volume must be represented by a BodyStructure resource that conforms to the RadiotherapyTreatmentVolume profile, and referenced in the extension RadiotherapyDoseDelivered.treatmentVolume."
+* bodySite ^short = "Not used in this profile."
+* bodySite ^definition = "Not used in this profile. Each treatment volume must be represented by a BodyStructure resource that conforms to the RadiotherapyTreatmentVolume profile, and referenced in the extension RadiotherapyDoseDelivered.treatmentVolume."
 
 Profile:  TeleradiotherapyTreatmentPhase
 Parent:   USCoreProcedure

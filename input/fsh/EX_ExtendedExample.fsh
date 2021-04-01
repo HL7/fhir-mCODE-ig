@@ -659,7 +659,7 @@ Description: "Treatment volume 1 for Jenny M's teleradiotherapy."
 * location = SCT#78904004 "Chest wall structure (body structure)"
 * locationQualifier = SCT#255503000 "Entire (qualifier value)"
 
-Instance: jenny-m-chest-wall-treatment-volume-lymph-nodes-treatment-volume
+Instance: jenny-m-chest-wall-lymph-nodes-treatment-volume
 InstanceOf: RadiotherapyTreatmentVolume
 Description: "Treatment volume 2 for Jenny M's teleradiotherapy."
 * patient = Reference(cancer-patient-jenny-m)

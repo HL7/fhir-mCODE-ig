@@ -37,7 +37,7 @@ Description: "Codes describing the modalities, techniques, and devices used in e
 * #LDR-PERM "Low Dose Rate Brachytherapy - Permanent Placement" "Radiation treatment that irradiates a treatment volume with permanently placed radiation sources delivering low dose rates (typically less than or equal to 2 Gy/hour)."
 * #LDR-TEMP "Low Dose Rate Brachytherapy - Temporary Placement" "Radiation treatment that irradiates a treatment volume with temporarily placed radiation sources delivering low dose rates (typically less than or equal to 2 Gy/hour)."
 * #PDR "Pulsed Dose Rate Brachytherapy" "Internal or surface radiation treatment that irradiates a treatment volume in short pulses (typically 10 to 30 minutes in every hour) with a stronger source than low dose rate brachytherapy (typically treatment rates up to 3 Gy/hour)."
-//* #HDR  "High Dose Rate Brachytherapy" "Internal or surface radiation treatment that irradiates a treatement volume with high dose rates of radiation (typically greater than 12 Gy/hour)."
+//* #HDR  "High Dose Rate Brachytherapy" "Internal or surface radiation treatment that irradiates a treatment volume with high dose rates of radiation (typically greater than 12 Gy/hour)."
 //* #EBRACHY "Electronic Brachytherapy"  "A modality of internal or surface radiation that uses X-ray sources instead of radionuclides to deliver high rates of radiation."
 //* #RADPHARM "Radiopharmaceutical Therapy" "The use of radioactive drugs that can be given by mouth, infused, or injected."
 //-- Teleradiotherapy Techniques

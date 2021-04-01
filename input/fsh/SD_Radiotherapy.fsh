@@ -5,13 +5,14 @@ RuleSet: RadiotherapyCommon
 * performed[x] only Period
 * extension and category MS
 * bodySite ^short = "Not used in this profile."
-* bodySite ^definition = "A more detailed description of the treatment volume should be entered in the RadiotherapyDoseDelivered.volumeDescription."
+* bodySite ^definition = "Not used in this profile. The treatment volume must be represented by a BodyStructure resource that conforms to the RadiotherapyTreatmentVolume profile, and referenced in the extension RadiotherapyDoseDelivered.treatmentVolume."
+
 
 Profile:  RadiotherapyCourseSummary
 Parent:   USCoreProcedure  // considered one procedure with multiple parts
 Id:       mcode-radiotherapy-course-summary
 Title:    "Radiotherapy Course Summary"
-Description: "A summary of a course of radiotherapy delivered to a patient. The status is changed to complete when the course has been fully delivered or changed to stopped if terminated. To describe the treatment in more detail, use either TeleradiotherapyTreatmentPhase or BrachytherapyTreatmentPhase, which should reference this summary through their partOf elements."
+Description: "A summary of a course of radiotherapy delivered to a patient. It records the treatment intent, termination reason, modalities, techniques, number of sessions, and doses delivered to one or more treatment volumes. To describe the treatment in more detail, use either TeleradiotherapyTreatmentPhase or BrachytherapyTreatmentPhase, which should reference this summary through their partOf elements. Whether the course has been fully delivered or stopped is indicated in the status element."
 * insert RadiotherapyCommon
 // Summary-specific content
 * code = RID#mcode-radiotherapy-course-summary
@@ -26,14 +27,6 @@ Description: "A summary of a course of radiotherapy delivered to a patient. The 
 * extension[technique].value[x] from RadiotherapyTechniqueVS (required)
 * reasonCode and reasonReference MS
 * obeys mcode-reason-required
-/* All bodySite stuff removed
-* bodySite from RadiotherapyBodySiteVS (extensible)
-* bodySite.extension contains
-    LocationQualifier named locationQualifier 0..*
-* bodySite ^short = "Body region treated"
-* bodySite ^definition = "The high level description of the body region where the treatment was directed, based on Commission on Cancer’s 'Standards for Oncology Registry Entry  - STORE 2018'" 
-* bodySite and bodySite.extension and bodySite.extension[locationQualifier] MS
-*/
 
 // ------------- Phase Summaries -----------------
 RuleSet: RadiotherapyPhaseCommon
@@ -47,11 +40,10 @@ RuleSet: RadiotherapyPhaseCommon
     RadiotherapyDoseDelivered named doseDelivered 0..* MS
 * extension[doseDelivered].extension[fractionsDelivered] 0..0
 * extension[doseDelivered].extension[fractionsDelivered] ^short = "Not used in this profile."
-* extension[doseDelivered].extension[fractionsDelivered] ^definition = "Record the fractions delivered in this phase in the top-level extension by the same name."
-* extension[doseDelivered].extension[fractionsDelivered] ^definition = " "
+* extension[doseDelivered].extension[fractionsDelivered] ^definition = "Record the fractions delivered in this phase in the top-level extension also named fractionDelivered."
 * extension[fractionsDelivered] ^short = "Number of Fractions Delivered"
 * extension[fractionsDelivered] ^definition = "The number of fractions delivered during this phase."
-* bodySite ^definition = "Not used in this profile. A more detailed description of the treatment volume should be entered in the RadiotherapyDoseDelivered.volumeDescription."
+* bodySite ^definition = "Not used in this profile. The treatment volume must be represented by a BodyStructure resource that conforms to the RadiotherapyTreatmentVolume profile, and referenced in the extension RadiotherapyDoseDelivered.treatmentVolume."
 
 Profile:  TeleradiotherapyTreatmentPhase
 Parent:   USCoreProcedure
@@ -118,36 +110,50 @@ Description: "The number of sessions in a course of radiotherapy."
 * insert ExtensionContext(Procedure)
 * value[x] only unsignedInt
 
+
+
 Extension: RadiotherapyDoseDelivered
 Id: mcode-radiotherapy-dose-delivered
 Title: "Radiotherapy Dose Delivered"
 Description: "Dose parameters for one treatment volume."
 * insert ExtensionContext(Procedure)
-* obeys mcode-volume-description-or-id-required
 * extension contains
-    volumeDescription 0..1 MS and
-    volumeId 0..1 MS and
+    treatmentVolume 1..1 MS and
     totalDoseDelivered 0..1 MS and
     fractionsDelivered 0..1 MS
-* extension[volumeDescription].value[x] only string
-* extension[volumeId].value[x] only string
+* extension[treatmentVolume].value[x] only Reference(RadiotherapyTreatmentVolume)
 * extension[totalDoseDelivered].value[x] only Quantity
 * extension[totalDoseDelivered].valueQuantity = UCUM#cGy
 * extension[fractionsDelivered].value[x] only unsignedInt
 // Definitions of in-line extensions
-* extension[volumeDescription] ^short = "Treatment volume where radiation was delivered"
-* extension[volumeDescription] ^definition = "Text description of the body structure treated, for example, Chest Wall Lymph Nodes."
-* extension[volumeId] ^short = "Identifier for the treatment volume."
-* extension[volumeId] ^definition = "Unique identifier to reliably identify the same target volume in different requests and procedures, for example, the Conceptual Volume UID used in DICOM."
+* extension[treatmentVolume] ^short = "Treatment volume where radiation was delivered"
+* extension[treatmentVolume] ^definition = "A BodyStructure resource representing the body structure treated, for example, Chest Wall Lymph Nodes."
 * extension[totalDoseDelivered] ^short = "Total Radiation Dose Delivered"
 * extension[totalDoseDelivered] ^definition = "The total amount of radiation delivered to this treatment volume within the scope of this dose delivery."
 * extension[fractionsDelivered] ^short = "Number of Fractions Delivered"
 * extension[fractionsDelivered] ^definition = "The number of fractions delivered to this treatment volume."
 
 
+//------ Treatment Volume -------
+
+Profile: RadiotherapyTreatmentVolume
+Parent: BodyStructure
+Id: mcode-radiotherapy-treatment-volume
+Title: "Radiotherapy Treatment Volume"
+Description: "The treatment volume where radiation was delivered."
+* obeys mcode-volume-description-or-id-required
+* identifier ^short = "Identifier for the treatment volume."
+* identifier ^definition = "Unique identifier to reliably identify the same target volume in different requests and procedures, for example, the Conceptual Volume UID used in DICOM."
+* description ^short = "Description of treatment volume"
+* description ^definition = "A text description of the treatment volume, containing any additional information above and beyond the location and locationQualifier that describe the treatment volume."
+* location from RadiotherapyTreatmentLocationVS (required)
+* locationQualifier from RadiotherapyTreatmentLocationQualifierVS (extensible)
+* identifier and location and locationQualifier and description and patient MS
+
+
 Invariant:  mcode-volume-description-or-id-required
-Description: "One of volumeDescription or volumeId MUST be present"
-Expression: "extension('volumeDescription').value.exists() or extension('volumeId').value.exists()"
+Description: "One of description or identifier MUST be present"
+Expression: "description.exists() or identifier.exists()"
 Severity:   #error
 
 

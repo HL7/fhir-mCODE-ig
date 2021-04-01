@@ -605,15 +605,13 @@ Description: "Example of radiotherapy treatment summary involving external beam 
 * extension[modality][1].valueCodeableConcept = SCT#45643008  "Teleradiotherapy using electrons (procedure)"
 * extension[technique][0].valueCodeableConcept = RT#VMAT "Volumetric Modulated Arc Therapy"
 * extension[technique][1].valueCodeableConcept = SCT#434131000124108 "Three dimensional conformal radiotherapy (procedure)"
-* extension[doseDelivered][0].extension[volumeDescription].valueString = "Chest Wall"
-* extension[doseDelivered][0].extension[volumeId].valueString = "1.2.246.352…1"
+* extension[doseDelivered][0].extension[treatmentVolume].valueReference = Reference(jenny-m-chest-wall)
 * extension[doseDelivered][0].extension[totalDoseDelivered].valueQuantity = 6000 'cGy'
 * extension[doseDelivered][0].extension[fractionsDelivered].valueUnsignedInt = 30
-* extension[doseDelivered][1].extension[volumeDescription].valueString = "Chest Wall Lymph Nodes"
-* extension[doseDelivered][1].extension[volumeId].valueString = "1.2.246.352…2"
+* extension[doseDelivered][1].extension[treatmentVolume].valueReference = Reference(jenny-m-chest-wall-lymph-nodes)
 * extension[doseDelivered][1].extension[totalDoseDelivered].valueQuantity = 5000 'cGy'
 * extension[doseDelivered][1].extension[fractionsDelivered].valueUnsignedInt = 25
-* subject = Reference(cancer-patient-eve-anyperson)
+* subject = Reference(cancer-patient-jenny-m)
 * asserter = Reference(us-core-practitioner-kyle-anydoc)
 
 Instance: teleradiotherapy-treatment-phase-chest-wall-jenny-m
@@ -628,13 +626,10 @@ Description: "Example of teleradiotherapy treatment phase involving external bea
 * extension[modality].valueCodeableConcept = RT#PHOTON "Photon Beam Radiation Therapy"
 * extension[technique].valueCodeableConcept = RT#VMAT "Volumetric Modulated Arc Therapy"
 * extension[fractionsDelivered].valueUnsignedInt = 25
-* extension[doseDelivered][0].extension[volumeDescription].valueString = "Chest Wall"
-* extension[doseDelivered][0].extension[totalDoseDelivered].valueQuantity = 5000 'cGy'
-* extension[doseDelivered][0].extension[volumeId].valueString = "1.2.246.352…1"
-* extension[doseDelivered][1].extension[volumeDescription].valueString = "Chest Wall Lymph Nodes"
+* extension[doseDelivered][0].extension[treatmentVolume].valueReference = Reference(jenny-m-chest-wall)
+* extension[doseDelivered][0].extension[treatmentVolume].valueReference = Reference(jenny-m-chest-wall-lymph-nodes)
 * extension[doseDelivered][1].extension[totalDoseDelivered].valueQuantity = 5000 'cGy'
-* extension[doseDelivered][1].extension[volumeId].valueString = "1.2.246.352…2"
-* subject = Reference(cancer-patient-eve-anyperson)
+* subject = Reference(cancer-patient-jenny-m)
 * asserter = Reference(us-core-practitioner-kyle-anydoc)
 
 Instance: teleradiotherapy-treatment-phase-boost-jenny-m
@@ -649,11 +644,29 @@ Description: "Example of teleradiotherapy treatment boost phase"
 * extension[modality].valueCodeableConcept = SCT#45643008  "Teleradiotherapy using electrons (procedure)"
 * extension[technique].valueCodeableConcept = SCT#434131000124108 "Three dimensional conformal radiotherapy (procedure)"
 * extension[fractionsDelivered].valueUnsignedInt = 5
-* extension[doseDelivered].extension[volumeDescription].valueString = "Chest Wall"
-* extension[doseDelivered].extension[volumeId].valueString = "1.2.246.352…1"
+* extension[doseDelivered].extension[treatmentVolume].valueReference = Reference(jenny-m-chest-wall)
 * extension[doseDelivered].extension[totalDoseDelivered].valueQuantity = 1000 'cGy'
-* subject = Reference(cancer-patient-eve-anyperson)
+* subject = Reference(cancer-patient-jenny-m)
 * asserter = Reference(us-core-practitioner-kyle-anydoc)
+
+Instance: jenny-m-chest-wall
+InstanceOf: RadiotherapyTreatmentVolume
+Description: "Treatment volume for Jenny M's teleradiotherapy."
+* patient = Reference(cancer-patient-jenny-m)
+* description = "Chest Wall"
+* identifier.value = "1.2.246.352…1"
+* location = SCT#78904004 "Chest wall structure (body structure)"
+* locationQualifier = SCT#255503000 "Entire (qualifier value)"
+
+Instance: jenny-m-chest-wall-nymph-nodes
+InstanceOf: RadiotherapyTreatmentVolume
+Description: "Treatment volume for Jenny M's teleradiotherapy."
+* patient = Reference(cancer-patient-jenny-m)
+* description = "Chest Wall Lymph Nodes"
+* identifier.value = "1.2.246.352…2"
+* location = SCT#245276004 "Mediastinal lymph node group (body structure)"
+* locationQualifier = SCT#1440002  "Right and left (qualifier value)"
+
 
 Instance: cancer-related-medication-request-anastrozole-jenny-m
 InstanceOf: CancerRelatedMedicationRequest

@@ -58,13 +58,21 @@ New code systems were created when no existing code systems were deemed fit for 
 | Resource Identifier Codes | Codes describing types of instances, to be used in the 'code' element |
 {: .grid }
 
-####
+#### Radiotherapy Code System
 
-In the case of radiotherapy, not all required concepts exist in established sources such as SNOMED CT and NCI Thesaurus. A local code system was created for the missing codes, at the same time requests were made to SNOMED CT for new terms to fill these gaps.
+Not all required concepts exist in established sources such as SNOMED CT and NCI Thesaurus (or UMLS). A local code system was created for the missing codes, at the same time requests were made to SNOMED CT for new terms to fill these gaps.
 
-Similarly, there is no established code system that represents the 30+ Elixhauser comorbidity categories. Although it would be preferable to use existing code systems to identify these categories, there is no terminology with terms for each comorbidity category. For example, there are no SNOMED CT concepts for "Liver disease, mild", "Renal failure, moderate", or "Thyroid disorders other than hypothyroidism". Note that the issue here is not to find disorder codes, but rather, to have codes representing the _categories themselves_.
+#### Elixhauser Code System
 
-Finally, the "catch code" code system was established as a way to know, positively, what a FHIR resource is supposed to represent in terms of mCODE-defined profiles. This relates to technical issues in FHIR, rather than clinical terminology gaps. A detailed explanation is found [here][CatchCodeCS].
+There is no established code system that represents the 30+ Elixhauser comorbidity categories. For example, there are no SNOMED CT concepts for Elixhauser categories such as "Liver disease, mild", "Renal failure, moderate", or "Thyroid disorders other than hypothyroidism". Note that the issue here is not to find disorder codes, but rather, to have codes representing the _categories themselves_. A detailed explanation is found [here][ComorbiditiesElixhauser]
+
+#### Catch Codes
+
+The "catch code" code system was established to represent "Other, specify: ___________" as often offered as the last in a list of choices. In addition, this approach prevents certain FHIR validation problems that would result from use of extensible bindings. A detailed explanation is found [here][CatchCodeCS].
+
+#### Resource Identifier Codes
+
+Certain resources, particularly in the radiotherapy area, are missing appropriate LOINC codes. Local codes have been defined to fill this gap, at least temporarily.
 
 **Links:**
 

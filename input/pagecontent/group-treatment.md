@@ -52,6 +52,7 @@ A radiation oncology work group convened under [CodeX FHIR Accelerator](https://
   * [TeleradiotherapyTechniqueVS]
   * [RadiotherapyTreatmentLocationVS]
   * [RadiotherapyTreatmentLocationQualifierVS]
+  * [RadiotherapyVolumeTypeVS]
 
 ### Code Systems
 

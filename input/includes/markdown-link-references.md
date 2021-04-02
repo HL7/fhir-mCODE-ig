@@ -113,6 +113,7 @@
 [PrimaryOrUncertainBehaviorCancerDisorderVS]: ValueSet-mcode-primary-or-uncertain-behavior-cancer-disorder-vs.html
 [RadiotherapyTreatmentLocationVS]: ValueSet-mcode-radiotherapy-treatment-location-vs.html
 [RadiotherapyTreatmentLocationQualifierVS]: ValueSet-mcode-radiotherapy-treatment-location-qualifier-vs.html
+[RadiotherapyVolumeTypeVS]: ValueSet-mcode-radiotherapy-volume-type-vs.html
 [SecondaryCancerDisorderVS]: ValueSet-mcode-secondary-cancer-disorder-vs.html
 [TeleradiotherapyModalityVS]: ValueSet-mcode-teleradiotherapy-modality-vs.html
 [TeleradiotherapyTechniqueVS]: ValueSet-mcode-teleradiotherapy-technique-vs.html

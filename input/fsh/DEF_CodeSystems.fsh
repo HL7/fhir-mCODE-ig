@@ -38,7 +38,6 @@ Description: "Concepts used in association with radiotherapy profiles in mCODE, 
 * #PSS "Particle Spot Scanning"  "In proton or carbon ion beam therapy, a technique where accelerated particles are focused into a small beam and then moved (scanned) over target regions in the patient."
 * #MIX "Mixed" "Both photon and particle based beams are used to deliver the radiation therapy."
 * #CAV-IMB "Intracavitary, Intensity Modulated" "A technique of brachytherapy that dynamically directs the radiation into the tumours and away from healthy tissue, for example, by incorporation of metallic shields inside brachytherapy applicators."
-//* #VASC "Intravascular" "Placement of a radiation source into a blood vessel or blood vascular system or vascular injection of radiopharmaceutical."
 * #C0223388 "Structure of body of thirteenth thoracic vertebra (body structure)"
 * #C0222987 "Bone structure of thirteenth rib (body structure)"
 * #NONADJACENT "Non-Adjacent (qualifier value)"

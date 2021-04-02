@@ -14,7 +14,7 @@ The following table shows potential mappings. **This table may not be exhaustive
 | **Radiotherapy Code System** | **SNOMED CT**   | **NCI Thesaurus**   |
 | --------- | -------------------- | --------------------- |
 | not needed | 441799006 "Intensity modulated radiation therapy (procedure)" | C16135 "Intensity-Modulated Radiation Therapy" |
-| not needed | none | UMLS#C3489631 _or_ MSH#D050397 |
+| not needed | none | UMLS#C3489631 |
 | 3D | none [1] | none [1] |
 | not needed | none [2] | C165189 "2D Conventional Radiotherapy" |
 | not needed  | 168524008 "Radiotherapy - intraoperative control (procedure)" | C15623 "Intraoperative Radiotherapy" |

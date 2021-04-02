@@ -9,8 +9,8 @@ Description: "Codes describing the modalities of teleradiotherapy (external beam
 * SCT#10611004 "Teleradiotherapy protons (procedure)"
 * SCT#45643008 "Teleradiotherapy using electrons (procedure)"
 * SCT#80347004 "Teleradiotherapy neutrons (procedure)"
-* NCIT#C160816 "Carbon Ion Radiation Therapy"
-* NCIT#C104914 "Photon Beam Radiation Therapy"
+* UMLS#C3494442 "Carbon Ion Radiation Therapy" // NCIT#C160816 "Carbon Ion Radiation Therapy"
+* UMLS#C3539769 "Photon Beam Radiation Therapy" // NCIT#C104914 "Photon Beam Radiation Therapy"
 
 ValueSet: BrachytherapyModalityVS
 Id: mcode-brachytherapy-modality-vs
@@ -20,7 +20,7 @@ Description: "Codes describing the modalities of brachytherapy procedures."
 * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
 * RT#LDR-TEMP
 * RT#LDR-PERM
-* NCIT#C116542 "Pulsed-Dose Rate Brachytherapy"
+* UMLS#C3897809 "Pulsed-Dose Rate Brachytherapy"  // NCIT#C116542 "Pulsed-Dose Rate Brachytherapy"
 * SCT#394902000 "High dose brachytherapy (procedure)"
 * SCT#438629002 "High dose rate electronic brachytherapy (procedure)"
 * SCT#440252007 "Administration of radiopharmaceutical (procedure)"
@@ -45,7 +45,7 @@ Description: "Codes describing the techniques of teleradiotherapy (external beam
 * SCT#441799006 "Intensity modulated radiation therapy (procedure)"
 * UMLS#C3489631 "Volumetric Modulated Arc Therapy"
 * RT#3D
-* NCIT#C165189 "2D Conventional Radiotherapy"
+* UMLS#C5236971 "2D Conventional Radiotherapy"  // NCIT#C165189 "2D Conventional Radiotherapy"
 * SCT#168524008 "Radiotherapy - intraoperative control (procedure)"
 * RT#PPS
 * RT#PSS
@@ -60,7 +60,7 @@ Description: "Codes describing the techniques of brachytherapy (internal or surf
 * SCT#384692006 "Intracavitary brachytherapy (procedure)"
 * RT#CAV-IMB
 * SCT#113120007 "Interstitial brachytherapy (procedure)"
-* MEDCIN#341945 "Intravascular radionuclide therapy"
+* UMLS#C0203617  "Intravascular radionuclide therapy" // MEDCIN#341945 "Intravascular radionuclide therapy"
 * SCT#384691004 "Intraluminal brachytherapy (procedure)"
 * SCT#168524008 "Radiotherapy - intraoperative control (procedure)"
 * SCT#14473006 "Surface brachytherapy (procedure)"
@@ -82,8 +82,7 @@ Description: "Codes describing the types of anatomical volumes used in radiother
 * SCT#228793007 "Planning target volume (observable entity)"
 * SCT#228791009 "Gross tumor volume (observable entity)"
 * SCT#228792002 "Clinical target volume (observable entity)"
-* MSH#D058958 "Organs at Risk"
-
+* UMLS#C2936599 "Organs at Risk"  // MSH#D058958 "Organs at Risk"
 
 ValueSet: RadiotherapyTreatmentLocationQualifierVS
 Id: mcode-radiotherapy-treatment-location-qualifier-vs
@@ -325,7 +324,25 @@ Description: "Codes describing the anatomical locations where radiotherapy treat
 // NEW 4-1-2021
 * SCT#143925009   "Structure of buccinator lymph node (body structure)"
 * SCT#16227691000119107 "Post-surgical excision site (morphologic abnormality)"
-* NCIT#C101558    "Tumor Bed"
+* UMLS#C3640144 "Tumor Bed"  // NCIT#C101558 "Tumor Bed"
+* RT#C0223388 "Structure of body of thirteenth thoracic vertebra (body structure)"
+* RT#C0222987 "Bone structure of thirteenth rib (body structure)"
+* RT#LN_AX_L1  "Level 1 Axillary Lymph Nodes"
+* RT#LN_Ax_L2  "Level 2 Axillary Lymph Nodes"
+* RT#LN_Ax_L3  "Level 3 Axillary Lymph Nodes"
+* RT#LN_Neck_IA  "Level IA (Submental) neck node"
+* RT#LN_Neck_IB  "Level IB (Submandibular) neck node"
+* RT#LN_Neck_IIA  "Level IIA (Upper Jugular) neck node"
+* RT#LN_Neck_IIB  "Level IIB (Upper Jugular) neck node"
+* RT#LN_Neck_III  "Level III (Middle Jugular) neck node"
+* RT#LN_Neck_IV  "Level IV neck (Lower Jugular) node"
+* RT#LN_Neck_VA  "Level VA (Posterior Triangle) neck node"
+* RT#LN_Neck_VB  "Level VB (Posterior Triangle) neck node"
+* RT#LN_Neck_VC  "Level VC (Posterior Triangle) neck node"
+* RT#LN_Neck_VI  "Level VI (Anterior Triangle) neck node"
+* RT#LN_Neck_VII  "Level VII (Upper Mediastinal) neck node"
+
+
 
 
 /*  SAVE

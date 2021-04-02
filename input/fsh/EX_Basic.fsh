@@ -24,7 +24,7 @@ Description: "Example of Primary Cancer Condition - hematologic cancer"
 * subject = Reference(cancer-patient-adam-everyman)
 * onsetDateTime = "2020-05-12"
 * asserter = Reference(us-core-practitioner-kyle-anydoc)
-* stage.summary = NCIT#C80134 "Binet Stage A"
+* stage.summary = UMLS#C2698392 "Binet Stage A"     // NCIT#C80134 "Binet Stage A"
 * stage.assessment = Reference(binet-stage-group-A)
 
 Instance: secondary-cancer-condition-brain-mets
@@ -224,11 +224,11 @@ InstanceOf: CancerStageGroup
 Description: "Example of a non-TNM Stage Group (Binet staging for CLL)"
 * code = LNC#21914-7 "Stage group.other Cancer"
 * status = #final "final"
-* method = NCIT#C141212 "Binet Staging"
+* method = UMLS#C4683625  "Binet Staging"  // NCIT#C141212 "Binet Staging"
 * subject = Reference(cancer-patient-adam-everyman)
 * effectiveDateTime = "2020-05-18"
 * derivedFrom = Reference(lab-result-observation-hemoglobin)
-* valueCodeableConcept = NCIT#C80134 "Binet Stage A"
+* valueCodeableConcept = UMLS#C2698392  "Binet Stage A" // NCIT#C80134 "Binet Stage A" 
 
 Instance: tnm-clinical-stage-group-3c
 InstanceOf: CancerStageGroup

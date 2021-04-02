@@ -105,6 +105,7 @@ codeSystems:
   'http://hl7.org/fhir/us/mcode/CodeSystem/mcode-catch-code-cs': 'mCODE: other, specify'
   'http://loinc.org': LOINC
   'http://ncithesaurus-stage.nci.nih.gov': NCI
+  'http://terminology.hl7.org/CodeSystem/umls': UMLS
   'http://sequenceontology.org': Sequence Ontology
   'http://terminology.hl7.org/CodeSystem/v2-0487': SpecimenType (HL7)
   'http://unitsofmeasure.org': Unified Code for Units of Measure

@@ -601,7 +601,7 @@ Description: "Example of radiotherapy treatment summary involving external beam 
 * extension[treatmentIntent].valueCodeableConcept = SCT#373808002 "Curative - procedure intent"
 * performedPeriod.start = "2018-05-01"
 * performedPeriod.end = "2018-06-29"
-* extension[modality][0].valueCodeableConcept = NCIT#C104914 "Photon Beam Radiation Therapy"
+* extension[modality][0].valueCodeableConcept = UMLS#C3539769 "Photon Beam Radiation Therapy"
 * extension[modality][1].valueCodeableConcept = SCT#45643008  "Teleradiotherapy using electrons (procedure)"
 * extension[technique][0].valueCodeableConcept =  UMLS#C3489631 "Volumetric Modulated Arc Therapy"
 * extension[technique][1].valueCodeableConcept = RT#3D
@@ -623,7 +623,7 @@ Description: "Example of teleradiotherapy treatment phase involving external bea
 * partOf = Reference(radiotherapy-treatment-summary-chest-wall-jenny-m)
 * performedPeriod.start = "2018-05-01"
 * performedPeriod.end = "2018-06-29"
-* extension[modality].valueCodeableConcept = NCIT#C104914 "Photon Beam Radiation Therapy"
+* extension[modality].valueCodeableConcept = UMLS#C3539769 "Photon Beam Radiation Therapy"
 * extension[technique].valueCodeableConcept = UMLS#C3489631 "Volumetric-Modulated Arc Therapy"
 * extension[fractionsDelivered].valueUnsignedInt = 25
 * extension[doseDelivered][0].extension[treatmentVolume].valueReference = Reference(jenny-m-chest-wall-treatment-volume)

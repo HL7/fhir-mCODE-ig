@@ -45,7 +45,7 @@ RuleSet: RadiotherapyPhaseCommon
 * extension[fractionsDelivered] ^short = "Number of Fractions Delivered"
 * extension[fractionsDelivered] ^definition = "The number of fractions delivered during this phase."
 * bodySite ^short = "Not used in this profile."
-* bodySite ^definition = "Not used in this profile. Each treatment volume must be represented by a BodyStructure resource that conforms to the RadiotherapyTreatmentVolume profile, and referenced in the extension RadiotherapyDoseDelivered.treatmentVolume."
+* bodySite ^definition = "Not used in this profile. Each treatment volume must be represented by a BodyStructure resource that conforms to the RadiotherapyAnatomicVolume profile, and referenced in the extension RadiotherapyDoseDelivered.treatmentVolume."
 
 Profile:  TeleradiotherapyTreatmentPhase
 Parent:   USCoreProcedure
@@ -112,8 +112,6 @@ Description: "The number of sessions in a course of radiotherapy."
 * insert ExtensionContext(Procedure)
 * value[x] only unsignedInt
 
-
-
 Extension: RadiotherapyDoseDelivered
 Id: mcode-radiotherapy-dose-delivered
 Title: "Radiotherapy Dose Delivered"
@@ -123,7 +121,7 @@ Description: "Dose parameters for one treatment volume."
     treatmentVolume 1..1 MS and
     totalDoseDelivered 0..1 MS and
     fractionsDelivered 0..1 MS
-* extension[treatmentVolume].value[x] only Reference(RadiotherapyTreatmentVolume)
+* extension[treatmentVolume].value[x] only Reference(RadiotherapyAnatomicVolume)
 * extension[totalDoseDelivered].value[x] only Quantity
 * extension[totalDoseDelivered].valueQuantity = UCUM#cGy
 * extension[fractionsDelivered].value[x] only unsignedInt
@@ -136,21 +134,22 @@ Description: "Dose parameters for one treatment volume."
 * extension[fractionsDelivered] ^definition = "The number of fractions delivered to this treatment volume."
 
 
-//------ Treatment Volume -------
+//------ Radiotherapy Anatomic Volume -------
 
-Profile: RadiotherapyTreatmentVolume
+Profile: RadiotherapyAnatomicVolume
 Parent: BodyStructure
-Id: mcode-radiotherapy-treatment-volume
-Title: "Radiotherapy Treatment Volume"
-Description: "The treatment volume where radiation was delivered."
+Id: mcode-radiotherapy-anatomic-volume
+Title: "Radiotherapy Anatomic Volume"
+Description: "An anatomic volume used in radiotherapy planning or treatment delivery."
 * obeys mcode-volume-description-or-id-required
 * identifier ^short = "Identifier for the treatment volume."
 * identifier ^definition = "Unique identifier to reliably identify the same target volume in different requests and procedures, for example, the Conceptual Volume UID used in DICOM."
 * description ^short = "Description of treatment volume"
 * description ^definition = "A text description of the treatment volume, containing any additional information above and beyond the location and locationQualifier that describe the treatment volume."
+* morphology from RadiotherapyVolumeTypeVS (extensible)
 * location from RadiotherapyTreatmentLocationVS (required)
 * locationQualifier from RadiotherapyTreatmentLocationQualifierVS (extensible)
-* identifier and location and locationQualifier and description and patient MS
+* identifier and location and locationQualifier and description and patient and morphology MS
 
 
 Invariant:  mcode-volume-description-or-id-required

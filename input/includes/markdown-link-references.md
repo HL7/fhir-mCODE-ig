@@ -34,7 +34,7 @@
 [RadiotherapyModality]: StructureDefinition-mcode-radiotherapy-modality.html
 [RadiotherapySessions]: StructureDefinition-mcode-radiotherapy-sessions.html
 [RadiotherapyTechnique]: StructureDefinition-mcode-radiotherapy-technique.html
-[RadiotherapyTreatmentVolume]: StructureDefinition-mcode-radiotherapy-treatment-volume.html
+[RadiotherapyAnatomicVolume]: StructureDefinition-mcode-radiotherapy-anatomic-volume.html
 [RelatedPrimaryCancerCondition]: StructureDefinition-mcode-related-primary-cancer-condition.html
 [SecondaryCancerCondition]: StructureDefinition-mcode-secondary-cancer-condition.html
 [TeleradiotherapyTreatmentPhase]: StructureDefinition-mcode-teleradiotherapy-treatment-phase.html

@@ -8,7 +8,7 @@ The following table shows potential mappings. **This table may not be exhaustive
 | --------- | ------------------------------ | --------------------------------- |
 | LDR-TEMP  | none [1]  | none [2] |
 | LDR-PERM  | none [1]  | none [2] |
-| PDR | none | C116542 "Pulsed-Dose Rate Brachytherapy" |
+| not needed | none | C116542 "Pulsed-Dose Rate Brachytherapy" |
 | not needed |  394902000  "High dose brachytherapy (procedure)"   | C15651 "High dose brachytherapy"  |
 | not needed | 438629002 "High dose rate electronic brachytherapy (procedure)" | none   |
 | not needed | 440252007 "Administration of radiopharmaceutical (procedure)" | none [3] |

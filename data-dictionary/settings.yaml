@@ -102,12 +102,12 @@ informationTabContent:
 codeSystems:
   'http://snomed.info/sct': SNOMED CT
   'http://hl7.org/fhir/sid/icd-10-cm': ICD-10 CM
-  'http://hl7.org/fhir/us/mcode/CodeSystem/mcode-other-specify-code-system': 'mCODE: other, specify'
+  'http://hl7.org/fhir/us/mcode/CodeSystem/mcode-catch-code-cs': 'mCODE: other, specify'
   'http://loinc.org': LOINC
   'http://ncithesaurus-stage.nci.nih.gov': NCI
   'http://sequenceontology.org': Sequence Ontology
   'http://terminology.hl7.org/CodeSystem/v2-0487': SpecimenType (HL7)
-  'http://unitsofmeasure.org': The Unified Code for Units of Measure
+  'http://unitsofmeasure.org': Unified Code for Units of Measure
 
 touchUpHumanizedElementNames:
   Aids: AIDS

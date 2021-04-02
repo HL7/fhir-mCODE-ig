@@ -10,8 +10,8 @@ The following table shows potential mappings. **This table may not be exhaustive
 | not needed   | 10611004 "Teleradiotherapy protons (procedure)" | C66897 "Proton Beam Radiation Therapy" |
 | not needed  | 45643008 "Teleradiotherapy using electrons (procedure)" | C15650 "Electron Beam Therapy" |
 | not needed   | 80347004 "Teleradiotherapy neutrons (procedure)" | C15440 "High-LET Neutron Therapy' |
-| CARBON    | none [1] | C160816 "Carbon Ion Radiation Therapy" |
-| PHOTON    | none [2] | C93337 "High-energy Photon Therapy" _or_ C104914 "Photon Beam Radiation Therapy" |
+| not needed  | none [1] | C160816 "Carbon Ion Radiation Therapy" |
+| not needed  | none [2] | C104914 "Photon Beam Radiation Therapy" |
 {: .grid }
 
 **Notes:**

@@ -211,7 +211,7 @@ Description: "Example of a brachytherapy therapy phase."
 * extension[doseDelivered].extension[treatmentVolume].valueReference = Reference(john-anyperson-treatment-volume)
 
 Instance: john-anyperson-treatment-volume
-InstanceOf: RadiotherapyTreatmentVolume
+InstanceOf: RadiotherapyAnatomicVolume
 Description: "Treatment volume for John Anyperson's brachytherapy."
 * patient = Reference(cancer-patient-john-anyperson)
 * description = "Structure of lower lobe of left lung"

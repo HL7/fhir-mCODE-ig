@@ -601,9 +601,9 @@ Description: "Example of radiotherapy treatment summary involving external beam 
 * extension[treatmentIntent].valueCodeableConcept = SCT#373808002 "Curative - procedure intent"
 * performedPeriod.start = "2018-05-01"
 * performedPeriod.end = "2018-06-29"
-* extension[modality][0].valueCodeableConcept = RT#PHOTON "Photon Beam Radiation Therapy"
+* extension[modality][0].valueCodeableConcept = NCIT#C104914 "Photon Beam Radiation Therapy"
 * extension[modality][1].valueCodeableConcept = SCT#45643008  "Teleradiotherapy using electrons (procedure)"
-* extension[technique][0].valueCodeableConcept = RT#VMAT "Volumetric Modulated Arc Therapy"
+* extension[technique][0].valueCodeableConcept =  UMLS#C3489631 "Volumetric Modulated Arc Therapy"
 * extension[technique][1].valueCodeableConcept = RT#3D
 * extension[doseDelivered][0].extension[treatmentVolume].valueReference = Reference(jenny-m-chest-wall-treatment-volume)
 * extension[doseDelivered][0].extension[totalDoseDelivered].valueQuantity = 6000 'cGy'
@@ -623,8 +623,8 @@ Description: "Example of teleradiotherapy treatment phase involving external bea
 * partOf = Reference(radiotherapy-treatment-summary-chest-wall-jenny-m)
 * performedPeriod.start = "2018-05-01"
 * performedPeriod.end = "2018-06-29"
-* extension[modality].valueCodeableConcept = RT#PHOTON "Photon Beam Radiation Therapy"
-* extension[technique].valueCodeableConcept = RT#VMAT "Volumetric Modulated Arc Therapy"
+* extension[modality].valueCodeableConcept = NCIT#C104914 "Photon Beam Radiation Therapy"
+* extension[technique].valueCodeableConcept = UMLS#C3489631 "Volumetric-Modulated Arc Therapy"
 * extension[fractionsDelivered].valueUnsignedInt = 25
 * extension[doseDelivered][0].extension[treatmentVolume].valueReference = Reference(jenny-m-chest-wall-treatment-volume)
 * extension[doseDelivered][0].extension[totalDoseDelivered].valueQuantity = 5000 'cGy'
@@ -651,7 +651,7 @@ Description: "Example of teleradiotherapy treatment boost phase"
 * asserter = Reference(us-core-practitioner-kyle-anydoc)
 
 Instance: jenny-m-chest-wall-treatment-volume
-InstanceOf: RadiotherapyTreatmentVolume
+InstanceOf: RadiotherapyAnatomicVolume
 Description: "Treatment volume 1 for Jenny M's teleradiotherapy."
 * patient = Reference(cancer-patient-jenny-m)
 * description = "Chest Wall"
@@ -660,7 +660,7 @@ Description: "Treatment volume 1 for Jenny M's teleradiotherapy."
 * locationQualifier = SCT#255503000 "Entire (qualifier value)"
 
 Instance: jenny-m-chest-wall-lymph-nodes-treatment-volume
-InstanceOf: RadiotherapyTreatmentVolume
+InstanceOf: RadiotherapyAnatomicVolume
 Description: "Treatment volume 2 for Jenny M's teleradiotherapy."
 * patient = Reference(cancer-patient-jenny-m)
 * description = "Chest Wall Lymph Nodes"

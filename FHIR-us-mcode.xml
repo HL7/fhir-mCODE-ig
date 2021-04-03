@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<specification xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ballotUrl="http://hl7.org/fhir/us/mcode/2019Sep/" ciUrl="http://build.fhir.org/ig/HL7/fhir-mCODE-ig/" defaultVersion="1.0.1" defaultWorkgroup="cic" gitUrl="https://github.com/HL7/fhir-mCODE-ig" url="http://hl7.org/fhir/us/mcode">
-<version code="current" url="http://build.fhir.org/ig/HL7/fhir-mCODE-ig/"/>
+<specification xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ballotUrl="http://hl7.org/fhir/us/mcode/2019Sep" ciUrl="http://build.fhir.org/ig/HL7/fhir-mCODE-ig" defaultVersion="1.0.1" defaultWorkgroup="cic" gitUrl="https://github.com/HL7/fhir-mCODE-ig" url="http://hl7.org/fhir/us/mcode">
+<version code="current" url="http://build.fhir.org/ig/HL7/fhir-mCODE-ig"/>
 <version code="1.0.1" url="http://hl7.org/fhir/us/mcode/STU1"/>
-<version code="0.9.1" deprecated="true" url="http://hl7.org/fhir/us/mcode/2019Sep/"/>
+<version code="1.0.0" url="http://hl7.org/fhir/us/mcode/STU1"/>
+<version code="0.9.1" deprecated="true" url="http://hl7.org/fhir/us/mcode/2019Sep"/>
 <version code="0.1" deprecated="true"/>
 <artifactPageExtension value="-definitions"/>
 <artifactPageExtension value="-examples"/>
@@ -204,7 +205,7 @@
 <artifact id="CodeSystem/mcode-catch-code-cs" key="CodeSystem-mcode-catch-code-cs" name="mCODE Catch Codes"/>
 <artifact id="StructureDefinition/mcode-patient-bundle" key="StructureDefinition-mcode-patient-bundle" name="mCODE Patient Bundle"/>
 <artifact id="StructureDefinition/mcode-patient-group" key="StructureDefinition-mcode-patient-group" name="mCODE Patient Group"/>
-<artifact id="Group/group-mcode-patients" key="Group-group-mcode-patients" name="mCODE Patient Group"/>
+<artifact id="Group/group-mcode-patients" key="Group-group-mcode-patients" name="mCODE Patient Group Example"/>
 <artifact id="CodeSystem/mcode-resource-identifier-cs" key="CodeSystem-mcode-resource-identifier-cs" name="mCODE Resource Identifier Code System"/>
 <artifact deprecated="true" id="Example/mcode-cancer-disease-status-example-01" key="mcode-cancer-disease-status-example-01" name="mCODECancerDiseaseStatusExample01"/>
 <artifact deprecated="true" id="Example/mcode-cancer-genetic-variant-example-01" key="mcode-cancer-genetic-variant-example-01" name="mCODECancerGeneticVariantExample01"/>

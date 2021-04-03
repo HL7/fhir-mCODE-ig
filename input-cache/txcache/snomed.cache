@@ -71143,6 +71143,10 @@ e: {
 e: {
   "valueSet" : {
   "resourceType" : "ValueSet",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set contains 5 concepts</p><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion based on SNOMED CT United States edition 01-Sep 2020</p><p>All codes from system <a href=\"http://hl7.org/fhir/R4/codesystem-snomedct.html\"><code>http://snomed.info/sct</code></a></p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-363679005\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=363679005\">363679005</a></td><td>Imaging (procedure)</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-108257001\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=108257001\">108257001</a></td><td>Anatomic pathology procedure (procedure)</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-711015009\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=711015009\">711015009</a></td><td>Assessment of symptom control (procedure)</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-5880005\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=5880005\">5880005</a></td><td>Physical examination procedure (procedure)</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-386344002\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=386344002\">386344002</a></td><td>Laboratory data interpretation (procedure)</td><td/></tr></table></div>"
+  },
   "status" : "active",
   "expansion" : {
     "identifier" : "urn:uuid:ad5a64ec-16e8-48cb-a687-89eb2621aefd",
@@ -80447,6 +80451,10 @@ e: {
 e: {
   "valueSet" : {
   "resourceType" : "ValueSet",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set contains 5 concepts</p><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion based on SNOMED CT United States edition 01-Sep 2020</p><p>All codes from system <a href=\"http://hl7.org/fhir/R4/codesystem-snomedct.html\"><code>http://snomed.info/sct</code></a></p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-281900007\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=281900007\">281900007</a></td><td>No abnormality detected (finding)</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-268910001\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=268910001\">268910001</a></td><td>Patient's condition improved (finding)</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-359746009\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=359746009\">359746009</a></td><td>Patient's condition stable (finding)</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-271299001\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=271299001\">271299001</a></td><td>Patient's condition worsened (finding)</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-709137006\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=709137006\">709137006</a></td><td>Patient condition undetermined (finding)</td><td/></tr></table></div>"
+  },
   "status" : "active",
   "expansion" : {
     "identifier" : "urn:uuid:2f6b0f9c-93f4-408e-b582-d3bad11084e1",
@@ -80512,6 +80520,10 @@ e: {
 e: {
   "valueSet" : {
   "resourceType" : "ValueSet",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set contains 3 concepts</p><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion based on SNOMED CT United States edition 01-Sep 2020</p><p>All codes from system <a href=\"http://hl7.org/fhir/R4/codesystem-snomedct.html\"><code>http://snomed.info/sct</code></a></p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-52101004\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=52101004\">52101004</a></td><td>Present (qualifier value)</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-2667000\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=2667000\">2667000</a></td><td>Absent (qualifier value)</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-261665006\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=261665006\">261665006</a></td><td>Unknown (qualifier value)</td><td/></tr></table></div>"
+  },
   "status" : "active",
   "expansion" : {
     "identifier" : "urn:uuid:4e70dc00-c0e3-4a3a-a462-a03e91f2625f",
@@ -80939,6 +80951,299 @@ e: {
       "system" : "http://snomed.info/sct",
       "code" : "77477000",
       "display" : "Computerized axial tomography (procedure)"
+    }]
+  }
+},
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://snomed.info/sct",
+  "code" : "45643008"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://snomed.info/sct",
+      "concept" : [{
+        "code" : "10611004",
+        "display" : "Teleradiotherapy protons (procedure)"
+      },
+      {
+        "code" : "45643008",
+        "display" : "Teleradiotherapy using electrons (procedure)"
+      },
+      {
+        "code" : "80347004",
+        "display" : "Teleradiotherapy neutrons (procedure)"
+      },
+      {
+        "code" : "394902000",
+        "display" : "High dose brachytherapy (procedure)"
+      },
+      {
+        "code" : "438629002",
+        "display" : "High dose rate electronic brachytherapy (procedure)"
+      },
+      {
+        "code" : "440252007",
+        "display" : "Administration of radiopharmaceutical (procedure)"
+      }]
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "Teleradiotherapy using electrons",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://snomed.info/sct",
+  "code" : "45643008",
+  "display" : "Teleradiotherapy using electrons (procedure)"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://snomed.info/sct",
+      "concept" : [{
+        "code" : "10611004",
+        "display" : "Teleradiotherapy protons (procedure)"
+      },
+      {
+        "code" : "45643008",
+        "display" : "Teleradiotherapy using electrons (procedure)"
+      },
+      {
+        "code" : "80347004",
+        "display" : "Teleradiotherapy neutrons (procedure)"
+      },
+      {
+        "code" : "394902000",
+        "display" : "High dose brachytherapy (procedure)"
+      },
+      {
+        "code" : "438629002",
+        "display" : "High dose rate electronic brachytherapy (procedure)"
+      },
+      {
+        "code" : "440252007",
+        "display" : "Administration of radiopharmaceutical (procedure)"
+      }]
+    },
+    {
+      "system" : "http://terminology.hl7.org/CodeSystem/umls",
+      "concept" : [{
+        "code" : "C3494442",
+        "display" : "Carbon Ion Radiation Therapy"
+      },
+      {
+        "code" : "C3539769",
+        "display" : "Photon Beam Radiation Therapy"
+      },
+      {
+        "code" : "C3897809",
+        "display" : "Pulsed-Dose Rate Brachytherapy"
+      }]
+    },
+    {
+      "system" : "http://terminology.hl7.org/CodeSystem/radiotherapy",
+      "concept" : [{
+        "code" : "LDR-TEMP"
+      },
+      {
+        "code" : "LDR-PERM"
+      }]
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK"}####
+v: {
+  "display" : "Teleradiotherapy using electrons",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://snomed.info/sct",
+      "concept" : [{
+        "code" : "10611004",
+        "display" : "Teleradiotherapy protons (procedure)"
+      },
+      {
+        "code" : "45643008",
+        "display" : "Teleradiotherapy using electrons (procedure)"
+      },
+      {
+        "code" : "80347004",
+        "display" : "Teleradiotherapy neutrons (procedure)"
+      },
+      {
+        "code" : "394902000",
+        "display" : "High dose brachytherapy (procedure)"
+      },
+      {
+        "code" : "438629002",
+        "display" : "High dose rate electronic brachytherapy (procedure)"
+      },
+      {
+        "code" : "440252007",
+        "display" : "Administration of radiopharmaceutical (procedure)"
+      }]
+    }]
+  }
+}}####
+e: {
+  "valueSet" : {
+  "resourceType" : "ValueSet",
+  "status" : "active",
+  "expansion" : {
+    "identifier" : "urn:uuid:03f73d4e-cc4e-4347-b91b-0a1def511544",
+    "timestamp" : "2021-04-03T00:47:57.074Z",
+    "parameter" : [{
+      "name" : "limitedExpansion",
+      "valueBoolean" : true
+    },
+    {
+      "name" : "version",
+      "valueString" : "http://snomed.info/sct|http://snomed.info/sct/731000124108/version/20210301"
+    }],
+    "contains" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "10611004",
+      "display" : "Teleradiotherapy protons (procedure)"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "45643008",
+      "display" : "Teleradiotherapy using electrons (procedure)"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "80347004",
+      "display" : "Teleradiotherapy neutrons (procedure)"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "394902000",
+      "display" : "High dose brachytherapy (procedure)"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "438629002",
+      "display" : "High dose rate electronic brachytherapy (procedure)"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "440252007",
+      "display" : "Administration of radiopharmaceutical (procedure)"
+    }]
+  }
+},
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://snomed.info/sct",
+      "concept" : [{
+        "code" : "441799006",
+        "display" : "Intensity modulated radiation therapy (procedure)"
+      },
+      {
+        "code" : "168524008",
+        "display" : "Radiotherapy - intraoperative control (procedure)"
+      },
+      {
+        "code" : "169317000",
+        "display" : "Neutron capture therapy (procedure)"
+      },
+      {
+        "code" : "384692006",
+        "display" : "Intracavitary brachytherapy (procedure)"
+      },
+      {
+        "code" : "113120007",
+        "display" : "Interstitial brachytherapy (procedure)"
+      },
+      {
+        "code" : "384691004",
+        "display" : "Intraluminal brachytherapy (procedure)"
+      },
+      {
+        "code" : "168524008",
+        "display" : "Radiotherapy - intraoperative control (procedure)"
+      },
+      {
+        "code" : "14473006",
+        "display" : "Surface brachytherapy (procedure)"
+      },
+      {
+        "code" : "16560241000119104",
+        "display" : "Oral radionuclide therapy (procedure)"
+      }]
+    }]
+  }
+}}####
+e: {
+  "valueSet" : {
+  "resourceType" : "ValueSet",
+  "status" : "active",
+  "expansion" : {
+    "identifier" : "urn:uuid:ffcd9b72-dadf-4763-b1e4-62a792716a44",
+    "timestamp" : "2021-04-03T00:47:57.839Z",
+    "parameter" : [{
+      "name" : "limitedExpansion",
+      "valueBoolean" : true
+    },
+    {
+      "name" : "version",
+      "valueString" : "http://snomed.info/sct|http://snomed.info/sct/731000124108/version/20210301"
+    }],
+    "contains" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "441799006",
+      "display" : "Intensity modulated radiation therapy (procedure)"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "168524008",
+      "display" : "Radiotherapy - intraoperative control (procedure)"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "169317000",
+      "display" : "Neutron capture therapy (procedure)"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "384692006",
+      "display" : "Intracavitary brachytherapy (procedure)"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "113120007",
+      "display" : "Interstitial brachytherapy (procedure)"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "384691004",
+      "display" : "Intraluminal brachytherapy (procedure)"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "14473006",
+      "display" : "Surface brachytherapy (procedure)"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "16560241000119104",
+      "display" : "Oral radionuclide therapy (procedure)"
     }]
   }
 },

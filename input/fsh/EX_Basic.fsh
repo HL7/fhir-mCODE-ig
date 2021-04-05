@@ -208,11 +208,11 @@ Description: "Example of a brachytherapy therapy phase."
 * performedPeriod.start = "2019-03-01"
 * performedPeriod.end = "2019-03-01"
 * reasonReference = Reference(primary-cancer-condition-nsclc)
-* extension[doseDelivered].extension[treatmentVolume].valueReference = Reference(john-anyperson-treatment-volume)
+* extension[doseDeliveredToAnatomicVolume].extension[anatomicVolume].valueReference = Reference(john-anyperson-treatment-volume)
 
 Instance: john-anyperson-treatment-volume
 InstanceOf: RadiotherapyAnatomicVolume
-Description: "Treatment volume for John Anyperson's brachytherapy."
+Description: "Anatomic volume for John Anyperson's brachytherapy."
 * patient = Reference(cancer-patient-john-anyperson)
 * description = "Structure of lower lobe of left lung"
 * location = SCT#31094006  "Structure of lobe of lung (body structure)"

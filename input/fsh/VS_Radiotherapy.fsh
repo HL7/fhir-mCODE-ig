@@ -129,7 +129,8 @@ Description: "Various modifiers that can be applied to anatomical locations wher
 * SCT#51440002    "Right and left (qualifier value)"
 * SCT#14414005  "Peripheral (qualifier value)"
 * SCT#26216008  "Central (qualifier value)"
-* RT#NONADJACENT "Non-Adjacent (qualifier value)"
+* SCT#18769003   "Adjacent" // "Juxta-posed (qualifier value)"
+* UMLS#C0687118  "Detached"
 
 ValueSet: RadiotherapyTreatmentLocationVS
 Id: mcode-radiotherapy-treatment-location-vs
@@ -345,12 +346,12 @@ Description: "Codes describing the anatomical locations where radiotherapy treat
 * SCT#85050009    "Bone structure of the humerus (body structure)"
 * SCT#32764006    "Portal vein structure (body structure)"
 * SCT#91381003    "Pleural cavity structure (body structure)"
-// NEW 4-1-2021
+// ADDED 4-1-2021
 * SCT#143925009   "Structure of buccinator lymph node (body structure)"
 * SCT#16227691000119107 "Post-surgical excision site (morphologic abnormality)"
-* UMLS#C3640144 "Tumor Bed"  // NCIT#C101558 "Tumor Bed"
-* RT#C0223388 "Structure of body of thirteenth thoracic vertebra (body structure)"
-* RT#C0222987 "Bone structure of thirteenth rib (body structure)"
+* UMLS#C3640144 "Tumor Bed"
+* UMLS#C0223388 "Structure of body of thirteenth thoracic vertebra (body structure)"
+* UMLS#C0222987 "Bone structure of thirteenth rib (body structure)"
 * RT#LN_AX_L1  "Level 1 Axillary Lymph Nodes"
 * RT#LN_Ax_L2  "Level 2 Axillary Lymph Nodes"
 * RT#LN_Ax_L3  "Level 3 Axillary Lymph Nodes"

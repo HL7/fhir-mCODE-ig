@@ -605,12 +605,12 @@ Description: "Example of radiotherapy treatment summary involving external beam 
 * extension[modality][1].valueCodeableConcept = SCT#45643008  "Teleradiotherapy using electrons (procedure)"
 * extension[technique][0].valueCodeableConcept =  UMLS#C3489631 "Volumetric Modulated Arc Therapy"
 * extension[technique][1].valueCodeableConcept = RT#3D
-* extension[doseDelivered][0].extension[treatmentVolume].valueReference = Reference(jenny-m-chest-wall-treatment-volume)
-* extension[doseDelivered][0].extension[totalDoseDelivered].valueQuantity = 6000 'cGy'
-* extension[doseDelivered][0].extension[fractionsDelivered].valueUnsignedInt = 30
-* extension[doseDelivered][1].extension[treatmentVolume].valueReference = Reference(jenny-m-chest-wall-lymph-nodes-treatment-volume)
-* extension[doseDelivered][1].extension[totalDoseDelivered].valueQuantity = 5000 'cGy'
-* extension[doseDelivered][1].extension[fractionsDelivered].valueUnsignedInt = 25
+* extension[doseDeliveredToAnatomicVolume][0].extension[anatomicVolume].valueReference = Reference(jenny-m-chest-wall-treatment-volume)
+* extension[doseDeliveredToAnatomicVolume][0].extension[totalDoseDelivered].valueQuantity = 6000 'cGy'
+* extension[doseDeliveredToAnatomicVolume][0].extension[fractionsDelivered].valueUnsignedInt = 30
+* extension[doseDeliveredToAnatomicVolume][1].extension[anatomicVolume].valueReference = Reference(jenny-m-chest-wall-lymph-nodes-treatment-volume)
+* extension[doseDeliveredToAnatomicVolume][1].extension[totalDoseDelivered].valueQuantity = 5000 'cGy'
+* extension[doseDeliveredToAnatomicVolume][1].extension[fractionsDelivered].valueUnsignedInt = 25
 * subject = Reference(cancer-patient-jenny-m)
 * asserter = Reference(us-core-practitioner-kyle-anydoc)
 
@@ -626,10 +626,10 @@ Description: "Example of teleradiotherapy treatment phase involving external bea
 * extension[modality].valueCodeableConcept = UMLS#C3539769 "Photon Beam Radiation Therapy"
 * extension[technique].valueCodeableConcept = UMLS#C3489631 "Volumetric-Modulated Arc Therapy"
 * extension[fractionsDelivered].valueUnsignedInt = 25
-* extension[doseDelivered][0].extension[treatmentVolume].valueReference = Reference(jenny-m-chest-wall-treatment-volume)
-* extension[doseDelivered][0].extension[totalDoseDelivered].valueQuantity = 5000 'cGy'
-* extension[doseDelivered][1].extension[treatmentVolume].valueReference = Reference(jenny-m-chest-wall-lymph-nodes-treatment-volume)
-* extension[doseDelivered][1].extension[totalDoseDelivered].valueQuantity = 5000 'cGy'
+* extension[doseDeliveredToAnatomicVolume][0].extension[anatomicVolume].valueReference = Reference(jenny-m-chest-wall-treatment-volume)
+* extension[doseDeliveredToAnatomicVolume][0].extension[totalDoseDelivered].valueQuantity = 5000 'cGy'
+* extension[doseDeliveredToAnatomicVolume][1].extension[anatomicVolume].valueReference = Reference(jenny-m-chest-wall-lymph-nodes-treatment-volume)
+* extension[doseDeliveredToAnatomicVolume][1].extension[totalDoseDelivered].valueQuantity = 5000 'cGy'
 * subject = Reference(cancer-patient-jenny-m)
 * asserter = Reference(us-core-practitioner-kyle-anydoc)
 
@@ -645,14 +645,14 @@ Description: "Example of teleradiotherapy treatment boost phase"
 * extension[modality].valueCodeableConcept = SCT#45643008  "Teleradiotherapy using electrons (procedure)"
 * extension[technique].valueCodeableConcept = RT#3D "Three dimensional"
 * extension[fractionsDelivered].valueUnsignedInt = 5
-* extension[doseDelivered].extension[treatmentVolume].valueReference = Reference(jenny-m-chest-wall-treatment-volume)
-* extension[doseDelivered].extension[totalDoseDelivered].valueQuantity = 1000 'cGy'
+* extension[doseDeliveredToAnatomicVolume].extension[anatomicVolume].valueReference = Reference(jenny-m-chest-wall-treatment-volume)
+* extension[doseDeliveredToAnatomicVolume].extension[totalDoseDelivered].valueQuantity = 1000 'cGy'
 * subject = Reference(cancer-patient-jenny-m)
 * asserter = Reference(us-core-practitioner-kyle-anydoc)
 
 Instance: jenny-m-chest-wall-treatment-volume
 InstanceOf: RadiotherapyAnatomicVolume
-Description: "Treatment volume 1 for Jenny M's teleradiotherapy."
+Description: "Anatomic volume 1 for Jenny M's teleradiotherapy."
 * patient = Reference(cancer-patient-jenny-m)
 * description = "Chest Wall"
 * identifier.value = "1.2.246.352…1"
@@ -661,7 +661,7 @@ Description: "Treatment volume 1 for Jenny M's teleradiotherapy."
 
 Instance: jenny-m-chest-wall-lymph-nodes-treatment-volume
 InstanceOf: RadiotherapyAnatomicVolume
-Description: "Treatment volume 2 for Jenny M's teleradiotherapy."
+Description: "Anatomic volume 2 for Jenny M's teleradiotherapy."
 * patient = Reference(cancer-patient-jenny-m)
 * description = "Chest Wall Lymph Nodes"
 * identifier.value = "1.2.246.352…2"

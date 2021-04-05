@@ -11,7 +11,6 @@ Description:  "Types of secondary malignant neoplastic disease, coded in SNOMED 
 Note that ICD-O-3 specifies morphology and topography, not disorder; in this case that the disorder code must be SNOMED CT 128462008 (Secondary malignant neoplastic disease). The ICD-O-3 morphology and topography codes should be entered in the HistologyMorphologyBehavior and bodySite fields, respectively."
 * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
 * CC#SCC-OTHER "Other Secondary Cancer Condition, Specify"
-* SCT#128462008  "Secondary malignant neoplastic disease (disorder)"
 * include codes from system SCT where concept is-a #128462008  "Secondary malignant neoplastic disease (disorder)"
 * ICD10CM#C7B.00       "Secondary carcinoid tumors, unspecified site"
 * ICD10CM#C7B.01       "Secondary carcinoid tumors of distant lymph nodes"

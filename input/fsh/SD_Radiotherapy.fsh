@@ -148,6 +148,8 @@ Description: "An anatomic volume used in radiotherapy planning or treatment deli
 * description ^definition = "A text description of the anatomic volume, containing any additional information above and beyond the location and locationQualifier that describe the anatomic volume."
 * morphology from RadiotherapyVolumeTypeVS (extensible)
 * location from RadiotherapyTreatmentLocationVS (required)
+* location ^short = "Anatomical location code."
+* location ^definition = "A code specifying the body structure comprising the anatomic volume. The codes do not include laterality, which if applicable MUST be specified in the locationQualifier."
 * locationQualifier from RadiotherapyTreatmentLocationQualifierVS (extensible)
 * identifier and location and locationQualifier and description and patient and morphology MS
 
@@ -171,37 +173,6 @@ If either Modality value set needs to be extended, here are the invariants;
     Description: "If the code representing 'Other brachytherapy, specify' is used, a second code from outside the original value set must be present. The second code MUST NOT represent a concept in or subsumed by any concept in the original value set."
     Expression: "coding.where(code = 'OtherBrachytherapyModality').exists() implies coding.where(code != 'OtherBrachytherapyModality' and $this.memberOf('http://hl7.org/fhir/us/mcode/ValueSet/brachytherapy-modality-vs').not()).exists()"
     Severity:   #error
-
-These extensions have been grouped under RadiotherapyDoseDeliveredToAnatomicVolume:
-
-Extension: RadiotherapyDosePerFraction
-Id: mcode-radiotherapy-dose-per-fraction
-Title: "Radiation Dose Per Fraction"
-Description: "The amount of radiation administered during a single session (fraction) of radiation therapy."
-* value[x] only Quantity
-* valueQuantity = UCUM#cGy
-
-Extension: RadiotherapyPrescribedFractions
-Id: mcode-radiotherapy-prescribed-fractions
-Title: "Radiation Fractions Prescribed"
-Description: "The total number of treatment sessions (fractions) planned in a given phase or during a course of therapy."
-* value[x] only positiveInt
-
-
-
-Extension: RadiotherapyTotalDosePlanned
-Id: mcode-radiotherapy-total-dose-planned
-Title: "Total Radiation Dose Planned"
-Description: "The total amount of radiation dose planned for the course of therapy. (source: SNOMED, ASTRO)"
-* value[x] only SimpleQuantity
-* valueQuantity = UCUM#cGy
-
-Extension: RadiotherapyTotalDoseDelivered
-Id: mcode-radiotherapy-total-dose-delivered
-Title: "Total Radiation Dose Delivered"
-Description: "The total amount of radiation dose delivered for the course of therapy. (source: SNOMED, ASTRO)"
-* value[x] only SimpleQuantity
-* valueQuantity = UCUM#cGy
 
 Profile: BrachytherapyImplantableDevice
 Parent:  USCoreImplantableDeviceProfile

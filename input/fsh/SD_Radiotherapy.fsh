@@ -141,20 +141,22 @@ Parent: BodyStructure
 Id: mcode-radiotherapy-anatomic-volume
 Title: "Radiotherapy Anatomic Volume"
 Description: "An anatomic volume used in radiotherapy planning or treatment delivery."
-* obeys mcode-volume-description-or-id-required
+* obeys mcode-description-or-id-required
 * identifier ^short = "Identifier for the anatomic volume."
 * identifier ^definition = "Unique identifier to reliably identify the same target volume in different requests and procedures, for example, the Conceptual Volume UID used in DICOM."
 * description ^short = "Description of anatomic volume"
 * description ^definition = "A text description of the anatomic volume, containing any additional information above and beyond the location and locationQualifier that describe the anatomic volume."
 * morphology from RadiotherapyVolumeTypeVS (extensible)
+* morphology ^short = "Type of Anatomic Volume"
+* morphology ^definition = "The type of anatomic volume (GTV, PTV, CTV or OR) this resource represents. Although the name of the element is 'morphology', this element is defined in the base resource as 'The kind of structure being represented by the body structure'. The name is somewhat of a misnomer, and might be better interpreted simply as 'type' or 'kind'."
 * location from RadiotherapyTreatmentLocationVS (required)
 * location ^short = "Anatomical location code."
-* location ^definition = "A code specifying the body structure comprising the anatomic volume. The codes do not include laterality, which if applicable MUST be specified in the locationQualifier."
+* location ^definition = "A code specifying the body structure or region comprising the anatomic volume. The codes do not include laterality, which if applicable MUST be specified in the locationQualifier."
 * locationQualifier from RadiotherapyTreatmentLocationQualifierVS (extensible)
 * identifier and location and locationQualifier and description and patient and morphology MS
 
 
-Invariant:  mcode-volume-description-or-id-required
+Invariant:  mcode-description-or-id-required
 Description: "One of description or identifier MUST be present"
 Expression: "description.exists() or identifier.exists()"
 Severity:   #error

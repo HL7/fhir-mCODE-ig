@@ -18,7 +18,7 @@ Instance: tumor-size-pathology
 InstanceOf: TumorSize
 Description: "Example of a resource conforming to the tumor size profile."
 * status = #final
-* method = SCT#168455000 "Gross pathology (finding)"
+* method = SCT#787377000 "Gross examination and sampling of tissue specimen (procedure)"
 * category = ObsCat#laboratory
 * subject = Reference(Patient/cancer-patient-eve-anyperson)
 * focus = Reference(BodyStructure/tumor-lobular-carcinoma-left-breast)

@@ -24,7 +24,7 @@ Description: "Example of Primary Cancer Condition - hematologic cancer"
 * subject = Reference(cancer-patient-adam-everyman)
 * onsetDateTime = "2020-05-12"
 * asserter = Reference(us-core-practitioner-kyle-anydoc)
-* stage.summary = NCIT#C80134 "Binet Stage A"
+* stage.summary = UMLS#C2698392 "Binet Stage A"     // NCIT#C80134 "Binet Stage A"
 * stage.assessment = Reference(binet-stage-group-A)
 
 Instance: secondary-cancer-condition-brain-mets
@@ -208,18 +208,27 @@ Description: "Example of a brachytherapy therapy phase."
 * performedPeriod.start = "2019-03-01"
 * performedPeriod.end = "2019-03-01"
 * reasonReference = Reference(primary-cancer-condition-nsclc)
-* extension[doseDelivered].extension[volumeDescription].valueString = "Structure of lower lobe of left lung"
+* extension[doseDeliveredToAnatomicVolume].extension[anatomicVolume].valueReference = Reference(john-anyperson-treatment-volume)
+
+Instance: john-anyperson-treatment-volume
+InstanceOf: RadiotherapyAnatomicVolume
+Description: "Anatomic volume for John Anyperson's brachytherapy."
+* patient = Reference(cancer-patient-john-anyperson)
+* description = "Structure of lower lobe of left lung"
+* location = SCT#31094006  "Structure of lobe of lung (body structure)"
+* locationQualifier[0] = SCT#7771000 "Left (qualifier value)"
+* locationQualifier[1] = SCT#261122009 "Lower (qualifier value)"
 
 Instance: binet-stage-group-A
 InstanceOf: CancerStageGroup
 Description: "Example of a non-TNM Stage Group (Binet staging for CLL)"
 * code = LNC#21914-7 "Stage group.other Cancer"
 * status = #final "final"
-* method = NCIT#C141212 "Binet Staging"
+* method = UMLS#C4683625  "Binet Staging"  // NCIT#C141212 "Binet Staging"
 * subject = Reference(cancer-patient-adam-everyman)
 * effectiveDateTime = "2020-05-18"
 * derivedFrom = Reference(lab-result-observation-hemoglobin)
-* valueCodeableConcept = NCIT#C80134 "Binet Stage A"
+* valueCodeableConcept = UMLS#C2698392  "Binet Stage A" // NCIT#C80134 "Binet Stage A" 
 
 Instance: tnm-clinical-stage-group-3c
 InstanceOf: CancerStageGroup

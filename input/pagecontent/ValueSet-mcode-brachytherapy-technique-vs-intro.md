@@ -7,20 +7,20 @@ The following rules apply to this value set:
 
 ### Mapping Between Vocabularies
 
-The concepts in this value set are drawn from SNOMED CT or the [radiotherapy code system][RadiotherapyCS] defined in this Implementation Guide. Additional SNOMED CT codes have been submitted for approval. NCI Thesaurus terms are shown for informational purposes.
+The concepts in this value set are drawn from SNOMED CT (SCT) or the [radiotherapy code system][RadiotherapyCS] defined in this Implementation Guide. Additional SNOMED CT codes have been submitted for approval. NCI Thesaurus terms are shown for informational purposes.
 
 The following table shows potential mappings. **This table may not be exhaustive and additional valid mappings may exist.**
 
 | **Radiotherapy Code System** | **SNOMED CT**   | **NCI Thesaurus**   |
 | ------------|-----------------|---------------------|
-| none | 384692006 Intracavitary brachytherapy (procedure) | C28049 Intracavitary Radiation Therapy |
+| not needed | 384692006 "Intracavitary brachytherapy (procedure)" | C28049 "Intracavitary Radiation Therapy" |
 | CAV-IMB | none | none |
-| none | 113120007 Interstitial brachytherapy (procedure) | C66891 Interstitial Radiation Therapy |
+| not needed | 113120007 "Interstitial brachytherapy (procedure)" | C66891 "Interstitial Radiation Therapy" |
 | VASC | none | none |
-| none | 384691004 Intraluminal brachytherapy (procedure) | none |
-| none | 14473006 Surface brachytherapy (procedure) | none |
-| none | 16560241000119104 Oral radionuclide therapy (procedure) | none |
-| none | 168524008 Radiotherapy - intraoperative control (procedure)  | none |
+| not needed | 384691004 "Intraluminal brachytherapy (procedure)" | none |
+| not needed | 14473006 "Surface brachytherapy (procedure)" | none |
+| not needed | 16560241000119104 "Oral radionuclide therapy (procedure)" | none |
+| not needed  | 168524008 "Radiotherapy - intraoperative control (procedure)"  | none |
 {: .grid }
 
 {% include markdown-link-references.md %}

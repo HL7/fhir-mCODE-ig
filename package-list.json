@@ -7,13 +7,13 @@
     {
       "version": "current",
       "desc": "Continuous Integration Build (latest in version control)",
-      "path": "http://build.fhir.org/ig/HL7/fhir-mCODE-ig/",
+      "path": "http://build.fhir.org/ig/HL7/fhir-mCODE-ig",
       "status": "ci-build",
       "current": true
     },
     {
       "version": "1.0.1",
-      "date": "2020-03-06",
+      "date": "2020-03-18",
       "desc": "STU 1 Release",
       "path": "http://hl7.org/fhir/us/mcode/STU1",
       "status": "trial-use",
@@ -22,13 +22,24 @@
       "current": true
     },
     {
+      "version": "1.0.0",
+      "date": "2020-03-06",
+      "desc": "STU 1 Release",
+      "path": "http://hl7.org/fhir/us/mcode/STU1",
+      "status": "trial-use",
+      "sequence": "STU 1",
+      "fhirversion": "4.0.1",
+      "current": false
+    },
+    {
       "version": "0.9.1",
       "date": "2019-06-10",
       "desc": "Initial STU ballot (Sep 2019 Ballot)",
-      "path": "http://hl7.org/fhir/us/mcode/2019Sep/",
+      "path": "http://hl7.org/fhir/us/mcode/2019Sep",
       "status": "ballot",
       "sequence": "STU 1",
-      "fhirversion": "4.0.0"
+      "fhirversion": "4.0.0",
+      "current": false
     }
   ]
 }

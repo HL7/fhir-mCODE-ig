@@ -218,7 +218,7 @@ Description: "Extended example: example showing TNM staging (stage group)"
 * subject = Reference(cancer-patient-jenny-m)
 * effectiveDateTime = "2018-03-16"
 * valueCodeableConcept = AJCC#2B "IIB"
-* method = NCIT#C146985 "AJCC Cancer Staging Manual 8th Edition"
+* method = SCT#897275008 "American Joint Commission on Cancer, Cancer Staging Manual, 8th edition neoplasm staging system (tumor staging)"
 * hasMember[0] = Reference(tnm-pathologic-primary-tumor-category-jenny-m)
 * hasMember[1] = Reference(tnm-pathologic-regional-nodes-category-jenny-m)
 * hasMember[2] = Reference(tnm-pathologic-distant-metastases-category-jenny-m)
@@ -231,7 +231,7 @@ Description: "Extended example: example showing TNM staging (T)"
 * subject = Reference(cancer-patient-jenny-m)
 * effectiveDateTime = "2018-03-16"
 * valueCodeableConcept = AJCC#cT3
-* method = NCIT#C146985 "AJCC Cancer Staging Manual 8th Edition"
+* method = SCT#897275008 "American Joint Commission on Cancer, Cancer Staging Manual, 8th edition neoplasm staging system (tumor staging)"
 
 Instance: tnm-clinical-regional-nodes-category-jenny-m
 InstanceOf: TNMRegionalNodesCategory
@@ -241,7 +241,7 @@ Description: "Extended example: example showing TNM staging (N)"
 * subject = Reference(cancer-patient-jenny-m)
 * effectiveDateTime = "2018-03-16"
 * valueCodeableConcept = AJCC#cN0
-* method = NCIT#C146985 "AJCC Cancer Staging Manual 8th Edition"
+* method = SCT#897275008 "American Joint Commission on Cancer, Cancer Staging Manual, 8th edition neoplasm staging system (tumor staging)"
 
 Instance: tnm-clinical-distant-metastases-category-jenny-m
 InstanceOf: TNMDistantMetastasesCategory
@@ -251,7 +251,7 @@ Description: "Extended example: example showing TNM staging (M)"
 * subject = Reference(cancer-patient-jenny-m)
 * effectiveDateTime = "2018-03-16"
 * valueCodeableConcept = AJCC#cM0
-* method = NCIT#C146985 "AJCC Cancer Staging Manual 8th Edition"
+* method = SCT#897275008 "American Joint Commission on Cancer, Cancer Staging Manual, 8th edition neoplasm staging system (tumor staging)"
 
 // Tumor marker test results 3-16-2018
 
@@ -444,7 +444,7 @@ Description: "Extended example: example showing TNM staging (stage group)"
 * subject = Reference(cancer-patient-jenny-m)
 * effectiveDateTime = "2018-04-05"
 * valueCodeableConcept = AJCC#2B "IIB"
-* method = NCIT#C146985 "AJCC Cancer Staging Manual 8th Edition"
+* method = SCT#897275008 "American Joint Commission on Cancer, Cancer Staging Manual, 8th edition neoplasm staging system (tumor staging)"
 * hasMember[0] = Reference(tnm-pathologic-primary-tumor-category-jenny-m)
 * hasMember[1] = Reference(tnm-pathologic-regional-nodes-category-jenny-m)
 * hasMember[2] = Reference(tnm-pathologic-distant-metastases-category-jenny-m)
@@ -457,7 +457,7 @@ Description: "Extended example: example showing TNM staging (T)"
 * subject = Reference(cancer-patient-jenny-m)
 * effectiveDateTime = "2018-04-01"
 * valueCodeableConcept = AJCC#pT3
-* method = NCIT#C146985 "AJCC Cancer Staging Manual 8th Edition"
+* method = SCT#897275008 "American Joint Commission on Cancer, Cancer Staging Manual, 8th edition neoplasm staging system (tumor staging)"
 
 Instance: tnm-pathologic-regional-nodes-category-jenny-m
 InstanceOf: TNMRegionalNodesCategory
@@ -467,7 +467,7 @@ Description: "Extended example: example showing TNM staging (N)"
 * subject = Reference(cancer-patient-jenny-m)
 * effectiveDateTime = "2018-04-01"
 * valueCodeableConcept = AJCC#pN0
-* method = NCIT#C146985 "AJCC Cancer Staging Manual 8th Edition"
+* method = SCT#897275008 "American Joint Commission on Cancer, Cancer Staging Manual, 8th edition neoplasm staging system (tumor staging)"
 
 Instance: tnm-pathologic-distant-metastases-category-jenny-m
 InstanceOf: TNMDistantMetastasesCategory
@@ -477,7 +477,7 @@ Description: "Extended example: example showing TNM staging (M)"
 * subject = Reference(cancer-patient-jenny-m)
 * effectiveDateTime = "2018-04-01"
 * valueCodeableConcept = AJCC#pM0
-* method = NCIT#C146985 "AJCC Cancer Staging Manual 8th Edition"
+* method = SCT#897275008 "American Joint Commission on Cancer, Cancer Staging Manual, 8th edition neoplasm staging system (tumor staging)"
 
 // 21-Gene Assay
 
@@ -601,19 +601,17 @@ Description: "Example of radiotherapy treatment summary involving external beam 
 * extension[treatmentIntent].valueCodeableConcept = SCT#373808002 "Curative - procedure intent"
 * performedPeriod.start = "2018-05-01"
 * performedPeriod.end = "2018-06-29"
-* extension[modality][0].valueCodeableConcept = RT#PHOTON "Photon Beam Radiation Therapy"
+* extension[modality][0].valueCodeableConcept = UMLS#C3539769 "Photon Beam Radiation Therapy"
 * extension[modality][1].valueCodeableConcept = SCT#45643008  "Teleradiotherapy using electrons (procedure)"
-* extension[technique][0].valueCodeableConcept = RT#VMAT "Volumetric Modulated Arc Therapy"
-* extension[technique][1].valueCodeableConcept = RT#3D "Three dimensional"
-* extension[doseDelivered][0].extension[volumeDescription].valueString = "Chest Wall"
-* extension[doseDelivered][0].extension[volumeId].valueString = "1.2.246.352…1"
-* extension[doseDelivered][0].extension[totalDoseDelivered].valueQuantity = 6000 'cGy'
-* extension[doseDelivered][0].extension[fractionsDelivered].valueUnsignedInt = 30
-* extension[doseDelivered][1].extension[volumeDescription].valueString = "Chest Wall Lymph Nodes"
-* extension[doseDelivered][1].extension[volumeId].valueString = "1.2.246.352…2"
-* extension[doseDelivered][1].extension[totalDoseDelivered].valueQuantity = 5000 'cGy'
-* extension[doseDelivered][1].extension[fractionsDelivered].valueUnsignedInt = 25
-* subject = Reference(cancer-patient-eve-anyperson)
+* extension[technique][0].valueCodeableConcept =  UMLS#C3489631 "Volumetric Modulated Arc Therapy"
+* extension[technique][1].valueCodeableConcept = RT#3D
+* extension[doseDeliveredToAnatomicVolume][0].extension[anatomicVolume].valueReference = Reference(jenny-m-chest-wall-treatment-volume)
+* extension[doseDeliveredToAnatomicVolume][0].extension[totalDoseDelivered].valueQuantity = 6000 'cGy'
+* extension[doseDeliveredToAnatomicVolume][0].extension[fractionsDelivered].valueUnsignedInt = 30
+* extension[doseDeliveredToAnatomicVolume][1].extension[anatomicVolume].valueReference = Reference(jenny-m-chest-wall-lymph-nodes-treatment-volume)
+* extension[doseDeliveredToAnatomicVolume][1].extension[totalDoseDelivered].valueQuantity = 5000 'cGy'
+* extension[doseDeliveredToAnatomicVolume][1].extension[fractionsDelivered].valueUnsignedInt = 25
+* subject = Reference(cancer-patient-jenny-m)
 * asserter = Reference(us-core-practitioner-kyle-anydoc)
 
 Instance: teleradiotherapy-treatment-phase-chest-wall-jenny-m
@@ -625,16 +623,14 @@ Description: "Example of teleradiotherapy treatment phase involving external bea
 * partOf = Reference(radiotherapy-treatment-summary-chest-wall-jenny-m)
 * performedPeriod.start = "2018-05-01"
 * performedPeriod.end = "2018-06-29"
-* extension[modality].valueCodeableConcept = RT#PHOTON "Photon Beam Radiation Therapy"
-* extension[technique].valueCodeableConcept = RT#VMAT "Volumetric Modulated Arc Therapy"
+* extension[modality].valueCodeableConcept = UMLS#C3539769 "Photon Beam Radiation Therapy"
+* extension[technique].valueCodeableConcept = UMLS#C3489631 "Volumetric-Modulated Arc Therapy"
 * extension[fractionsDelivered].valueUnsignedInt = 25
-* extension[doseDelivered][0].extension[volumeDescription].valueString = "Chest Wall"
-* extension[doseDelivered][0].extension[totalDoseDelivered].valueQuantity = 5000 'cGy'
-* extension[doseDelivered][0].extension[volumeId].valueString = "1.2.246.352…1"
-* extension[doseDelivered][1].extension[volumeDescription].valueString = "Chest Wall Lymph Nodes"
-* extension[doseDelivered][1].extension[totalDoseDelivered].valueQuantity = 5000 'cGy'
-* extension[doseDelivered][1].extension[volumeId].valueString = "1.2.246.352…2"
-* subject = Reference(cancer-patient-eve-anyperson)
+* extension[doseDeliveredToAnatomicVolume][0].extension[anatomicVolume].valueReference = Reference(jenny-m-chest-wall-treatment-volume)
+* extension[doseDeliveredToAnatomicVolume][0].extension[totalDoseDelivered].valueQuantity = 5000 'cGy'
+* extension[doseDeliveredToAnatomicVolume][1].extension[anatomicVolume].valueReference = Reference(jenny-m-chest-wall-lymph-nodes-treatment-volume)
+* extension[doseDeliveredToAnatomicVolume][1].extension[totalDoseDelivered].valueQuantity = 5000 'cGy'
+* subject = Reference(cancer-patient-jenny-m)
 * asserter = Reference(us-core-practitioner-kyle-anydoc)
 
 Instance: teleradiotherapy-treatment-phase-boost-jenny-m
@@ -649,11 +645,28 @@ Description: "Example of teleradiotherapy treatment boost phase"
 * extension[modality].valueCodeableConcept = SCT#45643008  "Teleradiotherapy using electrons (procedure)"
 * extension[technique].valueCodeableConcept = RT#3D "Three dimensional"
 * extension[fractionsDelivered].valueUnsignedInt = 5
-* extension[doseDelivered].extension[volumeDescription].valueString = "Chest Wall"
-* extension[doseDelivered].extension[volumeId].valueString = "1.2.246.352…1"
-* extension[doseDelivered].extension[totalDoseDelivered].valueQuantity = 1000 'cGy'
-* subject = Reference(cancer-patient-eve-anyperson)
+* extension[doseDeliveredToAnatomicVolume].extension[anatomicVolume].valueReference = Reference(jenny-m-chest-wall-treatment-volume)
+* extension[doseDeliveredToAnatomicVolume].extension[totalDoseDelivered].valueQuantity = 1000 'cGy'
+* subject = Reference(cancer-patient-jenny-m)
 * asserter = Reference(us-core-practitioner-kyle-anydoc)
+
+Instance: jenny-m-chest-wall-treatment-volume
+InstanceOf: RadiotherapyAnatomicVolume
+Description: "Anatomic volume 1 for Jenny M's teleradiotherapy."
+* patient = Reference(cancer-patient-jenny-m)
+* description = "Chest Wall"
+* identifier.value = "1.2.246.352…1"
+* location = SCT#78904004 "Chest wall structure (body structure)"
+* locationQualifier = SCT#255503000 "Entire (qualifier value)"
+
+Instance: jenny-m-chest-wall-lymph-nodes-treatment-volume
+InstanceOf: RadiotherapyAnatomicVolume
+Description: "Anatomic volume 2 for Jenny M's teleradiotherapy."
+* patient = Reference(cancer-patient-jenny-m)
+* description = "Chest Wall Lymph Nodes"
+* identifier.value = "1.2.246.352…2"
+* location = SCT#245276004 "Mediastinal lymph node group (body structure)"
+* locationQualifier = SCT#51440002  "Right and left (qualifier value)"
 
 Instance: cancer-related-medication-request-anastrozole-jenny-m
 InstanceOf: CancerRelatedMedicationRequest

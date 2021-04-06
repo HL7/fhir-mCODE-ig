@@ -76,7 +76,7 @@ Certain resources, particularly in the radiotherapy area, are missing appropriat
 
 **Links:**
 
-* [All code systems defined in mCODE](http://build.fhir.org/ig/HL7/fhir-mCODE-ig/branches/master/artifacts.html#terminology-code-systems)
-* [All value sets defined in mCODE](http://build.fhir.org/ig/HL7/fhir-mCODE-ig/branches/master/artifacts.html#terminology-value-sets)
+* [All code systems defined in mCODE](artifacts.html#terminology-code-systems)
+* [All value sets defined in mCODE](artifacts.html#terminology-value-sets)
 
 {% include markdown-link-references.md %}

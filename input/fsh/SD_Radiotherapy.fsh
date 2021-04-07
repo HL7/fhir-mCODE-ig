@@ -24,7 +24,7 @@ Description: "A summary of a course of radiotherapy delivered to a patient. It r
 * extension[modality].value[x] from RadiotherapyModalityVS (required)
 * extension[technique].value[x] from RadiotherapyTechniqueVS (required)
 * bodySite from RadiotherapyTreatmentLocationVS (required)
-* bodySite ^short = "Body structure(s) treated"
+* bodySite ^short = "All body structure(s) treated"
 * bodySite ^definition = "Coded body structure(s) treated in this course of radiotherapy. These codes represent general locations. For additional detail, refer to the BodyStructures references in the doseDeliveredToVolume extension."
 * reasonCode and reasonReference and bodySite MS
 * obeys mcode-reason-required
@@ -44,14 +44,15 @@ RuleSet: RadiotherapyPhaseCommon
 * extension[doseDeliveredToVolume].extension[fractionsDelivered] ^definition = "Record the fractions delivered in this phase in the top-level extension also named fractionDelivered."
 * extension[fractionsDelivered] ^short = "Number of Fractions Delivered"
 * extension[fractionsDelivered] ^definition = "The number of fractions delivered during this phase."
-* bodySite ^short = "Not used in this profile."
-* bodySite ^definition = "Not used in this profile. Each body volume receiving radiation must be represented by a BodyStructure resource that conforms to the RadiotherapyVolume profile, and referenced in the extension RadiotherapyDoseDeliveredToVolume.volume."
+* bodySite from RadiotherapyTreatmentLocationVS (required)
+* bodySite ^short = "All body structure(s) treated in this phase"
+* bodySite ^definition = "Coded body structure(s) treated in this phase of radiotherapy. These codes represent general locations. For additional detail, refer to the BodyStructures references in the doseDeliveredToVolume extension."
 
 Profile:  TeleradiotherapyTreatmentPhase
 Parent:   USCoreProcedure
 Id:       mcode-teleradiotherapy-treatment-phase
 Title: "Teleradiotherapy Treatment Phase"
-Description: "A summary of a phase of teleradiotherapy treatment that has been delivered. The scope is a treatment consisting of one or multiple identical fractions. A phase ends and a new phase begins whenever there is a change in the irradiated volume, dose per fraction, modality, or technique."
+Description: "A summary of a phase of teleradiotherapy treatment that has been delivered. The scope is a treatment consisting of one or multiple identical fractions. A phase ends whenever there is a change in the irradiated volume, dose per fraction, modality, or technique."
 * insert RadiotherapyPhaseCommon
 // Teleradiotherapy specific content:
 * code = RID#mcode-teleradiotherapy-treatment-phase
@@ -134,12 +135,12 @@ Description: "Dose parameters for one radiotherapy volume."
 * extension[fractionsDelivered] ^definition = "The number of fractions delivered to this volume."
 
 
-//------ Radiotherapy Anatomic Volume -------
+//------ Radiotherapy Volume -------
 
 Profile: RadiotherapyVolume
 Parent: BodyStructure
 Id: mcode-radiotherapy-volume
-Title: "Radiotherapy Anatomic Volume"
+Title: "Radiotherapy Volume"
 Description: "A volume of the body used in radiotherapy planning or treatment delivery."
 * obeys mcode-description-or-id-required
 * identifier ^short = "Volume Identifier"
@@ -148,7 +149,7 @@ Description: "A volume of the body used in radiotherapy planning or treatment de
 * description ^definition = "A text description of the radiotherapy volume, which SHOULD contain any additional information above and beyond the location and locationQualifier that describe the volume."
 * morphology from RadiotherapyVolumeTypeVS (extensible)
 * morphology ^short = "Type of Radiotherapy Volume"
-* morphology ^definition = "The type of radiotherapy volume (GTV, PTV, CTV or OR) this resource represents. Although the name of the element is 'morphology', this element is defined in the base resource as 'The kind of structure being represented by the body structure'. The name is somewhat of a misnomer, and might be better interpreted simply as 'type' or 'kind'."
+* morphology ^definition = "The type of radiotherapy volume this resource represents. Although the name of the element is 'morphology', this element is defined in the base resource as 'The kind of structure being represented by the body structure'. The name is somewhat of a misnomer, and might be better interpreted simply as 'type' or 'kind'."
 * location from RadiotherapyTreatmentLocationVS (required)
 * location ^short = "Body Location Code."
 * location ^definition = "A code specifying the body structure or region comprising the irradiated volume. The codes do not include laterality, which if applicable MUST be specified in the locationQualifier."
@@ -160,7 +161,6 @@ Invariant:  mcode-description-or-id-required
 Description: "One of description or identifier MUST be present"
 Expression: "description.exists() or identifier.exists()"
 Severity:   #error
-
 
 /* HOLD
 

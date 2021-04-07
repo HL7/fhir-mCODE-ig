@@ -7,8 +7,8 @@ Radiotherapy is a directed treatment that targets a specific volume (three dimen
 This profile describes the concepts of GTV, CTV, PTV and RO in terms of a BodyStructure resource. Using a stand-alone resource to describe a radiotherapy volume has several benefits:
 
 1. It uses an existing FHIR Resource, and avoids creation of a complex extension.
-2. It permits reuse of the same anatomic volume in planning, executing, and reporting a radiotherapy treatment, as opposed to repeating the same elements in multiple places.
-3. There is a single source of truth for an anatomic volume.
+2. It permits reuse of the same body volume in planning, executing, and reporting a radiotherapy treatment, as opposed to repeating the same elements in multiple places.
+3. There is a single source of truth for a radiotherapy volume.
 4. The use of BodyStructure fits the intended purpose of the BodyStructure resource and allows attachment of images and other textual and coded information that could be needed to fully describe a radiotherapy volume.
 
 The disadvantage of separating the radiotherapy volume is that it is not in the same resource as the modality, technique, and dose information, but overall, the above advantages are felt to outweigh this disadvantage.

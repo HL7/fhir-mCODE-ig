@@ -101,7 +101,7 @@ Description: "Codes describing the techniques of external beam and brachytherapy
 ValueSet: RadiotherapyVolumeTypeVS
 Id: mcode-radiotherapy-volume-type-vs
 Title: "Radiotherapy Volume Type Value Set"
-Description: "Codes describing the types of anatomical volumes used in radiotherapy planning and treatment."
+Description: "Codes describing the types of body volumes used in radiotherapy planning and treatment."
 * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
 * SCT#228793007 "Planning target volume (observable entity)"
 * SCT#228791009 "Gross tumor volume (observable entity)"
@@ -111,7 +111,7 @@ Description: "Codes describing the types of anatomical volumes used in radiother
 ValueSet: RadiotherapyTreatmentLocationQualifierVS
 Id: mcode-radiotherapy-treatment-location-qualifier-vs
 Title: "Radiotherapy Treatment Location Qualifier Value Set"
-Description: "Various modifiers that can be applied to anatomical locations where radiotherapy treatments can be directed."
+Description: "Various modifiers that can be applied to body locations where radiotherapy treatments can be directed."
 * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
 * SCT#7771000    "Left (qualifier value)"
 * SCT#24028007    "Right (qualifier value)"
@@ -135,7 +135,7 @@ Description: "Various modifiers that can be applied to anatomical locations wher
 ValueSet: RadiotherapyTreatmentLocationVS
 Id: mcode-radiotherapy-treatment-location-vs
 Title: "Radiotherapy Treatment Location Value Set"
-Description: "Codes describing the anatomical locations where radiotherapy treatments can be directed."
+Description: "Codes describing the body locations where radiotherapy treatments can be directed."
 * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
 * SCT#818983003    "Structure of abdominopelvic cavity and/or content of abdominopelvic cavity and/or anterior abdominal wall (body structure)"
 * SCT#245284000    "Abdominal lymph node group (body structure)"

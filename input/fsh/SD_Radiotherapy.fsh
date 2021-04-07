@@ -10,7 +10,7 @@ Profile:  RadiotherapyCourseSummary
 Parent:   USCoreProcedure  // considered one procedure with multiple parts
 Id:       mcode-radiotherapy-course-summary
 Title:    "Radiotherapy Course Summary"
-Description: "A summary of a course of radiotherapy delivered to a patient. It records the treatment intent, termination reason, modalities, techniques, number of sessions, and doses delivered to one or more anatomic volumes. To describe the treatment in more detail, use either TeleradiotherapyTreatmentPhase or BrachytherapyTreatmentPhase, which should reference this summary through their partOf elements. Whether the course has been fully delivered or stopped is indicated in the status element."
+Description: "A summary of a course of radiotherapy delivered to a patient. It records the treatment intent, termination reason, modalities, techniques, number of sessions, and doses delivered to one or more body volumes. To describe the treatment in more detail, use either TeleradiotherapyTreatmentPhase or BrachytherapyTreatmentPhase, which should reference this summary through their partOf elements. Whether the course has been fully delivered or stopped is indicated in the status element."
 * insert RadiotherapyCommon
 // Summary-specific content
 * code = RID#mcode-radiotherapy-course-summary
@@ -20,12 +20,12 @@ Description: "A summary of a course of radiotherapy delivered to a patient. It r
     RadiotherapyModality named modality 0..* MS and
     RadiotherapyTechnique named technique 0..* MS and
     RadiotherapySessions named actualNumberOfSessions 0..1 MS and
-    RadiotherapyDoseDeliveredToAnatomicVolume named doseDeliveredToAnatomicVolume 0..* MS
+    RadiotherapyDoseDeliveredToVolume named doseDeliveredToVolume 0..* MS
 * extension[modality].value[x] from RadiotherapyModalityVS (required)
 * extension[technique].value[x] from RadiotherapyTechniqueVS (required)
 * bodySite from RadiotherapyTreatmentLocationVS (required)
 * bodySite ^short = "Body structure(s) treated"
-* bodySite ^definition = "Coded body structure(s) treated in this course of radiotherapy. These codes represent general locations. For additional detail, refer to the BodyStructures references in the doseDeliveredToAnatomicVolume extension."
+* bodySite ^definition = "Coded body structure(s) treated in this course of radiotherapy. These codes represent general locations. For additional detail, refer to the BodyStructures references in the doseDeliveredToVolume extension."
 * reasonCode and reasonReference and bodySite MS
 * obeys mcode-reason-required
 
@@ -38,20 +38,20 @@ RuleSet: RadiotherapyPhaseCommon
     RadiotherapyModality named modality 0..1 MS and
     RadiotherapyTechnique named technique 0..1 MS and
     RadiotherapyFractionsDelivered named fractionsDelivered 0..1 MS and
-    RadiotherapyDoseDeliveredToAnatomicVolume named doseDeliveredToAnatomicVolume 0..* MS
-* extension[doseDeliveredToAnatomicVolume].extension[fractionsDelivered] 0..0
-* extension[doseDeliveredToAnatomicVolume].extension[fractionsDelivered] ^short = "Not used in this profile."
-* extension[doseDeliveredToAnatomicVolume].extension[fractionsDelivered] ^definition = "Record the fractions delivered in this phase in the top-level extension also named fractionDelivered."
+    RadiotherapyDoseDeliveredToVolume named doseDeliveredToVolume 0..* MS
+* extension[doseDeliveredToVolume].extension[fractionsDelivered] 0..0
+* extension[doseDeliveredToVolume].extension[fractionsDelivered] ^short = "Not used in this profile."
+* extension[doseDeliveredToVolume].extension[fractionsDelivered] ^definition = "Record the fractions delivered in this phase in the top-level extension also named fractionDelivered."
 * extension[fractionsDelivered] ^short = "Number of Fractions Delivered"
 * extension[fractionsDelivered] ^definition = "The number of fractions delivered during this phase."
 * bodySite ^short = "Not used in this profile."
-* bodySite ^definition = "Not used in this profile. Each anatomic volume must be represented by a BodyStructure resource that conforms to the RadiotherapyAnatomicVolume profile, and referenced in the extension RadiotherapyDoseDeliveredToAnatomicVolume.anatomicVolume."
+* bodySite ^definition = "Not used in this profile. Each body volume receiving radiation must be represented by a BodyStructure resource that conforms to the RadiotherapyVolume profile, and referenced in the extension RadiotherapyDoseDeliveredToVolume.volume."
 
 Profile:  TeleradiotherapyTreatmentPhase
 Parent:   USCoreProcedure
 Id:       mcode-teleradiotherapy-treatment-phase
 Title: "Teleradiotherapy Treatment Phase"
-Description: "A summary of a phase of teleradiotherapy treatment that has been delivered. The scope is a treatment consisting of one or multiple identical fractions. A phase ends and a new phase begins whenever there is a change in the anatomic volume, dose per fraction, modality, or technique."
+Description: "A summary of a phase of teleradiotherapy treatment that has been delivered. The scope is a treatment consisting of one or multiple identical fractions. A phase ends and a new phase begins whenever there is a change in the irradiated volume, dose per fraction, modality, or technique."
 * insert RadiotherapyPhaseCommon
 // Teleradiotherapy specific content:
 * code = RID#mcode-teleradiotherapy-treatment-phase
@@ -68,7 +68,7 @@ Profile:  BrachytherapyTreatmentPhase
 Parent:   USCoreProcedure
 Id:       mcode-brachytherapy-treatment-phase
 Title:    "Brachytherapy Treatment Phase"
-Description: "A summary of a phase of brachytherapy treatment that has been delivered. The scope is a treatment consisting of one or multiple identical fractions. A phase ends when there is a change in the anatomic volume, treatment fraction size, modality, or treatment technique."
+Description: "A summary of a phase of brachytherapy treatment that has been delivered. The scope is a treatment consisting of one or multiple identical fractions. A phase ends when there is a change in the irradiated volume, treatment fraction size, modality, or treatment technique."
 * insert RadiotherapyPhaseCommon
 // Content specific to Brachytherapy:
 * code = RID#mcode-brachytherapy-treatment-phase
@@ -112,46 +112,46 @@ Description: "The number of sessions in a course of radiotherapy."
 * insert ExtensionContext(Procedure)
 * value[x] only unsignedInt
 
-Extension: RadiotherapyDoseDeliveredToAnatomicVolume
-Id: mcode-radiotherapy-dose-delivered-to-anatomic-volume
-Title: "Radiotherapy Dose Delivered To Anatomic Volume"
-Description: "Dose parameters for one anatomic volume."
+Extension: RadiotherapyDoseDeliveredToVolume
+Id: mcode-radiotherapy-dose-delivered-to-volume
+Title: "Radiotherapy Dose Delivered To Body Volume"
+Description: "Dose parameters for one radiotherapy volume."
 * insert ExtensionContext(Procedure)
 * extension contains
-    anatomicVolume 1..1 MS and
+    volume 1..1 MS and
     totalDoseDelivered 0..1 MS and
     fractionsDelivered 0..1 MS
-* extension[anatomicVolume].value[x] only Reference(RadiotherapyAnatomicVolume)
+* extension[volume].value[x] only Reference(RadiotherapyVolume)
 * extension[totalDoseDelivered].value[x] only Quantity
 * extension[totalDoseDelivered].valueQuantity = UCUM#cGy
 * extension[fractionsDelivered].value[x] only unsignedInt
 // Definitions of in-line extensions
-* extension[anatomicVolume] ^short = "Anatomic volume where radiation was delivered"
-* extension[anatomicVolume] ^definition = "A BodyStructure resource representing the body structure treated, for example, Chest Wall Lymph Nodes."
+* extension[volume] ^short = "Volume in the body where radiation was delivered"
+* extension[volume] ^definition = "A BodyStructure resource representing the body structure treated, for example, Chest Wall Lymph Nodes."
 * extension[totalDoseDelivered] ^short = "Total Radiation Dose Delivered"
-* extension[totalDoseDelivered] ^definition = "The total amount of radiation delivered to this anatomic volume within the scope of this dose delivery."
+* extension[totalDoseDelivered] ^definition = "The total amount of radiation delivered to this volume within the scope of this dose delivery."
 * extension[fractionsDelivered] ^short = "Number of Fractions Delivered"
-* extension[fractionsDelivered] ^definition = "The number of fractions delivered to this anatomic volume."
+* extension[fractionsDelivered] ^definition = "The number of fractions delivered to this volume."
 
 
 //------ Radiotherapy Anatomic Volume -------
 
-Profile: RadiotherapyAnatomicVolume
+Profile: RadiotherapyVolume
 Parent: BodyStructure
-Id: mcode-radiotherapy-anatomic-volume
+Id: mcode-radiotherapy-volume
 Title: "Radiotherapy Anatomic Volume"
-Description: "An anatomic volume used in radiotherapy planning or treatment delivery."
+Description: "A volume of the body used in radiotherapy planning or treatment delivery."
 * obeys mcode-description-or-id-required
-* identifier ^short = "Identifier for the anatomic volume."
+* identifier ^short = "Volume Identifier"
 * identifier ^definition = "Unique identifier to reliably identify the same target volume in different requests and procedures, for example, the Conceptual Volume UID used in DICOM."
-* description ^short = "Description of anatomic volume"
-* description ^definition = "A text description of the anatomic volume, containing any additional information above and beyond the location and locationQualifier that describe the anatomic volume."
+* description ^short = "Volume Description"
+* description ^definition = "A text description of the radiotherapy volume, which SHOULD contain any additional information above and beyond the location and locationQualifier that describe the volume."
 * morphology from RadiotherapyVolumeTypeVS (extensible)
-* morphology ^short = "Type of Anatomic Volume"
-* morphology ^definition = "The type of anatomic volume (GTV, PTV, CTV or OR) this resource represents. Although the name of the element is 'morphology', this element is defined in the base resource as 'The kind of structure being represented by the body structure'. The name is somewhat of a misnomer, and might be better interpreted simply as 'type' or 'kind'."
+* morphology ^short = "Type of Radiotherapy Volume"
+* morphology ^definition = "The type of radiotherapy volume (GTV, PTV, CTV or OR) this resource represents. Although the name of the element is 'morphology', this element is defined in the base resource as 'The kind of structure being represented by the body structure'. The name is somewhat of a misnomer, and might be better interpreted simply as 'type' or 'kind'."
 * location from RadiotherapyTreatmentLocationVS (required)
-* location ^short = "Anatomical location code."
-* location ^definition = "A code specifying the body structure or region comprising the anatomic volume. The codes do not include laterality, which if applicable MUST be specified in the locationQualifier."
+* location ^short = "Body Location Code."
+* location ^definition = "A code specifying the body structure or region comprising the irradiated volume. The codes do not include laterality, which if applicable MUST be specified in the locationQualifier."
 * locationQualifier from RadiotherapyTreatmentLocationQualifierVS (extensible)
 * identifier and location and locationQualifier and description and patient and morphology MS
 

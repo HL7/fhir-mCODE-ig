@@ -107,11 +107,11 @@
 <artifact deprecated="true" key="Procedure" name="Procedure"/>
 <artifact deprecated="true" id="ValueSet/mcode-radiation-procedure-value-set" key="radiation-procedure-value-set" name="Radiation Procedure Value Set"/>
 <artifact deprecated="true" id="ValueSet/mcode-radiation-target-body-site-value-set" key="radiation-target-body-site-value-set" name="Radiation Target Body Site Value Set"/>
-<artifact id="StructureDefinition/mcode-radiotherapy-anatomic-volume" key="StructureDefinition-mcode-radiotherapy-anatomic-volume" name="Radiotherapy Anatomic Volume"/>
+<artifact id="StructureDefinition/mcode-radiotherapy-volume" key="StructureDefinition-mcode-radiotherapy-anatomic-volume" name="Radiotherapy Anatomic Volume"/>
 <artifact id="CodeSystem/radiotherapy-cs" key="CodeSystem-radiotherapy-cs" name="Radiotherapy Code System"/>
 <artifact id="StructureDefinition/mcode-radiotherapy-course-summary" key="StructureDefinition-mcode-radiotherapy-course-summary" name="Radiotherapy Course Summary"/>
 <artifact deprecated="true" id="StructureDefinition/mcode-radiotherapy-dose-delivered" key="StructureDefinition-mcode-radiotherapy-dose-delivered" name="Radiotherapy Dose Delivered"/>
-<artifact id="StructureDefinition/mcode-radiotherapy-dose-delivered-to-anatomic-volume" key="StructureDefinition-mcode-radiotherapy-dose-delivered-to-anatomic-volume" name="Radiotherapy Dose Delivered To Anatomic Volume"/>
+<artifact id="StructureDefinition/mcode-radiotherapy-dose-delivered-to-volume" key="StructureDefinition-mcode-radiotherapy-dose-delivered-to-volume" name="Radiotherapy Dose Delivered To Body Volume"/>
 <artifact id="StructureDefinition/mcode-radiotherapy-fractions-delivered" key="StructureDefinition-mcode-radiotherapy-fractions-delivered" name="Radiotherapy Fractions Delivered"/>
 <artifact id="StructureDefinition/mcode-radiotherapy-modality" key="StructureDefinition-mcode-radiotherapy-modality" name="Radiotherapy Modality"/>
 <artifact id="ValueSet/mcode-radiotherapy-modality-vs" key="ValueSet-mcode-radiotherapy-modality-vs" name="Radiotherapy Modality Value Set"/>

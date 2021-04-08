@@ -21,7 +21,7 @@ parameters:
   version-comparison: n/a
   path-expansion-params: '../../exp-params.json'  #path is relative to [base]/fsh-generated/resources
 copyrightYear: 2019+
-releaseLabel: pre-STU2 Ballot
+releaseLabel: STU Release 2 (Ballot Version)
 pages:
   index.md:
     title: Home

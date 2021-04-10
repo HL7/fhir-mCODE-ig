@@ -10,7 +10,7 @@ Please review the areas where major changes have occurred since STU 1. These inc
 * Revised design for [Comorbidities][ComorbiditiesElixhauser]: Is it clear how to use this profile?
 * New [extended patient journey example](examples.html): Does this help readers understand how mCODE might be applied to the real world?
 
-A complete list of STU2 changes are listed in the [change log](change_log.html).
+A complete list of STU2 changes are listed in the [change log](change_log.html), and highly-detailed, element-by-element changes are documented in the [data dictionary differential](dictionary.html#data-dictionary-differential).
 </div>
 
 ### Background

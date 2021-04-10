@@ -14,13 +14,13 @@ The following table shows potential mappings. **This table may not be exhaustive
 | **SNOMED CT Term**   | **UMLS Metathesaurus Term**     | **Radiotherapy Code System** |
 | -------------------- | -------------------- | --------------------- |
 | 441799006 "Intensity modulated radiation therapy (procedure)" |  C1512814 "Radiotherapy, Intensity-Modulated" | not needed |
-| missing | C3489631 "Volumetric-Modulated Arc Therapy" | not needed |
-| missing [1] | none [1] | 3D "Three dimensional" |
-| missing [2] | C5236971 "2D Conventional Radiotherapy" | not needed |
+| Missing | C3489631 "Volumetric-Modulated Arc Therapy" | not needed |
+| Missing [1] | none [1] | 3D "Three dimensional" |
+| Missing [2] | C5236971 "2D Conventional Radiotherapy" | not needed |
 | 168524008 "Radiotherapy - intraoperative control (procedure)" | C0436205 "Radiotherapy - intraoperative control" | not needed |
-| missing | none | PPS "Particle Passive Scattering" |
-| missing | none | PSS "Particle Spot Scanning" |
-| nmissing | none | MIX "Mixed" |
+| Missing | none | PPS "Particle Passive Scattering" |
+| Missing | none | PSS "Particle Spot Scanning" |
+| Missing | none | MIX "Mixed" |
 | 169317000 "Neutron capture therapy (procedure)" | C0162505 "Boron Neutron Capture Therapy" [3] | not needed |
 {: .grid }
 

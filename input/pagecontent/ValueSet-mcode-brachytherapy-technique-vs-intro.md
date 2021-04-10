@@ -14,9 +14,9 @@ The following table shows potential mappings. **This table may not be exhaustive
 | **SNOMED CT Term**   | **UMLS Metathesaurus Term**   | **Radiotherapy Code System** |
 | ------------|-----------------|---------------------|
 | 384692006 "Intracavitary brachytherapy (procedure)" | C0021864 "Intracavity Radiotherapy" | not needed |
-| missing | none | CAV-IMB "Intracavitary, Intensity Modulated" |
+| Missing | none | CAV-IMB "Intracavitary, Intensity Modulated" |
 | 113120007 "Interstitial brachytherapy (procedure)" | C1881237 "Interstitial Radiation Therapy" | not needed |
-| missing | C0203617  "Intravascular radionuclide therapy" | not needed |
+| Missing | C0203617  "Intravascular radionuclide therapy" | not needed |
 | 384691004 "Intraluminal brachytherapy (procedure)" |  C1273696 "Intraluminal brachytherapy" | not needed |
 | 14473006 "Surface brachytherapy (procedure)" | C0038886 "Surface Radiotherapy" | not needed |
 | 16560241000119104 "Oral radionuclide therapy (procedure)" | C4302853 "Oral radionuclide therapy"  | not needed |

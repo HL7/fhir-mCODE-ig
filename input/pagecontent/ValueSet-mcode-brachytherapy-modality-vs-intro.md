@@ -1,6 +1,6 @@
 ### Mapping Between Vocabularies
 
-The concepts in this value set are drawn in priority order first from SNOMED CT (SCT), second from UMLS Metathesaurus, and lastly, from the [radiotherapy code system][RadiotherapyCS] defined in this Implementation Guide. Missing SNOMED CT codes have been submitted for approval.
+The concepts in this value set are drawn in priority order first from SNOMED CT (SCT), second from UMLS Metathesaurus, and lastly, from the (radiotherapy code system][RadiotherapyCS] defined in this Implementation Guide. Missing SNOMED CT codes have been submitted for approval.
 
 The following table shows potential mappings. **This table may not be exhaustive and additional valid mappings may exist.**
 

@@ -10,7 +10,7 @@ Please review the areas where major changes have occurred since STU 1. These inc
 * Revised design for [Comorbidities][ComorbiditiesElixhauser]: Is it clear how to use this profile?
 * New [extended patient journey example](examples.html): Does this help readers understand how mCODE might be applied to the real world?
 
-A complete list of STU2 changes are listed in the [change log](change_log.html).
+A complete list of STU2 changes are listed in the [change log](change_log.html), and highly-detailed, element-by-element changes are documented in the [data dictionary differential](dictionary.html#data-dictionary-differential).
 </div>
 
 ### Background
@@ -71,9 +71,11 @@ The mCODE Implementation Guide was developed using the standard HL7 FHIR publish
 
 In the event there are differences between the page renderings in this IG and the associated FHIR artifacts, the FHIR artifacts should be taken as the source of truth. In the unlikely event that an artifact's snapshot is inconsistent with its differential, the differential should be taken as the source of truth.
 
-### Providing Feedback
+### Contributions
 
-<p style="background-color: #fce4ff; margin-top: 2rem; margin-bottom: 2rem; padding: 0.5em; border: 1px solid #be86c5;">If you have questions or comments about this guide, please reach out on <a href="https://chat.fhir.org/#narrow/stream/179234-Cancer-Interoperability/topic/mCODE">chat.fhir.org</a> or create an issue in the <a href="https://jira.hl7.org/issues/?filter=13361">HL7 Jira</a>.</p>
+mCODE is an open source project and welcomes all contributors. The source code for this IG is maintained in the [HL7 Github](https://github.com/HL7/fhir-mCODE-ig). Instead of just suggesting a change, consider creating a branch, making the change, and submitting a pull request. All of our profiling work is done in [FHIR Shorthand](http://hl7.org/fhir/uv/shorthand/) and all narrative content in markdown (specifically, [Kramdown](https://kramdown.gettalong.org/)). We suggest using the [Visual Studio Code editor](https://code.visualstudio.com/) with the [FHIR Shorthand plug-in](https://marketplace.visualstudio.com/items?itemName=kmahalingam.vscode-language-fsh). For more information on how to get started with IG development, visit the [FSH School](https://fshschool.org/).
+
+If you have questions or comments about this guide, please reach out on [chat.fhir.org](https://chat.fhir.org/#narrow/stream/179234-Cancer-Interoperability/topic/mCODE) or create an issue in the [HL7 Jira](https://jira.hl7.org/issues/?filter=13361).
 
 ### Credits
 
@@ -83,11 +85,11 @@ This IG was authored by the MITRE Corporation using [FHIR Shorthand (FSH)](http:
 
 ### Contact Information
 
-| Topic| Who | Role | Email |
+| Topic | Who | Role | Email |
 |----|---|---|------|
-| General Inquiries  | Steve Bratt | CodeX Accelerator Program Manager | sbratt@mitre.org |
-| Domain Content | Dr. Travis Osterman | Chair, mCODE Technical Review Group | travis.osterman@vumc.org |
-| IG and FHIR Issues | Mark Kramer | Modeling Lead | mkramer@mitre.org |
+| Implementation and use cases  | Steve Bratt | CodeX Accelerator Program Manager | sbratt@mitre.org |
+| Domain content | Dr. Travis Osterman | Chair, mCODE Technical Review Group | travis.osterman@vumc.org |
+| Modeling and FHIR IG issues | Mark Kramer | Modeling Lead | mkramer@mitre.org |
 {: .grid }
 
 MITRE: Approved for Public Release. Distribution Unlimited. Case Number 16-1988

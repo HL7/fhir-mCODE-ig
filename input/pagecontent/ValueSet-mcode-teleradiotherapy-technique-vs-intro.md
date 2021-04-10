@@ -7,27 +7,27 @@ The following rules apply to this value set:
 
 ### Mapping Between Vocabularies
 
-The concepts in this value set are drawn in priority order first from SNOMED CT (SCT), second from NCI Thesaurus, and lastly, from the [radiotherapy code system][RadiotherapyCS] defined in this Implementation Guide. Additional SNOMED CT codes have been submitted for approval.
+The concepts in this value set are drawn in priority order first from SNOMED CT (SCT), then from UMLS Metathesaurus, and lastly, from the [radiotherapy code system][RadiotherapyCS] defined in this Implementation Guide. Missing SNOMED CT codes have been submitted for approval.
 
 The following table shows potential mappings. **This table may not be exhaustive and additional valid mappings may exist.**
 
-| **Radiotherapy Code System** | **SNOMED CT**   | **NCI Thesaurus**   |
-| --------- | -------------------- | --------------------- |
-| not needed | 441799006 "Intensity modulated radiation therapy (procedure)" | C16135 "Intensity-Modulated Radiation Therapy" |
-| not needed | none | UMLS#C3489631 |
-| 3D | none [1] | none [1] |
-| not needed | none [2] | C165189 "2D Conventional Radiotherapy" |
-| not needed  | 168524008 "Radiotherapy - intraoperative control (procedure)" | C15623 "Intraoperative Radiotherapy" |
-| PPS | none | none |
-| PSS | none | none |
-| MIX | none | none |
-| not needed | 169317000 "Neutron capture therapy (procedure)" | C15378 "Boron Neutron Capture Therapy" [3] |
+| **SNOMED CT Term**   | **UMLS Metathesaurus Term**     | **Radiotherapy Code System** |
+| -------------------- | -------------------- | --------------------- |
+| 441799006 "Intensity modulated radiation therapy (procedure)" |  C1512814 "Radiotherapy, Intensity-Modulated" | not needed |
+| Missing | C3489631 "Volumetric-Modulated Arc Therapy" | not needed |
+| Missing [1] | none [1] | 3D "Three dimensional" |
+| Missing [2] | C5236971 "2D Conventional Radiotherapy" | not needed |
+| 168524008 "Radiotherapy - intraoperative control (procedure)" | C0436205 "Radiotherapy - intraoperative control" | not needed |
+| Missing | none | PPS "Particle Passive Scattering" |
+| Missing | none | PSS "Particle Spot Scanning" |
+| Missing | none | MIX "Mixed" |
+| 169317000 "Neutron capture therapy (procedure)" | C0162505 "Boron Neutron Capture Therapy" [3] | not needed |
 {: .grid }
 
 **Notes:**
 
-1. SCT#434131000124108 "Three dimensional conformal radiotherapy (procedure)" and NCIT#C16035 "3-Dimensional Conformal Radiation Therapy" are not matches because use of three-dimensional imaging in radiotherapy planning does not necessarily imply conformal dose distribution.
-2. SCT#5304008 "Conventional X-ray therapy" implies two-dimensional, but is too specific in terms of modality
-3. Superficially more specific, but because boron is the most common neutron capture agent, this is an acceptable match in many cases.
+1. SCT#434131000124108 "Three dimensional conformal radiotherapy (procedure)" and UMLS#C0600521 "Radiotherapy, Conformal" are not matches because use of three-dimensional imaging in radiotherapy planning does not necessarily imply conformal dose distribution.
+2. SCT#5304008 "Conventional X-ray therapy" implies two-dimensional, but is too specific in terms of modality.
+3. Although superficially more specific, this is an acceptable match in many cases because boron is the most common neutron capture agent.
 
 {% include markdown-link-references.md %}

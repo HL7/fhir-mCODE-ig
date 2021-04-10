@@ -28,7 +28,7 @@ Description: "Codes describing the modalities of brachytherapy procedures."
 ValueSet: RadiotherapyModalityVS
 Id: mcode-radiotherapy-modality-vs
 Title: "Radiotherapy Modality Value Set"
-Description: "Codes describing the modalities of external beam and brachytherapy radiation procedures, for use with radiotherapy summaries."
+Description: "Codes describing the modalities of external beam and brachytherapy radiation procedures, for use with radiotherapy summaries. This value set is the union of the EBRT and brachytherapy modality value sets."
 // * insert ExpandValueSet
 * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
 * SCT#10611004 "Teleradiotherapy protons (procedure)"
@@ -78,7 +78,7 @@ Description: "Codes describing the techniques of brachytherapy (internal or surf
 ValueSet: RadiotherapyTechniqueVS
 Id: mcode-radiotherapy-technique-vs
 Title: "Radiotherapy Technique Value Set"
-Description: "Codes describing the techniques of external beam and brachytherapy radiation procedures, for use with radiotherapy summaries."
+Description: "Codes describing the techniques of external beam and brachytherapy radiation procedures, for use with radiotherapy summaries. This is the union of the EBRT and brachytherapy technique value sets."
 * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
 * SCT#441799006 "Intensity modulated radiation therapy (procedure)"
 * UMLS#C3489631 "Volumetric Modulated Arc Therapy"

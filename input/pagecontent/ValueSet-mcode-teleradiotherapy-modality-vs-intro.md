@@ -1,11 +1,11 @@
 
 ### Mapping Between Vocabularies
 
-The concepts in this value set are drawn from SNOMED CT (SCT) or the [radiotherapy code system][RadiotherapyCS] defined in this Implementation Guide. Additional SNOMED CT codes have been submitted for approval. NCI Thesaurus terms are shown for informational purposes.
+The concepts in this value set are drawn in priority order first from SNOMED CT (SCT), second from UMLS Metathesaurus, and lastly, from the [radiotherapy code system][RadiotherapyCS] defined in this Implementation Guide. Missing SNOMED CT codes have been submitted for approval.
 
 The following table shows potential mappings. **This table may not be exhaustive and additional valid mappings may exist.**
 
-| **Radiotherapy Code System**    | **SNOMED CT Term**             | **NCI Thesaurus Term**            |
+| **Radiotherapy Code System**    | **SNOMED CT Term**             | **UMLS Metathesaurus Term**            |
 | ---------------|--------------------------------|-----------------------------------|
 | not needed   | 10611004 "Teleradiotherapy protons (procedure)" | C66897 "Proton Beam Radiation Therapy" |
 | not needed  | 45643008 "Teleradiotherapy using electrons (procedure)" | C15650 "Electron Beam Therapy" |

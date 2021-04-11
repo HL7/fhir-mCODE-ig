@@ -52,3 +52,681 @@ WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/mcode/Structure
 [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/mcode/ValueSet/mcode-teleradiotherapy-modality-vs because the value set or code system is not known to the validator]
 [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/mcode/ValueSet/mcode-radiotherapy-technique-vs because the value set or code system is not known to the validator]
 [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/mcode/ValueSet/mcode-radiotherapy-modality-vs because the value set or code system is not known to the validator]
+
+
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\ImplementationGuide-hl7.fhir.us.mcode.json ==
+INFORMATION: ImplementationGuide/hl7.fhir.us.mcode: ImplementationGuide: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ImplementationGuide
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\BodyStructure-jenny-m-chest-wall-lymph-nodes-treatment-volume.json ==
+INFORMATION: BodyStructure/jenny-m-chest-wall-lymph-nodes-treatment-volume: BodyStructure: Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-volume
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\BodyStructure-jenny-m-chest-wall-treatment-volume.json ==
+INFORMATION: BodyStructure/jenny-m-chest-wall-treatment-volume: BodyStructure: Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-volume
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\BodyStructure-john-anyperson-treatment-volume.json ==
+INFORMATION: BodyStructure/john-anyperson-treatment-volume: BodyStructure: Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-volume
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\BodyStructure-tumor-lobular-carcinoma-left-breast.json ==
+INFORMATION: BodyStructure/tumor-lobular-carcinoma-left-breast: BodyStructure: Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tumor
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\Bundle-mcode-patient-bundle-jenny-m.json ==
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle: Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[24]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[25]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[26]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[27]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[28]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[29]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[30]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[31]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[32]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[33]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[34]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[35]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[36]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[38]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[39]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[40]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[0].resource.ofType(Patient): Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-patient
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[0].resource.ofType(Patient): Validate resource against profile http://hl7.org/fhir/StructureDefinition/Patient
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[0].resource.ofType(Patient): Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-patient - listed in meta
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[1].resource.ofType(Observation): Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genetic-variant
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: resource.component[0].value.ofType(CodeableConcept).coding[0]: Code System URI 'http://www.genenames.org' is unknown so the code cannot be validated
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: resource.component[1].value.ofType(CodeableConcept).coding[0]: Code System URI 'http://www.ncbi.nlm.nih.gov/clinvar' is unknown so the code cannot be validated
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[1].resource.ofType(Observation): Validate resource against profile http://hl7.org/fhir/StructureDefinition/Observation
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[1].resource.ofType(Observation).component[0].value.ofType(CodeableConcept).coding[0]: Code System URI 'http://www.genenames.org' is unknown so the code cannot be validated
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[1].resource.ofType(Observation).component[1].value.ofType(CodeableConcept).coding[0]: Code System URI 'http://www.ncbi.nlm.nih.gov/clinvar' is unknown so the code cannot be validated
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[1].resource.ofType(Observation): Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genetic-variant - listed in meta
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[2].resource.ofType(DiagnosticReport): Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genomics-report
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[2].resource.ofType(DiagnosticReport): Validate resource against profile http://hl7.org/fhir/StructureDefinition/DiagnosticReport
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[2].resource.ofType(DiagnosticReport): Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genomics-report - listed in meta
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[3].resource.ofType(Procedure): Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-related-surgical-procedure
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[3].resource.ofType(Procedure): Validate resource against profile http://hl7.org/fhir/StructureDefinition/Procedure
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[3].resource.ofType(Procedure): Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-related-surgical-procedure - listed in meta
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[4].resource.ofType(Procedure): Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-course-summary
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: resource.extension[2].value.ofType(CodeableConcept).coding[0]: Code System URI 'http://terminology.hl7.org/CodeSystem/umls' is unknown so the code cannot be validated
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: resource.extension[4].value.ofType(CodeableConcept).coding[0]: Code System URI 'http://terminology.hl7.org/CodeSystem/umls' is unknown so the code cannot be validated
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[4].resource.ofType(Procedure): Validate resource against profile http://hl7.org/fhir/StructureDefinition/Procedure
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[4].resource.ofType(Procedure).extension[2].value.ofType(CodeableConcept).coding[0]: Code System URI 'http://terminology.hl7.org/CodeSystem/umls' is unknown so the code cannot be validated
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[4].resource.ofType(Procedure).extension[4].value.ofType(CodeableConcept).coding[0]: Code System URI 'http://terminology.hl7.org/CodeSystem/umls' is unknown so the code cannot be validated
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[4].resource.ofType(Procedure): Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-course-summary - listed in meta
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[5].resource.ofType(Procedure): Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-teleradiotherapy-treatment-phase
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: resource.extension[0].value.ofType(CodeableConcept).coding[0]: Code System URI 'http://terminology.hl7.org/CodeSystem/umls' is unknown so the code cannot be validated
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: resource.extension[1].value.ofType(CodeableConcept).coding[0]: Code System URI 'http://terminology.hl7.org/CodeSystem/umls' is unknown so the code cannot be validated
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[5].resource.ofType(Procedure): Validate resource against profile http://hl7.org/fhir/StructureDefinition/Procedure
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[5].resource.ofType(Procedure).extension[0].value.ofType(CodeableConcept).coding[0]: Code System URI 'http://terminology.hl7.org/CodeSystem/umls' is unknown so the code cannot be validated
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[5].resource.ofType(Procedure).extension[1].value.ofType(CodeableConcept).coding[0]: Code System URI 'http://terminology.hl7.org/CodeSystem/umls' is unknown so the code cannot be validated
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[5].resource.ofType(Procedure): Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-teleradiotherapy-treatment-phase - listed in meta
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[6].resource.ofType(Procedure): Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-teleradiotherapy-treatment-phase
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[6].resource.ofType(Procedure): Validate resource against profile http://hl7.org/fhir/StructureDefinition/Procedure
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[6].resource.ofType(Procedure): Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-teleradiotherapy-treatment-phase - listed in meta
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[7].resource.ofType(Observation): Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-stage-group
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: resource.value.ofType(CodeableConcept).coding[0]: Code System URI 'http://cancerstaging.org' is unknown so the code cannot be validated
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[7].resource.ofType(Observation): Validate resource against profile http://hl7.org/fhir/StructureDefinition/Observation
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[7].resource.ofType(Observation).value.ofType(CodeableConcept).coding[0]: Code System URI 'http://cancerstaging.org' is unknown so the code cannot be validated
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[7].resource.ofType(Observation): Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-stage-group - listed in meta
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[8].resource.ofType(Observation): Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-primary-tumor-category
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[8].resource.ofType(Observation): Validate resource against profile http://hl7.org/fhir/StructureDefinition/Observation
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[8].resource.ofType(Observation).value.ofType(CodeableConcept).coding[0]: Code System URI 'http://cancerstaging.org' is unknown so the code cannot be validated
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[8].resource.ofType(Observation): Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-primary-tumor-category - listed in meta
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[9].resource.ofType(Observation): Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-regional-nodes-category
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[9].resource.ofType(Observation): Validate resource against profile http://hl7.org/fhir/StructureDefinition/Observation
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[9].resource.ofType(Observation).value.ofType(CodeableConcept).coding[0]: Code System URI 'http://cancerstaging.org' is unknown so the code cannot be validated
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[9].resource.ofType(Observation): Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-regional-nodes-category - listed in meta
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[10].resource.ofType(Observation): Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-distant-metastases-category
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[10].resource.ofType(Observation): Validate resource against profile http://hl7.org/fhir/StructureDefinition/Observation
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[10].resource.ofType(Observation).value.ofType(CodeableConcept).coding[0]: Code System URI 'http://cancerstaging.org' is unknown so the code cannot be validated
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[10].resource.ofType(Observation): Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-distant-metastases-category - listed in meta
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[11].resource.ofType(Specimen): Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genetic-specimen
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[11].resource.ofType(Specimen): Validate resource against profile http://hl7.org/fhir/StructureDefinition/Specimen
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[11].resource.ofType(Specimen): Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genetic-specimen - listed in meta
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[12].resource.ofType(Observation): Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genomic-region-studied
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: resource.component[0].value.ofType(CodeableConcept).coding[1]: Code System URI 'http://www.genenames.org' is unknown so the code cannot be validated
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: resource.component[0].value.ofType(CodeableConcept).coding[2]: Code System URI 'http://www.genenames.org' is unknown so the code cannot be validated
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: resource.component[0].value.ofType(CodeableConcept).coding[3]: Code System URI 'http://www.genenames.org' is unknown so the code cannot be validated
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: resource.component[0].value.ofType(CodeableConcept).coding[4]: Code System URI 'http://www.genenames.org' is unknown so the code cannot be validated
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: resource.component[0].value.ofType(CodeableConcept).coding[5]: Code System URI 'http://www.genenames.org' is unknown so the code cannot be validated
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: resource.component[0].value.ofType(CodeableConcept).coding[6]: Code System URI 'http://www.genenames.org' is unknown so the code cannot be validated
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[12].resource.ofType(Observation): Validate resource against profile http://hl7.org/fhir/StructureDefinition/Observation
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[12].resource.ofType(Observation).component[0].value.ofType(CodeableConcept).coding[0]: Code System URI 'http://www.genenames.org' is unknown so the code cannot be validated
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[12].resource.ofType(Observation).component[0].value.ofType(CodeableConcept).coding[1]: Code System URI 'http://www.genenames.org' is unknown so the code cannot be validated
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[12].resource.ofType(Observation).component[0].value.ofType(CodeableConcept).coding[2]: Code System URI 'http://www.genenames.org' is unknown so the code cannot be validated
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[12].resource.ofType(Observation).component[0].value.ofType(CodeableConcept).coding[3]: Code System URI 'http://www.genenames.org' is unknown so the code cannot be validated
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[12].resource.ofType(Observation).component[0].value.ofType(CodeableConcept).coding[4]: Code System URI 'http://www.genenames.org' is unknown so the code cannot be validated
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[12].resource.ofType(Observation).component[0].value.ofType(CodeableConcept).coding[5]: Code System URI 'http://www.genenames.org' is unknown so the code cannot be validated
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[12].resource.ofType(Observation).component[0].value.ofType(CodeableConcept).coding[6]: Code System URI 'http://www.genenames.org' is unknown so the code cannot be validated
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[12].resource.ofType(Observation): Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genomic-region-studied - listed in meta
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[13].resource.ofType(Observation): Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-ecog-performance-status
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[13].resource.ofType(Observation): Validate resource against profile http://hl7.org/fhir/StructureDefinition/Observation
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[13].resource.ofType(Observation): Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-ecog-performance-status - listed in meta
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[14].resource.ofType(Observation): Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tumor-marker-test
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[14].resource.ofType(Observation): Validate resource against profile http://hl7.org/fhir/StructureDefinition/Observation
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[14].resource.ofType(Observation): Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tumor-marker-test - listed in meta
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[15].resource.ofType(Observation): Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tumor-marker-test
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[15].resource.ofType(Observation): Validate resource against profile http://hl7.org/fhir/StructureDefinition/Observation
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[15].resource.ofType(Observation): Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tumor-marker-test - listed in meta
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[16].resource.ofType(Observation): Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tumor-marker-test
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[16].resource.ofType(Observation): Validate resource against profile http://hl7.org/fhir/StructureDefinition/Observation
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[16].resource.ofType(Observation): Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tumor-marker-test - listed in meta
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[17].resource.ofType(Observation): Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tumor-marker-test
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: resource.code.coding[1]: Code System URI 'http://www.ncbi.nlm.nih.gov/gtr' is unknown so the code cannot be validated
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[17].resource.ofType(Observation): Validate resource against profile http://hl7.org/fhir/StructureDefinition/Observation
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[17].resource.ofType(Observation).code.coding[1]: Code System URI 'http://www.ncbi.nlm.nih.gov/gtr' is unknown so the code cannot be validated
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[17].resource.ofType(Observation): Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tumor-marker-test - listed in meta
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[18].resource.ofType(MedicationRequest): Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-related-medication-request
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[18].resource.ofType(MedicationRequest): Validate resource against profile http://hl7.org/fhir/StructureDefinition/MedicationRequest
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[18].resource.ofType(MedicationRequest): Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-related-medication-request - listed in meta
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[19].resource.ofType(MedicationRequest): Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-related-medication-request
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[19].resource.ofType(MedicationRequest): Validate resource against profile http://hl7.org/fhir/StructureDefinition/MedicationRequest
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[19].resource.ofType(MedicationRequest): Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-related-medication-request - listed in meta
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[20].resource.ofType(MedicationRequest): Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-related-medication-request
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[20].resource.ofType(MedicationRequest): Validate resource against profile http://hl7.org/fhir/StructureDefinition/MedicationRequest
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[20].resource.ofType(MedicationRequest): Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-related-medication-request - listed in meta
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[21].resource.ofType(MedicationRequest): Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-related-medication-request
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[21].resource.ofType(MedicationRequest): Validate resource against profile http://hl7.org/fhir/StructureDefinition/MedicationRequest
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[21].resource.ofType(MedicationRequest): Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-related-medication-request - listed in meta
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[22].resource.ofType(Observation): Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-comorbidities-elixhauser
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[22].resource.ofType(Observation): Validate resource against profile http://hl7.org/fhir/StructureDefinition/Observation
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[22].resource.ofType(Observation): Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-comorbidities-elixhauser - listed in meta
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[23].resource.ofType(Observation): Validate resource against profile http://hl7.org/fhir/StructureDefinition/vitalsigns
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[23].resource.ofType(Observation): Validate resource against profile http://hl7.org/fhir/StructureDefinition/bodyweight - listed in meta
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[23].resource.ofType(Observation): Validate resource against profile http://hl7.org/fhir/StructureDefinition/Observation
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[24].resource.ofType(Observation): Validate resource against profile http://hl7.org/fhir/StructureDefinition/Observation
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[24].resource.ofType(Observation): Validate resource against profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab - listed in meta
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[25].resource.ofType(Organization): Validate resource against profile http://hl7.org/fhir/StructureDefinition/Organization
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[25].resource.ofType(Organization): Validate resource against profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization - listed in meta
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[26].resource.ofType(Observation): Validate resource against profile http://hl7.org/fhir/StructureDefinition/Observation
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[26].resource.ofType(Observation): Validate resource against profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-smokingstatus - listed in meta
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[27].resource.ofType(Procedure): Validate resource against profile http://hl7.org/fhir/StructureDefinition/Procedure
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[27].resource.ofType(Procedure): Validate resource against profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-procedure - listed in meta
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[28].resource.ofType(Procedure): Validate resource against profile http://hl7.org/fhir/StructureDefinition/Procedure
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[28].resource.ofType(Procedure): Validate resource against profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-procedure - listed in meta
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[29].resource.ofType(FamilyMemberHistory): Validate resource against profile http://hl7.org/fhir/StructureDefinition/FamilyMemberHistory
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[30].resource.ofType(Procedure): Validate resource against profile http://hl7.org/fhir/StructureDefinition/Procedure
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[30].resource.ofType(Procedure): Validate resource against profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-procedure - listed in meta
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[31].resource.ofType(FamilyMemberHistory): Validate resource against profile http://hl7.org/fhir/StructureDefinition/FamilyMemberHistory
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[32].resource.ofType(DiagnosticReport): Validate resource against profile http://hl7.org/fhir/StructureDefinition/DiagnosticReport
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[32].resource.ofType(DiagnosticReport): Validate resource against profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-lab - listed in meta
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: resource.category[1]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-lab
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[33].resource.ofType(Observation): Validate resource against profile http://hl7.org/fhir/StructureDefinition/Observation
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[34].resource.ofType(Observation): Validate resource against profile http://hl7.org/fhir/StructureDefinition/Observation
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[34].resource.ofType(Observation): Validate resource against profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab - listed in meta
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[35].resource.ofType(Observation): Validate resource against profile http://hl7.org/fhir/StructureDefinition/Observation
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[35].resource.ofType(Observation): Validate resource against profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab - listed in meta
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[36].resource.ofType(Observation): Validate resource against profile http://hl7.org/fhir/StructureDefinition/Observation
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[36].resource.ofType(Observation): Validate resource against profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab - listed in meta
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[37].resource.ofType(Observation): Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tumor-size
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[37].resource.ofType(Observation): Validate resource against profile http://hl7.org/fhir/StructureDefinition/Observation
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[37].resource.ofType(Observation): Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tumor-size - listed in meta
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[38].resource.ofType(Observation): Validate resource against profile http://hl7.org/fhir/StructureDefinition/Observation
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[38].resource.ofType(Observation): Validate resource against profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab - listed in meta
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[39].resource.ofType(Practitioner): Validate resource against profile http://hl7.org/fhir/StructureDefinition/Practitioner
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[39].resource.ofType(Practitioner): Validate resource against profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner - listed in meta
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[40].resource.ofType(Practitioner): Validate resource against profile http://hl7.org/fhir/StructureDefinition/Practitioner
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[40].resource.ofType(Practitioner): Validate resource against profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner - listed in meta
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\CapabilityStatement-mcode-receiver-cancer-conditions-then-patients.json ==
+INFORMATION: CapabilityStatement/mcode-receiver-cancer-conditions-then-patients: CapabilityStatement: Validate resource against profile http://hl7.org/fhir/StructureDefinition/CapabilityStatement
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\CapabilityStatement-mcode-receiver-patient-bundle.json ==
+INFORMATION: CapabilityStatement/mcode-receiver-patient-bundle: CapabilityStatement: Validate resource against profile http://hl7.org/fhir/StructureDefinition/CapabilityStatement
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\CapabilityStatement-mcode-receiver-patients-and-cancer-conditions.json ==
+INFORMATION: CapabilityStatement/mcode-receiver-patients-and-cancer-conditions: CapabilityStatement: Validate resource against profile http://hl7.org/fhir/StructureDefinition/CapabilityStatement
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\CapabilityStatement-mcode-receiver-patients-in-group.json ==
+INFORMATION: CapabilityStatement/mcode-receiver-patients-in-group: CapabilityStatement: Validate resource against profile http://hl7.org/fhir/StructureDefinition/CapabilityStatement
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\CapabilityStatement-mcode-receiver-patients-with-cancer-condition.json ==
+INFORMATION: CapabilityStatement/mcode-receiver-patients-with-cancer-condition: CapabilityStatement: Validate resource against profile http://hl7.org/fhir/StructureDefinition/CapabilityStatement
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\CapabilityStatement-mcode-sender-cancer-conditions-then-patients.json ==
+INFORMATION: CapabilityStatement/mcode-sender-cancer-conditions-then-patients: CapabilityStatement: Validate resource against profile http://hl7.org/fhir/StructureDefinition/CapabilityStatement
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\CapabilityStatement-mcode-sender-patient-bundle.json ==
+INFORMATION: CapabilityStatement/mcode-sender-patient-bundle: CapabilityStatement: Validate resource against profile http://hl7.org/fhir/StructureDefinition/CapabilityStatement
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\CapabilityStatement-mcode-sender-patients-and-cancer-conditions.json ==
+INFORMATION: CapabilityStatement/mcode-sender-patients-and-cancer-conditions: CapabilityStatement: Validate resource against profile http://hl7.org/fhir/StructureDefinition/CapabilityStatement
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\CapabilityStatement-mcode-sender-patients-in-group.json ==
+INFORMATION: CapabilityStatement/mcode-sender-patients-in-group: CapabilityStatement: Validate resource against profile http://hl7.org/fhir/StructureDefinition/CapabilityStatement
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\CapabilityStatement-mcode-sender-patients-with-cancer-condition.json ==
+INFORMATION: CapabilityStatement/mcode-sender-patients-with-cancer-condition: CapabilityStatement: Validate resource against profile http://hl7.org/fhir/StructureDefinition/CapabilityStatement
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\CodeSystem-comorbidities-elixhauser-cs.json ==
+INFORMATION: CodeSystem/comorbidities-elixhauser-cs: CodeSystem: Validate resource against profile http://hl7.org/fhir/StructureDefinition/CodeSystem
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\CodeSystem-mcode-catch-code-cs.json ==
+INFORMATION: CodeSystem/mcode-catch-code-cs: CodeSystem: Validate resource against profile http://hl7.org/fhir/StructureDefinition/CodeSystem
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\CodeSystem-mcode-resource-identifier-cs.json ==
+INFORMATION: CodeSystem/mcode-resource-identifier-cs: CodeSystem: Validate resource against profile http://hl7.org/fhir/StructureDefinition/CodeSystem
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\CodeSystem-radiotherapy-cs.json ==
+INFORMATION: CodeSystem/radiotherapy-cs: CodeSystem: Validate resource against profile http://hl7.org/fhir/StructureDefinition/CodeSystem
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\Condition-primary-cancer-condition-breast.json ==
+INFORMATION: Condition/primary-cancer-condition-breast: Condition: Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-primary-cancer-condition
+INFORMATION: Condition/primary-cancer-condition-breast: Condition.stage[0].summary.coding[0]: Code System URI 'http://cancerstaging.org' is unknown so the code cannot be validated
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\Condition-primary-cancer-condition-cll.json ==
+INFORMATION: Condition/primary-cancer-condition-cll: Condition: Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-primary-cancer-condition
+INFORMATION: Condition/primary-cancer-condition-cll: Condition.stage[0].summary.coding[0]: Code System URI 'http://terminology.hl7.org/CodeSystem/umls' is unknown so the code cannot be validated
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\Condition-primary-cancer-condition-jenny-m.json ==
+INFORMATION: Condition/primary-cancer-condition-jenny-m: Condition: Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-primary-cancer-condition
+INFORMATION: Condition/primary-cancer-condition-jenny-m: Condition.stage[0].summary.coding[0]: Code System URI 'http://cancerstaging.org' is unknown so the code cannot be validated
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\Condition-primary-cancer-condition-nsclc.json ==
+INFORMATION: Condition/primary-cancer-condition-nsclc: Condition: Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-primary-cancer-condition
+INFORMATION: Condition/primary-cancer-condition-nsclc: Condition.stage[0].summary.coding[0]: Code System URI 'http://cancerstaging.org' is unknown so the code cannot be validated
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\Condition-secondary-cancer-condition-brain-mets.json ==
+INFORMATION: Condition/secondary-cancer-condition-brain-mets: Condition: Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-secondary-cancer-condition
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\Condition-us-core-condition-anxiety-jenny-m.json ==
+INFORMATION: Condition/us-core-condition-anxiety-jenny-m: Condition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/Condition
+INFORMATION: Condition/us-core-condition-anxiety-jenny-m: Condition: Validate resource against profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition - listed in meta
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\Condition-us-core-condition-depression-jenny-m.json ==
+INFORMATION: Condition/us-core-condition-depression-jenny-m: Condition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/Condition
+INFORMATION: Condition/us-core-condition-depression-jenny-m: Condition: Validate resource against profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition - listed in meta
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\Condition-us-core-condition-hypertension-jenny-m.json ==
+INFORMATION: Condition/us-core-condition-hypertension-jenny-m: Condition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/Condition
+INFORMATION: Condition/us-core-condition-hypertension-jenny-m: Condition: Validate resource against profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition - listed in meta
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\DiagnosticReport-cancer-genomics-report-jenny-m.json ==
+INFORMATION: DiagnosticReport/cancer-genomics-report-jenny-m: DiagnosticReport: Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genomics-report
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\DiagnosticReport-cancer-genomics-report-john-anyperson.json ==
+INFORMATION: DiagnosticReport/cancer-genomics-report-john-anyperson: DiagnosticReport: Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genomics-report
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\DiagnosticReport-us-core-diagnosticreport-lab-jenny-m.json ==
+INFORMATION: DiagnosticReport/us-core-diagnosticreport-lab-jenny-m: DiagnosticReport: Validate resource against profile http://hl7.org/fhir/StructureDefinition/DiagnosticReport
+INFORMATION: DiagnosticReport/us-core-diagnosticreport-lab-jenny-m: DiagnosticReport: Validate resource against profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-lab - listed in meta
+INFORMATION: DiagnosticReport/us-core-diagnosticreport-lab-jenny-m: DiagnosticReport.category[1]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-lab
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\FamilyMemberHistory-family-member-history-aunt-jenny-m.json ==
+INFORMATION: FamilyMemberHistory/family-member-history-aunt-jenny-m: FamilyMemberHistory: Validate resource against profile http://hl7.org/fhir/StructureDefinition/FamilyMemberHistory
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\FamilyMemberHistory-family-member-history-sister-jenny-m.json ==
+INFORMATION: FamilyMemberHistory/family-member-history-sister-jenny-m: FamilyMemberHistory: Validate resource against profile http://hl7.org/fhir/StructureDefinition/FamilyMemberHistory
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\FamilyMemberHistory-family-member-history-uncle-jenny-m.json ==
+INFORMATION: FamilyMemberHistory/family-member-history-uncle-jenny-m: FamilyMemberHistory: Validate resource against profile http://hl7.org/fhir/StructureDefinition/FamilyMemberHistory
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\Group-group-mcode-patients.json ==
+INFORMATION: Group/group-mcode-patients: Group: Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-group
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\MedicationAdministration-cancer-related-medication-administration-doxorubicin-jenny-m.json ==
+INFORMATION: MedicationAdministration/cancer-related-medication-administration-doxorubicin-jenny-m: MedicationAdministration: Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-related-medication-administration
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\MedicationRequest-cancer-related-medication-request-anastrozole-jenny-m.json ==
+INFORMATION: MedicationRequest/cancer-related-medication-request-anastrozole-jenny-m: MedicationRequest: Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-related-medication-request
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\MedicationRequest-cancer-related-medication-request-cisplatin.json ==
+INFORMATION: MedicationRequest/cancer-related-medication-request-cisplatin: MedicationRequest: Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-related-medication-request
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\MedicationRequest-cancer-related-medication-request-cyclophosphamide-jenny-m.json ==
+INFORMATION: MedicationRequest/cancer-related-medication-request-cyclophosphamide-jenny-m: MedicationRequest: Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-related-medication-request
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\MedicationRequest-cancer-related-medication-request-doxorubicin-jenny-m.json ==
+INFORMATION: MedicationRequest/cancer-related-medication-request-doxorubicin-jenny-m: MedicationRequest: Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-related-medication-request
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\MedicationRequest-cancer-related-medication-request-gefitinib.json ==
+INFORMATION: MedicationRequest/cancer-related-medication-request-gefitinib: MedicationRequest: Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-related-medication-request
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\MedicationRequest-cancer-related-medication-request-paclitaxel-jenny-m.json ==
+INFORMATION: MedicationRequest/cancer-related-medication-request-paclitaxel-jenny-m: MedicationRequest: Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-related-medication-request
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\Observation-binet-stage-group-A.json ==
+INFORMATION: Observation/binet-stage-group-A: Observation: Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-stage-group
+INFORMATION: Observation/binet-stage-group-A: Observation.value.ofType(CodeableConcept).coding[0]: Code System URI 'http://terminology.hl7.org/CodeSystem/umls' is unknown so the code cannot be validated
+INFORMATION: Observation/binet-stage-group-A: Observation.method.coding[0]: Code System URI 'http://terminology.hl7.org/CodeSystem/umls' is unknown so the code cannot be validated
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\Observation-bodyheight-jenny-m-2018-03-06.json ==
+INFORMATION: Observation/bodyheight-jenny-m-2018-03-06: Observation: Validate resource against profile http://hl7.org/fhir/StructureDefinition/Observation
+INFORMATION: Observation/bodyheight-jenny-m-2018-03-06: Observation: Validate resource against profile http://hl7.org/fhir/StructureDefinition/bodyheight - listed in meta
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\Observation-bodyweight-jenny-m-2018-03-16.json ==
+INFORMATION: Observation/bodyweight-jenny-m-2018-03-16: Observation: Validate resource against profile http://hl7.org/fhir/StructureDefinition/Observation
+INFORMATION: Observation/bodyweight-jenny-m-2018-03-16: Observation: Validate resource against profile http://hl7.org/fhir/StructureDefinition/bodyweight - listed in meta
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\Observation-bodyweight-jenny-m-2018-04-22.json ==
+INFORMATION: Observation/bodyweight-jenny-m-2018-04-22: Observation: Validate resource against profile http://hl7.org/fhir/StructureDefinition/Observation
+INFORMATION: Observation/bodyweight-jenny-m-2018-04-22: Observation: Validate resource against profile http://hl7.org/fhir/StructureDefinition/bodyweight - listed in meta
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\Observation-cancer-disease-status-improved.json ==
+INFORMATION: Observation/cancer-disease-status-improved: Observation: Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-disease-status
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\Observation-cancer-disease-status-jenny-m.json ==
+INFORMATION: Observation/cancer-disease-status-jenny-m: Observation: Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-disease-status
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\Observation-cancer-genetic-variant-germline-deletion.json ==
+INFORMATION: Observation/cancer-genetic-variant-germline-deletion: Observation: Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genetic-variant
+INFORMATION: Observation/cancer-genetic-variant-germline-deletion: Observation.component[0].value.ofType(CodeableConcept).coding[0]: Code System URI 'http://www.genenames.org' is unknown so the code cannot be validated
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\Observation-cancer-genetic-variant-jenny-m.json ==
+INFORMATION: Observation/cancer-genetic-variant-jenny-m: Observation: Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genetic-variant
+INFORMATION: Observation/cancer-genetic-variant-jenny-m: Observation.component[0].value.ofType(CodeableConcept).coding[0]: Code System URI 'http://www.genenames.org' is unknown so the code cannot be validated
+INFORMATION: Observation/cancer-genetic-variant-jenny-m: Observation.component[1].value.ofType(CodeableConcept).coding[0]: Code System URI 'http://www.ncbi.nlm.nih.gov/clinvar' is unknown so the code cannot be validated
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\Observation-cancer-genetic-variant-somatic-single-nucleotide.json ==
+INFORMATION: Observation/cancer-genetic-variant-somatic-single-nucleotide: Observation: Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genetic-variant
+INFORMATION: Observation/cancer-genetic-variant-somatic-single-nucleotide: Observation.component[0].value.ofType(CodeableConcept).coding[0]: Code System URI 'http://www.genenames.org' is unknown so the code cannot be validated
+INFORMATION: Observation/cancer-genetic-variant-somatic-single-nucleotide: Observation.component[1].value.ofType(CodeableConcept).coding[0]: Code System URI 'http://www.ncbi.nlm.nih.gov/clinvar' is unknown so the code cannot be validated
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\Observation-cancer-related-mcode-comorbidities-elixhauser-jenny-m.json ==
+INFORMATION: Observation/cancer-related-mcode-comorbidities-elixhauser-jenny-m: Observation: Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-comorbidities-elixhauser
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\Observation-cancer-related-mcode-comorbidities-elixhauser-john-anyperson.json ==
+INFORMATION: Observation/cancer-related-mcode-comorbidities-elixhauser-john-anyperson: Observation: Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-comorbidities-elixhauser
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\Observation-ecog-performance-status-fully-active.json ==
+INFORMATION: Observation/ecog-performance-status-fully-active: Observation: Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-ecog-performance-status
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\Observation-ecog-performance-status-jenny-m.json ==
+INFORMATION: Observation/ecog-performance-status-jenny-m: Observation: Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-ecog-performance-status
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\Observation-genomic-region-studied-jenny-m.json ==
+INFORMATION: Observation/genomic-region-studied-jenny-m: Observation: Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genomic-region-studied
+INFORMATION: Observation/genomic-region-studied-jenny-m: Observation.component[0].value.ofType(CodeableConcept).coding[0]: Code System URI 'http://www.genenames.org' is unknown so the code cannot be validated
+INFORMATION: Observation/genomic-region-studied-jenny-m: Observation.component[0].value.ofType(CodeableConcept).coding[1]: Code System URI 'http://www.genenames.org' is unknown so the code cannot be validated
+INFORMATION: Observation/genomic-region-studied-jenny-m: Observation.component[0].value.ofType(CodeableConcept).coding[2]: Code System URI 'http://www.genenames.org' is unknown so the code cannot be validated
+INFORMATION: Observation/genomic-region-studied-jenny-m: Observation.component[0].value.ofType(CodeableConcept).coding[3]: Code System URI 'http://www.genenames.org' is unknown so the code cannot be validated
+INFORMATION: Observation/genomic-region-studied-jenny-m: Observation.component[0].value.ofType(CodeableConcept).coding[4]: Code System URI 'http://www.genenames.org' is unknown so the code cannot be validated
+INFORMATION: Observation/genomic-region-studied-jenny-m: Observation.component[0].value.ofType(CodeableConcept).coding[5]: Code System URI 'http://www.genenames.org' is unknown so the code cannot be validated
+INFORMATION: Observation/genomic-region-studied-jenny-m: Observation.component[0].value.ofType(CodeableConcept).coding[6]: Code System URI 'http://www.genenames.org' is unknown so the code cannot be validated
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\Observation-genomic-region-studied-stk11.json ==
+INFORMATION: Observation/genomic-region-studied-stk11: Observation: Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genomic-region-studied
+INFORMATION: Observation/genomic-region-studied-stk11: Observation.component[0].value.ofType(CodeableConcept).coding[0]: Code System URI 'http://www.genenames.org' is unknown so the code cannot be validated
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\Observation-karnofsky-performance-status-normal-activity.json ==
+INFORMATION: Observation/karnofsky-performance-status-normal-activity: Observation: Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-karnofsky-performance-status
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\Observation-lab-result-observation-hemoglobin.json ==
+INFORMATION: Observation/lab-result-observation-hemoglobin: Observation: Validate resource against profile http://hl7.org/fhir/StructureDefinition/Observation
+INFORMATION: Observation/lab-result-observation-hemoglobin: Observation: Validate resource against profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab - listed in meta
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\Observation-observation-smoking-history-jenny-m.json ==
+INFORMATION: Observation/observation-smoking-history-jenny-m: Observation: Validate resource against profile http://hl7.org/fhir/StructureDefinition/Observation
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\Observation-tnm-clinical-distant-metastases-category-cM0.json ==
+INFORMATION: Observation/tnm-clinical-distant-metastases-category-cM0: Observation: Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-distant-metastases-category
+INFORMATION: Observation/tnm-clinical-distant-metastases-category-cM0: Observation.value.ofType(CodeableConcept).coding[0]: Code System URI 'http://cancerstaging.org' is unknown so the code cannot be validated
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\Observation-tnm-clinical-distant-metastases-category-jenny-m.json ==
+INFORMATION: Observation/tnm-clinical-distant-metastases-category-jenny-m: Observation: Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-distant-metastases-category
+INFORMATION: Observation/tnm-clinical-distant-metastases-category-jenny-m: Observation.value.ofType(CodeableConcept).coding[0]: Code System URI 'http://cancerstaging.org' is unknown so the code cannot be validated
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\Observation-tnm-clinical-primary-tumor-category-cT3.json ==
+INFORMATION: Observation/tnm-clinical-primary-tumor-category-cT3: Observation: Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-primary-tumor-category
+INFORMATION: Observation/tnm-clinical-primary-tumor-category-cT3: Observation.value.ofType(CodeableConcept).coding[0]: Code System URI 'http://cancerstaging.org' is unknown so the code cannot be validated
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\Observation-tnm-clinical-primary-tumor-category-jenny-m.json ==
+INFORMATION: Observation/tnm-clinical-primary-tumor-category-jenny-m: Observation: Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-primary-tumor-category
+INFORMATION: Observation/tnm-clinical-primary-tumor-category-jenny-m: Observation.value.ofType(CodeableConcept).coding[0]: Code System URI 'http://cancerstaging.org' is unknown so the code cannot be validated
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\Observation-tnm-clinical-regional-nodes-category-cN3.json ==
+INFORMATION: Observation/tnm-clinical-regional-nodes-category-cN3: Observation: Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-regional-nodes-category
+INFORMATION: Observation/tnm-clinical-regional-nodes-category-cN3: Observation.value.ofType(CodeableConcept).coding[0]: Code System URI 'http://cancerstaging.org' is unknown so the code cannot be validated
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\Observation-tnm-clinical-regional-nodes-category-jenny-m.json ==
+INFORMATION: Observation/tnm-clinical-regional-nodes-category-jenny-m: Observation: Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-regional-nodes-category
+INFORMATION: Observation/tnm-clinical-regional-nodes-category-jenny-m: Observation.value.ofType(CodeableConcept).coding[0]: Code System URI 'http://cancerstaging.org' is unknown so the code cannot be validated
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\Observation-tnm-clinical-stage-group-3c.json ==
+INFORMATION: Observation/tnm-clinical-stage-group-3c: Observation: Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-stage-group
+INFORMATION: Observation/tnm-clinical-stage-group-3c: Observation.value.ofType(CodeableConcept).coding[0]: Code System URI 'http://cancerstaging.org' is unknown so the code cannot be validated
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\Observation-tnm-clinical-stage-group-jenny-m.json ==
+INFORMATION: Observation/tnm-clinical-stage-group-jenny-m: Observation: Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-stage-group
+INFORMATION: Observation/tnm-clinical-stage-group-jenny-m: Observation.value.ofType(CodeableConcept).coding[0]: Code System URI 'http://cancerstaging.org' is unknown so the code cannot be validated
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\Observation-tnm-pathologic-distant-metastases-category-jenny-m.json ==
+INFORMATION: Observation/tnm-pathologic-distant-metastases-category-jenny-m: Observation: Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-distant-metastases-category
+INFORMATION: Observation/tnm-pathologic-distant-metastases-category-jenny-m: Observation.value.ofType(CodeableConcept).coding[0]: Code System URI 'http://cancerstaging.org' is unknown so the code cannot be validated
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\Observation-tnm-pathologic-primary-tumor-category-jenny-m.json ==
+INFORMATION: Observation/tnm-pathologic-primary-tumor-category-jenny-m: Observation: Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-primary-tumor-category
+INFORMATION: Observation/tnm-pathologic-primary-tumor-category-jenny-m: Observation.value.ofType(CodeableConcept).coding[0]: Code System URI 'http://cancerstaging.org' is unknown so the code cannot be validated
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\Observation-tnm-pathologic-regional-nodes-category-jenny-m.json ==
+INFORMATION: Observation/tnm-pathologic-regional-nodes-category-jenny-m: Observation: Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-regional-nodes-category
+INFORMATION: Observation/tnm-pathologic-regional-nodes-category-jenny-m: Observation.value.ofType(CodeableConcept).coding[0]: Code System URI 'http://cancerstaging.org' is unknown so the code cannot be validated
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\Observation-tnm-pathologic-stage-group-jenny-m.json ==
+INFORMATION: Observation/tnm-pathologic-stage-group-jenny-m: Observation: Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-stage-group
+INFORMATION: Observation/tnm-pathologic-stage-group-jenny-m: Observation.value.ofType(CodeableConcept).coding[0]: Code System URI 'http://cancerstaging.org' is unknown so the code cannot be validated
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\Observation-tumor-marker-test-egf.json ==
+INFORMATION: Observation/tumor-marker-test-egf: Observation: Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tumor-marker-test
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\Observation-tumor-marker-test-er-jenny-m.json ==
+INFORMATION: Observation/tumor-marker-test-er-jenny-m: Observation: Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tumor-marker-test
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\Observation-tumor-marker-test-her2-jenny-m.json ==
+INFORMATION: Observation/tumor-marker-test-her2-jenny-m: Observation: Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tumor-marker-test
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\Observation-tumor-marker-test-oncotype-dx-jenny-m.json ==
+INFORMATION: Observation/tumor-marker-test-oncotype-dx-jenny-m: Observation: Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tumor-marker-test
+INFORMATION: Observation/tumor-marker-test-oncotype-dx-jenny-m: Observation.code.coding[1]: Code System URI 'http://www.ncbi.nlm.nih.gov/gtr' is unknown so the code cannot be validated
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\Observation-tumor-marker-test-pr-jenny-m.json ==
+INFORMATION: Observation/tumor-marker-test-pr-jenny-m: Observation: Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tumor-marker-test
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\Observation-tumor-size-jenny-m.json ==
+INFORMATION: Observation/tumor-size-jenny-m: Observation: Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tumor-size
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\Observation-tumor-size-pathology.json ==
+INFORMATION: Observation/tumor-size-pathology: Observation: Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tumor-size
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\Observation-us-core-observation-lab-neutrophils-jenny-m.json ==
+INFORMATION: Observation/us-core-observation-lab-neutrophils-jenny-m: Observation: Validate resource against profile http://hl7.org/fhir/StructureDefinition/Observation
+INFORMATION: Observation/us-core-observation-lab-neutrophils-jenny-m: Observation: Validate resource against profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab - listed in meta
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\Observation-us-core-observation-lab-sentinel-nodes-jenny-m.json ==
+INFORMATION: Observation/us-core-observation-lab-sentinel-nodes-jenny-m: Observation: Validate resource against profile http://hl7.org/fhir/StructureDefinition/Observation
+INFORMATION: Observation/us-core-observation-lab-sentinel-nodes-jenny-m: Observation: Validate resource against profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab - listed in meta
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\Observation-us-core-observation-lab-tumor-dcis-jenny-m.json ==
+INFORMATION: Observation/us-core-observation-lab-tumor-dcis-jenny-m: Observation: Validate resource against profile http://hl7.org/fhir/StructureDefinition/Observation
+INFORMATION: Observation/us-core-observation-lab-tumor-dcis-jenny-m: Observation: Validate resource against profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab - listed in meta
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\Observation-us-core-observation-lab-tumor-invasion-jenny-m.json ==
+INFORMATION: Observation/us-core-observation-lab-tumor-invasion-jenny-m: Observation: Validate resource against profile http://hl7.org/fhir/StructureDefinition/Observation
+INFORMATION: Observation/us-core-observation-lab-tumor-invasion-jenny-m: Observation: Validate resource against profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab - listed in meta
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\Observation-us-core-observation-lab-tumor-margins-jenny-m.json ==
+INFORMATION: Observation/us-core-observation-lab-tumor-margins-jenny-m: Observation: Validate resource against profile http://hl7.org/fhir/StructureDefinition/Observation
+INFORMATION: Observation/us-core-observation-lab-tumor-margins-jenny-m: Observation: Validate resource against profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab - listed in meta
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\Observation-us-core-smokingstatus-jenny-m.json ==
+INFORMATION: Observation/us-core-smokingstatus-jenny-m: Observation: Validate resource against profile http://hl7.org/fhir/StructureDefinition/Observation
+INFORMATION: Observation/us-core-smokingstatus-jenny-m: Observation: Validate resource against profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-smokingstatus - listed in meta
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\OperationDefinition-mcode-patient-everything.json ==
+INFORMATION: OperationDefinition/mcode-patient-everything: OperationDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/OperationDefinition
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\Organization-us-core-organization-bedrock-medicine.json ==
+INFORMATION: Organization/us-core-organization-bedrock-medicine: Organization: Validate resource against profile http://hl7.org/fhir/StructureDefinition/Organization
+INFORMATION: Organization/us-core-organization-bedrock-medicine: Organization: Validate resource against profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization - listed in meta
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\Organization-us-core-organization-physician-services-inc.json ==
+INFORMATION: Organization/us-core-organization-physician-services-inc: Organization: Validate resource against profile http://hl7.org/fhir/StructureDefinition/Organization
+INFORMATION: Organization/us-core-organization-physician-services-inc: Organization: Validate resource against profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization - listed in meta
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\Patient-cancer-patient-adam-everyman.json ==
+INFORMATION: Patient/cancer-patient-adam-everyman: Patient: Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-patient
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\Patient-cancer-patient-eve-anyperson.json ==
+INFORMATION: Patient/cancer-patient-eve-anyperson: Patient: Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-patient
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\Patient-cancer-patient-jenny-m.json ==
+INFORMATION: Patient/cancer-patient-jenny-m: Patient: Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-patient
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\Patient-cancer-patient-john-anyperson.json ==
+INFORMATION: Patient/cancer-patient-john-anyperson: Patient: Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-patient
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\Practitioner-us-core-practitioner-jane-radiotech.json ==
+INFORMATION: Practitioner/us-core-practitioner-jane-radiotech: Practitioner: Validate resource against profile http://hl7.org/fhir/StructureDefinition/Practitioner
+INFORMATION: Practitioner/us-core-practitioner-jane-radiotech: Practitioner: Validate resource against profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner - listed in meta
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\Practitioner-us-core-practitioner-kyle-anydoc.json ==
+INFORMATION: Practitioner/us-core-practitioner-kyle-anydoc: Practitioner: Validate resource against profile http://hl7.org/fhir/StructureDefinition/Practitioner
+INFORMATION: Practitioner/us-core-practitioner-kyle-anydoc: Practitioner: Validate resource against profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner - listed in meta
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\Practitioner-us-core-practitioner-mary-obgyn.json ==
+INFORMATION: Practitioner/us-core-practitioner-mary-obgyn: Practitioner: Validate resource against profile http://hl7.org/fhir/StructureDefinition/Practitioner
+INFORMATION: Practitioner/us-core-practitioner-mary-obgyn: Practitioner: Validate resource against profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner - listed in meta
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\Practitioner-us-core-practitioner-nancy-oncology-nurse.json ==
+INFORMATION: Practitioner/us-core-practitioner-nancy-oncology-nurse: Practitioner: Validate resource against profile http://hl7.org/fhir/StructureDefinition/Practitioner
+INFORMATION: Practitioner/us-core-practitioner-nancy-oncology-nurse: Practitioner: Validate resource against profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner - listed in meta
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\Practitioner-us-core-practitioner-owen-oncologist.json ==
+INFORMATION: Practitioner/us-core-practitioner-owen-oncologist: Practitioner: Validate resource against profile http://hl7.org/fhir/StructureDefinition/Practitioner
+INFORMATION: Practitioner/us-core-practitioner-owen-oncologist: Practitioner: Validate resource against profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner - listed in meta
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\Practitioner-us-core-practitioner-peter-pathologist.json ==
+INFORMATION: Practitioner/us-core-practitioner-peter-pathologist: Practitioner: Validate resource against profile http://hl7.org/fhir/StructureDefinition/Practitioner
+INFORMATION: Practitioner/us-core-practitioner-peter-pathologist: Practitioner: Validate resource against profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner - listed in meta
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\Procedure-brachytherapy-treatment-phase-low-dose-rate-temporary.json ==
+INFORMATION: Procedure/brachytherapy-treatment-phase-low-dose-rate-temporary: Procedure: Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-brachytherapy-treatment-phase
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\Procedure-cancer-related-surgical-procedure-jenny-m.json ==
+INFORMATION: Procedure/cancer-related-surgical-procedure-jenny-m: Procedure: Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-related-surgical-procedure
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\Procedure-cancer-related-surgical-procedure-lobectomy.json ==
+INFORMATION: Procedure/cancer-related-surgical-procedure-lobectomy: Procedure: Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-related-surgical-procedure
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\Procedure-radiotherapy-treatment-summary-chest-wall-jenny-m.json ==
+INFORMATION: Procedure/radiotherapy-treatment-summary-chest-wall-jenny-m: Procedure: Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-course-summary
+INFORMATION: Procedure/radiotherapy-treatment-summary-chest-wall-jenny-m: Procedure.extension[2].value.ofType(CodeableConcept).coding[0]: Code System URI 'http://terminology.hl7.org/CodeSystem/umls' is unknown so the code cannot be validated
+INFORMATION: Procedure/radiotherapy-treatment-summary-chest-wall-jenny-m: Procedure.extension[4].value.ofType(CodeableConcept).coding[0]: Code System URI 'http://terminology.hl7.org/CodeSystem/umls' is unknown so the code cannot be validated
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\Procedure-teleradiotherapy-treatment-phase-boost-jenny-m.json ==
+INFORMATION: Procedure/teleradiotherapy-treatment-phase-boost-jenny-m: Procedure: Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-teleradiotherapy-treatment-phase
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\Procedure-teleradiotherapy-treatment-phase-chest-wall-jenny-m.json ==
+INFORMATION: Procedure/teleradiotherapy-treatment-phase-chest-wall-jenny-m: Procedure: Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-teleradiotherapy-treatment-phase
+INFORMATION: Procedure/teleradiotherapy-treatment-phase-chest-wall-jenny-m: Procedure.extension[0].value.ofType(CodeableConcept).coding[0]: Code System URI 'http://terminology.hl7.org/CodeSystem/umls' is unknown so the code cannot be validated
+INFORMATION: Procedure/teleradiotherapy-treatment-phase-chest-wall-jenny-m: Procedure.extension[1].value.ofType(CodeableConcept).coding[0]: Code System URI 'http://terminology.hl7.org/CodeSystem/umls' is unknown so the code cannot be validated
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\Procedure-us-core-procedure-biopsy-jenny-m.json ==
+INFORMATION: Procedure/us-core-procedure-biopsy-jenny-m: Procedure: Validate resource against profile http://hl7.org/fhir/StructureDefinition/Procedure
+INFORMATION: Procedure/us-core-procedure-biopsy-jenny-m: Procedure: Validate resource against profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-procedure - listed in meta
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\Procedure-us-core-procedure-mammogram-jenny-m.json ==
+INFORMATION: Procedure/us-core-procedure-mammogram-jenny-m: Procedure: Validate resource against profile http://hl7.org/fhir/StructureDefinition/Procedure
+INFORMATION: Procedure/us-core-procedure-mammogram-jenny-m: Procedure: Validate resource against profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-procedure - listed in meta
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\SearchParameter-Condition-code.json ==
+INFORMATION: SearchParameter/Condition-code: SearchParameter: Validate resource against profile http://hl7.org/fhir/StructureDefinition/SearchParameter
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\SearchParameter-Patient-id.json ==
+INFORMATION: SearchParameter/Patient-id: SearchParameter: Validate resource against profile http://hl7.org/fhir/StructureDefinition/SearchParameter
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\Specimen-genetic-specimen-left-breast-jenny-m.json ==
+INFORMATION: Specimen/genetic-specimen-left-breast-jenny-m: Specimen: Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genetic-specimen
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\Specimen-genetic-specimen-lung.json ==
+INFORMATION: Specimen/genetic-specimen-lung: Specimen: Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genetic-specimen
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\Specimen-tumor-specimen-left-breast-jenny-m.json ==
+INFORMATION: Specimen/tumor-specimen-left-breast-jenny-m: Specimen: Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tumor-specimen
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\Specimen-tumor-specimen-lobular-carcinoma-left-breast.json ==
+INFORMATION: Specimen/tumor-specimen-lobular-carcinoma-left-breast: Specimen: Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tumor-specimen
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\StructureDefinition-mcode-body-structure-identifier.json ==
+INFORMATION: StructureDefinition/mcode-body-structure-identifier: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\StructureDefinition-mcode-brachytherapy-treatment-phase.json ==
+INFORMATION: StructureDefinition/mcode-brachytherapy-treatment-phase: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\StructureDefinition-mcode-cancer-disease-status.json ==
+INFORMATION: StructureDefinition/mcode-cancer-disease-status: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\StructureDefinition-mcode-cancer-genetic-variant.json ==
+INFORMATION: StructureDefinition/mcode-cancer-genetic-variant: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\StructureDefinition-mcode-cancer-genomics-report.json ==
+INFORMATION: StructureDefinition/mcode-cancer-genomics-report: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\StructureDefinition-mcode-cancer-patient.json ==
+INFORMATION: StructureDefinition/mcode-cancer-patient: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\StructureDefinition-mcode-cancer-related-medication-administration.json ==
+INFORMATION: StructureDefinition/mcode-cancer-related-medication-administration: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\StructureDefinition-mcode-cancer-related-medication-request.json ==
+INFORMATION: StructureDefinition/mcode-cancer-related-medication-request: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\StructureDefinition-mcode-cancer-related-surgical-procedure.json ==
+INFORMATION: StructureDefinition/mcode-cancer-related-surgical-procedure: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\StructureDefinition-mcode-cancer-stage-group.json ==
+INFORMATION: StructureDefinition/mcode-cancer-stage-group: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\StructureDefinition-mcode-comorbid-condition-code.json ==
+INFORMATION: StructureDefinition/mcode-comorbid-condition-code: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\StructureDefinition-mcode-comorbid-condition-reference.json ==
+INFORMATION: StructureDefinition/mcode-comorbid-condition-reference: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\StructureDefinition-mcode-comorbidities-elixhauser.json ==
+INFORMATION: StructureDefinition/mcode-comorbidities-elixhauser: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\StructureDefinition-mcode-comorbidities-parent.json ==
+INFORMATION: StructureDefinition/mcode-comorbidities-parent: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\StructureDefinition-mcode-condition-related.json ==
+INFORMATION: StructureDefinition/mcode-condition-related: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\StructureDefinition-mcode-ecog-performance-status.json ==
+INFORMATION: StructureDefinition/mcode-ecog-performance-status: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\StructureDefinition-mcode-evidence-type.json ==
+INFORMATION: StructureDefinition/mcode-evidence-type: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\StructureDefinition-mcode-genetic-specimen.json ==
+INFORMATION: StructureDefinition/mcode-genetic-specimen: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\StructureDefinition-mcode-genomic-region-studied.json ==
+INFORMATION: StructureDefinition/mcode-genomic-region-studied: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\StructureDefinition-mcode-histology-morphology-behavior.json ==
+INFORMATION: StructureDefinition/mcode-histology-morphology-behavior: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\StructureDefinition-mcode-karnofsky-performance-status.json ==
+INFORMATION: StructureDefinition/mcode-karnofsky-performance-status: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\StructureDefinition-mcode-location-qualifier.json ==
+INFORMATION: StructureDefinition/mcode-location-qualifier: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\StructureDefinition-mcode-patient-bundle.json ==
+INFORMATION: StructureDefinition/mcode-patient-bundle: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\StructureDefinition-mcode-patient-group.json ==
+INFORMATION: StructureDefinition/mcode-patient-group: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\StructureDefinition-mcode-primary-cancer-condition.json ==
+INFORMATION: StructureDefinition/mcode-primary-cancer-condition: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\StructureDefinition-mcode-radiotherapy-course-summary.json ==
+INFORMATION: StructureDefinition/mcode-radiotherapy-course-summary: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\StructureDefinition-mcode-radiotherapy-dose-delivered-to-volume.json ==
+INFORMATION: StructureDefinition/mcode-radiotherapy-dose-delivered-to-volume: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\StructureDefinition-mcode-radiotherapy-fractions-delivered.json ==
+INFORMATION: StructureDefinition/mcode-radiotherapy-fractions-delivered: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\StructureDefinition-mcode-radiotherapy-modality.json ==
+INFORMATION: StructureDefinition/mcode-radiotherapy-modality: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\StructureDefinition-mcode-radiotherapy-sessions.json ==
+INFORMATION: StructureDefinition/mcode-radiotherapy-sessions: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\StructureDefinition-mcode-radiotherapy-technique.json ==
+INFORMATION: StructureDefinition/mcode-radiotherapy-technique: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\StructureDefinition-mcode-radiotherapy-volume.json ==
+INFORMATION: StructureDefinition/mcode-radiotherapy-volume: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\StructureDefinition-mcode-secondary-cancer-condition.json ==
+INFORMATION: StructureDefinition/mcode-secondary-cancer-condition: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\StructureDefinition-mcode-teleradiotherapy-treatment-phase.json ==
+INFORMATION: StructureDefinition/mcode-teleradiotherapy-treatment-phase: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\StructureDefinition-mcode-tnm-distant-metastases-category.json ==
+INFORMATION: StructureDefinition/mcode-tnm-distant-metastases-category: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\StructureDefinition-mcode-tnm-primary-tumor-category.json ==
+INFORMATION: StructureDefinition/mcode-tnm-primary-tumor-category: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\StructureDefinition-mcode-tnm-regional-nodes-category.json ==
+INFORMATION: StructureDefinition/mcode-tnm-regional-nodes-category: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\StructureDefinition-mcode-treatment-intent.json ==
+INFORMATION: StructureDefinition/mcode-treatment-intent: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\StructureDefinition-mcode-treatment-termination-reason.json ==
+INFORMATION: StructureDefinition/mcode-treatment-termination-reason: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\StructureDefinition-mcode-tumor.json ==
+INFORMATION: StructureDefinition/mcode-tumor: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\StructureDefinition-mcode-tumor-marker-test.json ==
+INFORMATION: StructureDefinition/mcode-tumor-marker-test: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\StructureDefinition-mcode-tumor-size.json ==
+INFORMATION: StructureDefinition/mcode-tumor-size: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\StructureDefinition-mcode-tumor-specimen.json ==
+INFORMATION: StructureDefinition/mcode-tumor-specimen: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\ValueSet-elixhauser-aids-vs.json ==
+INFORMATION: ValueSet/elixhauser-aids-vs: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\ValueSet-elixhauser-alcohol-abuse-vs.json ==
+INFORMATION: ValueSet/elixhauser-alcohol-abuse-vs: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\ValueSet-elixhauser-blood-loss-anemia-vs.json ==
+INFORMATION: ValueSet/elixhauser-blood-loss-anemia-vs: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\ValueSet-elixhauser-cancer-leukemia-vs.json ==
+INFORMATION: ValueSet/elixhauser-cancer-leukemia-vs: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\ValueSet-elixhauser-cancer-lymphoma-vs.json ==
+INFORMATION: ValueSet/elixhauser-cancer-lymphoma-vs: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\ValueSet-elixhauser-cancer-metastatic-vs.json ==
+INFORMATION: ValueSet/elixhauser-cancer-metastatic-vs: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\ValueSet-elixhauser-cancer-solid-tumor-in-situ-vs.json ==
+INFORMATION: ValueSet/elixhauser-cancer-solid-tumor-in-situ-vs: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\ValueSet-elixhauser-cancer-solid-tumor-malignant-vs.json ==
+INFORMATION: ValueSet/elixhauser-cancer-solid-tumor-malignant-vs: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\ValueSet-elixhauser-cerebrovascular-disease-vs.json ==
+INFORMATION: ValueSet/elixhauser-cerebrovascular-disease-vs: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\ValueSet-elixhauser-chronic-pulmonary-disease-vs.json ==
+INFORMATION: ValueSet/elixhauser-chronic-pulmonary-disease-vs: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\ValueSet-elixhauser-coagulation-deficiency-vs.json ==
+INFORMATION: ValueSet/elixhauser-coagulation-deficiency-vs: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\ValueSet-elixhauser-congestive-heart-failure-vs.json ==
+INFORMATION: ValueSet/elixhauser-congestive-heart-failure-vs: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\ValueSet-elixhauser-deficiency-anemia-vs.json ==
+INFORMATION: ValueSet/elixhauser-deficiency-anemia-vs: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\ValueSet-elixhauser-dementia-vs.json ==
+INFORMATION: ValueSet/elixhauser-dementia-vs: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\ValueSet-elixhauser-depression-vs.json ==
+INFORMATION: ValueSet/elixhauser-depression-vs: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\ValueSet-elixhauser-diabetes-complicated-vs.json ==
+INFORMATION: ValueSet/elixhauser-diabetes-complicated-vs: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\ValueSet-elixhauser-diabetes-uncomplicated-vs.json ==
+INFORMATION: ValueSet/elixhauser-diabetes-uncomplicated-vs: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\ValueSet-elixhauser-drug-abuse-vs.json ==
+INFORMATION: ValueSet/elixhauser-drug-abuse-vs: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\ValueSet-elixhauser-hypertension-complicated-vs.json ==
+INFORMATION: ValueSet/elixhauser-hypertension-complicated-vs: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\ValueSet-elixhauser-hypertension-uncomplicated-vs.json ==
+INFORMATION: ValueSet/elixhauser-hypertension-uncomplicated-vs: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\ValueSet-elixhauser-hypothyroidism-vs.json ==
+INFORMATION: ValueSet/elixhauser-hypothyroidism-vs: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\ValueSet-elixhauser-liver-disease-mild-vs.json ==
+INFORMATION: ValueSet/elixhauser-liver-disease-mild-vs: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\ValueSet-elixhauser-liver-disease-severe-vs.json ==
+INFORMATION: ValueSet/elixhauser-liver-disease-severe-vs: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\ValueSet-elixhauser-neurological-movement-disorder-vs.json ==
+INFORMATION: ValueSet/elixhauser-neurological-movement-disorder-vs: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\ValueSet-elixhauser-neurological-seizure-disorder-vs.json ==
+INFORMATION: ValueSet/elixhauser-neurological-seizure-disorder-vs: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\ValueSet-elixhauser-obesity-vs.json ==
+INFORMATION: ValueSet/elixhauser-obesity-vs: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\ValueSet-elixhauser-other-neurological-vs.json ==
+INFORMATION: ValueSet/elixhauser-other-neurological-vs: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\ValueSet-elixhauser-other-thyroid-disorder-vs.json ==
+INFORMATION: ValueSet/elixhauser-other-thyroid-disorder-vs: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\ValueSet-elixhauser-paralysis-vs.json ==
+INFORMATION: ValueSet/elixhauser-paralysis-vs: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\ValueSet-elixhauser-peripheral-vascular-disease-vs.json ==
+INFORMATION: ValueSet/elixhauser-peripheral-vascular-disease-vs: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\ValueSet-elixhauser-psychosis-vs.json ==
+INFORMATION: ValueSet/elixhauser-psychosis-vs: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\ValueSet-elixhauser-pulmonary-circulation-disorder-vs.json ==
+INFORMATION: ValueSet/elixhauser-pulmonary-circulation-disorder-vs: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\ValueSet-elixhauser-renal-failure-moderate-vs.json ==
+INFORMATION: ValueSet/elixhauser-renal-failure-moderate-vs: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\ValueSet-elixhauser-renal-failure-severe-vs.json ==
+INFORMATION: ValueSet/elixhauser-renal-failure-severe-vs: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\ValueSet-elixhauser-rheumatoid-arthritis-vs.json ==
+INFORMATION: ValueSet/elixhauser-rheumatoid-arthritis-vs: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\ValueSet-elixhauser-ulcer-vs.json ==
+INFORMATION: ValueSet/elixhauser-ulcer-vs: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\ValueSet-elixhauser-valvular-disease-vs.json ==
+INFORMATION: ValueSet/elixhauser-valvular-disease-vs: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\ValueSet-elixhauser-weight-loss-vs.json ==
+INFORMATION: ValueSet/elixhauser-weight-loss-vs: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\ValueSet-mcode-brachytherapy-modality-vs.json ==
+INFORMATION: ValueSet/mcode-brachytherapy-modality-vs: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\ValueSet-mcode-brachytherapy-technique-vs.json ==
+INFORMATION: ValueSet/mcode-brachytherapy-technique-vs: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\ValueSet-mcode-cancer-body-location-vs.json ==
+INFORMATION: ValueSet/mcode-cancer-body-location-vs: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\ValueSet-mcode-cancer-disease-status-evidence-type-vs.json ==
+INFORMATION: ValueSet/mcode-cancer-disease-status-evidence-type-vs: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\ValueSet-mcode-cancer-disorder-vs.json ==
+INFORMATION: ValueSet/mcode-cancer-disorder-vs: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\ValueSet-mcode-cancer-related-surgical-procedure-vs.json ==
+INFORMATION: ValueSet/mcode-cancer-related-surgical-procedure-vs: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\ValueSet-mcode-cancer-stage-group-vs.json ==
+INFORMATION: ValueSet/mcode-cancer-stage-group-vs: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\ValueSet-mcode-cancer-staging-system-vs.json ==
+INFORMATION: ValueSet/mcode-cancer-staging-system-vs: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\ValueSet-mcode-clinvar-vs.json ==
+INFORMATION: ValueSet/mcode-clinvar-vs: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\ValueSet-mcode-condition-status-trend-vs.json ==
+INFORMATION: ValueSet/mcode-condition-status-trend-vs: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\ValueSet-mcode-dna-change-type-vs.json ==
+INFORMATION: ValueSet/mcode-dna-change-type-vs: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\ValueSet-mcode-genetic-specimen-type-vs.json ==
+INFORMATION: ValueSet/mcode-genetic-specimen-type-vs: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\ValueSet-mcode-hgnc-vs.json ==
+INFORMATION: ValueSet/mcode-hgnc-vs: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\ValueSet-mcode-hgvs-vs.json ==
+INFORMATION: ValueSet/mcode-hgvs-vs: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\ValueSet-mcode-histology-morphology-behavior-vs.json ==
+INFORMATION: ValueSet/mcode-histology-morphology-behavior-vs: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\ValueSet-mcode-location-qualifier-vs.json ==
+INFORMATION: ValueSet/mcode-location-qualifier-vs: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\ValueSet-mcode-observation-codes-distant-metastases-vs.json ==
+INFORMATION: ValueSet/mcode-observation-codes-distant-metastases-vs: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\ValueSet-mcode-observation-codes-primary-tumor-vs.json ==
+INFORMATION: ValueSet/mcode-observation-codes-primary-tumor-vs: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\ValueSet-mcode-observation-codes-regional-nodes-vs.json ==
+INFORMATION: ValueSet/mcode-observation-codes-regional-nodes-vs: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\ValueSet-mcode-observation-codes-stage-group-vs.json ==
+INFORMATION: ValueSet/mcode-observation-codes-stage-group-vs: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\ValueSet-mcode-present-absent-unknown.json ==
+INFORMATION: ValueSet/mcode-present-absent-unknown: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\ValueSet-mcode-primary-or-uncertain-behavior-cancer-disorder-vs.json ==
+INFORMATION: ValueSet/mcode-primary-or-uncertain-behavior-cancer-disorder-vs: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\ValueSet-mcode-radiotherapy-modality-vs.json ==
+INFORMATION: ValueSet/mcode-radiotherapy-modality-vs: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\ValueSet-mcode-radiotherapy-technique-vs.json ==
+INFORMATION: ValueSet/mcode-radiotherapy-technique-vs: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\ValueSet-mcode-radiotherapy-treatment-location-qualifier-vs.json ==
+INFORMATION: ValueSet/mcode-radiotherapy-treatment-location-qualifier-vs: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\ValueSet-mcode-radiotherapy-treatment-location-vs.json ==
+INFORMATION: ValueSet/mcode-radiotherapy-treatment-location-vs: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\ValueSet-mcode-radiotherapy-volume-type-vs.json ==
+INFORMATION: ValueSet/mcode-radiotherapy-volume-type-vs: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\ValueSet-mcode-secondary-cancer-disorder-vs.json ==
+INFORMATION: ValueSet/mcode-secondary-cancer-disorder-vs: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\ValueSet-mcode-teleradiotherapy-modality-vs.json ==
+INFORMATION: ValueSet/mcode-teleradiotherapy-modality-vs: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\ValueSet-mcode-teleradiotherapy-technique-vs.json ==
+INFORMATION: ValueSet/mcode-teleradiotherapy-technique-vs: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\ValueSet-mcode-tnm-distant-metastases-category-vs.json ==
+INFORMATION: ValueSet/mcode-tnm-distant-metastases-category-vs: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\ValueSet-mcode-tnm-primary-tumor-category-vs.json ==
+INFORMATION: ValueSet/mcode-tnm-primary-tumor-category-vs: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\ValueSet-mcode-tnm-regional-nodes-category-vs.json ==
+INFORMATION: ValueSet/mcode-tnm-regional-nodes-category-vs: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\ValueSet-mcode-treatment-intent-vs.json ==
+INFORMATION: ValueSet/mcode-treatment-intent-vs: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\ValueSet-mcode-treatment-termination-reason-vs.json ==
+INFORMATION: ValueSet/mcode-treatment-termination-reason-vs: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\ValueSet-mcode-tumor-marker-test-vs.json ==
+INFORMATION: ValueSet/mcode-tumor-marker-test-vs: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\ValueSet-mcode-tumor-size-method-vs.json ==
+INFORMATION: ValueSet/mcode-tumor-size-method-vs: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
+== C:\Users\mkramer\Documents\GitHub\fhir-mCODE-ig\fsh-generated\resources\ValueSet-mcode-tumor-size-units-vs.json ==
+INFORMATION: ValueSet/mcode-tumor-size-units-vs: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet

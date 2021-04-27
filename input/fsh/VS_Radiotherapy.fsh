@@ -19,7 +19,7 @@ Description: "Codes describing the modalities of brachytherapy procedures."
 // * insert ExpandValueSet
 * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
 * RT#LDR-TEMP
-* RT#LDR-PERM
+* SCT#169359004 "Internal radiotherapy - permanent seeds (procedure)"  //* RT#LDR-PERM
 * UMLS#C3897809 "Pulsed-Dose Rate Brachytherapy"  // NCIT#C116542 "Pulsed-Dose Rate Brachytherapy"
 * SCT#394902000 "High dose brachytherapy (procedure)"
 * SCT#438629002 "High dose rate electronic brachytherapy (procedure)"
@@ -37,7 +37,7 @@ Description: "Codes describing the modalities of external beam and brachytherapy
 * UMLS#C3494442 "Carbon Ion Radiation Therapy" // NCIT#C160816 "Carbon Ion Radiation Therapy"
 * UMLS#C3539769 "Photon Beam Radiation Therapy" // NCIT#C104914 "Photon Beam Radiation Therapy"
 * RT#LDR-TEMP
-* RT#LDR-PERM
+* SCT#169359004 "Internal radiotherapy - permanent seeds (procedure)"  // * RT#LDR-PERM
 * UMLS#C3897809 "Pulsed-Dose Rate Brachytherapy"  // NCIT#C116542 "Pulsed-Dose Rate Brachytherapy"
 * SCT#394902000 "High dose brachytherapy (procedure)"
 * SCT#438629002 "High dose rate electronic brachytherapy (procedure)"
@@ -366,9 +366,14 @@ Description: "Codes describing the body locations where radiotherapy treatments 
 * RT#LN_Neck_VC  "Level VC (Posterior Triangle) neck node"
 * RT#LN_Neck_VI  "Level VI (Anterior Triangle) neck node"
 * RT#LN_Neck_VII  "Level VII (Upper Mediastinal) neck node"
-
-
-
+// Added after STU 2 ballot version
+* SCT#8928004  "Inguinal lymph node structure (body structure)"   // groin lymph nodes
+* SCT#50837003  "Structure of lingula of left lung (body structure)"  // Post STU 2 ballot
+* SCT#245321008  "Upper jugular lymph node (body structure)"  // Post STU 2 ballot
+* SCT#245262000 "Middle jugular lymph node group (body structure)"  // Post STU 2 ballot
+* SCT#245263005 "Lower jugular lymph node group (body structure)"  // Post STU 2 ballot
+* SCT#76838003 "Structure of supraclavicular lymph node (body structure)"  // Post STU 2 ballot
+* SCT#279143009 "Mastoid lymph node (body structure)"  // Post STU 2 ballot
 
 /*  SAVE
 ValueSet: RadiotherapyBodySiteVS

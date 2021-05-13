@@ -1,17 +1,17 @@
 
 ### Mapping Between Vocabularies
 
-The concepts in this value set are drawn from SNOMED CT (SCT) or the [radiotherapy code system][RadiotherapyCS] defined in this Implementation Guide. Additional SNOMED CT codes have been submitted for approval. NCI Thesaurus terms are shown for informational purposes.
+The concepts in this value set are drawn in priority order first from SNOMED CT (SCT), second from UMLS Metathesaurus, and lastly, from the [radiotherapy code system][RadiotherapyCS] defined in this Implementation Guide. Missing SNOMED CT codes have been submitted for approval.
 
 The following table shows potential mappings. **This table may not be exhaustive and additional valid mappings may exist.**
 
-| **Radiotherapy Code System**    | **SNOMED CT Term**             | **NCI Thesaurus Term**            |
+| **SNOMED CT Term**             | **UMLS Metathesaurus Term**   | **Radiotherapy Code System**    |
 | ---------------|--------------------------------|-----------------------------------|
-| not needed   | 10611004 "Teleradiotherapy protons (procedure)" | C66897 "Proton Beam Radiation Therapy" |
-| not needed  | 45643008 "Teleradiotherapy using electrons (procedure)" | C15650 "Electron Beam Therapy" |
-| not needed   | 80347004 "Teleradiotherapy neutrons (procedure)" | C15440 "High-LET Neutron Therapy' |
-| not needed  | none [1] | C160816 "Carbon Ion Radiation Therapy" |
-| not needed  | none [2] | C104914 "Photon Beam Radiation Therapy" |
+| 10611004 "Teleradiotherapy protons (procedure)" | C0436226 "Proton Therapy" | not needed   |
+| 45643008 "Teleradiotherapy using electrons (procedure)" | C0454077 "Teleradiotherapy using electrons" | not needed   |
+| 80347004 "Teleradiotherapy neutrons (procedure)" | C0278623 "High-LET Neutron Therapy" | not needed   |
+| Missing [1] | C3494442 "Carbon Ion Radiotherapy" | not needed  |
+| Missing [2] | C3539769 "Photon Beam Radiation Therapy" | not needed |
 {: .grid }
 
 **Notes:**

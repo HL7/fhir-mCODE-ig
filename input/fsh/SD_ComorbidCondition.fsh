@@ -23,7 +23,7 @@ Description: "General structure for capturing comorbid conditions with respect t
 * insert NotUsed(bodySite)
 * insert NotUsed(specimen)
 * insert NotUsed(device)
-// No Must Suppports in the abstract profile
+// No Must Supports in the abstract profile
 //* component and component.extension MS
 
 

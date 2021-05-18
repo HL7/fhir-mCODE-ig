@@ -30,11 +30,6 @@ RuleSet: MustSupportOnReference(path, refIndex)
 * {path} ^type[0].targetProfile[{refIndex}].extension[0].url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
 * {path} ^type[0].targetProfile[{refIndex}].extension[0].valueBoolean = true
 
-RuleSet: ExpandValueSet
-* ^expansion.parameter.name = "sushi-generated"
-* ^expansion.parameter.valueBoolean = true
-
-
 RuleSet: NotUsed(path)
 * {path} ^short = "Not used in this profile"
 * {path} ^definition = "Not used in this profile"

@@ -1,3 +1,8 @@
+### mCODE STU 2 (Sept 2021)
+
+* CancerDiseaseStatus profile now uses a newly-created LOINC code, 97509-4 "Cancer Disease Progression". In STU 1, the LOINC code chosen to represent this observation (88040-1, "Response to cancer treatment") did not precisely match the meaning of this profile because cancer disease status is observable regardless of whether the patient is under treatment. See [FHIR-27850](https://jira.hl7.org/browse/FHIR-27850?jql=project%3D%22FHIR%22%20AND%20id%20%3D%20FHIR-27850).
+
+
 ### mCODE STU 2 Ballot Version (May 2021)
 
 The following summarizes changes to [the STU1 release](http://hl7.org/fhir/us/mcode/STU1) for the STU2 Ballot (May 2021). Many of these changes have been taken in response to input from the HL7 community. Issue numbers refer to the [HL7 Jira](https://jira.hl7.org/issues/?filter=13361) (free account registration required).

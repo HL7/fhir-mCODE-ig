@@ -1,18 +1,3 @@
-<div markdown="1" class="note-to-balloters">
-Please review the areas where major changes have occurred since STU 1. These include:
-
-* Improved [Data Dictionary](dictionary.html): Is it understandable? Does it include the elements that address your use case?
-* Improved [Conformance Criteria](conformance-general.html): Is it clear what “mCODE conformant” means after reading this?
-* New [mCODE Patient Bundle][MCODEPatientBundle] to return all mCODE information for a given patient: Any comments?
-* New [capability statements and search parameters](conformance-patients.html): Does the API make sense? Meet your needs?
-* New [Tumor size observation][TumorSize]: Does the profile satisfy use cases that need this information?
-* Revised radiotherapy profiles, [RadiotherapyCourseSummary], [TeleradiotherapyTreatmentPhase] and [BrachytherapyTreatmentPhase]: Do these profiles satisfy an oncologist's need for information about radiotherapy treatments at the right level of detail?
-* Revised design for [Comorbidities][ComorbiditiesElixhauser]: Is it clear how to use this profile?
-* New [extended patient journey example](examples.html): Does this help readers understand how mCODE might be applied to the real world?
-
-A complete list of STU2 changes are listed in the [change log](change_log.html), and highly-detailed, element-by-element changes are documented in the [data dictionary differential](dictionary.html#data-dictionary-differential).
-</div>
-
 ### Background
 
 Cancer is among the leading causes of death worldwide. According to the National Cancer Institute, in the United States, 39.5 percent of men and women will be diagnosed with cancer at some point during their lifetimes. In 2020, an estimated 1,806,590 new cases of cancer will be diagnosed in the United States and 606,520 people will die from the disease. While these numbers are staggering, the silver lining in the wide prevalence of cancer is the potential to learn from treatment of millions of patients. If we had research-quality data from all cancer patients, it would enable higher quality health outcomes. Today, we lack the data models, technologies, and methods to capture that data.

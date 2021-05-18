@@ -13,7 +13,7 @@ Description:    "A clinician's qualitative judgment on the current trend of the 
 * insert NotUsed(hasMember)
 * insert NotUsed(component)
 * subject 1..1
-* code = LNC#88040-1 //"Response to cancer treatment"
+* code = LNC#97509-4 // "Cancer Disease Progression"
 * subject only Reference(CancerPatient)
 * focus only Reference(PrimaryCancerCondition or SecondaryCancerCondition or Tumor)
 * effective[x] only dateTime

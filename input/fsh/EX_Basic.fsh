@@ -224,7 +224,7 @@ InstanceOf: CancerStageGroup
 Description: "Example of a non-TNM Stage Group (Binet staging for CLL)"
 * code = LNC#21914-7 "Stage group.other Cancer"
 * status = #final "final"
-* method = UMLS#C4683625  "Binet Staging"  // NCIT#C141212 "Binet Staging"
+* method = SCT#1149099005 "Binet staging classification for chronic lymphocytic leukemia (tumor staging)"
 * subject = Reference(cancer-patient-adam-everyman)
 * effectiveDateTime = "2020-05-18"
 * derivedFrom = Reference(lab-result-observation-hemoglobin)

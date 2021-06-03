@@ -1,8 +1,8 @@
 ### mCODE STU 2 (Sept 2021)
 
-* CancerDiseaseStatus profile now uses a newly-created LOINC code, 97509-4 "Cancer Disease Progression". In STU 1, the LOINC code chosen to represent this observation (88040-1, "Response to cancer treatment") did not precisely match the meaning of this profile because cancer disease status is observable regardless of whether the patient is under treatment. See [FHIR-27850](https://jira.hl7.org/browse/FHIR-27850?jql=project%3D%22FHIR%22%20AND%20id%20%3D%20FHIR-27850).
+* CancerDiseaseStatus profile now uses a newly-created LOINC code, 97509-4 "Cancer Disease Progression". In STU 1, the LOINC code chosen to represent this observation (88040-1, "Response to cancer treatment") did not precisely match the meaning of this profile because cancer disease status is observable regardless of whether the patient is under treatment. See [FHIR-27850](https://jira.hl7.org/browse/FHIR-27850).
 * Replaced radiotherapy modality and technique UMLS and local codes with approved SNOMED-CT codes, to be released in the next International release on July 31, 2021. Local codes have been removed from the radiotherapy code system.
-* Changed the definition of CancerStagingSystemVS to an intensional set containing descendants of SCT#254292007 "Tumor staging (tumor staging)". The includes codes for AJCC staging (version 6, 7, and 8) and many other specialized staging systems.
+* Changed the definition of CancerStagingSystemVS to an intensional set containing descendants of SCT#254292007 "Tumor staging (tumor staging)". The includes codes for AJCC staging (version 6, 7, and 8) and many other specialized staging systems. See [FHIR-32663](https://jira.hl7.org/browse/FHIR-32663).
 
 ### mCODE STU 2 Ballot Version (May 2021)
 
@@ -11,7 +11,6 @@ The following summarizes changes to [the STU1 release](http://hl7.org/fhir/us/mc
 A comprehensive listing of differences in FHIR artifacts between STU 1 and STU 2 is given in the [Data Dictionary Differential](dictionary.html#data-dictionary-differential) (DDD) spreadsheet. This file is meant to supplement rather than replace the content in this Implementation Guide, and the Implementation Guide takes precedence in any cases where the DDD appears to conflict with it.
 
 #### General Changes
-
 
 * Improved [Data Dictionary](dictionary.html)
 * New and improved [Conformance Criteria](conformance-general.html)

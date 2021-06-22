@@ -28,11 +28,11 @@ Please note that while these codes may imply conformance to the profiles that us
 * #mcode-teleradiotherapy-treatment-phase "Teleradiotherapy Treatment Phase Resource" "Identifies a Procedure resource that describes delivery of teleradiotherapy (external beam radiation) and conforms to the TeleradiotherapyTreatmentPhase profile."
 * #mcode-brachytherapy-treatment-phase "Brachytherapy Treatment Phase Resource" "Identifies a Procedure resource that describes delivery of brachytherapy (internal or surface radiation) and conforms to the BrachytherapyTreatmentPhase profile."
 
-CodeSystem: RadiotherapyCS
-Id: radiotherapy-cs
-Title: "Radiotherapy Code System"
-Description: "Concepts used in association with radiotherapy profiles in mCODE, where terms could not be found in standard sources such as SNOMED CT."
-* ^url =  http://terminology.hl7.org/CodeSystem/radiotherapy
+// CodeSystem: RadiotherapyCS
+// Id: radiotherapy-cs
+// Title: "Radiotherapy Code System"
+// Description: "Concepts used in association with radiotherapy profiles in mCODE, where terms could not be found in standard sources such as SNOMED CT."
+// * ^url =  http://terminology.hl7.org/CodeSystem/radiotherapy
 //* #LDR-PERM "Low Dose Rate Brachytherapy - Permanent Placement" "Radiation treatment that irradiates a body volume with permanently placed radiation sources delivering low dose rates (typically less than or equal to 2 Gy/hour)."
 //* #LDR-TEMP "Low Dose Rate Brachytherapy - Temporary Placement" "Radiation treatment that irradiates a body volume with temporarily placed radiation sources delivering low dose rates (typically less than or equal to 2 Gy/hour)."
 //* #3D "Three Dimensional"  "Dose calculated with projection onto 3D imaging (e.g., CT or MR) delivered with either static aperture (Collimator, SRS Cone, Static MLC, blocks, etc) or non-IMRT/VMAT dynamic apertures (e.g., field-in-field, dynamic arc) using either single gantry angles or arcs."
@@ -40,33 +40,33 @@ Description: "Concepts used in association with radiotherapy profiles in mCODE, 
 //* #PSS "Particle Spot Scanning"  "In proton or carbon ion beam therapy, a technique where accelerated particles are focused into a small beam and then moved (scanned) over target regions in the patient."
 //* #MIX "Mixed" "Both photon and particle based beams are used to deliver the radiation therapy."
 //* #CAV-IMB "Intracavitary, Intensity Modulated" "A technique of brachytherapy that dynamically directs the radiation into the tumours and away from healthy tissue, for example, by incorporation of metallic shields inside brachytherapy applicators."
-* #LN_AX_L1  "Level 1 Axillary Lymph Nodes"
-* #LN_Ax_L2  "Level 2 Axillary Lymph Nodes"
-* #LN_Ax_L3  "Level 3 Axillary Lymph Nodes"
-* #LN_Neck_IA  "Level IA (Submental) neck node"
-* #LN_Neck_IB  "Level IB (Submandibular) neck node"
-* #LN_Neck_II  "Level II (Upper Jugular) neck nodes"  // Post STU 2 ballot
-* #LN_Neck_IIA  "Level IIA (Upper Jugular) neck node"
-* #LN_Neck_IIB  "Level IIB (Upper Jugular) neck node"
-* #LN_Neck_III  "Level III (Middle Jugular) neck node"
-* #LN_Neck_IV  "Level IV neck (Lower Jugular) node"
-* #LN_Neck_IVA  "Level IVA (Lower Jugular) neck nodes"  // Post STU 2 ballot
-* #LN_Neck_IVB  "Level IVB (Medial Suprclavicular) nodes"  // Post STU 2 ballot
-* #LN_Neck_V  "Level V (Posterior Triangle) neck nodes"  // Post STU 2 ballot
-* #LN_Neck_VA  "Level VA (Upper Posterior Triangle) neck node"
-* #LN_Neck_VB  "Level VB (Lower Posterior Triangle) neck node"
-* #LN_Neck_VC  "Level VC (Lateral spraclavicular) neck node"
-* #LN_Neck_VI  "Level VI (Anterior Triangle) neck node"
-* #LN_Neck_VIA  "Level VIA (Anterior Jugular) neck nodes"  // Post STU 2 ballot
-* #LN_Neck_VIB  "Level VIB (Prelaryngeal, pretracheal, & paratracheal) neck nodes"  // Post STU 2 ballot
-* #LN_Neck_VII  "Level VII (Prevertebral compartment) neck node"
-* #LN_Neck_VIIA  "Level VIIA (Retropharyngeal) neck nodes"  // Post STU 2 ballot
-* #LN_Neck_VIIB  "Level VIIB (Retro-styloid) neck nodes"  // Post STU 2 ballot
-* #LN_Neck_VIII  "Level VIII (Parotid) neck nodes"  // Post STU 2 ballot
-* #LN_Neck_IX  "Level IX (Bucco-facial) neck nodes"  // Post STU 2 ballot
-* #LN_Neck_X  "Level X (Posterior skull) neck nodes"  // Post STU 2 ballot
-* #LN_Neck_XA  "Level XA (Retroauricular & subauricular) neck nodes"  // Post STU 2 ballot
-* #LN_Neck_XB  "Level XB (Occipital) neck nodes"  // Post STU 2 ballot
+// * #LN_AX_L1  "Level 1 Axillary Lymph Nodes"
+// * #LN_Ax_L2  "Level 2 Axillary Lymph Nodes"
+// * #LN_Ax_L3  "Level 3 Axillary Lymph Nodes"
+// * #LN_Neck_IA  "Level IA (Submental) neck node"
+// * #LN_Neck_IB  "Level IB (Submandibular) neck node"
+// * #LN_Neck_II  "Level II (Upper Jugular) neck nodes"  // Post STU 2 ballot
+// * #LN_Neck_IIA  "Level IIA (Upper Jugular) neck node"
+// * #LN_Neck_IIB  "Level IIB (Upper Jugular) neck node"
+// * #LN_Neck_III  "Level III (Middle Jugular) neck node"
+// * #LN_Neck_IV  "Level IV neck (Lower Jugular) node"
+// * #LN_Neck_IVA  "Level IVA (Lower Jugular) neck nodes"  // Post STU 2 ballot
+// * #LN_Neck_IVB  "Level IVB (Medial Suprclavicular) nodes"  // Post STU 2 ballot
+// * #LN_Neck_V  "Level V (Posterior Triangle) neck nodes"  // Post STU 2 ballot
+// * #LN_Neck_VA  "Level VA (Upper Posterior Triangle) neck node"
+// * #LN_Neck_VB  "Level VB (Lower Posterior Triangle) neck node"
+// * #LN_Neck_VC  "Level VC (Lateral spraclavicular) neck node"
+// * #LN_Neck_VI  "Level VI (Anterior Triangle) neck node"
+// * #LN_Neck_VIA  "Level VIA (Anterior Jugular) neck nodes"  // Post STU 2 ballot
+// * #LN_Neck_VIB  "Level VIB (Prelaryngeal, pretracheal, & paratracheal) neck nodes"  // Post STU 2 ballot
+// * #LN_Neck_VII  "Level VII (Prevertebral compartment) neck node"
+// * #LN_Neck_VIIA  "Level VIIA (Retropharyngeal) neck nodes"  // Post STU 2 ballot
+// * #LN_Neck_VIIB  "Level VIIB (Retro-styloid) neck nodes"  // Post STU 2 ballot
+// * #LN_Neck_VIII  "Level VIII (Parotid) neck nodes"  // Post STU 2 ballot
+// * #LN_Neck_IX  "Level IX (Bucco-facial) neck nodes"  // Post STU 2 ballot
+// * #LN_Neck_X  "Level X (Posterior skull) neck nodes"  // Post STU 2 ballot
+// * #LN_Neck_XA  "Level XA (Retroauricular & subauricular) neck nodes"  // Post STU 2 ballot
+// * #LN_Neck_XB  "Level XB (Occipital) neck nodes"  // Post STU 2 ballot
 
 
 CodeSystem: ComorbiditiesElixhauserCS

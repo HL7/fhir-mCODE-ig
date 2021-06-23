@@ -7,27 +7,6 @@ The following rules apply to this value set:
 
 ### Mapping Between Vocabularies
 
-The concepts in this value set are drawn in priority order first from SNOMED CT (SCT), then from UMLS Metathesaurus, and lastly, from the [radiotherapy code system][RadiotherapyCS] defined in this Implementation Guide. Missing SNOMED CT codes have been submitted for approval.
-
-The following table shows potential mappings. **This table may not be exhaustive and additional valid mappings may exist.**
-
-| **SNOMED CT Term**   | **UMLS Metathesaurus Term**     | **Radiotherapy Code System** |
-| -------------------- | -------------------- | --------------------- |
-| 441799006 "Intensity modulated radiation therapy (procedure)" |  C1512814 "Radiotherapy, Intensity-Modulated" | not needed |
-| Missing | C3489631 "Volumetric-Modulated Arc Therapy" | not needed |
-| Missing [1] | none [1] | 3D "Three dimensional" |
-| Missing [2] | C5236971 "2D Conventional Radiotherapy" | not needed |
-| 168524008 "Radiotherapy - intraoperative control (procedure)" | C0436205 "Radiotherapy - intraoperative control" | not needed |
-| Missing | none | PPS "Particle Passive Scattering" |
-| Missing | none | PSS "Particle Spot Scanning" |
-| Missing | none | MIX "Mixed" |
-| 169317000 "Neutron capture therapy (procedure)" | C0162505 "Boron Neutron Capture Therapy" [3] | not needed |
-{: .grid }
-
-**Notes:**
-
-1. SCT#434131000124108 "Three dimensional conformal radiotherapy (procedure)" and UMLS#C0600521 "Radiotherapy, Conformal" are not matches because use of three-dimensional imaging in radiotherapy planning does not necessarily imply conformal dose distribution.
-2. SCT#5304008 "Conventional X-ray therapy" implies two-dimensional, but is too specific in terms of modality.
-3. Although superficially more specific, this is an acceptable match in many cases because boron is the most common neutron capture agent.
+No Mapping necessary.  All concepts now represented in SNOMED CT.
 
 {% include markdown-link-references.md %}

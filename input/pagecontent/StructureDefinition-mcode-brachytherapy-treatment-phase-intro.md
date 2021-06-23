@@ -4,6 +4,21 @@ The following table shows valid combinations of modality and technique for brach
 
 <!--Devices used during the procedure, but not remaining after, such as catheters and high-dose devices, are to be recorded in `Procedure.usedCode`. Devices implanted or removed during surgery should be recorded as a reference to a Device resource in `Procedure.focalDevice.manipulated`. The code for the implanted device type is recorded in the `Device.type` element on the referenced Device. The referenced device should conform to the [BrachytherapyImplantableDevice] profile.-->
 
+*NEW*
+
+| **Brachytherapy Modality**  | **Technique (Delivery Method)**|
+| ----------------------------- | ------------------------------ |
+| Internal radiotherapy – permanent seeds | Intecavitary |
+| Low Dose Rate | Intracavitary, Interstitial, Surface |
+| Low Dose Rate using temp rad source | Intracavitary, Interstitial, Surface |
+| Pulsed Dose Rate | Intracavitary, Interstitial, Intravascular, Intraluminal, Radiotherapy-intraoperative control(IORT) |
+| High Dose Rate  | Intracavitary, Intensity-modulated intercavitary (IMB), Interstitial, Intravascular, Intraluminal, Radiotherapy-intraoperative control(IORT), Surface |
+| High dose rate electronic  | Intracavitary, Intensity-modulated intercavitary (IMB), Interstitial, Intraluminal, Radiotherapy-intraoperative control(IORT), Surface |
+| Radiopharmaceutical  | Oral, Intravascular, Intracavitary, Interstitial |
+| ----------------------------- | ------------------------------ |
+{: .grid }
+
+*OLD*
 
 | **Brachytherapy Modality**  | **Technique (Delivery Method)**|
 | ----------------------------- | ------------------------------ |
@@ -11,7 +26,8 @@ The following table shows valid combinations of modality and technique for brach
 | Pulse Dose Rate | Intracavitary, Interstitial, Intravascular, Intraluminal, IORT|
 | High Dose Rate  | Intracavitary, Intracavitary-IMB, Interstitial, Intravascular, Intraluminal, IORT, Surface |
 | Electronic  | Intracavitary, Intracavitary-IMB, Interstitial, Intraluminal, Surface, IORT |
-| Radiopharmaceutical  | Oral, Intravascular, Intracavitary, Interstitial |
+| Radiopharmaceutical  | Intracavitary, Intravascular, Interstitial, and Oral Radionuclide |
+| ----------------------------- | ------------------------------ |
 {: .grid }
 
 **Key:**

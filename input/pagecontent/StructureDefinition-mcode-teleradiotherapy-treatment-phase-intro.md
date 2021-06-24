@@ -1,26 +1,30 @@
 
 ### Usage
+A phase consists of a set of identical fractions. In this context, identical means that each fraction uses the same modality, technique, dose per fraction, and is applied to the same treatment volume or volumes. Because of their spatial relationship or the technique used, all treatment volumes do not necessarily receive the same total dose during a phase.
 
-The following table shows valid combinations of modality and technique for external beam radiotherapy. They are not enforced in the profile. Other combinations and additional techniques may be possible. The modality is represented by `mcode-radiotherapy-modality` extension, technique using the `mcode-radiotherapy-technique` extension.
+The following table shows valid combinations of modality and technique for external beam radiotherapy. They are not enforced in the profile. Other combinations and additional techniques may be possible. The modality is represented by `mcode-teleradiotherapy-modality` extension, technique using the `mcode-teleradiotherapy-technique` extension.
 
 | **External Beam Modality** | **Technique** |
 | ------------------- | ------------------ |
 | Photons  | IMRT, VMAT, 3D, 2D, IORT |
-| Electrons| 3D, 2D, IORT, COMP |
+| Electrons| 3D, 2D, IORT |
 | Protons  | PPS, PSS, MIX |
 | Carbon   | PPS, PSS, MIX |
-| Neutrons | 3D, NCT |
+| Neutrons | 3D, IMRTN, NCT |
 {: .grid }
 
 **Key:**
 
-* 3D: Three Dimensional Conformal Therapy
+* 2D: Two dimensional external beam radiation therapy 
+* 3D: Three dimensional external beam radiation therapy 
 * IMRT: Intensity Modulated Radiation Therapy
-* VMAT: Volumetric Modulated Radiation Therapy
-* IORT: Intraoperative radiation therapy
+* IMRTN: Intensity Modulated Radiation Therapy Neutrons
+* IORT: Intraoperative Radiation Therapy
+* MIX: Mixed beam external beam radiation therapy
+* NCT: Neutron Capture Therapy
 * PPS: Particle Passive Scattering
 * PSS: Particle Spot Scanning
-* NCT: Neutron Capture Therapy
+* VMAT: Volumetric Modulated Arc Therapy
 
 ### Conformance
 

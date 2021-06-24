@@ -1,6 +1,7 @@
 ### Usage
+A phase consists of a set of identical fractions. In this context, identical means that each fraction uses the same modality, technique, dose per fraction, and is applied to the same treatment volume or volumes. Because of their spatial relationship or the technique used, all treatment volumes do not necessarily receive the same total dose during a phase.
 
-The following table shows valid combinations of modality and technique for brachytherapy. They are not enforced in the profile. Other combinations and additional techniques may be possible. The modality is represented by `mcode-radiotherapy-modality` extension, technique using the `mcode-radiotherapy-technique` extension.
+The following table shows valid combinations of modality and technique for brachytherapy. They are not enforced in the profile. Other combinations and additional techniques may be possible. The modality is represented by `mcode-brachytherapy-modality` extension, technique using the `mcode-brachytherapy-technique` extension.
 
 <!--Devices used during the procedure, but not remaining after, such as catheters and high-dose devices, are to be recorded in `Procedure.usedCode`. Devices implanted or removed during surgery should be recorded as a reference to a Device resource in `Procedure.focalDevice.manipulated`. The code for the implanted device type is recorded in the `Device.type` element on the referenced Device. The referenced device should conform to the [BrachytherapyImplantableDevice] profile.-->
 
@@ -24,8 +25,8 @@ The following table shows valid combinations of modality and technique for brach
 | ----------------------------- | ------------------------------ |
 | Low Dose Rate | Intracavitary, Interstitial-Permanent, Interstitial-Temporary, Surface |
 | Pulse Dose Rate | Intracavitary, Interstitial, Intravascular, Intraluminal, IORT|
-| High Dose Rate  | Intracavitary, Intracavitary-IMB, Interstitial, Intravascular, Intraluminal, IORT, Surface |
-| Electronic  | Intracavitary, Intracavitary-IMB, Interstitial, Intraluminal, Surface, IORT |
+| High Dose Rate  | Intracavitary, IMB, Interstitial, Intravascular, Intraluminal, IORT, Surface |
+| Electronic  | Intracavitary, IMB, Interstitial, Intraluminal, Surface, IORT |
 | Radiopharmaceutical  | Intracavitary, Intravascular, Interstitial, and Oral Radionuclide |
 | ----------------------------- | ------------------------------ |
 {: .grid }
@@ -33,7 +34,7 @@ The following table shows valid combinations of modality and technique for brach
 **Key:**
 
 * IORT: Intraoperative radiation therapy (SCT#168524008 Radiotherapy - intraoperative control)
-* IMB: Intensity Modulated Brachytherapy
+* IMB: Intensity Modulated Intercavitary Brachytherapy
 
 ### Conformance
 

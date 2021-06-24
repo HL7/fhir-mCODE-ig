@@ -8,12 +8,12 @@ Description: "A surgical action addressing a cancer condition. The scope of this
 // * insert ReduceText(focalDevice)
 * obeys mcode-reason-required
 * extension contains
-    TreatmentIntent named treatmentIntent 0..1 MS
+    ProcedureIntent named treatmentIntent 0..1 MS
 * category 1..  // upper cardinality is already 1
 * reasonCode from CancerDisorderVS (required)
 * reasonReference only Reference(PrimaryCancerCondition or SecondaryCancerCondition)
 * bodySite.extension contains
-    LocationQualifier named locationQualifier 0..* MS
+    BodyLocationQualifier named locationQualifier 0..* MS
 // Do not insert the category slicing rules because Procedure.category is 0..1.
 * category = SCT#387713003 //"Surgical procedure"
 * code from CancerRelatedSurgicalProcedureVS (extensible)

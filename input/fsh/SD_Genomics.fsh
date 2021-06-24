@@ -113,7 +113,7 @@ RuleSet: CancerRelatedSpecimenRules
 * type 1..1
 * subject only Reference(CancerPatient)
 * collection.bodySite.extension contains
-    LocationQualifier named locationQualifier 0..*
+    BodyLocationQualifier named locationQualifier 0..*
 // It would be nice to reuse the existing condition-related extension (see Jira https://jira.hl7.org/projects/FHIR/issues/FHIR-31027) but it doesn't apply to Specimen
 * extension contains ConditionRelated named relatedCondition 0..1 MS
 * extension[relatedCondition].value[x] only Reference(PrimaryCancerCondition or SecondaryCancerCondition)

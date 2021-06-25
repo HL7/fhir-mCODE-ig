@@ -17,7 +17,7 @@ Title: "Brachytherapy Modality Value Set"
 Description: "Codes describing the modalities of brachytherapy procedures."
 * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
 * SCT#1156708005 "Low dose rate brachytherapy using temporary radioactive source (procedure)"
-* SCT#169359004 "Internal radiotherapy - permanent seeds (procedure)"  //* RT#LDR-PERM
+* SCT#169359004 "Internal radiotherapy - permanent seeds (procedure)"
 * SCT#1156384006 "Pulsed dose rate brachytherapy (procedure)"
 * SCT#394902000 "High dose brachytherapy (procedure)"
 * SCT#438629002 "High dose rate electronic brachytherapy (procedure)"
@@ -26,19 +26,11 @@ Description: "Codes describing the modalities of brachytherapy procedures."
 ValueSet: RadiotherapyModalityVS
 Id: mcode-radiotherapy-modality-vs
 Title: "Radiotherapy Modality Value Set"
-Description: "Codes describing the modalities of external beam and brachytherapy radiation procedures, for use with radiotherapy summaries. This value set is the union of the EBRT and brachytherapy modality value sets."
+Description: "Codes describing the modalities of external beam and brachytherapy radiation procedures, for use with radiotherapy summaries.  This value set is the union of the teleradiotherapy and brachytherapy modality value sets."
 * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
-* SCT#10611004 "Teleradiotherapy protons (procedure)"
-* SCT#45643008 "Teleradiotherapy using electrons (procedure)"
-* SCT#80347004 "Teleradiotherapy neutrons (procedure)"
-* SCT#1156505006 "External beam radiation therapy using carbon ions (procedure)"
-* SCT#1156506007 "External beam radiation therapy using photons (procedure)"
-* SCT#1156708005 "Low dose rate brachytherapy using temporary radioactive source (procedure)"
-* SCT#169359004 "Internal radiotherapy - permanent seeds (procedure)"  //* RT#LDR-PERM
-* SCT#1156384006 "Pulsed dose rate brachytherapy (procedure)"
-* SCT#394902000 "High dose brachytherapy (procedure)"
-* SCT#438629002 "High dose rate electronic brachytherapy (procedure)"
-* SCT#440252007 "Administration of radiopharmaceutical (procedure)"
+* include codes from valueset TeleradiotherapyModalityVS 
+* include codes from valueset BrachytherapyModalityVS
+
 
 //----------- TECHNIQUES -----------------------
 
@@ -78,23 +70,9 @@ Title: "Radiotherapy Technique Value Set"
 Description: "Codes describing the techniques of external beam and brachytherapy radiation procedures, for use with radiotherapy summaries. This is the union of the EBRT and brachytherapy technique value sets."
 * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
 // Union of EBRT and brachytherapy value sets
-* SCT#441799006 "Intensity modulated radiation therapy (procedure)"
-* SCT#1156530009 "Volumetric Modulated Arc Therapy (procedure)"
-* SCT#118641002 "Three dimensional treatment planning for external beam radiation therapy (procedure)"
-* SCT#1156526006 "Two dimensional external beam radiation therapy (procedure)"
-* SCT#168524008 "Radiotherapy - intraoperative control (procedure)"
-* SCT#1156529004 "External beam radiation therapy using particle passive scattering technique (procedure)"
-* SCT#1156528007 "External beam radiation therapy using particle spot scanning technique (procedure)"
-* SCT#1156525005 "Mixed beam external beam radiation therapy (procedure)"
-* SCT#169317000 "Neutron capture therapy (procedure)"
-* SCT#384692006 "Intracavitary brachytherapy (procedure)"
-* SCT#1156382005 "Intensity modulated intracavitary brachytherapy (procedure)"
-* SCT#113120007 "Interstitial brachytherapy (procedure)"
-* SCT#1156383000 "Intravascular brachytherapy (procedure)"
-* SCT#384691004 "Intraluminal brachytherapy (procedure)"
-* SCT#168524008 "Radiotherapy - intraoperative control (procedure)"
-* SCT#14473006 "Surface brachytherapy (procedure)"
-* SCT#16560241000119104 "Oral radionuclide therapy (procedure)"
+// Union of EBRT and brachytherapy value sets
+* include codes from valueset TeleradiotherapyTechniqueVS 
+* include codes from valueset BrachytherapyTechniqueVS
 
 ValueSet: RadiotherapyVolumeTypeVS
 Id: mcode-radiotherapy-volume-type-vs

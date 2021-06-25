@@ -5,12 +5,13 @@ The following table shows valid combinations of modality and technique for brach
 <!--Devices used during the procedure, but not remaining after, such as catheters and high-dose devices, are to be recorded in `Procedure.usedCode`. Devices implanted or removed during surgery should be recorded as a reference to a Device resource in `Procedure.focalDevice.manipulated`. The code for the implanted device type is recorded in the `Device.type` element on the referenced Device. The referenced device should conform to the [BrachytherapyImplantableDevice] profile.-->
 
 
-| **Brachytherapy Modality**  | **Technique (Delivery Method)**|
+| **Brachytherapy Modality**  | **Possible Brachytherapy Techniques**|
 | ----------------------------- | ------------------------------ |
-| Low Dose Rate | Intracavitary, Interstitial-Permanent, Interstitial-Temporary, Surface |
-| Pulse Dose Rate | Intracavitary, Interstitial, Intravascular, Intraluminal, IORT|
-| High Dose Rate  | Intracavitary, Intracavitary-IMB, Interstitial, Intravascular, Intraluminal, IORT, Surface |
-| Electronic  | Intracavitary, Intracavitary-IMB, Interstitial, Intraluminal, Surface, IORT |
+| Low dose rate - temporary source | Intracavitary, Interstitial, Surface |
+| Low dose rate - permanent source | Intracavitary, Interstitial, Surface |
+| Pulsed dose rate | Intracavitary, Interstitial, Intravascular, Intraluminal, IORT|
+| High dose rate | Intracavitary, IMB, Interstitial, Intravascular, Intraluminal, IORT, Surface |
+| Electronic | Intracavitary, IMB, Interstitial, Intraluminal, Surface, IORT |
 | Radiopharmaceutical  | Oral, Intravascular, Intracavitary, Interstitial |
 {: .grid }
 

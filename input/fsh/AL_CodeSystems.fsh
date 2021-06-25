@@ -5,7 +5,7 @@
 Alias:   LNC = http://loinc.org
 Alias:   SCT = http://snomed.info/sct
 Alias:   UCUM = http://unitsofmeasure.org
-//Alias:   NCIT = http://ncithesaurus-stage.nci.nih.gov
+//Alias:   NCIT = http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl
 Alias:   ICD10CM = http://hl7.org/fhir/sid/icd-10-cm
 Alias:   ICD10PCS = http://www.cms.gov/Medicare/Coding/ICD10
 Alias:   RXN = http://www.nlm.nih.gov/research/umls/rxnorm
@@ -17,7 +17,7 @@ Alias:   HGVS = http://varnomen.hgvs.org
 Alias:   AJCC = http://cancerstaging.org
 Alias:   GTR = http://www.ncbi.nlm.nih.gov/gtr
 Alias:   CLINVAR = http://www.ncbi.nlm.nih.gov/clinvar
-Alias:   SO = http://sequenceontology.org
+Alias:   SO = http://www.sequenceontology.org/ 
 
 // From terminology.hl7.org
 Alias:   OmbRaceCat = urn:oid:2.16.840.1.113883.6.238

@@ -3,6 +3,7 @@ RuleSet: RadiotherapyCommon
 * category 1.. MS
 * category = SCT#108290001 // "Radiation oncology AND/OR radiotherapy (procedure)"
 * performed[x] only Period
+* subject only Reference(CancerPatient)
 * extension and category MS
 
 
@@ -130,7 +131,7 @@ Description: "Dose parameters for one radiotherapy volume."
 * extension[fractionsDelivered].value[x] only unsignedInt
 // Definitions of in-line extensions
 * extension[volume] ^short = "Volume in the body where radiation was delivered"
-* extension[volume] ^definition = "A BodyStructure resource representing the volume in the body where radiation was delivered."
+* extension[volume] ^definition = "A BodyStructure resource representing volume in the body where radiation was delivered, for example, Chest Wall Lymph Nodes."
 * extension[totalDoseDelivered] ^short = "Total Radiation Dose Delivered"
 * extension[totalDoseDelivered] ^definition = "The total amount of radiation delivered to this volume within the scope of this dose delivery, i.e., dose delivered from the Procedure in which this extension is used."
 * extension[fractionsDelivered] ^short = "Number of Fractions Delivered"
@@ -157,7 +158,7 @@ Description: "A volume of the body used in radiotherapy planning or treatment de
 * location ^definition = "A code specifying the body structure or region comprising the irradiated volume. The codes do not include laterality, which if applicable MUST be specified in the locationQualifier."
 * locationQualifier from RadiotherapyTreatmentLocationQualifierVS (extensible)
 * identifier and location and locationQualifier and description and patient and morphology MS
-
+* patient only Reference(CancerPatient)
 
 Invariant:  mcode-description-or-id-required
 Description: "One of description or identifier MUST be present"

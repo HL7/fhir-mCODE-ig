@@ -9,19 +9,21 @@ The following table shows valid combinations of modality and technique for exter
 | ------------------- | ------------------ |
 | Photons  | IMRT, VMAT, 3D, 2D, IORT |
 | Electrons| 3D, 2D, IORT, COMP |
-| Protons  | PPS, PSS, MIX |
-| Carbon   | PPS, PSS, MIX |
 | Neutrons | 3D, NCT |
+| Carbon   | PPS, PSS, MIX |
+| Protons  | PPS, PSS, MIX |
+
 {: .grid }
 
 **Key:**
 
-* 3D: Three Dimensional Conformal Therapy
-* IMRT: Intensity Modulated Radiation Therapy
-* VMAT: Volumetric Modulated Radiation Therapy
-* IORT: Intraoperative radiation therapy
-* PPS: Particle Passive Scattering
-* PSS: Particle Spot Scanning
+* 3D: Three Dimensional
+* IMRT: Intensity Modulated Radiotherapy
+* VMAT: Volumetric Modulated Arc Therapy
+* IORT: Intraoperative radiotherapy
+* PPS: Particle Passive Scattering technique
+* PSS: Particle Spot Scanning technique
+* MIX: Mixed Beam radiation therapy
 * NCT: Neutron Capture Therapy
 
 ### Conformance

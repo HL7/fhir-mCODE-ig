@@ -5,7 +5,7 @@ RuleSet: CancerConditionCommonRules
     AssertedDate named assertedDate 0..1 MS and
     HistologyMorphologyBehavior named histologyMorphologyBehavior 0..1 MS
 * bodySite.extension contains
-    LocationQualifier named locationQualifier 0..*
+    BodyLocationQualifier named locationQualifier 0..*
 // removed the non-US Core category and allow clinicians to choose MK 11-19-2020
 //* category = SCT#64572001 //"Disease"
 * bodySite from CancerBodyLocationVS (extensible)

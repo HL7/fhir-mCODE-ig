@@ -43,7 +43,7 @@ Description: "Includes surgical procedure codes from SNOMED CT, ICD-10-PCS and C
 
 ValueSet: BodyLocationQualifierVS
 Id: mcode-location-qualifier-vs
-Title: "Location Qualifier Value Set"
+Title: "Body Location Qualifier Value Set"
 Description: "Qualifiers to refine a body structure or location. These include qualifiers for laterality, relative location, directionality, number, and plane."
 * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
 // Changed to intensional definition 
@@ -66,8 +66,8 @@ Description:  "Values used to describe the reasons for stopping a treatment or e
 * SCT#399307001   "Lost to follow-up (finding)" // added by mCODE Exec Council recommendation 2/12/2021
 
 
-ValueSet:		TreatmentIntentVS
-Id: mcode-treatment-intent-vs
+ValueSet:		ProcedureIntentVS
+Id: mcode-procedure-intent-vs
 Title: "Treatment Intent Value Set"
 Description:	"The purpose of a treatment."
 * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"

@@ -16,7 +16,7 @@ Description: "A summary of a course of radiotherapy delivered to a patient. It r
 // Summary-specific content
 * code = RID#mcode-radiotherapy-course-summary
 * extension contains
-    TreatmentIntent named treatmentIntent 0..1 MS and
+    ProcedureIntent named treatmentIntent 0..1 MS and
     TreatmentTerminationReason named terminationReason 0..1 MS and
     RadiotherapyModality named modality 0..* MS and
     RadiotherapyTechnique named technique 0..* MS and
@@ -90,14 +90,14 @@ Extension: RadiotherapyModality
 Id:        mcode-radiotherapy-modality
 Title:    "Radiotherapy Modality"
 Description: "Extension capturing a modality of external beam or brachytherapy radiation procedures."
-* insert ExtensionContext(Procedure)
+//* insert ExtensionContext(Procedure)
 * value[x] only CodeableConcept
 
 Extension: RadiotherapyTechnique
 Id:        mcode-radiotherapy-technique
 Title:     "Radiotherapy Technique"
 Description: "Extension capturing a technique of external beam or brachytherapy radiation procedures."
-* insert ExtensionContext(Procedure)
+//* insert ExtensionContext(Procedure)
 * value[x] only CodeableConcept
 
 Extension: RadiotherapyFractionsDelivered

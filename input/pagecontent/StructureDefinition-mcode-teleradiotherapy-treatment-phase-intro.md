@@ -3,12 +3,18 @@
 A phase consists of a set of identical fractions. In this context, identical means that each fraction uses the same modality, technique, dose per fraction, and is applied to the same treatment volume or volumes. Because of their spatial relationship or the technique used, all treatment volumes do not necessarily receive the same total dose during a phase.
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 The following table shows valid combinations of modality and technique for external beam radiotherapy. They are not enforced in the profile. Other combinations and additional techniques may be possible. The modality is represented by `mcode-teleradiotherapy-modality` extension, technique using the `mcode-teleradiotherapy-technique` extension.
 =======
 A phase describes one series of equivalent fractions and all volumes treated by a phase are involved in all fractions of that phase. Therefore, fraction counting in a Phase is for that Phase on a Procedure level, not per volume, and should not differ between volumes affected in the same phase. This contrasts with the Course Summary, which summarizes contributions from one or more phases, and documents for each volume separately the number of fractions that the volume was treated. In the Course Summary the number of delivered fractions may differ between volumes, because each volume may have received contributions from different phases or different combinations of phases.
 
 The following table shows valid combinations of modality and technique for external beam radiotherapy. They are not enforced in the profile. Other combinations and additional techniques may be possible. The modality is represented by `mcode-radiotherapy-modality` extension, technique using the `mcode-radiotherapy-technique` extension.
 >>>>>>> master
+=======
+A phase describes one series of equivalent fractions and all volumes treated by a phase are involved in all fractions of that phase. Therefore, fraction counting in a Phase is for that Phase on a Procedure level, not per volume, and should not differ between volumes affected in the same phase. This contrasts with the Course Summary, which summarizes contributions from one or more phases, and documents for each volume separately the number of fractions that the volume was treated. In the Course Summary the number of delivered fractions may differ between volumes, because each volume may have received contributions from different phases or different combinations of phases.
+
+The following table shows valid combinations of modality and technique for external beam radiotherapy. They are not enforced in the profile. Other combinations and additional techniques may be possible. The modality is represented by `mcode-teleradiotherapy-modality` extension, technique using the `mcode-teleradiotherapy-technique` extension.
+>>>>>>> dc2e860b7fd577fe3462bf89edf8568e6a8b15ea
 
 | **External Beam Modality** | **Technique** |
 | ------------------- | ------------------ |

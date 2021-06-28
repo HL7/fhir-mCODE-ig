@@ -10,16 +10,22 @@
 * [FHIR-32264](https://jira.hl7.org/browse/FHIR-32264) Renamed TreatmentIntent --> ProcedureIntent along with associated value set.
 * [FHIR-32243](https://jira.hl7.org/browse/FHIR-32243) Eliminated context constraints on Modality, Technique, and ProcedureIntent extensions.
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> dc2e860b7fd577fe3462bf89edf8568e6a8b15ea
 * [FHIR-27850](https://jira.hl7.org/browse/FHIR-27850) CancerDiseaseStatus profile now uses a newly-created LOINC code, 97509-4 "Cancer Disease Progression". In STU 1, the LOINC code chosen to represent this observation (88040-1, "Response to cancer treatment") did not precisely match the meaning of this profile because cancer disease status is observable regardless of whether the patient is under treatment.
 * Replaced radiotherapy modality and technique UMLS and local codes with approved SNOMED-CT codes, to be released in the next International release on July 31, 2021. Local codes have been removed from the radiotherapy code system, and the radiotherapy code system has been removed.
 * [FHIR-XXXXX](https://jira.hl7.org/browse/FHIR-XXXXX) 
 * [FHIR-XXXXX](https://jira.hl7.org/browse/FHIR-XXXXX) 
+<<<<<<< HEAD
 =======
 
 ## Block Vote 3
 * CancerDiseaseStatus profile now uses a newly-created LOINC code, 97509-4 "Cancer Disease Progression". In STU 1, the LOINC code chosen to represent this observation (88040-1, "Response to cancer treatment") did not precisely match the meaning of this profile because cancer disease status is observable regardless of whether the patient is under treatment. See [FHIR-27850](https://jira.hl7.org/browse/FHIR-27850).
 * Replaced radiotherapy modality and technique UMLS and local codes with approved SNOMED-CT codes, to be released in the next International release on July 31, 2021. Local codes have been removed from the radiotherapy code system, and the radiotherapy code system has been removed.
 >>>>>>> master
+=======
+>>>>>>> dc2e860b7fd577fe3462bf89edf8568e6a8b15ea
 
 
 ### mCODE STU 2 Ballot Version (May 2021)

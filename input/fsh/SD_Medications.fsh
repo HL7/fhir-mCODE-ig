@@ -31,7 +31,7 @@ RuleSet: MedicationResourcesRS
 * obeys mcode-reason-required
 * subject only Reference(CancerPatient)
 * extension contains
-    TreatmentIntent named treatmentIntent 0..1 MS and
+    ProcedureIntent named treatmentIntent 0..1 MS and
     TreatmentTerminationReason named terminationReason 0..* MS
 * reasonCode from CancerDisorderVS (required)
 * reasonReference only Reference(PrimaryCancerCondition or SecondaryCancerCondition) // only for cancer-related reasons

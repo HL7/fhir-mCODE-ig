@@ -33,9 +33,9 @@ Description: "An extension describing the morphologic and behavioral characteris
 * value[x] only CodeableConcept
 * value[x] from HistologyMorphologyBehaviorVS (required)
 
-Extension: LocationQualifier
-Id: mcode-location-qualifier
-Title: "Location Qualifier"
+Extension: BodyLocationQualifier
+Id: mcode-body-location-qualifier
+Title: "Body Location Qualifier"
 Description: "Qualifier to refine an body location. These include qualifiers for laterality, relative location, directionality, number, and plane."
 * insert ExtensionContext(Specimen.collection.bodySite)
 * insert ExtensionContext(Procedure.bodySite)
@@ -54,14 +54,14 @@ Description: "A code explaining the unplanned or premature termination, or norma
 * value[x] from TreatmentTerminationReasonVS (required)
 
 
-Extension: TreatmentIntent
-Id: mcode-treatment-intent
-Title: "Treatment Intent"
-Description: "The purpose of a treatment."
-* insert ExtensionContext(MedicationRequest)
-* insert ExtensionContext(Procedure)
+Extension: ProcedureIntent
+Id: mcode-procedure-intent
+Title: "Procedure Intent"
+Description: "The purpose of a procedure."
+//* insert ExtensionContext(MedicationRequest)
+//* insert ExtensionContext(Procedure)
 * value[x] only CodeableConcept
-* value[x] from TreatmentIntentVS (required)
+* value[x] from ProcedureIntentVS (required)
 
 RuleSet: ExtensionContext(path)
 * ^context[+].type = #element

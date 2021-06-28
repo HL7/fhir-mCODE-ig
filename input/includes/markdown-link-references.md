@@ -24,7 +24,7 @@
 [GenomicRegionStudied]: StructureDefinition-mcode-genomic-region-studied.html
 [HistologyMorphologyBehavior]: StructureDefinition-mcode-histology-morphology-behavior.html
 [KarnofskyPerformanceStatus]: StructureDefinition-mcode-karnofsky-performance-status.html
-[LocationQualifier]: StructureDefinition-mcode-location-qualifier.html
+[BodyLocationQualifier]: StructureDefinition-mcode-body-location-qualifier.html
 [MCODEPatientBundle]: StructureDefinition-mcode-patient-bundle.html
 [MCODEPatientGroup]: StructureDefinition-mcode-patient-group.html
 [CapabilityStatement]: StructureDefinition-CapabilityStatement.html
@@ -43,7 +43,7 @@
 [TNMRegionalNodesCategory]: StructureDefinition-mcode-tnm-regional-nodes-category.html
 [CancerStageGroup]: StructureDefinition-mcode-cancer-stage-group.html
 [TreatmentTerminationReason]: StructureDefinition-mcode-treatment-termination-reason.html
-[TreatmentIntent]: StructureDefinition-mcode-treatment-intent.html
+[ProcedureIntent]: StructureDefinition-mcode-procedure-intent.html
 [TumorMarkerTest]: StructureDefinition-mcode-tumor-marker-test.html
 [TumorSize]: StructureDefinition-mcode-tumor-size.html
 [Tumor]: StructureDefinition-mcode-tumor.html
@@ -104,7 +104,7 @@
 [HGNCVS]: ValueSet-mcode-hgnc-vs.html
 [HGVSVS]: ValueSet-mcode-hgvs-vs.html
 [HistologyMorphologyBehaviorVS]: ValueSet-mcode-histology-morphology-behavior-vs.html
-[BodyLocationQualifierVS]: ValueSet-mcode-location-qualifier-vs.html
+[BodyLocationQualifierVS]: ValueSet-mcode-body-location-qualifier-vs.html
 [ObservationCodesStageGroupVS]: ValueSet-mcode-observation-codes-stage-group-vs.html
 [ObservationCodesPrimaryTumorVS]: ValueSet-mcode-observation-codes-primary-tumor-vs.html
 [ObservationCodesRegionalNodesVS]: ValueSet-mcode-observation-codes-regional-nodes-vs.html
@@ -122,7 +122,7 @@
 [TNMDistantMetastasesCategoryVS]: ValueSet-mcode-tnm-distant-metastases-category-vs.html
 [TNMPrimaryTumorCategoryVS]: ValueSet-mcode-tnm-primary-tumor-category-vs.html
 [TNMRegionalNodesCategoryVS]: ValueSet-mcode-tnm-regional-nodes-category-vs.html
-[TreatmentIntentVS]: ValueSet-mcode-treatment-intent-vs.html
+[ProcedureIntentVS]: ValueSet-mcode-procedure-intent-vs.html
 [TreatmentTerminationReasonVS]: ValueSet-mcode-treatment-termination-reason-vs.html
 [TumorMarkerTestVS]: ValueSet-mcode-tumor-marker-test-vs.html
 [TumorSizeMethodVS]: ValueSet-mcode-tumor-size-method-vs.html

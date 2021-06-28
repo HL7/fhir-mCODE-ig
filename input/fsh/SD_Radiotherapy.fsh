@@ -16,7 +16,7 @@ Description: "A summary of a course of radiotherapy delivered to a patient. It r
 // Summary-specific content
 * code = RID#mcode-radiotherapy-course-summary
 * extension contains
-    TreatmentIntent named treatmentIntent 0..1 MS and
+    ProcedureIntent named treatmentIntent 0..1 MS and
     TreatmentTerminationReason named terminationReason 0..1 MS and
     RadiotherapyModality named modality 0..* MS and
     RadiotherapyTechnique named technique 0..* MS and
@@ -43,6 +43,8 @@ RuleSet: RadiotherapyPhaseCommon
 * extension[doseDeliveredToVolume].extension[fractionsDelivered] 0..0
 * extension[doseDeliveredToVolume].extension[fractionsDelivered] ^short = "Not used in this profile."
 * extension[doseDeliveredToVolume].extension[fractionsDelivered] ^definition = "Record the fractions delivered in this phase in the top-level extension also named fractionDelivered."
+* extension[doseDeliveredToVolume].extension[fractionsDelivered] ^definition = "Record the fractions delivered in this phase in the top-level extension also named fractionDelivered."
+* extension[doseDeliveredToVolume].extension[totalDoseDelivered] ^definition = "The total amount of radiation delivered to this volume within the scope of this phase, not including dose from any other phase. For summary over multiple phases, see Radiotherapy Course Summary."
 * extension[fractionsDelivered] ^short = "Number of Fractions Delivered"
 * extension[fractionsDelivered] ^definition = "The number of fractions delivered during this phase."
 * bodySite from RadiotherapyTreatmentLocationVS (required)
@@ -90,14 +92,14 @@ Extension: RadiotherapyModality
 Id:        mcode-radiotherapy-modality
 Title:    "Radiotherapy Modality"
 Description: "Extension capturing a modality of external beam or brachytherapy radiation procedures."
-* insert ExtensionContext(Procedure)
+//* insert ExtensionContext(Procedure)
 * value[x] only CodeableConcept
 
 Extension: RadiotherapyTechnique
 Id:        mcode-radiotherapy-technique
 Title:     "Radiotherapy Technique"
 Description: "Extension capturing a technique of external beam or brachytherapy radiation procedures."
-* insert ExtensionContext(Procedure)
+//* insert ExtensionContext(Procedure)
 * value[x] only CodeableConcept
 
 Extension: RadiotherapyFractionsDelivered
@@ -131,7 +133,7 @@ Description: "Dose parameters for one radiotherapy volume."
 * extension[volume] ^short = "Volume in the body where radiation was delivered"
 * extension[volume] ^definition = "A BodyStructure resource representing volume in the body where radiation was delivered, for example, Chest Wall Lymph Nodes."
 * extension[totalDoseDelivered] ^short = "Total Radiation Dose Delivered"
-* extension[totalDoseDelivered] ^definition = "The total amount of radiation delivered to this volume within the scope of this dose delivery."
+* extension[totalDoseDelivered] ^definition = "The total amount of radiation delivered to this volume within the scope of this dose delivery, i.e., dose delivered from the Procedure in which this extension is used."
 * extension[fractionsDelivered] ^short = "Number of Fractions Delivered"
 * extension[fractionsDelivered] ^definition = "The number of fractions delivered to this volume."
 

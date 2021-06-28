@@ -9,7 +9,7 @@ The following table shows valid combinations of modality and technique for brach
 
 | **Brachytherapy Modality**  | **Technique (Delivery Method)**|
 | ----------------------------- | ------------------------------ |
-| Internal radiotherapy – permanent seeds | Intecavitary |
+| Internal radiotherapy – permanent seeds | Intracavitary |
 | Low Dose Rate | Intracavitary, Interstitial, Surface |
 | Low Dose Rate using temp rad source | Intracavitary, Interstitial, Surface |
 | Pulsed Dose Rate | Intracavitary, Interstitial, Intravascular, Intraluminal, Radiotherapy-intraoperative control(IORT) |

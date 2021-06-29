@@ -11,26 +11,13 @@ The following table shows valid combinations of modality and technique for brach
 
 | **Brachytherapy Modality**  | **Technique (Delivery Method)**|
 | ----------------------------- | ------------------------------ |
-| Internal radiotherapy – permanent seeds | Intracavitary |
-| Low Dose Rate | Intracavitary, Interstitial, Surface |
+| Internal radiotherapy – permanent seeds | Interstitial |
 | Low Dose Rate using temp rad source | Intracavitary, Interstitial, Surface |
-| Pulsed Dose Rate | Intracavitary, Interstitial, Intravascular, Intraluminal, Radiotherapy-intraoperative control(IORT) |
+| Pulsed Dose Rate | Intracavitary, Interstitial |
 | High Dose Rate  | Intracavitary, Intensity-modulated intercavitary (IMB), Interstitial, Intravascular, Intraluminal, Radiotherapy-intraoperative control(IORT), Surface |
 | High dose rate electronic  | Intracavitary, Intensity-modulated intercavitary (IMB), Interstitial, Intraluminal, Radiotherapy-intraoperative control(IORT), Surface |
 | Radiopharmaceutical  | Oral, Intravascular, Intracavitary, Interstitial |
 | ----------------------------- | ------------------------------ |
-{: .grid }
-
-*OLD*
-
-| **Brachytherapy Modality**  | **Possible Brachytherapy Techniques**|
-| ----------------------------- | ------------------------------ |
-| Low dose rate - temporary source | Intracavitary, Interstitial, Surface |
-| Low dose rate - permanent source | Intracavitary, Interstitial, Surface |
-| Pulsed dose rate | Intracavitary, Interstitial, Intravascular, Intraluminal, IORT|
-| High dose rate | Intracavitary, IMB, Interstitial, Intravascular, Intraluminal, IORT, Surface |
-| Electronic | Intracavitary, IMB, Interstitial, Intraluminal, Surface, IORT |
-| Radiopharmaceutical  | Oral, Intravascular, Intracavitary, Interstitial |
 {: .grid }
 
 **Key:**

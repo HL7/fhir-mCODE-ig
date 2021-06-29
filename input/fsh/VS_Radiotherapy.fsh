@@ -17,7 +17,7 @@ Title: "Brachytherapy Modality Value Set"
 Description: "Codes describing the modalities of brachytherapy procedures."
 * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
 * SCT#1156708005 "Low dose rate brachytherapy using temporary radioactive source (procedure)"
-* SCT#1156707000 "Low dose rate brachytherapy (procedure)"
+//* SCT#1156707000 "Low dose rate brachytherapy (procedure)"
 * SCT#169359004 "Internal radiotherapy - permanent seeds (procedure)"  //* RT#LDR-PERM
 * SCT#1156384006 "Pulsed dose rate brachytherapy (procedure)"
 * SCT#394902000 "High dose brachytherapy (procedure)"
@@ -50,7 +50,7 @@ Description: "Codes describing the techniques of teleradiotherapy (external beam
 * SCT#1156528007 "External beam radiation therapy using particle spot scanning technique (procedure)"
 * SCT#1156525005 "Mixed beam external beam radiation therapy (procedure)"
 * SCT#169317000 "Neutron capture therapy (procedure)"
-* SCT#1156524009 "Intensity modulated external beam neutron radiation therapy (procedure)"
+// * SCT#1156524009 "Intensity modulated external beam neutron radiation therapy (procedure)"
 
 
 ValueSet: BrachytherapyTechniqueVS

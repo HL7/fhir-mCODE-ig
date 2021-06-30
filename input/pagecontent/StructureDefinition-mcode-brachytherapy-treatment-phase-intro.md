@@ -1,4 +1,5 @@
 ### Usage
+
 A phase consists of a set of identical fractions. In this context, identical means that each fraction uses the same modality, technique, dose per fraction, and is applied to the same treatment volume or volumes. Because of their spatial relationship or the technique used, all treatment volumes do not necessarily receive the same total dose during a phase.
 
 A phase describes one series of equivalent fractions and all volumes treated by a phase are involved in all fractions of that phase. Therefore, fraction counting in a Phase is for that Phase on a Procedure level, not per volume, and should not differ between volumes affected in the same phase. This contrasts with the Course Summary, which summarizes contributions from one or more phases, and documents for each volume separately the number of fractions that the volume was treated. In the Course Summary the number of delivered fractions may differ between volumes, because each volume may have received contributions from different phases or different combinations of phases.
@@ -14,8 +15,8 @@ The following table shows valid combinations of modality and technique for brach
 | Internal radiotherapy – permanent seeds | Interstitial |
 | Low Dose Rate using temp rad source | Intracavitary, Interstitial, Surface |
 | Pulsed Dose Rate | Intracavitary, Interstitial |
-| High Dose Rate  | Intracavitary, Intensity-modulated intercavitary (IMB), Interstitial, Intravascular, Intraluminal, Radiotherapy-intraoperative control(IORT), Surface |
-| High dose rate electronic  | Intracavitary, Intensity-modulated intercavitary (IMB), Interstitial, Intraluminal, Radiotherapy-intraoperative control(IORT), Surface |
+| High Dose Rate  | Intracavitary, IMB, Interstitial, Intravascular, Intraluminal, IORT, Surface |
+| High dose rate electronic  | Intracavitary, IMB, Interstitial, Intraluminal, IORT, Surface |
 | Radiopharmaceutical  | Oral, Intravascular, Intracavitary, Interstitial |
 | ----------------------------- | ------------------------------ |
 {: .grid }
@@ -23,7 +24,7 @@ The following table shows valid combinations of modality and technique for brach
 **Key:**
 
 * IORT: Intraoperative radiation therapy (SCT#168524008 Radiotherapy - intraoperative control)
-* IMB: Intensity Modulated Intercavitary Brachytherapy
+* IMB: Intensity Modulated Intracavitary Brachytherapy
 
 ### Conformance
 

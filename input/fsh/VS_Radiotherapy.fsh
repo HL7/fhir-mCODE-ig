@@ -41,8 +41,7 @@ Description: "Codes describing the techniques of teleradiotherapy (external beam
 * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
 * SCT#441799006 "Intensity modulated radiation therapy (procedure)"
 * SCT#1156530009 "Volumetric Modulated Arc Therapy (procedure)"
-// 3D term is not optimal since it refers to the planning procedure, not the therapy itself
-* SCT#118641002 "Three dimensional treatment planning for external beam radiation therapy (procedure)"
+* SCT#1162782007 "Three dimensional external beam radiation therapy (procedure)"
 * SCT#1156526006 "Two dimensional external beam radiation therapy (procedure)"
 * SCT#168524008 "Radiotherapy - intraoperative control (procedure)"
 * SCT#1156529004 "External beam radiation therapy using particle passive scattering technique (procedure)"

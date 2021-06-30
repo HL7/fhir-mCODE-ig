@@ -48,8 +48,8 @@ Extension: TreatmentTerminationReason
 Id: mcode-treatment-termination-reason
 Title: "Termination Reason"
 Description: "A code explaining the unplanned or premature termination, or normal completion, of a plan of treatment, course of medication, or research study. "
-* insert ExtensionContext(MedicationRequest)
-* insert ExtensionContext(Procedure)
+//* insert ExtensionContext(MedicationRequest)
+//* insert ExtensionContext(Procedure)
 * value[x] only CodeableConcept
 * value[x] from TreatmentTerminationReasonVS (required)
 

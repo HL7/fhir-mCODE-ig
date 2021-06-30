@@ -199,5 +199,8 @@ Description: "Comorbid condition checklist and optional risk score, using Elixha
 * component[weightLoss].extension[conditionCode].value[x] from ElixhauserWeightLossVS
 // Must Supports -- none inherited
 * component and status and code and subject and focus and effective[x] MS
+// 
+* value[x] only integer 
+* value[x] MS 
 
 

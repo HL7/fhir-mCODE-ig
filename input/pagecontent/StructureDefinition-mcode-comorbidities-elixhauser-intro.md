@@ -22,7 +22,7 @@ If a comorbidity is present, the user can optionally supply a specific code deta
 
 For any component, "present" or "absent" refers back to a comorbidity category defined by `Observation.component`.code. Since there are no existing codes for individual Elixhauser categories, mCODE provides them. For example, a component relating to congestive heart failure (CHF) will have `component.code.coding.system` of `http://hl7.org/fhir/us/mcode/CodeSystem/mcode-elixhauser-category-cs` and `component.code.coding.code` "CHF". The implication is that the patient has a disease found in the *specific version* of Elixhauser CHF codes corresponding to the definition of the "CHF" code; in this case, one of the codes in [Elixhauser Comorbid Condition Value Set for Congestive Heart Failure](ValueSet-elixhauser-congestive-heart-failure-vs.html).
 
-If an overall score is calculated, it should be recorded in `Observation.value[x]`. This is not required.
+If an overall score is calculated, it should be recorded in Observation.value[valueInteger].   This is not required.
 
 ### Usage
 

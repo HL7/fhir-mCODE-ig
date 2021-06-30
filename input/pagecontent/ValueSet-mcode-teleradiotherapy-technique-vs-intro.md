@@ -7,10 +7,10 @@ The following rules apply to this value set:
 
 ### Code Descriptions
 
-| **Common Usage Name**  | **Definition**|  **SNOMED Description**  | **SNOMED Code**|
+| **Common Usage Name**  | **Definition**|  **SNOMED CT Fully Specified Name**  | **SNOMED CT Concept ID**|
 | ----------------- | ----------------------------- | ------------------------------ | ----------------------------- | 
 |  2D  |  Dose calculated without projection onto 3D imaging and delivered without 3D techniques.  |  Two dimensional external beam radiation therapy (procedure)  | 1156526006 |
-|  3D  |  Dose calculated with projection onto 3D imaging (e.g. CT or MR) delivered with either static aperture (Collimator, SRS Cone, Static MLC, blocks, etc) or non-IMRT/VMAT dynamic apertures (e.g. field-in-field, dynamic arc) using either single gantry angles or arcs.  |  Three Dimensional Teleradiotherapy (procedure)  | USCRS-33257 |
+|  3D  |  Dose calculated with projection onto 3D imaging (e.g. CT or MR) delivered with either static aperture (Collimator, SRS Cone, Static MLC, blocks, etc) or non-IMRT/VMAT dynamic apertures (e.g. field-in-field, dynamic arc) using either single gantry angles or arcs.  |  Three dimensional external beam radiation therapy  | 1162782007 |
 | Intensity Modulated Radiation Therapy (IMRT)   | A technique of high-precision radiotherapy that uses computer control to deliver precise radiation doses that conform to a three-dimensional (3-D) shape by modulating the intensity of the radiation beam across the areas irradiated by each of the beams, with patterns designed under computer control to optimize the dose distribution according to a set of limits specified for target, organ at risk, and other structures.   | Intensity modulated radiation therapy (procedure)   | 441799006 |
 | Intraoperative Radiation Therapy (IORT)   | A radiation treatment administered during surgery.   | Radiotherapy - intraoperative control (procedure)   | 168524008 |
 |  Mixed(MIX)  | Both Photon and Particle based beams are used to deliver the radiation therapy.   | Mixed beam external beam radiation therapy (procedure)  | 1156525005 |

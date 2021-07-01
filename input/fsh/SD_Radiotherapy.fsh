@@ -94,6 +94,7 @@ Title:    "Radiotherapy Modality"
 Description: "Extension capturing a modality of external beam or brachytherapy radiation procedures."
 //* insert ExtensionContext(Procedure)
 * value[x] only CodeableConcept
+* value[x] 1..1
 
 Extension: RadiotherapyTechnique
 Id:        mcode-radiotherapy-technique
@@ -101,6 +102,7 @@ Title:     "Radiotherapy Technique"
 Description: "Extension capturing a technique of external beam or brachytherapy radiation procedures."
 //* insert ExtensionContext(Procedure)
 * value[x] only CodeableConcept
+* value[x] 1..1
 
 Extension: RadiotherapyFractionsDelivered
 Id:        mcode-radiotherapy-fractions-delivered
@@ -108,6 +110,7 @@ Title:     "Radiotherapy Fractions Delivered"
 Description: "The total number of fractions (treatment divisions) actually delivered for this volume."
 * insert ExtensionContext(Procedure)
 * value[x] only unsignedInt
+* value[x] 1..1
 
 Extension: RadiotherapySessions
 Id:        mcode-radiotherapy-sessions
@@ -115,6 +118,7 @@ Title:     "Radiotherapy Number of Sessions"
 Description: "The number of sessions in a course of radiotherapy."
 * insert ExtensionContext(Procedure)
 * value[x] only unsignedInt
+* value[x] 1..1
 
 Extension: RadiotherapyDoseDeliveredToVolume
 Id: mcode-radiotherapy-dose-delivered-to-volume

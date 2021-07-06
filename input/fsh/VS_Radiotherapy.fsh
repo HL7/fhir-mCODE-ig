@@ -4,23 +4,22 @@ ValueSet:  TeleradiotherapyModalityVS
 Id: mcode-teleradiotherapy-modality-vs
 Title: "Teleradiotherapy Modality Value Set"
 Description: "Codes describing the modalities of teleradiotherapy (external beam) procedures."
-// * insert ExpandValueSet
 * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
 * SCT#10611004 "Teleradiotherapy protons (procedure)"
 * SCT#45643008 "Teleradiotherapy using electrons (procedure)"
 * SCT#80347004 "Teleradiotherapy neutrons (procedure)"
-* UMLS#C3494442 "Carbon Ion Radiation Therapy" // NCIT#C160816 "Carbon Ion Radiation Therapy"
-* UMLS#C3539769 "Photon Beam Radiation Therapy" // NCIT#C104914 "Photon Beam Radiation Therapy"
+* SCT#1156505006 "External beam radiation therapy using carbon ions (procedure)"
+* SCT#1156506007 "External beam radiation therapy using photons (procedure)"
 
 ValueSet: BrachytherapyModalityVS
 Id: mcode-brachytherapy-modality-vs
 Title: "Brachytherapy Modality Value Set"
 Description: "Codes describing the modalities of brachytherapy procedures."
-// * insert ExpandValueSet
 * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
-* RT#LDR-TEMP
-* RT#LDR-PERM
-* UMLS#C3897809 "Pulsed-Dose Rate Brachytherapy"  // NCIT#C116542 "Pulsed-Dose Rate Brachytherapy"
+* SCT#1156708005 "Low dose rate brachytherapy using temporary radioactive source (procedure)"
+//* SCT#1156707000 "Low dose rate brachytherapy (procedure)"
+* SCT#169359004 "Internal radiotherapy - permanent seeds (procedure)"  //* RT#LDR-PERM
+* SCT#1156384006 "Pulsed dose rate brachytherapy (procedure)"
 * SCT#394902000 "High dose brachytherapy (procedure)"
 * SCT#438629002 "High dose rate electronic brachytherapy (procedure)"
 * SCT#440252007 "Administration of radiopharmaceutical (procedure)"
@@ -28,38 +27,31 @@ Description: "Codes describing the modalities of brachytherapy procedures."
 ValueSet: RadiotherapyModalityVS
 Id: mcode-radiotherapy-modality-vs
 Title: "Radiotherapy Modality Value Set"
-Description: "Codes describing the modalities of external beam and brachytherapy radiation procedures, for use with radiotherapy summaries. This value set is the union of the EBRT and brachytherapy modality value sets."
-// * insert ExpandValueSet
+Description: "Codes describing the modalities of external beam and brachytherapy radiation procedures, for use with radiotherapy summaries.  This value set is the union of the teleradiotherapy and brachytherapy modality value sets."
 * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
-* SCT#10611004 "Teleradiotherapy protons (procedure)"
-* SCT#45643008 "Teleradiotherapy using electrons (procedure)"
-* SCT#80347004 "Teleradiotherapy neutrons (procedure)"
-* UMLS#C3494442 "Carbon Ion Radiation Therapy" // NCIT#C160816 "Carbon Ion Radiation Therapy"
-* UMLS#C3539769 "Photon Beam Radiation Therapy" // NCIT#C104914 "Photon Beam Radiation Therapy"
-* RT#LDR-TEMP
-* RT#LDR-PERM
-* UMLS#C3897809 "Pulsed-Dose Rate Brachytherapy"  // NCIT#C116542 "Pulsed-Dose Rate Brachytherapy"
-* SCT#394902000 "High dose brachytherapy (procedure)"
-* SCT#438629002 "High dose rate electronic brachytherapy (procedure)"
-* SCT#440252007 "Administration of radiopharmaceutical (procedure)"
+* include codes from valueset TeleradiotherapyModalityVS 
+* include codes from valueset BrachytherapyModalityVS
 
 //----------- TECHNIQUES -----------------------
-
+// 
 ValueSet: TeleradiotherapyTechniqueVS
 Id: mcode-teleradiotherapy-technique-vs
 Title: "Teleradiotherapy Technique Value Set"
 Description: "Codes describing the techniques of teleradiotherapy (external beam) procedures."
-// * insert ExpandValueSet
 * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
 * SCT#441799006 "Intensity modulated radiation therapy (procedure)"
-* UMLS#C3489631 "Volumetric Modulated Arc Therapy"
-* RT#3D
-* UMLS#C5236971 "2D Conventional Radiotherapy"  // NCIT#C165189 "2D Conventional Radiotherapy"
+* SCT#1156530009 "Volumetric Modulated Arc Therapy (procedure)"
+// 3D term is not optimal since it refers to the planning procedure, not the therapy itself
+// * SCT#Requested (USCRS-352183)"Three Dimensional Teleradiotherapy (procedure)"
+* SCT#118641002 "Three dimensional treatment planning for external beam radiation therapy (procedure)"
+* SCT#1156526006 "Two dimensional external beam radiation therapy (procedure)"
 * SCT#168524008 "Radiotherapy - intraoperative control (procedure)"
-* RT#PPS
-* RT#PSS
-* RT#MIX
+* SCT#1156529004 "External beam radiation therapy using particle passive scattering technique (procedure)"
+* SCT#1156528007 "External beam radiation therapy using particle spot scanning technique (procedure)"
+* SCT#1156525005 "Mixed beam external beam radiation therapy (procedure)"
 * SCT#169317000 "Neutron capture therapy (procedure)"
+// * SCT#1156524009 "Intensity modulated external beam neutron radiation therapy (procedure)"
+
 
 ValueSet: BrachytherapyTechniqueVS
 Id: mcode-brachytherapy-technique-vs
@@ -67,9 +59,9 @@ Title: "Brachytherapy Technique Value Set"
 Description: "Codes describing the techniques of brachytherapy (internal or surface radiation) procedures."
 * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
 * SCT#384692006 "Intracavitary brachytherapy (procedure)"
-* RT#CAV-IMB
+* SCT#1156382005 "Intensity modulated intracavitary brachytherapy (procedure)"
 * SCT#113120007 "Interstitial brachytherapy (procedure)"
-* UMLS#C0203617  "Intravascular radionuclide therapy" // MEDCIN#341945 "Intravascular radionuclide therapy"
+* SCT#1156383000 "Intravascular brachytherapy (procedure)"
 * SCT#384691004 "Intraluminal brachytherapy (procedure)"
 * SCT#168524008 "Radiotherapy - intraoperative control (procedure)"
 * SCT#14473006 "Surface brachytherapy (procedure)"
@@ -80,23 +72,9 @@ Id: mcode-radiotherapy-technique-vs
 Title: "Radiotherapy Technique Value Set"
 Description: "Codes describing the techniques of external beam and brachytherapy radiation procedures, for use with radiotherapy summaries. This is the union of the EBRT and brachytherapy technique value sets."
 * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
-* SCT#441799006 "Intensity modulated radiation therapy (procedure)"
-* UMLS#C3489631 "Volumetric Modulated Arc Therapy"
-* RT#3D
-* UMLS#C5236971 "2D Conventional Radiotherapy"  // NCIT#C165189 "2D Conventional Radiotherapy"
-* SCT#168524008 "Radiotherapy - intraoperative control (procedure)"
-* RT#PPS
-* RT#PSS
-* RT#MIX
-* SCT#169317000 "Neutron capture therapy (procedure)"
-* SCT#384692006 "Intracavitary brachytherapy (procedure)"
-* RT#CAV-IMB
-* SCT#113120007 "Interstitial brachytherapy (procedure)"
-* UMLS#C0203617  "Intravascular radionuclide therapy" // MEDCIN#341945 "Intravascular radionuclide therapy"
-* SCT#384691004 "Intraluminal brachytherapy (procedure)"
-* SCT#168524008 "Radiotherapy - intraoperative control (procedure)"
-* SCT#14473006 "Surface brachytherapy (procedure)"
-* SCT#16560241000119104 "Oral radionuclide therapy (procedure)"
+// Union of EBRT and brachytherapy value sets
+* include codes from valueset TeleradiotherapyTechniqueVS 
+* include codes from valueset BrachytherapyTechniqueVS
 
 ValueSet: RadiotherapyVolumeTypeVS
 Id: mcode-radiotherapy-volume-type-vs
@@ -106,13 +84,39 @@ Description: "Codes describing the types of body volumes used in radiotherapy pl
 * SCT#228793007 "Planning target volume (observable entity)"
 * SCT#228791009 "Gross tumor volume (observable entity)"
 * SCT#228792002 "Clinical target volume (observable entity)"
-* UMLS#C2936599 "Organs at Risk"  // MSH#D058958 "Organs at Risk"
+* SCT#1162586008 "Irradiated volume of organ at risk (observable entity)"
 
 ValueSet: RadiotherapyTreatmentLocationQualifierVS
 Id: mcode-radiotherapy-treatment-location-qualifier-vs
 Title: "Radiotherapy Treatment Location Qualifier Value Set"
 Description: "Various modifiers that can be applied to body locations where radiotherapy treatments can be directed."
 * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
+* include codes from system SCT where concept is-a #254292007 "Lymph node level value (qualifier value)"
+// SCT codes requested or existing 
+// * SCT#258400004 "Lymph node level I (qualifier value)"
+// * SCT#1162616006 "Lymph node level Ia (qualifier value)"
+// * SCT#1162617002 "Lymph node level Ib (qualifier value)"
+// * SCT#258401000 Lymph node level II (qualifier value)
+// * SCT#258403002 "Lymph node level III (qualifier value)"
+// * SCT#258403002 "Lymph node level IV (qualifier value)"
+// * SCT#1162620005 "Lymph node level IVa (qualifier value)"
+// * SCT#1162621009 "Lymph node level IVb (qualifier value)"
+// * SCT#258404008 "Lymph node level V (qualifier value)"
+// * SCT#1162622002f "Lymph node level Va (qualifier value)"
+// Lymph node level VB (qualifier value) - R
+// Lymph node level VC (qualifier value) - R
+// * SCT#258405009 "Lymph node level VI(qualifier value)"
+// Lymph node level VIA (qualifier value) - R
+// Lymph node level VIB (qualifier value) - R
+// * SCT#395168005 "Lymph node level VII (qualifier value)"
+// Lymph node level VIIA (qualifier value) - R
+// Lymph node level VIIB (qualifier value) - R
+// Lymph node level VIII (qualifier value) - R
+// Lymph node level IX (qualifier value) - R
+// Lymph node level X (qualifier value) - R
+// Lymph node level XA (qualifier value) - R
+// Lymph node level XB (qualifier value) - R
+
 * SCT#7771000    "Left (qualifier value)"
 * SCT#24028007    "Right (qualifier value)"
 * SCT#255549009    "Anterior (qualifier value)"
@@ -130,7 +134,8 @@ Description: "Various modifiers that can be applied to body locations where radi
 * SCT#14414005  "Peripheral (qualifier value)"
 * SCT#26216008  "Central (qualifier value)"
 * SCT#18769003   "Adjacent" // "Juxta-posed (qualifier value)"
-* UMLS#C0687118  "Detached"
+* UMLS#C0687118  "Detached"  // standing in for non-adjacent
+//* SCT#Requested (USCRS 352075) "non-adjacent (qualifier value)"
 
 ValueSet: RadiotherapyTreatmentLocationVS
 Id: mcode-radiotherapy-treatment-location-vs
@@ -349,26 +354,20 @@ Description: "Codes describing the body locations where radiotherapy treatments 
 // ADDED 4-1-2021
 * SCT#143925009   "Structure of buccinator lymph node (body structure)"
 * SCT#16227691000119107 "Post-surgical excision site (morphologic abnormality)"
-* UMLS#C3640144 "Tumor Bed"
+// * UMLS#C3640144 "Tumor Bed"
+* SCT#1162492000  "Tumor bed (morphologic abnormality)"
 * UMLS#C0223388 "Structure of body of thirteenth thoracic vertebra (body structure)"
+//* SCT#Requested (352072) "Structure of body of thirteenth thoracic vertebra (body structure)"
 * UMLS#C0222987 "Bone structure of thirteenth rib (body structure)"
-* RT#LN_AX_L1  "Level 1 Axillary Lymph Nodes"
-* RT#LN_Ax_L2  "Level 2 Axillary Lymph Nodes"
-* RT#LN_Ax_L3  "Level 3 Axillary Lymph Nodes"
-* RT#LN_Neck_IA  "Level IA (Submental) neck node"
-* RT#LN_Neck_IB  "Level IB (Submandibular) neck node"
-* RT#LN_Neck_IIA  "Level IIA (Upper Jugular) neck node"
-* RT#LN_Neck_IIB  "Level IIB (Upper Jugular) neck node"
-* RT#LN_Neck_III  "Level III (Middle Jugular) neck node"
-* RT#LN_Neck_IV  "Level IV neck (Lower Jugular) node"
-* RT#LN_Neck_VA  "Level VA (Posterior Triangle) neck node"
-* RT#LN_Neck_VB  "Level VB (Posterior Triangle) neck node"
-* RT#LN_Neck_VC  "Level VC (Posterior Triangle) neck node"
-* RT#LN_Neck_VI  "Level VI (Anterior Triangle) neck node"
-* RT#LN_Neck_VII  "Level VII (Upper Mediastinal) neck node"
-
-
-
+//* SCT#Requested (352073) "Bone structure of thirteenth rib (body structure)"
+// Added after STU 2 ballot version
+* SCT#8928004  "Inguinal lymph node structure (body structure)"   // groin lymph nodes
+* SCT#50837003  "Structure of lingula of left lung (body structure)"  // Post STU 2 ballot
+* SCT#245321008  "Upper jugular lymph node (body structure)"  // Post STU 2 ballot
+* SCT#245262000 "Middle jugular lymph node group (body structure)"  // Post STU 2 ballot
+* SCT#245263005 "Lower jugular lymph node group (body structure)"  // Post STU 2 ballot
+* SCT#76838003 "Structure of supraclavicular lymph node (body structure)"  // Post STU 2 ballot
+* SCT#279143009 "Mastoid lymph node (body structure)"  // Post STU 2 ballot
 
 /*  SAVE
 ValueSet: RadiotherapyBodySiteVS

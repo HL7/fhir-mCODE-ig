@@ -1,3 +1,20 @@
+### mCODE STU 2 (Sept 2021)
+## Block Vote 1
+* [FHIR-32166](https://jira.hl7.org/browse/FHIR-32166) All references to subject or patient now reference CancerPatient.   Any patient that conforms to USCore is conformant.  Clients/server have to handle in a meaningful way the deceased info.  
+* [FHIR-32263](Fhttps://jira.hl7.org/browse/FHIR-32263) Radiotherapy Modality Value Set and Radiotherapy Technique Value Set are now defined by inclusion of the modality and technique value sets for Brachytherapy and Teleoradiotherapy rather than by enumeration.
+* [FHIR-32350](https://jira.hl7.org/browse/FHIR-32350) The descriptions for the Elixhauser ThyroidOther and NeuroOther VS have been clarified.
+* [FHIR-32663](https://jira.hl7.org/browse/FHIR-32663) Changed the definition of CancerStagingSystemVS to an intensional set containing descendants of SCT#254292007 "Tumor staging (tumor staging)". The includes codes for AJCC staging (version 6, 7, and 8) and many other specialized staging systems. 
+* A number of small corrections/improvements to narrative
+## Subsequent Block Votes
+* [FHIR-32345](https://jira.hl7.org/browse/FHIR-32345) Renamed LocationBodyQualifer --> BodyLocationQualifier
+* [FHIR-32264](https://jira.hl7.org/browse/FHIR-32264) Renamed TreatmentIntent --> ProcedureIntent along with associated value set.
+* [FHIR-32243](https://jira.hl7.org/browse/FHIR-32243) Eliminated context constraints on Modality, Technique, and ProcedureIntent extensions.
+* [FHIR-27850](https://jira.hl7.org/browse/FHIR-27850) CancerDiseaseStatus profile now uses a newly-created LOINC code, 97509-4 "Cancer Disease Progression". In STU 1, the LOINC code chosen to represent this observation (88040-1, "Response to cancer treatment") did not precisely match the meaning of this profile because cancer disease status is observable regardless of whether the patient is under treatment.
+* Replaced radiotherapy modality and technique UMLS and local codes with approved SNOMED-CT codes, to be released in the next International release on July 31, 2021. Local codes have been removed from the radiotherapy code system, and the radiotherapy code system has been removed.
+* [FHIR-XXXXX](https://jira.hl7.org/browse/FHIR-XXXXX) 
+* [FHIR-XXXXX](https://jira.hl7.org/browse/FHIR-XXXXX) 
+
+
 ### mCODE STU 2 Ballot Version (May 2021)
 
 The following summarizes changes to [the STU1 release](http://hl7.org/fhir/us/mcode/STU1) for the STU2 Ballot (May 2021). Many of these changes have been taken in response to input from the HL7 community. Issue numbers refer to the [HL7 Jira](https://jira.hl7.org/issues/?filter=13361) (free account registration required).
@@ -5,7 +22,6 @@ The following summarizes changes to [the STU1 release](http://hl7.org/fhir/us/mc
 A comprehensive listing of differences in FHIR artifacts between STU 1 and STU 2 is given in the [Data Dictionary Differential](dictionary.html#data-dictionary-differential) (DDD) spreadsheet. This file is meant to supplement rather than replace the content in this Implementation Guide, and the Implementation Guide takes precedence in any cases where the DDD appears to conflict with it.
 
 #### General Changes
-
 
 * Improved [Data Dictionary](dictionary.html)
 * New and improved [Conformance Criteria](conformance-general.html)

@@ -1,6 +1,6 @@
 ### Background
 
-Codes correspond to body structures defined in [AAPM Task Group 263 Final Report](https://www.aapm.org/pubs/reports/RPT_263.pdf), but are drawn in priority order first from SNOMED CT (SCT), second from UMLS Metathesaurus, and lastly, from the [radiotherapy code system][RadiotherapyCS] defined in this Implementation Guide. The body structure terms do not, however, include laterality or any other qualifier (see [Usage](#usage)).
+Codes correspond to body structures defined in [AAPM Task Group 263 Final Report](https://www.aapm.org/pubs/reports/RPT_263.pdf), but are drawn from SNOMED CT (SCT). The body structure terms do not, however, include laterality or any other qualifier (see [Usage](#usage)).
 
 ### Usage
 

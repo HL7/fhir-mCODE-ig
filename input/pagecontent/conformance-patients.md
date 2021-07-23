@@ -1,14 +1,14 @@
-To facilitate conformance testing, testing software must be able to determine which patients are "mCODE Patients" -- those in scope for mCODE. In general, all patients with confirmed cancer diagnoses SHOULD be covered by mCODE. In FHIR terms, these are patients who have a Condition where `Condition.code` is a member of the value set [PrimaryOrUncertainBehaviorCancerDisorderVS] and `Condition.verificationStatus` is confirmed.
+To facilitate conformance testing, testing software must be able to determine which patients are in-scope -- Cancer patients who are in the scope of mCODE. In general, all patients with confirmed cancer diagnoses SHOULD be in-scope. In FHIR terms, these are patients who have a Condition where `Condition.code` is a member of the value set [PrimaryOrUncertainBehaviorCancerDisorderVS] and `Condition.verificationStatus` is confirmed.
 
-However, due to technical, organizational, or legal reasons, mCODE Data Senders MAY exclude some cancer patients from mCODE. In that case, the mCODE Data Sender MUST define a Group resource to identify ALL mCODE patients in their system. This Group resource MUST set `Group.code` to `mcode-patient` with code system `http://hl7.org/fhir/us/mcode/CodeSystem/mcode-resource-identifier-cs`. Data Senders that do not exclude any cancer patients from mCODE MAY still populate a `mcode-patient` Group resource.
+However, due to technical, organizational, or legal reasons, mCODE Data Senders MAY exclude some cancer patients from mCODE. In that case, the mCODE Data Sender MUST define a Group resource to identify ALL in-scope patients in their system. This Group resource MUST set `Group.code` to `mcode-patient` with code system `http://hl7.org/fhir/us/mcode/CodeSystem/mcode-resource-identifier-cs`. Data Senders that do not exclude any cancer patients from mCODE MAY still populate a `mcode-patient` Group resource.
 
-All mCODE Data Senders MUST respond to `GET [base]/Group?code=mcode-patient` with either zero or one Group resource. If no Group resource is returned, all patients with cancer diagnoses (as defined above) will be considered to be "mCODE Patients." If a Group resource is returned, patients not referenced in the Group resource are assumed to be out of scope, independent of any cancer diagnosis. This requirement is reflected in ALL CapabilityStatements referenced in this section.
+All mCODE Data Senders MUST respond to `GET [base]/Group?code=mcode-patient` with either zero or one Group resource. If no Group resource is returned, all patients with cancer diagnoses (as defined above) will be considered to be in-scope. If a Group resource is returned, patients not referenced in the Group resource are assumed to be out of scope, independent of any cancer diagnosis. This requirement is reflected in ALL CapabilityStatements referenced in this section.
 
-The following CapabilityStatements define the various methods participants can use to identify mCODE Patients. Participants implementing a pull architecture MUST support at least one of the CapabilityStatements listed from **most to least preferable**, below.
+The following CapabilityStatements define the various methods participants can use to identify in-scope Patients. Participants implementing a pull architecture MUST support at least one of the CapabilityStatements listed from **most to least preferable**, below.
 
 ### Patients-in-Group Approach
 
-In this approach, Senders respond to the following request with a Group resource referencing the Patient resources for all mCODE Patients, AND allow the Receiver to retrieve a Bundle of the Patient resources referenced in the first response using [composite search parameters](https://www.hl7.org/fhir/search.html#combining):
+In this approach, Senders respond to the following request with a Group resource referencing the Patient resources for all in-scope Patients, AND allow the Receiver to retrieve a Bundle of the Patient resources referenced in the first response using [composite search parameters](https://www.hl7.org/fhir/search.html#combining):
 
     GET [base]/Group?code=mcode-patients
 
@@ -24,7 +24,7 @@ In this approach, Senders respond to the following request with a Group resource
 
 ### Patients-With-Cancer-Condition Approach
 
-In this approach, Senders respond to the following request with a FHIR Bundle of Patient resources for all mCODE Patients. This method is preferred over the approaches below UNLESS [reverse chaining](https://www.hl7.org/fhir/search.html#has) is entirely unsupported on the system.
+In this approach, Senders respond to the following request with a FHIR Bundle of Patient resources for all in-scope Patients. This method is preferred over the approaches below UNLESS [reverse chaining](https://www.hl7.org/fhir/search.html#has) is entirely unsupported on the system.
 
     GET [base]/Patient?_has:Condition:subject:code:in=http://hl7.org/fhir/us/mcode/ValueSet/mcode-primary-or-uncertain-behavior-cancer-disorder-vs
 

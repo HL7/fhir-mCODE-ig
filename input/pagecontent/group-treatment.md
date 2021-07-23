@@ -34,6 +34,7 @@ A radiation oncology work group convened under [CodeX FHIR Accelerator](https://
   * [TreatmentIntent]
 * **Radiotherapy**
   * [RadiotherapyDoseDeliveredToVolume]
+  * [RadiotherapyFractionsDelivered]
   * [RadiotherapyModality]
   * [RadiotherapySessions]
   * [RadiotherapyTechnique]

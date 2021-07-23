@@ -12,7 +12,6 @@ The following table shows valid combinations of modality and technique for exter
 | Neutrons | 3D, NCT |
 | Carbon   | PPS, PSS, MIX |
 | Protons  | PPS, PSS, MIX |
-
 {: .grid }
 
 **Key:**

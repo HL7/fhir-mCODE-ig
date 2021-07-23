@@ -19,7 +19,7 @@ The following table shows valid combinations of modality and technique for brach
 
 **Key:**
 
-* IORT: Intraoperative radiation therapy (SCT#168524008 Radiotherapy - intraoperative control)
+* IORT: Intraoperative radiation therapy 
 * IMB: Intensity Modulated Brachytherapy
 
 ### Conformance

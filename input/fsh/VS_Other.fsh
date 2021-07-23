@@ -68,8 +68,8 @@ Description:  "Values used to describe the reasons for stopping a treatment or e
 
 ValueSet:		ProcedureIntentVS
 Id: mcode-procedure-intent-vs
-Title: "Treatment Intent Value Set"
-Description:	"The purpose of a treatment."
+Title: "Procedure Intent Value Set"
+Description:	"The purpose of a procedure."
 * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
 * SCT#373808002 "Curative - procedure intent"
 * SCT#363676003 "Palliative - procedure intent"

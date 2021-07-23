@@ -55,7 +55,7 @@ Profile:  TeleradiotherapyTreatmentPhase
 Parent:   USCoreProcedure
 Id:       mcode-teleradiotherapy-treatment-phase
 Title: "Teleradiotherapy Treatment Phase"
-Description: "A summary of a phase of teleradiotherapy treatment that has been delivered. The scope is a treatment consisting of one or multiple identical fractions. A phase ends whenever there is a change in the irradiated volume, dose per fraction, modality, or technique."
+Description: "A summary of a phase of teleradiotherapy treatment that has been delivered. The scope is a treatment consisting of one or multiple identical fractions.  A phase consists of a set of identical fractions. In this context, identical means that each fraction uses the same modality, technique, dose per fraction, and is applied to the same treatment volume or volumes. Because of their spatial relationship or the technique used,  all treatment volumes do not necessarily receive the same total dose during a phase."
 * insert RadiotherapyPhaseCommon
 // Teleradiotherapy specific content:
 * code = RID#mcode-teleradiotherapy-treatment-phase
@@ -72,7 +72,7 @@ Profile:  BrachytherapyTreatmentPhase
 Parent:   USCoreProcedure
 Id:       mcode-brachytherapy-treatment-phase
 Title:    "Brachytherapy Treatment Phase"
-Description: "A summary of a phase of brachytherapy treatment that has been delivered. The scope is a treatment consisting of one or multiple identical fractions. A phase ends when there is a change in the irradiated volume, treatment fraction size, modality, or treatment technique."
+Description: "A summary of a phase of brachytherapy treatment that has been delivered. The scope is a treatment consisting of one or multiple identical fractions. A phase consists of a set of identical fractions. In this context, identical means that each fraction uses the same modality, technique, dose per fraction, and is applied to the same treatment volume or volumes. Because of their spatial relationship or the technique used, all treatment volumes do not necessarily receive the same total dose during a phase"
 * insert RadiotherapyPhaseCommon
 // Content specific to Brachytherapy:
 * code = RID#mcode-brachytherapy-treatment-phase

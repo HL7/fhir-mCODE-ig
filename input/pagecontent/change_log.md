@@ -6,10 +6,20 @@
 * [FHIR-32663](https://jira.hl7.org/browse/FHIR-32663) Changed the definition of CancerStagingSystemVS to an intensional set containing descendants of SCT#254292007 "Tumor staging (tumor staging)". The includes codes for AJCC staging (version 6, 7, and 8) and many other specialized staging systems. 
 * A number of small corrections/improvements to narrative
 ## Block Vote 2
-## Subsequent Block Votes
-* [FHIR-32345](https://jira.hl7.org/browse/FHIR-32345) Renamed LocationBodyQualifer --> BodyLocationQualifier
-* [FHIR-32264](https://jira.hl7.org/browse/FHIR-32264) Renamed TreatmentIntent --> ProcedureIntent along with associated value set.
-* [FHIR-32243](https://jira.hl7.org/browse/FHIR-32243) Eliminated context constraints on Modality, Technique, and ProcedureIntent extensions.
+[FHIR-32243](https://jira.hl7.org/browse/FHIR-32243) Allow Intent, Modality, and Technique extensions also in ServiceRequests.  Dropped the context restrictions on these extensions.
+[FHIR-32244](https://jira.hl7.org/browse/FHIR-32244) Added tables with definitions for all radiotherapy and brachytherapy modalities and techniques.
+[FHIR-32246](https://jira.hl7.org/browse/FHIR-32246) Updated the table of valid brachytherapy modalities and techiques to latest entries in respective valuesets
+[FHIR-32247](https://jira.hl7.org/browse/FHIR-32247) Updated the table of valid teleradiotherapy modalities and techiques to latest entries in respective valuesets
+[FHIR-32256](https://jira.hl7.org/browse/FHIR-32256) Updated language defining brachy/teleradio treatment phase so as not to imply that phases are sequential.
+
+[FHIR-32246](https://jira.hl7.org/browse/FHIR-32264) Changed name of value set from TreatmentIntentVS to ProcedureIntentVS.
+[FHIR-32246](https://jira.hl7.org/browse/FHIR-32266) Clarify that total dose in a Phase is only from this Phase, not cumulative up to this Phase.
+
+[FHIR-32246](https://jira.hl7.org/browse/FHIR-32267) Clarify why number of fractions is per volume in Course Summary but not per volume in a Phase
+
+[FHIR-32246](https://jira.hl7.org/browse/FHIR-32304) Typo
+
+[FHIR-32246](https://jira.hl7.org/browse/FHIR-32345)  Changed name of extension from LocationQualifier to BodyLocationQualifier
 
 ## Block Vote 3
 * CancerDiseaseStatus profile now uses a newly-created LOINC code, 97509-4 "Cancer Disease Progression". In STU 1, the LOINC code chosen to represent this observation (88040-1, "Response to cancer treatment") did not precisely match the meaning of this profile because cancer disease status is observable regardless of whether the patient is under treatment. See [FHIR-27850](https://jira.hl7.org/browse/FHIR-27850).

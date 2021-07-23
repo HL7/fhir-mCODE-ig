@@ -14,7 +14,7 @@ This IG currently only provides CapabilityStatements and documentation for "pull
 
 mCODE participants MUST meet the following requirements for conformance:
 
-1. [Identify mCODE patients](#identify-mcode-patients)
+1. [Identify in-scope patients](#identify-mcode-patients)
 1. [Follow conformance requirements for supported profiles](#follow-conformance-requirements-for-supported-profiles)
 1. [Populate and meaningfully process mCODE resources](#populate-and-meaningfully-process-mcode-resources)
 1. [Support querying mCODE-conforming resources](#support-querying-mcode-conforming-resources)
@@ -22,9 +22,9 @@ mCODE participants MUST meet the following requirements for conformance:
 1. [Support US Core conformance requirements](#support-us-core-conformance-requirements)
 
 
-#### Identify mCODE Patients
+#### Identify In-Scope Patients
 
-To facilitate conformance testing, testing software must be able to determine which patients are "mCODE Patients" -- those in scope for mCODE. In general, all patients with confirmed cancer diagnoses SHOULD be covered by mCODE, but mCODE provides several ways to to identify the group of mCODE patients. See the [Identifying mCODE Patients](conformance-patients.html) page for details.
+To facilitate conformance testing, testing software must be able to determine which patients are "in-scope" -- Cancer patients who are in the scope of mCODE. In general, all patients with confirmed cancer diagnoses SHOULD be covered by mCODE, but mCODE provides several ways to to identify the group of mCODE patients. See the [Identifying mCODE Patients](conformance-patients.html) page for details.
 
 #### Follow Conformance Requirements for Supported Profiles
 
@@ -38,10 +38,10 @@ mCODE Senders MUST be able to populate data elements that have Must Support (MS)
 
 mCODE defines operations that Senders and Receivers use to exchange mCODE information. In a "pull" (query-response) architecture, Senders MUST support the requests below for retrieving all resources conforming to a given mCODE Profile, UNLESS they do not support the profile at all (see ["Support All mCODE Profiles"](#support-all-mcode-profiles) below). For more details on the conformance requirements for Senders and Receivers, see [Profile Conformance](conformance-profiles.html).
 
-Note that the requests below may return resources associated with patients who are not [mCODE patients]. These resources MAY not conform to mCODE profiles.
+Note that the requests below may return resources associated with patients who are not [in-scope patients]. These resources MAY not conform to mCODE profiles.
 
 * Patient
-  * [CancerPatient]\: see [Identifying mCODE Patients](conformance-patients.html) for the options to retrieve all conforming resources
+  * [CancerPatient]\: see [Identifying In-Scope Patients](conformance-patients.html) for the options to retrieve all conforming resources
   * [MCODEPatientBundle]\: see [Support the mCODE Bundle](#support-the-mcode-patient-bundle)
   * [MCODEPatientGroup]\: n/a
 
@@ -116,7 +116,7 @@ Participants SHOULD also support the non-mCODE-specific profiles that are consid
 
 #### Support the mCODE Patient Bundle
 
-The [mCODE Patient Bundle][MCODEPatientBundle] provides a mechanism to retrieve all mCODE-conforming resources for an mCODE Patient. Participants SHOULD support this CapabilityStatement ([sender][mcode-sender-patient-bundle]/[receiver][mcode-receiver-patient-bundle]) for the [mcode-patient-everything] operation, which retrieves an mCODE Patient Bundle for a given Patient ID.
+The [mCODE Patient Bundle][MCODEPatientBundle] provides a mechanism to retrieve all mCODE-conforming resources for an in-scope Patient. Participants SHOULD support this CapabilityStatement ([sender][mcode-sender-patient-bundle]/[receiver][mcode-receiver-patient-bundle]) for the [mcode-patient-everything] operation, which retrieves an mCODE Patient Bundle for a given Patient ID.
 
     GET [base]/Patient/[id]/$mcode-everything
 

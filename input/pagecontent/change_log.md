@@ -1,10 +1,11 @@
 ### mCODE STU 2 (Sept 2021)
 ## Block Vote 1
 * [FHIR-32166](https://jira.hl7.org/browse/FHIR-32166) All references to subject or patient now reference CancerPatient.   Any patient that conforms to USCore is conformant.  Clients/server have to handle in a meaningful way the deceased info.  
-* [FHIR-32263](Fhttps://jira.hl7.org/browse/FHIR-32263) Radiotherapy Modality Value Set and Radiotherapy Technique Value Set are now defined by inclusion of the modality and technique value sets for Brachytherapy and Teleoradiotherapy rather than by enumeration.
+* [FHIR-32263](https://jira.hl7.org/browse/FHIR-32263) Radiotherapy Modality Value Set and Radiotherapy Technique Value Set are now defined by inclusion of the modality and technique value sets for Brachytherapy and Teleoradiotherapy rather than by enumeration.
 * [FHIR-32350](https://jira.hl7.org/browse/FHIR-32350) The descriptions for the Elixhauser ThyroidOther and NeuroOther VS have been clarified.
 * [FHIR-32663](https://jira.hl7.org/browse/FHIR-32663) Changed the definition of CancerStagingSystemVS to an intensional set containing descendants of SCT#254292007 "Tumor staging (tumor staging)". The includes codes for AJCC staging (version 6, 7, and 8) and many other specialized staging systems. 
 * A number of small corrections/improvements to narrative
+## Block Vote 2
 ## Subsequent Block Votes
 * [FHIR-32345](https://jira.hl7.org/browse/FHIR-32345) Renamed LocationBodyQualifer --> BodyLocationQualifier
 * [FHIR-32264](https://jira.hl7.org/browse/FHIR-32264) Renamed TreatmentIntent --> ProcedureIntent along with associated value set.

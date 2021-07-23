@@ -104,9 +104,12 @@ Description:     "Code for methods of measuring tumor size, including physical e
 // Physical exam
 * SCT#5880005 "Physical examination procedure (procedure)"
 // Diagnostic imaging
-* SCT#363679005 "Imaging (procedure)"
 * SCT#16310003 "Diagnostic ultrasonography (procedure)"
 * SCT#113091000 "Magnetic resonance imaging (procedure)"
 * SCT#77477000 "Computerized axial tomography (procedure)"
+* SCT#82918005 "Positron emission tomography (procedure)"       
+* SCT#363680008 "Radiographic imaging procedure (procedure)"
+// Other Imaging.  If one of the above doesn't cut it.
+* SCT#363679005 "Imaging (procedure)"  
 // * include codes from system LNC where concept is-a #LP29684-5
 

@@ -48,6 +48,7 @@ Description: "Codes describing the techniques of teleradiotherapy (external beam
 * SCT#1156528007 "External beam radiation therapy using particle spot scanning technique (procedure)"
 * SCT#1156525005 "Mixed beam external beam radiation therapy (procedure)"
 * SCT#169317000 "Neutron capture therapy (procedure)"
+// * SCT#1163157007 "Ultra high dose rate radiotherapy (procedure)"
 
 ValueSet: BrachytherapyTechniqueVS
 Id: mcode-brachytherapy-technique-vs
@@ -81,7 +82,7 @@ Description: "Codes describing the types of body volumes used in radiotherapy pl
 * SCT#228793007 "Planning target volume (observable entity)"
 * SCT#228791009 "Gross tumor volume (observable entity)"
 * SCT#228792002 "Clinical target volume (observable entity)"
-* UMLS#C2936599 "Organs at Risk"  // MSH#D058958 "Organs at Risk"
+* SCT#1162586008 "Irradiated volume of organ at risk (observable entity)"  // MSH#D058958 "Organs at Risk"
 
 ValueSet: RadiotherapyTreatmentLocationQualifierVS
 Id: mcode-radiotherapy-treatment-location-qualifier-vs
@@ -105,7 +106,39 @@ Description: "Various modifiers that can be applied to body locations where radi
 * SCT#14414005  "Peripheral (qualifier value)"
 * SCT#26216008  "Central (qualifier value)"
 * SCT#18769003   "Adjacent" // "Juxta-posed (qualifier value)"
-* UMLS#C0687118  "Detached"  // standing in for non-adjacent
+* UMLS#C0687118  "Detached"  // standing in for non-adjacent  (USCRS-33144)
+* include codes from system SCT where concept is-a #258399006  "Lymph node level value (qualifier value)"    
+
+// ValueSet: LymphNodeLocationQualifierVS
+// Id: mcode-lymph-node-location-qualifier-vs
+// Title: "Lymph Node Location Qualifier Value Set"
+// Description: "Qualifiers for Lymph Node Locations"
+// * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
+// * SCT#258400004 "Lymph node level I (qualifier value)"
+// * SCT#1162616006 "Lymph node level Ia (qualifier value)"
+// * SCT#1162617002 "Lymph node level Ib (qualifier value)"
+// * SCT#258401000 "Lymph node level II (qualifier value)"
+// * SCT#258402007 "Lymph node level III (qualifier value)"
+// * SCT#258403002 "Lymph node level IV (qualifier value)"
+// * SCT#1162620005 "Lymph node level IVa (qualifier value)"
+// * SCT#1162621009 "Lymph node level IVb (qualifier value)"
+// * SCT#258404008 "Lymph node level V (qualifier value)"
+// * SCT#1162622002 "Lymph node level Va (qualifier value)"
+// * SCT#1162623007 "Lymph node level Vb (qualifier value)"
+// * SCT#1162624001 "Lymph node level Vc (qualifier value)"
+// * SCT#258405009 "Lymph node level VI (qualifier value)"
+// * SCT#1162625000 "Lymph node level VIa (qualifier value)"
+// * SCT#1162626004 "Lymph node level VIb (qualifier value)"
+// * SCT#395168005 "Lymph node level VII (qualifier value)"
+// * SCT#1162628003 "Lymph node level VIIa (qualifier value)"
+// * SCT#1162627008 "Lymph node level VIIb (qualifier value)"
+// * SCT#1162618007 "Lymph node level VIII (qualifier value)"
+// * SCT#1162619004 "Lymph node level IX (qualifier value)"
+// * SCT#1162614009 "Lymph node level X (qualifier value)"
+// * SCT#1162615005 "Lymph node level Xa (qualifier value)"
+// * SCT#1162613003 "Lymph node level Xb (qualifier value)"
+
+
 
 ValueSet: RadiotherapyTreatmentLocationVS
 Id: mcode-radiotherapy-treatment-location-vs
@@ -130,8 +163,8 @@ Description: "Codes describing the body locations where radiotherapy treatments 
 * SCT#389079005    "Brain and spinal cord structure (body structure)"
 * SCT#15926001    "Brainstem structure (body structure)"
 * SCT#76752008    "Breast structure (body structure)"
-* SCT#14806007    "Bone structure of atlas (body structure)"
-* SCT#39976000    "Bone structure of axis (body structure)"
+* SCT#14806007    "Bone structure of atlas (body structure)"   // aka C1
+* SCT#39976000    "Bone structure of axis (body structure)"    // aka C2
 * SCT#91116008    "Structure of body of third cervical vertebra (body structure)"
 * SCT#14705001    "Structure of body of fourth cervical vertebra (body structure)"
 * SCT#67479001    "Structure of body of fifth cervical vertebra (body structure)"
@@ -324,23 +357,14 @@ Description: "Codes describing the body locations where radiotherapy treatments 
 // ADDED 4-1-2021
 * SCT#143925009   "Structure of buccinator lymph node (body structure)"
 * SCT#16227691000119107 "Post-surgical excision site (morphologic abnormality)"
-* UMLS#C3640144 "Tumor Bed"
+* SCT#1162492000 "Tumor bed (morphologic abnormality)"
 * UMLS#C0223388 "Structure of body of thirteenth thoracic vertebra (body structure)"
 * UMLS#C0222987 "Bone structure of thirteenth rib (body structure)"
-* RT#LN_AX_L1  "Level 1 Axillary Lymph Nodes"
-* RT#LN_Ax_L2  "Level 2 Axillary Lymph Nodes"
-* RT#LN_Ax_L3  "Level 3 Axillary Lymph Nodes"
-* RT#LN_Neck_IA  "Level IA (Submental) neck node"
-* RT#LN_Neck_IB  "Level IB (Submandibular) neck node"
-* RT#LN_Neck_IIA  "Level IIA (Upper Jugular) neck node"
-* RT#LN_Neck_IIB  "Level IIB (Upper Jugular) neck node"
-* RT#LN_Neck_III  "Level III (Middle Jugular) neck node"
-* RT#LN_Neck_IV  "Level IV neck (Lower Jugular) node"
-* RT#LN_Neck_VA  "Level VA (Posterior Triangle) neck node"
-* RT#LN_Neck_VB  "Level VB (Posterior Triangle) neck node"
-* RT#LN_Neck_VC  "Level VC (Posterior Triangle) neck node"
-* RT#LN_Neck_VI  "Level VI (Anterior Triangle) neck node"
-* RT#LN_Neck_VII  "Level VII (Upper Mediastinal) neck node"
+//  These hve movied to qualifiers, 
+// * RT#LN_AX_L1  "Level 1 Axillary Lymph Nodes"
+// * RT#LN_Ax_L2  "Level 2 Axillary Lymph Nodes"
+// * RT#LN_Ax_L3  "Level 3 Axillary Lymph Nodes"
+
 // Added after STU 2 ballot version
 * SCT#8928004  "Inguinal lymph node structure (body structure)"   // groin lymph nodes
 * SCT#50837003  "Structure of lingula of left lung (body structure)"  // Post STU 2 ballot

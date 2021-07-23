@@ -42,7 +42,7 @@ Description: "Includes surgical procedure codes from SNOMED CT, ICD-10-PCS and C
 
 
 ValueSet: BodyLocationQualifierVS
-Id: mcode-location-qualifier-vs
+Id: mcode-body-location-qualifier-vs
 Title: "Body Location Qualifier Value Set"
 Description: "Qualifiers to refine a body structure or location. These include qualifiers for laterality, relative location, directionality, number, and plane."
 * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"

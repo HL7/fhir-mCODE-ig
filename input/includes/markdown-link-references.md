@@ -131,7 +131,6 @@
 
 <!-- mCODE Code Systems -->
 [ComorbiditiesElixhauserCS]: CodeSystem-comorbidities-elixhauser-cs.html
-[RadiotherapyCS]: CodeSystem-radiotherapy-cs.html
 [CatchCodeCS]: CodeSystem-mcode-catch-code-cs.html
 [ResourceIdentifierCS]: CodeSystem-mcode-resource-identifier-cs.html
 

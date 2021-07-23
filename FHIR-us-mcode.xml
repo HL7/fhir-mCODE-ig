@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <specification xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ballotUrl="http://hl7.org/fhir/us/mcode/2021May" ciUrl="http://build.fhir.org/ig/HL7/fhir-mCODE-ig" defaultVersion="1.0.1" defaultWorkgroup="cic" gitUrl="https://github.com/HL7/fhir-mCODE-ig" url="http://hl7.org/fhir/us/mcode">
 <version code="current" url="http://build.fhir.org/ig/HL7/fhir-mCODE-ig"/>
-<version code="1.17.0" url="http://hl7.org/fhir/us/mcode/2021May"/>
+<version code="1.16.0" url="http://hl7.org/fhir/us/mcode/2021May"/>
 <version code="1.0.1" url="http://hl7.org/fhir/us/mcode/STU1"/>
 <version code="1.0.0" url="http://hl7.org/fhir/us/mcode/STU1"/>
 <version code="0.9.1" deprecated="true" url="http://hl7.org/fhir/us/mcode/2019Sep"/>

@@ -5,6 +5,7 @@
 * [FHIR-32350](https://jira.hl7.org/browse/FHIR-32350) The descriptions for the Elixhauser ThyroidOther and NeuroOther VS have been clarified.
 * [FHIR-32663](https://jira.hl7.org/browse/FHIR-32663) Changed the definition of CancerStagingSystemVS to an intensional set containing descendants of SCT#254292007 "Tumor staging (tumor staging)". The includes codes for AJCC staging (version 6, 7, and 8) and many other specialized staging systems. 
 * A number of small corrections/improvements to narrative
+
 ## [Block Vote 2](https://jira.hl7.org/issues/?filter=14708) - July 22, 2021
 * [FHIR-32243](https://jira.hl7.org/browse/FHIR-32243) Allow Intent, Modality, and Technique extensions also in ServiceRequests.  Dropped the context restrictions on these extensions.
 * [FHIR-32244](https://jira.hl7.org/browse/FHIR-32244) Added tables with definitions for all radiotherapy and brachytherapy modalities and techniques.

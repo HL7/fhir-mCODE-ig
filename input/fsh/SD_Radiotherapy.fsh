@@ -72,7 +72,7 @@ Profile:  BrachytherapyTreatmentPhase
 Parent:   USCoreProcedure
 Id:       mcode-brachytherapy-treatment-phase
 Title:    "Brachytherapy Treatment Phase"
-Description: "A summary of a phase of brachytherapy treatment that has been delivered. The scope is a treatment consisting of one or multiple identical fractions. A phase consists of a set of identical fractions. In this context, identical means that each fraction uses the same modality, technique, dose per fraction, and is applied to the same treatment volume or volumes. Because of their spatial relationship or the technique used, all treatment volumes do not necessarily receive the same total dose during a phase"
+Description: "A summary of a phase of brachytherapy treatment that has been delivered. The scope is a treatment consisting of one or multiple identical fractions. A phase consists of a set of identical fractions. In this context, identical means that each fraction uses the same modality, technique, dose per fraction, and is applied to the same treatment volume or volumes. Because of their spatial relationship or the technique used, all treatment volumes do not necessarily receive the same total dose during a phase."
 * insert RadiotherapyPhaseCommon
 // Content specific to Brachytherapy:
 * code = RID#mcode-brachytherapy-treatment-phase
@@ -137,7 +137,8 @@ Description: "Dose parameters for one radiotherapy volume."
 * extension[volume] ^short = "Volume in the body where radiation was delivered"
 * extension[volume] ^definition = "A BodyStructure resource representing volume in the body where radiation was delivered, for example, Chest Wall Lymph Nodes."
 * extension[totalDoseDelivered] ^short = "Total Radiation Dose Delivered"
-* extension[totalDoseDelivered] ^definition = "The total amount of radiation delivered to this volume within the scope of this dose delivery, i.e., dose delivered from the Procedure in which this extension is used."
+* extension[totalDoseDelivered] ^definition = "The total amount of radiation delivered to this volume within the scope of this dose delivery, 
+i.e., dose delivered from the Procedure in which this extension is used."
 * extension[fractionsDelivered] ^short = "Number of Fractions Delivered"
 * extension[fractionsDelivered] ^definition = "The number of fractions delivered to this volume."
 

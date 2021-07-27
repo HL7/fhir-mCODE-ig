@@ -24,6 +24,8 @@ Description:    "Records an alteration in the most common DNA nucleotide sequenc
 * insert CreateComponent(aminoAcidChange, 0, 1)
 * insert CreateComponent(aminoAcidChangeType, 0, 1)
 * insert CreateComponent(copyNumber, 0, 1)
+* insert CreateComponent(sampleAllelicFrequency, 0, 1)
+* insert CreateComponent(allelicState, 0, 1)
 * insert CreateComponent(cytogeneticLocation, 0, *)
 * insert CreateComponent(cytogeneticNomenclature, 0, *)
 
@@ -80,6 +82,16 @@ Description:    "Records an alteration in the most common DNA nucleotide sequenc
 * component[copyNumber] ^short = "Genomic structural variant copy number"
 * component[copyNumber] ^definition = "Tthe genetic trait involving the number of copies of a particular gene present in the genome of an individual. (source: NCI)"
 
+* component[sampleAllelicFrequency].code = LNC#81258-6
+* component[sampleAllelicFrequency].value[x] only Quantity
+* component[sampleAllelicFrequency] ^short = "sample allelic frequency"
+* component[sampleAllelicFrequency] ^definition = "The allele frequency represents the incidence of a gene variant in a population. (source: Nature.com)"
+
+* component[allelicState].code = LNC#53034-5
+* component[allelicState].value[x] only CodeableConcept
+* component[allelicState].value[x] from http://loinc.org/vs/LL381-5 (required)
+* component[allelicState] ^short = "sample allelic frequency"
+* component[allelicState] ^definition = "Genetic variant allelic state."
 
 // CG Reporting IG does not constrain the cytogeneticNomenclature value type
 * component[cytogeneticNomenclature].code = LNC#81291-7

@@ -1,18 +1,28 @@
 ### mCODE STU 2 (Sept 2021)
-## Block Vote 1
+## [Block Vote 1](https://jira.hl7.org/issues/?filter=14606) - June 24, 2021
 * [FHIR-32166](https://jira.hl7.org/browse/FHIR-32166) All references to subject or patient now reference CancerPatient.   Any patient that conforms to USCore is conformant.  Clients/server have to handle in a meaningful way the deceased info.  
-* [FHIR-32263](Fhttps://jira.hl7.org/browse/FHIR-32263) Radiotherapy Modality Value Set and Radiotherapy Technique Value Set are now defined by inclusion of the modality and technique value sets for Brachytherapy and Teleoradiotherapy rather than by enumeration.
+* [FHIR-32263](https://jira.hl7.org/browse/FHIR-32263) Radiotherapy Modality Value Set and Radiotherapy Technique Value Set are now defined by inclusion of the modality and technique value sets for Brachytherapy and Teleoradiotherapy rather than by enumeration.
 * [FHIR-32350](https://jira.hl7.org/browse/FHIR-32350) The descriptions for the Elixhauser ThyroidOther and NeuroOther VS have been clarified.
 * [FHIR-32663](https://jira.hl7.org/browse/FHIR-32663) Changed the definition of CancerStagingSystemVS to an intensional set containing descendants of SCT#254292007 "Tumor staging (tumor staging)". The includes codes for AJCC staging (version 6, 7, and 8) and many other specialized staging systems. 
 * A number of small corrections/improvements to narrative
-## Subsequent Block Votes
-* [FHIR-32345](https://jira.hl7.org/browse/FHIR-32345) Renamed LocationBodyQualifer --> BodyLocationQualifier
-* [FHIR-32264](https://jira.hl7.org/browse/FHIR-32264) Renamed TreatmentIntent --> ProcedureIntent along with associated value set.
-* [FHIR-32243](https://jira.hl7.org/browse/FHIR-32243) Eliminated context constraints on Modality, Technique, and ProcedureIntent extensions.
-* [FHIR-27850](https://jira.hl7.org/browse/FHIR-27850) CancerDiseaseStatus profile now uses a newly-created LOINC code, 97509-4 "Cancer Disease Progression". In STU 1, the LOINC code chosen to represent this observation (88040-1, "Response to cancer treatment") did not precisely match the meaning of this profile because cancer disease status is observable regardless of whether the patient is under treatment.
-* Replaced radiotherapy modality and technique UMLS and local codes with approved SNOMED-CT codes, to be released in the next International release on July 31, 2021. Local codes have been removed from the radiotherapy code system, and the radiotherapy code system has been removed.
-* [FHIR-XXXXX](https://jira.hl7.org/browse/FHIR-XXXXX) 
-* [FHIR-XXXXX](https://jira.hl7.org/browse/FHIR-XXXXX) 
+
+## [Block Vote 2](https://jira.hl7.org/issues/?filter=14708) - July 22, 2021
+* [FHIR-32243](https://jira.hl7.org/browse/FHIR-32243) Allow Intent, Modality, and Technique extensions also in ServiceRequests.  Dropped the context restrictions on these extensions.
+* [FHIR-32244](https://jira.hl7.org/browse/FHIR-32244) Added tables with definitions for all radiotherapy and brachytherapy modalities and techniques.
+* [FHIR-32246](https://jira.hl7.org/browse/FHIR-32246) Updated the table of valid brachytherapy modalities and techiques to latest entries in respective valuesets
+* [FHIR-32247](https://jira.hl7.org/browse/FHIR-32247) Updated the table of valid teleradiotherapy modalities and techiques to latest entries in respective valuesets
+* [FHIR-32256](https://jira.hl7.org/browse/FHIR-32256) Updated language defining brachy/teleradio treatment phase so as not to imply that phases are sequential.
+* [FHIR-32261](https://jira.hl7.org/browse/FHIR-32261) Replaced radiotherapy modality and technique UMLS and local codes with approved SNOMED-CT codes, to be released in the next International release on July 31, 2021. Local codes have been removed from the radiotherapy code system, and the radiotherapy code system has been removed.
+* [FHIR-32264](https://jira.hl7.org/browse/FHIR-32264) Changed name of value set from TreatmentIntentVS to ProcedureIntentVS.
+* [FHIR-32266](https://jira.hl7.org/browse/FHIR-32266) Clarify that total dose in a Phase is only from this Phase, not cumulative up to this Phase.
+
+* [FHIR-32267](https://jira.hl7.org/browse/FHIR-32267) Clarify why number of fractions is per volume in Course Summary but not per volume in a Phase
+
+* [FHIR-32304](https://jira.hl7.org/browse/FHIR-32304) Typo
+
+* [FHIR-32345](https://jira.hl7.org/browse/FHIR-32345)  Changed name of extension from LocationQualifier to BodyLocationQualifier
+
+## [Block Vote 3](https://jira.hl7.org/issues/?filter=14928)
 
 
 ### mCODE STU 2 Ballot Version (May 2021)

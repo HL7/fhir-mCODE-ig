@@ -31,9 +31,10 @@ A radiation oncology work group convened under [CodeX FHIR Accelerator](https://
 
 * **General**
   * [TreatmentTerminationReason]
-  * [ProcedureIntent]
+  * [TreatmentIntent]
 * **Radiotherapy**
   * [RadiotherapyDoseDeliveredToVolume]
+  * [RadiotherapyFractionsDelivered]
   * [RadiotherapyModality]
   * [RadiotherapySessions]
   * [RadiotherapyTechnique]
@@ -42,7 +43,7 @@ A radiation oncology work group convened under [CodeX FHIR Accelerator](https://
 
 * **General**
   * [TreatmentTerminationReasonVS]
-  * [ProcedureIntentVS]
+  * [TreatmentIntentVS]
 * **Surgery**
   * [CancerRelatedSurgicalProcedureVS]
 * **Radiotherapy**
@@ -58,6 +59,5 @@ A radiation oncology work group convened under [CodeX FHIR Accelerator](https://
 
 ### Code Systems
 
-* [RadiotherapyCS]
 
 {% include markdown-link-references.md %}

@@ -24,11 +24,11 @@ Title: "Cancer Disease Status Evidence Type Value Set"
 Description:  "The type of evidence backing up the clinical determination of cancer progression." 
 // The code '252416005 Histopathology test (procedure)' is intended to be used when there is a biopsy that contributes evidence of the cancer disease status.
 * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
-* SCT#363679005 "Imaging (procedure)"
-* SCT#108257001 "Anatomic pathology procedure (procedure)" // Broader than SCT#252416005 "Histopathology test (procedure), include microscopy."
-* SCT#711015009 "Assessment of symptom control (procedure)"
-* SCT#5880005   "Physical examination procedure (procedure)"
-* SCT#386344002 "Laboratory data interpretation (procedure)"
+* include codes from system SCT where concept is-a #363679005 "Imaging (procedure)"   
+* include codes from system SCT where concept is-a #108257001 "Anatomic pathology procedure (procedure)" // Broader than SCT#252416005 "Histopathology test (procedure), include microscopy."
+* include codes from system SCT where concept is-a #711015009 "Assessment of symptom control (procedure)"
+* include codes from system SCT where concept is-a #5880005   "Physical examination procedure (procedure)"
+* include codes from system SCT where concept is-a #386344002 "Laboratory data interpretation (procedure)"
 
 
 ValueSet: CancerRelatedSurgicalProcedureVS
@@ -42,7 +42,7 @@ Description: "Includes surgical procedure codes from SNOMED CT, ICD-10-PCS and C
 
 
 ValueSet: BodyLocationQualifierVS
-Id: mcode-location-qualifier-vs
+Id: mcode-body-location-qualifier-vs
 Title: "Body Location Qualifier Value Set"
 Description: "Qualifiers to refine a body structure or location. These include qualifiers for laterality, relative location, directionality, number, and plane."
 * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
@@ -68,8 +68,8 @@ Description:  "Values used to describe the reasons for stopping a treatment or e
 
 ValueSet:		ProcedureIntentVS
 Id: mcode-procedure-intent-vs
-Title: "Treatment Intent Value Set"
-Description:	"The purpose of a treatment."
+Title: "Procedure Intent Value Set"
+Description:	"The purpose of a procedure."
 * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
 * SCT#373808002 "Curative - procedure intent"
 * SCT#363676003 "Palliative - procedure intent"
@@ -104,9 +104,12 @@ Description:     "Code for methods of measuring tumor size, including physical e
 // Physical exam
 * SCT#5880005 "Physical examination procedure (procedure)"
 // Diagnostic imaging
-* SCT#363679005 "Imaging (procedure)"
 * SCT#16310003 "Diagnostic ultrasonography (procedure)"
 * SCT#113091000 "Magnetic resonance imaging (procedure)"
 * SCT#77477000 "Computerized axial tomography (procedure)"
+* SCT#82918005 "Positron emission tomography (procedure)"       
+* SCT#363680008 "Radiographic imaging procedure (procedure)"
+// Other Imaging.  If one of the above doesn't cut it.
+* SCT#363679005 "Imaging (procedure)"  
 // * include codes from system LNC where concept is-a #LP29684-5
 

@@ -59,7 +59,7 @@ Support for non-TNM staging systems in mCODE is limited to [CancerStageGroup]. T
 
 Body locations in FHIR are typically represented using a single code. However, a single code is often insufficient to describe where a tumor is located, where a surgery is targeted, or where a radiation treatment is focused. When a single code is insufficient, FHIR recommends using a BodyStructure. This is appropriate when the BodyStructure is something to be tracked over time, for example, in the case of [Tumor]. But generally, it is better to describe a body location without using an additional resource.
 
-mCODE has adopted an approach that allows the user to add additional code or codes to further define the body site, without the need to create an independent resource. This takes the form of a [LocationQualifier] extension. This extension can be used to specify laterality, directionality, and plane. It appears in mCODE wherever a body site code is found.
+mCODE has adopted an approach that allows the user to add additional code or codes to further define the body site, without the need to create an independent resource. This takes the form of a [BodyLocationQualifier] extension. This extension can be used to specify laterality, directionality, and plane. It appears in mCODE wherever a body site code is found.
 
 ### Tumor Marker Tests
 

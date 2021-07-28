@@ -40,5 +40,5 @@ RuleSet: MedicationResourcesRS
 Invariant:  mcode-reason-required
 Description: "One of reasonCode or reasonReference SHALL be present"
 Expression: "reasonCode.exists() or reasonReference.exists()"
-Severity:   #error
+Severity:   #warning    // FHIR-32387 error-->warning
 

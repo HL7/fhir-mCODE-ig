@@ -6,13 +6,14 @@ A phase describes one series of equivalent fractions and all volumes treated by 
 
 The following table shows valid combinations of modality and technique for external beam radiotherapy. They are not enforced in the profile. Other combinations and additional techniques may be possible. The modality is represented by `mcode-radiotherapy-modality` extension, technique using the `mcode-radiotherapy-technique` extension.
 
-| **External Beam Modality** | **Technique** |
-| ------------------- | ------------------ |
-| Photons  | IMRT, VMAT, 3D, 2D, IORT |
-| Electrons| 3D, 2D, IORT |
-| Protons  | PPS, PSS, MIX |
-| Carbon   | PPS, PSS, MIX |
-| Neutrons | 3D, NCT |
+
+| **External Beam Modality** | **Technique**          |
+| ------------------------ | ------------------------ |
+| Photons                  | IMRT, VMAT, 3D, 2D, IORT |
+| Electrons                | 3D, 2D, IORT, COMP       |
+| Neutrons                 | 3D, NCT                  |
+| Carbon Ions              | PPS, PSS, MIX            |
+| Protons                  | PPS, PSS, MIX            |
 {: .grid }
 
 **Key:**

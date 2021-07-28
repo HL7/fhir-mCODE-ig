@@ -24,7 +24,7 @@ mCODE participants MUST meet the following requirements for conformance:
 
 #### Identify In-Scope Patients
 
-To facilitate conformance testing, testing software must be able to determine which patients are "in-scope" -- Cancer patients who are in the scope of mCODE. In general, all patients with confirmed cancer diagnoses SHOULD be covered by mCODE, but mCODE provides several ways to to identify the group of mCODE patients. See the [Identifying mCODE Patients](conformance-patients.html) page for details.
+To facilitate conformance testing, testing software must be able to determine which patients are "in-scope" (meaning cancer patients whose data is presented or exchanged with the intention of conforming to mCODE). In general, all patients with confirmed cancer diagnoses SHOULD be covered by mCODE, but mCODE provides several ways to to identify this group of in-scope patients. See the [Identifying In-Scope Patients](conformance-patients.html) page for details.
 
 #### Follow Conformance Requirements for Supported Profiles
 

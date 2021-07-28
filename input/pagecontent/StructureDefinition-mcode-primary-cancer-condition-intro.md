@@ -6,6 +6,6 @@ In mCODE, staging information MUST be captured in an Observation that conforms t
 
 ### Conformance
 
-Condition resources associated with an mCODE patient with a `Condition.code` in the value set [PrimaryOrUncertainBehaviorCancerDisorderVS] MUST conform to this profile. Beyond this requirement, a producer of resources SHOULD ensure that any resource instance associated with an mCODE patient that would reasonably be expected to conform to this profile SHOULD be published in this form.
+Condition resources associated with an [in-scope patient] with a `Condition.code` in the value set [PrimaryOrUncertainBehaviorCancerDisorderVS] MUST conform to this profile. Beyond this requirement, a producer of resources SHOULD ensure that any resource instance associated with an [in-scope patient] that would reasonably be expected to conform to this profile SHOULD be published in this form.
 
 {% include markdown-link-references.md %}

@@ -2,7 +2,7 @@ Instance: group-mcode-patients
 InstanceOf: MCODEPatientGroup
 Usage: #example
 Title: "mCODE Patient Group Example"
-Description: "Example of a Group identifying mCODE Patients"
+Description: "Example of a Group identifying in-scope patients"
 * type = #person
 * actual = true
 * code = RID#mcode-patient

@@ -40,7 +40,7 @@ pages:
   conformance-general.md:
     title: Conformance Expectations
   conformance-patients.md:
-    title: Identifying mCODE Patients
+    title: Identifying In-Scope Patients
   conformance-profiles.md:
     title: Profile Conformance
   terminology.md:

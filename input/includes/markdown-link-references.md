@@ -154,5 +154,5 @@
 [USCorePatientProfile]: http://hl7.org/fhir/us/core/StructureDefinition-us-core-patient.html
 
 <!-- Other links -->
-[mCODE patient]: conformance-patients.html
-[mCODE patients]: conformance-patients.html
+[in-scope patient]: conformance-patients.html
+[in-scope patients]: conformance-patients.html

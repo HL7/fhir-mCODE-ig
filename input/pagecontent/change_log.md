@@ -23,7 +23,11 @@
 * [FHIR-32345](https://jira.hl7.org/browse/FHIR-32345)  Changed name of extension from LocationQualifier to BodyLocationQualifier
 
 ## [Block Vote 3](https://jira.hl7.org/issues/?filter=14928)
-
+* [FHIR-32280](https://jira.hl7.org/browse/FHIR-32280) Exlixhauser Comorbidity profile should have an integer Observation.value
+* [FHIR-32348](https://jira.hl7.org/browse/FHIR-32348) LocationQualifier --> BodyLocationQualifier
+* [FHIR-32387](https://jira.hl7.org/browse/FHIR-32387) Invariant:  mcode-reason-required generates warning instead of error
+* [FHIR-32649](https://jira.hl7.org/browse/FHIR-32649) Extension 'Radiotherapy Fractions Delivered' added to the summary of extensions for Radiotherapy
+* [FHIR-33003](https://jira.hl7.org/browse/FHIR-33003)  Make extension values required
 
 ### mCODE STU 2 Ballot Version (May 2021)
 

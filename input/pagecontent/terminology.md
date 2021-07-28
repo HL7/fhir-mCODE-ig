@@ -23,7 +23,6 @@ The following table presents the external code systems (and naming conventions) 
 | Sequence Ontology | DNA change types | No | Missing |
 | SNOMED CT | Disorders, body structures, findings, qualifiers | Yes | <http://snomed.info/sct> |
 | UCUM | Units of measure | Yes | <http://unitsofmeasure.org> |
-| UMLS | Staging systems, radiotherapy | No | <http://terminology.hl7.org/CodeSystem/umls> |
 {: .grid }
 
 
@@ -53,7 +52,6 @@ New code systems were created when no existing code systems were deemed fit for 
 
 |  Code System | Application |
 |--------------|-------------|
-| Radiotherapy Code System | Radiotherapy modalities, techniques, and body sites |
 | Elixhauser Code System | Codes for comorbidity categories |
 | Catch Codes | Codes for positive identification of FHIR instances |
 | Resource Identifier Codes | Codes describing resource types |

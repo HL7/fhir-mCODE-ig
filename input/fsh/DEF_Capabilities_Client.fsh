@@ -54,7 +54,7 @@ RuleSet: mCODE_CapabilityStatement_Condition_Client_Common_Rules
 * rest[0].resource[1].searchParam[0].extension.valueCode = #SHALL
 
 // GET [base]/Group?code=mcode-cancer-patient
-// This must be implemented regardless of the method for identifying mCODE Patients
+// This must be implemented regardless of the method for identifying in-scope patients
 * rest[0].resource[2].type = #Group
 
 * rest[0].resource[2].interaction[0].code = #search-type
@@ -108,7 +108,7 @@ InstanceOf: CapabilityStatement
 Usage: #definition
 * description = "Uses reverse chaining to retrieve a Bundle of Patient resources with a condition code in mCODE's cancer condition value set."
 * name = "CapabilityStatementReceiverPatientsWithCancerCondition"
-* title = "mCODE Data Receiver CapabilityStatement: Get mCODE Patients using reverse chaining"
+* title = "mCODE Data Receiver CapabilityStatement: Get in-scope patients using reverse chaining"
 
 * insert mCODE_CapabilityStatement_Client_Common
 
@@ -125,7 +125,7 @@ Usage: #definition
 * rest[0].resource[0].searchParam[0].extension.valueCode = #SHALL
 
 // GET [base]/Group?code=mcode-cancer-patient
-// This must be implemented regardless of the method for identifying mCODE Patients
+// This must be implemented regardless of the method for identifying in-scope patients
 * rest[0].resource[1].type = #Group
 
 * rest[0].resource[1].interaction[0].code = #search-type
@@ -146,7 +146,7 @@ InstanceOf: CapabilityStatement
 Usage: #definition
 * description = "Uses `_include` to retrieve a Bundle of Condition resources with a code in mCODE's cancer condition value set, along with the associated Patient resources. Use ONLY when reverse chaining is not available on the system."
 * name = "CapabilityStatementReceiverPatientsAndCancerConditions"
-* title = "mCODE Data Receiver CapabilityStatement: Get mCODE Patients (and associated Conditions) using _include"
+* title = "mCODE Data Receiver CapabilityStatement: Get in-scope patients (and associated Conditions) using _include"
 
 * insert mCODE_CapabilityStatement_Client_Common
 

@@ -72,7 +72,7 @@ Profile:  BrachytherapyTreatmentPhase
 Parent:   USCoreProcedure
 Id:       mcode-brachytherapy-treatment-phase
 Title:    "Brachytherapy Treatment Phase"
-Description: "A summary of a phase of brachytherapy treatment that has been delivered. The scope is a treatment consisting of one or multiple identical fractions. A phase consists of a set of identical fractions. In this context, identical means that each fraction uses the same modality, technique, dose per fraction, and is applied to the same treatment volume or volumes. Because of their spatial relationship or the technique used, all treatment volumes do not necessarily receive the same total dose during a phase"
+Description: "A summary of a phase of brachytherapy treatment that has been delivered. The scope is a treatment consisting of one or multiple identical fractions. A phase consists of a set of identical fractions. In this context, identical means that each fraction uses the same modality, technique, dose per fraction, and is applied to the same treatment volume or volumes. Because of their spatial relationship or the technique used, all treatment volumes do not necessarily receive the same total dose during a phase."
 * insert RadiotherapyPhaseCommon
 // Content specific to Brachytherapy:
 * code = RID#mcode-brachytherapy-treatment-phase

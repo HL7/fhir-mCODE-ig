@@ -6,6 +6,6 @@ For staging and prognostic purposes, it is assumed that reported tumor measureme
 
 ### Conformance
 
-Observation resources associated with an [mCODE patient] with an `Observation.code` of LOINC `21889-1` ("Size Tumor") MUST conform to this profile. Beyond this requirement, a producer of resources SHOULD ensure that any resource instance associated with an [mCODE patient] that would reasonably be expected to conform to this profile SHOULD be published in this form.
+Observation resources associated with an [in-scope patient] with an `Observation.code` of LOINC `21889-1` ("Size Tumor") MUST conform to this profile. Beyond this requirement, a producer of resources SHOULD ensure that any resource instance associated with an [in-scope patient] that would reasonably be expected to conform to this profile SHOULD be published in this form.
 
 {% include markdown-link-references.md %}

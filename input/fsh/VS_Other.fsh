@@ -44,11 +44,23 @@ Description: "Includes surgical procedure codes from SNOMED CT, ICD-10-PCS and C
 ValueSet: BodyLocationQualifierVS
 Id: mcode-body-location-qualifier-vs
 Title: "Body Location Qualifier Value Set"
-Description: "Qualifiers to refine a body structure or location. These include qualifiers for laterality, relative location, directionality, number, and plane."
+Description: "Qualifiers to refine a body structure or location. These include qualifiers relative location, directionality, number, and plane, and exclude qualifiers for laterality."
 * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
 // Changed to intensional definition 
 * include codes from system SCT where concept is-a #106233006 "Topographic Modifier (qualifer)"
 * include codes from system SCT where concept is-a #272424004 "Relative Sites (qualifier)"
+* exclude codes from valueset LateralityQualifierVS
+
+ValueSet: LateralityQualifierVS
+Id: mcode-laterality-qualifier-vs
+Title: "Laterality Qualifier Value Set"
+Description: "Qualifiers to specify laterality."
+* ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
+* SCT#51440002	"Right and left (qualifier value)"
+* SCT#399488007	"Midline (qualifier value)"	
+* SCT#24028007	"Right (qualifier value)"	
+* SCT#7771000	"Left (qualifier value)"	
+* SCT#66459002	"Unilateral (qualifier value)"
 
 
 ValueSet:   TreatmentTerminationReasonVS

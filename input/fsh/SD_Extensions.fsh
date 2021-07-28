@@ -41,13 +41,25 @@ Description: "An extension describing the morphologic and behavioral characteris
 Extension: BodyLocationQualifier
 Id: mcode-body-location-qualifier
 Title: "Body Location Qualifier"
-Description: "Qualifier to refine an body location. These include qualifiers for laterality, relative location, directionality, number, and plane."
+Description: "Qualifier to refine an body location. These include qualifiers for relative location, directionality, number, and plane, and exclude qualifiers for laterality."
 * insert ExtensionContext(Specimen.collection.bodySite)
 * insert ExtensionContext(Procedure.bodySite)
 * insert ExtensionContext(Condition.bodySite)
 * insert ExtensionContext(Observation.bodySite)
 * value[x] only CodeableConcept
 * value[x] from BodyLocationQualifierVS (required)
+* value[x] 1..1
+
+Extension: LateralityQualifier
+Id: mcode-laterality-qualifier
+Title: "Laterality Qualifier"
+Description: "Qualifier to specify laterality laterality."
+* insert ExtensionContext(Specimen.collection.bodySite)
+* insert ExtensionContext(Procedure.bodySite)
+* insert ExtensionContext(Condition.bodySite)
+* insert ExtensionContext(Observation.bodySite)
+* value[x] only CodeableConcept
+* value[x] from LateralityQualifierVS (required)
 * value[x] 1..1
 
 Extension: TreatmentTerminationReason

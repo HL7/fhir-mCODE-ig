@@ -55,7 +55,7 @@ The following rules apply to Senders:
 
 As an example of #4, the conformance requirements for [PrimaryCancerCondition] are:
 
-* Any Condition resource associated with an [mCODE Patient](conformance-patients.html) whose `Condition.code` is in the value set (`PrimaryOrUncertainBehaviorCancerDisorderVS`)[PrimaryOrUncertainBehaviorCancerDisorderVS] MUST conform to the profile.
+* Any Condition resource associated with an [in-scope patient](conformance-patients.html) whose `Condition.code` is in the value set (`PrimaryOrUncertainBehaviorCancerDisorderVS`)[PrimaryOrUncertainBehaviorCancerDisorderVS] MUST conform to the profile.
 * Any resource instance that would reasonably be expected to conform to the profile SHOULD conform to the profile.
 
 The second statement is intended to discourage an mCODE Data Sender from creating different representation for data that *should* fall into the scope of mCODE. Compliance to this kind of condition is difficult to enforce, so it is expressed as a SHOULD.

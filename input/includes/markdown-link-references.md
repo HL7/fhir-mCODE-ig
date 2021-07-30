@@ -44,7 +44,7 @@
 [TNMRegionalNodesCategory]: StructureDefinition-mcode-tnm-regional-nodes-category.html
 [CancerStageGroup]: StructureDefinition-mcode-cancer-stage-group.html
 [TreatmentTerminationReason]: StructureDefinition-mcode-treatment-termination-reason.html
-[ProcedureIntent]: StructureDefinition-mcode-procedure-intent.html
+[TreatmentIntent]: StructureDefinition-mcode-treatment-intent.html
 [TumorMarkerTest]: StructureDefinition-mcode-tumor-marker-test.html
 [TumorSize]: StructureDefinition-mcode-tumor-size.html
 [Tumor]: StructureDefinition-mcode-tumor.html

@@ -1,4 +1,4 @@
-// ------------- Identifier Display Name Field ---------------
+// -------------- Identifier Display Name Field ---------------
 RuleSet: IdentifierDisplayName  // FHIR-32239
 * identifier 0..* MS 
 * identifier ^definition = "Display name and technical identifiers (e.g., the Conceptual Volume UID used in DICOM.)"

@@ -1,7 +1,3 @@
-
-
-
-
 // ------------- Overall Course Summary -----------------
 RuleSet: RadiotherapyCommon
 * category 1.. MS

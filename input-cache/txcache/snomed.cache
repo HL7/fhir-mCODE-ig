@@ -97209,3 +97209,25 @@ v: {
   "error" : "Unable to find code 1149099005 in http://snomed.info/sct (version http://snomed.info/sct/731000124108/version/20210301); The code \"1149099005\" is not valid in the system http://snomed.info/sct; The code provided (http://snomed.info/sct#1149099005) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4)"
 }
 -------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://snomed.info/sct",
+  "code" : "353431000119107",
+  "display" : "Primary malignant neoplasm of female left breast (disorder)"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "Primary malignant neoplasm of female left breast (disorder)",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://snomed.info/sct",
+  "code" : "268910001",
+  "display" : "Patient's condition improved (finding)"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "Patient's condition improved",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------

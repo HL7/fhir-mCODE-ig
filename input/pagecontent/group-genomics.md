@@ -3,11 +3,6 @@
 <p>
 This page has been enhanced to include extended guidance on the use of mCODE genomics elements in support of real-world scenarios. 
 </p>
-<ul>
-  <li>Feedback on the FHIR core specification should be submitted to the <a href="http://hl7.org/fhir-issues">FHIR change tracker</a> with "FHIR Core" as the specification.</li>
-  <li>Feedback on the US core profiles should be submitted to the <a href="http://hl7.org/fhir-issues">FHIR change tracker</a> with "US Core" as the specification.</li>
-  <li>Feedback on profiles from one of the other Da Vinci implementation guides should also be submitted to the <a href="http://hl7.org/fhir-issues">FHIR change tracker</a> with the specification set to the appropriate IG.</li>
-</ul>
 </blockquote>
 {% endraw %}
 

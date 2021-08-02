@@ -1,14 +1,4 @@
-// ------------- Identifier Display Name Field ---------------
-RuleSet: IdentifierDisplayName  // FHIR-32239
-* identifier 0..* MS 
-* identifier ^definition = "Display name and technical identifiers (e.g., the Conceptual Volume UID used in DICOM.)"
-* identifier ^slicing.discriminator.type = #value
-* identifier ^slicing.discriminator.path = "use"
-* identifier ^slicing.rules = #open
-* identifier contains
-    displayName 0..1 MS
-* identifier[displayName].use = #usual
-* identifier[displayName].value 1..1 MS
+
 
 
 
@@ -27,7 +17,6 @@ Id:       mcode-radiotherapy-course-summary
 Title:    "Radiotherapy Course Summary"
 Description: "A summary of a course of radiotherapy delivered to a patient. It records the treatment intent, termination reason, modalities, techniques, number of sessions, and doses delivered to one or more body volumes. To describe the treatment in more detail, use either TeleradiotherapyTreatmentPhase or BrachytherapyTreatmentPhase, which should reference this summary through their partOf elements. Whether the course has been fully delivered or stopped is indicated in the status element."
 * insert RadiotherapyCommon
-* insert IdentifierDisplayName  // FHIR-32239
 // Summary-specific content
 * code = RID#mcode-radiotherapy-course-summary
 * extension contains
@@ -72,7 +61,6 @@ Id:       mcode-teleradiotherapy-treatment-phase
 Title: "Teleradiotherapy Treatment Phase"
 Description: "A summary of a phase of teleradiotherapy treatment that has been delivered. The scope is a treatment consisting of one or multiple identical fractions.  A phase consists of a set of identical fractions. In this context, identical means that each fraction uses the same modality, technique, dose per fraction, and is applied to the same treatment volume or volumes. Because of their spatial relationship or the technique used,  all treatment volumes do not necessarily receive the same total dose during a phase."
 * insert RadiotherapyPhaseCommon
-* insert IdentifierDisplayName  // FHIR-32239
 // Teleradiotherapy specific content:
 * code = RID#mcode-teleradiotherapy-treatment-phase
 * extension[modality].value[x] from TeleradiotherapyModalityVS (required)
@@ -90,7 +78,6 @@ Id:       mcode-brachytherapy-treatment-phase
 Title:    "Brachytherapy Treatment Phase"
 Description: "A summary of a phase of brachytherapy treatment that has been delivered. The scope is a treatment consisting of one or multiple identical fractions. A phase consists of a set of identical fractions. In this context, identical means that each fraction uses the same modality, technique, dose per fraction, and is applied to the same treatment volume or volumes. Because of their spatial relationship or the technique used, all treatment volumes do not necessarily receive the same total dose during a phase."
 * insert RadiotherapyPhaseCommon
-* insert IdentifierDisplayName  // FHIR-32239
 // Content specific to Brachytherapy:
 * code = RID#mcode-brachytherapy-treatment-phase
 * extension[modality].value[x] from  BrachytherapyModalityVS (required)

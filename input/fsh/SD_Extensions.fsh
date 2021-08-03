@@ -42,7 +42,7 @@ Extension: BodyLocationQualifier
 Id: mcode-body-location-qualifier
 Title: "Body Location Qualifier"
 Description: "Qualifier to refine an body location. These include qualifiers for relative location, directionality, number, and plane, and exclude qualifiers for laterality."
-// FHIR-    
+// FHIR-xxxx    
 // * insert ExtensionContext(Specimen.collection.bodySite)
 // * insert ExtensionContext(Procedure.bodySite)
 // * insert ExtensionContext(Condition.bodySite)

@@ -42,22 +42,23 @@ Extension: BodyLocationQualifier
 Id: mcode-body-location-qualifier
 Title: "Body Location Qualifier"
 Description: "Qualifier to refine an body location. These include qualifiers for relative location, directionality, number, and plane, and exclude qualifiers for laterality."
-* insert ExtensionContext(Specimen.collection.bodySite)
-* insert ExtensionContext(Procedure.bodySite)
-* insert ExtensionContext(Condition.bodySite)
-* insert ExtensionContext(Observation.bodySite)
+// FHIR-    
+// * insert ExtensionContext(Specimen.collection.bodySite)
+// * insert ExtensionContext(Procedure.bodySite)
+// * insert ExtensionContext(Condition.bodySite)
+// * insert ExtensionContext(Observation.bodySite)
 * value[x] only CodeableConcept
-// FHIR-32340 * value[x] from BodyLocationQualifierVS (required) - each binding specify either BodyLocationQualifierVS or BodyLocationQualiferWithoutLateralityVS
+* value[x] from BodyLocationQualifierVS (required) 
 * value[x] 1..1
 
 Extension: LateralityQualifier
 Id: mcode-laterality-qualifier
 Title: "Laterality Qualifier"
 Description: "Qualifier to specify laterality laterality."
-* insert ExtensionContext(Specimen.collection.bodySite)
-* insert ExtensionContext(Procedure.bodySite)
-* insert ExtensionContext(Condition.bodySite)
-* insert ExtensionContext(Observation.bodySite)
+// * insert ExtensionContext(Specimen.collection.bodySite)
+// * insert ExtensionContext(Procedure.bodySite)
+// * insert ExtensionContext(Condition.bodySite)
+// * insert ExtensionContext(Observation.bodySite)
 * value[x] only CodeableConcept
 * value[x] from LateralityQualifierVS (required)
 * value[x] 1..1

@@ -47,7 +47,7 @@ Description: "Qualifier to refine an body location. These include qualifiers for
 * insert ExtensionContext(Condition.bodySite)
 * insert ExtensionContext(Observation.bodySite)
 * value[x] only CodeableConcept
-* value[x] from BodyLocationQualifierVS (required)
+// FHIR-32340 * value[x] from BodyLocationQualifierVS (required) - each binding specify either BodyLocationQualifierVS or BodyLocationQualiferWithoutLateralityVS
 * value[x] 1..1
 
 Extension: LateralityQualifier
@@ -66,8 +66,8 @@ Extension: TreatmentTerminationReason
 Id: mcode-treatment-termination-reason
 Title: "Termination Reason"
 Description: "A code explaining the unplanned or premature termination, or normal completion, of a plan of treatment, course of medication, or research study. "
-//* insert ExtensionContext(MedicationRequest)
-//* insert ExtensionContext(Procedure)
+//* insert ExtensionContext(MedicationRequest) - removed as per FHIR-32243
+//* insert ExtensionContext(Procedure)         - removed as per FHIR-32243
 * value[x] only CodeableConcept
 * value[x] from TreatmentTerminationReasonVS (required)
 * value[x] 1..1
@@ -76,8 +76,8 @@ Extension: ProcedureIntent
 Id: mcode-procedure-intent
 Title: "Procedure Intent"
 Description: "The purpose of a procedure."
-//* insert ExtensionContext(MedicationRequest)
-//* insert ExtensionContext(Procedure)
+//* insert ExtensionContext(MedicationRequest) - removed as per FHIR-32243
+//* insert ExtensionContext(Procedure)         - removed as per FHIR-32243
 * value[x] only CodeableConcept
 * value[x] from ProcedureIntentVS (required)
 * value[x] 1..1

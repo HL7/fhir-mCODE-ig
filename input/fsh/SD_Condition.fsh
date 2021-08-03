@@ -22,7 +22,6 @@ Description: "Records the the primary cancer condition, the original or first tu
 // * insert ReduceText2(bodySite)
 // * insert ReduceText(stage)
 // * insert ReduceText(evidence)
-* . MS
 * insert CancerConditionCommonRules
 * code from PrimaryOrUncertainBehaviorCancerDisorderVS (required)
 * code obeys primary-cancer-condition-code-invariant

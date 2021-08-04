@@ -19,6 +19,7 @@ Alias:   GTR = http://www.ncbi.nlm.nih.gov/gtr
 Alias:   CLINVAR = http://www.ncbi.nlm.nih.gov/clinvar
 Alias:   SO = http://www.sequenceontology.org/ 
 
+
 // From terminology.hl7.org
 Alias:   OmbRaceCat = urn:oid:2.16.840.1.113883.6.238
 Alias:   ICDO3 = http://terminology.hl7.org/CodeSystem/icd-o-3
@@ -39,3 +40,8 @@ Alias:   MedReqStatus = http://hl7.org/fhir/CodeSystem/medicationrequest-status
 Alias:   MedReqIntent = http://hl7.org/fhir/CodeSystem/medicationrequest-intent
 Alias:   MedReqCat = 	http://terminology.hl7.org/CodeSystem/medicationrequest-category
 Alias:   RefMeaning = http://terminology.hl7.org/CodeSystem/referencerange-meaning
+
+// Other coding systems
+CodeSystem: TbdCodes
+Title: "ToBeDeterminedCodes ('TbdCodes')"
+Description: "These codes are currently 'TBD-LOINC' codes. The CG WG is requesting formal LOINC codes."

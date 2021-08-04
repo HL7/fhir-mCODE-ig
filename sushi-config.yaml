@@ -11,7 +11,7 @@ publisher:
 jurisdiction: urn:iso:std:iso:3166#US "United States of America"
 description: mCODE™ (short for Minimal Common Oncology Data Elements) is an initiative
   intended to assemble a core set of structured data elements for oncology
-  electronic health records.
+  electronic health records. 
 license: CC0-1.0
 fhirVersion: 4.0.1
 dependencies:

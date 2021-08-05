@@ -1,3 +1,16 @@
+
+// -------------- Identifier Display Name Field ---------------
+RuleSet: IdentifierDisplayName  // FHIR-32239
+* identifier 0..* MS 
+* identifier ^definition = "Display name and technical identifiers (e.g., the Conceptual Volume UID used in DICOM.)"
+* identifier ^slicing.discriminator.type = #value
+* identifier ^slicing.discriminator.path = "use"
+* identifier ^slicing.rules = #open
+* identifier contains
+    displayName 0..1 MS
+* identifier[displayName].use = #usual
+* identifier[displayName].value 1..1 MS
+
 // ------------- Overall Course Summary -----------------
 RuleSet: RadiotherapyCommon
 * category 1.. MS

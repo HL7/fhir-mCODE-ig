@@ -235,20 +235,22 @@ Description:    "The area of the genome region referenced in testing for variant
 * component[genomicReferenceSequenceId] ^definition = "Range(s) of DNA sequence examined. The genomic reference sequence is a contiguous stretch of chromosome DNA that spans all of the exons of the gene and includes transcribed and non transcribed stretches. For this ID use either the NCBI genomic nucleotide RefSeq IDs with their version number (see: NCBI.NLM.NIH.Gov/RefSeq) or use the LRG identifiers, without transcript (t or p) extensions -- when they become available. (source: LOINC)"
 * component[genomicReferenceSequenceId].code = LNC#48013-7
 
-// * insert ReduceText
-// * insert ReduceText(referenceRange)
-// * insert ReduceText(component)
-// These are the additional MS on top of US Core Lab Observation
 * component and component.code and component.value[x] and component.dataAbsentReason MS
 
+Profile:    GenomicDiagnosticImplication
+Parent:     USCoreObservationLab
+Id: mcode-genomic-diagnostic-implication
+Title:      "Genomic Diagnostic Implication"
+Description:    "Observation stating a linkage between one or more genotype/haplotype/variation Observations and evidence for or against a particular disease, condition, or cancer diagnosis."
+* code = LNC#81259-4 "Associated phenotype" //"Associated phenotype"
+* derivedFrom only Reference(CancerGeneticVariant)
+* value[x] 0..0 
+* value[x] ^definition = "Not used in this profile. MustSupport is inherited from the parent profile (USCoreObservationLab) and should be ignored by implementers for this element."
+* insert ObservationComponentSlicingRules
+* insert CreateComponent(clinicalSignificance, 0, 1)
 
-//* identifier ^slicing.discriminator.type = #value
-//* identifier ^slicing.discriminator.path = "type.coding.code"
-//* identifier ^slicing.rules = #open
-//* identifier contains
-//    AccessionIdentifier 0..1 MS and
-//    FillerOrderNumber 0..1 MS and
-//    PlacerOrderNumber 0..1 MS
-//* identifier[AccessionIdentifier].type = IDTYPE#ACSN
-//* identifier[FillerOrderNumber].type = IDTYPE#FILL
-//* identifier[PlacerOrderNumber].type = IDTYPE#PLAC
+* component[clinicalSignificance].code = LNC#53037-8
+* component[clinicalSignificance].value[x] only CodeableConcept
+* component[clinicalSignificance].value[x] from http://loinc.org/vs/LL4034-6 (required)
+* component[clinicalSignificance] ^short = "Genetic variation clinical significance [Imp]"
+* component[clinicalSignificance] ^definition = "Single DNA marker or individual allele interpretation in the context of the assessed genetic disease (source: LOINC)."

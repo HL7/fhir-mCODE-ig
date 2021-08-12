@@ -238,14 +238,14 @@ Description:    "The area of the genome region referenced in testing for variant
 * component and component.code and component.value[x] and component.dataAbsentReason MS
 
 Profile:    GenomicDiagnosticImplication
-Parent:     USCoreObservationLab
+Parent:     Observation
 Id: mcode-genomic-diagnostic-implication
 Title:      "Genomic Diagnostic Implication"
 Description:    "Observation stating a linkage between one or more genotype/haplotype/variation Observations and evidence for or against a particular disease, condition, or cancer diagnosis."
-* code = LNC#81259-4 "Associated phenotype" //"Associated phenotype"
+* code = TbdCodes#diagnostic-implication "Diagnostic implication" // "marked as TBDCode by CGWG - needs LOINC submission"
 * derivedFrom only Reference(CancerGeneticVariant)
-* value[x] 0..0 
-* value[x] ^definition = "Not used in this profile. MustSupport is inherited from the parent profile (USCoreObservationLab) and should be ignored by implementers for this element."
+// * value[x] 0..0 
+// * value[x] ^definition = "Not used in this profile. MustSupport is inherited from the parent profile (USCoreObservationLab) and should be ignored by implementers for this element."
 * insert ObservationComponentSlicingRules
 * insert CreateComponent(clinicalSignificance, 0, 1)
 

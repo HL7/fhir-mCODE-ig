@@ -28,6 +28,8 @@ Description:    "Records an alteration in the most common DNA nucleotide sequenc
 * insert CreateComponent(allelicState, 0, 1)
 * insert CreateComponent(cytogeneticLocation, 0, *)
 * insert CreateComponent(cytogeneticNomenclature, 0, *)
+* insert ObservationComponentSlicingRules
+* insert CreateComponent(clinicalSignificance, 0, 1)
 
 * component[geneStudied].code = LNC#48018-6
 * component[geneStudied].value[x] only CodeableConcept
@@ -102,6 +104,12 @@ Description:    "Records an alteration in the most common DNA nucleotide sequenc
 * component[cytogeneticLocation].code = LNC#48001-2
 * component[cytogeneticLocation] ^short = "Cytogenetic (chromosome) location"
 * component[cytogeneticLocation] ^definition = "The cytogenetic (chromosome) location."
+
+* component[clinicalSignificance].code = LNC#53037-8
+* component[clinicalSignificance].value[x] only CodeableConcept
+* component[clinicalSignificance].value[x] from http://loinc.org/vs/LL4034-6 (required)
+* component[clinicalSignificance] ^short = "Genetic variation clinical significance [Imp]"
+* component[clinicalSignificance] ^definition = "Single DNA marker or individual allele interpretation in the context of the assessed genetic disease (source: LOINC)."
 
 // ReduceText(component) must come AFTER the slices, otherwise SUSHI assumes the text of all component extensions and modifier extensions has already been reduced
 // * insert ReduceText
@@ -237,6 +245,7 @@ Description:    "The area of the genome region referenced in testing for variant
 
 * component and component.code and component.value[x] and component.dataAbsentReason MS
 
+/* 
 Profile:    GenomicDiagnosticImplication
 Parent:     Observation
 Id: mcode-genomic-diagnostic-implication
@@ -254,3 +263,4 @@ Description:    "Observation stating a linkage between one or more genotype/hapl
 * component[clinicalSignificance].value[x] from http://loinc.org/vs/LL4034-6 (required)
 * component[clinicalSignificance] ^short = "Genetic variation clinical significance [Imp]"
 * component[clinicalSignificance] ^definition = "Single DNA marker or individual allele interpretation in the context of the assessed genetic disease (source: LOINC)."
+*/

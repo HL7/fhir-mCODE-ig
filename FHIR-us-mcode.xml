@@ -86,7 +86,6 @@
 <artifact deprecated="true" id="Extension/mcode-evidence-type-extension" key="evidence-type-extension" name="Evidence Type Extension"/>
 <artifact id="StructureDefinition/mcode-genetic-specimen" key="genetic-specimen" name="Genetic Specimen"/>
 <artifact id="ValueSet/mcode-genetic-specimen-type-vs" key="genetic-specimen-type-value-set" name="Genetic Specimen Type Value Set"/>
-<artifact id="StructureDefinition/mcode-genomic-diagnostic-implication" key="StructureDefinition-mcode-genomic-diagnostic-implication" name="Genomic Diagnostic Implication"/>
 <artifact id="StructureDefinition/mcode-genomic-region-studied" key="genomic-region-studied" name="Genomic Region Studied"/>
 <artifact deprecated="true" id="ValueSet/mcode-hgvs-sequence-variant-nomenclature-value-set" key="hgvs-sequence-variant-nomenclature-value-set" name="HGVS Sequence Variant Nomenclature Value Set"/>
 <artifact id="ValueSet/mcode-hgnc-vs" key="hugo-gene-nomenclature-committee-gene-names-value-set" name="HUGO Gene Nomenclature Committee Gene Names Value Set"/>

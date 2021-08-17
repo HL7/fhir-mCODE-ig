@@ -28,7 +28,6 @@ Description:    "Records an alteration in the most common DNA nucleotide sequenc
 * insert CreateComponent(allelicState, 0, 1)
 * insert CreateComponent(cytogeneticLocation, 0, *)
 * insert CreateComponent(cytogeneticNomenclature, 0, *)
-* insert ObservationComponentSlicingRules
 * insert CreateComponent(clinicalSignificance, 0, 1)
 
 * component[geneStudied].code = LNC#48018-6
@@ -244,23 +243,3 @@ Description:    "The area of the genome region referenced in testing for variant
 * component[genomicReferenceSequenceId].code = LNC#48013-7
 
 * component and component.code and component.value[x] and component.dataAbsentReason MS
-
-/* 
-Profile:    GenomicDiagnosticImplication
-Parent:     Observation
-Id: mcode-genomic-diagnostic-implication
-Title:      "Genomic Diagnostic Implication"
-Description:    "Observation stating a linkage between one or more genotype/haplotype/variation Observations and evidence for or against a particular disease, condition, or cancer diagnosis."
-* code = TbdCodes#diagnostic-implication "Diagnostic implication" // "marked as TBDCode by CGWG - needs LOINC submission"
-* derivedFrom only Reference(CancerGeneticVariant)
-// * value[x] 0..0 
-// * value[x] ^definition = "Not used in this profile. MustSupport is inherited from the parent profile (USCoreObservationLab) and should be ignored by implementers for this element."
-* insert ObservationComponentSlicingRules
-* insert CreateComponent(clinicalSignificance, 0, 1)
-
-* component[clinicalSignificance].code = LNC#53037-8
-* component[clinicalSignificance].value[x] only CodeableConcept
-* component[clinicalSignificance].value[x] from http://loinc.org/vs/LL4034-6 (required)
-* component[clinicalSignificance] ^short = "Genetic variation clinical significance [Imp]"
-* component[clinicalSignificance] ^definition = "Single DNA marker or individual allele interpretation in the context of the assessed genetic disease (source: LOINC)."
-*/

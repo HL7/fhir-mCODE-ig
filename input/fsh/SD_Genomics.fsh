@@ -110,11 +110,6 @@ Description:    "Records an alteration in the most common DNA nucleotide sequenc
 * component[clinicalSignificance] ^short = "Genetic variation clinical significance [Imp]"
 * component[clinicalSignificance] ^definition = "Single DNA marker or individual allele interpretation in the context of the assessed genetic disease (source: LOINC)."
 
-// ReduceText(component) must come AFTER the slices, otherwise SUSHI assumes the text of all component extensions and modifier extensions has already been reduced
-// * insert ReduceText
-// * insert ReduceText(referenceRange)
-// * insert ReduceText(component)
-
 // ADDITIONAL MUST SUPPORTS (MS on status, category, category[Laboratory], codes, subject, effective[x], value[x] are inherited from US Core Lab Observation)
 * method and specimen and component and component.code and component.value[x] and component.dataAbsentReason MS
 

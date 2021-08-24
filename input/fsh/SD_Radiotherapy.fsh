@@ -31,12 +31,14 @@ Description: "A summary of a course of radiotherapy delivered to a patient. It r
 * extension contains
     ProcedureIntent named treatmentIntent 0..1 MS and
     TreatmentTerminationReason named terminationReason 0..1 MS and
-    RadiotherapyModality named modality 0..* MS and
-    RadiotherapyTechnique named technique 0..* MS and
+// ADD NEW RADIOTHERAPY MODALITY AND TECHNIQUE EXTENSION STRUCTURE
+    RadiotherapyModalityAndTechnique named modalityAndTechnique 0..* MS and
+//    RadiotherapyModality named modality 0..* MS and
+//    RadiotherapyTechnique named technique 0..* MS and
     RadiotherapySessions named actualNumberOfSessions 0..1 MS and
     RadiotherapyDoseDeliveredToVolume named doseDeliveredToVolume 0..* MS
-* extension[modality].value[x] from RadiotherapyModalityVS (required)
-* extension[technique].value[x] from RadiotherapyTechniqueVS (required)
+//* extension[modality].value[x] from RadiotherapyModalityVS (required)
+//* extension[technique].value[x] from RadiotherapyTechniqueVS (required)
 * bodySite from RadiotherapyTreatmentLocationVS (required)
 * bodySite ^short = "All body structure(s) treated"
 * bodySite ^definition = "Coded body structure(s) treated in this course of radiotherapy. These codes represent general locations. For additional detail, refer to the BodyStructures references in the doseDeliveredToVolume extension."
@@ -53,6 +55,10 @@ RuleSet: RadiotherapyPhaseCommon
     RadiotherapyTechnique named technique 0..1 MS and
     RadiotherapyFractionsDelivered named fractionsDelivered 0..1 MS and
     RadiotherapyDoseDeliveredToVolume named doseDeliveredToVolume 0..* MS
+// add definition of value sets due to change in Radiotherapy Course Summary to use new RadiotherapyModalityAndTechnique extension instead
+* extension[modality].value[x] from RadiotherapyModalityVS (required)
+* extension[technique].value[x] from RadiotherapyTechniqueVS (required)
+//
 * extension[doseDeliveredToVolume].extension[fractionsDelivered] 0..0
 * extension[doseDeliveredToVolume].extension[fractionsDelivered] ^short = "Not used in this profile."
 * extension[doseDeliveredToVolume].extension[fractionsDelivered] ^definition = "Record the fractions delivered in this phase in the top-level extension also named fractionDelivered."
@@ -100,6 +106,16 @@ Description: "A summary of a phase of brachytherapy treatment that has been deli
 
 
 //---------- Extensions -------------------------
+// ADD NEW RADIOTHERAPY MODALITY AND TECHNIQUE EXTENSION STRUCTURE
+Extension: RadiotherapyModalityAndTechnique
+Id:        mcode-radiotherapy-modality-and-technique
+Title:     "Radiotherapy Modality And Technique"
+Description: "Extension capturing modality and technique of a given radiotherapy procedure."
+* extension contains
+    RadiotherapyModality named rtmodality 1..1 MS and
+    RadiotherapyTechnique named rttechnique 0..* MS
+* extension[rtmodality].value[x] from RadiotherapyModalityVS (required)
+* extension[rttechnique].value[x] from RadiotherapyTechniqueVS (required)
 
 Extension: RadiotherapyModality
 Id:        mcode-radiotherapy-modality

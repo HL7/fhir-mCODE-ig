@@ -81,23 +81,6 @@ Note that ICD-O-3 specifies morphology and topography, not disorder; in this cas
 * ICD10CM#C7B.1 "Secondary merkel cell carcinoma"
 * ICD10CM#C7B.8 "Other secondary neuroendocrine tumors"
 
-
-ValueSet:   HistologyMorphologyBehaviorVS
-Id: mcode-histology-morphology-behavior-vs
-Title: "Histology Morphology Behavior Value Set"
-Description: "Codes representing the structure, arrangement, and behavioral characteristics of malignant neoplasms, and cancer cells. Inclusion criteria: in situ neoplasms and malignant neoplasms. Exclusion criteria: benign neoplasms and neoplasms of unspecified behavior. Note: ICD-O-3 morphology codes are referenced in the logical definition but not expanded in the value set for intellectual property reasons. For primary cancers, the ICD-O-3 behavior suffix should be /1, /2, or /3. For secondary cancers, the ICD-O-3 behavior suffix should be /6."
-* ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
-* include codes from system ICDO3
-* include codes from system SCT where concept is-a #367651003 "Malignant neoplasm of primary, secondary, or uncertain origin (morphologic abnormality)"
-* include codes from system SCT where concept is-a #399919001 "Carcinoma in situ - category (morphologic abnormality)"
-* include codes from system SCT where concept is-a #399983006 "In situ adenomatous neoplasm - category (morphologic abnormality)"
-* SCT#399878004 "Malignant neoplasm with pilar differentiation (morphologic abnormality)"
-* SCT#253035009 "In situ melanocytic morphology (morphologic abnormality)"
-* exclude codes from system SCT where concept is-a #450893003 "Papillary neoplasm, pancreatobiliary-type, with high grade intraepithelial neoplasia (morphologic abnormality)"
-* exclude codes from system SCT where concept is-a #128640002 "Glandular intraepithelial neoplasia, grade III (morphologic abnormality)"
-* exclude codes from system SCT where concept is-a #450890000 "Glandular intraepithelial neoplasia, low grade (morphologic abnormality)"
-* exclude codes from system SCT where concept is-a #703548001 "Endometrioid intraepithelial neoplasia (morphologic abnormality)"
-
 ValueSet:  ECRPreCancerousConditionVS
 Id: mcode-pre-cancerous-condition-vs
 Title: "ECR Pre-cancerous Condition"

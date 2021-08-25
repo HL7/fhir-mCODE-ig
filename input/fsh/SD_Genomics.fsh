@@ -28,6 +28,7 @@ Description:    "Records an alteration in the most common DNA nucleotide sequenc
 * insert CreateComponent(allelicState, 0, 1)
 * insert CreateComponent(cytogeneticLocation, 0, *)
 * insert CreateComponent(cytogeneticNomenclature, 0, *)
+* insert CreateComponent(clinicalSignificance, 0, 1)
 
 * component[geneStudied].code = LNC#48018-6
 * component[geneStudied].value[x] only CodeableConcept
@@ -103,10 +104,11 @@ Description:    "Records an alteration in the most common DNA nucleotide sequenc
 * component[cytogeneticLocation] ^short = "Cytogenetic (chromosome) location"
 * component[cytogeneticLocation] ^definition = "The cytogenetic (chromosome) location."
 
-// ReduceText(component) must come AFTER the slices, otherwise SUSHI assumes the text of all component extensions and modifier extensions has already been reduced
-// * insert ReduceText
-// * insert ReduceText(referenceRange)
-// * insert ReduceText(component)
+* component[clinicalSignificance].code = LNC#53037-8
+* component[clinicalSignificance].value[x] only CodeableConcept
+* component[clinicalSignificance].value[x] from http://loinc.org/vs/LL4034-6 (required)
+* component[clinicalSignificance] ^short = "Genetic variation clinical significance [Imp]"
+* component[clinicalSignificance] ^definition = "Single DNA marker or individual allele interpretation in the context of the assessed genetic disease (source: LOINC)."
 
 // ADDITIONAL MUST SUPPORTS (MS on status, category, category[Laboratory], codes, subject, effective[x], value[x] are inherited from US Core Lab Observation)
 * method and specimen and component and component.code and component.value[x] and component.dataAbsentReason MS
@@ -235,20 +237,4 @@ Description:    "The area of the genome region referenced in testing for variant
 * component[genomicReferenceSequenceId] ^definition = "Range(s) of DNA sequence examined. The genomic reference sequence is a contiguous stretch of chromosome DNA that spans all of the exons of the gene and includes transcribed and non transcribed stretches. For this ID use either the NCBI genomic nucleotide RefSeq IDs with their version number (see: NCBI.NLM.NIH.Gov/RefSeq) or use the LRG identifiers, without transcript (t or p) extensions -- when they become available. (source: LOINC)"
 * component[genomicReferenceSequenceId].code = LNC#48013-7
 
-// * insert ReduceText
-// * insert ReduceText(referenceRange)
-// * insert ReduceText(component)
-// These are the additional MS on top of US Core Lab Observation
 * component and component.code and component.value[x] and component.dataAbsentReason MS
-
-
-//* identifier ^slicing.discriminator.type = #value
-//* identifier ^slicing.discriminator.path = "type.coding.code"
-//* identifier ^slicing.rules = #open
-//* identifier contains
-//    AccessionIdentifier 0..1 MS and
-//    FillerOrderNumber 0..1 MS and
-//    PlacerOrderNumber 0..1 MS
-//* identifier[AccessionIdentifier].type = IDTYPE#ACSN
-//* identifier[FillerOrderNumber].type = IDTYPE#FILL
-//* identifier[PlacerOrderNumber].type = IDTYPE#PLAC

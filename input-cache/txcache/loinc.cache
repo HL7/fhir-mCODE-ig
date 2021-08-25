@@ -37492,3 +37492,24 @@ v: {
   "error" : "The code \"97509-4\" is not valid in the system http://loinc.org; The code provided (http://loinc.org#97509-4) is not valid in the value set 'VitalSigns' (from http://tx.fhir.org/r4)"
 }
 -------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "81259-4",
+  "display" : "Associated phenotype"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "Associated phenotype",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "53037-8"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "Genetic variation clinical significance [Imp]",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------

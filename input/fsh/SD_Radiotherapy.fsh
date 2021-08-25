@@ -1,3 +1,16 @@
+
+// -------------- Identifier Display Name Field ---------------
+RuleSet: IdentifierDisplayName  // FHIR-32239
+* identifier 0..* MS 
+* identifier ^definition = "Display name and technical identifiers (e.g., the Conceptual Volume UID used in DICOM.)"
+* identifier ^slicing.discriminator.type = #value
+* identifier ^slicing.discriminator.path = "use"
+* identifier ^slicing.rules = #open
+* identifier contains
+    displayName 0..1 MS
+* identifier[displayName].use = #usual
+* identifier[displayName].value 1..1 MS
+
 // ------------- Overall Course Summary -----------------
 RuleSet: RadiotherapyCommon
 * category 1.. MS
@@ -92,7 +105,7 @@ Extension: RadiotherapyModality
 Id:        mcode-radiotherapy-modality
 Title:    "Radiotherapy Modality"
 Description: "Extension capturing a modality of external beam or brachytherapy radiation procedures."
-//* insert ExtensionContext(Procedure)
+//* insert ExtensionContext(Procedure) - removed as per FHIR-32243
 * value[x] only CodeableConcept
 * value[x] 1..1
 
@@ -100,7 +113,7 @@ Extension: RadiotherapyTechnique
 Id:        mcode-radiotherapy-technique
 Title:     "Radiotherapy Technique"
 Description: "Extension capturing a technique of external beam or brachytherapy radiation procedures."
-//* insert ExtensionContext(Procedure)
+//* insert ExtensionContext(Procedure)  - removed as per FHIR-32243
 * value[x] only CodeableConcept
 * value[x] 1..1
 
@@ -150,13 +163,15 @@ Id: mcode-radiotherapy-volume
 Title: "Radiotherapy Volume"
 Description: "A volume of the body used in radiotherapy planning or treatment delivery."
 * obeys mcode-description-or-id-required
+* insert IdentifierDisplayName 
 * identifier ^short = "Volume Identifier"
 * identifier ^definition = "Unique identifier to reliably identify the same target volume in different requests and procedures, for example, the Conceptual Volume UID used in DICOM."
 * description ^short = "Volume Description"
 * description ^definition = "A text description of the radiotherapy volume, which SHOULD contain any additional information above and beyond the location and locationQualifier that describe the volume."
 * morphology from RadiotherapyVolumeTypeVS (extensible)
 * morphology ^short = "Type of Radiotherapy Volume"
-* morphology ^definition = "The type of radiotherapy volume this resource represents. Although the name of the element is 'morphology', this element is defined in the base resource as 'The kind of structure being represented by the body structure'. The name is somewhat of a misnomer, and might be better interpreted simply as 'type' or 'kind'."
+// definition --> comment FHIR-32352
+* morphology ^comment = "The type of radiotherapy volume this resource represents. Although the name of the element is 'morphology', this element is defined in the base resource as 'The kind of structure being represented by the body structure'. The name is somewhat of a misnomer, and might be better interpreted simply as 'type' or 'kind'."
 * location from RadiotherapyTreatmentLocationVS (required)
 * location ^short = "Body Location Code."
 * location ^definition = "A code and qualifiers (via extensions) specifying the TG263 body structure comprising the irradiated volume."

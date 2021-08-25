@@ -16,14 +16,19 @@ Description:    "Records an alteration in the most common DNA nucleotide sequenc
 
 * insert ObservationComponentSlicingRules
 * insert CreateComponent(geneStudied, 0, *)
-* insert CreateComponent(variationCode, 0, *)
-* insert CreateComponent(genomicDNAChange, 0, *)
-* insert CreateComponent(genomicDNAChangeType, 0, *)
-* insert CreateComponent(genomicSourceClass, 0, *)
-* insert CreateComponent(aminoAcidChange, 0, *)
-* insert CreateComponent(aminoAcidChangeType, 0, *)
+* insert CreateComponent(variationCode, 0, 1)
+* insert CreateComponent(genomicDNAChange, 0, 1)
+* insert CreateComponent(genomicDNAChangeType, 0, 1)
+* insert CreateComponent(molecularConsequence, 0, 1)
+* insert CreateComponent(genomicSourceClass, 0, 1)
+* insert CreateComponent(aminoAcidChange, 0, 1)
+* insert CreateComponent(aminoAcidChangeType, 0, 1)
+* insert CreateComponent(copyNumber, 0, 1)
+* insert CreateComponent(sampleAllelicFrequency, 0, 1)
+* insert CreateComponent(allelicState, 0, 1)
 * insert CreateComponent(cytogeneticLocation, 0, *)
 * insert CreateComponent(cytogeneticNomenclature, 0, *)
+* insert CreateComponent(clinicalSignificance, 0, 1)
 
 * component[geneStudied].code = LNC#48018-6
 * component[geneStudied].value[x] only CodeableConcept
@@ -49,6 +54,12 @@ Description:    "Records an alteration in the most common DNA nucleotide sequenc
 * component[genomicDNAChangeType] ^short = "DNA Change Type"
 * component[genomicDNAChangeType] ^definition = "Codified type for associated DNA Marker. DNA Markers use the HGVS notation which implies the DNA Marker Type, but the concurrent use of this code will allow a standard and explicit type for technical and display convenience."
 
+* component[molecularConsequence].code = LNC#48019-4  // Note TBDCodes - accepted by HL7 while waiting for a LOINC code assignment
+* component[molecularConsequence].value[x] only CodeableConcept
+* component[molecularConsequence].value[x] from MolecularConsequenceVS (extensible)
+* component[molecularConsequence] ^short = "Molecular consequence"
+* component[molecularConsequence] ^definition = "Changes in a structural features of a sequence due to the observed variant."
+
 * component[genomicSourceClass].code = LNC#48002-0
 * component[genomicSourceClass].value[x] only CodeableConcept
 * component[genomicSourceClass].value[x] from http://loinc.org/vs/LL378-1 (required)
@@ -67,6 +78,22 @@ Description:    "Records an alteration in the most common DNA nucleotide sequenc
 * component[aminoAcidChangeType] ^short = "Amino acid change [Type]"
 * component[aminoAcidChangeType] ^definition = "The type of change related to the amino acid variant."
 
+* component[copyNumber].code = LNC#82155-3
+* component[copyNumber].value[x] only Quantity
+* component[copyNumber] ^short = "Genomic structural variant copy number"
+* component[copyNumber] ^definition = "Tthe genetic trait involving the number of copies of a particular gene present in the genome of an individual. (source: NCI)"
+
+* component[sampleAllelicFrequency].code = LNC#81258-6
+* component[sampleAllelicFrequency].value[x] only Quantity
+* component[sampleAllelicFrequency] ^short = "sample allelic frequency"
+* component[sampleAllelicFrequency] ^definition = "The allele frequency represents the incidence of a gene variant in a population. (source: Nature.com)"
+
+* component[allelicState].code = LNC#53034-5
+* component[allelicState].value[x] only CodeableConcept
+* component[allelicState].value[x] from http://loinc.org/vs/LL381-5 (required)
+* component[allelicState] ^short = "sample allelic frequency"
+* component[allelicState] ^definition = "Genetic variant allelic state."
+
 // CG Reporting IG does not constrain the cytogeneticNomenclature value type
 * component[cytogeneticNomenclature].code = LNC#81291-7
 * component[cytogeneticNomenclature] ^short = "Variant ISCN"
@@ -77,10 +104,11 @@ Description:    "Records an alteration in the most common DNA nucleotide sequenc
 * component[cytogeneticLocation] ^short = "Cytogenetic (chromosome) location"
 * component[cytogeneticLocation] ^definition = "The cytogenetic (chromosome) location."
 
-// ReduceText(component) must come AFTER the slices, otherwise SUSHI assumes the text of all component extensions and modifier extensions has already been reduced
-// * insert ReduceText
-// * insert ReduceText(referenceRange)
-// * insert ReduceText(component)
+* component[clinicalSignificance].code = LNC#53037-8
+* component[clinicalSignificance].value[x] only CodeableConcept
+* component[clinicalSignificance].value[x] from http://loinc.org/vs/LL4034-6 (required)
+* component[clinicalSignificance] ^short = "Genetic variation clinical significance [Imp]"
+* component[clinicalSignificance] ^definition = "Single DNA marker or individual allele interpretation in the context of the assessed genetic disease (source: LOINC)."
 
 // ADDITIONAL MUST SUPPORTS (MS on status, category, category[Laboratory], codes, subject, effective[x], value[x] are inherited from US Core Lab Observation)
 * method and specimen and component and component.code and component.value[x] and component.dataAbsentReason MS
@@ -209,20 +237,4 @@ Description:    "The area of the genome region referenced in testing for variant
 * component[genomicReferenceSequenceId] ^definition = "Range(s) of DNA sequence examined. The genomic reference sequence is a contiguous stretch of chromosome DNA that spans all of the exons of the gene and includes transcribed and non transcribed stretches. For this ID use either the NCBI genomic nucleotide RefSeq IDs with their version number (see: NCBI.NLM.NIH.Gov/RefSeq) or use the LRG identifiers, without transcript (t or p) extensions -- when they become available. (source: LOINC)"
 * component[genomicReferenceSequenceId].code = LNC#48013-7
 
-// * insert ReduceText
-// * insert ReduceText(referenceRange)
-// * insert ReduceText(component)
-// These are the additional MS on top of US Core Lab Observation
 * component and component.code and component.value[x] and component.dataAbsentReason MS
-
-
-//* identifier ^slicing.discriminator.type = #value
-//* identifier ^slicing.discriminator.path = "type.coding.code"
-//* identifier ^slicing.rules = #open
-//* identifier contains
-//    AccessionIdentifier 0..1 MS and
-//    FillerOrderNumber 0..1 MS and
-//    PlacerOrderNumber 0..1 MS
-//* identifier[AccessionIdentifier].type = IDTYPE#ACSN
-//* identifier[FillerOrderNumber].type = IDTYPE#FILL
-//* identifier[PlacerOrderNumber].type = IDTYPE#PLAC

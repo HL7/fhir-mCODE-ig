@@ -628,8 +628,8 @@ Description: "Example of teleradiotherapy treatment phase involving external bea
 * partOf = Reference(radiotherapy-treatment-summary-chest-wall-jenny-m)
 * performedPeriod.start = "2018-05-01"
 * performedPeriod.end = "2018-06-29"
-* extension[modality].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
-* extension[technique].valueCodeableConcept = SCT#1156530009 "Volumetric Modulated Arc Therapy (procedure)"
+* extension[modalityAndTechnique].extension[rtmodality].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
+* extension[modalityAndTechnique].extension[rttechnique].valueCodeableConcept = SCT#1156530009 "Volumetric Modulated Arc Therapy (procedure)"
 * extension[fractionsDelivered].valueUnsignedInt = 25
 * extension[doseDeliveredToVolume][0].extension[volume].valueReference = Reference(jenny-m-chest-wall-treatment-volume)
 * extension[doseDeliveredToVolume][0].extension[totalDoseDelivered].valueQuantity = 5000 'cGy'
@@ -647,8 +647,8 @@ Description: "Example of teleradiotherapy treatment boost phase"
 * partOf = Reference(radiotherapy-treatment-summary-chest-wall-jenny-m)
 * performedPeriod.start = "2018-08-01"
 * performedPeriod.end = "2018-09-30"
-* extension[modality].valueCodeableConcept = SCT#45643008  "Teleradiotherapy using electrons (procedure)"
-* extension[technique].valueCodeableConcept = SCT#118641002 "Three dimensional treatment planning for teleradiotherapy (procedure)"
+* extension[modalityAndTechnique].extension[rtmodality].valueCodeableConcept = SCT#45643008  "Teleradiotherapy using electrons (procedure)"
+* extension[modalityAndTechnique].extension[rttechnique].valueCodeableConcept = SCT#118641002 "Three dimensional treatment planning for teleradiotherapy (procedure)"
 * extension[fractionsDelivered].valueUnsignedInt = 5
 * extension[doseDeliveredToVolume].extension[volume].valueReference = Reference(jenny-m-chest-wall-treatment-volume)
 * extension[doseDeliveredToVolume].extension[totalDoseDelivered].valueQuantity = 1000 'cGy'

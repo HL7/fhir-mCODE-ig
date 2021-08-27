@@ -201,8 +201,8 @@ InstanceOf: BrachytherapyTreatmentPhase
 Description: "Example of a brachytherapy therapy phase."
 * status = #completed "completed"
 * code = RID#mcode-brachytherapy-treatment-phase
-* extension[modality].valueCodeableConcept = RT#LDR-TEMP "Low Dose Rate Brachytherapy - Temporary Placement"
-* extension[technique].valueCodeableConcept = SCT#113120007 "Interstitial brachytherapy (procedure)"
+* extension[modalityAndTechnique].extension[rtmodality].valueCodeableConcept = RT#LDR-TEMP "Low Dose Rate Brachytherapy - Temporary Placement"
+* extension[modalityAndTechnique].extension[rttechnique].valueCodeableConcept = SCT#113120007 "Interstitial brachytherapy (procedure)"
 * subject = Reference(cancer-patient-john-anyperson)
 * asserter = Reference(us-core-practitioner-kyle-anydoc)
 * performedPeriod.start = "2019-03-01"

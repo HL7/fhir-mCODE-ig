@@ -1,4 +1,4 @@
-
+### Glossary Content
 |  Concept  | Short | Additional Description|
 |-----|-------------------|--------------------|
 | *Course* | Grouping that collects all radiation therapy treatments constituting an episode of care. This means all target volumes treated from first delivery of radiation in the *Course* until the physician believes they have treated all body sites in need of radiation therapy. | A *Course* can be divided into multiple *Phases* and can last for several months. For example, if there is a split *Course* for liver with 1 month in between, these are all part of the same *Course*. If treatment is started for one body site and then another is subsequently discovered and treated, the *Course* includes both. |

@@ -113,7 +113,7 @@ Description: "A set of codes representing the comorbidity categories originally 
 * #VALVE    "Valvular disease Elixhauser category" "Patient has a disorder in the value set ElixhauserValvularDiseaseVS"
 * #WGHTLOSS    "Weight loss Elixhauser category" "Patient has a disorder in the value set ElixhauserWeightLossVS"
 
-CodeSystem: TbdCodes
-Title: "ToBeDeterminedCodes ('TbdCodes')"
-Description: "These codes are currently 'TBD-LOINC' codes. The CG WG is requesting formal LOINC codes."
-* #molecular-consequence "Molecular Consequence" "Annotated changes to sequence features caused by this variant. Terms are from the sequence ontology under SO:0001537."
+// CodeSystem: TbdCodes
+// Title: "ToBeDeterminedCodes ('TbdCodes')"
+// Description: "These codes are currently 'TBD-LOINC' codes. The CG WG is requesting formal LOINC codes."
+// * #molecular-consequence "Molecular Consequence" "Annotated changes to sequence features caused by this variant. Terms are from the sequence ontology under SO:0001537."

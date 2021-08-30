@@ -1,7 +1,7 @@
 
 // -------------- Identifier Display Name Field ---------------
 RuleSet: IdentifierDisplayName  // FHIR-32239
-* identifier 0..* MS 
+* identifier 0..* MS
 * identifier ^definition = "Display name and technical identifiers (e.g., the Conceptual Volume UID used in DICOM.)"
 * identifier ^slicing.discriminator.type = #value
 * identifier ^slicing.discriminator.path = "use"
@@ -49,7 +49,7 @@ RuleSet: RadiotherapyPhaseCommon
     RadiotherapyModalityAndTechnique named modalityAndTechnique 0..1 MS and
     RadiotherapyFractionsDelivered named fractionsDelivered 0..1 MS and
     RadiotherapyDoseDeliveredToVolume named doseDeliveredToVolume 0..* MS
-* extension[modalityAndTechnique].extension[rtmodality] 1..1 MS 
+* extension[modalityAndTechnique].extension[rtmodality] 1..1 MS
 * extension[modalityAndTechnique].extension[rttechnique] 0..* MS
 * extension[modalityAndTechnique].extension[rtmodality].value[x] from RadiotherapyModalityVS (required)
 * extension[modalityAndTechnique].extension[rttechnique].value[x] from RadiotherapyTechniqueVS (required)
@@ -111,7 +111,7 @@ Description: "Extension capturing modality and technique of a given radiotherapy
 * extension[rtmodality].value[x] from RadiotherapyModalityVS (required)
 * extension[rttechnique].value[x] from RadiotherapyTechniqueVS (required)
 * extension[rtmodality].value[x] from BrachytherapyModalityVS (required)
-* obeys TechniquesForBrachyRadioPharmaceuticalModality
+* extension obeys TechniquesForBrachyRadioPharmaceuticalModality
 //* obeys TechniquesForLDRBrachTempModality
 //* obeys TechniquesForInternalBrachPermModality
 //* obeys TechniquesForHDBrachModality
@@ -119,7 +119,7 @@ Description: "Extension capturing modality and technique of a given radiotherapy
 
 Invariant: TechniquesForBrachyRadioPharmaceuticalModality
 Description:  "Allowed Techniques for Radiopharmaceutical Modality"
-//Expression: "where(url = <modality extension>).exists() and extension.where(url = <technique extension>).exists() and extension.modality extension>).value() = SCT#440252007 implies <technique extension>).value() in  VS"
+Expression: "extension.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-modality').exists() and extension.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-technique').exists() and extension.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-modality').value() = SCT#440252007 implies extension.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-technique').value in BrachyRadioPharmaceuticalTechniquesVS"
 Severity: #error
 
 Extension: RadiotherapyModality
@@ -158,12 +158,12 @@ Extension: RadiotherapyDoseDeliveredToVolume
 Id: mcode-radiotherapy-dose-delivered-to-volume
 Title: "Radiotherapy Dose Delivered To Body Volume"
 Description: "Dose parameters for one radiotherapy volume."
-* insert ExtensionContext(Procedure) 
+* insert ExtensionContext(Procedure)
 * extension contains
     volume 1..1 MS and
     totalDoseDelivered 0..1 MS and
     fractionsDelivered 0..1 MS
-* extension[volume].value[x] only Reference(RadiotherapyVolume)        
+* extension[volume].value[x] only Reference(RadiotherapyVolume)
 * extension[totalDoseDelivered].value[x] only Quantity
 * extension[totalDoseDelivered].valueQuantity = UCUM#cGy
 * extension[fractionsDelivered].value[x] only unsignedInt
@@ -184,7 +184,7 @@ Id: mcode-radiotherapy-volume
 Title: "Radiotherapy Volume"
 Description: "A volume of the body used in radiotherapy planning or treatment delivery."
 * obeys mcode-description-or-id-required
-* insert IdentifierDisplayName 
+* insert IdentifierDisplayName
 * identifier ^short = "Volume Identifier"
 * identifier ^definition = "Unique identifier to reliably identify the same target volume in different requests and procedures, for example, the Conceptual Volume UID used in DICOM."
 * description ^short = "Volume Description"

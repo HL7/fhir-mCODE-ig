@@ -100,7 +100,7 @@ Description: "A summary of a phase of brachytherapy treatment that has been deli
 
 
 //---------- Extensions -------------------------
-// ADD NEW RADIOTHERAPY MODALITY AND TECHNIQUE EXTENSION STRUCTURE
+
 Extension: RadiotherapyModalityAndTechnique
 Id:        mcode-radiotherapy-modality-and-technique
 Title:     "Radiotherapy Modality And Technique"
@@ -110,6 +110,17 @@ Description: "Extension capturing modality and technique of a given radiotherapy
     RadiotherapyTechnique named rttechnique 0..* MS
 * extension[rtmodality].value[x] from RadiotherapyModalityVS (required)
 * extension[rttechnique].value[x] from RadiotherapyTechniqueVS (required)
+* extension[rtmodality].value[x] from BrachytherapyModalityVS (required)
+* obeys TechniquesForBrachyRadioPharmaceuticalModality
+//* obeys TechniquesForLDRBrachTempModality
+//* obeys TechniquesForInternalBrachPermModality
+//* obeys TechniquesForHDBrachModality
+//* obeys TechniquesForHDRBrachElectModality
+
+Invariant: TechniquesForBrachyRadioPharmaceuticalModality
+Description:  "Allowed Techniques for Radiopharmaceutical Modality"
+//Expression: "where(url = <modality extension>).exists() and extension.where(url = <technique extension>).exists() and extension.modality extension>).value() = SCT#440252007 implies <technique extension>).value() in  VS"
+Severity: #error
 
 Extension: RadiotherapyModality
 Id:        mcode-radiotherapy-modality
@@ -147,12 +158,12 @@ Extension: RadiotherapyDoseDeliveredToVolume
 Id: mcode-radiotherapy-dose-delivered-to-volume
 Title: "Radiotherapy Dose Delivered To Body Volume"
 Description: "Dose parameters for one radiotherapy volume."
-* insert ExtensionContext(Procedure)
+* insert ExtensionContext(Procedure) 
 * extension contains
     volume 1..1 MS and
     totalDoseDelivered 0..1 MS and
     fractionsDelivered 0..1 MS
-* extension[volume].value[x] only Reference(RadiotherapyVolume)
+* extension[volume].value[x] only Reference(RadiotherapyVolume)        
 * extension[totalDoseDelivered].value[x] only Quantity
 * extension[totalDoseDelivered].valueQuantity = UCUM#cGy
 * extension[fractionsDelivered].value[x] only unsignedInt

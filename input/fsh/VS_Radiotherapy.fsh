@@ -55,6 +55,50 @@ Id: mcode-brachytherapy-technique-vs
 Title: "Brachytherapy Technique Value Set"
 Description: "Codes describing the techniques of brachytherapy (internal or surface radiation) procedures."
 * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
+* include codes from valueset BrachyIntRadiotherapySeedTechniquesVS
+* include codes from valueset BrachyLDRTechniquesVS
+* include codes from valueset BrachyPDRTechniquesVS 
+* include codes from valueset BrachytherapyHDRTechniquesVS
+* include codes from valueset BrachytherapyHDRElectronicTechniquesVS
+* include codes from valueset BrachyRadioPharmaceuticalTechniquesVS
+//* SCT#384692006 "Intracavitary brachytherapy (procedure)"
+//* SCT#1156382005 "Intensity modulated intracavitary brachytherapy (procedure)"
+//* SCT#113120007 "Interstitial brachytherapy (procedure)"
+//* SCT#1156383000 "Intravascular brachytherapy (procedure)" 
+//* SCT#384691004 "Intraluminal brachytherapy (procedure)"
+//* SCT#168524008 "Radiotherapy - intraoperative control (procedure)"
+//* SCT#14473006 "Surface brachytherapy (procedure)"
+//* SCT#16560241000119104 "Oral radionuclide therapy (procedure)"
+
+ValueSet: BrachyIntRadiotherapySeedTechniquesVS
+Id: mcode-brachyintradiotherapyseed-technique-vs
+Title: "Allowed techniques for brachytherapy modality internal radiotherapy - permanent seeds"
+Description: "Allowed techniques for brachytherapy modality internal radiotherapy - permanent seeds"
+* ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
+* SCT#113120007 "Interstitial brachytherapy (procedure)"
+
+ValueSet: BrachyLDRTechniquesVS
+Id: mcode-brachyldr-technique-vs
+Title: "Allowed techniques for brachytherapy modality Low Dose Rate using temp rad source"
+Description: "Allowed techniques for brachytherapy modality Low Dose Rate using temp rad source"
+* ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
+* SCT#384692006 "Intracavitary brachytherapy (procedure)"
+* SCT#113120007 "Interstitial brachytherapy (procedure)"
+* SCT#14473006 "Surface brachytherapy (procedure)"
+
+ValueSet: BrachyPDRTechniquesVS 
+Id: mcode-brachypdr-technique-vs 
+Title: "Allowed techniques for brachytherapy modality Pulsed Dose Rate"
+Description: "Allowed techniques for brachytherapy modality Pulsed Dose Rate"
+* ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
+* SCT#384692006 "Intracavitary brachytherapy (procedure)"
+* SCT#113120007 "Interstitial brachytherapy (procedure)"
+
+ValueSet: BrachytherapyHDRTechniquesVS
+Id: mcode-brachyhdr-technique-vs 
+Title: "Allowed techniques for brachytherapy modality High Dose Rate"
+Description: "Allowed techniques for brachytherapy modality High Dose Rate"
+* ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
 * SCT#384692006 "Intracavitary brachytherapy (procedure)"
 * SCT#1156382005 "Intensity modulated intracavitary brachytherapy (procedure)"
 * SCT#113120007 "Interstitial brachytherapy (procedure)"
@@ -62,7 +106,28 @@ Description: "Codes describing the techniques of brachytherapy (internal or surf
 * SCT#384691004 "Intraluminal brachytherapy (procedure)"
 * SCT#168524008 "Radiotherapy - intraoperative control (procedure)"
 * SCT#14473006 "Surface brachytherapy (procedure)"
+
+ValueSet: BrachytherapyHDRElectronicTechniquesVS
+Id: mcode-brachyhdrelectronic-technique-vs 
+Title: "Allowed techniques for brachytherapy modality High Dose Rate electronic"
+Description: "Allowed techniques for brachytherapy modality High Dose Rate electronic"
+* ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
+* SCT#384692006 "Intracavitary brachytherapy (procedure)"
+* SCT#1156382005 "Intensity modulated intracavitary brachytherapy (procedure)"
+* SCT#113120007 "Interstitial brachytherapy (procedure)"
+* SCT#384691004 "Intraluminal brachytherapy (procedure)"
+* SCT#168524008 "Radiotherapy - intraoperative control (procedure)"
+* SCT#14473006 "Surface brachytherapy (procedure)"
+
+ValueSet: BrachyRadioPharmaceuticalTechniquesVS
+Id: mcode-brachyradiopharmaceutical-technique-vs
+Title: "Allowed techniques for brachytherapy modality radiopharmaceutical"
+Description: "Allowed techniques for brachytherapy modality radiopharmaceutical"
+* ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
 * SCT#16560241000119104 "Oral radionuclide therapy (procedure)"
+* SCT#1156383000 "Intravascular brachytherapy (procedure)"
+* SCT#384692006 "Intracavitary brachytherapy (procedure)"
+* SCT#113120007 "Interstitial brachytherapy (procedure)"
 
 ValueSet: RadiotherapyTechniqueVS
 Id: mcode-radiotherapy-technique-vs

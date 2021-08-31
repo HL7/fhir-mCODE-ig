@@ -531,7 +531,7 @@ Note that ICD-O-3 specifies morphology and topography, not disorder. If ICD-O-3 
 ValueSet:  PrimaryCancerDisorderVS
 Id: mcode-ECR-primary-cancer-disorder-vs
 Title: "ECR Primary  Cancer Disorder Value Set"
-Description:    "ECRPrimary."
+Description:    "ECR Primary Cancer Conditions."
 * ICD10CM#C00.0 "Malignant neoplasm of external upper lip"
 * ICD10CM#C00.1 "Malignant neoplasm of external lower lip"
 * ICD10CM#C00.2 "Malignant neoplasm of external lip, unspecified"
@@ -1591,3 +1591,43 @@ Description:    "ECRPrimary."
 * ICD10CM#D47.Z9 "Other specified neoplasms of uncertain behavior of lymphoid, hematopoietic and related tissue"
 * ICD10CM#D49.6 "Neoplasm of unspecified behavior of brain"
 * ICD10CM#D49.7 "Neoplasm of unspecified behavior of endocrine glands and other parts of nervous system"
+
+ValueSet: CancerDisorderVS
+Id: mcode-cancer-disorder-vs
+Title: "Cancer Disorder Value Set"
+Description:   "A broad cancer-related value set containing both primary and secondary tumor types, with codes from ICD-10 and SNOMED CT, including both diagnosis and histology/morphology/behavior codes. ICD-O-3 morphology codes may also be used and are considered conformant to the specification. For SNOMED, the value set includes all codes descending from 363346000 'Malignant neoplastic disease (disorder)' and 108369006 'Neoplasm (morphologic abnormality)'."
+* ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
+* CC#CD-OTHER "Other Cancer Disorder, Specify"
+* include codes from valueset PrimaryOrUncertainBehaviorCancerDisorderVS
+* include codes from valueset SecondaryCancerDisorderVS
+* include codes from valueset HistologyMorphologyBehaviorVS
+// MK - 4/2/2021 -- changed to direct copy of all the codes in the above value set to eliminate a QA error -- ugly!
+// * include codes from system ICDO3
+// * include codes from system SCT where concept is-a #367651003 "Malignant neoplasm of primary, secondary, or uncertain origin (morphologic abnormality)"
+// * include codes from system SCT where concept is-a #399919001 "Carcinoma in situ - category (morphologic abnormality)"
+// * include codes from system SCT where concept is-a #399983006 "In situ adenomatous neoplasm - category (morphologic abnormality)"
+// * SCT#399878004 "Malignant neoplasm with pilar differentiation (morphologic abnormality)"
+// * SCT#253035009 "In situ melanocytic morphology (morphologic abnormality)"
+// * exclude codes from system SCT where concept is-a #450893003 "Papillary neoplasm, pancreatobiliary-type, with high grade intraepithelial neoplasia (morphologic abnormality)"
+// * exclude codes from system SCT where concept is-a #128640002 "Glandular intraepithelial neoplasia, grade III (morphologic abnormality)"
+// * exclude codes from system SCT where concept is-a #450890000 "Glandular intraepithelial neoplasia, low grade (morphologic abnormality)"
+// * exclude codes from system SCT where concept is-a #703548001 "Endometrioid intraepithelial neoplasia (morphologic abnormality)"
+// * SCT#128462008  "Secondary malignant neoplastic disease (disorder)"
+// * include codes from system SCT where concept is-a #128462008  "Secondary malignant neoplastic disease (disorder)"
+
+
+ValueSet:   HistologyMorphologyBehaviorVS
+Id: mcode-histology-morphology-behavior-vs
+Title: "Histology Morphology Behavior Value Set"
+Description: "Codes representing the structure, arrangement, and behavioral characteristics of malignant neoplasms, and cancer cells. Inclusion criteria: in situ neoplasms and malignant neoplasms. Exclusion criteria: benign neoplasms and neoplasms of unspecified behavior. Note: ICD-O-3 morphology codes are referenced in the logical definition but not expanded in the value set for intellectual property reasons. For primary cancers, the ICD-O-3 behavior suffix should be /1, /2, or /3. For secondary cancers, the ICD-O-3 behavior suffix should be /6."
+* ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
+* include codes from system ICDO3
+* include codes from system SCT where concept is-a #367651003 "Malignant neoplasm of primary, secondary, or uncertain origin (morphologic abnormality)"
+* include codes from system SCT where concept is-a #399919001 "Carcinoma in situ - category (morphologic abnormality)"
+* include codes from system SCT where concept is-a #399983006 "In situ adenomatous neoplasm - category (morphologic abnormality)"
+* SCT#399878004 "Malignant neoplasm with pilar differentiation (morphologic abnormality)"
+* SCT#253035009 "In situ melanocytic morphology (morphologic abnormality)"
+* exclude codes from system SCT where concept is-a #450893003 "Papillary neoplasm, pancreatobiliary-type, with high grade intraepithelial neoplasia (morphologic abnormality)"
+* exclude codes from system SCT where concept is-a #128640002 "Glandular intraepithelial neoplasia, grade III (morphologic abnormality)"
+* exclude codes from system SCT where concept is-a #450890000 "Glandular intraepithelial neoplasia, low grade (morphologic abnormality)"
+* exclude codes from system SCT where concept is-a #703548001 "Endometrioid intraepithelial neoplasia (morphologic abnormality)"

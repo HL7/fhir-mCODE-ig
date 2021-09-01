@@ -1,9 +1,9 @@
 ### mCODE STU 2 (Sept 2021)
 #### [Block Vote 1](https://jira.hl7.org/issues/?filter=14606) - June 24, 2021
-* [FHIR-32166](https://jira.hl7.org/browse/FHIR-32166) All references to subject or patient now reference CancerPatient.   Any patient that conforms to USCore is conformant.  Clients/server have to handle in a meaningful way the deceased info.  
+* [FHIR-32166](https://jira.hl7.org/browse/FHIR-32166) All references to subject or patient now reference CancerPatient.   Any patient that conforms to USCore is conformant.  Clients/server have to handle in a meaningful way the deceased info.
 * [FHIR-32263](https://jira.hl7.org/browse/FHIR-32263) Radiotherapy Modality Value Set and Radiotherapy Technique Value Set are now defined by inclusion of the modality and technique value sets for Brachytherapy and Teleoradiotherapy rather than by enumeration.
 * [FHIR-32350](https://jira.hl7.org/browse/FHIR-32350) The descriptions for the Elixhauser ThyroidOther and NeuroOther VS have been clarified.
-* [FHIR-32663](https://jira.hl7.org/browse/FHIR-32663) Changed the definition of CancerStagingSystemVS to an intensional set containing descendants of SCT#254292007 "Tumor staging (tumor staging)". The includes codes for AJCC staging (version 6, 7, and 8) and many other specialized staging systems. 
+* [FHIR-32663](https://jira.hl7.org/browse/FHIR-32663) Changed the definition of CancerStagingSystemVS to an intensional set containing descendants of SCT#254292007 "Tumor staging (tumor staging)". The includes codes for AJCC staging (version 6, 7, and 8) and many other specialized staging systems.
 * A number of small corrections/improvements to narrative
 
 #### [Block Vote 2](https://jira.hl7.org/issues/?filter=14708) - July 22, 2021
@@ -23,11 +23,19 @@
 * [FHIR-32345](https://jira.hl7.org/browse/FHIR-32345)  Changed name of extension from LocationQualifier to BodyLocationQualifier
 
 #### [Block Vote 3](https://jira.hl7.org/issues/?filter=14928)
+* [FHIR-32280](https://jira.hl7.org/browse/FHIR-32279) Exlixhauser Comorbidity profile should have an value. Explanation of when it might be missing.
 * [FHIR-32280](https://jira.hl7.org/browse/FHIR-32280) Exlixhauser Comorbidity profile should have an integer Observation.value
+* [FHIR-32280](https://jira.hl7.org/browse/FHIR-32281) Exlixhauser Comorbidity profile components should be present or absent, not unknown
 * [FHIR-32348](https://jira.hl7.org/browse/FHIR-32348) LocationQualifier --> BodyLocationQualifier
 * [FHIR-32387](https://jira.hl7.org/browse/FHIR-32387) Invariant:  mcode-reason-required generates warning instead of error
 * [FHIR-32649](https://jira.hl7.org/browse/FHIR-32649) Extension 'Radiotherapy Fractions Delivered' added to the summary of extensions for Radiotherapy
 * [FHIR-33003](https://jira.hl7.org/browse/FHIR-33003)  Make extension values required
+
+#### [Block Vote 4](https://jira.hl7.org/issues/?filter=14928)
+
+#### [Block Vote 5](https://jira.hl7.org/issues/?filter=15618)
+
+#### [Block Vote 6](https://jira.hl7.org/issues/?filter=15619)
 
 ### mCODE STU 2 Ballot Version (May 2021)
 

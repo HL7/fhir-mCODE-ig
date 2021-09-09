@@ -110,16 +110,16 @@ Description: "Extension capturing modality and technique of a given radiotherapy
     RadiotherapyTechnique named rttechnique 0..* MS
 * extension[rtmodality].value[x] from RadiotherapyModalityVS (required)
 * extension[rttechnique].value[x] from RadiotherapyTechniqueVS (required)
-* obeys TechniquesForBrachyRadioPharmaceuticalModality
+//* obeys TechniquesForBrachyRadioPharmaceuticalModality
 //* obeys TechniquesForLDRBrachTempModality
 //* obeys TechniquesForInternalBrachPermModality
 //* obeys TechniquesForHDBrachModality
 //* obeys TechniquesForHDRBrachElectModality
 
-Invariant: TechniquesForBrachyRadioPharmaceuticalModality
-Description:  "Allowed Techniques for Radiopharmaceutical Modality"
-Expression: "extension.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-modality').exists() and extension.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-technique').exists() and extension.where(url = ’http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-modality').valueCodeableConcept.exists(coding.system = ‘http://snomed.info/sct’ and coding.code = ‘440252007’) implies extension.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-technique').value in http://hl7.org/fhir/us/mcode/ValueSet/mcode-brachyradiopharmaceutical-technique-vs"
-Severity: #error
+// Invariant: TechniquesForBrachyRadioPharmaceuticalModality
+// Description:  "Allowed Techniques for Radiopharmaceutical Modality"
+// Expression: "extension.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-modality').exists() and extension.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-technique').exists() and extension.where(url = ’http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-modality').valueCodeableConcept.exists(coding.system = ‘http://snomed.info/sct’ and coding.code = ‘440252007’) implies extension.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-technique').value in http://hl7.org/fhir/us/mcode/ValueSet/mcode-brachyradiopharmaceutical-technique-vs"
+// Severity: #error
 
 Extension: RadiotherapyModality
 Id:        mcode-radiotherapy-modality

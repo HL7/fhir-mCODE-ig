@@ -201,8 +201,8 @@ InstanceOf: BrachytherapyTreatmentPhase
 Description: "Example of a brachytherapy therapy phase."
 * status = #completed "completed"
 * code = RID#mcode-brachytherapy-treatment-phase
-* extension[modalityAndTechnique].extension[rtmodality].valueCodeableConcept = RT#LDR-TEMP "Low Dose Rate Brachytherapy - Temporary Placement"
-* extension[modalityAndTechnique].extension[rttechnique].valueCodeableConcept = SCT#113120007 "Interstitial brachytherapy (procedure)"
+* extension[modalityAndTechnique].extension[modality].valueCodeableConcept = RT#LDR-TEMP "Low Dose Rate Brachytherapy - Temporary Placement"
+* extension[modalityAndTechnique].extension[technique].valueCodeableConcept = SCT#113120007 "Interstitial brachytherapy (procedure)"
 * subject = Reference(cancer-patient-john-anyperson)
 * asserter = Reference(us-core-practitioner-kyle-anydoc)
 * performedPeriod.start = "2019-03-01"
@@ -228,7 +228,7 @@ Description: "Example of a non-TNM Stage Group (Binet staging for CLL)"
 * subject = Reference(cancer-patient-adam-everyman)
 * effectiveDateTime = "2020-05-18"
 * derivedFrom = Reference(lab-result-observation-hemoglobin)
-* valueCodeableConcept = UMLS#C2698392  "Binet Stage A" // NCIT#C80134 "Binet Stage A" 
+* valueCodeableConcept = UMLS#C2698392  "Binet Stage A" // NCIT#C80134 "Binet Stage A"
 
 Instance: tnm-clinical-stage-group-3c
 InstanceOf: CancerStageGroup

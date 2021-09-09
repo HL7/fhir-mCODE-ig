@@ -602,10 +602,10 @@ Description: "Example of radiotherapy treatment summary involving external beam 
 * performedPeriod.start = "2018-05-01"
 * performedPeriod.end = "2018-06-29"
 // modified example to demonstrate new RadiotherapyModalityAndTechnique structure in Course Summary
-* extension[modalityAndTechnique][0].extension[rtmodality][0].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
-* extension[modalityAndTechnique][0].extension[rttechnique][0].valueCodeableConcept = SCT#1156530009 "Volumetric Modulated Arc Therapy (procedure)"
-* extension[modalityAndTechnique][1].extension[rtmodality][0].valueCodeableConcept = SCT#45643008  "Teleradiotherapy using electrons (procedure)"
-* extension[modalityAndTechnique][1].extension[rttechnique][0].valueCodeableConcept = SCT#118641002 "Three dimensional treatment planning for teletherapy (procedure)"
+* extension[modalityAndTechnique][0].extension[modality][0].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
+* extension[modalityAndTechnique][0].extension[technique][0].valueCodeableConcept = SCT#1156530009 "Volumetric Modulated Arc Therapy (procedure)"
+* extension[modalityAndTechnique][1].extension[modality][0].valueCodeableConcept = SCT#45643008  "Teleradiotherapy using electrons (procedure)"
+* extension[modalityAndTechnique][1].extension[technique][0].valueCodeableConcept = SCT#118641002 "Three dimensional treatment planning for teletherapy (procedure)"
 //* extension[modality][0].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
 //* extension[modality][1].valueCodeableConcept = SCT#45643008  "Teleradiotherapy using electrons (procedure)"
 //* extension[technique][0].valueCodeableConcept =  SCT#1156530009 "Volumetric Modulated Arc Therapy (procedure)"
@@ -628,8 +628,8 @@ Description: "Example of teleradiotherapy treatment phase involving external bea
 * partOf = Reference(radiotherapy-treatment-summary-chest-wall-jenny-m)
 * performedPeriod.start = "2018-05-01"
 * performedPeriod.end = "2018-06-29"
-* extension[modalityAndTechnique].extension[rtmodality].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
-* extension[modalityAndTechnique].extension[rttechnique].valueCodeableConcept = SCT#1156530009 "Volumetric Modulated Arc Therapy (procedure)"
+* extension[modalityAndTechnique].extension[modality].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
+* extension[modalityAndTechnique].extension[technique].valueCodeableConcept = SCT#1156530009 "Volumetric Modulated Arc Therapy (procedure)"
 * extension[fractionsDelivered].valueUnsignedInt = 25
 * extension[doseDeliveredToVolume][0].extension[volume].valueReference = Reference(jenny-m-chest-wall-treatment-volume)
 * extension[doseDeliveredToVolume][0].extension[totalDoseDelivered].valueQuantity = 5000 'cGy'
@@ -647,8 +647,8 @@ Description: "Example of teleradiotherapy treatment boost phase"
 * partOf = Reference(radiotherapy-treatment-summary-chest-wall-jenny-m)
 * performedPeriod.start = "2018-08-01"
 * performedPeriod.end = "2018-09-30"
-* extension[modalityAndTechnique].extension[rtmodality].valueCodeableConcept = SCT#45643008  "Teleradiotherapy using electrons (procedure)"
-* extension[modalityAndTechnique].extension[rttechnique].valueCodeableConcept = SCT#118641002 "Three dimensional treatment planning for teleradiotherapy (procedure)"
+* extension[modalityAndTechnique].extension[modality].valueCodeableConcept = SCT#45643008  "Teleradiotherapy using electrons (procedure)"
+* extension[modalityAndTechnique].extension[technique].valueCodeableConcept = SCT#118641002 "Three dimensional treatment planning for teleradiotherapy (procedure)"
 * extension[fractionsDelivered].valueUnsignedInt = 5
 * extension[doseDeliveredToVolume].extension[volume].valueReference = Reference(jenny-m-chest-wall-treatment-volume)
 * extension[doseDeliveredToVolume].extension[totalDoseDelivered].valueQuantity = 1000 'cGy'

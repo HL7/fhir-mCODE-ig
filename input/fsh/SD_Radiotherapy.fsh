@@ -49,10 +49,10 @@ RuleSet: RadiotherapyPhaseCommon
     RadiotherapyModalityAndTechnique named modalityAndTechnique 0..1 MS and
     RadiotherapyFractionsDelivered named fractionsDelivered 0..1 MS and
     RadiotherapyDoseDeliveredToVolume named doseDeliveredToVolume 0..* MS
-* extension[modalityAndTechnique].extension[rtmodality] 1..1 MS
-* extension[modalityAndTechnique].extension[rttechnique] 0..* MS
-* extension[modalityAndTechnique].extension[rtmodality].value[x] from RadiotherapyModalityVS (required)
-* extension[modalityAndTechnique].extension[rttechnique].value[x] from RadiotherapyTechniqueVS (required)
+* extension[modalityAndTechnique].extension[modality] 1..1 MS
+* extension[modalityAndTechnique].extension[technique] 0..* MS
+* extension[modalityAndTechnique].extension[modality].value[x] from RadiotherapyModalityVS (required)
+* extension[modalityAndTechnique].extension[technique].value[x] from RadiotherapyTechniqueVS (required)
 * extension[doseDeliveredToVolume].extension[fractionsDelivered] 0..0
 * extension[doseDeliveredToVolume].extension[fractionsDelivered] ^short = "Not used in this profile."
 * extension[doseDeliveredToVolume].extension[fractionsDelivered] ^definition = "Record the fractions delivered in this phase in the top-level extension also named fractionDelivered."
@@ -72,12 +72,12 @@ Description: "A summary of a phase of teleradiotherapy treatment that has been d
 * insert RadiotherapyPhaseCommon
 // Teleradiotherapy specific content:
 * code = RID#mcode-teleradiotherapy-treatment-phase
-* extension[modalityAndTechnique].extension[rtmodality].value[x] from TeleradiotherapyModalityVS (required)
-* extension[modalityAndTechnique].extension[rtmodality] ^short = "Teleradiotherapy (EBRT) Modality"
-* extension[modalityAndTechnique].extension[rtmodality] ^definition = "The modality (radiation type) for external beam radiation therapy."
-* extension[modalityAndTechnique].extension[rttechnique].value[x] from TeleradiotherapyTechniqueVS (required)
-* extension[modalityAndTechnique].extension[rttechnique] ^short = "Teleradiotherapy (EBRT) Technique"
-* extension[modalityAndTechnique].extension[rttechnique] ^definition = "The method by which a radiation modality is applied (e.g., intensity modulated radiation therapy, intraoperative radiation therapy)."
+* extension[modalityAndTechnique].extension[modality].value[x] from TeleradiotherapyModalityVS (required)
+* extension[modalityAndTechnique].extension[modality] ^short = "Teleradiotherapy (EBRT) Modality"
+* extension[modalityAndTechnique].extension[modality] ^definition = "The modality (radiation type) for external beam radiation therapy."
+* extension[modalityAndTechnique].extension[technique].value[x] from TeleradiotherapyTechniqueVS (required)
+* extension[modalityAndTechnique].extension[technique] ^short = "Teleradiotherapy (EBRT) Technique"
+* extension[modalityAndTechnique].extension[technique] ^definition = "The method by which a radiation modality is applied (e.g., intensity modulated radiation therapy, intraoperative radiation therapy)."
 //* usedCode from TeleradiotherapyDeviceVS (extensible) // device-related, defer
 
 
@@ -89,12 +89,12 @@ Description: "A summary of a phase of brachytherapy treatment that has been deli
 * insert RadiotherapyPhaseCommon
 // Content specific to Brachytherapy:
 * code = RID#mcode-brachytherapy-treatment-phase
-* extension[modalityAndTechnique].extension[rtmodality].value[x] from BrachytherapyModalityVS (required)
-* extension[modalityAndTechnique].extension[rtmodality] ^short = "Brachytherapy Modality"
-* extension[modalityAndTechnique].extension[rtmodality] ^definition = "The modality for the Brachytherapy procedure."
-* extension[modalityAndTechnique].extension[rttechnique].value[x] from BrachytherapyTechniqueVS (required)
-* extension[modalityAndTechnique].extension[rttechnique] ^short = "Brachytherapy Technique"
-* extension[modalityAndTechnique].extension[rttechnique] ^definition = "The method by which the brachytherapy modality is applied."
+* extension[modalityAndTechnique].extension[modality].value[x] from BrachytherapyModalityVS (required)
+* extension[modalityAndTechnique].extension[modality] ^short = "Brachytherapy Modality"
+* extension[modalityAndTechnique].extension[modality] ^definition = "The modality for the Brachytherapy procedure."
+* extension[modalityAndTechnique].extension[technique].value[x] from BrachytherapyTechniqueVS (required)
+* extension[modalityAndTechnique].extension[technique] ^short = "Brachytherapy Technique"
+* extension[modalityAndTechnique].extension[technique] ^definition = "The method by which the brachytherapy modality is applied."
 //* usedCode from BrachytherapyDeviceVS (extensible)  // device-related, defer
 //* focalDevice.manipulated only Reference(BrachytherapyImplantableDevice)   // device-related, defer
 
@@ -106,20 +106,23 @@ Id:        mcode-radiotherapy-modality-and-technique
 Title:     "Radiotherapy Modality And Technique"
 Description: "Extension capturing modality and technique of a given radiotherapy procedure."
 * extension contains
-    RadiotherapyModality named rtmodality 1..1 MS and
-    RadiotherapyTechnique named rttechnique 0..* MS
-* extension[rtmodality].value[x] from RadiotherapyModalityVS (required)
-* extension[rttechnique].value[x] from RadiotherapyTechniqueVS (required)
-//* obeys TechniquesForBrachyRadioPharmaceuticalModality
+    RadiotherapyModality named modality 1..1 MS and
+    RadiotherapyTechnique named technique 0..* MS
+* extension[modality].value[x] from RadiotherapyModalityVS (required)
+* extension[technique].value[x] from RadiotherapyTechniqueVS (required)
+* obeys TechniquesForBrachyRadioPharmaceuticalModality
 //* obeys TechniquesForLDRBrachTempModality
 //* obeys TechniquesForInternalBrachPermModality
 //* obeys TechniquesForHDBrachModality
 //* obeys TechniquesForHDRBrachElectModality
 
-// Invariant: TechniquesForBrachyRadioPharmaceuticalModality
-// Description:  "Allowed Techniques for Radiopharmaceutical Modality"
-// Expression: "extension.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-modality').exists() and extension.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-technique').exists() and extension.where(url = ’http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-modality').valueCodeableConcept.exists(coding.system = ‘http://snomed.info/sct’ and coding.code = ‘440252007’) implies extension.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-technique').value in http://hl7.org/fhir/us/mcode/ValueSet/mcode-brachyradiopharmaceutical-technique-vs"
-// Severity: #error
+Invariant: TechniquesForBrachyRadioPharmaceuticalModality
+Description:  "Allowed Techniques for Radiopharmaceutical Modality"
+Expression: "extension.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-modality').exists() and
+             extension.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-technique').exists() and
+             extension.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-modality').valueCodeableConcept.exists(coding.system = 'http://snomed.info/sct' and coding.code = '440252007')
+                  implies extension.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-technique').value in 'http://hl7.org/fhir/us/mcode/ValueSet/mcode-brachyradiopharmaceutical-technique-vs'"
+Severity: #error
 
 Extension: RadiotherapyModality
 Id:        mcode-radiotherapy-modality

@@ -110,7 +110,6 @@ Description: "Extension capturing modality and technique of a given radiotherapy
     RadiotherapyTechnique named rttechnique 0..* MS
 * extension[rtmodality].value[x] from RadiotherapyModalityVS (required)
 * extension[rttechnique].value[x] from RadiotherapyTechniqueVS (required)
-* extension[rtmodality].value[x] from BrachytherapyModalityVS (required)
 * obeys TechniquesForBrachyRadioPharmaceuticalModality
 //* obeys TechniquesForLDRBrachTempModality
 //* obeys TechniquesForInternalBrachPermModality

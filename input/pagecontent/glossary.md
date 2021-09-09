@@ -2,6 +2,9 @@
 
 |  Concept  | Short | Additional Description|
 |-----|-------------------|--------------------|
+| *Radiation Therapy* | | General description mentioning Teleradiotherapy and Brachytherapy (including Radiopharmaceutical), Treatment Plan |
+| *TeleRadiotherapy* | | General description |
+| *Brachytherapy* | | General description |
 | *Treatment Plan* | A data object which contains one set of complete and detailed parameters that define how to deliver radiotherapy treatments. | The parameters of a Treatment Plan include the dose to be delivered to volumes, the number of Fractions into which the treatment is subdivided, Modality, Technique, as well as the detailed device parameters required by a treatment device. Examples of device parameters are dose rate, field size, or irradiation angles The *Treatment Plan* covers one set of these parameters. To vary any parameter between Radiotherapy treatments, different *Treatment Plans* must be created and scheduled during a Course of treatment to achieve the expected pattern. Some parameters from distinct *Treatment Plans* are summarized in Phases or over a full Course of treatment to provide an overview. |
 | *Modality*    |  The main type of radiation delivery such as photons, protons, or High Dose Rate brachytherapy.|  Modalities are not strictly differentiated along a single physical property, but in a way that makes sense in practical categorization. For teleradiotherapy (external beam radiotherapy) that is along the used particles, for brachytherapy, that is along the dose rate and placement. |
 | *Technique*    |  The treatment delivery method such as Volumetric Modulated Arc Therapy or Particle Spot Scanning. | The Technique defines how a certain Modality is applied. It therefore enables a more granular categorization of the treatment approach for a given Modality. |

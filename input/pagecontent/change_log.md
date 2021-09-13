@@ -30,7 +30,7 @@
 * [FHIR-33003](https://jira.hl7.org/browse/FHIR-33003)  Make extension values required
 
 #### Other
-* [FHIR-32340](https://jira.hl7.org/browse/FHIR-33340)  Laterality
+* [FHIR-32340](https://jira.hl7.org/browse/FHIR-33340)  Laterality broken out into separate extension
 
 ### mCODE STU 2 Ballot Version (May 2021)
 

@@ -216,8 +216,8 @@ Description: "Anatomic volume for John Anyperson's brachytherapy."
 * patient = Reference(cancer-patient-john-anyperson)
 * description = "Structure of lower lobe of left lung"
 * location = SCT#31094006  "Structure of lobe of lung (body structure)"
-* location.extension[locationQualifier][0].valueCodeableConcept = SCT#7771000 "Left (qualifier value)"
-* location.extension[locationQualifier][1].valueCodeableConcept = SCT#261122009 "Lower (qualifier value)"
+* location.extension[lateralityQualifier][0].valueCodeableConcept = SCT#7771000 "Left (qualifier value)"
+* location.extension[locationQualifier][0].valueCodeableConcept = SCT#261122009 "Lower (qualifier value)"
 Instance: binet-stage-group-A
 InstanceOf: CancerStageGroup
 Description: "Example of a non-TNM Stage Group (Binet staging for CLL)"

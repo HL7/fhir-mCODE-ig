@@ -5,12 +5,7 @@
 ValueSet:   SecondaryCancerDisorderVS
 Id: mcode-secondary-cancer-disorder-vs
 Title: "Secondary Cancer Disorder Value Set"
-Description:  "Types of secondary malignant neoplastic disease, coded in SNOMED CT or ICD-10-CM.
-
-* SNOMED CT coding: Use a code from the disorder hierarchy under secondary malignant neoplastic disease (SNOMED CT 128462008).
-* ICD-10-CM coding: Use one of the codes given in this value set representing secondary malignant neoplasms and neoplasms of uncertain or unspecified behavior. If body site is not precoordinated (implied by the code), it should be specified separately using the body location.
-
-Note that ICD-O-3 specifies morphology and topography, not disorder; in this case that the disorder code must be SNOMED CT 128462008 (Secondary malignant neoplastic disease). The ICD-O-3 morphology and topography codes should be entered in the HistologyMorphologyBehavior and bodySite fields, respectively."
+Description:  "Types of secondary malignant neoplastic disease, coded in SNOMED CT or ICD-10-CM."
 * insert SNOMEDCTCopyrightForVS
 * CC#SCC-OTHER "Other Secondary Cancer Condition, Specify"
 * include codes from system SCT where concept is-a #128462008  "Secondary malignant neoplastic disease (disorder)"
@@ -83,8 +78,8 @@ Note that ICD-O-3 specifies morphology and topography, not disorder; in this cas
 * ICD10CM#C7B.1 "Secondary merkel cell carcinoma"
 * ICD10CM#C7B.8 "Other secondary neuroendocrine tumors"
 
-ValueSet:  MelanomaInSituVS
-Id: mcode-melanoma-in-situ-vs
+ValueSet:  MelanomaInSituDisorderVS
+Id: mcode-melanoma-in-situ-disorder-vs
 Title: "Melanoma In-Situ"
 Description:    "Types of melanoma in-situ, coded in SNOMED CT or ICD-10-CM. "
 * insert SNOMEDCTCopyrightForVS
@@ -122,9 +117,9 @@ Description:    "Types of melanoma in-situ, coded in SNOMED CT or ICD-10-CM. "
 * ICD10CM#D03.8 "Melanoma in situ of other sites"
 * ICD10CM#D03.9 "Melanoma in situ, unspecified"
 
-ValueSet:  CytologicEvidenceCancerDisorderVS
-Id: mcode-cyto-evidence-maligancy-vs
-Title: "Cytologic Evidence Malignancy"
+ValueSet:  CytologicEvidenceOfMalignancyVS
+Id: mcode-cytologic-evidence-maligancy-vs
+Title: "Cytologic Evidence of Malignancy"
 Description:    "Types of cytological evience of malignancy, coded in SNOMED CT or ICD-10-CM. "
 * insert SNOMEDCTCopyrightForVS
 * SCT#126361000119107 "Cytological evidence of malignancy on anal Papanicolaou smear (finding)"
@@ -133,8 +128,8 @@ Description:    "Types of cytological evience of malignancy, coded in SNOMED CT 
 * ICD10CM#R87.624 "Cytologic evidence of malignancy on smear of vagina"
 
 ValueSet:  SpecificDiagnosisCancerDisorderVS
-Id: mcode-specific-evidence-maligancy-vs
-Title: "Specific Diagnosis Malignancy"
+Id: mcode-specific-diagnosis-cancer-disordervs
+Title: "Specific Diagnosis of Cancer"
 Description:    "Types of hypereosinophilic syndrome, coded in SNOMED CT or ICD-10-CM. "
 * insert SNOMEDCTCopyrightForVS
 * include codes from system SCT where concept is-a #393573009 "Hypereosinophilic syndrome (disorder)"
@@ -143,8 +138,8 @@ Description:    "Types of hypereosinophilic syndrome, coded in SNOMED CT or ICD-
 * ICD10CM#D72.118	"Other hypereosinophilic syndrome"
 * ICD10CM#D72.119	"Hypereosinophilic syndrome [HES], unspecified"
 
-ValueSet:  CarcinomaInSituVS
-Id: mcode-carcinoma-insitu-vs
+ValueSet:  CarcinomaInSituDisorderVS
+Id: mcode-carcinoma-insitu-disorder-vs
 Title: "Carcinoma In-Situ"
 Description:    "Types of carcinoma in-situ, coded in SNOMED CT or ICD-10-CM. "
 * insert SNOMEDCTCopyrightForVS
@@ -225,7 +220,7 @@ Description:    "Types of carcinoma in-situ, coded in SNOMED CT or ICD-10-CM. "
 * ICD10CM#D09.8 "Carcinoma in situ of other specified sites"
 * ICD10CM#D09.9 "Carcinoma in situ, unspecified"
 
-ValueSet:  BenignNeoplasmVS
+ValueSet:  BenignNeoplasmDisorderVS
 Id: mcode-benign-neoplasm-vs
 Title: "Benign Neoplasm"
 Description:    "Types of benign neoplasms, coded in SNOMED CT or ICD-10-CM. "
@@ -260,20 +255,14 @@ Description:    "Types of benign neoplasms, coded in SNOMED CT or ICD-10-CM. "
 ValueSet:  PrimaryOrUncertainBehaviorCancerDisorderVS
 Id: mcode-primary-or-uncertain-behavior-cancer-disorder-vs
 Title: "Primary or Uncertain Behavior Cancer Disorder Value Set"
-Description:    "Types of primary malignant neoplastic disease, coded in SNOMED CT or ICD-10-CM.
-
-For SNOMED CT coding, use a code from the disorder hierarchy under SNOMED CT 363346000 'Malignant neoplastic disease (disorder)' excluding codes descending from SNOMED CT 128462008 'Secondary malignant neoplastic disease (disorder)'. If body location is not precoordinated (i.e., implied by the code), the site of the primary tumor should be specified in the body site attribute.
-
-For ICD-10-CM coding, use one of the codes given in this value set representing primary malignant neoplasms and neoplasms of uncertain or unspecified behavior.
-
-Note that ICD-O-3 specifies morphology and topography, not disorder. If ICD-O-3 is used, the primary cancer disorder code must be specifically be SNOMED CT 363346000  'Malignant neoplastic disease (disorder)'. The ICD-O-3 morphology and topography codes should be entered in the HistologyMorphologyBehavior and body location fields, respectively."
+Description:    "Types of primary malignant neoplastic disease, coded in SNOMED CT or ICD-10-CM."
 * insert SNOMEDCTCopyrightForVS
 * include codes from valueset PrimaryCancerDisorderVS
 * include codes from valueset SpecificDiagnosisCancerDisorderVS
-* include codes from valueset CytologicEvidenceCancerDisorderVS
-* include codes from valueset CarcinomaInSituVS
-* include codes from valueset MelanomaInSituVS
-* include codes from valueset BenignNeoplasmVS
+* include codes from valueset CytologicEvidenceOfMalignancyVS
+* include codes from valueset CarcinomaInSituDisorderVS
+* include codes from valueset MelanomaInSituDisorderVS
+* include codes from valueset BenignNeoplasmDisorderVS
 
 
 ValueSet: CancerDisorderVS
@@ -305,9 +294,9 @@ Description: "Codes representing the structure, arrangement, and behavioral char
 * exclude codes from system SCT where concept is-a #703548001 "Endometrioid intraepithelial neoplasia (morphologic abnormality)"
 
 ValueSet:  PrimaryCancerDisorderVS
-Id: mcode-ECR-primary-cancer-disorder-vs
+Id: mcode-primary-cancer-disorder-vs
 Title: "Primary Cancer Disorder Value Set"
-Description:    "Primary Cancer Conditions."
+Description:    "Types of primary malignant neoplasms, coded in SNOMED CT or ICD-10-CM."
 * insert SNOMEDCTCopyrightForVS
 * CC#PCC-OTHER "Other Primary Cancer Condition, Specify"
 * include codes from system SCT where concept is-a #363346000 "Malignant neoplastic disease (disorder)"

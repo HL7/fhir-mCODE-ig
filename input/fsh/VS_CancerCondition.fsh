@@ -221,7 +221,7 @@ Description:    "Types of carcinoma in-situ, coded in SNOMED CT or ICD-10-CM. "
 * ICD10CM#D09.9 "Carcinoma in situ, unspecified"
 
 ValueSet:  BenignNeoplasmDisorderVS
-Id: mcode-benign-neoplasm-vs
+Id: mcode-benign-neoplasm-disorder-vs
 Title: "Benign Neoplasm"
 Description:    "Types of benign neoplasms, coded in SNOMED CT or ICD-10-CM. "
 * insert SNOMEDCTCopyrightForVS

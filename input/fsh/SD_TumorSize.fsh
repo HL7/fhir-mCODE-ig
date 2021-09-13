@@ -119,7 +119,8 @@ Description: "Represents a tumor after it has been removed from the body. Prior 
 * identifier contains tumorIdentifier 0..*
 * identifier[tumorIdentifier] only BodyStructureIdentifier
 * identifier[tumorIdentifier] ^short = "Identifier to associate this specimen with a specific Tumor"
-* identifier[tumorIdentifier] ^definition = "To associate this with a specific BodyStructure conforming to the Tumor profile, add an identifier with a value that matches a persistent identifier from `BodyStructure.identifier.value` that is unique in the context of the Patient."
+// FHIR-32352
+// * identifier[tumorIdentifier] ^definition = "To associate this with a specific BodyStructure conforming to the Tumor profile, add an identifier with a value that matches a persistent identifier from `BodyStructure.identifier.value` that is unique in the context of the Patient."
 * identifier and identifier[tumorIdentifier] and identifier[tumorIdentifier].type and identifier[tumorIdentifier].value MS
 
 

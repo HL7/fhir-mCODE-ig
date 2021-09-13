@@ -1,4 +1,4 @@
-The **Treatment** group includes reporting of procedures and medications used to treat a cancer patient, or relevant to that treatment. Treatments fall into three classes: medications, surgery, and radiotherapy. 
+The **Treatment** group includes reporting of procedures and medications used to treat a cancer patient, or relevant to that treatment. Treatments fall into three classes: medications, surgery, and radiotherapy.
 
 ### Medications
 
@@ -31,7 +31,7 @@ A radiation oncology work group convened under [CodeX FHIR Accelerator](https://
 
 * **General**
   * [TreatmentTerminationReason]
-  * [TreatmentIntent]
+  * [ProcedureIntent]
 * **Radiotherapy**
   * [RadiotherapyDoseDeliveredToVolume]
   * [RadiotherapyFractionsDelivered]
@@ -42,8 +42,8 @@ A radiation oncology work group convened under [CodeX FHIR Accelerator](https://
 ### Value Sets
 
 * **General**
+  * [ProcedureIntentVS]
   * [TreatmentTerminationReasonVS]
-  * [TreatmentIntentVS]
 * **Surgery**
   * [CancerRelatedSurgicalProcedureVS]
 * **Radiotherapy**

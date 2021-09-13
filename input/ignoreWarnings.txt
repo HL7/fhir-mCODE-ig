@@ -439,7 +439,7 @@ INFORMATION: StructureDefinition/mcode-teleradiotherapy-treatment-phase: Structu
 INFORMATION: StructureDefinition/mcode-tnm-distant-metastases-category: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
 INFORMATION: StructureDefinition/mcode-tnm-primary-tumor-category: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
 INFORMATION: StructureDefinition/mcode-tnm-regional-nodes-category: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
-INFORMATION: StructureDefinition/mcode-treatment-intent: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
+INFORMATION: StructureDefinition/mcode-procedure-intent: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
 INFORMATION: StructureDefinition/mcode-treatment-termination-reason: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
 INFORMATION: StructureDefinition/mcode-tumor: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
 INFORMATION: StructureDefinition/mcode-tumor-marker-test: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
@@ -516,7 +516,7 @@ INFORMATION: ValueSet/mcode-teleradiotherapy-technique-vs: ValueSet: Validate re
 INFORMATION: ValueSet/mcode-tnm-distant-metastases-category-vs: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
 INFORMATION: ValueSet/mcode-tnm-primary-tumor-category-vs: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
 INFORMATION: ValueSet/mcode-tnm-regional-nodes-category-vs: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
-INFORMATION: ValueSet/mcode-treatment-intent-vs: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
+INFORMATION: ValueSet/mcode-procedure-intent-vs: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
 INFORMATION: ValueSet/mcode-treatment-termination-reason-vs: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
 INFORMATION: ValueSet/mcode-tumor-marker-test-vs: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
 INFORMATION: ValueSet/mcode-tumor-size-method-vs: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet

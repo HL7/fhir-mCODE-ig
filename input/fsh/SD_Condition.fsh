@@ -1,15 +1,17 @@
 Alias: AssertedDate = http://hl7.org/fhir/StructureDefinition/condition-assertedDate
 
+
 RuleSet: CancerConditionCommonRules
 * extension contains
     AssertedDate named assertedDate 0..1 MS and
     HistologyMorphologyBehavior named histologyMorphologyBehavior 0..1 MS
 * bodySite.extension contains
-    BodyLocationQualifier named locationQualifier 0..*
+     BodyLocationQualifier named locationQualifier 0..*   and
+     LateralityQualifier named lateralityQualifier 0..1   
 // removed the non-US Core category and allow clinicians to choose MK 11-19-2020
 //* category = SCT#64572001 //"Disease"
 * bodySite from CancerBodyLocationVS (extensible)
-* extension and bodySite and bodySite.extension[locationQualifier] MS
+* extension and bodySite and bodySite.extension[locationQualifier] and bodySite.extension[lateralityQualifier] MS
 
 Profile: PrimaryCancerCondition
 Id: mcode-primary-cancer-condition
@@ -20,7 +22,6 @@ Description: "Records the the primary cancer condition, the original or first tu
 // * insert ReduceText2(bodySite)
 // * insert ReduceText(stage)
 // * insert ReduceText(evidence)
-* . MS
 * insert CancerConditionCommonRules
 * code from PrimaryOrUncertainBehaviorCancerDisorderVS (required)
 * code obeys primary-cancer-condition-code-invariant

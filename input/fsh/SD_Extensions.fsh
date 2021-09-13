@@ -41,21 +41,34 @@ Description: "An extension describing the morphologic and behavioral characteris
 Extension: BodyLocationQualifier
 Id: mcode-body-location-qualifier
 Title: "Body Location Qualifier"
-Description: "Qualifier to refine an body location. These include qualifiers for laterality, relative location, directionality, number, and plane."
-* insert ExtensionContext(Specimen.collection.bodySite)
-* insert ExtensionContext(Procedure.bodySite)
-* insert ExtensionContext(Condition.bodySite)
-* insert ExtensionContext(Observation.bodySite)
+Description: "Qualifier to refine an body location. These include qualifiers for relative location, directionality, number, and plane, and exclude qualifiers for laterality."
+// FHIR-xxxx    
+// * insert ExtensionContext(Specimen.collection.bodySite)
+// * insert ExtensionContext(Procedure.bodySite)
+// * insert ExtensionContext(Condition.bodySite)
+// * insert ExtensionContext(Observation.bodySite)
 * value[x] only CodeableConcept
-* value[x] from BodyLocationQualifierVS (required)
+* value[x] from BodyLocationQualifierVS (required) 
+* value[x] 1..1
+
+Extension: LateralityQualifier
+Id: mcode-laterality-qualifier
+Title: "Laterality Qualifier"
+Description: "Qualifier to specify laterality laterality."
+// * insert ExtensionContext(Specimen.collection.bodySite)
+// * insert ExtensionContext(Procedure.bodySite)
+// * insert ExtensionContext(Condition.bodySite)
+// * insert ExtensionContext(Observation.bodySite)
+* value[x] only CodeableConcept
+* value[x] from LateralityQualifierVS (required)
 * value[x] 1..1
 
 Extension: TreatmentTerminationReason
 Id: mcode-treatment-termination-reason
 Title: "Termination Reason"
 Description: "A code explaining the unplanned or premature termination, or normal completion, of a plan of treatment, course of medication, or research study. "
-//* insert ExtensionContext(MedicationRequest)
-//* insert ExtensionContext(Procedure)
+//* insert ExtensionContext(MedicationRequest) - removed as per FHIR-32243
+//* insert ExtensionContext(Procedure)         - removed as per FHIR-32243
 * value[x] only CodeableConcept
 * value[x] from TreatmentTerminationReasonVS (required)
 * value[x] 1..1
@@ -64,8 +77,8 @@ Extension: ProcedureIntent
 Id: mcode-procedure-intent
 Title: "Procedure Intent"
 Description: "The purpose of a procedure."
-//* insert ExtensionContext(MedicationRequest)
-//* insert ExtensionContext(Procedure)
+//* insert ExtensionContext(MedicationRequest) - removed as per FHIR-32243
+//* insert ExtensionContext(Procedure)         - removed as per FHIR-32243
 * value[x] only CodeableConcept
 * value[x] from ProcedureIntentVS (required)
 * value[x] 1..1

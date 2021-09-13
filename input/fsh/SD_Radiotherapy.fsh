@@ -174,9 +174,13 @@ Description: "A volume of the body used in radiotherapy planning or treatment de
 * morphology ^comment = "The type of radiotherapy volume this resource represents. Although the name of the element is 'morphology', this element is defined in the base resource as 'The kind of structure being represented by the body structure'. The name is somewhat of a misnomer, and might be better interpreted simply as 'type' or 'kind'."
 * location from RadiotherapyTreatmentLocationVS (required)
 * location ^short = "Body Location Code."
-* location ^definition = "A code specifying the body structure or region comprising the irradiated volume. The codes do not include laterality, which if applicable MUST be specified in the locationQualifier."
-* locationQualifier from RadiotherapyTreatmentLocationQualifierVS (extensible)
-* identifier and location and locationQualifier and description and patient and morphology MS
+* location ^definition = "A code and qualifiers (via extensions) specifying the TG263 body structure comprising the irradiated volume."
+* location.extension contains
+     BodyLocationQualifier named locationQualifier 0..*   and
+     LateralityQualifier named lateralityQualifier 0..1   
+* locationQualifier 0..0   
+* location.extension[locationQualifier].value[x] from RadiotherapyTreatmentLocationQualifierVS (required)
+* identifier and location and description and patient and morphology and location.extension[locationQualifier] and location.extension[lateralityQualifier] MS
 * patient only Reference(CancerPatient)
 
 Invariant:  mcode-description-or-id-required

@@ -5,9 +5,9 @@ Id: mcode-teleradiotherapy-modality-vs
 Title: "Teleradiotherapy Modality Value Set"
 Description: "Codes describing the modalities of teleradiotherapy (external beam) procedures."
 * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
-* SCT#10611004 "Teleradiotherapy protons (procedure)"
-* SCT#45643008 "Teleradiotherapy using electrons (procedure)"
-* SCT#80347004 "Teleradiotherapy neutrons (procedure)"
+* SCT#10611004 "External beam radiation therapy protons (procedure)"
+* SCT#45643008 "External beam radiation therapy using electrons (procedure)"
+* SCT#80347004 "External beam radiation therapy neutrons (procedure)"
 * SCT#1156505006 "External beam radiation therapy using carbon ions (procedure)"
 * SCT#1156506007 "External beam radiation therapy using photons (procedure)"
 
@@ -29,11 +29,11 @@ Id: mcode-radiotherapy-modality-vs
 Title: "Radiotherapy Modality Value Set"
 Description: "Codes describing the modalities of external beam and brachytherapy radiation procedures, for use with radiotherapy summaries.  This value set is the union of the teleradiotherapy and brachytherapy modality value sets."
 * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
-* include codes from valueset TeleradiotherapyModalityVS 
+* include codes from valueset TeleradiotherapyModalityVS
 * include codes from valueset BrachytherapyModalityVS
 
 //----------- TECHNIQUES -----------------------
-// 
+//
 ValueSet: TeleradiotherapyTechniqueVS
 Id: mcode-teleradiotherapy-technique-vs
 Title: "Teleradiotherapy Technique Value Set"
@@ -70,7 +70,7 @@ Title: "Radiotherapy Technique Value Set"
 Description: "Codes describing the techniques of external beam and brachytherapy radiation procedures, for use with radiotherapy summaries. This is the union of the EBRT and brachytherapy technique value sets."
 * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
 // Union of EBRT and brachytherapy value sets
-* include codes from valueset TeleradiotherapyTechniqueVS 
+* include codes from valueset TeleradiotherapyTechniqueVS
 * include codes from valueset BrachytherapyTechniqueVS
 
 ValueSet: RadiotherapyVolumeTypeVS
@@ -90,7 +90,7 @@ Title: "Radiotherapy Treatment Location Qualifier Value Set"
 Description: "Various modifiers that can be applied to body locations where radiotherapy treatments can be directed."
 * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
 * include codes from system SCT where concept is-a #254292007 "Lymph node level value (qualifier value)"
-// SCT codes requested or existing 
+// SCT codes requested or existing
 // * SCT#258400004 "Lymph node level I (qualifier value)"
 // * SCT#1162616006 "Lymph node level Ia (qualifier value)"
 // * SCT#1162617002 "Lymph node level Ib (qualifier value)"
@@ -133,7 +133,7 @@ Description: "Various modifiers that can be applied to body locations where radi
 * SCT#26216008  "Central (qualifier value)"
 * SCT#18769003   "Adjacent" // "Juxta-posed (qualifier value)"
 * UMLS#C0687118  "Detached"  // standing in for non-adjacent  (USCRS-33144)
-* include codes from system SCT where concept is-a #258399006  "Lymph node level value (qualifier value)"    
+* include codes from system SCT where concept is-a #258399006  "Lymph node level value (qualifier value)"
 
 // ValueSet: LymphNodeLocationQualifierVS
 // Id: mcode-lymph-node-location-qualifier-vs
@@ -386,7 +386,7 @@ Description: "Codes describing the body locations where radiotherapy treatments 
 * UMLS#C0223388 "Structure of body of thirteenth thoracic vertebra (body structure)"
 //* SCT#Requested (352072) "Structure of body of thirteenth thoracic vertebra (body structure)"
 * UMLS#C0222987 "Bone structure of thirteenth rib (body structure)"
-//  These have movied to qualifiers, 
+//  These have movied to qualifiers,
 // * RT#LN_AX_L1  "Level 1 Axillary Lymph Nodes"
 // * RT#LN_Ax_L2  "Level 2 Axillary Lymph Nodes"
 // * RT#LN_Ax_L3  "Level 3 Axillary Lymph Nodes"
@@ -499,11 +499,11 @@ Description: "Codes describing the devices used in brachytherapy (internal or su
 * RT#CYL
 * RT#OVOID
 * RT#RING
-* RT#SEED 
+* RT#SEED
 * RT#EYE
 * RT#HYBRID
-* RT#TARG 
-* RT#NONTARG 
+* RT#TARG
+* RT#NONTARG
 
 //-- Teleradiotherapy Devices
 * #LINAC "Linac" "Gantry based delivery with linear accelerator based source"
@@ -520,7 +520,7 @@ Description: "Codes describing the devices used in brachytherapy (internal or su
 * #OVOID "Ovoids" "Ovoid Brachytherapy Device"
 * #RING  "Ring" "Ring Brachytherapy Device"
 * #SEED  "Seeds" "Seeds Brachytherapy Device"
-* #EYE  "Eye-plaque" "Eye-plaque Brachytherapy Device"  
+* #EYE  "Eye-plaque" "Eye-plaque Brachytherapy Device"
 * #HYBRID   "Hybrid"  "Hybrid Brachytherapy Device"
 * #TARG  "Targeted" "Targeted Brachytherapy Device"
 * #NONTARG  "NonTargeted" "NonTargeted Brachytherapy Device"

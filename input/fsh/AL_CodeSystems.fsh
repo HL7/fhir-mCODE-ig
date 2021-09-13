@@ -10,14 +10,14 @@ Alias:   ICD10CM = http://hl7.org/fhir/sid/icd-10-cm
 Alias:   ICD10PCS = http://www.cms.gov/Medicare/Coding/ICD10
 Alias:   RXN = http://www.nlm.nih.gov/research/umls/rxnorm
 Alias:   CPT = http://www.ama-assn.org/go/cpt
-Alias:   HGNC = http://www.genenames.org   
+Alias:   HGNC = http://www.genenames.org
 Alias:   HGVS = http://varnomen.hgvs.org
 
 // Code systems lacking a recognized canonical at terminology.hl7.org
 Alias:   AJCC = http://cancerstaging.org
 Alias:   GTR = http://www.ncbi.nlm.nih.gov/gtr
 Alias:   CLINVAR = http://www.ncbi.nlm.nih.gov/clinvar
-Alias:   SO = http://www.sequenceontology.org/ 
+Alias:   SO = http://www.sequenceontology.org/
 
 
 // From terminology.hl7.org
@@ -36,12 +36,7 @@ Alias:   ObsStatus = http://hl7.org/fhir/observation-status
 Alias:   ObsInt = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation
 Alias:   DiagnosticService = http://terminology.hl7.org/CodeSystem/v2-0074
 Alias:   TimingAbbreviation = http://terminology.hl7.org/CodeSystem/v3-GTSAbbreviation
-Alias:   MedReqStatus = http://hl7.org/fhir/CodeSystem/medicationrequest-status 
+Alias:   MedReqStatus = http://hl7.org/fhir/CodeSystem/medicationrequest-status
 Alias:   MedReqIntent = http://hl7.org/fhir/CodeSystem/medicationrequest-intent
 Alias:   MedReqCat = 	http://terminology.hl7.org/CodeSystem/medicationrequest-category
 Alias:   RefMeaning = http://terminology.hl7.org/CodeSystem/referencerange-meaning
-
-// Other coding systems
-CodeSystem: TbdCodes
-Title: "ToBeDeterminedCodes ('TbdCodes')"
-Description: "These codes are currently 'TBD-LOINC' codes. The CG WG is requesting formal LOINC codes."

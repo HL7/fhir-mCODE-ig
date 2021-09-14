@@ -220,10 +220,10 @@ Description:    "Types of carcinoma in-situ, coded in SNOMED CT or ICD-10-CM. "
 * ICD10CM#D09.8 "Carcinoma in situ of other specified sites"
 * ICD10CM#D09.9 "Carcinoma in situ, unspecified"
 
-ValueSet:  BenignNeoplasmDisorderVS
-Id: mcode-benign-neoplasm-disorder-vs
+ValueSet:  BenignUncertainNeoplasmBrainCNSDisorderVS
+Id: mcode-benign-uncertain-neoplasm-brain-cns-disorder-vs
 Title: "Benign Neoplasm"
-Description:    "Types of benign neoplasms, coded in SNOMED CT or ICD-10-CM. "
+Description:    "Types of benign neoplasms of the brain and central nervous system, coded in SNOMED CT or ICD-10-CM. "
 * insert SNOMEDCTCopyrightForVS
 * include codes from system SCT where concept is-a #93468003 "Hemangioma of intracranial structure (disorder)"
 * include codes from system SCT where concept is-a #109913001 "Benign neoplasm of meninges (disorder)"
@@ -247,7 +247,19 @@ Description:    "Types of benign neoplasms, coded in SNOMED CT or ICD-10-CM. "
 * ICD10CM#D35.2 "Benign neoplasm of pituitary gland"
 * ICD10CM#D35.3 "Benign neoplasm of craniopharyngeal duct"
 * ICD10CM#D35.4 "Benign neoplasm of pineal gland"
-
+* ICD10CM#D42.0 "Neoplasm of uncertain behavior of cerebral meninges"
+* ICD10CM#D42.1 "Neoplasm of uncertain behavior of spinal meninges"
+* ICD10CM#D42.9 "Neoplasm of uncertain behavior of meninges, unspecified"
+* ICD10CM#D43.0 "Neoplasm of uncertain behavior of brain, supratentorial"
+* ICD10CM#D43.1 "Neoplasm of uncertain behavior of brain, infratentorial"
+* ICD10CM#D43.2 "Neoplasm of uncertain behavior of brain, unspecified"
+* ICD10CM#D43.3 "Neoplasm of uncertain behavior of cranial nerves"
+* ICD10CM#D43.4 "Neoplasm of uncertain behavior of spinal cord"
+* ICD10CM#D43.8 "Neoplasm of uncertain behavior of other specified parts of central nervous system"
+* ICD10CM#D43.9 "Neoplasm of uncertain behavior of central nervous system, unspecified"
+* ICD10CM#D44.3 "Neoplasm of uncertain behavior of pituitary gland"
+* ICD10CM#D44.4 "Neoplasm of uncertain behavior of craniopharyngeal duct"
+* ICD10CM#D44.5 "Neoplasm of uncertain behavior of pineal gland"
 
 
 // This VS is big, so I put it last in the file (order doesn't matter to FSH)
@@ -259,10 +271,11 @@ Description:    "Types of primary malignant neoplastic disease, coded in SNOMED 
 * insert SNOMEDCTCopyrightForVS
 * include codes from valueset PrimaryCancerDisorderVS
 * include codes from valueset SpecificDiagnosisCancerDisorderVS
-* include codes from valueset CytologicEvidenceOfMalignancyVS
 * include codes from valueset CarcinomaInSituDisorderVS
 * include codes from valueset MelanomaInSituDisorderVS
-* include codes from valueset BenignNeoplasmDisorderVS
+* include codes from valueset BenignUncertainNeoplasmBrainCNSDisorderVS
+* include codes from valueset CytologicEvidenceOfMalignancyVS
+* CC#PCC-OTHER "Other Primary Cancer Condition, Specify"
 
 
 ValueSet: CancerDisorderVS
@@ -270,11 +283,10 @@ Id: mcode-cancer-disorder-vs
 Title: "Cancer Disorder Value Set"
 Description:   "A broad cancer-related value set containing both primary and secondary tumor types, with codes from ICD-10 and SNOMED CT, including both diagnosis and histology/morphology/behavior codes. ICD-O-3 morphology codes may also be used and are considered conformant to the specification. For SNOMED, the value set includes all codes descending from 363346000 'Malignant neoplastic disease (disorder)' and 108369006 'Neoplasm (morphologic abnormality)'."
 * insert SNOMEDCTCopyrightForVS
-* CC#CD-OTHER "Other Cancer Disorder, Specify"
 * include codes from valueset PrimaryOrUncertainBehaviorCancerDisorderVS
 * include codes from valueset SecondaryCancerDisorderVS
 * include codes from valueset HistologyMorphologyBehaviorVS
-
+* CC#CD-OTHER "Other Cancer Disorder, Specify"
 
 
 ValueSet:   HistologyMorphologyBehaviorVS
@@ -298,7 +310,6 @@ Id: mcode-primary-cancer-disorder-vs
 Title: "Primary Cancer Disorder Value Set"
 Description:    "Types of primary malignant neoplasms, coded in SNOMED CT or ICD-10-CM."
 * insert SNOMEDCTCopyrightForVS
-* CC#PCC-OTHER "Other Primary Cancer Condition, Specify"
 * include codes from system SCT where concept is-a #363346000 "Malignant neoplastic disease (disorder)"
 * exclude codes from system SCT where concept is-a #128462008  "Secondary malignant neoplastic disease (disorder)"
 * ICD10CM#C00.0 "Malignant neoplasm of external upper lip"
@@ -1327,19 +1338,6 @@ Description:    "Types of primary malignant neoplasms, coded in SNOMED CT or ICD
 * ICD10CM#C96.9 "Malignant neoplasm of lymphoid, hematopoietic and related tissue, unspecified"
 * ICD10CM#C96.A "Histiocytic sarcoma"
 * ICD10CM#C96.Z "Other specified malignant neoplasms of lymphoid, hematopoietic and related tissue"
-* ICD10CM#D42.0 "Neoplasm of uncertain behavior of cerebral meninges"
-* ICD10CM#D42.1 "Neoplasm of uncertain behavior of spinal meninges"
-* ICD10CM#D42.9 "Neoplasm of uncertain behavior of meninges, unspecified"
-* ICD10CM#D43.0 "Neoplasm of uncertain behavior of brain, supratentorial"
-* ICD10CM#D43.1 "Neoplasm of uncertain behavior of brain, infratentorial"
-* ICD10CM#D43.2 "Neoplasm of uncertain behavior of brain, unspecified"
-* ICD10CM#D43.3 "Neoplasm of uncertain behavior of cranial nerves"
-* ICD10CM#D43.4 "Neoplasm of uncertain behavior of spinal cord"
-* ICD10CM#D43.8 "Neoplasm of uncertain behavior of other specified parts of central nervous system"
-* ICD10CM#D43.9 "Neoplasm of uncertain behavior of central nervous system, unspecified"
-* ICD10CM#D44.3 "Neoplasm of uncertain behavior of pituitary gland"
-* ICD10CM#D44.4 "Neoplasm of uncertain behavior of craniopharyngeal duct"
-* ICD10CM#D44.5 "Neoplasm of uncertain behavior of pineal gland"
 * ICD10CM#D45 "POLYCYTHEMIA VERA"
 * ICD10CM#D46.0 "Refractory anemia without ring sideroblasts, so stated"
 * ICD10CM#D46.1 "Refractory anemia with ring sideroblasts"

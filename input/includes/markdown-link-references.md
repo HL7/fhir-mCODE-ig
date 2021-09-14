@@ -51,7 +51,7 @@
 [TumorSpecimen]: StructureDefinition-mcode-tumor-specimen.html
 
 <!-- mCODE Value Sets -->
-[BenignNeoplasmDisorderVS]: ValueSet-mcode-benign-neoplasm-disorder-vs.html
+[BenignUncertainNeoplasmBrainCNSDisorderVS]: ValueSet-benign-uncertain-neoplasm-brain-cns-disorder-vs.html
 [BrachytherapyModalityVS]: ValueSet-mcode-brachytherapy-modality-vs.html
 [BrachytherapyTechniqueVS]: ValueSet-mcode-brachytherapy-technique-vs.html
 [CancerBodyLocationVS]: ValueSet-mcode-cancer-body-location-vs.html

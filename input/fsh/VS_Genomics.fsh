@@ -56,14 +56,14 @@ Description:    "Codes representing tests for tumor markers. This value set of L
 * include codes from system LNC where ancestor = #LP15097-6
 * include codes from system LNC where ancestor = #LP15097-6
 * include codes from system LNC where ancestor = #LP15461-4
-* include codes from system LNC where ancestor = #LP15463-0"
+* include codes from system LNC where ancestor = #LP15463-0
 * include codes from system LNC where ancestor = #LP15464-8
 * include codes from system LNC where ancestor = #LP15465-5
 * include codes from system LNC where ancestor = #LP15466-3
 * include codes from system LNC where ancestor = #LP15467-1
 * include codes from system LNC where ancestor = #LP15681-7
 * include codes from system LNC where ancestor = #LP157499-7
-* include codes from system LNC where ancestor = #LP15990-2"
+* include codes from system LNC where ancestor = #LP15990-2
 * include codes from system LNC where ancestor = #LP16890-3
 * include codes from system LNC where ancestor = #LP17730-0
 * include codes from system LNC where ancestor = #LP17751-6

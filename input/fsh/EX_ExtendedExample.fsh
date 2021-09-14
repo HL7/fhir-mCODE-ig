@@ -619,6 +619,7 @@ Description: "Example of radiotherapy treatment summary involving external beam 
 * subject = Reference(cancer-patient-jenny-m)
 * asserter = Reference(us-core-practitioner-kyle-anydoc)
 
+// Modified to use neutron modality and NCT technique...should be shifted back to original values
 Instance: teleradiotherapy-treatment-phase-chest-wall-jenny-m
 InstanceOf: TeleradiotherapyTreatmentPhase
 Description: "Example of teleradiotherapy treatment phase involving external beam radiation to chest wall and regional node radiation"
@@ -628,8 +629,28 @@ Description: "Example of teleradiotherapy treatment phase involving external bea
 * partOf = Reference(radiotherapy-treatment-summary-chest-wall-jenny-m)
 * performedPeriod.start = "2018-05-01"
 * performedPeriod.end = "2018-06-29"
-* extension[modalityAndTechnique].extension[modality].valueCodeableConcept = SCT#80347004	//  "External beam radiation therapy using photons (procedure)"
-* extension[modalityAndTechnique].extension[technique].valueCodeableConcept = SCT#169317000 //"Neutron Capture Therapy (procedure)"
+* extension[modalityAndTechnique].extension[modality].valueCodeableConcept = SCT#80347004	"External beam radiation therapy using neutrons (procedure)"
+* extension[modalityAndTechnique].extension[technique].valueCodeableConcept = SCT#168524008 "Radiotherapy - intraoperative control (procedure)" // invalid technique
+* extension[fractionsDelivered].valueUnsignedInt = 25
+* extension[doseDeliveredToVolume][0].extension[volume].valueReference = Reference(jenny-m-chest-wall-treatment-volume)
+* extension[doseDeliveredToVolume][0].extension[totalDoseDelivered].valueQuantity = 5000 'cGy'
+* extension[doseDeliveredToVolume][1].extension[volume].valueReference = Reference(jenny-m-chest-wall-lymph-nodes-treatment-volume)
+* extension[doseDeliveredToVolume][1].extension[totalDoseDelivered].valueQuantity = 5000 'cGy'
+* subject = Reference(cancer-patient-jenny-m)
+* asserter = Reference(us-core-practitioner-kyle-anydoc)
+
+// Modified to use neutron modality and NCT technique...should be shifted back to original values
+Instance: teleradiotherapy-treatment-phase-chest-wall-jenny-m-invalid
+InstanceOf: TeleradiotherapyTreatmentPhase
+Description: "Example of teleradiotherapy treatment phase involving external beam radiation to chest wall and regional node radiation"
+* status = #completed "completed"
+* code = RID#mcode-teleradiotherapy-treatment-phase
+* category = SCT#108290001 "Radiation oncology AND/OR radiotherapy (procedure)"
+* partOf = Reference(radiotherapy-treatment-summary-chest-wall-jenny-m)
+* performedPeriod.start = "2018-05-01"
+* performedPeriod.end = "2018-06-29"
+* extension[modalityAndTechnique].extension[modality].valueCodeableConcept = SCT#80347004	"External beam radiation therapy using neutrons (procedure)"
+* extension[modalityAndTechnique].extension[technique].valueCodeableConcept = SCT#169317000 "Neutron Capture Therapy (procedure)"
 * extension[fractionsDelivered].valueUnsignedInt = 25
 * extension[doseDeliveredToVolume][0].extension[volume].valueReference = Reference(jenny-m-chest-wall-treatment-volume)
 * extension[doseDeliveredToVolume][0].extension[totalDoseDelivered].valueQuantity = 5000 'cGy'

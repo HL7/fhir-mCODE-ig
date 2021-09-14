@@ -229,10 +229,12 @@ Description:    "Types of benign neoplasms of the brain and central nervous syst
 * include codes from system SCT where concept is-a #109913001 "Benign neoplasm of meninges (disorder)"
 * include codes from system SCT where concept is-a #92030004 "Benign neoplasm of brain (disorder)"
 * include codes from system SCT where concept is-a #92048008 "Benign neoplasm of central nervous system (disorder)"
-* include codes from system SCT where concept is-a #92296004 "Benign neoplasm of pituitary gland (disorder)"
+* include codes from system SCT where concept is-a #92296004 "Benign neoplasm of pituitary gland (disorder)" // includes craniopharyngeal duct
 * include codes from system SCT where concept is-a #92294001 "Benign neoplasm of pineal gland (disorder)"
 * include codes from system SCT where concept is-a #94963005 "Neoplasm of uncertain behavior of nervous system (disorder)"
 * include codes from system SCT where concept is-a #94767002 "Neoplasm of uncertain behavior of brain (disorder)"
+* include codes from system SCT where concept is-a #95002008 "Neoplasm of uncertain behavior of pineal gland (disorder)"
+* include codes from system SCT where concept is-a #95004009 "Neoplasm of uncertain behavior of pituitary gland (disorder)" // includes craniopharyngeal duct
 * ICD10CM#D18.02 "Hemangioma of intracranial structures"
 * ICD10CM#D32 "BENIGN NEOPLASM OF MENINGES"
 * ICD10CM#D32.0 "Benign neoplasm of cerebral meninges"

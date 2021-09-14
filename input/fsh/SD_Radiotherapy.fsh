@@ -110,7 +110,7 @@ Description: "Extension capturing modality and technique of a given radiotherapy
     RadiotherapyTechnique named technique 0..* MS
 * extension[modality].value[x] from RadiotherapyModalityVS (required)
 * extension[technique].value[x] from RadiotherapyTechniqueVS (required)
-* obeys TechniquesForProtonBeamModality
+* obeys TechniquesForNeutronBeamModality
 // * obeys TechniquesForBrachyRadioPharmaceuticalModality
 //* obeys TechniquesForLDRBrachTempModality
 //* obeys TechniquesForInternalBrachPermModality
@@ -124,12 +124,12 @@ Description: "Extension capturing modality and technique of a given radiotherapy
 //              extension.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-modality').valueCodeableConcept.exists(coding.system = 'http://snomed.info/sct' and coding.code = '440252007')
 //                   implies extension.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-technique').value in 'http://hl7.org/fhir/us/mcode/ValueSet/mcode-brachyradiopharmaceutical-technique-vs'"
 // Severity: #error
-Invariant: TechniquesForProtonBeamModality
+Invariant: TechniquesForNeutronBeamModality
 Description:  "Allowed Techniques for Proton Beam Modality"
 Expression: "extension.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-modality').exists() and
              extension.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-technique').exists() and
              extension.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-modality').value.exists(coding.system = 'http://snomed.info/sct' and coding.code = '80347004')
-                  implies extension.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-technique').value.memberOf('http://hl7.org/fhir/us/mcode/ValueSet/mcode-proton-beam-technique-vs')"
+                  implies extension.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-technique').value.memberOf('http://hl7.org/fhir/us/mcode/ValueSet/mcode-neutron-beam-technique-vs')"
 Severity: #error
 
 Extension: RadiotherapyModality

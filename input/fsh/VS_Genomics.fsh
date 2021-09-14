@@ -139,3 +139,6 @@ Description:    "The type of specimen analyzed in a genetic test. The values are
 * SPTY#TUMOR     "Tumor"
 * SPTY#VITF      "Vitreous Fluid"
 * SPTY#WND       "Wound"
+* SPTY#UR        "Urine"           // FHIR-32827
+* SPTY#STL       "Stool = Fecal"   // FHIR-32827
+* SPTY#OTH       "Source, Other"   // FHIR-32827

@@ -167,9 +167,8 @@ Description: "Various modifiers that can be applied to body locations where radi
 ValueSet: RadiotherapyTreatmentLocationVS
 Id: mcode-radiotherapy-treatment-location-vs
 Title: "Radiotherapy Treatment Location Value Set"
-Description: "Codes describing the body locations where radiotherapy treatments can be directed.   Based on TG263.  See mapping table here. "
+Description: "Codes describing the body locations where radiotherapy treatments can be directed. Based on TG263."
 * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
-// The comment on each row is the TG263 name
 * SCT#15825003 "Aortic structure (body structure)" // Aorta
 * SCT#54247002 "Ascending aorta structure (body Structure)" // Ascending Aorta
 * SCT#425444002 "Branch of brachiocephalic artery (body structure)" // Brachiocephalic Artery
@@ -179,13 +178,14 @@ Description: "Codes describing the body locations where radiotherapy treatments 
 * SCT#13792001 "Structure of medial circumflex femoral artery (body structure)" // Circumflex Left Femoral Artery
 * SCT#7657000 "Structure of femoral artery (body structure)" // Femoral Artery Left
 * SCT#244314003 "Circumflex humeral artery (body structure)" // Circumflex Humeral Artery Left
-* SCT#75718002 "Structure of hypophyseal artery (body structure)" // Hypophyseal Artery Inferior
+* SCT#74200005 "Structure of inferior hypophyseal artery (body structure)" // Hypophyseal Artery Inferior
+* SCT#55601007 "Structure of superior hypophyseal artery (body structure) |" // Hypophyseal Artery Superior
 * SCT#244327004 "Circumflex iliac artery (body structure)" // Circumflex Left Iliac Artery
 * SCT#113269004 "Structure of external iliac artery (body structure)" // External iliac artery Left
 * SCT#90024005 "Structure of internal iliac artery (body structure)" // Internal iliac artery Left
 * SCT#73634005 "Common iliac artery structure (body structure)" // Common iliac artery Left
-* SCT#59438005 "Structure of anterior descending branch of left coronary artery (body structure)" // Anterior interventricular branch of LCA (left anterior descending artery)
-* SCT#86570000 "Structure of mesenteric artery (body structure)" // Inferior mesenteric artery
+* SCT#33795007 "Structure of anterior descending branch of left coronary artery (body structure)" // Anterior interventricular branch of LCA (left anterior descending artery)
+* SCT#42258001 "Superior mesenteric artery structure (body structure) " // Superior mesenteric artery
 * SCT#81040000 "Pulmonary artery structure (body structure)" // Pulmonary Artery
 * SCT#36765005 "Structure of subclavian artery (body structure)" // Subclavian Artery
 * SCT#85234005 "Structure of vertebral artery (body structure)" // Vertebral arteries
@@ -201,6 +201,7 @@ Description: "Codes describing the body locations where radiotherapy treatments 
 * SCT#89837001 "Urinary bladder structure (body structure)" // Urinary Bladder
 * SCT#393006 "Structure of wall of urinary bladder (body structure)" // Bladder Wall
 // * SCT#PTV "PTV" // PRV created with xx mm expansion on the left optic nerve
+* SCT#462629001 " Radiation therapy bolus, reusable (physical object) |" // <none>
 * SCT#119186007 "Bone part (body structure)" // Bone
 * SCT#52374004 "Ethmoid bone structure (body structure)" // Ethmoid Bone
 * SCT#74872008 "Frontal bone structure (body structure)" // Frontal Bone
@@ -230,7 +231,7 @@ Description: "Codes describing the body locations where radiotherapy treatments 
 * SCT#76752008 "Breast structure (body structure)" // Breast Left
 * SCT#955009 "Bronchial structure (body structure)" // Bronchial tree
 * SCT#102297006 "Main bronchus structure (body structure)" // Main Bronchus
-//* SCT#PRV "PRV" // A PRV expansion on the Bronchus that  is xx millimeters thick
+// * SCT#PRV "PRV" // A PRV expansion on the Bronchus that  is xx millimeters thick
 * SCT#34381000 "Anal canal structure (body structure) |" // Anal Canal
 * SCT#28700002 "Structure of carina of trachea (body structure)" // Carina
 * SCT#38848004 "Duodenal structure (body structure)" // Small bowel - Duodenum
@@ -296,12 +297,15 @@ Description: "Codes describing the body locations where radiotherapy treatments 
 * SCT#16953009 "Elbow joint structure (body structure)" // Elbow joint
 * SCT#85537004 "Glenohumeral joint structure (body structure)" // Glenohumeral Joint
 * SCT#711190000 "Structure of epiphyseal plate (body structure)" // <none>
+* SCT#228791009 "Gross tumor volume (observable entity)" // Gross Tumor Volume
+* SCT#39352004 "Joint structure (body structure) " // <none>
 * SCT#53620006 "Temporomandibular joint structure (body structure)" // Temperomandibular Joint
 * SCT#50403003 "Structure of cortex of kidney (body structure)" // Renal cortex for both Kidneys
 * SCT#74033008 "Structure of hilum of kidney (body structure)" // Renal Hilum for both Kidneys
 * SCT#85050009 "Bone structure of humerus (body structure)" // Humerus Left
 * SCT#64033007 "Kidney structure (body structure)" // Both Kidneys
 * SCT#72696002 "Knee region structure (body structure)" // Knee
+* SCT#54066008 "Pharyngeal structure (body structure) " // Laryngeal pharynx
 * SCT#4596009 "Laryngeal structure (body structure)" // Larynx
 * SCT#86483002 "Structure of supraglottic space (body structure)" // Supraglottic Larynx
 * SCT#78076003 "Structure of lens of eye (body structure)" // Eye Lens
@@ -336,7 +340,7 @@ Description: "Codes describing the body locations where radiotherapy treatments 
 * SCT#245282001 "Internal mammary lymph node group (body structure)" // <none>
 * SCT#279763008 "Inguinofemoral lymph node group (body structure)" // Lymph nodes of pelvis - inguinofemoral
 * SCT#64038003 "Intercostal lymph node (body structure)" // Lymph nodes of thorax - Intercostal
-// * SCT#Help "<none>" // Lymph nodes of thorax - Ligamentum arteriosum
+* SCT#127938006 "Lymph node of aortopulmonary window (body structure) " // Lymph nodes of thorax - Ligamentum arteriosum
 * SCT#62683002 "Mediastinal lymph node structure (body structure)" // Lymph nodes of thorax - Mediastinal
 * SCT#81105003 "Cervical lymph node structure (body structure)" // Neck Lymph Node
 * SCT#36086000 "Structure of obturator lymph node (body structure)" // Lymph nodes of pelvis - obturator Left
@@ -346,9 +350,10 @@ Description: "Codes describing the body locations where radiotherapy treatments 
 * SCT#245294005 "Pelvic lymph node group (body structure)" // Pelvic Lymph Nodes Left
 * SCT#245288002 "Portahepatis lymph node group (body structure)" // Porta hepatis
 * SCT#45206002 "Nasal structure (body structure)" // Nose
+// * SCT#USCRS-33346 "Presacral lymph node group (body structure)" // Lymph nodes of pelvis - presacral Left
 * SCT#196662004 "Structure of intrapulmonary lymph node (body structure)" // Lymph nodes of thorax - Pulmonary Left
 * SCT#76838003 "Structure of supraclavicular lymph node (body structure)" // Supraclavicular Lymph Node Left
-* SCT#113340006 "Structure of superficial inguinal lymph node (body structure)" // Lymph nodes of thorax - Supramammary Left
+* SCT#4719002 "Structure of lymph node of thorax (body structure)" // Lymph nodes of thorax - Supramammary Left
 * SCT#245283006 "Tracheobronchial lymph node group (body structure)" // Lymph nodes of thorax - Tracheobronchial
 * SCT#84782009 "Peripheral nerve structure (body structure)" // Peripheral Nerve
 * SCT#40958000 "Nerve root structure (body structure)" // Nerve Root
@@ -357,8 +362,10 @@ Description: "Codes describing the body locations where radiotherapy treatments 
 * SCT#39607008 "Lung structure (body structure)" // Lung Left
 * SCT#31094006 "Structure of lobe of lung (body structure)" // Lung - lower lobe of left
 * SCT#34080009 "Malleus structure (body structure)" // Malleus
+* SCT#285315005 "Radiotherapy planning markers (physical object)" // <none>
 * SCT#70925003 "Bone structure of maxilla (body structure)" // Maxilla
 * SCT#363654007 "Structure of orbit proper (body structure)" // Orbit Left
+* SCT#31389004 "Oropharyngeal structure (body structure)" // Oral part of pharynx
 * SCT#52410001 "Digastric muscle structure (body structure)" // Digastric muscle Left
 * SCT#15497006 "Ovarian structure (body structure)" // Ovary
 * SCT#18252004 "Structure of platysma muscle (body structure)" // Platysma Left
@@ -377,7 +384,7 @@ Description: "Codes describing the body locations where radiotherapy treatments 
 * SCT#38864007 "Perineal structure (body structure)" // Perineum
 * SCT#118762006 "Peritoneal sac structure (body structure)" // Peritoneal sac
 * SCT#14106009 "Cardiac pacemaker, device (physical object)" // Pacemaker
-* SCT#54066008 "Pharyngeal structure (body structure)" // Pharynx
+* SCT#110822002 "Pancreas and jejunum (combined site) (body structure)" // The pancreatic jejuno junction - generated by surgical procedure
 * SCT#45793000 "Pineal structure (body structure)" // Pineal gland
 * SCT#56329008 "Pituitary structure (body structure)" // Pituitary gland
 * SCT#49557009 "Pontine structure (body structure)" // Pons
@@ -415,12 +422,19 @@ Description: "Codes describing the body locations where radiotherapy treatments 
 * SCT#58830002 "Bone structure of eleventh rib (body structure)" // Eleventh rib Left
 * SCT#43993008 "Bone structure of twelfth rib (body structure)" // Twelfth rib Left
 * SCT#39937001 "Skin structure (body structure)" // Skin
-// * SCT#In Process "Bone structure of thirteenth rib (body structure)" // Thirteenth   rib Left
+* UMLS#C0222987 "Bone structure of thirteenth rib (body structure)"    // ***** CHECK THIS*****
+* UMLS#C0223388 "Bone structure of thirteenth rib (body structure)"    // * SCT#USCRS-33146 "Bone structure of thirteenth rib (body structure)" // Thirteenth   rib Left
 * SCT#48014002 "Skin structure of perineum (body structure)" // <none>
 * SCT#79601000 "Bone structure of scapula (body structure)" // Scapula Left
+* SCT#75093004 "Skin structure of anterior abdominal wall (body structure)" // <none>
+// * SCT#USCRS-33351 "Bowel space (body structure)" // Space occupied by bowel
+// * SCT#USCRS-33352 "Small bowel space (body structure)" // <none>
 * SCT#789564000 "Structure of retropharyngeal space (body structure)" // Retropharyngeal space
+// * SCT#USCRS-33350 "Retrostyloid space (body structure)" // Retrostyloid space
+* SCT#77621008 "Supraclavicular region of neck (body structure)" // Supraclavicular space - Left
 * SCT#41178004 "Structure of sphincter ani muscle (body structure)" // Internal Anal Sphincter
 * SCT#61853006 "Spinal canal structure (body structure)" // Vertebral canal
+* SCT#24999009 "Sphenoid sinus structure (body structure)" // Sphenoidal Sinus Left
 * SCT#2748008 "Spinal cord structure (body structure)" // Spinal Cord
 * SCT#54785003 "Cervical spinal cord structure (body structure)" // Spinal Cord Cervical
 * SCT#60051002 "Lumbar spinal cord structure (body structure)" // Spinal Cord Lumbar
@@ -431,15 +445,18 @@ Description: "Codes describing the body locations where radiotherapy treatments 
 * SCT#22718006 "Stapes structure (body structure)" // Stapes
 * SCT#69695003 "Stomach structure (body structure)" // Stomach
 * SCT#75415000 "Structure of suprapatellar bursa (body structure)" // Suprapatellar Structures
-// * SCT#TBD "TBD" // <none>
+* SCT#182323001 "Entire eye region (surface region) (body structure)" // <none>
 * SCT#8997002 "Ventricular systole, function (observable entity)" // <none>
 * SCT#13024002 "Tendon structure (body structure)" // <none>
 * SCT#70567001 "Structure of quadriceps tendon (body structure)" // <none>
 * SCT#40689003 "Testis structure (body structure)" // Testis
+* SCT#37554007 "Spinal dura mater structure (body structure)" // <none>
 * SCT#1732005 "Thoracic duct structure (body structure)" // Thoracic Duct
 * SCT#78961009 "Splenic structure (body structure)" // Spleen
 * SCT#35378004 "Structure of hilum of spleen (body structure)" // Splenic hilum
 * SCT#21974007 "Tongue structure (body structure)" // Tongue
+* SCT#181226008 "Entire tongue (body structure)" // <none>
+* SCT#47975008 " Structure of root of tongue (body structure)" // <none>
 * SCT#44567001 "Tracheal structure (body structure)" // Trachea
 * SCT#245860003 "Urinary conduit site (morphologic abnormality)" // Urinary Divergence
 * SCT#87953007 "Ureteric structure (body structure)" // Both Ureters
@@ -460,6 +477,9 @@ Description: "Codes describing the body locations where radiotherapy treatments 
 * SCT#9454009 "Structure of subclavian vein (body structure)" // Subclavian Vein
 * SCT#35532006 "Vena caval structure (body structure)" // Inferior vena cava
 * SCT#76784001 "Vaginal structure (body structure)" // Vagina
+* SCT#279894000 "Inferior surface of vaginal cervix (body structure)" // <none>
+* SCT#438074005 "438074005 | Vaginal cuff (morphologic abnormality)" // Vaginal Cuff
+* SCT#17401000 "Cardiac valve structure (body structure)" // Valve
 * SCT#63190004 "Structure of jugular vein (body structure)" // Any Jugular Vein
 * SCT#91134007 "Mitral valve structure (body structure)" // Mitral Valve
 * SCT#39057004 "Pulmonary valve structure (body structure)" // Pulmonic Valve
@@ -471,6 +491,9 @@ Description: "Codes describing the body locations where radiotherapy treatments 
 * SCT#52940008 "Thyroid cartilage structure (body structure)" // Thyroid cartilage
 * SCT#15328005 "Structure of suprasellar region (body structure)" // Suprasellar Cistern
 * SCT#34202007 "Aortic valve structure (body structure)" // Aortic Valve
+* SCT#1172006 "Structure of odontoid process of axis (body structure)" // Cervical vertebrae - Bony part of dens of axis
+* SCT#79654002 "Edema (morphologic abnormality)" // Edema
+* SCT#123037004 "Body structure (body structure)" // Contour encompassing body plus other external items
 * SCT#3572006 "Structure of body of vertebra (body structure)" // Vertebral Body
 * SCT#14806007 "Bone structure of atlas (body structure)" // Atlas - C1
 * SCT#39976000 "Bone structure of axis (body structure)" // Axis - C2
@@ -504,6 +527,9 @@ Description: "Codes describing the body locations where radiotherapy treatments 
 * SCT#48405002 "Structure of body of tenth thoracic vertebra (body structure)" // Thoracic Vertebra T10
 * SCT#52120002 "Structure of body of eleventh thoracic vertebra (body structure)" // Thoracic Vertebra T11
 * SCT#280849005 "Structure of body of twelfth  thoracic vertebra (body structure)" // Thoracic Vertebra T12
+* UMLS#C0223388 "Structure of body of thirteenth thoracic vertebra (body structure)"  // * SCT#USCRS-33147 "Structure of body of thirteenth  thoracic vertebra (body structure)" // Thoracic Vertebra T13
+// * SCT#USCRS-33348 "Jugular Fossa (body structure)" // Jugular Fossa
+* SCT#35763008 "Structure of posterior fossa of cranial cavity (body structure)" // Posterior Fossa
 * SCT#87166008 "Vomer bone structure (body structure)" // Vomer
 
 /*

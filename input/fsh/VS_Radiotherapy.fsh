@@ -90,7 +90,6 @@ Title: "Radiotherapy Treatment Location Qualifier Value Set"
 Description: "Various modifiers that can be applied to body locations where radiotherapy treatments can be directed."
 * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
 * include codes from system SCT where concept is-a #258399006  "Lymph node level value (qualifier value)"  // I, II, III, IV, V, VI, VII and sub-levels
-* include codes from system SCT where concept is-a #258395000 "Levels (qualifier value)"  // level 1, 2, 3
 * include codes from system TG263Qualifier
 // SCT codes requested or existing
 // * SCT#258400004 "Lymph node level I (qualifier value)"
@@ -118,6 +117,9 @@ Description: "Various modifiers that can be applied to body locations where radi
 // Lymph node level XB (qualifier value) - R
 // * SCT#255549009    "Anterior (qualifier value)" -- NOT USED BY TG263
 // * SCT#255551008    "Posterior (qualifier value)" -- NOT USED BY TG263
+* SCT#277733009 "Level 1 (qualifier value)"
+* SCT#277733009 "Level 2 (qualifier value)"
+* SCT#277733009 "Level 3 (qualifier value)"
 * SCT#261089000    "Inferior (qualifier value)"
 * SCT#264217000    "Superior (qualifier value)"
 * SCT#261183002    "Upper (qualifier value)"
@@ -209,7 +211,7 @@ Description: "Codes describing the body locations where radiotherapy treatments 
 * SCT#89837001 "Urinary bladder structure (body structure)" // Urinary Bladder
 * SCT#393006 "Structure of wall of urinary bladder (body structure)" // Bladder Wall
 // * SCT#PTV "PTV" // PRV created with xx mm expansion on the left optic nerve
-* SCT#462629001 " Radiation therapy bolus, reusable (physical object) |" // <none>
+* SCT#462629001 " Radiation therapy bolus, reusable (physical object) " // <none>
 * SCT#119186007 "Bone part (body structure)" // Bone
 * SCT#52374004 "Ethmoid bone structure (body structure)" // Ethmoid Bone
 * SCT#74872008 "Frontal bone structure (body structure)" // Frontal Bone

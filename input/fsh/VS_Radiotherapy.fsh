@@ -486,7 +486,7 @@ Description: "Codes describing the body locations where radiotherapy treatments 
 * SCT#35532006 "Vena caval structure (body structure)" // Inferior vena cava
 * SCT#76784001 "Vaginal structure (body structure)" // Vagina
 * SCT#279894000 "Inferior surface of vaginal cervix (body structure)" // <none>
-* SCT#438074005 "438074005 | Vaginal cuff (morphologic abnormality)" // Vaginal Cuff
+* SCT#438074005 "Vaginal cuff (morphologic abnormality)" // Vaginal Cuff
 * SCT#17401000 "Cardiac valve structure (body structure)" // Valve
 * SCT#63190004 "Structure of jugular vein (body structure)" // Any Jugular Vein
 * SCT#91134007 "Mitral valve structure (body structure)" // Mitral Valve

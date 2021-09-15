@@ -430,8 +430,7 @@ Description: "Codes describing the body locations where radiotherapy treatments 
 * SCT#58830002 "Bone structure of eleventh rib (body structure)" // Eleventh rib Left
 * SCT#43993008 "Bone structure of twelfth rib (body structure)" // Twelfth rib Left
 * SCT#39937001 "Skin structure (body structure)" // Skin
-* UMLS#C0222987 "Bone structure of thirteenth rib (body structure)"    // ***** CHECK THIS*****
-* UMLS#C0223388 "Bone structure of thirteenth rib (body structure)"    // * SCT#USCRS-33146 "Bone structure of thirteenth rib (body structure)" // Thirteenth   rib Left
+* UMLS#C0222987 "Bone structure of thirteenth rib (body structure)"    // * SCT#USCRS-33146 "Bone structure of thirteenth rib (body structure)" // Thirteenth   rib Left
 * SCT#48014002 "Skin structure of perineum (body structure)" // <none>
 * SCT#79601000 "Bone structure of scapula (body structure)" // Scapula Left
 * SCT#75093004 "Skin structure of anterior abdominal wall (body structure)" // <none>

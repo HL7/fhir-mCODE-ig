@@ -350,7 +350,7 @@ Description: "Codes describing the body locations where radiotherapy treatments 
 * SCT#245294005 "Pelvic lymph node group (body structure)" // Pelvic Lymph Nodes Left
 * SCT#245288002 "Portahepatis lymph node group (body structure)" // Porta hepatis
 * SCT#45206002 "Nasal structure (body structure)" // Nose
-// * SCT#USCRS-33346 "Presacral lymph node group (body structure)" // Lymph nodes of pelvis - presacral Left
+* TG263#pre-sacral-lymph-node-group "Presacral lymph node group" // * SCT#USCRS-33346 "Presacral lymph node group (body structure)" // Lymph nodes of pelvis - presacral Left
 * SCT#196662004 "Structure of intrapulmonary lymph node (body structure)" // Lymph nodes of thorax - Pulmonary Left
 * SCT#76838003 "Structure of supraclavicular lymph node (body structure)" // Supraclavicular Lymph Node Left
 * SCT#4719002 "Structure of lymph node of thorax (body structure)" // Lymph nodes of thorax - Supramammary Left
@@ -427,10 +427,10 @@ Description: "Codes describing the body locations where radiotherapy treatments 
 * SCT#48014002 "Skin structure of perineum (body structure)" // <none>
 * SCT#79601000 "Bone structure of scapula (body structure)" // Scapula Left
 * SCT#75093004 "Skin structure of anterior abdominal wall (body structure)" // <none>
-// * SCT#USCRS-33351 "Bowel space (body structure)" // Space occupied by bowel
-// * SCT#USCRS-33352 "Small bowel space (body structure)" // <none>
+* TG263#bowel-space "Bowel Space" // * SCT#USCRS-33351 "Bowel space (body structure)" // Space occupied by bowel
+* TG263#small-bowel-space "Small Bowel Space" // * SCT#USCRS-33352 "Small bowel space (body structure)" // <none>
 * SCT#789564000 "Structure of retropharyngeal space (body structure)" // Retropharyngeal space
-// * SCT#USCRS-33350 "Retrostyloid space (body structure)" // Retrostyloid space
+* UMLS#C5197767 "Poststyoloid Compartment" // * SCT#USCRS-33350 "Retrostyloid space (body structure)" // Retrostyloid space
 * SCT#77621008 "Supraclavicular region of neck (body structure)" // Supraclavicular space - Left
 * SCT#41178004 "Structure of sphincter ani muscle (body structure)" // Internal Anal Sphincter
 * SCT#61853006 "Spinal canal structure (body structure)" // Vertebral canal
@@ -528,7 +528,7 @@ Description: "Codes describing the body locations where radiotherapy treatments 
 * SCT#52120002 "Structure of body of eleventh thoracic vertebra (body structure)" // Thoracic Vertebra T11
 * SCT#280849005 "Structure of body of twelfth  thoracic vertebra (body structure)" // Thoracic Vertebra T12
 * UMLS#C0223388 "Structure of body of thirteenth thoracic vertebra (body structure)"  // * SCT#USCRS-33147 "Structure of body of thirteenth  thoracic vertebra (body structure)" // Thoracic Vertebra T13
-// * SCT#USCRS-33348 "Jugular Fossa (body structure)" // Jugular Fossa
+* UMLS#C0927941 "Jugular Fossa (body structure)" // * SCT#USCRS-33348 "Jugular Fossa (body structure)" // Jugular Fossa
 * SCT#35763008 "Structure of posterior fossa of cranial cavity (body structure)" // Posterior Fossa
 * SCT#87166008 "Vomer bone structure (body structure)" // Vomer
 

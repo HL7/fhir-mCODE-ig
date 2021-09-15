@@ -75,7 +75,6 @@ Description: "Allowed techniques for electron beam modality"
 * SCT#1162782007 "Three dimensional external beam radiation therapy (procedure)"
 * SCT#1156526006 "Two dimensional external beam radiation therapy (procedure)"
 * SCT#168524008 "Radiotherapy - intraoperative control (procedure)"
-/* SCT code for COMP technique??*/
 
 ValueSet: NeutronBeamTechniquesVS
 Id: mcode-neutron-beam-technique-vs

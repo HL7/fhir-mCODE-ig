@@ -7,7 +7,7 @@ Allowed combinations of modality and technique are shown here:
 | **Treatment Type** |  **Modality**           |      **Technique**       |
 | ---------------| ------------------------ | ------------------------ |
 | External Beam Radiotherapy | Photons                 | IMRT, VMAT, 3D, 2D, IORT |
-| External Beam Radiotherapy| Electrons                | 3D, 2D, IORT, COMP       |
+| External Beam Radiotherapy| Electrons                | 3D, 2D, IORT      |
 | External Beam Radiotherapy| Neutrons                 | 3D, NCT                  |
 | External Beam Radiotherapy| Carbon Ions              | PPS, PSS, MIX            |
 | External Beam Radiotherapy| Protons                  | PPS, PSS, MIX            |

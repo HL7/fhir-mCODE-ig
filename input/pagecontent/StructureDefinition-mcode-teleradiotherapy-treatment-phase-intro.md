@@ -10,7 +10,7 @@ The following table shows valid combinations of modality and technique for exter
 | **External Beam Modality** | **Technique**          |
 | ------------------------ | ------------------------ |
 | Photons                  | IMRT, VMAT, 3D, 2D, IORT |
-| Electrons                | 3D, 2D, IORT, COMP       |
+| Electrons                | 3D, 2D, IORT      |
 | Neutrons                 | 3D, NCT                  |
 | Carbon Ions              | PPS, PSS, MIX            |
 | Protons                  | PPS, PSS, MIX            |
@@ -18,8 +18,8 @@ The following table shows valid combinations of modality and technique for exter
 
 **Key:**
 
-* 2D: Two dimensional external beam radiation therapy 
-* 3D: Three dimensional external beam radiation therapy 
+* 2D: Two dimensional external beam radiation therapy
+* 3D: Three dimensional external beam radiation therapy
 * IMRT: Intensity Modulated Radiation Therapy
 * IORT: Intraoperative Radiation Therapy
 * MIX: Mixed beam external beam radiation therapy

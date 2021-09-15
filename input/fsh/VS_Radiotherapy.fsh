@@ -89,7 +89,9 @@ Id: mcode-radiotherapy-treatment-location-qualifier-vs
 Title: "Radiotherapy Treatment Location Qualifier Value Set"
 Description: "Various modifiers that can be applied to body locations where radiotherapy treatments can be directed."
 * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
-* include codes from system SCT where concept is-a #254292007 "Lymph node level value (qualifier value)"
+* include codes from system SCT where concept is-a #258399006  "Lymph node level value (qualifier value)"  // I, II, III, IV, V, VI, VII and sub-levels
+* include codes from system SCT where concept is-a #258395000 "Levels (qualifier value)"  // level 1, 2, 3
+* include codes from system TG263Qualifier
 // SCT codes requested or existing
 // * SCT#258400004 "Lymph node level I (qualifier value)"
 // * SCT#1162616006 "Lymph node level Ia (qualifier value)"
@@ -114,11 +116,8 @@ Description: "Various modifiers that can be applied to body locations where radi
 // Lymph node level X (qualifier value) - R
 // Lymph node level XA (qualifier value) - R
 // Lymph node level XB (qualifier value) - R
-
-* SCT#7771000    "Left (qualifier value)"
-* SCT#24028007    "Right (qualifier value)"
-* SCT#255549009    "Anterior (qualifier value)"
-* SCT#255551008    "Posterior (qualifier value)"
+// * SCT#255549009    "Anterior (qualifier value)" -- NOT USED BY TG263
+// * SCT#255551008    "Posterior (qualifier value)" -- NOT USED BY TG263
 * SCT#261089000    "Inferior (qualifier value)"
 * SCT#264217000    "Superior (qualifier value)"
 * SCT#261183002    "Upper (qualifier value)"
@@ -128,12 +127,21 @@ Description: "Various modifiers that can be applied to body locations where radi
 * SCT#40415009    "Proximal (qualifier value)"
 * SCT#255503000    "Entire (qualifier value)"
 * SCT#255609007    "Partial (qualifier value)"
+* SCT#7771000    "Left (qualifier value)"
+* SCT#24028007    "Right (qualifier value)"
 * SCT#51440002    "Right and left (qualifier value)"
 * SCT#14414005  "Peripheral (qualifier value)"
 * SCT#26216008  "Central (qualifier value)"
 * SCT#18769003   "Adjacent" // "Juxta-posed (qualifier value)"
-* UMLS#C0687118  "Detached"  // standing in for non-adjacent  (USCRS-33144)
-* include codes from system SCT where concept is-a #258399006  "Lymph node level value (qualifier value)"
+* SCT#260235002 "Core (qualifier value)"
+* SCT#410679008 "Surface (qualifier value)"
+* SCT#260521003 "Internal (qualifier value)"
+* SCT#261074009 "External (qualifier value)"
+* SCT#261115001 "Laryngeal (qualifier value)"
+* SCT#260548002 "Oral (qualifier value)"
+* SCT#55561003 "Active (qualifier value)"
+
+
 
 // ValueSet: LymphNodeLocationQualifierVS
 // Id: mcode-lymph-node-location-qualifier-vs

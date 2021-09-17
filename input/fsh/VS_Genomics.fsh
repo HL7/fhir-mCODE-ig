@@ -35,6 +35,73 @@ Description:    "Codes representing tests for tumor markers. This value set of L
 
 * ^copyright = "This material contains content from LOINC (http://loinc.org). LOINC is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc"
 * CC#TMT-OTHER "Other Tumor Marker Test, Specify"
+* include codes from system LNC where ancestor = #LP101591-8 // t(15;17)(q24.1;q21.1)(PML,RARA) bcr2
+* include codes from system LNC where ancestor = #LP111251-7 // T-cell receptor excision circle
+* include codes from system LNC where ancestor = #LP136073-6 // PCA3 score
+* include codes from system LNC where ancestor = #LP14040-7 // Cancer Ag 19-9
+* include codes from system LNC where ancestor = #LP14329-4 // Choriogonadotropin.beta subunit
+* include codes from system LNC where ancestor = #LP14543-0 // Cancer Ag 125
+* include codes from system LNC where ancestor = #LP14618-0 // CD30
+* include codes from system LNC where ancestor = #LP14649-5 // Calcitonin
+* include codes from system LNC where ancestor = #LP14650-3 // Carcinoembryonic
+* include codes from system LNC where ancestor = #LP14652-9 // Chromogranin A
+* include codes from system LNC where ancestor = #LP14658-6 // Enolase.neuron specific
+* include codes from system LNC where ancestor = #LP14665-1 // Gastrin
+* include codes from system LNC where ancestor = #LP14694-1 // Somatostatin
+* include codes from system LNC where ancestor = #LP14697-4 // Thyroglobulin
+* include codes from system LNC where ancestor = #LP14902-8 // Progesterone receptor
+* include codes from system LNC where ancestor = #LP14907-7 // Beta-2-Microglobulin
+* include codes from system LNC where ancestor = #LP15033-1 // Lactate dehydrogenase
+* include codes from system LNC where ancestor = #LP15090-1 // Catecholamines
+* include codes from system LNC where ancestor = #LP15097-6 // 5-Hydroxyindoleacetate
+* include codes from system LNC where ancestor = #LP15097-6 // 5-Hydroxyindoleacetate
+* include codes from system LNC where ancestor = #LP15461-4 // Cancer Ag 15-3
+* include codes from system LNC where ancestor = #LP15463-0 // Cancer Ag 242
+* include codes from system LNC where ancestor = #LP15464-8 // Cancer Ag 27-29
+* include codes from system LNC where ancestor = #LP15465-5 // Cancer Ag 50
+* include codes from system LNC where ancestor = #LP15466-3 // Cancer Ag 549
+* include codes from system LNC where ancestor = #LP15467-1 // Cancer Ag 72-4
+* include codes from system LNC where ancestor = #LP15681-7 // Isocitrate dehydrogenase
+* include codes from system LNC where ancestor = #LP157499-7 // UGT1A1 gene.c.A(TA)7TAA(*28)
+* include codes from system LNC where ancestor = #LP15990-2 // Fibrin+Fibrinogen fragments
+* include codes from system LNC where ancestor = #LP16890-3 // Plasminogen activator urokinase type
+* include codes from system LNC where ancestor = #LP17730-0 // Cells.CD33
+* include codes from system LNC where ancestor = #LP17751-6 // Cells.CD20
+* include codes from system LNC where ancestor = #LP18193-0 // Prostate specific Ag
+* include codes from system LNC where ancestor = #LP18274-8 // Cancer Ag DM-70K
+* include codes from system LNC where ancestor = #LP18343-1 // CD25
+* include codes from system LNC where ancestor = #LP18396-9 // Epidermal growth factor receptor
+* include codes from system LNC where ancestor = #LP18515-4 // Cells.CD22
+* include codes from system LNC where ancestor = #LP18567-5 // Estrogen receptor
+* include codes from system LNC where ancestor = #LP189759-6 // ALK gene rearrangements
+* include codes from system LNC where ancestor = #LP19423-0 // Cytokeratin 19
+* include codes from system LNC where ancestor = #LP19492-5 // Thiopurine methyltransferase
+* include codes from system LNC where ancestor = #LP19666-4 // BRCA1 gene
+* include codes from system LNC where ancestor = #LP19732-4 // KRAS gene
+* include codes from system LNC where ancestor = #LP20052-4 // CD117
+* include codes from system LNC where ancestor = #LP200639-5 // B-cell CD27 & IgD subsets panel
+* include codes from system LNC where ancestor = #LP207485-6 // Cells.CD27+IgD-
+* include codes from system LNC where ancestor = #LP220351-3 // Programmed cell death ligand 1
+* include codes from system LNC where ancestor = #LP248009-5 // Serine-threonine protein kinase B-raf V600E
+* include codes from system LNC where ancestor = #LP28442-9 // HER2
+* include codes from system LNC where ancestor = #LP28518-6 // Bladder tumor Ag
+* include codes from system LNC where ancestor = #LP28728-1 // Nuclear matrix protein 22
+* include codes from system LNC where ancestor = #LP28852-9 // Estrogen+Progesterone receptor
+* include codes from system LNC where ancestor = #LP31830-0 // Acarboxyprothrombin
+* include codes from system LNC where ancestor = #LP31855-7 // BRCA2 gene
+* include codes from system LNC where ancestor = #LP35767-0 // Soluble mesothelin related proteins
+* include codes from system LNC where ancestor = #LP36040-1 // Alpha-1-Fetoprotein.L3
+* include codes from system LNC where ancestor = #LP36464-3 // Microsatellite instability
+* include codes from system LNC where ancestor = #LP36477-5 // JAK2 gene.p.Val617Phe
+* include codes from system LNC where ancestor = #LP36861-0 // B-cell
+* include codes from system LNC where ancestor = #LP36885-9 // DPYD gene
+* include codes from system LNC where ancestor = #LP61778-4 // FLT3 gene
+* include codes from system LNC where ancestor = #LP62864-1 // FISH
+* include codes from system LNC where ancestor = #LP63490-4 // FGFR2 gene+FGFR3 gene
+* include codes from system LNC where ancestor = #LP64447-3 // BCR-ABL1 b2a2 fusion protein
+* include codes from system LNC where ancestor = #LP93517-8 // Human epididymis protein 4
+
+/* 
 * include codes from system LNC where ancestor = #LP101591-8
 * include codes from system LNC where ancestor = #LP111251-7
 * include codes from system LNC where ancestor = #LP136073-6
@@ -101,7 +168,7 @@ Description:    "Codes representing tests for tumor markers. This value set of L
 * include codes from system LNC where ancestor = #LP63490-4
 * include codes from system LNC where ancestor = #LP64447-3
 * include codes from system LNC where ancestor = #LP93517-8
-
+*/
 
 ValueSet:   GeneticSpecimenTypeVS
 Id: mcode-genetic-specimen-type-vs

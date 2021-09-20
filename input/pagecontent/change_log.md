@@ -34,7 +34,8 @@
 
 
 #### Other
-* [FHIR-32340](https://jira.hl7.org/browse/FHIR-33340)  Laterality broken out into separate extension
+* [FHIR-32340](https://jira.hl7.org/browse/FHIR-32340)  Laterality broken out into separate extension
+* [FHIR-33340](https://jira.hl7.org/browse/FHIR-33340)   TreatmentPhase profiles and examples dropped.  Will reappear in Codex-RT IG.
 
 ### mCODE STU 2 Ballot Version (May 2021)
 

@@ -29,6 +29,14 @@ Description: "Categorization of the kind of evidence used as input to the clinic
 * value[x] from CancerDiseaseStatusEvidenceTypeVS (required)
 * value[x] 1..1
 
+Extension: ClinicalDiagnosisOnly
+Id: mcode-clinical-diagnosis-only
+Title: "Clinical Diagnosis Only"
+Description: "Boolean indicator.  True when the doctor ‘says the patient has cancer’ and there is no other supporting evidence.  If Extension is present and true, no evidence should be provided"
+* insert ExtensionContext(Observation)
+* value[x] only boolean
+* value[x] 1..1
+
 Extension: HistologyMorphologyBehavior
 Id: mcode-histology-morphology-behavior
 Title: "Histology-Morphology-Behavior"
@@ -42,13 +50,13 @@ Extension: BodyLocationQualifier
 Id: mcode-body-location-qualifier
 Title: "Body Location Qualifier"
 Description: "Qualifier to refine an body location. These include qualifiers for relative location, directionality, number, and plane, and exclude qualifiers for laterality."
-// FHIR-xxxx    
+// FHIR-xxxx
 // * insert ExtensionContext(Specimen.collection.bodySite)
 // * insert ExtensionContext(Procedure.bodySite)
 // * insert ExtensionContext(Condition.bodySite)
 // * insert ExtensionContext(Observation.bodySite)
 * value[x] only CodeableConcept
-* value[x] from BodyLocationQualifierVS (required) 
+* value[x] from BodyLocationQualifierVS (required)
 * value[x] 1..1
 
 Extension: LateralityQualifier

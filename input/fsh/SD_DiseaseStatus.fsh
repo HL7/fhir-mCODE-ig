@@ -6,7 +6,10 @@ Description:    "A clinician's qualitative judgment on the current trend of the 
 // * insert ReduceText
 // * insert ReduceText(referenceRange)
 // * insert ReduceText(component)
-* extension contains EvidenceType named evidenceType 0..*
+* obeys mcode-no-evidence-if-clinical-diagnosis-only
+* extension contains
+    EvidenceType named evidenceType 0..* and
+    ClinicalDiagnosisOnly named clinicalDiagnosisOnly 0..1
 * insert NotUsed(specimen)
 * insert NotUsed(device)
 * insert NotUsed(referenceRange)
@@ -21,4 +24,10 @@ Description:    "A clinician's qualitative judgment on the current trend of the 
 * value[x] only CodeableConcept
 * value[x] from ConditionStatusTrendVS (required)
 // ALL MUST SUPPORTS
-* status and code and subject and effective[x] and value[x] and focus and dataAbsentReason and extension[evidenceType] MS
+* status and code and subject and effective[x] and value[x] and focus and dataAbsentReason and extension[evidenceType] and extension[clinicalDiagnosisOnly] MS
+
+
+Invariant:  mcode-no-evidence-if-clinical-diagnosis-only
+Description: "If clnicaldiagnosisonly is true, there should be no evidenceType"
+Expression: "extension.where(url='george').exists() and extension.where(url='george').value = true implies !extension.where(url='harry').exists()"
+Severity:   #error

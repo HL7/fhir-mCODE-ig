@@ -9,8 +9,8 @@ Allowed combinations of modality and technique are shown here:
 | External Beam Radiotherapy | Photons                 | IMRT, VMAT, 3D, 2D, IORT |
 | External Beam Radiotherapy| Electrons                | 3D, 2D, IORT      |
 | External Beam Radiotherapy| Neutrons                 | 3D, NCT                  |
-| External Beam Radiotherapy| Carbon Ions              | PPS, PSS, MIX            |
-| External Beam Radiotherapy| Protons                  | PPS, PSS, MIX            |
+| External Beam Radiotherapy| Carbon Ions              | PPS, PSS           |
+| External Beam Radiotherapy| Protons                  | PPS, PSS           |
 | Brachytherapy | Internal radiotherapy – permanent seeds | Interstitial |
 | Brachytherapy| Low Dose Rate using temp rad source | Intracavitary, Interstitial, Surface |
 | Brachytherapy| Pulsed Dose Rate | Intracavitary, Interstitial |

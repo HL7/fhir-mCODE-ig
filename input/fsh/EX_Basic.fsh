@@ -196,20 +196,6 @@ Description: "Example of Cancer Related Surgical Procedure"
 * reasonReference = Reference(primary-cancer-condition-nsclc)
 * bodySite = SCT#41224006 "Structure of lower lobe of left lung (body structure)"
 
-Instance: brachytherapy-treatment-phase-low-dose-rate-temporary
-InstanceOf: BrachytherapyTreatmentPhase
-Description: "Example of a brachytherapy therapy phase."
-* status = #completed "completed"
-* code = RID#mcode-brachytherapy-treatment-phase
-* extension[modality].valueCodeableConcept = RT#LDR-TEMP "Low Dose Rate Brachytherapy - Temporary Placement"
-* extension[technique].valueCodeableConcept = SCT#113120007 "Interstitial brachytherapy (procedure)"
-* subject = Reference(cancer-patient-john-anyperson)
-* asserter = Reference(us-core-practitioner-kyle-anydoc)
-* performedPeriod.start = "2019-03-01"
-* performedPeriod.end = "2019-03-01"
-* reasonReference = Reference(primary-cancer-condition-nsclc)
-* extension[doseDeliveredToVolume].extension[volume].valueReference = Reference(john-anyperson-treatment-volume)
-
 Instance: john-anyperson-treatment-volume
 InstanceOf: RadiotherapyVolume
 Description: "Anatomic volume for John Anyperson's brachytherapy."

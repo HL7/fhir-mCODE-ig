@@ -27,11 +27,11 @@ Description: "Extended example as a mCODE Patient Bundle"
 * entry[+].resource = cancer-related-surgical-procedure-jenny-m
 * entry[=].fullUrl = "http://example.org/fhir/Procedure/cancer-related-surgical-procedure-jenny-m"
 * entry[+].resource = radiotherapy-treatment-summary-chest-wall-jenny-m
-* entry[=].fullUrl = "http://example.org/fhir/Procedure/radiotherapy-treatment-summary-chest-wall-jenny-m"
-* entry[+].resource = teleradiotherapy-treatment-phase-chest-wall-jenny-m
-* entry[=].fullUrl = "http://example.org/fhir/Procedure/teleradiotherapy-treatment-phase-chest-wall-jenny-m"
-* entry[+].resource = teleradiotherapy-treatment-phase-boost-jenny-m
-* entry[=].fullUrl = "http://example.org/fhir/Procedure/teleradiotherapy-treatment-phase-boost-jenny-m"
+// * entry[=].fullUrl = "http://example.org/fhir/Procedure/radiotherapy-treatment-summary-chest-wall-jenny-m"
+// * entry[+].resource = teleradiotherapy-treatment-phase-chest-wall-jenny-m
+// * entry[=].fullUrl = "http://example.org/fhir/Procedure/teleradiotherapy-treatment-phase-chest-wall-jenny-m"
+// * entry[+].resource = teleradiotherapy-treatment-phase-boost-jenny-m
+// * entry[=].fullUrl = "http://example.org/fhir/Procedure/teleradiotherapy-treatment-phase-boost-jenny-m"
 * entry[+].resource = tnm-clinical-stage-group-jenny-m
 * entry[=].fullUrl = "http://example.org/fhir/Observation/tnm-clinical-stage-group-jenny-m"
 * entry[+].resource = tnm-clinical-primary-tumor-category-jenny-m

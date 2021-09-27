@@ -10,7 +10,7 @@ Description: "A collection of data for an mCODE cancer patient."
 * entry ^slicing.description = "Slicing based on the profile conformance of the sliced element"
 
 
-* insert BundleEntry(brachytherapyTreatmentPhase, 0, *, Brachytherapy Phase Summary, Procedure resource representing one phase in cancer-related brachytherapy radiology procedures., BrachytherapyTreatmentPhase)
+// * insert BundleEntry(brachytherapyTreatmentPhase, 0, *, Brachytherapy Phase Summary, Procedure resource representing one phase in cancer-related brachytherapy radiology procedures., BrachytherapyTreatmentPhase)
 * insert BundleEntry(cancerDiseaseStatus, 0, *, Cancer Disease Status, Observations resource representing Cancer Disease Status. Include past assessments if available., CancerDiseaseStatus)
 * insert BundleEntry(cancerGeneticVariant, 0, *, Cancer Genetic Variant, Observation resource representing genetic variants., CancerGeneticVariant)
 * insert BundleEntry(cancerGenomicsReport, 0, *, Cancer Genomics Report, DiagnosticReport resource representing cancer genomics reports., CancerGenomicsReport)
@@ -27,7 +27,7 @@ Description: "A collection of data for an mCODE cancer patient."
 * insert BundleEntry(primaryCancerCondition, 0, *, Primary Cancer Condition, Condition resource representing the Primary Cancer Condition., PrimaryCancerCondition)
 * insert BundleEntry(radiotherapyCourseSummary, 0, *, Radiation Summary, Procedure resource representing a course of treatment in cancer-related radiotherapy., RadiotherapyCourseSummary)
 * insert BundleEntry(secondaryCancerCondition, 0, *, Secondary Cancer Condition, Condition resource representing the Secondary Cancer Condition., SecondaryCancerCondition)
-* insert BundleEntry(teleradiotherapyTreatmentPhase, 0, *, Teleradiotherapy Phase Summary, Procedure resource representing one phase in cancer-related external beam radiology procedures., TeleradiotherapyTreatmentPhase)
+// * insert BundleEntry(teleradiotherapyTreatmentPhase, 0, *, Teleradiotherapy Phase Summary, Procedure resource representing one phase in cancer-related external beam radiology procedures., TeleradiotherapyTreatmentPhase)
 * insert BundleEntry(tnmPrimaryTumorCategory, 0, *, TNM Primary Tumor Category, Observation resource representing T category., TNMPrimaryTumorCategory)
 * insert BundleEntry(tnmRegionalNodesCategory, 0, *, TNM Regional Node Category, Observation resource representing N category., TNMRegionalNodesCategory)
 * insert BundleEntry(tnmDistantMetastasesCategory, 0, *, TNM Distant Metastases Category, Observation resource representing M category., TNMDistantMetastasesCategory)

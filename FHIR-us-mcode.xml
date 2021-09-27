@@ -14,7 +14,7 @@
 <artifact id="StructureDefinition/mcode-body-structure-identifier" key="StructureDefinition-mcode-body-structure-identifier" name="Body Structure Identifier"/>
 <artifact id="ValueSet/mcode-brachytherapy-modality-vs" key="ValueSet-mcode-brachytherapy-modality-vs" name="Brachytherapy Modality Value Set"/>
 <artifact id="ValueSet/mcode-brachytherapy-technique-vs" key="ValueSet-mcode-brachytherapy-technique-vs" name="Brachytherapy Technique Value Set"/>
-<artifact id="StructureDefinition/mcode-brachytherapy-treatment-phase" key="StructureDefinition-mcode-brachytherapy-treatment-phase" name="Brachytherapy Treatment Phase"/>
+<artifact deprecated="true" id="StructureDefinition/mcode-brachytherapy-treatment-phase" key="StructureDefinition-mcode-brachytherapy-treatment-phase" name="Brachytherapy Treatment Phase"/>
 <artifact id="ValueSet/mcode-cancer-body-location-vs" key="cancer-body-location-value-set" name="Cancer Body Location Value Set"/>
 <artifact deprecated="true" id="Profile/mcode-cancer-condition-parent" key="cancer-condition-parent" name="Cancer Condition Parent"/>
 <artifact id="StructureDefinition/mcode-cancer-disease-status" key="cancer-disease-status" name="Cancer Disease Status"/>
@@ -156,7 +156,7 @@
 <artifact deprecated="true" id="ValueSet/mcode-tnm-stage-group-value-set" key="tnm-stage-group-value-set" name="TNM Stage Group Value Set"/>
 <artifact id="ValueSet/mcode-teleradiotherapy-modality-vs" key="ValueSet-mcode-teleradiotherapy-modality-vs" name="Teleradiotherapy Modality Value Set"/>
 <artifact id="ValueSet/mcode-teleradiotherapy-technique-vs" key="ValueSet-mcode-teleradiotherapy-technique-vs" name="Teleradiotherapy Technique Value Set"/>
-<artifact id="StructureDefinition/mcode-teleradiotherapy-treatment-phase" key="StructureDefinition-mcode-teleradiotherapy-treatment-phase" name="Teleradiotherapy Treatment Phase"/>
+<artifact deprecated="true" id="StructureDefinition/mcode-teleradiotherapy-treatment-phase" key="StructureDefinition-mcode-teleradiotherapy-treatment-phase" name="Teleradiotherapy Treatment Phase"/>
 <artifact id="StructureDefinition/mcode-treatment-termination-reason" key="StructureDefinition-mcode-treatment-termination-reason" name="Termination Reason"/>
 <artifact deprecated="true" id="Extension/mcode-termination-reason-extension" key="termination-reason-extension" name="Termination Reason Extension"/>
 <artifact id="CodeSystem/TbdCodes" key="CodeSystem-TbdCodes" name="ToBeDeterminedCodes ('TbdCodes')"/>
@@ -167,6 +167,7 @@
 <artifact id="StructureDefinition/mcode-tumor" key="StructureDefinition-mcode-tumor" name="Tumor"/>
 <artifact deprecated="true" id="Profile/mcode-tumor-marker" key="tumor-marker" name="Tumor Marker"/>
 <artifact id="StructureDefinition/mcode-tumor-marker-test" key="StructureDefinition-mcode-tumor-marker-test" name="Tumor Marker Test"/>
+<artifact id="ValueSet/mcode-tumor-marker-test-extensional-vs" key="ValueSet-mcode-tumor-marker-test-extensional-vs" name="Tumor Marker Test Extensional Value Set"/>
 <artifact id="ValueSet/mcode-tumor-marker-test-vs" key="tumor-marker-test-value-set" name="Tumor Marker Test Value Set"/>
 <artifact id="StructureDefinition/mcode-tumor-size" key="StructureDefinition-mcode-tumor-size" name="Tumor Size"/>
 <artifact id="StructureDefinition/mcode-tumor-specimen" key="StructureDefinition-mcode-tumor-specimen" name="Tumor Specimen"/>
@@ -177,7 +178,7 @@
 <artifact id="Observation/bodyheight-jenny-m-2018-03-06" key="Observation-bodyheight-jenny-m-2018-03-06" name="bodyheight-jenny-m-2018-03-06"/>
 <artifact id="Observation/bodyweight-jenny-m-2018-03-16" key="Observation-bodyweight-jenny-m-2018-03-16" name="bodyweight-jenny-m-2018-03-16"/>
 <artifact id="Observation/bodyweight-jenny-m-2018-04-22" key="Observation-bodyweight-jenny-m-2018-04-22" name="bodyweight-jenny-m-2018-04-22"/>
-<artifact id="Procedure/brachytherapy-treatment-phase-low-dose-rate-temporary" key="Procedure-brachytherapy-treatment-phase-low-dose-rate-temporary" name="brachytherapy-treatment-phase-low-dose-rate-temporary"/>
+<artifact deprecated="true" id="Procedure/brachytherapy-treatment-phase-low-dose-rate-temporary" key="Procedure-brachytherapy-treatment-phase-low-dose-rate-temporary" name="brachytherapy-treatment-phase-low-dose-rate-temporary"/>
 <artifact id="Observation/cancer-disease-status-improved" key="Observation-cancer-disease-status-improved" name="cancer-disease-status-improved"/>
 <artifact id="Observation/cancer-disease-status-jenny-m" key="Observation-cancer-disease-status-jenny-m" name="cancer-disease-status-jenny-m"/>
 <artifact id="Observation/cancer-genetic-variant-germline-deletion" key="Observation-cancer-genetic-variant-germline-deletion" name="cancer-genetic-variant-germline-deletion"/>
@@ -266,8 +267,8 @@
 <artifact id="Condition/primary-cancer-condition-nsclc" key="Condition-primary-cancer-condition-nsclc" name="primary-cancer-condition-nsclc"/>
 <artifact id="Procedure/radiotherapy-treatment-summary-chest-wall-jenny-m" key="Procedure-radiotherapy-treatment-summary-chest-wall-jenny-m" name="radiotherapy-treatment-summary-chest-wall-jenny-m"/>
 <artifact id="Condition/secondary-cancer-condition-brain-mets" key="Condition-secondary-cancer-condition-brain-mets" name="secondary-cancer-condition-brain-mets"/>
-<artifact id="Procedure/teleradiotherapy-treatment-phase-boost-jenny-m" key="Procedure-teleradiotherapy-treatment-phase-boost-jenny-m" name="teleradiotherapy-treatment-phase-boost-jenny-m"/>
-<artifact id="Procedure/teleradiotherapy-treatment-phase-chest-wall-jenny-m" key="Procedure-teleradiotherapy-treatment-phase-chest-wall-jenny-m" name="teleradiotherapy-treatment-phase-chest-wall-jenny-m"/>
+<artifact deprecated="true" id="Procedure/teleradiotherapy-treatment-phase-boost-jenny-m" key="Procedure-teleradiotherapy-treatment-phase-boost-jenny-m" name="teleradiotherapy-treatment-phase-boost-jenny-m"/>
+<artifact deprecated="true" id="Procedure/teleradiotherapy-treatment-phase-chest-wall-jenny-m" key="Procedure-teleradiotherapy-treatment-phase-chest-wall-jenny-m" name="teleradiotherapy-treatment-phase-chest-wall-jenny-m"/>
 <artifact id="Observation/tnm-clinical-distant-metastases-category-cM0" key="Observation-tnm-clinical-distant-metastases-category-cM0" name="tnm-clinical-distant-metastases-category-cM0"/>
 <artifact id="Observation/tnm-clinical-distant-metastases-category-jenny-m" key="Observation-tnm-clinical-distant-metastases-category-jenny-m" name="tnm-clinical-distant-metastases-category-jenny-m"/>
 <artifact id="Observation/tnm-clinical-primary-tumor-category-cT3" key="Observation-tnm-clinical-primary-tumor-category-cT3" name="tnm-clinical-primary-tumor-category-cT3"/>

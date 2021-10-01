@@ -176,10 +176,9 @@ Description: "A volume of the body used in radiotherapy planning or treatment de
 * location ^short = "Body Location Code."
 * location ^definition = "A code and qualifiers (via extensions) specifying the TG263 body structure comprising the irradiated volume."
 * location.extension contains
-     BodyLocationQualifier named locationQualifier 0..*   and
+     RadiotherapyTreatmentLocationQualifier named locationQualifier 0..*   and
      LateralityQualifier named lateralityQualifier 0..1
 * locationQualifier 0..0
-* location.extension[locationQualifier].value[x] from RadiotherapyTreatmentLocationQualifierVS (required)
 * identifier and location and description and patient and morphology and location.extension[locationQualifier] and location.extension[lateralityQualifier] MS
 * patient only Reference(CancerPatient)
 

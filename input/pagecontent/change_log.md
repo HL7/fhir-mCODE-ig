@@ -32,13 +32,15 @@
 * [FHIR-33003](https://jira.hl7.org/browse/FHIR-33003)  Make extension values required
 
 #### [Block Vote 4](https://jira.hl7.org/issues/?filter=14928)
-
+* [FHIR-32827](https://jira.hl7.org/browse/FHIR-32827) Added Values Urine, Stool and Other to Genetic Specimen Type Value Set
 #### [Block Vote 5](https://jira.hl7.org/issues/?filter=15618)
 
 #### [Block Vote 6](https://jira.hl7.org/issues/?filter=15619)
 
 ### Other
 * [FHIR-33343](https://jira.hl7.org/browse/FHIR-33343)  RadiotherapyTreatmentLocationVS/RadiotherapyTreatmentLocationQualifierVS should align with TG263 Anatomy Terms
+* [FHIR-32340](https://jira.hl7.org/browse/FHIR-32340)  Laterality broken out into separate extension
+* [FHIR-33340](https://jira.hl7.org/browse/FHIR-33340)   TreatmentPhase profiles and examples dropped.  Will reappear in Codex-RT IG.
 
 ### mCODE STU 2 Ballot Version (May 2021)
 

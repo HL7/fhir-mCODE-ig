@@ -29,6 +29,7 @@
 [MCODEPatientGroup]: StructureDefinition-mcode-patient-group.html
 [CapabilityStatement]: StructureDefinition-CapabilityStatement.html
 [PrimaryCancerCondition]: StructureDefinition-mcode-primary-cancer-condition.html
+[ProcedureIntent]: StructureDefinition-mcode-procedure-intent.html
 [RadiotherapyCourseSummary]: StructureDefinition-mcode-radiotherapy-course-summary.html
 [RadiotherapyDoseDeliveredToVolume]: StructureDefinition-mcode-radiotherapy-dose-delivered-to-volume.html
 [RadiotherapyFractionsDelivered]:    StructureDefinition-mcode-radiotherapy-fractions-delivered.html
@@ -44,7 +45,6 @@
 [TNMRegionalNodesCategory]: StructureDefinition-mcode-tnm-regional-nodes-category.html
 [CancerStageGroup]: StructureDefinition-mcode-cancer-stage-group.html
 [TreatmentTerminationReason]: StructureDefinition-mcode-treatment-termination-reason.html
-[ProcedureIntent]: StructureDefinition-mcode-procedure-intent.html
 [TumorMarkerTest]: StructureDefinition-mcode-tumor-marker-test.html
 [TumorSize]: StructureDefinition-mcode-tumor-size.html
 [Tumor]: StructureDefinition-mcode-tumor.html
@@ -110,7 +110,7 @@
 [ObservationCodesPrimaryTumorVS]: ValueSet-mcode-observation-codes-primary-tumor-vs.html
 [ObservationCodesRegionalNodesVS]: ValueSet-mcode-observation-codes-regional-nodes-vs.html
 [ObservationCodesDistantMetastasesVS]: ValueSet-mcode-observation-codes-distant-metastases-vs.html
-[PresentAbsentUnknownVS]: ValueSet-mcode-present-absent-unknown.html
+[PresentAbsentVS]: ValueSet-mcode-present-absent.html
 [PrimaryOrUncertainBehaviorCancerDisorderVS]: ValueSet-mcode-primary-or-uncertain-behavior-cancer-disorder-vs.html
 [RadiotherapyModalityVS]: ValueSet-mcode-radiotherapy-modality-vs.html
 [RadiotherapyTechniqueVS]: ValueSet-mcode-radiotherapy-technique-vs.html

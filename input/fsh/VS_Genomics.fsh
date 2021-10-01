@@ -139,6 +139,7 @@ Description:    "The type of specimen analyzed in a genetic test. The values are
 * SPTY#TUMOR     "Tumor"
 * SPTY#VITF      "Vitreous Fluid"
 * SPTY#WND       "Wound"
+<<<<<<< HEAD
 * SPTY#STL      "Stool = Fecal"
 * SPTY#UR       "Urine"
 // * SPTY#ORH      "Other" // value set binding is Extensible, so this is not needed
@@ -152,3 +153,8 @@ Description:    "The type of specimen analyzed in a genetic test. The values are
 // # SPTY#MISSING  "Spleen"
 // # SPTY#STL      "Stool = Fecal"
 // # SPTY#UR       "Urine"
+=======
+* SPTY#UR        "Urine"           // FHIR-32827
+* SPTY#STL       "Stool = Fecal"   // FHIR-32827
+* SPTY#OTH       "Source, Other"   // FHIR-32827
+>>>>>>> master

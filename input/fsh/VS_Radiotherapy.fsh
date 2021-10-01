@@ -141,7 +141,6 @@ Description: "Various modifiers that can be applied to body locations where radi
 * SCT#261074009 "External (qualifier value)"
 * SCT#261115001 "Laryngeal (qualifier value)"
 * SCT#260548002 "Oral (qualifier value)"
-* SCT#55561003 "Active (qualifier value)"
 
 
 
@@ -230,7 +229,8 @@ Description: "Codes describing the body locations where radiotherapy treatments 
 * SCT#73117003 "Sphenoid bone structure (body structure)" // Sphenoid Bone
 * SCT#60911003 "Temporal bone structure (body structure)" // Temporal Bone
 * SCT#13881006 "Zygomatic bone structure (body structure)" // Zygomatic Bone Left
-* SCT#14016003 " |Bone marrow structure (body structure)|" // Bone Marrow
+* SCT#14016003 "Bone marrow structure (body structure)" // Bone Marrow
+* SCT#75330005 "Structure of red bone marrow (body structure)" // Active (red) Bone Marrow
 * SCT#5798000 "Diaphragm structure (body structure)" // Diaphragm
 * SCT#113276009 "Intestinal structure (body structure)" // <none>
 * SCT#14742008 "Structure of large intestine (body structure)" // Large Bowel

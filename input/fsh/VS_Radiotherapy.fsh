@@ -455,7 +455,7 @@ Description: "Codes describing the body locations where radiotherapy treatments 
 * SCT#69695003 "Stomach structure (body structure)" // Stomach
 * SCT#75415000 "Structure of suprapatellar bursa (body structure)" // Suprapatellar Structures
 * SCT#182323001 "Entire eye region (surface region) (body structure)" // <none>
-* SCT#8997002 "Ventricular systole, function (observable entity)" // <none>
+* SCT#279245009 "Space of ventricular system of brain (body structure)" // FMAID  242787
 * SCT#13024002 "Tendon structure (body structure)" // <none>
 * SCT#70567001 "Structure of quadriceps tendon (body structure)" // <none>
 * SCT#40689003 "Testis structure (body structure)" // Testis

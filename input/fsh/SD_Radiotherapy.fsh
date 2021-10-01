@@ -129,8 +129,8 @@ Description:  "Allowed Techniques for Proton Beam Modality"
 Expression: "extension.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-modality').exists() and
              extension.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-technique').exists() and
              extension.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-modality').value.exists(coding.system = 'http://snomed.info/sct' and coding.code = '80347004')
-             implies false"
-            //implies extension.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-technique').value.memberOf('http://hl7.org/fhir/us/mcode/ValueSet/mcode-neutron-beam-technique-vs')"
+             implies
+             extension.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-technique').value.exists(coding.system = 'http://snomed.info/sct' and (coding.code = '169317000' or coding.code = '1162782007'))"
 Severity: #error
 
 Extension: RadiotherapyModality

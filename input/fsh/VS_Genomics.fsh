@@ -141,7 +141,7 @@ Description:    "The type of specimen analyzed in a genetic test. The values are
 * SPTY#WND       "Wound"
 * SPTY#STL      "Stool = Fecal"
 * SPTY#UR       "Urine"
-* SPTY#ORH      "Other"
+// * SPTY#ORH      "Other" // value set binding is Extensible, so this is not needed
 // # FHIR-32827 - Can we convert this to SNOMEDCT?  Or just say, these are all Tissue.   Not persuasive.
 // # SPTY#MISSING  "Brain"
 // # SPTY#MISSING   "Eye"

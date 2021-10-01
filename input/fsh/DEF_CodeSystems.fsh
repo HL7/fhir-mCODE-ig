@@ -129,6 +129,7 @@ Description: "Codes from TG263 Anatomy codes that lack both SNOMEDCT and UMLS de
 * #bowel-space "Bowel Space" // * SCT#USCRS-33351 "Bowel space (body structure)" // Space occupied by bowel
 * #small-bowel-space "Small Bowel Space" // * SCT#USCRS-33352 "Small bowel space (body structure)" // <none>
 * #pre-sacral-lymph-node-group "Presacral lymph node group" // * SCT#USCRS-33346 "Presacral lymph node group (body structure)" // Lymph nodes of pelvis - presacral Left
+* #tumor-bed "Tumor bed (morphologic abnormality)" // There is no snomed term or UMLS term
 
 CodeSystem: TG263Qualifier
 Title: "TG263 Qualifier Codes"

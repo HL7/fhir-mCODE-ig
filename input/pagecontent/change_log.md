@@ -23,17 +23,22 @@
 * [FHIR-32345](https://jira.hl7.org/browse/FHIR-32345)  Changed name of extension from LocationQualifier to BodyLocationQualifier
 
 #### [Block Vote 3](https://jira.hl7.org/issues/?filter=14928)
+* [FHIR-32280](https://jira.hl7.org/browse/FHIR-32279) Exlixhauser Comorbidity profile should have an value. Explanation of when it might be missing.
 * [FHIR-32280](https://jira.hl7.org/browse/FHIR-32280) Exlixhauser Comorbidity profile should have an integer Observation.value
+* [FHIR-32280](https://jira.hl7.org/browse/FHIR-32281) Exlixhauser Comorbidity profile components should be present or absent, not unknown
 * [FHIR-32348](https://jira.hl7.org/browse/FHIR-32348) LocationQualifier --> BodyLocationQualifier
 * [FHIR-32387](https://jira.hl7.org/browse/FHIR-32387) Invariant:  mcode-reason-required generates warning instead of error
 * [FHIR-32649](https://jira.hl7.org/browse/FHIR-32649) Extension 'Radiotherapy Fractions Delivered' added to the summary of extensions for Radiotherapy
 * [FHIR-33003](https://jira.hl7.org/browse/FHIR-33003)  Make extension values required
 
-#### [Block Vote 4](https://jira.hl7.org/issues/?filter=15427)
+#### [Block Vote 4](https://jira.hl7.org/issues/?filter=14928)
 * [FHIR-32827](https://jira.hl7.org/browse/FHIR-32827) Added Values Urine, Stool and Other to Genetic Specimen Type Value Set
+#### [Block Vote 5](https://jira.hl7.org/issues/?filter=15618)
 
+#### [Block Vote 6](https://jira.hl7.org/issues/?filter=15619)
 
-#### Other
+### Other
+* [FHIR-33343](https://jira.hl7.org/browse/FHIR-33343)  RadiotherapyTreatmentLocationVS/RadiotherapyTreatmentLocationQualifierVS should align with TG263 Anatomy Terms
 * [FHIR-32340](https://jira.hl7.org/browse/FHIR-32340)  Laterality broken out into separate extension
 * [FHIR-33340](https://jira.hl7.org/browse/FHIR-33340)   TreatmentPhase profiles and examples dropped.  Will reappear in Codex-RT IG.
 

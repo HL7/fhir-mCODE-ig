@@ -41,7 +41,7 @@ Description: "mCODE Example for Cancer Genomics Report"
 * status = #final "Final"
 * subject = Reference(cancer-patient-john-anyperson)
 * effectiveDateTime = "2019-04-01"
-* specimen = Reference(Specimen/genetic-specimen-lung)
+* specimen = Reference(Specimen/genomic-specimen-lung)
 * issued = "2019-04-01T11:45:33+11:00"
 * result[CancerGenomicVariant] = Reference(Observation/cancer-genomic-variant-somatic-single-nucleotide)
 * result[GenomicRegionStudied] = Reference(genomic-region-studied-stk11)
@@ -65,8 +65,8 @@ Description: "mCODE Example for Tumor Marker Test"
 * performer = Reference(us-core-practitioner-kyle-anydoc)
 * valueCodeableConcept = SCT#10828004 "Positive (qualifier value)"
 
-Instance: genetic-specimen-lung
-InstanceOf: GeneticSpecimen
+Instance: genomic-specimen-lung
+InstanceOf: GenomicSpecimen
 Description: "mCODE Example for Genetic Specimen"
 * status = #available "Available"
 * subject = Reference(cancer-patient-john-anyperson)

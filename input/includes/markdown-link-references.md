@@ -20,7 +20,7 @@
 [ComorbiditiesParent]: StructureDefinition-mcode-comorbidities-parent.html
 [ECOGPerformanceStatus]: StructureDefinition-mcode-ecog-performance-status.html
 [EvidenceType]: StructureDefinition-mcode-evidence-type.html
-[GeneticSpecimen]: StructureDefinition-mcode-genetic-specimen.html
+[GenomicSpecimen]: StructureDefinition-mcode-genomic-specimen.html
 [GenomicRegionStudied]: StructureDefinition-mcode-genomic-region-studied.html
 [HistologyMorphologyBehavior]: StructureDefinition-mcode-histology-morphology-behavior.html
 [KarnofskyPerformanceStatus]: StructureDefinition-mcode-karnofsky-performance-status.html
@@ -101,7 +101,7 @@
 [ElixhauserUlcerVS]: ValueSet-elixhauser-ulcer-vs.html
 [ElixhauserValvularDiseaseVS]: ValueSet-elixhauser-valvular-disease-vs.html
 [ElixhauserWeightLossVS]: ValueSet-elixhauser-weight-loss-vs.html
-[GeneticSpecimenTypeVS]: ValueSet-mcode-genetic-specimen-type-vs.html
+[GenomicSpecimenTypeVS]: ValueSet-mcode-genomic-specimen-type-vs.html
 [HGNCVS]: ValueSet-mcode-hgnc-vs.html
 [HGVSVS]: ValueSet-mcode-hgvs-vs.html
 [HistologyMorphologyBehaviorVS]: ValueSet-mcode-histology-morphology-behavior-vs.html

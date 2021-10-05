@@ -67,7 +67,7 @@ Note that the requests below may return resources associated with patients who a
 
 * Genomics
   * [CancerGenomicVariant]\: `GET [base]/Observation?code=http://loinc.org|69548-6`
-  * [GeneticSpecimen]\: Resources referenced in the `specimen` element in resources conforming to [CancerGenomicVariant] or [CancerGenomicsReport]
+  * [GenomicSpecimen]\: Resources referenced in the `specimen` element in resources conforming to [CancerGenomicVariant] or [CancerGenomicsReport]
   * [CancerGenomicsReport]\: `GET [base]/DiagnosticReport?code=http://loinc.org|81247-9`
   * [GenomicRegionStudied]\: `GET [base]/Observation?code=http://loinc.org|53041-0`
 

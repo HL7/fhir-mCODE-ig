@@ -8,10 +8,10 @@ Description:    "Records an alteration in the most common DNA nucleotide sequenc
 * insert NotUsed(hasMember)
 * code = LNC#69548-6 //"Genetic variant assessment"
 * method from http://loinc.org/vs/LL4048-6 (extensible)
-* specimen only Reference(GeneticSpecimen)
+* specimen only Reference(GenomicSpecimen)
 * value[x] only CodeableConcept
 * value[x] ^short = "Whether the variant is present"
-* value[x] ^definition = "The overall result of the genetic test; specifically, whether a variant is present, absent, no call, or indeterminant."
+* value[x] ^definition = "The overall result of the genomic test; specifically, whether a variant is present, absent, no call, or indeterminant."
 * value[x] from http://loinc.org/vs/LL1971-2 (required)
 
 * insert ObservationComponentSlicingRules
@@ -151,13 +151,13 @@ RuleSet: CancerRelatedSpecimenRules
 * subject and status and type and collection and collection.bodySite and collection.bodySite.extension and collection.bodySite.extension[locationQualifier] MS
 
 
-Profile:    GeneticSpecimen
+Profile:    GenomicSpecimen
 Parent:     Specimen
-Id: mcode-genetic-specimen
+Id: mcode-genomic-specimen
 Title:      "Genetic Specimen"
 Description:    "A small sample of blood, hair, skin, amniotic fluid (the fluid that surrounds a fetus during pregnancy), or other tissue which is excised from a subject for the purposes of genomics testing or analysis."
 * insert CancerRelatedSpecimenRules
-* type from GeneticSpecimenTypeVS (extensible)
+* type from GenomicSpecimenTypeVS (extensible)
 
 
 Profile:    CancerGenomicsReport
@@ -171,13 +171,13 @@ Description:    "Genetic analysis summary report. The report may include one or 
 * category contains GenomicsCategory 1..1
 * category[GenomicsCategory] = DiagnosticService#GE
 * code = LNC#81247-9 //"Master HL7 genetic variant reporting panel"
-* specimen only Reference(GeneticSpecimen)
+* specimen only Reference(GenomicSpecimen)
 * insert DiagnosticReportResultSlicingRules
 * result contains
     CancerGenomicVariant 0..1 MS and
     GenomicRegionStudied 0..1 MS
 * result[CancerGenomicVariant] only Reference(CancerGenomicVariant)
-* result[CancerGenomicVariant] ^short = "Reference to Cancer Genetic Variant"
+* result[CancerGenomicVariant] ^short = "Reference to Cancer Genomic Variant"
 * result[CancerGenomicVariant] ^definition = "Records an alteration in the most common DNA nucleotide sequence. The term variant is increasingly being used in place of the term mutation to describe an alteration that may be benign, pathogenic, or of unknown significance."
 * result[CancerGenomicVariant] ^comment = "When using this element, the referenced Observation must validate against the CancerGenomicVariant profile."
 * result[GenomicRegionStudied] only Reference(GenomicRegionStudied)

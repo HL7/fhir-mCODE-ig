@@ -84,8 +84,8 @@
 <artifact id="CodeSystem/comorbidities-elixhauser-cs" key="CodeSystem-comorbidities-elixhauser-cs" name="Elixhauser Comorbidity Categories"/>
 <artifact id="StructureDefinition/mcode-evidence-type" key="StructureDefinition-mcode-evidence-type" name="Evidence Type"/>
 <artifact deprecated="true" id="Extension/mcode-evidence-type-extension" key="evidence-type-extension" name="Evidence Type Extension"/>
-<artifact id="StructureDefinition/mcode-genetic-specimen" key="genetic-specimen" name="Genetic Specimen"/>
-<artifact id="ValueSet/mcode-genetic-specimen-type-vs" key="genetic-specimen-type-value-set" name="Genetic Specimen Type Value Set"/>
+<artifact id="StructureDefinition/mcode-genomic-specimen" key="genetic-specimen" name="Genetic Specimen"/>
+<artifact id="ValueSet/mcode-genomic-specimen-type-vs" key="genetic-specimen-type-value-set" name="Genetic Specimen Type Value Set"/>
 <artifact id="StructureDefinition/mcode-genomic-region-studied" key="genomic-region-studied" name="Genomic Region Studied"/>
 <artifact deprecated="true" id="ValueSet/mcode-hgvs-sequence-variant-nomenclature-value-set" key="hgvs-sequence-variant-nomenclature-value-set" name="HGVS Sequence Variant Nomenclature Value Set"/>
 <artifact id="ValueSet/mcode-hgnc-vs" key="hugo-gene-nomenclature-committee-gene-names-value-set" name="HUGO Gene Nomenclature Committee Gene Names Value Set"/>
@@ -211,10 +211,12 @@
 <artifact id="FamilyMemberHistory/family-member-history-aunt-jenny-m" key="FamilyMemberHistory-family-member-history-aunt-jenny-m" name="family-member-history-aunt-jenny-m"/>
 <artifact id="FamilyMemberHistory/family-member-history-sister-jenny-m" key="FamilyMemberHistory-family-member-history-sister-jenny-m" name="family-member-history-sister-jenny-m"/>
 <artifact id="FamilyMemberHistory/family-member-history-uncle-jenny-m" key="FamilyMemberHistory-family-member-history-uncle-jenny-m" name="family-member-history-uncle-jenny-m"/>
-<artifact id="Specimen/genetic-specimen-left-breast-jenny-m" key="Specimen-genetic-specimen-left-breast-jenny-m" name="genetic-specimen-left-breast-jenny-m"/>
-<artifact id="Specimen/genetic-specimen-lung" key="Specimen-genetic-specimen-lung" name="genetic-specimen-lung"/>
+<artifact deprecated="true" id="Specimen/genetic-specimen-left-breast-jenny-m" key="Specimen-genetic-specimen-left-breast-jenny-m" name="genetic-specimen-left-breast-jenny-m"/>
+<artifact deprecated="true" id="Specimen/genetic-specimen-lung" key="Specimen-genetic-specimen-lung" name="genetic-specimen-lung"/>
 <artifact id="Observation/genomic-region-studied-jenny-m" key="Observation-genomic-region-studied-jenny-m" name="genomic-region-studied-jenny-m"/>
 <artifact id="Observation/genomic-region-studied-stk11" key="Observation-genomic-region-studied-stk11" name="genomic-region-studied-stk11"/>
+<artifact id="Specimen/genomic-specimen-left-breast-jenny-m" key="Specimen-genomic-specimen-left-breast-jenny-m" name="genomic-specimen-left-breast-jenny-m"/>
+<artifact id="Specimen/genomic-specimen-lung" key="Specimen-genomic-specimen-lung" name="genomic-specimen-lung"/>
 <artifact id="BodyStructure/jenny-m-chest-wall-lymph-nodes-treatment-volume" key="BodyStructure-jenny-m-chest-wall-lymph-nodes-treatment-volume" name="jenny-m-chest-wall-lymph-nodes-treatment-volume"/>
 <artifact id="BodyStructure/jenny-m-chest-wall-treatment-volume" key="BodyStructure-jenny-m-chest-wall-treatment-volume" name="jenny-m-chest-wall-treatment-volume"/>
 <artifact id="BodyStructure/john-anyperson-treatment-volume" key="BodyStructure-john-anyperson-treatment-volume" name="john-anyperson-treatment-volume"/>

@@ -46,9 +46,9 @@ Description: "Extended example: example biopsy procedure"
 * reasonReference = Reference(primary-cancer-condition-jenny-m)
 * bodySite = SCT#80248007 "Left breast structure (body structure)"
 
-Instance: genetic-specimen-left-breast-jenny-m
-InstanceOf: GeneticSpecimen
-Description: "Extended example: example showing genetic specimen for sequencing"
+Instance: genomic-specimen-left-breast-jenny-m
+InstanceOf: GenomicSpecimen
+Description: "Extended example: example showing genomic specimen for sequencing"
 * status = #available "available"
 * type = http://terminology.hl7.org/CodeSystem/v2-0487#TISS
 * subject = Reference(cancer-patient-jenny-m)
@@ -297,7 +297,7 @@ Description: "Extended example: example of gene panel report"
 * subject = Reference(cancer-patient-jenny-m)
 * effectiveDateTime = "2018-03-15"
 * issued = "2020-03-15T00:00:01+00:00"
-* specimen = Reference(genetic-specimen-left-breast-jenny-m)
+* specimen = Reference(genomic-specimen-left-breast-jenny-m)
 * result[0] = Reference(cancer-genomic-variant-jenny-m)
 * result[1] = Reference(genomic-region-studied-jenny-m)
 
@@ -320,7 +320,7 @@ Description: "Extended example: example showing which regions were included in t
 
 Instance: cancer-genomic-variant-jenny-m
 InstanceOf: CancerGenomicVariant
-Description: "Extended example: example showing genetic variant found by breast cancer genomics panel"
+Description: "Extended example: example showing genomic variant found by breast cancer genomics panel"
 * status = #final "final"
 * code = LNC#69548-6 "Genetic variant assessment"
 * subject = Reference(cancer-patient-jenny-m)

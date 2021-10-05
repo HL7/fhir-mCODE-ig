@@ -115,8 +115,7 @@ Description: "Various modifiers that can be applied to body locations where radi
 // Lymph node level XA (qualifier value) - R
 // Lymph node level XB (qualifier value) - R
 
-* SCT#7771000    "Left (qualifier value)"
-* SCT#24028007    "Right (qualifier value)"
+* include codes from valueset LateralityQualifierVS
 * SCT#255549009    "Anterior (qualifier value)"
 * SCT#255551008    "Posterior (qualifier value)"
 * SCT#261089000    "Inferior (qualifier value)"
@@ -128,7 +127,6 @@ Description: "Various modifiers that can be applied to body locations where radi
 * SCT#40415009    "Proximal (qualifier value)"
 * SCT#255503000    "Entire (qualifier value)"
 * SCT#255609007    "Partial (qualifier value)"
-* SCT#51440002    "Right and left (qualifier value)"
 * SCT#14414005  "Peripheral (qualifier value)"
 * SCT#26216008  "Central (qualifier value)"
 * SCT#18769003   "Adjacent" // "Juxta-posed (qualifier value)"

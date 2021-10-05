@@ -52,7 +52,7 @@ A timeline of the narrative is illustrated in the following diagram:
 * [`cancer-genomics-report-jenny-m`](DiagnosticReport-cancer-genomics-report-jenny-m.html) ([CancerGenomicsReport])
 * [`genomic-region-studied-jenny-m`](Observation-genomic-region-studied-jenny-m.html) ([GenomicRegionStudied])
 * [`genetic-specimen-left-breast-jenny-m`](Specimen-genetic-specimen-left-breast-jenny-m.html) ([GeneticSpecimen])
-* [`cancer-genetic-variant-jenny-m`](Observation-cancer-genetic-variant-jenny-m.html) ([CancerGeneticVariant])
+* [`cancer-genomic-variant-jenny-m`](Observation-cancer-genomic-variant-jenny-m.html) ([CancerGenomicVariant])
 * [`cancer-related-medication-request-doxorubicin-jenny-m`](MedicationRequest-cancer-related-medication-request-doxorubicin-jenny-m.html) ([CancerRelatedMedicationRequest])
 * [`cancer-related-medication-request-cyclophosphamide-jenny-m`](MedicationRequest-cancer-related-medication-request-cyclophosphamide-jenny-m.html) ([CancerRelatedMedicationRequest])
 * [`cancer-related-medication-request-paclitaxel-jenny-m`](MedicationRequest-cancer-related-medication-request-paclitaxel-jenny-m.html) ([CancerRelatedMedicationRequest])

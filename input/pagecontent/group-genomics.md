@@ -20,7 +20,7 @@ There are however tumor marker tests that are molecular marker equivalent tests 
 mCODE includes genomics-related data elements needed inform cancer assessment and treatment options. The profiles are based on the [HL7 CGWG Clinical Genomics Reporting Implementation Guide](http://hl7.org/fhir/uv/genomics-reporting/index.html). Four profiles relate to the capture of clinical genomics data:
 
 * [CancerGenomicsReport] - contain results of genomic analyses. Genomic reports vary in complexity and content, as simple as the results for a single discrete variant to complex sequences.
-* [CancerGeneticVariant] - used to record variants that could be found from tests that broadly analyze genetic regions (e.g.: exome tests) and stores results for any variants that could have been found. The region in which the variant was found could be specified in the RegionStudied attribute of the GenomicsReport profile.
+* [CancerGenomicVariant] - used to record variants that could be found from tests that broadly analyze genetic regions (e.g.: exome tests) and stores results for any variants that could have been found. The region in which the variant was found could be specified in the RegionStudied attribute of the GenomicsReport profile.
 * [GenomicRegionStudied] - used to record the portion(s) of the genome that was tested for variants.
 * [GeneticSpecimen] - describes a specimen collected for a genomics test.
 
@@ -31,7 +31,7 @@ The identity of non-genomic laboratory tests is typically represented by a [Logi
 
 ### Profiles
 
-* [CancerGeneticVariant]
+* [CancerGenomicVariant]
 * [GeneticSpecimen]
 * [CancerGenomicsReport]
 * [GenomicRegionStudied]

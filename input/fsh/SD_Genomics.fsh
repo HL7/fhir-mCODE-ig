@@ -1,6 +1,6 @@
-Profile:    CancerGeneticVariant
+Profile:    CancerGenomicVariant
 Parent:     USCoreObservationLab
-Id: mcode-cancer-genetic-variant
+Id: mcode-cancer-genomic-variant
 Title:      "Cancer Genetic Variant"
 Description:    "Records an alteration in the most common DNA nucleotide sequence. The term variant can be used to describe an alteration that may be benign, pathogenic, or of unknown significance. The term variant is increasingly being used in place of the term mutation."
 * insert NotUsed(bodySite)
@@ -174,12 +174,12 @@ Description:    "Genetic analysis summary report. The report may include one or 
 * specimen only Reference(GeneticSpecimen)
 * insert DiagnosticReportResultSlicingRules
 * result contains
-    CancerGeneticVariant 0..1 MS and
+    CancerGenomicVariant 0..1 MS and
     GenomicRegionStudied 0..1 MS
-* result[CancerGeneticVariant] only Reference(CancerGeneticVariant)
-* result[CancerGeneticVariant] ^short = "Reference to Cancer Genetic Variant"
-* result[CancerGeneticVariant] ^definition = "Records an alteration in the most common DNA nucleotide sequence. The term variant is increasingly being used in place of the term mutation to describe an alteration that may be benign, pathogenic, or of unknown significance."
-* result[CancerGeneticVariant] ^comment = "When using this element, the referenced Observation must validate against the CancerGeneticVariant profile."
+* result[CancerGenomicVariant] only Reference(CancerGenomicVariant)
+* result[CancerGenomicVariant] ^short = "Reference to Cancer Genetic Variant"
+* result[CancerGenomicVariant] ^definition = "Records an alteration in the most common DNA nucleotide sequence. The term variant is increasingly being used in place of the term mutation to describe an alteration that may be benign, pathogenic, or of unknown significance."
+* result[CancerGenomicVariant] ^comment = "When using this element, the referenced Observation must validate against the CancerGenomicVariant profile."
 * result[GenomicRegionStudied] only Reference(GenomicRegionStudied)
 * result[GenomicRegionStudied] ^short = "Reference to Genomic Region Studied"
 * result[GenomicRegionStudied] ^definition = "The area of the genome region referenced in testing for variants."

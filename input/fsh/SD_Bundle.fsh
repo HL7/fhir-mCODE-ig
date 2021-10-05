@@ -12,7 +12,7 @@ Description: "A collection of data for an mCODE cancer patient."
 
 // * insert BundleEntry(brachytherapyTreatmentPhase, 0, *, Brachytherapy Phase Summary, Procedure resource representing one phase in cancer-related brachytherapy radiology procedures., BrachytherapyTreatmentPhase)
 * insert BundleEntry(cancerDiseaseStatus, 0, *, Cancer Disease Status, Observations resource representing Cancer Disease Status. Include past assessments if available., CancerDiseaseStatus)
-* insert BundleEntry(cancerGeneticVariant, 0, *, Cancer Genetic Variant, Observation resource representing genetic variants., CancerGeneticVariant)
+* insert BundleEntry(CancerGenomicVariant, 0, *, Cancer Genetic Variant, Observation resource representing genetic variants., CancerGenomicVariant)
 * insert BundleEntry(cancerGenomicsReport, 0, *, Cancer Genomics Report, DiagnosticReport resource representing cancer genomics reports., CancerGenomicsReport)
 * insert BundleEntry(cancerPatient, 1, 1, Cancer Patient, The Cancer Patient whose data is included in the bundle., CancerPatient)
 * insert BundleEntry(cancerStageGroup, 0, *, Cancer Stage Group, Observation resource representing the cancer stage group., CancerStageGroup)

@@ -363,7 +363,7 @@ Description: "Codes describing the body locations where radiotherapy treatments 
 * TG263#pre-sacral-lymph-node-group "Presacral lymph node group" // * SCT#USCRS-33346 "Presacral lymph node group (body structure)" // Lymph nodes of pelvis - presacral Left
 * SCT#196662004 "Structure of intrapulmonary lymph node (body structure)" // Lymph nodes of thorax - Pulmonary Left
 * SCT#76838003 "Structure of supraclavicular lymph node (body structure)" // Supraclavicular Lymph Node Left
-* SCT#4719002 "Structure of lymph node of thorax (body structure)" // Lymph nodes of thorax - Supramammary Left
+// * SCT#4719002 "Structure of lymph node of thorax (body structure)" // Lymph nodes of thorax - Supramammary Left -- RTTD100521
 * SCT#245283006 "Tracheobronchial lymph node group (body structure)" // Lymph nodes of thorax - Tracheobronchial
 * SCT#84782009 "Peripheral nerve structure (body structure)" // Peripheral Nerve
 * SCT#40958000 "Nerve root structure (body structure)" // Nerve Root

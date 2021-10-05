@@ -51,14 +51,6 @@ Description: "Qualifier to refine an body location. These include qualifiers for
 * value[x] from BodyLocationQualifierVS (required)
 * value[x] 1..1
 
-Extension: RadiotherapyTreatmentLocationQualifier
-Id: mcode-treatment-location-qualifier
-Title: "Radiotherapy Treatment Location Qualifier"
-Description: "Qualifier to refine a radiotherapy treatment location, as required to support TG263. These include qualifiers for relative location, directionality, number, and plane, and exclude qualifiers for laterality."
-* value[x] only CodeableConcept
-* value[x] from RadiotherapyTreatmentLocationQualifierVS (required)
-* value[x] 1..1
-
 Extension: LateralityQualifier
 Id: mcode-laterality-qualifier
 Title: "Laterality Qualifier"

@@ -89,7 +89,7 @@ Id: mcode-radiotherapy-treatment-location-qualifier-vs
 Title: "Radiotherapy Treatment Location Qualifier Value Set"
 Description: "Various modifiers that can be applied to body locations where radiotherapy treatments can be directed."
 * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
-* include codes from system SCT where concept is-a #254292007 "Lymph node level value (qualifier value)"
+* include codes from system SCT where concept is-a #258399006  "Lymph node level value (qualifier value)"
 // SCT codes requested or existing
 // * SCT#258400004 "Lymph node level I (qualifier value)"
 // * SCT#1162616006 "Lymph node level Ia (qualifier value)"
@@ -131,7 +131,7 @@ Description: "Various modifiers that can be applied to body locations where radi
 * SCT#26216008  "Central (qualifier value)"
 * SCT#18769003   "Adjacent" // "Juxta-posed (qualifier value)"
 * UMLS#C0687118  "Detached"  // standing in for non-adjacent  (USCRS-33144)
-* include codes from system SCT where concept is-a #258399006  "Lymph node level value (qualifier value)"
+
 
 // ValueSet: LymphNodeLocationQualifierVS
 // Id: mcode-lymph-node-location-qualifier-vs

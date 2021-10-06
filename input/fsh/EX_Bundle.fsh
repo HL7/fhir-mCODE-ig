@@ -20,8 +20,8 @@ Description: "Extended example as a mCODE Patient Bundle"
 // Other slices
 * entry[2].resource = cancer-disease-status-jenny-m
 * entry[=].fullUrl = "http://example.org/fhir/Observation/cancer-disease-status-jenny-m"
-* entry[+].resource = cancer-genetic-variant-jenny-m
-* entry[=].fullUrl = "http://example.org/fhir/Observation/cancer-genetic-variant-jenny-m"
+* entry[+].resource = cancer-genomic-variant-jenny-m
+* entry[=].fullUrl = "http://example.org/fhir/Observation/cancer-genomic-variant-jenny-m"
 * entry[+].resource = cancer-genomics-report-jenny-m
 * entry[=].fullUrl = "http://example.org/fhir/DiagnosticReport/cancer-genomics-report-jenny-m"
 * entry[+].resource = cancer-related-surgical-procedure-jenny-m
@@ -40,8 +40,8 @@ Description: "Extended example as a mCODE Patient Bundle"
 * entry[=].fullUrl = "http://example.org/fhir/Observation/tnm-clinical-regional-nodes-category-jenny-m"
 * entry[+].resource = tnm-clinical-distant-metastases-category-jenny-m
 * entry[=].fullUrl = "http://example.org/fhir/Observation/tnm-clinical-distant-metastases-category-jenny-m"
-* entry[+].resource = genetic-specimen-left-breast-jenny-m
-* entry[=].fullUrl = "http://example.org/fhir/Specimen/genetic-specimen-left-breast-jenny-m"
+* entry[+].resource = genomic-specimen-left-breast-jenny-m
+* entry[=].fullUrl = "http://example.org/fhir/Specimen/genomic-specimen-left-breast-jenny-m"
 * entry[+].resource = genomic-region-studied-jenny-m
 * entry[=].fullUrl = "http://example.org/fhir/Observation/genomic-region-studied-jenny-m"
 * entry[+].resource = ecog-performance-status-jenny-m

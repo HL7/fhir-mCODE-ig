@@ -17,8 +17,8 @@ The following table presents the external code systems (and naming conventions) 
 | ICD-10-CM | Diagnosis codes | Yes | <http://hl7.org/fhir/sid/icd-10-cm> |
 | ICD-10-PCS | Procedure codes | No | <http://www.cms.gov/Medicare/Coding/ICD10> |
 | LOINC | Observation and laboratory codes, answer codes | Yes | <http://loinc.org> |
-| NCBI GTR | Genetic test codes | No | Missing |
-| NCBI ClinVar | Genetic variations | No | Missing |
+| NCBI GTR | Genomic test codes | No | Missing |
+| NCBI ClinVar | Genomic variations | No | Missing |
 | RxNorm | Medication codes | Yes | <http://www.nlm.nih.gov/research/umls/rxnorm> |
 | Sequence Ontology | DNA change types | No | Missing |
 | SNOMED CT | Disorders, body structures, findings, qualifiers | Yes | <http://snomed.info/sct> |

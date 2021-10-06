@@ -11,8 +11,8 @@ RuleSet: CategorySlicingRules
 * category ^slicing.description = "Slicing requires the given value but allows additional categories"
 
 RuleSet: ObservationHasMemberSlicingRules
-* hasMember ^slicing.discriminator.type = #pattern  // #profile  
-* hasMember ^slicing.discriminator.path = "$this.resolve().code" // "$this.resolve()" 
+* hasMember ^slicing.discriminator.type = #pattern  // #profile
+* hasMember ^slicing.discriminator.path = "$this.resolve().code" // "$this.resolve()"
 * hasMember ^slicing.rules = #open
 * hasMember ^slicing.description = "Slicing based on referenced resource code attribute."
 
@@ -93,7 +93,7 @@ RuleSet: BundleEntry(name, min, max, short, def, class)
 * entry[{name}].response.modifierExtension ^requirements = "~"
 * entry[{name}].response.modifierExtension 0..0
 * entry[{name}].fullUrl ^definition = "~"
-* entry[{name}].fullUrl ^comment = "~" 
+* entry[{name}].fullUrl ^comment = "~"
 
 
 RuleSet: ReduceText
@@ -103,7 +103,7 @@ RuleSet: ReduceText
 * modifierExtension ^definition = "~"
 * modifierExtension ^comment = "~"
 * modifierExtension ^requirements = "~"
-* modifierExtension 0..0 
+* modifierExtension 0..0
 
 RuleSet: ReduceText(path)
 * {path}.extension ^definition = "~"

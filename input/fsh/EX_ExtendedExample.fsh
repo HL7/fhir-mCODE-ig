@@ -46,9 +46,9 @@ Description: "Extended example: example biopsy procedure"
 * reasonReference = Reference(primary-cancer-condition-jenny-m)
 * bodySite = SCT#80248007 "Left breast structure (body structure)"
 
-Instance: genetic-specimen-left-breast-jenny-m
-InstanceOf: GeneticSpecimen
-Description: "Extended example: example showing genetic specimen for sequencing"
+Instance: genomic-specimen-left-breast-jenny-m
+InstanceOf: GenomicSpecimen
+Description: "Extended example: example showing genomic specimen for sequencing"
 * status = #available "available"
 * type = http://terminology.hl7.org/CodeSystem/v2-0487#TISS
 * subject = Reference(cancer-patient-jenny-m)
@@ -65,6 +65,7 @@ Description: "Extended example: example showing smoking status"
 * code = LNC#72166-2 "Tobacco smoking status"
 * subject = Reference(cancer-patient-jenny-m)
 * issued = "2018-03-16T00:00:00Z"
+* effectiveDateTime = "2018-03-16"
 * valueCodeableConcept = SCT#449868002 "Smokes tobacco daily (finding)"
 
 Instance: observation-smoking-history-jenny-m
@@ -296,8 +297,8 @@ Description: "Extended example: example of gene panel report"
 * subject = Reference(cancer-patient-jenny-m)
 * effectiveDateTime = "2018-03-15"
 * issued = "2020-03-15T00:00:01+00:00"
-* specimen = Reference(genetic-specimen-left-breast-jenny-m)
-* result[0] = Reference(cancer-genetic-variant-jenny-m)
+* specimen = Reference(genomic-specimen-left-breast-jenny-m)
+* result[0] = Reference(cancer-genomic-variant-jenny-m)
 * result[1] = Reference(genomic-region-studied-jenny-m)
 
 Instance: genomic-region-studied-jenny-m
@@ -317,9 +318,9 @@ Description: "Extended example: example showing which regions were included in t
 * component[geneStudied].valueCodeableConcept.coding[+] = HGNC#11389 "STK11"
 * component[geneStudied].valueCodeableConcept.coding[+] = HGNC#11998 "TP53"
 
-Instance: cancer-genetic-variant-jenny-m
-InstanceOf: CancerGeneticVariant
-Description: "Extended example: example showing genetic variant found by breast cancer genomics panel"
+Instance: cancer-genomic-variant-jenny-m
+InstanceOf: CancerGenomicVariant
+Description: "Extended example: example showing genomic variant found by breast cancer genomics panel"
 * status = #final "final"
 * code = LNC#69548-6 "Genetic variant assessment"
 * subject = Reference(cancer-patient-jenny-m)
@@ -620,7 +621,7 @@ Description: "Example of radiotherapy treatment summary involving external beam 
 * asserter = Reference(us-core-practitioner-kyle-anydoc)
 
 // Modified to use neutron modality and NCT technique...should be shifted back to original values
-Instance: teleradiotherapy-treatment-phase-chest-wall-jenny-m
+Instance: teleradiotherapy-treatment-phase-chest-wall-jenny-m-invalid
 InstanceOf: TeleradiotherapyTreatmentPhase
 Description: "Example of teleradiotherapy treatment phase involving external beam radiation to chest wall and regional node radiation"
 * status = #completed "completed"
@@ -640,7 +641,7 @@ Description: "Example of teleradiotherapy treatment phase involving external bea
 * asserter = Reference(us-core-practitioner-kyle-anydoc)
 
 // Modified to use neutron modality and NCT technique...should be shifted back to original values
-Instance: teleradiotherapy-treatment-phase-chest-wall-jenny-m-invalid
+Instance: teleradiotherapy-treatment-phase-chest-wall-jenny-m-valid
 InstanceOf: TeleradiotherapyTreatmentPhase
 Description: "Example of teleradiotherapy treatment phase involving external beam radiation to chest wall and regional node radiation"
 * status = #completed "completed"
@@ -683,7 +684,7 @@ Description: "Anatomic volume 1 for Jenny M's teleradiotherapy."
 * description = "Chest Wall"
 * identifier.value = "1.2.246.352…1"
 * location = SCT#78904004 "Chest wall structure (body structure)"
-* locationQualifier = SCT#255503000 "Entire (qualifier value)"
+* location.extension[locationQualifier][0].valueCodeableConcept = SCT#255503000 "Entire (qualifier value)"
 
 Instance: jenny-m-chest-wall-lymph-nodes-treatment-volume
 InstanceOf: RadiotherapyVolume
@@ -692,7 +693,7 @@ Description: "Anatomic volume 2 for Jenny M's teleradiotherapy."
 * description = "Chest Wall Lymph Nodes"
 * identifier.value = "1.2.246.352…2"
 * location = SCT#245276004 "Mediastinal lymph node group (body structure)"
-* locationQualifier = SCT#51440002  "Right and left (qualifier value)"
+* location.extension[locationQualifier][0].valueCodeableConcept = SCT#51440002  "Right and left (qualifier value)"
 
 Instance: cancer-related-medication-request-anastrozole-jenny-m
 InstanceOf: CancerRelatedMedicationRequest

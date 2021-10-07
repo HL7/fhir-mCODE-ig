@@ -1,5 +1,5 @@
-Instance: cancer-genetic-variant-somatic-single-nucleotide
-InstanceOf: CancerGeneticVariant
+Instance: cancer-genomic-variant-somatic-single-nucleotide
+InstanceOf: CancerGenomicVariant
 Description: "mCODE Example for Cancer Genetic Variant"
 * status = #final "Final"
 * method = LNC#LA26398-0 "Sequencing"
@@ -17,12 +17,12 @@ Description: "mCODE Example for Cancer Genetic Variant"
 * component[genomicDNAChange].valueCodeableConcept = HGVS#NC_000019.8:g.1171707G>A "NC_000019.8:g.1171707G>A"
 * component[genomicSourceClass].valueCodeableConcept = LNC#LA6684-0 "Somatic"
 
-/* cancer-genetic-variant-germline-deletion is an example of the
- * CancerGeneticVariant to represent a single mutation test.
+/* cancer-genomic-variant-germline-deletion is an example of the
+ * CancerGenomicVariant to represent a single mutation test.
  * This example demonstrates a test for a single germline mutation, BRCA1 gene.c.185delAG, equivalent to the LOINC test https://loinc.org/21637-4/.
  */
-Instance: cancer-genetic-variant-germline-deletion
-InstanceOf: CancerGeneticVariant
+Instance: cancer-genomic-variant-germline-deletion
+InstanceOf: CancerGenomicVariant
 Description: "mCODE Example for Cancer Genetic Variant"
 * status = #final "Final"
 * method = LNC#LA26398-0 "Sequencing"
@@ -41,9 +41,9 @@ Description: "mCODE Example for Cancer Genomics Report"
 * status = #final "Final"
 * subject = Reference(cancer-patient-john-anyperson)
 * effectiveDateTime = "2019-04-01"
-* specimen = Reference(Specimen/genetic-specimen-lung)
+* specimen = Reference(Specimen/genomic-specimen-lung)
 * issued = "2019-04-01T11:45:33+11:00"
-* result[CancerGeneticVariant] = Reference(Observation/cancer-genetic-variant-somatic-single-nucleotide)
+* result[CancerGenomicVariant] = Reference(Observation/cancer-genomic-variant-somatic-single-nucleotide)
 * result[GenomicRegionStudied] = Reference(genomic-region-studied-stk11)
 
 Instance: genomic-region-studied-stk11
@@ -65,8 +65,8 @@ Description: "mCODE Example for Tumor Marker Test"
 * performer = Reference(us-core-practitioner-kyle-anydoc)
 * valueCodeableConcept = SCT#10828004 "Positive (qualifier value)"
 
-Instance: genetic-specimen-lung
-InstanceOf: GeneticSpecimen
+Instance: genomic-specimen-lung
+InstanceOf: GenomicSpecimen
 Description: "mCODE Example for Genetic Specimen"
 * status = #available "Available"
 * subject = Reference(cancer-patient-john-anyperson)

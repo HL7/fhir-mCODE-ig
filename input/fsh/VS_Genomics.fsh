@@ -1,7 +1,7 @@
 ValueSet:    ClinVarVS
 Id: mcode-clinvar-vs
 Title: "ClinVar Value Set"
-Description: "Value set of human genetic variants, drawn from [ClinVar](https://www.ncbi.nlm.nih.gov/clinvar/). The codes in this value set refer to the ClinVar Variation ID, or the identifier for the variant or set of variants that were interpreted. [Source: NCBI ClinVar Data Dictionary](https://www.ncbi.nlm.nih.gov/projects/clinvar/ClinVarDataDictionary.pdf)"
+Description: "Value set of human genomic variants, drawn from [ClinVar](https://www.ncbi.nlm.nih.gov/clinvar/). The codes in this value set refer to the ClinVar Variation ID, or the identifier for the variant or set of variants that were interpreted. [Source: NCBI ClinVar Data Dictionary](https://www.ncbi.nlm.nih.gov/projects/clinvar/ClinVarDataDictionary.pdf)"
 * codes from system CLINVAR
 
 ValueSet:  HGNCVS
@@ -31,7 +31,7 @@ Description: "Changes in a structural features of a sequence due to the observed
 ValueSet: TumorMarkerTestVS
 Id: mcode-tumor-marker-test-vs
 Title: "Tumor Marker Test Value Set"
-Description:    "Codes representing tests for tumor markers. This value set of LOINC codes is not comprehensive and can be extended. Other vocabularies can be used only if the test of interest is not covered by LOINC. Tumor marker tests differ from genetic tests in that they measure levels of protein or other substances produced downstream from RNA protein synthesis."
+Description:    "Codes representing tests for tumor markers. This value set of LOINC codes is not comprehensive and can be extended. Other vocabularies can be used only if the test of interest is not covered by LOINC. Tumor marker tests differ from genomic tests in that they measure levels of protein or other substances produced downstream from RNA protein synthesis."
 
 * ^copyright = "This material contains content from LOINC (http://loinc.org). LOINC is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc"
 * CC#TMT-OTHER "Other Tumor Marker Test, Specify"
@@ -103,10 +103,10 @@ Description:    "Codes representing tests for tumor markers. This value set of L
 * include codes from system LNC where ancestor = #LP93517-8
 
 
-ValueSet:   GeneticSpecimenTypeVS
-Id: mcode-genetic-specimen-type-vs
+ValueSet:   GenomicSpecimenTypeVS
+Id: mcode-genomic-specimen-type-vs
 Title: "Genetic Specimen Type Value Set"
-Description:    "The type of specimen analyzed in a genetic test. The values are taken from code system http://terminology.hl7.org/CodeSystem/v2-0487, and represent a subset of HL7 Version 2 Table 0487 (http://hl7.org/fhir/v2/0487).  The most specific term available should be used."
+Description:    "The type of specimen analyzed in a genomic test. The values are taken from code system http://terminology.hl7.org/CodeSystem/v2-0487, and represent a subset of HL7 Version 2 Table 0487 (http://hl7.org/fhir/v2/0487).  The most specific term available should be used."
 * SPTY#AMN       "Amniotic fluid"
 * SPTY#BIFL      "Bile Fluid"
 * SPTY#BLD       "Whole blood"
@@ -139,3 +139,6 @@ Description:    "The type of specimen analyzed in a genetic test. The values are
 * SPTY#TUMOR     "Tumor"
 * SPTY#VITF      "Vitreous Fluid"
 * SPTY#WND       "Wound"
+* SPTY#UR        "Urine"           // FHIR-32827
+* SPTY#STL       "Stool = Fecal"   // FHIR-32827
+* SPTY#OTH       "Source, Other"   // FHIR-32827

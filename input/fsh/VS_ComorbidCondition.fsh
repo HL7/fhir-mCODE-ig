@@ -1,11 +1,10 @@
-ValueSet: PresentAbsentUnknownVS
-Id: mcode-present-absent-unknown
-Title: "Present-Absent-Unknown"
-Description: "Value set used in association with phenomena that can be observed as being present or absent, such as a finding, organism, or physical object."
+ValueSet: PresentAbsentVS
+Id: mcode-present-absent
+Title: "Present-Absent"
+Description: "Value set used in association with phenomena that can be observed as being present or absent, such as a finding, organism, or physical object."  // FHIR-32281
 * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
 * SCT#52101004 "Present (qualifier value)"
 * SCT#2667000 "Absent (qualifier value)"
-* SCT#261665006 "Unknown (qualifier value)"
 
 ValueSet:  ElixhauserAidsVS
 Id: elixhauser-aids-vs

@@ -21,10 +21,10 @@ Description:  "How patient's given disease, condition, or ability is trending."
 ValueSet: CancerDiseaseStatusEvidenceTypeVS
 Id: mcode-cancer-disease-status-evidence-type-vs
 Title: "Cancer Disease Status Evidence Type Value Set"
-Description:  "The type of evidence backing up the clinical determination of cancer progression." 
+Description:  "The type of evidence backing up the clinical determination of cancer progression."
 // The code '252416005 Histopathology test (procedure)' is intended to be used when there is a biopsy that contributes evidence of the cancer disease status.
 * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
-* include codes from system SCT where concept is-a #363679005 "Imaging (procedure)"   
+* include codes from system SCT where concept is-a #363679005 "Imaging (procedure)"
 * include codes from system SCT where concept is-a #108257001 "Anatomic pathology procedure (procedure)" // Broader than SCT#252416005 "Histopathology test (procedure), include microscopy."
 * include codes from system SCT where concept is-a #711015009 "Assessment of symptom control (procedure)"
 * include codes from system SCT where concept is-a #5880005   "Physical examination procedure (procedure)"
@@ -44,11 +44,23 @@ Description: "Includes surgical procedure codes from SNOMED CT, ICD-10-PCS and C
 ValueSet: BodyLocationQualifierVS
 Id: mcode-body-location-qualifier-vs
 Title: "Body Location Qualifier Value Set"
-Description: "Qualifiers to refine a body structure or location. These include qualifiers for laterality, relative location, directionality, number, and plane."
+Description: "Qualifiers to refine a body structure or location including qualifiers for relative location, directionality, number, and plane, and excluding qualifiers for laterality."
 * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
-// Changed to intensional definition 
+// Changed to intensional definition
 * include codes from system SCT where concept is-a #106233006 "Topographic Modifier (qualifer)"
 * include codes from system SCT where concept is-a #272424004 "Relative Sites (qualifier)"
+* exclude codes from valueset LateralityQualifierVS
+
+ValueSet: LateralityQualifierVS
+Id: mcode-laterality-qualifier-vs
+Title: "Laterality Qualifier Value Set"
+Description: "Qualifiers to specify laterality."
+* ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
+* SCT#51440002	"Right and left (qualifier value)"
+* SCT#399488007	"Midline (qualifier value)"
+* SCT#24028007	"Right (qualifier value)"
+* SCT#7771000	"Left (qualifier value)"
+// * SCT#66459002	"Unilateral (qualifier value)"  -- this is used as 'left OR right'.   Given the uncertainty of the use case, it is dropped.
 
 
 ValueSet:   TreatmentTerminationReasonVS
@@ -57,12 +69,12 @@ Title: "Treatment Termination Reason Value Set"
 Description:  "Values used to describe the reasons for stopping a treatment or episode of care. Includes code for 'treatment completed' as well as codes for unplanned (early) stoppage. Applies to medications and other treatments that take place over a period of time, such as radiation treatments."
 * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
 * SCT#182992009   "Treatment completed (situation)"
-* SCT#266721009   "No response to treatment (situation)" // more general than SCT#58848006 "Lack of drug action (finding)"  
+* SCT#266721009   "No response to treatment (situation)" // more general than SCT#58848006 "Lack of drug action (finding)"
 * SCT#407563006   "Treatment not tolerated (situation)" // more general than SCT#281647001 "Adverse reaction (disorder)"
 * SCT#160932005   "Financial problem (finding)" // more general than 454061000124102 "Unable to afford medication (finding)"
 * SCT#105480006   "Refusal of treatment by patient (situation)"  // patient choice or decision
 * SCT#184081006   "Patient has moved away (finding)" // better than SCT#107724000 "Patient transfer (procedure)"
-* SCT#309846006   "Treatment not available (situation)" 
+* SCT#309846006   "Treatment not available (situation)"
 * SCT#399307001   "Lost to follow-up (finding)" // added by mCODE Exec Council recommendation 2/12/2021
 
 
@@ -107,9 +119,8 @@ Description:     "Code for methods of measuring tumor size, including physical e
 * SCT#16310003 "Diagnostic ultrasonography (procedure)"
 * SCT#113091000 "Magnetic resonance imaging (procedure)"
 * SCT#77477000 "Computerized axial tomography (procedure)"
-* SCT#82918005 "Positron emission tomography (procedure)"       
+* SCT#82918005 "Positron emission tomography (procedure)"
 * SCT#363680008 "Radiographic imaging procedure (procedure)"
 // Other Imaging.  If one of the above doesn't cut it.
-* SCT#363679005 "Imaging (procedure)"  
+* SCT#363679005 "Imaging (procedure)"
 // * include codes from system LNC where concept is-a #LP29684-5
-

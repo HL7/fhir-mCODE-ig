@@ -12,7 +12,7 @@ Description: "General structure for capturing comorbid conditions with respect t
 * focus ^definition = "The comorbid conditions may be defined with respect to a specific 'index' condition. For example, the US Centers for Disease Control (CDC) has a list of comorbid conditions important to COVID-19. In this case, the focus would be COVID-19 and the comorbid condition categories would be those called out by CDC, namely obesity, renal disease, respiratory disease, etc."
 * component.value[x] only CodeableConcept // do not bind to present/absent value set because some comorbidity scales use grades 1, 2, 3 (see Adult Comorbidity Evaluation-27)
 * component ^definition = "Component representing the presence or absence of the named comorbidity, with optional condition code(s) or reference to the actual condition(s)."
-* component.extension contains 
+* component.extension contains
      ComorbidConditionCode named conditionCode 0..* and
      ComorbidConditionReference named conditionReference 0..*
 * component.modifierExtension 0..0
@@ -38,7 +38,7 @@ Description: "Comorbid condition checklist and optional risk score, using Elixha
 * code = LNC#78923-0 "Comorbid condition panel"
 * focus only Reference(PrimaryCancerCondition)
 * focus ^definition = "A reference to the cancer condition that is the context for the current list of comorbid conditions."
-* component.value[x] from PresentAbsentUnknownVS (required)
+* component.value[x] from PresentAbsentVS (required) // FHIR-32281
 * component ^slicing.discriminator.type = #pattern
 * component ^slicing.discriminator.path = "code"
 * component ^slicing.rules = #closed
@@ -199,8 +199,6 @@ Description: "Comorbid condition checklist and optional risk score, using Elixha
 * component[weightLoss].extension[conditionCode].value[x] from ElixhauserWeightLossVS
 // Must Supports -- none inherited
 * component and status and code and subject and focus and effective[x] MS
-// 
-* value[x] only integer 
-* value[x] MS 
-
-
+//
+* value[x] only integer
+* value[x] MS

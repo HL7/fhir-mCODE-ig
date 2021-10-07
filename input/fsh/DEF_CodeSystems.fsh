@@ -115,9 +115,6 @@ CodeSystem: TbdCodes
 Title: "ToBeDeterminedCodes ('TbdCodes')"
 Description: "These codes are currently 'TBD-LOINC' codes. The CG WG is requesting formal LOINC codes."
 * #molecular-consequence "Molecular Consequence" "Annotated changes to sequence features caused by this variant. Terms are from the sequence ontology under SO:0001537."
-<<<<<<< HEAD
-* #diagnostic-implication
-=======
 * #diagnostic-implication "Diagnosic Implication" "Diagnostic Implication"
 
 CodeSystem: RequestedRemissionCodes
@@ -139,4 +136,3 @@ Title: "TG263 Qualifier Codes"
 Description: "Qualifier Codes from TG263 Anatomy codes that lack both SNOMEDCT and UMLS definitions"
 * #non-adjacent "Non-Adjacent"           // * SCT#USCRS-33144 "non-adjacent (qualifier)"
 * #supra-mammary "Supra-Mammary"         // * SCT#USCRS-33347 "supra-mammary"
->>>>>>> master

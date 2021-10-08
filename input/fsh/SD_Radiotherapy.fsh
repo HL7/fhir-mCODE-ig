@@ -24,7 +24,7 @@ Profile:  RadiotherapyCourseSummary
 Parent:   USCoreProcedure  // considered one procedure with multiple parts
 Id:       mcode-radiotherapy-course-summary
 Title:    "Radiotherapy Course Summary"
-Description: "A summary of a course of radiotherapy delivered to a patient. It records the treatment intent, termination reason, modalities, techniques, number of sessions, and doses delivered to one or more body volumes. To describe the treatment in more detail, use either TeleradiotherapyTreatmentPhase or BrachytherapyTreatmentPhase, which should reference this summary through their partOf elements. Whether the course has been fully delivered or stopped is indicated in the status element."
+Description: "A summary of a course of radiotherapy delivered to a patient. It records the treatment intent, termination reason, modalities, techniques, number of sessions, and doses delivered to one or more body volumes. Whether the course has been fully delivered or stopped is indicated in the status element."
 * insert RadiotherapyCommon
 // Summary-specific content
 * code = RID#mcode-radiotherapy-course-summary

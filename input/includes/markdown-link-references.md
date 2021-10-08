@@ -6,7 +6,6 @@
 </style>
 
 <!-- mCODE Profiles and Extensions -->
-[BrachytherapyTreatmentPhase]: StructureDefinition-mcode-brachytherapy-treatment-phase.html
 [CancerDiseaseStatus]: StructureDefinition-mcode-cancer-disease-status.html
 [CancerGenomicVariant]: StructureDefinition-mcode-cancer-genomic-variant.html
 [CancerGenomicsReport]: StructureDefinition-mcode-cancer-genomics-report.html
@@ -36,10 +35,10 @@
 [RadiotherapyModality]: StructureDefinition-mcode-radiotherapy-modality.html
 [RadiotherapySessions]: StructureDefinition-mcode-radiotherapy-sessions.html
 [RadiotherapyTechnique]: StructureDefinition-mcode-radiotherapy-technique.html
+[RadiotherapyModalityAndTechnique]: StructureDefinition-mcode-radiotherapy-modality-and-technique.html
 [RadiotherapyVolume]: StructureDefinition-mcode-radiotherapy-volume.html
 [RelatedPrimaryCancerCondition]: StructureDefinition-mcode-related-primary-cancer-condition.html
 [SecondaryCancerCondition]: StructureDefinition-mcode-secondary-cancer-condition.html
-[TeleradiotherapyTreatmentPhase]: StructureDefinition-mcode-teleradiotherapy-treatment-phase.html
 [TNMDistantMetastasesCategory]: StructureDefinition-mcode-tnm-distant-metastases-category.html
 [TNMPrimaryTumorCategory]: StructureDefinition-mcode-tnm-primary-tumor-category.html
 [TNMRegionalNodesCategory]: StructureDefinition-mcode-tnm-regional-nodes-category.html

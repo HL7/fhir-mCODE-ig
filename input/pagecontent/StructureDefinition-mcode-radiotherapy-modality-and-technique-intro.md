@@ -20,6 +20,7 @@ Allowed combinations of modality and technique are shown here and enforced by in
 {: .grid }
 
 Technique Acronyms:
+
 | **Acronym** |  **Meaning** |
 | ---------------|------------ |
 | IMRT | Intensity Modulated Radiation Therapy |

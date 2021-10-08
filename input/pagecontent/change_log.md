@@ -23,18 +23,33 @@
 * [FHIR-32345](https://jira.hl7.org/browse/FHIR-32345)  Changed name of extension from LocationQualifier to BodyLocationQualifier
 
 #### [Block Vote 3](https://jira.hl7.org/issues/?filter=14928)
+* [FHIR-32280](https://jira.hl7.org/browse/FHIR-32279) Exlixhauser Comorbidity profile should have an value. Explanation of when it might be missing.
 * [FHIR-32280](https://jira.hl7.org/browse/FHIR-32280) Exlixhauser Comorbidity profile should have an integer Observation.value
+* [FHIR-32280](https://jira.hl7.org/browse/FHIR-32281) Exlixhauser Comorbidity profile components should be present or absent, not unknown
 * [FHIR-32348](https://jira.hl7.org/browse/FHIR-32348) LocationQualifier --> BodyLocationQualifier
 * [FHIR-32387](https://jira.hl7.org/browse/FHIR-32387) Invariant:  mcode-reason-required generates warning instead of error
 * [FHIR-32649](https://jira.hl7.org/browse/FHIR-32649) Extension 'Radiotherapy Fractions Delivered' added to the summary of extensions for Radiotherapy
 * [FHIR-33003](https://jira.hl7.org/browse/FHIR-33003)  Make extension values required
 
+<<<<<<< HEAD
 #### [Block Vote 5](https://jira.hl7.org/issues/?filter=15618)
 * [FHIR-32956](https://jira.hl7.org/browse/FHIR-32956) Primary and Secondary cancer value sets have been aligned with CDC state cancer reporting practices.
 
 #### Other
 * [FHIR-32340](https://jira.hl7.org/browse/FHIR-33340)  Laterality broken out into separate extension
 *
+=======
+#### [Block Vote 4](https://jira.hl7.org/issues/?filter=14928)
+* [FHIR-32827](https://jira.hl7.org/browse/FHIR-32827) Added Values Urine, Stool and Other to Genetic Specimen Type Value Set
+#### [Block Vote 5](https://jira.hl7.org/issues/?filter=15618)
+
+#### [Block Vote 6](https://jira.hl7.org/issues/?filter=15619)
+
+### Other
+* [FHIR-33343](https://jira.hl7.org/browse/FHIR-33343)  RadiotherapyTreatmentLocationVS/RadiotherapyTreatmentLocationQualifierVS should align with TG263 Anatomy Terms
+* [FHIR-32340](https://jira.hl7.org/browse/FHIR-32340)  Laterality broken out into separate extension
+* [FHIR-33340](https://jira.hl7.org/browse/FHIR-33340)   TreatmentPhase profiles and examples dropped.  Will reappear in Codex-RT IG.
+>>>>>>> master
 
 ### mCODE STU 2 Ballot Version (May 2021)
 
@@ -75,7 +90,7 @@ A comprehensive listing of differences in FHIR artifacts between STU 1 and STU 2
 
 #### Genomics
 
-* [CancerGeneticVariant] contains an additional component for DNA change type.
+* [CancerGenomicVariant] contains an additional component for DNA change type.
 
 #### Outcomes
 
@@ -89,7 +104,7 @@ The following are changes made to the [mCODE 0.9.1 September 2019 Ballot Release
 
 #### Enhancements
 
-* The following profiles have been added: **GeneticSpecimen, RegionStudied** to support greater alignment between mCODE and the [Clinical Genomics Reporting FHIR IG STU1.](http://hl7.org/fhir/uv/genomics-reporting/index.html).
+* The following profiles have been added: **GenomicSpecimen, RegionStudied** to support greater alignment between mCODE and the [Clinical Genomics Reporting FHIR IG STU1.](http://hl7.org/fhir/uv/genomics-reporting/index.html).
 * The GeneticVariant profile has additional components which conform to equivalent components in the CG Reporting IG Variant profile: geneStudied, variationCode, genomicDNAChange, genomicSourceClass, aminoAcidChange, aminoAcidChangeType, cytogeneticLocation, and cytogeneticNomenclature.
 * The MedicationStatement profile name has changed to **CancerRelatedMedicationStatement**. This profile now constrains the reason reference to only primary and secondary cancer conditions.
 
@@ -98,7 +113,7 @@ The following are changes made to the [mCODE 0.9.1 September 2019 Ballot Release
 * The following mCODE profiles no longer appear and instead document preferred use of FHIR base profiles: **BloodPressure**, **BodyWeight**, **BodyHeight**, **CBCWAutoDifferentialPanel**, **ComprehensiveMetabolic2000SerumOrPlasmaPanel**.
 * Genomics-related profiles GeneticVariantTested and GeneticVariantFound are combined into one profile, GeneticVariant.
 * GenomicsReport onco-core-RegionStudied-extension is migrated to a slice under DiagnosticReport.result with a reference to a new profile, RegionStudied.
-* GenomicsReport obf-SpecimenType-extension is migrated to a slice under DiagnosticReport.result with a reference to a new profile, GeneticSpecimen.
+* GenomicsReport obf-SpecimenType-extension is migrated to a slice under DiagnosticReport.result with a reference to a new profile, GenomicSpecimen.
 * DiagnosticReport.category cardinality changed from `1..1` to `1..*`
 * Replaced references of CIMPL to references of FHIR Shorthand and SUSHI.
 * ECOGPerformanceStatus Observation.code and Observation.interpretation changed to align with the LOINC equivalent of ECOG score (89247-1) and interpretation (LOINC Answer List LL529-9).

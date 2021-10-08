@@ -15,7 +15,7 @@ description: mCODE™ (short for Minimal Common Oncology Data Elements) is an in
 license: CC0-1.0
 fhirVersion: 4.0.1
 dependencies:
-  hl7.fhir.us.core: 3.1.0
+  hl7.fhir.us.core: 4.0.0
 parameters:
   show-inherited-invariants: false
   version-comparison: n/a

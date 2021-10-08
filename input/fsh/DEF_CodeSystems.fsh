@@ -24,9 +24,7 @@ Please note that while these codes may imply conformance to the profiles that us
 3. The same `code` can correspond to more than one profile (although not the case here)."
 
 * #mcode-patient "mCODE Patient Group Resource" "Identifies a Group resource containing in-scope cancer patients that conforms to the MCODEPatientGroup profile."
-* #mcode-radiotherapy-course-summary "Radiotherapy Course Summary Resource" "Identifies a Procedure resource that summarizes a radiotherapy treatment that conforms to the RadiotherapyCourseSummary profile."
-* #mcode-teleradiotherapy-treatment-phase "Teleradiotherapy Treatment Phase Resource" "Identifies a Procedure resource that describes delivery of teleradiotherapy (external beam radiation) and conforms to the TeleradiotherapyTreatmentPhase profile."
-* #mcode-brachytherapy-treatment-phase "Brachytherapy Treatment Phase Resource" "Identifies a Procedure resource that describes delivery of brachytherapy (internal or surface radiation) and conforms to the BrachytherapyTreatmentPhase profile."
+* #mcode-radiotherapy-course-summary "Radiotherapy Course Summary Resource" "Identifies a Procedure resource that summarizes a radiotherapy treatment that conforms to the RadiotherapyCourseSummary profile." // USCRS-33292 - SNOMEDCT code requested
 
 // CodeSystem: RadiotherapyCS
 // Id: radiotherapy-cs
@@ -117,4 +115,24 @@ CodeSystem: TbdCodes
 Title: "ToBeDeterminedCodes ('TbdCodes')"
 Description: "These codes are currently 'TBD-LOINC' codes. The CG WG is requesting formal LOINC codes."
 * #molecular-consequence "Molecular Consequence" "Annotated changes to sequence features caused by this variant. Terms are from the sequence ontology under SO:0001537."
-* #diagnostic-implication
+* #diagnostic-implication "Diagnosic Implication" "Diagnostic Implication"
+
+CodeSystem: RequestedRemissionCodes
+Title: "Requested Remission Codes"
+Description:   "Codes requested from SNOMED for Remission Status"
+* #partialremission "Cancer in partial remission(finding)"     // USCRS 352237 * SCT#requested "Cancer in partial remission(finding)
+* #completeremission "Cancer in complete remission(finding)"    // USCRS 352236 * SCT#requested "Cancer in complete remission(finding)
+
+CodeSystem: TG263
+Title: "TG263 Codes"
+Description: "Codes from TG263 Anatomy codes that lack both SNOMEDCT and UMLS definitions"
+* #bowel-space "Bowel Space" // * SCT#USCRS-33351 "Bowel space (body structure)" // Space occupied by bowel
+* #small-bowel-space "Small Bowel Space" // * SCT#USCRS-33352 "Small bowel space (body structure)" // <none>
+* #pre-sacral-lymph-node-group "Presacral lymph node group" // * SCT#USCRS-33346 "Presacral lymph node group (body structure)" // Lymph nodes of pelvis - presacral Left
+* #tumor-bed "Tumor bed (morphologic abnormality)" // There is no snomed term or UMLS term
+
+CodeSystem: TG263Qualifier
+Title: "TG263 Qualifier Codes"
+Description: "Qualifier Codes from TG263 Anatomy codes that lack both SNOMEDCT and UMLS definitions"
+* #non-adjacent "Non-Adjacent"           // * SCT#USCRS-33144 "non-adjacent (qualifier)"
+* #supra-mammary "Supra-Mammary"         // * SCT#USCRS-33347 "supra-mammary"

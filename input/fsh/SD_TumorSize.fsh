@@ -110,7 +110,7 @@ Id: mcode-tumor-specimen
 Title: "Tumor Specimen"
 Description: "Represents a tumor after it has been removed from the body. Prior to excision, use [Tumor](StructureDefinition-mcode-tumor.html) (a BodyStructure) instead. If this tumor was represented by [Tumor](StructureDefinition-mcode-tumor.html) while still in the body, use `identifier` to associate with that resource."
 * insert CancerRelatedSpecimenRules
-// These rules are above and beyond GeneticSpecimen
+// These rules are above and beyond GenomicSpecimen
 * type = SPTY#TUMOR
 * identifier ^slicing.discriminator.type = #pattern
 * identifier ^slicing.discriminator.path = "type"

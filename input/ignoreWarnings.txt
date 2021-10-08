@@ -101,13 +101,13 @@ INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[40]: This element
 INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[0].resource.ofType(Patient): Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-patient
 INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[0].resource.ofType(Patient): Validate resource against profile http://hl7.org/fhir/StructureDefinition/Patient
 INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[0].resource.ofType(Patient): Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-patient - listed in meta
-INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[1].resource.ofType(Observation): Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genetic-variant
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[1].resource.ofType(Observation): Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genomic-variant
 INFORMATION: Bundle/mcode-patient-bundle-jenny-m: resource.component[0].value.ofType(CodeableConcept).coding[0]: Code System URI 'http://www.genenames.org' is unknown so the code cannot be validated
 INFORMATION: Bundle/mcode-patient-bundle-jenny-m: resource.component[1].value.ofType(CodeableConcept).coding[0]: Code System URI 'http://www.ncbi.nlm.nih.gov/clinvar' is unknown so the code cannot be validated
 INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[1].resource.ofType(Observation): Validate resource against profile http://hl7.org/fhir/StructureDefinition/Observation
 INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[1].resource.ofType(Observation).component[0].value.ofType(CodeableConcept).coding[0]: Code System URI 'http://www.genenames.org' is unknown so the code cannot be validated
 INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[1].resource.ofType(Observation).component[1].value.ofType(CodeableConcept).coding[0]: Code System URI 'http://www.ncbi.nlm.nih.gov/clinvar' is unknown so the code cannot be validated
-INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[1].resource.ofType(Observation): Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genetic-variant - listed in meta
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[1].resource.ofType(Observation): Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genomic-variant - listed in meta
 INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[2].resource.ofType(DiagnosticReport): Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genomics-report
 INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[2].resource.ofType(DiagnosticReport): Validate resource against profile http://hl7.org/fhir/StructureDefinition/DiagnosticReport
 INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[2].resource.ofType(DiagnosticReport): Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genomics-report - listed in meta
@@ -148,9 +148,9 @@ INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[10].resource.ofTy
 INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[10].resource.ofType(Observation): Validate resource against profile http://hl7.org/fhir/StructureDefinition/Observation
 INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[10].resource.ofType(Observation).value.ofType(CodeableConcept).coding[0]: Code System URI 'http://cancerstaging.org' is unknown so the code cannot be validated
 INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[10].resource.ofType(Observation): Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-distant-metastases-category - listed in meta
-INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[11].resource.ofType(Specimen): Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genetic-specimen
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[11].resource.ofType(Specimen): Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genomic-specimen
 INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[11].resource.ofType(Specimen): Validate resource against profile http://hl7.org/fhir/StructureDefinition/Specimen
-INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[11].resource.ofType(Specimen): Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genetic-specimen - listed in meta
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[11].resource.ofType(Specimen): Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genomic-specimen - listed in meta
 INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[12].resource.ofType(Observation): Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genomic-region-studied
 INFORMATION: Bundle/mcode-patient-bundle-jenny-m: resource.component[0].value.ofType(CodeableConcept).coding[1]: Code System URI 'http://www.genenames.org' is unknown so the code cannot be validated
 INFORMATION: Bundle/mcode-patient-bundle-jenny-m: resource.component[0].value.ofType(CodeableConcept).coding[2]: Code System URI 'http://www.genenames.org' is unknown so the code cannot be validated
@@ -291,14 +291,14 @@ INFORMATION: Observation/bodyweight-jenny-m-2018-04-22: Observation: Validate re
 INFORMATION: Observation/bodyweight-jenny-m-2018-04-22: Observation: Validate resource against profile http://hl7.org/fhir/StructureDefinition/bodyweight - listed in meta
 INFORMATION: Observation/cancer-disease-status-improved: Observation: Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-disease-status
 INFORMATION: Observation/cancer-disease-status-jenny-m: Observation: Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-disease-status
-INFORMATION: Observation/cancer-genetic-variant-germline-deletion: Observation: Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genetic-variant
-INFORMATION: Observation/cancer-genetic-variant-germline-deletion: Observation.component[0].value.ofType(CodeableConcept).coding[0]: Code System URI 'http://www.genenames.org' is unknown so the code cannot be validated
-INFORMATION: Observation/cancer-genetic-variant-jenny-m: Observation: Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genetic-variant
-INFORMATION: Observation/cancer-genetic-variant-jenny-m: Observation.component[0].value.ofType(CodeableConcept).coding[0]: Code System URI 'http://www.genenames.org' is unknown so the code cannot be validated
-INFORMATION: Observation/cancer-genetic-variant-jenny-m: Observation.component[1].value.ofType(CodeableConcept).coding[0]: Code System URI 'http://www.ncbi.nlm.nih.gov/clinvar' is unknown so the code cannot be validated
-INFORMATION: Observation/cancer-genetic-variant-somatic-single-nucleotide: Observation: Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genetic-variant
-INFORMATION: Observation/cancer-genetic-variant-somatic-single-nucleotide: Observation.component[0].value.ofType(CodeableConcept).coding[0]: Code System URI 'http://www.genenames.org' is unknown so the code cannot be validated
-INFORMATION: Observation/cancer-genetic-variant-somatic-single-nucleotide: Observation.component[1].value.ofType(CodeableConcept).coding[0]: Code System URI 'http://www.ncbi.nlm.nih.gov/clinvar' is unknown so the code cannot be validated
+INFORMATION: Observation/cancer-genomic-variant-germline-deletion: Observation: Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genomic-variant
+INFORMATION: Observation/cancer-genomic-variant-germline-deletion: Observation.component[0].value.ofType(CodeableConcept).coding[0]: Code System URI 'http://www.genenames.org' is unknown so the code cannot be validated
+INFORMATION: Observation/cancer-genomic-variant-jenny-m: Observation: Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genomic-variant
+INFORMATION: Observation/cancer-genomic-variant-jenny-m: Observation.component[0].value.ofType(CodeableConcept).coding[0]: Code System URI 'http://www.genenames.org' is unknown so the code cannot be validated
+INFORMATION: Observation/cancer-genomic-variant-jenny-m: Observation.component[1].value.ofType(CodeableConcept).coding[0]: Code System URI 'http://www.ncbi.nlm.nih.gov/clinvar' is unknown so the code cannot be validated
+INFORMATION: Observation/cancer-genomic-variant-somatic-single-nucleotide: Observation: Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genomic-variant
+INFORMATION: Observation/cancer-genomic-variant-somatic-single-nucleotide: Observation.component[0].value.ofType(CodeableConcept).coding[0]: Code System URI 'http://www.genenames.org' is unknown so the code cannot be validated
+INFORMATION: Observation/cancer-genomic-variant-somatic-single-nucleotide: Observation.component[1].value.ofType(CodeableConcept).coding[0]: Code System URI 'http://www.ncbi.nlm.nih.gov/clinvar' is unknown so the code cannot be validated
 INFORMATION: Observation/cancer-related-mcode-comorbidities-elixhauser-jenny-m: Observation: Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-comorbidities-elixhauser
 INFORMATION: Observation/cancer-related-mcode-comorbidities-elixhauser-john-anyperson: Observation: Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-comorbidities-elixhauser
 INFORMATION: Observation/ecog-performance-status-fully-active: Observation: Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-ecog-performance-status
@@ -398,14 +398,14 @@ INFORMATION: Procedure/us-core-procedure-mammogram-jenny-m: Procedure: Validate 
 INFORMATION: Procedure/us-core-procedure-mammogram-jenny-m: Procedure: Validate resource against profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-procedure - listed in meta
 INFORMATION: SearchParameter/Condition-code: SearchParameter: Validate resource against profile http://hl7.org/fhir/StructureDefinition/SearchParameter
 INFORMATION: SearchParameter/Patient-id: SearchParameter: Validate resource against profile http://hl7.org/fhir/StructureDefinition/SearchParameter
-INFORMATION: Specimen/genetic-specimen-left-breast-jenny-m: Specimen: Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genetic-specimen
-INFORMATION: Specimen/genetic-specimen-lung: Specimen: Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genetic-specimen
+INFORMATION: Specimen/genomic-specimen-left-breast-jenny-m: Specimen: Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genomic-specimen
+INFORMATION: Specimen/genomic-specimen-lung: Specimen: Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genomic-specimen
 INFORMATION: Specimen/tumor-specimen-left-breast-jenny-m: Specimen: Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tumor-specimen
 INFORMATION: Specimen/tumor-specimen-lobular-carcinoma-left-breast: Specimen: Validate resource against profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tumor-specimen
 INFORMATION: StructureDefinition/mcode-body-structure-identifier: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
 INFORMATION: StructureDefinition/mcode-brachytherapy-treatment-phase: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
 INFORMATION: StructureDefinition/mcode-cancer-disease-status: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
-INFORMATION: StructureDefinition/mcode-cancer-genetic-variant: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
+INFORMATION: StructureDefinition/mcode-cancer-genomic-variant: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
 INFORMATION: StructureDefinition/mcode-cancer-genomics-report: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
 INFORMATION: StructureDefinition/mcode-cancer-patient: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
 INFORMATION: StructureDefinition/mcode-cancer-related-medication-administration: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
@@ -419,7 +419,7 @@ INFORMATION: StructureDefinition/mcode-comorbidities-parent: StructureDefinition
 INFORMATION: StructureDefinition/mcode-condition-related: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
 INFORMATION: StructureDefinition/mcode-ecog-performance-status: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
 INFORMATION: StructureDefinition/mcode-evidence-type: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
-INFORMATION: StructureDefinition/mcode-genetic-specimen: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
+INFORMATION: StructureDefinition/mcode-genomic-specimen: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
 INFORMATION: StructureDefinition/mcode-genomic-region-studied: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
 INFORMATION: StructureDefinition/mcode-histology-morphology-behavior: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
 INFORMATION: StructureDefinition/mcode-karnofsky-performance-status: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
@@ -494,7 +494,7 @@ INFORMATION: ValueSet/mcode-cancer-staging-system-vs: ValueSet: Validate resourc
 INFORMATION: ValueSet/mcode-clinvar-vs: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
 INFORMATION: ValueSet/mcode-condition-status-trend-vs: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
 INFORMATION: ValueSet/mcode-dna-change-type-vs: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
-INFORMATION: ValueSet/mcode-genetic-specimen-type-vs: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
+INFORMATION: ValueSet/mcode-genomic-specimen-type-vs: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
 INFORMATION: ValueSet/mcode-hgnc-vs: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
 INFORMATION: ValueSet/mcode-hgvs-vs: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
 INFORMATION: ValueSet/mcode-histology-morphology-behavior-vs: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet

@@ -81,7 +81,7 @@ A comprehensive listing of differences in FHIR artifacts between STU 1 and STU 2
 
 #### Genomics
 
-* [CancerGeneticVariant] contains an additional component for DNA change type.
+* [CancerGenomicVariant] contains an additional component for DNA change type.
 
 #### Outcomes
 
@@ -95,7 +95,7 @@ The following are changes made to the [mCODE 0.9.1 September 2019 Ballot Release
 
 #### Enhancements
 
-* The following profiles have been added: **GeneticSpecimen, RegionStudied** to support greater alignment between mCODE and the [Clinical Genomics Reporting FHIR IG STU1.](http://hl7.org/fhir/uv/genomics-reporting/index.html).
+* The following profiles have been added: **GenomicSpecimen, RegionStudied** to support greater alignment between mCODE and the [Clinical Genomics Reporting FHIR IG STU1.](http://hl7.org/fhir/uv/genomics-reporting/index.html).
 * The GeneticVariant profile has additional components which conform to equivalent components in the CG Reporting IG Variant profile: geneStudied, variationCode, genomicDNAChange, genomicSourceClass, aminoAcidChange, aminoAcidChangeType, cytogeneticLocation, and cytogeneticNomenclature.
 * The MedicationStatement profile name has changed to **CancerRelatedMedicationStatement**. This profile now constrains the reason reference to only primary and secondary cancer conditions.
 
@@ -104,7 +104,7 @@ The following are changes made to the [mCODE 0.9.1 September 2019 Ballot Release
 * The following mCODE profiles no longer appear and instead document preferred use of FHIR base profiles: **BloodPressure**, **BodyWeight**, **BodyHeight**, **CBCWAutoDifferentialPanel**, **ComprehensiveMetabolic2000SerumOrPlasmaPanel**.
 * Genomics-related profiles GeneticVariantTested and GeneticVariantFound are combined into one profile, GeneticVariant.
 * GenomicsReport onco-core-RegionStudied-extension is migrated to a slice under DiagnosticReport.result with a reference to a new profile, RegionStudied.
-* GenomicsReport obf-SpecimenType-extension is migrated to a slice under DiagnosticReport.result with a reference to a new profile, GeneticSpecimen.
+* GenomicsReport obf-SpecimenType-extension is migrated to a slice under DiagnosticReport.result with a reference to a new profile, GenomicSpecimen.
 * DiagnosticReport.category cardinality changed from `1..1` to `1..*`
 * Replaced references of CIMPL to references of FHIR Shorthand and SUSHI.
 * ECOGPerformanceStatus Observation.code and Observation.interpretation changed to align with the LOINC equivalent of ECOG score (89247-1) and interpretation (LOINC Answer List LL529-9).

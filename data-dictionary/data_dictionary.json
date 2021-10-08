@@ -14,15 +14,15 @@
     },
     {
       "group": "Default",
-      "title": "Cancer Genetic Variant",
-      "url": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genetic-variant",
+      "title": "Cancer Genomic Variant",
+      "url": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genomic-variant",
       "description": "Records an alteration in the most common DNA nucleotide sequence. The term variant can be used to describe an alteration that may be benign, pathogenic, or of unknown significance. The term variant is increasingly being used in place of the term mutation."
     },
     {
       "group": "Default",
       "title": "Cancer Genomics Report",
       "url": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genomics-report",
-      "description": "Genetic analysis summary report. The report may include one or more tests, with two distinct test types. The first type is a targeted mutation test, where a specific mutation on a specific gene is tested for. The result is either positive or negative for that mutation. The second type is a more general test for variants. This type of test returns the identity of variants found in a certain region of the genome."
+      "description": "Genomic analysis summary report. The report may include one or more tests, with two distinct test types. The first type is a targeted mutation test, where a specific mutation on a specific gene is tested for. The result is either positive or negative for that mutation. The second type is a more general test for variants. This type of test returns the identity of variants found in a certain region of the genome."
     },
     {
       "group": "Default",
@@ -74,8 +74,8 @@
     },
     {
       "group": "Default",
-      "title": "Genetic Specimen",
-      "url": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genetic-specimen",
+      "title": "Genomic Specimen",
+      "url": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genomic-specimen",
       "description": "A small sample of blood, hair, skin, amniotic fluid (the fluid that surrounds a fetus during pregnancy), or other tissue which is excised from a subject for the purposes of genomics testing or analysis."
     },
     {
@@ -472,7 +472,7 @@
     },
     {
       "Group": "Default",
-      "Profile Title": "Cancer Genetic Variant",
+      "Profile Title": "Cancer Genomic Variant",
       "Data Element Name": "Status",
       "Definition": "The status of the result value.",
       "Required?": "Required",
@@ -481,12 +481,12 @@
       "Value Set URI": "http://hl7.org/fhir/ValueSet/observation-status",
       "Value Set Binding": "required",
       "FHIR Element (R4)": "Observation.status",
-      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genetic-variant",
-      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genetic-variant"
+      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genomic-variant",
+      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genomic-variant"
     },
     {
       "Group": "Default",
-      "Profile Title": "Cancer Genetic Variant",
+      "Profile Title": "Cancer Genomic Variant",
       "Data Element Name": "Subject",
       "Definition": "The patient, or group of patients, location, or device this observation is about and into whose record the observation is placed. If the actual focus of the observation is different from the subject (or a sample of, part, or region of the subject), the `focus` element or the `code` itself specifies the actual focus of the observation.",
       "Required?": "Required",
@@ -495,12 +495,12 @@
       "Value Set URI": "",
       "Value Set Binding": "",
       "FHIR Element (R4)": "Observation.subject",
-      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genetic-variant",
-      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genetic-variant"
+      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genomic-variant",
+      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genomic-variant"
     },
     {
       "Group": "Default",
-      "Profile Title": "Cancer Genetic Variant",
+      "Profile Title": "Cancer Genomic Variant",
       "Data Element Name": "Effective",
       "Definition": "For lab tests this is the specimen collection date.  For Ask at Order Entry Questions (AOE)'s this is the date the question was asked.",
       "Required?": "Required if known",
@@ -509,26 +509,26 @@
       "Value Set URI": "",
       "Value Set Binding": "",
       "FHIR Element (R4)": "Observation.effective[x]",
-      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genetic-variant",
-      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genetic-variant"
+      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genomic-variant",
+      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genomic-variant"
     },
     {
       "Group": "Default",
-      "Profile Title": "Cancer Genetic Variant",
+      "Profile Title": "Cancer Genomic Variant",
       "Data Element Name": "Value",
-      "Definition": "The overall result of the genetic test; specifically, whether a variant is present, absent, no call, or indeterminant.",
+      "Definition": "The overall result of the genomic test; specifically, whether a variant is present, absent, no call, or indeterminant.",
       "Required?": "Required if known",
       "Occurrences Allowed": "Single",
       "Data Type": "CodeableConcept",
       "Value Set URI": "http://loinc.org/vs/LL1971-2",
       "Value Set Binding": "required",
       "FHIR Element (R4)": "Observation.value[x]",
-      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genetic-variant",
-      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genetic-variant"
+      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genomic-variant",
+      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genomic-variant"
     },
     {
       "Group": "Default",
-      "Profile Title": "Cancer Genetic Variant",
+      "Profile Title": "Cancer Genomic Variant",
       "Data Element Name": "Data Absent Reason",
       "Definition": "Provides a reason why the expected value in the element Observation.value[x] is missing.",
       "Required?": "Required if known",
@@ -537,12 +537,12 @@
       "Value Set URI": "http://hl7.org/fhir/ValueSet/data-absent-reason",
       "Value Set Binding": "extensible",
       "FHIR Element (R4)": "Observation.dataAbsentReason",
-      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genetic-variant",
-      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genetic-variant"
+      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genomic-variant",
+      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genomic-variant"
     },
     {
       "Group": "Default",
-      "Profile Title": "Cancer Genetic Variant",
+      "Profile Title": "Cancer Genomic Variant",
       "Data Element Name": "Method",
       "Definition": "Indicates the mechanism used to perform the observation.",
       "Required?": "Required if known",
@@ -551,40 +551,40 @@
       "Value Set URI": "http://loinc.org/vs/LL4048-6",
       "Value Set Binding": "extensible",
       "FHIR Element (R4)": "Observation.method",
-      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genetic-variant",
-      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genetic-variant"
+      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genomic-variant",
+      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genomic-variant"
     },
     {
       "Group": "Default",
-      "Profile Title": "Cancer Genetic Variant",
+      "Profile Title": "Cancer Genomic Variant",
       "Data Element Name": "Specimen",
       "Definition": "The specimen that was used when this observation was made.",
       "Required?": "Required if known",
       "Occurrences Allowed": "Single",
-      "Data Type": "Reference: GeneticSpecimen",
+      "Data Type": "Reference: GenomicSpecimen",
       "Value Set URI": "",
       "Value Set Binding": "",
       "FHIR Element (R4)": "Observation.specimen",
-      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genetic-variant",
-      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genetic-variant"
+      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genomic-variant",
+      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genomic-variant"
     },
     {
       "Group": "Default",
-      "Profile Title": "Cancer Genetic Variant",
+      "Profile Title": "Cancer Genomic Variant",
       "Data Element Name": "Component",
-      "Definition": "Some observations have multiple component observations.  These component observations are expressed as separate code value pairs that share the same attributes.  Examples include systolic and diastolic component observations for blood pressure measurement and multiple component observations for genetics observations.",
+      "Definition": "Some observations have multiple component observations.  These component observations are expressed as separate code value pairs that share the same attributes.  Examples include systolic and diastolic component observations for blood pressure measurement and multiple component observations for genomics observations.",
       "Required?": "Required if known",
       "Occurrences Allowed": "Multiple",
       "Data Type": "Any",
       "Value Set URI": "",
       "Value Set Binding": "",
       "FHIR Element (R4)": "Observation.component",
-      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genetic-variant",
-      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genetic-variant"
+      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genomic-variant",
+      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genomic-variant"
     },
     {
       "Group": "Default",
-      "Profile Title": "Cancer Genetic Variant",
+      "Profile Title": "Cancer Genomic Variant",
       "Data Element Name": "Component > Code",
       "Definition": "Describes what was observed. Sometimes this is called the observation \"code\".",
       "Required?": "Required (conditional on Component)",
@@ -593,12 +593,12 @@
       "Value Set URI": "http://hl7.org/fhir/ValueSet/observation-codes",
       "Value Set Binding": "example",
       "FHIR Element (R4)": "Observation.component.code",
-      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genetic-variant",
-      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genetic-variant"
+      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genomic-variant",
+      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genomic-variant"
     },
     {
       "Group": "Default",
-      "Profile Title": "Cancer Genetic Variant",
+      "Profile Title": "Cancer Genomic Variant",
       "Data Element Name": "Component > Value",
       "Definition": "The information determined as a result of making the observation, if the information has a simple value.",
       "Required?": "Required if known (conditional on Component)",
@@ -607,12 +607,12 @@
       "Value Set URI": "",
       "Value Set Binding": "",
       "FHIR Element (R4)": "Observation.component.value[x]",
-      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genetic-variant",
-      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genetic-variant"
+      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genomic-variant",
+      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genomic-variant"
     },
     {
       "Group": "Default",
-      "Profile Title": "Cancer Genetic Variant",
+      "Profile Title": "Cancer Genomic Variant",
       "Data Element Name": "Component > Data Absent Reason",
       "Definition": "Provides a reason why the expected value in the element Observation.component.value[x] is missing.",
       "Required?": "Required if known (conditional on Component)",
@@ -621,12 +621,12 @@
       "Value Set URI": "http://hl7.org/fhir/ValueSet/data-absent-reason",
       "Value Set Binding": "extensible",
       "FHIR Element (R4)": "Observation.component.dataAbsentReason",
-      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genetic-variant",
-      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genetic-variant"
+      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genomic-variant",
+      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genomic-variant"
     },
     {
       "Group": "Default",
-      "Profile Title": "Cancer Genetic Variant",
+      "Profile Title": "Cancer Genomic Variant",
       "Data Element Name": "Component > Gene Studied > Value",
       "Definition": "The information determined as a result of making the observation, if the information has a simple value.",
       "Required?": "Required if known (conditional on Component)",
@@ -635,12 +635,12 @@
       "Value Set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-hgnc-vs",
       "Value Set Binding": "extensible",
       "FHIR Element (R4)": "Observation.component:geneStudied.value[x]",
-      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genetic-variant",
-      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genetic-variant"
+      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genomic-variant",
+      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genomic-variant"
     },
     {
       "Group": "Default",
-      "Profile Title": "Cancer Genetic Variant",
+      "Profile Title": "Cancer Genomic Variant",
       "Data Element Name": "Component > Gene Studied > Data Absent Reason",
       "Definition": "Provides a reason why the expected value in the element Observation.component.value[x] is missing.",
       "Required?": "Required if known (conditional on Component)",
@@ -649,12 +649,12 @@
       "Value Set URI": "http://hl7.org/fhir/ValueSet/data-absent-reason",
       "Value Set Binding": "extensible",
       "FHIR Element (R4)": "Observation.component:geneStudied.dataAbsentReason",
-      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genetic-variant",
-      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genetic-variant"
+      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genomic-variant",
+      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genomic-variant"
     },
     {
       "Group": "Default",
-      "Profile Title": "Cancer Genetic Variant",
+      "Profile Title": "Cancer Genomic Variant",
       "Data Element Name": "Component > Variation Code > Value",
       "Definition": "The information determined as a result of making the observation, if the information has a simple value.",
       "Required?": "Required if known (conditional on Component)",
@@ -663,12 +663,12 @@
       "Value Set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-clinvar-vs",
       "Value Set Binding": "preferred",
       "FHIR Element (R4)": "Observation.component:variationCode.value[x]",
-      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genetic-variant",
-      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genetic-variant"
+      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genomic-variant",
+      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genomic-variant"
     },
     {
       "Group": "Default",
-      "Profile Title": "Cancer Genetic Variant",
+      "Profile Title": "Cancer Genomic Variant",
       "Data Element Name": "Component > Variation Code > Data Absent Reason",
       "Definition": "Provides a reason why the expected value in the element Observation.component.value[x] is missing.",
       "Required?": "Required if known (conditional on Component)",
@@ -677,12 +677,12 @@
       "Value Set URI": "http://hl7.org/fhir/ValueSet/data-absent-reason",
       "Value Set Binding": "extensible",
       "FHIR Element (R4)": "Observation.component:variationCode.dataAbsentReason",
-      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genetic-variant",
-      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genetic-variant"
+      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genomic-variant",
+      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genomic-variant"
     },
     {
       "Group": "Default",
-      "Profile Title": "Cancer Genetic Variant",
+      "Profile Title": "Cancer Genomic Variant",
       "Data Element Name": "Component > Genomic DNA Change > Value",
       "Definition": "The information determined as a result of making the observation, if the information has a simple value.",
       "Required?": "Required if known (conditional on Component)",
@@ -691,12 +691,12 @@
       "Value Set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-hgvs-vs",
       "Value Set Binding": "required",
       "FHIR Element (R4)": "Observation.component:genomicDNAChange.value[x]",
-      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genetic-variant",
-      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genetic-variant"
+      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genomic-variant",
+      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genomic-variant"
     },
     {
       "Group": "Default",
-      "Profile Title": "Cancer Genetic Variant",
+      "Profile Title": "Cancer Genomic Variant",
       "Data Element Name": "Component > Genomic DNA Change > Data Absent Reason",
       "Definition": "Provides a reason why the expected value in the element Observation.component.value[x] is missing.",
       "Required?": "Required if known (conditional on Component)",
@@ -705,12 +705,12 @@
       "Value Set URI": "http://hl7.org/fhir/ValueSet/data-absent-reason",
       "Value Set Binding": "extensible",
       "FHIR Element (R4)": "Observation.component:genomicDNAChange.dataAbsentReason",
-      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genetic-variant",
-      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genetic-variant"
+      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genomic-variant",
+      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genomic-variant"
     },
     {
       "Group": "Default",
-      "Profile Title": "Cancer Genetic Variant",
+      "Profile Title": "Cancer Genomic Variant",
       "Data Element Name": "Component > Genomic DNA Change Type > Value",
       "Definition": "The information determined as a result of making the observation, if the information has a simple value.",
       "Required?": "Required if known (conditional on Component)",
@@ -719,12 +719,12 @@
       "Value Set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-dna-change-type-vs",
       "Value Set Binding": "extensible",
       "FHIR Element (R4)": "Observation.component:genomicDNAChangeType.value[x]",
-      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genetic-variant",
-      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genetic-variant"
+      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genomic-variant",
+      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genomic-variant"
     },
     {
       "Group": "Default",
-      "Profile Title": "Cancer Genetic Variant",
+      "Profile Title": "Cancer Genomic Variant",
       "Data Element Name": "Component > Genomic DNA Change Type > Data Absent Reason",
       "Definition": "Provides a reason why the expected value in the element Observation.component.value[x] is missing.",
       "Required?": "Required if known (conditional on Component)",
@@ -733,12 +733,12 @@
       "Value Set URI": "http://hl7.org/fhir/ValueSet/data-absent-reason",
       "Value Set Binding": "extensible",
       "FHIR Element (R4)": "Observation.component:genomicDNAChangeType.dataAbsentReason",
-      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genetic-variant",
-      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genetic-variant"
+      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genomic-variant",
+      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genomic-variant"
     },
     {
       "Group": "Default",
-      "Profile Title": "Cancer Genetic Variant",
+      "Profile Title": "Cancer Genomic Variant",
       "Data Element Name": "Component > Genomic Source Class > Value",
       "Definition": "The information determined as a result of making the observation, if the information has a simple value.",
       "Required?": "Required if known (conditional on Component)",
@@ -747,12 +747,12 @@
       "Value Set URI": "http://loinc.org/vs/LL378-1",
       "Value Set Binding": "required",
       "FHIR Element (R4)": "Observation.component:genomicSourceClass.value[x]",
-      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genetic-variant",
-      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genetic-variant"
+      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genomic-variant",
+      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genomic-variant"
     },
     {
       "Group": "Default",
-      "Profile Title": "Cancer Genetic Variant",
+      "Profile Title": "Cancer Genomic Variant",
       "Data Element Name": "Component > Genomic Source Class > Data Absent Reason",
       "Definition": "Provides a reason why the expected value in the element Observation.component.value[x] is missing.",
       "Required?": "Required if known (conditional on Component)",
@@ -761,12 +761,12 @@
       "Value Set URI": "http://hl7.org/fhir/ValueSet/data-absent-reason",
       "Value Set Binding": "extensible",
       "FHIR Element (R4)": "Observation.component:genomicSourceClass.dataAbsentReason",
-      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genetic-variant",
-      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genetic-variant"
+      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genomic-variant",
+      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genomic-variant"
     },
     {
       "Group": "Default",
-      "Profile Title": "Cancer Genetic Variant",
+      "Profile Title": "Cancer Genomic Variant",
       "Data Element Name": "Component > Amino Acid Change > Value",
       "Definition": "The information determined as a result of making the observation, if the information has a simple value.",
       "Required?": "Required if known (conditional on Component)",
@@ -775,12 +775,12 @@
       "Value Set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-hgvs-vs",
       "Value Set Binding": "required",
       "FHIR Element (R4)": "Observation.component:aminoAcidChange.value[x]",
-      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genetic-variant",
-      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genetic-variant"
+      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genomic-variant",
+      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genomic-variant"
     },
     {
       "Group": "Default",
-      "Profile Title": "Cancer Genetic Variant",
+      "Profile Title": "Cancer Genomic Variant",
       "Data Element Name": "Component > Amino Acid Change > Data Absent Reason",
       "Definition": "Provides a reason why the expected value in the element Observation.component.value[x] is missing.",
       "Required?": "Required if known (conditional on Component)",
@@ -789,12 +789,12 @@
       "Value Set URI": "http://hl7.org/fhir/ValueSet/data-absent-reason",
       "Value Set Binding": "extensible",
       "FHIR Element (R4)": "Observation.component:aminoAcidChange.dataAbsentReason",
-      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genetic-variant",
-      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genetic-variant"
+      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genomic-variant",
+      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genomic-variant"
     },
     {
       "Group": "Default",
-      "Profile Title": "Cancer Genetic Variant",
+      "Profile Title": "Cancer Genomic Variant",
       "Data Element Name": "Component > Amino Acid Change Type > Value",
       "Definition": "The information determined as a result of making the observation, if the information has a simple value.",
       "Required?": "Required if known (conditional on Component)",
@@ -803,12 +803,12 @@
       "Value Set URI": "http://loinc.org/vs/LL380-7",
       "Value Set Binding": "required",
       "FHIR Element (R4)": "Observation.component:aminoAcidChangeType.value[x]",
-      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genetic-variant",
-      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genetic-variant"
+      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genomic-variant",
+      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genomic-variant"
     },
     {
       "Group": "Default",
-      "Profile Title": "Cancer Genetic Variant",
+      "Profile Title": "Cancer Genomic Variant",
       "Data Element Name": "Component > Amino Acid Change Type > Data Absent Reason",
       "Definition": "Provides a reason why the expected value in the element Observation.component.value[x] is missing.",
       "Required?": "Required if known (conditional on Component)",
@@ -817,12 +817,12 @@
       "Value Set URI": "http://hl7.org/fhir/ValueSet/data-absent-reason",
       "Value Set Binding": "extensible",
       "FHIR Element (R4)": "Observation.component:aminoAcidChangeType.dataAbsentReason",
-      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genetic-variant",
-      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genetic-variant"
+      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genomic-variant",
+      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genomic-variant"
     },
     {
       "Group": "Default",
-      "Profile Title": "Cancer Genetic Variant",
+      "Profile Title": "Cancer Genomic Variant",
       "Data Element Name": "Component > Cytogenetic Location",
       "Definition": "The cytogenetic (chromosome) location.",
       "Required?": "Required if known",
@@ -831,12 +831,12 @@
       "Value Set URI": "",
       "Value Set Binding": "",
       "FHIR Element (R4)": "Observation.component:cytogeneticLocation",
-      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genetic-variant",
-      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genetic-variant"
+      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genomic-variant",
+      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genomic-variant"
     },
     {
       "Group": "Default",
-      "Profile Title": "Cancer Genetic Variant",
+      "Profile Title": "Cancer Genomic Variant",
       "Data Element Name": "Component > Cytogenetic Location > Value",
       "Definition": "The information determined as a result of making the observation, if the information has a simple value.",
       "Required?": "Required if known (conditional on Component)",
@@ -845,12 +845,12 @@
       "Value Set URI": "",
       "Value Set Binding": "",
       "FHIR Element (R4)": "Observation.component:cytogeneticLocation.value[x]",
-      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genetic-variant",
-      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genetic-variant"
+      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genomic-variant",
+      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genomic-variant"
     },
     {
       "Group": "Default",
-      "Profile Title": "Cancer Genetic Variant",
+      "Profile Title": "Cancer Genomic Variant",
       "Data Element Name": "Component > Cytogenetic Location > Data Absent Reason",
       "Definition": "Provides a reason why the expected value in the element Observation.component.value[x] is missing.",
       "Required?": "Required if known (conditional on Component)",
@@ -859,12 +859,12 @@
       "Value Set URI": "http://hl7.org/fhir/ValueSet/data-absent-reason",
       "Value Set Binding": "extensible",
       "FHIR Element (R4)": "Observation.component:cytogeneticLocation.dataAbsentReason",
-      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genetic-variant",
-      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genetic-variant"
+      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genomic-variant",
+      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genomic-variant"
     },
     {
       "Group": "Default",
-      "Profile Title": "Cancer Genetic Variant",
+      "Profile Title": "Cancer Genomic Variant",
       "Data Element Name": "Component > Cytogenetic Nomenclature",
       "Definition": "The cytogenetic (chromosome) location, represented using the International System for Human Cytogenetic Nomenclature (ISCN)",
       "Required?": "Required if known",
@@ -873,12 +873,12 @@
       "Value Set URI": "",
       "Value Set Binding": "",
       "FHIR Element (R4)": "Observation.component:cytogeneticNomenclature",
-      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genetic-variant",
-      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genetic-variant"
+      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genomic-variant",
+      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genomic-variant"
     },
     {
       "Group": "Default",
-      "Profile Title": "Cancer Genetic Variant",
+      "Profile Title": "Cancer Genomic Variant",
       "Data Element Name": "Component > Cytogenetic Nomenclature > Value",
       "Definition": "The information determined as a result of making the observation, if the information has a simple value.",
       "Required?": "Required if known (conditional on Component)",
@@ -887,12 +887,12 @@
       "Value Set URI": "",
       "Value Set Binding": "",
       "FHIR Element (R4)": "Observation.component:cytogeneticNomenclature.value[x]",
-      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genetic-variant",
-      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genetic-variant"
+      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genomic-variant",
+      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genomic-variant"
     },
     {
       "Group": "Default",
-      "Profile Title": "Cancer Genetic Variant",
+      "Profile Title": "Cancer Genomic Variant",
       "Data Element Name": "Component > Cytogenetic Nomenclature > Data Absent Reason",
       "Definition": "Provides a reason why the expected value in the element Observation.component.value[x] is missing.",
       "Required?": "Required if known (conditional on Component)",
@@ -901,8 +901,8 @@
       "Value Set URI": "http://hl7.org/fhir/ValueSet/data-absent-reason",
       "Value Set Binding": "extensible",
       "FHIR Element (R4)": "Observation.component:cytogeneticNomenclature.dataAbsentReason",
-      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genetic-variant",
-      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genetic-variant"
+      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genomic-variant",
+      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genomic-variant"
     },
     {
       "Group": "Default",
@@ -981,7 +981,7 @@
       "Definition": "Details about the specimens on which this diagnostic report is based.",
       "Required?": "Required if known",
       "Occurrences Allowed": "Multiple",
-      "Data Type": "Reference: GeneticSpecimen",
+      "Data Type": "Reference: GenomicSpecimen",
       "Value Set URI": "",
       "Value Set Binding": "",
       "FHIR Element (R4)": "DiagnosticReport.specimen",
@@ -991,14 +991,14 @@
     {
       "Group": "Default",
       "Profile Title": "Cancer Genomics Report",
-      "Data Element Name": "Result > Cancer Genetic Variant",
+      "Data Element Name": "Result > Cancer Genomic Variant",
       "Definition": "Records an alteration in the most common DNA nucleotide sequence. The term variant is increasingly being used in place of the term mutation to describe an alteration that may be benign, pathogenic, or of unknown significance.",
       "Required?": "Required if known",
       "Occurrences Allowed": "Single",
-      "Data Type": "Reference: CancerGeneticVariant",
+      "Data Type": "Reference: CancerGenomicVariant",
       "Value Set URI": "",
       "Value Set Binding": "",
-      "FHIR Element (R4)": "DiagnosticReport.result:CancerGeneticVariant",
+      "FHIR Element (R4)": "DiagnosticReport.result:CancerGenomicVariant",
       "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genomics-report",
       "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genomics-report"
     },
@@ -5316,7 +5316,7 @@
     },
     {
       "Group": "Default",
-      "Profile Title": "Genetic Specimen",
+      "Profile Title": "Genomic Specimen",
       "Data Element Name": "Related Condition",
       "Definition": "A reference that associates this sample with a cancer condition.",
       "Required?": "Required if known",
@@ -5325,12 +5325,12 @@
       "Value Set URI": "",
       "Value Set Binding": "",
       "FHIR Element (R4)": "Specimen.extension:relatedCondition",
-      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genetic-specimen",
-      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genetic-specimen"
+      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genomic-specimen",
+      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genomic-specimen"
     },
     {
       "Group": "Default",
-      "Profile Title": "Genetic Specimen",
+      "Profile Title": "Genomic Specimen",
       "Data Element Name": "Status",
       "Definition": "The availability of the specimen.",
       "Required?": "Required if known",
@@ -5339,26 +5339,26 @@
       "Value Set URI": "http://hl7.org/fhir/ValueSet/specimen-status|4.0.1",
       "Value Set Binding": "required",
       "FHIR Element (R4)": "Specimen.status",
-      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genetic-specimen",
-      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genetic-specimen"
+      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genomic-specimen",
+      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genomic-specimen"
     },
     {
       "Group": "Default",
-      "Profile Title": "Genetic Specimen",
+      "Profile Title": "Genomic Specimen",
       "Data Element Name": "Type",
       "Definition": "The kind of material that forms the specimen.",
       "Required?": "Required",
       "Occurrences Allowed": "Single",
       "Data Type": "CodeableConcept",
-      "Value Set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-genetic-specimen-type-vs",
+      "Value Set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-genomic-specimen-type-vs",
       "Value Set Binding": "extensible",
       "FHIR Element (R4)": "Specimen.type",
-      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genetic-specimen",
-      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genetic-specimen"
+      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genomic-specimen",
+      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genomic-specimen"
     },
     {
       "Group": "Default",
-      "Profile Title": "Genetic Specimen",
+      "Profile Title": "Genomic Specimen",
       "Data Element Name": "Subject",
       "Definition": "Where the specimen came from. This may be from patient(s), from a location (e.g., the source of an environmental sample), or a sampling of a substance or a device.",
       "Required?": "Required if known",
@@ -5367,12 +5367,12 @@
       "Value Set URI": "",
       "Value Set Binding": "",
       "FHIR Element (R4)": "Specimen.subject",
-      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genetic-specimen",
-      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genetic-specimen"
+      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genomic-specimen",
+      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genomic-specimen"
     },
     {
       "Group": "Default",
-      "Profile Title": "Genetic Specimen",
+      "Profile Title": "Genomic Specimen",
       "Data Element Name": "Collection",
       "Definition": "Details concerning the specimen collection.",
       "Required?": "Required if known",
@@ -5381,12 +5381,12 @@
       "Value Set URI": "",
       "Value Set Binding": "",
       "FHIR Element (R4)": "Specimen.collection",
-      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genetic-specimen",
-      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genetic-specimen"
+      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genomic-specimen",
+      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genomic-specimen"
     },
     {
       "Group": "Default",
-      "Profile Title": "Genetic Specimen",
+      "Profile Title": "Genomic Specimen",
       "Data Element Name": "Collection > Body Site",
       "Definition": "Anatomical location from which the specimen was collected (if subject is a patient). This is the target site.  This element is not used for environmental specimens.",
       "Required?": "Required if known (conditional on Collection)",
@@ -5395,12 +5395,12 @@
       "Value Set URI": "http://hl7.org/fhir/ValueSet/body-site",
       "Value Set Binding": "example",
       "FHIR Element (R4)": "Specimen.collection.bodySite",
-      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genetic-specimen",
-      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genetic-specimen"
+      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genomic-specimen",
+      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genomic-specimen"
     },
     {
       "Group": "Default",
-      "Profile Title": "Genetic Specimen",
+      "Profile Title": "Genomic Specimen",
       "Data Element Name": "Collection > Body Site > Location Qualifier",
       "Definition": "Qualifier to refine an body location. These include qualifiers for laterality, relative location, directionality, number, and plane.",
       "Required?": "Required if known (conditional on Collection > Body Site)",
@@ -5409,8 +5409,8 @@
       "Value Set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-location-qualifier-vs",
       "Value Set Binding": "required",
       "FHIR Element (R4)": "Specimen.collection.bodySite.extension:locationQualifier",
-      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genetic-specimen",
-      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genetic-specimen"
+      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genomic-specimen",
+      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genomic-specimen"
     },
     {
       "Group": "Default",
@@ -5486,7 +5486,7 @@
       "Group": "Default",
       "Profile Title": "Genomic Region Studied",
       "Data Element Name": "Component",
-      "Definition": "Some observations have multiple component observations.  These component observations are expressed as separate code value pairs that share the same attributes.  Examples include systolic and diastolic component observations for blood pressure measurement and multiple component observations for genetics observations.",
+      "Definition": "Some observations have multiple component observations.  These component observations are expressed as separate code value pairs that share the same attributes.  Examples include systolic and diastolic component observations for blood pressure measurement and multiple component observations forgenomics observations.",
       "Required?": "Required if known",
       "Occurrences Allowed": "Multiple",
       "Data Type": "Any",
@@ -5919,28 +5919,28 @@
     {
       "Group": "Default",
       "Profile Title": "mCODE Patient Bundle",
-      "Data Element Name": "Entry > Cancer Genetic Variant",
-      "Definition": "Observation resource representing genetic variants.",
+      "Data Element Name": "Entry > Cancer Genomic Variant",
+      "Definition": "Observation resource representing variants.",
       "Required?": "Required if known",
       "Occurrences Allowed": "Multiple",
       "Data Type": "BackboneElement",
       "Value Set URI": "",
       "Value Set Binding": "",
-      "FHIR Element (R4)": "Bundle.entry:cancerGeneticVariant",
+      "FHIR Element (R4)": "Bundle.entry:CancerGenomicVariant",
       "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle",
       "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle"
     },
     {
       "Group": "Default",
       "Profile Title": "mCODE Patient Bundle",
-      "Data Element Name": "Entry > Cancer Genetic Variant > Resource",
+      "Data Element Name": "Entry > Cancer Genomic Variant > Resource",
       "Definition": "This profile is  created to meet the 2015 Edition Common Clinical Data Set 'Laboratory test(s) and Laboratory value(s)/result(s)' requirements.",
       "Required?": "Required if known (conditional on Entry)",
       "Occurrences Allowed": "Single",
       "Data Type": "Observation",
       "Value Set URI": "",
       "Value Set Binding": "",
-      "FHIR Element (R4)": "Bundle.entry:cancerGeneticVariant.resource",
+      "FHIR Element (R4)": "Bundle.entry:CancerGenomicVariant.resource",
       "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle",
       "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle"
     },
@@ -6171,28 +6171,28 @@
     {
       "Group": "Default",
       "Profile Title": "mCODE Patient Bundle",
-      "Data Element Name": "Entry > Genetic Specimen",
-      "Definition": "Specimen resource representing a specimen obtained for genomic analysis.",
+      "Data Element Name": "Entry > Genomic Specimen",
+      "Definition": "Specimen resource representing a specimen obtained for analysis.",
       "Required?": "Required if known",
       "Occurrences Allowed": "Multiple",
       "Data Type": "BackboneElement",
       "Value Set URI": "",
       "Value Set Binding": "",
-      "FHIR Element (R4)": "Bundle.entry:geneticSpecimen",
+      "FHIR Element (R4)": "Bundle.entry:GenomicSpecimen",
       "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle",
       "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle"
     },
     {
       "Group": "Default",
       "Profile Title": "mCODE Patient Bundle",
-      "Data Element Name": "Entry > Genetic Specimen > Resource",
+      "Data Element Name": "Entry > Genomic Specimen > Resource",
       "Definition": "A sample to be used for analysis.",
       "Required?": "Required if known (conditional on Entry)",
       "Occurrences Allowed": "Single",
       "Data Type": "Specimen",
       "Value Set URI": "",
       "Value Set Binding": "",
-      "FHIR Element (R4)": "Bundle.entry:geneticSpecimen.resource",
+      "FHIR Element (R4)": "Bundle.entry:GenomicSpecimen.resource",
       "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle",
       "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle"
     },
@@ -7838,7 +7838,7 @@
       "Group": "Default",
       "Profile Title": "Tumor Size",
       "Data Element Name": "Component",
-      "Definition": "Some observations have multiple component observations.  These component observations are expressed as separate code value pairs that share the same attributes.  Examples include systolic and diastolic component observations for blood pressure measurement and multiple component observations for genetics observations.",
+      "Definition": "Some observations have multiple component observations.  These component observations are expressed as separate code value pairs that share the same attributes.  Examples include systolic and diastolic component observations for blood pressure measurement and multiple component observations forgenomics observations.",
       "Required?": "Required",
       "Occurrences Allowed": "Multiple",
       "Data Type": "Any",
@@ -8391,7 +8391,7 @@
     {
       "title": "ClinVar Value Set",
       "url": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-clinvar-vs",
-      "description": "Value set of human genetic variants, drawn from [ClinVar](https://www.ncbi.nlm.nih.gov/clinvar/). The codes in this value set refer to the ClinVar Variation ID, or the identifier for the variant or set of variants that were interpreted. [Source: NCBI ClinVar Data Dictionary](https://www.ncbi.nlm.nih.gov/projects/clinvar/ClinVarDataDictionary.pdf)"
+      "description": "Value set of human genomic variants, drawn from [ClinVar](https://www.ncbi.nlm.nih.gov/clinvar/). The codes in this value set refer to the ClinVar Variation ID, or the identifier for the variant or set of variants that were interpreted. [Source: NCBI ClinVar Data Dictionary](https://www.ncbi.nlm.nih.gov/projects/clinvar/ClinVarDataDictionary.pdf)"
     },
     {
       "title": "Condition Status Trend Value Set",
@@ -8404,9 +8404,9 @@
       "description": "DNA Change Type of a variant"
     },
     {
-      "title": "Genetic Specimen Type Value Set",
-      "url": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-genetic-specimen-type-vs",
-      "description": "The type of specimen analyzed in a genetic test. The values are taken from code system http://terminology.hl7.org/CodeSystem/v2-0487, and represent a subset of HL7 Version 2 Table 0487 (http://hl7.org/fhir/v2/0487)."
+      "title": "Genomic Specimen Type Value Set",
+      "url": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-genomic-specimen-type-vs",
+      "description": "The type of specimen analyzed in agenomictest. The values are taken from code system http://terminology.hl7.org/CodeSystem/v2-0487, and represent a subset of HL7 Version 2 Table 0487 (http://hl7.org/fhir/v2/0487)."
     },
     {
       "title": "HUGO Gene Nomenclature Committee Gene Names Value Set",
@@ -8526,7 +8526,7 @@
     {
       "title": "Tumor Marker Test Value Set",
       "url": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-tumor-marker-test-vs",
-      "description": "Codes representing tests for tumor markers. This value set of LOINC codes is not comprehensive and can be extended. Other vocabularies can be used only if the test of interest is not covered by LOINC. Tumor marker tests differ from genetic tests in that they measure levels of protein or other substances produced downstream from RNA protein synthesis."
+      "description": "Codes representing tests for tumor markers. This value set of LOINC codes is not comprehensive and can be extended. Other vocabularies can be used only if the test of interest is not covered by LOINC. Tumor marker tests differ from genomictests in that they measure levels of protein or other substances produced downstream from RNA protein synthesis."
     },
     {
       "title": "Methods for measuring tumor size",
@@ -28131,7 +28131,7 @@
       "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/elixhauser-neurological-movement-disorder-vs",
       "Code system": "ICD-10 CM",
       "Code": "G24.1",
-      "Code description": "Genetic torsion dystonia"
+      "Code description": "Genomic torsion dystonia"
     },
     {
       "Value set name": "Elixhauser Comorbid Condition Value Set for Neurological Movement Disorders",
@@ -50135,225 +50135,225 @@
       "Logical definition": "concept is a descendent of SO:0002072"
     },
     {
-      "Value set name": "Genetic Specimen Type Value Set",
-      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-genetic-specimen-type-vs",
+      "Value set name": "Genomic Specimen Type Value Set",
+      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-genomic-specimen-type-vs",
       "Code system": "SpecimenType (HL7)",
       "Code": "AMN",
       "Code description": "Amniotic fluid"
     },
     {
-      "Value set name": "Genetic Specimen Type Value Set",
-      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-genetic-specimen-type-vs",
+      "Value set name": "Genomic Specimen Type Value Set",
+      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-genomic-specimen-type-vs",
       "Code system": "SpecimenType (HL7)",
       "Code": "BIFL",
       "Code description": "Bile Fluid"
     },
     {
-      "Value set name": "Genetic Specimen Type Value Set",
-      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-genetic-specimen-type-vs",
+      "Value set name": "Genomic Specimen Type Value Set",
+      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-genomic-specimen-type-vs",
       "Code system": "SpecimenType (HL7)",
       "Code": "BLD",
       "Code description": "Whole blood"
     },
     {
-      "Value set name": "Genetic Specimen Type Value Set",
-      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-genetic-specimen-type-vs",
+      "Value set name": "Genomic Specimen Type Value Set",
+      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-genomic-specimen-type-vs",
       "Code system": "SpecimenType (HL7)",
       "Code": "BLDA",
       "Code description": "Blood arterial"
     },
     {
-      "Value set name": "Genetic Specimen Type Value Set",
-      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-genetic-specimen-type-vs",
+      "Value set name": "Genomic Specimen Type Value Set",
+      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-genomic-specimen-type-vs",
       "Code system": "SpecimenType (HL7)",
       "Code": "BLDCO",
       "Code description": "Cord blood"
     },
     {
-      "Value set name": "Genetic Specimen Type Value Set",
-      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-genetic-specimen-type-vs",
+      "Value set name": "Genomic Specimen Type Value Set",
+      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-genomic-specimen-type-vs",
       "Code system": "SpecimenType (HL7)",
       "Code": "BLDV",
       "Code description": "Blood venous"
     },
     {
-      "Value set name": "Genetic Specimen Type Value Set",
-      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-genetic-specimen-type-vs",
+      "Value set name": "Genomic Specimen Type Value Set",
+      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-genomic-specimen-type-vs",
       "Code system": "SpecimenType (HL7)",
       "Code": "BON",
       "Code description": "Bone"
     },
     {
-      "Value set name": "Genetic Specimen Type Value Set",
-      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-genetic-specimen-type-vs",
+      "Value set name": "Genomic Specimen Type Value Set",
+      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-genomic-specimen-type-vs",
       "Code system": "SpecimenType (HL7)",
       "Code": "CSERU",
       "Code description": "Serum, Convalescent"
     },
     {
-      "Value set name": "Genetic Specimen Type Value Set",
-      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-genetic-specimen-type-vs",
+      "Value set name": "Genomic Specimen Type Value Set",
+      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-genomic-specimen-type-vs",
       "Code system": "SpecimenType (HL7)",
       "Code": "CSF",
       "Code description": "Cerebral spinal fluid"
     },
     {
-      "Value set name": "Genetic Specimen Type Value Set",
-      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-genetic-specimen-type-vs",
+      "Value set name": "Genomic Specimen Type Value Set",
+      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-genomic-specimen-type-vs",
       "Code system": "SpecimenType (HL7)",
       "Code": "CVM",
       "Code description": "Cervical Mucus"
     },
     {
-      "Value set name": "Genetic Specimen Type Value Set",
-      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-genetic-specimen-type-vs",
+      "Value set name": "Genomic Specimen Type Value Set",
+      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-genomic-specimen-type-vs",
       "Code system": "SpecimenType (HL7)",
       "Code": "DUFL",
       "Code description": "Duodenal fluid"
     },
     {
-      "Value set name": "Genetic Specimen Type Value Set",
-      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-genetic-specimen-type-vs",
+      "Value set name": "Genomic Specimen Type Value Set",
+      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-genomic-specimen-type-vs",
       "Code system": "SpecimenType (HL7)",
       "Code": "FBLOOD",
       "Code description": "Blood, Fetal"
     },
     {
-      "Value set name": "Genetic Specimen Type Value Set",
-      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-genetic-specimen-type-vs",
+      "Value set name": "Genomic Specimen Type Value Set",
+      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-genomic-specimen-type-vs",
       "Code system": "SpecimenType (HL7)",
       "Code": "FGA",
       "Code description": "Fluid, Abdomen"
     },
     {
-      "Value set name": "Genetic Specimen Type Value Set",
-      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-genetic-specimen-type-vs",
+      "Value set name": "Genomic Specimen Type Value Set",
+      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-genomic-specimen-type-vs",
       "Code system": "SpecimenType (HL7)",
       "Code": "GENV",
       "Code description": "Genital vaginal"
     },
     {
-      "Value set name": "Genetic Specimen Type Value Set",
-      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-genetic-specimen-type-vs",
+      "Value set name": "Genomic Specimen Type Value Set",
+      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-genomic-specimen-type-vs",
       "Code system": "SpecimenType (HL7)",
       "Code": "HYDC",
       "Code description": "Fluid, Hydrocele"
     },
     {
-      "Value set name": "Genetic Specimen Type Value Set",
-      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-genetic-specimen-type-vs",
+      "Value set name": "Genomic Specimen Type Value Set",
+      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-genomic-specimen-type-vs",
       "Code system": "SpecimenType (HL7)",
       "Code": "JNTFLD",
       "Code description": "Fluid, Joint"
     },
     {
-      "Value set name": "Genetic Specimen Type Value Set",
-      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-genetic-specimen-type-vs",
+      "Value set name": "Genomic Specimen Type Value Set",
+      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-genomic-specimen-type-vs",
       "Code system": "SpecimenType (HL7)",
       "Code": "KIDFLD",
       "Code description": "Fluid, Kidney"
     },
     {
-      "Value set name": "Genetic Specimen Type Value Set",
-      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-genetic-specimen-type-vs",
+      "Value set name": "Genomic Specimen Type Value Set",
+      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-genomic-specimen-type-vs",
       "Code system": "SpecimenType (HL7)",
       "Code": "LSAC",
       "Code description": "Fluid, Lumbar Sac"
     },
     {
-      "Value set name": "Genetic Specimen Type Value Set",
-      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-genetic-specimen-type-vs",
+      "Value set name": "Genomic Specimen Type Value Set",
+      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-genomic-specimen-type-vs",
       "Code system": "SpecimenType (HL7)",
       "Code": "MAR",
       "Code description": "Marrow"
     },
     {
-      "Value set name": "Genetic Specimen Type Value Set",
-      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-genetic-specimen-type-vs",
+      "Value set name": "Genomic Specimen Type Value Set",
+      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-genomic-specimen-type-vs",
       "Code system": "SpecimenType (HL7)",
       "Code": "PAFL",
       "Code description": "Pancreatic fluid"
     },
     {
-      "Value set name": "Genetic Specimen Type Value Set",
-      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-genetic-specimen-type-vs",
+      "Value set name": "Genomic Specimen Type Value Set",
+      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-genomic-specimen-type-vs",
       "Code system": "SpecimenType (HL7)",
       "Code": "PCFL",
       "Code description": "Fluid, Pericardial"
     },
     {
-      "Value set name": "Genetic Specimen Type Value Set",
-      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-genetic-specimen-type-vs",
+      "Value set name": "Genomic Specimen Type Value Set",
+      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-genomic-specimen-type-vs",
       "Code system": "SpecimenType (HL7)",
       "Code": "PLC",
       "Code description": "Placenta"
     },
     {
-      "Value set name": "Genetic Specimen Type Value Set",
-      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-genetic-specimen-type-vs",
+      "Value set name": "Genomic Specimen Type Value Set",
+      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-genomic-specimen-type-vs",
       "Code system": "SpecimenType (HL7)",
       "Code": "PLR",
       "Code description": "Pleural fluid (thoracentesis fluid)"
     },
     {
-      "Value set name": "Genetic Specimen Type Value Set",
-      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-genetic-specimen-type-vs",
+      "Value set name": "Genomic Specimen Type Value Set",
+      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-genomic-specimen-type-vs",
       "Code system": "SpecimenType (HL7)",
       "Code": "SAL",
       "Code description": "Saliva"
     },
     {
-      "Value set name": "Genetic Specimen Type Value Set",
-      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-genetic-specimen-type-vs",
+      "Value set name": "Genomic Specimen Type Value Set",
+      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-genomic-specimen-type-vs",
       "Code system": "SpecimenType (HL7)",
       "Code": "SKN",
       "Code description": "Skin"
     },
     {
-      "Value set name": "Genetic Specimen Type Value Set",
-      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-genetic-specimen-type-vs",
+      "Value set name": "Genomic Specimen Type Value Set",
+      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-genomic-specimen-type-vs",
       "Code system": "SpecimenType (HL7)",
       "Code": "SMN",
       "Code description": "Seminal fluid"
     },
     {
-      "Value set name": "Genetic Specimen Type Value Set",
-      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-genetic-specimen-type-vs",
+      "Value set name": "Genomic Specimen Type Value Set",
+      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-genomic-specimen-type-vs",
       "Code system": "SpecimenType (HL7)",
       "Code": "SNV",
       "Code description": "Fluid, synovial (Joint fluid)"
     },
     {
-      "Value set name": "Genetic Specimen Type Value Set",
-      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-genetic-specimen-type-vs",
+      "Value set name": "Genomic Specimen Type Value Set",
+      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-genomic-specimen-type-vs",
       "Code system": "SpecimenType (HL7)",
       "Code": "SPT",
       "Code description": "Sputum"
     },
     {
-      "Value set name": "Genetic Specimen Type Value Set",
-      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-genetic-specimen-type-vs",
+      "Value set name": "Genomic Specimen Type Value Set",
+      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-genomic-specimen-type-vs",
       "Code system": "SpecimenType (HL7)",
       "Code": "TISS",
       "Code description": "Tissue"
     },
     {
-      "Value set name": "Genetic Specimen Type Value Set",
-      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-genetic-specimen-type-vs",
+      "Value set name": "Genomic Specimen Type Value Set",
+      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-genomic-specimen-type-vs",
       "Code system": "SpecimenType (HL7)",
       "Code": "TUMOR",
       "Code description": "Tumor"
     },
     {
-      "Value set name": "Genetic Specimen Type Value Set",
-      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-genetic-specimen-type-vs",
+      "Value set name": "Genomic Specimen Type Value Set",
+      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-genomic-specimen-type-vs",
       "Code system": "SpecimenType (HL7)",
       "Code": "VITF",
       "Code description": "Vitreous Fluid"
     },
     {
-      "Value set name": "Genetic Specimen Type Value Set",
-      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-genetic-specimen-type-vs",
+      "Value set name": "Genomic Specimen Type Value Set",
+      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-genomic-specimen-type-vs",
       "Code system": "SpecimenType (HL7)",
       "Code": "WND",
       "Code description": "Wound"

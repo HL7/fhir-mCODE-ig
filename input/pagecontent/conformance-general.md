@@ -14,7 +14,7 @@ This IG currently only provides CapabilityStatements and documentation for "pull
 
 mCODE participants MUST meet the following requirements for conformance:
 
-1. [Identify in-scope patients](#identify-mcode-patients)
+1. [Identify in-scope patients](#identify-in-scope-patients)
 1. [Follow conformance requirements for supported profiles](#follow-conformance-requirements-for-supported-profiles)
 1. [Populate and meaningfully process mCODE resources](#populate-and-meaningfully-process-mcode-resources)
 1. [Support querying mCODE-conforming resources](#support-querying-mcode-conforming-resources)
@@ -66,8 +66,8 @@ Note that the requests below may return resources associated with patients who a
   * [US Core Laboratory Result Profile](http://hl7.org/fhir/us/core/StructureDefinition-us-core-observation-lab.html): `GET [base]/Observation?category=laboratory`
 
 * Genomics
-  * [CancerGeneticVariant]\: `GET [base]/Observation?code=http://loinc.org|69548-6`
-  * [GeneticSpecimen]\: Resources referenced in the `specimen` element in resources conforming to [CancerGeneticVariant] or [CancerGenomicsReport]
+  * [CancerGenomicVariant]\: `GET [base]/Observation?code=http://loinc.org|69548-6`
+  * [GenomicSpecimen]\: Resources referenced in the `specimen` element in resources conforming to [CancerGenomicVariant] or [CancerGenomicsReport]
   * [CancerGenomicsReport]\: `GET [base]/DiagnosticReport?code=http://loinc.org|81247-9`
   * [GenomicRegionStudied]\: `GET [base]/Observation?code=http://loinc.org|53041-0`
 
@@ -116,7 +116,7 @@ Participants SHOULD also support the non-mCODE-specific profiles that are consid
 
 #### Support the mCODE Patient Bundle
 
-The [mCODE Patient Bundle][MCODEPatientBundle] provides a mechanism to retrieve all mCODE-conforming resources for an in-scope Patient. Participants SHOULD support this CapabilityStatement ([sender][mcode-sender-patient-bundle]/[receiver][mcode-receiver-patient-bundle]) for the [mcode-patient-everything] operation, which retrieves an mCODE Patient Bundle for a given Patient ID.
+The [mCODE Patient Bundle][MCODEPatientBundle] provides a mechanism to retrieve all mCODE-conforming resources for an Identify in-scope Patient. Participants SHOULD support this CapabilityStatement ([sender][mcode-sender-patient-bundle]/[receiver][mcode-receiver-patient-bundle]) for the [mcode-patient-everything] operation, which retrieves an mCODE Patient Bundle for a given Patient ID.
 
     GET [base]/Patient/[id]/$mcode-everything
 

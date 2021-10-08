@@ -196,29 +196,14 @@ Description: "Example of Cancer Related Surgical Procedure"
 * reasonReference = Reference(primary-cancer-condition-nsclc)
 * bodySite = SCT#41224006 "Structure of lower lobe of left lung (body structure)"
 
-Instance: brachytherapy-treatment-phase-low-dose-rate-temporary
-InstanceOf: BrachytherapyTreatmentPhase
-Description: "Example of a brachytherapy therapy phase."
-* status = #completed "completed"
-* code = RID#mcode-brachytherapy-treatment-phase
-* extension[modality].valueCodeableConcept = RT#LDR-TEMP "Low Dose Rate Brachytherapy - Temporary Placement"
-* extension[technique].valueCodeableConcept = SCT#113120007 "Interstitial brachytherapy (procedure)"
-* subject = Reference(cancer-patient-john-anyperson)
-* asserter = Reference(us-core-practitioner-kyle-anydoc)
-* performedPeriod.start = "2019-03-01"
-* performedPeriod.end = "2019-03-01"
-* reasonReference = Reference(primary-cancer-condition-nsclc)
-* extension[doseDeliveredToVolume].extension[volume].valueReference = Reference(john-anyperson-treatment-volume)
-
 Instance: john-anyperson-treatment-volume
 InstanceOf: RadiotherapyVolume
 Description: "Anatomic volume for John Anyperson's brachytherapy."
 * patient = Reference(cancer-patient-john-anyperson)
 * description = "Structure of lower lobe of left lung"
 * location = SCT#31094006  "Structure of lobe of lung (body structure)"
-* locationQualifier[0] = SCT#7771000 "Left (qualifier value)"
-* locationQualifier[1] = SCT#261122009 "Lower (qualifier value)"
-
+* location.extension[lateralityQualifier][0].valueCodeableConcept = SCT#7771000 "Left (qualifier value)"
+* location.extension[locationQualifier][0].valueCodeableConcept = SCT#261122009 "Lower (qualifier value)"
 Instance: binet-stage-group-A
 InstanceOf: CancerStageGroup
 Description: "Example of a non-TNM Stage Group (Binet staging for CLL)"
@@ -228,7 +213,7 @@ Description: "Example of a non-TNM Stage Group (Binet staging for CLL)"
 * subject = Reference(cancer-patient-adam-everyman)
 * effectiveDateTime = "2020-05-18"
 * derivedFrom = Reference(lab-result-observation-hemoglobin)
-* valueCodeableConcept = UMLS#C2698392  "Binet Stage A" // NCIT#C80134 "Binet Stage A" 
+* valueCodeableConcept = UMLS#C2698392  "Binet Stage A" // NCIT#C80134 "Binet Stage A"
 
 Instance: tnm-clinical-stage-group-3c
 InstanceOf: CancerStageGroup

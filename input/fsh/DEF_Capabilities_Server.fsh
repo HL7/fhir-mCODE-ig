@@ -106,7 +106,7 @@ Usage: #definition
 
 * insert mCODE_CapabilityStatement_Server_Common
 
-// GET [base]/Patient?_has:Condition:subject:code:in=http://hl7.org/fhir/us/mcode/ValueSet/mcode-primary-or-uncertain-behavior-cancer-disorder-vs
+// GET [base]/Patient?_has:Condition:subject:code:in=http://hl7.org/fhir/us/mcode/ValueSet/mcode-primary-cancer-disorder-vs
 * insert mCODE_CapabilityStatement_Patient_Server_Common_Rules
 * rest[0].resource[0].interaction[1].code = #search-type
 * rest[0].resource[0].interaction[1].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
@@ -146,7 +146,7 @@ Usage: #definition
 
 * insert mCODE_CapabilityStatement_Patient_Server_Common_Rules // Has to be here to make indexing work for the Condition RuleSet below
 
-// GET [base]/Condition?code:in=http://hl7.org/fhir/us/mcode/ValueSet/mcode-primary-or-uncertain-behavior-cancer-disorder-vs&_include=Condition:subject
+// GET [base]/Condition?code:in=http://hl7.org/fhir/us/mcode/ValueSet/mcode-primary-cancer-disorder-vs&_include=Condition:subject
 // GET [base]/Group?code=mcode-cancer-patient
 * insert mCODE_CapabilityStatement_Condition_Server_Common_Rules
 
@@ -165,7 +165,7 @@ Usage: #definition
 
 * insert mCODE_CapabilityStatement_Patient_Server_Common_Rules // Has to be here to make indexing work for the Condition RuleSet below
 
-// GET [base]/Condition?code:in=http://hl7.org/fhir/us/mcode/ValueSet/mcode-primary-or-uncertain-behavior-cancer-disorder-vs
+// GET [base]/Condition?code:in=http://hl7.org/fhir/us/mcode/ValueSet/mcode-primary-cancer-disorder-vs
 // GET [base]/Group?code=mcode-cancer-patient
 * insert mCODE_CapabilityStatement_Condition_Server_Common_Rules
 

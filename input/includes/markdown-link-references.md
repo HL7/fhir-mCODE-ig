@@ -115,7 +115,7 @@
 [ObservationCodesRegionalNodesVS]: ValueSet-mcode-observation-codes-regional-nodes-vs.html
 [ObservationCodesDistantMetastasesVS]: ValueSet-mcode-observation-codes-distant-metastases-vs.html
 [PresentAbsentVS]: ValueSet-mcode-present-absent.html
-[PrimaryOrUncertainBehaviorCancerDisorderVS]: ValueSet-mcode-primary-or-uncertain-behavior-cancer-disorder-vs.html
+[PrimaryMalignantNeoplasmDisorderVS]: ValueSet-mcode-primary-malignant-neoplasm-disorder-vs.html
 [PrimaryCancerDisorderVS]: ValueSet-mcode-primary-cancer-disorder-vs.html
 [RadiotherapyModalityVS]: ValueSet-mcode-radiotherapy-modality-vs.html
 [RadiotherapyTechniqueVS]: ValueSet-mcode-radiotherapy-technique-vs.html
@@ -134,20 +134,12 @@
 [TumorMarkerTestVS]: ValueSet-mcode-tumor-marker-test-vs.html
 [TumorSizeMethodVS]: ValueSet-mcode-tumor-size-method-vs.html
 [TumorSizeUnitsVS]: ValueSet-mcode-tumor-size-units-vs.html
-
-* include codes from valueset CarcinomaInSituDisorderVS
-* include codes from valueset
-
-
-ValueSet: CancerDisorderVS
-Id: mcode-cancer-disorder-vs
-Title: "Cancer Disorder Value Set"
-Description:   "A broad cancer-related value set containing both primary and secondary tumor types, with codes from ICD-10 and SNOMED CT, including both diagnosis and histology/morphology/behavior codes. ICD-O-3 morphology codes may also be used and are considered conformant to the specification. For SNOMED, the value set includes all codes descending from 363346000 'Malignant neoplastic disease (disorder)' and 108369006 'Neoplasm (morphologic abnormality)'."
-* insert SNOMEDCTCopyrightForVS
-* CC#CD-OTHER "Other Cancer Disorder, Specify"
-* include codes from valueset PrimaryOrUncertainBehaviorCancerDisorderVS
-* include codes from valueset SecondaryCancerDisorderVS
-* include codes from valueset HistologyMorphologyBehaviorVS
+[PrimaryMalignantNeoplasmDisorderVS]: ValueSet-mcode-primary-malignant-neoplasm-disorder-vs.html
+[SpecificDiagnosisCancerDisorderVS]: ValueSet-mcode-specific-diagnosis-cancer-disorder-vs.html
+[CarcinomaInSituDisorderVS]: ValueSet-mcode-carcinoma-in-situ-disorder-vs.html
+[MelanomaInSituDisorderVS]: ValueSet-mcode-melanoma-in-situ-disorder-vs.html
+[BenignUncertainNeoplasmBrainCNSDisorderVS]: ValueSet-mcode-uncertain-neoplasm-brain-CNS-Disorder-vs.html
+[CytologicEvidenceOfMalignancyVS]: ValueSet-mcode-evidence-of-malignancy-vs.html
 
 <!-- mCODE Code Systems -->
 [ComorbiditiesElixhauserCS]: CodeSystem-comorbidities-elixhauser-cs.html

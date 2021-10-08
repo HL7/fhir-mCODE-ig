@@ -268,12 +268,12 @@ Description:    "Types of benign neoplasms of the brain and central nervous syst
 
 // This VS is big, so I put it last in the file (order doesn't matter to FSH)
 
-ValueSet:  PrimaryOrUncertainBehaviorCancerDisorderVS
-Id: mcode-primary-or-uncertain-behavior-cancer-disorder-vs
-Title: "Primary or Uncertain Behavior Cancer Disorder Value Set"
+ValueSet:  PrimaryCancerDisorderVS
+Id: mcode-primary-cancer-disorder-vs
+Title: "Primary Cancer Disorder Value Set"
 Description:    "Types of primary malignant neoplastic disease, coded in SNOMED CT or ICD-10-CM."
 * insert SNOMEDCTCopyrightForVS
-* include codes from valueset PrimaryCancerDisorderVS
+* include codes from valueset PrimaryMalignantNeoplasmDisorderVS
 * include codes from valueset SpecificDiagnosisCancerDisorderVS
 * include codes from valueset CarcinomaInSituDisorderVS
 * include codes from valueset MelanomaInSituDisorderVS
@@ -287,7 +287,7 @@ Id: mcode-cancer-disorder-vs
 Title: "Cancer Disorder Value Set"
 Description:   "A broad cancer-related value set containing both primary and secondary tumor types, with codes from ICD-10 and SNOMED CT, including both diagnosis and histology/morphology/behavior codes. ICD-O-3 morphology codes may also be used and are considered conformant to the specification. For SNOMED, the value set includes all codes descending from 363346000 'Malignant neoplastic disease (disorder)' and 108369006 'Neoplasm (morphologic abnormality)'."
 * insert SNOMEDCTCopyrightForVS
-* include codes from valueset PrimaryOrUncertainBehaviorCancerDisorderVS
+* include codes from valueset PrimaryCancerDisorderVS
 * include codes from valueset SecondaryCancerDisorderVS
 * include codes from valueset HistologyMorphologyBehaviorVS
 * CC#CD-OTHER "Other Cancer Disorder, Specify"
@@ -309,9 +309,9 @@ Description: "Codes representing the structure, arrangement, and behavioral char
 * exclude codes from system SCT where concept is-a #450890000 "Glandular intraepithelial neoplasia, low grade (morphologic abnormality)"
 * exclude codes from system SCT where concept is-a #703548001 "Endometrioid intraepithelial neoplasia (morphologic abnormality)"
 
-ValueSet:  PrimaryCancerDisorderVS
-Id: mcode-primary-cancer-disorder-vs
-Title: "Primary Cancer Disorder Value Set"
+ValueSet:  PrimaryMalignantNeoplasmDisorderVS
+Id: mcode-primary-malignant-neoplasm-disorder-vs
+Title: "Primary Malignant Neoplasm Disorder Value Set"
 Description:    "Types of primary malignant neoplasms, coded in SNOMED CT or ICD-10-CM."
 * insert SNOMEDCTCopyrightForVS
 * include codes from system SCT where concept is-a #363346000 "Malignant neoplastic disease (disorder)"

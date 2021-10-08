@@ -88,12 +88,19 @@ mCODE includes single FHIR profile, [TumorMarkerTest], for all labs involving se
 ### Value Sets
 
 * **Diagnosis**
-  * [PrimaryOrUncertainBehaviorCancerDisorderVS]
+  * [PrimaryCancerDisorderVS]
   * [SecondaryCancerDisorderVS]
+  * [PrimaryMalignantNeoplasmDisorderVS]
+  * [SpecificDiagnosisCancerDisorderVS]
+  * [CarcinomaInSituDisorderVS]
+  * [MelanomaInSituDisorderVS]
+  * [BenignUncertainNeoplasmBrainCNSDisorderVS]
+  * [CytologicEvidenceOfMalignancyVS]
   * [CancerDisorderVS]
   * [CancerBodyLocationVS]
   * [BodyLocationQualifierVS]
   * [HistologyMorphologyBehaviorVS]
+
 * **Staging**
   * [CancerStageGroupVS]
   * [ObservationCodesStageGroupVS]

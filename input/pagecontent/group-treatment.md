@@ -22,20 +22,20 @@ A radiation oncology work group convened under [CodeX FHIR Accelerator](https://
 * **Surgery**
   * [CancerRelatedSurgicalProcedure]
 * **Radiotherapy**
-  * [BrachytherapyTreatmentPhase]
   * [RadiotherapyCourseSummary]
   * [RadiotherapyVolume]
-  * [TeleradiotherapyTreatmentPhase]
 
 ### Extensions
 
 * **General**
   * [TreatmentTerminationReason]
   * [ProcedureIntent]
+  * [LateralityQualifier]
 * **Radiotherapy**
   * [RadiotherapyDoseDeliveredToVolume]
   * [RadiotherapyFractionsDelivered]
   * [RadiotherapyModality]
+  * [RadiotherapyModalityAndTechnique]
   * [RadiotherapySessions]
   * [RadiotherapyTechnique]
 

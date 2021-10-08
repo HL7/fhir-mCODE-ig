@@ -1,9 +1,13 @@
 
 
+### Usage
+
+Valid combinations of modality and technique are described in the modality and technique extension [RadiotherapyModalityAndTechnique].
+
 ### Code Descriptions
 
 | **Common Usage Name**  | **Definition**|  **SNOMED CT Fully Specified Name**  | **SNOMED CT Concept ID**|
-| ----------------- | ----------------------------- | ------------------------------ | ----------------------------- | 
+| ----------------- | ----------------------------- | ------------------------------ | ----------------------------- |
 |  Intracavitary  |  Placement of a radiation source within an open cavity of the body.  |  Intracavitary brachytherapy (procedure)  | 384692006 |
 |  Intracavitary, Intensity Modulated |  A technique of brachytherapy that dynamically directs the radiation into the tumours and away from healthy tissue, for example, by incorporation of metallic shields inside brachytherapy applicators.  |  Intensity modulated intracavitary brachytherapy (procedure) | 1156382005 |
 | Interstitial  | Placement of a radiation source into tissue. | Interstitial brachytherapy (procedure)   | 113120007 |
@@ -14,4 +18,3 @@
 |   Oral | Delivery of radiopharaceutical by oral intake. | Oral radionuclide therapy (procedure)   | 16560241000119104  |
 {: .grid }
 {% include markdown-link-references.md %}
-

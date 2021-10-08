@@ -29,8 +29,12 @@
 * [FHIR-32649](https://jira.hl7.org/browse/FHIR-32649) Extension 'Radiotherapy Fractions Delivered' added to the summary of extensions for Radiotherapy
 * [FHIR-33003](https://jira.hl7.org/browse/FHIR-33003)  Make extension values required
 
+#### [Block Vote 5](https://jira.hl7.org/issues/?filter=15618)
+* [FHIR-32956](https://jira.hl7.org/browse/FHIR-32956) Primary and Secondary cancer value sets have been aligned with CDC state cancer reporting practices.
+
 #### Other
 * [FHIR-32340](https://jira.hl7.org/browse/FHIR-33340)  Laterality broken out into separate extension
+*
 
 ### mCODE STU 2 Ballot Version (May 2021)
 

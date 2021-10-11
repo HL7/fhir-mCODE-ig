@@ -4,7 +4,7 @@ In addition to individual examples of each , this extended example demonstrates 
 
 ### Patient description
 
-Patient Jenny M. is a 55 year old non-Hispanic white female with a past medical history significant for depression, a 20-pack-year history of smoking (current smoker), anxiety, and hypertension. Her family history was significant for a maternal aunt with ovarian cancer at age 69, a sister with breast cancer at age 64, and deceased paternal uncle due to pancreatic cancer.
+[`Patient Jenny M.`](Patient-cancer-patient-jenny-m.html) is a 55 year old non-Hispanic white female with a [`past medical history`](Observation-cancer-related-mcode-comorbidities-elixhauser-jenny-m.html) significant for [`depression`](Condition-us-core-condition-depression-jenny-m.html), a [`20-pack-year history of smoking`](Observation-observation-smoking-history-jenny-m.html) (current smoker), [`anxiety`](Condition-us-core-condition-anxiety-jenny-m.html), and [`hypertension`](Condition-us-core-condition-hypertension-jenny-m.html). Her family history was significant for a [`maternal aunt with ovarian cancer at age 69`](/FamilyMemberHistory-family-member-history-aunt-jenny-m.json.html), a [`sister with breast cancer at age 64`](FamilyMemberHistory-family-member-history-sister-jenny-m.html), and [`deceased paternal uncle due to pancreatic cancer`](FamilyMemberHistory-family-member-history-uncle-jenny-m.html).
 
 During a routine screening mammography in February 2018, an abnormality was detected as a possible mass and suspected breast cancer. The gynecologist performing the biopsy refers the patient to an oncologist for further workup. An ultrasound-guided biopsy was performed along with prognostic tumor marker tests with [`ER positive`](Observation-tumor-marker-test-er-jenny-m.html), [`PR negative`](Observation-tumor-marker-test-pr-jenny-m.html), and [`HER2 negative`](Observation-tumor-marker-test-her2-jenny-m.html). The patient is referred to an oncologist who clinically reviews the mammogram and tumor marker results, and clinical staged as [`cT3`](Observation-tnm-clinical-primary-tumor-category-jenny-m.html)[`N0`](Observation-tnm-clinical-regional-nodes-category-jenny-m.html).
 
@@ -43,7 +43,10 @@ A timeline of the narrative is illustrated in the following diagram:
 |  [`Performance Status: ECOG`](Observation-ecog-performance-status-jenny-m.html) | [ECOGPerformanceStatus] | [R4Observation] |  None Yet|
 |  [`Genomic Region: BRCA1`](Observation-genomic-region-studied-jenny-m.html) |[GenomicRegionStudied]| [USCoreLaboratoryResultObservation] | None Yet |
 |  [`Genomic Specimen: Left Breast`](Specimen-genomic-specimen-left-breast-jenny-m.html) | [GenomicSpecimen] | [R4Specimen]| None Yet |
-|  [`mCODE Patient Bundle: Jenny M](Bundle-mcode-patient-bundle-jenny-m.html) | [MCODEPatientBundle]|[R4Bundle] | None Yet |
+|  [`mCODE Patient Bundle: Jenny M`](Bundle-mcode-patient-bundle-jenny-m.html) | [MCODEPatientBundle]|[R4Bundle] | None Yet |
+| | | | |
+{: .grid }
+<!-- | | | | |
 | | | | |
 | | | | |
 | | | | |
@@ -54,9 +57,6 @@ A timeline of the narrative is illustrated in the following diagram:
 | | | | |
 | | | | |
 | | | | |
-| | | | |
-| | | | |
-
 * [`primary-cancer-condition-jenny-m`](Condition-primary-cancer-condition-jenny-m.html) ([PrimaryCancerCondition])
 * [`radiotherapy-treatment-summary-chest-wall-jenny-m`](Procedure-radiotherapy-treatment-summary-chest-wall-jenny-m.html) ([RadiotherapyCourseSummary])
 * [`tnm-clinical-stage-group-jenny-m`](Observation-tnm-clinical-stage-group-jenny-m.html) ([CancerStageGroup])
@@ -73,8 +73,7 @@ A timeline of the narrative is illustrated in the following diagram:
 * [`tumor-marker-test-oncotype-dx-jenny-m`](Observation-tumor-marker-test-oncotype-dx-jenny-m.html)  ([TumorMarkerTest])
 * [`tumor-size-jenny-m.html`](Observation-tumor-size-jenny-m.html) ([TumorSize])
 * [`tumor-specimen-left-breast-jenny-m`](Specimen-tumor-specimen-left-breast-jenny-m.html) ([TumorSpecimen])
-* [`cancer-genomics-report-jenny-m`](DiagnosticReport-cancer-genomics-report-jenny-m.html) ([CancerGenomicsReport])
-{: .grid }
+* [`cancer-genomics-report-jenny-m`](DiagnosticReport-cancer-genomics-report-jenny-m.html) ([CancerGenomicsReport]) --> -->
 
 * [`cancer-patient-jenny-m`](Patient-cancer-patient-jenny-m.html) ([CancerPatient])
 * [`cancer-disease-status-jenny-m`](Observation-cancer-disease-status-jenny-m.html) ([CancerDiseaseStatus])

@@ -29,9 +29,10 @@ A timeline of the narrative is illustrated in the following diagram:
 ### FHIR instances from mCODE elements
 |**Instance**|**mCODE Profile**|**Based On**|**Notes**|
 |------------|----------------|--------------|---------|
-|  [`cancer-patient-jenny-m`](Patient-cancer-patient-jenny-m.html)  |  [CancerPatient]  |  [USCorePatient] | None yet|
-|  [`cancer-disease-status-jenny-m`](Observation-cancer-disease-status-jenny-m.html) | [CancerDiseaseStatus] | [R4Observation]| None yet |
-|  [`cancer-related-mcode-comorbidities-elixhauser-jenny-m`](Observation-cancer-related-mcode-comorbidities-elixhauser-jenny-m.html) | [ComorbiditiesElixhauser] |  [R4Observation]| None yet |
+|  [`Cancer Patient: Jenny M`](Patient-cancer-patient-jenny-m.html)  |  [CancerPatient]  |  [USCorePatient] | None yet|
+|  [`Cancer Disease Status`](Observation-cancer-disease-status-jenny-m.html) | [CancerDiseaseStatus] | [R4Observation]| None yet |
+|  [`Elixhauser Comorbidities`](Observation-cancer-related-mcode-comorbidities-elixhauser-jenny-m.html) | [ComorbiditiesElixhauser] |  [R4Observation]| None yet |
+|  [`Genomic Variant`](Observation-cancer-genomic-variant-jenny-m.html) | [CancerGenomicVariant] |[USCoreLaboratoryResultObservation] | None yet |
 {: .grid }
 
 * [`cancer-patient-jenny-m`](Patient-cancer-patient-jenny-m.html) ([CancerPatient])

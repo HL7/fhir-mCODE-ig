@@ -27,10 +27,10 @@ A timeline of the narrative is illustrated in the following diagram:
 </div>
 
 ### FHIR instances from mCODE elements
-| **Instance** | **mCODE Profile**|  **Based On**  | **Notes**|
-| ------------ | ---------------- | -------------- | ---------|
+|**Instance**|**mCODE Profile**|**Based On**|**Notes**|
+|------------|----------------|--------------|---------|
 |  [`cancer-patient-jenny-m`](Patient-cancer-patient-jenny-m.html)  |  [CancerPatient]  |  [USCorePatient] | None yet|
-|  [`cancer-disease-status-jenny-m`](Observation-cancer-disease-status-jenny-m.html) [CancerDiseaseStatus] | [R4Observation]| None yet |
+|  [`cancer-disease-status-jenny-m`](Observation-cancer-disease-status-jenny-m.html) | [CancerDiseaseStatus] | [R4Observation]| None yet |
 |  [`cancer-related-mcode-comorbidities-elixhauser-jenny-m`](Observation-cancer-related-mcode-comorbidities-elixhauser-jenny-m.html) | [ComorbiditiesElixhauser] |  [R4Observation]| None yet |
 {: .grid }
 

@@ -17,12 +17,14 @@ RuleSet: mCODE_CapabilityStatement_Server_Common
 * fhirVersion = #4.0.1
 * implementationGuide = "http://hl7.org/fhir/us/mcode/ImplementationGuide/hl7.fhir.us.mcode"
 * rest[0].mode = #server
-* rest[0].documentation =  "An mCODE Server **SHALL**:\n\n1. Support all profiles defined in this Implementation Guide..\n1.  Implement the RESTful behavior according to the FHIR specification.\n1. Return the following response classes:\n   - (Status 400): invalid parameter\n   - (Status 401/4xx): unauthorized request\n   - (Status 403): insufficient scope\n   - (Status 404): unknown resource\n   - (Status 410): deleted resource.\n1. Support json source formats for all mCODE interactions.\n1. Identify the mCODE  profiles supported as part of the FHIR `meta.profile` attribute for each instance.\n1. Support the searchParameters on each profile individually and in combination.\n\nThe mCODE Server **SHOULD**:\n\n1. Support xml source formats for all mCODE interactions.\n"
-* rest[0].security.description = "1. See the [General Security Considerations](implementation.html#general-security-considerations) section for requirements and recommendations.\n1. A server **SHALL** reject any unauthorized requests by returning an `HTTP 401` unauthorized response code."
+* rest.documentation =  "An mCODE Server **SHALL**:\n\n1. Support all profiles defined in this Implementation Guide..\n1.  Implement the RESTful behavior according to the FHIR specification.\n1. Return the following response classes:\n   - (Status 400): invalid parameter\n   - (Status 401/4xx): unauthorized request\n   - (Status 403): insufficient scope\n   - (Status 404): unknown resource\n   - (Status 410): deleted resource.\n1. Support json source formats for all mCODE interactions.\n1. Identify the mCODE  profiles supported as part of the FHIR `meta.profile` attribute for each instance.\n1. Support the searchParameters on each profile individually and in combination.\n\nThe mCODE Server **SHOULD**:\n\n1. Support xml source formats for all mCODE interactions.\n"
+* rest.security.description = "1. See the [General Security Considerations](implementation.html#general-security-considerations) section for requirements and recommendations.\n1. A server **SHALL** reject any unauthorized requests by returning an `HTTP 401` unauthorized response code."
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 RuleSet: mCODE_CapabilityStatement_Patient_Server_Common_Rules
 * rest[0].resource[0].type = #Patient
+* rest[0].resource[=].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+* rest[0].resource[=].extension.valueCode = #SHALL
 * rest[0].resource[0].supportedProfile[0] = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-patient"
 * rest[0].resource[0].supportedProfile[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest[0].resource[0].supportedProfile[0].extension.valueCode = #SHALL
@@ -38,6 +40,8 @@ RuleSet: mCODE_CapabilityStatement_Patient_Server_Common_Rules
 // Common rules used by `patients-and-cancer-conditions` and `cancer-conditions-then-patients`
 RuleSet: mCODE_CapabilityStatement_Condition_Server_Common_Rules
 * rest[0].resource[1].type = #Condition
+* rest[0].resource[=].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+* rest[0].resource[=].extension.valueCode = #SHALL
 * rest[0].resource[1].supportedProfile[0] = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-patient"
 * rest[0].resource[0].supportedProfile[0].extension.valueCode = #SHALL
 * rest[0].resource[1].interaction[0].code = #search-type
@@ -81,7 +85,8 @@ Usage: #definition
 
 // GET [base]/Group?code=mcode-cancer-patient
 * rest[0].resource[1].type = #Group
-
+* rest[0].resource[=].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+* rest[0].resource[=].extension.valueCode = #SHALL
 * rest[0].resource[1].interaction[0].code = #search-type
 * rest[0].resource[1].interaction[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest[0].resource[1].interaction[0].extension.valueCode = #SHALL
@@ -128,7 +133,8 @@ Usage: #definition
 // GET [base]/Group?code=mcode-cancer-patient
 // This must be implemented regardless of the method for identifying in-scope patients
 * rest[0].resource[1].type = #Group
-
+* rest[0].resource[=].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+* rest[0].resource[=].extension.valueCode = #SHALL
 * rest[0].resource[1].interaction[0].code = #search-type
 * rest[0].resource[1].interaction[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest[0].resource[1].interaction[0].extension.valueCode = #SHALL

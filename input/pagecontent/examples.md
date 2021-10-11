@@ -27,7 +27,12 @@ A timeline of the narrative is illustrated in the following diagram:
 </div>
 
 ### FHIR instances from mCODE elements
-
+| **Instance** | **mCODE Profile**|  **Based On**  | **Notes**|
+| ------------ | ---------------- | -------------- | ---------|
+|  [`cancer-patient-jenny-m`](Patient-cancer-patient-jenny-m.html)  |  [CancerPatient]  |  [USCorePatient] | None yet|
+|  [`cancer-disease-status-jenny-m`](Observation-cancer-disease-status-jenny-m.html) [CancerDiseaseStatus] | [R4Observation]| None yet |
+|  [`cancer-related-mcode-comorbidities-elixhauser-jenny-m`](Observation-cancer-related-mcode-comorbidities-elixhauser-jenny-m.html) | [ComorbiditiesElixhauser] |  [R4Observation]| None yet |
+{: .grid }
 
 * [`cancer-patient-jenny-m`](Patient-cancer-patient-jenny-m.html) ([CancerPatient])
 * [`cancer-disease-status-jenny-m`](Observation-cancer-disease-status-jenny-m.html) ([CancerDiseaseStatus])
@@ -62,21 +67,21 @@ A timeline of the narrative is illustrated in the following diagram:
 
 ### FHIR instances from _non_-mCODE elements
 
-* [`us-core-practitioner-owen-oncologist`](Practitioner-us-core-practitioner-owen-oncologist.html) ([USCorePractitioner])
-* [`us-core-procedure-biopsy-jenny-m`](Procedure-us-core-procedure-biopsy-jenny-m.html) ([USCoreProcedure])
-* [`us-core-procedure-mammogram-jenny-m`](Procedure-us-core-procedure-mammogram-jenny-m.html) ([USCoreProcedure])
-* [`us-core-smokingstatus-jenny-m`](Observation-us-core-smokingstatus-jenny-m.html) ([USCoreSmokingStatus])
+
 * [`observation-smoking-history-jenny-m`](Observation-observation-smoking-history-jenny-m.html) ([R4Observation])
 * [`family-member-history-aunt-jenny-m`](FamilyMemberHistory-family-member-history-aunt-jenny-m.html) ([R4FamilyMemberHistory])
 * [`family-member-history-sister-jenny-m`](FamilyMemberHistory-family-member-history-sister-jenny-m.html) ([R4FamilyMemberHistory])
 * [`family-member-history-uncle-jenny-m`](FamilyMemberHistory-family-member-history-uncle-jenny-m.html) ([R4FamilyMemberHistory])
-* [`scenario1-observation-dcis`](Observation-us-core-observation-lab-tumor-dcis-jenny-m.html) ([USCoreLaboratoryResultObservation])
 * [`us-core-condition-anxiety-jenny-m`](Condition-us-core-condition-anxiety-jenny-m.html) ([USCoreCondition])
 * [`us-core-condition-depression-jenny-m`](Condition-us-core-condition-depression-jenny-m.html) ([USCoreCondition])
 * [`us-core-condition-hypertension-jenny-m`](Condition-us-core-condition-hypertension-jenny-m.html) ([USCoreCondition])
 * [`us-core-diagnosticreport-lab-jenny-m`](DiagnosticReport-us-core-diagnosticreport-lab-jenny-m.html) ([USCoreDiagnosticReport])
+* [`us-core-observation-lab-tumor-dcis-jenny-m`](Observation-us-core-observation-lab-tumor-dcis-jenny-m.html) ([USCoreLaboratoryResultObservation])
 * [`us-core-observation-lab-tumor-invasion-jenny-m`](Observation-us-core-observation-lab-tumor-invasion-jenny-m.html) ([USCoreLaboratoryResultObservation])
 * [`us-core-observation-lab-tumor-margins-jenny-m`](Observation-us-core-observation-lab-tumor-margins-jenny-m.html) ([USCoreLaboratoryResultObservation])
 * [`us-core-observation-lab-sentinel-nodes-jenny-m`](Observation-us-core-observation-lab-sentinel-nodes-jenny-m.html) ([USCoreLaboratoryResultObservation])
-
+* [`us-core-practitioner-owen-oncologist`](Practitioner-us-core-practitioner-owen-oncologist.html) ([USCorePractitioner])
+* [`us-core-procedure-biopsy-jenny-m`](Procedure-us-core-procedure-biopsy-jenny-m.html) ([USCoreProcedure])
+* [`us-core-procedure-mammogram-jenny-m`](Procedure-us-core-procedure-mammogram-jenny-m.html) ([USCoreProcedure])
+* [`us-core-smokingstatus-jenny-m`](Observation-us-core-smokingstatus-jenny-m.html) ([USCoreSmokingStatus])
 {% include markdown-link-references.md %}

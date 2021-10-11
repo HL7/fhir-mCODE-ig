@@ -54,7 +54,8 @@ RuleSet: mCODE_CapabilityStatement_Condition_Server_Common_Rules
 // GET [base]/Group?code=mcode-cancer-patient
 // This must be implemented regardless of the method for identifying in-scope patients
 * rest[0].resource[2].type = #Group
-
+* rest[0].resource[2].extension.valueCode = #SHALL
+* rest[0].resource[2].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest[0].resource[2].interaction[0].code = #search-type
 * rest[0].resource[2].interaction[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest[0].resource[2].interaction[0].extension.valueCode = #SHALL

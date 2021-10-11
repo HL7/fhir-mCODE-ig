@@ -27,8 +27,8 @@ A timeline of the narrative is illustrated in the following diagram:
 </div>
 
 ### FHIR instances from mCODE elements
-|**Instance**|**mCODE Profile**|**Based On**|**Notes**|
-|------------|----------------|--------------|---------|
+| **Instance** | **mCODE Profile** | **Based On** | **Notes** |
+| ------------ | ---------------- | -------------- | --------- |
 |  [`Cancer Patient: Jenny M`](Patient-cancer-patient-jenny-m.html)  |  [CancerPatient]  |  [USCorePatient] | None yet|
 |  [`Cancer Disease Status`](Observation-cancer-disease-status-jenny-m.html) | [CancerDiseaseStatus] | [R4Observation]| None yet |
 |  [`Elixhauser Comorbidities`](Observation-cancer-related-mcode-comorbidities-elixhauser-jenny-m.html) | [ComorbiditiesElixhauser] |  [R4Observation]| None yet |

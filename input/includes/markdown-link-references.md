@@ -157,10 +157,12 @@
 [USCorePractitioner]: http://hl7.org/fhir/us/core/StructureDefinition-us-core-practitioner.html
 [USCoreSmokingStatus]: http://hl7.org/fhir/us/core/StructureDefinition-us-core-smokingstatus.html
 [USCoreDiagnosticReport]: http://hl7.org/fhir/us/core/StructureDefinition-us-core-diagnosticreport-lab.html
-
+[USCoreMedicationRequest] : http://hl7.org/fhir/us/core/STU4/StructureDefinition-us-core-medicationrequest.html
 [R4Observation]: http://hl7.org/fhir/R4/observation.html
 [R4FamilyMemberHistory]: http://hl7.org/fhir/R4/familymemberhistory.html
-
+[R4MedicationAdministration]: http://hl7.org/fhir/R4/medicationadministration.html
+[R4Specimen]: http://hl7.org/fhir/R4/specimen.html
+[R4Bundle]: http://hl7.org/fhir/R4/bundle.html
 <!-- Other links -->
 [in-scope patient]: conformance-patients.html
 [in-scope patients]: conformance-patients.html

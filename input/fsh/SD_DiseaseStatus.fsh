@@ -8,8 +8,7 @@ Description:    "A clinician's qualitative judgment on the current trend of the 
 // * insert ReduceText(component)
 // * obeys mcode-no-evidence-if-clinical-diagnosis-only
 * extension contains
-    EvidenceType named evidenceType 0..* and
-    ClinicalDiagnosisOnly named clinicalDiagnosisOnly 0..1
+    EvidenceType named evidenceType 0..*
 * insert NotUsed(specimen)
 * insert NotUsed(device)
 * insert NotUsed(referenceRange)
@@ -24,7 +23,7 @@ Description:    "A clinician's qualitative judgment on the current trend of the 
 * value[x] only CodeableConcept
 * value[x] from ConditionStatusTrendVS (required)
 // ALL MUST SUPPORTS
-* status and code and subject and effective[x] and value[x] and focus and dataAbsentReason and extension[evidenceType] and extension[clinicalDiagnosisOnly] MS
+* status and code and subject and effective[x] and value[x] and focus and dataAbsentReason and extension[evidenceType]  MS
 
 
 // Invariant:  mcode-no-evidence-if-clinical-diagnosis-only

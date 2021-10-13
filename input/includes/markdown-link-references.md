@@ -7,7 +7,6 @@
 
 <!-- mCODE Profiles and Extensions -->
 [BodyLocationQualifier]: StructureDefinition-mcode-body-location-qualifier.html
-[BrachytherapyTreatmentPhase]: StructureDefinition-mcode-brachytherapy-treatment-phase.html
 [CancerDiseaseStatus]: StructureDefinition-mcode-cancer-disease-status.html
 [CancerGenomicVariant]: StructureDefinition-mcode-cancer-genomic-variant.html
 [CancerGenomicsReport]: StructureDefinition-mcode-cancer-genomics-report.html
@@ -39,7 +38,6 @@
 [RadiotherapyVolume]: StructureDefinition-mcode-radiotherapy-volume.html
 [RelatedPrimaryCancerCondition]: StructureDefinition-mcode-related-primary-cancer-condition.html
 [SecondaryCancerCondition]: StructureDefinition-mcode-secondary-cancer-condition.html
-[TeleradiotherapyTreatmentPhase]: StructureDefinition-mcode-teleradiotherapy-treatment-phase.html
 [TNMDistantMetastasesCategory]: StructureDefinition-mcode-tnm-distant-metastases-category.html
 [TNMPrimaryTumorCategory]: StructureDefinition-mcode-tnm-primary-tumor-category.html
 [TNMRegionalNodesCategory]: StructureDefinition-mcode-tnm-regional-nodes-category.html
@@ -162,6 +160,7 @@
 [mcode-patient-everything]: OperationDefinition-mcode-patient-everything.html
 
 <!-- US Core -->
+[USCoreMedicationRequest]: http://hl7.org/fhir/us/core/STU4/StructureDefinition-us-core-medicationrequest.html
 [USCoreLaboratoryResultObservation]: http://hl7.org/fhir/us/core/StructureDefinition-us-core-observation-lab.html
 [USCorePatient]: http://hl7.org/fhir/us/core/StructureDefinition-us-core-patient.html
 [USCoreCondition]: http://hl7.org/fhir/us/core/StructureDefinition-us-core-condition.html
@@ -170,9 +169,12 @@
 [USCoreSmokingStatus]: http://hl7.org/fhir/us/core/StructureDefinition-us-core-smokingstatus.html
 [USCoreDiagnosticReport]: http://hl7.org/fhir/us/core/StructureDefinition-us-core-diagnosticreport-lab.html
 
+<!-- R4 -->
 [R4Observation]: http://hl7.org/fhir/R4/observation.html
 [R4FamilyMemberHistory]: http://hl7.org/fhir/R4/familymemberhistory.html
-
+[R4MedicationAdministration]: http://hl7.org/fhir/R4/medicationadministration.html
+[R4Specimen]: http://hl7.org/fhir/R4/specimen.html
+[R4Bundle]: http://hl7.org/fhir/R4/bundle.html
 <!-- Other links -->
 [in-scope patient]: conformance-patients.html
 [in-scope patients]: conformance-patients.html

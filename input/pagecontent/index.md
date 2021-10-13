@@ -1,4 +1,4 @@
-### Background - GORK
+### Background
 
 Cancer is among the leading causes of death worldwide. According to the National Cancer Institute, in the United States, 39.5 percent of men and women will be diagnosed with cancer at some point during their lifetimes. In 2020, an estimated 1,806,590 new cases of cancer will be diagnosed in the United States and 606,520 people will die from the disease. While these numbers are staggering, the silver lining in the wide prevalence of cancer is the potential to learn from treatment of millions of patients. If we had research-quality data from all cancer patients, it would enable higher quality health outcomes. Today, we lack the data models, technologies, and methods to capture that data.
 
@@ -21,7 +21,7 @@ In addition to information obtained from subject matter experts, several pre-exi
 * [RECIST Guidelines v1.1](https://project.eortc.org/recist/wp-content/uploads/sites/4/2015/03/RECISTGuidelines.pdf)
 * [HL7 FHIR Genomics Reporting Implementation Guidance (STU1)](http://hl7.org/fhir/uv/genomics-reporting/index.html)
 * [The National Center for Biotechnology Genetic Test Registry (GTR)](https://www.ncbi.nlm.nih.gov/gtr)
-* [The Human Genome Variation Society nomenclature for defining genetic variants](https://varnomen.hgvs.org/).
+* [The Human Genome Variation Society nomenclature for defining genomic variants](https://varnomen.hgvs.org/).
 * [The Human Genome Organization (HUGO) Gene Nomenclature Committee](https://www.genenames.org/)
 * [The CDISC Therapeutic Area User Guides (TAUG)](https://www.cdisc.org/standards/therapeutic-areas/disease-area)
 

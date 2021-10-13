@@ -1,6 +1,6 @@
 ### Usage
 
-CancerGeneticVariant SHOULD be sent as part of a GenomicsReport and MAY be sent as a standalone observation.
+CancerGenomicVariant SHOULD be sent as part of a GenomicsReport and MAY be sent as a standalone observation.
 
 ### Conformance
 

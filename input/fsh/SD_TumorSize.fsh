@@ -112,7 +112,7 @@ Id: mcode-tumor-specimen
 Title: "Tumor Specimen"
 Description: "Represents a tumor after it has been removed from the body. Prior to excision, use [Tumor](http://hl7.org/fhir/us/mcode/StructureDefinition-mcode-tumor.html) (a BodyStructure) instead. If this tumor was represented by [Tumor](StructureDefinition-mcode-tumor.html) while still in the body, use `identifier` to associate with that resource."
 * insert CancerRelatedSpecimenRules
-// These rules are above and beyond GeneticSpecimen
+// These rules are above and beyond GenomicSpecimen
 * type = SPTY#TUMOR
 * identifier ^slicing.discriminator.type = #pattern
 * identifier ^slicing.discriminator.path = "type"
@@ -121,7 +121,8 @@ Description: "Represents a tumor after it has been removed from the body. Prior 
 * identifier contains tumorIdentifier 0..*
 * identifier[tumorIdentifier] only BodyStructureIdentifier
 * identifier[tumorIdentifier] ^short = "Identifier to associate this specimen with a specific Tumor"
-* identifier[tumorIdentifier] ^definition = "To associate this with a specific BodyStructure conforming to the Tumor profile, add an identifier with a value that matches a persistent identifier from `BodyStructure.identifier.value` that is unique in the context of the Patient."
+// FHIR-32352
+// * identifier[tumorIdentifier] ^definition = "To associate this with a specific BodyStructure conforming to the Tumor profile, add an identifier with a value that matches a persistent identifier from `BodyStructure.identifier.value` that is unique in the context of the Patient."
 * identifier and identifier[tumorIdentifier] and identifier[tumorIdentifier].type and identifier[tumorIdentifier].value MS
 
 

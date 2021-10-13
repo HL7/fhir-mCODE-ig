@@ -6,6 +6,7 @@
 </style>
 
 <!-- mCODE Profiles and Extensions -->
+[BodyLocationQualifier]: StructureDefinition-mcode-body-location-qualifier.html
 [BrachytherapyTreatmentPhase]: StructureDefinition-mcode-brachytherapy-treatment-phase.html
 [CancerDiseaseStatus]: StructureDefinition-mcode-cancer-disease-status.html
 [CancerGenomicVariant]: StructureDefinition-mcode-cancer-genomic-variant.html
@@ -24,7 +25,6 @@
 [GenomicRegionStudied]: StructureDefinition-mcode-genomic-region-studied.html
 [HistologyMorphologyBehavior]: StructureDefinition-mcode-histology-morphology-behavior.html
 [KarnofskyPerformanceStatus]: StructureDefinition-mcode-karnofsky-performance-status.html
-[BodyLocationQualifier]: StructureDefinition-mcode-body-location-qualifier.html
 [MCODEPatientBundle]: StructureDefinition-mcode-patient-bundle.html
 [MCODEPatientGroup]: StructureDefinition-mcode-patient-group.html
 [CapabilityStatement]: StructureDefinition-CapabilityStatement.html
@@ -51,6 +51,7 @@
 [TumorSpecimen]: StructureDefinition-mcode-tumor-specimen.html
 
 <!-- mCODE Value Sets -->
+[BenignUncertainNeoplasmBrainCNSDisorderVS]: ValueSet-benign-uncertain-neoplasm-brain-cns-disorder-vs.html
 [BrachytherapyModalityVS]: ValueSet-mcode-brachytherapy-modality-vs.html
 [BrachytherapyTechniqueVS]: ValueSet-mcode-brachytherapy-technique-vs.html
 [CancerBodyLocationVS]: ValueSet-mcode-cancer-body-location-vs.html
@@ -59,8 +60,10 @@
 [CancerRelatedSurgicalProcedureVS]: ValueSet-mcode-cancer-related-surgical-procedure-vs.html
 [CancerStageGroupVS]: ValueSet-mcode-cancer-stage-group-vs.html
 [CancerStagingSystemVS]: ValueSet-mcode-cancer-staging-system-vs.html
+[CarcinomaInSituDisorderVS]: ValueSet-mcode-carcinoma-insite-cancer-disorder-vs.html
 [ClinVarVS]: ValueSet-mcode-clinvar-vs.html
 [ConditionStatusTrendVS]: ValueSet-mcode-condition-status-trend-vs.html
+[CytologicEvidenceOfMalignancyVS]: ValueSet-mcode-cytologic-evidence-malignancy-vs.html
 [DNAChangeTypeVS]: ValueSet-mcode-dna-change-type-vs.html
 [ElixhauserAIDSVS]: ValueSet-elixhauser-aids-vs.html
 [ElixhauserAlcoholAbuseVS]: ValueSet-elixhauser-alcohol-abuse-vs.html
@@ -105,19 +108,22 @@
 [HGNCVS]: ValueSet-mcode-hgnc-vs.html
 [HGVSVS]: ValueSet-mcode-hgvs-vs.html
 [HistologyMorphologyBehaviorVS]: ValueSet-mcode-histology-morphology-behavior-vs.html
+[MelanomaInSituDisorderVS]: ValueSet-mcode-melanoma-in-situ-disorder-vs.html
 [BodyLocationQualifierVS]: ValueSet-mcode-body-location-qualifier-vs.html
 [ObservationCodesStageGroupVS]: ValueSet-mcode-observation-codes-stage-group-vs.html
 [ObservationCodesPrimaryTumorVS]: ValueSet-mcode-observation-codes-primary-tumor-vs.html
 [ObservationCodesRegionalNodesVS]: ValueSet-mcode-observation-codes-regional-nodes-vs.html
 [ObservationCodesDistantMetastasesVS]: ValueSet-mcode-observation-codes-distant-metastases-vs.html
 [PresentAbsentVS]: ValueSet-mcode-present-absent.html
-[PrimaryOrUncertainBehaviorCancerDisorderVS]: ValueSet-mcode-primary-or-uncertain-behavior-cancer-disorder-vs.html
+[PrimaryMalignantNeoplasmDisorderVS]: ValueSet-mcode-primary-malignant-neoplasm-disorder-vs.html
+[PrimaryCancerDisorderVS]: ValueSet-mcode-primary-cancer-disorder-vs.html
 [RadiotherapyModalityVS]: ValueSet-mcode-radiotherapy-modality-vs.html
 [RadiotherapyTechniqueVS]: ValueSet-mcode-radiotherapy-technique-vs.html
 [RadiotherapyTreatmentLocationVS]: ValueSet-mcode-radiotherapy-treatment-location-vs.html
 [RadiotherapyTreatmentLocationQualifierVS]: ValueSet-mcode-radiotherapy-treatment-location-qualifier-vs.html
 [RadiotherapyVolumeTypeVS]: ValueSet-mcode-radiotherapy-volume-type-vs.html
 [SecondaryCancerDisorderVS]: ValueSet-mcode-secondary-cancer-disorder-vs.html
+[SpecificDiagnosisCancerDisorderVS]: ValueSet-mcode-specific-diagnosis-cancer-disorder-vs.html
 [TeleradiotherapyModalityVS]: ValueSet-mcode-teleradiotherapy-modality-vs.html
 [TeleradiotherapyTechniqueVS]: ValueSet-mcode-teleradiotherapy-technique-vs.html
 [TNMDistantMetastasesCategoryVS]: ValueSet-mcode-tnm-distant-metastases-category-vs.html
@@ -128,6 +134,12 @@
 [TumorMarkerTestVS]: ValueSet-mcode-tumor-marker-test-vs.html
 [TumorSizeMethodVS]: ValueSet-mcode-tumor-size-method-vs.html
 [TumorSizeUnitsVS]: ValueSet-mcode-tumor-size-units-vs.html
+[PrimaryMalignantNeoplasmDisorderVS]: ValueSet-mcode-primary-malignant-neoplasm-disorder-vs.html
+[SpecificDiagnosisCancerDisorderVS]: ValueSet-mcode-specific-diagnosis-cancer-disorder-vs.html
+[CarcinomaInSituDisorderVS]: ValueSet-mcode-carcinoma-in-situ-disorder-vs.html
+[MelanomaInSituDisorderVS]: ValueSet-mcode-melanoma-in-situ-disorder-vs.html
+[BenignUncertainNeoplasmBrainCNSDisorderVS]: ValueSet-mcode-uncertain-neoplasm-brain-CNS-Disorder-vs.html
+[CytologicEvidenceOfMalignancyVS]: ValueSet-mcode-evidence-of-malignancy-vs.html
 
 <!-- mCODE Code Systems -->
 [ComorbiditiesElixhauserCS]: CodeSystem-comorbidities-elixhauser-cs.html

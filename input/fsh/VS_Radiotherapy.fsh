@@ -118,8 +118,8 @@ Description: "Various modifiers that can be applied to body locations where radi
 // * SCT#255549009    "Anterior (qualifier value)" -- NOT USED BY TG263
 // * SCT#255551008    "Posterior (qualifier value)" -- NOT USED BY TG263
 * SCT#277733009 "Level 1 (qualifier value)"
-* SCT#277733009 "Level 2 (qualifier value)"
-* SCT#277733009 "Level 3 (qualifier value)"
+* SCT#277734003 "Level 2 (qualifier value)"
+* SCT#277735002 "Level 3 (qualifier value)"
 * SCT#261089000    "Inferior (qualifier value)"
 * SCT#264217000    "Superior (qualifier value)"
 * SCT#261183002    "Upper (qualifier value)"

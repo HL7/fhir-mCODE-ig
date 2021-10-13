@@ -24,6 +24,7 @@ Title: "Cancer Disease Status Evidence Type Value Set"
 Description:  "The type of evidence backing up the clinical determination of cancer progression."
 // The code '252416005 Histopathology test (procedure)' is intended to be used when there is a biopsy that contributes evidence of the cancer disease status.
 * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
+// FHIR-32893 -- include descendents of the 5 codes below
 * include codes from system SCT where concept is-a #363679005 "Imaging (procedure)"
 * include codes from system SCT where concept is-a #108257001 "Anatomic pathology procedure (procedure)" // Broader than SCT#252416005 "Histopathology test (procedure), include microscopy."
 * include codes from system SCT where concept is-a #711015009 "Assessment of symptom control (procedure)"

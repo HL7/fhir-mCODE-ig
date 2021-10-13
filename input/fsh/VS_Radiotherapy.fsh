@@ -118,8 +118,8 @@ Description: "Various modifiers that can be applied to body locations where radi
 // * SCT#255549009    "Anterior (qualifier value)" -- NOT USED BY TG263
 // * SCT#255551008    "Posterior (qualifier value)" -- NOT USED BY TG263
 * SCT#277733009 "Level 1 (qualifier value)"
-* SCT#277733009 "Level 2 (qualifier value)"
-* SCT#277733009 "Level 3 (qualifier value)"
+* SCT#277734003 "Level 2 (qualifier value)"
+* SCT#277735002 "Level 3 (qualifier value)"
 * SCT#261089000    "Inferior (qualifier value)"
 * SCT#264217000    "Superior (qualifier value)"
 * SCT#261183002    "Upper (qualifier value)"
@@ -204,13 +204,10 @@ Description: "Codes describing the body locations where radiotherapy treatments 
 * SCT#66754008 "Appendix structure (body structure) " // Appendix
 * SCT#77578007 "Arytenoid cartilage structure (body structure)" // Arytenoid cartilage
 * SCT#59652004 "Atrial structure (body structure)" // Atrium of the heart
-* SCT#339648008 "Colostomy bag (physical object)" // Bowel Bag
-* SCT#705336001 "Intestinal ostomy bag (physical object)" // Ostomy Bag
 * SCT#79741001 "Common bile duct structure (body structure)" // Common bile duct
 * SCT#89837001 "Urinary bladder structure (body structure)" // Urinary Bladder
 * SCT#393006 "Structure of wall of urinary bladder (body structure)" // Bladder Wall
 // * SCT#PTV "PTV" // PRV created with xx mm expansion on the left optic nerve
-* SCT#462629001 " Radiation therapy bolus, reusable (physical object) " // <none>
 * SCT#119186007 "Bone part (body structure)" // Bone
 * SCT#52374004 "Ethmoid bone structure (body structure)" // Ethmoid Bone
 * SCT#74872008 "Frontal bone structure (body structure)" // Frontal Bone
@@ -293,7 +290,6 @@ Description: "Codes describing the body locations where radiotherapy treatments 
 * SCT#29627003 "Structure of neck of femur (body structure)" // Femur Neck
 * SCT#41111004 "Bone structure of shaft of femur (body structure)" // Femur Shaft Left
 * SCT#87342007 "Bone structure of fibula (body structure)" // Fibula
-* SCT#73368009 "Foley catheter (physical object)" // Foley Catheter
 * SCT#1307006 "Glottis structure (body structure)" // Glottis
 * SCT#3711007 "Structure of great blood vessel (organ) (body structure)" // Great Vessels of the heart (aorta, vena cava S&I, pulmonary A&V)
 * SCT#90228003 "Hard palate structure (body structure)" // Hard palate
@@ -363,7 +359,7 @@ Description: "Codes describing the body locations where radiotherapy treatments 
 * TG263#pre-sacral-lymph-node-group "Presacral lymph node group" // * SCT#USCRS-33346 "Presacral lymph node group (body structure)" // Lymph nodes of pelvis - presacral Left
 * SCT#196662004 "Structure of intrapulmonary lymph node (body structure)" // Lymph nodes of thorax - Pulmonary Left
 * SCT#76838003 "Structure of supraclavicular lymph node (body structure)" // Supraclavicular Lymph Node Left
-* SCT#4719002 "Structure of lymph node of thorax (body structure)" // Lymph nodes of thorax - Supramammary Left
+// * SCT#4719002 "Structure of lymph node of thorax (body structure)" // Lymph nodes of thorax - Supramammary Left -- RTTD100521
 * SCT#245283006 "Tracheobronchial lymph node group (body structure)" // Lymph nodes of thorax - Tracheobronchial
 * SCT#84782009 "Peripheral nerve structure (body structure)" // Peripheral Nerve
 * SCT#40958000 "Nerve root structure (body structure)" // Nerve Root
@@ -372,7 +368,6 @@ Description: "Codes describing the body locations where radiotherapy treatments 
 * SCT#39607008 "Lung structure (body structure)" // Lung Left
 * SCT#31094006 "Structure of lobe of lung (body structure)" // Lung - lower lobe of left
 * SCT#34080009 "Malleus structure (body structure)" // Malleus
-* SCT#285315005 "Radiotherapy planning markers (physical object)" // <none>
 * SCT#70925003 "Bone structure of maxilla (body structure)" // Maxilla
 * SCT#363654007 "Structure of orbit proper (body structure)" // Orbit Left
 * SCT#31389004 "Oropharyngeal structure (body structure)" // Oral part of pharynx
@@ -400,7 +395,6 @@ Description: "Codes describing the body locations where radiotherapy treatments 
 * SCT#49557009 "Pontine structure (body structure)" // Pons
 * SCT#41216001 "Prostatic structure (body structure)" // Prostate
 * SCT#37446007 "Structure of periprostatic tissue (body structure)" // Prostate Bed
-* SCT#53350007 "Prosthesis, device (physical object)" // Prosthesis
 * SCT#88938001 "Structure of lateral pterygoid muscle (body structure)" // Pterygoid muscles lateral - Left
 * SCT#85002005 "Structure of medial pterygoid muscle (body structure)" // Pterygoid muscles medial - Left
 * SCT#511000202101 "Rectum wall structure (body structure)" // Rectal Wall
@@ -501,7 +495,7 @@ Description: "Codes describing the body locations where radiotherapy treatments 
 * SCT#15328005 "Structure of suprasellar region (body structure)" // Suprasellar Cistern
 * SCT#34202007 "Aortic valve structure (body structure)" // Aortic Valve
 * SCT#1172006 "Structure of odontoid process of axis (body structure)" // Cervical vertebrae - Bony part of dens of axis
-* SCT#79654002 "Edema (morphologic abnormality)" // Edema
+// * SCT#79654002 "Edema (morphologic abnormality)" // Edema - RTTD 100521
 * SCT#123037004 "Body structure (body structure)" // Contour encompassing body plus other external items
 * SCT#3572006 "Structure of body of vertebra (body structure)" // Vertebral Body
 * SCT#14806007 "Bone structure of atlas (body structure)" // Atlas - C1

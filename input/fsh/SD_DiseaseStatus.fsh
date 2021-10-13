@@ -24,9 +24,3 @@ Description:    "A clinician's qualitative judgment on the current trend of the 
 * value[x] from ConditionStatusTrendVS (required)
 // ALL MUST SUPPORTS
 * status and code and subject and effective[x] and value[x] and focus and dataAbsentReason and extension[evidenceType]  MS
-
-
-// Invariant:  mcode-no-evidence-if-clinical-diagnosis-only
-// Description: "If clnicaldiagnosisonly is true, there should be no evidenceType"
-// Expression: "extension.where(url='george').exists() and extension.where(url='george').value = true implies !extension.where(url='harry').exists()"
-// Severity:   #error

@@ -368,7 +368,6 @@ Description: "Codes describing the body locations where radiotherapy treatments 
 * SCT#39607008 "Lung structure (body structure)" // Lung Left
 * SCT#31094006 "Structure of lobe of lung (body structure)" // Lung - lower lobe of left
 * SCT#34080009 "Malleus structure (body structure)" // Malleus
-// * SCT#285315005 "Radiotherapy planning markers (physical object)" // <none> RTTD 100521
 * SCT#70925003 "Bone structure of maxilla (body structure)" // Maxilla
 * SCT#363654007 "Structure of orbit proper (body structure)" // Orbit Left
 * SCT#31389004 "Oropharyngeal structure (body structure)" // Oral part of pharynx
@@ -396,7 +395,6 @@ Description: "Codes describing the body locations where radiotherapy treatments 
 * SCT#49557009 "Pontine structure (body structure)" // Pons
 * SCT#41216001 "Prostatic structure (body structure)" // Prostate
 * SCT#37446007 "Structure of periprostatic tissue (body structure)" // Prostate Bed
-// * SCT#53350007 "Prosthesis, device (physical object)" // Prosthesis - RTTD 100521
 * SCT#88938001 "Structure of lateral pterygoid muscle (body structure)" // Pterygoid muscles lateral - Left
 * SCT#85002005 "Structure of medial pterygoid muscle (body structure)" // Pterygoid muscles medial - Left
 * SCT#511000202101 "Rectum wall structure (body structure)" // Rectal Wall

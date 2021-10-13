@@ -148,7 +148,7 @@
 [mcode-patient-everything]: OperationDefinition-mcode-patient-everything.html
 
 <!-- US Core -->
-[USCoreMedicationRequest] : http://hl7.org/fhir/us/core/STU4/StructureDefinition-us-core-medicationrequest.html
+[USCoreMedicationRequest]: http://hl7.org/fhir/us/core/STU4/StructureDefinition-us-core-medicationrequest.html
 [USCoreLaboratoryResultObservation]: http://hl7.org/fhir/us/core/StructureDefinition-us-core-observation-lab.html
 [USCorePatient]: http://hl7.org/fhir/us/core/StructureDefinition-us-core-patient.html
 [USCoreCondition]: http://hl7.org/fhir/us/core/StructureDefinition-us-core-condition.html

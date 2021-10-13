@@ -204,13 +204,10 @@ Description: "Codes describing the body locations where radiotherapy treatments 
 * SCT#66754008 "Appendix structure (body structure) " // Appendix
 * SCT#77578007 "Arytenoid cartilage structure (body structure)" // Arytenoid cartilage
 * SCT#59652004 "Atrial structure (body structure)" // Atrium of the heart
-//* SCT#339648008 "Colostomy bag (physical object)" // Bowel Bag RTTD 100521  -- NEED A TERM FOR BOWEL BAG
-// * SCT#705336001 "Intestinal ostomy bag (physical object)" // Ostomy Bag RTTD 100521
 * SCT#79741001 "Common bile duct structure (body structure)" // Common bile duct
 * SCT#89837001 "Urinary bladder structure (body structure)" // Urinary Bladder
 * SCT#393006 "Structure of wall of urinary bladder (body structure)" // Bladder Wall
 // * SCT#PTV "PTV" // PRV created with xx mm expansion on the left optic nerve
-// * SCT#462629001 " Radiation therapy bolus, reusable (physical object) " // RTTD 100521
 * SCT#119186007 "Bone part (body structure)" // Bone
 * SCT#52374004 "Ethmoid bone structure (body structure)" // Ethmoid Bone
 * SCT#74872008 "Frontal bone structure (body structure)" // Frontal Bone
@@ -293,7 +290,6 @@ Description: "Codes describing the body locations where radiotherapy treatments 
 * SCT#29627003 "Structure of neck of femur (body structure)" // Femur Neck
 * SCT#41111004 "Bone structure of shaft of femur (body structure)" // Femur Shaft Left
 * SCT#87342007 "Bone structure of fibula (body structure)" // Fibula
-// * SCT#73368009 "Foley catheter (physical object)" // Foley Catheter RTTD 100521
 * SCT#1307006 "Glottis structure (body structure)" // Glottis
 * SCT#3711007 "Structure of great blood vessel (organ) (body structure)" // Great Vessels of the heart (aorta, vena cava S&I, pulmonary A&V)
 * SCT#90228003 "Hard palate structure (body structure)" // Hard palate

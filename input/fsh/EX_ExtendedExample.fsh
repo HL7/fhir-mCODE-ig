@@ -67,7 +67,6 @@ Description: "Extended example: example showing smoking status"
 * issued = "2018-03-16T00:00:00Z"
 * effectiveDateTime = "2018-03-16"
 * valueCodeableConcept = SCT#449868002 "Smokes tobacco daily (finding)"
-* effectiveDateTime = "2018-03-16"
 
 Instance: observation-smoking-history-jenny-m
 InstanceOf: Observation

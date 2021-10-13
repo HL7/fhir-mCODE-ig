@@ -14,7 +14,7 @@ This IG currently only provides CapabilityStatements and documentation for "pull
 
 mCODE participants MUST meet the following requirements for conformance:
 
-1. [Identify in-scope patients](#identify-mcode-patients)
+1. [Identify in-scope patients](#identify-in-scope-patients)
 1. [Follow conformance requirements for supported profiles](#follow-conformance-requirements-for-supported-profiles)
 1. [Populate and meaningfully process mCODE resources](#populate-and-meaningfully-process-mcode-resources)
 1. [Support querying mCODE-conforming resources](#support-querying-mcode-conforming-resources)

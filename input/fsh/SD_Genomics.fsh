@@ -148,13 +148,13 @@ RuleSet: CancerRelatedSpecimenRules
 * extension[relatedCondition] ^short = "Cancer condition associated with this sample."
 * extension[relatedCondition] ^definition = "A reference that associates this sample with a cancer condition."
 // No inherited MS
-* subject and status and type and collection and collection.bodySite and collection.bodySite.extension and collection.bodySite.extension[locationQualifier] MS
+* subject and status and type and collection and collection.bodySite and collection.bodySite.extension and collection.bodySite.extension[locationQualifier] and collection.bodySite.extension[lateralityQualifier] MS
 
 
 Profile:    GenomicSpecimen
 Parent:     Specimen
 Id: mcode-genomic-specimen
-Title:      "Genetic Specimen"
+Title:      "Genomic Specimen"
 Description:    "A small sample of blood, hair, skin, amniotic fluid (the fluid that surrounds a fetus during pregnancy), or other tissue which is excised from a subject for the purposes of genomics testing or analysis."
 * insert CancerRelatedSpecimenRules
 * type from GenomicSpecimenTypeVS (extensible)

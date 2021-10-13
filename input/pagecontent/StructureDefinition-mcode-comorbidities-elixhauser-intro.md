@@ -22,7 +22,8 @@ If a comorbidity is present, the user can optionally supply a specific code deta
 
 For any component, "present" or "absent" refers back to a comorbidity category defined by `Observation.component`.code. Since there are no existing codes for individual Elixhauser categories, mCODE provides them. For example, a component relating to congestive heart failure (CHF) will have `component.code.coding.system` of `http://hl7.org/fhir/us/mcode/CodeSystem/mcode-elixhauser-category-cs` and `component.code.coding.code` "CHF". The implication is that the patient has a disease found in the *specific version* of Elixhauser CHF codes corresponding to the definition of the "CHF" code; in this case, one of the codes in [Elixhauser Comorbid Condition Value Set for Congestive Heart Failure](ValueSet-elixhauser-congestive-heart-failure-vs.html).
 
-The overall score (index) is calculated from the comorbidity components and SHOULD be recorded in Observation.value[valueInteger].  The index value might be missing when the standardized comorbidity components are themselves of interest and the index is not, or when the components have been collected, but the index has not yet be calculated. In the second case, the observation might be sent across the wire to a server that fills in the index value, so in the interim before that, the value is missing.
+If an overall calculated index score should be recorded in Observation.value[valueInteger].
+Two situations where the index value might be missing are (1) when the standardized comorbidity components are themselves of interest and the index is not, and (2) If the components have been collected, but the index has not yet be calculated. In the second case, the observation might be sent across the wire to a server that fills in the index value, so in the interim before that, the value is missing.
 
 ### Usage
 

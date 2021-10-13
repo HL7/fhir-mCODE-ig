@@ -1,5 +1,5 @@
-In addition to individual examples of each profile, this extended example demonstrates how mCODE can be used to represent a clinically realistic scenario.
-* When information in the scenario does not map on to mCODE profiles, we provide examples using [USCore](http://hl7.org/fhir/us/core/index.html) or standard FHIR resources.
+In addition to individual examples of each , this extended example demonstrates how mCODE can be used to represent a clinically realistic scenario.
+* When information in the scenario does not map on to mCODE s, we provide examples using [USCore](http://hl7.org/fhir/us/core/index.html) or standard FHIR resources.
 * For the sake of brevity, only a subset of examples will be shown in cases where the FHIR representation patter is the same. For example, we only show one example of MedicationAdministration when in reality, there could be 4 cycles, of 3 medications that could be repeated over a 28 day cycle. Since the only difference would be the day of the administration, then we omit it assuming that the implementer understands that the representation pattern is the same except for timestamps.
 
 ### Patient description
@@ -28,15 +28,22 @@ A timeline of the narrative is illustrated in the following diagram:
 
 ### FHIR instances from mCODE elements
 
+
 * [`cancer-patient-jenny-m`](Patient-cancer-patient-jenny-m.html) ([CancerPatient])
 * [`cancer-disease-status-jenny-m`](Observation-cancer-disease-status-jenny-m.html) ([CancerDiseaseStatus])
 * [`cancer-related-mcode-comorbidities-elixhauser-jenny-m`](Observation-cancer-related-mcode-comorbidities-elixhauser-jenny-m.html) ([ComorbiditiesElixhauser])
-* [`us-core-condition-depression-jenny-m`](Condition-us-core-condition-depression-jenny-m.html) ([ComorbiditiesElixhauser])
-* [`us-core-condition-hypertension-jenny-m`](Condition-us-core-condition-hypertension-jenny-m.html) ([ComorbiditiesElixhauser])
-* [`ecog-performance-status-jenny-m`](Observation-ecog-performance-status-jenny-m.html) ([ECOGPerformanceStatus])
+* [`cancer-genomic-variant-jenny-m`](Observation-cancer-genomic-variant-jenny-m.html) ([CancerGenomicVariant])
+* [`cancer-related-medication-request-doxorubicin-jenny-m`](MedicationRequest-cancer-related-medication-request-doxorubicin-jenny-m.html) ([CancerRelatedMedicationRequest])
+* [`cancer-related-medication-request-cyclophosphamide-jenny-m`](MedicationRequest-cancer-related-medication-request-cyclophosphamide-jenny-m.html) ([CancerRelatedMedicationRequest])
+* [`cancer-related-medication-request-paclitaxel-jenny-m`](MedicationRequest-cancer-related-medication-request-paclitaxel-jenny-m.html) ([CancerRelatedMedicationRequest])
+* [`cancer-related-medication-administration-doxorubicin-jenny-m`](MedicationAdministration-cancer-related-medication-administration-doxorubicin-jenny-m.html) ([CancerRelatedMedicationAdministration])
 * [`cancer-related-surgical-procedure-jenny-m`](Procedure-cancer-related-surgical-procedure-jenny-m.html) ([CancerRelatedSurgicalProcedure])
+* [`ecog-performance-status-jenny-m`](Observation-ecog-performance-status-jenny-m.html) ([ECOGPerformanceStatus])
+* [`genomic-region-studied-jenny-m`](Observation-genomic-region-studied-jenny-m.html) ([GenomicRegionStudied])
+* [`genomic-specimen-left-breast-jenny-m`](Specimen-genomic-specimen-left-breast-jenny-m.html) ([GenomicSpecimen])
 * [`mcode-patient-bundle-jenny-m`](Bundle-mcode-patient-bundle-jenny-m.html) ([MCODEPatientBundle])
 * [`primary-cancer-condition-jenny-m`](Condition-primary-cancer-condition-jenny-m.html) ([PrimaryCancerCondition])
+* [`radiotherapy-treatment-summary-chest-wall-jenny-m`](Procedure-radiotherapy-treatment-summary-chest-wall-jenny-m.html) ([RadiotherapyCourseSummary])
 * [`tnm-clinical-stage-group-jenny-m`](Observation-tnm-clinical-stage-group-jenny-m.html) ([CancerStageGroup])
 * [`tnm-clinical-primary-tumor-category-jenny-m`](Observation-tnm-clinical-primary-tumor-category-jenny-m.html) ([TNMPrimaryTumorCategory])
 * [`tnm-clinical-regional-nodes-category-jenny-m`](Observation-tnm-clinical-regional-nodes-category-jenny-m.html) ([TNMRegionalNodesCategory])
@@ -49,33 +56,27 @@ A timeline of the narrative is illustrated in the following diagram:
 * [`tumor-marker-test-pr-jenny-m`](Observation-tumor-marker-test-pr-jenny-m.html)  ([TumorMarkerTest])
 * [`tumor-marker-test-her2-jenny-m`](Observation-tumor-marker-test-her2-jenny-m.html)  ([TumorMarkerTest])
 * [`tumor-marker-test-oncotype-dx-jenny-m`](Observation-tumor-marker-test-oncotype-dx-jenny-m.html)  ([TumorMarkerTest])
+* [`tumor-size-jenny-m.html`](Observation-tumor-size-jenny-m.html) ([TumorSize])
+* [`tumor-specimen-left-breast-jenny-m`](Specimen-tumor-specimen-left-breast-jenny-m.html) ([TumorSpecimen])
 * [`cancer-genomics-report-jenny-m`](DiagnosticReport-cancer-genomics-report-jenny-m.html) ([CancerGenomicsReport])
-* [`genomic-region-studied-jenny-m`](Observation-genomic-region-studied-jenny-m.html) ([GenomicRegionStudied])
-* [`genomic-specimen-left-breast-jenny-m`](Specimen-genomic-specimen-left-breast-jenny-m.html) ([GenomicSpecimen])
-* [`cancer-genomic-variant-jenny-m`](Observation-cancer-genomic-variant-jenny-m.html) ([CancerGenomicVariant])
-* [`cancer-related-medication-request-doxorubicin-jenny-m`](MedicationRequest-cancer-related-medication-request-doxorubicin-jenny-m.html) ([CancerRelatedMedicationRequest])
-* [`cancer-related-medication-request-cyclophosphamide-jenny-m`](MedicationRequest-cancer-related-medication-request-cyclophosphamide-jenny-m.html) ([CancerRelatedMedicationRequest])
-* [`cancer-related-medication-request-paclitaxel-jenny-m`](MedicationRequest-cancer-related-medication-request-paclitaxel-jenny-m.html) ([CancerRelatedMedicationRequest])
-* [`cancer-related-medication-administration-doxorubicin-jenny-m`](MedicationAdministration-cancer-related-medication-administration-doxorubicin-jenny-m.html) ([CancerRelatedMedicationAdministration])
-* [`radiotherapy-treatment-summary-chest-wall-jenny-m`](Procedure-radiotherapy-treatment-summary-chest-wall-jenny-m.html) ([RadiotherapyCourseSummary])
 
 ### FHIR instances from _non_-mCODE elements
 
-* [`us-core-practitioner-owen-oncologist`](Practitioner-us-core-practitioner-owen-oncologist.html) (US Core Practitioner)
-* [`us-core-procedure-biopsy-jenny-m`](Procedure-us-core-procedure-biopsy-jenny-m.html) (US Core Procedure)
-* [`us-core-procedure-mammogram-jenny-m`](Procedure-us-core-procedure-mammogram-jenny-m.html) (US Core Procedure)
-* [`us-core-smokingstatus-jenny-m`](Observation-us-core-smokingstatus-jenny-m.html) (US Core Smoking Status)
-* [`observation-smoking-history-jenny-m`](Observation-observation-smoking-history-jenny-m.html) (Observation)
-* [`us-core-condition-anxiety-jenny-m`](Condition-us-core-condition-anxiety-jenny-m.html) (US Core Condition)
-* [`family-member-history-aunt-jenny-m`](FamilyMemberHistory-family-member-history-aunt-jenny-m.html) (FamilyMemberHistory)
-* [`family-member-history-sister-jenny-m`](FamilyMemberHistory-family-member-history-sister-jenny-m.html) (FamilyMemberHistory)
-* [`family-member-history-uncle-jenny-m`](FamilyMemberHistory-family-member-history-uncle-jenny-m.html) (FamilyMemberHistory)
-* [`tumor-specimen-left-breast-jenny-m`](Specimen-tumor-specimen-left-breast-jenny-m.html) (Specimen)
-* [`us-core-diagnosticreport-lab-jenny-m`](DiagnosticReport-us-core-diagnosticreport-lab-jenny-m.html) (DiagnosticReport)
-* [`us-core-observation-lab-tumor-invasion-jenny-m`](Observation-us-core-observation-lab-tumor-invasion-jenny-m.html) (Observation)
-* [`us-core-observation-lab-tumor-margins-jenny-m`](Observation-us-core-observation-lab-tumor-margins-jenny-m.html) (Observation)
-* [`us-core-observation-lab-sentinel-nodes-jenny-m`](Observation-us-core-observation-lab-sentinel-nodes-jenny-m.html) (Observation)
-* [`Observation-tumor-size-jenny-m.html`](Observation-tumor-size-jenny-m.html) (Observation)
-* [`scenario1-observation-dcis`](Observation-us-core-observation-lab-tumor-dcis-jenny-m.html) (Observation)
+* [`us-core-practitioner-owen-oncologist`](Practitioner-us-core-practitioner-owen-oncologist.html) ([USCorePractitioner])
+* [`us-core-procedure-biopsy-jenny-m`](Procedure-us-core-procedure-biopsy-jenny-m.html) ([USCoreProcedure])
+* [`us-core-procedure-mammogram-jenny-m`](Procedure-us-core-procedure-mammogram-jenny-m.html) ([USCoreProcedure])
+* [`us-core-smokingstatus-jenny-m`](Observation-us-core-smokingstatus-jenny-m.html) ([USCoreSmokingStatus])
+* [`observation-smoking-history-jenny-m`](Observation-observation-smoking-history-jenny-m.html) ([R4Observation])
+* [`family-member-history-aunt-jenny-m`](FamilyMemberHistory-family-member-history-aunt-jenny-m.html) ([R4FamilyMemberHistory])
+* [`family-member-history-sister-jenny-m`](FamilyMemberHistory-family-member-history-sister-jenny-m.html) ([R4FamilyMemberHistory])
+* [`family-member-history-uncle-jenny-m`](FamilyMemberHistory-family-member-history-uncle-jenny-m.html) ([R4FamilyMemberHistory])
+* [`scenario1-observation-dcis`](Observation-us-core-observation-lab-tumor-dcis-jenny-m.html) ([USCoreLaboratoryResultObservation])
+* [`us-core-condition-anxiety-jenny-m`](Condition-us-core-condition-anxiety-jenny-m.html) ([USCoreCondition])
+* [`us-core-condition-depression-jenny-m`](Condition-us-core-condition-depression-jenny-m.html) ([USCoreCondition])
+* [`us-core-condition-hypertension-jenny-m`](Condition-us-core-condition-hypertension-jenny-m.html) ([USCoreCondition])
+* [`us-core-diagnosticreport-lab-jenny-m`](DiagnosticReport-us-core-diagnosticreport-lab-jenny-m.html) ([USCoreDiagnosticReport])
+* [`us-core-observation-lab-tumor-invasion-jenny-m`](Observation-us-core-observation-lab-tumor-invasion-jenny-m.html) ([USCoreLaboratoryResultObservation])
+* [`us-core-observation-lab-tumor-margins-jenny-m`](Observation-us-core-observation-lab-tumor-margins-jenny-m.html) ([USCoreLaboratoryResultObservation])
+* [`us-core-observation-lab-sentinel-nodes-jenny-m`](Observation-us-core-observation-lab-sentinel-nodes-jenny-m.html) ([USCoreLaboratoryResultObservation])
 
 {% include markdown-link-references.md %}

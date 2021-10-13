@@ -150,8 +150,16 @@
 [mcode-patient-everything]: OperationDefinition-mcode-patient-everything.html
 
 <!-- US Core -->
-[USCoreLaboratoryResultObservationProfile]: http://hl7.org/fhir/us/core/StructureDefinition-us-core-observation-lab.html
-[USCorePatientProfile]: http://hl7.org/fhir/us/core/StructureDefinition-us-core-patient.html
+[USCoreLaboratoryResultObservation]: http://hl7.org/fhir/us/core/StructureDefinition-us-core-observation-lab.html
+[USCorePatient]: http://hl7.org/fhir/us/core/StructureDefinition-us-core-patient.html
+[USCoreCondition]: http://hl7.org/fhir/us/core/StructureDefinition-us-core-condition.html
+[USCoreProcedure]: http://hl7.org/fhir/us/core/StructureDefinition-us-core-procedure.html
+[USCorePractitioner]: http://hl7.org/fhir/us/core/StructureDefinition-us-core-practitioner.html
+[USCoreSmokingStatus]: http://hl7.org/fhir/us/core/StructureDefinition-us-core-smokingstatus.html
+[USCoreDiagnosticReport]: http://hl7.org/fhir/us/core/StructureDefinition-us-core-diagnosticreport-lab.html
+
+[R4Observation]: http://hl7.org/fhir/R4/observation.html
+[R4FamilyMemberHistory]: http://hl7.org/fhir/R4/familymemberhistory.html
 
 <!-- Other links -->
 [in-scope patient]: conformance-patients.html

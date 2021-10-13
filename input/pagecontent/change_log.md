@@ -44,6 +44,7 @@
 #### [Block Vote 5](https://jira.hl7.org/issues/?filter=15618)
 
 #### [Block Vote 6](https://jira.hl7.org/issues/?filter=15619)
+* [FHIR-32893](https://jira.hl7.org/browse/FHIR-32893) Aligned CancerDiseaseStatusEvidenceTypeVS with NAACR reporting needs
 
 ### Other
 * [FHIR-33343](https://jira.hl7.org/browse/FHIR-33343)  RadiotherapyTreatmentLocationVS/RadiotherapyTreatmentLocationQualifierVS should align with TG263 Anatomy Terms

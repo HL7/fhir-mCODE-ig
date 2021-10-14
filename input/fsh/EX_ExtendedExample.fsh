@@ -600,12 +600,12 @@ Description: "Example of radiotherapy treatment summary involving external beam 
 * reasonCode = ICD10CM#C50.811 "Malignant neoplasm of overlapping sites of right female breast"
 * extension[actualNumberOfSessions].valueUnsignedInt = 31
 * extension[treatmentIntent].valueCodeableConcept = SCT#373808002 "Curative - procedure intent"
-* performedPeriod.start = "2018-05-01"
-* performedPeriod.end = "2018-06-29"
+* performedPeriod.start = "2018-08-15"
+* performedPeriod.end = "2018-10-25"
 * extension[modality][0].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
 * extension[modality][1].valueCodeableConcept = SCT#45643008  "Teleradiotherapy using electrons (procedure)"
 * extension[technique][0].valueCodeableConcept =  SCT#1156530009 "Volumetric Modulated Arc Therapy (procedure)"
-* extension[technique][1].valueCodeableConcept = SCT#118641002
+* extension[technique][1].valueCodeableConcept = SCT#1162782007 "Three dimensional external beam radiation therapy (procedure)"
 * extension[doseDeliveredToVolume][0].extension[volume].valueReference = Reference(jenny-m-chest-wall-treatment-volume)
 * extension[doseDeliveredToVolume][0].extension[totalDoseDelivered].valueQuantity = 6000 'cGy'
 * extension[doseDeliveredToVolume][0].extension[fractionsDelivered].valueUnsignedInt = 30

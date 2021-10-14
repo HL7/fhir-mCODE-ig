@@ -7,7 +7,7 @@ Description: "Example of Primary Cancer Condition"
 * code = SCT#254637007 "Non-small cell lung cancer (disorder)"
 * extension[histologyMorphologyBehavior].valueCodeableConcept = SCT#35917007 "Adenocarcinoma"
 * bodySite = SCT#39607008 "Lung structure (body structure)"
-* bodySite.extension[locationQualifier].valueCodeableConcept = SCT#7771000 "Left (qualifier value)"
+* bodySite.extension[lateralityQualifier].valueCodeableConcept = SCT#7771000 "Left (qualifier value)"
 * subject = Reference(cancer-patient-john-anyperson)
 * onsetDateTime = "2019-04-01"
 * asserter = Reference(us-core-practitioner-kyle-anydoc)

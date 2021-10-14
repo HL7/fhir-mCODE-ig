@@ -22,7 +22,7 @@ Description:    "An episode of medication administration for a patient whose con
 // * insert ReduceText(performer)
 // * insert ReduceText(dosage)
 * insert MedicationResourcesRS
-* medication[x] from http://hl7.org/fhir/us/core/ValueSet/us-core-medication-codes (extensible)
+* medication[x] from https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1010.4/expansion  (extensible) // as per USCore 4.0.0
 // Model the Must Supports on US Core MedicationRequest
 * status and medication[x] and subject and effective[x] MS
 
@@ -41,4 +41,3 @@ Invariant:  mcode-reason-required
 Description: "One of reasonCode or reasonReference SHALL be present"
 Expression: "reasonCode.exists() or reasonReference.exists()"
 Severity:   #warning    // FHIR-32387 error-->warning
-

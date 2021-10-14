@@ -128,7 +128,7 @@ Description:    "Types of cytological evience of malignancy, coded in SNOMED CT 
 * ICD10CM#R87.624 "Cytologic evidence of malignancy on smear of vagina"
 
 ValueSet:  SpecificDiagnosisCancerDisorderVS
-Id: mcode-specific-diagnosis-cancer-disordervs
+Id: mcode-specific-diagnosis-cancer-disorder-vs
 Title: "Specific Diagnosis of Cancer"
 Description:    "Types of hypereosinophilic syndrome, coded in SNOMED CT or ICD-10-CM. "
 * insert SNOMEDCTCopyrightForVS

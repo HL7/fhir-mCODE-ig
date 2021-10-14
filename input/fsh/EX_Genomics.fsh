@@ -1,6 +1,6 @@
 Instance: cancer-genomic-variant-somatic-single-nucleotide
 InstanceOf: CancerGenomicVariant
-Description: "mCODE Example for Cancer Genetic Variant"
+Description: "mCODE Example for Cancer Genomic Variant"
 * status = #final "Final"
 * method = LNC#LA26398-0 "Sequencing"
 // value[x] has alternate codings depending on where to place the interpretation of "Positive or Negative".
@@ -23,17 +23,36 @@ Description: "mCODE Example for Cancer Genetic Variant"
  */
 Instance: cancer-genomic-variant-germline-deletion
 InstanceOf: CancerGenomicVariant
-Description: "mCODE Example for Cancer Genetic Variant"
+Description: "mCODE Example for Cancer Genomic Variant"
 * status = #final "Final"
 * method = LNC#LA26398-0 "Sequencing"
 // value[x] has alternate codings depending on where to place the interpretation of "Positive or Negative".
-* valueCodeableConcept = SCT#10828004 "Positive (qualifier value)"
+* interpretation = SCT#10828004 "Positive (qualifier value)"
 * subject = Reference(cancer-patient-john-anyperson)
 * effectiveDateTime = "2019-04-01"
 * valueCodeableConcept = LNC#LA9633-4 "Present"
 * component[geneStudied].valueCodeableConcept = HGNC#HGNC:1100 "BRCA1" // NOTE: HGNC and HGVS codes have special characters in them so SUSHI needs to handle this.
 * component[genomicDNAChange].valueCodeableConcept = HGVS#NG_005905.2:g.126148_126152del "NG_005905.2:g.126148_126152del"
 * component[genomicSourceClass].valueCodeableConcept = LNC#LA6683-2 "Germline"
+
+/* cancer-genomic-variant-fusion is an example of the
+ * CancerGenomicVariant to represent a gene fusion event.
+ * This example demonstrates a test for the gene fusion ABR-BCL1.
+ */
+Instance: cancer-genomic-variant-fusion
+InstanceOf: CancerGenomicVariant
+Description: "mCODE Example for Cancer Genomic Variant gene fusion event"
+* status = #final "Final"
+* method = LNC#LA26398-0 "Sequencing"
+* interpretation = SCT#10828004 "Positive (qualifier value)"
+* subject = Reference(cancer-patient-john-anyperson)
+* effectiveDateTime = "2019-04-01"
+* valueCodeableConcept = LNC#LA9633-4 "Present"
+* component[geneStudied][0].valueCodeableConcept = HGNC#HGNC:1014 "BCR" // NOTE: HGNC and HGVS codes have special characters in them so SUSHI needs to handle this.
+* component[geneStudied][1].valueCodeableConcept = HGNC#HGNC:76 "ABL1"
+* component[molecularConsequence].valueCodeableConcept = #SO:001565 "gene_fusion"
+* component[genomicDNAChange].valueCodeableConcept = HGVS#NM_005157.6(ABL1):c.1076T>G "NM_005157.6(ABL1):c.1076T>G (p.Phe359Cys)"
+* component[genomicSourceClass].valueCodeableConcept = LNC#LA6684-0 "Somatic"
 
 Instance: cancer-genomics-report-john-anyperson
 InstanceOf: CancerGenomicsReport
@@ -67,7 +86,7 @@ Description: "mCODE Example for Tumor Marker Test"
 
 Instance: genomic-specimen-lung
 InstanceOf: GenomicSpecimen
-Description: "mCODE Example for Genetic Specimen"
+Description: "mCODE Example for Genomic Specimen"
 * status = #available "Available"
 * subject = Reference(cancer-patient-john-anyperson)
 * processing.timeDateTime = "2019-03-20"

@@ -632,7 +632,7 @@ Description: "Anatomic volume 2 for Jenny M's teleradiotherapy."
 * description = "Chest Wall Lymph Nodes"
 * identifier.value = "1.2.246.352…2"
 * location = SCT#245276004 "Mediastinal lymph node group (body structure)"
-* locationQualifier = SCT#51440002  "Right and left (qualifier value)"
+* extension[lateralityQualifier][0].valueCodeableConcept = SCT#51440002  "Right and left (qualifier value)"
 
 Instance: cancer-related-medication-request-anastrozole-jenny-m
 InstanceOf: CancerRelatedMedicationRequest

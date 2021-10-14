@@ -24,11 +24,17 @@ Title: "Cancer Disease Status Evidence Type Value Set"
 Description:  "The type of evidence backing up the clinical determination of cancer progression."
 // The code '252416005 Histopathology test (procedure)' is intended to be used when there is a biopsy that contributes evidence of the cancer disease status.
 * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
-* include codes from system SCT where concept is-a #363679005 "Imaging (procedure)"
-* include codes from system SCT where concept is-a #108257001 "Anatomic pathology procedure (procedure)" // Broader than SCT#252416005 "Histopathology test (procedure), include microscopy."
-* include codes from system SCT where concept is-a #711015009 "Assessment of symptom control (procedure)"
-* include codes from system SCT where concept is-a #5880005   "Physical examination procedure (procedure)"
-* include codes from system SCT where concept is-a #386344002 "Laboratory data interpretation (procedure)"
+* include codes from system SCT where concept is-a #714797009 "Histologic test (procedure)" // Rolls up to NAACR 1 - Positive Histology
+* include codes from system SCT where concept is-a #116147009 "Cytologic test (procedure)"  // Rolls up to NAACR 2 - Positive Cytology
+//                                                                                             Rolls up to NAACR 3  - Combo of Tumor Maker + Histological Test
+* include codes from system SCT where concept is-a #108257001 "Anatomic pathology procedure (procedure)" // Rolls up to NAACR 4 - Positive microscopic confirmation, method not specified
+* include codes from system SCT where concept is-a #386344002 "Laboratory data interpretation (procedure)" // Rolls up to NAACR 5 - Positive laboratory test/marker study
+* include codes from system SCT where concept is-a #5880005 "Clinical examination (procedure)"  // Rolls up to NAACR 6 Direct visualization without microscopic confirmation
+* include codes from system SCT where concept is-a #363679005 "Imaging (procedure)"          // Rolls up to NAACR 7 Radiography and/or other imaging techniques without microscopic confirmation
+//                                                                                              NAACR 8 intentionally NOT supported - Clinical Diagnosis
+//                                                                                              NAACR 9 represented by no value provided -- Unknown
+* include codes from system SCT where concept is-a #250724005 "Tumor marker measurement procedure (procedure)"
+
 
 
 ValueSet: CancerRelatedSurgicalProcedureVS
@@ -49,6 +55,7 @@ Description: "Qualifiers to refine a body structure or location including qualif
 // Changed to intensional definition
 * include codes from system SCT where concept is-a #106233006 "Topographic Modifier (qualifer)"
 * include codes from system SCT where concept is-a #272424004 "Relative Sites (qualifier)"
+* SCT#255503000 "Entire (qualifier value)"
 * exclude codes from valueset LateralityQualifierVS
 
 ValueSet: LateralityQualifierVS

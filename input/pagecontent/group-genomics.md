@@ -47,7 +47,7 @@ The diagram below shows an example representation for the gene fusion BCR_ABL1:
 
 The mCODE example [`cancer-genomic-variant-fusion`](Observation-cancer-genomic-variant-fusion.html) demonstrates the gene fusion representation.
 
-**NOTE:** A fusion event that is related to two variants will be expressed as two separate variant instances. Is is anticipated that both variants, even if part of the same fusion event, will be grouped as DiagnosticReport.result slices under **GenomicsReport**.
+**NOTE:** A fusion event that is related to two variants will be expressed as two separate variant instances. Both variants from the same fusion event can be included as DiagnosticReport.result slices under **GenomicsReport**.
 
 ### Profiles
 

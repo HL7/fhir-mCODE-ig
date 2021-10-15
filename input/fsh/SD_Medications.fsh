@@ -22,7 +22,7 @@ Description:    "An episode of medication administration for a patient whose con
 // * insert ReduceText(performer)
 // * insert ReduceText(dosage)
 * insert MedicationResourcesRS
-* medication[x] from https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1010.4/expansion  (extensible) // as per USCore 4.0.0
+* medication[x] from http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1010.4 (extensible) // as per USCore 4.0.0
 // Model the Must Supports on US Core MedicationRequest
 * status and medication[x] and subject and effective[x] MS
 

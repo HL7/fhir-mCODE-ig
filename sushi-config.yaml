@@ -75,6 +75,7 @@ menu:
   Artifacts:
     All FHIR Artifacts: artifacts.html
     Data Dictionary: dictionary.html
+    Glossary:  glossary.html
     Other Downloads: downloads.html
   History:
     Change Log: change_log.html

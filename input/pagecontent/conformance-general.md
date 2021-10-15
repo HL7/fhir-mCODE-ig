@@ -96,7 +96,7 @@ ALL mCODE participants MUST at minimum support the [CancerPatient] and [PrimaryC
 
 #### Support US Core Conformance Requirements
 
-Additional [conformance requirements from US Core](http://hl7.org/fhir/us/core/capstatements.html) apply to RESTful interactions, searches, and resource formats in mCODE. mCODE "inherits" all US Core conformance requirements. US Core provides base profiles for many (but not all) mCODE profiles, outlines expectations for handling of missing or unknown data elements, and outlines how to associate provenance information associated with collection, transfer, and updating of clinical information.
+Additional [conformance requirements from US Core](http://hl7.org/fhir/us/core/conformance-expectations.html#conformance-expectations) apply to RESTful interactions, searches, and resource formats in mCODE. mCODE "inherits" all US Core conformance requirements. US Core provides base profiles for many (but not all) mCODE profiles, outlines expectations for handling of missing or unknown data elements, and outlines how to associate provenance information associated with collection, transfer, and updating of clinical information.
 
 International users of mCODE may find US Core an impediment to implementation. Application of mCODE to other countries is open to further discussion.
 

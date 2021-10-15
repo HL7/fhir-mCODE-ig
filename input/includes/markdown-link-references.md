@@ -62,7 +62,7 @@
 [CarcinomaInSituDisorderVS]: ValueSet-mcode-carcinoma-insite-cancer-disorder-vs.html
 [ClinVarVS]: ValueSet-mcode-clinvar-vs.html
 [ConditionStatusTrendVS]: ValueSet-mcode-condition-status-trend-vs.html
-[CytologicEvidenceOfMalignancyVS]: ValueSet-mcode-cytologic-evidence-malignancy-vs.html
+[CytologicEvidenceOfMalignancyVS]: ValueSet-mcode-cytologic-evidence-maligancy-vs.html
 [DNAChangeTypeVS]: ValueSet-mcode-dna-change-type-vs.html
 [ElixhauserAIDSVS]: ValueSet-elixhauser-aids-vs.html
 [ElixhauserAlcoholAbuseVS]: ValueSet-elixhauser-alcohol-abuse-vs.html
@@ -137,7 +137,7 @@
 [SpecificDiagnosisCancerDisorderVS]: ValueSet-mcode-specific-diagnosis-cancer-disorder-vs.html
 [CarcinomaInSituDisorderVS]: ValueSet-mcode-carcinoma-in-situ-disorder-vs.html
 [MelanomaInSituDisorderVS]: ValueSet-mcode-melanoma-in-situ-disorder-vs.html
-[BenignUncertainNeoplasmBrainCNSDisorderVS]: ValueSet-mcode-uncertain-neoplasm-brain-CNS-Disorder-vs.html
+[BenignUncertainNeoplasmBrainCNSDisorderVS]: mcode-benign-uncertain-neoplasm-brain-cns-disorder-vs.html
 [CytologicEvidenceOfMalignancyVS]: ValueSet-mcode-evidence-of-malignancy-vs.html
 
 <!-- mCODE Code Systems -->

@@ -108,7 +108,7 @@ Description:    "Records an alteration in the most common DNA nucleotide sequenc
 * component[clinicalSignificance].value[x] only CodeableConcept
 * component[clinicalSignificance].value[x] from http://loinc.org/vs/LL4034-6 (required)
 * component[clinicalSignificance] ^short = "Genomic variation clinical significance [Imp]"
-* component[clinicalSignificance] ^definition = "Single DNA marker or individual allele interpretation in the context of the assessed Genomic disease (source: LOINC)."
+* component[clinicalSignificance] ^definition = "Single DNA marker or individual allele interpretation in the context of the assessed genomic disease (source: LOINC)."
 
 // ADDITIONAL MUST SUPPORTS (MS on status, category, category[Laboratory], codes, subject, effective[x], value[x] are inherited from US Core Lab Observation)
 * method and specimen and component and component.code and component.value[x] and component.dataAbsentReason MS

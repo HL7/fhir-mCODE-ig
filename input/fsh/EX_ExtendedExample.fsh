@@ -322,7 +322,7 @@ Instance: cancer-genomic-variant-jenny-m
 InstanceOf: CancerGenomicVariant
 Description: "Extended example: example showing genomic variant found by breast cancer genomics panel"
 * status = #final "final"
-* code = LNC#69548-6 "Genetic variant assessment"
+* code = LNC#69548-6 "Genomic variant assessment"
 * subject = Reference(cancer-patient-jenny-m)
 * effectiveDateTime = "2018-03-15"
 * valueCodeableConcept = LNC#LA9633-4 "Present"

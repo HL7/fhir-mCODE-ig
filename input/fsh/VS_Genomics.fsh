@@ -105,7 +105,7 @@ Description:    "Codes representing tests for tumor markers. This value set of L
 
 ValueSet:   GenomicSpecimenTypeVS
 Id: mcode-genomic-specimen-type-vs
-Title: "Genetic Specimen Type Value Set"
+Title: "Genomic Specimen Type Value Set"
 Description:    "The type of specimen analyzed in a genomic test. The values are taken from code system http://terminology.hl7.org/CodeSystem/v2-0487, and represent a subset of HL7 Version 2 Table 0487 (http://hl7.org/fhir/v2/0487).  The most specific term available should be used."
 * SPTY#AMN       "Amniotic fluid"
 * SPTY#BIFL      "Bile Fluid"

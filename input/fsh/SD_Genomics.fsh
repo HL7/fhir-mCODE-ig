@@ -1,12 +1,12 @@
 Profile:    CancerGenomicVariant
 Parent:     USCoreObservationLab
 Id: mcode-cancer-genomic-variant
-Title:      "Cancer Genetic Variant"
+Title:      "Cancer Genomic Variant"
 Description:    "Records an alteration in the most common DNA nucleotide sequence. The term variant can be used to describe an alteration that may be benign, pathogenic, or of unknown significance. The term variant is increasingly being used in place of the term mutation."
 * insert NotUsed(bodySite)
 * insert NotUsed(referenceRange)
 * insert NotUsed(hasMember)
-* code = LNC#69548-6 //"Genetic variant assessment"
+* code = LNC#69548-6 //"Genomic variant assessment"
 * method from http://loinc.org/vs/LL4048-6 (extensible)
 * specimen only Reference(GenomicSpecimen)
 * value[x] only CodeableConcept
@@ -39,14 +39,14 @@ Description:    "Records an alteration in the most common DNA nucleotide sequenc
 * component[variationCode].code = LNC#81252-9
 * component[variationCode].value[x] only CodeableConcept
 * component[variationCode].value[x] from ClinVarVS (preferred)
-* component[variationCode] ^short = "Discrete genetic variant"
+* component[variationCode] ^short = "Discrete Genomic variant"
 * component[variationCode] ^definition = "The variation ID assigned by ClinVar, for example, 360448 is the identifier which includes the HGVS nomenclature NM_005228.4(EGFR):c.-237A>G (single nucleotide variant in EGFR). Other acceptable variant standards include the Catalogue Of Somatic Mutations In Cancer (COSMIC) and the International System for Human Cytogenetic Nomenclature (ISCN)."
 
 * component[genomicDNAChange].code = LNC#81290-9
 * component[genomicDNAChange].value[x] only CodeableConcept
 * component[genomicDNAChange].value[x] from HGVSVS (required)
 * component[genomicDNAChange] ^short = "Genomic DNA change (gHGVS)"
-* component[genomicDNAChange] ^definition = "The symbolic representation of a genetic structural variant reported using HGVS nomenclature (gHGVS)"
+* component[genomicDNAChange] ^definition = "The symbolic representation of a Genomic structural variant reported using HGVS nomenclature (gHGVS)"
 
 * component[genomicDNAChangeType].code = LNC#48019-4  // DNA change type
 * component[genomicDNAChangeType].value[x] only CodeableConcept
@@ -81,7 +81,7 @@ Description:    "Records an alteration in the most common DNA nucleotide sequenc
 * component[copyNumber].code = LNC#82155-3
 * component[copyNumber].value[x] only Quantity
 * component[copyNumber] ^short = "Genomic structural variant copy number"
-* component[copyNumber] ^definition = "Tthe genetic trait involving the number of copies of a particular gene present in the genome of an individual. (source: NCI)"
+* component[copyNumber] ^definition = "The genomic trait involving the number of copies of a particular gene present in the genome of an individual. (source: NCI)"
 
 * component[sampleAllelicFrequency].code = LNC#81258-6
 * component[sampleAllelicFrequency].value[x] only Quantity
@@ -92,7 +92,7 @@ Description:    "Records an alteration in the most common DNA nucleotide sequenc
 * component[allelicState].value[x] only CodeableConcept
 * component[allelicState].value[x] from http://loinc.org/vs/LL381-5 (required)
 * component[allelicState] ^short = "sample allelic frequency"
-* component[allelicState] ^definition = "Genetic variant allelic state."
+* component[allelicState] ^definition = "Genomic variant allelic state."
 
 // CG Reporting IG does not constrain the cytogeneticNomenclature value type
 * component[cytogeneticNomenclature].code = LNC#81291-7
@@ -107,8 +107,8 @@ Description:    "Records an alteration in the most common DNA nucleotide sequenc
 * component[clinicalSignificance].code = LNC#53037-8
 * component[clinicalSignificance].value[x] only CodeableConcept
 * component[clinicalSignificance].value[x] from http://loinc.org/vs/LL4034-6 (required)
-* component[clinicalSignificance] ^short = "Genetic variation clinical significance [Imp]"
-* component[clinicalSignificance] ^definition = "Single DNA marker or individual allele interpretation in the context of the assessed genetic disease (source: LOINC)."
+* component[clinicalSignificance] ^short = "Genomic variation clinical significance [Imp]"
+* component[clinicalSignificance] ^definition = "Single DNA marker or individual allele interpretation in the context of the assessed genomic disease (source: LOINC)."
 
 // ADDITIONAL MUST SUPPORTS (MS on status, category, category[Laboratory], codes, subject, effective[x], value[x] are inherited from US Core Lab Observation)
 * method and specimen and component and component.code and component.value[x] and component.dataAbsentReason MS
@@ -154,7 +154,7 @@ RuleSet: CancerRelatedSpecimenRules
 Profile:    GenomicSpecimen
 Parent:     Specimen
 Id: mcode-genomic-specimen
-Title:      "Genetic Specimen"
+Title:      "Genomic Specimen"
 Description:    "A small sample of blood, hair, skin, amniotic fluid (the fluid that surrounds a fetus during pregnancy), or other tissue which is excised from a subject for the purposes of genomics testing or analysis."
 * insert CancerRelatedSpecimenRules
 * type from GenomicSpecimenTypeVS (extensible)
@@ -164,13 +164,13 @@ Profile:    CancerGenomicsReport
 Parent:     USCoreDiagnosticReportLab
 Id: mcode-cancer-genomics-report
 Title:      "Cancer Genomics Report"
-Description:    "Genetic analysis summary report. The report may include one or more tests, with two distinct test types. The first type is a targeted mutation test, where a specific mutation on a specific gene is tested for. The result is either positive or negative for that mutation. The second type is a more general test for variants. This type of test returns the identity of variants found in a certain region of the genome."
+Description:    "Genomic analysis summary report. The report may include one or more tests, with two distinct test types. The first type is a targeted mutation test, where a specific mutation on a specific gene is tested for. The result is either positive or negative for that mutation. The second type is a more general test for variants. This type of test returns the identity of variants found in a certain region of the genome."
 // * insert ReduceText
 // * insert ReduceText(media)
 * subject only Reference(CancerPatient)
 * category contains GenomicsCategory 1..1
 * category[GenomicsCategory] = DiagnosticService#GE
-* code = LNC#81247-9 //"Master HL7 genetic variant reporting panel"
+* code = LNC#81247-9 //"Master HL7 Genomic variant reporting panel"
 * specimen only Reference(GenomicSpecimen)
 * insert DiagnosticReportResultSlicingRules
 * result contains

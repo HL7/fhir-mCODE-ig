@@ -39,7 +39,7 @@ The following table presents the external code systems (and naming conventions) 
   * ICD-10-PCS - Procedure Coding System, 10th revision
 * LOINC - Logical Observation Identifiers Names and Codes
 * NCBI - National Center for Biotechnology Information (National Institutes of Health) (US)
-  * NCBI GTR - Genetic Testing Registry
+  * NCBI GTR - Genomic Testing Registry
   * NCBI ClinVar - Not an acronym
 * RxNorm - From National Library of Medicine (US)
 * SNOMED CT - Systematized Nomenclature of Medicine Clinical Terms

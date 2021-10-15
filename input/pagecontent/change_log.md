@@ -34,12 +34,14 @@
 #### [Block Vote 4](https://jira.hl7.org/issues/?filter=14928)
 * [FHIR-32827](https://jira.hl7.org/browse/FHIR-32827) Added Values Urine, Stool and Other to Genomic Specimen Type Value Set
 #### [Block Vote 5](https://jira.hl7.org/issues/?filter=15618)
+* [FHIR-32956](https://jira.hl7.org/browse/FHIR-32956) Primary and Secondary cancer value sets have been aligned with CDC state cancer reporting practices.
+* [FHIR-33340](https://jira.hl7.org/browse/FHIR-33340)   TreatmentPhase profiles and examples dropped.  Will reappear in Codex-RT IG.
+* [FHIR-33343](https://jira.hl7.org/browse/FHIR-33343)  RadiotherapyTreatmentLocationVS/RadiotherapyTreatmentLocationQualifierVS should align with TG263 Anatomy Terms
 
 #### [Block Vote 6](https://jira.hl7.org/issues/?filter=15619)
 * [FHIR-32893](https://jira.hl7.org/browse/FHIR-32893) Aligned CancerDiseaseStatusEvidenceTypeVS with NAACR reporting needs
+#### Other
 
-### Other
-* [FHIR-33343](https://jira.hl7.org/browse/FHIR-33343)  RadiotherapyTreatmentLocationVS/RadiotherapyTreatmentLocationQualifierVS should align with TG263 Anatomy Terms
 * [FHIR-32340](https://jira.hl7.org/browse/FHIR-32340)  Laterality broken out into separate extension
 * [FHIR-33340](https://jira.hl7.org/browse/FHIR-33340)   TreatmentPhase profiles and examples dropped.  Will reappear in Codex-RT IG.
 * [FHIR-32888] (https://jira.hl7.org/browse/FHIR-33340)  Consider renaming CancerGeneticVariant to a more accurate name which covers both dna and amino acid changes.

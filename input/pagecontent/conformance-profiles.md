@@ -18,7 +18,7 @@ Where US Core does not provide an appropriate base profile, mCODE profiles FHIR 
 | [Comorbidities Parent][ComorbiditiesParent]  | no | Observation |
 | [Comorbidities Elixhauser][ComorbiditiesElixhauser] | no | Comorbidities Parent |
 | [ECOG Performance Status][ECOGPerformanceStatus] | no | Observation |
-| [Genetic Specimen][GenomicSpecimen] | no | Specimen |
+| [Genomic Specimen][GenomicSpecimen] | no | Specimen |
 | [Genomic Region Studied][GenomicRegionStudied] | yes | US Core Laboratory Result Observation |
 | [Karnofsky Performance Status][KarnofskyPerformanceStatus] | no | Observation |
 | [mCODE Patient Bundle][MCODEPatientBundle] | no | Bundle  |

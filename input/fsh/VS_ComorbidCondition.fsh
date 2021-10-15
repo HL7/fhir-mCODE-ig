@@ -3002,7 +3002,7 @@ Description:    "Elixhauser Comorbid Condition Value Set for Neurological Moveme
 * ICD10CM#G23.8 "Other specified degenerative diseases of basal ganglia"
 * ICD10CM#G23.9 "Degenerative disease of basal ganglia, unspecified"
 * ICD10CM#G24.09 "Other drug induced dystonia"
-* ICD10CM#G24.1 "Genetic torsion dystonia"
+* ICD10CM#G24.1 "Genomic torsion dystonia"
 * ICD10CM#G24.2 "Idiopathic nonfamilial dystonia"
 * ICD10CM#G24.8 "Other dystonia"
 * ICD10CM#G25.4 "Drug-induced chorea"

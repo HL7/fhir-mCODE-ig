@@ -39,21 +39,117 @@ Id: mcode-teleradiotherapy-technique-vs
 Title: "Teleradiotherapy Technique Value Set"
 Description: "Codes describing the techniques of teleradiotherapy (external beam) procedures."
 * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
+//* SCT#441799006 "Intensity modulated radiation therapy (procedure)"
+//* SCT#1156530009 "Volumetric Modulated Arc Therapy (procedure)"
+//* SCT#1162782007 "Three dimensional external beam radiation therapy (procedure)"
+//* SCT#1156526006 "Two dimensional external beam radiation therapy (procedure)"
+//* SCT#168524008 "Radiotherapy - intraoperative control (procedure)"
+//* SCT#1156529004 "External beam radiation therapy using particle passive scattering technique (procedure)"
+//* SCT#1156528007 "External beam radiation therapy using particle spot scanning technique (procedure)"
+//* SCT#1156525005 "Mixed beam external beam radiation therapy (procedure)"  -- dropped by RTTD Terminology decision 9/21
+//* SCT#169317000 "Neutron capture therapy (procedure)"
+* include codes from valueset PhotonBeamTechniquesVS
+* include codes from valueset ElectronBeamTechniquesVS
+* include codes from valueset NeutronBeamTechniquesVS
+* include codes from valueset CarbonIonBeamTechniquesVS
+* include codes from valueset ProtonBeamTechniquesVS
+
+// * SCT#1163157007 "Ultra high dose rate radiotherapy (procedure)"
+
+ValueSet: PhotonBeamTechniquesVS
+Id: mcode-photon-beam-technique-vs
+Title: "Allowed techniques for photon beam modality"
+Description: "Allowed techniques for photon beam modality"
+* ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
 * SCT#441799006 "Intensity modulated radiation therapy (procedure)"
 * SCT#1156530009 "Volumetric Modulated Arc Therapy (procedure)"
 * SCT#1162782007 "Three dimensional external beam radiation therapy (procedure)"
 * SCT#1156526006 "Two dimensional external beam radiation therapy (procedure)"
 * SCT#168524008 "Radiotherapy - intraoperative control (procedure)"
+
+ValueSet: ElectronBeamTechniquesVS
+Id: mcode-electron-beam-technique-vs
+Title: "Allowed techniques for electron beam modality"
+Description: "Allowed techniques for electron beam modality"
+* ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
+* SCT#1162782007 "Three dimensional external beam radiation therapy (procedure)"
+* SCT#1156526006 "Two dimensional external beam radiation therapy (procedure)"
+* SCT#168524008 "Radiotherapy - intraoperative control (procedure)"
+
+ValueSet: NeutronBeamTechniquesVS
+Id: mcode-neutron-beam-technique-vs
+Title: "Allowed techniques for neutron beam modality"
+Description: "Allowed techniques for neutron beam modality"
+* ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
+* SCT#169317000 "Neutron capture therapy (procedure)"
+* SCT#1162782007 "Three dimensional external beam radiation therapy (procedure)"
+
+ValueSet: CarbonIonBeamTechniquesVS
+Id: mcode-carbon-ion-beam-technique-vs
+Title: "Allowed techniques for carbon ion beam modality"
+Description: "Allowed techniques for carbon ion beam modality"
+* ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
 * SCT#1156529004 "External beam radiation therapy using particle passive scattering technique (procedure)"
 * SCT#1156528007 "External beam radiation therapy using particle spot scanning technique (procedure)"
-* SCT#1156525005 "Mixed beam external beam radiation therapy (procedure)"
-* SCT#169317000 "Neutron capture therapy (procedure)"
-// * SCT#1163157007 "Ultra high dose rate radiotherapy (procedure)"
+// * SCT#1156525005 "Mixed beam external beam radiation therapy (procedure)" -- RTTD Terminology decision 9/21
+
+ValueSet: ProtonBeamTechniquesVS
+Id: mcode-proton-beam-technique-vs
+Title: "Allowed techniques for proton beam modality"
+Description: "Allowed techniques for proton beam modality"
+* ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
+* SCT#1156529004 "External beam radiation therapy using particle passive scattering technique (procedure)"
+* SCT#1156528007 "External beam radiation therapy using particle spot scanning technique (procedure)"
+// * SCT#1156525005 "Mixed beam external beam radiation therapy (procedure)" -- RTTD Terminology decision 9/21
 
 ValueSet: BrachytherapyTechniqueVS
 Id: mcode-brachytherapy-technique-vs
 Title: "Brachytherapy Technique Value Set"
 Description: "Codes describing the techniques of brachytherapy (internal or surface radiation) procedures."
+* ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
+* include codes from valueset BrachyIntRadiotherapySeedTechniquesVS
+* include codes from valueset BrachyLDRTechniquesVS
+* include codes from valueset BrachyPDRTechniquesVS
+* include codes from valueset BrachytherapyHDRTechniquesVS
+* include codes from valueset BrachytherapyHDRElectronicTechniquesVS
+* include codes from valueset BrachyRadioPharmaceuticalTechniquesVS
+//* SCT#384692006 "Intracavitary brachytherapy (procedure)"
+//* SCT#1156382005 "Intensity modulated intracavitary brachytherapy (procedure)"
+//* SCT#113120007 "Interstitial brachytherapy (procedure)"
+//* SCT#1156383000 "Intravascular brachytherapy (procedure)"
+//* SCT#384691004 "Intraluminal brachytherapy (procedure)"
+//* SCT#168524008 "Radiotherapy - intraoperative control (procedure)"
+//* SCT#14473006 "Surface brachytherapy (procedure)"
+//* SCT#16560241000119104 "Oral radionuclide therapy (procedure)"
+
+ValueSet: BrachyIntRadiotherapySeedTechniquesVS
+Id: mcode-brachyintradiotherapyseed-technique-vs
+Title: "Allowed techniques for brachytherapy modality internal radiotherapy - permanent seeds"
+Description: "Allowed techniques for brachytherapy modality internal radiotherapy - permanent seeds"
+* ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
+* SCT#113120007 "Interstitial brachytherapy (procedure)"
+
+ValueSet: BrachyLDRTechniquesVS
+Id: mcode-brachyldr-technique-vs
+Title: "Allowed techniques for brachytherapy modality Low Dose Rate using temp rad source"
+Description: "Allowed techniques for brachytherapy modality Low Dose Rate using temp rad source"
+* ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
+* SCT#384692006 "Intracavitary brachytherapy (procedure)"
+* SCT#113120007 "Interstitial brachytherapy (procedure)"
+* SCT#14473006 "Surface brachytherapy (procedure)"
+
+ValueSet: BrachyPDRTechniquesVS
+Id: mcode-brachypdr-technique-vs
+Title: "Allowed techniques for brachytherapy modality Pulsed Dose Rate"
+Description: "Allowed techniques for brachytherapy modality Pulsed Dose Rate"
+* ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
+* SCT#384692006 "Intracavitary brachytherapy (procedure)"
+* SCT#113120007 "Interstitial brachytherapy (procedure)"
+
+ValueSet: BrachytherapyHDRTechniquesVS
+Id: mcode-brachyhdr-technique-vs
+Title: "Allowed techniques for brachytherapy modality High Dose Rate"
+Description: "Allowed techniques for brachytherapy modality High Dose Rate"
 * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
 * SCT#384692006 "Intracavitary brachytherapy (procedure)"
 * SCT#1156382005 "Intensity modulated intracavitary brachytherapy (procedure)"
@@ -62,7 +158,28 @@ Description: "Codes describing the techniques of brachytherapy (internal or surf
 * SCT#384691004 "Intraluminal brachytherapy (procedure)"
 * SCT#168524008 "Radiotherapy - intraoperative control (procedure)"
 * SCT#14473006 "Surface brachytherapy (procedure)"
+
+ValueSet: BrachytherapyHDRElectronicTechniquesVS
+Id: mcode-brachyhdrelectronic-technique-vs
+Title: "Allowed techniques for brachytherapy modality High Dose Rate electronic"
+Description: "Allowed techniques for brachytherapy modality High Dose Rate electronic"
+* ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
+* SCT#384692006 "Intracavitary brachytherapy (procedure)"
+* SCT#1156382005 "Intensity modulated intracavitary brachytherapy (procedure)"
+* SCT#113120007 "Interstitial brachytherapy (procedure)"
+* SCT#384691004 "Intraluminal brachytherapy (procedure)"
+* SCT#168524008 "Radiotherapy - intraoperative control (procedure)"
+* SCT#14473006 "Surface brachytherapy (procedure)"
+
+ValueSet: BrachyRadioPharmaceuticalTechniquesVS
+Id: mcode-brachyradiopharmaceutical-technique-vs
+Title: "Allowed techniques for brachytherapy modality radiopharmaceutical"
+Description: "Allowed techniques for brachytherapy modality radiopharmaceutical"
+* ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
 * SCT#16560241000119104 "Oral radionuclide therapy (procedure)"
+* SCT#1156383000 "Intravascular brachytherapy (procedure)"
+* SCT#384692006 "Intracavitary brachytherapy (procedure)"
+* SCT#113120007 "Interstitial brachytherapy (procedure)"
 
 ValueSet: RadiotherapyTechniqueVS
 Id: mcode-radiotherapy-technique-vs

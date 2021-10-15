@@ -39,7 +39,7 @@ v: {
   }
 }, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK"}####
 v: {
-  "display" : "DOXOrubicin hydrochloride 20 MG per 10 ML Injection",
+  "display" : "10 ML doxorubicin hydrochloride 2 MG/ML Injection",
   "severity" : null,
   "error" : ""
 }
@@ -49,7 +49,7 @@ v: {
   "code" : "1790099"
 }, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
 v: {
-  "display" : "DOXOrubicin hydrochloride 20 MG per 10 ML Injection",
+  "display" : "10 ML doxorubicin hydrochloride 2 MG/ML Injection",
   "severity" : null,
   "error" : ""
 }
@@ -149,7 +149,7 @@ v: {
   }
 }, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK"}####
 v: {
-  "display" : "CISplatin 50 MG per 50 ML Injectable Solution",
+  "display" : "cisplatin 1 MG/ML Injectable Solution",
   "severity" : null,
   "error" : ""
 }
@@ -159,7 +159,7 @@ v: {
   "code" : "309311"
 }, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
 v: {
-  "display" : "CISplatin 50 MG per 50 ML Injectable Solution",
+  "display" : "cisplatin 1 MG/ML Injectable Solution",
   "severity" : null,
   "error" : ""
 }
@@ -259,7 +259,7 @@ v: {
   }
 }, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK"}####
 v: {
-  "display" : "DOXOrubicin",
+  "display" : "doxorubicin",
   "severity" : null,
   "error" : ""
 }
@@ -269,7 +269,7 @@ v: {
   "code" : "3639"
 }, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
 v: {
-  "display" : "DOXOrubicin",
+  "display" : "doxorubicin",
   "severity" : null,
   "error" : ""
 }
@@ -369,7 +369,7 @@ v: {
   }
 }, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK"}####
 v: {
-  "display" : "PACLitaxel",
+  "display" : "paclitaxel",
   "severity" : null,
   "error" : ""
 }
@@ -379,7 +379,7 @@ v: {
   "code" : "56946"
 }, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
 v: {
-  "display" : "PACLitaxel",
+  "display" : "paclitaxel",
   "severity" : null,
   "error" : ""
 }
@@ -390,7 +390,7 @@ v: {
   "display" : "DOXOrubicin"
 }, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
 v: {
-  "display" : "DOXOrubicin",
+  "display" : "doxorubicin",
   "severity" : null,
   "error" : ""
 }
@@ -412,7 +412,7 @@ v: {
   "display" : "PACLitaxel"
 }, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
 v: {
-  "display" : "PACLitaxel",
+  "display" : "paclitaxel",
   "severity" : null,
   "error" : ""
 }
@@ -428,6 +428,7 @@ v: {
   "error" : ""
 }
 -------------------------------------------------------------------------------------
+<<<<<<< HEAD
 {"code" : {
   "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
   "code" : "1790099",
@@ -622,3 +623,5 @@ v: {
   "error" : "Unable to find value set http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.3.88.12.80.17 (from http://tx.fhir.org/r4)"
 }
 -------------------------------------------------------------------------------------
+=======
+>>>>>>> master

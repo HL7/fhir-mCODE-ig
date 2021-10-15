@@ -7,7 +7,7 @@ Description: "Example of Primary Cancer Condition"
 * code = SCT#254637007 "Non-small cell lung cancer (disorder)"
 * extension[histologyMorphologyBehavior].valueCodeableConcept = SCT#35917007 "Adenocarcinoma"
 * bodySite = SCT#39607008 "Lung structure (body structure)"
-* bodySite.extension[locationQualifier].valueCodeableConcept = SCT#7771000 "Left (qualifier value)"
+* bodySite.extension[lateralityQualifier].valueCodeableConcept = SCT#7771000 "Left (qualifier value)"
 * subject = Reference(cancer-patient-john-anyperson)
 * onsetDateTime = "2019-04-01"
 * asserter = Reference(us-core-practitioner-kyle-anydoc)
@@ -194,7 +194,9 @@ Description: "Example of Cancer Related Surgical Procedure"
 * performedDateTime = "2019-03-01"
 * extension[treatmentIntent].valueCodeableConcept = SCT#373808002 "Curative - procedure intent"
 * reasonReference = Reference(primary-cancer-condition-nsclc)
-* bodySite = SCT#41224006 "Structure of lower lobe of left lung (body structure)"
+* bodySite = SCT#31094006  "Structure of lobe of lung (body structure)"
+* bodySite.extension[lateralityQualifier].valueCodeableConcept = SCT#7771000 "Left (qualifier value)"
+* bodySite.extension[locationQualifier].valueCodeableConcept = SCT#261122009 "Lower (qualifier value)"
 
 Instance: john-anyperson-treatment-volume
 InstanceOf: RadiotherapyVolume
@@ -202,8 +204,8 @@ Description: "Anatomic volume for John Anyperson's brachytherapy."
 * patient = Reference(cancer-patient-john-anyperson)
 * description = "Structure of lower lobe of left lung"
 * location = SCT#31094006  "Structure of lobe of lung (body structure)"
-* location.extension[lateralityQualifier][0].valueCodeableConcept = SCT#7771000 "Left (qualifier value)"
-* location.extension[locationQualifier][0].valueCodeableConcept = SCT#261122009 "Lower (qualifier value)"
+* extension[lateralityQualifier].valueCodeableConcept = SCT#7771000 "Left (qualifier value)"
+* locationQualifier[0] = SCT#261122009 "Lower (qualifier value)"
 Instance: binet-stage-group-A
 InstanceOf: CancerStageGroup
 Description: "Example of a non-TNM Stage Group (Binet staging for CLL)"

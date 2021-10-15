@@ -1,6 +1,54 @@
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://snomed.info/sct",
+  "code" : "1162782007"
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "Three dimensional external beam radiation therapy (procedure)",
+  "code" : "1162782007",
+  "system" : "http://snomed.info/sct",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://snomed.info/sct",
+  "code" : "1162782007"
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "Three dimensional external beam radiation therapy (procedure)",
+  "code" : "1162782007",
+  "system" : "http://snomed.info/sct",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://snomed.info/sct",
+  "code" : "1162586008"
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "Irradiated volume of organ at risk (observable entity)",
+  "code" : "1162586008",
+  "system" : "http://snomed.info/sct",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://snomed.info/sct",
+  "code" : "1162492000"
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "Tumor bed (morphologic abnormality)",
+  "code" : "1162492000",
+  "system" : "http://snomed.info/sct",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://snomed.info/sct",
   "code" : "93468003"
 }, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
 v: {
@@ -44575,7 +44623,7 @@ e: {
   "language" : "en",
   "text" : {
     "status" : "generated",
-    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en\" lang=\"en\"><p>This value set contains 4 concepts</p><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion based on SNOMED CT United States edition 01-Sep 2021</p><p>All codes in this table are from the system <a href=\"http://terminology.hl7.org/2.1.0/CodeSystem-v3-snomed-CT.html\"><code>http://snomed.info/sct</code></a></p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-51440002\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=51440002\">51440002</a></td><td>Right and left</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-399488007\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=399488007\">399488007</a></td><td>Midline (qualifier value)</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-24028007\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=24028007\">24028007</a></td><td>Right</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-7771000\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=7771000\">7771000</a></td><td>Left</td><td/></tr></table></div>"
+    "div" : "<div xml:lang=\"en\" xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"en\"><p>This value set contains 4 concepts</p><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion based on SNOMED CT United States edition 01-Sep 2021</p><p>All codes in this table are from the system <a href=\"http://terminology.hl7.org/2.1.0/CodeSystem-v3-snomed-CT.html\"><code>http://snomed.info/sct</code></a></p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-51440002\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=51440002\">51440002</a></td><td>Right and left</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-399488007\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=399488007\">399488007</a></td><td>Midline (qualifier value)</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-24028007\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=24028007\">24028007</a></td><td>Right</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-7771000\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=7771000\">7771000</a></td><td>Left</td><td/></tr></table></div>"
   },
   "status" : "active",
   "expansion" : {
@@ -85721,7 +85769,7 @@ e: {
   "language" : "en",
   "text" : {
     "status" : "generated",
-    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en\" lang=\"en\"><p>This value set contains 5 concepts</p><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion based on SNOMED CT United States edition 01-Sep 2021</p><p>All codes in this table are from the system <a href=\"http://terminology.hl7.org/2.1.0/CodeSystem-v3-snomed-CT.html\"><code>http://snomed.info/sct</code></a></p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-10611004\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=10611004\">10611004</a></td><td>Teleradiotherapy protons</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-45643008\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=45643008\">45643008</a></td><td>Teleradiotherapy using electrons</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-80347004\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=80347004\">80347004</a></td><td>Teleradiotherapy neutrons</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-1156505006\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=1156505006\">1156505006</a></td><td>Teleradiotherapy using carbon ions</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-1156506007\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=1156506007\">1156506007</a></td><td>Teleradiotherapy using photons</td><td/></tr></table></div>"
+    "div" : "<div xml:lang=\"en\" xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"en\"><p>This value set contains 5 concepts</p><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion based on SNOMED CT United States edition 01-Sep 2021</p><p>All codes in this table are from the system <a href=\"http://terminology.hl7.org/2.1.0/CodeSystem-v3-snomed-CT.html\"><code>http://snomed.info/sct</code></a></p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-10611004\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=10611004\">10611004</a></td><td>Teleradiotherapy protons</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-45643008\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=45643008\">45643008</a></td><td>Teleradiotherapy using electrons</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-80347004\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=80347004\">80347004</a></td><td>Teleradiotherapy neutrons</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-1156505006\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=1156505006\">1156505006</a></td><td>Teleradiotherapy using carbon ions</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---snomed.info-sct-1156506007\"> </a><a href=\"http://browser.ihtsdotools.org/?perspective=full&amp;conceptId1=1156506007\">1156506007</a></td><td>Teleradiotherapy using photons</td><td/></tr></table></div>"
   },
   "status" : "active",
   "expansion" : {
@@ -89463,5 +89511,397 @@ e: {
   }
 },
   "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://snomed.info/sct",
+  "code" : "370052007",
+  "display" : "Status of invasion by tumor"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "Tumor invasion",
+  "code" : "370052007",
+  "system" : "http://snomed.info/sct",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://snomed.info/sct",
+  "code" : "45643008",
+  "display" : "Teleradiotherapy using electrons"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "Teleradiotherapy using electrons",
+  "code" : "45643008",
+  "system" : "http://snomed.info/sct",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://snomed.info/sct",
+  "code" : "45643008",
+  "display" : "Teleradiotherapy using electrons"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "valueSet" : ["http://hl7.org/fhir/us/mcode/ValueSet/mcode-teleradiotherapy-modality-vs"]
+    },
+    {
+      "valueSet" : ["http://hl7.org/fhir/us/mcode/ValueSet/mcode-brachytherapy-modality-vs"]
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK"}####
+v: {
+  "display" : "Teleradiotherapy using electrons",
+  "code" : "45643008",
+  "system" : "http://snomed.info/sct",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://snomed.info/sct",
+  "code" : "1162782007",
+  "display" : "Three dimensional external beam radiation therapy (procedure)"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "code" : "",
+  "system" : "",
+  "severity" : "error",
+  "error" : "Unable to find code 1162782007 in http://snomed.info/sct (version http://snomed.info/sct/731000124108/version/20210901); The code \"1162782007\" is not valid in the system http://snomed.info/sct; The code provided (http://snomed.info/sct#1162782007) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4)"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://snomed.info/sct",
+  "code" : "1162782007"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://snomed.info/sct",
+      "concept" : [{
+        "code" : "441799006",
+        "display" : "Intensity modulated radiation therapy (procedure)"
+      },
+      {
+        "code" : "1156530009",
+        "display" : "Volumetric Modulated Arc Therapy (procedure)"
+      },
+      {
+        "code" : "1162782007",
+        "display" : "Three dimensional external beam radiation therapy (procedure)"
+      },
+      {
+        "code" : "1156526006",
+        "display" : "Two dimensional external beam radiation therapy (procedure)"
+      },
+      {
+        "code" : "168524008",
+        "display" : "Radiotherapy - intraoperative control (procedure)"
+      }]
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "code" : "",
+  "system" : "",
+  "severity" : "error",
+  "error" : "Unable to find code 1162782007 in http://snomed.info/sct (version http://snomed.info/sct/731000124108/version/20210901); The code \"1162782007\" is not valid in the system http://snomed.info/sct; The code provided (http://snomed.info/sct#1162782007) is not valid (from http://tx.fhir.org/r4)"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://snomed.info/sct",
+  "code" : "1162782007"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://snomed.info/sct",
+      "concept" : [{
+        "code" : "1162782007",
+        "display" : "Three dimensional external beam radiation therapy (procedure)"
+      },
+      {
+        "code" : "1156526006",
+        "display" : "Two dimensional external beam radiation therapy (procedure)"
+      },
+      {
+        "code" : "168524008",
+        "display" : "Radiotherapy - intraoperative control (procedure)"
+      }]
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "code" : "",
+  "system" : "",
+  "severity" : "error",
+  "error" : "Unable to find code 1162782007 in http://snomed.info/sct (version http://snomed.info/sct/731000124108/version/20210901); The code \"1162782007\" is not valid in the system http://snomed.info/sct; The code provided (http://snomed.info/sct#1162782007) is not valid (from http://tx.fhir.org/r4)"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://snomed.info/sct",
+  "code" : "1162782007"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://snomed.info/sct",
+      "concept" : [{
+        "code" : "169317000",
+        "display" : "Neutron capture therapy (procedure)"
+      },
+      {
+        "code" : "1162782007",
+        "display" : "Three dimensional external beam radiation therapy (procedure)"
+      }]
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "code" : "",
+  "system" : "",
+  "severity" : "error",
+  "error" : "Unable to find code 1162782007 in http://snomed.info/sct (version http://snomed.info/sct/731000124108/version/20210901); The code \"1162782007\" is not valid in the system http://snomed.info/sct; The code provided (http://snomed.info/sct#1162782007) is not valid (from http://tx.fhir.org/r4)"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://snomed.info/sct",
+  "code" : "1162782007"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://snomed.info/sct",
+      "concept" : [{
+        "code" : "1156529004",
+        "display" : "External beam radiation therapy using particle passive scattering technique (procedure)"
+      },
+      {
+        "code" : "1156528007",
+        "display" : "External beam radiation therapy using particle spot scanning technique (procedure)"
+      }]
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "code" : "",
+  "system" : "",
+  "severity" : "error",
+  "error" : "Unable to find code 1162782007 in http://snomed.info/sct (version http://snomed.info/sct/731000124108/version/20210901); The code \"1162782007\" is not valid in the system http://snomed.info/sct; The code provided (http://snomed.info/sct#1162782007) is not valid (from http://tx.fhir.org/r4)"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://snomed.info/sct",
+  "code" : "1162782007"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://snomed.info/sct",
+      "concept" : [{
+        "code" : "113120007",
+        "display" : "Interstitial brachytherapy (procedure)"
+      }]
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "code" : "",
+  "system" : "",
+  "severity" : "error",
+  "error" : "Unable to find code 1162782007 in http://snomed.info/sct (version http://snomed.info/sct/731000124108/version/20210901); The code \"1162782007\" is not valid in the system http://snomed.info/sct; The code provided (http://snomed.info/sct#1162782007) is not valid (from http://tx.fhir.org/r4)"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://snomed.info/sct",
+  "code" : "1162782007"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://snomed.info/sct",
+      "concept" : [{
+        "code" : "384692006",
+        "display" : "Intracavitary brachytherapy (procedure)"
+      },
+      {
+        "code" : "113120007",
+        "display" : "Interstitial brachytherapy (procedure)"
+      },
+      {
+        "code" : "14473006",
+        "display" : "Surface brachytherapy (procedure)"
+      }]
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "code" : "",
+  "system" : "",
+  "severity" : "error",
+  "error" : "Unable to find code 1162782007 in http://snomed.info/sct (version http://snomed.info/sct/731000124108/version/20210901); The code \"1162782007\" is not valid in the system http://snomed.info/sct; The code provided (http://snomed.info/sct#1162782007) is not valid (from http://tx.fhir.org/r4)"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://snomed.info/sct",
+  "code" : "1162782007"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://snomed.info/sct",
+      "concept" : [{
+        "code" : "384692006",
+        "display" : "Intracavitary brachytherapy (procedure)"
+      },
+      {
+        "code" : "113120007",
+        "display" : "Interstitial brachytherapy (procedure)"
+      }]
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "code" : "",
+  "system" : "",
+  "severity" : "error",
+  "error" : "Unable to find code 1162782007 in http://snomed.info/sct (version http://snomed.info/sct/731000124108/version/20210901); The code \"1162782007\" is not valid in the system http://snomed.info/sct; The code provided (http://snomed.info/sct#1162782007) is not valid (from http://tx.fhir.org/r4)"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://snomed.info/sct",
+  "code" : "1162782007"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://snomed.info/sct",
+      "concept" : [{
+        "code" : "384692006",
+        "display" : "Intracavitary brachytherapy (procedure)"
+      },
+      {
+        "code" : "1156382005",
+        "display" : "Intensity modulated intracavitary brachytherapy (procedure)"
+      },
+      {
+        "code" : "113120007",
+        "display" : "Interstitial brachytherapy (procedure)"
+      },
+      {
+        "code" : "1156383000",
+        "display" : "Intravascular brachytherapy (procedure)"
+      },
+      {
+        "code" : "384691004",
+        "display" : "Intraluminal brachytherapy (procedure)"
+      },
+      {
+        "code" : "168524008",
+        "display" : "Radiotherapy - intraoperative control (procedure)"
+      },
+      {
+        "code" : "14473006",
+        "display" : "Surface brachytherapy (procedure)"
+      }]
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "code" : "",
+  "system" : "",
+  "severity" : "error",
+  "error" : "Unable to find code 1162782007 in http://snomed.info/sct (version http://snomed.info/sct/731000124108/version/20210901); The code \"1162782007\" is not valid in the system http://snomed.info/sct; The code provided (http://snomed.info/sct#1162782007) is not valid (from http://tx.fhir.org/r4)"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://snomed.info/sct",
+  "code" : "1162782007"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://snomed.info/sct",
+      "concept" : [{
+        "code" : "384692006",
+        "display" : "Intracavitary brachytherapy (procedure)"
+      },
+      {
+        "code" : "1156382005",
+        "display" : "Intensity modulated intracavitary brachytherapy (procedure)"
+      },
+      {
+        "code" : "113120007",
+        "display" : "Interstitial brachytherapy (procedure)"
+      },
+      {
+        "code" : "384691004",
+        "display" : "Intraluminal brachytherapy (procedure)"
+      },
+      {
+        "code" : "168524008",
+        "display" : "Radiotherapy - intraoperative control (procedure)"
+      },
+      {
+        "code" : "14473006",
+        "display" : "Surface brachytherapy (procedure)"
+      }]
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "code" : "",
+  "system" : "",
+  "severity" : "error",
+  "error" : "Unable to find code 1162782007 in http://snomed.info/sct (version http://snomed.info/sct/731000124108/version/20210901); The code \"1162782007\" is not valid in the system http://snomed.info/sct; The code provided (http://snomed.info/sct#1162782007) is not valid (from http://tx.fhir.org/r4)"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://snomed.info/sct",
+  "code" : "1162782007"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://snomed.info/sct",
+      "concept" : [{
+        "code" : "16560241000119104",
+        "display" : "Oral radionuclide therapy (procedure)"
+      },
+      {
+        "code" : "1156383000",
+        "display" : "Intravascular brachytherapy (procedure)"
+      },
+      {
+        "code" : "384692006",
+        "display" : "Intracavitary brachytherapy (procedure)"
+      },
+      {
+        "code" : "113120007",
+        "display" : "Interstitial brachytherapy (procedure)"
+      }]
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "code" : "",
+  "system" : "",
+  "severity" : "error",
+  "error" : "Unable to find code 1162782007 in http://snomed.info/sct (version http://snomed.info/sct/731000124108/version/20210901); The code \"1162782007\" is not valid in the system http://snomed.info/sct; The code provided (http://snomed.info/sct#1162782007) is not valid (from http://tx.fhir.org/r4)"
 }
 -------------------------------------------------------------------------------------

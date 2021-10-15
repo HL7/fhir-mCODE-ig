@@ -39,22 +39,11 @@ Id: mcode-teleradiotherapy-technique-vs
 Title: "Teleradiotherapy Technique Value Set"
 Description: "Codes describing the techniques of teleradiotherapy (external beam) procedures."
 * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
-//* SCT#441799006 "Intensity modulated radiation therapy (procedure)"
-//* SCT#1156530009 "Volumetric Modulated Arc Therapy (procedure)"
-//* SCT#1162782007 "Three dimensional external beam radiation therapy (procedure)"
-//* SCT#1156526006 "Two dimensional external beam radiation therapy (procedure)"
-//* SCT#168524008 "Radiotherapy - intraoperative control (procedure)"
-//* SCT#1156529004 "External beam radiation therapy using particle passive scattering technique (procedure)"
-//* SCT#1156528007 "External beam radiation therapy using particle spot scanning technique (procedure)"
-//* SCT#1156525005 "Mixed beam external beam radiation therapy (procedure)"  -- dropped by RTTD Terminology decision 9/21
-//* SCT#169317000 "Neutron capture therapy (procedure)"
 * include codes from valueset PhotonBeamTechniquesVS
 * include codes from valueset ElectronBeamTechniquesVS
 * include codes from valueset NeutronBeamTechniquesVS
 * include codes from valueset CarbonIonBeamTechniquesVS
 * include codes from valueset ProtonBeamTechniquesVS
-
-// * SCT#1163157007 "Ultra high dose rate radiotherapy (procedure)"
 
 ValueSet: PhotonBeamTechniquesVS
 Id: mcode-photon-beam-technique-vs
@@ -576,7 +565,7 @@ Description: "Codes describing the body locations where radiotherapy treatments 
 * SCT#35378004 "Structure of hilum of spleen (body structure)" // Splenic hilum
 * SCT#21974007 "Tongue structure (body structure)" // Tongue
 * SCT#181226008 "Entire tongue (body structure)" // <none>
-* SCT#47975008 " Structure of root of tongue (body structure)" // <none>
+* SCT#47975008 "Structure of root of tongue (body structure)" // <none>
 * SCT#44567001 "Tracheal structure (body structure)" // Trachea
 * SCT#245860003 "Urinary conduit site (morphologic abnormality)" // Urinary Divergence
 * SCT#87953007 "Ureteric structure (body structure)" // Both Ureters

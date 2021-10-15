@@ -38602,3 +38602,651 @@ e: {
   "error" : ""
 }
 -------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "22637-3",
+  "display" : "Pathology report final diagnosis Narrative"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "Pathology report final diagnosis Narrative",
+  "code" : "22637-3",
+  "system" : "http://loinc.org",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "69548-6",
+  "display" : "Genetic variant assessment"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://loinc.org"
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK"}####
+v: {
+  "display" : "Genetic variant assessment",
+  "code" : "69548-6",
+  "system" : "http://loinc.org",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "69548-6",
+  "display" : "Genetic variant assessment"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "Genetic variant assessment",
+  "code" : "69548-6",
+  "system" : "http://loinc.org",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "69548-6"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://loinc.org",
+      "filter" : [{
+        "property" : "ancestor",
+        "op" : "=",
+        "value" : "LP136073-6"
+      }]
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "code" : "",
+  "system" : "",
+  "severity" : "error",
+  "error" : "The code provided (http://loinc.org#69548-6) is not valid (from http://tx.fhir.org/r4)"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "69548-6"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://loinc.org",
+      "filter" : [{
+        "property" : "ancestor",
+        "op" : "=",
+        "value" : "LP14040-7"
+      }]
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "code" : "",
+  "system" : "",
+  "severity" : "error",
+  "error" : "The code provided (http://loinc.org#69548-6) is not valid (from http://tx.fhir.org/r4)"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "coding" : [{
+    "system" : "http://loinc.org",
+    "code" : "69548-6",
+    "display" : "Genetic variant assessment"
+  }]
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/mcode-catch-code-cs",
+      "concept" : [{
+        "code" : "TMT-OTHER",
+        "display" : "Other Tumor Marker Test, Specify"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "filter" : [{
+        "property" : "ancestor",
+        "op" : "=",
+        "value" : "LP101591-8"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "filter" : [{
+        "property" : "ancestor",
+        "op" : "=",
+        "value" : "LP111251-7"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "filter" : [{
+        "property" : "ancestor",
+        "op" : "=",
+        "value" : "LP136073-6"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "filter" : [{
+        "property" : "ancestor",
+        "op" : "=",
+        "value" : "LP14040-7"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "filter" : [{
+        "property" : "ancestor",
+        "op" : "=",
+        "value" : "LP14329-4"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "filter" : [{
+        "property" : "ancestor",
+        "op" : "=",
+        "value" : "LP14543-0"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "filter" : [{
+        "property" : "ancestor",
+        "op" : "=",
+        "value" : "LP14618-0"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "filter" : [{
+        "property" : "ancestor",
+        "op" : "=",
+        "value" : "LP14649-5"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "filter" : [{
+        "property" : "ancestor",
+        "op" : "=",
+        "value" : "LP14650-3"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "filter" : [{
+        "property" : "ancestor",
+        "op" : "=",
+        "value" : "LP14652-9"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "filter" : [{
+        "property" : "ancestor",
+        "op" : "=",
+        "value" : "LP14658-6"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "filter" : [{
+        "property" : "ancestor",
+        "op" : "=",
+        "value" : "LP14665-1"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "filter" : [{
+        "property" : "ancestor",
+        "op" : "=",
+        "value" : "LP14694-1"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "filter" : [{
+        "property" : "ancestor",
+        "op" : "=",
+        "value" : "LP14697-4"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "filter" : [{
+        "property" : "ancestor",
+        "op" : "=",
+        "value" : "LP14902-8"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "filter" : [{
+        "property" : "ancestor",
+        "op" : "=",
+        "value" : "LP14907-7"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "filter" : [{
+        "property" : "ancestor",
+        "op" : "=",
+        "value" : "LP15033-1"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "filter" : [{
+        "property" : "ancestor",
+        "op" : "=",
+        "value" : "LP15090-1"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "filter" : [{
+        "property" : "ancestor",
+        "op" : "=",
+        "value" : "LP15097-6"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "filter" : [{
+        "property" : "ancestor",
+        "op" : "=",
+        "value" : "LP15097-6"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "filter" : [{
+        "property" : "ancestor",
+        "op" : "=",
+        "value" : "LP15461-4"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "filter" : [{
+        "property" : "ancestor",
+        "op" : "=",
+        "value" : "LP15463-0"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "filter" : [{
+        "property" : "ancestor",
+        "op" : "=",
+        "value" : "LP15464-8"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "filter" : [{
+        "property" : "ancestor",
+        "op" : "=",
+        "value" : "LP15465-5"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "filter" : [{
+        "property" : "ancestor",
+        "op" : "=",
+        "value" : "LP15466-3"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "filter" : [{
+        "property" : "ancestor",
+        "op" : "=",
+        "value" : "LP15467-1"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "filter" : [{
+        "property" : "ancestor",
+        "op" : "=",
+        "value" : "LP15681-7"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "filter" : [{
+        "property" : "ancestor",
+        "op" : "=",
+        "value" : "LP157499-7"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "filter" : [{
+        "property" : "ancestor",
+        "op" : "=",
+        "value" : "LP15990-2"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "filter" : [{
+        "property" : "ancestor",
+        "op" : "=",
+        "value" : "LP16890-3"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "filter" : [{
+        "property" : "ancestor",
+        "op" : "=",
+        "value" : "LP17730-0"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "filter" : [{
+        "property" : "ancestor",
+        "op" : "=",
+        "value" : "LP17751-6"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "filter" : [{
+        "property" : "ancestor",
+        "op" : "=",
+        "value" : "LP18193-0"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "filter" : [{
+        "property" : "ancestor",
+        "op" : "=",
+        "value" : "LP18274-8"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "filter" : [{
+        "property" : "ancestor",
+        "op" : "=",
+        "value" : "LP18343-1"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "filter" : [{
+        "property" : "ancestor",
+        "op" : "=",
+        "value" : "LP18396-9"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "filter" : [{
+        "property" : "ancestor",
+        "op" : "=",
+        "value" : "LP18515-4"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "filter" : [{
+        "property" : "ancestor",
+        "op" : "=",
+        "value" : "LP18567-5"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "filter" : [{
+        "property" : "ancestor",
+        "op" : "=",
+        "value" : "LP189759-6"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "filter" : [{
+        "property" : "ancestor",
+        "op" : "=",
+        "value" : "LP19423-0"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "filter" : [{
+        "property" : "ancestor",
+        "op" : "=",
+        "value" : "LP19492-5"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "filter" : [{
+        "property" : "ancestor",
+        "op" : "=",
+        "value" : "LP19666-4"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "filter" : [{
+        "property" : "ancestor",
+        "op" : "=",
+        "value" : "LP19732-4"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "filter" : [{
+        "property" : "ancestor",
+        "op" : "=",
+        "value" : "LP20052-4"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "filter" : [{
+        "property" : "ancestor",
+        "op" : "=",
+        "value" : "LP200639-5"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "filter" : [{
+        "property" : "ancestor",
+        "op" : "=",
+        "value" : "LP207485-6"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "filter" : [{
+        "property" : "ancestor",
+        "op" : "=",
+        "value" : "LP220351-3"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "filter" : [{
+        "property" : "ancestor",
+        "op" : "=",
+        "value" : "LP248009-5"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "filter" : [{
+        "property" : "ancestor",
+        "op" : "=",
+        "value" : "LP28442-9"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "filter" : [{
+        "property" : "ancestor",
+        "op" : "=",
+        "value" : "LP28518-6"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "filter" : [{
+        "property" : "ancestor",
+        "op" : "=",
+        "value" : "LP28728-1"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "filter" : [{
+        "property" : "ancestor",
+        "op" : "=",
+        "value" : "LP28852-9"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "filter" : [{
+        "property" : "ancestor",
+        "op" : "=",
+        "value" : "LP31830-0"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "filter" : [{
+        "property" : "ancestor",
+        "op" : "=",
+        "value" : "LP31855-7"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "filter" : [{
+        "property" : "ancestor",
+        "op" : "=",
+        "value" : "LP35767-0"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "filter" : [{
+        "property" : "ancestor",
+        "op" : "=",
+        "value" : "LP36040-1"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "filter" : [{
+        "property" : "ancestor",
+        "op" : "=",
+        "value" : "LP36464-3"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "filter" : [{
+        "property" : "ancestor",
+        "op" : "=",
+        "value" : "LP36477-5"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "filter" : [{
+        "property" : "ancestor",
+        "op" : "=",
+        "value" : "LP36861-0"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "filter" : [{
+        "property" : "ancestor",
+        "op" : "=",
+        "value" : "LP36885-9"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "filter" : [{
+        "property" : "ancestor",
+        "op" : "=",
+        "value" : "LP61778-4"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "filter" : [{
+        "property" : "ancestor",
+        "op" : "=",
+        "value" : "LP62864-1"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "filter" : [{
+        "property" : "ancestor",
+        "op" : "=",
+        "value" : "LP62864-1"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "filter" : [{
+        "property" : "ancestor",
+        "op" : "=",
+        "value" : "LP63490-4"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "filter" : [{
+        "property" : "ancestor",
+        "op" : "=",
+        "value" : "LP64447-3"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "filter" : [{
+        "property" : "ancestor",
+        "op" : "=",
+        "value" : "LP93517-8"
+      }]
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"CHECK_MEMERSHIP_ONLY"}####
+v: {
+  "display" : "",
+  "code" : "",
+  "system" : "",
+  "severity" : "error",
+  "error" : "The code provided (http://loinc.org#69548-6) is not valid in the value set 'TumorMarkerTestVS' (from http://tx.fhir.org/r4)"
+}
+-------------------------------------------------------------------------------------

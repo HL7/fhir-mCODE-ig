@@ -66,7 +66,7 @@ Description: "Qualifier to specify laterality laterality."
 Extension: TreatmentTerminationReason
 Id: mcode-treatment-termination-reason
 Title: "Termination Reason"
-Description: "A code explaining the unplanned or premature termination, or normal completion, of a plan of treatment, course of medication, or research study. "
+Description: "A code explaining the unplanned or premature termination, or normal completion, of a plan of treatment, course of medication, or research study."
 //* insert ExtensionContext(MedicationRequest) - removed as per FHIR-32243
 //* insert ExtensionContext(Procedure)         - removed as per FHIR-32243
 * value[x] only CodeableConcept

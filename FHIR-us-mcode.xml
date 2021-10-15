@@ -9,6 +9,7 @@
 <artifactPageExtension value="-definitions"/>
 <artifactPageExtension value="-examples"/>
 <artifactPageExtension value="-mappings"/>
+<artifact id="ValueSet/mcode-benign-uncertain-neoplasm-brain-cns-disorder-vs" key="ValueSet-mcode-benign-uncertain-neoplasm-brain-cns-disorder-vs" name="Benign Neoplasm"/>
 <artifact id="StructureDefinition/mcode-body-location-qualifier" key="StructureDefinition-mcode-body-location-qualifier" name="Body Location Qualifier"/>
 <artifact id="ValueSet/mcode-body-location-qualifier-vs" key="ValueSet-mcode-body-location-qualifier-vs" name="Body Location Qualifier Value Set"/>
 <artifact id="StructureDefinition/mcode-body-structure-identifier" key="StructureDefinition-mcode-body-structure-identifier" name="Body Structure Identifier"/>
@@ -34,6 +35,7 @@
 <artifact id="StructureDefinition/mcode-cancer-related-medication-request" key="StructureDefinition-mcode-cancer-related-medication-request" name="Cancer-Related Medication Request"/>
 <artifact id="StructureDefinition/mcode-cancer-related-surgical-procedure" key="StructureDefinition-mcode-cancer-related-surgical-procedure" name="Cancer-Related Surgical Procedure"/>
 <artifact id="ValueSet/mcode-cancer-related-surgical-procedure-vs" key="ValueSet-mcode-cancer-related-surgical-procedure-vs" name="Cancer-Related Surgical Procedure Value Set"/>
+<artifact id="ValueSet/mcode-carcinoma-in-situ-disorder-vs" key="ValueSet-mcode-carcinoma-in-situ-disorder-vs" name="Carcinoma In-Situ"/>
 <artifact id="ValueSet/mcode-clinvar-vs" key="clinvar-value-set" name="ClinVar Value Set"/>
 <artifact deprecated="true" id="Profile/mcode-comorbid-condition" key="comorbid-condition" name="Comorbid Condition"/>
 <artifact deprecated="true" id="ValueSet/mcode-comorbid-condition-value-set" key="comorbid-condition-value-set" name="Comorbid Condition Value Set"/>
@@ -41,6 +43,7 @@
 <artifact id="StructureDefinition/mcode-comorbidities-parent" key="StructureDefinition-mcode-comorbidities-parent" name="Comorbidities Parent"/>
 <artifact id="ValueSet/mcode-condition-status-trend-vs" key="condition-status-trend-value-set" name="Condition Status Trend Value Set"/>
 <artifact id="StructureDefinition/mcode-condition-related" key="StructureDefinition-mcode-condition-related" name="Condition related to resource"/>
+<artifact id="ValueSet/mcode-cytologic-evidence-malignancy-vs" key="ValueSet-mcode-cytologic-evidence-malignancy-vs" name="Cytologic Evidence of Malignancy"/>
 <artifact id="ValueSet/mcode-dna-change-type-vs" key="ValueSet-mcode-dna-change-type-vs" name="DNA Change Type Value Set"/>
 <artifact id="StructureDefinition/mcode-ecog-performance-status" key="ecog-performance-status" name="ECOG Performance Status"/>
 <artifact id="ValueSet/elixhauser-alcohol-abuse-vs" key="ValueSet-elixhauser-alcohol-abuse-vs" name="Elixhauser Comorbid Condition Value Set for Alcohol Abuse"/>
@@ -100,6 +103,7 @@
 <artifact deprecated="true" id="ValueSet/mcode-laterality-value-set" key="laterality-value-set" name="Laterality Value Set"/>
 <artifact deprecated="true" id="StructureDefinition/mcode-location-qualifier" key="StructureDefinition-mcode-location-qualifier" name="Location Qualifier"/>
 <artifact deprecated="true" id="ValueSet/mcode-location-qualifier-vs" key="ValueSet-mcode-location-qualifier-vs" name="Location Qualifier Value Set"/>
+<artifact id="ValueSet/mcode-melanoma-in-situ-disorder-vs" key="ValueSet-mcode-melanoma-in-situ-disorder-vs" name="Melanoma In-Situ"/>
 <artifact id="ValueSet/mcode-tumor-size-method-vs" key="ValueSet-mcode-tumor-size-method-vs" name="Methods for measuring tumor size"/>
 <artifact id="ValueSet/molecular-consequence-vs" key="ValueSet-molecular-consequence-vs" name="Molecular Consequence Value Set"/>
 <artifact deprecated="true" key="Observation" name="Observation"/>
@@ -110,7 +114,9 @@
 <artifact id="ValueSet/mcode-present-absent" key="ValueSet-mcode-present-absent" name="Present-Absent"/>
 <artifact deprecated="true" id="ValueSet/mcode-present-absent-unknown" key="ValueSet-mcode-present-absent-unknown" name="Present-Absent-Unknown"/>
 <artifact id="StructureDefinition/mcode-primary-cancer-condition" key="primary-cancer-condition" name="Primary Cancer Condition"/>
-<artifact id="ValueSet/mcode-primary-or-uncertain-behavior-cancer-disorder-vs" key="primary-or-uncertain-behavior-cancer-disorder-value-set" name="Primary or Uncertain Behavior Cancer Disorder Value Set"/>
+<artifact id="ValueSet/mcode-primary-cancer-disorder-vs" key="ValueSet-mcode-primary-cancer-disorder-vs" name="Primary Cancer Disorder Value Set"/>
+<artifact id="ValueSet/mcode-primary-malignant-neoplasm-disorder-vs" key="ValueSet-mcode-primary-malignant-neoplasm-disorder-vs" name="Primary Malignant Neoplasm Disorder Value Set"/>
+<artifact deprecated="true" id="ValueSet/mcode-primary-or-uncertain-behavior-cancer-disorder-vs" key="primary-or-uncertain-behavior-cancer-disorder-value-set" name="Primary or Uncertain Behavior Cancer Disorder Value Set"/>
 <artifact deprecated="true" key="Procedure" name="Procedure"/>
 <artifact id="StructureDefinition/mcode-procedure-intent" key="StructureDefinition-mcode-procedure-intent" name="Procedure Intent"/>
 <artifact id="ValueSet/mcode-procedure-intent-vs" key="ValueSet-mcode-procedure-intent-vs" name="Procedure Intent Value Set"/>
@@ -139,6 +145,7 @@
 <artifact id="ValueSet/mcode-secondary-cancer-disorder-vs" key="secondary-cancer-disorder-value-set" name="Secondary Cancer Disorder Value Set"/>
 <artifact id="StructureDefinition/mcode-comorbid-condition-code" key="StructureDefinition-mcode-comorbid-condition-code" name="Specific Condition Code for Comorbidity"/>
 <artifact id="StructureDefinition/mcode-comorbid-condition-reference" key="StructureDefinition-mcode-comorbid-condition-reference" name="Specific Condition Reference for Comorbidity"/>
+<artifact id="ValueSet/mcode-specific-diagnosis-cancer-disorder-vs" key="ValueSet-mcode-specific-diagnosis-cancer-disorder-vs" name="Specific Diagnosis of Cancer"/>
 <artifact id="ValueSet/mcode-cancer-stage-group-vs" key="ValueSet-mcode-cancer-stage-group-vs" name="Stage Group Value Set"/>
 <artifact id="CodeSystem/TG263" key="CodeSystem-TG263" name="TG263 Codes"/>
 <artifact id="CodeSystem/TG263Qualifier" key="CodeSystem-TG263Qualifier" name="TG263 Qualifier Codes"/>

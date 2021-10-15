@@ -161,7 +161,6 @@ Description: "mCODE Example for Cancer-Related Comorbidities"
 * component[peripheralVascularDisease].valueCodeableConcept = SCT#2667000 "Absent (qualifier value)"
 * component[pulmonaryCirculationDisorder].valueCodeableConcept = SCT#2667000 "Absent (qualifier value)"
 * component[renalFailureModerate].valueCodeableConcept = SCT#2667000 "Absent (qualifier value)"
-* component[drugAbuse].valueCodeableConcept = SCT#261665006 "Unknown (qualifier value)"
 
 
 Instance: ecog-performance-status-jenny-m
@@ -631,7 +630,7 @@ Description: "Anatomic volume 2 for Jenny M's teleradiotherapy."
 * patient = Reference(cancer-patient-jenny-m)
 * description = "Chest Wall Lymph Nodes"
 * identifier.value = "1.2.246.352…2"
-* location = SCT#245276004 "Mediastinal lymph node group (body structure)"
+* location = SCT#62683002 "Mediastinal lymph node structure (body structure)"
 * extension[lateralityQualifier].valueCodeableConcept = SCT#51440002  "Right and left (qualifier value)"
 
 Instance: cancer-related-medication-request-anastrozole-jenny-m

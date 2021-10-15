@@ -81,7 +81,7 @@ Description:  "Types of secondary malignant neoplastic disease, coded in SNOMED 
 ValueSet:  MelanomaInSituDisorderVS
 Id: mcode-melanoma-in-situ-disorder-vs
 Title: "Melanoma In-Situ"
-Description:    "Types of melanoma in-situ, coded in SNOMED CT or ICD-10-CM. "
+Description:    "Types of melanoma in-situ, coded in SNOMED CT or ICD-10-CM."
 * insert SNOMEDCTCopyrightForVS
 * include codes from system SCT where concept is-a #189758001 "Melanoma in situ (disorder)"
 * ICD10CM#D03 "MELANOMA IN SITU OF SKIN"
@@ -118,9 +118,9 @@ Description:    "Types of melanoma in-situ, coded in SNOMED CT or ICD-10-CM. "
 * ICD10CM#D03.9 "Melanoma in situ, unspecified"
 
 ValueSet:  CytologicEvidenceOfMalignancyVS
-Id: mcode-cytologic-evidence-maligancy-vs
+Id: mcode-cytologic-evidence-malignancy-vs
 Title: "Cytologic Evidence of Malignancy"
-Description:    "Types of cytological evience of malignancy, coded in SNOMED CT or ICD-10-CM. "
+Description:    "Types of cytological evience of malignancy, coded in SNOMED CT or ICD-10-CM."
 * insert SNOMEDCTCopyrightForVS
 * SCT#126361000119107 "Cytological evidence of malignancy on anal Papanicolaou smear (finding)"
 * SCT#126371000119101 "Cytological evidence of malignancy on vaginal Papanicolaou smear (finding)"
@@ -128,9 +128,9 @@ Description:    "Types of cytological evience of malignancy, coded in SNOMED CT 
 * ICD10CM#R87.624 "Cytologic evidence of malignancy on smear of vagina"
 
 ValueSet:  SpecificDiagnosisCancerDisorderVS
-Id: mcode-specific-diagnosis-cancer-disordervs
+Id: mcode-specific-diagnosis-cancer-disorder-vs
 Title: "Specific Diagnosis of Cancer"
-Description:    "Types of hypereosinophilic syndrome, coded in SNOMED CT or ICD-10-CM. "
+Description:    "Types of hypereosinophilic syndrome, coded in SNOMED CT or ICD-10-CM."
 * insert SNOMEDCTCopyrightForVS
 * include codes from system SCT where concept is-a #393573009 "Hypereosinophilic syndrome (disorder)"
 * ICD10CM#D72.110	"Idiopathic hypereosinophilic syndrome [HES]"
@@ -139,9 +139,9 @@ Description:    "Types of hypereosinophilic syndrome, coded in SNOMED CT or ICD-
 * ICD10CM#D72.119	"Hypereosinophilic syndrome [HES], unspecified"
 
 ValueSet:  CarcinomaInSituDisorderVS
-Id: mcode-carcinoma-insitu-disorder-vs
+Id: mcode-carcinoma-in-situ-disorder-vs
 Title: "Carcinoma In-Situ"
-Description:    "Types of carcinoma in-situ, coded in SNOMED CT or ICD-10-CM. "
+Description:    "Types of carcinoma in-situ, coded in SNOMED CT or ICD-10-CM."
 * insert SNOMEDCTCopyrightForVS
 * include codes from system SCT where concept is-a #109355002 "Carcinoma in situ (disorder)"
 * ICD10CM#D00 "CARCINOMA IN SITU OF ORAL CAVITY, ESOPHAGUS AND STOMACH"
@@ -223,7 +223,7 @@ Description:    "Types of carcinoma in-situ, coded in SNOMED CT or ICD-10-CM. "
 ValueSet:  BenignUncertainNeoplasmBrainCNSDisorderVS
 Id: mcode-benign-uncertain-neoplasm-brain-cns-disorder-vs
 Title: "Benign Neoplasm"
-Description:    "Types of benign neoplasms of the brain and central nervous system, coded in SNOMED CT or ICD-10-CM. "
+Description:    "Types of benign neoplasms of the brain and central nervous system, coded in SNOMED CT or ICD-10-CM."
 * insert SNOMEDCTCopyrightForVS
 * include codes from system SCT where concept is-a #93468003 "Hemangioma of intracranial structure (disorder)"
 * include codes from system SCT where concept is-a #109913001 "Benign neoplasm of meninges (disorder)"
@@ -417,7 +417,7 @@ Description:    "Types of primary malignant neoplasms, coded in SNOMED CT or ICD
 * ICD10CM#C21.1 "Malignant neoplasm of anal canal"
 * ICD10CM#C21.2 "Malignant neoplasm of cloacogenic zone"
 * ICD10CM#C21.8 "Malignant neoplasm of overlapping sites of rectum, anus and anal canal"
-* ICD10CM#C22.0 "Liver cell carcinoma "
+* ICD10CM#C22.0 "Liver cell carcinoma"
 * ICD10CM#C22.1 "Intrahepatic bile duct carcinoma"
 * ICD10CM#C22.2 "Hepatoblastoma"
 * ICD10CM#C22.3 "Angiosarcoma of liver"
@@ -568,7 +568,7 @@ Description:    "Types of primary malignant neoplasms, coded in SNOMED CT or ICD
 * ICD10CM#C48.0 "Malignant neoplasm of retroperitoneum"
 * ICD10CM#C48.1 "Malignant neoplasm of specified parts of peritoneum"
 * ICD10CM#C48.2 "Malignant neoplasm of peritoneum, unspecified"
-* ICD10CM#C48.8 "Malignant neoplasm of overlapping sites of retroperitoneum and peritoneum "
+* ICD10CM#C48.8 "Malignant neoplasm of overlapping sites of retroperitoneum and peritoneum"
 * ICD10CM#C49.0 "Malignant neoplasm of connective and soft tissue of head, face and neck"
 * ICD10CM#C49.10 "Malignant neoplasm of connective and soft tissue of unspecified upper limb, including shoulder"
 * ICD10CM#C49.11 "Malignant neoplasm of connective and soft tissue of right upper limb, including shoulder"
@@ -1318,7 +1318,7 @@ Description:    "Types of primary malignant neoplasms, coded in SNOMED CT or ICD
 * ICD10CM#C94.40 "Acute panmyelosis with myelofibrosis not having achieved remission"
 * ICD10CM#C94.41 "Acute panmyelosis with myelofibrosis, in remission"
 * ICD10CM#C94.42 "Acute panmyelosis with myelofibrosis, in relapse"
-* ICD10CM#C94.6 " Myelodysplastic disease, not classified"
+* ICD10CM#C94.6  "Myelodysplastic disease, not classified"
 * ICD10CM#C94.80 "Other specified leukemias not having achieved remission"
 * ICD10CM#C94.81 "Other specified leukemias, in remission"
 * ICD10CM#C94.82 "Other specified leukemias, in relapse"
@@ -1333,9 +1333,9 @@ Description:    "Types of primary malignant neoplasms, coded in SNOMED CT or ICD
 * ICD10CM#C95.92 "Leukemia, unspecified, in relapse"
 * ICD10CM#C96.0 "Multifocal and multisystemic (disseminated)  Langerhans-cell histiocytosis"
 * ICD10CM#C96.20 "Malignant mast cell neoplasm, unspecified"
-* ICD10CM#C96.21 "Aggressive systemic mastocytosis "
+* ICD10CM#C96.21 "Aggressive systemic mastocytosis"
 * ICD10CM#C96.22 "Mast cell sarcoma"
-* ICD10CM#C96.29 "Other malignant cell neoplasm "
+* ICD10CM#C96.29 "Other malignant cell neoplasm"
 * ICD10CM#C96.4 "Sarcoma of dendritic cells (accessory cells) Malignant neoplasm of lymphoid, hematopoietic and related tissue, unspecified"
 * ICD10CM#C96.5 "Multifocal and unisystemic Langerhans-cell histiocytosis"
 * ICD10CM#C96.6 "Unifocal Langerhans-cell histiocytosis"
@@ -1353,7 +1353,7 @@ Description:    "Types of primary malignant neoplasms, coded in SNOMED CT or ICD
 * ICD10CM#D46.B "Refractory cytopenia with multilineage dysplasia and ring sideroblasts"
 * ICD10CM#D46.C "Myelodysplastic syndrome with isolated del (5q) chromosomal abnormality"
 * ICD10CM#D46.Z "Other myelodysplastic syndromes"
-* ICD10CM#D47.02 " Systemic mastocytosis "
+* ICD10CM#D47.02 "Systemic mastocytosis"
 * ICD10CM#D47.1 "Chronic myeloproliferative disease"
 * ICD10CM#D47.3 "Essential (hemorrhagic) thrombocythemia"
 * ICD10CM#D47.4 "Osteomyelofibrosis"
@@ -1615,5 +1615,5 @@ Description:    "Types of primary malignant neoplasms, coded in SNOMED CT or ICD
 // * ICD10CM#D43 "NEOPLASM OF UNCERTAIN BEHAVIOR OF BRAIN AND CENTRAL NERVOUS SYSTEM"
 // * ICD10CM#D46 "MYELODYSPLASTIC SYNDROMES"
 // * ICD10CM#D46.2 "Refractory anemia with excess blasts"
-// * ICD10CM#D46.A  "Refractory cytopenia with multilineage dysplasia "
+// * ICD10CM#D46.A  "Refractory cytopenia with multilineage dysplasia"
 // * ICD10CM#D47.Z "Other specified neoplasm of uncertain behavior of lymphoid, hematopoietic and related tissue"

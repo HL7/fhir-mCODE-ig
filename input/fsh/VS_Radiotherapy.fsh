@@ -188,13 +188,13 @@ Description: "Codes describing the body locations where radiotherapy treatments 
 * SCT#7657000 "Structure of femoral artery (body structure)" // Femoral Artery Left
 * SCT#244314003 "Circumflex humeral artery (body structure)" // Circumflex Humeral Artery Left
 * SCT#74200005 "Structure of inferior hypophyseal artery (body structure)" // Hypophyseal Artery Inferior
-* SCT#55601007 "Structure of superior hypophyseal artery (body structure) |" // Hypophyseal Artery Superior
+* SCT#55601007 "Structure of superior hypophyseal artery (body structure)" // Hypophyseal Artery Superior
 * SCT#244327004 "Circumflex iliac artery (body structure)" // Circumflex Left Iliac Artery
 * SCT#113269004 "Structure of external iliac artery (body structure)" // External iliac artery Left
 * SCT#90024005 "Structure of internal iliac artery (body structure)" // Internal iliac artery Left
 * SCT#73634005 "Common iliac artery structure (body structure)" // Common iliac artery Left
 * SCT#33795007 "Structure of anterior descending branch of left coronary artery (body structure)" // Anterior interventricular branch of LCA (left anterior descending artery)
-* SCT#42258001 "Superior mesenteric artery structure (body structure) " // Superior mesenteric artery
+* SCT#42258001 "Superior mesenteric artery structure (body structure)" // Superior mesenteric artery
 * SCT#81040000 "Pulmonary artery structure (body structure)" // Pulmonary Artery
 * SCT#36765005 "Structure of subclavian artery (body structure)" // Subclavian Artery
 * SCT#85234005 "Structure of vertebral artery (body structure)" // Vertebral arteries
@@ -304,14 +304,14 @@ Description: "Codes describing the body locations where radiotherapy treatments 
 * SCT#85537004 "Glenohumeral joint structure (body structure)" // Glenohumeral Joint
 * SCT#711190000 "Structure of epiphyseal plate (body structure)" // <none>
 * SCT#228791009 "Gross tumor volume (observable entity)" // Gross Tumor Volume
-* SCT#39352004 "Joint structure (body structure) " // <none>
+* SCT#39352004 "Joint structure (body structure)" // <none>
 * SCT#53620006 "Temporomandibular joint structure (body structure)" // Temperomandibular Joint
 * SCT#50403003 "Structure of cortex of kidney (body structure)" // Renal cortex for both Kidneys
 * SCT#74033008 "Structure of hilum of kidney (body structure)" // Renal Hilum for both Kidneys
 * SCT#85050009 "Bone structure of humerus (body structure)" // Humerus Left
 * SCT#64033007 "Kidney structure (body structure)" // Both Kidneys
 * SCT#72696002 "Knee region structure (body structure)" // Knee
-* SCT#54066008 "Pharyngeal structure (body structure) " // Laryngeal pharynx
+* SCT#54066008 "Pharyngeal structure (body structure)" // Laryngeal pharynx
 * SCT#4596009 "Laryngeal structure (body structure)" // Larynx
 * SCT#86483002 "Structure of supraglottic space (body structure)" // Supraglottic Larynx
 * SCT#78076003 "Structure of lens of eye (body structure)" // Eye Lens
@@ -346,7 +346,7 @@ Description: "Codes describing the body locations where radiotherapy treatments 
 * SCT#245282001 "Internal mammary lymph node group (body structure)" // <none>
 * SCT#279763008 "Inguinofemoral lymph node group (body structure)" // Lymph nodes of pelvis - inguinofemoral
 * SCT#64038003 "Intercostal lymph node (body structure)" // Lymph nodes of thorax - Intercostal
-* SCT#127938006 "Lymph node of aortopulmonary window (body structure) " // Lymph nodes of thorax - Ligamentum arteriosum
+* SCT#127938006 "Lymph node of aortopulmonary window (body structure)" // Lymph nodes of thorax - Ligamentum arteriosum
 * SCT#62683002 "Mediastinal lymph node structure (body structure)" // Lymph nodes of thorax - Mediastinal
 * SCT#81105003 "Cervical lymph node structure (body structure)" // Neck Lymph Node
 * SCT#36086000 "Structure of obturator lymph node (body structure)" // Lymph nodes of pelvis - obturator Left

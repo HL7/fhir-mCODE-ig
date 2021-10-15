@@ -81,7 +81,7 @@ Description:    "Records an alteration in the most common DNA nucleotide sequenc
 * component[copyNumber].code = LNC#82155-3
 * component[copyNumber].value[x] only Quantity
 * component[copyNumber] ^short = "Genomic structural variant copy number"
-* component[copyNumber] ^definition = "Tthe Genomic trait involving the number of copies of a particular gene present in the genome of an individual. (source: NCI)"
+* component[copyNumber] ^definition = "The genomic trait involving the number of copies of a particular gene present in the genome of an individual. (source: NCI)"
 
 * component[sampleAllelicFrequency].code = LNC#81258-6
 * component[sampleAllelicFrequency].value[x] only Quantity

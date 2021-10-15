@@ -56,7 +56,8 @@ Description: "Qualifiers to refine a body structure or location including qualif
 * include codes from system SCT where concept is-a #106233006 "Topographic Modifier (qualifer)"
 * include codes from system SCT where concept is-a #272424004 "Relative Sites (qualifier)"
 * SCT#255503000 "Entire (qualifier value)"
-* exclude codes from valueset LateralityQualifierVS
+//* exclude codes from valueset LateralityQualifierVS
+* include codes from valueset LateralityQualifierVS
 
 ValueSet: LateralityQualifierVS
 Id: mcode-laterality-qualifier-vs

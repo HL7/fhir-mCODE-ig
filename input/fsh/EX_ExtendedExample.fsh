@@ -161,7 +161,6 @@ Description: "mCODE Example for Cancer-Related Comorbidities"
 * component[peripheralVascularDisease].valueCodeableConcept = SCT#2667000 "Absent (qualifier value)"
 * component[pulmonaryCirculationDisorder].valueCodeableConcept = SCT#2667000 "Absent (qualifier value)"
 * component[renalFailureModerate].valueCodeableConcept = SCT#2667000 "Absent (qualifier value)"
-* component[drugAbuse].valueCodeableConcept = SCT#261665006 "Unknown (qualifier value)"
 
 
 Instance: ecog-performance-status-jenny-m
@@ -322,7 +321,7 @@ Instance: cancer-genomic-variant-jenny-m
 InstanceOf: CancerGenomicVariant
 Description: "Extended example: example showing genomic variant found by breast cancer genomics panel"
 * status = #final "final"
-* code = LNC#69548-6 "Genomic variant assessment"
+* code = LNC#69548-6 "Genetic variant assessment"  // not Genomic!
 * subject = Reference(cancer-patient-jenny-m)
 * effectiveDateTime = "2018-03-15"
 * valueCodeableConcept = LNC#LA9633-4 "Present"
@@ -386,7 +385,7 @@ Instance: us-core-observation-lab-tumor-invasion-jenny-m
 InstanceOf: USCoreObservationLab
 Description: "Extended example: example showing negative invasion for the removed tumor"
 * status = #final "final"
-* code = SCT#370052007 "Status of invasion by tumor (observable entity)" // No LOINC for invasion status
+* code = SCT#370052007 "Status of invasion by tumor" // No LOINC for invasion status
 * subject = Reference(cancer-patient-jenny-m)
 * effectiveDateTime = "2018-04-01T00:00:00Z"
 * valueCodeableConcept = SCT#260385009 "Negative (qualifier value)"
@@ -605,8 +604,8 @@ Description: "Example of radiotherapy treatment summary involving external beam 
 // modified example to demonstrate new RadiotherapyModalityAndTechnique structure in Course Summary
 * extension[modalityAndTechnique][0].extension[modality][0].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
 * extension[modalityAndTechnique][0].extension[technique][0].valueCodeableConcept = SCT#1156530009 "Volumetric Modulated Arc Therapy (procedure)"
-* extension[modalityAndTechnique][1].extension[modality][0].valueCodeableConcept = SCT#45643008  "Teleradiotherapy using electrons (procedure)"
-* extension[modalityAndTechnique][1].extension[technique][0].valueCodeableConcept = SCT#118641002 "Three dimensional treatment planning for teletherapy (procedure)"
+* extension[modalityAndTechnique][1].extension[modality][0].valueCodeableConcept = SCT#45643008  "Teleradiotherapy using electrons"
+* extension[modalityAndTechnique][1].extension[technique][0].valueCodeableConcept = SCT#1162782007 "Three dimensional external beam radiation therapy (procedure)"
 * extension[doseDeliveredToVolume][0].extension[volume].valueReference = Reference(jenny-m-chest-wall-treatment-volume)
 * extension[doseDeliveredToVolume][0].extension[totalDoseDelivered].valueQuantity = 6000 'cGy'
 * extension[doseDeliveredToVolume][0].extension[fractionsDelivered].valueUnsignedInt = 30
@@ -615,63 +614,6 @@ Description: "Example of radiotherapy treatment summary involving external beam 
 * extension[doseDeliveredToVolume][1].extension[fractionsDelivered].valueUnsignedInt = 25
 * subject = Reference(cancer-patient-jenny-m)
 * asserter = Reference(us-core-practitioner-kyle-anydoc)
-
-// // Modified to use neutron modality and NCT technique...should be shifted back to original values
-// Instance: teleradiotherapy-treatment-phase-chest-wall-jenny-m-invalid
-// InstanceOf: TeleradiotherapyTreatmentPhase
-// Description: "Example of teleradiotherapy treatment phase involving external beam radiation to chest wall and regional node radiation"
-// * status = #completed "completed"
-// * code = RID#mcode-teleradiotherapy-treatment-phase
-// * category = SCT#108290001 "Radiation oncology AND/OR radiotherapy (procedure)"
-// * partOf = Reference(radiotherapy-treatment-summary-chest-wall-jenny-m)
-// * performedPeriod.start = "2018-05-01"
-// * performedPeriod.end = "2018-06-29"
-// * extension[modalityAndTechnique].extension[modality].valueCodeableConcept = SCT#80347004	"External beam radiation therapy using neutrons (procedure)"
-// * extension[modalityAndTechnique].extension[technique].valueCodeableConcept = SCT#168524008 "Radiotherapy - intraoperative control (procedure)" // invalid technique
-// * extension[fractionsDelivered].valueUnsignedInt = 25
-// * extension[doseDeliveredToVolume][0].extension[volume].valueReference = Reference(jenny-m-chest-wall-treatment-volume)
-// * extension[doseDeliveredToVolume][0].extension[totalDoseDelivered].valueQuantity = 5000 'cGy'
-// * extension[doseDeliveredToVolume][1].extension[volume].valueReference = Reference(jenny-m-chest-wall-lymph-nodes-treatment-volume)
-// * extension[doseDeliveredToVolume][1].extension[totalDoseDelivered].valueQuantity = 5000 'cGy'
-// * subject = Reference(cancer-patient-jenny-m)
-// * asserter = Reference(us-core-practitioner-kyle-anydoc)
-
-// // Modified to use neutron modality and NCT technique...should be shifted back to original values
-// Instance: teleradiotherapy-treatment-phase-chest-wall-jenny-m-valid
-// InstanceOf: TeleradiotherapyTreatmentPhase
-// Description: "Example of teleradiotherapy treatment phase involving external beam radiation to chest wall and regional node radiation"
-// * status = #completed "completed"
-// * code = RID#mcode-teleradiotherapy-treatment-phase
-// * category = SCT#108290001 "Radiation oncology AND/OR radiotherapy (procedure)"
-// * partOf = Reference(radiotherapy-treatment-summary-chest-wall-jenny-m)
-// * performedPeriod.start = "2018-05-01"
-// * performedPeriod.end = "2018-06-29"
-// * extension[modalityAndTechnique].extension[modality].valueCodeableConcept = SCT#80347004	"External beam radiation therapy using neutrons (procedure)"
-// * extension[modalityAndTechnique].extension[technique].valueCodeableConcept = SCT#169317000 "Neutron Capture Therapy (procedure)"
-// * extension[fractionsDelivered].valueUnsignedInt = 25
-// * extension[doseDeliveredToVolume][0].extension[volume].valueReference = Reference(jenny-m-chest-wall-treatment-volume)
-// * extension[doseDeliveredToVolume][0].extension[totalDoseDelivered].valueQuantity = 5000 'cGy'
-// * extension[doseDeliveredToVolume][1].extension[volume].valueReference = Reference(jenny-m-chest-wall-lymph-nodes-treatment-volume)
-// * extension[doseDeliveredToVolume][1].extension[totalDoseDelivered].valueQuantity = 5000 'cGy'
-// * subject = Reference(cancer-patient-jenny-m)
-// * asserter = Reference(us-core-practitioner-kyle-anydoc)
-
-// Instance: teleradiotherapy-treatment-phase-boost-jenny-m
-// InstanceOf: TeleradiotherapyTreatmentPhase
-// Description: "Example of teleradiotherapy treatment boost phase"
-// * status = #completed "completed"
-// * code = RID#mcode-teleradiotherapy-treatment-phase
-// * category = SCT#108290001 "Radiation oncology AND/OR radiotherapy (procedure)"
-// * partOf = Reference(radiotherapy-treatment-summary-chest-wall-jenny-m)
-// * performedPeriod.start = "2018-08-01"
-// * performedPeriod.end = "2018-09-30"
-// * extension[modalityAndTechnique].extension[modality].valueCodeableConcept = SCT#45643008  "Teleradiotherapy using electrons (procedure)"
-// * extension[modalityAndTechnique].extension[technique].valueCodeableConcept = SCT#118641002 "Three dimensional treatment planning for teleradiotherapy (procedure)"
-// * extension[fractionsDelivered].valueUnsignedInt = 5
-// * extension[doseDeliveredToVolume].extension[volume].valueReference = Reference(jenny-m-chest-wall-treatment-volume)
-// * extension[doseDeliveredToVolume].extension[totalDoseDelivered].valueQuantity = 1000 'cGy'
-// * subject = Reference(cancer-patient-jenny-m)
-// * asserter = Reference(us-core-practitioner-kyle-anydoc)
 
 Instance: jenny-m-chest-wall-treatment-volume
 InstanceOf: RadiotherapyVolume
@@ -688,7 +630,7 @@ Description: "Anatomic volume 2 for Jenny M's teleradiotherapy."
 * patient = Reference(cancer-patient-jenny-m)
 * description = "Chest Wall Lymph Nodes"
 * identifier.value = "1.2.246.352…2"
-* location = SCT#245276004 "Mediastinal lymph node group (body structure)"
+* location = SCT#62683002 "Mediastinal lymph node structure (body structure)"
 * extension[lateralityQualifier].valueCodeableConcept = SCT#51440002  "Right and left (qualifier value)"
 
 Instance: cancer-related-medication-request-anastrozole-jenny-m

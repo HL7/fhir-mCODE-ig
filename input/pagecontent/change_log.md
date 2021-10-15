@@ -80,7 +80,7 @@ A comprehensive listing of differences in FHIR artifacts between STU 1 and STU 2
 
 #### Treatment
 
-* [CancerRelatedMedicationStatement](http://hl7.org/fhir/us/mcode/STU1/StructureDefinition-mcode-cancer-related-medication-statement.html) was replaced with [CancerRelatedMedicationRequest] and [CancerRelatedMedicationAdministration]. This decision was prompted by US Core STU Release 3.1.1, which replaced MedicationStatement with MedicationRequest. [Its guidance for fetching medications in different contexts is provided here.](http://hl7.org/fhir/us/core/all-meds.html)
+* [CancerRelatedMedicationStatement](http://hl7.org/fhir/us/mcode/STU1/StructureDefinition-mcode-cancer-related-medication-statement.html) was replaced with [CancerRelatedMedicationRequest] and [CancerRelatedMedicationAdministration]. This decision was prompted by US Core STU Release 3.1.1, which replaced MedicationStatement with MedicationRequest. [Its guidance for fetching medications in different contexts is provided here.](http://hl7.org/fhir/us/core/medication-list-guidance.html)
 * Radiotherapy procedure area was expanded to include new requirements, resulting in additional profiles: [RadiotherapyCourseSummary], [RadiotherapyCourseSummary], and [TeleradiotherapyTreatmentPhase]
 
 #### Genomics

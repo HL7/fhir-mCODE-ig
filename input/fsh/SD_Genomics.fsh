@@ -6,7 +6,7 @@ Description:    "Records an alteration in the most common DNA nucleotide sequenc
 * insert NotUsed(bodySite)
 * insert NotUsed(referenceRange)
 * insert NotUsed(hasMember)
-* code = LNC#69548-6 //"Genomic variant assessment"
+* code = LNC#69548-6 //"Genetic variant assessment" -- not Genomic!
 * method from http://loinc.org/vs/LL4048-6 (extensible)
 * specimen only Reference(GenomicSpecimen)
 * value[x] only CodeableConcept

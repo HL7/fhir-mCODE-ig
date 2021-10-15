@@ -38,7 +38,7 @@ Description: "Comorbid condition checklist and optional risk score, using Elixha
 * code = LNC#78923-0 "Comorbid condition panel"
 * focus only Reference(PrimaryCancerCondition)
 * focus ^definition = "A reference to the cancer condition that is the context for the current list of comorbid conditions."
-* component.value[x] from PresentAbsentVS (required) // FHIR-32281
+* component.value[x] from PresentAbsentVS (required)  //FHIR-32281
 * component ^slicing.discriminator.type = #pattern
 * component ^slicing.discriminator.path = "code"
 * component ^slicing.rules = #closed

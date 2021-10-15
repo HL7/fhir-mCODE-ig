@@ -31,16 +31,26 @@
 * [FHIR-32649](https://jira.hl7.org/browse/FHIR-32649) Extension 'Radiotherapy Fractions Delivered' added to the summary of extensions for Radiotherapy
 * [FHIR-33003](https://jira.hl7.org/browse/FHIR-33003)  Make extension values required
 
+<<<<<<< HEAD
+#### [Block Vote 5](https://jira.hl7.org/issues/?filter=15618)
+* [FHIR-32956](https://jira.hl7.org/browse/FHIR-32956) Primary and Secondary cancer value sets have been aligned with CDC state cancer reporting practices.
+
+#### Other
+* [FHIR-32340](https://jira.hl7.org/browse/FHIR-33340)  Laterality broken out into separate extension
+*
+=======
 #### [Block Vote 4](https://jira.hl7.org/issues/?filter=14928)
 * [FHIR-32827](https://jira.hl7.org/browse/FHIR-32827) Added Values Urine, Stool and Other to Genetic Specimen Type Value Set
 #### [Block Vote 5](https://jira.hl7.org/issues/?filter=15618)
 
 #### [Block Vote 6](https://jira.hl7.org/issues/?filter=15619)
+* [FHIR-32893](https://jira.hl7.org/browse/FHIR-32893) Aligned CancerDiseaseStatusEvidenceTypeVS with NAACR reporting needs
 
 ### Other
 * [FHIR-33343](https://jira.hl7.org/browse/FHIR-33343)  RadiotherapyTreatmentLocationVS/RadiotherapyTreatmentLocationQualifierVS should align with TG263 Anatomy Terms
 * [FHIR-32340](https://jira.hl7.org/browse/FHIR-32340)  Laterality broken out into separate extension
 * [FHIR-33340](https://jira.hl7.org/browse/FHIR-33340)   TreatmentPhase profiles and examples dropped.  Will reappear in Codex-RT IG.
+>>>>>>> master
 
 ### mCODE STU 2 Ballot Version (May 2021)
 

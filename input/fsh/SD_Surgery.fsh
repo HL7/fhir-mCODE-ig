@@ -14,7 +14,7 @@ Description: "A surgical action addressing a cancer condition. The scope of this
 * reasonReference only Reference(PrimaryCancerCondition or SecondaryCancerCondition)
 * bodySite.extension contains
      BodyLocationQualifier named locationQualifier 0..*   and
-     LateralityQualifier named lateralityQualifier 0..1   
+     LateralityQualifier named lateralityQualifier 0..1
 * bodySite.extension[locationQualifier] ^short = "General location qualifier (excluding laterality) for this bodySite"
 * bodySite.extension[locationQualifier] ^definition = "General location qualifier (excluding laterality) for this bodySite"
 * bodySite.extension[lateralityQualifier] ^short = "Laterality qualifier (excluding laterality) for this bodySite"

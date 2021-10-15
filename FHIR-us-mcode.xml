@@ -9,7 +9,17 @@
 <artifactPageExtension value="-definitions"/>
 <artifactPageExtension value="-examples"/>
 <artifactPageExtension value="-mappings"/>
-<artifact id="ValueSet/mcode-benign-uncertain-neoplasm-brain-cns-disorder-vs" key="ValueSet-mcode-benign-uncertain-neoplasm-brain-cns-disorder-vs" name="Benign Neoplasm"/>
+<artifact id="ValueSet/mcode-brachyhdr-technique-vs" key="ValueSet-mcode-brachyhdr-technique-vs" name="Allowed techniques for brachytherapy modality High Dose Rate"/>
+<artifact id="ValueSet/mcode-brachyhdrelectronic-technique-vs" key="ValueSet-mcode-brachyhdrelectronic-technique-vs" name="Allowed techniques for brachytherapy modality High Dose Rate electronic"/>
+<artifact id="ValueSet/mcode-brachyldr-technique-vs" key="ValueSet-mcode-brachyldr-technique-vs" name="Allowed techniques for brachytherapy modality Low Dose Rate using temp rad source"/>
+<artifact id="ValueSet/mcode-brachypdr-technique-vs" key="ValueSet-mcode-brachypdr-technique-vs" name="Allowed techniques for brachytherapy modality Pulsed Dose Rate"/>
+<artifact id="ValueSet/mcode-brachyintradiotherapyseed-technique-vs" key="ValueSet-mcode-brachyintradiotherapyseed-technique-vs" name="Allowed techniques for brachytherapy modality internal radiotherapy - permanent seeds"/>
+<artifact id="ValueSet/mcode-brachyradiopharmaceutical-technique-vs" key="ValueSet-mcode-brachyradiopharmaceutical-technique-vs" name="Allowed techniques for brachytherapy modality radiopharmaceutical"/>
+<artifact id="ValueSet/mcode-carbon-ion-beam-technique-vs" key="ValueSet-mcode-carbon-ion-beam-technique-vs" name="Allowed techniques for carbon ion beam modality"/>
+<artifact id="ValueSet/mcode-electron-beam-technique-vs" key="ValueSet-mcode-electron-beam-technique-vs" name="Allowed techniques for electron beam modality"/>
+<artifact id="ValueSet/mcode-neutron-beam-technique-vs" key="ValueSet-mcode-neutron-beam-technique-vs" name="Allowed techniques for neutron beam modality"/>
+<artifact id="ValueSet/mcode-photon-beam-technique-vs" key="ValueSet-mcode-photon-beam-technique-vs" name="Allowed techniques for photon beam modality"/>
+<artifact id="ValueSet/mcode-proton-beam-technique-vs" key="ValueSet-mcode-proton-beam-technique-vs" name="Allowed techniques for proton beam modality"/>
 <artifact id="StructureDefinition/mcode-body-location-qualifier" key="StructureDefinition-mcode-body-location-qualifier" name="Body Location Qualifier"/>
 <artifact id="ValueSet/mcode-body-location-qualifier-vs" key="ValueSet-mcode-body-location-qualifier-vs" name="Body Location Qualifier Value Set"/>
 <artifact id="StructureDefinition/mcode-body-structure-identifier" key="StructureDefinition-mcode-body-structure-identifier" name="Body Structure Identifier"/>
@@ -132,6 +142,7 @@
 <artifact id="StructureDefinition/mcode-radiotherapy-dose-delivered-to-volume" key="StructureDefinition-mcode-radiotherapy-dose-delivered-to-volume" name="Radiotherapy Dose Delivered To Body Volume"/>
 <artifact id="StructureDefinition/mcode-radiotherapy-fractions-delivered" key="StructureDefinition-mcode-radiotherapy-fractions-delivered" name="Radiotherapy Fractions Delivered"/>
 <artifact id="StructureDefinition/mcode-radiotherapy-modality" key="StructureDefinition-mcode-radiotherapy-modality" name="Radiotherapy Modality"/>
+<artifact id="StructureDefinition/mcode-radiotherapy-modality-and-technique" key="StructureDefinition-mcode-radiotherapy-modality-and-technique" name="Radiotherapy Modality And Technique"/>
 <artifact id="ValueSet/mcode-radiotherapy-modality-vs" key="ValueSet-mcode-radiotherapy-modality-vs" name="Radiotherapy Modality Value Set"/>
 <artifact id="StructureDefinition/mcode-radiotherapy-sessions" key="StructureDefinition-mcode-radiotherapy-sessions" name="Radiotherapy Number of Sessions"/>
 <artifact id="StructureDefinition/mcode-radiotherapy-technique" key="StructureDefinition-mcode-radiotherapy-technique" name="Radiotherapy Technique"/>
@@ -283,6 +294,7 @@
 <artifact id="Condition/primary-cancer-condition-cll" key="Condition-primary-cancer-condition-cll" name="primary-cancer-condition-cll"/>
 <artifact id="Condition/primary-cancer-condition-jenny-m" key="Condition-primary-cancer-condition-jenny-m" name="primary-cancer-condition-jenny-m"/>
 <artifact id="Condition/primary-cancer-condition-nsclc" key="Condition-primary-cancer-condition-nsclc" name="primary-cancer-condition-nsclc"/>
+<artifact id="Procedure/radiotherapy-treatment-summary-chest-wall-RTtestNonCompliant-m" key="Procedure-radiotherapy-treatment-summary-chest-wall-RTtestNonCompliant-m" name="radiotherapy-treatment-summary-chest-wall-RTtestNonCompliant-m"/>
 <artifact id="Procedure/radiotherapy-treatment-summary-chest-wall-jenny-m" key="Procedure-radiotherapy-treatment-summary-chest-wall-jenny-m" name="radiotherapy-treatment-summary-chest-wall-jenny-m"/>
 <artifact id="Condition/secondary-cancer-condition-brain-mets" key="Condition-secondary-cancer-condition-brain-mets" name="secondary-cancer-condition-brain-mets"/>
 <artifact deprecated="true" id="Procedure/teleradiotherapy-treatment-phase-boost-jenny-m" key="Procedure-teleradiotherapy-treatment-phase-boost-jenny-m" name="teleradiotherapy-treatment-phase-boost-jenny-m"/>

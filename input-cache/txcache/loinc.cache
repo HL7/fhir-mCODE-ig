@@ -141,10 +141,10 @@ v: {
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
-  "code" : "88040-1"
+  "code" : "97509-4"
 }, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
 v: {
-  "display" : "Response to cancer treatment",
+  "display" : "Cancer disease progression",
   "severity" : null,
   "error" : ""
 }
@@ -271,10 +271,10 @@ v: {
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
-  "code" : "88040-1"
+  "code" : "97509-4"
 }, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
 v: {
-  "display" : "Response to cancer treatment",
+  "display" : "Cancer disease progression",
   "severity" : null,
   "error" : ""
 }
@@ -361,6 +361,36 @@ v: {
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
+  "code" : "82155-3"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "Genomic structural variant copy number",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "81258-6"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "Sample variant allelic frequency [NFr]",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "53034-5"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "Allelic state",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
   "code" : "48001-2"
 }, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
 v: {
@@ -375,6 +405,16 @@ v: {
 }, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
 v: {
   "display" : "Variant ISCN",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "53037-8"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "Genetic variation clinical significance [Imp]",
   "severity" : null,
   "error" : ""
 }
@@ -539,10 +579,11 @@ v: {
 e: {
   "valueSet" : {
   "resourceType" : "ValueSet",
+  "language" : "en",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:ed38be06-e6fa-49fa-9bd0-570f86f49376",
-    "timestamp" : "2021-04-08T20:47:18.603Z",
+    "identifier" : "urn:uuid:76da7dc3-a77e-4c7f-9e4a-7f85268d4acb",
+    "timestamp" : "2021-09-14T11:53:28.049Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -553,7 +594,7 @@ e: {
     },
     {
       "name" : "version",
-      "valueString" : "http://loinc.org|2.68"
+      "valueString" : "http://loinc.org|2.71"
     }],
     "contains" : [{
       "system" : "http://loinc.org",
@@ -640,10 +681,11 @@ e: {
 e: {
   "valueSet" : {
   "resourceType" : "ValueSet",
+  "language" : "en",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:acc07977-af55-44c1-927b-6f355cfac720",
-    "timestamp" : "2021-04-08T08:01:47.464Z",
+    "identifier" : "urn:uuid:5a0b7be6-2407-4db0-b342-5837d31705a8",
+    "timestamp" : "2021-09-14T11:53:28.205Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -654,7 +696,7 @@ e: {
     },
     {
       "name" : "version",
-      "valueString" : "http://loinc.org|2.68"
+      "valueString" : "http://loinc.org|2.71"
     }],
     "contains" : [{
       "system" : "http://loinc.org",
@@ -737,14 +779,15 @@ e: {
 e: {
   "valueSet" : {
   "resourceType" : "ValueSet",
+  "language" : "en",
   "status" : "active",
   "expansion" : {
     "extension" : [{
       "url" : "http://hl7.org/fhir/StructureDefinition/valueset-toocostly",
       "valueBoolean" : true
     }],
-    "identifier" : "urn:uuid:20673d62-0851-4bd9-9fb1-c567e09dae22",
-    "timestamp" : "2021-04-08T08:01:47.980Z",
+    "identifier" : "urn:uuid:51a5ec0f-edb9-4959-af0e-080211a49f77",
+    "timestamp" : "2021-09-14T11:53:28.721Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -755,7 +798,7 @@ e: {
     },
     {
       "name" : "version",
-      "valueString" : "http://loinc.org|2.68"
+      "valueString" : "http://loinc.org|2.71"
     }],
     "contains" : [{
       "system" : "http://loinc.org",
@@ -1160,7 +1203,7 @@ e: {
     {
       "system" : "http://loinc.org",
       "code" : "1007-4",
-      "display" : "Direct antiglobulin test.poly specific reagent [Presence] on Red Blood Cells"
+      "display" : "Direct antiglobulin test.polyspecific reagent [Presence] on Red Blood Cells"
     },
     {
       "system" : "http://loinc.org",
@@ -1215,7 +1258,7 @@ e: {
     {
       "system" : "http://loinc.org",
       "code" : "1008-2",
-      "display" : "Indirect antiglobulin test.poly specific reagent [Presence] in Serum or Plasma"
+      "display" : "Indirect antiglobulin test.polyspecific reagent [Presence] in Serum or Plasma"
     },
     {
       "system" : "http://loinc.org",
@@ -2790,7 +2833,7 @@ e: {
     {
       "system" : "http://loinc.org",
       "code" : "10363-0",
-      "display" : "Barbiturates [Presence] in Unspecified specimen"
+      "display" : "Barbiturates [Presence] in Specimen"
     },
     {
       "system" : "http://loinc.org",
@@ -3690,7 +3733,7 @@ e: {
     {
       "system" : "http://loinc.org",
       "code" : "10525-4",
-      "display" : "Microscopic observation [Identifier] in Unspecified specimen by Cyto stain"
+      "display" : "Microscopic observation [Identifier] in Specimen by Cyto stain"
     },
     {
       "system" : "http://loinc.org",
@@ -3765,7 +3808,7 @@ e: {
     {
       "system" : "http://loinc.org",
       "code" : "10539-5",
-      "display" : "Glipizide [Mass/volume] in Serum or Plasma"
+      "display" : "glipiZIDE [Mass/volume] in Serum or Plasma"
     },
     {
       "system" : "http://loinc.org",
@@ -3775,7 +3818,7 @@ e: {
     {
       "system" : "http://loinc.org",
       "code" : "10540-3",
-      "display" : "Glyburide [Mass/volume] in Serum or Plasma"
+      "display" : "glyBURIDE [Mass/volume] in Serum or Plasma"
     },
     {
       "system" : "http://loinc.org",
@@ -4315,12 +4358,12 @@ e: {
     {
       "system" : "http://loinc.org",
       "code" : "10638-5",
-      "display" : "Thermophilic Actinomycetes colony count [#/volume] in Unspecified specimen by Organism specific culture"
+      "display" : "Thermophilic Actinomycetes colony count [#/volume] in Specimen by Organism specific culture"
     },
     {
       "system" : "http://loinc.org",
       "code" : "10639-3",
-      "display" : "Thermophilic Actinomycetes identified in Unspecified specimen by Organism specific culture"
+      "display" : "Thermophilic Actinomycetes identified in Specimen by Organism specific culture"
     },
     {
       "system" : "http://loinc.org",
@@ -4350,7 +4393,7 @@ e: {
     {
       "system" : "http://loinc.org",
       "code" : "10644-3",
-      "display" : "Arthropod identified in Unspecified specimen"
+      "display" : "Arthropod identified in Specimen"
     },
     {
       "system" : "http://loinc.org",
@@ -4465,7 +4508,7 @@ e: {
     {
       "system" : "http://loinc.org",
       "code" : "10665-8",
-      "display" : "Fungus colony count [#/volume] in Unspecified specimen by Environmental culture"
+      "display" : "Fungus colony count [#/volume] in Specimen by Environmental culture"
     },
     {
       "system" : "http://loinc.org",
@@ -4475,17 +4518,17 @@ e: {
     {
       "system" : "http://loinc.org",
       "code" : "10667-4",
-      "display" : "Fungus identified in Unspecified specimen by Animal inoculation"
+      "display" : "Fungus identified in Specimen by Animal inoculation"
     },
     {
       "system" : "http://loinc.org",
       "code" : "10668-2",
-      "display" : "Fungus identified in Unspecified specimen by Environmental culture"
+      "display" : "Fungus identified in Specimen by Environmental culture"
     },
     {
       "system" : "http://loinc.org",
       "code" : "10669-0",
-      "display" : "Fungus identified in Unspecified specimen by Sticky tape for environmental fungus"
+      "display" : "Fungus identified in Specimen by Sticky tape for environmental fungus"
     },
     {
       "system" : "http://loinc.org",
@@ -4500,12 +4543,12 @@ e: {
     {
       "system" : "http://loinc.org",
       "code" : "10671-6",
-      "display" : "Helminth identified in Unspecified specimen"
+      "display" : "Helminth identified in Specimen"
     },
     {
       "system" : "http://loinc.org",
       "code" : "10672-4",
-      "display" : "Helminth+Arthropod identified in Unspecified specimen"
+      "display" : "Helminth+Arthropod identified in Specimen"
     },
     {
       "system" : "http://loinc.org",
@@ -4735,7 +4778,7 @@ e: {
     {
       "system" : "http://loinc.org",
       "code" : "10713-6",
-      "display" : "Prototheca identified in Unspecified specimen by Culture"
+      "display" : "Prototheca identified in Specimen by Culture"
     },
     {
       "system" : "http://loinc.org",
@@ -4750,7 +4793,7 @@ e: {
     {
       "system" : "http://loinc.org",
       "code" : "10716-9",
-      "display" : "Schistosoma sp identified in Unspecified specimen by Organism specific culture"
+      "display" : "Schistosoma sp identified in Specimen by Organism specific culture"
     },
     {
       "system" : "http://loinc.org",
@@ -4875,7 +4918,7 @@ e: {
     {
       "system" : "http://loinc.org",
       "code" : "10739-1",
-      "display" : "Virus identified in Unspecified specimen by Electron microscopy"
+      "display" : "Virus identified in Specimen by Electron microscopy"
     },
     {
       "system" : "http://loinc.org",
@@ -5495,7 +5538,7 @@ e: {
     {
       "system" : "http://loinc.org",
       "code" : "10850-6",
-      "display" : "Cyclospora cayetanensis [Presence] in Unspecified specimen"
+      "display" : "Cyclospora cayetanensis [Presence] in Specimen"
     },
     {
       "system" : "http://loinc.org",
@@ -5510,7 +5553,7 @@ e: {
     {
       "system" : "http://loinc.org",
       "code" : "10853-0",
-      "display" : "Isospora belli [Presence] in Unspecified specimen by Acid fast stain.Kinyoun modified"
+      "display" : "Isospora belli [Presence] in Specimen by Acid fast stain.Kinyoun modified"
     },
     {
       "system" : "http://loinc.org",
@@ -5530,7 +5573,7 @@ e: {
     {
       "system" : "http://loinc.org",
       "code" : "10857-1",
-      "display" : "Microsporidia identified in Unspecified specimen by Light microscopy"
+      "display" : "Microsporidia identified in Specimen by Light microscopy"
     },
     {
       "system" : "http://loinc.org",
@@ -5550,7 +5593,7 @@ e: {
     {
       "system" : "http://loinc.org",
       "code" : "10860-5",
-      "display" : "Varicella zoster virus [Presence] in Unspecified specimen by Organism specific culture"
+      "display" : "Varicella zoster virus [Presence] in Specimen by Organism specific culture"
     },
     {
       "system" : "http://loinc.org",
@@ -5777,10 +5820,11 @@ e: {
 e: {
   "valueSet" : {
   "resourceType" : "ValueSet",
+  "language" : "en",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:9e075227-b8d4-4797-8e6f-a0acec6ad7a8",
-    "timestamp" : "2021-04-08T08:01:53.714Z",
+    "identifier" : "urn:uuid:0ac616c4-ea78-4aed-bfef-3212e7c410f2",
+    "timestamp" : "2021-09-14T11:53:29.518Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -5791,12 +5835,12 @@ e: {
     },
     {
       "name" : "version",
-      "valueString" : "http://loinc.org|2.68"
+      "valueString" : "http://loinc.org|2.71"
     }],
     "contains" : [{
       "system" : "http://loinc.org",
       "code" : "72166-2",
-      "display" : "Tobacco smoking status NHIS"
+      "display" : "Tobacco smoking status"
     }]
   }
 },
@@ -5826,10 +5870,11 @@ e: {
 e: {
   "valueSet" : {
   "resourceType" : "ValueSet",
+  "language" : "en",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:795acd95-2710-4ccc-a864-31a6cfe30706",
-    "timestamp" : "2021-04-13T13:37:03.586Z",
+    "identifier" : "urn:uuid:14e32f17-087a-4cb2-9fed-81bdb5b5f16e",
+    "timestamp" : "2021-09-14T11:53:29.705Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -5840,7 +5885,7 @@ e: {
     },
     {
       "name" : "version",
-      "valueString" : "http://loinc.org|2.68"
+      "valueString" : "http://loinc.org|2.71"
     }],
     "contains" : [{
       "system" : "http://loinc.org",
@@ -5885,10 +5930,11 @@ e: {
 e: {
   "valueSet" : {
   "resourceType" : "ValueSet",
+  "language" : "en",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:4b39c43f-44d5-464d-8a6a-b65c31976e87",
-    "timestamp" : "2021-04-13T13:37:06.445Z",
+    "identifier" : "urn:uuid:e5c6115b-26a1-4e25-a855-5ced5221bffc",
+    "timestamp" : "2021-09-14T11:53:30.971Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -5899,7 +5945,7 @@ e: {
     },
     {
       "name" : "version",
-      "valueString" : "http://loinc.org|2.68"
+      "valueString" : "http://loinc.org|2.71"
     }],
     "contains" : [{
       "system" : "http://loinc.org",
@@ -5944,10 +5990,11 @@ e: {
 e: {
   "valueSet" : {
   "resourceType" : "ValueSet",
+  "language" : "en",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:b917daff-a3c6-49e1-9019-0956ccc0906f",
-    "timestamp" : "2021-04-13T13:37:07.070Z",
+    "identifier" : "urn:uuid:88c5ba61-e43b-42ae-b189-5ab2ec4e6d61",
+    "timestamp" : "2021-09-14T11:53:31.205Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -5958,7 +6005,7 @@ e: {
     },
     {
       "name" : "version",
-      "valueString" : "http://loinc.org|2.68"
+      "valueString" : "http://loinc.org|2.71"
     }],
     "contains" : [{
       "system" : "http://loinc.org",
@@ -6003,10 +6050,11 @@ e: {
 e: {
   "valueSet" : {
   "resourceType" : "ValueSet",
+  "language" : "en",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:fa66ee34-6c4a-400b-b5fd-57c8c48600eb",
-    "timestamp" : "2021-04-13T13:37:07.351Z",
+    "identifier" : "urn:uuid:01447813-5461-4b1c-bcb4-49c29c2af08d",
+    "timestamp" : "2021-09-14T11:53:31.424Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -6017,7 +6065,7 @@ e: {
     },
     {
       "name" : "version",
-      "valueString" : "http://loinc.org|2.68"
+      "valueString" : "http://loinc.org|2.71"
     }],
     "contains" : [{
       "system" : "http://loinc.org",
@@ -6354,11 +6402,11 @@ v: {
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
-  "code" : "88040-1",
-  "display" : "Response to cancer treatment"
+  "code" : "97509-4",
+  "display" : "Cancer Disease Progression"
 }, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
 v: {
-  "display" : "Response to cancer treatment",
+  "display" : "Cancer disease progression",
   "severity" : null,
   "error" : ""
 }
@@ -6932,39 +6980,6 @@ v: {
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
-  "code" : "69548-6",
-  "display" : "Genetic variant assessment"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
-v: {
-  "display" : "Genetic variant assessment",
-  "severity" : null,
-  "error" : ""
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://loinc.org",
-  "code" : "LA9633-4",
-  "display" : "Present"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
-v: {
-  "display" : "Present",
-  "severity" : null,
-  "error" : ""
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://loinc.org",
-  "code" : "LA26398-0",
-  "display" : "Sequencing"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
-v: {
-  "display" : "Sequencing",
-  "severity" : null,
-  "error" : ""
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://loinc.org",
   "code" : "21908-9",
   "display" : "Stage group.clinical Cancer"
 }, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
@@ -7333,6 +7348,39 @@ v: {
 }, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
 v: {
   "display" : "Stage group.clinical Cancer",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "69548-6",
+  "display" : "Genetic variant assessment"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "Genetic variant assessment",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "LA9633-4",
+  "display" : "Present"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "Present",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "LA26398-0",
+  "display" : "Sequencing"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "Sequencing",
   "severity" : null,
   "error" : ""
 }
@@ -11478,6 +11526,41 @@ v: {
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
+  "code" : "97509-4"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://loinc.org"
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "Cancer disease progression",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "97509-4",
+  "display" : "Cancer Disease Progression"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://loinc.org"
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK"}####
+v: {
+  "display" : "Cancer disease progression",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
   "code" : "21908-9"
 }, "valueSet" :{
   "resourceType" : "ValueSet",
@@ -12230,6 +12313,65 @@ v: {
 }, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
 v: {
   "display" : "Pathology report final diagnosis Narrative",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "97509-4"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://loinc.org",
+      "concept" : [{
+        "code" : "21908-9",
+        "display" : "Stage group.clinical Cancer"
+      },
+      {
+        "code" : "21902-2",
+        "display" : "Stage group.pathology Cancer"
+      },
+      {
+        "code" : "21914-7",
+        "display" : "Stage group.other Cancer"
+      }]
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code provided (http://loinc.org#97509-4) is not valid (from http://tx.fhir.org/r4)"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "97509-4",
+  "display" : "Cancer Disease Progression"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://loinc.org",
+      "concept" : [{
+        "code" : "21908-9",
+        "display" : "Stage group.clinical Cancer"
+      },
+      {
+        "code" : "21902-2",
+        "display" : "Stage group.pathology Cancer"
+      },
+      {
+        "code" : "21914-7",
+        "display" : "Stage group.other Cancer"
+      }]
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK"}####
+v: {
+  "display" : "Cancer disease progression",
   "severity" : null,
   "error" : ""
 }
@@ -13282,6 +13424,65 @@ v: {
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
+  "code" : "97509-4"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://loinc.org",
+      "concept" : [{
+        "code" : "21905-5",
+        "display" : "Primary tumor.clinical [Class] Cancer"
+      },
+      {
+        "code" : "21899-0",
+        "display" : "Primary tumor.pathology Cancer"
+      },
+      {
+        "code" : "21911-3",
+        "display" : "Primary tumor.other [Class] Cancer"
+      }]
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code provided (http://loinc.org#97509-4) is not valid (from http://tx.fhir.org/r4)"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "97509-4",
+  "display" : "Cancer Disease Progression"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://loinc.org",
+      "concept" : [{
+        "code" : "21905-5",
+        "display" : "Primary tumor.clinical [Class] Cancer"
+      },
+      {
+        "code" : "21899-0",
+        "display" : "Primary tumor.pathology Cancer"
+      },
+      {
+        "code" : "21911-3",
+        "display" : "Primary tumor.other [Class] Cancer"
+      }]
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK"}####
+v: {
+  "display" : "Cancer disease progression",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
   "code" : "69548-6"
 }, "valueSet" :{
   "resourceType" : "ValueSet",
@@ -14277,6 +14478,65 @@ v: {
 }, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK"}####
 v: {
   "display" : "Diagnosis",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "97509-4"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://loinc.org",
+      "concept" : [{
+        "code" : "21906-3",
+        "display" : "Regional lymph nodes.clinical [Class] Cancer"
+      },
+      {
+        "code" : "21900-6",
+        "display" : "Regional lymph nodes.pathology [Class] Cancer"
+      },
+      {
+        "code" : "21912-1",
+        "display" : "Regional lymph nodes.other [Class] Cancer"
+      }]
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code provided (http://loinc.org#97509-4) is not valid (from http://tx.fhir.org/r4)"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "97509-4",
+  "display" : "Cancer Disease Progression"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://loinc.org",
+      "concept" : [{
+        "code" : "21906-3",
+        "display" : "Regional lymph nodes.clinical [Class] Cancer"
+      },
+      {
+        "code" : "21900-6",
+        "display" : "Regional lymph nodes.pathology [Class] Cancer"
+      },
+      {
+        "code" : "21912-1",
+        "display" : "Regional lymph nodes.other [Class] Cancer"
+      }]
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK"}####
+v: {
+  "display" : "Cancer disease progression",
   "severity" : null,
   "error" : ""
 }
@@ -15284,6 +15544,65 @@ v: {
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
+  "code" : "97509-4"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://loinc.org",
+      "concept" : [{
+        "code" : "21907-1",
+        "display" : "Distant metastases.clinical [Class] Cancer"
+      },
+      {
+        "code" : "21901-4",
+        "display" : "Distant metastases.pathology [Class] Cancer"
+      },
+      {
+        "code" : "21913-9",
+        "display" : "Distant metastases.other [Class] Cancer"
+      }]
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code provided (http://loinc.org#97509-4) is not valid (from http://tx.fhir.org/r4)"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "97509-4",
+  "display" : "Cancer Disease Progression"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://loinc.org",
+      "concept" : [{
+        "code" : "21907-1",
+        "display" : "Distant metastases.clinical [Class] Cancer"
+      },
+      {
+        "code" : "21901-4",
+        "display" : "Distant metastases.pathology [Class] Cancer"
+      },
+      {
+        "code" : "21913-9",
+        "display" : "Distant metastases.other [Class] Cancer"
+      }]
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK"}####
+v: {
+  "display" : "Cancer disease progression",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
   "code" : "69548-6"
 }, "valueSet" :{
   "resourceType" : "ValueSet",
@@ -16281,6 +16600,602 @@ v: {
   "display" : "Diagnosis",
   "severity" : null,
   "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "97509-4"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://loinc.org",
+      "filter" : [{
+        "property" : "ancestor",
+        "op" : "=",
+        "value" : "LP101591-8"
+      }]
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code provided (http://loinc.org#97509-4) is not valid (from http://tx.fhir.org/r4)"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "97509-4"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://loinc.org",
+      "filter" : [{
+        "property" : "ancestor",
+        "op" : "=",
+        "value" : "LP111251-7"
+      }]
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code provided (http://loinc.org#97509-4) is not valid (from http://tx.fhir.org/r4)"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "coding" : [{
+    "system" : "http://loinc.org",
+    "code" : "97509-4",
+    "display" : "Cancer Disease Progression"
+  }]
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/mcode-catch-code-cs",
+      "concept" : [{
+        "code" : "TMT-OTHER",
+        "display" : "Other Tumor Marker Test, Specify"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "filter" : [{
+        "property" : "ancestor",
+        "op" : "=",
+        "value" : "LP101591-8"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "filter" : [{
+        "property" : "ancestor",
+        "op" : "=",
+        "value" : "LP111251-7"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "filter" : [{
+        "property" : "ancestor",
+        "op" : "=",
+        "value" : "LP136073-6"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "filter" : [{
+        "property" : "ancestor",
+        "op" : "=",
+        "value" : "LP14040-7"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "filter" : [{
+        "property" : "ancestor",
+        "op" : "=",
+        "value" : "LP14329-4"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "filter" : [{
+        "property" : "ancestor",
+        "op" : "=",
+        "value" : "LP14543-0"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "filter" : [{
+        "property" : "ancestor",
+        "op" : "=",
+        "value" : "LP14618-0"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "filter" : [{
+        "property" : "ancestor",
+        "op" : "=",
+        "value" : "LP14649-5"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "filter" : [{
+        "property" : "ancestor",
+        "op" : "=",
+        "value" : "LP14650-3"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "filter" : [{
+        "property" : "ancestor",
+        "op" : "=",
+        "value" : "LP14652-9"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "filter" : [{
+        "property" : "ancestor",
+        "op" : "=",
+        "value" : "LP14658-6"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "filter" : [{
+        "property" : "ancestor",
+        "op" : "=",
+        "value" : "LP14665-1"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "filter" : [{
+        "property" : "ancestor",
+        "op" : "=",
+        "value" : "LP14694-1"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "filter" : [{
+        "property" : "ancestor",
+        "op" : "=",
+        "value" : "LP14697-4"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "filter" : [{
+        "property" : "ancestor",
+        "op" : "=",
+        "value" : "LP14902-8"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "filter" : [{
+        "property" : "ancestor",
+        "op" : "=",
+        "value" : "LP14907-7"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "filter" : [{
+        "property" : "ancestor",
+        "op" : "=",
+        "value" : "LP15033-1"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "filter" : [{
+        "property" : "ancestor",
+        "op" : "=",
+        "value" : "LP15090-1"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "filter" : [{
+        "property" : "ancestor",
+        "op" : "=",
+        "value" : "LP15097-6"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "filter" : [{
+        "property" : "ancestor",
+        "op" : "=",
+        "value" : "LP15097-6"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "filter" : [{
+        "property" : "ancestor",
+        "op" : "=",
+        "value" : "LP15461-4"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "filter" : [{
+        "property" : "ancestor",
+        "op" : "=",
+        "value" : "LP15463-0"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "filter" : [{
+        "property" : "ancestor",
+        "op" : "=",
+        "value" : "LP15464-8"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "filter" : [{
+        "property" : "ancestor",
+        "op" : "=",
+        "value" : "LP15465-5"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "filter" : [{
+        "property" : "ancestor",
+        "op" : "=",
+        "value" : "LP15466-3"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "filter" : [{
+        "property" : "ancestor",
+        "op" : "=",
+        "value" : "LP15467-1"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "filter" : [{
+        "property" : "ancestor",
+        "op" : "=",
+        "value" : "LP15681-7"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "filter" : [{
+        "property" : "ancestor",
+        "op" : "=",
+        "value" : "LP157499-7"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "filter" : [{
+        "property" : "ancestor",
+        "op" : "=",
+        "value" : "LP15990-2"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "filter" : [{
+        "property" : "ancestor",
+        "op" : "=",
+        "value" : "LP16890-3"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "filter" : [{
+        "property" : "ancestor",
+        "op" : "=",
+        "value" : "LP17730-0"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "filter" : [{
+        "property" : "ancestor",
+        "op" : "=",
+        "value" : "LP17751-6"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "filter" : [{
+        "property" : "ancestor",
+        "op" : "=",
+        "value" : "LP18193-0"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "filter" : [{
+        "property" : "ancestor",
+        "op" : "=",
+        "value" : "LP18274-8"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "filter" : [{
+        "property" : "ancestor",
+        "op" : "=",
+        "value" : "LP18343-1"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "filter" : [{
+        "property" : "ancestor",
+        "op" : "=",
+        "value" : "LP18396-9"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "filter" : [{
+        "property" : "ancestor",
+        "op" : "=",
+        "value" : "LP18515-4"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "filter" : [{
+        "property" : "ancestor",
+        "op" : "=",
+        "value" : "LP18567-5"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "filter" : [{
+        "property" : "ancestor",
+        "op" : "=",
+        "value" : "LP189759-6"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "filter" : [{
+        "property" : "ancestor",
+        "op" : "=",
+        "value" : "LP19423-0"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "filter" : [{
+        "property" : "ancestor",
+        "op" : "=",
+        "value" : "LP19492-5"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "filter" : [{
+        "property" : "ancestor",
+        "op" : "=",
+        "value" : "LP19666-4"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "filter" : [{
+        "property" : "ancestor",
+        "op" : "=",
+        "value" : "LP19732-4"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "filter" : [{
+        "property" : "ancestor",
+        "op" : "=",
+        "value" : "LP20052-4"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "filter" : [{
+        "property" : "ancestor",
+        "op" : "=",
+        "value" : "LP200639-5"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "filter" : [{
+        "property" : "ancestor",
+        "op" : "=",
+        "value" : "LP207485-6"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "filter" : [{
+        "property" : "ancestor",
+        "op" : "=",
+        "value" : "LP220351-3"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "filter" : [{
+        "property" : "ancestor",
+        "op" : "=",
+        "value" : "LP248009-5"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "filter" : [{
+        "property" : "ancestor",
+        "op" : "=",
+        "value" : "LP28442-9"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "filter" : [{
+        "property" : "ancestor",
+        "op" : "=",
+        "value" : "LP28518-6"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "filter" : [{
+        "property" : "ancestor",
+        "op" : "=",
+        "value" : "LP28728-1"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "filter" : [{
+        "property" : "ancestor",
+        "op" : "=",
+        "value" : "LP28852-9"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "filter" : [{
+        "property" : "ancestor",
+        "op" : "=",
+        "value" : "LP31830-0"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "filter" : [{
+        "property" : "ancestor",
+        "op" : "=",
+        "value" : "LP31855-7"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "filter" : [{
+        "property" : "ancestor",
+        "op" : "=",
+        "value" : "LP35767-0"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "filter" : [{
+        "property" : "ancestor",
+        "op" : "=",
+        "value" : "LP36040-1"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "filter" : [{
+        "property" : "ancestor",
+        "op" : "=",
+        "value" : "LP36464-3"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "filter" : [{
+        "property" : "ancestor",
+        "op" : "=",
+        "value" : "LP36477-5"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "filter" : [{
+        "property" : "ancestor",
+        "op" : "=",
+        "value" : "LP36861-0"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "filter" : [{
+        "property" : "ancestor",
+        "op" : "=",
+        "value" : "LP36885-9"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "filter" : [{
+        "property" : "ancestor",
+        "op" : "=",
+        "value" : "LP61778-4"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "filter" : [{
+        "property" : "ancestor",
+        "op" : "=",
+        "value" : "LP62864-1"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "filter" : [{
+        "property" : "ancestor",
+        "op" : "=",
+        "value" : "LP62864-1"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "filter" : [{
+        "property" : "ancestor",
+        "op" : "=",
+        "value" : "LP63490-4"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "filter" : [{
+        "property" : "ancestor",
+        "op" : "=",
+        "value" : "LP64447-3"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "filter" : [{
+        "property" : "ancestor",
+        "op" : "=",
+        "value" : "LP93517-8"
+      }]
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"CHECK_MEMERSHIP_ONLY"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The display \"Cancer Disease Progression\" is not a valid display for the code ,{http://loinc.org}97509-4 - should be one of ['Cancer disease progression', 'Cancer progression', 'Clinico Osservazione paziente Progressione della malattia del cancro Punto nel tempo (episodio)' (it-IT)]; The code provided (http://loinc.org#97509-4) is not valid in the value set 'TumorMarkerTestVS' (from http://tx.fhir.org/r4)"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
@@ -25223,6 +26138,119 @@ v: {
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
+  "code" : "97509-4"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://loinc.org",
+      "concept" : [{
+        "code" : "85353-1"
+      },
+      {
+        "code" : "9279-1"
+      },
+      {
+        "code" : "8867-4"
+      },
+      {
+        "code" : "2708-6"
+      },
+      {
+        "code" : "8310-5"
+      },
+      {
+        "code" : "8302-2"
+      },
+      {
+        "code" : "9843-4"
+      },
+      {
+        "code" : "29463-7"
+      },
+      {
+        "code" : "39156-5"
+      },
+      {
+        "code" : "85354-9"
+      },
+      {
+        "code" : "8480-6"
+      },
+      {
+        "code" : "8462-4"
+      },
+      {
+        "code" : "8478-0"
+      }]
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code provided (http://loinc.org#97509-4) is not valid (from http://tx.fhir.org/r4)"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "97509-4",
+  "display" : "Cancer Disease Progression"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://loinc.org",
+      "concept" : [{
+        "code" : "85353-1"
+      },
+      {
+        "code" : "9279-1"
+      },
+      {
+        "code" : "8867-4"
+      },
+      {
+        "code" : "2708-6"
+      },
+      {
+        "code" : "8310-5"
+      },
+      {
+        "code" : "8302-2"
+      },
+      {
+        "code" : "9843-4"
+      },
+      {
+        "code" : "29463-7"
+      },
+      {
+        "code" : "39156-5"
+      },
+      {
+        "code" : "85354-9"
+      },
+      {
+        "code" : "8480-6"
+      },
+      {
+        "code" : "8462-4"
+      },
+      {
+        "code" : "8478-0"
+      }]
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK"}####
+v: {
+  "display" : "Cancer disease progression",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
   "code" : "69548-6"
 }, "valueSet" :{
   "resourceType" : "ValueSet",
@@ -29352,17 +30380,18 @@ v: {
 e: {
   "valueSet" : {
   "resourceType" : "ValueSet",
+  "language" : "en",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:e98c3fa3-70c0-418d-82db-e4aa344f9308",
-    "timestamp" : "2021-04-13T13:41:55.382Z",
+    "identifier" : "urn:uuid:15ec7c78-e593-4903-9c57-4299bbcccdd4",
+    "timestamp" : "2021-09-14T11:55:59.924Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
     },
     {
       "name" : "version",
-      "valueString" : "http://loinc.org|2.68"
+      "valueString" : "http://loinc.org|2.71"
     }],
     "contains" : [{
       "system" : "http://loinc.org",
@@ -29407,17 +30436,18 @@ e: {
 e: {
   "valueSet" : {
   "resourceType" : "ValueSet",
+  "language" : "en",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:83da26ec-2c68-4f48-806e-e531271eb714",
-    "timestamp" : "2021-04-13T13:41:55.772Z",
+    "identifier" : "urn:uuid:746bf87e-803d-4caa-8b53-5730f9e7835b",
+    "timestamp" : "2021-09-14T11:56:00.142Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
     },
     {
       "name" : "version",
-      "valueString" : "http://loinc.org|2.68"
+      "valueString" : "http://loinc.org|2.71"
     }],
     "contains" : [{
       "system" : "http://loinc.org",
@@ -29462,17 +30492,18 @@ e: {
 e: {
   "valueSet" : {
   "resourceType" : "ValueSet",
+  "language" : "en",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:6046f35f-ef91-4250-8510-a5e5fdeaf276",
-    "timestamp" : "2021-04-13T13:41:56.053Z",
+    "identifier" : "urn:uuid:88a361ab-394c-4241-b8c8-e5e15976c569",
+    "timestamp" : "2021-09-14T11:56:00.314Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
     },
     {
       "name" : "version",
-      "valueString" : "http://loinc.org|2.68"
+      "valueString" : "http://loinc.org|2.71"
     }],
     "contains" : [{
       "system" : "http://loinc.org",
@@ -29517,17 +30548,18 @@ e: {
 e: {
   "valueSet" : {
   "resourceType" : "ValueSet",
+  "language" : "en",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:9e8b22f4-ef8e-448f-a1de-06afb5cdf875",
-    "timestamp" : "2021-04-13T13:41:56.319Z",
+    "identifier" : "urn:uuid:c8d74150-321d-498d-9e95-22bfc2f7a2ad",
+    "timestamp" : "2021-09-14T11:56:00.533Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
     },
     {
       "name" : "version",
-      "valueString" : "http://loinc.org|2.68"
+      "valueString" : "http://loinc.org|2.71"
     }],
     "contains" : [{
       "system" : "http://loinc.org",
@@ -29565,10 +30597,11 @@ e: {
 e: {
   "valueSet" : {
   "resourceType" : "ValueSet",
+  "language" : "en",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:f4e8cb75-2d3b-4814-85ab-da386e999013",
-    "timestamp" : "2021-04-13T13:42:09.069Z",
+    "identifier" : "urn:uuid:4594e80b-6807-477d-bc09-814bbcd125ad",
+    "timestamp" : "2021-09-14T11:56:03.565Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -29579,7 +30612,7 @@ e: {
     },
     {
       "name" : "version",
-      "valueString" : "http://loinc.org|2.68"
+      "valueString" : "http://loinc.org|2.71"
     }],
     "contains" : [{
       "system" : "http://loinc.org",
@@ -29617,10 +30650,11 @@ e: {
 e: {
   "valueSet" : {
   "resourceType" : "ValueSet",
+  "language" : "en",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:746c25bf-29b8-4f61-81c0-2fb7d38ec1c8",
-    "timestamp" : "2021-04-13T13:42:09.319Z",
+    "identifier" : "urn:uuid:b894cbe2-cebf-4c1a-985e-bd6a37cd4f2b",
+    "timestamp" : "2021-09-14T11:56:03.768Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -29631,7 +30665,7 @@ e: {
     },
     {
       "name" : "version",
-      "valueString" : "http://loinc.org|2.68"
+      "valueString" : "http://loinc.org|2.71"
     }],
     "contains" : [{
       "system" : "http://loinc.org",
@@ -29674,10 +30708,11 @@ e: {
 e: {
   "valueSet" : {
   "resourceType" : "ValueSet",
+  "language" : "en",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:c10cf462-6cf8-46f4-8dc5-7d7c9866e8d9",
-    "timestamp" : "2021-04-13T13:42:09.585Z",
+    "identifier" : "urn:uuid:dec4d66d-2999-4593-91a3-d29c65ad4c6a",
+    "timestamp" : "2021-09-14T11:56:03.955Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -29688,7 +30723,7 @@ e: {
     },
     {
       "name" : "version",
-      "valueString" : "http://loinc.org|2.68"
+      "valueString" : "http://loinc.org|2.71"
     }],
     "contains" : [{
       "system" : "http://loinc.org",
@@ -29721,10 +30756,11 @@ e: {
 e: {
   "valueSet" : {
   "resourceType" : "ValueSet",
+  "language" : "en",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:e13f71d6-2c02-4e0e-a523-d4b4c80a134a",
-    "timestamp" : "2021-04-13T13:42:09.850Z",
+    "identifier" : "urn:uuid:62e8c810-b5eb-4255-a7e5-511601ce2ada",
+    "timestamp" : "2021-09-14T11:56:04.143Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -29735,7 +30771,7 @@ e: {
     },
     {
       "name" : "version",
-      "valueString" : "http://loinc.org|2.68"
+      "valueString" : "http://loinc.org|2.71"
     }],
     "contains" : [{
       "system" : "http://loinc.org",
@@ -29781,6 +30817,11 @@ e: {
       "system" : "http://loinc.org",
       "code" : "83084-4",
       "display" : "Cancer Ag 19-9 [Units/volume] in Serum or Plasma by Immunoassay"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "97750-4",
+      "display" : "Cancer Ag 19-9 [Units/volume] in Aspirate"
     }]
   }
 },
@@ -29803,10 +30844,11 @@ e: {
 e: {
   "valueSet" : {
   "resourceType" : "ValueSet",
+  "language" : "en",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:85f73809-1a90-4ba7-ad02-2a9cc1d79ed6",
-    "timestamp" : "2021-04-13T13:42:10.069Z",
+    "identifier" : "urn:uuid:2ba2372c-314e-42b5-9d87-90bbaa69721d",
+    "timestamp" : "2021-09-14T11:56:04.393Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -29817,7 +30859,7 @@ e: {
     },
     {
       "name" : "version",
-      "valueString" : "http://loinc.org|2.68"
+      "valueString" : "http://loinc.org|2.71"
     }],
     "contains" : [{
       "system" : "http://loinc.org",
@@ -29917,7 +30959,7 @@ e: {
     {
       "system" : "http://loinc.org",
       "code" : "43799-6",
-      "display" : "Choriogonadotropin.beta subunit [Presence] in Unspecified specimen"
+      "display" : "Choriogonadotropin.beta subunit [Presence] in Specimen"
     },
     {
       "system" : "http://loinc.org",
@@ -29995,10 +31037,11 @@ e: {
 e: {
   "valueSet" : {
   "resourceType" : "ValueSet",
+  "language" : "en",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:bf25340d-0c8f-4db7-af5c-c624d9fd8b0b",
-    "timestamp" : "2021-04-13T13:42:10.303Z",
+    "identifier" : "urn:uuid:a760a219-6b1c-4cd7-a20c-a9483b4eaae2",
+    "timestamp" : "2021-09-14T11:56:04.580Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -30009,7 +31052,7 @@ e: {
     },
     {
       "name" : "version",
-      "valueString" : "http://loinc.org|2.68"
+      "valueString" : "http://loinc.org|2.71"
     }],
     "contains" : [{
       "system" : "http://loinc.org",
@@ -30065,6 +31108,11 @@ e: {
       "system" : "http://loinc.org",
       "code" : "83082-8",
       "display" : "Cancer Ag 125 [Units/volume] in Serum or Plasma by Immunoassay"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "97743-9",
+      "display" : "Cancer Ag 125 [Units/volume] in Aspirate"
     }]
   }
 },
@@ -30087,10 +31135,11 @@ e: {
 e: {
   "valueSet" : {
   "resourceType" : "ValueSet",
+  "language" : "en",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:19b0d911-9cff-435f-96a1-82a852a3908d",
-    "timestamp" : "2021-04-13T13:42:10.538Z",
+    "identifier" : "urn:uuid:dc204982-bfc0-48cc-b5d6-a7a8afd445d9",
+    "timestamp" : "2021-09-14T11:56:04.799Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -30101,7 +31150,7 @@ e: {
     },
     {
       "name" : "version",
-      "valueString" : "http://loinc.org|2.68"
+      "valueString" : "http://loinc.org|2.71"
     }],
     "contains" : [{
       "system" : "http://loinc.org",
@@ -30139,10 +31188,11 @@ e: {
 e: {
   "valueSet" : {
   "resourceType" : "ValueSet",
+  "language" : "en",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:49361b04-e04d-48e7-90dc-339c2cf1de2f",
-    "timestamp" : "2021-04-13T13:42:10.803Z",
+    "identifier" : "urn:uuid:e885ab4a-7f0c-46a7-9754-2551d69065e4",
+    "timestamp" : "2021-09-14T11:56:04.971Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -30153,7 +31203,7 @@ e: {
     },
     {
       "name" : "version",
-      "valueString" : "http://loinc.org|2.68"
+      "valueString" : "http://loinc.org|2.71"
     }],
     "contains" : [{
       "system" : "http://loinc.org",
@@ -30471,10 +31521,11 @@ e: {
 e: {
   "valueSet" : {
   "resourceType" : "ValueSet",
+  "language" : "en",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:43ae1aa4-69ac-4a87-9b5e-2b0767f6f1c6",
-    "timestamp" : "2021-04-13T13:42:11.053Z",
+    "identifier" : "urn:uuid:cd6cbcd2-d665-4222-8e2e-028c97b9636e",
+    "timestamp" : "2021-09-14T11:56:05.174Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -30485,7 +31536,7 @@ e: {
     },
     {
       "name" : "version",
-      "valueString" : "http://loinc.org|2.68"
+      "valueString" : "http://loinc.org|2.71"
     }],
     "contains" : [{
       "system" : "http://loinc.org",
@@ -30551,6 +31602,11 @@ e: {
       "system" : "http://loinc.org",
       "code" : "83085-1",
       "display" : "Carcinoembryonic Ag [Mass/volume] in Serum or Plasma by Immunoassay"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "97747-0",
+      "display" : "Carcinoembryonic Ag [Mass/volume] in Aspirate"
     }]
   }
 },
@@ -30573,10 +31629,11 @@ e: {
 e: {
   "valueSet" : {
   "resourceType" : "ValueSet",
+  "language" : "en",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:1fa1ab1b-5866-4c86-933f-ee4fcb220057",
-    "timestamp" : "2021-04-13T13:42:11.460Z",
+    "identifier" : "urn:uuid:26be9e69-5d94-43d8-b0c1-f6dc3d3fff68",
+    "timestamp" : "2021-09-14T11:56:05.361Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -30587,7 +31644,7 @@ e: {
     },
     {
       "name" : "version",
-      "valueString" : "http://loinc.org|2.68"
+      "valueString" : "http://loinc.org|2.71"
     }],
     "contains" : [{
       "system" : "http://loinc.org",
@@ -30650,10 +31707,11 @@ e: {
 e: {
   "valueSet" : {
   "resourceType" : "ValueSet",
+  "language" : "en",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:810dbe93-9f8f-492d-8e72-349dc83cc14a",
-    "timestamp" : "2021-04-13T13:42:11.694Z",
+    "identifier" : "urn:uuid:d94eab0a-9fab-440e-87a7-2d8ec5cec991",
+    "timestamp" : "2021-09-14T11:56:05.564Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -30664,7 +31722,7 @@ e: {
     },
     {
       "name" : "version",
-      "valueString" : "http://loinc.org|2.68"
+      "valueString" : "http://loinc.org|2.71"
     }],
     "contains" : [{
       "system" : "http://loinc.org",
@@ -30725,6 +31783,11 @@ e: {
       "system" : "http://loinc.org",
       "code" : "69560-1",
       "display" : "Enolase.neuron specific [Mass/volume] in Peritoneal fluid"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "97744-7",
+      "display" : "Enolase.neuron specific [Mass/volume] in Aspirate"
     }]
   }
 },
@@ -30747,10 +31810,11 @@ e: {
 e: {
   "valueSet" : {
   "resourceType" : "ValueSet",
+  "language" : "en",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:bf37bc06-10b8-4d18-91f2-7f61605c6ac8",
-    "timestamp" : "2021-04-13T13:42:11.991Z",
+    "identifier" : "urn:uuid:4a820991-65da-4f7c-aec5-46446fcbceef",
+    "timestamp" : "2021-09-14T11:56:05.768Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -30761,7 +31825,7 @@ e: {
     },
     {
       "name" : "version",
-      "valueString" : "http://loinc.org|2.68"
+      "valueString" : "http://loinc.org|2.71"
     }],
     "contains" : [{
       "system" : "http://loinc.org",
@@ -31219,10 +32283,11 @@ e: {
 e: {
   "valueSet" : {
   "resourceType" : "ValueSet",
+  "language" : "en",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:7341d73e-f907-4494-87e9-59b7f979220c",
-    "timestamp" : "2021-04-13T13:42:12.225Z",
+    "identifier" : "urn:uuid:baf56f46-2f16-4bb0-bd84-32ced79df272",
+    "timestamp" : "2021-09-14T11:56:06.080Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -31233,7 +32298,7 @@ e: {
     },
     {
       "name" : "version",
-      "valueString" : "http://loinc.org|2.68"
+      "valueString" : "http://loinc.org|2.71"
     }],
     "contains" : [{
       "system" : "http://loinc.org",
@@ -31271,10 +32336,11 @@ e: {
 e: {
   "valueSet" : {
   "resourceType" : "ValueSet",
+  "language" : "en",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:1eb4cb3d-9d45-4f9a-b374-f424c16c98c1",
-    "timestamp" : "2021-04-13T13:42:12.491Z",
+    "identifier" : "urn:uuid:f6df2ca6-cd53-40f0-bd47-f4fca8972a53",
+    "timestamp" : "2021-09-14T11:56:06.252Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -31285,7 +32351,7 @@ e: {
     },
     {
       "name" : "version",
-      "valueString" : "http://loinc.org|2.68"
+      "valueString" : "http://loinc.org|2.71"
     }],
     "contains" : [{
       "system" : "http://loinc.org",
@@ -31376,6 +32442,16 @@ e: {
       "system" : "http://loinc.org",
       "code" : "8098-6",
       "display" : "Thyroglobulin Ab [Units/volume] in Serum or Plasma"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "96460-1",
+      "display" : "Thyroglobulin [Mass/volume] in Serum or Plasma by Immunoassay --post thyroglobulin antibody neutralization"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "97640-7",
+      "display" : "Thyroglobulin [Moles/volume] in Tissue fine needle aspirate"
     }]
   }
 },
@@ -31398,10 +32474,11 @@ e: {
 e: {
   "valueSet" : {
   "resourceType" : "ValueSet",
+  "language" : "en",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:c8ef9eb6-4d45-42db-9e9d-3feed2affcb5",
-    "timestamp" : "2021-04-13T13:42:12.741Z",
+    "identifier" : "urn:uuid:a5f79a1f-aa91-4869-8721-47056d00ae6f",
+    "timestamp" : "2021-09-14T11:56:06.393Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -31412,7 +32489,7 @@ e: {
     },
     {
       "name" : "version",
-      "valueString" : "http://loinc.org|2.68"
+      "valueString" : "http://loinc.org|2.71"
     }],
     "contains" : [{
       "system" : "http://loinc.org",
@@ -31475,10 +32552,11 @@ e: {
 e: {
   "valueSet" : {
   "resourceType" : "ValueSet",
+  "language" : "en",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:5b2b7591-8a9d-496b-a464-1413218aec0e",
-    "timestamp" : "2021-04-13T13:42:12.975Z",
+    "identifier" : "urn:uuid:a5557740-da1d-425e-9c8c-e670a9bb269b",
+    "timestamp" : "2021-09-14T11:56:06.752Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -31489,7 +32567,7 @@ e: {
     },
     {
       "name" : "version",
-      "valueString" : "http://loinc.org|2.68"
+      "valueString" : "http://loinc.org|2.71"
     }],
     "contains" : [{
       "system" : "http://loinc.org",
@@ -31575,6 +32653,11 @@ e: {
       "system" : "http://loinc.org",
       "code" : "50824-2",
       "display" : "Beta-2-Microglobulin [Moles/volume] in 24 hour Urine"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "54355-3",
+      "display" : "Beta-2-Microglobulin in CSF/Beta-2-Microglobulin in serum"
     },
     {
       "system" : "http://loinc.org",
@@ -31667,10 +32750,11 @@ e: {
 e: {
   "valueSet" : {
   "resourceType" : "ValueSet",
+  "language" : "en",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:171a517d-7ed9-46fe-a2b4-6338c35ca068",
-    "timestamp" : "2021-04-13T13:42:13.210Z",
+    "identifier" : "urn:uuid:73fd09c8-8f71-44e4-87b9-e692524fae39",
+    "timestamp" : "2021-09-14T11:56:07.017Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -31681,7 +32765,7 @@ e: {
     },
     {
       "name" : "version",
-      "valueString" : "http://loinc.org|2.68"
+      "valueString" : "http://loinc.org|2.71"
     }],
     "contains" : [{
       "system" : "http://loinc.org",
@@ -31866,7 +32950,7 @@ e: {
     {
       "system" : "http://loinc.org",
       "code" : "32324-6",
-      "display" : "Lactate dehydrogenase [Enzymatic activity/volume] in Unspecified specimen"
+      "display" : "Lactate dehydrogenase [Enzymatic activity/volume] in Specimen"
     },
     {
       "system" : "http://loinc.org",
@@ -31887,6 +32971,11 @@ e: {
       "system" : "http://loinc.org",
       "code" : "49279-3",
       "display" : "Lactate dehydrogenase isoenzymes [Interpretation] in Serum or Plasma Narrative"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "49930-1",
+      "display" : "Lactate dehydrogenase in pleural fluid/Lactate dehydrogenase in serum"
     },
     {
       "system" : "http://loinc.org",
@@ -31967,6 +33056,16 @@ e: {
       "system" : "http://loinc.org",
       "code" : "53561-7",
       "display" : "Lactate dehydrogenase/Creatinine [Ratio] in Urine"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "53933-8",
+      "display" : "Lactate dehydrogenase in pericardial fluid/Lactate dehydrogenase in serum"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "53934-6",
+      "display" : "Lactate dehydrogenase in peritoneal fluid/Lactate dehydrogenase in serum"
     },
     {
       "system" : "http://loinc.org",
@@ -32074,10 +33173,11 @@ e: {
 e: {
   "valueSet" : {
   "resourceType" : "ValueSet",
+  "language" : "en",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:2249f8c1-f6fe-47e7-9e1a-eccf4eececce",
-    "timestamp" : "2021-04-13T13:42:13.444Z",
+    "identifier" : "urn:uuid:c9bde520-5959-47b7-9a1e-f2c96ac5b543",
+    "timestamp" : "2021-09-14T11:56:07.314Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -32088,7 +33188,7 @@ e: {
     },
     {
       "name" : "version",
-      "valueString" : "http://loinc.org|2.68"
+      "valueString" : "http://loinc.org|2.71"
     }],
     "contains" : [{
       "system" : "http://loinc.org",
@@ -33716,10 +34816,11 @@ e: {
 e: {
   "valueSet" : {
   "resourceType" : "ValueSet",
+  "language" : "en",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:42e6f72c-298a-4b75-be4b-794398c28ca1",
-    "timestamp" : "2021-04-13T13:42:13.694Z",
+    "identifier" : "urn:uuid:008703c8-2856-4b8f-b4b3-662219d40d34",
+    "timestamp" : "2021-09-14T11:56:07.799Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -33730,7 +34831,7 @@ e: {
     },
     {
       "name" : "version",
-      "valueString" : "http://loinc.org|2.68"
+      "valueString" : "http://loinc.org|2.71"
     }],
     "contains" : [{
       "system" : "http://loinc.org",
@@ -33843,10 +34944,11 @@ e: {
 e: {
   "valueSet" : {
   "resourceType" : "ValueSet",
+  "language" : "en",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:e802ffdf-5408-43ec-beb3-3a6f51e3cd50",
-    "timestamp" : "2021-04-13T13:42:14.225Z",
+    "identifier" : "urn:uuid:d65e1d39-be73-454e-b6a3-fd367be2bf17",
+    "timestamp" : "2021-09-14T11:56:08.018Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -33857,7 +34959,7 @@ e: {
     },
     {
       "name" : "version",
-      "valueString" : "http://loinc.org|2.68"
+      "valueString" : "http://loinc.org|2.71"
     }],
     "contains" : [{
       "system" : "http://loinc.org",
@@ -33898,6 +35000,11 @@ e: {
       "system" : "http://loinc.org",
       "code" : "83083-6",
       "display" : "Cancer Ag 15-3 [Units/volume] in Serum or Plasma by Immunoassay"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "97749-6",
+      "display" : "Cancer Ag 15-3 [Units/volume] in Aspirate"
     }]
   }
 },
@@ -33920,10 +35027,11 @@ e: {
 e: {
   "valueSet" : {
   "resourceType" : "ValueSet",
+  "language" : "en",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:5deda209-122f-4da1-9fb4-ce5e4ce88895",
-    "timestamp" : "2021-04-13T13:42:14.460Z",
+    "identifier" : "urn:uuid:9ab0d60c-cdef-403d-9fd0-025e769c147b",
+    "timestamp" : "2021-09-14T11:56:08.189Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -33934,7 +35042,7 @@ e: {
     },
     {
       "name" : "version",
-      "valueString" : "http://loinc.org|2.68"
+      "valueString" : "http://loinc.org|2.71"
     }],
     "contains" : [{
       "system" : "http://loinc.org",
@@ -33962,10 +35070,11 @@ e: {
 e: {
   "valueSet" : {
   "resourceType" : "ValueSet",
+  "language" : "en",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:6d24f9fd-be6c-4ab9-b652-8968d7fc569e",
-    "timestamp" : "2021-04-13T13:42:14.944Z",
+    "identifier" : "urn:uuid:42044eda-c4e8-4415-acf4-c78e7c63c98e",
+    "timestamp" : "2021-09-14T11:56:08.377Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -33976,7 +35085,7 @@ e: {
     },
     {
       "name" : "version",
-      "valueString" : "http://loinc.org|2.68"
+      "valueString" : "http://loinc.org|2.71"
     }],
     "contains" : [{
       "system" : "http://loinc.org",
@@ -34019,10 +35128,11 @@ e: {
 e: {
   "valueSet" : {
   "resourceType" : "ValueSet",
+  "language" : "en",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:5db5f837-67ba-4e09-a254-1db89812d57d",
-    "timestamp" : "2021-04-13T13:42:15.210Z",
+    "identifier" : "urn:uuid:34b633ea-4487-4871-967c-4129f41b6029",
+    "timestamp" : "2021-09-14T11:56:08.564Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -34033,7 +35143,7 @@ e: {
     },
     {
       "name" : "version",
-      "valueString" : "http://loinc.org|2.68"
+      "valueString" : "http://loinc.org|2.71"
     }],
     "contains" : [{
       "system" : "http://loinc.org",
@@ -34066,10 +35176,11 @@ e: {
 e: {
   "valueSet" : {
   "resourceType" : "ValueSet",
+  "language" : "en",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:bec97ce9-cb3d-44d7-8f7e-af5148627a7d",
-    "timestamp" : "2021-04-13T13:42:15.475Z",
+    "identifier" : "urn:uuid:047362e6-95c9-4898-8429-3a3c849b0c60",
+    "timestamp" : "2021-09-14T11:56:08.752Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -34080,7 +35191,7 @@ e: {
     },
     {
       "name" : "version",
-      "valueString" : "http://loinc.org|2.68"
+      "valueString" : "http://loinc.org|2.71"
     }],
     "contains" : [{
       "system" : "http://loinc.org",
@@ -34118,10 +35229,11 @@ e: {
 e: {
   "valueSet" : {
   "resourceType" : "ValueSet",
+  "language" : "en",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:ec0de0a7-5465-4918-b1df-9da8398ac2c5",
-    "timestamp" : "2021-04-13T13:42:16.194Z",
+    "identifier" : "urn:uuid:5e78aa83-12e1-4b6c-9c11-0322a7582db9",
+    "timestamp" : "2021-09-14T11:56:09.002Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -34132,7 +35244,7 @@ e: {
     },
     {
       "name" : "version",
-      "valueString" : "http://loinc.org|2.68"
+      "valueString" : "http://loinc.org|2.71"
     }],
     "contains" : [{
       "system" : "http://loinc.org",
@@ -34195,10 +35307,11 @@ e: {
 e: {
   "valueSet" : {
   "resourceType" : "ValueSet",
+  "language" : "en",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:604f842a-c9c2-47b8-8d53-ab26139f94d9",
-    "timestamp" : "2021-04-13T13:42:16.428Z",
+    "identifier" : "urn:uuid:57f6f89a-d53d-45cc-a8ce-3fcdbc74a2bd",
+    "timestamp" : "2021-09-14T11:56:09.252Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -34209,7 +35322,7 @@ e: {
     },
     {
       "name" : "version",
-      "valueString" : "http://loinc.org|2.68"
+      "valueString" : "http://loinc.org|2.71"
     }],
     "contains" : [{
       "system" : "http://loinc.org",
@@ -34237,10 +35350,11 @@ e: {
 e: {
   "valueSet" : {
   "resourceType" : "ValueSet",
+  "language" : "en",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:7f9b664e-cf35-45dc-8305-201de55d70fa",
-    "timestamp" : "2021-04-13T13:42:16.694Z",
+    "identifier" : "urn:uuid:be9c95db-f71f-4709-ba82-cf134c1ead44",
+    "timestamp" : "2021-09-14T11:56:09.455Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -34251,7 +35365,7 @@ e: {
     },
     {
       "name" : "version",
-      "valueString" : "http://loinc.org|2.68"
+      "valueString" : "http://loinc.org|2.71"
     }],
     "contains" : [{
       "system" : "http://loinc.org",
@@ -34279,10 +35393,11 @@ e: {
 e: {
   "valueSet" : {
   "resourceType" : "ValueSet",
+  "language" : "en",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:163c8c91-1b58-4d6c-aea2-d3ec5c4841ff",
-    "timestamp" : "2021-04-13T13:42:16.960Z",
+    "identifier" : "urn:uuid:f3a0c9d9-3905-4bb9-a9ee-993ade21cf38",
+    "timestamp" : "2021-09-14T11:56:09.643Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -34293,7 +35408,7 @@ e: {
     },
     {
       "name" : "version",
-      "valueString" : "http://loinc.org|2.68"
+      "valueString" : "http://loinc.org|2.71"
     }],
     "contains" : [{
       "system" : "http://loinc.org",
@@ -34361,10 +35476,11 @@ e: {
 e: {
   "valueSet" : {
   "resourceType" : "ValueSet",
+  "language" : "en",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:4efe9a29-a176-4446-9735-f8789c743501",
-    "timestamp" : "2021-04-13T13:42:17.194Z",
+    "identifier" : "urn:uuid:5c7d0d8a-0055-4f18-83cc-2c0561bfed04",
+    "timestamp" : "2021-09-14T11:56:09.892Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -34375,7 +35491,7 @@ e: {
     },
     {
       "name" : "version",
-      "valueString" : "http://loinc.org|2.68"
+      "valueString" : "http://loinc.org|2.71"
     }],
     "contains" : [{
       "system" : "http://loinc.org",
@@ -34413,10 +35529,11 @@ e: {
 e: {
   "valueSet" : {
   "resourceType" : "ValueSet",
+  "language" : "en",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:0cc96034-766d-4c66-869a-377310c3eb88",
-    "timestamp" : "2021-04-13T13:42:17.460Z",
+    "identifier" : "urn:uuid:b563e636-33b5-45cb-8c26-085d5d05ddb9",
+    "timestamp" : "2021-09-14T11:56:10.080Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -34427,7 +35544,7 @@ e: {
     },
     {
       "name" : "version",
-      "valueString" : "http://loinc.org|2.68"
+      "valueString" : "http://loinc.org|2.71"
     }],
     "contains" : [{
       "system" : "http://loinc.org",
@@ -34442,7 +35559,7 @@ e: {
     {
       "system" : "http://loinc.org",
       "code" : "20601-1",
-      "display" : "CD33 cells/100 cells in Unspecified specimen"
+      "display" : "CD33 cells/100 cells in Specimen"
     },
     {
       "system" : "http://loinc.org",
@@ -34462,7 +35579,7 @@ e: {
     {
       "system" : "http://loinc.org",
       "code" : "51156-8",
-      "display" : "CD33 blasts/100 blasts in Unspecified specimen"
+      "display" : "CD33 blasts/100 blasts in Specimen"
     },
     {
       "system" : "http://loinc.org",
@@ -34477,7 +35594,7 @@ e: {
     {
       "system" : "http://loinc.org",
       "code" : "51159-2",
-      "display" : "CD33 blasts [Units/volume] in Unspecified specimen"
+      "display" : "CD33 blasts [Units/volume] in Specimen"
     },
     {
       "system" : "http://loinc.org",
@@ -34525,10 +35642,11 @@ e: {
 e: {
   "valueSet" : {
   "resourceType" : "ValueSet",
+  "language" : "en",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:c3fc66cc-e869-4387-a343-7a465174fac2",
-    "timestamp" : "2021-04-13T13:42:17.694Z",
+    "identifier" : "urn:uuid:206d7f76-3ce1-46c1-b43f-d31aacd3c64c",
+    "timestamp" : "2021-09-14T11:56:10.283Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -34539,7 +35657,7 @@ e: {
     },
     {
       "name" : "version",
-      "valueString" : "http://loinc.org|2.68"
+      "valueString" : "http://loinc.org|2.71"
     }],
     "contains" : [{
       "system" : "http://loinc.org",
@@ -34559,7 +35677,7 @@ e: {
     {
       "system" : "http://loinc.org",
       "code" : "20595-5",
-      "display" : "CD20 cells/100 cells in Unspecified specimen"
+      "display" : "CD20 cells/100 cells in Specimen"
     },
     {
       "system" : "http://loinc.org",
@@ -34574,7 +35692,7 @@ e: {
     {
       "system" : "http://loinc.org",
       "code" : "51116-2",
-      "display" : "CD20 blasts/100 blasts in Unspecified specimen"
+      "display" : "CD20 blasts/100 blasts in Specimen"
     },
     {
       "system" : "http://loinc.org",
@@ -34589,12 +35707,17 @@ e: {
     {
       "system" : "http://loinc.org",
       "code" : "74837-6",
-      "display" : "CD20 cells [#/volume] in Unspecified specimen"
+      "display" : "CD20 cells [#/volume] in Specimen"
     },
     {
       "system" : "http://loinc.org",
       "code" : "8119-0",
       "display" : "CD20 cells/100 cells in Blood"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "94689-7",
+      "display" : "CD20 cells/100 CD19 cells in Blood"
     },
     {
       "system" : "http://loinc.org",
@@ -34622,10 +35745,11 @@ e: {
 e: {
   "valueSet" : {
   "resourceType" : "ValueSet",
+  "language" : "en",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:d7561af0-7b3b-4125-8aee-6dc3c1600b9b",
-    "timestamp" : "2021-04-13T13:42:17.928Z",
+    "identifier" : "urn:uuid:64a17088-d684-4f89-8831-cffb080be310",
+    "timestamp" : "2021-09-14T11:56:10.549Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -34636,7 +35760,7 @@ e: {
     },
     {
       "name" : "version",
-      "valueString" : "http://loinc.org|2.68"
+      "valueString" : "http://loinc.org|2.71"
     }],
     "contains" : [{
       "system" : "http://loinc.org",
@@ -34729,10 +35853,11 @@ e: {
 e: {
   "valueSet" : {
   "resourceType" : "ValueSet",
+  "language" : "en",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:70a432ba-6698-4f7e-97ec-030c469e1bd5",
-    "timestamp" : "2021-04-13T13:42:18.163Z",
+    "identifier" : "urn:uuid:97694bd7-f2fb-4962-ae06-17f61dc96623",
+    "timestamp" : "2021-09-14T11:56:10.736Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -34743,7 +35868,7 @@ e: {
     },
     {
       "name" : "version",
-      "valueString" : "http://loinc.org|2.68"
+      "valueString" : "http://loinc.org|2.71"
     }],
     "contains" : [{
       "system" : "http://loinc.org",
@@ -34771,10 +35896,11 @@ e: {
 e: {
   "valueSet" : {
   "resourceType" : "ValueSet",
+  "language" : "en",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:3ceac975-1f79-4507-a08d-5b815c454776",
-    "timestamp" : "2021-04-13T13:42:18.428Z",
+    "identifier" : "urn:uuid:543c1c2d-4171-4c8a-b61b-fffa5269a1be",
+    "timestamp" : "2021-09-14T11:56:11.002Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -34785,7 +35911,7 @@ e: {
     },
     {
       "name" : "version",
-      "valueString" : "http://loinc.org|2.68"
+      "valueString" : "http://loinc.org|2.71"
     }],
     "contains" : [{
       "system" : "http://loinc.org",
@@ -34818,10 +35944,11 @@ e: {
 e: {
   "valueSet" : {
   "resourceType" : "ValueSet",
+  "language" : "en",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:3cbcdf1e-4427-4ec9-8f22-ff3c769b411a",
-    "timestamp" : "2021-04-13T13:42:18.710Z",
+    "identifier" : "urn:uuid:7e8fcfca-a748-43bf-b62f-d7430ea27b06",
+    "timestamp" : "2021-09-14T11:56:11.252Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -34832,7 +35959,7 @@ e: {
     },
     {
       "name" : "version",
-      "valueString" : "http://loinc.org|2.68"
+      "valueString" : "http://loinc.org|2.71"
     }],
     "contains" : [{
       "system" : "http://loinc.org",
@@ -34880,10 +36007,11 @@ e: {
 e: {
   "valueSet" : {
   "resourceType" : "ValueSet",
+  "language" : "en",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:5ee7e5c3-ce69-4762-9991-5cbce20a87bd",
-    "timestamp" : "2021-04-13T13:42:18.975Z",
+    "identifier" : "urn:uuid:4835acdc-a48a-4843-bb49-bf42ebd8de52",
+    "timestamp" : "2021-09-14T11:56:11.486Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -34894,7 +36022,7 @@ e: {
     },
     {
       "name" : "version",
-      "valueString" : "http://loinc.org|2.68"
+      "valueString" : "http://loinc.org|2.71"
     }],
     "contains" : [{
       "system" : "http://loinc.org",
@@ -34904,7 +36032,7 @@ e: {
     {
       "system" : "http://loinc.org",
       "code" : "20596-3",
-      "display" : "CD22 cells/100 cells in Unspecified specimen"
+      "display" : "CD22 cells/100 cells in Specimen"
     },
     {
       "system" : "http://loinc.org",
@@ -34929,7 +36057,7 @@ e: {
     {
       "system" : "http://loinc.org",
       "code" : "51126-1",
-      "display" : "CD22 blasts/100 blasts in Unspecified specimen"
+      "display" : "CD22 blasts/100 blasts in Specimen"
     },
     {
       "system" : "http://loinc.org",
@@ -34944,7 +36072,7 @@ e: {
     {
       "system" : "http://loinc.org",
       "code" : "51129-5",
-      "display" : "CD22 blasts [Units/volume] in Unspecified specimen"
+      "display" : "CD22 blasts [Units/volume] in Specimen"
     }]
   }
 },
@@ -34967,10 +36095,11 @@ e: {
 e: {
   "valueSet" : {
   "resourceType" : "ValueSet",
+  "language" : "en",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:01048d26-1623-48bb-b9f2-dd425e623050",
-    "timestamp" : "2021-04-13T13:42:19.210Z",
+    "identifier" : "urn:uuid:d59e9505-7376-4508-a45f-7bd31b31ddc6",
+    "timestamp" : "2021-09-14T11:56:11.642Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -34981,7 +36110,7 @@ e: {
     },
     {
       "name" : "version",
-      "valueString" : "http://loinc.org|2.68"
+      "valueString" : "http://loinc.org|2.71"
     }],
     "contains" : [{
       "system" : "http://loinc.org",
@@ -35039,10 +36168,11 @@ e: {
 e: {
   "valueSet" : {
   "resourceType" : "ValueSet",
+  "language" : "en",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:754d39be-dcc0-446d-aeb3-afc382010fa7",
-    "timestamp" : "2021-04-13T13:42:19.444Z",
+    "identifier" : "urn:uuid:d8ead570-744a-45b9-9803-8f9183e45a09",
+    "timestamp" : "2021-09-14T11:56:11.830Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -35053,7 +36183,7 @@ e: {
     },
     {
       "name" : "version",
-      "valueString" : "http://loinc.org|2.68"
+      "valueString" : "http://loinc.org|2.71"
     }],
     "contains" : [{
       "system" : "http://loinc.org",
@@ -35091,10 +36221,11 @@ e: {
 e: {
   "valueSet" : {
   "resourceType" : "ValueSet",
+  "language" : "en",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:4d46e34b-175e-42a7-8e48-1c3b0f8c4683",
-    "timestamp" : "2021-04-13T13:42:19.710Z",
+    "identifier" : "urn:uuid:8ca69afc-e6fa-4cad-9aaa-6f032ab416f2",
+    "timestamp" : "2021-09-14T11:56:12.017Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -35105,7 +36236,7 @@ e: {
     },
     {
       "name" : "version",
-      "valueString" : "http://loinc.org|2.68"
+      "valueString" : "http://loinc.org|2.71"
     }],
     "contains" : [{
       "system" : "http://loinc.org",
@@ -35151,6 +36282,11 @@ e: {
       "system" : "http://loinc.org",
       "code" : "68938-0",
       "display" : "Cytokeratin 19 [Mass/volume] in Pleural fluid"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "97748-8",
+      "display" : "Cytokeratin 19 [Mass/volume] in Aspirate"
     }]
   }
 },
@@ -35173,10 +36309,11 @@ e: {
 e: {
   "valueSet" : {
   "resourceType" : "ValueSet",
+  "language" : "en",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:e0a1e2c5-6e62-4c14-8612-94c9cc9d2001",
-    "timestamp" : "2021-04-13T13:42:19.975Z",
+    "identifier" : "urn:uuid:1a4d2de9-6e74-4022-b016-0a26f709d441",
+    "timestamp" : "2021-09-14T11:56:12.236Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -35187,7 +36324,7 @@ e: {
     },
     {
       "name" : "version",
-      "valueString" : "http://loinc.org|2.68"
+      "valueString" : "http://loinc.org|2.71"
     }],
     "contains" : [{
       "system" : "http://loinc.org",
@@ -35245,10 +36382,11 @@ e: {
 e: {
   "valueSet" : {
   "resourceType" : "ValueSet",
+  "language" : "en",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:da0fe62c-ef30-4316-bef1-31775e93cb38",
-    "timestamp" : "2021-04-13T13:42:20.413Z",
+    "identifier" : "urn:uuid:925015cd-8933-41b4-ad39-5adce57eacce",
+    "timestamp" : "2021-09-14T11:56:12.393Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -35259,7 +36397,7 @@ e: {
     },
     {
       "name" : "version",
-      "valueString" : "http://loinc.org|2.68"
+      "valueString" : "http://loinc.org|2.71"
     }],
     "contains" : [{
       "system" : "http://loinc.org",
@@ -35307,10 +36445,11 @@ e: {
 e: {
   "valueSet" : {
   "resourceType" : "ValueSet",
+  "language" : "en",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:37c989f9-a23d-4a5d-86d4-7c8ad52aa333",
-    "timestamp" : "2021-04-13T13:42:20.647Z",
+    "identifier" : "urn:uuid:ab9a6a34-47af-4a9a-8d1d-a7360ecbbb28",
+    "timestamp" : "2021-09-14T11:56:12.596Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -35321,7 +36460,7 @@ e: {
     },
     {
       "name" : "version",
-      "valueString" : "http://loinc.org|2.68"
+      "valueString" : "http://loinc.org|2.71"
     }],
     "contains" : [{
       "system" : "http://loinc.org",
@@ -35384,10 +36523,11 @@ e: {
 e: {
   "valueSet" : {
   "resourceType" : "ValueSet",
+  "language" : "en",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:a3c57a25-4538-48e7-8cfe-87e98f8d3de6",
-    "timestamp" : "2021-04-13T13:42:20.881Z",
+    "identifier" : "urn:uuid:361766c5-9fd1-4cb3-8b67-54bb8f3f441b",
+    "timestamp" : "2021-09-14T11:56:12.846Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -35398,7 +36538,7 @@ e: {
     },
     {
       "name" : "version",
-      "valueString" : "http://loinc.org|2.68"
+      "valueString" : "http://loinc.org|2.71"
     }],
     "contains" : [{
       "system" : "http://loinc.org",
@@ -35418,7 +36558,7 @@ e: {
     {
       "system" : "http://loinc.org",
       "code" : "51185-7",
-      "display" : "CD117 Ag [Presence] in Unspecified specimen by Immune stain"
+      "display" : "CD117 Ag [Presence] in Specimen by Immune stain"
     },
     {
       "system" : "http://loinc.org",
@@ -35446,10 +36586,11 @@ e: {
 e: {
   "valueSet" : {
   "resourceType" : "ValueSet",
+  "language" : "en",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:83c1a060-abf8-4c20-be4c-97e5fd0c4c52",
-    "timestamp" : "2021-04-13T13:42:21.147Z",
+    "identifier" : "urn:uuid:0d6c85ef-9ceb-4a9d-88d6-9ea19d713df8",
+    "timestamp" : "2021-09-14T11:56:13.033Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -35460,7 +36601,7 @@ e: {
     },
     {
       "name" : "version",
-      "valueString" : "http://loinc.org|2.68"
+      "valueString" : "http://loinc.org|2.71"
     }],
     "contains" : [{
       "system" : "http://loinc.org",
@@ -35488,10 +36629,11 @@ e: {
 e: {
   "valueSet" : {
   "resourceType" : "ValueSet",
+  "language" : "en",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:1985b56f-560a-4ffa-9a16-25b94a4173ee",
-    "timestamp" : "2021-04-13T13:42:21.413Z",
+    "identifier" : "urn:uuid:e1e6a3dd-b60a-471b-91d6-c9c47704438c",
+    "timestamp" : "2021-09-14T11:56:13.283Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -35502,7 +36644,7 @@ e: {
     },
     {
       "name" : "version",
-      "valueString" : "http://loinc.org|2.68"
+      "valueString" : "http://loinc.org|2.71"
     }],
     "contains" : [{
       "system" : "http://loinc.org",
@@ -35530,10 +36672,11 @@ e: {
 e: {
   "valueSet" : {
   "resourceType" : "ValueSet",
+  "language" : "en",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:ad8f9532-56b6-4636-aff1-178dc3f0c7ce",
-    "timestamp" : "2021-04-13T13:42:22.147Z",
+    "identifier" : "urn:uuid:477e4efa-7bd8-49e8-bbaf-748139570d5b",
+    "timestamp" : "2021-09-14T11:56:13.486Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -35544,7 +36687,7 @@ e: {
     },
     {
       "name" : "version",
-      "valueString" : "http://loinc.org|2.68"
+      "valueString" : "http://loinc.org|2.71"
     }],
     "contains" : [{
       "system" : "http://loinc.org",
@@ -35612,10 +36755,11 @@ e: {
 e: {
   "valueSet" : {
   "resourceType" : "ValueSet",
+  "language" : "en",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:ea8b2890-281e-46a4-af1a-b08541786e8b",
-    "timestamp" : "2021-04-13T13:42:22.585Z",
+    "identifier" : "urn:uuid:b7f60d6c-afb7-402a-a5a2-aa2e3a4505c9",
+    "timestamp" : "2021-09-14T11:56:13.736Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -35626,7 +36770,7 @@ e: {
     },
     {
       "name" : "version",
-      "valueString" : "http://loinc.org|2.68"
+      "valueString" : "http://loinc.org|2.71"
     }],
     "contains" : [{
       "system" : "http://loinc.org",
@@ -35654,10 +36798,11 @@ e: {
 e: {
   "valueSet" : {
   "resourceType" : "ValueSet",
+  "language" : "en",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:18e9db91-f677-4bcd-afa2-ad72bd65b945",
-    "timestamp" : "2021-04-13T13:42:22.866Z",
+    "identifier" : "urn:uuid:b689f98b-d1b7-4a61-926e-37e9a01193d7",
+    "timestamp" : "2021-09-14T11:56:13.924Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -35668,7 +36813,7 @@ e: {
     },
     {
       "name" : "version",
-      "valueString" : "http://loinc.org|2.68"
+      "valueString" : "http://loinc.org|2.71"
     }],
     "contains" : [{
       "system" : "http://loinc.org",
@@ -35731,10 +36876,11 @@ e: {
 e: {
   "valueSet" : {
   "resourceType" : "ValueSet",
+  "language" : "en",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:f5e19956-eb77-4d4d-b9c4-41b47333ab00",
-    "timestamp" : "2021-04-13T13:42:23.100Z",
+    "identifier" : "urn:uuid:63019179-5f4b-41ed-b455-fc705ae09e52",
+    "timestamp" : "2021-09-14T11:56:14.127Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -35745,7 +36891,7 @@ e: {
     },
     {
       "name" : "version",
-      "valueString" : "http://loinc.org|2.68"
+      "valueString" : "http://loinc.org|2.71"
     }],
     "contains" : [{
       "system" : "http://loinc.org",
@@ -35793,10 +36939,11 @@ e: {
 e: {
   "valueSet" : {
   "resourceType" : "ValueSet",
+  "language" : "en",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:182d408d-283e-4b95-8199-9567a7c59cdc",
-    "timestamp" : "2021-04-13T13:42:23.366Z",
+    "identifier" : "urn:uuid:8b57bc22-7ad5-4d73-84ca-898d10892adf",
+    "timestamp" : "2021-09-14T11:56:14.330Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -35807,7 +36954,7 @@ e: {
     },
     {
       "name" : "version",
-      "valueString" : "http://loinc.org|2.68"
+      "valueString" : "http://loinc.org|2.71"
     }],
     "contains" : [{
       "system" : "http://loinc.org",
@@ -35840,10 +36987,11 @@ e: {
 e: {
   "valueSet" : {
   "resourceType" : "ValueSet",
+  "language" : "en",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:7215bb70-898a-4bc3-85e6-85a66e965d5c",
-    "timestamp" : "2021-04-13T13:42:23.631Z",
+    "identifier" : "urn:uuid:1f36c25e-0eba-438a-a94c-f3a3960af953",
+    "timestamp" : "2021-09-14T11:56:14.533Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -35851,6 +36999,15 @@ e: {
     {
       "name" : "excludeNested",
       "valueBoolean" : true
+    },
+    {
+      "name" : "version",
+      "valueString" : "http://loinc.org|2.71"
+    }],
+    "contains" : [{
+      "system" : "http://loinc.org",
+      "code" : "10480-2",
+      "display" : "Estrogen+Progesterone receptor Ag [Presence] in Tissue by Immune stain"
     }]
   }
 },
@@ -35873,10 +37030,11 @@ e: {
 e: {
   "valueSet" : {
   "resourceType" : "ValueSet",
+  "language" : "en",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:7a768e14-4158-45c5-944a-f96a94d16c34",
-    "timestamp" : "2021-04-13T13:42:23.897Z",
+    "identifier" : "urn:uuid:d93f1e1b-f93c-4c7b-bd1c-e01385da75b7",
+    "timestamp" : "2021-09-14T11:56:14.799Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -35887,7 +37045,7 @@ e: {
     },
     {
       "name" : "version",
-      "valueString" : "http://loinc.org|2.68"
+      "valueString" : "http://loinc.org|2.71"
     }],
     "contains" : [{
       "system" : "http://loinc.org",
@@ -35920,10 +37078,11 @@ e: {
 e: {
   "valueSet" : {
   "resourceType" : "ValueSet",
+  "language" : "en",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:f4cd0cda-4237-49ef-9f78-8d991756805d",
-    "timestamp" : "2021-04-13T13:42:24.163Z",
+    "identifier" : "urn:uuid:3d44866d-805b-449b-8f76-47668592fc9d",
+    "timestamp" : "2021-09-14T11:56:14.986Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -35934,7 +37093,7 @@ e: {
     },
     {
       "name" : "version",
-      "valueString" : "http://loinc.org|2.68"
+      "valueString" : "http://loinc.org|2.71"
     }],
     "contains" : [{
       "system" : "http://loinc.org",
@@ -35977,10 +37136,11 @@ e: {
 e: {
   "valueSet" : {
   "resourceType" : "ValueSet",
+  "language" : "en",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:0f07d963-67d5-4276-95c5-33dd38be2760",
-    "timestamp" : "2021-04-13T13:42:24.428Z",
+    "identifier" : "urn:uuid:b3ca2ed3-770b-451b-99d7-426991e59656",
+    "timestamp" : "2021-09-14T11:56:15.221Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -35991,7 +37151,7 @@ e: {
     },
     {
       "name" : "version",
-      "valueString" : "http://loinc.org|2.68"
+      "valueString" : "http://loinc.org|2.71"
     }],
     "contains" : [{
       "system" : "http://loinc.org",
@@ -36019,10 +37179,11 @@ e: {
 e: {
   "valueSet" : {
   "resourceType" : "ValueSet",
+  "language" : "en",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:987cab7d-bbb1-4d18-9af5-5c728ae181e0",
-    "timestamp" : "2021-04-13T13:42:24.694Z",
+    "identifier" : "urn:uuid:18d98dc6-6b4c-4dd6-b1c5-9faaea2628d8",
+    "timestamp" : "2021-09-14T11:56:15.439Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -36030,6 +37191,15 @@ e: {
     {
       "name" : "excludeNested",
       "valueBoolean" : true
+    },
+    {
+      "name" : "version",
+      "valueString" : "http://loinc.org|2.71"
+    }],
+    "contains" : [{
+      "system" : "http://loinc.org",
+      "code" : "42332-7",
+      "display" : "Alpha-1-Fetoprotein L3/Alpha-1-fetoprotein.total in Serum or Plasma"
     }]
   }
 },
@@ -36052,10 +37222,11 @@ e: {
 e: {
   "valueSet" : {
   "resourceType" : "ValueSet",
+  "language" : "en",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:0a2ffe81-12b5-48f8-afd1-4ea746361a76",
-    "timestamp" : "2021-04-13T13:42:24.960Z",
+    "identifier" : "urn:uuid:067e36a3-df14-48ec-b984-b8b30c9743d3",
+    "timestamp" : "2021-09-14T11:56:15.596Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -36066,7 +37237,7 @@ e: {
     },
     {
       "name" : "version",
-      "valueString" : "http://loinc.org|2.68"
+      "valueString" : "http://loinc.org|2.71"
     }],
     "contains" : [{
       "system" : "http://loinc.org",
@@ -36094,10 +37265,11 @@ e: {
 e: {
   "valueSet" : {
   "resourceType" : "ValueSet",
+  "language" : "en",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:adeb45e0-05aa-41fe-9f65-9459a37c7b43",
-    "timestamp" : "2021-04-13T13:42:25.225Z",
+    "identifier" : "urn:uuid:17b61cd8-6fb4-45c8-bd51-23c2c4a4bd25",
+    "timestamp" : "2021-09-14T11:56:15.799Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -36108,7 +37280,7 @@ e: {
     },
     {
       "name" : "version",
-      "valueString" : "http://loinc.org|2.68"
+      "valueString" : "http://loinc.org|2.71"
     }],
     "contains" : [{
       "system" : "http://loinc.org",
@@ -36141,10 +37313,11 @@ e: {
 e: {
   "valueSet" : {
   "resourceType" : "ValueSet",
+  "language" : "en",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:ff819702-6d2c-4c7e-9c36-62c050498c38",
-    "timestamp" : "2021-04-13T13:42:25.491Z",
+    "identifier" : "urn:uuid:b1c1d196-db2d-4453-98ba-0619b7d57bd4",
+    "timestamp" : "2021-09-14T11:56:15.986Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -36155,7 +37328,7 @@ e: {
     },
     {
       "name" : "version",
-      "valueString" : "http://loinc.org|2.68"
+      "valueString" : "http://loinc.org|2.71"
     }],
     "contains" : [{
       "system" : "http://loinc.org",
@@ -36183,10 +37356,11 @@ e: {
 e: {
   "valueSet" : {
   "resourceType" : "ValueSet",
+  "language" : "en",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:a27e13ac-f534-4eb2-bc3e-7cedac745433",
-    "timestamp" : "2021-04-13T13:42:25.756Z",
+    "identifier" : "urn:uuid:6ca70a4a-92b6-432e-9d32-d37b1be3b47c",
+    "timestamp" : "2021-09-14T11:56:16.189Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -36197,7 +37371,7 @@ e: {
     },
     {
       "name" : "version",
-      "valueString" : "http://loinc.org|2.68"
+      "valueString" : "http://loinc.org|2.71"
     }],
     "contains" : [{
       "system" : "http://loinc.org",
@@ -36225,10 +37399,11 @@ e: {
 e: {
   "valueSet" : {
   "resourceType" : "ValueSet",
+  "language" : "en",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:9254008e-ef8e-4ca1-88e0-230077ce2428",
-    "timestamp" : "2021-04-13T13:42:26.022Z",
+    "identifier" : "urn:uuid:ac387ab9-428b-4ed6-b88f-ab9f271b5c38",
+    "timestamp" : "2021-09-14T11:56:16.377Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -36239,7 +37414,7 @@ e: {
     },
     {
       "name" : "version",
-      "valueString" : "http://loinc.org|2.68"
+      "valueString" : "http://loinc.org|2.71"
     }],
     "contains" : [{
       "system" : "http://loinc.org",
@@ -36254,7 +37429,7 @@ e: {
     {
       "system" : "http://loinc.org",
       "code" : "72520-0",
-      "display" : "FLT3 gene p.Asp835+Ile836 [Presence] in Blood or Tissue by Molecular genetics method"
+      "display" : "FLT3 gene.p.Asp835+Ile836 mutations [Presence] in Blood or Tissue by Molecular genetics method"
     },
     {
       "system" : "http://loinc.org",
@@ -36270,6 +37445,16 @@ e: {
       "system" : "http://loinc.org",
       "code" : "92843-2",
       "display" : "FLT3 gene p.Asp835 mutations [Presence] in Blood or Tissue by Molecular genetics method"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "92844-0",
+      "display" : "FLT3 gene internal tandem duplication/Normal [Ratio] in Blood or Tissue by Molecular genetics method"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "98489-8",
+      "display" : "FLT3 gene internal tandem duplication length [#] in Blood or Tissue by Molecular genetics method"
     }]
   }
 },
@@ -36292,10 +37477,11 @@ e: {
 e: {
   "valueSet" : {
   "resourceType" : "ValueSet",
+  "language" : "en",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:7f631a52-3bf9-4c5c-8988-c1846b485699",
-    "timestamp" : "2021-04-13T13:42:26.256Z",
+    "identifier" : "urn:uuid:d4a2c509-10bf-4ee1-869a-f1d6c56435e3",
+    "timestamp" : "2021-09-14T11:56:16.580Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -36325,10 +37511,11 @@ e: {
 e: {
   "valueSet" : {
   "resourceType" : "ValueSet",
+  "language" : "en",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:3d36b42e-fb61-4726-93b4-21b037bb8505",
-    "timestamp" : "2021-04-13T13:42:26.538Z",
+    "identifier" : "urn:uuid:8bb142f9-564d-4210-b4a4-10b4413f52b3",
+    "timestamp" : "2021-09-14T11:56:16.752Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -36339,7 +37526,7 @@ e: {
     },
     {
       "name" : "version",
-      "valueString" : "http://loinc.org|2.68"
+      "valueString" : "http://loinc.org|2.71"
     }],
     "contains" : [{
       "system" : "http://loinc.org",
@@ -36367,10 +37554,11 @@ e: {
 e: {
   "valueSet" : {
   "resourceType" : "ValueSet",
+  "language" : "en",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:248d6616-ceea-4eb2-8cf7-7455afe71043",
-    "timestamp" : "2021-04-13T13:42:26.803Z",
+    "identifier" : "urn:uuid:901444ee-c1ba-4ff1-b8dd-8e535b6f45a2",
+    "timestamp" : "2021-09-14T11:56:16.971Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -36381,7 +37569,7 @@ e: {
     },
     {
       "name" : "version",
-      "valueString" : "http://loinc.org|2.68"
+      "valueString" : "http://loinc.org|2.71"
     }],
     "contains" : [{
       "system" : "http://loinc.org",
@@ -36409,10 +37597,11 @@ e: {
 e: {
   "valueSet" : {
   "resourceType" : "ValueSet",
+  "language" : "en",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:0be1e1c1-42ca-47f3-9623-95e90aff7368",
-    "timestamp" : "2021-04-13T13:42:27.069Z",
+    "identifier" : "urn:uuid:9cc43b69-1db3-48b4-ad14-e05c80a6fb3f",
+    "timestamp" : "2021-09-14T11:56:17.205Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -36423,7 +37612,7 @@ e: {
     },
     {
       "name" : "version",
-      "valueString" : "http://loinc.org|2.68"
+      "valueString" : "http://loinc.org|2.71"
     }],
     "contains" : [{
       "system" : "http://loinc.org",
@@ -36434,1082 +37623,14 @@ e: {
       "system" : "http://loinc.org",
       "code" : "77191-5",
       "display" : "Deprecated Human epididymis protein 4 [Moles/volume] in Serum or Plasma by Immunoassay"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "96044-3",
+      "display" : "Human epididymis protein 4 [Mass/volume] in Serum or Plasma"
     }]
   }
 },
-  "error" : ""
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://loinc.org",
-  "code" : "22637-3",
-  "display" : "Pathology report final diagnosis Narrative"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
-v: {
-  "display" : "Pathology report final diagnosis Narrative",
-  "severity" : null,
-  "error" : ""
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://loinc.org",
-  "code" : "97509-4"
-}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
-v: {
-  "display" : "",
-  "severity" : "error",
-  "error" : "The code \"97509-4\" is not valid in the system http://loinc.org; The code provided (http://loinc.org#97509-4) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4)"
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://loinc.org",
-  "code" : "97509-4"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
-v: {
-  "display" : "",
-  "severity" : "error",
-  "error" : "The code \"97509-4\" is not valid in the system http://loinc.org; The code provided (http://loinc.org#97509-4) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4)"
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://loinc.org",
-  "code" : "82155-3"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
-v: {
-  "display" : "Genomic structural variant copy number",
-  "severity" : null,
-  "error" : ""
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://loinc.org",
-  "code" : "97509-4",
-  "display" : "Cancer Disease Progression"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
-v: {
-  "display" : "",
-  "severity" : "error",
-  "error" : "The code \"97509-4\" is not valid in the system http://loinc.org; The code provided (http://loinc.org#97509-4) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4)"
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://loinc.org",
-  "code" : "81258-6"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
-v: {
-  "display" : "Sample variant allelic frequency [NFr]",
-  "severity" : null,
-  "error" : ""
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://loinc.org",
-  "code" : "53034-5"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
-v: {
-  "display" : "Allelic state",
-  "severity" : null,
-  "error" : ""
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://loinc.org",
-  "code" : "97509-4"
-}, "valueSet" :{
-  "resourceType" : "ValueSet",
-  "compose" : {
-    "include" : [{
-      "system" : "http://loinc.org"
-    }]
-  }
-}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
-v: {
-  "display" : "",
-  "severity" : "error",
-  "error" : "The code \"97509-4\" is not valid in the system http://loinc.org; The code provided (http://loinc.org#97509-4) is not valid (from http://tx.fhir.org/r4)"
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://loinc.org",
-  "code" : "97509-4",
-  "display" : "Cancer Disease Progression"
-}, "valueSet" :{
-  "resourceType" : "ValueSet",
-  "compose" : {
-    "include" : [{
-      "system" : "http://loinc.org"
-    }]
-  }
-}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK"}####
-v: {
-  "display" : "",
-  "severity" : "error",
-  "error" : "The code \"97509-4\" is not valid in the system http://loinc.org; The code provided (http://loinc.org#97509-4) is not valid in the value set 'LOINCCodes' (from http://tx.fhir.org/r4)"
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://loinc.org",
-  "code" : "97509-4"
-}, "valueSet" :{
-  "resourceType" : "ValueSet",
-  "compose" : {
-    "include" : [{
-      "system" : "http://loinc.org",
-      "concept" : [{
-        "code" : "21908-9",
-        "display" : "Stage group.clinical Cancer"
-      },
-      {
-        "code" : "21902-2",
-        "display" : "Stage group.pathology Cancer"
-      },
-      {
-        "code" : "21914-7",
-        "display" : "Stage group.other Cancer"
-      }]
-    }]
-  }
-}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
-v: {
-  "display" : "",
-  "severity" : "error",
-  "error" : "The code \"97509-4\" is not valid in the system http://loinc.org; The code provided (http://loinc.org#97509-4) is not valid (from http://tx.fhir.org/r4)"
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://loinc.org",
-  "code" : "97509-4",
-  "display" : "Cancer Disease Progression"
-}, "valueSet" :{
-  "resourceType" : "ValueSet",
-  "compose" : {
-    "include" : [{
-      "system" : "http://loinc.org",
-      "concept" : [{
-        "code" : "21908-9",
-        "display" : "Stage group.clinical Cancer"
-      },
-      {
-        "code" : "21902-2",
-        "display" : "Stage group.pathology Cancer"
-      },
-      {
-        "code" : "21914-7",
-        "display" : "Stage group.other Cancer"
-      }]
-    }]
-  }
-}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK"}####
-v: {
-  "display" : "",
-  "severity" : "error",
-  "error" : "The code \"97509-4\" is not valid in the system http://loinc.org; The code provided (http://loinc.org#97509-4) is not valid in the value set 'ObservationCodesStageGroupVS' (from http://tx.fhir.org/r4)"
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://loinc.org",
-  "code" : "97509-4"
-}, "valueSet" :{
-  "resourceType" : "ValueSet",
-  "compose" : {
-    "include" : [{
-      "system" : "http://loinc.org",
-      "concept" : [{
-        "code" : "21905-5",
-        "display" : "Primary tumor.clinical [Class] Cancer"
-      },
-      {
-        "code" : "21899-0",
-        "display" : "Primary tumor.pathology Cancer"
-      },
-      {
-        "code" : "21911-3",
-        "display" : "Primary tumor.other [Class] Cancer"
-      }]
-    }]
-  }
-}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
-v: {
-  "display" : "",
-  "severity" : "error",
-  "error" : "The code \"97509-4\" is not valid in the system http://loinc.org; The code provided (http://loinc.org#97509-4) is not valid (from http://tx.fhir.org/r4)"
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://loinc.org",
-  "code" : "97509-4",
-  "display" : "Cancer Disease Progression"
-}, "valueSet" :{
-  "resourceType" : "ValueSet",
-  "compose" : {
-    "include" : [{
-      "system" : "http://loinc.org",
-      "concept" : [{
-        "code" : "21905-5",
-        "display" : "Primary tumor.clinical [Class] Cancer"
-      },
-      {
-        "code" : "21899-0",
-        "display" : "Primary tumor.pathology Cancer"
-      },
-      {
-        "code" : "21911-3",
-        "display" : "Primary tumor.other [Class] Cancer"
-      }]
-    }]
-  }
-}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK"}####
-v: {
-  "display" : "",
-  "severity" : "error",
-  "error" : "The code \"97509-4\" is not valid in the system http://loinc.org; The code provided (http://loinc.org#97509-4) is not valid in the value set 'ObservationCodesPrimaryTumorVS' (from http://tx.fhir.org/r4)"
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://loinc.org",
-  "code" : "97509-4"
-}, "valueSet" :{
-  "resourceType" : "ValueSet",
-  "compose" : {
-    "include" : [{
-      "system" : "http://loinc.org",
-      "concept" : [{
-        "code" : "21906-3",
-        "display" : "Regional lymph nodes.clinical [Class] Cancer"
-      },
-      {
-        "code" : "21900-6",
-        "display" : "Regional lymph nodes.pathology [Class] Cancer"
-      },
-      {
-        "code" : "21912-1",
-        "display" : "Regional lymph nodes.other [Class] Cancer"
-      }]
-    }]
-  }
-}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
-v: {
-  "display" : "",
-  "severity" : "error",
-  "error" : "The code \"97509-4\" is not valid in the system http://loinc.org; The code provided (http://loinc.org#97509-4) is not valid (from http://tx.fhir.org/r4)"
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://loinc.org",
-  "code" : "97509-4",
-  "display" : "Cancer Disease Progression"
-}, "valueSet" :{
-  "resourceType" : "ValueSet",
-  "compose" : {
-    "include" : [{
-      "system" : "http://loinc.org",
-      "concept" : [{
-        "code" : "21906-3",
-        "display" : "Regional lymph nodes.clinical [Class] Cancer"
-      },
-      {
-        "code" : "21900-6",
-        "display" : "Regional lymph nodes.pathology [Class] Cancer"
-      },
-      {
-        "code" : "21912-1",
-        "display" : "Regional lymph nodes.other [Class] Cancer"
-      }]
-    }]
-  }
-}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK"}####
-v: {
-  "display" : "",
-  "severity" : "error",
-  "error" : "The code \"97509-4\" is not valid in the system http://loinc.org; The code provided (http://loinc.org#97509-4) is not valid in the value set 'ObservationCodesRegionalNodesVS' (from http://tx.fhir.org/r4)"
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://loinc.org",
-  "code" : "97509-4"
-}, "valueSet" :{
-  "resourceType" : "ValueSet",
-  "compose" : {
-    "include" : [{
-      "system" : "http://loinc.org",
-      "concept" : [{
-        "code" : "21907-1",
-        "display" : "Distant metastases.clinical [Class] Cancer"
-      },
-      {
-        "code" : "21901-4",
-        "display" : "Distant metastases.pathology [Class] Cancer"
-      },
-      {
-        "code" : "21913-9",
-        "display" : "Distant metastases.other [Class] Cancer"
-      }]
-    }]
-  }
-}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
-v: {
-  "display" : "",
-  "severity" : "error",
-  "error" : "The code \"97509-4\" is not valid in the system http://loinc.org; The code provided (http://loinc.org#97509-4) is not valid (from http://tx.fhir.org/r4)"
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://loinc.org",
-  "code" : "97509-4",
-  "display" : "Cancer Disease Progression"
-}, "valueSet" :{
-  "resourceType" : "ValueSet",
-  "compose" : {
-    "include" : [{
-      "system" : "http://loinc.org",
-      "concept" : [{
-        "code" : "21907-1",
-        "display" : "Distant metastases.clinical [Class] Cancer"
-      },
-      {
-        "code" : "21901-4",
-        "display" : "Distant metastases.pathology [Class] Cancer"
-      },
-      {
-        "code" : "21913-9",
-        "display" : "Distant metastases.other [Class] Cancer"
-      }]
-    }]
-  }
-}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK"}####
-v: {
-  "display" : "",
-  "severity" : "error",
-  "error" : "The code \"97509-4\" is not valid in the system http://loinc.org; The code provided (http://loinc.org#97509-4) is not valid in the value set 'ObservationCodesDistantMetastasesVS' (from http://tx.fhir.org/r4)"
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://loinc.org",
-  "code" : "97509-4"
-}, "valueSet" :{
-  "resourceType" : "ValueSet",
-  "compose" : {
-    "include" : [{
-      "system" : "http://loinc.org",
-      "filter" : [{
-        "property" : "ancestor",
-        "op" : "=",
-        "value" : "LP101591-8"
-      }]
-    }]
-  }
-}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
-v: {
-  "display" : "",
-  "severity" : "error",
-  "error" : "The code \"97509-4\" is not valid in the system http://loinc.org; The code provided (http://loinc.org#97509-4) is not valid (from http://tx.fhir.org/r4)"
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://loinc.org",
-  "code" : "97509-4"
-}, "valueSet" :{
-  "resourceType" : "ValueSet",
-  "compose" : {
-    "include" : [{
-      "system" : "http://loinc.org",
-      "filter" : [{
-        "property" : "ancestor",
-        "op" : "=",
-        "value" : "LP111251-7"
-      }]
-    }]
-  }
-}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
-v: {
-  "display" : "",
-  "severity" : "error",
-  "error" : "The code \"97509-4\" is not valid in the system http://loinc.org; The code provided (http://loinc.org#97509-4) is not valid (from http://tx.fhir.org/r4)"
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "coding" : [{
-    "system" : "http://loinc.org",
-    "code" : "97509-4",
-    "display" : "Cancer Disease Progression"
-  }]
-}, "valueSet" :{
-  "resourceType" : "ValueSet",
-  "compose" : {
-    "include" : [{
-      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/mcode-catch-code-cs",
-      "concept" : [{
-        "code" : "TMT-OTHER",
-        "display" : "Other Tumor Marker Test, Specify"
-      }]
-    },
-    {
-      "system" : "http://loinc.org",
-      "filter" : [{
-        "property" : "ancestor",
-        "op" : "=",
-        "value" : "LP101591-8"
-      }]
-    },
-    {
-      "system" : "http://loinc.org",
-      "filter" : [{
-        "property" : "ancestor",
-        "op" : "=",
-        "value" : "LP111251-7"
-      }]
-    },
-    {
-      "system" : "http://loinc.org",
-      "filter" : [{
-        "property" : "ancestor",
-        "op" : "=",
-        "value" : "LP136073-6"
-      }]
-    },
-    {
-      "system" : "http://loinc.org",
-      "filter" : [{
-        "property" : "ancestor",
-        "op" : "=",
-        "value" : "LP14040-7"
-      }]
-    },
-    {
-      "system" : "http://loinc.org",
-      "filter" : [{
-        "property" : "ancestor",
-        "op" : "=",
-        "value" : "LP14329-4"
-      }]
-    },
-    {
-      "system" : "http://loinc.org",
-      "filter" : [{
-        "property" : "ancestor",
-        "op" : "=",
-        "value" : "LP14543-0"
-      }]
-    },
-    {
-      "system" : "http://loinc.org",
-      "filter" : [{
-        "property" : "ancestor",
-        "op" : "=",
-        "value" : "LP14618-0"
-      }]
-    },
-    {
-      "system" : "http://loinc.org",
-      "filter" : [{
-        "property" : "ancestor",
-        "op" : "=",
-        "value" : "LP14649-5"
-      }]
-    },
-    {
-      "system" : "http://loinc.org",
-      "filter" : [{
-        "property" : "ancestor",
-        "op" : "=",
-        "value" : "LP14650-3"
-      }]
-    },
-    {
-      "system" : "http://loinc.org",
-      "filter" : [{
-        "property" : "ancestor",
-        "op" : "=",
-        "value" : "LP14652-9"
-      }]
-    },
-    {
-      "system" : "http://loinc.org",
-      "filter" : [{
-        "property" : "ancestor",
-        "op" : "=",
-        "value" : "LP14658-6"
-      }]
-    },
-    {
-      "system" : "http://loinc.org",
-      "filter" : [{
-        "property" : "ancestor",
-        "op" : "=",
-        "value" : "LP14665-1"
-      }]
-    },
-    {
-      "system" : "http://loinc.org",
-      "filter" : [{
-        "property" : "ancestor",
-        "op" : "=",
-        "value" : "LP14694-1"
-      }]
-    },
-    {
-      "system" : "http://loinc.org",
-      "filter" : [{
-        "property" : "ancestor",
-        "op" : "=",
-        "value" : "LP14697-4"
-      }]
-    },
-    {
-      "system" : "http://loinc.org",
-      "filter" : [{
-        "property" : "ancestor",
-        "op" : "=",
-        "value" : "LP14902-8"
-      }]
-    },
-    {
-      "system" : "http://loinc.org",
-      "filter" : [{
-        "property" : "ancestor",
-        "op" : "=",
-        "value" : "LP14907-7"
-      }]
-    },
-    {
-      "system" : "http://loinc.org",
-      "filter" : [{
-        "property" : "ancestor",
-        "op" : "=",
-        "value" : "LP15033-1"
-      }]
-    },
-    {
-      "system" : "http://loinc.org",
-      "filter" : [{
-        "property" : "ancestor",
-        "op" : "=",
-        "value" : "LP15090-1"
-      }]
-    },
-    {
-      "system" : "http://loinc.org",
-      "filter" : [{
-        "property" : "ancestor",
-        "op" : "=",
-        "value" : "LP15097-6"
-      }]
-    },
-    {
-      "system" : "http://loinc.org",
-      "filter" : [{
-        "property" : "ancestor",
-        "op" : "=",
-        "value" : "LP15097-6"
-      }]
-    },
-    {
-      "system" : "http://loinc.org",
-      "filter" : [{
-        "property" : "ancestor",
-        "op" : "=",
-        "value" : "LP15461-4"
-      }]
-    },
-    {
-      "system" : "http://loinc.org",
-      "filter" : [{
-        "property" : "ancestor",
-        "op" : "=",
-        "value" : "LP15463-0"
-      }]
-    },
-    {
-      "system" : "http://loinc.org",
-      "filter" : [{
-        "property" : "ancestor",
-        "op" : "=",
-        "value" : "LP15464-8"
-      }]
-    },
-    {
-      "system" : "http://loinc.org",
-      "filter" : [{
-        "property" : "ancestor",
-        "op" : "=",
-        "value" : "LP15465-5"
-      }]
-    },
-    {
-      "system" : "http://loinc.org",
-      "filter" : [{
-        "property" : "ancestor",
-        "op" : "=",
-        "value" : "LP15466-3"
-      }]
-    },
-    {
-      "system" : "http://loinc.org",
-      "filter" : [{
-        "property" : "ancestor",
-        "op" : "=",
-        "value" : "LP15467-1"
-      }]
-    },
-    {
-      "system" : "http://loinc.org",
-      "filter" : [{
-        "property" : "ancestor",
-        "op" : "=",
-        "value" : "LP15681-7"
-      }]
-    },
-    {
-      "system" : "http://loinc.org",
-      "filter" : [{
-        "property" : "ancestor",
-        "op" : "=",
-        "value" : "LP157499-7"
-      }]
-    },
-    {
-      "system" : "http://loinc.org",
-      "filter" : [{
-        "property" : "ancestor",
-        "op" : "=",
-        "value" : "LP15990-2"
-      }]
-    },
-    {
-      "system" : "http://loinc.org",
-      "filter" : [{
-        "property" : "ancestor",
-        "op" : "=",
-        "value" : "LP16890-3"
-      }]
-    },
-    {
-      "system" : "http://loinc.org",
-      "filter" : [{
-        "property" : "ancestor",
-        "op" : "=",
-        "value" : "LP17730-0"
-      }]
-    },
-    {
-      "system" : "http://loinc.org",
-      "filter" : [{
-        "property" : "ancestor",
-        "op" : "=",
-        "value" : "LP17751-6"
-      }]
-    },
-    {
-      "system" : "http://loinc.org",
-      "filter" : [{
-        "property" : "ancestor",
-        "op" : "=",
-        "value" : "LP18193-0"
-      }]
-    },
-    {
-      "system" : "http://loinc.org",
-      "filter" : [{
-        "property" : "ancestor",
-        "op" : "=",
-        "value" : "LP18274-8"
-      }]
-    },
-    {
-      "system" : "http://loinc.org",
-      "filter" : [{
-        "property" : "ancestor",
-        "op" : "=",
-        "value" : "LP18343-1"
-      }]
-    },
-    {
-      "system" : "http://loinc.org",
-      "filter" : [{
-        "property" : "ancestor",
-        "op" : "=",
-        "value" : "LP18396-9"
-      }]
-    },
-    {
-      "system" : "http://loinc.org",
-      "filter" : [{
-        "property" : "ancestor",
-        "op" : "=",
-        "value" : "LP18515-4"
-      }]
-    },
-    {
-      "system" : "http://loinc.org",
-      "filter" : [{
-        "property" : "ancestor",
-        "op" : "=",
-        "value" : "LP18567-5"
-      }]
-    },
-    {
-      "system" : "http://loinc.org",
-      "filter" : [{
-        "property" : "ancestor",
-        "op" : "=",
-        "value" : "LP189759-6"
-      }]
-    },
-    {
-      "system" : "http://loinc.org",
-      "filter" : [{
-        "property" : "ancestor",
-        "op" : "=",
-        "value" : "LP19423-0"
-      }]
-    },
-    {
-      "system" : "http://loinc.org",
-      "filter" : [{
-        "property" : "ancestor",
-        "op" : "=",
-        "value" : "LP19492-5"
-      }]
-    },
-    {
-      "system" : "http://loinc.org",
-      "filter" : [{
-        "property" : "ancestor",
-        "op" : "=",
-        "value" : "LP19666-4"
-      }]
-    },
-    {
-      "system" : "http://loinc.org",
-      "filter" : [{
-        "property" : "ancestor",
-        "op" : "=",
-        "value" : "LP19732-4"
-      }]
-    },
-    {
-      "system" : "http://loinc.org",
-      "filter" : [{
-        "property" : "ancestor",
-        "op" : "=",
-        "value" : "LP20052-4"
-      }]
-    },
-    {
-      "system" : "http://loinc.org",
-      "filter" : [{
-        "property" : "ancestor",
-        "op" : "=",
-        "value" : "LP200639-5"
-      }]
-    },
-    {
-      "system" : "http://loinc.org",
-      "filter" : [{
-        "property" : "ancestor",
-        "op" : "=",
-        "value" : "LP207485-6"
-      }]
-    },
-    {
-      "system" : "http://loinc.org",
-      "filter" : [{
-        "property" : "ancestor",
-        "op" : "=",
-        "value" : "LP220351-3"
-      }]
-    },
-    {
-      "system" : "http://loinc.org",
-      "filter" : [{
-        "property" : "ancestor",
-        "op" : "=",
-        "value" : "LP248009-5"
-      }]
-    },
-    {
-      "system" : "http://loinc.org",
-      "filter" : [{
-        "property" : "ancestor",
-        "op" : "=",
-        "value" : "LP28442-9"
-      }]
-    },
-    {
-      "system" : "http://loinc.org",
-      "filter" : [{
-        "property" : "ancestor",
-        "op" : "=",
-        "value" : "LP28518-6"
-      }]
-    },
-    {
-      "system" : "http://loinc.org",
-      "filter" : [{
-        "property" : "ancestor",
-        "op" : "=",
-        "value" : "LP28728-1"
-      }]
-    },
-    {
-      "system" : "http://loinc.org",
-      "filter" : [{
-        "property" : "ancestor",
-        "op" : "=",
-        "value" : "LP28852-9"
-      }]
-    },
-    {
-      "system" : "http://loinc.org",
-      "filter" : [{
-        "property" : "ancestor",
-        "op" : "=",
-        "value" : "LP31830-0"
-      }]
-    },
-    {
-      "system" : "http://loinc.org",
-      "filter" : [{
-        "property" : "ancestor",
-        "op" : "=",
-        "value" : "LP31855-7"
-      }]
-    },
-    {
-      "system" : "http://loinc.org",
-      "filter" : [{
-        "property" : "ancestor",
-        "op" : "=",
-        "value" : "LP35767-0"
-      }]
-    },
-    {
-      "system" : "http://loinc.org",
-      "filter" : [{
-        "property" : "ancestor",
-        "op" : "=",
-        "value" : "LP36040-1"
-      }]
-    },
-    {
-      "system" : "http://loinc.org",
-      "filter" : [{
-        "property" : "ancestor",
-        "op" : "=",
-        "value" : "LP36464-3"
-      }]
-    },
-    {
-      "system" : "http://loinc.org",
-      "filter" : [{
-        "property" : "ancestor",
-        "op" : "=",
-        "value" : "LP36477-5"
-      }]
-    },
-    {
-      "system" : "http://loinc.org",
-      "filter" : [{
-        "property" : "ancestor",
-        "op" : "=",
-        "value" : "LP36861-0"
-      }]
-    },
-    {
-      "system" : "http://loinc.org",
-      "filter" : [{
-        "property" : "ancestor",
-        "op" : "=",
-        "value" : "LP36885-9"
-      }]
-    },
-    {
-      "system" : "http://loinc.org",
-      "filter" : [{
-        "property" : "ancestor",
-        "op" : "=",
-        "value" : "LP61778-4"
-      }]
-    },
-    {
-      "system" : "http://loinc.org",
-      "filter" : [{
-        "property" : "ancestor",
-        "op" : "=",
-        "value" : "LP62864-1"
-      }]
-    },
-    {
-      "system" : "http://loinc.org",
-      "filter" : [{
-        "property" : "ancestor",
-        "op" : "=",
-        "value" : "LP62864-1"
-      }]
-    },
-    {
-      "system" : "http://loinc.org",
-      "filter" : [{
-        "property" : "ancestor",
-        "op" : "=",
-        "value" : "LP63490-4"
-      }]
-    },
-    {
-      "system" : "http://loinc.org",
-      "filter" : [{
-        "property" : "ancestor",
-        "op" : "=",
-        "value" : "LP64447-3"
-      }]
-    },
-    {
-      "system" : "http://loinc.org",
-      "filter" : [{
-        "property" : "ancestor",
-        "op" : "=",
-        "value" : "LP93517-8"
-      }]
-    }]
-  }
-}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"CHECK_MEMERSHIP_ONLY"}####
-v: {
-  "display" : "",
-  "severity" : "error",
-  "error" : "The code \"97509-4\" is not valid in the system http://loinc.org; The code provided (http://loinc.org#97509-4) is not valid in the value set 'TumorMarkerTestVS' (from http://tx.fhir.org/r4)"
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://loinc.org",
-  "code" : "97509-4"
-}, "valueSet" :{
-  "resourceType" : "ValueSet",
-  "compose" : {
-    "include" : [{
-      "system" : "http://loinc.org",
-      "concept" : [{
-        "code" : "85353-1"
-      },
-      {
-        "code" : "9279-1"
-      },
-      {
-        "code" : "8867-4"
-      },
-      {
-        "code" : "2708-6"
-      },
-      {
-        "code" : "8310-5"
-      },
-      {
-        "code" : "8302-2"
-      },
-      {
-        "code" : "9843-4"
-      },
-      {
-        "code" : "29463-7"
-      },
-      {
-        "code" : "39156-5"
-      },
-      {
-        "code" : "85354-9"
-      },
-      {
-        "code" : "8480-6"
-      },
-      {
-        "code" : "8462-4"
-      },
-      {
-        "code" : "8478-0"
-      }]
-    }]
-  }
-}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
-v: {
-  "display" : "",
-  "severity" : "error",
-  "error" : "The code \"97509-4\" is not valid in the system http://loinc.org; The code provided (http://loinc.org#97509-4) is not valid (from http://tx.fhir.org/r4)"
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://loinc.org",
-  "code" : "97509-4",
-  "display" : "Cancer Disease Progression"
-}, "valueSet" :{
-  "resourceType" : "ValueSet",
-  "compose" : {
-    "include" : [{
-      "system" : "http://loinc.org",
-      "concept" : [{
-        "code" : "85353-1"
-      },
-      {
-        "code" : "9279-1"
-      },
-      {
-        "code" : "8867-4"
-      },
-      {
-        "code" : "2708-6"
-      },
-      {
-        "code" : "8310-5"
-      },
-      {
-        "code" : "8302-2"
-      },
-      {
-        "code" : "9843-4"
-      },
-      {
-        "code" : "29463-7"
-      },
-      {
-        "code" : "39156-5"
-      },
-      {
-        "code" : "85354-9"
-      },
-      {
-        "code" : "8480-6"
-      },
-      {
-        "code" : "8462-4"
-      },
-      {
-        "code" : "8478-0"
-      }]
-    }]
-  }
-}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK"}####
-v: {
-  "display" : "",
-  "severity" : "error",
-  "error" : "The code \"97509-4\" is not valid in the system http://loinc.org; The code provided (http://loinc.org#97509-4) is not valid in the value set 'VitalSigns' (from http://tx.fhir.org/r4)"
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://loinc.org",
-  "code" : "81259-4",
-  "display" : "Associated phenotype"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
-v: {
-  "display" : "Associated phenotype",
-  "severity" : null,
-  "error" : ""
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://loinc.org",
-  "code" : "53037-8"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
-v: {
-  "display" : "Genetic variation clinical significance [Imp]",
-  "severity" : null,
   "error" : ""
 }
 -------------------------------------------------------------------------------------

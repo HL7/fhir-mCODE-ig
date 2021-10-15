@@ -84,6 +84,7 @@ mCODE includes single FHIR profile, [TumorMarkerTest], for all labs involving se
 
 * [HistologyMorphologyBehavior]
 * [LocationQualifier]
+* [LateralityQualifier]
 
 ### Value Sets
 
@@ -99,6 +100,7 @@ mCODE includes single FHIR profile, [TumorMarkerTest], for all labs involving se
   * [CancerDisorderVS]
   * [CancerBodyLocationVS]
   * [BodyLocationQualifierVS]
+  * [LateralityQualifierVS]
   * [HistologyMorphologyBehaviorVS]
 
 * **Staging**

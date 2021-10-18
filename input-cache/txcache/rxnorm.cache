@@ -17,6 +17,8 @@
 }, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
 v: {
   "display" : "",
+  "code" : "",
+  "system" : "",
   "severity" : "error",
   "error" : "Argument out of range (from http://tx.fhir.org/r4)"
 }
@@ -39,7 +41,9 @@ v: {
   }
 }, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK"}####
 v: {
-  "display" : "DOXOrubicin hydrochloride 20 MG per 10 ML Injection",
+  "display" : "10 ML doxorubicin hydrochloride 2 MG/ML Injection",
+  "code" : "",
+  "system" : "",
   "severity" : null,
   "error" : ""
 }
@@ -49,7 +53,9 @@ v: {
   "code" : "1790099"
 }, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
 v: {
-  "display" : "DOXOrubicin hydrochloride 20 MG per 10 ML Injection",
+  "display" : "10 ML doxorubicin hydrochloride 2 MG/ML Injection",
+  "code" : "",
+  "system" : "",
   "severity" : null,
   "error" : ""
 }
@@ -72,6 +78,8 @@ v: {
 }, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
 v: {
   "display" : "",
+  "code" : "",
+  "system" : "",
   "severity" : "error",
   "error" : "Argument out of range (from http://tx.fhir.org/r4)"
 }
@@ -95,6 +103,8 @@ v: {
 }, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK"}####
 v: {
   "display" : "anastrozole",
+  "code" : "",
+  "system" : "",
   "severity" : null,
   "error" : ""
 }
@@ -105,6 +115,8 @@ v: {
 }, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
 v: {
   "display" : "anastrozole",
+  "code" : "",
+  "system" : "",
   "severity" : null,
   "error" : ""
 }
@@ -127,6 +139,8 @@ v: {
 }, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
 v: {
   "display" : "",
+  "code" : "",
+  "system" : "",
   "severity" : "error",
   "error" : "Argument out of range (from http://tx.fhir.org/r4)"
 }
@@ -149,7 +163,9 @@ v: {
   }
 }, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK"}####
 v: {
-  "display" : "CISplatin 50 MG per 50 ML Injectable Solution",
+  "display" : "cisplatin 1 MG/ML Injectable Solution",
+  "code" : "",
+  "system" : "",
   "severity" : null,
   "error" : ""
 }
@@ -159,7 +175,9 @@ v: {
   "code" : "309311"
 }, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
 v: {
-  "display" : "CISplatin 50 MG per 50 ML Injectable Solution",
+  "display" : "cisplatin 1 MG/ML Injectable Solution",
+  "code" : "",
+  "system" : "",
   "severity" : null,
   "error" : ""
 }
@@ -182,6 +200,8 @@ v: {
 }, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
 v: {
   "display" : "",
+  "code" : "",
+  "system" : "",
   "severity" : "error",
   "error" : "Argument out of range (from http://tx.fhir.org/r4)"
 }
@@ -205,6 +225,8 @@ v: {
 }, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK"}####
 v: {
   "display" : "cyclophosphamide",
+  "code" : "",
+  "system" : "",
   "severity" : null,
   "error" : ""
 }
@@ -215,6 +237,8 @@ v: {
 }, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
 v: {
   "display" : "cyclophosphamide",
+  "code" : "",
+  "system" : "",
   "severity" : null,
   "error" : ""
 }
@@ -237,6 +261,8 @@ v: {
 }, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
 v: {
   "display" : "",
+  "code" : "",
+  "system" : "",
   "severity" : "error",
   "error" : "Argument out of range (from http://tx.fhir.org/r4)"
 }
@@ -259,7 +285,9 @@ v: {
   }
 }, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK"}####
 v: {
-  "display" : "DOXOrubicin",
+  "display" : "doxorubicin",
+  "code" : "",
+  "system" : "",
   "severity" : null,
   "error" : ""
 }
@@ -269,7 +297,9 @@ v: {
   "code" : "3639"
 }, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
 v: {
-  "display" : "DOXOrubicin",
+  "display" : "doxorubicin",
+  "code" : "",
+  "system" : "",
   "severity" : null,
   "error" : ""
 }
@@ -292,6 +322,8 @@ v: {
 }, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
 v: {
   "display" : "",
+  "code" : "",
+  "system" : "",
   "severity" : "error",
   "error" : "Argument out of range (from http://tx.fhir.org/r4)"
 }
@@ -315,6 +347,8 @@ v: {
 }, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK"}####
 v: {
   "display" : "gefitinib 250 MG Oral Tablet",
+  "code" : "",
+  "system" : "",
   "severity" : null,
   "error" : ""
 }
@@ -325,6 +359,8 @@ v: {
 }, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
 v: {
   "display" : "gefitinib 250 MG Oral Tablet",
+  "code" : "",
+  "system" : "",
   "severity" : null,
   "error" : ""
 }
@@ -347,6 +383,8 @@ v: {
 }, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
 v: {
   "display" : "",
+  "code" : "",
+  "system" : "",
   "severity" : "error",
   "error" : "Argument out of range (from http://tx.fhir.org/r4)"
 }
@@ -369,7 +407,9 @@ v: {
   }
 }, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK"}####
 v: {
-  "display" : "PACLitaxel",
+  "display" : "paclitaxel",
+  "code" : "",
+  "system" : "",
   "severity" : null,
   "error" : ""
 }
@@ -379,7 +419,9 @@ v: {
   "code" : "56946"
 }, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
 v: {
-  "display" : "PACLitaxel",
+  "display" : "paclitaxel",
+  "code" : "",
+  "system" : "",
   "severity" : null,
   "error" : ""
 }
@@ -390,7 +432,9 @@ v: {
   "display" : "DOXOrubicin"
 }, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
 v: {
-  "display" : "DOXOrubicin",
+  "display" : "doxorubicin",
+  "code" : "",
+  "system" : "",
   "severity" : null,
   "error" : ""
 }
@@ -402,6 +446,8 @@ v: {
 }, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
 v: {
   "display" : "cyclophosphamide",
+  "code" : "",
+  "system" : "",
   "severity" : null,
   "error" : ""
 }
@@ -412,7 +458,9 @@ v: {
   "display" : "PACLitaxel"
 }, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
 v: {
-  "display" : "PACLitaxel",
+  "display" : "paclitaxel",
+  "code" : "",
+  "system" : "",
   "severity" : null,
   "error" : ""
 }
@@ -424,8 +472,225 @@ v: {
 }, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
 v: {
   "display" : "anastrozole",
+  "code" : "",
+  "system" : "",
   "severity" : null,
   "error" : ""
+}
+-------------------------------------------------------------------------------------
+<<<<<<< HEAD
+{"code" : {
+  "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+  "code" : "1790099",
+  "display" : "doxorubicin hydrochloride 20 MG per 10 ML Injection"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "DOXOrubicin hydrochloride 20 MG per 10 ML Injection",
+  "code" : "",
+  "system" : "",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+  "code" : "309311",
+  "display" : "CISplatin 50 MG per 50 ML Injectable Solution"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "CISplatin 50 MG per 50 ML Injectable Solution",
+  "code" : "",
+  "system" : "",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+  "code" : "349472",
+  "display" : "gefitinib 250 MG Oral Tablet"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "gefitinib 250 MG Oral Tablet",
+  "code" : "",
+  "system" : "",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "coding" : [{
+    "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+    "code" : "1790099",
+    "display" : "doxorubicin hydrochloride 20 MG per 10 ML Injection"
+  }]
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "valueSet" : ["http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.3.88.12.80.17"]
+    },
+    {
+      "valueSet" : ["http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1010.5"]
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"CHECK_MEMERSHIP_ONLY"}####
+v: {
+  "display" : "",
+  "code" : "",
+  "system" : "",
+  "severity" : "error",
+  "error" : "Unable to find value set http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.3.88.12.80.17 (from http://tx.fhir.org/r4)"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "coding" : [{
+    "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+    "code" : "84857",
+    "display" : "anastrozole"
+  }]
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "valueSet" : ["http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.3.88.12.80.17"]
+    },
+    {
+      "valueSet" : ["http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1010.5"]
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"CHECK_MEMERSHIP_ONLY"}####
+v: {
+  "display" : "",
+  "code" : "",
+  "system" : "",
+  "severity" : "error",
+  "error" : "Unable to find value set http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.3.88.12.80.17 (from http://tx.fhir.org/r4)"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "coding" : [{
+    "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+    "code" : "309311",
+    "display" : "CISplatin 50 MG per 50 ML Injectable Solution"
+  }]
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "valueSet" : ["http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.3.88.12.80.17"]
+    },
+    {
+      "valueSet" : ["http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1010.5"]
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"CHECK_MEMERSHIP_ONLY"}####
+v: {
+  "display" : "",
+  "code" : "",
+  "system" : "",
+  "severity" : "error",
+  "error" : "Unable to find value set http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.3.88.12.80.17 (from http://tx.fhir.org/r4)"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "coding" : [{
+    "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+    "code" : "3002",
+    "display" : "cyclophosphamide"
+  }]
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "valueSet" : ["http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.3.88.12.80.17"]
+    },
+    {
+      "valueSet" : ["http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1010.5"]
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"CHECK_MEMERSHIP_ONLY"}####
+v: {
+  "display" : "",
+  "code" : "",
+  "system" : "",
+  "severity" : "error",
+  "error" : "Unable to find value set http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.3.88.12.80.17 (from http://tx.fhir.org/r4)"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "coding" : [{
+    "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+    "code" : "3639",
+    "display" : "DOXOrubicin"
+  }]
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "valueSet" : ["http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.3.88.12.80.17"]
+    },
+    {
+      "valueSet" : ["http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1010.5"]
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"CHECK_MEMERSHIP_ONLY"}####
+v: {
+  "display" : "",
+  "code" : "",
+  "system" : "",
+  "severity" : "error",
+  "error" : "Unable to find value set http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.3.88.12.80.17 (from http://tx.fhir.org/r4)"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "coding" : [{
+    "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+    "code" : "349472",
+    "display" : "gefitinib 250 MG Oral Tablet"
+  }]
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "valueSet" : ["http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.3.88.12.80.17"]
+    },
+    {
+      "valueSet" : ["http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1010.5"]
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"CHECK_MEMERSHIP_ONLY"}####
+v: {
+  "display" : "",
+  "code" : "",
+  "system" : "",
+  "severity" : "error",
+  "error" : "Unable to find value set http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.3.88.12.80.17 (from http://tx.fhir.org/r4)"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "coding" : [{
+    "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+    "code" : "56946",
+    "display" : "PACLitaxel"
+  }]
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "valueSet" : ["http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.3.88.12.80.17"]
+    },
+    {
+      "valueSet" : ["http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1010.5"]
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"CHECK_MEMERSHIP_ONLY"}####
+v: {
+  "display" : "",
+  "code" : "",
+  "system" : "",
+  "severity" : "error",
+  "error" : "Unable to find value set http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.3.88.12.80.17 (from http://tx.fhir.org/r4)"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
@@ -434,29 +699,9 @@ v: {
   "display" : "doxorubicin hydrochloride 20 MG per 10 ML Injection"
 }, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
 v: {
-  "display" : "DOXOrubicin hydrochloride 20 MG per 10 ML Injection",
-  "severity" : null,
-  "error" : ""
-}
--------------------------------------------------------------------------------------
-{"code" : {
+  "display" : "10 ML doxorubicin hydrochloride 2 MG/ML Injection",
+  "code" : "1790099",
   "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
-  "code" : "309311",
-  "display" : "CISplatin 50 MG per 50 ML Injectable Solution"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
-v: {
-  "display" : "CISplatin 50 MG per 50 ML Injectable Solution",
-  "severity" : null,
-  "error" : ""
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
-  "code" : "349472",
-  "display" : "gefitinib 250 MG Oral Tablet"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
-v: {
-  "display" : "gefitinib 250 MG Oral Tablet",
   "severity" : null,
   "error" : ""
 }

@@ -65,7 +65,7 @@ Profile: Tumor
 Parent:  BodyStructure
 Id: mcode-tumor
 Title: "Tumor"
-Description:  "Identifies a tumor that has not been removed from the body. Whenever possible, a single resource conforming to this profile will be used to track a tumor over time (as opposed to creating new Tumor-conforming BodyStructure resources each time that tumor is measured). Use [TumorSpecimen](StructureDefinition-mcode-tumor-specimen.html) to represent the tumor after removal from the body."
+Description:  "Identifies a tumor that has not been removed from the body. Whenever possible, a single resource conforming to this profile will be used to track a tumor over time (as opposed to creating new Tumor-conforming BodyStructure resources each time that tumor is measured). Use TumorSpecimen to represent the tumor after removal from the body."
 * patient only Reference(CancerPatient)
 // The purpose of this profile is to uniquely identify a tumor, so it follows that there must be at least one identifier value provided
 * identifier ^short = "Stable identifier(s) for this tumor"
@@ -108,9 +108,9 @@ Profile: TumorSpecimen
 Parent: Specimen
 Id: mcode-tumor-specimen
 Title: "Tumor Specimen"
-Description: "Represents a tumor after it has been removed from the body. Prior to excision, use [Tumor](StructureDefinition-mcode-tumor.html) (a BodyStructure) instead. If this tumor was represented by [Tumor](StructureDefinition-mcode-tumor.html) while still in the body, use `identifier` to associate with that resource."
+Description: "Represents a tumor after it has been removed from the body. If there is a Tumor resource representing the tumor before it was removed from the body, use `identifier` to associate this TumorSpecimen with that Tumor resource."
 * insert CancerRelatedSpecimenRules
-// These rules are above and beyond GeneticSpecimen
+// These rules are above and beyond GenomicSpecimen
 * type = SPTY#TUMOR
 * identifier ^slicing.discriminator.type = #pattern
 * identifier ^slicing.discriminator.path = "type"

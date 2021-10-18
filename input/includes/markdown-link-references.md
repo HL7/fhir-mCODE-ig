@@ -6,9 +6,9 @@
 </style>
 
 <!-- mCODE Profiles and Extensions -->
-[BrachytherapyTreatmentPhase]: StructureDefinition-mcode-brachytherapy-treatment-phase.html
+[BodyLocationQualifier]: StructureDefinition-mcode-body-location-qualifier.html
 [CancerDiseaseStatus]: StructureDefinition-mcode-cancer-disease-status.html
-[CancerGeneticVariant]: StructureDefinition-mcode-cancer-genetic-variant.html
+[CancerGenomicVariant]: StructureDefinition-mcode-cancer-genomic-variant.html
 [CancerGenomicsReport]: StructureDefinition-mcode-cancer-genomics-report.html
 [CancerPatient]: StructureDefinition-mcode-cancer-patient.html
 [CancerRelatedMedicationAdministration]: StructureDefinition-mcode-cancer-related-medication-administration.html
@@ -20,11 +20,10 @@
 [ComorbiditiesParent]: StructureDefinition-mcode-comorbidities-parent.html
 [ECOGPerformanceStatus]: StructureDefinition-mcode-ecog-performance-status.html
 [EvidenceType]: StructureDefinition-mcode-evidence-type.html
-[GeneticSpecimen]: StructureDefinition-mcode-genetic-specimen.html
+[GenomicSpecimen]: StructureDefinition-mcode-genomic-specimen.html
 [GenomicRegionStudied]: StructureDefinition-mcode-genomic-region-studied.html
 [HistologyMorphologyBehavior]: StructureDefinition-mcode-histology-morphology-behavior.html
 [KarnofskyPerformanceStatus]: StructureDefinition-mcode-karnofsky-performance-status.html
-[BodyLocationQualifier]: StructureDefinition-mcode-body-location-qualifier.html
 [MCODEPatientBundle]: StructureDefinition-mcode-patient-bundle.html
 [MCODEPatientGroup]: StructureDefinition-mcode-patient-group.html
 [CapabilityStatement]: StructureDefinition-CapabilityStatement.html
@@ -36,10 +35,10 @@
 [RadiotherapyModality]: StructureDefinition-mcode-radiotherapy-modality.html
 [RadiotherapySessions]: StructureDefinition-mcode-radiotherapy-sessions.html
 [RadiotherapyTechnique]: StructureDefinition-mcode-radiotherapy-technique.html
+[RadiotherapyModalityAndTechnique]: StructureDefinition-mcode-radiotherapy-modality-and-technique.html
 [RadiotherapyVolume]: StructureDefinition-mcode-radiotherapy-volume.html
 [RelatedPrimaryCancerCondition]: StructureDefinition-mcode-related-primary-cancer-condition.html
 [SecondaryCancerCondition]: StructureDefinition-mcode-secondary-cancer-condition.html
-[TeleradiotherapyTreatmentPhase]: StructureDefinition-mcode-teleradiotherapy-treatment-phase.html
 [TNMDistantMetastasesCategory]: StructureDefinition-mcode-tnm-distant-metastases-category.html
 [TNMPrimaryTumorCategory]: StructureDefinition-mcode-tnm-primary-tumor-category.html
 [TNMRegionalNodesCategory]: StructureDefinition-mcode-tnm-regional-nodes-category.html
@@ -51,6 +50,7 @@
 [TumorSpecimen]: StructureDefinition-mcode-tumor-specimen.html
 
 <!-- mCODE Value Sets -->
+[BenignUncertainNeoplasmBrainCNSDisorderVS]: ValueSet-mcode-benign-uncertain-neoplasm-brain-cns-disorder-vs.html
 [BrachytherapyModalityVS]: ValueSet-mcode-brachytherapy-modality-vs.html
 [BrachytherapyTechniqueVS]: ValueSet-mcode-brachytherapy-technique-vs.html
 [CancerBodyLocationVS]: ValueSet-mcode-cancer-body-location-vs.html
@@ -59,8 +59,10 @@
 [CancerRelatedSurgicalProcedureVS]: ValueSet-mcode-cancer-related-surgical-procedure-vs.html
 [CancerStageGroupVS]: ValueSet-mcode-cancer-stage-group-vs.html
 [CancerStagingSystemVS]: ValueSet-mcode-cancer-staging-system-vs.html
+[CarcinomaInSituDisorderVS]: ValueSet-mcode-carcinoma-in-situ-disorder-vs.html
 [ClinVarVS]: ValueSet-mcode-clinvar-vs.html
 [ConditionStatusTrendVS]: ValueSet-mcode-condition-status-trend-vs.html
+[CytologicEvidenceOfMalignancyVS]: ValueSet-mcode-cytologic-evidence-malignancy-vs.html
 [DNAChangeTypeVS]: ValueSet-mcode-dna-change-type-vs.html
 [ElixhauserAIDSVS]: ValueSet-elixhauser-aids-vs.html
 [ElixhauserAlcoholAbuseVS]: ValueSet-elixhauser-alcohol-abuse-vs.html
@@ -101,29 +103,33 @@
 [ElixhauserUlcerVS]: ValueSet-elixhauser-ulcer-vs.html
 [ElixhauserValvularDiseaseVS]: ValueSet-elixhauser-valvular-disease-vs.html
 [ElixhauserWeightLossVS]: ValueSet-elixhauser-weight-loss-vs.html
-[GeneticSpecimenTypeVS]: ValueSet-mcode-genetic-specimen-type-vs.html
+[GenomicSpecimenTypeVS]: ValueSet-mcode-genomic-specimen-type-vs.html
 [HGNCVS]: ValueSet-mcode-hgnc-vs.html
 [HGVSVS]: ValueSet-mcode-hgvs-vs.html
 [HistologyMorphologyBehaviorVS]: ValueSet-mcode-histology-morphology-behavior-vs.html
+[MelanomaInSituDisorderVS]: ValueSet-mcode-melanoma-in-situ-disorder-vs.html
 [BodyLocationQualifierVS]: ValueSet-mcode-body-location-qualifier-vs.html
 [ObservationCodesStageGroupVS]: ValueSet-mcode-observation-codes-stage-group-vs.html
 [ObservationCodesPrimaryTumorVS]: ValueSet-mcode-observation-codes-primary-tumor-vs.html
 [ObservationCodesRegionalNodesVS]: ValueSet-mcode-observation-codes-regional-nodes-vs.html
 [ObservationCodesDistantMetastasesVS]: ValueSet-mcode-observation-codes-distant-metastases-vs.html
 [PresentAbsentVS]: ValueSet-mcode-present-absent.html
-[PrimaryOrUncertainBehaviorCancerDisorderVS]: ValueSet-mcode-primary-or-uncertain-behavior-cancer-disorder-vs.html
+[PrimaryMalignantNeoplasmDisorderVS]: ValueSet-mcode-primary-malignant-neoplasm-disorder-vs.html
+[PrimaryCancerDisorderVS]: ValueSet-mcode-primary-cancer-disorder-vs.html
+[PrimaryMalignantNeoplasmDisorderVS]: ValueSet-mcode-primary-malignant-neoplasm-disorder-vs.html
+[ProcedureIntentVS]: ValueSet-mcode-procedure-intent-vs.html
 [RadiotherapyModalityVS]: ValueSet-mcode-radiotherapy-modality-vs.html
 [RadiotherapyTechniqueVS]: ValueSet-mcode-radiotherapy-technique-vs.html
 [RadiotherapyTreatmentLocationVS]: ValueSet-mcode-radiotherapy-treatment-location-vs.html
 [RadiotherapyTreatmentLocationQualifierVS]: ValueSet-mcode-radiotherapy-treatment-location-qualifier-vs.html
 [RadiotherapyVolumeTypeVS]: ValueSet-mcode-radiotherapy-volume-type-vs.html
 [SecondaryCancerDisorderVS]: ValueSet-mcode-secondary-cancer-disorder-vs.html
+[SpecificDiagnosisCancerDisorderVS]: ValueSet-mcode-specific-diagnosis-cancer-disorder-vs.html
 [TeleradiotherapyModalityVS]: ValueSet-mcode-teleradiotherapy-modality-vs.html
 [TeleradiotherapyTechniqueVS]: ValueSet-mcode-teleradiotherapy-technique-vs.html
 [TNMDistantMetastasesCategoryVS]: ValueSet-mcode-tnm-distant-metastases-category-vs.html
 [TNMPrimaryTumorCategoryVS]: ValueSet-mcode-tnm-primary-tumor-category-vs.html
 [TNMRegionalNodesCategoryVS]: ValueSet-mcode-tnm-regional-nodes-category-vs.html
-[ProcedureIntentVS]: ValueSet-mcode-procedure-intent-vs.html
 [TreatmentTerminationReasonVS]: ValueSet-mcode-treatment-termination-reason-vs.html
 [TumorMarkerTestVS]: ValueSet-mcode-tumor-marker-test-vs.html
 [TumorSizeMethodVS]: ValueSet-mcode-tumor-size-method-vs.html
@@ -150,9 +156,21 @@
 [mcode-patient-everything]: OperationDefinition-mcode-patient-everything.html
 
 <!-- US Core -->
-[USCoreLaboratoryResultObservationProfile]: http://hl7.org/fhir/us/core/StructureDefinition-us-core-observation-lab.html
-[USCorePatientProfile]: http://hl7.org/fhir/us/core/StructureDefinition-us-core-patient.html
+[USCoreMedicationRequest]: http://hl7.org/fhir/us/core/StructureDefinition-us-core-medicationrequest.html
+[USCoreLaboratoryResultObservation]: http://hl7.org/fhir/us/core/StructureDefinition-us-core-observation-lab.html
+[USCorePatient]: http://hl7.org/fhir/us/core/StructureDefinition-us-core-patient.html
+[USCoreCondition]: http://hl7.org/fhir/us/core/StructureDefinition-us-core-condition.html
+[USCoreProcedure]: http://hl7.org/fhir/us/core/StructureDefinition-us-core-procedure.html
+[USCorePractitioner]: http://hl7.org/fhir/us/core/StructureDefinition-us-core-practitioner.html
+[USCoreSmokingStatus]: http://hl7.org/fhir/us/core/StructureDefinition-us-core-smokingstatus.html
+[USCoreDiagnosticReport]: http://hl7.org/fhir/us/core/StructureDefinition-us-core-diagnosticreport-lab.html
 
+<!-- R4 -->
+[R4Observation]: http://hl7.org/fhir/R4/observation.html
+[R4FamilyMemberHistory]: http://hl7.org/fhir/R4/familymemberhistory.html
+[R4MedicationAdministration]: http://hl7.org/fhir/R4/medicationadministration.html
+[R4Specimen]: http://hl7.org/fhir/R4/specimen.html
+[R4Bundle]: http://hl7.org/fhir/R4/bundle.html
 <!-- Other links -->
 [in-scope patient]: conformance-patients.html
 [in-scope patients]: conformance-patients.html

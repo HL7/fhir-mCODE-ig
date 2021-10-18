@@ -26,46 +26,6 @@ Please note that while these codes may imply conformance to the profiles that us
 * #mcode-patient "mCODE Patient Group Resource" "Identifies a Group resource containing in-scope cancer patients that conforms to the MCODEPatientGroup profile."
 * #mcode-radiotherapy-course-summary "Radiotherapy Course Summary Resource" "Identifies a Procedure resource that summarizes a radiotherapy treatment that conforms to the RadiotherapyCourseSummary profile." // USCRS-33292 - SNOMEDCT code requested
 
-// CodeSystem: RadiotherapyCS
-// Id: radiotherapy-cs
-// Title: "Radiotherapy Code System"
-// Description: "Concepts used in association with radiotherapy profiles in mCODE, where terms could not be found in standard sources such as SNOMED CT."
-// * ^url =  http://terminology.hl7.org/CodeSystem/radiotherapy
-//* #LDR-PERM "Low Dose Rate Brachytherapy - Permanent Placement" "Radiation treatment that irradiates a body volume with permanently placed radiation sources delivering low dose rates (typically less than or equal to 2 Gy/hour)."
-//* #LDR-TEMP "Low Dose Rate Brachytherapy - Temporary Placement" "Radiation treatment that irradiates a body volume with temporarily placed radiation sources delivering low dose rates (typically less than or equal to 2 Gy/hour)."
-//* #3D "Three Dimensional"  "Dose calculated with projection onto 3D imaging (e.g., CT or MR) delivered with either static aperture (Collimator, SRS Cone, Static MLC, blocks, etc) or non-IMRT/VMAT dynamic apertures (e.g., field-in-field, dynamic arc) using either single gantry angles or arcs."
-//* #PPS  "Particle Passive Scattering" "In proton or carbon ion beam therapy, a technique where the beam is spread out to larger dimension using a scattering device such as lead foil."
-//* #PSS "Particle Spot Scanning"  "In proton or carbon ion beam therapy, a technique where accelerated particles are focused into a small beam and then moved (scanned) over target regions in the patient."
-//* #MIX "Mixed" "Both photon and particle based beams are used to deliver the radiation therapy."
-//* #CAV-IMB "Intracavitary, Intensity Modulated" "A technique of brachytherapy that dynamically directs the radiation into the tumours and away from healthy tissue, for example, by incorporation of metallic shields inside brachytherapy applicators."
-// * #LN_AX_L1  "Level 1 Axillary Lymph Nodes"
-// * #LN_Ax_L2  "Level 2 Axillary Lymph Nodes"
-// * #LN_Ax_L3  "Level 3 Axillary Lymph Nodes"
-// * #LN_Neck_IA  "Level IA (Submental) neck node"
-// * #LN_Neck_IB  "Level IB (Submandibular) neck node"
-// * #LN_Neck_II  "Level II (Upper Jugular) neck nodes"  // Post STU 2 ballot
-// * #LN_Neck_IIA  "Level IIA (Upper Jugular) neck node"
-// * #LN_Neck_IIB  "Level IIB (Upper Jugular) neck node"
-// * #LN_Neck_III  "Level III (Middle Jugular) neck node"
-// * #LN_Neck_IV  "Level IV neck (Lower Jugular) node"
-// * #LN_Neck_IVA  "Level IVA (Lower Jugular) neck nodes"  // Post STU 2 ballot
-// * #LN_Neck_IVB  "Level IVB (Medial Suprclavicular) nodes"  // Post STU 2 ballot
-// * #LN_Neck_V  "Level V (Posterior Triangle) neck nodes"  // Post STU 2 ballot
-// * #LN_Neck_VA  "Level VA (Upper Posterior Triangle) neck node"
-// * #LN_Neck_VB  "Level VB (Lower Posterior Triangle) neck node"
-// * #LN_Neck_VC  "Level VC (Lateral spraclavicular) neck node"
-// * #LN_Neck_VI  "Level VI (Anterior Triangle) neck node"
-// * #LN_Neck_VIA  "Level VIA (Anterior Jugular) neck nodes"  // Post STU 2 ballot
-// * #LN_Neck_VIB  "Level VIB (Prelaryngeal, pretracheal, & paratracheal) neck nodes"  // Post STU 2 ballot
-// * #LN_Neck_VII  "Level VII (Prevertebral compartment) neck node"
-// * #LN_Neck_VIIA  "Level VIIA (Retropharyngeal) neck nodes"  // Post STU 2 ballot
-// * #LN_Neck_VIIB  "Level VIIB (Retro-styloid) neck nodes"  // Post STU 2 ballot
-// * #LN_Neck_VIII  "Level VIII (Parotid) neck nodes"  // Post STU 2 ballot
-// * #LN_Neck_IX  "Level IX (Bucco-facial) neck nodes"  // Post STU 2 ballot
-// * #LN_Neck_X  "Level X (Posterior skull) neck nodes"  // Post STU 2 ballot
-// * #LN_Neck_XA  "Level XA (Retroauricular & subauricular) neck nodes"  // Post STU 2 ballot
-// * #LN_Neck_XB  "Level XB (Occipital) neck nodes"  // Post STU 2 ballot
-
 
 CodeSystem: ComorbiditiesElixhauserCS
 Id: comorbidities-elixhauser-cs
@@ -115,4 +75,24 @@ CodeSystem: TbdCodes
 Title: "ToBeDeterminedCodes ('TbdCodes')"
 Description: "These codes are currently 'TBD-LOINC' codes. The CG WG is requesting formal LOINC codes."
 * #molecular-consequence "Molecular Consequence" "Annotated changes to sequence features caused by this variant. Terms are from the sequence ontology under SO:0001537."
-* #diagnostic-implication
+* #diagnostic-implication "Diagnosic Implication" "Diagnostic Implication"
+
+CodeSystem: RequestedRemissionCodes
+Title: "Requested Remission Codes"
+Description:   "Codes requested from SNOMED for Remission Status"
+* #partialremission "Cancer in partial remission(finding)"     // USCRS 352237 * SCT#requested "Cancer in partial remission(finding)
+* #completeremission "Cancer in complete remission(finding)"    // USCRS 352236 * SCT#requested "Cancer in complete remission(finding)
+
+CodeSystem: TG263
+Title: "TG263 Codes"
+Description: "Codes from TG263 Anatomy codes that lack both SNOMEDCT and UMLS definitions"
+* #bowel-space "Bowel Space" // * SCT#USCRS-33351 "Bowel space (body structure)" // Space occupied by bowel
+* #small-bowel-space "Small Bowel Space" // * SCT#USCRS-33352 "Small bowel space (body structure)" // <none>
+* #pre-sacral-lymph-node-group "Presacral lymph node group" // * SCT#USCRS-33346 "Presacral lymph node group (body structure)" // Lymph nodes of pelvis - presacral Left
+* #tumor-bed "Tumor bed (morphologic abnormality)" // There is no snomed term or UMLS term
+
+CodeSystem: TG263Qualifier
+Title: "TG263 Qualifier Codes"
+Description: "Qualifier Codes from TG263 Anatomy codes that lack both SNOMEDCT and UMLS definitions"
+* #non-adjacent "Non-Adjacent"           // * SCT#USCRS-33144 "non-adjacent (qualifier)"
+* #supra-mammary "Supra-Mammary"         // * SCT#USCRS-33347 "supra-mammary"

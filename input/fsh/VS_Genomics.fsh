@@ -1,7 +1,7 @@
 ValueSet:    ClinVarVS
 Id: mcode-clinvar-vs
 Title: "ClinVar Value Set"
-Description: "Value set of human genetic variants, drawn from [ClinVar](https://www.ncbi.nlm.nih.gov/clinvar/). The codes in this value set refer to the ClinVar Variation ID, or the identifier for the variant or set of variants that were interpreted. [Source: NCBI ClinVar Data Dictionary](https://www.ncbi.nlm.nih.gov/projects/clinvar/ClinVarDataDictionary.pdf)"
+Description: "Value set of human genomic variants, drawn from [ClinVar](https://www.ncbi.nlm.nih.gov/clinvar/). The codes in this value set refer to the ClinVar Variation ID, or the identifier for the variant or set of variants that were interpreted. [Source: NCBI ClinVar Data Dictionary](https://www.ncbi.nlm.nih.gov/projects/clinvar/ClinVarDataDictionary.pdf)"
 * codes from system CLINVAR
 
 ValueSet:  HGNCVS
@@ -102,10 +102,10 @@ Description:    "Codes representing tests for tumor markers. This value set of L
 * include codes from system LNC where ancestor = #LP93517-8 // Human epididymis protein 4
 
 
-ValueSet:   GeneticSpecimenTypeVS
-Id: mcode-genetic-specimen-type-vs
-Title: "Genetic Specimen Type Value Set"
-Description:    "The type of specimen analyzed in a genetic test. The values are taken from code system http://terminology.hl7.org/CodeSystem/v2-0487, and represent a subset of HL7 Version 2 Table 0487 (http://hl7.org/fhir/v2/0487).  The most specific term available should be used."
+ValueSet:   GenomicSpecimenTypeVS
+Id: mcode-genomic-specimen-type-vs
+Title: "Genomic Specimen Type Value Set"
+Description:    "The type of specimen analyzed in a genomic test. The values are taken from code system http://terminology.hl7.org/CodeSystem/v2-0487, and represent a subset of HL7 Version 2 Table 0487 (http://hl7.org/fhir/v2/0487).  The most specific term available should be used."
 * SPTY#AMN       "Amniotic fluid"
 * SPTY#BIFL      "Bile Fluid"
 * SPTY#BLD       "Whole blood"

@@ -20,8 +20,8 @@ In addition to information obtained from subject matter experts, several pre-exi
 * [National Comprehensive Cancer Network (NCCN) Clinical Practice Guidelines in Oncology](https://www.nccn.org/professionals/physician_gls/default.aspx#site)
 * [RECIST Guidelines v1.1](https://project.eortc.org/recist/wp-content/uploads/sites/4/2015/03/RECISTGuidelines.pdf)
 * [HL7 FHIR Genomics Reporting Implementation Guidance (STU1)](http://hl7.org/fhir/uv/genomics-reporting/index.html)
-* [The National Center for Biotechnology Genetic Test Registry (GTR)](https://www.ncbi.nlm.nih.gov/gtr)
-* [The Human Genome Variation Society nomenclature for defining genetic variants](https://varnomen.hgvs.org/).
+* [The National Center for Biotechnology Genomic Test Registry (GTR)](https://www.ncbi.nlm.nih.gov/gtr)
+* [The Human Genome Variation Society nomenclature for defining genomic variants](https://varnomen.hgvs.org/).
 * [The Human Genome Organization (HUGO) Gene Nomenclature Committee](https://www.genenames.org/)
 * [The CDISC Therapeutic Area User Guides (TAUG)](https://www.cdisc.org/standards/therapeutic-areas/disease-area)
 
@@ -64,7 +64,7 @@ If you have questions or comments about this guide, please reach out on [chat.fh
 
 ### Credits
 
-The authors recognize the leadership and sponsorship of Dr. Monica Bertagnolli, former ASCO President and Dr. Jay Schnitzer, MITRE Chief Technology and Chief Medical Officer. The ASCO/CancerLinQ team was led by Dr. Robert Miller. Dr. Travis Osterman of Vanderbilt University leads the mCODE Technical Review Group. Andre Quina guides the overall mCODE effort at MITRE. Dr. Charles Mayo of University of Michigan, Randi Kudner of ASTRO, and Martin von Siebenthal of Varian made significant contributions to the much improved radiotherapy portion of this IG. MITRE contributors include Mark Kramer, May Terry, Max Masnick, Rute Martins, Chris Moesel, Caroline Potteiger, Steve Bratt, and Sharon Sebastian. HL7 sponsorship and input from [Clinical Interoperability Council](http://www.hl7.org/Special/committees/cic/index.cfm) and [Clinical Information Modeling Initiative](https://www.hl7.org/Special/Committees/cimi/index.cfm) is gratefully acknowledged, with special thanks to Richard Esmond, Laura Heermann Langford, and Lindsey Hoggle.
+The authors recognize the leadership and sponsorship of Dr. Monica Bertagnolli, former ASCO President and Dr. Jay Schnitzer, MITRE Chief Technology and Chief Medical Officer. The ASCO/CancerLinQ team was led by Dr. Robert Miller. Dr. Travis Osterman of Vanderbilt University leads the mCODE Technical Review Group. Andre Quina guides the overall mCODE effort at MITRE. Dr. Charles Mayo of University of Michigan, Randi Kudner of ASTRO, and Martin von Siebenthal of Varian made significant contributions to the much improved radiotherapy portion of this IG. MITRE contributors include Mark Kramer, May Terry, Max Masnick, Saul Kravitz, Rute Martins, Chris Moesel, Caroline Potteiger, Steve Bratt, and Sharon Sebastian. HL7 sponsorship and input from [Clinical Interoperability Council](http://www.hl7.org/Special/committees/cic/index.cfm) and [Clinical Information Modeling Initiative](https://www.hl7.org/Special/Committees/cimi/index.cfm) is gratefully acknowledged, with special thanks to Richard Esmond, Laura Heermann Langford, and Lindsey Hoggle. The capability statements were rendered with tools developed by Eric Haas and modified by Corey Spears.
 
 This IG was authored by the MITRE Corporation using [FHIR Shorthand (FSH)](http://hl7.org/fhir/uv/shorthand/) and [SUSHI](https://fshschool.org), a free, open source toolchain from [MITRE Corporation](https://www.mitre.org/).
 

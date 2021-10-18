@@ -37,8 +37,10 @@
 }, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
 v: {
   "display" : "",
+  "code" : "",
+  "system" : "",
   "severity" : "error",
-  "error" : "Access violation at address 000000000041308B in module 'FHIRServer.exe'. Read of address 00000000FFFFFFF7 (from http://tx.fhir.org/r4)"
+  "error" : "Access violation at address 000000000070CF7E in module 'FHIRServer.exe'. Read of address FFFFFFFFFFFFFFFF (from http://tx.fhir.org/r4)"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
@@ -80,6 +82,8 @@ v: {
 }, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK"}####
 v: {
   "display" : "English (Region=United States)",
+  "code" : "",
+  "system" : "",
   "severity" : null,
   "error" : ""
 }
@@ -90,6 +94,8 @@ v: {
 }, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
 v: {
   "display" : "English (Region=United States)",
+  "code" : "",
+  "system" : "",
   "severity" : null,
   "error" : ""
 }
@@ -132,6 +138,8 @@ v: {
 }, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK"}####
 v: {
   "display" : "English (Region=United States)",
+  "code" : "",
+  "system" : "",
   "severity" : null,
   "error" : ""
 }
@@ -2909,6 +2917,8 @@ v: {
 }, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
 v: {
   "display" : "English (United States)",
+  "code" : "",
+  "system" : "",
   "severity" : null,
   "error" : ""
 }
@@ -5686,6 +5696,8 @@ v: {
 }, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK"}####
 v: {
   "display" : "English (Region=United States)",
+  "code" : "",
+  "system" : "",
   "severity" : null,
   "error" : ""
 }
@@ -5697,6 +5709,8 @@ v: {
 }, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
 v: {
   "display" : "English (Region=United States)",
+  "code" : "en-US",
+  "system" : "urn:ietf:bcp:47",
   "severity" : null,
   "error" : ""
 }

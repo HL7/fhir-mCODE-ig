@@ -1,6 +1,6 @@
-Instance: cancer-genetic-variant-somatic-single-nucleotide
-InstanceOf: CancerGeneticVariant
-Description: "mCODE Example for Cancer Genetic Variant"
+Instance: cancer-genomic-variant-somatic-single-nucleotide
+InstanceOf: CancerGenomicVariant
+Description: "mCODE Example for Cancer Genomic Variant"
 * status = #final "Final"
 * method = LNC#LA26398-0 "Sequencing"
 // value[x] has alternate codings depending on where to place the interpretation of "Positive or Negative".
@@ -17,17 +17,17 @@ Description: "mCODE Example for Cancer Genetic Variant"
 * component[genomicDNAChange].valueCodeableConcept = HGVS#NC_000019.8:g.1171707G>A "NC_000019.8:g.1171707G>A"
 * component[genomicSourceClass].valueCodeableConcept = LNC#LA6684-0 "Somatic"
 
-/* cancer-genetic-variant-germline-deletion is an example of the
- * CancerGeneticVariant to represent a single mutation test.
+/* cancer-genomic-variant-germline-deletion is an example of the
+ * CancerGenomicVariant to represent a single mutation test.
  * This example demonstrates a test for a single germline mutation, BRCA1 gene.c.185delAG, equivalent to the LOINC test https://loinc.org/21637-4/.
  */
-Instance: cancer-genetic-variant-germline-deletion
-InstanceOf: CancerGeneticVariant
-Description: "mCODE Example for Cancer Genetic Variant"
+Instance: cancer-genomic-variant-germline-deletion
+InstanceOf: CancerGenomicVariant
+Description: "mCODE Example for Cancer Genomic Variant"
 * status = #final "Final"
 * method = LNC#LA26398-0 "Sequencing"
 // value[x] has alternate codings depending on where to place the interpretation of "Positive or Negative".
-* valueCodeableConcept = SCT#10828004 "Positive (qualifier value)"
+* interpretation = SCT#10828004 "Positive (qualifier value)"
 * subject = Reference(cancer-patient-john-anyperson)
 * effectiveDateTime = "2019-04-01"
 * valueCodeableConcept = LNC#LA9633-4 "Present"
@@ -35,15 +35,34 @@ Description: "mCODE Example for Cancer Genetic Variant"
 * component[genomicDNAChange].valueCodeableConcept = HGVS#NG_005905.2:g.126148_126152del "NG_005905.2:g.126148_126152del"
 * component[genomicSourceClass].valueCodeableConcept = LNC#LA6683-2 "Germline"
 
+/* cancer-genomic-variant-fusion is an example of the
+ * CancerGenomicVariant to represent a gene fusion event.
+ * This example demonstrates a test for the gene fusion ABR-BCL1.
+ */
+Instance: cancer-genomic-variant-fusion
+InstanceOf: CancerGenomicVariant
+Description: "mCODE Example for Cancer Genomic Variant gene fusion event"
+* status = #final "Final"
+* method = LNC#LA26398-0 "Sequencing"
+* interpretation = SCT#10828004 "Positive (qualifier value)"
+* subject = Reference(cancer-patient-john-anyperson)
+* effectiveDateTime = "2019-04-01"
+* valueCodeableConcept = LNC#LA9633-4 "Present"
+* component[geneStudied][0].valueCodeableConcept = HGNC#HGNC:1014 "BCR" // NOTE: HGNC and HGVS codes have special characters in them so SUSHI needs to handle this.
+* component[geneStudied][1].valueCodeableConcept = HGNC#HGNC:76 "ABL1"
+* component[molecularConsequence].valueCodeableConcept = SO#SO:001565 "gene_fusion"
+* component[genomicDNAChange].valueCodeableConcept = HGVS#NM_005157.6(ABL1):c.1076T>G "NM_005157.6(ABL1):c.1076T>G"   // "NM_005157.6(ABL1):c.1076T>G (p.Phe359Cys)"
+* component[genomicSourceClass].valueCodeableConcept = LNC#LA6684-0 "Somatic"
+
 Instance: cancer-genomics-report-john-anyperson
 InstanceOf: CancerGenomicsReport
 Description: "mCODE Example for Cancer Genomics Report"
 * status = #final "Final"
 * subject = Reference(cancer-patient-john-anyperson)
 * effectiveDateTime = "2019-04-01"
-* specimen = Reference(Specimen/genetic-specimen-lung)
+* specimen = Reference(Specimen/genomic-specimen-lung)
 * issued = "2019-04-01T11:45:33+11:00"
-* result[CancerGeneticVariant] = Reference(Observation/cancer-genetic-variant-somatic-single-nucleotide)
+* result[CancerGenomicVariant] = Reference(Observation/cancer-genomic-variant-somatic-single-nucleotide)
 * result[GenomicRegionStudied] = Reference(genomic-region-studied-stk11)
 
 Instance: genomic-region-studied-stk11
@@ -65,9 +84,9 @@ Description: "mCODE Example for Tumor Marker Test"
 * performer = Reference(us-core-practitioner-kyle-anydoc)
 * valueCodeableConcept = SCT#10828004 "Positive (qualifier value)"
 
-Instance: genetic-specimen-lung
-InstanceOf: GeneticSpecimen
-Description: "mCODE Example for Genetic Specimen"
+Instance: genomic-specimen-lung
+InstanceOf: GenomicSpecimen
+Description: "mCODE Example for Genomic Specimen"
 * status = #available "Available"
 * subject = Reference(cancer-patient-john-anyperson)
 * processing.timeDateTime = "2019-03-20"

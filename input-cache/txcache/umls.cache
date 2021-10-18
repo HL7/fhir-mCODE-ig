@@ -1,82 +1,12 @@
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://terminology.hl7.org/CodeSystem/umls",
-  "code" : "C3897809"
-}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
-v: {
-  "display" : "",
-  "severity" : "error",
-  "error" : "The code system \"http://terminology.hl7.org/CodeSystem/umls\" is not known (encountered paired with code = \"C3897809\"); The code provided (http://terminology.hl7.org/CodeSystem/umls#C3897809) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4)"
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://terminology.hl7.org/CodeSystem/umls",
-  "code" : "C0203617"
-}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
-v: {
-  "display" : "",
-  "severity" : "error",
-  "error" : "The code system \"http://terminology.hl7.org/CodeSystem/umls\" is not known (encountered paired with code = \"C0203617\"); The code provided (http://terminology.hl7.org/CodeSystem/umls#C0203617) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4)"
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://terminology.hl7.org/CodeSystem/umls",
-  "code" : "C3494442"
-}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
-v: {
-  "display" : "",
-  "severity" : "error",
-  "error" : "The code system \"http://terminology.hl7.org/CodeSystem/umls\" is not known (encountered paired with code = \"C3494442\"); The code provided (http://terminology.hl7.org/CodeSystem/umls#C3494442) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4)"
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://terminology.hl7.org/CodeSystem/umls",
-  "code" : "C3539769"
-}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
-v: {
-  "display" : "",
-  "severity" : "error",
-  "error" : "The code system \"http://terminology.hl7.org/CodeSystem/umls\" is not known (encountered paired with code = \"C3539769\"); The code provided (http://terminology.hl7.org/CodeSystem/umls#C3539769) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4)"
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://terminology.hl7.org/CodeSystem/umls",
-  "code" : "C3489631"
-}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
-v: {
-  "display" : "",
-  "severity" : "error",
-  "error" : "The code system \"http://terminology.hl7.org/CodeSystem/umls\" is not known (encountered paired with code = \"C3489631\"); The code provided (http://terminology.hl7.org/CodeSystem/umls#C3489631) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4)"
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://terminology.hl7.org/CodeSystem/umls",
-  "code" : "C5236971"
-}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
-v: {
-  "display" : "",
-  "severity" : "error",
-  "error" : "The code system \"http://terminology.hl7.org/CodeSystem/umls\" is not known (encountered paired with code = \"C5236971\"); The code provided (http://terminology.hl7.org/CodeSystem/umls#C5236971) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4)"
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://terminology.hl7.org/CodeSystem/umls",
   "code" : "C0687118"
 }, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
 v: {
   "display" : "",
   "severity" : "error",
   "error" : "The code system \"http://terminology.hl7.org/CodeSystem/umls\" is not known (encountered paired with code = \"C0687118\"); The code provided (http://terminology.hl7.org/CodeSystem/umls#C0687118) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4)"
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://terminology.hl7.org/CodeSystem/umls",
-  "code" : "C3640144"
-}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
-v: {
-  "display" : "",
-  "severity" : "error",
-  "error" : "The code system \"http://terminology.hl7.org/CodeSystem/umls\" is not known (encountered paired with code = \"C3640144\"); The code provided (http://terminology.hl7.org/CodeSystem/umls#C3640144) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4)"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
@@ -99,96 +29,6 @@ v: {
   "error" : "The code system \"http://terminology.hl7.org/CodeSystem/umls\" is not known (encountered paired with code = \"C0222987\"); The code provided (http://terminology.hl7.org/CodeSystem/umls#C0222987) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4)"
 }
 -------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://terminology.hl7.org/CodeSystem/umls",
-  "code" : "C2936599"
-}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
-v: {
-  "display" : "",
-  "severity" : "error",
-  "error" : "The code system \"http://terminology.hl7.org/CodeSystem/umls\" is not known (encountered paired with code = \"C2936599\"); The code provided (http://terminology.hl7.org/CodeSystem/umls#C2936599) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4)"
-}
--------------------------------------------------------------------------------------
-{"hierarchical" : false, "valueSet" :{
-  "resourceType" : "ValueSet",
-  "compose" : {
-    "include" : [{
-      "system" : "http://terminology.hl7.org/CodeSystem/umls",
-      "concept" : [{
-        "code" : "C3897809",
-        "display" : "Pulsed-Dose Rate Brachytherapy"
-      }]
-    }]
-  }
-}}####
-e: {
-  "error" : "Error from server: Unable to provide support for code system http://terminology.hl7.org/CodeSystem/umls"
-}
--------------------------------------------------------------------------------------
-{"hierarchical" : false, "valueSet" :{
-  "resourceType" : "ValueSet",
-  "compose" : {
-    "include" : [{
-      "system" : "http://terminology.hl7.org/CodeSystem/umls",
-      "concept" : [{
-        "code" : "C0203617",
-        "display" : "Intravascular radionuclide therapy"
-      }]
-    }]
-  }
-}}####
-e: {
-  "error" : "Error from server: Unable to provide support for code system http://terminology.hl7.org/CodeSystem/umls"
-}
--------------------------------------------------------------------------------------
-{"hierarchical" : false, "valueSet" :{
-  "resourceType" : "ValueSet",
-  "compose" : {
-    "include" : [{
-      "system" : "http://terminology.hl7.org/CodeSystem/umls",
-      "concept" : [{
-        "code" : "C3494442",
-        "display" : "Carbon Ion Radiation Therapy"
-      },
-      {
-        "code" : "C3539769",
-        "display" : "Photon Beam Radiation Therapy"
-      },
-      {
-        "code" : "C3897809",
-        "display" : "Pulsed-Dose Rate Brachytherapy"
-      }]
-    }]
-  }
-}}####
-e: {
-  "error" : "Error from server: Unable to provide support for code system http://terminology.hl7.org/CodeSystem/umls"
-}
--------------------------------------------------------------------------------------
-{"hierarchical" : false, "valueSet" :{
-  "resourceType" : "ValueSet",
-  "compose" : {
-    "include" : [{
-      "system" : "http://terminology.hl7.org/CodeSystem/umls",
-      "concept" : [{
-        "code" : "C3489631",
-        "display" : "Volumetric Modulated Arc Therapy"
-      },
-      {
-        "code" : "C5236971",
-        "display" : "2D Conventional Radiotherapy"
-      },
-      {
-        "code" : "C0203617",
-        "display" : "Intravascular radionuclide therapy"
-      }]
-    }]
-  }
-}}####
-e: {
-  "error" : "Error from server: Unable to provide support for code system http://terminology.hl7.org/CodeSystem/umls"
-}
--------------------------------------------------------------------------------------
 {"hierarchical" : false, "valueSet" :{
   "resourceType" : "ValueSet",
   "compose" : {
@@ -202,7 +42,24 @@ e: {
   }
 }}####
 e: {
-  "error" : "Error from server: Unable to provide support for code system http://terminology.hl7.org/CodeSystem/umls"
+  "valueSet" : {
+  "resourceType" : "ValueSet",
+  "language" : "en",
+  "status" : "active",
+  "expansion" : {
+    "identifier" : "urn:uuid:67e3780d-c897-40ed-b3f3-2f70c6d975bd",
+    "timestamp" : "2021-09-14T11:56:01.924Z",
+    "parameter" : [{
+      "name" : "limitedExpansion",
+      "valueBoolean" : true
+    },
+    {
+      "name" : "excludeNested",
+      "valueBoolean" : true
+    }]
+  }
+},
+  "error" : ""
 }
 -------------------------------------------------------------------------------------
 {"hierarchical" : false, "valueSet" :{
@@ -211,10 +68,6 @@ e: {
     "include" : [{
       "system" : "http://terminology.hl7.org/CodeSystem/umls",
       "concept" : [{
-        "code" : "C3640144",
-        "display" : "Tumor Bed"
-      },
-      {
         "code" : "C0223388",
         "display" : "Structure of body of thirteenth thoracic vertebra (body structure)"
       },
@@ -229,20 +82,24 @@ e: {
   "error" : "Error from server: Unable to provide support for code system http://terminology.hl7.org/CodeSystem/umls"
 }
 -------------------------------------------------------------------------------------
-{"hierarchical" : false, "valueSet" :{
-  "resourceType" : "ValueSet",
-  "compose" : {
-    "include" : [{
-      "system" : "http://terminology.hl7.org/CodeSystem/umls",
-      "concept" : [{
-        "code" : "C2936599",
-        "display" : "Organs at Risk"
-      }]
-    }]
-  }
-}}####
-e: {
-  "error" : "Error from server: Unable to provide support for code system http://terminology.hl7.org/CodeSystem/umls"
+{"code" : {
+  "system" : "http://terminology.hl7.org/CodeSystem/umls",
+  "code" : "C5197767"
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code system \"http://terminology.hl7.org/CodeSystem/umls\" is not known (encountered paired with code = \"C5197767\"); The code provided (http://terminology.hl7.org/CodeSystem/umls#C5197767) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4)"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://terminology.hl7.org/CodeSystem/umls",
+  "code" : "C0927941"
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code system \"http://terminology.hl7.org/CodeSystem/umls\" is not known (encountered paired with code = \"C0927941\"); The code provided (http://terminology.hl7.org/CodeSystem/umls#C0927941) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4)"
 }
 -------------------------------------------------------------------------------------
 {"hierarchical" : false, "valueSet" :{
@@ -251,52 +108,20 @@ e: {
     "include" : [{
       "system" : "http://terminology.hl7.org/CodeSystem/umls",
       "concept" : [{
-        "code" : "C3494442",
-        "display" : "Carbon Ion Radiation Therapy"
+        "code" : "C0222987",
+        "display" : "Bone structure of thirteenth rib (body structure)"
       },
       {
-        "code" : "C3539769",
-        "display" : "Photon Beam Radiation Therapy"
-      }]
-    }]
-  }
-}}####
-e: {
-  "error" : "Error from server: Unable to provide support for code system http://terminology.hl7.org/CodeSystem/umls"
-}
--------------------------------------------------------------------------------------
-{"hierarchical" : false, "valueSet" :{
-  "resourceType" : "ValueSet",
-  "compose" : {
-    "include" : [{
-      "system" : "http://terminology.hl7.org/CodeSystem/umls",
-      "concept" : [{
-        "code" : "C3489631",
-        "display" : "Volumetric Modulated Arc Therapy"
+        "code" : "C5197767",
+        "display" : "Poststyoloid Compartment"
       },
       {
-        "code" : "C5236971",
-        "display" : "2D Conventional Radiotherapy"
-      }]
-    }]
-  }
-}}####
-e: {
-  "error" : "Error from server: Unable to provide support for code system http://terminology.hl7.org/CodeSystem/umls"
-}
--------------------------------------------------------------------------------------
-{"hierarchical" : false, "valueSet" :{
-  "resourceType" : "ValueSet",
-  "compose" : {
-    "include" : [{
-      "system" : "http://terminology.hl7.org/CodeSystem/umls",
-      "concept" : [{
         "code" : "C0223388",
         "display" : "Structure of body of thirteenth thoracic vertebra (body structure)"
       },
       {
-        "code" : "C0222987",
-        "display" : "Bone structure of thirteenth rib (body structure)"
+        "code" : "C0927941",
+        "display" : "Jugular Fossa (body structure)"
       }]
     }]
   }

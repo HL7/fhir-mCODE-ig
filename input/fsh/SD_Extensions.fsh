@@ -42,13 +42,13 @@ Extension: BodyLocationQualifier
 Id: mcode-body-location-qualifier
 Title: "Body Location Qualifier"
 Description: "Qualifier to refine an body location. These include qualifiers for relative location, directionality, number, and plane, and exclude qualifiers for laterality."
-// FHIR-xxxx    
+// FHIR-xxxx
 // * insert ExtensionContext(Specimen.collection.bodySite)
 // * insert ExtensionContext(Procedure.bodySite)
 // * insert ExtensionContext(Condition.bodySite)
 // * insert ExtensionContext(Observation.bodySite)
 * value[x] only CodeableConcept
-* value[x] from BodyLocationQualifierVS (required) 
+* value[x] from BodyLocationQualifierVS (required)
 * value[x] 1..1
 
 Extension: LateralityQualifier
@@ -66,7 +66,7 @@ Description: "Qualifier to specify laterality laterality."
 Extension: TreatmentTerminationReason
 Id: mcode-treatment-termination-reason
 Title: "Termination Reason"
-Description: "A code explaining the unplanned or premature termination, or normal completion, of a plan of treatment, course of medication, or research study. "
+Description: "A code explaining the unplanned or premature termination, or normal completion, of a plan of treatment, course of medication, or research study."
 //* insert ExtensionContext(MedicationRequest) - removed as per FHIR-32243
 //* insert ExtensionContext(Procedure)         - removed as per FHIR-32243
 * value[x] only CodeableConcept

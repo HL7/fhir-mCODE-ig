@@ -246,14 +246,6 @@ Description: "Extension capturing a technique of external beam or brachytherapy 
 * value[x] only CodeableConcept
 * value[x] 1..1
 
-Extension: RadiotherapyFractionsDelivered
-Id:        mcode-radiotherapy-fractions-delivered
-Title:     "Radiotherapy Fractions Delivered"
-Description: "The total number of fractions (treatment divisions) actually delivered for this volume."
-* insert ExtensionContext(Procedure)
-* value[x] only unsignedInt
-* value[x] 1..1
-
 Extension: RadiotherapySessions
 Id:        mcode-radiotherapy-sessions
 Title:     "Radiotherapy Number of Sessions"

@@ -52,7 +52,7 @@ Description: "Allowed techniques for photon beam modality"
 * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
 * SCT#441799006 "Intensity modulated radiation therapy (procedure)"
 * SCT#1156530009 "Volumetric Modulated Arc Therapy (procedure)"
-* SCT#1162782007 "Three dimensional external beam radiation therapy (procedure)"
+* RequestedRadiotherapyTechniqueCodes#ThreeD "Three dimensional external beam radiation therapy (procedure)"
 * SCT#1156526006 "Two dimensional external beam radiation therapy (procedure)"
 * SCT#168524008 "Radiotherapy - intraoperative control (procedure)"
 
@@ -61,7 +61,7 @@ Id: mcode-electron-beam-technique-vs
 Title: "Allowed techniques for electron beam modality"
 Description: "Allowed techniques for electron beam modality"
 * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
-* SCT#1162782007 "Three dimensional external beam radiation therapy (procedure)"
+* RequestedRadiotherapyTechniqueCodes#ThreeD "Three dimensional external beam radiation therapy (procedure)"
 * SCT#1156526006 "Two dimensional external beam radiation therapy (procedure)"
 * SCT#168524008 "Radiotherapy - intraoperative control (procedure)"
 
@@ -71,7 +71,7 @@ Title: "Allowed techniques for neutron beam modality"
 Description: "Allowed techniques for neutron beam modality"
 * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
 * SCT#169317000 "Neutron capture therapy (procedure)"
-* SCT#1162782007 "Three dimensional external beam radiation therapy (procedure)"
+* RequestedRadiotherapyTechniqueCodes#ThreeD   "Three dimensional external beam radiation therapy (procedure)"
 
 ValueSet: CarbonIonBeamTechniquesVS
 Id: mcode-carbon-ion-beam-technique-vs
@@ -193,7 +193,7 @@ Description: "Codes describing the types of body volumes used in radiotherapy pl
 ValueSet: RadiotherapyTreatmentLocationQualifierVS
 Id: mcode-radiotherapy-treatment-location-qualifier-vs
 Title: "Radiotherapy Treatment Location Qualifier Value Set"
-Description: "Various modifiers that can be applied to body locations where radiotherapy treatments can be directed."
+Description: "Various modifiers that can be applied to body locations where radiotherapy treatments can be directed. Laterality qualifiers are specified in [LateralityQualifierVS]"
 * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
 * include codes from system SCT where concept is-a #258399006  "Lymph node level value (qualifier value)"  // I, II, III, IV, V, VI, VII and sub-levels
 * include codes from system TG263Qualifier

@@ -130,14 +130,17 @@ Description: "Extension capturing modality and technique of a given radiotherapy
 //                   implies extension.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-technique').value in 'http://hl7.org/fhir/us/mcode/ValueSet/mcode-brachyradiopharmaceutical-technique-vs'"
 // Severity: #error
 // # Invariant: TechniquesForPhotonBeamModality
+// Removed requirement for "coding.system = 'http://snomed.info/sct' and " temporarily because of placeholder 3D code ThreeD instead of '1162782007'
 Invariant: TechniquesForPhotonBeamModality
 Description:  "Allowed Techniques for Photon Beam Modality"
 Expression: "extension.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-modality').exists() and
          extension.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-technique').exists() and
          extension.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-modality').value.exists(coding.system = 'http://snomed.info/sct' and coding.code = '1156506007')
    implies
-         extension.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-technique').value.exists(coding.system = 'http://snomed.info/sct' and (
-          coding.code = '441799006' or coding.code = '1156530009' or coding.code = '1162782007' or coding.code = '1156526006' or coding.code = '168524008'))"
+         extension.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-technique').value.exists((
+          coding.code = '441799006' or coding.code = '1156530009' or coding.code = 'ThreeD' or coding.code = '1156526006' or coding.code = '168524008'))"
+
+// Removed requirement for "coding.system = 'http://snomed.info/sct' and " temporarily because of placeholder 3D code instead of ThreeD instead of '1162782007'
 Severity: #error
 Invariant: TechniquesForElectronBeamModality
 Description:  "Allowed Techniques for Electron Beam Modality"
@@ -145,9 +148,11 @@ Expression: "extension.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefini
          extension.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-technique').exists() and
          extension.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-modality').value.exists(coding.system = 'http://snomed.info/sct' and coding.code = '45643008')
    implies
-         extension.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-technique').value.exists(coding.system = 'http://snomed.info/sct' and (
-          coding.code = '1162782007' or coding.code = '1156526006' or coding.code = '168524008'))"
+         extension.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-technique').value.exists( (
+          coding.code = 'ThreeD' or coding.code = '1156526006' or coding.code = '168524008'))"
 Severity: #error
+
+// Removed requirement for "coding.system = 'http://snomed.info/sct' and " temporarily because of placeholder 3D code instead of ThreeD instead of '1162782007'
 Invariant: TechniquesForNeutronBeamModality
 Description:  "Allowed Techniques for Neutron Beam Modality"
 Expression: "extension.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-modality').exists() and
@@ -155,7 +160,7 @@ Expression: "extension.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefini
          extension.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-modality').value.exists(coding.system = 'http://snomed.info/sct' and coding.code = '80347004')
    implies
          extension.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-technique').value.exists(coding.system = 'http://snomed.info/sct' and (
-          coding.code = '169317000' or coding.code = '1162782007'))"
+          coding.code = '169317000' or coding.code = 'ThreeD'))"
 Severity: #error
 Invariant: TechniquesForCarbonIonBeamModality
 Description:  "Allowed Techniques for Carbon Ion Beam Modality"
@@ -302,7 +307,6 @@ Description: "A volume of the body used in radiotherapy planning or treatment de
 * extension contains LateralityQualifier named lateralityQualifier 0..1
 * extension[lateralityQualifier] ^short = "Laterality qualifier."
 * extension[lateralityQualifier] ^definition = "Laterality qualifier that along with associated location and location qualifier codes specifies the TG263 body structure comprising the irradiated volume."
-* extension contains LateralityQualifier named lateralityQualifier 0..1
 * identifier and location and description and patient and morphology and locationQualifier and extension[lateralityQualifier]  MS
 * patient only Reference(CancerPatient)
 

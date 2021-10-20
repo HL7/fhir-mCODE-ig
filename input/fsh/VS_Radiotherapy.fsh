@@ -192,7 +192,7 @@ Description: "Codes describing the types of body volumes used in radiotherapy pl
 * SCT#228792002 "Clinical target volume (observable entity)"
 * SCT#1162586008 "Irradiated volume of organ at risk (observable entity)"
 // DELETE following line after SNOMEDCT Jan 2021 release
-* RequestedRadiationVolumeTypeCodes#oar "SCT#1162586008 Irradiated volume of organ at risk (observable entity)"
+* RequestedRadiationVolumeTypeCodes#1162586008 "Irradiated volume of organ at risk (observable entity)"
 
 
 

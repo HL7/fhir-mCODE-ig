@@ -606,6 +606,7 @@ Description: "Example of radiotherapy treatment summary involving external beam 
 * extension[modalityAndTechnique][0].extension[technique][0].valueCodeableConcept = SCT#1156530009 "Volumetric Modulated Arc Therapy (procedure)"
 * extension[modalityAndTechnique][1].extension[modality][0].valueCodeableConcept = SCT#45643008  "Teleradiotherapy using electrons"
 * extension[modalityAndTechnique][1].extension[technique][0].valueCodeableConcept = SCT#1162782007 "Three dimensional external beam radiation therapy (procedure)"
+* extension[modalityAndTechnique][1].extension[technique][0].valueCodeableConcept = RequestedRadiotherapyTechniqueCodes#1162782007 "Three dimensional external beam radiation therapy (procedure)" // Delete after 1/2022
 * extension[doseDeliveredToVolume][0].extension[volume].valueReference = Reference(jenny-m-chest-wall-treatment-volume)
 * extension[doseDeliveredToVolume][0].extension[totalDoseDelivered].valueQuantity = 6000 'cGy'
 * extension[doseDeliveredToVolume][0].extension[fractionsDelivered].valueUnsignedInt = 30

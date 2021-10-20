@@ -88,7 +88,7 @@ Title: "TG263 Codes"
 Description: "Codes from TG263 Anatomy codes that lack both SNOMEDCT and UMLS definitions"
 * #bowel-space "Bowel Space" // * SCT#USCRS-33351 "Bowel space (body structure)" // Space occupied by bowel
 * #small-bowel-space "Small Bowel Space" // * SCT#USCRS-33352 "Small bowel space (body structure)" // <none>
-* #pre-sacral-lymph-node-group "Presacral lymph node group" // * SCT#USCRS-33346 "Presacral lymph node group (body structure)" // Lymph nodes of pelvis - presacral Left
+* #pre-sacral-lymph-node-group "Presacral lymph node group" // * SCT#USCRS-33346 "Presacral lymph node group (body structure)" * # "Lymph nodes of pelvis - presacral Left
 * #tumor-bed "Tumor bed (morphologic abnormality)" // There is no snomed term or UMLS term
 
 CodeSystem: TG263Qualifier
@@ -96,3 +96,33 @@ Title: "TG263 Qualifier Codes"
 Description: "Qualifier Codes from TG263 Anatomy codes that lack both SNOMEDCT and UMLS definitions"
 * #non-adjacent "Non-Adjacent"           // * SCT#USCRS-33144 "non-adjacent (qualifier)"
 * #supra-mammary "Supra-Mammary"         // * SCT#USCRS-33347 "supra-mammary"
+
+CodeSystem: RequestedRadiotherapyTechniqueCodes
+Title: "Requested Radiotherapy Technique Codes to be released Jan 2021"
+Description: "Codes requested from SNOMED for Radiotherapy Techniques"
+* #ThreeD "Three dimensional external beam radiation therapy (procedure)" // to be released Jan 2021 -- SCT#1162782007 "Three dimensional external beam radiation therapy (procedure)"
+
+CodeSystem: RequestedLymphNodeLevelCodes
+Title: "Requested Lymph Node Level Codes to be released Jan 2021"
+Description: "Codes requested from SNOMED for Lymph Node Levels"
+* #IA "SCT#1162616006 Lymph node level IA (qualifier value)"
+* #IB "SCT#1162617002 Lymph node level IB (qualifier value)"
+* #IVA "SCT#1162620005 Lymph node level IVA (qualifier value)"
+* #IVB "SCT#1162621009 Lymph node level IVB (qualifier value)"
+* #VA "SCT#1162622002 Lymph node level VA (qualifier value)"
+* #VB "SCT#1162623007 Lymph node level VB (qualifier value)"
+* #VC "SCT#1162624001 Lymph node level VC (qualifier value)"
+* #VIA "SCT#1162625000 Lymph node level VIA (qualifier value)"
+* #VIB "SCT#1162626004 Lymph node level VIB (qualifier value)"
+* #VIIA "SCT#1162628003 Lymph node level VIIA (qualifier value)"
+* #VIIB "SCT#1162627008 Lymph node level VIIB (qualifier value)"
+* #VIII "SCT#1162618007 Lymph node level VIII (qualifier value)"
+* #IX "SCT#1162619004 Lymph node level IX (qualifier value)"
+* #X "SCT#1162614009 Lymph node level X (qualifier value)"
+* #XA "SCT#1162615005 Lymph node level XA (qualifier value)"
+* #XB "SCT#1162613003 Lymph node level XB (qualifier value)"
+
+CodeSystem: RequestedRadiationVolumeTypeCodes
+Title: "Requested Radiation Volume Type Codes to be released Jan 2021"
+Description: "Codes requested from SNOMED for Radiation Volume Types"
+* #oar "SCT#1162586008 Irradiated volume of organ at risk (observable entity)"

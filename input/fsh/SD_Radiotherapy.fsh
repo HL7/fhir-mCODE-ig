@@ -300,14 +300,11 @@ Description: "A volume of the body used in radiotherapy planning or treatment de
 * morphology ^comment = "The type of radiotherapy volume this resource represents. Although the name of the element is 'morphology', this element is defined in the base resource as 'The kind of structure being represented by the body structure'. The name is somewhat of a misnomer, and might be better interpreted simply as 'type' or 'kind'."
 * location from RadiotherapyTreatmentLocationVS (required)
 * location ^short = "Body Location Code."
-* location ^definition = "A code and qualifiers (via extensions) specifying the TG263 body structure comprising the irradiated volume."
+* location ^definition = "The location and locationQualifier codes specify a TG263 body structure comprising the irradiated volume."
 * locationQualifier from RadiotherapyTreatmentLocationQualifierVS
-* locationQualifier ^short = "Qualifiers on location, exclusive of laterality."
-* locationQualifier ^definition = "Qualifiers that together with the associated location code specify the TG263 body structure comprising the irradiated volume. Laterality qualifiers are specified separately via an extension."
-* extension contains LateralityQualifier named lateralityQualifier 0..1
-* extension[lateralityQualifier] ^short = "Laterality qualifier."
-* extension[lateralityQualifier] ^definition = "Laterality qualifier that along with associated location and location qualifier codes specifies the TG263 body structure comprising the irradiated volume."
-* identifier and location and description and patient and morphology and locationQualifier and extension[lateralityQualifier]  MS
+* locationQualifier ^short = "Qualifiers on location used to specify a TG263 body structure comprising the irradiated volume."
+* locationQualifier ^definition = "Qualifiers that together with the associated location code specify the TG263 body structure comprising the irradiated volume."
+* identifier and location and description and patient and morphology and locationQualifier  MS
 * patient only Reference(CancerPatient)
 
 Invariant:  mcode-description-or-id-required

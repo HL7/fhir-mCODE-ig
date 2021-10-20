@@ -130,7 +130,7 @@ Description: "Extension capturing modality and technique of a given radiotherapy
 //                   implies extension.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-technique').value in 'http://hl7.org/fhir/us/mcode/ValueSet/mcode-brachyradiopharmaceutical-technique-vs'"
 // Severity: #error
 // # Invariant: TechniquesForPhotonBeamModality
-// Removed requirement for "coding.system = 'http://snomed.info/sct' and " temporarily because of placeholder 3D code ThreeD instead of '1162782007'
+// Removed requirement for "coding.system = 'http://snomed.info/sct' and " temporarily because of placeholder 3D code '
 Invariant: TechniquesForPhotonBeamModality
 Description:  "Allowed Techniques for Photon Beam Modality"
 Expression: "extension.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-modality').exists() and
@@ -138,9 +138,9 @@ Expression: "extension.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefini
          extension.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-modality').value.exists(coding.system = 'http://snomed.info/sct' and coding.code = '1156506007')
    implies
          extension.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-technique').value.exists((
-          coding.code = '441799006' or coding.code = '1156530009' or coding.code = 'ThreeD' or coding.code = '1156526006' or coding.code = '168524008'))"
+          coding.code = '441799006' or coding.code = '1156530009' or coding.code = '1162782007' or coding.code = '1156526006' or coding.code = '168524008'))"
 
-// Removed requirement for "coding.system = 'http://snomed.info/sct' and " temporarily because of placeholder 3D code instead of ThreeD instead of '1162782007'
+// Removed requirement for "coding.system = 'http://snomed.info/sct' and " temporarily because of placeholder 3D code
 Severity: #error
 Invariant: TechniquesForElectronBeamModality
 Description:  "Allowed Techniques for Electron Beam Modality"
@@ -149,36 +149,38 @@ Expression: "extension.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefini
          extension.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-modality').value.exists(coding.system = 'http://snomed.info/sct' and coding.code = '45643008')
    implies
          extension.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-technique').value.exists( (
-          coding.code = 'ThreeD' or coding.code = '1156526006' or coding.code = '168524008'))"
+          coding.code = '1162782007' or coding.code = '1156526006' or coding.code = '168524008'))"
 Severity: #error
 
-// Removed requirement for "coding.system = 'http://snomed.info/sct' and " temporarily because of placeholder 3D code instead of ThreeD instead of '1162782007'
+// Removed requirement for "coding.system = 'http://snomed.info/sct' and " temporarily because of placeholder 3D code from local codesystem, not SCT'
 Invariant: TechniquesForNeutronBeamModality
 Description:  "Allowed Techniques for Neutron Beam Modality"
 Expression: "extension.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-modality').exists() and
          extension.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-technique').exists() and
          extension.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-modality').value.exists(coding.system = 'http://snomed.info/sct' and coding.code = '80347004')
    implies
-         extension.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-technique').value.exists(coding.system = 'http://snomed.info/sct' and (
-          coding.code = '169317000' or coding.code = 'ThreeD'))"
+         extension.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-technique').value.exists( (
+          coding.code = '169317000' or coding.code = '1162782007'))"
 Severity: #error
+// Removed requirement for "coding.system = 'http://snomed.info/sct' and " temporarily because of placeholder PS code from local codesystem, not SCT'
 Invariant: TechniquesForCarbonIonBeamModality
 Description:  "Allowed Techniques for Carbon Ion Beam Modality"
 Expression: "extension.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-modality').exists() and
          extension.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-technique').exists() and
          extension.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-modality').value.exists(coding.system = 'http://snomed.info/sct' and coding.code = '1156505006')
    implies
-         extension.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-technique').value.exists(coding.system = 'http://snomed.info/sct' and (
-          coding.code = '1156529004' or coding.code = '1156528007'))"
+         extension.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-technique').value.exists( (
+          coding.code = '1156529004' or coding.code = '1156528007' or coding.code='PS'))"
 Severity: #error
+// Removed requirement for "coding.system = 'http://snomed.info/sct' and " temporarily because of placeholder PS code from local codesystem, not SCT'
 Invariant: TechniquesForProtonBeamModality
 Description:  "Allowed Techniques for Proton Beam Modality"
 Expression: "extension.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-modality').exists() and
          extension.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-technique').exists() and
          extension.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-modality').value.exists(coding.system = 'http://snomed.info/sct' and coding.code = '10611004')
    implies
-         extension.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-technique').value.exists(coding.system = 'http://snomed.info/sct' and (
-          coding.code = '1156529004' or coding.code = '1156528007'))"
+         extension.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-technique').value.exists( (
+          coding.code = '1156529004' or coding.code = '1156528007' or coding.code = 'PS'))"
 Severity: #error
 Invariant: TechniquesForInternalRadiotherapyPermanentSeeds
 Description:  "Allowed Techniques for Internal Radiotherapy - Permanent Seeds"

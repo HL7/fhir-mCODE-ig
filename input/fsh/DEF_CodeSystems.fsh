@@ -100,4 +100,5 @@ Description: "Qualifier Codes from TG263 Anatomy codes that lack both SNOMEDCT a
 CodeSystem: RequestedRadiotherapyTechniqueCodes
 Title: "Requested Radiotherapy Technique Codes"
 Description: "Codes requested from SNOMED for Radiotherapy Techniques"
-* #ThreeD "Three dimensional external beam radiation therapy (procedure)" // to be released Jan 2021 -- SCT#1162782007 "Three dimensional external beam radiation therapy (procedure)"
+* #1162782007 "Three dimensional external beam radiation therapy (procedure)" // to be released Jan 2021 -- SCT#1162782007 "Three dimensional external beam radiation therapy (procedure)"
+* #PS "External beam radiation therapy using particle scanning technique (procedure)" // to be requested USCRS

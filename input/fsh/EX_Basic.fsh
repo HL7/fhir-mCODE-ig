@@ -183,6 +183,7 @@ Description: "Example of Karnofsky Performance Status"
 * performer = Reference(us-core-practitioner-kyle-anydoc)
 * valueInteger = 90
 * interpretation = LNC#LA29176-7 "Able to carry on normal activity; minor signs or symptoms of disease"
+* code = LNC#89243-0
 
 Instance: cancer-related-surgical-procedure-lobectomy
 InstanceOf: CancerRelatedSurgicalProcedure

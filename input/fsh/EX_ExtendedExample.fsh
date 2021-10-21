@@ -827,7 +827,7 @@ Description: "Example of US Core Organization"
 
 Instance: radiotherapy-treatment-summary-chest-wall-RTtestNonCompliant-m
 InstanceOf: RadiotherapyCourseSummary
-Description: "Example of radiotherapy treatment summary involving external beam radiation to chest wall and regional node radiation with a chest wall boost"
+Description: "Example of radiotherapy treatment summary involving external beam radiation to chest wall and regional node radiation with a chest wall boost,  THIS INSTANCE IS SUPPOSED TO FAIL VALIDATION!   Need to expand testing of modality/technique combination invariants."
 * status = #completed "completed"
 * code = RID#mcode-radiotherapy-course-summary
 * category = SCT#108290001 //"Radiation oncology AND/OR radiotherapy (procedure)"

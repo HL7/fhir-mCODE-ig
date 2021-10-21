@@ -96,3 +96,9 @@ Title: "TG263 Qualifier Codes"
 Description: "Qualifier Codes from TG263 Anatomy codes that lack both SNOMEDCT and UMLS definitions"
 * #non-adjacent "Non-Adjacent"           // * SCT#USCRS-33144 "non-adjacent (qualifier)"
 * #supra-mammary "Supra-Mammary"         // * SCT#USCRS-33347 "supra-mammary"
+
+CodeSystem: RequestedRadiotherapyTechniqueCodes
+Title: "Requested Radiotherapy Technique Codes"
+Description: "Codes requested from SNOMED for Radiotherapy Techniques"
+* #1162782007 "Three dimensional external beam radiation therapy (procedure)" // to be released Jan 2021 -- SCT#1162782007 "Three dimensional external beam radiation therapy (procedure)"
+* #PS "External beam radiation therapy using particle scanning technique (procedure)" // to be requested USCRS

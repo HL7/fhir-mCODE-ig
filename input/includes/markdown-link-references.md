@@ -140,7 +140,7 @@
 [SpecificDiagnosisCancerDisorderVS]: ValueSet-mcode-specific-diagnosis-cancer-disorder-vs.html
 [CarcinomaInSituDisorderVS]: ValueSet-mcode-carcinoma-in-situ-disorder-vs.html
 [MelanomaInSituDisorderVS]: ValueSet-mcode-melanoma-in-situ-disorder-vs.html
-[MolecularConsequenceVS]: ValueSet-mcode-molecular-consequence-vs.html
+[MolecularConsequenceVS]: ValueSet-molecular-consequence-vs.html
 
 <!-- mCODE Code Systems -->
 [ComorbiditiesElixhauserCS]: CodeSystem-comorbidities-elixhauser-cs.html

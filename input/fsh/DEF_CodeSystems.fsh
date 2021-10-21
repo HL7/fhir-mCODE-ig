@@ -129,6 +129,7 @@ Description: "Codes requested from SNOMED for Radiation Volume Types"
 * #1162586008 "Irradiated volume of organ at risk (observable entity)"
 
 CodeSystem: RequestedRadiotherapyTechniqueCodes
+Id: requested-radiotherapy-technique-code-cs
 Title: "Requested Radiotherapy Technique Codes"
 Description: "Codes requested from SNOMED for Radiotherapy Techniques"
 * #1162782007 "Three dimensional external beam radiation therapy (procedure)" // to be released Jan 2021 -- SCT#1162782007 "Three dimensional external beam radiation therapy (procedure)"

@@ -86,6 +86,7 @@ Description: "Allowed techniques for carbon ion beam modality"
 * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
 * SCT#1156529004 "External beam radiation therapy using particle passive scattering technique (procedure)"
 * SCT#1156528007 "External beam radiation therapy using particle spot scanning technique (procedure)"
+* RequestedRadiotherapyTechniqueCodes#PS "External beam radiation therapy using particle scanning technique (procedure)" // requested from SNOMED
 // * SCT#1156525005 "Mixed beam external beam radiation therapy (procedure)" -- RTTD Terminology decision 9/21
 
 ValueSet: ProtonBeamTechniquesVS
@@ -95,6 +96,7 @@ Description: "Allowed techniques for proton beam modality"
 * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
 * SCT#1156529004 "External beam radiation therapy using particle passive scattering technique (procedure)"
 * SCT#1156528007 "External beam radiation therapy using particle spot scanning technique (procedure)"
+* RequestedRadiotherapyTechniqueCodes#PS "External beam radiation therapy using particle scanning technique (procedure)" // requested from SNOMED
 // * SCT#1156525005 "Mixed beam external beam radiation therapy (procedure)" -- RTTD Terminology decision 9/21
 
 ValueSet: BrachytherapyTechniqueVS
@@ -209,6 +211,7 @@ Description: "Various modifiers that can be applied to body locations where radi
 * include codes from system TG263Qualifier
 // DELETE following line after SNOMEDCT Jan 2021 release
 * include codes from system RequestedLymphNodeLevelCodes  // codes to be released Jan 2021
+* include codes from valueset LateralityQualifierVS
 // * SCT#255549009    "Anterior (qualifier value)" -- NOT USED BY TG263
 // * SCT#255551008    "Posterior (qualifier value)" -- NOT USED BY TG263
 * SCT#277733009 "Level 1 (qualifier value)"
@@ -236,8 +239,7 @@ Description: "Various modifiers that can be applied to body locations where radi
 * SCT#261115001 "Laryngeal (qualifier value)"
 * SCT#260548002 "Oral (qualifier value)"
 
-
-
+// This valueset should be unnecessary, since 'include codes from system SCT where concept is-a #258399006  "Lymph node level value (qualifier value)" ' should cover this after 1/2022
 // ValueSet: LymphNodeLocationQualifierVS
 // Id: mcode-lymph-node-location-qualifier-vs
 // Title: "Lymph Node Location Qualifier Value Set"

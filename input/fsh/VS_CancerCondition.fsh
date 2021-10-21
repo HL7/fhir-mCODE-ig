@@ -222,8 +222,8 @@ Description:    "Types of carcinoma in-situ, coded in SNOMED CT or ICD-10-CM."
 
 ValueSet:  BenignUncertainNeoplasmBrainCNSDisorderVS
 Id: mcode-benign-uncertain-neoplasm-brain-cns-disorder-vs
-Title: "Benign Neoplasm"
-Description:    "Types of benign neoplasms of the brain and central nervous system, coded in SNOMED CT or ICD-10-CM."
+Title: "Benign Neoplasms of Brain and CNS Disorders"
+Description:    "Types of benign neoplasms and neoplasms of uncertain behavior of the brain and central nervous system, coded in SNOMED CT or ICD-10-CM."
 * insert SNOMEDCTCopyrightForVS
 * include codes from system SCT where concept is-a #93468003 "Hemangioma of intracranial structure (disorder)"
 * include codes from system SCT where concept is-a #109913001 "Benign neoplasm of meninges (disorder)"

@@ -1,15 +1,15 @@
 {% raw %}
 <blockquote class="stu-note">
 <p>
-This page has been enhanced to include extended guidance on the use of mCODE genomics elements in support of real-world scenarios. 
+This page has been enhanced to include extended guidance on the use of mCODE genomics elements in support of real-world scenarios.
 </p>
 </blockquote>
 {% endraw %}
 
 ### Assumptions and Scope
 
-* mCODE genomics elements should be seen as data that could be available for exchange. It is not assuming all of the data elements need to be captured and exchanged. 
-* The Tumor Marker elements differ from the genomics elements in its inclusion of 
+* mCODE genomics elements should be seen as data that could be available for exchange. It is not assuming all of the data elements need to be captured and exchanged.
+* The Tumor Marker elements differ from the genomics elements in its inclusion of
   * serum-based measurements which could have an implication on cancer but are not molecular markers (e.g.: PSA).
   * gene expression tests (e.g.: HER2 Immunohistochemistry tests)
 
@@ -63,5 +63,9 @@ The mCODE example [`cancer-genomic-variant-fusion`](Observation-cancer-genomic-v
 * [GenomicSpecimenTypeVS]
 * [HGNCVS]
 * [HGVSVS]
+* [MolecularConsequenceVS]
+* [TumorMarkerTestVS]
 
+### Code Systems
+* [TbdLoincCodes]
 {% include markdown-link-references.md %}

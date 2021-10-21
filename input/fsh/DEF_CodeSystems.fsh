@@ -26,7 +26,7 @@ Please note that while these codes may imply conformance to the profiles that us
 * #mcode-patient "mCODE Patient Group Resource" "Identifies a Group resource containing in-scope cancer patients that conforms to the MCODEPatientGroup profile."
 * #mcode-radiotherapy-course-summary "Radiotherapy Course Summary Resource" "Identifies a Procedure resource that summarizes a radiotherapy treatment that conforms to the RadiotherapyCourseSummary profile." // USCRS-33292 - SNOMEDCT code requested
 
-
+// LOINC Request 6073 requests LOINC codes for these categories, and for the overall index. Submitted 7/7/21
 CodeSystem: ComorbiditiesElixhauserCS
 Id: comorbidities-elixhauser-cs
 Title: "Elixhauser Comorbidity Categories"
@@ -71,38 +71,44 @@ Description: "A set of codes representing the comorbidity categories originally 
 * #VALVE    "Valvular disease Elixhauser category" "Patient has a disorder in the value set ElixhauserValvularDiseaseVS"
 * #WGHTLOSS    "Weight loss Elixhauser category" "Patient has a disorder in the value set ElixhauserWeightLossVS"
 
-CodeSystem: TbdCodes
-Title: "ToBeDeterminedCodes ('TbdCodes')"
+CodeSystem: TbdLoincCodes
+Id: tbd-loinc-code-cs
+Title: "To-Be-Determined LOINC Codes ('TbdLoincCodes')"
 Description: "These codes are currently 'TBD-LOINC' codes. The CG WG is requesting formal LOINC codes."
 * #molecular-consequence "Molecular Consequence" "Annotated changes to sequence features caused by this variant. Terms are from the sequence ontology under SO:0001537."
 * #diagnostic-implication "Diagnosic Implication" "Diagnostic Implication"
 
 CodeSystem: RequestedRemissionCodes
+Id: requested-remission-code-cs
 Title: "Requested Remission Codes"
 Description:   "Codes requested from SNOMED for Remission Status"
 * #partialremission "Cancer in partial remission(finding)"     // USCRS 352237 * SCT#requested "Cancer in partial remission(finding)
 * #completeremission "Cancer in complete remission(finding)"    // USCRS 352236 * SCT#requested "Cancer in complete remission(finding)
 
 CodeSystem: TG263
+Id: tg263-code-cs
 Title: "TG263 Codes"
-Description: "Codes from TG263 Anatomy codes that lack both SNOMEDCT and UMLS definitions"
+Description: "Codes from TG263 Anatomy codes that lack both SNOMEDCT and UMLS definitions."
 * #bowel-space "Bowel Space" // * SCT#USCRS-33351 "Bowel space (body structure)" // Space occupied by bowel
 * #small-bowel-space "Small Bowel Space" // * SCT#USCRS-33352 "Small bowel space (body structure)" // <none>
 * #pre-sacral-lymph-node-group "Presacral lymph node group" // * SCT#USCRS-33346 "Presacral lymph node group (body structure)" * # "Lymph nodes of pelvis - presacral Left
-* #tumor-bed "Tumor bed (morphologic abnormality)" // There is no snomed term or UMLS term
+* #1162492000 "Tumor bed (morphologic abnormality)" // SNOMED term available to be released in Jan 2021
 
 CodeSystem: TG263Qualifier
+Id: tg263-qualifier-code-cs
 Title: "TG263 Qualifier Codes"
 Description: "Qualifier Codes from TG263 Anatomy codes that lack both SNOMEDCT and UMLS definitions"
 * #non-adjacent "Non-Adjacent"           // * SCT#USCRS-33144 "non-adjacent (qualifier)"
-* #supra-mammary "Supra-Mammary"         // * SCT#USCRS-33347 "supra-mammary"
+// * #supra-mammary "Supra-Mammary"         // * SCT#USCRS-33347 "supra-mammary" - request rejected, TRG requested qualifier removal
 
 CodeSystem: RequestedRadiotherapyTechniqueCodes
+Id: requested-radiotherapy-techniques-code-cs
 Title: "Requested Radiotherapy Technique Codes to be released Jan 2021"
 Description: "Codes requested from SNOMED for Radiotherapy Techniques"
 * #1162782007 "Three dimensional external beam radiation therapy (procedure)" // to be released Jan 2021
 
 CodeSystem: RequestedLymphNodeLevelCodes
+Id: requested-lymph-node-level-code-cs
 Title: "Requested Lymph Node Level Codes to be released Jan 2021"
 Description: "Codes requested from SNOMED for Lymph Node Levels"
 * #1162616006 "Lymph node level IA (qualifier value)"
@@ -123,6 +129,7 @@ Description: "Codes requested from SNOMED for Lymph Node Levels"
 * #1162613003 "Lymph node level XB (qualifier value)"
 
 CodeSystem: RequestedRadiationVolumeTypeCodes
+Id: requested-radiation-volume-type-code-cs
 Title: "Requested Radiation Volume Type Codes to be released Jan 2021"
 Description: "Codes requested from SNOMED for Radiation Volume Types"
 * #1162586008 "Irradiated volume of organ at risk (observable entity)"

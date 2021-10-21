@@ -568,7 +568,7 @@ Description: "Codes describing the body locations where radiotherapy treatments 
 * SCT#46027005 "Structure of common iliac vein (body structure)" // Common iliac vein Right
 * SCT#1162492000 "Tumor bed (morphologic abnormality)" // Tumor Bed
 // DELETE FOLLOWING LINE after Jan 2022 SNOMEDCT Release
-* TG263#tumor-bed "SCT#1162492000 Tumor bed (morphologic abnormality)"
+* TG263#1162492000 "SCT#1162492000 Tumor bed (morphologic abnormality)"
 * SCT#71585003 "Structure of external jugular vein (body structure)" // external  jugular vein left
 * SCT#12123001 "Internal jugular vein structure (body structure)" // Internal jugular vein left
 * SCT#32764006 "Portal vein structure (body structure)" // Portal Vein

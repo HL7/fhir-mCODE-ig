@@ -63,7 +63,7 @@
 [CarcinomaInSituDisorderVS]: ValueSet-mcode-carcinoma-in-situ-disorder-vs.html
 [ClinVarVS]: ValueSet-mcode-clinvar-vs.html
 [ConditionStatusTrendVS]: ValueSet-mcode-condition-status-trend-vs.html
-[CytologicEvidenceOfMalignancyVS]: ValueSet-mcode-cytologic-evidence-malignancy-vs.html
+[CytologicEvidenceOfMalignancyVS]: ValueSet-mcode-cytologic-evidence-maligancy-vs.html
 [DNAChangeTypeVS]: ValueSet-mcode-dna-change-type-vs.html
 [ElixhauserAIDSVS]: ValueSet-elixhauser-aids-vs.html
 [ElixhauserAlcoholAbuseVS]: ValueSet-elixhauser-alcohol-abuse-vs.html
@@ -136,11 +136,23 @@
 [TumorMarkerTestVS]: ValueSet-mcode-tumor-marker-test-vs.html
 [TumorSizeMethodVS]: ValueSet-mcode-tumor-size-method-vs.html
 [TumorSizeUnitsVS]: ValueSet-mcode-tumor-size-units-vs.html
+[PrimaryMalignantNeoplasmDisorderVS]: ValueSet-mcode-primary-malignant-neoplasm-disorder-vs.html
+[SpecificDiagnosisCancerDisorderVS]: ValueSet-mcode-specific-diagnosis-cancer-disorder-vs.html
+[CarcinomaInSituDisorderVS]: ValueSet-mcode-carcinoma-in-situ-disorder-vs.html
+[MelanomaInSituDisorderVS]: ValueSet-mcode-melanoma-in-situ-disorder-vs.html
+[BenignUncertainNeoplasmBrainCNSDisorderVS]: mcode-benign-uncertain-neoplasm-brain-cns-disorder-vs.html
+[CytologicEvidenceOfMalignancyVS]: ValueSet-mcode-evidence-of-malignancy-vs.html
+[MolecularConsequenceVS]: ValueSet-mcode-molecular-consequences-vs.html
 
 <!-- mCODE Code Systems -->
 [ComorbiditiesElixhauserCS]: CodeSystem-comorbidities-elixhauser-cs.html
 [CatchCodeCS]: CodeSystem-mcode-catch-code-cs.html
 [ResourceIdentifierCS]: CodeSystem-mcode-resource-identifier-cs.html
+[RequestedLymphNodeLevelCodes]: CodeSystem-mcode-requested-lymph-node-level-code-cs.html
+[RequestedRadiationVolumeTypeCodes]:  CodeSystem-mcode-requested-radiation-volume-type-code-cs.html
+[RequestedRadiotherapyTechniqueCodes]: CodeSystem-mcode-requested-radiotherapy-technique-code-cs.html
+[TG263]: CodeSystem-mcode-tg263-code-cs.html
+[TG263Qualifier]: CodeSystem-mcode-tg263-qualifier-code-cs.html
 
 <!-- mCODE CapabilityStatements -->
 [mcode-receiver-cancer-conditions-then-patients]: CapabilityStatement-mcode-receiver-cancer-conditions-then-patients.html

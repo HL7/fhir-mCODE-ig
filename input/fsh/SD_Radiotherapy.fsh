@@ -140,7 +140,7 @@ Expression: "extension.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefini
          extension.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-technique').value.exists((
           coding.code = '441799006' or coding.code = '1156530009' or
           coding.code = '1162782007' or coding.code = '1156526006' or
-          coding.code = '168524008' or coding.code = '1156530009))"
+          coding.code = '168524008' or coding.code = '1156530009'))"
 
 // Removed requirement for "coding.system = 'http://snomed.info/sct' and " temporarily because of placeholder 3D code
 Severity: #error

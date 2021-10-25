@@ -80,10 +80,11 @@ mCODE includes single FHIR profile, [TumorMarkerTest], for all labs involving se
 * Characterization
   * [TumorMarkerTest]
 
+
 ### Extensions
 
 * [HistologyMorphologyBehavior]
-* [LocationQualifier]
+* [BodyLocationQualifier]
 * [LateralityQualifier]
 
 ### Value Sets
@@ -114,5 +115,8 @@ mCODE includes single FHIR profile, [TumorMarkerTest], for all labs involving se
   * [TNMDistantMetastasesCategoryVS]
 * **Characterization**
   * [TumorMarkerTestVS]
-
+* **Location**
+  * [CancerBodyLocationVS]
+  * [BodyLocationQualifierVS]
+  * [LateralityQualifierVS]
 {% include markdown-link-references.md %}

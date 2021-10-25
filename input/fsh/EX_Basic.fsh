@@ -183,6 +183,7 @@ Description: "Example of Karnofsky Performance Status"
 * performer = Reference(us-core-practitioner-kyle-anydoc)
 * valueInteger = 90
 * interpretation = LNC#LA29176-7 "Able to carry on normal activity; minor signs or symptoms of disease"
+* code = LNC#89243-0
 
 Instance: cancer-related-surgical-procedure-lobectomy
 InstanceOf: CancerRelatedSurgicalProcedure
@@ -204,8 +205,8 @@ Description: "Anatomic volume for John Anyperson's brachytherapy."
 * patient = Reference(cancer-patient-john-anyperson)
 * description = "Structure of lower lobe of left lung"
 * location = SCT#31094006  "Structure of lobe of lung (body structure)"
-* extension[lateralityQualifier].valueCodeableConcept = SCT#7771000 "Left (qualifier value)"
 * locationQualifier[0] = SCT#261122009 "Lower (qualifier value)"
+* locationQualifier[1] = SCT#7771000 "Left (qualifier value)"
 Instance: binet-stage-group-A
 InstanceOf: CancerStageGroup
 Description: "Example of a non-TNM Stage Group (Binet staging for CLL)"

@@ -24,6 +24,7 @@
 [GenomicRegionStudied]: StructureDefinition-mcode-genomic-region-studied.html
 [HistologyMorphologyBehavior]: StructureDefinition-mcode-histology-morphology-behavior.html
 [KarnofskyPerformanceStatus]: StructureDefinition-mcode-karnofsky-performance-status.html
+[LateralityQualifier]: StructureDefinition-mcode-laterality-qualifier.html
 [MCODEPatientBundle]: StructureDefinition-mcode-patient-bundle.html
 [MCODEPatientGroup]: StructureDefinition-mcode-patient-group.html
 [CapabilityStatement]: StructureDefinition-CapabilityStatement.html
@@ -122,6 +123,7 @@
 [RadiotherapyTechniqueVS]: ValueSet-mcode-radiotherapy-technique-vs.html
 [RadiotherapyTreatmentLocationVS]: ValueSet-mcode-radiotherapy-treatment-location-vs.html
 [RadiotherapyTreatmentLocationQualifierVS]: ValueSet-mcode-radiotherapy-treatment-location-qualifier-vs.html
+[LateralityQualifierVS]: ValueSet-mcode-laterality-qualifier-vs.html
 [RadiotherapyVolumeTypeVS]: ValueSet-mcode-radiotherapy-volume-type-vs.html
 [SecondaryCancerDisorderVS]: ValueSet-mcode-secondary-cancer-disorder-vs.html
 [SpecificDiagnosisCancerDisorderVS]: ValueSet-mcode-specific-diagnosis-cancer-disorder-vs.html
@@ -134,11 +136,21 @@
 [TumorMarkerTestVS]: ValueSet-mcode-tumor-marker-test-vs.html
 [TumorSizeMethodVS]: ValueSet-mcode-tumor-size-method-vs.html
 [TumorSizeUnitsVS]: ValueSet-mcode-tumor-size-units-vs.html
+[PrimaryMalignantNeoplasmDisorderVS]: ValueSet-mcode-primary-malignant-neoplasm-disorder-vs.html
+[SpecificDiagnosisCancerDisorderVS]: ValueSet-mcode-specific-diagnosis-cancer-disorder-vs.html
+[CarcinomaInSituDisorderVS]: ValueSet-mcode-carcinoma-in-situ-disorder-vs.html
+[MelanomaInSituDisorderVS]: ValueSet-mcode-melanoma-in-situ-disorder-vs.html
+[MolecularConsequenceVS]: ValueSet-mcode-molecular-consequence-vs.html
 
 <!-- mCODE Code Systems -->
 [ComorbiditiesElixhauserCS]: CodeSystem-comorbidities-elixhauser-cs.html
 [CatchCodeCS]: CodeSystem-mcode-catch-code-cs.html
 [ResourceIdentifierCS]: CodeSystem-mcode-resource-identifier-cs.html
+[RequestedLymphNodeLevelCodes]: CodeSystem-requested-lymph-node-level-code-cs.html
+[RequestedRadiationVolumeTypeCodes]:  CodeSystem-requested-radiation-volume-type-code-cs.html
+[RequestedRadiotherapyTechniqueCodes]: CodeSystem-requested-radiotherapy-technique-code-cs.html
+[TG263]: CodeSystem-tg263-code-cs.html
+[TG263Qualifier]: CodeSystem-tg263-qualifier-code-cs.html
 
 <!-- mCODE CapabilityStatements -->
 [mcode-receiver-cancer-conditions-then-patients]: CapabilityStatement-mcode-receiver-cancer-conditions-then-patients.html

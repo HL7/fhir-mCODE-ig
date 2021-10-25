@@ -54,7 +54,7 @@ Description: "Qualifier to refine an body location. These include qualifiers for
 Extension: LateralityQualifier
 Id: mcode-laterality-qualifier
 Title: "Laterality Qualifier"
-Description: "Qualifier to specify laterality laterality."
+Description: "Qualifier to specify  laterality."
 // * insert ExtensionContext(Specimen.collection.bodySite)
 // * insert ExtensionContext(Procedure.bodySite)
 // * insert ExtensionContext(Condition.bodySite)

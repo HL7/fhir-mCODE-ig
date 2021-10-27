@@ -71,10 +71,6 @@ There is no established code system that represents the 30+ Elixhauser comorbidi
 
 More discussion is found [here][ComorbiditiesElixhauser].
 
-#### Catch Codes
-
-The "catch code" code system was established to represent "Other, specify: ___________" as often offered as the last in a list of choices. In addition, this approach prevents certain FHIR validation problems that would result from use of extensible bindings. A detailed explanation is found [here][CatchCodeCS].
-
 #### Resource Identifier Codes
 
 Certain resources, particularly in the radiotherapy area, are missing appropriate LOINC codes. Local codes have been defined to fill this gap, at least temporarily.

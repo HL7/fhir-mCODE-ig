@@ -68,7 +68,7 @@ Description: "Extended example: example showing smoking status"
 * effectiveDateTime = "2018-03-16"
 * valueCodeableConcept = SCT#449868002 "Smokes tobacco daily (finding)"
 
-Instance: observation-smoking-history-jenny-m
+Instance: observation-smoking-pack-years-jenny-m
 InstanceOf: Observation
 Description: "Extended example: example showing smoking history"
 * status = #final "final"
@@ -485,8 +485,7 @@ Instance: tumor-marker-test-oncotype-dx-jenny-m
 InstanceOf: TumorMarkerTest
 Description: "Extended example: example showing Oncotype DX breast recurrence score. Note that this test has no assigned LOINC code, so GTR is being used as a backup. Only the score from the Oncotype DX panel (as opposed to variant data from the genes in the panel) is represented here."
 * status = #final "final"
-* code.coding[0] = CC#TMT-OTHER "Other Tumor Marker Test, Specify"
-* code.coding[1] = GTR#509910 "Oncotype DX Breast Recurrence Score Assay"
+* code = GTR#509910 "Oncotype DX Breast Recurrence Score Assay"  // extensible
 * code.text = "Oncotype DX Breast Recurrence Score Assay"
 * subject = Reference(cancer-patient-jenny-m)
 * effectiveDateTime = "2018-04-12"

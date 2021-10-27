@@ -1,7 +1,4 @@
 RuleSet: CancerStageCommonRules
-// * insert ReduceText
-// * insert ReduceText(referenceRange)
-// * insert ReduceText(component)
 * value[x] only CodeableConcept
 * value[x] ^comment = ""    // suppress QA error on #notes link
 * insert NotUsed(device)

@@ -20,7 +20,7 @@
 <artifact id="ValueSet/mcode-neutron-beam-technique-vs" key="ValueSet-mcode-neutron-beam-technique-vs" name="Allowed techniques for neutron beam modality"/>
 <artifact id="ValueSet/mcode-photon-beam-technique-vs" key="ValueSet-mcode-photon-beam-technique-vs" name="Allowed techniques for photon beam modality"/>
 <artifact id="ValueSet/mcode-proton-beam-technique-vs" key="ValueSet-mcode-proton-beam-technique-vs" name="Allowed techniques for proton beam modality"/>
-<artifact id="ValueSet/mcode-benign-uncertain-neoplasm-brain-cns-disorder-vs" key="ValueSet-mcode-benign-uncertain-neoplasm-brain-cns-disorder-vs" name="Benign Neoplasm"/>
+<artifact id="ValueSet/mcode-benign-uncertain-neoplasm-brain-cns-disorder-vs" key="ValueSet-mcode-benign-uncertain-neoplasm-brain-cns-disorder-vs" name="Benign Neoplasms of Brain and CNS Disorders"/>
 <artifact id="StructureDefinition/mcode-body-location-qualifier" key="StructureDefinition-mcode-body-location-qualifier" name="Body Location Qualifier"/>
 <artifact id="ValueSet/mcode-body-location-qualifier-vs" key="ValueSet-mcode-body-location-qualifier-vs" name="Body Location Qualifier Value Set"/>
 <artifact id="StructureDefinition/mcode-body-structure-identifier" key="StructureDefinition-mcode-body-structure-identifier" name="Body Structure Identifier"/>
@@ -141,7 +141,7 @@
 <artifact id="StructureDefinition/mcode-radiotherapy-course-summary" key="StructureDefinition-mcode-radiotherapy-course-summary" name="Radiotherapy Course Summary"/>
 <artifact deprecated="true" id="StructureDefinition/mcode-radiotherapy-dose-delivered" key="StructureDefinition-mcode-radiotherapy-dose-delivered" name="Radiotherapy Dose Delivered"/>
 <artifact id="StructureDefinition/mcode-radiotherapy-dose-delivered-to-volume" key="StructureDefinition-mcode-radiotherapy-dose-delivered-to-volume" name="Radiotherapy Dose Delivered To Body Volume"/>
-<artifact id="StructureDefinition/mcode-radiotherapy-fractions-delivered" key="StructureDefinition-mcode-radiotherapy-fractions-delivered" name="Radiotherapy Fractions Delivered"/>
+<artifact deprecated="true" id="StructureDefinition/mcode-radiotherapy-fractions-delivered" key="StructureDefinition-mcode-radiotherapy-fractions-delivered" name="Radiotherapy Fractions Delivered"/>
 <artifact id="StructureDefinition/mcode-radiotherapy-modality" key="StructureDefinition-mcode-radiotherapy-modality" name="Radiotherapy Modality"/>
 <artifact id="StructureDefinition/mcode-radiotherapy-modality-and-technique" key="StructureDefinition-mcode-radiotherapy-modality-and-technique" name="Radiotherapy Modality And Technique"/>
 <artifact id="ValueSet/mcode-radiotherapy-modality-vs" key="ValueSet-mcode-radiotherapy-modality-vs" name="Radiotherapy Modality Value Set"/>
@@ -153,7 +153,10 @@
 <artifact id="StructureDefinition/mcode-radiotherapy-volume" key="StructureDefinition-mcode-radiotherapy-volume" name="Radiotherapy Volume"/>
 <artifact id="ValueSet/mcode-radiotherapy-volume-type-vs" key="ValueSet-mcode-radiotherapy-volume-type-vs" name="Radiotherapy Volume Type Value Set"/>
 <artifact deprecated="true" id="Extension/mcode-related-primary-cancer-condition-extension" key="related-primary-cancer-condition-extension" name="Related Primary Cancer Condition Extension"/>
-<artifact id="CodeSystem/RequestedRemissionCodes" key="CodeSystem-RequestedRemissionCodes" name="Requested Remission Codes"/>
+<artifact id="CodeSystem/requested-lymph-node-level-code-cs" key="CodeSystem-requested-lymph-node-level-code-cs" name="Requested Lymph Node Level Codes to be released Jan 2021"/>
+<artifact id="CodeSystem/requested-radiation-volume-type-code-cs" key="CodeSystem-requested-radiation-volume-type-code-cs" name="Requested Radiation Volume Type Codes to be released Jan 2021"/>
+<artifact id="CodeSystem/RequestedRadiotherapyTechniqueCodes" key="CodeSystem-RequestedRadiotherapyTechniqueCodes" name="Requested Radiotherapy Technique Codes"/>
+<artifact id="CodeSystem/requested-remission-code-cs" key="CodeSystem-requested-remission-code-cs" name="Requested Remission Codes"/>
 <artifact id="SearchParameter/Patient-id" key="SearchParameter-Patient-id" name="Search by _id in Patients with multipleOr"/>
 <artifact id="SearchParameter/Condition-code" key="SearchParameter-Condition-code" name="Search by code:in in Conditions"/>
 <artifact id="StructureDefinition/mcode-secondary-cancer-condition" key="secondary-cancer-condition" name="Secondary Cancer Condition"/>
@@ -162,8 +165,8 @@
 <artifact id="StructureDefinition/mcode-comorbid-condition-reference" key="StructureDefinition-mcode-comorbid-condition-reference" name="Specific Condition Reference for Comorbidity"/>
 <artifact id="ValueSet/mcode-specific-diagnosis-cancer-disorder-vs" key="ValueSet-mcode-specific-diagnosis-cancer-disorder-vs" name="Specific Diagnosis of Cancer"/>
 <artifact id="ValueSet/mcode-cancer-stage-group-vs" key="ValueSet-mcode-cancer-stage-group-vs" name="Stage Group Value Set"/>
-<artifact id="CodeSystem/TG263" key="CodeSystem-TG263" name="TG263 Codes"/>
-<artifact id="CodeSystem/TG263Qualifier" key="CodeSystem-TG263Qualifier" name="TG263 Qualifier Codes"/>
+<artifact id="CodeSystem/tg263-code-cs" key="CodeSystem-tg263-code-cs" name="TG263 Codes"/>
+<artifact id="CodeSystem/tg263-qualifier-code-cs" key="CodeSystem-tg263-qualifier-code-cs" name="TG263 Qualifier Codes"/>
 <artifact deprecated="true" id="Profile/mcode-tnm-clinical-distant-metastases" key="tnm-clinical-distant-metastases" name="TNM Clinical Distant Metastases"/>
 <artifact deprecated="true" id="Profile/mcode-tnm-clinical-primary-tumor-category" key="tnm-clinical-primary-tumor-category" name="TNM Clinical Primary Tumor Category"/>
 <artifact deprecated="true" id="Profile/mcode-tnm-clinical-regional-nodes-category" key="tnm-clinical-regional-nodes-category" name="TNM Clinical Regional Nodes Category"/>
@@ -184,7 +187,7 @@
 <artifact deprecated="true" id="StructureDefinition/mcode-teleradiotherapy-treatment-phase" key="StructureDefinition-mcode-teleradiotherapy-treatment-phase" name="Teleradiotherapy Treatment Phase"/>
 <artifact id="StructureDefinition/mcode-treatment-termination-reason" key="StructureDefinition-mcode-treatment-termination-reason" name="Termination Reason"/>
 <artifact deprecated="true" id="Extension/mcode-termination-reason-extension" key="termination-reason-extension" name="Termination Reason Extension"/>
-<artifact id="CodeSystem/TbdCodes" key="CodeSystem-TbdCodes" name="ToBeDeterminedCodes ('TbdCodes')"/>
+<artifact id="CodeSystem/tbd-loinc-code-cs" key="CodeSystem-tbd-loinc-code-cs" name="To-Be-Determined LOINC Codes ('TbdLoincCodes')"/>
 <artifact deprecated="true" id="StructureDefinition/mcode-treatment-intent" key="StructureDefinition-mcode-treatment-intent" name="Treatment Intent"/>
 <artifact deprecated="true" id="Extension/mcode-treatment-intent-extension" key="treatment-intent-extension" name="Treatment Intent Extension"/>
 <artifact deprecated="true" id="ValueSet/mcode-treatment-intent-vs" key="treatment-intent-value-set" name="Treatment Intent Value Set"/>
@@ -290,7 +293,8 @@
 <artifact id="CapabilityStatement/mcode-sender-patients-and-cancer-conditions" key="CapabilityStatement-mcode-sender-patients-and-cancer-conditions" name="mcode-sender-patients-and-cancer-conditions"/>
 <artifact id="CapabilityStatement/mcode-sender-patients-in-group" key="CapabilityStatement-mcode-sender-patients-in-group" name="mcode-sender-patients-in-group"/>
 <artifact id="CapabilityStatement/mcode-sender-patients-with-cancer-condition" key="CapabilityStatement-mcode-sender-patients-with-cancer-condition" name="mcode-sender-patients-with-cancer-condition"/>
-<artifact id="Observation/observation-smoking-history-jenny-m" key="Observation-observation-smoking-history-jenny-m" name="observation-smoking-history-jenny-m"/>
+<artifact deprecated="true" id="Observation/observation-smoking-history-jenny-m" key="Observation-observation-smoking-history-jenny-m" name="observation-smoking-history-jenny-m"/>
+<artifact id="Observation/observation-smoking-pack-years-jenny-m" key="Observation-observation-smoking-pack-years-jenny-m" name="observation-smoking-pack-years-jenny-m"/>
 <artifact id="Condition/primary-cancer-condition-breast" key="Condition-primary-cancer-condition-breast" name="primary-cancer-condition-breast"/>
 <artifact id="Condition/primary-cancer-condition-cll" key="Condition-primary-cancer-condition-cll" name="primary-cancer-condition-cll"/>
 <artifact id="Condition/primary-cancer-condition-jenny-m" key="Condition-primary-cancer-condition-jenny-m" name="primary-cancer-condition-jenny-m"/>

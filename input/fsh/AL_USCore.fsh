@@ -11,7 +11,6 @@ Alias:   USCorePractitioner = http://hl7.org/fhir/us/core/StructureDefinition/us
 Alias:   USCoreProcedure = http://hl7.org/fhir/us/core/StructureDefinition/us-core-procedure
 Alias:   USCoreObservationLab = http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab
 Alias:   USCoreOrganization = http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization
-Alias:   VitalSign = http://hl7.org/fhir/StructureDefinition/vitalsigns
 
 // Extensions
 Alias:   USCoreBirthSex = http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex

@@ -3,15 +3,6 @@ Alias: RID = http://hl7.org/fhir/us/mcode/CodeSystem/mcode-resource-identifier-c
 Alias: CC = http://hl7.org/fhir/us/mcode/CodeSystem/mcode-catch-code-cs
 Alias: RT = http://terminology.hl7.org/CodeSystem/radiotherapy
 
-CodeSystem: CatchCodeCS
-Id: mcode-catch-code-cs
-Title: "mCODE Catch Codes"
-Description: "Codes needed for positive identification of certain types of instances, more specifically, to uniquely associate instances with slices when they are used in bundles. The codes in this code system are used when a concept falls outside of the defined set of codes. They make it possible to use 'required' bindings where 'extensible' bindings would result an instance matching multiple slices and thus trigger validation errors."
-* #PCC-OTHER "Other Primary Cancer Condition, Specify" "Code to be used when the desired concept is not represented base value set. This code represents the equivalent of 'Other, specify: _________'. Specify the additional concept as the second coding."
-* #SCC-OTHER "Other Secondary Cancer Condition, Specify" "Code to be used when the desired concept is not represented base value set. This code represents the equivalent of 'Other, specify: _________'. Specify the additional concept as the second coding."
-* #TMT-OTHER "Other Tumor Marker Test, Specify" "Code to be used when the desired concept is not represented base value set. This code represents the equivalent of 'Other, specify: _________'. Specify the additional concept as the second coding."
-* #CD-OTHER "Other Cancer Disorder, Specify"  "Code to be used when the desired concept is not represented base value set. This code represents the equivalent of 'Other, specify: _________'. Specify the additional concept as the second coding."
-
 CodeSystem: ResourceIdentifierCS
 Id: mcode-resource-identifier-cs
 Title: "mCODE Resource Identifier Code System"

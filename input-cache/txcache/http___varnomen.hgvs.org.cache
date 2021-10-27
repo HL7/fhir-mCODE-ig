@@ -2,13 +2,67 @@
 {"code" : {
   "system" : "http://varnomen.hgvs.org",
   "code" : "NC_000016.10:g.23603471G>T"
-}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
 v: {
   "display" : "NC_000016.10:g.23603471G>T",
-  "code" : "",
-  "system" : "",
-  "severity" : null,
-  "error" : ""
+  "code" : "NC_000016.10:g.23603471G>T",
+  "system" : "http://varnomen.hgvs.org"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://varnomen.hgvs.org",
+  "code" : "NM_005157.6(ABL1):c.1076T>G"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://varnomen.hgvs.org"
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
+v: {
+  "display" : "NM_005157.6(ABL1):c.1076T>G",
+  "code" : "NM_005157.6(ABL1):c.1076T>G",
+  "system" : "http://varnomen.hgvs.org"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://varnomen.hgvs.org",
+  "code" : "NM_005157.6(ABL1):c.1076T>G",
+  "display" : "NM_005157.6(ABL1):c.1076T>G"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://varnomen.hgvs.org"
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK", "versionFlexible":"true"}####
+v: {
+  "display" : "NM_005157.6(ABL1):c.1076T>G",
+  "code" : "NM_005157.6(ABL1):c.1076T>G",
+  "system" : "http://varnomen.hgvs.org"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://varnomen.hgvs.org",
+  "code" : "NM_005157.6(ABL1):c.1076T>G"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
+v: {
+  "display" : "NM_005157.6(ABL1):c.1076T>G",
+  "code" : "NM_005157.6(ABL1):c.1076T>G",
+  "system" : "http://varnomen.hgvs.org"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://varnomen.hgvs.org",
+  "code" : "NM_005157.6(ABL1):c.1076T>G",
+  "display" : "NM_005157.6(ABL1):c.1076T>G"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
+v: {
+  "display" : "NM_005157.6(ABL1):c.1076T>G",
+  "code" : "NM_005157.6(ABL1):c.1076T>G",
+  "system" : "http://varnomen.hgvs.org"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
@@ -21,13 +75,11 @@ v: {
       "system" : "http://varnomen.hgvs.org"
     }]
   }
-}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
 v: {
   "display" : "NG_005905.2:g.126148_126152del",
-  "code" : "",
-  "system" : "",
-  "severity" : null,
-  "error" : ""
+  "code" : "NG_005905.2:g.126148_126152del",
+  "system" : "http://varnomen.hgvs.org"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
@@ -41,38 +93,32 @@ v: {
       "system" : "http://varnomen.hgvs.org"
     }]
   }
-}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK"}####
+}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK", "versionFlexible":"true"}####
 v: {
   "display" : "NG_005905.2:g.126148_126152del",
-  "code" : "",
-  "system" : "",
-  "severity" : null,
-  "error" : ""
+  "code" : "NG_005905.2:g.126148_126152del",
+  "system" : "http://varnomen.hgvs.org"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://varnomen.hgvs.org",
   "code" : "NG_005905.2:g.126148_126152del"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
 v: {
   "display" : "NG_005905.2:g.126148_126152del",
-  "code" : "",
-  "system" : "",
-  "severity" : null,
-  "error" : ""
+  "code" : "NG_005905.2:g.126148_126152del",
+  "system" : "http://varnomen.hgvs.org"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://varnomen.hgvs.org",
   "code" : "NG_005905.2:g.126148_126152del",
   "display" : "NG_005905.2:g.126148_126152del"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
 v: {
   "display" : "NG_005905.2:g.126148_126152del",
-  "code" : "",
-  "system" : "",
-  "severity" : null,
-  "error" : ""
+  "code" : "NG_005905.2:g.126148_126152del",
+  "system" : "http://varnomen.hgvs.org"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
@@ -85,13 +131,11 @@ v: {
       "system" : "http://varnomen.hgvs.org"
     }]
   }
-}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
 v: {
   "display" : "NC_000016.10:g.23603471G>T",
-  "code" : "",
-  "system" : "",
-  "severity" : null,
-  "error" : ""
+  "code" : "NC_000016.10:g.23603471G>T",
+  "system" : "http://varnomen.hgvs.org"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
@@ -104,25 +148,21 @@ v: {
       "system" : "http://varnomen.hgvs.org"
     }]
   }
-}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK"}####
+}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK", "versionFlexible":"true"}####
 v: {
   "display" : "NC_000016.10:g.23603471G>T",
-  "code" : "",
-  "system" : "",
-  "severity" : null,
-  "error" : ""
+  "code" : "NC_000016.10:g.23603471G>T",
+  "system" : "http://varnomen.hgvs.org"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://varnomen.hgvs.org",
   "code" : "NC_000016.10:g.23603471G>T"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
 v: {
   "display" : "NC_000016.10:g.23603471G>T",
-  "code" : "",
-  "system" : "",
-  "severity" : null,
-  "error" : ""
+  "code" : "NC_000016.10:g.23603471G>T",
+  "system" : "http://varnomen.hgvs.org"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
@@ -135,13 +175,11 @@ v: {
       "system" : "http://varnomen.hgvs.org"
     }]
   }
-}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
 v: {
   "display" : "NC_000019.8:g.1171707G>A",
-  "code" : "",
-  "system" : "",
-  "severity" : null,
-  "error" : ""
+  "code" : "NC_000019.8:g.1171707G>A",
+  "system" : "http://varnomen.hgvs.org"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
@@ -155,38 +193,32 @@ v: {
       "system" : "http://varnomen.hgvs.org"
     }]
   }
-}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK"}####
+}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK", "versionFlexible":"true"}####
 v: {
   "display" : "NC_000019.8:g.1171707G>A",
-  "code" : "",
-  "system" : "",
-  "severity" : null,
-  "error" : ""
+  "code" : "NC_000019.8:g.1171707G>A",
+  "system" : "http://varnomen.hgvs.org"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://varnomen.hgvs.org",
   "code" : "NC_000019.8:g.1171707G>A"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
 v: {
   "display" : "NC_000019.8:g.1171707G>A",
-  "code" : "",
-  "system" : "",
-  "severity" : null,
-  "error" : ""
+  "code" : "NC_000019.8:g.1171707G>A",
+  "system" : "http://varnomen.hgvs.org"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://varnomen.hgvs.org",
   "code" : "NC_000019.8:g.1171707G>A",
   "display" : "NC_000019.8:g.1171707G>A"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
 v: {
   "display" : "NC_000019.8:g.1171707G>A",
-  "code" : "",
-  "system" : "",
-  "severity" : null,
-  "error" : ""
+  "code" : "NC_000019.8:g.1171707G>A",
+  "system" : "http://varnomen.hgvs.org"
 }
 -------------------------------------------------------------------------------------
 {"hierarchical" : true, "valueSet" :{
@@ -203,78 +235,14 @@ e: {
   "language" : "en",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:713778ba-229b-4765-9164-6f633a96bb5a",
-    "timestamp" : "2021-09-14T11:55:58.642Z",
+    "identifier" : "urn:uuid:00aa8ff9-8286-4035-9e7f-ea273e8fbbc3",
+    "timestamp" : "2021-10-26T20:42:25.353Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
     }]
   }
 },
-  "error" : ""
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://varnomen.hgvs.org",
-  "code" : "NM_005157.6(ABL1):c.1076T>G"
-}, "valueSet" :{
-  "resourceType" : "ValueSet",
-  "compose" : {
-    "include" : [{
-      "system" : "http://varnomen.hgvs.org"
-    }]
-  }
-}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
-v: {
-  "display" : "NM_005157.6(ABL1):c.1076T>G",
-  "code" : "NM_005157.6(ABL1):c.1076T>G",
-  "system" : "http://varnomen.hgvs.org",
-  "severity" : null,
-  "error" : ""
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://varnomen.hgvs.org",
-  "code" : "NM_005157.6(ABL1):c.1076T>G",
-  "display" : "NM_005157.6(ABL1):c.1076T>G"
-}, "valueSet" :{
-  "resourceType" : "ValueSet",
-  "compose" : {
-    "include" : [{
-      "system" : "http://varnomen.hgvs.org"
-    }]
-  }
-}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK"}####
-v: {
-  "display" : "NM_005157.6(ABL1):c.1076T>G",
-  "code" : "NM_005157.6(ABL1):c.1076T>G",
-  "system" : "http://varnomen.hgvs.org",
-  "severity" : null,
-  "error" : ""
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://varnomen.hgvs.org",
-  "code" : "NM_005157.6(ABL1):c.1076T>G"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
-v: {
-  "display" : "NM_005157.6(ABL1):c.1076T>G",
-  "code" : "NM_005157.6(ABL1):c.1076T>G",
-  "system" : "http://varnomen.hgvs.org",
-  "severity" : null,
-  "error" : ""
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://varnomen.hgvs.org",
-  "code" : "NM_005157.6(ABL1):c.1076T>G",
-  "display" : "NM_005157.6(ABL1):c.1076T>G"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
-v: {
-  "display" : "NM_005157.6(ABL1):c.1076T>G",
-  "code" : "NM_005157.6(ABL1):c.1076T>G",
-  "system" : "http://varnomen.hgvs.org",
-  "severity" : null,
   "error" : ""
 }
 -------------------------------------------------------------------------------------

@@ -1,6 +1,5 @@
 Alias: COMORB =  http://terminology.hl7.org/CodeSystem/comorbidities-elixhauser
 Alias: RID = http://hl7.org/fhir/us/mcode/CodeSystem/mcode-resource-identifier-cs
-Alias: CC = http://hl7.org/fhir/us/mcode/CodeSystem/mcode-catch-code-cs
 Alias: RT = http://terminology.hl7.org/CodeSystem/radiotherapy
 
 CodeSystem: ResourceIdentifierCS

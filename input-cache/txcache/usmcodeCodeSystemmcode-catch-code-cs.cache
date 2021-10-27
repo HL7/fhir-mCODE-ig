@@ -1,0 +1,27 @@
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/mcode-catch-code-cs",
+  "code" : "TMT-OTHER"
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
+v: {
+  "severity" : "error",
+  "error" : "The code system 'http://hl7.org/fhir/us/mcode/CodeSystem/mcode-catch-code-cs' is not known (encountered paired with code = 'TMT-OTHER'); The code provided (http://hl7.org/fhir/us/mcode/CodeSystem/mcode-catch-code-cs#TMT-OTHER) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4)",
+  "class" : "CODESYSTEM_UNSUPPORTED"
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/mcode-catch-code-cs",
+      "concept" : [{
+        "code" : "TMT-OTHER",
+        "display" : "Other Tumor Marker Test, Specify"
+      }]
+    }]
+  }
+}}####
+e: {
+  "error" : "Error from server: Unable to provide support for code system http://hl7.org/fhir/us/mcode/CodeSystem/mcode-catch-code-cs"
+}
+-------------------------------------------------------------------------------------

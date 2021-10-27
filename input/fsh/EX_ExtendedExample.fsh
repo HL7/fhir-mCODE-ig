@@ -366,7 +366,7 @@ InstanceOf: USCoreDiagnosticReportLab
 Description: "Extended example: example of pathology findings represented as a DiagnosticReport resource."
 * status = #final "final"
 * category[0] = DiagnosticService#LAB
-* category[1] = DiagnosticService#SP "Surgical Pathology"
+* category[1] = DiagnosticService#SP "Surgical Pathology"  // does not match any known slice in US Core Diagnostic Report -- but that's ok
 * code = LNC#22637-3 "Pathology report final diagnosis Narrative"
 * subject = Reference(cancer-patient-jenny-m)
 * issued = "2018-04-05T00:00:00Z"
@@ -620,6 +620,7 @@ Description: "Anatomic volume 1 for Jenny M's teleradiotherapy."
 * patient = Reference(cancer-patient-jenny-m)
 * description = "Chest Wall"
 * identifier.value = "1.2.246.352…1"
+* identifier.use = #usual
 * location = SCT#78904004 "Chest wall structure (body structure)"
 * locationQualifier = SCT#255503000 "Entire (qualifier value)"
 
@@ -629,6 +630,7 @@ Description: "Anatomic volume 2 for Jenny M's teleradiotherapy."
 * patient = Reference(cancer-patient-jenny-m)
 * description = "Chest Wall Lymph Nodes"
 * identifier.value = "1.2.246.352…2"
+* identifier.use = #usual
 * location = SCT#62683002 "Mediastinal lymph node structure (body structure)"
 * locationQualifier = SCT#51440002  "Right and left (qualifier value)"
 
@@ -824,6 +826,7 @@ Description: "Example of US Core Organization"
 * address.postalCode = "02141"
 * address.country = "USA"
 
+/*
 Instance: radiotherapy-treatment-summary-chest-wall-RTtestNonCompliant-m
 InstanceOf: RadiotherapyCourseSummary
 Description: "Example of radiotherapy treatment summary involving external beam radiation to chest wall and regional node radiation with a chest wall boost,  THIS INSTANCE IS SUPPOSED TO FAIL VALIDATION!   Need to expand testing of modality/technique combination invariants."
@@ -836,7 +839,7 @@ Description: "Example of radiotherapy treatment summary involving external beam 
 * extension[treatmentIntent].valueCodeableConcept = SCT#373808002 //"Curative - procedure intent"
 * performedPeriod.start = "2018-05-01"
 * performedPeriod.end = "2018-06-29"
-/* Technique assigned NOT associated with brachytherapy radiopharmaceutical modality*/
+// Technique assigned NOT associated with brachytherapy radiopharmaceutical modality
 * extension[modalityAndTechnique][0].extension[modality][0].valueCodeableConcept = SCT#440252007 //"Administration of radiopharmaceutical (procedure)"
 * extension[modalityAndTechnique][0].extension[technique][0].valueCodeableConcept = SCT#1156530009 // "Volumetric Modulated Arc Therapy (procedure)"
 * extension[doseDeliveredToVolume][0].extension[volume].valueReference = Reference(jenny-m-chest-wall-treatment-volume)
@@ -847,3 +850,4 @@ Description: "Example of radiotherapy treatment summary involving external beam 
 * extension[doseDeliveredToVolume][1].extension[fractionsDelivered].valueUnsignedInt = 25
 * subject = Reference(cancer-patient-jenny-m)
 * asserter = Reference(us-core-practitioner-kyle-anydoc)
+*/

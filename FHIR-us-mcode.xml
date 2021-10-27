@@ -155,7 +155,7 @@
 <artifact deprecated="true" id="Extension/mcode-related-primary-cancer-condition-extension" key="related-primary-cancer-condition-extension" name="Related Primary Cancer Condition Extension"/>
 <artifact id="CodeSystem/requested-lymph-node-level-code-cs" key="CodeSystem-requested-lymph-node-level-code-cs" name="Requested Lymph Node Level Codes to be released Jan 2021"/>
 <artifact id="CodeSystem/requested-radiation-volume-type-code-cs" key="CodeSystem-requested-radiation-volume-type-code-cs" name="Requested Radiation Volume Type Codes to be released Jan 2021"/>
-<artifact id="CodeSystem/RequestedRadiotherapyTechniqueCodes" key="CodeSystem-RequestedRadiotherapyTechniqueCodes" name="Requested Radiotherapy Technique Codes"/>
+<artifact id="CodeSystem/requested-radiotherapy-technique-code-cs" key="CodeSystem-requested-radiotherapy-technique-code-cs" name="Requested Radiotherapy Technique Codes"/>
 <artifact id="CodeSystem/requested-remission-code-cs" key="CodeSystem-requested-remission-code-cs" name="Requested Remission Codes"/>
 <artifact id="SearchParameter/Patient-id" key="SearchParameter-Patient-id" name="Search by _id in Patients with multipleOr"/>
 <artifact id="SearchParameter/Condition-code" key="SearchParameter-Condition-code" name="Search by code:in in Conditions"/>
@@ -299,7 +299,6 @@
 <artifact id="Condition/primary-cancer-condition-cll" key="Condition-primary-cancer-condition-cll" name="primary-cancer-condition-cll"/>
 <artifact id="Condition/primary-cancer-condition-jenny-m" key="Condition-primary-cancer-condition-jenny-m" name="primary-cancer-condition-jenny-m"/>
 <artifact id="Condition/primary-cancer-condition-nsclc" key="Condition-primary-cancer-condition-nsclc" name="primary-cancer-condition-nsclc"/>
-<artifact id="Procedure/radiotherapy-treatment-summary-chest-wall-RTtestNonCompliant-m" key="Procedure-radiotherapy-treatment-summary-chest-wall-RTtestNonCompliant-m" name="radiotherapy-treatment-summary-chest-wall-RTtestNonCompliant-m"/>
 <artifact id="Procedure/radiotherapy-treatment-summary-chest-wall-jenny-m" key="Procedure-radiotherapy-treatment-summary-chest-wall-jenny-m" name="radiotherapy-treatment-summary-chest-wall-jenny-m"/>
 <artifact id="Condition/secondary-cancer-condition-brain-mets" key="Condition-secondary-cancer-condition-brain-mets" name="secondary-cancer-condition-brain-mets"/>
 <artifact deprecated="true" id="Procedure/teleradiotherapy-treatment-phase-boost-jenny-m" key="Procedure-teleradiotherapy-treatment-phase-boost-jenny-m" name="teleradiotherapy-treatment-phase-boost-jenny-m"/>

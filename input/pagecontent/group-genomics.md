@@ -56,7 +56,7 @@ The mCODE example [`cancer-genomic-variant-fusion`](Observation-cancer-genomic-v
 * [CancerGenomicsReport]
 * [GenomicRegionStudied]
 
-### Value  Sets
+### Value Sets
 
 * [ClinvarVS]
 * [DNAChangeTypeVS]

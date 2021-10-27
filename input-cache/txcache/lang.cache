@@ -34,32 +34,114 @@
       }]
     }]
   }
-}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
+}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
 v: {
+  "display" : "",
+  "code" : "",
+  "system" : "",
   "severity" : "error",
-  "error" : "Error from server: Access violation at address 000000000070C420 in module 'FHIRServer.exe'. Read of address FFFFFFFFFFFFFFFF",
-  "class" : "SERVER_ERROR"
+  "error" : "Access violation at address 000000000070CF7E in module 'FHIRServer.exe'. Read of address FFFFFFFFFFFFFFFF (from http://tx.fhir.org/r4)"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "urn:ietf:bcp:47",
   "code" : "en-US",
   "display" : "English (Region=United States)"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "urn:ietf:bcp:47",
+      "filter" : [{
+        "property" : "ext-lang",
+        "op" : "exists",
+        "value" : "false"
+      },
+      {
+        "property" : "script",
+        "op" : "exists",
+        "value" : "false"
+      },
+      {
+        "property" : "variant",
+        "op" : "exists",
+        "value" : "false"
+      },
+      {
+        "property" : "extension",
+        "op" : "exists",
+        "value" : "false"
+      },
+      {
+        "property" : "private-use",
+        "op" : "exists",
+        "value" : "false"
+      }]
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK"}####
 v: {
   "display" : "English (Region=United States)",
-  "code" : "en-US",
-  "system" : "urn:ietf:bcp:47"
+  "code" : "",
+  "system" : "",
+  "severity" : null,
+  "error" : ""
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "urn:ietf:bcp:47",
   "code" : "en-US"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
 v: {
   "display" : "English (Region=United States)",
-  "code" : "en-US",
-  "system" : "urn:ietf:bcp:47"
+  "code" : "",
+  "system" : "",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "urn:ietf:bcp:47",
+  "code" : "en-US"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "urn:ietf:bcp:47",
+      "filter" : [{
+        "property" : "ext-lang",
+        "op" : "exists",
+        "value" : "false"
+      },
+      {
+        "property" : "script",
+        "op" : "exists",
+        "value" : "false"
+      },
+      {
+        "property" : "variant",
+        "op" : "exists",
+        "value" : "false"
+      },
+      {
+        "property" : "extension",
+        "op" : "exists",
+        "value" : "false"
+      },
+      {
+        "property" : "private-use",
+        "op" : "exists",
+        "value" : "false"
+      }]
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK"}####
+v: {
+  "display" : "English (Region=United States)",
+  "code" : "",
+  "system" : "",
+  "severity" : null,
+  "error" : ""
 }
 -------------------------------------------------------------------------------------
 {"code" : {
@@ -2832,11 +2914,13 @@ v: {
       }]
     }]
   }
-}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
+}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
 v: {
   "display" : "English (United States)",
-  "code" : "en-US",
-  "system" : "urn:ietf:bcp:47"
+  "code" : "",
+  "system" : "",
+  "severity" : null,
+  "error" : ""
 }
 -------------------------------------------------------------------------------------
 {"code" : {
@@ -5609,10 +5693,25 @@ v: {
       }]
     }]
   }
-}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK", "versionFlexible":"true"}####
+}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK"}####
+v: {
+  "display" : "English (Region=United States)",
+  "code" : "",
+  "system" : "",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "urn:ietf:bcp:47",
+  "code" : "en-US",
+  "display" : "English (Region=United States)"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
 v: {
   "display" : "English (Region=United States)",
   "code" : "en-US",
-  "system" : "urn:ietf:bcp:47"
+  "system" : "urn:ietf:bcp:47",
+  "severity" : null,
+  "error" : ""
 }
 -------------------------------------------------------------------------------------

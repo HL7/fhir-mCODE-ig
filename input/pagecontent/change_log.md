@@ -40,6 +40,8 @@
 
 #### [Block Vote 6](https://jira.hl7.org/issues/?filter=15619)
 * [FHIR-32893](https://jira.hl7.org/browse/FHIR-32893) Aligned CancerDiseaseStatusEvidenceTypeVS with NAACR reporting needs
+* more stuff
+
 #### Other
 
 * [FHIR-32340](https://jira.hl7.org/browse/FHIR-32340)  Laterality broken out into separate extension

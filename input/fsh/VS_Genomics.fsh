@@ -28,6 +28,7 @@ Title: "Molecular Consequence Value Set"
 Description: "Changes in a structural features of a sequence due to the observed variant."
 * include codes from system SO where concept descendent-of #SO:0001537
 
+/*
 ValueSet: TumorMarkerTestVS
 Id: mcode-tumor-marker-test-vs
 Title: "Tumor Marker Test Value Set"
@@ -100,7 +101,7 @@ Description:    "Codes representing tests for tumor markers. This value set of L
 * include codes from system LNC where ancestor = #LP63490-4 // FGFR2 gene+FGFR3 gene
 * include codes from system LNC where ancestor = #LP64447-3 // BCR-ABL1 b2a2 fusion protein
 * include codes from system LNC where ancestor = #LP93517-8 // Human epididymis protein 4
-
+*/
 
 ValueSet:   GenomicSpecimenTypeVS
 Id: mcode-genomic-specimen-type-vs
@@ -143,10 +144,10 @@ Description:    "The type of specimen analyzed in a genomic test. The values are
 * SPTY#OTH       "Source, Other"   // FHIR-32827
 
 
-ValueSet: TumorMarkerTestExtensionalVS
-Id: mcode-tumor-marker-test-extensional-vs
-Title: "Tumor Marker Test Extensional Value Set"
-Description:    "Codes representing tests for tumor markers. This extensional value set of LOINC codes is not comprehensive and can be extended. Other vocabularies can be used only if the test of interest is not covered by LOINC. Tumor marker tests differ from genetic tests in that they measure levels of protein or other substances produced downstream from RNA protein synthesis."
+ValueSet: TumorMarkerTestVS
+Id: mcode-tumor-marker-test-vs
+Title: "Tumor Marker Test Value Set"
+Description:    "Codes representing tests for tumor markers. This value set of LOINC codes is not comprehensive and can be extended. Other vocabularies can be used only if the test of interest is not covered by LOINC. Tumor marker tests differ from genetic tests in that they measure levels of protein or other substances produced downstream from RNA protein synthesis."
 
 * ^copyright = "This material contains content from LOINC (http://loinc.org). LOINC is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc"
 * CC#TMT-OTHER "Other Tumor Marker Test, Specify"

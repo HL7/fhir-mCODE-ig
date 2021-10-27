@@ -122,5 +122,5 @@ CodeSystem: RequestedRadiotherapyTechniqueCodes
 Id: requested-radiotherapy-technique-code-cs
 Title: "Requested Radiotherapy Technique Codes"
 Description: "Codes requested from SNOMED for Radiotherapy Techniques"
-* #1162782007 "Three dimensional external beam radiation therapy (procedure)" // to be released Jan 2021 -- SCT#1162782007 "Three dimensional external beam radiation therapy (procedure)"
+* #1162782007 "Three dimensional external beam radiation therapy (procedure)" // SCT#1162782007 "Three dimensional external beam radiation therapy (procedure)" to be released Jan 2021
 * #PS "External beam radiation therapy using particle scanning technique (procedure)" // to be requested USCRS

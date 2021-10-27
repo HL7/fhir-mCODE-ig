@@ -50,7 +50,7 @@
 [Tumor]: StructureDefinition-mcode-tumor.html
 [TumorSpecimen]: StructureDefinition-mcode-tumor-specimen.html
 
-<!-- mCODE Value Sets -->
+<!-- mCODE Value Sets  -->
 [BenignUncertainNeoplasmBrainCNSDisorderVS]: ValueSet-mcode-benign-uncertain-neoplasm-brain-cns-disorder-vs.html
 [BrachytherapyModalityVS]: ValueSet-mcode-brachytherapy-modality-vs.html
 [BrachytherapyTechniqueVS]: ValueSet-mcode-brachytherapy-technique-vs.html
@@ -140,7 +140,7 @@
 [SpecificDiagnosisCancerDisorderVS]: ValueSet-mcode-specific-diagnosis-cancer-disorder-vs.html
 [CarcinomaInSituDisorderVS]: ValueSet-mcode-carcinoma-in-situ-disorder-vs.html
 [MelanomaInSituDisorderVS]: ValueSet-mcode-melanoma-in-situ-disorder-vs.html
-[MolecularConsequenceVS]: ValueSet-mcode-molecular-consequence-vs.html
+[MolecularConsequenceVS]: ValueSet-molecular-consequence-vs.html
 
 <!-- mCODE Code Systems -->
 [ComorbiditiesElixhauserCS]: CodeSystem-comorbidities-elixhauser-cs.html

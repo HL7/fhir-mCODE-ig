@@ -153,10 +153,8 @@
 <artifact id="StructureDefinition/mcode-radiotherapy-volume" key="StructureDefinition-mcode-radiotherapy-volume" name="Radiotherapy Volume"/>
 <artifact id="ValueSet/mcode-radiotherapy-volume-type-vs" key="ValueSet-mcode-radiotherapy-volume-type-vs" name="Radiotherapy Volume Type Value Set"/>
 <artifact deprecated="true" id="Extension/mcode-related-primary-cancer-condition-extension" key="related-primary-cancer-condition-extension" name="Related Primary Cancer Condition Extension"/>
-<artifact id="CodeSystem/requested-lymph-node-level-code-cs" key="CodeSystem-requested-lymph-node-level-code-cs" name="Requested Lymph Node Level Codes to be released Jan 2021"/>
-<artifact id="CodeSystem/requested-radiation-volume-type-code-cs" key="CodeSystem-requested-radiation-volume-type-code-cs" name="Requested Radiation Volume Type Codes to be released Jan 2021"/>
-<artifact id="CodeSystem/requested-radiotherapy-technique-code-cs" key="CodeSystem-requested-radiotherapy-technique-code-cs" name="Requested Radiotherapy Technique Codes"/>
-<artifact id="CodeSystem/requested-remission-code-cs" key="CodeSystem-requested-remission-code-cs" name="Requested Remission Codes"/>
+<artifact id="CodeSystem/loinc-tbd-cs" key="CodeSystem-loinc-tbd-cs" name="Requested LOINC Codes"/>
+<artifact id="CodeSystem/snomed-tbd-cs" key="CodeSystem-snomed-tbd-cs" name="Requested SNOMED Codes"/>
 <artifact id="SearchParameter/Patient-id" key="SearchParameter-Patient-id" name="Search by _id in Patients with multipleOr"/>
 <artifact id="SearchParameter/Condition-code" key="SearchParameter-Condition-code" name="Search by code:in in Conditions"/>
 <artifact id="StructureDefinition/mcode-secondary-cancer-condition" key="secondary-cancer-condition" name="Secondary Cancer Condition"/>
@@ -165,8 +163,6 @@
 <artifact id="StructureDefinition/mcode-comorbid-condition-reference" key="StructureDefinition-mcode-comorbid-condition-reference" name="Specific Condition Reference for Comorbidity"/>
 <artifact id="ValueSet/mcode-specific-diagnosis-cancer-disorder-vs" key="ValueSet-mcode-specific-diagnosis-cancer-disorder-vs" name="Specific Diagnosis of Cancer"/>
 <artifact id="ValueSet/mcode-cancer-stage-group-vs" key="ValueSet-mcode-cancer-stage-group-vs" name="Stage Group Value Set"/>
-<artifact id="CodeSystem/tg263-code-cs" key="CodeSystem-tg263-code-cs" name="TG263 Codes"/>
-<artifact id="CodeSystem/tg263-qualifier-code-cs" key="CodeSystem-tg263-qualifier-code-cs" name="TG263 Qualifier Codes"/>
 <artifact deprecated="true" id="Profile/mcode-tnm-clinical-distant-metastases" key="tnm-clinical-distant-metastases" name="TNM Clinical Distant Metastases"/>
 <artifact deprecated="true" id="Profile/mcode-tnm-clinical-primary-tumor-category" key="tnm-clinical-primary-tumor-category" name="TNM Clinical Primary Tumor Category"/>
 <artifact deprecated="true" id="Profile/mcode-tnm-clinical-regional-nodes-category" key="tnm-clinical-regional-nodes-category" name="TNM Clinical Regional Nodes Category"/>
@@ -187,7 +183,6 @@
 <artifact deprecated="true" id="StructureDefinition/mcode-teleradiotherapy-treatment-phase" key="StructureDefinition-mcode-teleradiotherapy-treatment-phase" name="Teleradiotherapy Treatment Phase"/>
 <artifact id="StructureDefinition/mcode-treatment-termination-reason" key="StructureDefinition-mcode-treatment-termination-reason" name="Termination Reason"/>
 <artifact deprecated="true" id="Extension/mcode-termination-reason-extension" key="termination-reason-extension" name="Termination Reason Extension"/>
-<artifact id="CodeSystem/tbd-loinc-code-cs" key="CodeSystem-tbd-loinc-code-cs" name="To-Be-Determined LOINC Codes ('TbdLoincCodes')"/>
 <artifact deprecated="true" id="StructureDefinition/mcode-treatment-intent" key="StructureDefinition-mcode-treatment-intent" name="Treatment Intent"/>
 <artifact deprecated="true" id="Extension/mcode-treatment-intent-extension" key="treatment-intent-extension" name="Treatment Intent Extension"/>
 <artifact deprecated="true" id="ValueSet/mcode-treatment-intent-vs" key="treatment-intent-value-set" name="Treatment Intent Value Set"/>

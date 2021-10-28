@@ -47,6 +47,8 @@
 * [FHIR-32340](https://jira.hl7.org/browse/FHIR-32340)  Laterality broken out into separate extension
 * [FHIR-33340](https://jira.hl7.org/browse/FHIR-33340)   TreatmentPhase profiles and examples dropped.  Will reappear in Codex-RT IG.
 * [FHIR-32888] (https://jira.hl7.org/browse/FHIR-33340)  Consider renaming CancerGeneticVariant to a more accurate name which covers both dna and amino acid changes.
+* Changed slicing on mCODE Patient Bundle to required each resource in the bundle to populate meta.profile
+* Reorganized locally-defined code systems to better track codes requested from SNOMED and LOINC, but not yet published (in some cases, not yet approved)
 
 ### mCODE STU 2 Ballot Version (May 2021)
 

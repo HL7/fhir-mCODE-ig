@@ -9,11 +9,11 @@
       "system" : "urn:iso:std:iso:3166"
     }]
   }
-}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
 v: {
   "display" : "United States of America",
-  "severity" : null,
-  "error" : ""
+  "code" : "US",
+  "system" : "urn:iso:std:iso:3166"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
@@ -38,20 +38,20 @@ v: {
       }]
     }]
   }
-}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK"}####
+}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK", "versionFlexible":"true"}####
 v: {
   "display" : "United States of America",
-  "severity" : null,
-  "error" : ""
+  "code" : "US",
+  "system" : "urn:iso:std:iso:3166"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "urn:iso:std:iso:3166",
   "code" : "US"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
 v: {
   "display" : "United States of America",
-  "severity" : null,
-  "error" : ""
+  "code" : "US",
+  "system" : "urn:iso:std:iso:3166"
 }
 -------------------------------------------------------------------------------------

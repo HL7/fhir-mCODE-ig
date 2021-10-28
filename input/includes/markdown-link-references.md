@@ -145,11 +145,8 @@
 <!-- mCODE Code Systems -->
 [ComorbiditiesElixhauserCS]: CodeSystem-comorbidities-elixhauser-cs.html
 [ResourceIdentifierCS]: CodeSystem-mcode-resource-identifier-cs.html
-[RequestedLymphNodeLevelCodes]: CodeSystem-requested-lymph-node-level-code-cs.html
-[RequestedRadiationVolumeTypeCodes]:  CodeSystem-requested-radiation-volume-type-code-cs.html
-[RequestedRadiotherapyTechniqueCodes]: CodeSystem-requested-radiotherapy-technique-code-cs.html
-[TG263]: CodeSystem-tg263-code-cs.html
-[TG263Qualifier]: CodeSystem-tg263-qualifier-code-cs.html
+[SCT_TBD]: CodeSystem-snomed-tbd-cs.html
+[LNC_TBD]: CodeSystem-loinc-tbd-cs.html
 
 <!-- mCODE CapabilityStatements -->
 [mcode-receiver-cancer-conditions-then-patients]: CapabilityStatement-mcode-receiver-cancer-conditions-then-patients.html

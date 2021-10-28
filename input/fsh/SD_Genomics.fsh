@@ -120,22 +120,13 @@ Id:             mcode-tumor-marker-test
 Title:          "Tumor Marker Test"
 Description:    "The result of a tumor marker test. Tumor marker tests are generally used to guide cancer treatment decisions and monitor treatment, as well as to predict the chance of recovery and cancer recurrence."
 * subject 1..1
-* code from TumorMarkerTestVS (required)
-* code obeys tumor-marker-test-code-invariant
+* code from TumorMarkerTestVS (extensible)
 * subject only Reference(CancerPatient)
 * effective[x] only dateTime or Period
 * value[x] only Quantity or Ratio or string or CodeableConcept
 // Already MS in US Core Obs Lab: status, category, code, subject, effective[x], value[x], dataAbsentReason
 * specimen MS
-// * insert ReduceText
-// * insert ReduceText(referenceRange)
-// * insert ReduceText(component)
 
-
-Invariant: tumor-marker-test-code-invariant
-Description: "If the code representing 'Other tumor marker test, specify' is used, a second code from outside the original value set must be present. The second code MUST NOT represent a concept in or subsumed by any concept in the original value set."
-Expression: "coding.where(code = 'TMT-OTHER').exists() implies coding.where(code != 'TMT-OTHER' and $this.memberOf('http://hl7.org/fhir/us/mcode/ValueSet/mcode-tumor-marker-test-vs').not()).exists()"
-Severity:   #error
 
 RuleSet: CancerRelatedSpecimenRules
 * type 1..1
@@ -166,8 +157,6 @@ Parent:     USCoreDiagnosticReportLab
 Id: mcode-cancer-genomics-report
 Title:      "Cancer Genomics Report"
 Description:    "Genomic analysis summary report. The report may include one or more tests, with two distinct test types. The first type is a targeted mutation test, where a specific mutation on a specific gene is tested for. The result is either positive or negative for that mutation. The second type is a more general test for variants. This type of test returns the identity of variants found in a certain region of the genome."
-// * insert ReduceText
-// * insert ReduceText(media)
 * subject only Reference(CancerPatient)
 * category contains GenomicsCategory 1..1
 * category[GenomicsCategory] = DiagnosticService#GE

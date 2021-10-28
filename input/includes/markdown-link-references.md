@@ -144,7 +144,6 @@
 
 <!-- mCODE Code Systems -->
 [ComorbiditiesElixhauserCS]: CodeSystem-comorbidities-elixhauser-cs.html
-[CatchCodeCS]: CodeSystem-mcode-catch-code-cs.html
 [ResourceIdentifierCS]: CodeSystem-mcode-resource-identifier-cs.html
 [RequestedLymphNodeLevelCodes]: CodeSystem-requested-lymph-node-level-code-cs.html
 [RequestedRadiationVolumeTypeCodes]:  CodeSystem-requested-radiation-volume-type-code-cs.html

@@ -7,7 +7,6 @@ Id: mcode-secondary-cancer-disorder-vs
 Title: "Secondary Cancer Disorder Value Set"
 Description:  "Types of secondary malignant neoplastic disease, coded in SNOMED CT or ICD-10-CM."
 * insert SNOMEDCTCopyrightForVS
-* CC#SCC-OTHER "Other Secondary Cancer Condition, Specify"
 * include codes from system SCT where concept is-a #128462008  "Secondary malignant neoplastic disease (disorder)"
 * ICD10CM#C77 "SECONDARY AND UNSPECIFIED MALIGNANT NEOPLASM OF LYMPH NODES"
 * ICD10CM#C77.0 "Secondary and unspecified malignant neoplasm of lymph nodes of head, face and neck"
@@ -279,7 +278,6 @@ Description:    "Types of primary malignant neoplastic disease, coded in SNOMED 
 * include codes from valueset MelanomaInSituDisorderVS
 * include codes from valueset BenignUncertainNeoplasmBrainCNSDisorderVS
 * include codes from valueset CytologicEvidenceOfMalignancyVS
-* CC#PCC-OTHER "Other Primary Cancer Condition, Specify"
 
 
 ValueSet: CancerDisorderVS
@@ -290,7 +288,6 @@ Description:   "A broad cancer-related value set containing both primary and sec
 * include codes from valueset PrimaryCancerDisorderVS
 * include codes from valueset SecondaryCancerDisorderVS
 * include codes from valueset HistologyMorphologyBehaviorVS
-* CC#CD-OTHER "Other Cancer Disorder, Specify"
 
 
 ValueSet:   HistologyMorphologyBehaviorVS

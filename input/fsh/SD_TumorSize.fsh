@@ -48,10 +48,6 @@ Description:  "Records the dimensions of a tumor"
 
 // Group the Must Support to make it easier to see what's what
 * subject and code and effective[x] and component and method and specimen and focus MS
-// * insert ReduceText
-// * insert ReduceText(referenceRange)
-// * insert ReduceText(component)
-
 
 // This invariant has been exhaustively tested with the FHIR validator
 Invariant: must-have-focus-or-specimen-invariant
@@ -90,8 +86,6 @@ Description:  "Identifies a tumor that has not been removed from the body. Whene
 * extension[relatedCondition].value[x] only Reference(PrimaryCancerCondition or SecondaryCancerCondition)
 * extension[relatedCondition] ^short = "Reference to cancer condition associated with this tumor"
 * extension[relatedCondition] ^definition = "Associates this tumor with a cancer condition. This could be a causal association (e.g., this is believed to be the primary tumor causing the cancer) or a different type of relationship (e.g., this tumor is a metastasis)"
-// * insert ReduceText
-// * insert ReduceText2(identifier)
 // Gather MS in one place
 * identifier and location and morphology and locationQualifier and patient and extension and extension[relatedCondition] and extension[relatedCondition].value[x] MS
 

@@ -3,14 +3,11 @@ Parent:   USCoreProcedure
 Id: mcode-cancer-related-surgical-procedure
 Title:    "Cancer-Related Surgical Procedure"
 Description: "A surgical action addressing a cancer condition. The scope of this profile has been narrowed to cancer-related procedures by constraining the reasonReference and reasonCode to cancer conditions, one of which is required."
-// * insert ReduceText
-// * insert ReduceText(performer)
-// * insert ReduceText(focalDevice)
 * obeys mcode-reason-required
 * extension contains
     ProcedureIntent named treatmentIntent 0..1 MS
 * category 1..  // upper cardinality is already 1
-* reasonCode from CancerDisorderVS (required)
+* reasonCode from CancerDisorderVS (extensible)
 * reasonReference only Reference(PrimaryCancerCondition or SecondaryCancerCondition)
 * bodySite.extension contains
      BodyLocationQualifier named locationQualifier 0..*   and

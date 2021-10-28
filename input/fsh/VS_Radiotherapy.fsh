@@ -55,7 +55,7 @@ Description: "Allowed techniques for photon beam modality"
 * SCT#441799006 "Intensity modulated radiation therapy (procedure)"
 * SCT#1156530009 "Volumetric Modulated Arc Therapy (procedure)"
 // * SCT#1162782007 "Three dimensional external beam radiation therapy (procedure)"
-* SCT_TBD#1162782007 "Three dimensional external beam radiation therapy (procedure)" // Delete after SNOMED 1/22 release
+* SCT_TBD#1162782007 "Three dimensional external beam radiation therapy (procedure)"
 * SCT#1156526006 "Two dimensional external beam radiation therapy (procedure)"
 * SCT#168524008 "Radiotherapy - intraoperative control (procedure)"
 
@@ -65,7 +65,7 @@ Title: "Allowed techniques for electron beam modality"
 Description: "Allowed techniques for electron beam modality"
 * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
 // * SCT#1162782007 "Three dimensional external beam radiation therapy (procedure)"
-* SCT_TBD#1162782007 "Three dimensional external beam radiation therapy (procedure)" // Delete after SNOMED 1/22 release
+* SCT_TBD#1162782007 "Three dimensional external beam radiation therapy (procedure)"
 * SCT#1156526006 "Two dimensional external beam radiation therapy (procedure)"
 * SCT#168524008 "Radiotherapy - intraoperative control (procedure)"
 
@@ -76,7 +76,7 @@ Description: "Allowed techniques for neutron beam modality"
 * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
 * SCT#169317000 "Neutron capture therapy (procedure)"
 // * SCT#1162782007 "Three dimensional external beam radiation therapy (procedure)"
-* SCT_TBD#1162782007 "Three dimensional external beam radiation therapy (procedure)" // Delete after SNOMED 1/22 release
+* SCT_TBD#1162782007 "Three dimensional external beam radiation therapy (procedure)"
 
 ValueSet: CarbonIonBeamTechniquesVS
 Id: mcode-carbon-ion-beam-technique-vs
@@ -85,8 +85,8 @@ Description: "Allowed techniques for carbon ion beam modality"
 * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
 * SCT#1156529004 "External beam radiation therapy using particle passive scattering technique (procedure)"
 * SCT#1156528007 "External beam radiation therapy using particle spot scanning technique (procedure)"
-* SCT_TBD#USCRS-TBD001 "External beam radiation therapy using particle scanning technique (procedure)" // requested from SNOMED
-// * SCT#1156525005 "Mixed beam external beam radiation therapy (procedure)" -- RTTD Terminology decision 9/21
+* SCT_TBD#USCRS-PS "External beam radiation therapy using particle scanning technique (procedure)" // not yet requested from SNOMED
+// * SCT#1156525005 "Mixed beam external beam radiation therapy (procedure)" -- removed by RTTD Terminology decision 9/21
 
 ValueSet: ProtonBeamTechniquesVS
 Id: mcode-proton-beam-technique-vs
@@ -95,7 +95,7 @@ Description: "Allowed techniques for proton beam modality"
 * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
 * SCT#1156529004 "External beam radiation therapy using particle passive scattering technique (procedure)"
 * SCT#1156528007 "External beam radiation therapy using particle spot scanning technique (procedure)"
-* SCT_TBD#USCRS-TBD001 "External beam radiation therapy using particle scanning technique (procedure)"
+* SCT_TBD#USCRS-PS "External beam radiation therapy using particle scanning technique (procedure)"
 // * SCT#1156525005 "Mixed beam external beam radiation therapy (procedure)" -- RTTD Terminology decision 9/21
 
 ValueSet: BrachytherapyTechniqueVS

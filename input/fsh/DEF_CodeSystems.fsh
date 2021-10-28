@@ -94,7 +94,7 @@ Description: "Codes requested from SNOMED by mCODE, to be issued at a later date
 * #USCRS-33351 "Bowel space (body structure)"
 * #USCRS-33352 "Small bowel space (body structure)"
 * #USCRS-33346 "Presacral lymph node group (body structure)"
-* #USCRS-TBD001 "External beam radiation therapy using particle scanning technique (procedure)" // not yet requested through US Content Request Service
+* #USCRS-PS "External beam radiation therapy using particle scanning technique (procedure)" // not yet requested through US Content Request Service
 * #USCRS-33144 "non-adjacent (qualifier)"
 * #USCRS-352237 "Cancer in partial remission (finding)"  // not yet used anywhere
 * #USCRS-352236 "Cancer in complete remission(finding)"  // not yet used anywhere

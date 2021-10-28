@@ -54,7 +54,7 @@ Description:    "Records an alteration in the most common DNA nucleotide sequenc
 * component[genomicDNAChangeType] ^short = "DNA Change Type"
 * component[genomicDNAChangeType] ^definition = "Codified type for associated DNA Marker. DNA Markers use the HGVS notation which implies the DNA Marker Type, but the concurrent use of this code will allow a standard and explicit type for technical and display convenience."
 
-* component[molecularConsequence].code = TbdLoincCodes#molecular-consequence  // Note TbdLoincCodes - accepted by HL7 while waiting for a LOINC code assignment
+* component[molecularConsequence].code = LNC_TBD#molecular-consequence  // Note LNC_TBD - accepted by HL7 while waiting for a LOINC code assignment
 * component[molecularConsequence].value[x] only CodeableConcept
 * component[molecularConsequence].value[x] from MolecularConsequenceVS (extensible)
 * component[molecularConsequence] ^short = "Molecular consequence"

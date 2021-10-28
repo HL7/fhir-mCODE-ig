@@ -67,5 +67,5 @@ The mCODE example [`cancer-genomic-variant-fusion`](Observation-cancer-genomic-v
 * [TumorMarkerTestVS]
 
 ### Code Systems
-* [TbdLoincCodes]
+* [LNC_TBD]
 {% include markdown-link-references.md %}

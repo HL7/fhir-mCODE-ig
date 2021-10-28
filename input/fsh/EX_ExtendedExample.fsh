@@ -592,7 +592,7 @@ Instance: radiotherapy-treatment-summary-chest-wall-jenny-m
 InstanceOf: RadiotherapyCourseSummary
 Description: "Example of radiotherapy treatment summary involving external beam radiation to chest wall and regional node radiation with a chest wall boost"
 * status = #completed "completed"
-* code = RID#mcode-radiotherapy-course-summary
+* code = SCT_TBD#USCRS-33292
 * category = SCT#108290001 "Radiation oncology AND/OR radiotherapy (procedure)"
 * bodySite = SCT#78904004 "Chest Wall Structure (body structure)"
 * reasonCode = ICD10CM#C50.811 "Malignant neoplasm of overlapping sites of right female breast"
@@ -604,7 +604,7 @@ Description: "Example of radiotherapy treatment summary involving external beam 
 * extension[modalityAndTechnique][0].extension[modality][0].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
 * extension[modalityAndTechnique][0].extension[technique][0].valueCodeableConcept = SCT#1156530009 "Volumetric Modulated Arc Therapy (procedure)"
 * extension[modalityAndTechnique][1].extension[modality][0].valueCodeableConcept = SCT#45643008  "Teleradiotherapy using electrons"
-* extension[modalityAndTechnique][1].extension[technique][0].valueCodeableConcept = RequestedRadiotherapyTechniqueCodes#1162782007 "Three dimensional external beam radiation therapy (procedure)"
+* extension[modalityAndTechnique][1].extension[technique][0].valueCodeableConcept = SCT_TBD#1162782007 "Three dimensional external beam radiation therapy (procedure)"
 * extension[doseDeliveredToVolume][0].extension[volume].valueReference = Reference(jenny-m-chest-wall-treatment-volume)
 * extension[doseDeliveredToVolume][0].extension[totalDoseDelivered].valueQuantity = 6000 'cGy'
 * extension[doseDeliveredToVolume][0].extension[fractionsDelivered].valueUnsignedInt = 30
@@ -831,7 +831,7 @@ Instance: radiotherapy-treatment-summary-chest-wall-RTtestNonCompliant-m
 InstanceOf: RadiotherapyCourseSummary
 Description: "Example of radiotherapy treatment summary involving external beam radiation to chest wall and regional node radiation with a chest wall boost,  THIS INSTANCE IS SUPPOSED TO FAIL VALIDATION!   Need to expand testing of modality/technique combination invariants."
 * status = #completed "completed"
-* code = RID#mcode-radiotherapy-course-summary
+* code = SCT_TBD#USCRS-33292
 * category = SCT#108290001 //"Radiation oncology AND/OR radiotherapy (procedure)"
 * bodySite = SCT#78904004 //"Chest Wall Structure (body structure)"
 * reasonCode = ICD10CM#C50.811 //"Malignant neoplasm of overlapping sites of right female breast"

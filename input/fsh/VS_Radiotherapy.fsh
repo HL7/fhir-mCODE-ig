@@ -85,7 +85,7 @@ Description: "Allowed techniques for carbon ion beam modality"
 * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
 * SCT#1156529004 "External beam radiation therapy using particle passive scattering technique (procedure)"
 * SCT#1156528007 "External beam radiation therapy using particle spot scanning technique (procedure)"
-* SCT_TBD#USCRS-PS "External beam radiation therapy using particle scanning technique (procedure)" // not yet requested from SNOMED
+* SCT_TBD#USCRS-33517 "External beam radiation therapy using particle scanning technique (procedure)"
 // * SCT#1156525005 "Mixed beam external beam radiation therapy (procedure)" -- removed by RTTD Terminology decision 9/21
 
 ValueSet: ProtonBeamTechniquesVS
@@ -95,7 +95,7 @@ Description: "Allowed techniques for proton beam modality"
 * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
 * SCT#1156529004 "External beam radiation therapy using particle passive scattering technique (procedure)"
 * SCT#1156528007 "External beam radiation therapy using particle spot scanning technique (procedure)"
-* SCT_TBD#USCRS-PS "External beam radiation therapy using particle scanning technique (procedure)"
+* SCT_TBD#USCRS-33517 "External beam radiation therapy using particle scanning technique (procedure)"
 // * SCT#1156525005 "Mixed beam external beam radiation therapy (procedure)" -- RTTD Terminology decision 9/21
 
 ValueSet: BrachytherapyTechniqueVS

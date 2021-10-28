@@ -94,12 +94,12 @@ Description: "Codes requested from SNOMED by mCODE, to be issued at a later date
 * #USCRS-33351 "Bowel space (body structure)"
 * #USCRS-33352 "Small bowel space (body structure)"
 * #USCRS-33346 "Presacral lymph node group (body structure)"
-* #USCRS-PS "External beam radiation therapy using particle scanning technique (procedure)" // not yet requested through US Content Request Service
+* #USCRS-33517 "External beam radiation therapy using particle scanning technique (procedure)"
 * #USCRS-33144 "non-adjacent (qualifier)"
 * #USCRS-352237 "Cancer in partial remission (finding)"  // not yet used anywhere
 * #USCRS-352236 "Cancer in complete remission(finding)"  // not yet used anywhere
 * #USCRS-33292 "Radiotherapy Course Summary (procedure)"
-// * #USCRS-33347 "supra-mammary" // request rejected, TRG requested qualifier removal
+// * #USCRS-33347 "supra-mammary" // Request rejected; TRG requested removal
 * #USCRS-33146 "Bone structure of thirteenth rib (body structure)"
 * #USCRS-33350 "Retrostyloid space (body structure)"
 * #USCRS-33147 "Structure of body of thirteenth thoracic vertebra (body structure)"

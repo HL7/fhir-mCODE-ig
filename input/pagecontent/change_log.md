@@ -1,5 +1,7 @@
-### mCODE STU 2 (Sept 2021)
+### mCODE STU 2 (Ballot Reconciliation, June-Oct 2021)
+
 #### [Block Vote 1](https://jira.hl7.org/issues/?filter=14606) - June 24, 2021
+
 * [FHIR-32166](https://jira.hl7.org/browse/FHIR-32166) All references to subject or patient now reference CancerPatient.   Any patient that conforms to USCore is conformant.  Clients/server have to handle in a meaningful way the deceased info.
 * [FHIR-32263](https://jira.hl7.org/browse/FHIR-32263) Radiotherapy Modality Value Set and Radiotherapy Technique Value Set are now defined by inclusion of the modality and technique value sets for Brachytherapy and Teleoradiotherapy rather than by enumeration.
 * [FHIR-32350](https://jira.hl7.org/browse/FHIR-32350) The descriptions for the Elixhauser ThyroidOther and NeuroOther VS have been clarified.
@@ -7,6 +9,7 @@
 * A number of small corrections/improvements to narrative
 
 #### [Block Vote 2](https://jira.hl7.org/issues/?filter=14708) - July 22, 2021
+
 * [FHIR-32243](https://jira.hl7.org/browse/FHIR-32243) Allow Intent, Modality, and Technique extensions also in ServiceRequests.  Dropped the context restrictions on these extensions.
 * [FHIR-32244](https://jira.hl7.org/browse/FHIR-32244) Added tables with definitions for all radiotherapy and brachytherapy modalities and techniques.
 * [FHIR-32246](https://jira.hl7.org/browse/FHIR-32246) Updated the table of valid brachytherapy modalities and techiques to latest entries in respective valuesets
@@ -15,14 +18,12 @@
 * [FHIR-32261](https://jira.hl7.org/browse/FHIR-32261) Replaced radiotherapy modality and technique UMLS and local codes with approved SNOMED-CT codes, to be released in the next International release on July 31, 2021. Local codes have been removed from the radiotherapy code system, and the radiotherapy code system has been removed.
 * [FHIR-32264](https://jira.hl7.org/browse/FHIR-32264) Changed name of value set from TreatmentIntentVS to ProcedureIntentVS.
 * [FHIR-32266](https://jira.hl7.org/browse/FHIR-32266) Clarify that total dose in a Phase is only from this Phase, not cumulative up to this Phase.
-
 * [FHIR-32267](https://jira.hl7.org/browse/FHIR-32267) Clarify why number of fractions is per volume in Course Summary but not per volume in a Phase
-
 * [FHIR-32304](https://jira.hl7.org/browse/FHIR-32304) Typo
-
 * [FHIR-32345](https://jira.hl7.org/browse/FHIR-32345)  Changed name of extension from LocationQualifier to BodyLocationQualifier
 
 #### [Block Vote 3](https://jira.hl7.org/issues/?filter=14928)
+
 * [FHIR-32280](https://jira.hl7.org/browse/FHIR-32279) Exlixhauser Comorbidity profile should have an value. Explanation of when it might be missing.
 * [FHIR-32280](https://jira.hl7.org/browse/FHIR-32280) Exlixhauser Comorbidity profile should have an integer Observation.value
 * [FHIR-32280](https://jira.hl7.org/browse/FHIR-32281) Exlixhauser Comorbidity profile components should be present or absent, not unknown
@@ -32,23 +33,26 @@
 * [FHIR-33003](https://jira.hl7.org/browse/FHIR-33003)  Make extension values required
 
 #### [Block Vote 4](https://jira.hl7.org/issues/?filter=14928)
+
 * [FHIR-32827](https://jira.hl7.org/browse/FHIR-32827) Added Values Urine, Stool and Other to Genomic Specimen Type Value Set
+
 #### [Block Vote 5](https://jira.hl7.org/issues/?filter=15618)
+
 * [FHIR-32956](https://jira.hl7.org/browse/FHIR-32956) Primary and Secondary cancer value sets have been aligned with CDC state cancer reporting practices.
 * [FHIR-33340](https://jira.hl7.org/browse/FHIR-33340)   TreatmentPhase profiles and examples dropped.  Will reappear in Codex-RT IG.
 * [FHIR-33343](https://jira.hl7.org/browse/FHIR-33343)  RadiotherapyTreatmentLocationVS/RadiotherapyTreatmentLocationQualifierVS should align with TG263 Anatomy Terms
 
 #### [Block Vote 6](https://jira.hl7.org/issues/?filter=15619)
+
 * [FHIR-32893](https://jira.hl7.org/browse/FHIR-32893) Aligned CancerDiseaseStatusEvidenceTypeVS with NAACR reporting needs
-* more stuff
 
 #### Other
 
 * [FHIR-32340](https://jira.hl7.org/browse/FHIR-32340)  Laterality broken out into separate extension
 * [FHIR-33340](https://jira.hl7.org/browse/FHIR-33340)   TreatmentPhase profiles and examples dropped.  Will reappear in Codex-RT IG.
 * [FHIR-32888] (https://jira.hl7.org/browse/FHIR-33340)  Consider renaming CancerGeneticVariant to a more accurate name which covers both dna and amino acid changes.
-* Changed slicing on mCODE Patient Bundle to required each resource in the bundle to populate meta.profile
-* Reorganized locally-defined code systems to better track codes requested from SNOMED and LOINC, but not yet published (in some cases, not yet approved)
+* (Issue to be created) Changed slicing on mCODE Patient Bundle to required each resource in the bundle to populate meta.profile
+* (Issue to be created) Reorganized and reduced the number of locally-defined code systems to better track codes requested from SNOMED and LOINC
 
 ### mCODE STU 2 Ballot Version (May 2021)
 

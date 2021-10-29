@@ -43,7 +43,7 @@ A timeline of the narrative is illustrated in the following diagram:
 |  [`Medication Administration: Doxorubicin`](MedicationAdministration-cancer-related-medication-admin-doxorubicin-jenny-m.html) | [CancerRelatedMedicationAdministration] | [R4MedicationAdministration]|
 |  [`Surgical Procedure: Partial Mastectomy`](Procedure-cancer-related-surgical-procedure-jenny-m.html)|[CancerRelatedSurgicalProcedure] | [USCoreProcedure]|
 |  [`Performance Status: ECOG`](Observation-ecog-performance-status-jenny-m.html) | [ECOGPerformanceStatus] | [R4Observation] |
-|  [`Genomic Region: BRCA1`](Observation-genomic-region-studied-jenny-m.html) |[GenomicRegionStudied]| [USCoreLaboratoryResultObservation] |
+|  [`Seven Gene Panel: BRCA1, BRCA2, CDH1, PALB2, PTEN, STK11, TP53`](Observation-genomic-region-studied-jenny-m.html) |[GenomicRegionStudied]| [USCoreLaboratoryResultObservation] |
 |  [`Genomic Specimen: Left Breast`](Specimen-genomic-specimen-left-breast-jenny-m.html) | [GenomicSpecimen] | [R4Specimen]|
 |  [`mCODE Patient Bundle: Jenny M`](Bundle-mcode-patient-bundle-jenny-m.html) | [MCODEPatientBundle]|[R4Bundle] |
 |  [`Cancer Diagnosis`](Condition-primary-cancer-condition-jenny-m.html)|[PrimaryCancerCondition] | [USCoreCondition]|

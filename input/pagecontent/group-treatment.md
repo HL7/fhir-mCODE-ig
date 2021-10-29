@@ -56,10 +56,4 @@ A radiation oncology work group convened under [CodeX FHIR Accelerator](https://
   * [TeleradiotherapyModalityVS]
   * [TeleradiotherapyTechniqueVS]
 
-### Code Systems
-* [RequestedLymphNodeLevelCodes] - pending January 2022 release of SNOMEDCT
-* [RequestedRadiationVolumeTypeCodes] - pending January 2022 release of SNOMEDCT
-* [RequestedRadiotherapyTechniqueCodes] - pending January 2022 release of SNOMEDCT
-* [TG263]
-* [TG263Qualifier]
 {% include markdown-link-references.md %}

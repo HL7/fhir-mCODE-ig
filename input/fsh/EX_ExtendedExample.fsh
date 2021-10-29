@@ -433,10 +433,10 @@ Instance: us-core-observation-lab-tumor-dcis-jenny-m
 InstanceOf:  USCoreObservationLab
 Description: "Extended example: example showing DCIS diagnosis"
 * status = #final "final"
-* code = LNC#29308-4 "Diagnosis"
+* code = LNC#85336-6 "DCIS intraductal extension in Breast cancer specimen Qualitative by Light microscopy"
 * subject = Reference(cancer-patient-jenny-m)
 * effectiveDateTime = "2018-04-01T00:00:00Z"
-* valueCodeableConcept = LNC#85336-6 "DCIS intraductal extension in Breast cancer specimen Qualitative by Light microscopy"
+* valueCodeableConcept = LNC#LA27261-9 "DCIS present with extensive intraductal component (EIC)"
 * specimen = Reference(tumor-specimen-left-breast-jenny-m)
 
 Instance: tnm-pathologic-stage-group-jenny-m

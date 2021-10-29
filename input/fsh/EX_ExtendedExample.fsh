@@ -444,10 +444,10 @@ Instance: us-core-observation-lab-tumor-grade-jenny-m
 InstanceOf:  USCoreObservationLab
 Description: "Extended example: example showing DCIS diagnosis"
 * status = #final "final"
-* code = LNC#44648-4 "Histologic grade in Breast cancer specimen"
+* code = LNC#44648-4 "Histologic grade [Score] in Breast cancer specimen Qualitative by Nottingham"
 * subject = Reference(cancer-patient-jenny-m)
 * effectiveDateTime = "2018-04-01T00:00:00Z"
-* valueCodeableConcept = LNC#LA27824-4 "grade 2"
+* valueCodeableConcept = LNC#LA27824-4 "Nottingham grade 2"
 * specimen = Reference(tumor-specimen-left-breast-jenny-m)
 
 

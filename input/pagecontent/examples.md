@@ -38,7 +38,9 @@ A timeline of the narrative is illustrated in the following diagram:
 |  [`Medication Request: Doxorubicin`](MedicationRequest-cancer-related-medication-request-doxorubicin-jenny-m.html) | [CancerRelatedMedicationRequest] | [USCoreMedicationRequest] |
 |  [`Medication Request: Cyclophosphamide`](MedicationRequest-cancer-related-medication-request-cyclophosphamide-jenny-m.html) | [CancerRelatedMedicationRequest] | [USCoreMedicationRequest] |
 |  [`Medication Request: Paclitaxel`](MedicationRequest-cancer-related-medication-request-paclitaxel-jenny-m.html) | [CancerRelatedMedicationRequest] | [USCoreMedicationRequest] |
-|  [`Medication Administration: Doxorubicin`](MedicationAdministration-cancer-related-medication-administration-doxorubicin-jenny-m.html) | [CancerRelatedMedicationAdministration] | [R4MedicationAdministration]|
+|  [`Medication Administration: Cyclophosphamide`](MedicationAdministration-cancer-related-medication-admin-cyclophosphamide-jenny-m.html) | [CancerRelatedMedicationAdministration] | [R4MedicationAdministration] |
+|  [`Medication Administration: Paclitaxel`](MedicationAdministration-cancer-related-medication-admin-paclitaxel-jenny-m.html) | [CancerRelatedMedicationAdministration] | [R4MedicationAdministration] |
+|  [`Medication Administration: Doxorubicin`](MedicationAdministration-cancer-related-medication-admin-doxorubicin-jenny-m.html) | [CancerRelatedMedicationAdministration] | [R4MedicationAdministration]|
 |  [`Surgical Procedure: Partial Mastectomy`](Procedure-cancer-related-surgical-procedure-jenny-m.html)|[CancerRelatedSurgicalProcedure] | [USCoreProcedure]|
 |  [`Performance Status: ECOG`](Observation-ecog-performance-status-jenny-m.html) | [ECOGPerformanceStatus] | [R4Observation] |
 |  [`Genomic Region: BRCA1`](Observation-genomic-region-studied-jenny-m.html) |[GenomicRegionStudied]| [USCoreLaboratoryResultObservation] |

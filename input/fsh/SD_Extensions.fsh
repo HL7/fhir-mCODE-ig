@@ -1,6 +1,6 @@
 Extension: ComorbidConditionCode
 Id: mcode-comorbid-condition-code
-Title:  "Specific Condition Code for Comorbidity"
+Title:  "Comorbid Condition Code Extension"
 Description: "An extension for representing a specific condition code corresponding to the comorbid condition category."
 * value[x] only CodeableConcept
 * value[x] ^short = "Code for a specific condition in the named comorbidity category."
@@ -8,21 +8,21 @@ Description: "An extension for representing a specific condition code correspond
 
 Extension: ComorbidConditionReference
 Id: mcode-comorbid-condition-reference
-Title:  "Specific Condition Reference for Comorbidity"
+Title:  "Comorbid Condition Reference Extension"
 Description: "An extension for representing a reference to a condition resource corresponding to the comorbid condition category."
 * value[x] only Reference(Condition)
 * value[x] 1..1
 
 Extension: ConditionRelated
 Id: mcode-condition-related
-Title:  "Condition related to resource"
+Title:  "Related Condition Extension"
 Description: "The resource has an unspecified relationship with a Condition."
 * value[x] only Reference(Condition)
 * value[x] 1..1
 
 Extension: EvidenceType
 Id: mcode-evidence-type
-Title: "Evidence Type"
+Title: "Evidence Type Extension"
 Description: "Categorization of the kind of evidence used as input to the clinical judgment. This corresponds to both the S and O in SOAP."
 * insert ExtensionContext(Observation)
 * value[x] only CodeableConcept
@@ -31,7 +31,7 @@ Description: "Categorization of the kind of evidence used as input to the clinic
 
 Extension: HistologyMorphologyBehavior
 Id: mcode-histology-morphology-behavior
-Title: "Histology-Morphology-Behavior"
+Title: "Histology-Morphology-Behavior Extension"
 Description: "An extension describing the morphologic and behavioral characteristics of the cancer."
 * insert ExtensionContext(Condition)
 * value[x] only CodeableConcept
@@ -40,7 +40,7 @@ Description: "An extension describing the morphologic and behavioral characteris
 
 Extension: BodyLocationQualifier
 Id: mcode-body-location-qualifier
-Title: "Body Location Qualifier"
+Title: "Body Location Qualifier Extension"
 Description: "Qualifier to refine an body location. These include qualifiers for relative location, directionality, number, and plane, and exclude qualifiers for laterality."
 // FHIR-xxxx
 // * insert ExtensionContext(Specimen.collection.bodySite)
@@ -53,7 +53,7 @@ Description: "Qualifier to refine an body location. These include qualifiers for
 
 Extension: LateralityQualifier
 Id: mcode-laterality-qualifier
-Title: "Laterality Qualifier"
+Title: "Laterality Qualifier Extension"
 Description: "Qualifier to specify  laterality."
 // * insert ExtensionContext(Specimen.collection.bodySite)
 // * insert ExtensionContext(Procedure.bodySite)
@@ -65,7 +65,7 @@ Description: "Qualifier to specify  laterality."
 
 Extension: TreatmentTerminationReason
 Id: mcode-treatment-termination-reason
-Title: "Termination Reason"
+Title: "Treatment Termination Reason Extension"
 Description: "A code explaining the unplanned or premature termination, or normal completion, of a plan of treatment, course of medication, or research study."
 //* insert ExtensionContext(MedicationRequest) - removed as per FHIR-32243
 //* insert ExtensionContext(Procedure)         - removed as per FHIR-32243
@@ -75,7 +75,7 @@ Description: "A code explaining the unplanned or premature termination, or norma
 
 Extension: ProcedureIntent
 Id: mcode-procedure-intent
-Title: "Procedure Intent"
+Title: "Procedure Intent Extension"
 Description: "The purpose of a procedure."
 //* insert ExtensionContext(MedicationRequest) - removed as per FHIR-32243
 //* insert ExtensionContext(Procedure)         - removed as per FHIR-32243

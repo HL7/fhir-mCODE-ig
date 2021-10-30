@@ -1,7 +1,7 @@
 Profile:    CancerGenomicVariant
 Parent:     USCoreObservationLab
 Id: mcode-cancer-genomic-variant
-Title:      "Cancer Genomic Variant"
+Title:      "Cancer Genomic Variant Profile"
 Description:    "Records an alteration in the most common DNA nucleotide sequence. The term variant can be used to describe an alteration that may be benign, pathogenic, or of unknown significance. The term variant is increasingly being used in place of the term mutation."
 * insert NotUsed(bodySite)
 * insert NotUsed(referenceRange)
@@ -117,7 +117,7 @@ Description:    "Records an alteration in the most common DNA nucleotide sequenc
 Profile:        TumorMarkerTest
 Parent:         USCoreObservationLab
 Id:             mcode-tumor-marker-test
-Title:          "Tumor Marker Test"
+Title:          "Tumor Marker Test Profile"
 Description:    "The result of a tumor marker test. Tumor marker tests are generally used to guide cancer treatment decisions and monitor treatment, as well as to predict the chance of recovery and cancer recurrence."
 * subject 1..1
 * code from TumorMarkerTestVS (extensible)
@@ -146,7 +146,7 @@ RuleSet: CancerRelatedSpecimenRules
 Profile:    GenomicSpecimen
 Parent:     Specimen
 Id: mcode-genomic-specimen
-Title:      "Genomic Specimen"
+Title:      "Genomic Specimen Profile"
 Description:    "A small sample of blood, hair, skin, amniotic fluid (the fluid that surrounds a fetus during pregnancy), or other tissue which is excised from a subject for the purposes of genomics testing or analysis."
 * insert CancerRelatedSpecimenRules
 * type from GenomicSpecimenTypeVS (extensible)
@@ -155,7 +155,7 @@ Description:    "A small sample of blood, hair, skin, amniotic fluid (the fluid 
 Profile:    CancerGenomicsReport
 Parent:     USCoreDiagnosticReportLab
 Id: mcode-cancer-genomics-report
-Title:      "Cancer Genomics Report"
+Title:      "Cancer Genomics Report Profile"
 Description:    "Genomic analysis summary report. The report may include one or more tests, with two distinct test types. The first type is a targeted mutation test, where a specific mutation on a specific gene is tested for. The result is either positive or negative for that mutation. The second type is a more general test for variants. This type of test returns the identity of variants found in a certain region of the genome."
 * subject only Reference(CancerPatient)
 * category contains GenomicsCategory 1..1
@@ -180,7 +180,7 @@ Description:    "Genomic analysis summary report. The report may include one or 
 Profile:    GenomicRegionStudied
 Parent:     USCoreObservationLab
 Id: mcode-genomic-region-studied
-Title:      "Genomic Region Studied"
+Title:      "Genomic Region Studied Profile"
 Description:    "The area of the genome region referenced in testing for variants."
 * code = LNC#53041-0 //"DNA region of interest panel"
 //* insert NotUsed(value[x])

@@ -7,7 +7,7 @@ Description: "System used for staging."
 
 ValueSet: ObservationCodesStageGroupVS
 Id: mcode-observation-codes-stage-group-vs
-Title: "Observation Codes for Stage Group Category"
+Title: "Staging Type Value Set (for Stage Group)"
 Description: "Identifying codes based on the timing of classification for stage group observations."
 * ^copyright = "This material contains content from LOINC (http://loinc.org). LOINC is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc"
 * LNC#21908-9 "Stage group.clinical Cancer"
@@ -17,7 +17,7 @@ Description: "Identifying codes based on the timing of classification for stage 
 
 ValueSet: ObservationCodesPrimaryTumorVS
 Id: mcode-observation-codes-primary-tumor-vs
-Title: "Observation Codes for Primary Tumor Category"
+Title: "Staging Type Value Set (for Primary Tumor Category)"
 Description: "Identifying codes based on the timing of classification for primary tumor (T) staging observations."
 * ^copyright = "This material contains content from LOINC (http://loinc.org). LOINC is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc"
 * LNC#21905-5 "Primary tumor.clinical [Class] Cancer"
@@ -27,7 +27,7 @@ Description: "Identifying codes based on the timing of classification for primar
 
 ValueSet: ObservationCodesRegionalNodesVS
 Id: mcode-observation-codes-regional-nodes-vs
-Title: "Observation Codes for Regional Node Category"
+Title: "Staging Type Value Set (for Regional Node Category)"
 Description: "Identifying codes based on the timing of classification for regional node (N) staging observations."
 * ^copyright = "This material contains content from LOINC (http://loinc.org). LOINC is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc"
 * LNC#21906-3 "Regional lymph nodes.clinical [Class] Cancer"
@@ -37,7 +37,7 @@ Description: "Identifying codes based on the timing of classification for region
 
 ValueSet: ObservationCodesDistantMetastasesVS
 Id: mcode-observation-codes-distant-metastases-vs
-Title: "Observation Codes for Distant Metastases Category"
+Title: "Staging Type Value Set (for Distant Metastases Category)"
 Description: "Identifying codes based on the timing of classification for distant metastases (M) staging observations."
 * ^copyright = "This material contains content from LOINC (http://loinc.org). LOINC is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc"
 * LNC#21907-1 "Distant metastases.clinical [Class] Cancer"
@@ -47,7 +47,7 @@ Description: "Identifying codes based on the timing of classification for distan
 
 ValueSet: CancerStageGroupVS
 Id: mcode-cancer-stage-group-vs
-Title: "Stage Group Value Set"
+Title: "Cancer Stage Group Value Set"
 Description: "This value set is intended to contain allowable values for Stage Group, according to TNM staging rules. AJCC codes (preferably, version 8 for current cancers) SHOULD be used."
 * codes from system AJCC
 

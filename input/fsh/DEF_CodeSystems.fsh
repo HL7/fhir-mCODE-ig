@@ -19,7 +19,7 @@ Please note that while these codes may imply conformance to the profiles that us
 // LOINC Request 6073 requests LOINC codes for these categories, and for the overall index. Submitted 7/7/21
 CodeSystem: ComorbiditiesElixhauserCS
 Id: comorbidities-elixhauser-cs
-Title: "Elixhauser Comorbidity Categories"
+Title: "Elixhauser Comorbidity Categories Code System"
 Description: "A set of codes representing the comorbidity categories originally defined by Elixhauser, and updated by the Agency for Healthcare Research and Quality (AHRQ) Healthcare Cost and Utilization Project (H-CUP)."
 * ^url =  http://terminology.hl7.org/CodeSystem/comorbidities-elixhauser
 * #AIDS    "Acquired immune deficiency syndrome Elixhauser category" "Patient has a disorder in the value set ElixhauserAidsVS"
@@ -63,14 +63,14 @@ Description: "A set of codes representing the comorbidity categories originally 
 
 CodeSystem: LNC_TBD
 Id: loinc-tbd-cs
-Title: "Requested LOINC Codes"
+Title: "Requested LOINC Codes Code System"
 Description: "Codes requested from LOINC by Clinical Genomics Work Group, to be issued at a later date."
 * #molecular-consequence "Molecular Consequence" "Annotated changes to sequence features caused by this variant. Terms are from the sequence ontology under SO:0001537."
 * #diagnostic-implication "Diagnosic Implication" "Diagnostic Implication"
 
 CodeSystem: SCT_TBD
 Id: snomed-tbd-cs
-Title: "Requested SNOMED Codes"
+Title: "Requested SNOMED Codes Code System"
 Description: "Codes requested from SNOMED by mCODE, to be issued at a later date. Where numeric codes are given, these correspond to the expected SNOMED-CT codes. Terms beginning with 'USCRS-' (for United States Content Request Service) represent request identifiers with no SNOMED code yet approved or assigned."
 * #1162492000 "Tumor bed (morphologic abnormality)" // SNOMED term available to be released in Jan 2021
 * #1162782007 "Three dimensional external beam radiation therapy (procedure)" // to be released Jan 2021

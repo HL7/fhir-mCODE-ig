@@ -17,7 +17,7 @@ RuleSet: PerformanceStatusCommonRules
 Profile:    KarnofskyPerformanceStatus
 Parent:     Observation
 Id: mcode-karnofsky-performance-status
-Title:      "Karnofsky Performance Status"
+Title:      "Karnofsky Performance Status Profile"
 Description:    "The Karnofsky Performance Status (KPS) is a tool used to measure a patient's functional status. It can be used to compare the effectiveness of different therapies and to help assess the prognosis of certain patients, such as those with certain cancers. The KPS score ranges from 0 to 100 in intervals of 10. Higher scores are associated with better functional status, with 100 representing no symptoms or evidence of disease, and 0 representing death."
 * insert PerformanceStatusCommonRules
 * code = LNC#89243-0 //"Karnofsky Performance Status score"
@@ -28,7 +28,7 @@ Description:    "The Karnofsky Performance Status (KPS) is a tool used to measur
 Profile:    ECOGPerformanceStatus
 Parent:     Observation
 Id: mcode-ecog-performance-status
-Title:      "ECOG Performance Status"
+Title:      "ECOG Performance Status Profile"
 Description:    "The Eastern Cooperative Oncology Group (ECOG) Performance Status represents the patient's functional status and is used to determine their ability to tolerate therapies in serious illness, specifically for chemotherapy. (Definition from: [LOINC](https://loinc.org/89262-0/))"
 * insert PerformanceStatusCommonRules
 * code = LNC#89247-1 //"ECOG Performance Status score"

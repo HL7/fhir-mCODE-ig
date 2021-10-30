@@ -79,11 +79,11 @@ Description:  "Types of secondary malignant neoplastic disease, coded in SNOMED 
 
 ValueSet:  MelanomaInSituDisorderVS
 Id: mcode-melanoma-in-situ-disorder-vs
-Title: "Melanoma In-Situ"
+Title: "Melanoma In-Situ Disorder Value Set"
 Description:    "Types of melanoma in-situ, coded in SNOMED CT or ICD-10-CM."
 * insert SNOMEDCTCopyrightForVS
 * include codes from system SCT where concept is-a #189758001 "Melanoma in situ (disorder)"
-* ICD10CM#D03 "MELANOMA IN SITU OF SKIN"
+* ICD10CM#D03 "Melanoma in situ of skin"
 * ICD10CM#D03.0 "Melanoma in situ of lip"
 * ICD10CM#D03.1 "Melanoma in situ of eyelid, including canthus"
 * ICD10CM#D03.10 "Melanoma in situ of unspecified eyelid, including canthus"
@@ -118,7 +118,7 @@ Description:    "Types of melanoma in-situ, coded in SNOMED CT or ICD-10-CM."
 
 ValueSet:  CytologicEvidenceOfMalignancyVS
 Id: mcode-cytologic-evidence-malignancy-vs
-Title: "Cytologic Evidence of Malignancy"
+Title: "Cytologic Evidence of Malignancy Value Set"
 Description:    "Types of cytological evience of malignancy, coded in SNOMED CT or ICD-10-CM."
 * insert SNOMEDCTCopyrightForVS
 * SCT#126361000119107 "Cytological evidence of malignancy on anal Papanicolaou smear (finding)"
@@ -128,7 +128,7 @@ Description:    "Types of cytological evience of malignancy, coded in SNOMED CT 
 
 ValueSet:  SpecificDiagnosisCancerDisorderVS
 Id: mcode-specific-diagnosis-cancer-disorder-vs
-Title: "Specific Diagnosis of Cancer"
+Title: "Specific Diagnosis of Cancer Value Set"
 Description:    "Types of hypereosinophilic syndrome, coded in SNOMED CT or ICD-10-CM."
 * insert SNOMEDCTCopyrightForVS
 * include codes from system SCT where concept is-a #393573009 "Hypereosinophilic syndrome (disorder)"
@@ -139,7 +139,7 @@ Description:    "Types of hypereosinophilic syndrome, coded in SNOMED CT or ICD-
 
 ValueSet:  CarcinomaInSituDisorderVS
 Id: mcode-carcinoma-in-situ-disorder-vs
-Title: "Carcinoma In-Situ"
+Title: "Carcinoma In-Situ Disorder Value Set"
 Description:    "Types of carcinoma in-situ, coded in SNOMED CT or ICD-10-CM."
 * insert SNOMEDCTCopyrightForVS
 * include codes from system SCT where concept is-a #109355002 "Carcinoma in situ (disorder)"
@@ -221,7 +221,7 @@ Description:    "Types of carcinoma in-situ, coded in SNOMED CT or ICD-10-CM."
 
 ValueSet:  BenignUncertainNeoplasmBrainCNSDisorderVS
 Id: mcode-benign-uncertain-neoplasm-brain-cns-disorder-vs
-Title: "Benign Neoplasms of Brain and CNS Disorders"
+Title: "Benign Neoplasm of Brain and CNS Disorder Value Set"
 Description:    "Types of benign neoplasms and neoplasms of uncertain behavior of the brain and central nervous system, coded in SNOMED CT or ICD-10-CM."
 * insert SNOMEDCTCopyrightForVS
 * include codes from system SCT where concept is-a #93468003 "Hemangioma of intracranial structure (disorder)"

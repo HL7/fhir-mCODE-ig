@@ -107,14 +107,14 @@ Description:	"The purpose of a procedure."
 // Based on UnitsOfLengthVS, but limited to just mm and cm. In theory we could just use UnitsOfLengthVS if we don't care about restricting to just cm/mm.
 ValueSet:        TumorSizeUnitsVS
 Id:              mcode-tumor-size-units-vs
-Title:           "Units of tumor size value set"
+Title:           "Tumor Size Units Value Set"
 Description:     "Acceptable units for measuring tumor size"
 * UCUM#mm        "Millimeter"
 * UCUM#cm        "Centimeter"
 
 ValueSet:        TumorSizeMethodVS
 Id:              mcode-tumor-size-method-vs
-Title:           "Methods for measuring tumor size"
+Title:           "Tumor Size Method Value Set"
 Description:     "Code for methods of measuring tumor size, including physical examination, pathology, and imaging."
 * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
 // Pathology

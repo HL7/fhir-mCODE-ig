@@ -1,7 +1,7 @@
 Profile: MCODEPatientBundle
 Parent: Bundle
 Id: mcode-patient-bundle
-Title: "mCODE Patient Bundle"
+Title: "mCODE Patient Bundle Profile"
 Description: "A collection of data for an mCODE cancer patient."
 * type  = #collection
 * entry 1..* MS

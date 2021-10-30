@@ -265,8 +265,8 @@ Description: "The number of sessions in a course of radiotherapy."
 
 Extension: RadiotherapyDoseDeliveredToVolume
 Id: mcode-radiotherapy-dose-delivered-to-volume
-Title: "Radiotherapy Dose Delivered To Body Volume"
-Description: "Dose parameters for one radiotherapy volume."
+Title: "Radiotherapy Dose Delivered"
+Description: "Dose delivered to a given radiotherapy volume."
 * insert ExtensionContext(Procedure)
 * extension contains
     volume 1..1 MS and

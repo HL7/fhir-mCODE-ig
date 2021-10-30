@@ -1,6 +1,6 @@
 Extension: ComorbidConditionCode
 Id: mcode-comorbid-condition-code
-Title:  "Specific Condition Code for Comorbidity"
+Title:  "Comorbid Condition Code"
 Description: "An extension for representing a specific condition code corresponding to the comorbid condition category."
 * value[x] only CodeableConcept
 * value[x] ^short = "Code for a specific condition in the named comorbidity category."
@@ -8,14 +8,14 @@ Description: "An extension for representing a specific condition code correspond
 
 Extension: ComorbidConditionReference
 Id: mcode-comorbid-condition-reference
-Title:  "Specific Condition Reference for Comorbidity"
+Title:  "Comorbid Condition Reference"
 Description: "An extension for representing a reference to a condition resource corresponding to the comorbid condition category."
 * value[x] only Reference(Condition)
 * value[x] 1..1
 
 Extension: ConditionRelated
 Id: mcode-condition-related
-Title:  "Condition related to resource"
+Title:  "Related Condition"
 Description: "The resource has an unspecified relationship with a Condition."
 * value[x] only Reference(Condition)
 * value[x] 1..1
@@ -65,7 +65,7 @@ Description: "Qualifier to specify  laterality."
 
 Extension: TreatmentTerminationReason
 Id: mcode-treatment-termination-reason
-Title: "Termination Reason"
+Title: "Treatment Termination Reason"
 Description: "A code explaining the unplanned or premature termination, or normal completion, of a plan of treatment, course of medication, or research study."
 //* insert ExtensionContext(MedicationRequest) - removed as per FHIR-32243
 //* insert ExtensionContext(Procedure)         - removed as per FHIR-32243

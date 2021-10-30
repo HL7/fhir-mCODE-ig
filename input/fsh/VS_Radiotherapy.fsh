@@ -120,15 +120,15 @@ Description: "Codes describing the techniques of brachytherapy (internal or surf
 
 ValueSet: BrachyIntRadiotherapySeedTechniquesVS
 Id: mcode-brachyintradiotherapyseed-technique-vs
-Title: "Allowed techniques for brachytherapy modality internal radiotherapy - permanent seeds"
+Title: "Internal Radiotherapy - Permanent Seeds Technique Value Set"
 Description: "Allowed techniques for brachytherapy modality internal radiotherapy - permanent seeds"
 * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
 * SCT#113120007 "Interstitial brachytherapy (procedure)"
 
 ValueSet: BrachyLDRTechniquesVS
 Id: mcode-brachyldr-technique-vs
-Title: "Allowed techniques for brachytherapy modality Low Dose Rate using temp rad source"
-Description: "Allowed techniques for brachytherapy modality Low Dose Rate using temp rad source"
+Title: "Low Dose Rate using Temp Radation Technique Value Set"
+Description: "Allowed techniques for brachytherapy modality Low Dose Rate using temporary radiation source"
 * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
 * SCT#384692006 "Intracavitary brachytherapy (procedure)"
 * SCT#113120007 "Interstitial brachytherapy (procedure)"

@@ -1,7 +1,7 @@
 Profile:  CancerRelatedMedicationRequest
 Parent:   USCoreMedicationRequest
 Id: mcode-cancer-related-medication-request
-Title:    "Cancer-Related Medication Request"
+Title:    "Cancer-Related Medication Request Profile"
 Description:  "A record of a medication prescription or consumption associated with cancer treatment. The medication may reported by the prescriber, prescribing organization, or patient. It does not have to be directly observed."
 * insert MedicationResourcesRS
 * requester only Reference(USCorePractitioner or USCoreOrganization or CancerPatient)
@@ -10,7 +10,7 @@ Description:  "A record of a medication prescription or consumption associated w
 Profile:  CancerRelatedMedicationAdministration
 Parent:   MedicationAdministration
 Id: mcode-cancer-related-medication-administration
-Title:    "Cancer-Related Medication Administration"
+Title:    "Cancer-Related Medication Administration Profile"
 Description:    "An episode of medication administration for a patient whose condition is related to a primary or secondary cancer condition. In the context of chemotherapy drugs, the medication administration in most cases is performed and documented by the provider."
 * insert MedicationResourcesRS
 * medication[x] from http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1010.4 (extensible) // as per USCore 4.0.0

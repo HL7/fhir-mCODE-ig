@@ -23,7 +23,7 @@ RuleSet: RadiotherapyCommon
 Profile:  RadiotherapyCourseSummary
 Parent:   USCoreProcedure  // considered one procedure with multiple parts
 Id:       mcode-radiotherapy-course-summary
-Title:    "Radiotherapy Course Summary"
+Title:    "Radiotherapy Course Summary Profile"
 Description: "A summary of a course of radiotherapy delivered to a patient. It records the treatment intent, termination reason, modalities, techniques, number of sessions, and doses delivered to one or more body volumes. Whether the course has been fully delivered or stopped is indicated in the status element."
 * insert RadiotherapyCommon
 // Summary-specific content
@@ -66,7 +66,7 @@ Description: "A summary of a course of radiotherapy delivered to a patient. It r
 // Profile:  TeleradiotherapyTreatmentPhase
 // Parent:   USCoreProcedure
 // Id:       mcode-teleradiotherapy-treatment-phase
-// Title: "Teleradiotherapy Treatment Phase"
+// Title: "Teleradiotherapy Treatment Phase Profile"
 // Description: "A summary of a phase of teleradiotherapy treatment that has been delivered. The scope is a treatment consisting of one or multiple identical fractions.  A phase consists of a set of identical fractions. In this context, identical means that each fraction uses the same modality, technique, dose per fraction, and is applied to the same treatment volume or volumes. Because of their spatial relationship or the technique used,  all treatment volumes do not necessarily receive the same total dose during a phase."
 // * insert RadiotherapyPhaseCommon
 // // Teleradiotherapy specific content:
@@ -102,7 +102,7 @@ Description: "A summary of a course of radiotherapy delivered to a patient. It r
 
 Extension: RadiotherapyModalityAndTechnique
 Id:        mcode-radiotherapy-modality-and-technique
-Title:     "Radiotherapy Modality And Technique"
+Title:     "Radiotherapy Modality And Technique Extension"
 Description: "Extension capturing modality and technique of a given radiotherapy procedure.  The allowed combinations of modality and technique are constrained by invariants, one per modality."
 * extension contains
     RadiotherapyModality named modality 1..1 MS and
@@ -241,7 +241,7 @@ Severity: #error
 
 Extension: RadiotherapyModality
 Id:        mcode-radiotherapy-modality
-Title:    "Radiotherapy Modality"
+Title:    "Radiotherapy Modality Extension"
 Description: "Extension capturing a modality of external beam or brachytherapy radiation procedures."
 //* insert ExtensionContext(Procedure) - removed as per FHIR-32243
 * value[x] only CodeableConcept
@@ -249,7 +249,7 @@ Description: "Extension capturing a modality of external beam or brachytherapy r
 
 Extension: RadiotherapyTechnique
 Id:        mcode-radiotherapy-technique
-Title:     "Radiotherapy Technique"
+Title:     "Radiotherapy Technique Extension"
 Description: "Extension capturing a technique of external beam or brachytherapy radiation procedures."
 //* insert ExtensionContext(Procedure)  - removed as per FHIR-32243
 * value[x] only CodeableConcept
@@ -257,7 +257,7 @@ Description: "Extension capturing a technique of external beam or brachytherapy 
 
 Extension: RadiotherapySessions
 Id:        mcode-radiotherapy-sessions
-Title:     "Radiotherapy Number of Sessions"
+Title:     "Radiotherapy Number of Sessions Extension"
 Description: "The number of sessions in a course of radiotherapy."
 * insert ExtensionContext(Procedure)
 * value[x] only unsignedInt
@@ -265,7 +265,7 @@ Description: "The number of sessions in a course of radiotherapy."
 
 Extension: RadiotherapyDoseDeliveredToVolume
 Id: mcode-radiotherapy-dose-delivered-to-volume
-Title: "Radiotherapy Dose Delivered"
+Title: "Radiotherapy Dose Delivered To Volume Extension"
 Description: "Dose delivered to a given radiotherapy volume."
 * insert ExtensionContext(Procedure)
 * extension contains
@@ -290,7 +290,7 @@ Description: "Dose delivered to a given radiotherapy volume."
 Profile: RadiotherapyVolume
 Parent: BodyStructure
 Id: mcode-radiotherapy-volume
-Title: "Radiotherapy Volume"
+Title: "Radiotherapy Volume Profile"
 Description: "A volume of the body used in radiotherapy planning or treatment delivery."
 * obeys mcode-description-or-id-required
 * insert IdentifierDisplayName
@@ -333,7 +333,7 @@ If either Modality value set needs to be extended, here are the invariants;
 Profile: BrachytherapyImplantableDevice
 Parent:  USCoreImplantableDeviceProfile
 Id:      mcode-brachytherapy-implantable-device
-Title: "Brachytherapy Implantable Device"
+Title: "Brachytherapy Implantable Device Profile"
 Description: "A radioactive source device implanted into the body and remaining there temporarily or permanently."
 * type from BrachytherapyDeviceVS (extensible)
 

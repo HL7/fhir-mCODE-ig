@@ -49,7 +49,7 @@ Description: "Codes describing the techniques of teleradiotherapy (external beam
 
 ValueSet: PhotonBeamTechniquesVS
 Id: mcode-photon-beam-technique-vs
-Title: "Allowed techniques for photon beam modality"
+Title: "Photon Beam Technique Value Set"
 Description: "Allowed techniques for photon beam modality"
 * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
 * SCT#441799006 "Intensity modulated radiation therapy (procedure)"
@@ -61,7 +61,7 @@ Description: "Allowed techniques for photon beam modality"
 
 ValueSet: ElectronBeamTechniquesVS
 Id: mcode-electron-beam-technique-vs
-Title: "Allowed techniques for electron beam modality"
+Title: "Electron Beam Technique Value Set"
 Description: "Allowed techniques for electron beam modality"
 * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
 // * SCT#1162782007 "Three dimensional external beam radiation therapy (procedure)"
@@ -71,7 +71,7 @@ Description: "Allowed techniques for electron beam modality"
 
 ValueSet: NeutronBeamTechniquesVS
 Id: mcode-neutron-beam-technique-vs
-Title: "Allowed techniques for neutron beam modality"
+Title: "Neutron Beam Technique Value Set"
 Description: "Allowed techniques for neutron beam modality"
 * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
 * SCT#169317000 "Neutron capture therapy (procedure)"
@@ -80,7 +80,7 @@ Description: "Allowed techniques for neutron beam modality"
 
 ValueSet: CarbonIonBeamTechniquesVS
 Id: mcode-carbon-ion-beam-technique-vs
-Title: "Allowed techniques for carbon ion beam modality"
+Title: "Carbon Ion Beam Technique Value Set"
 Description: "Allowed techniques for carbon ion beam modality"
 * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
 * SCT#1156529004 "External beam radiation therapy using particle passive scattering technique (procedure)"
@@ -90,7 +90,7 @@ Description: "Allowed techniques for carbon ion beam modality"
 
 ValueSet: ProtonBeamTechniquesVS
 Id: mcode-proton-beam-technique-vs
-Title: "Allowed techniques for proton beam modality"
+Title: "Proton Beam Technique Value Set"
 Description: "Allowed techniques for proton beam modality"
 * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
 * SCT#1156529004 "External beam radiation therapy using particle passive scattering technique (procedure)"
@@ -120,14 +120,14 @@ Description: "Codes describing the techniques of brachytherapy (internal or surf
 
 ValueSet: BrachyIntRadiotherapySeedTechniquesVS
 Id: mcode-brachyintradiotherapyseed-technique-vs
-Title: "Internal Radiotherapy - Permanent Seeds Technique Value Set"
+Title: "Brachytherapy Permanent Seeds Technique Value Set"
 Description: "Allowed techniques for brachytherapy modality internal radiotherapy - permanent seeds"
 * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
 * SCT#113120007 "Interstitial brachytherapy (procedure)"
 
 ValueSet: BrachyLDRTechniquesVS
 Id: mcode-brachyldr-technique-vs
-Title: "Low Dose Rate using Temp Radation Technique Value Set"
+Title: "Brachytherapy Low Dose Rate Temporary Radation Technique Value Set"
 Description: "Allowed techniques for brachytherapy modality Low Dose Rate using temporary radiation source"
 * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
 * SCT#384692006 "Intracavitary brachytherapy (procedure)"
@@ -136,7 +136,7 @@ Description: "Allowed techniques for brachytherapy modality Low Dose Rate using 
 
 ValueSet: BrachyPDRTechniquesVS
 Id: mcode-brachypdr-technique-vs
-Title: "Allowed techniques for brachytherapy modality Pulsed Dose Rate"
+Title: "Brachytherapy Pulsed Dose Rate Technique Value Set"
 Description: "Allowed techniques for brachytherapy modality Pulsed Dose Rate"
 * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
 * SCT#384692006 "Intracavitary brachytherapy (procedure)"
@@ -144,7 +144,7 @@ Description: "Allowed techniques for brachytherapy modality Pulsed Dose Rate"
 
 ValueSet: BrachytherapyHDRTechniquesVS
 Id: mcode-brachyhdr-technique-vs
-Title: "Allowed techniques for brachytherapy modality High Dose Rate"
+Title: "Brachytherapy High Dose Rate Technique Value Set"
 Description: "Allowed techniques for brachytherapy modality High Dose Rate"
 * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
 * SCT#384692006 "Intracavitary brachytherapy (procedure)"
@@ -157,7 +157,7 @@ Description: "Allowed techniques for brachytherapy modality High Dose Rate"
 
 ValueSet: BrachytherapyHDRElectronicTechniquesVS
 Id: mcode-brachyhdrelectronic-technique-vs
-Title: "Allowed techniques for brachytherapy modality High Dose Rate electronic"
+Title: "Brachytherapy High Dose Rate Electronic Technique Value Set"
 Description: "Allowed techniques for brachytherapy modality High Dose Rate electronic"
 * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
 * SCT#384692006 "Intracavitary brachytherapy (procedure)"
@@ -169,7 +169,7 @@ Description: "Allowed techniques for brachytherapy modality High Dose Rate elect
 
 ValueSet: BrachyRadioPharmaceuticalTechniquesVS
 Id: mcode-brachyradiopharmaceutical-technique-vs
-Title: "Allowed techniques for brachytherapy modality radiopharmaceutical"
+Title: "Brachytherapy Radiopharmaceutical Technique Value Set"
 Description: "Allowed techniques for brachytherapy modality radiopharmaceutical"
 * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
 * SCT#16560241000119104 "Oral radionuclide therapy (procedure)"
@@ -249,37 +249,6 @@ Description: "Various modifiers that can be applied to body locations where radi
 * SCT_TBD#1162614009 "Lymph node level X (qualifier value)"
 * SCT_TBD#1162615005 "Lymph node level XA (qualifier value)"
 * SCT_TBD#1162613003 "Lymph node level XB (qualifier value)"
-
-
-// This valueset should be unnecessary, since 'include codes from system SCT where concept is-a #258399006  "Lymph node level value (qualifier value)" ' should cover this after 1/2022
-// ValueSet: LymphNodeLocationQualifierVS
-// Id: mcode-lymph-node-location-qualifier-vs
-// Title: "Lymph Node Location Qualifier Value Set"
-// Description: "Qualifiers for Lymph Node Locations"
-// * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
-// * SCT#258400004 "Lymph node level I (qualifier value)"
-// * SCT#1162616006 "Lymph node level Ia (qualifier value)"
-// * SCT#1162617002 "Lymph node level Ib (qualifier value)"
-// * SCT#258401000 "Lymph node level II (qualifier value)"
-// * SCT#258402007 "Lymph node level III (qualifier value)"
-// * SCT#258403002 "Lymph node level IV (qualifier value)"
-// * SCT#1162620005 "Lymph node level IVa (qualifier value)"
-// * SCT#1162621009 "Lymph node level IVb (qualifier value)"
-// * SCT#258404008 "Lymph node level V (qualifier value)"
-// * SCT#1162622002 "Lymph node level Va (qualifier value)"
-// * SCT#1162623007 "Lymph node level Vb (qualifier value)"
-// * SCT#1162624001 "Lymph node level Vc (qualifier value)"
-// * SCT#258405009 "Lymph node level VI (qualifier value)"
-// * SCT#1162625000 "Lymph node level VIa (qualifier value)"
-// * SCT#1162626004 "Lymph node level VIb (qualifier value)"
-// * SCT#395168005 "Lymph node level VII (qualifier value)"
-// * SCT#1162628003 "Lymph node level VIIa (qualifier value)"
-// * SCT#1162627008 "Lymph node level VIIb (qualifier value)"
-// * SCT#1162618007 "Lymph node level VIII (qualifier value)"
-// * SCT#1162619004 "Lymph node level IX (qualifier value)"
-// * SCT#1162614009 "Lymph node level X (qualifier value)"
-// * SCT#1162615005 "Lymph node level Xa (qualifier value)"
-// * SCT#1162613003 "Lymph node level Xb (qualifier value)"
 
 ValueSet: RadiotherapyTreatmentLocationVS
 Id: mcode-radiotherapy-treatment-location-vs
@@ -647,55 +616,3 @@ Description: "Codes describing the body locations where radiotherapy treatments 
 * SCT_TBD#USCRS-33348 "Jugular Fossa (body structure)" // Jugular Fossa
 * SCT#35763008 "Structure of posterior fossa of cranial cavity (body structure)" // Posterior Fossa
 * SCT#87166008 "Vomer bone structure (body structure)" // Vomer
-
-/*
-
-//----------- DEVICES -----------------------
-
-ValueSet: TeleradiotherapyDeviceVS
-Id: mcode-teleradiotherapy-device-vs
-Title: "Teleradiotherapy Device Value Set"
-Description: "Codes describing the devices used in teleradiotherapy (external beam) procedures."
-* RT#LINAC
-* RT#RLINAC
-* RT#MRLINAC
-* RT#ROBOTIC
-* RT#ISOMULTI
-* RT#KV
-* RT#NGLINAC
-* RT#MULTI
-
-ValueSet: BrachytherapyDeviceVS
-Id: mcode-brachytherapy-device-vs
-Title: "Brachytherapy Device Value Set"
-Description: "Codes describing the devices used in brachytherapy (internal or surface radiation) procedures."
-* RT#TANDEM
-* RT#CYL
-* RT#OVOID
-* RT#RING
-* RT#SEED
-* RT#EYE
-* RT#HYBRID
-* RT#TARG
-* RT#NONTARG
-
-//-- Teleradiotherapy Devices
-* #LINAC "Linac" "Gantry based delivery with linear accelerator based source"
-* #RLINAC "RLinac" "Ring Gantry based delivery with linear accelerator based source e.g. Ethos, Tomotherapy"
-* #MRLINAC "MRLinac" "Gantry based delivery with linear accelerator based source with onboard MRI for patient positioning."
-* #NGLINAC "Non-gantry based linear accelerator, e.g. specialty devices used for IORT, e.g. Mobetron."
-* #ROBOTIC "Robotic" "Multiple axis (other than MLCs) moved under electronic control during delivery of dose from a single beam with linear accelerator based source. e.g. CyberKnife."
-* #ISOMULTI "Isotope Multisource" "Multisource radiation use of multiple sources at different positons using isotope based source e.g. GammaKnife"
-* #KV "Kilovolt (kV)" "Non-megavoltage, electronically generated photons"
-* #MULTI "Multisource radiation" "Multisource radiation use of multiple sources at different positons using linear accelerator-based source"
-//-- Brachytherapy Devices
-* #TANDEM  "Tandem" "Tandem Brachytherapy Device"
-* #CYL  "Cylinder" "Cylinder Brachytherapy Device"
-* #OVOID "Ovoids" "Ovoid Brachytherapy Device"
-* #RING  "Ring" "Ring Brachytherapy Device"
-* #SEED  "Seeds" "Seeds Brachytherapy Device"
-* #EYE  "Eye-plaque" "Eye-plaque Brachytherapy Device"
-* #HYBRID   "Hybrid"  "Hybrid Brachytherapy Device"
-* #TARG  "Targeted" "Targeted Brachytherapy Device"
-* #NONTARG  "NonTargeted" "NonTargeted Brachytherapy Device"
-*/

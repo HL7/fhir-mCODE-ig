@@ -15,7 +15,7 @@ RuleSet: CancerConditionCommonRules
 
 Profile: PrimaryCancerCondition
 Id: mcode-primary-cancer-condition
-Title: "Primary Cancer Condition"
+Title: "Primary Cancer Condition Profile"
 Parent: USCoreCondition
 Description: "Records the the primary cancer condition, the original or first tumor in the body (Definition from: [NCI Dictionary of Cancer Terms](https://www.cancer.gov/publications/dictionaries/cancer-terms/def/primary-tumor)). Cancers that are not clearly secondary (i.e., of uncertain origin or behavior) should be documented as primary."
 * insert CancerConditionCommonRules
@@ -31,7 +31,7 @@ Description: "Records the the primary cancer condition, the original or first tu
 Profile: SecondaryCancerCondition
 Parent: USCoreCondition
 Id: mcode-secondary-cancer-condition
-Title: "Secondary Cancer Condition"
+Title: "Secondary Cancer Condition Profile"
 Description: "Records the history of secondary neoplasms, including location(s) and the date of onset of metastases. A secondary cancer results from the spread (metastasization) of cancer from its original site (Definition from: NCI Dictionary of Cancer Terms)."
 * insert CancerConditionCommonRules
 * extension contains condition-related named relatedPrimaryCancerCondition 0..1 MS

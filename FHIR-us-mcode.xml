@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <specification xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ballotUrl="http://hl7.org/fhir/us/mcode/2021May" ciUrl="http://build.fhir.org/ig/HL7/fhir-mCODE-ig" defaultVersion="1.0.1" defaultWorkgroup="cic" gitUrl="https://github.com/HL7/fhir-mCODE-ig" url="http://hl7.org/fhir/us/mcode">
 <version code="current" url="http://build.fhir.org/ig/HL7/fhir-mCODE-ig"/>
-<version code="1.18.1" url="http://hl7.org/fhir/us/mcode/2021May"/>
+<version code="1.16.0" url="http://hl7.org/fhir/us/mcode/2021May"/>
 <version code="1.0.1" url="http://hl7.org/fhir/us/mcode/STU1"/>
 <version code="1.0.0" url="http://hl7.org/fhir/us/mcode/STU1"/>
 <version code="0.9.1" deprecated="true" url="http://hl7.org/fhir/us/mcode/2019Sep"/>
@@ -50,8 +50,8 @@
 <artifact id="ValueSet/mcode-carcinoma-in-situ-disorder-vs" key="ValueSet-mcode-carcinoma-in-situ-disorder-vs" name="Carcinoma In-Situ Disorder Value Set"/>
 <artifact id="ValueSet/mcode-clinvar-vs" key="clinvar-value-set" name="ClinVar Value Set"/>
 <artifact deprecated="true" id="Profile/mcode-comorbid-condition" key="comorbid-condition" name="Comorbid Condition"/>
-<artifact id="StructureDefinition/mcode-comorbid-condition-code" key="StructureDefinition-mcode-comorbid-condition-code" name="Comorbid Condition Code"/>
-<artifact id="StructureDefinition/mcode-comorbid-condition-reference" key="StructureDefinition-mcode-comorbid-condition-reference" name="Comorbid Condition Reference"/>
+<artifact id="StructureDefinition/mcode-comorbid-condition-code" key="StructureDefinition-mcode-comorbid-condition-code" name="Comorbid Condition Code Extension"/>
+<artifact id="StructureDefinition/mcode-comorbid-condition-reference" key="StructureDefinition-mcode-comorbid-condition-reference" name="Comorbid Condition Reference Extension"/>
 <artifact deprecated="true" id="ValueSet/mcode-comorbid-condition-value-set" key="comorbid-condition-value-set" name="Comorbid Condition Value Set"/>
 <artifact id="StructureDefinition/mcode-comorbidities-elixhauser" key="StructureDefinition-mcode-comorbidities-elixhauser" name="Comorbidities Elixhauser Profile"/>
 <artifact id="StructureDefinition/mcode-comorbidities-parent" key="StructureDefinition-mcode-comorbidities-parent" name="Comorbidities Parent Abstract Profile"/>
@@ -141,21 +141,21 @@
 <artifact deprecated="true" id="ValueSet/mcode-radiation-target-body-site-value-set" key="radiation-target-body-site-value-set" name="Radiation Target Body Site Value Set"/>
 <artifact deprecated="true" id="StructureDefinition/mcode-radiotherapy-anatomic-volume" key="StructureDefinition-mcode-radiotherapy-anatomic-volume" name="Radiotherapy Anatomic Volume"/>
 <artifact deprecated="true" id="CodeSystem/radiotherapy-cs" key="CodeSystem-radiotherapy-cs" name="Radiotherapy Code System"/>
-<artifact id="StructureDefinition/mcode-radiotherapy-course-summary" key="StructureDefinition-mcode-radiotherapy-course-summary" name="Radiotherapy Course Summary"/>
+<artifact id="StructureDefinition/mcode-radiotherapy-course-summary" key="StructureDefinition-mcode-radiotherapy-course-summary" name="Radiotherapy Course Summary Profile"/>
 <artifact deprecated="true" id="StructureDefinition/mcode-radiotherapy-dose-delivered" key="StructureDefinition-mcode-radiotherapy-dose-delivered" name="Radiotherapy Dose Delivered"/>
-<artifact id="StructureDefinition/mcode-radiotherapy-dose-delivered-to-volume" key="StructureDefinition-mcode-radiotherapy-dose-delivered-to-volume" name="Radiotherapy Dose Delivered Extension"/>
+<artifact id="StructureDefinition/mcode-radiotherapy-dose-delivered-to-volume" key="StructureDefinition-mcode-radiotherapy-dose-delivered-to-volume" name="Radiotherapy Dose Delivered To Volume Extension"/>
 <artifact deprecated="true" id="StructureDefinition/mcode-radiotherapy-fractions-delivered" key="StructureDefinition-mcode-radiotherapy-fractions-delivered" name="Radiotherapy Fractions Delivered"/>
-<artifact id="StructureDefinition/mcode-radiotherapy-modality" key="StructureDefinition-mcode-radiotherapy-modality" name="Radiotherapy Modality"/>
-<artifact id="StructureDefinition/mcode-radiotherapy-modality-and-technique" key="StructureDefinition-mcode-radiotherapy-modality-and-technique" name="Radiotherapy Modality And Technique"/>
+<artifact id="StructureDefinition/mcode-radiotherapy-modality-and-technique" key="StructureDefinition-mcode-radiotherapy-modality-and-technique" name="Radiotherapy Modality And Technique Extension"/>
+<artifact id="StructureDefinition/mcode-radiotherapy-modality" key="StructureDefinition-mcode-radiotherapy-modality" name="Radiotherapy Modality Extension"/>
 <artifact id="ValueSet/mcode-radiotherapy-modality-vs" key="ValueSet-mcode-radiotherapy-modality-vs" name="Radiotherapy Modality Value Set"/>
-<artifact id="StructureDefinition/mcode-radiotherapy-sessions" key="StructureDefinition-mcode-radiotherapy-sessions" name="Radiotherapy Number of Sessions"/>
-<artifact id="StructureDefinition/mcode-radiotherapy-technique" key="StructureDefinition-mcode-radiotherapy-technique" name="Radiotherapy Technique"/>
+<artifact id="StructureDefinition/mcode-radiotherapy-sessions" key="StructureDefinition-mcode-radiotherapy-sessions" name="Radiotherapy Number of Sessions Extension"/>
+<artifact id="StructureDefinition/mcode-radiotherapy-technique" key="StructureDefinition-mcode-radiotherapy-technique" name="Radiotherapy Technique Extension"/>
 <artifact id="ValueSet/mcode-radiotherapy-technique-vs" key="ValueSet-mcode-radiotherapy-technique-vs" name="Radiotherapy Technique Value Set"/>
 <artifact id="ValueSet/mcode-radiotherapy-treatment-location-qualifier-vs" key="ValueSet-mcode-radiotherapy-treatment-location-qualifier-vs" name="Radiotherapy Treatment Location Qualifier Value Set"/>
 <artifact id="ValueSet/mcode-radiotherapy-treatment-location-vs" key="ValueSet-mcode-radiotherapy-treatment-location-vs" name="Radiotherapy Treatment Location Value Set"/>
 <artifact id="StructureDefinition/mcode-radiotherapy-volume" key="StructureDefinition-mcode-radiotherapy-volume" name="Radiotherapy Volume Profile"/>
 <artifact id="ValueSet/mcode-radiotherapy-volume-type-vs" key="ValueSet-mcode-radiotherapy-volume-type-vs" name="Radiotherapy Volume Type Value Set"/>
-<artifact id="StructureDefinition/mcode-condition-related" key="StructureDefinition-mcode-condition-related" name="Related Condition"/>
+<artifact id="StructureDefinition/mcode-condition-related" key="StructureDefinition-mcode-condition-related" name="Related Condition Extension"/>
 <artifact deprecated="true" id="Extension/mcode-related-primary-cancer-condition-extension" key="related-primary-cancer-condition-extension" name="Related Primary Cancer Condition Extension"/>
 <artifact id="CodeSystem/loinc-tbd-cs" key="CodeSystem-loinc-tbd-cs" name="Requested LOINC Codes Code System"/>
 <artifact id="CodeSystem/snomed-tbd-cs" key="CodeSystem-snomed-tbd-cs" name="Requested SNOMED Codes Code System"/>
@@ -194,7 +194,7 @@
 <artifact id="StructureDefinition/mcode-treatment-termination-reason" key="StructureDefinition-mcode-treatment-termination-reason" name="Treatment Termination Reason Extension"/>
 <artifact id="ValueSet/mcode-treatment-termination-reason-vs" key="treatment-termination-reason-value-set" name="Treatment Termination Reason Value Set"/>
 <artifact deprecated="true" id="Profile/mcode-tumor-marker" key="tumor-marker" name="Tumor Marker"/>
-<artifact id="StructureDefinition/mcode-tumor-marker-test" key="StructureDefinition-mcode-tumor-marker-test" name="Tumor Marker Test"/>
+<artifact id="StructureDefinition/mcode-tumor-marker-test" key="StructureDefinition-mcode-tumor-marker-test" name="Tumor Marker Test Profile"/>
 <artifact id="ValueSet/mcode-tumor-marker-test-vs" key="tumor-marker-test-value-set" name="Tumor Marker Test Value Set"/>
 <artifact id="StructureDefinition/mcode-tumor" key="StructureDefinition-mcode-tumor" name="Tumor Profile"/>
 <artifact id="ValueSet/mcode-tumor-size-method-vs" key="ValueSet-mcode-tumor-size-method-vs" name="Tumor Size Method Value Set"/>

@@ -52,7 +52,9 @@ pages:
   valuesets.md:
     title: Value Sets
   codesystems.md:
-    title: CodeSystems
+    title: Code Systems
+  capabilitystatements.md:
+    title: Capability Statements
   artifacts.html:
     title: Artifacts Summary
   examples.md:
@@ -85,7 +87,7 @@ menu:
     Extensions: extensions.html
     Value Sets: valuesets.html
     Code Systems: codesystems.html
-    Capability Statements: artifacts.html#behavior-capability-statements
+    Capability Statements: capabilitystatements.html
     Example Instances: artifacts.html#example-example-instances
     Complete Listing: artifacts.html
   More:

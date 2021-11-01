@@ -72,7 +72,7 @@
 [ClinVarVS]: ValueSet-mcode-clinvar-vs.html
 [ConditionStatusTrendVS]: ValueSet-mcode-condition-status-trend-vs.html
 [CytologicEvidenceOfMalignancyVS]: ValueSet-mcode-cytologic-evidence-malignancy-vs.html
-[DNAChangeTypeVS]: ValueSet-mcode-dna-change-type-vs.htm
+[DNAChangeTypeVS]: ValueSet-mcode-dna-change-type-vs.html
 [ElixhauserAIDSVS]: ValueSet-elixhauser-aids-vs.html
 [ElixhauserAlcoholAbuseVS]: ValueSet-elixhauser-alcohol-abuse-vs.html
 [ElixhauserBloodLossAnemiaVS]: ValueSet-elixhauser-blood-loss-anemia-vs.html

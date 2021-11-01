@@ -102,7 +102,7 @@
 <artifact deprecated="true" id="StructureDefinition/mcode-evidence-type" key="evidence-type-extension" name="Evidence Type Extension"/>
 <artifact deprecated="true" id="StructureDefinition/mcode-genetic-specimen" key="genetic-specimen" name="Genetic Specimen"/>
 <artifact deprecated="true" id="ValueSet/mcode-genetic-specimen-type-vs" key="genetic-specimen-type-value-set" name="Genetic Specimen Type Value Set"/>
-<artifact id="ValueSet/genomic-molecular-consequence-vs" key="ValueSet-genomic-molecular-consequence-vs" name="Genomic Molecular Consequence Value Set"/>
+<artifact id="ValueSet/mcode-mcode-genomic-molecular-consequence-vs" key="ValueSet-mcode-mcode-genomic-molecular-consequence-vs" name="Genomic Molecular Consequence Value Set"/>
 <artifact deprecated="true" id="StructureDefinition/mcode-genomic-region-studied" key="genomic-region-studied" name="Genomic Region Studied"/>
 <artifact id="StructureDefinition/mcode-genomic-region-studied" key="StructureDefinition-mcode-genomic-region-studied" name="Genomic Region Studied Profile"/>
 <artifact id="StructureDefinition/mcode-genomic-specimen" key="StructureDefinition-mcode-genomic-specimen" name="Genomic Specimen Profile"/>
@@ -222,7 +222,10 @@
 <artifact id="Patient/cancer-patient-john-anyperson" key="Patient-cancer-patient-john-anyperson" name="cancer-patient-john-anyperson"/>
 <artifact id="Observation/cancer-related-mcode-comorbidities-elixhauser-jenny-m" key="Observation-cancer-related-mcode-comorbidities-elixhauser-jenny-m" name="cancer-related-mcode-comorbidities-elixhauser-jenny-m"/>
 <artifact id="Observation/cancer-related-mcode-comorbidities-elixhauser-john-anyperson" key="Observation-cancer-related-mcode-comorbidities-elixhauser-john-anyperson" name="cancer-related-mcode-comorbidities-elixhauser-john-anyperson"/>
-<artifact id="MedicationAdministration/cancer-related-medication-administration-doxorubicin-jenny-m" key="MedicationAdministration-cancer-related-medication-administration-doxorubicin-jenny-m" name="cancer-related-medication-administration-doxorubicin-jenny-m"/>
+<artifact id="MedicationAdministration/cancer-related-medication-admin-cyclophosphamide-jenny-m" key="MedicationAdministration-cancer-related-medication-admin-cyclophosphamide-jenny-m" name="cancer-related-medication-admin-cyclophosphamide-jenny-m"/>
+<artifact id="MedicationAdministration/cancer-related-medication-admin-doxorubicin-jenny-m" key="MedicationAdministration-cancer-related-medication-admin-doxorubicin-jenny-m" name="cancer-related-medication-admin-doxorubicin-jenny-m"/>
+<artifact id="MedicationAdministration/cancer-related-medication-admin-paclitaxel-jenny-m" key="MedicationAdministration-cancer-related-medication-admin-paclitaxel-jenny-m" name="cancer-related-medication-admin-paclitaxel-jenny-m"/>
+<artifact deprecated="true" id="MedicationAdministration/cancer-related-medication-administration-doxorubicin-jenny-m" key="MedicationAdministration-cancer-related-medication-administration-doxorubicin-jenny-m" name="cancer-related-medication-administration-doxorubicin-jenny-m"/>
 <artifact id="MedicationRequest/cancer-related-medication-request-anastrozole-jenny-m" key="MedicationRequest-cancer-related-medication-request-anastrozole-jenny-m" name="cancer-related-medication-request-anastrozole-jenny-m"/>
 <artifact id="MedicationRequest/cancer-related-medication-request-cisplatin" key="MedicationRequest-cancer-related-medication-request-cisplatin" name="cancer-related-medication-request-cisplatin"/>
 <artifact id="MedicationRequest/cancer-related-medication-request-cyclophosphamide-jenny-m" key="MedicationRequest-cancer-related-medication-request-cyclophosphamide-jenny-m" name="cancer-related-medication-request-cyclophosphamide-jenny-m"/>
@@ -337,6 +340,7 @@
 <artifact id="Observation/us-core-observation-lab-neutrophils-jenny-m" key="Observation-us-core-observation-lab-neutrophils-jenny-m" name="us-core-observation-lab-neutrophils-jenny-m"/>
 <artifact id="Observation/us-core-observation-lab-sentinel-nodes-jenny-m" key="Observation-us-core-observation-lab-sentinel-nodes-jenny-m" name="us-core-observation-lab-sentinel-nodes-jenny-m"/>
 <artifact id="Observation/us-core-observation-lab-tumor-dcis-jenny-m" key="Observation-us-core-observation-lab-tumor-dcis-jenny-m" name="us-core-observation-lab-tumor-dcis-jenny-m"/>
+<artifact id="Observation/us-core-observation-lab-tumor-grade-jenny-m" key="Observation-us-core-observation-lab-tumor-grade-jenny-m" name="us-core-observation-lab-tumor-grade-jenny-m"/>
 <artifact id="Observation/us-core-observation-lab-tumor-invasion-jenny-m" key="Observation-us-core-observation-lab-tumor-invasion-jenny-m" name="us-core-observation-lab-tumor-invasion-jenny-m"/>
 <artifact id="Observation/us-core-observation-lab-tumor-margins-jenny-m" key="Observation-us-core-observation-lab-tumor-margins-jenny-m" name="us-core-observation-lab-tumor-margins-jenny-m"/>
 <artifact id="Organization/us-core-organization-bedrock-medicine" key="Organization-us-core-organization-bedrock-medicine" name="us-core-organization-bedrock-medicine"/>

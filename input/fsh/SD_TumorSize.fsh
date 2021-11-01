@@ -1,7 +1,7 @@
 Profile: TumorSize
 Parent:  Observation
 Id: mcode-tumor-size
-Title: "Tumor Size"
+Title: "Tumor Size Profile"
 Description:  "Records the dimensions of a tumor"
 // LOINC code indicating this is a tumor size observation
 * code = LNC#21889-1 //"Size Tumor"
@@ -48,10 +48,6 @@ Description:  "Records the dimensions of a tumor"
 
 // Group the Must Support to make it easier to see what's what
 * subject and code and effective[x] and component and method and specimen and focus MS
-// * insert ReduceText
-// * insert ReduceText(referenceRange)
-// * insert ReduceText(component)
-
 
 // This invariant has been exhaustively tested with the FHIR validator
 Invariant: must-have-focus-or-specimen-invariant
@@ -64,7 +60,7 @@ Severity: #error
 Profile: Tumor
 Parent:  BodyStructure
 Id: mcode-tumor
-Title: "Tumor"
+Title: "Tumor Profile"
 Description:  "Identifies a tumor that has not been removed from the body. Whenever possible, a single resource conforming to this profile will be used to track a tumor over time (as opposed to creating new Tumor-conforming BodyStructure resources each time that tumor is measured). Use TumorSpecimen to represent the tumor after removal from the body."
 * patient only Reference(CancerPatient)
 // The purpose of this profile is to uniquely identify a tumor, so it follows that there must be at least one identifier value provided
@@ -90,15 +86,13 @@ Description:  "Identifies a tumor that has not been removed from the body. Whene
 * extension[relatedCondition].value[x] only Reference(PrimaryCancerCondition or SecondaryCancerCondition)
 * extension[relatedCondition] ^short = "Reference to cancer condition associated with this tumor"
 * extension[relatedCondition] ^definition = "Associates this tumor with a cancer condition. This could be a causal association (e.g., this is believed to be the primary tumor causing the cancer) or a different type of relationship (e.g., this tumor is a metastasis)"
-// * insert ReduceText
-// * insert ReduceText2(identifier)
 // Gather MS in one place
 * identifier and location and morphology and locationQualifier and patient and extension and extension[relatedCondition] and extension[relatedCondition].value[x] MS
 
 Profile: BodyStructureIdentifier
 Parent: Identifier
 Id: mcode-body-structure-identifier
-Title: "Body Structure Identifier"
+Title: "Body Structure Identifier Data Type Profile"
 Description: "An identifier that designates a body structure such as a tumor and can be used for tracking the structure over time."
 * type = http://hl7.org/fhir/resource-types#BodyStructure
 * value 1..1
@@ -107,7 +101,7 @@ Description: "An identifier that designates a body structure such as a tumor and
 Profile: TumorSpecimen
 Parent: Specimen
 Id: mcode-tumor-specimen
-Title: "Tumor Specimen"
+Title: "Tumor Specimen Profile"
 Description: "Represents a tumor after it has been removed from the body. If there is a Tumor resource representing the tumor before it was removed from the body, use `identifier` to associate this TumorSpecimen with that Tumor resource."
 * insert CancerRelatedSpecimenRules
 // These rules are above and beyond GenomicSpecimen
@@ -135,7 +129,7 @@ Issues to consider further:
 Profile: MultifocalTumor
 Parent: Observation
 Id: mcode-multifocal-tumor
-Title: "Multifocal Tumor Observation"
+Title: "Multifocal Tumor Observation Profile"
 Description: "Identifies multiple [Tumor](StructureDefinition-mcode-tumor.html) or [TumorSpecimen](StructureDefinition-mcode-tumor-specimen.html)-conforming resources as part of a multifocal tumor."
 * ^status = #draft
 * ^experimental = true

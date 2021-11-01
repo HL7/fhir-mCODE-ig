@@ -1,7 +1,7 @@
 Profile:    CancerGenomicVariant
 Parent:     USCoreObservationLab
 Id: mcode-cancer-genomic-variant
-Title:      "Cancer Genomic Variant"
+Title:      "Cancer Genomic Variant Profile"
 Description:    "Records an alteration in the most common DNA nucleotide sequence. The term variant can be used to describe an alteration that may be benign, pathogenic, or of unknown significance. The term variant is increasingly being used in place of the term mutation."
 * insert NotUsed(bodySite)
 * insert NotUsed(referenceRange)
@@ -54,7 +54,7 @@ Description:    "Records an alteration in the most common DNA nucleotide sequenc
 * component[genomicDNAChangeType] ^short = "DNA Change Type"
 * component[genomicDNAChangeType] ^definition = "Codified type for associated DNA Marker. DNA Markers use the HGVS notation which implies the DNA Marker Type, but the concurrent use of this code will allow a standard and explicit type for technical and display convenience."
 
-* component[molecularConsequence].code = TbdLoincCodes#molecular-consequence  // Note TbdLoincCodes - accepted by HL7 while waiting for a LOINC code assignment
+* component[molecularConsequence].code = LNC_TBD#molecular-consequence  // Note LNC_TBD - accepted by HL7 while waiting for a LOINC code assignment
 * component[molecularConsequence].value[x] only CodeableConcept
 * component[molecularConsequence].value[x] from MolecularConsequenceVS (extensible)
 * component[molecularConsequence] ^short = "Molecular consequence"
@@ -117,25 +117,16 @@ Description:    "Records an alteration in the most common DNA nucleotide sequenc
 Profile:        TumorMarkerTest
 Parent:         USCoreObservationLab
 Id:             mcode-tumor-marker-test
-Title:          "Tumor Marker Test"
+Title:          "Tumor Marker Test Profile"
 Description:    "The result of a tumor marker test. Tumor marker tests are generally used to guide cancer treatment decisions and monitor treatment, as well as to predict the chance of recovery and cancer recurrence."
 * subject 1..1
-* code from TumorMarkerTestVS (required)
-* code obeys tumor-marker-test-code-invariant
+* code from TumorMarkerTestVS (extensible)
 * subject only Reference(CancerPatient)
 * effective[x] only dateTime or Period
 * value[x] only Quantity or Ratio or string or CodeableConcept
 // Already MS in US Core Obs Lab: status, category, code, subject, effective[x], value[x], dataAbsentReason
 * specimen MS
-// * insert ReduceText
-// * insert ReduceText(referenceRange)
-// * insert ReduceText(component)
 
-
-Invariant: tumor-marker-test-code-invariant
-Description: "If the code representing 'Other tumor marker test, specify' is used, a second code from outside the original value set must be present. The second code MUST NOT represent a concept in or subsumed by any concept in the original value set."
-Expression: "coding.where(code = 'TMT-OTHER').exists() implies coding.where(code != 'TMT-OTHER' and $this.memberOf('http://hl7.org/fhir/us/mcode/ValueSet/mcode-tumor-marker-test-vs').not()).exists()"
-Severity:   #error
 
 RuleSet: CancerRelatedSpecimenRules
 * type 1..1
@@ -155,7 +146,7 @@ RuleSet: CancerRelatedSpecimenRules
 Profile:    GenomicSpecimen
 Parent:     Specimen
 Id: mcode-genomic-specimen
-Title:      "Genomic Specimen"
+Title:      "Genomic Specimen Profile"
 Description:    "A small sample of blood, hair, skin, amniotic fluid (the fluid that surrounds a fetus during pregnancy), or other tissue which is excised from a subject for the purposes of genomics testing or analysis."
 * insert CancerRelatedSpecimenRules
 * type from GenomicSpecimenTypeVS (extensible)
@@ -164,10 +155,8 @@ Description:    "A small sample of blood, hair, skin, amniotic fluid (the fluid 
 Profile:    CancerGenomicsReport
 Parent:     USCoreDiagnosticReportLab
 Id: mcode-cancer-genomics-report
-Title:      "Cancer Genomics Report"
+Title:      "Cancer Genomics Report Profile"
 Description:    "Genomic analysis summary report. The report may include one or more tests, with two distinct test types. The first type is a targeted mutation test, where a specific mutation on a specific gene is tested for. The result is either positive or negative for that mutation. The second type is a more general test for variants. This type of test returns the identity of variants found in a certain region of the genome."
-// * insert ReduceText
-// * insert ReduceText(media)
 * subject only Reference(CancerPatient)
 * category contains GenomicsCategory 1..1
 * category[GenomicsCategory] = DiagnosticService#GE
@@ -191,7 +180,7 @@ Description:    "Genomic analysis summary report. The report may include one or 
 Profile:    GenomicRegionStudied
 Parent:     USCoreObservationLab
 Id: mcode-genomic-region-studied
-Title:      "Genomic Region Studied"
+Title:      "Genomic Region Studied Profile"
 Description:    "The area of the genome region referenced in testing for variants."
 * code = LNC#53041-0 //"DNA region of interest panel"
 //* insert NotUsed(value[x])

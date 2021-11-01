@@ -1,16 +1,6 @@
 Alias: COMORB =  http://terminology.hl7.org/CodeSystem/comorbidities-elixhauser
 Alias: RID = http://hl7.org/fhir/us/mcode/CodeSystem/mcode-resource-identifier-cs
-Alias: CC = http://hl7.org/fhir/us/mcode/CodeSystem/mcode-catch-code-cs
 Alias: RT = http://terminology.hl7.org/CodeSystem/radiotherapy
-
-CodeSystem: CatchCodeCS
-Id: mcode-catch-code-cs
-Title: "mCODE Catch Codes"
-Description: "Codes needed for positive identification of certain types of instances, more specifically, to uniquely associate instances with slices when they are used in bundles. The codes in this code system are used when a concept falls outside of the defined set of codes. They make it possible to use 'required' bindings where 'extensible' bindings would result an instance matching multiple slices and thus trigger validation errors."
-* #PCC-OTHER "Other Primary Cancer Condition, Specify" "Code to be used when the desired concept is not represented base value set. This code represents the equivalent of 'Other, specify: _________'. Specify the additional concept as the second coding."
-* #SCC-OTHER "Other Secondary Cancer Condition, Specify" "Code to be used when the desired concept is not represented base value set. This code represents the equivalent of 'Other, specify: _________'. Specify the additional concept as the second coding."
-* #TMT-OTHER "Other Tumor Marker Test, Specify" "Code to be used when the desired concept is not represented base value set. This code represents the equivalent of 'Other, specify: _________'. Specify the additional concept as the second coding."
-* #CD-OTHER "Other Cancer Disorder, Specify"  "Code to be used when the desired concept is not represented base value set. This code represents the equivalent of 'Other, specify: _________'. Specify the additional concept as the second coding."
 
 CodeSystem: ResourceIdentifierCS
 Id: mcode-resource-identifier-cs
@@ -24,12 +14,12 @@ Please note that while these codes may imply conformance to the profiles that us
 3. The same `code` can correspond to more than one profile (although not the case here)."
 
 * #mcode-patient "mCODE Patient Group Resource" "Identifies a Group resource containing in-scope cancer patients that conforms to the MCODEPatientGroup profile."
-* #mcode-radiotherapy-course-summary "Radiotherapy Course Summary Resource" "Identifies a Procedure resource that summarizes a radiotherapy treatment that conforms to the RadiotherapyCourseSummary profile." // USCRS-33292 - SNOMEDCT code requested
+
 
 // LOINC Request 6073 requests LOINC codes for these categories, and for the overall index. Submitted 7/7/21
 CodeSystem: ComorbiditiesElixhauserCS
 Id: comorbidities-elixhauser-cs
-Title: "Elixhauser Comorbidity Categories"
+Title: "Elixhauser Comorbidity Categories Code System"
 Description: "A set of codes representing the comorbidity categories originally defined by Elixhauser, and updated by the Agency for Healthcare Research and Quality (AHRQ) Healthcare Cost and Utilization Project (H-CUP)."
 * ^url =  http://terminology.hl7.org/CodeSystem/comorbidities-elixhauser
 * #AIDS    "Acquired immune deficiency syndrome Elixhauser category" "Patient has a disorder in the value set ElixhauserAidsVS"
@@ -71,40 +61,20 @@ Description: "A set of codes representing the comorbidity categories originally 
 * #VALVE    "Valvular disease Elixhauser category" "Patient has a disorder in the value set ElixhauserValvularDiseaseVS"
 * #WGHTLOSS    "Weight loss Elixhauser category" "Patient has a disorder in the value set ElixhauserWeightLossVS"
 
-CodeSystem: TbdLoincCodes
-Id: tbd-loinc-code-cs
-Title: "To-Be-Determined LOINC Codes ('TbdLoincCodes')"
-Description: "These codes are currently 'TBD-LOINC' codes. The CG WG is requesting formal LOINC codes."
+CodeSystem: LNC_TBD
+Id: loinc-tbd-cs
+Title: "Requested LOINC Codes Code System"
+Description: "Codes requested from LOINC by Clinical Genomics Work Group, to be issued at a later date."
 * #molecular-consequence "Molecular Consequence" "Annotated changes to sequence features caused by this variant. Terms are from the sequence ontology under SO:0001537."
 * #diagnostic-implication "Diagnosic Implication" "Diagnostic Implication"
 
-CodeSystem: RequestedRemissionCodes
-Id: requested-remission-code-cs
-Title: "Requested Remission Codes"
-Description:   "Codes requested from SNOMED for Remission Status"
-* #partialremission "Cancer in partial remission(finding)"     // USCRS 352237 * SCT#requested "Cancer in partial remission(finding)
-* #completeremission "Cancer in complete remission(finding)"    // USCRS 352236 * SCT#requested "Cancer in complete remission(finding)
-
-CodeSystem: TG263
-Id: tg263-code-cs
-Title: "TG263 Codes"
-Description: "Codes from TG263 Anatomy codes that lack both SNOMEDCT and UMLS definitions."
-* #bowel-space "Bowel Space" // * SCT#USCRS-33351 "Bowel space (body structure)" // Space occupied by bowel
-* #small-bowel-space "Small Bowel Space" // * SCT#USCRS-33352 "Small bowel space (body structure)" // <none>
-* #pre-sacral-lymph-node-group "Presacral lymph node group" // * SCT#USCRS-33346 "Presacral lymph node group (body structure)" * # "Lymph nodes of pelvis - presacral Left
+CodeSystem: SCT_TBD
+Id: snomed-tbd-cs
+Title: "Requested SNOMED Codes Code System"
+Description: "Codes requested from SNOMED by mCODE, to be issued at a later date. Where numeric codes are given, these correspond to the expected SNOMED-CT codes. Terms beginning with 'USCRS-' (for United States Content Request Service) represent request identifiers with no SNOMED code yet approved or assigned."
 * #1162492000 "Tumor bed (morphologic abnormality)" // SNOMED term available to be released in Jan 2021
-
-CodeSystem: TG263Qualifier
-Id: tg263-qualifier-code-cs
-Title: "TG263 Qualifier Codes"
-Description: "Qualifier Codes from TG263 Anatomy codes that lack both SNOMEDCT and UMLS definitions"
-* #non-adjacent "Non-Adjacent"           // * SCT#USCRS-33144 "non-adjacent (qualifier)"
-// * #supra-mammary "Supra-Mammary"         // * SCT#USCRS-33347 "supra-mammary" - request rejected, TRG requested qualifier removal
-
-CodeSystem: RequestedLymphNodeLevelCodes
-Id: requested-lymph-node-level-code-cs
-Title: "Requested Lymph Node Level Codes to be released Jan 2021"
-Description: "Codes requested from SNOMED for Lymph Node Levels"
+* #1162782007 "Three dimensional external beam radiation therapy (procedure)" // to be released Jan 2021
+* #1162586008 "Irradiated volume of organ at risk (observable entity)"  // to be released Jan 2021
 * #1162616006 "Lymph node level IA (qualifier value)"
 * #1162617002 "Lymph node level IB (qualifier value)"
 * #1162620005 "Lymph node level IVA (qualifier value)"
@@ -121,15 +91,16 @@ Description: "Codes requested from SNOMED for Lymph Node Levels"
 * #1162614009 "Lymph node level X (qualifier value)"
 * #1162615005 "Lymph node level XA (qualifier value)"
 * #1162613003 "Lymph node level XB (qualifier value)"
-
-CodeSystem: RequestedRadiationVolumeTypeCodes
-Id: requested-radiation-volume-type-code-cs
-Title: "Requested Radiation Volume Type Codes to be released Jan 2021"
-Description: "Codes requested from SNOMED for Radiation Volume Types"
-* #1162586008 "Irradiated volume of organ at risk (observable entity)"
-
-CodeSystem: RequestedRadiotherapyTechniqueCodes
-Title: "Requested Radiotherapy Technique Codes"
-Description: "Codes requested from SNOMED for Radiotherapy Techniques"
-* #1162782007 "Three dimensional external beam radiation therapy (procedure)" // to be released Jan 2021 -- SCT#1162782007 "Three dimensional external beam radiation therapy (procedure)"
-* #PS "External beam radiation therapy using particle scanning technique (procedure)" // to be requested USCRS
+* #USCRS-33351 "Bowel space (body structure)"
+* #USCRS-33352 "Small bowel space (body structure)"
+* #USCRS-33346 "Presacral lymph node group (body structure)"
+* #USCRS-33517 "External beam radiation therapy using particle scanning technique (procedure)"
+* #USCRS-33144 "non-adjacent (qualifier)"
+* #USCRS-352237 "Cancer in partial remission (finding)"  // not yet used anywhere
+* #USCRS-352236 "Cancer in complete remission(finding)"  // not yet used anywhere
+* #USCRS-33292 "Radiotherapy Course Summary (procedure)"
+// * #USCRS-33347 "supra-mammary" // Request rejected; TRG requested removal
+* #USCRS-33146 "Bone structure of thirteenth rib (body structure)"
+* #USCRS-33350 "Retrostyloid space (body structure)"
+* #USCRS-33147 "Structure of body of thirteenth thoracic vertebra (body structure)"
+* #USCRS-33348 "Jugular Fossa (body structure)"

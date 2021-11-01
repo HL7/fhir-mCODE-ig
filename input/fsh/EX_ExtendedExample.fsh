@@ -68,7 +68,7 @@ Description: "Extended example: example showing smoking status"
 * effectiveDateTime = "2018-03-16"
 * valueCodeableConcept = SCT#449868002 "Smokes tobacco daily (finding)"
 
-Instance: observation-smoking-history-jenny-m
+Instance: observation-smoking-pack-years-jenny-m
 InstanceOf: Observation
 Description: "Extended example: example showing smoking history"
 * status = #final "final"
@@ -366,7 +366,7 @@ InstanceOf: USCoreDiagnosticReportLab
 Description: "Extended example: example of pathology findings represented as a DiagnosticReport resource."
 * status = #final "final"
 * category[0] = DiagnosticService#LAB
-* category[1] = DiagnosticService#SP "Surgical Pathology"
+* category[1] = DiagnosticService#SP "Surgical Pathology"  // does not match any known slice in US Core Diagnostic Report -- but that's ok
 * code = LNC#22637-3 "Pathology report final diagnosis Narrative"
 * subject = Reference(cancer-patient-jenny-m)
 * issued = "2018-04-05T00:00:00Z"
@@ -500,8 +500,7 @@ Instance: tumor-marker-test-oncotype-dx-jenny-m
 InstanceOf: TumorMarkerTest
 Description: "Extended example: example showing Oncotype DX breast recurrence score. Note that this test has no assigned LOINC code, so GTR is being used as a backup. Only the score from the Oncotype DX panel (as opposed to variant data from the genes in the panel) is represented here."
 * status = #final "final"
-* code.coding[0] = CC#TMT-OTHER "Other Tumor Marker Test, Specify"
-* code.coding[1] = GTR#509910 "Oncotype DX Breast Recurrence Score Assay"
+* code = GTR#509910 "Oncotype DX Breast Recurrence Score Assay"  // extensible
 * code.text = "Oncotype DX Breast Recurrence Score Assay"
 * subject = Reference(cancer-patient-jenny-m)
 * effectiveDateTime = "2018-04-12"
@@ -641,7 +640,7 @@ Instance: radiotherapy-treatment-summary-chest-wall-jenny-m
 InstanceOf: RadiotherapyCourseSummary
 Description: "Example of radiotherapy treatment summary involving external beam radiation to chest wall and regional node radiation with a chest wall boost"
 * status = #completed "completed"
-* code = RID#mcode-radiotherapy-course-summary
+* code = SCT_TBD#USCRS-33292
 * category = SCT#108290001 "Radiation oncology AND/OR radiotherapy (procedure)"
 * bodySite = SCT#78904004 "Chest Wall Structure (body structure)"
 * reasonCode = ICD10CM#C50.811 "Malignant neoplasm of overlapping sites of right female breast"
@@ -653,7 +652,7 @@ Description: "Example of radiotherapy treatment summary involving external beam 
 * extension[modalityAndTechnique][0].extension[modality][0].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
 * extension[modalityAndTechnique][0].extension[technique][0].valueCodeableConcept = SCT#1156530009 "Volumetric Modulated Arc Therapy (procedure)"
 * extension[modalityAndTechnique][1].extension[modality][0].valueCodeableConcept = SCT#45643008  "Teleradiotherapy using electrons"
-* extension[modalityAndTechnique][1].extension[technique][0].valueCodeableConcept = RequestedRadiotherapyTechniqueCodes#1162782007 "Three dimensional external beam radiation therapy (procedure)"
+* extension[modalityAndTechnique][1].extension[technique][0].valueCodeableConcept = SCT_TBD#1162782007 "Three dimensional external beam radiation therapy (procedure)"
 * extension[doseDeliveredToVolume][0].extension[volume].valueReference = Reference(jenny-m-chest-wall-treatment-volume)
 * extension[doseDeliveredToVolume][0].extension[totalDoseDelivered].valueQuantity = 6000 'cGy'
 * extension[doseDeliveredToVolume][0].extension[fractionsDelivered].valueUnsignedInt = 30
@@ -669,6 +668,7 @@ Description: "Anatomic volume 1 for Jenny M's teleradiotherapy."
 * patient = Reference(cancer-patient-jenny-m)
 * description = "Chest Wall"
 * identifier.value = "1.2.246.352…1"
+* identifier.use = #usual
 * location = SCT#78904004 "Chest wall structure (body structure)"
 * locationQualifier = SCT#255503000 "Entire (qualifier value)"
 
@@ -678,6 +678,7 @@ Description: "Anatomic volume 2 for Jenny M's teleradiotherapy."
 * patient = Reference(cancer-patient-jenny-m)
 * description = "Chest Wall Lymph Nodes"
 * identifier.value = "1.2.246.352…2"
+* identifier.use = #usual
 * location = SCT#62683002 "Mediastinal lymph node structure (body structure)"
 * locationQualifier = SCT#51440002  "Right and left (qualifier value)"
 
@@ -873,11 +874,12 @@ Description: "Example of US Core Organization"
 * address.postalCode = "02141"
 * address.country = "USA"
 
+/*
 Instance: radiotherapy-treatment-summary-chest-wall-RTtestNonCompliant-m
 InstanceOf: RadiotherapyCourseSummary
 Description: "Example of radiotherapy treatment summary involving external beam radiation to chest wall and regional node radiation with a chest wall boost,  THIS INSTANCE IS SUPPOSED TO FAIL VALIDATION!   Need to expand testing of modality/technique combination invariants."
 * status = #completed "completed"
-* code = RID#mcode-radiotherapy-course-summary
+* code = SCT_TBD#USCRS-33292
 * category = SCT#108290001 //"Radiation oncology AND/OR radiotherapy (procedure)"
 * bodySite = SCT#78904004 //"Chest Wall Structure (body structure)"
 * reasonCode = ICD10CM#C50.811 //"Malignant neoplasm of overlapping sites of right female breast"
@@ -885,7 +887,7 @@ Description: "Example of radiotherapy treatment summary involving external beam 
 * extension[treatmentIntent].valueCodeableConcept = SCT#373808002 //"Curative - procedure intent"
 * performedPeriod.start = "2018-05-01"
 * performedPeriod.end = "2018-06-29"
-/* Technique assigned NOT associated with brachytherapy radiopharmaceutical modality*/
+// Technique assigned NOT associated with brachytherapy radiopharmaceutical modality
 * extension[modalityAndTechnique][0].extension[modality][0].valueCodeableConcept = SCT#440252007 //"Administration of radiopharmaceutical (procedure)"
 * extension[modalityAndTechnique][0].extension[technique][0].valueCodeableConcept = SCT#1156530009 // "Volumetric Modulated Arc Therapy (procedure)"
 * extension[doseDeliveredToVolume][0].extension[volume].valueReference = Reference(jenny-m-chest-wall-treatment-volume)
@@ -896,3 +898,4 @@ Description: "Example of radiotherapy treatment summary involving external beam 
 * extension[doseDeliveredToVolume][1].extension[fractionsDelivered].valueUnsignedInt = 25
 * subject = Reference(cancer-patient-jenny-m)
 * asserter = Reference(us-core-practitioner-kyle-anydoc)
+*/

@@ -1,12 +1,8 @@
 Profile:  CancerDiseaseStatus
 Parent:   Observation
 Id: mcode-cancer-disease-status
-Title:    "Cancer Disease Status"
+Title:    "Cancer Disease Status Profile"
 Description:    "A clinician's qualitative judgment on the current trend of the cancer, e.g., whether it is stable, worsening (progressing), or improving (responding). The judgment may be based a single type or multiple kinds of evidence, such as imaging data, assessment of symptoms, tumor markers, laboratory data, etc."
-// * insert ReduceText
-// * insert ReduceText(referenceRange)
-// * insert ReduceText(component)
-// * obeys mcode-no-evidence-if-clinical-diagnosis-only
 * extension contains
     EvidenceType named evidenceType 0..*
 * insert NotUsed(specimen)

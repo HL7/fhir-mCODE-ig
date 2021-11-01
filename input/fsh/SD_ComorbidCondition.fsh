@@ -1,11 +1,8 @@
 Profile: ComorbiditiesParent
 Parent: Observation
 Id: mcode-comorbidities-parent
-Title: "Comorbidities Parent"
+Title: "Comorbidities Parent Abstract Profile"
 Description: "General structure for capturing comorbid conditions with respect to a primary ('index') condition. The specific set of comorbidities of interest in a given context are defined by slicing the components array. The same general approach can be applied to any comorbidity category checklist."
-// * insert ReduceText
-// * insert ReduceText(referenceRange)
-// * insert ReduceText(component)
 * ^abstract = true
 * focus only Reference(Condition)
 * focus ^short = "The Index Condition"
@@ -31,9 +28,8 @@ Description: "General structure for capturing comorbid conditions with respect t
 Profile: ComorbiditiesElixhauser
 Parent: ComorbiditiesParent
 Id: mcode-comorbidities-elixhauser
-Title: "Comorbidities Elixhauser"
+Title: "Comorbidities Elixhauser Profile"
 Description: "Comorbid condition checklist and optional risk score, using Elixhauser comorbidity categories as defined by the Agency for Healthcare Research and Quality (AHRQ) Healthcare Cost and Utilization Project (H-CUP)."
-// * insert ReduceText
 * ^abstract = false
 * code = LNC#78923-0 "Comorbid condition panel"    //
 * focus only Reference(PrimaryCancerCondition)

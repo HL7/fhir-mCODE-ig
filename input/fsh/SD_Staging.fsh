@@ -1,7 +1,4 @@
 RuleSet: CancerStageCommonRules
-// * insert ReduceText
-// * insert ReduceText(referenceRange)
-// * insert ReduceText(component)
 * value[x] only CodeableConcept
 * value[x] ^comment = ""    // suppress QA error on #notes link
 * insert NotUsed(device)
@@ -16,7 +13,7 @@ RuleSet: CancerStageCommonRules
 Profile: CancerStageGroup
 Id: mcode-cancer-stage-group
 Parent: Observation
-Title: "Cancer Stage Group"
+Title: "Cancer Stage Group Profile"
 Description: "The extent of the cancer in the body, according to a given cancer staging classification system, based on evidence such as physical examination, imaging, and/or biopsy or based on pathologic analysis of a specimen."
 * insert CancerStageCommonRules
 * code from ObservationCodesStageGroupVS (required)
@@ -45,7 +42,7 @@ Description: "The extent of the cancer in the body, according to a given cancer 
 Profile:  TNMPrimaryTumorCategory
 Id: mcode-tnm-primary-tumor-category
 Parent: Observation
-Title: "TNM Primary Tumor Category"
+Title: "TNM Primary Tumor Category Profile"
 Description: "Category of the primary tumor, based on its size and extent, based on evidence such as physical examination, imaging, and/or biopsy."
 * insert CancerStageCommonRules
 * insert NotUsed(hasMember)
@@ -55,7 +52,7 @@ Description: "Category of the primary tumor, based on its size and extent, based
 Profile:  TNMRegionalNodesCategory
 Id: mcode-tnm-regional-nodes-category
 Parent: Observation
-Title: "TNM Regional Nodes Category"
+Title: "TNM Regional Nodes Category Profile"
 Description: "Category of the presence or absence of metastases in regional lymph nodes, based on evidence such as physical examination, imaging, and/or biopsy."
 * insert CancerStageCommonRules
 * insert NotUsed(hasMember)
@@ -65,7 +62,7 @@ Description: "Category of the presence or absence of metastases in regional lymp
 Profile:  TNMDistantMetastasesCategory
 Id: mcode-tnm-distant-metastases-category
 Parent: Observation
-Title: "TNM Distant Metastases Category"
+Title: "TNM Distant Metastases Category Profile"
 Description: "Category describing the extent of a tumor metastasis in remote anatomical locations, based on evidence such as physical examination, imaging, and/or biopsy."
 * insert CancerStageCommonRules
 * insert NotUsed(hasMember)

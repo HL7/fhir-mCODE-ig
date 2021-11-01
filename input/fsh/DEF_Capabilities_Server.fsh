@@ -1,7 +1,7 @@
 Profile: MCODEPatientGroup
 Parent: Group
 Id: mcode-patient-group
-Title: "mCODE Patient Group"
+Title: "mCODE Patient Group Profile"
 Description: "A group of patients included in the scope of mCODE, whose cancer-related resources conform to mCODE profiles."
 * code = RID#mcode-patient
 * member.entity only Reference(CancerPatient)

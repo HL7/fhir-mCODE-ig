@@ -63,7 +63,6 @@ A timeline of the narrative is illustrated in the following diagram:
 |  [`mCODE Patient Bundle: Jenny M`](Bundle-mcode-patient-bundle-jenny-m.html) | [MCODEPatientBundle]|[R4Bundle] |
 |  [`Cancer Diagnosis`](Condition-primary-cancer-condition-jenny-m.html)|[PrimaryCancerCondition] | [USCoreCondition]|
 |  [`Radiation Treatment Summary`](Procedure-radiotherapy-treatment-summary-chest-wall-jenny-m.html) | [RadiotherapyCourseSummary]| [USCoreProcedure]
-|  [`Comorbidities`](Observation-cancer-related-mcode-comorbidities-elixhauser-jenny-m.html) | [ComorbiditiesElixhauser]| [R4Observation] |
 | [`Clinical Cancer Stage: 2B`](Observation-tnm-clinical-stage-group-jenny-m.html) |[CancerStageGroup] | [R4Observation]|
 | [`Clinical Primary Tumor Category: cT3`](Observation-tnm-clinical-primary-tumor-category-jenny-m.html) | [TNMPrimaryTumorCategory] | [R4Observation] |
 | [`Clinical Regional Lymph Nodes Category: cN0`](Observation-tnm-clinical-regional-nodes-category-jenny-m.html) | [TNMRegionalNodesCategory]| [R4Observation] |

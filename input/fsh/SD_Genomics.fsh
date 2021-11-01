@@ -1,12 +1,12 @@
-Profile:    CancerGenomicVariant
+Profile:    GenomicVariant
 Parent:     USCoreObservationLab
-Id: mcode-cancer-genomic-variant
-Title:      "Cancer Genomic Variant Profile"
+Id: mcode-genomic-variant
+Title:      "Genomic Variant Profile"
 Description:    "Records an alteration in the most common DNA nucleotide sequence. The term variant can be used to describe an alteration that may be benign, pathogenic, or of unknown significance. The term variant is increasingly being used in place of the term mutation."
 * insert NotUsed(bodySite)
 * insert NotUsed(referenceRange)
 * insert NotUsed(hasMember)
-* code = LNC#69548-6 //"Genetic variant assessment" -- not Genomic!
+* code = LNC#69548-6 //"GENETIC variant assessment" (not Genomic!)
 * method from http://loinc.org/vs/LL4048-6 (extensible)
 * specimen only Reference(GenomicSpecimen)
 * value[x] only CodeableConcept
@@ -54,9 +54,9 @@ Description:    "Records an alteration in the most common DNA nucleotide sequenc
 * component[genomicDNAChangeType] ^short = "DNA Change Type"
 * component[genomicDNAChangeType] ^definition = "Codified type for associated DNA Marker. DNA Markers use the HGVS notation which implies the DNA Marker Type, but the concurrent use of this code will allow a standard and explicit type for technical and display convenience."
 
-* component[molecularConsequence].code = LNC_TBD#molecular-consequence  // Note LNC_TBD - accepted by HL7 while waiting for a LOINC code assignment
+* component[molecularConsequence].code = LNC_TBD#molecular-consequence
 * component[molecularConsequence].value[x] only CodeableConcept
-* component[molecularConsequence].value[x] from MolecularConsequenceVS (extensible)
+* component[molecularConsequence].value[x] from GenomicMolecularConsequenceVS (extensible)
 * component[molecularConsequence] ^short = "Molecular consequence"
 * component[molecularConsequence] ^definition = "Changes in a structural features of a sequence due to the observed variant."
 
@@ -135,7 +135,7 @@ RuleSet: CancerRelatedSpecimenRules
     BodyLocationQualifier named locationQualifier 0..* and
     LateralityQualifier named lateralityQualifier 0..1
 // It would be nice to reuse the existing condition-related extension (see Jira https://jira.hl7.org/projects/FHIR/issues/FHIR-31027) but it doesn't apply to Specimen
-* extension contains ConditionRelated named relatedCondition 0..1 MS
+* extension contains RelatedCondition named relatedCondition 0..1 MS
 * extension[relatedCondition].value[x] only Reference(PrimaryCancerCondition or SecondaryCancerCondition)
 * extension[relatedCondition] ^short = "Cancer condition associated with this sample."
 * extension[relatedCondition] ^definition = "A reference that associates this sample with a cancer condition."
@@ -143,8 +143,8 @@ RuleSet: CancerRelatedSpecimenRules
 * subject and status and type and collection and collection.bodySite and collection.bodySite.extension and collection.bodySite.extension[locationQualifier] and collection.bodySite.extension[lateralityQualifier] MS
 
 
-Profile:    GenomicSpecimen
-Parent:     Specimen
+Profile: GenomicSpecimen
+Parent: Specimen
 Id: mcode-genomic-specimen
 Title:      "Genomic Specimen Profile"
 Description:    "A small sample of blood, hair, skin, amniotic fluid (the fluid that surrounds a fetus during pregnancy), or other tissue which is excised from a subject for the purposes of genomics testing or analysis."
@@ -152,24 +152,23 @@ Description:    "A small sample of blood, hair, skin, amniotic fluid (the fluid 
 * type from GenomicSpecimenTypeVS (extensible)
 
 
-Profile:    CancerGenomicsReport
-Parent:     USCoreDiagnosticReportLab
-Id: mcode-cancer-genomics-report
-Title:      "Cancer Genomics Report Profile"
+Profile:     GenomicsReport
+Parent:      USCoreDiagnosticReportLab
+Id:          mcode-genomics-report
+Title:      "Genomics Report Profile"
 Description:    "Genomic analysis summary report. The report may include one or more tests, with two distinct test types. The first type is a targeted mutation test, where a specific mutation on a specific gene is tested for. The result is either positive or negative for that mutation. The second type is a more general test for variants. This type of test returns the identity of variants found in a certain region of the genome."
-* subject only Reference(CancerPatient)
 * category contains GenomicsCategory 1..1
 * category[GenomicsCategory] = DiagnosticService#GE
 * code = LNC#81247-9 //"Master HL7 Genomic variant reporting panel"
 * specimen only Reference(GenomicSpecimen)
 * insert DiagnosticReportResultSlicingRules
 * result contains
-    CancerGenomicVariant 0..1 MS and
+    GenomicVariant 0..1 MS and
     GenomicRegionStudied 0..1 MS
-* result[CancerGenomicVariant] only Reference(CancerGenomicVariant)
-* result[CancerGenomicVariant] ^short = "Reference to Cancer Genomic Variant"
-* result[CancerGenomicVariant] ^definition = "Records an alteration in the most common DNA nucleotide sequence. The term variant is increasingly being used in place of the term mutation to describe an alteration that may be benign, pathogenic, or of unknown significance."
-* result[CancerGenomicVariant] ^comment = "When using this element, the referenced Observation must validate against the CancerGenomicVariant profile."
+* result[GenomicVariant] only Reference(GenomicVariant)
+* result[GenomicVariant] ^short = "Reference to Genomic Variant"
+* result[GenomicVariant] ^definition = "Records an alteration in the most common DNA nucleotide sequence. The term variant is increasingly being used in place of the term mutation to describe an alteration that may be benign, pathogenic, or of unknown significance."
+* result[GenomicVariant] ^comment = "When using this element, the referenced Observation must validate against the GenomicVariant profile."
 * result[GenomicRegionStudied] only Reference(GenomicRegionStudied)
 * result[GenomicRegionStudied] ^short = "Reference to Genomic Region Studied"
 * result[GenomicRegionStudied] ^definition = "The area of the genome region referenced in testing for variants."
@@ -179,7 +178,7 @@ Description:    "Genomic analysis summary report. The report may include one or 
 
 Profile:    GenomicRegionStudied
 Parent:     USCoreObservationLab
-Id: mcode-genomic-region-studied
+Id:         mcode-genomic-region-studied
 Title:      "Genomic Region Studied Profile"
 Description:    "The area of the genome region referenced in testing for variants."
 * code = LNC#53041-0 //"DNA region of interest panel"

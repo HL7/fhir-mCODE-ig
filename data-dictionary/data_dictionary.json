@@ -14,7 +14,7 @@
     },
     {
       "group": "Default",
-      "title": "Cancer Genomic Variant",
+      "title": "Genomic Variant",
       "url": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genomic-variant",
       "description": "Records an alteration in the most common DNA nucleotide sequence. The term variant can be used to describe an alteration that may be benign, pathogenic, or of unknown significance. The term variant is increasingly being used in place of the term mutation."
     },
@@ -472,7 +472,7 @@
     },
     {
       "Group": "Default",
-      "Profile Title": "Cancer Genomic Variant",
+      "Profile Title": "Genomic Variant",
       "Data Element Name": "Status",
       "Definition": "The status of the result value.",
       "Required?": "Required",
@@ -486,7 +486,7 @@
     },
     {
       "Group": "Default",
-      "Profile Title": "Cancer Genomic Variant",
+      "Profile Title": "Genomic Variant",
       "Data Element Name": "Subject",
       "Definition": "The patient, or group of patients, location, or device this observation is about and into whose record the observation is placed. If the actual focus of the observation is different from the subject (or a sample of, part, or region of the subject), the `focus` element or the `code` itself specifies the actual focus of the observation.",
       "Required?": "Required",
@@ -500,7 +500,7 @@
     },
     {
       "Group": "Default",
-      "Profile Title": "Cancer Genomic Variant",
+      "Profile Title": "Genomic Variant",
       "Data Element Name": "Effective",
       "Definition": "For lab tests this is the specimen collection date.  For Ask at Order Entry Questions (AOE)'s this is the date the question was asked.",
       "Required?": "Required if known",
@@ -514,7 +514,7 @@
     },
     {
       "Group": "Default",
-      "Profile Title": "Cancer Genomic Variant",
+      "Profile Title": "Genomic Variant",
       "Data Element Name": "Value",
       "Definition": "The overall result of the genomic test; specifically, whether a variant is present, absent, no call, or indeterminant.",
       "Required?": "Required if known",
@@ -528,7 +528,7 @@
     },
     {
       "Group": "Default",
-      "Profile Title": "Cancer Genomic Variant",
+      "Profile Title": "Genomic Variant",
       "Data Element Name": "Data Absent Reason",
       "Definition": "Provides a reason why the expected value in the element Observation.value[x] is missing.",
       "Required?": "Required if known",
@@ -542,7 +542,7 @@
     },
     {
       "Group": "Default",
-      "Profile Title": "Cancer Genomic Variant",
+      "Profile Title": "Genomic Variant",
       "Data Element Name": "Method",
       "Definition": "Indicates the mechanism used to perform the observation.",
       "Required?": "Required if known",
@@ -556,7 +556,7 @@
     },
     {
       "Group": "Default",
-      "Profile Title": "Cancer Genomic Variant",
+      "Profile Title": "Genomic Variant",
       "Data Element Name": "Specimen",
       "Definition": "The specimen that was used when this observation was made.",
       "Required?": "Required if known",
@@ -570,7 +570,7 @@
     },
     {
       "Group": "Default",
-      "Profile Title": "Cancer Genomic Variant",
+      "Profile Title": "Genomic Variant",
       "Data Element Name": "Component",
       "Definition": "Some observations have multiple component observations.  These component observations are expressed as separate code value pairs that share the same attributes.  Examples include systolic and diastolic component observations for blood pressure measurement and multiple component observations for genomics observations.",
       "Required?": "Required if known",
@@ -584,7 +584,7 @@
     },
     {
       "Group": "Default",
-      "Profile Title": "Cancer Genomic Variant",
+      "Profile Title": "Genomic Variant",
       "Data Element Name": "Component > Code",
       "Definition": "Describes what was observed. Sometimes this is called the observation \"code\".",
       "Required?": "Required (conditional on Component)",
@@ -598,7 +598,7 @@
     },
     {
       "Group": "Default",
-      "Profile Title": "Cancer Genomic Variant",
+      "Profile Title": "Genomic Variant",
       "Data Element Name": "Component > Value",
       "Definition": "The information determined as a result of making the observation, if the information has a simple value.",
       "Required?": "Required if known (conditional on Component)",
@@ -612,7 +612,7 @@
     },
     {
       "Group": "Default",
-      "Profile Title": "Cancer Genomic Variant",
+      "Profile Title": "Genomic Variant",
       "Data Element Name": "Component > Data Absent Reason",
       "Definition": "Provides a reason why the expected value in the element Observation.component.value[x] is missing.",
       "Required?": "Required if known (conditional on Component)",
@@ -626,7 +626,7 @@
     },
     {
       "Group": "Default",
-      "Profile Title": "Cancer Genomic Variant",
+      "Profile Title": "Genomic Variant",
       "Data Element Name": "Component > Gene Studied > Value",
       "Definition": "The information determined as a result of making the observation, if the information has a simple value.",
       "Required?": "Required if known (conditional on Component)",
@@ -640,7 +640,7 @@
     },
     {
       "Group": "Default",
-      "Profile Title": "Cancer Genomic Variant",
+      "Profile Title": "Genomic Variant",
       "Data Element Name": "Component > Gene Studied > Data Absent Reason",
       "Definition": "Provides a reason why the expected value in the element Observation.component.value[x] is missing.",
       "Required?": "Required if known (conditional on Component)",
@@ -654,7 +654,7 @@
     },
     {
       "Group": "Default",
-      "Profile Title": "Cancer Genomic Variant",
+      "Profile Title": "Genomic Variant",
       "Data Element Name": "Component > Variation Code > Value",
       "Definition": "The information determined as a result of making the observation, if the information has a simple value.",
       "Required?": "Required if known (conditional on Component)",
@@ -668,7 +668,7 @@
     },
     {
       "Group": "Default",
-      "Profile Title": "Cancer Genomic Variant",
+      "Profile Title": "Genomic Variant",
       "Data Element Name": "Component > Variation Code > Data Absent Reason",
       "Definition": "Provides a reason why the expected value in the element Observation.component.value[x] is missing.",
       "Required?": "Required if known (conditional on Component)",
@@ -682,7 +682,7 @@
     },
     {
       "Group": "Default",
-      "Profile Title": "Cancer Genomic Variant",
+      "Profile Title": "Genomic Variant",
       "Data Element Name": "Component > Genomic DNA Change > Value",
       "Definition": "The information determined as a result of making the observation, if the information has a simple value.",
       "Required?": "Required if known (conditional on Component)",
@@ -696,7 +696,7 @@
     },
     {
       "Group": "Default",
-      "Profile Title": "Cancer Genomic Variant",
+      "Profile Title": "Genomic Variant",
       "Data Element Name": "Component > Genomic DNA Change > Data Absent Reason",
       "Definition": "Provides a reason why the expected value in the element Observation.component.value[x] is missing.",
       "Required?": "Required if known (conditional on Component)",
@@ -710,7 +710,7 @@
     },
     {
       "Group": "Default",
-      "Profile Title": "Cancer Genomic Variant",
+      "Profile Title": "Genomic Variant",
       "Data Element Name": "Component > Genomic DNA Change Type > Value",
       "Definition": "The information determined as a result of making the observation, if the information has a simple value.",
       "Required?": "Required if known (conditional on Component)",
@@ -724,7 +724,7 @@
     },
     {
       "Group": "Default",
-      "Profile Title": "Cancer Genomic Variant",
+      "Profile Title": "Genomic Variant",
       "Data Element Name": "Component > Genomic DNA Change Type > Data Absent Reason",
       "Definition": "Provides a reason why the expected value in the element Observation.component.value[x] is missing.",
       "Required?": "Required if known (conditional on Component)",
@@ -738,7 +738,7 @@
     },
     {
       "Group": "Default",
-      "Profile Title": "Cancer Genomic Variant",
+      "Profile Title": "Genomic Variant",
       "Data Element Name": "Component > Genomic Source Class > Value",
       "Definition": "The information determined as a result of making the observation, if the information has a simple value.",
       "Required?": "Required if known (conditional on Component)",
@@ -752,7 +752,7 @@
     },
     {
       "Group": "Default",
-      "Profile Title": "Cancer Genomic Variant",
+      "Profile Title": "Genomic Variant",
       "Data Element Name": "Component > Genomic Source Class > Data Absent Reason",
       "Definition": "Provides a reason why the expected value in the element Observation.component.value[x] is missing.",
       "Required?": "Required if known (conditional on Component)",
@@ -766,7 +766,7 @@
     },
     {
       "Group": "Default",
-      "Profile Title": "Cancer Genomic Variant",
+      "Profile Title": "Genomic Variant",
       "Data Element Name": "Component > Amino Acid Change > Value",
       "Definition": "The information determined as a result of making the observation, if the information has a simple value.",
       "Required?": "Required if known (conditional on Component)",
@@ -780,7 +780,7 @@
     },
     {
       "Group": "Default",
-      "Profile Title": "Cancer Genomic Variant",
+      "Profile Title": "Genomic Variant",
       "Data Element Name": "Component > Amino Acid Change > Data Absent Reason",
       "Definition": "Provides a reason why the expected value in the element Observation.component.value[x] is missing.",
       "Required?": "Required if known (conditional on Component)",
@@ -794,7 +794,7 @@
     },
     {
       "Group": "Default",
-      "Profile Title": "Cancer Genomic Variant",
+      "Profile Title": "Genomic Variant",
       "Data Element Name": "Component > Amino Acid Change Type > Value",
       "Definition": "The information determined as a result of making the observation, if the information has a simple value.",
       "Required?": "Required if known (conditional on Component)",
@@ -808,7 +808,7 @@
     },
     {
       "Group": "Default",
-      "Profile Title": "Cancer Genomic Variant",
+      "Profile Title": "Genomic Variant",
       "Data Element Name": "Component > Amino Acid Change Type > Data Absent Reason",
       "Definition": "Provides a reason why the expected value in the element Observation.component.value[x] is missing.",
       "Required?": "Required if known (conditional on Component)",
@@ -822,7 +822,7 @@
     },
     {
       "Group": "Default",
-      "Profile Title": "Cancer Genomic Variant",
+      "Profile Title": "Genomic Variant",
       "Data Element Name": "Component > Cytogenetic Location",
       "Definition": "The cytogenetic (chromosome) location.",
       "Required?": "Required if known",
@@ -836,7 +836,7 @@
     },
     {
       "Group": "Default",
-      "Profile Title": "Cancer Genomic Variant",
+      "Profile Title": "Genomic Variant",
       "Data Element Name": "Component > Cytogenetic Location > Value",
       "Definition": "The information determined as a result of making the observation, if the information has a simple value.",
       "Required?": "Required if known (conditional on Component)",
@@ -850,7 +850,7 @@
     },
     {
       "Group": "Default",
-      "Profile Title": "Cancer Genomic Variant",
+      "Profile Title": "Genomic Variant",
       "Data Element Name": "Component > Cytogenetic Location > Data Absent Reason",
       "Definition": "Provides a reason why the expected value in the element Observation.component.value[x] is missing.",
       "Required?": "Required if known (conditional on Component)",
@@ -864,7 +864,7 @@
     },
     {
       "Group": "Default",
-      "Profile Title": "Cancer Genomic Variant",
+      "Profile Title": "Genomic Variant",
       "Data Element Name": "Component > Cytogenetic Nomenclature",
       "Definition": "The cytogenetic (chromosome) location, represented using the International System for Human Cytogenetic Nomenclature (ISCN)",
       "Required?": "Required if known",
@@ -878,7 +878,7 @@
     },
     {
       "Group": "Default",
-      "Profile Title": "Cancer Genomic Variant",
+      "Profile Title": "Genomic Variant",
       "Data Element Name": "Component > Cytogenetic Nomenclature > Value",
       "Definition": "The information determined as a result of making the observation, if the information has a simple value.",
       "Required?": "Required if known (conditional on Component)",
@@ -892,7 +892,7 @@
     },
     {
       "Group": "Default",
-      "Profile Title": "Cancer Genomic Variant",
+      "Profile Title": "Genomic Variant",
       "Data Element Name": "Component > Cytogenetic Nomenclature > Data Absent Reason",
       "Definition": "Provides a reason why the expected value in the element Observation.component.value[x] is missing.",
       "Required?": "Required if known (conditional on Component)",
@@ -991,14 +991,14 @@
     {
       "Group": "Default",
       "Profile Title": "Cancer Genomics Report",
-      "Data Element Name": "Result > Cancer Genomic Variant",
+      "Data Element Name": "Result > Genomic Variant",
       "Definition": "Records an alteration in the most common DNA nucleotide sequence. The term variant is increasingly being used in place of the term mutation to describe an alteration that may be benign, pathogenic, or of unknown significance.",
       "Required?": "Required if known",
       "Occurrences Allowed": "Single",
-      "Data Type": "Reference: CancerGenomicVariant",
+      "Data Type": "Reference: GenomicVariant",
       "Value Set URI": "",
       "Value Set Binding": "",
-      "FHIR Element (R4)": "DiagnosticReport.result:CancerGenomicVariant",
+      "FHIR Element (R4)": "DiagnosticReport.result:GenomicVariant",
       "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genomics-report",
       "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genomics-report"
     },
@@ -5919,28 +5919,28 @@
     {
       "Group": "Default",
       "Profile Title": "mCODE Patient Bundle",
-      "Data Element Name": "Entry > Cancer Genomic Variant",
+      "Data Element Name": "Entry > Genomic Variant",
       "Definition": "Observation resource representing variants.",
       "Required?": "Required if known",
       "Occurrences Allowed": "Multiple",
       "Data Type": "BackboneElement",
       "Value Set URI": "",
       "Value Set Binding": "",
-      "FHIR Element (R4)": "Bundle.entry:CancerGenomicVariant",
+      "FHIR Element (R4)": "Bundle.entry:GenomicVariant",
       "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle",
       "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle"
     },
     {
       "Group": "Default",
       "Profile Title": "mCODE Patient Bundle",
-      "Data Element Name": "Entry > Cancer Genomic Variant > Resource",
+      "Data Element Name": "Entry > Genomic Variant > Resource",
       "Definition": "This profile is  created to meet the 2015 Edition Common Clinical Data Set 'Laboratory test(s) and Laboratory value(s)/result(s)' requirements.",
       "Required?": "Required if known (conditional on Entry)",
       "Occurrences Allowed": "Single",
       "Data Type": "Observation",
       "Value Set URI": "",
       "Value Set Binding": "",
-      "FHIR Element (R4)": "Bundle.entry:CancerGenomicVariant.resource",
+      "FHIR Element (R4)": "Bundle.entry:GenomicVariant.resource",
       "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle",
       "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle"
     },

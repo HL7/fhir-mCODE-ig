@@ -82,7 +82,7 @@ Description:  "Identifies a tumor that has not been removed from the body. Whene
 * location 1..1 // Tumor is meaningless without a location; parent profile is 0..1
 * locationQualifier from BodyLocationQualifierVS (required)
 // Related cancer condition
-* extension contains ConditionRelated named relatedCondition 0..1
+* extension contains RelatedCondition named relatedCondition 0..1
 * extension[relatedCondition].value[x] only Reference(PrimaryCancerCondition or SecondaryCancerCondition)
 * extension[relatedCondition] ^short = "Reference to cancer condition associated with this tumor"
 * extension[relatedCondition] ^definition = "Associates this tumor with a cancer condition. This could be a causal association (e.g., this is believed to be the primary tumor causing the cancer) or a different type of relationship (e.g., this tumor is a metastasis)"

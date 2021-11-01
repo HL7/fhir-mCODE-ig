@@ -13,8 +13,8 @@ Description: "An extension for representing a reference to a condition resource 
 * value[x] only Reference(Condition)
 * value[x] 1..1
 
-Extension: ConditionRelated
-Id: mcode-condition-related
+Extension: RelatedCondition
+Id: mcode-related-condition
 Title:  "Related Condition Extension"
 Description: "The resource has an unspecified relationship with a Condition."
 * value[x] only Reference(Condition)
@@ -35,7 +35,7 @@ Title: "Histology-Morphology-Behavior Extension"
 Description: "An extension describing the morphologic and behavioral characteristics of the cancer."
 * insert ExtensionContext(Condition)
 * value[x] only CodeableConcept
-* value[x] from HistologyMorphologyBehaviorVS (required)
+* value[x] from HistologyMorphologyBehaviorVS (extensible)
 * value[x] 1..1
 
 Extension: BodyLocationQualifier

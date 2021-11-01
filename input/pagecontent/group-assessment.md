@@ -2,11 +2,11 @@ The mCODE **Assessment** group contains information related to the patient's gen
 
 ### Comorbidities
 
-Comorbidities are important in the prognosis and treatment. Comorbid conditions in mCODE are aligned with the [Elixhauser Comorbidity Index](https://www.hcup-us.ahrq.gov/toolssoftware/comorbidityicd10/comorbidity_icd10.jsp).
+Comorbidities are important in the prognosis and treatment of cancer. Comorbid conditions in mCODE are aligned with the [Elixhauser Comorbidity Index](https://www.hcup-us.ahrq.gov/toolssoftware/comorbidityicd10/comorbidity_icd10.jsp). A similar approach could be used with other systems of comorbidity assessment, such as the [Charlson Comorbidity Index](https://healthcaredelivery.cancer.gov/seermedicare/considerations/comorbidity.html), but that remains outside the scope of mCODE.
 
 ### Performance Assessments
 
-mCODE supports the [Eastern Cooperative Oncology Group (ECOG) Performance Status](https://ecog-acrin.org/resources/ecog-performance-status) and [Karnofsky Performance Status (KPS)](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3722041/). Because performance assessments may be performed more than once over a period of time, multiple instances may exist for a single patient
+mCODE supports the [Eastern Cooperative Oncology Group (ECOG) Performance Status](https://ecog-acrin.org/resources/ecog-performance-status) and [Karnofsky Performance Status (KPS)](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3722041/). Because performance assessments may be performed more than once over a period of time, multiple instances may exist for a single patient.
 
 ### Laboratory Tests
 
@@ -20,16 +20,16 @@ Beyond the requirements of US Core, under [Clinical Laboratory Improvement Amend
 
 ### Vital Signs
 
-Vital signs are measurements of the most essential, or "vital" body functions. For mCODE, blood pressure, body height, and body weight are believed to be most critical to assessment and treatment. Instead of defining its own profiles, mCODE uses the [FHIR R4 vital sign profile](http://hl7.org/fhir/R4/observation-vitalsigns.html), which is incorporated into [US Core Version 3.0 and 3.1](http://hl7.org/fhir/us/core/index.html). As of Version 3.2, US Core defines its own set of vital signs profiles. These profiles are derived from the same FHIR base vital sign profile. mCODE accepts vital sign data conforming to either FHIR or US Core profiles. Examples of height, weight, and blood pressure are given in both sources.
+Vital signs are measurements of the most essential, or "vital" body functions. For mCODE, blood pressure, body height, and body weight are believed to be most critical to assessment and treatment. Instead of defining its own profiles, mCODE uses the [FHIR R4 vital sign profile](http://hl7.org/fhir/R4/observation-vitalsigns.html), which is incorporated into [US Core](http://hl7.org/fhir/us/core/index.html). As of Version 3.2, US Core defines its own set of vital signs profiles. These profiles are derived from the same FHIR base vital sign profile. mCODE accepts vital sign data conforming to either FHIR or US Core profiles. Examples of height, weight, and blood pressure are given in both sources.
 
 ### Profiles
 
-* [ComorbiditiesParent] (abstract profile)
 * [ComorbiditiesElixhauser]
+* [ComorbiditiesParent] (abstract profile)
 * [ECOGPerformanceStatus]
-* [KarnofskyPerformanceStatus]
 * [FHIR Vital Signs](https://www.hl7.org/fhir/observation-vitalsigns.html)
-* [US Core Vital Signs](https://hl7.org/fhir/us/core/3.2.0/StructureDefinition-us-core-vital-signs.html) (version 3.2 and higher)
+* [KarnofskyPerformanceStatus]
+* [US Core Vital Signs](https://hl7.org/fhir/us/core/4.0.0/StructureDefinition-us-core-vital-signs.html) (version 4.0 and higher)
 * [US Core DiagnosticReport Profile for Laboratory Results Reporting](http://hl7.org/fhir/us/core/StructureDefinition-us-core-diagnosticreport-lab.html)
 * [US Core Laboratory Result Profile](http://hl7.org/fhir/us/core/StructureDefinition-us-core-observation-lab.html)
 
@@ -37,11 +37,12 @@ Vital signs are measurements of the most essential, or "vital" body functions. F
 
 * [ComorbidConditionCode]
 * [ComorbidConditionReference]
+* [EvidenceType]
 
 ### Value Sets
 
-* [PresentAbsentUnknownVS]
-* [ElixhauserAidsVS]
+* [ECOG_Performance status] (external)
+* [ElixhauserAIDSVS]
 * [ElixhauserAlcoholAbuseVS]
 * [ElixhauserBloodLossAnemiaVS]
 * [ElixhauserCancerLeukemiaVS]
@@ -51,8 +52,8 @@ Vital signs are measurements of the most essential, or "vital" body functions. F
 * [ElixhauserCancerSolidTumorMalignantVS]
 * [ElixhauserCerebrovascularDiseaseVS]
 * [ElixhauserChronicPulmonaryDiseaseVS]
-* [ElixhauserCongestiveHeartFailureVS]
 * [ElixhauserCoagulationDeficiencyVS]
+* [ElixhauserCongestiveHeartFailureVS]
 * [ElixhauserDeficiencyAnemiaVS]
 * [ElixhauserDementiaVS]
 * [ElixhauserDepressionVS]
@@ -79,9 +80,8 @@ Vital signs are measurements of the most essential, or "vital" body functions. F
 * [ElixhauserUlcerVS]
 * [ElixhauserValvularDiseaseVS]
 * [ElixhauserWeightLossVS]
+* [Karnofsky performance status] (external)
+* [PresentAbsentVS]
 
-### Code Systems
-
-* [ComorbiditiesElixhauserCS] (LOINC codes requested)
 
 {% include markdown-link-references.md %}

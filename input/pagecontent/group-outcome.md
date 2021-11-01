@@ -34,7 +34,7 @@ In the context of breast cancer, multifocal tumors refer to "multiple foci of th
 
 For multifocal tumors, each foci may be separately tracked and measured by clinicians. Therefore, each foci SHOULD be represented by a separate [Tumor] or [TumorSpecimen] instance, and grouped together using the `focus` element in a [MultifocalTumor] Observation. [MultifocalTumor] SHOULD be referenced in `hasMember` of [TNMClinicalStageGroup] or [TNMPathologicalStageGroup] if relevant.
 
-Multicentric tumors should also each be represented by a separate [Tumor] or [TumorSpecimen], which can each be associated with separate [PrimaryCancerCondition]-conforming resources using `extension[mcode-condition-related]` in [Tumor] or [TumorSpecimen].
+Multicentric tumors should also each be represented by a separate [Tumor] or [TumorSpecimen], which can each be associated with separate [PrimaryCancerCondition]-conforming resources using `extension[mcode-related-condition]` in [Tumor] or [TumorSpecimen].
 -->
 
 ### Profiles
@@ -44,7 +44,6 @@ Multicentric tumors should also each be represented by a separate [Tumor] or [Tu
 * [Tumor]
 * [TumorSpecimen]
 * [TumorSize]
-<!--* [MultifocalTumor]-->
 
 ### Extension
 

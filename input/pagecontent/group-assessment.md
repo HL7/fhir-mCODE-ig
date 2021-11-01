@@ -2,11 +2,11 @@ The mCODE **Assessment** group contains information related to the patient's gen
 
 ### Comorbidities
 
-Comorbidities are important in the prognosis and treatment. Comorbid conditions in mCODE are aligned with the [Elixhauser Comorbidity Index](https://www.hcup-us.ahrq.gov/toolssoftware/comorbidityicd10/comorbidity_icd10.jsp).
+Comorbidities are important in the prognosis and treatment of cancer. Comorbid conditions in mCODE are aligned with the [Elixhauser Comorbidity Index](https://www.hcup-us.ahrq.gov/toolssoftware/comorbidityicd10/comorbidity_icd10.jsp). A similar approach could be used with other systems of comorbidity assessment, such as the [Charlson Comorbidity Index](https://healthcaredelivery.cancer.gov/seermedicare/considerations/comorbidity.html), but that remains outside the scope of mCODE.
 
 ### Performance Assessments
 
-mCODE supports the [Eastern Cooperative Oncology Group (ECOG) Performance Status](https://ecog-acrin.org/resources/ecog-performance-status) and [Karnofsky Performance Status (KPS)](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3722041/). Because performance assessments may be performed more than once over a period of time, multiple instances may exist for a single patient
+mCODE supports the [Eastern Cooperative Oncology Group (ECOG) Performance Status](https://ecog-acrin.org/resources/ecog-performance-status) and [Karnofsky Performance Status (KPS)](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3722041/). Because performance assessments may be performed more than once over a period of time, multiple instances may exist for a single patient.
 
 ### Laboratory Tests
 
@@ -83,8 +83,5 @@ Vital signs are measurements of the most essential, or "vital" body functions. F
 * [Karnofsky performance status] (external)
 * [PresentAbsentVS]
 
-### Code Systems
-
-* [ComorbiditiesElixhauserCS]
 
 {% include markdown-link-references.md %}

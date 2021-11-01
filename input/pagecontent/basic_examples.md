@@ -19,19 +19,15 @@
 #### [Primary Cancer Condition](Structure-definition-mcode-primary-cancer-condition.html) ([US Core Condition](http://hl7.org/fhir/us/core/STU4/StructureDefinition-us-core-condition.html))
 *  [Chronic lymphoid leukemia, Binet Stage A](Condition-primary-cancer-condition-cll.html)
 *  [Non-Small Cell Lung Cancer, Stage IIc](Condition-primary-cancer-condition-nsclc.html)
-#### Radiotherapy Treatment Volume (BodyStructure)
-*  john-anyperson-treatment-volume
+#### [Radiotherapy Volume](Structure-definition-mcode-radiotherapy-volume.html) ([BodyStructure](http://hl7.org/fhir/R4/bodystructure.html))
+*  [Lower lobe of left lung](BodyStructure-john-anyperson-treatment-volume.html)
 #### [Secondary Cancer Condition](Structure-definition-mcode-secondary-cancer-condition.html) ([US Core Condition](http://hl7.org/fhir/us/core/STU4/StructureDefinition-us-core-condition.html))
 *  [Brain Metastases](Condition-secondary-cancer-condition-brain-mets.html)
-#### Clinical Distant Metastases
+#### [Cancer Stage Group](Structure-definition-mcode-cancer-stage-group.html) ([Observation](http://hl7.org/fhir/R4/observation.html))
 *  tnm-clinical-distant-metastases-category-cM0
-#### Clinical Distant Metastases
 *  tnm-clinical-primary-tumor-category-cT3
-#### Clinical Distant Metastases
 *  tnm-clinical-regional-nodes-category-cN3
-#### Clinical Distant Metastases
 *  tnm-clinical-stage-group-3c
-#### Stage Group
 *  binet-stage-group-A
 #### US Core Practitioner
 *  us-core-practitioner-kyle-anydoc

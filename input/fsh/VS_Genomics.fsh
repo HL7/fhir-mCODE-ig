@@ -22,15 +22,9 @@ Title: "DNA Change Type Value Set"
 Description: "DNA Change Type of a variant"
 * include codes from system SO where concept descendent-of #SO:0002072
 
-<<<<<<< HEAD
-ValueSet: MolecularConsequenceVS
-Id: mcode-molecular-consequence-vs
-Title: "Molecular Consequence Value Set"
-=======
 ValueSet: GenomicMolecularConsequenceVS
 Id: mcode-genomic-molecular-consequence-vs
 Title: "Genomic Molecular Consequence Value Set"
->>>>>>> master
 Description: "Changes in a structural features of a sequence due to the observed variant."
 * include codes from system SO where concept descendent-of #SO:0001537
 

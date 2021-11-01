@@ -102,7 +102,7 @@
 <artifact deprecated="true" id="StructureDefinition/mcode-evidence-type" key="evidence-type-extension" name="Evidence Type Extension"/>
 <artifact deprecated="true" id="StructureDefinition/mcode-genetic-specimen" key="genetic-specimen" name="Genetic Specimen"/>
 <artifact deprecated="true" id="ValueSet/mcode-genetic-specimen-type-vs" key="genetic-specimen-type-value-set" name="Genetic Specimen Type Value Set"/>
-<artifact id="ValueSet/mcode-mcode-genomic-molecular-consequence-vs" key="ValueSet-mcode-mcode-genomic-molecular-consequence-vs" name="Genomic Molecular Consequence Value Set"/>
+<artifact id="ValueSet/mcode-genomic-molecular-consequence-vs" key="ValueSet-mcode-genomic-molecular-consequence-vs" name="Genomic Molecular Consequence Value Set"/>
 <artifact deprecated="true" id="StructureDefinition/mcode-genomic-region-studied" key="genomic-region-studied" name="Genomic Region Studied"/>
 <artifact id="StructureDefinition/mcode-genomic-region-studied" key="StructureDefinition-mcode-genomic-region-studied" name="Genomic Region Studied Profile"/>
 <artifact id="StructureDefinition/mcode-genomic-specimen" key="StructureDefinition-mcode-genomic-specimen" name="Genomic Specimen Profile"/>

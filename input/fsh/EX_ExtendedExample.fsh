@@ -378,6 +378,10 @@ Description: "Extended example: example of pathology findings represented as a D
 * result[3] = Reference(tumor-size-jenny-m)
 * result[4] = Reference(us-core-observation-lab-tumor-dcis-jenny-m)
 * result[5] = Reference(tumor-marker-test-her2-jenny-m)
+//** adding pathology results **//
+* result[6] = Reference(tumor-marker-test-er-jenny-m)
+* result[7] = Reference(tumor-marker-test-pr-jenny-m)
+* result[8] = Reference(us-core-observation-lab-tumor-grade-jenny-m)
 * performer = Reference(us-core-organization-physician-services-inc)
 * resultsInterpreter = Reference(us-core-practitioner-peter-pathologist)
 
@@ -430,11 +434,22 @@ Instance: us-core-observation-lab-tumor-dcis-jenny-m
 InstanceOf:  USCoreObservationLab
 Description: "Extended example: example showing DCIS diagnosis"
 * status = #final "final"
-* code = LNC#29308-4 "Diagnosis"
+* code = LNC#85336-6 "DCIS intraductal extension in Breast cancer specimen Qualitative by Light microscopy"
 * subject = Reference(cancer-patient-jenny-m)
 * effectiveDateTime = "2018-04-01T00:00:00Z"
-* valueCodeableConcept = LNC#85336-6 "DCIS intraductal extension in Breast cancer specimen Qualitative by Light microscopy"
+* valueCodeableConcept = LNC#LA27261-9 "DCIS present with extensive intraductal component (EIC)"
 * specimen = Reference(tumor-specimen-left-breast-jenny-m)
+
+Instance: us-core-observation-lab-tumor-grade-jenny-m
+InstanceOf:  USCoreObservationLab
+Description: "Extended example: example showing DCIS diagnosis"
+* status = #final "final"
+* code = LNC#44648-4 "Histologic grade [Score] in Breast cancer specimen Qualitative by Nottingham"
+* subject = Reference(cancer-patient-jenny-m)
+* effectiveDateTime = "2018-04-01T00:00:00Z"
+* valueCodeableConcept = LNC#LA27824-4 "Nottingham grade 2"
+* specimen = Reference(tumor-specimen-left-breast-jenny-m)
+
 
 Instance: tnm-pathologic-stage-group-jenny-m
 InstanceOf: CancerStageGroup
@@ -549,7 +564,7 @@ Description: "Extended example: example showing chemotherapy medication"
 * reasonReference = Reference(primary-cancer-condition-jenny-m)
 * dosageInstruction.timing.repeat.boundsPeriod.start = "2018-04-12"
 * authoredOn = "2018-04-12"
-* dosageInstruction.text = "doxorubicin (175 mg/m² IV), 272.01mg"
+* dosageInstruction.text = "PACLitaxel (175 mg/m² IV), 272.01mg"
 * dosageInstruction.route = SCT#47625008 "Intravenous route (qualifier value)"
 * dosageInstruction.doseAndRate.doseQuantity = 272.01 'mg' "mg"
 // Once every 3 weeks
@@ -570,7 +585,7 @@ Description: "Extended example: body weight vital sign at the time of chemothera
 // Based on the relative dose, height, and current weight, we calculate the absolute dose to be 105.96 mg of doxorubicin.
 // Chemotherapy preparation details (e.g.: number of vials used for the absolute dose, IV mixing solution, etc.)
 // have been omitted for simplicity.
-Instance: cancer-related-medication-administration-doxorubicin-jenny-m
+Instance: cancer-related-medication-admin-doxorubicin-jenny-m
 InstanceOf: CancerRelatedMedicationAdministration
 Description: "Extended example: example showing chemotherapy medication"
 * status = #completed "completed"
@@ -586,6 +601,39 @@ Description: "Extended example: example showing chemotherapy medication"
 * note.text = "doxorubicin (60 mg/m² IV), 105.96 mg in 50 ml 0.9% normal saline administered by continuous infusion. Patient tolerated infusion without side effects."
 * dosage.dose = 105.96 'mg' "mg"
 * dosage.route = SCT#47625008 "Intravenous route (qualifier value)"
+
+Instance: cancer-related-medication-admin-cyclophosphamide-jenny-m
+InstanceOf: CancerRelatedMedicationAdministration
+Description: "Extended example: example showing chemotherapy medication"
+* extension[treatmentIntent].valueCodeableConcept = SCT#373808002 "Curative - procedure intent (qualifier value)"
+* status = #completed "completed"
+* category = MedReqCat#outpatient
+* medicationCodeableConcept = RXN#3002 "cyclophosphamide"
+* subject = Reference(cancer-patient-jenny-m)
+* performer.actor = Reference(us-core-practitioner-nancy-oncology-nurse)
+* reasonReference = Reference(primary-cancer-condition-jenny-m)
+* effectiveDateTime = "2018-04-22"
+* note.authorReference = Reference(us-core-practitioner-nancy-oncology-nurse)
+* note.time = "2018-04-22"
+* note.text = "cyclophosphamide (60 mg/m² IV), 932.59 mg in 50 ml 0.9% normal saline administered by continuous infusion. Patient tolerated infusion without side effects."
+* dosage.dose = 932.59 'mg' "mg"
+* dosage.route = SCT#47625008 "Intravenous route (qualifier value)"
+
+Instance: cancer-related-medication-admin-paclitaxel-jenny-m
+InstanceOf: CancerRelatedMedicationAdministration
+Description: "Extended example: example showing chemotherapy medication"
+* extension[treatmentIntent].valueCodeableConcept = SCT#373808002 "Curative - procedure intent (qualifier value)"
+* status = #completed "completed"
+* category = MedReqCat#outpatient
+* medicationCodeableConcept = RXN#56946 "PACLitaxel"
+* subject = Reference(cancer-patient-jenny-m)
+* performer.actor = Reference(us-core-practitioner-nancy-oncology-nurse)
+* reasonReference = Reference(primary-cancer-condition-jenny-m)
+* note.time = "2018-04-12"
+* note.text = "PACLitaxel (175 mg/m² IV), 272.01mg"
+* dosage.route = SCT#47625008 "Intravenous route (qualifier value)"
+* dosage.dose = 272.01 'mg' "mg"
+* effectiveDateTime = "2018-04-22"
 
 
 Instance: radiotherapy-treatment-summary-chest-wall-jenny-m

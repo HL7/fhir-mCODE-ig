@@ -55,7 +55,7 @@ Description: "mCODE Example for Cancer Genomic Variant gene fusion event"
 * component[genomicSourceClass].valueCodeableConcept = LNC#LA6684-0 "Somatic"
 
 Instance: cancer-genomics-report-john-anyperson
-InstanceOf: CancerGenomicsReport
+InstanceOf: GenomicsReport
 Description: "mCODE Example for Cancer Genomics Report"
 * status = #final "Final"
 * subject = Reference(cancer-patient-john-anyperson)

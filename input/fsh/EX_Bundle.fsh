@@ -30,7 +30,7 @@ Description: "Extended example as a mCODE Patient Bundle"
 * entry[=].resource.meta.profile[0] = Canonical(CancerGenomicVariant)
 * entry[+].resource = cancer-genomics-report-jenny-m
 * entry[=].fullUrl = "http://example.org/fhir/DiagnosticReport/cancer-genomics-report-jenny-m"
-* entry[=].resource.meta.profile[0] = Canonical(CancerGenomicsReport)
+* entry[=].resource.meta.profile[0] = Canonical(GenomicsReport)
 * entry[+].resource = cancer-related-surgical-procedure-jenny-m
 * entry[=].fullUrl = "http://example.org/fhir/Procedure/cancer-related-surgical-procedure-jenny-m"
 * entry[=].resource.meta.profile[0] = Canonical(CancerRelatedSurgicalProcedure)

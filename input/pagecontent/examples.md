@@ -61,7 +61,7 @@ A timeline of the narrative is illustrated in the following diagram:
 | [`Oncotype DX Breast Recurrence Score Assay: 47/High`](Observation-tumor-marker-test-oncotype-dx-jenny-m.html)| [USCoreLaboratoryResultObservation]|
 | [`Tumor Size: 2.5cm`](Observation-tumor-size-jenny-m.html)| [TumorSize]| [R4Observation]|
 | [`Tumor Specimen: Left Breast``](Specimen-tumor-specimen-left-breast-jenny-m.html)| [TumorSpecimen] | [R4Specimen] |
-| [`Cancer Genomics Report`](DiagnosticReport-cancer-genomics-report-jenny-m.html)| [CancerGenomicsReport] | [USCoreLaboratoryResultObservation]|
+| [`Cancer Genomics Report`](DiagnosticReport-cancer-genomics-report-jenny-m.html)| [GenomicsReport] | [USCoreLaboratoryResultObservation]|
 {: .grid }
 
 

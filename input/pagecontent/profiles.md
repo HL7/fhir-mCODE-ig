@@ -2,8 +2,6 @@ The following Profiles and have been defined for this implementation guide:
 
 * [BodyStructureIdentifier]
 * [CancerDiseaseStatus]
-* [CancerGenomicVariant]
-* [CancerGenomicsReport]
 * [CancerPatient]
 * [CancerRelatedMedicationAdministration]
 * [CancerRelatedMedicationRequest]
@@ -14,6 +12,8 @@ The following Profiles and have been defined for this implementation guide:
 * [ECOGPerformanceStatus]
 * [GenomicRegionStudied]
 * [GenomicSpecimen]
+* [GenomicsReport]
+* [GenomicVariant]
 * [KarnofskyPerformanceStatus]
 * [mCODEPatientBundle]
 * [mCODEPatientGroup]

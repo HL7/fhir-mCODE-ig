@@ -288,7 +288,7 @@ Description: "Extended example: example showing HER2 status"
 // 7-Gene Panel
 
 Instance: cancer-genomics-report-jenny-m
-InstanceOf: CancerGenomicsReport
+InstanceOf: GenomicsReport
 Description: "Extended example: example of gene panel report"
 * status = #final "final"
 * category[0] = DiagnosticService#LAB

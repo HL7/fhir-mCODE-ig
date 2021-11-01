@@ -9,7 +9,7 @@ Where US Core does not provide an appropriate base profile, mCODE profiles FHIR 
 | [Brachytherapy Treatment Phase][BrachytherapyTreatmentPhase]| yes | US Core Procedure |
 | [Cancer Disease Status][CancerDiseaseStatus] | no | Observation |
 | [Cancer Genomic Variant][CancerGenomicVariant] | yes | US Core Laboratory Result Observation |
-| [Cancer Genomics Report][CancerGenomicsReport] | yes | US Core Diagnostic Report Lab |
+| [Cancer Genomics Report][GenomicsReport] | yes | US Core Diagnostic Report Lab |
 | [Cancer Patient][CancerPatient] | yes | US Core Patient |
 | [Cancer-Related Medication Administration][CancerRelatedMedicationAdministration] | no | Medication Administration |
 | [Cancer-Related Medication Request][CancerRelatedMedicationRequest] | yes | US Core Medication Request |

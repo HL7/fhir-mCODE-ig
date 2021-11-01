@@ -67,8 +67,8 @@ Note that the requests below may return resources associated with patients who a
 
 * Genomics
   * [CancerGenomicVariant]\: `GET [base]/Observation?code=http://loinc.org|69548-6`
-  * [GenomicSpecimen]\: Resources referenced in the `specimen` element in resources conforming to [CancerGenomicVariant] or [CancerGenomicsReport]
-  * [CancerGenomicsReport]\: `GET [base]/DiagnosticReport?code=http://loinc.org|81247-9`
+  * [GenomicSpecimen]\: Resources referenced in the `specimen` element in resources conforming to [CancerGenomicVariant] or [GenomicsReport]
+  * [GenomicsReport]\: `GET [base]/DiagnosticReport?code=http://loinc.org|81247-9`
   * [GenomicRegionStudied]\: `GET [base]/Observation?code=http://loinc.org|53041-0`
 
 * Treatment
@@ -110,7 +110,7 @@ mCODE participants SHOULD meet the following requirements for conformance:
 
 #### Support All mCODE Profiles
 
-In addition to supporting the core profiles as described above, mCODE participants SHOULD support all profiles defined in mCODE UNLESS the participant does not anticipate supplying or consuming a certain type of data, usually by virtue of playing a limited or specialized role in clinical or information workflows. For example, a genomics laboratory may support [CancerGenomicsReport], but not vital signs or staging.
+In addition to supporting the core profiles as described above, mCODE participants SHOULD support all profiles defined in mCODE UNLESS the participant does not anticipate supplying or consuming a certain type of data, usually by virtue of playing a limited or specialized role in clinical or information workflows. For example, a genomics laboratory may support [GenomicsReport], but not vital signs or staging.
 
 Participants SHOULD also support the non-mCODE-specific profiles that are considered part of an [mCODE Patient Bundle][MCODEPatientBundle], such as [blood pressure](http://hl7.org/fhir/StructureDefinition/bp).
 

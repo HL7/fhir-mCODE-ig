@@ -6,7 +6,7 @@ Description:    "Records an alteration in the most common DNA nucleotide sequenc
 * insert NotUsed(bodySite)
 * insert NotUsed(referenceRange)
 * insert NotUsed(hasMember)
-* code = LNC#69548-6 //"Genetic variant assessment" -- not Genomic!
+* code = LNC#69548-6 //"GENETIC variant assessment" (not Genomic!)
 * method from http://loinc.org/vs/LL4048-6 (extensible)
 * specimen only Reference(GenomicSpecimen)
 * value[x] only CodeableConcept
@@ -152,12 +152,11 @@ Description:    "A small sample of blood, hair, skin, amniotic fluid (the fluid 
 * type from GenomicSpecimenTypeVS (extensible)
 
 
-Profile:    CancerGenomicsReport
+Profile:    GenomicsReport
 Parent:     USCoreDiagnosticReportLab
-Id: mcode-cancer-genomics-report
+Id: mcode-genomics-report
 Title:      "Cancer Genomics Report Profile"
 Description:    "Genomic analysis summary report. The report may include one or more tests, with two distinct test types. The first type is a targeted mutation test, where a specific mutation on a specific gene is tested for. The result is either positive or negative for that mutation. The second type is a more general test for variants. This type of test returns the identity of variants found in a certain region of the genome."
-* subject only Reference(CancerPatient)
 * category contains GenomicsCategory 1..1
 * category[GenomicsCategory] = DiagnosticService#GE
 * code = LNC#81247-9 //"Master HL7 Genomic variant reporting panel"

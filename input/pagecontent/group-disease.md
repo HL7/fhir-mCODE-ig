@@ -110,6 +110,6 @@ mCODE includes single FHIR profile, [TumorMarkerTest], for all labs involving se
 
 ### Code Systems
 
-* [SnomedRequestedVS]
+* [SnomedRequestedCS]
 
 {% include markdown-link-references.md %}

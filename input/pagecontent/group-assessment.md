@@ -81,7 +81,6 @@ Vital signs are measurements of the most essential, or "vital" body functions. F
 * [ElixhauserValvularDiseaseVS]
 * [ElixhauserWeightLossVS]
 * [Karnofsky performance status] (external)
-
 * [PresentAbsentVS]
 
 ### Code Systems

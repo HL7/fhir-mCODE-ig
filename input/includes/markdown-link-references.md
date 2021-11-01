@@ -8,8 +8,6 @@
 <!-- mCODE Profiles -->
 [BodyStructureIdentifier]: StructureDefinition-mcode-body-structure-identifier.html
 [CancerDiseaseStatus]: StructureDefinition-mcode-cancer-disease-status.html
-[CancerGenomicVariant]: StructureDefinition-mcode-cancer-genomic-variant.html
-[CancerGenomicsReport]: StructureDefinition-mcode-cancer-genomics-report.html
 [CancerPatient]: StructureDefinition-mcode-cancer-patient.html
 [CancerRelatedMedicationAdministration]: StructureDefinition-mcode-cancer-related-medication-administration.html
 [CancerRelatedMedicationRequest]: StructureDefinition-mcode-cancer-related-medication-request.html
@@ -20,6 +18,8 @@
 [ECOGPerformanceStatus]: StructureDefinition-mcode-ecog-performance-status.html
 [GenomicRegionStudied]: StructureDefinition-mcode-genomic-region-studied.html
 [GenomicSpecimen]: StructureDefinition-mcode-genomic-specimen.html
+[GenomicsReport]: StructureDefinition-mcode-genomics-report.html
+[GenomicVariant]: StructureDefinition-mcode-cancer-genomic-variant.html
 [KarnofskyPerformanceStatus]: StructureDefinition-mcode-karnofsky-performance-status.html
 [MCODEPatientBundle]: StructureDefinition-mcode-patient-bundle.html
 [MCODEPatientGroup]: StructureDefinition-mcode-patient-group.html

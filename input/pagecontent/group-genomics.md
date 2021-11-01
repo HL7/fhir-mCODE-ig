@@ -19,7 +19,7 @@ There are however tumor marker tests that are molecular marker equivalent tests 
 
 mCODE includes genomics-related data elements needed inform cancer assessment and treatment options. The profiles are based on the [HL7 CGWG Clinical Genomics Reporting Implementation Guide](http://hl7.org/fhir/uv/genomics-reporting/index.html). Four profiles relate to the capture of clinical genomics data:
 
-* [CancerGenomicsReport] - contain results of genomic analyses. Genomic reports vary in complexity and content, as simple as the results for a single discrete variant to complex sequences.
+* [GenomicsReport] - contain results of genomic analyses. Genomic reports vary in complexity and content, as simple as the results for a single discrete variant to complex sequences.
 * [CancerGenomicVariant] - used to record variants that could be found from tests that broadly analyze genomic regions (e.g.: exome tests) and stores results for any variants that could have been found. The region in which the variant was found could be specified in the RegionStudied attribute of the GenomicsReport profile.
 * [GenomicRegionStudied] - used to record the portion(s) of the genome that was tested for variants.
 * [GenomicSpecimen] - describes a specimen collected for a genomics test.
@@ -34,11 +34,10 @@ A gene made by joining parts of two different genes. Fusion genes, and the fusio
 
 mCODE represents a fusion gene as an instance of **CancerGenomicVariant** with the following changes:
 
-* The _**molecular-consequence**_ component is fixed to the SequenceOntology code _SO:001565_ (gene_fusion)
-* Two _**gene-studied**_ components are included, one for each gene involved in the fusion event.
+* The _**molecularConsequence**_ component is fixed to the SequenceOntology code _SO:001565_ (gene_fusion)
+* Two _**geneStudied**_ components are included, one for each gene involved in the fusion event.
 
 The diagram below shows an example representation for the gene fusion BCR_ABL1:
-
 
 <div style="text-align: center;">
 <img src="mCODE-gene-fusion.svg" alt="Example mCODE Gene Fusion" />
@@ -46,14 +45,14 @@ The diagram below shows an example representation for the gene fusion BCR_ABL1:
 
 The mCODE example [`cancer-genomic-variant-fusion`](Observation-cancer-genomic-variant-fusion.html) demonstrates the gene fusion representation.
 
-**NOTE:** A fusion event that is related to two variants will be expressed as two separate variant instances. Both variants from the same fusion event can be included as DiagnosticReport.result slices under **GenomicsReport**.
+**NOTE:** A fusion event that is related to two variants will be expressed as two separate variant instances. Both variants from the same fusion event can be included as DiagnosticReport.result slices under [GenomicsReport].
 
 ### Profiles
 
-* [CancerGenomicsReport]
-* [CancerGenomicVariant]
 * [GenomicRegionStudied]
 * [GenomicSpecimen]
+* [GenomicsReport]
+* [GenomicVariant]
 
 ### Value Sets
 

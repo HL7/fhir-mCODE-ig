@@ -45,18 +45,27 @@ pages:
     title: Profile Conformance
   terminology.md:
     title: Terminology
-  glossary.md:
-    title: Glossary
-  examples.md:
-    title: Extended Example
+  profiles.md:
+    title: Profiles
+  extensions.md:
+    title: Extensions
+  valuesets.md:
+    title: Value Sets
+  codesystems.md:
+    title: CodeSystems
   artifacts.html:
     title: Artifacts Summary
+  examples.md:
+    title: Extended Example
   dictionary.md:
     title: Data Dictionary
-  downloads.md:
-    title: Download Specification
+  glossary.md:
+    title: Glossary
   change_log.md:
     title: Change Log
+  downloads.md:
+    title: Download Specification
+
 menu:
   Home: index.html
   Content by Group:
@@ -72,10 +81,10 @@ menu:
     Profile Conformance: conformance-profiles.html
     Terminology: terminology.html
   FHIR Artifacts:
-    Profiles: artifacts.html#structures-abstract-profiles
-    Extensions: artifacts.html#structures-extension-definitions
-    Value Sets: artifacts.html#terminology-value-sets
-    Code Systems: artifacts.html#terminology-code-systems
+    Profiles: profiles.html
+    Extensions: extensions.html
+    Value Sets: valuesets.html
+    Code Systems: codesystems.html
     Capability Statements: artifacts.html#behavior-capability-statements
     Example Instances: artifacts.html#example-example-instances
     Complete Listing: artifacts.html
@@ -84,5 +93,5 @@ menu:
     Data Dictionary: dictionary.html
     Glossary:  glossary.html
     Change Log: change_log.html
-    Other Versions: http://hl7.org/fhir/us/mcode/history.html
     Download Specification: downloads.html
+    Other Versions: http://hl7.org/fhir/us/mcode/history.html

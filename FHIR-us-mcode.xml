@@ -13,13 +13,13 @@
 <artifact id="StructureDefinition/mcode-body-location-qualifier" key="StructureDefinition-mcode-body-location-qualifier" name="Body Location Qualifier Extension"/>
 <artifact id="ValueSet/mcode-body-location-qualifier-vs" key="ValueSet-mcode-body-location-qualifier-vs" name="Body Location Qualifier Value Set"/>
 <artifact id="StructureDefinition/mcode-body-structure-identifier" key="StructureDefinition-mcode-body-structure-identifier" name="Body Structure Identifier Data Type Profile"/>
-<artifact id="ValueSet/mcode-brachyhdrelectronic-technique-vs" key="ValueSet-mcode-brachyhdrelectronic-technique-vs" name="Brachytherapy High Dose Rate Electronic Technique Value Set"/>
-<artifact id="ValueSet/mcode-brachyhdr-technique-vs" key="ValueSet-mcode-brachyhdr-technique-vs" name="Brachytherapy High Dose Rate Technique Value Set"/>
-<artifact id="ValueSet/mcode-brachyldr-technique-vs" key="ValueSet-mcode-brachyldr-technique-vs" name="Brachytherapy Low Dose Rate Temporary Radation Technique Value Set"/>
+<artifact id="ValueSet/mcode-brachytherapy-high-dose-rate-electronic-technique-vs" key="ValueSet-mcode-brachytherapy-high-dose-rate-electronic-technique-vs" name="Brachytherapy High Dose Rate Electronic Technique Value Set"/>
+<artifact id="ValueSet/mcode-brachytherapy-high-dose-rate-technique-vs" key="ValueSet-mcode-brachytherapy-high-dose-rate-technique-vs" name="Brachytherapy High Dose Rate Technique Value Set"/>
+<artifact id="ValueSet/mcode-brachytherapy-low-dose-rate-temporary-technique-vs" key="ValueSet-mcode-brachytherapy-low-dose-rate-temporary-technique-vs" name="Brachytherapy Low Dose Rate Temporary Radation Technique Value Set"/>
 <artifact id="ValueSet/mcode-brachytherapy-modality-vs" key="ValueSet-mcode-brachytherapy-modality-vs" name="Brachytherapy Modality Value Set"/>
-<artifact id="ValueSet/mcode-brachyintradiotherapyseed-technique-vs" key="ValueSet-mcode-brachyintradiotherapyseed-technique-vs" name="Brachytherapy Permanent Seeds Technique Value Set"/>
-<artifact id="ValueSet/mcode-brachypdr-technique-vs" key="ValueSet-mcode-brachypdr-technique-vs" name="Brachytherapy Pulsed Dose Rate Technique Value Set"/>
-<artifact id="ValueSet/mcode-brachyradiopharmaceutical-technique-vs" key="ValueSet-mcode-brachyradiopharmaceutical-technique-vs" name="Brachytherapy Radiopharmaceutical Technique Value Set"/>
+<artifact id="ValueSet/mcode-brachytherapy-permanent-seeds-technique-vs" key="ValueSet-mcode-brachytherapy-permanent-seeds-technique-vs" name="Brachytherapy Permanent Seeds Technique Value Set"/>
+<artifact id="ValueSet/mcode-brachytherapy-pulsed-dose-rate-technique-vs" key="ValueSet-mcode-brachytherapy-pulsed-dose-rate-technique-vs" name="Brachytherapy Pulsed Dose Rate Technique Value Set"/>
+<artifact id="ValueSet/mcode-brachytherapy-radiopharmaceutical-technique-vs" key="ValueSet-mcode-brachytherapy-radiopharmaceutical-technique-vs" name="Brachytherapy Radiopharmaceutical Technique Value Set"/>
 <artifact id="ValueSet/mcode-brachytherapy-technique-vs" key="ValueSet-mcode-brachytherapy-technique-vs" name="Brachytherapy Technique Value Set"/>
 <artifact deprecated="true" id="StructureDefinition/mcode-brachytherapy-treatment-phase" key="StructureDefinition-mcode-brachytherapy-treatment-phase" name="Brachytherapy Treatment Phase"/>
 <artifact id="ValueSet/mcode-cancer-body-location-vs" key="cancer-body-location-value-set" name="Cancer Body Location Value Set"/>
@@ -349,10 +349,10 @@
 <artifact id="Observation/us-core-smokingstatus-jenny-m" key="Observation-us-core-smokingstatus-jenny-m" name="us-core-smokingstatus-jenny-m"/>
 <page key="NA" name="(NA)"/>
 <page key="many" name="(many)"/>
-<page deprecated="true" key="profiles" name="(profiles)"/>
 <page key="artifacts" name="Artifacts Summary"/>
 <page key="group-assessment" name="Assessment"/>
 <page key="changelog" name="Change Log"/>
+<page key="codesystems" name="CodeSystems"/>
 <page key="conformance-general" name="Conformance Expectations"/>
 <page key="dictionary" name="Data Dictionary"/>
 <page key="group-disease" name="Disease Characterization"/>
@@ -368,6 +368,7 @@
 <page key="group-outcome" name="Outcomes"/>
 <page key="group-patient" name="Patient Information"/>
 <page key="conformance-profiles" name="Profile Conformance"/>
+<page key="profiles" name="Profiles"/>
 <page key="toc" name="Table of Contents"/>
 <page key="terminology" name="Terminology"/>
 <page key="group-treatment" name="Treatments"/>

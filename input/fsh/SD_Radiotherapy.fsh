@@ -127,7 +127,7 @@ Description: "Extension capturing modality and technique of a given radiotherapy
 // Expression: "extension.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-modality').exists() and
 //              extension.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-technique').exists() and
 //              extension.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-modality').valueCodeableConcept.exists(coding.system = 'http://snomed.info/sct' and coding.code = '440252007')
-//                   implies extension.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-technique').value in 'http://hl7.org/fhir/us/mcode/ValueSet/mcode-brachyradiopharmaceutical-technique-vs'"
+//                   implies extension.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-technique').value in 'http://hl7.org/fhir/us/mcode/ValueSet/mcode-brachytherapy-radiopharmaceutical-technique-vs'"
 // Severity: #error
 // # Invariant: TechniquesForPhotonBeamModality
 // Removed requirement for "coding.system = 'http://snomed.info/sct' and " temporarily because of placeholder 3D code '

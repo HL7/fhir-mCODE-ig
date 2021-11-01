@@ -29,9 +29,7 @@
 <artifact id="StructureDefinition/mcode-cancer-disease-status" key="StructureDefinition-mcode-cancer-disease-status" name="Cancer Disease Status Profile"/>
 <artifact id="ValueSet/mcode-cancer-disorder-vs" key="cancer-disorder-value-set" name="Cancer Disorder Value Set"/>
 <artifact deprecated="true" id="StructureDefinition/mcode-cancer-genetic-variant" key="cancer-genetic-variant" name="Cancer Genetic Variant"/>
-<artifact id="StructureDefinition/mcode-cancer-genomic-variant" key="StructureDefinition-mcode-cancer-genomic-variant" name="Genomic Variant Profile"/>
 <artifact deprecated="true" id="StructureDefinition/mcode-cancer-genomics-report" key="cancer-genomics-report" name="Cancer Genomics Report"/>
-<artifact id="StructureDefinition/mcode-genomics-report" key="StructureDefinition-mcode-genomics-report" name="Cancer Genomics Report Profile"/>
 <artifact deprecated="true" id="StructureDefinition/mcode-cancer-patient" key="cancer-patient" name="Cancer Patient"/>
 <artifact id="StructureDefinition/mcode-cancer-patient" key="StructureDefinition-mcode-cancer-patient" name="Cancer Patient Profile"/>
 <artifact deprecated="true" id="Profile/mcode-cancer-related-medication-statement" key="cancer-related-medication-statement" name="Cancer Related Medication Statement"/>
@@ -109,6 +107,8 @@
 <artifact id="StructureDefinition/mcode-genomic-region-studied" key="StructureDefinition-mcode-genomic-region-studied" name="Genomic Region Studied Profile"/>
 <artifact id="StructureDefinition/mcode-genomic-specimen" key="StructureDefinition-mcode-genomic-specimen" name="Genomic Specimen Profile"/>
 <artifact id="ValueSet/mcode-genomic-specimen-type-vs" key="ValueSet-mcode-genomic-specimen-type-vs" name="Genomic Specimen Type Value Set"/>
+<artifact id="StructureDefinition/mcode-genomic-variant" key="StructureDefinition-mcode-genomic-variant" name="Genomic Variant Profile"/>
+<artifact id="StructureDefinition/mcode-genomics-report" key="StructureDefinition-mcode-genomics-report" name="Genomics Report Profile"/>
 <artifact deprecated="true" id="ValueSet/mcode-hgvs-sequence-variant-nomenclature-value-set" key="hgvs-sequence-variant-nomenclature-value-set" name="HGVS Sequence Variant Nomenclature Value Set"/>
 <artifact id="ValueSet/mcode-hgnc-vs" key="hugo-gene-nomenclature-committee-gene-names-value-set" name="HUGO Gene Nomenclature Committee Gene Names Value Set"/>
 <artifact deprecated="true" id="Extension/mcode-histology-morphology-behavior-extension" key="histology-morphology-behavior-extension" name="Histology Morphology Behavior Extension"/>
@@ -214,12 +214,8 @@
 <artifact deprecated="true" id="Observation/cancer-genetic-variant-germline-deletion" key="Observation-cancer-genetic-variant-germline-deletion" name="cancer-genetic-variant-germline-deletion"/>
 <artifact deprecated="true" id="Observation/cancer-genetic-variant-jenny-m" key="Observation-cancer-genetic-variant-jenny-m" name="cancer-genetic-variant-jenny-m"/>
 <artifact deprecated="true" id="Observation/cancer-genetic-variant-somatic-single-nucleotide" key="Observation-cancer-genetic-variant-somatic-single-nucleotide" name="cancer-genetic-variant-somatic-single-nucleotide"/>
-<artifact id="Observation/cancer-genomic-variant-fusion" key="Observation-cancer-genomic-variant-fusion" name="cancer-genomic-variant-fusion"/>
-<artifact id="Observation/cancer-genomic-variant-germline-deletion" key="Observation-cancer-genomic-variant-germline-deletion" name="cancer-genomic-variant-germline-deletion"/>
-<artifact id="Observation/cancer-genomic-variant-jenny-m" key="Observation-cancer-genomic-variant-jenny-m" name="cancer-genomic-variant-jenny-m"/>
-<artifact id="Observation/cancer-genomic-variant-somatic-single-nucleotide" key="Observation-cancer-genomic-variant-somatic-single-nucleotide" name="cancer-genomic-variant-somatic-single-nucleotide"/>
-<artifact id="DiagnosticReport/cancer-genomics-report-jenny-m" key="DiagnosticReport-cancer-genomics-report-jenny-m" name="cancer-genomics-report-jenny-m"/>
-<artifact id="DiagnosticReport/cancer-genomics-report-john-anyperson" key="DiagnosticReport-cancer-genomics-report-john-anyperson" name="cancer-genomics-report-john-anyperson"/>
+<artifact deprecated="true" id="DiagnosticReport/cancer-genomics-report-jenny-m" key="DiagnosticReport-cancer-genomics-report-jenny-m" name="cancer-genomics-report-jenny-m"/>
+<artifact deprecated="true" id="DiagnosticReport/cancer-genomics-report-john-anyperson" key="DiagnosticReport-cancer-genomics-report-john-anyperson" name="cancer-genomics-report-john-anyperson"/>
 <artifact id="Patient/cancer-patient-adam-everyman" key="Patient-cancer-patient-adam-everyman" name="cancer-patient-adam-everyman"/>
 <artifact id="Patient/cancer-patient-eve-anyperson" key="Patient-cancer-patient-eve-anyperson" name="cancer-patient-eve-anyperson"/>
 <artifact id="Patient/cancer-patient-jenny-m" key="Patient-cancer-patient-jenny-m" name="cancer-patient-jenny-m"/>
@@ -246,6 +242,12 @@
 <artifact id="Observation/genomic-region-studied-stk11" key="Observation-genomic-region-studied-stk11" name="genomic-region-studied-stk11"/>
 <artifact id="Specimen/genomic-specimen-left-breast-jenny-m" key="Specimen-genomic-specimen-left-breast-jenny-m" name="genomic-specimen-left-breast-jenny-m"/>
 <artifact id="Specimen/genomic-specimen-lung" key="Specimen-genomic-specimen-lung" name="genomic-specimen-lung"/>
+<artifact id="Observation/genomic-variant-fusion" key="Observation-genomic-variant-fusion" name="genomic-variant-fusion"/>
+<artifact id="Observation/genomic-variant-germline-deletion" key="Observation-genomic-variant-germline-deletion" name="genomic-variant-germline-deletion"/>
+<artifact id="Observation/genomic-variant-jenny-m" key="Observation-genomic-variant-jenny-m" name="genomic-variant-jenny-m"/>
+<artifact id="Observation/genomic-variant-somatic-single-nucleotide" key="Observation-genomic-variant-somatic-single-nucleotide" name="genomic-variant-somatic-single-nucleotide"/>
+<artifact id="DiagnosticReport/genomics-report-jenny-m" key="DiagnosticReport-genomics-report-jenny-m" name="genomics-report-jenny-m"/>
+<artifact id="DiagnosticReport/genomics-report-john-anyperson" key="DiagnosticReport-genomics-report-john-anyperson" name="genomics-report-john-anyperson"/>
 <artifact id="BodyStructure/jenny-m-chest-wall-lymph-nodes-treatment-volume" key="BodyStructure-jenny-m-chest-wall-lymph-nodes-treatment-volume" name="jenny-m-chest-wall-lymph-nodes-treatment-volume"/>
 <artifact id="BodyStructure/jenny-m-chest-wall-treatment-volume" key="BodyStructure-jenny-m-chest-wall-treatment-volume" name="jenny-m-chest-wall-treatment-volume"/>
 <artifact id="BodyStructure/john-anyperson-treatment-volume" key="BodyStructure-john-anyperson-treatment-volume" name="john-anyperson-treatment-volume"/>
@@ -259,7 +261,7 @@
 <artifact deprecated="true" id="Example/mcode-cancer-disease-status-example-01" key="mcode-cancer-disease-status-example-01" name="mCODECancerDiseaseStatusExample01"/>
 <artifact deprecated="true" id="Example/mcode-cancer-genetic-variant-example-01" key="mcode-cancer-genetic-variant-example-01" name="mCODECancerGeneticVariantExample01"/>
 <artifact deprecated="true" id="Example/mcode-cancer-genetic-variant-example-02" key="mcode-cancer-genetic-variant-example-02" name="mCODECancerGeneticVariantExample02"/>
-<artifact deprecated="true" id="Example/mcode-cancer-genomics-report-example-01" key="mcode-cancer-genomics-report-example-01" name="mCODEGenomicsReportExample01"/>
+<artifact deprecated="true" id="Example/mcode-cancer-genomics-report-example-01" key="mcode-cancer-genomics-report-example-01" name="mCODECancerGenomicsReportExample01"/>
 <artifact deprecated="true" id="Example/mcode-cancer-related-medication-statement-example-01" key="mcode-cancer-related-medication-statement-example-01" name="mCODECancerRelatedMedicationStatementExample01"/>
 <artifact deprecated="true" id="Example/mcode-cancer-related-medication-statement-example-02" key="mcode-cancer-related-medication-statement-example-02" name="mCODECancerRelatedMedicationStatementExample02"/>
 <artifact deprecated="true" id="Example/mcode-cancer-related-radiation-procedure-example-01" key="mcode-cancer-related-radiation-procedure-example-01" name="mCODECancerRelatedRadiationProcedureExample01"/>

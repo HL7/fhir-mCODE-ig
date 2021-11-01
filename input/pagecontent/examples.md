@@ -20,11 +20,7 @@ In addition to individual examples of each , this extended example demonstrates 
 <strong>Note:</strong> patient and clinical data in the narrative example below are linked to the relevant FHIR examples using <a href="#"><code style="background-color: #f5f2f0; color: #000;">this styling</code></a>.
 </div>
 
-<<<<<<< HEAD
 [`Patient Jenny M.`](Patient-cancer-patient-jenny-m.html) is a 55 year old non-Hispanic white female with a [`past medical history`](Observation-cancer-related-mcode-comorbidities-elixhauser-jenny-m.html) significant for [`depression`](Condition-us-core-condition-depression-jenny-m.html), a [`20-pack-year history of smoking`](Observation-observation-smoking-history-jenny-m.html) (current smoker), [`anxiety`](Condition-us-core-condition-anxiety-jenny-m.html), and [`hypertension`](Condition-us-core-condition-hypertension-jenny-m.html). Her family history was significant for a [`maternal aunt with ovarian cancer at age 69`](FamilyMemberHistory-family-member-history-aunt-jenny-m.json.html), a [`sister with breast cancer at age 64`](FamilyMemberHistory-family-member-history-sister-jenny-m.html), and [`deceased paternal uncle due to pancreatic cancer`](FamilyMemberHistory-family-member-history-uncle-jenny-m.html).
-=======
-[`Patient Jenny M.`](Patient-cancer-patient-jenny-m.html) is a 55 year old non-Hispanic white female with a [`past medical history`](Observation-cancer-related-mcode-comorbidities-elixhauser-jenny-m.html) significant for [`depression`](Condition-us-core-condition-depression-jenny-m.html), a [`20-pack-year history of smoking`](Observation-observation-smoking-pack-years-jenny-m.html) (current smoker), [`anxiety`](Condition-us-core-condition-anxiety-jenny-m.html), and [`hypertension`](Condition-us-core-condition-hypertension-jenny-m.html). Her family history was significant for a [`maternal aunt with ovarian cancer at age 69`](FamilyMemberHistory-family-member-history-aunt-jenny-m.json.html), a [`sister with breast cancer at age 64`](FamilyMemberHistory-family-member-history-sister-jenny-m.html), and [`deceased paternal uncle due to pancreatic cancer`](FamilyMemberHistory-family-member-history-uncle-jenny-m.html).
->>>>>>> master
 
 During a routine screening mammography in February 2018, an abnormality was detected as a possible mass and suspected breast cancer. The gynecologist performing the biopsy refers the patient to an oncologist for further workup. An ultrasound-guided biopsy was performed along with prognostic tumor marker tests with [`ER positive`](Observation-tumor-marker-test-er-jenny-m.html), [`PR negative`](Observation-tumor-marker-test-pr-jenny-m.html), and [`HER2 negative`](Observation-tumor-marker-test-her2-jenny-m.html). The patient is referred to an oncologist who clinically reviews the mammogram and tumor marker results, and clinical staged the [`cancer diagnosis`](Condition-primary-cancer-condition-jenny-m.html) as [`cT3`](Observation-tnm-clinical-primary-tumor-category-jenny-m.html)[`N0`](Observation-tnm-clinical-regional-nodes-category-jenny-m.html).
 
@@ -50,7 +46,6 @@ A timeline of the narrative is illustrated in the following diagram:
 
 | **Instance Description** | **mCODE Profile** | **Based On** |
 | ------------ | ---------------- | -------------- |
-<<<<<<< HEAD
 |  [`Cancer Patient: Jenny M`](Patient-cancer-patient-jenny-m.html)  |  [CancerPatient]  |  [USCorePatient] |
 |  [`Cancer Disease Status: Condition Improving`](Observation-cancer-disease-status-jenny-m.html) | [CancerDiseaseStatus] | [R4Observation]|
 |  [`Elixhauser Comorbidities: Anxiety, Depression, Hypertension`](Observation-cancer-related-mcode-comorbidities-elixhauser-jenny-m.html) | [ComorbiditiesElixhauser] |  [R4Observation]|
@@ -69,11 +64,6 @@ A timeline of the narrative is illustrated in the following diagram:
 |  [`Cancer Diagnosis`](Condition-primary-cancer-condition-jenny-m.html)|[PrimaryCancerCondition] | [USCoreCondition]|
 |  [`Radiation Treatment Summary`](Procedure-radiotherapy-treatment-summary-chest-wall-jenny-m.html) | [RadiotherapyCourseSummary]| [USCoreProcedure]
 |  [`Comorbidities`](Observation-cancer-related-mcode-comorbidities-elixhauser-jenny-m.html) | [ComorbiditiesElixhauser]| [R4Observation] |
-=======
-| [`Cancer Diagnosis`](Condition-primary-cancer-condition-jenny-m.html)|[PrimaryCancerCondition] | [USCoreCondition]|
-| [`Cancer Disease Status: Condition Improving`](Observation-cancer-disease-status-jenny-m.html) | [CancerDiseaseStatus] | [R4Observation]|
-| [`Cancer Patient: Jenny M`](Patient-cancer-patient-jenny-m.html)  | [CancerPatient]  | [USCorePatient] |
->>>>>>> master
 | [`Clinical Cancer Stage: 2B`](Observation-tnm-clinical-stage-group-jenny-m.html) |[CancerStageGroup] | [R4Observation]|
 | [`Clinical Primary Tumor Category: cT3`](Observation-tnm-clinical-primary-tumor-category-jenny-m.html) | [TNMPrimaryTumorCategory] | [R4Observation] |
 | [`Clinical Regional Lymph Nodes Category: cN0`](Observation-tnm-clinical-regional-nodes-category-jenny-m.html) | [TNMRegionalNodesCategory]| [R4Observation] |

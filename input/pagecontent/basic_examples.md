@@ -10,7 +10,7 @@
 #### [Cancer Related Medication Request]() ([US Core Medication Request](http://hl7.org/fhir/us/core/STU4/StructureDefinition-us-core-medication-request.html))
 *  [CisPlatin - ChemoInfusion](MedicationRequest-cancer-related-medication-request-cisplatin.html)
 *  [GeFitinib - Oral Tablet](MedicationRequest-cancer-related-medication-request-gefitinib.html)
-#### [Cancer Related Surgical Procedure](Structure-definition-mcode-cancer-related-surgical-procedure.html) ([US Core Procedure](http://hl7.org/fhir/us/core/STU4/StructureDefinition-us-core-procedure.html)))
+#### [Cancer Related Surgical Procedure](Structure-definition-mcode-cancer-related-surgical-procedure.html) ([US Core Procedure](http://hl7.org/fhir/us/core/STU4/StructureDefinition-us-core-procedure.html))
 *  [Lobotomy](Procedure-cancer-related-surgical-procedure-lobectomy.html)
 #### [ECOG Performance Status](StructureDefinition/mcode-ecog-performance-status.html) ([Observation](http://hl7.org/fhir/R4/observation.html))
 *  [Fully Active](Observation-ecog-performance-status-fully-active.html)

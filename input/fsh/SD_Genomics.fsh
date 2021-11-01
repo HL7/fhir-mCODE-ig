@@ -54,9 +54,9 @@ Description:    "Records an alteration in the most common DNA nucleotide sequenc
 * component[genomicDNAChangeType] ^short = "DNA Change Type"
 * component[genomicDNAChangeType] ^definition = "Codified type for associated DNA Marker. DNA Markers use the HGVS notation which implies the DNA Marker Type, but the concurrent use of this code will allow a standard and explicit type for technical and display convenience."
 
-* component[molecularConsequence].code = LNC_TBD#molecular-consequence  // Note LNC_TBD - accepted by HL7 while waiting for a LOINC code assignment
+* component[molecularConsequence].code = LNC_TBD#molecular-consequence
 * component[molecularConsequence].value[x] only CodeableConcept
-* component[molecularConsequence].value[x] from MolecularConsequenceVS (extensible)
+* component[molecularConsequence].value[x] from GenomicMolecularConsequenceVS (extensible)
 * component[molecularConsequence] ^short = "Molecular consequence"
 * component[molecularConsequence] ^definition = "Changes in a structural features of a sequence due to the observed variant."
 
@@ -135,7 +135,7 @@ RuleSet: CancerRelatedSpecimenRules
     BodyLocationQualifier named locationQualifier 0..* and
     LateralityQualifier named lateralityQualifier 0..1
 // It would be nice to reuse the existing condition-related extension (see Jira https://jira.hl7.org/projects/FHIR/issues/FHIR-31027) but it doesn't apply to Specimen
-* extension contains ConditionRelated named relatedCondition 0..1 MS
+* extension contains RelatedCondition named relatedCondition 0..1 MS
 * extension[relatedCondition].value[x] only Reference(PrimaryCancerCondition or SecondaryCancerCondition)
 * extension[relatedCondition] ^short = "Cancer condition associated with this sample."
 * extension[relatedCondition] ^definition = "A reference that associates this sample with a cancer condition."

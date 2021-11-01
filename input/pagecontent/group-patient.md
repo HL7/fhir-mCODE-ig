@@ -10,4 +10,8 @@ The mCODE **Patient Information** group contains the following information about
 * [MCODEPatientBundle]
 * [MCODEPatientGroup]
 
+### Code Systems
+
+* [ResourceIdentifierCS]
+
 {% include markdown-link-references.md %}

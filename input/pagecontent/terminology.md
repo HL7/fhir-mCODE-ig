@@ -77,7 +77,7 @@ Certain resources, particularly in the radiotherapy area, are missing appropriat
 
 **Links:**
 
-* [All code systems defined in mCODE](artifacts.html#terminology-code-systems)
-* [All value sets defined in mCODE](artifacts.html#terminology-value-sets)
+* [Code systems defined in mCODE](codesystems.html)
+* [Value sets used in mCODE](valuesets.html)
 
 {% include markdown-link-references.md %}

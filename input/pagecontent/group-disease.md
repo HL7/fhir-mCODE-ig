@@ -29,14 +29,7 @@ Clinicians assign stages to cancers according to rules defined in various [cance
 
 Cancer stage information is contained in a set of profiles. One profile on Observation represents the [stage group][CancerStageGroup]. The stage group contains optional references to additional profiles representing the primary tumor (T), regional nodes (N), and distant metastases (M) categories. These references are used only in conjunction with TNM staging systems.
 
-The `Observation.code` element value is used to distinguish the method of staging, e.g., [clinical](https://www.cancer.gov/publications/dictionaries/cancer-terms/def/clinical-staging) or [pathologic](https://www.cancer.gov/publications/dictionaries/cancer-terms/def/pathologic-staging). For other types staging (e.g., retreatment (r) or autopsy (a)), a code indicating "other" staging type must be used. The staging type codes for the `Observation.code` element are found in these value sets:
-
-* [ObservationCodesStageGroupVS]
-* [ObservationCodesPrimaryTumorVS]
-* [ObservationCodesRegionalNodesVS]
-* [ObservationCodesDistantMetastasesVS]
-
-In mCODE, a single patient may have more than one staging panel, although this is not common in practice.
+The `Observation.code` element value is used to distinguish the method of staging, e.g., [clinical](https://www.cancer.gov/publications/dictionaries/cancer-terms/def/clinical-staging) or [pathologic](https://www.cancer.gov/publications/dictionaries/cancer-terms/def/pathologic-staging). For other types staging (e.g., retreatment (r) or autopsy (a)), a code indicating "other" staging type must be used. In mCODE, a single patient may have more than one staging panel, although this is not common in practice.
 
 #### TNM Staging Information
 
@@ -59,7 +52,7 @@ Support for non-TNM staging systems in mCODE is limited to [CancerStageGroup]. T
 
 Body locations in FHIR are typically represented using a single code. However, a single code is often insufficient to describe where a tumor is located, where a surgery is targeted, or where a radiation treatment is focused. When a single code is insufficient, FHIR recommends using a BodyStructure. This is appropriate when the BodyStructure is something to be tracked over time, for example, in the case of [Tumor]. But generally, it is better to describe a body location without using an additional resource.
 
-mCODE has adopted an approach that allows the user to add additional code or codes to further define the body site, without the need to create an independent resource. This takes the form of a [BodyLocationQualifier] extension. This extension can be used to specify laterality, directionality, and plane. It appears in mCODE wherever a body site code is found.
+mCODE has adopted an approach that allows the user to add additional code or codes to further define the body site, without the need to create an independent resource. This takes the form of the [LateralityQualifier] and [BodyLocationQualifier] extensions. These extensions can be used to specify laterality, directionality, and plane.
 
 ### Tumor Marker Tests
 
@@ -74,36 +67,29 @@ mCODE includes single FHIR profile, [TumorMarkerTest], for all labs involving se
   * [SecondaryCancerCondition]
 * Staging
   * [CancerStageGroup]
+  * [TNMDistantMetastasesCategory]
   * [TNMPrimaryTumorCategory]
   * [TNMRegionalNodesCategory]
-  * [TNMDistantMetastasesCategory]
 * Characterization
   * [TumorMarkerTest]
 
-
 ### Extensions
 
-* [HistologyMorphologyBehavior]
 * [BodyLocationQualifier]
+* [HistologyMorphologyBehavior]
 * [LateralityQualifier]
 
 ### Value Sets
 
-* **Diagnosis**
-  * [PrimaryCancerDisorderVS]
-  * [SecondaryCancerDisorderVS]
-  * [PrimaryMalignantNeoplasmDisorderVS]
-  * [SpecificDiagnosisCancerDisorderVS]
-  * [CarcinomaInSituDisorderVS]
-  * [MelanomaInSituDisorderVS]
+* **Disorder Type**
   * [BenignUncertainNeoplasmBrainCNSDisorderVS]
-  * [CytologicEvidenceOfMalignancyVS]
   * [CancerDisorderVS]
-  * [CancerBodyLocationVS]
-  * [BodyLocationQualifierVS]
-  * [LateralityQualifierVS]
-  * [HistologyMorphologyBehaviorVS]
-
+  * [CarcinomaInSituDisorderVS]
+  * [HypereosinophilicSyndromeDisorderVS]
+  * [MelanomaInSituDisorderVS]
+  * [PrimaryCancerDisorderVS]
+  * [PrimaryMalignantNeoplasmDisorderVS]
+  * [SecondaryCancerDisorderVS]
 * **Staging**
   * [CancerStageGroupVS]
   * [ObservationCodesStageGroupVS]
@@ -114,9 +100,16 @@ mCODE includes single FHIR profile, [TumorMarkerTest], for all labs involving se
   * [TNMRegionalNodesCategoryVS]
   * [TNMDistantMetastasesCategoryVS]
 * **Characterization**
+  * [CytologicEvidenceOfMalignancyVS]
+  * [HistologyMorphologyBehaviorVS]
   * [TumorMarkerTestVS]
 * **Location**
-  * [CancerBodyLocationVS]
   * [BodyLocationQualifierVS]
+  * [CancerBodyLocationVS]
   * [LateralityQualifierVS]
+
+### Code Systems
+
+* [SnomedRequestedVS]
+
 {% include markdown-link-references.md %}

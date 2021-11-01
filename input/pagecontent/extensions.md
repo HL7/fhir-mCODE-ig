@@ -1,9 +1,8 @@
-The following Extensions have been defined as part of mCODE:
+The following Extensions are defined as part of mCODE:
 
 * [BodyLocationQualifier]
 * [ComorbidConditionCode]
 * [ComorbidConditionReference]
-* [ConditionRelated]
 * [EvidenceType]
 * [HistologyMorphologyBehavior]
 * [LateralityQualifier]
@@ -13,6 +12,7 @@ The following Extensions have been defined as part of mCODE:
 * [RadiotherapyModalityAndTechnique]
 * [RadiotherapySessions]
 * [RadiotherapyTechnique]
+* [RelatedCondition]
 * [TreatmentTerminationReason]
 
 {% include markdown-link-references.md %}

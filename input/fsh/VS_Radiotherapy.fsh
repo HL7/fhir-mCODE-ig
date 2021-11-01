@@ -39,16 +39,16 @@ Id: mcode-teleradiotherapy-technique-vs
 Title: "Teleradiotherapy Technique Value Set"
 Description: "Codes describing the techniques of teleradiotherapy (external beam) procedures."
 * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
-* include codes from valueset PhotonBeamTechniqueVS
-* include codes from valueset ElectronBeamTechniqueVS
-* include codes from valueset NeutronBeamTechniqueVS
-* include codes from valueset CarbonIonBeamTechniqueVS
-* include codes from valueset ProtonBeamTechniqueVS
+* include codes from valueset TeleradiotherapyPhotonBeamTechniqueVS
+* include codes from valueset TeleradiotherapyElectronBeamTechniqueVS
+* include codes from valueset TeleradiotherapyNeutronTechniqueVS
+* include codes from valueset TeleradiotherapyCarbonIonBeamTechniqueVS
+* include codes from valueset TeleradiotherapyProtonBeamTechniqueVS
 // FLASH should be in here somewhere: need a temp code if we want to use it before January 2022
 // * SCT#1163157007 "Ultra high dose rate radiotherapy (procedure)"
 
-ValueSet: PhotonBeamTechniqueVS
-Id: mcode-photon-beam-technique-vs
+ValueSet: TeleradiotherapyPhotonBeamTechniqueVS
+Id: mcode-teleradiotherapy-photon-beam-technique-vs
 Title: "Photon Beam Technique Value Set"
 Description: "Allowed techniques for photon beam modality"
 * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
@@ -59,8 +59,8 @@ Description: "Allowed techniques for photon beam modality"
 * SCT#1156526006 "Two dimensional external beam radiation therapy (procedure)"
 * SCT#168524008 "Radiotherapy - intraoperative control (procedure)"
 
-ValueSet: ElectronBeamTechniqueVS
-Id: mcode-electron-beam-technique-vs
+ValueSet: TeleradiotherapyElectronBeamTechniqueVS
+Id: mcode-teleradiotherapy-electron-beam-technique-vs
 Title: "Electron Beam Technique Value Set"
 Description: "Allowed techniques for electron beam modality"
 * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
@@ -69,8 +69,8 @@ Description: "Allowed techniques for electron beam modality"
 * SCT#1156526006 "Two dimensional external beam radiation therapy (procedure)"
 * SCT#168524008 "Radiotherapy - intraoperative control (procedure)"
 
-ValueSet: NeutronBeamTechniqueVS
-Id: mcode-neutron-beam-technique-vs
+ValueSet: TeleradiotherapyNeutronTechniqueVS
+Id: mcode-teleradiotherapy-neutron-beam-technique-vs
 Title: "Neutron Beam Technique Value Set"
 Description: "Allowed techniques for neutron beam modality"
 * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
@@ -78,8 +78,8 @@ Description: "Allowed techniques for neutron beam modality"
 // * SCT#1162782007 "Three dimensional external beam radiation therapy (procedure)"
 * SCT_TBD#1162782007 "Three dimensional external beam radiation therapy (procedure)"
 
-ValueSet: CarbonIonBeamTechniqueVS
-Id: mcode-carbon-ion-beam-technique-vs
+ValueSet: TeleradiotherapyCarbonIonBeamTechniqueVS
+Id: mcode-teleradiotherapy-carbon-ion-beam-technique-vs
 Title: "Carbon Ion Beam Technique Value Set"
 Description: "Allowed techniques for carbon ion beam modality"
 * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
@@ -88,8 +88,8 @@ Description: "Allowed techniques for carbon ion beam modality"
 * SCT_TBD#USCRS-33517 "External beam radiation therapy using particle scanning technique (procedure)"
 // * SCT#1156525005 "Mixed beam external beam radiation therapy (procedure)" -- removed by RTTD Terminology decision 9/21
 
-ValueSet: ProtonBeamTechniqueVS
-Id: mcode-proton-beam-technique-vs
+ValueSet: TeleradiotherapyProtonBeamTechniqueVS
+Id: mcode-teleradiotherapy-proton-beam-technique-vs
 Title: "Proton Beam Technique Value Set"
 Description: "Allowed techniques for proton beam modality"
 * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"

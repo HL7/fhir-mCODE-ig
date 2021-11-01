@@ -1,6 +1,8 @@
 Alias: COMORB =  http://terminology.hl7.org/CodeSystem/comorbidities-elixhauser
 Alias: RID = http://hl7.org/fhir/us/mcode/CodeSystem/mcode-resource-identifier-cs
 Alias: RT = http://terminology.hl7.org/CodeSystem/radiotherapy
+Alias: LNC_TBD = http://hl7.org/fhir/us/mcode/CodeSystem/loinc-requested-cs
+Alias: SCT_TBD = http://hl7.org/fhir/us/mcode/CodeSystem/snomed-requested-cs
 
 CodeSystem: ResourceIdentifierCS
 Id: mcode-resource-identifier-cs
@@ -12,7 +14,6 @@ Please note that while these codes may imply conformance to the profiles that us
 1. An instance of a resource like Group, Observation, or Procedure may conform to multiple profiles, but may only have one 'type of thing' as determined by the value of `code` (which has a maximum cardinality of 1).
 2. `Procedure.code`, `Observation.code`, and `Group.code` elements require a [CodeableConcept data type](http://www.hl7.org/fhir/datatypes.html#CodeableConcept), which can be satisfied with a code from this code system. In contrast, a profile is identified with a [canonical URL](http://www.hl7.org/fhir/structuredefinition-definitions.html#StructureDefinition.url), which is represented by a [URI data type](http://www.hl7.org/fhir/datatypes.html#uri). In other words, a profile's canonical URL belongs in the `meta.profile` element, whereas the codes in this code system belong in `Resource.code` elements.
 3. The same `code` can correspond to more than one profile (although not the case here)."
-
 * #mcode-patient "mCODE Patient Group Resource" "Identifies a Group resource containing in-scope cancer patients that conforms to the MCODEPatientGroup profile."
 
 
@@ -61,15 +62,15 @@ Description: "A set of codes representing the comorbidity categories originally 
 * #VALVE    "Valvular disease Elixhauser category" "Patient has a disorder in the value set ElixhauserValvularDiseaseVS"
 * #WGHTLOSS    "Weight loss Elixhauser category" "Patient has a disorder in the value set ElixhauserWeightLossVS"
 
-CodeSystem: LNC_TBD
-Id: loinc-tbd-cs
+CodeSystem: LoincRequestedCS
+Id: loinc-requested-cs
 Title: "Requested LOINC Codes Code System"
 Description: "Codes requested from LOINC by Clinical Genomics Work Group, to be issued at a later date."
 * #molecular-consequence "Molecular Consequence" "Annotated changes to sequence features caused by this variant. Terms are from the sequence ontology under SO:0001537."
 * #diagnostic-implication "Diagnosic Implication" "Diagnostic Implication"
 
-CodeSystem: SCT_TBD
-Id: snomed-tbd-cs
+CodeSystem: SnomedRequestedCS
+Id: snomed-requested-cs
 Title: "Requested SNOMED Codes Code System"
 Description: "Codes requested from SNOMED by mCODE, to be issued at a later date. Where numeric codes are given, these correspond to the expected SNOMED-CT codes. Terms beginning with 'USCRS-' (for United States Content Request Service) represent request identifiers with no SNOMED code yet approved or assigned."
 * #1162492000 "Tumor bed (morphologic abnormality)" // SNOMED term available to be released in Jan 2021

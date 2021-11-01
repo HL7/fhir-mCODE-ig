@@ -1,4 +1,4 @@
-ValueSet:    ClinVarVS
+ValueSet: ClinVarVS
 Id: mcode-clinvar-vs
 Title: "ClinVar Value Set"
 Description: "Value set of human genomic variants, drawn from [ClinVar](https://www.ncbi.nlm.nih.gov/clinvar/). The codes in this value set refer to the ClinVar Variation ID, or the identifier for the variant or set of variants that were interpreted. [Source: NCBI ClinVar Data Dictionary](https://www.ncbi.nlm.nih.gov/projects/clinvar/ClinVarDataDictionary.pdf)"
@@ -22,9 +22,9 @@ Title: "DNA Change Type Value Set"
 Description: "DNA Change Type of a variant"
 * include codes from system SO where concept descendent-of #SO:0002072
 
-ValueSet: MolecularConsequenceVS
-Id: molecular-consequence-vs
-Title: "Molecular Consequence Value Set"
+ValueSet: GenomicMolecularConsequenceVS
+Id: genomic-molecular-consequence-vs
+Title: "Genomic Molecular Consequence Value Set"
 Description: "Changes in a structural features of a sequence due to the observed variant."
 * include codes from system SO where concept descendent-of #SO:0001537
 

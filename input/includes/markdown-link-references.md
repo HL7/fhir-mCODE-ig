@@ -39,7 +39,6 @@
 [BodyLocationQualifier]: StructureDefinition-mcode-body-location-qualifier.html
 [ComorbidConditionCode]: StructureDefinition-mcode-comorbid-condition-code.html
 [ComorbidConditionReference]: StructureDefinition-mcode-comorbid-condition-reference.html
-[ConditionRelated]: StructureDefinition-mcode-condition-related.html
 [EvidenceType]: StructureDefinition-mcode-evidence-type.html
 [HistologyMorphologyBehavior]: StructureDefinition-mcode-histology-morphology-behavior.html
 [LateralityQualifier]: StructureDefinition-mcode-laterality-qualifier.html
@@ -49,6 +48,7 @@
 [RadiotherapyModalityAndTechnique]: StructureDefinition-mcode-radiotherapy-modality-and-technique.html
 [RadiotherapySessions]: StructureDefinition-mcode-radiotherapy-sessions.html
 [RadiotherapyTechnique]: StructureDefinition-mcode-radiotherapy-technique.html
+[RelatedCondition]: StructureDefinition-mcode-related-condition.html
 [TreatmentTerminationReason]: StructureDefinition-mcode-treatment-termination-reason.html
 
 <!-- mCODE Value Sets  -->
@@ -68,13 +68,13 @@
 [CancerRelatedSurgicalProcedureVS]: ValueSet-mcode-cancer-related-surgical-procedure-vs.html
 [CancerStageGroupVS]: ValueSet-mcode-cancer-stage-group-vs.html
 [CancerStagingSystemVS]: ValueSet-mcode-cancer-staging-system-vs.html
-[CarbonIonBeamTechniqueVS]: ValueSet-mcode-carbon-ion-beam-technique-vs.html
+[TeleradiotherapyCarbonIonBeamTechniqueVS]: ValueSet-mcode-teleradiotherapy-carbon-ion-beam-technique-vs.html
 [CarcinomaInSituDisorderVS]: ValueSet-mcode-carcinoma-in-situ-disorder-vs.html
 [ClinVarVS]: ValueSet-mcode-clinvar-vs.html
 [ConditionStatusTrendVS]: ValueSet-mcode-condition-status-trend-vs.html
 [CytologicEvidenceOfMalignancyVS]: ValueSet-mcode-cytologic-evidence-malignancy-vs.html
 [DNAChangeTypeVS]: ValueSet-mcode-dna-change-type-vs.html
-[ElectronBeamTechniqueVS]: ValueSet-mcode-electron-beam-technique-vs.html
+[TeleradiotherapyElectronBeamTechniqueVS]: ValueSet-mcode-teleradiotherapy-electron-beam-technique-vs.html
 [ElixhauserAIDSVS]: ValueSet-elixhauser-aids-vs.html
 [ElixhauserAlcoholAbuseVS]: ValueSet-elixhauser-alcohol-abuse-vs.html
 [ElixhauserBloodLossAnemiaVS]: ValueSet-elixhauser-blood-loss-anemia-vs.html
@@ -113,31 +113,31 @@
 [ElixhauserUlcerVS]: ValueSet-elixhauser-ulcer-vs.html
 [ElixhauserValvularDiseaseVS]: ValueSet-elixhauser-valvular-disease-vs.html
 [ElixhauserWeightLossVS]: ValueSet-elixhauser-weight-loss-vs.html
+[GenomicMolecularConsequenceVS]: ValueSet-genomic-molecular-consequence-vs.html
 [GenomicSpecimenTypeVS]: ValueSet-mcode-genomic-specimen-type-vs.html
 [HGNCVS]: ValueSet-mcode-hgnc-vs.html
 [HGVSVS]: ValueSet-mcode-hgvs-vs.html
 [HistologyMorphologyBehaviorVS]: ValueSet-mcode-histology-morphology-behavior-vs.html
+[HypereosinophilicSyndromeDisorderVS]: ValueSet-mcode-hypereosinophilic-syndrome-disorder-vs.html
 [LateralityQualifierVS]: ValueSet-mcode-laterality-qualifier-vs.html
 [MelanomaInSituDisorderVS]: ValueSet-mcode-melanoma-in-situ-disorder-vs.html
-[MolecularConsequenceVS]: ValueSet-molecular-consequence-vs.html
-[NeutronBeamTechniqueVS]: ValueSet-mcode-neutron-beam-technique-vs.html
+[TeleradiotherapyNeutronTechniqueVS]: ValueSet-mcode-teleradiotherapy-neutron-beam-technique-vs.html
 [ObservationCodesDistantMetastasesVS]: ValueSet-mcode-observation-codes-distant-metastases-vs.html
 [ObservationCodesPrimaryTumorVS]: ValueSet-mcode-observation-codes-primary-tumor-vs.html
 [ObservationCodesRegionalNodesVS]: ValueSet-mcode-observation-codes-regional-nodes-vs.html
 [ObservationCodesStageGroupVS]: ValueSet-mcode-observation-codes-stage-group-vs.html
-[PhotonBeamTechniqueVS]: ValueSet-mcode-photon-beam-technique-vs.html
+[TeleradiotherapyPhotonBeamTechniqueVS]: ValueSet-mcode-teleradiotherapy-photon-beam-technique-vs.html
 [PresentAbsentVS]: ValueSet-mcode-present-absent.html
 [PrimaryCancerDisorderVS]: ValueSet-mcode-primary-cancer-disorder-vs.html
 [PrimaryMalignantNeoplasmDisorderVS]: ValueSet-mcode-primary-malignant-neoplasm-disorder-vs.html
 [ProcedureIntentVS]: ValueSet-mcode-procedure-intent-vs.html
-[ProtonBeamTechniqueVS]: ValueSet-mcode-proton-beam-technique-vs.html
+[TeleradiotherapyProtonBeamTechniqueVS]: ValueSet-mcode-teleradiotherapy-proton-beam-technique-vs.html
 [RadiotherapyModalityVS]: ValueSet-mcode-radiotherapy-modality-vs.html
 [RadiotherapyTechniqueVS]: ValueSet-mcode-radiotherapy-technique-vs.html
 [RadiotherapyTreatmentLocationQualifierVS]: ValueSet-mcode-radiotherapy-treatment-location-qualifier-vs.html
 [RadiotherapyTreatmentLocationVS]: ValueSet-mcode-radiotherapy-treatment-location-vs.html
 [RadiotherapyVolumeTypeVS]: ValueSet-mcode-radiotherapy-volume-type-vs.html
 [SecondaryCancerDisorderVS]: ValueSet-mcode-secondary-cancer-disorder-vs.html
-[SpecificDiagnosisCancerDisorderVS]: ValueSet-mcode-specific-diagnosis-cancer-disorder-vs.html
 [TeleradiotherapyModalityVS]: ValueSet-mcode-teleradiotherapy-modality-vs.html
 [TeleradiotherapyTechniqueVS]: ValueSet-mcode-teleradiotherapy-technique-vs.html
 [TNMDistantMetastasesCategoryVS]: ValueSet-mcode-tnm-distant-metastases-category-vs.html
@@ -148,11 +148,23 @@
 [TumorSizeMethodVS]: ValueSet-mcode-tumor-size-method-vs.html
 [TumorSizeUnitsVS]: ValueSet-mcode-tumor-size-units-vs.html
 
+<!-- External Value Sets -->
+[ACMG_Clinical significance of genetic variation]:  http://loinc.org/vs/LL4034-6
+[ECOG_Performance status]:  http://loinc.org/vs/LL529-9
+[Genomic coordinate system]: http://loinc.org/vs/LL5323-2
+[Karnofsky performance status]:  http://loinc.org/vs/LL4986-7
+[Medication Clinical Drug (RxNorm)]: http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1010.4
+[MG_2_Genetic variant source]: http://loinc.org/vs/LL378-1
+[MG_4_Amino acid change type]: http://loinc.org/vs/LL380-7
+[MG_5_Genetic variant allelic state]: http://loinc.org/vs/LL381-5
+[Structural variant analysis method]: http://loinc.org/vs/LL4048-6
+[Variant Assess]: http://loinc.org/vs/LL1971-2
+
 <!-- mCODE Code Systems -->
 [ComorbiditiesElixhauserCS]: CodeSystem-comorbidities-elixhauser-cs.html
 [ResourceIdentifierCS]: CodeSystem-mcode-resource-identifier-cs.html
-[LNC_TBD]: CodeSystem-loinc-tbd-cs.html
-[SCT_TBD]: CodeSystem-snomed-tbd-cs.html
+[LoincRequestedCS]: CodeSystem-loinc-requested-cs.html
+[SnomedRequestedCS]: CodeSystem-snomed-requested-cs.html
 
 <!-- mCODE CapabilityStatements -->
 [mcode-receiver-cancer-conditions-then-patients]: CapabilityStatement-mcode-receiver-cancer-conditions-then-patients.html

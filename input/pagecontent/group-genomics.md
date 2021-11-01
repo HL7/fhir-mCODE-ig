@@ -50,21 +50,31 @@ The mCODE example [`cancer-genomic-variant-fusion`](Observation-cancer-genomic-v
 
 ### Profiles
 
-* [CancerGenomicVariant]
-* [GenomicSpecimen]
 * [CancerGenomicsReport]
+* [CancerGenomicVariant]
 * [GenomicRegionStudied]
+* [GenomicSpecimen]
 
 ### Value Sets
 
+* [ACMG_Clinical significance of genetic variation] (external)
 * [ClinvarVS]
 * [DNAChangeTypeVS]
+* [Genomic coordinate system] (external)
+* [GenomicMolecularConsequenceVS]
 * [GenomicSpecimenTypeVS]
 * [HGNCVS]
 * [HGVSVS]
-* [MolecularConsequenceVS]
+* [MG_2_Genetic variant source] (external)
+* [MG_4_Amino acid change type] (external)
+* [MG_5_Genetic variant allelic state] (external)
+* [Structural variant analysis method] (external)
 * [TumorMarkerTestVS]
+* [Variant Assess] (external)
+
 
 ### Code Systems
-* [LNC_TBD]
+
+* [LoincRequestedCS]
+
 {% include markdown-link-references.md %}

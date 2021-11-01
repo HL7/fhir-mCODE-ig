@@ -1,10 +1,26 @@
+<style>
+  a code {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+    "Helvetica Neue", sans-serif !important;
+
+    text-decoration: underline;
+    text-decoration-color: #0088f9;
+    background-color: #f4faff;
+  }
+</style>
+
 In addition to individual examples of each , this extended example demonstrates how mCODE can be used to represent a clinically realistic scenario.
 * When information in the scenario does not map on to mCODE s, we provide examples using [USCore](http://hl7.org/fhir/us/core/index.html) or standard FHIR resources.
 * For the sake of brevity, only a subset of examples will be shown in cases where the FHIR representation patter is the same. For example, we only show one example of MedicationAdministration when in reality, there could be 4 cycles, of 3 medications that could be repeated over a 28 day cycle. Since the only difference would be the day of the administration, then we omit it assuming that the implementer understands that the representation pattern is the same except for timestamps.
 
 ### Patient description
 
-[`Patient Jenny M.`](Patient-cancer-patient-jenny-m.html) is a 55 year old non-Hispanic white female with a [`past medical history`](Observation-cancer-related-mcode-comorbidities-elixhauser-jenny-m.html) significant for [`depression`](Condition-us-core-condition-depression-jenny-m.html), a [`20-pack-year history of smoking`](Observation-observation-smoking-pack-years-jenny-m.html) (current smoker), [`anxiety`](Condition-us-core-condition-anxiety-jenny-m.html), and [`hypertension`](Condition-us-core-condition-hypertension-jenny-m.html). Her family history was significant for a [`maternal aunt with ovarian cancer at age 69`](FamilyMemberHistory-family-member-history-aunt-jenny-m.json.html), a [`sister with breast cancer at age 64`](FamilyMemberHistory-family-member-history-sister-jenny-m.html), and [`deceased paternal uncle due to pancreatic cancer`](FamilyMemberHistory-family-member-history-uncle-jenny-m.html).
+<div class="well" style="padding: 0.5em;background-color: white;border: 1px solid #0088f9;">
+<strong>Note:</strong> patient and clinical data in the narrative example below are linked to the relevant FHIR examples using <a href="#"><code style="background-color: #f5f2f0; color: #000;">this styling</code></a>.
+</div>
+
+[`Patient Jenny M.`](Patient-cancer-patient-jenny-m.html) is a 55 year old non-Hispanic white female with a [`past medical history`](Observation-cancer-related-mcode-comorbidities-elixhauser-jenny-m.html) significant for [`depression`](Condition-us-core-condition-depression-jenny-m.html), a [`20-pack-year history of smoking`](Observation-observation-smoking-history-jenny-m.html) (current smoker), [`anxiety`](Condition-us-core-condition-anxiety-jenny-m.html), and [`hypertension`](Condition-us-core-condition-hypertension-jenny-m.html). Her family history was significant for a [`maternal aunt with ovarian cancer at age 69`](FamilyMemberHistory-family-member-history-aunt-jenny-m.json.html), a [`sister with breast cancer at age 64`](FamilyMemberHistory-family-member-history-sister-jenny-m.html), and [`deceased paternal uncle due to pancreatic cancer`](FamilyMemberHistory-family-member-history-uncle-jenny-m.html).
 
 During a routine screening mammography in February 2018, an abnormality was detected as a possible mass and suspected breast cancer. The gynecologist performing the biopsy refers the patient to an oncologist for further workup. An ultrasound-guided biopsy was performed along with prognostic tumor marker tests with [`ER positive`](Observation-tumor-marker-test-er-jenny-m.html), [`PR negative`](Observation-tumor-marker-test-pr-jenny-m.html), and [`HER2 negative`](Observation-tumor-marker-test-her2-jenny-m.html). The patient is referred to an oncologist who clinically reviews the mammogram and tumor marker results, and clinical staged the [`cancer diagnosis`](Condition-primary-cancer-condition-jenny-m.html) as [`cT3`](Observation-tnm-clinical-primary-tumor-category-jenny-m.html)[`N0`](Observation-tnm-clinical-regional-nodes-category-jenny-m.html).
 

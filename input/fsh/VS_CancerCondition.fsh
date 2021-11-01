@@ -126,8 +126,8 @@ Description:    "Types of cytological evience of malignancy, coded in SNOMED CT 
 * ICD10CM#R85.614 "Cytologic evidence of malignancy on smear of anus"
 * ICD10CM#R87.624 "Cytologic evidence of malignancy on smear of vagina"
 
-ValueSet:  SpecificDiagnosisCancerDisorderVS
-Id: mcode-specific-diagnosis-cancer-disorder-vs
+ValueSet:  HypereosinophilicSyndromeDisorderVS
+Id: mcode-hypereosinophilic-syndrome-disorder-vs
 Title: "Specific Diagnosis of Cancer Value Set"
 Description:    "Types of hypereosinophilic syndrome, coded in SNOMED CT or ICD-10-CM."
 * insert SNOMEDCTCopyrightForVS
@@ -273,7 +273,7 @@ Title: "Primary Cancer Disorder Value Set"
 Description:    "Types of primary malignant neoplastic disease, coded in SNOMED CT or ICD-10-CM."
 * insert SNOMEDCTCopyrightForVS
 * include codes from valueset PrimaryMalignantNeoplasmDisorderVS
-* include codes from valueset SpecificDiagnosisCancerDisorderVS
+* include codes from valueset HypereosinophilicSyndromeDisorderVS
 * include codes from valueset CarcinomaInSituDisorderVS
 * include codes from valueset MelanomaInSituDisorderVS
 * include codes from valueset BenignUncertainNeoplasmBrainCNSDisorderVS

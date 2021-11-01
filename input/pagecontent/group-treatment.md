@@ -28,36 +28,52 @@ A radiation oncology work group convened under [CodeX FHIR Accelerator](https://
 ### Extensions
 
 * **General**
-  * [TreatmentTerminationReason]
-  * [ProcedureIntent]
+  * [BodyLocationQualifier]
   * [LateralityQualifier]
+  * [ProcedureIntent]
+  * [TreatmentTerminationReason]
 * **Radiotherapy**
   * [RadiotherapyDoseDeliveredToVolume]
   * [RadiotherapyModality]
   * [RadiotherapyModalityAndTechnique]
   * [RadiotherapySessions]
   * [RadiotherapyTechnique]
+  * [RelatedCondition]
 
 ### Value Sets
 
 * **General**
   * [ProcedureIntentVS]
   * [TreatmentTerminationReasonVS]
+* **Medication**
+  * [Medication Clinical Drug (RxNorm)] (external)
 * **Surgery**
   * [CancerRelatedSurgicalProcedureVS]
 * **Radiotherapy**
+  * [BodyLocationQualifierVS]
+  * [BrachytherapyPermanentSeedsTechniqueVS]
+  * [BrachytherapyLowDoseRateTemporaryTechniqueVS]
+  * [BrachytherapyPulsedDoseRateTechniqueVS]
+  * [BrachytherapyRadiopharmaceuticalTechniqueVS]
+  * [BrachytherapyHighDoseRateElectronicTechniqueVS]
+  * [BrachytherapyHighDoseRateTechniqueVS]
   * [BrachytherapyModalityVS]
   * [BrachytherapyTechniqueVS]
-  * [RadiotherapyModalityVS]
   * [RadiotherapyTechniqueVS]
   * [RadiotherapyTreatmentLocationVS]
   * [RadiotherapyTreatmentLocationQualifierVS]
   * [RadiotherapyVolumeTypeVS]
+  * [TeleradiotherapyCarbonIonBeamTechniqueVS]
+  * [TeleradiotherapyElectronBeamTechniqueVS]
   * [TeleradiotherapyModalityVS]
+  * [TeleradiotherapyNeutronTechniqueVS]
+  * [TeleradiotherapyPhotonBeamTechniqueVS]
+  * [TeleradiotherapyProtonBeamTechniqueVS]
   * [TeleradiotherapyTechniqueVS]
 
 ### Code Systems
-* [SCT_TBD] - pending January 2022 release of SNOMEDCT
 
+* [LoincRequestedCS]
+* [SnomedRequestedCS]
 
 {% include markdown-link-references.md %}

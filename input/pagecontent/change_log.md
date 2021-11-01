@@ -93,7 +93,7 @@ A comprehensive listing of differences in FHIR artifacts between STU 1 and STU 2
 
 #### Genomics
 
-* [CancerGenomicVariant] contains an additional component for DNA change type.
+* [GenomicVariant] contains an additional component for DNA change type.
 
 #### Outcomes
 

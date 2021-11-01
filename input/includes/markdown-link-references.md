@@ -5,53 +5,61 @@
   }
 </style>
 
-<!-- mCODE Profiles and Extensions -->
-[BodyLocationQualifier]: StructureDefinition-mcode-body-location-qualifier.html
+<!-- mCODE Profiles -->
+[BodyStructureIdentifier]: StructureDefinition-mcode-body-structure-identifier.html
 [CancerDiseaseStatus]: StructureDefinition-mcode-cancer-disease-status.html
-[CancerGenomicVariant]: StructureDefinition-mcode-cancer-genomic-variant.html
-[CancerGenomicsReport]: StructureDefinition-mcode-cancer-genomics-report.html
 [CancerPatient]: StructureDefinition-mcode-cancer-patient.html
 [CancerRelatedMedicationAdministration]: StructureDefinition-mcode-cancer-related-medication-administration.html
 [CancerRelatedMedicationRequest]: StructureDefinition-mcode-cancer-related-medication-request.html
 [CancerRelatedSurgicalProcedure]: StructureDefinition-mcode-cancer-related-surgical-procedure.html
-[ComorbidConditionCode]: StructureDefinition-mcode-comorbid-condition-code.html
-[ComorbidConditionReference]: StructureDefinition-mcode-comorbid-condition-reference.html
+[CancerStageGroup]: StructureDefinition-mcode-cancer-stage-group.html
 [ComorbiditiesElixhauser]: StructureDefinition-mcode-comorbidities-elixhauser.html
 [ComorbiditiesParent]: StructureDefinition-mcode-comorbidities-parent.html
 [ECOGPerformanceStatus]: StructureDefinition-mcode-ecog-performance-status.html
-[EvidenceType]: StructureDefinition-mcode-evidence-type.html
-[GenomicSpecimen]: StructureDefinition-mcode-genomic-specimen.html
 [GenomicRegionStudied]: StructureDefinition-mcode-genomic-region-studied.html
-[HistologyMorphologyBehavior]: StructureDefinition-mcode-histology-morphology-behavior.html
+[GenomicSpecimen]: StructureDefinition-mcode-genomic-specimen.html
+[GenomicsReport]: StructureDefinition-mcode-genomics-report.html
+[GenomicVariant]: StructureDefinition-mcode-genomic-variant.html
 [KarnofskyPerformanceStatus]: StructureDefinition-mcode-karnofsky-performance-status.html
-[LateralityQualifier]: StructureDefinition-mcode-laterality-qualifier.html
 [MCODEPatientBundle]: StructureDefinition-mcode-patient-bundle.html
 [MCODEPatientGroup]: StructureDefinition-mcode-patient-group.html
-[CapabilityStatement]: StructureDefinition-CapabilityStatement.html
 [PrimaryCancerCondition]: StructureDefinition-mcode-primary-cancer-condition.html
-[ProcedureIntent]: StructureDefinition-mcode-procedure-intent.html
 [RadiotherapyCourseSummary]: StructureDefinition-mcode-radiotherapy-course-summary.html
-[RadiotherapyDoseDeliveredToVolume]: StructureDefinition-mcode-radiotherapy-dose-delivered-to-volume.html
-[RadiotherapyFractionsDelivered]:    StructureDefinition-mcode-radiotherapy-fractions-delivered.html
-[RadiotherapyModality]: StructureDefinition-mcode-radiotherapy-modality.html
-[RadiotherapySessions]: StructureDefinition-mcode-radiotherapy-sessions.html
-[RadiotherapyTechnique]: StructureDefinition-mcode-radiotherapy-technique.html
-[RadiotherapyModalityAndTechnique]: StructureDefinition-mcode-radiotherapy-modality-and-technique.html
 [RadiotherapyVolume]: StructureDefinition-mcode-radiotherapy-volume.html
-[RelatedPrimaryCancerCondition]: StructureDefinition-mcode-related-primary-cancer-condition.html
 [SecondaryCancerCondition]: StructureDefinition-mcode-secondary-cancer-condition.html
 [TNMDistantMetastasesCategory]: StructureDefinition-mcode-tnm-distant-metastases-category.html
 [TNMPrimaryTumorCategory]: StructureDefinition-mcode-tnm-primary-tumor-category.html
 [TNMRegionalNodesCategory]: StructureDefinition-mcode-tnm-regional-nodes-category.html
-[CancerStageGroup]: StructureDefinition-mcode-cancer-stage-group.html
-[TreatmentTerminationReason]: StructureDefinition-mcode-treatment-termination-reason.html
+[Tumor]: StructureDefinition-mcode-tumor.html
 [TumorMarkerTest]: StructureDefinition-mcode-tumor-marker-test.html
 [TumorSize]: StructureDefinition-mcode-tumor-size.html
-[Tumor]: StructureDefinition-mcode-tumor.html
 [TumorSpecimen]: StructureDefinition-mcode-tumor-specimen.html
+
+<!-- mCODE Extensions -->
+[BodyLocationQualifier]: StructureDefinition-mcode-body-location-qualifier.html
+[ComorbidConditionCode]: StructureDefinition-mcode-comorbid-condition-code.html
+[ComorbidConditionReference]: StructureDefinition-mcode-comorbid-condition-reference.html
+[EvidenceType]: StructureDefinition-mcode-evidence-type.html
+[HistologyMorphologyBehavior]: StructureDefinition-mcode-histology-morphology-behavior.html
+[LateralityQualifier]: StructureDefinition-mcode-laterality-qualifier.html
+[ProcedureIntent]: StructureDefinition-mcode-procedure-intent.html
+[RadiotherapyDoseDeliveredToVolume]: StructureDefinition-mcode-radiotherapy-dose-delivered-to-volume.html
+[RadiotherapyModality]: StructureDefinition-mcode-radiotherapy-modality.html
+[RadiotherapyModalityAndTechnique]: StructureDefinition-mcode-radiotherapy-modality-and-technique.html
+[RadiotherapySessions]: StructureDefinition-mcode-radiotherapy-sessions.html
+[RadiotherapyTechnique]: StructureDefinition-mcode-radiotherapy-technique.html
+[RelatedCondition]: StructureDefinition-mcode-related-condition.html
+[TreatmentTerminationReason]: StructureDefinition-mcode-treatment-termination-reason.html
 
 <!-- mCODE Value Sets  -->
 [BenignUncertainNeoplasmBrainCNSDisorderVS]: ValueSet-mcode-benign-uncertain-neoplasm-brain-cns-disorder-vs.html
+[BodyLocationQualifierVS]: ValueSet-mcode-body-location-qualifier-vs.html
+[BrachytherapyPermanentSeedsTechniqueVS]: ValueSet-mcode-brachytherapy-permanent-seeds-technique-vs.html
+[BrachytherapyLowDoseRateTemporaryTechniqueVS]: ValueSet-mcode-brachytherapy-low-dose-rate-temporary-technique-vs.html
+[BrachytherapyPulsedDoseRateTechniqueVS]: ValueSet-mcode-brachytherapy-pulsed-dose-rate-technique-vs.html
+[BrachytherapyRadiopharmaceuticalTechniqueVS]: ValueSet-mcode-brachytherapy-radiopharmaceutical-technique-vs.html
+[BrachytherapyHighDoseRateElectronicTechniqueVS]: ValueSet-mcode-brachytherapy-high-dose-rate-electronic-technique-vs.html
+[BrachytherapyHighDoseRateTechniqueVS]: ValueSet-mcode-brachytherapy-high-dose-rate-technique-vs.html
 [BrachytherapyModalityVS]: ValueSet-mcode-brachytherapy-modality-vs.html
 [BrachytherapyTechniqueVS]: ValueSet-mcode-brachytherapy-technique-vs.html
 [CancerBodyLocationVS]: ValueSet-mcode-cancer-body-location-vs.html
@@ -83,7 +91,6 @@
 [ElixhauserDiabetesComplicatedVS]: ValueSet-elixhauser-diabetes-complicated-vs.html
 [ElixhauserDiabetesUncomplicatedVS]: ValueSet-elixhauser-diabetes-uncomplicated-vs.html
 [ElixhauserDrugAbuseVS]: ValueSet-elixhauser-drug-abuse-vs.html
-[ElixhauserFluidElectrolyteDisordersVS]: ValueSet-elixhauser-fluid-electrolyte-vs.html
 [ElixhauserHypertensionComplicatedVS]: ValueSet-elixhauser-hypertension-complicated-vs.html
 [ElixhauserHypertensionUncomplicatedVS]: ValueSet-elixhauser-hypertension-uncomplicated-vs.html
 [ElixhauserHypothyroidismVS]: ValueSet-elixhauser-hypothyroidism-vs.html
@@ -104,30 +111,34 @@
 [ElixhauserUlcerVS]: ValueSet-elixhauser-ulcer-vs.html
 [ElixhauserValvularDiseaseVS]: ValueSet-elixhauser-valvular-disease-vs.html
 [ElixhauserWeightLossVS]: ValueSet-elixhauser-weight-loss-vs.html
+[GenomicMolecularConsequenceVS]: ValueSet-mcode-genomic-molecular-consequence-vs.html
 [GenomicSpecimenTypeVS]: ValueSet-mcode-genomic-specimen-type-vs.html
 [HGNCVS]: ValueSet-mcode-hgnc-vs.html
 [HGVSVS]: ValueSet-mcode-hgvs-vs.html
 [HistologyMorphologyBehaviorVS]: ValueSet-mcode-histology-morphology-behavior-vs.html
+[HypereosinophilicSyndromeDisorderVS]: ValueSet-mcode-hypereosinophilic-syndrome-disorder-vs.html
+[LateralityQualifierVS]: ValueSet-mcode-laterality-qualifier-vs.html
 [MelanomaInSituDisorderVS]: ValueSet-mcode-melanoma-in-situ-disorder-vs.html
-[BodyLocationQualifierVS]: ValueSet-mcode-body-location-qualifier-vs.html
-[ObservationCodesStageGroupVS]: ValueSet-mcode-observation-codes-stage-group-vs.html
+[ObservationCodesDistantMetastasesVS]: ValueSet-mcode-observation-codes-distant-metastases-vs.html
 [ObservationCodesPrimaryTumorVS]: ValueSet-mcode-observation-codes-primary-tumor-vs.html
 [ObservationCodesRegionalNodesVS]: ValueSet-mcode-observation-codes-regional-nodes-vs.html
-[ObservationCodesDistantMetastasesVS]: ValueSet-mcode-observation-codes-distant-metastases-vs.html
+[ObservationCodesStageGroupVS]: ValueSet-mcode-observation-codes-stage-group-vs.html
 [PresentAbsentVS]: ValueSet-mcode-present-absent.html
-[PrimaryMalignantNeoplasmDisorderVS]: ValueSet-mcode-primary-malignant-neoplasm-disorder-vs.html
 [PrimaryCancerDisorderVS]: ValueSet-mcode-primary-cancer-disorder-vs.html
 [PrimaryMalignantNeoplasmDisorderVS]: ValueSet-mcode-primary-malignant-neoplasm-disorder-vs.html
 [ProcedureIntentVS]: ValueSet-mcode-procedure-intent-vs.html
 [RadiotherapyModalityVS]: ValueSet-mcode-radiotherapy-modality-vs.html
 [RadiotherapyTechniqueVS]: ValueSet-mcode-radiotherapy-technique-vs.html
-[RadiotherapyTreatmentLocationVS]: ValueSet-mcode-radiotherapy-treatment-location-vs.html
 [RadiotherapyTreatmentLocationQualifierVS]: ValueSet-mcode-radiotherapy-treatment-location-qualifier-vs.html
-[LateralityQualifierVS]: ValueSet-mcode-laterality-qualifier-vs.html
+[RadiotherapyTreatmentLocationVS]: ValueSet-mcode-radiotherapy-treatment-location-vs.html
 [RadiotherapyVolumeTypeVS]: ValueSet-mcode-radiotherapy-volume-type-vs.html
 [SecondaryCancerDisorderVS]: ValueSet-mcode-secondary-cancer-disorder-vs.html
-[SpecificDiagnosisCancerDisorderVS]: ValueSet-mcode-specific-diagnosis-cancer-disorder-vs.html
+[TeleradiotherapyCarbonIonBeamTechniqueVS]: ValueSet-mcode-teleradiotherapy-carbon-ion-beam-technique-vs.html
+[TeleradiotherapyElectronBeamTechniqueVS]: ValueSet-mcode-teleradiotherapy-electron-beam-technique-vs.html
 [TeleradiotherapyModalityVS]: ValueSet-mcode-teleradiotherapy-modality-vs.html
+[TeleradiotherapyNeutronTechniqueVS]: ValueSet-mcode-teleradiotherapy-neutron-beam-technique-vs.html
+[TeleradiotherapyPhotonBeamTechniqueVS]: ValueSet-mcode-teleradiotherapy-photon-beam-technique-vs.html
+[TeleradiotherapyProtonBeamTechniqueVS]: ValueSet-mcode-teleradiotherapy-proton-beam-technique-vs.html
 [TeleradiotherapyTechniqueVS]: ValueSet-mcode-teleradiotherapy-technique-vs.html
 [TNMDistantMetastasesCategoryVS]: ValueSet-mcode-tnm-distant-metastases-category-vs.html
 [TNMPrimaryTumorCategoryVS]: ValueSet-mcode-tnm-primary-tumor-category-vs.html
@@ -136,17 +147,23 @@
 [TumorMarkerTestVS]: ValueSet-mcode-tumor-marker-test-vs.html
 [TumorSizeMethodVS]: ValueSet-mcode-tumor-size-method-vs.html
 [TumorSizeUnitsVS]: ValueSet-mcode-tumor-size-units-vs.html
-[PrimaryMalignantNeoplasmDisorderVS]: ValueSet-mcode-primary-malignant-neoplasm-disorder-vs.html
-[SpecificDiagnosisCancerDisorderVS]: ValueSet-mcode-specific-diagnosis-cancer-disorder-vs.html
-[CarcinomaInSituDisorderVS]: ValueSet-mcode-carcinoma-in-situ-disorder-vs.html
-[MelanomaInSituDisorderVS]: ValueSet-mcode-melanoma-in-situ-disorder-vs.html
-[MolecularConsequenceVS]: ValueSet-molecular-consequence-vs.html
+
+<!-- External Value Sets -->
+[ACMG_Clinical significance of genetic variation]:  http://loinc.org/vs/LL4034-6
+[ECOG_Performance status]:  http://loinc.org/vs/LL529-9
+[Genomic coordinate system]: http://loinc.org/vs/LL5323-2
+[Karnofsky performance status]:  http://loinc.org/vs/LL4986-7
+[Medication Clinical Drug (RxNorm)]: http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1010.4
+[MG_2_Genetic variant source]: http://loinc.org/vs/LL378-1
+[MG_4_Amino acid change type]: http://loinc.org/vs/LL380-7
+[MG_5_Genetic variant allelic state]: http://loinc.org/vs/LL381-5
+[Structural variant analysis method]: http://loinc.org/vs/LL4048-6
+[Variant Assess]: http://loinc.org/vs/LL1971-2
 
 <!-- mCODE Code Systems -->
 [ComorbiditiesElixhauserCS]: CodeSystem-comorbidities-elixhauser-cs.html
-[ResourceIdentifierCS]: CodeSystem-mcode-resource-identifier-cs.html
-[SCT_TBD]: CodeSystem-snomed-tbd-cs.html
-[LNC_TBD]: CodeSystem-loinc-tbd-cs.html
+[LoincRequestedCS]: CodeSystem-loinc-requested-cs.html
+[SnomedRequestedCS]: CodeSystem-snomed-requested-cs.html
 
 <!-- mCODE CapabilityStatements -->
 [mcode-receiver-cancer-conditions-then-patients]: CapabilityStatement-mcode-receiver-cancer-conditions-then-patients.html
@@ -174,6 +191,7 @@
 [USCoreDiagnosticReport]: http://hl7.org/fhir/us/core/StructureDefinition-us-core-diagnosticreport-lab.html
 
 <!-- R4 -->
+[CapabilityStatement]: StructureDefinition-CapabilityStatement.html
 [R4Observation]: http://hl7.org/fhir/R4/observation.html
 [R4FamilyMemberHistory]: http://hl7.org/fhir/R4/familymemberhistory.html
 [R4MedicationAdministration]: http://hl7.org/fhir/R4/medicationadministration.html

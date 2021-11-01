@@ -3,7 +3,7 @@ Parent: Group
 Id: mcode-patient-group
 Title: "mCODE Patient Group Profile"
 Description: "A group of patients included in the scope of mCODE, whose cancer-related resources conform to mCODE profiles."
-* code = RID#mcode-patient
+* code = NCI#C19700  // Cancer Patient
 * member.entity only Reference(CancerPatient)
 
 // Defines common operations for the server role

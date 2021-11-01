@@ -1,6 +1,6 @@
 ### Usage
 
-The specimen SHOULD be referenced by [CancerGenomicsReport]. Multiple specimens are possible in the case of a tumor normal test where the variants found in a tumor specimen are compared with the variants in a normal specimen.
+The specimen SHOULD be referenced by [GenomicsReport]. Multiple specimens are possible in the case of a tumor normal test where the variants found in a tumor specimen are compared with the variants in a normal specimen.
 
 ### Conformance
 

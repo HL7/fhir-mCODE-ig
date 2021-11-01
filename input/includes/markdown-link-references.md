@@ -111,7 +111,7 @@
 [ElixhauserUlcerVS]: ValueSet-elixhauser-ulcer-vs.html
 [ElixhauserValvularDiseaseVS]: ValueSet-elixhauser-valvular-disease-vs.html
 [ElixhauserWeightLossVS]: ValueSet-elixhauser-weight-loss-vs.html
-[GenomicMolecularConsequenceVS]: ValueSet-genomic-molecular-consequence-vs.html
+[GenomicMolecularConsequenceVS]: ValueSet-mcode-genomic-molecular-consequence-vs.html
 [GenomicSpecimenTypeVS]: ValueSet-mcode-genomic-specimen-type-vs.html
 [HGNCVS]: ValueSet-mcode-hgnc-vs.html
 [HGVSVS]: ValueSet-mcode-hgvs-vs.html

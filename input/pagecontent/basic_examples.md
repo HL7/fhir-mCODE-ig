@@ -24,12 +24,12 @@
 #### [Secondary Cancer Condition](Structure-definition-mcode-secondary-cancer-condition.html) ([US Core Condition](http://hl7.org/fhir/us/core/STU4/StructureDefinition-us-core-condition.html))
 *  [Brain Metastases](Condition-secondary-cancer-condition-brain-mets.html)
 #### [Cancer Stage Group](Structure-definition-mcode-cancer-stage-group.html) ([Observation](http://hl7.org/fhir/R4/observation.html))
-*  tnm-clinical-distant-metastases-category-cM0
-*  tnm-clinical-primary-tumor-category-cT3
-*  tnm-clinical-regional-nodes-category-cN3
-*  tnm-clinical-stage-group-3c
-*  binet-stage-group-A
+*  [TNM Clinical Distant Metastases Category - cM0](Observation-tnm-clinical-distant-metastases-category-cM0.html)
+*  [TNM Clinical Primary Tumor Category - cT3](Observation-tnm-clinical-primary-tumor-category-cT3.html)
+*  [TNM Clinical Regional Nodes Category - cN3](Observation-tnm-clinical-regional-nodes-category-cN3.html)
+*  [TNM Clinical Stage Group 3](Observation-tnm-clinical-stage-group-3c.html)
+*  [Binet Stage Group A for Leukemia](Observation-binet-stage-group-A.html)
 #### US Core Practitioner
-*  us-core-practitioner-kyle-anydoc
+*  [Practitioner Kyle](Practitioner-us-core-practitioner-kyle-anydoc.html)
 #### US Core Lab Observation
-*  lab-result-observation-hemoglobin
+*  [Hemoglobin Lab Result][Observation-lab-result-observation-hemoglobin.html]

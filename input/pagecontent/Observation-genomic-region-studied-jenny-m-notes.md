@@ -5,7 +5,7 @@ Title: "genomic-region-studied-jenny-m"
 Description: "Extended example: example showing which regions were included in the genomics panel"
 Usage: #example
 * status = #final
-* category = $observation-category#laboratory
+* category = http://terminology.hl7.org/CodeSystem/observation-category#laboratory
 * code = http://loinc.org#53041-0 "DNA region of interest panel"
 * subject = Reference(cancer-patient-jenny-m)
 * effectiveDateTime = "2018-03-15"

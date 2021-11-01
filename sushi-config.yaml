@@ -59,6 +59,8 @@ pages:
     title: Artifacts Summary
   examples.md:
     title: Extended Example
+  basic_examples.md:
+    title: Basic Examples
   dictionary.md:
     title: Data Dictionary
   glossary.md:
@@ -91,7 +93,8 @@ menu:
     Example Instances: artifacts.html#example-example-instances
     Complete Listing: artifacts.html
   More:
-    Extended Example: examples.html  
+    Basic Examples: basic_examples.html
+    Extended Example: examples.html
     Data Dictionary: dictionary.html
     Glossary:  glossary.html
     Change Log: change_log.html

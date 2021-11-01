@@ -2,7 +2,7 @@
 
 This profile identifies a specific region analyzed for gene mutations or variants in a given genomic test. For example, exome sequencing tests could analyze multiple non-contiguous regions. Each region is designated by a range of start and end location and referencing a coordinate system which is 0-based or 1-based. 
 
-RegionStudied is noted at the [GenomicsReport] level and not directly tied to a given [CancerGenomicVariant].
+RegionStudied is noted at the [GenomicsReport] level and not directly tied to a given [GenomicVariant].
 
 ### Conformance
 

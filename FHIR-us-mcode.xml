@@ -29,9 +29,9 @@
 <artifact id="StructureDefinition/mcode-cancer-disease-status" key="StructureDefinition-mcode-cancer-disease-status" name="Cancer Disease Status Profile"/>
 <artifact id="ValueSet/mcode-cancer-disorder-vs" key="cancer-disorder-value-set" name="Cancer Disorder Value Set"/>
 <artifact deprecated="true" id="StructureDefinition/mcode-cancer-genetic-variant" key="cancer-genetic-variant" name="Cancer Genetic Variant"/>
-<artifact id="StructureDefinition/mcode-cancer-genomic-variant" key="StructureDefinition-mcode-cancer-genomic-variant" name="Cancer Genomic Variant Profile"/>
+<artifact id="StructureDefinition/mcode-cancer-genomic-variant" key="StructureDefinition-mcode-cancer-genomic-variant" name="Genomic Variant Profile"/>
 <artifact deprecated="true" id="StructureDefinition/mcode-cancer-genomics-report" key="cancer-genomics-report" name="Cancer Genomics Report"/>
-<artifact id="StructureDefinition/mcode-cancer-genomics-report" key="StructureDefinition-mcode-cancer-genomics-report" name="Cancer Genomics Report Profile"/>
+<artifact id="StructureDefinition/mcode-genomics-report" key="StructureDefinition-mcode-genomics-report" name="Cancer Genomics Report Profile"/>
 <artifact deprecated="true" id="StructureDefinition/mcode-cancer-patient" key="cancer-patient" name="Cancer Patient"/>
 <artifact id="StructureDefinition/mcode-cancer-patient" key="StructureDefinition-mcode-cancer-patient" name="Cancer Patient Profile"/>
 <artifact deprecated="true" id="Profile/mcode-cancer-related-medication-statement" key="cancer-related-medication-statement" name="Cancer Related Medication Statement"/>
@@ -255,11 +255,11 @@
 <artifact id="StructureDefinition/mcode-patient-bundle" key="StructureDefinition-mcode-patient-bundle" name="mCODE Patient Bundle Profile"/>
 <artifact id="Group/group-mcode-patients" key="Group-group-mcode-patients" name="mCODE Patient Group Example"/>
 <artifact id="StructureDefinition/mcode-patient-group" key="StructureDefinition-mcode-patient-group" name="mCODE Patient Group Profile"/>
-<artifact id="CodeSystem/mcode-resource-identifier-cs" key="CodeSystem-mcode-resource-identifier-cs" name="mCODE Resource Identifier Code System"/>
+<artifact deprecated="true" id="CodeSystem/mcode-resource-identifier-cs" key="CodeSystem-mcode-resource-identifier-cs" name="mCODE Resource Identifier Code System"/>
 <artifact deprecated="true" id="Example/mcode-cancer-disease-status-example-01" key="mcode-cancer-disease-status-example-01" name="mCODECancerDiseaseStatusExample01"/>
 <artifact deprecated="true" id="Example/mcode-cancer-genetic-variant-example-01" key="mcode-cancer-genetic-variant-example-01" name="mCODECancerGeneticVariantExample01"/>
 <artifact deprecated="true" id="Example/mcode-cancer-genetic-variant-example-02" key="mcode-cancer-genetic-variant-example-02" name="mCODECancerGeneticVariantExample02"/>
-<artifact deprecated="true" id="Example/mcode-cancer-genomics-report-example-01" key="mcode-cancer-genomics-report-example-01" name="mCODECancerGenomicsReportExample01"/>
+<artifact deprecated="true" id="Example/mcode-cancer-genomics-report-example-01" key="mcode-cancer-genomics-report-example-01" name="mCODEGenomicsReportExample01"/>
 <artifact deprecated="true" id="Example/mcode-cancer-related-medication-statement-example-01" key="mcode-cancer-related-medication-statement-example-01" name="mCODECancerRelatedMedicationStatementExample01"/>
 <artifact deprecated="true" id="Example/mcode-cancer-related-medication-statement-example-02" key="mcode-cancer-related-medication-statement-example-02" name="mCODECancerRelatedMedicationStatementExample02"/>
 <artifact deprecated="true" id="Example/mcode-cancer-related-radiation-procedure-example-01" key="mcode-cancer-related-radiation-procedure-example-01" name="mCODECancerRelatedRadiationProcedureExample01"/>

@@ -287,7 +287,7 @@ Description: "Extended example: example showing HER2 status"
 
 // 7-Gene Panel
 
-Instance: cancer-genomics-report-jenny-m
+Instance: genomics-report-jenny-m
 InstanceOf: GenomicsReport
 Description: "Extended example: example of gene panel report"
 * status = #final "final"
@@ -297,7 +297,7 @@ Description: "Extended example: example of gene panel report"
 * effectiveDateTime = "2018-03-15"
 * issued = "2020-03-15T00:00:01+00:00"
 * specimen = Reference(genomic-specimen-left-breast-jenny-m)
-* result[0] = Reference(cancer-genomic-variant-jenny-m)
+* result[0] = Reference(genomic-variant-jenny-m)
 * result[1] = Reference(genomic-region-studied-jenny-m)
 
 Instance: genomic-region-studied-jenny-m
@@ -317,8 +317,8 @@ Description: "Extended example: example showing which regions were included in t
 * component[geneStudied].valueCodeableConcept.coding[+] = HGNC#11389 "STK11"
 * component[geneStudied].valueCodeableConcept.coding[+] = HGNC#11998 "TP53"
 
-Instance: cancer-genomic-variant-jenny-m
-InstanceOf: CancerGenomicVariant
+Instance: genomic-variant-jenny-m
+InstanceOf: GenomicVariant
 Description: "Extended example: example showing genomic variant found by breast cancer genomics panel"
 * status = #final "final"
 * code = LNC#69548-6 "Genetic variant assessment"  // not Genomic!

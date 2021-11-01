@@ -1,7 +1,7 @@
-Profile:    CancerGenomicVariant
+Profile:    GenomicVariant
 Parent:     USCoreObservationLab
-Id: mcode-cancer-genomic-variant
-Title:      "Cancer Genomic Variant Profile"
+Id: mcode-genomic-variant
+Title:      "Genomic Variant Profile"
 Description:    "Records an alteration in the most common DNA nucleotide sequence. The term variant can be used to describe an alteration that may be benign, pathogenic, or of unknown significance. The term variant is increasingly being used in place of the term mutation."
 * insert NotUsed(bodySite)
 * insert NotUsed(referenceRange)
@@ -143,8 +143,8 @@ RuleSet: CancerRelatedSpecimenRules
 * subject and status and type and collection and collection.bodySite and collection.bodySite.extension and collection.bodySite.extension[locationQualifier] and collection.bodySite.extension[lateralityQualifier] MS
 
 
-Profile:    GenomicSpecimen
-Parent:     Specimen
+Profile: GenomicSpecimen
+Parent: Specimen
 Id: mcode-genomic-specimen
 Title:      "Genomic Specimen Profile"
 Description:    "A small sample of blood, hair, skin, amniotic fluid (the fluid that surrounds a fetus during pregnancy), or other tissue which is excised from a subject for the purposes of genomics testing or analysis."
@@ -152,10 +152,10 @@ Description:    "A small sample of blood, hair, skin, amniotic fluid (the fluid 
 * type from GenomicSpecimenTypeVS (extensible)
 
 
-Profile:    GenomicsReport
-Parent:     USCoreDiagnosticReportLab
-Id: mcode-genomics-report
-Title:      "Cancer Genomics Report Profile"
+Profile:     GenomicsReport
+Parent:      USCoreDiagnosticReportLab
+Id:          mcode-genomics-report
+Title:      "Genomics Report Profile"
 Description:    "Genomic analysis summary report. The report may include one or more tests, with two distinct test types. The first type is a targeted mutation test, where a specific mutation on a specific gene is tested for. The result is either positive or negative for that mutation. The second type is a more general test for variants. This type of test returns the identity of variants found in a certain region of the genome."
 * category contains GenomicsCategory 1..1
 * category[GenomicsCategory] = DiagnosticService#GE
@@ -163,12 +163,12 @@ Description:    "Genomic analysis summary report. The report may include one or 
 * specimen only Reference(GenomicSpecimen)
 * insert DiagnosticReportResultSlicingRules
 * result contains
-    CancerGenomicVariant 0..1 MS and
+    GenomicVariant 0..1 MS and
     GenomicRegionStudied 0..1 MS
-* result[CancerGenomicVariant] only Reference(CancerGenomicVariant)
-* result[CancerGenomicVariant] ^short = "Reference to Cancer Genomic Variant"
-* result[CancerGenomicVariant] ^definition = "Records an alteration in the most common DNA nucleotide sequence. The term variant is increasingly being used in place of the term mutation to describe an alteration that may be benign, pathogenic, or of unknown significance."
-* result[CancerGenomicVariant] ^comment = "When using this element, the referenced Observation must validate against the CancerGenomicVariant profile."
+* result[GenomicVariant] only Reference(GenomicVariant)
+* result[GenomicVariant] ^short = "Reference to Genomic Variant"
+* result[GenomicVariant] ^definition = "Records an alteration in the most common DNA nucleotide sequence. The term variant is increasingly being used in place of the term mutation to describe an alteration that may be benign, pathogenic, or of unknown significance."
+* result[GenomicVariant] ^comment = "When using this element, the referenced Observation must validate against the GenomicVariant profile."
 * result[GenomicRegionStudied] only Reference(GenomicRegionStudied)
 * result[GenomicRegionStudied] ^short = "Reference to Genomic Region Studied"
 * result[GenomicRegionStudied] ^definition = "The area of the genome region referenced in testing for variants."
@@ -178,7 +178,7 @@ Description:    "Genomic analysis summary report. The report may include one or 
 
 Profile:    GenomicRegionStudied
 Parent:     USCoreObservationLab
-Id: mcode-genomic-region-studied
+Id:         mcode-genomic-region-studied
 Title:      "Genomic Region Studied Profile"
 Description:    "The area of the genome region referenced in testing for variants."
 * code = LNC#53041-0 //"DNA region of interest panel"

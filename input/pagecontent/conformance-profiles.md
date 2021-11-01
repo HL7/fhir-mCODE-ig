@@ -8,8 +8,6 @@ Where US Core does not provide an appropriate base profile, mCODE profiles FHIR 
 |---------|--------------------|--------------------------|
 | [Brachytherapy Treatment Phase][BrachytherapyTreatmentPhase]| yes | US Core Procedure |
 | [Cancer Disease Status][CancerDiseaseStatus] | no | Observation |
-| [Cancer Genomic Variant][CancerGenomicVariant] | yes | US Core Laboratory Result Observation |
-| [Cancer Genomics Report][GenomicsReport] | yes | US Core Diagnostic Report Lab |
 | [Cancer Patient][CancerPatient] | yes | US Core Patient |
 | [Cancer-Related Medication Administration][CancerRelatedMedicationAdministration] | no | Medication Administration |
 | [Cancer-Related Medication Request][CancerRelatedMedicationRequest] | yes | US Core Medication Request |
@@ -18,8 +16,10 @@ Where US Core does not provide an appropriate base profile, mCODE profiles FHIR 
 | [Comorbidities Parent][ComorbiditiesParent]  | no | Observation |
 | [Comorbidities Elixhauser][ComorbiditiesElixhauser] | no | Comorbidities Parent |
 | [ECOG Performance Status][ECOGPerformanceStatus] | no | Observation |
-| [Genomic Specimen][GenomicSpecimen] | no | Specimen |
 | [Genomic Region Studied][GenomicRegionStudied] | yes | US Core Laboratory Result Observation |
+| [Genomics Report][GenomicsReport] | yes | US Core Diagnostic Report Lab |
+| [Genomic Specimen][GenomicSpecimen] | no | Specimen |
+| [Genomic Variant][GenomicVariant] | yes | US Core Laboratory Result Observation |
 | [Karnofsky Performance Status][KarnofskyPerformanceStatus] | no | Observation |
 | [mCODE Patient Bundle][MCODEPatientBundle] | no | Bundle  |
 | [Primary Cancer Condition][PrimaryCancerCondition] | yes | US Core Condition |

@@ -1,7 +1,6 @@
 The following code systems are defined in mCODE:
 
 * [ComorbiditiesElixhauserCS]
-* [ResourceIdentifierCS]
 * [LoincRequestedCS]
 * [SnomedRequestedCS]
 

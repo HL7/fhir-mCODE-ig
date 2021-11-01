@@ -1,6 +1,6 @@
-Instance: cancer-genomic-variant-somatic-single-nucleotide
-InstanceOf: CancerGenomicVariant
-Description: "mCODE Example for Cancer Genomic Variant"
+Instance: genomic-variant-somatic-single-nucleotide
+InstanceOf: GenomicVariant
+Description: "mCODE Example for Genomic Variant"
 * status = #final "Final"
 * method = LNC#LA26398-0 "Sequencing"
 // value[x] has alternate codings depending on where to place the interpretation of "Positive or Negative".
@@ -17,13 +17,13 @@ Description: "mCODE Example for Cancer Genomic Variant"
 * component[genomicDNAChange].valueCodeableConcept = HGVS#NC_000019.8:g.1171707G>A "NC_000019.8:g.1171707G>A"
 * component[genomicSourceClass].valueCodeableConcept = LNC#LA6684-0 "Somatic"
 
-/* cancer-genomic-variant-germline-deletion is an example of the
- * CancerGenomicVariant to represent a single mutation test.
+/* genomic-variant-germline-deletion is an example of the
+ * GenomicVariant to represent a single mutation test.
  * This example demonstrates a test for a single germline mutation, BRCA1 gene.c.185delAG, equivalent to the LOINC test https://loinc.org/21637-4/.
  */
-Instance: cancer-genomic-variant-germline-deletion
-InstanceOf: CancerGenomicVariant
-Description: "mCODE Example for Cancer Genomic Variant"
+Instance: genomic-variant-germline-deletion
+InstanceOf: GenomicVariant
+Description: "mCODE Example for Genomic Variant"
 * status = #final "Final"
 * method = LNC#LA26398-0 "Sequencing"
 // value[x] has alternate codings depending on where to place the interpretation of "Positive or Negative".
@@ -35,13 +35,13 @@ Description: "mCODE Example for Cancer Genomic Variant"
 * component[genomicDNAChange].valueCodeableConcept = HGVS#NG_005905.2:g.126148_126152del "NG_005905.2:g.126148_126152del"
 * component[genomicSourceClass].valueCodeableConcept = LNC#LA6683-2 "Germline"
 
-/* cancer-genomic-variant-fusion is an example of the
- * CancerGenomicVariant to represent a gene fusion event.
+/* genomic-variant-fusion is an example of the
+ * GenomicVariant to represent a gene fusion event.
  * This example demonstrates a test for the gene fusion ABR-BCL1.
  */
-Instance: cancer-genomic-variant-fusion
-InstanceOf: CancerGenomicVariant
-Description: "mCODE Example for Cancer Genomic Variant gene fusion event"
+Instance: genomic-variant-fusion
+InstanceOf: GenomicVariant
+Description: "mCODE Example for Genomic Variant gene fusion event"
 * status = #final "Final"
 * method = LNC#LA26398-0 "Sequencing"
 * interpretation = SCT#10828004 "Positive (qualifier value)"
@@ -54,15 +54,15 @@ Description: "mCODE Example for Cancer Genomic Variant gene fusion event"
 * component[genomicDNAChange].valueCodeableConcept = HGVS#NM_005157.6(ABL1):c.1076T>G "NM_005157.6(ABL1):c.1076T>G"   // "NM_005157.6(ABL1):c.1076T>G (p.Phe359Cys)"
 * component[genomicSourceClass].valueCodeableConcept = LNC#LA6684-0 "Somatic"
 
-Instance: cancer-genomics-report-john-anyperson
+Instance: genomics-report-john-anyperson
 InstanceOf: GenomicsReport
-Description: "mCODE Example for Cancer Genomics Report"
+Description: "mCODE Example for Genomics Report"
 * status = #final "Final"
 * subject = Reference(cancer-patient-john-anyperson)
 * effectiveDateTime = "2019-04-01"
 * specimen = Reference(Specimen/genomic-specimen-lung)
 * issued = "2019-04-01T11:45:33+11:00"
-* result[CancerGenomicVariant] = Reference(Observation/cancer-genomic-variant-somatic-single-nucleotide)
+* result[GenomicVariant] = Reference(Observation/genomic-variant-somatic-single-nucleotide)
 * result[GenomicRegionStudied] = Reference(genomic-region-studied-stk11)
 
 Instance: genomic-region-studied-stk11

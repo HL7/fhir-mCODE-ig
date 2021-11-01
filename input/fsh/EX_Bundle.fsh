@@ -5,7 +5,7 @@ Title: "mCODE Patient Group Example"
 Description: "Example of a Group identifying in-scope patients"
 * type = #person
 * actual = true
-* code = RID#mcode-patient
+* code = NCI#C19700  "Cancer Patient"
 * member[0].entity = Reference(Patient/cancer-patient-john-anyperson)
 * member[1].entity = Reference(Patient/cancer-patient-eve-anyperson)
 
@@ -25,11 +25,11 @@ Description: "Extended example as a mCODE Patient Bundle"
 * entry[+].resource = cancer-disease-status-jenny-m
 * entry[=].fullUrl = "http://example.org/fhir/Observation/cancer-disease-status-jenny-m"
 * entry[=].resource.meta.profile[0] = Canonical(CancerDiseaseStatus)
-* entry[+].resource = cancer-genomic-variant-jenny-m
-* entry[=].fullUrl = "http://example.org/fhir/Observation/cancer-genomic-variant-jenny-m"
-* entry[=].resource.meta.profile[0] = Canonical(CancerGenomicVariant)
-* entry[+].resource = cancer-genomics-report-jenny-m
-* entry[=].fullUrl = "http://example.org/fhir/DiagnosticReport/cancer-genomics-report-jenny-m"
+* entry[+].resource = genomic-variant-jenny-m
+* entry[=].fullUrl = "http://example.org/fhir/Observation/genomic-variant-jenny-m"
+* entry[=].resource.meta.profile[0] = Canonical(GenomicVariant)
+* entry[+].resource = genomics-report-jenny-m
+* entry[=].fullUrl = "http://example.org/fhir/DiagnosticReport/genomics-report-jenny-m"
 * entry[=].resource.meta.profile[0] = Canonical(GenomicsReport)
 * entry[+].resource = cancer-related-surgical-procedure-jenny-m
 * entry[=].fullUrl = "http://example.org/fhir/Procedure/cancer-related-surgical-procedure-jenny-m"

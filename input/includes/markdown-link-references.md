@@ -19,7 +19,7 @@
 [GenomicRegionStudied]: StructureDefinition-mcode-genomic-region-studied.html
 [GenomicSpecimen]: StructureDefinition-mcode-genomic-specimen.html
 [GenomicsReport]: StructureDefinition-mcode-genomics-report.html
-[GenomicVariant]: StructureDefinition-mcode-cancer-genomic-variant.html
+[GenomicVariant]: StructureDefinition-mcode-genomic-variant.html
 [KarnofskyPerformanceStatus]: StructureDefinition-mcode-karnofsky-performance-status.html
 [MCODEPatientBundle]: StructureDefinition-mcode-patient-bundle.html
 [MCODEPatientGroup]: StructureDefinition-mcode-patient-group.html
@@ -162,7 +162,6 @@
 
 <!-- mCODE Code Systems -->
 [ComorbiditiesElixhauserCS]: CodeSystem-comorbidities-elixhauser-cs.html
-[ResourceIdentifierCS]: CodeSystem-mcode-resource-identifier-cs.html
 [LoincRequestedCS]: CodeSystem-loinc-requested-cs.html
 [SnomedRequestedCS]: CodeSystem-snomed-requested-cs.html
 

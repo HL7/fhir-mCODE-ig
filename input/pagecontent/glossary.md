@@ -2,7 +2,7 @@
 
 |  Concept  | Definition | Additional Description|
 |-----|-------------------|--------------------|
-| Radiation Therapy (Radiotherapy) | Radiation therapy, or radiotherapy, is a treatment that uses doses of radiation to kill cells and shrink tumors.| Radiation therapy is generally divided into two classes, teleradiotherapy (externally applied) and brachytherapy |
+| Radiation Therapy (Radiotherapy) | Radiation therapy, or radiotherapy, is a treatment that uses doses of radiation to kill cells and shrink tumors.| Radiation therapy is generally divided into two classes, teleradiotherapy (externally applied) and brachytherapy (internally applied) |
 | Teleradiotherapy |  Radiation therapy in which high-energy beams are delivered from outside of the body. | Also known as [External Beam Radiation Therapy](https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C15751). |
 | Brachytherapy |  A type of radiation therapy in which radioactive material is placed inside the body, into a tumor or body cavity. | [Reference](https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C15195) |
 | Modality | The main type of radiation delivery such as photons, protons, or high dose rate brachytherapy. |  Modalities are not strictly differentiated along a single physical property, but in a way that makes sense in practical categorization. For teleradiotherapy, modality refers to the type of particle used, while for brachytherapy, modality generally refers to the type of dose rate and placement. |

@@ -8,6 +8,7 @@
 | Modality | The main type of radiation delivery such as photons, protons, or high dose rate brachytherapy. |  Modalities are not strictly differentiated along a single physical property, but in a way that makes sense in practical categorization. For teleradiotherapy, modality refers to the type of particle used, while for brachytherapy, modality generally refers to the type of dose rate and placement. |
 | Technique  |  The treatment delivery method such as Volumetric Modulated Arc Therapy or Particle Spot Scanning. | The technique defines how a certain modality is applied, enabling a more granular categorization of the treatment approach for a given modality. |
 | Target Volume | ? | ? |
+{: .grid }
 
 ### Treatment Delivery Concepts
 
@@ -18,7 +19,6 @@
 | Plan Fraction | A portion of a treatment plan, delivered during a single session. | Each treatment plan is treated as a series of equivalent plan fractions, each fraction consisting of the same nominal dose to the same set of target volumes with the same modality, technique, and device parameters. The term "fraction" is also commonly used in the context of a phase, but here the concept of plan fraction is used for clarity when referring to subdivisions of a plan. |
 | Phase Fraction | Given one or more treatment plans belonging to a phase, a phase fraction is the combination of plan fractions delivered during a given session. | If a phase has only one plan, then the fractions of a phase and the fractions of a treatment plan are identical (in such a case, the term "fraction" can be used without qualification). When multiple plans are part of one phase, then a fraction of the phase contains the fractions of all those treatment plans during the session. |
 | Session | A course consists of a series of sessions. A session is the period between when the patient enters the treatment room and when they leave it. | In one session, a fraction of one treatment plan or fractions from different treatment plans may be executed, depending on how the treatments of multiple phases and their specific treatment plans are assigned to sessions. For example, the first fraction of the right breast may be treated in the same session as the fifth fraction of the left breast. The actual number of sessions required to deliver a course may exceed the number of sessions originally scheduled. This is the case if the treatment in one session cannot be completed due to medical or technical issues and has to be continued in another session. |
-
 {: .grid }
 
 ### Example

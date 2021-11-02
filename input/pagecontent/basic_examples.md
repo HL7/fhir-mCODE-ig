@@ -28,7 +28,7 @@
 *  [TNM Clinical Regional Nodes Category - cN3](Observation-tnm-clinical-regional-nodes-category-cN3.html)
 *  [TNM Clinical Stage Group 3](Observation-tnm-clinical-stage-group-3c.html)
 *  [Binet Stage Group A for Leukemia](Observation-binet-stage-group-A.html)
-###US Core Practitioner
+### US Core Practitioner
 *  [Practitioner Kyle](Practitioner-us-core-practitioner-kyle-anydoc.html)
-###US Core Lab Observation
+### US Core Lab Observation
 *  [Hemoglobin Lab Result][Observation-lab-result-observation-hemoglobin.html]

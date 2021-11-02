@@ -53,6 +53,7 @@
 * [FHIR-32888] (https://jira.hl7.org/browse/FHIR-33340)  Consider renaming CancerGeneticVariant to a more accurate name which covers both dna and amino acid changes.
 * (Issue to be created) Changed slicing on mCODE Patient Bundle to required each resource in the bundle to populate meta.profile
 * (Issue to be created) Reorganized and reduced the number of locally-defined code systems to better track codes requested from SNOMED and LOINC
+* RadiotherapyTreatmentLocationQualifierVS and RadiotherapyTreatmentLocationVS now aligned with TG263
 
 ### mCODE STU 2 Ballot Version (May 2021)
 

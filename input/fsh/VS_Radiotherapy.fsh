@@ -356,7 +356,7 @@ Description: "Codes describing the body locations where radiotherapy treatments 
 * SCT#88481005 "Sublingual gland structure (body structure)" // Sublingual gland
 * SCT#385296007 "Submandibular salivary gland structure (body structure)" // Submandibular Gland
 * SCT#9875009 "Thymus gland structure (body structure)" // Thymus Gland
-* SCT#24571007  "Structure of distal epiphysis of femur (body structure)" //(was |13348000 | Structure of base of neck of femur (body structure))  // Femur Base Left
+// * SCT#24571007  "Structure of distal epiphysis of femur (body structure)"   // Femur Base Left - DROPPED 11/2/21 by RTTD
 * SCT#69748006 "Thyroid structure (body structure)" // Thyroid Gland
 * SCT#2812003 "Structure of head of femur (body structure)" // Femur Head & Neck Left
 * SCT#24136001 "Hip joint structure (body structure)" // Femoral Joint Left

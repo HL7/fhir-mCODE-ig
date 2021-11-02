@@ -14,6 +14,8 @@ Not all surgical procedures are relevant to treatment of cancer patients. To lim
 
 A radiation oncology work group convened under [CodeX FHIR Accelerator](https://confluence.hl7.org/display/COD/CodeX+Home) has helped create new profiles and value sets for radiotherapy. The group included American Society for Radiation Oncology (ASTRO), American Association of Physicists in Medicine (AAPM), Integrating Healthcare Enterprise - Radiation Oncology (IHE-RO), Varian, Elekta, Epic, and Wemedoo. The group helped defined value sets for modality and technique for external beam (teleradiotherapy) and internal radiotherapy (brachytherapy), as well as profiles for delivery of both types of treatment. To limit the scope, mCODE focused on high-level summarization of the treatment given, and avoids many details of the treatments. Ordering workflows are out of scope.
 
+For definition of key terms in radiotherapy, see the [Radiotherapy Glossary](glossary.html) page.
+
 ### Profiles
 
 * **Medication**

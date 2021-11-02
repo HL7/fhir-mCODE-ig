@@ -31,4 +31,7 @@ The following figures illustrate two different views of the treatment delivery c
 
 ![Illustrative Radiotherapy Example](BreastTreatmentPlan.png)
 
+<br>
+<br>
+
 ![Relationship of Plans, Phases, and Course](BreastTreatmentSummary.png)

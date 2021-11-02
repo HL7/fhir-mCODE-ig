@@ -7,7 +7,7 @@
 | Brachytherapy |  A type of radiation therapy in which radioactive material is placed inside the body, into a tumor or body cavity. | [Reference](https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C15195) |
 | Modality | The main type of radiation delivery such as photons, protons, or high dose rate brachytherapy. |  Modalities are not strictly differentiated along a single physical property, but in a way that makes sense in practical categorization. For teleradiotherapy, modality refers to the type of particle used, while for brachytherapy, modality generally refers to the type of dose rate and placement. |
 | Technique  |  The treatment delivery method such as Volumetric Modulated Arc Therapy or Particle Spot Scanning. | The technique defines how a certain modality is applied, enabling a more granular categorization of the treatment approach for a given modality. |
-| Target Volume | ? | ? |
+| Radiotherapy Volume | A volume of the body used in radiotherapy planning or treatment delivery. | Each volume can be further characterized as (i) gross tumor volume (GTV), which is the position and extent of a tumour, (ii) clinical target volume (CTV), which is the GTV plus a margin to account for disease spread that cannot be fully imaged), and (iii) planning target volume (PTV), which allows for uncertainties in planning or treatment delivery. [Reference](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1434601/) |
 {: .grid }
 
 ### Treatment Delivery Concepts

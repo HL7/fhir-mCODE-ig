@@ -1,6 +1,6 @@
 ### Usage
 
-Extension capturing modality and technique of a given radiotherapy procedure.
+Extension capturing modality and technique of a given radiotherapy procedure. For definitions, see the [Radiotherapy Glossary](glossary.html) page.
 
 Allowed combinations of modality and technique are shown here and enforced by invariants:
 

@@ -1,6 +1,6 @@
 ### [Cancer Disease Status](StructureDefinition-mcode-cancer-disease-status.html) ([Observation](http://hl7.org/fhir/R4/observation.html))
 
-* [Cancer Disease Status Improved](Observationcancer-disease-status-improved.html)
+* [Cancer Disease Status Improved](Observation-cancer-disease-status-improved.html)
 
 ### [Cancer Patient](StructureDefinition-mcode-cancer-patient.html) ([US Core Patient](http://hl7.org/fhir/us/core/STU4/StructureDefinition-us-core-patient.html))
 
@@ -33,7 +33,7 @@
 
 * [Cancer Related Comorbidities - John Anyperson](Observation-cancer-related-mcode-comorbidities-elixhauser-john-anyperson.html)
 
-### [Karnofsky Performance Status](StructureDefinition-mcode-karnofky-performance-status.html) ([Observation](http://hl7.org/fhir/R4/observation.html))
+### [Karnofsky Performance Status](StructureDefinition-mcode-karnofsky-performance-status.html) ([Observation](http://hl7.org/fhir/R4/observation.html))
 
 * [Karnofsky Performance State - Normal Activities](Observation-karnofsky-performance-status-normal-activity.html)
 

@@ -66,7 +66,7 @@
 <artifact id="ValueSet/elixhauser-ulcer-vs" key="ValueSet-elixhauser-ulcer-vs" name="Elixhauser Chronic Peptic Ulcer Disease Value Set"/>
 <artifact id="ValueSet/elixhauser-chronic-pulmonary-disease-vs" key="ValueSet-elixhauser-chronic-pulmonary-disease-vs" name="Elixhauser Chronic Pulmonary Disease Value Set"/>
 <artifact id="ValueSet/elixhauser-coagulation-deficiency-vs" key="ValueSet-elixhauser-coagulation-deficiency-vs" name="Elixhauser Coagulation Deficiency Value Set"/>
-<artifact id="CodeSystem/comorbidities-elixhauser-cs" key="CodeSystem-comorbidities-elixhauser-cs" name="Elixhauser Comorbidity Categories Code System"/>
+<artifact deprecated="true" id="CodeSystem/comorbidities-elixhauser-cs" key="CodeSystem-comorbidities-elixhauser-cs" name="Elixhauser Comorbidity Categories"/>
 <artifact id="ValueSet/elixhauser-congestive-heart-failure-vs" key="ValueSet-elixhauser-congestive-heart-failure-vs" name="Elixhauser Congestive Heart Failure Value Set"/>
 <artifact id="ValueSet/elixhauser-deficiency-anemia-vs" key="ValueSet-elixhauser-deficiency-anemia-vs" name="Elixhauser Deficiency Anemia Value Set"/>
 <artifact id="ValueSet/elixhauser-dementia-vs" key="ValueSet-elixhauser-dementia-vs" name="Elixhauser Dementia Value Set"/>
@@ -358,8 +358,9 @@
 <page key="many" name="(many)"/>
 <page key="artifacts" name="Artifacts Summary"/>
 <page key="group-assessment" name="Assessment"/>
+<page key="capabilitystatements" name="Capability Statements"/>
 <page key="changelog" name="Change Log"/>
-<page key="codesystems" name="CodeSystems"/>
+<page key="codesystems" name="Code Systems"/>
 <page key="conformance-general" name="Conformance Expectations"/>
 <page key="dictionary" name="Data Dictionary"/>
 <page key="group-disease" name="Disease Characterization"/>

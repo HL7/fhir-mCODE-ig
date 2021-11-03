@@ -161,7 +161,6 @@
 [Variant Assess]: http://loinc.org/vs/LL1971-2
 
 <!-- mCODE Code Systems -->
-[ComorbiditiesElixhauserCS]: CodeSystem-comorbidities-elixhauser-cs.html
 [LoincRequestedCS]: CodeSystem-loinc-requested-cs.html
 [SnomedRequestedCS]: CodeSystem-snomed-requested-cs.html
 

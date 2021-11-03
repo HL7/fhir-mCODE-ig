@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<specification xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ballotUrl="http://hl7.org/fhir/us/mcode/2021May" ciUrl="http://build.fhir.org/ig/HL7/fhir-mCODE-ig" defaultVersion="1.0.1" defaultWorkgroup="cic" gitUrl="https://github.com/HL7/fhir-mCODE-ig" url="http://hl7.org/fhir/us/mcode">
+<specification xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ballotUrl="http://hl7.org/fhir/us/mcode/2021May" ciUrl="http://build.fhir.org/ig/HL7/fhir-mCODE-ig" defaultVersion="2.0.0" defaultWorkgroup="cic" gitUrl="https://github.com/HL7/fhir-mCODE-ig" url="http://hl7.org/fhir/us/mcode">
 <version code="current" url="http://build.fhir.org/ig/HL7/fhir-mCODE-ig"/>
+<version code="2.0.0" url="http://hl7.org/fhir/us/mcode/STU2"/>
 <version code="1.16.0" url="http://hl7.org/fhir/us/mcode/2021May"/>
 <version code="1.0.1" url="http://hl7.org/fhir/us/mcode/STU1"/>
 <version code="1.0.0" url="http://hl7.org/fhir/us/mcode/STU1"/>
@@ -358,6 +359,7 @@
 <page key="many" name="(many)"/>
 <page key="artifacts" name="Artifacts Summary"/>
 <page key="group-assessment" name="Assessment"/>
+<page key="basic_examples" name="Basic Examples"/>
 <page key="capabilitystatements" name="Capability Statements"/>
 <page key="changelog" name="Change Log"/>
 <page key="codesystems" name="Code Systems"/>

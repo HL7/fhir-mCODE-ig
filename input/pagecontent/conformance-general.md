@@ -78,9 +78,7 @@ Note that the requests below may return resources associated with patients who a
   * Surgery
     * [CancerRelatedSurgicalProcedure]\: `GET [base]/Procedure?code=http://snomed.info/sct|387713003` will identify all surgical procedures. `Procedure.code` is extensibly bound to [CancerRelatedSurgicalProcedureVS], so further filtering to include only Procedures with `code` in this value set will identify some but not necessarily all cancer-related surgical procedures.
   * Radiotherapy
-    * [BrachytherapyTreatmentPhase]\: `GET [base]/Procedure?code=mcode-brachytherapy-treatment-phase`
     * [RadiotherapyCourseSummary]\: `GET [base]/Procedure?code=mcode-radiotherapy-course-summary`
-    * [TeleradiotherapyTreatmentPhase]\: `GET [base]/Procedure?code=mcode-teleradiotherapy-treatment-phase`
 
 * Outcome
   * [CancerDiseaseStatus]\: `GET [base]/Observation?code=http://loinc.org|88040-1`

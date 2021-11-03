@@ -6,26 +6,27 @@ Where US Core does not provide an appropriate base profile, mCODE profiles FHIR 
 
 | Profile | Based on US Core?  | Immediate Parent Profile |
 |---------|--------------------|--------------------------|
-| [Brachytherapy Treatment Phase][BrachytherapyTreatmentPhase]| yes | US Core Procedure |
+| [Body Structure Identifier][BodyStructureIdentifier] | no | Identifier |
 | [Cancer Disease Status][CancerDiseaseStatus] | no | Observation |
 | [Cancer Patient][CancerPatient] | yes | US Core Patient |
 | [Cancer-Related Medication Administration][CancerRelatedMedicationAdministration] | no | Medication Administration |
 | [Cancer-Related Medication Request][CancerRelatedMedicationRequest] | yes | US Core Medication Request |
 | [Cancer-Related Surgical Procedure][CancerRelatedSurgicalProcedure] | yes | US Core Procedure |
 | [Cancer Stage Group][CancerStageGroup] | no | Observation |
-| [Comorbidities Parent][ComorbiditiesParent]  | no | Observation |
 | [Comorbidities Elixhauser][ComorbiditiesElixhauser] | no | Comorbidities Parent |
+| [Comorbidities Parent][ComorbiditiesParent]  | no | Observation |
 | [ECOG Performance Status][ECOGPerformanceStatus] | no | Observation |
 | [Genomic Region Studied][GenomicRegionStudied] | yes | US Core Laboratory Result Observation |
-| [Genomics Report][GenomicsReport] | yes | US Core Diagnostic Report Lab |
 | [Genomic Specimen][GenomicSpecimen] | no | Specimen |
+| [Genomics Report][GenomicsReport] | yes | US Core Diagnostic Report Lab |
 | [Genomic Variant][GenomicVariant] | yes | US Core Laboratory Result Observation |
 | [Karnofsky Performance Status][KarnofskyPerformanceStatus] | no | Observation |
 | [mCODE Patient Bundle][MCODEPatientBundle] | no | Bundle  |
+| [mCODE Patient Group][MCODEPatientGroup] | no | Group  |
 | [Primary Cancer Condition][PrimaryCancerCondition] | yes | US Core Condition |
 | [Radiotherapy Course Summary][RadiotherapyCourseSummary] | yes | US Core Procedure |
+| [Radiotherapy Volume][RadiotherapyVolume] | yes | BodyStructure |
 | [Secondary Cancer Condition][SecondaryCancerCondition] | yes | US Core Condition |
-| [Teleradiotherapy Treatment Phase][TeleradiotherapyTreatmentPhase] | yes | US Core Procedure |
 | [TNM Distant Metastases Category][TNMDistantMetastasesCategory] | no | Observation |
 | [TNM Primary Tumor Category][TNMPrimaryTumorCategory] | no | Observation |
 | [TNM Regional Nodes Category][TNMRegionalNodesCategory] | no | Observation |

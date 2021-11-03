@@ -57,10 +57,10 @@ pages:
     title: Capability Statements
   artifacts.html:
     title: Artifacts Summary
-  examples.md:
-    title: Extended Example
   basic_examples.md:
     title: Basic Examples
+  examples.md:
+    title: Extended Example
   dictionary.md:
     title: Data Dictionary
   glossary.md:
@@ -90,7 +90,6 @@ menu:
     Value Sets: valuesets.html
     Code Systems: codesystems.html
     Capability Statements: capabilitystatements.html
-    Example Instances: artifacts.html#example-example-instances
     Complete Listing: artifacts.html
   More:
     Basic Examples: basic_examples.html

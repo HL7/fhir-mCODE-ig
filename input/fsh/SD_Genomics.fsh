@@ -2,7 +2,7 @@ Profile:    GenomicVariant
 Parent:     USCoreObservationLab
 Id: mcode-genomic-variant
 Title:      "Genomic Variant Profile"
-Description:    "Records an alteration in the most common DNA nucleotide sequence. The term variant can be used to describe an alteration that may be benign, pathogenic, or of unknown significance. The term variant is increasingly being used in place of the term mutation."
+Description:    "An alteration in the most common DNA nucleotide sequence. The term variant can be used to describe an alteration that may be benign, pathogenic, or of unknown significance. The term variant is increasingly being used in place of the term mutation. Variants can be computed relative to reference sequence assembly from which it was identified."
 * insert NotUsed(bodySite)
 * insert NotUsed(referenceRange)
 * insert NotUsed(hasMember)
@@ -180,7 +180,7 @@ Profile:    GenomicRegionStudied
 Parent:     USCoreObservationLab
 Id:         mcode-genomic-region-studied
 Title:      "Genomic Region Studied Profile"
-Description:    "The area of the genome region referenced in testing for variants."
+Description:    "A subset of genes or genomic regions of interest in a targeted resequencing study."
 * code = LNC#53041-0 //"DNA region of interest panel"
 //* insert NotUsed(value[x])
 * value[x] 0..0 // remove the must-support obligation imposed by US Core (MK 2/16/2021)

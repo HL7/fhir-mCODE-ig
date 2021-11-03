@@ -57,6 +57,8 @@ pages:
     title: Capability Statements
   artifacts.html:
     title: Artifacts Summary
+  basic_examples.md:
+    title: Basic Examples
   examples.md:
     title: Extended Example
   dictionary.md:
@@ -88,10 +90,10 @@ menu:
     Value Sets: valuesets.html
     Code Systems: codesystems.html
     Capability Statements: capabilitystatements.html
-    Example Instances: artifacts.html#example-example-instances
     Complete Listing: artifacts.html
   More:
-    Extended Example: examples.html  
+    Basic Examples: basic_examples.html
+    Extended Example: examples.html
     Data Dictionary: dictionary.html
     Radiotherapy Glossary:  glossary.html
     Change Log: change_log.html

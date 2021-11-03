@@ -53,6 +53,7 @@
 * [FHIR-32888] (https://jira.hl7.org/browse/FHIR-33340)  Consider renaming CancerGeneticVariant to a more accurate name which covers both dna and amino acid changes.
 * (Issue to be created) Changed slicing on mCODE Patient Bundle to required each resource in the bundle to populate meta.profile
 * (Issue to be created) Reorganized and reduced the number of locally-defined code systems to better track codes requested from SNOMED and LOINC
+* RadiotherapyTreatmentLocationQualifierVS and RadiotherapyTreatmentLocationVS now aligned with TG263
 * (Issue to be created) Renamed `CancerGenomicsReport` to `GenomicsReport` and `CancerGenomicVariant` to `GenomicVariant` because they are not specific to cancer, and make them more broadly applicable outside of cancer.
 * (Issue to be created) Removed the local code system `ResourceIdentifierCS` that contained only one code (`#mcode-patient`), and replaced `#mcode-patient` with the NCI code for cancer patient, `NCI#C19700`. This affects the profile `MCODEPatientGroup` and the way of querying for the list of "in-scope" patients.
 * Merged local codes for Cormorbidities into the LoincRequestedCS code system and removed the local code system that contained the Elixhauser comorbidity codes, since the codes have been requested in LOINC.

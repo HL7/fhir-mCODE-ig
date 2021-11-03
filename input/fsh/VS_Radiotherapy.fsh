@@ -301,7 +301,7 @@ Description: "Codes describing the body locations where radiotherapy treatments 
 * SCT#73117003 "Sphenoid bone structure (body structure)" // Sphenoid Bone
 * SCT#60911003 "Temporal bone structure (body structure)" // Temporal Bone
 * SCT#13881006 "Zygomatic bone structure (body structure)" // Zygomatic Bone Left
-* SCT#14016003 " |Bone marrow structure (body structure)|" // Bone Marrow
+* SCT#14016003 "Bone marrow structure (body structure)" // Bone Marrow
 * SCT#5798000 "Diaphragm structure (body structure)" // Diaphragm
 * SCT#113276009 "Intestinal structure (body structure)" // <none>
 * SCT#14742008 "Structure of large intestine (body structure)" // Large Bowel
@@ -534,7 +534,7 @@ Description: "Codes describing the body locations where radiotherapy treatments 
 * SCT#35378004 "Structure of hilum of spleen (body structure)" // Splenic hilum
 * SCT#21974007 "Tongue structure (body structure)" // Tongue
 * SCT#181226008 "Entire tongue (body structure)" // <none>
-* SCT#47975008 " Structure of root of tongue (body structure)" // <none>
+* SCT#47975008 "Structure of root of tongue (body structure)" // <none>
 * SCT#61344008 "Structure of body of tongue (body structure)" // <none>
 * SCT#44567001 "Tracheal structure (body structure)" // Trachea
 * SCT#87953007 "Ureteric structure (body structure)" // Both Ureters

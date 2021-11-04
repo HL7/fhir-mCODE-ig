@@ -24,14 +24,12 @@
 <artifact deprecated="true" id="StructureDefinition/mcode-brachytherapy-treatment-phase" key="StructureDefinition-mcode-brachytherapy-treatment-phase" name="Brachytherapy Treatment Phase"/>
 <artifact id="ValueSet/mcode-cancer-body-location-vs" key="cancer-body-location-value-set" name="Cancer Body Location Value Set"/>
 <artifact deprecated="true" id="Profile/mcode-cancer-condition-parent" key="cancer-condition-parent" name="Cancer Condition Parent"/>
-<artifact deprecated="true" id="StructureDefinition/mcode-cancer-disease-status" key="cancer-disease-status" name="Cancer Disease Status"/>
 <artifact id="ValueSet/mcode-cancer-disease-status-evidence-type-vs" key="cancer-disease-status-evidence-type-value-set" name="Cancer Disease Status Evidence Type Value Set"/>
-<artifact id="StructureDefinition/mcode-cancer-disease-status" key="StructureDefinition-mcode-cancer-disease-status" name="Cancer Disease Status Profile"/>
+<artifact id="StructureDefinition/mcode-cancer-disease-status" key="cancer-disease-status" name="Cancer Disease Status Profile"/>
 <artifact id="ValueSet/mcode-cancer-disorder-vs" key="cancer-disorder-value-set" name="Cancer Disorder Value Set"/>
 <artifact deprecated="true" id="StructureDefinition/mcode-cancer-genetic-variant" key="cancer-genetic-variant" name="Cancer Genetic Variant"/>
 <artifact deprecated="true" id="StructureDefinition/mcode-cancer-genomics-report" key="cancer-genomics-report" name="Cancer Genomics Report"/>
-<artifact deprecated="true" id="StructureDefinition/mcode-cancer-patient" key="cancer-patient" name="Cancer Patient"/>
-<artifact id="StructureDefinition/mcode-cancer-patient" key="StructureDefinition-mcode-cancer-patient" name="Cancer Patient Profile"/>
+<artifact id="StructureDefinition/mcode-cancer-patient" key="cancer-patient" name="Cancer Patient Profile"/>
 <artifact deprecated="true" id="Profile/mcode-cancer-related-medication-statement" key="cancer-related-medication-statement" name="Cancer Related Medication Statement"/>
 <artifact deprecated="true" id="Profile/mcode-cancer-related-radiation-procedure" key="cancer-related-radiation-procedure" name="Cancer Related Radiation Procedure"/>
 <artifact deprecated="true" id="Profile/mcode-cancer-related-surgical-procedure" key="cancer-related-surgical-procedure" name="Cancer Related Surgical Procedure"/>
@@ -57,8 +55,7 @@
 <artifact deprecated="true" id="StructureDefinition/mcode-condition-related" key="StructureDefinition-mcode-condition-related" name="Condition related to resource"/>
 <artifact id="ValueSet/mcode-cytologic-evidence-malignancy-vs" key="ValueSet-mcode-cytologic-evidence-malignancy-vs" name="Cytologic Evidence of Malignancy Value Set"/>
 <artifact id="ValueSet/mcode-dna-change-type-vs" key="ValueSet-mcode-dna-change-type-vs" name="DNA Change Type Value Set"/>
-<artifact deprecated="true" id="StructureDefinition/mcode-ecog-performance-status" key="ecog-performance-status" name="ECOG Performance Status"/>
-<artifact id="StructureDefinition/mcode-ecog-performance-status" key="StructureDefinition-mcode-ecog-performance-status" name="ECOG Performance Status Profile"/>
+<artifact id="StructureDefinition/mcode-ecog-performance-status" key="ecog-performance-status" name="ECOG Performance Status Profile"/>
 <artifact id="ValueSet/mcode-teleradiotherapy-electron-beam-technique-vs" key="ValueSet-mcode-teleradiotherapy-electron-beam-technique-vs" name="Electron Beam Technique Value Set"/>
 <artifact id="ValueSet/elixhauser-alcohol-abuse-vs" key="ValueSet-elixhauser-alcohol-abuse-vs" name="Elixhauser Alcohol Abuse Value Set"/>
 <artifact id="ValueSet/elixhauser-blood-loss-anemia-vs" key="ValueSet-elixhauser-blood-loss-anemia-vs" name="Elixhauser Blood Loss Anemia Value Set"/>
@@ -99,12 +96,12 @@
 <artifact id="ValueSet/elixhauser-renal-failure-severe-vs" key="ValueSet-elixhauser-renal-failure-severe-vs" name="Elixhauser Severe Renal Failure Value Set"/>
 <artifact id="ValueSet/elixhauser-valvular-disease-vs" key="ValueSet-elixhauser-valvular-disease-vs" name="Elixhauser Valvular Disease Value Set"/>
 <artifact id="ValueSet/elixhauser-weight-loss-vs" key="ValueSet-elixhauser-weight-loss-vs" name="Elixhauser Weight Loss Value Set"/>
-<artifact deprecated="true" id="StructureDefinition/mcode-evidence-type" key="evidence-type-extension" name="Evidence Type Extension"/>
+<artifact id="StructureDefinition/mcode-evidence-type" key="StructureDefinition-mcode-evidence-type" name="Evidence Type Extension"/>
+<artifact deprecated="true" id="Extension/mcode-evidence-type-extension" key="evidence-type-extension" name="Evidence Type Extension"/>
 <artifact deprecated="true" id="StructureDefinition/mcode-genetic-specimen" key="genetic-specimen" name="Genetic Specimen"/>
 <artifact deprecated="true" id="ValueSet/mcode-genetic-specimen-type-vs" key="genetic-specimen-type-value-set" name="Genetic Specimen Type Value Set"/>
 <artifact id="ValueSet/mcode-genomic-molecular-consequence-vs" key="ValueSet-mcode-genomic-molecular-consequence-vs" name="Genomic Molecular Consequence Value Set"/>
-<artifact deprecated="true" id="StructureDefinition/mcode-genomic-region-studied" key="genomic-region-studied" name="Genomic Region Studied"/>
-<artifact id="StructureDefinition/mcode-genomic-region-studied" key="StructureDefinition-mcode-genomic-region-studied" name="Genomic Region Studied Profile"/>
+<artifact id="StructureDefinition/mcode-genomic-region-studied" key="genomic-region-studied" name="Genomic Region Studied Profile"/>
 <artifact id="StructureDefinition/mcode-genomic-specimen" key="StructureDefinition-mcode-genomic-specimen" name="Genomic Specimen Profile"/>
 <artifact id="ValueSet/mcode-genomic-specimen-type-vs" key="ValueSet-mcode-genomic-specimen-type-vs" name="Genomic Specimen Type Value Set"/>
 <artifact id="StructureDefinition/mcode-genomic-variant" key="StructureDefinition-mcode-genomic-variant" name="Genomic Variant Profile"/>
@@ -115,8 +112,7 @@
 <artifact id="ValueSet/mcode-histology-morphology-behavior-vs" key="histology-morphology-behavior-value-set" name="Histology Morphology Behavior Value Set"/>
 <artifact id="StructureDefinition/mcode-histology-morphology-behavior" key="StructureDefinition-mcode-histology-morphology-behavior" name="Histology-Morphology-Behavior Extension"/>
 <artifact id="ValueSet/mcode-hgvs-vs" key="ValueSet-mcode-hgvs-vs" name="Human Genome Variation Society Sequence Variant Nomenclature Value Set"/>
-<artifact deprecated="true" id="StructureDefinition/mcode-karnofsky-performance-status" key="karnofsky-performance-status" name="Karnofsky Performance Status"/>
-<artifact id="StructureDefinition/mcode-karnofsky-performance-status" key="StructureDefinition-mcode-karnofsky-performance-status" name="Karnofsky Performance Status Profile"/>
+<artifact id="StructureDefinition/mcode-karnofsky-performance-status" key="karnofsky-performance-status" name="Karnofsky Performance Status Profile"/>
 <artifact deprecated="true" id="Extension/mcode-laterality-extension" key="laterality-extension" name="Laterality Extension"/>
 <artifact id="StructureDefinition/mcode-laterality-qualifier" key="StructureDefinition-mcode-laterality-qualifier" name="Laterality Qualifier Extension"/>
 <artifact id="ValueSet/mcode-laterality-qualifier-vs" key="ValueSet-mcode-laterality-qualifier-vs" name="Laterality Qualifier Value Set"/>
@@ -129,8 +125,7 @@
 <artifact id="ValueSet/mcode-teleradiotherapy-photon-beam-technique-vs" key="ValueSet-mcode-teleradiotherapy-photon-beam-technique-vs" name="Photon Beam Technique Value Set"/>
 <artifact id="ValueSet/mcode-present-absent" key="ValueSet-mcode-present-absent" name="Present Absent Value Set"/>
 <artifact deprecated="true" id="ValueSet/mcode-present-absent-unknown" key="ValueSet-mcode-present-absent-unknown" name="Present-Absent-Unknown"/>
-<artifact deprecated="true" id="StructureDefinition/mcode-primary-cancer-condition" key="primary-cancer-condition" name="Primary Cancer Condition"/>
-<artifact id="StructureDefinition/mcode-primary-cancer-condition" key="StructureDefinition-mcode-primary-cancer-condition" name="Primary Cancer Condition Profile"/>
+<artifact id="StructureDefinition/mcode-primary-cancer-condition" key="primary-cancer-condition" name="Primary Cancer Condition Profile"/>
 <artifact id="ValueSet/mcode-primary-cancer-disorder-vs" key="ValueSet-mcode-primary-cancer-disorder-vs" name="Primary Cancer Disorder Value Set"/>
 <artifact id="ValueSet/mcode-primary-malignant-neoplasm-disorder-vs" key="ValueSet-mcode-primary-malignant-neoplasm-disorder-vs" name="Primary Malignant Neoplasm Disorder Value Set"/>
 <artifact deprecated="true" id="ValueSet/mcode-primary-or-uncertain-behavior-cancer-disorder-vs" key="primary-or-uncertain-behavior-cancer-disorder-value-set" name="Primary or Uncertain Behavior Cancer Disorder Value Set"/>
@@ -162,14 +157,13 @@
 <artifact id="CodeSystem/snomed-requested-cs" key="CodeSystem-snomed-requested-cs" name="Requested SNOMED Codes Code System"/>
 <artifact id="SearchParameter/Patient-id" key="SearchParameter-Patient-id" name="Search by _id in Patients with multipleOr"/>
 <artifact id="SearchParameter/Condition-code" key="SearchParameter-Condition-code" name="Search by code:in in Conditions"/>
-<artifact deprecated="true" id="StructureDefinition/mcode-secondary-cancer-condition" key="secondary-cancer-condition" name="Secondary Cancer Condition"/>
-<artifact id="StructureDefinition/mcode-secondary-cancer-condition" key="StructureDefinition-mcode-secondary-cancer-condition" name="Secondary Cancer Condition Profile"/>
+<artifact id="StructureDefinition/mcode-secondary-cancer-condition" key="secondary-cancer-condition" name="Secondary Cancer Condition Profile"/>
 <artifact id="ValueSet/mcode-secondary-cancer-disorder-vs" key="secondary-cancer-disorder-value-set" name="Secondary Cancer Disorder Value Set"/>
 <artifact id="ValueSet/mcode-hypereosinophilic-syndrome-disorder-vs" key="ValueSet-mcode-hypereosinophilic-syndrome-disorder-vs" name="Specific Diagnosis of Cancer Value Set"/>
 <artifact id="ValueSet/mcode-observation-codes-distant-metastases-vs" key="ValueSet-mcode-observation-codes-distant-metastases-vs" name="Staging Type Value Set (for Distant Metastases Category)"/>
-<artifact id="ValueSet/mcode-observation-codes-primary-tumor-vs" key="ValueSet-mcode-observation-codes-primary-tumor-vs" name="Staging Type Value Set (for Primary Tumor Category)"/>
-<artifact id="ValueSet/mcode-observation-codes-regional-nodes-vs" key="ValueSet-mcode-observation-codes-regional-nodes-vs" name="Staging Type Value Set (for Regional Node Category)"/>
-<artifact id="ValueSet/mcode-observation-codes-stage-group-vs" key="ValueSet-mcode-observation-codes-stage-group-vs" name="Staging Type Value Set (for Stage Group)"/>
+<artifact id="ValueSet/mcode-observation-codes-primary-tumor-vs" key="ValueSet-mcode-observation-codes-primary-tumor-vs" name="Staging Type for Primary Tumor Category Value Set"/>
+<artifact id="ValueSet/mcode-observation-codes-regional-nodes-vs" key="ValueSet-mcode-observation-codes-regional-nodes-vs" name="Staging Type for Regional Node Category Value Set"/>
+<artifact id="ValueSet/mcode-observation-codes-stage-group-vs" key="ValueSet-mcode-observation-codes-stage-group-vs" name="Staging Type for Stage Group Value Set"/>
 <artifact deprecated="true" id="Profile/mcode-tnm-clinical-distant-metastases" key="tnm-clinical-distant-metastases" name="TNM Clinical Distant Metastases"/>
 <artifact deprecated="true" id="Profile/mcode-tnm-clinical-primary-tumor-category" key="tnm-clinical-primary-tumor-category" name="TNM Clinical Primary Tumor Category"/>
 <artifact deprecated="true" id="Profile/mcode-tnm-clinical-regional-nodes-category" key="tnm-clinical-regional-nodes-category" name="TNM Clinical Regional Nodes Category"/>
@@ -358,6 +352,7 @@
 <page key="many" name="(many)"/>
 <page key="artifacts" name="Artifacts Summary"/>
 <page key="group-assessment" name="Assessment"/>
+<page key="basic_examples" name="Basic Examples"/>
 <page key="capabilitystatements" name="Capability Statements"/>
 <page key="changelog" name="Change Log"/>
 <page key="codesystems" name="Code Systems"/>

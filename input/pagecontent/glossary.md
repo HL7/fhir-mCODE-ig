@@ -29,12 +29,12 @@ Radiotherapy delivery typically involves multiple sessions that can be conceptua
 
 The following figures illustrate two different views of the treatment delivery concepts defined above. Here, one course of treatment is divided into three phases. The first of these phases is implemented by two plans, the second plan being a revision (adaptation) of the original plan after the first three sessions. The second and third phases are each implemented by a single treatment plan. The phases partially overlap and some sessions involve delivering fractions from two plans. For example, session 7 delivers the seventh fraction of the first (left breast tangents) phase (which is the fourth fraction of the adapted second plan of the first phase) and the third fraction of the third (right breast tangents) phase.
 
-![Illustrative Radiotherapy Example](BreastTreatmentPlan.png)
 
-{% raw %}
-<p>
+
+<img src="BreastTreatmentPlan.png" alt="Breast Treatment Plan" width="1000px" style="float:none; margin: 0px 0px 0px 0px;" />
+
+<br/>
 Here is a hierarchical view of the same course of treatment:
-</p>
-{% endraw %}
+<br/>
 
-![Relationship of Plans, Phases, and Course](BreastTreatmentSummary.png)
+<img src="BreastTreatmentSummary.png" alt="Relationship of Plans, Phases, and Course" width="1000px" style="float:none; margin: 0px 0px 0px 0px;" />

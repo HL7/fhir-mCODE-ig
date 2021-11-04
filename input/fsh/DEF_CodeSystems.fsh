@@ -84,3 +84,5 @@ Description: "Codes requested from SNOMED by mCODE, to be issued at a later date
 * #USCRS-33350 "Retrostyloid space (body structure)"
 * #USCRS-33147 "Structure of body of thirteenth thoracic vertebra (body structure)"
 * #USCRS-33348 "Jugular Fossa (body structure)"
+* #ITV "Internal Target Volume" "Clinical tumor volume with an internal margin to compensate for all movements. Reference: ICRU 62"
+* #IGTV "Internal Gross Tumor Volume" "Gross tumor volume with an internal margin to compensate for all movements [Reference](https://ro-journal.biomedcentral.com/articles/10.1186/1748-717X-4-4)"

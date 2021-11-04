@@ -196,7 +196,8 @@ Description: "Codes describing the types of body volumes used in radiotherapy pl
 * SCT#228792002 "Clinical target volume (observable entity)"
 // * SCT#1162586008 "Irradiated volume of organ at risk (observable entity)"
 * SCT_TBD#1162586008 "Irradiated volume of organ at risk (observable entity)"
-
+* SCT_TBD#ITV "Internal Target Volume"
+* SCT_TBD#IGTV "Internal Gross Tumor Volume"
 
 ValueSet: RadiotherapyTreatmentLocationQualifierVS
 Id: mcode-radiotherapy-treatment-location-qualifier-vs

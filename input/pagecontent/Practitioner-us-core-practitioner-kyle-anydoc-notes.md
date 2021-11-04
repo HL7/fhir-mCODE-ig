@@ -17,5 +17,5 @@ Usage: #example
 * address.country = "US"
 * gender = #male
 * qualification.code.coding.version = "2.7"
-* qualification.code.coding = $v2-0360#MD "Doctor of Medicine"
+* qualification.code.coding = http://terminology.hl7.org/CodeSystem/v2-0360#MD "Doctor of Medicine"
 ```

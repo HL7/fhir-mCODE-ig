@@ -5,7 +5,7 @@ Title: "us-core-organization-physician-services-inc"
 Description: "Extended example: example organization"
 Usage: #example
 * active = true
-* type = $organization-type#prov "Healthcare Provider"
+* type = http://terminology.hl7.org/CodeSystem/organization-type#prov "Healthcare Provider"
 * name = "Physician Services, Inc."
 * telecom.system = #phone
 * telecom.value = "999-999-9999"

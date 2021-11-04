@@ -5,7 +5,7 @@ Title: "cancer-patient-john-anyperson"
 Description: "Example of Patient"
 Usage: #example
 * identifier.use = #usual
-* identifier.type = $v2-0203#MR "Medical Record Number"
+* identifier.type = http://terminology.hl7.org/CodeSystem/v2-0203#MR "Medical Record Number"
 * identifier.system = "http://hospital.example.org"
 * identifier.value = "m123"
 * name.family = "Anyperson"

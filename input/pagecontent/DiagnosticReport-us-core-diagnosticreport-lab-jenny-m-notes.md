@@ -5,9 +5,9 @@ Title: "us-core-diagnosticreport-lab-jenny-m"
 Description: "Extended example: example of pathology findings represented as a DiagnosticReport resource."
 Usage: #example
 * status = #final
-* category[0] = $v2-0074#LAB
-* category[+] = $v2-0074#SP "Surgical Pathology"
-* code = $loinc#22637-3 "Pathology report final diagnosis Narrative"
+* category[0] = http://terminology.hl7.org/CodeSystem/v2-0074#LAB
+* category[+] = http://terminology.hl7.org/CodeSystem/v2-0074#SP "Surgical Pathology"
+* code = http://loinc.org#22637-3 "Pathology report final diagnosis Narrative"
 * subject = Reference(cancer-patient-jenny-m)
 * effectiveDateTime = "2018-04-01T00:00:00Z"
 * issued = "2018-04-05T00:00:00Z"

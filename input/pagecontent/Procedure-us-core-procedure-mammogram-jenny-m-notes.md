@@ -5,7 +5,7 @@ Title: "us-core-procedure-mammogram-jenny-m"
 Description: "Extended example: example mammogram"
 Usage: #example
 * status = #completed
-* code = $sct#71651007 "Mammography (procedure)"
+* code = http://snomed.info/sct#71651007 "Mammography (procedure)"
 * subject = Reference(cancer-patient-jenny-m)
 * performedDateTime = "2018-02-01"
 * asserter = Reference(us-core-practitioner-mary-obgyn)

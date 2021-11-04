@@ -1,12 +1,12 @@
 ```
 Instance: bodyweight-jenny-m-2018-04-22
-InstanceOf: $bodyweight
+InstanceOf: http://hl7.org/fhir/StructureDefinition/bodyweight
 Title: "bodyweight-jenny-m-2018-04-22"
 Description: "Extended example: body weight vital sign at the time of chemotherapy administration"
 Usage: #example
 * status = #final
-* category = $observation-category#vital-signs
-* code = $loinc#29463-7
+* category = http://terminology.hl7.org/CodeSystem/observation-category#vital-signs
+* code = http://loinc.org#29463-7
 * subject.reference = "Patient/cancer-patient-jenny-m"
 * effectiveDateTime = "2018-04-22"
 * valueQuantity = 150 '[lb_av]' "lb"

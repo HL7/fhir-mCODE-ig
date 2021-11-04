@@ -5,9 +5,9 @@ Title: "genomics-report-john-anyperson"
 Description: "mCODE Example for Genomics Report"
 Usage: #example
 * status = #final
-* category[0] = $v2-0074#LAB
-* category[+] = $v2-0074#GE
-* code = $loinc#81247-9
+* category[0] = http://terminology.hl7.org/CodeSystem/v2-0074#LAB
+* category[+] = http://terminology.hl7.org/CodeSystem/v2-0074#GE
+* code = http://loinc.org#81247-9
 * subject = Reference(cancer-patient-john-anyperson)
 * effectiveDateTime = "2019-04-01"
 * issued = "2019-04-01T11:45:33+11:00"

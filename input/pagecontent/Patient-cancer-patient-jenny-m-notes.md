@@ -15,7 +15,7 @@ Usage: #example
 * extension[=].extension[=].valueString = "Not Hispanic or Latino"
 * extension[=].url = "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity"
 * identifier.use = #usual
-* identifier.type = $v2-0203#MR "Medical Record Number"
+* identifier.type = http://terminology.hl7.org/CodeSystem/v2-0203#MR "Medical Record Number"
 * identifier.system = "http://hospital.example.org"
 * identifier.value = "MRN1234"
 * name.family = "M"

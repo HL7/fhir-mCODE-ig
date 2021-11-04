@@ -78,9 +78,7 @@ Note that the requests below may return resources associated with patients who a
   * Surgery
     * [CancerRelatedSurgicalProcedure]\: `GET [base]/Procedure?code=http://snomed.info/sct|387713003` will identify all surgical procedures. `Procedure.code` is extensibly bound to [CancerRelatedSurgicalProcedureVS], so further filtering to include only Procedures with `code` in this value set will identify some but not necessarily all cancer-related surgical procedures.
   * Radiotherapy
-    * [BrachytherapyTreatmentPhase]\: `GET [base]/Procedure?code=mcode-brachytherapy-treatment-phase`
     * [RadiotherapyCourseSummary]\: `GET [base]/Procedure?code=mcode-radiotherapy-course-summary`
-    * [TeleradiotherapyTreatmentPhase]\: `GET [base]/Procedure?code=mcode-teleradiotherapy-treatment-phase`
 
 * Outcome
   * [CancerDiseaseStatus]\: `GET [base]/Observation?code=http://loinc.org|88040-1`
@@ -130,6 +128,8 @@ mCODE Patient Bundles SHALL be identified by an `id` value that matches the `id`
 #### Use `meta.profile` to Signal Conformance
 
 Participants SHOULD populate `meta.profile` elements for all resources to indicate which profiles the resources should conform to. Participants SHOULD also implement [profile search](https://www.hl7.org/fhir/search.html#profile), which allows participants to query using the `_profile` parameter to return resources conforming to the profiles declared in `meta.profile`.
+
+Participants MUST populate `meta.profile` for elements included in the [mCODE Patient Bundle][MCODEPatientBundle].
 
 Profile search and population of `meta.profile` originate as "SHALL" requirements in the base FHIR specification; they are not an additional requirements imposed by mCODE. However, in practice, few implementations have followed these requirements. Refer to the [FHIR Documentation on supported profiles](https://www.hl7.org/fhir/profiling.html#CapabilityStatement.rest.resource.supportedProfile) for details.
 

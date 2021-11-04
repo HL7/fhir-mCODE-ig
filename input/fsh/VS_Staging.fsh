@@ -7,7 +7,7 @@ Description: "System used for staging."
 
 ValueSet: ObservationCodesStageGroupVS
 Id: mcode-observation-codes-stage-group-vs
-Title: "Staging Type Value Set (for Stage Group)"
+Title: "Staging Type for Stage Group Value Set"
 Description: "Identifying codes based on the timing of classification for stage group observations."
 * ^copyright = "This material contains content from LOINC (http://loinc.org). LOINC is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc"
 * LNC#21908-9 "Stage group.clinical Cancer"
@@ -17,7 +17,7 @@ Description: "Identifying codes based on the timing of classification for stage 
 
 ValueSet: ObservationCodesPrimaryTumorVS
 Id: mcode-observation-codes-primary-tumor-vs
-Title: "Staging Type Value Set (for Primary Tumor Category)"
+Title: "Staging Type for Primary Tumor Category Value Set"
 Description: "Identifying codes based on the timing of classification for primary tumor (T) staging observations."
 * ^copyright = "This material contains content from LOINC (http://loinc.org). LOINC is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc"
 * LNC#21905-5 "Primary tumor.clinical [Class] Cancer"
@@ -27,7 +27,7 @@ Description: "Identifying codes based on the timing of classification for primar
 
 ValueSet: ObservationCodesRegionalNodesVS
 Id: mcode-observation-codes-regional-nodes-vs
-Title: "Staging Type Value Set (for Regional Node Category)"
+Title: "Staging Type for Regional Node Category Value Set"
 Description: "Identifying codes based on the timing of classification for regional node (N) staging observations."
 * ^copyright = "This material contains content from LOINC (http://loinc.org). LOINC is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc"
 * LNC#21906-3 "Regional lymph nodes.clinical [Class] Cancer"

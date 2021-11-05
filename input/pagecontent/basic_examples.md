@@ -33,6 +33,18 @@
 
 * [Cancer Related Comorbidities - John Anyperson](Observation-cancer-related-mcode-comorbidities-elixhauser-john-anyperson.html)
 
+### [Genomic Specimen](StructureDefinition-mcode-genomic-specimen.html) ([Specimen](http://hl7.org/fhir/R4/specimen.html))
+
+* [Genomic Specimen - Lung](Specimen-genomic-specimen-lung.html)
+
+### [Genomic Variant](StructureDefinition-mcode-genomic-variant.html) ([Observation](http://hl7.org/fhir/R4/observation.html))
+
+* [Genomic Variant - Gene Fusion](Observation-genomic-variant-fusion.html)
+
+### [Genomics Report](StructureDefinition-mcode-genomics-report.html) ([DiagnosticReport](http://hl7.org/fhir/R4/diagnosticreport.html))
+
+* [Genomic Diagnostic Report - John Anyperson](DiagnosticReport-genomics-report-john-anyperson.html)
+
 ### [Karnofsky Performance Status](StructureDefinition-mcode-karnofsky-performance-status.html) ([Observation](http://hl7.org/fhir/R4/observation.html))
 
 * [Karnofsky Performance State - Normal Activities](Observation-karnofsky-performance-status-normal-activity.html)

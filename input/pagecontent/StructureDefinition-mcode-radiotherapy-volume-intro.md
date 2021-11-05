@@ -22,9 +22,9 @@ The disadvantage of separating the radiotherapy volume is that it is not in the 
 ** ^^^^^ CAN WE DELETE THIS ^^^^ **
 
 The treatment location should be expressed using the anatomical concepts in the American Association of Physicists in Medicine (AAPM) [Task Group 263 report on Standardizing Nomenclatures in Radiation Oncology](https://www.aapm.org/pubs/reports/RPT_263.pdf), expressed using SNOMEDCT.   The mapping from AAPM TG263 concepts to SNOMEDCT codes  ([RadiotherapyTreatmentLocationVS]) and qualifiers ([RadiotherapyTreatmentLocationQualifierVS]) can be found in this [spreadsheet](TG263_Nomenclature_to_SNOMEDCT_Codes_and_Qualifiers.xlsx).
-For example, if the treatment location was the Left Breast, with TG263 primary name Breast_L, the location would be expressed by using the SNOMEDCT code for location, and the code for the locationQualifier.
+For example, if the treatment location was the Left Breast, with TG263 primary name Breast_L, the location would be expressed by using the SNOMEDCT  `76752008` (Breast structure (body structure))  for location, and `7771000` (Left) for the locationQualifier.
 
-![Excerpt from TG263 to SNOMED mapping](TG263-mapping.png)
+![Excerpt from TG263 to SNOMED mapping](TG263mapping.png)
 
 ### Limitations
 

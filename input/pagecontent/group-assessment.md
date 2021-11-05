@@ -37,7 +37,7 @@ Vital signs are measurements of the most essential, or "vital" body functions. F
 
 * [ComorbidConditionCode]
 * [ComorbidConditionReference]
-* [EvidenceType]
+* [CancerDiseaseStatusEvidenceType]
 
 ### Value Sets
 

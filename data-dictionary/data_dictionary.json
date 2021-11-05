@@ -15,13 +15,13 @@
     {
       "group": "Default",
       "title": "Genomic Variant",
-      "url": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genomic-variant",
+      "url": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genomic-variant",
       "description": "Records an alteration in the most common DNA nucleotide sequence. The term variant can be used to describe an alteration that may be benign, pathogenic, or of unknown significance. The term variant is increasingly being used in place of the term mutation."
     },
     {
       "group": "Default",
-      "title": "Cancer Genomics Report",
-      "url": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genomics-report",
+      "title": "Genomics Report",
+      "url": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genomics-report",
       "description": "Genomic analysis summary report. The report may include one or more tests, with two distinct test types. The first type is a targeted mutation test, where a specific mutation on a specific gene is tested for. The result is either positive or negative for that mutation. The second type is a more general test for variants. This type of test returns the identity of variants found in a certain region of the genome."
     },
     {
@@ -375,7 +375,7 @@
     {
       "Group": "Default",
       "Profile Title": "Cancer Disease Status",
-      "Data Element Name": "Evidence Type",
+      "Data Element Name": "Cancer Disease Status Evidence Type",
       "Definition": "Categorization of the kind of evidence used as input to the clinical judgment. This corresponds to both the S and O in SOAP.",
       "Required?": "Required if known",
       "Occurrences Allowed": "Multiple",
@@ -481,8 +481,8 @@
       "Value Set URI": "http://hl7.org/fhir/ValueSet/observation-status",
       "Value Set Binding": "required",
       "FHIR Element (R4)": "Observation.status",
-      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genomic-variant",
-      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genomic-variant"
+      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genomic-variant",
+      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genomic-variant"
     },
     {
       "Group": "Default",
@@ -495,8 +495,8 @@
       "Value Set URI": "",
       "Value Set Binding": "",
       "FHIR Element (R4)": "Observation.subject",
-      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genomic-variant",
-      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genomic-variant"
+      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genomic-variant",
+      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genomic-variant"
     },
     {
       "Group": "Default",
@@ -509,8 +509,8 @@
       "Value Set URI": "",
       "Value Set Binding": "",
       "FHIR Element (R4)": "Observation.effective[x]",
-      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genomic-variant",
-      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genomic-variant"
+      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genomic-variant",
+      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genomic-variant"
     },
     {
       "Group": "Default",
@@ -523,8 +523,8 @@
       "Value Set URI": "http://loinc.org/vs/LL1971-2",
       "Value Set Binding": "required",
       "FHIR Element (R4)": "Observation.value[x]",
-      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genomic-variant",
-      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genomic-variant"
+      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genomic-variant",
+      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genomic-variant"
     },
     {
       "Group": "Default",
@@ -537,8 +537,8 @@
       "Value Set URI": "http://hl7.org/fhir/ValueSet/data-absent-reason",
       "Value Set Binding": "extensible",
       "FHIR Element (R4)": "Observation.dataAbsentReason",
-      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genomic-variant",
-      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genomic-variant"
+      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genomic-variant",
+      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genomic-variant"
     },
     {
       "Group": "Default",
@@ -551,8 +551,8 @@
       "Value Set URI": "http://loinc.org/vs/LL4048-6",
       "Value Set Binding": "extensible",
       "FHIR Element (R4)": "Observation.method",
-      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genomic-variant",
-      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genomic-variant"
+      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genomic-variant",
+      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genomic-variant"
     },
     {
       "Group": "Default",
@@ -565,8 +565,8 @@
       "Value Set URI": "",
       "Value Set Binding": "",
       "FHIR Element (R4)": "Observation.specimen",
-      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genomic-variant",
-      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genomic-variant"
+      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genomic-variant",
+      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genomic-variant"
     },
     {
       "Group": "Default",
@@ -579,8 +579,8 @@
       "Value Set URI": "",
       "Value Set Binding": "",
       "FHIR Element (R4)": "Observation.component",
-      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genomic-variant",
-      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genomic-variant"
+      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genomic-variant",
+      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genomic-variant"
     },
     {
       "Group": "Default",
@@ -593,8 +593,8 @@
       "Value Set URI": "http://hl7.org/fhir/ValueSet/observation-codes",
       "Value Set Binding": "example",
       "FHIR Element (R4)": "Observation.component.code",
-      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genomic-variant",
-      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genomic-variant"
+      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genomic-variant",
+      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genomic-variant"
     },
     {
       "Group": "Default",
@@ -607,8 +607,8 @@
       "Value Set URI": "",
       "Value Set Binding": "",
       "FHIR Element (R4)": "Observation.component.value[x]",
-      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genomic-variant",
-      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genomic-variant"
+      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genomic-variant",
+      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genomic-variant"
     },
     {
       "Group": "Default",
@@ -621,8 +621,8 @@
       "Value Set URI": "http://hl7.org/fhir/ValueSet/data-absent-reason",
       "Value Set Binding": "extensible",
       "FHIR Element (R4)": "Observation.component.dataAbsentReason",
-      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genomic-variant",
-      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genomic-variant"
+      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genomic-variant",
+      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genomic-variant"
     },
     {
       "Group": "Default",
@@ -635,8 +635,8 @@
       "Value Set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-hgnc-vs",
       "Value Set Binding": "extensible",
       "FHIR Element (R4)": "Observation.component:geneStudied.value[x]",
-      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genomic-variant",
-      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genomic-variant"
+      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genomic-variant",
+      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genomic-variant"
     },
     {
       "Group": "Default",
@@ -649,8 +649,8 @@
       "Value Set URI": "http://hl7.org/fhir/ValueSet/data-absent-reason",
       "Value Set Binding": "extensible",
       "FHIR Element (R4)": "Observation.component:geneStudied.dataAbsentReason",
-      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genomic-variant",
-      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genomic-variant"
+      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genomic-variant",
+      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genomic-variant"
     },
     {
       "Group": "Default",
@@ -663,8 +663,8 @@
       "Value Set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-clinvar-vs",
       "Value Set Binding": "preferred",
       "FHIR Element (R4)": "Observation.component:variationCode.value[x]",
-      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genomic-variant",
-      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genomic-variant"
+      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genomic-variant",
+      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genomic-variant"
     },
     {
       "Group": "Default",
@@ -677,8 +677,8 @@
       "Value Set URI": "http://hl7.org/fhir/ValueSet/data-absent-reason",
       "Value Set Binding": "extensible",
       "FHIR Element (R4)": "Observation.component:variationCode.dataAbsentReason",
-      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genomic-variant",
-      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genomic-variant"
+      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genomic-variant",
+      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genomic-variant"
     },
     {
       "Group": "Default",
@@ -691,8 +691,8 @@
       "Value Set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-hgvs-vs",
       "Value Set Binding": "required",
       "FHIR Element (R4)": "Observation.component:genomicDNAChange.value[x]",
-      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genomic-variant",
-      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genomic-variant"
+      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genomic-variant",
+      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genomic-variant"
     },
     {
       "Group": "Default",
@@ -705,8 +705,8 @@
       "Value Set URI": "http://hl7.org/fhir/ValueSet/data-absent-reason",
       "Value Set Binding": "extensible",
       "FHIR Element (R4)": "Observation.component:genomicDNAChange.dataAbsentReason",
-      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genomic-variant",
-      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genomic-variant"
+      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genomic-variant",
+      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genomic-variant"
     },
     {
       "Group": "Default",
@@ -719,8 +719,8 @@
       "Value Set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-dna-change-type-vs",
       "Value Set Binding": "extensible",
       "FHIR Element (R4)": "Observation.component:genomicDNAChangeType.value[x]",
-      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genomic-variant",
-      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genomic-variant"
+      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genomic-variant",
+      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genomic-variant"
     },
     {
       "Group": "Default",
@@ -733,8 +733,8 @@
       "Value Set URI": "http://hl7.org/fhir/ValueSet/data-absent-reason",
       "Value Set Binding": "extensible",
       "FHIR Element (R4)": "Observation.component:genomicDNAChangeType.dataAbsentReason",
-      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genomic-variant",
-      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genomic-variant"
+      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genomic-variant",
+      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genomic-variant"
     },
     {
       "Group": "Default",
@@ -747,8 +747,8 @@
       "Value Set URI": "http://loinc.org/vs/LL378-1",
       "Value Set Binding": "required",
       "FHIR Element (R4)": "Observation.component:genomicSourceClass.value[x]",
-      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genomic-variant",
-      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genomic-variant"
+      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genomic-variant",
+      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genomic-variant"
     },
     {
       "Group": "Default",
@@ -761,8 +761,8 @@
       "Value Set URI": "http://hl7.org/fhir/ValueSet/data-absent-reason",
       "Value Set Binding": "extensible",
       "FHIR Element (R4)": "Observation.component:genomicSourceClass.dataAbsentReason",
-      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genomic-variant",
-      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genomic-variant"
+      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genomic-variant",
+      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genomic-variant"
     },
     {
       "Group": "Default",
@@ -775,8 +775,8 @@
       "Value Set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-hgvs-vs",
       "Value Set Binding": "required",
       "FHIR Element (R4)": "Observation.component:aminoAcidChange.value[x]",
-      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genomic-variant",
-      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genomic-variant"
+      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genomic-variant",
+      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genomic-variant"
     },
     {
       "Group": "Default",
@@ -789,8 +789,8 @@
       "Value Set URI": "http://hl7.org/fhir/ValueSet/data-absent-reason",
       "Value Set Binding": "extensible",
       "FHIR Element (R4)": "Observation.component:aminoAcidChange.dataAbsentReason",
-      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genomic-variant",
-      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genomic-variant"
+      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genomic-variant",
+      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genomic-variant"
     },
     {
       "Group": "Default",
@@ -803,8 +803,8 @@
       "Value Set URI": "http://loinc.org/vs/LL380-7",
       "Value Set Binding": "required",
       "FHIR Element (R4)": "Observation.component:aminoAcidChangeType.value[x]",
-      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genomic-variant",
-      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genomic-variant"
+      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genomic-variant",
+      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genomic-variant"
     },
     {
       "Group": "Default",
@@ -817,8 +817,8 @@
       "Value Set URI": "http://hl7.org/fhir/ValueSet/data-absent-reason",
       "Value Set Binding": "extensible",
       "FHIR Element (R4)": "Observation.component:aminoAcidChangeType.dataAbsentReason",
-      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genomic-variant",
-      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genomic-variant"
+      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genomic-variant",
+      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genomic-variant"
     },
     {
       "Group": "Default",
@@ -831,8 +831,8 @@
       "Value Set URI": "",
       "Value Set Binding": "",
       "FHIR Element (R4)": "Observation.component:cytogeneticLocation",
-      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genomic-variant",
-      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genomic-variant"
+      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genomic-variant",
+      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genomic-variant"
     },
     {
       "Group": "Default",
@@ -845,8 +845,8 @@
       "Value Set URI": "",
       "Value Set Binding": "",
       "FHIR Element (R4)": "Observation.component:cytogeneticLocation.value[x]",
-      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genomic-variant",
-      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genomic-variant"
+      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genomic-variant",
+      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genomic-variant"
     },
     {
       "Group": "Default",
@@ -859,8 +859,8 @@
       "Value Set URI": "http://hl7.org/fhir/ValueSet/data-absent-reason",
       "Value Set Binding": "extensible",
       "FHIR Element (R4)": "Observation.component:cytogeneticLocation.dataAbsentReason",
-      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genomic-variant",
-      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genomic-variant"
+      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genomic-variant",
+      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genomic-variant"
     },
     {
       "Group": "Default",
@@ -873,8 +873,8 @@
       "Value Set URI": "",
       "Value Set Binding": "",
       "FHIR Element (R4)": "Observation.component:cytogeneticNomenclature",
-      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genomic-variant",
-      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genomic-variant"
+      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genomic-variant",
+      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genomic-variant"
     },
     {
       "Group": "Default",
@@ -887,8 +887,8 @@
       "Value Set URI": "",
       "Value Set Binding": "",
       "FHIR Element (R4)": "Observation.component:cytogeneticNomenclature.value[x]",
-      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genomic-variant",
-      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genomic-variant"
+      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genomic-variant",
+      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genomic-variant"
     },
     {
       "Group": "Default",
@@ -901,12 +901,12 @@
       "Value Set URI": "http://hl7.org/fhir/ValueSet/data-absent-reason",
       "Value Set Binding": "extensible",
       "FHIR Element (R4)": "Observation.component:cytogeneticNomenclature.dataAbsentReason",
-      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genomic-variant",
-      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genomic-variant"
+      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genomic-variant",
+      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genomic-variant"
     },
     {
       "Group": "Default",
-      "Profile Title": "Cancer Genomics Report",
+      "Profile Title": "Genomics Report",
       "Data Element Name": "Status",
       "Definition": "The status of the diagnostic report.",
       "Required?": "Required",
@@ -915,12 +915,12 @@
       "Value Set URI": "http://hl7.org/fhir/ValueSet/diagnostic-report-status",
       "Value Set Binding": "required",
       "FHIR Element (R4)": "DiagnosticReport.status",
-      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genomics-report",
-      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genomics-report"
+      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genomics-report",
+      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genomics-report"
     },
     {
       "Group": "Default",
-      "Profile Title": "Cancer Genomics Report",
+      "Profile Title": "Genomics Report",
       "Data Element Name": "Subject",
       "Definition": "The subject of the report. Usually, but not always, this is a patient. However, diagnostic services also perform analyses on specimens collected from a variety of other sources.",
       "Required?": "Required",
@@ -929,12 +929,12 @@
       "Value Set URI": "",
       "Value Set Binding": "",
       "FHIR Element (R4)": "DiagnosticReport.subject",
-      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genomics-report",
-      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genomics-report"
+      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genomics-report",
+      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genomics-report"
     },
     {
       "Group": "Default",
-      "Profile Title": "Cancer Genomics Report",
+      "Profile Title": "Genomics Report",
       "Data Element Name": "Effective",
       "Definition": "This is the Specimen Collection Datetime or Period which is the physically relevent dateTime for laboratory tests.",
       "Required?": "Required",
@@ -943,12 +943,12 @@
       "Value Set URI": "",
       "Value Set Binding": "",
       "FHIR Element (R4)": "DiagnosticReport.effective[x]",
-      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genomics-report",
-      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genomics-report"
+      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genomics-report",
+      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genomics-report"
     },
     {
       "Group": "Default",
-      "Profile Title": "Cancer Genomics Report",
+      "Profile Title": "Genomics Report",
       "Data Element Name": "Issued",
       "Definition": "The date and time that this version of the report was made available to providers, typically after the report was reviewed and verified.",
       "Required?": "Required",
@@ -957,12 +957,12 @@
       "Value Set URI": "",
       "Value Set Binding": "",
       "FHIR Element (R4)": "DiagnosticReport.issued",
-      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genomics-report",
-      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genomics-report"
+      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genomics-report",
+      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genomics-report"
     },
     {
       "Group": "Default",
-      "Profile Title": "Cancer Genomics Report",
+      "Profile Title": "Genomics Report",
       "Data Element Name": "Performer",
       "Definition": "The diagnostic service that is responsible for issuing the report.",
       "Required?": "Required if known",
@@ -971,12 +971,12 @@
       "Value Set URI": "",
       "Value Set Binding": "",
       "FHIR Element (R4)": "DiagnosticReport.performer",
-      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genomics-report",
-      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genomics-report"
+      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genomics-report",
+      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genomics-report"
     },
     {
       "Group": "Default",
-      "Profile Title": "Cancer Genomics Report",
+      "Profile Title": "Genomics Report",
       "Data Element Name": "Specimen",
       "Definition": "Details about the specimens on which this diagnostic report is based.",
       "Required?": "Required if known",
@@ -985,12 +985,12 @@
       "Value Set URI": "",
       "Value Set Binding": "",
       "FHIR Element (R4)": "DiagnosticReport.specimen",
-      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genomics-report",
-      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genomics-report"
+      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genomics-report",
+      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genomics-report"
     },
     {
       "Group": "Default",
-      "Profile Title": "Cancer Genomics Report",
+      "Profile Title": "Genomics Report",
       "Data Element Name": "Result > Genomic Variant",
       "Definition": "Records an alteration in the most common DNA nucleotide sequence. The term variant is increasingly being used in place of the term mutation to describe an alteration that may be benign, pathogenic, or of unknown significance.",
       "Required?": "Required if known",
@@ -999,12 +999,12 @@
       "Value Set URI": "",
       "Value Set Binding": "",
       "FHIR Element (R4)": "DiagnosticReport.result:GenomicVariant",
-      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genomics-report",
-      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genomics-report"
+      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genomics-report",
+      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genomics-report"
     },
     {
       "Group": "Default",
-      "Profile Title": "Cancer Genomics Report",
+      "Profile Title": "Genomics Report",
       "Data Element Name": "Result > Genomic Region Studied",
       "Definition": "The area of the genome region referenced in testing for variants.",
       "Required?": "Required if known",
@@ -1013,8 +1013,8 @@
       "Value Set URI": "",
       "Value Set Binding": "",
       "FHIR Element (R4)": "DiagnosticReport.result:GenomicRegionStudied",
-      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genomics-report",
-      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-genomics-report"
+      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genomics-report",
+      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genomics-report"
     },
     {
       "Group": "Default",
@@ -5947,7 +5947,7 @@
     {
       "Group": "Default",
       "Profile Title": "mCODE Patient Bundle",
-      "Data Element Name": "Entry > Cancer Genomics Report",
+      "Data Element Name": "Entry > Genomics Report",
       "Definition": "DiagnosticReport resource representing cancer genomics reports.",
       "Required?": "Required if known",
       "Occurrences Allowed": "Multiple",
@@ -5961,7 +5961,7 @@
     {
       "Group": "Default",
       "Profile Title": "mCODE Patient Bundle",
-      "Data Element Name": "Entry > Cancer Genomics Report > Resource",
+      "Data Element Name": "Entry > Genomics Report > Resource",
       "Definition": "The US Core Diagnostic Report Profile is based upon the core FHIR DiagnosticReport Resource and created to meet the 2015 Edition Common Clinical Data Set 'Laboratory test(s) and Laboratory value(s)/result(s)' requirements.",
       "Required?": "Required if known (conditional on Entry)",
       "Occurrences Allowed": "Single",
@@ -61791,8 +61791,8 @@
       "description": "The resource has an unspecified relationship with a Condition."
     },
     {
-      "title": "Evidence Type",
-      "url": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-evidence-type",
+      "title": "Cancer Disease Status Evidence Type",
+      "url": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-disease-status-evidence-type",
       "description": "Categorization of the kind of evidence used as input to the clinical judgment. This corresponds to both the S and O in SOAP."
     },
     {

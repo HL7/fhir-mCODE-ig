@@ -39,7 +39,7 @@
 [BodyLocationQualifier]: StructureDefinition-mcode-body-location-qualifier.html
 [ComorbidConditionCode]: StructureDefinition-mcode-comorbid-condition-code.html
 [ComorbidConditionReference]: StructureDefinition-mcode-comorbid-condition-reference.html
-[EvidenceType]: StructureDefinition-mcode-evidence-type.html
+[CancerDiseaseStatusEvidenceType]: StructureDefinition-mcode-cancer-disease-status-evidence-type.html
 [HistologyMorphologyBehavior]: StructureDefinition-mcode-histology-morphology-behavior.html
 [LateralityQualifier]: StructureDefinition-mcode-laterality-qualifier.html
 [ProcedureIntent]: StructureDefinition-mcode-procedure-intent.html

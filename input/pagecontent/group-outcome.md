@@ -47,7 +47,7 @@ Multicentric tumors should also each be represented by a separate [Tumor] or [Tu
 
 ### Extension
 
-* [EvidenceType]
+* [CancerDiseaseStatusEvidenceType]
 
 ### Value Sets
 

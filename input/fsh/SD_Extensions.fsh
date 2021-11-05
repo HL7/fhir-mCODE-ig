@@ -20,10 +20,10 @@ Description: "The resource has an unspecified relationship with a Condition."
 * value[x] only Reference(Condition)
 * value[x] 1..1
 
-Extension: EvidenceType
-Id: mcode-evidence-type
-Title: "Evidence Type Extension"
-Description: "Categorization of the kind of evidence used as input to the clinical judgment. This corresponds to both the S and O in SOAP."
+Extension: CancerDiseaseStatusEvidenceType
+Id: mcode-cancer-disease-status-evidence-type
+Title: "Cancer Disease Status Evidence Type Extension"
+Description: "Categorization of the kind of evidence contributing to a clinical judgment on cancer disease progression."
 * insert ExtensionContext(Observation)
 * value[x] only CodeableConcept
 * value[x] from CancerDiseaseStatusEvidenceTypeVS (required)

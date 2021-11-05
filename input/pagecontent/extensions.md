@@ -3,7 +3,7 @@ The following Extensions are defined as part of mCODE:
 * [BodyLocationQualifier]
 * [ComorbidConditionCode]
 * [ComorbidConditionReference]
-* [EvidenceType]
+* [CancerDiseaseStatusEvidenceType]
 * [HistologyMorphologyBehavior]
 * [LateralityQualifier]
 * [ProcedureIntent]

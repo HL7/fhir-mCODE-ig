@@ -42,7 +42,6 @@ Description: "Example of Secondary Cancer Condition"
 Instance: cancer-disease-status-improved
 InstanceOf: CancerDiseaseStatus
 Description: "Example of Cancer Disease Status"
-// * extension[evidenceType].url = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-evidence-type"
 * extension[evidenceType].valueCodeableConcept = SCT#108257001 "Anatomic pathology procedure (procedure)"
 * status = #final "final"
 * subject = Reference(cancer-patient-john-anyperson)

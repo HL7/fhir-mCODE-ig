@@ -4,7 +4,7 @@ InstanceOf: CancerDiseaseStatus
 Title: "cancer-disease-status-jenny-m"
 Description: "Extended example: example showing disease status (patient's condition improved)"
 Usage: #example
-* extension.url = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-evidence-type"
+* extension.url = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-disease-status-evidence-type"
 * extension.valueCodeableConcept = http://snomed.info/sct#363679005 "Imaging (procedure)"
 * status = #final
 * code = http://loinc.org#97509-4 "Cancer Disease Progression"

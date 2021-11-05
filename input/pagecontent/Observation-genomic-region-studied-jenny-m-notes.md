@@ -1,4 +1,4 @@
-```fsh
+```
 Instance: genomic-region-studied-jenny-m
 InstanceOf: GenomicRegionStudied
 Title: "genomic-region-studied-jenny-m"

@@ -4,10 +4,10 @@
 |-----|-------------------|--------------------|
 | Radiation Therapy (Radiotherapy) | Radiation therapy, or radiotherapy, is a treatment that uses doses of radiation to kill cells and shrink tumors.| Radiation therapy is generally divided into two classes, teleradiotherapy (externally applied) and brachytherapy (internally applied) |
 | Teleradiotherapy |  Radiation therapy in which high-energy beams are delivered from outside of the body. | Also known as [External Beam Radiation Therapy](https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C15751). |
-| Brachytherapy |  A type of radiation therapy in which radioactive material is placed inside the body, into a tumor or body cavity. | [Reference](https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C15195) |
+| Brachytherapy |  A type of radiation therapy in which radioactive material is placed inside the body, in a tumor or body cavity, or on the surface of the body. | [Reference](https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C15195) |
 | Modality | The main type of radiation delivery such as photons, protons, or high dose rate brachytherapy. |  Modalities are not strictly differentiated along a single physical property, but in a way that makes sense in practical categorization. For teleradiotherapy, modality refers to the type of particle used, while for brachytherapy, modality generally refers to the type of dose rate and placement. |
 | Technique  |  The treatment delivery method such as Volumetric Modulated Arc Therapy or Particle Spot Scanning. | The technique defines how a certain modality is applied, enabling a more granular categorization of the treatment approach for a given modality. |
-| Radiotherapy Volume | A volume of the body used in radiotherapy planning or treatment delivery. | Each volume can be further characterized as (i) gross tumor volume (GTV), which is the position and extent of a tumour, (ii) clinical target volume (CTV), which is the GTV plus a margin to account for disease spread that cannot be fully imaged), and (iii) planning target volume (PTV), which allows for uncertainties in planning or treatment delivery. [Reference](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1434601/) |
+| Radiotherapy Volume | A volume of the body used in radiotherapy planning or treatment delivery. | Each volume can be further characterized by a type such as gross tumor volume (GTV) or planning target volume (PTV). [Reference](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1434601/) |
 {: .grid }
 
 ### Treatment Delivery Concepts
@@ -29,9 +29,12 @@ Radiotherapy delivery typically involves multiple sessions that can be conceptua
 
 The following figures illustrate two different views of the treatment delivery concepts defined above. Here, one course of treatment is divided into three phases. The first of these phases is implemented by two plans, the second plan being a revision (adaptation) of the original plan after the first three sessions. The second and third phases are each implemented by a single treatment plan. The phases partially overlap and some sessions involve delivering fractions from two plans. For example, session 7 delivers the seventh fraction of the first (left breast tangents) phase (which is the fourth fraction of the adapted second plan of the first phase) and the third fraction of the third (right breast tangents) phase.
 
-![Illustrative Radiotherapy Example](BreastTreatmentPlan.png)
 
-<br>
-<br>
 
-![Relationship of Plans, Phases, and Course](BreastTreatmentSummary.png)
+<img src="BreastTreatmentPlan.png" alt="Breast Treatment Plan" width="1000px" style="float:none; margin: 0px 0px 0px 0px;" />
+
+<br/>
+Here is a hierarchical view of the same course of treatment:
+<br/>
+
+<img src="BreastTreatmentSummary.png" alt="Relationship of Plans, Phases, and Course" width="1000px" style="float:none; margin: 0px 0px 0px 0px;" />

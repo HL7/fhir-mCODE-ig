@@ -12,8 +12,18 @@
       "current": true
     },
     {
+      "version": "2.0.0",
+      "date": "2021-11-20",
+      "desc": "STU 2 Release",
+      "path": "http://hl7.org/fhir/us/mcode/STU2",
+      "status": "trial-use",
+      "sequence": "STU 2",
+      "fhirversion": "4.0.1",
+      "current": true
+    },
+    {
       "version": "1.16.0",
-      "date": "",
+      "date": "2021-03-20",
       "desc": "STU 2 Ballot Version",
       "path": "http://hl7.org/fhir/us/mcode/2021May",
       "status": "ballot",
@@ -29,7 +39,7 @@
       "status": "trial-use",
       "sequence": "STU 1",
       "fhirversion": "4.0.1",
-      "current": true
+      "current": false
     },
     {
       "version": "1.0.0",
@@ -52,5 +62,5 @@
       "current": false
     }
   ],
-  "category": "Care Planning"
+  "category": "Oncology"
 }

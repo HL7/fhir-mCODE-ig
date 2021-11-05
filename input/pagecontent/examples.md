@@ -10,9 +10,10 @@
   }
 </style>
 
-In addition to individual examples of each , this extended example demonstrates how mCODE can be used to represent a clinically realistic scenario.
-* When information in the scenario does not map on to mCODE s, we provide examples using [USCore](http://hl7.org/fhir/us/core/index.html) or standard FHIR resources.
-* For the sake of brevity, only a subset of examples will be shown in cases where the FHIR representation patter is the same. For example, we only show one example of MedicationAdministration when in reality, there could be 4 cycles, of 3 medications that could be repeated over a 28 day cycle. Since the only difference would be the day of the administration, then we omit it assuming that the implementer understands that the representation pattern is the same except for timestamps.
+In addition to providing examples of mCODE profiles, this extended example demonstrates how to represent a clinically realistic scenario.
+
+* When information in the scenario does not map on to mCODE profiles, we provide examples using [USCore](http://hl7.org/fhir/us/core/index.html) or standard FHIR resources.
+* We condense some repeated patterns. For example, we only show one example of MedicationAdministration when in reality, there could be multiple cycles, the only difference being the day of the administration.
 
 ### Patient description
 

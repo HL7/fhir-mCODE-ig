@@ -6,7 +6,11 @@ An additional volume types referenced by [ICRU62](https://www.icru.org/report/pr
 is the term Internal Target Volume (ITV), "representing the volume encompassing the CTV and the Internal  Margin".  As defined by [Ezhil et al](https://ro-journal.biomedcentral.com/articles/10.1186/1748-717X-4-4) the Internal Gross Tumor Volume (IGTV) represents the GTV with an internal margin to compensate for all movements.
 
 ### Usage
-This profile described volumes as BodyStructure resources. Each volume can be  characterized by a type such as planning target volume (PTV) or gross tumor volume (GTV) and by the anatomic location. Using a stand-alone resource to describe a radiotherapy volume has several benefits:
+This profile described volumes as BodyStructure resources. Each volume can be  characterized by a type such as planning target volume (PTV) or gross tumor volume (GTV) and by the anatomic location.
+
+** vvvCAN WE DELETE THIS?vvv **
+
+Using a stand-alone resource to describe a radiotherapy volume has several benefits:
 
 1. It uses an existing FHIR Resource, and avoids creation of a complex extension.
 2. It permits reuse of the same body volume in planning, executing, and reporting a radiotherapy treatment, as opposed to repeating the same elements in multiple places.
@@ -14,6 +18,13 @@ This profile described volumes as BodyStructure resources. Each volume can be  c
 4. The use of BodyStructure fits the intended purpose of the BodyStructure resource and allows attachment of images and other textual and coded information that could be needed to fully describe a radiotherapy volume.
 
 The disadvantage of separating the radiotherapy volume is that it is not in the same resource as the modality, technique, and dose information, but overall, the above advantages are felt to outweigh this disadvantage.
+
+** ^^^^^ CAN WE DELETE THIS ^^^^ **
+
+The treatment location should be expressed using the anatomical concepts in the American Association of Physicists in Medicine (AAPM) [Task Group 263 report on Standardizing Nomenclatures in Radiation Oncology](https://www.aapm.org/pubs/reports/RPT_263.pdf), expressed using SNOMEDCT.   The mapping from AAPM TG263 concepts to SNOMEDCT codes  ([RadiotherapyTreatmentLocationVS]) and qualifiers ([RadiotherapyTreatmentLocationQualifierVS]) can be found in this [spreadsheet](TG263_Nomenclature_to_SNOMEDCT_Codes_and_Qualifiers.xlsx).
+For example, if the treatment location was the Left Breast, with TG263 primary name Breast_L, the location would be expressed by using the SNOMEDCT code for location, and the code for the locationQualifier.
+
+![Excerpt from TG263 to SNOMED mapping](TG263-mapping.png)
 
 ### Limitations
 

@@ -20,6 +20,8 @@ At the command prompt in the root folder of the IG, run:
 - Mac/Linux: `./mvnw test`
 - Windows: `mvnw test`
 
+You **do not** need to re-run SUSHI or the IG Publisher before running the tests: the above commands run SUSHI as a preflight step.
+
 ## Example testing strategy
 
 The invariant `must-have-focus-or-specimen-invariant` (defined for the tumor size profile) has the following contents:

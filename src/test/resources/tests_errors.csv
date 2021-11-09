@@ -1,3 +1,6 @@
 example,profile,expectedIssueSeverity,expectedLocation,expectedErrorMessage
 src/test/resources/must-have-focus-or-specimen-invariant_focus-and-specimen.json,http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tumor-size,ERROR,Observation,must-have-focus-or-specimen-invariant
 src/test/resources/must-have-focus-or-specimen-invariant_neither.json,http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tumor-size,ERROR,Observation,must-have-focus-or-specimen-invariant
+src/test/resources/course-summary-invalid-photon-modality.json,http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-course-summary,ERROR,Procedure,Invalid-TechniquesForPhotonBeamModality
+src/test/resources/course-summary-invalid-neutron-modality.json,http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-course-summary,ERROR,Procedure,Invalid-TechniquesForNeutronBeamModality
+src/test/resources/course-summary-invalid-brachperm-modality.json,http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-course-summary,ERROR,Procedure,Invalid-TechniquesBrachPermModality

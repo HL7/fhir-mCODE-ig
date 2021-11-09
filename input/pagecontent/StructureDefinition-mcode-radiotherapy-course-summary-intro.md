@@ -6,7 +6,7 @@ In radiotherapy, a _phase_ is a subset of a course. A phase is defined as a trea
 
 The relationship between a course and its phases is exemplified in the following diagram:
 
-![Radiotherapy Example](BreastTreatmentSummary.png)
+<img src="BreastTreatmentPlan.png" alt="Breast Treatment Plan" width="1000px" style="float:none; margin: 0px 0px 0px 0px;" />
 
 In this example, the radiotherapy course encompasses three phases. The course summary captures each radiotherapy volume, the total dose for each volume, and total number of fractions delivered for each volume. The course summary also records the modalities and techniques used, without directly associating those with individual volumes. Other elements in the summary include the reason for treatment, the treatment intent, the period of treatment, and the total number of sessions.
 

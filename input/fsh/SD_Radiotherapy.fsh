@@ -99,7 +99,7 @@ Expression: "extension.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefini
          extension.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-technique').value.exists( (
           coding.code = '169317000' or coding.code = '1162782007'))"
 Severity: #error
-// Removed requirement for "coding.system = 'http://snomed.info/sct' and " temporarily because of placeholder PS code from local codesystem, not SCT'
+// Removed requirement for "coding.system = 'http://snomed.info/sct' and " temporarily because of placeholder USCRS-33517 code from SCT_TBD'
 Invariant: TechniquesForCarbonIonBeamModality
 Description:  "Allowed Techniques for Carbon Ion Beam Modality"
 Expression: "extension.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-modality').exists() and
@@ -109,7 +109,7 @@ Expression: "extension.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefini
          extension.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-technique').value.exists( (
           coding.code = '1156529004' or coding.code = '1156528007' or coding.code='USCRS-33517'))"
 Severity: #error
-// Removed requirement for "coding.system = 'http://snomed.info/sct' and " temporarily because of placeholder PS code from local codesystem, not SCT'
+// Removed requirement for "coding.system = 'http://snomed.info/sct' and " temporarily because of placeholder USCRS-33517 code from SCT_TBD'
 Invariant: TechniquesForProtonBeamModality
 Description:  "Allowed Techniques for Proton Beam Modality"
 Expression: "extension.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-modality').exists() and

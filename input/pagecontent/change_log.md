@@ -1,7 +1,6 @@
 ### mCODE STU 2 (Ballot Reconciliation, June-Oct 2021)
 
 #### [Block Vote 1](https://jira.hl7.org/issues/?filter=14606) - June 24, 2021
-
 * [FHIR-32166](https://jira.hl7.org/browse/FHIR-32166) All references to subject or patient now reference CancerPatient.   Any patient that conforms to USCore is conformant.  Clients/server have to handle in a meaningful way the deceased info.
 * [FHIR-32263](https://jira.hl7.org/browse/FHIR-32263) Radiotherapy Modality Value Set and Radiotherapy Technique Value Set are now defined by inclusion of the modality and technique value sets for Brachytherapy and Teleoradiotherapy rather than by enumeration.
 * [FHIR-32350](https://jira.hl7.org/browse/FHIR-32350) The descriptions for the Elixhauser ThyroidOther and NeuroOther VS have been clarified.
@@ -10,7 +9,7 @@
 
 #### [Block Vote 2](https://jira.hl7.org/issues/?filter=14708) - July 22, 2021
 
-* [FHIR-32243](https://jira.hl7.org/browse/FHIR-32243) Allow Intent, Modality, and Technique extensions also in ServiceRequests.  Dropped the context restrictions on these extensions.
+* [FHIR-32243](https://jira.hl7.org/browse/FHIR-32243) Dropped the context restrictions on the Intent, Modality, and Technique extensions.
 * [FHIR-32244](https://jira.hl7.org/browse/FHIR-32244) Added tables with definitions for all radiotherapy and brachytherapy modalities and techniques.
 * [FHIR-32246](https://jira.hl7.org/browse/FHIR-32246) Updated the table of valid brachytherapy modalities and techiques to latest entries in respective valuesets
 * [FHIR-32247](https://jira.hl7.org/browse/FHIR-32247) Updated the table of valid teleradiotherapy modalities and techiques to latest entries in respective valuesets
@@ -19,11 +18,9 @@
 * [FHIR-32264](https://jira.hl7.org/browse/FHIR-32264) Changed name of value set from TreatmentIntentVS to ProcedureIntentVS.
 * [FHIR-32266](https://jira.hl7.org/browse/FHIR-32266) Clarify that total dose in a Phase is only from this Phase, not cumulative up to this Phase.
 * [FHIR-32267](https://jira.hl7.org/browse/FHIR-32267) Clarify why number of fractions is per volume in Course Summary but not per volume in a Phase
-* [FHIR-32304](https://jira.hl7.org/browse/FHIR-32304) Typo
 * [FHIR-32345](https://jira.hl7.org/browse/FHIR-32345)  Changed name of extension from LocationQualifier to BodyLocationQualifier
 
 #### [Block Vote 3](https://jira.hl7.org/issues/?filter=14928)
-
 * [FHIR-32280](https://jira.hl7.org/browse/FHIR-32279) Exlixhauser Comorbidity profile should have an value. Explanation of when it might be missing.
 * [FHIR-32280](https://jira.hl7.org/browse/FHIR-32280) Exlixhauser Comorbidity profile should have an integer Observation.value
 * [FHIR-32280](https://jira.hl7.org/browse/FHIR-32281) Exlixhauser Comorbidity profile components should be present or absent, not unknown
@@ -33,36 +30,87 @@
 * [FHIR-33003](https://jira.hl7.org/browse/FHIR-33003)  Make extension values required
 
 #### [Block Vote 4](https://jira.hl7.org/issues/?filter=14928)
-
 * [FHIR-32827](https://jira.hl7.org/browse/FHIR-32827) Added Values Urine, Stool and Other to Genomic Specimen Type Value Set
+* [FHIR-32301](https://jira.hl7.org/browse/FHIR-32301) mCODE Patient to in-scope patient
+* [FHIR-32621](https://jira.hl7.org/browse/FHIR-32621) Generated human readable renderings of all capability statements
+* [FHIR-32641](https://jira.hl7.org/browse/FHIR-32641) Restructured presentation of extended example for clarity
+* [FHIR-32835](https://jira.hl7.org/browse/FHIR-32835) Restructured Treatment Location Value Set using SNOMED Lymph Node Level Qualifiers
 
 #### [Block Vote 5](https://jira.hl7.org/issues/?filter=15618)
-
 * [FHIR-32956](https://jira.hl7.org/browse/FHIR-32956) Primary and Secondary cancer value sets have been aligned with CDC state cancer reporting practices.
 * [FHIR-33340](https://jira.hl7.org/browse/FHIR-33340)   TreatmentPhase profiles and examples dropped.  Will reappear in Codex-RT IG.
 * [FHIR-33343](https://jira.hl7.org/browse/FHIR-33343)  RadiotherapyTreatmentLocationVS/RadiotherapyTreatmentLocationQualifierVS should align with TG263 Anatomy Terms
+* [FHIR-32272](https://jira.hl7.org/browse/FHIR-32272) Glossary of radiotherapy treatment terms added
+* [FHIR-32832](https://jira.hl7.org/browse/FHIR-32832) Added values to Treatment Terminated Reason Value Set
+* [FHIR-32834](https://jira.hl7.org/browse/FHIR-32834) Added values to Methods of measuring tumor size VS
+* [FHIR-32837](https://jira.hl7.org/browse/FHIR-32837) Added values to Condition Status Trend VS
+* [FHIR-32871](https://jira.hl7.org/browse/FHIR-32871) Added interim support for fusion events in Cancer Genomics Variant
+* [FHIR-33340](https://jira.hl7.org/browse/FHIR-33340)   TreatmentPhase profiles and examples dropped.  Will reappear in Codex-RT IG.
 
 #### [Block Vote 6](https://jira.hl7.org/issues/?filter=15619)
-
 * [FHIR-32893](https://jira.hl7.org/browse/FHIR-32893) Aligned CancerDiseaseStatusEvidenceTypeVS with NAACR reporting needs
+* [FHIR-32239](https://jira.hl7.org/browse/FHIR-32239) Added  the identifier slice to RadioTherapyVolume, RadiotherapyCourseSummary.
+* [FHIR-32340](https://jira.hl7.org/browse/FHIR-32340)  Laterality broken out into separate extension in Primary/Secondry Cancer Condition, Tumor Specimen, Genetic Specimen, Cancer Related Surgical Procedure
+* [FHIR-32650](https://jira.hl7.org/browse/FHIR-32650) Tumor Marker Test Value set has been curated
+* [FHIR-32836](https://jira.hl7.org/browse/FHIR-32836) Cancer Disease Status Evidence Type ValueSet has been broadened
+* [FHIR-32870](https://jira.hl7.org/browse/FHIR-32870)  Add a new component to CancerGeneticVariant for molecular consequence, whose values are bound to the sequence ontology "structural variant"
+* [FHIR-32872](https://jira.hl7.org/browse/FHIR-32872) Add clinical significance component to Cancer Genetic Variant
+* [FHIR-32887](https://jira.hl7.org/browse/FHIR-32887) Add copy number component to Cancer Genetic Variant
+* [FHIR-32888](https://jira.hl7.org/browse/FHIR-32888) Rename Cancer Genetic Variant --> Cancer Genomics Variant
+* [FHIR-32893](https://jira.hl7.org/browse/FHIR-32893) Broadened Cancer Disease Status Evidence Type value set to align with Cancer Registry needs
+
 
 #### Other
-
-* [FHIR-32340](https://jira.hl7.org/browse/FHIR-32340)  Laterality broken out into separate extension
-* [FHIR-33340](https://jira.hl7.org/browse/FHIR-33340)   TreatmentPhase profiles and examples dropped.  Will reappear in Codex-RT IG.
-* [FHIR-32888] (https://jira.hl7.org/browse/FHIR-33340)  Consider renaming CancerGeneticVariant to a more accurate name which covers both dna and amino acid changes.
-* (Issue to be created) Changed slicing on mCODE Patient Bundle to required each resource in the bundle to populate meta.profile
-* (Issue to be created) Reorganized and reduced the number of locally-defined code systems to better track codes requested from SNOMED and LOINC
-* RadiotherapyTreatmentLocationQualifierVS and RadiotherapyTreatmentLocationVS now aligned with TG263
-* (Issue to be created) Renamed `CancerGenomicsReport` to `GenomicsReport` and `CancerGenomicVariant` to `GenomicVariant` because they are not specific to cancer, and make them more broadly applicable outside of cancer.
-* (Issue to be created) Removed the local code system `ResourceIdentifierCS` that contained only one code (`#mcode-patient`), and replaced `#mcode-patient` with the NCI code for cancer patient, `NCI#C19700`. This affects the profile `MCODEPatientGroup` and the way of querying for the list of "in-scope" patients.
-* Merged local codes for Cormorbidities into the LoincRequestedCS code system and removed the local code system that contained the Elixhauser comorbidity codes, since the codes have been requested in LOINC.
+* Changed slicing on mCODE Patient Bundle to required each resource in the bundle to populate meta.profile
+* Reorganized and reduced the number of locally-defined code systems to better track codes requested from SNOMED (mostly treatment locations and qualifiers) and LOINC (mostly for Elixhauser Comorbidity)
+* Renamed `CancerGenomicsReport` to `GenomicsReport` and `CancerGenomicVariant` to `GenomicVariant` because they are not specific to cancer, and make them more broadly applicable outside of cancer.
+* Removed the local code system `ResourceIdentifierCS` that contained only one code (`#mcode-patient`), and replaced `#mcode-patient` with the NCI code for cancer patient, `NCI#C19700`. This affects the profile `MCODEPatientGroup` and the way of querying for the list of "in-scope" patients.
 * Re-arranged menus for easier navigation
 * Provided separate pages containing the different types of FHIR artifacts
 * Updated mCODE diagram to reflect STU 2 changes
 * Updated lists of artifacts on "Content by Group" pages
 * Added external code systems used by mCODE to FHIR Artifacts "Value Sets" page and "Content by Group" pages, where appropriate.
 * Updated terminology page to include code system identifiers recommended by HL7 Terminology Authority, and reflect the current local code systems (LoincRequestedCS and SnomedRequestedCS)
+* Updated data dictionary content.
+* Added FSH rendering for all example instances
+### mCODE STU 2 Publication Version (November 2021)
+#### General Changes
+* Updated [Data Dictionary](dictionary.html) content
+* New [Radiotherapy Glossary](glossary.html)
+* Updated [mCODE diagram](index.html#scope-and-conceptual-model) to reflect STU 2 changes
+* Re-arranged menus for easier navigation
+* Provided separate pages containing the different types of FHIR artifacts
+* Updated lists of artifacts on "Content by Group" pages
+* Added external valuesets used by mCODE to FHIR Artifacts [Value Sets](valuesets.html) page
+* Updated [terminology](terminology.html) page to include code system identifiers recommended by HL7 Terminology Authority, and to document [local code systems](terminology.html#local-code-systems)
+* Added FSH [rendering](Observation-cancer-related-mcode-comorbidities-elixhauser-john-anyperson.html#notes) in notes section for all example instances
+* Made values required in extensions
+* All definitions have been reviewed and edited and numerous improvements and corrections made to narrative content.
+#### Patient Group Changes
+* All references to subject or patient now reference CancerPatient.   Any patient that conforms to USCore is conformant.
+* Removed the local code system `ResourceIdentifierCS` that contained only one code (`#mcode-patient`), and replaced `#mcode-patient` with the NCI code for cancer patient, `NCI#C19700`. This affects the profile `MCODEPatientGroup` and the way of querying for the list of "in-scope" patients.
+* Changed slicing on mCODE Patient Bundle to required each resource in the bundle to populate meta.profile
+* Narrative now refers consistently "in-scope patient", instead of the more jargony "mCODE patient"
+#### Assessment Group Changes
+#### Disease Group Changes
+* Laterality broken out into separate extension in Primary/Secondry Cancer Condition, Tumor Specimen, Genetic Specimen
+* Added values to Methods of measuring tumor size VS
+* Added values to Condition Status Trend VS
+* Changed the definition of CancerStagingSystemVS to an intensional set containing descendants of SCT#254292007 "Tumor staging (tumor staging)". The includes codes for AJCC staging (version 6, 7, and 8) and many other specialized staging systems.Changed the definition of CancerStagingSystemVS to an intensional set containing descendants of SCT#254292007 "Tumor staging (tumor staging)". The includes codes for AJCC staging (version 6, 7, and 8) and many other specialized staging systems.
+#### Treatment Group Changes
+* Incorporated the modality and technique extensions into a combined extension that includes invariants that restrict the allowed [combinations](StructureDefinition-mcode-radiotherapy-modality-and-technique.html#usage) using invariants
+* Aligned the RadiationTreatmentLocation and RadiationTreatmentLocationQualifier value sets to AAPM TG263 anatomy terms and [provide a mapping](http://build.fhir.org/ig/HL7/fhir-mCODE-ig/branches/master/StructureDefinition-mcode-radiotherapy-volume.html#usage) to SNOMEDCT concepts and qualifiers
+* Added  the identifier slice to RadioTherapyVolume, RadiotherapyCourseSummary.
+* Laterality broken out into separate extension in Cancer Related Surgical Procedure
+* Tumor Marker Test Value set has been curated
+* Cancer Disease Status Evidence Type ValueSet has been aligned with NAACR reporting needs
+* TreatmentPhase profiles and examples dropped.  Will reappear in [Codex-Radiation-Therapy FHIR Implementation Guide](http://build.fhir.org/ig/HL7/codex-radiation-therapy/branches/master/index.html).
+* Added values to Treatment Terminated Reason Value Set
+#### Genomics Group Changes
+* Renamed `CancerGenomicsReport` to `GenomicsReport` and `CancerGenomicVariant` to `GenomicVariant` because they are not specific to cancer, and make them more broadly applicable outside of cancer.
+* `GenomicVariant` now includes components for molecular consequence, clinical significance, variant category, and copy number
+* Added Values Urine, Stool and Other to Genomic Specimen Type Value Set
+#### Outcome Group Changes
 
 
 ### mCODE STU 2 Ballot Version (May 2021)

@@ -710,9 +710,11 @@ Description: "Example of radiotherapy treatment summary involving external beam 
 * extension[modalityAndTechnique][=].extension[technique][+].valueCodeableConcept = SCT_TBD#USCRS-33517 "External beam radiation therapy using particle scanning technique (procedure)"
 // Photons
 * extension[modalityAndTechnique][+].extension[modality][0].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
-* extension[modalityAndTechnique][=].extension[technique][0].valueCodeableConcept = SCT#1156529004 "External beam radiation therapy using particle passive scattering technique (procedure)"
-* extension[modalityAndTechnique][=].extension[technique][+].valueCodeableConcept = SCT#1156528007 "External beam radiation therapy using particle spot scanning technique (procedure)"
-* extension[modalityAndTechnique][=].extension[technique][+].valueCodeableConcept = SCT_TBD#USCRS-33517 "External beam radiation therapy using particle scanning technique (procedure)"
+* extension[modalityAndTechnique][=].extension[technique][0].valueCodeableConcept = SCT#441799006 "Intensity modulated radiation therapy (procedure)"
+* extension[modalityAndTechnique][=].extension[technique][+].valueCodeableConcept = SCT#1156530009 "Volumetric Modulated Arc Therapy (procedure)"
+* extension[modalityAndTechnique][=].extension[technique][+].valueCodeableConcept = SCT_TBD#1162782007 "Three dimensional external beam radiation therapy (procedure)"
+* extension[modalityAndTechnique][=].extension[technique][+].valueCodeableConcept = SCT#1156526006 "Two dimensional external beam radiation therapy (procedure)"
+* extension[modalityAndTechnique][=].extension[technique][+].valueCodeableConcept = SCT#168524008 "Radiotherapy - intraoperative control (procedure)"
 // Brach LDR
 * extension[modalityAndTechnique][+].extension[modality][0].valueCodeableConcept = SCT#1156708005 "Low dose rate brachytherapy using temporary radioactive source (procedure)"
 * extension[modalityAndTechnique][=].extension[technique][0].valueCodeableConcept = SCT#384692006 "Intracavitary brachytherapy (procedure)"

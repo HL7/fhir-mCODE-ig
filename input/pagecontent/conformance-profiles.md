@@ -49,7 +49,7 @@ The following rules apply to Senders:
 3. The Sender's list of implemented profiles MUST be published in a CapabilityStatement.
 4. For each implemented profile, the Data Sender MUST follow that profile's conformance statement describing what data MUST or SHOULD conform to that profile.
 5. When the appropriate profile for a certain type of data has been determined, the Sender has the responsibility for creating instances that conform to that profile. All such instances must pass [validation](https://www.hl7.org/fhir/validation.html) against the selected profile.
-6. The Data Sender SHALL be capable of populating every data element it implements. See the [Obligation to Implement](#obligation-to-implement) section to determine which elements MUST/SHOULD/MAY be implemented for a given profile.
+6. The Data Sender MUST be capable of populating every data element it implements, and MUST implement the [Obligation to Implement](#obligation-to-implement) elements.
 7. For any element that is required (minimum cardinality > 0), if the Sender lacks the data necessary to populate the element, the [US Core rules on missing data](http://hl7.org/fhir/us/core/general-guidance.html#missing-data) MUST be followed.
 8. For any non-required element (minimum cardinality = 0), if the Sender lacks the data necessary to populate the element, the element SHOULD be entirely omitted. If there is a specific reason the data is missing, a data absent reason (described in the [US Core rules on missing data](http://hl7.org/fhir/us/core/general-guidance.html#missing-data)) MAY be substituted. Note that this rule applies to _non-required_ Obligation to Implement elements (described below).
 9. Senders MUST NOT substitute nonsense or filler values for missing values.
@@ -80,12 +80,17 @@ Regarding #4, there are several ways the Receiver can identify the correct profi
 
 ### Obligation to Implement
 
-This section describes conformance requirements in terms of which profiles and data elements MUST (or SHOULD or MAY) be implemented by adopters of mCODE.
-
 mCODE defines Obligation to Implement (OTI) as follows:
 
 * OTI on a profile means that the profile MUST be implemented.
-* OTI on a data element means that Senders and Receivers MUST implement that data element -- in other words, implementers MUST support the population and use of that data element. (Note that the [Profile-Level Conformance Expectations](#profile-level-conformance-expectations) describes handling missing data for OTI elements.)
+	* Data Senders MUST produce an instance of a FHIR resource that conforms to each OTI profile for all [in-scope patients](conformance-patients.html).
+	* Data Receivers MUST meaningfully process any instances of a FHIR resource that conform to an OTI profile.
+* OTI on a data element means that Senders and Receivers MUST implement that data element.
+	* Data Senders MUST populate all OTI elements if the data to fill those elements exists in their system. This applies to all FHIR resource instances produced by the Data Sender intended to conform with an mCODE profile.
+		* Note that the [Profile-Level Conformance Expectations](#profile-level-conformance-expectations) describes handling missing data for OTI elements.
+	* Data Receivers MUST meaningfully process all OTI elements appearing in incoming FHIR resource instances that (1) conform to an mCODE profile supported by the Data Receiver; and (2) are related to an [in-scope patient](conformance-patients.html).
+
+The remainder of this section describes how to determine which profiles and elements are OTI, meaning that they MUST be supported as described above. It also describes the conformance expectations around non-OTI profiles and elements, which SHOULD or MAY be supported.
 
 #### Obligation to Implement Versus Must Support
 

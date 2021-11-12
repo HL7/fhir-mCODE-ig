@@ -28,8 +28,8 @@
 * Added  the identifier slice to [RadioTherapyVolume], [RadiotherapyCourseSummary].
 * Laterality broken out into separate extension in [CancerRelatedSurgicalProcedure]
 * [TumorMarkerTestVS] value set has been curated
-* TreatmentPhase profiles and examples dropped.  Will reappear in [Codex-Radiation-Therapy FHIR Implementation Guide](http://build.fhir.org/ig/HL7/codex-radiation-therapy/branches/master/index.html).
-* Added values to [TreatmentTerminatedReasonVS] value set
+* `BrachytherapyTreatmentPhase` and `RadiotherapyTreatmentPhase` profiles and examples dropped because it was determined that this was too much detail for mCODE.  Will reappear in [Codex-Radiation-Therapy FHIR Implementation Guide](http://build.fhir.org/ig/HL7/codex-radiation-therapy/branches/master/index.html).
+* Added values to [TreatmentTerminationReason] value set
 #### Genomics Group Changes
 * Renamed `CancerGenomicsReport` to [GenomicsReport] and `CancerGenomicVariant` to [GenomicVariant] because they are not specific to cancer, and make them more broadly applicable outside of cancer.
 * [GenomicVariant] now includes components for molecular consequence, clinical significance, variant category, and copy number

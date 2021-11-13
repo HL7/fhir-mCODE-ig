@@ -1,12 +1,34 @@
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+  "code" : "3002",
+  "display" : "cyclophosphamide"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
+v: {
+  "display" : "cyclophosphamide",
+  "code" : "3002",
+  "system" : "http://www.nlm.nih.gov/research/umls/rxnorm"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
   "code" : "1790099",
   "display" : "doxorubicin hydrochloride 20 MG per 10 ML Injection"
 }, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
 v: {
   "display" : "10 ML doxorubicin hydrochloride 2 MG/ML Injection",
   "code" : "1790099",
+  "system" : "http://www.nlm.nih.gov/research/umls/rxnorm"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+  "code" : "56946",
+  "display" : "PACLitaxel"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
+v: {
+  "display" : "paclitaxel",
+  "code" : "56946",
   "system" : "http://www.nlm.nih.gov/research/umls/rxnorm"
 }
 -------------------------------------------------------------------------------------
@@ -34,17 +56,6 @@ v: {
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
-  "code" : "3002",
-  "display" : "cyclophosphamide"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
-v: {
-  "display" : "cyclophosphamide",
-  "code" : "3002",
-  "system" : "http://www.nlm.nih.gov/research/umls/rxnorm"
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
   "code" : "3639",
   "display" : "DOXOrubicin"
 }, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
@@ -62,17 +73,6 @@ v: {
 v: {
   "display" : "gefitinib 250 MG Oral Tablet",
   "code" : "349472",
-  "system" : "http://www.nlm.nih.gov/research/umls/rxnorm"
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
-  "code" : "56946",
-  "display" : "PACLitaxel"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
-v: {
-  "display" : "paclitaxel",
-  "code" : "56946",
   "system" : "http://www.nlm.nih.gov/research/umls/rxnorm"
 }
 -------------------------------------------------------------------------------------

@@ -5271,11 +5271,21 @@ v: {
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
-  "code" : "69548-6"
+  "code" : "89247-1"
 }, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
 v: {
-  "display" : "Genetic variant assessment",
-  "code" : "69548-6",
+  "display" : "ECOG Performance Status score",
+  "code" : "89247-1",
+  "system" : "http://loinc.org"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "53041-0"
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
+v: {
+  "display" : "DNA region of interest panel",
+  "code" : "53041-0",
   "system" : "http://loinc.org"
 }
 -------------------------------------------------------------------------------------
@@ -5286,6 +5296,16 @@ v: {
 v: {
   "display" : "Gene studied [ID]",
   "code" : "48018-6",
+  "system" : "http://loinc.org"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "69548-6"
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
+v: {
+  "display" : "Genetic variant assessment",
+  "code" : "69548-6",
   "system" : "http://loinc.org"
 }
 -------------------------------------------------------------------------------------
@@ -5326,26 +5346,6 @@ v: {
 v: {
   "display" : "Master HL7 genetic variant reporting panel",
   "code" : "81247-9",
-  "system" : "http://loinc.org"
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://loinc.org",
-  "code" : "53041-0"
-}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
-v: {
-  "display" : "DNA region of interest panel",
-  "code" : "53041-0",
-  "system" : "http://loinc.org"
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://loinc.org",
-  "code" : "89247-1"
-}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
-v: {
-  "display" : "ECOG Performance Status score",
-  "code" : "89247-1",
   "system" : "http://loinc.org"
 }
 -------------------------------------------------------------------------------------
@@ -5401,11 +5401,42 @@ v: {
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
-  "code" : "69548-6"
+  "code" : "89247-1"
 }, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
 v: {
-  "display" : "Genetic variant assessment",
-  "code" : "69548-6",
+  "display" : "ECOG Performance Status score",
+  "code" : "89247-1",
+  "system" : "http://loinc.org"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "5792-7"
+}, "valueSet" :{
+  "resourceType" : "ValueSet"
+}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
+v: {
+  "severity" : "error",
+  "error" : "The code provided (http://loinc.org#5792-7) is not valid in the value set 'LOINC Answer List LL529-9' (from http://tx.fhir.org/r4)"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "53041-0"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
+v: {
+  "display" : "DNA region of interest panel",
+  "code" : "53041-0",
+  "system" : "http://loinc.org"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "36908-2"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
+v: {
+  "display" : "Gene mutations tested for in Blood or Tissue by Molecular genetics method Nominal",
+  "code" : "36908-2",
   "system" : "http://loinc.org"
 }
 -------------------------------------------------------------------------------------
@@ -5416,6 +5447,56 @@ v: {
 v: {
   "display" : "Gene studied [ID]",
   "code" : "48018-6",
+  "system" : "http://loinc.org"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "81293-3"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
+v: {
+  "display" : "Description of ranges of DNA sequences examined",
+  "code" : "81293-3",
+  "system" : "http://loinc.org"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "51959-5"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
+v: {
+  "display" : "Range(s) of DNA sequence examined",
+  "code" : "51959-5",
+  "system" : "http://loinc.org"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "92822-6"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
+v: {
+  "display" : "Genomic coordinate system [Type]",
+  "code" : "92822-6",
+  "system" : "http://loinc.org"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "48013-7"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
+v: {
+  "display" : "Genomic reference sequence [ID]",
+  "code" : "48013-7",
+  "system" : "http://loinc.org"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "69548-6"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
+v: {
+  "display" : "Genetic variant assessment",
+  "code" : "69548-6",
   "system" : "http://loinc.org"
 }
 -------------------------------------------------------------------------------------
@@ -5541,103 +5622,11 @@ v: {
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
-  "code" : "5792-7"
-}, "valueSet" :{
-  "resourceType" : "ValueSet"
-}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
-v: {
-  "severity" : "error",
-  "error" : "The code provided (http://loinc.org#5792-7) is not valid in the value set 'LOINC Answer List LL1971-2' (from http://tx.fhir.org/r4)"
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://loinc.org",
   "code" : "81247-9"
 }, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
 v: {
   "display" : "Master HL7 genetic variant reporting panel",
   "code" : "81247-9",
-  "system" : "http://loinc.org"
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://loinc.org",
-  "code" : "78923-0",
-  "display" : "Comorbid condition panel"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
-v: {
-  "display" : "Comorbid condition panel",
-  "code" : "78923-0",
-  "system" : "http://loinc.org"
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://loinc.org",
-  "code" : "89247-1"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
-v: {
-  "display" : "ECOG Performance Status score",
-  "code" : "89247-1",
-  "system" : "http://loinc.org"
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://loinc.org",
-  "code" : "53041-0"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
-v: {
-  "display" : "DNA region of interest panel",
-  "code" : "53041-0",
-  "system" : "http://loinc.org"
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://loinc.org",
-  "code" : "36908-2"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
-v: {
-  "display" : "Gene mutations tested for in Blood or Tissue by Molecular genetics method Nominal",
-  "code" : "36908-2",
-  "system" : "http://loinc.org"
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://loinc.org",
-  "code" : "81293-3"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
-v: {
-  "display" : "Description of ranges of DNA sequences examined",
-  "code" : "81293-3",
-  "system" : "http://loinc.org"
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://loinc.org",
-  "code" : "51959-5"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
-v: {
-  "display" : "Range(s) of DNA sequence examined",
-  "code" : "51959-5",
-  "system" : "http://loinc.org"
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://loinc.org",
-  "code" : "92822-6"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
-v: {
-  "display" : "Genomic coordinate system [Type]",
-  "code" : "92822-6",
-  "system" : "http://loinc.org"
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://loinc.org",
-  "code" : "48013-7"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
-v: {
-  "display" : "Genomic reference sequence [ID]",
-  "code" : "48013-7",
   "system" : "http://loinc.org"
 }
 -------------------------------------------------------------------------------------
@@ -5713,8 +5702,8 @@ e: {
   "language" : "en",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:82ba87eb-a577-4d0a-8811-cd5ff81aeb2f",
-    "timestamp" : "2021-10-27T23:44:55.295Z",
+    "identifier" : "urn:uuid:72d980a0-8b89-42ab-899a-9d2661fa5aa5",
+    "timestamp" : "2021-11-13T13:06:27.282Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -5815,8 +5804,8 @@ e: {
   "language" : "en",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:a232633c-d0e9-43e0-91ca-fd6bd47105a2",
-    "timestamp" : "2021-10-27T23:44:55.420Z",
+    "identifier" : "urn:uuid:e860aa0e-7f67-42d1-8b6a-ee2320684922",
+    "timestamp" : "2021-11-13T13:06:27.376Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -5917,8 +5906,8 @@ e: {
       "url" : "http://hl7.org/fhir/StructureDefinition/valueset-toocostly",
       "valueBoolean" : true
     }],
-    "identifier" : "urn:uuid:f6798c8a-b196-481a-b74a-9f1659fbd14e",
-    "timestamp" : "2021-10-27T23:44:55.514Z",
+    "identifier" : "urn:uuid:c8507699-c1f5-4766-97b7-afcd121d8fa9",
+    "timestamp" : "2021-11-13T13:06:27.485Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -10954,8 +10943,8 @@ e: {
   "language" : "en",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:dd5965bd-4624-42da-918b-b4a08e5e0f61",
-    "timestamp" : "2021-10-27T23:44:56.155Z",
+    "identifier" : "urn:uuid:4aedaece-2738-433b-851b-01f3ca2b8189",
+    "timestamp" : "2021-11-13T13:06:28.220Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -11004,8 +10993,8 @@ e: {
   "language" : "en",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:e15b0e29-3fa4-4ac2-b5d5-f5c84ca3428f",
-    "timestamp" : "2021-10-27T23:44:56.295Z",
+    "identifier" : "urn:uuid:fd120a90-48c7-4c40-98ae-6afed4a599ff",
+    "timestamp" : "2021-11-13T13:06:28.345Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -11064,8 +11053,8 @@ e: {
   "language" : "en",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:c0461949-82cb-46e8-9a8d-2705c8d360e5",
-    "timestamp" : "2021-10-27T23:44:58.795Z",
+    "identifier" : "urn:uuid:4b30edd9-5266-4053-9913-7cda16c0c1f8",
+    "timestamp" : "2021-11-13T13:06:30.532Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -11124,8 +11113,8 @@ e: {
   "language" : "en",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:0225d02f-f657-42c5-b3c3-24e022a11cfd",
-    "timestamp" : "2021-10-27T23:44:59.123Z",
+    "identifier" : "urn:uuid:e8f15522-3595-4187-acdc-4eb4c6982b23",
+    "timestamp" : "2021-11-13T13:06:30.751Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -11184,8 +11173,8 @@ e: {
   "language" : "en",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:9936c2b8-04c9-404d-a4bd-127e519914d0",
-    "timestamp" : "2021-10-27T23:44:59.467Z",
+    "identifier" : "urn:uuid:bc401891-2977-4ce0-8aa5-faff671daa1a",
+    "timestamp" : "2021-11-13T13:06:31.001Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -11544,6 +11533,124 @@ v: {
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
+  "code" : "LA9622-7"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://loinc.org",
+      "filter" : [{
+        "property" : "LIST",
+        "op" : "=",
+        "value" : "LL529-9"
+      }]
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
+v: {
+  "display" : "Fully active, able to carry on all pre-disease performance without restriction",
+  "code" : "LA9622-7",
+  "system" : "http://loinc.org"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "LA9622-7",
+  "display" : "Fully active, able to carry on all pre-disease performance without restriction"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://loinc.org",
+      "filter" : [{
+        "property" : "LIST",
+        "op" : "=",
+        "value" : "LL529-9"
+      }]
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK", "versionFlexible":"true"}####
+v: {
+  "display" : "Fully active, able to carry on all pre-disease performance without restriction",
+  "code" : "LA9622-7",
+  "system" : "http://loinc.org"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "LA9622-7"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
+v: {
+  "display" : "Fully active, able to carry on all pre-disease performance without restriction",
+  "code" : "LA9622-7",
+  "system" : "http://loinc.org"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "53041-0"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://loinc.org"
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
+v: {
+  "display" : "DNA region of interest panel",
+  "code" : "53041-0",
+  "system" : "http://loinc.org"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "53041-0",
+  "display" : "DNA region of interest panel"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://loinc.org"
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK", "versionFlexible":"true"}####
+v: {
+  "display" : "DNA region of interest panel",
+  "code" : "53041-0",
+  "system" : "http://loinc.org"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "48018-6",
+  "display" : "Gene studied [ID]"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
+v: {
+  "display" : "Gene studied [ID]",
+  "code" : "48018-6",
+  "system" : "http://loinc.org"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "53041-0"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://loinc.org"
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK", "versionFlexible":"true"}####
+v: {
+  "display" : "DNA region of interest panel",
+  "code" : "53041-0",
+  "system" : "http://loinc.org"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
   "code" : "69548-6"
 }, "valueSet" :{
   "resourceType" : "ValueSet",
@@ -11877,124 +11984,6 @@ v: {
 v: {
   "display" : "Master HL7 genetic variant reporting panel",
   "code" : "81247-9",
-  "system" : "http://loinc.org"
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://loinc.org",
-  "code" : "LA9622-7"
-}, "valueSet" :{
-  "resourceType" : "ValueSet",
-  "compose" : {
-    "include" : [{
-      "system" : "http://loinc.org",
-      "filter" : [{
-        "property" : "LIST",
-        "op" : "=",
-        "value" : "LL529-9"
-      }]
-    }]
-  }
-}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
-v: {
-  "display" : "Fully active, able to carry on all pre-disease performance without restriction",
-  "code" : "LA9622-7",
-  "system" : "http://loinc.org"
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://loinc.org",
-  "code" : "LA9622-7",
-  "display" : "Fully active, able to carry on all pre-disease performance without restriction"
-}, "valueSet" :{
-  "resourceType" : "ValueSet",
-  "compose" : {
-    "include" : [{
-      "system" : "http://loinc.org",
-      "filter" : [{
-        "property" : "LIST",
-        "op" : "=",
-        "value" : "LL529-9"
-      }]
-    }]
-  }
-}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK", "versionFlexible":"true"}####
-v: {
-  "display" : "Fully active, able to carry on all pre-disease performance without restriction",
-  "code" : "LA9622-7",
-  "system" : "http://loinc.org"
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://loinc.org",
-  "code" : "LA9622-7"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
-v: {
-  "display" : "Fully active, able to carry on all pre-disease performance without restriction",
-  "code" : "LA9622-7",
-  "system" : "http://loinc.org"
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://loinc.org",
-  "code" : "53041-0"
-}, "valueSet" :{
-  "resourceType" : "ValueSet",
-  "compose" : {
-    "include" : [{
-      "system" : "http://loinc.org"
-    }]
-  }
-}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
-v: {
-  "display" : "DNA region of interest panel",
-  "code" : "53041-0",
-  "system" : "http://loinc.org"
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://loinc.org",
-  "code" : "53041-0",
-  "display" : "DNA region of interest panel"
-}, "valueSet" :{
-  "resourceType" : "ValueSet",
-  "compose" : {
-    "include" : [{
-      "system" : "http://loinc.org"
-    }]
-  }
-}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK", "versionFlexible":"true"}####
-v: {
-  "display" : "DNA region of interest panel",
-  "code" : "53041-0",
-  "system" : "http://loinc.org"
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://loinc.org",
-  "code" : "48018-6",
-  "display" : "Gene studied [ID]"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
-v: {
-  "display" : "Gene studied [ID]",
-  "code" : "48018-6",
-  "system" : "http://loinc.org"
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://loinc.org",
-  "code" : "53041-0"
-}, "valueSet" :{
-  "resourceType" : "ValueSet",
-  "compose" : {
-    "include" : [{
-      "system" : "http://loinc.org"
-    }]
-  }
-}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK", "versionFlexible":"true"}####
-v: {
-  "display" : "DNA region of interest panel",
-  "code" : "53041-0",
   "system" : "http://loinc.org"
 }
 -------------------------------------------------------------------------------------
@@ -25690,17 +25679,6 @@ v: {
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
-  "code" : "29308-4",
-  "display" : "Diagnosis"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
-v: {
-  "display" : "Diagnosis",
-  "code" : "29308-4",
-  "system" : "http://loinc.org"
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://loinc.org",
   "code" : "85336-6",
   "display" : "DCIS intraductal extension in Breast cancer specimen Qualitative by Light microscopy"
 }, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
@@ -25712,7 +25690,18 @@ v: {
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
-  "code" : "29308-4"
+  "code" : "LA27261-9",
+  "display" : "DCIS present with extensive intraductal component (EIC)"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
+v: {
+  "display" : "DCIS present with extensive intraductal component (EIC)",
+  "code" : "LA27261-9",
+  "system" : "http://loinc.org"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "85336-6"
 }, "valueSet" :{
   "resourceType" : "ValueSet",
   "compose" : {
@@ -25722,15 +25711,15 @@ v: {
   }
 }, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
 v: {
-  "display" : "Diagnosis",
-  "code" : "29308-4",
+  "display" : "DCIS intraductal extension in Breast cancer specimen Qualitative by Light microscopy",
+  "code" : "85336-6",
   "system" : "http://loinc.org"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
-  "code" : "29308-4",
-  "display" : "Diagnosis"
+  "code" : "85336-6",
+  "display" : "DCIS intraductal extension in Breast cancer specimen Qualitative by Light microscopy"
 }, "valueSet" :{
   "resourceType" : "ValueSet",
   "compose" : {
@@ -25740,18 +25729,18 @@ v: {
   }
 }, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK", "versionFlexible":"true"}####
 v: {
-  "display" : "Diagnosis",
-  "code" : "29308-4",
+  "display" : "DCIS intraductal extension in Breast cancer specimen Qualitative by Light microscopy",
+  "code" : "85336-6",
   "system" : "http://loinc.org"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
-  "code" : "29308-4"
+  "code" : "85336-6"
 }, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
 v: {
-  "display" : "Diagnosis",
-  "code" : "29308-4",
+  "display" : "DCIS intraductal extension in Breast cancer specimen Qualitative by Light microscopy",
+  "code" : "85336-6",
   "system" : "http://loinc.org"
 }
 -------------------------------------------------------------------------------------
@@ -25854,6 +25843,76 @@ v: {
 v: {
   "display" : "HER2 [Interpretation] in Tissue",
   "code" : "48676-1",
+  "system" : "http://loinc.org"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "85337-4"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://loinc.org"
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
+v: {
+  "display" : "Estrogen receptor Ag [Presence] in Breast cancer specimen by Immune stain",
+  "code" : "85337-4",
+  "system" : "http://loinc.org"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "85337-4",
+  "display" : "Estrogen receptor Ag [Presence] in Breast cancer specimen by Immune stain"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://loinc.org"
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK", "versionFlexible":"true"}####
+v: {
+  "display" : "Estrogen receptor Ag [Presence] in Breast cancer specimen by Immune stain",
+  "code" : "85337-4",
+  "system" : "http://loinc.org"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "85339-0"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://loinc.org"
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
+v: {
+  "display" : "Progesterone receptor Ag [Presence] in Breast cancer specimen by Immune stain",
+  "code" : "85339-0",
+  "system" : "http://loinc.org"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "85339-0",
+  "display" : "Progesterone receptor Ag [Presence] in Breast cancer specimen by Immune stain"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://loinc.org"
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK", "versionFlexible":"true"}####
+v: {
+  "display" : "Progesterone receptor Ag [Presence] in Breast cancer specimen by Immune stain",
+  "code" : "85339-0",
   "system" : "http://loinc.org"
 }
 -------------------------------------------------------------------------------------
@@ -30388,6 +30447,73 @@ v: {
   "system" : "http://loinc.org"
 }
 -------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "44648-4",
+  "display" : "Histologic grade [Score] in Breast cancer specimen Qualitative by Nottingham"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
+v: {
+  "display" : "Histologic grade [Score] in Breast cancer specimen Qualitative by Nottingham",
+  "code" : "44648-4",
+  "system" : "http://loinc.org"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "LA27824-4",
+  "display" : "Nottingham grade 2"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
+v: {
+  "display" : "Nottingham grade 2",
+  "code" : "LA27824-4",
+  "system" : "http://loinc.org"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "44648-4"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://loinc.org"
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
+v: {
+  "display" : "Histologic grade [Score] in Breast cancer specimen Qualitative by Nottingham",
+  "code" : "44648-4",
+  "system" : "http://loinc.org"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "44648-4",
+  "display" : "Histologic grade [Score] in Breast cancer specimen Qualitative by Nottingham"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://loinc.org"
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK", "versionFlexible":"true"}####
+v: {
+  "display" : "Histologic grade [Score] in Breast cancer specimen Qualitative by Nottingham",
+  "code" : "44648-4",
+  "system" : "http://loinc.org"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "44648-4"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
+v: {
+  "display" : "Histologic grade [Score] in Breast cancer specimen Qualitative by Nottingham",
+  "code" : "44648-4",
+  "system" : "http://loinc.org"
+}
+-------------------------------------------------------------------------------------
 {"hierarchical" : true, "valueSet" :{
   "resourceType" : "ValueSet",
   "compose" : {
@@ -30414,8 +30540,8 @@ e: {
   "language" : "en",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:0388f78a-b192-49a8-af01-a496e9eea819",
-    "timestamp" : "2021-10-27T23:47:45.451Z",
+    "identifier" : "urn:uuid:43b8db12-ac32-4599-999d-5a6b6ff02b5b",
+    "timestamp" : "2021-11-13T13:09:25.974Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -30470,8 +30596,8 @@ e: {
   "language" : "en",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:9002b95b-6451-43ae-b620-002f8c1f26ab",
-    "timestamp" : "2021-10-27T23:47:45.670Z",
+    "identifier" : "urn:uuid:f0e1995f-6d91-4186-838d-8af598612fc8",
+    "timestamp" : "2021-11-13T13:09:26.177Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -30526,8 +30652,8 @@ e: {
   "language" : "en",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:49526f56-64d8-4515-962b-09aadbef0767",
-    "timestamp" : "2021-10-27T23:47:45.873Z",
+    "identifier" : "urn:uuid:379b8245-212a-49ae-acec-a7cc6f0418bc",
+    "timestamp" : "2021-11-13T13:09:26.365Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -30582,8 +30708,8 @@ e: {
   "language" : "en",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:14845679-d0de-45fb-8f85-7a2b93bf7fcb",
-    "timestamp" : "2021-10-27T23:47:46.076Z",
+    "identifier" : "urn:uuid:9ce491d6-f9a8-4e5b-8640-b9cf5438e492",
+    "timestamp" : "2021-11-13T13:09:26.552Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -32674,8 +32800,8 @@ e: {
   "language" : "en",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:36a4125f-64f6-4489-aa1a-4f596cb51165",
-    "timestamp" : "2021-10-27T23:47:53.107Z",
+    "identifier" : "urn:uuid:37343b52-861d-4b3a-a6da-721e73db5446",
+    "timestamp" : "2021-11-13T13:09:33.849Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -35247,198 +35373,5 @@ e: {
   }
 },
   "error" : ""
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://loinc.org",
-  "code" : "LA27261-9",
-  "display" : "DCIS present with extensive intraductal component (EIC)"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
-v: {
-  "display" : "DCIS present with extensive intraductal component (EIC)",
-  "code" : "LA27261-9",
-  "system" : "http://loinc.org"
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://loinc.org",
-  "code" : "85336-6"
-}, "valueSet" :{
-  "resourceType" : "ValueSet",
-  "compose" : {
-    "include" : [{
-      "system" : "http://loinc.org"
-    }]
-  }
-}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
-v: {
-  "display" : "DCIS intraductal extension in Breast cancer specimen Qualitative by Light microscopy",
-  "code" : "85336-6",
-  "system" : "http://loinc.org"
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://loinc.org",
-  "code" : "85336-6",
-  "display" : "DCIS intraductal extension in Breast cancer specimen Qualitative by Light microscopy"
-}, "valueSet" :{
-  "resourceType" : "ValueSet",
-  "compose" : {
-    "include" : [{
-      "system" : "http://loinc.org"
-    }]
-  }
-}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK", "versionFlexible":"true"}####
-v: {
-  "display" : "DCIS intraductal extension in Breast cancer specimen Qualitative by Light microscopy",
-  "code" : "85336-6",
-  "system" : "http://loinc.org"
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://loinc.org",
-  "code" : "85336-6"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
-v: {
-  "display" : "DCIS intraductal extension in Breast cancer specimen Qualitative by Light microscopy",
-  "code" : "85336-6",
-  "system" : "http://loinc.org"
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://loinc.org",
-  "code" : "85337-4"
-}, "valueSet" :{
-  "resourceType" : "ValueSet",
-  "compose" : {
-    "include" : [{
-      "system" : "http://loinc.org"
-    }]
-  }
-}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
-v: {
-  "display" : "Estrogen receptor Ag [Presence] in Breast cancer specimen by Immune stain",
-  "code" : "85337-4",
-  "system" : "http://loinc.org"
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://loinc.org",
-  "code" : "85337-4",
-  "display" : "Estrogen receptor Ag [Presence] in Breast cancer specimen by Immune stain"
-}, "valueSet" :{
-  "resourceType" : "ValueSet",
-  "compose" : {
-    "include" : [{
-      "system" : "http://loinc.org"
-    }]
-  }
-}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK", "versionFlexible":"true"}####
-v: {
-  "display" : "Estrogen receptor Ag [Presence] in Breast cancer specimen by Immune stain",
-  "code" : "85337-4",
-  "system" : "http://loinc.org"
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://loinc.org",
-  "code" : "85339-0"
-}, "valueSet" :{
-  "resourceType" : "ValueSet",
-  "compose" : {
-    "include" : [{
-      "system" : "http://loinc.org"
-    }]
-  }
-}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
-v: {
-  "display" : "Progesterone receptor Ag [Presence] in Breast cancer specimen by Immune stain",
-  "code" : "85339-0",
-  "system" : "http://loinc.org"
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://loinc.org",
-  "code" : "85339-0",
-  "display" : "Progesterone receptor Ag [Presence] in Breast cancer specimen by Immune stain"
-}, "valueSet" :{
-  "resourceType" : "ValueSet",
-  "compose" : {
-    "include" : [{
-      "system" : "http://loinc.org"
-    }]
-  }
-}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK", "versionFlexible":"true"}####
-v: {
-  "display" : "Progesterone receptor Ag [Presence] in Breast cancer specimen by Immune stain",
-  "code" : "85339-0",
-  "system" : "http://loinc.org"
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://loinc.org",
-  "code" : "44648-4",
-  "display" : "Histologic grade [Score] in Breast cancer specimen Qualitative by Nottingham"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
-v: {
-  "display" : "Histologic grade [Score] in Breast cancer specimen Qualitative by Nottingham",
-  "code" : "44648-4",
-  "system" : "http://loinc.org"
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://loinc.org",
-  "code" : "LA27824-4",
-  "display" : "Nottingham grade 2"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
-v: {
-  "display" : "Nottingham grade 2",
-  "code" : "LA27824-4",
-  "system" : "http://loinc.org"
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://loinc.org",
-  "code" : "44648-4"
-}, "valueSet" :{
-  "resourceType" : "ValueSet",
-  "compose" : {
-    "include" : [{
-      "system" : "http://loinc.org"
-    }]
-  }
-}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
-v: {
-  "display" : "Histologic grade [Score] in Breast cancer specimen Qualitative by Nottingham",
-  "code" : "44648-4",
-  "system" : "http://loinc.org"
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://loinc.org",
-  "code" : "44648-4",
-  "display" : "Histologic grade [Score] in Breast cancer specimen Qualitative by Nottingham"
-}, "valueSet" :{
-  "resourceType" : "ValueSet",
-  "compose" : {
-    "include" : [{
-      "system" : "http://loinc.org"
-    }]
-  }
-}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK", "versionFlexible":"true"}####
-v: {
-  "display" : "Histologic grade [Score] in Breast cancer specimen Qualitative by Nottingham",
-  "code" : "44648-4",
-  "system" : "http://loinc.org"
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://loinc.org",
-  "code" : "44648-4"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
-v: {
-  "display" : "Histologic grade [Score] in Breast cancer specimen Qualitative by Nottingham",
-  "code" : "44648-4",
-  "system" : "http://loinc.org"
 }
 -------------------------------------------------------------------------------------

@@ -3,6 +3,7 @@
 The following value sets are defined in this implementation guide:
 
 * [BenignUncertainNeoplasmBrainCNSDisorderVS]
+* [BodyLocationAndLateralityQualifierVS]
 * [BodyLocationQualifierVS]
 * [BrachytherapyPermanentSeedsTechniqueVS]
 * [BrachytherapyLowDoseRateTemporaryTechniqueVS]

@@ -1,0 +1,4 @@
+example,profile
+fsh-generated/resources/Observation-tumor-size-pathology.json,http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tumor-size
+src/test/resources/must-have-focus-or-specimen-invariant_specimen-only.json,http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tumor-size
+fsh-generated/resources/Procedure-radiotherapy-treatment-valid-modality-technique-combos.json, http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-course-summary

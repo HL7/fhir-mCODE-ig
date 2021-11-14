@@ -44,3 +44,7 @@ input-cache/txcache/rxnorm.cache
 input-cache/txcache/snomed.cache
 input-cache/txcache/ucum.cache
 input-cache/txcache/umls.cache
+
+# Automated testing
+target/*
+.mvn/wrapper/maven-wrapper.jar

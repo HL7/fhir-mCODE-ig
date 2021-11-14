@@ -25,8 +25,9 @@
 <artifact deprecated="true" id="StructureDefinition/mcode-brachytherapy-treatment-phase" key="StructureDefinition-mcode-brachytherapy-treatment-phase" name="Brachytherapy Treatment Phase"/>
 <artifact id="ValueSet/mcode-cancer-body-location-vs" key="cancer-body-location-value-set" name="Cancer Body Location Value Set"/>
 <artifact deprecated="true" id="Profile/mcode-cancer-condition-parent" key="cancer-condition-parent" name="Cancer Condition Parent"/>
-<artifact id="StructureDefinition/mcode-cancer-disease-status" key="cancer-disease-status" name="Cancer Disease Status Profile"/>
+<artifact id="StructureDefinition/mcode-cancer-disease-status-evidence-type" key="StructureDefinition-mcode-cancer-disease-status-evidence-type" name="Cancer Disease Status Evidence Type Extension"/>
 <artifact id="ValueSet/mcode-cancer-disease-status-evidence-type-vs" key="cancer-disease-status-evidence-type-value-set" name="Cancer Disease Status Evidence Type Value Set"/>
+<artifact id="StructureDefinition/mcode-cancer-disease-status" key="cancer-disease-status" name="Cancer Disease Status Profile"/>
 <artifact id="ValueSet/mcode-cancer-disorder-vs" key="cancer-disorder-value-set" name="Cancer Disorder Value Set"/>
 <artifact deprecated="true" id="StructureDefinition/mcode-cancer-genetic-variant" key="cancer-genetic-variant" name="Cancer Genetic Variant"/>
 <artifact deprecated="true" id="StructureDefinition/mcode-cancer-genomics-report" key="cancer-genomics-report" name="Cancer Genomics Report"/>
@@ -97,7 +98,8 @@
 <artifact id="ValueSet/elixhauser-renal-failure-severe-vs" key="ValueSet-elixhauser-renal-failure-severe-vs" name="Elixhauser Severe Renal Failure Value Set"/>
 <artifact id="ValueSet/elixhauser-valvular-disease-vs" key="ValueSet-elixhauser-valvular-disease-vs" name="Elixhauser Valvular Disease Value Set"/>
 <artifact id="ValueSet/elixhauser-weight-loss-vs" key="ValueSet-elixhauser-weight-loss-vs" name="Elixhauser Weight Loss Value Set"/>
-
+<artifact deprecated="true" id="StructureDefinition/mcode-evidence-type" key="StructureDefinition-mcode-evidence-type" name="Evidence Type"/>
+<artifact deprecated="true" id="Extension/mcode-evidence-type-extension" key="evidence-type-extension" name="Evidence Type Extension"/>
 <artifact deprecated="true" id="StructureDefinition/mcode-genetic-specimen" key="genetic-specimen" name="Genetic Specimen"/>
 <artifact deprecated="true" id="ValueSet/mcode-genetic-specimen-type-vs" key="genetic-specimen-type-value-set" name="Genetic Specimen Type Value Set"/>
 <artifact id="ValueSet/mcode-genomic-molecular-consequence-vs" key="ValueSet-mcode-genomic-molecular-consequence-vs" name="Genomic Molecular Consequence Value Set"/>
@@ -161,9 +163,9 @@
 <artifact id="ValueSet/mcode-secondary-cancer-disorder-vs" key="secondary-cancer-disorder-value-set" name="Secondary Cancer Disorder Value Set"/>
 <artifact id="ValueSet/mcode-hypereosinophilic-syndrome-disorder-vs" key="ValueSet-mcode-hypereosinophilic-syndrome-disorder-vs" name="Specific Diagnosis of Cancer Value Set"/>
 <artifact id="ValueSet/mcode-observation-codes-distant-metastases-vs" key="ValueSet-mcode-observation-codes-distant-metastases-vs" name="Staging Type Value Set (for Distant Metastases Category)"/>
-<artifact id="ValueSet/mcode-observation-codes-primary-tumor-vs" key="ValueSet-mcode-observation-codes-primary-tumor-vs" name="Staging Type Value Set (for Primary Tumor Category)"/>
-<artifact id="ValueSet/mcode-observation-codes-regional-nodes-vs" key="ValueSet-mcode-observation-codes-regional-nodes-vs" name="Staging Type Value Set (for Regional Node Category)"/>
-<artifact id="ValueSet/mcode-observation-codes-stage-group-vs" key="ValueSet-mcode-observation-codes-stage-group-vs" name="Staging Type Value Set (for Stage Group)"/>
+<artifact id="ValueSet/mcode-observation-codes-primary-tumor-vs" key="ValueSet-mcode-observation-codes-primary-tumor-vs" name="Staging Type for Primary Tumor Category Value Set"/>
+<artifact id="ValueSet/mcode-observation-codes-regional-nodes-vs" key="ValueSet-mcode-observation-codes-regional-nodes-vs" name="Staging Type for Regional Node Category Value Set"/>
+<artifact id="ValueSet/mcode-observation-codes-stage-group-vs" key="ValueSet-mcode-observation-codes-stage-group-vs" name="Staging Type for Stage Group Value Set"/>
 <artifact deprecated="true" id="Profile/mcode-tnm-clinical-distant-metastases" key="tnm-clinical-distant-metastases" name="TNM Clinical Distant Metastases"/>
 <artifact deprecated="true" id="Profile/mcode-tnm-clinical-primary-tumor-category" key="tnm-clinical-primary-tumor-category" name="TNM Clinical Primary Tumor Category"/>
 <artifact deprecated="true" id="Profile/mcode-tnm-clinical-regional-nodes-category" key="tnm-clinical-regional-nodes-category" name="TNM Clinical Regional Nodes Category"/>
@@ -348,14 +350,6 @@
 <artifact id="Procedure/us-core-procedure-biopsy-jenny-m" key="Procedure-us-core-procedure-biopsy-jenny-m" name="us-core-procedure-biopsy-jenny-m"/>
 <artifact id="Procedure/us-core-procedure-mammogram-jenny-m" key="Procedure-us-core-procedure-mammogram-jenny-m" name="us-core-procedure-mammogram-jenny-m"/>
 <artifact id="Observation/us-core-smokingstatus-jenny-m" key="Observation-us-core-smokingstatus-jenny-m" name="us-core-smokingstatus-jenny-m"/>
-<!-- Here is a problem -->
-<!--artifact deprecated="true" id="Extension/mcode-evidence-type-extension" key="evidence-type-extension" name="Evidence Type"-->
-<!--artifact id="StructureDefinition/mcode-evidence-type-extension" key="evidence-type" name="Evidence Type Extension"/-->
-<!-- End of problem ha ha -->
-
-<artifact id="StructureDefinition/mcode-evidence-type" key="StructureDefinition-mcode-evidence-type" name="Evidence Type"/>
-<artifact deprecated="true" id="Extension/mcode-evidence-type-extension" key="evidence-type-extension" name="Evidence Type Extension"/>
-
 <page key="NA" name="(NA)"/>
 <page key="many" name="(many)"/>
 <page key="artifacts" name="Artifacts Summary"/>

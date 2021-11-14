@@ -75,12 +75,11 @@ Description:  "Identifies a tumor that has not been removed from the body. Whene
 * identifier[tumorIdentifier] only BodyStructureIdentifier
 * identifier[tumorIdentifier] ^short = "Identifier to associate this specimen with a specific Tumor"
 * identifier[tumorIdentifier] ^definition = "To associate this with a specific BodyStructure conforming to the Tumor profile, add an identifier with a value that matches a persistent identifier from `BodyStructure.identifier.value` that is unique in the context of the Patient."
-
 * morphology = SCT#367651003 "Malignant neoplasm of primary, secondary, or uncertain origin (morphologic abnormality)"
 // This VS is used for the primary/secondary cancer conditions; rule set here for consistency with these profiles.
 * location from CancerBodyLocationVS (extensible)
 * location 1..1 // Tumor is meaningless without a location; parent profile is 0..1
-* locationQualifier from BodyLocationQualifierVS (required)
+* locationQualifier from BodyLocationAndLateralityQualifierVS (required)
 // Related cancer condition
 * extension contains RelatedCondition named relatedCondition 0..1
 * extension[relatedCondition].value[x] only Reference(PrimaryCancerCondition or SecondaryCancerCondition)

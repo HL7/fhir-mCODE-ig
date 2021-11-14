@@ -39,6 +39,7 @@ Multicentric tumors should also each be represented by a separate [Tumor] or [Tu
 
 ### Profiles
 
+* [BodyStructureIdentifier]
 * [CancerPatient] (for death date)
 * [CancerDiseaseStatus]
 * [Tumor]
@@ -51,6 +52,7 @@ Multicentric tumors should also each be represented by a separate [Tumor] or [Tu
 
 ### Value Sets
 
+* [BodyLocationAndLateralityQualifierVS]
 * [CancerDiseaseStatusEvidenceTypeVS]
 * [ConditionStatusTrendVS]
 * [TumorSizeMethodVS]

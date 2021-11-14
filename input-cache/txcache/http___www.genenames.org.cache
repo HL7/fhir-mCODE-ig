@@ -1,86 +1,6 @@
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://www.genenames.org",
-  "code" : "HGNC:1014"
-}, "valueSet" :{
-  "resourceType" : "ValueSet",
-  "compose" : {
-    "include" : [{
-      "system" : "http://www.genenames.org"
-    }]
-  }
-}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
-v: {
-  "severity" : "error",
-  "error" : "The code \"HGNC:1014\" is not valid in the system http://www.genenames.org; The code provided (http://www.genenames.org#HGNC:1014) is not valid (from http://tx.fhir.org/r4)"
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://www.genenames.org",
-  "code" : "HGNC:76"
-}, "valueSet" :{
-  "resourceType" : "ValueSet",
-  "compose" : {
-    "include" : [{
-      "system" : "http://www.genenames.org"
-    }]
-  }
-}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
-v: {
-  "severity" : "error",
-  "error" : "The code \"HGNC:76\" is not valid in the system http://www.genenames.org; The code provided (http://www.genenames.org#HGNC:76) is not valid (from http://tx.fhir.org/r4)"
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://www.genenames.org",
-  "code" : "HGNC:1100"
-}, "valueSet" :{
-  "resourceType" : "ValueSet",
-  "compose" : {
-    "include" : [{
-      "system" : "http://www.genenames.org"
-    }]
-  }
-}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
-v: {
-  "severity" : "error",
-  "error" : "The code \"HGNC:1100\" is not valid in the system http://www.genenames.org; The code provided (http://www.genenames.org#HGNC:1100) is not valid (from http://tx.fhir.org/r4)"
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://www.genenames.org",
-  "code" : "HGNC:26144"
-}, "valueSet" :{
-  "resourceType" : "ValueSet",
-  "compose" : {
-    "include" : [{
-      "system" : "http://www.genenames.org"
-    }]
-  }
-}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
-v: {
-  "severity" : "error",
-  "error" : "The code \"HGNC:26144\" is not valid in the system http://www.genenames.org; The code provided (http://www.genenames.org#HGNC:26144) is not valid (from http://tx.fhir.org/r4)"
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://www.genenames.org",
-  "code" : "HGNC:11389"
-}, "valueSet" :{
-  "resourceType" : "ValueSet",
-  "compose" : {
-    "include" : [{
-      "system" : "http://www.genenames.org"
-    }]
-  }
-}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
-v: {
-  "severity" : "error",
-  "error" : "The code \"HGNC:11389\" is not valid in the system http://www.genenames.org; The code provided (http://www.genenames.org#HGNC:11389) is not valid (from http://tx.fhir.org/r4)"
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://www.genenames.org",
   "code" : "1100"
 }, "valueSet" :{
   "resourceType" : "ValueSet",
@@ -191,6 +111,86 @@ v: {
   "error" : "The code \"11998\" is not valid in the system http://www.genenames.org; The code provided (http://www.genenames.org#11998) is not valid (from http://tx.fhir.org/r4)"
 }
 -------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://www.genenames.org",
+  "code" : "HGNC:11389"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://www.genenames.org"
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
+v: {
+  "severity" : "error",
+  "error" : "The code \"HGNC:11389\" is not valid in the system http://www.genenames.org; The code provided (http://www.genenames.org#HGNC:11389) is not valid (from http://tx.fhir.org/r4)"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://www.genenames.org",
+  "code" : "HGNC:1014"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://www.genenames.org"
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
+v: {
+  "severity" : "error",
+  "error" : "The code \"HGNC:1014\" is not valid in the system http://www.genenames.org; The code provided (http://www.genenames.org#HGNC:1014) is not valid (from http://tx.fhir.org/r4)"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://www.genenames.org",
+  "code" : "HGNC:76"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://www.genenames.org"
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
+v: {
+  "severity" : "error",
+  "error" : "The code \"HGNC:76\" is not valid in the system http://www.genenames.org; The code provided (http://www.genenames.org#HGNC:76) is not valid (from http://tx.fhir.org/r4)"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://www.genenames.org",
+  "code" : "HGNC:1100"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://www.genenames.org"
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
+v: {
+  "severity" : "error",
+  "error" : "The code \"HGNC:1100\" is not valid in the system http://www.genenames.org; The code provided (http://www.genenames.org#HGNC:1100) is not valid (from http://tx.fhir.org/r4)"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://www.genenames.org",
+  "code" : "HGNC:26144"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://www.genenames.org"
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
+v: {
+  "severity" : "error",
+  "error" : "The code \"HGNC:26144\" is not valid in the system http://www.genenames.org; The code provided (http://www.genenames.org#HGNC:26144) is not valid (from http://tx.fhir.org/r4)"
+}
+-------------------------------------------------------------------------------------
 {"hierarchical" : true, "valueSet" :{
   "resourceType" : "ValueSet",
   "compose" : {
@@ -205,8 +205,8 @@ e: {
   "language" : "en",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:8eb5544a-94bd-4abb-b107-d97164c003b5",
-    "timestamp" : "2021-10-27T23:47:43.342Z",
+    "identifier" : "urn:uuid:d455d72f-ba2e-4177-abc6-6eef3c6e07d2",
+    "timestamp" : "2021-11-13T13:09:24.896Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true

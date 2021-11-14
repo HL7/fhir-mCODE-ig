@@ -662,6 +662,179 @@ Description: "Example of radiotherapy treatment summary involving external beam 
 * subject = Reference(cancer-patient-jenny-m)
 * asserter = Reference(us-core-practitioner-kyle-anydoc)
 
+// FOR TESTING
+
+RuleSet: CourseSummaryContent
+* status = #completed "completed"
+* code = SCT_TBD#USCRS-33292
+* category = SCT#108290001 "Radiation oncology AND/OR radiotherapy (procedure)"
+* bodySite = SCT#78904004 "Chest Wall Structure (body structure)"
+* reasonCode = ICD10CM#C50.811 "Malignant neoplasm of overlapping sites of right female breast"
+* extension[actualNumberOfSessions].valueUnsignedInt = 31
+* extension[treatmentIntent].valueCodeableConcept = SCT#373808002 "Curative - procedure intent"
+* performedPeriod.start = "2018-08-15"
+* performedPeriod.end = "2018-10-25"
+// modified example to demonstrate new RadiotherapyModalityAndTechnique structure in Course Summary
+* extension[doseDeliveredToVolume][0].extension[volume].valueReference = Reference(jenny-m-chest-wall-treatment-volume)
+* extension[doseDeliveredToVolume][0].extension[totalDoseDelivered].valueQuantity = 6000 'cGy'
+* extension[doseDeliveredToVolume][0].extension[fractionsDelivered].valueUnsignedInt = 30
+* extension[doseDeliveredToVolume][1].extension[volume].valueReference = Reference(jenny-m-chest-wall-lymph-nodes-treatment-volume)
+* extension[doseDeliveredToVolume][1].extension[totalDoseDelivered].valueQuantity = 5000 'cGy'
+* extension[doseDeliveredToVolume][1].extension[fractionsDelivered].valueUnsignedInt = 25
+* subject = Reference(cancer-patient-jenny-m)
+* asserter = Reference(us-core-practitioner-kyle-anydoc)
+
+
+Instance: radiotherapy-treatment-valid-modality-technique-combos
+InstanceOf: RadiotherapyCourseSummary
+Description: "Example of radiotherapy treatment summary involving external beam radiation to chest wall and regional node radiation with a chest wall boost"
+* insert CourseSummaryContent
+// Electrons
+* extension[modalityAndTechnique][0].extension[modality][0].valueCodeableConcept = SCT#45643008  "Teleradiotherapy using electrons"
+* extension[modalityAndTechnique][=].extension[technique][0].valueCodeableConcept = SCT_TBD#1162782007 "Three dimensional external beam radiation therapy (procedure)"
+* extension[modalityAndTechnique][=].extension[technique][+].valueCodeableConcept = SCT#1156526006 "Two dimensional external beam radiation therapy (procedure)"
+* extension[modalityAndTechnique][=].extension[technique][+].valueCodeableConcept = SCT#168524008 "Radiotherapy - intraoperative control (procedure)"
+// Protons
+* extension[modalityAndTechnique][+].extension[modality][0].valueCodeableConcept = SCT#10611004 "External beam radiation therapy protons (procedure)"
+* extension[modalityAndTechnique][=].extension[technique][0].valueCodeableConcept = SCT#1156529004 "External beam radiation therapy using particle passive scattering technique (procedure)"
+* extension[modalityAndTechnique][=].extension[technique][+].valueCodeableConcept = SCT#1156528007 "External beam radiation therapy using particle spot scanning technique (procedure)"
+* extension[modalityAndTechnique][=].extension[technique][+].valueCodeableConcept = SCT_TBD#USCRS-33517 "External beam radiation therapy using particle scanning technique (procedure)"
+// Neutrons
+* extension[modalityAndTechnique][+].extension[modality][0].valueCodeableConcept = SCT#80347004 "External beam radiation therapy neutrons (procedure)"
+* extension[modalityAndTechnique][=].extension[technique][0].valueCodeableConcept = SCT#169317000 "Neutron capture therapy (procedure)"
+* extension[modalityAndTechnique][=].extension[technique][+].valueCodeableConcept = SCT_TBD#1162782007 "Three dimensional external beam radiation therapy (procedure)"
+// Carbon Ions
+* extension[modalityAndTechnique][+].extension[modality][0].valueCodeableConcept = SCT#1156505006 "External beam radiation therapy using carbon ions (procedure)"
+* extension[modalityAndTechnique][=].extension[technique][0].valueCodeableConcept = SCT#1156529004 "External beam radiation therapy using particle passive scattering technique (procedure)"
+* extension[modalityAndTechnique][=].extension[technique][+].valueCodeableConcept = SCT#1156528007 "External beam radiation therapy using particle spot scanning technique (procedure)"
+* extension[modalityAndTechnique][=].extension[technique][+].valueCodeableConcept = SCT_TBD#USCRS-33517 "External beam radiation therapy using particle scanning technique (procedure)"
+// Photons
+* extension[modalityAndTechnique][+].extension[modality][0].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
+* extension[modalityAndTechnique][=].extension[technique][0].valueCodeableConcept = SCT#441799006 "Intensity modulated radiation therapy (procedure)"
+* extension[modalityAndTechnique][=].extension[technique][+].valueCodeableConcept = SCT#1156530009 "Volumetric Modulated Arc Therapy (procedure)"
+* extension[modalityAndTechnique][=].extension[technique][+].valueCodeableConcept = SCT_TBD#1162782007 "Three dimensional external beam radiation therapy (procedure)"
+* extension[modalityAndTechnique][=].extension[technique][+].valueCodeableConcept = SCT#1156526006 "Two dimensional external beam radiation therapy (procedure)"
+* extension[modalityAndTechnique][=].extension[technique][+].valueCodeableConcept = SCT#168524008 "Radiotherapy - intraoperative control (procedure)"
+// Brach LDR
+* extension[modalityAndTechnique][+].extension[modality][0].valueCodeableConcept = SCT#1156708005 "Low dose rate brachytherapy using temporary radioactive source (procedure)"
+* extension[modalityAndTechnique][=].extension[technique][0].valueCodeableConcept = SCT#384692006 "Intracavitary brachytherapy (procedure)"
+* extension[modalityAndTechnique][=].extension[technique][+].valueCodeableConcept = SCT#113120007 "Interstitial brachytherapy (procedure)"
+* extension[modalityAndTechnique][=].extension[technique][+].valueCodeableConcept = SCT#14473006 "Surface brachytherapy (procedure)"
+// Brach permanent
+* extension[modalityAndTechnique][+].extension[modality][0].valueCodeableConcept = SCT#169359004 "Internal radiotherapy - permanent seeds (procedure)"  //* RT#LDR-PERM
+* extension[modalityAndTechnique][=].extension[technique][0].valueCodeableConcept = SCT#113120007 "Interstitial brachytherapy (procedure)"
+// Brach Pulsed
+* extension[modalityAndTechnique][+].extension[modality][0].valueCodeableConcept = SCT#1156384006 "Pulsed dose rate brachytherapy (procedure)"
+* extension[modalityAndTechnique][=].extension[technique][0].valueCodeableConcept = SCT#384692006 "Intracavitary brachytherapy (procedure)"
+* extension[modalityAndTechnique][=].extension[technique][+].valueCodeableConcept = SCT#113120007 "Interstitial brachytherapy (procedure)"
+// Brach HDR
+* extension[modalityAndTechnique][+].extension[modality][0].valueCodeableConcept = SCT#394902000 "High dose brachytherapy (procedure)"
+* extension[modalityAndTechnique][=].extension[technique][0].valueCodeableConcept = SCT#384692006 "Intracavitary brachytherapy (procedure)"
+* extension[modalityAndTechnique][=].extension[technique][+].valueCodeableConcept = SCT#1156382005 "Intensity modulated intracavitary brachytherapy (procedure)"
+* extension[modalityAndTechnique][=].extension[technique][+].valueCodeableConcept = SCT#1156383000 "Intravascular brachytherapy (procedure)"
+* extension[modalityAndTechnique][=].extension[technique][+].valueCodeableConcept = SCT#113120007 "Interstitial brachytherapy (procedure)"
+* extension[modalityAndTechnique][=].extension[technique][+].valueCodeableConcept = SCT#384691004 "Intraluminal brachytherapy (procedure)"
+* extension[modalityAndTechnique][=].extension[technique][+].valueCodeableConcept = SCT#168524008 "Radiotherapy - intraoperative control (procedure)"
+* extension[modalityAndTechnique][=].extension[technique][+].valueCodeableConcept = SCT#14473006 "Surface brachytherapy (procedure)"
+// Brach HDRe
+* extension[modalityAndTechnique][+].extension[modality][0].valueCodeableConcept = SCT#438629002 "High dose rate electronic brachytherapy (procedure)"
+* extension[modalityAndTechnique][=].extension[technique][0].valueCodeableConcept = SCT#384692006 "Intracavitary brachytherapy (procedure)"
+* extension[modalityAndTechnique][=].extension[technique][+].valueCodeableConcept = SCT#1156382005 "Intensity modulated intracavitary brachytherapy (procedure)"
+* extension[modalityAndTechnique][=].extension[technique][+].valueCodeableConcept = SCT#113120007 "Interstitial brachytherapy (procedure)"
+* extension[modalityAndTechnique][=].extension[technique][+].valueCodeableConcept = SCT#384691004 "Intraluminal brachytherapy (procedure)"
+* extension[modalityAndTechnique][=].extension[technique][+].valueCodeableConcept = SCT#168524008 "Radiotherapy - intraoperative control (procedure)"
+* extension[modalityAndTechnique][=].extension[technique][+].valueCodeableConcept = SCT#14473006 "Surface brachytherapy (procedure)"
+// Brach Radiopharm
+* extension[modalityAndTechnique][+].extension[modality][0].valueCodeableConcept = SCT#440252007 "Administration of radiopharmaceutical (procedure)"
+* extension[modalityAndTechnique][=].extension[technique][0].valueCodeableConcept = SCT#16560241000119104 "Oral radionuclide therapy (procedure)"
+* extension[modalityAndTechnique][=].extension[technique][+].valueCodeableConcept = SCT#1156383000 "Intravascular brachytherapy (procedure)"
+* extension[modalityAndTechnique][=].extension[technique][0].valueCodeableConcept = SCT#384692006 "Intracavitary brachytherapy (procedure)"
+* extension[modalityAndTechnique][=].extension[technique][+].valueCodeableConcept = SCT#113120007 "Interstitial brachytherapy (procedure)"
+
+Instance: radiotherapy-treatment-invalid-photon-technique
+InstanceOf: RadiotherapyCourseSummary
+Description: "Example of radiotherapy treatment summary involving external beam radiation to chest wall and regional node radiation with a chest wall boost"
+* insert CourseSummaryContent
+* extension[modalityAndTechnique][0].extension[modality][0].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
+* extension[modalityAndTechnique][0].extension[technique][0].valueCodeableConcept = SCT_TBD#USCRS-33517 "External beam radiation therapy using particle scanning technique (procedure)"
+
+Instance: radiotherapy-treatment-invalid-carbonion-technique
+InstanceOf: RadiotherapyCourseSummary
+Description: "Example of radiotherapy treatment summary involving external beam radiation to chest wall and regional node radiation with a chest wall boost"
+* insert CourseSummaryContent
+* extension[modalityAndTechnique][0].extension[modality][0].valueCodeableConcept = SCT#1156505006 "External beam radiation therapy using carbon ions (procedure)"
+* extension[modalityAndTechnique][0].extension[technique][0].valueCodeableConcept = SCT_TBD#1162782007 "Three dimensional external beam radiation therapy (procedure)"
+
+Instance: radiotherapy-treatment-invalid-proton-technique
+InstanceOf: RadiotherapyCourseSummary
+Description: "Example of radiotherapy treatment summary involving external beam radiation to chest wall and regional node radiation with a chest wall boost"
+* insert CourseSummaryContent
+* extension[modalityAndTechnique][0].extension[modality][0].valueCodeableConcept = SCT#10611004 "External beam radiation therapy protons (procedure)"
+* extension[modalityAndTechnique][0].extension[technique][0].valueCodeableConcept = SCT_TBD#1162782007 "Three dimensional external beam radiation therapy (procedure)"
+
+Instance: radiotherapy-treatment-invalid-proton-valid-photon-technique
+InstanceOf: RadiotherapyCourseSummary
+Description: "Example of radiotherapy treatment summary involving external beam radiation to chest wall and regional node radiation with a chest wall boost"
+* insert CourseSummaryContent
+* extension[modalityAndTechnique][0].extension[modality][0].valueCodeableConcept = SCT#10611004 "External beam radiation therapy protons (procedure)"
+* extension[modalityAndTechnique][0].extension[technique][0].valueCodeableConcept = SCT_TBD#1162782007 "Three dimensional external beam radiation therapy (procedure)"
+* extension[modalityAndTechnique][1].extension[modality][0].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
+* extension[modalityAndTechnique][1].extension[technique][0].valueCodeableConcept = SCT_TBD#1162782007 "Three dimensional external beam radiation therapy (procedure)"
+
+
+Instance: radiotherapy-treatment-invalid-neutron-technique
+InstanceOf: RadiotherapyCourseSummary
+Description: "Example of radiotherapy treatment summary involving external beam radiation to chest wall and regional node radiation with a chest wall boost"
+* insert CourseSummaryContent
+* extension[modalityAndTechnique][0].extension[modality][0].valueCodeableConcept = SCT#80347004 "External beam radiation therapy neutrons (procedure)"
+* extension[modalityAndTechnique][0].extension[technique][0].valueCodeableConcept = SCT_TBD#USCRS-33517 "External beam radiation therapy using particle scanning technique (procedure)"
+
+Instance: radiotherapy-treatment-invalid-brachperm-technique
+InstanceOf: RadiotherapyCourseSummary
+Description: "Example of radiotherapy treatment summary involving external beam radiation to chest wall and regional node radiation with a chest wall boost"
+* insert CourseSummaryContent
+* extension[modalityAndTechnique][0].extension[modality][0].valueCodeableConcept = SCT#169359004 "Internal radiotherapy - permanent seeds (procedure)"
+* extension[modalityAndTechnique][0].extension[technique][0].valueCodeableConcept = SCT#384692006 "Intracavitary brachytherapy (procedure)"
+
+Instance: radiotherapy-treatment-invalid-brachldr-technique
+InstanceOf: RadiotherapyCourseSummary
+Description: "Example of radiotherapy treatment summary involving external beam radiation to chest wall and regional node radiation with a chest wall boost"
+* insert CourseSummaryContent
+* extension[modalityAndTechnique][0].extension[modality][0].valueCodeableConcept = SCT#1156708005 "Low dose rate brachytherapy using temporary radioactive source (procedure)"
+* extension[modalityAndTechnique][0].extension[technique][0].valueCodeableConcept = SCT#16560241000119104 "Oral radionuclide therapy (procedure)"
+
+Instance: radiotherapy-treatment-invalid-brachpulsed-technique
+InstanceOf: RadiotherapyCourseSummary
+Description: "Example of radiotherapy treatment summary involving external beam radiation to chest wall and regional node radiation with a chest wall boost"
+* insert CourseSummaryContent
+* extension[modalityAndTechnique][0].extension[modality][0].valueCodeableConcept = SCT#1156384006 "Pulsed dose rate brachytherapy (procedure)"
+* extension[modalityAndTechnique][0].extension[technique][0].valueCodeableConcept = SCT#16560241000119104 "Oral radionuclide therapy (procedure)"
+
+Instance: radiotherapy-treatment-invalid-brachhdr-technique
+InstanceOf: RadiotherapyCourseSummary
+Description: "Example of radiotherapy treatment summary involving external beam radiation to chest wall and regional node radiation with a chest wall boost"
+* insert CourseSummaryContent
+* extension[modalityAndTechnique][0].extension[modality][0].valueCodeableConcept = SCT#394902000 "High dose brachytherapy (procedure)"
+* extension[modalityAndTechnique][0].extension[technique][0].valueCodeableConcept = SCT#16560241000119104 "Oral radionuclide therapy (procedure)"
+
+Instance: radiotherapy-treatment-invalid-brachhdre-technique
+InstanceOf: RadiotherapyCourseSummary
+Description: "Example of radiotherapy treatment summary involving external beam radiation to chest wall and regional node radiation with a chest wall boost"
+* insert CourseSummaryContent
+* extension[modalityAndTechnique][0].extension[modality][0].valueCodeableConcept = SCT#438629002 "High dose rate electronic brachytherapy (procedure)"
+* extension[modalityAndTechnique][0].extension[technique][0].valueCodeableConcept = SCT#1156383000 "Intravascular brachytherapy (procedure)"
+
+Instance: radiotherapy-treatment-invalid-brachradiopharm-technique
+InstanceOf: RadiotherapyCourseSummary
+Description: "Example of radiotherapy treatment summary involving external beam radiation to chest wall and regional node radiation with a chest wall boost"
+* insert CourseSummaryContent
+* extension[modalityAndTechnique][0].extension[modality][0].valueCodeableConcept = SCT#440252007 "Administration of radiopharmaceutical (procedure)"
+* extension[modalityAndTechnique][0].extension[technique][0].valueCodeableConcept = SCT#14473006 "Surface brachytherapy (procedure)"
+
+
+
+
+// END TESTING
 Instance: jenny-m-chest-wall-treatment-volume
 InstanceOf: RadiotherapyVolume
 Description: "Anatomic volume 1 for Jenny M's teleradiotherapy."

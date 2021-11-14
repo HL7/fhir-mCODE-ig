@@ -32,7 +32,7 @@ The information produced and consumed by mCODE participants is defined by a set 
 
 #### Populate and Meaningfully Process mCODE Resources
 
-mCODE Senders MUST be able to populate data elements that have Must Support (MS) obligations, for all profiles they support (as declared in their CapabilityStatement). Receivers MUST be able to meaningfully process elements with MS obligations for each profiles they support (as declared in their CapabilityStatement). "Able to Populate" and "Meaningfully Process" have particular meanings, as discussed on the [Profile Conformance](conformance-profiles.html) page.
+mCODE Senders MUST be able to populate data elements Must-Support (MS) obligations, for all profiles they support (as declared in their CapabilityStatement). Receivers MUST be able to meaningfully process elements with MS obligations for each profiles they support (as declared in their CapabilityStatement). "Able to Populate" and "Meaningfully Process" have particular meanings, as discussed on the [Profile Conformance](conformance-profiles.html) page.
 
 #### Support Querying mCODE-Conforming Resources
 

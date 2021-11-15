@@ -62,7 +62,7 @@
 
 #### Genomics Group Changes
 
-* Renamed `CancerGeneticVariant` to `GenomicVariant` to reflect wider scope of this profile. [FHIR-32888] (https://jira.hl7.org/browse/FHIR-33340)
+* Renamed `CancerGeneticVariant` to `GenomicVariant` to reflect wider scope of this profile. [FHIR-32888](https://jira.hl7.org/browse/FHIR-33340)
 * Renamed `CancerGenomicsReport` to [GenomicsReport] because it is not specific to cancer, and make that profile more broadly applicable.
 * [GenomicVariant] now includes additional components for molecular consequence, clinical significance, variant category, and copy number.
 * Added Values Urine, Stool and Other to [GenomicSpecimenTypeVS] value set. [FHIR-32827](https://jira.hl7.org/browse/FHIR-32827)

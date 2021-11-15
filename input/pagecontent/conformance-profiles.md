@@ -25,7 +25,7 @@ Where US Core does not provide an appropriate base profile, mCODE profiles FHIR 
 | [mCODE Patient Group][MCODEPatientGroup] | no | Group  |
 | [Primary Cancer Condition][PrimaryCancerCondition] | yes | US Core Condition |
 | [Radiotherapy Course Summary][RadiotherapyCourseSummary] | yes | US Core Procedure |
-| [Radiotherapy Volume][RadiotherapyVolume] | yes | BodyStructure |
+| [Radiotherapy Volume][RadiotherapyVolume] | no | BodyStructure |
 | [Secondary Cancer Condition][SecondaryCancerCondition] | yes | US Core Condition |
 | [TNM Distant Metastases Category][TNMDistantMetastasesCategory] | no | Observation |
 | [TNM Primary Tumor Category][TNMPrimaryTumorCategory] | no | Observation |

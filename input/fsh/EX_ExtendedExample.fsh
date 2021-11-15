@@ -684,7 +684,7 @@ RuleSet: CourseSummaryContent
 * subject = Reference(cancer-patient-jenny-m)
 * asserter = Reference(us-core-practitioner-kyle-anydoc)
 
-
+/*
 Instance: radiotherapy-treatment-valid-modality-technique-combos
 InstanceOf: RadiotherapyCourseSummary
 Description: "Example of radiotherapy treatment summary involving external beam radiation to chest wall and regional node radiation with a chest wall boost"
@@ -831,10 +831,9 @@ Description: "Example of radiotherapy treatment summary involving external beam 
 * extension[modalityAndTechnique][0].extension[modality][0].valueCodeableConcept = SCT#440252007 "Administration of radiopharmaceutical (procedure)"
 * extension[modalityAndTechnique][0].extension[technique][0].valueCodeableConcept = SCT#14473006 "Surface brachytherapy (procedure)"
 
+*/
 
 
-
-// END TESTING
 Instance: jenny-m-chest-wall-treatment-volume
 InstanceOf: RadiotherapyVolume
 Description: "Anatomic volume 1 for Jenny M's teleradiotherapy."

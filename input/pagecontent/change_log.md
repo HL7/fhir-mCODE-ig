@@ -1,43 +1,78 @@
 ### mCODE STU 2 Publication Version (November 2021)
+
 #### General Changes
-* Updated [Data Dictionary](dictionary.html) content
-* New [Radiotherapy Glossary](glossary.html)
-* Updated [mCODE diagram](index.html#scope-and-conceptual-model) to reflect STU 2 changes
-* Re-arranged menus for easier navigation
+
+* Updated the [Data Dictionary](dictionary.html) content.
+* A [glossary of radiotherapy terms](glossary.html) was added.
+* Updated the [mCODE diagram](index.html#scope-and-conceptual-model) to reflect STU 2 changes. Embedded links to FHIR artifacts were added.
+* Re-arranged the top-level menus for easier navigation.
 * Provided separate pages containing the different types of FHIR artifacts (e.g., [Profiles](profiles.html), [ValueSets](valuesets.html))
-* Updated lists of artifacts on "Content by Group" pages
-* Added external valuesets used by mCODE to FHIR Artifacts [Value Sets](valuesets.html) page
-* Updated [terminology](terminology.html) page to include code system identifiers recommended by HL7 Terminology Authority, and to document [local code systems](terminology.html#local-code-systems)
-* Added FSH rendering in notes section for all example instances (see this [example](Observation-cancer-related-mcode-comorbidities-elixhauser-john-anyperson.html#notes))
-* Added accurate renderings of all [capability statements](http://build.fhir.org/ig/HL7/fhir-mCODE-ig/branches/master/capabilitystatements.html)
-* Made values required in all extensions
+* Updated lists of artifacts on "Content by Group" pages.
+* Added external value sets used by mCODE to FHIR Artifacts [Value Sets](valuesets.html) page
+* Updated [terminology](terminology.html) page to include code system identifiers recommended by HL7 Terminology Authority, and to document [local code systems](terminology.html#local-code-systems).
+* Local code systems have been consolidated and reorganized to reduce their number. Local codes have been standardized to reflect codes requested from SNOMED and LOINC.
+* Added FSH rendering in notes section for all example instances (e.g., this [example](Observation-cancer-related-mcode-comorbidities-elixhauser-john-anyperson.html#notes))
+* Added more readable renderings of all [capability statements](http://build.fhir.org/ig/HL7/fhir-mCODE-ig/branches/master/capabilitystatements.html).
+* Made values required in all extensions because extensions should never appear if there is no value. [FHIR-33003](https://jira.hl7.org/browse/FHIR-33003)
 * All definitions have been reviewed and edited and numerous improvements and corrections made to narrative content.
+
+#### Conformance
+
+* Replaced the term "Obligation to Implement (OTI)" with more straightforward "Must Implement" in explanation of [profile conformance](conformance-profiles.html)
+* Simplified and clarified explanations of what profiles and data elements must be implemented by mCODE users.
+* Narrative now refers consistently "in-scope patient", instead of "mCODE patient" due to confusion about the meaning of the latter term.
+
 #### Patient Group Changes
-* All references to subject or patient now reference [CancerPatient].   Any patient that conforms to USCore is conformant.
+
+* All references to subject or patient now reference [CancerPatient].   Any patient that conforms to USCore is conformant. [FHIR-32166](https://jira.hl7.org/browse/FHIR-32166)
 * Removed the local code system `ResourceIdentifierCS` that contained only one code (`#mcode-patient`), and replaced `#mcode-patient` with the NCI code for cancer patient, `NCI#C19700`. This affects the profile [MCODEPatientGroup] and the way of querying for the list of "in-scope" patients.
-* Changed slicing on [MCODEPatientBundle] to required each resource in the bundle to populate meta.profile
-* Narrative now refers consistently "in-scope patient", instead of the more jargony "mCODE patient"
+* Changed slicing on [MCODEPatientBundle] to required each resource in the bundle to populate `meta.profile`.
+
 #### Assessment Group Changes
-* All Elixhauser Comorbidity elements are now coded by [requested LOINC codes](CodeSystem-loinc-requested-cs.html)
+
+* Replaced local codes for Comorbidities with codes in the [LoincRequestedCS] code system, since codes have now been requested in LOINC.
+* Clarified that the overall risk score should be included in the Elixhauser Comorbidity, and explained cases where might be missing. [FHIR-32280](https://jira.hl7.org/browse/FHIR-32279), [FHIR-32280](https://jira.hl7.org/browse/FHIR-32280)
+* Removed "unknown" from value set in Elixhauser Comorbidity profile components since unknown is not a part of the Elixhauser score. [FHIR-32280](https://jira.hl7.org/browse/FHIR-32281)
+
 #### Disease Group Changes
-* Laterality broken out into separate extension in [PrimaryCancerCondition], [SecondaryCancerCondition], [TumorSpecimen], [GenomicSpecimen]
-* Changed the definition of [CancerStagingSystemVS] to an intensional set containing descendants of SCT#254292007 "Tumor staging (tumor staging)". The includes codes for AJCC staging (version 6, 7, and 8) and many other specialized staging systems.Changed the definition of CancerStagingSystemVS to an intensional set containing descendants of SCT#254292007 "Tumor staging (tumor staging)". The includes codes for AJCC staging (version 6, 7, and 8) and many other specialized staging systems.
+
+* Laterality broken out into separate extension in [PrimaryCancerCondition], [SecondaryCancerCondition], [TumorSpecimen], [GenomicSpecimen] because laterality is reported as a separate required value in most registry reports. [FHIR-32340](https://jira.hl7.org/browse/FHIR-32340)
+* Changed the definition of [CancerStagingSystemVS] to an intensional set containing descendants of SCT#254292007 "Tumor staging (tumor staging)". The includes codes for AJCC staging (version 6, 7, and 8) and many other specialized staging systems.Changed the definition of CancerStagingSystemVS to an intensional set containing descendants of SCT#254292007 "Tumor staging (tumor staging)". The includes codes for AJCC staging (version 6, 7, and 8) and many other specialized staging systems. [FHIR-32663](https://jira.hl7.org/browse/FHIR-32663)
+* Changed name of extension from LocationQualifier to BodyLocationQualifier to make the semantics more clear. [FHIR-32345](https://jira.hl7.org/browse/FHIR-32345), [FHIR-32348](https://jira.hl7.org/browse/FHIR-32348)
+
 #### Treatment Group Changes
+
 * Incorporated the modality and technique extensions into a combined [RadiotherapyModalityAndTechnique] extension that includes invariants that restrict the allowed [combinations](StructureDefinition-mcode-radiotherapy-modality-and-technique.html#usage) using invariants
-* Aligned the [RadiotherapyTreatmentLocationVS] and [RadiotherapyTreatmentLocationQualifierVS] value sets to AAPM TG263 anatomy terms and [provide a mapping](http://build.fhir.org/ig/HL7/fhir-mCODE-ig/branches/master/StructureDefinition-mcode-radiotherapy-volume.html#usage) to SNOMEDCT concepts and qualifiers
-* Added  the identifier slice to [RadioTherapyVolume], [RadiotherapyCourseSummary].
-* Laterality broken out into separate extension in [CancerRelatedSurgicalProcedure]
-* [TumorMarkerTestVS] value set has been curated
-* `BrachytherapyTreatmentPhase` and `RadiotherapyTreatmentPhase` profiles and examples dropped because it was determined that this was too much detail for mCODE.  Will reappear in [Codex-Radiation-Therapy FHIR Implementation Guide](http://build.fhir.org/ig/HL7/codex-radiation-therapy/branches/master/index.html).
+* Aligned the [RadiotherapyTreatmentLocationVS] and [RadiotherapyTreatmentLocationQualifierVS] value sets to American Association of Physicists in Medicine (AAPM) TG-263 anatomy terms and [provide a mapping](http://build.fhir.org/ig/HL7/fhir-mCODE-ig/branches/master/StructureDefinition-mcode-radiotherapy-volume.html#usage) to SNOMED-CT concepts and qualifiers. [FHIR-33343](https://jira.hl7.org/browse/FHIR-33343)
+* Added the identifier slice to [RadioTherapyVolume] and [RadiotherapyCourseSummary].
+* Laterality broken out into separate extension in [CancerRelatedSurgicalProcedure]. [FHIR-32340](https://jira.hl7.org/browse/FHIR-32340)
+* [TumorMarkerTestVS] value set has been curated to better capture the intended scope of tumor marker tests.
+* `BrachytherapyTreatmentPhase` and `RadiotherapyTreatmentPhase` profiles and examples dropped because it was determined that this was too much detail for mCODE. Phase profiles will reappear in the planned [CodeX Radiation Therapy FHIR Implementation Guide](http://build.fhir.org/ig/HL7/codex-radiation-therapy/branches/master/index.html). [FHIR-33340](https://jira.hl7.org/browse/FHIR-33340)
 * Added values to [TreatmentTerminationReason] value set
+* Radiotherapy Modality Value Set and Radiotherapy Technique Value Set are now defined by inclusion of the modality and technique value sets for Brachytherapy and Teleradiotherapy rather than by enumeration. [FHIR-32263](https://jira.hl7.org/browse/FHIR-32263)
+* Descriptions for the Elixhauser ThyroidOther and NeuroOther VS have been clarified. [FHIR-32350](https://jira.hl7.org/browse/FHIR-32350)
+* Dropped the context restrictions on TreatmentIntent, Modality, and Technique extensions to permit them to be used in other resources in the future. [FHIR-32243](https://jira.hl7.org/browse/FHIR-32243)
+* Added tables with definitions and compatibility for all radiotherapy and brachytherapy modalities and techniques. [FHIR-32244](https://jira.hl7.org/browse/FHIR-32244), [FHIR-32246](https://jira.hl7.org/browse/FHIR-32246), [FHIR-32247](https://jira.hl7.org/browse/FHIR-32247)
+* Updated language defining brachythereapy and teleradiotherapy treatment phase so as not to imply that phases are sequential. [FHIR-32256](https://jira.hl7.org/browse/FHIR-32256)
+* Replaced radiotherapy modality and technique UMLS and local codes with approved SNOMED-CT codes. Local codes have been removed from the radiotherapy code system, and the radiotherapy code system has been removed. [FHIR-32261](https://jira.hl7.org/browse/FHIR-32261)
+* Changed name of value set from TreatmentIntentVS to ProcedureIntentVS because "procedure" was considered broader than "treatment". [FHIR-32264](https://jira.hl7.org/browse/FHIR-32264)
+* Clarified that total dose in a Phase is not cumulative across multiple phases. [FHIR-32266](https://jira.hl7.org/browse/FHIR-32266)
+* Clarify that the number of fractions is per volume in Course Summary, but not per volume in a Phase. [FHIR-32267](https://jira.hl7.org/browse/FHIR-32267).
+* The invariant requiring a reason for medication and surgery (mcode-reason-required) now generates warning instead of an error. [FHIR-32387](https://jira.hl7.org/browse/FHIR-32387)
+
 #### Genomics Group Changes
-* Renamed `CancerGenomicsReport` to [GenomicsReport] and `CancerGenomicVariant` to [GenomicVariant] because they are not specific to cancer, and make them more broadly applicable outside of cancer.
-* [GenomicVariant] now includes components for molecular consequence, clinical significance, variant category, and copy number
-* Added Values Urine, Stool and Other to [GenomicSpecimenTypeVS] value set
+
+* Renamed `CancerGeneticVariant` to `GenomicVariant` to reflect wider scope of this profile. [FHIR-32888] (https://jira.hl7.org/browse/FHIR-33340)
+* Renamed `CancerGenomicsReport` to [GenomicsReport] because it is not specific to cancer, and make that profile more broadly applicable.
+* [GenomicVariant] now includes additional components for molecular consequence, clinical significance, variant category, and copy number.
+* Added Values Urine, Stool and Other to [GenomicSpecimenTypeVS] value set. [FHIR-32827](https://jira.hl7.org/browse/FHIR-32827)
+* Primary and Secondary cancer value sets have been aligned with CDC state cancer reporting practices. [FHIR-32956](https://jira.hl7.org/browse/FHIR-32956)
+
 #### Outcome Group Changes
-* Added values to [TumorSizeMethodVS]
-* Added values to [ConditionStatusTrendVS]
-* [CancerDiseaseStatusEvidenceTypeVS] valueSet has been aligned with NAACR reporting needs
+
+* Added values to [TumorSizeMethodVS] to reflect clinical and pathologic analysis practices.
+* Changed the code `SCT#260415000 "Not detected (qualifier)"` to `SCT#281900007 "No abnormality detected (finding)"` in [ConditionStatusTrendVS] to better align with the other findings in that value set. The code represents the concept "no evidence of disease".
+* [CancerDiseaseStatusEvidenceTypeVS] valueSet has been aligned with NAACR reporting needs. [FHIR-32893](https://jira.hl7.org/browse/FHIR-32893)
 
 ### mCODE STU 2 Ballot Version (May 2021)
 
@@ -154,6 +189,5 @@ The following are changes relative to [mCODE 0.9.0](https://mcodeinitiative.gith
 * Replaced obf-dateOfDiagnosis-extension with condition-assertedDate standard extension in PrimaryCancerCondition and SecondaryCancerCondition.
 * Added logical definition to TNM-related value sets to include all codes from AJCC staging systems.
 * Removed references to MedicationRequest on basedOn attribute for TNMPrimaryTumorCategory, TNMRegionalNodesCategory, TNMDistantMetastasesCategory, KarnofskyPerformanceStatus and ECOGPerformanceStatus.
-
 
 {% include markdown-link-references.md %}

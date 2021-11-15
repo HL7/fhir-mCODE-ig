@@ -13,6 +13,7 @@
 <artifact id="ValueSet/mcode-benign-uncertain-neoplasm-brain-cns-disorder-vs" key="ValueSet-mcode-benign-uncertain-neoplasm-brain-cns-disorder-vs" name="Benign Neoplasm of Brain and CNS Disorder Value Set"/>
 <artifact id="StructureDefinition/mcode-body-location-qualifier" key="StructureDefinition-mcode-body-location-qualifier" name="Body Location Qualifier Extension"/>
 <artifact id="ValueSet/mcode-body-location-qualifier-vs" key="ValueSet-mcode-body-location-qualifier-vs" name="Body Location Qualifier Value Set"/>
+<artifact id="ValueSet/mcode-body-location-and-laterality-qualifier-vs" key="ValueSet-mcode-body-location-and-laterality-qualifier-vs" name="Body Location and Laterality Qualifier Value Set"/>
 <artifact id="StructureDefinition/mcode-body-structure-identifier" key="StructureDefinition-mcode-body-structure-identifier" name="Body Structure Identifier Data Type Profile"/>
 <artifact id="ValueSet/mcode-brachytherapy-high-dose-rate-electronic-technique-vs" key="ValueSet-mcode-brachytherapy-high-dose-rate-electronic-technique-vs" name="Brachytherapy High Dose Rate Electronic Technique Value Set"/>
 <artifact id="ValueSet/mcode-brachytherapy-high-dose-rate-technique-vs" key="ValueSet-mcode-brachytherapy-high-dose-rate-technique-vs" name="Brachytherapy High Dose Rate Technique Value Set"/>

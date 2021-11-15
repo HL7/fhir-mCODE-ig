@@ -684,7 +684,7 @@ RuleSet: CourseSummaryContent
 * subject = Reference(cancer-patient-jenny-m)
 * asserter = Reference(us-core-practitioner-kyle-anydoc)
 
-
+/*
 Instance: radiotherapy-treatment-valid-modality-technique-combos
 InstanceOf: RadiotherapyCourseSummary
 Description: "Example of radiotherapy treatment summary involving external beam radiation to chest wall and regional node radiation with a chest wall boost"
@@ -750,8 +750,6 @@ Description: "Example of radiotherapy treatment summary involving external beam 
 * extension[modalityAndTechnique][=].extension[technique][+].valueCodeableConcept = SCT#1156383000 "Intravascular brachytherapy (procedure)"
 * extension[modalityAndTechnique][=].extension[technique][0].valueCodeableConcept = SCT#384692006 "Intracavitary brachytherapy (procedure)"
 * extension[modalityAndTechnique][=].extension[technique][+].valueCodeableConcept = SCT#113120007 "Interstitial brachytherapy (procedure)"
-
-/*
 
 Instance: radiotherapy-treatment-invalid-photon-technique
 InstanceOf: RadiotherapyCourseSummary

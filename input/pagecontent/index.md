@@ -51,9 +51,7 @@ The groups are illustrated in the following diagram:
 
 ### Data Dictionary
 
-In addition to the FHIR artifacts, readers should also take note of the [Data Dictionary ](dictionary.html), a simplified, flattened list of mCODE elements in MS-Excel format.
-
-There is also a [Data Dictionary Differential](dictionary.html#data-dictionary-differential) that compares STU 1 with STU 2 on an element-by-element basis.
+In addition to the FHIR artifacts, readers should also take note of the [Data Dictionary ](dictionary.html), a simplified, flattened list of mCODE elements in MS-Excel format. There is also a [Data Dictionary Differential](dictionary.html#data-dictionary-differential) that compares STU 1 with STU 2 on an element-by-element basis.
 
 ### Understanding this Guide
 
@@ -63,22 +61,18 @@ In the event there are differences between the page renderings in this IG and th
 
 ### Contributions
 
-mCODE is an open source project and welcomes all contributors. The source code for this IG is maintained in the [HL7 Github](https://github.com/HL7/fhir-mCODE-ig). Instead of just suggesting a change, consider creating a branch, making the change, and submitting a pull request. All of our profiling work is done in [FHIR Shorthand](http://hl7.org/fhir/uv/shorthand/) and all narrative content in markdown (specifically, [Kramdown](https://kramdown.gettalong.org/)). We suggest using the [Visual Studio Code editor](https://code.visualstudio.com/) with the [FHIR Shorthand plug-in](https://marketplace.visualstudio.com/items?itemName=kmahalingam.vscode-language-fsh). For more information on how to get started with IG development, visit the [FSH School](https://fshschool.org/).
-
-If you have questions or comments about this guide, please reach out on [chat.fhir.org](https://chat.fhir.org/#narrow/stream/179234-Cancer-Interoperability/topic/mCODE) or create an issue in the [HL7 Jira](https://jira.hl7.org/issues/?filter=13361).
+mCODE is an open source project and welcomes all contributors. The source code for this IG is maintained in the [HL7 Github](https://github.com/HL7/fhir-mCODE-ig). All of the profiling work is done using [FHIR Shorthand](http://hl7.org/fhir/uv/shorthand/) and [SUSHI](https://fshschool.org). If you have questions or comments about this guide, please reach out on [chat.fhir.org](https://chat.fhir.org/#narrow/stream/179234-Cancer-Interoperability/topic/mCODE) or create an issue in the [HL7 Jira](https://jira.hl7.org/issues/?filter=13361).
 
 ### Credits
 
-The authors recognize the leadership and sponsorship of Dr. Monica Bertagnolli, former ASCO President and Dr. Jay Schnitzer, MITRE Chief Technology and Chief Medical Officer. The ASCO/CancerLinQ team was led by Dr. Robert Miller. Dr. Travis Osterman of Vanderbilt University leads the mCODE Technical Review Group. Andre Quina guides the overall mCODE effort at MITRE. Dr. Charles Mayo of University of Michigan, Randi Kudner of ASTRO, and Martin von Siebenthal of Varian made significant contributions to the much improved radiotherapy portion of this IG. MITRE contributors include Mark Kramer, May Terry, Max Masnick, Saul Kravitz, Su Chen, Rute Martins, Chris Moesel, Caroline Potteiger, Steve Bratt, and Sharon Sebastian. HL7 sponsorship and input from [Clinical Interoperability Council](http://www.hl7.org/Special/committees/cic/index.cfm) and [Clinical Information Modeling Initiative](https://www.hl7.org/Special/Committees/cimi/index.cfm) is gratefully acknowledged, with special thanks to Richard Esmond, Laura Heermann Langford, and Lindsey Hoggle. The capability statements were rendered with tools developed by Eric Haas and modified by Corey Spears. The FSH annotation of the examples was generated with [GoFSH](https://fshschool.org) and this [script](fshtomd.rb)
-
-This IG was authored by the MITRE Corporation using [FHIR Shorthand (FSH)](http://hl7.org/fhir/uv/shorthand/) and [SUSHI](https://fshschool.org), a free, open source toolchain from [MITRE Corporation](https://www.mitre.org/).
+The authors recognize the leadership and sponsorship of Dr. Monica Bertagnolli, former ASCO President and Dr. Jay Schnitzer, MITRE Chief Technology and Chief Medical Officer. The ASCO/CancerLinQ team was led by Dr. Robert Miller. Dr. Travis Osterman of Vanderbilt University leads the mCODE Technical Review Group. Andre Quina guides the overall mCODE effort at MITRE. Dr. Charles Mayo of University of Michigan, Randi Kudner of ASTRO, and Martin von Siebenthal of Varian made significant contributions to the much improved radiotherapy portion of this IG. MITRE contributors include Mark Kramer, May Terry, Max Masnick, Saul Kravitz, Su Chen, Rute Martins, Chris Moesel, Caroline Potteiger, Steve Bratt, and Sharon Sebastian. HL7 sponsorship and input from [Clinical Interoperability Council](http://www.hl7.org/Special/committees/cic/index.cfm) is gratefully acknowledged, with special thanks to Laura Heermann Langford, Russell Leftwich, and Lindsey Hoggle. The capability statements were rendered with tools developed by Eric Haas and modified by Corey Spears. The FSH annotation of the examples was generated with [GoFSH](https://fshschool.org) and this [script](fshtomd.rb)
 
 ### Contact Information
 
 | Topic | Who | Role | Email |
 |----|---|---|------|
-| Implementation and use cases  | Steve Bratt | CodeX Accelerator Program Manager | sbratt@mitre.org |
-| Domain content | Dr. Travis Osterman | Chair, mCODE Technical Review Group | travis.osterman@vumc.org |
+| Implementation and Use Cases  | Steve Bratt | CodeX Accelerator Program Manager | sbratt@mitre.org |
+| Oncology Domain Content | Dr. Travis Osterman | Chair, mCODE Technical Review Group | travis.osterman@vumc.org |
 | Modeling and FHIR IG issues | Mark Kramer | Modeling Lead | mkramer@mitre.org |
 {: .grid }
 

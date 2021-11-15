@@ -26,16 +26,14 @@ Description:  "The type of evidence backing up the clinical determination of can
 * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
 * include codes from system SCT where concept is-a #714797009 "Histologic test (procedure)" // Rolls up to NAACR 1 - Positive Histology
 * include codes from system SCT where concept is-a #116147009 "Cytologic test (procedure)"  // Rolls up to NAACR 2 - Positive Cytology
-//                                                                                             Rolls up to NAACR 3  - Combo of Tumor Maker + Histological Test
+// Rolls up to NAACR 3  - Combo of Tumor Maker + Histological Test
 * include codes from system SCT where concept is-a #108257001 "Anatomic pathology procedure (procedure)" // Rolls up to NAACR 4 - Positive microscopic confirmation, method not specified
 * include codes from system SCT where concept is-a #386344002 "Laboratory data interpretation (procedure)" // Rolls up to NAACR 5 - Positive laboratory test/marker study
 * include codes from system SCT where concept is-a #5880005 "Clinical examination (procedure)"  // Rolls up to NAACR 6 Direct visualization without microscopic confirmation
-* include codes from system SCT where concept is-a #363679005 "Imaging (procedure)"          // Rolls up to NAACR 7 Radiography and/or other imaging techniques without microscopic confirmation
-//                                                                                              NAACR 8 intentionally NOT supported - Clinical Diagnosis
-//                                                                                              NAACR 9 represented by no value provided -- Unknown
+* include codes from system SCT where concept is-a #363679005 "Imaging (procedure)"  // Rolls up to NAACR 7 Radiography and/or other imaging techniques without microscopic confirmation
+// NAACR 8 intentionally NOT supported - Clinical Diagnosis
+// NAACR 9 represented by no value provided -- Unknown
 * include codes from system SCT where concept is-a #250724005 "Tumor marker measurement procedure (procedure)"
-
-
 
 ValueSet: CancerRelatedSurgicalProcedureVS
 Id: mcode-cancer-related-surgical-procedure-vs
@@ -55,15 +53,6 @@ Description: "Qualifiers to refine a body structure or location including qualif
 * include codes from system SCT where concept is-a #272424004 "Relative Sites (qualifier)"
 * SCT#255503000 "Entire (qualifier value)"
 
-ValueSet: BodyLocationQualifierVS
-Id: mcode-body-location-qualifier-vs
-Title: "Body Location Qualifier Value Set"
-Description: "Qualifiers to refine a body structure or location including qualifiers for relative location, directionality, number, and plane, and excluding qualifiers for laterality."
-* ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
-// Changed to intensional definition
-* include codes from valueset BodyLocationAndLateralityQualifierVS
-* exclude codes from valueset LateralityQualifierVS // laterality is separated into a separate value set
-
 ValueSet: LateralityQualifierVS
 Id: mcode-laterality-qualifier-vs
 Title: "Laterality Qualifier Value Set"
@@ -75,6 +64,14 @@ Description: "Qualifiers to specify laterality."
 * SCT#7771000	"Left (qualifier value)"
 // * SCT#66459002	"Unilateral (qualifier value)"  -- this is used as 'left OR right'.   Given the uncertainty of the use case, it is dropped.
 
+ValueSet: BodyLocationQualifierVS
+Id: mcode-body-location-qualifier-vs
+Title: "Body Location Qualifier Value Set"
+Description: "Qualifiers to refine a body structure or location including qualifiers for relative location, directionality, number, and plane, and excluding qualifiers for laterality."
+* ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
+// Changed to intensional definition
+* include codes from valueset BodyLocationAndLateralityQualifierVS
+* exclude codes from valueset LateralityQualifierVS // laterality is separated into a separate value set
 
 ValueSet:   TreatmentTerminationReasonVS
 Id: mcode-treatment-termination-reason-vs

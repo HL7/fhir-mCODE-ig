@@ -24,6 +24,7 @@ In addition to information obtained from subject matter experts, several pre-exi
 * [The Human Genome Variation Society nomenclature for defining genomic variants](https://varnomen.hgvs.org/).
 * [The Human Genome Organization (HUGO) Gene Nomenclature Committee](https://www.genenames.org/)
 * [The CDISC Therapeutic Area User Guides (TAUG)](https://www.cdisc.org/standards/therapeutic-areas/disease-area)
+* [American Association of Phyicists in Medicine (AAPM) Task Group 263 Final Report](https://www.aapm.org/pubs/reports/RPT_263.pdf)
 
 After initial development, in early 2019, an open survey was conducted to validate and prioritize the data elements from these use cases. Further down-scoping was done based on whether the data would be stored or capture in an electronic health record (EHR), and if it would place undue documentation burden on clinicians.
 

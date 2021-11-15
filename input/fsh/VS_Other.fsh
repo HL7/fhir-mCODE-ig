@@ -53,6 +53,7 @@ Description: "Qualifiers to refine a body structure or location including qualif
 * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
 * include codes from system SCT where concept is-a #106233006 "Topographic Modifier (qualifer)"
 * include codes from system SCT where concept is-a #272424004 "Relative Sites (qualifier)"
+* SCT#255503000 "Entire (qualifier value)"
 
 ValueSet: BodyLocationQualifierVS
 Id: mcode-body-location-qualifier-vs
@@ -60,9 +61,7 @@ Title: "Body Location Qualifier Value Set"
 Description: "Qualifiers to refine a body structure or location including qualifiers for relative location, directionality, number, and plane, and excluding qualifiers for laterality."
 * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
 // Changed to intensional definition
-* include codes from system SCT where concept is-a #106233006 "Topographic Modifier (qualifer)"
-* include codes from system SCT where concept is-a #272424004 "Relative Sites (qualifier)"
-* SCT#255503000 "Entire (qualifier value)"
+* include codes from valueset BodyLocationAndLateralityQualifierVS
 * exclude codes from valueset LateralityQualifierVS // laterality is separated into a separate value set
 
 ValueSet: LateralityQualifierVS

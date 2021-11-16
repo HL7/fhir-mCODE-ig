@@ -34,7 +34,7 @@ In addition to information obtained from subject matter experts, several pre-exi
 * [North American Association of Central Cancer Registries (NAACCR): Standards for Cancer Registries](https://www.naaccr.org/data-standards-data-dictionary/)
 * [RECIST Guidelines v1.1](https://project.eortc.org/recist/wp-content/uploads/sites/4/2015/03/RECISTGuidelines.pdf)
 
-In addition, material was drawn from the [US Core Implementation Guide](http://hl7.org/fhir/us/core/STU4/) and the [Genomics Reporting Implementation Guide](http://hl7.org/fhir/uv/genomics-reporting/).
+In addition, material was drawn from the [US Core Implementation Guide](http://hl7.org/fhir/us/core/) and the [Genomics Reporting Implementation Guide](http://hl7.org/fhir/uv/genomics-reporting/).
 
 ### mCODE Overview
 
@@ -59,7 +59,7 @@ Readers should also take note of the [Data Dictionary](dictionary.html), a flatt
 
 The question "How many data elements are there in mCODE?" arises repeatedly. The short answer is: *it depends how data elements are counted*. Should non-required elements be counted? What about provenance elements such as author, date, patient identifier, status, language, and identifier? Should complex data types be counted as one or multiple elements? Are requirements derived from US Core counted as mCODE data elements?
 
-Only one mCODE profile MUST be implemented: [CancerPatient]. The potential number of data elements in CancerPatient is [over 70](StructureDefinition-mcode-cancer-patient.html#tabs-snap), not even counting subelements in complex elements or [additional optional extensions](http://www.hl7.org/fhir/patient-profiles.html#extensions). Of these, [only 23](StructureDefinition-mcode-cancer-patient.html#tabs-snapms) are [must-support elements](https://www.hl7.org/fhir/conformance-rules.html#mustSupport). Of these, only four elements are absolutely [required](profile-conformance.html#definition-of-required) (namely `identifier.system`, `identifier.value`, `name.family` or `name.given`, and `gender`). Compared to the base profile defined in US Core, [just one additional element is must-support](http://build.fhir.org/ig/HL7/fhir-mCODE-ig/branches/master/StructureDefinition-mcode-cancer-patient.html#tabs-diff). Finally, mCODE defines **zero** new data elements above and beyond those already in US Core. So depending on one's point of view, [CancerPatient] may have 0, 1, 4, 23, or more than 70 data elements.
+Only one mCODE profile MUST be implemented: [CancerPatient]. The potential number of data elements in CancerPatient is [over 70](StructureDefinition-mcode-cancer-patient.html#tabs-snap), not even counting subelements in complex elements or [additional optional extensions](http://www.hl7.org/fhir/patient-profiles.html#extensions). Of these, [only 23](StructureDefinition-mcode-cancer-patient.html#tabs-snapms) are [must-support elements](https://www.hl7.org/fhir/conformance-rules.html#mustSupport). Of these, only four elements are absolutely [required](conformance-profiles.html#definition-of-required) (namely `identifier.system`, `identifier.value`, `name.family` or `name.given`, and `gender`). Compared to the base profile defined in US Core, [just one additional element is must-support](http://build.fhir.org/ig/HL7/fhir-mCODE-ig/branches/master/StructureDefinition-mcode-cancer-patient.html#tabs-diff). Finally, mCODE defines **zero** new data elements above and beyond those already in US Core. So depending on one's point of view, [CancerPatient] may have 0, 1, 4, 23, or more than 70 data elements.
 
 ### Understanding this Guide
 

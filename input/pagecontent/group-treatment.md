@@ -62,6 +62,7 @@ For definition of key terms in radiotherapy, see the [Radiotherapy Glossary](glo
   * [BrachytherapyHighDoseRateTechniqueVS]
   * [BrachytherapyModalityVS]
   * [BrachytherapyTechniqueVS]
+  * [RadiotherapyModalityVS]
   * [RadiotherapyTechniqueVS]
   * [RadiotherapyTreatmentLocationVS]
   * [RadiotherapyTreatmentLocationQualifierVS]

@@ -11,11 +11,14 @@ Id: mcode-condition-status-trend-vs
 Title: "Condition Status Trend Value Set"
 Description:  "How patient's given disease, condition, or ability is trending."
 * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
-* SCT#281900007 "No abnormality detected (finding)" // better than SCT#260415000 "Not detected (qualifier)"
+// * SCT#281900007 "No abnormality detected (finding)" // better than SCT#260415000 "Not detected (qualifier)" - FHIR-32837
 * SCT#268910001 "Patient's condition improved (finding)"
 * SCT#359746009 "Patient's condition stable (finding)"
 * SCT#271299001 "Patient's condition worsened (finding)"
 * SCT#709137006 "Patient condition undetermined (finding)"
+* SCT_TBD#USCRS-352236 "Cancer in complete remission(finding)" // FHIR-32837
+* SCT_TBD#USCRS-352237 "Cancer in partial remission (finding)" // FHIR-32837
+
 
 
 ValueSet: CancerDiseaseStatusEvidenceTypeVS
@@ -86,6 +89,7 @@ Description:  "Values used to describe the reasons for stopping a treatment or e
 * SCT#184081006   "Patient has moved away (finding)" // better than SCT#107724000 "Patient transfer (procedure)"
 * SCT#309846006   "Treatment not available (situation)"
 * SCT#399307001   "Lost to follow-up (finding)" // added by mCODE Exec Council recommendation 2/12/2021
+* SCT#419620001   "Death (event)"  // FHIR-32832
 
 
 ValueSet:		ProcedureIntentVS

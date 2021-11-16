@@ -121,7 +121,7 @@ Description:    "The type of specimen analyzed in a genomic test. The values are
 * SPTY#FGA       "Fluid, Abdomen"
 * SPTY#GENV      "Genital vaginal"
 * SPTY#HYDC      "Fluid, Hydrocele"
-* SPTY#JNTFLD    "Fluid, Joint"
+* SPTY#JNTFLD    "Fluid, Joint" //- FHIR-32838 asked to remove this one
 * SPTY#KIDFLD    "Fluid, Kidney"
 * SPTY#LSAC      "Fluid, Lumbar Sac"
 * SPTY#MAR       "Marrow"

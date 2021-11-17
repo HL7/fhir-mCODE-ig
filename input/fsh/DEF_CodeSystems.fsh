@@ -76,8 +76,8 @@ Description: "Codes requested from SNOMED by mCODE, to be issued at a later date
 * #USCRS-33346 "Presacral lymph node group (body structure)"
 * #USCRS-33517 "External beam radiation therapy using particle scanning technique (procedure)"
 * #USCRS-33144 "non-adjacent (qualifier)"
-* #USCRS-352237 "Cancer in partial remission (finding)"  // not yet used anywhere
-* #USCRS-352236 "Cancer in complete remission(finding)"  // not yet used anywhere
+* #USCRS-352237 "Cancer in partial remission (finding)"
+* #USCRS-352236 "Cancer in complete remission(finding)"
 * #USCRS-33292 "Radiotherapy Course Summary (procedure)"
 // * #USCRS-33347 "supra-mammary" // Request rejected; TRG requested removal
 * #USCRS-33146 "Bone structure of thirteenth rib (body structure)"

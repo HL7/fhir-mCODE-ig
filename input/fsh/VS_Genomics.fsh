@@ -105,7 +105,7 @@ Description:    "Codes representing tests for tumor markers. This value set of L
 ValueSet:   GenomicSpecimenTypeVS
 Id: mcode-genomic-specimen-type-vs
 Title: "Genomic Specimen Type Value Set"
-Description:    "The type of specimen analyzed in a genomic test. The values include the subset of codes in  the HL7 Specimen Type code system representing body sites, body fluids, and excrement.  The most specific term available should be used."
+Description:    "The type of specimen analyzed in a genomic test. The values include the subset of codes in the HL7 Specimen Type code system representing body sites and body fluids, HL7 Version 2 Table 0487 (http://hl7.org/fhir/v2/0487).  The most specific term available should be used."
 * SPTY#AMN       "Amniotic fluid"
 * SPTY#BIFL      "Bile Fluid"
 * SPTY#BLD       "Whole blood"
@@ -121,7 +121,7 @@ Description:    "The type of specimen analyzed in a genomic test. The values inc
 * SPTY#FGA       "Fluid, Abdomen"
 * SPTY#GENV      "Genital vaginal"
 * SPTY#HYDC      "Fluid, Hydrocele"
-* SPTY#JNTFLD    "Fluid, Joint" //- FHIR-32838 asked to remove this one
+//* SPTY#JNTFLD    "Fluid, Joint" // FHIR-32838 asked to remove this one because of synonymy with SPTY#SNV
 * SPTY#KIDFLD    "Fluid, Kidney"
 * SPTY#LSAC      "Fluid, Lumbar Sac"
 * SPTY#MAR       "Marrow"
@@ -140,7 +140,7 @@ Description:    "The type of specimen analyzed in a genomic test. The values inc
 * SPTY#WND       "Wound"
 * SPTY#UR        "Urine"           // FHIR-32827
 * SPTY#STL       "Stool = Fecal"   // FHIR-32827
-* SPTY#OTH       "Source, Other"   // FHIR-32827
+//* SPTY#OTH       "Source, Other"   // FHIR-32827 -- Other should not be added because the VS is extensible
 
 
 ValueSet: TumorMarkerTestVS

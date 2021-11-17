@@ -65,7 +65,8 @@
 * Renamed `CancerGeneticVariant` to `GenomicVariant` to reflect wider scope of this profile. [FHIR-32888](https://jira.hl7.org/browse/FHIR-33340)
 * Renamed `CancerGenomicsReport` to [GenomicsReport] because it is not specific to cancer, and make that profile more broadly applicable.
 * [GenomicVariant] now includes additional components for molecular consequence, clinical significance, variant category, and copy number.
-* Added Values Urine, Stool and Other to [GenomicSpecimenTypeVS] value set. [FHIR-32827](https://jira.hl7.org/browse/FHIR-32827)
+* Added Values Urine, Stool to [GenomicSpecimenTypeVS] value set. The suggested term `Source, other` was not added because the value set binding is extensible. [FHIR-32827](https://jira.hl7.org/browse/FHIR-32827)
+* Removed `SPTY#JNTFLD "Fluid, Joint"` from [GenomicSpecimenTypeVS] because it is a duplicate of `SPTY#SNV "Fluid, synovial (Joint fluid)". [FHIR-32838](https://jira.hl7.org/browse/FHIR-32838)
 * Primary and Secondary cancer value sets have been aligned with CDC state cancer reporting practices. [FHIR-32956](https://jira.hl7.org/browse/FHIR-32956)
 
 #### Outcome Group Changes
@@ -73,6 +74,8 @@
 * Added values to [TumorSizeMethodVS] to reflect clinical and pathologic analysis practices.
 * Changed the code `SCT#260415000 "Not detected (qualifier)"` to `SCT#281900007 "No abnormality detected (finding)"` in [ConditionStatusTrendVS] to better align with the other findings in that value set. The code represents the concept "no evidence of disease".
 * [CancerDiseaseStatusEvidenceTypeVS] valueSet has been aligned with NAACR reporting needs. [FHIR-32893](https://jira.hl7.org/browse/FHIR-32893)
+* The SNOMED-CT requested concepts `SCT_TBD#USCRS-352236 "Cancer in complete remission(finding)"` and `SCT_TBD#USCRS-352237 "Cancer in partial remission (finding)"` have replaced `SCT#281900007 "No abnormality detected (finding)"` in ConditionStatusTrendVS. [FHIR-32837](https://jira.hl7.org/browse/FHIR-32837)
+
 
 ### mCODE STU 2 Ballot Version (May 2021)
 

@@ -66,7 +66,6 @@
 * Renamed `CancerGenomicsReport` to [GenomicsReport] because it is not specific to cancer, and make that profile more broadly applicable.
 * [GenomicVariant] now includes additional components for molecular consequence, clinical significance, variant category, and copy number.
 * Added Values Urine, Stool to [GenomicSpecimenTypeVS] value set. The suggested term `Source, other` was not added because the value set binding is extensible. [FHIR-32827](https://jira.hl7.org/browse/FHIR-32827)
-* Removed `SPTY#JNTFLD "Fluid, Joint"` from [GenomicSpecimenTypeVS] because it is a duplicate of `SPTY#SNV "Fluid, synovial (Joint fluid)". [FHIR-32838](https://jira.hl7.org/browse/FHIR-32838)
 * Primary and Secondary cancer value sets have been aligned with CDC state cancer reporting practices. [FHIR-32956](https://jira.hl7.org/browse/FHIR-32956)
 
 #### Outcome Group Changes

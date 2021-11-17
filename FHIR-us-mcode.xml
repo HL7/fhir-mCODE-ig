@@ -305,7 +305,6 @@
 <artifact id="Condition/primary-cancer-condition-jenny-m" key="Condition-primary-cancer-condition-jenny-m" name="primary-cancer-condition-jenny-m"/>
 <artifact id="Condition/primary-cancer-condition-nsclc" key="Condition-primary-cancer-condition-nsclc" name="primary-cancer-condition-nsclc"/>
 <artifact id="Procedure/radiotherapy-treatment-summary-chest-wall-jenny-m" key="Procedure-radiotherapy-treatment-summary-chest-wall-jenny-m" name="radiotherapy-treatment-summary-chest-wall-jenny-m"/>
-<artifact id="Procedure/radiotherapy-treatment-valid-modality-technique-combos" key="Procedure-radiotherapy-treatment-valid-modality-technique-combos" name="radiotherapy-treatment-valid-modality-technique-combos"/>
 <artifact id="Condition/secondary-cancer-condition-brain-mets" key="Condition-secondary-cancer-condition-brain-mets" name="secondary-cancer-condition-brain-mets"/>
 <artifact deprecated="true" id="Procedure/teleradiotherapy-treatment-phase-boost-jenny-m" key="Procedure-teleradiotherapy-treatment-phase-boost-jenny-m" name="teleradiotherapy-treatment-phase-boost-jenny-m"/>
 <artifact deprecated="true" id="Procedure/teleradiotherapy-treatment-phase-chest-wall-jenny-m" key="Procedure-teleradiotherapy-treatment-phase-chest-wall-jenny-m" name="teleradiotherapy-treatment-phase-chest-wall-jenny-m"/>

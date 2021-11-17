@@ -1,12 +1,3 @@
-### Assumptions and Scope
-
-* mCODE genomics elements should be seen as data that could be available for exchange. It is not assuming all of the data elements need to be captured and exchanged.
-* The Tumor Marker elements differ from the genomics elements in its inclusion of:
-  * serum-based measurements which could have an implication on cancer but are not molecular markers (e.g.: PSA).
-  * gene expression tests (e.g.: HER2 Immunohistochemistry tests)
-
-There are however tumor marker tests that are molecular marker equivalent tests that could also be included in a sequencing test.
-
 ### mCODE Use of Genomics Elements
 
 mCODE includes genomics-related data elements needed inform cancer assessment and treatment options. The profiles are based on the [HL7 CGWG Clinical Genomics Reporting Implementation Guide](http://hl7.org/fhir/uv/genomics-reporting/index.html). Four profiles relate to the capture of clinical genomics data:
@@ -16,13 +7,18 @@ mCODE includes genomics-related data elements needed inform cancer assessment an
 * [GenomicRegionStudied] - used to record the portion(s) of the genome that was tested for variants.
 * [GenomicSpecimen] - describes a specimen collected for a genomics test.
 
-### Genomics Test Representation
+### Assumptions and Scope
+
+* mCODE genomics elements are a superset of those that may be available for exchange. There is no assumption that all data elements need to be captured or exchanged.
+* Genomics profiles represent results from genomic sequencing, whereas [TumorMarkerTest] (grouped in the [Disease Characterization](group-disease.html)) involve results from gene expression tests (e.g.: HER2 Immunohistochemistry tests) and serum-based measurements which could have an implication on cancer (e.g., PSA).
+
+### Genomics Test Coding
 
 The identity of non-genomic laboratory tests is typically represented by a [Logical Observation Identifiers and Names (LOINC)](https://loinc.org/) code. However, many genomic tests and panels do not have LOINC codes, although some might have an identifier in the [NCBI Genomic Testing Registry (GTR)](https://www.ncbi.nlm.nih.gov/gtr/), a central location for voluntary submission of genomic test information by providers. While GTR is a viable source for identifying many genomic tests, the user should be aware that the GTR is not single authoritative source since the test data is voluntarily updated. Standardization of codes for genomic tests is essential to facilitate data analysis of genomic tests, and should be a priority for the genomics testing community in the near future. Implementers should also note that, to conform to the requirements of the [US Core Laboratory Result Profile](http://hl7.org/fhir/us/core/StructureDefinition-us-core-observation-lab.html), if a suitable LOINC exists, it must be used. If there is no suitable code in LOINC, then a code from an alternative code system such as GTR can be used.
 
 ### Representing Fusion Genes
 
-A gene made by joining parts of two different genes. Fusion genes, and the fusion proteins that come from them, may be made in the laboratory, or made naturally in the body when part of the DNA from one chromosome moves to another chromosome. Fusion proteins produced by this change may lead to the development of some types of cancer (source: [NCI Cancer Dictionary](https://www.cancer.gov/publications/dictionaries/cancer-terms/def/fusion-gene)).
+A fusion gene is made by joining parts of two different genes. Fusion genes, and the fusion proteins that come from them, arise when part of the DNA from one chromosome moves to another chromosome. Fusion proteins produced by this change may lead to the development of some types of cancer (source: [NCI Cancer Dictionary](https://www.cancer.gov/publications/dictionaries/cancer-terms/def/fusion-gene)).
 
 mCODE represents a fusion gene as an instance of **GenomicVariant** with the following changes:
 

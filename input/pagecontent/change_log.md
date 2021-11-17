@@ -4,7 +4,7 @@
 
 * Updated the [Data Dictionary](dictionary.html) content.
 * A [glossary of radiotherapy terms](glossary.html) was added.
-* Updated the [mCODE diagram](index.html#scope-and-conceptual-model) to reflect STU 2 changes. Embedded links to FHIR artifacts were added.
+* Updated the [mCODE diagram](index.html#mcode-overview) to reflect STU 2 changes. Embedded links to FHIR artifacts were added.
 * Re-arranged the top-level menus for easier navigation.
 * Provided separate pages containing the different types of FHIR artifacts (e.g., [Profiles](profiles.html), [ValueSets](valuesets.html))
 * Updated lists of artifacts on "Content by Group" pages.
@@ -48,7 +48,11 @@
 * Laterality broken out into separate extension in [CancerRelatedSurgicalProcedure]. [FHIR-32340](https://jira.hl7.org/browse/FHIR-32340)
 * [TumorMarkerTestVS] value set has been curated to better capture the intended scope of tumor marker tests.
 * `BrachytherapyTreatmentPhase` and `RadiotherapyTreatmentPhase` profiles and examples dropped because it was determined that this was too much detail for mCODE. Phase profiles will reappear in the planned [CodeX Radiation Therapy FHIR Implementation Guide](http://build.fhir.org/ig/HL7/codex-radiation-therapy/branches/master/index.html). [FHIR-33340](https://jira.hl7.org/browse/FHIR-33340)
+<<<<<<< HEAD
 * Added values to [TreatmentTerminationReason] value set.   [FHIR-32832](https://jira.hl7.org/browse/FHIR-32832)
+=======
+* Changed valued in [TreatmentTerminationReasonVS] to SNOMED-CT situations and findings. Added new values including `SCT#399307001 "Lost to follow-up (finding)"` and `SCT#419620001 "Death (event)"`. [FHIR-32832](https://jira.hl7.org/browse/FHIR-32832)
+>>>>>>> 117488c30590344a028b703070eac7b1505cbfc4
 * Radiotherapy Modality Value Set and Radiotherapy Technique Value Set are now defined by inclusion of the modality and technique value sets for Brachytherapy and Teleradiotherapy rather than by enumeration. [FHIR-32263](https://jira.hl7.org/browse/FHIR-32263)
 * Descriptions for the Elixhauser ThyroidOther and NeuroOther VS have been clarified. [FHIR-32350](https://jira.hl7.org/browse/FHIR-32350)
 * Dropped the context restrictions on TreatmentIntent, Modality, and Technique extensions to permit them to be used in other resources in the future. [FHIR-32243](https://jira.hl7.org/browse/FHIR-32243)
@@ -65,14 +69,26 @@
 * Renamed `CancerGeneticVariant` to `GenomicVariant` to reflect wider scope of this profile. [FHIR-32888](https://jira.hl7.org/browse/FHIR-33340)
 * Renamed `CancerGenomicsReport` to [GenomicsReport] because it is not specific to cancer, and make that profile more broadly applicable.
 * [GenomicVariant] now includes additional components for molecular consequence, clinical significance, variant category, and copy number.
+<<<<<<< HEAD
 * Added Values Urine, Stool and Other to [GenomicSpecimenTypeVS] value set and updated the definition of the value set to reflect its intentional nature. [FHIR-32827](https://jira.hl7.org/browse/FHIR-32827)
+=======
+* Added Values Urine, Stool to [GenomicSpecimenTypeVS] value set. The suggested term `Source, other` was not added because the value set binding is extensible. [FHIR-32827](https://jira.hl7.org/browse/FHIR-32827)
+* Removed `SPTY#JNTFLD "Fluid, Joint"` from [GenomicSpecimenTypeVS] because it is a duplicate of `SPTY#SNV "Fluid, synovial (Joint fluid)". [FHIR-32838](https://jira.hl7.org/browse/FHIR-32838)
+>>>>>>> 117488c30590344a028b703070eac7b1505cbfc4
 * Primary and Secondary cancer value sets have been aligned with CDC state cancer reporting practices. [FHIR-32956](https://jira.hl7.org/browse/FHIR-32956)
 
 #### Outcome Group Changes
 
 * Added values to [TumorSizeMethodVS] to reflect clinical and pathologic analysis practices.
+<<<<<<< HEAD
 * Aligned [ConditionStatusTrendVS] with NAACR reporting requirements by adding TBD SNOMED terms for partial and complete remission, and dropping `SCT#281900007 "No abnormality detected (finding)"` [FHIR-32837](https://jira.hl7.org/browse/FHIR-32837)
 * Aligned [CancerDiseaseStatusEvidenceTypeVS] valueSet with NAACR reporting needs. [FHIR-32893](https://jira.hl7.org/browse/FHIR-32893)
+=======
+* Changed the code `SCT#260415000 "Not detected (qualifier)"` to `SCT#281900007 "No abnormality detected (finding)"` in [ConditionStatusTrendVS] to better align with the other findings in that value set. The code represents the concept "no evidence of disease".
+* [CancerDiseaseStatusEvidenceTypeVS] valueSet has been aligned with NAACR reporting needs. [FHIR-32893](https://jira.hl7.org/browse/FHIR-32893)
+* The SNOMED-CT requested concepts `SCT_TBD#USCRS-352236 "Cancer in complete remission(finding)"` and `SCT_TBD#USCRS-352237 "Cancer in partial remission (finding)"` have replaced `SCT#281900007 "No abnormality detected (finding)"` in ConditionStatusTrendVS. [FHIR-32837](https://jira.hl7.org/browse/FHIR-32837)
+
+>>>>>>> 117488c30590344a028b703070eac7b1505cbfc4
 
 ### mCODE STU 2 Ballot Version (May 2021)
 
@@ -88,7 +104,7 @@ A comprehensive listing of differences in FHIR artifacts between STU 1 and STU 2
 * New [CapabilityStatements and SearchParameters](conformance-patients.html) defined for mCODE Data Sender and mCODE Data Receiver roles
 * New [extended patient journey example](examples.html)
 * Extended [conformance criteria](conformance-general.html) to allow compliance to be tested in a more objective way
-* Realignment of the six mCODE groups (Patient, Disease, Genomics, Labs/Vitals, Outcomes): Labs/Vitals has been renamed "Assessments" and some profiles formerly in the Patient Group have been moved into that group. TumorMarkerTest has been moved from Labs/Vitals to the Disease group. The [mCODE concept diagram](index.html#scope-and-conceptual-model) has been updated to reflect these changes.
+* Realignment of the six mCODE groups (Patient, Disease, Genomics, Labs/Vitals, Outcomes): Labs/Vitals has been renamed "Assessments" and some profiles formerly in the Patient Group have been moved into that group. TumorMarkerTest has been moved from Labs/Vitals to the Disease group. The [mCODE concept diagram](index.html#mcode-overview) has been updated to reflect these changes.
 
 #### Patient Group Changes
 

@@ -48,7 +48,7 @@
 * Laterality broken out into separate extension in [CancerRelatedSurgicalProcedure]. [FHIR-32340](https://jira.hl7.org/browse/FHIR-32340)
 * [TumorMarkerTestVS] value set has been curated to better capture the intended scope of tumor marker tests.
 * `BrachytherapyTreatmentPhase` and `RadiotherapyTreatmentPhase` profiles and examples dropped because it was determined that this was too much detail for mCODE. Phase profiles will reappear in the planned [CodeX Radiation Therapy FHIR Implementation Guide](http://build.fhir.org/ig/HL7/codex-radiation-therapy/branches/master/index.html). [FHIR-33340](https://jira.hl7.org/browse/FHIR-33340)
-* Added values to [TreatmentTerminationReason] value set
+* Changed valued in [TreatmentTerminationReasonVS] to SNOMED-CT situations and findings. Added new values including `SCT#399307001 "Lost to follow-up (finding)"` and `SCT#419620001 "Death (event)"`. [FHIR-32832](https://jira.hl7.org/browse/FHIR-32832)
 * Radiotherapy Modality Value Set and Radiotherapy Technique Value Set are now defined by inclusion of the modality and technique value sets for Brachytherapy and Teleradiotherapy rather than by enumeration. [FHIR-32263](https://jira.hl7.org/browse/FHIR-32263)
 * Descriptions for the Elixhauser ThyroidOther and NeuroOther VS have been clarified. [FHIR-32350](https://jira.hl7.org/browse/FHIR-32350)
 * Dropped the context restrictions on TreatmentIntent, Modality, and Technique extensions to permit them to be used in other resources in the future. [FHIR-32243](https://jira.hl7.org/browse/FHIR-32243)

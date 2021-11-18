@@ -5,8 +5,8 @@
 Alias:   LNC = http://loinc.org
 Alias:   SCT = http://snomed.info/sct
 Alias:   UCUM = http://unitsofmeasure.org
-//Alias:   NCIT = http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl
-Alias:   NCI = http://ncithesaurus-stage.nci.nih.gov
+Alias:   NCI = http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl
+// Alias:   NCI = http://ncithesaurus-stage.nci.nih.gov
 // Alias:   ICD10CM = http://hl7.org/fhir/sid/icd-10-cm
 Alias:   ICD10CM = http://hl7.org/fhir/sid/icd-10-cm
 Alias:   ICD10PCS = http://www.cms.gov/Medicare/Coding/ICD10

@@ -2,20 +2,47 @@
 
 Cancer is among the leading causes of death worldwide. According to the National Cancer Institute, in the United States, 39.5 percent of men and women will be diagnosed with cancer at some point during their lifetimes. In 2020, an estimated 1,806,590 new cases of cancer will be diagnosed in the United States and 606,520 people will die from the disease. While these numbers are staggering, the silver lining in the wide prevalence of cancer is the potential to learn from treatment of millions of patients. If we had research-quality data from all cancer patients, it would enable higher quality health outcomes. Today, we lack the data models, technologies, and methods to capture that data.
 
-[mCODE™](https://mcodeinitiative.org/) (short for Minimal Common Oncology Data Elements) is an initiative intended to assemble a core set of structured data elements for oncology electronic health records (EHRs). mCODE is a step towards capturing research-quality data from the treatment of all cancer patients. This would enable the treatment of every cancer patient to contribute to [comparative effectiveness analysis (CEA)](https://en.wikipedia.org/wiki/Comparative_effectiveness_research) of cancer treatments by allowing for easier methods of data exchange between health systems. mCODE has been created and is being supported by the [American Society of Clinical Oncology (ASCO®)](https://www.asco.org/)in collaboration with the MITRE Corporation.
+[mCODE™](https://mcodeinitiative.org/) (short for Minimal Common Oncology Data Elements) is an initiative intended to assemble a core set of structured data elements for oncology electronic health records (EHRs). mCODE is a step towards capturing research-quality data from the treatment of all cancer patients. This would enable the treatment of every cancer patient to contribute to [comparative effectiveness analysis (CEA)](https://en.wikipedia.org/wiki/Comparative_effectiveness_research) of cancer treatments by allowing for easier methods of data exchange between health systems. While the initial focus has been on solid tumors, mCODE ultimately is meant to be applicable across all types of cancer.
 
-In late 2018, ASCO convened committee of twenty leading clinical experts in oncology, radiology, surgery, and public health developed two use cases that drove the initial clinical data requirements for mCODE:
+### Overview
+
+mCODE consists of approximately 30 FHIR profiles organized into six thematic groups. Groups are introduced for pedagogical purposes only and have no other meaning or consequence.
+
+* [Patient Information Group](group-patient.html)
+* [Disease Characterization Group](group-disease.html)
+* [Health Assessment Group](group-assessment.html)
+* [Genomics Group](group-genomics.html)
+* [Cancer Treatments Group](group-treatment.html)
+* [Outcomes Group](group-outcome.html)
+
+The overall scope of mCODE and the relationships between mCODE profiles is illustrated in the following diagram (not all details are shown). Click on items to see their underlying definitions.
+
+<object data="mCodeDiagram.svg" type="image/svg+xml"></object>
+
+Readers should also take note of the [Data Dictionary](dictionary.html), a flattened list of data elements in mCODE in MS-Excel format. There is also a [Data Dictionary Differential](dictionary.html#data-dictionary-differential) that compares STU 1 with STU 2 on an element-by-element basis.
+
+The Data Dictionary comes with several caveats:
+
+* Only [must-support (MS)](https://www.hl7.org/fhir/conformance-rules.html#mustSupport) data elements are included. These are elements that implementers could be expected to provide meaningful support for (see [Profile Conformance](conformance-profiles.html) for details).
+* Profiles defined externally to mCODE, such as vital signs defined in base FHIR or US Core, are not included.
+* Sub-elements of complex types such as CodeableConcept and Period are not included.
+
+The actual number of data elements in a resource can vary widely. For example, while there are 16 MS data elements in the [CancerPatient] profile, the full resource defines more than 60 elements, but of these, only four are [required](conformance-profiles.html#definition-of-required) (namely `identifier.system`, `identifier.value`, `name.family` or `name.given`, and `gender`).
+
+### Development History
+
+In late 2018, [American Society of Clinical Oncology (ASCO®)](https://www.asco.org/) convened committee of twenty leading clinical experts in oncology, radiology, surgery, and public health. This group developed two use cases that drove the initial clinical data requirements for mCODE:
 
 * **Use Case 1**: [Comparative Effectiveness Analysis and Cooperative Decision Making](mCODE-UseCase-RCC.docx)
 * **Use Case 2**: [Comparative Effectiveness Analysis with Next Generation Sequencing (NGS)](mCODE-UseCase-NGS.docx)
 
-While mCODE ultimately is meant to be applicable across all types of cancer, the initial focus (and both use cases) has been on solid tumors.
+After initial development, in early 2019, an open survey was conducted to validate and prioritize the data elements from these use cases. Further down-scoping was done based on whether the data would be stored or capture in an electronic health record (EHR), and if it would place undue documentation burden on clinicians. The same year, mCODE was balloted and approved as an HL7 Standard for Trial Use (STU 1).
 
-After initial development, in early 2019, an open survey was conducted to validate and prioritize the data elements from these use cases. Further down-scoping was done based on whether the data would be stored or capture in an electronic health record (EHR), and if it would place undue documentation burden on clinicians.
+In the ensuing period of more one year, mCODE was piloted at a number of clinical sites, facilitated by the [CodeX FHIR Accelerator](https://confluence.hl7.org/display/COD/CodeX+Home). Use cases are tracked [here](https://confluence.hl7.org/display/COD/CodeX+Use+Cases). Incorporating that experience, the second trial use publication (STU 2) was balloted in May 2021.
 
 ### Sources
 
-In addition to information obtained from subject matter experts, several pre-existing standards, nomenclatures, and guidelines were consulted in the development of this specification. These include:
+In addition to information obtained from subject matter experts, several pre-existing standards, nomenclatures, and guidelines were consulted during the development of this specification. These include:
 
 * [American Association of Physicists in Medicine (AAPM): Task Group 263 Final Report](https://www.aapm.org/pubs/reports/RPT_263.pdf)
 * [American College of Surgeons(ACS): Standards for Registry Entry (STORE)](https://www.facs.org/-/media/files/quality-programs/cancer/ncdb/store_manual_2021.ashx)
@@ -36,34 +63,11 @@ In addition to information obtained from subject matter experts, several pre-exi
 
 In addition, material was drawn from the [US Core Implementation Guide](http://hl7.org/fhir/us/core/) and the [Genomics Reporting Implementation Guide](http://hl7.org/fhir/uv/genomics-reporting/).
 
-### mCODE Overview
-
-This implementation guide is a Domain of Knowledge IG. The purpose of this IG is to show how to represent clinical concepts generally, not to have a complete set of agreements for interoperable exchanges.
-
-mCODE consists of approximately 30 FHIR profiles organized into six thematic groups. Groups are introduced for pedagogical purposes only and have no other meaning or consequence. Refer to the links below for details on the content and artifacts in each group:
-
-* [Patient Information Group](group-patient.html)
-* [Disease Characterization Group](group-disease.html)
-* [Health Assessment Group](group-assessment.html)
-* [Genomics Group](group-genomics.html)
-* [Cancer Treatments Group](group-treatment.html)
-* [Outcomes Group](group-outcome.html)
-
-The overall scope of mCODE and the relationships between mCODE profiles is illustrated in the following diagram:
-
-<object data="mCodeDiagram.svg" type="image/svg+xml"></object>
-
-### Data Dictionary and Number of Data Elements
-
-Readers should also take note of the [Data Dictionary](dictionary.html), a flattened list of mCODE data elements in MS-Excel format. There is also a [Data Dictionary Differential](dictionary.html#data-dictionary-differential) that compares STU 1 with STU 2 on an element-by-element basis.
-
-The question "How many data elements are there in mCODE?" arises repeatedly. The short answer is: *it depends how data elements are counted*. Should non-required elements be counted? What about provenance elements such as author, date, patient identifier, status, language, and identifier? Should complex data types be counted as one or multiple elements? Are requirements derived from US Core counted as mCODE data elements?
-
-Only one mCODE profile MUST be implemented: [CancerPatient]. The potential number of data elements in CancerPatient is [over 70](StructureDefinition-mcode-cancer-patient.html#tabs-snap), not even counting subelements in complex elements or [additional optional extensions](http://www.hl7.org/fhir/patient-profiles.html#extensions). Of these, [only 23](StructureDefinition-mcode-cancer-patient.html#tabs-snapms) are [must-support elements](https://www.hl7.org/fhir/conformance-rules.html#mustSupport). Of these, only four elements are absolutely [required](conformance-profiles.html#definition-of-required) (namely `identifier.system`, `identifier.value`, `name.family` or `name.given`, and `gender`). Compared to the base profile defined in US Core, [just one additional element is must-support](http://build.fhir.org/ig/HL7/fhir-mCODE-ig/branches/master/StructureDefinition-mcode-cancer-patient.html#tabs-diff). Finally, mCODE defines **zero** new data elements above and beyond those already in US Core. So depending on one's point of view, [CancerPatient] may have 0, 1, 4, 23, or more than 70 data elements.
-
 ### Understanding this Guide
 
-The mCODE Implementation Guide was developed using the standard HL7 FHIR publishing tools. The page layouts and symbols are explained [in the FHIR documentation](https://www.hl7.org/fhir/formats.html). In viewing a profile page, note that there are multiple views. The "Differential Table" view represents the difference between the current profile and its base resource or profile. When interpreting this view, bear in mind that the immediate parent may not be a base FHIR resource, but it could be a US Core profile or another profile in this guide. The "Snapshot Table" represents the entire profile, with all elements.
+mCODE is a "Domain of Knowledge" implementation guide (IG). The purpose is to show how to represent clinical concepts generally, not to have a complete set of agreements for interoperable exchanges.
+
+The page layouts and symbols are explained [in the FHIR documentation](https://www.hl7.org/fhir/formats.html). In viewing a profile page, note that there are multiple views. The "Differential Table" view represents the difference between the current profile and its base resource or profile. When interpreting this view, bear in mind that the immediate parent may not be a base FHIR resource, but it could be a US Core profile or another profile in this guide. The "Snapshot Table" represents the entire profile, with all elements.
 
 In the event there are differences between the page renderings in this IG and the associated FHIR artifacts, the FHIR artifacts should be taken as the source of truth. In the event that an artifact's snapshot is inconsistent with its differential, the differential should be taken as the source of truth.
 

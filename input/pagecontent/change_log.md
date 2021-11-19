@@ -4,7 +4,7 @@
 
 * Updated the [Data Dictionary](dictionary.html) content.
 * A [glossary of radiotherapy terms](glossary.html) was added.
-* Updated the [mCODE diagram](index.html#mcode-overview) to reflect STU 2 changes. Embedded links to FHIR artifacts were added.
+* Updated the [mCODE diagram](index.html#overview) to reflect STU 2 changes. Embedded links to FHIR artifacts were added.
 * Re-arranged the top-level menus for easier navigation.
 * Provided separate pages containing the different types of FHIR artifacts (e.g., [Profiles](profiles.html), [ValueSets](valuesets.html))
 * Updated lists of artifacts on "Content by Group" pages.
@@ -88,7 +88,7 @@ A comprehensive listing of differences in FHIR artifacts between STU 1 and STU 2
 * New [CapabilityStatements and SearchParameters](conformance-patients.html) defined for mCODE Data Sender and mCODE Data Receiver roles
 * New [extended patient journey example](examples.html)
 * Extended [conformance criteria](conformance-general.html) to allow compliance to be tested in a more objective way
-* Realignment of the six mCODE groups (Patient, Disease, Genomics, Labs/Vitals, Outcomes): Labs/Vitals has been renamed "Assessments" and some profiles formerly in the Patient Group have been moved into that group. TumorMarkerTest has been moved from Labs/Vitals to the Disease group. The [mCODE concept diagram](index.html#mcode-overview) has been updated to reflect these changes.
+* Realignment of the six mCODE groups (Patient, Disease, Genomics, Labs/Vitals, Outcomes): Labs/Vitals has been renamed "Assessments" and some profiles formerly in the Patient Group have been moved into that group. TumorMarkerTest has been moved from Labs/Vitals to the Disease group. The [mCODE concept diagram](index.html#overview) has been updated to reflect these changes.
 
 #### Patient Group Changes
 

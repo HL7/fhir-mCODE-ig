@@ -91,8 +91,8 @@ e: {
   "language" : "en",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:66c1f96c-6312-45a3-a370-b0d57da0c954",
-    "timestamp" : "2021-11-16T15:36:23.987Z",
+    "identifier" : "urn:uuid:9488bcee-ab14-41a3-8d17-077433b1eca5",
+    "timestamp" : "2021-11-18T14:22:29.685Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -103,7 +103,7 @@ e: {
     },
     {
       "name" : "version",
-      "valueString" : "http://unitsofmeasure.org|2.0.1"
+      "valueUri" : "http://unitsofmeasure.org|2.0.1"
     }],
     "contains" : [{
       "system" : "http://unitsofmeasure.org",
@@ -402,15 +402,15 @@ e: {
   "language" : "en",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:de4f1e78-95a1-4955-9cc8-3b5b37017948",
-    "timestamp" : "2021-11-16T15:40:34.022Z",
+    "identifier" : "urn:uuid:7f203f6f-2165-40ee-a966-351dca7b4b5c",
+    "timestamp" : "2021-11-18T14:25:36.485Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
     },
     {
       "name" : "version",
-      "valueString" : "http://unitsofmeasure.org|2.0.1"
+      "valueUri" : "http://unitsofmeasure.org|2.0.1"
     }],
     "contains" : [{
       "system" : "http://unitsofmeasure.org",

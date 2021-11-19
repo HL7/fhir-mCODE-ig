@@ -5,7 +5,6 @@
 Alias:   LNC = http://loinc.org
 Alias:   SCT = http://snomed.info/sct
 Alias:   UCUM = http://unitsofmeasure.org
-Alias:   NCI = http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl
 // Alias:   NCI = http://ncithesaurus-stage.nci.nih.gov
 // Alias:   ICD10CM = http://hl7.org/fhir/sid/icd-10-cm
 Alias:   ICD10CM = http://hl7.org/fhir/sid/icd-10-cm
@@ -20,6 +19,9 @@ Alias:   AJCC = http://cancerstaging.org
 Alias:   GTR = http://www.ncbi.nlm.nih.gov/gtr
 Alias:   CLINVAR = http://www.ncbi.nlm.nih.gov/clinvar
 Alias:   SO = http://www.sequenceontology.org/
+
+// Code systems URLs from HL7 Terminology Authority that conflict with terminology.hl7.org
+Alias:   NCI = http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl
 
 
 // From terminology.hl7.org

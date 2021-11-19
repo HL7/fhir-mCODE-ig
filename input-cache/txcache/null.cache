@@ -24,7 +24,7 @@ e: {
   "name" : "BodyLocationQualifierVS",
   "title" : "Body Location Qualifier Value Set",
   "status" : "active",
-  "date" : "2021-11-16T10:32:33-05:00",
+  "date" : "2021-11-19T10:26:26-05:00",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",
@@ -33,11 +33,11 @@ e: {
     }]
   }],
   "expansion" : {
-    "identifier" : "urn:uuid:048b4d3d-5e33-4366-a633-42098391807e",
-    "timestamp" : "2021-11-16T15:39:44.693Z",
+    "identifier" : "urn:uuid:083a453c-e688-44f6-be1e-c0b09e93ebc0",
+    "timestamp" : "2021-11-19T18:08:41.178Z",
     "parameter" : [{
       "name" : "expansion-source",
-      "valueString" : "ValueSet/mcode-body-location-qualifier-vs"
+      "valueUri" : "ValueSet/mcode-body-location-qualifier-vs"
     },
     {
       "name" : "limitedExpansion",
@@ -45,7 +45,7 @@ e: {
     },
     {
       "name" : "expansion-source",
-      "valueString" : "ValueSet/mcode-body-location-and-laterality-qualifier-vs"
+      "valueUri" : "ValueSet/mcode-body-location-and-laterality-qualifier-vs"
     },
     {
       "name" : "limitedExpansion",
@@ -53,7 +53,7 @@ e: {
     },
     {
       "name" : "version",
-      "valueString" : "http://snomed.info/sct|http://snomed.info/sct/731000124108/version/20210901"
+      "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/731000124108/version/20210901"
     }],
     "contains" : [{
       "system" : "http://snomed.info/sct",

@@ -46,5 +46,8 @@ input-cache/txcache/ucum.cache
 input-cache/txcache/umls.cache
 
 # Automated testing
+.classpath
+.project
+.settings/*
 target/*
 .mvn/wrapper/maven-wrapper.jar

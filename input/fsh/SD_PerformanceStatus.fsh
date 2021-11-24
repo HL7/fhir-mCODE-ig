@@ -10,6 +10,7 @@ RuleSet: PerformanceStatusCommonRules
 * basedOn only Reference (ServiceRequest or CarePlan)
 * partOf only Reference (Procedure)
 * subject only Reference(CancerPatient)
+* subject ^definition = "Patient whose performance status is recorded."
 * effective[x] only dateTime or Period
 // EGOG and Karnofsky have exactly the same set of MS
 * status and code and subject and effective[x] and value[x] and interpretation MS

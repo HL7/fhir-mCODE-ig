@@ -21,6 +21,7 @@ Description:    "An episode of medication administration for a patient whose con
 RuleSet: MedicationResourcesRS
 * obeys mcode-reason-required
 * subject only Reference(CancerPatient)
+* subject ^definition = "The patient receiving the medication."
 * extension contains
     ProcedureIntent named treatmentIntent 0..1 MS and
     TreatmentTerminationReason named terminationReason 0..* MS

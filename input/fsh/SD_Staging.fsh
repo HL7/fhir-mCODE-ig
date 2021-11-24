@@ -6,6 +6,7 @@ RuleSet: CancerStageCommonRules
 * insert NotUsed(component)
 * focus only Reference(PrimaryCancerCondition)
 * subject only Reference(CancerPatient)
+* subject ^definition = "The patient associated with staging data."
 * method from CancerStagingSystemVS (extensible)
 // MS flags -- for Pathological staging, they might be redundant with US Core Lab Observation (but that's harmless)
 * status and code and subject and effective[x] and value[x] and method and focus MS

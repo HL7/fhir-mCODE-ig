@@ -111,7 +111,8 @@ Description:    "An alteration in the most common DNA nucleotide sequence. The t
 * component[clinicalSignificance] ^definition = "Single DNA marker or individual allele interpretation in the context of the assessed genomic disease (source: LOINC)."
 
 // ADDITIONAL MUST SUPPORTS (MS on status, category, category[Laboratory], codes, subject, effective[x], value[x] are inherited from US Core Lab Observation)
-* method and specimen and component and component.code and component.value[x] and component.dataAbsentReason MS
+* method and specimen and component and component.code and component.value[x] MS
+//* component.dataAbsentReason MS
 
 
 Profile:        TumorMarkerTest
@@ -122,6 +123,7 @@ Description:    "The result of a tumor marker test. Tumor marker tests are gener
 * subject 1..1
 * code from TumorMarkerTestVS (extensible)
 * subject only Reference(CancerPatient)
+* subject ^definition = "Patient whose tumor marker test is recorded."
 * effective[x] only dateTime or Period
 * value[x] only Quantity or Ratio or string or CodeableConcept
 // Already MS in US Core Obs Lab: status, category, code, subject, effective[x], value[x], dataAbsentReason
@@ -131,14 +133,15 @@ Description:    "The result of a tumor marker test. Tumor marker tests are gener
 RuleSet: CancerRelatedSpecimenRules
 * type 1..1
 * subject only Reference(CancerPatient)
+* subject ^definition = "The patient associated with this specimen."
 * collection.bodySite.extension contains
     BodyLocationQualifier named locationQualifier 0..* and
     LateralityQualifier named lateralityQualifier 0..1
 // It would be nice to reuse the existing condition-related extension (see Jira https://jira.hl7.org/projects/FHIR/issues/FHIR-31027) but it doesn't apply to Specimen
 * extension contains RelatedCondition named relatedCondition 0..1 MS
 * extension[relatedCondition].value[x] only Reference(PrimaryCancerCondition or SecondaryCancerCondition)
-* extension[relatedCondition] ^short = "Cancer condition associated with this sample."
-* extension[relatedCondition] ^definition = "A reference that associates this sample with a cancer condition."
+* extension[relatedCondition] ^short = "Cancer condition associated with this specimen."
+* extension[relatedCondition] ^definition = "A reference that associates this specimen with a cancer condition."
 // No inherited MS
 * subject and status and type and collection and collection.bodySite and collection.bodySite.extension and collection.bodySite.extension[locationQualifier] and collection.bodySite.extension[lateralityQualifier] MS
 
@@ -226,4 +229,5 @@ Description:    "A subset of genes or genomic regions of interest in a targeted 
 * component[genomicReferenceSequenceId] ^definition = "Range(s) of DNA sequence examined. The genomic reference sequence is a contiguous stretch of chromosome DNA that spans all of the exons of the gene and includes transcribed and non transcribed stretches. For this ID use either the NCBI genomic nucleotide RefSeq IDs with their version number (see: NCBI.NLM.NIH.Gov/RefSeq) or use the LRG identifiers, without transcript (t or p) extensions -- when they become available. (source: LOINC)"
 * component[genomicReferenceSequenceId].code = LNC#48013-7
 
-* component and component.code and component.value[x] and component.dataAbsentReason MS
+* component and component.code and component.value[x] MS
+//* component.dataAbsentReason MS

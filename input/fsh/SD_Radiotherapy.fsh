@@ -17,6 +17,7 @@ RuleSet: RadiotherapyCommon
 * category = SCT#108290001 // "Radiation oncology AND/OR radiotherapy (procedure)"
 * performed[x] only Period
 * subject only Reference(CancerPatient)
+* subject ^definition = "The patient on whom the procedure was performed."
 * extension and category MS
 
 
@@ -245,6 +246,7 @@ Description: "A volume of the body used in radiotherapy planning or treatment de
 * locationQualifier ^definition = "Qualifiers that together with the associated location code specify the TG263 body structure comprising the irradiated volume."
 * identifier and location and description and patient and morphology and locationQualifier  MS
 * patient only Reference(CancerPatient)
+* patient ^definition = "The patient for which a radiotherapy procedure is planned or performed."
 
 Invariant:  mcode-description-or-id-required
 Description: "One of description or identifier MUST be present"

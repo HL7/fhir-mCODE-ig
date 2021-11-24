@@ -5,6 +5,7 @@ Title: "mCODE Patient Group Profile"
 Description: "A group of patients included in the scope of mCODE, whose cancer-related resources conform to mCODE profiles."
 * code = NCI#C19700  // Cancer Patient
 * member.entity only Reference(CancerPatient)
+* member.entity ^definition = "A cancer patient considered `in-scope` for mCODE."
 
 // Defines common operations for the server role
 RuleSet: mCODE_CapabilityStatement_Server_Common

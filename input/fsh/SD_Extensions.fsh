@@ -54,7 +54,7 @@ Description: "Qualifier to refine an body location. These include qualifiers for
 Extension: LateralityQualifier
 Id: mcode-laterality-qualifier
 Title: "Laterality Qualifier Extension"
-Description: "Qualifier to specify  laterality."
+Description: "Qualifier to specify laterality."
 // * insert ExtensionContext(Specimen.collection.bodySite)
 // * insert ExtensionContext(Procedure.bodySite)
 // * insert ExtensionContext(Condition.bodySite)
@@ -76,7 +76,7 @@ Description: "A code explaining the unplanned or premature termination, or norma
 Extension: ProcedureIntent
 Id: mcode-procedure-intent
 Title: "Procedure Intent Extension"
-Description: "The purpose of a procedure."
+Description: "The purpose of a treatment, medication, or procedure."
 //* insert ExtensionContext(MedicationRequest) - removed as per FHIR-32243
 //* insert ExtensionContext(Procedure)         - removed as per FHIR-32243
 * value[x] only CodeableConcept

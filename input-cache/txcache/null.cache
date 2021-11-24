@@ -24,7 +24,7 @@ e: {
   "name" : "BodyLocationQualifierVS",
   "title" : "Body Location Qualifier Value Set",
   "status" : "active",
-  "date" : "2021-11-24T10:15:11-05:00",
+  "date" : "2021-11-24T10:31:03-05:00",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",
@@ -33,8 +33,8 @@ e: {
     }]
   }],
   "expansion" : {
-    "identifier" : "urn:uuid:c9961501-275e-446a-9372-db3400912122",
-    "timestamp" : "2021-11-24T15:19:27.819Z",
+    "identifier" : "urn:uuid:15b6a47d-762a-4fde-83eb-2eaeb4d663e5",
+    "timestamp" : "2021-11-24T15:34:50.505Z",
     "parameter" : [{
       "name" : "expansion-source",
       "valueUri" : "ValueSet/mcode-body-location-qualifier-vs"

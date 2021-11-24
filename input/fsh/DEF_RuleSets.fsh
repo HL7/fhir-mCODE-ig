@@ -38,7 +38,7 @@ RuleSet: CreateComponent(sliceName, min, max)
 * component contains {sliceName} {min}..{max} MS
 * component[{sliceName}].code MS
 * component[{sliceName}].value[x] MS
-//* component[{sliceName}].dataAbsentReason MS  // US Core wants dataAbsentReason retained
+//* component[{sliceName}].dataAbsentReason MS 
 
 RuleSet: CreateComorbidityComponent(sliceName, code, short, vs)
 * component contains {sliceName} 0..1 MS

@@ -63,6 +63,7 @@ Id: mcode-tumor
 Title: "Tumor Profile"
 Description:  "Identifies a tumor that has not been removed from the body. Whenever possible, a single resource conforming to this profile will be used to track a tumor over time (as opposed to creating new Tumor-conforming BodyStructure resources each time that tumor is measured). Use TumorSpecimen to represent the tumor after removal from the body."
 * patient only Reference(CancerPatient)
+* patient ^definition = "The patient associated with this tumor."
 // The purpose of this profile is to uniquely identify a tumor, so it follows that there must be at least one identifier value provided
 * identifier ^short = "Stable identifier(s) for this tumor"
 * identifier ^definition = "Stable identifier(s) for this specific tumor. The identifiers MUST be unique within the context of the referenced `CancerPatient`."

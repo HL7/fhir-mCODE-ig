@@ -38,16 +38,20 @@ RuleSet: CreateComponent(sliceName, min, max)
 * component contains {sliceName} {min}..{max} MS
 * component[{sliceName}].code MS
 * component[{sliceName}].value[x] MS
-* component[{sliceName}].dataAbsentReason MS  // US Core wants dataAbsentReason retained
+//* component[{sliceName}].dataAbsentReason MS  // US Core wants dataAbsentReason retained
 
-RuleSet: CreateComorbidityComponent(sliceName)
+RuleSet: CreateComorbidityComponent(sliceName, code, short, vs)
 * component contains {sliceName} 0..1 MS
 * component[{sliceName}].code MS
 * component[{sliceName}].value[x] MS
-* component[{sliceName}].dataAbsentReason MS
+//* component[{sliceName}].dataAbsentReason MS
 * component[{sliceName}].extension MS
 * component[{sliceName}].extension[conditionCode] MS
 * component[{sliceName}].extension[conditionReference] MS
+* component[{sliceName}].code = LNC_TBD#{code}
+* component[{sliceName}] ^short = {short}
+* component[{sliceName}].extension ^definition = "The patient's specific condition within this comorbidity class."
+* component[{sliceName}].extension[conditionCode].value[x] from {vs}
 
 RuleSet: BundleSlice(name, min, max, short, def, class)
 * entry contains {name} {min}..{max} MS

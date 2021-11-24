@@ -21,6 +21,8 @@ Description: "General structure for capturing comorbid conditions with respect t
 * insert NotUsed(specimen)
 * insert NotUsed(device)
 * subject only Reference(CancerPatient)
+* subject ^definition = "The patient whose comorbidities are recorded."
+
 // No Must Suppports in the abstract profile
 //* component and component.extension MS
 
@@ -39,160 +41,44 @@ Description: "Comorbid condition checklist and optional risk score, using Elixha
 * component ^slicing.discriminator.path = "code"
 * component ^slicing.rules = #closed
 * component ^slicing.description = "Slice based on the component.code pattern"
-* insert CreateComorbidityComponent(aids)
-* insert CreateComorbidityComponent(alcoholAbuse)
-* insert CreateComorbidityComponent(deficiencyAnemia)
-* insert CreateComorbidityComponent(arthropathy)
-* insert CreateComorbidityComponent(bloodLossAnemia)
-* insert CreateComorbidityComponent(cancerLeukemia)
-* insert CreateComorbidityComponent(cancerLymphoma)
-* insert CreateComorbidityComponent(cancerMetastatic)
-* insert CreateComorbidityComponent(cancerSolidInSitu)
-* insert CreateComorbidityComponent(cancerSolidMalignant)
-* insert CreateComorbidityComponent(cerebrovascular)
-* insert CreateComorbidityComponent(congestiveHeartFailure)
-* insert CreateComorbidityComponent(coagulopathy)
-* insert CreateComorbidityComponent(dementia)
-* insert CreateComorbidityComponent(depression)
-* insert CreateComorbidityComponent(diabetesUncomplicated)
-* insert CreateComorbidityComponent(diabetesComplicated)
-* insert CreateComorbidityComponent(drugAbuse)
-* insert CreateComorbidityComponent(hypertensionComplicated)
-* insert CreateComorbidityComponent(hypertensionUncomplicated)
-* insert CreateComorbidityComponent(liverDiseaseMild)
-* insert CreateComorbidityComponent(liverDiseaseSevere)
-* insert CreateComorbidityComponent(chronicPulmonaryDisease)
-* insert CreateComorbidityComponent(neurologicalMovement)
-* insert CreateComorbidityComponent(neurologicalOther)
-* insert CreateComorbidityComponent(neurologicalSeizure)
-* insert CreateComorbidityComponent(obesity)
-* insert CreateComorbidityComponent(paralysis)
-* insert CreateComorbidityComponent(peripheralVascularDisease)
-* insert CreateComorbidityComponent(psychosis)
-* insert CreateComorbidityComponent(pulmonaryCirculationDisorder)
-* insert CreateComorbidityComponent(renalFailureModerate)
-* insert CreateComorbidityComponent(renalFailureSevere)
-* insert CreateComorbidityComponent(hypothyroidism)
-* insert CreateComorbidityComponent(thyroidOther)
-* insert CreateComorbidityComponent(ulcer)
-* insert CreateComorbidityComponent(valvularDisease)
-* insert CreateComorbidityComponent(weightLoss)
-// codes and definitions
-* component[aids].code = LNC_TBD#AIDS
-* component[aids] ^short = "Acquired Immune Deficiency Syndrome"
-* component[alcoholAbuse].code = LNC_TBD#ALCOHOL
-* component[alcoholAbuse] ^short = "Alcohol Abuse"
-* component[deficiencyAnemia].code = LNC_TBD#ANEMDF
-* component[deficiencyAnemia] ^short = "DeficiencyAnemia"
-* component[arthropathy].code = LNC_TBD#ARTH
-* component[arthropathy] ^short = "Arthropathy"
-* component[bloodLossAnemia].code = LNC_TBD#BLDLOSS
-* component[bloodLossAnemia] ^short = "Chronic Blood Loss Anemia"
-* component[cancerLeukemia].code = LNC_TBD#CANCER_LEUK
-* component[cancerLeukemia] ^short = "Leukemia"
-* component[cancerLymphoma].code = LNC_TBD#CANCER_LYMPH
-* component[cancerLymphoma] ^short = "Lymphoma"
-* component[cancerMetastatic].code = LNC_TBD#CANCER_METS
-* component[cancerMetastatic] ^short = "Metastatic Cancer"
-* component[cancerSolidInSitu].code = LNC_TBD#CANCER_NSITU
-* component[cancerSolidInSitu] ^short = "Solid tumor without metastasis, in situ"
-* component[cancerSolidMalignant].code = LNC_TBD#CANCER_SOLID
-* component[cancerSolidMalignant] ^short = "Solid tumor without metastasis, malignant"
-* component[cerebrovascular].code = LNC_TBD#CBVD
-* component[cerebrovascular] ^short = "Cerebrovascular disease"
-* component[congestiveHeartFailure].code = LNC_TBD#CHF
-* component[congestiveHeartFailure] ^short = "CongestiveHeartFailure"
-* component[coagulopathy].code = LNC_TBD#COAG
-* component[coagulopathy] ^short = "Coagulation Deficiency"
-* component[dementia].code = LNC_TBD#DEMENTIA
-* component[dementia] ^short = "Dementia"
-* component[depression].code = LNC_TBD#DEPRESS
-* component[depression] ^short = "Depression"
-* component[diabetesUncomplicated].code = LNC_TBD#DIAB_CX
-* component[diabetesUncomplicated] ^short = "Diabetes with chronic complications"
-* component[diabetesComplicated].code = LNC_TBD#DIAB_UNCX
-* component[diabetesComplicated] ^short = "Diabetes without chronic complications"
-* component[drugAbuse].code = LNC_TBD#DRUG_ABUSE
-* component[drugAbuse] ^short = "Drug Abuse"
-* component[hypertensionComplicated].code = LNC_TBD#HTN_CX
-* component[hypertensionComplicated] ^short = "Hypertension, Complicated"
-* component[hypertensionUncomplicated].code = LNC_TBD#HTN_UNCX
-* component[hypertensionUncomplicated] ^short = "Hypertension, Uncomplicated"
-* component[liverDiseaseMild].code = LNC_TBD#LIVER_MLD
-* component[liverDiseaseMild] ^short = "Mild Liver Disease"
-* component[liverDiseaseSevere].code = LNC_TBD#LIVER_SEV
-* component[liverDiseaseSevere] ^short = "Moderate to Severe Liver Disease"
-* component[chronicPulmonaryDisease].code = LNC_TBD#LUNG_CHRONIC
-* component[chronicPulmonaryDisease] ^short = "Chronic pulmonary disease"
-* component[neurologicalMovement].code = LNC_TBD#NEURO_MOVT
-* component[neurologicalMovement] ^short = "Neurological disorders affecting movement"
-* component[neurologicalOther].code = LNC_TBD#NEURO_OTH
-* component[neurologicalOther] ^short = "Other neurological disorders"
-* component[neurologicalSeizure].code = LNC_TBD#NEURO_SEIZ
-* component[neurologicalSeizure] ^short = "Seizures and epilepsy"
-* component[obesity].code = LNC_TBD#OBESE
-* component[obesity] ^short = "Obesity"
-* component[paralysis].code = LNC_TBD#PARALYSIS
-* component[paralysis] ^short = "Paralysis"
-* component[peripheralVascularDisease].code = LNC_TBD#PERIVASC
-* component[peripheralVascularDisease] ^short = "Peripheral Vascular Disease"
-* component[psychosis].code = LNC_TBD#PSYCHOSIS
-* component[psychosis] ^short = "Psychosis"
-* component[pulmonaryCirculationDisorder].code = LNC_TBD#PULMCIRC
-* component[pulmonaryCirculationDisorder] ^short = "Pulmonary Circulation Disorders"
-* component[renalFailureModerate].code = LNC_TBD#RENLFL_MOD
-* component[renalFailureModerate] ^short = "Moderate Renal Failure"
-* component[renalFailureSevere].code = LNC_TBD#RENLFL_SEV
-* component[renalFailureSevere] ^short = "Severe Renal Failure"
-* component[hypothyroidism].code = LNC_TBD#THYROID_HYPO
-* component[hypothyroidism] ^short = "Hypothyroidism"
-* component[thyroidOther].code = LNC_TBD#THYROID_OTH
-* component[thyroidOther] ^short = "Other Thyroid Disease"
-* component[ulcer].code = LNC_TBD#ULCER_PEPTIC
-* component[ulcer] ^short = "Ulcer"
-* component[valvularDisease].code = LNC_TBD#VALVE
-* component[valvularDisease] ^short = "Valvular Disease"
-* component[weightLoss].code = LNC_TBD#WGHTLOSS
-* component[weightLoss] ^short = "Weight Loss"
-// value[x] constraints
-* component[aids].extension[conditionCode].value[x] from ElixhauserAidsVS
-* component[alcoholAbuse].extension[conditionCode].value[x] from ElixhauserAlcoholAbuseVS
-* component[deficiencyAnemia].extension[conditionCode].value[x] from ElixhauserDeficiencyAnemiaVS
-* component[arthropathy].extension[conditionCode].value[x] from ElixhauserRheumatoidArthritisVS
-* component[bloodLossAnemia].extension[conditionCode].value[x] from ElixhauserBloodLossAnemiaVS
-* component[cancerLeukemia].extension[conditionCode].value[x] from ElixhauserCancerLeukemiaVS
-* component[cancerLymphoma].extension[conditionCode].value[x] from ElixhauserCancerLymphomaVS
-* component[cancerMetastatic].extension[conditionCode].value[x] from ElixhauserCancerMetastaticVS
-* component[cancerSolidInSitu].extension[conditionCode].value[x] from ElixhauserCancerSolidTumorInSituVS
-* component[cancerSolidMalignant].extension[conditionCode].value[x] from ElixhauserCancerSolidTumorMalignantVS
-* component[cerebrovascular].extension[conditionCode].value[x] from ElixhauserCerebrovascularDiseaseVS
-* component[congestiveHeartFailure].extension[conditionCode].value[x] from ElixhauserCongestiveHeartFailureVS
-* component[chronicPulmonaryDisease].extension[conditionCode].value[x] from ElixhauserChronicPulmonaryDiseaseVS
-* component[coagulopathy].extension[conditionCode].value[x] from ElixhauserCoagulationDeficiencyVS
-* component[dementia].extension[conditionCode].value[x] from ElixhauserDementiaVS
-* component[depression].extension[conditionCode].value[x] from ElixhauserDepressionVS
-* component[diabetesComplicated].extension[conditionCode].value[x] from ElixhauserDiabetesComplicatedVS
-* component[diabetesUncomplicated].extension[conditionCode].value[x] from ElixhauserDiabetesUncomplicatedVS
-* component[drugAbuse].extension[conditionCode].value[x] from ElixhauserDrugAbuseVS
-* component[hypertensionComplicated].extension[conditionCode].value[x] from ElixhauserHypertensionComplicatedVS
-* component[hypertensionUncomplicated].extension[conditionCode].value[x] from ElixhauserHypertensionUncomplicatedVS
-* component[liverDiseaseMild].extension[conditionCode].value[x] from ElixhauserLiverDiseaseMildVS
-* component[liverDiseaseSevere].extension[conditionCode].value[x] from ElixhauserLiverDiseaseSevereVS
-* component[neurologicalMovement].extension[conditionCode].value[x] from ElixhauserNeurologicalMovementDisorderVS
-* component[neurologicalOther].extension[conditionCode].value[x] from ElixhauserOtherNeurologicalVS
-* component[neurologicalSeizure].extension[conditionCode].value[x] from ElixhauserNeurologicalSeizureDisorderVS
-* component[obesity].extension[conditionCode].value[x] from ElixhauserObesityVS
-* component[paralysis].extension[conditionCode].value[x] from ElixhauserParalysisVS
-* component[peripheralVascularDisease].extension[conditionCode].value[x] from ElixhauserPeripheralVascularDiseaseVS
-* component[psychosis].extension[conditionCode].value[x] from ElixhauserPsychosisVS
-* component[pulmonaryCirculationDisorder].extension[conditionCode].value[x] from ElixhauserPulmonaryCirculationDisorderVS
-* component[renalFailureModerate].extension[conditionCode].value[x] from ElixhauserRenalFailureModerateVS
-* component[renalFailureSevere].extension[conditionCode].value[x] from ElixhauserRenalFailureSevereVS
-* component[hypothyroidism].extension[conditionCode].value[x] from ElixhauserHypothyroidismVS
-* component[thyroidOther].extension[conditionCode].value[x] from ElixhauserOtherThyroidDisorderVS
-* component[ulcer].extension[conditionCode].value[x] from ElixhauserUlcerVS
-* component[valvularDisease].extension[conditionCode].value[x] from ElixhauserValvularDiseaseVS
-* component[weightLoss].extension[conditionCode].value[x] from ElixhauserWeightLossVS
+* insert CreateComorbidityComponent(aids, AIDS, "Acquired Immune Deficiency Syndrome", ElixhauserAidsVS)
+* insert CreateComorbidityComponent(alcoholAbuse, ALCOHOL, "Alcohol Abuse", ElixhauserAlcoholAbuseVS)
+* insert CreateComorbidityComponent(deficiencyAnemia, ANEMDF, "DeficiencyAnemia", ElixhauserDeficiencyAnemiaVS)
+* insert CreateComorbidityComponent(arthropathy, ARTH, "Arthropathy", ElixhauserRheumatoidArthritisVS)
+* insert CreateComorbidityComponent(bloodLossAnemia, BLDLOSS, "Chronic Blood Loss Anemia", ElixhauserBloodLossAnemiaVS)
+* insert CreateComorbidityComponent(cancerLeukemia, CANCER_LEUK, "Leukemia", ElixhauserCancerLeukemiaVS)
+* insert CreateComorbidityComponent(cancerLymphoma, CANCER_LYMPH, "Lymphoma", ElixhauserCancerLymphomaVS)
+* insert CreateComorbidityComponent(cancerMetastatic, CANCER_METS , "Metastatic Cancer", ElixhauserCancerMetastaticVS)
+* insert CreateComorbidityComponent(cancerSolidInSitu, CANCER_NSITU, "Solid tumor without metastasis\, in situ", ElixhauserCancerSolidTumorInSituVS)
+* insert CreateComorbidityComponent(cancerSolidMalignant, CANCER_SOLID, "Solid tumor without metastasis\, malignant", ElixhauserCancerSolidTumorMalignantVS)
+* insert CreateComorbidityComponent(cerebrovascular, CBVD, "Cerebrovascular disease", ElixhauserCerebrovascularDiseaseVS)
+* insert CreateComorbidityComponent(congestiveHeartFailure, CHF, "CongestiveHeartFailure", ElixhauserCongestiveHeartFailureVS)
+* insert CreateComorbidityComponent(coagulopathy, COAG, "Coagulation Deficiency", ElixhauserCoagulationDeficiencyVS)
+* insert CreateComorbidityComponent(dementia, DEMENTIA, "Dementia", ElixhauserDementiaVS)
+* insert CreateComorbidityComponent(depression, DEPRESS, "Depression", ElixhauserDepressionVS)
+* insert CreateComorbidityComponent(diabetesComplicated, DIAB_CX, "Diabetes with chronic complications", ElixhauserDiabetesComplicatedVS)
+* insert CreateComorbidityComponent(diabetesUncomplicated, DIAB_UNCX, "Diabetes without chronic complications", ElixhauserDiabetesUncomplicatedVS)
+* insert CreateComorbidityComponent(drugAbuse, DRUG_ABUSE, "Drug Abuse", ElixhauserDrugAbuseVS)
+* insert CreateComorbidityComponent(hypertensionComplicated, HTN_CX, "Hypertension\, Complicated", ElixhauserHypertensionComplicatedVS)
+* insert CreateComorbidityComponent(hypertensionUncomplicated, HTN_UNCX, "Hypertension\, Uncomplicated", ElixhauserHypertensionUncomplicatedVS)
+* insert CreateComorbidityComponent(liverDiseaseMild, LIVER_MLD, "Mild Liver Disease", ElixhauserLiverDiseaseMildVS)
+* insert CreateComorbidityComponent(liverDiseaseSevere, LIVER_SEV, "Moderate to Severe Liver Disease", ElixhauserLiverDiseaseSevereVS)
+* insert CreateComorbidityComponent(chronicPulmonaryDisease, LUNG_CHRONIC, "Chronic pulmonary disease", ElixhauserChronicPulmonaryDiseaseVS)
+* insert CreateComorbidityComponent(neurologicalMovement, NEURO_MOVT, "Neurological disorders affecting movement", ElixhauserNeurologicalMovementDisorderVS)
+* insert CreateComorbidityComponent(neurologicalOther, NEURO_OTH, "Other neurological disorders", ElixhauserOtherNeurologicalVS)
+* insert CreateComorbidityComponent(neurologicalSeizure, NEURO_SEIZ, "Seizures and epilepsy", ElixhauserNeurologicalSeizureDisorderVS)
+* insert CreateComorbidityComponent(obesity, OBESE, "Obesity", ElixhauserObesityVS)
+* insert CreateComorbidityComponent(paralysis, PARALYSIS, "Paralysis", ElixhauserParalysisVS)
+* insert CreateComorbidityComponent(peripheralVascularDisease, PERIVASC, "Peripheral Vascular Disease", ElixhauserPeripheralVascularDiseaseVS)
+* insert CreateComorbidityComponent(psychosis, PSYCHOSIS, "Psychosis", ElixhauserPsychosisVS)
+* insert CreateComorbidityComponent(pulmonaryCirculationDisorder, PULMCIRC, "Pulmonary Circulation Disorders", ElixhauserPulmonaryCirculationDisorderVS)
+* insert CreateComorbidityComponent(renalFailureModerate, RENLFL_MOD, "Moderate Renal Failure", ElixhauserRenalFailureModerateVS)
+* insert CreateComorbidityComponent(renalFailureSevere, RENLFL_SEV, "Severe Renal Failure", ElixhauserRenalFailureSevereVS)
+* insert CreateComorbidityComponent(hypothyroidism, THYROID_HYPO, "Hypothyroidism", ElixhauserHypothyroidismVS)
+* insert CreateComorbidityComponent(thyroidOther, THYROID_OTH, "Other Thyroid Disease", ElixhauserOtherThyroidDisorderVS)
+* insert CreateComorbidityComponent(ulcer, ULCER_PEPTIC, "Ulcer", ElixhauserUlcerVS)
+* insert CreateComorbidityComponent(valvularDisease, VALVE, "Valvular Disease", ElixhauserValvularDiseaseVS)
+* insert CreateComorbidityComponent(weightLoss, WGHTLOSS,"Weight Loss", ElixhauserWeightLossVS)
 // Must Supports -- none inherited
 * component and status and code and subject and focus and effective[x] MS
 //

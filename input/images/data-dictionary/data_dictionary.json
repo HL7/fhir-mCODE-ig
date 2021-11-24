@@ -40442,6 +40442,12 @@
       "Logical definition": "concept is 106233006 AND concept is 272424004"
     },
     {
+      "Value set name": "Body Location Qualifier Value Set",
+      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-body-location-qualifier-vs",
+      "Code system": "n/a",
+      "Logical definition": "Include codes from Body Location and Laterality Qualifier Value Set"
+    },
+    {
       "Value set name": "Brachytherapy High Dose Rate Electronic Technique Value Set",
       "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-brachytherapy-high-dose-rate-electronic-technique-vs",
       "Code system": "SNOMED CT",
@@ -40645,6 +40651,42 @@
       "Code description": "Intracavitary brachytherapy (procedure)"
     },
     {
+      "Value set name": "Brachytherapy Technique Value Set",
+      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-brachytherapy-technique-vs",
+      "Code system": "n/a",
+      "Logical definition": "Include codes from Brachytherapy Permanent Seeds Technique Value Set"
+    },
+    {
+      "Value set name": "Brachytherapy Technique Value Set",
+      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-brachytherapy-technique-vs",
+      "Code system": "n/a",
+      "Logical definition": "Include codes from Brachytherapy Low Dose Rate Temporary Radation Technique Value Set"
+    },
+    {
+      "Value set name": "Brachytherapy Technique Value Set",
+      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-brachytherapy-technique-vs",
+      "Code system": "n/a",
+      "Logical definition": "Include codes from Brachytherapy Pulsed Dose Rate Technique Value Set"
+    },
+    {
+      "Value set name": "Brachytherapy Technique Value Set",
+      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-brachytherapy-technique-vs",
+      "Code system": "n/a",
+      "Logical definition": "Include codes from Brachytherapy High Dose Rate Technique Value Set"
+    },
+    {
+      "Value set name": "Brachytherapy Technique Value Set",
+      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-brachytherapy-technique-vs",
+      "Code system": "n/a",
+      "Logical definition": "Include codes from Brachytherapy High Dose Rate Electronic Technique Value Set"
+    },
+    {
+      "Value set name": "Brachytherapy Technique Value Set",
+      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-brachytherapy-technique-vs",
+      "Code system": "n/a",
+      "Logical definition": "Include codes from Brachytherapy Radiopharmaceutical Technique Value Set"
+    },
+    {
       "Value set name": "Cancer Body Location Value Set",
       "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-body-location-vs",
       "Code system": "SNOMED CT",
@@ -40655,6 +40697,24 @@
       "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-disease-status-evidence-type-vs",
       "Code system": "SNOMED CT",
       "Logical definition": "concept is 714797009 AND concept is 116147009 AND concept is 108257001 AND concept is 386344002 AND concept is 5880005 AND concept is 363679005 AND concept is 250724005"
+    },
+    {
+      "Value set name": "Cancer Disorder Value Set",
+      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-disorder-vs",
+      "Code system": "n/a",
+      "Logical definition": "Include codes from Primary Cancer Disorder Value Set"
+    },
+    {
+      "Value set name": "Cancer Disorder Value Set",
+      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-disorder-vs",
+      "Code system": "n/a",
+      "Logical definition": "Include codes from Secondary Cancer Disorder Value Set"
+    },
+    {
+      "Value set name": "Cancer Disorder Value Set",
+      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-disorder-vs",
+      "Code system": "n/a",
+      "Logical definition": "Include codes from Histology Morphology Behavior Value Set"
     },
     {
       "Value set name": "Cancer-Related Surgical Procedure Value Set",
@@ -41921,6 +41981,42 @@
       "Code system": "SNOMED CT",
       "Code": "52101004",
       "Code description": "Present (qualifier value)"
+    },
+    {
+      "Value set name": "Primary Cancer Disorder Value Set",
+      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-primary-cancer-disorder-vs",
+      "Code system": "n/a",
+      "Logical definition": "Include codes from Primary Malignant Neoplasm Disorder Value Set"
+    },
+    {
+      "Value set name": "Primary Cancer Disorder Value Set",
+      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-primary-cancer-disorder-vs",
+      "Code system": "n/a",
+      "Logical definition": "Include codes from Specific Diagnosis of Cancer Value Set"
+    },
+    {
+      "Value set name": "Primary Cancer Disorder Value Set",
+      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-primary-cancer-disorder-vs",
+      "Code system": "n/a",
+      "Logical definition": "Include codes from Carcinoma In-Situ Disorder Value Set"
+    },
+    {
+      "Value set name": "Primary Cancer Disorder Value Set",
+      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-primary-cancer-disorder-vs",
+      "Code system": "n/a",
+      "Logical definition": "Include codes from Melanoma In-Situ Disorder Value Set"
+    },
+    {
+      "Value set name": "Primary Cancer Disorder Value Set",
+      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-primary-cancer-disorder-vs",
+      "Code system": "n/a",
+      "Logical definition": "Include codes from Benign Neoplasm of Brain and CNS Disorder Value Set"
+    },
+    {
+      "Value set name": "Primary Cancer Disorder Value Set",
+      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-primary-cancer-disorder-vs",
+      "Code system": "n/a",
+      "Logical definition": "Include codes from Cytologic Evidence of Malignancy Value Set"
     },
     {
       "Value set name": "Primary Malignant Neoplasm Disorder Value Set",
@@ -49307,6 +49403,30 @@
       "Code description": "Forensic intent"
     },
     {
+      "Value set name": "Radiotherapy Modality Value Set",
+      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-radiotherapy-modality-vs",
+      "Code system": "n/a",
+      "Logical definition": "Include codes from Teleradiotherapy Modality Value Set"
+    },
+    {
+      "Value set name": "Radiotherapy Modality Value Set",
+      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-radiotherapy-modality-vs",
+      "Code system": "n/a",
+      "Logical definition": "Include codes from Brachytherapy Modality Value Set"
+    },
+    {
+      "Value set name": "Radiotherapy Technique Value Set",
+      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-radiotherapy-technique-vs",
+      "Code system": "n/a",
+      "Logical definition": "Include codes from Teleradiotherapy Technique Value Set"
+    },
+    {
+      "Value set name": "Radiotherapy Technique Value Set",
+      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-radiotherapy-technique-vs",
+      "Code system": "n/a",
+      "Logical definition": "Include codes from Brachytherapy Technique Value Set"
+    },
+    {
       "Value set name": "Radiotherapy Treatment Location Qualifier Value Set",
       "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-radiotherapy-treatment-location-qualifier-vs",
       "Code system": "SNOMED CT",
@@ -49577,6 +49697,12 @@
       "Code system": "http://hl7.org/fhir/us/mcode/CodeSystem/snomed-requested-cs",
       "Code": "USCRS-33144",
       "Code description": "Non-adjacent (qualifier)"
+    },
+    {
+      "Value set name": "Radiotherapy Treatment Location Qualifier Value Set",
+      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-radiotherapy-treatment-location-qualifier-vs",
+      "Code system": "n/a",
+      "Logical definition": "Include codes from Laterality Qualifier Value Set"
     },
     {
       "Value set name": "Radiotherapy Treatment Location Value Set",
@@ -52719,6 +52845,36 @@
       "Code system": "http://hl7.org/fhir/us/mcode/CodeSystem/snomed-requested-cs",
       "Code": "USCRS-33517",
       "Code description": "External beam radiation therapy using particle scanning technique (procedure)"
+    },
+    {
+      "Value set name": "Teleradiotherapy Technique Value Set",
+      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-teleradiotherapy-technique-vs",
+      "Code system": "n/a",
+      "Logical definition": "Include codes from Photon Beam Technique Value Set"
+    },
+    {
+      "Value set name": "Teleradiotherapy Technique Value Set",
+      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-teleradiotherapy-technique-vs",
+      "Code system": "n/a",
+      "Logical definition": "Include codes from Electron Beam Technique Value Set"
+    },
+    {
+      "Value set name": "Teleradiotherapy Technique Value Set",
+      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-teleradiotherapy-technique-vs",
+      "Code system": "n/a",
+      "Logical definition": "Include codes from Neutron Beam Technique Value Set"
+    },
+    {
+      "Value set name": "Teleradiotherapy Technique Value Set",
+      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-teleradiotherapy-technique-vs",
+      "Code system": "n/a",
+      "Logical definition": "Include codes from Carbon Ion Beam Technique Value Set"
+    },
+    {
+      "Value set name": "Teleradiotherapy Technique Value Set",
+      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-teleradiotherapy-technique-vs",
+      "Code system": "n/a",
+      "Logical definition": "Include codes from Proton Beam Technique Value Set"
     },
     {
       "Value set name": "Treatment Termination Reason Value Set",

@@ -125,6 +125,37 @@ remapValues:
   - column: Profile Title
     old: Genetic Specimen
     new: Genomic Specimen Profile
+    # Profile title changes
+  - column: Profile Title
+    old: Cancer Disease Status
+    new: Cancer Disease Status Profile
+  - column: Profile Title
+    old: Cancer Patient
+    new: Cancer Patient Profile
+  - column: Profile Title
+    old: Cancer-Related Surgical Procedure
+    new: Cancer-Related Surgical Procedure Profile
+  - column: Profile Title
+    old: ECOG Performance Status
+    new: ECOG Performance Status Profile
+  - column: Profile Title
+    old: Genomic Region Studied
+    new: Genomic Region Studied Profile
+  - column: Profile Title
+    old: Karnofsky Performance Status
+    new: Karnofsky Performance Status Profile
+  - column: Profile Title
+    old: Primary Cancer Condition
+    new: Primary Cancer Condition Profile
+  - column: Profile Title
+    old: Secondary Cancer Condition
+    new: Secondary Cancer Condition Profile
+  - column: Profile Title
+    old: Tumor Marker Test
+    new: Tumor Marker Test Profile
+  - column: Value set name
+    old: TumorMarkerTestVS
+    new: Tumor Marker Test Value Set
 
 
   # Suppress minimization of repeated comments
@@ -752,4 +783,3 @@ notes:
 #        Data Element Name: "Category"
 #      - Profile Title: TNM Pathological Stage Group
 #        Data Element Name: "Category"
-

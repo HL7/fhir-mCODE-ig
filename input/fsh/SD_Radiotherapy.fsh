@@ -194,7 +194,7 @@ Extension: RadiotherapySessions
 Id:        mcode-radiotherapy-sessions
 Title:     "Radiotherapy Number of Sessions Extension"
 Description: "The number of sessions in a course of radiotherapy."
-* insert ExtensionContext(Procedure)
+// * insert ExtensionContext(Procedure) - removed as per FHIR-32243
 * value[x] only unsignedInt
 * value[x] 1..1
 
@@ -202,7 +202,7 @@ Extension: RadiotherapyDoseDeliveredToVolume
 Id: mcode-radiotherapy-dose-delivered-to-volume
 Title: "Radiotherapy Dose Delivered To Volume Extension"
 Description: "Dose delivered to a given radiotherapy volume."
-* insert ExtensionContext(Procedure)
+// * insert ExtensionContext(Procedure) - removed as per FHIR-32243
 * extension contains
     volume 1..1 MS and
     totalDoseDelivered 0..1 MS and

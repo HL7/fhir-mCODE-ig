@@ -80,7 +80,7 @@ Description: "Codes requested from SNOMED by mCODE, to be issued at a later date
 * #USCRS-33144 "non-adjacent (qualifier)"
 * #USCRS-352237 "Cancer in partial remission (finding)"
 * #USCRS-352236 "Cancer in complete remission(finding)"
-* #USCRS-33292 "Radiotherapy Course Summary (procedure)"
+* #USCRS-33529 "Radiotherapy Course of Treatment (regime/therapy)"
 // * #USCRS-33347 "supra-mammary" // Request rejected; TRG requested removal
 * #USCRS-33146 "Bone structure of thirteenth rib (body structure)"
 * #USCRS-33350 "Retrostyloid space (body structure)"

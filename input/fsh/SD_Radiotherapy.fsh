@@ -27,7 +27,7 @@ Title:    "Radiotherapy Course Summary Profile"
 Description: "A summary of a course of radiotherapy delivered to a patient. It records the treatment intent, termination reason, modalities, techniques, number of sessions, and doses delivered to one or more body volumes. Whether the course has been fully delivered or stopped is indicated in the status element."
 * insert RadiotherapyCommon
 // Summary-specific content
-* code = SCT_TBD#USCRS-33292
+* code = SCT_TBD#USCRS-33529 // Radiotherapy Course of Treatment (regime/therapy)
 * extension contains
     ProcedureIntent named treatmentIntent 0..1 MS and
     TreatmentTerminationReason named terminationReason 0..1 MS and

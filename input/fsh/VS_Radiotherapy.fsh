@@ -432,7 +432,7 @@ Description: "Codes describing the body locations where radiotherapy treatments 
 * SCT#245294005 "Pelvic lymph node group (body structure)" // Pelvic Lymph Nodes Left
 * SCT#245288002 "Portahepatis lymph node group (body structure)" // Porta hepatis
 * SCT#45206002 "Nasal structure (body structure)" // Nose
-* SCT_TBD#USCRS-33346 "Presacral lymph node group (body structure)" // Lymph nodes of pelvis - presacral Left
+* SCT_TBD#1187336003 "Presacral lymph node group (body structure)" // Lymph nodes of pelvis - presacral Left
 * SCT#196662004 "Structure of intrapulmonary lymph node (body structure)" // Lymph nodes of thorax - Pulmonary Left
 * SCT#76838003 "Structure of supraclavicular lymph node (body structure)" // Supraclavicular Lymph Node Left
 * SCT#245283006 "Tracheobronchial lymph node group (body structure)" // Lymph nodes of thorax - Tracheobronchial
@@ -607,6 +607,6 @@ Description: "Codes describing the body locations where radiotherapy treatments 
 * SCT#52120002 "Structure of body of eleventh thoracic vertebra (body structure)" // Thoracic Vertebra T11
 * SCT#280849005 "Structure of body of twelfth  thoracic vertebra (body structure)" // Thoracic Vertebra T12
 * SCT_TBD#USCRS-33147 "Structure of body of thirteenth  thoracic vertebra (body structure)" // Thoracic Vertebra T13
-* SCT_TBD#USCRS-33348 "Jugular Fossa (body structure)" // Jugular Fossa
+* SCT_TBD#1187337007 "Jugular Fossa (body structure)" // Jugular Fossa
 * SCT#35763008 "Structure of posterior fossa of cranial cavity (body structure)" // Posterior Fossa
 * SCT#87166008 "Vomer bone structure (body structure)" // Vomer

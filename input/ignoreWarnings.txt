@@ -63,6 +63,26 @@ WARNING: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[19].resource.ofType(M
 WARNING: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[20].resource.ofType(MedicationRequest).reasonReference[0]: Found multiple matching profiles for Condition/primary-cancer-condition-jenny-m among choices: http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-secondary-cancer-condition, http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-primary-cancer-condition
 WARNING: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[21].resource.ofType(MedicationRequest).reasonReference[0]: Found multiple matching profiles for Condition/primary-cancer-condition-jenny-m among choices: http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-secondary-cancer-condition, http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-primary-cancer-condition
 
+# SUPPRESS INFORMATIONs ABOUT BUNDLE ENTRY MATCHING NOT MATCHING ANY KNOWN SLICE
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[23]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[24]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[25]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[26]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[27]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[28]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[29]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[30]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[31]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[32]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[33]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[34]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[35]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[36]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[38]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[39]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[40]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[32].resource.ofType(DiagnosticReport).category[1]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-lab
+
 
 # SUPPRESS INFORMATION MESSAGES ABOUT BEING UNABLE TO SUPPORT CERTAIN CODE SYSTEMS
 Error from server: Unable to provide support for code system http://terminology.hl7.org/CodeSystem/icd-o-3

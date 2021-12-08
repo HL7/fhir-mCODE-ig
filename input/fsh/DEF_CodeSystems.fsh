@@ -83,7 +83,7 @@ Description: "Codes requested from SNOMED by mCODE, to be issued at a later date
 * #USCRS-33529 "Radiotherapy Course of Treatment (regime/therapy)"
 // * #USCRS-33347 "supra-mammary" // Request rejected; TRG requested removal
 * #USCRS-33146 "Bone structure of thirteenth rib (body structure)"
-* #USCRS-33350 "Retrostyloid space (body structure)"
+* #1193554003 "Structure of retrostyloid space (body structure)" //USCRS-33350
 * #USCRS-33147 "Structure of body of thirteenth thoracic vertebra (body structure)"
 * #1187337007  "Jugular Fossa (body structure)" //USCRS-33348
 * #USCRS-33520 "Internal Target Volume" "Clinical tumor volume with an internal margin to compensate for all movements"

@@ -509,7 +509,7 @@ Description: "Codes describing the body locations where radiotherapy treatments 
 * SCT_TBD#USCRS-33351 "Bowel space (body structure)" // Space occupied by bowel
 * SCT_TBD#USCRS-33352 "Small bowel space (body structure)" // Space occupied by small bowel
 * SCT#789564000 "Structure of retropharyngeal space (body structure)" // Retropharyngeal space
-* SCT_TBD#USCRS-33350 "Retrostyloid space (body structure)" // Retrostyloid space
+* SCT#1193554003 "Structure of retrostyloid space (body structure)" // Retrostyloid space
 * SCT#41178004 "Structure of sphincter ani muscle (body structure)" // Internal Anal Sphincter
 * SCT#61853006 "Spinal canal structure (body structure)" // Vertebral canal
 * SCT#24999009 "Sphenoid sinus structure (body structure)" // Sphenoidal Sinus Left

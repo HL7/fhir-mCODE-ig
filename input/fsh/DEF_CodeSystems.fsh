@@ -75,16 +75,16 @@ Description: "Codes requested from SNOMED by mCODE, to be issued at a later date
 * #1162613003 "Lymph node level XB (qualifier value)"
 * #USCRS-33351 "Bowel space (body structure)"
 * #USCRS-33352 "Small bowel space (body structure)"
-* #1187336003 "Presacral lymph node group (body structure)" // USCRS-33346
+* #1187336003 "Presacral lymph node group (body structure)" // USCRS-33466
 * #USCRS-33517 "External beam radiation therapy using particle scanning technique (procedure)"
 * #USCRS-33144 "non-adjacent (qualifier)"
 * #USCRS-352237 "Cancer in partial remission (finding)"
 * #USCRS-352236 "Cancer in complete remission(finding)"
 * #USCRS-33529 "Radiotherapy Course of Treatment (regime/therapy)"
 // * #USCRS-33347 "supra-mammary" // Request rejected; TRG requested removal
-* #USCRS-33146 "Bone structure of thirteenth rib (body structure)"
-* #USCRS-33350 "Retrostyloid space (body structure)"
-* #USCRS-33147 "Structure of body of thirteenth thoracic vertebra (body structure)"
+* #1193560003 "Bone structure of thirteenth rib (body structure)" //USCRS-33146
+* #1193554003 "Structure of retrostyloid space (body structure)" //USCRS-33350
+* #1186895000 "Structure of body of thirteenth thoracic vertebra (body structure)" //USCRS-33147
 * #1187337007  "Jugular Fossa (body structure)" //USCRS-33348
 * #USCRS-33520 "Internal Target Volume" "Clinical tumor volume with an internal margin to compensate for all movements"
 * #USCRS-33521 "Internal Gross Tumor Volume" "Gross tumor volume with an internal margin to compensate for all movements"

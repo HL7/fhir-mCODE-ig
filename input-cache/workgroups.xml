@@ -10,7 +10,7 @@
   <workgroup key="gas" webcode="gas" name="Anesthesia"/>
   <workgroup key="arb" name="Architecture Review Board" deprecated="true"/>
   <workgroup key="as" webcode="as" name="Arden Syntax"/>
-  <workgroup key="att" webcode="att" name="Attachments"/>
+  <workgroup key="att" webcode="att" name="Attachments" deprecated="true"/>
   <workgroup key="brr" webcode="rcrim" name="Biomedical Research &amp;amp; Regulation"/>
   <workgroup key="cbcc" webcode="homehealth" name="Community-Based Care and Privacy"/>
   <workgroup key="cdamg" webcode="cdamanagement" name="CDA Management Group"/>

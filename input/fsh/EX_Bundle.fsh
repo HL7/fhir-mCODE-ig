@@ -15,10 +15,10 @@ Description: "Extended example as a mCODE Patient Bundle"
 // Named slices, required
 * entry[+].resource = cancer-patient-jenny-m
 * entry[=].fullUrl = "http://example.org/fhir/Patient/cancer-patient-jenny-m"
-* entry[=].resource.meta.profile[0] = Canonical(CancerPatient)
+//* entry[=].resource.meta.profile[0] = Canonical(CancerPatient)
 * entry[+].resource = primary-cancer-condition-jenny-m
 * entry[=].fullUrl = "http://example.org/fhir/Condition/primary-cancer-condition-jenny-m"
-* entry[=].resource.meta.profile[0] = Canonical(PrimaryCancerCondition)
+//* entry[=].resource.meta.profile[0] = Canonical(PrimaryCancerCondition)
 * entry[+].resource = cancer-related-medication-request-cyclophosphamide-jenny-m
 * entry[=].fullUrl = "http://example.org/fhir/MedicationRequest/cancer-related-medication-request-cyclophosphamide-jenny-m"
 // * entry[=].resource.meta.profile[0]profile[0] = Canonical(CancerRelatedMedicationRequest)

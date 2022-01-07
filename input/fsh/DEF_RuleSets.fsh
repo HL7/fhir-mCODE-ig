@@ -58,7 +58,7 @@ RuleSet: BundleSlice(name, min, max, short, def, class)
 * entry[{name}] ^short = "{short}"
 * entry[{name}] ^definition = "{def}"
 * entry[{name}].resource only {class}
-* entry[{name}].resource.meta.profile = Canonical({class})
+//* entry[{name}].resource.meta.profile = Canonical({class})
 
 RuleSet: SNOMEDCTCopyrightForVS
 * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"

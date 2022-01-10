@@ -191,8 +191,8 @@ e: {
   "language" : "en",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:520d1b88-7f94-4062-9970-6fc541f29eb3",
-    "timestamp" : "2021-11-24T14:42:44.160Z",
+    "identifier" : "urn:uuid:bce671a6-66de-4abb-91be-e56aface091d",
+    "timestamp" : "2022-01-06T23:24:18.719Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -208,62 +208,62 @@ e: {
     "contains" : [{
       "system" : "http://unitsofmeasure.org",
       "code" : "%",
-      "display" : "%"
+      "display" : "percent"
     },
     {
       "system" : "http://unitsofmeasure.org",
       "code" : "cm",
-      "display" : "cm"
+      "display" : "centimeter"
     },
     {
       "system" : "http://unitsofmeasure.org",
       "code" : "[in_i]",
-      "display" : "[in_i]"
+      "display" : "inch (international)"
     },
     {
       "system" : "http://unitsofmeasure.org",
       "code" : "kg",
-      "display" : "kg"
+      "display" : "kilogram"
     },
     {
       "system" : "http://unitsofmeasure.org",
       "code" : "g",
-      "display" : "g"
+      "display" : "gram"
     },
     {
       "system" : "http://unitsofmeasure.org",
       "code" : "[lb_av]",
-      "display" : "[lb_av]"
+      "display" : "pound (US and British)"
     },
     {
       "system" : "http://unitsofmeasure.org",
       "code" : "Cel",
-      "display" : "Cel"
+      "display" : "degree Celsius"
     },
     {
       "system" : "http://unitsofmeasure.org",
       "code" : "[degF]",
-      "display" : "[degF]"
+      "display" : "degree Fahrenheit"
     },
     {
       "system" : "http://unitsofmeasure.org",
       "code" : "mm[Hg]",
-      "display" : "mm[Hg]"
+      "display" : "millimeter of mercury"
     },
     {
       "system" : "http://unitsofmeasure.org",
       "code" : "/min",
-      "display" : "/min"
+      "display" : "per minute"
     },
     {
       "system" : "http://unitsofmeasure.org",
       "code" : "kg/m2",
-      "display" : "kg/m2"
+      "display" : "kilogram / (meter ^ 2)"
     },
     {
       "system" : "http://unitsofmeasure.org",
       "code" : "m2",
-      "display" : "m2"
+      "display" : "square meter"
     }]
   }
 },
@@ -352,71 +352,6 @@ v: {
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://unitsofmeasure.org",
-  "code" : "[lb_av]"
-}, "valueSet" :{
-  "resourceType" : "ValueSet",
-  "compose" : {
-    "include" : [{
-      "system" : "http://unitsofmeasure.org",
-      "concept" : [{
-        "code" : "%",
-        "display" : "percent"
-      },
-      {
-        "code" : "cm",
-        "display" : "centimeter"
-      },
-      {
-        "code" : "[in_i]",
-        "display" : "inch (international)"
-      },
-      {
-        "code" : "kg",
-        "display" : "kilogram"
-      },
-      {
-        "code" : "g",
-        "display" : "gram"
-      },
-      {
-        "code" : "[lb_av]",
-        "display" : "pound (US and British)"
-      },
-      {
-        "code" : "Cel",
-        "display" : "degree Celsius"
-      },
-      {
-        "code" : "[degF]",
-        "display" : "degree Fahrenheit"
-      },
-      {
-        "code" : "mm[Hg]",
-        "display" : "millimeter of mercury"
-      },
-      {
-        "code" : "/min",
-        "display" : "per minute"
-      },
-      {
-        "code" : "kg/m2",
-        "display" : "kilogram / (meter ^ 2)"
-      },
-      {
-        "code" : "m2",
-        "display" : "square meter"
-      }]
-    }]
-  }
-}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
-v: {
-  "display" : "[lb_av]",
-  "code" : "[lb_av]",
-  "system" : "http://unitsofmeasure.org"
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://unitsofmeasure.org",
   "code" : "10*3/uL"
 }, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
 v: {
@@ -465,7 +400,7 @@ v: {
   }
 }, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
 v: {
-  "display" : "cm",
+  "display" : "Centimeter",
   "code" : "cm",
   "system" : "http://unitsofmeasure.org"
 }
@@ -502,8 +437,8 @@ e: {
   "language" : "en",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:e6b1640c-4cd0-4e84-8aed-35b389e9b5e9",
-    "timestamp" : "2021-11-24T14:49:21.260Z",
+    "identifier" : "urn:uuid:b833131b-56ed-49d8-aea1-b173f8d42f41",
+    "timestamp" : "2022-01-06T23:27:23.954Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -515,12 +450,12 @@ e: {
     "contains" : [{
       "system" : "http://unitsofmeasure.org",
       "code" : "mm",
-      "display" : "mm"
+      "display" : "Millimeter"
     },
     {
       "system" : "http://unitsofmeasure.org",
       "code" : "cm",
-      "display" : "cm"
+      "display" : "Centimeter"
     }]
   }
 },

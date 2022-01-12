@@ -219,7 +219,7 @@ Description: "Various modifiers that can be applied to body locations where radi
 * SCT#260528009    "Middle (qualifier value)"
 * SCT#46053002    "Distal (qualifier value)"
 * SCT#40415009    "Proximal (qualifier value)"
-* SCT#255503000    "Entire (qualifier value)" // Publisher v1.1.93 flags as invalid
+* SCT#255503000    "Entire (qualifier value)" // Publisher v1.1.94 flags as invalid
 * SCT#255609007    "Partial (qualifier value)"
 //* SCT#7771000    "Left (qualifier value)" - now in separate lateralityQualifier
 //* SCT#24028007    "Right (qualifier value)" - now in separate lateralityQualifier

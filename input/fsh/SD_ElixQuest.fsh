@@ -5,12 +5,13 @@ RuleSet: CreateComorbidityitem(sliceName, code, short, vs)
 * item[{sliceName}].answer MS
 //* item[{sliceName}].dataAbsentReason MS
 * item[{sliceName}].answer.extension MS
-* item[{sliceName}].answer.extension[conditionCode] MS
-* item[{sliceName}].answer.extension[conditionReference] MS
+//* item[{sliceName}].answer.extension[conditionCode] MS
+//* item[{sliceName}].answer.extension[conditionReference] MS
 * item[{sliceName}].linkId = #{code}
 * item[{sliceName}] ^short = {short}
-* item[{sliceName}].answer.extension ^definition = "The patient's specific condition within this comorbidity class."
-* item[{sliceName}].answer.extension[conditionCode].value[x] from {vs}
+* item.answer[conditioncode].value[x] from {vs} (required)
+//* item[{sliceName}].answer.extension ^definition = "The patient's specific condition within this comorbidity class."
+//* item[{sliceName}].answer.extension[conditionCode].value[x] from
 
 Profile: ElixhauserQuestionaireResponse
 Parent: QuestionnaireResponse
@@ -22,12 +23,18 @@ Description: "Questionaire response for Elixhauser Comorbidity Responses"
 * subject only Reference(Condition)
 * subject ^short = "The Index Condition"
 * subject ^definition = "The comorbid conditions may be defined with respect to a specific 'index' condition. For example, the US Centers for Disease Control (CDC) has a list of comorbid conditions important to COVID-19. In this case, the focus would be COVID-19 and the comorbid condition categories would be those called out by CDC, namely obesity, renal disease, respiratory disease, etc."
-* item.answer.value[x] only Coding // do not bind to present/absent value set because some comorbidity scales use grades 1, 2, 3 (see Adult Comorbidity Evaluation-27)
-* item.answer.value[x] from PresentAbsentVS (required)
+* item.answer.valueCoding from PresentAbsentVS (required)
 * item.answer ^definition = "item representing the presence or absence of the named comorbidity, with optional condition code(s) or reference to the actual condition(s)."
-* item.answer.extension contains
-     ComorbidConditionCode named conditionCode 0..* and
-     ComorbidConditionReference named conditionReference 0..*
+* item.answer ^slicing.discriminator.type = #type
+* item.answer ^slicing.discriminator.path = "$this"
+* item.answer ^slicing.rules = #closed
+* item.answer contains
+     presentabsent 0..1 MS and
+     conditionreference 0..1 MS and
+     conditioncode 0..1 MS
+* item.answer[presentabsent].value[x] only boolean
+* item.answer[conditionreference].value[x] only Reference(Condition)
+* item.answer[conditioncode].value[x] only Coding
 * item.modifierExtension 0..0
 * item.linkId ^short = "Code representing the comorbidity category"
 * item.linkId ^definition = "The code identifying category of comorbidity, for example, congestive heart failure or severe renal disease. The category typically represents a set of specific diagnosis codes."
@@ -67,10 +74,10 @@ Description: "Questionaire response for Elixhauser Comorbidity Responses"
 // * insert CreateComorbidityitem(drugAbuse, "DRUG_ABUSE", "Drug Abuse", ElixhauserDrugAbuseVS)
 // * insert CreateComorbidityitem(hypertensionComplicated, "HTN_CX", "Hypertension\, Complicated", ElixhauserHypertensionComplicatedVS)
 // * insert CreateComorbidityitem(hypertensionUncomplicated, "HTN_UNCX", "Hypertension\, Uncomplicated", ElixhauserHypertensionUncomplicatedVS)
-//* insert CreateComorbidityitem(liverDiseaseMild, "LIVER_MLD", "Mild Liver Disease", ElixhauserLiverDiseaseMildVS)  *** UNCOMMENT THIS LINE--> ERROR
-//* insert CreateComorbidityitem(liverDiseaseSevere, "LIVER_SEV", "Moderate to Severe Liver Disease", ElixhauserLiverDiseaseSevereVS)
-//* insert CreateComorbidityitem(chronicPulmonaryDisease, "LUNG_CHRONIC", "Chronic pulmonary disease", ElixhauserChronicPulmonaryDiseaseVS)
-//* insert CreateComorbidityitem(neurologicalMovement, "NEURO_MOVT", "Neurological disorders affecting movement", ElixhauserNeurologicalMovementDisorderVS)
+* insert CreateComorbidityitem(liverDiseaseMild, "LIVER_MLD", "Mild Liver Disease", ElixhauserLiverDiseaseMildVS)  //*** UNCOMMENT THIS LINE--> ERROR
+* insert CreateComorbidityitem(liverDiseaseSevere, "LIVER_SEV", "Moderate to Severe Liver Disease", ElixhauserLiverDiseaseSevereVS)
+* insert CreateComorbidityitem(chronicPulmonaryDisease, "LUNG_CHRONIC", "Chronic pulmonary disease", ElixhauserChronicPulmonaryDiseaseVS)
+* insert CreateComorbidityitem(neurologicalMovement, "NEURO_MOVT", "Neurological disorders affecting movement", ElixhauserNeurologicalMovementDisorderVS)
 * insert CreateComorbidityitem(neurologicalOther, "NEURO_OTH", "Other neurological disorders", ElixhauserOtherNeurologicalVS)
 * insert CreateComorbidityitem(neurologicalSeizure, "NEURO_SEIZ", "Seizures and epilepsy", ElixhauserNeurologicalSeizureDisorderVS)
 * insert CreateComorbidityitem(obesity, "OBESE", "Obesity", ElixhauserObesityVS)

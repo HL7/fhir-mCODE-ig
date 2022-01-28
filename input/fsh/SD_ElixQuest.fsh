@@ -4,14 +4,10 @@ RuleSet: CreateComorbidityitem(sliceName, code, short, vs)
 * item[{sliceName}].linkId MS
 * item[{sliceName}].answer MS
 //* item[{sliceName}].dataAbsentReason MS
-//* item[{sliceName}].answer.extension MS
-//* item[{sliceName}].answer.extension[conditionCode] MS
-//* item[{sliceName}].answer.extension[conditionReference] MS
 * item[{sliceName}].linkId = #{code}
 * item[{sliceName}] ^short = {short}
 * item[{sliceName}].answer[conditioncode].value[x] from {vs} (required)
-//* item[{sliceName}].answer.extension ^definition = "The patient's specific condition within this comorbidity class."
-//* item[{sliceName}].answer.extension[conditionCode].value[x] from
+
 
 Profile: ElixhauserQuestionaireResponse
 Parent: QuestionnaireResponse
@@ -28,8 +24,6 @@ Description: "Questionaire response for Elixhauser Comorbidity Responses"
 * item.modifierExtension 0..0
 * item.linkId ^short = "Code representing the comorbidity category"
 * item.linkId ^definition = "The code identifying category of comorbidity, for example, congestive heart failure or severe renal disease. The category typically represents a set of specific diagnosis codes."
-// * item.answer.extension ^short = "Extensions to capture specific conditions that fall into the given category."
-// * item.answer.extension ^definition = "If more detail about the comorbid condition is desired, elements in this extension can be populated with a specific condition code or a reference to a Condition resource. The extension elements SHALL be used only if the comorbidity category is present."
 * item ^slicing.discriminator.type = #pattern
 * item ^slicing.discriminator.path = "linkId"
 * item ^slicing.rules = #closed

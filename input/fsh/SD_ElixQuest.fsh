@@ -8,7 +8,7 @@ RuleSet: CreateComorbidityitem(sliceName, code, short, vs)
 * item[{sliceName}] ^short = {short}
 //* item[{sliceName}].answer[conditioncode].value[x] from {vs} (required)
 * item[{sliceName}].answer.value[x] only Reference(Condition) or Coding or boolean
-* item[{sliceName}].answer.value[x] from {vs} (required)
+* item[{sliceName}].answer.valueCoding from {vs} (required)
 * item[{sliceName}].answer.valueCoding ^short = "Condition Code"
 * item[{sliceName}].answer.valueBoolean ^short = "Condition Present"
 * item[{sliceName}].answer.valueReference ^short = "Condition Reference"
@@ -25,6 +25,7 @@ Description: "Questionaire response for Elixhauser Comorbidity Responses"
 * subject ^definition = "The comorbid conditions may be defined with respect to a specific 'index' condition. For example, the US Centers for Disease Control (CDC) has a list of comorbid conditions important to COVID-19. In this case, the focus would be COVID-19 and the comorbid condition categories would be those called out by CDC, namely obesity, renal disease, respiratory disease, etc."
 // * item.answer.valueCoding from PresentAbsentVS (required)
 * item.answer ^definition = "item representing the presence or absence of the named comorbidity, with optional condition code(s) or reference to the actual condition(s)."
+* item.answer 1..*
 * item.modifierExtension 0..0
 * item.linkId ^short = "Code representing the comorbidity category"
 * item.linkId ^definition = "The code identifying category of comorbidity, for example, congestive heart failure or severe renal disease. The category typically represents a set of specific diagnosis codes."
@@ -69,10 +70,9 @@ Description: "Questionaire response for Elixhauser Comorbidity Responses"
 * insert CreateComorbidityitem(ulcer, "ULCER_PEPTIC", "Ulcer", ElixhauserUlcerVS)
 * insert CreateComorbidityitem(valvularDisease, "VALVE", "Valvular Disease", ElixhauserValvularDiseaseVS)
 * insert CreateComorbidityitem(weightLoss, "WGHTLOSS","Weight Loss", ElixhauserWeightLossVS)
-// Must Supports -- none inherited
-//* item and status and code and subject and focus and effective[x] MS
-//
-//* value[x] only integer
-//* value[x] MS
-// No Must Suppports in the abstract profile
-//* item and item.extension MS
+* item contains ElixhauserScore 0..1 MS
+* item[ElixhauserScore].linkId MS
+* item[ElixhauserScore].answer MS
+* item[ElixhauserScore].linkId = "ElixhauserScore"
+* item[ElixhauserScore] ^short = "Elixhauser Score"
+* item[ElixhauserScore].answer.value[x] only decimal

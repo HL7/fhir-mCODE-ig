@@ -1,4 +1,14 @@
+### Updates Since mCODE STU 2 Publication  (2022)
+ * Integrated SNOMED Codes that have been issued since STU2 publication
+
 ### mCODE STU 2 Publication Version (November 2021)
+* #1204242009  "External beam radiation therapy using particle scanning technique (procedure)" //USCRS-33517
+* #1217011006  "non-adjacent (qualifier)" // USCRS-33144
+* #551001000124108  "Cancer in partial remission (finding)" // USCRS-352237
+* #550991000124107  "Cancer in full remission(finding)" //USCRS-352236
+* #1217123003 "Radiotherapy Course of Treatment (regime/therapy)" //USCRS-33529
+* #1201745009 "Internal Target Volume (observable entity)" //USCRS-33520
+* #1201746005  "Internal Gross Tumor Volume (observable entity)" // USCRS-33521
 
 #### General Changes
 

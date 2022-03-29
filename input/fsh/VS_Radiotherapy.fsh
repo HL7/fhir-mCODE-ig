@@ -85,7 +85,7 @@ Description: "Allowed techniques for carbon ion beam modality"
 * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
 * SCT#1156529004 "External beam radiation therapy using particle passive scattering technique (procedure)"
 * SCT#1156528007 "External beam radiation therapy using particle spot scanning technique (procedure)"
-* SCT_TBD#USCRS-33517 "External beam radiation therapy using particle scanning technique (procedure)"
+* SCT_TBD#1204242009 "External beam radiation therapy using particle scanning technique (procedure)"
 // * SCT#1156525005 "Mixed beam external beam radiation therapy (procedure)" -- removed by RTTD Terminology decision 9/21
 
 ValueSet: TeleradiotherapyProtonBeamTechniqueVS
@@ -95,7 +95,7 @@ Description: "Allowed techniques for proton beam modality"
 * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
 * SCT#1156529004 "External beam radiation therapy using particle passive scattering technique (procedure)"
 * SCT#1156528007 "External beam radiation therapy using particle spot scanning technique (procedure)"
-* SCT_TBD#USCRS-33517 "External beam radiation therapy using particle scanning technique (procedure)"
+* SCT_TBD#1204242009 "External beam radiation therapy using particle scanning technique (procedure)"
 // * SCT#1156525005 "Mixed beam external beam radiation therapy (procedure)" -- RTTD Terminology decision 9/21
 
 ValueSet: BrachytherapyTechniqueVS
@@ -196,8 +196,8 @@ Description: "Codes describing the types of body volumes used in radiotherapy pl
 * SCT#228792002 "Clinical target volume (observable entity)"
 // * SCT#1162586008 "Irradiated volume of organ at risk (observable entity)"
 * SCT_TBD#1162586008 "Irradiated volume of organ at risk (observable entity)"
-* SCT_TBD#USCRS-33520 "Internal Target Volume"
-* SCT_TBD#USCRS-33521 "Internal Gross Tumor Volume"
+* SCT_TBD#1201745009 "Internal Target Volume"
+* SCT_TBD#1201746005 "Internal Gross Tumor Volume"
 
 ValueSet: RadiotherapyTreatmentLocationQualifierVS
 Id: mcode-radiotherapy-treatment-location-qualifier-vs
@@ -233,7 +233,7 @@ Description: "Various modifiers that can be applied to body locations where radi
 * SCT#261115001 "Laryngeal (qualifier value)"
 * SCT#260548002  "Oral (qualifier value)"
 * SCT#18769003   "Adjacent" // or "Juxta-posed (qualifier value)"
-* SCT_TBD#USCRS-33144 "Non-adjacent (qualifier)"
+* SCT_TBD#1217011006 "Non-adjacent (qualifier)"
 * SCT_TBD#1162616006 "Lymph node level IA (qualifier value)"
 * SCT_TBD#1162617002 "Lymph node level IB (qualifier value)"
 * SCT_TBD#1162620005 "Lymph node level IVA (qualifier value)"

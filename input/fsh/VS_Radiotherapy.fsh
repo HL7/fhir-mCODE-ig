@@ -54,8 +54,7 @@ Description: "Allowed techniques for photon beam modality"
 * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
 * SCT#441799006 "Intensity modulated radiation therapy (procedure)"
 * SCT#1156530009 "Volumetric Modulated Arc Therapy (procedure)"
-// * SCT#1162782007 "Three dimensional external beam radiation therapy (procedure)"
-* SCT_TBD#1162782007 "Three dimensional external beam radiation therapy (procedure)"
+* SCT#1162782007 "Three dimensional external beam radiation therapy (procedure)"
 * SCT#1156526006 "Two dimensional external beam radiation therapy (procedure)"
 * SCT#168524008 "Radiotherapy - intraoperative control (procedure)"
 
@@ -64,8 +63,7 @@ Id: mcode-teleradiotherapy-electron-beam-technique-vs
 Title: "Electron Beam Technique Value Set"
 Description: "Allowed techniques for electron beam modality"
 * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
-// * SCT#1162782007 "Three dimensional external beam radiation therapy (procedure)"
-* SCT_TBD#1162782007 "Three dimensional external beam radiation therapy (procedure)"
+* SCT#1162782007 "Three dimensional external beam radiation therapy (procedure)"
 * SCT#1156526006 "Two dimensional external beam radiation therapy (procedure)"
 * SCT#168524008 "Radiotherapy - intraoperative control (procedure)"
 
@@ -75,8 +73,7 @@ Title: "Neutron Beam Technique Value Set"
 Description: "Allowed techniques for neutron beam modality"
 * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
 * SCT#169317000 "Neutron capture therapy (procedure)"
-// * SCT#1162782007 "Three dimensional external beam radiation therapy (procedure)"
-* SCT_TBD#1162782007 "Three dimensional external beam radiation therapy (procedure)"
+* SCT#1162782007 "Three dimensional external beam radiation therapy (procedure)"
 
 ValueSet: TeleradiotherapyCarbonIonBeamTechniqueVS
 Id: mcode-teleradiotherapy-carbon-ion-beam-technique-vs
@@ -194,8 +191,7 @@ Description: "Codes describing the types of body volumes used in radiotherapy pl
 * SCT#228793007 "Planning target volume (observable entity)"
 * SCT#228791009 "Gross tumor volume (observable entity)"
 * SCT#228792002 "Clinical target volume (observable entity)"
-// * SCT#1162586008 "Irradiated volume of organ at risk (observable entity)"
-* SCT_TBD#1162586008 "Irradiated volume of organ at risk (observable entity)"
+* SCT#1162586008 "Irradiated volume of organ at risk (observable entity)"
 * SCT_TBD#1201745009 "Internal Target Volume"
 * SCT_TBD#1201746005 "Internal Gross Tumor Volume"
 
@@ -234,22 +230,22 @@ Description: "Various modifiers that can be applied to body locations where radi
 * SCT#260548002  "Oral (qualifier value)"
 * SCT#18769003   "Adjacent" // or "Juxta-posed (qualifier value)"
 * SCT_TBD#1217011006 "Non-adjacent (qualifier)"
-* SCT_TBD#1162616006 "Lymph node level IA (qualifier value)"
-* SCT_TBD#1162617002 "Lymph node level IB (qualifier value)"
-* SCT_TBD#1162620005 "Lymph node level IVA (qualifier value)"
-* SCT_TBD#1162621009 "Lymph node level IVB (qualifier value)"
-* SCT_TBD#1162622002 "Lymph node level VA (qualifier value)"
-* SCT_TBD#1162623007 "Lymph node level VB (qualifier value)"
-* SCT_TBD#1162624001 "Lymph node level VC (qualifier value)"
-* SCT_TBD#1162625000 "Lymph node level VIA (qualifier value)"
-* SCT_TBD#1162626004 "Lymph node level VIB (qualifier value)"
-* SCT_TBD#1162628003 "Lymph node level VIIA (qualifier value)"
-* SCT_TBD#1162627008 "Lymph node level VIIB (qualifier value)"
-* SCT_TBD#1162618007 "Lymph node level VIII (qualifier value)"
-* SCT_TBD#1162619004 "Lymph node level IX (qualifier value)"
-* SCT_TBD#1162614009 "Lymph node level X (qualifier value)"
-* SCT_TBD#1162615005 "Lymph node level XA (qualifier value)"
-* SCT_TBD#1162613003 "Lymph node level XB (qualifier value)"
+* SCT#1162616006 "Lymph node level IA (qualifier value)"
+* SCT#1162617002 "Lymph node level IB (qualifier value)"
+* SCT#1162620005 "Lymph node level IVA (qualifier value)"
+* SCT#1162621009 "Lymph node level IVB (qualifier value)"
+* SCT#1162622002 "Lymph node level VA (qualifier value)"
+* SCT#1162623007 "Lymph node level VB (qualifier value)"
+* SCT#1162624001 "Lymph node level VC (qualifier value)"
+* SCT#1162625000 "Lymph node level VIA (qualifier value)"
+* SCT#1162626004 "Lymph node level VIB (qualifier value)"
+* SCT#1162628003 "Lymph node level VIIA (qualifier value)"
+* SCT#1162627008 "Lymph node level VIIB (qualifier value)"
+* SCT#1162618007 "Lymph node level VIII (qualifier value)"
+* SCT#1162619004 "Lymph node level IX (qualifier value)"
+* SCT#1162614009 "Lymph node level X (qualifier value)"
+* SCT#1162615005 "Lymph node level XA (qualifier value)"
+* SCT#1162613003 "Lymph node level XB (qualifier value)"
 
 ValueSet: RadiotherapyTreatmentLocationVS
 Id: mcode-radiotherapy-treatment-location-vs
@@ -432,7 +428,7 @@ Description: "Codes describing the body locations where radiotherapy treatments 
 * SCT#245294005 "Pelvic lymph node group (body structure)" // Pelvic Lymph Nodes Left
 * SCT#245288002 "Portahepatis lymph node group (body structure)" // Porta hepatis
 * SCT#45206002 "Nasal structure (body structure)" // Nose
-* SCT_TBD#1187336003 "Presacral lymph node group (body structure)" // Lymph nodes of pelvis - presacral Left
+* SCT#1187336003 "Presacral lymph node group (body structure)" // Lymph nodes of pelvis - presacral Left
 * SCT#196662004 "Structure of intrapulmonary lymph node (body structure)" // Lymph nodes of thorax - Pulmonary Left
 * SCT#76838003 "Structure of supraclavicular lymph node (body structure)" // Supraclavicular Lymph Node Left
 * SCT#245283006 "Tracheobronchial lymph node group (body structure)" // Lymph nodes of thorax - Tracheobronchial
@@ -470,7 +466,7 @@ Description: "Codes describing the body locations where radiotherapy treatments 
 * SCT#56329008 "Pituitary structure (body structure)" // Pituitary gland
 * SCT#49557009 "Pontine structure (body structure)" // Pons
 * SCT#41216001 "Prostatic structure (body structure)" // Prostate
-* SCT_TBD#1162492000 "Tumor bed (morphologic abnormality)" // Prostate Bed
+* SCT#1162492000 "Tumor bed (morphologic abnormality)" // Prostate Bed
 * SCT#88938001 "Structure of lateral pterygoid muscle (body structure)" // Pterygoid muscles lateral - Left
 * SCT#85002005 "Structure of medial pterygoid muscle (body structure)" // Pterygoid muscles medial - Left
 * SCT#511000202101 "Rectum wall structure (body structure)" // Rectal Wall
@@ -502,14 +498,14 @@ Description: "Codes describing the body locations where radiotherapy treatments 
 * SCT#58830002 "Bone structure of eleventh rib (body structure)" // Eleventh rib Left
 * SCT#43993008 "Bone structure of twelfth rib (body structure)" // Twelfth rib Left
 * SCT#39937001 "Skin structure (body structure)" // Skin
-* SCT_TBD#1193560003 "Bone structure of thirteenth rib (body structure)" // Thirteenth   rib Left
+* SCT#1193560003 "Bone structure of thirteenth rib (body structure)" // Thirteenth   rib Left
 * SCT#48014002 "Skin structure of perineum (body structure)" // <none>
 * SCT#79601000 "Bone structure of scapula (body structure)" // Scapula Left
 * SCT#75093004 "Skin structure of anterior abdominal wall (body structure)" // <none>
 * SCT_TBD#USCRS-33351 "Bowel space (body structure)" // Space occupied by bowel
 * SCT_TBD#USCRS-33352 "Small bowel space (body structure)" // Space occupied by small bowel
 * SCT#789564000 "Structure of retropharyngeal space (body structure)" // Retropharyngeal space
-* SCT_TBD#1193554003 "Structure of retrostyloid space (body structure)" // Retrostyloid space
+* SCT#1193554003 "Structure of retrostyloid space (body structure)" // Retrostyloid space
 * SCT#41178004 "Structure of sphincter ani muscle (body structure)" // Internal Anal Sphincter
 * SCT#61853006 "Spinal canal structure (body structure)" // Vertebral canal
 * SCT#24999009 "Sphenoid sinus structure (body structure)" // Sphenoidal Sinus Left
@@ -606,7 +602,7 @@ Description: "Codes describing the body locations where radiotherapy treatments 
 * SCT#48405002 "Structure of body of tenth thoracic vertebra (body structure)" // Thoracic Vertebra T10
 * SCT#52120002 "Structure of body of eleventh thoracic vertebra (body structure)" // Thoracic Vertebra T11
 * SCT#280849005 "Structure of body of twelfth  thoracic vertebra (body structure)" // Thoracic Vertebra T12
-* SCT_TBD#1186895000 "Structure of body of thirteenth  thoracic vertebra (body structure)" // Thoracic Vertebra T13
-* SCT_TBD#1187337007 "Jugular Fossa (body structure)" // Jugular Fossa
+* SCT#1186895000 "Structure of body of thirteenth  thoracic vertebra (body structure)" // Thoracic Vertebra T13
+* SCT#1187337007 "Jugular Fossa (body structure)" // Jugular Fossa
 * SCT#35763008 "Structure of posterior fossa of cranial cavity (body structure)" // Posterior Fossa
 * SCT#87166008 "Vomer bone structure (body structure)" // Vomer

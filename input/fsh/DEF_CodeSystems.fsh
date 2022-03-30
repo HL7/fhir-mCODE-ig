@@ -54,37 +54,10 @@ Id: snomed-requested-cs
 Title: "Requested SNOMED Codes Code System"
 Description: "Codes requested from SNOMED by mCODE, to be issued at a later date. Where numeric codes are given, these correspond to the expected SNOMED-CT codes. Terms beginning with 'USCRS-' (for United States Content Request Service) represent request identifiers with no SNOMED code yet approved or assigned."
 * ^caseSensitive = true
-* #1162492000 "Tumor bed (morphologic abnormality)" // SNOMED term available to be released in Jan 2021
-* #1162782007 "Three dimensional external beam radiation therapy (procedure)" // to be released Jan 2021
-* #1162586008 "Irradiated volume of organ at risk (observable entity)"  // to be released Jan 2021
-* #1162616006 "Lymph node level IA (qualifier value)"
-* #1162617002 "Lymph node level IB (qualifier value)"
-* #1162620005 "Lymph node level IVA (qualifier value)"
-* #1162621009 "Lymph node level IVB (qualifier value)"
-* #1162622002 "Lymph node level VA (qualifier value)"
-* #1162623007 "Lymph node level VB (qualifier value)"
-* #1162624001 "Lymph node level VC (qualifier value)"
-* #1162625000 "Lymph node level VIA (qualifier value)"
-* #1162626004 "Lymph node level VIB (qualifier value)"
-* #1162628003 "Lymph node level VIIA (qualifier value)"
-* #1162627008 "Lymph node level VIIB (qualifier value)"
-* #1162618007 "Lymph node level VIII (qualifier value)"
-* #1162619004 "Lymph node level IX (qualifier value)"
-* #1162614009 "Lymph node level X (qualifier value)"
-* #1162615005 "Lymph node level XA (qualifier value)"
-* #1162613003 "Lymph node level XB (qualifier value)"
 * #USCRS-33351 "Bowel space (body structure)"               // rejected
 * #USCRS-33352 "Small bowel space (body structure)"         // rejected
-* #1187336003 "Presacral lymph node group (body structure)" // USCRS-33466
 * #1204242009  "External beam radiation therapy using particle scanning technique (procedure)" //USCRS-33517
 * #1217011006  "non-adjacent (qualifier)" // USCRS-33144
-* #551001000124108  "Cancer in partial remission (finding)" // USCRS-352237
-* #550991000124107  "Cancer in full remission(finding)" //USCRS-352236
 * #1217123003 "Radiotherapy Course of Treatment (regime/therapy)" //USCRS-33529
-// * #USCRS-33347 "supra-mammary" // Request rejected; TRG requested removal
-* #1193560003 "Bone structure of thirteenth rib (body structure)" //USCRS-33146
-* #1193554003 "Structure of retrostyloid space (body structure)" //USCRS-33350
-* #1186895000 "Structure of body of thirteenth thoracic vertebra (body structure)" //USCRS-33147
-* #1187337007  "Jugular Fossa (body structure)" //USCRS-33348
 * #1201745009 "Internal Target Volume (observable entity)" // USCRS-33520
 * #1201746005  "Internal Gross Tumor Volume (observable entity)" // USCRS-33521

@@ -16,7 +16,7 @@ Usage: #example
 * extension[+].extension[0].url = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-modality"
 * extension[=].extension[=].valueCodeableConcept = http://snomed.info/sct#45643008 "Teleradiotherapy using electrons"
 * extension[=].extension[+].url = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-technique"
-* extension[=].extension[=].valueCodeableConcept = http://hl7.org/fhir/us/mcode/CodeSystem/snomed-requested-cs#1162782007 "Three dimensional external beam radiation therapy (procedure)"
+* extension[=].extension[=].valueCodeableConcept = http://snomed.info/sct#1162782007 "Three dimensional external beam radiation therapy (procedure)"
 * extension[=].url = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-modality-and-technique"
 * extension[+].extension[0].url = "volume"
 * extension[=].extension[=].valueReference = Reference(jenny-m-chest-wall-treatment-volume)
@@ -34,7 +34,7 @@ Usage: #example
 * extension[=].url = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-dose-delivered-to-volume"
 * status = #completed
 * category = http://snomed.info/sct#108290001 "Radiation oncology AND/OR radiotherapy (procedure)"
-* code = http://hl7.org/fhir/us/mcode/CodeSystem/snomed-requested-cs#USCRS-33292
+* code = http://hl7.org/fhir/us/mcode/CodeSystem/snomed-requested-cs#1217123003
 * subject = Reference(cancer-patient-jenny-m)
 * performedPeriod.start = "2018-08-15"
 * performedPeriod.end = "2018-10-25"

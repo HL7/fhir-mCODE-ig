@@ -182,8 +182,7 @@ Description: "Extended example: example of body weight vital sign"
 * status = #final "final"
 * subject = Reference(cancer-patient-jenny-m)
 * effectiveDateTime = "2018-03-06"
-* valueQuantity = 155.0 '[lb_av]'
-* valueQuantity.unit = "lb"
+* valueQuantity = 155.0 '[lb_av]' "lb"
 
 Instance: bodyheight-jenny-m-2018-03-06
 InstanceOf: http://hl7.org/fhir/StructureDefinition/bodyheight
@@ -191,8 +190,7 @@ Description: "Extended example: example of body height vital sign"
 * status = #final "final"
 * subject = Reference(cancer-patient-jenny-m)
 * effectiveDateTime = "2018-03-16"
-* valueQuantity = 65 '[in_i]'
-* valueQuantity.unit = "in"
+* valueQuantity = 65 '[in_i]' "in"
 
 // Diagnosis and Clinical Staging 3/16/2018
 
@@ -291,8 +289,9 @@ Instance: genomics-report-jenny-m
 InstanceOf: GenomicsReport
 Description: "Extended example: example of gene panel report"
 * status = #final "final"
-* category[0] = DiagnosticService#LAB
-* category[1] = DiagnosticService#GE
+// The category is autopopulated by SUSHI since both slices are required
+//* category[0] = DiagnosticService#LAB
+//* category[1] = DiagnosticService#GE
 * subject = Reference(cancer-patient-jenny-m)
 * effectiveDateTime = "2018-03-15"
 * issued = "2020-03-15T00:00:01+00:00"
@@ -365,7 +364,7 @@ Instance: us-core-diagnosticreport-lab-jenny-m
 InstanceOf: USCoreDiagnosticReportLab
 Description: "Extended example: example of pathology findings represented as a DiagnosticReport resource."
 * status = #final "final"
-* category[0] = DiagnosticService#LAB
+//* category[0] = DiagnosticService#LAB
 * category[1] = DiagnosticService#SP "Surgical Pathology"  // does not match any known slice in US Core Diagnostic Report -- but that's ok
 * code = LNC#22637-3 "Pathology report final diagnosis Narrative"
 * subject = Reference(cancer-patient-jenny-m)
@@ -425,9 +424,8 @@ Description: "Extended example: example showing tumor size"
 * method = LNC#24419-4 "Pathology report gross observation"
 * subject = Reference(cancer-patient-jenny-m)
 * effectiveDateTime = "2018-04-01T00:00:00Z"
-* component.code = LNC#33728-7 "Size.maximum dimension in Tumor"
-* component.valueQuantity = 2.5 'cm'
-* component.valueQuantity.unit = "centimeters"
+//* component[tumorLongestDimension].code = LNC#33728-7 "Size.maximum dimension in Tumor"
+* component[tumorLongestDimension].valueQuantity = 2.5 'cm' "centimeters"
 * specimen = Reference(tumor-specimen-left-breast-jenny-m)
 
 Instance: us-core-observation-lab-tumor-dcis-jenny-m

@@ -423,7 +423,6 @@ Description: "Extended example: example showing tumor size"
 * method = LNC#24419-4 "Pathology report gross observation"
 * subject = Reference(cancer-patient-jenny-m)
 * effectiveDateTime = "2018-04-01T00:00:00Z"
-//* component[tumorLongestDimension].code = LNC#33728-7 "Size.maximum dimension in Tumor"
 * component[tumorLongestDimension].valueQuantity = 2.5 'cm' "centimeters"
 * specimen = Reference(tumor-specimen-left-breast-jenny-m)
 

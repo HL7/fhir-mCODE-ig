@@ -56,8 +56,4 @@ Description: "Codes requested from SNOMED by mCODE, to be issued at a later date
 * ^caseSensitive = true
 * #USCRS-33351 "Bowel space (body structure)"               // rejected
 * #USCRS-33352 "Small bowel space (body structure)"         // rejected
-* #1204242009  "External beam radiation therapy using particle scanning technique (procedure)" //USCRS-33517
-* #1217011006  "non-adjacent (qualifier)" // USCRS-33144
-* #1217123003 "Radiotherapy Course of Treatment (regime/therapy)" //USCRS-33529
-* #1201745009 "Internal Target Volume (observable entity)" // USCRS-33520
-* #1201746005  "Internal Gross Tumor Volume (observable entity)" // USCRS-33521
+

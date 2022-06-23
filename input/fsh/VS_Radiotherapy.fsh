@@ -82,7 +82,7 @@ Description: "Allowed techniques for carbon ion beam modality"
 * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
 * SCT#1156529004 "External beam radiation therapy using particle passive scattering technique (procedure)"
 * SCT#1156528007 "External beam radiation therapy using particle spot scanning technique (procedure)"
-* SCT_TBD#1204242009 "External beam radiation therapy using particle scanning technique (procedure)"
+* SCT#1204242009 "External beam radiation therapy using particle scanning technique (procedure)"
 // * SCT#1156525005 "Mixed beam external beam radiation therapy (procedure)" -- removed by RTTD Terminology decision 9/21
 
 ValueSet: TeleradiotherapyProtonBeamTechniqueVS
@@ -92,7 +92,7 @@ Description: "Allowed techniques for proton beam modality"
 * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
 * SCT#1156529004 "External beam radiation therapy using particle passive scattering technique (procedure)"
 * SCT#1156528007 "External beam radiation therapy using particle spot scanning technique (procedure)"
-* SCT_TBD#1204242009 "External beam radiation therapy using particle scanning technique (procedure)"
+* SCT#1204242009 "External beam radiation therapy using particle scanning technique (procedure)"
 // * SCT#1156525005 "Mixed beam external beam radiation therapy (procedure)" -- RTTD Terminology decision 9/21
 
 ValueSet: BrachytherapyTechniqueVS
@@ -192,8 +192,8 @@ Description: "Codes describing the types of body volumes used in radiotherapy pl
 * SCT#228791009 "Gross tumor volume (observable entity)"
 * SCT#228792002 "Clinical target volume (observable entity)"
 * SCT#1162586008 "Irradiated volume of organ at risk (observable entity)"
-* SCT_TBD#1201745009 "Internal Target Volume"
-* SCT_TBD#1201746005 "Internal Gross Tumor Volume"
+* SCT#1201745009 "Internal target volume (observable entity)"
+* SCT#1201746005 "Internal gross tumor volume (observable entity)"
 
 ValueSet: RadiotherapyTreatmentLocationQualifierVS
 Id: mcode-radiotherapy-treatment-location-qualifier-vs
@@ -229,7 +229,7 @@ Description: "Various modifiers that can be applied to body locations where radi
 * SCT#261115001 "Laryngeal (qualifier value)"
 * SCT#260548002  "Oral (qualifier value)"
 * SCT#18769003   "Adjacent" // or "Juxta-posed (qualifier value)"
-* SCT_TBD#1217011006 "Non-adjacent (qualifier)"
+* SCT#1217011006 "Non-adjacent (qualifier value)"
 * SCT#1162616006 "Lymph node level IA (qualifier value)"
 * SCT#1162617002 "Lymph node level IB (qualifier value)"
 * SCT#1162620005 "Lymph node level IVA (qualifier value)"
@@ -274,7 +274,7 @@ Description: "Codes describing the body locations where radiotherapy treatments 
 * SCT#37783008 "Bone structure of acetabulum (body structure)" // Acetabulum
 * SCT#89187006 "Airway structure (body structure)" // Distal Airway
 * SCT#123956007 "Anus part (body structure)" // Anus
-* SCT#66754008 "Appendix structure (body structure) " // Appendix
+* SCT#66754008 "Appendix structure (body structure)" // Appendix
 * SCT#77578007 "Arytenoid cartilage structure (body structure)" // Arytenoid cartilage
 * SCT#59652004 "Atrial structure (body structure)" // Atrium of the heart
 * SCT#79741001 "Common bile duct structure (body structure)" // Common bile duct
@@ -309,7 +309,7 @@ Description: "Codes describing the body locations where radiotherapy treatments 
 * SCT#76752008 "Breast structure (body structure)" // Breast Left
 * SCT#955009 "Bronchial structure (body structure)" // Bronchial tree
 * SCT#102297006 "Main bronchus structure (body structure)" // Main Bronchus
-* SCT#34381000 "Anal canal structure (body structure) |" // Anal Canal
+* SCT#34381000 "Anal canal structure (body structure)" // Anal Canal
 * SCT#28700002 "Structure of carina of trachea (body structure)" // Carina
 * SCT#38848004 "Duodenal structure (body structure)" // Small bowel - Duodenum
 * SCT#7173007 "Cauda equina structure (body structure)" // Cauda equina
@@ -411,8 +411,8 @@ Description: "Codes describing the body locations where radiotherapy treatments 
 * SCT#279816002 "Bronchopulmonary lymph node group (body structure)" // Lymph nodes of thorax - Bronchopulmonary Left
 * SCT#196751009 "Structure of diaphragmatic lymph node (body structure)" // Lymph nodes of thorax - Diaphragmatic
 * SCT#65349008 "Structure of external iliac lymph node (body structure)" // Lymph nodes of pelvis - External iliac
-* SCT#245357003 "Structure of internal iliac lymph node (body structure) |" // Lymph nodes of pelvis -  Internal iliac
-* SCT#84219008 "Structure of iliac lymph node (body structure) |" // Lymph nodes of pelvis -  common iliac
+* SCT#245357003 "Structure of internal iliac lymph node (body structure)" // Lymph nodes of pelvis -  Internal iliac
+* SCT#84219008 "Structure of iliac lymph node (body structure)" // Lymph nodes of pelvis -  common iliac
 * SCT#245299000 "Internal iliac lymph node group (body structure)" // Lymph nodes of pelvis - internal iliac Left
 * SCT#245295006 "Common iliac lymph node group (body structure)" // Lymph nodes of pelvis - common iliac Left
 * SCT#245282001 "Internal mammary lymph node group (body structure)" // <none>

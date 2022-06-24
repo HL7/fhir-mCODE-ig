@@ -27,8 +27,6 @@
     * #1162614009 "Lymph node level X (qualifier value)"
     * #1162615005 "Lymph node level XA (qualifier value)"
     * #1162613003 "Lymph node level XB (qualifier value)"
-### mCODE STU 2 Publication Version (November 2021)
-
 
 #### General Changes
 

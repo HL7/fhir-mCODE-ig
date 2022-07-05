@@ -22,7 +22,6 @@ Alias:   SO = http://www.sequenceontology.org/
 
 // Code systems URLs from HL7 Terminology Authority that conflict with terminology.hl7.org
 Alias:   NCI = http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl
-// Alias:   NCI = http://ncithesaurus-stage.nci.nih.gov
 
 // From terminology.hl7.org
 Alias:   OmbRaceCat = urn:oid:2.16.840.1.113883.6.238

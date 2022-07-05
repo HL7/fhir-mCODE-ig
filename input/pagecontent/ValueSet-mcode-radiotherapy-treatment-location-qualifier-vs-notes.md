@@ -33,7 +33,7 @@ Usage: #inline
 * expansion.parameter[+].name = "version"
 * expansion.parameter[=].valueUri = "http://hl7.org/fhir/us/mcode/ValueSet/mcode-laterality-qualifier-vs|2.0.0"
 * expansion.parameter[+].name = "version"
-* expansion.parameter[=].valueUri = "http://hl7.org/fhir/us/mcode/CodeSystem/snomed-requested-cs|2.0.0"
+* expansion.parameter[=].valueUri = "http://snomed.info/sct"
 * expansion.contains[0] = http://snomed.info/sct#258400004 "Lymph node level I"
 * expansion.contains[+] = http://snomed.info/sct#258401000 "Lymph node level II"
 * expansion.contains[+] = http://snomed.info/sct#258402007 "Lymph node level III"
@@ -74,5 +74,5 @@ Usage: #inline
 * expansion.contains[+] = http://snomed.info/sct#261115001 "Laryngeal (qualifier value)"
 * expansion.contains[+] = http://snomed.info/sct#260548002 "Oral (qualifier value)"
 * expansion.contains[+] = http://snomed.info/sct#18769003 "Adjacent"
-* expansion.contains[+] = http://hl7.org/fhir/us/mcode/CodeSystem/snomed-requested-cs#1217011006 "Non-adjacent (qualifier)"
+* expansion.contains[+] = http://snomed.info/sct#1217011006 "Non-adjacent (qualifier)"
 ```

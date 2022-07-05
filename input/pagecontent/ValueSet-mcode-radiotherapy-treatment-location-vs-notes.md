@@ -27,7 +27,7 @@ Usage: #inline
 * expansion.parameter[+].name = "version"
 * expansion.parameter[=].valueUri = "http://snomed.info/sct|http://snomed.info/sct/731000124108/version/20210901"
 * expansion.parameter[+].name = "version"
-* expansion.parameter[=].valueUri = "http://hl7.org/fhir/us/mcode/CodeSystem/snomed-requested-cs|2.0.0"
+* expansion.parameter[=].valueUri = "http://snomed.info/sct"
 * expansion.contains[0] = http://snomed.info/sct#15825003 "Aortic structure (body structure)"
 * expansion.contains[+] = http://snomed.info/sct#54247002 "Ascending aorta structure (body Structure)"
 * expansion.contains[+] = http://snomed.info/sct#425444002 "Branch of brachiocephalic artery (body structure)"

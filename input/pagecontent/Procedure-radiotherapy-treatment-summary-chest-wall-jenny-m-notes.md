@@ -34,7 +34,7 @@ Usage: #example
 * extension[=].url = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-dose-delivered-to-volume"
 * status = #completed
 * category = http://snomed.info/sct#108290001 "Radiation oncology AND/OR radiotherapy (procedure)"
-* code = http://hl7.org/fhir/us/mcode/CodeSystem/snomed-requested-cs#1217123003
+* code = http://snomed.info/sct#1217123003
 * subject = Reference(cancer-patient-jenny-m)
 * performedPeriod.start = "2018-08-15"
 * performedPeriod.end = "2018-10-25"

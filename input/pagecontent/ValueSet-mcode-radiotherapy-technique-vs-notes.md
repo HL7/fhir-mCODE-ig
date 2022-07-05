@@ -37,7 +37,7 @@ Usage: #inline
 * expansion.parameter[+].name = "version"
 * expansion.parameter[=].valueUri = "http://hl7.org/fhir/us/mcode/ValueSet/mcode-teleradiotherapy-carbon-ion-beam-technique-vs|2.0.0"
 * expansion.parameter[+].name = "version"
-* expansion.parameter[=].valueUri = "http://hl7.org/fhir/us/mcode/CodeSystem/snomed-requested-cs|2.0.0"
+* expansion.parameter[=].valueUri = "http://snomed.info/sct"
 * expansion.parameter[+].name = "version"
 * expansion.parameter[=].valueUri = "http://hl7.org/fhir/us/mcode/ValueSet/mcode-teleradiotherapy-proton-beam-technique-vs|2.0.0"
 * expansion.parameter[+].name = "version"
@@ -77,7 +77,7 @@ Usage: #inline
 * expansion.contains[=] = http://snomed.info/sct#1156528007 "External beam radiation therapy using particle spot scanning technique (procedure)"
 * expansion.contains[+].abstract = false
 * expansion.contains[=].inactive = false
-* expansion.contains[=] = http://hl7.org/fhir/us/mcode/CodeSystem/snomed-requested-cs#1204242009 "External beam radiation therapy using particle scanning technique (procedure)"
+* expansion.contains[=] = http://snomed.info/sct#1204242009 "External beam radiation therapy using particle scanning technique (procedure)"
 * expansion.contains[+].abstract = false
 * expansion.contains[=].inactive = false
 * expansion.contains[=] = http://snomed.info/sct#113120007 "Interstitial brachytherapy (procedure)"

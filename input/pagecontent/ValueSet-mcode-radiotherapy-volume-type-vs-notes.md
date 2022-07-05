@@ -27,10 +27,10 @@ Usage: #inline
 * expansion.parameter[+].name = "version"
 * expansion.parameter[=].valueUri = "http://snomed.info/sct|http://snomed.info/sct/731000124108/version/20210901"
 * expansion.parameter[+].name = "version"
-* expansion.parameter[=].valueUri = "http://hl7.org/fhir/us/mcode/CodeSystem/snomed-requested-cs|2.0.0"
+* expansion.parameter[=].valueUri = "http://snomed.info/sct"
 * expansion.contains[0] = http://snomed.info/sct#228793007 "Planning target volume (observable entity)"
 * expansion.contains[+] = http://snomed.info/sct#228791009 "Gross tumor volume (observable entity)"
 * expansion.contains[+] = http://snomed.info/sct#228792002 "Clinical target volume (observable entity)"
-* expansion.contains[+] = http://hl7.org/fhir/us/mcode/CodeSystem/snomed-requested-cs#1201745009 "Internal Target Volume"
-* expansion.contains[+] = http://hl7.org/fhir/us/mcode/CodeSystem/snomed-requested-cs#1201746005 "Internal Gross Tumor Volume"
+* expansion.contains[+] = http://snomed.info/sct#1201745009 "Internal Target Volume"
+* expansion.contains[+] = http://snomed.info/sct#1201746005 "Internal Gross Tumor Volume"
 ```

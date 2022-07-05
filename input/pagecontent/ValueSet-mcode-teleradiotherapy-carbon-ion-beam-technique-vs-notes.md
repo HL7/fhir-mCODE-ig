@@ -27,8 +27,8 @@ Usage: #inline
 * expansion.parameter[+].name = "version"
 * expansion.parameter[=].valueUri = "http://snomed.info/sct|http://snomed.info/sct/731000124108/version/20210901"
 * expansion.parameter[+].name = "version"
-* expansion.parameter[=].valueUri = "http://hl7.org/fhir/us/mcode/CodeSystem/snomed-requested-cs|2.0.0"
+* expansion.parameter[=].valueUri = "http://snomed.info/sct"
 * expansion.contains[0] = http://snomed.info/sct#1156529004 "External beam radiation therapy using particle passive scattering technique (procedure)"
 * expansion.contains[+] = http://snomed.info/sct#1156528007 "External beam radiation therapy using particle spot scanning technique (procedure)"
-* expansion.contains[+] = http://hl7.org/fhir/us/mcode/CodeSystem/snomed-requested-cs#1204242009 "External beam radiation therapy using particle scanning technique (procedure)"
+* expansion.contains[+] = http://snomed.info/sct#1204242009 "External beam radiation therapy using particle scanning technique (procedure)"
 ```

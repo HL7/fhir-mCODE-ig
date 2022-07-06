@@ -1,0 +1,18 @@
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "inactive" : true,
+    "include" : [{
+      "system" : "http://snomed.info/sct/900000000000207008",
+      "concept" : [{
+        "code" : "1162782007",
+        "display" : "Three dimensional external beam radiation therapy (procedure)"
+      }]
+    }]
+  }
+}}####
+e: {
+  "error" : "Error from server: Unable to provide support for code system http://snomed.info/sct/900000000000207008"
+}
+-------------------------------------------------------------------------------------

@@ -1,0 +1,2447 @@
+-------------------------------------------------------------------------------------
+{"hierarchical" : false, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "inactive" : true,
+    "include" : [{
+      "system" : "http://snomed.info/sct/",
+      "concept" : [{
+        "code" : "268910001",
+        "display" : "Patient's condition improved (finding)"
+      },
+      {
+        "code" : "359746009",
+        "display" : "Patient's condition stable (finding)"
+      },
+      {
+        "code" : "271299001",
+        "display" : "Patient's condition worsened (finding)"
+      },
+      {
+        "code" : "709137006",
+        "display" : "Patient condition undetermined (finding)"
+      },
+      {
+        "code" : "550991000124107",
+        "display" : "Cancer in full remission(finding)"
+      },
+      {
+        "code" : "551001000124108",
+        "display" : "Cancer in partial remission (finding)"
+      }]
+    }]
+  }
+}}####
+e: {
+  "error" : "Error from server: Unable to provide support for code system http://snomed.info/sct/"
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : false, "url": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-condition-status-trend-vs", "version": "2.0.0"}####
+e: {
+  "error" : "Error from server: Unable to provide support for code system http://snomed.info/sct/"
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : false, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "inactive" : true,
+    "include" : [{
+      "system" : "http://snomed.info/sct/",
+      "filter" : [{
+        "property" : "concept",
+        "op" : "is-a",
+        "value" : "254292007"
+      }]
+    }]
+  }
+}}####
+e: {
+  "error" : "Error from server: Unable to provide support for code system http://snomed.info/sct/"
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : false, "url": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-staging-system-vs", "version": "2.0.0"}####
+e: {
+  "error" : "Error from server: Unable to provide support for code system http://snomed.info/sct/"
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : false, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "inactive" : true,
+    "include" : [{
+      "system" : "http://snomed.info/sct/",
+      "concept" : [{
+        "code" : "52101004",
+        "display" : "Present (qualifier value)"
+      },
+      {
+        "code" : "2667000",
+        "display" : "Absent (qualifier value)"
+      }]
+    }]
+  }
+}}####
+e: {
+  "error" : "Error from server: Unable to provide support for code system http://snomed.info/sct/"
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : false, "url": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-present-absent", "version": "2.0.0"}####
+e: {
+  "error" : "Error from server: Unable to provide support for code system http://snomed.info/sct/"
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : false, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "inactive" : true,
+    "include" : [{
+      "system" : "http://snomed.info/sct/",
+      "filter" : [{
+        "property" : "concept",
+        "op" : "is-a",
+        "value" : "128462008"
+      }]
+    }]
+  }
+}}####
+e: {
+  "error" : "Error from server: Unable to provide support for code system http://snomed.info/sct/"
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : false, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "inactive" : true,
+    "include" : [{
+      "system" : "http://snomed.info/sct/",
+      "concept" : [{
+        "code" : "787377000",
+        "display" : "Gross examination and sampling of tissue specimen (procedure)"
+      },
+      {
+        "code" : "104157003",
+        "display" : "Light microscopy (procedure)"
+      },
+      {
+        "code" : "5880005",
+        "display" : "Physical examination procedure (procedure)"
+      },
+      {
+        "code" : "16310003",
+        "display" : "Diagnostic ultrasonography (procedure)"
+      },
+      {
+        "code" : "113091000",
+        "display" : "Magnetic resonance imaging (procedure)"
+      },
+      {
+        "code" : "77477000",
+        "display" : "Computerized axial tomography (procedure)"
+      },
+      {
+        "code" : "82918005",
+        "display" : "Positron emission tomography (procedure)"
+      },
+      {
+        "code" : "363680008",
+        "display" : "Radiographic imaging procedure (procedure)"
+      },
+      {
+        "code" : "363679005",
+        "display" : "Imaging (procedure)"
+      }]
+    }]
+  }
+}}####
+e: {
+  "error" : "Error from server: Unable to provide support for code system http://snomed.info/sct/"
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : false, "url": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-tumor-size-method-vs", "version": "2.0.0"}####
+e: {
+  "error" : "Error from server: Unable to provide support for code system http://snomed.info/sct/"
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "inactive" : true,
+    "include" : [{
+      "system" : "http://snomed.info/sct/",
+      "filter" : [{
+        "property" : "concept",
+        "op" : "is-a",
+        "value" : "93468003"
+      }]
+    }]
+  }
+}}####
+e: {
+  "error" : "Error from server: Unable to provide support for code system http://snomed.info/sct/"
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "inactive" : true,
+    "include" : [{
+      "system" : "http://snomed.info/sct/",
+      "filter" : [{
+        "property" : "concept",
+        "op" : "is-a",
+        "value" : "106233006"
+      }]
+    }]
+  }
+}}####
+e: {
+  "error" : "Error from server: Unable to provide support for code system http://snomed.info/sct/"
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "url": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-body-location-and-laterality-qualifier-vs", "version": "2.0.0"}####
+e: {
+  "error" : "Error from server: Unable to provide support for code system http://snomed.info/sct/"
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "inactive" : true,
+    "include" : [{
+      "system" : "http://snomed.info/sct/",
+      "concept" : [{
+        "code" : "384692006",
+        "display" : "Intracavitary brachytherapy (procedure)"
+      },
+      {
+        "code" : "1156382005",
+        "display" : "Intensity modulated intracavitary brachytherapy (procedure)"
+      },
+      {
+        "code" : "113120007",
+        "display" : "Interstitial brachytherapy (procedure)"
+      },
+      {
+        "code" : "384691004",
+        "display" : "Intraluminal brachytherapy (procedure)"
+      },
+      {
+        "code" : "168524008",
+        "display" : "Radiotherapy - intraoperative control (procedure)"
+      },
+      {
+        "code" : "14473006",
+        "display" : "Surface brachytherapy (procedure)"
+      }]
+    }]
+  }
+}}####
+e: {
+  "error" : "Error from server: Unable to provide support for code system http://snomed.info/sct/"
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "url": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-brachytherapy-high-dose-rate-electronic-technique-vs", "version": "2.0.0"}####
+e: {
+  "error" : "Error from server: Unable to provide support for code system http://snomed.info/sct/"
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "inactive" : true,
+    "include" : [{
+      "system" : "http://snomed.info/sct/",
+      "concept" : [{
+        "code" : "384692006",
+        "display" : "Intracavitary brachytherapy (procedure)"
+      },
+      {
+        "code" : "1156382005",
+        "display" : "Intensity modulated intracavitary brachytherapy (procedure)"
+      },
+      {
+        "code" : "113120007",
+        "display" : "Interstitial brachytherapy (procedure)"
+      },
+      {
+        "code" : "1156383000",
+        "display" : "Intravascular brachytherapy (procedure)"
+      },
+      {
+        "code" : "384691004",
+        "display" : "Intraluminal brachytherapy (procedure)"
+      },
+      {
+        "code" : "168524008",
+        "display" : "Radiotherapy - intraoperative control (procedure)"
+      },
+      {
+        "code" : "14473006",
+        "display" : "Surface brachytherapy (procedure)"
+      }]
+    }]
+  }
+}}####
+e: {
+  "error" : "Error from server: Unable to provide support for code system http://snomed.info/sct/"
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "url": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-brachytherapy-high-dose-rate-technique-vs", "version": "2.0.0"}####
+e: {
+  "error" : "Error from server: Unable to provide support for code system http://snomed.info/sct/"
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "inactive" : true,
+    "include" : [{
+      "system" : "http://snomed.info/sct/",
+      "concept" : [{
+        "code" : "384692006",
+        "display" : "Intracavitary brachytherapy (procedure)"
+      },
+      {
+        "code" : "113120007",
+        "display" : "Interstitial brachytherapy (procedure)"
+      },
+      {
+        "code" : "14473006",
+        "display" : "Surface brachytherapy (procedure)"
+      }]
+    }]
+  }
+}}####
+e: {
+  "error" : "Error from server: Unable to provide support for code system http://snomed.info/sct/"
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "url": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-brachytherapy-low-dose-rate-temporary-technique-vs", "version": "2.0.0"}####
+e: {
+  "error" : "Error from server: Unable to provide support for code system http://snomed.info/sct/"
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "inactive" : true,
+    "include" : [{
+      "system" : "http://snomed.info/sct/",
+      "concept" : [{
+        "code" : "1156708005",
+        "display" : "Low dose rate brachytherapy using temporary radioactive source (procedure)"
+      },
+      {
+        "code" : "169359004",
+        "display" : "Internal radiotherapy - permanent seeds (procedure)"
+      },
+      {
+        "code" : "1156384006",
+        "display" : "Pulsed dose rate brachytherapy (procedure)"
+      },
+      {
+        "code" : "394902000",
+        "display" : "High dose brachytherapy (procedure)"
+      },
+      {
+        "code" : "438629002",
+        "display" : "High dose rate electronic brachytherapy (procedure)"
+      },
+      {
+        "code" : "440252007",
+        "display" : "Administration of radiopharmaceutical (procedure)"
+      }]
+    }]
+  }
+}}####
+e: {
+  "error" : "Error from server: Unable to provide support for code system http://snomed.info/sct/"
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "url": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-brachytherapy-modality-vs", "version": "2.0.0"}####
+e: {
+  "error" : "Error from server: Unable to provide support for code system http://snomed.info/sct/"
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "inactive" : true,
+    "include" : [{
+      "system" : "http://snomed.info/sct/",
+      "concept" : [{
+        "code" : "113120007",
+        "display" : "Interstitial brachytherapy (procedure)"
+      }]
+    }]
+  }
+}}####
+e: {
+  "error" : "Error from server: Unable to provide support for code system http://snomed.info/sct/"
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "url": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-brachytherapy-permanent-seeds-technique-vs", "version": "2.0.0"}####
+e: {
+  "error" : "Error from server: Unable to provide support for code system http://snomed.info/sct/"
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "inactive" : true,
+    "include" : [{
+      "system" : "http://snomed.info/sct/",
+      "concept" : [{
+        "code" : "384692006",
+        "display" : "Intracavitary brachytherapy (procedure)"
+      },
+      {
+        "code" : "113120007",
+        "display" : "Interstitial brachytherapy (procedure)"
+      }]
+    }]
+  }
+}}####
+e: {
+  "error" : "Error from server: Unable to provide support for code system http://snomed.info/sct/"
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "url": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-brachytherapy-pulsed-dose-rate-technique-vs", "version": "2.0.0"}####
+e: {
+  "error" : "Error from server: Unable to provide support for code system http://snomed.info/sct/"
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "inactive" : true,
+    "include" : [{
+      "system" : "http://snomed.info/sct/",
+      "concept" : [{
+        "code" : "16560241000119104",
+        "display" : "Oral radionuclide therapy (procedure)"
+      },
+      {
+        "code" : "1156383000",
+        "display" : "Intravascular brachytherapy (procedure)"
+      },
+      {
+        "code" : "384692006",
+        "display" : "Intracavitary brachytherapy (procedure)"
+      },
+      {
+        "code" : "113120007",
+        "display" : "Interstitial brachytherapy (procedure)"
+      }]
+    }]
+  }
+}}####
+e: {
+  "error" : "Error from server: Unable to provide support for code system http://snomed.info/sct/"
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "url": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-brachytherapy-radiopharmaceutical-technique-vs", "version": "2.0.0"}####
+e: {
+  "error" : "Error from server: Unable to provide support for code system http://snomed.info/sct/"
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "inactive" : true,
+    "include" : [{
+      "system" : "http://snomed.info/sct/",
+      "filter" : [{
+        "property" : "concept",
+        "op" : "is-a",
+        "value" : "714797009"
+      }]
+    }]
+  }
+}}####
+e: {
+  "error" : "Error from server: Unable to provide support for code system http://snomed.info/sct/"
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "url": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-disease-status-evidence-type-vs", "version": "2.0.0"}####
+e: {
+  "error" : "Error from server: Unable to provide support for code system http://snomed.info/sct/"
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "inactive" : true,
+    "include" : [{
+      "system" : "http://snomed.info/sct/",
+      "filter" : [{
+        "property" : "concept",
+        "op" : "is-a",
+        "value" : "254292007"
+      }]
+    }]
+  }
+}}####
+e: {
+  "error" : "Error from server: Unable to provide support for code system http://snomed.info/sct/"
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "url": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-staging-system-vs", "version": "2.0.0"}####
+e: {
+  "error" : "Error from server: Unable to provide support for code system http://snomed.info/sct/"
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "inactive" : true,
+    "include" : [{
+      "system" : "http://snomed.info/sct/",
+      "filter" : [{
+        "property" : "concept",
+        "op" : "is-a",
+        "value" : "109355002"
+      }]
+    }]
+  }
+}}####
+e: {
+  "error" : "Error from server: Unable to provide support for code system http://snomed.info/sct/"
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "inactive" : true,
+    "include" : [{
+      "system" : "http://snomed.info/sct/",
+      "concept" : [{
+        "code" : "268910001",
+        "display" : "Patient's condition improved (finding)"
+      },
+      {
+        "code" : "359746009",
+        "display" : "Patient's condition stable (finding)"
+      },
+      {
+        "code" : "271299001",
+        "display" : "Patient's condition worsened (finding)"
+      },
+      {
+        "code" : "709137006",
+        "display" : "Patient condition undetermined (finding)"
+      },
+      {
+        "code" : "550991000124107",
+        "display" : "Cancer in full remission(finding)"
+      },
+      {
+        "code" : "551001000124108",
+        "display" : "Cancer in partial remission (finding)"
+      }]
+    }]
+  }
+}}####
+e: {
+  "error" : "Error from server: Unable to provide support for code system http://snomed.info/sct/"
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "url": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-condition-status-trend-vs", "version": "2.0.0"}####
+e: {
+  "error" : "Error from server: Unable to provide support for code system http://snomed.info/sct/"
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "inactive" : true,
+    "include" : [{
+      "system" : "http://snomed.info/sct/",
+      "concept" : [{
+        "code" : "126361000119107",
+        "display" : "Cytological evidence of malignancy on anal Papanicolaou smear (finding)"
+      },
+      {
+        "code" : "126371000119101",
+        "display" : "Cytological evidence of malignancy on vaginal Papanicolaou smear (finding)"
+      }]
+    }]
+  }
+}}####
+e: {
+  "error" : "Error from server: Unable to provide support for code system http://snomed.info/sct/"
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "inactive" : true,
+    "include" : [{
+      "system" : "http://snomed.info/sct/",
+      "filter" : [{
+        "property" : "concept",
+        "op" : "is-a",
+        "value" : "393573009"
+      }]
+    }]
+  }
+}}####
+e: {
+  "error" : "Error from server: Unable to provide support for code system http://snomed.info/sct/"
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "inactive" : true,
+    "include" : [{
+      "system" : "http://snomed.info/sct/",
+      "concept" : [{
+        "code" : "51440002",
+        "display" : "Right and left (qualifier value)"
+      },
+      {
+        "code" : "399488007",
+        "display" : "Midline (qualifier value)"
+      },
+      {
+        "code" : "24028007",
+        "display" : "Right (qualifier value)"
+      },
+      {
+        "code" : "7771000",
+        "display" : "Left (qualifier value)"
+      }]
+    }]
+  }
+}}####
+e: {
+  "error" : "Error from server: Unable to provide support for code system http://snomed.info/sct/"
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "url": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-laterality-qualifier-vs", "version": "2.0.0"}####
+e: {
+  "error" : "Error from server: Unable to provide support for code system http://snomed.info/sct/"
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "inactive" : true,
+    "include" : [{
+      "system" : "http://snomed.info/sct/",
+      "filter" : [{
+        "property" : "concept",
+        "op" : "is-a",
+        "value" : "189758001"
+      }]
+    }]
+  }
+}}####
+e: {
+  "error" : "Error from server: Unable to provide support for code system http://snomed.info/sct/"
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "inactive" : true,
+    "include" : [{
+      "system" : "http://snomed.info/sct/",
+      "concept" : [{
+        "code" : "52101004",
+        "display" : "Present (qualifier value)"
+      },
+      {
+        "code" : "2667000",
+        "display" : "Absent (qualifier value)"
+      }]
+    }]
+  }
+}}####
+e: {
+  "error" : "Error from server: Unable to provide support for code system http://snomed.info/sct/"
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "url": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-present-absent", "version": "2.0.0"}####
+e: {
+  "error" : "Error from server: Unable to provide support for code system http://snomed.info/sct/"
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "inactive" : true,
+    "include" : [{
+      "system" : "http://snomed.info/sct/",
+      "concept" : [{
+        "code" : "373808002",
+        "display" : "Curative - procedure intent"
+      },
+      {
+        "code" : "363676003",
+        "display" : "Palliative - procedure intent"
+      },
+      {
+        "code" : "399707004",
+        "display" : "Supportive - procedure intent"
+      },
+      {
+        "code" : "261004008",
+        "display" : "Diagnostic intent"
+      },
+      {
+        "code" : "129428001",
+        "display" : "Preventive - intent"
+      },
+      {
+        "code" : "429892002",
+        "display" : "Guidance intent"
+      },
+      {
+        "code" : "360156006",
+        "display" : "Screening - procedure intent"
+      },
+      {
+        "code" : "447295008",
+        "display" : "Forensic intent"
+      }]
+    }]
+  }
+}}####
+e: {
+  "error" : "Error from server: Unable to provide support for code system http://snomed.info/sct/"
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "url": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-procedure-intent-vs", "version": "2.0.0"}####
+e: {
+  "error" : "Error from server: Unable to provide support for code system http://snomed.info/sct/"
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "inactive" : true,
+    "include" : [{
+      "system" : "http://snomed.info/sct/",
+      "concept" : [{
+        "code" : "10611004",
+        "display" : "External beam radiation therapy protons (procedure)"
+      },
+      {
+        "code" : "45643008",
+        "display" : "External beam radiation therapy using electrons (procedure)"
+      },
+      {
+        "code" : "80347004",
+        "display" : "External beam radiation therapy neutrons (procedure)"
+      },
+      {
+        "code" : "1156505006",
+        "display" : "External beam radiation therapy using carbon ions (procedure)"
+      },
+      {
+        "code" : "1156506007",
+        "display" : "External beam radiation therapy using photons (procedure)"
+      }]
+    }]
+  }
+}}####
+e: {
+  "error" : "Error from server: Unable to provide support for code system http://snomed.info/sct/"
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "inactive" : true,
+    "include" : [{
+      "system" : "http://snomed.info/sct/",
+      "concept" : [{
+        "code" : "441799006",
+        "display" : "Intensity modulated radiation therapy (procedure)"
+      },
+      {
+        "code" : "1156530009",
+        "display" : "Volumetric Modulated Arc Therapy (procedure)"
+      },
+      {
+        "code" : "1156526006",
+        "display" : "Two dimensional external beam radiation therapy (procedure)"
+      },
+      {
+        "code" : "168524008",
+        "display" : "Radiotherapy - intraoperative control (procedure)"
+      }]
+    }]
+  }
+}}####
+e: {
+  "error" : "Error from server: Unable to provide support for code system http://snomed.info/sct/"
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : false, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "inactive" : true,
+    "include" : [{
+      "system" : "http://snomed.info/sct/",
+      "filter" : [{
+        "property" : "concept",
+        "op" : "is-a",
+        "value" : "258399006"
+      }]
+    }]
+  }
+}}####
+e: {
+  "error" : "Error from server: Unable to provide support for code system http://snomed.info/sct/"
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "url": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-radiotherapy-treatment-location-qualifier-vs", "version": "2.0.0"}####
+e: {
+  "error" : "Error from server: Unable to provide support for code system http://snomed.info/sct/"
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "inactive" : true,
+    "include" : [{
+      "system" : "http://snomed.info/sct/",
+      "concept" : [{
+        "code" : "15825003",
+        "display" : "Aortic structure (body structure)"
+      },
+      {
+        "code" : "54247002",
+        "display" : "Ascending aorta structure (body Structure)"
+      },
+      {
+        "code" : "425444002",
+        "display" : "Branch of brachiocephalic artery (body structure)"
+      },
+      {
+        "code" : "69105007",
+        "display" : "Carotid artery structure (body structure)"
+      },
+      {
+        "code" : "57850000",
+        "display" : "Structure of celiac artery (body structure)"
+      },
+      {
+        "code" : "41801008",
+        "display" : "Coronary artery structure (body structure)"
+      },
+      {
+        "code" : "7657000",
+        "display" : "Structure of femoral artery (body structure)"
+      },
+      {
+        "code" : "244314003",
+        "display" : "Circumflex humeral artery (body structure)"
+      },
+      {
+        "code" : "74200005",
+        "display" : "Structure of inferior hypophyseal artery (body structure)"
+      },
+      {
+        "code" : "55601007",
+        "display" : "Structure of superior hypophyseal artery (body structure)"
+      },
+      {
+        "code" : "244327004",
+        "display" : "Circumflex iliac artery (body structure)"
+      },
+      {
+        "code" : "113269004",
+        "display" : "Structure of external iliac artery (body structure)"
+      },
+      {
+        "code" : "90024005",
+        "display" : "Structure of internal iliac artery (body structure)"
+      },
+      {
+        "code" : "73634005",
+        "display" : "Common iliac artery structure (body structure)"
+      },
+      {
+        "code" : "33795007",
+        "display" : "Structure of anterior descending branch of left coronary artery (body structure)"
+      },
+      {
+        "code" : "42258001",
+        "display" : "Superior mesenteric artery structure (body structure)"
+      },
+      {
+        "code" : "81040000",
+        "display" : "Pulmonary artery structure (body structure)"
+      },
+      {
+        "code" : "36765005",
+        "display" : "Structure of subclavian artery (body structure)"
+      },
+      {
+        "code" : "85234005",
+        "display" : "Structure of vertebral artery (body structure)"
+      },
+      {
+        "code" : "37783008",
+        "display" : "Bone structure of acetabulum (body structure)"
+      },
+      {
+        "code" : "89187006",
+        "display" : "Airway structure (body structure)"
+      },
+      {
+        "code" : "123956007",
+        "display" : "Anus part (body structure)"
+      },
+      {
+        "code" : "66754008",
+        "display" : "Appendix structure (body structure)"
+      },
+      {
+        "code" : "77578007",
+        "display" : "Arytenoid cartilage structure (body structure)"
+      },
+      {
+        "code" : "59652004",
+        "display" : "Atrial structure (body structure)"
+      },
+      {
+        "code" : "79741001",
+        "display" : "Common bile duct structure (body structure)"
+      },
+      {
+        "code" : "89837001",
+        "display" : "Urinary bladder structure (body structure)"
+      },
+      {
+        "code" : "393006",
+        "display" : "Structure of wall of urinary bladder (body structure)"
+      },
+      {
+        "code" : "119186007",
+        "display" : "Bone part (body structure)"
+      },
+      {
+        "code" : "52374004",
+        "display" : "Ethmoid bone structure (body structure)"
+      },
+      {
+        "code" : "74872008",
+        "display" : "Frontal bone structure (body structure)"
+      },
+      {
+        "code" : "21387005",
+        "display" : "Hyoid bone structure (body structure)"
+      },
+      {
+        "code" : "22356005",
+        "display" : "Bone structure of ilium (body structure)"
+      },
+      {
+        "code" : "421793000",
+        "display" : "Bone structure of incus (body structure)"
+      },
+      {
+        "code" : "85710004",
+        "display" : "Bone structure of ischium (body structure)"
+      },
+      {
+        "code" : "6229007",
+        "display" : "Lacrimal bone structure (body structure)"
+      },
+      {
+        "code" : "91609006",
+        "display" : "Bone structure of mandible (body structure)"
+      },
+      {
+        "code" : "59066005",
+        "display" : "Mastoid structure (body structure)"
+      },
+      {
+        "code" : "74386004",
+        "display" : "Nasal bone structure (body structure)"
+      },
+      {
+        "code" : "31640002",
+        "display" : "Occipital bone structure (body structure)"
+      },
+      {
+        "code" : "51283005",
+        "display" : "Palatine bone structure (body structure)"
+      },
+      {
+        "code" : "24924006",
+        "display" : "Parietal bone structure (body structure)"
+      },
+      {
+        "code" : "118645006",
+        "display" : "Structure of innominate bone and/or sacrum and/or coccyx (body structure)"
+      },
+      {
+        "code" : "73117003",
+        "display" : "Sphenoid bone structure (body structure)"
+      },
+      {
+        "code" : "60911003",
+        "display" : "Temporal bone structure (body structure)"
+      },
+      {
+        "code" : "13881006",
+        "display" : "Zygomatic bone structure (body structure)"
+      },
+      {
+        "code" : "14016003",
+        "display" : "Bone marrow structure (body structure)"
+      },
+      {
+        "code" : "5798000",
+        "display" : "Diaphragm structure (body structure)"
+      },
+      {
+        "code" : "113276009",
+        "display" : "Intestinal structure (body structure)"
+      },
+      {
+        "code" : "14742008",
+        "display" : "Structure of large intestine (body structure)"
+      },
+      {
+        "code" : "30315005",
+        "display" : "Structure of small intestine (body structure)"
+      },
+      {
+        "code" : "36582005",
+        "display" : "Brachial plexus structure (body structure)"
+      },
+      {
+        "code" : "12738006",
+        "display" : "Brain structure (body structure)"
+      },
+      {
+        "code" : "15926001",
+        "display" : "Brainstem structure (body structure)"
+      },
+      {
+        "code" : "76752008",
+        "display" : "Breast structure (body structure)"
+      },
+      {
+        "code" : "955009",
+        "display" : "Bronchial structure (body structure)"
+      },
+      {
+        "code" : "102297006",
+        "display" : "Main bronchus structure (body structure)"
+      },
+      {
+        "code" : "34381000",
+        "display" : "Anal canal structure (body structure)"
+      },
+      {
+        "code" : "28700002",
+        "display" : "Structure of carina of trachea (body structure)"
+      },
+      {
+        "code" : "38848004",
+        "display" : "Duodenal structure (body structure)"
+      },
+      {
+        "code" : "7173007",
+        "display" : "Cauda equina structure (body structure)"
+      },
+      {
+        "code" : "9284003",
+        "display" : "Corpus cavernosum structure (body structure)"
+      },
+      {
+        "code" : "279549004",
+        "display" : "Nasal cavity structure (body structure)"
+      },
+      {
+        "code" : "74262004",
+        "display" : "Oral cavity structure (body structure)"
+      },
+      {
+        "code" : "32713005",
+        "display" : "Cecum structure (body structure)"
+      },
+      {
+        "code" : "113305005",
+        "display" : "Cerebellar structure (body structure)"
+      },
+      {
+        "code" : "83678007",
+        "display" : "Structure of cerebrum (body structure)"
+      },
+      {
+        "code" : "71252005",
+        "display" : "Cervix uteri structure (body structure)"
+      },
+      {
+        "code" : "78904004",
+        "display" : "Chest wall structure (body structure)"
+      },
+      {
+        "code" : "369387006",
+        "display" : "Structure of cisterna pontis (body structure)"
+      },
+      {
+        "code" : "60075002",
+        "display" : "Cervical esophagus structure (body structure)"
+      },
+      {
+        "code" : "51299004",
+        "display" : "Bone structure of clavicle (body structure)"
+      },
+      {
+        "code" : "56193007",
+        "display" : "Oculomotor nerve structure (body structure)"
+      },
+      {
+        "code" : "21161002",
+        "display" : "Glossopharyngeal nerve structure (body structure)"
+      },
+      {
+        "code" : "27612005",
+        "display" : "Trigeminal nerve structure (body structure)"
+      },
+      {
+        "code" : "80622005",
+        "display" : "Abducens nerve structure (body structure)"
+      },
+      {
+        "code" : "56052001",
+        "display" : "Facial nerve structure (body structure)"
+      },
+      {
+        "code" : "8598002",
+        "display" : "Vestibulocochlear nerve structure (body structure)"
+      },
+      {
+        "code" : "15119000",
+        "display" : "Accessory nerve structure (body structure)"
+      },
+      {
+        "code" : "37899009",
+        "display" : "Hypoglossal nerve structure (body structure)"
+      },
+      {
+        "code" : "80169004",
+        "display" : "Cochlear structure (body structure)"
+      },
+      {
+        "code" : "71854001",
+        "display" : "Colon structure (body structure)"
+      },
+      {
+        "code" : "9040008",
+        "display" : "Ascending colon structure (body structure)"
+      },
+      {
+        "code" : "32622004",
+        "display" : "Descending colon structure (body structure)"
+      },
+      {
+        "code" : "81745001",
+        "display" : "Structure of eye proper (body structure)"
+      },
+      {
+        "code" : "60184004",
+        "display" : "Sigmoid colon structure (body structure)"
+      },
+      {
+        "code" : "485005",
+        "display" : "Transverse colon structure (body structure)"
+      },
+      {
+        "code" : "28726007",
+        "display" : "Corneal structure (body structure)"
+      },
+      {
+        "code" : "36743005",
+        "display" : "Structure of cribriform plate (body structure)"
+      },
+      {
+        "code" : "8600008",
+        "display" : "Cricoid cartilage structure (body structure)"
+      },
+      {
+        "code" : "28276008",
+        "display" : "Structure of cricopharyngeal part of inferior constrictor pharyngeus muscle (body structure)"
+      },
+      {
+        "code" : "28231008",
+        "display" : "Gallbladder structure (body structure)"
+      },
+      {
+        "code" : "71934003",
+        "display" : "Genital structure (body structure)"
+      },
+      {
+        "code" : "13561001",
+        "display" : "Lacrimal gland structure (body structure)"
+      },
+      {
+        "code" : "117590005",
+        "display" : "Ear structure (body structure)"
+      },
+      {
+        "code" : "111002",
+        "display" : "Parathyroid structure (body structure)"
+      },
+      {
+        "code" : "127949000",
+        "display" : "Elbow region structure (body structure)"
+      },
+      {
+        "code" : "32849002",
+        "display" : "Esophageal structure (body structure)"
+      },
+      {
+        "code" : "88481005",
+        "display" : "Sublingual gland structure (body structure)"
+      },
+      {
+        "code" : "385296007",
+        "display" : "Submandibular salivary gland structure (body structure)"
+      },
+      {
+        "code" : "9875009",
+        "display" : "Thymus gland structure (body structure)"
+      },
+      {
+        "code" : "69748006",
+        "display" : "Thyroid structure (body structure)"
+      },
+      {
+        "code" : "2812003",
+        "display" : "Structure of head of femur (body structure)"
+      },
+      {
+        "code" : "24136001",
+        "display" : "Hip joint structure (body structure)"
+      },
+      {
+        "code" : "71341001",
+        "display" : "Bone structure of femur (body structure)"
+      },
+      {
+        "code" : "29627003",
+        "display" : "Structure of neck of femur (body structure)"
+      },
+      {
+        "code" : "41111004",
+        "display" : "Bone structure of shaft of femur (body structure)"
+      },
+      {
+        "code" : "87342007",
+        "display" : "Bone structure of fibula (body structure)"
+      },
+      {
+        "code" : "1307006",
+        "display" : "Glottis structure (body structure)"
+      },
+      {
+        "code" : "3711007",
+        "display" : "Structure of great blood vessel (organ) (body structure)"
+      },
+      {
+        "code" : "90228003",
+        "display" : "Hard palate structure (body structure)"
+      },
+      {
+        "code" : "23451007",
+        "display" : "Adrenal structure (body structure)"
+      },
+      {
+        "code" : "80891009",
+        "display" : "Heart structure (body structure)"
+      },
+      {
+        "code" : "372073000",
+        "display" : "Cerebral hemisphere structure (body structure)"
+      },
+      {
+        "code" : "5366008",
+        "display" : "Hippocampal structure (body structure)"
+      },
+      {
+        "code" : "67923007",
+        "display" : "Hypothalamic structure (body structure)"
+      },
+      {
+        "code" : "34516001",
+        "display" : "Ileal structure (body structure)"
+      },
+      {
+        "code" : "21306003",
+        "display" : "Jejunal structure (body structure)"
+      },
+      {
+        "code" : "16953009",
+        "display" : "Elbow joint structure (body structure)"
+      },
+      {
+        "code" : "85537004",
+        "display" : "Glenohumeral joint structure (body structure)"
+      },
+      {
+        "code" : "711190000",
+        "display" : "Structure of epiphyseal plate (body structure)"
+      },
+      {
+        "code" : "39352004",
+        "display" : "Joint structure (body structure)"
+      },
+      {
+        "code" : "53620006",
+        "display" : "Temporomandibular joint structure (body structure)"
+      },
+      {
+        "code" : "6566002",
+        "display" : "Cerebellar hemisphere structure (body structure)"
+      },
+      {
+        "code" : "50403003",
+        "display" : "Structure of cortex of kidney (body structure)"
+      },
+      {
+        "code" : "74033008",
+        "display" : "Structure of hilum of kidney (body structure)"
+      },
+      {
+        "code" : "85050009",
+        "display" : "Bone structure of humerus (body structure)"
+      },
+      {
+        "code" : "64033007",
+        "display" : "Kidney structure (body structure)"
+      },
+      {
+        "code" : "72696002",
+        "display" : "Knee region structure (body structure)"
+      },
+      {
+        "code" : "81502006",
+        "display" : "Hypopharyngeal structure (body structure)"
+      },
+      {
+        "code" : "4596009",
+        "display" : "Laryngeal structure (body structure)"
+      },
+      {
+        "code" : "86483002",
+        "display" : "Structure of supraglottic space (body structure)"
+      },
+      {
+        "code" : "78076003",
+        "display" : "Structure of lens of eye (body structure)"
+      },
+      {
+        "code" : "6544009",
+        "display" : "Structure of gastrohepatic ligament (body structure)"
+      },
+      {
+        "code" : "81083006",
+        "display" : "Both lips (body structure)"
+      },
+      {
+        "code" : "10200004",
+        "display" : "Liver structure (body structure)"
+      },
+      {
+        "code" : "83251001",
+        "display" : "Frontal lobe structure (body structure)"
+      },
+      {
+        "code" : "25990002",
+        "display" : "Renal pelvis structure (body structure)"
+      },
+      {
+        "code" : "31065004",
+        "display" : "Occipital lobe structure (body structure)"
+      },
+      {
+        "code" : "16630005",
+        "display" : "Parietal lobe structure (body structure)"
+      },
+      {
+        "code" : "78277001",
+        "display" : "Temporal lobe structure (body structure)"
+      },
+      {
+        "code" : "72410000",
+        "display" : "Mediastinal structure (body structure)"
+      },
+      {
+        "code" : "71616004",
+        "display" : "Skeletal and/or smooth muscle structure (body structure)"
+      },
+      {
+        "code" : "4866005",
+        "display" : "Constrictor muscle of pharynx structure (body structure)"
+      },
+      {
+        "code" : "79368004",
+        "display" : "Masseter muscle structure (body structure)"
+      },
+      {
+        "code" : "52927003",
+        "display" : "Structure of temporalis muscle (body structure)"
+      },
+      {
+        "code" : "71836000",
+        "display" : "Nasopharyngeal structure (body structure)"
+      },
+      {
+        "code" : "59441001",
+        "display" : "Structure of lymph node (body structure)"
+      },
+      {
+        "code" : "16051009",
+        "display" : " Structure of apical axillary lymph node (body structure)"
+      },
+      {
+        "code" : "283001",
+        "display" : "Structure of central axillary lymph node (body structure) |"
+      },
+      {
+        "code" : "68171009",
+        "display" : "Axillary lymph node structure (body structure)"
+      },
+      {
+        "code" : "33770006",
+        "display" : "Structure of lateral axillary lymph node (body structure)"
+      },
+      {
+        "code" : "69691007",
+        "display" : "Structure of pectoral axillary lymph node (body structure)"
+      },
+      {
+        "code" : "12196003",
+        "display" : "Structure of subscapular axillary lymph node (body structure)"
+      },
+      {
+        "code" : "196821008",
+        "display" : "Structure of innominate lymph node (body structure)"
+      },
+      {
+        "code" : "279816002",
+        "display" : "Bronchopulmonary lymph node group (body structure)"
+      },
+      {
+        "code" : "196751009",
+        "display" : "Structure of diaphragmatic lymph node (body structure)"
+      },
+      {
+        "code" : "65349008",
+        "display" : "Structure of external iliac lymph node (body structure)"
+      },
+      {
+        "code" : "245357003",
+        "display" : "Structure of internal iliac lymph node (body structure)"
+      },
+      {
+        "code" : "84219008",
+        "display" : "Structure of iliac lymph node (body structure)"
+      },
+      {
+        "code" : "245299000",
+        "display" : "Internal iliac lymph node group (body structure)"
+      },
+      {
+        "code" : "245295006",
+        "display" : "Common iliac lymph node group (body structure)"
+      },
+      {
+        "code" : "245282001",
+        "display" : "Internal mammary lymph node group (body structure)"
+      },
+      {
+        "code" : "279763008",
+        "display" : "Inguinofemoral lymph node group (body structure)"
+      },
+      {
+        "code" : "64038003",
+        "display" : "Intercostal lymph node (body structure)"
+      },
+      {
+        "code" : "127938006",
+        "display" : "Lymph node of aortopulmonary window (body structure)"
+      },
+      {
+        "code" : "62683002",
+        "display" : "Mediastinal lymph node structure (body structure)"
+      },
+      {
+        "code" : "81105003",
+        "display" : "Cervical lymph node structure (body structure)"
+      },
+      {
+        "code" : "36086000",
+        "display" : "Structure of obturator lymph node (body structure)"
+      },
+      {
+        "code" : "35783009",
+        "display" : "Structure of aortic lymph node (body structure)"
+      },
+      {
+        "code" : "368550005",
+        "display" : "Structure of paramammary lymph node (body structure)"
+      },
+      {
+        "code" : "82365008",
+        "display" : "Structure of parasternal lymph node (body structure)"
+      },
+      {
+        "code" : "245294005",
+        "display" : "Pelvic lymph node group (body structure)"
+      },
+      {
+        "code" : "245288002",
+        "display" : "Portahepatis lymph node group (body structure)"
+      },
+      {
+        "code" : "45206002",
+        "display" : "Nasal structure (body structure)"
+      },
+      {
+        "code" : "1187336003",
+        "display" : "Presacral lymph node group (body structure)"
+      },
+      {
+        "code" : "196662004",
+        "display" : "Structure of intrapulmonary lymph node (body structure)"
+      },
+      {
+        "code" : "76838003",
+        "display" : "Structure of supraclavicular lymph node (body structure)"
+      },
+      {
+        "code" : "245283006",
+        "display" : "Tracheobronchial lymph node group (body structure)"
+      },
+      {
+        "code" : "84782009",
+        "display" : "Peripheral nerve structure (body structure)"
+      },
+      {
+        "code" : "40958000",
+        "display" : "Nerve root structure (body structure)"
+      },
+      {
+        "code" : "244453006",
+        "display" : "Structure of optic chiasma (body structure)"
+      },
+      {
+        "code" : "18234004",
+        "display" : "Optic nerve structure (body structure)"
+      },
+      {
+        "code" : "39607008",
+        "display" : "Lung structure (body structure)"
+      },
+      {
+        "code" : "31094006",
+        "display" : "Structure of lobe of lung (body structure)"
+      },
+      {
+        "code" : "34080009",
+        "display" : "Malleus structure (body structure)"
+      },
+      {
+        "code" : "70925003",
+        "display" : "Bone structure of maxilla (body structure)"
+      },
+      {
+        "code" : "363654007",
+        "display" : "Structure of orbit proper (body structure)"
+      },
+      {
+        "code" : "31389004",
+        "display" : "Oropharyngeal structure (body structure)"
+      },
+      {
+        "code" : "52410001",
+        "display" : "Digastric muscle structure (body structure)"
+      },
+      {
+        "code" : "15497006",
+        "display" : "Ovarian structure (body structure)"
+      },
+      {
+        "code" : "18252004",
+        "display" : "Structure of platysma muscle (body structure)"
+      },
+      {
+        "code" : "76738006",
+        "display" : "Structure of pterygoid muscle (body structure)"
+      },
+      {
+        "code" : "22823000",
+        "display" : "Structure of sternocleidomastoid muscle (body structure)"
+      },
+      {
+        "code" : "49460000",
+        "display" : "Soft palate structure (body structure)"
+      },
+      {
+        "code" : "46607005",
+        "display" : "Nasal turbinate structure (body structure)"
+      },
+      {
+        "code" : "15776009",
+        "display" : "Pancreatic structure (body structure)"
+      },
+      {
+        "code" : "64163001",
+        "display" : "Structure of head of pancreas (body structure)"
+      },
+      {
+        "code" : "73239005",
+        "display" : "Structure of tail of pancreas (body structure)"
+      },
+      {
+        "code" : "45682005",
+        "display" : "Structure of parametrium (body structure)"
+      },
+      {
+        "code" : "45289007",
+        "display" : "Parotid gland structure (body structure)"
+      },
+      {
+        "code" : "52737000",
+        "display" : "Structure of bulb of penis (body structure)"
+      },
+      {
+        "code" : "18911002",
+        "display" : "Penile structure (body structure)"
+      },
+      {
+        "code" : "76848001",
+        "display" : "Pericardial structure (body structure)"
+      },
+      {
+        "code" : "38864007",
+        "display" : "Perineal structure (body structure)"
+      },
+      {
+        "code" : "118762006",
+        "display" : "Peritoneal sac structure (body structure)"
+      },
+      {
+        "code" : "14106009",
+        "display" : "Cardiac pacemaker, device (physical object)"
+      },
+      {
+        "code" : "54066008",
+        "display" : "Pharyngeal structure (body structure)"
+      },
+      {
+        "code" : "110822002",
+        "display" : "Pancreas and jejunum (combined site) (body structure)"
+      },
+      {
+        "code" : "45793000",
+        "display" : "Pineal structure (body structure)"
+      },
+      {
+        "code" : "56329008",
+        "display" : "Pituitary structure (body structure)"
+      },
+      {
+        "code" : "49557009",
+        "display" : "Pontine structure (body structure)"
+      },
+      {
+        "code" : "41216001",
+        "display" : "Prostatic structure (body structure)"
+      },
+      {
+        "code" : "1162492000",
+        "display" : "Tumor bed (morphologic abnormality)"
+      },
+      {
+        "code" : "88938001",
+        "display" : "Structure of lateral pterygoid muscle (body structure)"
+      },
+      {
+        "code" : "85002005",
+        "display" : "Structure of medial pterygoid muscle (body structure)"
+      },
+      {
+        "code" : "511000202101",
+        "display" : "Rectum wall structure (body structure)"
+      },
+      {
+        "code" : "34402009",
+        "display" : "Rectum structure (body structure)"
+      },
+      {
+        "code" : "62397004",
+        "display" : "Sacral plexus structure (body structure)"
+      },
+      {
+        "code" : "41695006",
+        "display" : "Scalp structure (body structure)"
+      },
+      {
+        "code" : "67183008",
+        "display" : "Structure of condyloid process of mandible (body structure)"
+      },
+      {
+        "code" : "124002",
+        "display" : "Structure of coronoid process of mandible (body structure)"
+      },
+      {
+        "code" : "12402003",
+        "display" : "Scar (morphologic abnormality)"
+      },
+      {
+        "code" : "20233005",
+        "display" : "Scrotal structure (body structure)"
+      },
+      {
+        "code" : "64739004",
+        "display" : "Seminal vesicle structure (body structure)"
+      },
+      {
+        "code" : "54215007",
+        "display" : "Ethmoid sinus structure (body structure)"
+      },
+      {
+        "code" : "82561000",
+        "display" : "Symphysis pubis structure (body structure)"
+      },
+      {
+        "code" : "62413002",
+        "display" : "Bone structure of radius (body structure)"
+      },
+      {
+        "code" : "55060009",
+        "display" : "Frontal sinus structure (body structure)"
+      },
+      {
+        "code" : "15924003",
+        "display" : "Maxillary sinus structure (body structure)"
+      },
+      {
+        "code" : "5665001",
+        "display" : "Retinal structure (body structure)"
+      },
+      {
+        "code" : "113197003",
+        "display" : "Bone structure of rib (body structure)"
+      },
+      {
+        "code" : "48535007",
+        "display" : "Bone structure of first rib (body structure)"
+      },
+      {
+        "code" : "78247007",
+        "display" : "Bone structure of second rib (body structure)"
+      },
+      {
+        "code" : "25888004",
+        "display" : "Bone structure of third rib (body structure)"
+      },
+      {
+        "code" : "25523003",
+        "display" : "Bone structure of fourth rib (body structure)"
+      },
+      {
+        "code" : "15339008",
+        "display" : "Bone structure of fifth rib (body structure)"
+      },
+      {
+        "code" : "59558009",
+        "display" : "Bone structure of sixth rib (body structure)"
+      },
+      {
+        "code" : "24915002",
+        "display" : "Bone structure of seventh rib (body structure)"
+      },
+      {
+        "code" : "5953002",
+        "display" : "Bone structure of eighth rib (body structure)"
+      },
+      {
+        "code" : "22565002",
+        "display" : "Bone structure of ninth rib (body structure)"
+      },
+      {
+        "code" : "77644006",
+        "display" : "Bone structure of tenth rib (body structure)"
+      },
+      {
+        "code" : "58830002",
+        "display" : "Bone structure of eleventh rib (body structure)"
+      },
+      {
+        "code" : "43993008",
+        "display" : "Bone structure of twelfth rib (body structure)"
+      },
+      {
+        "code" : "39937001",
+        "display" : "Skin structure (body structure)"
+      },
+      {
+        "code" : "1193560003",
+        "display" : "Bone structure of thirteenth rib (body structure)"
+      },
+      {
+        "code" : "48014002",
+        "display" : "Skin structure of perineum (body structure)"
+      },
+      {
+        "code" : "79601000",
+        "display" : "Bone structure of scapula (body structure)"
+      },
+      {
+        "code" : "75093004",
+        "display" : "Skin structure of anterior abdominal wall (body structure)"
+      },
+      {
+        "code" : "789564000",
+        "display" : "Structure of retropharyngeal space (body structure)"
+      },
+      {
+        "code" : "1193554003",
+        "display" : "Structure of retrostyloid space (body structure)"
+      },
+      {
+        "code" : "41178004",
+        "display" : "Structure of sphincter ani muscle (body structure)"
+      },
+      {
+        "code" : "61853006",
+        "display" : "Spinal canal structure (body structure)"
+      },
+      {
+        "code" : "24999009",
+        "display" : "Sphenoid sinus structure (body structure)"
+      },
+      {
+        "code" : "2748008",
+        "display" : "Spinal cord structure (body structure)"
+      },
+      {
+        "code" : "54785003",
+        "display" : "Cervical spinal cord structure (body structure)"
+      },
+      {
+        "code" : "60051002",
+        "display" : "Lumbar spinal cord structure (body structure)"
+      },
+      {
+        "code" : "89546000",
+        "display" : "Bone structure of cranium (body structure)"
+      },
+      {
+        "code" : "11478001",
+        "display" : "Sacral spinal cord structure (body structure)"
+      },
+      {
+        "code" : "50800009",
+        "display" : "Thoracic spinal cord structure (body structure)"
+      },
+      {
+        "code" : "25270003",
+        "display" : "Corpus spongiosum structure (body structure)"
+      },
+      {
+        "code" : "22718006",
+        "display" : "Stapes structure (body structure)"
+      },
+      {
+        "code" : "69695003",
+        "display" : "Stomach structure (body structure)"
+      },
+      {
+        "code" : "75415000",
+        "display" : "Structure of suprapatellar bursa (body structure)"
+      },
+      {
+        "code" : "67548002",
+        "display" : "Structure of conjunctiva of left eye (body structure)"
+      },
+      {
+        "code" : "13014005",
+        "display" : "Structure of conjunctiva of right eye (body structure)"
+      },
+      {
+        "code" : "8997002",
+        "display" : "Space of ventricular system of brain (body structure)"
+      },
+      {
+        "code" : "13024002",
+        "display" : "Tendon structure (body structure)"
+      },
+      {
+        "code" : "70567001",
+        "display" : "Structure of quadriceps tendon (body structure)"
+      },
+      {
+        "code" : "40689003",
+        "display" : "Testis structure (body structure)"
+      },
+      {
+        "code" : "37554007",
+        "display" : "Spinal dura mater structure (body structure)"
+      },
+      {
+        "code" : "1732005",
+        "display" : "Thoracic duct structure (body structure)"
+      },
+      {
+        "code" : "78961009",
+        "display" : "Splenic structure (body structure)"
+      },
+      {
+        "code" : "35378004",
+        "display" : "Structure of hilum of spleen (body structure)"
+      },
+      {
+        "code" : "21974007",
+        "display" : "Tongue structure (body structure)"
+      },
+      {
+        "code" : "181226008",
+        "display" : "Entire tongue (body structure)"
+      },
+      {
+        "code" : "47975008",
+        "display" : "Structure of root of tongue (body structure)"
+      },
+      {
+        "code" : "61344008",
+        "display" : "Structure of body of tongue (body structure)"
+      },
+      {
+        "code" : "44567001",
+        "display" : "Tracheal structure (body structure)"
+      },
+      {
+        "code" : "87953007",
+        "display" : "Ureteric structure (body structure)"
+      },
+      {
+        "code" : "13648007",
+        "display" : "Urethral structure (body structure)"
+      },
+      {
+        "code" : "71553001",
+        "display" : "Prostatic urethra structure (body structure)"
+      },
+      {
+        "code" : "35039007",
+        "display" : "Uterine structure (body structure)"
+      },
+      {
+        "code" : "72107004",
+        "display" : "Structure of azygous vein (body structure)"
+      },
+      {
+        "code" : "8887007",
+        "display" : "Structure of brachiocephalic vein (body structure)"
+      },
+      {
+        "code" : "63507001",
+        "display" : "Structure of external iliac vein (body structure)"
+      },
+      {
+        "code" : "40300007",
+        "display" : "Structure of internal iliac vein (body structure)"
+      },
+      {
+        "code" : "75573002",
+        "display" : "Tonsillar structure (palatine) (body structure)"
+      },
+      {
+        "code" : "46027005",
+        "display" : "Structure of common iliac vein (body structure)"
+      },
+      {
+        "code" : "71585003",
+        "display" : "Structure of external jugular vein (body structure)"
+      },
+      {
+        "code" : "12123001",
+        "display" : "Internal jugular vein structure (body structure)"
+      },
+      {
+        "code" : "32764006",
+        "display" : "Portal vein structure (body structure)"
+      },
+      {
+        "code" : "430757002",
+        "display" : "Structure of pulmonary vein great vessel (body structure)"
+      },
+      {
+        "code" : "9454009",
+        "display" : "Structure of subclavian vein (body structure)"
+      },
+      {
+        "code" : "35532006",
+        "display" : "Vena caval structure (body structure)"
+      },
+      {
+        "code" : "76784001",
+        "display" : "Vaginal structure (body structure)"
+      },
+      {
+        "code" : "279894000",
+        "display" : "Inferior surface of vaginal cervix (body structure)"
+      },
+      {
+        "code" : "438074005",
+        "display" : "Vaginal cuff (morphologic abnormality)"
+      },
+      {
+        "code" : "17401000",
+        "display" : "Cardiac valve structure (body structure)"
+      },
+      {
+        "code" : "63190004",
+        "display" : "Structure of jugular vein (body structure)"
+      },
+      {
+        "code" : "91134007",
+        "display" : "Mitral valve structure (body structure)"
+      },
+      {
+        "code" : "39057004",
+        "display" : "Pulmonary valve structure (body structure)"
+      },
+      {
+        "code" : "46030003",
+        "display" : "Tricuspid valve structure (body structure)"
+      },
+      {
+        "code" : "21814001",
+        "display" : "Cardiac ventricular structure (body structure)"
+      },
+      {
+        "code" : "46105003",
+        "display" : "Vocal cord structure (body structure)"
+      },
+      {
+        "code" : "45292006",
+        "display" : "Vulval structure (body structure)"
+      },
+      {
+        "code" : "263355003",
+        "display" : "Vaginal wall (body structure)"
+      },
+      {
+        "code" : "38266002",
+        "display" : "Entire body as a whole (body structure) |"
+      },
+      {
+        "code" : "75330005",
+        "display" : "Structure of red bone marrow (body structure)"
+      },
+      {
+        "code" : "52940008",
+        "display" : "Thyroid cartilage structure (body structure)"
+      },
+      {
+        "code" : "15328005",
+        "display" : "Structure of suprasellar region (body structure)"
+      },
+      {
+        "code" : "34202007",
+        "display" : "Aortic valve structure (body structure)"
+      },
+      {
+        "code" : "1172006",
+        "display" : "Structure of odontoid process of axis (body structure)"
+      },
+      {
+        "code" : "123037004",
+        "display" : "Body structure (body structure)"
+      },
+      {
+        "code" : "3572006",
+        "display" : "Structure of body of vertebra (body structure)"
+      },
+      {
+        "code" : "14806007",
+        "display" : "Bone structure of atlas (body structure)"
+      },
+      {
+        "code" : "39976000",
+        "display" : "Bone structure of axis (body structure)"
+      },
+      {
+        "code" : "91116008",
+        "display" : "Structure of body of third cervical vertebra (body structure)"
+      },
+      {
+        "code" : "14705001",
+        "display" : "Structure of body of fourth cervical vertebra (body structure)"
+      },
+      {
+        "code" : "67479001",
+        "display" : "Structure of body of fifth cervical vertebra (body structure)"
+      },
+      {
+        "code" : "88298007",
+        "display" : "Structure of body of sixth cervical vertebra (body structure)"
+      },
+      {
+        "code" : "16126006",
+        "display" : "Structure of body of seventh cervical vertebra (body structure)"
+      },
+      {
+        "code" : "73903008",
+        "display" : "Bone structure of lumbar vertebra (body structure)"
+      },
+      {
+        "code" : "61032001",
+        "display" : "Structure of body of first lumbar vertebra (body structure)"
+      },
+      {
+        "code" : "53983007",
+        "display" : "Structure of body of second lumbar vertebra (body structure)"
+      },
+      {
+        "code" : "55492004",
+        "display" : "Structure of body of third lumbar vertebra (body structure)"
+      },
+      {
+        "code" : "71996003",
+        "display" : "Structure of body of fourth lumbar vertebra (body structure)"
+      },
+      {
+        "code" : "21799000",
+        "display" : "Structure of body of fifth lumbar vertebra (body structure)"
+      },
+      {
+        "code" : "87141009",
+        "display" : "Sacral vertebra structure (body structure)"
+      },
+      {
+        "code" : "65985001",
+        "display" : "Structure of first sacral vertebra (body structure)"
+      },
+      {
+        "code" : "11808007",
+        "display" : "Structure of second sacral vertebra (body structure)"
+      },
+      {
+        "code" : "49967005",
+        "display" : "Structure of third sacral vertebra (body structure)"
+      },
+      {
+        "code" : "69950008",
+        "display" : "Structure of fourth sacral vertebra (body structure)"
+      },
+      {
+        "code" : "21452006",
+        "display" : "Structure of fifth sacral vertebra (body structure)"
+      },
+      {
+        "code" : "35769007",
+        "display" : "Bone structure of thoracic vertebra (body structure)"
+      },
+      {
+        "code" : "56094003",
+        "display" : "Structure of body of first thoracic vertebra (body structure)"
+      },
+      {
+        "code" : "50060007",
+        "display" : "Structure of body of secon thoracic vertebra (body structure)"
+      },
+      {
+        "code" : "73138009",
+        "display" : "Structure of body of third thoracic vertebra (body structure)"
+      },
+      {
+        "code" : "86197001",
+        "display" : "Structure of body of fourth thoracic vertebra (body structure)"
+      },
+      {
+        "code" : "6105006",
+        "display" : "Structure of body of fifth thoracic vertebra (body structure)"
+      },
+      {
+        "code" : "32430008",
+        "display" : "Structure of body of sixth thoracic vertebra (body structure)"
+      },
+      {
+        "code" : "71737002",
+        "display" : "Structure of body of seventh thoracic vertebra (body structure)"
+      },
+      {
+        "code" : "77435000",
+        "display" : "Structure of body of eighth thoracic vertebra (body structure)"
+      },
+      {
+        "code" : "33766003",
+        "display" : "Structure of body of ninth thoracic vertebra (body structure)"
+      },
+      {
+        "code" : "48405002",
+        "display" : "Structure of body of tenth thoracic vertebra (body structure)"
+      },
+      {
+        "code" : "52120002",
+        "display" : "Structure of body of eleventh thoracic vertebra (body structure)"
+      },
+      {
+        "code" : "280849005",
+        "display" : "Structure of body of twelfth  thoracic vertebra (body structure)"
+      },
+      {
+        "code" : "1186895000",
+        "display" : "Structure of body of thirteenth  thoracic vertebra (body structure)"
+      },
+      {
+        "code" : "1187337007",
+        "display" : "Jugular Fossa (body structure)"
+      },
+      {
+        "code" : "35763008",
+        "display" : "Structure of posterior fossa of cranial cavity (body structure)"
+      },
+      {
+        "code" : "87166008",
+        "display" : "Vomer bone structure (body structure)"
+      }]
+    }]
+  }
+}}####
+e: {
+  "error" : "Error from server: Unable to provide support for code system http://snomed.info/sct/"
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "inactive" : true,
+    "include" : [{
+      "system" : "http://snomed.info/sct/",
+      "concept" : [{
+        "code" : "228793007",
+        "display" : "Planning target volume (observable entity)"
+      },
+      {
+        "code" : "228791009",
+        "display" : "Gross tumor volume (observable entity)"
+      },
+      {
+        "code" : "228792002",
+        "display" : "Clinical target volume (observable entity)"
+      },
+      {
+        "code" : "1162586008",
+        "display" : "Irradiated volume of organ at risk (observable entity)"
+      },
+      {
+        "code" : "1201745009",
+        "display" : "Internal target volume (observable entity)"
+      },
+      {
+        "code" : "1201746005",
+        "display" : "Internal gross tumor volume (observable entity)"
+      }]
+    }]
+  }
+}}####
+e: {
+  "error" : "Error from server: Unable to provide support for code system http://snomed.info/sct/"
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "url": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-radiotherapy-volume-type-vs", "version": "2.0.0"}####
+e: {
+  "error" : "Error from server: Unable to provide support for code system http://snomed.info/sct/"
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "inactive" : true,
+    "include" : [{
+      "system" : "http://snomed.info/sct/",
+      "filter" : [{
+        "property" : "concept",
+        "op" : "is-a",
+        "value" : "128462008"
+      }]
+    }]
+  }
+}}####
+e: {
+  "error" : "Error from server: Unable to provide support for code system http://snomed.info/sct/"
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "inactive" : true,
+    "include" : [{
+      "system" : "http://snomed.info/sct/",
+      "concept" : [{
+        "code" : "1156529004",
+        "display" : "External beam radiation therapy using particle passive scattering technique (procedure)"
+      },
+      {
+        "code" : "1156528007",
+        "display" : "External beam radiation therapy using particle spot scanning technique (procedure)"
+      },
+      {
+        "code" : "1204242009",
+        "display" : "External beam radiation therapy using particle scanning technique (procedure)"
+      }]
+    }]
+  }
+}}####
+e: {
+  "error" : "Error from server: Unable to provide support for code system http://snomed.info/sct/"
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "url": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-teleradiotherapy-carbon-ion-beam-technique-vs", "version": "2.0.0"}####
+e: {
+  "error" : "Error from server: Unable to provide support for code system http://snomed.info/sct/"
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "url": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-teleradiotherapy-modality-vs", "version": "2.0.0"}####
+e: {
+  "error" : "Error from server: Unable to provide support for code system http://snomed.info/sct/"
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "inactive" : true,
+    "include" : [{
+      "system" : "http://snomed.info/sct/",
+      "concept" : [{
+        "code" : "169317000",
+        "display" : "Neutron capture therapy (procedure)"
+      }]
+    }]
+  }
+}}####
+e: {
+  "error" : "Error from server: Unable to provide support for code system http://snomed.info/sct/"
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "url": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-teleradiotherapy-proton-beam-technique-vs", "version": "2.0.0"}####
+e: {
+  "error" : "Error from server: Unable to provide support for code system http://snomed.info/sct/"
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "inactive" : true,
+    "include" : [{
+      "system" : "http://snomed.info/sct/",
+      "concept" : [{
+        "code" : "182992009",
+        "display" : "Treatment completed (situation)"
+      },
+      {
+        "code" : "266721009",
+        "display" : "No response to treatment (situation)"
+      },
+      {
+        "code" : "407563006",
+        "display" : "Treatment not tolerated (situation)"
+      },
+      {
+        "code" : "160932005",
+        "display" : "Financial problem (finding)"
+      },
+      {
+        "code" : "105480006",
+        "display" : "Refusal of treatment by patient (situation)"
+      },
+      {
+        "code" : "184081006",
+        "display" : "Patient has moved away (finding)"
+      },
+      {
+        "code" : "309846006",
+        "display" : "Treatment not available (situation)"
+      },
+      {
+        "code" : "399307001",
+        "display" : "Lost to follow-up (finding)"
+      },
+      {
+        "code" : "419620001",
+        "display" : "Death (event)"
+      }]
+    }]
+  }
+}}####
+e: {
+  "error" : "Error from server: Unable to provide support for code system http://snomed.info/sct/"
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "url": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-treatment-termination-reason-vs", "version": "2.0.0"}####
+e: {
+  "error" : "Error from server: Unable to provide support for code system http://snomed.info/sct/"
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "inactive" : true,
+    "include" : [{
+      "system" : "http://snomed.info/sct/",
+      "concept" : [{
+        "code" : "787377000",
+        "display" : "Gross examination and sampling of tissue specimen (procedure)"
+      },
+      {
+        "code" : "104157003",
+        "display" : "Light microscopy (procedure)"
+      },
+      {
+        "code" : "5880005",
+        "display" : "Physical examination procedure (procedure)"
+      },
+      {
+        "code" : "16310003",
+        "display" : "Diagnostic ultrasonography (procedure)"
+      },
+      {
+        "code" : "113091000",
+        "display" : "Magnetic resonance imaging (procedure)"
+      },
+      {
+        "code" : "77477000",
+        "display" : "Computerized axial tomography (procedure)"
+      },
+      {
+        "code" : "82918005",
+        "display" : "Positron emission tomography (procedure)"
+      },
+      {
+        "code" : "363680008",
+        "display" : "Radiographic imaging procedure (procedure)"
+      },
+      {
+        "code" : "363679005",
+        "display" : "Imaging (procedure)"
+      }]
+    }]
+  }
+}}####
+e: {
+  "error" : "Error from server: Unable to provide support for code system http://snomed.info/sct/"
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "url": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-tumor-size-method-vs", "version": "2.0.0"}####
+e: {
+  "error" : "Error from server: Unable to provide support for code system http://snomed.info/sct/"
+}
+-------------------------------------------------------------------------------------

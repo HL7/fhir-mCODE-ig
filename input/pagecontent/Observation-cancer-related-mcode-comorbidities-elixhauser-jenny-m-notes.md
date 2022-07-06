@@ -23,9 +23,9 @@ Usage: #example
 * component[=].valueCodeableConcept = http://snomed.info/sct#2667000 "Absent (qualifier value)"
 * component[+].code = http://loinc.org-requested-cs#LUNG_CHRONIC
 * component[=].valueCodeableConcept = http://snomed.info/sct#2667000 "Absent (qualifier value)"
-* component[+].code = http://loinc.org-requested-cs#DIAB_CX
-* component[=].valueCodeableConcept = http://snomed.info/sct#2667000 "Absent (qualifier value)"
 * component[+].code = http://loinc.org-requested-cs#DIAB_UNCX
+* component[=].valueCodeableConcept = http://snomed.info/sct#2667000 "Absent (qualifier value)"
+* component[+].code = http://loinc.org-requested-cs#DIAB_CX
 * component[=].valueCodeableConcept = http://snomed.info/sct#2667000 "Absent (qualifier value)"
 * component[+].code = http://loinc.org-requested-cs#OBESE
 * component[=].valueCodeableConcept = http://snomed.info/sct#2667000 "Absent (qualifier value)"

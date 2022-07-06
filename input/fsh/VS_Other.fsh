@@ -16,9 +16,8 @@ Description:  "How patient's given disease, condition, or ability is trending."
 * SCT#359746009 "Patient's condition stable (finding)"
 * SCT#271299001 "Patient's condition worsened (finding)"
 * SCT#709137006 "Patient condition undetermined (finding)"
-* SCT_TBD#USCRS-352236 "Cancer in complete remission(finding)" // FHIR-32837
-* SCT_TBD#USCRS-352237 "Cancer in partial remission (finding)" // FHIR-32837
-
+* SCT#550991000124107 "Malignant neoplasm in full remission (disorder)" // FHIR-32837 - MLT_note: SCT FN is displayed. The initial term of "cancer in complete remission" is a synonym for the concept.
+* SCT#551001000124108 "Malignant neoplasm in partial remission (disorder)" // FHIR-32837 - MLT_note: SCT FN is displayed. The initial term of "cancer in partial remission" is a synonym for the concept.
 
 
 ValueSet: CancerDiseaseStatusEvidenceTypeVS

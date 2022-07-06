@@ -10,7 +10,7 @@ Usage: #definition
 * title = "Fetch mCODE Patient Bundle for a given Patient"
 * status = #draft
 * kind = #operation
-* date = "2021-11-03T17:39:06-04:00"
+* date = "2022-03-30T14:27:52-04:00"
 * publisher = "HL7 International Clinical Interoperability Council"
 * contact.name = "HL7 International Clinical Interoperability Council"
 * contact.telecom[0].system = #url

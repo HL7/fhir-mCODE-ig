@@ -4,9 +4,9 @@
 // External Code Systems with a canonical recognized by terminology.hl7.org
 Alias:   LNC = http://loinc.org
 Alias:   SCT = http://snomed.info/sct
+//Alias:   SCT = http://snomed.info/sct|http://snomed.info/sct/731000124108   // latest US edition (see exp-params.json)
+//Alias:   SCT_INT = http://snomed.info/sct|http://snomed.info/sct/900000000000207008   // Latest international edition
 Alias:   UCUM = http://unitsofmeasure.org
-// Alias:   NCI = http://ncithesaurus-stage.nci.nih.gov
-// Alias:   ICD10CM = http://hl7.org/fhir/sid/icd-10-cm
 Alias:   ICD10CM = http://hl7.org/fhir/sid/icd-10-cm
 Alias:   ICD10PCS = http://www.cms.gov/Medicare/Coding/ICD10
 Alias:   RXN = http://www.nlm.nih.gov/research/umls/rxnorm
@@ -22,7 +22,6 @@ Alias:   SO = http://www.sequenceontology.org/
 
 // Code systems URLs from HL7 Terminology Authority that conflict with terminology.hl7.org
 Alias:   NCI = http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl
-
 
 // From terminology.hl7.org
 Alias:   OmbRaceCat = urn:oid:2.16.840.1.113883.6.238

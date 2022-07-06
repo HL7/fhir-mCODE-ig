@@ -16,8 +16,8 @@ Description:  "How patient's given disease, condition, or ability is trending."
 * SCT#359746009 "Patient's condition stable (finding)"
 * SCT#271299001 "Patient's condition worsened (finding)"
 * SCT#709137006 "Patient condition undetermined (finding)"
-* SCT_TBD#USCRS-352236 "Cancer in complete remission(finding)" // FHIR-32837
-* SCT_TBD#USCRS-352237 "Cancer in partial remission (finding)" // FHIR-32837
+* SCT#550991000124107 "Cancer in full remission(finding)" // FHIR-32836
+* SCT#551001000124108 "Cancer in partial remission (finding)" // FHIR-32837
 
 
 

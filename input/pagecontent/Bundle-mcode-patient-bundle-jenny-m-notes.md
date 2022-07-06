@@ -52,7 +52,7 @@ Usage: #example
 * entry[+].fullUrl = "http://example.org/fhir/Observation/cancer-related-mcode-comorbidities-elixhauser-jenny-m"
 * entry[=].resource = cancer-related-mcode-comorbidities-elixhauser-jenny-m
 * entry[+].fullUrl = "http://example.org/fhir/Observation/bodyweight-jenny-m-2018-03-16"
-* entry[=].resource = Inline-Instance-for-mcode-patient-bundle-jenny-m-24
+* entry[=].resource = bodyweight-jenny-m-2018-03-16
 * entry[+].fullUrl = "http://example.org/fhir/Observation/us-core-observation-lab-neutrophils-jenny-m"
 * entry[=].resource = us-core-observation-lab-neutrophils-jenny-m
 * entry[+].fullUrl = "http://example.org/fhir/Organization/us-core-organization-physician-services-inc"
@@ -64,15 +64,15 @@ Usage: #example
 * entry[+].fullUrl = "http://example.org/fhir/Observation/us-core-procedure-mammogram-jenny-m"
 * entry[=].resource = us-core-procedure-mammogram-jenny-m
 * entry[+].fullUrl = "http://example.org/fhir/FamilyMemberHistory/family-member-history-aunt-jenny-m"
-* entry[=].resource = Inline-Instance-for-mcode-patient-bundle-jenny-m-30
+* entry[=].resource = family-member-history-aunt-jenny-m
 * entry[+].fullUrl = "http://example.org/fhir/Procedure/us-core-procedure-mammogram-jenny-m"
 * entry[=].resource = us-core-procedure-mammogram-jenny-m
 * entry[+].fullUrl = "http://example.org/fhir/FamilyMemberHistory/family-member-history-uncle-jenny-m"
-* entry[=].resource = Inline-Instance-for-mcode-patient-bundle-jenny-m-32
+* entry[=].resource = family-member-history-uncle-jenny-m
 * entry[+].fullUrl = "http://example.org/fhir/DiagnosticReport/us-core-diagnosticreport-lab-jenny-m"
 * entry[=].resource = us-core-diagnosticreport-lab-jenny-m
 * entry[+].fullUrl = "http://example.org/fhir/Observation/observation-smoking-pack-years-jenny-m"
-* entry[=].resource = Inline-Instance-for-mcode-patient-bundle-jenny-m-34
+* entry[=].resource = observation-smoking-pack-years-jenny-m
 * entry[+].fullUrl = "http://example.org/fhir/Observation/us-core-observation-lab-tumor-invasion-jenny-m"
 * entry[=].resource = us-core-observation-lab-tumor-invasion-jenny-m
 * entry[+].fullUrl = "http://example.org/fhir/Observation/us-core-observation-lab-tumor-margins-jenny-m"

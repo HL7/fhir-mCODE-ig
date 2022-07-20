@@ -1,16 +1,20 @@
 ### Updates Since mCODE STU 2 Publication  (2022)
- * Integrated SNOMED Codes that have been issued since STU2 publication.  Not in the March 2022 US Release
-   * #1204242009  "External beam radiation therapy using particle scanning technique (procedure)" //USCRS-33517
-   * #1217011006  "non-adjacent (qualifier)" // USCRS-33144
-   * #1217123003 "Radiotherapy Course of Treatment (regime/therapy)" //USCRS-33529
-   * #1201745009 "Internal Target Volume (observable entity)" //USCRS-33520
-   * #1201746005  "Internal Gross Tumor Volume (observable entity)" // USCRS-33521
- * Integrated SNOMED Codes that have been issued since STU2 publication and are in the US and Int'l releases
-   * #551001000124108  "Cancer in partial remission (finding)" // USCRS-352237
-   * #550991000124107  "Cancer in full remission(finding)" //USCRS-352236
-   * #1162492000 "Tumor bed (morphologic abnormality)" // SNOMED term available to be released in Jan 2021
-   * #1162782007 "Three dimensional external beam radiation therapy (procedure)" // to be released Jan 2021
-   * #1162586008 "Irradiated volume of organ at risk (observable entity)"  // to be released Jan 2021
+ 
+* Updated AJCC references to new SNOMED-CT terms that map to AJCC (https://jira.hl7.org/browse/FHIR-37593)
+* Corrected extended example, which formerly used invalid stage "pM0". Replaced with a data absent reason "not applicable".
+ 
+* Integrated SNOMED Codes that have been issued since STU2 publication. Not in the March 2022 US Release
+  * #1204242009  "External beam radiation therapy using particle scanning technique (procedure)" //USCRS-33517
+  * #1217011006  "non-adjacent (qualifier)" // USCRS-33144
+  * #1217123003 "Radiotherapy Course of Treatment (regime/therapy)" //USCRS-33529
+  * #1201745009 "Internal Target Volume (observable entity)" //USCRS-33520
+  * #1201746005  "Internal Gross Tumor Volume (observable entity)" // USCRS-33521
+* Integrated SNOMED Codes that have been issued since STU2 publication and are in the US and Int'l releases
+  * #551001000124108  "Cancer in partial remission (finding)" // USCRS-352237
+  * #550991000124107  "Cancer in full remission(finding)" //USCRS-352236
+  * #1162492000 "Tumor bed (morphologic abnormality)" // SNOMED term available to be released in Jan 2021
+  * #1162782007 "Three dimensional external beam radiation therapy (procedure)" // to be released Jan 2021
+  * #1162586008 "Irradiated volume of organ at risk (observable entity)"  // to be released Jan 2021
     * #1162616006 "Lymph node level IA (qualifier value)"
     * #1162617002 "Lymph node level IB (qualifier value)"
     * #1162620005 "Lymph node level IVA (qualifier value)"

@@ -487,7 +487,7 @@ Description: "Extended example: example showing TNM staging (M)"
 * code = LNC#21901-4 "Distant metastases.pathology [Class] Cancer"
 * subject = Reference(cancer-patient-jenny-m)
 * effectiveDateTime = "2018-04-01"
-* valueCodeableConcept = AJCC#pM0
+* valueCodeableConcept = AbsentReason#not-applicable "Not Applicable"   // cancer is not metastatic, pM0 is not valid
 * method = SCT#897275008 "American Joint Commission on Cancer, Cancer Staging Manual, 8th edition neoplasm staging system (tumor staging)"
 
 // 21-Gene Assay

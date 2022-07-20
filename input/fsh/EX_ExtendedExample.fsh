@@ -205,7 +205,7 @@ Description: "Extended example: example showing primary cancer condition"
 * subject = Reference(cancer-patient-jenny-m)
 * onsetDateTime = "2018-03-16"
 * asserter = Reference(us-core-practitioner-owen-oncologist)
-* stage.summary = AJCC#3C
+* stage.summary = SCT#1222806003 "American Joint Committee on Cancer stage IIIC (qualifier value)"
 * stage.assessment = Reference(tnm-clinical-stage-group-jenny-m)
 
 Instance: tnm-clinical-stage-group-jenny-m
@@ -215,7 +215,7 @@ Description: "Extended example: example showing TNM staging (stage group)"
 * code = LNC#21908-9 "Stage group.clinical Cancer"
 * subject = Reference(cancer-patient-jenny-m)
 * effectiveDateTime = "2018-03-16"
-* valueCodeableConcept = AJCC#2B "IIB"
+* valueCodeableConcept = SCT#1222769001 "American Joint Committee on Cancer stage IIB (qualifier value)"
 * method = SCT#897275008 "American Joint Commission on Cancer, Cancer Staging Manual, 8th edition neoplasm staging system (tumor staging)"
 * hasMember[0] = Reference(tnm-pathologic-primary-tumor-category-jenny-m)
 * hasMember[1] = Reference(tnm-pathologic-regional-nodes-category-jenny-m)
@@ -228,7 +228,7 @@ Description: "Extended example: example showing TNM staging (T)"
 * code = LNC#21905-5 "Primary tumor.clinical [Class] Cancer"
 * subject = Reference(cancer-patient-jenny-m)
 * effectiveDateTime = "2018-03-16"
-* valueCodeableConcept = AJCC#cT3
+* valueCodeableConcept = SCT#1228938002 "American Joint Committee on Cancer cT3 (qualifier value)"
 * method = SCT#897275008 "American Joint Commission on Cancer, Cancer Staging Manual, 8th edition neoplasm staging system (tumor staging)"
 
 Instance: tnm-clinical-regional-nodes-category-jenny-m
@@ -238,7 +238,7 @@ Description: "Extended example: example showing TNM staging (N)"
 * code = LNC#21906-3 "Regional lymph nodes.clinical [Class] Cancer"
 * subject = Reference(cancer-patient-jenny-m)
 * effectiveDateTime = "2018-03-16"
-* valueCodeableConcept = AJCC#cN0
+* valueCodeableConcept = SCT#1229967007 "American Joint Committee on Cancer cN0 (qualifier value)"
 * method = SCT#897275008 "American Joint Commission on Cancer, Cancer Staging Manual, 8th edition neoplasm staging system (tumor staging)"
 
 Instance: tnm-clinical-distant-metastases-category-jenny-m
@@ -248,7 +248,7 @@ Description: "Extended example: example showing TNM staging (M)"
 * code = LNC#21907-1 "Distant metastases.clinical [Class] Cancer"
 * subject = Reference(cancer-patient-jenny-m)
 * effectiveDateTime = "2018-03-16"
-* valueCodeableConcept = AJCC#cM0
+* valueCodeableConcept = SCT#1229901006 "American Joint Committee on Cancer cM0 (qualifier value)"
 * method = SCT#897275008 "American Joint Commission on Cancer, Cancer Staging Manual, 8th edition neoplasm staging system (tumor staging)"
 
 // Tumor marker test results 3-16-2018
@@ -454,7 +454,7 @@ Description: "Extended example: example showing TNM staging (stage group)"
 * code = LNC#21902-2 "Stage group.pathology Cancer"
 * subject = Reference(cancer-patient-jenny-m)
 * effectiveDateTime = "2018-04-05"
-* valueCodeableConcept = AJCC#2B "IIB"
+* valueCodeableConcept = SCT#1222769001 "American Joint Committee on Cancer stage IIB (qualifier value)"
 * method = SCT#897275008 "American Joint Commission on Cancer, Cancer Staging Manual, 8th edition neoplasm staging system (tumor staging)"
 * hasMember[0] = Reference(tnm-pathologic-primary-tumor-category-jenny-m)
 * hasMember[1] = Reference(tnm-pathologic-regional-nodes-category-jenny-m)
@@ -467,7 +467,7 @@ Description: "Extended example: example showing TNM staging (T)"
 * code = LNC#21899-0 "Primary tumor.pathology Cancer"
 * subject = Reference(cancer-patient-jenny-m)
 * effectiveDateTime = "2018-04-01"
-* valueCodeableConcept = AJCC#pT3
+* valueCodeableConcept = SCT#1229859000 "American Joint Committee on Cancer pT3 (qualifier value)"
 * method = SCT#897275008 "American Joint Commission on Cancer, Cancer Staging Manual, 8th edition neoplasm staging system (tumor staging)"
 
 Instance: tnm-pathologic-regional-nodes-category-jenny-m
@@ -477,7 +477,7 @@ Description: "Extended example: example showing TNM staging (N)"
 * code = LNC#21900-6 "Regional lymph nodes.pathology [Class] Cancer"
 * subject = Reference(cancer-patient-jenny-m)
 * effectiveDateTime = "2018-04-01"
-* valueCodeableConcept = AJCC#pN0
+* valueCodeableConcept = SCT#1229947003 "American Joint Committee on Cancer pN0 (qualifier value)"
 * method = SCT#897275008 "American Joint Commission on Cancer, Cancer Staging Manual, 8th edition neoplasm staging system (tumor staging)"
 
 Instance: tnm-pathologic-distant-metastases-category-jenny-m
@@ -503,7 +503,6 @@ Description: "Extended example: example showing Oncotype DX breast recurrence sc
 * performer = Reference(us-core-organization-bedrock-medicine)
 * valueQuantity = 47 '{ScoreOf}' "Recurrence score"
 * interpretation = ObsInt#H "High"
-
 
 // Initial Chemotherapy
 

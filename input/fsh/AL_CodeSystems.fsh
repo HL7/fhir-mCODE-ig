@@ -15,7 +15,6 @@ Alias:   HGNC = http://www.genenames.org
 Alias:   HGVS = http://varnomen.hgvs.org
 
 // Code systems lacking a recognized canonical at terminology.hl7.org
-Alias:   AJCC = http://cancerstaging.org
 Alias:   GTR = http://www.ncbi.nlm.nih.gov/gtr
 Alias:   CLINVAR = http://www.ncbi.nlm.nih.gov/clinvar
 Alias:   SO = http://www.sequenceontology.org/

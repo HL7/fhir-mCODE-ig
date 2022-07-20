@@ -6,9 +6,7 @@ Id: loinc-requested-cs
 Title: "Requested LOINC Codes Code System"
 Description: "Codes requested from LOINC, but not yet approved or assigned. Codes related to comorbidities use the categories originally defined by Elixhauser, and updated by the Agency for Healthcare Research and Quality (AHRQ) Healthcare Cost and Utilization Project (H-CUP) [Elixhauser Comorbidity Software Refined for ICD-10-CM v2021.1](https://www.hcup-us.ahrq.gov/toolssoftware/comorbidityicd10/comorbidity_icd10.jsp). Each comorbidity category is associated with a specific ICD-10-CM value set. For example, the category #CHF (congestive heart failure) refers to the patient having a diagnosis within the [Elixhauser Comorbid Condition Value Set for Congestive Heart Failure](http://hl7.org/fhir/us/mcode/ValueSet/elixhauser-congestive-heart-failure-vs)."
 * ^caseSensitive = true
-* #molecular-consequence "Molecular Consequence" "Annotated changes to sequence features caused by this variant. Terms are from the sequence ontology under SO:0001537."
-* #diagnostic-implication "Diagnosic Implication" "Diagnostic Implication"
-// LOINC Request 6073 requests LOINC codes for these categories, and for the overall index. Submitted 7/7/21
+// LOINC Request 6073 requests LOINC codes for these categories, and for the overall index. Submitted 7/7/21 & rejected
 * #comorbidities-elixhauser "Elixhauser Comorbidity Panel" "Code identifying an Observation as a comorbidity panel consistent with mCODE's ComorbidityElixhauser profile."
 * #AIDS    "Acquired immune deficiency syndrome (Elixhauser comorbidity category)" "Patient has a disorder in the value set ElixhauserAidsVS"
 * #ALCOHOL    "Alcohol abuse (Elixhauser comorbidity category)" "Patient has a disorder in the value set ElixhauserAlcoholAbuseVS"
@@ -54,6 +52,5 @@ Id: snomed-requested-cs
 Title: "Requested SNOMED Codes Code System"
 Description: "Codes requested from SNOMED by mCODE, to be issued at a later date. Where numeric codes are given, these correspond to the expected SNOMED-CT codes. Terms beginning with 'USCRS-' (for United States Content Request Service) represent request identifiers with no SNOMED code yet approved or assigned."
 * ^caseSensitive = true
-* #USCRS-33351 "Bowel space (body structure)"               // rejected
-* #USCRS-33352 "Small bowel space (body structure)"         // rejected
-
+* #USCRS-34356 "Bowel space (body structure)"               // new request submitted 7/2022
+* #USCRS-34358 "Small bowel space (body structure)"         // new request submitted 7/2022

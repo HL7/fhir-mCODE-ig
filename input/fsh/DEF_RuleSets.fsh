@@ -9,6 +9,8 @@ RuleSet: CategorySlicingRules
 * category ^slicing.discriminator.path = "$this"
 * category ^slicing.rules = #open
 * category ^slicing.description = "Slicing requires the given value but allows additional categories"
+* category contains
+  required 1..1
 
 RuleSet: ObservationHasMemberSlicingRules
 * hasMember ^slicing.discriminator.type = #pattern  // #profile
@@ -38,7 +40,7 @@ RuleSet: CreateComponent(sliceName, min, max)
 * component contains {sliceName} {min}..{max} MS
 * component[{sliceName}].code MS
 * component[{sliceName}].value[x] MS
-//* component[{sliceName}].dataAbsentReason MS 
+//* component[{sliceName}].dataAbsentReason MS
 
 RuleSet: CreateComorbidityComponent(sliceName, code, short, vs)
 * component contains {sliceName} 0..1 MS

@@ -1,6 +1,6 @@
 RuleSet: PerformanceStatusCommonRules
 * insert CategorySlicingRules
-* category = ObsCat#survey
+* category[required] = ObsCat#survey
 * subject 1..1
 * insert NotUsed(bodySite)
 * insert NotUsed(specimen)

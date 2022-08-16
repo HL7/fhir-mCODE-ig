@@ -11,22 +11,18 @@ RuleSet: IdentifierDisplayName  // FHIR-32239
 * identifier[displayName].use = #usual
 * identifier[displayName].value 1..1 MS
 
-// ------------- Overall Course Summary -----------------
-RuleSet: RadiotherapyCommon
+Profile:  RadiotherapyCourseSummary
+Parent:   USCoreProcedure  // considered one procedure with multiple parts
+Id:       mcode-radiotherapy-course-summary
+Title:    "Radiotherapy Course Summary Profile"
+Description: "A summary of a course of radiotherapy delivered to a patient. It records the treatment intent, termination reason, modalities, techniques, number of sessions, and doses delivered to one or more body volumes. Whether the course has been fully delivered or stopped is indicated in the status element."
+* ^extension[FMM].valueInteger = 3
 * category 1.. MS
 * category = SCT#108290001 // "Radiation oncology AND/OR radiotherapy (procedure)"
 * performed[x] only Period
 * subject only Reference(CancerPatient)
 * subject ^definition = "The patient on whom the procedure was performed."
 * extension and category MS
-
-
-Profile:  RadiotherapyCourseSummary
-Parent:   USCoreProcedure  // considered one procedure with multiple parts
-Id:       mcode-radiotherapy-course-summary
-Title:    "Radiotherapy Course Summary Profile"
-Description: "A summary of a course of radiotherapy delivered to a patient. It records the treatment intent, termination reason, modalities, techniques, number of sessions, and doses delivered to one or more body volumes. Whether the course has been fully delivered or stopped is indicated in the status element."
-* insert RadiotherapyCommon
 // Summary-specific content
 * code = SCT#1217123003 // "Radiotherapy course of treatment (regime/therapy)"
 * extension contains
@@ -228,6 +224,7 @@ Parent: BodyStructure
 Id: mcode-radiotherapy-volume
 Title: "Radiotherapy Volume Profile"
 Description: "A volume of the body used in radiotherapy planning or treatment delivery."
+* ^extension[FMM].valueInteger = 3
 * obeys mcode-description-or-id-required
 * insert IdentifierDisplayName
 * identifier ^short = "Volume Identifier"

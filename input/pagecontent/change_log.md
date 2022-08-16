@@ -1,5 +1,6 @@
 ### Updates Since mCODE STU 2 Publication  (2022)
  
+* Replaced local code #molecular-consequence with LOINC #81289-1  // Structural variant [Type]
 * Updated AJCC references to new SNOMED-CT terms that map to AJCC (https://jira.hl7.org/browse/FHIR-37593)
 * Corrected extended example, which formerly used invalid stage "pM0". Replaced with a data absent reason "not applicable".
  

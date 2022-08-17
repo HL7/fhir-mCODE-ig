@@ -3,6 +3,7 @@ Parent:     USCoreObservationLab
 Id: mcode-genomic-variant
 Title:      "Genomic Variant Profile"
 Description:    "An alteration in the most common DNA nucleotide sequence. The term variant can be used to describe an alteration that may be benign, pathogenic, or of unknown significance. The term variant is increasingly being used in place of the term mutation. Variants can be computed relative to reference sequence assembly from which it was identified."
+* ^extension[FMM].valueInteger = 1
 * insert NotUsed(bodySite)
 * insert NotUsed(referenceRange)
 * insert NotUsed(hasMember)
@@ -120,6 +121,7 @@ Parent:         USCoreObservationLab
 Id:             mcode-tumor-marker-test
 Title:          "Tumor Marker Test Profile"
 Description:    "The result of a tumor marker test. Tumor marker tests are generally used to guide cancer treatment decisions and monitor treatment, as well as to predict the chance of recovery and cancer recurrence."
+* ^extension[FMM].valueInteger = 4
 * subject 1..1
 * code from TumorMarkerTestVS (extensible)
 * subject only Reference(CancerPatient)
@@ -131,6 +133,7 @@ Description:    "The result of a tumor marker test. Tumor marker tests are gener
 
 
 RuleSet: CancerRelatedSpecimenRules
+* ^extension[FMM].valueInteger = 1
 * type 1..1
 * subject only Reference(CancerPatient)
 * subject ^definition = "The patient associated with this specimen."
@@ -152,6 +155,7 @@ Id: mcode-genomic-specimen
 Title:      "Genomic Specimen Profile"
 Description:    "A small sample of blood, hair, skin, amniotic fluid (the fluid that surrounds a fetus during pregnancy), or other tissue which is excised from a subject for the purposes of genomics testing or analysis."
 * insert CancerRelatedSpecimenRules
+* ^extension[FMM].valueInteger = 1
 * type from GenomicSpecimenTypeVS (extensible)
 
 
@@ -160,6 +164,7 @@ Parent:      USCoreDiagnosticReportLab
 Id:          mcode-genomics-report
 Title:      "Genomics Report Profile"
 Description:    "Genomic analysis summary report. The report may include one or more tests, with two distinct test types. The first type is a targeted mutation test, where a specific mutation on a specific gene is tested for. The result is either positive or negative for that mutation. The second type is a more general test for variants. This type of test returns the identity of variants found in a certain region of the genome."
+* ^extension[FMM].valueInteger = 1
 * category contains GenomicsCategory 1..1
 * category[GenomicsCategory] = DiagnosticService#GE
 * code = LNC#81247-9 //"Master HL7 Genomic variant reporting panel"
@@ -184,6 +189,7 @@ Parent:     USCoreObservationLab
 Id:         mcode-genomic-region-studied
 Title:      "Genomic Region Studied Profile"
 Description:    "A subset of genes or genomic regions of interest in a targeted resequencing study."
+* ^extension[FMM].valueInteger = 1
 * code = LNC#53041-0 //"DNA region of interest panel"
 //* insert NotUsed(value[x])
 * value[x] 0..0 // remove the must-support obligation imposed by US Core (MK 2/16/2021)

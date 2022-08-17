@@ -16,3 +16,6 @@ Alias:   USCoreOrganization = http://hl7.org/fhir/us/core/StructureDefinition/us
 Alias:   USCoreBirthSex = http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex
 Alias:   USCoreRace = http://hl7.org/fhir/us/core/StructureDefinition/us-core-race
 
+// Other
+Alias: FMM = http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm
+

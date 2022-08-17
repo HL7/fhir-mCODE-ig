@@ -4,6 +4,7 @@ Id: mcode-tumor-size
 Title: "Tumor Size Profile"
 Description:  "Records the dimensions of a tumor"
 // LOINC code indicating this is a tumor size observation
+* ^extension[FMM].valueInteger = 3
 * code = LNC#21889-1 //"Size Tumor"
 * subject ^short = "The patient whose tumor was measured."
 * subject ^definition = "The patient whose tumor was measured. SHALL be a `Patient` resource conforming to `CancerPatient`."
@@ -62,6 +63,7 @@ Parent:  BodyStructure
 Id: mcode-tumor
 Title: "Tumor Profile"
 Description:  "Identifies a tumor that has not been removed from the body. Whenever possible, a single resource conforming to this profile will be used to track a tumor over time (as opposed to creating new Tumor-conforming BodyStructure resources each time that tumor is measured). Use TumorSpecimen to represent the tumor after removal from the body."
+* ^extension[FMM].valueInteger = 3
 * patient only Reference(CancerPatient)
 * patient ^definition = "The patient associated with this tumor."
 // The purpose of this profile is to uniquely identify a tumor, so it follows that there must be at least one identifier value provided
@@ -94,6 +96,7 @@ Parent: Identifier
 Id: mcode-body-structure-identifier
 Title: "Body Structure Identifier Data Type Profile"
 Description: "An identifier that designates a body structure such as a tumor and can be used for tracking the structure over time."
+* ^extension[FMM].valueInteger = 3
 * type = http://hl7.org/fhir/resource-types#BodyStructure
 * value 1..1
 * use = #usual
@@ -104,6 +107,7 @@ Id: mcode-tumor-specimen
 Title: "Tumor Specimen Profile"
 Description: "Represents a tumor after it has been removed from the body. If there is a Tumor resource representing the tumor before it was removed from the body, use `identifier` to associate this TumorSpecimen with that Tumor resource."
 * insert CancerRelatedSpecimenRules
+* ^extension[FMM].valueInteger = 3
 // These rules are above and beyond GenomicSpecimen
 * type = SPTY#TUMOR
 * identifier ^slicing.discriminator.type = #pattern

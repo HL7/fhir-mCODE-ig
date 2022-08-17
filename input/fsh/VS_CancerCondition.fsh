@@ -7,6 +7,7 @@ Id: mcode-secondary-cancer-disorder-vs
 Title: "Secondary Cancer Disorder Value Set"
 Description:  "Types of secondary malignant neoplastic disease, coded in SNOMED CT or ICD-10-CM."
 * insert SNOMEDCTCopyrightForVS
+* ^extension[FMM].valueInteger = 4
 * include codes from system SCT where concept is-a #128462008  "Secondary malignant neoplastic disease (disorder)"
 * ICD10CM#C77 "SECONDARY AND UNSPECIFIED MALIGNANT NEOPLASM OF LYMPH NODES"
 * ICD10CM#C77.0 "Secondary and unspecified malignant neoplasm of lymph nodes of head, face and neck"
@@ -81,6 +82,7 @@ ValueSet:  MelanomaInSituDisorderVS
 Id: mcode-melanoma-in-situ-disorder-vs
 Title: "Melanoma In-Situ Disorder Value Set"
 Description:    "Types of melanoma in-situ, coded in SNOMED CT or ICD-10-CM."
+* ^extension[FMM].valueInteger = 4
 * insert SNOMEDCTCopyrightForVS
 * include codes from system SCT where concept is-a #189758001 "Melanoma in situ (disorder)"
 * ICD10CM#D03 "Melanoma in situ of skin"
@@ -121,6 +123,7 @@ Id: mcode-cytologic-evidence-malignancy-vs
 Title: "Cytologic Evidence of Malignancy Value Set"
 Description:    "Types of cytological evience of malignancy, coded in SNOMED CT or ICD-10-CM."
 * insert SNOMEDCTCopyrightForVS
+* ^extension[FMM].valueInteger = 4
 * SCT#126361000119107 "Cytological evidence of malignancy on anal Papanicolaou smear (finding)"
 * SCT#126371000119101 "Cytological evidence of malignancy on vaginal Papanicolaou smear (finding)"
 * ICD10CM#R85.614 "Cytologic evidence of malignancy on smear of anus"
@@ -131,6 +134,7 @@ Id: mcode-hypereosinophilic-syndrome-disorder-vs
 Title: "Specific Diagnosis of Cancer Value Set"
 Description:    "Types of hypereosinophilic syndrome, coded in SNOMED CT or ICD-10-CM."
 * insert SNOMEDCTCopyrightForVS
+* ^extension[FMM].valueInteger = 4
 * include codes from system SCT where concept is-a #393573009 "Hypereosinophilic syndrome (disorder)"
 * ICD10CM#D72.110	"Idiopathic hypereosinophilic syndrome [HES]"
 * ICD10CM#D72.111	"Lymphocytic Variant Hypereosinophilic Syndrome [LHES]"
@@ -142,6 +146,7 @@ Id: mcode-carcinoma-in-situ-disorder-vs
 Title: "Carcinoma In-Situ Disorder Value Set"
 Description:    "Types of carcinoma in-situ, coded in SNOMED CT or ICD-10-CM."
 * insert SNOMEDCTCopyrightForVS
+* ^extension[FMM].valueInteger = 4
 * include codes from system SCT where concept is-a #109355002 "Carcinoma in situ (disorder)"
 * ICD10CM#D00 "CARCINOMA IN SITU OF ORAL CAVITY, ESOPHAGUS AND STOMACH"
 * ICD10CM#D00.0 "Carcinoma in situ of lip, oral cavity and pharynx"
@@ -224,6 +229,7 @@ Id: mcode-benign-uncertain-neoplasm-brain-cns-disorder-vs
 Title: "Benign Neoplasm of Brain and CNS Disorder Value Set"
 Description:    "Types of benign neoplasms and neoplasms of uncertain behavior of the brain and central nervous system, coded in SNOMED CT or ICD-10-CM."
 * insert SNOMEDCTCopyrightForVS
+* ^extension[FMM].valueInteger = 4
 * include codes from system SCT where concept is-a #93468003 "Hemangioma of intracranial structure (disorder)"
 * include codes from system SCT where concept is-a #109913001 "Benign neoplasm of meninges (disorder)"
 * include codes from system SCT where concept is-a #92030004 "Benign neoplasm of brain (disorder)"
@@ -272,6 +278,7 @@ Id: mcode-primary-cancer-disorder-vs
 Title: "Primary Cancer Disorder Value Set"
 Description:    "Types of primary malignant neoplastic disease, coded in SNOMED CT or ICD-10-CM."
 * insert SNOMEDCTCopyrightForVS
+* ^extension[FMM].valueInteger = 4
 * include codes from valueset PrimaryMalignantNeoplasmDisorderVS
 * include codes from valueset HypereosinophilicSyndromeDisorderVS
 * include codes from valueset CarcinomaInSituDisorderVS
@@ -285,6 +292,7 @@ Id: mcode-cancer-disorder-vs
 Title: "Cancer Disorder Value Set"
 Description:   "A broad cancer-related value set containing both primary and secondary tumor types, with codes from ICD-10 and SNOMED CT, including both diagnosis and histology/morphology/behavior codes. ICD-O-3 morphology codes may also be used and are considered conformant to the specification. For SNOMED, the value set includes all codes descending from 363346000 'Malignant neoplastic disease (disorder)' and 108369006 'Neoplasm (morphologic abnormality)'."
 * insert SNOMEDCTCopyrightForVS
+* ^extension[FMM].valueInteger = 4
 * include codes from valueset PrimaryCancerDisorderVS
 * include codes from valueset SecondaryCancerDisorderVS
 * include codes from valueset HistologyMorphologyBehaviorVS
@@ -295,6 +303,7 @@ Id: mcode-histology-morphology-behavior-vs
 Title: "Histology Morphology Behavior Value Set"
 Description: "Codes representing the structure, arrangement, and behavioral characteristics of malignant neoplasms, and cancer cells. Inclusion criteria: in situ neoplasms and malignant neoplasms. Exclusion criteria: benign neoplasms and neoplasms of unspecified behavior. Note: ICD-O-3 morphology codes are referenced in the logical definition but not expanded in the value set for intellectual property reasons. For primary cancers, the ICD-O-3 behavior suffix should be /1, /2, or /3. For secondary cancers, the ICD-O-3 behavior suffix should be /6."
 * insert SNOMEDCTCopyrightForVS
+* ^extension[FMM].valueInteger = 4
 * include codes from system ICDO3
 * include codes from system SCT where concept is-a #367651003 "Malignant neoplasm of primary, secondary, or uncertain origin (morphologic abnormality)"
 * include codes from system SCT where concept is-a #399919001 "Carcinoma in situ - category (morphologic abnormality)"
@@ -311,6 +320,7 @@ Id: mcode-primary-malignant-neoplasm-disorder-vs
 Title: "Primary Malignant Neoplasm Disorder Value Set"
 Description:    "Types of primary malignant neoplasms, coded in SNOMED CT or ICD-10-CM."
 * insert SNOMEDCTCopyrightForVS
+* ^extension[FMM].valueInteger = 4
 * include codes from system SCT where concept is-a #363346000 "Malignant neoplastic disease (disorder)"
 * exclude codes from system SCT where concept is-a #128462008  "Secondary malignant neoplastic disease (disorder)"
 * ICD10CM#C00.0 "Malignant neoplasm of external upper lip"

@@ -18,7 +18,8 @@ Description: "A surgical action addressing a cancer condition. The scope of this
 * bodySite.extension[locationQualifier] ^definition = "General location qualifier (excluding laterality) for this bodySite"
 * bodySite.extension[lateralityQualifier] ^short = "Laterality qualifier (excluding laterality) for this bodySite"
 * bodySite.extension[lateralityQualifier] ^definition = "Laterality qualifier (excluding laterality) for this bodySite"
-// Do not insert the category slicing rules because Procedure.category is 0..1.
+// It is not kosher to slice a 0..1 element, however, the cardinality of Procedure.category is a mistake. It was supposed to have changed in 2019 to 0..* (https://jira.hl7.org/browse/FHIR-20628). However, it is still 0..1 in R4, but the change has been made for R5.
+* category 1.. MS
 * category = SCT#387713003 //"Surgical procedure"
 * code from CancerRelatedSurgicalProcedureVS (extensible)
 // MUST SUPPORTS -- US Core Procedure sets status, code, subject, performed[x]

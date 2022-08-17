@@ -4,14 +4,6 @@ RuleSet: ObservationComponentSlicingRules
 * component ^slicing.rules = #open
 * component ^slicing.description = "Slice based on the component.code pattern"
 
-RuleSet: CategorySlicingRules
-* category ^slicing.discriminator.type = #pattern
-* category ^slicing.discriminator.path = "$this"
-* category ^slicing.rules = #open
-* category ^slicing.description = "Slicing requires the given value but allows additional categories"
-* category contains
-  required 1..1
-
 RuleSet: ObservationHasMemberSlicingRules
 * hasMember ^slicing.discriminator.type = #pattern  // #profile
 * hasMember ^slicing.discriminator.path = "$this.resolve().code"

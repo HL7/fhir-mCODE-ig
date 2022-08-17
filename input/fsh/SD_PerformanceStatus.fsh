@@ -1,7 +1,6 @@
 RuleSet: PerformanceStatusCommonRules
 * ^extension[FMM].valueInteger = 4
-* insert CategorySlicingRules
-* category[required] = ObsCat#survey
+* category = ObsCat#survey
 * subject 1..1
 * insert NotUsed(bodySite)
 * insert NotUsed(specimen)

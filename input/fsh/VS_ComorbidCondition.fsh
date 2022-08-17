@@ -2,7 +2,8 @@ ValueSet: PresentAbsentVS    //FHIR-32281
 Id: mcode-present-absent
 Title: "Present Absent Value Set"
 Description: "Value set used in association with phenomena that can be observed as being present or absent, such as a finding, organism, or physical object."
-* insert SNOMEDCopyrightStatement
+* insert SNOMEDCTCopyrightForVS
+* ^extension[FMM].valueInteger = 1
 * SCT#52101004 "Present (qualifier value)"
 * SCT#2667000 "Absent (qualifier value)"
 
@@ -10,6 +11,7 @@ ValueSet:  ElixhauserAidsVS
 Id: elixhauser-aids-vs
 Title: "Elixhauser HIV-AIDS Value Set"
 Description:    "Elixhauser Comorbid Condition Value Set for HIV-AIDS. ICD-10 codes are drawn from https://www.hcup-us.ahrq.gov/toolssoftware/comorbidityicd10/comorbidity_icd10.jsp, version 2021.1"
+* ^extension[FMM].valueInteger = 1
 * ICD10CM#O98.711 "Human immunodeficiency virus [HIV] disease complicating pregnancy, first trimester"
 * ICD10CM#O98.712 "Human immunodeficiency virus[HIV] disease complicating pregnancy,second trimester"
 * ICD10CM#O98.713 "Human immunodeficiency virus[HIV] disease complicating pregnancy, thirdtrimester"
@@ -23,6 +25,7 @@ ValueSet:  ElixhauserAlcoholAbuseVS
 Id: elixhauser-alcohol-abuse-vs
 Title: "Elixhauser Alcohol Abuse Value Set"
 Description:    "Elixhauser Comorbid Condition Value Set for Alcohol Abuse. ICD-10 codes are drawn from https://www.hcup-us.ahrq.gov/toolssoftware/comorbidityicd10/comorbidity_icd10.jsp, version 2021.1"
+* ^extension[FMM].valueInteger = 1
 * ICD10CM#F10.10 "Alcohol abuse, uncomplicated"
 * ICD10CM#F10.11 "Alcohol abuse, in remission"
 * ICD10CM#F10.120 "Alcohol abuse with intoxication, uncomplicated"
@@ -85,6 +88,7 @@ ValueSet:  ElixhauserDeficiencyAnemiaVS
 Id: elixhauser-deficiency-anemia-vs
 Title: "Elixhauser Deficiency Anemia Value Set"
 Description:    "Elixhauser Comorbid Condition Value Set for Deficiency Anemia. ICD-10 codes are drawn from https://www.hcup-us.ahrq.gov/toolssoftware/comorbidityicd10/comorbidity_icd10.jsp, version 2021.1"
+* ^extension[FMM].valueInteger = 1
 * ICD10CM#D50.1 "Sideropenic dysphagia"
 * ICD10CM#D50.8 "Other iron deficiency anemias"
 * ICD10CM#D50.9 "Iron deficiency anemia, unspecified"
@@ -117,6 +121,7 @@ ValueSet:  ElixhauserRheumatoidArthritisVS
 Id: elixhauser-rheumatoid-arthritis-vs
 Title: "Elixhauser Rheumatoid Arthritis and Collagen Vascular Disease Value Set"
 Description:    "Elixhauser Comorbid Condition Value Set for Rheumatoid Arthritis and collagen vascular diseases. ICD-10 codes are drawn from https://www.hcup-us.ahrq.gov/toolssoftware/comorbidityicd10/comorbidity_icd10.jsp, version 2021.1"
+* ^extension[FMM].valueInteger = 1
 * ICD10CM#A18.01 "Tuberculosis of spine"
 * ICD10CM#A18.02 "Tuberculous arthritis of other joints"
 * ICD10CM#A39.84 "Postmeningococcal arthritis"
@@ -893,6 +898,7 @@ ValueSet:  ElixhauserBloodLossAnemiaVS
 Id: elixhauser-blood-loss-anemia-vs
 Title: "Elixhauser Blood Loss Anemia Value Set"
 Description:    "Elixhauser Comorbid Condition Value Set for Blood Loss Anemia. ICD-10 codes are drawn from https://www.hcup-us.ahrq.gov/toolssoftware/comorbidityicd10/comorbidity_icd10.jsp, version 2021.1"
+* ^extension[FMM].valueInteger = 1
 * ICD10CM#O90.81 "Anemia of the puerperium"
 * ICD10CM#O99.02 "Anemia complicating childbirth"
 * ICD10CM#O99.03 "Anemia complicating the puerperium"
@@ -901,6 +907,7 @@ ValueSet:  ElixhauserCongestiveHeartFailureVS
 Id: elixhauser-congestive-heart-failure-vs
 Title: "Elixhauser Congestive Heart Failure Value Set"
 Description:    "Elixhauser Comorbid Condition Value Set for CongestiveHeartFailure. ICD-10 codes are drawn from https://www.hcup-us.ahrq.gov/toolssoftware/comorbidityicd10/comorbidity_icd10.jsp, version 2021.1"
+* ^extension[FMM].valueInteger = 1
 * ICD10CM#I09.81 "Rheumatic heart failure"
 * ICD10CM#I11.0 "Hypertensive heart disease with heart failure"
 * ICD10CM#I13.0 "Hypertensive heart and chronic kidney disease with heart failure and stage 1 through stage 4 chronic kidney disease, or unsp"
@@ -943,6 +950,7 @@ ValueSet:  ElixhauserChronicPulmonaryDiseaseVS
 Id: elixhauser-chronic-pulmonary-disease-vs
 Title: "Elixhauser Chronic Pulmonary Disease Value Set"
 Description:    "Elixhauser Comorbid Condition Value Set for Chronic Pulmonary Disease. ICD-10 codes are drawn from https://www.hcup-us.ahrq.gov/toolssoftware/comorbidityicd10/comorbidity_icd10.jsp, version 2021.1"
+* ^extension[FMM].valueInteger = 1
 * ICD10CM#J41.0 "Simple chronic bronchitis"
 * ICD10CM#J41.1 "Mucopurulent chronic bronchitis"
 * ICD10CM#J41.8 "Mixed simple and mucopurulent chronic bronchitis"
@@ -1011,6 +1019,7 @@ ValueSet:  ElixhauserCoagulationDeficiencyVS
 Id: elixhauser-coagulation-deficiency-vs
 Title: "Elixhauser Coagulation Deficiency Value Set"
 Description:    "Elixhauser Comorbid Condition Value Set for Coagulation Deficiency. ICD-10 codes are drawn from https://www.hcup-us.ahrq.gov/toolssoftware/comorbidityicd10/comorbidity_icd10.jsp, version 2021.1"
+* ^extension[FMM].valueInteger = 1
 * ICD10CM#D61.09 "Other constitutional aplastic anemia"
 * ICD10CM#D61.1 "Drug-induced aplastic anemia"
 * ICD10CM#D61.2 "Aplastic anemia due to other external agents"
@@ -1057,6 +1066,7 @@ ValueSet:  ElixhauserCerebrovascularDiseaseVS
 Id: elixhauser-cerebrovascular-disease-vs
 Title: "Elixhauser Cerebrovascular Disease Value Set"
 Description:    "Elixhauser Comorbid Condition Value Set for cerebrovascular disease. ICD-10 codes are drawn from https://www.hcup-us.ahrq.gov/toolssoftware/comorbidityicd10/comorbidity_icd10.jsp, version 2021.1"
+* ^extension[FMM].valueInteger = 1
 * ICD10CM#G45.0 "Vertebro-basilar artery syndrome"
 * ICD10CM#G45.1 "Carotid artery syndrome (hemispheric)"
 * ICD10CM#G45.2 "Multiple and bilateral precerebral artery syndromes"
@@ -1376,6 +1386,7 @@ ValueSet:  ElixhauserDepressionVS
 Id: elixhauser-depression-vs
 Title: "Elixhauser Depression Value Set"
 Description:    "Elixhauser Comorbid Condition Value Set for Depression. ICD-10 codes are drawn from https://www.hcup-us.ahrq.gov/toolssoftware/comorbidityicd10/comorbidity_icd10.jsp, version 2021.1"
+* ^extension[FMM].valueInteger = 1
 * ICD10CM#F06.31 "Mood disorder due to known physiol cond w depressv features"
 * ICD10CM#F06.32 "Mood disord d/t physiol cond w major depressive-like epsd"
 * ICD10CM#F06.34 "Mood disorder due to known physiological condition with mixed features"
@@ -1400,6 +1411,7 @@ ValueSet:  ElixhauserDiabetesUncomplicatedVS
 Id: elixhauser-diabetes-uncomplicated-vs
 Title: "Elixhauser Diabetes Without Chronic Complications Value Set"
 Description:    "Elixhauser Comorbid Condition Value Set for diabetes without chronic complications. ICD-10 codes are drawn from https://www.hcup-us.ahrq.gov/toolssoftware/comorbidityicd10/comorbidity_icd10.jsp, version 2021.1"
+* ^extension[FMM].valueInteger = 1
 * ICD10CM#E08.00 "Diabetes mellitus due to underlying condition with hyperosmolarity without nonketotic hyperglycemic-hyperosmolar coma (NKHHC"
 * ICD10CM#E08.01 "Diabetes mellitus due to underlying condition with hyperosmolarity with coma"
 * ICD10CM#E08.10 "Diabetes mellitus due to underlying condition with ketoacidosis without coma"
@@ -1471,6 +1483,7 @@ ValueSet:  ElixhauserDiabetesComplicatedVS
 Id: elixhauser-diabetes-complicated-vs
 Title: "Elixhauser Diabetes With Chronic Complications Value Set"
 Description:    "Elixhauser Comorbid Condition Value Set for diabetes with chronic complications. ICD-10 codes are drawn from https://www.hcup-us.ahrq.gov/toolssoftware/comorbidityicd10/comorbidity_icd10.jsp, version 2021.1"
+* ^extension[FMM].valueInteger = 1
 * ICD10CM#E08.21 "Diabetes mellitus due to underlying condition with diabetic nephropathy"
 * ICD10CM#E08.22 "Diabetes mellitus due to underlying condition with diabetic chronic kidney disease"
 * ICD10CM#E08.29 "Diabetes mellitus due to underlying condition with other diabetic kidney complication"
@@ -1922,6 +1935,7 @@ ValueSet:  ElixhauserDrugAbuseVS
 Id: elixhauser-drug-abuse-vs
 Title: "Elixhauser Drug Abuse Value Set"
 Description:    "Elixhauser Comorbid Condition Value Set for drug abuse. ICD-10 codes are drawn from https://www.hcup-us.ahrq.gov/toolssoftware/comorbidityicd10/comorbidity_icd10.jsp, version 2021.1"
+* ^extension[FMM].valueInteger = 1
 * ICD10CM#F11.10 "Opioid abuse, uncomplicated"
 * ICD10CM#F11.11 "Opioid abuse, in remission"
 * ICD10CM#F11.120 "Opioid abuse with intoxication, uncomplicated"
@@ -2188,6 +2202,7 @@ ValueSet:  ElixhauserHypertensionUncomplicatedVS
 Id: elixhauser-hypertension-uncomplicated-vs
 Title: "Elixhauser Hypertension, Uncomplicated Value Set"
 Description:    "Elixhauser Comorbid Condition Value Set for Hypertension, Uncomplicated. ICD-10 codes are drawn from https://www.hcup-us.ahrq.gov/toolssoftware/comorbidityicd10/comorbidity_icd10.jsp, version 2021.1"
+* ^extension[FMM].valueInteger = 1
 * ICD10CM#I10 "Essential (primary) hypertension"
 * ICD10CM#I16.0 "Hypertensive urgency"
 * ICD10CM#I16.9 "Hypertensive crisis, unspecified"
@@ -2203,6 +2218,7 @@ ValueSet:  ElixhauserHypertensionComplicatedVS
 Id: elixhauser-hypertension-complicated-vs
 Title: "Elixhauser Hypertension, Complicated Value Set"
 Description:    "Elixhauser Comorbid Condition Value Set for Hypertension, Complicated. ICD-10 codes are drawn from https://www.hcup-us.ahrq.gov/toolssoftware/comorbidityicd10/comorbidity_icd10.jsp, version 2021.1"
+* ^extension[FMM].valueInteger = 1
 * ICD10CM#H35.031 "Hypertensive retinopathy, right eye"
 * ICD10CM#H35.032 "Hypertensive retinopathy, left eye"
 * ICD10CM#H35.033 "Hypertensive retinopathy, bilateral"
@@ -2270,6 +2286,7 @@ ValueSet:  ElixhauserHypothyroidismVS
 Id: elixhauser-hypothyroidism-vs
 Title: "Elixhauser Hypothyroidism Value Set"
 Description:    "Elixhauser Comorbid Condition Value Set for Hypothyroidism. ICD-10 codes are drawn from https://www.hcup-us.ahrq.gov/toolssoftware/comorbidityicd10/comorbidity_icd10.jsp, version 2021.1"
+* ^extension[FMM].valueInteger = 1
 * ICD10CM#E00.0 "Congenital iodine-deficiency syndrome, neurological type"
 * ICD10CM#E00.1 "Congenital iodine-deficiency syndrome, myxedematous type"
 * ICD10CM#E00.2 "Congenital iodine-deficiency syndrome, mixed type"
@@ -2293,6 +2310,7 @@ ValueSet:  ElixhauserLiverDiseaseMildVS
 Id: elixhauser-liver-disease-mild-vs
 Title: "Elixhauser Mild Liver Disease Value Set"
 Description:    "Elixhauser Comorbid Condition Value Set for Mild Liver Disease. ICD-10 codes are drawn from https://www.hcup-us.ahrq.gov/toolssoftware/comorbidityicd10/comorbidity_icd10.jsp, version 2021.1"
+* ^extension[FMM].valueInteger = 1
 * ICD10CM#A51.45 "Secondary syphilitic hepatitis"
 * ICD10CM#A52.74 "Syphilis of liver and other viscera"
 * ICD10CM#B18.0 "Chronic viral hepatitis B with delta-agent"
@@ -2357,6 +2375,7 @@ ValueSet:  ElixhauserLiverDiseaseSevereVS
 Id: elixhauser-liver-disease-severe-vs
 Title: "Elixhauser Moderate To Severe Liver Disease Value Set"
 Description:    "Elixhauser Comorbid Condition Value Set for Moderate to Severe Liver Disease. ICD-10 codes are drawn from https://www.hcup-us.ahrq.gov/toolssoftware/comorbidityicd10/comorbidity_icd10.jsp, version 2021.1"
+* ^extension[FMM].valueInteger = 1
 * ICD10CM#B19.0 "Unspecified viral hepatitis with hepatic coma"
 * ICD10CM#B19.11 "Unspecified viral hepatitis B with hepatic coma"
 * ICD10CM#B19.21 "Unspecified viral hepatitis C with hepatic coma"
@@ -2382,6 +2401,7 @@ ValueSet:  ElixhauserCancerLymphomaVS
 Id: elixhauser-cancer-lymphoma-vs
 Title: "Elixhauser Lymphoma Value Set"
 Description:    "Elixhauser Comorbid Condition Value Set for Lymphoma. ICD-10 codes are drawn from https://www.hcup-us.ahrq.gov/toolssoftware/comorbidityicd10/comorbidity_icd10.jsp, version 2021.1"
+* ^extension[FMM].valueInteger = 1
 * ICD10CM#C81.00 "Nodular lymphocyte predominant Hodgkin lymphoma, unsp site"
 * ICD10CM#C81.01 "Nodlr lymphocy predom Hdgkn lymph, nodes of head, face, & nk"
 * ICD10CM#C81.02 "Nodular lymphocy predom Hodgkin lymphoma, intrathorac nodes"
@@ -2770,6 +2790,7 @@ ValueSet:  ElixhauserCancerLeukemiaVS
 Id: elixhauser-cancer-leukemia-vs
 Title: "Elixhauser Leukemia Value Set"
 Description:    "Elixhauser Comorbid Condition Value Set for Leukemia. ICD-10 codes are drawn from https://www.hcup-us.ahrq.gov/toolssoftware/comorbidityicd10/comorbidity_icd10.jsp, version 2021.1"
+* ^extension[FMM].valueInteger = 1
 * ICD10CM#C90.10 "Plasma cell leukemia not having achieved remission"
 * ICD10CM#C90.11 "Plasma cell leukemia in remission"
 * ICD10CM#C90.12 "Plasma cell leukemia in relapse"
@@ -2875,6 +2896,7 @@ ValueSet:  ElixhauserCancerMetastaticVS
 Id: elixhauser-cancer-metastatic-vs
 Title: "Elixhauser Metastatic Cancer Value Set"
 Description:    "Elixhauser Comorbid Condition Value Set for Metastatic cancer. ICD-10 codes are drawn from https://www.hcup-us.ahrq.gov/toolssoftware/comorbidityicd10/comorbidity_icd10.jsp, version 2021.1"
+* ^extension[FMM].valueInteger = 1
 * ICD10CM#C77.0 "Sec and unsp malig neoplasm of nodes of head, face and neck"
 * ICD10CM#C77.1 "Secondary and unsp malignant neoplasm of intrathorac nodes"
 * ICD10CM#C77.2 "Secondary and unsp malignant neoplasm of intra-abd nodes"
@@ -2934,6 +2956,7 @@ ValueSet:  ElixhauserDementiaVS
 Id: elixhauser-dementia-vs
 Title: "Elixhauser Dementia Value Set"
 Description:    "Elixhauser Comorbid Condition Value Set for Dementia. ICD-10 codes are drawn from https://www.hcup-us.ahrq.gov/toolssoftware/comorbidityicd10/comorbidity_icd10.jsp, version 2021.1"
+* ^extension[FMM].valueInteger = 1
 * ICD10CM#F01.50 "Vascular dementia without behavioral disturbance"
 * ICD10CM#F01.51 "Vascular dementia with behavioral disturbance"
 * ICD10CM#F02.80 "Dementia in oth diseases classd elswhr w/o behavrl disturb"
@@ -2960,6 +2983,7 @@ ValueSet:  ElixhauserNeurologicalMovementDisorderVS
 Id: elixhauser-neurological-movement-disorder-vs
 Title: "Elixhauser Neurological Movement Disorder Value Set"
 Description:    "Elixhauser Comorbid Condition Value Set for Neurological Movement Disorders. ICD-10 codes are drawn from https://www.hcup-us.ahrq.gov/toolssoftware/comorbidityicd10/comorbidity_icd10.jsp, version 2021.1"
+* ^extension[FMM].valueInteger = 1
 * ICD10CM#G08 "Intracranial and intraspinal phlebitis and thrombophlebitis"
 * ICD10CM#G10 "Huntington's disease"
 * ICD10CM#G11.0 "Congenital nonprogressive ataxia"
@@ -3025,6 +3049,7 @@ ValueSet:  ElixhauserNeurologicalSeizureDisorderVS
 Id: elixhauser-neurological-seizure-disorder-vs
 Title: "Elixhauser Neurological Seizure Disorder Value Set"
 Description:    "Elixhauser Comorbid Condition Value Set for Neurological Seizure Disorders. ICD-10 codes are drawn from https://www.hcup-us.ahrq.gov/toolssoftware/comorbidityicd10/comorbidity_icd10.jsp, version 2021.1"
+* ^extension[FMM].valueInteger = 1
 * ICD10CM#G40.001 "Local-rel idio epi w seiz of loc onst, not ntrct, w stat epi"
 * ICD10CM#G40.009 "Local-rel idio epi w seiz of loc onst,not ntrct,w/o stat epi"
 * ICD10CM#G40.011 "Local-rel idio epi w seiz of loc onset, ntrct, w stat epi"
@@ -3082,6 +3107,7 @@ ValueSet:  ElixhauserOtherNeurologicalVS
 Id: elixhauser-other-neurological-vs
 Title: "Elixhauser Other Neurological Disorder Value Set"
 Description:    "Elixhauser Comorbid Condition Value Set for Other Neurological Disorders. ICD-10 codes are drawn from https://www.hcup-us.ahrq.gov/toolssoftware/comorbidityicd10/comorbidity_icd10.jsp, version 2021.1"
+* ^extension[FMM].valueInteger = 1
 * ICD10CM#E75.00 "GM2 gangliosidosis, unspecified"
 * ICD10CM#E75.01 "Sandhoff disease"
 * ICD10CM#E75.02 "Tay-Sachs disease"
@@ -3147,6 +3173,7 @@ ValueSet:  ElixhauserObesityVS
 Id: elixhauser-obesity-vs
 Title: "Elixhauser Obesity Value Set"
 Description:    "Elixhauser Comorbid Condition Value Set for Obesity. ICD-10 codes are drawn from https://www.hcup-us.ahrq.gov/toolssoftware/comorbidityicd10/comorbidity_icd10.jsp, version 2021.1"
+* ^extension[FMM].valueInteger = 1
 * ICD10CM#E66.01 "Morbid (severe) obesity due to excess calories"
 * ICD10CM#E66.09 "Other obesity due to excess calories"
 * ICD10CM#E66.1 "Drug-induced obesity"
@@ -3182,6 +3209,7 @@ ValueSet:  ElixhauserOtherThyroidDisorderVS
 Id: elixhauser-other-thyroid-disorder-vs
 Title: "Elixhauser Other Thyroid Disorder Value Set"
 Description:    "Elixhauser Comorbid Condition Value Set for Other Thyroid Disorder. ICD-10 codes are drawn from https://www.hcup-us.ahrq.gov/toolssoftware/comorbidityicd10/comorbidity_icd10.jsp, version 2021.1"
+* ^extension[FMM].valueInteger = 1
 * ICD10CM#E04.0 "Nontoxic diffuse goiter"
 * ICD10CM#E04.1 "Nontoxic single thyroid nodule"
 * ICD10CM#E04.2 "Nontoxic multinodular goiter"
@@ -3215,6 +3243,7 @@ ValueSet:  ElixhauserParalysisVS
 Id: elixhauser-paralysis-vs
 Title: "Elixhauser Paralysis Value Set"
 Description:    "Elixhauser Comorbid Condition Value Set for Paralysis. ICD-10 codes are drawn from https://www.hcup-us.ahrq.gov/toolssoftware/comorbidityicd10/comorbidity_icd10.jsp, version 2021.1"
+* ^extension[FMM].valueInteger = 1
 * ICD10CM#G04.1 "Tropical spastic paraplegia"
 * ICD10CM#G80.0 "Spastic quadriplegic cerebral palsy"
 * ICD10CM#G80.1 "Spastic diplegic cerebral palsy"
@@ -3402,6 +3431,7 @@ ValueSet:  ElixhauserPeripheralVascularDiseaseVS
 Id: elixhauser-peripheral-vascular-disease-vs
 Title: "Elixhauser Peripheral Vascular Disease Value Set"
 Description:    "Elixhauser Comorbid Condition Value Set for Peripheral vascular disease. ICD-10 codes are drawn from https://www.hcup-us.ahrq.gov/toolssoftware/comorbidityicd10/comorbidity_icd10.jsp, version 2021.1"
+* ^extension[FMM].valueInteger = 1
 * ICD10CM#A52.00 "Cardiovascular syphilis, unspecified"
 * ICD10CM#A52.01 "Syphilitic aneurysm of aorta"
 * ICD10CM#A52.02 "Syphilitic aortitis"
@@ -3743,6 +3773,7 @@ ValueSet:  ElixhauserPsychosisVS
 Id: elixhauser-psychosis-vs
 Title: "Elixhauser Psychosis Value Set"
 Description:    "Elixhauser Comorbid Condition Value Set for Psychosis. ICD-10 codes are drawn from https://www.hcup-us.ahrq.gov/toolssoftware/comorbidityicd10/comorbidity_icd10.jsp, version 2021.1"
+* ^extension[FMM].valueInteger = 1
 * ICD10CM#F06.0 "Psychotic disorder w hallucin due to known physiol condition"
 * ICD10CM#F06.1 "Catatonic disorder due to known physiological condition"
 * ICD10CM#F06.2 "Psychotic disorder w delusions due to known physiol cond"
@@ -3893,6 +3924,7 @@ ValueSet:  ElixhauserPulmonaryCirculationDisorderVS
 Id: elixhauser-pulmonary-circulation-disorder-vs
 Title: "Elixhauser Pulmonary Circulation Disorder Value Set"
 Description:    "Elixhauser Comorbid Condition Value Set for Pulmonary circulation disorders. ICD-10 codes are drawn from https://www.hcup-us.ahrq.gov/toolssoftware/comorbidityicd10/comorbidity_icd10.jsp, version 2021.1"
+* ^extension[FMM].valueInteger = 1
 * ICD10CM#I27.0 "Primary pulmonary hypertension"
 * ICD10CM#I27.1 "Kyphoscoliotic heart disease"
 * ICD10CM#I27.2 "Other secondary pulmonary hypertension"
@@ -3917,6 +3949,7 @@ ValueSet:  ElixhauserRenalFailureModerateVS
 Id: elixhauser-renal-failure-moderate-vs
 Title: "Elixhauser Moderate Renal Failure Value Set"
 Description:    "Elixhauser Comorbid Condition Value Set for Moderate Renal Failure. ICD-10 codes are drawn from https://www.hcup-us.ahrq.gov/toolssoftware/comorbidityicd10/comorbidity_icd10.jsp, version 2021.1"
+* ^extension[FMM].valueInteger = 1
 * ICD10CM#N18.3 "Chronic kidney disease, stage 3 (moderate)"
 * ICD10CM#N18.30 "Chronic kidney disease, stage 3 unspecified"
 * ICD10CM#N18.31 "Chronic kidney disease, stage 3a"
@@ -3929,6 +3962,7 @@ ValueSet:  ElixhauserRenalFailureSevereVS
 Id: elixhauser-renal-failure-severe-vs
 Title: "Elixhauser Severe Renal Failure Value Set"
 Description:    "Elixhauser Comorbid Condition Value Set for Severe Renal Failure. ICD-10 codes are drawn from https://www.hcup-us.ahrq.gov/toolssoftware/comorbidityicd10/comorbidity_icd10.jsp, version 2021.1"
+* ^extension[FMM].valueInteger = 1
 * ICD10CM#I12.0 "Hypertensive chronic kidney disease with stage 5 chronic kidney disease or end stage renal disease"
 * ICD10CM#I13.11 "Hypertensive heart and chronic kidney disease without heart failure, with stage 5 chronic kidney disease, or end stage renal"
 * ICD10CM#I13.2 "Hypertensive heart and chronic kidney disease with heart failure and with stage 5 chronic kidney disease, or end stage renal"
@@ -3948,6 +3982,7 @@ ValueSet:  ElixhauserCancerSolidTumorMalignantVS
 Id: elixhauser-cancer-solid-tumor-malignant-vs
 Title: "Elixhauser Malignant Solid Tumors Without Metastases Value Set"
 Description:    "Elixhauser Comorbid Condition Value Set for malignant solid tumors without metastases. ICD-10 codes are drawn from https://www.hcup-us.ahrq.gov/toolssoftware/comorbidityicd10/comorbidity_icd10.jsp, version 2021.1"
+* ^extension[FMM].valueInteger = 1
 * ICD10CM#C00.0 "Malignant neoplasm of external upper lip"
 * ICD10CM#C00.1 "Malignant neoplasm of external lower lip"
 * ICD10CM#C00.2 "Malignant neoplasm of external lip, unspecified"
@@ -4550,6 +4585,7 @@ ValueSet:  ElixhauserCancerSolidTumorInSituVS
 Id: elixhauser-cancer-solid-tumor-in-situ-vs
 Title: "Elixhauser Malignant Solid Tumors In Situ Value Set"
 Description:    "Elixhauser Comorbid Condition Value Set for malignant solid tumors in situ. ICD-10 codes are drawn from https://www.hcup-us.ahrq.gov/toolssoftware/comorbidityicd10/comorbidity_icd10.jsp, version 2021.1"
+* ^extension[FMM].valueInteger = 1
 * ICD10CM#D00.00 "Carcinoma in situ of oral cavity, unspecified site"
 * ICD10CM#D00.01 "Carcinoma in situ of labial mucosa and vermilion border"
 * ICD10CM#D00.02 "Carcinoma in situ of buccal mucosa"
@@ -4666,6 +4702,7 @@ ValueSet:  ElixhauserUlcerVS
 Id: elixhauser-ulcer-vs
 Title: "Elixhauser Chronic Peptic Ulcer Disease Value Set"
 Description:    "Elixhauser Comorbid Condition Value Set for Chronic peptic ulcer disease. ICD-10 codes are drawn from https://www.hcup-us.ahrq.gov/toolssoftware/comorbidityicd10/comorbidity_icd10.jsp, version 2021.1"
+* ^extension[FMM].valueInteger = 1
 * ICD10CM#K25.0 "Acute gastric ulcer with hemorrhage"
 * ICD10CM#K25.1 "Acute gastric ulcer with perforation"
 * ICD10CM#K25.2 "Acute gastric ulcer with both hemorrhage and perforation"
@@ -4708,6 +4745,7 @@ ValueSet:  ElixhauserValvularDiseaseVS
 Id: elixhauser-valvular-disease-vs
 Title: "Elixhauser Valvular Disease Value Set"
 Description:    "Elixhauser Comorbid Condition Value Set for Valvular disease. ICD-10 codes are drawn from https://www.hcup-us.ahrq.gov/toolssoftware/comorbidityicd10/comorbidity_icd10.jsp, version 2021.1"
+* ^extension[FMM].valueInteger = 1
 * ICD10CM#A18.84 "Tuberculosis of heart"
 * ICD10CM#A32.82 "Listerial endocarditis"
 * ICD10CM#A39.51 "Meningococcal endocarditis"
@@ -4817,6 +4855,7 @@ ValueSet:  ElixhauserWeightLossVS
 Id: elixhauser-weight-loss-vs
 Title: "Elixhauser Weight Loss Value Set"
 Description:    "Elixhauser Comorbid Condition Value Set for Weight loss. ICD-10 codes are drawn from https://www.hcup-us.ahrq.gov/toolssoftware/comorbidityicd10/comorbidity_icd10.jsp, version 2021.1"
+* ^extension[FMM].valueInteger = 1
 * ICD10CM#E40 "Kwashiorkor"
 * ICD10CM#E41 "Nutritional marasmus"
 * ICD10CM#E42 "Marasmic kwashiorkor"

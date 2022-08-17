@@ -3,6 +3,7 @@ Parent: Bundle
 Id: mcode-patient-bundle
 Title: "mCODE Patient Bundle Profile"
 Description: "A collection of data for an mCODE cancer patient."
+* ^extension[FMM].valueInteger = 1
 * type  = #collection
 * entry 1..* MS
 * entry.resource 1..1 MS // each entry must have a resource

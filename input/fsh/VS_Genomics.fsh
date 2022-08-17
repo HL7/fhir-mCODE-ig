@@ -2,30 +2,35 @@ ValueSet: ClinVarVS
 Id: mcode-clinvar-vs
 Title: "ClinVar Value Set"
 Description: "Value set of human genomic variants, drawn from [ClinVar](https://www.ncbi.nlm.nih.gov/clinvar/). The codes in this value set refer to the ClinVar Variation ID, or the identifier for the variant or set of variants that were interpreted. [Source: NCBI ClinVar Data Dictionary](https://www.ncbi.nlm.nih.gov/projects/clinvar/ClinVarDataDictionary.pdf)"
+* ^extension[FMM].valueInteger = 1
 * codes from system CLINVAR
 
 ValueSet:  HGNCVS
 Id: mcode-hgnc-vs
 Title: "HUGO Gene Nomenclature Committee Gene Names Value Set"
 Description: "HUGO Gene Nomenclature Committee Gene Names Value Set"
+* ^extension[FMM].valueInteger = 1
 * codes from system HGNC
 
 ValueSet: HGVSVS
 Id: mcode-hgvs-vs
 Title: "Human Genome Variation Society Sequence Variant Nomenclature Value Set"
 Description: "HGVS nomenclature is used to report and exchange information regarding variants found in DNA, RNA, and protein sequences."
+* ^extension[FMM].valueInteger = 1
 * codes from system HGVS
 
 ValueSet: DNAChangeTypeVS
 Id: mcode-dna-change-type-vs
 Title: "DNA Change Type Value Set"
 Description: "DNA Change Type of a variant"
+* ^extension[FMM].valueInteger = 1
 * include codes from system SO where concept descendent-of #SO:0002072
 
 ValueSet: GenomicMolecularConsequenceVS
 Id: mcode-genomic-molecular-consequence-vs
 Title: "Genomic Molecular Consequence Value Set"
 Description: "Changes in a structural features of a sequence due to the observed variant."
+* ^extension[FMM].valueInteger = 1
 * include codes from system SO where concept descendent-of #SO:0001537
 
 /*
@@ -34,7 +39,7 @@ Id: mcode-tumor-marker-test-vs
 Title: "Tumor Marker Test Value Set"
 Description:    "Codes representing tests for tumor markers. This value set of LOINC codes is not comprehensive and can be extended. Other vocabularies can be used only if the test of interest is not covered by LOINC. Tumor marker tests differ from genetic tests in that they measure levels of protein or other substances produced downstream from RNA protein synthesis."
 // intensional value set
-* insert LOINCCopyrightStatement
+* insert LOINCCopyrightForVS
 * include codes from system LNC where ancestor = #LP101591-8 // t(15;17)(q24.1;q21.1)(PML,RARA) bcr2
 * include codes from system LNC where ancestor = #LP111251-7 // T-cell receptor excision circle
 * include codes from system LNC where ancestor = #LP136073-6 // PCA3 score
@@ -106,6 +111,7 @@ ValueSet:   GenomicSpecimenTypeVS
 Id: mcode-genomic-specimen-type-vs
 Title: "Genomic Specimen Type Value Set"
 Description:    "The type of specimen analyzed in a genomic test. The values include the subset of codes in the HL7 Specimen Type code system (https://terminology.hl7.org/2.1.0/CodeSystem-v2-0487.html) representing body sites and body fluids likely to be used in genomic testing.  The most specific term available should be used."
+* ^extension[FMM].valueInteger = 1
 * SPTY#AMN       "Amniotic fluid"
 * SPTY#BIFL      "Bile Fluid"
 * SPTY#BLD       "Whole blood"
@@ -147,7 +153,8 @@ ValueSet: TumorMarkerTestVS
 Id: mcode-tumor-marker-test-vs
 Title: "Tumor Marker Test Value Set"
 Description:    "Codes representing tests for tumor markers. This value set of LOINC codes is not comprehensive and can be extended. Other vocabularies can be used only if the test of interest is not covered by LOINC. Tumor marker tests differ from genetic tests in that they measure levels of protein or other substances produced downstream from RNA protein synthesis."
-* insert LOINCCopyrightStatement
+* insert LOINCCopyrightForVS
+* ^extension[FMM].valueInteger = 1
 * LNC#62320-7 "T-cell receptor excision circle [#/volume] in DBS by NAA with probe detection"
 * LNC#92006-6 "T-cell receptor excision circle [Cycle Threshold #] in DBS"
 * LNC#92007-4 "T-cell receptor excision circle [Z-score] in DBS"

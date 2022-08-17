@@ -32,6 +32,7 @@ Parent: ComorbiditiesParent
 Id: mcode-comorbidities-elixhauser
 Title: "Comorbidities Elixhauser Profile"
 Description: "Comorbid condition checklist and optional risk score, using Elixhauser comorbidity categories as defined by the Agency for Healthcare Research and Quality (AHRQ) Healthcare Cost and Utilization Project (H-CUP)."
+* ^extension[FMM].valueInteger = 1
 * ^abstract = false
 * code = LNC_TBD#comorbidities-elixhauser "Elixhauser Comorbidity Panel"
 * focus only Reference(PrimaryCancerCondition)

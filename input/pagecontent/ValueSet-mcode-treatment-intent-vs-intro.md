@@ -11,7 +11,7 @@ Use these terms with the following definitions in mind:
 * **Guidance** relates to education and counselling, such as smoking cessation programs.
 * **Forensic** in the medical context refers to procedures carried out to determine the cause of death.
 
-These values appear in SNOMED-CT under "Intents (nature of procedure values)" (code 363675004). There are certain terms under the same heading that were **not** included in this value set:
+These values appear in SNOMED CT under "Intents (nature of procedure values)" (code 363675004). There are certain terms under the same heading that were **not** included in this value set:
 
 * **Prophylaxis** is essentially synonymous with preventive. See <https://en.wikipedia.org/wiki/Preventive_healthcare> for the distinction between these terms.
 * **Neo-adjuvant** deals with the timing of a treatment relative to other treatments, not the intent. SNOMED's classification of this term is questionable.

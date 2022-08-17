@@ -2,7 +2,7 @@
 Instance: primary-cancer-condition-breast
 InstanceOf: PrimaryCancerCondition
 Title: "primary-cancer-condition-breast"
-Description: "mCODE Example for Primary Cancer Condition (breast). The example shows post-coordinated coding using SNOMED-CT, with separate codes for morphology and bodySite."
+Description: "mCODE Example for Primary Cancer Condition (breast). The example shows post-coordinated coding using SNOMED CT, with separate codes for morphology and bodySite."
 Usage: #example
 * extension.url = "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-histology-morphology-behavior"
 * extension.valueCodeableConcept = http://snomed.info/sct#77284006 "Lobular carcinoma in situ (morphologic abnormality)"

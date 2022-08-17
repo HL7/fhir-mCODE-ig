@@ -3,8 +3,9 @@
 * Replaced local code #molecular-consequence with LOINC #81289-1  // Structural variant [Type]
 * Updated AJCC references to new SNOMED-CT terms that map to AJCC (https://jira.hl7.org/browse/FHIR-37593)
 * Corrected extended example, which formerly used invalid stage "pM0". Replaced with a data absent reason "not applicable".
- 
-* Integrated SNOMED Codes that have been issued since STU2 publication. Not in the March 2022 US Release
+* Changed "SNOMED-CT" to preferred form "SNOMED CT"
+* Added Maturity Indicator (FHIR Maturity Model or FMM) to profiles and value sets
+* Integrated SNOMED Codes that have been issued since STU2 publication.  Not in the March 2022 US Release
   * #1204242009  "External beam radiation therapy using particle scanning technique (procedure)" //USCRS-33517
   * #1217011006  "non-adjacent (qualifier)" // USCRS-33144
   * #1217123003 "Radiotherapy Course of Treatment (regime/therapy)" //USCRS-33529
@@ -16,22 +17,22 @@
   * #1162492000 "Tumor bed (morphologic abnormality)" // SNOMED term available to be released in Jan 2021
   * #1162782007 "Three dimensional external beam radiation therapy (procedure)" // to be released Jan 2021
   * #1162586008 "Irradiated volume of organ at risk (observable entity)"  // to be released Jan 2021
-    * #1162616006 "Lymph node level IA (qualifier value)"
-    * #1162617002 "Lymph node level IB (qualifier value)"
-    * #1162620005 "Lymph node level IVA (qualifier value)"
-    * #1162621009 "Lymph node level IVB (qualifier value)"
-    * #1162622002 "Lymph node level VA (qualifier value)"
-    * #1162623007 "Lymph node level VB (qualifier value)"
-    * #1162624001 "Lymph node level VC (qualifier value)"
-    * #1162625000 "Lymph node level VIA (qualifier value)"
-    * #1162626004 "Lymph node level VIB (qualifier value)"
-    * #1162628003 "Lymph node level VIIA (qualifier value)"
-    * #1162627008 "Lymph node level VIIB (qualifier value)"
-    * #1162618007 "Lymph node level VIII (qualifier value)"
-    * #1162619004 "Lymph node level IX (qualifier value)"
-    * #1162614009 "Lymph node level X (qualifier value)"
-    * #1162615005 "Lymph node level XA (qualifier value)"
-    * #1162613003 "Lymph node level XB (qualifier value)"
+  * #1162616006 "Lymph node level IA (qualifier value)"
+  * #1162617002 "Lymph node level IB (qualifier value)"
+  * #1162620005 "Lymph node level IVA (qualifier value)"
+  * #1162621009 "Lymph node level IVB (qualifier value)"
+  * #1162622002 "Lymph node level VA (qualifier value)"
+  * #1162623007 "Lymph node level VB (qualifier value)"
+  * #1162624001 "Lymph node level VC (qualifier value)"
+  * #1162625000 "Lymph node level VIA (qualifier value)"
+  * #1162626004 "Lymph node level VIB (qualifier value)"
+  * #1162628003 "Lymph node level VIIA (qualifier value)"
+  * #1162627008 "Lymph node level VIIB (qualifier value)"
+  * #1162618007 "Lymph node level VIII (qualifier value)"
+  * #1162619004 "Lymph node level IX (qualifier value)"
+  * #1162614009 "Lymph node level X (qualifier value)"
+  * #1162615005 "Lymph node level XA (qualifier value)"
+  * #1162613003 "Lymph node level XB (qualifier value)"
 
 #### General Changes
 
@@ -76,18 +77,18 @@
 #### Treatment Group Changes
 
 * Incorporated the modality and technique extensions into a combined [RadiotherapyModalityAndTechnique] extension that includes invariants that restrict the allowed [combinations](StructureDefinition-mcode-radiotherapy-modality-and-technique.html#usage) using invariants
-* Aligned the [RadiotherapyTreatmentLocationVS] and [RadiotherapyTreatmentLocationQualifierVS] value sets to American Association of Physicists in Medicine (AAPM) TG-263 anatomy terms and [provide a mapping](http://build.fhir.org/ig/HL7/fhir-mCODE-ig/branches/master/StructureDefinition-mcode-radiotherapy-volume.html#usage) to SNOMED-CT concepts and qualifiers. [FHIR-33343](https://jira.hl7.org/browse/FHIR-33343)
+* Aligned the [RadiotherapyTreatmentLocationVS] and [RadiotherapyTreatmentLocationQualifierVS] value sets to American Association of Physicists in Medicine (AAPM) TG-263 anatomy terms and [provide a mapping](http://build.fhir.org/ig/HL7/fhir-mCODE-ig/branches/master/StructureDefinition-mcode-radiotherapy-volume.html#usage) to SNOMED CT concepts and qualifiers. [FHIR-33343](https://jira.hl7.org/browse/FHIR-33343)
 * Added the identifier slice to [RadioTherapyVolume] and [RadiotherapyCourseSummary].
 * Laterality broken out into separate extension in [CancerRelatedSurgicalProcedure]. [FHIR-32340](https://jira.hl7.org/browse/FHIR-32340)
 * [TumorMarkerTestVS] value set has been curated to better capture the intended scope of tumor marker tests.
 * `BrachytherapyTreatmentPhase` and `RadiotherapyTreatmentPhase` profiles and examples dropped because it was determined that this was too much detail for mCODE. Phase profiles will reappear in the planned [CodeX Radiation Therapy FHIR Implementation Guide](http://build.fhir.org/ig/HL7/codex-radiation-therapy/branches/master/index.html). [FHIR-33340](https://jira.hl7.org/browse/FHIR-33340)
-* Changed valued in [TreatmentTerminationReasonVS] to SNOMED-CT situations and findings. Added new values including `SCT#399307001 "Lost to follow-up (finding)"` and `SCT#419620001 "Death (event)"`. [FHIR-32832](https://jira.hl7.org/browse/FHIR-32832)
+* Changed valued in [TreatmentTerminationReasonVS] to SNOMED CT situations and findings. Added new values including `SCT#399307001 "Lost to follow-up (finding)"` and `SCT#419620001 "Death (event)"`. [FHIR-32832](https://jira.hl7.org/browse/FHIR-32832)
 * Radiotherapy Modality Value Set and Radiotherapy Technique Value Set are now defined by inclusion of the modality and technique value sets for Brachytherapy and Teleradiotherapy rather than by enumeration. [FHIR-32263](https://jira.hl7.org/browse/FHIR-32263)
 * Descriptions for the Elixhauser ThyroidOther and NeuroOther VS have been clarified. [FHIR-32350](https://jira.hl7.org/browse/FHIR-32350)
 * Dropped the context restrictions on TreatmentIntent, Modality, and Technique extensions to permit them to be used in other resources in the future. [FHIR-32243](https://jira.hl7.org/browse/FHIR-32243)
 * Added tables with definitions and compatibility for all radiotherapy and brachytherapy modalities and techniques. [FHIR-32244](https://jira.hl7.org/browse/FHIR-32244), [FHIR-32246](https://jira.hl7.org/browse/FHIR-32246), [FHIR-32247](https://jira.hl7.org/browse/FHIR-32247)
 * Updated language defining brachythereapy and teleradiotherapy treatment phase so as not to imply that phases are sequential. [FHIR-32256](https://jira.hl7.org/browse/FHIR-32256)
-* Replaced radiotherapy modality and technique UMLS and local codes with approved SNOMED-CT codes. Local codes have been removed from the radiotherapy code system, and the radiotherapy code system has been removed. [FHIR-32261](https://jira.hl7.org/browse/FHIR-32261)
+* Replaced radiotherapy modality and technique UMLS and local codes with approved SNOMED CT codes. Local codes have been removed from the radiotherapy code system, and the radiotherapy code system has been removed. [FHIR-32261](https://jira.hl7.org/browse/FHIR-32261)
 * Changed name of value set from TreatmentIntentVS to ProcedureIntentVS because "procedure" was considered broader than "treatment". [FHIR-32264](https://jira.hl7.org/browse/FHIR-32264)
 * Clarified that total dose in a Phase is not cumulative across multiple phases. [FHIR-32266](https://jira.hl7.org/browse/FHIR-32266)
 * Clarify that the number of fractions is per volume in Course Summary, but not per volume in a Phase. [FHIR-32267](https://jira.hl7.org/browse/FHIR-32267).

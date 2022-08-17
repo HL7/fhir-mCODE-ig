@@ -2,6 +2,7 @@ Alias: AssertedDate = http://hl7.org/fhir/StructureDefinition/condition-asserted
 
 
 RuleSet: CancerConditionCommonRules
+* ^extension[FMM].valueInteger = 4
 * extension contains
     AssertedDate named assertedDate 0..1 MS and
     HistologyMorphologyBehavior named histologyMorphologyBehavior 0..1 MS

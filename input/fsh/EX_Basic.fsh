@@ -11,7 +11,7 @@ Description: "Example of Primary Cancer Condition"
 * subject = Reference(cancer-patient-john-anyperson)
 * onsetDateTime = "2019-04-01"
 * asserter = Reference(us-core-practitioner-kyle-anydoc)
-* stage.summary = AJCC#3C "IIIC"
+* stage.summary = SCT#1222806003 "American Joint Committee on Cancer stage IIIC (qualifier value)"
 * stage.assessment = Reference(tnm-clinical-stage-group-3c)
 
 Instance: primary-cancer-condition-cll
@@ -225,7 +225,7 @@ Description: "Example of TNM Clinical Stage Group"
 * method = SCT#897275008 "American Joint Commission on Cancer, Cancer Staging Manual, 8th edition neoplasm staging system (tumor staging)"
 * subject = Reference(cancer-patient-john-anyperson)
 * effectiveDateTime = "2019-04-01"
-* valueCodeableConcept = AJCC#3C "IIIC"
+* valueCodeableConcept = SCT#1222806003 "American Joint Committee on Cancer stage IIIC (qualifier value)"
 * hasMember[tnmPrimaryTumorCategory] = Reference(tnm-clinical-primary-tumor-category-cT3)
 * hasMember[tnmRegionalNodesCategory] = Reference(tnm-clinical-regional-nodes-category-cN3)
 * hasMember[tnmDistantMetastasesCategory] = Reference(tnm-clinical-distant-metastases-category-cM0)
@@ -238,7 +238,7 @@ Description: "Example of TNM Clinical Distant Metastases Category"
 * method = SCT#897275008 "American Joint Commission on Cancer, Cancer Staging Manual, 8th edition neoplasm staging system (tumor staging)"
 * subject = Reference(cancer-patient-john-anyperson)
 * effectiveDateTime = "2019-04-01"
-* valueCodeableConcept = AJCC#cM0 "M0"
+* valueCodeableConcept = SCT#1229901006 "American Joint Committee on Cancer cM0 (qualifier value)"
 
 Instance: tnm-clinical-primary-tumor-category-cT3
 InstanceOf: TNMPrimaryTumorCategory
@@ -248,7 +248,7 @@ Description: "Example of TNM Clinical Primary Tumor Category"
 * method = SCT#897275008 "American Joint Commission on Cancer, Cancer Staging Manual, 8th edition neoplasm staging system (tumor staging)"
 * subject = Reference(cancer-patient-john-anyperson)
 * effectiveDateTime = "2019-04-01"
-* valueCodeableConcept = AJCC#cT3 "T3"
+* valueCodeableConcept = SCT#1228938002 "American Joint Committee on Cancer cT3 (qualifier value)"
 
 Instance: tnm-clinical-regional-nodes-category-cN3
 InstanceOf: TNMRegionalNodesCategory
@@ -258,7 +258,7 @@ Description: "Example of TNM Clinical Regional Nodes Category"
 * method = SCT#897275008 "American Joint Commission on Cancer, Cancer Staging Manual, 8th edition neoplasm staging system (tumor staging)"
 * subject = Reference(cancer-patient-john-anyperson)
 * effectiveDateTime = "2019-04-01"
-* valueCodeableConcept = AJCC#cN3 "N3"
+* valueCodeableConcept = SCT#1229984001 "American Joint Committee on Cancer cN3 (qualifier value)"
 
 Instance: cancer-related-medication-request-gefitinib
 InstanceOf: CancerRelatedMedicationRequest

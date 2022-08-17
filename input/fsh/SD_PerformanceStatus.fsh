@@ -1,4 +1,5 @@
 RuleSet: PerformanceStatusCommonRules
+* ^extension[FMM].valueInteger = 4
 * insert CategorySlicingRules
 * category[required] = ObsCat#survey
 * subject 1..1

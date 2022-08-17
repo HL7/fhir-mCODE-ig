@@ -11,22 +11,18 @@ RuleSet: IdentifierDisplayName  // FHIR-32239
 * identifier[displayName].use = #usual
 * identifier[displayName].value 1..1 MS
 
-// ------------- Overall Course Summary -----------------
-RuleSet: RadiotherapyCommon
+Profile:  RadiotherapyCourseSummary
+Parent:   USCoreProcedure  // considered one procedure with multiple parts
+Id:       mcode-radiotherapy-course-summary
+Title:    "Radiotherapy Course Summary Profile"
+Description: "A summary of a course of radiotherapy delivered to a patient. It records the treatment intent, termination reason, modalities, techniques, number of sessions, and doses delivered to one or more body volumes. Whether the course has been fully delivered or stopped is indicated in the status element."
+* ^extension[FMM].valueInteger = 3
 * category 1.. MS
 * category = SCT#108290001 // "Radiation oncology AND/OR radiotherapy (procedure)"
 * performed[x] only Period
 * subject only Reference(CancerPatient)
 * subject ^definition = "The patient on whom the procedure was performed."
 * extension and category MS
-
-
-Profile:  RadiotherapyCourseSummary
-Parent:   USCoreProcedure  // considered one procedure with multiple parts
-Id:       mcode-radiotherapy-course-summary
-Title:    "Radiotherapy Course Summary Profile"
-Description: "A summary of a course of radiotherapy delivered to a patient. It records the treatment intent, termination reason, modalities, techniques, number of sessions, and doses delivered to one or more body volumes. Whether the course has been fully delivered or stopped is indicated in the status element."
-* insert RadiotherapyCommon
 // Summary-specific content
 * code = SCT#1217123003 // "Radiotherapy course of treatment (regime/therapy)"
 * extension contains
@@ -49,6 +45,7 @@ Extension: RadiotherapyModalityAndTechnique
 Id:        mcode-radiotherapy-modality-and-technique
 Title:     "Radiotherapy Modality And Technique Extension"
 Description: "Extension capturing modality and technique of a given radiotherapy procedure.  The allowed combinations of modality and technique are constrained by invariants, one per modality."
+* ^extension[FMM].valueInteger = 3
 * extension contains
     RadiotherapyModality named modality 1..1 MS and
     RadiotherapyTechnique named technique 0..* MS
@@ -180,6 +177,7 @@ Id:        mcode-radiotherapy-modality
 Title:    "Radiotherapy Modality Extension"
 Description: "Extension capturing a modality of external beam or brachytherapy radiation procedures."
 //* insert ExtensionContext(Procedure) - removed as per FHIR-32243
+* ^extension[FMM].valueInteger = 3
 * value[x] only CodeableConcept
 * value[x] 1..1
 
@@ -188,6 +186,7 @@ Id:        mcode-radiotherapy-technique
 Title:     "Radiotherapy Technique Extension"
 Description: "Extension capturing a technique of external beam or brachytherapy radiation procedures."
 //* insert ExtensionContext(Procedure)  - removed as per FHIR-32243
+* ^extension[FMM].valueInteger = 3
 * value[x] only CodeableConcept
 * value[x] 1..1
 
@@ -196,6 +195,7 @@ Id:        mcode-radiotherapy-sessions
 Title:     "Radiotherapy Number of Sessions Extension"
 Description: "The number of sessions in a course of radiotherapy."
 // * insert ExtensionContext(Procedure) - removed as per FHIR-32243
+* ^extension[FMM].valueInteger = 3
 * value[x] only unsignedInt
 * value[x] 1..1
 
@@ -204,6 +204,7 @@ Id: mcode-radiotherapy-dose-delivered-to-volume
 Title: "Radiotherapy Dose Delivered To Volume Extension"
 Description: "Dose delivered to a given radiotherapy volume."
 // * insert ExtensionContext(Procedure) - removed as per FHIR-32243
+* ^extension[FMM].valueInteger = 3
 * extension contains
     volume 1..1 MS and
     totalDoseDelivered 0..1 MS and
@@ -228,6 +229,7 @@ Parent: BodyStructure
 Id: mcode-radiotherapy-volume
 Title: "Radiotherapy Volume Profile"
 Description: "A volume of the body used in radiotherapy planning or treatment delivery."
+* ^extension[FMM].valueInteger = 3
 * obeys mcode-description-or-id-required
 * insert IdentifierDisplayName
 * identifier ^short = "Volume Identifier"

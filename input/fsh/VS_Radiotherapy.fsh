@@ -4,7 +4,8 @@ ValueSet:  TeleradiotherapyModalityVS
 Id: mcode-teleradiotherapy-modality-vs
 Title: "Teleradiotherapy Modality Value Set"
 Description: "Codes describing the modalities of teleradiotherapy (external beam) procedures."
-* ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
+* insert SNOMEDCopyrightForVS
+* ^extension[FMM].valueInteger = 3
 * SCT#10611004 "External beam radiation therapy protons (procedure)"
 * SCT#45643008 "External beam radiation therapy using electrons (procedure)"
 * SCT#80347004 "External beam radiation therapy neutrons (procedure)"
@@ -15,7 +16,8 @@ ValueSet: BrachytherapyModalityVS
 Id: mcode-brachytherapy-modality-vs
 Title: "Brachytherapy Modality Value Set"
 Description: "Codes describing the modalities of brachytherapy procedures."
-* ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
+* insert SNOMEDCopyrightForVS
+* ^extension[FMM].valueInteger = 3
 * SCT#1156708005 "Low dose rate brachytherapy using temporary radioactive source (procedure)"
 //* SCT#1156707000 "Low dose rate brachytherapy (procedure)"
 * SCT#169359004 "Internal radiotherapy - permanent seeds (procedure)"  //* RT#LDR-PERM
@@ -28,7 +30,8 @@ ValueSet: RadiotherapyModalityVS
 Id: mcode-radiotherapy-modality-vs
 Title: "Radiotherapy Modality Value Set"
 Description: "Codes describing the modalities of external beam and brachytherapy radiation procedures, for use with radiotherapy summaries.  This value set is the union of the teleradiotherapy and brachytherapy modality value sets."
-* ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
+* insert SNOMEDCopyrightForVS
+* ^extension[FMM].valueInteger = 3
 * include codes from valueset TeleradiotherapyModalityVS
 * include codes from valueset BrachytherapyModalityVS
 
@@ -38,7 +41,8 @@ ValueSet: TeleradiotherapyTechniqueVS
 Id: mcode-teleradiotherapy-technique-vs
 Title: "Teleradiotherapy Technique Value Set"
 Description: "Codes describing the techniques of teleradiotherapy (external beam) procedures."
-* ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
+* insert SNOMEDCopyrightForVS
+* ^extension[FMM].valueInteger = 3
 * include codes from valueset TeleradiotherapyPhotonBeamTechniqueVS
 * include codes from valueset TeleradiotherapyElectronBeamTechniqueVS
 * include codes from valueset TeleradiotherapyNeutronTechniqueVS
@@ -51,7 +55,8 @@ ValueSet: TeleradiotherapyPhotonBeamTechniqueVS
 Id: mcode-teleradiotherapy-photon-beam-technique-vs
 Title: "Photon Beam Technique Value Set"
 Description: "Allowed techniques for photon beam modality"
-* ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
+* insert SNOMEDCopyrightForVS
+* ^extension[FMM].valueInteger = 3
 * SCT#441799006 "Intensity modulated radiation therapy (procedure)"
 * SCT#1156530009 "Volumetric Modulated Arc Therapy (procedure)"
 * SCT#1162782007 "Three dimensional external beam radiation therapy (procedure)"
@@ -62,7 +67,8 @@ ValueSet: TeleradiotherapyElectronBeamTechniqueVS
 Id: mcode-teleradiotherapy-electron-beam-technique-vs
 Title: "Electron Beam Technique Value Set"
 Description: "Allowed techniques for electron beam modality"
-* ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
+* insert SNOMEDCopyrightForVS
+* ^extension[FMM].valueInteger = 3
 * SCT#1162782007 "Three dimensional external beam radiation therapy (procedure)"
 * SCT#1156526006 "Two dimensional external beam radiation therapy (procedure)"
 * SCT#168524008 "Radiotherapy - intraoperative control (procedure)"
@@ -71,7 +77,8 @@ ValueSet: TeleradiotherapyNeutronTechniqueVS
 Id: mcode-teleradiotherapy-neutron-beam-technique-vs
 Title: "Neutron Beam Technique Value Set"
 Description: "Allowed techniques for neutron beam modality"
-* ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
+* insert SNOMEDCopyrightForVS
+* ^extension[FMM].valueInteger = 3
 * SCT#169317000 "Neutron capture therapy (procedure)"
 * SCT#1162782007 "Three dimensional external beam radiation therapy (procedure)"
 
@@ -79,7 +86,8 @@ ValueSet: TeleradiotherapyCarbonIonBeamTechniqueVS
 Id: mcode-teleradiotherapy-carbon-ion-beam-technique-vs
 Title: "Carbon Ion Beam Technique Value Set"
 Description: "Allowed techniques for carbon ion beam modality"
-* ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
+* insert SNOMEDCopyrightForVS
+* ^extension[FMM].valueInteger = 3
 * SCT#1156529004 "External beam radiation therapy using particle passive scattering technique (procedure)"
 * SCT#1156528007 "External beam radiation therapy using particle spot scanning technique (procedure)"
 * SCT#1204242009 "External beam radiation therapy using particle scanning technique (procedure)"
@@ -89,7 +97,8 @@ ValueSet: TeleradiotherapyProtonBeamTechniqueVS
 Id: mcode-teleradiotherapy-proton-beam-technique-vs
 Title: "Proton Beam Technique Value Set"
 Description: "Allowed techniques for proton beam modality"
-* ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
+* insert SNOMEDCopyrightForVS
+* ^extension[FMM].valueInteger = 3
 * SCT#1156529004 "External beam radiation therapy using particle passive scattering technique (procedure)"
 * SCT#1156528007 "External beam radiation therapy using particle spot scanning technique (procedure)"
 * SCT#1204242009 "External beam radiation therapy using particle scanning technique (procedure)"
@@ -99,7 +108,8 @@ ValueSet: BrachytherapyTechniqueVS
 Id: mcode-brachytherapy-technique-vs
 Title: "Brachytherapy Technique Value Set"
 Description: "Codes describing the techniques of brachytherapy (internal or surface radiation) procedures."
-* ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
+* insert SNOMEDCopyrightForVS
+* ^extension[FMM].valueInteger = 3
 * include codes from valueset BrachytherapyPermanentSeedsTechniqueVS
 * include codes from valueset BrachytherapyLowDoseRateTemporaryTechniqueVSs
 * include codes from valueset BrachytherapyPulsedDoseRateTechniqueVS
@@ -119,14 +129,16 @@ ValueSet: BrachytherapyPermanentSeedsTechniqueVS
 Id: mcode-brachytherapy-permanent-seeds-technique-vs
 Title: "Brachytherapy Permanent Seeds Technique Value Set"
 Description: "Allowed techniques for brachytherapy modality internal radiotherapy - permanent seeds"
-* ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
+* insert SNOMEDCopyrightForVS
+* ^extension[FMM].valueInteger = 3
 * SCT#113120007 "Interstitial brachytherapy (procedure)"
 
 ValueSet: BrachytherapyLowDoseRateTemporaryTechniqueVSs
 Id: mcode-brachytherapy-low-dose-rate-temporary-technique-vs
 Title: "Brachytherapy Low Dose Rate Temporary Radation Technique Value Set"
 Description: "Allowed techniques for brachytherapy modality Low Dose Rate using temporary radiation source"
-* ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
+* insert SNOMEDCopyrightForVS
+* ^extension[FMM].valueInteger = 3
 * SCT#384692006 "Intracavitary brachytherapy (procedure)"
 * SCT#113120007 "Interstitial brachytherapy (procedure)"
 * SCT#14473006 "Surface brachytherapy (procedure)"
@@ -135,7 +147,8 @@ ValueSet: BrachytherapyPulsedDoseRateTechniqueVS
 Id: mcode-brachytherapy-pulsed-dose-rate-technique-vs
 Title: "Brachytherapy Pulsed Dose Rate Technique Value Set"
 Description: "Allowed techniques for brachytherapy modality Pulsed Dose Rate"
-* ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
+* insert SNOMEDCopyrightForVS
+* ^extension[FMM].valueInteger = 3
 * SCT#384692006 "Intracavitary brachytherapy (procedure)"
 * SCT#113120007 "Interstitial brachytherapy (procedure)"
 
@@ -143,7 +156,8 @@ ValueSet: BrachytherapyHighDoseRateTechniqueVS
 Id: mcode-brachytherapy-high-dose-rate-technique-vs
 Title: "Brachytherapy High Dose Rate Technique Value Set"
 Description: "Allowed techniques for brachytherapy modality High Dose Rate"
-* ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
+* insert SNOMEDCopyrightForVS
+* ^extension[FMM].valueInteger = 3
 * SCT#384692006 "Intracavitary brachytherapy (procedure)"
 * SCT#1156382005 "Intensity modulated intracavitary brachytherapy (procedure)"
 * SCT#113120007 "Interstitial brachytherapy (procedure)"
@@ -156,7 +170,8 @@ ValueSet: BrachytherapyHighDoseRateElectronicTechniqueVS
 Id: mcode-brachytherapy-high-dose-rate-electronic-technique-vs
 Title: "Brachytherapy High Dose Rate Electronic Technique Value Set"
 Description: "Allowed techniques for brachytherapy modality High Dose Rate electronic"
-* ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
+* insert SNOMEDCopyrightForVS
+* ^extension[FMM].valueInteger = 3
 * SCT#384692006 "Intracavitary brachytherapy (procedure)"
 * SCT#1156382005 "Intensity modulated intracavitary brachytherapy (procedure)"
 * SCT#113120007 "Interstitial brachytherapy (procedure)"
@@ -168,7 +183,8 @@ ValueSet: BrachytherapyRadiopharmaceuticalTechniqueVS
 Id: mcode-brachytherapy-radiopharmaceutical-technique-vs
 Title: "Brachytherapy Radiopharmaceutical Technique Value Set"
 Description: "Allowed techniques for brachytherapy modality radiopharmaceutical"
-* ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
+* insert SNOMEDCopyrightForVS
+* ^extension[FMM].valueInteger = 3
 * SCT#16560241000119104 "Oral radionuclide therapy (procedure)"
 * SCT#1156383000 "Intravascular brachytherapy (procedure)"
 * SCT#384692006 "Intracavitary brachytherapy (procedure)"
@@ -178,7 +194,8 @@ ValueSet: RadiotherapyTechniqueVS
 Id: mcode-radiotherapy-technique-vs
 Title: "Radiotherapy Technique Value Set"
 Description: "Codes describing the techniques of external beam and brachytherapy radiation procedures, for use with radiotherapy summaries. This is the union of the EBRT and brachytherapy technique value sets."
-* ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
+* insert SNOMEDCopyrightForVS
+* ^extension[FMM].valueInteger = 3
 // Union of EBRT and brachytherapy value sets
 * include codes from valueset TeleradiotherapyTechniqueVS
 * include codes from valueset BrachytherapyTechniqueVS
@@ -187,7 +204,8 @@ ValueSet: RadiotherapyVolumeTypeVS
 Id: mcode-radiotherapy-volume-type-vs
 Title: "Radiotherapy Volume Type Value Set"
 Description: "Codes describing the types of body volumes used in radiotherapy planning and treatment. The value set includes the most common codes from DICOM CID 9534 Radiotherapy Targets (UID 1.2.840.10008.6.1.1244) and adds a code for Organs at Risk (OAR)."
-* ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
+* insert SNOMEDCopyrightForVS
+* ^extension[FMM].valueInteger = 3
 * SCT#228793007 "Planning target volume (observable entity)"
 * SCT#228791009 "Gross tumor volume (observable entity)"
 * SCT#228792002 "Clinical target volume (observable entity)"
@@ -199,7 +217,8 @@ ValueSet: RadiotherapyTreatmentLocationQualifierVS
 Id: mcode-radiotherapy-treatment-location-qualifier-vs
 Title: "Radiotherapy Treatment Location Qualifier Value Set"
 Description: "Various modifiers that can be applied to body locations where radiotherapy treatments can be directed."
-* ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
+* insert SNOMEDCopyrightForVS
+* ^extension[FMM].valueInteger = 3
 * include codes from system SCT where concept is-a #258399006  "Lymph node level value (qualifier value)"  // I, II, III, IV, V, VI, VII and sub-levels
 * exclude SCT#258399006 // the top level abstract code is excluded
 * include codes from valueset LateralityQualifierVS
@@ -251,7 +270,8 @@ ValueSet: RadiotherapyTreatmentLocationVS
 Id: mcode-radiotherapy-treatment-location-vs
 Title: "Radiotherapy Treatment Location Value Set"
 Description: "Codes describing the body locations where radiotherapy treatments can be directed. Based on TG263."
-* ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
+* insert SNOMEDCopyrightForVS
+* ^extension[FMM].valueInteger = 3
 * SCT#15825003 "Aortic structure (body structure)" // Aorta
 * SCT#54247002 "Ascending aorta structure (body Structure)" // Ascending Aorta
 * SCT#425444002 "Branch of brachiocephalic artery (body structure)" // Brachiocephalic Artery
@@ -502,8 +522,8 @@ Description: "Codes describing the body locations where radiotherapy treatments 
 * SCT#48014002 "Skin structure of perineum (body structure)" // <none>
 * SCT#79601000 "Bone structure of scapula (body structure)" // Scapula Left
 * SCT#75093004 "Skin structure of anterior abdominal wall (body structure)" // <none>
-* SCT_TBD#USCRS-33351 "Bowel space (body structure)" // Space occupied by bowel
-* SCT_TBD#USCRS-33352 "Small bowel space (body structure)" // Space occupied by small bowel
+* SCT_TBD#USCRS-34356 "Bowel space (body structure)" // Space occupied by bowel
+* SCT_TBD#USCRS-34358 "Small bowel space (body structure)" // Space occupied by small bowel
 * SCT#789564000 "Structure of retropharyngeal space (body structure)" // Retropharyngeal space
 * SCT#1193554003 "Structure of retrostyloid space (body structure)" // Retrostyloid space
 * SCT#41178004 "Structure of sphincter ani muscle (body structure)" // Internal Anal Sphincter

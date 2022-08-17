@@ -8,7 +8,6 @@ The following table presents the external code systems (and naming conventions) 
 
 | Code System | Application | [FHIR IG Publishing](https://confluence.hl7.org/display/FHIR/IG+Publisher+Documentation) support? | HL7 Canonical [1] | Proposed HTA, if different [2] |
 |--------------|-------------|------------------|------------------|----------------------|
-| AJCC | Cancer staging codes | No | Missing | <https://cancerstaging.org/> |
 | CPT | Procedure codes | No | <http://www.ama-assn.org/go/cpt> |  |
 | HGNC | Gene identification | No | <http://www.genenames.org>  |  |
 | HGVS | Sequence variant nomenclature | Yes | <http://varnomen.hgvs.org> | OID: 2.16.840.1.113883.6.282 |
@@ -32,7 +31,6 @@ The following table presents the external code systems (and naming conventions) 
 
 **Key:**
 
-* AJCC - American Joint Committee on Cancer
 * CPT - Current Procedural Terminology (American Medical Association)
 * HGNC - Human Genome Organisation (HUGO) Gene Nomenclature Committee
 * HGVS - Human Genome Variation Society

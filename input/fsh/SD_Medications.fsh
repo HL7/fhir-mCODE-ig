@@ -19,6 +19,7 @@ Description:    "An episode of medication administration for a patient whose con
 
 
 RuleSet: MedicationResourcesRS
+* ^extension[FMM].valueInteger = 3
 * obeys mcode-reason-required
 * subject only Reference(CancerPatient)
 * subject ^definition = "The patient receiving the medication."

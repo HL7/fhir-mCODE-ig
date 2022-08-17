@@ -1,4 +1,5 @@
 RuleSet: CancerStageCommonRules
+* ^extension[FMM].valueInteger = 4
 * value[x] only CodeableConcept
 * value[x] ^comment = ""    // suppress QA error on #notes link
 * insert NotUsed(device)

@@ -2,7 +2,7 @@ ValueSet:   CancerStagingSystemVS
 Id: mcode-cancer-staging-system-vs
 Title: "Cancer Staging System Value Set"
 Description: "System used for staging."
-* insert SNOMEDCTCopyrightForVS
+* insert SNOMEDCopyrightForVS
 * ^extension[FMM].valueInteger = 4
 * include codes from system SCT where concept is-a #254292007 "Tumor staging (tumor staging)"
 

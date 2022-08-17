@@ -2,7 +2,7 @@ ValueSet: PresentAbsentVS    //FHIR-32281
 Id: mcode-present-absent
 Title: "Present Absent Value Set"
 Description: "Value set used in association with phenomena that can be observed as being present or absent, such as a finding, organism, or physical object."
-* insert SNOMEDCTCopyrightForVS
+* insert SNOMEDCopyrightForVS
 * ^extension[FMM].valueInteger = 1
 * SCT#52101004 "Present (qualifier value)"
 * SCT#2667000 "Absent (qualifier value)"

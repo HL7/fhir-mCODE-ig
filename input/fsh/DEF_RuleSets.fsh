@@ -4,12 +4,6 @@ RuleSet: ObservationComponentSlicingRules
 * component ^slicing.rules = #open
 * component ^slicing.description = "Slice based on the component.code pattern"
 
-RuleSet: CategorySlicingRules
-* category ^slicing.discriminator.type = #pattern
-* category ^slicing.discriminator.path = "$this"
-* category ^slicing.rules = #open
-* category ^slicing.description = "Slicing requires the given value but allows additional categories"
-
 RuleSet: ObservationHasMemberSlicingRules
 * hasMember ^slicing.discriminator.type = #pattern  // #profile
 * hasMember ^slicing.discriminator.path = "$this.resolve().code"
@@ -38,7 +32,7 @@ RuleSet: CreateComponent(sliceName, min, max)
 * component contains {sliceName} {min}..{max} MS
 * component[{sliceName}].code MS
 * component[{sliceName}].value[x] MS
-//* component[{sliceName}].dataAbsentReason MS 
+//* component[{sliceName}].dataAbsentReason MS
 
 RuleSet: CreateComorbidityComponent(sliceName, code, short, vs)
 * component contains {sliceName} 0..1 MS

@@ -53,27 +53,38 @@ Description: "Identifying codes based on the timing of classification for distan
 ValueSet: CancerStageGroupVS
 Id: mcode-cancer-stage-group-vs
 Title: "Cancer Stage Group Value Set"
-Description: "This value set is intended to contain allowable values for Stage Group, according to TNM staging rules. AJCC codes (preferably, version 8 for current cancers) SHOULD be used."
+Description: "This value set contains SNOMED-CT equivalents of AJCC codes for Stage Group, according to TNM staging rules."
+* insert SNOMEDCopyrightForVS
 * ^extension[FMM].valueInteger = 4
-* codes from system AJCC
+* include codes from system SCT where concept is-a #1222592004 "American Joint Committee on Cancer clinical stage group allowable value (qualifier value)"
+* include codes from system SCT where concept is-a #1222593009 "American Joint Committee on Cancer pathological stage group allowable value (qualifier value)"
+* include codes from system SCT where concept is-a #1222594003 "American Joint Committee on Cancer yp stage group allowable value (qualifier value)"
 
 ValueSet: TNMPrimaryTumorCategoryVS
 Id: mcode-tnm-primary-tumor-category-vs
 Title: "TNM Primary Tumor Category Value Set"
-Description: "This value set is intended to contain allowable values for the T category, according to TNM staging rules. AJCC codes (preferably, version 8 for current cancers) SHOULD be used."
+Description: "This value set contains SNOMED-CT equivalents of AJCC codes for the T category, according to TNM staging rules."
+* insert SNOMEDCopyrightForVS
 * ^extension[FMM].valueInteger = 4
-* codes from system AJCC
+* include codes from system SCT where concept is-a #1222585009 "American Joint Committee on Cancer clinical T category allowable value (qualifier value)"
+* include codes from system SCT where concept is-a #1222589003 "American Joint Committee on Cancer pathological T category allowable value (qualifier value)"
+* include codes from system SCT where concept is-a #1222595002 "American Joint Committee on Cancer ypT category allowable value (qualifier value)"
 
 ValueSet: TNMRegionalNodesCategoryVS
 Id: mcode-tnm-regional-nodes-category-vs
 Title: "TNM Regional Nodes Category Value Set"
-Description: "This value set is intended to contain allowable values for the N category, according to TNM staging rules. AJCC codes (preferably, version 8 for current cancers) SHOULD be used."
+Description: "This value set contains SNOMED-CT equivalents of AJCC codes for the N category, according to TNM staging rules."
+* insert SNOMEDCopyrightForVS
 * ^extension[FMM].valueInteger = 4
-* include codes from system AJCC
+* include codes from system SCT where concept is-a #1222588006 "American Joint Committee on Cancer clinical N category allowable value (qualifier value)"
+* include codes from system SCT where concept is-a #1222590007 "American Joint Committee on Cancer pathological N category allowable value (qualifier value)"
+* include codes from system SCT where concept is-a #1222596001 "American Joint Committee on Cancer ypN category allowable value (qualifier value)"
 
 ValueSet: TNMDistantMetastasesCategoryVS
 Id: mcode-tnm-distant-metastases-category-vs
 Title: "TNM Distant Metastases Category Value Set"
-Description: "This value set is intended to contain allowable values for the M category, according to TNM staging rules. AJCC codes (preferably, version 8 for current cancers) SHOULD be used."
+Description: "This value set contains SNOMED-CT equivalents of AJCC codes for the M category, according to TNM staging rules."
+* insert SNOMEDCopyrightForVS
 * ^extension[FMM].valueInteger = 4
-* codes from system AJCC
+* include codes from system SCT where concept is-a #1222587001 "American Joint Committee on Cancer clinical M category allowable value (qualifier value)"
+* include codes from system SCT where concept is-a #1222591006 "American Joint Committee on Cancer pathological M category allowable value (qualifier value)"

@@ -1,7 +1,10 @@
-### Updates Since mCODE STU 2 Publication  (2022)  *
-
-* Added Maturity Indicator (FHIR Maturity Model or FMM) to profiles and value sets
+### Updates Since mCODE STU 2 Publication  (2022)
+ 
+* Replaced local code #molecular-consequence with LOINC #81289-1  // Structural variant [Type]
+* Updated AJCC references to new SNOMED-CT terms that map to AJCC (https://jira.hl7.org/browse/FHIR-37593)
+* Corrected extended example, which formerly used invalid stage "pM0". Replaced with a data absent reason "not applicable".
 * Changed "SNOMED-CT" to preferred form "SNOMED CT"
+* Added Maturity Indicator (FHIR Maturity Model or FMM) to profiles and value sets
 * Integrated SNOMED Codes that have been issued since STU2 publication.  Not in the March 2022 US Release
   * #1204242009  "External beam radiation therapy using particle scanning technique (procedure)" //USCRS-33517
   * #1217011006  "non-adjacent (qualifier)" // USCRS-33144

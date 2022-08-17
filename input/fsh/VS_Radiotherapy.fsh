@@ -522,8 +522,8 @@ Description: "Codes describing the body locations where radiotherapy treatments 
 * SCT#48014002 "Skin structure of perineum (body structure)" // <none>
 * SCT#79601000 "Bone structure of scapula (body structure)" // Scapula Left
 * SCT#75093004 "Skin structure of anterior abdominal wall (body structure)" // <none>
-* SCT_TBD#USCRS-33351 "Bowel space (body structure)" // Space occupied by bowel
-* SCT_TBD#USCRS-33352 "Small bowel space (body structure)" // Space occupied by small bowel
+* SCT_TBD#USCRS-34356 "Bowel space (body structure)" // Space occupied by bowel
+* SCT_TBD#USCRS-34358 "Small bowel space (body structure)" // Space occupied by small bowel
 * SCT#789564000 "Structure of retropharyngeal space (body structure)" // Retropharyngeal space
 * SCT#1193554003 "Structure of retrostyloid space (body structure)" // Retrostyloid space
 * SCT#41178004 "Structure of sphincter ani muscle (body structure)" // Internal Anal Sphincter

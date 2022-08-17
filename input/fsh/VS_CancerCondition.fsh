@@ -82,8 +82,8 @@ ValueSet:  MelanomaInSituDisorderVS
 Id: mcode-melanoma-in-situ-disorder-vs
 Title: "Melanoma In-Situ Disorder Value Set"
 Description:    "Types of melanoma in-situ, coded in SNOMED CT or ICD-10-CM."
-* ^extension[FMM].valueInteger = 4
 * insert SNOMEDCTCopyrightForVS
+* ^extension[FMM].valueInteger = 4
 * include codes from system SCT where concept is-a #189758001 "Melanoma in situ (disorder)"
 * ICD10CM#D03 "Melanoma in situ of skin"
 * ICD10CM#D03.0 "Melanoma in situ of lip"

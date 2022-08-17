@@ -15,7 +15,6 @@ Alias:   HGNC = http://www.genenames.org
 Alias:   HGVS = http://varnomen.hgvs.org
 
 // Code systems lacking a recognized canonical at terminology.hl7.org
-Alias:   AJCC = http://cancerstaging.org
 Alias:   GTR = http://www.ncbi.nlm.nih.gov/gtr
 Alias:   CLINVAR = http://www.ncbi.nlm.nih.gov/clinvar
 Alias:   SO = http://www.sequenceontology.org/
@@ -41,3 +40,4 @@ Alias:   MedReqStatus = http://hl7.org/fhir/CodeSystem/medicationrequest-status
 Alias:   MedReqIntent = http://hl7.org/fhir/CodeSystem/medicationrequest-intent
 Alias:   MedReqCat = 	http://terminology.hl7.org/CodeSystem/medicationrequest-category
 Alias:   RefMeaning = http://terminology.hl7.org/CodeSystem/referencerange-meaning
+Alias:   AbsentReason = http://terminology.hl7.org/CodeSystem/data-absent-reason

@@ -17,8 +17,9 @@ Description:    "An alteration in the most common DNA nucleotide sequence. The t
 
 * insert ObservationComponentSlicingRules
 * insert CreateComponent(geneStudied, 0, *)
+* insert CreateComponent(cytogeneticLocation, 0, *)
 * insert CreateComponent(variationCode, 0, 1)
-* insert CreateComponent(genomicDNAChange, 0, 1)
+* insert CreateComponent(genomicDNAChange, 0, 1)  // genomic-hgvs
 * insert CreateComponent(genomicDNAChangeType, 0, 1)
 * insert CreateComponent(molecularConsequence, 0, 1)
 * insert CreateComponent(genomicSourceClass, 0, 1)
@@ -27,7 +28,6 @@ Description:    "An alteration in the most common DNA nucleotide sequence. The t
 * insert CreateComponent(copyNumber, 0, 1)
 * insert CreateComponent(sampleAllelicFrequency, 0, 1)
 * insert CreateComponent(allelicState, 0, 1)
-* insert CreateComponent(cytogeneticLocation, 0, *)
 * insert CreateComponent(cytogeneticNomenclature, 0, *)
 * insert CreateComponent(clinicalSignificance, 0, 1)
 
@@ -94,7 +94,7 @@ Description:    "An alteration in the most common DNA nucleotide sequence. The t
 * component[allelicState].code = LNC#53034-5
 * component[allelicState].value[x] only CodeableConcept
 * component[allelicState].value[x] from http://loinc.org/vs/LL381-5 (required)
-* component[allelicState] ^short = "sample allelic frequency"
+* component[allelicState] ^short = "sample allelic state"
 * component[allelicState] ^definition = "Genomic variant allelic state."
 
 // CG Reporting IG does not constrain the cytogeneticNomenclature value type
@@ -107,16 +107,15 @@ Description:    "An alteration in the most common DNA nucleotide sequence. The t
 * component[cytogeneticLocation] ^short = "Cytogenetic (chromosome) location"
 * component[cytogeneticLocation] ^definition = "The cytogenetic (chromosome) location."
 
-* component[clinicalSignificance].code = LNC#53037-8
+/** component[clinicalSignificance].code = LNC#53037-8
 * component[clinicalSignificance].value[x] only CodeableConcept
 * component[clinicalSignificance].value[x] from http://loinc.org/vs/LL4034-6 (required)
 * component[clinicalSignificance] ^short = "Genomic variation clinical significance [Imp]"
-* component[clinicalSignificance] ^definition = "Single DNA marker or individual allele interpretation in the context of the assessed genomic disease (source: LOINC)."
+* component[clinicalSignificance] ^definition = "Single DNA marker or individual allele interpretation in the context of the assessed genomic disease (source: LOINC)."*/
 
 // ADDITIONAL MUST SUPPORTS (MS on status, category, category[Laboratory], codes, subject, effective[x], value[x] are inherited from US Core Lab Observation)
 * method and specimen and component and component.code and component.value[x] MS
 //* component.dataAbsentReason MS
-
 
 Profile:        TumorMarkerTest
 Parent:         USCoreObservationLab

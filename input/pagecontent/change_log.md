@@ -5,6 +5,7 @@
   * Inheritance from US Core was removed (FHIR does not allow a profile to have two parents). Instances can still be consistent with US Core but FHIR IG Publisher does not recognize that.
   * Components names in examples were aligned to the component names in GRIG
   * The diagnosticImplication component of GenomicVariant no longer exists. Users should express diagnostic implications of a variant using the GRIG DiagnosticImplication profile.
+  * Removed value sets no longer used because equivalents are defined externally in GRIG: HGNCVS, HGVSVS, GenomicMolecularConsequenceVS, ClinvarVS, DNAChangeTypeVS
 * Updated AJCC references to new SNOMED-CT terms that map to AJCC (https://jira.hl7.org/browse/FHIR-37593)
 * Corrected extended example, which formerly used invalid stage "pM0". Replaced with a data absent reason "not applicable".
 * Changed "SNOMED-CT" to preferred form "SNOMED CT" in narratives

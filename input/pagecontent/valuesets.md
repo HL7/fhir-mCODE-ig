@@ -20,10 +20,8 @@ The following value sets are defined in this implementation guide:
 * [CancerStageGroupVS]
 * [CancerStagingSystemVS]
 * [CarcinomaInSituDisorderVS]
-* [ClinVarVS]
 * [ConditionStatusTrendVS]
 * [CytologicEvidenceOfMalignancyVS]
-* [DNAChangeTypeVS]
 * [ElixhauserAIDSVS]
 * [ElixhauserAlcoholAbuseVS]
 * [ElixhauserBloodLossAnemiaVS]
@@ -62,10 +60,7 @@ The following value sets are defined in this implementation guide:
 * [ElixhauserUlcerVS]
 * [ElixhauserValvularDiseaseVS]
 * [ElixhauserWeightLossVS]
-* [GenomicMolecularConsequenceVS]
 * [GenomicSpecimenTypeVS]
-* [HGNCVS]
-* [HGVSVS]
 * [HistologyMorphologyBehaviorVS]
 * [HypereosinophilicSyndromeDisorderVS]
 * [LateralityQualifierVS]
@@ -101,14 +96,8 @@ The following value sets are defined in this implementation guide:
 
 ### External Value Sets Used in mCODE
 
-* [ACMG_Clinical significance of genetic variation]
 * [ECOG_Performance status]
-* [Genomic coordinate system]
 * [Karnofsky performance status]
 * [Medication Clinical Drug (RxNorm)]
-* [MG_2_Genetic variant source]
-* [MG_4_Amino acid change type]
-* [MG_5_Genetic variant allelic state]
-* [Structural variant analysis method]
 
 {% include markdown-link-references.md %}

@@ -1,121 +1,55 @@
-Profile:    GenomicVariant
-Parent:     USCoreObservationLab
+Profile:    GenomicRegionStudied
+Parent:     RegionStudied
+Id:         mcode-genomic-region-studied
+Title:      "Genomic Region Studied Profile"
+Description:    "A subset of genes or genomic regions of interest in a targeted resequencing study."
+* ^extension[FMM].valueInteger = 1
+* value[x] ^definition = "Not used in this profile. MustSupport is inherited from the parent profile (USCoreObservationLab) and should be ignored by implementers for this element."
+* category[labCategory] = ObsCat#laboratory
+* component[gene-mutations] and component[gene-mutations].code and component[gene-mutations].value[x] MS
+* component[region-description] and component[region-description].code and component[region-description].value[x] MS
+* component[gene-studied] and component[gene-studied].code and component[gene-studied].value[x] MS
+* component[ranges-examined] and component[ranges-examined].code and component[ranges-examined].value[x] MS	
+* component[coordinate-system] and component[coordinate-system].code and component[coordinate-system].value[x] MS	
+* component[genomic-ref-seq] and component[genomic-ref-seq].code and component[genomic-ref-seq].value[x] MS
+* status and category and code and subject and effective[x] and effectiveDateTime and dataAbsentReason and component MS
+
+Profile: GenomicVariant
+Parent: Variant
 Id: mcode-genomic-variant
 Title:      "Genomic Variant Profile"
-Description:    "An alteration in the most common DNA nucleotide sequence. The term variant can be used to describe an alteration that may be benign, pathogenic, or of unknown significance. The term variant is increasingly being used in place of the term mutation. Variants can be computed relative to reference sequence assembly from which it was identified."
+Description:    "Details about a set of changes in the tested sample compared to a reference sequence. The term variant can be used to describe an alteration that may be benign, pathogenic, or of unknown significance. The term variant is increasingly being used in place of the term mutation. Variants can be computed relative to reference sequence assembly from which it was identified."
 * ^extension[FMM].valueInteger = 1
-* insert NotUsed(bodySite)
 * insert NotUsed(referenceRange)
 * insert NotUsed(hasMember)
-* code = LNC#69548-6 //"GENETIC variant assessment" (not Genomic!)
-* method from http://loinc.org/vs/LL4048-6 (extensible)
 * specimen only Reference(GenomicSpecimen)
-* value[x] only CodeableConcept
-* value[x] ^short = "Whether the variant is present"
-* value[x] ^definition = "The overall result of the genomic test; specifically, whether a variant is present, absent, no call, or indeterminant."
-* value[x] from http://loinc.org/vs/LL1971-2 (required)
+* value[x] ^slicing.rules = #closed
+* category[labCategory] = ObsCat#laboratory
+* component[gene-studied] and component[gene-studied].code and component[gene-studied].value[x] MS
+* component[variation-code] and component[variation-code].code and component[variation-code].value[x] MS
+* component[genomic-hgvs] and component[genomic-hgvs].code and component[genomic-hgvs].value[x] MS
+* component[coding-change-type] and component[coding-change-type].code and component[coding-change-type].value[x] MS
+* component[molecular-consequence] and component[molecular-consequence].code and component[molecular-consequence].value[x] MS
+* component[genomic-source-class] and component[genomic-source-class].code and component[genomic-source-class].value[x] MS
+* component[protein-hgvs] and component[protein-hgvs].code and component[protein-hgvs].value[x] MS
+* component[amino-acid-change-type] and component[amino-acid-change-type].code and component[amino-acid-change-type].value[x] MS
+* component[copy-number] and component[copy-number].code and component[copy-number].value[x] MS
+* component[sample-allelic-frequency] and component[sample-allelic-frequency].code and component[sample-allelic-frequency].value[x] MS
+* component[allelic-state] and component[allelic-state].code and component[allelic-state].value[x] MS
+* component[cytogenomic-nomenclature] and component[cytogenomic-nomenclature].code and component[cytogenomic-nomenclature].value[x] MS
+* component[cytogenetic-location] and component[cytogenetic-location].code and component[cytogenetic-location].value[x] MS
+* status and category and code and subject and effective[x] and effectiveDateTime and value[x] and dataAbsentReason and method and specimen and component MS
 
-* insert ObservationComponentSlicingRules
-* insert CreateComponent(geneStudied, 0, *)
-* insert CreateComponent(cytogeneticLocation, 0, *)
-* insert CreateComponent(variationCode, 0, 1)
-* insert CreateComponent(genomicDNAChange, 0, 1)  // genomic-hgvs
-* insert CreateComponent(genomicDNAChangeType, 0, 1)
-* insert CreateComponent(molecularConsequence, 0, 1)
-* insert CreateComponent(genomicSourceClass, 0, 1)
-* insert CreateComponent(aminoAcidChange, 0, 1)
-* insert CreateComponent(aminoAcidChangeType, 0, 1)
-* insert CreateComponent(copyNumber, 0, 1)
-* insert CreateComponent(sampleAllelicFrequency, 0, 1)
-* insert CreateComponent(allelicState, 0, 1)
-* insert CreateComponent(cytogeneticNomenclature, 0, *)
-* insert CreateComponent(clinicalSignificance, 0, 1)
-
-* component[geneStudied].code = LNC#48018-6
-* component[geneStudied].value[x] only CodeableConcept
-* component[geneStudied].value[x] from HGNCVS (extensible)
-* component[geneStudied] ^short = "Gene studied [ID]"
-* component[geneStudied] ^definition = "A gene targeted for mutation analysis, identified in HUGO Gene Nomenclature Committee (HGNC) notation. The required code is HGNC gene ID. Gene IDs are of the format HGNC:n, where n is a unique number. Only the number, n, should be given as the code. For example, the HGNC identifier for the EGFR gene is 3236. The display text associated with the code should be the HGNC official gene symbol. For example, the official gene symbol for epidermal growth factor receptor is EGFR."
-
-* component[variationCode].code = LNC#81252-9
-* component[variationCode].value[x] only CodeableConcept
-* component[variationCode].value[x] from ClinVarVS (preferred)
-* component[variationCode] ^short = "Discrete Genomic variant"
-* component[variationCode] ^definition = "The variation ID assigned by ClinVar, for example, 360448 is the identifier which includes the HGVS nomenclature NM_005228.4(EGFR):c.-237A>G (single nucleotide variant in EGFR). Other acceptable variant standards include the Catalogue Of Somatic Mutations In Cancer (COSMIC) and the International System for Human Cytogenetic Nomenclature (ISCN)."
-
-* component[genomicDNAChange].code = LNC#81290-9
-* component[genomicDNAChange].value[x] only CodeableConcept
-* component[genomicDNAChange].value[x] from HGVSVS (required)
-* component[genomicDNAChange] ^short = "Genomic DNA change (gHGVS)"
-* component[genomicDNAChange] ^definition = "The symbolic representation of a Genomic structural variant reported using HGVS nomenclature (gHGVS)"
-
-* component[genomicDNAChangeType].code = LNC#48019-4  // DNA change type
-* component[genomicDNAChangeType].value[x] only CodeableConcept
-* component[genomicDNAChangeType].value[x] from DNAChangeTypeVS (extensible)
-* component[genomicDNAChangeType] ^short = "DNA Change Type"
-* component[genomicDNAChangeType] ^definition = "Codified type for associated DNA Marker. DNA Markers use the HGVS notation which implies the DNA Marker Type, but the concurrent use of this code will allow a standard and explicit type for technical and display convenience."
-
-// use placeholder code until Genomics WG has a new LOINC code for molecular consequence
-// formerly local code #molecular-consequence
-* component[molecularConsequence].code = LNC#81289-1  // Structural variant [Type]
-* component[molecularConsequence].value[x] only CodeableConcept
-* component[molecularConsequence].value[x] from GenomicMolecularConsequenceVS (extensible)
-* component[molecularConsequence] ^short = "Molecular consequence"
-* component[molecularConsequence] ^definition = "Changes in a structural features of a sequence due to the observed variant."
-
-* component[genomicSourceClass].code = LNC#48002-0
-* component[genomicSourceClass].value[x] only CodeableConcept
-* component[genomicSourceClass].value[x] from http://loinc.org/vs/LL378-1 (required)
-* component[genomicSourceClass] ^short = "Genomic source class [Type]"
-* component[genomicSourceClass] ^definition = "The genomic class of the specimen being analyzed, for example, germline for inherited genome, somatic for cancer genome, and prenatal for fetal genome."
-
-* component[aminoAcidChange].code = LNC#48005-3
-* component[aminoAcidChange].value[x] only CodeableConcept
-* component[aminoAcidChange].value[x] from HGVSVS (required)
-* component[aminoAcidChange] ^short = "Amino acid change (pHGVS)"
-* component[aminoAcidChange] ^definition = "The symbolic representation of an amino acid variant reported using HGVS nomenclature (pHGVS)."
-
-* component[aminoAcidChangeType].code = LNC#48006-1
-* component[aminoAcidChangeType].value[x] only CodeableConcept
-* component[aminoAcidChangeType].value[x] from http://loinc.org/vs/LL380-7 (required)
-* component[aminoAcidChangeType] ^short = "Amino acid change [Type]"
-* component[aminoAcidChangeType] ^definition = "The type of change related to the amino acid variant."
-
-* component[copyNumber].code = LNC#82155-3
-* component[copyNumber].value[x] only Quantity
-* component[copyNumber] ^short = "Genomic structural variant copy number"
-* component[copyNumber] ^definition = "The genomic trait involving the number of copies of a particular gene present in the genome of an individual. (source: NCI)"
-
-* component[sampleAllelicFrequency].code = LNC#81258-6
-* component[sampleAllelicFrequency].value[x] only Quantity
-* component[sampleAllelicFrequency] ^short = "sample allelic frequency"
-* component[sampleAllelicFrequency] ^definition = "The allele frequency represents the incidence of a gene variant in a population. (source: Nature.com)"
-
-* component[allelicState].code = LNC#53034-5
-* component[allelicState].value[x] only CodeableConcept
-* component[allelicState].value[x] from http://loinc.org/vs/LL381-5 (required)
-* component[allelicState] ^short = "sample allelic state"
-* component[allelicState] ^definition = "Genomic variant allelic state."
-
-// CG Reporting IG does not constrain the cytogeneticNomenclature value type
-* component[cytogeneticNomenclature].code = LNC#81291-7
-* component[cytogeneticNomenclature] ^short = "Variant ISCN"
-* component[cytogeneticNomenclature] ^definition = "The cytogenetic (chromosome) location, represented using the International System for Human Cytogenetic Nomenclature (ISCN)"
-
-// CG Reporting IG does not constrain the cytogeneticLocation value type
-* component[cytogeneticLocation].code = LNC#48001-2
-* component[cytogeneticLocation] ^short = "Cytogenetic (chromosome) location"
-* component[cytogeneticLocation] ^definition = "The cytogenetic (chromosome) location."
-
-/** component[clinicalSignificance].code = LNC#53037-8
-* component[clinicalSignificance].value[x] only CodeableConcept
-* component[clinicalSignificance].value[x] from http://loinc.org/vs/LL4034-6 (required)
-* component[clinicalSignificance] ^short = "Genomic variation clinical significance [Imp]"
-* component[clinicalSignificance] ^definition = "Single DNA marker or individual allele interpretation in the context of the assessed genomic disease (source: LOINC)."*/
-
-// ADDITIONAL MUST SUPPORTS (MS on status, category, category[Laboratory], codes, subject, effective[x], value[x] are inherited from US Core Lab Observation)
-* method and specimen and component and component.code and component.value[x] MS
-//* component.dataAbsentReason MS
+Profile:     GenomicsReport
+Parent:      http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomics-report
+Id:          mcode-genomics-report
+Title:      "Genomics Report Profile"
+Description:    "Genomic analysis summary report. The report may include one or more tests, with two distinct test types. The first type is a targeted mutation test, where a specific mutation on a specific gene is tested for. The result is either positive or negative for that mutation. The second type is a more general test for variants. This type of test returns the identity of variants found in a certain region of the genome."
+* ^extension[FMM].valueInteger = 1
+* specimen only Reference(GenomicSpecimen)
+* result[variant] MS
+* result[region-studied] MS
+* status and category and code and subject and effective[x] and effectiveDateTime and issued and performer and result and specimen MS
 
 Profile:        TumorMarkerTest
 Parent:         USCoreObservationLab
@@ -158,83 +92,3 @@ Description:    "A small sample of blood, hair, skin, amniotic fluid (the fluid 
 * insert CancerRelatedSpecimenRules
 * ^extension[FMM].valueInteger = 1
 * type from GenomicSpecimenTypeVS (extensible)
-
-
-Profile:     GenomicsReport
-Parent:      USCoreDiagnosticReportLab
-Id:          mcode-genomics-report
-Title:      "Genomics Report Profile"
-Description:    "Genomic analysis summary report. The report may include one or more tests, with two distinct test types. The first type is a targeted mutation test, where a specific mutation on a specific gene is tested for. The result is either positive or negative for that mutation. The second type is a more general test for variants. This type of test returns the identity of variants found in a certain region of the genome."
-* ^extension[FMM].valueInteger = 1
-* category contains GenomicsCategory 1..1
-* category[GenomicsCategory] = DiagnosticService#GE
-* code = LNC#81247-9 //"Master HL7 Genomic variant reporting panel"
-* specimen only Reference(GenomicSpecimen)
-* insert DiagnosticReportResultSlicingRules
-* result contains
-    GenomicVariant 0..1 MS and
-    GenomicRegionStudied 0..1 MS
-* result[GenomicVariant] only Reference(GenomicVariant)
-* result[GenomicVariant] ^short = "Reference to Genomic Variant"
-* result[GenomicVariant] ^definition = "Records an alteration in the most common DNA nucleotide sequence. The term variant is increasingly being used in place of the term mutation to describe an alteration that may be benign, pathogenic, or of unknown significance."
-* result[GenomicVariant] ^comment = "When using this element, the referenced Observation must validate against the GenomicVariant profile."
-* result[GenomicRegionStudied] only Reference(GenomicRegionStudied)
-* result[GenomicRegionStudied] ^short = "Reference to Genomic Region Studied"
-* result[GenomicRegionStudied] ^definition = "The area of the genome region referenced in testing for variants."
-* result[GenomicRegionStudied] ^comment = "When using this element, the referenced Observation must validate against the GenomicRegionStudied profile."
-// Already MS in US Core: status, category, code, subject, effective[x], issued, performer, result
-* specimen MS
-
-Profile:    GenomicRegionStudied
-Parent:     USCoreObservationLab
-Id:         mcode-genomic-region-studied
-Title:      "Genomic Region Studied Profile"
-Description:    "A subset of genes or genomic regions of interest in a targeted resequencing study."
-* ^extension[FMM].valueInteger = 1
-* code = LNC#53041-0 //"DNA region of interest panel"
-//* insert NotUsed(value[x])
-* value[x] 0..0 // remove the must-support obligation imposed by US Core (MK 2/16/2021)
-* value[x] ^definition = "Not used in this profile. MustSupport is inherited from the parent profile (USCoreObservationLab) and should be ignored by implementers for this element."
-* insert ObservationComponentSlicingRules
-* insert CreateComponent(geneMutations, 0, *)
-* insert CreateComponent(geneStudied, 0, *)
-* insert CreateComponent(dnaRegionDescription, 0, *)
-* insert CreateComponent(dnaRangesExamined, 0, *)
-* insert CreateComponent(genomicRegionCoordinateSystem, 0, 1)
-* insert CreateComponent(genomicReferenceSequenceId, 0, 1)
-
-* component[geneMutations] ^short = "Gene mutations tested for in Blood or Tissue by Molecular genetics method Nominal"
-* component[geneMutations] ^definition = "The gene mutations tested for in blood or tissue by molecular genetics methods"
-* component[geneMutations].code = LNC#36908-2
-* component[geneMutations].value[x] only CodeableConcept
-* component[geneMutations].value[x] from HGVSVS (required)
-
-
-* component[geneStudied] ^short = "Gene studied [ID]"
-* component[geneStudied] ^definition = "The ID for the gene studied"
-* component[geneStudied].code = LNC#48018-6
-* component[geneStudied].value[x] only CodeableConcept
-* component[geneStudied].value[x] from HGNCVS (extensible)
-
-* component[dnaRegionDescription] ^short = "Description of ranges of DNA sequences examined"
-* component[dnaRegionDescription] ^definition = "Description for the DNA region studied in the genomics report"
-* component[dnaRegionDescription].code = LNC#81293-3
-* component[dnaRegionDescription].value[x] only string
-
-* component[dnaRangesExamined] ^short = "Range(s) of DNA sequence examined"
-* component[dnaRangesExamined] ^definition = "The range(s) of the DNA sequence examined"
-* component[dnaRangesExamined].code = LNC#51959-5
-* component[dnaRangesExamined].value[x] only Range
-
-* component[genomicRegionCoordinateSystem] ^short = "Genomic coordinate system [Type]."
-* component[genomicRegionCoordinateSystem] ^definition = "The method of counting along the genome, for example, 0-based interval counting or 0-based character counting."
-* component[genomicRegionCoordinateSystem].code = LNC#92822-6
-* component[genomicRegionCoordinateSystem].value[x] only CodeableConcept
-* component[genomicRegionCoordinateSystem].value[x] from http://loinc.org/vs/LL5323-2 (preferred)
-
-* component[genomicReferenceSequenceId] ^short = "Genomic reference sequence [ID]"
-* component[genomicReferenceSequenceId] ^definition = "Range(s) of DNA sequence examined. The genomic reference sequence is a contiguous stretch of chromosome DNA that spans all of the exons of the gene and includes transcribed and non transcribed stretches. For this ID use either the NCBI genomic nucleotide RefSeq IDs with their version number (see: NCBI.NLM.NIH.Gov/RefSeq) or use the LRG identifiers, without transcript (t or p) extensions -- when they become available. (source: LOINC)"
-* component[genomicReferenceSequenceId].code = LNC#48013-7
-
-* component and component.code and component.value[x] MS
-//* component.dataAbsentReason MS

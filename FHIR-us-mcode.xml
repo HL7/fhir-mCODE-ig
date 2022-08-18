@@ -108,6 +108,7 @@
 <artifact id="StructureDefinition/mcode-genomic-specimen" key="StructureDefinition-mcode-genomic-specimen" name="Genomic Specimen Profile"/>
 <artifact id="ValueSet/mcode-genomic-specimen-type-vs" key="ValueSet-mcode-genomic-specimen-type-vs" name="Genomic Specimen Type Value Set"/>
 <artifact id="StructureDefinition/mcode-genomic-variant" key="StructureDefinition-mcode-genomic-variant" name="Genomic Variant Profile"/>
+<artifact id="StructureDefinition/mcode-genomic-variant2" key="StructureDefinition-mcode-genomic-variant" name="Genomic Variant Profile"/>
 <artifact id="StructureDefinition/mcode-genomics-report" key="StructureDefinition-mcode-genomics-report" name="Genomics Report Profile"/>
 <artifact deprecated="true" id="ValueSet/mcode-hgvs-sequence-variant-nomenclature-value-set" key="hgvs-sequence-variant-nomenclature-value-set" name="HGVS Sequence Variant Nomenclature Value Set"/>
 <artifact id="ValueSet/mcode-hgnc-vs" key="hugo-gene-nomenclature-committee-gene-names-value-set" name="HUGO Gene Nomenclature Committee Gene Names Value Set"/>

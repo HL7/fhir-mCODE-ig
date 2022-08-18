@@ -9,13 +9,13 @@ Description: "mCODE Example for Genomic Variant"
 * effectiveDateTime = "2019-04-01"
 * valueCodeableConcept = LNC#LA9633-4 "Present"
 * interpretation = SCT#10828004 "Positive (qualifier value)"
-* component[geneStudied].valueCodeableConcept = HGNC#HGNC:11389 "STK11"
+* component[gene-studied].valueCodeableConcept = HGNC#HGNC:11389 "STK11"
 // variant type: single nucleotide variant
 // https://www.ncbi.nlm.nih.gov/clinvar/variation/619728/
 // https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/HGNC:8023
-* component[variationCode].valueCodeableConcept = CLINVAR#619728 "NC_000019.8:g.1171707G>A"
-* component[genomicDNAChange].valueCodeableConcept = HGVS#NC_000019.8:g.1171707G>A "NC_000019.8:g.1171707G>A"
-* component[genomicSourceClass].valueCodeableConcept = LNC#LA6684-0 "Somatic"
+* component[variation-code].valueCodeableConcept = CLINVAR#619728 "NC_000019.8:g.1171707G>A"
+* component[genomic-hgvs].valueCodeableConcept = HGVS#NC_000019.8:g.1171707G>A "NC_000019.8:g.1171707G>A"
+* component[genomic-source-class].valueCodeableConcept = LNC#LA6684-0 "Somatic"
 
 /* genomic-variant-germline-deletion is an example of the
  * GenomicVariant to represent a single mutation test.
@@ -31,9 +31,9 @@ Description: "mCODE Example for Genomic Variant"
 * subject = Reference(cancer-patient-john-anyperson)
 * effectiveDateTime = "2019-04-01"
 * valueCodeableConcept = LNC#LA9633-4 "Present"
-* component[geneStudied].valueCodeableConcept = HGNC#HGNC:1100 "BRCA1" // NOTE: HGNC and HGVS codes have special characters in them so SUSHI needs to handle this.
-* component[genomicDNAChange].valueCodeableConcept = HGVS#NG_005905.2:g.126148_126152del "NG_005905.2:g.126148_126152del"
-* component[genomicSourceClass].valueCodeableConcept = LNC#LA6683-2 "Germline"
+* component[gene-studied].valueCodeableConcept = HGNC#HGNC:1100 "BRCA1" // NOTE: HGNC and HGVS codes have special characters in them so SUSHI needs to handle this.
+* component[genomic-hgvs].valueCodeableConcept = HGVS#NG_005905.2:g.126148_126152del "NG_005905.2:g.126148_126152del"
+* component[genomic-source-class].valueCodeableConcept = LNC#LA6683-2 "Germline"
 
 /* genomic-variant-fusion is an example of the
  * GenomicVariant to represent a gene fusion event.
@@ -48,22 +48,23 @@ Description: "mCODE Example for Genomic Variant gene fusion event"
 * subject = Reference(cancer-patient-john-anyperson)
 * effectiveDateTime = "2019-04-01"
 * valueCodeableConcept = LNC#LA9633-4 "Present"
-* component[geneStudied][0].valueCodeableConcept = HGNC#HGNC:1014 "BCR" // NOTE: HGNC and HGVS codes have special characters in them so SUSHI needs to handle this.
-* component[geneStudied][1].valueCodeableConcept = HGNC#HGNC:76 "ABL1"
-* component[molecularConsequence].valueCodeableConcept = SO#SO:001565 "gene_fusion"
-* component[genomicDNAChange].valueCodeableConcept = HGVS#NM_005157.6(ABL1):c.1076T>G "NM_005157.6(ABL1):c.1076T>G"   // "NM_005157.6(ABL1):c.1076T>G (p.Phe359Cys)"
-* component[genomicSourceClass].valueCodeableConcept = LNC#LA6684-0 "Somatic"
+* component[gene-studied][0].valueCodeableConcept = HGNC#HGNC:1014 "BCR" // NOTE: HGNC and HGVS codes have special characters in them so SUSHI needs to handle this.
+* component[gene-studied][1].valueCodeableConcept = HGNC#HGNC:76 "ABL1"
+//* component[molecularConsequence].valueCodeableConcept = SO#SO:001565 "gene_fusion"
+* component[genomic-hgvs].valueCodeableConcept = HGVS#NM_005157.6(ABL1):c.1076T>G "NM_005157.6(ABL1):c.1076T>G"   // "NM_005157.6(ABL1):c.1076T>G (p.Phe359Cys)"
+* component[genomic-source-class].valueCodeableConcept = LNC#LA6684-0 "Somatic"
 
 Instance: genomics-report-john-anyperson
-InstanceOf: GenomicsReport
+InstanceOf: mcode-genomics-report
 Description: "mCODE Example for Genomics Report"
 * status = #final "Final"
+* code = LNC#51969-4 "Genetic analysis report"
 * subject = Reference(cancer-patient-john-anyperson)
 * effectiveDateTime = "2019-04-01"
 * specimen = Reference(Specimen/genomic-specimen-lung)
 * issued = "2019-04-01T11:45:33+11:00"
-* result[GenomicVariant] = Reference(Observation/genomic-variant-somatic-single-nucleotide)
-* result[GenomicRegionStudied] = Reference(genomic-region-studied-stk11)
+* result[variant] = Reference(Observation/genomic-variant-somatic-single-nucleotide)
+* result[region-studied] = Reference(genomic-region-studied-stk11)
 
 Instance: genomic-region-studied-stk11
 InstanceOf: GenomicRegionStudied
@@ -72,7 +73,7 @@ Description: "mCODE Example for Genomic Region Studied"
 * subject = Reference(cancer-patient-john-anyperson)
 * effectiveDateTime = "2019-04-01"
 * issued = "2019-04-01T11:45:33+11:00"
-* component[geneStudied].valueCodeableConcept = HGNC#HGNC:11389 "STK11"
+* component[gene-studied].valueCodeableConcept = HGNC#HGNC:11389 "STK11"
 
 Instance: tumor-marker-test-egf
 InstanceOf: TumorMarkerTest

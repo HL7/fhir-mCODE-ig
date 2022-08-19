@@ -6,6 +6,7 @@ Description:    "A subset of genes or genomic regions of interest in a targeted 
 * ^extension[FMM].valueInteger = 1
 * value[x] ^definition = "Not used in this profile. MustSupport is inherited from the parent profile (USCoreObservationLab) and should be ignored by implementers for this element."
 * category[labCategory] = ObsCat#laboratory
+* subject only Reference(CancerPatient)
 * component[gene-mutations] and component[gene-mutations].code and component[gene-mutations].value[x] MS
 * component[region-description] and component[region-description].code and component[region-description].value[x] MS
 * component[gene-studied] and component[gene-studied].code and component[gene-studied].value[x] MS
@@ -22,6 +23,7 @@ Description:    "Details about a set of changes in the tested sample compared to
 * ^extension[FMM].valueInteger = 1
 * insert NotUsed(referenceRange)
 * insert NotUsed(hasMember)
+* subject only Reference(CancerPatient)
 * specimen only Reference(GenomicSpecimen)
 * value[x] ^slicing.rules = #closed
 * category[labCategory] = ObsCat#laboratory
@@ -46,9 +48,11 @@ Id:          mcode-genomics-report
 Title:      "Genomics Report Profile"
 Description:    "Genomic analysis summary report. The report may include one or more tests, with two distinct test types. The first type is a targeted mutation test, where a specific mutation on a specific gene is tested for. The result is either positive or negative for that mutation. The second type is a more general test for variants. This type of test returns the identity of variants found in a certain region of the genome."
 * ^extension[FMM].valueInteger = 1
+* subject only Reference(CancerPatient)
 * specimen only Reference(GenomicSpecimen)
-* result[variant] MS
-* result[region-studied] MS
+* result[variant] only Reference(GenomicVariant)
+* result[region-studied] only Reference(GenomicRegionStudied)
+* result[region-studied] and result[variant] MS
 * status and category and code and subject and effective[x] and effectiveDateTime and issued and performer and result and specimen MS
 
 Profile:        TumorMarkerTest

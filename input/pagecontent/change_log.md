@@ -1,9 +1,14 @@
-### Updates Since mCODE STU 2 Publication  (2022)
+### STU 3 Ballot Version  (Expected January 2023)
  
-* Replaced local code #molecular-consequence with LOINC #81289-1  // Structural variant [Type]
+* Created dependency on Genomics Reporting IG (GRIG) STU2 (v2.0.0)
+  * GenomicsReport, GenomicRegionStudied, and GenomicVariant now inherit from the corresponding profiles in GRIG
+  * Inheritance from US Core was removed (FHIR does not allow a profile to have two parents). Instances can still be consistent with US Core but FHIR IG Publisher does not recognize that.
+  * Components names in examples were aligned to the component names in GRIG
+  * The diagnosticImplication component of GenomicVariant no longer exists. Users should express diagnostic implications of a variant using the GRIG DiagnosticImplication profile.
+  * Removed value sets no longer used because equivalents are defined externally in GRIG: HGNCVS, HGVSVS, GenomicMolecularConsequenceVS, ClinvarVS, DNAChangeTypeVS
 * Updated AJCC references to new SNOMED-CT terms that map to AJCC (https://jira.hl7.org/browse/FHIR-37593)
 * Corrected extended example, which formerly used invalid stage "pM0". Replaced with a data absent reason "not applicable".
-* Changed "SNOMED-CT" to preferred form "SNOMED CT"
+* Changed "SNOMED-CT" to preferred form "SNOMED CT" in narratives
 * Added Maturity Indicator (FHIR Maturity Model or FMM) to profiles and value sets
 * Integrated SNOMED Codes that have been issued since STU2 publication.  Not in the March 2022 US Release
   * #1204242009  "External beam radiation therapy using particle scanning technique (procedure)" //USCRS-33517
@@ -33,6 +38,8 @@
   * #1162614009 "Lymph node level X (qualifier value)"
   * #1162615005 "Lymph node level XA (qualifier value)"
   * #1162613003 "Lymph node level XB (qualifier value)"
+
+### mCODE STU 2 Published Version (January 2022)
 
 #### General Changes
 
@@ -100,7 +107,7 @@
 * Renamed `CancerGenomicsReport` to [GenomicsReport] because it is not specific to cancer, and make that profile more broadly applicable.
 * [GenomicVariant] now includes additional components for molecular consequence, clinical significance, variant category, and copy number.
 * Added Values Urine, Stool to [GenomicSpecimenTypeVS] value set. The suggested term `Source, other` was not added because the value set binding is extensible. [FHIR-32827](https://jira.hl7.org/browse/FHIR-32827)
-* Primary and Secondary cancer value sets have been aligned with CDC state cancer reporting practices. [FHIR-32956](https://jira.hl7.org/browse/FHIR-32956)
+* Primary and Secondary cancer value sets were aligned with CDC state cancer reporting practices. [FHIR-32956](https://jira.hl7.org/browse/FHIR-32956)
 
 #### Outcome Group Changes
 

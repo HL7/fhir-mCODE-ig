@@ -70,10 +70,8 @@
 [CancerStageGroupVS]: ValueSet-mcode-cancer-stage-group-vs.html
 [CancerStagingSystemVS]: ValueSet-mcode-cancer-staging-system-vs.html
 [CarcinomaInSituDisorderVS]: ValueSet-mcode-carcinoma-in-situ-disorder-vs.html
-[ClinVarVS]: ValueSet-mcode-clinvar-vs.html
 [ConditionStatusTrendVS]: ValueSet-mcode-condition-status-trend-vs.html
 [CytologicEvidenceOfMalignancyVS]: ValueSet-mcode-cytologic-evidence-malignancy-vs.html
-[DNAChangeTypeVS]: ValueSet-mcode-dna-change-type-vs.html
 [ElixhauserAIDSVS]: ValueSet-elixhauser-aids-vs.html
 [ElixhauserAlcoholAbuseVS]: ValueSet-elixhauser-alcohol-abuse-vs.html
 [ElixhauserBloodLossAnemiaVS]: ValueSet-elixhauser-blood-loss-anemia-vs.html
@@ -112,10 +110,7 @@
 [ElixhauserUlcerVS]: ValueSet-elixhauser-ulcer-vs.html
 [ElixhauserValvularDiseaseVS]: ValueSet-elixhauser-valvular-disease-vs.html
 [ElixhauserWeightLossVS]: ValueSet-elixhauser-weight-loss-vs.html
-[GenomicMolecularConsequenceVS]: ValueSet-mcode-genomic-molecular-consequence-vs.html
 [GenomicSpecimenTypeVS]: ValueSet-mcode-genomic-specimen-type-vs.html
-[HGNCVS]: ValueSet-mcode-hgnc-vs.html
-[HGVSVS]: ValueSet-mcode-hgvs-vs.html
 [HistologyMorphologyBehaviorVS]: ValueSet-mcode-histology-morphology-behavior-vs.html
 [HypereosinophilicSyndromeDisorderVS]: ValueSet-mcode-hypereosinophilic-syndrome-disorder-vs.html
 [LateralityQualifierVS]: ValueSet-mcode-laterality-qualifier-vs.html
@@ -150,16 +145,10 @@
 [TumorSizeUnitsVS]: ValueSet-mcode-tumor-size-units-vs.html
 
 <!-- External Value Sets -->
-[ACMG_Clinical significance of genetic variation]:  http://loinc.org/vs/LL4034-6
 [ECOG_Performance status]:  http://loinc.org/vs/LL529-9
 [Genomic coordinate system]: http://loinc.org/vs/LL5323-2
 [Karnofsky performance status]:  http://loinc.org/vs/LL4986-7
 [Medication Clinical Drug (RxNorm)]: http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1010.4
-[MG_2_Genetic variant source]: http://loinc.org/vs/LL378-1
-[MG_4_Amino acid change type]: http://loinc.org/vs/LL380-7
-[MG_5_Genetic variant allelic state]: http://loinc.org/vs/LL381-5
-[Structural variant analysis method]: http://loinc.org/vs/LL4048-6
-[Variant Assess]: http://loinc.org/vs/LL1971-2
 
 <!-- mCODE Code Systems -->
 [LoincRequestedCS]: CodeSystem-loinc-requested-cs.html

@@ -289,9 +289,7 @@ Instance: genomics-report-jenny-m
 InstanceOf: GenomicsReport
 Description: "Extended example: example of gene panel report"
 * status = #final "final"
-// The category is autopopulated by SUSHI since both slices are required
-//* category[0] = DiagnosticService#LAB
-//* category[1] = DiagnosticService#GE
+* code = LNC#51969-4 "Genetic analysis report"
 * subject = Reference(cancer-patient-jenny-m)
 * effectiveDateTime = "2018-03-15"
 * issued = "2020-03-15T00:00:01+00:00"
@@ -308,13 +306,13 @@ Description: "Extended example: example showing which regions were included in t
 * effectiveDateTime = "2018-03-15"
 * issued = "2018-03-15T00:00:01+00:00"
 * component.code = LNC#48018-6 "Gene studied [ID]"
-* component[geneStudied].valueCodeableConcept.coding[+] = HGNC#1100 "BRCA1"
-* component[geneStudied].valueCodeableConcept.coding[+] = HGNC#1101 "BRCA2"
-* component[geneStudied].valueCodeableConcept.coding[+] = HGNC#1748 "CDH1"
-* component[geneStudied].valueCodeableConcept.coding[+] = HGNC#26144 "PALB2"
-* component[geneStudied].valueCodeableConcept.coding[+] = HGNC#9588 "PTEN"
-* component[geneStudied].valueCodeableConcept.coding[+] = HGNC#11389 "STK11"
-* component[geneStudied].valueCodeableConcept.coding[+] = HGNC#11998 "TP53"
+* component[gene-studied].valueCodeableConcept.coding[+] = HGNC#1100 "BRCA1"
+* component[gene-studied].valueCodeableConcept.coding[+] = HGNC#1101 "BRCA2"
+* component[gene-studied].valueCodeableConcept.coding[+] = HGNC#1748 "CDH1"
+* component[gene-studied].valueCodeableConcept.coding[+] = HGNC#26144 "PALB2"
+* component[gene-studied].valueCodeableConcept.coding[+] = HGNC#9588 "PTEN"
+* component[gene-studied].valueCodeableConcept.coding[+] = HGNC#11389 "STK11"
+* component[gene-studied].valueCodeableConcept.coding[+] = HGNC#11998 "TP53"
 
 Instance: genomic-variant-jenny-m
 InstanceOf: GenomicVariant
@@ -325,10 +323,10 @@ Description: "Extended example: example showing genomic variant found by breast 
 * effectiveDateTime = "2018-03-15"
 * valueCodeableConcept = LNC#LA9633-4 "Present"
 * method = LNC#LA26398-0 "Sequencing"
-* component[geneStudied].valueCodeableConcept = HGNC#HGNC:26144 "PALB2"
-* component[variationCode].valueCodeableConcept = CLINVAR#128144 "NM_024675.3(PALB2):c.3549C>A (p.Tyr1183Ter)"
-* component[genomicDNAChange].valueCodeableConcept = HGVS#NC_000016.10:g.23603471G>T
-* component[genomicSourceClass].valueCodeableConcept = LNC#LA6684-0 "Somatic"
+* component[gene-studied].valueCodeableConcept = HGNC#HGNC:26144 "PALB2"
+* component[variation-code].valueCodeableConcept = CLINVAR#128144 "NM_024675.3(PALB2):c.3549C>A (p.Tyr1183Ter)"
+* component[genomic-hgvs].valueCodeableConcept = HGVS#NC_000016.10:g.23603471G>T
+* component[genomic-source-class].valueCodeableConcept = LNC#LA6684-0 "Somatic"
 
 
 // Partial Mastectomy

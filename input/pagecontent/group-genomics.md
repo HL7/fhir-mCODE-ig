@@ -44,21 +44,8 @@ The mCODE example [`genomic-variant-fusion`](Observation-genomic-variant-fusion.
 
 ### Value Sets
 
-* [ACMG_Clinical significance of genetic variation] (external)
-* [ClinvarVS]
-* [DNAChangeTypeVS]
-* [Genomic coordinate system] (external)
-* [GenomicMolecularConsequenceVS]
 * [GenomicSpecimenTypeVS]
-* [HGNCVS]
-* [HGVSVS]
-* [MG_2_Genetic variant source] (external)
-* [MG_4_Amino acid change type] (external)
-* [MG_5_Genetic variant allelic state] (external)
-* [Structural variant analysis method] (external)
 * [TumorMarkerTestVS]
-* [Variant Assess] (external)
-
 
 ### Code Systems
 

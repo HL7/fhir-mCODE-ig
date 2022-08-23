@@ -55,11 +55,11 @@ Description:    "Genomic analysis summary report. The report may include one or 
 * result[region-studied] and result[variant] MS
 * status and category and code and subject and effective[x] and effectiveDateTime and issued and performer and result and specimen MS
 
-Profile:        TumorMarkerTest
-Parent:         USCoreObservationLab
-Id:             mcode-tumor-marker-test
-Title:          "Tumor Marker Test Profile"
-Description:    "The result of a tumor marker test. Tumor marker tests are generally used to guide cancer treatment decisions and monitor treatment, as well as to predict the chance of recovery and cancer recurrence."
+Profile: TumorMarkerTest
+Parent:  USCoreObservationLab
+Id:      mcode-tumor-marker-test
+Title:   "Tumor Marker Test Profile"
+Description: "The result of a tumor marker test. Tumor marker tests are generally used to guide cancer treatment decisions and monitor treatment, as well as to predict the chance of recovery and cancer recurrence."
 * ^extension[FMM].valueInteger = 4
 * subject 1..1
 * code from TumorMarkerTestVS (extensible)

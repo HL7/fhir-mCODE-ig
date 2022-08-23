@@ -131,7 +131,7 @@ Issues to consider further:
 5) I know we convinced ourselves otherwise, but we shouldn't forget the option of allowing a value set for Tumor.morphology (perhaps by slicing Tumor.morphology and fixing the first code.)
 
 Profile: MultifocalTumor
-Parent: Observation
+Parent: USCoreClinicalTest
 Id: mcode-multifocal-tumor
 Title: "Multifocal Tumor Observation Profile"
 Description: "Identifies multiple [Tumor](StructureDefinition-mcode-tumor.html) or [TumorSpecimen](StructureDefinition-mcode-tumor-specimen.html)-conforming resources as part of a multifocal tumor."

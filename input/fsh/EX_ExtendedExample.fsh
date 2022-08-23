@@ -336,7 +336,7 @@ InstanceOf: CancerRelatedSurgicalProcedure
 Description: "Extended example: example showing partial mastectomy surgical procedure"
 * extension[treatmentIntent].valueCodeableConcept = SCT#373808002 "Curative - procedure intent (qualifier value)"
 * status = #completed "completed"
-* code = SCT#64368001 "Partial mastectomy (procedure)"
+* code = SCT#64368001 "Excision of part of breast (procedure)"
 * subject = Reference(cancer-patient-jenny-m)
 * performedDateTime = "2018-04-01"
 * asserter = Reference(us-core-practitioner-owen-oncologist)

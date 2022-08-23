@@ -12,6 +12,15 @@
       "current": true
     },
     {
+      "version": "2.1.0",
+      "desc": "Pre-STU3 development version of mCODE",
+      "path": "http://build.fhir.org/ig/HL7/fhir-mCODE-ig",
+      "status": "ci-build",
+      "sequence": "STU 3",
+      "fhirversion": "4.0.1",
+      "current": false
+    },
+    {
       "version": "2.0.0",
       "date": "2021-11-20",
       "desc": "STU 2 Release",
@@ -34,7 +43,7 @@
     {
       "version": "1.0.1",
       "date": "2020-03-18",
-      "desc": "STU 1 Release",
+      "desc": "STU 1 Release with Technical Corrections",
       "path": "http://hl7.org/fhir/us/mcode/STU1",
       "status": "trial-use",
       "sequence": "STU 1",

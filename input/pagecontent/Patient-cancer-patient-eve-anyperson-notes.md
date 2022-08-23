@@ -5,7 +5,7 @@ Title: "cancer-patient-eve-anyperson"
 Description: "Example of Patient"
 Usage: #example
 * extension[0].extension[0].url = "ombCategory"
-* extension[=].extension[=].valueCoding = urn:oid:2.16.840.1.113883.6.238#1002-5 "American Indian or Alaska Native"
+* extension[=].extension[=].valueCoding = OmbRaceCat#1002-5 "American Indian or Alaska Native"
 * extension[=].extension[+].url = "text"
 * extension[=].extension[=].valueString = "Lakota and Crow"
 * extension[=].url = "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race"

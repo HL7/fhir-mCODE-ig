@@ -1,5 +1,5 @@
 Profile: ComorbiditiesParent
-Parent: Observation
+Parent: USCoreClinicalTest
 Id: mcode-comorbidities-parent
 Title: "Comorbidities Parent Abstract Profile"
 Description: "General structure for capturing comorbid conditions with respect to a primary ('index') condition. The specific set of comorbidities of interest in a given context are defined by slicing the components array. The same general approach can be applied to any comorbidity category checklist."

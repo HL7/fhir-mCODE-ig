@@ -61,7 +61,7 @@ Description: "Allowed techniques for photon beam modality"
 * SCT#1156530009 "Volumetric Modulated Arc Therapy (procedure)"
 * SCT#1162782007 "Three dimensional external beam radiation therapy (procedure)"
 * SCT#1156526006 "Two dimensional external beam radiation therapy (procedure)"
-* SCT#168524008 "Radiotherapy - intraoperative control (procedure)"
+* SCT#168524008 "Radiotherapy - intraoperative control (procedure)"
 
 ValueSet: TeleradiotherapyElectronBeamTechniqueVS
 Id: mcode-teleradiotherapy-electron-beam-technique-vs
@@ -71,7 +71,7 @@ Description: "Allowed techniques for electron beam modality"
 * ^extension[FMM].valueInteger = 3
 * SCT#1162782007 "Three dimensional external beam radiation therapy (procedure)"
 * SCT#1156526006 "Two dimensional external beam radiation therapy (procedure)"
-* SCT#168524008 "Radiotherapy - intraoperative control (procedure)"
+* SCT#168524008 "Radiotherapy - intraoperative control (procedure)"
 
 ValueSet: TeleradiotherapyNeutronTechniqueVS
 Id: mcode-teleradiotherapy-neutron-beam-technique-vs
@@ -163,7 +163,7 @@ Description: "Allowed techniques for brachytherapy modality High Dose Rate"
 * SCT#113120007 "Interstitial brachytherapy (procedure)"
 * SCT#1156383000 "Intravascular brachytherapy (procedure)"
 * SCT#384691004 "Intraluminal brachytherapy (procedure)"
-* SCT#168524008 "Radiotherapy - intraoperative control (procedure)"
+* SCT#168524008 "Radiotherapy - intraoperative control (procedure)"
 * SCT#14473006 "Surface brachytherapy (procedure)"
 
 ValueSet: BrachytherapyHighDoseRateElectronicTechniqueVS
@@ -176,7 +176,7 @@ Description: "Allowed techniques for brachytherapy modality High Dose Rate elect
 * SCT#1156382005 "Intensity modulated intracavitary brachytherapy (procedure)"
 * SCT#113120007 "Interstitial brachytherapy (procedure)"
 * SCT#384691004 "Intraluminal brachytherapy (procedure)"
-* SCT#168524008 "Radiotherapy - intraoperative control (procedure)"
+* SCT#168524008 "Radiotherapy - intraoperative control (procedure)"
 * SCT#14473006 "Surface brachytherapy (procedure)"
 
 ValueSet: BrachytherapyRadiopharmaceuticalTechniqueVS

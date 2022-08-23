@@ -1,7 +1,7 @@
 ValueSet:   GenomicSpecimenTypeVS
 Id: mcode-genomic-specimen-type-vs
 Title: "Genomic Specimen Type Value Set"
-Description:    "The type of specimen analyzed in a genomic test. The values include the subset of codes in the HL7 Specimen Type code system (https://terminology.hl7.org/2.1.0/CodeSystem-v2-0487.html) representing body sites and body fluids likely to be used in genomic testing.  The most specific term available should be used."
+Description:    "The type of specimen analyzed in a genomic test. The values include the subset of codes in the HL7 Specimen Type code system (https://terminology.hl7.org/CodeSystem-v2-0487.html) representing body sites and body fluids likely to be used in genomic testing.  The most specific term available should be used."
 * ^extension[FMM].valueInteger = 1
 * SPTY#AMN       "Amniotic fluid"
 * SPTY#BIFL      "Bile Fluid"

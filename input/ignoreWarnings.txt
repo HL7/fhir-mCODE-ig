@@ -1,14 +1,5 @@
 == Suppressed Messages ==
 
-# SUPPRESS WARNINGS ABOUT LOINC LIST ELEMENTS THAT ARE KNOWN TO EXIST.
-The valueSet reference http://loinc.org/vs/LL5323-2 on element Observation.component.value[x] could not be resolved
-The valueSet reference http://loinc.org/vs/LL380-7 on element Observation.component.value[x] could not be resolved
-The valueSet reference http://loinc.org/vs/LL378-1 on element Observation.component.value[x] could not be resolved
-The valueSet reference http://loinc.org/vs/LL4986-7 on element Observation.interpretation could not be resolved
-The valueSet reference http://loinc.org/vs/LL529-9 on element Observation.interpretation could not be resolved
-The valueSet reference http://loinc.org/vs/LL4048-6 on element Observation.method could not be resolved
-The valueSet reference http://loinc.org/vs/LL1971-2 on element Observation.value[x] could not be resolved
-
 # SUPPRESS US CORE OBSERVATION MESSAGES. This was approved by Cross-Group Projects Work Group on 1/28/2021 Floyd Eisenberg/Brett Marquard 28-0-1. See https://jira.hl7.org/browse/FHIR-30707
 WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-comorbidities-elixhauser').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
 WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tumor-size').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
@@ -16,12 +7,16 @@ WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/mcode/Structure
 WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-regional-nodes-category').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
 WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-primary-tumor-category').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
 WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-distant-metastases-category').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
-WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-karnofsky-performance-status').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
-WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-ecog-performance-status').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
 WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-comorbidities-parent').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
 WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-related-comorbidities-elixhauser').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
-WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-disease-status').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
 WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/comorbidities-elixhauser').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
+
+# SNOMED CONCEPTS ACTUALLY VALID IN SNOMED 6/30/2022 EDITION, BUT FHIR TERMINOLOGY SERVER NOT UP TO DATE
+ERROR: ValueSet.where(id = 'mcode-cancer-stage-group-vs'): Error from server: The Snomed Concept 1222592004 was not known
+ERROR: ValueSet.where(id = 'mcode-tnm-distant-metastases-category-vs'): Error from server: The Snomed Concept 1222587001 was not known
+ERROR: ValueSet.where(id = 'mcode-tnm-primary-tumor-category-vs'): Error from server: The Snomed Concept 1222585009 was not known
+ERROR: ValueSet.where(id = 'mcode-tnm-regional-nodes-category-vs'): Error from server: The Snomed Concept 1222588006 was not known
+
 
 # SUPPRESS MESSAGES ABOUT BEING UNABLE TO DETERMINE WHETHER CODES ARE IN VALUE SETS BECAUSE THE CODE SYSTEM IS UNKNOWN
 [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/mcode/ValueSet/mcode-tnm-primary-tumor-category-vs because the value set or code system is not known to the validator]
@@ -54,16 +49,29 @@ WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/mcode/Structure
 [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/mcode/ValueSet/mcode-tnm-regional-nodes-category-vs because the value set or a code system it depends on is not known to the validator, Code System URI 'http://cancerstaging.org' is unknown so the code cannot be validated]
 [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-stage-group-vs because the value set or a code system it depends on is not known to the validator, Code System URI 'http://cancerstaging.org' is unknown so the code cannot be validated]
 
-# SUPPRESS WARNINGS ABOUT BUNDLE ENTRY MATCHING MULTIPLE PROFILES
-Found multiple matching profiles for Condition/primary-cancer-condition-jenny-m among choices: http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-primary-cancer-condition, http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-secondary-cancer-condition
-WARNING: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[2].resource.ofType(MedicationRequest).reasonReference[0]: Found multiple matching profiles for Condition/primary-cancer-condition-jenny-m among choices: http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-secondary-cancer-condition, http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-primary-cancer-condition
-WARNING: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[3].resource.ofType(Observation).focus[0]: Found multiple matching profiles for Condition/primary-cancer-condition-jenny-m among choices: http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-secondary-cancer-condition, http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-primary-cancer-condition
-WARNING: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[6].resource.ofType(Procedure).reasonReference[0]: Found multiple matching profiles for Condition/primary-cancer-condition-jenny-m among choices: http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-secondary-cancer-condition, http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-primary-cancer-condition
-WARNING: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[19].resource.ofType(MedicationRequest).reasonReference[0]: Found multiple matching profiles for Condition/primary-cancer-condition-jenny-m among choices: http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-secondary-cancer-condition, http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-primary-cancer-condition
-WARNING: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[20].resource.ofType(MedicationRequest).reasonReference[0]: Found multiple matching profiles for Condition/primary-cancer-condition-jenny-m among choices: http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-secondary-cancer-condition, http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-primary-cancer-condition
-WARNING: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[21].resource.ofType(MedicationRequest).reasonReference[0]: Found multiple matching profiles for Condition/primary-cancer-condition-jenny-m among choices: http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-secondary-cancer-condition, http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-primary-cancer-condition
-
-# SUPPRESS INFORMATIONs ABOUT BUNDLE ENTRY MATCHING NOT MATCHING ANY KNOWN SLICE
+# SUPPRESS WARNINGS ABOUT BUNDLE ENTRY NOT MATCHING ANY KNOWN SLICE OR MATCHING MULTIPLE PROFILES
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[1]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[2]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[3]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[4]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[5]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[6]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[7]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[8]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[9]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[10]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[11]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[12]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[13]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[14]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[15]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[16]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[17]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[18]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[19]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[20]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[21]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[22]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle
 INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[23]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle
 INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[24]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle
 INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[25]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle
@@ -78,9 +86,21 @@ INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[33]: This element
 INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[34]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle
 INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[35]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle
 INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[36]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[37]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle
 INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[38]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle
 INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[39]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle
 INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[40]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[0].resource.extension[0].extension[0].value.ofType(Coding): Code System URI 'urn:oid:2.16.840.1.113883.6.238' is unknown so the code cannot be validated
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[0].resource.extension[1].extension[0].value.ofType(Coding): Code System URI 'urn:oid:2.16.840.1.113883.6.238' is unknown so the code cannot be validated
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[0].resource.ofType(Patient).extension[0].extension[0].value.ofType(Coding): Code System URI 'urn:oid:2.16.840.1.113883.6.238' is unknown so the code cannot be validated
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[0].resource.ofType(Patient).extension[1].extension[0].value.ofType(Coding): Code System URI 'urn:oid:2.16.840.1.113883.6.238' is unknown so the code cannot be validated
+WARNING: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[2].resource.ofType(MedicationRequest).reasonReference[0]: Found multiple matching profiles for Condition/primary-cancer-condition-jenny-m among choices: http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-primary-cancer-condition, http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-secondary-cancer-condition
+WARNING: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[3].resource.ofType(Observation).focus[0]: Found multiple matching profiles for Condition/primary-cancer-condition-jenny-m among choices: http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-primary-cancer-condition, http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-secondary-cancer-condition
+WARNING: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[6].resource.ofType(Procedure).reasonReference[0]: Found multiple matching profiles for Condition/primary-cancer-condition-jenny-m among choices: http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-primary-cancer-condition, http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-secondary-cancer-condition
+ERROR: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[7].resource.ofType(Procedure).code.coding[0]: Unable to find code 1217123003 in http://snomed.info/sct (version http://snomed.info/sct/900000000000207008/version/20220331); The code "1217123003" is not valid in the system http://snomed.info/sct; The code provided (http://snomed.info/sct#1217123003) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4) for 'http://snomed.info/sct#1217123003'
+WARNING: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[19].resource.ofType(MedicationRequest).reasonReference[0]: Found multiple matching profiles for Condition/primary-cancer-condition-jenny-m among choices: http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-primary-cancer-condition, http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-secondary-cancer-condition
+WARNING: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[20].resource.ofType(MedicationRequest).reasonReference[0]: Found multiple matching profiles for Condition/primary-cancer-condition-jenny-m among choices: http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-primary-cancer-condition, http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-secondary-cancer-condition
+WARNING: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[21].resource.ofType(MedicationRequest).reasonReference[0]: Found multiple matching profiles for Condition/primary-cancer-condition-jenny-m among choices: http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-primary-cancer-condition, http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-secondary-cancer-condition
 INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[32].resource.ofType(DiagnosticReport).category[1]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-lab
 INFORMATION: DiagnosticReport/us-core-diagnosticreport-lab-jenny-m: DiagnosticReport.category[1]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-lab
 

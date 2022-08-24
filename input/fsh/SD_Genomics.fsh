@@ -62,7 +62,10 @@ Title:   "Tumor Marker Test Profile"
 Description: "The result of a tumor marker test. Tumor marker tests are generally used to guide cancer treatment decisions and monitor treatment, as well as to predict the chance of recovery and cancer recurrence."
 * ^extension[FMM].valueInteger = 4
 * subject 1..1
+* value[x] 1..1
 * code from TumorMarkerTestVS (extensible)
+// Establishing a maximum binding assures that a TumorMarkerTest cannot be confused with a TumorSize, GenomicRegionStudied, or GenomicVariant profile when instances are in the same bundle. MK 8/24/2022
+* code ^binding.extension[http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet].valueCanonical = Canonical(TumorMarkerTestMaxVS)
 * subject only Reference(CancerPatient)
 * subject ^definition = "Patient whose tumor marker test is recorded."
 * effective[x] only dateTime or Period

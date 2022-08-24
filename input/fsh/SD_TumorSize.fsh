@@ -10,13 +10,11 @@ Description:  "Records the dimensions of a tumor"
 * subject ^definition = "The patient whose tumor was measured. SHALL be a `Patient` resource conforming to `CancerPatient`."
 * subject 1..1
 * subject only Reference(CancerPatient)
-
 * focus 0..1
 * focus only Reference(Tumor)
 * focus ^short = "Identifies a tumor that has NOT been removed from the body"
 * focus ^definition = "Reference to a BodyStructure resource conforming to Tumor."
 * focus ^comment = "Use **only** when the tumor **has not** been removed from the body. If the tumor has been removed, use `specimen` instead and leave `focus` empty."
-
 * specimen only Reference(TumorSpecimen)
 * specimen ^short = "Identifies a tumor that has been removed from the body"
 * specimen ^definition = "Reference to a Specimen resource conforming to TumorSpecimen."

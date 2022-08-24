@@ -19,7 +19,6 @@ InstanceOf: TumorSize
 Description: "Example of a resource conforming to the tumor size profile."
 * status = #final
 * method = SCT#787377000 "Gross examination and sampling of tissue specimen (procedure)"
-* category = ObsCat#laboratory
 * subject = Reference(Patient/cancer-patient-eve-anyperson)
 * focus = Reference(BodyStructure/tumor-lobular-carcinoma-left-breast)
 * component[tumorLongestDimension].valueQuantity = 1.2 'cm' "cm"

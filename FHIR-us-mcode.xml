@@ -27,6 +27,7 @@
 <artifact deprecated="true" id="StructureDefinition/mcode-brachytherapy-treatment-phase" key="StructureDefinition-mcode-brachytherapy-treatment-phase" name="Brachytherapy Treatment Phase"/>
 <artifact id="ValueSet/mcode-cancer-body-location-vs" key="cancer-body-location-value-set" name="Cancer Body Location Value Set"/>
 <artifact deprecated="true" id="Profile/mcode-cancer-condition-parent" key="cancer-condition-parent" name="Cancer Condition Parent"/>
+<artifact id="StructureDefinition/mcode-cancer-condition" key="StructureDefinition-mcode-cancer-condition" name="Cancer Condition Profile"/>
 <artifact id="StructureDefinition/mcode-cancer-disease-status-evidence-type" key="StructureDefinition-mcode-cancer-disease-status-evidence-type" name="Cancer Disease Status Evidence Type Extension"/>
 <artifact id="ValueSet/mcode-cancer-disease-status-evidence-type-vs" key="cancer-disease-status-evidence-type-value-set" name="Cancer Disease Status Evidence Type Value Set"/>
 <artifact id="StructureDefinition/mcode-cancer-disease-status" key="cancer-disease-status" name="Cancer Disease Status Profile"/>
@@ -129,6 +130,7 @@
 <artifact id="ValueSet/mcode-teleradiotherapy-photon-beam-technique-vs" key="ValueSet-mcode-teleradiotherapy-photon-beam-technique-vs" name="Photon Beam Technique Value Set"/>
 <artifact id="ValueSet/mcode-present-absent" key="ValueSet-mcode-present-absent" name="Present Absent Value Set"/>
 <artifact deprecated="true" id="ValueSet/mcode-present-absent-unknown" key="ValueSet-mcode-present-absent-unknown" name="Present-Absent-Unknown"/>
+<artifact id="ValueSet/mcode-primary-cancer-disorder-max-vs" key="ValueSet-mcode-primary-cancer-disorder-max-vs" name="Primary Cancer Condition Maximum Value Set"/>
 <artifact id="StructureDefinition/mcode-primary-cancer-condition" key="primary-cancer-condition" name="Primary Cancer Condition Profile"/>
 <artifact id="ValueSet/mcode-primary-cancer-disorder-vs" key="ValueSet-mcode-primary-cancer-disorder-vs" name="Primary Cancer Disorder Value Set"/>
 <artifact id="ValueSet/mcode-primary-malignant-neoplasm-disorder-vs" key="ValueSet-mcode-primary-malignant-neoplasm-disorder-vs" name="Primary Malignant Neoplasm Disorder Value Set"/>
@@ -157,10 +159,11 @@
 <artifact id="ValueSet/mcode-radiotherapy-volume-type-vs" key="ValueSet-mcode-radiotherapy-volume-type-vs" name="Radiotherapy Volume Type Value Set"/>
 <artifact id="StructureDefinition/mcode-related-condition" key="StructureDefinition-mcode-related-condition" name="Related Condition Extension"/>
 <artifact deprecated="true" id="Extension/mcode-related-primary-cancer-condition-extension" key="related-primary-cancer-condition-extension" name="Related Primary Cancer Condition Extension"/>
-<artifact id="CodeSystem/loinc-requested-cs" key="CodeSystem-loinc-requested-cs" name="Requested LOINC Codes Code System"/>
+<artifact id="CodeSystem/comorbid-condition-cs" key="CodeSystem-loinc-requested-cs" name="Requested LOINC Codes Code System"/>
 <artifact id="CodeSystem/snomed-requested-cs" key="CodeSystem-snomed-requested-cs" name="Requested SNOMED Codes Code System"/>
 <artifact id="SearchParameter/Patient-id" key="SearchParameter-Patient-id" name="Search by _id in Patients with multipleOr"/>
 <artifact id="SearchParameter/Condition-code" key="SearchParameter-Condition-code" name="Search by code:in in Conditions"/>
+<artifact id="ValueSet/mcode-secondary-cancer-disorder-max-vs" key="ValueSet-mcode-secondary-cancer-disorder-max-vs" name="Secondary Cancer Condition Maximum Value Set"/>
 <artifact id="StructureDefinition/mcode-secondary-cancer-condition" key="secondary-cancer-condition" name="Secondary Cancer Condition Profile"/>
 <artifact id="ValueSet/mcode-secondary-cancer-disorder-vs" key="secondary-cancer-disorder-value-set" name="Secondary Cancer Disorder Value Set"/>
 <artifact id="ValueSet/mcode-hypereosinophilic-syndrome-disorder-vs" key="ValueSet-mcode-hypereosinophilic-syndrome-disorder-vs" name="Specific Diagnosis of Cancer Value Set"/>
@@ -193,6 +196,7 @@
 <artifact id="StructureDefinition/mcode-treatment-termination-reason" key="StructureDefinition-mcode-treatment-termination-reason" name="Treatment Termination Reason Extension"/>
 <artifact id="ValueSet/mcode-treatment-termination-reason-vs" key="treatment-termination-reason-value-set" name="Treatment Termination Reason Value Set"/>
 <artifact deprecated="true" id="Profile/mcode-tumor-marker" key="tumor-marker" name="Tumor Marker"/>
+<artifact id="ValueSet/mcode-tumor-marker-test-max-vs" key="ValueSet-mcode-tumor-marker-test-max-vs" name="Tumor Marker Test Maximum Value Set"/>
 <artifact id="StructureDefinition/mcode-tumor-marker-test" key="StructureDefinition-mcode-tumor-marker-test" name="Tumor Marker Test Profile"/>
 <artifact id="ValueSet/mcode-tumor-marker-test-vs" key="tumor-marker-test-value-set" name="Tumor Marker Test Value Set"/>
 <artifact id="StructureDefinition/mcode-tumor" key="StructureDefinition-mcode-tumor" name="Tumor Profile"/>

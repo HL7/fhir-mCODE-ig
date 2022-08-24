@@ -286,6 +286,21 @@ Description:    "Types of primary malignant neoplastic disease, coded in SNOMED 
 * include codes from valueset BenignUncertainNeoplasmBrainCNSDisorderVS
 * include codes from valueset CytologicEvidenceOfMalignancyVS
 
+ValueSet: PrimaryCancerDisorderMaxVS
+Id: mcode-primary-cancer-disorder-max-vs
+Title: "Primary Cancer Condition Maximum Value Set"
+Description: "Codes for primary cancer conditions that are excluded from the set of extensible codes."
+* include codes from system ICD10CM
+* include codes from system SCT
+* exclude codes from valueset SecondaryCancerDisorderVS
+
+ValueSet: SecondaryCancerDisorderMaxVS
+Id: mcode-secondary-cancer-disorder-max-vs
+Title: "Secondary Cancer Condition Maximum Value Set"
+Description: "Codes for secondary cancer conditions that are excluded from the set of extensible codes."
+* include codes from system ICD10CM
+* include codes from system SCT
+* exclude codes from valueset PrimaryCancerDisorderVS
 
 ValueSet: CancerDisorderVS
 Id: mcode-cancer-disorder-vs

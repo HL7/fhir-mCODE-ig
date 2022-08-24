@@ -362,6 +362,7 @@ Instance: us-core-diagnosticreport-lab-jenny-m
 InstanceOf: USCoreDiagnosticReportLab
 Description: "Extended example: example of pathology findings represented as a DiagnosticReport resource."
 * status = #final "final"
+* category[LaboratorySlice] = ObsCat#LAB
 * category[1] = DiagnosticService#SP "Surgical Pathology"  // does not match any known slice in US Core Diagnostic Report -- but that's ok
 * code = LNC#22637-3 "Pathology report final diagnosis Narrative"
 * subject = Reference(cancer-patient-jenny-m)
@@ -417,7 +418,6 @@ InstanceOf:  TumorSize
 Description: "Extended example: example showing tumor size"
 * status = #final "final"
 * code = LNC#21889-1 "Size Tumor"
-* category = ObsCat#laboratory
 * method = LNC#24419-4 "Pathology report gross observation"
 * subject = Reference(cancer-patient-jenny-m)
 * effectiveDateTime = "2018-04-01T00:00:00Z"

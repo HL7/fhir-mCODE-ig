@@ -12,127 +12,140 @@ Description: "Example of a Group identifying in-scope patients"
 Instance: mcode-patient-bundle-jenny-m
 InstanceOf: MCODEPatientBundle
 Description: "Extended example as a mCODE Patient Bundle"
-// Named slices, required
-* entry[+].resource = cancer-patient-jenny-m
+* entry[0].resource = cancer-patient-jenny-m
 * entry[=].fullUrl = "http://example.org/fhir/Patient/cancer-patient-jenny-m"
-//* entry[=].resource.meta.profile[0] = Canonical(CancerPatient)
 * entry[+].resource = primary-cancer-condition-jenny-m
 * entry[=].fullUrl = "http://example.org/fhir/Condition/primary-cancer-condition-jenny-m"
-//* entry[=].resource.meta.profile[0] = Canonical(PrimaryCancerCondition)
 * entry[+].resource = cancer-related-medication-request-cyclophosphamide-jenny-m
 * entry[=].fullUrl = "http://example.org/fhir/MedicationRequest/cancer-related-medication-request-cyclophosphamide-jenny-m"
-// * entry[=].resource.meta.profile[0]profile[0] = Canonical(CancerRelatedMedicationRequest)
-* entry[+].resource = cancer-disease-status-jenny-m
-* entry[=].fullUrl = "http://example.org/fhir/Observation/cancer-disease-status-jenny-m"
-// * entry[=].resource.meta.profile[0]profile[0] = Canonical(CancerDiseaseStatus)
-* entry[+].resource = genomic-variant-jenny-m
-* entry[=].fullUrl = "http://example.org/fhir/Observation/genomic-variant-jenny-m"
-// * entry[=].resource.meta.profile[0]profile[0] = Canonical(GenomicVariant)
-* entry[+].resource = genomics-report-jenny-m
-* entry[=].fullUrl = "http://example.org/fhir/DiagnosticReport/genomics-report-jenny-m"
-// * entry[=].resource.meta.profile[0]profile[0] = Canonical(GenomicsReport)
-* entry[+].resource = cancer-related-surgical-procedure-jenny-m
-* entry[=].fullUrl = "http://example.org/fhir/Procedure/cancer-related-surgical-procedure-jenny-m"
-// * entry[=].resource.meta.profile[0]profile[0] = Canonical(CancerRelatedSurgicalProcedure)
-* entry[+].resource = radiotherapy-treatment-summary-chest-wall-jenny-m
-* entry[=].fullUrl = "http://example.org/fhir/Procedure/radiotherapy-treatment-summary-chest-wall-jenny-m"
-// * entry[=].resource.meta.profile[0]profile[0] = Canonical(RadiotherapyCourseSummary)
-* entry[+].resource = tnm-clinical-stage-group-jenny-m
-* entry[=].fullUrl = "http://example.org/fhir/Observation/tnm-clinical-stage-group-jenny-m"
-// * entry[=].resource.meta.profile[0]profile[0] = Canonical(CancerStageGroup)
-* entry[+].resource = tnm-clinical-primary-tumor-category-jenny-m
-* entry[=].fullUrl = "http://example.org/fhir/Observation/tnm-clinical-primary-tumor-category-jenny-m"
-// * entry[=].resource.meta.profile[0]profile[0] = Canonical(TNMPrimaryTumorCategory)
-* entry[+].resource = tnm-clinical-regional-nodes-category-jenny-m
-* entry[=].fullUrl = "http://example.org/fhir/Observation/tnm-clinical-regional-nodes-category-jenny-m"
-// * entry[=].resource.meta.profile[0]profile[0] = Canonical(TNMRegionalNodesCategory)
-* entry[+].resource = tnm-clinical-distant-metastases-category-jenny-m
-* entry[=].fullUrl = "http://example.org/fhir/Observation/tnm-clinical-distant-metastases-category-jenny-m"
-// * entry[=].resource.meta.profile[0]profile[0] = Canonical(TNMDistantMetastasesCategory)
-* entry[+].resource = genomic-specimen-left-breast-jenny-m
-* entry[=].fullUrl = "http://example.org/fhir/Specimen/genomic-specimen-left-breast-jenny-m"
-// * entry[=].resource.meta.profile[0]profile[0] = Canonical(GenomicSpecimen)
-* entry[+].resource = genomic-region-studied-jenny-m
-* entry[=].fullUrl = "http://example.org/fhir/Observation/genomic-region-studied-jenny-m"
-// * entry[=].resource.meta.profile[0]profile[0] = Canonical(GenomicRegionStudied)
-* entry[+].resource = ecog-performance-status-jenny-m
-* entry[=].fullUrl = "http://example.org/fhir/Observation/ecog-performance-status-jenny-m"
-// * entry[=].resource.meta.profile[0]profile[0] = Canonical(ECOGPerformanceStatus)
-* entry[+].resource = tumor-marker-test-er-jenny-m
-* entry[=].fullUrl = "http://example.org/fhir/Observation/tumor-marker-test-er-jenny-m"
-// * entry[=].resource.meta.profile[0]profile[0] = Canonical(TumorMarkerTest)
-* entry[+].resource = tumor-marker-test-pr-jenny-m
-* entry[=].fullUrl = "http://example.org/fhir/Observation/tumor-marker-test-pr-jenny-m"
-// * entry[=].resource.meta.profile[0]profile[0] = Canonical(TumorMarkerTest)
-* entry[+].resource = tumor-marker-test-her2-jenny-m
-* entry[=].fullUrl = "http://example.org/fhir/Observation/tumor-marker-test-her2-jenny-m"
-// * entry[=].resource.meta.profile[0]profile[0] = Canonical(TumorMarkerTest)
-* entry[+].resource = tumor-marker-test-oncotype-dx-jenny-m
-* entry[=].fullUrl = "http://example.org/fhir/Observation/tumor-marker-test-oncotype-dx-jenny-m"
-// * entry[=].resource.meta.profile[0]profile[0] = Canonical(TumorMarkerTest)
 * entry[+].resource = cancer-related-medication-request-doxorubicin-jenny-m
 * entry[=].fullUrl = "http://example.org/fhir/MedicationRequest/cancer-related-medication-request-doxorubicin-jenny-m"
-// * entry[=].resource.meta.profile[0]profile[0] = Canonical(CancerRelatedMedicationRequest)
 * entry[+].resource = cancer-related-medication-request-paclitaxel-jenny-m
 * entry[=].fullUrl = "http://example.org/fhir/MedicationRequest/cancer-related-medication-request-paclitaxel-jenny-m"
-// * entry[=].resource.meta.profile[0]profile[0] = Canonical(CancerRelatedMedicationRequest)
 * entry[+].resource = cancer-related-medication-request-anastrozole-jenny-m
 * entry[=].fullUrl = "http://example.org/fhir/MedicationRequest/cancer-related-medication-request-anastrozole-jenny-m"
-// * entry[=].resource.meta.profile[0]profile[0] = Canonical(CancerRelatedMedicationRequest)
-* entry[+].resource = cancer-related-mcode-comorbidities-elixhauser-jenny-m
-* entry[=].fullUrl = "http://example.org/fhir/Observation/cancer-related-mcode-comorbidities-elixhauser-jenny-m"
-// * entry[=].resource.meta.profile[0]profile[0] = Canonical(ComorbiditiesElixhauser)
-* entry[+].resource = bodyweight-jenny-m-2018-03-16
-* entry[=].fullUrl = "http://example.org/fhir/Observation/bodyweight-jenny-m-2018-03-16"
-// * entry[=].resource.meta.profile[0]profile[0] = "http://hl7.org/fhir/us/core/StructureDefinition/us-core-body-weight"
-* entry[+].resource = us-core-observation-lab-neutrophils-jenny-m
-* entry[=].fullUrl = "http://example.org/fhir/Observation/us-core-observation-lab-neutrophils-jenny-m"
-// * entry[=].resource.meta.profile[0]profile[0] = "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
-* entry[+].resource = us-core-organization-physician-services-inc
-* entry[=].fullUrl = "http://example.org/fhir/Organization/us-core-organization-physician-services-inc"
-// * entry[=].resource.meta.profile[0]profile[0] = "http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization"
-* entry[+].resource = us-core-smokingstatus-jenny-m
-* entry[=].fullUrl = "http://example.org/fhir/Observation/us-core-smokingstatus-jenny-m"
-// * entry[=].resource.meta.profile[0]profile[0] = "http://hl7.org/fhir/us/core/StructureDefinition/us-core-smokingstatus"
+* entry[+].resource = cancer-disease-status-jenny-m
+* entry[=].fullUrl = "http://example.org/fhir/Observation/cancer-disease-status-jenny-m"
+* entry[+].resource = genomic-variant-jenny-m
+* entry[=].fullUrl = "http://example.org/fhir/Observation/genomic-variant-jenny-m"
+* entry[+].resource = genomics-report-jenny-m
+* entry[=].fullUrl = "http://example.org/fhir/DiagnosticReport/genomics-report-jenny-m"
+* entry[+].resource = cancer-related-surgical-procedure-jenny-m
+* entry[=].fullUrl = "http://example.org/fhir/Procedure/cancer-related-surgical-procedure-jenny-m"
+//* entry[+].resource = cancer-related-mcode-comorbidities-elixhauser-jenny-m
+//* entry[=].fullUrl = "http://example.org/fhir/Observation/cancer-related-mcode-comorbidities-elixhauser-jenny-m"
+* entry[+].resource = radiotherapy-treatment-summary-chest-wall-jenny-m
+* entry[=].fullUrl = "http://example.org/fhir/Procedure/radiotherapy-treatment-summary-chest-wall-jenny-m"
+* entry[+].resource = tnm-clinical-stage-group-jenny-m
+* entry[=].fullUrl = "http://example.org/fhir/Observation/tnm-clinical-stage-group-jenny-m"
+* entry[+].resource = tnm-clinical-primary-tumor-category-jenny-m  //slice 12
+* entry[=].fullUrl = "http://example.org/fhir/Observation/tnm-clinical-primary-tumor-category-jenny-m"
+* entry[+].resource = tnm-clinical-regional-nodes-category-jenny-m
+* entry[=].fullUrl = "http://example.org/fhir/Observation/tnm-clinical-regional-nodes-category-jenny-m"
+* entry[+].resource = tnm-clinical-distant-metastases-category-jenny-m
+* entry[=].fullUrl = "http://example.org/fhir/Observation/tnm-clinical-distant-metastases-category-jenny-m"
+* entry[+].resource = genomic-specimen-left-breast-jenny-m
+* entry[=].fullUrl = "http://example.org/fhir/Specimen/genomic-specimen-left-breast-jenny-m"
+* entry[+].resource = genomic-region-studied-jenny-m
+* entry[=].fullUrl = "http://example.org/fhir/Observation/genomic-region-studied-jenny-m"
+* entry[+].resource = ecog-performance-status-jenny-m
+* entry[=].fullUrl = "http://example.org/fhir/Observation/ecog-performance-status-jenny-m"
+* entry[+].resource = tumor-marker-test-er-jenny-m
+* entry[=].fullUrl = "http://example.org/fhir/Observation/tumor-marker-test-er-jenny-m"
+* entry[+].resource = tumor-marker-test-pr-jenny-m
+* entry[=].fullUrl = "http://example.org/fhir/Observation/tumor-marker-test-pr-jenny-m"
+* entry[+].resource = tumor-marker-test-her2-jenny-m
+* entry[=].fullUrl = "http://example.org/fhir/Observation/tumor-marker-test-her2-jenny-m"
+* entry[+].resource = tumor-marker-test-oncotype-dx-jenny-m
+* entry[=].fullUrl = "http://example.org/fhir/Observation/tumor-marker-test-oncotype-dx-jenny-m"
+* entry[+].resource = tumor-size-jenny-m  // slice 22
+* entry[=].fullUrl = "http://example.org/fhir/Observation/tumor-size-jenny-m"
+// Other optional entries like vital signs, providers
+// Note: If named slices are used, then the first unnamed slice entry must be numbered
 * entry[+].resource = us-core-procedure-biopsy-jenny-m
 * entry[=].fullUrl = "http://example.org/fhir/Observation/us-core-procedure-biopsy-jenny-m"
-// * entry[=].resource.meta.profile[0]profile[0] = "http://hl7.org/fhir/us/core/StructureDefinition/us-core-procedure"
+* entry[+].resource = bodyweight-jenny-m-2018-03-16
+* entry[=].fullUrl = "http://example.org/fhir/Observation/bodyweight-jenny-m-2018-03-16"
+* entry[+].resource = us-core-observation-lab-neutrophils-jenny-m
+* entry[=].fullUrl = "http://example.org/fhir/Observation/us-core-observation-lab-neutrophils-jenny-m"
+* entry[+].resource = us-core-organization-physician-services-inc
+* entry[=].fullUrl = "http://example.org/fhir/Organization/us-core-organization-physician-services-inc"
+* entry[+].resource = us-core-smokingstatus-jenny-m
+* entry[=].fullUrl = "http://example.org/fhir/Observation/us-core-smokingstatus-jenny-m"
 * entry[+].resource = us-core-procedure-mammogram-jenny-m
 * entry[=].fullUrl = "http://example.org/fhir/Observation/us-core-procedure-mammogram-jenny-m"
-// * entry[=].resource.meta.profile[0]profile[0] = "http://hl7.org/fhir/us/core/StructureDefinition/us-core-procedure"
 * entry[+].resource = family-member-history-aunt-jenny-m
 * entry[=].fullUrl = "http://example.org/fhir/FamilyMemberHistory/family-member-history-aunt-jenny-m"
-// * entry[=].resource.meta.profile[0]profile[0] = "http://hl7.org/fhir/StructureDefinition/FamilyMemberHistory"
 * entry[+].resource = us-core-procedure-mammogram-jenny-m
 * entry[=].fullUrl = "http://example.org/fhir/Procedure/us-core-procedure-mammogram-jenny-m"
-// * entry[=].resource.meta.profile[0]profile[0] = "http://hl7.org/fhir/us/core/StructureDefinition/us-core-procedure"
 * entry[+].resource = family-member-history-uncle-jenny-m
 * entry[=].fullUrl = "http://example.org/fhir/FamilyMemberHistory/family-member-history-uncle-jenny-m"
-// * entry[=].resource.meta.profile[0]profile[0] = "http://hl7.org/fhir/StructureDefinition/FamilyMemberHistory"
-* entry[+].resource = us-core-diagnosticreport-lab-jenny-m
+* entry[+].resource = us-core-diagnosticreport-lab-jenny-m  // slice 32
 * entry[=].fullUrl = "http://example.org/fhir/DiagnosticReport/us-core-diagnosticreport-lab-jenny-m"
-// * entry[=].resource.meta.profile[0]profile[0] = "http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-lab"
 * entry[+].resource = observation-smoking-pack-years-jenny-m
 * entry[=].fullUrl = "http://example.org/fhir/Observation/observation-smoking-pack-years-jenny-m"
-// * entry[=].resource.meta.profile[0]profile[0] = "http://hl7.org/fhir/StructureDefinition/Observation"
 * entry[+].resource = us-core-observation-lab-tumor-invasion-jenny-m
 * entry[=].fullUrl = "http://example.org/fhir/Observation/us-core-observation-lab-tumor-invasion-jenny-m"
-// * entry[=].resource.meta.profile[0]profile[0] = "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
 * entry[+].resource = us-core-observation-lab-tumor-margins-jenny-m
 * entry[=].fullUrl = "http://example.org/fhir/Observation/us-core-observation-lab-tumor-margins-jenny-m"
-// * entry[=].resource.meta.profile[0]profile[0] = "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
 * entry[+].resource = us-core-observation-lab-sentinel-nodes-jenny-m
 * entry[=].fullUrl = "http://example.org/fhir/Observation/us-core-observation-lab-sentinel-nodes-jenny-m"
-// * entry[=].resource.meta.profile[0]profile[0] = "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
-* entry[+].resource = tumor-size-jenny-m
-* entry[=].fullUrl = "http://example.org/fhir/Observation/tumor-size-jenny-m"
-// * entry[=].resource.meta.profile[0]profile[0] = Canonical(TumorSize)
 * entry[+].resource = us-core-observation-lab-tumor-dcis-jenny-m
 * entry[=].fullUrl = "http://example.org/fhir/Observation/us-core-observation-lab-tumor-dcis-jenny-m"
-// * entry[=].resource.meta.profile[0]profile[0] = "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
 * entry[+].resource = us-core-practitioner-owen-oncologist
 * entry[=].fullUrl = "http://example.org/fhir/Practitioner/us-core-practitioner-owen-oncologist"
-// * entry[=].resource.meta.profile[0]profile[0] = "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner"
 * entry[+].resource = us-core-practitioner-peter-pathologist
 * entry[=].fullUrl = "http://example.org/fhir/Practitioner/us-core-practitioner-peter-pathologist"
-// * entry[=].resource.meta.profile[0]profile[0] = "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner"
+
+
+
+/* Using named slices in assignments is preferred, maybe, but it makes things longer and harder to read, IMO. So using indices instead
+* entry[cancerPatient].resource = cancer-patient-jenny-m
+* entry[cancerPatient].fullUrl = "http://example.org/fhir/Patient/cancer-patient-jenny-m"
+* entry[cancerCondition].resource = primary-cancer-condition-jenny-m
+* entry[cancerCondition].fullUrl = "http://example.org/fhir/Condition/primary-cancer-condition-jenny-m"
+* entry[cancerRelatedMedicationRequest][0].resource = cancer-related-medication-request-cyclophosphamide-jenny-m
+* entry[cancerRelatedMedicationRequest][0].fullUrl = "http://example.org/fhir/MedicationRequest/cancer-related-medication-request-cyclophosphamide-jenny-m"
+* entry[cancerRelatedMedicationRequest][1].resource = cancer-related-medication-request-doxorubicin-jenny-m
+* entry[cancerRelatedMedicationRequest][1].fullUrl = "http://example.org/fhir/MedicationRequest/cancer-related-medication-request-doxorubicin-jenny-m"
+* entry[cancerRelatedMedicationRequest][2].resource = cancer-related-medication-request-paclitaxel-jenny-m
+* entry[cancerRelatedMedicationRequest][2].fullUrl = "http://example.org/fhir/MedicationRequest/cancer-related-medication-request-paclitaxel-jenny-m"
+* entry[cancerRelatedMedicationRequest][3].resource = cancer-related-medication-request-anastrozole-jenny-m
+* entry[cancerRelatedMedicationRequest][3].fullUrl = "http://example.org/fhir/MedicationRequest/cancer-related-medication-request-anastrozole-jenny-m"
+* entry[cancerDiseaseStatus].resource = cancer-disease-status-jenny-m
+* entry[cancerDiseaseStatus].fullUrl = "http://example.org/fhir/Observation/cancer-disease-status-jenny-m"
+* entry[genomicVariant].resource = genomic-variant-jenny-m
+* entry[genomicVariant].fullUrl = "http://example.org/fhir/Observation/genomic-variant-jenny-m"
+* entry[genomicsReport].resource = genomics-report-jenny-m
+* entry[genomicsReport].fullUrl = "http://example.org/fhir/DiagnosticReport/genomics-report-jenny-m"
+* entry[cancerRelatedSurgicalProcedure].resource = cancer-related-surgical-procedure-jenny-m
+* entry[cancerRelatedSurgicalProcedure].fullUrl = "http://example.org/fhir/Procedure/cancer-related-surgical-procedure-jenny-m"
+//* entry[+].resource = cancer-related-mcode-comorbidities-elixhauser-jenny-m
+//* entry[=].fullUrl = "http://example.org/fhir/Observation/cancer-related-mcode-comorbidities-elixhauser-jenny-m"
+* entry[radiotherapyCourseSummary].resource = radiotherapy-treatment-summary-chest-wall-jenny-m
+* entry[radiotherapyCourseSummary].fullUrl = "http://example.org/fhir/Procedure/radiotherapy-treatment-summary-chest-wall-jenny-m"
+* entry[cancerStageGroup].resource = tnm-clinical-stage-group-jenny-m
+* entry[cancerStageGroup].fullUrl = "http://example.org/fhir/Observation/tnm-clinical-stage-group-jenny-m"
+* entry[primaryTumorCategory].resource = tnm-clinical-primary-tumor-category-jenny-m
+* entry[primaryTumorCategory].fullUrl = "http://example.org/fhir/Observation/tnm-clinical-primary-tumor-category-jenny-m"
+* entry[regionalNodesCategory].resource = tnm-clinical-regional-nodes-category-jenny-m
+* entry[regionalNodesCategory].fullUrl = "http://example.org/fhir/Observation/tnm-clinical-regional-nodes-category-jenny-m"
+* entry[distantMetastasesCategory].resource = tnm-clinical-distant-metastases-category-jenny-m
+* entry[distantMetastasesCategory].fullUrl = "http://example.org/fhir/Observation/tnm-clinical-distant-metastases-category-jenny-m"
+* entry[genomicSpecimen].resource = genomic-specimen-left-breast-jenny-m
+* entry[genomicSpecimen].fullUrl = "http://example.org/fhir/Specimen/genomic-specimen-left-breast-jenny-m"
+* entry[genomicRegionStudied].resource = genomic-region-studied-jenny-m
+* entry[genomicRegionStudied].fullUrl = "http://example.org/fhir/Observation/genomic-region-studied-jenny-m"
+* entry[ecogPerformanceStatus].resource = ecog-performance-status-jenny-m
+* entry[ecogPerformanceStatus].fullUrl = "http://example.org/fhir/Observation/ecog-performance-status-jenny-m"
+* entry[tumorMarkerTest][0].resource = tumor-marker-test-er-jenny-m
+* entry[tumorMarkerTest][0].fullUrl = "http://example.org/fhir/Observation/tumor-marker-test-er-jenny-m"
+* entry[tumorMarkerTest][1].resource = tumor-marker-test-pr-jenny-m
+* entry[tumorMarkerTest][1].fullUrl = "http://example.org/fhir/Observation/tumor-marker-test-pr-jenny-m"
+* entry[tumorMarkerTest][2].resource = tumor-marker-test-her2-jenny-m
+* entry[tumorMarkerTest][2].fullUrl = "http://example.org/fhir/Observation/tumor-marker-test-her2-jenny-m"
+* entry[tumorMarkerTest][3].resource = tumor-marker-test-oncotype-dx-jenny-m
+* entry[tumorMarkerTest][3].fullUrl = "http://example.org/fhir/Observation/tumor-marker-test-oncotype-dx-jenny-m"
+* entry[tumorSize].resource = tumor-size-jenny-m
+* entry[tumorSize].fullUrl = "http://example.org/fhir/Observation/tumor-size-jenny-m"
+*/

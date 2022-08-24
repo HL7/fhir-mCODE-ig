@@ -1,5 +1,6 @@
 ### STU 3 Ballot Version  (Expected January 2023)
  
+* Renamed LoincRequestedCS code system to [ComorbidConditionCS]), since the proposed codes were rejected by LOINC and more accurately are comorbid conditions.
 * Updated to US Core 5.0.1
   * Changed parent profiles of Karnofsky and ECOG Performance Status profiles and Cancer Disease Status profile to the newly-introduced US Core Observation Clinical Test Result Profile
 * Created dependency on Genomics Reporting IG (GRIG) STU2 (v2.0.0)
@@ -11,7 +12,7 @@
 * Updated AJCC references to new SNOMED-CT terms that map to AJCC (https://jira.hl7.org/browse/FHIR-37593)
 * Corrected extended example, which formerly used invalid stage "pM0". Replaced with a data absent reason "not applicable".
 * Changed "SNOMED-CT" to preferred form "SNOMED CT" in narratives
-* Added Maturity Indicator (FHIR Maturity Model or FMM) to profiles and value sets
+* Added Maturity Indicators (FHIR Maturity Model or FMM) to profiles and value sets
 * Integrated SNOMED Codes that have been issued since STU2 publication.  Not in the March 2022 US Release
   * #1204242009  "External beam radiation therapy using particle scanning technique (procedure)" //USCRS-33517
   * #1217011006  "non-adjacent (qualifier)" // USCRS-33144
@@ -73,7 +74,7 @@
 
 #### Assessment Group Changes
 
-* Replaced local codes for Comorbidities with codes in the [LoincRequestedCS] code system, since codes have now been requested in LOINC.
+* Replaced local codes for Comorbidities with codes in the LoincRequestedCS code system (now renamed [ComorbidConditionCS]), since codes have now been requested in LOINC.
 * Clarified that the overall risk score should be included in the Elixhauser Comorbidity, and explained cases where might be missing. [FHIR-32280](https://jira.hl7.org/browse/FHIR-32279), [FHIR-32280](https://jira.hl7.org/browse/FHIR-32280)
 * Removed "unknown" from value set in Elixhauser Comorbidity profile components since unknown is not a part of the Elixhauser score. [FHIR-32280](https://jira.hl7.org/browse/FHIR-32281)
 

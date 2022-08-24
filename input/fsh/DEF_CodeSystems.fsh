@@ -1,10 +1,10 @@
-Alias: LNC_TBD = http://hl7.org/fhir/us/mcode/CodeSystem/loinc-requested-cs
+Alias: COMORB = http://hl7.org/fhir/us/mcode/CodeSystem/comorbid-condition-cs
 Alias: SCT_TBD = http://hl7.org/fhir/us/mcode/CodeSystem/snomed-requested-cs
 
-CodeSystem: LoincRequestedCS
-Id: loinc-requested-cs
+CodeSystem:  ComorbidConditionCS
+Id: comorbid-condition-cs
 Title: "Requested LOINC Codes Code System"
-Description: "Codes requested from LOINC, but not yet approved or assigned. Codes related to comorbidities use the categories originally defined by Elixhauser, and updated by the Agency for Healthcare Research and Quality (AHRQ) Healthcare Cost and Utilization Project (H-CUP) [Elixhauser Comorbidity Software Refined for ICD-10-CM v2021.1](https://www.hcup-us.ahrq.gov/toolssoftware/comorbidityicd10/comorbidity_icd10.jsp). Each comorbidity category is associated with a specific ICD-10-CM value set. For example, the category #CHF (congestive heart failure) refers to the patient having a diagnosis within the [Elixhauser Comorbid Condition Value Set for Congestive Heart Failure](http://hl7.org/fhir/us/mcode/ValueSet/elixhauser-congestive-heart-failure-vs)."
+Description: "Codes related to comorbidities use the categories originally defined by Elixhauser, and updated by the Agency for Healthcare Research and Quality (AHRQ) Healthcare Cost and Utilization Project (H-CUP) [Elixhauser Comorbidity Software Refined for ICD-10-CM v2021.1](https://www.hcup-us.ahrq.gov/toolssoftware/comorbidityicd10/comorbidity_icd10.jsp). Each comorbidity category is associated with a specific ICD-10-CM value set. For example, the category #CHF (congestive heart failure) refers to the patient having a diagnosis within the [Elixhauser Comorbid Condition Value Set for Congestive Heart Failure](http://hl7.org/fhir/us/mcode/ValueSet/elixhauser-congestive-heart-failure-vs)."
 * ^caseSensitive = true
 // LOINC Request 6073 requests LOINC codes for these categories, and for the overall index. Submitted 7/7/21 & rejected
 * #comorbidities-elixhauser "Elixhauser Comorbidity Panel" "Code identifying an Observation as a comorbidity panel consistent with mCODE's ComorbidityElixhauser profile."

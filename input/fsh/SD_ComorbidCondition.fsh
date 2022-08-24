@@ -34,7 +34,7 @@ Title: "Comorbidities Elixhauser Profile"
 Description: "Comorbid condition checklist and optional risk score, using Elixhauser comorbidity categories as defined by the Agency for Healthcare Research and Quality (AHRQ) Healthcare Cost and Utilization Project (H-CUP)."
 * ^extension[FMM].valueInteger = 1
 * ^abstract = false
-* code = LNC_TBD#comorbidities-elixhauser "Elixhauser Comorbidity Panel"
+* code = COMORB#comorbidities-elixhauser "Elixhauser Comorbidity Panel"
 * focus only Reference(PrimaryCancerCondition)
 * focus ^definition = "A reference to the cancer condition that is the context for the current list of comorbid conditions."
 * component.value[x] from PresentAbsentVS (required)  //FHIR-32281

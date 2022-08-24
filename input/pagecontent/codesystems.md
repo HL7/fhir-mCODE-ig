@@ -1,6 +1,6 @@
 The following code systems are defined in mCODE:
 
-* [LoincRequestedCS]
+* [ComorbidConditionCS]
 * [SnomedRequestedCS]
 
 {% include markdown-link-references.md %}

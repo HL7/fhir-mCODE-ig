@@ -77,7 +77,7 @@ For definition of key terms in radiotherapy, see the [Radiotherapy Glossary](glo
 
 ### Code Systems
 
-* [LoincRequestedCS]
+* [ComorbidConditionCS]
 * [SnomedRequestedCS]
 
 {% include markdown-link-references.md %}

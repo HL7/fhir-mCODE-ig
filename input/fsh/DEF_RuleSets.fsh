@@ -50,7 +50,7 @@ RuleSet: CreateComorbidityComponent(sliceName, code, short, vs)
 * component[{sliceName}].extension MS
 * component[{sliceName}].extension[conditionCode] MS
 * component[{sliceName}].extension[conditionReference] MS
-* component[{sliceName}].code = LNC_TBD#{code}
+* component[{sliceName}].code = COMORB#{code}
 * component[{sliceName}] ^short = {short}
 * component[{sliceName}].extension ^definition = "The patient's specific condition within this comorbidity class."
 * component[{sliceName}].extension[conditionCode].value[x] from {vs}

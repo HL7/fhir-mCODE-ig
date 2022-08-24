@@ -8,7 +8,7 @@ For SNOMED CT coding, use a code from the disorder hierarchy under SNOMED CT 363
 
 For ICD-10-CM coding, use one of the codes given in this value set representing primary malignant neoplasms and neoplasms of uncertain or unspecified behavior.
 
-Note that ICD-O-3 specifies morphology and topography, not disorder. If ICD-O-3 is used, the primary cancer disorder code must be specifically be SNOMED CT 363346000  'Malignant neoplastic disease (disorder)'. The ICD-O-3 morphology and topography codes should be entered in the HistologyMorphologyBehavior and body location fields, respectively.
+Note that ICD-O-3 specifies morphology and topography, not disorder. If ICD-O-3 is used, the primary cancer disorder code must be specifically be SNOMED CT 363346000  'Malignant neoplastic disease (disorder)'. The ICD-O-3 morphology and topography codes should be entered in the HistologyMorphologyBehavior and body location fields, respectively.
 
 
 ### Conformance

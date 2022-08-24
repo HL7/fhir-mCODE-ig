@@ -14,8 +14,8 @@ The STU 2 DD is somewhat different than the STU 1 version. In STU 1, some data e
 
 Download links:
 
-* [Current mCODE Data Dictionary - STU 2 (Excel download)](data-dictionary/mCODEDataDictionary-STU2.xlsx)
-* [Former mCODE Data Dictionary - STU 1 (Excel download)](data-dictionary/mCODEDataDictionary-STU1.xlsx)
+* [STU 2 mCODE Data Dictionary (Excel download)](data-dictionary/mCODEDataDictionary-STU2.xlsx)
+* [STU 1 mCODE Data Dictionary (Excel download)](data-dictionary/mCODEDataDictionary-STU1.xlsx)
 
 ### Data Dictionary Differential
 

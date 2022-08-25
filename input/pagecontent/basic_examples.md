@@ -25,13 +25,13 @@
 * [TNM Clinical Stage Group 3](Observation-tnm-clinical-stage-group-3c.html)
 * [Binet Stage Group A for Leukemia](Observation-binet-stage-group-A.html)
 
+### [Comorbidities](StructureDefinition-mcode-comorbidities.html) ([Observation](http://hl7.org/fhir/R4/observation.html))
+
+* [Cancer Related Comorbidities - John Anyperson](Observation-cancer-related-comorbidities-john-anyperson.html)
+
 ### [ECOG Performance Status](StructureDefinition-mcode-ecog-performance-status.html) ([US Core Observation Clinical Test Result Profile](https://hl7.org/fhir/us/core/StructureDefinition-us-core-observation-clinical-test.html))
 
 * [ECOG Performance - Fully Active](Observation-ecog-performance-status-fully-active.html)
-
-### [Elixhauser Comorbidities](StructureDefinition-mcode-comorbidities-elixhauser.html) ([Observation](http://hl7.org/fhir/R4/observation.html))
-
-* [Cancer Related Comorbidities - John Anyperson](Observation-cancer-related-mcode-comorbidities-elixhauser-john-anyperson.html)
 
 ### [Genomic Specimen](StructureDefinition-mcode-genomic-specimen.html) ([Specimen](http://hl7.org/fhir/R4/specimen.html))
 

@@ -1,6 +1,9 @@
 ### STU 3 Ballot Version  (Expected January 2023)
- 
-* Renamed LoincRequestedCS code system to [ComorbidConditionCS]), since the proposed codes were rejected by LOINC and more accurately are comorbid conditions.
+
+* [Comorbidities][Comorbidities] have been redesigned into a more compact form.
+  * Comorbidities are no longer based on the Elixhauser framework. Users can now list or reference any condition as a comorbidity present or absent.
+  * Value sets, extensions, and profiles related to Elixhauser comorbidities have been eliminated.
+  * ConditionReference extension has been expanded to allow either a reference or a CodeableConcept.
 * Updated to US Core 5.0.1
   * Changed parent profiles of Karnofsky and ECOG Performance Status profiles and Cancer Disease Status profile to the newly-introduced US Core Observation Clinical Test Result Profile
 * Created dependency on Genomics Reporting IG (GRIG) STU2 (v2.0.0)
@@ -55,7 +58,7 @@
 * Added external value sets used by mCODE to FHIR Artifacts [Value Sets](valuesets.html) page
 * Updated [terminology](terminology.html) page to include code system identifiers recommended by HL7 Terminology Authority, and to document [local code systems](terminology.html#local-code-systems).
 * Local code systems have been consolidated and reorganized to reduce their number. Local codes have been standardized to reflect codes requested from SNOMED and LOINC.
-* Added FSH rendering in notes section for all example instances (e.g., this [example](Observation-cancer-related-mcode-comorbidities-elixhauser-john-anyperson.html#notes))
+* Added FSH rendering in notes section for all example instances
 * Added more readable renderings of all [capability statements](https://hl7.org/fhir/us/mcode/capabilitystatements.html).
 * Made values required in all extensions because extensions should never appear if there is no value. [FHIR-33003](https://jira.hl7.org/browse/FHIR-33003)
 * All definitions have been reviewed and edited and numerous improvements and corrections made to narrative content.
@@ -74,7 +77,7 @@
 
 #### Assessment Group Changes
 
-* Replaced local codes for Comorbidities with codes in the LoincRequestedCS code system (now renamed [ComorbidConditionCS]), since codes have now been requested in LOINC.
+* Replaced local codes for Comorbidities with codes in the LoincRequestedCS code system, since codes have now been requested in LOINC.
 * Clarified that the overall risk score should be included in the Elixhauser Comorbidity, and explained cases where might be missing. [FHIR-32280](https://jira.hl7.org/browse/FHIR-32279), [FHIR-32280](https://jira.hl7.org/browse/FHIR-32280)
 * Removed "unknown" from value set in Elixhauser Comorbidity profile components since unknown is not a part of the Elixhauser score. [FHIR-32280](https://jira.hl7.org/browse/FHIR-32281)
 
@@ -143,7 +146,7 @@ A comprehensive listing of differences in FHIR artifacts between STU 1 and STU 2
 ### Assessment
 
 * Changed the name of this group from Labs & Vital to Assessment and moved Performance Assessments and Comorbidities into this group.
-* [Comorbidities][ComorbiditiesElixhauser] have been redesigned to capture the presence or absence of all comorbidities in one Observation.
+* [Comorbidities][Comorbidities] have been redesigned to capture the presence or absence of all comorbidities in one Observation.
 
 #### Disease
 

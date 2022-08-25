@@ -141,27 +141,20 @@ Description: "Extended example: example showing family member history of cancer"
 * condition.contributedToDeath = true
 * deceasedBoolean = true
 
-Instance: cancer-related-mcode-comorbidities-elixhauser-jenny-m
-InstanceOf: ComorbiditiesElixhauser
+Instance: cancer-related-comorbidities-jenny-m
+InstanceOf: Comorbidities
 Description: "mCODE Example for Cancer-Related Comorbidities"
 * subject = Reference(cancer-patient-jenny-m)
 * performer = Reference(us-core-practitioner-owen-oncologist)
 * status = #final "final"
 * effectiveDateTime = "2018-03-16"
-* component[depression].valueCodeableConcept = SCT#52101004 "Present (qualifier value)"
-* component[depression].extension[conditionReference].valueReference = Reference(us-core-condition-depression-jenny-m)
-* component[hypertensionComplicated].valueCodeableConcept = SCT#52101004 "Present (qualifier value)"
-* component[hypertensionComplicated].extension[conditionReference].valueReference = Reference(us-core-condition-hypertension-jenny-m)
-* component[arthropathy].valueCodeableConcept = SCT#2667000 "Absent (qualifier value)"
-* component[congestiveHeartFailure].valueCodeableConcept = SCT#2667000 "Absent (qualifier value)"
-* component[chronicPulmonaryDisease].valueCodeableConcept = SCT#2667000 "Absent (qualifier value)"
-* component[diabetesUncomplicated].valueCodeableConcept = SCT#2667000 "Absent (qualifier value)"
-* component[diabetesComplicated].valueCodeableConcept = SCT#2667000 "Absent (qualifier value)"
-* component[obesity].valueCodeableConcept = SCT#2667000 "Absent (qualifier value)"
-* component[peripheralVascularDisease].valueCodeableConcept = SCT#2667000 "Absent (qualifier value)"
-* component[pulmonaryCirculationDisorder].valueCodeableConcept = SCT#2667000 "Absent (qualifier value)"
-* component[renalFailureModerate].valueCodeableConcept = SCT#2667000 "Absent (qualifier value)"
-
+// present -- note these could be codes instead of references (either are acceptable)
+* extension[comorbidConditionPresent][0].valueReference = Reference(us-core-condition-depression-jenny-m)
+* extension[comorbidConditionPresent][1].valueReference = Reference(us-core-condition-anxiety-jenny-m)
+* extension[comorbidConditionPresent][2].valueReference = Reference(us-core-condition-hypertension-jenny-m)
+// absent -- These could also be references, but having a resource representing a non-condition would be unusual
+* extension[comorbidConditionAbsent][0].valueCodeableConcept = SCT#414916001 "Obesity (disorder)"
+* extension[comorbidConditionAbsent][1].valueCodeableConcept = SCT#19829001 "Disorder of lung (disorder)"
 
 Instance: ecog-performance-status-jenny-m
 InstanceOf: ECOGPerformanceStatus

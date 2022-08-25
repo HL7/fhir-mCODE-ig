@@ -49,21 +49,29 @@ Description: "Example of Cancer Disease Status"
 * performer = Reference(us-core-practitioner-kyle-anydoc)
 * valueCodeableConcept = SCT#268910001 "Patient's condition improved (finding)"
 
-Instance: cancer-related-mcode-comorbidities-elixhauser-john-anyperson
-InstanceOf: ComorbiditiesElixhauser
+Instance: cancer-related-comorbidities-john-anyperson
+InstanceOf: Comorbidities
 Description: "Example of Cancer-Related Comorbidities"
 * subject = Reference(cancer-patient-john-anyperson)
 * performer = Reference(us-core-practitioner-kyle-anydoc)
 * focus = Reference(primary-cancer-condition-nsclc)
 * status = #final "final"
+* effectiveDateTime = "2019-04-01"
 // present
-* component[congestiveHeartFailure].valueCodeableConcept = SCT#52101004 "Present (qualifier value)"
-* component[congestiveHeartFailure].extension[conditionCode].valueCodeableConcept = ICD10CM#I50.32 "Chronic diastolic (congestive) heart failure"
+* extension[comorbidConditionPresent].valueReference = Reference(john-anyperson-chf)
 // absent
-* component[arthropathy].valueCodeableConcept = SCT#2667000 "Absent (qualifier value)"
-* component[chronicPulmonaryDisease].valueCodeableConcept = SCT#2667000 "Absent (qualifier value)"
-* component[obesity].valueCodeableConcept = SCT#2667000 "Absent (qualifier value)"
-* component[peripheralVascularDisease].valueCodeableConcept = SCT#2667000 "Absent (qualifier value)"
+* extension[comorbidConditionAbsent][0].valueCodeableConcept = SCT#414916001 "Obesity (disorder)"
+* extension[comorbidConditionAbsent][1].valueCodeableConcept = SCT#19829001 "Disorder of lung (disorder)"
+
+Instance: john-anyperson-chf
+InstanceOf: USCoreCondition
+Description: "Example of comorbid condition (congestive heart failure) present"
+* subject = Reference(cancer-patient-john-anyperson)
+* asserter = Reference(us-core-practitioner-kyle-anydoc)
+* category = CondCat#problem-list-item
+* code = ICD10CM#I50.32 "Chronic diastolic (congestive) heart failure"
+* verificationStatus = VerStatus#confirmed
+* extension[condition-assertedDate].valueDateTime = "2019-04-01"
 
 Instance: cancer-patient-john-anyperson
 InstanceOf: CancerPatient

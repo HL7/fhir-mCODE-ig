@@ -47,8 +47,4 @@ The mCODE example [`genomic-variant-fusion`](Observation-genomic-variant-fusion.
 * [GenomicSpecimenTypeVS]
 * [TumorMarkerTestVS]
 
-### Code Systems
-
-* [ComorbidConditionCS]
-
 {% include markdown-link-references.md %}

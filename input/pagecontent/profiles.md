@@ -8,7 +8,6 @@ The following profiles and have been defined for this implementation guide:
 * [CancerRelatedSurgicalProcedure]
 * [CancerStageGroup]
 * [Comorbidities]
-* [ComorbiditiesParent]
 * [ECOGPerformanceStatus]
 * [GenomicRegionStudied]
 * [GenomicSpecimen]

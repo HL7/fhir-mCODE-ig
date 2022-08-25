@@ -130,7 +130,7 @@
 [USCoreMedicationRequest]: http://hl7.org/fhir/us/core/StructureDefinition-us-core-medicationrequest.html
 [USCoreLaboratoryResultObservation]: http://hl7.org/fhir/us/core/StructureDefinition-us-core-observation-lab.html
 [USCorePatient]: http://hl7.org/fhir/us/core/StructureDefinition-us-core-patient.html
-[USCoreCondition]: http://hl7.org/fhir/us/core/StructureDefinition-us-core-condition-problems-health-concerns.html
+[USCoreConditionProblemHealthConcern]: http://hl7.org/fhir/us/core/StructureDefinition-us-core-condition-problems-health-concerns.html
 [USCoreProcedure]: http://hl7.org/fhir/us/core/StructureDefinition-us-core-procedure.html
 [USCorePractitioner]: http://hl7.org/fhir/us/core/StructureDefinition-us-core-practitioner.html
 [USCoreSmokingStatus]: http://hl7.org/fhir/us/core/StructureDefinition-us-core-smokingstatus.html

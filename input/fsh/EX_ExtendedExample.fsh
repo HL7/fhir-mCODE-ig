@@ -141,13 +141,20 @@ Description: "Extended example: example showing family member history of cancer"
 * condition.contributedToDeath = true
 * deceasedBoolean = true
 
-Instance: cancer-related-mcode-comorbidities-elixhauser-jenny-m
-InstanceOf: ComorbiditiesElixhauser
+Instance: cancer-related-mcode-comorbidities-jenny-m
+InstanceOf: Comorbidities
 Description: "mCODE Example for Cancer-Related Comorbidities"
 * subject = Reference(cancer-patient-jenny-m)
 * performer = Reference(us-core-practitioner-owen-oncologist)
 * status = #final "final"
 * effectiveDateTime = "2018-03-16"
+// CHANGE THIS!
+// present
+* extension[comorbidConditionPresent].valueReference = Reference(john-anyperson-chf)
+// absent
+* extension[comorbidConditionAbsent][0].valueReference = Reference(john-anyperson-obesity-absent)
+* extension[comorbidConditionAbsent][1].valueReference = Reference(john-anyperson-pulmonary-disease-absent)
+/*
 * component[depression].valueCodeableConcept = SCT#52101004 "Present (qualifier value)"
 * component[depression].extension[conditionReference].valueReference = Reference(us-core-condition-depression-jenny-m)
 * component[hypertensionComplicated].valueCodeableConcept = SCT#52101004 "Present (qualifier value)"
@@ -161,6 +168,7 @@ Description: "mCODE Example for Cancer-Related Comorbidities"
 * component[peripheralVascularDisease].valueCodeableConcept = SCT#2667000 "Absent (qualifier value)"
 * component[pulmonaryCirculationDisorder].valueCodeableConcept = SCT#2667000 "Absent (qualifier value)"
 * component[renalFailureModerate].valueCodeableConcept = SCT#2667000 "Absent (qualifier value)"
+*/
 
 
 Instance: ecog-performance-status-jenny-m

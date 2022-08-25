@@ -62,7 +62,13 @@ Title:   "Tumor Marker Test Profile"
 Description: "The result of a tumor marker test. Tumor marker tests are generally used to guide cancer treatment decisions and monitor treatment, as well as to predict the chance of recovery and cancer recurrence."
 * ^extension[FMM].valueInteger = 4
 * subject 1..1
+* value[x] 1..1
 * code from TumorMarkerTestVS (extensible)
+* category 2..*
+// inherits from US Core * category[LaboratorySlice] = http://terminology.hl7.org/CodeSystem/v2-0074#LAB
+* category contains mcode-category 1..1
+* category[mcode-category] = SCT#250724005 // Tumor marker measurement (procedure)
+// sushi error >>> * category[mcode-category].coding.version = ""  // make sure version is not specified
 * subject only Reference(CancerPatient)
 * subject ^definition = "Patient whose tumor marker test is recorded."
 * effective[x] only dateTime or Period

@@ -93,7 +93,7 @@ InstanceOf: USCoreCondition
 Description: "Extended example: example showing comorbid condition (depression)"
 * clinicalStatus = ClinStatus#active
 * verificationStatus = VerStatus#confirmed
-* category = CondCat#problem-list-item
+* category = CondCat#problem-list-item "Problem List Item"
 * code = SCT#35489007 "Depressive disorder (disorder)"
 * subject = Reference(cancer-patient-jenny-m)
 * onsetDateTime = "2005-01-01"
@@ -104,7 +104,7 @@ InstanceOf: USCoreCondition
 Description: "Extended example: example showing comorbid condition (hypertension)"
 * clinicalStatus = ClinStatus#active
 * verificationStatus = VerStatus#confirmed
-* category = CondCat#problem-list-item
+* category = CondCat#problem-list-item "Problem List Item"
 * code = SCT#77970009 "Benign hypertensive heart disease without congestive heart failure (disorder)"  // Changed to avoid IG Publisher error ICD10CM#I11.9 "Hypertensive heart disease without heart failure"
 * subject = Reference(cancer-patient-jenny-m)
 * onsetDateTime = "2012-01-01"
@@ -193,7 +193,6 @@ Description: "Extended example: example showing primary cancer condition"
 * extension[histologyMorphologyBehavior].valueCodeableConcept = SCT#413448000 "Adenocarcinoma, no subtype, intermediate grade (morphologic abnormality)"
 * clinicalStatus = ClinStatus#remission
 * verificationStatus = VerStatus#confirmed
-* category = CondCat#problem-list-item
 * code = SCT#353431000119107 "Primary malignant neoplasm of female left breast (disorder)"
 * subject = Reference(cancer-patient-jenny-m)
 * onsetDateTime = "2018-03-16"
@@ -355,7 +354,7 @@ Instance: us-core-diagnosticreport-lab-jenny-m
 InstanceOf: USCoreDiagnosticReportLab
 Description: "Extended example: example of pathology findings represented as a DiagnosticReport resource."
 * status = #final "final"
-* category[1] = DiagnosticService#SP "Surgical Pathology"  // does not match any known slice in US Core Diagnostic Report -- but that's ok
+//* category[1] = DiagnosticService#SP "Surgical Pathology"  // does not match any known slice in US Core Diagnostic Report -- but that's ok
 * code = LNC#22637-3 "Pathology report final diagnosis Narrative"
 * subject = Reference(cancer-patient-jenny-m)
 * issued = "2018-04-05T00:00:00Z"
@@ -410,7 +409,7 @@ InstanceOf:  TumorSize
 Description: "Extended example: example showing tumor size"
 * status = #final "final"
 * code = LNC#21889-1 "Size Tumor"
-* category = ObsCat#laboratory
+//* category[Laboratory] = ObsCat#laboratory  // inherited
 * method = LNC#24419-4 "Pathology report gross observation"
 * subject = Reference(cancer-patient-jenny-m)
 * effectiveDateTime = "2018-04-01T00:00:00Z"
@@ -487,7 +486,7 @@ Instance: tumor-marker-test-oncotype-dx-jenny-m
 InstanceOf: TumorMarkerTest
 Description: "Extended example: example showing Oncotype DX breast recurrence score. Note that this test has no assigned LOINC code, so GTR is being used as a backup. Only the score from the Oncotype DX panel (as opposed to variant data from the genes in the panel) is represented here."
 * status = #final "final"
-* code = GTR#509910 "Oncotype DX Breast Recurrence Score Assay"  // extensible
+* code = GTR#509910 "Oncotype DX Breast Recurrence Score Assay"  // take advantage of extensibility
 * code.text = "Oncotype DX Breast Recurrence Score Assay"
 * subject = Reference(cancer-patient-jenny-m)
 * effectiveDateTime = "2018-04-12"

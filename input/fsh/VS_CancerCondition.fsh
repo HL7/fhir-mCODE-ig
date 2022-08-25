@@ -286,7 +286,6 @@ Description:    "Types of primary malignant neoplastic disease, coded in SNOMED 
 * include codes from valueset BenignUncertainNeoplasmBrainCNSDisorderVS
 * include codes from valueset CytologicEvidenceOfMalignancyVS
 
-
 ValueSet: CancerDisorderVS
 Id: mcode-cancer-disorder-vs
 Title: "Cancer Disorder Value Set"

@@ -4,7 +4,6 @@ InstanceOf: PrimaryCancerCondition
 Description: "mCODE Example for Primary Cancer Condition (breast). The example shows post-coordinated coding using SNOMED CT, with separate codes for morphology and bodySite."
 * clinicalStatus = ClinStatus#active "Active"
 * verificationStatus = VerStatus#confirmed "Confirmed"
-* category = CondCat#problem-list-item
 * code = SCT#363346000 "Malignant neoplastic disease (disorder)" //SCT#109888004 "Lobular carcinoma in situ of breast (disorder)"
 * extension[histologyMorphologyBehavior].valueCodeableConcept = SCT#77284006 "Lobular carcinoma in situ (morphologic abnormality)"
 * bodySite = SCT#80248007 "Left breast structure (body structure)"
@@ -14,12 +13,11 @@ Description: "mCODE Example for Primary Cancer Condition (breast). The example s
 * stage.summary = SCT#1222806003 "American Joint Committee on Cancer stage IIIC (qualifier value)"
 * stage.assessment = Reference(tnm-clinical-stage-group-3c)
 
-Instance: tumor-size-pathology 
+Instance: tumor-size-pathology
 InstanceOf: TumorSize
 Description: "Example of a resource conforming to the tumor size profile."
 * status = #final
 * method = SCT#787377000 "Gross examination and sampling of tissue specimen (procedure)"
-* category = ObsCat#laboratory
 * subject = Reference(Patient/cancer-patient-eve-anyperson)
 * focus = Reference(BodyStructure/tumor-lobular-carcinoma-left-breast)
 * component[tumorLongestDimension].valueQuantity = 1.2 'cm' "cm"

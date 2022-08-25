@@ -1,53 +1,46 @@
 Profile: TumorSize
-Parent:  Observation
+Parent:  USCoreLaboratoryResultObservationProfile
 Id: mcode-tumor-size
 Title: "Tumor Size Profile"
 Description:  "Records the dimensions of a tumor"
 // LOINC code indicating this is a tumor size observation
 * ^extension[FMM].valueInteger = 3
 * code = LNC#21889-1 //"Size Tumor"
+* category 
 * subject ^short = "The patient whose tumor was measured."
 * subject ^definition = "The patient whose tumor was measured. SHALL be a `Patient` resource conforming to `CancerPatient`."
 * subject 1..1
 * subject only Reference(CancerPatient)
-
 * focus 0..1
 * focus only Reference(Tumor)
 * focus ^short = "Identifies a tumor that has NOT been removed from the body"
 * focus ^definition = "Reference to a BodyStructure resource conforming to Tumor."
 * focus ^comment = "Use **only** when the tumor **has not** been removed from the body. If the tumor has been removed, use `specimen` instead and leave `focus` empty."
-
 * specimen only Reference(TumorSpecimen)
 * specimen ^short = "Identifies a tumor that has been removed from the body"
 * specimen ^definition = "Reference to a Specimen resource conforming to TumorSpecimen."
 * specimen ^comment = "Use **only** when the tumor **has** been removed from the body. If the tumor has been not removed, use `focus` instead and leave `specimen` empty."
-
 * obeys must-have-focus-or-specimen-invariant
-
 * method from TumorSizeMethodVS (extensible)
 * method ^short = "Method for measuring the tumor"
 * method ^definition = "Method for measuring the tumor"
 * method ^comment = "Tumors are typically measured via gross pathology after excision, or via diagnostic imaging or physical exam prior to removal. If `specimen` is set, `method` is expected to be a \"gross pathology\" code. If `focus` is set, `method` is expected to be a type of diagnostic imaging or physical exam."
-
 * insert ObservationComponentSlicingRules
 // Require 1 dimension; the additional dimensions are optional
 * insert CreateComponent(tumorLongestDimension, 1, 1)
 * insert CreateComponent(tumorOtherDimension, 0, 2)
-
 * component[tumorLongestDimension] ^short = "Longest tumor dimension (cm or mm)"
 * component[tumorLongestDimension] ^definition = "The longest tumor dimension in cm or mm."
 * component[tumorLongestDimension].code = LNC#33728-7 // "Size.maximum dimension in Tumor"
 * component[tumorLongestDimension].value[x] only Quantity
 * component[tumorLongestDimension].valueQuantity from TumorSizeUnitsVS (required)
-
 * component[tumorOtherDimension] ^short = "2nd or 3rd tumor dimension (cm or mm)"
 * component[tumorOtherDimension] ^definition = "The second or third tumor dimension in cm or mm."
 * component[tumorOtherDimension] ^comment = "Additional tumor dimensions should be ordered from largest to smallest."
 * component[tumorOtherDimension].code = LNC#33729-5 // "Size additional dimension in Tumor"
 * component[tumorOtherDimension].value[x] only Quantity
 * component[tumorOtherDimension].valueQuantity from TumorSizeUnitsVS (required)
-
-// Group the Must Support to make it easier to see what's what
+// Group the MustSupports to make it easier to see what's what
 * subject and code and effective[x] and component and method and specimen and focus MS
 
 // This invariant has been exhaustively tested with the FHIR validator

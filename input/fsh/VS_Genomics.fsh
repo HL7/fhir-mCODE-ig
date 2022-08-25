@@ -39,7 +39,6 @@ Description:    "The type of specimen analyzed in a genomic test. The values inc
 * SPTY#STL       "Stool = Fecal"   // FHIR-32827
 //* SPTY#OTH       "Source, Other"   // FHIR-32827 -- Other should not be added because the VS is extensible
 
-
 ValueSet: TumorMarkerTestVS
 Id: mcode-tumor-marker-test-vs
 Title: "Tumor Marker Test Value Set"

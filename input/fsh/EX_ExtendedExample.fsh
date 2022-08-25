@@ -93,7 +93,7 @@ InstanceOf: USCoreCondition
 Description: "Extended example: example showing comorbid condition (depression)"
 * clinicalStatus = ClinStatus#active
 * verificationStatus = VerStatus#confirmed
-* category = CondCat#problem-list-item
+* category = CondCat#problem-list-item "Problem List Item"
 * code = SCT#35489007 "Depressive disorder (disorder)"
 * subject = Reference(cancer-patient-jenny-m)
 * onsetDateTime = "2005-01-01"
@@ -104,7 +104,7 @@ InstanceOf: USCoreCondition
 Description: "Extended example: example showing comorbid condition (hypertension)"
 * clinicalStatus = ClinStatus#active
 * verificationStatus = VerStatus#confirmed
-* category = CondCat#problem-list-item
+* category = CondCat#problem-list-item "Problem List Item"
 * code = SCT#77970009 "Benign hypertensive heart disease without congestive heart failure (disorder)"  // Changed to avoid IG Publisher error ICD10CM#I11.9 "Hypertensive heart disease without heart failure"
 * subject = Reference(cancer-patient-jenny-m)
 * onsetDateTime = "2012-01-01"
@@ -193,7 +193,6 @@ Description: "Extended example: example showing primary cancer condition"
 * extension[histologyMorphologyBehavior].valueCodeableConcept = SCT#413448000 "Adenocarcinoma, no subtype, intermediate grade (morphologic abnormality)"
 * clinicalStatus = ClinStatus#remission
 * verificationStatus = VerStatus#confirmed
-* category = CondCat#problem-list-item
 * code = SCT#353431000119107 "Primary malignant neoplasm of female left breast (disorder)"
 * subject = Reference(cancer-patient-jenny-m)
 * onsetDateTime = "2018-03-16"

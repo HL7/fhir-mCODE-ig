@@ -64,8 +64,11 @@ Description: "The result of a tumor marker test. Tumor marker tests are generall
 * subject 1..1
 * value[x] 1..1
 * code from TumorMarkerTestVS (extensible)
-// Establishing a maximum binding assures that a TumorMarkerTest cannot be confused with a TumorSize, GenomicRegionStudied, or GenomicVariant profile when instances are in the same bundle. MK 8/24/2022
-//* code ^binding.extension[http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet].valueCanonical = Canonical(TumorMarkerTestMaxVS)
+* category 2..*
+// inherits from US Core * category[LaboratorySlice] = http://terminology.hl7.org/CodeSystem/v2-0074#LAB
+* category contains mcode-category 1..1
+* category[mcode-category] = SCT#250724005 // Tumor marker measurement (procedure)
+// sushi error >>> * category[mcode-category].coding.version = ""  // make sure version is not specified
 * subject only Reference(CancerPatient)
 * subject ^definition = "Patient whose tumor marker test is recorded."
 * effective[x] only dateTime or Period

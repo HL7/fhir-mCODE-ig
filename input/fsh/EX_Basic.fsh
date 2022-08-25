@@ -3,7 +3,6 @@ InstanceOf: PrimaryCancerCondition
 Description: "Example of Primary Cancer Condition"
 * clinicalStatus = ClinStatus#active "Active"
 * verificationStatus = VerStatus#confirmed "Confirmed"
-* category = CondCat#problem-list-item
 * code = SCT#254637007 "Non-small cell lung cancer (disorder)"
 * extension[histologyMorphologyBehavior].valueCodeableConcept = SCT#35917007 "Adenocarcinoma"
 * bodySite = SCT#39607008 "Lung structure (body structure)"
@@ -19,7 +18,6 @@ InstanceOf: PrimaryCancerCondition
 Description: "Example of Primary Cancer Condition - hematologic cancer"
 * clinicalStatus = ClinStatus#active "Active"
 * verificationStatus = VerStatus#confirmed "Confirmed"
-* category = CondCat#problem-list-item
 * code = SCT#92814006 "Chronic lymphoid leukemia, disease (disorder)"
 * subject = Reference(cancer-patient-adam-everyman)
 * onsetDateTime = "2020-05-12"
@@ -33,7 +31,6 @@ Description: "Example of Secondary Cancer Condition"
 * extension[relatedPrimaryCancerCondition].valueReference = Reference(primary-cancer-condition-nsclc)
 * clinicalStatus = ClinStatus#active "Active"
 * verificationStatus = VerStatus#confirmed "Confirmed"
-* category = CondCat#problem-list-item
 * code = SCT#94225005 "Secondary malignant neoplasm of brain"
 * subject = Reference(cancer-patient-john-anyperson)
 * onsetDateTime = "2019-05-01"
@@ -68,7 +65,7 @@ InstanceOf: USCoreCondition
 Description: "Example of comorbid condition (congestive heart failure) present"
 * subject = Reference(cancer-patient-john-anyperson)
 * asserter = Reference(us-core-practitioner-kyle-anydoc)
-* category = CondCat#problem-list-item
+* category = CondCat#problem-list-item "Problem List Item"
 * code = ICD10CM#I50.32 "Chronic diastolic (congestive) heart failure"
 * verificationStatus = VerStatus#confirmed
 * extension[condition-assertedDate].valueDateTime = "2019-04-01"

@@ -32,13 +32,13 @@ Description: "Extended example as a mCODE Patient Bundle"
 * entry[=].fullUrl = "http://example.org/fhir/DiagnosticReport/genomics-report-jenny-m"
 * entry[+].resource = cancer-related-surgical-procedure-jenny-m
 * entry[=].fullUrl = "http://example.org/fhir/Procedure/cancer-related-surgical-procedure-jenny-m"
-//* entry[+].resource = cancer-related-mcode-comorbidities-elixhauser-jenny-m
-//* entry[=].fullUrl = "http://example.org/fhir/Observation/cancer-related-mcode-comorbidities-elixhauser-jenny-m"
-* entry[+].resource = radiotherapy-treatment-summary-chest-wall-jenny-m  // slice 10
+* entry[+].resource = cancer-related-comorbidities-jenny-m
+* entry[=].fullUrl = "http://example.org/fhir/Observation/cancer-related-comorbidities-jenny-m"
+* entry[+].resource = radiotherapy-treatment-summary-chest-wall-jenny-m  // slice 11
 * entry[=].fullUrl = "http://example.org/fhir/Procedure/radiotherapy-treatment-summary-chest-wall-jenny-m"
 * entry[+].resource = tnm-clinical-stage-group-jenny-m
 * entry[=].fullUrl = "http://example.org/fhir/Observation/tnm-clinical-stage-group-jenny-m"
-* entry[+].resource = tnm-clinical-primary-tumor-category-jenny-m  //slice 12
+* entry[+].resource = tnm-clinical-primary-tumor-category-jenny-m  //slice 13
 * entry[=].fullUrl = "http://example.org/fhir/Observation/tnm-clinical-primary-tumor-category-jenny-m"
 * entry[+].resource = tnm-clinical-regional-nodes-category-jenny-m
 * entry[=].fullUrl = "http://example.org/fhir/Observation/tnm-clinical-regional-nodes-category-jenny-m"
@@ -56,9 +56,9 @@ Description: "Extended example as a mCODE Patient Bundle"
 * entry[=].fullUrl = "http://example.org/fhir/Observation/tumor-marker-test-pr-jenny-m"
 * entry[+].resource = tumor-marker-test-her2-jenny-m
 * entry[=].fullUrl = "http://example.org/fhir/Observation/tumor-marker-test-her2-jenny-m"
-* entry[+].resource = tumor-marker-test-oncotype-dx-jenny-m  // slice 21 - code is from GTR (extending)
+* entry[+].resource = tumor-marker-test-oncotype-dx-jenny-m  // slice 22 - code is from GTR (extending)
 * entry[=].fullUrl = "http://example.org/fhir/Observation/tumor-marker-test-oncotype-dx-jenny-m"
-* entry[+].resource = tumor-size-jenny-m  // slice 22
+* entry[+].resource = tumor-size-jenny-m  // slice 23
 * entry[=].fullUrl = "http://example.org/fhir/Observation/tumor-size-jenny-m"
 // Other optional entries like vital signs, providers
 // Note: If named slices are used, then the first unnamed slice entry must be numbered
@@ -80,7 +80,7 @@ Description: "Extended example as a mCODE Patient Bundle"
 * entry[=].fullUrl = "http://example.org/fhir/Procedure/us-core-procedure-mammogram-jenny-m"
 * entry[+].resource = family-member-history-uncle-jenny-m
 * entry[=].fullUrl = "http://example.org/fhir/FamilyMemberHistory/family-member-history-uncle-jenny-m"
-* entry[+].resource = us-core-diagnosticreport-lab-jenny-m  // slice 32
+* entry[+].resource = us-core-diagnosticreport-lab-jenny-m  // slice 33
 * entry[=].fullUrl = "http://example.org/fhir/DiagnosticReport/us-core-diagnosticreport-lab-jenny-m"
 * entry[+].resource = observation-smoking-pack-years-jenny-m
 * entry[=].fullUrl = "http://example.org/fhir/Observation/observation-smoking-pack-years-jenny-m"
@@ -96,7 +96,6 @@ Description: "Extended example as a mCODE Patient Bundle"
 * entry[=].fullUrl = "http://example.org/fhir/Practitioner/us-core-practitioner-owen-oncologist"
 * entry[+].resource = us-core-practitioner-peter-pathologist
 * entry[=].fullUrl = "http://example.org/fhir/Practitioner/us-core-practitioner-peter-pathologist"
-
 
 
 /* Using named slices in assignments is preferred, maybe, but it makes things longer and harder to read, IMO. So using indices instead
@@ -120,8 +119,8 @@ Description: "Extended example as a mCODE Patient Bundle"
 * entry[genomicsReport].fullUrl = "http://example.org/fhir/DiagnosticReport/genomics-report-jenny-m"
 * entry[cancerRelatedSurgicalProcedure].resource = cancer-related-surgical-procedure-jenny-m
 * entry[cancerRelatedSurgicalProcedure].fullUrl = "http://example.org/fhir/Procedure/cancer-related-surgical-procedure-jenny-m"
-//* entry[+].resource = cancer-related-mcode-comorbidities-elixhauser-jenny-m
-//* entry[=].fullUrl = "http://example.org/fhir/Observation/cancer-related-mcode-comorbidities-elixhauser-jenny-m"
+//* entry[+].resource = cancer-related-comorbidities-elixhauser-jenny-m
+//* entry[=].fullUrl = "http://example.org/fhir/Observation/cancer-related-comorbidities-elixhauser-jenny-m"
 * entry[radiotherapyCourseSummary].resource = radiotherapy-treatment-summary-chest-wall-jenny-m
 * entry[radiotherapyCourseSummary].fullUrl = "http://example.org/fhir/Procedure/radiotherapy-treatment-summary-chest-wall-jenny-m"
 * entry[cancerStageGroup].resource = tnm-clinical-stage-group-jenny-m

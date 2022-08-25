@@ -130,7 +130,6 @@
 <artifact id="ValueSet/mcode-teleradiotherapy-photon-beam-technique-vs" key="ValueSet-mcode-teleradiotherapy-photon-beam-technique-vs" name="Photon Beam Technique Value Set"/>
 <artifact deprecated="true" id="ValueSet/mcode-present-absent" key="ValueSet-mcode-present-absent" name="Present Absent Value Set"/>
 <artifact deprecated="true" id="ValueSet/mcode-present-absent-unknown" key="ValueSet-mcode-present-absent-unknown" name="Present-Absent-Unknown"/>
-<artifact id="ValueSet/mcode-primary-cancer-disorder-max-vs" key="ValueSet-mcode-primary-cancer-disorder-max-vs" name="Primary Cancer Condition Maximum Value Set"/>
 <artifact id="StructureDefinition/mcode-primary-cancer-condition" key="primary-cancer-condition" name="Primary Cancer Condition Profile"/>
 <artifact id="ValueSet/mcode-primary-cancer-disorder-vs" key="ValueSet-mcode-primary-cancer-disorder-vs" name="Primary Cancer Disorder Value Set"/>
 <artifact id="ValueSet/mcode-primary-malignant-neoplasm-disorder-vs" key="ValueSet-mcode-primary-malignant-neoplasm-disorder-vs" name="Primary Malignant Neoplasm Disorder Value Set"/>
@@ -160,12 +159,10 @@
 <artifact id="StructureDefinition/mcode-related-condition" key="StructureDefinition-mcode-related-condition" name="Related Condition Extension"/>
 <artifact id="StructureDefinition/mcode-related-condition-absent" key="StructureDefinition-mcode-related-condition" name="Related Condition Extension"/>
 <artifact deprecated="true" id="Extension/mcode-related-primary-cancer-condition-extension" key="related-primary-cancer-condition-extension" name="Related Primary Cancer Condition Extension"/>
-<artifact deprecated="true" id="CodeSystem/comorbid-condition-cs" key="CodeSystem-loinc-requested-cs" name="Requested LOINC Codes Code System"/>
 <artifact deprecated="true" id="CodeSystem/loinc-requested-cs" key="CodeSystem-loinc-requested-cs" name="Requested LOINC Codes Code System"/>
 <artifact id="CodeSystem/snomed-requested-cs" key="CodeSystem-snomed-requested-cs" name="Requested SNOMED Codes Code System"/>
 <artifact id="SearchParameter/Patient-id" key="SearchParameter-Patient-id" name="Search by _id in Patients with multipleOr"/>
 <artifact id="SearchParameter/Condition-code" key="SearchParameter-Condition-code" name="Search by code:in in Conditions"/>
-<artifact id="ValueSet/mcode-secondary-cancer-disorder-max-vs" key="ValueSet-mcode-secondary-cancer-disorder-max-vs" name="Secondary Cancer Condition Maximum Value Set"/>
 <artifact id="StructureDefinition/mcode-secondary-cancer-condition" key="secondary-cancer-condition" name="Secondary Cancer Condition Profile"/>
 <artifact id="ValueSet/mcode-secondary-cancer-disorder-vs" key="secondary-cancer-disorder-value-set" name="Secondary Cancer Disorder Value Set"/>
 <artifact id="ValueSet/mcode-hypereosinophilic-syndrome-disorder-vs" key="ValueSet-mcode-hypereosinophilic-syndrome-disorder-vs" name="Specific Diagnosis of Cancer Value Set"/>

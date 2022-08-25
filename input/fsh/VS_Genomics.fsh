@@ -46,6 +46,8 @@ Title: "Tumor Marker Test Maximum Value Set"
 Description: "Codes for tumor marker test that are excluded from the set of extensible codes."
 * insert LOINCCopyrightForVS
 * include codes from system LNC
+//* include codes from system GTR
+* include codes from system SCT
 * exclude LNC#69548-6 "Genetic variant assessment"
 * exclude LNC#53041-0 "DNA region of interest panel"
 * exclude LNC#21889-1 "Size Tumor"

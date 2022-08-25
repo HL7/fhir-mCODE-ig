@@ -362,8 +362,7 @@ Instance: us-core-diagnosticreport-lab-jenny-m
 InstanceOf: USCoreDiagnosticReportLab
 Description: "Extended example: example of pathology findings represented as a DiagnosticReport resource."
 * status = #final "final"
-* category[LaboratorySlice] = ObsCat#LAB
-* category[1] = DiagnosticService#SP "Surgical Pathology"  // does not match any known slice in US Core Diagnostic Report -- but that's ok
+//* category[1] = DiagnosticService#SP "Surgical Pathology"  // does not match any known slice in US Core Diagnostic Report -- but that's ok
 * code = LNC#22637-3 "Pathology report final diagnosis Narrative"
 * subject = Reference(cancer-patient-jenny-m)
 * issued = "2018-04-05T00:00:00Z"
@@ -418,6 +417,7 @@ InstanceOf:  TumorSize
 Description: "Extended example: example showing tumor size"
 * status = #final "final"
 * code = LNC#21889-1 "Size Tumor"
+//* category[Laboratory] = ObsCat#laboratory  // inherited
 * method = LNC#24419-4 "Pathology report gross observation"
 * subject = Reference(cancer-patient-jenny-m)
 * effectiveDateTime = "2018-04-01T00:00:00Z"
@@ -494,7 +494,7 @@ Instance: tumor-marker-test-oncotype-dx-jenny-m
 InstanceOf: TumorMarkerTest
 Description: "Extended example: example showing Oncotype DX breast recurrence score. Note that this test has no assigned LOINC code, so GTR is being used as a backup. Only the score from the Oncotype DX panel (as opposed to variant data from the genes in the panel) is represented here."
 * status = #final "final"
-* code = GTR#509910 "Oncotype DX Breast Recurrence Score Assay"  // extensible
+* code = GTR#509910 "Oncotype DX Breast Recurrence Score Assay"  // take advantage of extensibility
 * code.text = "Oncotype DX Breast Recurrence Score Assay"
 * subject = Reference(cancer-patient-jenny-m)
 * effectiveDateTime = "2018-04-12"

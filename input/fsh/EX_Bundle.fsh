@@ -34,7 +34,7 @@ Description: "Extended example as a mCODE Patient Bundle"
 * entry[=].fullUrl = "http://example.org/fhir/Procedure/cancer-related-surgical-procedure-jenny-m"
 //* entry[+].resource = cancer-related-mcode-comorbidities-elixhauser-jenny-m
 //* entry[=].fullUrl = "http://example.org/fhir/Observation/cancer-related-mcode-comorbidities-elixhauser-jenny-m"
-* entry[+].resource = radiotherapy-treatment-summary-chest-wall-jenny-m
+* entry[+].resource = radiotherapy-treatment-summary-chest-wall-jenny-m  // slice 10
 * entry[=].fullUrl = "http://example.org/fhir/Procedure/radiotherapy-treatment-summary-chest-wall-jenny-m"
 * entry[+].resource = tnm-clinical-stage-group-jenny-m
 * entry[=].fullUrl = "http://example.org/fhir/Observation/tnm-clinical-stage-group-jenny-m"
@@ -56,7 +56,7 @@ Description: "Extended example as a mCODE Patient Bundle"
 * entry[=].fullUrl = "http://example.org/fhir/Observation/tumor-marker-test-pr-jenny-m"
 * entry[+].resource = tumor-marker-test-her2-jenny-m
 * entry[=].fullUrl = "http://example.org/fhir/Observation/tumor-marker-test-her2-jenny-m"
-* entry[+].resource = tumor-marker-test-oncotype-dx-jenny-m
+* entry[+].resource = tumor-marker-test-oncotype-dx-jenny-m  // slice 21 - code is from GTR (extending)
 * entry[=].fullUrl = "http://example.org/fhir/Observation/tumor-marker-test-oncotype-dx-jenny-m"
 * entry[+].resource = tumor-size-jenny-m  // slice 22
 * entry[=].fullUrl = "http://example.org/fhir/Observation/tumor-size-jenny-m"

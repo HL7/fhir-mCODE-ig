@@ -14,7 +14,7 @@ Description: "mCODE Example for Primary Cancer Condition (breast). The example s
 * stage.summary = SCT#1222806003 "American Joint Committee on Cancer stage IIIC (qualifier value)"
 * stage.assessment = Reference(tnm-clinical-stage-group-3c)
 
-Instance: tumor-size-pathology 
+Instance: tumor-size-pathology
 InstanceOf: TumorSize
 Description: "Example of a resource conforming to the tumor size profile."
 * status = #final

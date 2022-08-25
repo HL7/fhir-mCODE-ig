@@ -12,7 +12,8 @@ Description: "A collection of data for an mCODE cancer patient."
 * entry ^slicing.rules = #open
 * entry ^slicing.description = "Slicing based on the profile"
 * insert BundleSlice(cancerPatient, 1, 1, Cancer Patient, The Cancer Patient whose data is included in the bundle., CancerPatient)
-* insert BundleSlice(cancerCondition, 0, *, Cancer Condition, Condition resource representing any primary or secondary cancer condition., CancerCondition)
+* insert BundleSlice(primaryCancerCondition, 0, *, Primary Cancer Condition, Condition resource representing any primary cancer condition., PrimaryCancerCondition)
+* insert BundleSlice(secondaryCancerCondition, 0, *, Secondary Cancer Condition, Condition resource representing any secondary cancer condition., SecondaryCancerCondition)
 * insert BundleSlice(cancerRelatedMedicationAdministration, 0, *, Cancer-Related Medication Administration, MedicationAdministration resource representing medication administrations., CancerRelatedMedicationAdministration)
 * insert BundleSlice(cancerRelatedMedicationRequest, 0, *, Cancer-Related Medication Request, MedicationRequest resources representing cancer-related medications\, including both active and inactive medications., CancerRelatedMedicationRequest)
 * insert BundleSlice(cancerDiseaseStatus, 0, *, Cancer Disease Status, Observations resource representing Cancer Disease Status. Include past assessments if available., CancerDiseaseStatus)

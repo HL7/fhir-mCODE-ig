@@ -60,8 +60,8 @@ Description: "Example of Cancer-Related Comorbidities"
 // present
 * extension[comorbidConditionPresent].valueReference = Reference(john-anyperson-chf)
 // absent
-* extension[comorbidConditionAbsent][0].valueReference = Reference(john-anyperson-obesity-absent)
-* extension[comorbidConditionAbsent][1].valueReference = Reference(john-anyperson-pulmonary-disease-absent)
+* extension[comorbidConditionAbsent][0].valueCodeableConcept = SCT#414916001 "Obesity (disorder)"
+* extension[comorbidConditionAbsent][1].valueCodeableConcept = SCT#19829001 "Disorder of lung (disorder)"
 
 Instance: john-anyperson-chf
 InstanceOf: USCoreCondition
@@ -71,26 +71,6 @@ Description: "Example of comorbid condition (congestive heart failure) present"
 * category = CondCat#problem-list-item
 * code = ICD10CM#I50.32 "Chronic diastolic (congestive) heart failure"
 * verificationStatus = VerStatus#confirmed
-* extension[condition-assertedDate].valueDateTime = "2019-04-01"
-
-Instance: john-anyperson-obesity-absent
-InstanceOf: USCoreCondition
-Description: "Example of comorbid condition (obesity) not present"
-* subject = Reference(cancer-patient-john-anyperson)
-* asserter = Reference(us-core-practitioner-kyle-anydoc)
-* category = CondCat#problem-list-item
-* code = SCT#414916001 "Obesity (disorder)"
-* verificationStatus = VerStatus#refuted
-* extension[condition-assertedDate].valueDateTime = "2019-04-01"
-
-Instance: john-anyperson-pulmonary-disease-absent
-InstanceOf: USCoreCondition
-Description: "Example of comorbid condition (lung disease) not present"
-* subject = Reference(cancer-patient-john-anyperson)
-* asserter = Reference(us-core-practitioner-kyle-anydoc)
-* category = CondCat#problem-list-item
-* code = SCT#19829001 "Disorder of lung (disorder)"
-* verificationStatus = VerStatus#refuted
 * extension[condition-assertedDate].valueDateTime = "2019-04-01"
 
 Instance: cancer-patient-john-anyperson

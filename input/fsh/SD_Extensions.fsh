@@ -3,7 +3,7 @@ Id: mcode-related-condition
 Title:  "Related Condition Extension"
 Description: "The resource has an unspecified relationship with a Condition."
 * ^extension[FMM].valueInteger = 4
-* value[x] only Reference(Condition)
+* value[x] only CodeableConcept or Reference(Condition) 
 * value[x] 1..1
 
 Extension: CancerDiseaseStatusEvidenceType

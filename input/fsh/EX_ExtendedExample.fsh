@@ -150,25 +150,12 @@ Description: "mCODE Example for Cancer-Related Comorbidities"
 * effectiveDateTime = "2018-03-16"
 // CHANGE THIS!
 // present
-* extension[comorbidConditionPresent].valueReference = Reference(john-anyperson-chf)
+* extension[comorbidConditionPresent][0].valueReference = Reference(us-core-condition-depression-jenny-m)
+* extension[comorbidConditionPresent][1].valueReference = Reference(us-core-condition-anxiety-jenny-m)
+* extension[comorbidConditionPresent][2].valueReference = Reference(us-core-condition-hypertension-jenny-m)
 // absent
-* extension[comorbidConditionAbsent][0].valueReference = Reference(john-anyperson-obesity-absent)
-* extension[comorbidConditionAbsent][1].valueReference = Reference(john-anyperson-pulmonary-disease-absent)
-/*
-* component[depression].valueCodeableConcept = SCT#52101004 "Present (qualifier value)"
-* component[depression].extension[conditionReference].valueReference = Reference(us-core-condition-depression-jenny-m)
-* component[hypertensionComplicated].valueCodeableConcept = SCT#52101004 "Present (qualifier value)"
-* component[hypertensionComplicated].extension[conditionReference].valueReference = Reference(us-core-condition-hypertension-jenny-m)
-* component[arthropathy].valueCodeableConcept = SCT#2667000 "Absent (qualifier value)"
-* component[congestiveHeartFailure].valueCodeableConcept = SCT#2667000 "Absent (qualifier value)"
-* component[chronicPulmonaryDisease].valueCodeableConcept = SCT#2667000 "Absent (qualifier value)"
-* component[diabetesUncomplicated].valueCodeableConcept = SCT#2667000 "Absent (qualifier value)"
-* component[diabetesComplicated].valueCodeableConcept = SCT#2667000 "Absent (qualifier value)"
-* component[obesity].valueCodeableConcept = SCT#2667000 "Absent (qualifier value)"
-* component[peripheralVascularDisease].valueCodeableConcept = SCT#2667000 "Absent (qualifier value)"
-* component[pulmonaryCirculationDisorder].valueCodeableConcept = SCT#2667000 "Absent (qualifier value)"
-* component[renalFailureModerate].valueCodeableConcept = SCT#2667000 "Absent (qualifier value)"
-*/
+* extension[comorbidConditionAbsent][0].valueCodeableConcept = SCT#414916001 "Obesity (disorder)"
+* extension[comorbidConditionAbsent][1].valueCodeableConcept = SCT#19829001 "Disorder of lung (disorder)"
 
 
 Instance: ecog-performance-status-jenny-m

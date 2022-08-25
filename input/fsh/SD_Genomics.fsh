@@ -65,7 +65,7 @@ Description: "The result of a tumor marker test. Tumor marker tests are generall
 * value[x] 1..1
 * code from TumorMarkerTestVS (extensible)
 // Establishing a maximum binding assures that a TumorMarkerTest cannot be confused with a TumorSize, GenomicRegionStudied, or GenomicVariant profile when instances are in the same bundle. MK 8/24/2022
-* code ^binding.extension[http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet].valueCanonical = Canonical(TumorMarkerTestMaxVS)
+//* code ^binding.extension[http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet].valueCanonical = Canonical(TumorMarkerTestMaxVS)
 * subject only Reference(CancerPatient)
 * subject ^definition = "Patient whose tumor marker test is recorded."
 * effective[x] only dateTime or Period

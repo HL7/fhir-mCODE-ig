@@ -26,7 +26,7 @@ Description: "Extended example as a mCODE Patient Bundle"
 * entry[=].fullUrl = "http://example.org/fhir/MedicationRequest/cancer-related-medication-request-anastrozole-jenny-m"
 * entry[+].resource = cancer-disease-status-jenny-m
 * entry[=].fullUrl = "http://example.org/fhir/Observation/cancer-disease-status-jenny-m"
-* entry[+].resource = genomic-variant-jenny-m
+* entry[+].resource = genomic-variant-jenny-m   // slice 7
 * entry[=].fullUrl = "http://example.org/fhir/Observation/genomic-variant-jenny-m"
 * entry[+].resource = genomics-report-jenny-m
 * entry[=].fullUrl = "http://example.org/fhir/DiagnosticReport/genomics-report-jenny-m"

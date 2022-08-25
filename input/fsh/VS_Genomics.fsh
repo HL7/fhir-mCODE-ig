@@ -39,7 +39,7 @@ Description:    "The type of specimen analyzed in a genomic test. The values inc
 * SPTY#STL       "Stool = Fecal"   // FHIR-32827
 //* SPTY#OTH       "Source, Other"   // FHIR-32827 -- Other should not be added because the VS is extensible
 
-
+/*
 ValueSet: TumorMarkerTestMaxVS
 Id: mcode-tumor-marker-test-max-vs
 Title: "Tumor Marker Test Maximum Value Set"
@@ -51,6 +51,7 @@ Description: "Codes for tumor marker test that are excluded from the set of exte
 * exclude LNC#69548-6 "Genetic variant assessment"
 * exclude LNC#53041-0 "DNA region of interest panel"
 * exclude LNC#21889-1 "Size Tumor"
+*/
 
 ValueSet: TumorMarkerTestVS
 Id: mcode-tumor-marker-test-vs

@@ -78,7 +78,7 @@
 
 #### Assessment Group Changes
 
-* Replaced local codes for Comorbidities with codes in the LoincRequestedCS code system (now renamed [ComorbidConditionCS]), since codes have now been requested in LOINC.
+* Replaced local codes for Comorbidities with codes in the LoincRequestedCS code system, since codes have now been requested in LOINC.
 * Clarified that the overall risk score should be included in the Elixhauser Comorbidity, and explained cases where might be missing. [FHIR-32280](https://jira.hl7.org/browse/FHIR-32279), [FHIR-32280](https://jira.hl7.org/browse/FHIR-32280)
 * Removed "unknown" from value set in Elixhauser Comorbidity profile components since unknown is not a part of the Elixhauser score. [FHIR-32280](https://jira.hl7.org/browse/FHIR-32281)
 
@@ -147,7 +147,7 @@ A comprehensive listing of differences in FHIR artifacts between STU 1 and STU 2
 ### Assessment
 
 * Changed the name of this group from Labs & Vital to Assessment and moved Performance Assessments and Comorbidities into this group.
-* [Comorbidities][ComorbiditiesElixhauser] have been redesigned to capture the presence or absence of all comorbidities in one Observation.
+* [Comorbidities][Comorbidities] have been redesigned to capture the presence or absence of all comorbidities in one Observation.
 
 #### Disease
 

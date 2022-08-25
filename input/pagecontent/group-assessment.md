@@ -2,7 +2,7 @@ The mCODE **Assessment** group contains information related to the patient's gen
 
 ### Comorbidities
 
-Comorbidities are important in the prognosis and treatment of cancer. Comorbid conditions in mCODE are aligned with the [Elixhauser Comorbidity Index](https://www.hcup-us.ahrq.gov/toolssoftware/comorbidityicd10/comorbidity_icd10.jsp). A similar approach could be used with other systems of comorbidity assessment, such as the [Charlson Comorbidity Index](https://healthcaredelivery.cancer.gov/seermedicare/considerations/comorbidity.html), but that remains outside the scope of mCODE.
+Comorbidities are important in the prognosis and treatment of cancer. Any existing or new conditions can be designated as comorbidities.
 
 ### Performance Assessments
 
@@ -24,8 +24,7 @@ Vital signs are measurements of the most essential, or "vital" body functions. F
 
 ### Profiles
 
-* [ComorbiditiesElixhauser]
-* [ComorbiditiesParent] (abstract profile)
+* [Comorbidities]
 * [ECOGPerformanceStatus]
 * [FHIR Vital Signs](https://www.hl7.org/fhir/observation-vitalsigns.html)
 * [KarnofskyPerformanceStatus]

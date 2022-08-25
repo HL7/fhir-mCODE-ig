@@ -31,7 +31,6 @@ The following value sets are defined in this implementation guide:
 * [ObservationCodesPrimaryTumorVS]
 * [ObservationCodesRegionalNodesVS]
 * [ObservationCodesStageGroupVS]
-* [PresentAbsentVS]
 * [PrimaryCancerDisorderVS]
 * [PrimaryMalignantNeoplasmDisorderVS]
 * [ProcedureIntentVS]

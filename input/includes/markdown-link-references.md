@@ -80,7 +80,6 @@
 [ObservationCodesPrimaryTumorVS]: ValueSet-mcode-observation-codes-primary-tumor-vs.html
 [ObservationCodesRegionalNodesVS]: ValueSet-mcode-observation-codes-regional-nodes-vs.html
 [ObservationCodesStageGroupVS]: ValueSet-mcode-observation-codes-stage-group-vs.html
-[PresentAbsentVS]: ValueSet-mcode-present-absent.html
 [PrimaryCancerDisorderVS]: ValueSet-mcode-primary-cancer-disorder-vs.html
 [PrimaryMalignantNeoplasmDisorderVS]: ValueSet-mcode-primary-malignant-neoplasm-disorder-vs.html
 [ProcedureIntentVS]: ValueSet-mcode-procedure-intent-vs.html
@@ -112,7 +111,6 @@
 [Medication Clinical Drug (RxNorm)]: http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1010.4
 
 <!-- mCODE Code Systems -->
-[ComorbidConditionCS]: CodeSystem-comorbid-condition-cs.html
 [SnomedRequestedCS]: CodeSystem-snomed-requested-cs.html
 
 <!-- mCODE CapabilityStatements -->

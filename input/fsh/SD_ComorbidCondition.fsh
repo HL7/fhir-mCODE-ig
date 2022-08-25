@@ -13,7 +13,7 @@ Description: "General structure for capturing comorbid conditions with respect t
 // We cannot use hasMember because that element does not allow Reference(Condition) or CodeableConcept as a type
 // We cannot use component because that element does not allow References of any type
 * extension contains RelatedCondition named comorbidConditionPresent 0..*
-* extension contains RelatedCondition named comorbidConditionAbsent 0..*
+* extension contains RelatedConditionAbsent named comorbidConditionAbsent 0..*
 * insert NotUsed(bodySite)
 * insert NotUsed(specimen)
 * insert NotUsed(device)

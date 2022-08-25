@@ -13,8 +13,7 @@ Where US Core does not provide an appropriate base profile, mCODE profiles FHIR 
 | [Cancer-Related Medication Request][CancerRelatedMedicationRequest] | yes | US Core Medication Request |
 | [Cancer-Related Surgical Procedure][CancerRelatedSurgicalProcedure] | yes | US Core Procedure |
 | [Cancer Stage Group][CancerStageGroup] | no | Observation |
-| [Comorbidities Elixhauser][ComorbiditiesElixhauser] | no | Comorbidities Parent |
-| [Comorbidities Parent][ComorbiditiesParent]  | no | Observation |
+| [Comorbidities][Comorbidities] | no | Observation |
 | [ECOG Performance Status][ECOGPerformanceStatus] | no | Observation |
 | [Genomic Region Studied][GenomicRegionStudied] | yes | US Core Laboratory Result Observation |
 | [Genomic Specimen][GenomicSpecimen] | no | Specimen |

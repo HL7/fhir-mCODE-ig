@@ -1,7 +1,15 @@
 Extension: RelatedCondition
 Id: mcode-related-condition
 Title:  "Related Condition Extension"
-Description: "The resource has an unspecified relationship with a Condition."
+Description: "The condition has a relationship with the Condition."
+* ^extension[FMM].valueInteger = 4
+* value[x] only CodeableConcept or Reference(Condition) 
+* value[x] 1..1
+
+Extension: RelatedConditionAbsent
+Id: mcode-related-condition-absent
+Title:  "Related Condition Extension"
+Description: "A condition that is not present has a relationship with the Condition."
 * ^extension[FMM].valueInteger = 4
 * value[x] only CodeableConcept or Reference(Condition) 
 * value[x] 1..1

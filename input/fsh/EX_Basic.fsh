@@ -49,7 +49,7 @@ Description: "Example of Cancer Disease Status"
 * performer = Reference(us-core-practitioner-kyle-anydoc)
 * valueCodeableConcept = SCT#268910001 "Patient's condition improved (finding)"
 
-Instance: cancer-related-mcode-comorbidities-elixhauser-john-anyperson
+Instance: cancer-related-mcode-comorbidities-john-anyperson
 InstanceOf: Comorbidities
 Description: "Example of Cancer-Related Comorbidities"
 * subject = Reference(cancer-patient-john-anyperson)

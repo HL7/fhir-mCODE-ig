@@ -1,6 +1,10 @@
 ### STU 3 Ballot Version  (Expected January 2023)
- 
-* Renamed LoincRequestedCS code system to [ComorbidConditionCS]), since the proposed codes were rejected by LOINC and more accurately are comorbid conditions.
+
+* [Comorbidities][Comorbidities] have been redesigned in a more compact form.
+  * Comorbidities are now free-form; no longer based on the Elixhauser framework.
+  * Value sets, extensions, and profiles related to Elixhauser comorbidities have been eliminated.
+  * Users can now list or reference any condition as a comorbidity present or absent.
+  * ConditionReference extension has been altered to allow either a reference or a CodeableConcept.
 * Updated to US Core 5.0.1
   * Changed parent profiles of Karnofsky and ECOG Performance Status profiles and Cancer Disease Status profile to the newly-introduced US Core Observation Clinical Test Result Profile
 * Created dependency on Genomics Reporting IG (GRIG) STU2 (v2.0.0)

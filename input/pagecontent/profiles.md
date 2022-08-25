@@ -7,7 +7,7 @@ The following profiles and have been defined for this implementation guide:
 * [CancerRelatedMedicationRequest]
 * [CancerRelatedSurgicalProcedure]
 * [CancerStageGroup]
-* [ComorbiditiesElixhauser]
+* [Comorbidities]
 * [ComorbiditiesParent]
 * [ECOGPerformanceStatus]
 * [GenomicRegionStudied]

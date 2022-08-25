@@ -58,7 +58,7 @@
 * Added external value sets used by mCODE to FHIR Artifacts [Value Sets](valuesets.html) page
 * Updated [terminology](terminology.html) page to include code system identifiers recommended by HL7 Terminology Authority, and to document [local code systems](terminology.html#local-code-systems).
 * Local code systems have been consolidated and reorganized to reduce their number. Local codes have been standardized to reflect codes requested from SNOMED and LOINC.
-* Added FSH rendering in notes section for all example instances (e.g., this [example](Observation-cancer-related-comorbidities-elixhauser-john-anyperson.html#notes))
+* Added FSH rendering in notes section for all example instances
 * Added more readable renderings of all [capability statements](https://hl7.org/fhir/us/mcode/capabilitystatements.html).
 * Made values required in all extensions because extensions should never appear if there is no value. [FHIR-33003](https://jira.hl7.org/browse/FHIR-33003)
 * All definitions have been reviewed and edited and numerous improvements and corrections made to narrative content.

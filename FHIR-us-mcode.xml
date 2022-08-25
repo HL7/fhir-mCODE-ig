@@ -220,10 +220,10 @@
 <artifact id="Patient/cancer-patient-eve-anyperson" key="Patient-cancer-patient-eve-anyperson" name="cancer-patient-eve-anyperson"/>
 <artifact id="Patient/cancer-patient-jenny-m" key="Patient-cancer-patient-jenny-m" name="cancer-patient-jenny-m"/>
 <artifact id="Patient/cancer-patient-john-anyperson" key="Patient-cancer-patient-john-anyperson" name="cancer-patient-john-anyperson"/>
+<artifact id="Observation/cancer-related-comorbidities-jenny-m" key="Observation-cancer-related-comorbidities-jenny-m" name="cancer-related-comorbidities-jenny-m"/>
+<artifact id="Observation/cancer-related-comorbidities-john-anyperson" key="Observation-cancer-related-comorbidities-john-anyperson" name="cancer-related-comorbidities-john-anyperson"/>
 <artifact deprecated="true" id="Observation/cancer-related-mcode-comorbidities-elixhauser-jenny-m" key="Observation-cancer-related-mcode-comorbidities-elixhauser-jenny-m" name="cancer-related-mcode-comorbidities-elixhauser-jenny-m"/>
 <artifact deprecated="true" id="Observation/cancer-related-mcode-comorbidities-elixhauser-john-anyperson" key="Observation-cancer-related-mcode-comorbidities-elixhauser-john-anyperson" name="cancer-related-mcode-comorbidities-elixhauser-john-anyperson"/>
-<artifact id="Observation/cancer-related-mcode-comorbidities-jenny-m" key="Observation-cancer-related-mcode-comorbidities-jenny-m" name="cancer-related-mcode-comorbidities-jenny-m"/>
-<artifact id="Observation/cancer-related-mcode-comorbidities-john-anyperson" key="Observation-cancer-related-mcode-comorbidities-john-anyperson" name="cancer-related-mcode-comorbidities-john-anyperson"/>
 <artifact id="MedicationAdministration/cancer-related-medication-admin-cyclophosphamide-jenny-m" key="MedicationAdministration-cancer-related-medication-admin-cyclophosphamide-jenny-m" name="cancer-related-medication-admin-cyclophosphamide-jenny-m"/>
 <artifact id="MedicationAdministration/cancer-related-medication-admin-doxorubicin-jenny-m" key="MedicationAdministration-cancer-related-medication-admin-doxorubicin-jenny-m" name="cancer-related-medication-admin-doxorubicin-jenny-m"/>
 <artifact id="MedicationAdministration/cancer-related-medication-admin-paclitaxel-jenny-m" key="MedicationAdministration-cancer-related-medication-admin-paclitaxel-jenny-m" name="cancer-related-medication-admin-paclitaxel-jenny-m"/>

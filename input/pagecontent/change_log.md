@@ -1,10 +1,9 @@
 ### STU 3 Ballot Version  (Expected January 2023)
 
-* [Comorbidities][Comorbidities] have been redesigned in a more compact form.
-  * Comorbidities are now free-form; no longer based on the Elixhauser framework.
+* [Comorbidities][Comorbidities] have been redesigned into a more compact form.
+  * Comorbidities are no longer based on the Elixhauser framework. Users can now list or reference any condition as a comorbidity present or absent.
   * Value sets, extensions, and profiles related to Elixhauser comorbidities have been eliminated.
-  * Users can now list or reference any condition as a comorbidity present or absent.
-  * ConditionReference extension has been altered to allow either a reference or a CodeableConcept.
+  * ConditionReference extension has been expanded to allow either a reference or a CodeableConcept.
 * Updated to US Core 5.0.1
   * Changed parent profiles of Karnofsky and ECOG Performance Status profiles and Cancer Disease Status profile to the newly-introduced US Core Observation Clinical Test Result Profile
 * Created dependency on Genomics Reporting IG (GRIG) STU2 (v2.0.0)
@@ -59,7 +58,7 @@
 * Added external value sets used by mCODE to FHIR Artifacts [Value Sets](valuesets.html) page
 * Updated [terminology](terminology.html) page to include code system identifiers recommended by HL7 Terminology Authority, and to document [local code systems](terminology.html#local-code-systems).
 * Local code systems have been consolidated and reorganized to reduce their number. Local codes have been standardized to reflect codes requested from SNOMED and LOINC.
-* Added FSH rendering in notes section for all example instances (e.g., this [example](Observation-cancer-related-mcode-comorbidities-elixhauser-john-anyperson.html#notes))
+* Added FSH rendering in notes section for all example instances (e.g., this [example](Observation-cancer-related-comorbidities-elixhauser-john-anyperson.html#notes))
 * Added more readable renderings of all [capability statements](https://hl7.org/fhir/us/mcode/capabilitystatements.html).
 * Made values required in all extensions because extensions should never appear if there is no value. [FHIR-33003](https://jira.hl7.org/browse/FHIR-33003)
 * All definitions have been reviewed and edited and numerous improvements and corrections made to narrative content.

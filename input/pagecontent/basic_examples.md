@@ -27,7 +27,7 @@
 
 ### [Comorbidities](StructureDefinition-mcode-comorbidities.html) ([Observation](http://hl7.org/fhir/R4/observation.html))
 
-* [Cancer Related Comorbidities - John Anyperson](Observation-cancer-related-mcode-comorbidities-john-anyperson.html)
+* [Cancer Related Comorbidities - John Anyperson](Observation-cancer-related-comorbidities-john-anyperson.html)
 
 ### [ECOG Performance Status](StructureDefinition-mcode-ecog-performance-status.html) ([US Core Observation Clinical Test Result Profile](https://hl7.org/fhir/us/core/StructureDefinition-us-core-observation-clinical-test.html))
 

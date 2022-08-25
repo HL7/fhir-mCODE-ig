@@ -141,7 +141,7 @@ Description: "Extended example: example showing family member history of cancer"
 * condition.contributedToDeath = true
 * deceasedBoolean = true
 
-Instance: cancer-related-mcode-comorbidities-jenny-m
+Instance: cancer-related-comorbidities-jenny-m
 InstanceOf: Comorbidities
 Description: "mCODE Example for Cancer-Related Comorbidities"
 * subject = Reference(cancer-patient-jenny-m)

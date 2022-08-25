@@ -7,25 +7,25 @@ Where US Core does not provide an appropriate base profile, mCODE profiles FHIR 
 | Profile | Based on US Core?  | Immediate Parent Profile |
 |---------|--------------------|--------------------------|
 | [Body Structure Identifier][BodyStructureIdentifier] | no | Identifier |
-| [Cancer Disease Status][CancerDiseaseStatus] | no | Observation |
+| [Cancer Disease Status][CancerDiseaseStatus] | yes | US Core Observation Clinical Test Result |
 | [Cancer Patient][CancerPatient] | yes | US Core Patient |
 | [Cancer-Related Medication Administration][CancerRelatedMedicationAdministration] | no | Medication Administration |
 | [Cancer-Related Medication Request][CancerRelatedMedicationRequest] | yes | US Core Medication Request |
 | [Cancer-Related Surgical Procedure][CancerRelatedSurgicalProcedure] | yes | US Core Procedure |
 | [Cancer Stage Group][CancerStageGroup] | no | Observation |
-| [Comorbidities][Comorbidities] | no | Observation |
-| [ECOG Performance Status][ECOGPerformanceStatus] | no | Observation |
+| [Comorbidities][Comorbidities] | yes | US Core Observation Clinical Test Result |
+| [ECOG Performance Status][ECOGPerformanceStatus] | yes | US Core Observation Clinical Test Result |
 | [Genomic Region Studied][GenomicRegionStudied] | yes | US Core Laboratory Result Observation |
 | [Genomic Specimen][GenomicSpecimen] | no | Specimen |
 | [Genomics Report][GenomicsReport] | yes | US Core Diagnostic Report Lab |
 | [Genomic Variant][GenomicVariant] | yes | US Core Laboratory Result Observation |
-| [Karnofsky Performance Status][KarnofskyPerformanceStatus] | no | Observation |
+| [Karnofsky Performance Status][KarnofskyPerformanceStatus] | yes | US Core Observation Clinical Test Result |
 | [mCODE Patient Bundle][MCODEPatientBundle] | no | Bundle  |
 | [mCODE Patient Group][MCODEPatientGroup] | no | Group  |
-| [Primary Cancer Condition][PrimaryCancerCondition] | yes | US Core Condition |
+| [Primary Cancer Condition][PrimaryCancerCondition] | yes | US Core Condition Problems Health Concerns |
 | [Radiotherapy Course Summary][RadiotherapyCourseSummary] | yes | US Core Procedure |
 | [Radiotherapy Volume][RadiotherapyVolume] | no | BodyStructure |
-| [Secondary Cancer Condition][SecondaryCancerCondition] | yes | US Core Condition |
+| [Secondary Cancer Condition][SecondaryCancerCondition] | yes | US Core Condition Problems Health Concerns |
 | [TNM Distant Metastases Category][TNMDistantMetastasesCategory] | no | Observation |
 | [TNM Primary Tumor Category][TNMPrimaryTumorCategory] | no | Observation |
 | [TNM Regional Nodes Category][TNMRegionalNodesCategory] | no | Observation |

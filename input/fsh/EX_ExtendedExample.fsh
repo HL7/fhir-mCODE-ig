@@ -148,7 +148,6 @@ Description: "mCODE Example for Cancer-Related Comorbidities"
 * performer = Reference(us-core-practitioner-owen-oncologist)
 * status = #final "final"
 * effectiveDateTime = "2018-03-16"
-// CHANGE THIS!
 // present
 * extension[comorbidConditionPresent][0].valueReference = Reference(us-core-condition-depression-jenny-m)
 * extension[comorbidConditionPresent][1].valueReference = Reference(us-core-condition-anxiety-jenny-m)

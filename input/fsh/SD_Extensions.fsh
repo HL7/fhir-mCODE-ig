@@ -1,26 +1,17 @@
-Extension: ComorbidConditionCode
-Id: mcode-comorbid-condition-code
-Title:  "Comorbid Condition Code Extension"
-Description: "An extension for representing a specific condition code corresponding to the comorbid condition category."
-* ^extension[FMM].valueInteger = 1
-* value[x] only CodeableConcept
-* value[x] ^short = "Code for a specific condition in the named comorbidity category."
-* value[x] 1..1
-
-Extension: ComorbidConditionReference
-Id: mcode-comorbid-condition-reference
-Title:  "Comorbid Condition Reference Extension"
-Description: "An extension for representing a reference to a condition resource corresponding to the comorbid condition category."
-* ^extension[FMM].valueInteger = 1
-* value[x] only Reference(Condition)
-* value[x] 1..1
-
 Extension: RelatedCondition
 Id: mcode-related-condition
 Title:  "Related Condition Extension"
-Description: "The resource has an unspecified relationship with a Condition."
+Description: "The condition has a relationship with the Condition."
 * ^extension[FMM].valueInteger = 4
-* value[x] only Reference(Condition)
+* value[x] only CodeableConcept or Reference(Condition) 
+* value[x] 1..1
+
+Extension: RelatedConditionAbsent
+Id: mcode-related-condition-absent
+Title:  "Related Condition Extension"
+Description: "A condition that is not present has a relationship with the Condition."
+* ^extension[FMM].valueInteger = 4
+* value[x] only CodeableConcept or Reference(Condition) 
 * value[x] 1..1
 
 Extension: CancerDiseaseStatusEvidenceType

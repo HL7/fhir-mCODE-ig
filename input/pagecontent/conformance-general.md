@@ -58,7 +58,7 @@ Note that the requests below may return resources associated with patients who a
     * [TumorMarkerTest]\: `GET [base]/Observation?code:in=http://hl7.org/fhir/us/mcode/ValueSet/mcode-tumor-marker-test-vs`
 
 * Assessment
-  * [ComorbiditiesElixhauser]\: `GET [base]/Observation?code=http://loinc.org|78923-0`
+  * [Comorbidities]\: `GET [base]/Observation?code=http://snomed.info/sct|398192003`
   * [ECOGPerformanceStatus]\: `GET [base]/Observation?code=http://loinc.org|89247-1`
   * [KarnofskyPerformanceStatus]\: `GET [base]/Observation?code=http://loinc.org|89243-0`
   * [FHIR Vital Signs](https://www.hl7.org/fhir/observation-vitalsigns.html) and [US Core Vital Signs](https://hl7.org/fhir/us/core/3.2.0/StructureDefinition-us-core-vital-signs.html): `GET [base]/Observation?category=vital-signs`

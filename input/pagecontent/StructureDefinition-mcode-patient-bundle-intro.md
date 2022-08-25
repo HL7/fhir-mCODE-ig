@@ -14,7 +14,7 @@ The bundle MUST contain exactly one Patient resource conforming to the [CancerPa
 * Specimen resources representing to [GenomicSpecimen] and [TumorSpecimen]
 * BodyStructure resources representing [Tumor]
 * Observation resources representing [TumorSize]
-* Observation resource representing to [ComorbiditiesElixhauser], and any referenced Condition resources
+* Observation resource representing [Comorbidities], referencing Condition resources
 * Observation resources for patient height, weight, blood pressure
 * Laboratory results from Comprehensive Metabolic Panels (CMP) and Complete Blood Counts (CBC)
 

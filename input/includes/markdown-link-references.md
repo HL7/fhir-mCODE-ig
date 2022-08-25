@@ -13,8 +13,7 @@
 [CancerRelatedMedicationRequest]: StructureDefinition-mcode-cancer-related-medication-request.html
 [CancerRelatedSurgicalProcedure]: StructureDefinition-mcode-cancer-related-surgical-procedure.html
 [CancerStageGroup]: StructureDefinition-mcode-cancer-stage-group.html
-[ComorbiditiesElixhauser]: StructureDefinition-mcode-comorbidities-elixhauser.html
-[ComorbiditiesParent]: StructureDefinition-mcode-comorbidities-parent.html
+[Comorbidities]: StructureDefinition-mcode-comorbidities.html
 [ECOGPerformanceStatus]: StructureDefinition-mcode-ecog-performance-status.html
 [GenomicRegionStudied]: StructureDefinition-mcode-genomic-region-studied.html
 [GenomicSpecimen]: StructureDefinition-mcode-genomic-specimen.html
@@ -37,8 +36,6 @@
 
 <!-- mCODE Extensions -->
 [BodyLocationQualifier]: StructureDefinition-mcode-body-location-qualifier.html
-[ComorbidConditionCode]: StructureDefinition-mcode-comorbid-condition-code.html
-[ComorbidConditionReference]: StructureDefinition-mcode-comorbid-condition-reference.html
 [CancerDiseaseStatusEvidenceType]: StructureDefinition-mcode-cancer-disease-status-evidence-type.html
 [HistologyMorphologyBehavior]: StructureDefinition-mcode-histology-morphology-behavior.html
 [LateralityQualifier]: StructureDefinition-mcode-laterality-qualifier.html
@@ -72,44 +69,6 @@
 [CarcinomaInSituDisorderVS]: ValueSet-mcode-carcinoma-in-situ-disorder-vs.html
 [ConditionStatusTrendVS]: ValueSet-mcode-condition-status-trend-vs.html
 [CytologicEvidenceOfMalignancyVS]: ValueSet-mcode-cytologic-evidence-malignancy-vs.html
-[ElixhauserAIDSVS]: ValueSet-elixhauser-aids-vs.html
-[ElixhauserAlcoholAbuseVS]: ValueSet-elixhauser-alcohol-abuse-vs.html
-[ElixhauserBloodLossAnemiaVS]: ValueSet-elixhauser-blood-loss-anemia-vs.html
-[ElixhauserCancerLeukemiaVS]: ValueSet-elixhauser-cancer-leukemia-vs.html
-[ElixhauserCancerLymphomaVS]: ValueSet-elixhauser-cancer-lymphoma-vs.html
-[ElixhauserCancerMetastaticVS]: ValueSet-elixhauser-cancer-metastatic-vs.html
-[ElixhauserCancerSolidTumorInSituVS]: ValueSet-elixhauser-cancer-solid-tumor-in-situ-vs.html
-[ElixhauserCancerSolidTumorMalignantVS]: ValueSet-elixhauser-cancer-solid-tumor-malignant-vs.html
-[ElixhauserCerebrovascularDiseaseVS]: ValueSet-elixhauser-cerebrovascular-disease-vs.html
-[ElixhauserChronicPulmonaryDiseaseVS]: ValueSet-elixhauser-chronic-pulmonary-disease-vs.html
-[ElixhauserCoagulationDeficiencyVS]: ValueSet-elixhauser-coagulation-deficiency-vs.html
-[ElixhauserCongestiveHeartFailureVS]: ValueSet-elixhauser-congestive-heart-failure-vs.html
-[ElixhauserDeficiencyAnemiaVS]: ValueSet-elixhauser-deficiency-anemia-vs.html
-[ElixhauserDementiaVS]: ValueSet-elixhauser-dementia-vs.html
-[ElixhauserDepressionVS]: ValueSet-elixhauser-depression-vs.html
-[ElixhauserDiabetesComplicatedVS]: ValueSet-elixhauser-diabetes-complicated-vs.html
-[ElixhauserDiabetesUncomplicatedVS]: ValueSet-elixhauser-diabetes-uncomplicated-vs.html
-[ElixhauserDrugAbuseVS]: ValueSet-elixhauser-drug-abuse-vs.html
-[ElixhauserHypertensionComplicatedVS]: ValueSet-elixhauser-hypertension-complicated-vs.html
-[ElixhauserHypertensionUncomplicatedVS]: ValueSet-elixhauser-hypertension-uncomplicated-vs.html
-[ElixhauserHypothyroidismVS]: ValueSet-elixhauser-hypothyroidism-vs.html
-[ElixhauserLiverDiseaseMildVS]: ValueSet-elixhauser-liver-disease-mild-vs.html
-[ElixhauserLiverDiseaseSevereVS]: ValueSet-elixhauser-liver-disease-severe-vs.html
-[ElixhauserNeurologicalMovementDisorderVS]: ValueSet-elixhauser-neurological-movement-disorder-vs.html
-[ElixhauserNeurologicalSeizureDisorderVS]: ValueSet-elixhauser-neurological-seizure-disorder-vs.html
-[ElixhauserObesityVS]: ValueSet-elixhauser-obesity-vs.html
-[ElixhauserOtherNeurologicalVS]: ValueSet-elixhauser-other-neurological-vs.html
-[ElixhauserOtherThyroidDisorderVS]: ValueSet-elixhauser-other-thyroid-disorder-vs.html
-[ElixhauserParalysisVS]: ValueSet-elixhauser-paralysis-vs.html
-[ElixhauserPeripheralVascularDiseaseVS]: ValueSet-elixhauser-peripheral-vascular-disease-vs.html
-[ElixhauserPsychosisVS]: ValueSet-elixhauser-psychosis-vs.html
-[ElixhauserPulmonaryCirculationDisorderVS]: ValueSet-elixhauser-pulmonary-circulation-disorder-vs.html
-[ElixhauserRenalFailureModerateVS]: ValueSet-elixhauser-renal-failure-moderate-vs.html
-[ElixhauserRenalFailureSevereVS]: ValueSet-elixhauser-renal-failure-severe-vs.html
-[ElixhauserRheumatoidArthritisVS]: ValueSet-elixhauser-rheumatoid-arthritis-vs.html
-[ElixhauserUlcerVS]: ValueSet-elixhauser-ulcer-vs.html
-[ElixhauserValvularDiseaseVS]: ValueSet-elixhauser-valvular-disease-vs.html
-[ElixhauserWeightLossVS]: ValueSet-elixhauser-weight-loss-vs.html
 [GenomicSpecimenTypeVS]: ValueSet-mcode-genomic-specimen-type-vs.html
 [HistologyMorphologyBehaviorVS]: ValueSet-mcode-histology-morphology-behavior-vs.html
 [HypereosinophilicSyndromeDisorderVS]: ValueSet-mcode-hypereosinophilic-syndrome-disorder-vs.html
@@ -119,7 +78,6 @@
 [ObservationCodesPrimaryTumorVS]: ValueSet-mcode-observation-codes-primary-tumor-vs.html
 [ObservationCodesRegionalNodesVS]: ValueSet-mcode-observation-codes-regional-nodes-vs.html
 [ObservationCodesStageGroupVS]: ValueSet-mcode-observation-codes-stage-group-vs.html
-[PresentAbsentVS]: ValueSet-mcode-present-absent.html
 [PrimaryCancerDisorderVS]: ValueSet-mcode-primary-cancer-disorder-vs.html
 [PrimaryMalignantNeoplasmDisorderVS]: ValueSet-mcode-primary-malignant-neoplasm-disorder-vs.html
 [ProcedureIntentVS]: ValueSet-mcode-procedure-intent-vs.html
@@ -151,7 +109,6 @@
 [Medication Clinical Drug (RxNorm)]: http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1010.4
 
 <!-- mCODE Code Systems -->
-[ComorbidConditionCS]: CodeSystem-comorbid-condition-cs.html
 [SnomedRequestedCS]: CodeSystem-snomed-requested-cs.html
 
 <!-- mCODE CapabilityStatements -->
@@ -173,7 +130,7 @@
 [USCoreMedicationRequest]: http://hl7.org/fhir/us/core/StructureDefinition-us-core-medicationrequest.html
 [USCoreLaboratoryResultObservation]: http://hl7.org/fhir/us/core/StructureDefinition-us-core-observation-lab.html
 [USCorePatient]: http://hl7.org/fhir/us/core/StructureDefinition-us-core-patient.html
-[USCoreCondition]: http://hl7.org/fhir/us/core/StructureDefinition-us-core-condition-problems-health-concerns.html
+[USCoreConditionProblemHealthConcern]: http://hl7.org/fhir/us/core/StructureDefinition-us-core-condition-problems-health-concerns.html
 [USCoreProcedure]: http://hl7.org/fhir/us/core/StructureDefinition-us-core-procedure.html
 [USCorePractitioner]: http://hl7.org/fhir/us/core/StructureDefinition-us-core-practitioner.html
 [USCoreSmokingStatus]: http://hl7.org/fhir/us/core/StructureDefinition-us-core-smokingstatus.html

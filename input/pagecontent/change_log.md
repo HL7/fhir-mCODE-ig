@@ -1,5 +1,6 @@
 ### STU 3 Ballot Version  (Expected January 2023)
 
+* Required categories have been added to PrimaryCancerCondition, SecondaryCancerCondition, and TumorMarkerTest. The purpose is to help create an API that can directly return a bundle containing mCODE resources.
 * [Comorbidities][Comorbidities] have been redesigned into a more compact form.
   * Comorbidities are no longer based on the Elixhauser framework. Users can now list or reference any condition as a comorbidity present or absent.
   * Value sets, extensions, and profiles related to Elixhauser comorbidities have been eliminated.

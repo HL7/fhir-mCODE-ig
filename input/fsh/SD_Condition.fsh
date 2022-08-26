@@ -16,6 +16,7 @@ Description: "Records the the primary cancer condition, the original or first tu
 * insert CancerConditionCommonRules
 * code from PrimaryCancerDisorderVS (extensible)
 * category 2..*
+* category[us-core] 1..1  // To prevent the message "The repeating element has a pattern. The pattern will apply to all the repeats (this has not been clear to all users)"
 * category[us-core] = CondCat#problem-list-item
 * category contains mcode-category 1..1
 * category[mcode-category] = SCT#372087000 // Primary malignant neoplasm (disorder) 
@@ -34,6 +35,7 @@ Title: "Secondary Cancer Condition Profile"
 Description: "Records the history of secondary neoplasms, including location(s) and the date of onset of metastases. A secondary cancer results from the spread (metastasization) of cancer from its original site (Definition from: NCI Dictionary of Cancer Terms)."
 * insert CancerConditionCommonRules
 * category 2..*
+* category[us-core] 1..1  // To prevent the message "The repeating element has a pattern. The pattern will apply to all the repeats (this has not been clear to all users)"
 * category[us-core] = CondCat#problem-list-item
 * category contains mcode-category 1..1
 * category[mcode-category] = SCT#128462008 // Metastatic malignant neoplasm (disorder)

@@ -32,15 +32,9 @@ Description: "A collection of data for an mCODE cancer patient."
 * insert BundleSlice(regionalNodesCategory, 0, *, TNM Regional Node Category, Observation resource representing N category., TNMRegionalNodesCategory)
 * insert BundleSlice(secondaryCancerCondition, 0, *, Secondary Cancer Condition, Condition resource representing any secondary cancer condition., SecondaryCancerCondition)
 * insert BundleSlice(tumor, 0, *, Tumor, BodyStructure resource representing a tumor having an identifier and being tracked over time., Tumor)
-* insert BundleSlice(tumorMarkerTest, 0, *, Tumor Marker Tests, Observations resource representing tumor marker tests., TumorMarkerTest)
-* insert BundleSlice(tumorSize, 0, *, Tumor Size Measurements, Observation resource representing a tumor size measurement., TumorSize)
-
-// MK 10-26-2021. Removing vital signs slice for now. Not sure why but this causes the IG Publisher to crash.
-//* entry contains vitalSign 0..* MS
-//* entry[vitalSign] ^short = "Patient Vital Signs"
-//* entry[vitalSign] ^definition = "Observation resource representing patient height, weight, blood pressure, and other vital signs."
-//* entry[vitalSign].resource only http://hl7.org/fhir/StructureDefinition/vitalsigns
-//* entry[vitalSign].resource.meta.profile = "http://hl7.org/fhir/StructureDefinition/vitalsigns"
+* insert BundleSlice(tumorMarkerTest, 0, *, Tumor Marker Tests, Observation resources representing tumor marker or biomarker tests., TumorMarkerTest)
+* insert BundleSlice(tumorSize, 0, *, Tumor Size Measurements, Observation resources representing a tumor size measurement., TumorSize)
+* insert BundleSlice(vitalSigns, 0, *, Vital Signs, Observation resources representing patient height\, weight\, blood pressure\, and other vital signs., USCoreVitalSigns)
 
 // Put the MS for entry.resource LAST, otherwise it doesn't take for some reason
 * timestamp and entry and entry.resource MS

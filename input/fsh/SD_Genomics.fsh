@@ -5,6 +5,7 @@ Title:      "Genomic Region Studied Profile"
 Description:    "A subset of genes or genomic regions of interest in a targeted resequencing study."
 * ^extension[FMM].valueInteger = 1
 * value[x] ^definition = "Not used in this profile. MustSupport is inherited from the parent profile (USCoreObservationLab) and should be ignored by implementers for this element."
+* category[labCategory].coding 1..1  // To prevent the message "The repeating element has a pattern. The pattern will apply to all the repeats (this has not been clear to all users)"
 * category[labCategory] = ObsCat#laboratory
 * subject only Reference(CancerPatient)
 * component[gene-mutations] and component[gene-mutations].code and component[gene-mutations].value[x] MS
@@ -26,6 +27,7 @@ Description:    "Details about a set of changes in the tested sample compared to
 * subject only Reference(CancerPatient)
 * specimen only Reference(GenomicSpecimen)
 * value[x] ^slicing.rules = #closed
+* category[labCategory].coding 1..1  // To prevent the message "The repeating element has a pattern. The pattern will apply to all the repeats (this has not been clear to all users)"
 * category[labCategory] = ObsCat#laboratory
 * component[gene-studied] and component[gene-studied].code and component[gene-studied].value[x] MS
 * component[variation-code] and component[variation-code].code and component[variation-code].value[x] MS
@@ -48,6 +50,7 @@ Id:          mcode-genomics-report
 Title:      "Genomics Report Profile"
 Description:    "Genomic analysis summary report. The report may include one or more tests, with two distinct test types. The first type is a targeted mutation test, where a specific mutation on a specific gene is tested for. The result is either positive or negative for that mutation. The second type is a more general test for variants. This type of test returns the identity of variants found in a certain region of the genome."
 * ^extension[FMM].valueInteger = 1
+* category[Genetics].coding 1..1  // To prevent the message "The repeating element has a pattern. The pattern will apply to all the repeats (this has not been clear to all users)"
 * subject only Reference(CancerPatient)
 * specimen only Reference(GenomicSpecimen)
 * result[variant] only Reference(GenomicVariant)
@@ -65,7 +68,6 @@ Description: "The result of a tumor marker test. Tumor marker tests are generall
 * value[x] 1..1
 * code from TumorMarkerTestVS (extensible)
 * category 2..*
-// inherits from US Core * category[LaboratorySlice] = http://terminology.hl7.org/CodeSystem/v2-0074#LAB
 * category contains mcode-category 1..1
 * category[mcode-category] = SCT#250724005 // Tumor marker measurement (procedure)
 // sushi error >>> * category[mcode-category].coding.version = ""  // make sure version is not specified

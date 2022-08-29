@@ -31,7 +31,7 @@ Where US Core does not provide an appropriate base profile, mCODE profiles FHIR 
 | [TNM Regional Nodes Category][TNMRegionalNodesCategory] | no | Observation |
 | [Tumor][Tumor] | no | BodyStructure |
 | [Tumor Marker Test][TumorMarkerTest] | yes | US Core Laboratory Result Observation |
-| [Tumor Size][TumorSize] | no | Observation |
+| [Tumor Size][TumorSize] | yes | US Core Laboratory Result Observation |
 | [Tumor Specimen][TumorSpecimen] | no | Specimen |
 {: .grid }
 

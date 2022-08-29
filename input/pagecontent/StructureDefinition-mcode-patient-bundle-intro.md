@@ -2,19 +2,19 @@
 
 The bundle MUST contain exactly one Patient resource conforming to the [CancerPatient] profile. The bundle MUST also contain following mCODE-conformant resources, if available to the server:
 
-* Condition resources representing the [PrimaryCancerCondition] and [SecondaryCancerCondition], if applicable
-* Observation resources representing [CancerDiseaseStatus]
-* Observation resources representing [ECOGPerformanceStatus] and/or [KarnofskyPerformanceStatus]
-* Observation resources representing any [TumorMarkerTest]
-* MedicationRequest resources conforming to [CancerRelatedMedicationRequest] and [CancerRelatedMedicationAdministration], representing any cancer-related prescriptions, administrations, and patient-reported medications
-* Procedure resources representing any [CancerRelatedSurgicalProcedure] and [RadiotherapyCourseSummary]
-* Observation resources representing the staging information: [CancerStageGroup], [TNMDistantMetastasesCategory], [TNMPrimaryTumorCategory], and [TNMRegionalNodesCategory]
-* Observation resources representing [GenomicVariant] and [GenomicRegionStudied]
-* DiagnosticReport resources representing [GenomicsReport]
-* Specimen resources representing to [GenomicSpecimen] and [TumorSpecimen]
-* BodyStructure resources representing [Tumor]
-* Observation resources representing [TumorSize]
-* Observation resource representing [Comorbidities], referencing Condition resources
+* Condition resources conforming to [PrimaryCancerCondition] and [SecondaryCancerCondition] profiles
+* Observation resources conforming to [CancerDiseaseStatus] profile
+* Observation resources conforming to [ECOGPerformanceStatus] and/or [KarnofskyPerformanceStatus] profiles
+* Observation resources conforming to [TumorMarkerTest] profile
+* MedicationRequest resources conforming to [CancerRelatedMedicationRequest] and [CancerRelatedMedicationAdministration] profiles, representing any cancer-related prescriptions, administrations, and patient-reported medications
+* Procedure resources conforming to [CancerRelatedSurgicalProcedure] and [RadiotherapyCourseSummary] profiles
+* Observation resources conforming to: [CancerStageGroup], [TNMDistantMetastasesCategory], [TNMPrimaryTumorCategory], and [TNMRegionalNodesCategory] profiles, representing staging information
+* Observation resources conforming to [GenomicVariant] and [GenomicRegionStudied] profiles
+* DiagnosticReport resources conforming to [GenomicsReport] profile
+* Specimen resources conforming to [GenomicSpecimen] and [TumorSpecimen] profiles
+* BodyStructure resources conforming to [Tumor] profile
+* Observation resources conforming to [TumorSize] profile
+* Observation resource conforming to [Comorbidities] profile, referencing Condition resources
 
 In addition, the bundle SHOULD contain the following non-mCODE resources, following appropriate US Core profiles:
 

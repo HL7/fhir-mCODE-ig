@@ -1,5 +1,11 @@
 ### STU 3 Ballot Version  (Expected January 2023)
 
+* Changes to CancerStagingSystemVS
+  * Added two more staging systems to CancerStagingSystemVS (see https://jira.hl7.org/browse/FHIR-37860)
+    * include SCT#1149162008 "International Staging System for multiple myeloma (staging scale)"
+    * include SCT#1149163003 "Revised International Staging System for multiple myeloma (staging scale)"
+  * Removed specific staging categories that are children of Tumor staging (SCTID: 2542920070) (see https://jira.hl7.org/browse/FHIR-34448)
+  
 * Required categories have been added to PrimaryCancerCondition, SecondaryCancerCondition, and TumorMarkerTest. The purpose is to help create an API that can directly return a bundle containing mCODE resources.
 * [Comorbidities][Comorbidities] have been redesigned into a more compact form.
   * Comorbidities are no longer based on the Elixhauser framework. Users can now list or reference any condition as a comorbidity present or absent.

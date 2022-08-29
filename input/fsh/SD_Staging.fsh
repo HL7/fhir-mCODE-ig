@@ -48,7 +48,7 @@ Title: "TNM Primary Tumor Category Profile"
 Description: "Category of the primary tumor, based on its size and extent, based on evidence such as physical examination, imaging, and/or biopsy."
 * insert CancerStageCommonRules
 * insert NotUsed(hasMember)
-* code from ObservationCodesPrimaryTumorVS (required)
+* code from ObservationCodesPrimaryTumorVS (required)  // MK 8/29/2022 - This could be a problem because codes for "r" and "a" staging are not in SNOMED
 * value[x] from TNMPrimaryTumorCategoryVS (preferred)
 
 Profile:  TNMRegionalNodesCategory

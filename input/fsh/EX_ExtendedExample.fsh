@@ -148,6 +148,7 @@ Description: "mCODE Example for Cancer-Related Comorbidities"
 * performer = Reference(us-core-practitioner-owen-oncologist)
 * status = #final "final"
 * effectiveDateTime = "2018-03-16"
+* focus = Reference(primary-cancer-condition-jenny-m)
 // present -- note these could be codes instead of references (either are acceptable)
 * extension[comorbidConditionPresent][0].valueReference = Reference(us-core-condition-depression-jenny-m)
 * extension[comorbidConditionPresent][1].valueReference = Reference(us-core-condition-anxiety-jenny-m)
@@ -155,6 +156,30 @@ Description: "mCODE Example for Cancer-Related Comorbidities"
 // absent -- These could also be references, but having a resource representing a non-condition would be unusual
 * extension[comorbidConditionAbsent][0].valueCodeableConcept = SCT#414916001 "Obesity (disorder)"
 * extension[comorbidConditionAbsent][1].valueCodeableConcept = SCT#19829001 "Disorder of lung (disorder)"
+
+/*
+Instance: cancer-related-comorbidity-response-jenny-m
+InstanceOf: ComorbiditiesResponse
+Description: "mCODE Example for Cancer-Related Comorbidities"
+* subject = Reference(cancer-patient-jenny-m)
+* author = Reference(us-core-practitioner-owen-oncologist)
+* status = #completed
+* authored = "2018-03-16"
+* item[0]
+  * linkId = "indexConditionReference"
+  * answer.valueReference = Reference(primary-cancer-condition-jenny-m)
+* item[1]
+  * linkId = "comorbidConditionsPresent"
+  * item[0]
+    * linkId = "comorbidConditionPresentReference"
+    * answer[0].valueReference = Reference(us-core-condition-depression-jenny-m)
+    * answer[1].valueReference = Reference(us-core-condition-anxiety-jenny-m)
+    * answer[2].valueReference = Reference(us-core-condition-hypertension-jenny-m)
+* item[2]
+  * linkId = "comorbidConditionsAbsent"
+  * answer[0].valueCoding = SCT#414916001 "Obesity (disorder)"
+  * answer[1].valueCoding = SCT#19829001 "Disorder of lung (disorder)"
+*/
 
 Instance: ecog-performance-status-jenny-m
 InstanceOf: ECOGPerformanceStatus

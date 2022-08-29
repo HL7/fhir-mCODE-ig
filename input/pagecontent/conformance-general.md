@@ -104,7 +104,6 @@ mCODE participants SHOULD meet the following requirements for conformance:
 
 1. [Support all mCODE Profiles](#support-all-mcode-profiles)
 1. [Support the mCODE Patient Bundle](#support-the-mcode-patient-bundle)
-1. [Use `meta.profile` to Signal Conformance](#use-metaprofile-to-signal-conformance)
 
 #### Support All mCODE Profiles
 
@@ -114,7 +113,7 @@ Participants SHOULD also support the non-mCODE-specific profiles that are consid
 
 #### Support the mCODE Patient Bundle
 
-The [mCODE Patient Bundle][MCODEPatientBundle] provides a mechanism to retrieve all mCODE-conforming resources for an Identify in-scope Patient. Participants SHOULD support this CapabilityStatement ([sender][mcode-sender-patient-bundle]/[receiver][mcode-receiver-patient-bundle]) for the [mcode-patient-everything] operation, which retrieves an mCODE Patient Bundle for a given Patient ID.
+The [mCODE Patient Bundle][MCODEPatientBundle] provides a mechanism to retrieve cancer-related resources for an in-scope Patient. Participants SHOULD support this CapabilityStatement ([sender][mcode-sender-patient-bundle]/[receiver][mcode-receiver-patient-bundle]) for the [mcode-patient-everything] operation, which retrieves an mCODE Patient Bundle for a given Patient ID.
 
     GET [base]/Patient/[id]/$mcode-everything
 
@@ -128,8 +127,6 @@ mCODE Patient Bundles SHALL be identified by an `id` value that matches the `id`
 #### Use `meta.profile` to Signal Conformance
 
 Participants SHOULD populate `meta.profile` elements for all resources to indicate which profiles the resources should conform to. Participants SHOULD also implement [profile search](https://www.hl7.org/fhir/search.html#profile), which allows participants to query using the `_profile` parameter to return resources conforming to the profiles declared in `meta.profile`.
-
-Participants MUST populate `meta.profile` for elements included in the [mCODE Patient Bundle][MCODEPatientBundle].
 
 Profile search and population of `meta.profile` originate as "SHALL" requirements in the base FHIR specification; they are not an additional requirements imposed by mCODE. However, in practice, few implementations have followed these requirements. Refer to the [FHIR Documentation on supported profiles](https://www.hl7.org/fhir/profiling.html#CapabilityStatement.rest.resource.supportedProfile) for details.
 

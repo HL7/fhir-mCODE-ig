@@ -6,7 +6,6 @@ Description:  "Records the dimensions of a tumor"
 // LOINC code indicating this is a tumor size observation
 * ^extension[FMM].valueInteger = 3
 * code = LNC#21889-1 //"Size Tumor"
-* category 
 * subject ^short = "The patient whose tumor was measured."
 * subject ^definition = "The patient whose tumor was measured. SHALL be a `Patient` resource conforming to `CancerPatient`."
 * subject 1..1

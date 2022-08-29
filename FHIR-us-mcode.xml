@@ -56,6 +56,8 @@
 <artifact deprecated="true" id="StructureDefinition/mcode-comorbidities-elixhauser" key="StructureDefinition-mcode-comorbidities-elixhauser" name="Comorbidities Elixhauser Profile"/>
 <artifact deprecated="true" id="StructureDefinition/mcode-comorbidities-parent" key="StructureDefinition-mcode-comorbidities-parent" name="Comorbidities Parent Abstract Profile"/>
 <artifact id="StructureDefinition/mcode-comorbidities" key="StructureDefinition-mcode-comorbidities" name="Comorbidities Profile"/>
+<artifact id="Questionnaire/mcode-comorbidities-questionnaire" key="Questionnaire-mcode-comorbidities-questionnaire" name="Comorbidities Questionnaire Profile"/>
+<artifact id="StructureDefinition/mcode-comorbidities-response" key="StructureDefinition-mcode-comorbidities-response" name="Comorbidities Questionnaire Response Profile"/>
 <artifact id="ValueSet/mcode-condition-status-trend-vs" key="condition-status-trend-value-set" name="Condition Status Trend Value Set"/>
 <artifact deprecated="true" id="StructureDefinition/mcode-condition-related" key="StructureDefinition-mcode-condition-related" name="Condition related to resource"/>
 <artifact id="ValueSet/mcode-cytologic-evidence-malignancy-vs" key="ValueSet-mcode-cytologic-evidence-malignancy-vs" name="Cytologic Evidence of Malignancy Value Set"/>
@@ -222,6 +224,7 @@
 <artifact id="Patient/cancer-patient-john-anyperson" key="Patient-cancer-patient-john-anyperson" name="cancer-patient-john-anyperson"/>
 <artifact id="Observation/cancer-related-comorbidities-jenny-m" key="Observation-cancer-related-comorbidities-jenny-m" name="cancer-related-comorbidities-jenny-m"/>
 <artifact id="Observation/cancer-related-comorbidities-john-anyperson" key="Observation-cancer-related-comorbidities-john-anyperson" name="cancer-related-comorbidities-john-anyperson"/>
+<artifact id="QuestionnaireResponse/cancer-related-comorbidity-response-jenny-m" key="QuestionnaireResponse-cancer-related-comorbidity-response-jenny-m" name="cancer-related-comorbidity-response-jenny-m"/>
 <artifact deprecated="true" id="Observation/cancer-related-mcode-comorbidities-elixhauser-jenny-m" key="Observation-cancer-related-mcode-comorbidities-elixhauser-jenny-m" name="cancer-related-mcode-comorbidities-elixhauser-jenny-m"/>
 <artifact deprecated="true" id="Observation/cancer-related-mcode-comorbidities-elixhauser-john-anyperson" key="Observation-cancer-related-mcode-comorbidities-elixhauser-john-anyperson" name="cancer-related-mcode-comorbidities-elixhauser-john-anyperson"/>
 <artifact id="MedicationAdministration/cancer-related-medication-admin-cyclophosphamide-jenny-m" key="MedicationAdministration-cancer-related-medication-admin-cyclophosphamide-jenny-m" name="cancer-related-medication-admin-cyclophosphamide-jenny-m"/>

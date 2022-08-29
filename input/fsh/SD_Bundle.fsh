@@ -18,6 +18,7 @@ Description: "A collection of data for an mCODE cancer patient."
 * insert BundleSlice(cancerRelatedSurgicalProcedure, 0, *, Cancer-Related Surgical Procedure,  Procedure resource representing cancer-related surgical procedures., CancerRelatedSurgicalProcedure)
 * insert BundleSlice(cancerStageGroup, 0, *, Cancer Stage Group, Observation resource representing the cancer stage group., CancerStageGroup)
 * insert BundleSlice(comorbidities, 0, *, Cancer-Related Comorbidities, Observation resource representing comorbidities., Comorbidities)
+* insert BundleSlice(diagnosticImplications, 0, *, Genomic Diagnostic Implications, Observation stating a linkage between one or more genotype/haplotype/variation Observations and evidence for or against a particular disease\, condition\, or cancer diagnosis., http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/diagnostic-implication)
 * insert BundleSlice(distantMetastasesCategory, 0, *, TNM Distant Metastases Category, Observation resource representing M category., TNMDistantMetastasesCategory)
 * insert BundleSlice(ecogPerformanceStatus, 0, *, ECOG Performance Status, Observations resource representing ECOG performance status assessment. Include past assessments if available., ECOGPerformanceStatus)
 * insert BundleSlice(genomicRegionStudied, 0, *, Genomic Region Studied, Observation resource representing regions of the genome analyzed for variants., GenomicRegionStudied)

@@ -50,7 +50,7 @@ Note that the requests below may return resources associated with patients who a
     * [PrimaryCancerCondition]\: `GET [base]/Condition?code:in=http://hl7.org/fhir/us/mcode/ValueSet/mcode-primary-or-uncertain-behavior-cancer-disorder-vs`
     * [SecondaryCancerCondition]\: `GET [base]/Condition?code:in=http://hl7.org/fhir/us/mcode/ValueSet/mcode-secondary-cancer-disorder-vs`
   * Staging
-    * [CancerStageGroup]\: `GET [base]/Observation?code:in=http://hl7.org/fhir/us/mcode/ValueSet/mcode-observation-codes-stage-group-vs`
+    * [CancerStageAssessment]\: `GET [base]/Observation?code:in=http://hl7.org/fhir/us/mcode/ValueSet/mcode-observation-codes-stage-group-vs`
     * [TNMPrimaryTumorCategory]\: `GET [base]/Observation?code:in=http://hl7.org/fhir/us/mcode/ValueSet/mcode-observation-codes-primary-tumor-vs`
     * [TNMRegionalNodesCategory]\: `GET [base]/Observation?code:in=http://hl7.org/fhir/us/mcode/ValueSet/mcode-observation-codes-regional-nodes-vs`
     * [TNMDistantMetastasesCategory]\: `GET [base]/Observation?code:in=http://hl7.org/fhir/us/mcode/ValueSet/mcode-observation-codes-distant-metastases-vs`

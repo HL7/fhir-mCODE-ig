@@ -13,8 +13,8 @@ Description: "mCODE Example for Genomic Variant"
 // variant type: single nucleotide variant
 // https://www.ncbi.nlm.nih.gov/clinvar/variation/619728/
 // https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/HGNC:8023
-* component[variation-code].valueCodeableConcept = CLINVAR#619728 "NC_000019.8:g.1171707G>A"
-* component[genomic-hgvs].valueCodeableConcept = HGVS#NC_000019.8:g.1171707G>A "NC_000019.8:g.1171707G>A"
+* component[variation-code].valueCodeableConcept = CLINVAR#611264 "NM_000455.5(STK11):c.725G>A (p.Gly242Glu)"
+* component[genomic-hgvs].valueCodeableConcept = HGVS#NM_000455.5:c.725G>A
 * component[genomic-source-class].valueCodeableConcept = LNC#LA6684-0 "Somatic"
 
 /* genomic-variant-germline-deletion is an example of the

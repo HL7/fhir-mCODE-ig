@@ -7,6 +7,7 @@ Description: "System used for staging. Terms describe staging systems, not speci
 * include codes from system SCT where concept is-a #254292007 "Tumor staging (tumor staging)"
 * include SCT#1149162008 "International Staging System for multiple myeloma (staging scale)"
 * include SCT#1149163003 "Revised International Staging System for multiple myeloma (staging scale)"
+* include NCI#C174125 "Neoplastic Disease Extent Indicator" 
 * exclude codes from system SCT where concept is-a #258318002 "Generic anatomical site tumor invasion status (tumor staging)"
 * exclude codes from system SCT where concept is-a #258309004 "Generic lymph node tumor invasion status stage (tumor staging)"
 * exclude codes from system SCT where concept is-a #258233007 "Generic tumor staging descriptor (tumor staging)"

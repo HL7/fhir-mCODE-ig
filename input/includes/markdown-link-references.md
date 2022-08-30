@@ -12,7 +12,8 @@
 [CancerRelatedMedicationAdministration]: StructureDefinition-mcode-cancer-related-medication-administration.html
 [CancerRelatedMedicationRequest]: StructureDefinition-mcode-cancer-related-medication-request.html
 [CancerRelatedSurgicalProcedure]: StructureDefinition-mcode-cancer-related-surgical-procedure.html
-[CancerStageGroup]: StructureDefinition-mcode-cancer-stage-group.html
+[CancerStageAssessment]: StructureDefinition-mcode-cancer-stage-assessment.html
+[CancerStageTNM]: StructureDefinition-mcode-cancer-stage-tnm.html
 [Comorbidities]: StructureDefinition-mcode-comorbidities.html
 [ECOGPerformanceStatus]: StructureDefinition-mcode-ecog-performance-status.html
 [GenomicRegionStudied]: StructureDefinition-mcode-genomic-region-studied.html

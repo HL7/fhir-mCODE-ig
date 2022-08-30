@@ -211,24 +211,27 @@ Description: "Anatomic volume for John Anyperson's brachytherapy."
 * location = SCT#31094006  "Structure of lobe of lung (body structure)"
 * locationQualifier[0] = SCT#261122009 "Lower (qualifier value)"
 * locationQualifier[1] = SCT#7771000 "Left (qualifier value)"
+
 Instance: binet-stage-group-A
-InstanceOf: CancerStageGroup
+InstanceOf: CancerStageAssessment
 Description: "Example of a non-TNM Stage Group (Binet staging for CLL)"
 * code = LNC#21914-7 "Stage group.other Cancer"
 * status = #final "final"
 * method = SCT#1149099005 "Binet staging classification for chronic lymphocytic leukemia (tumor staging)"
+* focus = Reference(primary-cancer-condition-cll) // added requirement STU3
 * subject = Reference(cancer-patient-adam-everyman)
 * effectiveDateTime = "2020-05-18"
 * derivedFrom = Reference(lab-result-observation-hemoglobin)
 * valueCodeableConcept = UMLS#C2698392  "Binet Stage A" // NCIT#C80134 "Binet Stage A"
 
 Instance: tnm-clinical-stage-group-3c
-InstanceOf: CancerStageGroup
+InstanceOf: CancerStageTNM
 Description: "Example of TNM Clinical Stage Group"
 * code = LNC#21908-9 "Stage group.clinical Cancer"
 * status = #final "final"
 * method = SCT#897275008 "American Joint Commission on Cancer, Cancer Staging Manual, 8th edition neoplasm staging system (tumor staging)"
 * subject = Reference(cancer-patient-john-anyperson)
+* focus = Reference(primary-cancer-condition-nsclc)  // added requirement STU3
 * effectiveDateTime = "2019-04-01"
 * valueCodeableConcept = SCT#1222806003 "American Joint Committee on Cancer stage IIIC (qualifier value)"
 * hasMember[tnmPrimaryTumorCategory] = Reference(tnm-clinical-primary-tumor-category-cT3)

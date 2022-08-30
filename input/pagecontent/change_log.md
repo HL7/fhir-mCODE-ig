@@ -1,17 +1,24 @@
 ### STU 3 Ballot Version  (Expected January 2023)
 
+* Corrected PrimaryCancerCondition.stage.type value set binding, which should have indicated the staging **method** that gave rise to the value appearing in stage.summary (such as AJCC Version 8).
+* Changed the genomic-variant-somatic-single-nucleotide example from CLINVAR#619728 to CLINVAR#611264 to address https://jira.hl7.org/browse/FHIR-36724
 * Changes to CancerStagingSystemVS
-  * Added two more staging systems to CancerStagingSystemVS (see https://jira.hl7.org/browse/FHIR-37860)
-    * include SCT#1149162008 "International Staging System for multiple myeloma (staging scale)"
-    * include SCT#1149163003 "Revised International Staging System for multiple myeloma (staging scale)"
-  * Removed specific staging categories that are children of Tumor staging (SCTID: 2542920070) (see https://jira.hl7.org/browse/FHIR-34448)
-  
-* Required categories have been added to PrimaryCancerCondition, SecondaryCancerCondition, and TumorMarkerTest. The purpose is to help create an API that can directly return a bundle containing mCODE resources.
-* [Comorbidities][Comorbidities] have been redesigned into a more compact form.
-  * Comorbidities are no longer based on the Elixhauser framework. Users can now list or reference any condition as a comorbidity present or absent.
+  * Removed staging categories and staging statuses that appeared in the value set because they are children of Tumor staging (SCTID: 2542920070) (see https://jira.hl7.org/browse/FHIR-34448)
+  * Added the following staging systems to CancerStagingSystemVS (see https://jira.hl7.org/browse/FHIR-37860):
+    * SCT#1149162008 "International Staging System for multiple myeloma (staging scale)"
+    * SCT#1149163003 "Revised International Staging System for multiple myeloma (staging scale)"
+    * NCI#C174125 "Neoplastic Disease Extent Indicator"
+* Additional required categories have been added to PrimaryCancerCondition, SecondaryCancerCondition, and TumorMarkerTest. The purpose is to help create an API that can directly return a bundle containing mCODE resources. The following are now required, in addition to the categories required in STU 2:
+  * PrimaryCancerCondition: * category = SCT#372087000 "Primary malignant neoplasm (disorder)"
+  * SecondaryCancerCondition: * category = SCT#128462008 "Metastatic malignant neoplasm (disorder)"
+  * TumorMarkerTest: * category = SCT#250724005 "Tumor marker measurement (procedure)"
+  * CancerStageAssessment: * category = SCT#385356007 "Tumor stage finding (finding)"
+* [Comorbidities] have been redesigned into a much more compact form.
+  * Comorbidities are no longer based on the Elixhauser framework. Therefore, users have the freedom to name any condition as a comorbidity, by code or reference.
+  * Conditions mentioned in the Comorbidities profile can be designated as present or absent (if needed to assert a significant negative)
   * Value sets, extensions, and profiles related to Elixhauser comorbidities have been eliminated.
-  * ConditionReference extension has been expanded to allow either a reference or a CodeableConcept.
-* Updated to US Core 5.0.1
+  * The ConditionReference extension has been expanded to allow either a reference or a CodeableConcept.
+* mCODE has been updated to US Core 5.0.1
   * Changed parent profiles of Karnofsky and ECOG Performance Status profiles and Cancer Disease Status profile to the newly-introduced US Core Observation Clinical Test Result Profile
 * Created dependency on Genomics Reporting IG (GRIG) STU2 (v2.0.0)
   * GenomicsReport, GenomicRegionStudied, and GenomicVariant now inherit from the corresponding profiles in GRIG
@@ -153,12 +160,14 @@ A comprehensive listing of differences in FHIR artifacts between STU 1 and STU 2
 ### Assessment
 
 * Changed the name of this group from Labs & Vital to Assessment and moved Performance Assessments and Comorbidities into this group.
-* [Comorbidities][Comorbidities] have been redesigned to capture the presence or absence of all comorbidities in one Observation.
+* [Comorbidities] have been redesigned to capture the presence or absence of all comorbidities in one Observation.
 
 #### Disease
 
-* The separate sets of profiles for TNM Clinical and TNM Pathologic staging were combined into a single set of profiles: [CancerStageGroup], [TNMPrimaryTumorCategory], [TNMRegionalNodesCategory], and [TNMDistantMetastasesCategory]. The new profiles can be used for both clinical and pathologic TNM staging, or for other types of TNM staging; these are differentiated by the value of `Observation.code` in CancerStageGroup, which is bound to [ObservationCodesPrimaryTumorVS].
-* The profile TNMStageGroup is now renamed [CancerStageGroup] in order to support non-TNM staging systems such as Rai, Binet, and Revised International Staging System (R-ISS).
+**STU3 NOTE: This has been re-architected in STU3 as two profiles, CancerStageAssessment for the general case, and CancerStageTNM for the specific TNM case.**
+
+* The separate sets of profiles for TNM Clinical and TNM Pathologic staging were combined into a single set of profiles: CancerStageGroup, [TNMPrimaryTumorCategory], [TNMRegionalNodesCategory], and [TNMDistantMetastasesCategory]. The new profiles can be used for both clinical and pathologic TNM staging, or for other types of TNM staging; these are differentiated by the value of `Observation.code` in CancerStageGroup, which is bound to [ObservationCodesPrimaryTumorVS].
+* The profile TNMStageGroup is now renamed CancerStageGroup in order to support non-TNM staging systems such as Rai, Binet, and Revised International Staging System (R-ISS). 
 
 #### Treatment
 

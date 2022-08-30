@@ -226,11 +226,12 @@ Description: "Extended example: example showing primary cancer condition"
 * stage.assessment = Reference(tnm-clinical-stage-group-jenny-m)
 
 Instance: tnm-clinical-stage-group-jenny-m
-InstanceOf: CancerStageGroup
+InstanceOf: CancerStageTNM
 Description: "Extended example: example showing TNM staging (stage group)"
 * status = #final "final"
 * code = LNC#21908-9 "Stage group.clinical Cancer"
 * subject = Reference(cancer-patient-jenny-m)
+* focus = Reference(primary-cancer-condition-jenny-m)  // new STU3 requirement
 * effectiveDateTime = "2018-03-16"
 * valueCodeableConcept = SCT#1222769001 "American Joint Committee on Cancer stage IIB (qualifier value)"
 * method = SCT#897275008 "American Joint Commission on Cancer, Cancer Staging Manual, 8th edition neoplasm staging system (tumor staging)"
@@ -461,13 +462,13 @@ Description: "Extended example: example showing DCIS diagnosis"
 * valueCodeableConcept = LNC#LA27824-4 "Nottingham grade 2"
 * specimen = Reference(tumor-specimen-left-breast-jenny-m)
 
-
 Instance: tnm-pathologic-stage-group-jenny-m
-InstanceOf: CancerStageGroup
+InstanceOf: CancerStageTNM
 Description: "Extended example: example showing TNM staging (stage group)"
 * status = #final "final"
 * code = LNC#21902-2 "Stage group.pathology Cancer"
 * subject = Reference(cancer-patient-jenny-m)
+* focus = Reference(primary-cancer-condition-jenny-m)  // new STU3 requirement
 * effectiveDateTime = "2018-04-05"
 * valueCodeableConcept = SCT#1222769001 "American Joint Committee on Cancer stage IIB (qualifier value)"
 * method = SCT#897275008 "American Joint Commission on Cancer, Cancer Staging Manual, 8th edition neoplasm staging system (tumor staging)"

@@ -25,11 +25,24 @@ Implementers should reference the [PrimaryCancerCondition] and [SecondaryCancerC
 
 ### Representing Staging Information
 
-Clinicians assign stages to cancers according to rules defined in various [cancer staging systems](https://www.cancer.gov/about-cancer/diagnosis-staging/staging). The staging system must always be specified alongside the stage, because it establishes the meaning of the stage code(s).
+Clinicians and pathologists assign stages to cancers according to rules defined in various [cancer staging systems](https://www.cancer.gov/about-cancer/diagnosis-staging/staging). The staging system must always be specified alongside the stage, because it establishes the meaning of the stage code(s). The single-value stage may be included in the PrimaryCancerCondition, in the elements `Condition.stage.summary` and `Condition.stage.type`, the latter being the method of staging used to arrive at the stage summary.
 
-Cancer stage information is contained in a set of profiles. One profile on Observation represents the [stage group][CancerStageGroup]. The stage group contains optional references to additional profiles representing the primary tumor (T), regional nodes (N), and distant metastases (M) categories. These references are used only in conjunction with TNM staging systems.
+For more detailed staging information, the user should provide a separate Observation resource conforming to the [CancerStageAssessment] profile. A reference to this resource should be provided in `Condition.stage.assessment`. The CancerStageAssessment profile can be used with any staging system, but specifically, non-TNM staging systems, since a specialized TNM staging profile is provided. In CancerStageAssessment, the following information must be provided:
 
-The `Observation.code` element value is used to distinguish the method of staging, e.g., [clinical](https://www.cancer.gov/publications/dictionaries/cancer-terms/def/clinical-staging) or [pathologic](https://www.cancer.gov/publications/dictionaries/cancer-terms/def/pathologic-staging). For other types staging (e.g., retreatment (r) or autopsy (a)), a code indicating "other" staging type must be used. In mCODE, a single patient may have more than one staging panel, although this is not common in practice.
+* `Observation.category`: fixed value of SNOMED CT 385356007 "Tumor stage finding (finding)"
+* `Observation.code`: represents what is being observed and identifies what value is reported, in this case, either a clinical stage, a pathological stage, or another type of stage.
+* `Observation.valueCodeableConcept`: the stage determined for the cancer
+* `Observation.method`: the staging system used (from [CancerStagingSystemVS])
+* `Observation.focus`: a reference to the primary cancer condition that was staged
+
+
+The user must specify the staging method used in Observation.method.
+
+For TNM staging, the [CancerStageTNM][CancerStageTNM] profile should be used. This profile contains the stage group in `Observation.valueCodeableConcept` and provides optional references in `Observation.hasMember` to additional resources representing the primary tumor (T), regional nodes (N), and distant metastases (M) categories.
+
+The `Observation.code` element value in CancerStageTNM is used to distinguish the type of staging, e.g., [clinical](https://www.cancer.gov/publications/dictionaries/cancer-terms/def/clinical-staging) or [pathologic](https://www.cancer.gov/publications/dictionaries/cancer-terms/def/pathologic-staging). For other types staging (e.g., retreatment (r) or autopsy (a)), a code indicating "other" staging type is used. The code itself, 
+
+In mCODE, a single patient may have more than one staging panel, although this is not common in practice. If staging is repeated, the PrimaryCancerCondition reference to staging should be updated to the most recent staging information.
 
 #### TNM Staging Information
 

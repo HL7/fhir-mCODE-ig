@@ -13,7 +13,7 @@ Where US Core does not provide an appropriate base profile, mCODE profiles FHIR 
 | [Cancer-Related Medication Request][CancerRelatedMedicationRequest] | yes | US Core Medication Request |
 | [Cancer-Related Surgical Procedure][CancerRelatedSurgicalProcedure] | yes | US Core Procedure |
 | [Cancer Stage Assessment][CancerStageAssessment] | no | Observation |
-| [Cancer Stage TNM][CancerStageTNM] | no | CancerStageAssessment |
+| [Cancer Stage TNM][CancerStageGroupTNM] | no | CancerStageAssessment |
 | [Comorbidities] | yes | US Core Observation Clinical Test Result |
 | [ECOG Performance Status][ECOGPerformanceStatus] | yes | US Core Observation Clinical Test Result |
 | [Genomic Region Studied][GenomicRegionStudied] | yes | US Core Laboratory Result Observation |
@@ -114,7 +114,7 @@ The following table summarizes how Must-Implement (MI) requirements derive from 
 | 8 | Element is a [Reference() data type](https://www.hl7.org/fhir/references.html#2.3.0) with an MS flag on one or more of the referenced types | MI only on the resources or profiles in the reference that are explicitly MS-flagged, and only if they are in the Sender's capability statement | MI only on the resources or profiles in the reference that are explicitly MS-flagged, and only if they are in the Receiver's capability statement | [US Core DocumentReference Profile version 3.2](https://bit.ly/us-core-2021Jan-StructureDefinition-us-core-documentreference) `DocumentReference.author` |
 | 9 | Element is a [backbone data type](https://www.hl7.org/fhir/backboneelement.html#2.29.0) | No implementation requirement on sub-elements unless they are explicitly MS-flagged  | same | [`SDC QuestionnaireResponse.item`](https://hl7.org/fhir/uv/sdc/2019May/sdc-questionnaireresponse.html) (subelement `QuestionResponse.item.definition` is not MS)  |
 | 10 | Element is an [array that is sliced](https://www.hl7.org/fhir/profiling.html#slicing), with no MS flag on any slice | MUST be able to populate the array, but [no implementation requirement any particular slice](https://confluence.hl7.org/pages/viewpage.action?pageId=35718826#GuidetoDesigningResources-HowdoIinterpret'MustSupport'withrespecttoslicing?) | MI array and its contents, including any or all defined slices. |
-| 11 | Element is an [array that is sliced](https://www.hl7.org/fhir/profiling.html#slicing), with MS flags on one or more slices | MI only on the slices that have MS flags | same | [`CancerStageTNM.hasMember`][CancerStageTNM] |
+| 11 | Element is an [array that is sliced](https://www.hl7.org/fhir/profiling.html#slicing), with MS flags on one or more slices | MI only on the slices that have MS flags | same | [`CancerStageGroupTNM.hasMember`][CancerStageGroupTNM] |
 | 12 | Element that has MS flag is a slice and the containing array does not have an MS flag | No implementation requirement on the slice | same | [US Core Patient Profile version 3.1.1](http://hl7.org/fhir/us/core/StructureDefinition-us-core-patient.html) `Patient.extension:us-core-race` (because `Patient.extension` is not MS) |
 {: .grid }
 

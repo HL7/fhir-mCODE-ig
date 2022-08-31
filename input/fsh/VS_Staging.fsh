@@ -7,7 +7,8 @@ Description: "System used for staging. Terms describe staging systems, not speci
 * include codes from system SCT where concept is-a #254292007 "Tumor staging (tumor staging)"
 * include SCT#1149162008 "International Staging System for multiple myeloma (staging scale)"
 * include SCT#1149163003 "Revised International Staging System for multiple myeloma (staging scale)"
-* include NCI#C174125 "Neoplastic Disease Extent Indicator" 
+//* include NCI#C174125 "Neoplastic Disease Extent Indicator"
+* include SCT#246165003 "Extent of disease (attribute)"
 * exclude codes from system SCT where concept is-a #258318002 "Generic anatomical site tumor invasion status (tumor staging)"
 * exclude codes from system SCT where concept is-a #258309004 "Generic lymph node tumor invasion status stage (tumor staging)"
 * exclude codes from system SCT where concept is-a #258233007 "Generic tumor staging descriptor (tumor staging)"
@@ -18,6 +19,18 @@ Description: "System used for staging. Terms describe staging systems, not speci
 * exclude SCT#74542008 "Walter Reed stage 4 (tumor staging)"
 * exclude SCT#66470009 "Walter Reed stage 5 (tumor staging)"
 * exclude SCT#83200007 "Walter Reed stage 6 (tumor staging)"
+
+ValueSet: ObservationCodesStageAssessmentVS
+Id: mcode-observation-codes-stage-assessment-vs
+Title: "Staging Type for Stage Group Value Set"
+Description: "Identifying codes based on the timing of classification for stage group observations."
+* insert LOINCCopyrightForVS
+* ^extension[FMM].valueInteger = 4
+* include LNC#67213-9 "Disease stage"
+* include codes from valueset ObservationCodesStageGroupVS
+* include codes from valueset ObservationCodesPrimaryTumorVS
+* include codes from valueset ObservationCodesRegionalNodesVS
+* include codes from valueset ObservationCodesDistantMetastasesVS
 
 ValueSet: ObservationCodesStageGroupVS
 Id: mcode-observation-codes-stage-group-vs

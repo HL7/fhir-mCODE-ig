@@ -1,8 +1,14 @@
 ### STU 3 Ballot Version  (Expected January 2023)
 
+* Staging changes
+  * New profile, CancerStageAssessment
+  * New value set, ObservationCodesStageAssessmentVS
+
+
+* Updated queries for PrimaryCancerCondition, SecondaryCancerCondition, TumorMarkerText, and CancerStageAssessment
 * Corrected PrimaryCancerCondition.stage.type value set binding, which should have indicated the staging **method** that gave rise to the value appearing in stage.summary (such as AJCC Version 8).
 * Changed the genomic-variant-somatic-single-nucleotide example from CLINVAR#619728 to CLINVAR#611264 to address https://jira.hl7.org/browse/FHIR-36724
-* Changes to CancerStagingSystemVS
+* Made the following improvements to value set of cancer staging systems (CancerStagingSystemVS):
   * Removed staging categories and staging statuses that appeared in the value set because they are children of Tumor staging (SCTID: 2542920070) (see https://jira.hl7.org/browse/FHIR-34448)
   * Added the following staging systems to CancerStagingSystemVS (see https://jira.hl7.org/browse/FHIR-37860):
     * SCT#1149162008 "International Staging System for multiple myeloma (staging scale)"
@@ -164,7 +170,7 @@ A comprehensive listing of differences in FHIR artifacts between STU 1 and STU 2
 
 #### Disease
 
-**STU3 NOTE: This has been re-architected in STU3 as two profiles, CancerStageAssessment for the general case, and CancerStageTNM for the specific TNM case.**
+**STU3 NOTE: This has been re-architected in STU3 as two profiles, CancerStageAssessment for the general case, and CancerStageGroupTNM for the specific TNM case.**
 
 * The separate sets of profiles for TNM Clinical and TNM Pathologic staging were combined into a single set of profiles: CancerStageGroup, [TNMPrimaryTumorCategory], [TNMRegionalNodesCategory], and [TNMDistantMetastasesCategory]. The new profiles can be used for both clinical and pathologic TNM staging, or for other types of TNM staging; these are differentiated by the value of `Observation.code` in CancerStageGroup, which is bound to [ObservationCodesPrimaryTumorVS].
 * The profile TNMStageGroup is now renamed CancerStageGroup in order to support non-TNM staging systems such as Rai, Binet, and Revised International Staging System (R-ISS). 

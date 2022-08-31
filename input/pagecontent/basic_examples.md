@@ -17,7 +17,7 @@
 
 * [Lobectomy](Procedure-cancer-related-surgical-procedure-lobectomy.html)
 
-### [Cancer Stage Group](StructureDefinition-mcode-cancer-stage-group.html) ([Observation](http://hl7.org/fhir/R4/observation.html))
+### [Cancer Stage Assessment](StructureDefinition-mcode-cancer-stage-assessment.html) ([Observation](http://hl7.org/fhir/R4/observation.html))
 
 * [TNM Clinical Distant Metastases Category - cM0](Observation-tnm-clinical-distant-metastases-category-cM0.html)
 * [TNM Clinical Primary Tumor Category - cT3](Observation-tnm-clinical-primary-tumor-category-cT3.html)

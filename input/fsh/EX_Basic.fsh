@@ -215,25 +215,25 @@ Description: "Anatomic volume for John Anyperson's brachytherapy."
 Instance: binet-stage-group-A
 InstanceOf: CancerStageAssessment
 Description: "Example of a non-TNM Stage Group (Binet staging for CLL)"
-* code = LNC#21914-7 "Stage group.other Cancer"
+* code = LNC#67213-9 "Disease stage"
+* valueCodeableConcept = UMLS#C2698392  "Binet Stage A" // or NCIT#C80134 "Binet Stage A"
 * status = #final "final"
-* method = SCT#1149099005 "Binet staging classification for chronic lymphocytic leukemia (tumor staging)"
 * focus = Reference(primary-cancer-condition-cll) // added requirement STU3
 * subject = Reference(cancer-patient-adam-everyman)
 * effectiveDateTime = "2020-05-18"
 * derivedFrom = Reference(lab-result-observation-hemoglobin)
-* valueCodeableConcept = UMLS#C2698392  "Binet Stage A" // NCIT#C80134 "Binet Stage A"
+* method =  SCT#1149099005 "Binet staging classification for chronic lymphocytic leukemia (tumor staging)"
 
 Instance: tnm-clinical-stage-group-3c
-InstanceOf: CancerStageTNM
+InstanceOf: CancerStageGroupTNM
 Description: "Example of TNM Clinical Stage Group"
 * code = LNC#21908-9 "Stage group.clinical Cancer"
+* valueCodeableConcept = SCT#1222806003 "American Joint Committee on Cancer stage IIIC (qualifier value)"
 * status = #final "final"
 * method = SCT#897275008 "American Joint Commission on Cancer, Cancer Staging Manual, 8th edition neoplasm staging system (tumor staging)"
 * subject = Reference(cancer-patient-john-anyperson)
 * focus = Reference(primary-cancer-condition-nsclc)  // added requirement STU3
 * effectiveDateTime = "2019-04-01"
-* valueCodeableConcept = SCT#1222806003 "American Joint Committee on Cancer stage IIIC (qualifier value)"
 * hasMember[tnmPrimaryTumorCategory] = Reference(tnm-clinical-primary-tumor-category-cT3)
 * hasMember[tnmRegionalNodesCategory] = Reference(tnm-clinical-regional-nodes-category-cN3)
 * hasMember[tnmDistantMetastasesCategory] = Reference(tnm-clinical-distant-metastases-category-cM0)
@@ -252,21 +252,21 @@ Instance: tnm-clinical-primary-tumor-category-cT3
 InstanceOf: TNMPrimaryTumorCategory
 Description: "Example of TNM Clinical Primary Tumor Category"
 * code = LNC#21905-5 "Primary tumor.clinical [Class] Cancer"
+* valueCodeableConcept = SCT#1228938002 "American Joint Committee on Cancer cT3 (qualifier value)"
 * status = #final "final"
 * method = SCT#897275008 "American Joint Commission on Cancer, Cancer Staging Manual, 8th edition neoplasm staging system (tumor staging)"
 * subject = Reference(cancer-patient-john-anyperson)
 * effectiveDateTime = "2019-04-01"
-* valueCodeableConcept = SCT#1228938002 "American Joint Committee on Cancer cT3 (qualifier value)"
 
 Instance: tnm-clinical-regional-nodes-category-cN3
 InstanceOf: TNMRegionalNodesCategory
 Description: "Example of TNM Clinical Regional Nodes Category"
 * code = LNC#21906-3 "Regional lymph nodes.clinical [Class] Cancer"
+* valueCodeableConcept = SCT#1229984001 "American Joint Committee on Cancer cN3 (qualifier value)"
 * status = #final "final"
 * method = SCT#897275008 "American Joint Commission on Cancer, Cancer Staging Manual, 8th edition neoplasm staging system (tumor staging)"
 * subject = Reference(cancer-patient-john-anyperson)
 * effectiveDateTime = "2019-04-01"
-* valueCodeableConcept = SCT#1229984001 "American Joint Committee on Cancer cN3 (qualifier value)"
 
 Instance: cancer-related-medication-request-gefitinib
 InstanceOf: CancerRelatedMedicationRequest

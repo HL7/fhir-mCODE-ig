@@ -43,7 +43,7 @@
 <artifact id="ValueSet/mcode-cancer-stage-group-vs" key="ValueSet-mcode-cancer-stage-group-vs" name="Cancer Stage Group Value Set"/>
 <artifact deprecated="true" id="Profile/mcode-cancer-stage-parent" key="cancer-stage-parent" name="Cancer Stage Parent"/>
 <artifact id="ValueSet/mcode-cancer-staging-system-vs" key="cancer-staging-system-value-set" name="Cancer Staging System Value Set"/>
-<artifact id="StructureDefinition/mcode-cancer-stage-tnm" key="StructureDefinition-mcode-cancer-stage-tnm" name="Cancer TNM Stage Profile"/>
+<artifact id="StructureDefinition/mcode-cancer-stage-group-tnm" key="StructureDefinition-mcode-cancer-stage-group-tnm" name="Cancer TNM Stage Profile"/>
 <artifact id="StructureDefinition/mcode-cancer-related-medication-administration" key="StructureDefinition-mcode-cancer-related-medication-administration" name="Cancer-Related Medication Administration Profile"/>
 <artifact id="StructureDefinition/mcode-cancer-related-medication-request" key="StructureDefinition-mcode-cancer-related-medication-request" name="Cancer-Related Medication Request Profile"/>
 <artifact id="StructureDefinition/mcode-cancer-related-surgical-procedure" key="StructureDefinition-mcode-cancer-related-surgical-procedure" name="Cancer-Related Surgical Procedure Profile"/>
@@ -171,6 +171,7 @@
 <artifact id="ValueSet/mcode-observation-codes-distant-metastases-vs" key="ValueSet-mcode-observation-codes-distant-metastases-vs" name="Staging Type Value Set (for Distant Metastases Category)"/>
 <artifact id="ValueSet/mcode-observation-codes-primary-tumor-vs" key="ValueSet-mcode-observation-codes-primary-tumor-vs" name="Staging Type for Primary Tumor Category Value Set"/>
 <artifact id="ValueSet/mcode-observation-codes-regional-nodes-vs" key="ValueSet-mcode-observation-codes-regional-nodes-vs" name="Staging Type for Regional Node Category Value Set"/>
+<artifact id="ValueSet/mcode-observation-codes-stage-assessment-vs" key="ValueSet-mcode-observation-codes-stage-group-vs" name="Staging Type for Stage Group Value Set"/>
 <artifact id="ValueSet/mcode-observation-codes-stage-group-vs" key="ValueSet-mcode-observation-codes-stage-group-vs" name="Staging Type for Stage Group Value Set"/>
 <artifact deprecated="true" id="Profile/mcode-tnm-clinical-distant-metastases" key="tnm-clinical-distant-metastases" name="TNM Clinical Distant Metastases"/>
 <artifact deprecated="true" id="Profile/mcode-tnm-clinical-primary-tumor-category" key="tnm-clinical-primary-tumor-category" name="TNM Clinical Primary Tumor Category"/>

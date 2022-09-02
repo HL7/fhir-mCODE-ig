@@ -123,8 +123,8 @@ Description: "Extended example as a mCODE Patient Bundle"
 //* entry[=].fullUrl = "http://example.org/fhir/Observation/cancer-related-comorbidities-elixhauser-jenny-m"
 * entry[radiotherapyCourseSummary].resource = radiotherapy-treatment-summary-chest-wall-jenny-m
 * entry[radiotherapyCourseSummary].fullUrl = "http://example.org/fhir/Procedure/radiotherapy-treatment-summary-chest-wall-jenny-m"
-* entry[cancerStageGroup].resource = tnm-clinical-stage-group-jenny-m
-* entry[cancerStageGroup].fullUrl = "http://example.org/fhir/Observation/tnm-clinical-stage-group-jenny-m"
+* entry[cancerStageAssessment].resource = tnm-clinical-stage-group-jenny-m
+* entry[cancerStageAssessment].fullUrl = "http://example.org/fhir/Observation/tnm-clinical-stage-group-jenny-m"
 * entry[primaryTumorCategory].resource = tnm-clinical-primary-tumor-category-jenny-m
 * entry[primaryTumorCategory].fullUrl = "http://example.org/fhir/Observation/tnm-clinical-primary-tumor-category-jenny-m"
 * entry[regionalNodesCategory].resource = tnm-clinical-regional-nodes-category-jenny-m

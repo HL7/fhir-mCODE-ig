@@ -7,7 +7,7 @@ valueSets:
     - old: http://hl7.org/fhir/us/mcode/ValueSet/mcode-laterality-vs
       new: http://hl7.org/fhir/us/mcode/ValueSet/mcode-location-qualifier-vs
     - old: http://hl7.org/fhir/us/mcode/ValueSet/mcode-tnm-stage-group-vs
-      new: http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-stage-group-vs
+      new: http://hl7.org/fhir/us/mcode/ValueSet/mcode-tnm-stage-group-vs
 
 # If there are any columns you do not want to consider in comparisons, list them here. The column name in this file
 # must be an exact match for the column header in Excel or it will be ignored.

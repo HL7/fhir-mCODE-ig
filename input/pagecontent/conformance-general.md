@@ -47,15 +47,17 @@ Note that the requests below may return resources associated with patients who a
 
 * Disease
   * Diagnosis
-    * [PrimaryCancerCondition]\: `GET [base]/Condition?code:in=http://hl7.org/fhir/us/mcode/ValueSet/mcode-primary-or-uncertain-behavior-cancer-disorder-vs`
-    * [SecondaryCancerCondition]\: `GET [base]/Condition?code:in=http://hl7.org/fhir/us/mcode/ValueSet/mcode-secondary-cancer-disorder-vs`
+    * [PrimaryCancerCondition]\: `GET [base]/Condition?category=http://snomed.info/sct|372087000` (preferred form)
+    * [PrimaryCancerCondition]\: `GET [base]/Condition?code:in=http://hl7.org/fhir/us/mcode/ValueSet/mcode-primary-or-uncertain-behavior-cancer-disorder-vs` (alternate form)
+    * [SecondaryCancerCondition]\: `GET [base]/Condition?category=http://snomed.info/sct|128462008` (preferred form)
+    * [SecondaryCancerCondition]\: `GET [base]/Condition?code:in=http://hl7.org/fhir/us/mcode/ValueSet/CancerStagingTypeVS` (alternate form)
   * Staging
-    * [CancerStageGroup]\: `GET [base]/Observation?code:in=http://hl7.org/fhir/us/mcode/ValueSet/mcode-observation-codes-stage-group-vs`
-    * [TNMPrimaryTumorCategory]\: `GET [base]/Observation?code:in=http://hl7.org/fhir/us/mcode/ValueSet/mcode-observation-codes-primary-tumor-vs`
-    * [TNMRegionalNodesCategory]\: `GET [base]/Observation?code:in=http://hl7.org/fhir/us/mcode/ValueSet/mcode-observation-codes-regional-nodes-vs`
-    * [TNMDistantMetastasesCategory]\: `GET [base]/Observation?code:in=http://hl7.org/fhir/us/mcode/ValueSet/mcode-observation-codes-distant-metastases-vs`
+    * Note: This single query returns all resources compliant with the profiles [CancerStage], [TNMStageGroup], [TNMPrimaryTumorCategory], [TNMRegionalNodesCategory], and [TNMDistantMetastasesCategory]:
+    * [CancerStage]\: `GET [base]/Observation?category= http://snomed.info/sct|385356007` (preferred form)
+    * [CancerStage]\: `GET [base]/Observation?code:in=http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-staging-type-vs` (alternate form)
   * Characterization
-    * [TumorMarkerTest]\: `GET [base]/Observation?code:in=http://hl7.org/fhir/us/mcode/ValueSet/mcode-tumor-marker-test-vs`
+    * [TumorMarkerTest]\: `GET [base]/Observation?category=http://snomed.info/sct|250724005` (preferred form)
+    * [TumorMarkerTest]\: `GET [base]/Observation?code:in=http://hl7.org/fhir/us/mcode/ValueSet/mcode-tumor-marker-test-vs` (alternate form)
 
 * Assessment
   * [Comorbidities]\: `GET [base]/Observation?code=http://snomed.info/sct|398192003`

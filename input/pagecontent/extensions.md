@@ -11,6 +11,7 @@ The following Extensions are defined as part of mCODE:
 * [RadiotherapySessions]
 * [RadiotherapyTechnique]
 * [RelatedCondition]
+* [RelatedConditionAbsent]
 * [TreatmentTerminationReason]
 
 {% include markdown-link-references.md %}

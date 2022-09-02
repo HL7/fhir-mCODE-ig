@@ -998,7 +998,7 @@
       "Required?": "Required",
       "Occurrences Allowed": "Single",
       "Data Type": "CodeableConcept",
-      "Value Set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-observation-codes-stage-group-vs",
+      "Value Set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-tnm-stage-group-staging-type-vs",
       "Value Set Binding": "required",
       "FHIR Element (R4)": "Observation.code",
       "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-stage-group",
@@ -1054,7 +1054,7 @@
       "Required?": "Required if known",
       "Occurrences Allowed": "Single",
       "Data Type": "CodeableConcept",
-      "Value Set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-stage-group-vs",
+      "Value Set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-tnm-stage-group-vs",
       "Value Set Binding": "preferred",
       "FHIR Element (R4)": "Observation.value[x]",
       "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-stage-group",
@@ -1068,7 +1068,7 @@
       "Required?": "Required if known",
       "Occurrences Allowed": "Single",
       "Data Type": "CodeableConcept",
-      "Value Set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-staging-system-vs",
+      "Value Set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-staging-method-vs",
       "Value Set Binding": "extensible",
       "FHIR Element (R4)": "Observation.method",
       "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-stage-group",
@@ -5309,7 +5309,7 @@
       "Definition": "Reference to a formal record of the evidence on which the staging assessment is based.",
       "Required?": "Required if known (conditional on Stage)",
       "Occurrences Allowed": "Multiple",
-      "Data Type": "Reference: CancerStageGroup",
+      "Data Type": "Reference: TNMStageGroup",
       "Value Set URI": "",
       "Value Set Binding": "",
       "FHIR Element (R4)": "Condition.stage.assessment",
@@ -5842,7 +5842,7 @@
       "Required?": "Required",
       "Occurrences Allowed": "Single",
       "Data Type": "CodeableConcept",
-      "Value Set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-observation-codes-distant-metastases-vs",
+      "Value Set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-tnm-distant-metastases-staging-type-vs",
       "Value Set Binding": "required",
       "FHIR Element (R4)": "Observation.code",
       "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-distant-metastases-category",
@@ -5912,7 +5912,7 @@
       "Required?": "Required if known",
       "Occurrences Allowed": "Single",
       "Data Type": "CodeableConcept",
-      "Value Set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-staging-system-vs",
+      "Value Set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-staging-method-vs",
       "Value Set Binding": "extensible",
       "FHIR Element (R4)": "Observation.method",
       "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-distant-metastases-category",
@@ -5940,7 +5940,7 @@
       "Required?": "Required",
       "Occurrences Allowed": "Single",
       "Data Type": "CodeableConcept",
-      "Value Set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-observation-codes-primary-tumor-vs",
+      "Value Set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-tnm-primary-tumor-staging-type-vs",
       "Value Set Binding": "required",
       "FHIR Element (R4)": "Observation.code",
       "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-primary-tumor-category",
@@ -6010,7 +6010,7 @@
       "Required?": "Required if known",
       "Occurrences Allowed": "Single",
       "Data Type": "CodeableConcept",
-      "Value Set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-staging-system-vs",
+      "Value Set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-staging-method-vs",
       "Value Set Binding": "extensible",
       "FHIR Element (R4)": "Observation.method",
       "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-primary-tumor-category",
@@ -6038,7 +6038,7 @@
       "Required?": "Required",
       "Occurrences Allowed": "Single",
       "Data Type": "CodeableConcept",
-      "Value Set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-observation-codes-regional-nodes-vs",
+      "Value Set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-tnm-regional-nodes-staging-type-vs",
       "Value Set Binding": "required",
       "FHIR Element (R4)": "Observation.code",
       "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-regional-nodes-category",
@@ -6108,7 +6108,7 @@
       "Required?": "Required if known",
       "Occurrences Allowed": "Single",
       "Data Type": "CodeableConcept",
-      "Value Set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-staging-system-vs",
+      "Value Set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-staging-method-vs",
       "Value Set Binding": "extensible",
       "FHIR Element (R4)": "Observation.method",
       "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-regional-nodes-category",
@@ -6859,12 +6859,12 @@
     },
     {
       "title": "Cancer Stage Group Value Set",
-      "url": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-stage-group-vs",
+      "url": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-tnm-stage-group-vs",
       "description": "This value set is intended to contain allowable values for Stage Group, according to TNM staging rules. AJCC codes (preferably, version 8 for current cancers) SHOULD be used."
     },
     {
       "title": "Cancer Staging System Value Set",
-      "url": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-staging-system-vs",
+      "url": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-staging-method-vs",
       "description": "System used for staging."
     },
     {
@@ -6934,22 +6934,22 @@
     },
     {
       "title": "Staging Type Value Set (for Distant Metastases Category)",
-      "url": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-observation-codes-distant-metastases-vs",
+      "url": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-tnm-distant-metastases-staging-type-vs",
       "description": "Identifying codes based on the timing of classification for distant metastases (M) staging observations."
     },
     {
       "title": "Staging Type for Primary Tumor Category Value Set",
-      "url": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-observation-codes-primary-tumor-vs",
+      "url": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-tnm-primary-tumor-staging-type-vs",
       "description": "Identifying codes based on the timing of classification for primary tumor (T) staging observations."
     },
     {
       "title": "Staging Type for Regional Node Category Value Set",
-      "url": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-observation-codes-regional-nodes-vs",
+      "url": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-tnm-regional-nodes-staging-type-vs",
       "description": "Identifying codes based on the timing of classification for regional node (N) staging observations."
     },
     {
       "title": "Staging Type for Stage Group Value Set",
-      "url": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-observation-codes-stage-group-vs",
+      "url": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-tnm-stage-group-staging-type-vs",
       "description": "Identifying codes based on the timing of classification for stage group observations."
     },
     {
@@ -39842,7 +39842,7 @@
     },
     {
       "Value set name": "Cancer Staging System Value Set",
-      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-staging-system-vs",
+      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-staging-method-vs",
       "Code system": "SNOMED CT",
       "Logical definition": "concept is 254292007"
     },
@@ -41004,84 +41004,84 @@
     },
     {
       "Value set name": "Staging Type Value Set (for Distant Metastases Category)",
-      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-observation-codes-distant-metastases-vs",
+      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-tnm-distant-metastases-staging-type-vs",
       "Code system": "LOINC",
       "Code": "21901-4",
       "Code description": "Distant metastases.pathology [Class] Cancer"
     },
     {
       "Value set name": "Staging Type Value Set (for Distant Metastases Category)",
-      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-observation-codes-distant-metastases-vs",
+      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-tnm-distant-metastases-staging-type-vs",
       "Code system": "LOINC",
       "Code": "21907-1",
       "Code description": "Distant metastases.clinical [Class] Cancer"
     },
     {
       "Value set name": "Staging Type Value Set (for Distant Metastases Category)",
-      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-observation-codes-distant-metastases-vs",
+      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-tnm-distant-metastases-staging-type-vs",
       "Code system": "LOINC",
       "Code": "21913-9",
       "Code description": "Distant metastases.other [Class] Cancer"
     },
     {
       "Value set name": "Staging Type for Primary Tumor Category Value Set",
-      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-observation-codes-primary-tumor-vs",
+      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-tnm-primary-tumor-staging-type-vs",
       "Code system": "LOINC",
       "Code": "21899-0",
       "Code description": "Primary tumor.pathology Cancer"
     },
     {
       "Value set name": "Staging Type for Primary Tumor Category Value Set",
-      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-observation-codes-primary-tumor-vs",
+      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-tnm-primary-tumor-staging-type-vs",
       "Code system": "LOINC",
       "Code": "21905-5",
       "Code description": "Primary tumor.clinical [Class] Cancer"
     },
     {
       "Value set name": "Staging Type for Primary Tumor Category Value Set",
-      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-observation-codes-primary-tumor-vs",
+      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-tnm-primary-tumor-staging-type-vs",
       "Code system": "LOINC",
       "Code": "21911-3",
       "Code description": "Primary tumor.other [Class] Cancer"
     },
     {
       "Value set name": "Staging Type for Regional Node Category Value Set",
-      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-observation-codes-regional-nodes-vs",
+      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-tnm-regional-nodes-staging-type-vs",
       "Code system": "LOINC",
       "Code": "21900-6",
       "Code description": "Regional lymph nodes.pathology [Class] Cancer"
     },
     {
       "Value set name": "Staging Type for Regional Node Category Value Set",
-      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-observation-codes-regional-nodes-vs",
+      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-tnm-regional-nodes-staging-type-vs",
       "Code system": "LOINC",
       "Code": "21906-3",
       "Code description": "Regional lymph nodes.clinical [Class] Cancer"
     },
     {
       "Value set name": "Staging Type for Regional Node Category Value Set",
-      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-observation-codes-regional-nodes-vs",
+      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-tnm-regional-nodes-staging-type-vs",
       "Code system": "LOINC",
       "Code": "21912-1",
       "Code description": "Regional lymph nodes.other [Class] Cancer"
     },
     {
       "Value set name": "Staging Type for Stage Group Value Set",
-      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-observation-codes-stage-group-vs",
+      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-tnm-stage-group-staging-type-vs",
       "Code system": "LOINC",
       "Code": "21902-2",
       "Code description": "Stage group.pathology Cancer"
     },
     {
       "Value set name": "Staging Type for Stage Group Value Set",
-      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-observation-codes-stage-group-vs",
+      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-tnm-stage-group-staging-type-vs",
       "Code system": "LOINC",
       "Code": "21908-9",
       "Code description": "Stage group.clinical Cancer"
     },
     {
       "Value set name": "Staging Type for Stage Group Value Set",
-      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-observation-codes-stage-group-vs",
+      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-tnm-stage-group-staging-type-vs",
       "Code system": "LOINC",
       "Code": "21914-7",
       "Code description": "Stage group.other Cancer"

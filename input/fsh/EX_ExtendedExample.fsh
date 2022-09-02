@@ -157,7 +157,7 @@ Description: "mCODE Example for Cancer-Related Comorbidities"
 * extension[comorbidConditionAbsent][0].valueCodeableConcept = SCT#414916001 "Obesity (disorder)"
 * extension[comorbidConditionAbsent][1].valueCodeableConcept = SCT#19829001 "Disorder of lung (disorder)"
 
-/*
+/* Not used -- model of comorbidities as Questionnaire
 Instance: cancer-related-comorbidity-response-jenny-m
 InstanceOf: ComorbiditiesResponse
 Description: "mCODE Example for Cancer-Related Comorbidities"
@@ -224,13 +224,15 @@ Description: "Extended example: example showing primary cancer condition"
 * asserter = Reference(us-core-practitioner-owen-oncologist)
 * stage.summary = SCT#1222806003 "American Joint Committee on Cancer stage IIIC (qualifier value)"
 * stage.assessment = Reference(tnm-clinical-stage-group-jenny-m)
+* stage.type = SCT#897275008 "American Joint Commission on Cancer, Cancer Staging Manual, 8th edition neoplasm staging system (tumor staging)"
 
 Instance: tnm-clinical-stage-group-jenny-m
-InstanceOf: CancerStageGroup
+InstanceOf: TNMStageGroup
 Description: "Extended example: example showing TNM staging (stage group)"
 * status = #final "final"
 * code = LNC#21908-9 "Stage group.clinical Cancer"
 * subject = Reference(cancer-patient-jenny-m)
+* focus = Reference(primary-cancer-condition-jenny-m)  // new STU3 requirement
 * effectiveDateTime = "2018-03-16"
 * valueCodeableConcept = SCT#1222769001 "American Joint Committee on Cancer stage IIB (qualifier value)"
 * method = SCT#897275008 "American Joint Commission on Cancer, Cancer Staging Manual, 8th edition neoplasm staging system (tumor staging)"
@@ -461,13 +463,13 @@ Description: "Extended example: example showing DCIS diagnosis"
 * valueCodeableConcept = LNC#LA27824-4 "Nottingham grade 2"
 * specimen = Reference(tumor-specimen-left-breast-jenny-m)
 
-
 Instance: tnm-pathologic-stage-group-jenny-m
-InstanceOf: CancerStageGroup
+InstanceOf: TNMStageGroup
 Description: "Extended example: example showing TNM staging (stage group)"
 * status = #final "final"
 * code = LNC#21902-2 "Stage group.pathology Cancer"
 * subject = Reference(cancer-patient-jenny-m)
+* focus = Reference(primary-cancer-condition-jenny-m)  // new STU3 requirement
 * effectiveDateTime = "2018-04-05"
 * valueCodeableConcept = SCT#1222769001 "American Joint Committee on Cancer stage IIB (qualifier value)"
 * method = SCT#897275008 "American Joint Commission on Cancer, Cancer Staging Manual, 8th edition neoplasm staging system (tumor staging)"

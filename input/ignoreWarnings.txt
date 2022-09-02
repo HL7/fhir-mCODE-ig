@@ -28,8 +28,8 @@ ERROR: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[11].resource.code.codin
 
 
 # SNOMED CONCEPTS VALID IN SNOMED 6/30/2022 EDITION, BUT FHIR TERMINOLOGY SERVER NOT UP TO DATE
-ERROR: ValueSet.where(id = 'mcode-cancer-stage-group-vs'): Error from server: The Snomed Concept 1222592004 was not known
-ERROR: ValueSet.where(id = 'mcode-cancer-stage-group-vs'): Error from server: The Snomed Concept 1222592004 was not known
+ERROR: ValueSet.where(id = 'mcode-tnm-stage-group-vs'): Error from server: The Snomed Concept 1222592004 was not known
+ERROR: ValueSet.where(id = 'mcode-tnm-stage-group-vs'): Error from server: The Snomed Concept 1222592004 was not known
 ERROR: ValueSet.where(id = 'mcode-tnm-primary-tumor-category-vs'): Error from server: The Snomed Concept 1222585009 was not known
 ERROR: ValueSet.where(id = 'mcode-tnm-regional-nodes-category-vs'): Error from server: The Snomed Concept 1222588006 was not known
 

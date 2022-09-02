@@ -12,7 +12,7 @@ Profile: PrimaryCancerCondition
 Id: mcode-primary-cancer-condition
 Title: "Primary Cancer Condition Profile"
 Parent: USCoreCondition
-Description: "Records the the primary cancer condition, the original or first tumor in the body (Definition from: [NCI Dictionary of Cancer Terms](https://www.cancer.gov/publications/dictionaries/cancer-terms/def/primary-tumor)). Cancers that are not clearly secondary (i.e., of uncertain origin or behavior) should be documented as primary."
+Description: "Records the the primary cancer condition, the original or first neoplasm in the body (Definition from: [NCI Dictionary of Cancer Terms](https://www.cancer.gov/publications/dictionaries/cancer-terms/def/primary-tumor)). Cancers that are not clearly secondary (i.e., of uncertain origin or behavior) should be documented as primary."
 * insert CancerConditionCommonRules
 * code from PrimaryCancerDisorderVS (extensible)
 * category 2..*
@@ -20,13 +20,14 @@ Description: "Records the the primary cancer condition, the original or first tu
 * category[us-core] = CondCat#problem-list-item
 * category contains mcode-category 1..1
 * category[mcode-category] = SCT#372087000 // Primary malignant neoplasm (disorder) 
-* stage.assessment only Reference(CancerStageGroup)
+* stage.assessment only Reference(CancerStage)
 * stage and stage.assessment MS
-* stage.summary ^short = "Most recent Stage Group"
-* stage.summary ^definition = "In mCODE, staging information MUST be captured in an Observation that conforms to the CancerStageGroup profile. For convenience, the stage group MAY appear in this element, copied from the CancerStageGroup, but mCODE Data Senders and Receivers MAY ignore it."
-* stage.type ^short = "Staging system used."
-* stage.type ^definition = "In mCODE, staging information MUST be captured in an Observation that conforms to the CancerStageGroup profile. For convenience, the staging system MAY appear in this element, but mCODE Data Senders and Receivers MAY ignore it."
-* stage.type from ObservationCodesStageGroupVS (required)
+* stage.summary ^short = "Stage at time of last staging."
+* stage.summary ^definition = "Most recent overall cancer stage, such as stage group IIA in TNM staging. More detailed staging information (such as the individual T, N, and M categories) SHOULD be captured in a separate Observation resource, referenced by stage.assessment, conforming to CancerStage profile."
+* stage.type ^short = "Staging system or method used."
+* stage.type ^definition = "The type of staging used to arrive at the stage.summary value."
+* stage.type from CancerStagingMethodVS (required)
+
 
 Profile: SecondaryCancerCondition
 Parent: USCoreCondition

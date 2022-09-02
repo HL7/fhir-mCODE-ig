@@ -1,5 +1,5 @@
 
-// Package hl7.terminology#2.1.0 based on FHIR 4.0.1. Generated 2021-03-06
+// Package hl7.terminology#3.1.0 based on FHIR 4.0.1. Generated 2021-03-06
 
 // External Code Systems with a canonical recognized by terminology.hl7.org
 Alias:   LNC = http://loinc.org

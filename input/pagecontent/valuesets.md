@@ -13,16 +13,13 @@ The following value sets are defined in this implementation guide:
 * [BrachytherapyHighDoseRateTechniqueVS]
 * [BrachytherapyModalityVS]
 * [BrachytherapyTechniqueVS]
-
 * [CancerBodyLocationVS]
 * [CancerDiseaseStatusEvidenceTypeVS]
 * [CancerDisorderVS]
 * [CancerRelatedSurgicalProcedureVS]
-
 * [CancerStageVS]
 * [CancerStagingMethodVS]
 * [CancerStagingTypeVS]
-
 * [CarcinomaInSituDisorderVS]
 * [ConditionStatusTrendVS]
 * [CytologicEvidenceOfMalignancyVS]
@@ -31,7 +28,6 @@ The following value sets are defined in this implementation guide:
 * [HypereosinophilicSyndromeDisorderVS]
 * [LateralityQualifierVS]
 * [MelanomaInSituDisorderVS]
-
 * [PrimaryCancerDisorderVS]
 * [PrimaryMalignantNeoplasmDisorderVS]
 * [ProcedureIntentVS]
@@ -41,7 +37,6 @@ The following value sets are defined in this implementation guide:
 * [RadiotherapyTreatmentLocationVS]
 * [RadiotherapyVolumeTypeVS]
 * [SecondaryCancerDisorderVS]
-
 * [TeleradiotherapyCarbonIonBeamTechniqueVS]
 * [TeleradiotherapyElectronBeamTechniqueVS]
 * [TeleradiotherapyModalityVS]
@@ -49,7 +44,6 @@ The following value sets are defined in this implementation guide:
 * [TeleradiotherapyPhotonBeamTechniqueVS]
 * [TeleradiotherapyProtonBeamTechniqueVS]
 * [TeleradiotherapyTechniqueVS]
-
 * [TNMDistantMetastasesCategoryVS]
 * [TNMDistantMetastasesStagingTypeVS]
 * [TNMPrimaryTumorCategoryVS]
@@ -59,7 +53,6 @@ The following value sets are defined in this implementation guide:
 * [TNMStageGroupVS]
 * [TNMStageGroupStagingTypeVS]
 * [TNMStagingMethodVS]
-
 * [TreatmentTerminationReasonVS]
 * [TumorMarkerTestVS]
 * [TumorSizeMethodVS]

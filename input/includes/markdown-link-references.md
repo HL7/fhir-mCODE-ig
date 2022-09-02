@@ -47,6 +47,7 @@
 [RadiotherapySessions]: StructureDefinition-mcode-radiotherapy-sessions.html
 [RadiotherapyTechnique]: StructureDefinition-mcode-radiotherapy-technique.html
 [RelatedCondition]: StructureDefinition-mcode-related-condition.html
+[RelatedConditionAbsent]: StructureDefinition-mcode-related-condition-absent.html
 [TreatmentTerminationReason]: StructureDefinition-mcode-treatment-termination-reason.html
 
 <!-- mCODE Value Sets  -->

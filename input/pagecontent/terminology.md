@@ -25,7 +25,7 @@ The following table presents the external code systems (and naming conventions) 
 | UCUM | Units of measure | Yes | <http://unitsofmeasure.org> |  |
 {: .grid }
 
-[1] [Official HL7 Terminology (v2.1.0: Release)](https://terminology.hl7.org/codesystems.html)
+[1] [Official HL7 Terminology (v3.1.0: Release)](https://terminology.hl7.org/codesystems.html)
 
 [2] [HL7 Terminology Authority Recommendation (as of 1 Nov 2021)](https://confluence.hl7.org/display/TA/External+Terminologies+-+Information)
 

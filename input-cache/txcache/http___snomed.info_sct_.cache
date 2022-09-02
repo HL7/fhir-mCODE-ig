@@ -59,7 +59,7 @@ e: {
   "error" : "Error from server: Unable to provide support for code system http://snomed.info/sct/"
 }
 -------------------------------------------------------------------------------------
-{"hierarchical" : false, "url": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-staging-system-vs", "version": "2.0.0"}####
+{"hierarchical" : false, "url": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-staging-method-vs", "version": "2.0.0"}####
 e: {
   "error" : "Error from server: Unable to provide support for code system http://snomed.info/sct/"
 }
@@ -486,7 +486,7 @@ e: {
   "error" : "Error from server: Unable to provide support for code system http://snomed.info/sct/"
 }
 -------------------------------------------------------------------------------------
-{"hierarchical" : true, "url": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-staging-system-vs", "version": "2.0.0"}####
+{"hierarchical" : true, "url": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-staging-method-vs", "version": "2.0.0"}####
 e: {
   "error" : "Error from server: Unable to provide support for code system http://snomed.info/sct/"
 }

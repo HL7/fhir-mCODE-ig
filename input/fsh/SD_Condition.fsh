@@ -20,13 +20,13 @@ Description: "Records the the primary cancer condition, the original or first ne
 * category[us-core] = CondCat#problem-list-item
 * category contains mcode-category 1..1
 * category[mcode-category] = SCT#372087000 // Primary malignant neoplasm (disorder) 
-* stage.assessment only Reference(CancerStageAssessment)
+* stage.assessment only Reference(CancerStage)
 * stage and stage.assessment MS
 * stage.summary ^short = "Stage at time of last staging."
-* stage.summary ^definition = "Most recent overall cancer stage, such as stage group IIA in TNM staging. More detailed staging information (such as the individual T, N, and M categories) SHOULD be captured in a separate Observation resource, referenced by stage.assessment, conforming to CancerStageAssessment profile."
+* stage.summary ^definition = "Most recent overall cancer stage, such as stage group IIA in TNM staging. More detailed staging information (such as the individual T, N, and M categories) SHOULD be captured in a separate Observation resource, referenced by stage.assessment, conforming to CancerStage profile."
 * stage.type ^short = "Staging system or method used."
 * stage.type ^definition = "The type of staging used to arrive at the stage.summary value."
-* stage.type from CancerStagingSystemVS (required)
+* stage.type from CancerStagingMethodVS (required)
 
 
 Profile: SecondaryCancerCondition

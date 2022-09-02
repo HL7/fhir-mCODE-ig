@@ -227,7 +227,7 @@ Description: "Extended example: example showing primary cancer condition"
 * stage.type = SCT#897275008 "American Joint Commission on Cancer, Cancer Staging Manual, 8th edition neoplasm staging system (tumor staging)"
 
 Instance: tnm-clinical-stage-group-jenny-m
-InstanceOf: CancerStageGroupTNM
+InstanceOf: TNMStageGroup
 Description: "Extended example: example showing TNM staging (stage group)"
 * status = #final "final"
 * code = LNC#21908-9 "Stage group.clinical Cancer"
@@ -464,7 +464,7 @@ Description: "Extended example: example showing DCIS diagnosis"
 * specimen = Reference(tumor-specimen-left-breast-jenny-m)
 
 Instance: tnm-pathologic-stage-group-jenny-m
-InstanceOf: CancerStageGroupTNM
+InstanceOf: TNMStageGroup
 Description: "Extended example: example showing TNM staging (stage group)"
 * status = #final "final"
 * code = LNC#21902-2 "Stage group.pathology Cancer"

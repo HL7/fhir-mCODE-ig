@@ -12,8 +12,7 @@
 [CancerRelatedMedicationAdministration]: StructureDefinition-mcode-cancer-related-medication-administration.html
 [CancerRelatedMedicationRequest]: StructureDefinition-mcode-cancer-related-medication-request.html
 [CancerRelatedSurgicalProcedure]: StructureDefinition-mcode-cancer-related-surgical-procedure.html
-[CancerStageAssessment]: StructureDefinition-mcode-cancer-stage-assessment.html
-[CancerStageGroupTNM]: StructureDefinition-mcode-cancer-stage-group-tnm.html
+[CancerStage]: StructureDefinition-mcode-cancer-stage.html
 [Comorbidities]: StructureDefinition-mcode-comorbidities.html
 [ECOGPerformanceStatus]: StructureDefinition-mcode-ecog-performance-status.html
 [GenomicRegionStudied]: StructureDefinition-mcode-genomic-region-studied.html
@@ -30,6 +29,7 @@
 [TNMDistantMetastasesCategory]: StructureDefinition-mcode-tnm-distant-metastases-category.html
 [TNMPrimaryTumorCategory]: StructureDefinition-mcode-tnm-primary-tumor-category.html
 [TNMRegionalNodesCategory]: StructureDefinition-mcode-tnm-regional-nodes-category.html
+[TNMStageGroup]: StructureDefinition-mcode-tnm-stage-group.html
 [Tumor]: StructureDefinition-mcode-tumor.html
 [TumorMarkerTest]: StructureDefinition-mcode-tumor-marker-test.html
 [TumorSize]: StructureDefinition-mcode-tumor-size.html
@@ -65,8 +65,9 @@
 [CancerDiseaseStatusEvidenceTypeVS]: ValueSet-mcode-cancer-disease-status-evidence-type-vs.html
 [CancerDisorderVS]: ValueSet-mcode-cancer-disorder-vs.html
 [CancerRelatedSurgicalProcedureVS]: ValueSet-mcode-cancer-related-surgical-procedure-vs.html
-[CancerStageGroupVS]: ValueSet-mcode-cancer-stage-group-vs.html
-[CancerStagingSystemVS]: ValueSet-mcode-cancer-staging-system-vs.html
+[CancerStageVS]: ValueSet-mcode-cancer-stage-vs.html
+[CancerStagingMethodVS]: ValueSet-mcode-cancer-staging-method-vs.html
+[CancerStagingTypeVS]: ValueSet-mcode-cancer-staging-type-vs.html
 [CarcinomaInSituDisorderVS]: ValueSet-mcode-carcinoma-in-situ-disorder-vs.html
 [ConditionStatusTrendVS]: ValueSet-mcode-condition-status-trend-vs.html
 [CytologicEvidenceOfMalignancyVS]: ValueSet-mcode-cytologic-evidence-malignancy-vs.html
@@ -75,10 +76,11 @@
 [HypereosinophilicSyndromeDisorderVS]: ValueSet-mcode-hypereosinophilic-syndrome-disorder-vs.html
 [LateralityQualifierVS]: ValueSet-mcode-laterality-qualifier-vs.html
 [MelanomaInSituDisorderVS]: ValueSet-mcode-melanoma-in-situ-disorder-vs.html
-[ObservationCodesDistantMetastasesVS]: ValueSet-mcode-observation-codes-distant-metastases-vs.html
-[ObservationCodesPrimaryTumorVS]: ValueSet-mcode-observation-codes-primary-tumor-vs.html
-[ObservationCodesRegionalNodesVS]: ValueSet-mcode-observation-codes-regional-nodes-vs.html
-[ObservationCodesStageGroupVS]: ValueSet-mcode-observation-codes-stage-group-vs.html
+[TNMDistantMetastasesStagingTypeVS]: ValueSet-mcode-tnm-distant-metastases-staging-type-vs.html
+[TNMPrimaryTumorStagingTypeVS]: ValueSet-mcode-tnm-primary-tumor-staging-type-vs.html
+[TNMRegionalNodesStagingTypeVS]: ValueSet-mcode-tnm-regional-nodes-staging-type-vs.html
+[TNMStagingMethodVS]: ValueSet-mcode-tnm-staging-method-vs.html
+[TNMStageGroupStagingTypeVS]: ValueSet-mcode-tnm-stage-group-staging-type-vs.html
 [PrimaryCancerDisorderVS]: ValueSet-mcode-primary-cancer-disorder-vs.html
 [PrimaryMalignantNeoplasmDisorderVS]: ValueSet-mcode-primary-malignant-neoplasm-disorder-vs.html
 [ProcedureIntentVS]: ValueSet-mcode-procedure-intent-vs.html
@@ -98,6 +100,7 @@
 [TNMDistantMetastasesCategoryVS]: ValueSet-mcode-tnm-distant-metastases-category-vs.html
 [TNMPrimaryTumorCategoryVS]: ValueSet-mcode-tnm-primary-tumor-category-vs.html
 [TNMRegionalNodesCategoryVS]: ValueSet-mcode-tnm-regional-nodes-category-vs.html
+[TNMStageGroupVS]: ValueSet-mcode-tnm-stage-group-vs.html
 [TreatmentTerminationReasonVS]: ValueSet-mcode-treatment-termination-reason-vs.html
 [TumorMarkerTestVS]: ValueSet-mcode-tumor-marker-test-vs.html
 [TumorSizeMethodVS]: ValueSet-mcode-tumor-size-method-vs.html
@@ -130,6 +133,7 @@
 <!-- US Core -->
 [USCoreMedicationRequest]: http://hl7.org/fhir/us/core/StructureDefinition-us-core-medicationrequest.html
 [USCoreLaboratoryResultObservation]: http://hl7.org/fhir/us/core/StructureDefinition-us-core-observation-lab.html
+[USCoreClinicalTestObservation]:https://hl7.org/fhir/us/core/StructureDefinition-us-core-observation-clinical-test.html
 [USCorePatient]: http://hl7.org/fhir/us/core/StructureDefinition-us-core-patient.html
 [USCoreConditionProblemHealthConcern]: http://hl7.org/fhir/us/core/StructureDefinition-us-core-condition-problems-health-concerns.html
 [USCoreProcedure]: http://hl7.org/fhir/us/core/StructureDefinition-us-core-procedure.html
@@ -144,6 +148,10 @@
 [R4MedicationAdministration]: http://hl7.org/fhir/R4/medicationadministration.html
 [R4Specimen]: http://hl7.org/fhir/R4/specimen.html
 [R4Bundle]: http://hl7.org/fhir/R4/bundle.html
+
+<!-- Genomics -->
+[Variant]: http://hl7.org/fhir/uv/genomics-reporting/STU2/StructureDefinition-variant.html
+
 <!-- Other links -->
 [in-scope patient]: conformance-patients.html
 [in-scope patients]: conformance-patients.html

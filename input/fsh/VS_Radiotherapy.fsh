@@ -224,28 +224,28 @@ Description: "Various modifiers that can be applied to body locations where radi
 * include codes from valueset LateralityQualifierVS
 // * SCT#255549009    "Anterior (qualifier value)" -- NOT USED BY TG263
 // * SCT#255551008    "Posterior (qualifier value)" -- NOT USED BY TG263
-* SCT#277733009 "Level 1 (qualifier value)"
-* SCT#277734003 "Level 2 (qualifier value)"
-* SCT#277735002 "Level 3 (qualifier value)"
-* SCT#261089000    "Inferior (qualifier value)"
-* SCT#264217000    "Superior (qualifier value)"
-* SCT#261183002    "Upper (qualifier value)"
-* SCT#261122009    "Lower (qualifier value)"
-* SCT#260528009    "Middle (qualifier value)"
-* SCT#46053002    "Distal (qualifier value)"
-* SCT#40415009    "Proximal (qualifier value)"
-* SCT#255503000    "Entire (qualifier value)" // flagged spuriously as invalid
-* SCT#255609007    "Partial (qualifier value)"
+* SCT#277733009  "Level 1 (qualifier value)"
+* SCT#277734003  "Level 2 (qualifier value)"
+* SCT#277735002  "Level 3 (qualifier value)"
+* SCT#261089000  "Inferior (qualifier value)"
+* SCT#264217000  "Superior (qualifier value)"
+* SCT#261183002  "Upper (qualifier value)"
+* SCT#261122009  "Lower (qualifier value)"
+* SCT#260528009  "Middle (qualifier value)"
+* SCT#46053002   "Distal (qualifier value)"
+* SCT#40415009   "Proximal (qualifier value)"
+* SCT#255503000  "Entire (qualifier value)" // flagged spuriously as invalid
+* SCT#255609007  "Partial (qualifier value)"
 //* SCT#7771000    "Left (qualifier value)" - now in separate lateralityQualifier
 //* SCT#24028007    "Right (qualifier value)" - now in separate lateralityQualifier
 //* SCT#51440002    "Right and left (qualifier value)" - now in separate lateralityQualifier
-* SCT#14414005  "Peripheral (qualifier value)"
-* SCT#26216008  "Central (qualifier value)"
-* SCT#260235002 "Core (qualifier value)"
-* SCT#410679008 "Surface (qualifier value)"
-* SCT#260521003 "Internal (qualifier value)"
-* SCT#261074009 "External (qualifier value)"
-* SCT#261115001 "Laryngeal (qualifier value)"
+* SCT#14414005   "Peripheral (qualifier value)"
+* SCT#26216008   "Central (qualifier value)"
+* SCT#260235002  "Core (qualifier value)"
+* SCT#410679008  "Surface (qualifier value)"
+* SCT#260521003  "Internal (qualifier value)"
+* SCT#261074009  "External (qualifier value)"
+* SCT#261115001  "Laryngeal (qualifier value)"
 * SCT#260548002  "Oral (qualifier value)"
 * SCT#18769003   "Adjacent" // or "Juxta-posed (qualifier value)"
 * SCT#1217011006 "Non-adjacent (qualifier value)"

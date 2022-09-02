@@ -213,7 +213,7 @@ Description: "Anatomic volume for John Anyperson's brachytherapy."
 * locationQualifier[1] = SCT#7771000 "Left (qualifier value)"
 
 Instance: binet-stage-group-A
-InstanceOf: CancerStageAssessment
+InstanceOf: CancerStage
 Description: "Example of a non-TNM Stage Group (Binet staging for CLL)"
 * code = LNC#67213-9 "Disease stage"
 * valueCodeableConcept = UMLS#C2698392  "Binet Stage A" // or NCIT#C80134 "Binet Stage A"
@@ -225,7 +225,7 @@ Description: "Example of a non-TNM Stage Group (Binet staging for CLL)"
 * method =  SCT#1149099005 "Binet staging classification for chronic lymphocytic leukemia (tumor staging)"
 
 Instance: tnm-clinical-stage-group-3c
-InstanceOf: CancerStageGroupTNM
+InstanceOf: TNMStageGroup
 Description: "Example of TNM Clinical Stage Group"
 * code = LNC#21908-9 "Stage group.clinical Cancer"
 * valueCodeableConcept = SCT#1222806003 "American Joint Committee on Cancer stage IIIC (qualifier value)"
@@ -311,7 +311,7 @@ Description: "Example of CancerRelatedMedicationRequest - Chemo Infusion"
 
 Instance: lab-result-observation-hemoglobin
 InstanceOf: USCoreLaboratoryResultObservationProfile
-Description: "Hemoglobin lab result to support CancerStageGroup example"
+Description: "Hemoglobin lab result to support TNMStageGroup example"
 * subject = Reference(cancer-patient-adam-everyman)
 * status = ObsStatus#final
 * code = LNC#718-7 "Hemoglobin [Mass/volume] in Blood"

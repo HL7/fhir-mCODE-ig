@@ -17,8 +17,7 @@ Description: "mCODE Example for Genomic Variant"
 * component[genomic-hgvs].valueCodeableConcept = HGVS#NM_000455.5:c.725G>A
 * component[genomic-source-class].valueCodeableConcept = LNC#LA6684-0 "Somatic"
 
-/* genomic-variant-germline-deletion is an example of the
- * GenomicVariant to represent a single mutation test.
+/* genomic-variant-germline-deletion is an example of the GenomicVariant to represent a single mutation test.
  * This example demonstrates a test for a single germline mutation, BRCA1 gene.c.185delAG, equivalent to the LOINC test https://loinc.org/21637-4/.
  */
 Instance: genomic-variant-germline-deletion

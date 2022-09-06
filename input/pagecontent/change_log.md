@@ -28,7 +28,7 @@ Here is one sample code to demonstrate how SNOMED and AJCC are related:
     en   cN0 - Used with permission of the American College of Surgeons, Chicago, Illinois. The original source for this information is the AJCC Cancer Staging System (2022) https://www.facs.org/quality-programs/cancer/ajcc/cancer-staging.
   ```
 
-To be clear, a clinician should never _see_ the SNOMED codes. A user interface would present the familiar AJCC codes. SNOMED codes would exist only in the back end system for wire transfer purposes.  
+To be clear, a clinician should never _see_ the SNOMED codes. A user interface would present and accept the familiar AJCC staging codes. The SNOMED equivalents would exist only in the back end system for wire transfer purposes.  
 
 The binding strength for these value sets remains "preferred", meaning values outside this value set can be used. However, the additional values have been specifically limited to AJCC codes through addition of [maximum value sets](http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet). The maximum value sets are:
 

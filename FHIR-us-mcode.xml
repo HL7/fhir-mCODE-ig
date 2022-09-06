@@ -377,7 +377,7 @@
 <page key="group-assessment" name="Assessment"/>
 <page key="basic_examples" name="Basic Examples"/>
 <page key="capabilitystatements" name="Capability Statements"/>
-<page key="changelog" name="Change Log"/>
+<page deprecated="true" key="changelog" name="Change Log"/>
 <page key="codesystems" name="Code Systems"/>
 <page key="conformance-general" name="Conformance Expectations"/>
 <page key="dictionary" name="Data Dictionary"/>
@@ -395,6 +395,7 @@
 <page key="group-patient" name="Patient Information"/>
 <page key="conformance-profiles" name="Profile Conformance"/>
 <page key="profiles" name="Profiles"/>
+<page key="change_log" name="Release Notes"/>
 <page key="toc" name="Table of Contents"/>
 <page key="terminology" name="Terminology"/>
 <page key="group-treatment" name="Treatments"/>

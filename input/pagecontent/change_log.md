@@ -1,13 +1,8 @@
 The following changes occurred between [STU 2 publication](http://hl7.org/fhir/us/mcode/STU2/) (January 2022) and mCODE version 2.1, STU 3 ballot (January 2023). For a history of previous changes, please see the prior change logs in the [appropriate versions](http://hl7.org/fhir/us/mcode/history.html).
 
-### Staging Profiles
-
-* To make it more clear that mCODE supports non-TNM staging systems, a new profile, [CancerStage], was added to represent non-TNM staging. Previously, the CancerStageGroup profile was used TNM stage groups and non-TNM staging. Stage group name was confusing, and the profile included elements specific to TNM staging. The CancerStage profile is referenced from PrimaryCancerCondition's `Condition.stage.assessment` element.
-* The STU2 profile CancerStageGroup was renamed TNMStageGroup to reflect the profile's specialization to TNM staging.
-
 ### Use of AJCC-equivalent SNOMED Codes for Staging
 
-Based on the [new licensing agreement between SNOMED International and the American College of Surgeons](https://www.snomed.org/news-and-events/articles/SNOMED-ACS-AJCC-licensing-agreement), there are now SNOMED CT codes for AJCC staging. mCODE has redefined staging value sets that previously could not list AJCC codes due to copyright restrictions (see https://jira.hl7.org/browse/FHIR-37593). The value sets now defined in terms of SNOMED CT are:
+Based on the [new licensing agreement between SNOMED International and the American College of Surgeons](https://www.snomed.org/news-and-events/articles/SNOMED-ACS-AJCC-licensing-agreement), there are now SNOMED CT equivalent codes for AJCC staging codes. mCODE has taken advantage of this by redefining the staging value sets that previously could not list AJCC codes due to copyright restrictions (see https://jira.hl7.org/browse/FHIR-37593). The value sets now defined in terms of SNOMED CT are:
 
 * [TNMStageGroupVS]
 * [TNMPrimaryTumorCategoryVS]
@@ -30,14 +25,29 @@ Here is one sample code to demonstrate how SNOMED and AJCC are related:
 
 To be clear, a clinician should never _see_ the SNOMED codes. A user interface would present and accept the familiar AJCC staging codes. The SNOMED equivalents would exist only in the back end system for wire transfer purposes.  
 
-The binding strength for these value sets remains "preferred", meaning values outside this value set can be used. However, the additional values have been specifically limited to AJCC codes through addition of [maximum value sets](http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet). The maximum value sets are:
+The binding strength for these value sets remains "preferred", meaning that the SNOMED codes are not required. However, the alternative codes if used must be AJCC codes. This is implemented through addition of [maximum value sets](http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet) to the bindings. The maximum value sets are:
 
 * [TNMStageGroupMaxVS]
 * [TNMPrimaryTumorCategoryMaxVS]
 * [TNMRegionalNodesCategoryMaxVS]
 * [TNMDistantMetastasesCategoryMaxVS]
 
-To summarize, mCODE now prefers the SNOMED equivalents of AJCC codes, but AJCC codes are still acceptable. This provides maximum interoperability across AJCC licensed and unlicensed systems, but does not break existing applications.
+**To summarize, mCODE now prefers the SNOMED equivalents of AJCC codes, but AJCC codes are still acceptable. This provides maximum interoperability across AJCC licensed and unlicensed systems, but does not break existing applications.**
+
+### Staging Profiles
+
+Previously, the CancerStageGroup profile was used to represent both the TNM stage group and non-TNM staging. This was less than optimal, since the name "stage group" was confusing for non-TNM staging, and the profile contained elements specific to TNM staging. With the ability to have specific value sets for TNM staging afforded by the SNOMED-AJCC agreement described above, mCODE can now explicitly model TNM-based and non-TNM-based staging. To make it clear how to represent non-TNM staging, a new profile, [CancerStage], has been added to represent non-TNM staging, while the former CancerStageGroup profile has been renamed [TNMStageGroup] to reflect the profile's specialization to TNM staging.
+
+For non-TNM staging, the PrimaryCancerCondition's `Condition.stage.assessment` element should reference an Observation conforming to the [CancerStage] profile. For TNM staging, the same element will reference an Observation conforming to the [TNMStageGroup] profile.
+
+### New Value Sets
+
+To support the [CancerStage] profile, two new value sets were introduced:
+
+* [CancerStagingTypeVS] was introduced to populate the `Observation.code` element in the CancerStage profile.
+* [CancerStageVS] was introduced to populate the `Observation.valueCodeableConcept` element in the CancerStage profile.
+
+The [CancerStagingMethodVS] (formerly CancerStagingSystemVS) that populates the `Observation.method` element in the CancerStage profile, already existed in STU2.
 
 ### Value Sets Renamed
 
@@ -49,15 +59,6 @@ Several value sets were renamed to clarify their purpose and provide more consis
 * ObservationCodesPrimaryTumorVS -> [TNMPrimaryTumorStagingTypeVS] (because it used for TNM staging)
 * ObservationCodesRegionalNodesVS -> [TNMRegionalNodesStagingTypeVS] (because it used for TNM staging)
 * ObservationCodesStageGroupVS -> [TNMStageGroupStagingTypeVS] (because it used for TNM staging)
-
-### New Value Sets
-
-To support the [CancerStage] profile, new value sets were introduced. The naming and content of these value sets parallel those for TNM staging:
-
-* [CancerStagingTypeVS] was introduced to populate the `Observation.code` element in the CancerStage profile.
-* [CancerStageVS] was introduced to populate the `Observation.valueCodeableConcept` element in the CancerStage profile.
-
-The [CancerStagingMethodVS] (formerly CancerStagingSystemVS), whic populates the `Observation.method` element in the CancerStage profile, existed in STU2.
 
 ### Value Set Content Changes
 

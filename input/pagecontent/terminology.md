@@ -51,7 +51,7 @@ The following table presents the external code systems (and naming conventions) 
 
 ### Local Code Systems
 
-Local code systems `SnomedRequestedCS` are provided for terms submitted but not yet published and/or approved by SNOMED. It is expected that the local codes will be replaced with approved LOINC and SNOMED terms in a future technical correction to the STU2 IG. Where codes have already been assigned by SNOMED, but not yet published, those codes are used as local codes to reduce future changes. In other cases, the submission numbers are used as the local codes.
+Local code systems `SnomedRequestedCS` are provided for terms submitted but not yet published and/or approved by SNOMED. It is expected that the local codes will be replaced with approved LOINC and SNOMED terms in a future technical correction to the STU 2 IG. Where codes have already been assigned by SNOMED, but not yet published, those codes are used as local codes to reduce future changes. In other cases, the submission numbers are used as the local codes.
 
 **Links:**
 

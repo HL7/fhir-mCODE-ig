@@ -46,6 +46,8 @@ pages:
     title: Profile Conformance
   terminology.md:
     title: Terminology
+  dictionary.md:
+    title: Data Dictionary
   profiles.md:
     title: Profiles
   extensions.md:
@@ -62,12 +64,10 @@ pages:
     title: Basic Examples
   examples.md:
     title: Extended Example
-  dictionary.md:
-    title: Data Dictionary
+  change_log.md:
+    title: Release Notes
   glossary.md:
     title: Glossary
-  change_log.md:
-    title: Change Log
   downloads.md:
     title: Download Specification
 
@@ -85,6 +85,7 @@ menu:
     Identifying mCODE Patients: conformance-patients.html
     Profile Conformance: conformance-profiles.html
     Terminology: terminology.html
+    Data Dictionary: dictionary.html
   FHIR Artifacts:
     Profiles: profiles.html
     Extensions: extensions.html
@@ -92,11 +93,11 @@ menu:
     Code Systems: codesystems.html
     Capability Statements: capabilitystatements.html
     Complete Listing: artifacts.html
-  More:
+  Examples:
     Basic Examples: basic_examples.html
     Extended Example: examples.html
-    Data Dictionary: dictionary.html
+  Release Notes: change_log.html
+  More:
     Radiotherapy Glossary:  glossary.html
-    Change Log: change_log.html
     Download Specification: downloads.html
     Other Versions: http://hl7.org/fhir/us/mcode/history.html

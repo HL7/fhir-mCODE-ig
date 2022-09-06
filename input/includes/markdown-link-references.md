@@ -102,6 +102,10 @@
 [TNMPrimaryTumorCategoryVS]: ValueSet-mcode-tnm-primary-tumor-category-vs.html
 [TNMRegionalNodesCategoryVS]: ValueSet-mcode-tnm-regional-nodes-category-vs.html
 [TNMStageGroupVS]: ValueSet-mcode-tnm-stage-group-vs.html
+[TNMDistantMetastasesCategoryMaxVS]: ValueSet-mcode-tnm-distant-metastases-category-max-vs.html
+[TNMPrimaryTumorCategoryMaxVS]: ValueSet-mcode-tnm-primary-tumor-category-max-vs.html
+[TNMRegionalNodesCategoryMaxVS]: ValueSet-mcode-tnm-regional-nodes-category-max-vs.html
+[TNMStageGroupMaxVS]: ValueSet-mcode-tnm-stage-group-max-vs.html
 [TreatmentTerminationReasonVS]: ValueSet-mcode-treatment-termination-reason-vs.html
 [TumorMarkerTestVS]: ValueSet-mcode-tumor-marker-test-vs.html
 [TumorSizeMethodVS]: ValueSet-mcode-tumor-size-method-vs.html

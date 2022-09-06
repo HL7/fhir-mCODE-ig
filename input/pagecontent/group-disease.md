@@ -117,15 +117,23 @@ mCODE includes single FHIR profile, [TumorMarkerTest], for all labs involving se
   * [CancerStageVS]
 
 * Staging, TNM
-  * [TNMDistantMetastasesCategoryVS]
-  * [TNMDistantMetastasesStagingTypeVS]
-  * [TNMPrimaryTumorCategoryVS]
-  * [TNMPrimaryTumorStagingTypeVS]
-  * [TNMRegionalNodesCategoryVS]
-  * [TNMRegionalNodesStagingTypeVS]
-  * [TNMStageGroupVS]
-  * [TNMStageGroupStagingTypeVS]
   * [TNMStagingMethodVS]
+  * Stage Group
+    * [TNMStageGroupVS]
+    * [TNMStageGroupMaxVS]
+    * [TNMStageGroupStagingTypeVS]
+  * Primary Tumor (T)
+    * [TNMPrimaryTumorCategoryVS]
+    * [TNMPrimaryTumorCategoryMaxVS]
+    * [TNMPrimaryTumorStagingTypeVS]
+  * Regional Nodes (N)
+    * [TNMRegionalNodesCategoryVS]
+    * [TNMRegionalNodesCategoryMaxVS]
+    * [TNMRegionalNodesStagingTypeVS]
+  * Distant Metastases (M)
+    * [TNMDistantMetastasesCategoryVS]
+    * [TNMDistantMetastasesCategoryMaxVS]
+    * [TNMDistantMetastasesStagingTypeVS]
 
 ### Code Systems
 

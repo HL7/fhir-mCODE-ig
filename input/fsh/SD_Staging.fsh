@@ -33,6 +33,7 @@ Description: "The extent of cancer reprsented by the stage group, based on a TNM
 * value[x] from TNMStageGroupVS (preferred)
 * value[x] ^short = "The stage group"
 * value[x] ^definition = "The overall cancer stage, such as stage group IIA."
+* value[x] ^binding.extension[http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet].valueCanonical = Canonical(TNMStageGroupMaxVS)
 * hasMember MS
 * method 1..1  // NEW requirement 
 * method from TNMStagingMethodVS (extensible)
@@ -66,6 +67,7 @@ Description: "Category of the primary tumor, based on its size and extent, based
 * method from TNMStagingMethodVS (extensible)
 * code from TNMPrimaryTumorStagingTypeVS (required)  
 * value[x] from TNMPrimaryTumorCategoryVS (preferred)  // MK 8/29/2022 - Using "preferred" binding because some users might use AJCC codes directly; in addition, the codes for "r" and "a" staging are not in SNOMED
+* value[x] ^binding.extension[http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet].valueCanonical = Canonical(TNMPrimaryTumorCategoryMaxVS)
 
 Profile:  TNMRegionalNodesCategory
 Id: mcode-tnm-regional-nodes-category
@@ -77,6 +79,7 @@ Description: "Category of the presence or absence of metastases in regional lymp
 * method from TNMStagingMethodVS (extensible)
 * code from TNMRegionalNodesStagingTypeVS (required)
 * value[x] from TNMRegionalNodesCategoryVS (preferred)
+* value[x] ^binding.extension[http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet].valueCanonical = Canonical(TNMRegionalNodesCategoryMaxVS)
 
 Profile:  TNMDistantMetastasesCategory
 Id: mcode-tnm-distant-metastases-category
@@ -88,4 +91,4 @@ Description: "Category describing the extent of a tumor metastasis in remote ana
 * method from TNMStagingMethodVS (extensible)
 * code from TNMDistantMetastasesStagingTypeVS (required)
 * value[x] from TNMDistantMetastasesCategoryVS (preferred)
-//
+* value[x] ^binding.extension[http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet].valueCanonical = Canonical(TNMDistantMetastasesCategoryMaxVS)

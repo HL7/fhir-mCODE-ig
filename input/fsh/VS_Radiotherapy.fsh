@@ -85,7 +85,7 @@ Description: "Allowed techniques for carbon ion beam modality"
 * insert SNOMEDCTCopyrightForVS
 * SCT#1156529004 "External beam radiation therapy using particle passive scattering technique (procedure)"
 * SCT#1156528007 "External beam radiation therapy using particle spot scanning technique (procedure)"
-* SCT#USCRS-33517 "External beam radiation therapy using particle scanning technique (procedure)"
+* SCT#1204242009 "External beam radiation therapy using particle scanning technique (procedure)"
 // * SCT#1156525005 "Mixed beam external beam radiation therapy (procedure)" -- removed by RTTD Terminology decision 9/21
 
 ValueSet: TeleradiotherapyProtonBeamTechniqueVS
@@ -95,7 +95,7 @@ Description: "Allowed techniques for proton beam modality"
 * insert SNOMEDCTCopyrightForVS
 * SCT#1156529004 "External beam radiation therapy using particle passive scattering technique (procedure)"
 * SCT#1156528007 "External beam radiation therapy using particle spot scanning technique (procedure)"
-* SCT#USCRS-33517 "External beam radiation therapy using particle scanning technique (procedure)"
+* SCT#1204242009 "External beam radiation therapy using particle scanning technique (procedure)"
 // * SCT#1156525005 "Mixed beam external beam radiation therapy (procedure)" -- RTTD Terminology decision 9/21
 
 ValueSet: BrachytherapyTechniqueVS
@@ -196,8 +196,8 @@ Description: "Codes describing the types of body volumes used in radiotherapy pl
 * SCT#228792002 "Clinical target volume (observable entity)"
 // * SCT#1162586008 "Irradiated volume of organ at risk (observable entity)"
 * SCT#1162586008 "Irradiated volume of organ at risk (observable entity)"
-* SCT#USCRS-33520 "Internal Target Volume"
-* SCT#USCRS-33521 "Internal Gross Tumor Volume"
+* SCT#1201745009 "Internal target volume (observable entity)"
+* SCT#1201746005 "Internal gross tumor volume (observable entity)"
 
 ValueSet: RadiotherapyTreatmentLocationQualifierVS
 Id: mcode-radiotherapy-treatment-location-qualifier-vs

@@ -1,6 +1,6 @@
 id: hl7.fhir.us.mcode
 canonical: http://hl7.org/fhir/us/mcode
-version: 2.0.0
+version: 2.1.0
 name: MinimalCommonOncologyDataElements
 title: "minimal Common Oncology Data Elements (mCODE) Implementation Guide"
 status: draft

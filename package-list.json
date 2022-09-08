@@ -12,6 +12,16 @@
       "current": true
     },
     {
+      "version": "2.1.0",
+      "date": "2022-11-20",
+      "desc": "STU 2.1 Release",
+      "path": "http://hl7.org/fhir/us/mcode/STU2.1",
+      "status": "trial-use",
+      "sequence": "STU 2",
+      "fhirversion": "4.0.1",
+      "current": false
+    },
+    {
       "version": "2.0.0",
       "date": "2021-11-20",
       "desc": "STU 2 Release",

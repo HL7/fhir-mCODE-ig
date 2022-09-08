@@ -1,4 +1,38 @@
-### mCODE STU 2 Publication Version (November 2021)
+### mCODE STU 2.1 Technical Correciton (November 2022)
+The following changes occurred between STU 2 publication (January 2022) and STU 2.1 (October 2022).
+
+* [PrimaryCancerCondition]'s stage.type value set binding was corrected. It should have indicated the staging method that gave rise to the value appearing in stage.summary (such as AJCC Version 8).
+* Corrected extended example, which formerly used invalid stage "pM0". Replaced with a data absent reason "not applicable".
+* "SNOMED-CT" was changed to the preferred form "SNOMED CT" in narratives
+* New SNOMED Codes that have been issued since the STU 2 publication have replaced STU 2 temporary codes. These new terms include:
+  * #1204242009  "External beam radiation therapy using particle scanning technique (procedure)" //USCRS-33517
+  * #1217011006  "non-adjacent (qualifier)" // formerly USCRS-33144
+  * #1217123003 "Radiotherapy Course of Treatment (regime/therapy)" //USCRS-33529
+  * #1201745009 "Internal Target Volume (observable entity)" //USCRS-33520
+  * #1201746005  "Internal Gross Tumor Volume (observable entity)" // USCRS-33521
+  * #551001000124108  "Cancer in partial remission (finding)" // USCRS-352237
+  * #550991000124107  "Cancer in full remission(finding)" //USCRS-352236
+  * #1162492000 "Tumor bed (morphologic abnormality)"
+  * #1162782007 "Three dimensional external beam radiation therapy (procedure)"
+  * #1162586008 "Irradiated volume of organ at risk (observable entity)"
+  * #1162616006 "Lymph node level IA (qualifier value)"
+  * #1162617002 "Lymph node level IB (qualifier value)"
+  * #1162620005 "Lymph node level IVA (qualifier value)"
+  * #1162621009 "Lymph node level IVB (qualifier value)"
+  * #1162622002 "Lymph node level VA (qualifier value)"
+  * #1162623007 "Lymph node level VB (qualifier value)"
+  * #1162624001 "Lymph node level VC (qualifier value)"
+  * #1162625000 "Lymph node level VIA (qualifier value)"
+  * #1162626004 "Lymph node level VIB (qualifier value)"
+  * #1162628003 "Lymph node level VIIA (qualifier value)"
+  * #1162627008 "Lymph node level VIIB (qualifier value)"
+  * #1162618007 "Lymph node level VIII (qualifier value)"
+  * #1162619004 "Lymph node level IX (qualifier value)"
+  * #1162614009 "Lymph node level X (qualifier value)"
+  * #1162615005 "Lymph node level XA (qualifier value)"
+  * #1162613003 "Lymph node level XB (qualifier value)"
+
+### mCODE STU 2 Publication Version (January 2021)
 
 #### General Changes
 

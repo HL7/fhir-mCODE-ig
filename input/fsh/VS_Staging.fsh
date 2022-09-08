@@ -1,30 +1,8 @@
-ValueSet: CancerStagingMethodVS
-Id: mcode-cancer-staging-method-vs
-Title: "Cancer Staging Method Value Set"
-Description: "System or method used for staging cancers. The terms in this value set describe staging systems, not specific stages or descriptors used within those systems."
-* insert SNOMEDCTCopyrightForVS
-* include codes from system SCT where concept is-a #254292007 "Tumor staging (tumor staging)"
-* SCT#1149162008 "International Staging System for multiple myeloma (staging scale)"
-* SCT#1149163003 "Revised International Staging System for multiple myeloma (staging scale)"
-* SCT#246165003 "Extent of disease (attribute)"  // instead of NCI#C174125 "Neoplastic Disease Extent Indicator"
-* SCT#418414003 "The revised European-American Lymphoma classification (qualifier value)"
-* SCT#418823005 "The World Health Organization classification of lymphoid malignancies (qualifier value)"
-* exclude codes from system SCT where concept is-a #258318002 "Generic anatomical site tumor invasion status (tumor staging)"
-* exclude codes from system SCT where concept is-a #258309004 "Generic lymph node tumor invasion status stage (tumor staging)"
-* exclude codes from system SCT where concept is-a #258233007 "Generic tumor staging descriptor (tumor staging)"
-* exclude codes from system SCT where concept is-a #258271004 "Specific tumor staging descriptor (tumor staging)"
-* exclude SCT#42114005 "Walter Reed stage 1 (tumor staging)"
-* exclude SCT#15972002 "Walter Reed stage 2 (tumor staging)"
-* exclude SCT#13808002 "Walter Reed stage 3 (tumor staging)"
-* exclude SCT#74542008 "Walter Reed stage 4 (tumor staging)"
-* exclude SCT#66470009 "Walter Reed stage 5 (tumor staging)"
-* exclude SCT#83200007 "Walter Reed stage 6 (tumor staging)"
-
 ValueSet:   CancerStagingSystemVS
 Id: mcode-cancer-staging-system-vs
 Title: "Cancer Staging System Value Set"
 Description: "System used for staging."
-* ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
+* insert SNOMEDCTCopyrightForVS
 * include codes from system SCT where concept is-a #254292007 "Tumor staging (tumor staging)"
 
 ValueSet: ObservationCodesStageGroupVS

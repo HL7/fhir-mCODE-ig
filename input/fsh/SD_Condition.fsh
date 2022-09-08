@@ -26,7 +26,7 @@ Description: "Records the the primary cancer condition, the original or first tu
 * stage.summary ^definition = "In mCODE, staging information MUST be captured in an Observation that conforms to the CancerStageGroup profile. For convenience, the stage group MAY appear in this element, copied from the CancerStageGroup, but mCODE Data Senders and Receivers MAY ignore it."
 * stage.type ^short = "Staging system used."
 * stage.type ^definition = "In mCODE, staging information MUST be captured in an Observation that conforms to the CancerStageGroup profile. For convenience, the staging system MAY appear in this element, but mCODE Data Senders and Receivers MAY ignore it."
-* stage.type from CancerStagingMethodVS (required)
+* stage.type from CancerStagingSystemVS (required)
 
 Profile: SecondaryCancerCondition
 Parent: USCoreCondition

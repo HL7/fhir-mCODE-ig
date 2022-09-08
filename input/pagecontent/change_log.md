@@ -46,7 +46,7 @@ The following changes occurred between STU 2 publication (January 2022) and STU 
 * Updated [terminology](terminology.html) page to include code system identifiers recommended by HL7 Terminology Authority, and to document [local code systems](terminology.html#local-code-systems).
 * Local code systems have been consolidated and reorganized to reduce their number. Local codes have been standardized to reflect codes requested from SNOMED and LOINC.
 * Added FSH rendering in notes section for all example instances (e.g., this [example](Observation-cancer-related-mcode-comorbidities-elixhauser-john-anyperson.html#notes))
-* Added more readable renderings of all [capability statements](http://build.fhir.org/ig/HL7/fhir-mCODE-ig/branches/master/capabilitystatements.html).
+* Added more readable renderings of all [capability statements](capabilitystatements.html).
 * Made values required in all extensions because extensions should never appear if there is no value. [FHIR-33003](https://jira.hl7.org/browse/FHIR-33003)
 * All definitions have been reviewed and edited and numerous improvements and corrections made to narrative content.
 
@@ -77,11 +77,11 @@ The following changes occurred between STU 2 publication (January 2022) and STU 
 #### Treatment Group Changes
 
 * Incorporated the modality and technique extensions into a combined [RadiotherapyModalityAndTechnique] extension that includes invariants that restrict the allowed [combinations](StructureDefinition-mcode-radiotherapy-modality-and-technique.html#usage) using invariants
-* Aligned the [RadiotherapyTreatmentLocationVS] and [RadiotherapyTreatmentLocationQualifierVS] value sets to American Association of Physicists in Medicine (AAPM) TG-263 anatomy terms and [provide a mapping](http://build.fhir.org/ig/HL7/fhir-mCODE-ig/branches/master/StructureDefinition-mcode-radiotherapy-volume.html#usage) to SNOMED-CT concepts and qualifiers. [FHIR-33343](https://jira.hl7.org/browse/FHIR-33343)
+* Aligned the [RadiotherapyTreatmentLocationVS] and [RadiotherapyTreatmentLocationQualifierVS] value sets to American Association of Physicists in Medicine (AAPM) TG-263 anatomy terms and [provide a mapping](StructureDefinition-mcode-radiotherapy-volume.html#usage) to SNOMED-CT concepts and qualifiers. [FHIR-33343](https://jira.hl7.org/browse/FHIR-33343)
 * Added the identifier slice to [RadioTherapyVolume] and [RadiotherapyCourseSummary].
 * Laterality broken out into separate extension in [CancerRelatedSurgicalProcedure]. [FHIR-32340](https://jira.hl7.org/browse/FHIR-32340)
 * [TumorMarkerTestVS] value set has been curated to better capture the intended scope of tumor marker tests.
-* `BrachytherapyTreatmentPhase` and `RadiotherapyTreatmentPhase` profiles and examples dropped because it was determined that this was too much detail for mCODE. Phase profiles will reappear in the planned [CodeX Radiation Therapy FHIR Implementation Guide](http://build.fhir.org/ig/HL7/codex-radiation-therapy/branches/master/index.html). [FHIR-33340](https://jira.hl7.org/browse/FHIR-33340)
+* `BrachytherapyTreatmentPhase` and `RadiotherapyTreatmentPhase` profiles and examples dropped because it was determined that this was too much detail for mCODE. Phase profiles will reappear in the planned [CodeX Radiation Therapy FHIR Implementation Guide](https://build.fhir.org/ig/HL7/codex-radiation-therapy/branches/master/index.html). [FHIR-33340](https://jira.hl7.org/browse/FHIR-33340)
 * Changed valued in [TreatmentTerminationReasonVS] to SNOMED-CT situations and findings. Added new values including `SCT#399307001 "Lost to follow-up (finding)"` and `SCT#419620001 "Death (event)"`. [FHIR-32832](https://jira.hl7.org/browse/FHIR-32832)
 * Radiotherapy Modality Value Set and Radiotherapy Technique Value Set are now defined by inclusion of the modality and technique value sets for Brachytherapy and Teleradiotherapy rather than by enumeration. [FHIR-32263](https://jira.hl7.org/browse/FHIR-32263)
 * Descriptions for the Elixhauser ThyroidOther and NeuroOther VS have been clarified. [FHIR-32350](https://jira.hl7.org/browse/FHIR-32350)

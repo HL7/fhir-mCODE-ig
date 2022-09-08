@@ -2,7 +2,7 @@ ValueSet: CancerBodyLocationVS
 Id: mcode-cancer-body-location-vs
 Title: "Cancer Body Location Value Set"
 Description:  "Codes describing the location(s) of primary or secondary cancer. The value set includes all codes from the SNOMED CT body structure hierarchy (codes descending from 123037004 'Body Structure'). The cancer body location may also be expressed using ICD-O-3 topography codes, however, those codes are not included here due to intellectual property restrictions. These topography terms have four-character codes that run from C00.0 to C80.9 [ref](https://apps.who.int/iris/bitstream/handle/10665/96612/9789241548496_eng.pdf). Only SNOMED CT and ICD-O-3 are considered conformant."
-* ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
+* insert SNOMEDCTCopyrightForVS
 * include codes from system SCT where concept is-a #123037004  "Body Structure"
 * include codes from system ICDO3  // currently no way to filter down to just topology codes (that I know of)
 
@@ -10,14 +10,14 @@ ValueSet:   ConditionStatusTrendVS
 Id: mcode-condition-status-trend-vs
 Title: "Condition Status Trend Value Set"
 Description:  "How patient's given disease, condition, or ability is trending."
-* ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
+* insert SNOMEDCTCopyrightForVS
 // * SCT#281900007 "No abnormality detected (finding)" // better than SCT#260415000 "Not detected (qualifier)" - FHIR-32837
 * SCT#268910001 "Patient's condition improved (finding)"
 * SCT#359746009 "Patient's condition stable (finding)"
 * SCT#271299001 "Patient's condition worsened (finding)"
 * SCT#709137006 "Patient condition undetermined (finding)"
-* SCT_TBD#USCRS-352236 "Cancer in complete remission(finding)" // FHIR-32837
-* SCT_TBD#USCRS-352237 "Cancer in partial remission (finding)" // FHIR-32837
+* SCT#550991000124107 "Malignant neoplasm in full remission (disorder)" // FHIR-32837 - MLT_note: SCT FN is displayed. The initial term of "cancer in complete remission" is a synonym for the concept.
+* SCT#551001000124108 "Malignant neoplasm in partial remission (disorder)" // FHIR-32837 - MLT_note: SCT FN is displayed. The initial term of "cancer in partial remission" is a synonym for the concept.
 
 
 
@@ -26,7 +26,7 @@ Id: mcode-cancer-disease-status-evidence-type-vs
 Title: "Cancer Disease Status Evidence Type Value Set"
 Description:  "The type of evidence backing up the clinical determination of cancer progression."
 // The code '252416005 Histopathology test (procedure)' is intended to be used when there is a biopsy that contributes evidence of the cancer disease status.
-* ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
+* insert SNOMEDCTCopyrightForVS
 * include codes from system SCT where concept is-a #714797009 "Histologic test (procedure)" // Rolls up to NAACR 1 - Positive Histology
 * include codes from system SCT where concept is-a #116147009 "Cytologic test (procedure)"  // Rolls up to NAACR 2 - Positive Cytology
 // Rolls up to NAACR 3  - Combo of Tumor Maker + Histological Test
@@ -51,7 +51,7 @@ ValueSet: BodyLocationAndLateralityQualifierVS
 Id: mcode-body-location-and-laterality-qualifier-vs
 Title: "Body Location and Laterality Qualifier Value Set"
 Description: "Qualifiers to refine a body structure or location including qualifiers for relative location, directionality, number, plane, and laterality."
-* ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
+* insert SNOMEDCTCopyrightForVS
 * include codes from system SCT where concept is-a #106233006 "Topographic Modifier (qualifer)"
 * include codes from system SCT where concept is-a #272424004 "Relative Sites (qualifier)"
 * SCT#255503000 "Entire (qualifier value)"
@@ -60,7 +60,7 @@ ValueSet: LateralityQualifierVS
 Id: mcode-laterality-qualifier-vs
 Title: "Laterality Qualifier Value Set"
 Description: "Qualifiers to specify laterality."
-* ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
+* insert SNOMEDCTCopyrightForVS
 * SCT#51440002	"Right and left (qualifier value)"
 * SCT#399488007	"Midline (qualifier value)"
 * SCT#24028007	"Right (qualifier value)"
@@ -71,7 +71,7 @@ ValueSet: BodyLocationQualifierVS
 Id: mcode-body-location-qualifier-vs
 Title: "Body Location Qualifier Value Set"
 Description: "Qualifiers to refine a body structure or location including qualifiers for relative location, directionality, number, and plane, and excluding qualifiers for laterality."
-* ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
+* insert SNOMEDCTCopyrightForVS
 // Changed to intensional definition
 * include codes from valueset BodyLocationAndLateralityQualifierVS
 * exclude codes from valueset LateralityQualifierVS // laterality is separated into a separate value set
@@ -80,7 +80,7 @@ ValueSet:   TreatmentTerminationReasonVS
 Id: mcode-treatment-termination-reason-vs
 Title: "Treatment Termination Reason Value Set"
 Description:  "Values used to describe the reasons for stopping a treatment or episode of care. Includes code for 'treatment completed' as well as codes for unplanned (early) stoppage. Applies to medications and other treatments that take place over a period of time, such as radiation treatments."
-* ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
+* insert SNOMEDCTCopyrightForVS
 * SCT#182992009   "Treatment completed (situation)"
 * SCT#266721009   "No response to treatment (situation)" // more general than SCT#58848006 "Lack of drug action (finding)"
 * SCT#407563006   "Treatment not tolerated (situation)" // more general than SCT#281647001 "Adverse reaction (disorder)"
@@ -96,7 +96,7 @@ ValueSet:		ProcedureIntentVS
 Id: mcode-procedure-intent-vs
 Title: "Procedure Intent Value Set"
 Description:	"The purpose of a procedure."
-* ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
+* insert SNOMEDCTCopyrightForVS
 * SCT#373808002 "Curative - procedure intent"
 * SCT#363676003 "Palliative - procedure intent"
 * SCT#399707004 "Supportive - procedure intent"
@@ -123,7 +123,7 @@ ValueSet:        TumorSizeMethodVS
 Id:              mcode-tumor-size-method-vs
 Title:           "Tumor Size Method Value Set"
 Description:     "Code for methods of measuring tumor size, including physical examination, pathology, and imaging."
-* ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
+* insert SNOMEDCTCopyrightForVS
 // Pathology
 * SCT#787377000 "Gross examination and sampling of tissue specimen (procedure)"
 * SCT#104157003 "Light microscopy (procedure)"

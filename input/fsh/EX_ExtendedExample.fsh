@@ -291,8 +291,8 @@ Instance: genomics-report-jenny-m
 InstanceOf: GenomicsReport
 Description: "Extended example: example of gene panel report"
 * status = #final "final"
-* category[0] = DiagnosticService#LAB
-* category[1] = DiagnosticService#GE
+* category[LaboratorySlice] = DiagnosticService#LAB
+* category[GenomicsCategory] = DiagnosticService#GE
 * subject = Reference(cancer-patient-jenny-m)
 * effectiveDateTime = "2018-03-15"
 * issued = "2020-03-15T00:00:01+00:00"
@@ -365,7 +365,7 @@ Instance: us-core-diagnosticreport-lab-jenny-m
 InstanceOf: USCoreDiagnosticReportLab
 Description: "Extended example: example of pathology findings represented as a DiagnosticReport resource."
 * status = #final "final"
-* category[0] = DiagnosticService#LAB
+* category[LaboratorySlice] = DiagnosticService#LAB
 * category[1] = DiagnosticService#SP "Surgical Pathology"  // does not match any known slice in US Core Diagnostic Report -- but that's ok
 * code = LNC#22637-3 "Pathology report final diagnosis Narrative"
 * subject = Reference(cancer-patient-jenny-m)
@@ -425,9 +425,7 @@ Description: "Extended example: example showing tumor size"
 * method = LNC#24419-4 "Pathology report gross observation"
 * subject = Reference(cancer-patient-jenny-m)
 * effectiveDateTime = "2018-04-01T00:00:00Z"
-* component.code = LNC#33728-7 "Size.maximum dimension in Tumor"
-* component.valueQuantity = 2.5 'cm'
-* component.valueQuantity.unit = "centimeters"
+* component[tumorLongestDimension].valueQuantity = 2.5 'cm' "centimeters"
 * specimen = Reference(tumor-specimen-left-breast-jenny-m)
 
 Instance: us-core-observation-lab-tumor-dcis-jenny-m
@@ -640,7 +638,7 @@ Instance: radiotherapy-treatment-summary-chest-wall-jenny-m
 InstanceOf: RadiotherapyCourseSummary
 Description: "Example of radiotherapy treatment summary involving external beam radiation to chest wall and regional node radiation with a chest wall boost"
 * status = #completed "completed"
-* code = SCT_TBD#USCRS-33529 // Radiation Course of Treatment (regime/therapy)
+* code = SCT#1217123003 // "Radiotherapy course of treatment (regime/therapy)"
 * category = SCT#108290001 "Radiation oncology AND/OR radiotherapy (procedure)"
 * bodySite = SCT#78904004 "Chest Wall Structure (body structure)"
 * reasonCode = ICD10CM#C50.811 "Malignant neoplasm of overlapping sites of right female breast"
@@ -652,7 +650,7 @@ Description: "Example of radiotherapy treatment summary involving external beam 
 * extension[modalityAndTechnique][0].extension[modality][0].valueCodeableConcept = SCT#1156506007 "External beam radiation therapy using photons (procedure)"
 * extension[modalityAndTechnique][0].extension[technique][0].valueCodeableConcept = SCT#1156530009 "Volumetric Modulated Arc Therapy (procedure)"
 * extension[modalityAndTechnique][1].extension[modality][0].valueCodeableConcept = SCT#45643008  "Teleradiotherapy using electrons"
-* extension[modalityAndTechnique][1].extension[technique][0].valueCodeableConcept = SCT_TBD#1162782007 "Three dimensional external beam radiation therapy (procedure)"
+* extension[modalityAndTechnique][1].extension[technique][0].valueCodeableConcept = SCT#1162782007 "Three dimensional external beam radiation therapy (procedure)"
 * extension[doseDeliveredToVolume][0].extension[volume].valueReference = Reference(jenny-m-chest-wall-treatment-volume)
 * extension[doseDeliveredToVolume][0].extension[totalDoseDelivered].valueQuantity = 6000 'cGy'
 * extension[doseDeliveredToVolume][0].extension[fractionsDelivered].valueUnsignedInt = 30
@@ -666,7 +664,7 @@ Description: "Example of radiotherapy treatment summary involving external beam 
 
 RuleSet: CourseSummaryContent
 * status = #completed "completed"
-* code = SCT_TBD#USCRS-33292
+* code = SCT#1217123003 // "Radiotherapy course of treatment (regime/therapy)"
 * category = SCT#108290001 "Radiation oncology AND/OR radiotherapy (procedure)"
 * bodySite = SCT#78904004 "Chest Wall Structure (body structure)"
 * reasonCode = ICD10CM#C50.811 "Malignant neoplasm of overlapping sites of right female breast"

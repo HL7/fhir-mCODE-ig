@@ -8,8 +8,11 @@ Usage: #example
 * extension.valueReference = Reference(primary-cancer-condition-nsclc)
 * clinicalStatus = http://terminology.hl7.org/CodeSystem/condition-clinical#active "Active"
 * verificationStatus = http://terminology.hl7.org/CodeSystem/condition-ver-status#confirmed "Confirmed"
-* category = http://terminology.hl7.org/CodeSystem/condition-category#problem-list-item
-* code = http://snomed.info/sct#94225005 "Secondary malignant neoplasm of brain"
+* category[0] = http://terminology.hl7.org/CodeSystem/condition-category#problem-list-item
+* category[+].coding.version = "http://snomed.info/sct/900000000000207008"
+* category[=].coding = http://snomed.info/sct#128462008
+* code.coding.version = "http://snomed.info/sct/900000000000207008"
+* code.coding = http://snomed.info/sct#94225005 "Secondary malignant neoplasm of brain"
 * subject = Reference(cancer-patient-john-anyperson)
 * onsetDateTime = "2019-05-01"
 * asserter = Reference(us-core-practitioner-kyle-anydoc)

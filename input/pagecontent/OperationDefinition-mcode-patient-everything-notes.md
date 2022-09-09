@@ -5,12 +5,12 @@ Title: "mcode-patient-everything"
 Description: "Gets an [mCODE Patient Bundle](StructureDefinition-mcode-patient-bundle.html) for a specific patient that contains all of that patient's resources that conform to mCODE Profiles."
 Usage: #definition
 * url = "http://hl7.org/fhir/us/mcode/OperationDefinition/mcode-patient-everything"
-* version = "2.0.0"
+* version = "2.1.0"
 * name = "Fetch_mCODE_patient_bundle"
 * title = "Fetch mCODE Patient Bundle for a given Patient"
 * status = #draft
 * kind = #operation
-* date = "2021-11-03T17:39:06-04:00"
+* date = "2022-09-09T11:01:03-04:00"
 * publisher = "HL7 International Clinical Interoperability Council"
 * contact.name = "HL7 International Clinical Interoperability Council"
 * contact.telecom[0].system = #url

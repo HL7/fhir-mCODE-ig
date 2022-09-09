@@ -12,5 +12,6 @@ Usage: #example
 * type = http://terminology.hl7.org/CodeSystem/v2-0487#TUMOR
 * subject = Reference(cancer-patient-jenny-m)
 * receivedTime = "2018-04-01"
-* collection.bodySite = http://snomed.info/sct#80248007 "Left breast structure (body structure)"
+* collection.bodySite.coding.version = "http://snomed.info/sct/900000000000207008"
+* collection.bodySite.coding = http://snomed.info/sct#80248007 "Left breast structure (body structure)"
 ```

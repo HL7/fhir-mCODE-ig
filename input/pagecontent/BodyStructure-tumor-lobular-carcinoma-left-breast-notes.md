@@ -10,6 +10,7 @@ Usage: #example
 * identifier.type = http://hl7.org/fhir/resource-types#BodyStructure
 * identifier.system = "http://radiology.hospital.example.org"
 * identifier.value = "Tumor 1234"
-* location = http://snomed.info/sct#80248007 "Left breast structure (body structure)"
+* location.coding.version = "http://snomed.info/sct/900000000000207008"
+* location.coding = http://snomed.info/sct#80248007 "Left breast structure (body structure)"
 * patient = Reference(cancer-patient-eve-anyperson)
 ```

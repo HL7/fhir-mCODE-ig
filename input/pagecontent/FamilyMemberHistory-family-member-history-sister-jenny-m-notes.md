@@ -7,7 +7,8 @@ Usage: #example
 * status = #completed
 * patient = Reference(cancer-patient-jenny-m)
 * relationship = http://terminology.hl7.org/CodeSystem/v3-RoleCode#NSIS "natural sister"
-* condition.code = http://snomed.info/sct#254837009 "Malignant neoplasm of breast (disorder)"
+* condition.code.coding.version = "http://snomed.info/sct/900000000000207008"
+* condition.code.coding = http://snomed.info/sct#254837009 "Malignant neoplasm of breast (disorder)"
 * condition.contributedToDeath = false
 * condition.onsetAge = 64 'a'
 ```

@@ -10,5 +10,6 @@ Usage: #example
 * subject = Reference(cancer-patient-jenny-m)
 * effectiveDateTime = "2018-03-16"
 * issued = "2018-03-16T00:00:00Z"
-* valueCodeableConcept = http://snomed.info/sct#449868002 "Smokes tobacco daily (finding)"
+* valueCodeableConcept.coding.version = "http://snomed.info/sct/900000000000207008"
+* valueCodeableConcept.coding = http://snomed.info/sct#449868002 "Smokes tobacco daily (finding)"
 ```

@@ -2,7 +2,7 @@
 Instance: lab-result-observation-hemoglobin
 InstanceOf: USCoreLaboratoryResultObservationProfile
 Title: "lab-result-observation-hemoglobin"
-Description: "Hemoglobin lab result to support CancerStageGroup example"
+Description: "Hemoglobin lab result to support TNMStageGroup example"
 Usage: #example
 * status = #final
 * category = http://terminology.hl7.org/CodeSystem/observation-category#laboratory

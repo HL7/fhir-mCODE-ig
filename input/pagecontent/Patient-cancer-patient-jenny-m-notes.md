@@ -32,5 +32,5 @@ Usage: #example
 * contact.telecom[+].system = #email
 * contact.telecom[=].value = "example@example.com"
 * communication.language = urn:ietf:bcp:47#en-US
-* communication.language.text = "English"
+  * text = "English"
 ```

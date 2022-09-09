@@ -15,6 +15,7 @@ Usage: #example
 * note.authorReference = Reference(us-core-practitioner-nancy-oncology-nurse)
 * note.time = "2018-04-22"
 * note.text = "doxorubicin (60 mg/m² IV), 105.96 mg in 50 ml 0.9% normal saline administered by continuous infusion. Patient tolerated infusion without side effects."
-* dosage.route = http://snomed.info/sct#47625008 "Intravenous route (qualifier value)"
+* dosage.route.coding.version = "http://snomed.info/sct/900000000000207008"
+* dosage.route.coding = http://snomed.info/sct#47625008 "Intravenous route (qualifier value)"
 * dosage.dose = 105.96 'mg' "mg"
 ```

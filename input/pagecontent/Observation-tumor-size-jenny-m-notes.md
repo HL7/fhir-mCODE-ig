@@ -11,6 +11,6 @@ Usage: #example
 * effectiveDateTime = "2018-04-01T00:00:00Z"
 * method = http://loinc.org#24419-4 "Pathology report gross observation"
 * specimen = Reference(tumor-specimen-left-breast-jenny-m)
-* component.code = http://loinc.org#33728-7 "Size.maximum dimension in Tumor"
+* component.code = http://loinc.org#33728-7
 * component.valueQuantity = 2.5 'cm' "centimeters"
 ```

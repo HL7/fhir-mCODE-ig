@@ -7,7 +7,7 @@ Usage: #example
 * status = #final
 * category = http://terminology.hl7.org/CodeSystem/observation-category#vital-signs
 * code = http://loinc.org#29463-7
-* subject.reference = "Patient/cancer-patient-jenny-m"
+* subject = Reference(cancer-patient-jenny-m)
 * effectiveDateTime = "2018-04-22"
 * valueQuantity = 150 '[lb_av]' "lb"
 ```

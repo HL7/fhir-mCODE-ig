@@ -6,9 +6,11 @@ Description: "Extended example: example showing negative invasion for the remove
 Usage: #example
 * status = #final
 * category = http://terminology.hl7.org/CodeSystem/observation-category#laboratory
-* code = http://snomed.info/sct#370052007 "Status of invasion by tumor"
+* code.coding.version = "http://snomed.info/sct/900000000000207008"
+* code.coding = http://snomed.info/sct#370052007 "Status of invasion by tumor"
 * subject = Reference(cancer-patient-jenny-m)
 * effectiveDateTime = "2018-04-01T00:00:00Z"
-* valueCodeableConcept = http://snomed.info/sct#260385009 "Negative (qualifier value)"
+* valueCodeableConcept.coding.version = "http://snomed.info/sct/900000000000207008"
+* valueCodeableConcept.coding = http://snomed.info/sct#260385009 "Negative (qualifier value)"
 * specimen = Reference(tumor-specimen-left-breast-jenny-m)
 ```

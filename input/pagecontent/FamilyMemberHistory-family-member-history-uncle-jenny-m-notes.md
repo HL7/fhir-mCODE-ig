@@ -8,6 +8,7 @@ Usage: #example
 * patient = Reference(cancer-patient-jenny-m)
 * relationship = http://terminology.hl7.org/CodeSystem/v3-RoleCode#PUNCLE "paternal uncle"
 * deceasedBoolean = true
-* condition.code = http://snomed.info/sct#363418001 "Malignant tumor of pancreas (disorder)"
+* condition.code.coding.version = "http://snomed.info/sct/900000000000207008"
+* condition.code.coding = http://snomed.info/sct#363418001 "Malignant tumor of pancreas (disorder)"
 * condition.contributedToDeath = true
 ```

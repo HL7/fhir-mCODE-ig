@@ -10,7 +10,8 @@ Usage: #example
 * subject = Reference(cancer-patient-john-anyperson)
 * effectiveDateTime = "2019-04-01"
 * valueCodeableConcept = http://loinc.org#LA9633-4 "Present"
-* interpretation = http://snomed.info/sct#10828004 "Positive (qualifier value)"
+* interpretation.coding.version = "http://snomed.info/sct/900000000000207008"
+* interpretation.coding = http://snomed.info/sct#10828004 "Positive (qualifier value)"
 * method = http://loinc.org#LA26398-0 "Sequencing"
 * component[0].code = http://loinc.org#48018-6
 * component[=].valueCodeableConcept = http://www.genenames.org#HGNC:1100 "BRCA1"

@@ -9,6 +9,9 @@ RuleSet: CategorySlicingRules
 * category ^slicing.discriminator.path = "$this"
 * category ^slicing.rules = #open
 * category ^slicing.description = "Slicing requires the given value but allows additional categories"
+* category contains
+  required 1..1
+
 
 RuleSet: ObservationHasMemberSlicingRules
 * hasMember ^slicing.discriminator.type = #pattern  // #profile

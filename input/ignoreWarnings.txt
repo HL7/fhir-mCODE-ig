@@ -94,6 +94,9 @@ WARNING: ValueSet.where(id = 'mcode-tnm-regional-nodes-category-vs'): Error from
 WARNING: ValueSet.where(id = 'mcode-cancer-stage-group-vs'): Error from server: Unable to provide support for code system http://cancerstaging.org
 WARNING: ValueSet.where(id = 'mcode-clinvar-vs'): Error from server: Unable to provide support for code system http://www.ncbi.nlm.nih.gov/clinvar
 WARNING: ValueSet.where(id = 'mcode-dna-change-type-vs'): Error from server: Unable to provide support for code system http://www.sequenceontology.org/
+WARNING: ValueSet.where(id = 'mcode-cancer-related-surgical-procedure-vs'): Error from server: Unable to provide support for code system http://www.ama-assn.org/go/cpt
+WARNING: ValueSet.where(id = 'mcode-genomic-molecular-consequence-vs'): Error from server: Unable to provide support for code system http://www.sequenceontology.org/
+WARNING: ValueSet.where(id = 'mcode-hgnc-vs'): Error from server: Unable to provide support for code system http://www.genenames.org
 Code System URI 'http://www.genenames.org' is unknown so the code cannot be validated
 Code System URI 'http://www.ncbi.nlm.nih.gov/clinvar' is unknown so the code cannot be validated
 Code System URI 'http://www.ncbi.nlm.nih.gov/gtr' is unknown so the code cannot be validated

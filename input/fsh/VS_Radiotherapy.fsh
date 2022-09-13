@@ -406,7 +406,7 @@ Description: "Codes describing the body locations where radiotherapy treatments 
 * SCT#52927003 "Structure of temporalis muscle (body structure)" // Temporal muscle - Right
 * SCT#71836000 "Nasopharyngeal structure (body structure)" // Nasal part of pharynx
 * SCT#59441001 "Structure of lymph node (body structure)" // Lymph Node
-* SCT#16051009 " Structure of apical axillary lymph node (body structure)" // Set of apical axillary lymphatic vessels
+* SCT#16051009 "Structure of apical axillary lymph node (body structure)" // Set of apical axillary lymphatic vessels
 * SCT#283001 "Structure of central axillary lymph node (body structure) |" // Set of central axillary lymphatic vessels
 * SCT#68171009 "Axillary lymph node structure (body structure)" // Axillary lymphatic chain Left
 * SCT#33770006 "Structure of lateral axillary lymph node (body structure)" // Axillary lymphatic chain - Lateral Left

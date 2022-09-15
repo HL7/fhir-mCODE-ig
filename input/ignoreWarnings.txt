@@ -25,7 +25,7 @@ WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/mcode/Structure
 WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-primary-cancer-condition').baseDefinition: US FHIR Usage rules require that all profiles on Condition derive from one of the base US profiles
 WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-secondary-cancer-condition').baseDefinition: US FHIR Usage rules require that all profiles on Condition derive from one of the base US profiles
 
-# SUPPRESS MESSAGES ABOUT BEING UNABLE TO DETERMINE WHETHER CODES ARE IN VALUE SETS BECAUSE THE CODE SYSTEM IS UNKNOWN
+# SUPPRESS MESSAGES ABOUT BEING UNABLE TO DETERMINE WHETHER CODES ARE IN VALUE SETS BECAUSE THE CODE SYSTEM  IS  UNKNOWN
 [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/mcode/ValueSet/mcode-tnm-primary-tumor-category-vs because the value set or code system is not known to the validator]
 #[Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-staging-system-vs because the value set or code system is not known to the validator]
 [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-stage-group-vs because the value set or code system is not known to the validator]

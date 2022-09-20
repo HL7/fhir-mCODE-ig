@@ -24,34 +24,28 @@ The binding strength for these value sets remains "preferred", meaning that the 
 
 ### Staging Profiles
 
-Previously, the CancerStageGroup profile was used to represent both the TNM stage group and non-TNM staging. This was less than optimal, since the name "stage group" was confusing for non-TNM staging, and the profile contained elements specific to TNM staging. With the ability to have specific value sets for TNM staging afforded by the SNOMED-AJCC agreement described above, mCODE can now explicitly model TNM-based and non-TNM-based staging. To make it clear how to represent non-TNM staging, a new profile, [CancerStageGroup], has been added to represent non-TNM staging, while the former CancerStageGroup profile has been renamed [TNMStageGroup] to reflect the profile's specialization to TNM staging.
+Previously, the [CancerStageGroup] profile contained optional elements specific to TNM staging. This was misleading because CancerStageGroup could be used for non-TNM staging. To avoid this ambiguity, [CancerStageGroup] no longer contains the optional TNM-specific content. A separate child profile, [TNMStageGroup], has been added as a template for TNM-specific staging. This change is backward compatible, since any resource complying with the STU 2 version of CancerStageGroup will comply with STU 3 CancerStageGroup, and every resource complying to TNMStageGroup automatically complies to CancerStageGroup.
 
-For non-TNM staging, the PrimaryCancerCondition's `Condition.stage.assessment` element should reference an Observation conforming to the [CancerStageGroup] profile. For TNM staging, the same element will reference an Observation conforming to the [TNMStageGroup] profile.
+### Staging Value Sets
 
-### New Value Sets
+To support the separation of [TNMStageGroup] from more generic [CancerStageGroup] profile, several value sets were renamed. In FHIR, renaming value sets has little or no impact on implementations, since value set names are not directly used in information exchanges. The following TNM value sets were renamed for clarity:
 
-To support the [CancerStageGroup] profile, two new value sets were introduced:
+* CancerStageGroupVS was renamed [TNMStageGroupVS], because it contains the TNM stage groups.
+* ObservationCodesDistantMetastasesVS was renamed [TNMDistantMetastasesStagingTypeVS] because it used for TNM staging.
+* ObservationCodesPrimaryTumorVS was renamed [TNMPrimaryTumorStagingTypeVS], because it used for TNM staging.
+* ObservationCodesRegionalNodesVS was renamed [TNMRegionalNodesStagingTypeVS], because it used for TNM staging.
+* ObservationCodesStageGroupVS was renamed [TNMStageGroupStagingTypeVS], because it used for TNM staging.
 
+In addition, the following value sets are now associated with the non-TNM [CancerStageGroup] profile:
+
+* CancerStagingSystemVS was renamed [CancerStagingMethodVS], because it populates `Observation.method`.
 * [CancerStagingTypeVS] was introduced to populate the `Observation.code` element in the CancerStageGroup profile.
 * [CancerStageVS] was introduced to populate the `Observation.valueCodeableConcept` element in the CancerStageGroup profile.
-
-The [CancerStagingMethodVS] (formerly CancerStagingSystemVS) that populates the `Observation.method` element in the CancerStageGroup profile, already existed in STU 2.
-
-### Value Sets Renamed
-
-Several value sets were renamed to clarify their purpose and provide more consistent naming. In FHIR, renaming value sets has little or no impact on implementations, since value set names are not directly used in information exchanges. The following value sets were renamed:
-
-* CancerStageGroupVS -> [TNMStageGroupVS] (because it contains TNM stage groups)
-* CancerStagingSystemVS -> [CancerStagingMethodVS] (because it populates `Observation.method`)
-* ObservationCodesDistantMetastasesVS -> [TNMDistantMetastasesStagingTypeVS] (because it used for TNM staging)
-* ObservationCodesPrimaryTumorVS -> [TNMPrimaryTumorStagingTypeVS] (because it used for TNM staging)
-* ObservationCodesRegionalNodesVS -> [TNMRegionalNodesStagingTypeVS] (because it used for TNM staging)
-* ObservationCodesStageGroupVS -> [TNMStageGroupStagingTypeVS] (because it used for TNM staging)
 
 ### Value Set Content Changes
 
 * The following improvements were made to [CancerStagingMethodVS] (formerly CancerStagingSystemVS) value set:
-  * There are certain children of Tumor staging (SCTID: 2542920070) (see https://jira.hl7.org/browse/FHIR-34448) that represent stage values rather than staging methods. Values that are not staging methods were removed.
+  * Certain children of Tumor staging (SCTID: 2542920070) (see https://jira.hl7.org/browse/FHIR-34448) were removed because they represent stage values rather than staging methods.
   * The following staging methods were added (see https://jira.hl7.org/browse/FHIR-37860):
     * SCT#1149162008 "International Staging System for multiple myeloma (staging scale)"
     * SCT#1149163003 "Revised International Staging System for multiple myeloma (staging scale)"
@@ -120,10 +114,9 @@ The following are now required values in `Condition.category` or `Observation.ca
 
   The first of these categories satisfies the US Core requirement from [US Core Condition Problems and Health Concerns Profile][USCoreConditionProblemHealthConcern] and the second category satisfies the mCODE requirement. The other categories are similar.
 
-
 ### Comorbidity Redesign
 
-Based on user feedback criticizing the complexity of the STU 2 design, [comorbidities][Comorbidities] have been redesigned into a far more compact, practical form. **This change is not backward compatible.**
+Based on user feedback on the complexity of the STU 2 design, [comorbidities][Comorbidities] have been redesigned into a more compact, practical form. As a full redesign, this change is not backward compatible.
 
 * Comorbidities are no longer based on the Elixhauser framework. Users now have the freedom to name any condition as a comorbidity.
 * Comorbid conditions can be designated either by providing a disorder code or reference to a FHIR resource. To allow this, the data types on the [RelatedCondition] extension have been expanded to allow a choice of Reference(Condition) or CodeableConcept.

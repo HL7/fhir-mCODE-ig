@@ -50,7 +50,7 @@ A timeline of the narrative is illustrated in the following diagram:
 | [`Cancer Diagnosis`](Condition-primary-cancer-condition-jenny-m.html)|[PrimaryCancerCondition] |
 | [`Cancer Disease Status: Condition Improving`](Observation-cancer-disease-status-jenny-m.html) | [CancerDiseaseStatus] |
 | [`Cancer Patient: Jenny M`](Patient-cancer-patient-jenny-m.html)  | [CancerPatient]  |
-| [`Clinical Cancer Stage: 2B`](Observation-tnm-clinical-stage-group-jenny-m.html) |[TNMStageGroup] |
+| [`Clinical Cancer Stage Group: 2B`](Observation-tnm-clinical-stage-group-jenny-m.html) |[TNMStageGroup] |
 | [`Clinical Primary Tumor Category: cT3`](Observation-tnm-clinical-primary-tumor-category-jenny-m.html) | [TNMPrimaryTumorCategory] |
 | [`Clinical Regional Lymph Nodes Category: cN0`](Observation-tnm-clinical-regional-nodes-category-jenny-m.html) | [TNMRegionalNodesCategory]|
 | [`Clinical Distant Metastases Category: cM0`](Observation-tnm-clinical-distant-metastases-category-jenny-m.html)|[TNMDistantMetastasesCategory]|
@@ -67,7 +67,7 @@ A timeline of the narrative is illustrated in the following diagram:
 | [`Medication Request: Cyclophosphamide`](MedicationRequest-cancer-related-medication-request-cyclophosphamide-jenny-m.html) | [CancerRelatedMedicationRequest] |
 | [`Medication Request: Paclitaxel`](MedicationRequest-cancer-related-medication-request-paclitaxel-jenny-m.html) | [CancerRelatedMedicationRequest] |
 | [`Oncotype DX Breast Recurrence Score Assay: 47/High`](Observation-tumor-marker-test-oncotype-dx-jenny-m.html)| [TumorMarkerTest] |
-| [`Pathologic Cancer Stage Group: stage IIB`](Observation-tnm-pathologic-stage-group-jenny-m.html) |[TNMStageGroup] |
+| [`Pathologic Cancer Stage Group Group: stage IIB`](Observation-tnm-pathologic-stage-group-jenny-m.html) |[TNMStageGroup] |
 | [`Pathologic Primary Tumor Category: pT3`](Observation-tnm-pathologic-primary-tumor-category-jenny-m.html) | [TNMPrimaryTumorCategory] |
 | [`Pathologic Regional Lymph Nodes Category: pN0`](Observation-tnm-pathologic-regional-nodes-category-jenny-m.html) | [TNMRegionalNodesCategory]|
 | [`Pathologic Distant Metastases Category: pM0`](Observation-tnm-pathologic-distant-metastases-category-jenny-m.html)| [TNMDistantMetastasesCategory]|

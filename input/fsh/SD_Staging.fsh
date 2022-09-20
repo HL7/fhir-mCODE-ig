@@ -1,7 +1,7 @@
-Profile: CancerStage  // introduced 8/30/2020 to handle non-TNM staging more clearly
-Id: mcode-cancer-stage
+Profile: CancerStageGroup  // introduced 8/30/2020 to handle non-TNM staging more clearly
+Id: mcode-cancer-stage-group
 Parent: Observation
-Title: "Cancer Stage"
+Title: "Cancer Stage Group"
 Description: "An assessment of the extent of the cancer in the body, according to a given cancer staging classification system. This profile can be used with any staging system, but it is specifically targeted for non-TNM staging systems, since specialized TNM staging profiles are provided."
 * ^extension[FMM].valueInteger = 4
 * insert CategorySlicingRules
@@ -18,6 +18,8 @@ Description: "An assessment of the extent of the cancer in the body, according t
 * focus only Reference(PrimaryCancerCondition)
 * focus ^short = "The cancer condition associated with staging assessment."
 * focus ^definition = "Staging is associated with a particular primary cancer condition. Observation.focus is used to point back to that condition."
+* hasMember ^short = "Prognostic Factors"
+* hasMember ^definition = "References to the prognostic factors affecting the stage, for example, the T, N, M categories."
 * subject only Reference(CancerPatient)
 * subject ^definition = "The patient associated with staging assessment."
 * status and code and subject and effective[x] and value[x] and method and focus MS
@@ -25,7 +27,7 @@ Description: "An assessment of the extent of the cancer in the body, according t
 
 Profile: TNMStageGroup  // formerly CancerStageGroup
 Id: mcode-tnm-stage-group
-Parent: CancerStage
+Parent: CancerStageGroup
 Title: "TNM Stage Group Profile"
 Description: "The extent of cancer reprsented by the stage group, based on a TNM staging system."
 * insert NotUsed(component)
@@ -59,7 +61,7 @@ Description: "The extent of cancer reprsented by the stage group, based on a TNM
 
 Profile:  TNMPrimaryTumorCategory
 Id: mcode-tnm-primary-tumor-category
-Parent: CancerStage
+Parent: CancerStageGroup
 Title: "TNM Primary Tumor Category Profile"
 Description: "Category of the primary tumor, based on its size and extent, based on evidence such as physical examination, imaging, and/or biopsy."
 * insert NotUsed(hasMember)
@@ -71,7 +73,7 @@ Description: "Category of the primary tumor, based on its size and extent, based
 
 Profile:  TNMRegionalNodesCategory
 Id: mcode-tnm-regional-nodes-category
-Parent: CancerStage
+Parent: CancerStageGroup
 Title: "TNM Regional Nodes Category Profile"
 Description: "Category of the presence or absence of metastases in regional lymph nodes, based on evidence such as physical examination, imaging, and/or biopsy."
 * insert NotUsed(hasMember)
@@ -83,7 +85,7 @@ Description: "Category of the presence or absence of metastases in regional lymp
 
 Profile:  TNMDistantMetastasesCategory
 Id: mcode-tnm-distant-metastases-category
-Parent: CancerStage
+Parent: CancerStageGroup
 Title: "TNM Distant Metastases Category Profile"
 Description: "Category describing the extent of a tumor metastasis in remote anatomical locations, based on evidence such as physical examination, imaging, and/or biopsy."
 * insert NotUsed(hasMember)

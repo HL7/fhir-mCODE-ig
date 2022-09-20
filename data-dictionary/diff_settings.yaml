@@ -79,10 +79,10 @@ remapValues:
 
   - column: Source Profile URI
     old: http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-stage-group
-    new: http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-stage-group
+    new: http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-stage-group-group
   - column: Element StructureDefinition URI
     old: http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-stage-group
-    new: http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-stage-group
+    new: http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-stage-group-group
 
   # STU1 used `laterality`, which was renamed to `locationQualifier` in STU2
   - column: FHIR Element (R4)

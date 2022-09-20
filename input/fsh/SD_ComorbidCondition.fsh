@@ -15,7 +15,6 @@ Description: "General structure for capturing comorbid conditions with respect t
 // Therefore, we need extensions to record the comorbid conditions
 * extension contains RelatedCondition named comorbidConditionPresent 0..*
 * extension contains RelatedConditionAbsent named comorbidConditionAbsent 0..*
-
 // Indicate MS and NotUsed elements
 * extension and extension[comorbidConditionPresent] and extension[comorbidConditionAbsent] and status and code and subject and focus and effective[x] MS
 * insert NotUsed(bodySite)

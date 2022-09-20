@@ -96,6 +96,7 @@ ValueSet: TNMStageGroupMaxVS
 Id: mcode-tnm-stage-group-max-vs
 Title: "TNM Stage Group Maximum Value Set"
 Description: "Values for TNM stage group must be selected from this value set, which includes all codes from AJCC and all codes from TNMStageGroupVS."
+* ^experimental = false
 * include codes from valueset TNMStageGroupVS
 * include codes from system AJCC
 
@@ -125,6 +126,7 @@ ValueSet: TNMPrimaryTumorCategoryMaxVS
 Id: mcode-tnm-primary-tumor-category-max-vs
 Title: "TNM Primary Tumor Maximum Value Set"
 Description: "Values for TNM primary tumor category must be selected from this value set, which includes all codes from AJCC and all codes from TNMPrimaryTumorCategoryVS."
+* ^experimental = false
 * include codes from valueset TNMPrimaryTumorCategoryVS
 * include codes from system AJCC
 
@@ -154,6 +156,7 @@ ValueSet: TNMRegionalNodesCategoryMaxVS
 Id: mcode-tnm-regional-nodes-category-max-vs
 Title: "TNM Regional Nodes Maximum Value Set"
 Description: "Values for TNM regional nodes category must be selected from this value set, which includes all codes from AJCC and all codes from TNMRegionalNodesCategoryVS."
+* ^experimental = false
 * include codes from valueset TNMRegionalNodesCategoryVS
 * include codes from system AJCC
 
@@ -182,5 +185,6 @@ ValueSet: TNMDistantMetastasesCategoryMaxVS
 Id: mcode-tnm-distant-metastases-category-max-vs
 Title: "TNM Distant Metastases Maximum Value Set"
 Description: "Values for TNM distant metastases category must be selected from this value set, which includes all codes from AJCC and all codes from TNMDistantMetastasesCategoryVS."
+* ^experimental = false
 * include codes from valueset TNMDistantMetastasesCategoryVS
 * include codes from system AJCC

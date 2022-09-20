@@ -12,8 +12,8 @@ Where US Core does not provide an appropriate base profile, mCODE profiles FHIR 
 | [Cancer-Related Medication Administration][CancerRelatedMedicationAdministration] | no | Medication Administration |
 | [Cancer-Related Medication Request][CancerRelatedMedicationRequest] | yes | US Core Medication Request |
 | [Cancer-Related Surgical Procedure][CancerRelatedSurgicalProcedure] | yes | US Core Procedure |
-| [Cancer Stage Assessment][CancerStage] | no | Observation |
-| [Cancer Stage TNM][TNMStageGroup] | no | CancerStage |
+| [Cancer Stage Group Assessment][CancerStageGroup] | no | Observation |
+| [Cancer Stage Group TNM][TNMStageGroup] | no | CancerStageGroup |
 | [Comorbidities] | yes | US Core Observation Clinical Test Result |
 | [ECOG Performance Status][ECOGPerformanceStatus] | yes | US Core Observation Clinical Test Result |
 | [Genomic Region Studied][GenomicRegionStudied] | yes | US Core Laboratory Result Observation |

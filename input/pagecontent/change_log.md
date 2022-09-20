@@ -24,18 +24,18 @@ The binding strength for these value sets remains "preferred", meaning that the 
 
 ### Staging Profiles
 
-Previously, the CancerStageGroup profile was used to represent both the TNM stage group and non-TNM staging. This was less than optimal, since the name "stage group" was confusing for non-TNM staging, and the profile contained elements specific to TNM staging. With the ability to have specific value sets for TNM staging afforded by the SNOMED-AJCC agreement described above, mCODE can now explicitly model TNM-based and non-TNM-based staging. To make it clear how to represent non-TNM staging, a new profile, [CancerStage], has been added to represent non-TNM staging, while the former CancerStageGroup profile has been renamed [TNMStageGroup] to reflect the profile's specialization to TNM staging.
+Previously, the CancerStageGroup profile was used to represent both the TNM stage group and non-TNM staging. This was less than optimal, since the name "stage group" was confusing for non-TNM staging, and the profile contained elements specific to TNM staging. With the ability to have specific value sets for TNM staging afforded by the SNOMED-AJCC agreement described above, mCODE can now explicitly model TNM-based and non-TNM-based staging. To make it clear how to represent non-TNM staging, a new profile, [CancerStageGroup], has been added to represent non-TNM staging, while the former CancerStageGroup profile has been renamed [TNMStageGroup] to reflect the profile's specialization to TNM staging.
 
-For non-TNM staging, the PrimaryCancerCondition's `Condition.stage.assessment` element should reference an Observation conforming to the [CancerStage] profile. For TNM staging, the same element will reference an Observation conforming to the [TNMStageGroup] profile.
+For non-TNM staging, the PrimaryCancerCondition's `Condition.stage.assessment` element should reference an Observation conforming to the [CancerStageGroup] profile. For TNM staging, the same element will reference an Observation conforming to the [TNMStageGroup] profile.
 
 ### New Value Sets
 
-To support the [CancerStage] profile, two new value sets were introduced:
+To support the [CancerStageGroup] profile, two new value sets were introduced:
 
-* [CancerStagingTypeVS] was introduced to populate the `Observation.code` element in the CancerStage profile.
-* [CancerStageVS] was introduced to populate the `Observation.valueCodeableConcept` element in the CancerStage profile.
+* [CancerStagingTypeVS] was introduced to populate the `Observation.code` element in the CancerStageGroup profile.
+* [CancerStageVS] was introduced to populate the `Observation.valueCodeableConcept` element in the CancerStageGroup profile.
 
-The [CancerStagingMethodVS] (formerly CancerStagingSystemVS) that populates the `Observation.method` element in the CancerStage profile, already existed in STU 2.
+The [CancerStagingMethodVS] (formerly CancerStagingSystemVS) that populates the `Observation.method` element in the CancerStageGroup profile, already existed in STU 2.
 
 ### Value Sets Renamed
 
@@ -93,7 +93,7 @@ The following are now required values in `Condition.category` or `Observation.ca
 * [PrimaryCancerCondition] now requires category SNOMED CT 372087000 "Primary malignant neoplasm (disorder)"
 * [SecondaryCancerCondition] now requires category SNOMED CT 128462008 "Metastatic malignant neoplasm (disorder)"
 * [TumorMarkerTest] now requires category SNOMED CT 250724005 "Tumor marker measurement (procedure)"
-* The five staging profiles ([CancerStage], [TNMStageGroup], [TNMPrimaryTumorCategory], [TNMRegionalNodesCategory], and [TNMDistantMetastasesCategory]) now require category SNOMED CT 385356007 "Tumor stage finding (finding)"
+* The five staging profiles ([CancerStageGroup], [TNMStageGroup], [TNMPrimaryTumorCategory], [TNMRegionalNodesCategory], and [TNMDistantMetastasesCategory]) now require category SNOMED CT 385356007 "Tumor stage finding (finding)"
 
   As an example of how to assign these categories in instances, the JSON for a principal cancer condition would include:
 
@@ -128,15 +128,15 @@ Based on user feedback criticizing the complexity of the STU 2 design, [comorbid
 * Comorbidities are no longer based on the Elixhauser framework. Users now have the freedom to name any condition as a comorbidity.
 * Comorbid conditions can be designated either by providing a disorder code or reference to a FHIR resource. To allow this, the data types on the [RelatedCondition] extension have been expanded to allow a choice of Reference(Condition) or CodeableConcept.
 * Conditions mentioned in the Comorbidities profile can still be designated as present or absent, but this is accomplished by populating different extensions. A new extension, [RelatedConditionAbsent], has been introduced to support negation of a comorbidity (if needed to assert a significant negative).
-* Value sets, extensions, code systems, and profiles related to STU2 Elixhauser comorbidities that are no longer required have been eliminated.
+* Value sets, extensions, code systems, and profiles related to STU 2 Elixhauser comorbidities that are no longer required have been eliminated.
 
 ### Update to US Core 5.0.1
 
-mCODE has been updated to the current version of US Core, STU5. Because there are new profiles in STU5 that should be used as parent profiles, some mCODE profiles were affected. In particular, the parent profiles of [CancerDiseaseStatus], [KarnofskyPerformanceStatus], and [ECOGPerformanceStatus] were switched from Observation to the newly-introduced [US Core Observation Clinical Test Result Profile][USCoreClinicalTestObservation].
+mCODE has been updated to the current version of US Core, STU 5. Because there are new profiles in STU 5 that should be used as parent profiles, some mCODE profiles were affected. In particular, the parent profiles of [CancerDiseaseStatus], [KarnofskyPerformanceStatus], and [ECOGPerformanceStatus] were switched from Observation to the newly-introduced [US Core Observation Clinical Test Result Profile][USCoreClinicalTestObservation].
 
 ### Dependency on Genomics Reporting IG
 
-mCODE is now is explicitly dependent on the [Genomics Reporting IG STU2 (v2.0.0)](http://hl7.org/fhir/uv/genomics-reporting/STU2/index.html) (GRIG). This eliminates the duplication of profiles that existed in STU1 and STU 2, and assures that the two IGs remain in synchronization. The following changes were made:
+mCODE is now is explicitly dependent on the [Genomics Reporting IG STU2 (v2.0.0)](http://hl7.org/fhir/uv/genomics-reporting/STU2/index.html) (GRIG). This eliminates the duplication of profiles that existed in STU 1 and STU 2, and assures that the two IGs remain in synchronization. The following changes were made:
 
 * [GenomicsReport], [GenomicRegionStudied], and [GenomicVariant] now inherit from the corresponding profiles in GRIG.
 * Inheritance from US Core was removed from these profiles, since FHIR does not allow a profile to have two parents. Instances MUST be consistent with US Core but the FHIR IG Publisher does not recognize US Core compliance because it does not derive from inheritance.

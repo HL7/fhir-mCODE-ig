@@ -32,8 +32,8 @@
     },
     {
       "group": "Default",
-      "title": "Cancer Stage Parent",
-      "url": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-stage-parent",
+      "title": "Cancer Stage Group Parent",
+      "url": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-stage-group-parent",
       "description": "Abstract parent class for members of cancer staging panels. Cancer panel members must include a timing element and staging system, and focus on a cancer disorder. Specific realizations will have value sets specific to certain staging systems."
     },
     {

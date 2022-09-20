@@ -14,8 +14,8 @@
     },
     {
       "group": "Default",
-      "title": "Cancer Stage Group Profile",
-      "url": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-stage-group",
+      "title": "Cancer Stage Group Group Profile",
+      "url": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-stage-group-group",
       "description": "The extent of the cancer in the body, according to a given cancer staging classification system, based on evidence such as physical examination, imaging, and/or biopsy or based on pathologic analysis of a specimen."
     },
     {
@@ -978,7 +978,7 @@
     },
     {
       "Group": "Default",
-      "Profile Title": "Cancer Stage Group Profile",
+      "Profile Title": "Cancer Stage Group Group Profile",
       "Data Element Name": "Status",
       "Definition": "The status of the result value.",
       "Required?": "Required",
@@ -987,12 +987,12 @@
       "Value Set URI": "http://hl7.org/fhir/ValueSet/observation-status|4.0.1",
       "Value Set Binding": "required",
       "FHIR Element (R4)": "Observation.status",
-      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-stage-group",
-      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-stage-group"
+      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-stage-group-group",
+      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-stage-group-group"
     },
     {
       "Group": "Default",
-      "Profile Title": "Cancer Stage Group Profile",
+      "Profile Title": "Cancer Stage Group Group Profile",
       "Data Element Name": "Code",
       "Definition": "Describes what was observed. Sometimes this is called the observation \"name\".",
       "Required?": "Required",
@@ -1001,12 +1001,12 @@
       "Value Set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-tnm-stage-group-staging-type-vs",
       "Value Set Binding": "required",
       "FHIR Element (R4)": "Observation.code",
-      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-stage-group",
-      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-stage-group"
+      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-stage-group-group",
+      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-stage-group-group"
     },
     {
       "Group": "Default",
-      "Profile Title": "Cancer Stage Group Profile",
+      "Profile Title": "Cancer Stage Group Group Profile",
       "Data Element Name": "Subject",
       "Definition": "The patient associated with staging data.",
       "Required?": "Required if known",
@@ -1015,12 +1015,12 @@
       "Value Set URI": "",
       "Value Set Binding": "",
       "FHIR Element (R4)": "Observation.subject",
-      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-stage-group",
-      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-stage-group"
+      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-stage-group-group",
+      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-stage-group-group"
     },
     {
       "Group": "Default",
-      "Profile Title": "Cancer Stage Group Profile",
+      "Profile Title": "Cancer Stage Group Group Profile",
       "Data Element Name": "Focus",
       "Definition": "The actual focus of an observation when it is not the patient of record representing something or someone associated with the patient such as a spouse, parent, fetus, or donor. For example, fetus observations in a mother's record.  The focus of an observation could also be an existing condition,  an intervention, the subject's diet,  another observation of the subject,  or a body structure such as tumor or implanted device.   An example use case would be using the Observation resource to capture whether the mother is trained to change her child's tracheostomy tube. In this example, the child is the patient of record and the mother is the focus.",
       "Required?": "Required if known",
@@ -1029,12 +1029,12 @@
       "Value Set URI": "",
       "Value Set Binding": "",
       "FHIR Element (R4)": "Observation.focus",
-      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-stage-group",
-      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-stage-group"
+      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-stage-group-group",
+      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-stage-group-group"
     },
     {
       "Group": "Default",
-      "Profile Title": "Cancer Stage Group Profile",
+      "Profile Title": "Cancer Stage Group Group Profile",
       "Data Element Name": "Effective",
       "Definition": "The time or time-period the observed value is asserted as being true. For biological subjects - e.g. human patients - this is usually called the \"physiologically relevant time\". This is usually either the time of the procedure or of specimen collection, but very often the source of the date/time is not known, only the date/time itself.",
       "Required?": "Required if known",
@@ -1043,12 +1043,12 @@
       "Value Set URI": "",
       "Value Set Binding": "",
       "FHIR Element (R4)": "Observation.effective[x]",
-      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-stage-group",
-      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-stage-group"
+      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-stage-group-group",
+      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-stage-group-group"
     },
     {
       "Group": "Default",
-      "Profile Title": "Cancer Stage Group Profile",
+      "Profile Title": "Cancer Stage Group Group Profile",
       "Data Element Name": "Value",
       "Definition": "The information determined as a result of making the observation, if the information has a simple value.",
       "Required?": "Required if known",
@@ -1057,12 +1057,12 @@
       "Value Set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-tnm-stage-group-vs",
       "Value Set Binding": "preferred",
       "FHIR Element (R4)": "Observation.value[x]",
-      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-stage-group",
-      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-stage-group"
+      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-stage-group-group",
+      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-stage-group-group"
     },
     {
       "Group": "Default",
-      "Profile Title": "Cancer Stage Group Profile",
+      "Profile Title": "Cancer Stage Group Group Profile",
       "Data Element Name": "Method",
       "Definition": "Indicates the mechanism used to perform the observation.",
       "Required?": "Required if known",
@@ -1071,12 +1071,12 @@
       "Value Set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-staging-method-vs",
       "Value Set Binding": "extensible",
       "FHIR Element (R4)": "Observation.method",
-      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-stage-group",
-      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-stage-group"
+      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-stage-group-group",
+      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-stage-group-group"
     },
     {
       "Group": "Default",
-      "Profile Title": "Cancer Stage Group Profile",
+      "Profile Title": "Cancer Stage Group Group Profile",
       "Data Element Name": "Has Member > TNM Primary Tumor Category",
       "Definition": "Category of the primary tumor, based on its size and extent, and based on evidence such as physical examination, imaging, and/or biopsy.",
       "Required?": "Required if known",
@@ -1085,12 +1085,12 @@
       "Value Set URI": "",
       "Value Set Binding": "",
       "FHIR Element (R4)": "Observation.hasMember:tnmPrimaryTumorCategory",
-      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-stage-group",
-      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-stage-group"
+      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-stage-group-group",
+      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-stage-group-group"
     },
     {
       "Group": "Default",
-      "Profile Title": "Cancer Stage Group Profile",
+      "Profile Title": "Cancer Stage Group Group Profile",
       "Data Element Name": "Has Member > TNM Regional Nodes Category",
       "Definition": "Category of the presence or absence of metastases in regional lymph nodes, based on evidence such as physical examination, imaging, and/or biopsy.",
       "Required?": "Required if known",
@@ -1099,12 +1099,12 @@
       "Value Set URI": "",
       "Value Set Binding": "",
       "FHIR Element (R4)": "Observation.hasMember:tnmRegionalNodesCategory",
-      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-stage-group",
-      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-stage-group"
+      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-stage-group-group",
+      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-stage-group-group"
     },
     {
       "Group": "Default",
-      "Profile Title": "Cancer Stage Group Profile",
+      "Profile Title": "Cancer Stage Group Group Profile",
       "Data Element Name": "Has Member > TNM Distant Metastases Category",
       "Definition": "Category describing the presence or absence of metastases in remote anatomical locations, based on evidence such as physical examination, imaging, and/or biopsy.",
       "Required?": "Required if known",
@@ -1113,8 +1113,8 @@
       "Value Set URI": "",
       "Value Set Binding": "",
       "FHIR Element (R4)": "Observation.hasMember:tnmDistantMetastasesCategory",
-      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-stage-group",
-      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-stage-group"
+      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-stage-group-group",
+      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-stage-group-group"
     },
     {
       "Group": "Default",
@@ -6858,7 +6858,7 @@
       "description": "Includes surgical procedure codes from SNOMED CT, ICD-10-PCS and CPT. The value set may be a superset of cancer surgery codes, but narrowing the set further risks eliminating potentially useful and relevant codes."
     },
     {
-      "title": "Cancer Stage Group Value Set",
+      "title": "Cancer Stage Group Group Value Set",
       "url": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-tnm-stage-group-vs",
       "description": "This value set is intended to contain allowable values for Stage Group, according to TNM staging rules. AJCC codes (preferably, version 8 for current cancers) SHOULD be used."
     },

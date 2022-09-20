@@ -2,7 +2,7 @@ The mCODE **Disease Characterization** group includes data elements specific to 
 
 * **Cancer Diagnosis** - the date and location (body site/position and laterality) of the cancer diagnosis.
 * **Tumor Characteristics** - histological classification, morphology, and behavior of the tumor cell, compared to that of a normal cell.
-* **Cancer Stage** - describes the severity of an individual's cancer based on the magnitude of the original (primary) tumor as well as on the extent cancer has spread in the body. Understanding the stage of the cancer helps doctors to develop a prognosis and design a treatment plan for individual patients. Staging calculations leverage results from the previous two categories, along with prognostic factors relevant to the cancer type, in order to assess an overall cancer stage group (source: [AJCC](https://cancerstaging.org/references-tools/Pages/What-is-Cancer-Staging.aspx)).
+* **Cancer Stage Group** - describes the severity of an individual's cancer based on the magnitude of the original (primary) tumor as well as on the extent cancer has spread in the body. Understanding the stage of the cancer helps doctors to develop a prognosis and design a treatment plan for individual patients. Staging calculations leverage results from the previous two categories, along with prognostic factors relevant to the cancer type, in order to assess an overall cancer stage group (source: [AJCC](https://cancerstaging.org/references-tools/Pages/What-is-Cancer-Staging.aspx)).
 
 ### Representing the Cancer Diagnosis
 
@@ -27,7 +27,7 @@ Implementers should reference the [PrimaryCancerCondition] and [SecondaryCancerC
 
 Clinicians and pathologists assign stages to cancers according to rules defined in various [cancer staging systems or methods](https://www.cancer.gov/about-cancer/diagnosis-staging/staging). The staging system must always be specified alongside the stage, because it establishes the meaning of the stage code(s). One staging value can be included in the PrimaryCancerCondition, in the element `Condition.stage.summary` with the corresponding staging system in `Condition.stage.type`. However, a single value is often insufficient and does not allow for capture of provenance information related to staging, separate from the provenance of the cancer condition information.
 
-For more detailed staging information, the user should provide a separate Observation resource conforming to the [CancerStage] profile. A reference to this resource is provided in `Condition.stage.assessment`. The CancerStage profile can be used with any staging system, but specifically, non-TNM staging systems, since a specialized TNM staging profile is provided. In CancerStage, the following information must be provided:
+For more detailed staging information, the user should provide a separate Observation resource conforming to the [CancerStageGroup] profile. A reference to this resource is provided in `Condition.stage.assessment`. The CancerStageGroup profile can be used with any staging system, but specifically, non-TNM staging systems, since a specialized TNM staging profile is provided. In CancerStageGroup, the following information must be provided:
 
 * `Observation.category`: fixed, required value of SNOMED CT 385356007 "Tumor stage finding (finding)"
 * `Observation.focus`: a reference to the primary cancer condition that was staged
@@ -54,7 +54,7 @@ Several widely-used terminologies in the cancer domain, including ICD-O-3 and AJ
 
 Not all cancer types are staged with a TNM-based staging system, including hematological cancers like leukemias, multiple myeloma, and some lymphomas. Some specialized solid tumors like gynecologic tumors are staged using the FIGO (International Federation of Gynecology and Obstetrics) staging system. Other non-TNM staging systems include Rai, Binet, and Cottswold. The staging system should be represented with a code from the [CancerStagingMethodVS] value set, if available.
 
-Non-TNM staging results are represented using the profile [CancerStage]. Prognostic factors related to the cancer stage group can be specified with the `Observation.derivedFrom` element. For example, a hemoglobin lab result which was evaluated in the  staging of chronic lymphocytic leukemia using the Binet staging system can be referenced under `Observation.derivedFrom` element. [This example of Binet staging](Observation-binet-stage-group-A.html) illustrates how this could be represented.
+Non-TNM staging results are represented using the profile [CancerStageGroup]. Prognostic factors related to the cancer stage group can be specified with the `Observation.derivedFrom` element. For example, a hemoglobin lab result which was evaluated in the  staging of chronic lymphocytic leukemia using the Binet staging system can be referenced under `Observation.derivedFrom` element. [This example of Binet staging](Observation-binet-stage-group-A.html) illustrates how this could be represented.
 
 ### Body Locations
 
@@ -76,7 +76,7 @@ mCODE includes single FHIR profile, [TumorMarkerTest], for all labs involving se
 * Characterization
   * [TumorMarkerTest]
 * Staging, Non-TNM
-  * [CancerStage]
+  * [CancerStageGroup]
 * Staging, TNM
   * [TNMStageGroup]
   * [TNMPrimaryTumorCategory]

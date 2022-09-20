@@ -43,8 +43,8 @@ Description: "Identifying codes for the type of cancer staging performed. In ter
 //* include codes from valueset TNMDistantMetastasesStagingTypeVS
 
 ValueSet: CancerStageVS
-Id: mcode-cancer-stage-vs
-Title: "Cancer Stage Value Set"
+Id: mcode-cancer-stage-group-vs
+Title: "Cancer Stage Group Value Set"
 Description: "The result of cancer staging, i.e., the stage or category of the cancer."
 * insert SNOMEDCopyrightForVS
 * include codes from system SCT where concept is-a #1222584008 "American Joint Committee on Cancer allowable value (qualifier value)"

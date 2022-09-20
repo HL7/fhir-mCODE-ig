@@ -1,5 +1,5 @@
 Profile: Comorbidities
-Parent: USCoreClinicalTest  // an Observation, not a condition
+Parent: Observation  // an Observation, not a condition
 Id: mcode-comorbidities
 Title: "Comorbidities Profile"
 Description: "General structure for capturing comorbid conditions with respect to a primary ('index') condition. The specific set of comorbidities appear in extensions."
@@ -15,15 +15,20 @@ Description: "General structure for capturing comorbid conditions with respect t
 // Therefore, we need extensions to record the comorbid conditions
 * extension contains RelatedCondition named comorbidConditionPresent 0..*
 * extension contains RelatedConditionAbsent named comorbidConditionAbsent 0..*
-// The design also must satisfy Rule us-core-2: 'If there is no component or hasMember element then either a value[x] or a data absent reason must be present'. We will use a data absent reason. 
-* value[x] 0..0
-* dataAbsentReason 1..1
-* dataAbsentReason = AbsentReason#not-permitted "Not Permitted"
+
 // Indicate MS and NotUsed elements
 * extension and extension[comorbidConditionPresent] and extension[comorbidConditionAbsent] and status and code and subject and focus and effective[x] MS
 * insert NotUsed(bodySite)
 * insert NotUsed(specimen)
 * insert NotUsed(device)
+/* Design options considered and rejected
+* 1. Why not use component?
+*    Component does not support references, and we would like to 
+*    give users the option of either a condition code or Reference(Condition)
+* 2. Why not use hasMember?
+*    hasMember is a Reference, but cannot reference Conditions 
+*    (it is limited to Reference(Observation | QuestionnaireResponse | MolecularSequence))
+*/
 * insert NotUsed(hasMember)
 * insert NotUsed(component)
 

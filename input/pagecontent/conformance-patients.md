@@ -1,4 +1,4 @@
-To facilitate conformance testing, testing software must be able to determine which patients are "in-scope" (meaning cancer patients whose data is presented or exchanged with the intention of conforming to mCODE). In FHIR terms, these are patients who have a Condition where `Condition.code` is a member of the value set [PrimaryOrUncertainBehaviorCancerDisorderVS] and `Condition.verificationStatus` is confirmed.
+To facilitate conformance testing, testing software must be able to determine which patients are "in-scope" (meaning cancer patients whose data is presented or exchanged with the intention of conforming to mCODE). In FHIR terms, these are patients who have a Condition where `Condition.code` is a member of the value set [PrimaryCancerDisorderVS] and `Condition.verificationStatus` is confirmed.
 
 However, due to technical, organizational, or legal reasons, mCODE Data Senders MAY exclude some cancer patients from mCODE. In that case, the mCODE Data Sender MUST define a Group resource to identify ALL in-scope patients in their system. This Group resource MUST set `Group.code` to `C19700` with code system `http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl` (this is the NCI code for concept "Cancer Patient"). Data Senders that do not exclude any cancer patients from mCODE MAY still populate a Group resource.
 
@@ -39,7 +39,7 @@ In this approach, Senders respond to the following request with a FHIR Bundle of
 
 ### Patient-Then-Cancer-Conditions Approach
 
-In this approach, Senders can respond to a request using [`_include`](https://www.hl7.org/fhir/search.html#revinclude) to get a Bundle of the relevant Patient resources along with the subset of Condition resources with `Condition.code` in [Primary or Uncertain Behavior Cancer Disorder Value Set][PrimaryOrUncertainBehaviorCancerDisorderVS] in a single request. Preferred over the approach below UNLESS `_include` is entirely unsupported on the system.
+In this approach, Senders can respond to a request using [`_include`](https://www.hl7.org/fhir/search.html#revinclude) to get a Bundle of the relevant Patient resources along with the subset of Condition resources with `Condition.code` in [Primary Cancer Disorder Value Set][PrimaryCancerDisorderVS] in a single request. Preferred over the approach below UNLESS `_include` is entirely unsupported on the system.
 
     GET [base]/Condition?code:in=http://hl7.org/fhir/us/mcode/ValueSet/mcode-primary-or-uncertain-behavior-cancer-disorder-vs&_include=Condition:subject
 
@@ -55,7 +55,7 @@ In this approach, Senders can respond to a request using [`_include`](https://ww
 
 ### Conditions-Then-Patients Approach
 
-In this approach, Senders return a Bundle with the subset of Condition resources with a `code` in the [Primary or Uncertain Behavior Cancer Disorder Value Set][PrimaryOrUncertainBehaviorCancerDisorderVS] in a single request, AND allow the Receiver to retrieve a Bundle of the Patient resources referenced in the first response using [composite search parameters](https://www.hl7.org/fhir/search.html#combining):
+In this approach, Senders return a Bundle with the subset of Condition resources with a `code` in the [Primary Cancer Disorder Value Set][PrimaryCancerDisorderVS] in a single request, AND allow the Receiver to retrieve a Bundle of the Patient resources referenced in the first response using [composite search parameters](https://www.hl7.org/fhir/search.html#combining):
 
     GET [base]/Condition?code:in=http://hl7.org/fhir/us/mcode/ValueSet/mcode-primary-or-uncertain-behavior-cancer-disorder-vs
 

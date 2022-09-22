@@ -13,6 +13,6 @@ Note that ICD-O-3 specifies morphology and topography, not disorder. If ICD-O-3 
 
 ### Conformance
 
-Condition resources associated with an [in-scope patient] with a `Condition.code` in the value set [PrimaryOrUncertainBehaviorCancerDisorderVS] MUST conform to this profile. Beyond this requirement, a producer of resources SHOULD ensure that any resource instance associated with an [in-scope patient] that would reasonably be expected to conform to this profile SHOULD be published in this form.
+Condition resources associated with an [in-scope patient] with a `Condition.code` in the value set [PrimaryCancerDisorderVS] MUST conform to this profile. Beyond this requirement, a producer of resources SHOULD ensure that any resource instance associated with an [in-scope patient] that would reasonably be expected to conform to this profile SHOULD be published in this form.
 
 {% include markdown-link-references.md %}

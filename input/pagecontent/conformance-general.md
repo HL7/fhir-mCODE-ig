@@ -119,7 +119,9 @@ The [mCODE Patient Bundle][MCODEPatientBundle] provides a mechanism to retrieve 
 
     GET [base]/Patient/[id]/$mcode-everything
 
-This endpoint SHALL support `start` and `end` parameters which operate the same as in the [`Patient/[id]/$everything` operation](https://www.hl7.org/fhir/operation-patient-everything.html).
+This endpoint SHALL support `start` and `end` parameters and MAY support the `_since`, `_type`, and `_count` parameters, which operate the same as in the [`Patient/[id]/$everything` operation](https://www.hl7.org/fhir/operation-patient-everything.html). The _since parameter is provided to support periodic queries to get additional information that has changed about the patient since the last query.
+
+For some types of resources, such as vital signs, a large number of resources may exist. Senders may use their discretion to select the resources that are most relevant, e.g., a subset of the vital signs that were recorded. Alternatively, servers may refuse to serve the request and indicate that the client asked for too much data (see [OperationOutcome](https://www.hl7.org/fhir/operationoutcome.html)). To limit the number of included resources, callers MAY specify a `_count` parameter that pages through the results.
 
 <!-- If the image below is not wrapped in a div tag, the publisher tries to wrap text around the image, which is not desired. -->
 <div style="text-align: center;">{%include mcode-patient-bundle-pull.svg%}</div>
@@ -128,7 +130,7 @@ mCODE Patient Bundles SHALL be identified by an `id` value that matches the `id`
 
 #### Use `meta.profile` to Signal Conformance
 
-Participants SHOULD populate `meta.profile` elements for all resources to indicate which profiles the resources should conform to. Participants SHOULD also implement [profile search](https://www.hl7.org/fhir/search.html#profile), which allows participants to query using the `_profile` parameter to return resources conforming to the profiles declared in `meta.profile`.
+Participants SHOULD populate `meta.profile` elements for all resources to indicate which profiles the resources claim to conform to. Servers SHOULD also implement [profile search](https://www.hl7.org/fhir/search.html#profile), which allows participants to query using the `_profile` parameter to return resources conforming to the profiles declared in `meta.profile`.
 
 Profile search and population of `meta.profile` originate as "SHALL" requirements in the base FHIR specification; they are not an additional requirements imposed by mCODE. However, in practice, few implementations have followed these requirements. Refer to the [FHIR Documentation on supported profiles](https://www.hl7.org/fhir/profiling.html#CapabilityStatement.rest.resource.supportedProfile) for details.
 

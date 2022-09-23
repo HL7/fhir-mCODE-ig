@@ -18,8 +18,8 @@ Description: "An assessment of the extent of the cancer in the body, according t
 * focus only Reference(PrimaryCancerCondition)
 * focus ^short = "The cancer condition associated with staging assessment."
 * focus ^definition = "Staging is associated with a particular primary cancer condition. Observation.focus is used to point back to that condition."
-* hasMember ^short = "Prognostic Factors"
-* hasMember ^definition = "References to the prognostic factors affecting the stage, for example, the T, N, M categories."
+* hasMember ^short = "Prognostic factors contributing to stage determination."
+* hasMember ^definition = "References to the prognostic factors affecting the stage, for example, the T, N, and M categories."
 * subject only Reference(CancerPatient)
 * subject ^definition = "The patient associated with staging assessment."
 * status and code and subject and effective[x] and value[x] and method and focus MS

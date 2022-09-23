@@ -4,6 +4,7 @@ Id:         mcode-genomic-region-studied
 Title:      "Genomic Region Studied Profile"
 Description:    "A subset of genes or genomic regions of interest in a targeted resequencing study."
 * ^extension[FMM].valueInteger = 1
+* subject 1..1 // subject is required in US Core Laboratory Result (although I am not quite sure this represents a laboratory result, since it isn't strictly a result. It is more like what we are observing, additional information behind Observation.code.)
 * value[x] ^definition = "Not used in this profile. MustSupport is inherited from the parent profile (USCoreObservationLab) and should be ignored by implementers for this element."
 * category[labCategory].coding 1..1  // To prevent the message "The repeating element has a pattern. The pattern will apply to all the repeats (this has not been clear to all users)"
 * category[labCategory] = ObsCat#laboratory

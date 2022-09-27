@@ -141,6 +141,10 @@ mCODE is now is explicitly dependent on the [Genomics Reporting IG STU2 (v2.0.0)
 
 Maturity indicators, based on the FHIR Maturity Model (FMM) have been added to profiles and value sets. These indicators show up in the IG but have no functional affect on implementations.
 
+### CancerDiseaseStatus Focus
+
+Radiotherapy subject matter experts requested a way to link CancerDiseaseStatus to a RadiotherapyVolume through the `Observation.focus` element. This broadens the choices of STU2, which were Reference(PrimaryCancerCondition or SecondaryCancerCondition or Tumor) and are now Reference(PrimaryCancerCondition or SecondaryCancerCondition or Tumor or RadiotherapyVolume). This allows a change in disease status to point to a specific area of the body, not just a specific Tumor or condition.
+
 ### Technical Corrections
 
 * [PrimaryCancerCondition]'s `stage.type` value set binding was corrected. It should have indicated the staging **method** that gave rise to the value appearing in stage.summary (such as AJCC Version 8).

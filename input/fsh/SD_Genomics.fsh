@@ -44,7 +44,7 @@ Description:    "An alteration in the most common DNA nucleotide sequence. The t
 
 * component[genomicDNAChange].code = LNC#81290-9
 * component[genomicDNAChange].value[x] only CodeableConcept
-* component[genomicDNAChange].value[x] from HGVSVS (required)
+* component[genomicDNAChange].value[x] from HGVSVS_alt (required)
 * component[genomicDNAChange] ^short = "Genomic DNA change (gHGVS)"
 * component[genomicDNAChange] ^definition = "The symbolic representation of a Genomic structural variant reported using HGVS nomenclature (gHGVS)"
 
@@ -68,7 +68,7 @@ Description:    "An alteration in the most common DNA nucleotide sequence. The t
 
 * component[aminoAcidChange].code = LNC#48005-3
 * component[aminoAcidChange].value[x] only CodeableConcept
-* component[aminoAcidChange].value[x] from HGVSVS (required)
+* component[aminoAcidChange].value[x] from HGVSVS_alt (required)
 * component[aminoAcidChange] ^short = "Amino acid change (pHGVS)"
 * component[aminoAcidChange] ^definition = "The symbolic representation of an amino acid variant reported using HGVS nomenclature (pHGVS)."
 
@@ -200,7 +200,7 @@ Description:    "A subset of genes or genomic regions of interest in a targeted 
 * component[geneMutations] ^definition = "The gene mutations tested for in blood or tissue by molecular genetics methods"
 * component[geneMutations].code = LNC#36908-2
 * component[geneMutations].value[x] only CodeableConcept
-* component[geneMutations].value[x] from HGVSVS (required)
+* component[geneMutations].value[x] from HGVSVS_alt (required)
 
 
 * component[geneStudied] ^short = "Gene studied [ID]"

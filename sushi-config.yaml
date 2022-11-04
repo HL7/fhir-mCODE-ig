@@ -16,7 +16,6 @@ license: CC0-1.0
 fhirVersion: 4.0.1
 dependencies:
   hl7.fhir.us.core: 4.0.0
-  hl7.fhir.uv.genomics-reporting: 2.0.0
 parameters:
   show-inherited-invariants: false
   version-comparison: n/a

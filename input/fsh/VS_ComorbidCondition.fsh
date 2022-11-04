@@ -944,6 +944,7 @@ Description:    "Elixhauser Comorbid Condition Value Set for CongestiveHeartFail
 * ICD10CM#R57.0 "Cardiogenic shock"
 * ICD10CM#Z95.811 "Presence of heart assist device"
 * ICD10CM#Z95.812 "Presence of fully implantable artificial heart"
+* ^experimental = false
 
 ValueSet:  ElixhauserChronicPulmonaryDiseaseVS
 Id: elixhauser-chronic-pulmonary-disease-vs

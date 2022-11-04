@@ -5,6 +5,7 @@ Description: "Value set used in association with phenomena that can be observed 
 * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
 * SCT#52101004 "Present (qualifier value)"
 * SCT#2667000 "Absent (qualifier value)"
+* ^experimental = false
 
 ValueSet:  ElixhauserAidsVS
 Id: elixhauser-aids-vs
@@ -17,6 +18,7 @@ Description:    "Elixhauser Comorbid Condition Value Set for HIV-AIDS. ICD-10 co
 * ICD10CM#O98.72 "Human immunodeficiency virus[HIV] disease complicating childbirth"
 * ICD10CM#O98.73 "Human immunodeficiency virus[HIV] disease complicating the puerperium"
 * ICD10CM#Z21 "Asymptomatic humanimmunodeficiency virus infection status"
+* ^experimental = false
 
 
 ValueSet:  ElixhauserAlcoholAbuseVS
@@ -80,6 +82,7 @@ Description:    "Elixhauser Comorbid Condition Value Set for Alcohol Abuse. ICD-
 * ICD10CM#O99.313 "Alcohol use complicating pregnancy, third trimester"
 * ICD10CM#O99.314 "Alcohol use complicating childbirth"
 * ICD10CM#O99.315 "Alcohol use complicating the puerperium"
+* ^experimental = false
 
 ValueSet:  ElixhauserDeficiencyAnemiaVS
 Id: elixhauser-deficiency-anemia-vs
@@ -111,6 +114,7 @@ Description:    "Elixhauser Comorbid Condition Value Set for Deficiency Anemia. 
 * ICD10CM#O99.012 "Anemia complicating pregnancy, second trimester"
 * ICD10CM#O99.013 "Anemia complicating pregnancy, third trimester"
 * ICD10CM#O99.019 "Anemia complicating pregnancy, unspecified trimester"
+* ^experimental = false
 
 
 ValueSet:  ElixhauserRheumatoidArthritisVS
@@ -888,6 +892,7 @@ Description:    "Elixhauser Comorbid Condition Value Set for Rheumatoid Arthriti
 * ICD10CM#M49.87 "Spondylopathy in diseases classd elswhr, lumbosacral region"
 * ICD10CM#M49.88 "Spond in diseases classd elswhr, sacr/sacrocygl region"
 * ICD10CM#M49.89 "Spond in diseases classd elswhr, multiple sites in spine"
+* ^experimental = false
 
 ValueSet:  ElixhauserBloodLossAnemiaVS
 Id: elixhauser-blood-loss-anemia-vs
@@ -896,6 +901,7 @@ Description:    "Elixhauser Comorbid Condition Value Set for Blood Loss Anemia. 
 * ICD10CM#O90.81 "Anemia of the puerperium"
 * ICD10CM#O99.02 "Anemia complicating childbirth"
 * ICD10CM#O99.03 "Anemia complicating the puerperium"
+* ^experimental = false
 
 ValueSet:  ElixhauserCongestiveHeartFailureVS
 Id: elixhauser-congestive-heart-failure-vs
@@ -1006,6 +1012,7 @@ Description:    "Elixhauser Comorbid Condition Value Set for Chronic Pulmonary D
 * ICD10CM#J68.4 "Chronic resp cond due to chemicals, gases, fumes and vapors"
 * ICD10CM#J70.1 "Chronic and other pulmonary manifestations due to radiation"
 * ICD10CM#J70.3 "Chronic drug-induced interstitial lung disorders"
+* ^experimental = false
 
 ValueSet:  ElixhauserCoagulationDeficiencyVS
 Id: elixhauser-coagulation-deficiency-vs
@@ -1051,6 +1058,7 @@ Description:    "Elixhauser Comorbid Condition Value Set for Coagulation Deficie
 * ICD10CM#O99.119 "Oth dis of bld/bld-form org/immun mechnsm comp preg,unsp tri"
 * ICD10CM#O99.12 "Oth dis of the bld/bld-form org/immun mechnsm comp chldbrth"
 * ICD10CM#O99.13 "Oth dis of the bld/bld-form org/immun mechnsm comp the puerp"
+* ^experimental = false
 
 
 ValueSet:  ElixhauserCerebrovascularDiseaseVS
@@ -1370,6 +1378,7 @@ Description:    "Elixhauser Comorbid Condition Value Set for cerebrovascular dis
 * ICD10CM#P91.822 "Neonatal cerebral infarction, left side of brain"
 * ICD10CM#P91.823 "Neonatal cerebral infarction, bilateral"
 * ICD10CM#P91.829 "Neonatal cerebral infarction, unspecified side"
+* ^experimental = false
 
 
 ValueSet:  ElixhauserDepressionVS
@@ -1394,6 +1403,7 @@ Description:    "Elixhauser Comorbid Condition Value Set for Depression. ICD-10 
 * ICD10CM#F33.8 "Other recurrent depressive disorders"
 * ICD10CM#F33.9 "Major depressive disorder, recurrent, unspecified"
 * ICD10CM#F34.1 "Dysthymic disorder"
+* ^experimental = false
 
 
 ValueSet:  ElixhauserDiabetesUncomplicatedVS
@@ -1465,6 +1475,7 @@ Description:    "Elixhauser Comorbid Condition Value Set for diabetes without ch
 * ICD10CM#O24.919 "Unspecified diabetes mellitus in pregnancy, unspecified trimester"
 * ICD10CM#O24.92 "Unspecified diabetes mellitus in childbirth"
 * ICD10CM#O24.93 "Unspecified diabetes mellitus in the puerperium"
+* ^experimental = false
 
 
 ValueSet:  ElixhauserDiabetesComplicatedVS
@@ -1916,6 +1927,7 @@ Description:    "Elixhauser Comorbid Condition Value Set for diabetes with chron
 * ICD10CM#E13.65 "Other specified diabetes mellitus with hyperglycemia"
 * ICD10CM#E13.69 "Other specified diabetes mellitus with other specified complication"
 * ICD10CM#E13.8 "Other specified diabetes mellitus with unspecified complications"
+* ^experimental = false
 
 
 ValueSet:  ElixhauserDrugAbuseVS
@@ -2181,6 +2193,7 @@ Description:    "Elixhauser Comorbid Condition Value Set for drug abuse. ICD-10 
 * ICD10CM#O99.323 "Drug use complicating pregnancy, third trimester"
 * ICD10CM#O99.324 "Drug use complicating childbirth"
 * ICD10CM#O99.325 "Drug use complicating the puerperium"
+* ^experimental = false
 
 
 
@@ -2197,6 +2210,7 @@ Description:    "Elixhauser Comorbid Condition Value Set for Hypertension, Uncom
 * ICD10CM#O10.019 "Pre-existing essential hypertension complicating pregnancy, unspecified trimester"
 * ICD10CM#O10.02 "Pre-existing essential hypertension complicating childbirth"
 * ICD10CM#O10.03 "Pre-existing essential hypertension complicating the puerperium"
+* ^experimental = false
 
 
 ValueSet:  ElixhauserHypertensionComplicatedVS
@@ -2264,6 +2278,7 @@ Description:    "Elixhauser Comorbid Condition Value Set for Hypertension, Compl
 * ICD10CM#O16.4 "Unspecified maternal hypertension, complicating childbirth"
 * ICD10CM#O16.5 "Unspecified maternal hypertension, complicating the puerperium"
 * ICD10CM#O16.9 "Unspecified maternal hypertension, unspecified trimester"
+* ^experimental = false
 
 
 ValueSet:  ElixhauserHypothyroidismVS
@@ -2288,6 +2303,7 @@ Description:    "Elixhauser Comorbid Condition Value Set for Hypothyroidism. ICD
 * ICD10CM#E03.8 "Other specified hypothyroidism"
 * ICD10CM#E03.9 "Hypothyroidism, unspecified"
 * ICD10CM#E89.0 "Postprocedural hypothyroidism"
+* ^experimental = false
 
 ValueSet:  ElixhauserLiverDiseaseMildVS
 Id: elixhauser-liver-disease-mild-vs
@@ -2351,7 +2367,7 @@ Description:    "Elixhauser Comorbid Condition Value Set for Mild Liver Disease.
 * ICD10CM#K76.89 "Other specified diseases of liver"
 * ICD10CM#K76.9 "Liver disease, unspecified"
 * ICD10CM#K77 "Liver disorders in diseases classified elsewhere"
-
+* ^experimental = false
 
 ValueSet:  ElixhauserLiverDiseaseSevereVS
 Id: elixhauser-liver-disease-severe-vs
@@ -2376,7 +2392,7 @@ Description:    "Elixhauser Comorbid Condition Value Set for Moderate to Severe 
 * ICD10CM#K76.7 "Hepatorenal syndrome"
 * ICD10CM#K91.82 "Postprocedural hepatic failure"
 * ICD10CM#Z94.4 "Liver transplant status"
-
+* ^experimental = false
 
 ValueSet:  ElixhauserCancerLymphomaVS
 Id: elixhauser-cancer-lymphoma-vs
@@ -2765,6 +2781,7 @@ Description:    "Elixhauser Comorbid Condition Value Set for Lymphoma. ICD-10 co
 * ICD10CM#C96.A "Histiocytic sarcoma"
 * ICD10CM#C96.Z "Oth malig neoplm of lymphoid, hematpoetc and related tissue"
 * ICD10CM#D47.Z9 "Oth neoplm of uncrt behav of lymphoid, hematpoetc & rel tiss"
+* ^experimental = false
 
 ValueSet:  ElixhauserCancerLeukemiaVS
 Id: elixhauser-cancer-leukemia-vs
@@ -2870,6 +2887,7 @@ Description:    "Elixhauser Comorbid Condition Value Set for Leukemia. ICD-10 co
 * ICD10CM#C95.90 "Leukemia, unspecified not having achieved remission"
 * ICD10CM#C95.91 "Leukemia, unspecified, in remission"
 * ICD10CM#C95.92 "Leukemia, unspecified, in relapse"
+* ^experimental = false
 
 ValueSet:  ElixhauserCancerMetastaticVS
 Id: elixhauser-cancer-metastatic-vs
@@ -2928,6 +2946,7 @@ Description:    "Elixhauser Comorbid Condition Value Set for Metastatic cancer. 
 * ICD10CM#C7B.1 "Secondary Merkel cell carcinoma"
 * ICD10CM#C7B.8 "Other secondary neuroendocrine tumors"
 * ICD10CM#C80.0 "Disseminated malignant neoplasm, unspecified"
+* ^experimental = false
 
 
 ValueSet:  ElixhauserDementiaVS
@@ -2954,6 +2973,7 @@ Description:    "Elixhauser Comorbid Condition Value Set for Dementia. ICD-10 co
 * ICD10CM#G31.85 "Corticobasal degeneration"
 * ICD10CM#G31.89 "Other specified degenerative diseases of nervous system"
 * ICD10CM#G31.9 "Degenerative disease of nervous system, unspecified"
+* ^experimental = false
 
 
 ValueSet:  ElixhauserNeurologicalMovementDisorderVS
@@ -3020,6 +3040,7 @@ Description:    "Elixhauser Comorbid Condition Value Set for Neurological Moveme
 * ICD10CM#G32.81 "Cerebellar ataxia in diseases classified elsewhere"
 * ICD10CM#G32.89 "Oth degeneratv disord of nervous sys in dis classd elswhr"
 * ICD10CM#G80.3 "Athetoid cerebral palsy"
+* ^experimental = false
 
 ValueSet:  ElixhauserNeurologicalSeizureDisorderVS
 Id: elixhauser-neurological-seizure-disorder-vs
@@ -3077,6 +3098,7 @@ Description:    "Elixhauser Comorbid Condition Value Set for Neurological Seizur
 * ICD10CM#G40.B19 "Juvenile myoclonic epilepsy, intractable, w/o stat epi"
 * ICD10CM#R56.1 "Post traumatic seizures"
 * ICD10CM#R56.9 "Unspecified convulsions"
+* ^experimental = false
 
 ValueSet:  ElixhauserOtherNeurologicalVS
 Id: elixhauser-other-neurological-vs
@@ -3142,6 +3164,7 @@ Description:    "Elixhauser Comorbid Condition Value Set for Other Neurological 
 * ICD10CM#P91.61 "Mild hypoxic ischemic encephalopathy [HIE]"
 * ICD10CM#P91.62 "Moderate hypoxic ischemic encephalopathy [HIE]"
 * ICD10CM#P91.63 "Severe hypoxic ischemic encephalopathy [HIE]"
+* ^experimental = false
 
 ValueSet:  ElixhauserObesityVS
 Id: elixhauser-obesity-vs
@@ -3176,6 +3199,7 @@ Description:    "Elixhauser Comorbid Condition Value Set for Obesity. ICD-10 cod
 * ICD10CM#Z68.44 "Body mass index (BMI) 60.0-69.9, adult"
 * ICD10CM#Z68.45 "Body mass index (BMI) 70 or greater, adult"
 * ICD10CM#Z68.54 "BMI pediatric, greater than or equal to 95% for age"
+* ^experimental = false
 
 
 ValueSet:  ElixhauserOtherThyroidDisorderVS
@@ -3209,6 +3233,7 @@ Description:    "Elixhauser Comorbid Condition Value Set for Other Thyroid Disor
 * ICD10CM#E06.5 "Other chronic thyroiditis"
 * ICD10CM#E06.9 "Thyroiditis, unspecified"
 * ICD10CM#O90.5 "Postpartum thyroiditis"
+* ^experimental = false
 
 
 ValueSet:  ElixhauserParalysisVS
@@ -3395,6 +3420,7 @@ Description:    "Elixhauser Comorbid Condition Value Set for Paralysis. ICD-10 c
 * ICD10CM#I69.965 "Oth paralytic syndrome following unsp cerebvasc disease, bi"
 * ICD10CM#I69.969 "Oth parlyt syndrome fol unsp cerebvasc disease aff unsp side"
 * ICD10CM#R53.2 "Functional quadriplegia"
+* ^experimental = false
 
 
 
@@ -3737,6 +3763,7 @@ Description:    "Elixhauser Comorbid Condition Value Set for Peripheral vascular
 * ICD10CM#K55.9 "Vascular disorder of intestine, unspecified"
 * ICD10CM#Z95.820 "Peripheral vascular angioplasty status with implants and grafts"
 * ICD10CM#Z95.828 "Presence of other vascular implants and grafts"
+* ^experimental = false
 
 
 ValueSet:  ElixhauserPsychosisVS
@@ -3888,6 +3915,7 @@ Description:    "Elixhauser Comorbid Condition Value Set for Psychosis. ICD-10 c
 * ICD10CM#F39 "Unspecified mood [affective] disorder"
 * ICD10CM#F44.89 "Other dissociative and conversion disorders"
 * ICD10CM#F84.3 "Other childhood disintegrative disorder"
+* ^experimental = false
 
 ValueSet:  ElixhauserPulmonaryCirculationDisorderVS
 Id: elixhauser-pulmonary-circulation-disorder-vs
@@ -3911,6 +3939,7 @@ Description:    "Elixhauser Comorbid Condition Value Set for Pulmonary circulati
 * ICD10CM#I28.1 "Aneurysm of pulmonary artery"
 * ICD10CM#I28.8 "Other diseases of pulmonary vessels"
 * ICD10CM#I28.9 "Disease of pulmonary vessels, unspecified"
+* ^experimental = false
 
 
 ValueSet:  ElixhauserRenalFailureModerateVS
@@ -3923,6 +3952,7 @@ Description:    "Elixhauser Comorbid Condition Value Set for Moderate Renal Fail
 * ICD10CM#N18.32 "Chronic kidney disease, stage 3b"
 * ICD10CM#N18.9 "Chronic kidney disease, unspecified"
 * ICD10CM#N19 "Unspecified kidney failure"
+* ^experimental = false
 
 
 ValueSet:  ElixhauserRenalFailureSevereVS
@@ -3942,6 +3972,7 @@ Description:    "Elixhauser Comorbid Condition Value Set for Severe Renal Failur
 * ICD10CM#Z91.15 "Patient's noncompliance with renal dialysis"
 * ICD10CM#Z94.0 "Kidney transplant status"
 * ICD10CM#Z99.2 "Dependence on renal dialysis"
+* ^experimental = false
 
 
 ValueSet:  ElixhauserCancerSolidTumorMalignantVS
@@ -4545,6 +4576,7 @@ Description:    "Elixhauser Comorbid Condition Value Set for malignant solid tum
 * ICD10CM#E31.21 "Multiple endocrine neoplasia [MEN] type I"
 * ICD10CM#E31.22 "Multiple endocrine neoplasia [MEN] type IIA"
 * ICD10CM#E31.23 "Multiple endocrine neoplasia [MEN] type IIB"
+* ^experimental = false
 
 ValueSet:  ElixhauserCancerSolidTumorInSituVS
 Id: elixhauser-cancer-solid-tumor-in-situ-vs
@@ -4660,6 +4692,7 @@ Description:    "Elixhauser Comorbid Condition Value Set for malignant solid tum
 * ICD10CM#D09.3 "Carcinoma in situ of thyroid and other endocrine glands"
 * ICD10CM#D09.8 "Carcinoma in situ of other specified sites"
 * ICD10CM#D09.9 "Carcinoma in situ, unspecified"
+* ^experimental = false
 
 
 ValueSet:  ElixhauserUlcerVS
@@ -4702,6 +4735,7 @@ Description:    "Elixhauser Comorbid Condition Value Set for Chronic peptic ulce
 * ICD10CM#K28.6 "Chronic or unsp gastrojejunal ulcer w both hemor and perf"
 * ICD10CM#K28.7 "Chronic gastrojejunal ulcer w/o hemorrhage or perforation"
 * ICD10CM#K28.9 "Gastrojejunal ulcer, unsp as acute or chr, w/o hemor or perf"
+* ^experimental = false
 
 
 ValueSet:  ElixhauserValvularDiseaseVS
@@ -4812,6 +4846,7 @@ Description:    "Elixhauser Comorbid Condition Value Set for Valvular disease. I
 * ICD10CM#Z95.2 "Presence of prosthetic heart valve"
 * ICD10CM#Z95.3 "Presence of xenogenic heart valve"
 * ICD10CM#Z95.4 "Presence of other heart-valve replacement"
+* ^experimental = false
 
 ValueSet:  ElixhauserWeightLossVS
 Id: elixhauser-weight-loss-vs
@@ -4834,3 +4869,4 @@ Description:    "Elixhauser Comorbid Condition Value Set for Weight loss. ICD-10
 * ICD10CM#O25.3 "Malnutrition in the puerperium"
 * ICD10CM#R63.4 "Abnormal weight loss"
 * ICD10CM#R64 "Cachexia"
+* ^experimental = false

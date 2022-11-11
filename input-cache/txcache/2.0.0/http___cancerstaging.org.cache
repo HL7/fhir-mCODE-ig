@@ -1,0 +1,34 @@
+-------------------------------------------------------------------------------------
+{"hierarchical" : false, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "inactive" : true,
+    "include" : [{
+      "system" : "http://cancerstaging.org"
+    }]
+  }
+}}####
+e: {
+  "error" : "Error from server: Unable to provide support for code system http://cancerstaging.org"
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : false, "url": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-stage-group-vs", "version": "2.0.0"}####
+e: {
+  "error" : "Error from server: Unable to provide support for code system http://cancerstaging.org"
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : false, "url": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-tnm-distant-metastases-category-vs", "version": "2.0.0"}####
+e: {
+  "error" : "Error from server: Unable to provide support for code system http://cancerstaging.org"
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : false, "url": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-tnm-primary-tumor-category-vs", "version": "2.0.0"}####
+e: {
+  "error" : "Error from server: Unable to provide support for code system http://cancerstaging.org"
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : false, "url": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-tnm-regional-nodes-category-vs", "version": "2.0.0"}####
+e: {
+  "error" : "Error from server: Unable to provide support for code system http://cancerstaging.org"
+}
+-------------------------------------------------------------------------------------

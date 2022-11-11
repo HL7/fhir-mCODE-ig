@@ -209,4 +209,4 @@ Usage: #definition
 * rest[0].operation[0].name = "mcode-patient-bundle"
 * rest[0].operation[0].definition = "http://hl7.org/fhir/us/mcode/OperationDefinition/mcode-patient-everything"
 * rest[0].operation[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-* rest[0].operation[0].extension.valueCode = #SHALL
+* rest[0].operation[0].extension.valueCode = #SHALL 

@@ -125,7 +125,7 @@ Based on user feedback on the complexity of the STU 2 design, [comorbidities][Co
 
 ### Update to US Core 5.0.1
 
-mCODE has been updated to the current version of US Core, STU 5. Because there are new profiles in STU 5 that should be used as parent profiles, some mCODE profiles were affected. In particular, the parent profiles of [CancerDiseaseStatus], [KarnofskyPerformanceStatus], and [ECOGPerformanceStatus] were switched from Observation to the newly-introduced [US Core Observation Clinical Test Result Profile][USCoreClinicalTestObservation].
+mCODE has been updated to the current version of US Core, STU 5. Because there are new profiles in STU 5 that should be used as parent profiles, some mCODE profiles were affected. In particular, the parent profiles of [KarnofskyPerformanceStatus] and [ECOGPerformanceStatus] were switched from Observation to the newly-introduced [US Core Observation Clinical Test Result Profile][USCoreClinicalTestObservation].
 
 ### Dependency on Genomics Reporting IG
 

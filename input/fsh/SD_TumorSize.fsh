@@ -1,4 +1,4 @@
-Profile: TumorSize
+Profile: TumorSize 
 Parent:  USCoreLaboratoryResultObservationProfile
 Id: mcode-tumor-size
 Title: "Tumor Size Profile"
@@ -41,6 +41,7 @@ Description:  "Records the dimensions of a tumor"
 * component[tumorOtherDimension].valueQuantity from TumorSizeUnitsVS (required)
 // Group the MustSupports to make it easier to see what's what
 * subject and code and effective[x] and component and method and specimen and focus MS
+* insert NotUsed(value[x])
 
 // This invariant has been exhaustively tested with the FHIR validator
 Invariant: must-have-focus-or-specimen-invariant

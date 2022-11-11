@@ -1,0 +1,19 @@
+-------------------------------------------------------------------------------------
+{"hierarchical" : false, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "inactive" : true,
+    "include" : [{
+      "system" : "http://www.nubc.org/patient-discharge"
+    }]
+  }
+}}####
+e: {
+  "error" : "Error from server: Unable to provide support for code system http://www.nubc.org/patient-discharge"
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : false, "url": "http://hl7.org/fhir/us/core/ValueSet/us-core-discharge-disposition", "version": "5.0.1"}####
+e: {
+  "error" : "Error from server: Unable to provide support for code system http://www.nubc.org/patient-discharge"
+}
+-------------------------------------------------------------------------------------

@@ -5,7 +5,6 @@ mCODE includes genomics-related data elements needed inform cancer assessment an
 * [GenomicsReport] - Contains results of genomic analyses. Genomic reports vary in complexity and content, as simple as the results for a single discrete variant to complex sequences. This profile inherits from the profile of the same name in CGRIG.
 * [GenomicVariant] - Used to record variants that could be found from tests that broadly analyze genomic regions (e.g.: exome tests) and stores results for any variants that could have been found. The region in which the variant was found could be specified in the RegionStudied attribute of the GenomicsReport profile. This profile inherits from the Variant profile in CGRIG.
 * [GenomicRegionStudied] - Used to record the portion(s) of the genome that was tested for variants. This profile inherits from the RegionStudied profile in CGRIG.
-* [PatientSpecimen] - Describes a specimen collected for a genomics test. This profile is unique to mCODE.
 
 ### Assumptions and Scope
 
@@ -38,13 +37,11 @@ The mCODE example [`genomic-variant-fusion`](Observation-genomic-variant-fusion.
 ### Profiles
 
 * [GenomicRegionStudied]
-* [PatientSpecimen]
 * [GenomicsReport]
 * [GenomicVariant]
 
 ### Value Sets
 
-* [PatientSpecimenTypeVS]
 * [TumorMarkerTestVS]
 
 {% include markdown-link-references.md %}

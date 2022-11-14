@@ -78,11 +78,15 @@ Description: "The result of a tumor marker test. Tumor marker tests are generall
 // Already MS in US Core Obs Lab: status, category, code, subject, effective[x], value[x], dataAbsentReason
 * specimen only Reference(PatientSpecimen)
 * specimen MS  // is not MS in US Core 4.0.0 and 5.0.1 
+// RelatedCondition added 11/14/2022, see https://chat.fhir.org/#narrow/stream/229074-CodeX/topic/Reference.20between.20tumor.20characteristics.20and.20cancer.20diagnosis
+* extension contains RelatedCondition named relatedCondition 0..1 MS   // should this be 0..*?
+* extension[relatedCondition] ^short = "Condition associated with this test."
+* extension[relatedCondition] ^definition = "Associates the tumor marker test with a condition, if one exists. Condition can be given by a reference or a code. In the case of a screening test such as prostate-specific antigen (PSA), there may be no existing condition to reference."
 
 Profile: PatientSpecimen
 Parent: Specimen
 Id: mcode-patient-specimen
-Title:  "Specimen taken from Patient"
+Title:  "Patient Specimen Profile"
 Description:  "A specimen taken from a Patient. The profile includes extensions to capture a related condition, a more precise body site, and an identifier of source body structure at that site (for example, a tumor)."
 * ^extension[FMM].valueInteger = 1
 * type from PatientSpecimenTypeVS (extensible)
@@ -92,7 +96,7 @@ Description:  "A specimen taken from a Patient. The profile includes extensions 
     BodyLocationQualifier named locationQualifier 0..* and
     LateralityQualifier named lateralityQualifier 0..1
 // It would be nice to reuse the existing "condition-related" extension but it doesn't apply to Specimen (see Jira https://jira.hl7.org/projects/FHIR/issues/FHIR-31027) 
-* extension contains RelatedCondition named relatedCondition 0..1 MS
+* extension contains RelatedCondition named relatedCondition 0..1 MS  // should this be 0..*?
 * extension[relatedCondition] ^short = "Condition associated with this specimen."
 * extension[relatedCondition] ^definition = "Associates this specimen with a condition. For example, a sample of normal tissue can be associated with a cancer condition for tumor normal genomic testing, comparing tumor genome with normal tissue."
 * identifier ^slicing.discriminator.type = #pattern

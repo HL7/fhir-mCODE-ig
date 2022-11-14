@@ -145,6 +145,14 @@ Maturity indicators, based on the FHIR Maturity Model (FMM) have been added to p
 
 Radiotherapy subject matter experts requested a way to link CancerDiseaseStatus to a RadiotherapyVolume through the `Observation.focus` element. This broadens the choices of STU2, which were Reference(PrimaryCancerCondition or SecondaryCancerCondition or Tumor) and are now Reference(PrimaryCancerCondition or SecondaryCancerCondition or Tumor or RadiotherapyVolume). This allows a change in disease status to point to a specific area of the body, not just a specific Tumor or condition.
 
+### TumorMarkerTest Related Condition
+
+Users requested a link between TumorMarkerTest and the condition the test is related to. Optional RelatedCondition extension was added to TumorMarkerTest.
+
+### Multiple Specimen Profiles Simplified
+
+A specimen is a specimen. There was no real reason to distinguish specimens obtained for genomic analysis from those obtained for other uses. A single profile, PatientSpecimen, was created to represent any specimen from a human subject. Since this profile is no longer associated with a single domain (Disease or Genomics), specimens were added to the Patient domain.
+
 ### Technical Corrections
 
 * [PrimaryCancerCondition]'s `stage.type` value set binding was corrected. It should have indicated the staging **method** that gave rise to the value appearing in stage.summary (such as AJCC Version 8).

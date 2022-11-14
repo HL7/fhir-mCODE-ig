@@ -87,7 +87,7 @@ Description:  "Identifies a tumor that has not been removed from the body. Whene
 Profile: BodyStructureIdentifier
 Parent: Identifier
 Id: mcode-body-structure-identifier
-Title: "Body Structure Identifier Data Type Profile"
+Title: "Body Structure Identifier Profile"
 Description: "An identifier that designates a body structure such as a tumor and can be used for tracking the structure over time."
 * ^extension[FMM].valueInteger = 3
 * type = http://hl7.org/fhir/resource-types#BodyStructure

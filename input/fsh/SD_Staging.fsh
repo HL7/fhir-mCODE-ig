@@ -1,7 +1,7 @@
 Profile: CancerStageGroup  // introduced 8/30/2020 to handle non-TNM staging more clearly
 Id: mcode-cancer-stage-group
 Parent: Observation
-Title: "Cancer Stage Group"
+Title: "Cancer Stage Group Profile"
 Description: "An assessment of the extent of the cancer in the body, according to a given cancer staging classification system. This profile can be used with any staging system, but it is specifically targeted for non-TNM staging systems, since specialized TNM staging profiles are provided."
 * ^extension[FMM].valueInteger = 4
 * insert CategorySlicingRules

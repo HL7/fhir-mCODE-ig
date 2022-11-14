@@ -90,7 +90,7 @@
 [RadiotherapyTreatmentLocationVS]: ValueSet-mcode-radiotherapy-treatment-location-vs.html
 [RadiotherapyVolumeTypeVS]: ValueSet-mcode-radiotherapy-volume-type-vs.html
 [SecondaryCancerDisorderVS]: ValueSet-mcode-secondary-cancer-disorder-vs.html
-[PatientSpecimenTypeVS]: ValueSet-mcode-specimen-type-vs.html
+[PatientSpecimenTypeVS]: ValueSet-mcode-patient-specimen-type-vs.html
 [TeleradiotherapyCarbonIonBeamTechniqueVS]: ValueSet-mcode-teleradiotherapy-carbon-ion-beam-technique-vs.html
 [TeleradiotherapyElectronBeamTechniqueVS]: ValueSet-mcode-teleradiotherapy-electron-beam-technique-vs.html
 [TeleradiotherapyModalityVS]: ValueSet-mcode-teleradiotherapy-modality-vs.html

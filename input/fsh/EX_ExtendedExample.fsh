@@ -46,9 +46,9 @@ Description: "Extended example: example biopsy procedure"
 * reasonReference = Reference(primary-cancer-condition-jenny-m)
 * bodySite = SCT#80248007 "Left breast structure (body structure)"
 
-Instance: genomic-specimen-left-breast-jenny-m
-InstanceOf: GenomicSpecimen
-Description: "Extended example: example showing genomic specimen for sequencing"
+Instance: patient-specimen-left-breast-jenny-m
+InstanceOf: PatientSpecimen
+Description: "Extended example: example showing patient specimen for genomic sequencing"
 * status = #available "available"
 * type = http://terminology.hl7.org/CodeSystem/v2-0487#TISS
 * subject = Reference(cancer-patient-jenny-m)
@@ -312,7 +312,7 @@ Description: "Extended example: example of gene panel report"
 * subject = Reference(cancer-patient-jenny-m)
 * effectiveDateTime = "2018-03-15"
 * issued = "2020-03-15T00:00:01+00:00"
-* specimen = Reference(genomic-specimen-left-breast-jenny-m)
+* specimen = Reference(patient-specimen-left-breast-jenny-m)
 * result[0] = Reference(genomic-variant-jenny-m)
 * result[1] = Reference(genomic-region-studied-jenny-m)
 
@@ -367,10 +367,10 @@ InstanceOf: TumorSpecimen
 Description: "Extended example: example tumor specimen"
 * status = #available "available"
 * type = SPTY#TUMOR
-* identifier[tumorIdentifier].use = #usual
-* identifier[tumorIdentifier].type = http://hl7.org/fhir/resource-types#BodyStructure
-* identifier[tumorIdentifier].system = "http://radiology.hospital.example.org"
-* identifier[tumorIdentifier].value = "Tumor 1234"
+* identifier[bodyStructureIdentifier].use = #usual
+* identifier[bodyStructureIdentifier].type = http://hl7.org/fhir/resource-types#BodyStructure
+* identifier[bodyStructureIdentifier].system = "http://radiology.hospital.example.org"
+* identifier[bodyStructureIdentifier].value = "Tumor 1234"
 * subject = Reference(cancer-patient-jenny-m)
 * receivedTime = "2018-04-01"
 * collection.bodySite = SCT#80248007 "Left breast structure (body structure)"

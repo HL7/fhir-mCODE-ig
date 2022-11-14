@@ -17,7 +17,7 @@ Where US Core does not provide an appropriate base profile, mCODE profiles FHIR 
 | [Comorbidities] | yes | US Core Observation Clinical Test Result |
 | [ECOG Performance Status][ECOGPerformanceStatus] | yes | US Core Observation Clinical Test Result |
 | [Genomic Region Studied][GenomicRegionStudied] | yes | US Core Laboratory Result Observation |
-| [Genomic Specimen][GenomicSpecimen] | no | Specimen |
+| [Patient Specimen][PatientSpecimen] | no | Specimen |
 | [Genomics Report][GenomicsReport] | yes | US Core Diagnostic Report Lab |
 | [Genomic Variant][GenomicVariant] | yes | US Core Laboratory Result Observation |
 | [Karnofsky Performance Status][KarnofskyPerformanceStatus] | yes | US Core Observation Clinical Test Result |

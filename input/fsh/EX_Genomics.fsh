@@ -60,7 +60,7 @@ Description: "mCODE Example for Genomics Report"
 * code = LNC#51969-4 "Genetic analysis report"
 * subject = Reference(cancer-patient-john-anyperson)
 * effectiveDateTime = "2019-04-01"
-* specimen = Reference(Specimen/genomic-specimen-lung)
+* specimen = Reference(Specimen/patient-specimen-lung)
 * issued = "2019-04-01T11:45:33+11:00"
 * result[variant] = Reference(Observation/genomic-variant-somatic-single-nucleotide)
 * result[region-studied] = Reference(genomic-region-studied-stk11)
@@ -84,9 +84,9 @@ Description: "mCODE Example for Tumor Marker Test"
 * performer = Reference(us-core-practitioner-kyle-anydoc)
 * valueCodeableConcept = SCT#10828004 "Positive (qualifier value)"
 
-Instance: genomic-specimen-lung
-InstanceOf: GenomicSpecimen
-Description: "mCODE Example for Genomic Specimen"
+Instance: patient-specimen-lung
+InstanceOf: PatientSpecimen
+Description: "mCODE Example of Patient Specimen"
 * status = #available "Available"
 * subject = Reference(cancer-patient-john-anyperson)
 * processing.timeDateTime = "2019-03-20"

@@ -10,7 +10,7 @@ The following profiles and have been defined for this implementation guide:
 * [Comorbidities]
 * [ECOGPerformanceStatus]
 * [GenomicRegionStudied]
-* [GenomicSpecimen]
+* [PatientSpecimen]
 * [GenomicsReport]
 * [GenomicVariant]
 * [KarnofskyPerformanceStatus]

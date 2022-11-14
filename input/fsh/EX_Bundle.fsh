@@ -44,8 +44,8 @@ Description: "Extended example as a mCODE Patient Bundle"
 * entry[=].fullUrl = "http://example.org/fhir/Observation/tnm-clinical-regional-nodes-category-jenny-m"
 * entry[+].resource = tnm-clinical-distant-metastases-category-jenny-m
 * entry[=].fullUrl = "http://example.org/fhir/Observation/tnm-clinical-distant-metastases-category-jenny-m"
-* entry[+].resource = genomic-specimen-left-breast-jenny-m
-* entry[=].fullUrl = "http://example.org/fhir/Specimen/genomic-specimen-left-breast-jenny-m"
+* entry[+].resource = patient-specimen-left-breast-jenny-m
+* entry[=].fullUrl = "http://example.org/fhir/Specimen/patient-specimen-left-breast-jenny-m"
 * entry[+].resource = genomic-region-studied-jenny-m
 * entry[=].fullUrl = "http://example.org/fhir/Observation/genomic-region-studied-jenny-m"
 * entry[+].resource = ecog-performance-status-jenny-m
@@ -131,8 +131,8 @@ Description: "Extended example as a mCODE Patient Bundle"
 * entry[regionalNodesCategory].fullUrl = "http://example.org/fhir/Observation/tnm-clinical-regional-nodes-category-jenny-m"
 * entry[distantMetastasesCategory].resource = tnm-clinical-distant-metastases-category-jenny-m
 * entry[distantMetastasesCategory].fullUrl = "http://example.org/fhir/Observation/tnm-clinical-distant-metastases-category-jenny-m"
-* entry[genomicSpecimen].resource = genomic-specimen-left-breast-jenny-m
-* entry[genomicSpecimen].fullUrl = "http://example.org/fhir/Specimen/genomic-specimen-left-breast-jenny-m"
+* entry[patientSpecimen].resource = patient-specimen-left-breast-jenny-m
+* entry[patientSpecimen].fullUrl = "http://example.org/fhir/Specimen/patient-specimen-left-breast-jenny-m"
 * entry[genomicRegionStudied].resource = genomic-region-studied-jenny-m
 * entry[genomicRegionStudied].fullUrl = "http://example.org/fhir/Observation/genomic-region-studied-jenny-m"
 * entry[ecogPerformanceStatus].resource = ecog-performance-status-jenny-m

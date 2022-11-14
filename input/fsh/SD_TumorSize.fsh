@@ -67,10 +67,10 @@ Description:  "Identifies a tumor that has not been removed from the body. Whene
 * identifier ^slicing.discriminator.path = "type"
 * identifier ^slicing.rules = #open
 * identifier ^slicing.description = "Slice containing at least one tumor identifier"
-* identifier contains tumorIdentifier 1..*
-* identifier[tumorIdentifier] only BodyStructureIdentifier
-* identifier[tumorIdentifier] ^short = "Identifier to associate this specimen with a specific Tumor"
-* identifier[tumorIdentifier] ^definition = "To associate this with a specific BodyStructure conforming to the Tumor profile, add an identifier with a value that matches a persistent identifier from `BodyStructure.identifier.value` that is unique in the context of the Patient."
+* identifier contains bodyStructureIdentifier 1..*
+* identifier[bodyStructureIdentifier] only BodyStructureIdentifier
+* identifier[bodyStructureIdentifier] ^short = "A persistent identifier of this tumor."
+* identifier[bodyStructureIdentifier] ^definition = "A persistent identifier used to identify and track the tumor over time. The identifier must be unique in the context of the patient."
 * morphology = SCT#367651003 "Malignant neoplasm of primary, secondary, or uncertain origin (morphologic abnormality)"
 // This VS is used for the primary/secondary cancer conditions; rule set here for consistency with these profiles.
 * location from CancerBodyLocationVS (extensible)
@@ -95,24 +95,12 @@ Description: "An identifier that designates a body structure such as a tumor and
 * use = #usual
 
 Profile: TumorSpecimen
-Parent: Specimen
+Parent: PatientSpecimen
 Id: mcode-tumor-specimen
 Title: "Tumor Specimen Profile"
-Description: "Represents a tumor after it has been removed from the body. If there is a Tumor resource representing the tumor before it was removed from the body, use `identifier` to associate this TumorSpecimen with that Tumor resource."
-* insert CancerRelatedSpecimenRules
+Description: "Represents a tumor after it has been removed from the body. If there is a Tumor resource representing the tumor before it was removed from the body, use `identifier` (specifically, the bodyStructureIdentifier slice) to associate this TumorSpecimen with that Tumor resource."
 * ^extension[FMM].valueInteger = 3
-// These rules are above and beyond GenomicSpecimen
-* type = SPTY#TUMOR
-* identifier ^slicing.discriminator.type = #pattern
-* identifier ^slicing.discriminator.path = "type"
-* identifier ^slicing.rules = #open
-* identifier ^slicing.description = "Slicing by identifier.type to identify tumor identifier"
-* identifier contains tumorIdentifier 0..*
-* identifier[tumorIdentifier] only BodyStructureIdentifier
-* identifier[tumorIdentifier] ^short = "Identifier to associate this specimen with a specific Tumor"
-// FHIR-32352
-// * identifier[tumorIdentifier] ^definition = "To associate this with a specific BodyStructure conforming to the Tumor profile, add an identifier with a value that matches a persistent identifier from `BodyStructure.identifier.value` that is unique in the context of the Patient."
-* identifier and identifier[tumorIdentifier] and identifier[tumorIdentifier].type and identifier[tumorIdentifier].value MS
+
 
 
 /* Commenting out MultifocalTumor observation for now

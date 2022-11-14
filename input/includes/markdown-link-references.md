@@ -16,7 +16,7 @@
 [Comorbidities]: StructureDefinition-mcode-comorbidities.html
 [ECOGPerformanceStatus]: StructureDefinition-mcode-ecog-performance-status.html
 [GenomicRegionStudied]: StructureDefinition-mcode-genomic-region-studied.html
-[GenomicSpecimen]: StructureDefinition-mcode-genomic-specimen.html
+[PatientSpecimen]: StructureDefinition-mcode-patient-specimen.html
 [GenomicsReport]: StructureDefinition-mcode-genomics-report.html
 [GenomicVariant]: StructureDefinition-mcode-genomic-variant.html
 [KarnofskyPerformanceStatus]: StructureDefinition-mcode-karnofsky-performance-status.html
@@ -72,7 +72,6 @@
 [CarcinomaInSituDisorderVS]: ValueSet-mcode-carcinoma-in-situ-disorder-vs.html
 [ConditionStatusTrendVS]: ValueSet-mcode-condition-status-trend-vs.html
 [CytologicEvidenceOfMalignancyVS]: ValueSet-mcode-cytologic-evidence-malignancy-vs.html
-[GenomicSpecimenTypeVS]: ValueSet-mcode-genomic-specimen-type-vs.html
 [HistologyMorphologyBehaviorVS]: ValueSet-mcode-histology-morphology-behavior-vs.html
 [HypereosinophilicSyndromeDisorderVS]: ValueSet-mcode-hypereosinophilic-syndrome-disorder-vs.html
 [LateralityQualifierVS]: ValueSet-mcode-laterality-qualifier-vs.html
@@ -91,6 +90,7 @@
 [RadiotherapyTreatmentLocationVS]: ValueSet-mcode-radiotherapy-treatment-location-vs.html
 [RadiotherapyVolumeTypeVS]: ValueSet-mcode-radiotherapy-volume-type-vs.html
 [SecondaryCancerDisorderVS]: ValueSet-mcode-secondary-cancer-disorder-vs.html
+[PatientSpecimenTypeVS]: ValueSet-mcode-specimen-type-vs.html
 [TeleradiotherapyCarbonIonBeamTechniqueVS]: ValueSet-mcode-teleradiotherapy-carbon-ion-beam-technique-vs.html
 [TeleradiotherapyElectronBeamTechniqueVS]: ValueSet-mcode-teleradiotherapy-electron-beam-technique-vs.html
 [TeleradiotherapyModalityVS]: ValueSet-mcode-teleradiotherapy-modality-vs.html

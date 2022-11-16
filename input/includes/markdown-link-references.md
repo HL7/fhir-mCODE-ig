@@ -21,7 +21,7 @@
 [KarnofskyPerformanceStatus]: StructureDefinition-mcode-karnofsky-performance-status.html
 [MCODEPatientBundle]: StructureDefinition-mcode-patient-bundle.html
 [MCODEPatientGroup]: StructureDefinition-mcode-patient-group.html
-[PatientSpecimen]: StructureDefinition-mcode-patient-specimen.html
+[HumanSpecimen]: StructureDefinition-mcode-human-specimen.html
 [PrimaryCancerCondition]: StructureDefinition-mcode-primary-cancer-condition.html
 [RadiotherapyCourseSummary]: StructureDefinition-mcode-radiotherapy-course-summary.html
 [RadiotherapyVolume]: StructureDefinition-mcode-radiotherapy-volume.html
@@ -33,7 +33,6 @@
 [Tumor]: StructureDefinition-mcode-tumor.html
 [TumorMarkerTest]: StructureDefinition-mcode-tumor-marker-test.html
 [TumorSize]: StructureDefinition-mcode-tumor-size.html
-[TumorSpecimen]: StructureDefinition-mcode-tumor-specimen.html
 
 <!-- mCODE Extensions -->
 [BodyLocationQualifier]: StructureDefinition-mcode-body-location-qualifier.html
@@ -76,7 +75,7 @@
 [HypereosinophilicSyndromeDisorderVS]: ValueSet-mcode-hypereosinophilic-syndrome-disorder-vs.html
 [LateralityQualifierVS]: ValueSet-mcode-laterality-qualifier-vs.html
 [MelanomaInSituDisorderVS]: ValueSet-mcode-melanoma-in-situ-disorder-vs.html
-[PatientSpecimenTypeVS]: ValueSet-mcode-patient-specimen-type-vs.html
+[HumanSpecimenTypeVS]: ValueSet-mcode-human-specimen-type-vs.html
 [PrimaryCancerDisorderVS]: ValueSet-mcode-primary-cancer-disorder-vs.html
 [PrimaryMalignantNeoplasmDisorderVS]: ValueSet-mcode-primary-malignant-neoplasm-disorder-vs.html
 [ProcedureIntentVS]: ValueSet-mcode-procedure-intent-vs.html

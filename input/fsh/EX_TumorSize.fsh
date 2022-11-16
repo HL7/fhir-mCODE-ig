@@ -41,7 +41,7 @@ Description: "Example of a resource conforming to the tumor profile."
 
 
 Instance: tumor-specimen-lobular-carcinoma-left-breast
-InstanceOf: TumorSpecimen
+InstanceOf: HumanSpecimen
 Description: "Example of a tumor specimen, linked to [this Tumor](BodyStructure-tumor-lobular-carcinoma-left-breast.html) via `identifier`."
 * subject = Reference(Patient/cancer-patient-eve-anyperson)
 * status = #available "available"
@@ -50,7 +50,6 @@ Description: "Example of a tumor specimen, linked to [this Tumor](BodyStructure-
 * identifier[bodyStructureIdentifier].type = http://hl7.org/fhir/resource-types#BodyStructure
 * identifier.system = "http://radiology.hospital.example.org"
 * identifier[bodyStructureIdentifier].value = "Tumor 1234"
-* extension[relatedCondition].valueReference = Reference(Condition/primary-cancer-condition-breast)
 * receivedTime = "2020-05-01"
 * collection.bodySite = SCT#80248007 "Left breast structure (body structure)"
 

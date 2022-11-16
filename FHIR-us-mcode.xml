@@ -15,7 +15,7 @@
 <artifact id="StructureDefinition/mcode-body-location-qualifier" key="StructureDefinition-mcode-body-location-qualifier" name="Body Location Qualifier Extension"/>
 <artifact id="ValueSet/mcode-body-location-qualifier-vs" key="ValueSet-mcode-body-location-qualifier-vs" name="Body Location Qualifier Value Set"/>
 <artifact id="ValueSet/mcode-body-location-and-laterality-qualifier-vs" key="ValueSet-mcode-body-location-and-laterality-qualifier-vs" name="Body Location and Laterality Qualifier Value Set"/>
-<artifact id="StructureDefinition/mcode-body-structure-identifier" key="StructureDefinition-mcode-body-structure-identifier" name="Body Structure Identifier Data Type Profile"/>
+<artifact id="StructureDefinition/mcode-body-structure-identifier" key="StructureDefinition-mcode-body-structure-identifier" name="Body Structure Identifier Profile"/>
 <artifact id="ValueSet/mcode-brachytherapy-high-dose-rate-electronic-technique-vs" key="ValueSet-mcode-brachytherapy-high-dose-rate-electronic-technique-vs" name="Brachytherapy High Dose Rate Electronic Technique Value Set"/>
 <artifact id="ValueSet/mcode-brachytherapy-high-dose-rate-technique-vs" key="ValueSet-mcode-brachytherapy-high-dose-rate-technique-vs" name="Brachytherapy High Dose Rate Technique Value Set"/>
 <artifact id="ValueSet/mcode-brachytherapy-low-dose-rate-temporary-technique-vs" key="ValueSet-mcode-brachytherapy-low-dose-rate-temporary-technique-vs" name="Brachytherapy Low Dose Rate Temporary Radation Technique Value Set"/>
@@ -38,7 +38,7 @@
 <artifact deprecated="true" id="Profile/mcode-cancer-related-radiation-procedure" key="cancer-related-radiation-procedure" name="Cancer Related Radiation Procedure"/>
 <artifact deprecated="true" id="Profile/mcode-cancer-related-surgical-procedure" key="cancer-related-surgical-procedure" name="Cancer Related Surgical Procedure"/>
 <artifact deprecated="true" id="ValueSet/mcode-cancer-related-surgical-procedure-value-set" key="cancer-related-surgical-procedure-value-set" name="Cancer Related Surgical Procedure Value Set"/>
-<artifact id="StructureDefinition/mcode-cancer-stage-group" key="StructureDefinition-mcode-cancer-stage-group" name="Cancer Stage Group"/>
+<artifact id="StructureDefinition/mcode-cancer-stage-group" key="StructureDefinition-mcode-cancer-stage-group" name="Cancer Stage Group Profile"/>
 <artifact id="ValueSet/mcode-cancer-stage-group-vs" key="ValueSet-mcode-cancer-stage-group-vs" name="Cancer Stage Group Value Set"/>
 <artifact deprecated="true" id="Profile/mcode-cancer-stage-parent" key="cancer-stage-parent" name="Cancer Stage Parent"/>
 <artifact id="ValueSet/mcode-cancer-staging-method-vs" key="ValueSet-mcode-cancer-staging-method-vs" name="Cancer Staging Method Value Set"/>
@@ -129,7 +129,8 @@
 <artifact id="ValueSet/mcode-melanoma-in-situ-disorder-vs" key="ValueSet-mcode-melanoma-in-situ-disorder-vs" name="Melanoma In-Situ Disorder Value Set"/>
 <artifact id="ValueSet/mcode-teleradiotherapy-neutron-beam-technique-vs" key="ValueSet-mcode-teleradiotherapy-neutron-beam-technique-vs" name="Neutron Beam Technique Value Set"/>
 <artifact deprecated="true" key="Observation" name="Observation"/>
-<artifact id="ValueSet/mcode-patient-specimen-type-vs" key="ValueSet-mcode-patient-specimen-type-vs" name="Patient Specimen Type Value Set"/>
+<artifact id="StructureDefinition/mcode-patient-specimen" key="StructureDefinition-mcode-patient-specimen" name="Human Specimen Profile"/>
+<artifact id="ValueSet/mcode-patient-specimen-type-vs" key="ValueSet-mcode-patient-specimen-type-vs" name="Human Specimen Type Value Set"/>
 <artifact id="ValueSet/mcode-teleradiotherapy-photon-beam-technique-vs" key="ValueSet-mcode-teleradiotherapy-photon-beam-technique-vs" name="Photon Beam Technique Value Set"/>
 <artifact deprecated="true" id="ValueSet/mcode-present-absent" key="ValueSet-mcode-present-absent" name="Present Absent Value Set"/>
 <artifact deprecated="true" id="ValueSet/mcode-present-absent-unknown" key="ValueSet-mcode-present-absent-unknown" name="Present-Absent-Unknown"/>
@@ -169,7 +170,6 @@
 <artifact id="StructureDefinition/mcode-secondary-cancer-condition" key="secondary-cancer-condition" name="Secondary Cancer Condition Profile"/>
 <artifact id="ValueSet/mcode-secondary-cancer-disorder-vs" key="secondary-cancer-disorder-value-set" name="Secondary Cancer Disorder Value Set"/>
 <artifact id="ValueSet/mcode-hypereosinophilic-syndrome-disorder-vs" key="ValueSet-mcode-hypereosinophilic-syndrome-disorder-vs" name="Specific Diagnosis of Cancer Value Set"/>
-<artifact id="StructureDefinition/mcode-patient-specimen" key="StructureDefinition-mcode-patient-specimen" name="Specimen taken from Patient"/>
 <artifact deprecated="true" id="ValueSet/mcode-observation-codes-distant-metastases-vs" key="ValueSet-mcode-observation-codes-distant-metastases-vs" name="Staging Type Value Set (for Distant Metastases Category)"/>
 <artifact deprecated="true" id="ValueSet/mcode-observation-codes-primary-tumor-vs" key="ValueSet-mcode-observation-codes-primary-tumor-vs" name="Staging Type for Primary Tumor Category Value Set"/>
 <artifact deprecated="true" id="ValueSet/mcode-observation-codes-regional-nodes-vs" key="ValueSet-mcode-observation-codes-regional-nodes-vs" name="Staging Type for Regional Node Category Value Set"/>
@@ -215,7 +215,7 @@
 <artifact id="ValueSet/mcode-tumor-size-method-vs" key="ValueSet-mcode-tumor-size-method-vs" name="Tumor Size Method Value Set"/>
 <artifact id="StructureDefinition/mcode-tumor-size" key="StructureDefinition-mcode-tumor-size" name="Tumor Size Profile"/>
 <artifact id="ValueSet/mcode-tumor-size-units-vs" key="ValueSet-mcode-tumor-size-units-vs" name="Tumor Size Units Value Set"/>
-<artifact id="StructureDefinition/mcode-tumor-specimen" key="StructureDefinition-mcode-tumor-specimen" name="Tumor Specimen Profile"/>
+<artifact deprecated="true" id="StructureDefinition/mcode-tumor-specimen" key="StructureDefinition-mcode-tumor-specimen" name="Tumor Specimen Profile"/>
 <artifact deprecated="true" id="ValueSet/mcode-units-of-length-value-set" key="units-of-length-value-set" name="Units of Length Value Set"/>
 <artifact deprecated="true" key="ValueSet" name="ValueSet"/>
 <artifact id="Observation/binet-stage-group-A" key="Observation-binet-stage-group-A" name="binet-stage-group-A"/>

@@ -1,7 +1,7 @@
-ValueSet: PatientSpecimenTypeVS
-Id: mcode-patient-specimen-type-vs
-Title: "Patient Specimen Type Value Set"
-Description: "Specimen taken from a human patient or subject and analyzed in a laboratory test. The values include the subset of codes in the HL7 Specimen Type code system (https://terminology.hl7.org/CodeSystem-v2-0487.html) representing body sites and body fluids likely to be used in tumor marker or genomic testing. The most specific term available should be used, for example, for arterial blood, use #BLDA not #BLD."
+ValueSet: HumanSpecimenTypeVS
+Id: mcode-human-specimen-type-vs
+Title: "Human Specimen Type Value Set"
+Description: "Specimen taken from a human subject. The values include the subset of codes in the HL7 Specimen Type code system (https://terminology.hl7.org/CodeSystem-v2-0487.html) representing body sites and body fluids likely to be used in tumor marker or genomic testing. The most specific term available should be used, for example, for arterial blood, use #BLDA not #BLD."
 * ^experimental = false
 * ^extension[FMM].valueInteger = 1
 * SPTY#AMN       "Amniotic fluid"

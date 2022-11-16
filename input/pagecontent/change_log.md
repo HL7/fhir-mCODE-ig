@@ -147,11 +147,11 @@ Radiotherapy subject matter experts requested a way to link CancerDiseaseStatus 
 
 ### TumorMarkerTest Related Condition
 
-Users requested a link between TumorMarkerTest and the condition the test is related to. Optional RelatedCondition extension was added to TumorMarkerTest.
+Users requested a link between TumorMarkerTest and the condition the test is related to. Optional RelatedCondition extension was added to TumorMarkerTest. See https://chat.fhir.org/#narrow/stream/229074-CodeX/topic/Reference.20between.20tumor.20characteristics.20and.20cancer.20diagnosis
 
 ### Multiple Specimen Profiles Simplified
 
-A specimen is a specimen. There was no real reason to distinguish specimens obtained for genomic analysis from those obtained for other uses. A single profile, PatientSpecimen, was created to represent any specimen from a human subject. Since this profile is no longer associated with a single domain (Disease or Genomics), specimens were added to the Patient domain.
+A specimen is a specimen. There was no real reason to distinguish specimens obtained for genomic analysis from those obtained for other uses. A single profile, HumanSpecimen, was created to represent any specimen from a human subject. Since this profile is no longer associated with a single domain (Disease or Genomics), specimens were added to the Patient domain.
 
 ### Technical Corrections
 

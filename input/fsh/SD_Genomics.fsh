@@ -26,7 +26,7 @@ Description:    "Details about a set of changes in the tested sample compared to
 * insert NotUsed(referenceRange)
 * insert NotUsed(hasMember)
 * subject only Reference(CancerPatient)
-* specimen only Reference(PatientSpecimen)
+* specimen only Reference(HumanSpecimen)
 * value[x] ^slicing.rules = #closed
 * category[labCategory].coding 1..1  // To prevent the message "The repeating element has a pattern. The pattern will apply to all the repeats (this has not been clear to all users)"
 * category[labCategory] = ObsCat#laboratory
@@ -53,7 +53,7 @@ Description:    "Genomic analysis summary report. The report may include one or 
 * ^extension[FMM].valueInteger = 1
 * category[Genetics].coding 1..1  // To prevent the message "The repeating element has a pattern. The pattern will apply to all the repeats (this has not been clear to all users)"
 * subject only Reference(CancerPatient)
-* specimen only Reference(PatientSpecimen)
+* specimen only Reference(HumanSpecimen)
 * result[variant] only Reference(GenomicVariant)
 * result[region-studied] only Reference(GenomicRegionStudied)
 * result[region-studied] and result[variant] MS
@@ -76,29 +76,25 @@ Description: "The result of a tumor marker test. Tumor marker tests are generall
 * effective[x] only dateTime or Period
 * value[x] only Quantity or Ratio or string or CodeableConcept
 // Already MS in US Core Obs Lab: status, category, code, subject, effective[x], value[x], dataAbsentReason
-* specimen only Reference(PatientSpecimen)
+* specimen only Reference(HumanSpecimen)
 * specimen MS  // is not MS in US Core 4.0.0 and 5.0.1 
 // RelatedCondition added 11/14/2022, see https://chat.fhir.org/#narrow/stream/229074-CodeX/topic/Reference.20between.20tumor.20characteristics.20and.20cancer.20diagnosis
-* extension contains RelatedCondition named relatedCondition 0..1 MS   // should this be 0..*?
+* extension contains RelatedCondition named relatedCondition 0..* MS 
 * extension[relatedCondition] ^short = "Condition associated with this test."
 * extension[relatedCondition] ^definition = "Associates the tumor marker test with a condition, if one exists. Condition can be given by a reference or a code. In the case of a screening test such as prostate-specific antigen (PSA), there may be no existing condition to reference."
 
-Profile: PatientSpecimen
+Profile: HumanSpecimen
 Parent: Specimen
-Id: mcode-patient-specimen
-Title:  "Patient Specimen Profile"
+Id: mcode-human-specimen
+Title:  "Human Specimen Profile"
 Description:  "A specimen taken from a Patient. The profile includes extensions to capture a related condition, a more precise body site, and an identifier of source body structure at that site (for example, a tumor)."
 * ^extension[FMM].valueInteger = 1
-* type from PatientSpecimenTypeVS (extensible)
-* subject only Reference(Patient)
+* type from HumanSpecimenTypeVS (extensible)
+* subject only Reference(CancerPatient)
 * subject ^definition = "The patient associated with this specimen."
 * collection.bodySite.extension contains
     BodyLocationQualifier named locationQualifier 0..* and
     LateralityQualifier named lateralityQualifier 0..1
-// It would be nice to reuse the existing "condition-related" extension but it doesn't apply to Specimen (see Jira https://jira.hl7.org/projects/FHIR/issues/FHIR-31027) 
-* extension contains RelatedCondition named relatedCondition 0..1 MS  // should this be 0..*?
-* extension[relatedCondition] ^short = "Condition associated with this specimen."
-* extension[relatedCondition] ^definition = "Associates this specimen with a condition. For example, a sample of normal tissue can be associated with a cancer condition for tumor normal genomic testing, comparing tumor genome with normal tissue."
 * identifier ^slicing.discriminator.type = #pattern
 * identifier ^slicing.discriminator.path = "type"
 * identifier ^slicing.rules = #open

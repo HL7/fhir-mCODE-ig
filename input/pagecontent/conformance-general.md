@@ -42,6 +42,7 @@ Note that the requests below may return resources associated with patients who a
 
 * Patient
   * [CancerPatient]\: see [Identifying In-Scope Patients](conformance-patients.html) for the options to retrieve all conforming resources
+  * [HumanSpecimen]\: Depends on type, for example: `GET [base]/Specimen?type=http://terminology.hl7.org/CodeSystem/v2-0487|TUMOR` (note that `TUMOR` MUST be capitalized)
   * [MCODEPatientBundle]\: see [Support the mCODE Bundle](#support-the-mcode-patient-bundle)
   * [MCODEPatientGroup]\: n/a
 
@@ -69,7 +70,7 @@ Note that the requests below may return resources associated with patients who a
 
 * Genomics
   * [GenomicVariant]\: `GET [base]/Observation?code=http://loinc.org|69548-6`
-  * [GenomicSpecimen]\: Resources referenced in the `specimen` element in resources conforming to [GenomicVariant] or [GenomicsReport]
+  * [HumanSpecimen]\: Resources referenced in the `specimen` element in resources conforming to [GenomicVariant] or [GenomicsReport]
   * [GenomicsReport]\: `GET [base]/DiagnosticReport?code=http://loinc.org|81247-9`
   * [GenomicRegionStudied]\: `GET [base]/Observation?code=http://loinc.org|53041-0`
 
@@ -85,7 +86,6 @@ Note that the requests below may return resources associated with patients who a
 * Outcome
   * [CancerDiseaseStatus]\: `GET [base]/Observation?code=http://loinc.org|88040-1`
   * [Tumor]\: Not identifiable as there are no required elements with fixed values or required value sets in this profile. Note that `BodyStructure.morphology` is fixed to `http://snomed.info/sct|367651003`, but this is not a required element. This may therefore be used to identify some but not all BodyStructure resources conforming to this profile.
-  * [TumorSpecimen]\: `GET [base]/Specimen?type=http://terminology.hl7.org/CodeSystem/v2-0487|TUMOR` (note that `TUMOR` MUST be capitalized)
   * [TumorSize]\: `GET [base]/Observation?code=http://loinc.org|21889-1`
 
 #### Publish a CapabilityStatement Identifying Supported Profiles and Operations

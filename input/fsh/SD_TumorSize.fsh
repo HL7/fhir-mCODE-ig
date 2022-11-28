@@ -15,10 +15,10 @@ Description:  "Records the dimensions of a tumor"
 * focus ^short = "Identifies a tumor that has NOT been removed from the body"
 * focus ^definition = "Reference to a BodyStructure resource conforming to Tumor."
 * focus ^comment = "Use **only** when the tumor **has not** been removed from the body. If the tumor has been removed, use `specimen` instead and leave `focus` empty."
-* specimen only Reference(TumorSpecimen)
+* specimen only Reference(HumanSpecimen)
 * specimen ^short = "Identifies a tumor that has been removed from the body"
-* specimen ^definition = "Reference to a Specimen resource conforming to TumorSpecimen."
-* specimen ^comment = "Use **only** when the tumor **has** been removed from the body. If the tumor has been not removed, use `focus` instead and leave `specimen` empty."
+* specimen ^definition = "Reference to a Specimen resource consistent with HumanSpecimen with type = http://terminology.hl7.org/CodeSystem/v2-0487#TUMOR."
+* specimen ^comment = "Use specimen **only** when the tumor **has** been removed from the body. If the tumor has been not removed, use `focus` instead and leave `specimen` empty."
 * obeys must-have-focus-or-specimen-invariant
 * method from TumorSizeMethodVS (extensible)
 * method ^short = "Method for measuring the tumor"
@@ -55,7 +55,7 @@ Profile: Tumor
 Parent:  BodyStructure
 Id: mcode-tumor
 Title: "Tumor Profile"
-Description:  "Identifies a tumor that has not been removed from the body. Whenever possible, a single resource conforming to this profile will be used to track a tumor over time (as opposed to creating new Tumor-conforming BodyStructure resources each time that tumor is measured). Use TumorSpecimen to represent the tumor after removal from the body."
+Description:  "Identifies a tumor that has not been removed from the body. Whenever possible, a single resource conforming to this profile will be used to track a tumor over time (as opposed to creating new Tumor-conforming BodyStructure resources each time that tumor is measured). Use HumanSpecimen to represent the tumor after removal from the body."
 * ^extension[FMM].valueInteger = 3
 * patient only Reference(CancerPatient)
 * patient ^definition = "The patient associated with this tumor."
@@ -67,10 +67,10 @@ Description:  "Identifies a tumor that has not been removed from the body. Whene
 * identifier ^slicing.discriminator.path = "type"
 * identifier ^slicing.rules = #open
 * identifier ^slicing.description = "Slice containing at least one tumor identifier"
-* identifier contains tumorIdentifier 1..*
-* identifier[tumorIdentifier] only BodyStructureIdentifier
-* identifier[tumorIdentifier] ^short = "Identifier to associate this specimen with a specific Tumor"
-* identifier[tumorIdentifier] ^definition = "To associate this with a specific BodyStructure conforming to the Tumor profile, add an identifier with a value that matches a persistent identifier from `BodyStructure.identifier.value` that is unique in the context of the Patient."
+* identifier contains bodyStructureIdentifier 1..*
+* identifier[bodyStructureIdentifier] only BodyStructureIdentifier
+* identifier[bodyStructureIdentifier] ^short = "A persistent identifier of this tumor."
+* identifier[bodyStructureIdentifier] ^definition = "A persistent identifier used to identify and track the tumor over time. The identifier must be unique in the context of the patient."
 * morphology = SCT#367651003 "Malignant neoplasm of primary, secondary, or uncertain origin (morphologic abnormality)"
 // This VS is used for the primary/secondary cancer conditions; rule set here for consistency with these profiles.
 * location from CancerBodyLocationVS (extensible)
@@ -87,39 +87,18 @@ Description:  "Identifies a tumor that has not been removed from the body. Whene
 Profile: BodyStructureIdentifier
 Parent: Identifier
 Id: mcode-body-structure-identifier
-Title: "Body Structure Identifier Data Type Profile"
+Title: "Body Structure Identifier Profile"
 Description: "An identifier that designates a body structure such as a tumor and can be used for tracking the structure over time."
 * ^extension[FMM].valueInteger = 3
 * type = http://hl7.org/fhir/resource-types#BodyStructure
 * value 1..1
 * use = #usual
 
-Profile: TumorSpecimen
-Parent: Specimen
-Id: mcode-tumor-specimen
-Title: "Tumor Specimen Profile"
-Description: "Represents a tumor after it has been removed from the body. If there is a Tumor resource representing the tumor before it was removed from the body, use `identifier` to associate this TumorSpecimen with that Tumor resource."
-* insert CancerRelatedSpecimenRules
-* ^extension[FMM].valueInteger = 3
-// These rules are above and beyond GenomicSpecimen
-* type = SPTY#TUMOR
-* identifier ^slicing.discriminator.type = #pattern
-* identifier ^slicing.discriminator.path = "type"
-* identifier ^slicing.rules = #open
-* identifier ^slicing.description = "Slicing by identifier.type to identify tumor identifier"
-* identifier contains tumorIdentifier 0..*
-* identifier[tumorIdentifier] only BodyStructureIdentifier
-* identifier[tumorIdentifier] ^short = "Identifier to associate this specimen with a specific Tumor"
-// FHIR-32352
-// * identifier[tumorIdentifier] ^definition = "To associate this with a specific BodyStructure conforming to the Tumor profile, add an identifier with a value that matches a persistent identifier from `BodyStructure.identifier.value` that is unique in the context of the Patient."
-* identifier and identifier[tumorIdentifier] and identifier[tumorIdentifier].type and identifier[tumorIdentifier].value MS
-
-
 /* Commenting out MultifocalTumor observation for now
 Issues to consider further:
 1) Does this rise to the level of "minimal"?
 2) You were missing Observation.code that says what is being observed.
-3) Is this an Observation or a Condition? Conditions are uni-valued findings, while Observations need a question (code) and an answer set (value[x]). Observations on a TumorSpecimen are not Conditions although it is arguable that a multifocal tumor in the body could be modeled as a Condition.
+3) Is this an Observation or a Condition? Conditions are uni-valued findings, while Observations need a question (code) and an answer set (value[x]). Observations on a HumanSpecimen are not Conditions although it is arguable that a multifocal tumor in the body could be modeled as a Condition.
 4) If this is modeled as an Observation, then what is the question and what are the possible answers? Are we playing Jeopardy where the answer is "multi-focal"? Or is the question something about morphology, and "multi-focal" is among the possible answers?
 5) I know we convinced ourselves otherwise, but we shouldn't forget the option of allowing a value set for Tumor.morphology (perhaps by slicing Tumor.morphology and fixing the first code.)
 
@@ -127,14 +106,14 @@ Profile: MultifocalTumor
 Parent: USCoreClinicalTest
 Id: mcode-multifocal-tumor
 Title: "Multifocal Tumor Observation Profile"
-Description: "Identifies multiple [Tumor](StructureDefinition-mcode-tumor.html) or [TumorSpecimen](StructureDefinition-mcode-tumor-specimen.html)-conforming resources as part of a multifocal tumor."
+Description: "Identifies multiple [Tumor](StructureDefinition-mcode-tumor.html) or [HumanSpecimen](StructureDefinition-mcode-tumor-specimen.html)-conforming resources as part of a multifocal tumor."
 * ^status = #draft
 * ^experimental = true
 * valueCodeableConcept = SCT#399506006 "Multifocal tumor (finding)"
-* focus only Reference(Tumor or TumorSpecimen)
+* focus only Reference(Tumor or HumanSpecimen)
 * focus MS
 * focus ^short = "References individual masses that comprise the multifocal tumor"
-* focus ^definition = "If [Tumor](StructureDefinition-mcode-tumor.html) or [TumorSpecimen](StructureDefinition-mcode-tumor-specimen.html) are used to represent this multifocal tumor, or are used to represent multiple masses that comprise the multifocal tumor, they SHOULD be referenced here. If the same tumor is represented by both [Tumor](StructureDefinition-mcode-tumor.html) and [TumorSpecimen](StructureDefinition-mcode-tumor-specimen.html) at the time the multifocal observation was made, both resources SHOULD be referenced in `focus`."
+* focus ^definition = "If [Tumor](StructureDefinition-mcode-tumor.html) or [HumanSpecimen](StructureDefinition-mcode-tumor-specimen.html) are used to represent this multifocal tumor, or are used to represent multiple masses that comprise the multifocal tumor, they SHOULD be referenced here. If the same tumor is represented by both [Tumor](StructureDefinition-mcode-tumor.html) and [HumanSpecimen](StructureDefinition-mcode-tumor-specimen.html) at the time the multifocal observation was made, both resources SHOULD be referenced in `focus`."
 * subject only Reference(CancerPatient)
 * subject MS
 * status MS

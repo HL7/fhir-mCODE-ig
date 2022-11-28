@@ -10,9 +10,9 @@ The following profiles and have been defined for this implementation guide:
 * [Comorbidities]
 * [ECOGPerformanceStatus]
 * [GenomicRegionStudied]
-* [GenomicSpecimen]
 * [GenomicsReport]
 * [GenomicVariant]
+* [HumanSpecimen]
 * [KarnofskyPerformanceStatus]
 * [mCODEPatientBundle]
 * [mCODEPatientGroup]
@@ -27,6 +27,5 @@ The following profiles and have been defined for this implementation guide:
 * [Tumor]
 * [TumorMarkerTest]
 * [TumorSize]
-* [TumorSpecimen]
 
 {% include markdown-link-references.md %}

@@ -40,9 +40,9 @@
 
 * [Genomic Diagnostic Report - John Anyperson](DiagnosticReport-genomics-report-john-anyperson.html)
 
-### [Genomic Specimen][GenomicSpecimen]
+### [Human Specimen][HumanSpecimen]
 
-* [Genomic Specimen - Lung](Specimen-genomic-specimen-lung.html)
+* [Human Specimen - Lung](Specimen-human-specimen-lung.html)
 
 ### [Genomic Variant][GenomicVariant]
 

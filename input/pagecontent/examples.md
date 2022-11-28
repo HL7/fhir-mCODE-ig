@@ -57,8 +57,8 @@ A timeline of the narrative is illustrated in the following diagram:
 | [`Comorbidities: Anxiety, Depression, Hypertension`](Observation-cancer-related-comorbidities-jenny-m.html) | [Comorbidities] |
 | [`Genomic Region: BRCA1`](Observation-genomic-region-studied-jenny-m.html) |[GenomicRegionStudied]|
 | [`Genomics Report`](DiagnosticReport-genomics-report-jenny-m.html)| [GenomicsReport] |
-| [`Genomic Specimen: Left Breast`](Specimen-genomic-specimen-left-breast-jenny-m.html) | [GenomicSpecimen] |
 | [`Genomic Variant Results: Pathogenic Variant in PALB2`](Observation-genomic-variant-jenny-m.html) | [GenomicVariant] |
+| [`Human Specimen: Left Breast`](Specimen-human-specimen-left-breast-jenny-m.html) | [HumanSpecimen] |
 | [`mCODE Patient Bundle: Jenny M`](Bundle-mcode-patient-bundle-jenny-m.html) | [MCODEPatientBundle]|
 | [`Medication Administration: Cyclophosphamide`](MedicationAdministration-cancer-related-medication-admin-cyclophosphamide-jenny-m.html) | [CancerRelatedMedicationAdministration] |
 | [`Medication Administration: Paclitaxel`](MedicationAdministration-cancer-related-medication-admin-paclitaxel-jenny-m.html) | [CancerRelatedMedicationAdministration] | 
@@ -79,7 +79,7 @@ A timeline of the narrative is illustrated in the following diagram:
 | [`Tumor Marker PR Negative`](Observation-tumor-marker-test-pr-jenny-m.html)| [TumorMarkerTest] |
 | [`Tumor Marker Her2 Negative`](Observation-tumor-marker-test-her2-jenny-m.html)| [TumorMarkerTest] |
 | [`Tumor Size: 2.5cm`](Observation-tumor-size-jenny-m.html)| [TumorSize]|
-| [`Tumor Specimen: Left Breast`](Specimen-tumor-specimen-left-breast-jenny-m.html)| [TumorSpecimen] |
+| [`Tumor Specimen: Left Breast`](Specimen-tumor-specimen-left-breast-jenny-m.html)| [HumanSpecimen] |
 {: .grid }
 
 

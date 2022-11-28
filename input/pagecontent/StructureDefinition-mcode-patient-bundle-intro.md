@@ -1,6 +1,6 @@
 ### Usage
 
-The bundle MUST contain exactly one Patient resource conforming to the [CancerPatient] profile. The bundle MUST also contain following mCODE-conformant resources, if available to the server:
+The bundle MUST contain exactly one Patient resource conforming to the [CancerPatient] profile (any patient conforming with US Core Patient is also conformant). The bundle MUST also contain following mCODE-conformant resources, if available to the server:
 
 * Condition resources conforming to [PrimaryCancerCondition] and [SecondaryCancerCondition] profiles
 * Observation resources conforming to [CancerDiseaseStatus] profile
@@ -11,7 +11,7 @@ The bundle MUST contain exactly one Patient resource conforming to the [CancerPa
 * Observation resources conforming to: [TNMStageGroup], [TNMDistantMetastasesCategory], [TNMPrimaryTumorCategory], and [TNMRegionalNodesCategory] profiles, representing staging information
 * Observation resources conforming to [GenomicVariant] and [GenomicRegionStudied] profiles
 * DiagnosticReport resources conforming to [GenomicsReport] profile
-* Specimen resources conforming to [GenomicSpecimen] and [TumorSpecimen] profiles
+* Specimen resources conforming to [HumanSpecimen] profiles
 * BodyStructure resources conforming to [Tumor] profile
 * Observation resources conforming to [TumorSize] profile
 * Observation resource conforming to [Comorbidities] profile, referencing Condition resources

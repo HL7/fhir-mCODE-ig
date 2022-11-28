@@ -32,25 +32,24 @@ Description: "Example of a resource conforming to the tumor profile."
 // Resources conforming to this profile indicate that the tumor is still in the body.
 // This implies it is being measured by imaging or physical exam. The identifier here is a hypothetical
 // radiology identifier for a specific tumor.
-* identifier[tumorIdentifier].use = #usual
-* identifier[tumorIdentifier].type = http://hl7.org/fhir/resource-types#BodyStructure
-* identifier[tumorIdentifier].system = "http://radiology.hospital.example.org"
-* identifier[tumorIdentifier].value = "Tumor 1234"
+* identifier[bodyStructureIdentifier].use = #usual
+* identifier[bodyStructureIdentifier].type = http://hl7.org/fhir/resource-types#BodyStructure
+* identifier[bodyStructureIdentifier].system = "http://radiology.hospital.example.org"
+* identifier[bodyStructureIdentifier].value = "Tumor 1234"
 * location = SCT#80248007 "Left breast structure (body structure)"
 * extension[relatedCondition].valueReference = Reference(Condition/primary-cancer-condition-breast)
 
 
 Instance: tumor-specimen-lobular-carcinoma-left-breast
-InstanceOf: TumorSpecimen
-Description: "Example of a TumorSpecimen linked to [this Tumor](BodyStructure-tumor-lobular-carcinoma-left-breast.html) via `identifier`."
+InstanceOf: HumanSpecimen
+Description: "Example of a tumor specimen, linked to [this Tumor](BodyStructure-tumor-lobular-carcinoma-left-breast.html) via `identifier`."
 * subject = Reference(Patient/cancer-patient-eve-anyperson)
 * status = #available "available"
 * type = SPTY#TUMOR
-* identifier[tumorIdentifier].use = #usual
-* identifier[tumorIdentifier].type = http://hl7.org/fhir/resource-types#BodyStructure
+* identifier[bodyStructureIdentifier].use = #usual
+* identifier[bodyStructureIdentifier].type = http://hl7.org/fhir/resource-types#BodyStructure
 * identifier.system = "http://radiology.hospital.example.org"
-* identifier[tumorIdentifier].value = "Tumor 1234"
-* extension[relatedCondition].valueReference = Reference(Condition/primary-cancer-condition-breast)
+* identifier[bodyStructureIdentifier].value = "Tumor 1234"
 * receivedTime = "2020-05-01"
 * collection.bodySite = SCT#80248007 "Left breast structure (body structure)"
 

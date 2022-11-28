@@ -16,12 +16,12 @@
 [Comorbidities]: StructureDefinition-mcode-comorbidities.html
 [ECOGPerformanceStatus]: StructureDefinition-mcode-ecog-performance-status.html
 [GenomicRegionStudied]: StructureDefinition-mcode-genomic-region-studied.html
-[GenomicSpecimen]: StructureDefinition-mcode-genomic-specimen.html
 [GenomicsReport]: StructureDefinition-mcode-genomics-report.html
 [GenomicVariant]: StructureDefinition-mcode-genomic-variant.html
 [KarnofskyPerformanceStatus]: StructureDefinition-mcode-karnofsky-performance-status.html
 [MCODEPatientBundle]: StructureDefinition-mcode-patient-bundle.html
 [MCODEPatientGroup]: StructureDefinition-mcode-patient-group.html
+[HumanSpecimen]: StructureDefinition-mcode-human-specimen.html
 [PrimaryCancerCondition]: StructureDefinition-mcode-primary-cancer-condition.html
 [RadiotherapyCourseSummary]: StructureDefinition-mcode-radiotherapy-course-summary.html
 [RadiotherapyVolume]: StructureDefinition-mcode-radiotherapy-volume.html
@@ -33,7 +33,6 @@
 [Tumor]: StructureDefinition-mcode-tumor.html
 [TumorMarkerTest]: StructureDefinition-mcode-tumor-marker-test.html
 [TumorSize]: StructureDefinition-mcode-tumor-size.html
-[TumorSpecimen]: StructureDefinition-mcode-tumor-specimen.html
 
 <!-- mCODE Extensions -->
 [BodyLocationQualifier]: StructureDefinition-mcode-body-location-qualifier.html
@@ -72,16 +71,11 @@
 [CarcinomaInSituDisorderVS]: ValueSet-mcode-carcinoma-in-situ-disorder-vs.html
 [ConditionStatusTrendVS]: ValueSet-mcode-condition-status-trend-vs.html
 [CytologicEvidenceOfMalignancyVS]: ValueSet-mcode-cytologic-evidence-malignancy-vs.html
-[GenomicSpecimenTypeVS]: ValueSet-mcode-genomic-specimen-type-vs.html
 [HistologyMorphologyBehaviorVS]: ValueSet-mcode-histology-morphology-behavior-vs.html
 [HypereosinophilicSyndromeDisorderVS]: ValueSet-mcode-hypereosinophilic-syndrome-disorder-vs.html
 [LateralityQualifierVS]: ValueSet-mcode-laterality-qualifier-vs.html
 [MelanomaInSituDisorderVS]: ValueSet-mcode-melanoma-in-situ-disorder-vs.html
-[TNMDistantMetastasesStagingTypeVS]: ValueSet-mcode-tnm-distant-metastases-staging-type-vs.html
-[TNMPrimaryTumorStagingTypeVS]: ValueSet-mcode-tnm-primary-tumor-staging-type-vs.html
-[TNMRegionalNodesStagingTypeVS]: ValueSet-mcode-tnm-regional-nodes-staging-type-vs.html
-[TNMStagingMethodVS]: ValueSet-mcode-tnm-staging-method-vs.html
-[TNMStageGroupStagingTypeVS]: ValueSet-mcode-tnm-stage-group-staging-type-vs.html
+[HumanSpecimenTypeVS]: ValueSet-mcode-human-specimen-type-vs.html
 [PrimaryCancerDisorderVS]: ValueSet-mcode-primary-cancer-disorder-vs.html
 [PrimaryMalignantNeoplasmDisorderVS]: ValueSet-mcode-primary-malignant-neoplasm-disorder-vs.html
 [ProcedureIntentVS]: ValueSet-mcode-procedure-intent-vs.html
@@ -98,6 +92,11 @@
 [TeleradiotherapyPhotonBeamTechniqueVS]: ValueSet-mcode-teleradiotherapy-photon-beam-technique-vs.html
 [TeleradiotherapyProtonBeamTechniqueVS]: ValueSet-mcode-teleradiotherapy-proton-beam-technique-vs.html
 [TeleradiotherapyTechniqueVS]: ValueSet-mcode-teleradiotherapy-technique-vs.html
+[TNMDistantMetastasesStagingTypeVS]: ValueSet-mcode-tnm-distant-metastases-staging-type-vs.html
+[TNMPrimaryTumorStagingTypeVS]: ValueSet-mcode-tnm-primary-tumor-staging-type-vs.html
+[TNMRegionalNodesStagingTypeVS]: ValueSet-mcode-tnm-regional-nodes-staging-type-vs.html
+[TNMStagingMethodVS]: ValueSet-mcode-tnm-staging-method-vs.html
+[TNMStageGroupStagingTypeVS]: ValueSet-mcode-tnm-stage-group-staging-type-vs.html
 [TNMDistantMetastasesCategoryVS]: ValueSet-mcode-tnm-distant-metastases-category-vs.html
 [TNMPrimaryTumorCategoryVS]: ValueSet-mcode-tnm-primary-tumor-category-vs.html
 [TNMRegionalNodesCategoryVS]: ValueSet-mcode-tnm-regional-nodes-category-vs.html

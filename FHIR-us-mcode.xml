@@ -15,7 +15,7 @@
 <artifact id="StructureDefinition/mcode-body-location-qualifier" key="StructureDefinition-mcode-body-location-qualifier" name="Body Location Qualifier Extension"/>
 <artifact id="ValueSet/mcode-body-location-qualifier-vs" key="ValueSet-mcode-body-location-qualifier-vs" name="Body Location Qualifier Value Set"/>
 <artifact id="ValueSet/mcode-body-location-and-laterality-qualifier-vs" key="ValueSet-mcode-body-location-and-laterality-qualifier-vs" name="Body Location and Laterality Qualifier Value Set"/>
-<artifact id="StructureDefinition/mcode-body-structure-identifier" key="StructureDefinition-mcode-body-structure-identifier" name="Body Structure Identifier Data Type Profile"/>
+<artifact id="StructureDefinition/mcode-body-structure-identifier" key="StructureDefinition-mcode-body-structure-identifier" name="Body Structure Identifier Profile"/>
 <artifact id="ValueSet/mcode-brachytherapy-high-dose-rate-electronic-technique-vs" key="ValueSet-mcode-brachytherapy-high-dose-rate-electronic-technique-vs" name="Brachytherapy High Dose Rate Electronic Technique Value Set"/>
 <artifact id="ValueSet/mcode-brachytherapy-high-dose-rate-technique-vs" key="ValueSet-mcode-brachytherapy-high-dose-rate-technique-vs" name="Brachytherapy High Dose Rate Technique Value Set"/>
 <artifact id="ValueSet/mcode-brachytherapy-low-dose-rate-temporary-technique-vs" key="ValueSet-mcode-brachytherapy-low-dose-rate-temporary-technique-vs" name="Brachytherapy Low Dose Rate Temporary Radation Technique Value Set"/>
@@ -38,7 +38,7 @@
 <artifact deprecated="true" id="Profile/mcode-cancer-related-radiation-procedure" key="cancer-related-radiation-procedure" name="Cancer Related Radiation Procedure"/>
 <artifact deprecated="true" id="Profile/mcode-cancer-related-surgical-procedure" key="cancer-related-surgical-procedure" name="Cancer Related Surgical Procedure"/>
 <artifact deprecated="true" id="ValueSet/mcode-cancer-related-surgical-procedure-value-set" key="cancer-related-surgical-procedure-value-set" name="Cancer Related Surgical Procedure Value Set"/>
-<artifact id="StructureDefinition/mcode-cancer-stage-group" key="StructureDefinition-mcode-cancer-stage-group" name="Cancer Stage Group"/>
+<artifact id="StructureDefinition/mcode-cancer-stage-group" key="StructureDefinition-mcode-cancer-stage-group" name="Cancer Stage Group Profile"/>
 <artifact id="ValueSet/mcode-cancer-stage-group-vs" key="ValueSet-mcode-cancer-stage-group-vs" name="Cancer Stage Group Value Set"/>
 <artifact deprecated="true" id="Profile/mcode-cancer-stage-parent" key="cancer-stage-parent" name="Cancer Stage Parent"/>
 <artifact id="ValueSet/mcode-cancer-staging-method-vs" key="ValueSet-mcode-cancer-staging-method-vs" name="Cancer Staging Method Value Set"/>
@@ -109,8 +109,8 @@
 <artifact deprecated="true" id="ValueSet/mcode-genetic-specimen-type-vs" key="genetic-specimen-type-value-set" name="Genetic Specimen Type Value Set"/>
 <artifact deprecated="true" id="ValueSet/mcode-genomic-molecular-consequence-vs" key="ValueSet-mcode-genomic-molecular-consequence-vs" name="Genomic Molecular Consequence Value Set"/>
 <artifact id="StructureDefinition/mcode-genomic-region-studied" key="genomic-region-studied" name="Genomic Region Studied Profile"/>
-<artifact id="StructureDefinition/mcode-genomic-specimen" key="StructureDefinition-mcode-genomic-specimen" name="Genomic Specimen Profile"/>
-<artifact id="ValueSet/mcode-genomic-specimen-type-vs" key="ValueSet-mcode-genomic-specimen-type-vs" name="Genomic Specimen Type Value Set"/>
+<artifact deprecated="true" id="StructureDefinition/mcode-genomic-specimen" key="StructureDefinition-mcode-genomic-specimen" name="Genomic Specimen Profile"/>
+<artifact deprecated="true" id="ValueSet/mcode-genomic-specimen-type-vs" key="ValueSet-mcode-genomic-specimen-type-vs" name="Genomic Specimen Type Value Set"/>
 <artifact id="StructureDefinition/mcode-genomic-variant" key="StructureDefinition-mcode-genomic-variant" name="Genomic Variant Profile"/>
 <artifact id="StructureDefinition/mcode-genomics-report" key="StructureDefinition-mcode-genomics-report" name="Genomics Report Profile"/>
 <artifact deprecated="true" id="ValueSet/mcode-hgvs-sequence-variant-nomenclature-value-set" key="hgvs-sequence-variant-nomenclature-value-set" name="HGVS Sequence Variant Nomenclature Value Set"/>
@@ -119,6 +119,8 @@
 <artifact id="ValueSet/mcode-histology-morphology-behavior-vs" key="histology-morphology-behavior-value-set" name="Histology Morphology Behavior Value Set"/>
 <artifact id="StructureDefinition/mcode-histology-morphology-behavior" key="StructureDefinition-mcode-histology-morphology-behavior" name="Histology-Morphology-Behavior Extension"/>
 <artifact deprecated="true" id="ValueSet/mcode-hgvs-vs" key="ValueSet-mcode-hgvs-vs" name="Human Genome Variation Society Sequence Variant Nomenclature Value Set"/>
+<artifact id="StructureDefinition/mcode-human-specimen" key="StructureDefinition-mcode-human-specimen" name="Human Specimen Profile"/>
+<artifact id="ValueSet/mcode-human-specimen-type-vs" key="ValueSet-mcode-human-specimen-type-vs" name="Human Specimen Type Value Set"/>
 <artifact id="StructureDefinition/mcode-karnofsky-performance-status" key="karnofsky-performance-status" name="Karnofsky Performance Status Profile"/>
 <artifact deprecated="true" id="Extension/mcode-laterality-extension" key="laterality-extension" name="Laterality Extension"/>
 <artifact id="StructureDefinition/mcode-laterality-qualifier" key="StructureDefinition-mcode-laterality-qualifier" name="Laterality Qualifier Extension"/>
@@ -213,7 +215,7 @@
 <artifact id="ValueSet/mcode-tumor-size-method-vs" key="ValueSet-mcode-tumor-size-method-vs" name="Tumor Size Method Value Set"/>
 <artifact id="StructureDefinition/mcode-tumor-size" key="StructureDefinition-mcode-tumor-size" name="Tumor Size Profile"/>
 <artifact id="ValueSet/mcode-tumor-size-units-vs" key="ValueSet-mcode-tumor-size-units-vs" name="Tumor Size Units Value Set"/>
-<artifact id="StructureDefinition/mcode-tumor-specimen" key="StructureDefinition-mcode-tumor-specimen" name="Tumor Specimen Profile"/>
+<artifact deprecated="true" id="StructureDefinition/mcode-tumor-specimen" key="StructureDefinition-mcode-tumor-specimen" name="Tumor Specimen Profile"/>
 <artifact deprecated="true" id="ValueSet/mcode-units-of-length-value-set" key="units-of-length-value-set" name="Units of Length Value Set"/>
 <artifact deprecated="true" key="ValueSet" name="ValueSet"/>
 <artifact id="Observation/binet-stage-group-A" key="Observation-binet-stage-group-A" name="binet-stage-group-A"/>
@@ -257,14 +259,16 @@
 <artifact deprecated="true" id="Specimen/genetic-specimen-lung" key="Specimen-genetic-specimen-lung" name="genetic-specimen-lung"/>
 <artifact id="Observation/genomic-region-studied-jenny-m" key="Observation-genomic-region-studied-jenny-m" name="genomic-region-studied-jenny-m"/>
 <artifact id="Observation/genomic-region-studied-stk11" key="Observation-genomic-region-studied-stk11" name="genomic-region-studied-stk11"/>
-<artifact id="Specimen/genomic-specimen-left-breast-jenny-m" key="Specimen-genomic-specimen-left-breast-jenny-m" name="genomic-specimen-left-breast-jenny-m"/>
-<artifact id="Specimen/genomic-specimen-lung" key="Specimen-genomic-specimen-lung" name="genomic-specimen-lung"/>
+<artifact deprecated="true" id="Specimen/genomic-specimen-left-breast-jenny-m" key="Specimen-genomic-specimen-left-breast-jenny-m" name="genomic-specimen-left-breast-jenny-m"/>
+<artifact deprecated="true" id="Specimen/genomic-specimen-lung" key="Specimen-genomic-specimen-lung" name="genomic-specimen-lung"/>
 <artifact id="Observation/genomic-variant-fusion" key="Observation-genomic-variant-fusion" name="genomic-variant-fusion"/>
 <artifact id="Observation/genomic-variant-germline-deletion" key="Observation-genomic-variant-germline-deletion" name="genomic-variant-germline-deletion"/>
 <artifact id="Observation/genomic-variant-jenny-m" key="Observation-genomic-variant-jenny-m" name="genomic-variant-jenny-m"/>
 <artifact id="Observation/genomic-variant-somatic-single-nucleotide" key="Observation-genomic-variant-somatic-single-nucleotide" name="genomic-variant-somatic-single-nucleotide"/>
 <artifact id="DiagnosticReport/genomics-report-jenny-m" key="DiagnosticReport-genomics-report-jenny-m" name="genomics-report-jenny-m"/>
 <artifact id="DiagnosticReport/genomics-report-john-anyperson" key="DiagnosticReport-genomics-report-john-anyperson" name="genomics-report-john-anyperson"/>
+<artifact id="Specimen/human-specimen-left-breast-jenny-m" key="Specimen-human-specimen-left-breast-jenny-m" name="human-specimen-left-breast-jenny-m"/>
+<artifact id="Specimen/human-specimen-lung" key="Specimen-human-specimen-lung" name="human-specimen-lung"/>
 <artifact id="BodyStructure/jenny-m-chest-wall-lymph-nodes-treatment-volume" key="BodyStructure-jenny-m-chest-wall-lymph-nodes-treatment-volume" name="jenny-m-chest-wall-lymph-nodes-treatment-volume"/>
 <artifact id="BodyStructure/jenny-m-chest-wall-treatment-volume" key="BodyStructure-jenny-m-chest-wall-treatment-volume" name="jenny-m-chest-wall-treatment-volume"/>
 <artifact id="Condition/john-anyperson-chf" key="Condition-john-anyperson-chf" name="john-anyperson-chf"/>

@@ -1,0 +1,477 @@
+-------------------------------------------------------------------------------------
+{"hierarchical" : false, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "inactive" : true,
+    "include" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/v2-0487",
+      "concept" : [{
+        "code" : "AMN",
+        "display" : "Amniotic fluid"
+      },
+      {
+        "code" : "BIFL",
+        "display" : "Bile Fluid"
+      },
+      {
+        "code" : "BLD",
+        "display" : "Whole blood"
+      },
+      {
+        "code" : "BLDA",
+        "display" : "Blood arterial"
+      },
+      {
+        "code" : "BLDCO",
+        "display" : "Cord blood"
+      },
+      {
+        "code" : "BLDV",
+        "display" : "Blood venous"
+      },
+      {
+        "code" : "BON",
+        "display" : "Bone"
+      },
+      {
+        "code" : "CSERU",
+        "display" : "Serum, Convalescent"
+      },
+      {
+        "code" : "CSF",
+        "display" : "Cerebral spinal fluid"
+      },
+      {
+        "code" : "CVM",
+        "display" : "Cervical Mucus"
+      },
+      {
+        "code" : "DUFL",
+        "display" : "Duodenal fluid"
+      },
+      {
+        "code" : "FBLOOD",
+        "display" : "Blood, Fetal"
+      },
+      {
+        "code" : "FGA",
+        "display" : "Fluid, Abdomen"
+      },
+      {
+        "code" : "GENV",
+        "display" : "Genital vaginal"
+      },
+      {
+        "code" : "HYDC",
+        "display" : "Fluid, Hydrocele"
+      },
+      {
+        "code" : "JNTFLD",
+        "display" : "Fluid, Joint"
+      },
+      {
+        "code" : "KIDFLD",
+        "display" : "Fluid, Kidney"
+      },
+      {
+        "code" : "LSAC",
+        "display" : "Fluid, Lumbar Sac"
+      },
+      {
+        "code" : "MAR",
+        "display" : "Marrow"
+      },
+      {
+        "code" : "PAFL",
+        "display" : "Pancreatic fluid"
+      },
+      {
+        "code" : "PCFL",
+        "display" : "Fluid, Pericardial"
+      },
+      {
+        "code" : "PLC",
+        "display" : "Placenta"
+      },
+      {
+        "code" : "PLR",
+        "display" : "Pleural fluid (thoracentesis fluid)"
+      },
+      {
+        "code" : "SAL",
+        "display" : "Saliva"
+      },
+      {
+        "code" : "SKN",
+        "display" : "Skin"
+      },
+      {
+        "code" : "SMN",
+        "display" : "Seminal fluid"
+      },
+      {
+        "code" : "SNV",
+        "display" : "Fluid, synovial (Joint fluid)"
+      },
+      {
+        "code" : "SPT",
+        "display" : "Sputum"
+      },
+      {
+        "code" : "TISS",
+        "display" : "Tissue"
+      },
+      {
+        "code" : "TUMOR",
+        "display" : "Tumor"
+      },
+      {
+        "code" : "VITF",
+        "display" : "Vitreous Fluid"
+      },
+      {
+        "code" : "WND",
+        "display" : "Wound"
+      },
+      {
+        "code" : "UR",
+        "display" : "Urine"
+      },
+      {
+        "code" : "STL",
+        "display" : "Stool = Fecal"
+      }]
+    }]
+  }
+}}####
+e: {
+  "valueSet" : {
+  "resourceType" : "ValueSet",
+  "language" : "en",
+  "status" : "active",
+  "expansion" : {
+    "identifier" : "urn:uuid:96881799-39c6-44f9-aa1a-cadac82451cf",
+    "timestamp" : "2022-11-14T16:32:50.481Z",
+    "parameter" : [{
+      "name" : "limitedExpansion",
+      "valueBoolean" : true
+    },
+    {
+      "name" : "excludeNested",
+      "valueBoolean" : true
+    },
+    {
+      "name" : "version",
+      "valueUri" : "http://terminology.hl7.org/CodeSystem/v2-0487|2.3.0"
+    }],
+    "contains" : [{
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/valueset-definition",
+        "valueString" : "Amniotic fluid"
+      }],
+      "system" : "http://terminology.hl7.org/CodeSystem/v2-0487",
+      "code" : "AMN",
+      "display" : "Amniotic fluid"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/valueset-definition",
+        "valueString" : "Bile Fluid"
+      }],
+      "system" : "http://terminology.hl7.org/CodeSystem/v2-0487",
+      "code" : "BIFL",
+      "display" : "Bile Fluid"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/valueset-definition",
+        "valueString" : "Whole blood"
+      }],
+      "system" : "http://terminology.hl7.org/CodeSystem/v2-0487",
+      "code" : "BLD",
+      "display" : "Whole blood"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/valueset-definition",
+        "valueString" : "Blood arterial"
+      }],
+      "system" : "http://terminology.hl7.org/CodeSystem/v2-0487",
+      "code" : "BLDA",
+      "display" : "Blood arterial"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/valueset-definition",
+        "valueString" : "Cord blood"
+      }],
+      "system" : "http://terminology.hl7.org/CodeSystem/v2-0487",
+      "code" : "BLDCO",
+      "display" : "Cord blood"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/valueset-definition",
+        "valueString" : "Blood venous"
+      }],
+      "system" : "http://terminology.hl7.org/CodeSystem/v2-0487",
+      "code" : "BLDV",
+      "display" : "Blood venous"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/valueset-definition",
+        "valueString" : "Bone"
+      }],
+      "system" : "http://terminology.hl7.org/CodeSystem/v2-0487",
+      "code" : "BON",
+      "display" : "Bone"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/valueset-definition",
+        "valueString" : "Serum, Convalescent"
+      }],
+      "system" : "http://terminology.hl7.org/CodeSystem/v2-0487",
+      "code" : "CSERU",
+      "display" : "Serum, Convalescent"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/valueset-definition",
+        "valueString" : "Cerebral spinal fluid"
+      }],
+      "system" : "http://terminology.hl7.org/CodeSystem/v2-0487",
+      "code" : "CSF",
+      "display" : "Cerebral spinal fluid"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/valueset-definition",
+        "valueString" : "Cervical Mucus"
+      }],
+      "system" : "http://terminology.hl7.org/CodeSystem/v2-0487",
+      "code" : "CVM",
+      "display" : "Cervical Mucus"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/valueset-definition",
+        "valueString" : "Duodenal fluid"
+      }],
+      "system" : "http://terminology.hl7.org/CodeSystem/v2-0487",
+      "code" : "DUFL",
+      "display" : "Duodenal fluid"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/valueset-definition",
+        "valueString" : "Blood, Fetal"
+      }],
+      "system" : "http://terminology.hl7.org/CodeSystem/v2-0487",
+      "code" : "FBLOOD",
+      "display" : "Blood, Fetal"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/valueset-definition",
+        "valueString" : "Fluid,  Abdomen"
+      }],
+      "system" : "http://terminology.hl7.org/CodeSystem/v2-0487",
+      "code" : "FGA",
+      "display" : "Fluid, Abdomen"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/valueset-definition",
+        "valueString" : "Genital vaginal"
+      }],
+      "system" : "http://terminology.hl7.org/CodeSystem/v2-0487",
+      "code" : "GENV",
+      "display" : "Genital vaginal"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/valueset-definition",
+        "valueString" : "Fluid, Hydrocele"
+      }],
+      "system" : "http://terminology.hl7.org/CodeSystem/v2-0487",
+      "code" : "HYDC",
+      "display" : "Fluid, Hydrocele"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/valueset-definition",
+        "valueString" : "Fluid, Joint"
+      }],
+      "system" : "http://terminology.hl7.org/CodeSystem/v2-0487",
+      "code" : "JNTFLD",
+      "display" : "Fluid, Joint"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/valueset-definition",
+        "valueString" : "Fluid, Kidney"
+      }],
+      "system" : "http://terminology.hl7.org/CodeSystem/v2-0487",
+      "code" : "KIDFLD",
+      "display" : "Fluid, Kidney"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/valueset-definition",
+        "valueString" : "Fluid, Lumbar Sac"
+      }],
+      "system" : "http://terminology.hl7.org/CodeSystem/v2-0487",
+      "code" : "LSAC",
+      "display" : "Fluid, Lumbar Sac"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/valueset-definition",
+        "valueString" : "Marrow"
+      }],
+      "system" : "http://terminology.hl7.org/CodeSystem/v2-0487",
+      "code" : "MAR",
+      "display" : "Marrow"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/valueset-definition",
+        "valueString" : "Pancreatic fluid"
+      }],
+      "system" : "http://terminology.hl7.org/CodeSystem/v2-0487",
+      "code" : "PAFL",
+      "display" : "Pancreatic fluid"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/valueset-definition",
+        "valueString" : "Fluid, Pericardial"
+      }],
+      "system" : "http://terminology.hl7.org/CodeSystem/v2-0487",
+      "code" : "PCFL",
+      "display" : "Fluid, Pericardial"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/valueset-definition",
+        "valueString" : "Placenta"
+      }],
+      "system" : "http://terminology.hl7.org/CodeSystem/v2-0487",
+      "code" : "PLC",
+      "display" : "Placenta"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/valueset-definition",
+        "valueString" : "Pleural fluid (thoracentesis fluid)"
+      }],
+      "system" : "http://terminology.hl7.org/CodeSystem/v2-0487",
+      "code" : "PLR",
+      "display" : "Pleural fluid (thoracentesis fluid)"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/valueset-definition",
+        "valueString" : "Saliva"
+      }],
+      "system" : "http://terminology.hl7.org/CodeSystem/v2-0487",
+      "code" : "SAL",
+      "display" : "Saliva"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/valueset-definition",
+        "valueString" : "Skin"
+      }],
+      "system" : "http://terminology.hl7.org/CodeSystem/v2-0487",
+      "code" : "SKN",
+      "display" : "Skin"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/valueset-definition",
+        "valueString" : "Seminal fluid"
+      }],
+      "system" : "http://terminology.hl7.org/CodeSystem/v2-0487",
+      "code" : "SMN",
+      "display" : "Seminal fluid"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/valueset-definition",
+        "valueString" : "Fluid, synovial (Joint fluid)"
+      }],
+      "system" : "http://terminology.hl7.org/CodeSystem/v2-0487",
+      "code" : "SNV",
+      "display" : "Fluid, synovial (Joint fluid)"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/valueset-definition",
+        "valueString" : "Sputum"
+      }],
+      "system" : "http://terminology.hl7.org/CodeSystem/v2-0487",
+      "code" : "SPT",
+      "display" : "Sputum"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/valueset-definition",
+        "valueString" : "Tissue"
+      }],
+      "system" : "http://terminology.hl7.org/CodeSystem/v2-0487",
+      "code" : "TISS",
+      "display" : "Tissue"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/valueset-definition",
+        "valueString" : "Tumor"
+      }],
+      "system" : "http://terminology.hl7.org/CodeSystem/v2-0487",
+      "code" : "TUMOR",
+      "display" : "Tumor"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/valueset-definition",
+        "valueString" : "Vitreous Fluid"
+      }],
+      "system" : "http://terminology.hl7.org/CodeSystem/v2-0487",
+      "code" : "VITF",
+      "display" : "Vitreous Fluid"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/valueset-definition",
+        "valueString" : "Wound"
+      }],
+      "system" : "http://terminology.hl7.org/CodeSystem/v2-0487",
+      "code" : "WND",
+      "display" : "Wound"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/valueset-definition",
+        "valueString" : "Urine"
+      }],
+      "system" : "http://terminology.hl7.org/CodeSystem/v2-0487",
+      "code" : "UR",
+      "display" : "Urine"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/valueset-definition",
+        "valueString" : "Stool = Fecal"
+      }],
+      "system" : "http://terminology.hl7.org/CodeSystem/v2-0487",
+      "code" : "STL",
+      "display" : "Stool = Fecal"
+    }]
+  }
+},
+  "error" : ""
+}
+-------------------------------------------------------------------------------------

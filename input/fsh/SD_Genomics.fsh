@@ -26,7 +26,7 @@ Description:    "Details about a set of changes in the tested sample compared to
 * insert NotUsed(referenceRange)
 * insert NotUsed(hasMember)
 * subject only Reference(CancerPatient)
-* specimen only Reference(GenomicSpecimen)
+* specimen only Reference(HumanSpecimen)
 * value[x] ^slicing.rules = #closed
 * category[labCategory].coding 1..1  // To prevent the message "The repeating element has a pattern. The pattern will apply to all the repeats (this has not been clear to all users)"
 * category[labCategory] = ObsCat#laboratory
@@ -53,7 +53,7 @@ Description:    "Genomic analysis summary report. The report may include one or 
 * ^extension[FMM].valueInteger = 1
 * category[Genetics].coding 1..1  // To prevent the message "The repeating element has a pattern. The pattern will apply to all the repeats (this has not been clear to all users)"
 * subject only Reference(CancerPatient)
-* specimen only Reference(GenomicSpecimen)
+* specimen only Reference(HumanSpecimen)
 * result[variant] only Reference(GenomicVariant)
 * result[region-studied] only Reference(GenomicRegionStudied)
 * result[region-studied] and result[variant] MS
@@ -71,37 +71,39 @@ Description: "The result of a tumor marker test. Tumor marker tests are generall
 * category 2..*
 * category contains mcode-category 1..1
 * category[mcode-category] = SCT#250724005 // Tumor marker measurement (procedure)
-// sushi error >>> * category[mcode-category].coding.version = ""  // make sure version is not specified
 * subject only Reference(CancerPatient)
-* subject ^definition = "Patient whose tumor marker test is recorded."
+* subject ^definition = "Patient whose test result is recorded."
 * effective[x] only dateTime or Period
 * value[x] only Quantity or Ratio or string or CodeableConcept
 // Already MS in US Core Obs Lab: status, category, code, subject, effective[x], value[x], dataAbsentReason
-* specimen MS
+* specimen only Reference(HumanSpecimen)
+* specimen MS  // is not MS in US Core 4.0.0 and 5.0.1 
+// RelatedCondition added 11/14/2022, see https://chat.fhir.org/#narrow/stream/229074-CodeX/topic/Reference.20between.20tumor.20characteristics.20and.20cancer.20diagnosis
+* extension contains RelatedCondition named relatedCondition 0..* MS 
+* extension[relatedCondition] ^short = "Condition associated with this test."
+* extension[relatedCondition] ^definition = "Associates the tumor marker test with a condition, if one exists. Condition can be given by a reference or a code. In the case of a screening test such as prostate-specific antigen (PSA), there may be no existing condition to reference."
 
-
-RuleSet: CancerRelatedSpecimenRules
+Profile: HumanSpecimen
+Parent: Specimen
+Id: mcode-human-specimen
+Title:  "Human Specimen Profile"
+Description:  "A specimen taken from a Patient. The profile includes extensions to specify a more precise body site and an identifier of source body structure at that site (for example, a tumor identifier)."
 * ^extension[FMM].valueInteger = 1
-* type 1..1
+* type from HumanSpecimenTypeVS (extensible)
 * subject only Reference(CancerPatient)
 * subject ^definition = "The patient associated with this specimen."
 * collection.bodySite.extension contains
     BodyLocationQualifier named locationQualifier 0..* and
     LateralityQualifier named lateralityQualifier 0..1
-// It would be nice to reuse the existing condition-related extension (see Jira https://jira.hl7.org/projects/FHIR/issues/FHIR-31027) but it doesn't apply to Specimen
-* extension contains RelatedCondition named relatedCondition 0..1 MS
-* extension[relatedCondition].value[x] only Reference(PrimaryCancerCondition or SecondaryCancerCondition)
-* extension[relatedCondition] ^short = "Cancer condition associated with this specimen."
-* extension[relatedCondition] ^definition = "A reference that associates this specimen with a cancer condition."
-// No inherited MS
+* identifier ^slicing.discriminator.type = #pattern
+* identifier ^slicing.discriminator.path = "type"
+* identifier ^slicing.rules = #open
+* identifier ^slicing.description = "Slicing by identifier.type"
+* identifier contains bodyStructureIdentifier 0..*
+* identifier[bodyStructureIdentifier] only BodyStructureIdentifier
+* identifier[bodyStructureIdentifier] ^short = "An identifier associating the specimen with a identified body structure, such as a tumor with a tumor identifier."
+// FHIR-32352
+// * identifier[bodyStructureIdentifier] ^definition = "To associate this with a specific BodyStructure conforming to the Tumor profile, add an identifier with a value that matches a persistent identifier from `BodyStructure.identifier.value` that is unique in the context of the Patient."
 * subject and status and type and collection and collection.bodySite and collection.bodySite.extension and collection.bodySite.extension[locationQualifier] and collection.bodySite.extension[lateralityQualifier] MS
+* identifier and identifier[bodyStructureIdentifier] and identifier[bodyStructureIdentifier].type and identifier[bodyStructureIdentifier].value MS
 
-
-Profile: GenomicSpecimen
-Parent: Specimen
-Id: mcode-genomic-specimen
-Title:      "Genomic Specimen Profile"
-Description:    "A small sample of blood, hair, skin, amniotic fluid (the fluid that surrounds a fetus during pregnancy), or other tissue which is excised from a subject for the purposes of genomics testing or analysis."
-* insert CancerRelatedSpecimenRules
-* ^extension[FMM].valueInteger = 1
-* type from GenomicSpecimenTypeVS (extensible)

@@ -16,13 +16,13 @@ Where US Core does not provide an appropriate base profile, mCODE profiles FHIR 
 | [Cancer Stage Group TNM][TNMStageGroup] | no | CancerStageGroup |
 | [Comorbidities] | yes | US Core Observation Clinical Test Result |
 | [ECOG Performance Status][ECOGPerformanceStatus] | yes | US Core Observation Clinical Test Result |
-| [Genomic Region Studied][GenomicRegionStudied] | yes | US Core Laboratory Result Observation |
-| [Genomic Specimen][GenomicSpecimen] | no | Specimen |
-| [Genomics Report][GenomicsReport] | yes | US Core Diagnostic Report Lab |
-| [Genomic Variant][GenomicVariant] | yes | US Core Laboratory Result Observation |
+| [Genomic Region Studied][GenomicRegionStudied] | no | Genomics Reporting IG RegionStudied |
+| [Genomics Report][GenomicsReport] | no | Genomics Reporting IG GenomicsReport |
+| [Genomic Variant][GenomicVariant] | no | Genomics Reporting IG Variant |
 | [Karnofsky Performance Status][KarnofskyPerformanceStatus] | yes | US Core Observation Clinical Test Result |
 | [mCODE Patient Bundle][MCODEPatientBundle] | no | Bundle  |
 | [mCODE Patient Group][MCODEPatientGroup] | no | Group  |
+| [Human Specimen][HumanSpecimen] | no | Specimen |
 | [Primary Cancer Condition][PrimaryCancerCondition] | yes | US Core Condition Problems Health Concerns |
 | [Radiotherapy Course Summary][RadiotherapyCourseSummary] | yes | US Core Procedure |
 | [Radiotherapy Volume][RadiotherapyVolume] | no | BodyStructure |
@@ -33,7 +33,6 @@ Where US Core does not provide an appropriate base profile, mCODE profiles FHIR 
 | [Tumor][Tumor] | no | BodyStructure |
 | [Tumor Marker Test][TumorMarkerTest] | yes | US Core Laboratory Result Observation |
 | [Tumor Size][TumorSize] | yes | US Core Laboratory Result Observation |
-| [Tumor Specimen][TumorSpecimen] | no | Specimen |
 {: .grid }
 
 ### Profile-Level Conformance Expectations

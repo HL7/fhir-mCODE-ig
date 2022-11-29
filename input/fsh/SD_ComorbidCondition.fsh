@@ -1,13 +1,15 @@
 Profile: Comorbidities
-Parent: Observation  // an Observation, not a condition
+Parent: Observation
 Id: mcode-comorbidities
 Title: "Comorbidities Profile"
-Description: "General structure for capturing comorbid conditions with respect to a primary ('index') condition. The specific set of comorbidities appear in extensions."
+Description: "General structure for capturing comorbid conditions with respect to a primary ('index') condition. The user can use this profile in three ways: (1) free-form, listing any conditions they wish to highlight as significant comorbidities, (2) following a formal paradigm such as the Charlson Comorbidity Index or the NCI Comorbidity Index, or (3) use disease categories defined for registry reporting purposes, such as those defined by Center for International Blood and Marrow Transplant Research (CIBMTR)."
 * ^extension[FMM].valueInteger = 1
 * code = SCT#398192003 // Co-morbid conditions (finding) 
-* focus only Reference(Condition)
+* method ^short = "Comorbidity framework used."
+* method ^definition = "The formal methodology used, such as Charlson, NCI, Elixhauser, or ACE-27. The method must be specified if a comorbidity index is specified, otherwise the index cannot be correctly interpreted."
+* focus only Reference(PrimaryCancerCondition)
 * focus ^short = "The Index Condition"
-* focus ^definition = "The comorbid conditions may be defined with respect to a specific 'index' condition. For example, the US Centers for Disease Control (CDC) has a list of comorbid conditions important to COVID-19. In this case, the focus would be COVID-19 and the comorbid condition categories would be those called out by CDC, namely obesity, renal disease, respiratory disease, etc."
+* focus ^definition = "Comorbid conditions are typically defined with respect to a specific 'index' condition. For example, the US Centers for Disease Control (CDC) has provided a list of comorbid conditions important to COVID-19. In this case, the focus would be COVID-19 and the comorbid condition categories would be those specified by CDC, namely obesity, renal disease, respiratory disease, etc."
 * subject only Reference(CancerPatient)
 * subject ^definition = "The patient whose comorbidities are recorded."
 // We cannot use hasMember because that element does not allow Reference(Condition) or CodeableConcept as a type
@@ -17,10 +19,13 @@ Description: "General structure for capturing comorbid conditions with respect t
 * extension contains RelatedConditionAbsent named comorbidConditionAbsent 0..*
 // Indicate MS and NotUsed elements
 * extension and extension[comorbidConditionPresent] and extension[comorbidConditionAbsent] and status and code and subject and focus and effective[x] MS
+* value[x] only Quantity or integer
+* value[x] ^definition = "Comorbidity score or risk index"
 * insert NotUsed(bodySite)
 * insert NotUsed(specimen)
 * insert NotUsed(device)
-/* Design options considered and rejected
+/* 
+* Design options considered and rejected
 * 1. Why not use component?
 *    Component does not support references, and we would like to 
 *    give users the option of either a condition code or Reference(Condition)

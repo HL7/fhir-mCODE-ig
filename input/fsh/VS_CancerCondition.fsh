@@ -76,6 +76,7 @@ Description:  "Types of secondary malignant neoplastic disease, coded in SNOMED 
 * ICD10CM#C7B.09 "Secondary carcinoid tumors of other sites"
 * ICD10CM#C7B.1 "Secondary merkel cell carcinoma"
 * ICD10CM#C7B.8 "Other secondary neuroendocrine tumors"
+* ^experimental = false
 
 ValueSet:  MelanomaInSituDisorderVS
 Id: mcode-melanoma-in-situ-disorder-vs
@@ -115,6 +116,7 @@ Description:    "Types of melanoma in-situ, coded in SNOMED CT or ICD-10-CM."
 * ICD10CM#D03.72 "Melanoma in situ of left lower limb, including hip"
 * ICD10CM#D03.8 "Melanoma in situ of other sites"
 * ICD10CM#D03.9 "Melanoma in situ, unspecified"
+* ^experimental = false
 
 ValueSet:  CytologicEvidenceOfMalignancyVS
 Id: mcode-cytologic-evidence-malignancy-vs
@@ -125,6 +127,7 @@ Description:    "Types of cytological evience of malignancy, coded in SNOMED CT 
 * SCT#126371000119101 "Cytological evidence of malignancy on vaginal Papanicolaou smear (finding)"
 * ICD10CM#R85.614 "Cytologic evidence of malignancy on smear of anus"
 * ICD10CM#R87.624 "Cytologic evidence of malignancy on smear of vagina"
+* ^experimental = false
 
 ValueSet:  HypereosinophilicSyndromeDisorderVS
 Id: mcode-hypereosinophilic-syndrome-disorder-vs
@@ -136,6 +139,7 @@ Description:    "Types of hypereosinophilic syndrome, coded in SNOMED CT or ICD-
 * ICD10CM#D72.111	"Lymphocytic Variant Hypereosinophilic Syndrome [LHES]"
 * ICD10CM#D72.118	"Other hypereosinophilic syndrome"
 * ICD10CM#D72.119	"Hypereosinophilic syndrome [HES], unspecified"
+* ^experimental = false
 
 ValueSet:  CarcinomaInSituDisorderVS
 Id: mcode-carcinoma-in-situ-disorder-vs
@@ -218,6 +222,7 @@ Description:    "Types of carcinoma in-situ, coded in SNOMED CT or ICD-10-CM."
 * ICD10CM#D09.3 "Carcinoma in situ of thyroid and other endocrine glands"
 * ICD10CM#D09.8 "Carcinoma in situ of other specified sites"
 * ICD10CM#D09.9 "Carcinoma in situ, unspecified"
+* ^experimental = false
 
 ValueSet:  BenignUncertainNeoplasmBrainCNSDisorderVS
 Id: mcode-benign-uncertain-neoplasm-brain-cns-disorder-vs
@@ -263,6 +268,7 @@ Description:    "Types of benign neoplasms and neoplasms of uncertain behavior o
 * ICD10CM#D44.3 "Neoplasm of uncertain behavior of pituitary gland"
 * ICD10CM#D44.4 "Neoplasm of uncertain behavior of craniopharyngeal duct"
 * ICD10CM#D44.5 "Neoplasm of uncertain behavior of pineal gland"
+* ^experimental = false
 
 
 // This VS is big, so I put it last in the file (order doesn't matter to FSH)
@@ -278,7 +284,7 @@ Description:    "Types of primary malignant neoplastic disease, coded in SNOMED 
 * include codes from valueset MelanomaInSituDisorderVS
 * include codes from valueset BenignUncertainNeoplasmBrainCNSDisorderVS
 * include codes from valueset CytologicEvidenceOfMalignancyVS
-
+* ^experimental = false
 
 ValueSet: CancerDisorderVS
 Id: mcode-cancer-disorder-vs
@@ -288,7 +294,7 @@ Description:   "A broad cancer-related value set containing both primary and sec
 * include codes from valueset PrimaryCancerDisorderVS
 * include codes from valueset SecondaryCancerDisorderVS
 * include codes from valueset HistologyMorphologyBehaviorVS
-
+* ^experimental = false
 
 ValueSet:   HistologyMorphologyBehaviorVS
 Id: mcode-histology-morphology-behavior-vs
@@ -305,6 +311,7 @@ Description: "Codes representing the structure, arrangement, and behavioral char
 * exclude codes from system SCT where concept is-a #128640002 "Glandular intraepithelial neoplasia, grade III (morphologic abnormality)"
 * exclude codes from system SCT where concept is-a #450890000 "Glandular intraepithelial neoplasia, low grade (morphologic abnormality)"
 * exclude codes from system SCT where concept is-a #703548001 "Endometrioid intraepithelial neoplasia (morphologic abnormality)"
+* ^experimental = false
 
 ValueSet:  PrimaryMalignantNeoplasmDisorderVS
 Id: mcode-primary-malignant-neoplasm-disorder-vs
@@ -1359,7 +1366,7 @@ Description:    "Types of primary malignant neoplasms, coded in SNOMED CT or ICD
 * ICD10CM#D47.Z9 "Other specified neoplasms of uncertain behavior of lymphoid, hematopoietic and related tissue"
 * ICD10CM#D49.6 "Neoplasm of unspecified behavior of brain"
 * ICD10CM#D49.7 "Neoplasm of unspecified behavior of endocrine glands and other parts of nervous system"
-
+* ^experimental = false
 
 // Wendy Schwaber sez:
 // The Header/roll-up codes/values are not valid codes for CMS so I do not recommend you include them in your value set.  I believe you will get a lot of questions, if not pushback if they are included.  The reason cancer registries included them, in my opinion, is that we are concerned that some of our reporting

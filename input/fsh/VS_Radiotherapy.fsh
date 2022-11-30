@@ -10,6 +10,7 @@ Description: "Codes describing the modalities of teleradiotherapy (external beam
 * SCT#80347004 "External beam radiation therapy neutrons (procedure)"
 * SCT#1156505006 "External beam radiation therapy using carbon ions (procedure)"
 * SCT#1156506007 "External beam radiation therapy using photons (procedure)"
+* ^experimental = false
 
 ValueSet: BrachytherapyModalityVS
 Id: mcode-brachytherapy-modality-vs
@@ -23,6 +24,7 @@ Description: "Codes describing the modalities of brachytherapy procedures."
 * SCT#394902000 "High dose brachytherapy (procedure)"
 * SCT#438629002 "High dose rate electronic brachytherapy (procedure)"
 * SCT#440252007 "Administration of radiopharmaceutical (procedure)"
+* ^experimental = false
 
 ValueSet: RadiotherapyModalityVS
 Id: mcode-radiotherapy-modality-vs
@@ -31,6 +33,7 @@ Description: "Codes describing the modalities of external beam and brachytherapy
 * insert SNOMEDCTCopyrightForVS
 * include codes from valueset TeleradiotherapyModalityVS
 * include codes from valueset BrachytherapyModalityVS
+* ^experimental = false
 
 //----------- TECHNIQUES -----------------------
 //
@@ -46,6 +49,7 @@ Description: "Codes describing the techniques of teleradiotherapy (external beam
 * include codes from valueset TeleradiotherapyProtonBeamTechniqueVS
 // FLASH should be in here somewhere: need a temp code if we want to use it before January 2022
 // * SCT#1163157007 "Ultra high dose rate radiotherapy (procedure)"
+* ^experimental = false
 
 ValueSet: TeleradiotherapyPhotonBeamTechniqueVS
 Id: mcode-teleradiotherapy-photon-beam-technique-vs
@@ -58,6 +62,7 @@ Description: "Allowed techniques for photon beam modality"
 * SCT#1162782007 "Three dimensional external beam radiation therapy (procedure)"
 * SCT#1156526006 "Two dimensional external beam radiation therapy (procedure)"
 * SCT#168524008 "Radiotherapy - intraoperative control (procedure)"
+* ^experimental = false
 
 ValueSet: TeleradiotherapyElectronBeamTechniqueVS
 Id: mcode-teleradiotherapy-electron-beam-technique-vs
@@ -68,6 +73,7 @@ Description: "Allowed techniques for electron beam modality"
 * SCT#1162782007 "Three dimensional external beam radiation therapy (procedure)"
 * SCT#1156526006 "Two dimensional external beam radiation therapy (procedure)"
 * SCT#168524008 "Radiotherapy - intraoperative control (procedure)"
+* ^experimental = false
 
 ValueSet: TeleradiotherapyNeutronTechniqueVS
 Id: mcode-teleradiotherapy-neutron-beam-technique-vs
@@ -77,6 +83,7 @@ Description: "Allowed techniques for neutron beam modality"
 * SCT#169317000 "Neutron capture therapy (procedure)"
 // * SCT#1162782007 "Three dimensional external beam radiation therapy (procedure)"
 * SCT#1162782007 "Three dimensional external beam radiation therapy (procedure)"
+* ^experimental = false
 
 ValueSet: TeleradiotherapyCarbonIonBeamTechniqueVS
 Id: mcode-teleradiotherapy-carbon-ion-beam-technique-vs
@@ -87,6 +94,7 @@ Description: "Allowed techniques for carbon ion beam modality"
 * SCT#1156528007 "External beam radiation therapy using particle spot scanning technique (procedure)"
 * SCT#1204242009 "External beam radiation therapy using particle scanning technique (procedure)"
 // * SCT#1156525005 "Mixed beam external beam radiation therapy (procedure)" -- removed by RTTD Terminology decision 9/21
+* ^experimental = false
 
 ValueSet: TeleradiotherapyProtonBeamTechniqueVS
 Id: mcode-teleradiotherapy-proton-beam-technique-vs
@@ -97,6 +105,7 @@ Description: "Allowed techniques for proton beam modality"
 * SCT#1156528007 "External beam radiation therapy using particle spot scanning technique (procedure)"
 * SCT#1204242009 "External beam radiation therapy using particle scanning technique (procedure)"
 // * SCT#1156525005 "Mixed beam external beam radiation therapy (procedure)" -- RTTD Terminology decision 9/21
+* ^experimental = false
 
 ValueSet: BrachytherapyTechniqueVS
 Id: mcode-brachytherapy-technique-vs
@@ -117,6 +126,7 @@ Description: "Codes describing the techniques of brachytherapy (internal or surf
 //* SCT#168524008 "Radiotherapy - intraoperative control (procedure)"
 //* SCT#14473006 "Surface brachytherapy (procedure)"
 //* SCT#16560241000119104 "Oral radionuclide therapy (procedure)"
+* ^experimental = false
 
 ValueSet: BrachytherapyPermanentSeedsTechniqueVS
 Id: mcode-brachytherapy-permanent-seeds-technique-vs
@@ -124,6 +134,7 @@ Title: "Brachytherapy Permanent Seeds Technique Value Set"
 Description: "Allowed techniques for brachytherapy modality internal radiotherapy - permanent seeds"
 * insert SNOMEDCTCopyrightForVS
 * SCT#113120007 "Interstitial brachytherapy (procedure)"
+* ^experimental = false
 
 ValueSet: BrachytherapyLowDoseRateTemporaryTechniqueVSs
 Id: mcode-brachytherapy-low-dose-rate-temporary-technique-vs
@@ -133,6 +144,7 @@ Description: "Allowed techniques for brachytherapy modality Low Dose Rate using 
 * SCT#384692006 "Intracavitary brachytherapy (procedure)"
 * SCT#113120007 "Interstitial brachytherapy (procedure)"
 * SCT#14473006 "Surface brachytherapy (procedure)"
+* ^experimental = false
 
 ValueSet: BrachytherapyPulsedDoseRateTechniqueVS
 Id: mcode-brachytherapy-pulsed-dose-rate-technique-vs
@@ -141,6 +153,7 @@ Description: "Allowed techniques for brachytherapy modality Pulsed Dose Rate"
 * insert SNOMEDCTCopyrightForVS
 * SCT#384692006 "Intracavitary brachytherapy (procedure)"
 * SCT#113120007 "Interstitial brachytherapy (procedure)"
+* ^experimental = false
 
 ValueSet: BrachytherapyHighDoseRateTechniqueVS
 Id: mcode-brachytherapy-high-dose-rate-technique-vs
@@ -154,6 +167,7 @@ Description: "Allowed techniques for brachytherapy modality High Dose Rate"
 * SCT#384691004 "Intraluminal brachytherapy (procedure)"
 * SCT#168524008 "Radiotherapy - intraoperative control (procedure)"
 * SCT#14473006 "Surface brachytherapy (procedure)"
+* ^experimental = false
 
 ValueSet: BrachytherapyHighDoseRateElectronicTechniqueVS
 Id: mcode-brachytherapy-high-dose-rate-electronic-technique-vs
@@ -166,6 +180,7 @@ Description: "Allowed techniques for brachytherapy modality High Dose Rate elect
 * SCT#384691004 "Intraluminal brachytherapy (procedure)"
 * SCT#168524008 "Radiotherapy - intraoperative control (procedure)"
 * SCT#14473006 "Surface brachytherapy (procedure)"
+* ^experimental = false
 
 ValueSet: BrachytherapyRadiopharmaceuticalTechniqueVS
 Id: mcode-brachytherapy-radiopharmaceutical-technique-vs
@@ -176,6 +191,7 @@ Description: "Allowed techniques for brachytherapy modality radiopharmaceutical"
 * SCT#1156383000 "Intravascular brachytherapy (procedure)"
 * SCT#384692006 "Intracavitary brachytherapy (procedure)"
 * SCT#113120007 "Interstitial brachytherapy (procedure)"
+* ^experimental = false
 
 ValueSet: RadiotherapyTechniqueVS
 Id: mcode-radiotherapy-technique-vs
@@ -185,6 +201,7 @@ Description: "Codes describing the techniques of external beam and brachytherapy
 // Union of EBRT and brachytherapy value sets
 * include codes from valueset TeleradiotherapyTechniqueVS
 * include codes from valueset BrachytherapyTechniqueVS
+* ^experimental = false
 
 ValueSet: RadiotherapyVolumeTypeVS
 Id: mcode-radiotherapy-volume-type-vs
@@ -198,6 +215,7 @@ Description: "Codes describing the types of body volumes used in radiotherapy pl
 * SCT#1162586008 "Irradiated volume of organ at risk (observable entity)"
 * SCT#1201745009 "Internal target volume (observable entity)"
 * SCT#1201746005 "Internal gross tumor volume (observable entity)"
+* ^experimental = false
 
 ValueSet: RadiotherapyTreatmentLocationQualifierVS
 Id: mcode-radiotherapy-treatment-location-qualifier-vs
@@ -250,6 +268,7 @@ Description: "Various modifiers that can be applied to body locations where radi
 * SCT#1162614009 "Lymph node level X (qualifier value)"
 * SCT#1162615005 "Lymph node level XA (qualifier value)"
 * SCT#1162613003 "Lymph node level XB (qualifier value)"
+* ^experimental = false
 
 
 ValueSet: RadiotherapyTreatmentLocationVS
@@ -611,3 +630,4 @@ Description: "Codes describing the body locations where radiotherapy treatments 
 * SCT#1187337007 "Jugular Fossa (body structure)" // Jugular Fossa
 * SCT#35763008 "Structure of posterior fossa of cranial cavity (body structure)" // Posterior Fossa
 * SCT#87166008 "Vomer bone structure (body structure)" // Vomer
+* ^experimental = false

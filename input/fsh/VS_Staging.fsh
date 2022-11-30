@@ -4,6 +4,7 @@ Title: "Cancer Staging System Value Set"
 Description: "System used for staging."
 * insert SNOMEDCTCopyrightForVS
 * include codes from system SCT where concept is-a #254292007 "Tumor staging (tumor staging)"
+* ^experimental = false
 
 ValueSet: ObservationCodesStageGroupVS
 Id: mcode-observation-codes-stage-group-vs
@@ -14,6 +15,7 @@ Description: "Identifying codes based on the timing of classification for stage 
 * LNC#21902-2 "Stage group.pathology Cancer"
 * LNC#21914-7 "Stage group.other Cancer"
 // Keep in sync with the intro .md page for this ValueSet, which lists these codes.
+* ^experimental = false
 
 ValueSet: ObservationCodesPrimaryTumorVS
 Id: mcode-observation-codes-primary-tumor-vs
@@ -24,6 +26,7 @@ Description: "Identifying codes based on the timing of classification for primar
 * LNC#21899-0 "Primary tumor.pathology Cancer"
 * LNC#21911-3 "Primary tumor.other [Class] Cancer"
 // Keep in sync with the intro .md page for this ValueSet, which lists these codes.
+* ^experimental = false
 
 ValueSet: ObservationCodesRegionalNodesVS
 Id: mcode-observation-codes-regional-nodes-vs
@@ -34,6 +37,7 @@ Description: "Identifying codes based on the timing of classification for region
 * LNC#21900-6 "Regional lymph nodes.pathology [Class] Cancer"
 * LNC#21912-1 "Regional lymph nodes.other [Class] Cancer"
 // Keep in sync with the intro .md page for this ValueSet, which lists these codes.
+* ^experimental = false
 
 ValueSet: ObservationCodesDistantMetastasesVS
 Id: mcode-observation-codes-distant-metastases-vs
@@ -44,27 +48,32 @@ Description: "Identifying codes based on the timing of classification for distan
 * LNC#21901-4 "Distant metastases.pathology [Class] Cancer"
 * LNC#21913-9 "Distant metastases.other [Class] Cancer"
 // Keep in sync with the intro .md page for this ValueSet, which lists these codes.
+* ^experimental = false
 
 ValueSet: CancerStageGroupVS
 Id: mcode-cancer-stage-group-vs
 Title: "Cancer Stage Group Value Set"
 Description: "This value set is intended to contain allowable values for Stage Group, according to TNM staging rules. AJCC codes (preferably, version 8 for current cancers) SHOULD be used."
 * codes from system AJCC
+* ^experimental = false
 
 ValueSet: TNMPrimaryTumorCategoryVS
 Id: mcode-tnm-primary-tumor-category-vs
 Title: "TNM Primary Tumor Category Value Set"
 Description: "This value set is intended to contain allowable values for the T category, according to TNM staging rules. AJCC codes (preferably, version 8 for current cancers) SHOULD be used."
 * codes from system AJCC
+* ^experimental = false
 
 ValueSet: TNMRegionalNodesCategoryVS
 Id: mcode-tnm-regional-nodes-category-vs
 Title: "TNM Regional Nodes Category Value Set"
 Description: "This value set is intended to contain allowable values for the N category, according to TNM staging rules. AJCC codes (preferably, version 8 for current cancers) SHOULD be used."
 * include codes from system AJCC
+* ^experimental = false
 
 ValueSet: TNMDistantMetastasesCategoryVS
 Id: mcode-tnm-distant-metastases-category-vs
 Title: "TNM Distant Metastases Category Value Set"
 Description: "This value set is intended to contain allowable values for the M category, according to TNM staging rules. AJCC codes (preferably, version 8 for current cancers) SHOULD be used."
 * codes from system AJCC
+* ^experimental = false

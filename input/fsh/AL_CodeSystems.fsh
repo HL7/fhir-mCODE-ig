@@ -13,6 +13,7 @@ Alias:   RXN = http://www.nlm.nih.gov/research/umls/rxnorm
 Alias:   CPT = http://www.ama-assn.org/go/cpt
 Alias:   HGNC = http://www.genenames.org
 Alias:   HGVS = http://varnomen.hgvs.org
+Alias:   HGVSVS_alt = http://hl7.org/fhir/uv/genomics-reporting/ValueSet/hgvs-vs
 
 // Code systems lacking a recognized canonical at terminology.hl7.org
 Alias:   AJCC = http://cancerstaging.org

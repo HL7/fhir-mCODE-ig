@@ -131,8 +131,8 @@ Description: "Extended example as a mCODE Patient Bundle"
 * entry[=].fullUrl = "http://example.org/fhir/Observation/us-core-observation-lab-tumor-dcis-jenny-m"
 // * entry[=].resource.meta.profile[0]profile[0] = "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
 * entry[+].resource = us-core-practitioner-owen-oncologist
-* entry[=].fullUrl = "http://example.org/fhir/Pracititioner/us-core-practitioner-owen-oncologist"
+* entry[=].fullUrl = "http://example.org/fhir/Practitioner/us-core-practitioner-owen-oncologist"
 // * entry[=].resource.meta.profile[0]profile[0] = "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner"
 * entry[+].resource = us-core-practitioner-peter-pathologist
-* entry[=].fullUrl = "http://example.org/fhir/Pracititioner/us-core-practitioner-peter-pathologist"
+* entry[=].fullUrl = "http://example.org/fhir/Practitioner/us-core-practitioner-peter-pathologist"
 // * entry[=].resource.meta.profile[0]profile[0] = "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner"

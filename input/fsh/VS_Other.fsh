@@ -5,6 +5,7 @@ Description:  "Codes describing the location(s) of primary or secondary cancer. 
 * insert SNOMEDCTCopyrightForVS
 * include codes from system SCT where concept is-a #123037004  "Body Structure"
 * include codes from system ICDO3  // currently no way to filter down to just topology codes (that I know of)
+* ^experimental = false
 
 ValueSet:   ConditionStatusTrendVS
 Id: mcode-condition-status-trend-vs
@@ -18,6 +19,7 @@ Description:  "How patient's given disease, condition, or ability is trending."
 * SCT#709137006 "Patient condition undetermined (finding)"
 * SCT#550991000124107 "Malignant neoplasm in full remission (disorder)" // FHIR-32837 - MLT_note: SCT FN is displayed. The initial term of "cancer in complete remission" is a synonym for the concept.
 * SCT#551001000124108 "Malignant neoplasm in partial remission (disorder)" // FHIR-32837 - MLT_note: SCT FN is displayed. The initial term of "cancer in partial remission" is a synonym for the concept.
+* ^experimental = false
 
 
 
@@ -37,6 +39,7 @@ Description:  "The type of evidence backing up the clinical determination of can
 // NAACR 8 intentionally NOT supported - Clinical Diagnosis
 // NAACR 9 represented by no value provided -- Unknown
 * include codes from system SCT where concept is-a #250724005 "Tumor marker measurement procedure (procedure)"
+* ^experimental = false
 
 ValueSet: CancerRelatedSurgicalProcedureVS
 Id: mcode-cancer-related-surgical-procedure-vs
@@ -46,6 +49,7 @@ Description: "Includes surgical procedure codes from SNOMED CT, ICD-10-PCS and C
 * include codes from system SCT where concept is-a #387713003 "Surgical procedure (procedure)"
 * include codes from system CPT
 * include codes from system ICD10PCS
+* ^experimental = false
 
 ValueSet: BodyLocationAndLateralityQualifierVS
 Id: mcode-body-location-and-laterality-qualifier-vs
@@ -55,6 +59,7 @@ Description: "Qualifiers to refine a body structure or location including qualif
 * include codes from system SCT where concept is-a #106233006 "Topographic Modifier (qualifer)"
 * include codes from system SCT where concept is-a #272424004 "Relative Sites (qualifier)"
 * SCT#255503000 "Entire (qualifier value)"
+* ^experimental = false
 
 ValueSet: LateralityQualifierVS
 Id: mcode-laterality-qualifier-vs
@@ -66,6 +71,7 @@ Description: "Qualifiers to specify laterality."
 * SCT#24028007	"Right (qualifier value)"
 * SCT#7771000	"Left (qualifier value)"
 // * SCT#66459002	"Unilateral (qualifier value)"  -- this is used as 'left OR right'.   Given the uncertainty of the use case, it is dropped.
+* ^experimental = false
 
 ValueSet: BodyLocationQualifierVS
 Id: mcode-body-location-qualifier-vs
@@ -75,6 +81,7 @@ Description: "Qualifiers to refine a body structure or location including qualif
 // Changed to intensional definition
 * include codes from valueset BodyLocationAndLateralityQualifierVS
 * exclude codes from valueset LateralityQualifierVS // laterality is separated into a separate value set
+* ^experimental = false
 
 ValueSet:   TreatmentTerminationReasonVS
 Id: mcode-treatment-termination-reason-vs
@@ -90,6 +97,7 @@ Description:  "Values used to describe the reasons for stopping a treatment or e
 * SCT#309846006   "Treatment not available (situation)"
 * SCT#399307001   "Lost to follow-up (finding)" // added by mCODE Exec Council recommendation 2/12/2021
 * SCT#419620001   "Death (event)"  // FHIR-32832  (but why not 419099009 Dead (finding) because other values are findings or situations?)
+* ^experimental = false
 
 
 ValueSet:		ProcedureIntentVS
@@ -105,6 +113,7 @@ Description:	"The purpose of a procedure."
 * SCT#429892002 "Guidance intent"
 * SCT#360156006 "Screening - procedure intent"
 * SCT#447295008 "Forensic intent"
+* ^experimental = false
 
 //* SCT#360271000 "Prophylaxis - procedure intent"  // redundant with preventive. See https://en.wikipedia.org/wiki/Preventive_healthcare for the (slight) distinction between these terms.
 //* SCT#73847000  "Neo-adjuvant - intent"  // relates to timing, not intent
@@ -118,6 +127,7 @@ Title:           "Tumor Size Units Value Set"
 Description:     "Acceptable units for measuring tumor size"
 * UCUM#mm        "Millimeter"
 * UCUM#cm        "Centimeter"
+* ^experimental = false
 
 ValueSet:        TumorSizeMethodVS
 Id:              mcode-tumor-size-method-vs
@@ -138,3 +148,4 @@ Description:     "Code for methods of measuring tumor size, including physical e
 // Other Imaging.  If one of the above doesn't cut it.
 * SCT#363679005 "Imaging (procedure)"
 // * include codes from system LNC where concept is-a #LP29684-5
+* ^experimental = false

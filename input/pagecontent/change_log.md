@@ -4,7 +4,7 @@ The primary goal of the STU 2.1 update is to incorporate newly-issued SNOMED CT 
 * [PrimaryCancerCondition]'s stage.type value set binding was corrected. It should have indicated the staging method that gave rise to the value appearing in stage.summary (such as AJCC Version 8).
 * Corrected extended example, which formerly used invalid stage "pM0". Replaced with a data absent reason "not applicable".
 * "SNOMED-CT" was changed to the preferred form "SNOMED CT" in narratives
-* New SNOMED Codes that have been issued since the STU 2 publication have replaced temporary codes that were incorporated in the STU2:
+* New SNOMED Codes issued since the STU 2 publication have replaced temporary codes that were incorporated in the STU2:
   * #1204242009  "External beam radiation therapy using particle scanning technique (procedure)"
   * #1217123003 "Radiotherapy Course of Treatment (regime/therapy)"
   * #1201745009 "Internal Target Volume (observable entity)"

@@ -1,0 +1,10 @@
+{
+    "package-id" : "hl7.fhir.us.mcode",
+    "version" : "2.1.0",
+    "path" : "http://hl7.org/fhir/us/mcode/STU2.1",
+    "status" : "trial-use",
+    "sequence" : "STU 2",
+    "desc" : "Update to mCODE STU2 incorporating newly-issued SNOMEDCT codes",
+    "descmd" : "Update to mCODE STU2 incorporating newly-issued SNOMEDCT codes",
+    "changes" : "change_log.html",
+  }

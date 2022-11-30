@@ -48,6 +48,7 @@ Description: "Codes requested from LOINC, but not yet approved or assigned. Code
 * #ULCER_PEPTIC    "Peptic ulcer with bleeding (Elixhauser comorbidity category)" "Patient has a disorder in the value set ElixhauserUlcerVS"
 * #VALVE    "Valvular disease (Elixhauser comorbidity category)" "Patient has a disorder in the value set ElixhauserValvularDiseaseVS"
 * #WGHTLOSS    "Weight loss (Elixhauser comorbidity category)" "Patient has a disorder in the value set ElixhauserWeightLossVS"
+* ^experimental = false
 
 CodeSystem: SnomedRequestedCS
 Id: snomed-requested-cs
@@ -56,3 +57,4 @@ Description: "Codes requested from SNOMED by mCODE, to be issued at a later date
 * ^caseSensitive = true
 * #USCRS-34356 "Bowel space (observable entity)"               // new request submitted 7/2022
 * #USCRS-34358 "Small bowel space (observable entity)"         // new request submitted 7/2022
+* ^experimental = false

@@ -3,30 +3,35 @@ Id: mcode-clinvar-vs
 Title: "ClinVar Value Set"
 Description: "Value set of human genomic variants, drawn from [ClinVar](https://www.ncbi.nlm.nih.gov/clinvar/). The codes in this value set refer to the ClinVar Variation ID, or the identifier for the variant or set of variants that were interpreted. [Source: NCBI ClinVar Data Dictionary](https://www.ncbi.nlm.nih.gov/projects/clinvar/ClinVarDataDictionary.pdf)"
 * codes from system CLINVAR
+* ^experimental = false
 
 ValueSet:  HGNCVS
 Id: mcode-hgnc-vs
 Title: "HUGO Gene Nomenclature Committee Gene Names Value Set"
 Description: "HUGO Gene Nomenclature Committee Gene Names Value Set"
 * codes from system HGNC
+* ^experimental = false
 
 ValueSet: HGVSVS
 Id: mcode-hgvs-vs
 Title: "Human Genome Variation Society Sequence Variant Nomenclature Value Set"
 Description: "HGVS nomenclature is used to report and exchange information regarding variants found in DNA, RNA, and protein sequences."
 * codes from system HGVS
+* ^experimental = false
 
 ValueSet: DNAChangeTypeVS
 Id: mcode-dna-change-type-vs
 Title: "DNA Change Type Value Set"
 Description: "DNA Change Type of a variant"
 * include codes from system SO where concept descendent-of #SO:0002072
+* ^experimental = false
 
 ValueSet: GenomicMolecularConsequenceVS
 Id: mcode-genomic-molecular-consequence-vs
 Title: "Genomic Molecular Consequence Value Set"
 Description: "Changes in a structural features of a sequence due to the observed variant."
 * include codes from system SO where concept descendent-of #SO:0001537
+* ^experimental = false
 
 /*
 ValueSet: TumorMarkerTestVS
@@ -141,6 +146,7 @@ Description:    "The type of specimen analyzed in a genomic test. The values inc
 * SPTY#UR        "Urine"           // FHIR-32827
 * SPTY#STL       "Stool = Fecal"   // FHIR-32827
 //* SPTY#OTH       "Source, Other"   // FHIR-32827 -- Other should not be added because the VS is extensible
+* ^experimental = false
 
 
 ValueSet: TumorMarkerTestVS
@@ -735,3 +741,4 @@ Description:    "Codes representing tests for tumor markers. This value set of L
 * LNC#85100-6 "FLT3 gene internal tandem duplication [Presence] in Bone marrow by Molecular genetics method"
 * LNC#92843-2 "FLT3 gene p.Asp835 mutations [Presence] in Blood or Tissue by Molecular genetics method"
 * LNC#48972-4 "FGFR2 gene+FGFR3 gene mutations found [Identifier] in Blood or Tissue by Molecular genetics method Nominal"
+* ^experimental = false

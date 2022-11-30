@@ -1,4 +1,4 @@
-### mCODE STU 2.0.1 Technical Correciton (November 2022)
+### mCODE STU 2.0.1 Technical Correction (November 2022)
 The following changes occurred between STU 2 publication (January 2022) and STU 2.0.1 (October 2022).
 
 * [PrimaryCancerCondition]'s stage.type value set binding was corrected. It should have indicated the staging method that gave rise to the value appearing in stage.summary (such as AJCC Version 8).

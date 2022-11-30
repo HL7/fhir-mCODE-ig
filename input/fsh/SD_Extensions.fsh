@@ -11,7 +11,7 @@ Id: mcode-related-condition-absent
 Title:  "Related Condition Absent Extension"
 Description: "A condition that is NOT present, related to the resource."
 * ^extension[FMM].valueInteger = 4
-* value[x] only CodeableConcept or Reference(Condition) 
+* value[x] only CodeableConcept
 * value[x] 1..1
 
 Extension: CancerDiseaseStatusEvidenceType

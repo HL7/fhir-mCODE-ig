@@ -93,6 +93,10 @@ Description: "Example of Patient"
 * address.country = "US"
 * communication.language = urn:ietf:bcp:47#en-US "English (Region=United States)"
 * communication.language.text = "English"
+* extension[USCoreRace].extension[ombCategory].valueCoding = OmbRaceCat#2054-5 "Black or African American"
+* extension[USCoreRace].extension[text].valueString = "Black or African American"
+* extension[USCoreEthnicity].extension[ombCategory].valueCoding = OmbRaceCat#2186-5 "Not Hispanic or Latino"
+* extension[USCoreEthnicity].extension[text].valueString = "Not Hispanic or Latino"
 
 Instance: cancer-patient-eve-anyperson
 InstanceOf: CancerPatient
@@ -125,6 +129,10 @@ Description: "Example of Patient"
 * address.country = "US"
 * communication.language = urn:ietf:bcp:47#en-US "English (Region=United States)"
 * communication.language.text = "English"
+* extension[USCoreRace].extension[ombCategory].valueCoding = OmbRaceCat#2106-3 "White"
+* extension[USCoreRace].extension[text].valueString = "White"
+* extension[USCoreEthnicity].extension[ombCategory].valueCoding = OmbRaceCat#2135-2 "Hispanic or Latino"
+* extension[USCoreEthnicity].extension[text].valueString = "Hispanic or Latino"
 
 Instance: cancer-patient-adam-everyman
 InstanceOf: CancerPatient
@@ -149,6 +157,10 @@ Description: "Example of Patient"
 * address.country = "US"
 * communication.language = urn:ietf:bcp:47#en-US "English (Region=United States)"
 * communication.language.text = "English"
+* extension[USCoreRace].extension[ombCategory].valueCoding = OmbRaceCat#2106-3 "White"
+* extension[USCoreRace].extension[text].valueString = "White"
+* extension[USCoreEthnicity].extension[ombCategory].valueCoding = OmbRaceCat#2186-5 "Not Hispanic or Latino"
+* extension[USCoreEthnicity].extension[text].valueString = "Not Hispanic or Latino"
 
 Instance: us-core-practitioner-kyle-anydoc
 InstanceOf: USCorePractitioner

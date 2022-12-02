@@ -21,6 +21,7 @@ parameters:
   show-inherited-invariants: false
   version-comparison: n/a
   path-expansion-params: '../../exp-params.json'  #path is relative to [base]/fsh-generated/resources
+  path-binary: input/attachments
 copyrightYear: 2019+
 releaseLabel: Pre-STU 3 Development
 pages:

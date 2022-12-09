@@ -25,6 +25,10 @@ WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/mcode/Structure
 WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-primary-cancer-condition').baseDefinition: US FHIR Usage rules require that all profiles on Condition derive from one of the base US profiles
 WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-secondary-cancer-condition').baseDefinition: US FHIR Usage rules require that all profiles on Condition derive from one of the base US profiles
 
+# USCore Specimen  does not exist in USCore 4.0.0
+WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genomic-specimen').baseDefinition: US FHIR Usage rules require that all profiles on Specimen derive from the core US profile
+WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tumor-specimen').baseDefinition: US FHIR Usage rules require that all profiles on Specimen derive from the core US profile
+
 # SUPPRESS MESSAGES ABOUT BEING UNABLE TO DETERMINE WHETHER CODES ARE IN VALUE SETS BECAUSE THE CODE SYSTEM  IS  UNKNOWN
 [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/mcode/ValueSet/mcode-tnm-primary-tumor-category-vs because the value set or code system is not known to the validator]
 #[Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-staging-system-vs because the value set or code system is not known to the validator]
@@ -105,8 +109,8 @@ INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[36]: This element
 INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[37]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle|2.1.0
 INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[38]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle|2.1.0
 INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[39]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle|2.1.0
-INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[40]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle|2.1.0INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[32].resource.ofType(DiagnosticReport).category[1]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-lab
-INFORMATION: DiagnosticReport/us-core-diagnosticreport-lab-jenny-m: DiagnosticReport.category[1]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-lab
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[40]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle|2.1.0
+INFORMATION: DiagnosticReport/us-core-diagnosticreport-lab-jenny-m: DiagnosticReport.category[1]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-lab|4.0.0
 
 # SUPPRESS INFORMATION MESSAGES ABOUT BEING UNABLE TO SUPPORT CERTAIN CODE SYSTEMS
 INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[1].resource.ofType(Condition).stage[0].summary.coding[0]: Code System URI 'http://cancerstaging.org' is unknown so the code cannot be validated
@@ -115,6 +119,24 @@ WARNING: ValueSet.where(id = 'mcode-tnm-distant-metastases-category-vs'): Error 
 WARNING: ValueSet.where(id = 'mcode-tnm-primary-tumor-category-vs'): Error from server: Unable to provide support for code system http://cancerstaging.org
 WARNING: ValueSet.where(id = 'mcode-tnm-regional-nodes-category-vs'): Error from server: Unable to provide support for code system http://cancerstaging.org
 WARNING: ValueSet.where(id = 'mcode-cancer-stage-group-vs'): Error from server: Unable to provide support for code system http://cancerstaging.org
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[8].resource.ofType(Observation).value.ofType(CodeableConcept).coding[0]: Code System URI 'http://cancerstaging.org' is unknown so the code cannot be validated
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[9].resource.ofType(Observation).value.ofType(CodeableConcept).coding[0]: Code System URI 'http://cancerstaging.org' is unknown so the code cannot be validated
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[10].resource.ofType(Observation).value.ofType(CodeableConcept).coding[0]: Code System URI 'http://cancerstaging.org' is unknown so the code cannot be validated
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[11].resource.ofType(Observation).value.ofType(CodeableConcept).coding[0]: Code System URI 'http://cancerstaging.org' is unknown so the code cannot be validated
+INFORMATION: Condition/primary-cancer-condition-breast: Condition.stage[0].summary.coding[0]: Code System URI 'http://cancerstaging.org' is unknown so the code cannot be validated
+INFORMATION: Condition/primary-cancer-condition-jenny-m: Condition.stage[0].summary.coding[0]: Code System URI 'http://cancerstaging.org' is unknown so the code cannot be validated
+INFORMATION: Condition/primary-cancer-condition-nsclc: Condition.stage[0].summary.coding[0]: Code System URI 'http://cancerstaging.org' is unknown so the code cannot be validated
+INFORMATION: Observation/tnm-clinical-distant-metastases-category-cM0: Observation.value.ofType(CodeableConcept).coding[0]: Code System URI 'http://cancerstaging.org' is unknown so the code cannot be validated
+INFORMATION: Observation/tnm-clinical-distant-metastases-category-jenny-m: Observation.value.ofType(CodeableConcept).coding[0]: Code System URI 'http://cancerstaging.org' is unknown so the code cannot be validated
+INFORMATION: Observation/tnm-clinical-primary-tumor-category-cT3: Observation.value.ofType(CodeableConcept).coding[0]: Code System URI 'http://cancerstaging.org' is unknown so the code cannot be validated
+INFORMATION: Observation/tnm-clinical-primary-tumor-category-jenny-m: Observation.value.ofType(CodeableConcept).coding[0]: Code System URI 'http://cancerstaging.org' is unknown so the code cannot be validated
+INFORMATION: Observation/tnm-clinical-regional-nodes-category-cN3: Observation.value.ofType(CodeableConcept).coding[0]: Code System URI 'http://cancerstaging.org' is unknown so the code cannot be validated
+INFORMATION: Observation/tnm-clinical-regional-nodes-category-jenny-m: Observation.value.ofType(CodeableConcept).coding[0]: Code System URI 'http://cancerstaging.org' is unknown so the code cannot be validated
+INFORMATION: Observation/tnm-clinical-stage-group-3c: Observation.value.ofType(CodeableConcept).coding[0]: Code System URI 'http://cancerstaging.org' is unknown so the code cannot be validated
+INFORMATION: Observation/tnm-clinical-stage-group-jenny-m: Observation.value.ofType(CodeableConcept).coding[0]: Code System URI 'http://cancerstaging.org' is unknown so the code cannot be validated
+INFORMATION: Observation/tnm-pathologic-primary-tumor-category-jenny-m: Observation.value.ofType(CodeableConcept).coding[0]: Code System URI 'http://cancerstaging.org' is unknown so the code cannot be validated
+INFORMATION: Observation/tnm-pathologic-regional-nodes-category-jenny-m: Observation.value.ofType(CodeableConcept).coding[0]: Code System URI 'http://cancerstaging.org' is unknown so the code cannot be validated
+INFORMATION: Observation/tnm-pathologic-stage-group-jenny-m: Observation.value.ofType(CodeableConcept).coding[0]: Code System URI 'http://cancerstaging.org' is unknown so the code cannot be validated
 WARNING: ValueSet.where(id = 'mcode-clinvar-vs'): Error from server: Unable to provide support for code system http://www.ncbi.nlm.nih.gov/clinvar
 WARNING: ValueSet.where(id = 'mcode-dna-change-type-vs'): Error from server: Unable to provide support for code system http://www.sequenceontology.org/
 WARNING: ValueSet.where(id = 'mcode-cancer-related-surgical-procedure-vs'): Error from server: Unable to provide support for code system http://www.ama-assn.org/go/cpt

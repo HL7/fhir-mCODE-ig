@@ -4,7 +4,7 @@
 <version code="2.1.0" url="http://build.fhir.org/ig/HL7/fhir-mCODE-ig"/>
 <version code="2.0.0" url="http://hl7.org/fhir/us/mcode/STU2"/>
 <version code="1.16.0" url="http://hl7.org/fhir/us/mcode/2021May"/>
-<version code="1.0.1" url="http://hl7.org/fhir/us/mcode/STU1"/>
+<version code="1.0.1" deprecated="true" url="http://hl7.org/fhir/us/mcode/STU1"/>
 <version code="1.0.0" url="http://hl7.org/fhir/us/mcode/STU1"/>
 <version code="0.9.1" deprecated="true" url="http://hl7.org/fhir/us/mcode/2019Sep"/>
 <version code="0.1" deprecated="true"/>
@@ -268,8 +268,6 @@
 <artifact id="DiagnosticReport/genomics-report-jenny-m" key="DiagnosticReport-genomics-report-jenny-m" name="genomics-report-jenny-m"/>
 <artifact id="DiagnosticReport/genomics-report-john-anyperson" key="DiagnosticReport-genomics-report-john-anyperson" name="genomics-report-john-anyperson"/>
 <artifact id="Patient/gx-cancer-patient-incredible-hulk" key="Patient-gx-cancer-patient-incredible-hulk" name="gx-cancer-patient-incredible-hulk"/>
-<artifact id="Task/gx-genomic-medication-recommendation-brigatinib" key="Task-gx-genomic-medication-recommendation-brigatinib" name="gx-genomic-medication-recommendation-brigatinib"/>
-<artifact id="Task/gx-genomic-medication-recommendation-ceritinib" key="Task-gx-genomic-medication-recommendation-ceritinib" name="gx-genomic-medication-recommendation-ceritinib"/>
 <artifact id="Observation/gx-genomic-msi" key="Observation-gx-genomic-msi" name="gx-genomic-msi"/>
 <artifact id="Specimen/gx-genomic-specimen-tumornormal-normal" key="Specimen-gx-genomic-specimen-tumornormal-normal" name="gx-genomic-specimen-tumornormal-normal"/>
 <artifact id="Specimen/gx-genomic-specimen-tumornormal-tumor" key="Specimen-gx-genomic-specimen-tumornormal-tumor" name="gx-genomic-specimen-tumornormal-tumor"/>
@@ -277,9 +275,7 @@
 <artifact id="Observation/gx-genomic-therapeutic-implication-ceritinib" key="Observation-gx-genomic-therapeutic-implication-ceritinib" name="gx-genomic-therapeutic-implication-ceritinib"/>
 <artifact id="Observation/gx-genomic-tmb" key="Observation-gx-genomic-tmb" name="gx-genomic-tmb"/>
 <artifact id="Observation/gx-genomic-variant-fusion-met-alk" key="Observation-gx-genomic-variant-fusion-met-alk" name="gx-genomic-variant-fusion-met-alk"/>
-<artifact id="Observation/gx-genomic-variant-pertinent-negative-braf" key="Observation-gx-genomic-variant-pertinent-negative-braf" name="gx-genomic-variant-pertinent-negative-braf"/>
-<artifact id="Observation/gx-genomic-variant-pertinent-negative-kit" key="Observation-gx-genomic-variant-pertinent-negative-kit" name="gx-genomic-variant-pertinent-negative-kit"/>
-<artifact id="Observation/gx-genomic-variant-pertinent-negative-nras" key="Observation-gx-genomic-variant-pertinent-negative-nras" name="gx-genomic-variant-pertinent-negative-nras"/>
+<artifact id="Observation/gx-genomic-variant-pertinent-negative-nras-kit-braf" key="Observation-gx-genomic-variant-pertinent-negative-nras-kit-braf" name="gx-genomic-variant-pertinent-negative-nras-kit-braf"/>
 <artifact id="Observation/gx-genomic-variant-somatic-bap1-indel" key="Observation-gx-genomic-variant-somatic-bap1-indel" name="gx-genomic-variant-somatic-bap1-indel"/>
 <artifact id="Observation/gx-genomic-variant-somatic-cdkn2a-cnv" key="Observation-gx-genomic-variant-somatic-cdkn2a-cnv" name="gx-genomic-variant-somatic-cdkn2a-cnv"/>
 <artifact id="DiagnosticReport/gx-genomics-report-incredible-hulk" key="DiagnosticReport-gx-genomics-report-incredible-hulk" name="gx-genomics-report-incredible-hulk"/>

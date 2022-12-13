@@ -11,14 +11,18 @@ Four profiles relate to the capture of clinical genomics data:
 Additionally, the additional GRIG profiles are included in the mCODE bundle:
 
 * [Diagnostic Implication](http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition-diagnostic-implication.html)
-* [Medication Recommendation](http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition-medication-recommendation.html)
+* [Therapeutic Implication](http://hl7.org/fhir/uv/genomics-reporting/STU2/StructureDefinition-therapeutic-implication.html)
 * [Microsatellite Instability (MSI)](http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/msi)
 * [Tumor Mutation Burden (TMB)](http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/tmb)
 
 The diagram below illustrates the distinction within an mCODE bundle.
 
-<object data="mcode-cg-overlap.svg" type="image/svg+xml"></object>
+<div style="text-align: center;">
+<img src="mcode-cg-overlap.svg" alt="mCODE use of GRIG profiles" />
+</div>>
+
 <br/>
+
 ### Assumptions and Scope
 
 * mCODE genomics elements are a superset of those that may be available for exchange. There is no assumption that all data elements need to be captured or exchanged.
@@ -61,7 +65,7 @@ Some genomics reports are gene panels which include a list of genes that do not 
 
 Represent pertinent negatives by creating one instance of GenomicVariant with the following representation:
 * assert that the variant is absent by assigning the value of `"LA9634-2"` to Observation valueCodeableConcept.
-* include the list of all genes that are "negative" for the value in Observation component:gene-studied. 
+* include the list of all genes that are "negative" for the value in Observation component:gene-studied. Including multiple pertinent genes in the gene-studied component does not clearly link the variant representation with its associated gene and would require a full HGVS representation to derive it. However, this method does allow for grouping all genes whose variants found are not clinically actionable.
 
 #### Fusion Events
 

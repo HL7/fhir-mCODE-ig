@@ -108,6 +108,8 @@ Description: "GenomeX mCODE Example for Genomic Variant - BAP1"
 // * component[genomic-hgvs].valueCodeableConcept = HGVS#NM_004656.4:c.1768C>T "NM_004656.4:c.1768C>T"
 * component[molecular-consequence].valueCodeableConcept = SO#SO:0001743 "copy_number_loss"
 
+// MLT: All pertinent negative genes for a single report were combined into one variant "absent" resource.
+/*
 Instance: gx-genomic-variant-pertinent-negative-nras
 InstanceOf: GenomicVariant
 Description: "GenomeX mCODE Example for the absence of a notable variant - NRAS"
@@ -131,10 +133,11 @@ Description: "GenomeX mCODE Example for the absence of a notable variant - KIT"
 // * effectiveDateTime = "2019-04-01"
 * valueCodeableConcept = LNC#LA9634-2 "Absent"
 * component[gene-studied].valueCodeableConcept = HGNC#HGNC:7989 "KIT" 
+*/
 
-Instance: gx-genomic-variant-pertinent-negative-braf
+Instance: gx-genomic-variant-pertinent-negative-nras-kit-braf
 InstanceOf: GenomicVariant
-Description: "GenomeX mCODE Example for the absence of a notable variant - BRAF"
+Description: "GenomeX mCODE Example for the absence of a notable variant - KIT and BRAF"
 * status = #final "Final"
 * method = LNC#LA26398-0 "Sequencing"
 // value[x] has alternate codings depending on where to place the interpretation of "Positive or Negative".
@@ -142,7 +145,9 @@ Description: "GenomeX mCODE Example for the absence of a notable variant - BRAF"
 * subject = Reference(gx-cancer-patient-incredible-hulk)
 // * effectiveDateTime = "2019-04-01"
 * valueCodeableConcept = LNC#LA9634-2 "Absent"
-* component[gene-studied].valueCodeableConcept = HGNC#HGNC:1097 "BRAF" 
+* component[gene-studied][0].valueCodeableConcept = HGNC#HGNC:6342 "NRAS" 
+* component[gene-studied][1].valueCodeableConcept = HGNC#HGNC:7989 "KIT"
+* component[gene-studied][+].valueCodeableConcept = HGNC#HGNC:1097 "BRAF" 
 
 /* genomic-variant-fusion is an example of the
  * GenomicVariant to represent a gene fusion event.
@@ -182,6 +187,8 @@ Description: "Example for Microsatellite Instability"
 
 // ******** Recommended Actions *********
 // Here we insert potential therapies indicated for a variant as proposed in by the report.
+/****** COMMENTING OUT MEDICATION RECOMMENDATION - based on CGWG meeting on 12/12/22
+
 Instance: gx-genomic-medication-recommendation-brigatinib
 InstanceOf: CGMedicationRecommendation
 Description: "Example of a Pharmacogenomic Medication recommendation for brigatinib"
@@ -196,6 +203,8 @@ Description: "Example of a Pharmacogenomic Medication recommendation for ceritin
 * intent = #proposal "proposal"
 * reasonReference = Reference(gx-genomic-therapeutic-implication-ceritinib)
 
+*/
+
 // ******** Therapeutic Implications *********
 
 Instance: gx-genomic-therapeutic-implication-brigatinib
@@ -205,6 +214,7 @@ Description: "Example of how Genomics Reporting IG Therapeutic Implications fits
 * category[labCategory] = ObsCat#laboratory
 * derivedFrom = Reference(gx-genomic-variant-fusion-met-alk)
 * component[medication-assessed].valueCodeableConcept = RXN#1921217 "brigatinib"
+* component[predicted-therapeutic-implication].valueCodeableConcept = LNC#LA9661-5 "Presumed responsive"
 
 Instance: gx-genomic-therapeutic-implication-ceritinib
 InstanceOf: CGTherapeuticImplication
@@ -213,6 +223,8 @@ Description: "Example of how Genomics Reporting IG Therapeutic Implications fits
 * category[labCategory] = ObsCat#laboratory
 * derivedFrom = Reference(gx-genomic-variant-fusion-met-alk)
 * component[medication-assessed].valueCodeableConcept = RXN#1535457 "ceritinib"
+* component[predicted-therapeutic-implication].valueCodeableConcept = LNC#LA9661-5 "Presumed responsive"
+
 
 // ********** Genomics Report ***********
 Instance: gx-genomics-report-incredible-hulk
@@ -226,19 +238,14 @@ Description: "GenomeX Example for Genomics Report"
 * resultsInterpreter = Reference(gx-practitioner-test-pathologist)
 * specimen[0] = Reference(Specimen/gx-genomic-specimen-tumornormal-tumor)
 * specimen[1] = Reference(Specimen/gx-genomic-specimen-tumornormal-normal)
-* extension[recommended-action][0].valueReference = Reference(Task/gx-genomic-medication-recommendation-brigatinib)
-* extension[recommended-action][1].valueReference = Reference(Task/gx-genomic-medication-recommendation-ceritinib)
 * result[0] = Reference(Observation/gx-genomic-variant-somatic-bap1-indel)
 * result[1] = Reference(Observation/gx-genomic-variant-somatic-cdkn2a-cnv)
 * result[+] = Reference(Observation/gx-genomic-variant-fusion-met-alk)
-* result[+] = Reference(Observation/gx-genomic-variant-pertinent-negative-nras)
-* result[+] = Reference(Observation/gx-genomic-variant-pertinent-negative-kit)
-* result[+] = Reference(Observation/gx-genomic-variant-pertinent-negative-braf)
-* result[+] = Reference(Observation/gx-genomic-tmb)
+* result[+] = Reference(Observation/gx-genomic-variant-pertinent-negative-nras-kit-braf)
+* result[+] = Reference(Observation/gx-genomic-therapeutic-implication-brigatinib)
+* result[+] = Reference(Observation/gx-genomic-therapeutic-implication-ceritinib)
 
 * presentedForm.id = "ig-loader-XT_d6eeedd1-92d3-45b9-bf33-6401e804425f.pdf"
-// * result[+] = Reference(Observation/gx-genomic-therapeutic-implication-brigatinib)
-// * result[+] = Reference(Observation/gx-genomic-therapeutic-implication-ceritinib)
 
 
-// ************* Example 2: Tumor-Normal Test *******************
+// ************* Example 2: Trio Test (TBD) *******************

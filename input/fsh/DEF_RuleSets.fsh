@@ -12,17 +12,18 @@ RuleSet: CategorySlicingRules
 * category ^slicing.description = "Slicing requires the given value but allows additional categories"
 * category contains requiredCategory 1..1
 
-RuleSet: ObservationHasMemberSlicingRules
-* hasMember ^slicing.discriminator.type = #pattern  // #profile
-* hasMember ^slicing.discriminator.path = "$this.resolve().code"
-* hasMember ^slicing.rules = #open
-* hasMember ^slicing.description = "Slicing based on referenced resource code attribute."
+RuleSet: SliceReferenceOnProfile(path)
+* {path} ^slicing.discriminator.type = #profile
+* {path} ^slicing.discriminator.path = "$this.resolve()"
+* {path} ^slicing.rules = #open
+* {path} ^slicing.description = "Slicing based on profile conformance of the referenced resource."
 
-RuleSet: DiagnosticReportResultSlicingRules
-* result ^slicing.discriminator.type = #pattern
-* result ^slicing.discriminator.path = "$this.resolve().code"
-* result ^slicing.rules = #open
-* result ^slicing.description = "Slice based on the reference profile and code pattern"
+RuleSet: BundleSlice(name, min, max, short, def, class)
+* entry contains {name} {min}..{max} MS
+* entry[{name}] ^short = "{short}"
+* entry[{name}] ^definition = "{def}"
+* entry[{name}].resource only {class}
+//* entry[{name}].resource.meta.profile = Canonical({class})
 
 /* MustSupportOnReference applies an MS flag to a selected reference. For example in Reference(Patient or Practitioner), an MS can be put on Practitioner without a MS on Patient. In some cases, this might better than using an "only" rule
 For example, given that Practitioner is element [1] in the element "recorder":
@@ -41,13 +42,6 @@ RuleSet: CreateComponent(sliceName, min, max)
 * component[{sliceName}].code MS
 * component[{sliceName}].value[x] MS
 //* component[{sliceName}].dataAbsentReason MS
-
-RuleSet: BundleSlice(name, min, max, short, def, class)
-* entry contains {name} {min}..{max} MS
-* entry[{name}] ^short = "{short}"
-* entry[{name}] ^definition = "{def}"
-* entry[{name}].resource only {class}
-//* entry[{name}].resource.meta.profile = Canonical({class})
 
 RuleSet: SNOMEDCopyrightForVS
 * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"

@@ -40,7 +40,7 @@ Description: "The extent of cancer reprsented by the stage group, based on a TNM
 * method 1..1  // NEW requirement 
 * method from TNMStagingMethodVS (extensible)
 * focus 1..1  // NEW requirement -- see https://jira.hl7.org/browse/FHIR-37575
-* insert ObservationHasMemberSlicingRules
+* insert SliceReferenceOnProfile(hasMember)
 * hasMember contains
     tnmPrimaryTumorCategory 0..1 MS and
     tnmRegionalNodesCategory 0..1 MS and

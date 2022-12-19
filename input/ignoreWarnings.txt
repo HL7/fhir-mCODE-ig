@@ -73,7 +73,6 @@ INFORMATION: DiagnosticReport/us-core-diagnosticreport-lab-jenny-m: DiagnosticRe
 
 # SUPPRESS INFORMATION MESSAGES ABOUT BEING UNABLE TO SUPPORT CERTAIN CODE SYSTEMS
 INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[1].resource.ofType(Condition).stage[0].summary.coding[0]: Code System URI 'http://cancerstaging.org' is unknown so the code cannot be validated
-WARNING: ValueSet.where(id = 'molecular-consequence-vs'): Error from server: Unable to provide support for code system http://www.sequenceontology.org/
 WARNING: ValueSet.where(id = 'mcode-tnm-distant-metastases-category-vs'): Error from server: Unable to provide support for code system http://cancerstaging.org
 WARNING: ValueSet.where(id = 'mcode-tnm-primary-tumor-category-vs'): Error from server: Unable to provide support for code system http://cancerstaging.org
 WARNING: ValueSet.where(id = 'mcode-tnm-regional-nodes-category-vs'): Error from server: Unable to provide support for code system http://cancerstaging.org

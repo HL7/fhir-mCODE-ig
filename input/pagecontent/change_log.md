@@ -31,6 +31,9 @@ The primary goal of the STU 2.1 update is to incorporate newly-issued SNOMED CT 
   * #1162614009 "Lymph node level X (qualifier value)"
   * #1162615005 "Lymph node level XA (qualifier value)"
   * #1162613003 "Lymph node level XB (qualifier value)"
+* Corrected temporary codes to align with SNOMED USCRS Jira Tickets.  These changed due to resubmission of the SNOMED USCRS requests.
+  * bowel space (USCRS-33351 ==> USCRS-34356)
+  * small bowel space (USCRS-33352 ==> USCRS-34358)
 
 ### mCODE STU 2 Publication Version (January 2021)
 

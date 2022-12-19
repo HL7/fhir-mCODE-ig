@@ -19,4 +19,4 @@ The Data Dictionary Differential (DDD) provides a detailed comparison between mC
 
 Download link:
 
-* [mCODE Data Dictionary Differential STU2 versus STU1 (Excel download)](mCODEDataDictionary-STU2-vs-STU2.1.xlsx)
+* [mCODE Data Dictionary Differential STU2 versus STU2.1 (Excel download)](mCODEDataDictionary-STU2-vs-STU2.1.xlsx)

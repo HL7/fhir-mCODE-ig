@@ -268,6 +268,7 @@
 <artifact id="DiagnosticReport/genomics-report-jenny-m" key="DiagnosticReport-genomics-report-jenny-m" name="genomics-report-jenny-m"/>
 <artifact id="DiagnosticReport/genomics-report-john-anyperson" key="DiagnosticReport-genomics-report-john-anyperson" name="genomics-report-john-anyperson"/>
 <artifact id="Patient/gx-cancer-patient-incredible-hulk" key="Patient-gx-cancer-patient-incredible-hulk" name="gx-cancer-patient-incredible-hulk"/>
+<artifact id="Bundle/gx-genomic-bundle-incredible-hulk" key="Bundle-gx-genomic-bundle-incredible-hulk" name="gx-genomic-bundle-incredible-hulk"/>
 <artifact id="Observation/gx-genomic-msi" key="Observation-gx-genomic-msi" name="gx-genomic-msi"/>
 <artifact id="Specimen/gx-genomic-specimen-tumornormal-normal" key="Specimen-gx-genomic-specimen-tumornormal-normal" name="gx-genomic-specimen-tumornormal-normal"/>
 <artifact id="Specimen/gx-genomic-specimen-tumornormal-tumor" key="Specimen-gx-genomic-specimen-tumornormal-tumor" name="gx-genomic-specimen-tumornormal-tumor"/>

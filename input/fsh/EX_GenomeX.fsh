@@ -245,7 +245,34 @@ Description: "GenomeX Example for Genomics Report"
 * result[+] = Reference(Observation/gx-genomic-therapeutic-implication-brigatinib)
 * result[+] = Reference(Observation/gx-genomic-therapeutic-implication-ceritinib)
 
-* presentedForm.id = "ig-loader-XT_d6eeedd1-92d3-45b9-bf33-6401e804425f.pdf"
+// * presentedForm.id = "ig-loader-XT_d6eeedd1-92d3-45b9-bf33-6401e804425f.pdf"
 
 
-// ************* Example 2: Trio Test (TBD) *******************
+// ************* Genomic Bundle *******************
+
+Instance: gx-genomic-bundle-incredible-hulk
+InstanceOf: Bundle
+Description: "Extended example as a mCODE Genomic Bundle"
+* type = #collection "Collection"
+* entry[0].resource = gx-genomics-report-incredible-hulk
+* entry[=].fullUrl = "http://example.org/fhir/DiagnosticReport/gx-genomics-report-incredible-hulk"
+* entry[+].resource = gx-cancer-patient-incredible-hulk
+* entry[=].fullUrl = "http://example.org/fhir/Patient/gx-cancer-patient-incredible-hulk"
+* entry[+].resource = gx-practitioner-test-pathologist
+* entry[=].fullUrl = "http://example.org/fhir/Practitioner/gx-practitioner-test-pathologist"
+* entry[+].resource = gx-genomic-specimen-tumornormal-tumor
+* entry[=].fullUrl = "http://example.org/fhir/Specimen/gx-genomic-specimen-tumornormal-tumor"
+* entry[+].resource = gx-genomic-specimen-tumornormal-normal
+* entry[=].fullUrl = "http://example.org/fhir/Specimen/gx-genomic-specimen-tumornormal-normal"
+* entry[+].resource = gx-genomic-variant-somatic-bap1-indel
+* entry[=].fullUrl = "http://example.org/fhir/Observation/gx-genomic-variant-somatic-bap1-indel"
+* entry[+].resource = gx-genomic-variant-somatic-cdkn2a-cnv
+* entry[=].fullUrl = "http://example.org/fhir/Observation/gx-genomic-variant-somatic-cdkn2a-cnv"
+* entry[+].resource = gx-genomic-variant-fusion-met-alk
+* entry[=].fullUrl = "http://example.org/fhir/Observation/gx-genomic-variant-fusion-met-alk"
+* entry[+].resource = gx-genomic-variant-pertinent-negative-nras-kit-braf
+* entry[=].fullUrl = "http://example.org/fhir/Observation/gx-genomic-variant-pertinent-negative-nras-kit-braf"
+* entry[+].resource = gx-genomic-therapeutic-implication-brigatinib
+* entry[=].fullUrl = "http://example.org/fhir/Observation/gx-genomic-therapeutic-implication-brigatinib"
+* entry[+].resource = gx-genomic-therapeutic-implication-ceritinib
+* entry[=].fullUrl = "http://example.org/fhir/Observation/gx-genomic-therapeutic-implication-ceritinib"

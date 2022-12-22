@@ -1,6 +1,6 @@
 ### mCODE Use of Genomics Elements
 
-mCODE includes genomics-related data elements needed inform cancer assessment and treatment options. The profiles directly derive from the [HL7 CGWG Clinical Genomics Reporting Implementation Guide](http://hl7.org/fhir/uv/genomics-reporting/index.html) (GRIG) STU2 release. 
+mCODE includes genomics-related data elements needed inform cancer assessment and treatment options. The profiles directly derive from the [HL7 CGWG Clinical Genomics Reporting Implementation Guide](http://hl7.org/fhir/uv/genomics-reporting/index.html) (GRIG) STU2 release. The GRIG provides helpful foundational concepts and guidance for representing different types of genomics reports. mCODE assumes one is familiar with the GRIG content and uses this additional guidance to identify 1) what is clinically actionable and minimal for 
 
 Four profiles relate to the capture of clinical genomics data:
 
@@ -42,12 +42,12 @@ A minimal set of genomics elements may vary based on the type of test. For examp
 
 **NOTE:** The initial mCODE scope will be with somatic variants in gene panels with the intention that these elements will also apply as foundational for non-oncology use cases.
 
-Despite the variations, there is a general list of elements that are in common. The eMERGE project provides a good illustration of the sections found in [a generalized pharmacogenomics report](http://hl7.org/fhir/uv/genomics-reporting/pharmacogenomics.html#how-to-use-the-report-mapping-images) which includes pharmacogenomics. This conceptual representation and which serves as a good start for mCODE scoping but needs further guidance on how to specifically represent certain representation patterns. These include the following patterns which will be covered in the sections to follow:
+Despite the variations, there is a general list of elements that are in common. The Electronic Medical Records and Genomics (eMERGE) program provides a good illustration of the sections found in [a generalized pharmacogenomics report](http://hl7.org/fhir/uv/genomics-reporting/pharmacogenomics.html#how-to-use-the-report-mapping-images) which includes pharmacogenomics. This conceptual representation and which serves as a good start for mCODE scoping but needs further guidance on how to specifically represent certain representation patterns. These include the following patterns which will be covered in the sections to follow:
 
 * Genomics test coding
-* Somatic variants
+* Representing variants
 * Fusion events
-
+* Search parameters for mCODE genomic data
 
 ### Genomics Test Coding
 
@@ -57,7 +57,7 @@ The identity of non-genomic laboratory tests is typically represented by a [Logi
 
 A full representation of an HGVS variant requires a transcript identifier or reference sequence id that includes the version number followed by a nomenclature which further characterizes the nature of the variant.
 
-**NOTE:** The FHIR IG publisher uses the **TBD** for validating an HGVS-notated variant included in the FHIR examples. It is not intended to validate all possible variants as there is no single HGVS validation tool that comprehensively covers the most up-to-date recognized variants for a given reference sequence. Reference the [HL7 GRIG section on Variant Reporting](http://hl7.org/fhir/uv/genomics-reporting/sequencing.html) for further guidance on defining variants.
+**NOTE:** The FHIR IG publisher uses the [Mutalyzer 3](https://mutalyzer.nl/) Application Programming Interface (API) for validating an HGVS-notated variant included in the FHIR examples. It is not intended to validate all possible variants as there is no single HGVS validation tool that comprehensively covers the most up-to-date recognized variants for a given reference sequence. Reference the [HL7 GRIG section on Variant Reporting](http://hl7.org/fhir/uv/genomics-reporting/sequencing.html) for further guidance on defining variants.
 
 #### Pertinent Negatives
 

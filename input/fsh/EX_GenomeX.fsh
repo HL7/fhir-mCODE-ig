@@ -252,12 +252,12 @@ Description: "GenomeX Example for Genomics Report"
 
 Instance: gx-genomic-bundle-incredible-hulk
 InstanceOf: Bundle
-Description: "Extended example as a mCODE Genomic Bundle"
+Description: "Extended genomics example conformant with an mCODE Bundle."
 * type = #collection "Collection"
-* entry[0].resource = gx-genomics-report-incredible-hulk
-* entry[=].fullUrl = "http://example.org/fhir/DiagnosticReport/gx-genomics-report-incredible-hulk"
-* entry[+].resource = gx-cancer-patient-incredible-hulk
+* entry[0].resource = gx-cancer-patient-incredible-hulk
 * entry[=].fullUrl = "http://example.org/fhir/Patient/gx-cancer-patient-incredible-hulk"
+* entry[+].resource = gx-genomics-report-incredible-hulk
+* entry[=].fullUrl = "http://example.org/fhir/DiagnosticReport/gx-genomics-report-incredible-hulk"
 * entry[+].resource = gx-practitioner-test-pathologist
 * entry[=].fullUrl = "http://example.org/fhir/Practitioner/gx-practitioner-test-pathologist"
 * entry[+].resource = gx-genomic-specimen-tumornormal-tumor

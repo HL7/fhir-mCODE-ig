@@ -90,13 +90,13 @@ Description: "GenomeX mCODE Example for Genomic Variant - BAP1"
 * component[coding-hgvs].valueCodeableConcept = HGVS#NM_004656.4:c.1768C>T "NC_000003.11(NM_004656.4):c.1768C>T"
 * component[protein-hgvs].valueCodeableConcept = HGVS#NP_004647.1:p.(Gln590Ter) "NP_004647.1:p.(Gln590Ter)"  // Mutalizer normalized HGVS string for HGVS#p.Q590* "p.Q590*".
 * component[genomic-source-class].valueCodeableConcept = LNC#LA6684-0 "Somatic"
-* component[sample-allelic-frequency].valueQuantity.value = 57.4
+* component[sample-allelic-frequency].valueQuantity = 57.4 '%' "%"
 * component[coding-change-type].valueCodeableConcept = SO#SO:0001587 "stop_gained"
 * component[molecular-consequence].valueCodeableConcept = SO#SO:0002054 "loss of function variant"
 
 Instance: gx-genomic-variant-somatic-cdkn2a-cnv
 InstanceOf: GenomicVariant
-Description: "GenomeX mCODE Example for Genomic Variant - BAP1"
+Description: "GenomeX mCODE Example for Genomic Variant - CDKN2A"
 * status = #final "Final"
 * method = LNC#LA26398-0 "Sequencing"
 // value[x] has alternate codings depending on where to place the interpretation of "Positive or Negative".
@@ -104,36 +104,67 @@ Description: "GenomeX mCODE Example for Genomic Variant - BAP1"
 * subject = Reference(gx-cancer-patient-incredible-hulk)
 // * effectiveDateTime = "2019-04-01"
 * valueCodeableConcept = LNC#LA9633-4 "Present"
-* component[gene-studied].valueCodeableConcept = HGNC#HGNC:1787 "CDKN2A" 
-// * component[genomic-hgvs].valueCodeableConcept = HGVS#NM_004656.4:c.1768C>T "NM_004656.4:c.1768C>T"
+* component[gene-studied].valueCodeableConcept = HGNC#HGNC:1787 "CDKN2A"
+* component[genomic-source-class].valueCodeableConcept = LNC#LA6684-0 "Somatic"
 * component[molecular-consequence].valueCodeableConcept = SO#SO:0001743 "copy_number_loss"
 
-// MLT: All pertinent negative genes for a single report were combined into one variant "absent" resource.
-/*
-Instance: gx-genomic-variant-pertinent-negative-nras
+Instance: gx-genomic-variant-somatic-cdkn2b-cnv
 InstanceOf: GenomicVariant
-Description: "GenomeX mCODE Example for the absence of a notable variant - NRAS"
+Description: "GenomeX mCODE Example for Genomic Variant - CDKN2B"
 * status = #final "Final"
 * method = LNC#LA26398-0 "Sequencing"
 // value[x] has alternate codings depending on where to place the interpretation of "Positive or Negative".
 // * interpretation = SCT#10828004 "Positive (qualifier value)"
 * subject = Reference(gx-cancer-patient-incredible-hulk)
 // * effectiveDateTime = "2019-04-01"
-* valueCodeableConcept = LNC#LA9634-2 "Absent"
-* component[gene-studied].valueCodeableConcept = HGNC#HGNC:6342 "NRAS" 
+* valueCodeableConcept = LNC#LA9633-4 "Present"
+* component[gene-studied].valueCodeableConcept = HGNC#HGNC:1788 "CDKN2B"
+* component[genomic-source-class].valueCodeableConcept = LNC#LA6684-0 "Somatic"
+* component[molecular-consequence].valueCodeableConcept = SO#SO:0001743 "copy_number_loss"
 
-Instance: gx-genomic-variant-pertinent-negative-kit
+Instance: gx-genomic-variant-somatic-kdm5d
 InstanceOf: GenomicVariant
-Description: "GenomeX mCODE Example for the absence of a notable variant - KIT"
+Description: "GenomeX mCODE Example for Genomic Variant - KDM5D"
 * status = #final "Final"
 * method = LNC#LA26398-0 "Sequencing"
 // value[x] has alternate codings depending on where to place the interpretation of "Positive or Negative".
 // * interpretation = SCT#10828004 "Positive (qualifier value)"
 * subject = Reference(gx-cancer-patient-incredible-hulk)
 // * effectiveDateTime = "2019-04-01"
-* valueCodeableConcept = LNC#LA9634-2 "Absent"
-* component[gene-studied].valueCodeableConcept = HGNC#HGNC:7989 "KIT" 
-*/
+* valueCodeableConcept = LNC#LA9633-4 "Present"
+* component[gene-studied].valueCodeableConcept = HGNC#HGNC:11115 "KDM5D"
+* component[genomic-source-class].valueCodeableConcept = LNC#LA6684-0 "Somatic"
+* component[molecular-consequence].valueCodeableConcept = SO#SO:0001743 "copy_number_loss"
+
+Instance: gx-genomic-variant-somatic-mtap
+InstanceOf: GenomicVariant
+Description: "GenomeX mCODE Example for Genomic Variant - MTAP"
+* status = #final "Final"
+* method = LNC#LA26398-0 "Sequencing"
+// value[x] has alternate codings depending on where to place the interpretation of "Positive or Negative".
+// * interpretation = SCT#10828004 "Positive (qualifier value)"
+* subject = Reference(gx-cancer-patient-incredible-hulk)
+// * effectiveDateTime = "2019-04-01"
+* valueCodeableConcept = LNC#LA9633-4 "Present"
+* component[gene-studied].valueCodeableConcept = HGNC#HGNC:7413 "MTAP"
+* component[genomic-source-class].valueCodeableConcept = LNC#LA6684-0 "Somatic"
+* component[molecular-consequence].valueCodeableConcept = SO#SO:0001743 "copy_number_loss"
+
+Instance: gx-genomic-variant-somatic-mycn
+InstanceOf: GenomicVariant
+Description: "GenomeX mCODE Example for Genomic Variant - MYCN"
+* status = #final "Final"
+* method = LNC#LA26398-0 "Sequencing"
+// value[x] has alternate codings depending on where to place the interpretation of "Positive or Negative".
+// * interpretation = SCT#10828004 "Positive (qualifier value)"
+* subject = Reference(gx-cancer-patient-incredible-hulk)
+// * effectiveDateTime = "2019-04-01"
+* valueCodeableConcept = LNC#LA9633-4 "Present"
+* component[gene-studied].valueCodeableConcept = HGNC#HGNC:7559 "MYCN"
+* component[genomic-source-class].valueCodeableConcept = LNC#LA6684-0 "Somatic"
+* component[molecular-consequence].valueCodeableConcept = SO#SO:0001742 "copy_number_gain"
+
+// MLT: All pertinent negative genes for a single report were combined into one variant "absent" resource.
 
 Instance: gx-genomic-variant-pertinent-negative-nras-kit-braf
 InstanceOf: GenomicVariant
@@ -165,6 +196,8 @@ Description: "mCODE Example for Genomic Variant gene fusion event"
 * component[gene-studied][1].valueCodeableConcept = HGNC#HGNC:427 "ALK"
 * component[coding-change-type].valueCodeableConcept = SO#SO:0002062 "complex chromosomal rearrangement"
 * component[genomic-source-class].valueCodeableConcept = LNC#LA6684-0 "Somatic"
+
+// ******** Variants of Unknown Significance (VUS) **********
 
 
 // ******* Tumor Mutation Burden *********
@@ -207,6 +240,15 @@ Description: "Example of a Pharmacogenomic Medication recommendation for ceritin
 
 // ******** Therapeutic Implications *********
 
+Instance: gx-genomic-therapeutic-implication-alectinib
+InstanceOf: CGTherapeuticImplication
+Description: "Example of how Genomics Reporting IG Therapeutic Implications fits with mCODE"
+* status = #final "Final"
+* category[labCategory] = ObsCat#laboratory
+* derivedFrom = Reference(gx-genomic-variant-fusion-met-alk)
+* component[medication-assessed].valueCodeableConcept = RXN#1727455 "alectinib"
+* component[predicted-therapeutic-implication].valueCodeableConcept = LNC#LA9661-5 "Presumed responsive"
+
 Instance: gx-genomic-therapeutic-implication-brigatinib
 InstanceOf: CGTherapeuticImplication
 Description: "Example of how Genomics Reporting IG Therapeutic Implications fits with mCODE"
@@ -225,6 +267,24 @@ Description: "Example of how Genomics Reporting IG Therapeutic Implications fits
 * component[medication-assessed].valueCodeableConcept = RXN#1535457 "ceritinib"
 * component[predicted-therapeutic-implication].valueCodeableConcept = LNC#LA9661-5 "Presumed responsive"
 
+Instance: gx-genomic-therapeutic-implication-crizotinib
+InstanceOf: CGTherapeuticImplication
+Description: "Example of how Genomics Reporting IG Therapeutic Implications fits with mCODE"
+* status = #final "Final"
+* category[labCategory] = ObsCat#laboratory
+* derivedFrom = Reference(gx-genomic-variant-fusion-met-alk)
+* component[medication-assessed].valueCodeableConcept = RXN#1148495 "crizotinib"
+* component[predicted-therapeutic-implication].valueCodeableConcept = LNC#LA9661-5 "Presumed responsive"
+
+Instance: gx-genomic-therapeutic-implication-lorlatinib
+InstanceOf: CGTherapeuticImplication
+Description: "Example of how Genomics Reporting IG Therapeutic Implications fits with mCODE"
+* status = #final "Final"
+* category[labCategory] = ObsCat#laboratory
+* derivedFrom = Reference(gx-genomic-variant-fusion-met-alk)
+* component[medication-assessed].valueCodeableConcept = RXN#2103164 "lorlatinib"
+* component[predicted-therapeutic-implication].valueCodeableConcept = LNC#LA9661-5 "Presumed responsive"
+
 
 // ********** Genomics Report ***********
 Instance: gx-genomics-report-incredible-hulk
@@ -240,10 +300,17 @@ Description: "GenomeX Example for Genomics Report"
 * specimen[1] = Reference(Specimen/gx-genomic-specimen-tumornormal-normal)
 * result[0] = Reference(Observation/gx-genomic-variant-somatic-bap1-indel)
 * result[1] = Reference(Observation/gx-genomic-variant-somatic-cdkn2a-cnv)
+* result[+] = Reference(Observation/gx-genomic-variant-somatic-cdkn2b-cnv)
+* result[+] = Reference(Observation/gx-genomic-variant-somatic-kdm5d)
+* result[+] = Reference(Observation/gx-genomic-variant-somatic-mtap)
+* result[+] = Reference(Observation/gx-genomic-variant-somatic-mycn)
 * result[+] = Reference(Observation/gx-genomic-variant-fusion-met-alk)
 * result[+] = Reference(Observation/gx-genomic-variant-pertinent-negative-nras-kit-braf)
+* result[+] = Reference(Observation/gx-genomic-therapeutic-implication-alectinib)
 * result[+] = Reference(Observation/gx-genomic-therapeutic-implication-brigatinib)
 * result[+] = Reference(Observation/gx-genomic-therapeutic-implication-ceritinib)
+* result[+] = Reference(Observation/gx-genomic-therapeutic-implication-crizotinib)
+* result[+] = Reference(Observation/gx-genomic-therapeutic-implication-lorlatinib)
 
 // * presentedForm.id = "ig-loader-XT_d6eeedd1-92d3-45b9-bf33-6401e804425f.pdf"
 
@@ -268,11 +335,27 @@ Description: "Extended genomics example conformant with an mCODE Bundle."
 * entry[=].fullUrl = "http://example.org/fhir/Observation/gx-genomic-variant-somatic-bap1-indel"
 * entry[+].resource = gx-genomic-variant-somatic-cdkn2a-cnv
 * entry[=].fullUrl = "http://example.org/fhir/Observation/gx-genomic-variant-somatic-cdkn2a-cnv"
+* entry[+].resource = gx-genomic-variant-somatic-cdkn2b-cnv
+* entry[=].fullUrl = "http://example.org/fhir/Observation/gx-genomic-variant-somatic-cdkn2b-cnv"
+* entry[+].resource = gx-genomic-variant-somatic-kdm5d
+* entry[=].fullUrl = "http://example.org/fhir/Observation/gx-genomic-variant-somatic-kdm5d"
+* entry[+].resource = gx-genomic-variant-somatic-mtap
+* entry[=].fullUrl = "http://example.org/fhir/Observation/gx-genomic-variant-somatic-mtap"
+* entry[+].resource = gx-genomic-variant-somatic-mycn
+* entry[=].fullUrl = "http://example.org/fhir/Observation/gx-genomic-variant-somatic-mycn"
 * entry[+].resource = gx-genomic-variant-fusion-met-alk
 * entry[=].fullUrl = "http://example.org/fhir/Observation/gx-genomic-variant-fusion-met-alk"
 * entry[+].resource = gx-genomic-variant-pertinent-negative-nras-kit-braf
 * entry[=].fullUrl = "http://example.org/fhir/Observation/gx-genomic-variant-pertinent-negative-nras-kit-braf"
+* entry[+].resource = gx-genomic-tmb
+* entry[=].fullUrl = "http://example.org/fhir/Observation/gx-genomic-tmb"
+* entry[+].resource = gx-genomic-therapeutic-implication-alectinib
+* entry[=].fullUrl = "http://example.org/fhir/Observation/gx-genomic-therapeutic-implication-alectinib"
 * entry[+].resource = gx-genomic-therapeutic-implication-brigatinib
 * entry[=].fullUrl = "http://example.org/fhir/Observation/gx-genomic-therapeutic-implication-brigatinib"
 * entry[+].resource = gx-genomic-therapeutic-implication-ceritinib
 * entry[=].fullUrl = "http://example.org/fhir/Observation/gx-genomic-therapeutic-implication-ceritinib"
+* entry[+].resource = gx-genomic-therapeutic-implication-crizotinib
+* entry[=].fullUrl = "http://example.org/fhir/Observation/gx-genomic-therapeutic-implication-crizotinib"
+* entry[+].resource = gx-genomic-therapeutic-implication-lorlatinib
+* entry[=].fullUrl = "http://example.org/fhir/Observation/gx-genomic-therapeutic-implication-lorlatinib"

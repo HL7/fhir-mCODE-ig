@@ -28,6 +28,7 @@ The diagram below illustrates the distinction within an mCODE bundle.
 * mCODE genomics elements are a superset of those that may be available for exchange. There is no assumption that all data elements need to be captured or exchanged.
 * Genomics profiles represent results from genomic sequencing, whereas [TumorMarkerTest] (grouped in the [Disease Characterization](group-disease.html)) involve results from gene expression tests (e.g.: HER2 Immunohistochemistry tests) and serum-based measurements which could have an implication on cancer (e.g., PSA).
 
+
 #### Positioning of mCODE with GenomeX
 
 The GenomeX use case under the CodeX FHIR accelerator has a broader scope that is not limited to oncology-specific genomic tests, and with the primary goal of validating the HL7 GRIG. However, it is widely recognized that the most prevalent and pervasive application for genomics and precision medicine is in the field of oncology. Consequently, there is a need for clarification and additional guidance between the mCODE FHIR IG.
@@ -51,6 +52,8 @@ Despite the variations, there is a general list of elements that are in common. 
 
 ### Genomics Test Coding
 
+There is currently no general consensus on standardizing the ordering of next-generation sequencing (NGS) genomic tests. Regardless, mCODE provides some high level information on test codes that may be helpful for identifying tests.
+
 The identity of non-genomic laboratory tests is typically represented by a [Logical Observation Identifiers and Names (LOINC)](https://loinc.org/) code. However, many genomic tests and panels do not have LOINC codes, although some might have an identifier in the [NCBI Genomic Testing Registry (GTR)](https://www.ncbi.nlm.nih.gov/gtr/), a central location for voluntary submission of genomic test information by providers. While GTR is a viable source for identifying many genomic tests, the user should be aware that the GTR is not single authoritative source since the test data is voluntarily updated. Standardization of codes for genomic tests is essential to facilitate data analysis of genomic tests, and should be a priority for the genomics testing community in the near future. Implementers should also note that, to conform to the requirements of the [US Core Laboratory Result Profile](http://hl7.org/fhir/us/core/StructureDefinition-us-core-observation-lab.html), if a suitable LOINC exists, it must be used. If there is no suitable code in LOINC, then a code from an alternative code system such as GTR can be used.
 
 ### Representing Variants
@@ -58,6 +61,12 @@ The identity of non-genomic laboratory tests is typically represented by a [Logi
 A full representation of an HGVS variant requires a transcript identifier or reference sequence id that includes the version number followed by a nomenclature which further characterizes the nature of the variant.
 
 **NOTE:** The FHIR IG publisher uses the [Mutalyzer 3](https://mutalyzer.nl/) Application Programming Interface (API) for validating an HGVS-notated variant included in the FHIR examples. It is not intended to validate all possible variants as there is no single HGVS validation tool that comprehensively covers the most up-to-date recognized variants for a given reference sequence. Reference the [HL7 GRIG section on Variant Reporting](http://hl7.org/fhir/uv/genomics-reporting/sequencing.html) for further guidance on defining variants.
+
+Every FHIR genomics resource referenced by a genomics report (e.g.: Variant, Diagnostic Implication, Therapeutic Implication), should include a date or datetime, even if there was only one date included in the genomic report for all results. Doing so simplifies the ability for the implementer to directly track changes in cases of a variant reclassification or reinterpretation. 
+
+#### Representing Clinical Significance
+
+A genomics report will oftentimes include the classification, or clinical significance, of a variant using a five-tier terminology from the American College of Medical Genetics and Genomics (ACMG) and the Association for Molecular Pathology (AMP) [2015 Guidelines for the interpretation of sequence variants](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4544753/), and consisting of the following categories: pathogenic, likely pathogenic, uncertain significance, likely benign, and benign. In alignment with the GRIG, this is represented in the [DiagnosticImplication](http://build.fhir.org/ig/HL7/genomics-reporting/StructureDefinition-diagnostic-implication.html) profile as an Observation component, clinical-significance. 
 
 #### Pertinent Negatives
 

@@ -72,7 +72,6 @@ Description: "GenomeX mCODE Example for Genomic Specimen - Tumor specimen of the
 * subject = Reference(gx-cancer-patient-incredible-hulk)
 * type = SPTY#BLD "Blood"  // HL7v2 Specimen type does not handle "a normal sample" for TumorNormal
 * receivedTime = "2021-02-09T21:30:50+05:00"
-// * collection.bodySite = SCT#44029006 "Left lung structure (body structure)"
 * collection.collectedDateTime = "2021-02-06T17:15:00+05:00"
 
 Instance: gx-genomic-variant-somatic-bap1-indel
@@ -99,10 +98,8 @@ InstanceOf: GenomicVariant
 Description: "GenomeX mCODE Example for Genomic Variant - CDKN2A"
 * status = #final "Final"
 * method = LNC#LA26398-0 "Sequencing"
-// value[x] has alternate codings depending on where to place the interpretation of "Positive or Negative".
-// * interpretation = SCT#10828004 "Positive (qualifier value)"
 * subject = Reference(gx-cancer-patient-incredible-hulk)
-// * effectiveDateTime = "2019-04-01"
+* effectiveDateTime = "2019-04-01"
 * valueCodeableConcept = LNC#LA9633-4 "Present"
 * component[gene-studied].valueCodeableConcept = HGNC#HGNC:1787 "CDKN2A"
 * component[genomic-source-class].valueCodeableConcept = LNC#LA6684-0 "Somatic"
@@ -113,10 +110,8 @@ InstanceOf: GenomicVariant
 Description: "GenomeX mCODE Example for Genomic Variant - CDKN2B"
 * status = #final "Final"
 * method = LNC#LA26398-0 "Sequencing"
-// value[x] has alternate codings depending on where to place the interpretation of "Positive or Negative".
-// * interpretation = SCT#10828004 "Positive (qualifier value)"
 * subject = Reference(gx-cancer-patient-incredible-hulk)
-// * effectiveDateTime = "2019-04-01"
+* effectiveDateTime = "2019-04-01"
 * valueCodeableConcept = LNC#LA9633-4 "Present"
 * component[gene-studied].valueCodeableConcept = HGNC#HGNC:1788 "CDKN2B"
 * component[genomic-source-class].valueCodeableConcept = LNC#LA6684-0 "Somatic"
@@ -127,10 +122,8 @@ InstanceOf: GenomicVariant
 Description: "GenomeX mCODE Example for Genomic Variant - KDM5D"
 * status = #final "Final"
 * method = LNC#LA26398-0 "Sequencing"
-// value[x] has alternate codings depending on where to place the interpretation of "Positive or Negative".
-// * interpretation = SCT#10828004 "Positive (qualifier value)"
 * subject = Reference(gx-cancer-patient-incredible-hulk)
-// * effectiveDateTime = "2019-04-01"
+* effectiveDateTime = "2019-04-01"
 * valueCodeableConcept = LNC#LA9633-4 "Present"
 * component[gene-studied].valueCodeableConcept = HGNC#HGNC:11115 "KDM5D"
 * component[genomic-source-class].valueCodeableConcept = LNC#LA6684-0 "Somatic"
@@ -141,10 +134,8 @@ InstanceOf: GenomicVariant
 Description: "GenomeX mCODE Example for Genomic Variant - MTAP"
 * status = #final "Final"
 * method = LNC#LA26398-0 "Sequencing"
-// value[x] has alternate codings depending on where to place the interpretation of "Positive or Negative".
-// * interpretation = SCT#10828004 "Positive (qualifier value)"
 * subject = Reference(gx-cancer-patient-incredible-hulk)
-// * effectiveDateTime = "2019-04-01"
+* effectiveDateTime = "2019-04-01"
 * valueCodeableConcept = LNC#LA9633-4 "Present"
 * component[gene-studied].valueCodeableConcept = HGNC#HGNC:7413 "MTAP"
 * component[genomic-source-class].valueCodeableConcept = LNC#LA6684-0 "Somatic"
@@ -155,10 +146,8 @@ InstanceOf: GenomicVariant
 Description: "GenomeX mCODE Example for Genomic Variant - MYCN"
 * status = #final "Final"
 * method = LNC#LA26398-0 "Sequencing"
-// value[x] has alternate codings depending on where to place the interpretation of "Positive or Negative".
-// * interpretation = SCT#10828004 "Positive (qualifier value)"
 * subject = Reference(gx-cancer-patient-incredible-hulk)
-// * effectiveDateTime = "2019-04-01"
+* effectiveDateTime = "2019-04-01"
 * valueCodeableConcept = LNC#LA9633-4 "Present"
 * component[gene-studied].valueCodeableConcept = HGNC#HGNC:7559 "MYCN"
 * component[genomic-source-class].valueCodeableConcept = LNC#LA6684-0 "Somatic"
@@ -171,10 +160,8 @@ InstanceOf: GenomicVariant
 Description: "GenomeX mCODE Example for the absence of a notable variant - KIT and BRAF"
 * status = #final "Final"
 * method = LNC#LA26398-0 "Sequencing"
-// value[x] has alternate codings depending on where to place the interpretation of "Positive or Negative".
-// * interpretation = SCT#10828004 "Positive (qualifier value)"
 * subject = Reference(gx-cancer-patient-incredible-hulk)
-// * effectiveDateTime = "2019-04-01"
+* effectiveDateTime = "2019-04-01"
 * valueCodeableConcept = LNC#LA9634-2 "Absent"
 * component[gene-studied][0].valueCodeableConcept = HGNC#HGNC:6342 "NRAS" 
 * component[gene-studied][1].valueCodeableConcept = HGNC#HGNC:7989 "KIT"
@@ -190,7 +177,7 @@ Description: "mCODE Example for Genomic Variant gene fusion event"
 * status = #final "Final"
 * method = LNC#LA26398-0 "Sequencing"
 * subject = Reference(gx-cancer-patient-incredible-hulk)
-// * effectiveDateTime = "2019-04-01"
+* effectiveDateTime = "2019-04-01"
 * valueCodeableConcept = LNC#LA9633-4 "Present"
 * component[gene-studied][0].valueCodeableConcept = HGNC#HGNC:7029 "MET" 
 * component[gene-studied][1].valueCodeableConcept = HGNC#HGNC:427 "ALK"
@@ -199,6 +186,31 @@ Description: "mCODE Example for Genomic Variant gene fusion event"
 
 // ******** Variants of Unknown Significance (VUS) **********
 
+Instance: gx-genomic-variant-somatic-pof1b
+InstanceOf: GenomicVariant
+Description: "GenomeX mCODE Example for Genomic Variant - POF1B"
+* status = #final "Final"
+* method = LNC#LA26398-0 "Sequencing"
+* subject = Reference(gx-cancer-patient-incredible-hulk)
+* effectiveDateTime = "2019-04-01"
+* valueCodeableConcept = LNC#LA9633-4 "Present"
+* component[gene-studied].valueCodeableConcept = HGNC#HGNC:13711 "POF1B"
+* component[genomic-source-class].valueCodeableConcept = LNC#LA6684-0 "Somatic"
+* component[molecular-consequence].valueCodeableConcept = SO#SO:0001583 "missense_variant"
+* component[transcript-ref-seq].valueCodeableConcept = NCBI#NM_004656 "NM_004656"
+* component[coding-hgvs].valueCodeableConcept = HGVS#NM_001307940.2:c.430C>T "NM_001307940.2:c.430C>T"
+* component[protein-hgvs].valueCodeableConcept = HGVS#NP_001294869.1:p.(Pro144Ser) "NP_001294869.1:p.(Pro144Ser)"  // Mutalizer normalized HGVS string for HGVS#p.Q590* "p.Q590*".
+* component[genomic-source-class].valueCodeableConcept = LNC#LA6684-0 "Somatic"
+* component[sample-allelic-frequency].valueQuantity = 78.6 '%' "%"
+
+Instance: gx-genomic-diagnostic-implication-pof1b
+InstanceOf: DiagnosticImplication
+Description: "GenomeX mCODE Example for Clinical Significance of VUS - POF1B"
+* status = #final "Final"
+* subject = Reference(gx-cancer-patient-incredible-hulk)
+* effectiveDateTime = "2019-04-01"
+* derivedFrom = Reference(gx-genomic-variant-somatic-pof1b)
+* component[clinical-significance].valueCodeableConcept = LNC#LA26333-7 "Uncertain significance"
 
 // ******* Tumor Mutation Burden *********
 Instance: gx-genomic-tmb
@@ -304,6 +316,7 @@ Description: "GenomeX Example for Genomics Report"
 * result[+] = Reference(Observation/gx-genomic-variant-somatic-kdm5d)
 * result[+] = Reference(Observation/gx-genomic-variant-somatic-mtap)
 * result[+] = Reference(Observation/gx-genomic-variant-somatic-mycn)
+* result[+] = Reference(Observation/gx-genomic-diagnostic-implication-pof1b)
 * result[+] = Reference(Observation/gx-genomic-variant-fusion-met-alk)
 * result[+] = Reference(Observation/gx-genomic-variant-pertinent-negative-nras-kit-braf)
 * result[+] = Reference(Observation/gx-genomic-therapeutic-implication-alectinib)
@@ -312,7 +325,7 @@ Description: "GenomeX Example for Genomics Report"
 * result[+] = Reference(Observation/gx-genomic-therapeutic-implication-crizotinib)
 * result[+] = Reference(Observation/gx-genomic-therapeutic-implication-lorlatinib)
 
-// * presentedForm.id = "ig-loader-XT_d6eeedd1-92d3-45b9-bf33-6401e804425f.pdf"
+// * presentedForm.id = "ig-loader-XT_d6eeedd1-92d3-45b9-bf33-6401e804425f.pdf"  // removed the PDF attachment at the request of the lab vendor
 
 
 // ************* Genomic Bundle *******************
@@ -343,6 +356,8 @@ Description: "Extended genomics example conformant with an mCODE Bundle."
 * entry[=].fullUrl = "http://example.org/fhir/Observation/gx-genomic-variant-somatic-mtap"
 * entry[+].resource = gx-genomic-variant-somatic-mycn
 * entry[=].fullUrl = "http://example.org/fhir/Observation/gx-genomic-variant-somatic-mycn"
+* entry[+].resource = gx-genomic-diagnostic-implication-pof1b
+* entry[=].fullUrl = "http://example.org/fhir/Observation/gx-genomic-diagnostic-implication-pof1b"
 * entry[+].resource = gx-genomic-variant-fusion-met-alk
 * entry[=].fullUrl = "http://example.org/fhir/Observation/gx-genomic-variant-fusion-met-alk"
 * entry[+].resource = gx-genomic-variant-pertinent-negative-nras-kit-braf

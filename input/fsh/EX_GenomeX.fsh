@@ -199,7 +199,7 @@ Description: "GenomeX mCODE Example for Genomic Variant - POF1B"
 * component[molecular-consequence].valueCodeableConcept = SO#SO:0001583 "missense_variant"
 * component[transcript-ref-seq].valueCodeableConcept = NCBI#NM_004656 "NM_004656"
 * component[coding-hgvs].valueCodeableConcept = HGVS#NM_001307940.2:c.430C>T "NM_001307940.2:c.430C>T"
-* component[protein-hgvs].valueCodeableConcept = HGVS#NP_001294869.1:p.(Pro144Ser) "NP_001294869.1:p.(Pro144Ser)"  // Mutalizer normalized HGVS string for HGVS#p.Q590* "p.Q590*".
+* component[protein-hgvs].valueCodeableConcept = HGVS#NP_001294869.1:p.(Pro144Ser) "NP_001294869.1:p.(Pro144Ser)"  // VariantValidator normalized HGVS string for p.P144S*".
 * component[genomic-source-class].valueCodeableConcept = LNC#LA6684-0 "Somatic"
 * component[sample-allelic-frequency].valueQuantity = 78.6 '%' "%"
 
@@ -210,6 +210,32 @@ Description: "GenomeX mCODE Example for Clinical Significance of VUS - POF1B"
 * subject = Reference(gx-cancer-patient-incredible-hulk)
 * effectiveDateTime = "2019-04-01"
 * derivedFrom = Reference(gx-genomic-variant-somatic-pof1b)
+* component[clinical-significance].valueCodeableConcept = LNC#LA26333-7 "Uncertain significance"
+
+Instance: gx-genomic-variant-somatic-polrmt
+InstanceOf: GenomicVariant
+Description: "GenomeX mCODE Example for Genomic Variant - POLRMT"
+* status = #final "Final"
+* method = LNC#LA26398-0 "Sequencing"
+* subject = Reference(gx-cancer-patient-incredible-hulk)
+* effectiveDateTime = "2019-04-01"
+* valueCodeableConcept = LNC#LA9633-4 "Present"
+* component[gene-studied].valueCodeableConcept = HGNC#HGNC:9200 "POLRMT"
+* component[genomic-source-class].valueCodeableConcept = LNC#LA6684-0 "Somatic"
+* component[molecular-consequence].valueCodeableConcept = SO#SO:0001583 "missense_variant"
+* component[transcript-ref-seq].valueCodeableConcept = NCBI#NM_004656 "NM_005035"
+* component[coding-hgvs].valueCodeableConcept = HGVS#NM_005035.4:c.598G>A "NM_005035.4:c.598G>A"
+* component[protein-hgvs].valueCodeableConcept = HGVS#NP_005026.3:p.(Gly200Arg) "NP_005026.3:p.(Gly200Arg)"  // VariantValidator normalized HGVS string for p.G200R
+* component[genomic-source-class].valueCodeableConcept = LNC#LA6684-0 "Somatic"
+* component[sample-allelic-frequency].valueQuantity = 75.6 '%' "%"
+
+Instance: gx-genomic-diagnostic-implication-polrmt
+InstanceOf: DiagnosticImplication
+Description: "GenomeX mCODE Example for Clinical Significance of VUS - POF1B"
+* status = #final "Final"
+* subject = Reference(gx-cancer-patient-incredible-hulk)
+* effectiveDateTime = "2019-04-01"
+* derivedFrom = Reference(gx-genomic-variant-somatic-polrmt)
 * component[clinical-significance].valueCodeableConcept = LNC#LA26333-7 "Uncertain significance"
 
 // ******* Tumor Mutation Burden *********
@@ -316,7 +342,10 @@ Description: "GenomeX Example for Genomics Report"
 * result[+] = Reference(Observation/gx-genomic-variant-somatic-kdm5d)
 * result[+] = Reference(Observation/gx-genomic-variant-somatic-mtap)
 * result[+] = Reference(Observation/gx-genomic-variant-somatic-mycn)
+* result[+] = Reference(Observation/gx-genomic-variant-somatic-pof1b)
+* result[+] = Reference(Observation/gx-genomic-variant-somatic-polrmt)
 * result[+] = Reference(Observation/gx-genomic-diagnostic-implication-pof1b)
+* result[+] = Reference(Observation/gx-genomic-diagnostic-implication-polrmt)
 * result[+] = Reference(Observation/gx-genomic-variant-fusion-met-alk)
 * result[+] = Reference(Observation/gx-genomic-variant-pertinent-negative-nras-kit-braf)
 * result[+] = Reference(Observation/gx-genomic-therapeutic-implication-alectinib)
@@ -356,8 +385,14 @@ Description: "Extended genomics example conformant with an mCODE Bundle."
 * entry[=].fullUrl = "http://example.org/fhir/Observation/gx-genomic-variant-somatic-mtap"
 * entry[+].resource = gx-genomic-variant-somatic-mycn
 * entry[=].fullUrl = "http://example.org/fhir/Observation/gx-genomic-variant-somatic-mycn"
+* entry[+].resource = gx-genomic-variant-somatic-pof1b
+* entry[=].fullUrl = "http://example.org/fhir/Observation/gx-genomic-variant-somatic-pof1b"
+* entry[+].resource = gx-genomic-variant-somatic-polrmt
+* entry[=].fullUrl = "http://example.org/fhir/Observation/gx-genomic-variant-somatic-polrmt"
 * entry[+].resource = gx-genomic-diagnostic-implication-pof1b
 * entry[=].fullUrl = "http://example.org/fhir/Observation/gx-genomic-diagnostic-implication-pof1b"
+* entry[+].resource = gx-genomic-diagnostic-implication-polrmt
+* entry[=].fullUrl = "http://example.org/fhir/Observation/gx-genomic-diagnostic-implication-polrmt"
 * entry[+].resource = gx-genomic-variant-fusion-met-alk
 * entry[=].fullUrl = "http://example.org/fhir/Observation/gx-genomic-variant-fusion-met-alk"
 * entry[+].resource = gx-genomic-variant-pertinent-negative-nras-kit-braf

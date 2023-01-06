@@ -60,7 +60,15 @@ The identity of non-genomic laboratory tests is typically represented by a [Logi
 
 A full representation of an HGVS variant requires a transcript identifier or reference sequence id that includes the version number followed by a nomenclature which further characterizes the nature of the variant.
 
-**NOTE:** The FHIR IG publisher uses the [Mutalyzer 3](https://mutalyzer.nl/) Application Programming Interface (API) for validating an HGVS-notated variant included in the FHIR examples. It is not intended to validate all possible variants as there is no single HGVS validation tool that comprehensively covers the most up-to-date recognized variants for a given reference sequence. Reference the [HL7 GRIG section on Variant Reporting](http://hl7.org/fhir/uv/genomics-reporting/sequencing.html) for further guidance on defining variants.
+#### Variant Nomenclature
+
+The [HL7 GRIG guidance on defining variants](http://hl7.org/fhir/uv/genomics-reporting/sequencing.html) states support for two reporting patterns for specifying variants:
+1. by HGVS or ISCN nomenclature
+2. by providing multiple component details in the style of VCF columns
+
+Although mCODE should support both formats, it is preferable to use HGVS nomenclature for coding and protein variants where possible.
+
+**NOTE**: The FHIR IG publisher uses the [Mutalyzer 3](https://mutalyzer.nl/) Application Programming Interface (API) for validating an HGVS-notated variant included in the FHIR examples. It is not intended to validate all possible variants as there is no single HGVS validation tool that comprehensively covers the most up-to-date recognized variants for a given reference sequence. 
 
 Every FHIR genomics resource referenced by a genomics report (e.g.: Variant, Diagnostic Implication, Therapeutic Implication), should include a date or datetime, even if there was only one date included in the genomic report for all results. Doing so simplifies the ability for the implementer to directly track changes in cases of a variant reclassification or reinterpretation. 
 

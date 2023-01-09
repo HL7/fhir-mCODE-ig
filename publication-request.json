@@ -6,5 +6,5 @@
     "sequence" : "STU 2",
     "desc" : "Update to mCODE STU2 incorporating newly-issued SNOMEDCT codes",
     "descmd" : "Update to mCODE STU2 incorporating newly-issued SNOMEDCT codes",
-    "changes" : "change_log.html",
+    "changes" : "change_log.html"
   }

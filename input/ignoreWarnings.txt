@@ -28,7 +28,7 @@ WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/mcode/Structure
 [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/mcode/ValueSet/mcode-clinvar-vs because the value set or a code system it depends on is not known to the validator, Code System URI 'http://www.ncbi.nlm.nih.gov/clinvar' is unknown so the code cannot be validated]
 [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/mcode/ValueSet/mcode-tnm-primary-tumor-category-vs because the value set or a code system it depends on is not known to the validator, Code System URI 'http://cancerstaging.org' is unknown so the code cannot be validated]
 
-# SUPPRESS INFORMATIONs ABOUT BUNDLE ENTRY MATCHING NOT MATCHING ANY KNOWN SLICE
+# We've validated and weren't expecting these to match any of the slices
 INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[1]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle|2.1.0
 INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[2]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle|2.1.0
 INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[3]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle|2.1.0

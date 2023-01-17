@@ -48,8 +48,6 @@ Description: "Codes describing the techniques of teleradiotherapy (external beam
 * include codes from valueset TeleradiotherapyNeutronTechniqueVS
 * include codes from valueset TeleradiotherapyCarbonIonBeamTechniqueVS
 * include codes from valueset TeleradiotherapyProtonBeamTechniqueVS
-// FLASH should be in here somewhere: need a temp code if we want to use it before January 2022
-
 
 ValueSet: TeleradiotherapyPhotonBeamTechniqueVS
 Id: mcode-teleradiotherapy-photon-beam-technique-vs

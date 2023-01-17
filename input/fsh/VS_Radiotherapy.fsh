@@ -49,7 +49,7 @@ Description: "Codes describing the techniques of teleradiotherapy (external beam
 * include codes from valueset TeleradiotherapyCarbonIonBeamTechniqueVS
 * include codes from valueset TeleradiotherapyProtonBeamTechniqueVS
 // FLASH should be in here somewhere: need a temp code if we want to use it before January 2022
-// * SCT#1163157007 "Ultra high dose rate radiotherapy (procedure)"
+
 
 ValueSet: TeleradiotherapyPhotonBeamTechniqueVS
 Id: mcode-teleradiotherapy-photon-beam-technique-vs
@@ -72,6 +72,7 @@ Description: "Allowed techniques for electron beam modality"
 * SCT#1162782007 "Three dimensional external beam radiation therapy (procedure)"
 * SCT#1156526006 "Two dimensional external beam radiation therapy (procedure)"
 * SCT#168524008 "Radiotherapy - intraoperative control (procedure)"
+* SCT#1163157007 "Ultra high dose rate radiotherapy (procedure)"
 
 ValueSet: TeleradiotherapyNeutronTechniqueVS
 Id: mcode-teleradiotherapy-neutron-beam-technique-vs
@@ -103,6 +104,8 @@ Description: "Allowed techniques for proton beam modality"
 * SCT#1156528007 "External beam radiation therapy using particle spot scanning technique (procedure)"
 * SCT#1204242009 "External beam radiation therapy using particle scanning technique (procedure)"
 // * SCT#1156525005 "Mixed beam external beam radiation therapy (procedure)" -- RTTD Terminology decision 9/21
+* SCT#1163157007 "Ultra high dose rate radiotherapy (procedure)"
+
 
 ValueSet: BrachytherapyTechniqueVS
 Id: mcode-brachytherapy-technique-vs

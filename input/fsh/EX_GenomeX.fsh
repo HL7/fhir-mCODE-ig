@@ -1,7 +1,9 @@
 // GenomeX example for Use Case 1 - Reference lab to EHR
 // The following examples will be used as a prototype and based on de-identified RWD test data. There is no PHI.
 
+// **************************************************************
 // ************* Example 1: Tumor-Normal Test *******************
+// **************************************************************
 
 Instance: gx-cancer-patient-incredible-hulk
 InstanceOf: Patient
@@ -74,6 +76,9 @@ Description: "GenomeX mCODE Example for Genomic Specimen - Tumor specimen of the
 * receivedTime = "2021-02-09T21:30:50+05:00"
 * collection.collectedDateTime = "2021-02-06T17:15:00+05:00"
 
+// ******** "Biologically significant" Variants **********
+// Note: the Example 1 Tumor-Normal report does not explicitly identify the variant's clinical significance
+
 Instance: gx-genomic-variant-somatic-bap1-indel
 InstanceOf: GenomicVariant
 Description: "GenomeX mCODE Example for Genomic Variant - BAP1"
@@ -85,13 +90,14 @@ Description: "GenomeX mCODE Example for Genomic Variant - BAP1"
 // * effectiveDateTime = "2019-04-01"
 * valueCodeableConcept = LNC#LA9633-4 "Present"
 * component[gene-studied].valueCodeableConcept = HGNC#HGNC:950 "BAP1"
-* component[transcript-ref-seq].valueCodeableConcept = NCBI#NM_004656 "NM_004656"
+* component[transcript-ref-seq].valueCodeableConcept = NCBI#NM_004656 "NM_004656.4"
 * component[coding-hgvs].valueCodeableConcept = HGVS#NM_004656.4:c.1768C>T "NC_000003.11(NM_004656.4):c.1768C>T"
 * component[protein-hgvs].valueCodeableConcept = HGVS#NP_004647.1:p.(Gln590Ter) "NP_004647.1:p.(Gln590Ter)"  // Mutalizer normalized HGVS string for HGVS#p.Q590* "p.Q590*".
 * component[genomic-source-class].valueCodeableConcept = LNC#LA6684-0 "Somatic"
 * component[sample-allelic-frequency].valueQuantity = 57.4 '%' "%"
 * component[coding-change-type].valueCodeableConcept = SO#SO:0001587 "stop_gained"
 * component[molecular-consequence].valueCodeableConcept = SO#SO:0002054 "loss of function variant"
+* component[reference-sequence-assembly].valueCodeableConcept = LNC#LA14029-5 "GRCh37"
 
 Instance: gx-genomic-variant-somatic-cdkn2a-cnv
 InstanceOf: GenomicVariant
@@ -104,6 +110,7 @@ Description: "GenomeX mCODE Example for Genomic Variant - CDKN2A"
 * component[gene-studied].valueCodeableConcept = HGNC#HGNC:1787 "CDKN2A"
 * component[genomic-source-class].valueCodeableConcept = LNC#LA6684-0 "Somatic"
 * component[molecular-consequence].valueCodeableConcept = SO#SO:0001743 "copy_number_loss"
+* component[reference-sequence-assembly].valueCodeableConcept = LNC#LA14029-5 "GRCh37"
 
 Instance: gx-genomic-variant-somatic-cdkn2b-cnv
 InstanceOf: GenomicVariant
@@ -116,6 +123,7 @@ Description: "GenomeX mCODE Example for Genomic Variant - CDKN2B"
 * component[gene-studied].valueCodeableConcept = HGNC#HGNC:1788 "CDKN2B"
 * component[genomic-source-class].valueCodeableConcept = LNC#LA6684-0 "Somatic"
 * component[molecular-consequence].valueCodeableConcept = SO#SO:0001743 "copy_number_loss"
+* component[reference-sequence-assembly].valueCodeableConcept = LNC#LA14029-5 "GRCh37"
 
 Instance: gx-genomic-variant-somatic-kdm5d
 InstanceOf: GenomicVariant
@@ -128,6 +136,7 @@ Description: "GenomeX mCODE Example for Genomic Variant - KDM5D"
 * component[gene-studied].valueCodeableConcept = HGNC#HGNC:11115 "KDM5D"
 * component[genomic-source-class].valueCodeableConcept = LNC#LA6684-0 "Somatic"
 * component[molecular-consequence].valueCodeableConcept = SO#SO:0001743 "copy_number_loss"
+* component[reference-sequence-assembly].valueCodeableConcept = LNC#LA14029-5 "GRCh37"
 
 Instance: gx-genomic-variant-somatic-mtap
 InstanceOf: GenomicVariant
@@ -140,6 +149,7 @@ Description: "GenomeX mCODE Example for Genomic Variant - MTAP"
 * component[gene-studied].valueCodeableConcept = HGNC#HGNC:7413 "MTAP"
 * component[genomic-source-class].valueCodeableConcept = LNC#LA6684-0 "Somatic"
 * component[molecular-consequence].valueCodeableConcept = SO#SO:0001743 "copy_number_loss"
+* component[reference-sequence-assembly].valueCodeableConcept = LNC#LA14029-5 "GRCh37"
 
 Instance: gx-genomic-variant-somatic-mycn
 InstanceOf: GenomicVariant
@@ -152,6 +162,7 @@ Description: "GenomeX mCODE Example for Genomic Variant - MYCN"
 * component[gene-studied].valueCodeableConcept = HGNC#HGNC:7559 "MYCN"
 * component[genomic-source-class].valueCodeableConcept = LNC#LA6684-0 "Somatic"
 * component[molecular-consequence].valueCodeableConcept = SO#SO:0001742 "copy_number_gain"
+* component[reference-sequence-assembly].valueCodeableConcept = LNC#LA14029-5 "GRCh37"
 
 // MLT: All pertinent negative genes for a single report were combined into one variant "absent" resource.
 
@@ -202,6 +213,7 @@ Description: "GenomeX mCODE Example for Genomic Variant - POF1B"
 * component[protein-hgvs].valueCodeableConcept = HGVS#NP_001294869.1:p.(Pro144Ser) "NP_001294869.1:p.(Pro144Ser)"  // VariantValidator normalized HGVS string for p.P144S*".
 * component[genomic-source-class].valueCodeableConcept = LNC#LA6684-0 "Somatic"
 * component[sample-allelic-frequency].valueQuantity = 78.6 '%' "%"
+* component[reference-sequence-assembly].valueCodeableConcept = LNC#LA14029-5 "GRCh37"
 
 Instance: gx-genomic-diagnostic-implication-pof1b
 InstanceOf: DiagnosticImplication
@@ -228,6 +240,7 @@ Description: "GenomeX mCODE Example for Genomic Variant - POLRMT"
 * component[protein-hgvs].valueCodeableConcept = HGVS#NP_005026.3:p.(Gly200Arg) "NP_005026.3:p.(Gly200Arg)"  // VariantValidator normalized HGVS string for p.G200R
 * component[genomic-source-class].valueCodeableConcept = LNC#LA6684-0 "Somatic"
 * component[sample-allelic-frequency].valueQuantity = 75.6 '%' "%"
+* component[reference-sequence-assembly].valueCodeableConcept = LNC#LA14029-5 "GRCh37"
 
 Instance: gx-genomic-diagnostic-implication-polrmt
 InstanceOf: DiagnosticImplication

@@ -2,7 +2,7 @@
 
 mCODE includes genomics-related data elements needed inform cancer assessment and treatment options. The profiles directly derive from the [HL7 CGWG Clinical Genomics Reporting Implementation Guide](http://hl7.org/fhir/uv/genomics-reporting/index.html) (GRIG) STU2 release. The GRIG provides helpful foundational concepts and guidance for representing different types of genomics reports. mCODE assumes one is familiar with the GRIG content and uses this additional guidance to identify 1) what is clinically actionable and minimal for 
 
-Four profiles relate to the capture of clinical genomics data:
+Three profiles relate to the capture of clinical genomics data:
 
 * [GenomicsReport] - Contains results of genomic analyses. Genomic reports vary in complexity and content, as simple as the results for a single discrete variant to complex sequences. This profile inherits from the profile of the same name in GRIG.
 * [GenomicVariant] - Used to record variants that could be found from tests that broadly analyze genomic regions (e.g.: exome tests) and stores results for any variants that could have been found. The region in which the variant was found could be specified in the RegionStudied attribute of the GenomicsReport profile. This profile derives from the Variant profile in GRIG.
@@ -22,6 +22,8 @@ The diagram below illustrates the distinction within an mCODE bundle.
 </div>>
 
 <br/>
+
+The mCODE example [`Bundle-gx-genomic-bundle-incredible-hulk`](Bundle-gx-genomic-bundle-incredible-hulk.html) demonstrates a bundle containing resources conforming with the GRIG genomics report.
 
 ### Assumptions and Scope
 
@@ -58,8 +60,6 @@ The identity of non-genomic laboratory tests is typically represented by a [Logi
 
 ### Representing Variants
 
-A full representation of an HGVS variant requires a transcript identifier or reference sequence id that includes the version number followed by a nomenclature which further characterizes the nature of the variant.
-
 #### Variant Nomenclature
 
 The [HL7 GRIG guidance on defining variants](http://hl7.org/fhir/uv/genomics-reporting/sequencing.html) states support for two reporting patterns for specifying variants:
@@ -67,6 +67,10 @@ The [HL7 GRIG guidance on defining variants](http://hl7.org/fhir/uv/genomics-rep
 2. by providing multiple component details in the style of VCF columns
 
 Although mCODE should support both formats, it is preferable to use HGVS nomenclature for coding and protein variants where possible.
+
+A full representation of an HGVS variant should include the following: 
+* a transcript identifier or reference sequence id that includes the version number followed by a nomenclature which further characterizes the nature of the variant.
+* the reference sequence assembly version populated in the Variant observation component [reference-sequence-assembly](http://hl7.org/fhir/uv/genomics-reporting/STU2/StructureDefinition-finding-definitions.html#Observation.component:reference-sequence-assembly).
 
 **NOTE**: The FHIR IG publisher uses the [Mutalyzer 3](https://mutalyzer.nl/) Application Programming Interface (API) for validating an HGVS-notated variant included in the FHIR examples. It is not intended to validate all possible variants as there is no single HGVS validation tool that comprehensively covers the most up-to-date recognized variants for a given reference sequence. 
 

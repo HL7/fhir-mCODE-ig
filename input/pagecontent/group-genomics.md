@@ -109,7 +109,19 @@ The mCODE example [`genomic-variant-fusion`](Observation-genomic-variant-fusion.
 
 ### Search parameters for genomic variants
 
-Genomic operations are out of scope for mCODE STU3.
+The [GRIG provides extensive guidance and examples](http://build.fhir.org/ig/HL7/genomics-reporting/usecases.html#appendix-d-query-guidance) for querying FHIR genomic reporting data. Some of the ones relevant to mCODE are listed below for convenience.
+
+**NOTE:** Genomic operations are out of scope for mCODE STU3 since it is not yet approved for publication at this time.
+
+#### [Search a patient's variants with a given gene](http://build.fhir.org/ig/HL7/genomics-reporting/usecases.html#search-for-variants-with-a-given-gene)
+
+The following example FHIR query will retrieve all of a patient's variants reported for a given gene. Note that the gene is expressed as an HGNC identifier (e.g.: HGNC:11389 is the STK11 gene).
+
+`GET <fhir endpoint>/Observation?subject=cancer-patient-john-anyperson&code=69548-6&component-code=48018-6&component-value-concept=HGNC:11389`
+
+#### Get references to all DNA sequences related to mutations with an interpretation “Pathogenic” for a specific Patient
+
+`GET <fhir endpoint>/Observation?subject:Patient=123&code-value-concept=http://loinc.org|53037-8$http://loinc.org|LA6668-3&_include:iterate=Observation:derived-from`
 
 
 {% include markdown-link-references.md %}

@@ -1,6 +1,6 @@
 The following changes occurred between [STU 2 publication](http://hl7.org/fhir/us/mcode/STU2/) (January 2022) and mCODE version 2.1, STU 3 ballot (January 2023). For a history of previous changes, please see the prior change logs in the [appropriate versions](http://hl7.org/fhir/us/mcode/history.html).
 
-### Use of AJCC-equivalent SNOMED Codes for Staging
+### Allowing the Use of AJCC-equivalent SNOMED Codes for Staging
 
 mCODE STU 3 accepts SNOMED equivalents of AJCC codes, in addition to AJCC codes as in STU 2. This provides maximum interoperability across AJCC licensed and unlicensed systems, but does not break existing applications.
 
@@ -78,42 +78,6 @@ In addition, the following value sets are now associated with the non-TNM [Cance
   * #1162615005 "Lymph node level XA (qualifier value)"
   * #1162613003 "Lymph node level XB (qualifier value)"
 
-### Profile Categories
-
-Required categories (`Observation.category`) have been added to PrimaryCancerCondition, SecondaryCancerCondition, TumorMarkerTest, and five staging-related profiles. The purpose is to make it easier to retrieve mCODE resources. Having fixed categories provide a firmer "handle" to retrieve relevant mCODE resources, without relying on the "code in value set" (`code:in=[value set]`) operation that is not implemented by all FHIR servers. [Updated sample queries](conformance-general.html#support-querying-mcode-conforming-resources) have been provided. **These changes are not backward compatible.**
-
-The following are now required values in `Condition.category` or `Observation.category`:
-
-* [PrimaryCancerCondition] now requires category SNOMED CT 372087000 "Primary malignant neoplasm (disorder)"
-* [SecondaryCancerCondition] now requires category SNOMED CT 128462008 "Metastatic malignant neoplasm (disorder)"
-* [TumorMarkerTest] now requires category SNOMED CT 250724005 "Tumor marker measurement (procedure)"
-* The five staging profiles ([CancerStageGroup], [TNMStageGroup], [TNMPrimaryTumorCategory], [TNMRegionalNodesCategory], and [TNMDistantMetastasesCategory]) now require category SNOMED CT 385356007 "Tumor stage finding (finding)"
-
-  As an example of how to assign these categories in instances, the JSON for a principal cancer condition would include:
-
-  ```
-  "category" : [
-      {
-        "coding" : [
-          {
-            "system" : "http://terminology.hl7.org/CodeSystem/condition-category",
-            "code" : "problem-list-item"
-          }
-        ]
-      },
-      {
-        "coding" : [
-          {
-            "system" : "http://snomed.info/sct",
-            "code" : "372087000"
-          }
-        ]
-      }
-    ]
-    ```
-
-  The first of these categories satisfies the US Core requirement from [US Core Condition Problems and Health Concerns Profile][USCoreConditionProblemHealthConcern] and the second category satisfies the mCODE requirement. The other categories are similar.
-
 ### Comorbidity Redesign
 
 Based on user feedback on the complexity of the STU 2 design, [comorbidities][Comorbidities] have been redesigned into a more compact, practical form. As a full redesign, this change is not backward compatible.
@@ -125,7 +89,28 @@ Based on user feedback on the complexity of the STU 2 design, [comorbidities][Co
 
 ### Update to US Core 5.0.1
 
-mCODE has been updated to the current version of US Core, STU 5. Because there are new profiles in STU 5 that should be used as parent profiles, some mCODE profiles were affected. In particular, the parent profiles of [KarnofskyPerformanceStatus] and [ECOGPerformanceStatus] were switched from Observation to the newly-introduced [US Core Observation Clinical Test Result Profile][USCoreClinicalTestObservation].
+mCODE has been updated to the current version of US Core, STU 5. Because there are new profiles in STU 5 that should be used as parent profiles, some mCODE profiles were affected. In particular, the parent profiles of [KarnofskyPerformanceStatus] and [ECOGPerformanceStatus] were switched from Observation to the newly-introduced [US Core Observation Clinical Test Result Profile][USCoreClinicalTestObservation]. Secondly, the parent profiles of [PrimaryCancerCondition] and [SecondaryCancerCondition] were switched to [US Core Condition Problems and Health Concerns Profile]. This change is not backward compatible.
+
+As a result, there are new required values for `Condition.category` or `Observation.category`:
+
+* In [PrimaryCancerCondition] and [SecondaryCancerCondition], the category "problem-list-item" is required.
+* In [KarnofskyPerformanceStatus] and [ECOGPerformanceStatus] , the category "clinical-test" is required.
+
+
+  As an example of how to assign a category, the JSON for a primary cancer condition must now include:
+
+  ```
+  "category" : [
+      {
+        "coding" : [
+          {
+            "system" : "http://terminology.hl7.org/CodeSystem/condition-category",
+            "code" : "problem-list-item"
+          }
+        ]
+      }
+    ]
+  ```
 
 ### Dependency on Genomics Reporting IG
 

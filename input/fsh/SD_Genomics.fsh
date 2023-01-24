@@ -68,9 +68,6 @@ Description: "The result of a tumor marker test. Tumor marker tests are generall
 * subject 1..1
 * value[x] 1..1
 * code from TumorMarkerTestVS (extensible)
-* category 2..*
-* category contains mcode-category 1..1
-* category[mcode-category] = SCT#250724005 // Tumor marker measurement (procedure)
 * subject only Reference(CancerPatient)
 * subject ^definition = "Patient whose test result is recorded."
 * effective[x] only dateTime or Period

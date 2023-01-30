@@ -11,13 +11,7 @@ Description: "A surgical action addressing a cancer condition. The scope of this
 * category 1..  // upper cardinality is already 1
 * reasonCode from CancerDisorderVS (extensible)
 * reasonReference only Reference(PrimaryCancerCondition or SecondaryCancerCondition)
-* bodySite.extension contains
-     BodyLocationQualifier named locationQualifier 0..*   and
-     LateralityQualifier named lateralityQualifier 0..1
-* bodySite.extension[locationQualifier] ^short = "General location qualifier (excluding laterality) for this bodySite"
-* bodySite.extension[locationQualifier] ^definition = "General location qualifier (excluding laterality) for this bodySite"
-* bodySite.extension[lateralityQualifier] ^short = "Laterality qualifier (excluding laterality) for this bodySite"
-* bodySite.extension[lateralityQualifier] ^definition = "Laterality qualifier (excluding laterality) for this bodySite"
+* insert BodySiteQualifierAndLaterality
 // It is not kosher to slice a 0..1 element, however, the cardinality of Procedure.category is a mistake. It was supposed to have changed in 2019 to 0..* (https://jira.hl7.org/browse/FHIR-20628). However, it is still 0..1 in R4, but the change has been made for R5.
 * category 1.. MS
 * category = SCT#387713003 //"Surgical procedure"

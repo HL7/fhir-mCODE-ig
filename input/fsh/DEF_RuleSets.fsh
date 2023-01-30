@@ -54,3 +54,12 @@ RuleSet: LOINCCopyrightForVS
 RuleSet: ExtensionContext(path)
 * ^context[+].type = #element
 * ^context[=].expression = "{path}"
+
+RuleSet: BodySiteQualifierAndLaterality
+* bodySite.extension contains
+     BodyLocationQualifier named locationQualifier 0..*   and
+     LateralityQualifier named lateralityQualifier 0..1
+* bodySite.extension[locationQualifier] ^short = "General location qualifier (excluding laterality) for this bodySite"
+* bodySite.extension[locationQualifier] ^definition = "General location qualifier (excluding laterality) for this bodySite"
+* bodySite.extension[lateralityQualifier] ^short = "Laterality qualifier for this bodySite"
+* bodySite.extension[lateralityQualifier] ^definition = "Laterality qualifier for this bodySite"

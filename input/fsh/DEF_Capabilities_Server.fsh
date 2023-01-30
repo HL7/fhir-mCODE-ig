@@ -21,6 +21,7 @@ RuleSet: mCODE_CapabilityStatement_Server_Common
 * rest[0].mode = #server
 * rest.documentation =  "An mCODE Server **SHALL**:\n\n1. Support all profiles defined in this Implementation Guide..\n1.  Implement the RESTful behavior according to the FHIR specification.\n1. Return the following response classes:\n   - (Status 400): invalid parameter\n   - (Status 401/4xx): unauthorized request\n   - (Status 403): insufficient scope\n   - (Status 404): unknown resource\n   - (Status 410): deleted resource.\n1. Support json source formats for all mCODE interactions.\n1. Identify the mCODE  profiles supported as part of the FHIR `meta.profile` attribute for each instance.\n1. Support the searchParameters on each profile individually and in combination.\n\nThe mCODE Server **SHOULD**:\n\n1. Support xml source formats for all mCODE interactions.\n"
 * rest.security.description = "1. See the [General Security Considerations](https://www.hl7.org/fhir/security.html#general) section for requirements and recommendations.\n1. A server **SHALL** reject any unauthorized requests by returning an `HTTP 401` unauthorized response code."
+* imports = "http://hl7.org/fhir/us/core/CapabilityStatement/us-core-client"   // Import the US Core Client Capability Statement
 
 /////////////////////////////////////////////////////////////////////////////////////
 RuleSet: mCODE_CapabilityStatement_Patient_Server_Common_Rules
@@ -209,4 +210,4 @@ Usage: #definition
 * rest[0].operation[0].name = "mcode-patient-bundle"
 * rest[0].operation[0].definition = "http://hl7.org/fhir/us/mcode/OperationDefinition/mcode-patient-everything"
 * rest[0].operation[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-* rest[0].operation[0].extension.valueCode = #SHALL 
+* rest[0].operation[0].extension.valueCode = #SHALL

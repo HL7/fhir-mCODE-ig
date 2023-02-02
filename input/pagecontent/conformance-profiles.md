@@ -7,14 +7,13 @@ Where US Core does not provide an appropriate base profile, mCODE profiles FHIR 
 | Profile | Based on US Core?  | Immediate Parent Profile |
 |---------|--------------------|--------------------------|
 | [Body Structure Identifier][BodyStructureIdentifier] | no | Identifier |
-| [Cancer Disease Status][CancerDiseaseStatus] | yes | US Core Observation Clinical Test Result |
+| [Cancer Disease Status][CancerDiseaseStatus] | no | Observation |
 | [Cancer Patient][CancerPatient] | yes | US Core Patient |
 | [Cancer-Related Medication Administration][CancerRelatedMedicationAdministration] | no | Medication Administration |
 | [Cancer-Related Medication Request][CancerRelatedMedicationRequest] | yes | US Core Medication Request |
 | [Cancer-Related Surgical Procedure][CancerRelatedSurgicalProcedure] | yes | US Core Procedure |
-| [Cancer Stage Group Assessment][CancerStageGroup] | no | Observation |
-| [Cancer Stage Group TNM][TNMStageGroup] | no | CancerStageGroup |
-| [Comorbidities] | yes | US Core Observation Clinical Test Result |
+| [Cancer Stage Group][CancerStageGroup] | no | Observation |
+| [Comorbidities] | no | Observation |
 | [ECOG Performance Status][ECOGPerformanceStatus] | yes | US Core Observation Clinical Test Result |
 | [Genomic Region Studied][GenomicRegionStudied] | no | Genomics Reporting IG RegionStudied |
 | [Genomics Report][GenomicsReport] | no | Genomics Reporting IG GenomicsReport |
@@ -30,9 +29,10 @@ Where US Core does not provide an appropriate base profile, mCODE profiles FHIR 
 | [TNM Distant Metastases Category][TNMDistantMetastasesCategory] | no | Observation |
 | [TNM Primary Tumor Category][TNMPrimaryTumorCategory] | no | Observation |
 | [TNM Regional Nodes Category][TNMRegionalNodesCategory] | no | Observation |
+| [TNM Stage Group TNM][TNMStageGroup] | no | CancerStageGroup |
 | [Tumor][Tumor] | no | BodyStructure |
 | [Tumor Marker Test][TumorMarkerTest] | yes | US Core Laboratory Result Observation |
-| [Tumor Size][TumorSize] | yes | US Core Laboratory Result Observation |
+| [Tumor Size][TumorSize] | no | Observation |
 {: .grid }
 
 ### Profile-Level Conformance Expectations

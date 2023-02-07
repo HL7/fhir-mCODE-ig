@@ -2,9 +2,7 @@ RuleSet: CancerConditionCommonRules
 * ^extension[FMM].valueInteger = 4
 * extension contains
     HistologyMorphologyBehavior named histologyMorphologyBehavior 0..1 MS
-* bodySite.extension contains
-     BodyLocationQualifier named locationQualifier 0..*   and
-     LateralityQualifier named lateralityQualifier 0..1
+* insert BodySiteQualifierAndLaterality(bodySite)
 * bodySite from CancerBodyLocationVS (extensible)
 * extension and bodySite and bodySite.extension[locationQualifier] and bodySite.extension[lateralityQualifier] MS
 

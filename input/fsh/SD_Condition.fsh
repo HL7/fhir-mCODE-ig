@@ -2,9 +2,7 @@ RuleSet: CancerConditionCommonRules
 * ^extension[FMM].valueInteger = 4
 * extension contains
     HistologyMorphologyBehavior named histologyMorphologyBehavior 0..1 MS
-* bodySite.extension contains
-     BodyLocationQualifier named locationQualifier 0..*   and
-     LateralityQualifier named lateralityQualifier 0..1
+* insert BodySiteQualifierAndLaterality(bodySite)
 * bodySite from CancerBodyLocationVS (extensible)
 * extension and bodySite and bodySite.extension[locationQualifier] and bodySite.extension[lateralityQualifier] MS
 
@@ -27,6 +25,8 @@ Description: "Records the the primary cancer condition, the original or first ne
 * stage.type ^short = "Staging system or method used."
 * stage.type ^definition = "The type of staging used to arrive at the stage.summary value."
 * stage.type from CancerStagingMethodVS (required)
+* evidence.code from CancerDiseaseStatusEvidenceTypeVS (required)
+* evidence.code ^orderMeaning = "If more than one code or Reference is present, it is interpreted as the the physician's declaration of how the cancer was diagnosed, with the most invasive method first (e.g., autopsy/histopathology, cytology, radiology, physicial exam, etc.)"
 
 
 Profile: SecondaryCancerCondition
@@ -47,3 +47,5 @@ Description: "Records the history of secondary neoplasms, including location(s) 
 * code from SecondaryCancerDisorderVS (extensible)
 * insert NotUsed(stage)
 * extension and extension[relatedPrimaryCancerCondition] MS
+* evidence.code from CancerDiseaseStatusEvidenceTypeVS (required)
+* evidence.code ^orderMeaning = "If more than one code or Reference is present, it is interpreted as the the physician's declaration of how the cancer was diagnosed, with the most invasive method first (e.g., autopsy/histopathology, cytology, radiology, physicial exam, etc.)"

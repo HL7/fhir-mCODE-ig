@@ -92,9 +92,7 @@ Description:  "A specimen taken from a Patient. The profile includes extensions 
 * type from HumanSpecimenTypeVS (extensible)
 * subject only Reference(CancerPatient)
 * subject ^definition = "The patient associated with this specimen."
-* collection.bodySite.extension contains
-    BodyLocationQualifier named locationQualifier 0..* and
-    LateralityQualifier named lateralityQualifier 0..1
+* insert BodySiteQualifierAndLaterality(collection.bodySite)
 * identifier ^slicing.discriminator.type = #pattern
 * identifier ^slicing.discriminator.path = "type"
 * identifier ^slicing.rules = #open

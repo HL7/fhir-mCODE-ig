@@ -1,6 +1,7 @@
 {
     "package-id" : "hl7.fhir.us.mcode",
     "version" : "2.1.0",
+    "mode" : "milestone",
     "path" : "http://hl7.org/fhir/us/mcode/STU2.1",
     "status" : "trial-use",
     "sequence" : "STU 2",

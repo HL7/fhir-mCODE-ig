@@ -186,6 +186,7 @@
 <artifact id="Observation/gx-genomic-variant-somatic-mycn" key="Observation-gx-genomic-variant-somatic-mycn" name="gx-genomic-variant-somatic-mycn"/>
 <artifact id="Observation/gx-genomic-variant-somatic-pof1b" key="Observation-gx-genomic-variant-somatic-pof1b" name="gx-genomic-variant-somatic-pof1b"/>
 <artifact id="Observation/gx-genomic-variant-somatic-polrmt" key="Observation-gx-genomic-variant-somatic-polrmt" name="gx-genomic-variant-somatic-polrmt"/>
+<artifact id="ServiceRequest/gx-order-tumornormal-tempus-inc" key="ServiceRequest-gx-order-tumornormal-tempus-inc" name="gx-order-tumornormal-tempus-inc"/>
 <artifact id="Practitioner/gx-practitioner-test-pathologist" key="Practitioner-gx-practitioner-test-pathologist" name="gx-practitioner-test-pathologist"/>
 <artifact id="Organization/gx-us-core-organization-tempus-inc" key="Organization-gx-us-core-organization-tempus-inc" name="gx-us-core-organization-tempus-inc"/>
 <artifact id="Organization/gx-us-core-organization-test-institution" key="Organization-gx-us-core-organization-test-institution" name="gx-us-core-organization-test-institution"/>

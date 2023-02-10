@@ -24,6 +24,20 @@ Description: "GenomeX Example of NGS Patient"
 * address.postalCode = "12345"
 * address.country = "US"
 
+
+Instance: gx-order-tumornormal-tempus-inc
+InstanceOf: ServiceRequest
+Description: "GenomeX example: Order information"
+* identifier[0].type = IDTYPE#FILL "Filler Identifier"
+* identifier[0].system = "https://www.tempus.com"
+* identifier[0].value = "22howe"
+* status = #completed
+* intent = #order
+* subject = Reference(gx-cancer-patient-incredible-hulk)
+* code = https://www.tempus.com#XT.V4 "xT - 648 gene panel"
+* reasonCode = ICD10CM#C34.9 "Malignant neoplasm of unspecified part of bronchus or lung"
+
+
 Instance: gx-us-core-organization-tempus-inc
 InstanceOf: USCoreOrganization
 Description: "GenomeX example: example organization"
@@ -356,6 +370,7 @@ Description: "GenomeX Example for Genomics Report"
 * subject = Reference(gx-cancer-patient-incredible-hulk)
 * performer = Reference(gx-us-core-organization-tempus-inc)
 * effectiveDateTime = "2022-02-15T19:28:58+05:00"
+* basedOn = Reference(gx-order-tumornormal-tempus-inc)
 * resultsInterpreter = Reference(gx-practitioner-test-pathologist)
 * specimen[0] = Reference(Specimen/gx-genomic-specimen-tumornormal-tumor)
 * specimen[1] = Reference(Specimen/gx-genomic-specimen-tumornormal-normal)
@@ -371,6 +386,8 @@ Description: "GenomeX Example for Genomics Report"
 * result[+] = Reference(Observation/gx-genomic-diagnostic-implication-polrmt)
 * result[+] = Reference(Observation/gx-genomic-variant-fusion-met-alk)
 * result[+] = Reference(Observation/gx-genomic-variant-pertinent-negative-nras-kit-braf)
+* result[+] = Reference(Observation/gx-genomic-tmb)
+* result[+] = Reference(Observation/gx-genomic-msi)
 * result[+] = Reference(Observation/gx-genomic-therapeutic-implication-alectinib)
 * result[+] = Reference(Observation/gx-genomic-therapeutic-implication-brigatinib)
 * result[+] = Reference(Observation/gx-genomic-therapeutic-implication-ceritinib)
@@ -390,6 +407,8 @@ Description: "Extended genomics example conformant with an mCODE Bundle."
 * entry[=].fullUrl = "http://example.org/fhir/Patient/gx-cancer-patient-incredible-hulk"
 * entry[+].resource = gx-genomics-report-incredible-hulk
 * entry[=].fullUrl = "http://example.org/fhir/DiagnosticReport/gx-genomics-report-incredible-hulk"
+* entry[+].resource = gx-order-tumornormal-tempus-inc
+* entry[=].fullUrl = "http://example.org/fhir/ServiceRequest/gx-order-tumornormal-tempus-inc"
 * entry[+].resource = gx-practitioner-test-pathologist
 * entry[=].fullUrl = "http://example.org/fhir/Practitioner/gx-practitioner-test-pathologist"
 * entry[+].resource = gx-genomic-specimen-tumornormal-tumor

@@ -16,10 +16,10 @@ Because the use of these code systems vary in different institutions, mCODE supp
 
 | Encoding | Code  | Histology Morphology Behavior Extension| Body Site |
 |----------|-------|-----------------------------|----------|
-| **SNOMED Encoded** | Any descendant of `363346000` "Malignant neoplastic disease (disorder)" | Any descendant of `367651003` "Malignant neoplasm of primary, secondary, or uncertain origin (morphologic abnormality)" | Any descendant of `123037004` "Body structure" |
+| **SNOMED Encoded** | Any SNOMED CT code in the [Primary Cancer Disorder Value Set][PrimaryCancerDisorderVS] | Any SNOMED CT code in the [Histology Morphology Behavior Value Set] [HistologyMorphologyBehaviorVS] | Any descendant of `123037004` "Body structure" |
 | **ICD-10-CM Encoded** | Any ICD-10-CM primary code (precoodinated) | n/a | n/a |
-| **ICD-O-3 Encoded** | The code `363346000` "Malignant neoplastic disease (disorder)" | Any ICD-O-3 Morphology Code (including /1, /2, or /3 suffix for primary cancers, and /6 suffix for secondary cancers) | Any ICD-O-3 Topology Code |
-{: .grid }
+| **ICD-O-3 Encoded** | The code `55342001` "Neoplastic disease (disorder)" or `363346000` "Malignant neoplastic disease (disorder)" or `20376005` "Benign neoplastic disease (disorder)" | Any ICD-O-3 Morphology Code (including /1, /2, or /3 suffix for primary cancers, and /6 suffix for secondary cancers) | Any ICD-O-3 Topology Code |
+{: .grid }v
 
 Implementers should reference the [PrimaryCancerCondition] and [SecondaryCancerCondition] profiles for further details on the use of these terminologies and associated value sets.
 

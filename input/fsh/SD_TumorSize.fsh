@@ -1,5 +1,5 @@
 Profile: TumorSize 
-Parent:  Observation
+Parent:  Observation  // not US Core, because the method could be laboratory, imaging, or clinical
 Id: mcode-tumor-size
 Title: "Tumor Size Profile"
 Description:  "Records the dimensions of a tumor"

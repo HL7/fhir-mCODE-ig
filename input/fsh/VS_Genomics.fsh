@@ -184,7 +184,7 @@ Description:    "Codes representing tests for tumor markers. This value set of L
 * LNC#68452-2 "Lactate dehydrogenase [Enzymatic activity/volume] in Synovial fluid by Pyruvate to lactate reaction"
 * LNC#68453-0 "Lactate dehydrogenase [Enzymatic activity/volume] in Synovial fluid by Lactate to pyruvate reaction"
 * LNC#94076-7 "Mutations/Megabase [# Ratio] in Tumor"  // Tumor Mutation Burden
-* LC#81695-9 "Microsatellite instability [Interpretation] in Cancer specimen Qualitative"
+* LNC#81695-9 "Microsatellite instability [Interpretation] in Cancer specimen Qualitative"
 
 // * LNC#81430-1 "Lactate dehydrogenase [Enzymatic activity/volume] in Peritoneal dialysis fluid by Lactate to pyruvate reaction"
 // * LNC#15036-7 "Catecholamines [Moles/time] in 24 hour Urine"

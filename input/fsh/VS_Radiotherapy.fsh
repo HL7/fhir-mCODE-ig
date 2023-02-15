@@ -60,6 +60,7 @@ Description: "Allowed techniques for photon beam modality"
 * SCT#1162782007 "Three dimensional external beam radiation therapy (procedure)"
 * SCT#1156526006 "Two dimensional external beam radiation therapy (procedure)"
 * SCT#168524008 "Radiotherapy - intraoperative control (procedure)"
+* SCT#1163157007 "Ultra high dose rate radiotherapy (procedure)"
 
 ValueSet: TeleradiotherapyElectronBeamTechniqueVS
 Id: mcode-teleradiotherapy-electron-beam-technique-vs

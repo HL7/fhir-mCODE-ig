@@ -6,13 +6,13 @@ Allowed combinations of modality and technique are shown here and enforced by in
 
 | **Treatment Type** |  **Modality**           |      **Technique**       |
 | ---------------| ------------------------ | ------------------------ |
-| External Beam Radiotherapy | Photons                 | IMRT, VMAT, 3D, 2D, IORT |
-| External Beam Radiotherapy| Electrons                | 3D, 2D, IORT      |
+| External Beam Radiotherapy | Photons                 | IMRT, VMAT, 3D, 2D, IORT, FLASH |
+| External Beam Radiotherapy| Electrons                | 3D, 2D, IORT, FLASH      |
 | External Beam Radiotherapy| Neutrons                 | 3D, NCT                  |
 | External Beam Radiotherapy| Carbon Ions              | PPS, PSS, PS           |
-| External Beam Radiotherapy| Protons                  | PPS, PSS, PS           |
+| External Beam Radiotherapy| Protons                  | PPS, PSS, PS, FLASH    |
 | Brachytherapy | Internal radiotherapy – permanent seeds | Interstitial |
-| Brachytherapy| Low Dose Rate using temp rad source | Intracavitary, Interstitial, Surface |
+| Brachytherapy| Low Dose Rate using temporary source | Intracavitary, Interstitial, Surface |
 | Brachytherapy| Pulsed Dose Rate | Intracavitary, Interstitial |
 | Brachytherapy| High Dose Rate  | Intracavitary, IMB, Interstitial, Intravascular, Intraluminal, IORT, Surface |
 | Brachytherapy| High dose rate electronic  | Intracavitary, IMB, Interstitial, Intraluminal, IORT, Surface |
@@ -32,6 +32,7 @@ Technique Acronyms:
 | PS | Particle Scanning other than PSS |
 | PPS | Particle Spot Scanning|
 | PSS | Particle Passive Scattering |
+| FLASH | Ultra high dose rate radiotherapy |
 {: .grid }
 
 ### Conformance

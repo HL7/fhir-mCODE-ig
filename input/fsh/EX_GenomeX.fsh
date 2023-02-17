@@ -35,8 +35,8 @@ Description: "GenomeX example: Order information"
 * intent = #order
 * subject = Reference(gx-cancer-patient-incredible-hulk)
 * code = https://www.tempus.com#XT.V4 "xT - 648 gene panel"
-* reasonCode = ICD10CM#C34.9 "Malignant neoplasm of unspecified part of bronchus or lung"
-
+* reasonCode[0].coding[0] = ICD10CM#C34.9 "Malignant neoplasm of unspecified part of bronchus or lung"
+* reasonCode[0].coding[1] = ICDO3#"C34.9 8140/3" "Lung adenocarcinoma"
 
 Instance: gx-us-core-organization-tempus-inc
 InstanceOf: USCoreOrganization

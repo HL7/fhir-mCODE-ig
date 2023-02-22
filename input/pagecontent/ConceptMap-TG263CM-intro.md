@@ -9,3 +9,4 @@ The mapping uses the 'product' field of each mapped element to enumerate the qua
 same treatment location as the TG263 concept.
 
 Despite the authors best efforts, two of the TG263 concepts and two of the qualifiers lack corresponding SNOMEDCT terms.
+{% include markdown-link-references.md %}

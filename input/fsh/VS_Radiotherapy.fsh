@@ -249,6 +249,11 @@ Description: "Various modifiers that can be applied to body locations where radi
 * SCT#18769003   "Adjacent" // or "Juxta-posed (qualifier value)"
 * SCT#1217011006 "Non-adjacent (qualifier value)"
 * SCT#255204007  "Multiple (qualifier value)"
+// missing Lymph node levels:
+* SCT_TBD#USCRS-34777 "Lymph node level IIa (qualifier value)"  // request submitted 2/22/2023
+* SCT_TBD#USCRS-34775 "Lymph node level IIb (qualifier value)"  // request submitted 2/22/2023
+
+
 /* No need for separately listing these codes, since they are included as children of 258399006 "Lymph node level value (qualifier value)"
 * SCT#1162616006 "Lymph node level IA (qualifier value)"
 * SCT#1162617002 "Lymph node level IB (qualifier value)"

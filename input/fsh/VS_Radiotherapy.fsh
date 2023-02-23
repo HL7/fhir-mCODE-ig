@@ -221,7 +221,7 @@ Title: "Radiotherapy Treatment Location Qualifier Value Set"
 Description: "Various modifiers that can be applied to body locations where radiotherapy treatments can be directed."
 * insert SNOMEDCopyrightForVS
 * ^extension[FMM].valueInteger = 3
-* include codes from system SCT where concept is-a #258399006  "Lymph node level value (qualifier value)"  // I, II, III, IV, V, VI, VII and sub-levels
+* include codes from system SCT where concept is-a #258399006  "Lymph node level value (qualifier value)"
 * exclude SCT#258399006 // the top level abstract code is excluded
 * include codes from valueset LateralityQualifierVS
 // * SCT#255549009    "Anterior (qualifier value)" -- NOT USED BY TG263
@@ -238,9 +238,6 @@ Description: "Various modifiers that can be applied to body locations where radi
 * SCT#40415009   "Proximal (qualifier value)"
 * SCT#255503000  "Entire (qualifier value)" // flagged spuriously as invalid
 * SCT#255609007  "Partial (qualifier value)"
-//* SCT#7771000    "Left (qualifier value)" - now in separate lateralityQualifier
-//* SCT#24028007    "Right (qualifier value)" - now in separate lateralityQualifier
-//* SCT#51440002    "Right and left (qualifier value)" - now in separate lateralityQualifier
 * SCT#14414005   "Peripheral (qualifier value)"
 * SCT#26216008   "Central (qualifier value)"
 * SCT#260235002  "Core (qualifier value)"
@@ -251,6 +248,8 @@ Description: "Various modifiers that can be applied to body locations where radi
 * SCT#260548002  "Oral (qualifier value)"
 * SCT#18769003   "Adjacent" // or "Juxta-posed (qualifier value)"
 * SCT#1217011006 "Non-adjacent (qualifier value)"
+* SCT#255204007  "Multiple (qualifier value)"
+/* No need for separately listing these codes, since they are included as children of 258399006 "Lymph node level value (qualifier value)"
 * SCT#1162616006 "Lymph node level IA (qualifier value)"
 * SCT#1162617002 "Lymph node level IB (qualifier value)"
 * SCT#1162620005 "Lymph node level IVA (qualifier value)"
@@ -267,6 +266,7 @@ Description: "Various modifiers that can be applied to body locations where radi
 * SCT#1162614009 "Lymph node level X (qualifier value)"
 * SCT#1162615005 "Lymph node level XA (qualifier value)"
 * SCT#1162613003 "Lymph node level XB (qualifier value)"
+*/
 
 ValueSet: RadiotherapyTreatmentLocationVS
 Id: mcode-radiotherapy-treatment-location-vs

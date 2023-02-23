@@ -313,7 +313,7 @@ Description: "Example of CancerRelatedMedicationRequest - Chemo Infusion"
 * extension[terminationReason].valueCodeableConcept = SCT#182992009  "Treatment completed (situation)"
 
 Instance: lab-result-observation-hemoglobin
-InstanceOf: USCoreLaboratoryResultObservationProfile
+InstanceOf: USCoreObservationLab
 Description: "Hemoglobin lab result to support TNMStageGroup example"
 * subject = Reference(cancer-patient-adam-everyman)
 * status = ObsStatus#final

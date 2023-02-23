@@ -13,7 +13,7 @@
     },
     {
       "version": "2.1.0",
-      "desc": "Pre-STU3 development version of mCODE",
+      "desc": "STU 2 update with new SNOMED codes",
       "path": "http://build.fhir.org/ig/HL7/fhir-mCODE-ig",
       "status": "ci-build",
       "sequence": "STU 3",

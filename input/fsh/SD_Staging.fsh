@@ -4,8 +4,6 @@ Parent: Observation
 Title: "Cancer Stage Group Profile"
 Description: "An assessment of the extent of the cancer in the body, according to a given cancer staging classification system. This profile can be used with any staging system, but it is specifically targeted for non-TNM staging systems, since specialized TNM staging profiles are provided."
 * ^extension[FMM].valueInteger = 4
-* insert CategorySlicingRules
-* category[requiredCategory] = SCT#385356007 // Tumor stage finding (finding)
 * method from CancerStagingMethodVS (extensible)
 * code from CancerStagingTypeVS (preferred)
 * code ^short = "The type of stage information reported."

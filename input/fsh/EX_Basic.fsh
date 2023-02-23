@@ -3,6 +3,7 @@ InstanceOf: PrimaryCancerCondition
 Description: "Example of Primary Cancer Condition"
 * clinicalStatus = ClinStatus#active "Active"
 * verificationStatus = VerStatus#confirmed "Confirmed"
+* category = CondCat#problem-list-item
 * code = SCT#254637007 "Non-small cell lung cancer (disorder)"
 * extension[histologyMorphologyBehavior].valueCodeableConcept = SCT#35917007 "Adenocarcinoma"
 * bodySite = SCT#39607008 "Lung structure (body structure)"
@@ -18,6 +19,7 @@ InstanceOf: PrimaryCancerCondition
 Description: "Example of Primary Cancer Condition - hematologic cancer"
 * clinicalStatus = ClinStatus#active "Active"
 * verificationStatus = VerStatus#confirmed "Confirmed"
+* category = CondCat#problem-list-item
 * code = SCT#92814006 "Chronic lymphoid leukemia, disease (disorder)"
 * subject = Reference(cancer-patient-adam-everyman)
 * onsetDateTime = "2020-05-12"
@@ -31,6 +33,7 @@ Description: "Example of Secondary Cancer Condition"
 * extension[relatedPrimaryCancerCondition].valueReference = Reference(primary-cancer-condition-nsclc)
 * clinicalStatus = ClinStatus#active "Active"
 * verificationStatus = VerStatus#confirmed "Confirmed"
+* category = CondCat#problem-list-item
 * code = SCT#94225005 "Secondary malignant neoplasm of brain"
 * subject = Reference(cancer-patient-john-anyperson)
 * onsetDateTime = "2019-05-01"
@@ -322,7 +325,7 @@ Description: "Example of CancerRelatedMedicationRequest - Chemo Infusion"
 * extension[terminationReason].valueCodeableConcept = SCT#182992009  "Treatment completed (situation)"
 
 Instance: lab-result-observation-hemoglobin
-InstanceOf: USCoreLaboratoryResultObservationProfile
+InstanceOf: USCoreObservationLab
 Description: "Hemoglobin lab result to support TNMStageGroup example"
 * subject = Reference(cancer-patient-adam-everyman)
 * status = ObsStatus#final

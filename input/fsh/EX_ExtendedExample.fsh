@@ -218,6 +218,7 @@ Description: "Extended example: example showing primary cancer condition"
 * extension[histologyMorphologyBehavior].valueCodeableConcept = SCT#413448000 "Adenocarcinoma, no subtype, intermediate grade (morphologic abnormality)"
 * clinicalStatus = ClinStatus#remission
 * verificationStatus = VerStatus#confirmed
+* category = CondCat#problem-list-item
 * code = SCT#353431000119107 "Primary malignant neoplasm of female left breast (disorder)"
 * subject = Reference(cancer-patient-jenny-m)
 * onsetDateTime = "2018-03-16"

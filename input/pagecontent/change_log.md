@@ -1,4 +1,4 @@
-The following changes occurred between [STU 2 publication](http://hl7.org/fhir/us/mcode/STU2/) (January 2022) and mCODE version 2.1, STU 3 ballot (January 2023). For a history of previous changes, please see the prior change logs in the [appropriate versions](http://hl7.org/fhir/us/mcode/history.html).
+The following changes occurred between [STU 2 publication](http://hl7.org/fhir/us/mcode/STU2/) (January 2022) and the STU 3 ballot (March 2023). For a history of previous changes, please see the prior change logs in the [appropriate versions](http://hl7.org/fhir/us/mcode/history.html).
 
 ### Allowing the Use of AJCC-equivalent SNOMED Codes for Staging
 
@@ -42,42 +42,6 @@ In addition, the following value sets are now associated with the non-TNM [Cance
 * [CancerStagingTypeVS] was introduced to populate the `Observation.code` element in the CancerStageGroup profile.
 * [CancerStageVS] was introduced to populate the `Observation.valueCodeableConcept` element in the CancerStageGroup profile.
 
-### Value Set Content Changes
-
-* The following improvements were made to [CancerStagingMethodVS] (formerly CancerStagingSystemVS) value set:
-  * Certain children of Tumor staging (SCTID: 2542920070) (see https://jira.hl7.org/browse/FHIR-34448) were removed because they represent stage values rather than staging methods.
-  * The following staging methods were added (see https://jira.hl7.org/browse/FHIR-37860):
-    * SCT#1149162008 "International Staging System for multiple myeloma (staging scale)"
-    * SCT#1149163003 "Revised International Staging System for multiple myeloma (staging scale)"
-    * SCT#246165003 "Extent of disease (attribute)"
-* New SNOMED Codes that have been issued since the STU 2 publication have replaced STU 2 temporary codes. These new terms include:
-  * #1204242009  "External beam radiation therapy using particle scanning technique (procedure)" //USCRS-33517
-  * #1217011006  "non-adjacent (qualifier)" // formerly USCRS-33144
-  * #1217123003 "Radiotherapy Course of Treatment (regime/therapy)" //USCRS-33529
-  * #1201745009 "Internal Target Volume (observable entity)" //USCRS-33520
-  * #1201746005  "Internal Gross Tumor Volume (observable entity)" // USCRS-33521
-  * #551001000124108  "Cancer in partial remission (finding)" // USCRS-352237
-  * #550991000124107  "Cancer in full remission(finding)" //USCRS-352236
-  * #1162492000 "Tumor bed (morphologic abnormality)"
-  * #1162782007 "Three dimensional external beam radiation therapy (procedure)"
-  * #1162586008 "Irradiated volume of organ at risk (observable entity)"
-  * #1162616006 "Lymph node level IA (qualifier value)"
-  * #1162617002 "Lymph node level IB (qualifier value)"
-  * #1162620005 "Lymph node level IVA (qualifier value)"
-  * #1162621009 "Lymph node level IVB (qualifier value)"
-  * #1162622002 "Lymph node level VA (qualifier value)"
-  * #1162623007 "Lymph node level VB (qualifier value)"
-  * #1162624001 "Lymph node level VC (qualifier value)"
-  * #1162625000 "Lymph node level VIA (qualifier value)"
-  * #1162626004 "Lymph node level VIB (qualifier value)"
-  * #1162628003 "Lymph node level VIIA (qualifier value)"
-  * #1162627008 "Lymph node level VIIB (qualifier value)"
-  * #1162618007 "Lymph node level VIII (qualifier value)"
-  * #1162619004 "Lymph node level IX (qualifier value)"
-  * #1162614009 "Lymph node level X (qualifier value)"
-  * #1162615005 "Lymph node level XA (qualifier value)"
-  * #1162613003 "Lymph node level XB (qualifier value)"
-
 ### Comorbidity Redesign
 
 Based on user feedback on the complexity of the STU 2 design, [comorbidities][Comorbidities] have been redesigned into a more compact, practical form. As a full redesign, this change is not backward compatible.
@@ -86,6 +50,17 @@ Based on user feedback on the complexity of the STU 2 design, [comorbidities][Co
 * Comorbid conditions can be designated either by providing a disorder code or reference to a FHIR resource. To allow this, the data types on the [RelatedCondition] extension have been expanded to allow a choice of Reference(Condition) or CodeableConcept.
 * Conditions mentioned in the Comorbidities profile can still be designated as present or absent, but this is accomplished by populating different extensions. A new extension, [RelatedConditionAbsent], has been introduced to support negation of a comorbidity (if needed to assert a significant negative).
 * Value sets, extensions, code systems, and profiles related to STU 2 Elixhauser comorbidities that are no longer required have been eliminated.
+
+### Value Set Content Changes
+
+* The following improvements were made to [CancerStagingMethodVS] (formerly CancerStagingSystemVS) value set:
+  * Certain children of Tumor staging (SCTID: 2542920070) (see https://jira.hl7.org/browse/FHIR-34448) were removed because they represent stage values rather than staging methods.
+  * The following staging methods were added (see https://jira.hl7.org/browse/FHIR-37860):
+    * SCT#1149162008 "International Staging System for multiple myeloma (staging scale)"
+    * SCT#1149163003 "Revised International Staging System for multiple myeloma (staging scale)"
+    * SCT#246165003 "Extent of disease (attribute)"
+  * Temporary codes for lymph node levels IIA and IIB, missing from previous versions, were added.
+  * A code for "multiple" was added to RadiotherapyTreatmentLocationQualifierVS
 
 ### Update to US Core 5.0.1
 
@@ -122,6 +97,10 @@ mCODE is now is explicitly dependent on the [Genomics Reporting IG STU2 (v2.0.0)
 * The diagnosticImplication component of GenomicVariant (present in STU 2) does not exist in GRIG. Users should express diagnostic implications of a variant using the GRIG [DiagnosticImplication](http://hl7.org/fhir/uv/genomics-reporting/STU2/StructureDefinition-diagnostic-implication.html) profile.
 * Value sets that are no longer required because equivalents are defined externally in GRIG were removed: HGNCVS, HGVSVS, GenomicMolecularConsequenceVS, ClinvarVS, and DNAChangeTypeVS.
 
+### Change in mCODE Bundle Slicing
+
+The mCODE bundle definition now slices on resource type, rather than profile. Slicing logic was changed because, in some cases, instances could not be assigned unambigously to a slice, causing the FHIR validator to output errors. With this change, the assignment to a slice will always be unambiguous. This change has no effect on the contents or use of the mCODE bundle.
+
 ### Maturity Indicators
 
 Maturity indicators, based on the FHIR Maturity Model (FMM) have been added to profiles and value sets. These indicators show up in the IG but have no functional affect on implementations.
@@ -147,6 +126,43 @@ A specimen is a specimen. There was no real reason to distinguish specimens obta
 ### Examples
 
 * The genetic variant in the [genomic-variant-somatic-single-nucleotide example](Observation-genomic-variant-somatic-single-nucleotide.html) changed from CLINVAR#619728 to CLINVAR#611264 to address https://jira.hl7.org/browse/FHIR-36724
+
+
+### Value Set Content Changes (Published in STU 2.1)
+
+* The following improvements were made to [CancerStagingMethodVS] (formerly CancerStagingSystemVS) value set:
+  * Certain children of Tumor staging (SCTID: 2542920070) (see https://jira.hl7.org/browse/FHIR-34448) were removed because they represent stage values rather than staging methods.
+  * The following staging methods were added (see https://jira.hl7.org/browse/FHIR-37860):
+    * SCT#1149162008 "International Staging System for multiple myeloma (staging scale)"
+    * SCT#1149163003 "Revised International Staging System for multiple myeloma (staging scale)"
+    * SCT#246165003 "Extent of disease (attribute)"
+* New SNOMED Codes that have been issued since the STU 2 publication have replaced STU 2 temporary codes. These new terms include:
+  * #1204242009  "External beam radiation therapy using particle scanning technique (procedure)" //USCRS-33517
+  * #1217011006  "non-adjacent (qualifier)" // formerly USCRS-33144
+  * #1217123003 "Radiotherapy Course of Treatment (regime/therapy)" //USCRS-33529
+  * #1201745009 "Internal Target Volume (observable entity)" //USCRS-33520
+  * #1201746005  "Internal Gross Tumor Volume (observable entity)" // USCRS-33521
+  * #551001000124108  "Cancer in partial remission (finding)" // USCRS-352237
+  * #550991000124107  "Cancer in full remission(finding)" //USCRS-352236
+  * #1162492000 "Tumor bed (morphologic abnormality)"
+  * #1162782007 "Three dimensional external beam radiation therapy (procedure)"
+  * #1162586008 "Irradiated volume of organ at risk (observable entity)"
+  * #1162616006 "Lymph node level IA (qualifier value)"
+  * #1162617002 "Lymph node level IB (qualifier value)"
+  * #1162620005 "Lymph node level IVA (qualifier value)"
+  * #1162621009 "Lymph node level IVB (qualifier value)"
+  * #1162622002 "Lymph node level VA (qualifier value)"
+  * #1162623007 "Lymph node level VB (qualifier value)"
+  * #1162624001 "Lymph node level VC (qualifier value)"
+  * #1162625000 "Lymph node level VIA (qualifier value)"
+  * #1162626004 "Lymph node level VIB (qualifier value)"
+  * #1162628003 "Lymph node level VIIA (qualifier value)"
+  * #1162627008 "Lymph node level VIIB (qualifier value)"
+  * #1162618007 "Lymph node level VIII (qualifier value)"
+  * #1162619004 "Lymph node level IX (qualifier value)"
+  * #1162614009 "Lymph node level X (qualifier value)"
+  * #1162615005 "Lymph node level XA (qualifier value)"
+  * #1162613003 "Lymph node level XB (qualifier value)"
 
 
 {% include markdown-link-references.md %}

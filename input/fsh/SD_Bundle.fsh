@@ -12,6 +12,65 @@ Description: "A collection of data for an mCODE cancer patient."
 * entry ^slicing.rules = #open
 * entry ^slicing.description = "Slicing based on the profile"
 * insert BundleSlice(cancerPatient, 1, 1, Cancer Patient, The Cancer Patient whose data is included in the bundle., CancerPatient)
+* entry contains 
+    mcodeObservations 0..* MS and
+    mcodeConditions 0..* MS and
+    mcodeMedicationAdministrations 0..* MS and
+    mcodeMedicationRequests 0..* MS and
+    mcodeDiagnosticReports 0..* MS and
+    mcodeSpecimens 0..* MS and
+    mcodeProcedures 0..* MS and
+    mcodeBodyStructures 0..* MS
+* entry[mcodeObservations] ^short = "mCODE Observation Resources"
+* entry[mcodeObservations] ^definition = "Slice containing mCODE observations"
+* entry[mcodeObservations].resource only 
+    CancerDiseaseStatus or 
+    CancerStageGroup or
+    Comorbidities or
+    ECOGPerformanceStatus or
+    GenomicRegionStudied or
+    GenomicVariant or
+    KarnofskyPerformanceStatus or
+    TNMDistantMetastasesCategory or
+    TNMPrimaryTumorCategory or
+    TNMRegionalNodesCategory or
+    TNMStageGroup or
+    TumorMarkerTest or
+    TumorSize
+* entry[mcodeConditions] ^short = "mCODE Condition Resources"
+* entry[mcodeConditions] ^definition = "Slice containing mCODE conditions"
+* entry[mcodeConditions].resource only 
+    PrimaryCancerCondition or
+    SecondaryCancerCondition
+* entry[mcodeMedicationAdministrations] ^short = "mCODE Medication Administration Resources"
+* entry[mcodeMedicationAdministrations] ^definition = "Slice containing mCODE Cancer-Related Medication Administration"
+* entry[mcodeMedicationAdministrations].resource only 
+    CancerRelatedMedicationAdministration
+* entry[mcodeMedicationRequests] ^short = "mCODE Medication Request Resources"
+* entry[mcodeMedicationRequests] ^definition = "Slice containing mCODE Cancer-Related Medication Requests"
+* entry[mcodeMedicationRequests].resource only 
+    CancerRelatedMedicationRequest
+* entry[mcodeDiagnosticReports] ^short = "mCODE Diagnostic Report Resources"
+* entry[mcodeDiagnosticReports] ^definition = "Slice containing mCODE diagnostic report resources"
+* entry[mcodeDiagnosticReports].resource only 
+    GenomicsReport
+* entry[mcodeSpecimens] ^short = "mCODE Specimen Resources"
+* entry[mcodeSpecimens] ^definition = "Slice containing mCODE specimen resources"
+* entry[mcodeSpecimens].resource only 
+    HumanSpecimen
+* entry[mcodeProcedures] ^short = "mCODE Procedure Resources"
+* entry[mcodeProcedures] ^definition = "Slice containing mCODE Procedure resources"
+* entry[mcodeProcedures].resource only 
+    CancerRelatedSurgicalProcedure or
+    RadiotherapyCourseSummary
+* entry[mcodeBodyStructures] ^short = "mCODE BodyStructure Resources"
+* entry[mcodeBodyStructures] ^definition = "Slice containing mCODE BodyStructure resources"
+* entry[mcodeBodyStructures].resource only 
+    RadiotherapyVolume or
+    Tumor
+* timestamp and entry and entry.resource MS
+
+/*
 * insert BundleSlice(cancerDiseaseStatus, 0, *, Cancer Disease Status, Observations resource representing Cancer Disease Status. Include past assessments if available., CancerDiseaseStatus)
 * insert BundleSlice(cancerRelatedMedicationAdministration, 0, *, Cancer-Related Medication Administration, MedicationAdministration resource representing medication administrations., CancerRelatedMedicationAdministration)
 * insert BundleSlice(cancerRelatedMedicationRequest, 0, *, Cancer-Related Medication Request, MedicationRequest resources representing cancer-related medications\, including both active and inactive medications., CancerRelatedMedicationRequest)
@@ -33,6 +92,6 @@ Description: "A collection of data for an mCODE cancer patient."
 * insert BundleSlice(tumorMarkerTest, 0, *, Tumor Marker Tests, Observation resources representing tumor marker or biomarker tests., TumorMarkerTest)
 * insert BundleSlice(tumorSize, 0, *, Tumor Size Measurements, Observation resources representing a tumor size measurement., TumorSize)
 * insert BundleSlice(vitalSigns, 0, *, Vital Signs, Observation resources representing patient height\, weight\, blood pressure\, and other vital signs., USCoreVitalSigns)
+*/
 
-// Put the MS for entry.resource LAST, otherwise it doesn't take for some reason
-* timestamp and entry and entry.resource MS
+

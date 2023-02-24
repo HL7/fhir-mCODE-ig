@@ -4,17 +4,17 @@ The bundle MUST contain exactly one Patient resource conforming to the [CancerPa
 
 * Condition resources conforming to [PrimaryCancerCondition] and [SecondaryCancerCondition] profiles
 * Observation resources conforming to [CancerDiseaseStatus] profile
+* Observation resources conforming to [Comorbidities] profile
 * Observation resources conforming to [ECOGPerformanceStatus] and/or [KarnofskyPerformanceStatus] profiles
-* Observation resources conforming to [TumorMarkerTest] profile
-* MedicationRequest resources conforming to [CancerRelatedMedicationRequest] and [CancerRelatedMedicationAdministration] profiles, representing any cancer-related prescriptions, administrations, and patient-reported medications
-* Procedure resources conforming to [CancerRelatedSurgicalProcedure] and [RadiotherapyCourseSummary] profiles
-* Observation resources conforming to: [TNMStageGroup], [TNMDistantMetastasesCategory], [TNMPrimaryTumorCategory], and [TNMRegionalNodesCategory] profiles, representing staging information
 * Observation resources conforming to [GenomicVariant] and [GenomicRegionStudied] profiles
+* Observation resources conforming to [TumorMarkerTest] profile
+* Observation resources conforming to: [TNMStageGroup], [TNMDistantMetastasesCategory], [TNMPrimaryTumorCategory], and [TNMRegionalNodesCategory] profiles, representing staging information
+* Medication resources conforming to [CancerRelatedMedicationRequest] and [CancerRelatedMedicationAdministration] profiles, representing cancer-related prescriptions, administrations, and patient-reported medications
+* Procedure resources conforming to [CancerRelatedSurgicalProcedure] and [RadiotherapyCourseSummary] profiles
 * DiagnosticReport resources conforming to [GenomicsReport] profile
 * Specimen resources conforming to [HumanSpecimen] profiles
-* BodyStructure resources conforming to [Tumor] profile
+* BodyStructure resources conforming to [RadiotherapyVolume] and [Tumor] profiles
 * Observation resources conforming to [TumorSize] profile
-* Observation resource conforming to [Comorbidities] profile, referencing Condition resources
 
 In addition, the bundle SHOULD contain the following non-mCODE resources, following appropriate US Core profiles:
 

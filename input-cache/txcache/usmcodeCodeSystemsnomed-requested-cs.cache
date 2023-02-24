@@ -22,8 +22,8 @@ e: {
   "language" : "en",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:92ecd96a-e11b-4aa7-a633-4b39f559671a",
-    "timestamp" : "2023-01-25T15:06:15.859Z",
+    "identifier" : "urn:uuid:53f73efc-fc11-45fe-b109-d88dd6ff8825",
+    "timestamp" : "2023-02-24T00:11:15.892Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -34,7 +34,7 @@ e: {
     },
     {
       "name" : "version",
-      "valueUri" : "http://hl7.org/fhir/us/mcode/CodeSystem/snomed-requested-cs|2.1.0"
+      "valueUri" : "http://hl7.org/fhir/us/mcode/CodeSystem/snomed-requested-cs|3.0.0-ballot"
     }],
     "contains" : [{
       "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/snomed-requested-cs",

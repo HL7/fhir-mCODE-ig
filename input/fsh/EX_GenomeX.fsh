@@ -86,7 +86,7 @@ InstanceOf: HumanSpecimen
 Description: "GenomeX mCODE Example for Genomic Specimen - Tumor specimen of the TumorNormal test"
 * status = #available "Available"
 * subject = Reference(gx-cancer-patient-incredible-hulk)
-* type = SPTY#BLD "Blood"  // HL7v2 Specimen type does not handle "a normal sample" for TumorNormal
+* type = SPTY#BLD "Whole Blood"  // HL7v2 Specimen type does not handle "a normal sample" for TumorNormal
 * receivedTime = "2021-02-09T21:30:50+05:00"
 * collection.collectedDateTime = "2021-02-06T17:15:00+05:00"
 

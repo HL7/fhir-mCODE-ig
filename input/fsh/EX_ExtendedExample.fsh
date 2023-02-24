@@ -50,7 +50,7 @@ Instance: human-specimen-left-breast-jenny-m
 InstanceOf: HumanSpecimen
 Description: "Extended example: example showing human specimen for genomic sequencing"
 * status = #available "available"
-* type = http://terminology.hl7.org/CodeSystem/v2-0487#TISS
+* type = SPTY#TISS
 * subject = Reference(cancer-patient-jenny-m)
 * collection.collector = Reference(us-core-practitioner-owen-oncologist)
 * collection.bodySite = SCT#80248007 "Left breast structure (body structure)"

@@ -2,7 +2,9 @@
 
 # NOTE TO SELF: ERRORS CANNOT BE SUPPRESSED, ONLY WARNINGS AND INFORMATION MESSAGES
 
-# SUPPRESS US CORE OBSERVATION MESSAGES. This was approved by Cross-Group Projects Work Group on 1/28/2021 Floyd Eisenberg/Brett Marquard 28-0-1. See https://jira.hl7.org/browse/FHIR-30707
+# SUPPRESS US CORE OBSERVATION MESSAGES
+#   For STU2 This was approved by Cross-Group Projects Work Group on 1/28/2021 Floyd Eisenberg/Brett Marquard 28-0-1. See https://jira.hl7.org/browse/FHIR-30707
+#   For STU3, this was approved by the Cross-Group Projects Work Group on 2/9/2023   Saul Kravitz/Floyd Eisenberg: 23-0-2    see https://jira.hl7.org/browse/FHIR-40383
 
 WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-stage-group').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
 WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-comorbidities').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles

@@ -3,6 +3,7 @@ InstanceOf: PrimaryCancerCondition
 Description: "Example of Primary Cancer Condition"
 * clinicalStatus = ClinStatus#active "Active"
 * verificationStatus = VerStatus#confirmed "Confirmed"
+* category = CondCat#problem-list-item
 * code = SCT#254637007 "Non-small cell lung cancer (disorder)"
 * extension[histologyMorphologyBehavior].valueCodeableConcept = SCT#35917007 "Adenocarcinoma"
 * bodySite = SCT#39607008 "Lung structure (body structure)"
@@ -18,6 +19,7 @@ InstanceOf: PrimaryCancerCondition
 Description: "Example of Primary Cancer Condition - hematologic cancer"
 * clinicalStatus = ClinStatus#active "Active"
 * verificationStatus = VerStatus#confirmed "Confirmed"
+* category = CondCat#problem-list-item
 * code = SCT#92814006 "Chronic lymphoid leukemia, disease (disorder)"
 * subject = Reference(cancer-patient-adam-everyman)
 * onsetDateTime = "2020-05-12"
@@ -31,6 +33,7 @@ Description: "Example of Secondary Cancer Condition"
 * extension[relatedPrimaryCancerCondition].valueReference = Reference(primary-cancer-condition-nsclc)
 * clinicalStatus = ClinStatus#active "Active"
 * verificationStatus = VerStatus#confirmed "Confirmed"
+* category = CondCat#problem-list-item
 * code = SCT#94225005 "Secondary malignant neoplasm of brain"
 * subject = Reference(cancer-patient-john-anyperson)
 * onsetDateTime = "2019-05-01"
@@ -93,6 +96,10 @@ Description: "Example of Patient"
 * address.country = "US"
 * communication.language = urn:ietf:bcp:47#en-US "English (Region=United States)"
 * communication.language.text = "English"
+* extension[USCoreRace].extension[ombCategory].valueCoding = OmbRaceCat#2054-5 "Black or African American"
+* extension[USCoreRace].extension[text].valueString = "Black or African American"
+* extension[USCoreEthnicity].extension[ombCategory].valueCoding = OmbRaceCat#2186-5 "Not Hispanic or Latino"
+* extension[USCoreEthnicity].extension[text].valueString = "Not Hispanic or Latino"
 
 Instance: cancer-patient-eve-anyperson
 InstanceOf: CancerPatient
@@ -125,6 +132,10 @@ Description: "Example of Patient"
 * address.country = "US"
 * communication.language = urn:ietf:bcp:47#en-US "English (Region=United States)"
 * communication.language.text = "English"
+* extension[USCoreRace].extension[ombCategory].valueCoding = OmbRaceCat#2106-3 "White"
+* extension[USCoreRace].extension[text].valueString = "White"
+* extension[USCoreEthnicity].extension[ombCategory].valueCoding = OmbRaceCat#2135-2 "Hispanic or Latino"
+* extension[USCoreEthnicity].extension[text].valueString = "Hispanic or Latino"
 
 Instance: cancer-patient-adam-everyman
 InstanceOf: CancerPatient
@@ -149,6 +160,10 @@ Description: "Example of Patient"
 * address.country = "US"
 * communication.language = urn:ietf:bcp:47#en-US "English (Region=United States)"
 * communication.language.text = "English"
+* extension[USCoreRace].extension[ombCategory].valueCoding = OmbRaceCat#2106-3 "White"
+* extension[USCoreRace].extension[text].valueString = "White"
+* extension[USCoreEthnicity].extension[ombCategory].valueCoding = OmbRaceCat#2186-5 "Not Hispanic or Latino"
+* extension[USCoreEthnicity].extension[text].valueString = "Not Hispanic or Latino"
 
 Instance: us-core-practitioner-kyle-anydoc
 InstanceOf: USCorePractitioner
@@ -310,7 +325,7 @@ Description: "Example of CancerRelatedMedicationRequest - Chemo Infusion"
 * extension[terminationReason].valueCodeableConcept = SCT#182992009  "Treatment completed (situation)"
 
 Instance: lab-result-observation-hemoglobin
-InstanceOf: USCoreLaboratoryResultObservationProfile
+InstanceOf: USCoreObservationLab
 Description: "Hemoglobin lab result to support TNMStageGroup example"
 * subject = Reference(cancer-patient-adam-everyman)
 * status = ObsStatus#final

@@ -1,6 +1,6 @@
 id: hl7.fhir.us.mcode
 canonical: http://hl7.org/fhir/us/mcode
-version: 2.1.0
+version: 3.0.0-ballot
 name: MinimalCommonOncologyDataElements
 title: "minimal Common Oncology Data Elements (mCODE) Implementation Guide"
 status: draft
@@ -9,9 +9,7 @@ publisher:
   url: http://www.hl7.org/Special/committees/cic
   email: ciclist@lists.HL7.org
 jurisdiction: urn:iso:std:iso:3166#US "United States of America"
-description: mCODE™ (short for Minimal Common Oncology Data Elements) is an initiative
-  intended to assemble a core set of structured data elements for oncology
-  electronic health records.
+description: mCODE™ (short for Minimal Common Oncology Data Elements) is an initiative intended to assemble a core set of structured data elements for oncology electronic health records.
 license: CC0-1.0
 fhirVersion: 4.0.1
 dependencies:
@@ -21,8 +19,9 @@ parameters:
   show-inherited-invariants: false
   version-comparison: n/a
   path-expansion-params: '../../exp-params.json'  #path is relative to [base]/fsh-generated/resources
+  path-binary: input/attachments
 copyrightYear: 2019+
-releaseLabel: Pre-STU 3 Development
+releaseLabel: STU 3 Ballot
 pages:
   index.md:
     title: Home

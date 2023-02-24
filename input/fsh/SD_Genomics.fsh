@@ -5,7 +5,7 @@ Title:      "Genomic Region Studied Profile"
 Description:    "A subset of genes or genomic regions of interest in a targeted resequencing study."
 * ^extension[FMM].valueInteger = 1
 * subject 1..1 // subject is required in US Core Laboratory Result (although I am not quite sure this represents a laboratory result, since it isn't strictly a result. It is more like what we are observing, additional information behind Observation.code.)
-* value[x] ^definition = "Not used in this profile. MustSupport is inherited from the parent profile (USCoreObservationLab) and should be ignored by implementers for this element."
+* value[x] ^definition = "Not used in this profile."
 * category[labCategory].coding 1..1  // To prevent the message "The repeating element has a pattern. The pattern will apply to all the repeats (this has not been clear to all users)"
 * category[labCategory] = ObsCat#laboratory
 * subject only Reference(CancerPatient)
@@ -68,9 +68,6 @@ Description: "The result of a tumor marker test. Tumor marker tests are generall
 * subject 1..1
 * value[x] 1..1
 * code from TumorMarkerTestVS (extensible)
-* category 2..*
-* category contains mcode-category 1..1
-* category[mcode-category] = SCT#250724005 // Tumor marker measurement (procedure)
 * subject only Reference(CancerPatient)
 * subject ^definition = "Patient whose test result is recorded."
 * effective[x] only dateTime or Period

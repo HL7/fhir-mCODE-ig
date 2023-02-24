@@ -50,7 +50,7 @@ Instance: human-specimen-left-breast-jenny-m
 InstanceOf: HumanSpecimen
 Description: "Extended example: example showing human specimen for genomic sequencing"
 * status = #available "available"
-* type = http://terminology.hl7.org/CodeSystem/v2-0487#TISS
+* type = SPTY#TISS
 * subject = Reference(cancer-patient-jenny-m)
 * collection.collector = Reference(us-core-practitioner-owen-oncologist)
 * collection.bodySite = SCT#80248007 "Left breast structure (body structure)"
@@ -218,6 +218,7 @@ Description: "Extended example: example showing primary cancer condition"
 * extension[histologyMorphologyBehavior].valueCodeableConcept = SCT#413448000 "Adenocarcinoma, no subtype, intermediate grade (morphologic abnormality)"
 * clinicalStatus = ClinStatus#remission
 * verificationStatus = VerStatus#confirmed
+* category = CondCat#problem-list-item
 * code = SCT#353431000119107 "Primary malignant neoplasm of female left breast (disorder)"
 * subject = Reference(cancer-patient-jenny-m)
 * onsetDateTime = "2018-03-16"

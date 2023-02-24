@@ -1,60 +1,37 @@
 == Suppressed Messages ==
 
-# SUPPRESS US CORE OBSERVATION MESSAGES. For STU2 This was approved by Cross-Group Projects Work Group on 1/28/2021 Floyd Eisenberg/Brett Marquard 28-0-1. See https://jira.hl7.org/browse/FHIR-30707
-# For STU3, this was approved by the Cross-Group Projects Work Group on 2/9/2023   Saul Kravitz/Floyd Eisenberg: 23-0-2    see https://jira.hl7.org/browse/FHIR-40383
+# NOTE TO SELF: ERRORS CANNOT BE SUPPRESSED, ONLY WARNINGS AND INFORMATION MESSAGES
+
+# SUPPRESS US CORE OBSERVATION MESSAGES
+#   For STU2 This was approved by Cross-Group Projects Work Group on 1/28/2021 Floyd Eisenberg/Brett Marquard 28-0-1. See https://jira.hl7.org/browse/FHIR-30707
+#   For STU3, this was approved by the Cross-Group Projects Work Group on 2/9/2023   Saul Kravitz/Floyd Eisenberg: 23-0-2    see https://jira.hl7.org/browse/FHIR-40383
+
+WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-stage-group').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
+WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-comorbidities').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
+WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genomic-region-studied').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
+WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genomic-variant').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
+WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genomics-report').baseDefinition: US FHIR Usage rules require that all profiles on DiagnosticReport derive from one of the base US profiles
+WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-human-specimen').baseDefinition: US FHIR Usage rules require that all profiles on Specimen derive from the core US profile
+WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-karnofsky-performance-status').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
 WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-distant-metastases-category').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
 WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-primary-tumor-category').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
 WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-regional-nodes-category').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
-
-# SUPPRESS WARNINGS ABOUT BUNDLE ENTRY NOT MATCHING ANY KNOWN SLICE OR MATCHING MULTIPLE PROFILES
-INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[11]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle
-INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[24]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle
-INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[26]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle
-INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[27]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle
-INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[28]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle
-INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[29]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle
-INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[30]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle
-INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[31]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle
-INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[32]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle
-INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[33]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle
-INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[34]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle
-INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[35]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle
-INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[36]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle
-INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[37]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle
-INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[38]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle
-INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[39]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle
-INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[40]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle
-ERROR: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[11].resource.ofType(Procedure).code.coding[0]: Unable to find code 1217123003 in http://snomed.info/sct (version http://snomed.info/sct/900000000000207008/version/20220331); The code "1217123003" is not valid in the system http://snomed.info/sct; The code provided (http://snomed.info/sct#1217123003) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4) for 'http://snomed.info/sct#1217123003'
-ERROR: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[11].resource.code.coding[0]: Unable to find code 1217123003 in http://snomed.info/sct (version http://snomed.info/sct/900000000000207008/version/20220331); The code "1217123003" is not valid in the system http://snomed.info/sct; The code provided (http://snomed.info/sct#1217123003) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4) for 'http://snomed.info/sct#1217123003'
-
-
-# SNOMED CONCEPTS VALID IN SNOMED 6/30/2022 EDITION, BUT FHIR TERMINOLOGY SERVER NOT UP TO DATE
-ERROR: ValueSet.where(id = 'mcode-tnm-stage-group-vs'): Error from server: The Snomed Concept 1222592004 was not known
-ERROR: ValueSet.where(id = 'mcode-tnm-stage-group-vs'): Error from server: The Snomed Concept 1222592004 was not known
-ERROR: ValueSet.where(id = 'mcode-tnm-primary-tumor-category-vs'): Error from server: The Snomed Concept 1222585009 was not known
-ERROR: ValueSet.where(id = 'mcode-tnm-regional-nodes-category-vs'): Error from server: The Snomed Concept 1222588006 was not known
+WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-disease-status').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
+WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-ecog-performance-status').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
+WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-stage-group').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
+WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tumor-size').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
 
 # SUPPRESS INFORMATION MESSAGES ABOUT BEING UNABLE TO SUPPORT CERTAIN CODE SYSTEMS
-Error from server: Unable to provide support for code system http://www.genenames.org
-Error from server: Unable to provide support for code system http://www.ncbi.nlm.nih.gov/clinvar
 Error from server: Unable to provide support for code system http://www.ama-assn.org/go/cpt
-Error from server: Unable to provide support for code system http://terminology.hl7.org/CodeSystem/umls
+Error from server: Unable to provide support for code system http://terminology.hl7.org/CodeSystem/icd-o-3
+Error from server: Unable to provide support for code system http://cancerstaging.org
+Code System URI 'https://www.tempus.com' is unknown so the code cannot be validated
+Code System URI 'https://www.ncbi.nlm.nih.gov/gene' is unknown so the code cannot be validated
+Code System URI 'http://www.sequenceontology.org/' is unknown so the code cannot be validated
 Code System URI 'http://www.genenames.org' is unknown so the code cannot be validated
 Code System URI 'http://www.ncbi.nlm.nih.gov/clinvar' is unknown so the code cannot be validated
 Code System URI 'http://www.ncbi.nlm.nih.gov/gtr' is unknown so the code cannot be validated
 Code System URI 'http://terminology.hl7.org/CodeSystem/umls' is unknown so the code cannot be validated
 Code System URI 'http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl' is unknown so the code cannot be validated
+Code System URI 'http://www.ncbi.nlm.nih.gov/refseq' is unknown so the code cannot be validated
 Code System URI 'urn:oid:2.16.840.1.113883.6.238' is unknown so the code cannot be validated
-
-ERROR: Procedure/radiotherapy-treatment-summary-chest-wall-jenny-m: Procedure.code.coding[0]: Unable to find code 1217123003 in http://snomed.info/sct (version http://snomed.info/sct/900000000000207008/version/20220331); The code "1217123003" is not valid in the system http://snomed.info/sct; The code provided (http://snomed.info/sct#1217123003) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4) for 'http://snomed.info/sct#1217123003'
-ERROR: StructureDefinition/mcode-radiotherapy-course-summary: StructureDefinition.snapshot.element[22].pattern.ofType(CodeableConcept).coding[0]: Unable to find code 1217123003 in http://snomed.info/sct (version http://snomed.info/sct/900000000000207008/version/20220331); The code "1217123003" is not valid in the system http://snomed.info/sct; The code provided (http://snomed.info/sct#1217123003) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4) for 'http://snomed.info/sct#1217123003'
-ERROR: StructureDefinition/mcode-radiotherapy-course-summary: StructureDefinition.differential.element[8].pattern.ofType(CodeableConcept).coding[0]: Unable to find code 1217123003 in http://snomed.info/sct (version http://snomed.info/sct/900000000000207008/version/20220331); The code "1217123003" is not valid in the system http://snomed.info/sct; The code provided (http://snomed.info/sct#1217123003) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4) for 'http://snomed.info/sct#1217123003'
-
-INFORMATION: StructureDefinition/mcode-body-structure-identifier: StructureDefinition.snapshot.element[7].mapping[2].map: The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk
-INFORMATION: StructureDefinition/mcode-patient-group: StructureDefinition.snapshot.element[24].mapping[2].map: The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk
-INFORMATION: StructureDefinition/mcode-patient-group: StructureDefinition.snapshot.element[30].mapping[2].map: The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk
-INFORMATION: StructureDefinition/mcode-radiotherapy-volume: StructureDefinition.snapshot.element[17].mapping[2].map: The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk
-INFORMATION: StructureDefinition/mcode-tumor-specimen: StructureDefinition.snapshot.element[22].mapping[2].map: The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk
-
-ERROR: StructureDefinition/mcode-tumor-specimen: StructureDefinition.snapshot.element[37].binding: The element Specimen.collection.duration has a binding, but no bindable types are present [Duration]
-ERROR: StructureDefinition/mcode-genomic-specimen: StructureDefinition.snapshot.element[28].binding: The element Specimen.collection.duration has a binding, but no bindable types are present [Duration]

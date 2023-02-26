@@ -49,33 +49,20 @@ lookup = {
   "level xb" => "#1162613003"
 }
 
-# puts ARGV[0]
+puts ARGV[0]
 
 workbook = Roo::Spreadsheet.open ARGV[0]
 worksheets = workbook.sheets
 worksheet = "Mapped TG263 Terms"
   num_rows = 0
   unique = {}
-  puts "Instance: TG263CM"
-  puts "InstanceOf: ConceptMap"
-  puts "Usage: #definition"
-  puts "* insert ConceptMapIntro(TG263, RadiotherapyTreatmentLocationQualifierVS)"
-
-  header = true
-  localcodes = ""
-  localtable = ""
-  snomedcodes = ""
-  table = ""
+  puts "GORK"
   workbook.sheet(worksheet).each_row_streaming(pad_cells:true) do |row|
-    if header == true  # Skip first row
-      header = false
-      next
-    end
     next if row[10] == nil || row[10].empty?
     tg263primary = "#"+row[6].value
-    tg263description = row[8].value.gsub(")","\\)").gsub(",","\\,") if row[8].value != nil
+    tg263description = row[8].value.gsub(")","\\)") if row[8].value != nil
     code = "#" + row[10].value.to_s
-    term = row[11].value.gsub(")","\\)").gsub(",","\\,")
+    term = row[11].value.gsub(")","\\)")
     if row[12] && !row[12].empty?
       qualifiers = row[12].value.split(',')
       if qualifiers.length == 2
@@ -85,34 +72,17 @@ worksheet = "Mapped TG263 Terms"
         puts "GORK1: qualifier code1 = #{qualifier1}" if qualifiercode1 == nil
         qualifiercode1display = qualifier1 + "(qualifier value\\)";
         qualifiercode2 = lookup[qualifier2.downcase.strip]
-        puts "GORK2: qualifier code2 = #{qualifier2}" if qualifiercode2 == nil
+        # puts "GORK2: qualifier code2 = #{qualifier2}" if qualifiercode2 == nil
         qualifiercode2display = qualifier2 + "(qualifier value\\)";
-        snomedcodes.concat("* insert MapConceptQualifier2(#{tg263primary}, \"#{tg263description}\", #{code}, \"#{term}\", #{qualifiercode1}, \"#{qualifiercode1display}\", #{qualifiercode2}, \"#{qualifiercode2display}\")\n")
-        table.concat("|#{tg263primary}| \"#{tg263description}\" | #{code} |  \"#{term}\" | #{qualifiercode1}| \"#{qualifiercode1display}\"| #{qualifiercode2}| \"#{qualifiercode2display} |\n")
+        # puts "* insert MapConceptQualifier2(#{tg263primary}, \"#{tg263description}\", #{code}, \"#{term}\", #{qualifiercode1}, \"#{qualifiercode1display}\", #{qualifiercode2}, \"#{qualifiercode2display}\")"
       else
         qualifier1 = row[12].value
         qualifiercode1display = qualifier1 + "(qualifier value\\)";
         qualifiercode1 = lookup[qualifier1.downcase.strip]
-        puts "GORK1: qualifier code1 = #{qualifier1}" if qualifiercode1 == nil
-        if qualifiercode1.include?("USCRS")
-          system = "Canonical(SnomedRequestedCS"
-        else
-          system = "SCT"
-        end
-        snomedcodes.concat("* insert MapConceptQualifier1(#{tg263primary}, \"#{tg263description}\", #{code}, \"#{term}\", #{qualifiercode1}, \"#{qualifiercode1display}\", #{system})\n")
-        table.concat("|#{tg263primary}| \"#{tg263description}\" | #{code} |  \"#{term}\" | #{qualifiercode1}| \"#{qualifiercode1display}\"| | |\n")
+        puts "* insert MapConceptQualifier1(#{tg263primary}, \"#{tg263description}\", #{code}, \"#{term}\", #{qualifiercode1}, \"#{qualifiercode1display}\")"
       end
     else
-      if code.include?("USCRS")
-        localcodes.concat( "* insert MapConcept(#{tg263primary}, \"#{tg263description}\", #{code}, \"#{term}\" )\n")
-      else
-       snomedcodes.concat( "* insert MapConcept(#{tg263primary}, \"#{tg263description}\", #{code}, \"#{term}\")\n")
-      end
-      table.concat("|#{tg263primary}| \"#{tg263description}\" | #{code} |  \"#{term}\" | | | | |\n")
+      puts "* insert MapConcept(#{tg263primary}, \"#{tg263description}\", #{code}, \"#{term}\")"
     end
   end
-  puts "* insert AddGroup(\"TG263\",SCT)"
-  puts snomedcodes
-  puts "* insert AddGroup(\"TG263\",Canonical(SnomedRequestedCS))"
-  puts localcodes
-  puts table
+  puts "* insert AddGroup("TG263",Canonical(SnomedRequestedCS))"

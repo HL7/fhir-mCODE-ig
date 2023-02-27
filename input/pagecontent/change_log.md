@@ -85,6 +85,8 @@ In addition, the following value sets are now associated with the non-TNM [Cance
 * The following improvements were made to [RadiotherapyTreatmentLocationQualifierVS] value set:
   * added existing SNOMED codes and the Node Level IIa and IIb codes to bring this valueset into alignment with qualifiers used for the TG263 mapping.
 
+* A [concept map](ConceptMap-TG263CM.html) was added to document the mapping between the TG263 concepts and SNOMED codes and qualifiers
+
 ### Profile Categories
 
 Required categories (`Observation.category`) have been added to PrimaryCancerCondition, SecondaryCancerCondition, TumorMarkerTest, and five staging-related profiles. The purpose is to make it easier to retrieve mCODE resources. Having fixed categories provide a firmer "handle" to retrieve relevant mCODE resources, without relying on the "code in value set" (`code:in=[value set]`) operation that is not implemented by all FHIR servers. [Updated sample queries](conformance-general.html#support-querying-mcode-conforming-resources) have been provided. **These changes are not backward compatible.**

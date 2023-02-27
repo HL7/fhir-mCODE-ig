@@ -1,6 +1,8 @@
 Instance: TG263CM
 InstanceOf: ConceptMap
 Usage: #definition
+* text = "<div></div>"
+* text.status = #generated
 * insert ConceptMapIntro(TG263, RadiotherapyTreatmentLocationQualifierVS)
 * insert AddGroup("TG263",SCT)
 * insert MapConcept(#A_Aorta, "Aorta", #15825003, "Aortic structure (body structure\)")

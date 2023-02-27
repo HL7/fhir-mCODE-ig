@@ -255,8 +255,8 @@ Description: "Various modifiers that can be applied to body locations where radi
 * SCT#1162616006 "Lymph node level IA (qualifier value)"
 * SCT#1162617002 "Lymph node level IB (qualifier value)"
 * SCT#258401000 "Lymph node level II (qualifier value)"
-* SnomedRequestedCS#USCRS-34777 "Lymph node level IIA (qualifier value)"        // requested 2/22/23
-* SnomedRequestedCS#USCRS-34775 "Lymph node level IIB (qualifier value)"        // requested 2/22/23
+* SCT_TBD#USCRS-34777 "Lymph node level IIA (qualifier value)"        // requested 2/22/23
+* SCT_TBD#USCRS-34775 "Lymph node level IIB (qualifier value)"        // requested 2/22/23
 * SCT#258402007 "Lymph node level III (qualifier value)"
 * SCT#258403002 "Lymph node level IV (qualifier value)"
 * SCT#1162620005 "Lymph node level IVA (qualifier value)"

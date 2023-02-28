@@ -99,7 +99,6 @@ Description:  "Values used to describe the reasons for stopping a treatment or e
 * SCT#399307001   "Lost to follow-up (finding)" // added by mCODE Exec Council recommendation 2/12/2021
 * SCT#419620001   "Death (event)"  // FHIR-32832  (but why not 419099009 Dead (finding) because other values are findings or situations?)
 
-
 ValueSet:		ProcedureIntentVS
 Id: mcode-procedure-intent-vs
 Title: "Procedure Intent Value Set"

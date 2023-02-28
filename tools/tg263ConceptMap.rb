@@ -9,6 +9,7 @@ require 'pry'
 lookup = {
   "left" => "#7771000",
   "right" => "#24028007",
+  "right+left" => "#51440002",
   "middle" => "#260528009",
   "upper" => "#261183002",
   "lower" => "#261122009",
@@ -50,7 +51,9 @@ lookup = {
 }
 
 # puts ARGV[0]
-
+def isLateralityQualifier(qualifier)
+  return(qualifier.downcase.include?("left") || qualifier.downcase.include?("right") )
+end
 workbook = Roo::Spreadsheet.open ARGV[0]
 worksheets = workbook.sheets
 worksheet = "Mapped TG263 Terms"
@@ -79,8 +82,8 @@ worksheet = "Mapped TG263 Terms"
     if row[12] && !row[12].empty?
       qualifiers = row[12].value.split(',')
       if qualifiers.length == 2
-        qualifier1 = qualifiers[0]
-        qualifier2 = qualifiers[1]
+        qualifier1 = qualifiers[0] # first qualifier is always laterality
+        qualifier2 = qualifiers[1] # second qualifier is always non-laterality
         qualifiercode1 = lookup[qualifier1.downcase.strip]
         puts "GORK1: qualifier code1 = #{qualifier1}" if qualifiercode1 == nil
         qualifiercode1display = qualifier1 + "(qualifier value\\)";
@@ -95,12 +98,18 @@ worksheet = "Mapped TG263 Terms"
         qualifiercode1 = lookup[qualifier1.downcase.strip]
         puts "GORK1: qualifier code1 = #{qualifier1}" if qualifiercode1 == nil
         if qualifiercode1.include?("USCRS")
-          system = "Canonical(SnomedRequestedCS"
+          system = "SCT_TBD"
         else
           system = "SCT"
         end
-        snomedcodes.concat("* insert MapConceptQualifier1(#{tg263primary}, \"#{tg263description}\", #{code}, \"#{term}\", #{qualifiercode1}, \"#{qualifiercode1display}\", #{system})\n")
-        table.concat("|#{tg263primary}| #{tg263description} | &#8594; | #{code} |  #{term} | #{qualifiercode1}| #{qualifiercode1display}| | |\n")
+        if (isLateralityQualifier(qualifier1))
+          rule = "MapConceptLateralityQualifier"
+          table.concat("|#{tg263primary}| #{tg263description} | &#8594; | #{code} |  #{term} | #{qualifiercode1}| #{qualifiercode1display}| | |\n")
+        else
+          rule = "MapConceptLocationQualifier"
+          table.concat("|#{tg263primary}| #{tg263description} | &#8594; | #{code} |  #{term} | | |#{qualifiercode1}| #{qualifiercode1display}|\n")
+        end
+        snomedcodes.concat("* insert #{rule}(#{tg263primary}, \"#{tg263description}\", #{code}, \"#{term}\", #{qualifiercode1}, \"#{qualifiercode1display}\", #{system})\n")
       end
     else
       if code.include?("USCRS")
@@ -113,6 +122,6 @@ worksheet = "Mapped TG263 Terms"
   end
   puts "* insert AddGroup(\"TG263\",SCT)"
   puts snomedcodes
-  puts "* insert AddGroup(\"TG263\",Canonical(SnomedRequestedCS))"
+  puts "* insert AddGroup(\"TG263\",SCT_TBD))"
   puts localcodes
   puts table

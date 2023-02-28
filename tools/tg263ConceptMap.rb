@@ -90,7 +90,12 @@ worksheet = "Mapped TG263 Terms"
         qualifiercode2 = lookup[qualifier2.downcase.strip]
         puts "GORK2: qualifier code2 = #{qualifier2}" if qualifiercode2 == nil
         qualifiercode2display = qualifier2 + "(qualifier value\\)";
-        snomedcodes.concat("* insert MapConceptQualifier2(#{tg263primary}, \"#{tg263description}\", #{code}, \"#{term}\", #{qualifiercode1}, \"#{qualifiercode1display}\", #{qualifiercode2}, \"#{qualifiercode2display}\")\n")
+        if qualifiercode2.include?("USCRS")
+          system = "SCT_TBD"
+        else
+          system = "SCT"
+        end
+        snomedcodes.concat("* insert MapConceptQualifier2(#{tg263primary}, \"#{tg263description}\", #{code}, \"#{term}\", #{qualifiercode1}, \"#{qualifiercode1display}\", #{qualifiercode2}, \"#{qualifiercode2display}\", #{system})\n")
         table.concat("|#{tg263primary}| #{tg263description} | &#8594; |  #{code} |  #{term} | #{qualifiercode1}| #{qualifiercode1display}| #{qualifiercode2}| #{qualifiercode2display} |\n")
       else
         qualifier1 = row[12].value
@@ -122,6 +127,6 @@ worksheet = "Mapped TG263 Terms"
   end
   puts "* insert AddGroup(\"TG263\",SCT)"
   puts snomedcodes
-  puts "* insert AddGroup(\"TG263\",SCT_TBD))"
+  puts "* insert AddGroup(\"TG263\",SCT_TBD)"
   puts localcodes
   puts table

@@ -13,7 +13,7 @@ Despite the authors best efforts, two of the TG263 concepts and two of the quali
 ### TG263 to SNOMEDCT Codes and Qualifiers Mapping
 
 | TG263 Term | Description |  &#8594; | SNOMED Code | Description | Laterality Qualifier Code | Laterality Qualifier Description | Location Qualifier Code | Location Qualifier Description |
-| ---------- | ----------- | ----- | ----------- | ----------- | --------------- | ---------------------- | --------------- | -----------------------|
+| ---------- | ----------- | -------- | ----------- | ----------- | ------------------------- | -------------------------------- | ----------------------- | -------------------------------|
 |#A_Aorta| Aorta | &#8594; | #15825003 |  Aortic structure (body structure\) | | | | |
 |#A_Aorta_Asc| Ascending Aorta | &#8594; | #54247002 |  Ascending aorta structure (body Structure\) | | | | |
 |#A_Brachiocephls| Brachiocephalic Artery | &#8594; | #425444002 |  Branch of brachiocephalic artery (body structure\) | | | | |

@@ -46,7 +46,7 @@ RuleSet: MapConceptLateralityQualifier(code, display, targetcode, targetdisplay,
       * value = {qualifiercode1}
       * display = {qualifiercode1display}
 
-RuleSet: MapConceptQualifier2(code, display, targetcode, targetdisplay, qualifiercode1, qualifiercode1display, qualifiercode2, qualifiercode2display)
+RuleSet: MapConceptQualifier2(code, display, targetcode, targetdisplay, qualifiercode1, qualifiercode1display, qualifiercode2, qualifiercode2display, system)
 * group[=].element[+]
   * code = {code}
   * display = {display}
@@ -61,7 +61,7 @@ RuleSet: MapConceptQualifier2(code, display, targetcode, targetdisplay, qualifie
       * display = {qualifiercode1display}
     * product[1].
       * property = Canonical(BodyLocationQualifier)
-      * system = SCT
+      * system = {system}
       * value = {qualifiercode2}
       * display = {qualifiercode2display}
 

@@ -18,7 +18,7 @@ RuleSet: MapConcept(code, display, targetcode, targetdisplay)
 * group[=].element[=].target.display = {targetdisplay}
 * group[=].element[=].target.equivalence = #equivalent
 
-RuleSet: MapConceptQualifier1(code, display, targetcode, targetdisplay, qualifiercode1, qualifiercode1display, qualifiercode1system)
+RuleSet: MapConceptLocationQualifier(code, display, targetcode, targetdisplay, qualifiercode1, qualifiercode1display, qualifiercode1system )
 * group[=].element[+]
   * code = {code}
   * display = {display}
@@ -32,6 +32,20 @@ RuleSet: MapConceptQualifier1(code, display, targetcode, targetdisplay, qualifie
       * value = {qualifiercode1}
       * display = {qualifiercode1display}
 
+RuleSet: MapConceptLateralityQualifier(code, display, targetcode, targetdisplay, qualifiercode1, qualifiercode1display, qualifiercode1system )
+* group[=].element[+]
+  * code = {code}
+  * display = {display}
+  * target
+    * code = {targetcode}
+    * display = {targetdisplay}
+    * equivalence = #equivalent
+    * product.
+      * property = Canonical(LateralityQualifier)
+      * system = {qualifiercode1system}
+      * value = {qualifiercode1}
+      * display = {qualifiercode1display}
+
 RuleSet: MapConceptQualifier2(code, display, targetcode, targetdisplay, qualifiercode1, qualifiercode1display, qualifiercode2, qualifiercode2display)
 * group[=].element[+]
   * code = {code}
@@ -41,7 +55,7 @@ RuleSet: MapConceptQualifier2(code, display, targetcode, targetdisplay, qualifie
     * display = {targetdisplay}
     * equivalence = #equivalent
     * product[0].
-      * property = Canonical(BodyLocationQualifier)
+      * property = Canonical(LateralityQualifier)
       * system = SCT
       * value = {qualifiercode1}
       * display = {qualifiercode1display}

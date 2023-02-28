@@ -674,6 +674,8 @@ Usage: #definition
 * insert MapConcept(#Vomer, "Vomer", #87166008, "Vomer bone structure (body structure\)")
 * insert MapConcept(#Sinus_Sphenoid, "Sphenoidal Sinus", #24999009, "Sphenoid sinus structure (body structure\) ")
 * insert MapConcept(#Strct , "Structure", #123037004, "Body structure (body structure\)")
-* insert AddGroup("TG263",SCT_TBD))
+// * insert AddGroup("TG263", SCT_TBD )
+* group[+].target = SCT_TBD
+* group[=].source = "TG263"
 * insert MapConcept(#Spc_Bowel , "Space occupied by bowel", #USCRS-34356, "Bowel space (body structure\)" )
 * insert MapConcept(#Spc_Bowel_Small, "Space occupied by small bowel", #USCRS-34358, "Small bowel space (body structure\)" )

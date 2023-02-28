@@ -1,5 +1,3 @@
-Alias: SCT_TBD = http://hl7.org/fhir/us/mcode/CodeSystem/snomed-requested-cs
-
 CodeSystem: SnomedRequestedCS
 Id: snomed-requested-cs
 Title: "Requested SNOMED Codes Code System"

@@ -685,7 +685,7 @@ Efforts to define SNOMEDCT are ongoing for two of the TG263 concepts (Spc_Bowel 
 |Vomer| Vomer | &#8594; | 87166008 |  Vomer bone structure (body structure) | | | | |
 |Sinus_Sphenoid| Sphenoidal Sinus | &#8594; | 24999009 |  Sphenoid sinus structure (body structure)  | | | | |
 |Strct | Structure | &#8594; | 123037004 |  Body structure (body structure) | | | | |
-
+{:.grid}
 
 
 {% include markdown-link-references.md %}

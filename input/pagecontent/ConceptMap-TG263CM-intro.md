@@ -1,7 +1,7 @@
 ###  Structure of this Concept Map
 A key mapping used by this IG is that of the TG263 concepts for treatment location to SNOMEDCT codes and qualifiers.
-See the brief discussion in [RadiotherapyTreatmentLocationVS].  The mapping was documented by reference to a spreadsheet in the STU2
-version of the IG, and this ConceptMap has now been added to better support implementers.
+See the brief discussion in [RadiotherapyTreatmentLocationVS].  The mapping was initially documented by [spreadsheet](TG263_Nomenclature_to_SNOMEDCT_Codes_and_Qualifiers.xlsx) in the STU2
+version of the IG, and this ConceptMap, derived directly from the spreadsheet using a [script](https://github.com/HL7/fhir-mCODE-ig/blob/master/tools/tg263ConceptMap.rb), has now been added to better support implementers.
 
 Some of the TG263 terms are pre-coordinated, incorporating laterality and other qualifiers directly in the term.
 For the mapping to SNOMEDCT, we have chosen to avoid pre-coordination, and rather use a code + qualifier(s) approach to uniquely map each TG263 concept.

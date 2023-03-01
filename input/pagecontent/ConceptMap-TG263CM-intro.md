@@ -12,8 +12,6 @@ Efforts to define SNOMEDCT are ongoing for two of the TG263 concepts (Spc_Bowel 
 
 ### TG263 to SNOMEDCT Codes and Qualifiers Mapping
 
-| TG263 Term | Description |  &#8594; | SNOMED Code | Description | Laterality Qualifier Code | Laterality Qualifier Description | Location Qualifier Code | Location Qualifier Description |
-| ---------- | ----------- | -------- | ----------- | ----------- | ------------------------- | -------------------------------- | ----------------------- | -------------------------------|
 |A_Aorta| Aorta | &#8594; | 15825003 |  Aortic structure (body structure) | | | | |
 |A_Aorta_Asc| Ascending Aorta | &#8594; | 54247002 |  Ascending aorta structure (body Structure) | | | | |
 |A_Brachiocephls| Brachiocephalic Artery | &#8594; | 425444002 |  Branch of brachiocephalic artery (body structure) | | | | |
@@ -29,7 +27,7 @@ Efforts to define SNOMEDCT are ongoing for two of the TG263 concepts (Spc_Bowel 
 |A_Humeral_Cflx_L| Circumflex Humeral Artery Left | &#8594; | 244314003 |  Circumflex humeral artery (body structure) | 7771000| Left (qualifier value)| | |
 |A_Humeral_Cflx_R| Circumflex Humeral Artery Right | &#8594; | 244314003 |  Circumflex humeral artery (body structure) | 24028007| right (qualifier value)| | |
 |A_Hypophyseal_I| Hypophyseal Artery Inferior | &#8594; | 74200005 |  Structure of inferior hypophyseal artery (body structure) | | | | |
-|A_Hypophyseal_S| Hypophyseal Artery Superior | &#8594; | 55601007 |  Structure of superior hypophyseal artery (body structure) | | | | | |
+|A_Hypophyseal_S| Hypophyseal Artery Superior | &#8594; | 55601007 |  Structure of superior hypophyseal artery (body structure) | | | | |
 |A_Iliac_Cflx_L| Circumflex Left Iliac Artery | &#8594; | 244327004 |  Circumflex iliac artery (body structure) | 7771000| Left (qualifier value)| | |
 |A_Iliac_Cflx_R| Circumflex Right Iliac Artery | &#8594; | 244327004 |  Circumflex iliac artery (body structure) | 24028007| right (qualifier value)| | |
 |A_Iliac_Ext_L| External iliac artery Left | &#8594; | 113269004 |  Structure of external iliac artery (body structure) | 7771000| Left (qualifier value)| | |
@@ -103,7 +101,7 @@ Efforts to define SNOMEDCT are ongoing for two of the TG263 concepts (Spc_Bowel 
 |Bone_Zygomatic_L| Zygomatic Bone Left | &#8594; | 13881006 |  Zygomatic bone structure (body structure) | 7771000| left (qualifier value)| | |
 |Bone_Zygomatic_R| Zygomatic Bone Right | &#8594; | 13881006 |  Zygomatic bone structure (body structure) | 24028007| right (qualifier value)| | |
 |Bone_Zygomatics| Zygomatic Bone | &#8594; | 13881006 |  Zygomatic bone structure (body structure) | | | | |
-|BoneMarrow| Bone Marrow | &#8594; | 14016003 |   |Bone marrow structure (body structure)| | | | | |
+|BoneMarrow| Bone Marrow | &#8594; | 14016003 |   Bone marrow structure (body structure) | | | | |
 |Diaphragm| Diaphragm | &#8594; | 5798000 |  Diaphragm structure (body structure) | | | | |
 |Bowel| Bowel  | &#8594; | 113276009 |  Intestinal structure (body structure) | | | | |
 |Bowel_Large| Large Bowel | &#8594; | 14742008 |  Structure of large intestine (body structure) | | | | |
@@ -124,7 +122,7 @@ Efforts to define SNOMEDCT are ongoing for two of the TG263 concepts (Spc_Bowel 
 |Bronchus_Main_L| Main Bronchus Left | &#8594; | 102297006 |  Main bronchus structure (body structure) | | | | |
 |Bronchus_Main_R| Main Bronchus Right | &#8594; | 102297006 |  Main bronchus structure (body structure) | | | | |
 |Bronchus_R| Bronchial tree Right | &#8594; | 955009 |  Bronchial structure (body structure) | 24028007| right (qualifier value)| | |
-|Canal_Anal| Anal Canal | &#8594; | 34381000 |  Anal canal structure (body structure) | | | | | |
+|Canal_Anal| Anal Canal | &#8594; | 34381000 |  Anal canal structure (body structure)  | | | | |
 |Carina| Carina | &#8594; | 28700002 |  Structure of carina of trachea (body structure) | | | | |
 |Duodenum| Small bowel - Duodenum | &#8594; | 38848004 |  Duodenal structure (body structure) | | | | |
 |CaudaEquina| Cauda equina | &#8594; | 7173007 |  Cauda equina structure (body structure) | | | | |
@@ -302,7 +300,7 @@ Efforts to define SNOMEDCT are ongoing for two of the TG263 concepts (Spc_Bowel 
 |LN_Ax_Apical_R| Axillary lymphatic chain - Apical Right | &#8594; | 16051009 |   Structure of apical axillary lymph node (body structure) | 24028007| Right (qualifier value)| | |
 |LN_Ax_Central_L| Axillary lymphatic chain - Central Left | &#8594; |  16051009 |   Structure of apical axillary lymph node (body structure) | 7771000| left (qualifier value)| 26216008|  central (qualifier value) |
 |LN_Ax_Central_R| Axillary lymphatic chain - Central Right | &#8594; |  16051009 |   Structure of apical axillary lymph node (body structure) | 24028007| right (qualifier value)| 26216008|  central (qualifier value) |
-|LN_Ax_Centrals| Set of central axillary lymphatic vessels | &#8594; | 283001 |  Structure of central axillary lymph node (body structure) | | | | | |
+|LN_Ax_Centrals| Set of central axillary lymphatic vessels | &#8594; | 283001 |  Structure of central axillary lymph node (body structure)  | | | | |
 |LN_Ax_L| Axillary lymphatic chain Left | &#8594; | 68171009 |  Axillary lymph node structure (body structure) | 7771000| Left (qualifier value)| | |
 |LN_Ax_L1_L| Level 1 Axillary Lymph Node Left | &#8594; |  68171009 |  Axillary lymph node structure (body structure) | 7771000| left (qualifier value)| 277733009|  level 1 (qualifier value) |
 |LN_Ax_L1_R| Level 1 Axillary Lymph Node Right | &#8594; |  68171009 |  Axillary lymph node structure (body structure) | 24028007| right (qualifier value)| 277733009|  level 1 (qualifier value) |
@@ -328,8 +326,8 @@ Efforts to define SNOMEDCT are ongoing for two of the TG263 concepts (Spc_Bowel 
 |LN_Bronchpulms| Lymph nodes of thorax - Bronchopulmonary | &#8594; | 279816002 |  Bronchopulmonary lymph node group (body structure) | | | | |
 |LN_Diaphragmatic| Lymph nodes of thorax - Diaphragmatic | &#8594; | 196751009 |  Structure of diaphragmatic lymph node (body structure) | | | | |
 |LN_Iliac_Ext| Lymph nodes of pelvis - External iliac | &#8594; | 65349008 |  Structure of external iliac lymph node (body structure) | | | | |
-|LN_Iliac_Int| Lymph nodes of pelvis -  Internal iliac | &#8594; | 245357003 |  Structure of internal iliac lymph node (body structure) | | | | | |
-|LN_Iliac| Lymph nodes of pelvis -  common iliac | &#8594; | 84219008 |  Structure of iliac lymph node (body structure) | | | | | |
+|LN_Iliac_Int| Lymph nodes of pelvis -  Internal iliac | &#8594; | 245357003 |  Structure of internal iliac lymph node (body structure)  | | | | |
+|LN_Iliac| Lymph nodes of pelvis -  common iliac | &#8594; | 84219008 |  Structure of iliac lymph node (body structure)  | | | | |
 |LN_Iliac_Ext_L| Lymph nodes of pelvis - external iliac Left | &#8594; | 65349008 |  Structure of external iliac lymph node (body structure) | 7771000| left (qualifier value)| | |
 |LN_Iliac_Ext_R| Lymph nodes of pelvis - external iliac Right | &#8594; | 65349008 |  Structure of external iliac lymph node (body structure) | 24028007| right (qualifier value)| | |
 |LN_Iliac_Int_L| Lymph nodes of pelvis - internal iliac Left | &#8594; | 245299000 |  Internal iliac lymph node group (body structure) | 7771000| left (qualifier value)| | |
@@ -622,7 +620,7 @@ Efforts to define SNOMEDCT are ongoing for two of the TG263 concepts (Spc_Bowel 
 |V_Venacava_S| Superior vena cava | &#8594; | 35532006 |  Vena caval structure (body structure) | | |264217000| superior (qualifier value)|
 |Vagina| Vagina | &#8594; | 76784001 |  Vaginal structure (body structure) | | | | |
 |Vagina_Surf| Surface of Vagina | &#8594; | 279894000 |  Inferior surface of vaginal cervix (body structure) | | | | |
-|VaginalCuff| Vaginal Cuff | &#8594; | 438074005 |  438074005 | Vaginal cuff (morphologic abnormality) | | | | |
+|VaginalCuff| Vaginal Cuff | &#8594; | 438074005 |   Vaginal cuff (morphologic abnormality) | | | | |
 |Valve| Valve | &#8594; | 17401000 |  Cardiac valve structure (body structure) | | | | |
 |V_Jugular| Any Jugular Vein | &#8594; | 63190004 |  Structure of jugular vein (body structure) | | | | |
 |Valve_Mitral| Mitral Valve | &#8594; | 91134007 |  Mitral valve structure (body structure) | | | | |
@@ -636,7 +634,7 @@ Efforts to define SNOMEDCT are ongoing for two of the TG263 concepts (Spc_Bowel 
 |VocalCords| Vocal Cords | &#8594; | 46105003 |  Vocal cord structure (body structure) | 51440002| right+left (qualifier value)| | |
 |Vulva| Vulva | &#8594; | 45292006 |  Vulval structure (body structure) | | | | |
 |Wall_Vagina| Wall of vagina | &#8594; | 263355003 |  Vaginal wall (body structure) | | | | |
-|Body| Only the body | &#8594; | 38266002 |  Entire body as a whole (body structure) | | | | | |
+|Body| Only the body | &#8594; | 38266002 |  Entire body as a whole (body structure)  | | | | |
 |BoneMarrow_Act| Active Bone Marrow | &#8594; | 75330005 |   Structure of red bone marrow (body structure) | | | | |
 |Cartlg_Thyroid| Thyroid cartilage | &#8594; | 52940008 |  Thyroid cartilage structure (body structure) | | | | |
 |Cist_Suprasellar| Suprasellar Cistern | &#8594; | 15328005 |  Structure of suprasellar region (body structure) | | | | |
@@ -687,7 +685,6 @@ Efforts to define SNOMEDCT are ongoing for two of the TG263 concepts (Spc_Bowel 
 |Vomer| Vomer | &#8594; | 87166008 |  Vomer bone structure (body structure) | | | | |
 |Sinus_Sphenoid| Sphenoidal Sinus | &#8594; | 24999009 |  Sphenoid sinus structure (body structure)  | | | | |
 |Strct | Structure | &#8594; | 123037004 |  Body structure (body structure) | | | | |
-{:.grid}
 
 
 

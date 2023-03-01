@@ -86,20 +86,20 @@ worksheet = "Mapped TG263 Terms"
         qualifier2 = qualifiers[1] # second qualifier is always non-laterality
         qualifiercode1 = lookup[qualifier1.downcase.strip]
         puts "GORK1: qualifier code1 = #{qualifier1}" if qualifiercode1 == nil
-        qualifiercode1display = qualifier1 + "(qualifier value\\)";
+        qualifiercode1display = qualifier1 + " (qualifier value\\)";
         qualifiercode2 = lookup[qualifier2.downcase.strip]
         puts "GORK2: qualifier code2 = #{qualifier2}" if qualifiercode2 == nil
-        qualifiercode2display = qualifier2 + "(qualifier value\\)";
+        qualifiercode2display = qualifier2 + " (qualifier value\\)";
         if qualifiercode2.include?("USCRS")
           system = "SCT_TBD"
         else
           system = "SCT"
         end
         snomedcodes.concat("* insert MapConceptQualifier2(#{tg263primary}, \"#{tg263description}\", #{code}, \"#{term}\", #{qualifiercode1}, \"#{qualifiercode1display}\", #{qualifiercode2}, \"#{qualifiercode2display}\", #{system})\n")
-        table.concat("|#{tg263primary}| #{tg263description} | &#8594; |  #{code} |  #{term} | #{qualifiercode1}| #{qualifiercode1display}| #{qualifiercode2}| #{qualifiercode2display} |\n")
+        table.concat("|#{row[6].value}| #{row[8].value} | &#8594; |  #{code.gsub("#","")} |  #{term.gsub("\\","")} | #{qualifiercode1.gsub("#","")}| #{qualifiercode1display.gsub("\\","")}| #{qualifiercode2.gsub("#","")}| #{qualifiercode2display.gsub("\\","")} |\n")
       else
         qualifier1 = row[12].value
-        qualifiercode1display = qualifier1 + "(qualifier value\\)";
+        qualifiercode1display = qualifier1 + " (qualifier value\\)";
         qualifiercode1 = lookup[qualifier1.downcase.strip]
         puts "GORK1: qualifier code1 = #{qualifier1}" if qualifiercode1 == nil
         if qualifiercode1.include?("USCRS")
@@ -109,10 +109,10 @@ worksheet = "Mapped TG263 Terms"
         end
         if (isLateralityQualifier(qualifier1))
           rule = "MapConceptLateralityQualifier"
-          table.concat("|#{tg263primary}| #{tg263description} | &#8594; | #{code} |  #{term} | #{qualifiercode1}| #{qualifiercode1display}| | |\n")
+          table.concat("|#{row[6].value}| #{row[8].value} | &#8594; | #{code.gsub("#","")} |  #{term.gsub("\\","")} | #{qualifiercode1.gsub("#","")}| #{qualifiercode1display.gsub("\\","")}| | |\n")
         else
           rule = "MapConceptLocationQualifier"
-          table.concat("|#{tg263primary}| #{tg263description} | &#8594; | #{code} |  #{term} | | |#{qualifiercode1}| #{qualifiercode1display}|\n")
+          table.concat("|#{row[6].value}| #{row[8].value} | &#8594; | #{code.gsub("#","")} |  #{term.gsub("\\","")} | | |#{qualifiercode1.gsub("#","")}| #{qualifiercode1display.gsub("\\","")}|\n")
         end
         snomedcodes.concat("* insert #{rule}(#{tg263primary}, \"#{tg263description}\", #{code}, \"#{term}\", #{qualifiercode1}, \"#{qualifiercode1display}\", #{system})\n")
       end
@@ -122,7 +122,7 @@ worksheet = "Mapped TG263 Terms"
       else
        snomedcodes.concat( "* insert MapConcept(#{tg263primary}, \"#{tg263description}\", #{code}, \"#{term}\")\n")
       end
-      table.concat("|#{tg263primary}| #{tg263description} | &#8594; | #{code} |  #{term} | | | | |\n")
+      table.concat("|#{row[6].value}| #{row[8].value} | &#8594; | #{code.gsub("#","")} |  #{term.gsub("\\","")} | | | | |\n")
     end
   end
   puts "* insert AddGroup(\"TG263\",SCT)"

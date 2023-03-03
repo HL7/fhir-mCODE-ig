@@ -236,6 +236,7 @@ Description: "Various modifiers that can be applied to body locations where radi
 * SCT#260528009  "Middle (qualifier value)"
 * SCT#46053002   "Distal (qualifier value)"
 * SCT#40415009   "Proximal (qualifier value)"
+* SCT#255204007   "Multiple (qualifier value)"
 * SCT#255503000  "Entire (qualifier value)" // flagged spuriously as invalid
 * SCT#255609007  "Partial (qualifier value)"
 //* SCT#7771000    "Left (qualifier value)" - now in separate lateralityQualifier
@@ -247,19 +248,27 @@ Description: "Various modifiers that can be applied to body locations where radi
 * SCT#410679008  "Surface (qualifier value)"
 * SCT#260521003  "Internal (qualifier value)"
 * SCT#261074009  "External (qualifier value)"
-* SCT#261115001  "Laryngeal (qualifier value)"
 * SCT#260548002  "Oral (qualifier value)"
 * SCT#18769003   "Adjacent" // or "Juxta-posed (qualifier value)"
 * SCT#1217011006 "Non-adjacent (qualifier value)"
+* SCT#258400004 "Lymph node level I (qualifier value)"
 * SCT#1162616006 "Lymph node level IA (qualifier value)"
 * SCT#1162617002 "Lymph node level IB (qualifier value)"
+* SCT#258401000 "Lymph node level II (qualifier value)"
+* SCT_TBD#USCRS-34777 "Lymph node level IIA (qualifier value)"        // requested 2/22/23
+* SCT_TBD#USCRS-34775 "Lymph node level IIB (qualifier value)"        // requested 2/22/23
+* SCT#258402007 "Lymph node level III (qualifier value)"
+* SCT#258403002 "Lymph node level IV (qualifier value)"
 * SCT#1162620005 "Lymph node level IVA (qualifier value)"
 * SCT#1162621009 "Lymph node level IVB (qualifier value)"
+* SCT#258404008 "Lymph node level V (qualifier value)"
 * SCT#1162622002 "Lymph node level VA (qualifier value)"
 * SCT#1162623007 "Lymph node level VB (qualifier value)"
 * SCT#1162624001 "Lymph node level VC (qualifier value)"
+* SCT#258405009 "Lymph node level VI (qualifier value)"
 * SCT#1162625000 "Lymph node level VIA (qualifier value)"
 * SCT#1162626004 "Lymph node level VIB (qualifier value)"
+* SCT#395168005 "Lymph node level VII (qualifier value)"
 * SCT#1162628003 "Lymph node level VIIA (qualifier value)"
 * SCT#1162627008 "Lymph node level VIIB (qualifier value)"
 * SCT#1162618007 "Lymph node level VIII (qualifier value)"
@@ -267,6 +276,9 @@ Description: "Various modifiers that can be applied to body locations where radi
 * SCT#1162614009 "Lymph node level X (qualifier value)"
 * SCT#1162615005 "Lymph node level XA (qualifier value)"
 * SCT#1162613003 "Lymph node level XB (qualifier value)"
+
+
+
 
 ValueSet: RadiotherapyTreatmentLocationVS
 Id: mcode-radiotherapy-treatment-location-vs

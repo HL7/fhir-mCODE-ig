@@ -1,6 +1,6 @@
-The following changes occurred between [STU 2 publication](http://hl7.org/fhir/us/mcode/STU2/) (January 2022) and mCODE version 2.1, STU 3 ballot (January 2023). For a history of previous changes, please see the prior change logs in the [appropriate versions](http://hl7.org/fhir/us/mcode/history.html).
+The following changes occurred between [STU 2 publication](http://hl7.org/fhir/us/mcode/STU2/) (January 2022) and the STU 3 ballot (March 2023). For a history of previous changes, please see the prior change logs in the [appropriate versions](http://hl7.org/fhir/us/mcode/history.html).
 
-### Use of AJCC-equivalent SNOMED Codes for Staging
+### Allowing the Use of AJCC-equivalent SNOMED Codes for Staging
 
 mCODE STU 3 accepts SNOMED equivalents of AJCC codes, in addition to AJCC codes as in STU 2. This provides maximum interoperability across AJCC licensed and unlicensed systems, but does not break existing applications.
 
@@ -42,7 +42,93 @@ In addition, the following value sets are now associated with the non-TNM [Cance
 * [CancerStagingTypeVS] was introduced to populate the `Observation.code` element in the CancerStageGroup profile.
 * [CancerStageVS] was introduced to populate the `Observation.valueCodeableConcept` element in the CancerStageGroup profile.
 
+### Comorbidity Redesign
+
+Based on user feedback on the complexity of the STU 2 design, [comorbidities][Comorbidities] have been redesigned into a more compact, practical form. As a full redesign, this change is not backward compatible.
+
+* Comorbidities are no longer based on the Elixhauser framework. Users now have the freedom to name any condition as a comorbidity.
+* Comorbid conditions can be designated either by providing a disorder code or reference to a FHIR resource. To allow this, the data types on the [RelatedCondition] extension have been expanded to allow a choice of Reference(Condition) or CodeableConcept.
+* Conditions mentioned in the Comorbidities profile can still be designated as present or absent, but this is accomplished by populating different extensions. A new extension, [RelatedConditionAbsent], has been introduced to support negation of a comorbidity (if needed to assert a significant negative).
+* Value sets, extensions, code systems, and profiles related to STU 2 Elixhauser comorbidities that are no longer required have been eliminated.
+
 ### Value Set Content Changes
+
+* The following improvements were made to [CancerStagingMethodVS] (formerly CancerStagingSystemVS) value set:
+  * Certain children of Tumor staging (SCTID: 2542920070) (see https://jira.hl7.org/browse/FHIR-34448) were removed because they represent stage values rather than staging methods.
+  * The following staging methods were added (see https://jira.hl7.org/browse/FHIR-37860):
+    * SCT#1149162008 "International Staging System for multiple myeloma (staging scale)"
+    * SCT#1149163003 "Revised International Staging System for multiple myeloma (staging scale)"
+    * SCT#246165003 "Extent of disease (attribute)"
+  * Temporary codes for lymph node levels IIA and IIB, missing from previous versions, were added.
+  * A code for "multiple" was added to RadiotherapyTreatmentLocationQualifierVS
+
+### Update to US Core 5.0.1
+
+mCODE has been updated to the current version of US Core, STU 5. Because there are new profiles in STU 5 that should be used as parent profiles, some mCODE profiles were affected. In particular, the parent profiles of [KarnofskyPerformanceStatus] and [ECOGPerformanceStatus] were switched from Observation to the newly-introduced [US Core Observation Clinical Test Result Profile][USCoreClinicalTestObservation]. Secondly, the parent profiles of [PrimaryCancerCondition] and [SecondaryCancerCondition] were switched to [US Core Condition Problems and Health Concerns Profile]. This change is not backward compatible.
+
+As a result, there are new required values for `Condition.category` or `Observation.category`:
+
+* In [PrimaryCancerCondition] and [SecondaryCancerCondition], the category "problem-list-item" is required.
+* In [KarnofskyPerformanceStatus] and [ECOGPerformanceStatus] , the category "clinical-test" is required.
+
+
+  As an example of how to assign a category, the JSON for a primary cancer condition must now include:
+
+  ```
+  "category" : [
+      {
+        "coding" : [
+          {
+            "system" : "http://terminology.hl7.org/CodeSystem/condition-category",
+            "code" : "problem-list-item"
+          }
+        ]
+      }
+    ]
+  ```
+
+### Dependency on Genomics Reporting IG
+
+mCODE is now is explicitly dependent on the [Genomics Reporting IG STU2 (v2.0.0)](http://hl7.org/fhir/uv/genomics-reporting/STU2/index.html) (GRIG). This eliminates the duplication of profiles that existed in STU 1 and STU 2, and assures that the two IGs remain in synchronization. The following changes were made:
+
+* [GenomicsReport], [GenomicRegionStudied], and [GenomicVariant] now inherit from the corresponding profiles in GRIG.
+* Inheritance from US Core was removed from these profiles, since FHIR does not allow a profile to have two parents. Instances MUST be consistent with US Core but the FHIR IG Publisher does not recognize US Core compliance because it does not derive from inheritance.
+* Component names in genomics examples were aligned to the component names in GRIG.
+* The diagnosticImplication component of GenomicVariant (present in STU 2) does not exist in GRIG. Users should express diagnostic implications of a variant using the GRIG [DiagnosticImplication](http://hl7.org/fhir/uv/genomics-reporting/STU2/StructureDefinition-diagnostic-implication.html) profile.
+* Value sets that are no longer required because equivalents are defined externally in GRIG were removed: HGNCVS, HGVSVS, GenomicMolecularConsequenceVS, ClinvarVS, and DNAChangeTypeVS.
+
+### Change in mCODE Bundle Slicing
+
+The mCODE bundle definition now slices on resource type, rather than profile. Slicing logic was changed because, in some cases, instances could not be assigned unambigously to a slice, causing the FHIR validator to output errors. With this change, the assignment to a slice will always be unambiguous. This change has no effect on the contents or use of the mCODE bundle.
+
+### Maturity Indicators
+
+Maturity indicators, based on the FHIR Maturity Model (FMM) have been added to profiles and value sets. These indicators show up in the IG but have no functional affect on implementations.
+
+### CancerDiseaseStatus Focus
+
+Radiotherapy subject matter experts requested a way to link CancerDiseaseStatus to a RadiotherapyVolume through the `Observation.focus` element. This broadens the choices of STU2, which were Reference(PrimaryCancerCondition or SecondaryCancerCondition or Tumor) and are now Reference(PrimaryCancerCondition or SecondaryCancerCondition or Tumor or RadiotherapyVolume). This allows a change in disease status to point to a specific area of the body, not just a specific Tumor or condition.
+
+### TumorMarkerTest Related Condition
+
+Users requested a link between TumorMarkerTest and the condition the test is related to. Optional RelatedCondition extension was added to TumorMarkerTest. See https://chat.fhir.org/#narrow/stream/229074-CodeX/topic/Reference.20between.20tumor.20characteristics.20and.20cancer.20diagnosis
+
+### Multiple Specimen Profiles Simplified
+
+A specimen is a specimen. There was no real reason to distinguish specimens obtained for genomic analysis from those obtained for other uses. A single profile, HumanSpecimen, was created to represent any specimen from a human subject. Since this profile is no longer associated with a single domain (Disease or Genomics), specimens were added to the Patient domain.
+
+### Technical Corrections
+
+* [PrimaryCancerCondition]'s `stage.type` value set binding was corrected. It should have indicated the staging **method** that gave rise to the value appearing in stage.summary (such as AJCC Version 8).
+* Corrected extended example, which formerly used invalid stage "pM0". Replaced with a data absent reason "not applicable".
+* "SNOMED-CT" was changed to the preferred form "SNOMED CT" in narratives
+
+### Examples
+
+* The genetic variant in the [genomic-variant-somatic-single-nucleotide example](Observation-genomic-variant-somatic-single-nucleotide.html) changed from CLINVAR#619728 to CLINVAR#611264 to address https://jira.hl7.org/browse/FHIR-36724
+
+
+### Value Set Content Changes (Published in STU 2.1)
 
 * The following improvements were made to [CancerStagingMethodVS] (formerly CancerStagingSystemVS) value set:
   * Certain children of Tumor staging (SCTID: 2542920070) (see https://jira.hl7.org/browse/FHIR-34448) were removed because they represent stage values rather than staging methods.
@@ -77,100 +163,6 @@ In addition, the following value sets are now associated with the non-TNM [Cance
   * #1162614009 "Lymph node level X (qualifier value)"
   * #1162615005 "Lymph node level XA (qualifier value)"
   * #1162613003 "Lymph node level XB (qualifier value)"
-
-* The following additions were made to [[SnomedRequestedCS] Code System:
-  * #USCRS-34777 "Lymph node level IIA (qualifier value)"        // requested 2/22/23
-  * #USCRS-34775 "Lymph node level IIB (qualifier value)"        // requested 2/22/23
-
-* The following improvements were made to [RadiotherapyTreatmentLocationQualifierVS] value set:
-  * added existing SNOMED codes and the Node Level IIa and IIb codes to bring this valueset into alignment with qualifiers used for the TG263 mapping.
-
-* A [concept map](ConceptMap-TG263CM.html) was added to document the mapping between the TG263 concepts and SNOMED codes and qualifiers
-
-### Profile Categories
-
-Required categories (`Observation.category`) have been added to PrimaryCancerCondition, SecondaryCancerCondition, TumorMarkerTest, and five staging-related profiles. The purpose is to make it easier to retrieve mCODE resources. Having fixed categories provide a firmer "handle" to retrieve relevant mCODE resources, without relying on the "code in value set" (`code:in=[value set]`) operation that is not implemented by all FHIR servers. [Updated sample queries](conformance-general.html#support-querying-mcode-conforming-resources) have been provided. **These changes are not backward compatible.**
-
-The following are now required values in `Condition.category` or `Observation.category`:
-
-* [PrimaryCancerCondition] now requires category SNOMED CT 372087000 "Primary malignant neoplasm (disorder)"
-* [SecondaryCancerCondition] now requires category SNOMED CT 128462008 "Metastatic malignant neoplasm (disorder)"
-* [TumorMarkerTest] now requires category SNOMED CT 250724005 "Tumor marker measurement (procedure)"
-* The five staging profiles ([CancerStageGroup], [TNMStageGroup], [TNMPrimaryTumorCategory], [TNMRegionalNodesCategory], and [TNMDistantMetastasesCategory]) now require category SNOMED CT 385356007 "Tumor stage finding (finding)"
-
-  As an example of how to assign these categories in instances, the JSON for a principal cancer condition would include:
-
-  ```
-  "category" : [
-      {
-        "coding" : [
-          {
-            "system" : "http://terminology.hl7.org/CodeSystem/condition-category",
-            "code" : "problem-list-item"
-          }
-        ]
-      },
-      {
-        "coding" : [
-          {
-            "system" : "http://snomed.info/sct",
-            "code" : "372087000"
-          }
-        ]
-      }
-    ]
-    ```
-
-  The first of these categories satisfies the US Core requirement from [US Core Condition Problems and Health Concerns Profile][USCoreConditionProblemHealthConcern] and the second category satisfies the mCODE requirement. The other categories are similar.
-
-### Comorbidity Redesign
-
-Based on user feedback on the complexity of the STU 2 design, [comorbidities][Comorbidities] have been redesigned into a more compact, practical form. As a full redesign, this change is not backward compatible.
-
-* Comorbidities are no longer based on the Elixhauser framework. Users now have the freedom to name any condition as a comorbidity.
-* Comorbid conditions can be designated either by providing a disorder code or reference to a FHIR resource. To allow this, the data types on the [RelatedCondition] extension have been expanded to allow a choice of Reference(Condition) or CodeableConcept.
-* Conditions mentioned in the Comorbidities profile can still be designated as present or absent, but this is accomplished by populating different extensions. A new extension, [RelatedConditionAbsent], has been introduced to support negation of a comorbidity (if needed to assert a significant negative).
-* Value sets, extensions, code systems, and profiles related to STU 2 Elixhauser comorbidities that are no longer required have been eliminated.
-
-### Update to US Core 5.0.1
-
-mCODE has been updated to the current version of US Core, STU 5. Because there are new profiles in STU 5 that should be used as parent profiles, some mCODE profiles were affected. In particular, the parent profiles of [KarnofskyPerformanceStatus] and [ECOGPerformanceStatus] were switched from Observation to the newly-introduced [US Core Observation Clinical Test Result Profile][USCoreClinicalTestObservation].
-
-### Dependency on Genomics Reporting IG
-
-mCODE is now is explicitly dependent on the [Genomics Reporting IG STU2 (v2.0.0)](http://hl7.org/fhir/uv/genomics-reporting/STU2/index.html) (GRIG). This eliminates the duplication of profiles that existed in STU 1 and STU 2, and assures that the two IGs remain in synchronization. The following changes were made:
-
-* [GenomicsReport], [GenomicRegionStudied], and [GenomicVariant] now inherit from the corresponding profiles in GRIG.
-* Inheritance from US Core was removed from these profiles, since FHIR does not allow a profile to have two parents. Instances MUST be consistent with US Core but the FHIR IG Publisher does not recognize US Core compliance because it does not derive from inheritance.
-* Component names in genomics examples were aligned to the component names in GRIG.
-* The diagnosticImplication component of GenomicVariant (present in STU 2) does not exist in GRIG. Users should express diagnostic implications of a variant using the GRIG [DiagnosticImplication](http://hl7.org/fhir/uv/genomics-reporting/STU2/StructureDefinition-diagnostic-implication.html) profile.
-* Value sets that are no longer required because equivalents are defined externally in GRIG were removed: HGNCVS, HGVSVS, GenomicMolecularConsequenceVS, ClinvarVS, and DNAChangeTypeVS.
-
-### Maturity Indicators
-
-Maturity indicators, based on the FHIR Maturity Model (FMM) have been added to profiles and value sets. These indicators show up in the IG but have no functional affect on implementations.
-
-### CancerDiseaseStatus Focus
-
-Radiotherapy subject matter experts requested a way to link CancerDiseaseStatus to a RadiotherapyVolume through the `Observation.focus` element. This broadens the choices of STU2, which were Reference(PrimaryCancerCondition or SecondaryCancerCondition or Tumor) and are now Reference(PrimaryCancerCondition or SecondaryCancerCondition or Tumor or RadiotherapyVolume). This allows a change in disease status to point to a specific area of the body, not just a specific Tumor or condition.
-
-### TumorMarkerTest Related Condition
-
-Users requested a link between TumorMarkerTest and the condition the test is related to. Optional RelatedCondition extension was added to TumorMarkerTest. See https://chat.fhir.org/#narrow/stream/229074-CodeX/topic/Reference.20between.20tumor.20characteristics.20and.20cancer.20diagnosis
-
-### Multiple Specimen Profiles Simplified
-
-A specimen is a specimen. There was no real reason to distinguish specimens obtained for genomic analysis from those obtained for other uses. A single profile, HumanSpecimen, was created to represent any specimen from a human subject. Since this profile is no longer associated with a single domain (Disease or Genomics), specimens were added to the Patient domain.
-
-### Technical Corrections
-
-* [PrimaryCancerCondition]'s `stage.type` value set binding was corrected. It should have indicated the staging **method** that gave rise to the value appearing in stage.summary (such as AJCC Version 8).
-* Corrected extended example, which formerly used invalid stage "pM0". Replaced with a data absent reason "not applicable".
-* "SNOMED-CT" was changed to the preferred form "SNOMED CT" in narratives
-
-### Examples
-
-* The genetic variant in the [genomic-variant-somatic-single-nucleotide example](Observation-genomic-variant-somatic-single-nucleotide.html) changed from CLINVAR#619728 to CLINVAR#611264 to address https://jira.hl7.org/browse/FHIR-36724
 
 
 {% include markdown-link-references.md %}

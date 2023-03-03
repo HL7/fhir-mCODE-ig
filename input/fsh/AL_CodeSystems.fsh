@@ -20,6 +20,7 @@ Alias:   GTR = http://www.ncbi.nlm.nih.gov/gtr
 Alias:   CLINVAR = http://www.ncbi.nlm.nih.gov/clinvar
 Alias:   SO = http://www.sequenceontology.org/
 Alias:   AJCC = http://cancerstaging.org
+Alias:   ENTREZ = https://www.ncbi.nlm.nih.gov/gene
 
 // Code systems URLs from HL7 Terminology Authority that conflict with terminology.hl7.org
 Alias:   NCI = http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl

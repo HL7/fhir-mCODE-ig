@@ -127,6 +127,10 @@ A specimen is a specimen. There was no real reason to distinguish specimens obta
 
 * The genetic variant in the [genomic-variant-somatic-single-nucleotide example](Observation-genomic-variant-somatic-single-nucleotide.html) changed from CLINVAR#619728 to CLINVAR#611264 to address https://jira.hl7.org/browse/FHIR-36724
 
+### New Concept Map
+
+* A [concept map](ConceptMap-TG263CM.html) from [TG263](https://www.aapm.org/pubs/reports/RPT_263.pdf) to [RadiotherapyTreatmentLocationVS] has been added.
+
 
 ### Value Set Content Changes (Published in STU 2.1)
 

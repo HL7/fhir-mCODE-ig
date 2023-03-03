@@ -1,14 +1,12 @@
 ###  Structure of this Concept Map
-A key mapping used by this IG is that of the TG263 concepts for treatment location to SNOMEDCT codes and qualifiers.
-See the brief discussion in [RadiotherapyTreatmentLocationVS].  The mapping was initially documented by [spreadsheet](TG263_Nomenclature_to_SNOMEDCT_Codes_and_Qualifiers.xlsx) in the STU2
-version of the IG, and this ConceptMap, derived directly from the spreadsheet using a [script](https://github.com/HL7/fhir-mCODE-ig/blob/master/tools/tg263ConceptMap.rb), has now been added to better support implementers.
 
-Some of the TG263 terms are pre-coordinated, incorporating laterality and other qualifiers directly in the term.
-For the mapping to SNOMEDCT, we have chosen to avoid pre-coordination, and rather use a code + qualifier(s) approach to uniquely map each TG263 concept.
-The mapping uses the 'product' field of each mapped element to enumerate the qualifiers needed in combination with the SNOMEDCT code to express the
-same treatment location as the TG263 concept.
+[TG263](https://www.aapm.org/pubs/reports/RPT_263.pdf) is a source for standards in radiotherapy, proposed in 2018 by the American Association of Physicists in Medicine (AAPM). It is focused on describing body structures and location. mCODE uses SNOMED CT codes and qualifiers for treatment locations. See the brief discussion in [RadiotherapyTreatmentLocationVS]. This concept map shows how each term in TG263 maps to SNOMED CT. 
 
-Efforts to define SNOMEDCT are ongoing for two of the TG263 concepts (Spc_Bowel and Spc_Bowel_Small) and two of the qualifiers (Level IIA and Level IIB).
+Some of the TG263 terms are pre-coordinated, incorporating laterality and other qualifiers directly in the term. For the mapping to SNOMED CT, a code + laterality + additional qualifier(s) approach is used to uniquely map each TG263 concept. The mapping uses the 'product' field of each mapped element to enumerate the qualifiers needed in combination with the SNOMED CT code to express the same treatment location as the TG263 concept.
+
+The mapping was initially documented by [spreadsheet](TG263_Nomenclature_to_SNOMEDCT_Codes_and_Qualifiers.xlsx) in the STU2 version of the IG, and this ConceptMap, derived directly from the spreadsheet using a [script](https://github.com/HL7/fhir-mCODE-ig/blob/master/tools/tg263ConceptMap.rb), has now been added to better support implementers.
+
+Efforts to define SNOMED CT are ongoing for two of the TG263 concepts (Spc_Bowel and Spc_Bowel_Small) and two of the qualifiers (Level IIA and Level IIB).
 
 ### TG263 to SNOMEDCT Codes and Qualifiers Mapping
 

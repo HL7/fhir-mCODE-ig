@@ -39,7 +39,7 @@ In late 2018, [American Society of Clinical Oncology (ASCO®)](https://www.asco.
 
 After the initial analysis, an open survey was conducted to validate and prioritize the data elements from these use cases. Down-scoping was conducted based on the likelihood the data elements would be found in current EHRs, and if collecting the data would place undue burden on clinicians. In 2019, mCODE was balloted and approved as an HL7 Standard for Trial Use (STU 1).
 
-In the ensuing period, mCODE was piloted at a number of clinical sites, facilitated by the [CodeX FHIR Accelerator](https://confluence.hl7.org/display/COD/CodeX+Home). Use cases are tracked [here](https://confluence.hl7.org/display/COD/CodeX+Use+Cases). Incorporating that experience, the second trial use publication (STU 2) was balloted in May 2021, and published in January 2022.
+In the ensuing period, mCODE was piloted at a number of clinical sites, facilitated by the [CodeX FHIR Accelerator](https://confluence.hl7.org/display/COD/CodeX+Home). Use cases are tracked [here](https://confluence.hl7.org/display/COD/CodeX+Use+Cases). Incorporating that experience, the second trial use publication (STU 2) was balloted in May 2021, and published in January 2022. A non-balloted update, version 2.1, was published in March 2023.
 
 ### Sources
 
@@ -86,9 +86,10 @@ If you have questions or comments about this guide, you can join the conversatio
 
 | Topic | Who | Role | Email |
 |----|---|---|------|
-| Implementation and Use Cases | Steve Bratt | CodeX Accelerator Program Manager | sbratt@mitre.org |
-| Oncology Domain Content | Dr. Travis Osterman | Chair, mCODE Technical Review Group | travis.osterman@vumc.org |
-| Modeling and FHIR IG issues | Mark Kramer | Modeling Lead | mkramer@mitre.org |
+| Implementation and Use Cases | Dr. Su Chen | CodeX Accelerator Program Manager | suchen@mitre.org |
+| CodeX Leadership | Dr. Travis Osterman | Chair, CodeX Executive Committee | travis.osterman@vumc.org |
+| Oncology Domain Content | Dr. Sanjay Aneja | Chair, mCODE Technical Review Group | sanjay.aneja@yale.edu |
+| Modeling and FHIR IG | Mark Kramer | Modeling Lead | mkramer@mitre.org |
 {: .grid }
 
 mCODE is an open source project and welcomes all contributors. The source code for this IG is maintained in the [HL7 Github](https://github.com/HL7/fhir-mCODE-ig). All of the profiling work is done using [FHIR Shorthand](http://hl7.org/fhir/uv/shorthand/) and [SUSHI](https://fshschool.org).

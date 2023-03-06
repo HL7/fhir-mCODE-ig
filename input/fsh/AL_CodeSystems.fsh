@@ -27,7 +27,7 @@ Alias:   NCI = http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl
 
 // From terminology.hl7.org
 Alias:   OmbRaceCat = urn:oid:2.16.840.1.113883.6.238
-Alias:   ICDO3 = http://terminology.hl7.org/CodeSystem/icd-o-3
+Alias:   ICDO3 = http://terminology.hl7.org/CodeSystem/icd-o
 Alias:   UMLS = http://terminology.hl7.org/CodeSystem/umls
 Alias:   IDTYPE = http://terminology.hl7.org/CodeSystem/v2-0203
 Alias:   SPTY = http://terminology.hl7.org/CodeSystem/v2-0487

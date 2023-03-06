@@ -19,6 +19,7 @@ parameters:
   show-inherited-invariants: false
   version-comparison: n/a
   path-expansion-params: '../../exp-params.json'  #path is relative to [base]/fsh-generated/resources
+  path-binary: input/attachments
 copyrightYear: 2019+
 releaseLabel: STU 3 Ballot
 pages:
@@ -90,6 +91,7 @@ menu:
     Value Sets: valuesets.html
     Code Systems: codesystems.html
     Capability Statements: capabilitystatements.html
+    Concept Maps: artifacts.html#terminology-concept-maps
     Complete Listing: artifacts.html
   Examples:
     Basic Examples: basic_examples.html

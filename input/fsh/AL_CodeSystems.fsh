@@ -6,6 +6,7 @@ Alias:   LNC = http://loinc.org
 //Alias:   SCT = http://snomed.info/sct
 //Alias:   SCT = http://snomed.info/sct|http://snomed.info/sct/731000124108   // latest US edition (see exp-params.json)
 Alias:   SCT = http://snomed.info/sct|http://snomed.info/sct/900000000000207008   // Latest international edition
+Alias: SCT_TBD = http://hl7.org/fhir/us/mcode/CodeSystem/snomed-requested-cs
 Alias:   UCUM = http://unitsofmeasure.org
 Alias:   ICD10CM = http://hl7.org/fhir/sid/icd-10-cm
 Alias:   ICD10PCS = http://www.cms.gov/Medicare/Coding/ICD10
@@ -26,7 +27,7 @@ Alias:   NCI = http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl
 
 // From terminology.hl7.org
 Alias:   OmbRaceCat = urn:oid:2.16.840.1.113883.6.238
-Alias:   ICDO3 = http://terminology.hl7.org/CodeSystem/icd-o-3
+Alias:   ICDO3 = http://terminology.hl7.org/CodeSystem/icd-o
 Alias:   UMLS = http://terminology.hl7.org/CodeSystem/umls
 Alias:   IDTYPE = http://terminology.hl7.org/CodeSystem/v2-0203
 Alias:   SPTY = http://terminology.hl7.org/CodeSystem/v2-0487

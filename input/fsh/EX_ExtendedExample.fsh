@@ -438,7 +438,7 @@ Description: "Extended example: example showing tumor size"
 * status = #final "final"
 * code = LNC#21889-1 "Size Tumor"
 //* category[Laboratory] = ObsCat#laboratory  // inherited
-* method = LNC#24419-4 "Pathology report gross observation"
+* method = SCT#787377000 "Gross examination and sampling of tissue specimen (procedure)"
 * subject = Reference(cancer-patient-jenny-m)
 * effectiveDateTime = "2018-04-01T00:00:00Z"
 * component[tumorLongestDimension].valueQuantity = 2.5 'cm' "centimeters"

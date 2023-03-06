@@ -1,6 +1,6 @@
 ###  Structure of this Concept Map
 
-[TG263](https://www.aapm.org/pubs/reports/RPT_263.pdf) is a source for standards in radiotherapy, proposed in 2018 by the American Association of Physicists in Medicine (AAPM). It is focused on describing body structures and location. mCODE uses SNOMED CT codes and qualifiers for treatment locations. See the brief discussion in [RadiotherapyTreatmentLocationVS]. This concept map shows how each term in TG263 maps to SNOMED CT. 
+[TG263](https://www.aapm.org/pubs/reports/RPT_263.pdf) is a source for standards in radiotherapy, proposed in 2018 by the American Association of Physicists in Medicine (AAPM). It is focused on describing body structures and location. mCODE uses SNOMED CT codes and qualifiers for treatment locations. See the brief discussion in [RadiotherapyTreatmentLocationVS]. This concept map shows how each term in TG263 maps to SNOMED CT.
 
 Some of the TG263 terms are pre-coordinated, incorporating laterality and other qualifiers directly in the term. For the mapping to SNOMED CT, a code + laterality + additional qualifier(s) approach is used to uniquely map each TG263 concept. The mapping uses the 'product' field of each mapped element to enumerate the qualifiers needed in combination with the SNOMED CT code to express the same treatment location as the TG263 concept.
 
@@ -9,7 +9,8 @@ The mapping was initially documented by [spreadsheet](TG263_Nomenclature_to_SNOM
 Efforts to define SNOMED CT are ongoing for two of the TG263 concepts (Spc_Bowel and Spc_Bowel_Small) and two of the qualifiers (Level IIA and Level IIB).
 
 ### TG263 to SNOMEDCT Codes and Qualifiers Mapping
-
+| TG263 Code | Description |  &#8594; | SNOMEDCT code | Description | Location Qualifier | Description | Laterality Qualifier | Description |
+| ---------- | ----------- | -------- | ------------- | ----------- | ------------------ | ----------- | -------------------- | ----------- |
 |A_Aorta| Aorta | &#8594; | 15825003 |  Aortic structure (body structure) | | | | |
 |A_Aorta_Asc| Ascending Aorta | &#8594; | 54247002 |  Ascending aorta structure (body Structure) | | | | |
 |A_Brachiocephls| Brachiocephalic Artery | &#8594; | 425444002 |  Branch of brachiocephalic artery (body structure) | | | | |
@@ -36,7 +37,7 @@ Efforts to define SNOMED CT are ongoing for two of the TG263 concepts (Spc_Bowel
 |A_Iliac_R| Common iliac artery Right | &#8594; | 73634005 |  Common iliac artery structure (body structure) | 24028007| right (qualifier value)| | |
 |A_LAD| Anterior interventricular branch of LCA (left anterior descending artery) | &#8594; | 33795007 |  Structure of anterior descending branch of left coronary artery (body structure) | | | | |
 |A_Mesenteric_I| Inferior mesenteric artery  | &#8594; | 33795007 |  Structure of inferior mesenteric artery (body structure) | | | | |
-|A_Mesenteric_S| Superior mesenteric artery  | &#8594; | 42258001 |  Superior mesenteric artery structure (body structure)  | | | | |
+|A_Mesenteric_S| Superior mesenteric artery  | &#8594; | 42258001 |  Superior mesenteric artery structure (body structure) | | | | |
 |A_Pulmonary| Pulmonary Artery | &#8594; | 81040000 |  Pulmonary artery structure (body structure) | | | | |
 |A_Subclavian| Subclavian Artery | &#8594; | 36765005 |  Structure of subclavian artery (body structure) | | | | |
 |A_Subclavian_L| Subclavian Artery Left | &#8594; | 36765005 |  Structure of subclavian artery (body structure) | 7771000| left (qualifier value)| | |
@@ -99,7 +100,7 @@ Efforts to define SNOMED CT are ongoing for two of the TG263 concepts (Spc_Bowel
 |Bone_Zygomatic_L| Zygomatic Bone Left | &#8594; | 13881006 |  Zygomatic bone structure (body structure) | 7771000| left (qualifier value)| | |
 |Bone_Zygomatic_R| Zygomatic Bone Right | &#8594; | 13881006 |  Zygomatic bone structure (body structure) | 24028007| right (qualifier value)| | |
 |Bone_Zygomatics| Zygomatic Bone | &#8594; | 13881006 |  Zygomatic bone structure (body structure) | | | | |
-|BoneMarrow| Bone Marrow | &#8594; | 14016003 |   Bone marrow structure (body structure) | | | | |
+|BoneMarrow| Bone Marrow | &#8594; | 14016003 |  Bone marrow structure (body structure) | | | | |
 |Diaphragm| Diaphragm | &#8594; | 5798000 |  Diaphragm structure (body structure) | | | | |
 |Bowel| Bowel  | &#8594; | 113276009 |  Intestinal structure (body structure) | | | | |
 |Bowel_Large| Large Bowel | &#8594; | 14742008 |  Structure of large intestine (body structure) | | | | |
@@ -120,7 +121,7 @@ Efforts to define SNOMED CT are ongoing for two of the TG263 concepts (Spc_Bowel
 |Bronchus_Main_L| Main Bronchus Left | &#8594; | 102297006 |  Main bronchus structure (body structure) | | | | |
 |Bronchus_Main_R| Main Bronchus Right | &#8594; | 102297006 |  Main bronchus structure (body structure) | | | | |
 |Bronchus_R| Bronchial tree Right | &#8594; | 955009 |  Bronchial structure (body structure) | 24028007| right (qualifier value)| | |
-|Canal_Anal| Anal Canal | &#8594; | 34381000 |  Anal canal structure (body structure)  | | | | |
+|Canal_Anal| Anal Canal | &#8594; | 34381000 |  Anal canal structure (body structure) | | | | |
 |Carina| Carina | &#8594; | 28700002 |  Structure of carina of trachea (body structure) | | | | |
 |Duodenum| Small bowel - Duodenum | &#8594; | 38848004 |  Duodenal structure (body structure) | | | | |
 |CaudaEquina| Cauda equina | &#8594; | 7173007 |  Cauda equina structure (body structure) | | | | |
@@ -183,14 +184,14 @@ Efforts to define SNOMED CT are ongoing for two of the TG263 concepts (Spc_Bowel
 |Genitals| Genitals | &#8594; | 71934003 |  Genital structure (body structure) | | | | |
 |Glnd_Lacrimal| Lacrimal Gland | &#8594; | 13561001 |  Lacrimal gland structure (body structure) | | | | |
 |Ear_External_L| External Ear Left | &#8594; | 117590005 |  Ear structure (body structure) | | | | |
-|Ear_External_R| External Ear Right | &#8594; |  117590005 |  Ear structure (body structure) | 7771000| left (qualifier value)| 261074009|  external (qualifier value) |
+|Ear_External_R| External Ear Right | &#8594; |  117590005 |  Ear structure (body structure) | 7771000| left (qualifier value)| 261074009| external (qualifier value) |
 |Ear_Externals| External Ear | &#8594; | 117590005 |  Ear structure (body structure) | | |261074009| external (qualifier value)|
-|Ear_Internal_L| Internal Ear Left | &#8594; |  117590005 |  Ear structure (body structure) | 7771000| left (qualifier value)| 260521003|  internal (qualifier value) |
-|Ear_Internal_R| Internal Ear Right | &#8594; |  117590005 |  Ear structure (body structure) | 24028007| right (qualifier value)| 260521003|  internal (qualifier value) |
+|Ear_Internal_L| Internal Ear Left | &#8594; |  117590005 |  Ear structure (body structure) | 7771000| left (qualifier value)| 260521003| internal (qualifier value) |
+|Ear_Internal_R| Internal Ear Right | &#8594; |  117590005 |  Ear structure (body structure) | 24028007| right (qualifier value)| 260521003| internal (qualifier value) |
 |Ear_Internals| Internal Ear | &#8594; | 117590005 |  Ear structure (body structure) | | |260521003| internal (qualifier value)|
 |Ear_Middle| Middle Ear | &#8594; | 117590005 |  Ear structure (body structure) | | |260528009| middle (qualifier value)|
-|Ear_Middle_L| Middle Ear Left | &#8594; |  117590005 |  Ear structure (body structure) | 7771000| left (qualifier value)| 260528009|  middle (qualifier value) |
-|Ear_Middle_R| Middle Ear Right | &#8594; |  117590005 |  Ear structure (body structure) | 24028007| right (qualifier value)| 260528009|  middle (qualifier value) |
+|Ear_Middle_L| Middle Ear Left | &#8594; |  117590005 |  Ear structure (body structure) | 7771000| left (qualifier value)| 260528009| middle (qualifier value) |
+|Ear_Middle_R| Middle Ear Right | &#8594; |  117590005 |  Ear structure (body structure) | 24028007| right (qualifier value)| 260528009| middle (qualifier value) |
 |Glnd_Parathyroid| Parathyroid gland | &#8594; | 111002 |  Parathyroid structure (body structure) | | | | |
 |Elbow| Elbow | &#8594; | 127949000 |  Elbow region structure (body structure) | | | | |
 |Elbow_L| Elbow Left | &#8594; | 127949000 |  Elbow region structure (body structure) | 7771000| Left (qualifier value)| | |
@@ -205,8 +206,8 @@ Efforts to define SNOMED CT are ongoing for two of the TG263 concepts (Spc_Bowel
 |Eye_R| Eyeball Right | &#8594; | 81745001 |  Structure of eye proper (body structure) | 24028007| right (qualifier value)| | |
 |Glnd_Thymus| Thymus Gland | &#8594; | 9875009 |  Thymus gland structure (body structure) | | | | |
 |Glnd_Thyroid| Thyroid Gland | &#8594; | 69748006 |  Thyroid structure (body structure) | | | | |
-|Femur_Head_L| Femur Head & Neck Left | &#8594; | 2812003 |  Structure of head of femur (body structure)  | 7771000| left (qualifier value)| | |
-|Femur_Head_R| Femur Head & Neck Right | &#8594; | 2812003 |  Structure of head of femur (body structure)  | 24028007| right (qualifier value)| | |
+|Femur_Head_L| Femur Head & Neck Left | &#8594; | 2812003 |  Structure of head of femur (body structure) | 7771000| left (qualifier value)| | |
+|Femur_Head_R| Femur Head & Neck Right | &#8594; | 2812003 |  Structure of head of femur (body structure) | 24028007| right (qualifier value)| | |
 |Femur_Joint_L| Femoral Joint Left | &#8594; | 24136001 |  Hip joint structure (body structure) | 7771000| left (qualifier value)| | |
 |Femur_Joint_R| Femoral Joint Right | &#8594; | 24136001 |  Hip joint structure (body structure) | 24028007| right (qualifier value)| | |
 |Femur| Femur  Whole  | &#8594; | 71341001 |  Bone structure of femur (body structure) | | | | |
@@ -245,7 +246,7 @@ Efforts to define SNOMED CT are ongoing for two of the TG263 concepts (Spc_Bowel
 |Joint_Glenohum| Glenohumeral Joint | &#8594; | 85537004 |  Glenohumeral joint structure (body structure) | | | | |
 |GrowthPlate_L| Left Growth Plate | &#8594; | 711190000 |  Structure of epiphyseal plate (body structure) | 7771000| left (qualifier value)| | |
 |GrowthPlate_R| Right Growth Plate | &#8594; | 711190000 |  Structure of epiphyseal plate (body structure) | 24028007| right (qualifier value)| | |
-|Joint_Surface| Joint Surface | &#8594; | 39352004 |  Joint structure (body structure)  | | |410679008| Surface (qualifier value)|
+|Joint_Surface| Joint Surface | &#8594; | 39352004 |  Joint structure (body structure) | | |410679008| Surface (qualifier value)|
 |Joint_TM| Temperomandibular Joint  | &#8594; | 53620006 |  Temporomandibular joint structure (body structure) | | | | |
 |Hemisphere_L| Left Hemisphere | &#8594; | 6566002 |  Cerebellar hemisphere structure (body structure) | 7771000| left (qualifier value)| | |
 |Hemisphere_R| Right Hemisphere | &#8594; | 6566002 |  Cerebellar hemisphere structure (body structure) | 24028007| right (qualifier value)| | |
@@ -296,16 +297,16 @@ Efforts to define SNOMED CT are ongoing for two of the TG263 concepts (Spc_Bowel
 |LN_Ax_Apical| Set of apical axillary lymphatic vessels | &#8594; | 16051009 |   Structure of apical axillary lymph node (body structure) | | | | |
 |LN_Ax_Apical_L| Axillary lymphatic chain - Apical Left | &#8594; | 16051009 |   Structure of apical axillary lymph node (body structure) | 7771000| Left (qualifier value)| | |
 |LN_Ax_Apical_R| Axillary lymphatic chain - Apical Right | &#8594; | 16051009 |   Structure of apical axillary lymph node (body structure) | 24028007| Right (qualifier value)| | |
-|LN_Ax_Central_L| Axillary lymphatic chain - Central Left | &#8594; |  16051009 |   Structure of apical axillary lymph node (body structure) | 7771000| left (qualifier value)| 26216008|  central (qualifier value) |
-|LN_Ax_Central_R| Axillary lymphatic chain - Central Right | &#8594; |  16051009 |   Structure of apical axillary lymph node (body structure) | 24028007| right (qualifier value)| 26216008|  central (qualifier value) |
-|LN_Ax_Centrals| Set of central axillary lymphatic vessels | &#8594; | 283001 |  Structure of central axillary lymph node (body structure)  | | | | |
+|LN_Ax_Central_L| Axillary lymphatic chain - Central Left | &#8594; |  16051009 |   Structure of apical axillary lymph node (body structure) | 7771000| left (qualifier value)| 26216008| central (qualifier value) |
+|LN_Ax_Central_R| Axillary lymphatic chain - Central Right | &#8594; |  16051009 |   Structure of apical axillary lymph node (body structure) | 24028007| right (qualifier value)| 26216008| central (qualifier value) |
+|LN_Ax_Centrals| Set of central axillary lymphatic vessels | &#8594; | 283001 |  Structure of central axillary lymph node (body structure) | | | | |
 |LN_Ax_L| Axillary lymphatic chain Left | &#8594; | 68171009 |  Axillary lymph node structure (body structure) | 7771000| Left (qualifier value)| | |
-|LN_Ax_L1_L| Level 1 Axillary Lymph Node Left | &#8594; |  68171009 |  Axillary lymph node structure (body structure) | 7771000| left (qualifier value)| 277733009|  level 1 (qualifier value) |
-|LN_Ax_L1_R| Level 1 Axillary Lymph Node Right | &#8594; |  68171009 |  Axillary lymph node structure (body structure) | 24028007| right (qualifier value)| 277733009|  level 1 (qualifier value) |
-|LN_Ax_L2_L| Level 2 Axillary Lymph Node Left | &#8594; |  68171009 |  Axillary lymph node structure (body structure) | 7771000| left (qualifier value)| 277734003|  level 2 (qualifier value) |
-|LN_Ax_L2_R| Level 2 Axillary Lymph Node Right | &#8594; |  68171009 |  Axillary lymph node structure (body structure) | 24028007| right (qualifier value)| 277734003|  level 2 (qualifier value) |
-|LN_Ax_L3_L| Level 3 Axillary Lymph Node Left | &#8594; |  68171009 |  Axillary lymph node structure (body structure) | 7771000| left (qualifier value)| 277735002|  level 3 (qualifier value) |
-|LN_Ax_L3_R| Level 3 Axillary Lymph Node Right | &#8594; |  68171009 |  Axillary lymph node structure (body structure) | 24028007| right (qualifier value)| 277735002|  level 3 (qualifier value) |
+|LN_Ax_L1_L| Level 1 Axillary Lymph Node Left | &#8594; |  68171009 |  Axillary lymph node structure (body structure) | 7771000| left (qualifier value)| 277733009| level 1 (qualifier value) |
+|LN_Ax_L1_R| Level 1 Axillary Lymph Node Right | &#8594; |  68171009 |  Axillary lymph node structure (body structure) | 24028007| right (qualifier value)| 277733009| level 1 (qualifier value) |
+|LN_Ax_L2_L| Level 2 Axillary Lymph Node Left | &#8594; |  68171009 |  Axillary lymph node structure (body structure) | 7771000| left (qualifier value)| 277734003| level 2 (qualifier value) |
+|LN_Ax_L2_R| Level 2 Axillary Lymph Node Right | &#8594; |  68171009 |  Axillary lymph node structure (body structure) | 24028007| right (qualifier value)| 277734003| level 2 (qualifier value) |
+|LN_Ax_L3_L| Level 3 Axillary Lymph Node Left | &#8594; |  68171009 |  Axillary lymph node structure (body structure) | 7771000| left (qualifier value)| 277735002| level 3 (qualifier value) |
+|LN_Ax_L3_R| Level 3 Axillary Lymph Node Right | &#8594; |  68171009 |  Axillary lymph node structure (body structure) | 24028007| right (qualifier value)| 277735002| level 3 (qualifier value) |
 |LN_Ax_Lateral_L| Axillary lymphatic chain - Lateral Left | &#8594; | 33770006 |  Structure of lateral axillary lymph node (body structure) | 7771000| left (qualifier value)| | |
 |LN_Ax_Lateral_R| Axillary lymphatic chain - Lateral Right | &#8594; | 33770006 |  Structure of lateral axillary lymph node (body structure) | 24028007| right (qualifier value)| | |
 |LN_Ax_Laterals|  lateral axillary lymph nodes | &#8594; | 33770006 |  Structure of lateral axillary lymph node (body structure) | | | | |
@@ -324,12 +325,12 @@ Efforts to define SNOMED CT are ongoing for two of the TG263 concepts (Spc_Bowel
 |LN_Bronchpulms| Lymph nodes of thorax - Bronchopulmonary | &#8594; | 279816002 |  Bronchopulmonary lymph node group (body structure) | | | | |
 |LN_Diaphragmatic| Lymph nodes of thorax - Diaphragmatic | &#8594; | 196751009 |  Structure of diaphragmatic lymph node (body structure) | | | | |
 |LN_Iliac_Ext| Lymph nodes of pelvis - External iliac | &#8594; | 65349008 |  Structure of external iliac lymph node (body structure) | | | | |
-|LN_Iliac_Int| Lymph nodes of pelvis -  Internal iliac | &#8594; | 245357003 |  Structure of internal iliac lymph node (body structure)  | | | | |
-|LN_Iliac| Lymph nodes of pelvis -  common iliac | &#8594; | 84219008 |  Structure of iliac lymph node (body structure)  | | | | |
+|LN_Iliac_Int| Lymph nodes of pelvis -  Internal iliac | &#8594; | 245357003 |  Structure of internal iliac lymph node (body structure) | | | | |
+|LN_Iliac| Lymph nodes of pelvis -  common iliac | &#8594; | 84219008 |  Structure of iliac lymph node (body structure) | | | | |
 |LN_Iliac_Ext_L| Lymph nodes of pelvis - external iliac Left | &#8594; | 65349008 |  Structure of external iliac lymph node (body structure) | 7771000| left (qualifier value)| | |
 |LN_Iliac_Ext_R| Lymph nodes of pelvis - external iliac Right | &#8594; | 65349008 |  Structure of external iliac lymph node (body structure) | 24028007| right (qualifier value)| | |
 |LN_Iliac_Int_L| Lymph nodes of pelvis - internal iliac Left | &#8594; | 245299000 |  Internal iliac lymph node group (body structure) | 7771000| left (qualifier value)| | |
-|LN_Iliac_L| Lymph nodes of pelvis - common iliac Left | &#8594; | 245295006 |  Common iliac lymph node group (body structure) | 7771000| left  (qualifier value)| | |
+|LN_Iliac_L| Lymph nodes of pelvis - common iliac Left | &#8594; | 245295006 |  Common iliac lymph node group (body structure) | 7771000| left (qualifier value)| | |
 |LN_Iliac_R| Lymph nodes of pelvis - common iliac Right | &#8594; | 245295006 |  Common iliac lymph node group (body structure) | 24028007| right (qualifier value)| | |
 |LN_IMN_L| Left Internal Mammary Lynph Node | &#8594; | 245282001 |  Internal mammary lymph node group (body structure) | 7771000| left (qualifier value)| | |
 |LN_IMN_R| Right Internal Mammary Lynph Node | &#8594; | 245282001 |  Internal mammary lymph node group (body structure) | 24028007| right (qualifier value)| | |
@@ -339,48 +340,48 @@ Efforts to define SNOMED CT are ongoing for two of the TG263 concepts (Spc_Bowel
 |LN_Inguinofem_R| Lymph nodes of pelvis - inguinofemoral right | &#8594; | 279763008 |  Inguinofemoral lymph node group (body structure) | 24028007| right (qualifier value)| | |
 |LN_Intercostals| Lymph nodes of thorax - Intercostal | &#8594; | 64038003 |  Intercostal lymph node (body structure) | | | | |
 |LN_L| Lymph Node Left | &#8594; | 59441001 |  Structure of lymph node (body structure) | 7771000| left (qualifier value)| | |
-|LN_Ligamentarter| Lymph nodes of thorax - Ligamentum arteriosum | &#8594; | 127938006 |  Lymph node of aortopulmonary window (body structure)  | | | | |
+|LN_Ligamentarter| Lymph nodes of thorax - Ligamentum arteriosum | &#8594; | 127938006 |  Lymph node of aortopulmonary window (body structure) | | | | |
 |LN_lliac_Int_R| Lymph nodes of pelvis - internal iliac Right | &#8594; | 245299000 |  Internal iliac lymph node group (body structure) | 24028007| right (qualifier value)| | |
 |LN_Mediastinals| Lymph nodes of thorax - Mediastinal | &#8594; | 62683002 |  Mediastinal lymph node structure (body structure) | | | | |
 |LN_Neck| Neck Lymph Node | &#8594; | 81105003 |  Cervical lymph node structure (body structure) | | | | |
-|LN_Neck_IA_L| Level IA (Submental) neck node Left | &#8594; |  81105003 |  Cervical lymph node structure (body structure) | 7771000| Left (qualifier value)| 1162616006|  Level IA (qualifier value) |
-|LN_Neck_IA_R| Level IA (Submental) neck node Right | &#8594; |  81105003 |  Cervical lymph node structure (body structure) | 24028007| Right (qualifier value)| 1162616006|  Level IA (qualifier value) |
-|LN_Neck_IB_L| Level IB (Submandibular) neck node Left | &#8594; |  81105003 |  Cervical lymph node structure (body structure) | 7771000| Left (qualifier value)| 1162617002|  Level IB (qualifier value) |
-|LN_Neck_IB_R| Level IB (Submandibular) neck node Right | &#8594; |  81105003 |  Cervical lymph node structure (body structure) | 24028007| Right (qualifier value)| 1162617002|  Level IB (qualifier value) |
-|LN_Neck_II_L| Level IIA & IIB (Upper Jugular) neck nodes Left | &#8594; |  81105003 |  Cervical lymph node structure (body structure) | 7771000| Left (qualifier value)| 258401000|  Level II (qualifier value) |
-|LN_Neck_II_R| Level IIA & IIB (Upper Jugular) neck nodes Left | &#8594; |  81105003 |  Cervical lymph node structure (body structure) | 24028007| Right (qualifier value)| 258401000|  Level II (qualifier value) |
-|LN_Neck_IIA_L| Level IIA (Upper Jugular) neck node Left | &#8594; |  81105003 |  Cervical lymph node structure (body structure) | 7771000| Left  (qualifier value)| USCRS-34777|  Level IIA (qualifier value) |
-|LN_Neck_IIA_R| Level IIA (Upper Jugular) neck node Right | &#8594; |  81105003 |  Cervical lymph node structure (body structure) | 24028007| Right (qualifier value)| USCRS-34777|  Level IIA (qualifier value) |
-|LN_Neck_IIB_L| Level IIB (Upper Jugular) neck node Left | &#8594; |  81105003 |  Cervical lymph node structure (body structure) | 7771000| Left (qualifier value)| USCRS-34775|  Level IIB (qualifier value) |
-|LN_Neck_IIB_R| Level IIB (Upper Jugular) neck node Right | &#8594; |  81105003 |  Cervical lymph node structure (body structure) | 24028007| Right (qualifier value)| USCRS-34775|  Level IIB (qualifier value) |
-|LN_Neck_III_L| Level III (Middle Jugular) neck node Left | &#8594; |  81105003 |  Cervical lymph node structure (body structure) | 7771000| Left (qualifier value)| 258402007|  Level III (qualifier value) |
-|LN_Neck_III_R| Level III (Middle Jugular) neck node Right | &#8594; |  81105003 |  Cervical lymph node structure (body structure) | 24028007| Right (qualifier value)| 258402007|  Level III (qualifier value) |
-|LN_Neck_IV_L| Level IV neck (Lower Jugular) node Left | &#8594; |  81105003 |  Cervical lymph node structure (body structure) | 7771000| Left (qualifier value)| 258403002|  Level IV (qualifier value) |
-|LN_Neck_IV_R| Level IV (Lower Jugular) neck node Right | &#8594; |  81105003 |  Cervical lymph node structure (body structure) | 24028007| Right (qualifier value)| 258403002|  Level IV (qualifier value) |
-|LN_Neck_V_L| Level VA, VB and VC (Posterior Triangle) neck nodes Left | &#8594; |  81105003 |  Cervical lymph node structure (body structure) | 7771000| Left (qualifier value)| 258404008|  Level V (qualifier value) |
-|LN_Neck_V_R| Level VA, VB and VC (Posterior Triangle) neck nodes Right | &#8594; |  81105003 |  Cervical lymph node structure (body structure) | 24028007| Right (qualifier value)| 258404008|  Level V (qualifier value) |
-|LN_Neck_VA_L| Level VA (Posterior Triangle) neck node Left | &#8594; |  81105003 |  Cervical lymph node structure (body structure) | 7771000| Left (qualifier value)| 1162622002|  Level VA (qualifier value) |
-|LN_Neck_VA_R| Level VA (Posterior Triangle) neck node Right | &#8594; |  81105003 |  Cervical lymph node structure (body structure) | 24028007| Right (qualifier value)| 1162622002|  Level VA (qualifier value) |
-|LN_Neck_VB_L| Level VB (Posterior Triangle) neck node Left | &#8594; |  81105003 |  Cervical lymph node structure (body structure) | 7771000| Left (qualifier value)| 1162623007|  Level VB (qualifier value) |
-|LN_Neck_VB_R| Level VB (Posterior Triangle) neck node Right | &#8594; |  81105003 |  Cervical lymph node structure (body structure) | 24028007| Right (qualifier value)| 1162623007|  Level VB (qualifier value) |
-|LN_Neck_VC_L| Level VC (Posterior Triangle) neck node Left | &#8594; |  81105003 |  Cervical lymph node structure (body structure) | 7771000| Left (qualifier value)| 1162624001|  Level VC (qualifier value) |
-|LN_Neck_VC_R| Level VC (Posterior Triangle) neck node Right | &#8594; |  81105003 |  Cervical lymph node structure (body structure) | 24028007| Right (qualifier value)| 1162624001|  Level VC (qualifier value) |
-|LN_Neck_VI_L| Level VI (Anterior Triangle) neck node Left | &#8594; |  81105003 |  Cervical lymph node structure (body structure) | 7771000| Left (qualifier value)| 258405009|  Level VI (qualifier value) |
-|LN_Neck_VI_R| Level VI (Anterior Triangle) neck node Right | &#8594; |  81105003 |  Cervical lymph node structure (body structure) | 24028007| Right (qualifier value)| 258405009|  Level VI (qualifier value) |
-|LN_Neck_VII_L| Level VII (Upper Mediastinal) neck node Left | &#8594; |  81105003 |  Cervical lymph node structure (body structure) | 7771000| Left (qualifier value)| 395168005|  Level VII (qualifier value) |
-|LN_Neck_VII_R| Level VII (Upper Mediastinal) neck node Right | &#8594; |  81105003 |  Cervical lymph node structure (body structure) | 24028007| Right (qualifier value)| 1162628003|  Level VIIA (qualifier value) |
-|LN_Neck_VIIA_L| LN_Neck_VIIA_L | &#8594; |  81105003 |  Cervical lymph node structure (body structure) | 7771000| Left (qualifier value)| 1162628003|  Level VIIA (qualifier value) |
-|LN_Neck_VIIA_R| LN_Neck_VIIA_R | &#8594; |  81105003 |  Cervical lymph node structure (body structure) | 24028007| Right (qualifier value)| 395168005|  Level VII (qualifier value) |
-|LN_Neck_VIII_R| LN_Neck_VIII_R | &#8594; |  81105003 |  Cervical lymph node structure (body structure) | 24028007| Right (qualifier value)| 1162618007|  Level VIII (qualifier value) |
-|LN_Neck_VIII_L| LN_Neck_VIII_L | &#8594; |  81105003 |  Cervical lymph node structure (body structure) | 7771000| Left (qualifier value)| 1162618007|  Level VIII (qualifier value) |
-|LN_Neck_IX_R| LN_Neck_IX_R | &#8594; |  81105003 |  Cervical lymph node structure (body structure) | 24028007| Right (qualifier value)| 1162619004|  Level IX (qualifier value) |
-|LN_Neck_IX_L| LN_Neck_IX_L | &#8594; |  81105003 |  Cervical lymph node structure (body structure) | 7771000| Left (qualifier value)| 1162619004|  Level IX (qualifier value) |
-|LN_Neck_X_R| LN_Neck_X_R | &#8594; |  81105003 |  Cervical lymph node structure (body structure) | 24028007| Right (qualifier value)| 1162614009|  Level X (qualifier value) |
-|LN_Neck_X_L| LN_Neck_X_L | &#8594; |  81105003 |  Cervical lymph node structure (body structure) | 7771000| Left (qualifier value)| 1162614009|  Level X (qualifier value) |
-|LN_Neck_XA_R| LN_Neck_XA_R | &#8594; |  81105003 |  Cervical lymph node structure (body structure) | 24028007| Right (qualifier value)| 1162615005|  Level XA (qualifier value) |
-|LN_Neck_XA_L| LN_Neck_XA_L | &#8594; |  81105003 |  Cervical lymph node structure (body structure) | 7771000| Left (qualifier value)| 1162615005|  Level XA (qualifier value) |
-|LN_Neck_XB_R| LN_Neck_XB_R | &#8594; |  81105003 |  Cervical lymph node structure (body structure) | 24028007| Right (qualifier value)| 1162613003|  Level XB (qualifier value) |
-|LN_Neck_XB_L| LN_Neck_XB_L | &#8594; |  81105003 |  Cervical lymph node structure (body structure) | 7771000| Left (qualifier value)| 1162613003|  Level XB (qualifier value) |
+|LN_Neck_IA_L| Level IA (Submental) neck node Left | &#8594; |  81105003 |  Cervical lymph node structure (body structure) | 7771000| Left (qualifier value)| 1162616006| Level IA (qualifier value) |
+|LN_Neck_IA_R| Level IA (Submental) neck node Right | &#8594; |  81105003 |  Cervical lymph node structure (body structure) | 24028007| Right (qualifier value)| 1162616006| Level IA (qualifier value) |
+|LN_Neck_IB_L| Level IB (Submandibular) neck node Left | &#8594; |  81105003 |  Cervical lymph node structure (body structure) | 7771000| Left (qualifier value)| 1162617002| Level IB (qualifier value) |
+|LN_Neck_IB_R| Level IB (Submandibular) neck node Right | &#8594; |  81105003 |  Cervical lymph node structure (body structure) | 24028007| Right (qualifier value)| 1162617002| Level IB (qualifier value) |
+|LN_Neck_II_L| Level IIA & IIB (Upper Jugular) neck nodes Left | &#8594; |  81105003 |  Cervical lymph node structure (body structure) | 7771000| Left (qualifier value)| 258401000| Level II (qualifier value) |
+|LN_Neck_II_R| Level IIA & IIB (Upper Jugular) neck nodes Left | &#8594; |  81105003 |  Cervical lymph node structure (body structure) | 24028007| Right (qualifier value)| 258401000| Level II (qualifier value) |
+|LN_Neck_IIA_L| Level IIA (Upper Jugular) neck node Left | &#8594; |  81105003 |  Cervical lymph node structure (body structure) | 7771000| Left (qualifier value)| USCRS-34777| Level IIA (qualifier value) |
+|LN_Neck_IIA_R| Level IIA (Upper Jugular) neck node Right | &#8594; |  81105003 |  Cervical lymph node structure (body structure) | 24028007| Right (qualifier value)| USCRS-34777| Level IIA (qualifier value) |
+|LN_Neck_IIB_L| Level IIB (Upper Jugular) neck node Left | &#8594; |  81105003 |  Cervical lymph node structure (body structure) | 7771000| Left (qualifier value)| USCRS-34775| Level IIB (qualifier value) |
+|LN_Neck_IIB_R| Level IIB (Upper Jugular) neck node Right | &#8594; |  81105003 |  Cervical lymph node structure (body structure) | 24028007| Right (qualifier value)| USCRS-34775| Level IIB (qualifier value) |
+|LN_Neck_III_L| Level III (Middle Jugular) neck node Left | &#8594; |  81105003 |  Cervical lymph node structure (body structure) | 7771000| Left (qualifier value)| 258402007| Level III (qualifier value) |
+|LN_Neck_III_R| Level III (Middle Jugular) neck node Right | &#8594; |  81105003 |  Cervical lymph node structure (body structure) | 24028007| Right (qualifier value)| 258402007| Level III (qualifier value) |
+|LN_Neck_IV_L| Level IV neck (Lower Jugular) node Left | &#8594; |  81105003 |  Cervical lymph node structure (body structure) | 7771000| Left (qualifier value)| 258403002| Level IV (qualifier value) |
+|LN_Neck_IV_R| Level IV (Lower Jugular) neck node Right | &#8594; |  81105003 |  Cervical lymph node structure (body structure) | 24028007| Right (qualifier value)| 258403002| Level IV (qualifier value) |
+|LN_Neck_V_L| Level VA, VB and VC (Posterior Triangle) neck nodes Left | &#8594; |  81105003 |  Cervical lymph node structure (body structure) | 7771000| Left (qualifier value)| 258404008| Level V (qualifier value) |
+|LN_Neck_V_R| Level VA, VB and VC (Posterior Triangle) neck nodes Right | &#8594; |  81105003 |  Cervical lymph node structure (body structure) | 24028007| Right (qualifier value)| 258404008| Level V (qualifier value) |
+|LN_Neck_VA_L| Level VA (Posterior Triangle) neck node Left | &#8594; |  81105003 |  Cervical lymph node structure (body structure) | 7771000| Left (qualifier value)| 1162622002| Level VA (qualifier value) |
+|LN_Neck_VA_R| Level VA (Posterior Triangle) neck node Right | &#8594; |  81105003 |  Cervical lymph node structure (body structure) | 24028007| Right (qualifier value)| 1162622002| Level VA (qualifier value) |
+|LN_Neck_VB_L| Level VB (Posterior Triangle) neck node Left | &#8594; |  81105003 |  Cervical lymph node structure (body structure) | 7771000| Left (qualifier value)| 1162623007| Level VB (qualifier value) |
+|LN_Neck_VB_R| Level VB (Posterior Triangle) neck node Right | &#8594; |  81105003 |  Cervical lymph node structure (body structure) | 24028007| Right (qualifier value)| 1162623007| Level VB (qualifier value) |
+|LN_Neck_VC_L| Level VC (Posterior Triangle) neck node Left | &#8594; |  81105003 |  Cervical lymph node structure (body structure) | 7771000| Left (qualifier value)| 1162624001| Level VC (qualifier value) |
+|LN_Neck_VC_R| Level VC (Posterior Triangle) neck node Right | &#8594; |  81105003 |  Cervical lymph node structure (body structure) | 24028007| Right (qualifier value)| 1162624001| Level VC (qualifier value) |
+|LN_Neck_VI_L| Level VI (Anterior Triangle) neck node Left | &#8594; |  81105003 |  Cervical lymph node structure (body structure) | 7771000| Left (qualifier value)| 258405009| Level VI (qualifier value) |
+|LN_Neck_VI_R| Level VI (Anterior Triangle) neck node Right | &#8594; |  81105003 |  Cervical lymph node structure (body structure) | 24028007| Right (qualifier value)| 258405009| Level VI (qualifier value) |
+|LN_Neck_VII_L| Level VII (Upper Mediastinal) neck node Left | &#8594; |  81105003 |  Cervical lymph node structure (body structure) | 7771000| Left (qualifier value)| 395168005| Level VII (qualifier value) |
+|LN_Neck_VII_R| Level VII (Upper Mediastinal) neck node Right | &#8594; |  81105003 |  Cervical lymph node structure (body structure) | 24028007| Right (qualifier value)| 1162628003| Level VIIA (qualifier value) |
+|LN_Neck_VIIA_L| LN_Neck_VIIA_L | &#8594; |  81105003 |  Cervical lymph node structure (body structure) | 7771000| Left (qualifier value)| 1162628003| Level VIIA (qualifier value) |
+|LN_Neck_VIIA_R| LN_Neck_VIIA_R | &#8594; |  81105003 |  Cervical lymph node structure (body structure) | 24028007| Right (qualifier value)| 395168005| Level VII (qualifier value) |
+|LN_Neck_VIII_R| LN_Neck_VIII_R | &#8594; |  81105003 |  Cervical lymph node structure (body structure) | 24028007| Right (qualifier value)| 1162618007| Level VIII (qualifier value) |
+|LN_Neck_VIII_L| LN_Neck_VIII_L | &#8594; |  81105003 |  Cervical lymph node structure (body structure) | 7771000| Left (qualifier value)| 1162618007| Level VIII (qualifier value) |
+|LN_Neck_IX_R| LN_Neck_IX_R | &#8594; |  81105003 |  Cervical lymph node structure (body structure) | 24028007| Right (qualifier value)| 1162619004| Level IX (qualifier value) |
+|LN_Neck_IX_L| LN_Neck_IX_L | &#8594; |  81105003 |  Cervical lymph node structure (body structure) | 7771000| Left (qualifier value)| 1162619004| Level IX (qualifier value) |
+|LN_Neck_X_R| LN_Neck_X_R | &#8594; |  81105003 |  Cervical lymph node structure (body structure) | 24028007| Right (qualifier value)| 1162614009| Level X (qualifier value) |
+|LN_Neck_X_L| LN_Neck_X_L | &#8594; |  81105003 |  Cervical lymph node structure (body structure) | 7771000| Left (qualifier value)| 1162614009| Level X (qualifier value) |
+|LN_Neck_XA_R| LN_Neck_XA_R | &#8594; |  81105003 |  Cervical lymph node structure (body structure) | 24028007| Right (qualifier value)| 1162615005| Level XA (qualifier value) |
+|LN_Neck_XA_L| LN_Neck_XA_L | &#8594; |  81105003 |  Cervical lymph node structure (body structure) | 7771000| Left (qualifier value)| 1162615005| Level XA (qualifier value) |
+|LN_Neck_XB_R| LN_Neck_XB_R | &#8594; |  81105003 |  Cervical lymph node structure (body structure) | 24028007| Right (qualifier value)| 1162613003| Level XB (qualifier value) |
+|LN_Neck_XB_L| LN_Neck_XB_L | &#8594; |  81105003 |  Cervical lymph node structure (body structure) | 7771000| Left (qualifier value)| 1162613003| Level XB (qualifier value) |
 |LN_Obturator_L| Lymph nodes of pelvis - obturator Left | &#8594; | 36086000 |  Structure of obturator lymph node (body structure) | 7771000| left (qualifier value)| | |
 |LN_Obturator_R| Lymph nodes of pelvis - obturator Right | &#8594; | 36086000 |  Structure of obturator lymph node (body structure) | 24028007| right (qualifier value)| | |
 |LN_Paraaortic| Lymph nodes of abdomen- para-aortic | &#8594; | 35783009 |  Structure of aortic lymph node (body structure) | | | | |
@@ -419,12 +420,12 @@ Efforts to define SNOMED CT are ongoing for two of the TG263 concepts (Spc_Bowel
 |Lobe_Temporal_L| Temporal Lobe Left | &#8594; | 78277001 |  Temporal lobe structure (body structure) | 7771000| left (qualifier value)| | |
 |Lobe_Temporal_R| Temporal Lobe Right | &#8594; | 78277001 |  Temporal lobe structure (body structure) | 24028007| right (qualifier value)| | |
 |Lung_L| Lung Left | &#8594; | 39607008 |  Lung structure (body structure) | 7771000| left (qualifier value)| | |
-|Lung_LLL| Lung - lower lobe of left | &#8594; |  31094006 |  Structure of lobe of lung (body structure) | 7771000| left (qualifier value)| 261122009|  lower (qualifier value) |
-|Lung_LUL| Lung - upper lobe of left | &#8594; |  31094006 |  Structure of lobe of lung (body structure) | 7771000| left (qualifier value)| 261183002|  upper (qualifier value) |
+|Lung_LLL| Lung - lower lobe of left | &#8594; |  31094006 |  Structure of lobe of lung (body structure) | 7771000| left (qualifier value)| 261122009| lower (qualifier value) |
+|Lung_LUL| Lung - upper lobe of left | &#8594; |  31094006 |  Structure of lobe of lung (body structure) | 7771000| left (qualifier value)| 261183002| upper (qualifier value) |
 |Lung_R| Lung Right | &#8594; | 31094006 |  Structure of lobe of lung (body structure) | 24028007| right (qualifier value)| | |
-|Lung_RLL| Lung - lower lobe of right | &#8594; |  31094006 |  Structure of lobe of lung (body structure) | 24028007| right (qualifier value)| 261122009|  lower (qualifier value) |
-|Lung_RML| Lung - middle lobe of right | &#8594; |  31094006 |  Structure of lobe of lung (body structure) | 24028007| right (qualifier value)| 260528009|  middle (qualifier value) |
-|Lung_RUL| Lung - upper lobe of right | &#8594; |  31094006 |  Structure of lobe of lung (body structure) | 24028007| right (qualifier value)| 261183002|  upper (qualifier value) |
+|Lung_RLL| Lung - lower lobe of right | &#8594; |  31094006 |  Structure of lobe of lung (body structure) | 24028007| right (qualifier value)| 261122009| lower (qualifier value) |
+|Lung_RML| Lung - middle lobe of right | &#8594; |  31094006 |  Structure of lobe of lung (body structure) | 24028007| right (qualifier value)| 260528009| middle (qualifier value) |
+|Lung_RUL| Lung - upper lobe of right | &#8594; |  31094006 |  Structure of lobe of lung (body structure) | 24028007| right (qualifier value)| 261183002| upper (qualifier value) |
 |Lungs| Pair of Lungs | &#8594; | 39607008 |  Lung structure (body structure) | 51440002| right+left (qualifier value)| | |
 |Malleus| Malleus | &#8594; | 34080009 |  Malleus structure (body structure) | | | | |
 |Malleus_L| Malleus Left | &#8594; | 34080009 |  Malleus structure (body structure) | | | | |
@@ -451,7 +452,7 @@ Efforts to define SNOMED CT are ongoing for two of the TG263 concepts (Spc_Bowel
 |Musc_Sclmast_R| Sternocleidomastoid Right | &#8594; | 22823000 |  Structure of sternocleidomastoid muscle (body structure) | 24028007| right (qualifier value)| | |
 |Musc_Temporal_L| Temporal muscle - Left | &#8594; | 52927003 |  Structure of temporalis muscle (body structure) | 7771000| left (qualifier value)| | |
 |Palate_Soft| Soft palate | &#8594; | 49460000 |  Soft palate structure (body structure) | | | | |
-|Nasalconcha_LI| Inferior Nasal Concha Left | &#8594; |  46607005 |  Nasal turbinate structure (body structure) | 7771000| left (qualifier value)| 261089000|  inferior (qualifier value) |
+|Nasalconcha_LI| Inferior Nasal Concha Left | &#8594; |  46607005 |  Nasal turbinate structure (body structure) | 7771000| left (qualifier value)| 261089000| inferior (qualifier value) |
 |Nasalconcha_RI| Inferior Nasal Concha Right | &#8594; |  46607005 |  Nasal turbinate structure (body structure) | 24028007| right (qualifier value)| 261089000| inferior (qualifier value) |
 |Pancreas| Pancreas | &#8594; | 15776009 |  Pancreatic structure (body structure) | | | | |
 |Pancreas_Head| Head of Pancreas | &#8594; | 64163001 |  Structure of head of pancreas (body structure) | | | | |
@@ -550,7 +551,7 @@ Efforts to define SNOMED CT are ongoing for two of the TG263 concepts (Spc_Bowel
 |Sinus_Maxilry_L| Maxillary Sinus | &#8594; | 15924003 |  Maxillary sinus structure (body structure) | 7771000| left (qualifier value)| | |
 |Sinus_Maxilry_R| Maxillary Sinus | &#8594; | 15924003 |  Maxillary sinus structure (body structure) | 24028007| right (qualifier value)| | |
 |SpinalCanal| Vertebral canal | &#8594; | 61853006 |  Spinal canal structure (body structure) | | | | |
-|Sinus_Sphenoid_L| Sphenoidal Sinus Left | &#8594; | 24999009 |  Sphenoid sinus structure (body structure) | 7771000| left  (qualifier value)| | |
+|Sinus_Sphenoid_L| Sphenoidal Sinus Left | &#8594; | 24999009 |  Sphenoid sinus structure (body structure) | 7771000| left (qualifier value)| | |
 |Sinus_Sphenoid_R| Sphenoidal Sinus Right | &#8594; | 24999009 |  Sphenoid sinus structure (body structure) | 24028007| right (qualifier value)| | |
 |SpinalCord| Spinal Cord | &#8594; | 2748008 |  Spinal cord structure (body structure) | | | | |
 |SpinalCord_Cerv| Spinal Cord Cervical | &#8594; | 54785003 |  Cervical spinal cord structure (body structure) | | | | |
@@ -560,7 +561,7 @@ Efforts to define SNOMED CT are ongoing for two of the TG263 concepts (Spc_Bowel
 |SpinalCord_Thor| Spinal Cord Thoracic | &#8594; | 50800009 |  Thoracic spinal cord structure (body structure) | | | | |
 |Spongiosum| Penis Corpus Spongiosum | &#8594; | 25270003 |  Corpus spongiosum structure (body structure) | | | | |
 |Spc_Retrophar_L| Retropharyngeal space Left | &#8594; | 789564000 |  Structure of retropharyngeal space (body structure) | 7771000| left (qualifier value)| | |
-|Spc_Retrophar_R| Retropharyngeal space Right | &#8594; | 789564000 |  Structure of retropharyngeal space (body structure) | 24028007| right  (qualifier value)| | |
+|Spc_Retrophar_R| Retropharyngeal space Right | &#8594; | 789564000 |  Structure of retropharyngeal space (body structure) | 24028007| right (qualifier value)| | |
 |Stapes| Stapes | &#8594; | 22718006 |  Stapes structure (body structure) | | | | |
 |Stomach| Stomach | &#8594; | 69695003 |  Stomach structure (body structure) | | | | |
 |Spc_Retrosty_L| Retrostyloid space -Left | &#8594; | 1193554003 |  Retrostyloid space (body structure) | 7771000| left (qualifier value)| | |
@@ -580,7 +581,7 @@ Efforts to define SNOMED CT are ongoing for two of the TG263 concepts (Spc_Bowel
 |Tongue_All| Entire Tongue | &#8594; | 181226008 |  Entire tongue (body structure) | | | | |
 |Stapes_L| Stapes Left | &#8594; | 22718006 |  Stapes structure (body structure) | | | | |
 |Stapes_R| Stapes Right | &#8594; | 22718006 |  Stapes structure (body structure) | | | | |
-|Tongue_Base| Base of Tongue | &#8594; | 47975008 |   Structure of root of tongue (body structure) | | | | |
+|Tongue_Base| Base of Tongue | &#8594; | 47975008 |  Structure of root of tongue (body structure) | | | | |
 |Tongue_Oral| Oral Tongue | &#8594; | 61344008 |  Structure of body of tongue (body structure) | | | | |
 |Tongue_Oral_L| Left Oral Tonque | &#8594; | 61344008 |  Structure of body of tongue (body structure) | 7771000| left (qualifier value)| | |
 |Trachea| Trachea | &#8594; | 44567001 |  Tracheal structure (body structure) | | | | |
@@ -595,8 +596,8 @@ Efforts to define SNOMED CT are ongoing for two of the TG263 concepts (Spc_Bowel
 |V_Brachioceph_L| Brachiocephalic vein Left | &#8594; | 8887007 |  Structure of brachiocephalic vein (body structure) | 7771000| left (qualifier value)| | |
 |V_Brachioceph_R| Brachiocephalic vein Right | &#8594; | 8887007 |  Structure of brachiocephalic vein (body structure) | 24028007| right (qualifier value)| | |
 |V_Iliac_Ext_L| External iliac vein Left | &#8594; | 63507001 |  Structure of external iliac vein (body structure) | 7771000| left (qualifier value)| | |
-|Tongue_Base_L| Base of Tongue | &#8594; | 47975008 |   Structure of root of tongue (body structure) | 7771000| left (qualifier value)| | |
-|Tongue_Base_R| Base of Tongue | &#8594; | 47975008 |   Structure of root of tongue (body structure) | 24028007| right (qualifier value)| | |
+|Tongue_Base_L| Base of Tongue | &#8594; | 47975008 |  Structure of root of tongue (body structure) | 7771000| left (qualifier value)| | |
+|Tongue_Base_R| Base of Tongue | &#8594; | 47975008 |  Structure of root of tongue (body structure) | 24028007| right (qualifier value)| | |
 |V_Iliac_Ext_R| External iliac vein Right | &#8594; | 63507001 |  Structure of external iliac vein (body structure) | 24028007| right (qualifier value)| | |
 |V_Iliac_Int_L| Internal iliac vein Left | &#8594; | 40300007 |  Structure of internal iliac vein (body structure) | 7771000| left (qualifier value)| | |
 |Tongue_Oral_R| Right Oral Tongue | &#8594; | 61344008 |  Structure of body of tongue (body structure) | 24028007| right (qualifier value)| | |
@@ -618,7 +619,7 @@ Efforts to define SNOMED CT are ongoing for two of the TG263 concepts (Spc_Bowel
 |V_Venacava_S| Superior vena cava | &#8594; | 35532006 |  Vena caval structure (body structure) | | |264217000| superior (qualifier value)|
 |Vagina| Vagina | &#8594; | 76784001 |  Vaginal structure (body structure) | | | | |
 |Vagina_Surf| Surface of Vagina | &#8594; | 279894000 |  Inferior surface of vaginal cervix (body structure) | | | | |
-|VaginalCuff| Vaginal Cuff | &#8594; | 438074005 |   Vaginal cuff (morphologic abnormality) | | | | |
+|VaginalCuff| Vaginal Cuff | &#8594; | 438074005 |  Vaginal cuff (morphologic abnormality) | | | | |
 |Valve| Valve | &#8594; | 17401000 |  Cardiac valve structure (body structure) | | | | |
 |V_Jugular| Any Jugular Vein | &#8594; | 63190004 |  Structure of jugular vein (body structure) | | | | |
 |Valve_Mitral| Mitral Valve | &#8594; | 91134007 |  Mitral valve structure (body structure) | | | | |
@@ -632,8 +633,8 @@ Efforts to define SNOMED CT are ongoing for two of the TG263 concepts (Spc_Bowel
 |VocalCords| Vocal Cords | &#8594; | 46105003 |  Vocal cord structure (body structure) | 51440002| right+left (qualifier value)| | |
 |Vulva| Vulva | &#8594; | 45292006 |  Vulval structure (body structure) | | | | |
 |Wall_Vagina| Wall of vagina | &#8594; | 263355003 |  Vaginal wall (body structure) | | | | |
-|Body| Only the body | &#8594; | 38266002 |  Entire body as a whole (body structure)  | | | | |
-|BoneMarrow_Act| Active Bone Marrow | &#8594; | 75330005 |   Structure of red bone marrow (body structure) | | | | |
+|Body| Only the body | &#8594; | 38266002 |  Entire body as a whole (body structure) | | | | |
+|BoneMarrow_Act| Active Bone Marrow | &#8594; | 75330005 |  Structure of red bone marrow (body structure) | | | | |
 |Cartlg_Thyroid| Thyroid cartilage | &#8594; | 52940008 |  Thyroid cartilage structure (body structure) | | | | |
 |Cist_Suprasellar| Suprasellar Cistern | &#8594; | 15328005 |  Structure of suprasellar region (body structure) | | | | |
 |Valve_Aortic| Aortic Valve | &#8594; | 34202007 |  Aortic valve structure (body structure) | | | | |
@@ -681,7 +682,7 @@ Efforts to define SNOMED CT are ongoing for two of the TG263 concepts (Spc_Bowel
 |VocalCord_R| Right Vocal Cord | &#8594; | 46105003 |  Vocal cord structure (body structure) | 24028007| right (qualifier value)| | |
 |LN_Presacral| Lymph nodes of pelvis - presacral  | &#8594; | 1187336003 |  Presacral lymph node group (body structure) | | | | |
 |Vomer| Vomer | &#8594; | 87166008 |  Vomer bone structure (body structure) | | | | |
-|Sinus_Sphenoid| Sphenoidal Sinus | &#8594; | 24999009 |  Sphenoid sinus structure (body structure)  | | | | |
+|Sinus_Sphenoid| Sphenoidal Sinus | &#8594; | 24999009 |  Sphenoid sinus structure (body structure) | | | | |
 |Strct | Structure | &#8594; | 123037004 |  Body structure (body structure) | | | | |
 {:.grid}
 

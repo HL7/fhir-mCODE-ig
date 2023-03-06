@@ -75,15 +75,15 @@ worksheet = "Mapped TG263 Terms"
       next
     end
     next if row[10] == nil || row[10].empty?
-    tg263primary = "#"+row[6].value
-    tg263description = row[8].value.gsub(")","\\)").gsub(",","\\,") if row[8].value != nil
-    code = "#" + row[10].value.to_s
-    term = row[11].value.gsub(")","\\)").gsub(",","\\,")
+    tg263primary = "#"+row[6].value.strip
+    tg263description = row[8].value.gsub(")","\\)").gsub(",","\\,").strip if row[8].value != nil
+    code = "#" + row[10].value.to_s.strip
+    term = row[11].value.gsub(")","\\)").gsub(",","\\,").strip
     if row[12] && !row[12].empty?
       qualifiers = row[12].value.split(',')
       if qualifiers.length == 2
-        qualifier1 = qualifiers[0] # first qualifier is always laterality
-        qualifier2 = qualifiers[1] # second qualifier is always non-laterality
+        qualifier1 = qualifiers[0].strip # first qualifier is always laterality
+        qualifier2 = qualifiers[1].strip # second qualifier is always non-laterality
         qualifiercode1 = lookup[qualifier1.downcase.strip]
         puts "GORK1: qualifier code1 = #{qualifier1}" if qualifiercode1 == nil
         qualifiercode1display = qualifier1 + " (qualifier value\\)";
@@ -98,7 +98,7 @@ worksheet = "Mapped TG263 Terms"
         snomedcodes.concat("* insert MapConceptQualifier2(#{tg263primary}, \"#{tg263description}\", #{code}, \"#{term}\", #{qualifiercode1}, \"#{qualifiercode1display}\", #{qualifiercode2}, \"#{qualifiercode2display}\", #{system})\n")
         table.concat("|#{row[6].value}| #{row[8].value} | &#8594; |  #{code.gsub("#","")} |  #{term.gsub("\\","")} | #{qualifiercode1.gsub("#","")}| #{qualifiercode1display.gsub("\\","")}| #{qualifiercode2.gsub("#","")}| #{qualifiercode2display.gsub("\\","")} |\n")
       else
-        qualifier1 = row[12].value
+        qualifier1 = row[12].value.strip
         qualifiercode1display = qualifier1 + " (qualifier value\\)";
         qualifiercode1 = lookup[qualifier1.downcase.strip]
         puts "GORK1: qualifier code1 = #{qualifier1}" if qualifiercode1 == nil

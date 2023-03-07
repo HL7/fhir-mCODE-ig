@@ -9,6 +9,7 @@ The mapping was initially documented by [spreadsheet](TG263_Nomenclature_to_SNOM
 Efforts to define SNOMED CT are ongoing for two of the TG263 concepts (Spc_Bowel and Spc_Bowel_Small) and two of the qualifiers (Level IIA and Level IIB).
 
 ### TG263 to SNOMEDCT Codes and Qualifiers Mapping
+
 | TG263 Code | Description |  &#8594; | SNOMEDCT code | Description | Location Qualifier | Description | Laterality Qualifier | Description |
 | ---------- | ----------- | -------- | ------------- | ----------- | ------------------ | ----------- | -------------------- | ----------- |
 |A_Aorta| Aorta | &#8594; | 15825003 |  Aortic structure (body structure) | | | | |

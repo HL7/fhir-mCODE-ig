@@ -1,6 +1,7 @@
 Instance: TG263CM
 InstanceOf: ConceptMap
 Usage: #definition
+* experimental = false
 * insert ConceptMapIntro(TG263, RadiotherapyTreatmentLocationQualifierVS)
 * insert AddGroup("TG263",SCT)
 * insert MapConcept(#A_Aorta, "Aorta", #15825003, "Aortic structure (body structure\)")
@@ -43,7 +44,7 @@ Usage: #definition
 * insert MapConceptLocationQualifier(#AirWay_Dist, "Distal Airway", #89187006, "Airway structure (body structure\)", #46053002, "distal (qualifier value\)", SCT)
 * insert MapConceptLocationQualifier(#AirWay_Prox, "Proximal Airway", #89187006, "Airway structure (body structure\)", #40415009, "proximal (qualifier value\)", SCT)
 * insert MapConcept(#Anus, "Anus", #123956007, "Anus part (body structure\)")
-* insert MapConcept(#Appendix, "Appendix", #66754008, "Appendix structure (body structure\) ")
+* insert MapConcept(#Appendix, "Appendix", #66754008, "Appendix structure (body structure\)")
 * insert MapConcept(#Arytenoid, "Arytenoid cartilage", #77578007, "Arytenoid cartilage structure (body structure\)")
 * insert MapConceptLateralityQualifier(#Arytenoid_L, "Arytenoid cartilage Left", #77578007, "Arytenoid cartilage structure (body structure\)", #7771000, "left (qualifier value\)", SCT)
 * insert MapConceptLateralityQualifier(#Arytenoid_R, "Arytenoid cartilage Right", #77578007, "Arytenoid cartilage structure (body structure\)", #24028007, "right (qualifier value\)", SCT)
@@ -286,11 +287,11 @@ Usage: #definition
 * insert MapConceptLateralityQualifier(#Musc_Temporal_R, "Temporal muscle - Right", #52927003, "Structure of temporalis muscle (body structure\)", #24028007, "right (qualifier value\)", SCT)
 * insert MapConcept(#Nasopharynx, "Nasal part of pharynx", #71836000, "Nasopharyngeal structure (body structure\)")
 * insert MapConcept(#LN, "Lymph Node", #59441001, "Structure of lymph node (body structure\)")
-* insert MapConcept(#LN_Ax_Apical, "Set of apical axillary lymphatic vessels", #16051009, " Structure of apical axillary lymph node (body structure\)")
-* insert MapConceptLateralityQualifier(#LN_Ax_Apical_L, "Axillary lymphatic chain - Apical Left", #16051009, " Structure of apical axillary lymph node (body structure\)", #7771000, "Left (qualifier value\)", SCT)
-* insert MapConceptLateralityQualifier(#LN_Ax_Apical_R, "Axillary lymphatic chain - Apical Right", #16051009, " Structure of apical axillary lymph node (body structure\)", #24028007, "Right (qualifier value\)", SCT)
-* insert MapConceptQualifier2(#LN_Ax_Central_L, "Axillary lymphatic chain - Central Left", #16051009, " Structure of apical axillary lymph node (body structure\)", #7771000, "left (qualifier value\)", #26216008, "central (qualifier value\)", SCT)
-* insert MapConceptQualifier2(#LN_Ax_Central_R, "Axillary lymphatic chain - Central Right", #16051009, " Structure of apical axillary lymph node (body structure\)", #24028007, "right (qualifier value\)", #26216008, "central (qualifier value\)", SCT)
+* insert MapConcept(#LN_Ax_Apical, "Set of apical axillary lymphatic vessels", #16051009, "Structure of apical axillary lymph node (body structure\)")
+* insert MapConceptLateralityQualifier(#LN_Ax_Apical_L, "Axillary lymphatic chain - Apical Left", #16051009, "Structure of apical axillary lymph node (body structure\)", #7771000, "Left (qualifier value\)", SCT)
+* insert MapConceptLateralityQualifier(#LN_Ax_Apical_R, "Axillary lymphatic chain - Apical Right", #16051009, "Structure of apical axillary lymph node (body structure\)", #24028007, "Right (qualifier value\)", SCT)
+* insert MapConceptQualifier2(#LN_Ax_Central_L, "Axillary lymphatic chain - Central Left", #16051009, "Structure of apical axillary lymph node (body structure\)", #7771000, "left (qualifier value\)", #26216008, "central (qualifier value\)", SCT)
+* insert MapConceptQualifier2(#LN_Ax_Central_R, "Axillary lymphatic chain - Central Right", #16051009, "Structure of apical axillary lymph node (body structure\)", #24028007, "right (qualifier value\)", #26216008, "central (qualifier value\)", SCT)
 * insert MapConcept(#LN_Ax_Centrals, "Set of central axillary lymphatic vessels", #283001, "Structure of central axillary lymph node (body structure\)")
 * insert MapConceptLateralityQualifier(#LN_Ax_L, "Axillary lymphatic chain Left", #68171009, "Axillary lymph node structure (body structure\)", #7771000, "Left (qualifier value\)", SCT)
 * insert MapConceptQualifier2(#LN_Ax_L1_L, "Level 1 Axillary Lymph Node Left", #68171009, "Axillary lymph node structure (body structure\)", #7771000, "left (qualifier value\)", #277733009, "level 1 (qualifier value\)", SCT)
@@ -675,5 +676,5 @@ Usage: #definition
 * insert MapConcept(#Sinus_Sphenoid, "Sphenoidal Sinus", #24999009, "Sphenoid sinus structure (body structure\)")
 * insert MapConcept(#Strct, "Structure", #123037004, "Body structure (body structure\)")
 * insert AddGroup("TG263",SCT_TBD)
-* insert MapConcept(#Spc_Bowel, "Space occupied by bowel", #USCRS-34356, "Bowel space (body structure\)" )
-* insert MapConcept(#Spc_Bowel_Small, "Space occupied by small bowel", #USCRS-34358, "Small bowel space (body structure\)" )
+* insert MapConcept(#Spc_Bowel, "Space occupied by bowel", #USCRS-34356, "Bowel space (observable entity\)" )
+* insert MapConcept(#Spc_Bowel_Small, "Space occupied by small bowel", #USCRS-34358, "Small bowel space (observable entity\)" )

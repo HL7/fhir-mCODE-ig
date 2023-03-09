@@ -6,6 +6,58 @@
     "include" : [{
       "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/snomed-requested-cs",
       "concept" : [{
+        "code" : "USCRS-34777",
+        "display" : "Lymph node level IIA (qualifier value)"
+      },
+      {
+        "code" : "USCRS-34775",
+        "display" : "Lymph node level IIB (qualifier value)"
+      }]
+    }]
+  }
+}}####
+e: {
+  "valueSet" : {
+  "resourceType" : "ValueSet",
+  "language" : "en",
+  "status" : "active",
+  "expansion" : {
+    "identifier" : "urn:uuid:166a632e-f327-4add-9c45-3b5642f31bb1",
+    "timestamp" : "2023-03-08T22:16:46.796Z",
+    "parameter" : [{
+      "name" : "limitedExpansion",
+      "valueBoolean" : true
+    },
+    {
+      "name" : "excludeNested",
+      "valueBoolean" : true
+    },
+    {
+      "name" : "version",
+      "valueUri" : "http://hl7.org/fhir/us/mcode/CodeSystem/snomed-requested-cs|3.0.0-ballot"
+    }],
+    "contains" : [{
+      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/snomed-requested-cs",
+      "code" : "USCRS-34777",
+      "display" : "Lymph node level IIA (qualifier value)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/snomed-requested-cs",
+      "code" : "USCRS-34775",
+      "display" : "Lymph node level IIB (qualifier value)"
+    }]
+  }
+},
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : false, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "inactive" : true,
+    "include" : [{
+      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/snomed-requested-cs",
+      "concept" : [{
         "code" : "USCRS-34356",
         "display" : "Bowel space (body structure)"
       },
@@ -22,8 +74,8 @@ e: {
   "language" : "en",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:53f73efc-fc11-45fe-b109-d88dd6ff8825",
-    "timestamp" : "2023-02-24T00:11:15.892Z",
+    "identifier" : "urn:uuid:02403a4d-26a7-4d77-854b-73682852e707",
+    "timestamp" : "2023-03-08T22:16:46.968Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true

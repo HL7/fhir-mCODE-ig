@@ -62,6 +62,7 @@ worksheet = "Mapped TG263 Terms"
   puts "Instance: TG263CM"
   puts "InstanceOf: ConceptMap"
   puts "Usage: #definition"
+  puts "* experimental = false"
   puts "* insert ConceptMapIntro(TG263, RadiotherapyTreatmentLocationQualifierVS)"
 
   header = true

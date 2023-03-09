@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <specification xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ballotUrl="http://hl7.org/fhir/us/mcode/2021May" ciUrl="http://build.fhir.org/ig/HL7/fhir-mCODE-ig" defaultVersion="2.0.0" defaultWorkgroup="cic" gitUrl="https://github.com/HL7/fhir-mCODE-ig" url="http://hl7.org/fhir/us/mcode">
 <version code="current" url="http://build.fhir.org/ig/HL7/fhir-mCODE-ig"/>
-<version code="2.1.0" url="http://build.fhir.org/ig/HL7/fhir-mCODE-ig"/>
 <version code="2.0.0" url="http://hl7.org/fhir/us/mcode/STU2"/>
 <version code="1.16.0" url="http://hl7.org/fhir/us/mcode/2021May"/>
-<version code="1.0.1" deprecated="true" url="http://hl7.org/fhir/us/mcode/STU1"/>
 <version code="1.0.0" url="http://hl7.org/fhir/us/mcode/STU1"/>
 <version code="0.9.1" deprecated="true" url="http://hl7.org/fhir/us/mcode/2019Sep"/>
+<version code="1.0.1" deprecated="true" url="http://hl7.org/fhir/us/mcode/STU1"/>
 <version code="0.1" deprecated="true"/>
 <artifactPageExtension value="-definitions"/>
 <artifactPageExtension value="-examples"/>
@@ -174,6 +173,7 @@
 <artifact deprecated="true" id="ValueSet/mcode-observation-codes-primary-tumor-vs" key="ValueSet-mcode-observation-codes-primary-tumor-vs" name="Staging Type for Primary Tumor Category Value Set"/>
 <artifact deprecated="true" id="ValueSet/mcode-observation-codes-regional-nodes-vs" key="ValueSet-mcode-observation-codes-regional-nodes-vs" name="Staging Type for Regional Node Category Value Set"/>
 <artifact deprecated="true" id="ValueSet/mcode-observation-codes-stage-group-vs" key="ValueSet-mcode-observation-codes-stage-group-vs" name="Staging Type for Stage Group Value Set"/>
+<artifact id="ConceptMap/TG263CM" key="ConceptMap-TG263CM" name="TG263CM"/>
 <artifact deprecated="true" id="Profile/mcode-tnm-clinical-distant-metastases" key="tnm-clinical-distant-metastases" name="TNM Clinical Distant Metastases"/>
 <artifact deprecated="true" id="Profile/mcode-tnm-clinical-primary-tumor-category" key="tnm-clinical-primary-tumor-category" name="TNM Clinical Primary Tumor Category"/>
 <artifact deprecated="true" id="Profile/mcode-tnm-clinical-regional-nodes-category" key="tnm-clinical-regional-nodes-category" name="TNM Clinical Regional Nodes Category"/>

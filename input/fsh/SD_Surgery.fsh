@@ -8,7 +8,6 @@ Description: "A surgical action addressing a cancer condition. The scope of this
 * obeys mcode-reason-required
 * extension contains
     ProcedureIntent named treatmentIntent 0..1 MS
-* category 1..  // upper cardinality is already 1
 * reasonCode from CancerDisorderVS (extensible)
 * reasonReference only Reference(PrimaryCancerCondition or SecondaryCancerCondition)
 * insert BodySiteQualifierAndLaterality(bodySite)

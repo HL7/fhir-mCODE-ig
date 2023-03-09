@@ -77,10 +77,8 @@ Description: "Extended example as a mCODE Patient Bundle"
 * entry[+].resource = family-member-history-aunt-jenny-m
 * entry[=].fullUrl = "http://example.org/fhir/FamilyMemberHistory/family-member-history-aunt-jenny-m"
 * entry[+].resource = us-core-procedure-mammogram-jenny-m
-* entry[=].fullUrl = "http://example.org/fhir/Procedure/us-core-procedure-mammogram-jenny-m"
-* entry[+].resource = family-member-history-uncle-jenny-m
 * entry[=].fullUrl = "http://example.org/fhir/FamilyMemberHistory/family-member-history-uncle-jenny-m"
-* entry[+].resource = us-core-diagnosticreport-lab-jenny-m  // slice 33
+* entry[+].resource = us-core-diagnosticreport-lab-jenny-m
 * entry[=].fullUrl = "http://example.org/fhir/DiagnosticReport/us-core-diagnosticreport-lab-jenny-m"
 * entry[+].resource = observation-smoking-pack-years-jenny-m
 * entry[=].fullUrl = "http://example.org/fhir/Observation/observation-smoking-pack-years-jenny-m"

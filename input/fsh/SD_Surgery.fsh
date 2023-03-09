@@ -13,8 +13,6 @@ Description: "A surgical action addressing a cancer condition. The scope of this
 * reasonReference only Reference(PrimaryCancerCondition or SecondaryCancerCondition)
 * insert BodySiteQualifierAndLaterality(bodySite)
 // It is not kosher to slice a 0..1 element, however, the cardinality of Procedure.category is a mistake. It was supposed to have changed in 2019 to 0..* (https://jira.hl7.org/browse/FHIR-20628). However, it is still 0..1 in R4, but the change has been made for R5.
-* category 1.. MS
-* category = SCT#387713003 //"Surgical procedure"
 * code from CancerRelatedSurgicalProcedureVS (extensible)
 // MUST SUPPORTS -- US Core Procedure sets status, code, subject, performed[x]
 * bodySite and bodySite.extension and extension and reasonCode and reasonReference and bodySite.extension[locationQualifier] and bodySite.extension[lateralityQualifier] MS

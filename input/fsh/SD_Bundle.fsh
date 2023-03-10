@@ -36,12 +36,17 @@ Description: "A collection of data for an mCODE cancer patient."
     TNMRegionalNodesCategory or
     TNMStageGroup or
     TumorMarkerTest or
-    TumorSize
+    TumorSize or
+    USCoreClinicalTest or
+    USCoreObservationLab or 
+    USCoreVitalSigns or
+    Observation
 * entry[mcodeConditions] ^short = "mCODE Condition Resources"
 * entry[mcodeConditions] ^definition = "Slice containing mCODE conditions"
 * entry[mcodeConditions].resource only 
     PrimaryCancerCondition or
-    SecondaryCancerCondition
+    SecondaryCancerCondition or
+    USCoreCondition
 * entry[mcodeMedicationAdministrations] ^short = "mCODE Medication Administration Resources"
 * entry[mcodeMedicationAdministrations] ^definition = "Slice containing mCODE Cancer-Related Medication Administration"
 * entry[mcodeMedicationAdministrations].resource only 
@@ -49,25 +54,30 @@ Description: "A collection of data for an mCODE cancer patient."
 * entry[mcodeMedicationRequests] ^short = "mCODE Medication Request Resources"
 * entry[mcodeMedicationRequests] ^definition = "Slice containing mCODE Cancer-Related Medication Requests"
 * entry[mcodeMedicationRequests].resource only 
-    CancerRelatedMedicationRequest
+    CancerRelatedMedicationRequest or
+    USCoreMedicationRequest
 * entry[mcodeDiagnosticReports] ^short = "mCODE Diagnostic Report Resources"
 * entry[mcodeDiagnosticReports] ^definition = "Slice containing mCODE diagnostic report resources"
 * entry[mcodeDiagnosticReports].resource only 
-    GenomicsReport
+    GenomicsReport or
+    USCoreDiagnosticReportLab
 * entry[mcodeSpecimens] ^short = "mCODE Specimen Resources"
 * entry[mcodeSpecimens] ^definition = "Slice containing mCODE specimen resources"
 * entry[mcodeSpecimens].resource only 
-    HumanSpecimen
+    HumanSpecimen or
+    Specimen
 * entry[mcodeProcedures] ^short = "mCODE Procedure Resources"
 * entry[mcodeProcedures] ^definition = "Slice containing mCODE Procedure resources"
 * entry[mcodeProcedures].resource only 
     CancerRelatedSurgicalProcedure or
-    RadiotherapyCourseSummary
+    RadiotherapyCourseSummary or
+    USCoreProcedure
 * entry[mcodeBodyStructures] ^short = "mCODE BodyStructure Resources"
 * entry[mcodeBodyStructures] ^definition = "Slice containing mCODE BodyStructure resources"
 * entry[mcodeBodyStructures].resource only 
     RadiotherapyVolume or
-    Tumor
+    Tumor or 
+    BodyStructure
 * timestamp and entry and entry.resource MS
 
 /*

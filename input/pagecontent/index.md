@@ -1,3 +1,7 @@
+<div markdown="1" class="note-to-balloters">
+Voters familiar with mCODE can focus their attention on the changes since STU 2, listed in the [Release Notes](change_log.html).
+</div>
+
 ### Background
 
 Cancer is among the leading causes of death worldwide. According to the National Cancer Institute, in the United States, 39.5 percent of men and women will be diagnosed with cancer at some point during their lifetimes. In 2020, an estimated 1,806,590 new cases of cancer will be diagnosed in the United States and 606,520 people will die from the disease. While these numbers are staggering, the silver lining in the wide prevalence of cancer is the potential to learn from treatment of millions of patients. If we had research-quality data from all cancer patients, it would enable better health outcomes. Today, we lack the data models, technologies, and methods to capture that data.
@@ -6,7 +10,7 @@ Cancer is among the leading causes of death worldwide. According to the National
 
 ### Overview
 
-mCODE consists of approximately 30 FHIR profiles organized into six thematic groups. Groups are introduced for pedagogical purposes only and have no other meaning or consequence.
+mCODE consists of approximately 30 FHIR profiles organized into six thematic groups. Groups are introduced for pedagogical purposes only and have no other meaning or consequence:
 
 * [Patient Information Group](group-patient.html)
 * [Disease Characterization Group](group-disease.html)
@@ -20,7 +24,19 @@ The overall scope of mCODE and the relationships between mCODE profiles is illus
 <object data="mCodeDiagram.svg" type="image/svg+xml"></object>
 <br/>
 
-Readers should also take note of the [Data Dictionary](dictionary.html), a flattened list of data elements in mCODE in Microsoft Excel format. There is also a [Data Dictionary Differential](dictionary.html#data-dictionary-differential) that compares STU 2 with STU 1 on an element-by-element basis.
+### Extensibility
+
+mCODE is an extensible standard, open to increased scope (horizontal extensibility) and to more specific subcases (vertical extensibility):
+
+* mCODE is horizontally extensible in the sense that information not specifically covered by an mCODE profile is not excluded. For example, there is no specific profile for care teams in mCODE, but sharing care team information is essential in some workflows. In such cases, the user should express this information using an appropriate FHIR resources and/or profiles. Users will need to exercise judgment regarding the best choice of profiles.
+
+* mCODE is vertically extensible in the sense that more specific profiles can be derived from mCODE. For example, a user could create a profile for a specific type of procedure, such as a reconstructive procedure, using the mCODE procedure profile as a parent. It is expected that mCODE will serve as the basis for future implementation guides dealing with new use cases, particular types of cancer, or specific demographic groups.
+
+To be perfectly clear, if mCODE does not have a profile for some type of data, it CAN be included with mCODE data using an appropriate resource or profile.
+
+### Data Dictionary
+
+Readers should also take note of the [Data Dictionary](dictionary.html), a flattened list of data elements in mCODE in Microsoft Excel format. There is also a [Data Dictionary Differential](dictionary.html#data-dictionary-differential) that compares STU 3 with STU 2 on an element-by-element basis.
 
 The Data Dictionary comes with several caveats:
 
@@ -28,7 +44,7 @@ The Data Dictionary comes with several caveats:
 * Profiles defined externally to mCODE, such as vital signs defined in base FHIR or US Core, are not included.
 * Sub-elements of complex types such as CodeableConcept and Period are not explicitly included.
 
-The actual number of data elements in a resource can vary widely. For example, there are 16 MS data elements in the [CancerPatient] profile, but the full resource defines more than 60 elements. Of these, only four are [required](conformance-profiles.html#definition-of-required) (namely `identifier.system`, `identifier.value`, `name.family` or `name.given`, and `gender`). Moreover, different systems can implement different subsets of profiles, depending on their role in information workflows (see [Profile Conformance](conformance-profiles.html) for details). Not every mCODE-compliant system will support the same set of data elements.
+The actual number of data elements in a resource can vary widely. For example, there are 16 MS data elements in the [CancerPatient] profile, but the full resource defines more than 60 elements. Of these, only four are [required](conformance-profiles.html#definition-of-required) (namely `identifier.system`, `identifier.value`, `name.family` or `name.given`, and `gender`). Moreover, different systems can implement different subsets of profiles, depending on their role in information workflows (see [Profile Conformance](conformance-profiles.html) for details). Therefore, not every mCODE-compliant system will support the same set of data elements. However, whatever portion of this specification is implemented will be compatible with other systems, inasmuch as the implementations overlap.
 
 ### Development History
 
@@ -37,9 +53,7 @@ In late 2018, [American Society of Clinical Oncology (ASCO®)](https://www.asco.
 * **Use Case 1**: [Comparative Effectiveness Analysis and Cooperative Decision Making](mCODE-UseCase-RCC.docx)
 * **Use Case 2**: [Comparative Effectiveness Analysis with Next Generation Sequencing (NGS)](mCODE-UseCase-NGS.docx)
 
-After the initial analysis, an open survey was conducted to validate and prioritize the data elements from these use cases. Down-scoping was conducted based on the likelihood the data elements would be found in current EHRs, and if collecting the data would place undue burden on clinicians. In 2019, mCODE was balloted and approved as an HL7 Standard for Trial Use (STU 1).
-
-In the ensuing period, mCODE was piloted at a number of clinical sites, facilitated by the [CodeX FHIR Accelerator](https://confluence.hl7.org/display/COD/CodeX+Home). Use cases are tracked [here](https://confluence.hl7.org/display/COD/CodeX+Use+Cases). Incorporating that experience, the second trial use publication (STU 2) was balloted in May 2021, and published in January 2022. A non-balloted update, version 2.1, was published in March 2023.
+After the initial analysis, an open survey was conducted to validate and prioritize the data elements from these use cases. Down-scoping was conducted based on the likelihood the data elements would be found in current EHRs, and if collecting the data would place undue burden on clinicians. In 2019, mCODE was balloted and approved as an HL7 Standard for Trial Use (STU 1). In the ensuing period, mCODE was piloted at a number of clinical sites, facilitated by the [CodeX FHIR Accelerator](https://confluence.hl7.org/display/COD/CodeX+Home). Use cases are tracked [here](https://confluence.hl7.org/display/COD/CodeX+Use+Cases). Incorporating that experience, the second trial use publication (STU 2) was balloted in May 2021, and published in January 2022. A non-balloted update containing terminology updates, version 2.1, was published in March 2023.
 
 ### Sources
 

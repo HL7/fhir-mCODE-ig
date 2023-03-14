@@ -17,12 +17,10 @@ Id:       mcode-radiotherapy-course-summary
 Title:    "Radiotherapy Course Summary Profile"
 Description: "A summary of a course of radiotherapy delivered to a patient. It records the treatment intent, termination reason, modalities, techniques, number of sessions, and doses delivered to one or more body volumes. Whether the course has been fully delivered or stopped is indicated in the status element."
 * ^extension[FMM].valueInteger = 3
-* category 1.. MS
-* category = SCT#108290001 // "Radiation oncology AND/OR radiotherapy (procedure)"
 * performed[x] only Period
 * subject only Reference(CancerPatient)
 * subject ^definition = "The patient on whom the procedure was performed."
-* extension and category MS
+* extension MS
 // Summary-specific content
 * code = SCT#1217123003 // "Radiotherapy course of treatment (regime/therapy)"
 * extension contains

@@ -2,36 +2,963 @@
 
 # NOTE TO SELF: ERRORS CANNOT BE SUPPRESSED, ONLY WARNINGS AND INFORMATION MESSAGES
 
-# SUPPRESS US CORE OBSERVATION MESSAGES
-#   For STU2 This was approved by Cross-Group Projects Work Group on 1/28/2021 Floyd Eisenberg/Brett Marquard 28-0-1. See https://jira.hl7.org/browse/FHIR-30707
-#   For STU3, this was approved by the Cross-Group Projects Work Group on 2/9/2023   Saul Kravitz/Floyd Eisenberg: 23-0-2    see https://jira.hl7.org/browse/FHIR-40383
+# NOTE ON ERROR "BUNDLE_BUNDLE_ENTRY_MULTIPLE_PROFILES": This error reflects a limitation in the IG Publisher. Dispensation has been granted by the FHIR Product Manager. See https://chat.fhir.org/#narrow/stream/179192-fmg/topic/BUNDLE_ENTRY_MULTIPLE_PROFILES. Example of error message:
+ERROR: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[11].resource/*Procedure/radiotherapy-treatment-summary-chest-wall-jenny-m*/: 2 profiles found for entry resource. More than one is not supported at this time. (Type Procedure: http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-related-surgical-procedure, http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-course-summary)
 
+# NOTE ON ERROR "Terminology_TX_NoValid_1_CC": This error reflects a terminology server problem parsing HGVS codes. See https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/New.20Problem.20With.20Existing.20Valueset.2FCodeSYstem. Example of error message:
+ERROR: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[7].resource.component[2].value.ofType(CodeableConcept): None of the codings provided are in the value set 'Human Genome Variation Society (HGVS) Nomenclature' (http://hl7.org/fhir/uv/genomics-reporting/ValueSet/hgvs-vs|2.0.0), and a coding from this value set is required) (codes = http://varnomen.hgvs.org#NC_000016.10:g.23603471G>T)
+
+# SUPPRESS WARNINGS: HGVS CODE SYSTEM (http://varnomen.hgvs.org)
+WARNING: Observation/gx-genomic-variant-somatic-bap1-indel: Observation.component[2].value.ofType(CodeableConcept).coding[0]: Local Error: Resolved system http://varnomen.hgvs.org (v2.0.0), but the definition is not complete. Server Error: Error from server: Error parsing JSON source: Unexpected char "<" in json stream at Line 0 (path=[])
+WARNING: Observation/gx-genomic-variant-somatic-bap1-indel: Observation.component[3].value.ofType(CodeableConcept).coding[0]: Local Error: Resolved system http://varnomen.hgvs.org (v2.0.0), but the definition is not complete. Server Error: Error from server: Error parsing JSON source: Unexpected char "<" in json stream at Line 0 (path=[])
+WARNING: Observation/gx-genomic-variant-somatic-pof1b: Observation.component[4].value.ofType(CodeableConcept).coding[0]: Local Error: Resolved system http://varnomen.hgvs.org (v2.0.0), but the definition is not complete. Server Error: Error from server: Error parsing JSON source: Unexpected char "<" in json stream at Line 0 (path=[])
+WARNING: Observation/gx-genomic-variant-somatic-pof1b: Observation.component[5].value.ofType(CodeableConcept).coding[0]: Local Error: Resolved system http://varnomen.hgvs.org (v2.0.0), but the definition is not complete. Server Error: Error from server: Error parsing JSON source: Unexpected char "<" in json stream at Line 0 (path=[])
+WARNING: Observation/gx-genomic-variant-somatic-polrmt: Observation.component[4].value.ofType(CodeableConcept).coding[0]: Local Error: Resolved system http://varnomen.hgvs.org (v2.0.0), but the definition is not complete. Server Error: Error from server: Error parsing JSON source: Unexpected char "<" in json stream at Line 0 (path=[])
+WARNING: Observation/gx-genomic-variant-somatic-polrmt: Observation.component[5].value.ofType(CodeableConcept).coding[0]: Local Error: Resolved system http://varnomen.hgvs.org (v2.0.0), but the definition is not complete. Server Error: Error from server: Error parsing JSON source: Unexpected char "<" in json stream at Line 0 (path=[])
+WARNING: Bundle/gx-genomic-bundle-incredible-hulk: Bundle.entry[12].resource/*Observation/gx-genomic-variant-somatic-pof1b*/.component[4].value.ofType(CodeableConcept).coding[0]: Local Error: Resolved system http://varnomen.hgvs.org (v2.0.0), but the definition is not complete. Server Error: Error from server: Error parsing JSON source: Unexpected char "<" in json stream at Line 0 (path=[])
+WARNING: Bundle/gx-genomic-bundle-incredible-hulk: Bundle.entry[12].resource/*Observation/gx-genomic-variant-somatic-pof1b*/.component[5].value.ofType(CodeableConcept).coding[0]: Local Error: Resolved system http://varnomen.hgvs.org (v2.0.0), but the definition is not complete. Server Error: Error from server: Error parsing JSON source: Unexpected char "<" in json stream at Line 0 (path=[])
+WARNING: Bundle/gx-genomic-bundle-incredible-hulk: Bundle.entry[13].resource/*Observation/gx-genomic-variant-somatic-polrmt*/.component[4].value.ofType(CodeableConcept).coding[0]: Local Error: Resolved system http://varnomen.hgvs.org (v2.0.0), but the definition is not complete. Server Error: Error from server: Error parsing JSON source: Unexpected char "<" in json stream at Line 0 (path=[])
+WARNING: Bundle/gx-genomic-bundle-incredible-hulk: Bundle.entry[13].resource/*Observation/gx-genomic-variant-somatic-polrmt*/.component[5].value.ofType(CodeableConcept).coding[0]: Local Error: Resolved system http://varnomen.hgvs.org (v2.0.0), but the definition is not complete. Server Error: Error from server: Error parsing JSON source: Unexpected char "<" in json stream at Line 0 (path=[])
+WARNING: Bundle/gx-genomic-bundle-incredible-hulk: Bundle.entry[6].resource/*Observation/gx-genomic-variant-somatic-bap1-indel*/.component[2].value.ofType(CodeableConcept).coding[0]: Local Error: Resolved system http://varnomen.hgvs.org (v2.0.0), but the definition is not complete. Server Error: Error from server: Error parsing JSON source: Unexpected char "<" in json stream at Line 0 (path=[])
+WARNING: Bundle/gx-genomic-bundle-incredible-hulk: Bundle.entry[6].resource/*Observation/gx-genomic-variant-somatic-bap1-indel*/.component[3].value.ofType(CodeableConcept).coding[0]: Local Error: Resolved system http://varnomen.hgvs.org (v2.0.0), but the definition is not complete. Server Error: Error from server: Error parsing JSON source: Unexpected char "<" in json stream at Line 0 (path=[])
+WARNING: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[8].resource.entry[7].resource/*Observation/genomic-variant-jenny-m*/.component[2].value.ofType(CodeableConcept).coding[0]: Local Error: Resolved system http://varnomen.hgvs.org (v2.0.0), but the definition is not complete. Server Error: Error from server: Error parsing JSON source: Unexpected char "<" in json stream at Line 0 (path=[])
+
+
+# SUPPRESS US CORE COMPLIANCE MESSAGES.  For STU2, exceptions to US Core parent profiles was approved by Cross-Group Projects Work Group on 1/28/2021 Floyd Eisenberg/Brett Marquard: 28-0-1. See https://jira.hl7.org/browse/FHIR-30707. For STU3, exceptions to US Core parent profiles was approved by the Cross-Group Projects Work Group on 2/9/2023 Saul Kravitz/Floyd Eisenberg: 23-0-2. See https://jira.hl7.org/browse/FHIR-40383
+WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-disease-status').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
 WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-stage-group').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
 WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-comorbidities').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
+WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-ecog-performance-status').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
 WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genomic-region-studied').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
-WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genomic-variant').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
 WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genomics-report').baseDefinition: US FHIR Usage rules require that all profiles on DiagnosticReport derive from one of the base US profiles
+WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genomic-variant').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
 WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-human-specimen').baseDefinition: US FHIR Usage rules require that all profiles on Specimen derive from the core US profile
 WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-karnofsky-performance-status').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
 WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-distant-metastases-category').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
 WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-primary-tumor-category').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
 WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-regional-nodes-category').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
-WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-disease-status').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
-WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-ecog-performance-status').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
 WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-stage-group').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
 WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tumor-size').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
 
-# SUPPRESS INFORMATION MESSAGES ABOUT BEING UNABLE TO SUPPORT CERTAIN CODE SYSTEMS
-Error from server: Unable to provide support for code system http://www.ama-assn.org/go/cpt
-Error from server: Unable to provide support for code system http://terminology.hl7.org/CodeSystem/icd-o-3
-Error from server: Unable to provide support for code system http://cancerstaging.org
-Code System URI 'https://www.tempus.com' is unknown so the code cannot be validated
-Code System URI 'https://www.ncbi.nlm.nih.gov/gene' is unknown so the code cannot be validated
-Code System URI 'http://www.sequenceontology.org/' is unknown so the code cannot be validated
-Code System URI 'http://www.genenames.org' is unknown so the code cannot be validated
-Code System URI 'http://www.ncbi.nlm.nih.gov/clinvar' is unknown so the code cannot be validated
-Code System URI 'http://www.ncbi.nlm.nih.gov/gtr' is unknown so the code cannot be validated
-Code System URI 'http://terminology.hl7.org/CodeSystem/umls' is unknown so the code cannot be validated
-Code System URI 'http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl' is unknown so the code cannot be validated
-Code System URI 'http://www.ncbi.nlm.nih.gov/refseq' is unknown so the code cannot be validated
-Code System URI 'urn:oid:2.16.840.1.113883.6.238' is unknown so the code cannot be validated
+# SUPPRESS WARNINGS "UNABLE TO SUPPORT CERTAIN CODE SYSTEMS"
+WARNING: ValueSet.where(id = 'mcode-cancer-body-location-vs'): Error from server: Unable to provide support for code system http://terminology.hl7.org/CodeSystem/icd-o-3
+WARNING: ValueSet.where(id = 'mcode-cancer-disorder-vs'): Error from server: Unable to provide support for code system http://terminology.hl7.org/CodeSystem/icd-o-3
+WARNING: ValueSet.where(id = 'mcode-cancer-related-surgical-procedure-vs'): Error from server: Unable to provide support for code system http://www.ama-assn.org/go/cpt
+WARNING: ValueSet.where(id = 'mcode-histology-morphology-behavior-vs'): Error from server: Unable to provide support for code system http://terminology.hl7.org/CodeSystem/icd-o-3
+WARNING: ValueSet.where(id = 'mcode-tnm-distant-metastases-category-max-vs'): Error from server: Unable to provide support for code system http://cancerstaging.org
+WARNING: ValueSet.where(id = 'mcode-tnm-primary-tumor-category-max-vs'): Error from server: Unable to provide support for code system http://cancerstaging.org
+WARNING: ValueSet.where(id = 'mcode-tnm-regional-nodes-category-max-vs'): Error from server: Unable to provide support for code system http://cancerstaging.org
+WARNING: ValueSet.where(id = 'mcode-tnm-stage-group-max-vs'): Error from server: Unable to provide support for code system http://cancerstaging.org
+
+# SUPPRESS WARNINGS ON BUNDLE ENTRY MATCHING MULTIPLE RESOURCES
+WARNING: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[1].resource: Found multiple matching profiles among 3 choices: http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition-problems-health-concerns, http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-primary-cancer-condition, http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-secondary-cancer-condition
+WARNING: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[10].resource: Found multiple matching profiles among 2 choices: http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-stage-group, http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-comorbidities
+WARNING: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[11].resource: Found multiple matching profiles among 3 choices: http://hl7.org/fhir/us/core/StructureDefinition/us-core-procedure, http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-related-surgical-procedure, http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-course-summary
+WARNING: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[12].resource: Found multiple matching profiles among 2 choices: http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-stage-group, http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-stage-group
+WARNING: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[13].resource: Found multiple matching profiles among 2 choices: http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-stage-group, http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-primary-tumor-category
+WARNING: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[14].resource: Found multiple matching profiles among 2 choices: http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-stage-group, http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-regional-nodes-category
+WARNING: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[15].resource: Found multiple matching profiles among 2 choices: http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-stage-group, http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-distant-metastases-category
+WARNING: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[17].resource: Found multiple matching profiles among 3 choices: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab, http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-stage-group, http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genomic-region-studied
+WARNING: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[18].resource: Found multiple matching profiles among 2 choices: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-test, http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-ecog-performance-status
+WARNING: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[19].resource: Found multiple matching profiles among 3 choices: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab, http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-stage-group, http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tumor-marker-test
+WARNING: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[2].resource.reasonReference[0]: Found multiple matching profiles for Condition/primary-cancer-condition-jenny-m among choices: http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-primary-cancer-condition, http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-secondary-cancer-condition
+WARNING: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[2].resource/*MedicationRequest/cancer-related-medication-request-cyclophosphamide-jenny-m*/.reasonReference[0]: Found multiple matching profiles for Condition/primary-cancer-condition-jenny-m among choices: http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-primary-cancer-condition, http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-secondary-cancer-condition (validating against http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-related-medication-request|2023May [CancerRelatedMedicationRequest])
+WARNING: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[2].resource: Found multiple matching profiles among 2 choices: http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest, http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-related-medication-request
+WARNING: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[20].resource: Found multiple matching profiles among 3 choices: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab, http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-stage-group, http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tumor-marker-test
+WARNING: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[21].resource: Found multiple matching profiles among 3 choices: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab, http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-stage-group, http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tumor-marker-test
+WARNING: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[22].resource: Found multiple matching profiles among 2 choices: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab, http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tumor-marker-test
+WARNING: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[23].resource: Found multiple matching profiles among 3 choices: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab, http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-stage-group, http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tumor-size
+WARNING: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[24].resource/*Procedure/us-core-procedure-biopsy-jenny-m*/.reasonReference[0]: Found multiple matching profiles for Condition/primary-cancer-condition-jenny-m among choices: http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-primary-cancer-condition, http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-secondary-cancer-condition (validating against http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-related-surgical-procedure|2023May [CancerRelatedSurgicalProcedure])
+WARNING: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[24].resource: Found multiple matching profiles among 2 choices: http://hl7.org/fhir/us/core/StructureDefinition/us-core-procedure, http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-related-surgical-procedure
+WARNING: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[26].resource: Found multiple matching profiles among 2 choices: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab, http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tumor-marker-test
+WARNING: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[29].resource: Found multiple matching profiles among 2 choices: http://hl7.org/fhir/us/core/StructureDefinition/us-core-procedure, http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-related-surgical-procedure
+WARNING: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[3].resource.reasonReference[0]: Found multiple matching profiles for Condition/primary-cancer-condition-jenny-m among choices: http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-primary-cancer-condition, http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-secondary-cancer-condition
+WARNING: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[3].resource/*MedicationRequest/cancer-related-medication-request-doxorubicin-jenny-m*/.reasonReference[0]: Found multiple matching profiles for Condition/primary-cancer-condition-jenny-m among choices: http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-primary-cancer-condition, http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-secondary-cancer-condition (validating against http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-related-medication-request|2023May [CancerRelatedMedicationRequest])
+WARNING: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[3].resource: Found multiple matching profiles among 2 choices: http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest, http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-related-medication-request
+WARNING: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[31].resource: Found multiple matching profiles among 2 choices: http://hl7.org/fhir/us/core/StructureDefinition/us-core-procedure, http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-related-surgical-procedure
+WARNING: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[34].resource: Found multiple matching profiles among 3 choices: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab, http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-stage-group, http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tumor-marker-test
+WARNING: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[35].resource: Found multiple matching profiles among 3 choices: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab, http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-stage-group, http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tumor-marker-test
+WARNING: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[36].resource: Found multiple matching profiles among 2 choices: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab, http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-stage-group
+WARNING: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[37].resource: Found multiple matching profiles among 3 choices: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab, http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-stage-group, http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tumor-marker-test
+WARNING: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[4].resource.reasonReference[0]: Found multiple matching profiles for Condition/primary-cancer-condition-jenny-m among choices: http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-primary-cancer-condition, http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-secondary-cancer-condition
+WARNING: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[4].resource/*MedicationRequest/cancer-related-medication-request-paclitaxel-jenny-m*/.reasonReference[0]: Found multiple matching profiles for Condition/primary-cancer-condition-jenny-m among choices: http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-primary-cancer-condition, http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-secondary-cancer-condition (validating against http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-related-medication-request|2023May [CancerRelatedMedicationRequest])
+WARNING: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[4].resource: Found multiple matching profiles among 2 choices: http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest, http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-related-medication-request
+WARNING: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[5].resource.reasonReference[0]: Found multiple matching profiles for Condition/primary-cancer-condition-jenny-m among choices: http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-primary-cancer-condition, http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-secondary-cancer-condition
+WARNING: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[5].resource/*MedicationRequest/cancer-related-medication-request-anastrozole-jenny-m*/.reasonReference[0]: Found multiple matching profiles for Condition/primary-cancer-condition-jenny-m among choices: http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-primary-cancer-condition, http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-secondary-cancer-condition (validating against http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-related-medication-request|2023May [CancerRelatedMedicationRequest])
+WARNING: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[5].resource: Found multiple matching profiles among 2 choices: http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest, http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-related-medication-request
+WARNING: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[6].resource.focus[0]: Found multiple matching profiles for Condition/primary-cancer-condition-jenny-m among choices: http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-primary-cancer-condition, http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-secondary-cancer-condition
+WARNING: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[6].resource/*Observation/cancer-disease-status-jenny-m*/.focus[0]: Found multiple matching profiles for Condition/primary-cancer-condition-jenny-m among choices: http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-primary-cancer-condition, http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-secondary-cancer-condition (validating against http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-disease-status|2023May [CancerDiseaseStatus])
+WARNING: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[6].resource: Found multiple matching profiles among 2 choices: http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-disease-status, http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-stage-group
+WARNING: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[7].resource: Found multiple matching profiles among 4 choices: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab, http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-stage-group, http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genomic-variant, http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tumor-marker-test
+WARNING: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[9].resource.reasonReference[0]: Found multiple matching profiles for Condition/primary-cancer-condition-jenny-m among choices: http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-primary-cancer-condition, http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-secondary-cancer-condition
+WARNING: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[9].resource/*Procedure/cancer-related-surgical-procedure-jenny-m*/.reasonReference[0]: Found multiple matching profiles for Condition/primary-cancer-condition-jenny-m among choices: http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-primary-cancer-condition, http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-secondary-cancer-condition (validating against http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-related-surgical-procedure|2023May [CancerRelatedSurgicalProcedure])
+WARNING: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[9].resource: Found multiple matching profiles among 2 choices: http://hl7.org/fhir/us/core/StructureDefinition/us-core-procedure, http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-related-surgical-procedure
+
+# SUPPRESS SPURIOUS WARNINGS ON CONCEPT MAP TERMINOLOGY
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[0].target[0].code: The target code '15825003' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[1].target[0].code: The target code '54247002' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[10].target[0].code: The target code '7657000' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[100].target[0].code: The target code '15926001' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[101].target[0].code: The target code '76752008' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[102].target[0].code: The target code '76752008' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[103].target[0].code: The target code '76752008' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[104].target[0].code: The target code '955009' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[105].target[0].code: The target code '955009' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[106].target[0].code: The target code '102297006' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[107].target[0].code: The target code '102297006' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[108].target[0].code: The target code '102297006' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[109].target[0].code: The target code '955009' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[11].target[0].code: The target code '7657000' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[110].target[0].code: The target code '34381000' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[111].target[0].code: The target code '28700002' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[112].target[0].code: The target code '38848004' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[113].target[0].code: The target code '7173007' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[114].target[0].code: The target code '9284003' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[115].target[0].code: The target code '279549004' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[116].target[0].code: The target code '74262004' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[117].target[0].code: The target code '32713005' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[118].target[0].code: The target code '113305005' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[119].target[0].code: The target code '83678007' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[12].target[0].code: The target code '244314003' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[120].target[0].code: The target code '83678007' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[121].target[0].code: The target code '83678007' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[122].target[0].code: The target code '71252005' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[123].target[0].code: The target code '78904004' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[124].target[0].code: The target code '78904004' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[125].target[0].code: The target code '78904004' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[126].target[0].code: The target code '369387006' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[127].target[0].code: The target code '60075002' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[128].target[0].code: The target code '51299004' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[129].target[0].code: The target code '51299004' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[13].target[0].code: The target code '244314003' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[130].target[0].code: The target code '56193007' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[131].target[0].code: The target code '56193007' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[132].target[0].code: The target code '56193007' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[133].target[0].code: The target code '21161002' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[134].target[0].code: The target code '21161002' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[135].target[0].code: The target code '21161002' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[136].target[0].code: The target code '27612005' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[137].target[0].code: The target code '27612005' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[138].target[0].code: The target code '27612005' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[139].target[0].code: The target code '80622005' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[14].target[0].code: The target code '74200005' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[140].target[0].code: The target code '80622005' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[141].target[0].code: The target code '80622005' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[142].target[0].code: The target code '56052001' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[143].target[0].code: The target code '56052001' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[144].target[0].code: The target code '56052001' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[145].target[0].code: The target code '8598002' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[146].target[0].code: The target code '8598002' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[147].target[0].code: The target code '8598002' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[148].target[0].code: The target code '15119000' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[149].target[0].code: The target code '15119000' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[15].target[0].code: The target code '55601007' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[150].target[0].code: The target code '15119000' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[151].target[0].code: The target code '37899009' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[152].target[0].code: The target code '37899009' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[153].target[0].code: The target code '37899009' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[154].target[0].code: The target code '80169004' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[155].target[0].code: The target code '80169004' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[156].target[0].code: The target code '80169004' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[157].target[0].code: The target code '71854001' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[158].target[0].code: The target code '9040008' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[159].target[0].code: The target code '32622004' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[16].target[0].code: The target code '244327004' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[160].target[0].code: The target code '81745001' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[161].target[0].code: The target code '60184004' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[162].target[0].code: The target code '485005' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[163].target[0].code: The target code '28726007' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[164].target[0].code: The target code '28726007' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[165].target[0].code: The target code '28726007' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[166].target[0].code: The target code '36743005' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[167].target[0].code: The target code '8600008' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[168].target[0].code: The target code '28276008' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[169].target[0].code: The target code '28231008' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[17].target[0].code: The target code '244327004' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[170].target[0].code: The target code '71934003' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[171].target[0].code: The target code '13561001' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[172].target[0].code: The target code '117590005' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[173].target[0].code: The target code '117590005' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[174].target[0].code: The target code '117590005' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[175].target[0].code: The target code '117590005' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[176].target[0].code: The target code '117590005' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[177].target[0].code: The target code '117590005' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[178].target[0].code: The target code '117590005' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[179].target[0].code: The target code '117590005' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[18].target[0].code: The target code '113269004' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[180].target[0].code: The target code '117590005' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[181].target[0].code: The target code '111002' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[182].target[0].code: The target code '127949000' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[183].target[0].code: The target code '127949000' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[184].target[0].code: The target code '127949000' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[185].target[0].code: The target code '32849002' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[186].target[0].code: The target code '32849002' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[187].target[0].code: The target code '32849002' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[188].target[0].code: The target code '32849002' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[189].target[0].code: The target code '88481005' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[19].target[0].code: The target code '113269004' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[190].target[0].code: The target code '385296007' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[191].target[0].code: The target code '81745001' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[192].target[0].code: The target code '81745001' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[193].target[0].code: The target code '9875009' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[194].target[0].code: The target code '69748006' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[195].target[0].code: The target code '2812003' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[196].target[0].code: The target code '2812003' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[197].target[0].code: The target code '24136001' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[198].target[0].code: The target code '24136001' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[199].target[0].code: The target code '71341001' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[2].target[0].code: The target code '425444002' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[20].target[0].code: The target code '90024005' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[200].target[0].code: The target code '71341001' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[201].target[0].code: The target code '29627003' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[202].target[0].code: The target code '29627003' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[203].target[0].code: The target code '29627003' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[204].target[0].code: The target code '71341001' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[205].target[0].code: The target code '41111004' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[206].target[0].code: The target code '41111004' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[207].target[0].code: The target code '71341001' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[208].target[0].code: The target code '87342007' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[209].target[0].code: The target code '87342007' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[21].target[0].code: The target code '90024005' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[210].target[0].code: The target code '87342007' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[211].target[0].code: The target code '1307006' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[212].target[0].code: The target code '3711007' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[213].target[0].code: The target code '3711007' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[214].target[0].code: The target code '90228003' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[215].target[0].code: The target code '23451007' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[216].target[0].code: The target code '23451007' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[217].target[0].code: The target code '23451007' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[218].target[0].code: The target code '80891009' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[219].target[0].code: The target code '13561001' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[22].target[0].code: The target code '73634005' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[220].target[0].code: The target code '13561001' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[221].target[0].code: The target code '372073000' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[222].target[0].code: The target code '88481005' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[223].target[0].code: The target code '88481005' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[224].target[0].code: The target code '5366008' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[225].target[0].code: The target code '385296007' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[226].target[0].code: The target code '385296007' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[227].target[0].code: The target code '67923007' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[228].target[0].code: The target code '34516001' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[229].target[0].code: The target code '21306003' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[23].target[0].code: The target code '73634005' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[230].target[0].code: The target code '90228003' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[231].target[0].code: The target code '16953009' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[232].target[0].code: The target code '85537004' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[233].target[0].code: The target code '711190000' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[234].target[0].code: The target code '711190000' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[235].target[0].code: The target code '39352004' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[236].target[0].code: The target code '53620006' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[237].target[0].code: The target code '6566002' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[238].target[0].code: The target code '6566002' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[239].target[0].code: The target code '50403003' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[24].target[0].code: The target code '33795007' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[240].target[0].code: The target code '74033008' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[241].target[0].code: The target code '5366008' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[242].target[0].code: The target code '5366008' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[243].target[0].code: The target code '85050009' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[244].target[0].code: The target code '85050009' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[245].target[0].code: The target code '64033007' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[246].target[0].code: The target code '72696002' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[247].target[0].code: The target code '81502006' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[248].target[0].code: The target code '4596009' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[249].target[0].code: The target code '86483002' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[25].target[0].code: The target code '33795007' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[250].target[0].code: The target code '16953009' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[251].target[0].code: The target code '16953009' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[252].target[0].code: The target code '78076003' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[253].target[0].code: The target code '85537004' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[254].target[0].code: The target code '85537004' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[255].target[0].code: The target code '6544009' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[256].target[0].code: The target code '81083006' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[257].target[0].code: The target code '53620006' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[258].target[0].code: The target code '53620006' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[259].target[0].code: The target code '10200004' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[26].target[0].code: The target code '42258001' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[260].target[0].code: The target code '50403003' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[261].target[0].code: The target code '50403003' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[262].target[0].code: The target code '74033008' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[263].target[0].code: The target code '74033008' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[264].target[0].code: The target code '83251001' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[265].target[0].code: The target code '64033007' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[266].target[0].code: The target code '25990002' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[267].target[0].code: The target code '25990002' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[268].target[0].code: The target code '64033007' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[269].target[0].code: The target code '31065004' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[27].target[0].code: The target code '81040000' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[270].target[0].code: The target code '16630005' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[271].target[0].code: The target code '72696002' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[272].target[0].code: The target code '72696002' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[273].target[0].code: The target code '78277001' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[274].target[0].code: The target code '72410000' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[275].target[0].code: The target code '71616004' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[276].target[0].code: The target code '4866005' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[277].target[0].code: The target code '78076003' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[278].target[0].code: The target code '78076003' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[279].target[0].code: The target code '79368004' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[28].target[0].code: The target code '36765005' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[280].target[0].code: The target code '52927003' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[281].target[0].code: The target code '71836000' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[282].target[0].code: The target code '59441001' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[283].target[0].code: The target code '16051009' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[284].target[0].code: The target code '16051009' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[285].target[0].code: The target code '16051009' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[286].target[0].code: The target code '16051009' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[287].target[0].code: The target code '16051009' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[288].target[0].code: The target code '283001' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[289].target[0].code: The target code '68171009' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[29].target[0].code: The target code '36765005' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[290].target[0].code: The target code '68171009' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[291].target[0].code: The target code '68171009' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[292].target[0].code: The target code '68171009' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[293].target[0].code: The target code '68171009' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[294].target[0].code: The target code '68171009' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[295].target[0].code: The target code '68171009' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[296].target[0].code: The target code '33770006' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[297].target[0].code: The target code '33770006' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[298].target[0].code: The target code '33770006' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[299].target[0].code: The target code '69691007' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[3].target[0].code: The target code '69105007' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[30].target[0].code: The target code '36765005' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[300].target[0].code: The target code '69691007' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[301].target[0].code: The target code '69691007' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[302].target[0].code: The target code '68171009' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[303].target[0].code: The target code '12196003' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[304].target[0].code: The target code '12196003' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[305].target[0].code: The target code '12196003' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[306].target[0].code: The target code '196821008' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[307].target[0].code: The target code '196821008' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[308].target[0].code: The target code '196821008' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[309].target[0].code: The target code '279816002' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[31].target[0].code: The target code '85234005' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[310].target[0].code: The target code '279816002' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[311].target[0].code: The target code '279816002' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[312].target[0].code: The target code '196751009' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[313].target[0].code: The target code '65349008' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[314].target[0].code: The target code '245357003' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[315].target[0].code: The target code '84219008' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[316].target[0].code: The target code '65349008' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[317].target[0].code: The target code '65349008' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[318].target[0].code: The target code '245299000' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[319].target[0].code: The target code '245295006' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[32].target[0].code: The target code '85234005' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[320].target[0].code: The target code '245295006' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[321].target[0].code: The target code '245282001' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[322].target[0].code: The target code '245282001' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[323].target[0].code: The target code '245282001' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[324].target[0].code: The target code '279763008' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[325].target[0].code: The target code '279763008' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[326].target[0].code: The target code '279763008' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[327].target[0].code: The target code '64038003' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[328].target[0].code: The target code '59441001' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[329].target[0].code: The target code '127938006' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[33].target[0].code: The target code '85234005' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[330].target[0].code: The target code '245299000' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[331].target[0].code: The target code '62683002' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[332].target[0].code: The target code '81105003' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[333].target[0].code: The target code '81105003' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[334].target[0].code: The target code '81105003' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[335].target[0].code: The target code '81105003' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[336].target[0].code: The target code '81105003' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[337].target[0].code: The target code '81105003' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[338].target[0].code: The target code '81105003' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[339].target[0].code: The target code '81105003' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[34].target[0].code: The target code '37783008' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[340].target[0].code: The target code '81105003' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[341].target[0].code: The target code '81105003' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[342].target[0].code: The target code '81105003' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[343].target[0].code: The target code '81105003' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[344].target[0].code: The target code '81105003' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[345].target[0].code: The target code '81105003' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[346].target[0].code: The target code '81105003' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[347].target[0].code: The target code '81105003' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[348].target[0].code: The target code '81105003' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[349].target[0].code: The target code '81105003' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[35].target[0].code: The target code '37783008' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[350].target[0].code: The target code '81105003' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[351].target[0].code: The target code '81105003' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[352].target[0].code: The target code '81105003' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[353].target[0].code: The target code '81105003' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[354].target[0].code: The target code '81105003' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[355].target[0].code: The target code '81105003' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[356].target[0].code: The target code '81105003' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[357].target[0].code: The target code '81105003' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[358].target[0].code: The target code '81105003' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[359].target[0].code: The target code '81105003' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[36].target[0].code: The target code '37783008' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[360].target[0].code: The target code '81105003' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[361].target[0].code: The target code '81105003' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[362].target[0].code: The target code '81105003' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[363].target[0].code: The target code '81105003' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[364].target[0].code: The target code '81105003' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[365].target[0].code: The target code '81105003' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[366].target[0].code: The target code '81105003' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[367].target[0].code: The target code '81105003' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[368].target[0].code: The target code '81105003' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[369].target[0].code: The target code '81105003' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[37].target[0].code: The target code '89187006' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[370].target[0].code: The target code '81105003' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[371].target[0].code: The target code '36086000' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[372].target[0].code: The target code '36086000' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[373].target[0].code: The target code '35783009' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[374].target[0].code: The target code '368550005' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[375].target[0].code: The target code '368550005' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[376].target[0].code: The target code '368550005' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[377].target[0].code: The target code '82365008' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[378].target[0].code: The target code '82365008' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[379].target[0].code: The target code '82365008' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[38].target[0].code: The target code '89187006' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[380].target[0].code: The target code '245294005' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[381].target[0].code: The target code '245294005' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[382].target[0].code: The target code '245294005' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[383].target[0].code: The target code '245288002' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[384].target[0].code: The target code '45206002' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[385].target[0].code: The target code '1187336003' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[386].target[0].code: The target code '1187336003' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[387].target[0].code: The target code '196662004' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[388].target[0].code: The target code '196662004' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[389].target[0].code: The target code '196662004' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[39].target[0].code: The target code '123956007' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[390].target[0].code: The target code '59441001' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[391].target[0].code: The target code '76838003' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[392].target[0].code: The target code '76838003' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[393].target[0].code: The target code '245283006' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[394].target[0].code: The target code '245283006' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[395].target[0].code: The target code '245283006' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[396].target[0].code: The target code '84782009' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[397].target[0].code: The target code '83251001' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[398].target[0].code: The target code '83251001' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[399].target[0].code: The target code '40958000' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[4].target[0].code: The target code '69105007' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[40].target[0].code: The target code '66754008' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[400].target[0].code: The target code '31065004' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[401].target[0].code: The target code '31065004' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[402].target[0].code: The target code '244453006' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[403].target[0].code: The target code '16630005' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[404].target[0].code: The target code '16630005' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[405].target[0].code: The target code '18234004' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[406].target[0].code: The target code '78277001' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[407].target[0].code: The target code '78277001' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[408].target[0].code: The target code '39607008' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[409].target[0].code: The target code '31094006' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[41].target[0].code: The target code '77578007' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[410].target[0].code: The target code '31094006' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[411].target[0].code: The target code '31094006' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[412].target[0].code: The target code '31094006' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[413].target[0].code: The target code '31094006' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[414].target[0].code: The target code '31094006' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[415].target[0].code: The target code '39607008' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[416].target[0].code: The target code '34080009' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[417].target[0].code: The target code '34080009' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[418].target[0].code: The target code '34080009' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[419].target[0].code: The target code '70925003' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[42].target[0].code: The target code '77578007' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[420].target[0].code: The target code '70925003' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[421].target[0].code: The target code '70925003' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[422].target[0].code: The target code '363654007' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[423].target[0].code: The target code '363654007' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[424].target[0].code: The target code '31389004' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[425].target[0].code: The target code '4866005' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[426].target[0].code: The target code '4866005' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[427].target[0].code: The target code '4866005' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[428].target[0].code: The target code '52410001' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[429].target[0].code: The target code '52410001' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[43].target[0].code: The target code '77578007' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[430].target[0].code: The target code '15497006' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[431].target[0].code: The target code '79368004' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[432].target[0].code: The target code '79368004' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[433].target[0].code: The target code '18252004' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[434].target[0].code: The target code '18252004' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[435].target[0].code: The target code '76738006' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[436].target[0].code: The target code '76738006' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[437].target[0].code: The target code '22823000' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[438].target[0].code: The target code '22823000' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[439].target[0].code: The target code '52927003' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[44].target[0].code: The target code '59652004' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[440].target[0].code: The target code '49460000' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[441].target[0].code: The target code '46607005' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[442].target[0].code: The target code '46607005' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[443].target[0].code: The target code '15776009' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[444].target[0].code: The target code '64163001' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[445].target[0].code: The target code '73239005' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[446].target[0].code: The target code '45682005' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[447].target[0].code: The target code '45289007' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[448].target[0].code: The target code '52737000' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[449].target[0].code: The target code '18234004' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[45].target[0].code: The target code '59652004' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[450].target[0].code: The target code '18234004' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[451].target[0].code: The target code '18911002' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[452].target[0].code: The target code '76848001' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[453].target[0].code: The target code '38864007' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[454].target[0].code: The target code '118762006' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[455].target[0].code: The target code '15497006' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[456].target[0].code: The target code '15497006' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[457].target[0].code: The target code '14106009' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[458].target[0].code: The target code '54066008' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[459].target[0].code: The target code '110822002' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[46].target[0].code: The target code '59652004' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[460].target[0].code: The target code '45793000' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[461].target[0].code: The target code '56329008' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[462].target[0].code: The target code '49557009' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[463].target[0].code: The target code '41216001' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[464].target[0].code: The target code '45289007' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[465].target[0].code: The target code '45289007' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[466].target[0].code: The target code '1162492000' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[467].target[0].code: The target code '88938001' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[468].target[0].code: The target code '88938001' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[469].target[0].code: The target code '85002005' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[47].target[0].code: The target code '79741001' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[470].target[0].code: The target code '85002005' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[471].target[0].code: The target code '511000202101' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[472].target[0].code: The target code '34402009' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[473].target[0].code: The target code '62397004' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[474].target[0].code: The target code '41695006' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[475].target[0].code: The target code '67183008' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[476].target[0].code: The target code '67183008' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[477].target[0].code: The target code '124002' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[478].target[0].code: The target code '124002' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[479].target[0].code: The target code '12402003' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[48].target[0].code: The target code '89837001' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[480].target[0].code: The target code '12402003' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[481].target[0].code: The target code '20233005' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[482].target[0].code: The target code '64739004' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[483].target[0].code: The target code '64739004' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[484].target[0].code: The target code '64739004' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[485].target[0].code: The target code '54215007' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[486].target[0].code: The target code '82561000' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[487].target[0].code: The target code '82561000' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[488].target[0].code: The target code '82561000' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[489].target[0].code: The target code '62413002' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[49].target[0].code: The target code '393006' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[490].target[0].code: The target code '62413002' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[491].target[0].code: The target code '55060009' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[492].target[0].code: The target code '15924003' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[493].target[0].code: The target code '5665001' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[494].target[0].code: The target code '5665001' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[495].target[0].code: The target code '5665001' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[496].target[0].code: The target code '113197003' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[497].target[0].code: The target code '48535007' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[498].target[0].code: The target code '48535007' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[499].target[0].code: The target code '78247007' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[5].target[0].code: The target code '69105007' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[50].target[0].code: The target code '119186007' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[500].target[0].code: The target code '78247007' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[501].target[0].code: The target code '25888004' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[502].target[0].code: The target code '25888004' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[503].target[0].code: The target code '25523003' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[504].target[0].code: The target code '25523003' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[505].target[0].code: The target code '15339008' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[506].target[0].code: The target code '15339008' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[507].target[0].code: The target code '59558009' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[508].target[0].code: The target code '59558009' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[509].target[0].code: The target code '24915002' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[51].target[0].code: The target code '52374004' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[510].target[0].code: The target code '24915002' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[511].target[0].code: The target code '5953002' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[512].target[0].code: The target code '5953002' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[513].target[0].code: The target code '22565002' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[514].target[0].code: The target code '22565002' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[515].target[0].code: The target code '77644006' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[516].target[0].code: The target code '77644006' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[517].target[0].code: The target code '58830002' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[518].target[0].code: The target code '58830002' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[519].target[0].code: The target code '43993008' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[52].target[0].code: The target code '74872008' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[520].target[0].code: The target code '43993008' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[521].target[0].code: The target code '39937001' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[522].target[0].code: The target code '1193560003' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[523].target[0].code: The target code '1193560003' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[524].target[0].code: The target code '48014002' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[525].target[0].code: The target code '79601000' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[526].target[0].code: The target code '79601000' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[527].target[0].code: The target code '75093004' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[528].target[0].code: The target code '789564000' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[529].target[0].code: The target code '1193554003' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[53].target[0].code: The target code '21387005' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[530].target[0].code: The target code '76838003' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[531].target[0].code: The target code '76838003' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[532].target[0].code: The target code '55060009' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[533].target[0].code: The target code '55060009' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[534].target[0].code: The target code '41178004' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[535].target[0].code: The target code '15924003' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[536].target[0].code: The target code '15924003' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[537].target[0].code: The target code '61853006' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[538].target[0].code: The target code '24999009' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[539].target[0].code: The target code '24999009' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[54].target[0].code: The target code '22356005' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[540].target[0].code: The target code '2748008' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[541].target[0].code: The target code '54785003' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[542].target[0].code: The target code '60051002' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[543].target[0].code: The target code '89546000' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[544].target[0].code: The target code '11478001' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[545].target[0].code: The target code '50800009' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[546].target[0].code: The target code '25270003' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[547].target[0].code: The target code '789564000' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[548].target[0].code: The target code '789564000' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[549].target[0].code: The target code '22718006' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[55].target[0].code: The target code '22356005' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[550].target[0].code: The target code '69695003' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[551].target[0].code: The target code '1193554003' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[552].target[0].code: The target code '1193554003' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[553].target[0].code: The target code '75415000' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[554].target[0].code: The target code '67548002' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[555].target[0].code: The target code '13014005' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[556].target[0].code: The target code '8997002' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[557].target[0].code: The target code '13024002' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[558].target[0].code: The target code '70567001' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[559].target[0].code: The target code '40689003' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[56].target[0].code: The target code '22356005' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[560].target[0].code: The target code '37554007' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[561].target[0].code: The target code '1732005' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[562].target[0].code: The target code '78961009' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[563].target[0].code: The target code '35378004' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[564].target[0].code: The target code '21974007' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[565].target[0].code: The target code '181226008' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[566].target[0].code: The target code '22718006' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[567].target[0].code: The target code '22718006' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[568].target[0].code: The target code '47975008' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[569].target[0].code: The target code '61344008' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[57].target[0].code: The target code '421793000' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[570].target[0].code: The target code '61344008' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[571].target[0].code: The target code '44567001' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[572].target[0].code: The target code '44567001' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[573].target[0].code: The target code '87953007' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[574].target[0].code: The target code '13648007' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[575].target[0].code: The target code '71553001' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[576].target[0].code: The target code '40689003' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[577].target[0].code: The target code '40689003' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[578].target[0].code: The target code '35039007' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[579].target[0].code: The target code '72107004' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[58].target[0].code: The target code '421793000' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[580].target[0].code: The target code '8887007' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[581].target[0].code: The target code '8887007' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[582].target[0].code: The target code '63507001' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[583].target[0].code: The target code '47975008' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[584].target[0].code: The target code '47975008' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[585].target[0].code: The target code '63507001' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[586].target[0].code: The target code '40300007' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[587].target[0].code: The target code '61344008' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[588].target[0].code: The target code '75573002' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[589].target[0].code: The target code '40300007' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[59].target[0].code: The target code '421793000' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[590].target[0].code: The target code '46027005' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[591].target[0].code: The target code '1162492000' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[592].target[0].code: The target code '87953007' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[593].target[0].code: The target code '87953007' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[594].target[0].code: The target code '46027005' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[595].target[0].code: The target code '71585003' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[596].target[0].code: The target code '71585003' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[597].target[0].code: The target code '12123001' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[598].target[0].code: The target code '12123001' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[599].target[0].code: The target code '32764006' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[6].target[0].code: The target code '57850000' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[60].target[0].code: The target code '85710004' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[600].target[0].code: The target code '430757002' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[601].target[0].code: The target code '9454009' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[602].target[0].code: The target code '35532006' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[603].target[0].code: The target code '35532006' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[604].target[0].code: The target code '76784001' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[605].target[0].code: The target code '279894000' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[606].target[0].code: The target code '438074005' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[607].target[0].code: The target code '17401000' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[608].target[0].code: The target code '63190004' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[609].target[0].code: The target code '91134007' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[61].target[0].code: The target code '85710004' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[610].target[0].code: The target code '39057004' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[611].target[0].code: The target code '46030003' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[612].target[0].code: The target code '21814001' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[613].target[0].code: The target code '21814001' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[614].target[0].code: The target code '21814001' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[615].target[0].code: The target code '9454009' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[616].target[0].code: The target code '9454009' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[617].target[0].code: The target code '46105003' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[618].target[0].code: The target code '45292006' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[619].target[0].code: The target code '263355003' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[62].target[0].code: The target code '6229007' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[620].target[0].code: The target code '38266002' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[621].target[0].code: The target code '75330005' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[622].target[0].code: The target code '52940008' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[623].target[0].code: The target code '15328005' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[624].target[0].code: The target code '34202007' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[625].target[0].code: The target code '1172006' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[626].target[0].code: The target code '123037004' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[627].target[0].code: The target code '3572006' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[628].target[0].code: The target code '3572006' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[629].target[0].code: The target code '14806007' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[63].target[0].code: The target code '6229007' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[630].target[0].code: The target code '39976000' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[631].target[0].code: The target code '91116008' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[632].target[0].code: The target code '14705001' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[633].target[0].code: The target code '67479001' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[634].target[0].code: The target code '88298007' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[635].target[0].code: The target code '16126006' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[636].target[0].code: The target code '73903008' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[637].target[0].code: The target code '61032001' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[638].target[0].code: The target code '53983007' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[639].target[0].code: The target code '55492004' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[64].target[0].code: The target code '6229007' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[640].target[0].code: The target code '71996003' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[641].target[0].code: The target code '21799000' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[642].target[0].code: The target code '87141009' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[643].target[0].code: The target code '65985001' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[644].target[0].code: The target code '11808007' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[645].target[0].code: The target code '49967005' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[646].target[0].code: The target code '69950008' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[647].target[0].code: The target code '21452006' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[648].target[0].code: The target code '35769007' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[649].target[0].code: The target code '56094003' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[65].target[0].code: The target code '91609006' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[650].target[0].code: The target code '50060007' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[651].target[0].code: The target code '73138009' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[652].target[0].code: The target code '86197001' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[653].target[0].code: The target code '6105006' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[654].target[0].code: The target code '32430008' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[655].target[0].code: The target code '71737002' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[656].target[0].code: The target code '77435000' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[657].target[0].code: The target code '33766003' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[658].target[0].code: The target code '48405002' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[659].target[0].code: The target code '52120002' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[66].target[0].code: The target code '59066005' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[660].target[0].code: The target code '280849005' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[661].target[0].code: The target code '1186895000' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[662].target[0].code: The target code '3572006' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[663].target[0].code: The target code '1187337007' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[664].target[0].code: The target code '35763008' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[665].target[0].code: The target code '46105003' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[666].target[0].code: The target code '46105003' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[667].target[0].code: The target code '1187336003' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[668].target[0].code: The target code '87166008' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[669].target[0].code: The target code '24999009' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[67].target[0].code: The target code '59066005' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[670].target[0].code: The target code '123037004' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[68].target[0].code: The target code '59066005' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[69].target[0].code: The target code '74386004' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[7].target[0].code: The target code '41801008' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[70].target[0].code: The target code '74386004' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[71].target[0].code: The target code '74386004' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[72].target[0].code: The target code '31640002' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[73].target[0].code: The target code '51283005' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[74].target[0].code: The target code '51283005' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[75].target[0].code: The target code '51283005' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[76].target[0].code: The target code '24924006' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[77].target[0].code: The target code '24924006' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[78].target[0].code: The target code '24924006' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[79].target[0].code: The target code '118645006' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[8].target[0].code: The target code '41801008' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[80].target[0].code: The target code '118645006' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[81].target[0].code: The target code '118645006' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[82].target[0].code: The target code '73117003' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[83].target[0].code: The target code '60911003' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[84].target[0].code: The target code '60911003' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[85].target[0].code: The target code '60911003' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[86].target[0].code: The target code '13881006' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[87].target[0].code: The target code '13881006' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[88].target[0].code: The target code '13881006' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[89].target[0].code: The target code '14016003' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[9].target[0].code: The target code '41801008' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[90].target[0].code: The target code '5798000' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[91].target[0].code: The target code '113276009' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[92].target[0].code: The target code '14742008' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[93].target[0].code: The target code '30315005' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[94].target[0].code: The target code '36582005' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[95].target[0].code: The target code '36582005' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[96].target[0].code: The target code '36582005' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[97].target[0].code: The target code '12738006' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[98].target[0].code: The target code '15926001' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].element[99].target[0].code: The target code '15926001' is not valid in the code system http://snomed.info/sct
+WARNING: ConceptMap/TG263CM: ConceptMap.group[0].source: Unknown Source Code System TG263, so the source codes cannot be checked
+WARNING: ConceptMap/TG263CM: ConceptMap.group[1].source: Unknown Source Code System TG263, so the source codes cannot be checked
+
+# SUPPRESS INFORMATION MESSAGES "CODE CANNOT BE VALIDATED"
+INFORMATION: Bundle/gx-genomic-bundle-incredible-hulk: Bundle.entry[10].resource/*Observation/gx-genomic-variant-somatic-mtap*/.component[0].value.ofType(CodeableConcept).coding[0]: Code System URI 'http://www.genenames.org' is unknown so the code cannot be validated
+INFORMATION: Bundle/gx-genomic-bundle-incredible-hulk: Bundle.entry[10].resource/*Observation/gx-genomic-variant-somatic-mtap*/.component[0].value.ofType(CodeableConcept).coding[1]: Code System URI 'https://www.ncbi.nlm.nih.gov/gene' is unknown so the code cannot be validated
+INFORMATION: Bundle/gx-genomic-bundle-incredible-hulk: Bundle.entry[10].resource/*Observation/gx-genomic-variant-somatic-mtap*/.component[2].value.ofType(CodeableConcept).coding[0]: Code System URI 'http://www.sequenceontology.org/' is unknown so the code cannot be validated
+INFORMATION: Bundle/gx-genomic-bundle-incredible-hulk: Bundle.entry[11].resource/*Observation/gx-genomic-variant-somatic-mycn*/.component[0].value.ofType(CodeableConcept).coding[0]: Code System URI 'http://www.genenames.org' is unknown so the code cannot be validated
+INFORMATION: Bundle/gx-genomic-bundle-incredible-hulk: Bundle.entry[11].resource/*Observation/gx-genomic-variant-somatic-mycn*/.component[0].value.ofType(CodeableConcept).coding[1]: Code System URI 'https://www.ncbi.nlm.nih.gov/gene' is unknown so the code cannot be validated
+INFORMATION: Bundle/gx-genomic-bundle-incredible-hulk: Bundle.entry[11].resource/*Observation/gx-genomic-variant-somatic-mycn*/.component[2].value.ofType(CodeableConcept).coding[0]: Code System URI 'http://www.sequenceontology.org/' is unknown so the code cannot be validated
+INFORMATION: Bundle/gx-genomic-bundle-incredible-hulk: Bundle.entry[12].resource/*Observation/gx-genomic-variant-somatic-pof1b*/.component[0].value.ofType(CodeableConcept).coding[0]: Code System URI 'http://www.genenames.org' is unknown so the code cannot be validated
+INFORMATION: Bundle/gx-genomic-bundle-incredible-hulk: Bundle.entry[12].resource/*Observation/gx-genomic-variant-somatic-pof1b*/.component[0].value.ofType(CodeableConcept).coding[1]: Code System URI 'https://www.ncbi.nlm.nih.gov/gene' is unknown so the code cannot be validated
+INFORMATION: Bundle/gx-genomic-bundle-incredible-hulk: Bundle.entry[12].resource/*Observation/gx-genomic-variant-somatic-pof1b*/.component[2].value.ofType(CodeableConcept).coding[0]: Code System URI 'http://www.sequenceontology.org/' is unknown so the code cannot be validated
+INFORMATION: Bundle/gx-genomic-bundle-incredible-hulk: Bundle.entry[12].resource/*Observation/gx-genomic-variant-somatic-pof1b*/.component[3].value.ofType(CodeableConcept).coding[0]: Code System URI 'http://www.ncbi.nlm.nih.gov/refseq' is unknown so the code cannot be validated
+INFORMATION: Bundle/gx-genomic-bundle-incredible-hulk: Bundle.entry[13].resource/*Observation/gx-genomic-variant-somatic-polrmt*/.component[0].value.ofType(CodeableConcept).coding[0]: Code System URI 'https://www.ncbi.nlm.nih.gov/gene' is unknown so the code cannot be validated
+INFORMATION: Bundle/gx-genomic-bundle-incredible-hulk: Bundle.entry[13].resource/*Observation/gx-genomic-variant-somatic-polrmt*/.component[2].value.ofType(CodeableConcept).coding[0]: Code System URI 'http://www.sequenceontology.org/' is unknown so the code cannot be validated
+INFORMATION: Bundle/gx-genomic-bundle-incredible-hulk: Bundle.entry[13].resource/*Observation/gx-genomic-variant-somatic-polrmt*/.component[3].value.ofType(CodeableConcept).coding[0]: Code System URI 'http://www.ncbi.nlm.nih.gov/refseq' is unknown so the code cannot be validated
+INFORMATION: Bundle/gx-genomic-bundle-incredible-hulk: Bundle.entry[16].resource/*Observation/gx-genomic-variant-fusion-met-alk*/.component[0].value.ofType(CodeableConcept).coding[0]: Code System URI 'http://www.genenames.org' is unknown so the code cannot be validated
+INFORMATION: Bundle/gx-genomic-bundle-incredible-hulk: Bundle.entry[16].resource/*Observation/gx-genomic-variant-fusion-met-alk*/.component[0].value.ofType(CodeableConcept).coding[1]: Code System URI 'https://www.ncbi.nlm.nih.gov/gene' is unknown so the code cannot be validated
+INFORMATION: Bundle/gx-genomic-bundle-incredible-hulk: Bundle.entry[16].resource/*Observation/gx-genomic-variant-fusion-met-alk*/.component[1].value.ofType(CodeableConcept).coding[0]: Code System URI 'http://www.genenames.org' is unknown so the code cannot be validated
+INFORMATION: Bundle/gx-genomic-bundle-incredible-hulk: Bundle.entry[16].resource/*Observation/gx-genomic-variant-fusion-met-alk*/.component[1].value.ofType(CodeableConcept).coding[1]: Code System URI 'https://www.ncbi.nlm.nih.gov/gene' is unknown so the code cannot be validated
+INFORMATION: Bundle/gx-genomic-bundle-incredible-hulk: Bundle.entry[16].resource/*Observation/gx-genomic-variant-fusion-met-alk*/.component[2].value.ofType(CodeableConcept).coding[0]: Code System URI 'http://www.sequenceontology.org/' is unknown so the code cannot be validated
+INFORMATION: Bundle/gx-genomic-bundle-incredible-hulk: Bundle.entry[17].resource/*Observation/gx-genomic-variant-pertinent-negative-nras-kit-braf*/.component[0].value.ofType(CodeableConcept).coding[0]: Code System URI 'http://www.genenames.org' is unknown so the code cannot be validated
+INFORMATION: Bundle/gx-genomic-bundle-incredible-hulk: Bundle.entry[17].resource/*Observation/gx-genomic-variant-pertinent-negative-nras-kit-braf*/.component[1].value.ofType(CodeableConcept).coding[0]: Code System URI 'http://www.genenames.org' is unknown so the code cannot be validated
+INFORMATION: Bundle/gx-genomic-bundle-incredible-hulk: Bundle.entry[17].resource/*Observation/gx-genomic-variant-pertinent-negative-nras-kit-braf*/.component[2].value.ofType(CodeableConcept).coding[0]: Code System URI 'http://www.genenames.org' is unknown so the code cannot be validated
+INFORMATION: Bundle/gx-genomic-bundle-incredible-hulk: Bundle.entry[2].resource/*ServiceRequest/gx-order-tumornormal-tempus-inc*/.code.coding[0]: Code System URI 'https://www.tempus.com' is unknown so the code cannot be validated
+INFORMATION: Bundle/gx-genomic-bundle-incredible-hulk: Bundle.entry[6].resource/*Observation/gx-genomic-variant-somatic-bap1-indel*/.component[0].value.ofType(CodeableConcept).coding[0]: Code System URI 'http://www.genenames.org' is unknown so the code cannot be validated
+INFORMATION: Bundle/gx-genomic-bundle-incredible-hulk: Bundle.entry[6].resource/*Observation/gx-genomic-variant-somatic-bap1-indel*/.component[0].value.ofType(CodeableConcept).coding[1]: Code System URI 'https://www.ncbi.nlm.nih.gov/gene' is unknown so the code cannot be validated
+INFORMATION: Bundle/gx-genomic-bundle-incredible-hulk: Bundle.entry[6].resource/*Observation/gx-genomic-variant-somatic-bap1-indel*/.component[1].value.ofType(CodeableConcept).coding[0]: Code System URI 'http://www.ncbi.nlm.nih.gov/refseq' is unknown so the code cannot be validated
+INFORMATION: Bundle/gx-genomic-bundle-incredible-hulk: Bundle.entry[6].resource/*Observation/gx-genomic-variant-somatic-bap1-indel*/.component[6].value.ofType(CodeableConcept).coding[0]: Code System URI 'http://www.sequenceontology.org/' is unknown so the code cannot be validated
+INFORMATION: Bundle/gx-genomic-bundle-incredible-hulk: Bundle.entry[6].resource/*Observation/gx-genomic-variant-somatic-bap1-indel*/.component[7].value.ofType(CodeableConcept).coding[0]: Code System URI 'http://www.sequenceontology.org/' is unknown so the code cannot be validated
+INFORMATION: Bundle/gx-genomic-bundle-incredible-hulk: Bundle.entry[7].resource/*Observation/gx-genomic-variant-somatic-cdkn2a-cnv*/.component[0].value.ofType(CodeableConcept).coding[0]: Code System URI 'http://www.genenames.org' is unknown so the code cannot be validated
+INFORMATION: Bundle/gx-genomic-bundle-incredible-hulk: Bundle.entry[7].resource/*Observation/gx-genomic-variant-somatic-cdkn2a-cnv*/.component[0].value.ofType(CodeableConcept).coding[1]: Code System URI 'https://www.ncbi.nlm.nih.gov/gene' is unknown so the code cannot be validated
+INFORMATION: Bundle/gx-genomic-bundle-incredible-hulk: Bundle.entry[7].resource/*Observation/gx-genomic-variant-somatic-cdkn2a-cnv*/.component[2].value.ofType(CodeableConcept).coding[0]: Code System URI 'http://www.sequenceontology.org/' is unknown so the code cannot be validated
+INFORMATION: Bundle/gx-genomic-bundle-incredible-hulk: Bundle.entry[8].resource/*Observation/gx-genomic-variant-somatic-cdkn2b-cnv*/.component[0].value.ofType(CodeableConcept).coding[0]: Code System URI 'http://www.genenames.org' is unknown so the code cannot be validated
+INFORMATION: Bundle/gx-genomic-bundle-incredible-hulk: Bundle.entry[8].resource/*Observation/gx-genomic-variant-somatic-cdkn2b-cnv*/.component[0].value.ofType(CodeableConcept).coding[1]: Code System URI 'https://www.ncbi.nlm.nih.gov/gene' is unknown so the code cannot be validated
+INFORMATION: Bundle/gx-genomic-bundle-incredible-hulk: Bundle.entry[8].resource/*Observation/gx-genomic-variant-somatic-cdkn2b-cnv*/.component[2].value.ofType(CodeableConcept).coding[0]: Code System URI 'http://www.sequenceontology.org/' is unknown so the code cannot be validated
+INFORMATION: Bundle/gx-genomic-bundle-incredible-hulk: Bundle.entry[9].resource/*Observation/gx-genomic-variant-somatic-kdm5d*/.component[0].value.ofType(CodeableConcept).coding[0]: Code System URI 'http://www.genenames.org' is unknown so the code cannot be validated
+INFORMATION: Bundle/gx-genomic-bundle-incredible-hulk: Bundle.entry[9].resource/*Observation/gx-genomic-variant-somatic-kdm5d*/.component[0].value.ofType(CodeableConcept).coding[1]: Code System URI 'https://www.ncbi.nlm.nih.gov/gene' is unknown so the code cannot be validated
+INFORMATION: Bundle/gx-genomic-bundle-incredible-hulk: Bundle.entry[9].resource/*Observation/gx-genomic-variant-somatic-kdm5d*/.component[2].value.ofType(CodeableConcept).coding[0]: Code System URI 'http://www.sequenceontology.org/' is unknown so the code cannot be validated
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[0].resource.extension[0].extension[0].value.ofType(Coding): Code System URI 'urn:oid:2.16.840.1.113883.6.238' is unknown so the code cannot be validated
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[0].resource.extension[1].extension[0].value.ofType(Coding): Code System URI 'urn:oid:2.16.840.1.113883.6.238' is unknown so the code cannot be validated
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[12].resource.entry[0].resource/*Patient/cancer-patient-jenny-m*/.extension[0].extension[0].value.ofType(Coding): Code System URI 'urn:oid:2.16.840.1.113883.6.238' is unknown so the code cannot be validated
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[12].resource.entry[0].resource/*Patient/cancer-patient-jenny-m*/.extension[1].extension[0].value.ofType(Coding): Code System URI 'urn:oid:2.16.840.1.113883.6.238' is unknown so the code cannot be validated
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[17].resource.component[0].value.ofType(CodeableConcept).coding[0]: Code System URI 'http://www.genenames.org' is unknown so the code cannot be validated
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[17].resource.component[0].value.ofType(CodeableConcept).coding[1]: Code System URI 'http://www.genenames.org' is unknown so the code cannot be validated
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[17].resource.component[0].value.ofType(CodeableConcept).coding[2]: Code System URI 'http://www.genenames.org' is unknown so the code cannot be validated
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[17].resource.component[0].value.ofType(CodeableConcept).coding[3]: Code System URI 'http://www.genenames.org' is unknown so the code cannot be validated
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[17].resource.component[0].value.ofType(CodeableConcept).coding[4]: Code System URI 'http://www.genenames.org' is unknown so the code cannot be validated
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[17].resource.component[0].value.ofType(CodeableConcept).coding[5]: Code System URI 'http://www.genenames.org' is unknown so the code cannot be validated
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[17].resource.component[0].value.ofType(CodeableConcept).coding[6]: Code System URI 'http://www.genenames.org' is unknown so the code cannot be validated
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[17].resource/*Observation/genomic-region-studied-jenny-m*/.component[0].value.ofType(CodeableConcept).coding[0]: Code System URI 'http://www.genenames.org' is unknown so the code cannot be validated (validating against http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genomic-region-studied|2023May [GenomicRegionStudied])
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[17].resource/*Observation/genomic-region-studied-jenny-m*/.component[0].value.ofType(CodeableConcept).coding[0]: Code System URI 'http://www.genenames.org' is unknown so the code cannot be validated (validating against http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab|5.0.1 [USCoreLaboratoryResultObservationProfile])
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[17].resource/*Observation/genomic-region-studied-jenny-m*/.component[0].value.ofType(CodeableConcept).coding[0]: Code System URI 'http://www.genenames.org' is unknown so the code cannot be validated (validating against http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-stage-group|2023May [CancerStageGroup])
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[17].resource/*Observation/genomic-region-studied-jenny-m*/.component[0].value.ofType(CodeableConcept).coding[1]: Code System URI 'http://www.genenames.org' is unknown so the code cannot be validated (validating against http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genomic-region-studied|2023May [GenomicRegionStudied])
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[17].resource/*Observation/genomic-region-studied-jenny-m*/.component[0].value.ofType(CodeableConcept).coding[1]: Code System URI 'http://www.genenames.org' is unknown so the code cannot be validated (validating against http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab|5.0.1 [USCoreLaboratoryResultObservationProfile])
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[17].resource/*Observation/genomic-region-studied-jenny-m*/.component[0].value.ofType(CodeableConcept).coding[1]: Code System URI 'http://www.genenames.org' is unknown so the code cannot be validated (validating against http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-stage-group|2023May [CancerStageGroup])
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[17].resource/*Observation/genomic-region-studied-jenny-m*/.component[0].value.ofType(CodeableConcept).coding[2]: Code System URI 'http://www.genenames.org' is unknown so the code cannot be validated (validating against http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genomic-region-studied|2023May [GenomicRegionStudied])
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[17].resource/*Observation/genomic-region-studied-jenny-m*/.component[0].value.ofType(CodeableConcept).coding[2]: Code System URI 'http://www.genenames.org' is unknown so the code cannot be validated (validating against http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab|5.0.1 [USCoreLaboratoryResultObservationProfile])
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[17].resource/*Observation/genomic-region-studied-jenny-m*/.component[0].value.ofType(CodeableConcept).coding[2]: Code System URI 'http://www.genenames.org' is unknown so the code cannot be validated (validating against http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-stage-group|2023May [CancerStageGroup])
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[17].resource/*Observation/genomic-region-studied-jenny-m*/.component[0].value.ofType(CodeableConcept).coding[3]: Code System URI 'http://www.genenames.org' is unknown so the code cannot be validated (validating against http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genomic-region-studied|2023May [GenomicRegionStudied])
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[17].resource/*Observation/genomic-region-studied-jenny-m*/.component[0].value.ofType(CodeableConcept).coding[3]: Code System URI 'http://www.genenames.org' is unknown so the code cannot be validated (validating against http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab|5.0.1 [USCoreLaboratoryResultObservationProfile])
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[17].resource/*Observation/genomic-region-studied-jenny-m*/.component[0].value.ofType(CodeableConcept).coding[3]: Code System URI 'http://www.genenames.org' is unknown so the code cannot be validated (validating against http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-stage-group|2023May [CancerStageGroup])
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[17].resource/*Observation/genomic-region-studied-jenny-m*/.component[0].value.ofType(CodeableConcept).coding[4]: Code System URI 'http://www.genenames.org' is unknown so the code cannot be validated (validating against http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genomic-region-studied|2023May [GenomicRegionStudied])
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[17].resource/*Observation/genomic-region-studied-jenny-m*/.component[0].value.ofType(CodeableConcept).coding[4]: Code System URI 'http://www.genenames.org' is unknown so the code cannot be validated (validating against http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab|5.0.1 [USCoreLaboratoryResultObservationProfile])
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[17].resource/*Observation/genomic-region-studied-jenny-m*/.component[0].value.ofType(CodeableConcept).coding[4]: Code System URI 'http://www.genenames.org' is unknown so the code cannot be validated (validating against http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-stage-group|2023May [CancerStageGroup])
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[17].resource/*Observation/genomic-region-studied-jenny-m*/.component[0].value.ofType(CodeableConcept).coding[5]: Code System URI 'http://www.genenames.org' is unknown so the code cannot be validated (validating against http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genomic-region-studied|2023May [GenomicRegionStudied])
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[17].resource/*Observation/genomic-region-studied-jenny-m*/.component[0].value.ofType(CodeableConcept).coding[5]: Code System URI 'http://www.genenames.org' is unknown so the code cannot be validated (validating against http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab|5.0.1 [USCoreLaboratoryResultObservationProfile])
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[17].resource/*Observation/genomic-region-studied-jenny-m*/.component[0].value.ofType(CodeableConcept).coding[5]: Code System URI 'http://www.genenames.org' is unknown so the code cannot be validated (validating against http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-stage-group|2023May [CancerStageGroup])
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[17].resource/*Observation/genomic-region-studied-jenny-m*/.component[0].value.ofType(CodeableConcept).coding[6]: Code System URI 'http://www.genenames.org' is unknown so the code cannot be validated (validating against http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genomic-region-studied|2023May [GenomicRegionStudied])
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[17].resource/*Observation/genomic-region-studied-jenny-m*/.component[0].value.ofType(CodeableConcept).coding[6]: Code System URI 'http://www.genenames.org' is unknown so the code cannot be validated (validating against http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab|5.0.1 [USCoreLaboratoryResultObservationProfile])
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[17].resource/*Observation/genomic-region-studied-jenny-m*/.component[0].value.ofType(CodeableConcept).coding[6]: Code System URI 'http://www.genenames.org' is unknown so the code cannot be validated (validating against http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-stage-group|2023May [CancerStageGroup])
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[22].resource.code.coding[0]: Code System URI 'http://www.ncbi.nlm.nih.gov/gtr' is unknown so the code cannot be validated
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[22].resource/*Observation/tumor-marker-test-oncotype-dx-jenny-m*/.code.coding[0]: Code System URI 'http://www.ncbi.nlm.nih.gov/gtr' is unknown so the code cannot be validated
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[22].resource/*Observation/tumor-marker-test-oncotype-dx-jenny-m*/.code.coding[0]: Code System URI 'http://www.ncbi.nlm.nih.gov/gtr' is unknown so the code cannot be validated (validating against http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tumor-marker-test|2023May [TumorMarkerTest])
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[22].resource/*Observation/tumor-marker-test-oncotype-dx-jenny-m*/.code.coding[0]: Code System URI 'http://www.ncbi.nlm.nih.gov/gtr' is unknown so the code cannot be validated (validating against http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab|5.0.1 [USCoreLaboratoryResultObservationProfile])
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[7].resource.component[0].value.ofType(CodeableConcept).coding[0]: Code System URI 'http://www.genenames.org' is unknown so the code cannot be validated
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[7].resource.component[1].value.ofType(CodeableConcept).coding[0]: Code System URI 'http://www.ncbi.nlm.nih.gov/clinvar' is unknown so the code cannot be validated
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[7].resource/*Observation/genomic-variant-jenny-m*/.component[0].value.ofType(CodeableConcept).coding[0]: Code System URI 'http://www.genenames.org' is unknown so the code cannot be validated (validating against http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tumor-marker-test|2023May [TumorMarkerTest])
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[7].resource/*Observation/genomic-variant-jenny-m*/.component[0].value.ofType(CodeableConcept).coding[0]: Code System URI 'http://www.genenames.org' is unknown so the code cannot be validated (validating against http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab|5.0.1 [USCoreLaboratoryResultObservationProfile])
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[7].resource/*Observation/genomic-variant-jenny-m*/.component[0].value.ofType(CodeableConcept).coding[0]: Code System URI 'http://www.genenames.org' is unknown so the code cannot be validated (validating against http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genomic-variant|2023May [GenomicVariant])
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[7].resource/*Observation/genomic-variant-jenny-m*/.component[0].value.ofType(CodeableConcept).coding[0]: Code System URI 'http://www.genenames.org' is unknown so the code cannot be validated (validating against http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-stage-group|2023May [CancerStageGroup])
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[7].resource/*Observation/genomic-variant-jenny-m*/.component[1].value.ofType(CodeableConcept).coding[0]: Code System URI 'http://www.ncbi.nlm.nih.gov/clinvar' is unknown so the code cannot be validated (validating against http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tumor-marker-test|2023May [TumorMarkerTest])
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[7].resource/*Observation/genomic-variant-jenny-m*/.component[1].value.ofType(CodeableConcept).coding[0]: Code System URI 'http://www.ncbi.nlm.nih.gov/clinvar' is unknown so the code cannot be validated (validating against http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab|5.0.1 [USCoreLaboratoryResultObservationProfile])
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[7].resource/*Observation/genomic-variant-jenny-m*/.component[1].value.ofType(CodeableConcept).coding[0]: Code System URI 'http://www.ncbi.nlm.nih.gov/clinvar' is unknown so the code cannot be validated (validating against http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genomic-variant|2023May [GenomicVariant])
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[7].resource/*Observation/genomic-variant-jenny-m*/.component[1].value.ofType(CodeableConcept).coding[0]: Code System URI 'http://www.ncbi.nlm.nih.gov/clinvar' is unknown so the code cannot be validated (validating against http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-stage-group|2023May [CancerStageGroup])
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[8].resource.entry[17].resource/*Observation/genomic-region-studied-jenny-m*/.component[0].value.ofType(CodeableConcept).coding[0]: Code System URI 'http://www.genenames.org' is unknown so the code cannot be validated
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[8].resource.entry[17].resource/*Observation/genomic-region-studied-jenny-m*/.component[0].value.ofType(CodeableConcept).coding[1]: Code System URI 'http://www.genenames.org' is unknown so the code cannot be validated
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[8].resource.entry[17].resource/*Observation/genomic-region-studied-jenny-m*/.component[0].value.ofType(CodeableConcept).coding[2]: Code System URI 'http://www.genenames.org' is unknown so the code cannot be validated
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[8].resource.entry[17].resource/*Observation/genomic-region-studied-jenny-m*/.component[0].value.ofType(CodeableConcept).coding[3]: Code System URI 'http://www.genenames.org' is unknown so the code cannot be validated
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[8].resource.entry[17].resource/*Observation/genomic-region-studied-jenny-m*/.component[0].value.ofType(CodeableConcept).coding[4]: Code System URI 'http://www.genenames.org' is unknown so the code cannot be validated
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[8].resource.entry[17].resource/*Observation/genomic-region-studied-jenny-m*/.component[0].value.ofType(CodeableConcept).coding[5]: Code System URI 'http://www.genenames.org' is unknown so the code cannot be validated
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[8].resource.entry[17].resource/*Observation/genomic-region-studied-jenny-m*/.component[0].value.ofType(CodeableConcept).coding[6]: Code System URI 'http://www.genenames.org' is unknown so the code cannot be validated
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[8].resource.entry[7].resource/*Observation/genomic-variant-jenny-m*/.component[0].value.ofType(CodeableConcept).coding[0]: Code System URI 'http://www.genenames.org' is unknown so the code cannot be validated
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[8].resource.entry[7].resource/*Observation/genomic-variant-jenny-m*/.component[1].value.ofType(CodeableConcept).coding[0]: Code System URI 'http://www.ncbi.nlm.nih.gov/clinvar' is unknown so the code cannot be validated
+INFORMATION: Condition/primary-cancer-condition-cll: Condition.stage[0].summary.coding[0]: Code System URI 'http://terminology.hl7.org/CodeSystem/umls' is unknown so the code cannot be validated
+INFORMATION: Group/group-mcode-patients: Group.code.coding[0]: Code System URI 'http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl' is unknown so the code cannot be validated
+INFORMATION: Observation/binet-stage-group-A: Observation.value.ofType(CodeableConcept).coding[0]: Code System URI 'http://terminology.hl7.org/CodeSystem/umls' is unknown so the code cannot be validated
+INFORMATION: Observation/genomic-region-studied-jenny-m: Observation.component[0].value.ofType(CodeableConcept).coding[0]: Code System URI 'http://www.genenames.org' is unknown so the code cannot be validated
+INFORMATION: Observation/genomic-region-studied-jenny-m: Observation.component[0].value.ofType(CodeableConcept).coding[1]: Code System URI 'http://www.genenames.org' is unknown so the code cannot be validated
+INFORMATION: Observation/genomic-region-studied-jenny-m: Observation.component[0].value.ofType(CodeableConcept).coding[2]: Code System URI 'http://www.genenames.org' is unknown so the code cannot be validated
+INFORMATION: Observation/genomic-region-studied-jenny-m: Observation.component[0].value.ofType(CodeableConcept).coding[3]: Code System URI 'http://www.genenames.org' is unknown so the code cannot be validated
+INFORMATION: Observation/genomic-region-studied-jenny-m: Observation.component[0].value.ofType(CodeableConcept).coding[4]: Code System URI 'http://www.genenames.org' is unknown so the code cannot be validated
+INFORMATION: Observation/genomic-region-studied-jenny-m: Observation.component[0].value.ofType(CodeableConcept).coding[5]: Code System URI 'http://www.genenames.org' is unknown so the code cannot be validated
+INFORMATION: Observation/genomic-region-studied-jenny-m: Observation.component[0].value.ofType(CodeableConcept).coding[6]: Code System URI 'http://www.genenames.org' is unknown so the code cannot be validated
+INFORMATION: Observation/genomic-region-studied-stk11: Observation.component[0].value.ofType(CodeableConcept).coding[0]: Code System URI 'http://www.genenames.org' is unknown so the code cannot be validated
+INFORMATION: Observation/genomic-variant-fusion: Observation.component[0].value.ofType(CodeableConcept).coding[0]: Code System URI 'http://www.genenames.org' is unknown so the code cannot be validated
+INFORMATION: Observation/genomic-variant-fusion: Observation.component[1].value.ofType(CodeableConcept).coding[0]: Code System URI 'http://www.genenames.org' is unknown so the code cannot be validated
+INFORMATION: Observation/genomic-variant-germline-deletion: Observation.component[0].value.ofType(CodeableConcept).coding[0]: Code System URI 'http://www.genenames.org' is unknown so the code cannot be validated
+INFORMATION: Observation/genomic-variant-jenny-m: Observation.component[0].value.ofType(CodeableConcept).coding[0]: Code System URI 'http://www.genenames.org' is unknown so the code cannot be validated
+INFORMATION: Observation/genomic-variant-jenny-m: Observation.component[1].value.ofType(CodeableConcept).coding[0]: Code System URI 'http://www.ncbi.nlm.nih.gov/clinvar' is unknown so the code cannot be validated
+INFORMATION: Observation/genomic-variant-somatic-single-nucleotide: Observation.component[0].value.ofType(CodeableConcept).coding[0]: Code System URI 'http://www.genenames.org' is unknown so the code cannot be validated
+INFORMATION: Observation/genomic-variant-somatic-single-nucleotide: Observation.component[1].value.ofType(CodeableConcept).coding[0]: Code System URI 'http://www.ncbi.nlm.nih.gov/clinvar' is unknown so the code cannot be validated
+INFORMATION: Observation/gx-genomic-variant-fusion-met-alk: Observation.component[0].value.ofType(CodeableConcept).coding[0]: Code System URI 'http://www.genenames.org' is unknown so the code cannot be validated
+INFORMATION: Observation/gx-genomic-variant-fusion-met-alk: Observation.component[0].value.ofType(CodeableConcept).coding[1]: Code System URI 'https://www.ncbi.nlm.nih.gov/gene' is unknown so the code cannot be validated
+INFORMATION: Observation/gx-genomic-variant-fusion-met-alk: Observation.component[1].value.ofType(CodeableConcept).coding[0]: Code System URI 'http://www.genenames.org' is unknown so the code cannot be validated
+INFORMATION: Observation/gx-genomic-variant-fusion-met-alk: Observation.component[1].value.ofType(CodeableConcept).coding[1]: Code System URI 'https://www.ncbi.nlm.nih.gov/gene' is unknown so the code cannot be validated
+INFORMATION: Observation/gx-genomic-variant-fusion-met-alk: Observation.component[2].value.ofType(CodeableConcept).coding[0]: Code System URI 'http://www.sequenceontology.org/' is unknown so the code cannot be validated
+INFORMATION: Observation/gx-genomic-variant-pertinent-negative-nras-kit-braf: Observation.component[0].value.ofType(CodeableConcept).coding[0]: Code System URI 'http://www.genenames.org' is unknown so the code cannot be validated
+INFORMATION: Observation/gx-genomic-variant-pertinent-negative-nras-kit-braf: Observation.component[1].value.ofType(CodeableConcept).coding[0]: Code System URI 'http://www.genenames.org' is unknown so the code cannot be validated
+INFORMATION: Observation/gx-genomic-variant-pertinent-negative-nras-kit-braf: Observation.component[2].value.ofType(CodeableConcept).coding[0]: Code System URI 'http://www.genenames.org' is unknown so the code cannot be validated
+INFORMATION: Observation/gx-genomic-variant-somatic-bap1-indel: Observation.component[0].value.ofType(CodeableConcept).coding[0]: Code System URI 'http://www.genenames.org' is unknown so the code cannot be validated
+INFORMATION: Observation/gx-genomic-variant-somatic-bap1-indel: Observation.component[0].value.ofType(CodeableConcept).coding[1]: Code System URI 'https://www.ncbi.nlm.nih.gov/gene' is unknown so the code cannot be validated
+INFORMATION: Observation/gx-genomic-variant-somatic-bap1-indel: Observation.component[1].value.ofType(CodeableConcept).coding[0]: Code System URI 'http://www.ncbi.nlm.nih.gov/refseq' is unknown so the code cannot be validated
+INFORMATION: Observation/gx-genomic-variant-somatic-bap1-indel: Observation.component[6].value.ofType(CodeableConcept).coding[0]: Code System URI 'http://www.sequenceontology.org/' is unknown so the code cannot be validated
+INFORMATION: Observation/gx-genomic-variant-somatic-bap1-indel: Observation.component[7].value.ofType(CodeableConcept).coding[0]: Code System URI 'http://www.sequenceontology.org/' is unknown so the code cannot be validated
+INFORMATION: Observation/gx-genomic-variant-somatic-cdkn2a-cnv: Observation.component[0].value.ofType(CodeableConcept).coding[0]: Code System URI 'http://www.genenames.org' is unknown so the code cannot be validated
+INFORMATION: Observation/gx-genomic-variant-somatic-cdkn2a-cnv: Observation.component[0].value.ofType(CodeableConcept).coding[1]: Code System URI 'https://www.ncbi.nlm.nih.gov/gene' is unknown so the code cannot be validated
+INFORMATION: Observation/gx-genomic-variant-somatic-cdkn2a-cnv: Observation.component[2].value.ofType(CodeableConcept).coding[0]: Code System URI 'http://www.sequenceontology.org/' is unknown so the code cannot be validated
+INFORMATION: Observation/gx-genomic-variant-somatic-cdkn2b-cnv: Observation.component[0].value.ofType(CodeableConcept).coding[0]: Code System URI 'http://www.genenames.org' is unknown so the code cannot be validated
+INFORMATION: Observation/gx-genomic-variant-somatic-cdkn2b-cnv: Observation.component[0].value.ofType(CodeableConcept).coding[1]: Code System URI 'https://www.ncbi.nlm.nih.gov/gene' is unknown so the code cannot be validated
+INFORMATION: Observation/gx-genomic-variant-somatic-cdkn2b-cnv: Observation.component[2].value.ofType(CodeableConcept).coding[0]: Code System URI 'http://www.sequenceontology.org/' is unknown so the code cannot be validated
+INFORMATION: Observation/gx-genomic-variant-somatic-kdm5d: Observation.component[0].value.ofType(CodeableConcept).coding[0]: Code System URI 'http://www.genenames.org' is unknown so the code cannot be validated
+INFORMATION: Observation/gx-genomic-variant-somatic-kdm5d: Observation.component[0].value.ofType(CodeableConcept).coding[1]: Code System URI 'https://www.ncbi.nlm.nih.gov/gene' is unknown so the code cannot be validated
+INFORMATION: Observation/gx-genomic-variant-somatic-kdm5d: Observation.component[2].value.ofType(CodeableConcept).coding[0]: Code System URI 'http://www.sequenceontology.org/' is unknown so the code cannot be validated
+INFORMATION: Observation/gx-genomic-variant-somatic-mtap: Observation.component[0].value.ofType(CodeableConcept).coding[0]: Code System URI 'http://www.genenames.org' is unknown so the code cannot be validated
+INFORMATION: Observation/gx-genomic-variant-somatic-mtap: Observation.component[0].value.ofType(CodeableConcept).coding[1]: Code System URI 'https://www.ncbi.nlm.nih.gov/gene' is unknown so the code cannot be validated
+INFORMATION: Observation/gx-genomic-variant-somatic-mtap: Observation.component[2].value.ofType(CodeableConcept).coding[0]: Code System URI 'http://www.sequenceontology.org/' is unknown so the code cannot be validated
+INFORMATION: Observation/gx-genomic-variant-somatic-mycn: Observation.component[0].value.ofType(CodeableConcept).coding[0]: Code System URI 'http://www.genenames.org' is unknown so the code cannot be validated
+INFORMATION: Observation/gx-genomic-variant-somatic-mycn: Observation.component[0].value.ofType(CodeableConcept).coding[1]: Code System URI 'https://www.ncbi.nlm.nih.gov/gene' is unknown so the code cannot be validated
+INFORMATION: Observation/gx-genomic-variant-somatic-mycn: Observation.component[2].value.ofType(CodeableConcept).coding[0]: Code System URI 'http://www.sequenceontology.org/' is unknown so the code cannot be validated
+INFORMATION: Observation/gx-genomic-variant-somatic-pof1b: Observation.component[0].value.ofType(CodeableConcept).coding[0]: Code System URI 'http://www.genenames.org' is unknown so the code cannot be validated
+INFORMATION: Observation/gx-genomic-variant-somatic-pof1b: Observation.component[0].value.ofType(CodeableConcept).coding[1]: Code System URI 'https://www.ncbi.nlm.nih.gov/gene' is unknown so the code cannot be validated
+INFORMATION: Observation/gx-genomic-variant-somatic-pof1b: Observation.component[2].value.ofType(CodeableConcept).coding[0]: Code System URI 'http://www.sequenceontology.org/' is unknown so the code cannot be validated
+INFORMATION: Observation/gx-genomic-variant-somatic-pof1b: Observation.component[3].value.ofType(CodeableConcept).coding[0]: Code System URI 'http://www.ncbi.nlm.nih.gov/refseq' is unknown so the code cannot be validated
+INFORMATION: Observation/gx-genomic-variant-somatic-polrmt: Observation.component[0].value.ofType(CodeableConcept).coding[0]: Code System URI 'https://www.ncbi.nlm.nih.gov/gene' is unknown so the code cannot be validated
+INFORMATION: Observation/gx-genomic-variant-somatic-polrmt: Observation.component[2].value.ofType(CodeableConcept).coding[0]: Code System URI 'http://www.sequenceontology.org/' is unknown so the code cannot be validated
+INFORMATION: Observation/gx-genomic-variant-somatic-polrmt: Observation.component[3].value.ofType(CodeableConcept).coding[0]: Code System URI 'http://www.ncbi.nlm.nih.gov/refseq' is unknown so the code cannot be validated
+INFORMATION: Observation/tumor-marker-test-oncotype-dx-jenny-m: Observation.code.coding[0]: Code System URI 'http://www.ncbi.nlm.nih.gov/gtr' is unknown so the code cannot be validated
+INFORMATION: Patient/cancer-patient-adam-everyman: Patient.extension[0].extension[0].value.ofType(Coding): Code System URI 'urn:oid:2.16.840.1.113883.6.238' is unknown so the code cannot be validated
+INFORMATION: Patient/cancer-patient-adam-everyman: Patient.extension[1].extension[0].value.ofType(Coding): Code System URI 'urn:oid:2.16.840.1.113883.6.238' is unknown so the code cannot be validated
+INFORMATION: Patient/cancer-patient-eve-anyperson: Patient.extension[0].extension[0].value.ofType(Coding): Code System URI 'urn:oid:2.16.840.1.113883.6.238' is unknown so the code cannot be validated
+INFORMATION: Patient/cancer-patient-eve-anyperson: Patient.extension[2].extension[0].value.ofType(Coding): Code System URI 'urn:oid:2.16.840.1.113883.6.238' is unknown so the code cannot be validated
+INFORMATION: Patient/cancer-patient-jenny-m: Patient.extension[0].extension[0].value.ofType(Coding): Code System URI 'urn:oid:2.16.840.1.113883.6.238' is unknown so the code cannot be validated
+INFORMATION: Patient/cancer-patient-jenny-m: Patient.extension[1].extension[0].value.ofType(Coding): Code System URI 'urn:oid:2.16.840.1.113883.6.238' is unknown so the code cannot be validated
+INFORMATION: Patient/cancer-patient-john-anyperson: Patient.extension[0].extension[0].value.ofType(Coding): Code System URI 'urn:oid:2.16.840.1.113883.6.238' is unknown so the code cannot be validated
+INFORMATION: Patient/cancer-patient-john-anyperson: Patient.extension[1].extension[0].value.ofType(Coding): Code System URI 'urn:oid:2.16.840.1.113883.6.238' is unknown so the code cannot be validated
+INFORMATION: ServiceRequest/gx-order-tumornormal-tempus-inc: ServiceRequest.code.coding[0]: Code System URI 'https://www.tempus.com' is unknown so the code cannot be validated
+INFORMATION: StructureDefinition/mcode-patient-group: StructureDefinition.differential.element[1].pattern.ofType(CodeableConcept).coding[0]: Code System URI 'http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl' is unknown so the code cannot be validated
+INFORMATION: StructureDefinition/mcode-patient-group: StructureDefinition.snapshot.element[13].pattern.ofType(CodeableConcept).coding[0]: Code System URI 'http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl' is unknown so the code cannot be validated
+
+# SUPPRESS INFORMATION MESSAGES "DOES NOT MATCH ANY KNOWN SLICE"
+INFORMATION: Bundle/gx-genomic-bundle-incredible-hulk: Bundle.entry[1].resource/*DiagnosticReport/gx-genomics-report-incredible-hulk*/.result[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genomics-report|2023May
+INFORMATION: Bundle/gx-genomic-bundle-incredible-hulk: Bundle.entry[1].resource/*DiagnosticReport/gx-genomics-report-incredible-hulk*/.result[12]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genomics-report|2023May
+INFORMATION: Bundle/gx-genomic-bundle-incredible-hulk: Bundle.entry[1].resource/*DiagnosticReport/gx-genomics-report-incredible-hulk*/.result[13]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genomics-report|2023May
+INFORMATION: Bundle/gx-genomic-bundle-incredible-hulk: Bundle.entry[1].resource/*DiagnosticReport/gx-genomics-report-incredible-hulk*/.result[6]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genomics-report|2023May
+INFORMATION: Bundle/gx-genomic-bundle-incredible-hulk: Bundle.entry[1].resource/*DiagnosticReport/gx-genomics-report-incredible-hulk*/.result[7]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genomics-report|2023May
+INFORMATION: Bundle/gx-genomic-bundle-incredible-hulk: Bundle.entry[14].resource/*Observation/gx-genomic-diagnostic-implication-pof1b*/.derivedFrom[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/diagnostic-implication|2.0.0
+INFORMATION: Bundle/gx-genomic-bundle-incredible-hulk: Bundle.entry[15].resource/*Observation/gx-genomic-diagnostic-implication-polrmt*/.derivedFrom[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/diagnostic-implication|2.0.0
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[1].resource/*Condition/primary-cancer-condition-jenny-m*/.extension[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition-problems-health-concerns|5.0.1 (validating against http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition-problems-health-concerns|5.0.1 [USCoreConditionProblemsHealthConcernsProfile])
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[11].resource/*Procedure/radiotherapy-treatment-summary-chest-wall-jenny-m*/.extension[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-related-surgical-procedure|2023May (validating against http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-related-surgical-procedure|2023May [CancerRelatedSurgicalProcedure])
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[11].resource/*Procedure/radiotherapy-treatment-summary-chest-wall-jenny-m*/.extension[2]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-related-surgical-procedure|2023May (validating against http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-related-surgical-procedure|2023May [CancerRelatedSurgicalProcedure])
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[11].resource/*Procedure/radiotherapy-treatment-summary-chest-wall-jenny-m*/.extension[3]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-related-surgical-procedure|2023May (validating against http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-related-surgical-procedure|2023May [CancerRelatedSurgicalProcedure])
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[11].resource/*Procedure/radiotherapy-treatment-summary-chest-wall-jenny-m*/.extension[4]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-related-surgical-procedure|2023May (validating against http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-related-surgical-procedure|2023May [CancerRelatedSurgicalProcedure])
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[11].resource/*Procedure/radiotherapy-treatment-summary-chest-wall-jenny-m*/.extension[5]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-related-surgical-procedure|2023May (validating against http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-related-surgical-procedure|2023May [CancerRelatedSurgicalProcedure])
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[27]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle|2023May
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[30]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle|2023May
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[33]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle|2023May
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[38]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle|2023May
+INFORMATION: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[39]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle|2023May
+INFORMATION: DiagnosticReport/gx-genomics-report-incredible-hulk: DiagnosticReport.result[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genomics-report|2023May
+INFORMATION: DiagnosticReport/gx-genomics-report-incredible-hulk: DiagnosticReport.result[12]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genomics-report|2023May
+INFORMATION: DiagnosticReport/gx-genomics-report-incredible-hulk: DiagnosticReport.result[13]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genomics-report|2023May
+INFORMATION: DiagnosticReport/gx-genomics-report-incredible-hulk: DiagnosticReport.result[6]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genomics-report|2023May
+INFORMATION: DiagnosticReport/gx-genomics-report-incredible-hulk: DiagnosticReport.result[7]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genomics-report|2023May
+INFORMATION: Observation/gx-genomic-diagnostic-implication-pof1b: Observation.derivedFrom[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/diagnostic-implication|2.0.0
+INFORMATION: Observation/gx-genomic-diagnostic-implication-polrmt: Observation.derivedFrom[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/diagnostic-implication|2.0.0
+
+
+# SUPPRESS INFORMATION MESSAGES "Details for X matching against profile"
+INFORMATION: Bundle/gx-genomic-bundle-incredible-hulk: Bundle.entry[1].resource/*DiagnosticReport/gx-genomics-report-incredible-hulk*/.basedOn[0]: Details for ServiceRequest/gx-order-tumornormal-tempus-inc matching against profile http://hl7.org/fhir/StructureDefinition/ServiceRequest|4.0.1
+INFORMATION: Bundle/gx-genomic-bundle-incredible-hulk: Bundle.entry[1].resource/*DiagnosticReport/gx-genomics-report-incredible-hulk*/.result[0]: Details for Observation/gx-genomic-variant-somatic-bap1-indel matching against profile http://hl7.org/fhir/StructureDefinition/Observation|4.0.1
+INFORMATION: Bundle/gx-genomic-bundle-incredible-hulk: Bundle.entry[1].resource/*DiagnosticReport/gx-genomics-report-incredible-hulk*/.result[6]: Details for Observation/gx-genomic-variant-somatic-pof1b matching against profile http://hl7.org/fhir/StructureDefinition/Observation|4.0.1
+INFORMATION: Bundle/gx-genomic-bundle-incredible-hulk: Bundle.entry[1].resource/*DiagnosticReport/gx-genomics-report-incredible-hulk*/.result[7]: Details for Observation/gx-genomic-variant-somatic-polrmt matching against profile http://hl7.org/fhir/StructureDefinition/Observation|4.0.1
+INFORMATION: Bundle/gx-genomic-bundle-incredible-hulk: Bundle.entry[14].resource/*Observation/gx-genomic-diagnostic-implication-pof1b*/.derivedFrom[0]: Details for Observation/gx-genomic-variant-somatic-pof1b matching against profile http://hl7.org/fhir/StructureDefinition/Observation|4.0.1
+INFORMATION: Bundle/gx-genomic-bundle-incredible-hulk: Bundle.entry[15].resource/*Observation/gx-genomic-diagnostic-implication-polrmt*/.derivedFrom[0]: Details for Observation/gx-genomic-variant-somatic-polrmt matching against profile http://hl7.org/fhir/StructureDefinition/Observation|4.0.1

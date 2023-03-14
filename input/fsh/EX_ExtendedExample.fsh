@@ -31,6 +31,7 @@ Description: "Extended example: example mammogram"
 * performer.actor = Reference(us-core-practitioner-jane-radiotech)
 * performedDateTime = 2018-02-01
 * asserter = Reference(us-core-practitioner-mary-obgyn)
+* reasonCode = SCT#360156006 "Screening - procedure intent (qualifier value)"
 
 // Biopsy Procedure - 3/6/2018
 
@@ -437,7 +438,7 @@ InstanceOf:  TumorSize
 Description: "Extended example: example showing tumor size"
 * status = #final "final"
 * code = LNC#21889-1 "Size Tumor"
-//* category[Laboratory] = ObsCat#laboratory  // inherited
+* category = ObsCat#laboratory
 * method = SCT#787377000 "Gross examination and sampling of tissue specimen (procedure)"
 * subject = Reference(cancer-patient-jenny-m)
 * effectiveDateTime = "2018-04-01T00:00:00Z"

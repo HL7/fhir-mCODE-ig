@@ -163,13 +163,16 @@
 <artifact id="StructureDefinition/mcode-genomic-variant" key="StructureDefinition-mcode-genomic-variant" name="Genomic Variant Profile"/>
 <artifact id="Observation/genomic-variant-somatic-single-nucleotide" key="Observation-genomic-variant-somatic-single-nucleotide" name="genomic-variant-somatic-single-nucleotide"/>
 <artifact id="Patient/gx-cancer-patient-adam-anyperson" key="Patient-gx-cancer-patient-adam-anyperson" name="gx-cancer-patient-adam-anyperson"/>
+<artifact deprecated="true" id="Patient/gx-cancer-patient-incredible-hulk" key="Patient-gx-cancer-patient-incredible-hulk" name="gx-cancer-patient-incredible-hulk"/>
 <artifact id="Bundle/gx-genomic-bundle-adam-anyperson" key="Bundle-gx-genomic-bundle-adam-anyperson" name="gx-genomic-bundle-adam-anyperson"/>
+<artifact deprecated="true" id="Bundle/gx-genomic-bundle-incredible-hulk" key="Bundle-gx-genomic-bundle-incredible-hulk" name="gx-genomic-bundle-incredible-hulk"/>
 <artifact id="Observation/gx-genomic-diagnostic-implication-pof1b" key="Observation-gx-genomic-diagnostic-implication-pof1b" name="gx-genomic-diagnostic-implication-pof1b"/>
 <artifact id="Observation/gx-genomic-diagnostic-implication-polrmt" key="Observation-gx-genomic-diagnostic-implication-polrmt" name="gx-genomic-diagnostic-implication-polrmt"/>
 <artifact id="Observation/gx-genomic-msi" key="Observation-gx-genomic-msi" name="gx-genomic-msi"/>
 <artifact id="Specimen/gx-genomic-specimen-tumornormal-normal" key="Specimen-gx-genomic-specimen-tumornormal-normal" name="gx-genomic-specimen-tumornormal-normal"/>
 <artifact id="Specimen/gx-genomic-specimen-tumornormal-tumor" key="Specimen-gx-genomic-specimen-tumornormal-tumor" name="gx-genomic-specimen-tumornormal-tumor"/>
 <artifact id="DiagnosticReport/gx-genomics-report-adam-anyperson" key="DiagnosticReport-gx-genomics-report-adam-anyperson" name="gx-genomics-report-adam-anyperson"/>
+<artifact deprecated="true" id="DiagnosticReport/gx-genomics-report-incredible-hulk" key="DiagnosticReport-gx-genomics-report-incredible-hulk" name="gx-genomics-report-incredible-hulk"/>
 <artifact id="Observation/gx-genomic-therapeutic-implication-alectinib" key="Observation-gx-genomic-therapeutic-implication-alectinib" name="gx-genomic-therapeutic-implication-alectinib"/>
 <artifact id="Observation/gx-genomic-therapeutic-implication-brigatinib" key="Observation-gx-genomic-therapeutic-implication-brigatinib" name="gx-genomic-therapeutic-implication-brigatinib"/>
 <artifact id="Observation/gx-genomic-therapeutic-implication-ceritinib" key="Observation-gx-genomic-therapeutic-implication-ceritinib" name="gx-genomic-therapeutic-implication-ceritinib"/>
@@ -311,6 +314,13 @@
 <artifact deprecated="true" id="ValueSet/mcode-observation-codes-primary-tumor-vs" key="ValueSet-mcode-observation-codes-primary-tumor-vs" name="Staging Type for Primary Tumor Category Value Set"/>
 <artifact deprecated="true" id="ValueSet/mcode-observation-codes-regional-nodes-vs" key="ValueSet-mcode-observation-codes-regional-nodes-vs" name="Staging Type for Regional Node Category Value Set"/>
 <artifact deprecated="true" id="ValueSet/mcode-observation-codes-stage-group-vs" key="ValueSet-mcode-observation-codes-stage-group-vs" name="Staging Type for Stage Group Value Set"/>
+<artifact deprecated="true" id="ValueSet/mcode-observation-codes-distant-metastases-vs" key="ValueSet-mcode-observation-codes-distant-metastases-vs" name="Staging Type Value Set (for Distant Metastases Category)"/>
+<artifact id="ValueSet/mcode-teleradiotherapy-modality-vs" key="ValueSet-mcode-teleradiotherapy-modality-vs" name="Teleradiotherapy Modality Value Set"/>
+<artifact id="ValueSet/mcode-teleradiotherapy-technique-vs" key="ValueSet-mcode-teleradiotherapy-technique-vs" name="Teleradiotherapy Technique Value Set"/>
+<artifact deprecated="true" id="StructureDefinition/mcode-teleradiotherapy-treatment-phase" key="StructureDefinition-mcode-teleradiotherapy-treatment-phase" name="Teleradiotherapy Treatment Phase"/>
+<artifact deprecated="true" id="Procedure/teleradiotherapy-treatment-phase-boost-jenny-m" key="Procedure-teleradiotherapy-treatment-phase-boost-jenny-m" name="teleradiotherapy-treatment-phase-boost-jenny-m"/>
+<artifact deprecated="true" id="Procedure/teleradiotherapy-treatment-phase-chest-wall-jenny-m" key="Procedure-teleradiotherapy-treatment-phase-chest-wall-jenny-m" name="teleradiotherapy-treatment-phase-chest-wall-jenny-m"/>
+<artifact deprecated="true" id="Extension/mcode-termination-reason-extension" key="termination-reason-extension" name="Termination Reason Extension"/>
 <artifact id="ConceptMap/TG263CM" key="ConceptMap-TG263CM" name="TG263CM"/>
 <artifact deprecated="true" id="Profile/mcode-tnm-clinical-distant-metastases" key="tnm-clinical-distant-metastases" name="TNM Clinical Distant Metastases"/>
 <artifact id="Observation/tnm-clinical-distant-metastases-category-cM0" key="Observation-tnm-clinical-distant-metastases-category-cM0" name="tnm-clinical-distant-metastases-category-cM0"/>

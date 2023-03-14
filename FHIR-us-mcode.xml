@@ -162,14 +162,14 @@
 <artifact id="Observation/genomic-variant-jenny-m" key="Observation-genomic-variant-jenny-m" name="genomic-variant-jenny-m"/>
 <artifact id="StructureDefinition/mcode-genomic-variant" key="StructureDefinition-mcode-genomic-variant" name="Genomic Variant Profile"/>
 <artifact id="Observation/genomic-variant-somatic-single-nucleotide" key="Observation-genomic-variant-somatic-single-nucleotide" name="genomic-variant-somatic-single-nucleotide"/>
-<artifact id="Patient/gx-cancer-patient-incredible-hulk" key="Patient-gx-cancer-patient-incredible-hulk" name="gx-cancer-patient-incredible-hulk"/>
-<artifact id="Bundle/gx-genomic-bundle-incredible-hulk" key="Bundle-gx-genomic-bundle-incredible-hulk" name="gx-genomic-bundle-incredible-hulk"/>
+<artifact id="Patient/gx-cancer-patient-adam-anyperson" key="Patient-gx-cancer-patient-adam-anyperson" name="gx-cancer-patient-adam-anyperson"/>
+<artifact id="Bundle/gx-genomic-bundle-adam-anyperson" key="Bundle-gx-genomic-bundle-adam-anyperson" name="gx-genomic-bundle-adam-anyperson"/>
 <artifact id="Observation/gx-genomic-diagnostic-implication-pof1b" key="Observation-gx-genomic-diagnostic-implication-pof1b" name="gx-genomic-diagnostic-implication-pof1b"/>
 <artifact id="Observation/gx-genomic-diagnostic-implication-polrmt" key="Observation-gx-genomic-diagnostic-implication-polrmt" name="gx-genomic-diagnostic-implication-polrmt"/>
 <artifact id="Observation/gx-genomic-msi" key="Observation-gx-genomic-msi" name="gx-genomic-msi"/>
 <artifact id="Specimen/gx-genomic-specimen-tumornormal-normal" key="Specimen-gx-genomic-specimen-tumornormal-normal" name="gx-genomic-specimen-tumornormal-normal"/>
 <artifact id="Specimen/gx-genomic-specimen-tumornormal-tumor" key="Specimen-gx-genomic-specimen-tumornormal-tumor" name="gx-genomic-specimen-tumornormal-tumor"/>
-<artifact id="DiagnosticReport/gx-genomics-report-incredible-hulk" key="DiagnosticReport-gx-genomics-report-incredible-hulk" name="gx-genomics-report-incredible-hulk"/>
+<artifact id="DiagnosticReport/gx-genomics-report-adam-anyperson" key="DiagnosticReport-gx-genomics-report-adam-anyperson" name="gx-genomics-report-adam-anyperson"/>
 <artifact id="Observation/gx-genomic-therapeutic-implication-alectinib" key="Observation-gx-genomic-therapeutic-implication-alectinib" name="gx-genomic-therapeutic-implication-alectinib"/>
 <artifact id="Observation/gx-genomic-therapeutic-implication-brigatinib" key="Observation-gx-genomic-therapeutic-implication-brigatinib" name="gx-genomic-therapeutic-implication-brigatinib"/>
 <artifact id="Observation/gx-genomic-therapeutic-implication-ceritinib" key="Observation-gx-genomic-therapeutic-implication-ceritinib" name="gx-genomic-therapeutic-implication-ceritinib"/>
@@ -318,6 +318,7 @@
 <artifact deprecated="true" id="Procedure/teleradiotherapy-treatment-phase-boost-jenny-m" key="Procedure-teleradiotherapy-treatment-phase-boost-jenny-m" name="teleradiotherapy-treatment-phase-boost-jenny-m"/>
 <artifact deprecated="true" id="Procedure/teleradiotherapy-treatment-phase-chest-wall-jenny-m" key="Procedure-teleradiotherapy-treatment-phase-chest-wall-jenny-m" name="teleradiotherapy-treatment-phase-chest-wall-jenny-m"/>
 <artifact deprecated="true" id="Extension/mcode-termination-reason-extension" key="termination-reason-extension" name="Termination Reason Extension"/>
+<artifact id="ConceptMap/TG263CM" key="ConceptMap-TG263CM" name="TG263CM"/>
 <artifact deprecated="true" id="Profile/mcode-tnm-clinical-distant-metastases" key="tnm-clinical-distant-metastases" name="TNM Clinical Distant Metastases"/>
 <artifact id="Observation/tnm-clinical-distant-metastases-category-cM0" key="Observation-tnm-clinical-distant-metastases-category-cM0" name="tnm-clinical-distant-metastases-category-cM0"/>
 <artifact id="Observation/tnm-clinical-distant-metastases-category-jenny-m" key="Observation-tnm-clinical-distant-metastases-category-jenny-m" name="tnm-clinical-distant-metastases-category-jenny-m"/>
@@ -360,168 +361,6 @@
 <artifact deprecated="true" id="ValueSet/mcode-treatment-intent-vs" key="treatment-intent-value-set" name="Treatment Intent Value Set"/>
 <artifact id="StructureDefinition/mcode-treatment-termination-reason" key="StructureDefinition-mcode-treatment-termination-reason" name="Treatment Termination Reason Extension"/>
 <artifact id="ValueSet/mcode-treatment-termination-reason-vs" key="treatment-termination-reason-value-set" name="Treatment Termination Reason Value Set"/>
-<artifact deprecated="true" id="Profile/mcode-tumor-marker" key="tumor-marker" name="Tumor Marker"/>
-<artifact id="StructureDefinition/mcode-tumor-marker-test" key="StructureDefinition-mcode-tumor-marker-test" name="Tumor Marker Test Profile"/>
-<artifact id="ValueSet/mcode-tumor-marker-test-vs" key="tumor-marker-test-value-set" name="Tumor Marker Test Value Set"/>
-<artifact id="StructureDefinition/mcode-tumor" key="StructureDefinition-mcode-tumor" name="Tumor Profile"/>
-<artifact id="ValueSet/mcode-tumor-size-method-vs" key="ValueSet-mcode-tumor-size-method-vs" name="Tumor Size Method Value Set"/>
-<artifact id="StructureDefinition/mcode-tumor-size" key="StructureDefinition-mcode-tumor-size" name="Tumor Size Profile"/>
-<artifact id="ValueSet/mcode-tumor-size-units-vs" key="ValueSet-mcode-tumor-size-units-vs" name="Tumor Size Units Value Set"/>
-<artifact deprecated="true" id="StructureDefinition/mcode-tumor-specimen" key="StructureDefinition-mcode-tumor-specimen" name="Tumor Specimen Profile"/>
-<artifact deprecated="true" id="ValueSet/mcode-units-of-length-value-set" key="units-of-length-value-set" name="Units of Length Value Set"/>
-<artifact deprecated="true" key="ValueSet" name="ValueSet"/>
-<artifact id="Observation/binet-stage-group-A" key="Observation-binet-stage-group-A" name="binet-stage-group-A"/>
-<artifact id="Observation/bodyheight-jenny-m-2018-03-06" key="Observation-bodyheight-jenny-m-2018-03-06" name="bodyheight-jenny-m-2018-03-06"/>
-<artifact id="Observation/bodyweight-jenny-m-2018-03-16" key="Observation-bodyweight-jenny-m-2018-03-16" name="bodyweight-jenny-m-2018-03-16"/>
-<artifact id="Observation/bodyweight-jenny-m-2018-04-22" key="Observation-bodyweight-jenny-m-2018-04-22" name="bodyweight-jenny-m-2018-04-22"/>
-<artifact deprecated="true" id="Procedure/brachytherapy-treatment-phase-low-dose-rate-temporary" key="Procedure-brachytherapy-treatment-phase-low-dose-rate-temporary" name="brachytherapy-treatment-phase-low-dose-rate-temporary"/>
-<artifact id="Observation/cancer-disease-status-improved" key="Observation-cancer-disease-status-improved" name="cancer-disease-status-improved"/>
-<artifact id="Observation/cancer-disease-status-jenny-m" key="Observation-cancer-disease-status-jenny-m" name="cancer-disease-status-jenny-m"/>
-<artifact deprecated="true" id="Observation/cancer-genetic-variant-germline-deletion" key="Observation-cancer-genetic-variant-germline-deletion" name="cancer-genetic-variant-germline-deletion"/>
-<artifact deprecated="true" id="Observation/cancer-genetic-variant-jenny-m" key="Observation-cancer-genetic-variant-jenny-m" name="cancer-genetic-variant-jenny-m"/>
-<artifact deprecated="true" id="Observation/cancer-genetic-variant-somatic-single-nucleotide" key="Observation-cancer-genetic-variant-somatic-single-nucleotide" name="cancer-genetic-variant-somatic-single-nucleotide"/>
-<artifact deprecated="true" id="DiagnosticReport/cancer-genomics-report-jenny-m" key="DiagnosticReport-cancer-genomics-report-jenny-m" name="cancer-genomics-report-jenny-m"/>
-<artifact deprecated="true" id="DiagnosticReport/cancer-genomics-report-john-anyperson" key="DiagnosticReport-cancer-genomics-report-john-anyperson" name="cancer-genomics-report-john-anyperson"/>
-<artifact id="Patient/cancer-patient-adam-everyman" key="Patient-cancer-patient-adam-everyman" name="cancer-patient-adam-everyman"/>
-<artifact id="Patient/cancer-patient-eve-anyperson" key="Patient-cancer-patient-eve-anyperson" name="cancer-patient-eve-anyperson"/>
-<artifact id="Patient/cancer-patient-jenny-m" key="Patient-cancer-patient-jenny-m" name="cancer-patient-jenny-m"/>
-<artifact id="Patient/cancer-patient-john-anyperson" key="Patient-cancer-patient-john-anyperson" name="cancer-patient-john-anyperson"/>
-<artifact id="Observation/cancer-related-comorbidities-jenny-m" key="Observation-cancer-related-comorbidities-jenny-m" name="cancer-related-comorbidities-jenny-m"/>
-<artifact id="Observation/cancer-related-comorbidities-john-anyperson" key="Observation-cancer-related-comorbidities-john-anyperson" name="cancer-related-comorbidities-john-anyperson"/>
-<artifact deprecated="true" id="Observation/cancer-related-mcode-comorbidities-elixhauser-jenny-m" key="Observation-cancer-related-mcode-comorbidities-elixhauser-jenny-m" name="cancer-related-mcode-comorbidities-elixhauser-jenny-m"/>
-<artifact deprecated="true" id="Observation/cancer-related-mcode-comorbidities-elixhauser-john-anyperson" key="Observation-cancer-related-mcode-comorbidities-elixhauser-john-anyperson" name="cancer-related-mcode-comorbidities-elixhauser-john-anyperson"/>
-<artifact id="MedicationAdministration/cancer-related-medication-admin-cyclophosphamide-jenny-m" key="MedicationAdministration-cancer-related-medication-admin-cyclophosphamide-jenny-m" name="cancer-related-medication-admin-cyclophosphamide-jenny-m"/>
-<artifact id="MedicationAdministration/cancer-related-medication-admin-doxorubicin-jenny-m" key="MedicationAdministration-cancer-related-medication-admin-doxorubicin-jenny-m" name="cancer-related-medication-admin-doxorubicin-jenny-m"/>
-<artifact id="MedicationAdministration/cancer-related-medication-admin-paclitaxel-jenny-m" key="MedicationAdministration-cancer-related-medication-admin-paclitaxel-jenny-m" name="cancer-related-medication-admin-paclitaxel-jenny-m"/>
-<artifact deprecated="true" id="MedicationAdministration/cancer-related-medication-administration-doxorubicin-jenny-m" key="MedicationAdministration-cancer-related-medication-administration-doxorubicin-jenny-m" name="cancer-related-medication-administration-doxorubicin-jenny-m"/>
-<artifact id="MedicationRequest/cancer-related-medication-request-anastrozole-jenny-m" key="MedicationRequest-cancer-related-medication-request-anastrozole-jenny-m" name="cancer-related-medication-request-anastrozole-jenny-m"/>
-<artifact id="MedicationRequest/cancer-related-medication-request-cisplatin" key="MedicationRequest-cancer-related-medication-request-cisplatin" name="cancer-related-medication-request-cisplatin"/>
-<artifact id="MedicationRequest/cancer-related-medication-request-cyclophosphamide-jenny-m" key="MedicationRequest-cancer-related-medication-request-cyclophosphamide-jenny-m" name="cancer-related-medication-request-cyclophosphamide-jenny-m"/>
-<artifact id="MedicationRequest/cancer-related-medication-request-doxorubicin-jenny-m" key="MedicationRequest-cancer-related-medication-request-doxorubicin-jenny-m" name="cancer-related-medication-request-doxorubicin-jenny-m"/>
-<artifact id="MedicationRequest/cancer-related-medication-request-gefitinib" key="MedicationRequest-cancer-related-medication-request-gefitinib" name="cancer-related-medication-request-gefitinib"/>
-<artifact id="MedicationRequest/cancer-related-medication-request-paclitaxel-jenny-m" key="MedicationRequest-cancer-related-medication-request-paclitaxel-jenny-m" name="cancer-related-medication-request-paclitaxel-jenny-m"/>
-<artifact id="Procedure/cancer-related-surgical-procedure-jenny-m" key="Procedure-cancer-related-surgical-procedure-jenny-m" name="cancer-related-surgical-procedure-jenny-m"/>
-<artifact id="Procedure/cancer-related-surgical-procedure-lobectomy" key="Procedure-cancer-related-surgical-procedure-lobectomy" name="cancer-related-surgical-procedure-lobectomy"/>
-<artifact id="Observation/ecog-performance-status-fully-active" key="Observation-ecog-performance-status-fully-active" name="ecog-performance-status-fully-active"/>
-<artifact id="Observation/ecog-performance-status-jenny-m" key="Observation-ecog-performance-status-jenny-m" name="ecog-performance-status-jenny-m"/>
-<artifact id="FamilyMemberHistory/family-member-history-aunt-jenny-m" key="FamilyMemberHistory-family-member-history-aunt-jenny-m" name="family-member-history-aunt-jenny-m"/>
-<artifact id="FamilyMemberHistory/family-member-history-sister-jenny-m" key="FamilyMemberHistory-family-member-history-sister-jenny-m" name="family-member-history-sister-jenny-m"/>
-<artifact id="FamilyMemberHistory/family-member-history-uncle-jenny-m" key="FamilyMemberHistory-family-member-history-uncle-jenny-m" name="family-member-history-uncle-jenny-m"/>
-<artifact deprecated="true" id="Specimen/genetic-specimen-left-breast-jenny-m" key="Specimen-genetic-specimen-left-breast-jenny-m" name="genetic-specimen-left-breast-jenny-m"/>
-<artifact deprecated="true" id="Specimen/genetic-specimen-lung" key="Specimen-genetic-specimen-lung" name="genetic-specimen-lung"/>
-<artifact id="Observation/genomic-region-studied-jenny-m" key="Observation-genomic-region-studied-jenny-m" name="genomic-region-studied-jenny-m"/>
-<artifact id="Observation/genomic-region-studied-stk11" key="Observation-genomic-region-studied-stk11" name="genomic-region-studied-stk11"/>
-<artifact deprecated="true" id="Specimen/genomic-specimen-left-breast-jenny-m" key="Specimen-genomic-specimen-left-breast-jenny-m" name="genomic-specimen-left-breast-jenny-m"/>
-<artifact deprecated="true" id="Specimen/genomic-specimen-lung" key="Specimen-genomic-specimen-lung" name="genomic-specimen-lung"/>
-<artifact id="Observation/genomic-variant-fusion" key="Observation-genomic-variant-fusion" name="genomic-variant-fusion"/>
-<artifact id="Observation/genomic-variant-germline-deletion" key="Observation-genomic-variant-germline-deletion" name="genomic-variant-germline-deletion"/>
-<artifact id="Observation/genomic-variant-jenny-m" key="Observation-genomic-variant-jenny-m" name="genomic-variant-jenny-m"/>
-<artifact id="Observation/genomic-variant-somatic-single-nucleotide" key="Observation-genomic-variant-somatic-single-nucleotide" name="genomic-variant-somatic-single-nucleotide"/>
-<artifact id="DiagnosticReport/genomics-report-jenny-m" key="DiagnosticReport-genomics-report-jenny-m" name="genomics-report-jenny-m"/>
-<artifact id="DiagnosticReport/genomics-report-john-anyperson" key="DiagnosticReport-genomics-report-john-anyperson" name="genomics-report-john-anyperson"/>
-<artifact id="Patient/gx-cancer-patient-incredible-hulk" key="Patient-gx-cancer-patient-incredible-hulk" name="gx-cancer-patient-incredible-hulk"/>
-<artifact id="Bundle/gx-genomic-bundle-incredible-hulk" key="Bundle-gx-genomic-bundle-incredible-hulk" name="gx-genomic-bundle-incredible-hulk"/>
-<artifact id="Observation/gx-genomic-diagnostic-implication-pof1b" key="Observation-gx-genomic-diagnostic-implication-pof1b" name="gx-genomic-diagnostic-implication-pof1b"/>
-<artifact id="Observation/gx-genomic-diagnostic-implication-polrmt" key="Observation-gx-genomic-diagnostic-implication-polrmt" name="gx-genomic-diagnostic-implication-polrmt"/>
-<artifact id="Observation/gx-genomic-msi" key="Observation-gx-genomic-msi" name="gx-genomic-msi"/>
-<artifact id="Specimen/gx-genomic-specimen-tumornormal-normal" key="Specimen-gx-genomic-specimen-tumornormal-normal" name="gx-genomic-specimen-tumornormal-normal"/>
-<artifact id="Specimen/gx-genomic-specimen-tumornormal-tumor" key="Specimen-gx-genomic-specimen-tumornormal-tumor" name="gx-genomic-specimen-tumornormal-tumor"/>
-<artifact id="Observation/gx-genomic-therapeutic-implication-alectinib" key="Observation-gx-genomic-therapeutic-implication-alectinib" name="gx-genomic-therapeutic-implication-alectinib"/>
-<artifact id="Observation/gx-genomic-therapeutic-implication-brigatinib" key="Observation-gx-genomic-therapeutic-implication-brigatinib" name="gx-genomic-therapeutic-implication-brigatinib"/>
-<artifact id="Observation/gx-genomic-therapeutic-implication-ceritinib" key="Observation-gx-genomic-therapeutic-implication-ceritinib" name="gx-genomic-therapeutic-implication-ceritinib"/>
-<artifact id="Observation/gx-genomic-therapeutic-implication-crizotinib" key="Observation-gx-genomic-therapeutic-implication-crizotinib" name="gx-genomic-therapeutic-implication-crizotinib"/>
-<artifact id="Observation/gx-genomic-therapeutic-implication-lorlatinib" key="Observation-gx-genomic-therapeutic-implication-lorlatinib" name="gx-genomic-therapeutic-implication-lorlatinib"/>
-<artifact id="Observation/gx-genomic-tmb" key="Observation-gx-genomic-tmb" name="gx-genomic-tmb"/>
-<artifact id="Observation/gx-genomic-variant-fusion-met-alk" key="Observation-gx-genomic-variant-fusion-met-alk" name="gx-genomic-variant-fusion-met-alk"/>
-<artifact id="Observation/gx-genomic-variant-pertinent-negative-nras-kit-braf" key="Observation-gx-genomic-variant-pertinent-negative-nras-kit-braf" name="gx-genomic-variant-pertinent-negative-nras-kit-braf"/>
-<artifact id="Observation/gx-genomic-variant-somatic-bap1-indel" key="Observation-gx-genomic-variant-somatic-bap1-indel" name="gx-genomic-variant-somatic-bap1-indel"/>
-<artifact id="Observation/gx-genomic-variant-somatic-cdkn2a-cnv" key="Observation-gx-genomic-variant-somatic-cdkn2a-cnv" name="gx-genomic-variant-somatic-cdkn2a-cnv"/>
-<artifact id="Observation/gx-genomic-variant-somatic-cdkn2b-cnv" key="Observation-gx-genomic-variant-somatic-cdkn2b-cnv" name="gx-genomic-variant-somatic-cdkn2b-cnv"/>
-<artifact id="Observation/gx-genomic-variant-somatic-kdm5d" key="Observation-gx-genomic-variant-somatic-kdm5d" name="gx-genomic-variant-somatic-kdm5d"/>
-<artifact id="Observation/gx-genomic-variant-somatic-mtap" key="Observation-gx-genomic-variant-somatic-mtap" name="gx-genomic-variant-somatic-mtap"/>
-<artifact id="Observation/gx-genomic-variant-somatic-mycn" key="Observation-gx-genomic-variant-somatic-mycn" name="gx-genomic-variant-somatic-mycn"/>
-<artifact id="Observation/gx-genomic-variant-somatic-pof1b" key="Observation-gx-genomic-variant-somatic-pof1b" name="gx-genomic-variant-somatic-pof1b"/>
-<artifact id="Observation/gx-genomic-variant-somatic-polrmt" key="Observation-gx-genomic-variant-somatic-polrmt" name="gx-genomic-variant-somatic-polrmt"/>
-<artifact id="DiagnosticReport/gx-genomics-report-incredible-hulk" key="DiagnosticReport-gx-genomics-report-incredible-hulk" name="gx-genomics-report-incredible-hulk"/>
-<artifact id="ServiceRequest/gx-order-tumornormal-tempus-inc" key="ServiceRequest-gx-order-tumornormal-tempus-inc" name="gx-order-tumornormal-tempus-inc"/>
-<artifact id="Practitioner/gx-practitioner-test-pathologist" key="Practitioner-gx-practitioner-test-pathologist" name="gx-practitioner-test-pathologist"/>
-<artifact id="Organization/gx-us-core-organization-tempus-inc" key="Organization-gx-us-core-organization-tempus-inc" name="gx-us-core-organization-tempus-inc"/>
-<artifact id="Organization/gx-us-core-organization-test-institution" key="Organization-gx-us-core-organization-test-institution" name="gx-us-core-organization-test-institution"/>
-<artifact id="Specimen/human-specimen-left-breast-jenny-m" key="Specimen-human-specimen-left-breast-jenny-m" name="human-specimen-left-breast-jenny-m"/>
-<artifact id="Specimen/human-specimen-lung" key="Specimen-human-specimen-lung" name="human-specimen-lung"/>
-<artifact id="BodyStructure/jenny-m-chest-wall-lymph-nodes-treatment-volume" key="BodyStructure-jenny-m-chest-wall-lymph-nodes-treatment-volume" name="jenny-m-chest-wall-lymph-nodes-treatment-volume"/>
-<artifact id="BodyStructure/jenny-m-chest-wall-treatment-volume" key="BodyStructure-jenny-m-chest-wall-treatment-volume" name="jenny-m-chest-wall-treatment-volume"/>
-<artifact id="Condition/john-anyperson-chf" key="Condition-john-anyperson-chf" name="john-anyperson-chf"/>
-<artifact id="BodyStructure/john-anyperson-treatment-volume" key="BodyStructure-john-anyperson-treatment-volume" name="john-anyperson-treatment-volume"/>
-<artifact id="Observation/karnofsky-performance-status-normal-activity" key="Observation-karnofsky-performance-status-normal-activity" name="karnofsky-performance-status-normal-activity"/>
-<artifact id="Observation/lab-result-observation-hemoglobin" key="Observation-lab-result-observation-hemoglobin" name="lab-result-observation-hemoglobin"/>
-<artifact deprecated="true" id="CodeSystem/mcode-catch-code-cs" key="CodeSystem-mcode-catch-code-cs" name="mCODE Catch Codes"/>
-<artifact id="StructureDefinition/mcode-patient-bundle" key="StructureDefinition-mcode-patient-bundle" name="mCODE Patient Bundle Profile"/>
-<artifact id="Group/group-mcode-patients" key="Group-group-mcode-patients" name="mCODE Patient Group Example"/>
-<artifact id="StructureDefinition/mcode-patient-group" key="StructureDefinition-mcode-patient-group" name="mCODE Patient Group Profile"/>
-<artifact deprecated="true" id="CodeSystem/mcode-resource-identifier-cs" key="CodeSystem-mcode-resource-identifier-cs" name="mCODE Resource Identifier Code System"/>
-<artifact deprecated="true" id="Example/mcode-cancer-disease-status-example-01" key="mcode-cancer-disease-status-example-01" name="mCODECancerDiseaseStatusExample01"/>
-<artifact deprecated="true" id="Example/mcode-cancer-genetic-variant-example-01" key="mcode-cancer-genetic-variant-example-01" name="mCODECancerGeneticVariantExample01"/>
-<artifact deprecated="true" id="Example/mcode-cancer-genetic-variant-example-02" key="mcode-cancer-genetic-variant-example-02" name="mCODECancerGeneticVariantExample02"/>
-<artifact deprecated="true" id="Example/mcode-cancer-genomics-report-example-01" key="mcode-cancer-genomics-report-example-01" name="mCODECancerGenomicsReportExample01"/>
-<artifact deprecated="true" id="Example/mcode-cancer-related-medication-statement-example-01" key="mcode-cancer-related-medication-statement-example-01" name="mCODECancerRelatedMedicationStatementExample01"/>
-<artifact deprecated="true" id="Example/mcode-cancer-related-medication-statement-example-02" key="mcode-cancer-related-medication-statement-example-02" name="mCODECancerRelatedMedicationStatementExample02"/>
-<artifact deprecated="true" id="Example/mcode-cancer-related-radiation-procedure-example-01" key="mcode-cancer-related-radiation-procedure-example-01" name="mCODECancerRelatedRadiationProcedureExample01"/>
-<artifact deprecated="true" id="Example/mcode-cancer-related-surgical-procedure-example-01" key="mcode-cancer-related-surgical-procedure-example-01" name="mCODECancerRelatedSurgicalProcedureExample01"/>
-<artifact deprecated="true" id="Example/mcode-comorbid-condition-example-01" key="mcode-comorbid-condition-example-01" name="mCODEComorbidConditionExample01"/>
-<artifact deprecated="true" id="Example/mcode-ecog-performance-status-example-01" key="mcode-ecog-performance-status-example-01" name="mCODEECOGPerformanceStatusExample01"/>
-<artifact deprecated="true" id="Example/mcode-genetic-specimen-example-01" key="mcode-genetic-specimen-example-01" name="mCODEGeneticSpecimenExample01"/>
-<artifact deprecated="true" id="Example/mcode-genomic-region-studied-example-01" key="mcode-genomic-region-studied-example-01" name="mCODEGenomicRegionStudiedExample01"/>
-<artifact deprecated="true" id="Example/mcode-karnofsky-performance-status-example-01" key="mcode-karnofsky-performance-status-example-01" name="mCODEKarnofskyPerformanceStatusExample01"/>
-<artifact deprecated="true" id="Example/mcode-organization-example-01" key="mcode-organization-example-01" name="mCODEOrganizationExample01"/>
-<artifact deprecated="true" id="Example/mcode-patient-example-01" key="mcode-patient-example-01" name="mCODEPatientExample01"/>
-<artifact deprecated="true" id="Example/mcode-patient-example-02" key="mcode-patient-example-02" name="mCODEPatientExample02"/>
-<artifact deprecated="true" id="Example/mcode-practitioner-example-01" key="mcode-practitioner-example-01" name="mCODEPractitionerExample01"/>
-<artifact deprecated="true" id="Example/mcode-primary-cancer-condition-example-01" key="mcode-primary-cancer-condition-example-01" name="mCODEPrimaryCancerConditionExample01"/>
-<artifact deprecated="true" id="Example/mcode-secondary-cancer-condition-example-01" key="mcode-secondary-cancer-condition-example-01" name="mCODESecondaryCancerConditionExample01"/>
-<artifact deprecated="true" id="Example/mcode-tnm-clinical-distant-metastases-category-example-01" key="mcode-tnm-clinical-distant-metastases-category-example-01" name="mCODETNMClinicalDistantMetastasesCategoryExample01"/>
-<artifact deprecated="true" id="Example/mcode-tnm-clinical-primary-tumor-category-example-01" key="mcode-tnm-clinical-primary-tumor-category-example-01" name="mCODETNMClinicalPrimaryTumorCategoryExample01"/>
-<artifact deprecated="true" id="Example/mcode-tnm-clinical-regional-nodes-category-example-01" key="mcode-tnm-clinical-regional-nodes-category-example-01" name="mCODETNMClinicalRegionalNodesCategoryExample01"/>
-<artifact deprecated="true" id="Example/mcode-tnm-clinical-stage-group-example-01" key="mcode-tnm-clinical-stage-group-example-01" name="mCODETNMClinicalStageGroupExample01"/>
-<artifact deprecated="true" id="Example/mcode-tnm-pathological-distant-metastases-category-example-01" key="mcode-tnm-pathological-distant-metastases-category-example-01" name="mCODETNMPathologicalDistantMetastasesCategoryExample01"/>
-<artifact deprecated="true" id="Example/mcode-tnm-pathological-primary-tumor-category-example-01" key="mcode-tnm-pathological-primary-tumor-category-example-01" name="mCODETNMPathologicalPrimaryTumorCategoryExample01"/>
-<artifact deprecated="true" id="Example/mcode-tnm-pathological-regional-nodes-category-example-01" key="mcode-tnm-pathological-regional-nodes-category-example-01" name="mCODETNMPathologicalRegionalNodesCategoryExample01"/>
-<artifact deprecated="true" id="Example/mcode-tnm-pathological-stage-group-example-01" key="mcode-tnm-pathological-stage-group-example-01" name="mCODETNMPathologicalStageGroupExample01"/>
-<artifact deprecated="true" id="Example/mcode-tumor-marker-example-01" key="mcode-tumor-marker-example-01" name="mCODETumorMarkerExample01"/>
-<artifact id="Bundle/mcode-patient-bundle-jenny-m" key="Bundle-mcode-patient-bundle-jenny-m" name="mcode-patient-bundle-jenny-m"/>
-<artifact id="OperationDefinition/mcode-patient-everything" key="OperationDefinition-mcode-patient-everything" name="mcode-patient-everything"/>
-<artifact id="CapabilityStatement/mcode-receiver-cancer-conditions-then-patients" key="CapabilityStatement-mcode-receiver-cancer-conditions-then-patients" name="mcode-receiver-cancer-conditions-then-patients"/>
-<artifact id="CapabilityStatement/mcode-receiver-patient-bundle" key="CapabilityStatement-mcode-receiver-patient-bundle" name="mcode-receiver-patient-bundle"/>
-<artifact id="CapabilityStatement/mcode-receiver-patients-and-cancer-conditions" key="CapabilityStatement-mcode-receiver-patients-and-cancer-conditions" name="mcode-receiver-patients-and-cancer-conditions"/>
-<artifact id="CapabilityStatement/mcode-receiver-patients-in-group" key="CapabilityStatement-mcode-receiver-patients-in-group" name="mcode-receiver-patients-in-group"/>
-<artifact id="CapabilityStatement/mcode-receiver-patients-with-cancer-condition" key="CapabilityStatement-mcode-receiver-patients-with-cancer-condition" name="mcode-receiver-patients-with-cancer-condition"/>
-<artifact id="CapabilityStatement/mcode-sender-cancer-conditions-then-patients" key="CapabilityStatement-mcode-sender-cancer-conditions-then-patients" name="mcode-sender-cancer-conditions-then-patients"/>
-<artifact id="CapabilityStatement/mcode-sender-patient-bundle" key="CapabilityStatement-mcode-sender-patient-bundle" name="mcode-sender-patient-bundle"/>
-<artifact id="CapabilityStatement/mcode-sender-patients-and-cancer-conditions" key="CapabilityStatement-mcode-sender-patients-and-cancer-conditions" name="mcode-sender-patients-and-cancer-conditions"/>
-<artifact id="CapabilityStatement/mcode-sender-patients-in-group" key="CapabilityStatement-mcode-sender-patients-in-group" name="mcode-sender-patients-in-group"/>
-<artifact id="CapabilityStatement/mcode-sender-patients-with-cancer-condition" key="CapabilityStatement-mcode-sender-patients-with-cancer-condition" name="mcode-sender-patients-with-cancer-condition"/>
-<artifact deprecated="true" id="Observation/observation-smoking-history-jenny-m" key="Observation-observation-smoking-history-jenny-m" name="observation-smoking-history-jenny-m"/>
-<artifact id="Observation/observation-smoking-pack-years-jenny-m" key="Observation-observation-smoking-pack-years-jenny-m" name="observation-smoking-pack-years-jenny-m"/>
-<artifact id="Condition/primary-cancer-condition-breast" key="Condition-primary-cancer-condition-breast" name="primary-cancer-condition-breast"/>
-<artifact id="Condition/primary-cancer-condition-cll" key="Condition-primary-cancer-condition-cll" name="primary-cancer-condition-cll"/>
-<artifact id="Condition/primary-cancer-condition-jenny-m" key="Condition-primary-cancer-condition-jenny-m" name="primary-cancer-condition-jenny-m"/>
-<artifact id="Condition/primary-cancer-condition-nsclc" key="Condition-primary-cancer-condition-nsclc" name="primary-cancer-condition-nsclc"/>
-<artifact id="Procedure/radiotherapy-treatment-summary-chest-wall-jenny-m" key="Procedure-radiotherapy-treatment-summary-chest-wall-jenny-m" name="radiotherapy-treatment-summary-chest-wall-jenny-m"/>
-<artifact id="Condition/secondary-cancer-condition-brain-mets" key="Condition-secondary-cancer-condition-brain-mets" name="secondary-cancer-condition-brain-mets"/>
-<artifact deprecated="true" id="Procedure/teleradiotherapy-treatment-phase-boost-jenny-m" key="Procedure-teleradiotherapy-treatment-phase-boost-jenny-m" name="teleradiotherapy-treatment-phase-boost-jenny-m"/>
-<artifact deprecated="true" id="Procedure/teleradiotherapy-treatment-phase-chest-wall-jenny-m" key="Procedure-teleradiotherapy-treatment-phase-chest-wall-jenny-m" name="teleradiotherapy-treatment-phase-chest-wall-jenny-m"/>
-<artifact id="Observation/tnm-clinical-distant-metastases-category-cM0" key="Observation-tnm-clinical-distant-metastases-category-cM0" name="tnm-clinical-distant-metastases-category-cM0"/>
-<artifact id="Observation/tnm-clinical-distant-metastases-category-jenny-m" key="Observation-tnm-clinical-distant-metastases-category-jenny-m" name="tnm-clinical-distant-metastases-category-jenny-m"/>
-<artifact id="Observation/tnm-clinical-primary-tumor-category-cT3" key="Observation-tnm-clinical-primary-tumor-category-cT3" name="tnm-clinical-primary-tumor-category-cT3"/>
-<artifact id="Observation/tnm-clinical-primary-tumor-category-jenny-m" key="Observation-tnm-clinical-primary-tumor-category-jenny-m" name="tnm-clinical-primary-tumor-category-jenny-m"/>
-<artifact id="Observation/tnm-clinical-regional-nodes-category-cN3" key="Observation-tnm-clinical-regional-nodes-category-cN3" name="tnm-clinical-regional-nodes-category-cN3"/>
-<artifact id="Observation/tnm-clinical-regional-nodes-category-jenny-m" key="Observation-tnm-clinical-regional-nodes-category-jenny-m" name="tnm-clinical-regional-nodes-category-jenny-m"/>
-<artifact id="Observation/tnm-clinical-stage-group-3c" key="Observation-tnm-clinical-stage-group-3c" name="tnm-clinical-stage-group-3c"/>
-<artifact id="Observation/tnm-clinical-stage-group-jenny-m" key="Observation-tnm-clinical-stage-group-jenny-m" name="tnm-clinical-stage-group-jenny-m"/>
-<artifact id="Observation/tnm-pathologic-distant-metastases-category-jenny-m" key="Observation-tnm-pathologic-distant-metastases-category-jenny-m" name="tnm-pathologic-distant-metastases-category-jenny-m"/>
-<artifact id="Observation/tnm-pathologic-primary-tumor-category-jenny-m" key="Observation-tnm-pathologic-primary-tumor-category-jenny-m" name="tnm-pathologic-primary-tumor-category-jenny-m"/>
-<artifact id="Observation/tnm-pathologic-regional-nodes-category-jenny-m" key="Observation-tnm-pathologic-regional-nodes-category-jenny-m" name="tnm-pathologic-regional-nodes-category-jenny-m"/>
-<artifact id="Observation/tnm-pathologic-stage-group-jenny-m" key="Observation-tnm-pathologic-stage-group-jenny-m" name="tnm-pathologic-stage-group-jenny-m"/>
 <artifact id="BodyStructure/tumor-lobular-carcinoma-left-breast" key="BodyStructure-tumor-lobular-carcinoma-left-breast" name="tumor-lobular-carcinoma-left-breast"/>
 <artifact deprecated="true" id="Profile/mcode-tumor-marker" key="tumor-marker" name="Tumor Marker"/>
 <artifact id="Observation/tumor-marker-test-egf" key="Observation-tumor-marker-test-egf" name="tumor-marker-test-egf"/>

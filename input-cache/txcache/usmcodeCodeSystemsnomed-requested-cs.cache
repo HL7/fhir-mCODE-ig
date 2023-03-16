@@ -22,8 +22,8 @@ e: {
   "language" : "en",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:288bfc66-6874-4c0f-a914-6b6dca06cecd",
-    "timestamp" : "2023-03-10T19:40:19.389Z",
+    "identifier" : "urn:uuid:f98ff35a-0ff4-4270-989b-fe27cf8cf7ca",
+    "timestamp" : "2023-03-13T15:21:21.391Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -34,7 +34,7 @@ e: {
     },
     {
       "name" : "version",
-      "valueUri" : "http://hl7.org/fhir/us/mcode/CodeSystem/snomed-requested-cs|3.0.0-ballot"
+      "valueUri" : "http://hl7.org/fhir/us/mcode/CodeSystem/snomed-requested-cs|2023May"
     }],
     "contains" : [{
       "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/snomed-requested-cs",
@@ -74,8 +74,8 @@ e: {
   "language" : "en",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:7bfbfb69-a706-4a34-bbc1-2240ce93f5ba",
-    "timestamp" : "2023-03-10T19:40:19.607Z",
+    "identifier" : "urn:uuid:240f5a81-6e03-479b-a3ff-b7b3c09090c2",
+    "timestamp" : "2023-03-13T15:21:21.563Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -86,7 +86,7 @@ e: {
     },
     {
       "name" : "version",
-      "valueUri" : "http://hl7.org/fhir/us/mcode/CodeSystem/snomed-requested-cs|3.0.0-ballot"
+      "valueUri" : "http://hl7.org/fhir/us/mcode/CodeSystem/snomed-requested-cs|2023May"
     }],
     "contains" : [{
       "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/snomed-requested-cs",

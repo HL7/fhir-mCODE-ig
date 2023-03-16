@@ -1,6 +1,6 @@
 {
     "package-id" : "hl7.fhir.us.mcode",
-    "version" : "3.0.0-ballot",
+    "version" : "2023May",
     "path" : "http://hl7.org/fhir/us/mcode/2023May",
     "status" : "trial-use",
     "sequence" : "STU 3",

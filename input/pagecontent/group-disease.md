@@ -16,10 +16,12 @@ Because the use of these code systems vary in different institutions, mCODE supp
 
 | Encoding | Code  | Histology Morphology Behavior Extension| Body Site |
 |----------|-------|-----------------------------|----------|
-| **SNOMED Encoded** | Any SNOMED CT code in the [Primary Cancer Disorder Value Set][PrimaryCancerDisorderVS] | Any SNOMED CT code in the [Histology Morphology Behavior Value Set] [HistologyMorphologyBehaviorVS] | Any descendant of `123037004` "Body structure" |
-| **ICD-10-CM Encoded** | Any ICD-10-CM primary code (precoodinated) | n/a | n/a |
-| **ICD-O-3 Encoded** | The code `55342001` "Neoplastic disease (disorder)" or `363346000` "Malignant neoplastic disease (disorder)" or `20376005` "Benign neoplastic disease (disorder)" | Any ICD-O-3 Morphology Code (including /1, /2, or /3 suffix for primary cancers, and /6 suffix for secondary cancers) | Any ICD-O-3 Topology Code |
-{: .grid }v
+| **SNOMED Encoded** | Any SNOMED CT code in the [Primary Cancer Disorder Value Set][PrimaryCancerDisorderVS] | Any SNOMED CT code in the [Histology Morphology Behavior Value Set][HistologyMorphologyBehaviorVS] | Any descendant of `123037004` "Body structure" |
+| **ICD-10-CM Encoded** | Any ICD-10-CM primary code (precoodinated) | omit | optional; must be consistent with primary code if provided but may contain more detail |
+| **ICD-O-3 Encoded** | SNOMED CT code `55342001` "Neoplastic disease (disorder)", `363346000` "Malignant neoplastic disease (disorder)", or `20376005` "Benign neoplastic disease (disorder)" | Full ICD-O-3 morphology code* | Any ICD-O-3 Topology Code |
+{: .grid }
+
+*The ICD-O-3 morphology code should have the form `HHHH/B G` where HHHH is the 4-digit histology code, B is the 1-digit behavior code (i.e., /1, /2, or /3 suffix for primary cancers, and /6 suffix for secondary cancers), and G is the grade or equivalent in leukemias and lymphomas (1 digit). For more information, see [ICD-O Third Edition, Table 8](https://apps.who.int/iris/bitstream/handle/10665/96612/9789241548496_eng.pdf).
 
 Implementers should reference the [PrimaryCancerCondition] and [SecondaryCancerCondition] profiles for further details on the use of these terminologies and associated value sets.
 

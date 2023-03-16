@@ -11,7 +11,7 @@ The DD intentionally omits certain elements in FHIR that are not expected to be 
 
 Downloads:
 
-* [STU 3 mCODE Data Dictionary (Excel download)](mCODEDataDictionary-STU3.xlsx)
+* [STU 3 mCODE Data Dictionary (Excel download)](data-dictionary/mCODEDataDictionary-STU3.xlsx)
 * [STU 2 mCODE Data Dictionary (Excel download)](http://hl7.org/fhir/us/mcode/STU2/data-dictionary/mCODEDataDictionary-STU2.xlsx)
 
 
@@ -22,4 +22,4 @@ The DDD is provided for convenience in understanding the changes between STU 3 a
 
 Download link:
 
-* [mCODE Data Dictionary Differential STU3 versus STU2 (Excel download)](mCODEDataDictionary-STU3-vs-STU2.xlsx)
+* [mCODE Data Dictionary Differential STU3 versus STU2 (Excel download)](data-dictionary/mCODEDataDictionary-STU3-vs-STU2.xlsx)

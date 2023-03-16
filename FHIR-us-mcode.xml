@@ -166,6 +166,7 @@
 <artifact deprecated="true" id="Patient/gx-cancer-patient-incredible-hulk" key="Patient-gx-cancer-patient-incredible-hulk" name="gx-cancer-patient-incredible-hulk"/>
 <artifact id="Bundle/gx-genomic-bundle-adam-anyperson" key="Bundle-gx-genomic-bundle-adam-anyperson" name="gx-genomic-bundle-adam-anyperson"/>
 <artifact deprecated="true" id="Bundle/gx-genomic-bundle-incredible-hulk" key="Bundle-gx-genomic-bundle-incredible-hulk" name="gx-genomic-bundle-incredible-hulk"/>
+<artifact id="Observation/gx-genomic-diagnostic-implication-bap1" key="Observation-gx-genomic-diagnostic-implication-bap1" name="gx-genomic-diagnostic-implication-bap1"/>
 <artifact id="Observation/gx-genomic-diagnostic-implication-pof1b" key="Observation-gx-genomic-diagnostic-implication-pof1b" name="gx-genomic-diagnostic-implication-pof1b"/>
 <artifact id="Observation/gx-genomic-diagnostic-implication-polrmt" key="Observation-gx-genomic-diagnostic-implication-polrmt" name="gx-genomic-diagnostic-implication-polrmt"/>
 <artifact id="Observation/gx-genomic-msi" key="Observation-gx-genomic-msi" name="gx-genomic-msi"/>

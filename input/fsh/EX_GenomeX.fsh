@@ -110,9 +110,17 @@ Description: "GenomeX mCODE Example for Genomic Variant - BAP1"
 * component[protein-hgvs].valueCodeableConcept = HGVS#NP_004647.1:p.(Gln590Ter) "NP_004647.1:p.(Gln590Ter)"  // Mutalizer normalized HGVS string for HGVS#p.Q590* "p.Q590*".
 * component[genomic-source-class].valueCodeableConcept = LNC#LA6684-0 "Somatic"
 * component[sample-allelic-frequency].valueQuantity = 57.4 '%' "%"
-* component[coding-change-type].valueCodeableConcept = SO#SO:0001587 "stop_gained"
-* component[molecular-consequence].valueCodeableConcept = SO#SO:0002054 "loss of function variant"
+* component[molecular-consequence].valueCodeableConcept = SO#SO:0001587 "stop_gained"
 * component[reference-sequence-assembly].valueCodeableConcept = LNC#LA14029-5 "GRCh37"
+
+Instance: gx-genomic-diagnostic-implication-bap1
+InstanceOf: DiagnosticImplication
+Description: "GenomeX mCODE Example for functional effect (loss of function) - BAP1"
+* status = #final "Final"
+* subject = Reference(gx-cancer-patient-adam-anyperson)
+* effectiveDateTime = "2019-04-01"
+* derivedFrom = Reference(gx-genomic-variant-somatic-bap1-indel)
+* component[functional-effect].valueCodeableConcept = SO#SO:0002054 "loss of function variant"
 
 Instance: gx-genomic-variant-somatic-cdkn2a-cnv
 InstanceOf: GenomicVariant
@@ -293,26 +301,6 @@ Description: "Example for Microsatellite Instability"
 * subject = Reference(gx-cancer-patient-adam-anyperson)
 * valueCodeableConcept = LNC#LA26203-2 "MSI-H"
 
-// ******** Recommended Actions *********
-// Here we insert potential therapies indicated for a variant as proposed in by the report.
-/****** COMMENTING OUT MEDICATION RECOMMENDATION - based on CGWG meeting on 12/12/22
-
-Instance: gx-genomic-medication-recommendation-brigatinib
-InstanceOf: CGMedicationRecommendation
-Description: "Example of a Pharmacogenomic Medication recommendation for brigatinib"
-* status = #requested "requested"
-* intent = #proposal "proposal"
-* reasonReference = Reference(gx-genomic-therapeutic-implication-brigatinib)
-
-Instance: gx-genomic-medication-recommendation-ceritinib
-InstanceOf: CGMedicationRecommendation
-Description: "Example of a Pharmacogenomic Medication recommendation for ceritinib"
-* status = #requested "requested"
-* intent = #proposal "proposal"
-* reasonReference = Reference(gx-genomic-therapeutic-implication-ceritinib)
-
-*/
-
 // ******** Therapeutic Implications *********
 
 Instance: gx-genomic-therapeutic-implication-alectinib
@@ -382,6 +370,7 @@ Description: "GenomeX Example for Genomics Report"
 * result[+] = Reference(Observation/gx-genomic-variant-somatic-mycn)
 * result[+] = Reference(Observation/gx-genomic-variant-somatic-pof1b)
 * result[+] = Reference(Observation/gx-genomic-variant-somatic-polrmt)
+* result[+] = Reference(Observation/gx-genomic-diagnostic-implication-bap1)
 * result[+] = Reference(Observation/gx-genomic-diagnostic-implication-pof1b)
 * result[+] = Reference(Observation/gx-genomic-diagnostic-implication-polrmt)
 * result[+] = Reference(Observation/gx-genomic-variant-fusion-met-alk)
@@ -431,6 +420,8 @@ Description: "Extended genomics example conformant with an mCODE Bundle."
 * entry[=].fullUrl = "http://example.org/fhir/Observation/gx-genomic-variant-somatic-pof1b"
 * entry[+].resource = gx-genomic-variant-somatic-polrmt
 * entry[=].fullUrl = "http://example.org/fhir/Observation/gx-genomic-variant-somatic-polrmt"
+* entry[+].resource = gx-genomic-diagnostic-implication-bap1
+* entry[=].fullUrl = "http://example.org/fhir/Observation/gx-genomic-diagnostic-implication-bap1"
 * entry[+].resource = gx-genomic-diagnostic-implication-pof1b
 * entry[=].fullUrl = "http://example.org/fhir/Observation/gx-genomic-diagnostic-implication-pof1b"
 * entry[+].resource = gx-genomic-diagnostic-implication-polrmt

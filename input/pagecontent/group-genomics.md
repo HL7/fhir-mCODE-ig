@@ -23,7 +23,7 @@ The diagram below illustrates the distinction within an mCODE bundle.
 
 <br/>
 
-The mCODE example [`Bundle-gx-genomic-bundle-incredible-hulk`](Bundle-gx-genomic-bundle-incredible-hulk.html) demonstrates a bundle containing resources conforming with the GRIG genomics report.
+The mCODE example [`Bundle-gx-genomic-bundle-adam-anyperson`](Bundle-gx-genomic-bundle-adam-anyperson.html) demonstrates a bundle containing resources conforming with the GRIG genomics report.
 
 ### Assumptions and Scope
 

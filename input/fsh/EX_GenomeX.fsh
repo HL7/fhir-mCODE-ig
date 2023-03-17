@@ -5,7 +5,7 @@
 // ************* Example 1: Tumor-Normal Test *******************
 // **************************************************************
 
-Instance: gx-cancer-patient-incredible-hulk
+Instance: gx-cancer-patient-adam-anyperson
 InstanceOf: Patient
 Description: "GenomeX Example of NGS Patient"
 * identifier.use = #usual
@@ -15,8 +15,8 @@ Description: "GenomeX Example of NGS Patient"
 * identifier[1].type = IDTYPE#MR "Medical Record Number"
 * identifier[1].system = "http://hospital.example.org"
 * identifier[1].value = "123456789"
-* name.family = "Hulk"
-* name.given[0] = "Incredible"
+* name.family = "Anyperson"
+* name.given[0] = "Adam"
 * gender = #male
 * birthDate = "1990-01-01"
 * address.line = "987 Main St"
@@ -33,7 +33,7 @@ Description: "GenomeX example: Order information"
 * identifier[0].value = "22howe"
 * status = #completed
 * intent = #order
-* subject = Reference(gx-cancer-patient-incredible-hulk)
+* subject = Reference(gx-cancer-patient-adam-anyperson)
 * code = https://www.tempus.com#XT.V4 "xT - 648 gene panel"
 * reasonCode[0].coding[0] = ICD10CM#C34.9 "Malignant neoplasm of unspecified part of bronchus or lung"
 * reasonCode[0].coding[1] = ICDO3#"C34.9 8140/3" "Lung adenocarcinoma"
@@ -75,7 +75,7 @@ Instance: gx-genomic-specimen-tumornormal-tumor
 InstanceOf: HumanSpecimen
 Description: "GenomeX mCODE Example for Genomic Specimen - Tumor specimen of the TumorNormal test"
 * status = #available "Available"
-* subject = Reference(gx-cancer-patient-incredible-hulk)
+* subject = Reference(gx-cancer-patient-adam-anyperson)
 * type = SPTY#TUMOR "Tumor"
 * receivedTime = "2021-02-09T21:30:50+05:00"
 * collection.bodySite = SCT#44029006 "Left lung structure (body structure)"
@@ -85,7 +85,7 @@ Instance: gx-genomic-specimen-tumornormal-normal
 InstanceOf: HumanSpecimen
 Description: "GenomeX mCODE Example for Genomic Specimen - Tumor specimen of the TumorNormal test"
 * status = #available "Available"
-* subject = Reference(gx-cancer-patient-incredible-hulk)
+* subject = Reference(gx-cancer-patient-adam-anyperson)
 * type = SPTY#BLD "Whole Blood"  // HL7v2 Specimen type does not handle "a normal sample" for TumorNormal
 * receivedTime = "2021-02-09T21:30:50+05:00"
 * collection.collectedDateTime = "2021-02-06T17:15:00+05:00"
@@ -100,7 +100,7 @@ Description: "GenomeX mCODE Example for Genomic Variant - BAP1"
 * method = LNC#LA26398-0 "Sequencing"
 // value[x] has alternate codings depending on where to place the interpretation of "Positive or Negative".
 // * interpretation = SCT#10828004 "Positive (qualifier value)"
-* subject = Reference(gx-cancer-patient-incredible-hulk)
+* subject = Reference(gx-cancer-patient-adam-anyperson)
 // * effectiveDateTime = "2019-04-01"
 * valueCodeableConcept = LNC#LA9633-4 "Present"
 * component[gene-studied].valueCodeableConcept.coding[0] = HGNC#HGNC:950 "BAP1"
@@ -110,16 +110,24 @@ Description: "GenomeX mCODE Example for Genomic Variant - BAP1"
 * component[protein-hgvs].valueCodeableConcept = HGVS#NP_004647.1:p.(Gln590Ter) "NP_004647.1:p.(Gln590Ter)"  // Mutalizer normalized HGVS string for HGVS#p.Q590* "p.Q590*".
 * component[genomic-source-class].valueCodeableConcept = LNC#LA6684-0 "Somatic"
 * component[sample-allelic-frequency].valueQuantity = 57.4 '%' "%"
-* component[coding-change-type].valueCodeableConcept = SO#SO:0001587 "stop_gained"
-* component[molecular-consequence].valueCodeableConcept = SO#SO:0002054 "loss of function variant"
+* component[molecular-consequence].valueCodeableConcept = SO#SO:0001587 "stop_gained"
 * component[reference-sequence-assembly].valueCodeableConcept = LNC#LA14029-5 "GRCh37"
+
+Instance: gx-genomic-diagnostic-implication-bap1
+InstanceOf: DiagnosticImplication
+Description: "GenomeX mCODE Example for functional effect (loss of function) - BAP1"
+* status = #final "Final"
+* subject = Reference(gx-cancer-patient-adam-anyperson)
+* effectiveDateTime = "2019-04-01"
+* derivedFrom = Reference(gx-genomic-variant-somatic-bap1-indel)
+* component[functional-effect].valueCodeableConcept = SO#SO:0002054 "loss of function variant"
 
 Instance: gx-genomic-variant-somatic-cdkn2a-cnv
 InstanceOf: GenomicVariant
 Description: "GenomeX mCODE Example for Genomic Variant - CDKN2A"
 * status = #final "Final"
 * method = LNC#LA26398-0 "Sequencing"
-* subject = Reference(gx-cancer-patient-incredible-hulk)
+* subject = Reference(gx-cancer-patient-adam-anyperson)
 * effectiveDateTime = "2019-04-01"
 * valueCodeableConcept = LNC#LA9633-4 "Present"
 * component[gene-studied].valueCodeableConcept.coding[0] = HGNC#HGNC:1787 "CDKN2A"
@@ -133,7 +141,7 @@ InstanceOf: GenomicVariant
 Description: "GenomeX mCODE Example for Genomic Variant - CDKN2B"
 * status = #final "Final"
 * method = LNC#LA26398-0 "Sequencing"
-* subject = Reference(gx-cancer-patient-incredible-hulk)
+* subject = Reference(gx-cancer-patient-adam-anyperson)
 * effectiveDateTime = "2019-04-01"
 * valueCodeableConcept = LNC#LA9633-4 "Present"
 * component[gene-studied].valueCodeableConcept.coding[0] = HGNC#HGNC:1788 "CDKN2B"
@@ -147,7 +155,7 @@ InstanceOf: GenomicVariant
 Description: "GenomeX mCODE Example for Genomic Variant - KDM5D"
 * status = #final "Final"
 * method = LNC#LA26398-0 "Sequencing"
-* subject = Reference(gx-cancer-patient-incredible-hulk)
+* subject = Reference(gx-cancer-patient-adam-anyperson)
 * effectiveDateTime = "2019-04-01"
 * valueCodeableConcept = LNC#LA9633-4 "Present"
 * component[gene-studied].valueCodeableConcept.coding[0] = HGNC#HGNC:11115 "KDM5D"
@@ -161,7 +169,7 @@ InstanceOf: GenomicVariant
 Description: "GenomeX mCODE Example for Genomic Variant - MTAP"
 * status = #final "Final"
 * method = LNC#LA26398-0 "Sequencing"
-* subject = Reference(gx-cancer-patient-incredible-hulk)
+* subject = Reference(gx-cancer-patient-adam-anyperson)
 * effectiveDateTime = "2019-04-01"
 * valueCodeableConcept = LNC#LA9633-4 "Present"
 * component[gene-studied].valueCodeableConcept.coding[0] = HGNC#HGNC:7413 "MTAP"
@@ -175,7 +183,7 @@ InstanceOf: GenomicVariant
 Description: "GenomeX mCODE Example for Genomic Variant - MYCN"
 * status = #final "Final"
 * method = LNC#LA26398-0 "Sequencing"
-* subject = Reference(gx-cancer-patient-incredible-hulk)
+* subject = Reference(gx-cancer-patient-adam-anyperson)
 * effectiveDateTime = "2019-04-01"
 * valueCodeableConcept = LNC#LA9633-4 "Present"
 * component[gene-studied].valueCodeableConcept.coding[0] = HGNC#HGNC:7559 "MYCN"
@@ -191,7 +199,7 @@ InstanceOf: GenomicVariant
 Description: "GenomeX mCODE Example for the absence of a notable variant - KIT and BRAF"
 * status = #final "Final"
 * method = LNC#LA26398-0 "Sequencing"
-* subject = Reference(gx-cancer-patient-incredible-hulk)
+* subject = Reference(gx-cancer-patient-adam-anyperson)
 * effectiveDateTime = "2019-04-01"
 * valueCodeableConcept = LNC#LA9634-2 "Absent"
 * component[gene-studied][0].valueCodeableConcept = HGNC#HGNC:6342 "NRAS" 
@@ -207,7 +215,7 @@ InstanceOf: GenomicVariant
 Description: "mCODE Example for Genomic Variant gene fusion event"
 * status = #final "Final"
 * method = LNC#LA26398-0 "Sequencing"
-* subject = Reference(gx-cancer-patient-incredible-hulk)
+* subject = Reference(gx-cancer-patient-adam-anyperson)
 * effectiveDateTime = "2019-04-01"
 * valueCodeableConcept = LNC#LA9633-4 "Present"
 * component[gene-studied][0].valueCodeableConcept.coding[0] = HGNC#HGNC:7029 "MET" 
@@ -224,7 +232,7 @@ InstanceOf: GenomicVariant
 Description: "GenomeX mCODE Example for Genomic Variant - POF1B"
 * status = #final "Final"
 * method = LNC#LA26398-0 "Sequencing"
-* subject = Reference(gx-cancer-patient-incredible-hulk)
+* subject = Reference(gx-cancer-patient-adam-anyperson)
 * effectiveDateTime = "2019-04-01"
 * valueCodeableConcept = LNC#LA9633-4 "Present"
 * component[gene-studied].valueCodeableConcept.coding[0] = HGNC#HGNC:13711 "POF1B"
@@ -242,7 +250,7 @@ Instance: gx-genomic-diagnostic-implication-pof1b
 InstanceOf: DiagnosticImplication
 Description: "GenomeX mCODE Example for Clinical Significance of VUS - POF1B"
 * status = #final "Final"
-* subject = Reference(gx-cancer-patient-incredible-hulk)
+* subject = Reference(gx-cancer-patient-adam-anyperson)
 * effectiveDateTime = "2019-04-01"
 * derivedFrom = Reference(gx-genomic-variant-somatic-pof1b)
 * component[clinical-significance].valueCodeableConcept = LNC#LA26333-7 "Uncertain significance"
@@ -252,7 +260,7 @@ InstanceOf: GenomicVariant
 Description: "GenomeX mCODE Example for Genomic Variant - POLRMT"
 * status = #final "Final"
 * method = LNC#LA26398-0 "Sequencing"
-* subject = Reference(gx-cancer-patient-incredible-hulk)
+* subject = Reference(gx-cancer-patient-adam-anyperson)
 * effectiveDateTime = "2019-04-01"
 * valueCodeableConcept = LNC#LA9633-4 "Present"
 * component[gene-studied].valueCodeableConcept.coding[0] = HGNC#HGNC:9200 "POLRMT"
@@ -270,7 +278,7 @@ Instance: gx-genomic-diagnostic-implication-polrmt
 InstanceOf: DiagnosticImplication
 Description: "GenomeX mCODE Example for Clinical Significance of VUS - POF1B"
 * status = #final "Final"
-* subject = Reference(gx-cancer-patient-incredible-hulk)
+* subject = Reference(gx-cancer-patient-adam-anyperson)
 * effectiveDateTime = "2019-04-01"
 * derivedFrom = Reference(gx-genomic-variant-somatic-polrmt)
 * component[clinical-significance].valueCodeableConcept = LNC#LA26333-7 "Uncertain significance"
@@ -281,7 +289,7 @@ InstanceOf: TMB
 Description: "Example for Tumor Mutation Burden"
 * status = #final "final"
 * category[labCategory] = ObsCat#laboratory
-* subject = Reference(gx-cancer-patient-incredible-hulk)
+* subject = Reference(gx-cancer-patient-adam-anyperson)
 * valueQuantity.value = 57.1
 
 // ******* Microsatellite Instability *********
@@ -290,28 +298,8 @@ InstanceOf: MSI
 Description: "Example for Microsatellite Instability"
 * status = #final "final"
 * category[labCategory] = ObsCat#laboratory
-* subject = Reference(gx-cancer-patient-incredible-hulk)
+* subject = Reference(gx-cancer-patient-adam-anyperson)
 * valueCodeableConcept = LNC#LA26203-2 "MSI-H"
-
-// ******** Recommended Actions *********
-// Here we insert potential therapies indicated for a variant as proposed in by the report.
-/****** COMMENTING OUT MEDICATION RECOMMENDATION - based on CGWG meeting on 12/12/22
-
-Instance: gx-genomic-medication-recommendation-brigatinib
-InstanceOf: CGMedicationRecommendation
-Description: "Example of a Pharmacogenomic Medication recommendation for brigatinib"
-* status = #requested "requested"
-* intent = #proposal "proposal"
-* reasonReference = Reference(gx-genomic-therapeutic-implication-brigatinib)
-
-Instance: gx-genomic-medication-recommendation-ceritinib
-InstanceOf: CGMedicationRecommendation
-Description: "Example of a Pharmacogenomic Medication recommendation for ceritinib"
-* status = #requested "requested"
-* intent = #proposal "proposal"
-* reasonReference = Reference(gx-genomic-therapeutic-implication-ceritinib)
-
-*/
 
 // ******** Therapeutic Implications *********
 
@@ -362,12 +350,12 @@ Description: "Example of how Genomics Reporting IG Therapeutic Implications fits
 
 
 // ********** Genomics Report ***********
-Instance: gx-genomics-report-incredible-hulk
+Instance: gx-genomics-report-adam-anyperson
 InstanceOf: mcode-genomics-report
 Description: "GenomeX Example for Genomics Report"
 * status = #final "Final"
 * code = LNC#51969-4 "Genetic analysis report"
-* subject = Reference(gx-cancer-patient-incredible-hulk)
+* subject = Reference(gx-cancer-patient-adam-anyperson)
 * performer = Reference(gx-us-core-organization-tempus-inc)
 * effectiveDateTime = "2022-02-15T19:28:58+05:00"
 * basedOn = Reference(gx-order-tumornormal-tempus-inc)
@@ -382,6 +370,7 @@ Description: "GenomeX Example for Genomics Report"
 * result[+] = Reference(Observation/gx-genomic-variant-somatic-mycn)
 * result[+] = Reference(Observation/gx-genomic-variant-somatic-pof1b)
 * result[+] = Reference(Observation/gx-genomic-variant-somatic-polrmt)
+* result[+] = Reference(Observation/gx-genomic-diagnostic-implication-bap1)
 * result[+] = Reference(Observation/gx-genomic-diagnostic-implication-pof1b)
 * result[+] = Reference(Observation/gx-genomic-diagnostic-implication-polrmt)
 * result[+] = Reference(Observation/gx-genomic-variant-fusion-met-alk)
@@ -399,14 +388,14 @@ Description: "GenomeX Example for Genomics Report"
 
 // ************* Genomic Bundle *******************
 
-Instance: gx-genomic-bundle-incredible-hulk
+Instance: gx-genomic-bundle-adam-anyperson
 InstanceOf: Bundle
 Description: "Extended genomics example conformant with an mCODE Bundle."
 * type = #collection "Collection"
-* entry[0].resource = gx-cancer-patient-incredible-hulk
-* entry[=].fullUrl = "http://example.org/fhir/Patient/gx-cancer-patient-incredible-hulk"
-* entry[+].resource = gx-genomics-report-incredible-hulk
-* entry[=].fullUrl = "http://example.org/fhir/DiagnosticReport/gx-genomics-report-incredible-hulk"
+* entry[0].resource = gx-cancer-patient-adam-anyperson
+* entry[=].fullUrl = "http://example.org/fhir/Patient/gx-cancer-patient-adam-anyperson"
+* entry[+].resource = gx-genomics-report-adam-anyperson
+* entry[=].fullUrl = "http://example.org/fhir/DiagnosticReport/gx-genomics-report-adam-anyperson"
 * entry[+].resource = gx-order-tumornormal-tempus-inc
 * entry[=].fullUrl = "http://example.org/fhir/ServiceRequest/gx-order-tumornormal-tempus-inc"
 * entry[+].resource = gx-practitioner-test-pathologist
@@ -431,6 +420,8 @@ Description: "Extended genomics example conformant with an mCODE Bundle."
 * entry[=].fullUrl = "http://example.org/fhir/Observation/gx-genomic-variant-somatic-pof1b"
 * entry[+].resource = gx-genomic-variant-somatic-polrmt
 * entry[=].fullUrl = "http://example.org/fhir/Observation/gx-genomic-variant-somatic-polrmt"
+* entry[+].resource = gx-genomic-diagnostic-implication-bap1
+* entry[=].fullUrl = "http://example.org/fhir/Observation/gx-genomic-diagnostic-implication-bap1"
 * entry[+].resource = gx-genomic-diagnostic-implication-pof1b
 * entry[=].fullUrl = "http://example.org/fhir/Observation/gx-genomic-diagnostic-implication-pof1b"
 * entry[+].resource = gx-genomic-diagnostic-implication-polrmt

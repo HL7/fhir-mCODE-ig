@@ -1,5 +1,5 @@
 == Suppressed Messages ==
-# For terminology errors, see https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/New.20Problem.20With.20Existing.20Valueset.2FCodeSYstem
+# For terminology errors, see  https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/New.20Problem.20With.20Existing.20Valueset.2FCodeSYstem
 
 # SUPPRESS US CORE OBSERVATION MESSAGES. This was approved by Cross-Group Projects Work Group on 1/28/2021 Floyd Eisenberg/Brett Marquard 28-0-1. See https://jira.hl7.org/browse/FHIR-30707
 WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tumor-size').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles

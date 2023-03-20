@@ -61,6 +61,8 @@ Based on user feedback on the complexity of the STU 2 design, [comorbidities][Co
     * SCT#246165003 "Extent of disease (attribute)"
   * Temporary codes for lymph node levels IIA and IIB, missing from previous versions, were added.
   * A code for "multiple" was added to RadiotherapyTreatmentLocationQualifierVS
+  * "Noncompliance with treatment (finding)" was added to TreatmentTerminationReasonVS
+  * In some intensionally-defined SNOMED CT value sets, the `is-a` operator was replaced with the `descendant-of` operator, removing the top-level code when it was not a valid choice.
 
 ### Update to US Core 5.0.1
 

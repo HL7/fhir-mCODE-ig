@@ -221,7 +221,7 @@ Title: "Radiotherapy Treatment Location Qualifier Value Set"
 Description: "Various modifiers that can be applied to body locations where radiotherapy treatments can be directed."
 * insert SNOMEDCopyrightForVS
 * ^extension[FMM].valueInteger = 3
-* include codes from system SCT where concept is-a #258399006  "Lymph node level value (qualifier value)"  // I, II, III, IV, V, VI, VII and sub-levels
+* include codes from system SCT where concept descendant-of #258399006  "Lymph node level value (qualifier value)"  // I, II, III, IV, V, VI, VII and sub-levels
 * exclude SCT#258399006 // the top level abstract code is excluded
 * include codes from valueset LateralityQualifierVS
 // * SCT#255549009    "Anterior (qualifier value)" -- NOT USED BY TG263

@@ -5,7 +5,7 @@
 # NOTE ON ERROR "BUNDLE_BUNDLE_ENTRY_MULTIPLE_PROFILES": This error reflects a limitation in the IG Publisher. Dispensation has been granted by the FHIR Product Manager. See https://chat.fhir.org/#narrow/stream/179192-fmg/topic/BUNDLE_ENTRY_MULTIPLE_PROFILES. Example of error message:
 ERROR: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[11].resource/*Procedure/radiotherapy-treatment-summary-chest-wall-jenny-m*/: 2 profiles found for entry resource. More than one is not supported at this time. (Type Procedure: http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-related-surgical-procedure, http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-course-summary)
 
-# NOTE ON ERROR "Terminology_TX_NoValid_1_CC": This error reflects a terminology server problem parsing HGVS codes. See https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/New.20Problem.20With.20Existing.20Valueset.2FCodeSYstem. Example of error message:
+# NOTE ON ERROR  "Terminology_TX_NoValid_1_CC": This error reflects a terminology server problem parsing HGVS codes. See https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/New.20Problem.20With.20Existing.20Valueset.2FCodeSYstem. Example of error message:
 ERROR: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[7].resource.component[2].value.ofType(CodeableConcept): None of the codings provided are in the value set 'Human Genome Variation Society (HGVS) Nomenclature' (http://hl7.org/fhir/uv/genomics-reporting/ValueSet/hgvs-vs|2.0.0), and a coding from this value set is required) (codes = http://varnomen.hgvs.org#NC_000016.10:g.23603471G>T)
 
 # SUPPRESS WARNINGS: HGVS CODE SYSTEM (http://varnomen.hgvs.org)

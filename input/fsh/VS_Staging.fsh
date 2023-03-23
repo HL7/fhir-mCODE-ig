@@ -22,7 +22,6 @@ Description: "System or method used for staging cancers. The terms in this value
 * exclude SCT#74542008 "Walter Reed stage 4 (tumor staging)"
 * exclude SCT#66470009 "Walter Reed stage 5 (tumor staging)"
 * exclude SCT#83200007 "Walter Reed stage 6 (tumor staging)"
-#1
 
 ValueSet: CancerStagingTypeVS
 Id: mcode-cancer-staging-type-vs

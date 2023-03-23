@@ -79,7 +79,7 @@ Title: "Body Location Qualifier Value Set"
 Description: "Qualifiers to refine a body structure or location including qualifiers for relative location, directionality, number, and plane, and excluding qualifiers for laterality."
 * insert SNOMEDCopyrightForVS
 * ^extension[FMM].valueInteger = 4
-// Changed to intensional definition
+// Changed this to an intensional definition
 * include codes from valueset BodyLocationAndLateralityQualifierVS
 * exclude codes from valueset LateralityQualifierVS // laterality is separated into a separate value set
 

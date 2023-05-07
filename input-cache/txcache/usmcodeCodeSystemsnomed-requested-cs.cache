@@ -6,58 +6,6 @@
     "include" : [{
       "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/snomed-requested-cs",
       "concept" : [{
-        "code" : "USCRS-34777",
-        "display" : "Lymph node level IIA (qualifier value)"
-      },
-      {
-        "code" : "USCRS-34775",
-        "display" : "Lymph node level IIB (qualifier value)"
-      }]
-    }]
-  }
-}}####
-e: {
-  "valueSet" : {
-  "resourceType" : "ValueSet",
-  "language" : "en",
-  "status" : "active",
-  "expansion" : {
-    "identifier" : "urn:uuid:3ab43867-4681-4e31-ae44-57313d31420c",
-    "timestamp" : "2023-03-20T15:46:54.293Z",
-    "parameter" : [{
-      "name" : "limitedExpansion",
-      "valueBoolean" : true
-    },
-    {
-      "name" : "excludeNested",
-      "valueBoolean" : true
-    },
-    {
-      "name" : "version",
-      "valueUri" : "http://hl7.org/fhir/us/mcode/CodeSystem/snomed-requested-cs|3.0.0-ballot"
-    }],
-    "contains" : [{
-      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/snomed-requested-cs",
-      "code" : "USCRS-34777",
-      "display" : "Lymph node level IIA (qualifier value)"
-    },
-    {
-      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/snomed-requested-cs",
-      "code" : "USCRS-34775",
-      "display" : "Lymph node level IIB (qualifier value)"
-    }]
-  }
-},
-  "error" : ""
-}
--------------------------------------------------------------------------------------
-{"hierarchical" : false, "valueSet" :{
-  "resourceType" : "ValueSet",
-  "compose" : {
-    "inactive" : true,
-    "include" : [{
-      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/snomed-requested-cs",
-      "concept" : [{
         "code" : "USCRS-34356",
         "display" : "Bowel space (body structure)"
       },
@@ -71,11 +19,11 @@ e: {
 e: {
   "valueSet" : {
   "resourceType" : "ValueSet",
-  "language" : "en",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:0a2a3536-b438-4cb5-967d-c8e1257babb8",
-    "timestamp" : "2023-03-20T15:46:56.199Z",
+    "identifier" : "urn:uuid:711e1ceb-3b9d-44e2-8ea1-a4c67f4dcea0",
+    "timestamp" : "2023-05-07T20:52:27.153Z",
+    "total" : 2,
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -97,6 +45,58 @@ e: {
       "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/snomed-requested-cs",
       "code" : "USCRS-34358",
       "display" : "Small bowel space (body structure)"
+    }]
+  }
+},
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : false, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "inactive" : true,
+    "include" : [{
+      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/snomed-requested-cs",
+      "concept" : [{
+        "code" : "USCRS-34777",
+        "display" : "Lymph node level IIA (qualifier value)"
+      },
+      {
+        "code" : "USCRS-34775",
+        "display" : "Lymph node level IIB (qualifier value)"
+      }]
+    }]
+  }
+}}####
+e: {
+  "valueSet" : {
+  "resourceType" : "ValueSet",
+  "status" : "active",
+  "expansion" : {
+    "identifier" : "urn:uuid:e8490248-c854-4c0d-a996-4228d4e778ea",
+    "timestamp" : "2023-05-07T20:52:33.153Z",
+    "total" : 2,
+    "parameter" : [{
+      "name" : "limitedExpansion",
+      "valueBoolean" : true
+    },
+    {
+      "name" : "excludeNested",
+      "valueBoolean" : true
+    },
+    {
+      "name" : "version",
+      "valueUri" : "http://hl7.org/fhir/us/mcode/CodeSystem/snomed-requested-cs|3.0.0-ballot"
+    }],
+    "contains" : [{
+      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/snomed-requested-cs",
+      "code" : "USCRS-34777",
+      "display" : "Lymph node level IIA (qualifier value)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/snomed-requested-cs",
+      "code" : "USCRS-34775",
+      "display" : "Lymph node level IIB (qualifier value)"
     }]
   }
 },

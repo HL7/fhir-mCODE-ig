@@ -1,5 +1,5 @@
 // GenomeX example for Use Case 1 - Reference lab to EHR
-// The following examples will be used as a prototype and based on de-identified RWD test data. There is no PHI.
+// The following examples will be used as a prototype and based on de-identified RWD test data. ////There is no PHI.
 
 // **************************************************************
 // ************* Example 1: Tumor-Normal Test *******************
@@ -121,6 +121,7 @@ Description: "GenomeX mCODE Example for functional effect (loss of function) - B
 * effectiveDateTime = "2019-04-01"
 * derivedFrom = Reference(gx-genomic-variant-somatic-bap1-indel)
 * component[functional-effect].valueCodeableConcept = SO#SO:0002054 "loss of function variant"
+* component[clinical-significance].valueCodeableConcept = LNC#LA6668-3 "Pathogenic"
 
 Instance: gx-genomic-variant-somatic-cdkn2a-cnv
 InstanceOf: GenomicVariant
@@ -136,6 +137,15 @@ Description: "GenomeX mCODE Example for Genomic Variant - CDKN2A"
 * component[molecular-consequence].valueCodeableConcept = SO#SO:0001743 "copy_number_loss"
 * component[reference-sequence-assembly].valueCodeableConcept = LNC#LA14029-5 "GRCh37"
 
+Instance: gx-genomic-diagnostic-implication-cdkn2a-cnv
+InstanceOf: DiagnosticImplication
+Description: "GenomeX mCODE Example for clinical significance - CDKN2A "
+* status = #final "Final"
+* subject = Reference(gx-cancer-patient-adam-anyperson)
+* effectiveDateTime = "2019-04-01"
+* derivedFrom = Reference(gx-genomic-variant-somatic-cdkn2a-cnv)
+* component[clinical-significance].valueCodeableConcept = LNC#LA6668-3 "Pathogenic"
+
 Instance: gx-genomic-variant-somatic-cdkn2b-cnv
 InstanceOf: GenomicVariant
 Description: "GenomeX mCODE Example for Genomic Variant - CDKN2B"
@@ -149,6 +159,15 @@ Description: "GenomeX mCODE Example for Genomic Variant - CDKN2B"
 * component[genomic-source-class].valueCodeableConcept = LNC#LA6684-0 "Somatic"
 * component[molecular-consequence].valueCodeableConcept = SO#SO:0001743 "copy_number_loss"
 * component[reference-sequence-assembly].valueCodeableConcept = LNC#LA14029-5 "GRCh37"
+
+Instance: gx-genomic-diagnostic-implication-cdkn2b-cnv
+InstanceOf: DiagnosticImplication
+Description: "GenomeX mCODE Example for clinical significance - CDKN2B "
+* status = #final "Final"
+* subject = Reference(gx-cancer-patient-adam-anyperson)
+* effectiveDateTime = "2019-04-01"
+* derivedFrom = Reference(gx-genomic-variant-somatic-cdkn2b-cnv)
+* component[clinical-significance].valueCodeableConcept = LNC#LA6668-3 "Pathogenic"
 
 Instance: gx-genomic-variant-somatic-kdm5d
 InstanceOf: GenomicVariant
@@ -164,6 +183,15 @@ Description: "GenomeX mCODE Example for Genomic Variant - KDM5D"
 * component[molecular-consequence].valueCodeableConcept = SO#SO:0001743 "copy_number_loss"
 * component[reference-sequence-assembly].valueCodeableConcept = LNC#LA14029-5 "GRCh37"
 
+Instance: gx-genomic-diagnostic-implication-kdm5d
+InstanceOf: DiagnosticImplication
+Description: "GenomeX mCODE Example for clinical significance - KDM5D "
+* status = #final "Final"
+* subject = Reference(gx-cancer-patient-adam-anyperson)
+* effectiveDateTime = "2019-04-01"
+* derivedFrom = Reference(gx-genomic-variant-somatic-kdm5d)
+* component[clinical-significance].valueCodeableConcept = LNC#LA6668-3 "Pathogenic"
+
 Instance: gx-genomic-variant-somatic-mtap
 InstanceOf: GenomicVariant
 Description: "GenomeX mCODE Example for Genomic Variant - MTAP"
@@ -177,6 +205,15 @@ Description: "GenomeX mCODE Example for Genomic Variant - MTAP"
 * component[genomic-source-class].valueCodeableConcept = LNC#LA6684-0 "Somatic"
 * component[molecular-consequence].valueCodeableConcept = SO#SO:0001743 "copy_number_loss"
 * component[reference-sequence-assembly].valueCodeableConcept = LNC#LA14029-5 "GRCh37"
+
+Instance: gx-genomic-diagnostic-implication-mtap
+InstanceOf: DiagnosticImplication
+Description: "GenomeX mCODE Example for clinical significance - MTAP "
+* status = #final "Final"
+* subject = Reference(gx-cancer-patient-adam-anyperson)
+* effectiveDateTime = "2019-04-01"
+* derivedFrom = Reference(gx-genomic-variant-somatic-mtap)
+* component[clinical-significance].valueCodeableConcept = LNC#LA6668-3 "Pathogenic"
 
 Instance: gx-genomic-variant-somatic-mycn
 InstanceOf: GenomicVariant
@@ -192,6 +229,15 @@ Description: "GenomeX mCODE Example for Genomic Variant - MYCN"
 * component[molecular-consequence].valueCodeableConcept = SO#SO:0001742 "copy_number_gain"
 * component[reference-sequence-assembly].valueCodeableConcept = LNC#LA14029-5 "GRCh37"
 
+Instance: gx-genomic-diagnostic-implication-mycn
+InstanceOf: DiagnosticImplication
+Description: "GenomeX mCODE Example for clinical significance - MYCN "
+* status = #final "Final"
+* subject = Reference(gx-cancer-patient-adam-anyperson)
+* effectiveDateTime = "2019-04-01"
+* derivedFrom = Reference(gx-genomic-variant-somatic-mycn)
+* component[clinical-significance].valueCodeableConcept = LNC#LA6668-3 "Pathogenic"
+
 // MLT: All pertinent negative genes for a single report were combined into one variant "absent" resource.
 
 Instance: gx-genomic-variant-pertinent-negative-nras-kit-braf
@@ -205,6 +251,7 @@ Description: "GenomeX mCODE Example for the absence of a notable variant - KIT a
 * component[gene-studied][0].valueCodeableConcept = HGNC#HGNC:6342 "NRAS" 
 * component[gene-studied][1].valueCodeableConcept = HGNC#HGNC:7989 "KIT"
 * component[gene-studied][+].valueCodeableConcept = HGNC#HGNC:1097 "BRAF" 
+* component[genomic-ref-seq].valueCodeableConcept = NCBI#NM_004656  "NM_004656"
 
 /* genomic-variant-fusion is an example of the
  * GenomicVariant to represent a gene fusion event.

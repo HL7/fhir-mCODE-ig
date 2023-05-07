@@ -1,0 +1,21 @@
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "urn:oid:2.16.840.1.113883.6.238",
+  "code" : "2106-3"
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
+v: {
+  "severity" : "error",
+  "error" : "Local Error: Resolved system urn:oid:2.16.840.1.113883.6.238 (v3.0.0), but the definition is not complete. Server Error: The CodeSystem urn:oid:2.16.840.1.113883.6.238 is unknown; The provided code urn:oid:2.16.840.1.113883.6.238#2106-3 is not in the value set 'http://hl7.org/fhir/ValueSet/@all' (from http://tx.fhir.org/r4)",
+  "class" : "UNKNOWN"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "urn:oid:2.16.840.1.113883.6.238",
+  "code" : "2186-5"
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
+v: {
+  "severity" : "error",
+  "error" : "Local Error: Resolved system urn:oid:2.16.840.1.113883.6.238 (v3.0.0), but the definition is not complete. Server Error: The CodeSystem urn:oid:2.16.840.1.113883.6.238 is unknown; The provided code urn:oid:2.16.840.1.113883.6.238#2186-5 is not in the value set 'http://hl7.org/fhir/ValueSet/@all' (from http://tx.fhir.org/r4)",
+  "class" : "UNKNOWN"
+}
+-------------------------------------------------------------------------------------

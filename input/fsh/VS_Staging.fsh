@@ -9,9 +9,15 @@ Description: "System or method used for staging cancers. The terms in this value
 * include codes from system SCT where concept descendant-of #254292007 "Tumor staging (tumor staging)"
 * SCT#1149162008 "International Staging System for multiple myeloma (staging scale)"
 * SCT#1149163003 "Revised International Staging System for multiple myeloma (staging scale)"
-* SCT#246165003 "Extent of disease (attribute)"  // instead of NCI#C174125 "Neoplastic Disease Extent Indicator"
+//* SCT#246165003 "Extent of disease (attribute)"  // instead of NCI#C174125 "Neoplastic Disease Extent Indicator"
 * SCT#418414003 "The revised European-American Lymphoma classification (qualifier value)"
 * SCT#418823005 "The World Health Organization classification of lymphoid malignancies (qualifier value)"
+* SCT_TBD#USCRS-34952 "The International Neuroblastoma Risk Group (INRG)  (tumor staging)"           // requested 6/9/23
+* SCT_TBD#USCRS-34951  "Toronto Childhood Cancer Stage Guidelines (tumor staging)"         // requested 6/9/23
+* SCT_TBD#USCRS-34950  "Masaoka-Koga Stage Classification for Thymic Malignancies (tumor staging)"         // requested 6/9/23
+* SCT_TBD#USCRS-34949  "Enneking surgical staging system (tumor staging)"         // requested 6/9/23
+* SCT_TBD#USCRS-34948  "International Germ Cell Consensus Classification (tumor staging)"         // requested 6/9/23
+* SCT_TBD#USCRS-34947  "Surveillance Epidemiology and End Results Program Extent of Disease, 2018 edition (tumor staging)" // requested 6/9/23, replaces SCT#246165003 Extend of Disease, which replaced NCI#C174125 "Neoplastic Disease Extent Indicator"
 * exclude codes from system SCT where concept descendant-of #258318002 "Generic anatomical site tumor invasion status (tumor staging)"
 * exclude codes from system SCT where concept descendant-of #258309004 "Generic lymph node tumor invasion status stage (tumor staging)"
 * exclude codes from system SCT where concept descendant-of #258233007 "Generic tumor staging descriptor (tumor staging)"

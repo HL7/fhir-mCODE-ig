@@ -6,58 +6,6 @@
     "include" : [{
       "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/snomed-requested-cs",
       "concept" : [{
-        "code" : "USCRS-34777",
-        "display" : "Lymph node level IIA (qualifier value)"
-      },
-      {
-        "code" : "USCRS-34775",
-        "display" : "Lymph node level IIB (qualifier value)"
-      }]
-    }]
-  }
-}}####
-e: {
-  "valueSet" : {
-  "resourceType" : "ValueSet",
-  "language" : "en",
-  "status" : "active",
-  "expansion" : {
-    "identifier" : "urn:uuid:3ab43867-4681-4e31-ae44-57313d31420c",
-    "timestamp" : "2023-03-20T15:46:54.293Z",
-    "parameter" : [{
-      "name" : "limitedExpansion",
-      "valueBoolean" : true
-    },
-    {
-      "name" : "excludeNested",
-      "valueBoolean" : true
-    },
-    {
-      "name" : "version",
-      "valueUri" : "http://hl7.org/fhir/us/mcode/CodeSystem/snomed-requested-cs|3.0.0-ballot"
-    }],
-    "contains" : [{
-      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/snomed-requested-cs",
-      "code" : "USCRS-34777",
-      "display" : "Lymph node level IIA (qualifier value)"
-    },
-    {
-      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/snomed-requested-cs",
-      "code" : "USCRS-34775",
-      "display" : "Lymph node level IIB (qualifier value)"
-    }]
-  }
-},
-  "error" : ""
-}
--------------------------------------------------------------------------------------
-{"hierarchical" : false, "valueSet" :{
-  "resourceType" : "ValueSet",
-  "compose" : {
-    "inactive" : true,
-    "include" : [{
-      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/snomed-requested-cs",
-      "concept" : [{
         "code" : "USCRS-34356",
         "display" : "Bowel space (body structure)"
       },
@@ -71,11 +19,11 @@ e: {
 e: {
   "valueSet" : {
   "resourceType" : "ValueSet",
-  "language" : "en",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:0a2a3536-b438-4cb5-967d-c8e1257babb8",
-    "timestamp" : "2023-03-20T15:46:56.199Z",
+    "identifier" : "urn:uuid:e285ffc8-4f21-42c2-b683-ed39b143dc81",
+    "timestamp" : "2023-06-12T13:44:56.235Z",
+    "total" : 2,
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -97,6 +45,146 @@ e: {
       "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/snomed-requested-cs",
       "code" : "USCRS-34358",
       "display" : "Small bowel space (body structure)"
+    }]
+  }
+},
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : false, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "inactive" : true,
+    "include" : [{
+      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/snomed-requested-cs",
+      "concept" : [{
+        "code" : "USCRS-34952",
+        "display" : "The International Neuroblastoma Risk Group (INRG)  (tumor staging)"
+      },
+      {
+        "code" : "USCRS-34951",
+        "display" : "Toronto Childhood Cancer Stage Guidelines (tumor staging)"
+      },
+      {
+        "code" : "USCRS-34950",
+        "display" : "Masaoka-Koga Stage Classification for Thymic Malignancies (tumor staging)"
+      },
+      {
+        "code" : "USCRS-34949",
+        "display" : "Enneking surgical staging system (tumor staging)"
+      },
+      {
+        "code" : "USCRS-34948",
+        "display" : "International Germ Cell Consensus Classification (tumor staging)"
+      },
+      {
+        "code" : "USCRS-34947",
+        "display" : "Surveillance Epidemiology and End Results Program Extent of Disease, 2018 edition (tumor staging)"
+      }]
+    }]
+  }
+}}####
+e: {
+  "valueSet" : {
+  "resourceType" : "ValueSet",
+  "status" : "active",
+  "expansion" : {
+    "identifier" : "urn:uuid:62ce92ba-8a94-44f5-bfa2-3b8cdc5b373e",
+    "timestamp" : "2023-06-12T13:45:18.141Z",
+    "total" : 6,
+    "parameter" : [{
+      "name" : "limitedExpansion",
+      "valueBoolean" : true
+    },
+    {
+      "name" : "excludeNested",
+      "valueBoolean" : true
+    },
+    {
+      "name" : "version",
+      "valueUri" : "http://hl7.org/fhir/us/mcode/CodeSystem/snomed-requested-cs|3.0.0-ballot"
+    }],
+    "contains" : [{
+      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/snomed-requested-cs",
+      "code" : "USCRS-34952",
+      "display" : "The International Neuroblastoma Risk Group (INRG)  (tumor staging)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/snomed-requested-cs",
+      "code" : "USCRS-34951",
+      "display" : "Toronto Childhood Cancer Stage Guidelines (tumor staging)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/snomed-requested-cs",
+      "code" : "USCRS-34950",
+      "display" : "Masaoka-Koga Stage Classification for Thymic Malignancies (tumor staging)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/snomed-requested-cs",
+      "code" : "USCRS-34949",
+      "display" : "Enneking surgical staging system (tumor staging)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/snomed-requested-cs",
+      "code" : "USCRS-34948",
+      "display" : "International Germ Cell Consensus Classification (tumor staging)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/snomed-requested-cs",
+      "code" : "USCRS-34947",
+      "display" : "Surveillance Epidemiology and End Results Program Extent of Disease, 2018 edition (tumor staging)"
+    }]
+  }
+},
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : false, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "inactive" : true,
+    "include" : [{
+      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/snomed-requested-cs",
+      "concept" : [{
+        "code" : "USCRS-34777",
+        "display" : "Lymph node level IIA (qualifier value)"
+      },
+      {
+        "code" : "USCRS-34775",
+        "display" : "Lymph node level IIB (qualifier value)"
+      }]
+    }]
+  }
+}}####
+e: {
+  "valueSet" : {
+  "resourceType" : "ValueSet",
+  "status" : "active",
+  "expansion" : {
+    "identifier" : "urn:uuid:2f921875-b963-4bcb-b627-ce28d06fd7bb",
+    "timestamp" : "2023-06-12T13:45:19.954Z",
+    "total" : 2,
+    "parameter" : [{
+      "name" : "limitedExpansion",
+      "valueBoolean" : true
+    },
+    {
+      "name" : "excludeNested",
+      "valueBoolean" : true
+    },
+    {
+      "name" : "version",
+      "valueUri" : "http://hl7.org/fhir/us/mcode/CodeSystem/snomed-requested-cs|3.0.0-ballot"
+    }],
+    "contains" : [{
+      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/snomed-requested-cs",
+      "code" : "USCRS-34777",
+      "display" : "Lymph node level IIA (qualifier value)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/snomed-requested-cs",
+      "code" : "USCRS-34775",
+      "display" : "Lymph node level IIB (qualifier value)"
     }]
   }
 },

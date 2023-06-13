@@ -14,6 +14,7 @@ Description: "Codes requested from SNOMED by mCODE, to be issued at a later date
 * #USCRS-34949  "Enneking surgical staging system (tumor staging)"         // requested 6/9/23
 * #USCRS-34948  "International Germ Cell Consensus Classification (tumor staging)"         // requested 6/9/23
 * #USCRS-34947  "Surveillance Epidemiology and End Results Program Extent of Disease, 2018 edition (tumor staging)"         // requested 6/9/23
-
+* #USCRS-34955 "UICC Classification of Malignant Tumours 8th Edition (tumor staging)" // requested 6/12/23
+* #USCRS-34956 "UICC Classification of Malignant Tumours 7th Edition (tumor staging)" // requested 6/12/23
 
 

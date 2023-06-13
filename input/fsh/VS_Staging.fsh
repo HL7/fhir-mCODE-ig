@@ -79,12 +79,14 @@ Description: "The result of cancer staging, i.e., the stage or category of the c
 ValueSet: TNMStagingMethodVS
 Id: mcode-tnm-staging-method-vs
 Title: "TNM Staging Method Value Set"
-Description: "Method used for TNM staging, e.g., AJCC 6th, 7th, or 8th edition."
+Description: "Method used for TNM staging, e.g., AJCC 8th edition, or UICC 7th edition."
 * insert SNOMEDCopyrightForVS
 * include SCT#444256004 "American Joint Commission on Cancer, Cancer Staging Manual, 6th edition neoplasm staging system (tumor staging)"
 * include SCT#443830009 "American Joint Commission on Cancer, Cancer Staging Manual, 7th edition neoplasm staging system (tumor staging)"
 * include SCT#897275008 "American Joint Commission on Cancer, Cancer Staging Manual, 8th edition neoplasm staging system (tumor staging)"
-
+* include SCT_TBD#USCRS-34952 "The International Neuroblastoma Risk Group (INRG)  (tumor staging)"           // requested 6/9/23
+* include SCT_TBD#USCRS-34956 "UICC Classification of Malignant Tumours 7th Edition (tumor staging)" // requested 6/12/23
+* include SCT_TBD#USCRS-34955 "UICC Classification of Malignant Tumours 8th Edition (tumor staging)" // requested 6/12/23
 // Stage Group
 
 ValueSet: TNMStageGroupStagingTypeVS

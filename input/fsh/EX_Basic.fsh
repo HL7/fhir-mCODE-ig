@@ -179,7 +179,7 @@ Description: "Example of Practitioner"
 * address.state = "MA"
 * address.postalCode = "12345"
 * address.country = "US"
-* qualification.code = http://terminology.hl7.org/CodeSystem/v2-0360|2.7#MD "Doctor of Medicine"
+* qualification.code = http://terminology.hl7.org/CodeSystem/v2-0360#MD "Doctor of Medicine"
 
 Instance: ecog-performance-status-fully-active
 InstanceOf: ECOGPerformanceStatus
@@ -230,14 +230,13 @@ Description: "Anatomic volume for John Anyperson's brachytherapy."
 Instance: binet-stage-group-A
 InstanceOf: CancerStageGroup
 Description: "Example of a non-TNM Stage Group (Binet staging for CLL)"
-* code = LNC#67213-9 "Disease stage"
-* valueCodeableConcept = UMLS#C2698392  "Binet Stage A" // or NCIT#C80134 "Binet Stage A"
+* code = SCT#1149099005 "Binet staging classification for chronic lymphocytic leukemia (tumor staging)"
+* valueCodeableConcept = NCIT#C80134 "Binet Stage A" // or UMLS#C2698392  "Binet Stage A"
 * status = #final "final"
 * focus = Reference(primary-cancer-condition-cll) // added requirement STU3
 * subject = Reference(cancer-patient-adam-everyman)
 * effectiveDateTime = "2020-05-18"
 * derivedFrom = Reference(lab-result-observation-hemoglobin)
-* method =  SCT#1149099005 "Binet staging classification for chronic lymphocytic leukemia (tumor staging)"
 
 Instance: tnm-clinical-stage-group-3c
 InstanceOf: TNMStageGroup

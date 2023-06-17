@@ -21,7 +21,7 @@ Alias:   CLINVAR = http://www.ncbi.nlm.nih.gov/clinvar
 Alias:   SO = http://www.sequenceontology.org/
 Alias:   AJCC = http://cancerstaging.org
 Alias:   ENTREZ = https://www.ncbi.nlm.nih.gov/gene
-Alias:   NCI = http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl
+Alias:   NCIT = http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl
 
 // From terminology.hl7.org
 Alias:   OmbRaceCat = urn:oid:2.16.840.1.113883.6.238

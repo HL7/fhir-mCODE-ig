@@ -5,7 +5,7 @@ Title: "mCODE Patient Group Example"
 Description: "Example of a Group identifying in-scope patients"
 * type = #person
 * actual = true
-* code = NCI#C19700  "Cancer Patient"
+* code = NCIT#C19700  "Cancer Patient"
 * member[0].entity = Reference(Patient/cancer-patient-john-anyperson)
 * member[1].entity = Reference(Patient/cancer-patient-eve-anyperson)
 

@@ -31,11 +31,10 @@ Clinicians and pathologists assign stages to cancers according to rules defined 
 
 For more detailed staging information, the user should provide a separate Observation resource conforming to the [CancerStageGroup] profile. A reference to this resource is provided in `Condition.stage.assessment`. The CancerStageGroup profile can be used with any staging system, but specifically, non-TNM staging systems, since a specialized TNM staging profile is provided. In CancerStageGroup, the following information must be provided:
 
-* `Observation.category`: fixed, required value of SNOMED CT 385356007 "Tumor stage finding (finding)"
-* `Observation.focus`: a reference to the primary cancer condition that was staged
 * `Observation.code`: a code that describes the specific type of stage being reported, for example, a TNM stage group or  International Federation of Gynecology and Obstetrics (FIGO) ovarian tumor stage.
-* `Observation.method`: the staging system used to determine the value (from [CancerStagingMethodVS]), for example, SEER Extent of Disease or 
+* `Observation.method`: the staging system used to determine the value (from [CancerStagingMethodVS]), for example, AJCC Version 8 or the International Neuroblastoma Staging System.
 * `Observation.valueCodeableConcept`: the actual stage or category determined for the cancer.
+* `Observation.focus`: a reference to the cancer condition being staged
 
 For TNM staging, the [TNMStageGroup] profile should be used. This profile contains the stage group in `Observation.valueCodeableConcept` and provides optional references in `Observation.hasMember` to additional resources representing the T, N, and M categories. The `Observation.code` element value in TNMStageGroup is used to distinguish the type of staging, e.g., [clinical](https://www.cancer.gov/publications/dictionaries/cancer-terms/def/clinical-staging) or [pathologic](https://www.cancer.gov/publications/dictionaries/cancer-terms/def/pathologic-staging). For other types staging (e.g., retreatment (r) or autopsy (a)), a code indicating "other" staging type is used.
 

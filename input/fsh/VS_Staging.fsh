@@ -12,6 +12,10 @@ Description: "System or method used for staging cancers. The terms in this value
 //* SCT#246165003 "Extent of disease (attribute)"  // instead of NCI#C174125 "Neoplastic Disease Extent Indicator"
 * SCT#418414003 "The revised European-American Lymphoma classification (qualifier value)"
 * SCT#418823005 "The World Health Organization classification of lymphoid malignancies (qualifier value)"
+* SCT_TBD#USCRS-34955 "UICC Classification of Malignant Tumours 8th Edition (tumor staging)" // requested 6/12/23
+* SCT_TBD#USCRS-34956 "UICC Classification of Malignant Tumours 7th Edition (tumor staging)" // requested 6/12/23
+* SCT_TBD#USCRS-34957 "Children's Oncology Group Renal Staging System (tumor staging)" // requested 6/13/23
+* SCT_TBD#USCRS-34958 "Children's Oncology Group Liver Staging System (tumor staging)" // requested 6/13/23
 * SCT_TBD#USCRS-34952 "The International Neuroblastoma Risk Group (INRG)  (tumor staging)"           // requested 6/9/23
 * SCT_TBD#USCRS-34951  "Toronto Childhood Cancer Stage Guidelines (tumor staging)"         // requested 6/9/23
 * SCT_TBD#USCRS-34950  "Masaoka-Koga Stage Classification for Thymic Malignancies (tumor staging)"         // requested 6/9/23

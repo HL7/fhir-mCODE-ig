@@ -17,7 +17,7 @@ Description:  "Records the dimensions of a tumor"
 * focus ^comment = "Use **only** when the tumor **has not** been removed from the body. If the tumor has been removed, use `specimen` instead and leave `focus` empty."
 * specimen only Reference(OncologySpecimen)
 * specimen ^short = "Identifies a tumor that has been removed from the body"
-* specimen ^definition = "Reference to a Specimen resource consistent with OncologySpecimen with type = http://terminology.hl7.org/CodeSystem/v2-0487#TUMOR."
+* specimen ^definition = "Reference to a Specimen resource consistent with OncologySpecimen with type = http://terminology.hl7.org/CodeSystem/v3-SpecimenType#TUMOR."
 * specimen ^comment = "Use specimen **only** when the tumor **has** been removed from the body. If the tumor has been not removed, use `focus` instead and leave `specimen` empty."
 * obeys must-have-focus-or-specimen-invariant
 * method from TumorSizeMethodVS (extensible)

@@ -1,7 +1,7 @@
 ValueSet: OncologySpecimenTypeVS
 Id: mcode-oncology-specimen-type-vs
 Title: "Oncology Specimen Type Value Set"
-Description: "Specimen taken from a human subject for testing relating to Oncology. The values include the subset of codes in the HL7 Specimen Type code system (https://terminology.hl7.org/CodeSystem-v2-0487.html) representing body sites and body fluids likely to be used in tumor marker or genomic testing. The most specific term available should be used, for example, for arterial blood, use #BLDA not #BLD."
+Description: "Specimen taken from a human subject for testing relating to Oncology. The values include the subset of codes in the HL7 Specimen Type code system (http://terminology.hl7.org/CodeSystem/v3-SpecimenType) representing body sites and body fluids likely to be used in tumor marker or genomic testing. The most specific term available should be used, for example, for arterial blood, use #BLDA not #BLD."
 * ^experimental = false
 * ^extension[FMM].valueInteger = 1
 // * SPTY#AMN       "Amniotic fluid"

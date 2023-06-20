@@ -12,7 +12,7 @@
 [CancerRelatedMedicationAdministration]: StructureDefinition-mcode-cancer-related-medication-administration.html
 [CancerRelatedMedicationRequest]: StructureDefinition-mcode-cancer-related-medication-request.html
 [CancerRelatedSurgicalProcedure]: StructureDefinition-mcode-cancer-related-surgical-procedure.html
-[CancerStageGroup]: StructureDefinition-mcode-cancer-stage-group.html
+[CancerStage]: StructureDefinition-mcode-cancer-stage.html
 [Comorbidities]: StructureDefinition-mcode-comorbidities.html
 [ECOGPerformanceStatus]: StructureDefinition-mcode-ecog-performance-status.html
 [GenomicRegionStudied]: StructureDefinition-mcode-genomic-region-studied.html
@@ -65,7 +65,7 @@
 [CancerDiseaseStatusEvidenceTypeVS]: ValueSet-mcode-cancer-disease-status-evidence-type-vs.html
 [CancerDisorderVS]: ValueSet-mcode-cancer-disorder-vs.html
 [CancerRelatedSurgicalProcedureVS]: ValueSet-mcode-cancer-related-surgical-procedure-vs.html
-[CancerStageVS]: ValueSet-mcode-cancer-stage-group-vs.html
+[CancerStageVS]: ValueSet-mcode-cancer-stage-vs.html
 [CancerStagingMethodVS]: ValueSet-mcode-cancer-staging-method-vs.html
 [CancerStagingTypeVS]: ValueSet-mcode-cancer-staging-type-vs.html
 [CarcinomaInSituDisorderVS]: ValueSet-mcode-carcinoma-in-situ-disorder-vs.html

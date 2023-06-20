@@ -19,11 +19,11 @@
 e: {
   "valueSet" : {
   "resourceType" : "ValueSet",
-  "language" : "en",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:3ab43867-4681-4e31-ae44-57313d31420c",
-    "timestamp" : "2023-03-20T15:46:54.293Z",
+    "identifier" : "urn:uuid:9b71f209-4d6d-4063-8e9b-f4ab74c30f59",
+    "timestamp" : "2023-06-18T13:39:38.080Z",
+    "total" : 2,
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -71,11 +71,11 @@ e: {
 e: {
   "valueSet" : {
   "resourceType" : "ValueSet",
-  "language" : "en",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:0a2a3536-b438-4cb5-967d-c8e1257babb8",
-    "timestamp" : "2023-03-20T15:46:56.199Z",
+    "identifier" : "urn:uuid:c469b5cd-3ed7-4453-af49-5b8bd1afbcc6",
+    "timestamp" : "2023-06-18T13:39:38.205Z",
+    "total" : 2,
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true

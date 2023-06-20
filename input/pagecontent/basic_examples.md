@@ -16,7 +16,7 @@
 ### [Cancer Related Surgical Procedure][CancerRelatedSurgicalProcedure]
 * [Lobectomy](Procedure-cancer-related-surgical-procedure-lobectomy.html)
 
-### [Cancer Stage Group][CancerStageGroup]
+### [CancerStage][CancerStage]
 
 * [TNM Clinical Distant Metastases Category - cM0](Observation-tnm-clinical-distant-metastases-category-cM0.html)
 * [TNM Clinical Primary Tumor Category - cT3](Observation-tnm-clinical-primary-tumor-category-cT3.html)

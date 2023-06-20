@@ -24,11 +24,11 @@ The binding strength for these value sets remains "preferred", meaning that the 
 
 ### Staging Profiles
 
-Previously, the [CancerStageGroup] profile contained optional elements specific to TNM staging. This was misleading because CancerStageGroup could be used for non-TNM staging. To avoid this ambiguity, [CancerStageGroup] no longer contains the optional TNM-specific content. A separate child profile, [TNMStageGroup], has been added as a template for TNM-specific staging. This change is backward compatible, since any resource complying with the STU 2 version of CancerStageGroup will comply with STU 3 CancerStageGroup, and every resource complying to TNMStageGroup automatically complies to CancerStageGroup.
+Previously, the [CancerStage] profile contained optional elements specific to TNM staging. This was misleading because CancerStage could be used for non-TNM staging. To avoid this ambiguity, [CancerStage] no longer contains the optional TNM-specific content. A separate child profile, [TNMStageGroup], has been added as a template for TNM-specific staging. This change is backward compatible, since any resource complying with the STU 2 version of CancerStage will comply with STU 3 CancerStage, and every resource complying to TNMStageGroup automatically complies to CancerStage.
 
 ### Staging Value Sets
 
-To support the separation of [TNMStageGroup] from more generic [CancerStageGroup] profile, several value sets were renamed. In FHIR, renaming value sets has little or no impact on implementations, since value set names are not directly used in information exchanges. The following TNM value sets were renamed for clarity:
+To support the separation of [TNMStageGroup] from more generic [CancerStage] profile, several value sets were renamed. In FHIR, renaming value sets has little or no impact on implementations, since value set names are not directly used in information exchanges. The following TNM value sets were renamed for clarity:
 
 * CancerStageGroupVS was renamed [TNMStageGroupVS], because it contains the TNM stage groups.
 * ObservationCodesDistantMetastasesVS was renamed [TNMDistantMetastasesStagingTypeVS] because it used for TNM staging.
@@ -36,11 +36,11 @@ To support the separation of [TNMStageGroup] from more generic [CancerStageGroup
 * ObservationCodesRegionalNodesVS was renamed [TNMRegionalNodesStagingTypeVS], because it used for TNM staging.
 * ObservationCodesStageGroupVS was renamed [TNMStageGroupStagingTypeVS], because it used for TNM staging.
 
-In addition, the following value sets are now associated with the non-TNM [CancerStageGroup] profile:
+In addition, the following value sets are now associated with the non-TNM [CancerStage] profile:
 
 * CancerStagingSystemVS was renamed [CancerStagingMethodVS], because it populates `Observation.method`.
-* [CancerStagingTypeVS] was introduced to populate the `Observation.code` element in the CancerStageGroup profile.
-* [CancerStageVS] was introduced to populate the `Observation.valueCodeableConcept` element in the CancerStageGroup profile.
+* [CancerStagingTypeVS] was introduced to populate the `Observation.code` element in the CancerStage profile.
+* [CancerStageVS] was introduced to populate the `Observation.valueCodeableConcept` element in the CancerStage profile.
 
 ### Comorbidity Redesign
 

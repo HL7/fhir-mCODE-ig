@@ -228,7 +228,7 @@ Description: "Anatomic volume for John Anyperson's brachytherapy."
 * locationQualifier[1] = SCT#7771000 "Left (qualifier value)"
 
 Instance: binet-stage-group-A
-InstanceOf: CancerStageGroup
+InstanceOf: CancerStage
 Description: "Example of a non-TNM Stage Group (Binet staging for CLL)"
 * code = SCT#1149099005 "Binet staging classification for chronic lymphocytic leukemia (tumor staging)"
 * valueCodeableConcept = NCIT#C80134 "Binet Stage A" // or UMLS#C2698392  "Binet Stage A"

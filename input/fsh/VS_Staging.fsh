@@ -1,15 +1,15 @@
 //******************** General Staging (TNM and non-TNM) **************************/
 
-
 // Observation.code
 ValueSet: CancerStagingTypeVS
 Id: mcode-cancer-staging-type-vs
 Title: "Cancer Staging Type Value Set"
-Description: "Codes identifying the type or kind of stage reported, necessary to correctly interpret the value of a staging Observation. In terms of the SNOMED CT hierarchy, these codes represent observables. If the staging system used to determine the stage group, classification, or category value, is not implicit in this code, the staging system must recorded in Observation.method. More specific profiles should be consulted before determining the correct code."
+Description: "Codes identifying the type or kind of stage reported, necessary to correctly interpret the value associated with a staging Observation. In terms of the SNOMED CT hierarchy, these codes represent observables. If the staging system used to determine the stage is not implicit in this code, the staging system must be separately recorded in Observation.method. More specific profiles should be consulted before determining the correct code."
 * insert LOINCCopyrightForVS
 * insert SNOMEDCopyrightForVS
 * ^extension[FMM].valueInteger = 4
 // LOINC Codes
+/*
 * include LNC#21886-7 "Breast-prostate staging.NAACCR"
 * include LNC#42082-8 "Collaborative staging lymph nodes Cancer"
 * include LNC#59478-8 "Collaborative staging metastasis at diagnosis - lung involvement Cancer"
@@ -71,6 +71,7 @@ Description: "Codes identifying the type or kind of stage reported, necessary to
 * include LNC#21902-2 "Stage group.pathology Cancer"
 * include LNC#21888-3 "Summary stage abbreviated at Dx Cancer"
 * include LNC#39806-5 "Summary stage at Dx 2000 revised Cancer"
+*/
 // SNOMED CT Codes
 * include codes from system SCT where concept is-a #399566009 "Tumor-node-metastasis (TNM) category (observable entity)"
 * include codes from system SCT where concept is-a #399390009 "Tumor-node-metastasis (TNM) stage grouping (observable entity)"
@@ -88,6 +89,7 @@ Description: "Codes identifying the type or kind of stage reported, necessary to
 * include SCT#371495009 "Stage of tumor involvement of non-regional lymph nodes (observable entity)"
 * exclude SCT#277655009 "Additional staging descriptors (attribute)"
 // NCI Thesaurus terms
+/*
 * include NCIT#C134969 "AIDS-Related Kaposi Sarcoma Stage"
 * include NCIT#C90529 "AJCC v6 Stage"
 * include NCIT#C90530 "AJCC v7 Stage"
@@ -119,7 +121,7 @@ Description: "Codes identifying the type or kind of stage reported, necessary to
 * include NCIT#C16899 "Neoplasm Stage"
 * include NCIT#C174125 "Neoplastic Disease Extent Indicator"
 * include NCIT#C141461 "Occult Stage"
-
+*/
 
 ValueSet: CancerStagingMethodVS
 Id: mcode-cancer-staging-method-vs
@@ -166,6 +168,7 @@ Description: "Staging system or method used for staging cancers. The terms in th
 * include SCT#254382001 "Trophoblastic malignancy staging system (tumor staging)"
 * include SCT#254368001 "United Kingdom children's cancer study group central nervous system tumor staging system (tumor staging)"
 * include SCT#254378003 "Walter Reed testicular tumor staging system (tumor staging)"
+// NCIT Terms
 * include NCIT#C191343 "AJCC Cancer Staging Manual 4th Edition"
 * include NCIT#C191344 "AJCC Cancer Staging Manual 5th Edition"
 * include NCIT#C186613 "AJCC Cancer Staging System Version 9"
@@ -190,6 +193,7 @@ Description: "Staging system or method used for staging cancers. The terms in th
 * include NCIT#C133427 "International Neuroblastoma Risk Group Staging System"
 * include NCIT#C140270 "International Society of Pediatric Oncology Staging System"
 * include NCIT#C177550 "IRS Clinical Staging System"
+* include NCIT#C141168 "Lugano Classification Hodgkin Lymphoma by AJCC v8 Stage"
 * include NCIT#C186520 "Medulloblastoma Staging System"
 * include NCIT#C198826 "Modified Chang Staging System for Medulloblastoma"
 * include NCIT#C177308 "Non-Seminomatous Germ Cell Tumor International Germ Cell Consensus Risk Classification"
@@ -208,11 +212,10 @@ Description: "Staging system or method used for staging cancers. The terms in th
 * include NCIT#C141685 "Veterans Administration Lung Study Group Clinical Classification"
 * include NCIT#C18214 "Whitmore-Jewett Staging System"
 
-
 // Observation.value
 ValueSet: CancerStageVS
-Id: mcode-cancer-stage-group-vs
-Title: "Cancer Stage Group Value Set"
+Id: mcode-cancer-stage-vs
+Title: "Cancer Stage Value Set"
 Description: "The result of cancer staging, i.e., the stage or category of the cancer."
 * insert SNOMEDCopyrightForVS
 * include codes from system SCT where concept descendant-of #1222585009 "American Joint Committee on Cancer clinical T category allowable value (qualifier value)"
@@ -237,8 +240,6 @@ Description: "The result of cancer staging, i.e., the stage or category of the c
 * include codes from system SCT where concept descendant-of #106242004 "Walter Reed staging of prostatic cancer (tumor staging)"
 
 
-
-
 //******************** TNM Staging **************************/
 
 // Observation.method
@@ -256,6 +257,16 @@ Description: "Method used for TNM staging, e.g., AJCC 6th, 7th, or 8th edition."
 * include NCIT#C186613 "AJCC Cancer Staging System Version 9"
 
 // Stage Group
+
+ValueSet: TNMStageGroupStagingTypeVS
+Id: mcode-tnm-stage-group-staging-type-vs
+Title: "TNM Stage Group Staging Type Value Set"
+Description: "Identifying codes for the type of cancer staging performed, i.e., clinical, pathological, or other, for the stage group observation."
+* insert LOINCCopyrightForVS
+* ^extension[FMM].valueInteger = 4
+* LNC#21908-9 "Stage group.clinical Cancer"
+* LNC#21902-2 "Stage group.pathology Cancer"
+* LNC#21914-7 "Stage group.other Cancer"
 
 // valueCodeableConcept
 ValueSet: TNMStageGroupVS

@@ -72,7 +72,7 @@ Description: "GenomeX mCODE example: results interpreter of the NGS test."
 * name.text = "Test Pathologist, MD"
 
 Instance: gx-genomic-specimen-tumornormal-tumor
-InstanceOf: HumanSpecimen
+InstanceOf: OncologySpecimen
 Description: "GenomeX mCODE Example for Genomic Specimen - Tumor specimen of the TumorNormal test"
 * status = #available "Available"
 * subject = Reference(gx-cancer-patient-adam-anyperson)
@@ -82,7 +82,7 @@ Description: "GenomeX mCODE Example for Genomic Specimen - Tumor specimen of the
 * collection.collectedDateTime = "2021-02-06T17:15:00+05:00"
 
 Instance: gx-genomic-specimen-tumornormal-normal
-InstanceOf: HumanSpecimen
+InstanceOf: OncologySpecimen
 Description: "GenomeX mCODE Example for Genomic Specimen - Tumor specimen of the TumorNormal test"
 * status = #available "Available"
 * subject = Reference(gx-cancer-patient-adam-anyperson)

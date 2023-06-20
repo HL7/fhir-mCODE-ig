@@ -42,7 +42,7 @@ Description: "Example of a resource conforming to the tumor profile."
 
 
 Instance: tumor-specimen-lobular-carcinoma-left-breast
-InstanceOf: HumanSpecimen
+InstanceOf: OncologySpecimen
 Description: "Example of a tumor specimen, linked to [this Tumor](BodyStructure-tumor-lobular-carcinoma-left-breast.html) via `identifier`."
 * subject = Reference(Patient/cancer-patient-eve-anyperson)
 * status = #available "available"

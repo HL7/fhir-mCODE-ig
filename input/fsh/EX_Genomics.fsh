@@ -85,7 +85,7 @@ Description: "mCODE Example for Tumor Marker Test"
 * valueCodeableConcept = SCT#10828004 "Positive (qualifier value)"
 
 Instance: human-specimen-lung
-InstanceOf: HumanSpecimen
+InstanceOf: OncologySpecimen
 Description: "mCODE Example of human specimen"
 * status = #available "Available"
 * subject = Reference(cancer-patient-john-anyperson)

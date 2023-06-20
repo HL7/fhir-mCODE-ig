@@ -48,7 +48,7 @@ Description: "Extended example: example biopsy procedure"
 * bodySite = SCT#80248007 "Left breast structure (body structure)"
 
 Instance: human-specimen-left-breast-jenny-m
-InstanceOf: HumanSpecimen
+InstanceOf: OncologySpecimen
 Description: "Extended example: example showing human specimen for genomic sequencing"
 * status = #available "available"
 * type = SPTY#TISS
@@ -365,7 +365,7 @@ Description: "Extended example: example showing partial mastectomy surgical proc
 * bodySite = SCT#80248007 "Left breast structure (body structure)"
 
 Instance: tumor-specimen-left-breast-jenny-m
-InstanceOf: HumanSpecimen
+InstanceOf: OncologySpecimen
 Description: "Extended example: example tumor specimen"
 * status = #available "available"
 * type = SPTY#TUMOR

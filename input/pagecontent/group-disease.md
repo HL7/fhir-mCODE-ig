@@ -25,44 +25,49 @@ Because the use of these code systems vary in different institutions, mCODE supp
 
 Implementers should reference the [PrimaryCancerCondition] and [SecondaryCancerCondition] profiles for further details on the use of these terminologies and associated value sets.
 
-### Reporting Summary Stage Information in Primary Cancer Condition
+#### Body Location
 
-Clinicians and pathologists assign stages to cancers according to rules defined in various [cancer staging systems or classification methods](https://www.cancer.gov/about-cancer/diagnosis-staging/staging). Stage may be defined at different time points, for example, at the time of diagnosis or posttherapy, and it can be based on different types of evidence, e.g., clincal or pathologic.
+Body locations in FHIR are typically represented using a single code. However, a single code is often insufficient to describe where a tumor is located, where a surgery is targeted, or where a radiation treatment is focused. When a single code is insufficient, FHIR recommends using a BodyStructure resource. This is appropriate when the BodyStructure is tracked over time, for example, in the case of [Tumor]. But generally, it is better to describe a body location without using an additional resource.
 
-When staging information is reported, the staging system must always be known because it establishes the meaning of the stage code(s). 
+mCODE has adopted an approach that allows the user to add additional code or codes to further define the body site, without the need to create an independent resource. This takes the form of the [LateralityQualifier] and [BodyLocationQualifier] extensions. These extensions can be used to specify laterality, directionality, and plane.
 
+### Disease Stage
 
+In mCODE, staging information has three components:
 
-One staging value can be included in the PrimaryCancerCondition, in the element `Condition.stage.summary` with the corresponding type of stage in `Condition.stage.type`. However, a single value is often insufficient and does not allow for capture of provenance information related to staging, separate from the provenance of the cancer condition information. A single stage value does not capture prognostic factors.
+1. The type of stage reported (e.g., a clinical T category) 
+2. The staging system, method, or protocol used to perform the staging (e.g., AJCC 7th Edition)
+3. The actual stage value (e.g., cT3)
 
+The stage value (3) always reported. To interpret the meaning of the stage value, the staging system or staging method must be known. Depending on the code used, the stage type (1) can identify the staging system, the kind of stage reported, and factors such as the timing (e.g., at diagnosis or posttherapy) and the type of evidence (e.g., clincal or pathologic). If the stage type does not imply the staging system, the staging system is reported separately (2). 
 
+A degree of redundancy may exist between these three elements. For example:
 
+* If the stage is cT3, then the type of stage is a clinical T stage.
+* If the stage being reported is a Binet stage, it can be assumed that the staging system is Binet and the disease is chronic lymphocytic leukemia.
 
-### Reporting Detailed Staging Information in Observation(s)
+The data sender must assure that the values in these three fields are self-consistent.
 
-For more detailed staging information, the user should provide a separate Observation resource conforming to the [CancerStage] profile. A reference to this resource is provided in `Condition.stage.assessment`. The CancerStage profile can be used with any staging system, but specifically, non-TNM staging systems, since a specialized TNM staging profile is provided. the following information must be provided:
+#### Reporting Staging Information
 
-* `Observation.code`: a code that describes the specific type of stage being reported, for example, a TNM stage group or  International Federation of Gynecology and Obstetrics (FIGO) ovarian tumor stage.
-* `Observation.method`: the staging system used to determine the value (from [CancerStagingMethodVS]), for example, AJCC Version 8 or the International Neuroblastoma Staging System.
-* `Observation.valueCodeableConcept`: the actual stage or category determined for the cancer.
-* `Observation.focus`: a reference to the cancer condition being staged
+Staging information should be provided as Observation resources conforming to the [CancerStage] profile or a constrained version of that profile. CancerStage is a parent profile that should be used only if a more specific profile corresponding to a particular staging system is unavailable. If a patient has been staged more than once, there will be multiple CancerStage observations. 
 
+In the CancerStage profile and its descendants, the following elements are used to describe a stage or classification:
 
-In mCODE, a single patient may have more than one staging panel, although this is not common in practice. If staging is repeated, the PrimaryCancerCondition reference to staging should be updated to the most recent staging information.
+| Stage Information | FHIR Element | Description |
+|-------------------|--------------|-------------|
+| Stage Type        | `Observation.code` |  LOINC or SNOMED term that describes the specific type of stage being reported, for example, a TNM stage group or International Federation of Gynecology and Obstetrics (FIGO) ovarian tumor stage. In terms of the SNOMED CT hierarchy, these are terms of type **Observable Entity**.  |
+| Staging System    | `Obseration.method` |  The staging system, method, or protocol used to perform the staging, for example, AJCC Version 8 or the International Neuroblastoma Staging System. In the SNOMED CT hierarchy, these are terms in the **Staging and Scales** hierarchy, specifically, terms descending from **Tumor Staging** that represent staging systems. `Observation.method` is not required if the staging system is implicit in `Observation.code`. |
+| Stage Value | `Observation.valueCodeableConcept` | Contains the actual stage or category determined for the cancer. In terms of SNOMED CT, these are terms from the **Qualifier Value** hierarchy (although some staging values also appear in the Tumor Staging hierarchy). |
+| Cancer Staged | `Observation.focus` | A reference to the cancer condition being staged. |
 
-
-
-
-
+A reference to the CancerStage observation should be given in the PrimaryCancerCondition's `Condition.stage.assessment` element. If staging has been repeated for a patient, the reference in PrimaryCancerCondition should point to the most recent staging information.
 
 #### TNM Staging Information
 
+TNM staging is used for many types of solid-tumor cancers. The [TNMStageGroup] profile is a specialization of [CancerStage] dedicated to AJCC TNM staging. This profile contains the stage group in `Observation.valueCodeableConcept` and provides optional references in `Observation.hasMember` to additional resources representing the T, N, and M categories. The `Observation.code` element value in TNMStageGroup is used to distinguish the type of staging, e.g., [clinical](https://www.cancer.gov/publications/dictionaries/cancer-terms/def/clinical-staging) or [pathologic](https://www.cancer.gov/publications/dictionaries/cancer-terms/def/pathologic-staging). For other types staging (e.g., retreatment (r) or autopsy (a)), a code indicating "other" staging type is used.
 
-For TNM staging, the [TNMStageGroup] profile should be used. This profile contains the stage group in `Observation.valueCodeableConcept` and provides optional references in `Observation.hasMember` to additional resources representing the T, N, and M categories. The `Observation.code` element value in TNMStageGroup is used to distinguish the type of staging, e.g., [clinical](https://www.cancer.gov/publications/dictionaries/cancer-terms/def/clinical-staging) or [pathologic](https://www.cancer.gov/publications/dictionaries/cancer-terms/def/pathologic-staging). For other types staging (e.g., retreatment (r) or autopsy (a)), a code indicating "other" staging type is used.
-
-
-
-TNM staging is used for many types of solid-tumor cancers. Clinical applications vary in their representation of T, N, and M staging category values, falling into one of two naming conventions:
+Clinical applications vary in their representation of T, N, and M staging category values, falling into one of two naming conventions:
 
 * Prefixed with a staging classification abbreviation (e.g.: _cT3_, _ypT3_). This is the coding convention returned by American Joint Commission on Cancer (AJCC) in their digital data content retrieved via the [AJCC Application Programming Interface (API)](https://ajcc.3scale.net/).
 * Without a prefixed staging classification abbreviation (e.g.: _T3_).
@@ -73,15 +78,25 @@ Several widely-used terminologies in the cancer domain, including ICD-O-3 and AJ
 
 #### Non-TNM Staging Information
 
-Not all cancer types are staged with a TNM-based staging system, including hematological cancers like leukemias, multiple myeloma, and some lymphomas. Some specialized solid tumors like gynecologic tumors are staged using the FIGO (International Federation of Gynecology and Obstetrics) staging system. Other non-TNM staging systems include Rai, Binet, and Cottswold. The staging system should be represented with a code from the [CancerStagingMethodVS] value set, if available.
+Not all cancer types are staged with a TNM-based staging system, including hematologic cancers like leukemias, multiple myeloma, and some lymphomas. Some specialized solid tumors like gynecologic tumors are staged using the FIGO (International Federation of Gynecology and Obstetrics) staging system. Other non-TNM staging systems include Rai, Binet, and Ann Arbor Cotswold Modification. The staging system should be represented with a code from the [CancerStagingMethodVS] value set, if available.
+
+Profiles for these staging systems and others are not currently part of mCODE but may be added in the future.
 
 Non-TNM staging results are represented using the profile [CancerStage]. Prognostic factors related to the cancer stage group can be specified with the `Observation.derivedFrom` element. For example, a hemoglobin lab result which was evaluated in the  staging of chronic lymphocytic leukemia using the Binet staging system can be referenced under `Observation.derivedFrom` element. [This example of Binet staging](Observation-binet-stage-group-A.html) illustrates how this could be represented.
 
-### Body Locations
+#### Summary Stage Information in PrimaryCancerCondition
 
-Body locations in FHIR are typically represented using a single code. However, a single code is often insufficient to describe where a tumor is located, where a surgery is targeted, or where a radiation treatment is focused. When a single code is insufficient, FHIR recommends using a BodyStructure. This is appropriate when the BodyStructure is something to be tracked over time, for example, in the case of [Tumor]. But generally, it is better to describe a body location without using an additional resource.
+To keep staging information together with cancer diagnosis, staging values and types can be included in the PrimaryCancerCondition. A stage reported in PrimaryCancerCondition is interpreted as the stage at the time of diagnosis. 
 
-mCODE has adopted an approach that allows the user to add additional code or codes to further define the body site, without the need to create an independent resource. This takes the form of the [LateralityQualifier] and [BodyLocationQualifier] extensions. These extensions can be used to specify laterality, directionality, and plane.
+In PrimaryCancerCondition, only the stage type and stage value can be reported, as follows:
+
+| Stage Information | FHIR Element | Description |
+|-------------------|--------------|-------------|
+| Stage Type        | `Condition.stage.type` | See above. |
+| Stage Value       | `Condition.stage.summary` | See above. |
+
+Representing stage information in this way, without an explicit method, only works if the staging system is implicit in the stage type. 
+
 
 ### Tumor Marker Tests
 

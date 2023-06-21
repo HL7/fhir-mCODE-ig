@@ -1,4 +1,22 @@
-//  International Neuroblastoma Staging
+/* Staging Systems to consider:
+TNM - check
+INSS - check
+INRGSS - check
+Ann Arbor - check
+COG
+FIGO
+FAB
+Rai
+Binet
+CML Stage
+B-cell ALL
+T-cell ALL
+
+Biomarkers
+Prior treatment
+*/
+
+//  International Neuroblastoma Staging System (INSS)
 
 Profile: INSSStage
 Id: mcode-inss-stage
@@ -17,7 +35,7 @@ Description: "Codes in INSS staging system representing neuroblastoma stage."
 * include codes from system SCT where concept is-a #409721000 "International neuroblastoma staging system stage finding (finding)"
 
 
-//  International Neuroblastoma Risk Group Staging
+//  International Neuroblastoma Risk Group Staging System (NRGSS)
 
 Profile: InternationalNeuroblastomaRiskGroup
 Id: mcode-international-neuroblastoma-risk-group
@@ -36,7 +54,6 @@ Description: "Codes in International Neuroblastoma Risk Group. It includes two s
 * NCIT#C133429 "INRG Stage L2"
 * NCIT#C133430 "INRG Stage M"
 * NCIT#C133431 "INRG Stage MS"
-
 
 // Lymphoma Stage
 

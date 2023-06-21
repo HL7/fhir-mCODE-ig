@@ -9,7 +9,7 @@ Description: "Codes identifying the type or kind of stage reported, necessary to
 * insert SNOMEDCopyrightForVS
 * ^extension[FMM].valueInteger = 4
 // LOINC Codes
-/*
+
 * include LNC#21886-7 "Breast-prostate staging.NAACCR"
 * include LNC#42082-8 "Collaborative staging lymph nodes Cancer"
 * include LNC#59478-8 "Collaborative staging metastasis at diagnosis - lung involvement Cancer"
@@ -71,7 +71,7 @@ Description: "Codes identifying the type or kind of stage reported, necessary to
 * include LNC#21902-2 "Stage group.pathology Cancer"
 * include LNC#21888-3 "Summary stage abbreviated at Dx Cancer"
 * include LNC#39806-5 "Summary stage at Dx 2000 revised Cancer"
-*/
+
 // SNOMED CT Codes
 * include codes from system SCT where concept is-a #399566009 "Tumor-node-metastasis (TNM) category (observable entity)"
 * include codes from system SCT where concept is-a #399390009 "Tumor-node-metastasis (TNM) stage grouping (observable entity)"
@@ -89,7 +89,7 @@ Description: "Codes identifying the type or kind of stage reported, necessary to
 * include SCT#371495009 "Stage of tumor involvement of non-regional lymph nodes (observable entity)"
 * exclude SCT#277655009 "Additional staging descriptors (attribute)"
 // NCI Thesaurus terms
-/*
+
 * include NCIT#C134969 "AIDS-Related Kaposi Sarcoma Stage"
 * include NCIT#C90529 "AJCC v6 Stage"
 * include NCIT#C90530 "AJCC v7 Stage"
@@ -121,7 +121,7 @@ Description: "Codes identifying the type or kind of stage reported, necessary to
 * include NCIT#C16899 "Neoplasm Stage"
 * include NCIT#C174125 "Neoplastic Disease Extent Indicator"
 * include NCIT#C141461 "Occult Stage"
-*/
+
 
 ValueSet: CancerStagingMethodVS
 Id: mcode-cancer-staging-method-vs

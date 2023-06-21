@@ -3,8 +3,8 @@ TNM - check
 INSS - check
 INRGSS - check
 Ann Arbor - check
-COG
-FIGO
+COG/Wilms - check?  Wilms but not COG/Wilms
+FIGO - check
 FAB
 Rai
 Binet
@@ -105,3 +105,87 @@ Title: "Clinical or Pathologic Staging"
 Description: "Codes to indicate if staging was based on clinical or pathologic evidence."
 * SCT#385349001 "Clinical stage (observable entity)"
 * SCT#405978005 "Pathologic stage (observable entity)"
+
+
+//  Wilms Tumor Staging
+
+Profile: NationalWilmsStage
+Id: mcode-national-wilms-stage
+Parent: CancerStage
+Title: "National Wilms Tumor Study Group Stage Profile"
+Description: "Profile for stage National Wilms Tumor Study Group (NWTSG) Stage"
+* insert NotUsed(component)
+* code = SCT#405931009 "National Wilms Tumor Study Group Stage (observable entity)"
+* value[x] from WilmsStageVS (required)
+
+ValueSet: NationalWilmsStageVS
+Id: mcode-national-wilms-stage-vs
+Title: "NWTSG Stage Value Set"
+Description: "Stage values for the National Wilms Tumor Study Group Staging System."
+* insert SNOMEDCopyrightForVS
+* include codes from system SCT where concept is-a #405971004 "National Wilms Tumor Study Group Stage finding (finding)"
+
+
+// International Federation of Gynecology and Obstetrics (FIGO)
+
+Profile: FIGOStage
+Id: mcode-figo-stage
+Parent: CancerStage
+Title: "FIGO Stage Profile"
+Description: "International Federation of Gynecology and Obstetrics (FIGO) Staging Profile"
+* insert NotUsed(component)
+* code from FIGOStageTypeVS (extensible)
+* method from FIGOStageSystemVS (extensible)
+* value[x] from FIGOStageVS (extensible)
+
+ValueSet: FIGOStageTypeVS
+Id: mcode-figo-stage-type-vs
+Title: "FIGO Stage Type Value Set"
+Description: "Stage Types for International Federation of Gynecology and Obstetrics (FIGO) Staging System."
+* insert SNOMEDCopyrightForVS
+* include codes from system SCT where concept is-a #385361009 "International Federation of Gynecology and Obstetrics stage for gynecological malignancy (observable entity)"
+
+ValueSet: FIGOStageSystemVS
+Id: mcode-figo-stage-system-vs
+Title: "FIGO Stage System Value Set"
+Description: "Stage Systems from International Federation of Gynecology and Obstetrics (FIGO)."
+* insert SNOMEDCopyrightForVS
+* include codes from system SCT where concept is-a #254383006 "International Federation of Gynecology and Obstetrics staging system of gynecological malignancy (tumor staging)"
+
+ValueSet: FIGOStageVS
+Id: mcode-figo-stage-vs
+Title: "FIGO Stage Value Set"
+Description: "Values for International Federation of Gynecology and Obstetrics (FIGO) Staging System."
+* NCIT#C96243 "FIGO Stage 0"
+* NCIT#C96244 "FIGO Stage I"
+* NCIT#C96245 "FIGO Stage IA"
+* NCIT#C96246 "FIGO Stage IA1"
+* NCIT#C96247 "FIGO Stage IA2"
+* NCIT#C96248 "FIGO Stage IB"
+* NCIT#C96249 "FIGO Stage IB1"
+* NCIT#C96250 "FIGO Stage IB2"
+* NCIT#C162222 "FIGO Stage IB3"
+* NCIT#C96251 "FIGO Stage IC"
+* NCIT#C128099 "FIGO Stage IC1"
+* NCIT#C128100 "FIGO Stage IC2"
+* NCIT#C128101 "FIGO Stage IC3"
+* NCIT#C96252 "FIGO Stage II"
+* NCIT#C96253 "FIGO Stage IIA"
+* NCIT#C162223 "FIGO Stage IIA1"
+* NCIT#C128103 "FIGO Stage IIA1(i)"
+* NCIT#C128104 "FIGO Stage IIA1(ii)"
+* NCIT#C162224 "FIGO Stage IIA2"
+* NCIT#C96257 "FIGO Stage IIB"
+* NCIT#C188300 "FIGO Stage IIC1"
+* NCIT#C96255 "FIGO Stage III"
+* NCIT#C96256 "FIGO Stage IIIA"
+* NCIT#C128102 "FIGO Stage IIIA1"
+* NCIT#C128105 "FIGO Stage IIIA2"
+* NCIT#C96257 "FIGO Stage IIIB"
+* NCIT#C96258 "FIGO Stage IIIC"
+* NCIT#C96259 "FIGO Stage IIIC1"
+* NCIT#C96260 "FIGO Stage IIIC2"
+* NCIT#C96261 "FIGO Stage IV"
+* NCIT#C96262 "FIGO Stage IVA"
+* NCIT#C96263 "FIGO Stage IVB"
+

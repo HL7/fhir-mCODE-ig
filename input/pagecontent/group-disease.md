@@ -58,7 +58,7 @@ In the CancerStage profile and its descendants, the following elements are used 
 |-------------------|--------------|-------------|
 | Stage Type        | `Observation.code` |  LOINC or SNOMED term that describes the specific type of stage being reported, for example, a TNM stage group or International Federation of Gynecology and Obstetrics (FIGO) ovarian tumor stage. In terms of the SNOMED CT hierarchy, these are terms of type **Observable Entity**.  |
 | Staging System    | `Obseration.method` |  The staging system, method, or protocol used to perform the staging, for example, AJCC Version 8 or the International Neuroblastoma Staging System. In the SNOMED CT hierarchy, these are terms in the **Staging and Scales** hierarchy, specifically, terms descending from **Tumor Staging** that represent staging systems. `Observation.method` is not required if the staging system is implicit in `Observation.code`. |
-| Stage Value | `Observation.valueCodeableConcept` | Contains the actual stage or category determined for the cancer. In terms of SNOMED CT, these are terms from the **Qualifier Value** hierarchy (although some staging values also appear in the Tumor Staging hierarchy). |
+| Stage Value | `Observation.valueCodeableConcept` | Contains the actual stage or category determined for the cancer. In terms of SNOMED CT, these are terms from the **Qualifier Value** and **Finding** hierarchies (some staging values appear, perhaps erroneously, in the Tumor Staging hierarchy). |
 | Cancer Staged | `Observation.focus` | A reference to the cancer condition being staged. |
 
 A reference to the CancerStage observation should be given in the PrimaryCancerCondition's `Condition.stage.assessment` element. If staging has been repeated for a patient, the reference in PrimaryCancerCondition should point to the most recent staging information.
@@ -92,10 +92,10 @@ In PrimaryCancerCondition, only the stage type and stage value can be reported, 
 
 | Stage Information | FHIR Element | Description |
 |-------------------|--------------|-------------|
-| Stage Type        | `Condition.stage.type` | See above. |
-| Stage Value       | `Condition.stage.summary` | See above. |
+| Stage Type        | `Condition.stage.type` | See "Reporting Staging Information" above. |
+| Stage Value       | `Condition.stage.summary` | See "Reporting Staging Information" above. |
 
-Representing stage information in this way, without an explicit method, only works if the staging system is implicit in the stage type. 
+Representing stage information in this way, i.e., without an explicit staging system, only works if the staging system is implicit in the stage type. 
 
 
 ### Tumor Marker Tests
@@ -111,9 +111,9 @@ mCODE includes single FHIR profile, [TumorMarkerTest], for all labs involving se
   * [SecondaryCancerCondition]
 * Characterization
   * [TumorMarkerTest]
-* Staging, Non-TNM
+* Staging, General
   * [CancerStage]
-* Staging, TNM
+* Staging, AJCC TNM
   * [TNMStageGroup]
   * [TNMPrimaryTumorCategory]
   * [TNMRegionalNodesCategory]

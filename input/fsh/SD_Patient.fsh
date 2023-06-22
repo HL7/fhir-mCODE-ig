@@ -6,3 +6,16 @@ Description: "A patient who has been diagnosed with or is receiving medical trea
 * ^extension[FMM].valueInteger = 5
 * deceased[x] MS
 * . MS
+
+Profile: HistoryOfMalignantNeoplasm
+Parent: USCoreConditionProblemsHealthConcernsProfile
+Id: mcode-history-of-malignant-neoplasm
+Title: "History of Malignant Neoplasm"
+Description: "Records the existence of a past episode of cancer, for the purpose of long term management and tracking."
+* code from HistoryOfMalignantNeoplasmVS
+
+ValueSet: HistoryOfMalignantNeoplasmVS
+Id: mcode-istory-of-malignant-neoplasm-vs
+Title: "TNM Stage Group Value Set"
+Description: "Values defining history of an episode of cancer."
+* include codes from system SCT where concept is-a #SCT#266987004 "History of malignant neoplasm (situation)"

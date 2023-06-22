@@ -1,4 +1,4 @@
-The following changes occurred between [STU 2 publication](http://hl7.org/fhir/us/mcode/STU2/) (January 2022) and the STU 3 ballot (March 2023). For a history of previous changes, please see the prior change logs in the [appropriate versions](http://hl7.org/fhir/us/mcode/history.html).
+The following changes occurred between [STU 2](http://hl7.org/fhir/us/mcode/STU2/) (January 2022) and the STU 3. For a history of previous changes, please see the prior change logs in the [appropriate versions](http://hl7.org/fhir/us/mcode/history.html).
 
 ### Allowing the Use of AJCC-equivalent SNOMED Codes for Staging
 
@@ -63,6 +63,7 @@ Based on user feedback on the complexity of the STU 2 design, [comorbidities][Co
   * A code for "multiple" was added to RadiotherapyTreatmentLocationQualifierVS
   * "Noncompliance with treatment (finding)" was added to TreatmentTerminationReasonVS
   * In some intensionally-defined SNOMED CT value sets, the `is-a` operator was replaced with the `descendant-of` operator, removing the top-level code when it was not a valid choice.
+  * New value set, [HistoryOfMalignantNeoplasmVS], was added for enabling more complete reporting of patient history.
 
 ### Update to US Core 5.0.1
 
@@ -102,6 +103,10 @@ mCODE is now is explicitly dependent on the [Genomics Reporting IG STU2 (v2.0.0)
 ### Change in mCODE Bundle Slicing
 
 The mCODE bundle definition now slices on resource type, rather than profile. Slicing logic was changed because, in some cases, instances could not be assigned unambigously to a slice, causing the FHIR validator to output errors. With this change, the assignment to a slice will always be unambiguous. This change has no effect on the contents or use of the mCODE bundle.
+
+### Addition of Patient History of Malignant Disease
+
+To enable more complete reporting of patient history, a new profile for recording a patient's cancer history was added.
 
 ### Maturity Indicators
 

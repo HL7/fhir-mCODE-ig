@@ -12,7 +12,7 @@ The bundle MUST contain exactly one Patient resource conforming to the [CancerPa
 * Medication resources conforming to [CancerRelatedMedicationRequest] and [CancerRelatedMedicationAdministration] profiles, representing cancer-related prescriptions, administrations, and patient-reported medications
 * Procedure resources conforming to [CancerRelatedSurgicalProcedure] and [RadiotherapyCourseSummary] profiles
 * DiagnosticReport resources conforming to [GenomicsReport] profile
-* Specimen resources conforming to [HumanSpecimen] profiles
+* Specimen resources conforming to [OncologySpecimen] profiles
 * BodyStructure resources conforming to [RadiotherapyVolume] and [Tumor] profiles
 * Observation resources conforming to [TumorSize] profile
 

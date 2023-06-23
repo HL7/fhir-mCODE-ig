@@ -86,7 +86,7 @@ Id: mcode-oncology-specimen
 Title:  "Human Oncology Specimen Profile"
 Description:  "A specimen taken from a Patient for the purpose of oncology-related testing. The profile includes extensions to specify a more precise body site and an identifier of source body structure at that site (for example, a tumor identifier)."
 * ^extension[FMM].valueInteger = 1
-* type from OncologySpecimenTypeVS (extensible)
+* type from SpecimenTypeVS (extensible)
 * subject only Reference(CancerPatient)
 * subject ^definition = "The patient associated with this specimen."
 * insert BodySiteQualifierAndLaterality(collection.bodySite)

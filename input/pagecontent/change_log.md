@@ -24,11 +24,13 @@ The binding strength for these value sets remains "preferred", meaning that the 
 
 ### Staging Profiles
 
-Previously, the [CancerStage] profile contained optional elements specific to TNM staging. This was misleading because CancerStage could be used for non-TNM staging. To avoid this ambiguity, [CancerStage] no longer contains the optional TNM-specific content. A separate child profile, [TNMStageGroup], has been added as a template for TNM-specific staging. This change is backward compatible, since any resource complying with the STU 2 version of CancerStage will comply with STU 3 CancerStage, and every resource complying to TNMStageGroup automatically complies to CancerStage.
+#### Common Parent Profile for TNM and non-TNM Staging
 
-### Staging Value Sets
+Previously, the [CancerStage] profile contained optional elements specific to TNM staging. This was confusing because CancerStage was intended also for non-TNM staging. To avoid this ambiguity, [CancerStage] no longer contains the optional TNM-specific content. A separate child profile, [TNMStageGroup], has been added as a template for TNM-specific staging. This change is backward compatible, since any resource complying with the STU 2 version (named CancerStageGroup) will comply with STU 3 CancerStage, and every resource complying to TNMStageGroup automatically complies to CancerStage.
 
-To support the separation of [TNMStageGroup] from more generic [CancerStage] profile, several value sets were renamed. In FHIR, renaming value sets has little or no impact on implementations, since value set names are not directly used in information exchanges. The following TNM value sets were renamed for clarity:
+#### Value Set Renaming
+
+To support the separation of [TNMStageGroup] from more generic [CancerStage] profile, several value sets were renamed. In FHIR, renaming value sets has little or no impact on implementations, since value set names and ids are not used in information exchanges (although they are involved in validation algorithms). The following value sets were renamed for clarity:
 
 * CancerStageGroupVS was renamed [TNMStageGroupVS], because it contains the TNM stage groups.
 * ObservationCodesDistantMetastasesVS was renamed [TNMDistantMetastasesStagingTypeVS] because it used for TNM staging.
@@ -36,11 +38,21 @@ To support the separation of [TNMStageGroup] from more generic [CancerStage] pro
 * ObservationCodesRegionalNodesVS was renamed [TNMRegionalNodesStagingTypeVS], because it used for TNM staging.
 * ObservationCodesStageGroupVS was renamed [TNMStageGroupStagingTypeVS], because it used for TNM staging.
 
-In addition, the following value sets are now associated with the non-TNM [CancerStage] profile:
+In addition, the following value sets are now associated with the general parent profile, [CancerStage]:
 
 * CancerStagingSystemVS was renamed [CancerStagingMethodVS], because it populates `Observation.method`.
 * [CancerStagingTypeVS] was introduced to populate the `Observation.code` element in the CancerStage profile.
 * [CancerStageVS] was introduced to populate the `Observation.valueCodeableConcept` element in the CancerStage profile.
+
+#### Staging Value Set Expansion
+
+* Value sets associated with the [CancerStage] profile are more comprehensive and accurate
+  * [CancerStagingMethodVS] (formerly CancerStagingSystemVS) has been expanded to include additional cancer staging systems from SNOMED CT, and staging systems from NCI Thesaurus that currently are not covered in SNOMED CT.
+  * Certain children of Tumor staging (SCTID: 2542920070) (see https://jira.hl7.org/browse/FHIR-34448) were removed because they represent stage values rather than staging methods.
+  * The following staging methods were added (see https://jira.hl7.org/browse/FHIR-37860):
+    * SCT#1149162008 "International Staging System for multiple myeloma (staging scale)"
+    * SCT#1149163003 "Revised International Staging System for multiple myeloma (staging scale)"
+    * SCT#246165003 "Extent of disease (attribute)"
 
 ### Comorbidity Redesign
 
@@ -53,16 +65,10 @@ Based on user feedback on the complexity of the STU 2 design, [comorbidities][Co
 
 ### Value Set Content Changes
 
-* The following improvements were made to [CancerStagingMethodVS] (formerly CancerStagingSystemVS) value set:
-  * Certain children of Tumor staging (SCTID: 2542920070) (see https://jira.hl7.org/browse/FHIR-34448) were removed because they represent stage values rather than staging methods.
-  * The following staging methods were added (see https://jira.hl7.org/browse/FHIR-37860):
-    * SCT#1149162008 "International Staging System for multiple myeloma (staging scale)"
-    * SCT#1149163003 "Revised International Staging System for multiple myeloma (staging scale)"
-    * SCT#246165003 "Extent of disease (attribute)"
-  * Temporary codes for lymph node levels IIA and IIB, missing from previous versions, were added.
-  * A code for "multiple" was added to RadiotherapyTreatmentLocationQualifierVS
-  * "Noncompliance with treatment (finding)" was added to TreatmentTerminationReasonVS
-  * In some intensionally-defined SNOMED CT value sets, the `is-a` operator was replaced with the `descendant-of` operator, removing the top-level code when it was not a valid choice.
+* Temporary codes for lymph node levels IIA and IIB, missing from previous versions, were added.
+* A code for "multiple" was added to RadiotherapyTreatmentLocationQualifierVS
+* "Noncompliance with treatment (finding)" was added to TreatmentTerminationReasonVS
+* In some intensionally-defined SNOMED CT value sets, the `is-a` operator was replaced with the `descendant-of` operator, removing the top-level code when it was not a valid choice.
 
 ### Update to US Core 5.0.1
 

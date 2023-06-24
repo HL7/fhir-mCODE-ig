@@ -50,14 +50,14 @@ The data sender must assure that the values in these three fields are self-consi
 
 #### Reporting Staging Information
 
-Staging information should be provided as Observation resources conforming to the [CancerStage] profile or a constrained version of that profile. CancerStage is a parent profile that should be used only if a more specific profile corresponding to a particular staging system is unavailable. If a patient has been staged more than once, there will be multiple CancerStage observations. 
+Staging information should be provided as Observation resource(s) conforming to the [CancerStage] profile or a constrained version of that profile. CancerStage is a parent profile that should be used only if a more specific profile corresponding to a particular staging system is unavailable. If a patient has been staged more than once, there will be multiple CancerStage observations. 
 
 In the CancerStage profile and its descendants, the following elements are used to describe a stage or classification:
 
 | Stage Information | FHIR Element | Description |
 |-------------------|--------------|-------------|
 | Stage Type        | `Observation.code` |  LOINC or SNOMED term that describes the specific type of stage being reported, for example, a TNM stage group or International Federation of Gynecology and Obstetrics (FIGO) ovarian tumor stage. In terms of the SNOMED CT hierarchy, these are terms of type **Observable Entity**.  |
-| Staging System    | `Obseration.method` |  The staging system, method, or protocol used to perform the staging, for example, AJCC Version 8 or the International Neuroblastoma Staging System. In the SNOMED CT hierarchy, these are terms in the **Staging and Scales** hierarchy, specifically, terms descending from **Tumor Staging** that represent staging systems. `Observation.method` is not required if the staging system is implicit in `Observation.code`. |
+| Staging System    | `Observation.method` |  The staging system, method, or protocol used to perform the staging, for example, AJCC Version 8 or the International Neuroblastoma Staging System. In the SNOMED CT hierarchy, these are terms in the **Staging and Scales** hierarchy, specifically, terms descending from **Tumor Staging** that represent staging systems. `Observation.method` is not required if the staging system is implicit in `Observation.code`. |
 | Stage Value | `Observation.valueCodeableConcept` | Contains the actual stage or category determined for the cancer. In terms of SNOMED CT, these are terms from the **Qualifier Value** and **Finding** hierarchies (some staging values appear, perhaps erroneously, in the Tumor Staging hierarchy). |
 | Cancer Staged | `Observation.focus` | A reference to the cancer condition being staged. |
 

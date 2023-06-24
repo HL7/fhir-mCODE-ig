@@ -5,16 +5,63 @@ INRGSS - check
 Ann Arbor - check
 COG/Wilms - check?  Wilms but not COG/Wilms
 FIGO - check
-FAB
-Rai
-Binet
-CML Stage
-B-cell ALL
-T-cell ALL
-
-Biomarkers
-Prior treatment
+French-American-British (FAB) classification -- This is a grading method (appearance and behavio of cells), not a staging method
+Rai - check
+Binet - check
+CML Phase -- Chronic, blastic, accelerated are considered disease phases (in the SCT disorder hierarchy)
+B-cell ALL, T-cell ALL  - Currently, there is no staging system for acute lymphocytic leukemia (ALL).  The phases of ALL are described as untreated, in remission, relapsed (also called recurrent) or refractory.
 */
+
+//  Rai Staging System for CLL
+
+Profile: RaiStage
+Id: mcode-rai-stage
+Parent: CancerStage
+Title: "Rai stage for chronic lymphocytic leukemia"
+Description: "Rai stage for chronic lymphocytic leukemia"
+* insert NotUsed(component)
+* code = NCIT#C141207 // Rai Stage -- need a SNOMED code
+* method from RaiStagingMethodVS
+* value[x] from RaiStageVS (required)
+
+ValueSet: RaiStagingMethodVS
+Id: mcode-rai-staging-method-vs
+Title: "Rai Staging System Value Set"
+Description: "Rai Staging Systems used to stage chronic lymphocytic leukemia."
+* insert SNOMEDCopyrightForVS
+* SCT#1149131009 "Rai staging system for chronic lymphocytic leukemia (tumor staging)"
+* NCIT#C141206  "Chronic Lymphocytic Leukemia- Modified Rai Staging System"
+
+ValueSet: RaiStageVS
+Id: mcode-rai-stage-vs
+Title: "Rai Stage Value Set"
+Description: "Codes in the Rai staging system representing Chronic Lymphocytic Leukemia (CLL) stage."
+* insert SNOMEDCopyrightForVS
+* NCIT#C7847 "Stage 0 Chronic Lymphocytic Leukemia"
+* NCIT#C7874 "Stage I Chronic Lymphocytic Leukemia"
+* NCIT#C7875 "Stage II Chronic Lymphocytic Leukemia"
+* NCIT#C7876 "Stage III Chronic Lymphocytic Leukemia"
+* NCIT#C8646 "Stage IV Chronic Lymphocytic Leukemia"
+
+//  Binet Staging System for CLL
+
+Profile: BinetStage
+Id: mcode-binet-stage
+Parent: CancerStage
+Title: "Binet stage for chronic lymphocytic leukemia"
+Description: "Binet stage for chronic lymphocytic leukemia"
+* insert NotUsed(component)
+* code = NCIT#C141212 // Binet Stage -- need a SNOMED code
+* method = SCT#1149099005 // "Binet staging classification for chronic lymphocytic leukemia (tumor staging)"
+* value[x] from BinetStageVS (required)
+
+ValueSet: BinetStageVS
+Id: mcode-binet-stage-vs
+Title: "Binet Stage Value Set"
+Description: "Codes in the Binet staging system representing Chronic Lymphocytic Leukemia (CLL) stage."
+* NCIT#C80134 "Binet Stage A"
+* NCIT#C80135 "Binet Stage B"
+* NCIT#C80136 "Binet Stage C"
 
 //  International Neuroblastoma Staging System (INSS)
 
@@ -33,7 +80,6 @@ Title: "INNS Stage Value Set"
 Description: "Codes in INSS staging system representing neuroblastoma stage."
 * insert SNOMEDCopyrightForVS
 * include codes from system SCT where concept is-a #409721000 "International neuroblastoma staging system stage finding (finding)"
-
 
 //  International Neuroblastoma Risk Group Staging System (NRGSS)
 
@@ -74,11 +120,20 @@ Description: "Ann Arbor Staging of Lymphoma. The Ann Arbor staging system is the
 * component[clin-or-path].value[x] from ClinOrPathVS
 
 
+ValueSet: 
+
+* include NCIT#C141147 "Lugano Stage"
+* include NCIT#C177558 "Ann Arbor Clinical Stage"
+* include NCIT#C177559 "Ann Arbor Pathologic Stage"
+* include NCIT#C141138 "Ann Arbor Stage"
+
 ValueSet: LymphomaStagingMethodVS
 Id: mcode-lymphoma-staging-method-vs
 Title: "Lymphoma Staging System Value Set"
-Description: "Staging Systems used to stage lymphomas."
-* include codes from system SCT where concept descendant-of #254372002 "Ann Arbor lymphoma staging system (tumor staging)"
+Description: "Staging Systems used to stage lymphomas (Hodgkin's and non-Hodgkin's)."
+* SCT#254372002 "Ann Arbor lymphoma staging system (tumor staging)"
+* SCT#254373007 "Ann Arbor Hodgkin's disease tumor staging system (tumor staging)"
+* SCT#254374001 "Ann Arbor non-Hodgkin's lymphoma tumor staging system (tumor staging)"
 * SCT#254375000 "Cotswolds Hodgkin's disease tumor staging system (tumor staging)"
 * SCT#254371009 "St Jude's non-Hodgkin's lymphoma staging system (tumor staging)"
 * NCIT#C141189 "Lugano Classification Adult Hodgkin Lymphoma by AJCC v8 Stage"
@@ -91,7 +146,6 @@ Title: "Lymphoma Stage Value Set"
 Description: "Stage values used in lymphoma staging systems."
 * include codes from system SCT where concept descendant-of #385389007 "Lymphoma stage finding (finding)"
 * NCIT#C171157 "Ann Arbor Stage IIX (Bulky)"
-
 
 ValueSet: LymphomaModifierVS
 Id: mcode-lymphoma-modifier-vs
@@ -109,22 +163,39 @@ Description: "Codes to indicate if staging was based on clinical or pathologic e
 
 //  Wilms Tumor Staging
 
-Profile: NationalWilmsStage
-Id: mcode-national-wilms-stage
+Profile: WilmsTumorStage
+Id: mcode-wilms-tumor-stage
 Parent: CancerStage
-Title: "National Wilms Tumor Study Group Stage Profile"
-Description: "Profile for stage National Wilms Tumor Study Group (NWTSG) Stage"
+Title: "Wilms Tumor Stage Profile"
+Description: "Profile for staging Wilms Tumors via National Wilms Tumor Study Group (NWTSG) Staging method or the National Wilms Tumor Study Group (NWTS) and updated by the Children's Oncology Group Renal Tumor Committee (COG/NWTSG)."
 * insert NotUsed(component)
-* code = SCT#405931009 "National Wilms Tumor Study Group Stage (observable entity)"
-* value[x] from WilmsStageVS (required)
+* code = SCT#405931009 // National Wilms Tumor Study Group Stage
+* value[x] from WilmsTumorStageVS (required)
+* method from WilmsTumorStagingMethodVS (extensible)
+* bodySite from WilmsTumorBodySiteVS (extensible)
 
-ValueSet: NationalWilmsStageVS
-Id: mcode-national-wilms-stage-vs
-Title: "NWTSG Stage Value Set"
-Description: "Stage values for the National Wilms Tumor Study Group Staging System."
+ValueSet: WilmsTumorStagingMethodVS
+Id: mcode-wilms-tumor-staging-method-vs
+Title: "WilmsTumor Staging Method Value Set"
+Description: "Methods for staging Wilms Tumors that differentiate the original National Wilms' tumor study staging system from the Children's Oncology Group modification of the National Wilms' Tumor Study Group Staging System."
 * insert SNOMEDCopyrightForVS
-* include codes from system SCT where concept is-a #405971004 "National Wilms Tumor Study Group Stage finding (finding)"
+* include SCT#254364004 "National Wilms' tumor study staging system (tumor staging)"
+* include NCIT#C140271 "Children's Oncology Group/National Wilms' Tumor Study Group Staging System"
 
+ValueSet: WilmsTumorStageVS
+Id: mcode-wilms-tumor-stage-vs
+Title: "Wilms Stage Value Set"
+Description: "Stages I-V for Wilms Tumor Staging."
+* insert SNOMEDCopyrightForVS
+* include codes from system SCT where concept descendant-of #405971004 "National Wilms Tumor Study Group Stage finding (finding)"
+
+ValueSet: WilmsTumorBodySiteVS
+Id: mcode-wilms-tumor-body-site-vs
+Title: "Wilms Tumor Body Site Value Set"
+Description: "Codes indicating the location of Wilms Tumor"
+* insert SNOMEDCopyrightForVS
+* include codes from system SCT where concept is-a #18639004 "Left kidney structure (body structure)"
+* include codes from system SCT where concept is-a #9846003 "Right kidney structure (body structure)"
 
 // International Federation of Gynecology and Obstetrics (FIGO)
 

@@ -37,22 +37,21 @@ To support the separation of [TNMStageGroup] from more generic [CancerStage] pro
 * ObservationCodesPrimaryTumorVS was renamed [TNMPrimaryTumorStagingTypeVS], because it used for TNM staging.
 * ObservationCodesRegionalNodesVS was renamed [TNMRegionalNodesStagingTypeVS], because it used for TNM staging.
 * ObservationCodesStageGroupVS was renamed [TNMStageGroupStagingTypeVS], because it used for TNM staging.
-
-In addition, the following value sets are now associated with the general parent profile, [CancerStage]:
-
 * CancerStagingSystemVS was renamed [CancerStagingMethodVS], because it populates `Observation.method`.
-* [CancerStagingTypeVS] was introduced to populate the `Observation.code` element in the CancerStage profile.
-* [CancerStageVS] was introduced to populate the `Observation.valueCodeableConcept` element in the CancerStage profile.
+
+In addition, the following new value sets are now associated with the parent profile, [CancerStage]:
+
+* [CancerStageTypeVS] was introduced to populate the `Observation.code` element in the CancerStage profile. The value set contains LOINC, SNOMED, and NCI Thesaurus terms that represent staging observables, such as "clinical M stage" or "FIGO ovarian tumor stage". These values identify what is being reported in Observation's value element.
+* [CancerStageVS] was introduced to populate the `Observation.valueCodeableConcept` element in the CancerStage profile. Because there are numerous possible staging values across all staging systems, this value set is only a brief sampling, presented as an example.
 
 #### Staging Value Set Expansion
 
-* Value sets associated with the [CancerStage] profile are more comprehensive and accurate
-  * [CancerStagingMethodVS] (formerly CancerStagingSystemVS) has been expanded to include additional cancer staging systems from SNOMED CT, and staging systems from NCI Thesaurus that currently are not covered in SNOMED CT.
-  * Certain children of Tumor staging (SCTID: 2542920070) (see https://jira.hl7.org/browse/FHIR-34448) were removed because they represent stage values rather than staging methods.
-  * The following staging methods were added (see https://jira.hl7.org/browse/FHIR-37860):
+* [CancerStagingMethodVS] (formerly CancerStagingSystemVS):
+  * Several staging methods in SNOMED were added (see https://jira.hl7.org/browse/FHIR-37860), including:
     * SCT#1149162008 "International Staging System for multiple myeloma (staging scale)"
     * SCT#1149163003 "Revised International Staging System for multiple myeloma (staging scale)"
-    * SCT#246165003 "Extent of disease (attribute)"
+  * Staging systems from NCI Thesaurus that are not covered in SNOMED CT have been added.
+  * Certain children of Tumor staging (SCTID: 2542920070) (see https://jira.hl7.org/browse/FHIR-34448) were removed because they represent stage values rather than staging methods.
 
 ### Comorbidity Redesign
 

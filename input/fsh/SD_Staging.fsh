@@ -2,21 +2,26 @@ Profile: CancerStage  // introduced 8/30/2020 to handle non-TNM staging more cle
 Id: mcode-cancer-stage
 Parent: Observation
 Title: "Cancer Stage Profile"
-Description: "Parent profile for observations regarding cancer stage. Profiles for different staging classification systems (e.g., AJCC TNM-based systems) derive from this profile. The stage is an assessment of the extent of the cancer in the body, according to a given cancer staging classification system."
+Description: "Parent profile for observations regarding cancer stage. The stage is an assessment of the extent of the cancer in the body, according to a given cancer staging classification system. Profiles for different staging systems (e.g., AJCC TNM-based systems) must derive from this profile."
 * ^extension[FMM].valueInteger = 4
-* method from CancerStagingMethodVS (extensible)
-* code from CancerStagingTypeVS (preferred)
+
+* code from CancerStageTypeVS (preferred)
 * code ^short = "The type of stage information reported."
-* code ^definition = """The kind of stage reported, e.g., a clinical TNM stage group, a pathologic TNM stage, an Ann Arbor lymphoma stage, or a Binet stage for leukemia. The code element identifies the type of value that is reported in Observation.value and is necessary for the correct interpretation of that value.
+* code ^definition = """The kind of stage reported, e.g., a pathologic TNM stage, an Ann Arbor lymphoma stage, or a Binet stage for leukemia. This element identifies the type of value that is reported in Observation.value and is necessary for the correct interpretation of that value.
 
 Understanding the distinction between Observation.code and Observation.method is important. Observation.code represents the kind of stage being reported and Observation.method represents the staging system used to determine the code. Observation.code may imply the staging system. For example, the SNOMED CT 103420007 says the reported value is a modified Dukes stage, implying the Modified Dukes staging system (SNOMED CT 385359000) was used to determine the stage. When the staging system is implied by Observation.code, Observation.method is not required. However, when Observation.code does not imply a staging system (for example, if the code is SNOMED CT 385388004 Lymphoma stage), then the staging system must be specified in Observation.method. 
 
 The value (Observation.valueCodeableConcept) may also imply certain things about the kind of stage being reported. For example, the value cN0 implies the value is a clinical stage. However, even if the value is partly or wholly self-identifying, it is not a reliable indicator of the type of stage being reported or the method of staging. Therefore, Observation.code must in all cases be reported."""
+
+* method from CancerStagingMethodVS (extensible)
+* method ^short = "The staging system used."
+* method ^definition = "The staging system or protocol used to determine the stage, stage group, or category of the cancer based on its extend. When the staging system is implied by Observation.code, Observation.method is not required. However, when Observation.code does not imply a staging system (for example, if the code is SNOMED CT 385388004 Lymphoma stage), then the staging system must be specified in Observation.method. "
+
 * value[x] only CodeableConcept
-* value[x] from CancerStageVS (preferred)
+* value[x] from CancerStageVS (example)
 * value[x] ^comment = ""    // suppress QA error on #notes link
 * value[x] ^short = "The value of the stage"
-* value[x] ^definition = "The stage, stage group, category, or classification"
+* value[x] ^definition = "The stage, stage group, category, or classification resulting from the staging evaluation."
 * insert NotUsed(device)
 * insert NotUsed(referenceRange)
 * focus only Reference(PrimaryCancerCondition)
@@ -28,73 +33,3 @@ The value (Observation.valueCodeableConcept) may also imply certain things about
 * subject ^definition = "The patient associated with staging assessment."
 * status and code and subject and effective[x] and value[x] and method and focus MS
 
-//----------- AJCC TNM Staging Profiles--------------
-
-Profile: TNMStageGroup
-Id: mcode-tnm-stage-group
-Parent: CancerStage
-Title: "TNM Stage Group Profile"
-Description: "The extent of cancer reprsented by the stage group, based on a TNM staging system."
-* insert NotUsed(component)
-* code from TNMStageGroupStagingTypeVS (required)
-* value[x] from TNMStageGroupVS (preferred)
-* value[x] ^short = "The stage group"
-* value[x] ^definition = "The overall cancer stage, such as stage group IIA."
-* value[x] ^binding.extension[http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet].valueCanonical = Canonical(TNMStageGroupMaxVS)
-* hasMember MS
-* method 1..1  // NEW requirement 
-* method from TNMStagingMethodVS (extensible)
-* focus 1..1  // NEW requirement -- see https://jira.hl7.org/browse/FHIR-37575
-* insert SliceReferenceOnProfile(hasMember)
-* hasMember contains
-    tnmPrimaryTumorCategory 0..1 MS and
-    tnmRegionalNodesCategory 0..1 MS and
-    tnmDistantMetastasesCategory 0..1 MS
-* hasMember[tnmPrimaryTumorCategory] only Reference(TNMPrimaryTumorCategory)
-* hasMember[tnmPrimaryTumorCategory] ^short = "TNM Primary Tumor Category"
-* hasMember[tnmPrimaryTumorCategory] ^definition = "Category of the primary tumor, based on its size and extent, and based on evidence such as physical examination, imaging, and/or biopsy."
-* hasMember[tnmPrimaryTumorCategory] ^comment = "When using this element, the Observation must validate against the specified profile."
-* hasMember[tnmRegionalNodesCategory] only Reference(TNMRegionalNodesCategory)
-* hasMember[tnmRegionalNodesCategory] ^short = "TNM  Regional Nodes Category"
-* hasMember[tnmRegionalNodesCategory] ^definition = "Category of the presence or absence of metastases in regional lymph nodes, based on evidence such as physical examination, imaging, and/or biopsy."
-* hasMember[tnmRegionalNodesCategory] ^comment = "When using this element, the Observation must validate against the specified profile."
-* hasMember[tnmDistantMetastasesCategory] only Reference(TNMDistantMetastasesCategory)
-* hasMember[tnmDistantMetastasesCategory] ^short = "TNM  Distant Metastases Category"
-* hasMember[tnmDistantMetastasesCategory] ^definition = "Category describing the presence or absence of metastases in remote anatomical locations, based on evidence such as physical examination, imaging, and/or biopsy."
-* hasMember[tnmDistantMetastasesCategory] ^comment = "When using this element, the Observation must validate against the specified profile."
- 
-Profile:  TNMPrimaryTumorCategory
-Id: mcode-tnm-primary-tumor-category
-Parent: CancerStage
-Title: "TNM Primary Tumor Category Profile"
-Description: "Category of the primary tumor, based on its size and extent, based on evidence such as physical examination, imaging, and/or biopsy."
-* insert NotUsed(hasMember)
-* method 1..1
-* method from TNMStagingMethodVS (extensible)
-* code from TNMPrimaryTumorStagingTypeVS (required)  
-* value[x] from TNMPrimaryTumorCategoryVS (preferred)  // MK 8/29/2022 - Using "preferred" binding because some users might use AJCC codes directly; in addition, the codes for "r" and "a" staging are not in SNOMED
-* value[x] ^binding.extension[http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet].valueCanonical = Canonical(TNMPrimaryTumorCategoryMaxVS)
-
-Profile:  TNMRegionalNodesCategory
-Id: mcode-tnm-regional-nodes-category
-Parent: CancerStage
-Title: "TNM Regional Nodes Category Profile"
-Description: "Category of the presence or absence of metastases in regional lymph nodes, based on evidence such as physical examination, imaging, and/or biopsy."
-* insert NotUsed(hasMember)
-* method 1..1
-* method from TNMStagingMethodVS (extensible)
-* code from TNMRegionalNodesStagingTypeVS (required)
-* value[x] from TNMRegionalNodesCategoryVS (preferred)
-* value[x] ^binding.extension[http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet].valueCanonical = Canonical(TNMRegionalNodesCategoryMaxVS)
-
-Profile:  TNMDistantMetastasesCategory
-Id: mcode-tnm-distant-metastases-category
-Parent: CancerStage
-Title: "TNM Distant Metastases Category Profile"
-Description: "Category describing the extent of a tumor metastasis in remote anatomical locations, based on evidence such as physical examination, imaging, and/or biopsy."
-* insert NotUsed(hasMember)
-* method 1..1
-* method from TNMStagingMethodVS (extensible)
-* code from TNMDistantMetastasesStagingTypeVS (required)
-* value[x] from TNMDistantMetastasesCategoryVS (preferred)
-* value[x] ^binding.extension[http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet].valueCanonical = Canonical(TNMDistantMetastasesCategoryMaxVS)

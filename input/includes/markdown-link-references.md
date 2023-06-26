@@ -67,7 +67,7 @@
 [CancerRelatedSurgicalProcedureVS]: ValueSet-mcode-cancer-related-surgical-procedure-vs.html
 [CancerStageVS]: ValueSet-mcode-cancer-stage-vs.html
 [CancerStagingMethodVS]: ValueSet-mcode-cancer-staging-method-vs.html
-[CancerStagingTypeVS]: ValueSet-mcode-cancer-staging-type-vs.html
+[CancerStageTypeVS]: ValueSet-mcode-cancer-stage-type-vs.html
 [CarcinomaInSituDisorderVS]: ValueSet-mcode-carcinoma-in-situ-disorder-vs.html
 [TG263CM]: ConceptMap-TG263CM.html
 [ConditionStatusTrendVS]: ValueSet-mcode-condition-status-trend-vs.html

@@ -19,7 +19,7 @@ The following value sets are defined in this implementation guide:
 * [CancerRelatedSurgicalProcedureVS]
 * [CancerStageVS]
 * [CancerStagingMethodVS]
-* [CancerStagingTypeVS]
+* [CancerStageTypeVS]
 * [CarcinomaInSituDisorderVS]
 * [ConditionStatusTrendVS]
 * [CytologicEvidenceOfMalignancyVS]

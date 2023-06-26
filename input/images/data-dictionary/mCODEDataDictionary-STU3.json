@@ -992,7 +992,7 @@
       "Required?": "Required",
       "Occurrences Allowed": "Single",
       "Data Type": "CodeableConcept",
-      "Value Set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-staging-type-vs",
+      "Value Set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-stage-type-vs",
       "Value Set Binding": "preferred",
       "FHIR Element (R4)": "Observation.code",
       "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-stage",
@@ -4012,8 +4012,8 @@
       "description": "System or method used for staging cancers. The terms in this value set describe staging systems, not specific stages or descriptors used within those systems."
     },
     {
-      "title": "Cancer Staging Type Value Set",
-      "url": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-staging-type-vs",
+      "title": "Cancer Stage Type Value Set",
+      "url": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-stage-type-vs",
       "description": "Identifying codes for the type of cancer staging performed. In terms of the SNOMED CT hierarchy, these codes represent observables."
     },
     {
@@ -4816,29 +4816,29 @@
       "Logical definition": "concept is 254292007"
     },
     {
-      "Value set name": "Cancer Staging Type Value Set",
-      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-staging-type-vs",
+      "Value set name": "Cancer Stage Type Value Set",
+      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-stage-type-vs",
       "Code system": "http://snomed.info/sct",
       "Code": "103420007",
       "Code description": "Modified Dukes stage (observable entity)"
     },
     {
-      "Value set name": "Cancer Staging Type Value Set",
-      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-staging-type-vs",
+      "Value set name": "Cancer Stage Type Value Set",
+      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-stage-type-vs",
       "Code system": "http://snomed.info/sct",
       "Code": "385357003",
       "Code description": "Dukes stage (observable entity)"
     },
     {
-      "Value set name": "Cancer Staging Type Value Set",
-      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-staging-type-vs",
+      "Value set name": "Cancer Stage Type Value Set",
+      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-stage-type-vs",
       "Code system": "http://snomed.info/sct",
       "Code": "409720004",
       "Code description": "International neuroblastoma staging system stage (observable entity)"
     },
     {
-      "Value set name": "Cancer Staging Type Value Set",
-      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-staging-type-vs",
+      "Value set name": "Cancer Stage Type Value Set",
+      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-stage-type-vs",
       "Code system": "http://snomed.info/sct",
       "Logical definition": "concept is 371508000 AND concept is 385361009 AND concept is 405931009"
     },

@@ -56,6 +56,8 @@
 <artifact id="ValueSet/mcode-cancer-related-surgical-procedure-vs" key="ValueSet-mcode-cancer-related-surgical-procedure-vs" name="Cancer-Related Surgical Procedure Value Set"/>
 <artifact id="ValueSet/mcode-teleradiotherapy-carbon-ion-beam-technique-vs" key="ValueSet-mcode-teleradiotherapy-carbon-ion-beam-technique-vs" name="Carbon Ion Beam Technique Value Set"/>
 <artifact id="ValueSet/mcode-carcinoma-in-situ-disorder-vs" key="ValueSet-mcode-carcinoma-in-situ-disorder-vs" name="Carcinoma In-Situ Disorder Value Set"/>
+<artifact id="StructureDefinition/mcode-cml-phase" key="StructureDefinition-mcode-cml-phase" name="Chronic Myeloid Leukemia Phase Profile"/>
+<artifact id="ValueSet/mcode-cml-phase-vs" key="ValueSet-mcode-cml-phase-vs" name="Chronic Myeloid Leukemia Phase Value Set"/>
 <artifact deprecated="true" id="ValueSet/mcode-clinvar-vs" key="clinvar-value-set" name="ClinVar Value Set"/>
 <artifact id="ValueSet/mcode-clin-or-path-vs" key="ValueSet-mcode-clin-or-path-vs" name="Clinical or Pathologic Staging"/>
 <artifact deprecated="true" id="Profile/mcode-comorbid-condition" key="comorbid-condition" name="Comorbid Condition"/>
@@ -112,6 +114,8 @@
 <artifact deprecated="true" id="ValueSet/elixhauser-weight-loss-vs" key="ValueSet-elixhauser-weight-loss-vs" name="Elixhauser Weight Loss Value Set"/>
 <artifact deprecated="true" id="StructureDefinition/mcode-evidence-type" key="StructureDefinition-mcode-evidence-type" name="Evidence Type"/>
 <artifact deprecated="true" id="Extension/mcode-evidence-type-extension" key="evidence-type-extension" name="Evidence Type Extension"/>
+<artifact id="ValueSet/mcode-fab-classification-vs" key="ValueSet-mcode-fab-classification-vs" name="FAB Classification"/>
+<artifact id="StructureDefinition/mcode-fab-classification" key="StructureDefinition-mcode-fab-classification" name="FAB Classification for acute lymphoblastic leukemia"/>
 <artifact id="StructureDefinition/mcode-figo-stage" key="StructureDefinition-mcode-figo-stage" name="FIGO Stage Profile"/>
 <artifact id="ValueSet/mcode-figo-stage-system-vs" key="ValueSet-mcode-figo-stage-system-vs" name="FIGO Stage System Value Set"/>
 <artifact id="ValueSet/mcode-figo-stage-type-vs" key="ValueSet-mcode-figo-stage-type-vs" name="FIGO Stage Type Value Set"/>

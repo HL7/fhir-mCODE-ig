@@ -42,7 +42,7 @@ Profile: FABClassification
 Id: mcode-fab-classification
 Parent: CancerStage  // ?
 Title: "FAB Classification for acute lymphoblastic leukemia"
-Description: "Binet stage for acute lymphoblastic leukemia"
+Description: "French-American-British stage for acute lymphoblastic leukemia"
 * insert NotUsed(component)
 * code = NCIT#C91220 // French-American-British Classification
 * value[x] from FABClassificationVS (required)
@@ -124,7 +124,3 @@ Description: "Profile for staging Wilms Tumors via National Wilms Tumor Study Gr
 * value[x] from WilmsTumorStageVS (required)
 * method from WilmsTumorStagingMethodVS (extensible)
 * bodySite from WilmsTumorBodySiteVS (extensible)
-
-
-
-

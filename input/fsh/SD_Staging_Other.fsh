@@ -56,7 +56,7 @@ Title: "FIGO Stage Profile"
 Description: "International Federation of Gynecology and Obstetrics (FIGO) Staging Profile"
 * insert NotUsed(component)
 * code from FIGOStageTypeVS (extensible)
-* method from FIGOStageSystemVS (extensible)
+* method from FIGOStagingMethodVS (extensible)
 * value[x] from FIGOStageVS (extensible)
 
 //  International Neuroblastoma Staging System (INSS)

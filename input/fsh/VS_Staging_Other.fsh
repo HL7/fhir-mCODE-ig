@@ -35,10 +35,10 @@ Description: "Stage Types for International Federation of Gynecology and Obstetr
 * insert SNOMEDCopyrightForVS
 * include codes from system SCT where concept is-a #385361009 "International Federation of Gynecology and Obstetrics stage for gynecological malignancy (observable entity)"
 
-ValueSet: FIGOStageSystemVS
-Id: mcode-figo-stage-system-vs
-Title: "FIGO Stage System Value Set"
-Description: "Stage Systems from International Federation of Gynecology and Obstetrics (FIGO)."
+ValueSet: FIGOStagingMethodVS
+Id: mcode-figo-staging-method-vs
+Title: "FIGO Staging Method Value Set"
+Description: "Staging methods from International Federation of Gynecology and Obstetrics (FIGO)."
 * insert SNOMEDCopyrightForVS
 * include codes from system SCT where concept is-a #254383006 "International Federation of Gynecology and Obstetrics staging system of gynecological malignancy (tumor staging)"
 

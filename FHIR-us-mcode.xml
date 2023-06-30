@@ -59,7 +59,7 @@
 <artifact id="StructureDefinition/mcode-cml-phase" key="StructureDefinition-mcode-cml-phase" name="Chronic Myeloid Leukemia Phase Profile"/>
 <artifact id="ValueSet/mcode-cml-phase-value-vs" key="ValueSet-mcode-cml-phase-value-vs" name="Chronic Myeloid Leukemia Phase Value Set"/>
 <artifact deprecated="true" id="ValueSet/mcode-clinvar-vs" key="clinvar-value-set" name="ClinVar Value Set"/>
-<artifact id="ValueSet/mcode-clin-or-path-vs" key="ValueSet-mcode-clin-or-path-vs" name="Clinical or Pathologic Staging"/>
+<artifact id="ValueSet/mocde-clin-or-path-modifier-vs" key="ValueSet-mocde-clin-or-path-modifier-vs" name="Clinical or Pathologic Modifier"/>
 <artifact deprecated="true" id="Profile/mcode-comorbid-condition" key="comorbid-condition" name="Comorbid Condition"/>
 <artifact deprecated="true" id="StructureDefinition/mcode-comorbid-condition-code" key="StructureDefinition-mcode-comorbid-condition-code" name="Comorbid Condition Code Extension"/>
 <artifact deprecated="true" id="StructureDefinition/mcode-comorbid-condition-reference" key="StructureDefinition-mcode-comorbid-condition-reference" name="Comorbid Condition Reference Extension"/>
@@ -114,7 +114,7 @@
 <artifact deprecated="true" id="ValueSet/elixhauser-weight-loss-vs" key="ValueSet-elixhauser-weight-loss-vs" name="Elixhauser Weight Loss Value Set"/>
 <artifact deprecated="true" id="StructureDefinition/mcode-evidence-type" key="StructureDefinition-mcode-evidence-type" name="Evidence Type"/>
 <artifact deprecated="true" id="Extension/mcode-evidence-type-extension" key="evidence-type-extension" name="Evidence Type Extension"/>
-<artifact id="ValueSet/mcode-fab-classification-value-vs" key="ValueSet-mcode-fab-classification-value-vs" name="FAB Classification"/>
+<artifact id="ValueSet/mcode-fab-classification-value-vs" key="ValueSet-mcode-fab-classification-value-vs" name="FAB Classification Value"/>
 <artifact id="StructureDefinition/mcode-fab-classification" key="StructureDefinition-mcode-fab-classification" name="FAB Classification for acute lymphoblastic leukemia"/>
 <artifact id="StructureDefinition/mcode-figo-stage" key="StructureDefinition-mcode-figo-stage" name="FIGO Stage Profile"/>
 <artifact id="ValueSet/mcode-figo-stage-type-vs" key="ValueSet-mcode-figo-stage-type-vs" name="FIGO Stage Type Value Set"/>
@@ -138,7 +138,7 @@
 <artifact id="ValueSet/mcode-human-specimen-type-vs" key="ValueSet-mcode-human-specimen-type-vs" name="Human Specimen Type Value Set"/>
 <artifact id="ValueSet/mcode-inss-stage-value-vs" key="ValueSet-mcode-inss-stage-value-vs" name="INNS Stage Value Set"/>
 <artifact id="StructureDefinition/mcode-international-neuroblastoma-risk-group" key="StructureDefinition-mcode-international-neuroblastoma-risk-group" name="International Neuroblastoma Risk Group Profile"/>
-<artifact id="ValueSet/mcode-inrgss-vs" key="ValueSet-mcode-inrgss-vs" name="International Neuroblastoma Risk Group Value Set"/>
+<artifact id="ValueSet/mcode-inrgss-value-vs" key="ValueSet-mcode-inrgss-value-vs" name="International Neuroblastoma Risk Group Value Set"/>
 <artifact id="StructureDefinition/mcode-inss-stage" key="StructureDefinition-mcode-inss-stage" name="International Neuroblastoma Stage Profile"/>
 <artifact id="StructureDefinition/mcode-karnofsky-performance-status" key="karnofsky-performance-status" name="Karnofsky Performance Status Profile"/>
 <artifact deprecated="true" id="Extension/mcode-laterality-extension" key="laterality-extension" name="Laterality Extension"/>
@@ -147,9 +147,9 @@
 <artifact deprecated="true" id="ValueSet/mcode-laterality-value-set" key="laterality-value-set" name="Laterality Value Set"/>
 <artifact deprecated="true" id="StructureDefinition/mcode-location-qualifier" key="StructureDefinition-mcode-location-qualifier" name="Location Qualifier"/>
 <artifact deprecated="true" id="ValueSet/mcode-location-qualifier-vs" key="ValueSet-mcode-location-qualifier-vs" name="Location Qualifier Value Set"/>
-<artifact id="ValueSet/mcode-lymphoma-modifier-vs" key="ValueSet-mcode-lymphoma-modifier-vs" name="Lymphoma Modifier Value Set"/>
 <artifact id="StructureDefinition/mcode-lymphoma-stage" key="StructureDefinition-mcode-lymphoma-stage" name="Lymphoma Stage Profile"/>
 <artifact id="ValueSet/mcode-lymphoma-stage-type-vs" key="ValueSet-mcode-lymphoma-stage-type-vs" name="Lymphoma Stage Type Value Set"/>
+<artifact id="ValueSet/mcode-lymphoma-stage-value-modifier-vs" key="ValueSet-mcode-lymphoma-stage-value-modifier-vs" name="Lymphoma Stage Value Modifier Value Set"/>
 <artifact id="ValueSet/mcode-lymphoma-stage-value-vs" key="ValueSet-mcode-lymphoma-stage-value-vs" name="Lymphoma Stage Value Set"/>
 <artifact id="ValueSet/mcode-lymphoma-staging-method-vs" key="ValueSet-mcode-lymphoma-staging-method-vs" name="Lymphoma Staging System Value Set"/>
 <artifact id="ValueSet/mcode-melanoma-in-situ-disorder-vs" key="ValueSet-mcode-melanoma-in-situ-disorder-vs" name="Melanoma In-Situ Disorder Value Set"/>

@@ -42,7 +42,7 @@ To support the separation of [TNMStageGroup] from more generic [CancerStage] pro
 In addition, the following new value sets are now associated with the parent profile, [CancerStage]:
 
 * [CancerStageTypeVS] was introduced to populate the `Observation.code` element in the CancerStage profile. The value set contains LOINC, SNOMED, and NCI Thesaurus terms that represent staging observables, such as "clinical M stage" or "FIGO ovarian tumor stage". These values identify what is being reported in Observation's value element.
-* [CancerStageVS] was introduced to populate the `Observation.valueCodeableConcept` element in the CancerStage profile. Because there are numerous possible staging values across all staging systems, this value set is only a brief sampling, presented as an example.
+* [CancerStageValueVS] was introduced to populate the `Observation.valueCodeableConcept` element in the CancerStage profile. Because there are numerous possible staging values across all staging systems, this value set is only a brief sampling, presented as an example.
 
 #### Staging Value Set Expansion
 

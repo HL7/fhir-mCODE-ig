@@ -150,7 +150,7 @@ mCODE includes single FHIR profile, [TumorMarkerTest], for all labs involving se
 * Staging, non-TNM
   * [CancerStagingMethodVS]
   * [CancerStageTypeVS]
-  * [CancerStageVS]
+  * [CancerStageValueVS]
 
 * Staging, TNM
   * [TNMStagingMethodVS]

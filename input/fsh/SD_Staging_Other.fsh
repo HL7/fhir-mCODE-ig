@@ -25,7 +25,7 @@ Description: "Binet stage for chronic lymphocytic leukemia"
 * insert NotUsed(component)
 * code = NCIT#C141212 // Binet Stage -- need a SNOMED code
 * method = SCT#1149099005 // "Binet staging classification for chronic lymphocytic leukemia (tumor staging)"
-* value[x] from BinetStageVS (required)
+* value[x] from BinetStageValueVS (required)
 
 Profile: CMLPhase
 Id: mcode-cml-phase
@@ -34,7 +34,7 @@ Title: "Chronic Myeloid Leukemia Phase Profile"
 Description: "Phase of Chronic Myeloid Leukemia (CML) observed at a specified point in time."
 * insert NotUsed(component)
 * code = MDR#10066506  // CML Progression (code from medDRA; no suitable codes in NCIT, SCT, or LNC)
-* value[x] from CMLPhaseVS (required)
+* value[x] from CMLPhaseValueVS (required)
 
 //  French-American-British (FAB) Classification for ALL
 
@@ -45,7 +45,7 @@ Title: "FAB Classification for acute lymphoblastic leukemia"
 Description: "French-American-British stage for acute lymphoblastic leukemia"
 * insert NotUsed(component)
 * code = NCIT#C91220 // French-American-British Classification
-* value[x] from FABClassificationVS (required)
+* value[x] from FABClassificationValueVS (required)
 
 // International Federation of Gynecology and Obstetrics (FIGO)
 
@@ -57,7 +57,7 @@ Description: "International Federation of Gynecology and Obstetrics (FIGO) Stagi
 * insert NotUsed(component)
 * code from FIGOStageTypeVS (extensible)
 * method from FIGOStagingMethodVS (extensible)
-* value[x] from FIGOStageVS (extensible)
+* value[x] from FIGOStageValueVS (extensible)
 
 //  International Neuroblastoma Staging System (INSS)
 
@@ -68,7 +68,7 @@ Title: "International Neuroblastoma Stage Profile"
 Description: "The International Neuroblastoma Staging System (INSS) stage for neuroblastoma."
 * insert NotUsed(component)
 * code = SCT#409720004  // International neuroblastoma staging system stage (observable entity)
-* value[x] from INSSStageVS (required)
+* value[x] from INSSStageValueVS (required)
 
 //  International Neuroblastoma Risk Group Staging System (NRGSS)
 
@@ -79,7 +79,7 @@ Title: "International Neuroblastoma Risk Group Profile"
 Description: "The stage according to the International Neuroblastoma Risk Group Staging System (INRGSS). It is based on preoperative imaging and determined prior to any treatment, including surgery."
 * insert NotUsed(component)
 * code = NCIT#C192760 // International Neuroblastoma Risk Group
-* value[x] from INSSStageVS (required)
+* value[x] from INSSStageValueVS (required)
 
 // Lymphoma Stage
 
@@ -92,13 +92,13 @@ Description: "Ann Arbor Staging of Lymphoma. The Ann Arbor staging system is the
 * code from LymphomaStageTypeVS (extensible)
 * method 1..1 MS
 * method from LymphomaStagingMethodVS
-* value[x] from LymphomaStageVS (required)
+* value[x] from LymphomaStageValueVS (required)
 * insert ObservationComponentSlicingRules
-* component contains modifier 0..* and clin-or-path 0..1
-* component[modifier].value[x] only CodeableConcept
-* component[modifier].value[x] from LymphomaModifierVS
-* component[clin-or-path].value[x] only CodeableConcept
-* component[clin-or-path].value[x] from ClinOrPathVS
+* component contains stage-modifier 0..* and clin-or-path-modifier 0..1
+* component[stage-modifier].value[x] only CodeableConcept
+* component[stage-modifier].value[x] from LymphomaStageValueModifierVS
+* component[clin-or-path-modifier].value[x] only CodeableConcept
+* component[clin-or-path-modifier].value[x] from ClinOrPathModifierVS
 
 //  Rai Staging System for CLL
 
@@ -110,7 +110,7 @@ Description: "Rai stage for chronic lymphocytic leukemia"
 * insert NotUsed(component)
 * code = NCIT#C141207 // Rai Stage -- need a SNOMED code
 * method from RaiStagingMethodVS
-* value[x] from RaiStageVS (required)
+* value[x] from RaiStageValueVS (required)
 
 //  Wilms Tumor Staging
 
@@ -121,6 +121,6 @@ Title: "Wilms Tumor Stage Profile"
 Description: "Profile for staging Wilms Tumors via National Wilms Tumor Study Group (NWTSG) Staging method or the National Wilms Tumor Study Group (NWTS) and updated by the Children's Oncology Group Renal Tumor Committee (COG/NWTSG)."
 * insert NotUsed(component)
 * code = SCT#405931009 // National Wilms Tumor Study Group Stage
-* value[x] from WilmsTumorStageVS (required)
+* value[x] from WilmsTumorStageValueVS (required)
 * method from WilmsTumorStagingMethodVS (extensible)
 * bodySite from WilmsTumorBodySiteVS (extensible)

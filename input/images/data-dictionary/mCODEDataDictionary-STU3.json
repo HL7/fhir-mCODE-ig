@@ -1048,7 +1048,7 @@
       "Required?": "Required if known",
       "Occurrences Allowed": "Single",
       "Data Type": "CodeableConcept",
-      "Value Set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-stage-vs",
+      "Value Set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-stage-value-vs",
       "Value Set Binding": "preferred",
       "FHIR Element (R4)": "Observation.value[x]",
       "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-stage",
@@ -4003,7 +4003,7 @@
     },
     {
       "title": "Cancer Stage Value Set",
-      "url": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-stage-vs",
+      "url": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-stage-value-vs",
       "description": "The result of cancer staging, i.e., the stage or category of the cancer."
     },
     {
@@ -4728,49 +4728,49 @@
     },
     {
       "Value set name": "Cancer Stage Value Set",
-      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-stage-vs",
+      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-stage-value-vs",
       "Code system": "http://snomed.info/sct",
       "Code": "13808002",
       "Code description": "Walter Reed stage 3 (tumor staging)"
     },
     {
       "Value set name": "Cancer Stage Value Set",
-      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-stage-vs",
+      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-stage-value-vs",
       "Code system": "http://snomed.info/sct",
       "Code": "15972002",
       "Code description": "Walter Reed stage 2 (tumor staging)"
     },
     {
       "Value set name": "Cancer Stage Value Set",
-      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-stage-vs",
+      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-stage-value-vs",
       "Code system": "http://snomed.info/sct",
       "Code": "42114005",
       "Code description": "Walter Reed stage 1 (tumor staging)"
     },
     {
       "Value set name": "Cancer Stage Value Set",
-      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-stage-vs",
+      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-stage-value-vs",
       "Code system": "http://snomed.info/sct",
       "Code": "66470009",
       "Code description": "Walter Reed stage 5 (tumor staging)"
     },
     {
       "Value set name": "Cancer Stage Value Set",
-      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-stage-vs",
+      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-stage-value-vs",
       "Code system": "http://snomed.info/sct",
       "Code": "74542008",
       "Code description": "Walter Reed stage 4 (tumor staging)"
     },
     {
       "Value set name": "Cancer Stage Value Set",
-      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-stage-vs",
+      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-stage-value-vs",
       "Code system": "http://snomed.info/sct",
       "Code": "83200007",
       "Code description": "Walter Reed stage 6 (tumor staging)"
     },
     {
       "Value set name": "Cancer Stage Value Set",
-      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-stage-vs",
+      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-stage-value-vs",
       "Code system": "http://snomed.info/sct",
       "Logical definition": "concept is 1222584008 AND concept is 258318002 AND concept is 258309004 AND concept is 258233007 AND concept is 258271004"
     },

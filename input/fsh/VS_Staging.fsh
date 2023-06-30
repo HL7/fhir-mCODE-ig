@@ -225,8 +225,8 @@ Description: "Staging system or method used for staging cancers. The terms in th
 * NCIT#C18214 "Whitmore-Jewett Staging System"
 
 // Observation.value
-ValueSet: CancerStageVS
-Id: mcode-cancer-stage-vs
+ValueSet: CancerStageValueVS
+Id: mcode-cancer-stage-value-vs
 Title: "Cancer Stage Value Set"
 Description: "A non-exhaustive value set containing codes that result from cancer staging, i.e., the stage or category of the cancer."
 * insert SNOMEDCopyrightForVS

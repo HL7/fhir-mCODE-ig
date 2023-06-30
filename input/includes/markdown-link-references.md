@@ -65,7 +65,7 @@
 [CancerDiseaseStatusEvidenceTypeVS]: ValueSet-mcode-cancer-disease-status-evidence-type-vs.html
 [CancerDisorderVS]: ValueSet-mcode-cancer-disorder-vs.html
 [CancerRelatedSurgicalProcedureVS]: ValueSet-mcode-cancer-related-surgical-procedure-vs.html
-[CancerStageVS]: ValueSet-mcode-cancer-stage-vs.html
+[CancerStageValueVS]: ValueSet-mcode-cancer-stage-value-vs.html
 [CancerStagingMethodVS]: ValueSet-mcode-cancer-staging-method-vs.html
 [CancerStageTypeVS]: ValueSet-mcode-cancer-stage-type-vs.html
 [CarcinomaInSituDisorderVS]: ValueSet-mcode-carcinoma-in-situ-disorder-vs.html

@@ -62,6 +62,7 @@ Description: "Extension capturing modality and technique of a given radiotherapy
 * obeys TechniquesForHighDoseRateElectronic
 * obeys TechniquesForRadioPharmaceutical
 * obeys ModalityTextRequiredForOther
+* obeys TechniqueTextRequiredForOther
 
 Invariant: ModalityTextRequiredForOther
 Description:  "Require a text literal for code other"
@@ -69,6 +70,14 @@ Expression: "extension.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefini
          extension.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-modality').value.exists(coding.system = 'http://snomed.info/sct' and coding.code = '74964007')
    implies
        extension.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-modality').value.exists(text)"
+Severity: #error
+
+Invariant: TechniqueTextRequiredForOther
+Description:  "Require a text literal for code other"
+Expression: "extension.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-technique').exists() and
+         extension.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-technique').value.exists(coding.system = 'http://snomed.info/sct' and coding.code = '74964007')
+   implies
+       extension.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-technique').value.exists(text)"
 Severity: #error
 
 Invariant: TechniquesForPhotonBeamModality

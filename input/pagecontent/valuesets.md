@@ -24,7 +24,6 @@ The following value sets are defined in this implementation guide:
 * [ConditionStatusTrendVS]
 * [CytologicEvidenceOfMalignancyVS]
 * [HistologyMorphologyBehaviorVS]
-* [HumanSpecimenTypeVS]
 * [HypereosinophilicSyndromeDisorderVS]
 * [LateralityQualifierVS]
 * [MelanomaInSituDisorderVS]

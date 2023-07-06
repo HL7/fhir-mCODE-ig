@@ -14,14 +14,14 @@ Description: "Example of radiotherapy treatment summary involving external beam 
 * extension[modalityAndTechnique][0]
   * extension[modality][0]
     * valueCodeableConcept
-      * coding[0] = SCT#74964007 "Other"
+      * coding[0] = NULLFLAVOR#UNC "un-coded"
       * coding[+] = SCT#169317000 "Neutron capture therapy (procedure)"
       * text = "Boron neutron capture therapy (procedure)"
   * extension[technique][0].valueCodeableConcept = SCT#1156530009 "Volumetric Modulated Arc Therapy (procedure)"
 * extension[modalityAndTechnique][+]
   * extension[modality][0].valueCodeableConcept = SCT#45643008  "Teleradiotherapy using electrons"
   * extension[technique][0]
-    * valueCodeableConcept = SCT#74964007 "Other"
+    * valueCodeableConcept = NULLFLAVOR#UNC "un-coded"
     * valueCodeableConcept.text = "Three dimensional external beam radiation therapy (procedure) - my version"
 * extension[doseDeliveredToVolume][0].extension[volume].valueReference = Reference(jenny-m-chest-wall-treatment-volume)
 * extension[doseDeliveredToVolume][0].extension[totalDoseDelivered].valueQuantity = 6000 'cGy'

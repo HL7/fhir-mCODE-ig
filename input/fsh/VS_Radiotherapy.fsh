@@ -35,7 +35,7 @@ Description: "Codes describing the modalities of external beam and brachytherapy
 * ^extension[FMM].valueInteger = 3
 * include codes from valueset TeleradiotherapyModalityVS
 * include codes from valueset BrachytherapyModalityVS
-* SCT#74964007 "Other (qualifier)" // .text must be provided
+* NULLFLAVOR#UNC "un-encoded" // .text must be provided
 
 //----------- TECHNIQUES -----------------------
 //
@@ -203,7 +203,7 @@ Description: "Codes describing the techniques of external beam and brachytherapy
 // Union of EBRT and brachytherapy value sets
 * include codes from valueset TeleradiotherapyTechniqueVS
 * include codes from valueset BrachytherapyTechniqueVS
-* SCT#74964007 "Other (qualifier)" // .text must be provided
+* NULLFLAVOR#UNC "un-encoded" // .text must be provided
 
 ValueSet: RadiotherapyVolumeTypeVS
 Id: mcode-radiotherapy-volume-type-vs

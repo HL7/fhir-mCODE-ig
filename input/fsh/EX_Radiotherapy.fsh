@@ -13,8 +13,12 @@ Description: "Example of radiotherapy treatment summary involving external beam 
 // modified example to demonstrate new RadiotherapyModalityAndTechnique structure in Course Summary
 * extension[modalityAndTechnique][0]
   * extension[modality][0]
-    * valueCodeableConcept = SCT#74964007 "Other"
-    * valueCodeableConcept.text = "External beam radiation therapy using photons (procedure) - my version"
+    * valueCodeableConcept
+      * coding[0]
+        * code = SCT#74964007 "Other"
+      * coding[+]
+        * code = SCT#169317000 "Neutron capture therapy (procedure)"
+      * text = "Boron neutron capture therapy (procedure)"
   * extension[technique][0].valueCodeableConcept = SCT#1156530009 "Volumetric Modulated Arc Therapy (procedure)"
 * extension[modalityAndTechnique][+]
   * extension[modality][0].valueCodeableConcept = SCT#45643008  "Teleradiotherapy using electrons"

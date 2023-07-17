@@ -10,7 +10,7 @@ Description:  "Codes describing the location(s) of primary or secondary cancer. 
 ValueSet:   ConditionStatusTrendVS
 Id: mcode-condition-status-trend-vs
 Title: "Condition Status Trend Value Set"
-Description:  "How patient's given disease, condition, or ability is trending."
+Description:  "How patient's given disease, condition, or ability is trending. This value set is less than ideal because it mixes findings with disorders, but that is the way that SNOMED (IHTSDO) insisted the new terms for partial and full remission be added. See https://jira.hl7.org/browse/FHIR-29813 for details."
 * insert SNOMEDCopyrightForVS
 * ^extension[FMM].valueInteger = 3
 // * SCT#281900007 "No abnormality detected (finding)" // better than SCT#260415000 "Not detected (qualifier)" - FHIR-32837

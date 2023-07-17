@@ -10,8 +10,6 @@ Efforts to define SNOMED CT are ongoing for two of the TG263 concepts (Spc_Bowel
 
 ### TG263 to SNOMEDCT Codes and Qualifiers Mapping
 
-| TG263 Code | Description |  &#8594; | SNOMEDCT code | Description | Location Qualifier | Description | Laterality Qualifier | Description |
-| ---------- | ----------- | -------- | ------------- | ----------- | ------------------ | ----------- | -------------------- | ----------- |
 |A_Aorta| Aorta | &#8594; | 15825003 |  Aortic structure (body structure) | | | | |
 |A_Aorta_Asc| Ascending Aorta | &#8594; | 54247002 |  Ascending aorta structure (body Structure) | | | | |
 |A_Brachiocephls| Brachiocephalic Artery | &#8594; | 425444002 |  Branch of brachiocephalic artery (body structure) | | | | |
@@ -52,7 +50,7 @@ Efforts to define SNOMED CT are ongoing for two of the TG263 concepts (Spc_Bowel
 |AirWay_Dist| Distal Airway | &#8594; | 89187006 |  Airway structure (body structure) | | |46053002| distal (qualifier value)|
 |AirWay_Prox| Proximal Airway | &#8594; | 89187006 |  Airway structure (body structure) | | |40415009| proximal (qualifier value)|
 |Anus| Anus | &#8594; | 123956007 |  Anus part (body structure) | | | | |
-|Appendix| Appendix | &#8594; | 66754008 |  Appendix structure (body structure)  | | | | |
+|Appendix| Appendix | &#8594; | 66754008 |  Appendix structure (body structure) | | | | |
 |Arytenoid| Arytenoid cartilage | &#8594; | 77578007 |  Arytenoid cartilage structure (body structure) | | | | |
 |Arytenoid_L| Arytenoid cartilage Left | &#8594; | 77578007 |  Arytenoid cartilage structure (body structure) | 7771000| left (qualifier value)| | |
 |Arytenoid_R| Arytenoid cartilage Right | &#8594; | 77578007 |  Arytenoid cartilage structure (body structure) | 24028007| right (qualifier value)| | |
@@ -295,11 +293,11 @@ Efforts to define SNOMED CT are ongoing for two of the TG263 concepts (Spc_Bowel
 |Musc_Temporal_R| Temporal muscle - Right | &#8594; | 52927003 |  Structure of temporalis muscle (body structure) | 24028007| right (qualifier value)| | |
 |Nasopharynx| Nasal part of pharynx | &#8594; | 71836000 |  Nasopharyngeal structure (body structure) | | | | |
 |LN| Lymph Node | &#8594; | 59441001 |  Structure of lymph node (body structure) | | | | |
-|LN_Ax_Apical| Set of apical axillary lymphatic vessels | &#8594; | 16051009 |   Structure of apical axillary lymph node (body structure) | | | | |
-|LN_Ax_Apical_L| Axillary lymphatic chain - Apical Left | &#8594; | 16051009 |   Structure of apical axillary lymph node (body structure) | 7771000| Left (qualifier value)| | |
-|LN_Ax_Apical_R| Axillary lymphatic chain - Apical Right | &#8594; | 16051009 |   Structure of apical axillary lymph node (body structure) | 24028007| Right (qualifier value)| | |
-|LN_Ax_Central_L| Axillary lymphatic chain - Central Left | &#8594; |  16051009 |   Structure of apical axillary lymph node (body structure) | 7771000| left (qualifier value)| 26216008| central (qualifier value) |
-|LN_Ax_Central_R| Axillary lymphatic chain - Central Right | &#8594; |  16051009 |   Structure of apical axillary lymph node (body structure) | 24028007| right (qualifier value)| 26216008| central (qualifier value) |
+|LN_Ax_Apical| Set of apical axillary lymphatic vessels | &#8594; | 16051009 |  Structure of apical axillary lymph node (body structure) | | | | |
+|LN_Ax_Apical_L| Axillary lymphatic chain - Apical Left | &#8594; | 16051009 |  Structure of apical axillary lymph node (body structure) | 7771000| Left (qualifier value)| | |
+|LN_Ax_Apical_R| Axillary lymphatic chain - Apical Right | &#8594; | 16051009 |  Structure of apical axillary lymph node (body structure) | 24028007| Right (qualifier value)| | |
+|LN_Ax_Central_L| Axillary lymphatic chain - Central Left | &#8594; |  16051009 |  Structure of apical axillary lymph node (body structure) | 7771000| left (qualifier value)| 26216008| central (qualifier value) |
+|LN_Ax_Central_R| Axillary lymphatic chain - Central Right | &#8594; |  16051009 |  Structure of apical axillary lymph node (body structure) | 24028007| right (qualifier value)| 26216008| central (qualifier value) |
 |LN_Ax_Centrals| Set of central axillary lymphatic vessels | &#8594; | 283001 |  Structure of central axillary lymph node (body structure) | | | | |
 |LN_Ax_L| Axillary lymphatic chain Left | &#8594; | 68171009 |  Axillary lymph node structure (body structure) | 7771000| Left (qualifier value)| | |
 |LN_Ax_L1_L| Level 1 Axillary Lymph Node Left | &#8594; |  68171009 |  Axillary lymph node structure (body structure) | 7771000| left (qualifier value)| 277733009| level 1 (qualifier value) |
@@ -351,10 +349,10 @@ Efforts to define SNOMED CT are ongoing for two of the TG263 concepts (Spc_Bowel
 |LN_Neck_IB_R| Level IB (Submandibular) neck node Right | &#8594; |  81105003 |  Cervical lymph node structure (body structure) | 24028007| Right (qualifier value)| 1162617002| Level IB (qualifier value) |
 |LN_Neck_II_L| Level IIA & IIB (Upper Jugular) neck nodes Left | &#8594; |  81105003 |  Cervical lymph node structure (body structure) | 7771000| Left (qualifier value)| 258401000| Level II (qualifier value) |
 |LN_Neck_II_R| Level IIA & IIB (Upper Jugular) neck nodes Left | &#8594; |  81105003 |  Cervical lymph node structure (body structure) | 24028007| Right (qualifier value)| 258401000| Level II (qualifier value) |
-|LN_Neck_IIA_L| Level IIA (Upper Jugular) neck node Left | &#8594; |  81105003 |  Cervical lymph node structure (body structure) | 7771000| Left (qualifier value)| USCRS-34777| Level IIA (qualifier value) |
-|LN_Neck_IIA_R| Level IIA (Upper Jugular) neck node Right | &#8594; |  81105003 |  Cervical lymph node structure (body structure) | 24028007| Right (qualifier value)| USCRS-34777| Level IIA (qualifier value) |
-|LN_Neck_IIB_L| Level IIB (Upper Jugular) neck node Left | &#8594; |  81105003 |  Cervical lymph node structure (body structure) | 7771000| Left (qualifier value)| USCRS-34775| Level IIB (qualifier value) |
-|LN_Neck_IIB_R| Level IIB (Upper Jugular) neck node Right | &#8594; |  81105003 |  Cervical lymph node structure (body structure) | 24028007| Right (qualifier value)| USCRS-34775| Level IIB (qualifier value) |
+|LN_Neck_IIA_L| Level IIA (Upper Jugular) neck node Left | &#8594; |  81105003 |  Cervical lymph node structure (body structure) | 7771000| Left (qualifier value)| 1284814003| Level IIA (qualifier value) |
+|LN_Neck_IIA_R| Level IIA (Upper Jugular) neck node Right | &#8594; |  81105003 |  Cervical lymph node structure (body structure) | 24028007| Right (qualifier value)| 1284814003| Level IIA (qualifier value) |
+|LN_Neck_IIB_L| Level IIB (Upper Jugular) neck node Left | &#8594; |  81105003 |  Cervical lymph node structure (body structure) | 7771000| Left (qualifier value)| 1284815002| Level IIB (qualifier value) |
+|LN_Neck_IIB_R| Level IIB (Upper Jugular) neck node Right | &#8594; |  81105003 |  Cervical lymph node structure (body structure) | 24028007| Right (qualifier value)| 1284815002| Level IIB (qualifier value) |
 |LN_Neck_III_L| Level III (Middle Jugular) neck node Left | &#8594; |  81105003 |  Cervical lymph node structure (body structure) | 7771000| Left (qualifier value)| 258402007| Level III (qualifier value) |
 |LN_Neck_III_R| Level III (Middle Jugular) neck node Right | &#8594; |  81105003 |  Cervical lymph node structure (body structure) | 24028007| Right (qualifier value)| 258402007| Level III (qualifier value) |
 |LN_Neck_IV_L| Level IV neck (Lower Jugular) node Left | &#8594; |  81105003 |  Cervical lymph node structure (body structure) | 7771000| Left (qualifier value)| 258403002| Level IV (qualifier value) |
@@ -540,8 +538,8 @@ Efforts to define SNOMED CT are ongoing for two of the TG263 concepts (Spc_Bowel
 |Scapula_L| Scapula Left | &#8594; | 79601000 |  Bone structure of scapula (body structure) | 7771000| left (qualifier value)| | |
 |Scapula_R| Scapula Right | &#8594; | 79601000 |  Bone structure of scapula (body structure) | 24028007| right (qualifier value)| | |
 |Skin_Peritoneum| Skin of Peritoneum | &#8594; | 75093004 |  Skin structure of anterior abdominal wall (body structure) | | | | |
-|Spc_Bowel | Space occupied by bowel | &#8594; | USCRS-34356 |  Bowel space (body structure) | | | | |
-|Spc_Bowel_Small| Space occupied by small bowel | &#8594; | USCRS-34358 |  Small bowel space (body structure) | | | | |
+|Spc_Bowel | Space occupied by bowel | &#8594; | 1285442003 |  Estimated contoured volume of bowel in peritoneal cavity using radiographic imaging (observable entity) | | | | |
+|Spc_Bowel_Small| Space occupied by small bowel | &#8594; | 1285443008 |  Estimated contoured volume of small bowel in peritoneal cavity using imaging (observable entity) | | | | |
 |Spc_Retrophars| Retropharyngeal space | &#8594; | 789564000 |  Structure of retropharyngeal space (body structure) | | | | |
 |Spc_Retrosty| Retrostyloid space  | &#8594; | 1193554003 |  Retrostyloid space (body structure) | | | | |
 |Spc_Supraclav_L| Supraclavicular space - Left | &#8594; | 76838003 |  Structure of supraclavicular lymph node (body structure) | 7771000| left (qualifier value)| | |

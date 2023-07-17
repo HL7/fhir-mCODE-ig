@@ -143,7 +143,6 @@ ValueSet: RaiStageValueVS
 Id: mcode-rai-stage-value-vs
 Title: "Rai Stage Value Set"
 Description: "Codes in the Rai staging system representing Chronic Lymphocytic Leukemia (CLL) stage."
-* insert SNOMEDCopyrightForVS
 * NCIT#C7847 "Stage 0 Chronic Lymphocytic Leukemia"
 * NCIT#C7874 "Stage I Chronic Lymphocytic Leukemia"
 * NCIT#C7875 "Stage II Chronic Lymphocytic Leukemia"

@@ -15,7 +15,7 @@ Description: "Records the existence of a past episode of cancer, for the purpose
 * code from HistoryOfMalignantNeoplasmVS
 
 ValueSet: HistoryOfMalignantNeoplasmVS
-Id: mcode-istory-of-malignant-neoplasm-vs
+Id: mcode-history-of-malignant-neoplasm-vs
 Title: "TNM Stage Group Value Set"
 Description: "Values defining history of an episode of cancer."
 * include codes from system SCT where concept is-a #SCT#266987004 "History of malignant neoplasm (situation)"

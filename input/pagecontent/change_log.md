@@ -1,4 +1,4 @@
-The following changes occurred between [STU 2](http://hl7.org/fhir/us/mcode/STU2/) (January 2022) and the STU 3. For a history of previous changes, please see the prior change logs in the [appropriate versions](http://hl7.org/fhir/us/mcode/history.html).
+The following changes occurred between [STU 2](http://hl7.org/fhir/us/mcode/STU2/) (January 2022) and STU 3. For a history of previous changes, please see the prior change logs in the [appropriate versions](http://hl7.org/fhir/us/mcode/history.html).
 
 ### Allowing the Use of AJCC-equivalent SNOMED Codes for Staging
 

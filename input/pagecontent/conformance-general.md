@@ -42,7 +42,7 @@ Note that the requests below may return resources associated with patients who a
 
 * Patient
   * [CancerPatient]\: see [Identifying In-Scope Patients](conformance-patients.html) for the options to retrieve all conforming resources
-  * [HumanSpecimen]\: Depends on type, for example: `GET [base]/Specimen?type=http://terminology.hl7.org/CodeSystem/v2-0487|TUMOR` (note that `TUMOR` MUST be capitalized)
+  * [OncologySpecimen]\: Depends on type, for example: `GET [base]/Specimen?type=http://terminology.hl7.org/CodeSystem/v2-0487|TUMOR` (note that `TUMOR` MUST be capitalized)
   * [MCODEPatientBundle]\: see [Support the mCODE Bundle](#support-the-mcode-patient-bundle)
   * [MCODEPatientGroup]\: n/a
 
@@ -70,7 +70,7 @@ Note that the requests below may return resources associated with patients who a
 
 * Genomics
   * [GenomicVariant]\: `GET [base]/Observation?code=http://loinc.org|69548-6`
-  * [HumanSpecimen]\: Resources referenced in the `specimen` element in resources conforming to [GenomicVariant] or [GenomicsReport]
+  * [OncologySpecimen]\: Resources referenced in the `specimen` element in resources conforming to [GenomicVariant] or [GenomicsReport]
   * [GenomicsReport]\: `GET [base]/DiagnosticReport?code=http://loinc.org|81247-9`
   * [GenomicRegionStudied]\: `GET [base]/Observation?code=http://loinc.org|53041-0`
 

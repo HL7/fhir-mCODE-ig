@@ -7,12 +7,9 @@ The mCODE **Patient Information** group contains the following information about
 ### Profiles
 
 * [CancerPatient]
-* [HumanSpecimen]
 * [MCODEPatientBundle]
 * [MCODEPatientGroup]
+* [OncologySpecimen]
 
-### Value Sets
-
-* [HumanSpecimenTypeVS]
 
 {% include markdown-link-references.md %}

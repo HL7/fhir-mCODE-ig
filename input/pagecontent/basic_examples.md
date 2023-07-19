@@ -40,7 +40,7 @@
 
 * [Genomic Diagnostic Report - John Anyperson](DiagnosticReport-genomics-report-john-anyperson.html)
 
-### [Human Specimen][HumanSpecimen]
+### [Oncology Specimen][OncologySpecimen]
 
 * [Human Specimen - Lung](Specimen-human-specimen-lung.html)
 

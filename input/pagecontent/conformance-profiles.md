@@ -21,7 +21,7 @@ Where US Core does not provide an appropriate base profile, mCODE profiles FHIR 
 | [Karnofsky Performance Status][KarnofskyPerformanceStatus] | yes | US Core Observation Clinical Test Result |
 | [mCODE Patient Bundle][MCODEPatientBundle] | no | Bundle  |
 | [mCODE Patient Group][MCODEPatientGroup] | no | Group  |
-| [Human Specimen][HumanSpecimen] | no | Specimen |
+| [Oncology Specimen][OncologySpecimen] | no | Specimen |
 | [Primary Cancer Condition][PrimaryCancerCondition] | yes | US Core Condition Problems Health Concerns |
 | [Radiotherapy Course Summary][RadiotherapyCourseSummary] | yes | US Core Procedure |
 | [Radiotherapy Volume][RadiotherapyVolume] | no | BodyStructure |

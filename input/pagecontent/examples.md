@@ -58,7 +58,6 @@ A timeline of the narrative is illustrated in the following diagram:
 | [`Genomic Region: BRCA1`](Observation-genomic-region-studied-jenny-m.html) |[GenomicRegionStudied]|
 | [`Genomics Report`](DiagnosticReport-genomics-report-jenny-m.html)| [GenomicsReport] |
 | [`Genomic Variant Results: Pathogenic Variant in PALB2`](Observation-genomic-variant-jenny-m.html) | [GenomicVariant] |
-| [`Human Specimen: Left Breast`](Specimen-human-specimen-left-breast-jenny-m.html) | [HumanSpecimen] |
 | [`mCODE Patient Bundle: Jenny M`](Bundle-mcode-patient-bundle-jenny-m.html) | [MCODEPatientBundle]|
 | [`Medication Administration: Cyclophosphamide`](MedicationAdministration-cancer-related-medication-admin-cyclophosphamide-jenny-m.html) | [CancerRelatedMedicationAdministration] |
 | [`Medication Administration: Paclitaxel`](MedicationAdministration-cancer-related-medication-admin-paclitaxel-jenny-m.html) | [CancerRelatedMedicationAdministration] | 
@@ -66,6 +65,7 @@ A timeline of the narrative is illustrated in the following diagram:
 | [`Medication Request: Doxorubicin`](MedicationRequest-cancer-related-medication-request-doxorubicin-jenny-m.html) | [CancerRelatedMedicationRequest] |
 | [`Medication Request: Cyclophosphamide`](MedicationRequest-cancer-related-medication-request-cyclophosphamide-jenny-m.html) | [CancerRelatedMedicationRequest] |
 | [`Medication Request: Paclitaxel`](MedicationRequest-cancer-related-medication-request-paclitaxel-jenny-m.html) | [CancerRelatedMedicationRequest] |
+| [`Oncology Specimen: Left Breast`](Specimen-human-specimen-left-breast-jenny-m.html) | [OncologySpecimen] |
 | [`Oncotype DX Breast Recurrence Score Assay: 47/High`](Observation-tumor-marker-test-oncotype-dx-jenny-m.html)| [TumorMarkerTest] |
 | [`Pathologic Cancer Stage Group Group: stage IIB`](Observation-tnm-pathologic-stage-group-jenny-m.html) |[TNMStageGroup] |
 | [`Pathologic Primary Tumor Category: pT3`](Observation-tnm-pathologic-primary-tumor-category-jenny-m.html) | [TNMPrimaryTumorCategory] |
@@ -79,7 +79,7 @@ A timeline of the narrative is illustrated in the following diagram:
 | [`Tumor Marker PR Negative`](Observation-tumor-marker-test-pr-jenny-m.html)| [TumorMarkerTest] |
 | [`Tumor Marker Her2 Negative`](Observation-tumor-marker-test-her2-jenny-m.html)| [TumorMarkerTest] |
 | [`Tumor Size: 2.5cm`](Observation-tumor-size-jenny-m.html)| [TumorSize]|
-| [`Tumor Specimen: Left Breast`](Specimen-tumor-specimen-left-breast-jenny-m.html)| [HumanSpecimen] |
+| [`Tumor Specimen: Left Breast`](Specimen-tumor-specimen-left-breast-jenny-m.html)| [OncologySpecimen] |
 {: .grid }
 
 

@@ -677,5 +677,5 @@ Usage: #definition
 * insert MapConcept(#Vomer, "Vomer", #87166008, "Vomer bone structure (body structure\)")
 * insert MapConcept(#Sinus_Sphenoid, "Sphenoidal Sinus", #24999009, "Sphenoid sinus structure (body structure\)")
 * insert MapConcept(#Strct, "Structure", #123037004, "Body structure (body structure\)")
-* insert AddGroup("TG263",SCT_TBD)
+//* insert AddGroup("TG263",SCT_TBD)
 

@@ -8,3 +8,10 @@ Description: "Codes requested from SNOMED by mCODE, to be issued at a later date
 * #1285443008 "Estimated contoured volume of small bowel in peritoneal cavity using imaging (observable entity)"  // Space occupied by small bowel USCRS-34358
 * #1284814003 "Lymph node level IIA (qualifier value)"        // requested 2/22/23 USCRS-34777
 * #1284815002 "Lymph node level IIB (qualifier value)"        // requested 2/22/23 USCRS-34775
+/*
+This is a child of 275904003 |History of neoplasm (situation)| which is a parent of SCT#266987004 "History of malignant neoplasm (situation). 
+It is the parent of a bunch of codes for "History of Metastatic malignant neoplasm of ______"
+SNOMEDCT handles metastatic and malignant in a very particular way.
+https://confluence.ihtsdotools.org/display/DOCEG/Neoplasm
+*/
+* #USCRS-34979 "History of metastatic malignant neoplasm (situation)" // Requested June 2023, Issued July 2023.   

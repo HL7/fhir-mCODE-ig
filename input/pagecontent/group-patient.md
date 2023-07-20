@@ -7,7 +7,7 @@ The mCODE **Patient Information** group contains the following information about
 ### Profiles
 
 * [CancerPatient]
-* [HistoryOfMalignantNeoplasm]
+* [HistoryOfMetastaticCancer]
 * [HumanSpecimen]
 * [MCODEPatientBundle]
 * [MCODEPatientGroup]

@@ -25,6 +25,12 @@ Because the use of these code systems vary in different institutions, mCODE supp
 
 Implementers should reference the [PrimaryCancerCondition] and [SecondaryCancerCondition] profiles for further details on the use of these terminologies and associated value sets.
 
+#### Clinical Status
+
+On initial diagnosis, the `Condition.clinicalStatus` element will be `active`. Subsequent changes to the disease status should be recorded by updating the `clinicalStatus` element. The permitted values are active, recurrence, relapse, inactive, remission, resolved. Recurrence and relapse are often used interchangeably in the context of cancer. The resource's history can be accessed to see the history of the status value. 
+
+Note that there is another resource profile, the [CancerDiseaseStatus], that is used to record the patient's condition on an encounter-by-encounter basis, and uses values such as improved, stable, worsened, as well as full and partial remission. When the value of CancerDiseaseStatus indicates remission, the `Condition.clinicalStatus` should be updated to reflect that finding.
+
 ### Representing Staging Information
 
 Clinicians and pathologists assign stages to cancers according to rules defined in various [cancer staging systems or methods](https://www.cancer.gov/about-cancer/diagnosis-staging/staging). The staging system must always be specified alongside the stage, because it establishes the meaning of the stage code(s). One staging value can be included in the PrimaryCancerCondition, in the element `Condition.stage.summary` with the corresponding staging system in `Condition.stage.type`. However, a single value is often insufficient and does not allow for capture of provenance information related to staging, separate from the provenance of the cancer condition information.

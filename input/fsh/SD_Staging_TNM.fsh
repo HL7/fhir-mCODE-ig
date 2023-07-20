@@ -5,6 +5,7 @@ Id: mcode-tnm-stage-group
 Parent: CancerStage
 Title: "TNM Stage Group Profile"
 Description: "Reporting of the stage group representing the overall extent of a cancer, based on AJCC staging guidelines."
+* ^extension[FMM].valueInteger = 4
 * insert NotUsed(component)
 * code from TNMStageGroupStagingTypeVS (required)
 * value[x] from TNMStageGroupVS (preferred)
@@ -38,6 +39,7 @@ Id: mcode-tnm-primary-tumor-category
 Parent: CancerStage
 Title: "TNM Primary Tumor Category Profile"
 Description: "Category of the primary tumor, based on its size and extent, based on evidence such as physical examination, imaging, and/or biopsy."
+* ^extension[FMM].valueInteger = 4
 * insert NotUsed(hasMember)
 * method 1..1
 * method from TNMStagingMethodVS (extensible)
@@ -50,6 +52,7 @@ Id: mcode-tnm-regional-nodes-category
 Parent: CancerStage
 Title: "TNM Regional Nodes Category Profile"
 Description: "Category of the presence or absence of metastases in regional lymph nodes, based on evidence such as physical examination, imaging, and/or biopsy."
+* ^extension[FMM].valueInteger = 4
 * insert NotUsed(hasMember)
 * method 1..1
 * method from TNMStagingMethodVS (extensible)
@@ -62,6 +65,7 @@ Id: mcode-tnm-distant-metastases-category
 Parent: CancerStage
 Title: "TNM Distant Metastases Category Profile"
 Description: "Category describing the extent of a tumor metastasis in remote anatomical locations, based on evidence such as physical examination, imaging, and/or biopsy."
+* ^extension[FMM].valueInteger = 4
 * insert NotUsed(hasMember)
 * method 1..1
 * method from TNMStagingMethodVS (extensible)

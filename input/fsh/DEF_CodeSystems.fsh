@@ -14,4 +14,4 @@ It is the parent of a bunch of codes for "History of Metastatic malignant neopla
 SNOMEDCT handles metastatic and malignant in a very particular way.
 https://confluence.ihtsdotools.org/display/DOCEG/Neoplasm
 */
-* #USCRS-34979 "History of metastatic malignant neoplasm (situation)" // Requested June 2023, Issued July 2023.   
+* #1287652008 "History of metastatic malignant neoplasm (situation)" // USCRS-34979 Requested June 2023, Issued July 2023.   

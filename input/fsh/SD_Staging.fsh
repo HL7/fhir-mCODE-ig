@@ -3,8 +3,6 @@ Id: mcode-cancer-stage
 Parent: Observation
 Title: "Cancer Stage Profile"
 Description: "Parent profile for observations regarding cancer stage. The stage is an assessment of the extent of the cancer in the body, according to a given cancer staging classification system. Profiles for different staging systems (e.g., AJCC TNM-based systems) must derive from this profile."
-* ^extension[FMM].valueInteger = 4
-
 * code from CancerStageTypeVS (preferred)
 * code ^short = "The type of stage information reported."
 * code ^definition = """The kind of stage reported, e.g., a pathologic TNM stage, an Ann Arbor lymphoma stage, or a Binet stage for leukemia. This element identifies the type of value that is reported in Observation.value and is necessary for the correct interpretation of that value.

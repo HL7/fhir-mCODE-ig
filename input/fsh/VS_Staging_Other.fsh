@@ -19,21 +19,14 @@ Title: "Chronic Myeloid Leukemia Phase Value Set"
 Description: "Phases of Chronic Myeloid Leukemia (CML)"
 * SCT#278177007 "Chronic phase (qualifier value)"
 * SCT#278179005 "Accelerated phase (qualifier value)"
+* SCT#255251009 "Acute phase (qualifier value)"
 //* SCT#278180008 "Blast crisis (qualifier value)"
-* SCT#255251009 "Acute phase"
 
 ValueSet: FABClassificationValueVS
 Id: mcode-fab-classification-value-vs
 Title: "FAB Classification Value"
 Description: "French American British classification for acute myeloid leukemias, acute lymphoblastic leukemias, and myelodysplastic syndromes."
 * include codes from system SCT where concept descendant-of #278159002 "French-American-British type values (qualifier value)"
-
-ValueSet: FIGOStageTypeVS
-Id: mcode-figo-stage-type-vs
-Title: "FIGO Stage Type Value Set"
-Description: "Stage Types for International Federation of Gynecology and Obstetrics (FIGO) Staging System."
-* insert SNOMEDCopyrightForVS
-* include codes from system SCT where concept is-a #385361009 "International Federation of Gynecology and Obstetrics stage for gynecological malignancy (observable entity)"
 
 ValueSet: FIGOStagingMethodVS
 Id: mcode-figo-staging-method-vs
@@ -79,7 +72,7 @@ Description: "Values for International Federation of Gynecology and Obstetrics (
 * NCIT#C96262 "FIGO Stage IVA"
 * NCIT#C96263 "FIGO Stage IVB"
 
-ValueSet: INRGSSValueVS
+ValueSet: InternationalNeuroblastomaRiskGroupValueVS
 Id: mcode-inrgss-value-vs
 Title: "International Neuroblastoma Risk Group Value Set"
 Description: "Codes in International Neuroblastoma Risk Group. It includes two stages of localized disease (L1 and L2) and two stages of metastatic disease (M and MS)."
@@ -88,22 +81,12 @@ Description: "Codes in International Neuroblastoma Risk Group. It includes two s
 * NCIT#C133430 "INRG Stage M"
 * NCIT#C133431 "INRG Stage MS"
 
-ValueSet: INSSStageValueVS
+ValueSet: InternationalNeuroblastomaStagingSystemStageValueVS
 Id: mcode-inss-stage-value-vs
-Title: "INNS Stage Value Set"
+Title: "International Neuroblastoma Staging System (INSS) Stage Value Set"
 Description: "Codes in INSS staging system representing neuroblastoma stage."
 * insert SNOMEDCopyrightForVS
-* include codes from system SCT where concept is-a #409721000 "International neuroblastoma staging system stage finding (finding)"
-
-ValueSet: LymphomaStageTypeVS
-Id: mcode-lymphoma-stage-type-vs
-Title: "Lymphoma Stage Type Value Set"
-Description: "The kind or type of stage reported in an Observation. In general, the 'Lymphoma stage' code can be used since the staging method is required, and carries more detailed information than the Observation.code."
-* SCT#385388004 "Lymphoma stage (observable entity)"
-* NCIT#C141147 "Lugano Stage"
-* NCIT#C177558 "Ann Arbor Clinical Stage"
-* NCIT#C177559 "Ann Arbor Pathologic Stage"
-* NCIT#C141138 "Ann Arbor Stage"
+* include codes from system SCT where concept descendant-of #409721000 "International neuroblastoma staging system stage finding (finding)"
 
 ValueSet: LymphomaStagingMethodVS
 Id: mcode-lymphoma-staging-method-vs
@@ -131,6 +114,8 @@ Title: "Lymphoma Stage Value Modifier Value Set"
 Description: "Staging modifiers indicating symptoms and extent for lymphomas."
 * include codes from system SCT where concept descendant-of #106252000 "Staging classification for lymphoma (tumor staging)"
 
+//--------------------------------------
+
 ValueSet: RaiStagingMethodVS
 Id: mcode-rai-staging-method-vs
 Title: "Rai Staging System Value Set"
@@ -149,10 +134,12 @@ Description: "Codes in the Rai staging system representing Chronic Lymphocytic L
 * NCIT#C7876 "Stage III Chronic Lymphocytic Leukemia"
 * NCIT#C8646 "Stage IV Chronic Lymphocytic Leukemia"
 
+//--------------------------------------
+
 ValueSet: WilmsTumorStagingMethodVS
 Id: mcode-wilms-tumor-staging-method-vs
 Title: "WilmsTumor Staging Method Value Set"
-Description: "Methods for staging Wilms Tumors that differentiate the original National Wilms' tumor study staging system from the Children's Oncology Group modification of the National Wilms' Tumor Study Group Staging System."
+Description: "Methods for staging Wilms Tumors, differentiating the original National Wilms' tumor study staging system from the Children's Oncology Group modification of the National Wilms' Tumor Study Group Staging System."
 * insert SNOMEDCopyrightForVS
 * include SCT#254364004 "National Wilms' tumor study staging system (tumor staging)"
 * include NCIT#C140271 "Children's Oncology Group/National Wilms' Tumor Study Group Staging System"
@@ -171,3 +158,24 @@ Description: "Codes indicating the location of Wilms Tumor"
 * insert SNOMEDCopyrightForVS
 * include codes from system SCT where concept is-a #18639004 "Left kidney structure (body structure)"
 * include codes from system SCT where concept is-a #9846003 "Right kidney structure (body structure)"
+
+
+
+/* not used
+ValueSet: LymphomaStageTypeVS
+Id: mcode-lymphoma-stage-type-vs
+Title: "Lymphoma Stage Type Value Set"
+Description: "The kind or type of stage reported in an Observation. In general, the 'Lymphoma stage' code can be used since the staging method is required, and carries more detailed information than the Observation.code."
+* SCT#385388004 "Lymphoma stage (observable entity)"
+* NCIT#C141147 "Lugano Stage"
+* NCIT#C177558 "Ann Arbor Clinical Stage"
+* NCIT#C177559 "Ann Arbor Pathologic Stage"
+* NCIT#C141138 "Ann Arbor Stage"
+
+ValueSet: FIGOStageTypeVS
+Id: mcode-figo-stage-type-vs
+Title: "FIGO Stage Type Value Set"
+Description: "Stage Types for International Federation of Gynecology and Obstetrics (FIGO) Staging System."
+* insert SNOMEDCopyrightForVS
+* include codes from system SCT where concept is-a #385361009 "International Federation of Gynecology and Obstetrics stage for gynecological malignancy (observable entity)"
+*/

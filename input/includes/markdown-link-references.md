@@ -34,6 +34,17 @@
 [TumorMarkerTest]: StructureDefinition-mcode-tumor-marker-test.html
 [TumorSize]: StructureDefinition-mcode-tumor-size.html
 
+<!-- mCODE New Staging Profiles -->
+[BinetStage]: StructureDefinition-mcode-binet-stage.html
+[CMLPhase]: StructureDefinition-mcode-cml-phase.html
+[FABClassification]: StructureDefinition-mcode-fab-classification.html
+[FIGOStage]: StructureDefinition-mcode-figo-stage.html
+[InternationalNeuroblastomaRiskGroup]: StructureDefinition-mcode-international-neuroblastoma-risk-group.html
+[InternationalNeuroblastomaStage]: StructureDefinition-mcode-international-neuroblastoma-stage.html
+[LymphomaStage]: StructureDefinition-mcode-lymphoma-stage.html
+[RaiStage]: StructureDefinition-mcode-rai-stage.html
+[WilmsTumorStage]: StructureDefinition-mcode-wilms-tumor-stage.html
+
 <!-- mCODE Extensions -->
 [BodyLocationQualifier]: StructureDefinition-mcode-body-location-qualifier.html
 [CancerDiseaseStatusEvidenceType]: StructureDefinition-mcode-cancer-disease-status-evidence-type.html

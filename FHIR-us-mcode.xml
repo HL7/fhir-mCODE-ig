@@ -117,7 +117,6 @@
 <artifact id="ValueSet/mcode-fab-classification-value-vs" key="ValueSet-mcode-fab-classification-value-vs" name="FAB Classification Value"/>
 <artifact id="StructureDefinition/mcode-fab-classification" key="StructureDefinition-mcode-fab-classification" name="FAB Classification for acute lymphoblastic leukemia"/>
 <artifact id="StructureDefinition/mcode-figo-stage" key="StructureDefinition-mcode-figo-stage" name="FIGO Stage Profile"/>
-<artifact id="ValueSet/mcode-figo-stage-type-vs" key="ValueSet-mcode-figo-stage-type-vs" name="FIGO Stage Type Value Set"/>
 <artifact id="ValueSet/mcode-figo-stage-value-vs" key="ValueSet-mcode-figo-stage-value-vs" name="FIGO Stage Value Set"/>
 <artifact id="ValueSet/mcode-figo-staging-method-vs" key="ValueSet-mcode-figo-staging-method-vs" name="FIGO Staging Method Value Set"/>
 <artifact deprecated="true" id="StructureDefinition/mcode-genetic-specimen" key="genetic-specimen" name="Genetic Specimen"/>
@@ -136,10 +135,10 @@
 <artifact deprecated="true" id="ValueSet/mcode-hgvs-vs" key="ValueSet-mcode-hgvs-vs" name="Human Genome Variation Society Sequence Variant Nomenclature Value Set"/>
 <artifact id="StructureDefinition/mcode-human-specimen" key="StructureDefinition-mcode-human-specimen" name="Human Specimen Profile"/>
 <artifact id="ValueSet/mcode-human-specimen-type-vs" key="ValueSet-mcode-human-specimen-type-vs" name="Human Specimen Type Value Set"/>
-<artifact id="ValueSet/mcode-inss-stage-value-vs" key="ValueSet-mcode-inss-stage-value-vs" name="INNS Stage Value Set"/>
 <artifact id="StructureDefinition/mcode-international-neuroblastoma-risk-group" key="StructureDefinition-mcode-international-neuroblastoma-risk-group" name="International Neuroblastoma Risk Group Profile"/>
 <artifact id="ValueSet/mcode-inrgss-value-vs" key="ValueSet-mcode-inrgss-value-vs" name="International Neuroblastoma Risk Group Value Set"/>
 <artifact id="StructureDefinition/mcode-inss-stage" key="StructureDefinition-mcode-inss-stage" name="International Neuroblastoma Stage Profile"/>
+<artifact id="ValueSet/mcode-inss-stage-value-vs" key="ValueSet-mcode-inss-stage-value-vs" name="International Neuroblastoma Staging System (INSS) Stage Value Set"/>
 <artifact id="StructureDefinition/mcode-karnofsky-performance-status" key="karnofsky-performance-status" name="Karnofsky Performance Status Profile"/>
 <artifact deprecated="true" id="Extension/mcode-laterality-extension" key="laterality-extension" name="Laterality Extension"/>
 <artifact id="StructureDefinition/mcode-laterality-qualifier" key="StructureDefinition-mcode-laterality-qualifier" name="Laterality Qualifier Extension"/>
@@ -148,7 +147,6 @@
 <artifact deprecated="true" id="StructureDefinition/mcode-location-qualifier" key="StructureDefinition-mcode-location-qualifier" name="Location Qualifier"/>
 <artifact deprecated="true" id="ValueSet/mcode-location-qualifier-vs" key="ValueSet-mcode-location-qualifier-vs" name="Location Qualifier Value Set"/>
 <artifact id="StructureDefinition/mcode-lymphoma-stage" key="StructureDefinition-mcode-lymphoma-stage" name="Lymphoma Stage Profile"/>
-<artifact id="ValueSet/mcode-lymphoma-stage-type-vs" key="ValueSet-mcode-lymphoma-stage-type-vs" name="Lymphoma Stage Type Value Set"/>
 <artifact id="ValueSet/mcode-lymphoma-stage-value-modifier-vs" key="ValueSet-mcode-lymphoma-stage-value-modifier-vs" name="Lymphoma Stage Value Modifier Value Set"/>
 <artifact id="ValueSet/mcode-lymphoma-stage-value-vs" key="ValueSet-mcode-lymphoma-stage-value-vs" name="Lymphoma Stage Value Set"/>
 <artifact id="ValueSet/mcode-lymphoma-staging-method-vs" key="ValueSet-mcode-lymphoma-staging-method-vs" name="Lymphoma Staging System Value Set"/>

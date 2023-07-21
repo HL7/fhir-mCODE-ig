@@ -1,4 +1,4 @@
-The following profiles and have been defined for this implementation guide:
+The following profiles have been defined for this implementation guide:
 
 * [BodyStructureIdentifier]
 * [CancerDiseaseStatus]

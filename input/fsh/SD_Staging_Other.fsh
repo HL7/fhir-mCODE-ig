@@ -20,7 +20,7 @@ Consider the WHO classification of myeloid neoplasms and acute leukemia? see htt
 Profile: BinetStage
 Id: mcode-binet-stage
 Parent: CancerStage
-Title: "Binet stage for chronic lymphocytic leukemia"
+Title: "Binet Stage Profile"
 Description: "Binet stage for chronic lymphocytic leukemia"
 * ^extension[FMM].valueInteger = 0
 * insert NotUsed(component)
@@ -43,7 +43,7 @@ Description: "Phase of Chronic Myeloid Leukemia (CML) observed at a specified po
 Profile: FABClassification
 Id: mcode-fab-classification
 Parent: CancerStage  // is this really a stage?
-Title: "FAB Classification for acute lymphoblastic leukemia"
+Title: "French-American-British Classification Profile"
 Description: "French-American-British stage for acute lymphoblastic leukemia"
 * ^extension[FMM].valueInteger = 0
 * insert NotUsed(component)
@@ -65,8 +65,8 @@ Description: "International Federation of Gynecology and Obstetrics (FIGO) Stagi
 
 //  International Neuroblastoma Staging System (INSS)
 
-Profile: INSSStage
-Id: mcode-inss-stage
+Profile: InternationalNeuroblastomaStage
+Id: mcode-international-neuroblastoma-stage
 Parent: CancerStage
 Title: "International Neuroblastoma Stage Profile"
 Description: "The International Neuroblastoma Staging System (INSS) stage for neuroblastoma."
@@ -112,7 +112,7 @@ Description: "Staging of lymphoma (both Hodgkins and Non-Hodgkins) by Ann Arbor,
 Profile: RaiStage
 Id: mcode-rai-stage
 Parent: CancerStage
-Title: "Rai stage for chronic lymphocytic leukemia"
+Title: "Rai Stage Profile"
 Description: "Rai stage for chronic lymphocytic leukemia"
 * ^extension[FMM].valueInteger = 0
 * insert NotUsed(component)

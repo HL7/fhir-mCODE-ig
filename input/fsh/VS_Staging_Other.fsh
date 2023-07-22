@@ -110,6 +110,7 @@ ValueSet: MyelomaISSValueVS
 Id: mcode-myeloma-iss-stage-value-vs
 Title: "International Staging System (ISS) for Myeloma Stage Value Set"
 Description: "Codes in ISS staging system representing plasma cell or multiple myeloma stage."
+* ^experimental = false
 * NCIT#C70658 "ISS Stage I Plasma Cell Myeloma"
 * NCIT#C70659 "ISS Stage II Plasma Cell Myeloma"
 * NCIT#C70660 "ISS Stage III Plasma Cell Myeloma"
@@ -118,6 +119,7 @@ ValueSet: MyelomaRISSValueVS
 Id: mcode-myeloma-riss-stage-value-vs
 Title: "Revised International Staging System (ISS) for Multiple Myeloma Stage Value Set"
 Description: "Codes in RISS staging system representing plasma cell or multiple myeloma stage."
+* ^experimental = false
 * NCIT#C141394 "RISS Stage I Plasma Cell Myeloma"
 * NCIT#C141395 "RISS Stage II Plasma Cell Myeloma"
 * NCIT#C141396 "RISS Stage III Plasma Cell Myeloma"

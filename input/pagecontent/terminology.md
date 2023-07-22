@@ -6,7 +6,7 @@ This implementation guide draws on a number of formal terminologies (code system
 
 The following table presents the external code systems (and naming conventions) adopted in mCODE, and their primary purpose:
 
-| Code System | Application | [FHIR IG Publishing](https://confluence.hl7.org/display/FHIR/IG+Publisher+Documentation) support? | HL7 Canonical [1]|
+| Code System | Domain | [FHIR IG Publishing](https://confluence.hl7.org/display/FHIR/IG+Publisher+Documentation) support? | [HL7 Canonical](https://terminology.hl7.org/external_terminologies.html) |
 |--------------|-------------|------------------|------------------|
 | CPT | Procedure codes | No | <http://www.ama-assn.org/go/cpt> |
 | HGNC | Gene identification | No | <http://www.genenames.org>  |
@@ -24,8 +24,6 @@ The following table presents the external code systems (and naming conventions) 
 | SNOMED CT | Disorders, body structures, findings, qualifiers | Yes | <http://snomed.info/sct> |
 | UCUM | Units of measure | Yes | <http://unitsofmeasure.org> |
 {: .grid }
-
-[1] [HL7 Terminology Authority](https://terminology.hl7.org/external_terminologies.html)
 
 **Key:**
 

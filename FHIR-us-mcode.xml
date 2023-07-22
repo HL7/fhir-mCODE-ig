@@ -13,8 +13,8 @@
 <artifactPageExtension value="-examples"/>
 <artifactPageExtension value="-mappings"/>
 <artifact id="ValueSet/mcode-benign-uncertain-neoplasm-brain-cns-disorder-vs" key="ValueSet-mcode-benign-uncertain-neoplasm-brain-cns-disorder-vs" name="Benign Neoplasm of Brain and CNS Disorder Value Set"/>
-<artifact id="StructureDefinition/mcode-binet-stage" key="StructureDefinition-mcode-binet-stage" name="Binet Stage Profile"/>
-<artifact id="ValueSet/mcode-binet-stage-value-vs" key="ValueSet-mcode-binet-stage-value-vs" name="Binet Stage Value Set"/>
+<artifact id="StructureDefinition/mcode-cll-binet-stage" key="StructureDefinition-mcode-cll-binet-stage" name="Binet Stage Profile"/>
+<artifact id="ValueSet/mcode-cll-binet-stage-value-vs" key="ValueSet-mcode-cll-binet-stage-value-vs" name="Binet Stage Value Set"/>
 <artifact id="StructureDefinition/mcode-body-location-qualifier" key="StructureDefinition-mcode-body-location-qualifier" name="Body Location Qualifier Extension"/>
 <artifact id="ValueSet/mcode-body-location-qualifier-vs" key="ValueSet-mcode-body-location-qualifier-vs" name="Body Location Qualifier Value Set"/>
 <artifact id="ValueSet/mcode-body-location-and-laterality-qualifier-vs" key="ValueSet-mcode-body-location-and-laterality-qualifier-vs" name="Body Location and Laterality Qualifier Value Set"/>
@@ -114,11 +114,11 @@
 <artifact deprecated="true" id="ValueSet/elixhauser-weight-loss-vs" key="ValueSet-elixhauser-weight-loss-vs" name="Elixhauser Weight Loss Value Set"/>
 <artifact deprecated="true" id="StructureDefinition/mcode-evidence-type" key="StructureDefinition-mcode-evidence-type" name="Evidence Type"/>
 <artifact deprecated="true" id="Extension/mcode-evidence-type-extension" key="evidence-type-extension" name="Evidence Type Extension"/>
-<artifact id="ValueSet/mcode-fab-classification-value-vs" key="ValueSet-mcode-fab-classification-value-vs" name="FAB Classification Value"/>
-<artifact id="StructureDefinition/mcode-figo-stage" key="StructureDefinition-mcode-figo-stage" name="FIGO Stage Profile"/>
-<artifact id="ValueSet/mcode-figo-stage-value-vs" key="ValueSet-mcode-figo-stage-value-vs" name="FIGO Stage Value Set"/>
+<artifact id="ValueSet/mcode-all-fab-classification-value-vs" key="ValueSet-mcode-all-fab-classification-value-vs" name="FAB Classification Value"/>
+<artifact id="StructureDefinition/mcode-gynecologic-tumor-figo-stage" key="StructureDefinition-mcode-gynecologic-tumor-figo-stage" name="FIGO Stage Profile"/>
+<artifact id="ValueSet/mcode-gynecologic-tumor-figo-stage-value-vs" key="ValueSet-mcode-gynecologic-tumor-figo-stage-value-vs" name="FIGO Stage Value Set"/>
 <artifact id="ValueSet/mcode-figo-staging-method-vs" key="ValueSet-mcode-figo-staging-method-vs" name="FIGO Staging Method Value Set"/>
-<artifact id="StructureDefinition/mcode-fab-classification" key="StructureDefinition-mcode-fab-classification" name="French-American-British Classification Profile"/>
+<artifact id="StructureDefinition/mcode-all-fab-classification" key="StructureDefinition-mcode-all-fab-classification" name="French-American-British Classification Profile"/>
 <artifact deprecated="true" id="StructureDefinition/mcode-genetic-specimen" key="genetic-specimen" name="Genetic Specimen"/>
 <artifact deprecated="true" id="ValueSet/mcode-genetic-specimen-type-vs" key="genetic-specimen-type-value-set" name="Genetic Specimen Type Value Set"/>
 <artifact deprecated="true" id="ValueSet/mcode-genomic-molecular-consequence-vs" key="ValueSet-mcode-genomic-molecular-consequence-vs" name="Genomic Molecular Consequence Value Set"/>
@@ -136,9 +136,9 @@
 <artifact id="StructureDefinition/mcode-human-specimen" key="StructureDefinition-mcode-human-specimen" name="Human Specimen Profile"/>
 <artifact id="ValueSet/mcode-human-specimen-type-vs" key="ValueSet-mcode-human-specimen-type-vs" name="Human Specimen Type Value Set"/>
 <artifact id="StructureDefinition/mcode-international-neuroblastoma-risk-group" key="StructureDefinition-mcode-international-neuroblastoma-risk-group" name="International Neuroblastoma Risk Group Profile"/>
-<artifact id="ValueSet/mcode-inrgss-value-vs" key="ValueSet-mcode-inrgss-value-vs" name="International Neuroblastoma Risk Group Value Set"/>
-<artifact id="StructureDefinition/mcode-international-neuroblastoma-stage" key="StructureDefinition-mcode-international-neuroblastoma-stage" name="International Neuroblastoma Stage Profile"/>
-<artifact id="ValueSet/mcode-inss-stage-value-vs" key="ValueSet-mcode-inss-stage-value-vs" name="International Neuroblastoma Staging System (INSS) Stage Value Set"/>
+<artifact id="ValueSet/mcode-neuroblastoma-risk-group-value-vs" key="ValueSet-mcode-neuroblastoma-risk-group-value-vs" name="International Neuroblastoma Risk Group Value Set"/>
+<artifact id="StructureDefinition/mcode-neuroblastoma-inss-stage" key="StructureDefinition-mcode-neuroblastoma-inss-stage" name="International Neuroblastoma Stage Profile"/>
+<artifact id="ValueSet/mcode-neuroblastoma-inss-stage-value-vs" key="ValueSet-mcode-neuroblastoma-inss-stage-value-vs" name="International Neuroblastoma Staging System (INSS) Stage Value Set"/>
 <artifact id="StructureDefinition/mcode-karnofsky-performance-status" key="karnofsky-performance-status" name="Karnofsky Performance Status Profile"/>
 <artifact deprecated="true" id="Extension/mcode-laterality-extension" key="laterality-extension" name="Laterality Extension"/>
 <artifact id="StructureDefinition/mcode-laterality-qualifier" key="StructureDefinition-mcode-laterality-qualifier" name="Laterality Qualifier Extension"/>
@@ -182,7 +182,7 @@
 <artifact id="ValueSet/mcode-radiotherapy-treatment-location-vs" key="ValueSet-mcode-radiotherapy-treatment-location-vs" name="Radiotherapy Treatment Location Value Set"/>
 <artifact id="StructureDefinition/mcode-radiotherapy-volume" key="StructureDefinition-mcode-radiotherapy-volume" name="Radiotherapy Volume Profile"/>
 <artifact id="ValueSet/mcode-radiotherapy-volume-type-vs" key="ValueSet-mcode-radiotherapy-volume-type-vs" name="Radiotherapy Volume Type Value Set"/>
-<artifact id="StructureDefinition/mcode-rai-stage" key="StructureDefinition-mcode-rai-stage" name="Rai Stage Profile"/>
+<artifact id="StructureDefinition/mcode-cll-rai-stage" key="StructureDefinition-mcode-cll-rai-stage" name="Rai Stage Profile"/>
 <artifact id="ValueSet/mcode-rai-stage-value-vs" key="ValueSet-mcode-rai-stage-value-vs" name="Rai Stage Value Set"/>
 <artifact id="ValueSet/mcode-rai-staging-method-vs" key="ValueSet-mcode-rai-staging-method-vs" name="Rai Staging System Value Set"/>
 <artifact id="StructureDefinition/mcode-related-condition-absent" key="StructureDefinition-mcode-related-condition-absent" name="Related Condition Absent Extension"/>

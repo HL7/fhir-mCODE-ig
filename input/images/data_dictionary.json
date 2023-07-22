@@ -13434,14 +13434,14 @@
       "Value set name": "Radiotherapy Treatment Location Qualifier Value Set",
       "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-radiotherapy-treatment-location-qualifier-vs",
       "Code system": "http://hl7.org/fhir/us/mcode/CodeSystem/snomed-requested-cs",
-      "Code": "USCRS-34775",
+      "Code": "1284815002",
       "Code description": "Lymph node level IIB (qualifier value)"
     },
     {
       "Value set name": "Radiotherapy Treatment Location Qualifier Value Set",
       "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-radiotherapy-treatment-location-qualifier-vs",
       "Code system": "http://hl7.org/fhir/us/mcode/CodeSystem/snomed-requested-cs",
-      "Code": "USCRS-34777",
+      "Code": "1284814003",
       "Code description": "Lymph node level IIA (qualifier value)"
     },
     {

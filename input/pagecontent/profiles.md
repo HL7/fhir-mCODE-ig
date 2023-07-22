@@ -12,10 +12,10 @@ The following profiles have been defined for this implementation guide:
 * [GenomicRegionStudied]
 * [GenomicsReport]
 * [GenomicVariant]
+* [HumanSpecimen]
 * [KarnofskyPerformanceStatus]
 * [mCODEPatientBundle]
 * [mCODEPatientGroup]
-* [OncologySpecimen]
 * [PrimaryCancerCondition]
 * [RadiotherapyCourseSummary]
 * [RadiotherapyVolume]
@@ -30,14 +30,14 @@ The following profiles have been defined for this implementation guide:
 
 The following draft (maturity level 0) profiles have been defined for this implementation guide:
 
-* [BinetStage]
+* [CLLBinetStage]
 * [CMLPhase]
-* [FABClassification]
-* [FIGOStage]
-* [InternationalNeuroblastomaRiskGroup]
-* [InternationalNeuroblastomaStage]
+* [ALLClassification]
+* [GynecologicTumorFIGOStage]
+* [NeuroblastomaRiskGroup]
+* [NeuroblastomaINSSStage]
 * [LymphomaStage]
-* [RaiStage]
+* [CLLRaiStage]
 * [WilmsTumorStage]
 
 {% include markdown-link-references.md %}

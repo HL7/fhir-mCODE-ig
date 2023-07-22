@@ -122,6 +122,24 @@
 [TumorSizeMethodVS]: ValueSet-mcode-tumor-size-method-vs.html
 [TumorSizeUnitsVS]: ValueSet-mcode-tumor-size-units-vs.html
 
+<!-- New non-TNM Value Sets -->
+[BinetStageValueVS]: ValueSet-mcode-binet-stage-value-vs.html
+[ClinOrPathModifierVS]: ValueSet-mcode-clin-or-path-modifier-vs.html
+[CMLPhaseValueVS]: ValueSet-mcode-cml-phase-value-vs.html
+[FABClassificationValueVS]: ValueSet-mcode-fab-classification-value-vs.html
+[FIGOStagingMethodVS]: ValueSet-mcode-figo-staging-method-vs.html
+[FIGOStageValueVS]: ValueSet-mcode-figo-stage-value-vs.html
+[InternationalNeuroblastomaRiskGroupValueVS]: ValueSet-mcode-inrgss-value-vs.html
+[InternationalNeuroblastomaStagingSystemStageValueVS]: ValueSet-mcode-inss-stage-value-vs.html
+[LymphomaStagingMethodVS]: ValueSet-mcode-lymphoma-staging-method-vs.html
+[LymphomaStageValueVS]: ValueSet-mcode-lymphoma-stage-value-vs.html
+[LymphomaStageValueModifierVS]: ValueSet-mcode-lymphoma-stage-value-modifier-vs.html
+[RaiStagingMethodVS]: ValueSet-mcode-rai-staging-method-vs.html
+[RaiStageValueVS]: ValueSet-mcode-rai-stage-value-vs.html
+[WilmsTumorStagingMethodVS]: ValueSet-mcode-wilms-tumor-staging-method-vs.html
+[WilmsTumorStageValueVS]: ValueSet-mcode-wilms-tumor-stage-value-vs.html
+[WilmsTumorBodySiteVS]: ValueSet-mcode-wilms-tumor-body-site-vs.html
+
 <!-- External Value Sets -->
 [ECOG_Performance status]:  http://loinc.org/vs/LL529-9
 [Genomic coordinate system]: http://loinc.org/vs/LL5323-2

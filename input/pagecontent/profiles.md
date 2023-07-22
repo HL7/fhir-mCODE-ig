@@ -28,4 +28,16 @@ The following profiles have been defined for this implementation guide:
 * [TumorMarkerTest]
 * [TumorSize]
 
+The following draft (maturity level 0) profiles have been defined for this implementation guide:
+
+* [BinetStage]
+* [CMLPhase]
+* [FABClassification]
+* [FIGOStage]
+* [InternationalNeuroblastomaRiskGroup]
+* [InternationalNeuroblastomaStage]
+* [LymphomaStage]
+* [RaiStage]
+* [WilmsTumorStage]
+
 {% include markdown-link-references.md %}

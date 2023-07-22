@@ -123,7 +123,7 @@ mCODE includes single FHIR profile, [TumorMarkerTest], for all labs involving se
   * [CancerStage]
 * Staging, AJCC TNM
   * [TNMStageGroup]
-  * [TNMPrimaryTumorCategory]
+  * [TNMPrimaryTumorCategory]All
   * [TNMRegionalNodesCategory]
   * [TNMDistantMetastasesCategory]
 * Staging, non-TNM (Draft Status)
@@ -198,11 +198,13 @@ mCODE includes single FHIR profile, [TumorMarkerTest], for all labs involving se
     * [FABClassificationValueVS]
     * [FIGOStagingMethodVS]
     * [FIGOStageValueVS]
-    * [NeuroblastomaRiskGroupValueVS]
-    * [NeuroblastomaStageValueVS]
+    * [MyelomaISSValueVS]
+    * [MyelomaRISSValueVS]
     * [LymphomaStagingMethodVS]
     * [LymphomaStageValueVS]
     * [LymphomaStageValueModifierVS]
+    * [NeuroblastomaRiskGroupValueVS]
+    * [NeuroblastomaStageValueVS]
     * [RaiStagingMethodVS]
     * [RaiStageValueVS]
     * [WilmsTumorStagingMethodVS]

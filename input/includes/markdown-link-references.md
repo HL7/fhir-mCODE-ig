@@ -41,8 +41,8 @@
 [CMLPhase]: StructureDefinition-mcode-cml-phase.html
 [GynecologicTumorFIGOStage]: StructureDefinition-mcode-gynecologic-tumor-figo-stage.html
 [LymphomaStage]: StructureDefinition-mcode-lymphoma-stage.html
-[MyelomaISSStage]:  StructureDefinition-mcode-mcode-myeloma-iss-stage.html
-[MyelomaRISSStage]:  StructureDefinition-mcode-mcode-myeloma-riss-stage.html
+[MyelomaISSStage]:  StructureDefinition-mcode-myeloma-iss-stage.html
+[MyelomaRISSStage]:  StructureDefinition-mcode-myeloma-riss-stage.html
 [NeuroblastomaINSSStage]: StructureDefinition-mcode-neuroblastoma-inss-stage.html
 [NeuroblastomaRiskGroup]: StructureDefinition-mcode-international-neuroblastoma-risk-group.html
 [WilmsTumorStage]: StructureDefinition-mcode-wilms-tumor-stage.html

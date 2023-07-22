@@ -24,7 +24,7 @@ Description: "Binet stage for chronic lymphocytic leukemia (CLL)"
 * ^extension[FMM].valueInteger = 0
 * insert NotUsed(component)
 * code = NCIT#C141212 // Binet Stage -- request a SNOMED code?
-* method = SCT#1149099005 // "Binet staging classification for chronic lymphocytic leukemia (tumor staging)"
+//* method = SCT#1149099005 // "Binet staging classification for chronic lymphocytic leukemia (tumor staging)"
 * value[x] from BinetStageValueVS (required)
 
 Profile: CLLRaiStage

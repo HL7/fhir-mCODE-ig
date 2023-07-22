@@ -2,6 +2,7 @@ ValueSet: BinetStageValueVS
 Id: mcode-binet-stage-value-vs
 Title: "Binet Stage Value Set"
 Description: "Codes in the Binet staging system representing Chronic Lymphocytic Leukemia (CLL) stage."
+* ^experimental = false
 * NCIT#C80134 "Binet Stage A"
 * NCIT#C80135 "Binet Stage B"
 * NCIT#C80136 "Binet Stage C"
@@ -10,6 +11,7 @@ ValueSet: ClinOrPathModifierVS
 Id: mocde-clin-or-path-modifier-vs
 Title: "Clinical or Pathologic Modifier"
 Description: "Stage value modifier indicating if staging was based on clinical or pathologic evidence."
+* insert SNOMEDCopyrightForVS
 * SCT#260998006 "Clinical staging (qualifier value)"
 * SCT#261023001 "Pathological staging (qualifier value)"
 
@@ -17,6 +19,7 @@ ValueSet: CMLPhaseValueVS
 Id: mcode-cml-phase-value-vs
 Title: "Chronic Myeloid Leukemia Phase Value Set"
 Description: "Phases of Chronic Myeloid Leukemia (CML)"
+* insert SNOMEDCopyrightForVS
 * SCT#278177007 "Chronic phase (qualifier value)"
 * SCT#278179005 "Accelerated phase (qualifier value)"
 * SCT#255251009 "Acute phase (qualifier value)"
@@ -26,6 +29,7 @@ ValueSet: FABClassificationValueVS
 Id: mcode-fab-classification-value-vs
 Title: "FAB Classification Value"
 Description: "French American British classification for acute myeloid leukemias, acute lymphoblastic leukemias, and myelodysplastic syndromes."
+* insert SNOMEDCopyrightForVS
 * include codes from system SCT where concept descendant-of #278159002 "French-American-British type values (qualifier value)"
 
 ValueSet: FIGOStagingMethodVS
@@ -39,6 +43,7 @@ ValueSet: FIGOStageValueVS
 Id: mcode-figo-stage-value-vs
 Title: "FIGO Stage Value Set"
 Description: "Values for International Federation of Gynecology and Obstetrics (FIGO) Staging System."
+* ^experimental = false
 * NCIT#C96243 "FIGO Stage 0"
 * NCIT#C96244 "FIGO Stage I"
 * NCIT#C96245 "FIGO Stage IA"
@@ -76,6 +81,7 @@ ValueSet: InternationalNeuroblastomaRiskGroupValueVS
 Id: mcode-inrgss-value-vs
 Title: "International Neuroblastoma Risk Group Value Set"
 Description: "Codes in International Neuroblastoma Risk Group. It includes two stages of localized disease (L1 and L2) and two stages of metastatic disease (M and MS)."
+* ^experimental = false
 * NCIT#C133428 "INRG Stage L1"
 * NCIT#C133429 "INRG Stage L2"
 * NCIT#C133430 "INRG Stage M"
@@ -92,6 +98,7 @@ ValueSet: LymphomaStagingMethodVS
 Id: mcode-lymphoma-staging-method-vs
 Title: "Lymphoma Staging System Value Set"
 Description: "Staging Systems used to stage lymphomas (Hodgkin's and non-Hodgkin's)."
+* insert SNOMEDCopyrightForVS
 * SCT#254372002 "Ann Arbor lymphoma staging system (tumor staging)"
 * SCT#254373007 "Ann Arbor Hodgkin's disease tumor staging system (tumor staging)"
 * SCT#254374001 "Ann Arbor non-Hodgkin's lymphoma tumor staging system (tumor staging)"
@@ -105,6 +112,7 @@ ValueSet: LymphomaStageValueVS
 Id: mcode-lymphoma-stage-value-vs
 Title: "Lymphoma Stage Value Set"
 Description: "Stage values used in lymphoma staging systems."
+* insert SNOMEDCopyrightForVS
 * include codes from system SCT where concept descendant-of #385389007 "Lymphoma stage finding (finding)"
 * NCIT#C171157 "Ann Arbor Stage IIX (Bulky)"
 
@@ -112,6 +120,7 @@ ValueSet: LymphomaStageValueModifierVS
 Id: mcode-lymphoma-stage-value-modifier-vs
 Title: "Lymphoma Stage Value Modifier Value Set"
 Description: "Staging modifiers indicating symptoms and extent for lymphomas."
+* insert SNOMEDCopyrightForVS
 * include codes from system SCT where concept descendant-of #106252000 "Staging classification for lymphoma (tumor staging)"
 
 //--------------------------------------
@@ -128,6 +137,7 @@ ValueSet: RaiStageValueVS
 Id: mcode-rai-stage-value-vs
 Title: "Rai Stage Value Set"
 Description: "Codes in the Rai staging system representing Chronic Lymphocytic Leukemia (CLL) stage."
+* ^experimental = false
 * NCIT#C7847 "Stage 0 Chronic Lymphocytic Leukemia"
 * NCIT#C7874 "Stage I Chronic Lymphocytic Leukemia"
 * NCIT#C7875 "Stage II Chronic Lymphocytic Leukemia"

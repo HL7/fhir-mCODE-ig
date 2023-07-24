@@ -1,6 +1,6 @@
 Instance: primary-cancer-condition-nonspecific
 InstanceOf: PrimaryCancerCondition
-Description: "Generic unspecific Primary Cancer Condition (PCC) for use in IG examples. Any real PCC would use a more specific code."
+Description: "An unspecific Primary Cancer Condition (PCC) for use in IG examples. Any real PCC would use a more specific code."
 * clinicalStatus = ClinStatus#active "Active"
 * verificationStatus = VerStatus#confirmed "Confirmed"
 * category = CondCat#problem-list-item
@@ -26,7 +26,7 @@ Description: "Example of FAB (French-American-British) staging of acute lymphobl
 
 Instance: binet-stage-group-A
 InstanceOf: CLLBinetStage
-Description: "Example of a non-TNM Stage Group (Binet staging for CLL)"
+Description: "Example of Binet staging for CLL."
 * insert StagingInstanceRuleSet
 * code = NCIT#C141212 "Binet Stage"
 // method is optional because Binet staging is implicit in Observation.code
@@ -37,7 +37,7 @@ Description: "Example of a non-TNM Stage Group (Binet staging for CLL)"
 
 Instance: rai-stage-II
 InstanceOf: CLLRaiStage
-Description: "Example of a non-TNM Stage Group (Binet staging for CLL)."
+Description: "Example of Rai staging for CLL."
 * insert StagingInstanceRuleSet
 * code = NCIT#C141207 "Rai Stage"
 * method = SCT#1149131009 "Rai staging system for chronic lymphocytic leukemia (tumor staging)"
@@ -45,7 +45,7 @@ Description: "Example of a non-TNM Stage Group (Binet staging for CLL)."
 
 Instance: cml-phase-chronic
 InstanceOf: CMLPhase
-Description: "Example of FAB (French-American-British) staging of acute lymphoblastic leukemia (ALL)."
+Description: "Example of reporting the CML phase."
 * insert StagingInstanceRuleSet
 * code = MDR#10066506  "CML Progression"
 * valueCodeableConcept = SCT#278177007 "Chronic phase (qualifier value)"
@@ -68,14 +68,14 @@ Description: "Example of staging using Cotswold staging of Hodgkin's disease."
 
 Instance: multiple-myeloma-iss-stage-II
 InstanceOf: MyelomaISSStage
-Description: "Example of use of International Staging System (ISS) for Myeloma Stage Value Set"
+Description: "Example of use of International Staging System (ISS) for myeloma staging."
 * insert StagingInstanceRuleSet
 * code = NCIT#C139007 "International Staging System Stage"
 * valueCodeableConcept = NCIT#C70659 "ISS Stage II Plasma Cell Myeloma"
 
 Instance: multiple-myeloma-riss-stage-II
 InstanceOf: MyelomaRISSStage
-Description: "Example of Revised International Staging System (ISS) for Myeloma Stage Value Set"
+Description: "Example of Revised International Staging System (RISS) for myeloma staging."
 * insert StagingInstanceRuleSet
 * code = NCIT#C141392 "Revised International Staging System Stage"
 * valueCodeableConcept = NCIT#C141395 "RISS Stage II Plasma Cell Myeloma"
@@ -87,7 +87,7 @@ Description: "Example of The International Neuroblastoma Staging System (INSS) s
 * code = SCT#409720004  "International neuroblastoma staging system stage (observable entity)"
 * valueCodeableConcept = SCT#409724008 "International neuroblastoma staging system stage 2B (finding)"
 
-Instance: international-neuroblastoma-risk-group-L2
+Instance: neuroblastoma-risk-group-L2
 InstanceOf: NeuroblastomaRiskGroup
 Description: "Example of Neuroblastoma risk group according to the International Neuroblastoma Risk Group Staging System (INRGSS)"
 * insert StagingInstanceRuleSet
@@ -96,7 +96,7 @@ Description: "Example of Neuroblastoma risk group according to the International
 
 Instance: wilms-tumor-stage-III
 InstanceOf: WilmsTumorStage
-Description: "Example of "
+Description: "Example of staging Wilms Tumor by Children's Oncology Group/National Wilms' Tumor Study Group"
 * insert StagingInstanceRuleSet
 * code = SCT#405931009 "National Wilms Tumor Study Group Stage"
 * method = NCIT#C140271 "Children's Oncology Group/National Wilms' Tumor Study Group Staging System"

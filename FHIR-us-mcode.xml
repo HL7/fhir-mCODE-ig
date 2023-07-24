@@ -133,6 +133,7 @@
 <artifact deprecated="true" id="Extension/mcode-histology-morphology-behavior-extension" key="histology-morphology-behavior-extension" name="Histology Morphology Behavior Extension"/>
 <artifact id="ValueSet/mcode-histology-morphology-behavior-vs" key="histology-morphology-behavior-value-set" name="Histology Morphology Behavior Value Set"/>
 <artifact id="StructureDefinition/mcode-histology-morphology-behavior" key="StructureDefinition-mcode-histology-morphology-behavior" name="Histology-Morphology-Behavior Extension"/>
+<artifact id="Observation/Hodgkins-lymphoma-stage-IIIe" key="Observation-Hodgkins-lymphoma-stage-IIIe" name="Hodgkins-lymphoma-stage-IIIe"/>
 <artifact deprecated="true" id="ValueSet/mcode-hgvs-vs" key="ValueSet-mcode-hgvs-vs" name="Human Genome Variation Society Sequence Variant Nomenclature Value Set"/>
 <artifact id="StructureDefinition/mcode-human-specimen" key="StructureDefinition-mcode-human-specimen" name="Human Specimen Profile"/>
 <artifact id="ValueSet/mcode-human-specimen-type-vs" key="ValueSet-mcode-human-specimen-type-vs" name="Human Specimen Type Value Set"/>
@@ -252,6 +253,7 @@
 <artifact id="ValueSet/mcode-wilms-tumor-body-site-vs" key="ValueSet-mcode-wilms-tumor-body-site-vs" name="Wilms Tumor Body Site Value Set"/>
 <artifact id="StructureDefinition/mcode-wilms-tumor-stage" key="StructureDefinition-mcode-wilms-tumor-stage" name="Wilms Tumor COG/NWTSG Stage Profile"/>
 <artifact id="ValueSet/mcode-wilms-tumor-staging-method-vs" key="ValueSet-mcode-wilms-tumor-staging-method-vs" name="WilmsTumor Staging Method Value Set"/>
+<artifact id="Observation/all-fab-classification-M5b" key="Observation-all-fab-classification-M5b" name="all-fab-classification-M5b"/>
 <artifact id="Observation/binet-stage-group-A" key="Observation-binet-stage-group-A" name="binet-stage-group-A"/>
 <artifact id="Observation/bodyheight-jenny-m-2018-03-06" key="Observation-bodyheight-jenny-m-2018-03-06" name="bodyheight-jenny-m-2018-03-06"/>
 <artifact id="Observation/bodyweight-jenny-m-2018-03-16" key="Observation-bodyweight-jenny-m-2018-03-16" name="bodyweight-jenny-m-2018-03-16"/>
@@ -284,11 +286,13 @@
 <artifact id="MedicationRequest/cancer-related-medication-request-paclitaxel-jenny-m" key="MedicationRequest-cancer-related-medication-request-paclitaxel-jenny-m" name="cancer-related-medication-request-paclitaxel-jenny-m"/>
 <artifact id="Procedure/cancer-related-surgical-procedure-jenny-m" key="Procedure-cancer-related-surgical-procedure-jenny-m" name="cancer-related-surgical-procedure-jenny-m"/>
 <artifact id="Procedure/cancer-related-surgical-procedure-lobectomy" key="Procedure-cancer-related-surgical-procedure-lobectomy" name="cancer-related-surgical-procedure-lobectomy"/>
+<artifact id="Observation/cml-phase-chronic" key="Observation-cml-phase-chronic" name="cml-phase-chronic"/>
 <artifact id="Observation/ecog-performance-status-fully-active" key="Observation-ecog-performance-status-fully-active" name="ecog-performance-status-fully-active"/>
 <artifact id="Observation/ecog-performance-status-jenny-m" key="Observation-ecog-performance-status-jenny-m" name="ecog-performance-status-jenny-m"/>
 <artifact id="FamilyMemberHistory/family-member-history-aunt-jenny-m" key="FamilyMemberHistory-family-member-history-aunt-jenny-m" name="family-member-history-aunt-jenny-m"/>
 <artifact id="FamilyMemberHistory/family-member-history-sister-jenny-m" key="FamilyMemberHistory-family-member-history-sister-jenny-m" name="family-member-history-sister-jenny-m"/>
 <artifact id="FamilyMemberHistory/family-member-history-uncle-jenny-m" key="FamilyMemberHistory-family-member-history-uncle-jenny-m" name="family-member-history-uncle-jenny-m"/>
+<artifact id="Observation/figo-stage-IIIA" key="Observation-figo-stage-IIIA" name="figo-stage-IIIA"/>
 <artifact deprecated="true" id="Specimen/genetic-specimen-left-breast-jenny-m" key="Specimen-genetic-specimen-left-breast-jenny-m" name="genetic-specimen-left-breast-jenny-m"/>
 <artifact deprecated="true" id="Specimen/genetic-specimen-lung" key="Specimen-genetic-specimen-lung" name="genetic-specimen-lung"/>
 <artifact id="Observation/genomic-region-studied-jenny-m" key="Observation-genomic-region-studied-jenny-m" name="genomic-region-studied-jenny-m"/>
@@ -335,6 +339,7 @@
 <artifact id="Organization/gx-us-core-organization-test-institution" key="Organization-gx-us-core-organization-test-institution" name="gx-us-core-organization-test-institution"/>
 <artifact id="Specimen/human-specimen-left-breast-jenny-m" key="Specimen-human-specimen-left-breast-jenny-m" name="human-specimen-left-breast-jenny-m"/>
 <artifact id="Specimen/human-specimen-lung" key="Specimen-human-specimen-lung" name="human-specimen-lung"/>
+<artifact id="Observation/international-neuroblastoma-risk-group-L2" key="Observation-international-neuroblastoma-risk-group-L2" name="international-neuroblastoma-risk-group-L2"/>
 <artifact id="BodyStructure/jenny-m-chest-wall-lymph-nodes-treatment-volume" key="BodyStructure-jenny-m-chest-wall-lymph-nodes-treatment-volume" name="jenny-m-chest-wall-lymph-nodes-treatment-volume"/>
 <artifact id="BodyStructure/jenny-m-chest-wall-treatment-volume" key="BodyStructure-jenny-m-chest-wall-treatment-volume" name="jenny-m-chest-wall-treatment-volume"/>
 <artifact id="Condition/john-anyperson-chf" key="Condition-john-anyperson-chf" name="john-anyperson-chf"/>
@@ -386,13 +391,18 @@
 <artifact id="CapabilityStatement/mcode-sender-patients-and-cancer-conditions" key="CapabilityStatement-mcode-sender-patients-and-cancer-conditions" name="mcode-sender-patients-and-cancer-conditions"/>
 <artifact id="CapabilityStatement/mcode-sender-patients-in-group" key="CapabilityStatement-mcode-sender-patients-in-group" name="mcode-sender-patients-in-group"/>
 <artifact id="CapabilityStatement/mcode-sender-patients-with-cancer-condition" key="CapabilityStatement-mcode-sender-patients-with-cancer-condition" name="mcode-sender-patients-with-cancer-condition"/>
+<artifact id="Observation/multiple-myeloma-iss-stage-II" key="Observation-multiple-myeloma-iss-stage-II" name="multiple-myeloma-iss-stage-II"/>
+<artifact id="Observation/multiple-myeloma-riss-stage-II" key="Observation-multiple-myeloma-riss-stage-II" name="multiple-myeloma-riss-stage-II"/>
+<artifact id="Observation/neuroblastoma-inss-stage-2B" key="Observation-neuroblastoma-inss-stage-2B" name="neuroblastoma-inss-stage-2B"/>
 <artifact deprecated="true" id="Observation/observation-smoking-history-jenny-m" key="Observation-observation-smoking-history-jenny-m" name="observation-smoking-history-jenny-m"/>
 <artifact id="Observation/observation-smoking-pack-years-jenny-m" key="Observation-observation-smoking-pack-years-jenny-m" name="observation-smoking-pack-years-jenny-m"/>
 <artifact id="Condition/primary-cancer-condition-breast" key="Condition-primary-cancer-condition-breast" name="primary-cancer-condition-breast"/>
 <artifact id="Condition/primary-cancer-condition-cll" key="Condition-primary-cancer-condition-cll" name="primary-cancer-condition-cll"/>
 <artifact id="Condition/primary-cancer-condition-jenny-m" key="Condition-primary-cancer-condition-jenny-m" name="primary-cancer-condition-jenny-m"/>
+<artifact id="Condition/primary-cancer-condition-nonspecific" key="Condition-primary-cancer-condition-nonspecific" name="primary-cancer-condition-nonspecific"/>
 <artifact id="Condition/primary-cancer-condition-nsclc" key="Condition-primary-cancer-condition-nsclc" name="primary-cancer-condition-nsclc"/>
 <artifact id="Procedure/radiotherapy-treatment-summary-chest-wall-jenny-m" key="Procedure-radiotherapy-treatment-summary-chest-wall-jenny-m" name="radiotherapy-treatment-summary-chest-wall-jenny-m"/>
+<artifact id="Observation/rai-stage-II" key="Observation-rai-stage-II" name="rai-stage-II"/>
 <artifact id="Condition/secondary-cancer-condition-brain-mets" key="Condition-secondary-cancer-condition-brain-mets" name="secondary-cancer-condition-brain-mets"/>
 <artifact deprecated="true" id="Procedure/teleradiotherapy-treatment-phase-boost-jenny-m" key="Procedure-teleradiotherapy-treatment-phase-boost-jenny-m" name="teleradiotherapy-treatment-phase-boost-jenny-m"/>
 <artifact deprecated="true" id="Procedure/teleradiotherapy-treatment-phase-chest-wall-jenny-m" key="Procedure-teleradiotherapy-treatment-phase-chest-wall-jenny-m" name="teleradiotherapy-treatment-phase-chest-wall-jenny-m"/>
@@ -439,6 +449,7 @@
 <artifact id="Procedure/us-core-procedure-biopsy-jenny-m" key="Procedure-us-core-procedure-biopsy-jenny-m" name="us-core-procedure-biopsy-jenny-m"/>
 <artifact id="Procedure/us-core-procedure-mammogram-jenny-m" key="Procedure-us-core-procedure-mammogram-jenny-m" name="us-core-procedure-mammogram-jenny-m"/>
 <artifact id="Observation/us-core-smokingstatus-jenny-m" key="Observation-us-core-smokingstatus-jenny-m" name="us-core-smokingstatus-jenny-m"/>
+<artifact id="Observation/wilms-tumor-stage-III" key="Observation-wilms-tumor-stage-III" name="wilms-tumor-stage-III"/>
 <page key="NA" name="(NA)"/>
 <page key="many" name="(many)"/>
 <page key="artifacts" name="Artifacts Summary"/>

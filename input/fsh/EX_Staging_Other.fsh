@@ -30,7 +30,7 @@ Description: "Example of Binet staging for CLL."
 * insert StagingInstanceRuleSet
 * code = NCIT#C141212 "Binet Stage"
 // method is optional because Binet staging is implicit in Observation.code
-* method = SCT#1149099005 "Binet staging classification for chronic lymphocytic leukemia (tumor staging)."
+* method = SCT#1149099005 "Binet staging classification for chronic lymphocytic leukemia (tumor staging)"
 * valueCodeableConcept = NCIT#C80134 "Binet Stage A"
 * focus = Reference(primary-cancer-condition-cll) // added requirement STU3
 * derivedFrom = Reference(lab-result-observation-hemoglobin)

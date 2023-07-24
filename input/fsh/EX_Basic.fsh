@@ -24,7 +24,7 @@ Description: "Example of Primary Cancer Condition - hematologic cancer"
 * subject = Reference(cancer-patient-adam-everyman)
 * onsetDateTime = "2020-05-12"
 * asserter = Reference(us-core-practitioner-kyle-anydoc)
-* stage.summary = UMLS#C2698392 "Binet Stage A"     // NCIT#C80134 "Binet Stage A"
+* stage.summary = NCIT#C80134 "Binet Stage A"
 * stage.assessment = Reference(binet-stage-group-A)
 
 Instance: secondary-cancer-condition-brain-mets

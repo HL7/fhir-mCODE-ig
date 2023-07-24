@@ -16,6 +16,16 @@ Consider the WHO classification of myeloid neoplasms and acute leukemia? see htt
 
 //  Leukemia Stage
 
+Profile: ALLClassification
+Id: mcode-all-fab-classification
+Parent: CancerStage  // is the FAB classification really a stage?
+Title: "ALL French-American-British Classification Profile"
+Description: "French-American-British (FAB) stage for acute lymphoblastic leukemia (ALL)"
+* ^extension[FMM].valueInteger = 0
+* insert NotUsed(component)
+* code = NCIT#C91220 // French-American-British Classification
+* value[x] from FABClassificationValueVS (required)
+
 Profile: CLLBinetStage
 Id: mcode-cll-binet-stage
 Parent: CancerStage
@@ -48,16 +58,6 @@ Description: "Phase of Chronic Myeloid Leukemia (CML) observed at a specified po
 * code = MDR#10066506  // CML Progression (code from medDRA; no suitable codes in NCIT, SCT, or LNC)
 * value[x] from CMLPhaseValueVS (required)
 
-Profile: ALLClassification
-Id: mcode-all-fab-classification
-Parent: CancerStage  // is the FAB classification really a stage?
-Title: "ALL French-American-British Classification Profile"
-Description: "French-American-British (FAB) stage for acute lymphoblastic leukemia (ALL)"
-* ^extension[FMM].valueInteger = 0
-* insert NotUsed(component)
-* code = NCIT#C91220 // French-American-British Classification
-* value[x] from FABClassificationValueVS (required)
-
 // Gynecologic Tumors
 
 Profile: GynecologicTumorFIGOStage
@@ -70,28 +70,6 @@ Description: "Gynecologic tumor stage by International Federation of Gynecology 
 * code = SCT#385361009 // "International Federation of Gynecology and Obstetrics stage for gynecological malignancy (observable entity)"
 * method from FIGOStagingMethodVS (extensible)
 * value[x] from FIGOStageValueVS (extensible)
-
-// Neuroblastoma Staging
-
-Profile: NeuroblastomaINSSStage
-Id: mcode-neuroblastoma-inss-stage
-Parent: CancerStage
-Title: "Neuroblastoma INNS Stage Profile"
-Description: "The International Neuroblastoma Staging System (INSS) stage for neuroblastoma."
-* ^extension[FMM].valueInteger = 0
-* insert NotUsed(component)
-* code = SCT#409720004  // International neuroblastoma staging system stage (observable entity)
-* value[x] from NeuroblastomaStageValueVS (required)
-
-Profile: NeuroblastomaRiskGroup
-Id: mcode-international-neuroblastoma-risk-group
-Parent: CancerStage
-Title: "Neuroblastoma International Risk Group Profile"
-Description: "Neuroblastoma risk group according to the International Neuroblastoma Risk Group Staging System (INRGSS)."
-* ^extension[FMM].valueInteger = 0
-* insert NotUsed(component)
-* code = NCIT#C192760 // International Neuroblastoma Risk Group
-* value[x] from NeuroblastomaRiskGroupValueVS (required)
 
 // Lymphoma Stage
 
@@ -139,6 +117,28 @@ Description: "Myeloma Stage by Revised International Staging System (RISS)"
 // How do I say "method is not required, but if you include it, it must be this code"?
 //* method = SCT#1149163003 // Revised International Staging System for multiple myeloma (staging scale)
 * value[x] from MyelomaRISSValueVS (required)
+
+// Neuroblastoma Staging
+
+Profile: NeuroblastomaINSSStage
+Id: mcode-neuroblastoma-inss-stage
+Parent: CancerStage
+Title: "Neuroblastoma INNS Stage Profile"
+Description: "The International Neuroblastoma Staging System (INSS) stage for neuroblastoma."
+* ^extension[FMM].valueInteger = 0
+* insert NotUsed(component)
+* code = SCT#409720004  // International neuroblastoma staging system stage (observable entity)
+* value[x] from NeuroblastomaStageValueVS (required)
+
+Profile: NeuroblastomaRiskGroup
+Id: mcode-international-neuroblastoma-risk-group
+Parent: CancerStage
+Title: "Neuroblastoma International Risk Group Profile"
+Description: "Neuroblastoma risk group according to the International Neuroblastoma Risk Group Staging System (INRGSS)."
+* ^extension[FMM].valueInteger = 0
+* insert NotUsed(component)
+* code = NCIT#C192760 // International Neuroblastoma Risk Group
+* value[x] from NeuroblastomaRiskGroupValueVS (required)
 
 //  Wilms Tumor Staging
 

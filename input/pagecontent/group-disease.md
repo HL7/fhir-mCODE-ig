@@ -130,14 +130,13 @@ mCODE includes single FHIR profile, [TumorMarkerTest], for all labs involving se
   * [ALLClassification]
   * [CLLBinetStage]
   * [CLLRaiStage]
-  * [CMLPhase]
   * [GynecologicTumorFIGOStage]
   * [LymphomaStage]
+  * [MelanomaClarkLevel]
   * [MyelomaISSStage]
   * [MyelomaRISSStage]
   * [NeuroblastomaINSSStage]
   * [NeuroblastomaRiskGroup]
-  * [WilmsTumorStage]
 
 ### Extensions
 
@@ -193,8 +192,8 @@ mCODE includes single FHIR profile, [TumorMarkerTest], for all labs involving se
 
 * Staging, non-TNM
     * [BinetStageValueVS]
+    * [ClarkLevelValueVS]  
     * [ClinOrPathModifierVS]
-    * [CMLPhaseValueVS]
     * [FABClassificationValueVS]
     * [FIGOStagingMethodVS]
     * [FIGOStageValueVS]
@@ -207,9 +206,6 @@ mCODE includes single FHIR profile, [TumorMarkerTest], for all labs involving se
     * [NeuroblastomaStageValueVS]
     * [RaiStagingMethodVS]
     * [RaiStageValueVS]
-    * [WilmsTumorStagingMethodVS]
-    * [WilmsTumorStageValueVS]
-    * [WilmsTumorBodySiteVS]
 
 ### Code Systems
 

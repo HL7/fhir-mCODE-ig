@@ -28,14 +28,12 @@
 * [FAB (French-American-British) staging of acute lymphoblastic leukemia (ALL)](Observation-all-fab-classification-M5b.html)
 * [Binet staging for chronic lymphocytic leukemia](Observation-binet-stage-group-A.html)
 * [Rai staging for chronic lymphocytic leukemia](Observation-rai-stage-II.html)
-* [Chronic myeloid leukemia disease phase](Observation-cml-phase-chronic.html)
 * [Gynecologic tumor staged by FIGO (International Federation of Gynecology and Obstetrics)](Observation-figo-stage-IIIA.html)
-* [Cotswold staging of Hodgkin's disease](Observation-Hodgkins-lymphoma-stage-IIIe.html)
+* [Cotswold staging of Hodgkin's disease](Observation-hodgkins-lymphoma-stage-IIIe.html)
 * [Myeloma stage by International Staging System (ISS)](Observation-multiple-myeloma-iss-stage-II.html)
 * [Myeloma stage by Revised International Staging System (RISS)](Observation-multiple-myeloma-riss-stage-II.html)
 * [Neuroblastoma stage by International Neuroblastoma Staging System (INSS)](Observation-neuroblastoma-inss-stage-2B.html)
 * [Neuroblastoma risk group by International Neuroblastoma Risk Group Staging System (INRGSS)](Observation-neuroblastoma-risk-group-L2.html)
-* [Wilms Tumor staging by Children's Oncology Group/National Wilms' Tumor Study Group](Observation-wilms-tumor-stage-III.html)
 
 ### [Comorbidities]
 

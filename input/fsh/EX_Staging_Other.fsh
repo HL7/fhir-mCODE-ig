@@ -1,6 +1,6 @@
 Instance: primary-cancer-condition-nonspecific
 InstanceOf: PrimaryCancerCondition
-Description: "An unspecific Primary Cancer Condition (PCC) for use in IG examples. Any real PCC would use a more specific code."
+Description: "An unspecific Primary Cancer Condition (PCC) used in IG examples. Any real PCC would use a specific diagnostic code."
 * clinicalStatus = ClinStatus#active "Active"
 * verificationStatus = VerStatus#confirmed "Confirmed"
 * category = CondCat#problem-list-item
@@ -43,13 +43,6 @@ Description: "Example of Rai staging for CLL."
 * method = SCT#1149131009 "Rai staging system for chronic lymphocytic leukemia (tumor staging)"
 * valueCodeableConcept = NCIT#C7875 "Stage II Chronic Lymphocytic Leukemia"
 
-Instance: cml-phase-chronic
-InstanceOf: CMLPhase
-Description: "Example of reporting the CML phase."
-* insert StagingInstanceRuleSet
-* code = MDR#10066506  "CML Progression"
-* valueCodeableConcept = SCT#278177007 "Chronic phase (qualifier value)"
-
 Instance: figo-stage-IIIA
 InstanceOf: GynecologicTumorFIGOStage
 Description: "Example of gynecologic tumor staged by International Federation of Gynecology and Obstetrics (FIGO) Staging System."
@@ -58,13 +51,21 @@ Description: "Example of gynecologic tumor staged by International Federation of
 * method = SCT#106250008 "International Federation of Gynecology and Obstetrics staging system for cervical carcinoma (tumor staging)"
 * valueCodeableConcept = NCIT#C96256 "FIGO Stage IIIA"
 
-Instance: Hodgkins-lymphoma-stage-IIIe
+Instance: hodgkins-lymphoma-stage-IIIe
 InstanceOf: LymphomaStage
 Description: "Example of staging using Cotswold staging of Hodgkin's disease."
 * insert StagingInstanceRuleSet
 * code = SCT#385388004 "Lymphoma stage (observable entity)"
 * method = SCT#254375000 "Cotswolds Hodgkin's disease tumor staging system (tumor staging)"
 * valueCodeableConcept = SCT#44255004 "Lymphoma stage IIIe (finding)"
+
+Instance: melanoma-clark-level-4
+InstanceOf: MelanomaClarkLevel
+Description: "Example of Clark level staging for melanoma."
+* insert StagingInstanceRuleSet
+* code = SCT#103419001 "Clark melanoma level of invasion of excised malignant melanoma of skin (observable entity)"
+// method is optional because Clark staging is implicit in Observation.code
+* valueCodeableConcept = SCT#1556006 "Clark melanoma level 4 (finding)"
 
 Instance: multiple-myeloma-iss-stage-II
 InstanceOf: MyelomaISSStage
@@ -93,13 +94,3 @@ Description: "Example of Neuroblastoma risk group according to the International
 * insert StagingInstanceRuleSet
 * code = NCIT#C192760 "International Neuroblastoma Risk Group"
 * valueCodeableConcept = NCIT#C133429 "INRG Stage L2"
-
-Instance: wilms-tumor-stage-III
-InstanceOf: WilmsTumorStage
-Description: "Example of staging Wilms Tumor by Children's Oncology Group/National Wilms' Tumor Study Group"
-* insert StagingInstanceRuleSet
-* code = SCT#405931009 "National Wilms Tumor Study Group Stage"
-* method = NCIT#C140271 "Children's Oncology Group/National Wilms' Tumor Study Group Staging System"
-* valueCodeableConcept = SCT#405973001 "National Wilms Tumor Study Group Stage III (finding)"
-* bodySite = SCT#18639004 "Left kidney structure (body structure)"
-

@@ -1894,12 +1894,12 @@ e: {
   "error" : "Error from server: Unable to provide support for code system http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl"
 }
 -------------------------------------------------------------------------------------
-{"hierarchical" : false, "url": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-cll-binet-stage-value-vs", "version": "3.0.0-ballot"}####
+{"hierarchical" : false, "url": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-binet-stage-value-vs", "version": "3.0.0-ballot"}####
 e: {
   "error" : "Error from server: Unable to provide support for code system http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl"
 }
 -------------------------------------------------------------------------------------
-{"hierarchical" : false, "url": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-gynecologic-tumor-figo-stage-value-vs", "version": "3.0.0-ballot"}####
+{"hierarchical" : false, "url": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-figo-stage-value-vs", "version": "3.0.0-ballot"}####
 e: {
   "error" : "Error from server: Unable to provide support for code system http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl"
 }
@@ -1934,7 +1934,7 @@ e: {
   "error" : "Error from server: Unable to provide support for code system http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl"
 }
 -------------------------------------------------------------------------------------
-{"hierarchical" : true, "url": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-cll-binet-stage-value-vs", "version": "3.0.0-ballot"}####
+{"hierarchical" : true, "url": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-binet-stage-value-vs", "version": "3.0.0-ballot"}####
 e: {
   "error" : "Error from server: Unable to provide support for code system http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl"
 }
@@ -2080,7 +2080,7 @@ e: {
   "error" : "Error from server: Unable to provide support for code system http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl"
 }
 -------------------------------------------------------------------------------------
-{"hierarchical" : true, "url": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-gynecologic-tumor-figo-stage-value-vs", "version": "3.0.0-ballot"}####
+{"hierarchical" : true, "url": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-figo-stage-value-vs", "version": "3.0.0-ballot"}####
 e: {
   "error" : "Error from server: Unable to provide support for code system http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl"
 }
@@ -2249,6 +2249,27 @@ e: {
 }
 -------------------------------------------------------------------------------------
 {"hierarchical" : true, "url": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-myeloma-riss-stage-value-vs", "version": "3.0.0-ballot"}####
+e: {
+  "error" : "Error from server: Unable to provide support for code system http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl"
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : false, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "inactive" : true,
+    "include" : [{
+      "system" : "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl",
+      "concept" : [{
+        "code" : "C140271",
+        "display" : "Children's Oncology Group/National Wilms' Tumor Study Group Staging System"
+      },
+      {
+        "code" : "C198026",
+        "display" : "International Society of Pediatric Oncology (SIOP) Stage"
+      }]
+    }]
+  }
+}}####
 e: {
   "error" : "Error from server: Unable to provide support for code system http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl"
 }

@@ -65,8 +65,8 @@ The following value sets are defined in this implementation guide:
 The following draft (maturity level 0) value sets are defined in this implementation guide:
 
 * [BinetStageValueVS]
+* [ClarkLevelValueVS]  
 * [ClinOrPathModifierVS]
-* [CMLPhaseValueVS]
 * [FABClassificationValueVS]
 * [FIGOStagingMethodVS]
 * [FIGOStageValueVS]
@@ -77,13 +77,10 @@ The following draft (maturity level 0) value sets are defined in this implementa
 * [LymphomaStageValueModifierVS]
 * [RaiStagingMethodVS]
 * [RaiStageValueVS]
-* [WilmsTumorStagingMethodVS]
-* [WilmsTumorStageValueVS]
-* [WilmsTumorBodySiteVS]
 
 ### External Value Sets Used in mCODE
 
-* [ECOG_Performance status]
+* [ECOG performance status]
 * [Karnofsky performance status]
 * [Medication Clinical Drug (RxNorm)]
 

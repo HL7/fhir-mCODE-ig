@@ -58,6 +58,7 @@
 <artifact id="ValueSet/mcode-cancer-related-surgical-procedure-vs" key="ValueSet-mcode-cancer-related-surgical-procedure-vs" name="Cancer-Related Surgical Procedure Value Set"/>
 <artifact id="ValueSet/mcode-teleradiotherapy-carbon-ion-beam-technique-vs" key="ValueSet-mcode-teleradiotherapy-carbon-ion-beam-technique-vs" name="Carbon Ion Beam Technique Value Set"/>
 <artifact id="ValueSet/mcode-carcinoma-in-situ-disorder-vs" key="ValueSet-mcode-carcinoma-in-situ-disorder-vs" name="Carcinoma In-Situ Disorder Value Set"/>
+<artifact id="ValueSet/mcode-clark-level-value-vs" key="ValueSet-mcode-clark-level-value-vs" name="Clark Level Value Set"/>
 <artifact deprecated="true" id="ValueSet/mcode-clinvar-vs" key="clinvar-value-set" name="ClinVar Value Set"/>
 <artifact id="ValueSet/mcode-clin-or-path-modifier-vs" key="ValueSet-mcode-clin-or-path-modifier-vs" name="Clinical or Pathologic Modifier"/>
 <artifact deprecated="true" id="Profile/mcode-comorbid-condition" key="comorbid-condition" name="Comorbid Condition"/>
@@ -131,7 +132,6 @@
 <artifact deprecated="true" id="Extension/mcode-histology-morphology-behavior-extension" key="histology-morphology-behavior-extension" name="Histology Morphology Behavior Extension"/>
 <artifact id="ValueSet/mcode-histology-morphology-behavior-vs" key="histology-morphology-behavior-value-set" name="Histology Morphology Behavior Value Set"/>
 <artifact id="StructureDefinition/mcode-histology-morphology-behavior" key="StructureDefinition-mcode-histology-morphology-behavior" name="Histology-Morphology-Behavior Extension"/>
-<artifact id="Observation/Hodgkins-lymphoma-stage-IIIe" key="Observation-Hodgkins-lymphoma-stage-IIIe" name="Hodgkins-lymphoma-stage-IIIe"/>
 <artifact deprecated="true" id="ValueSet/mcode-hgvs-vs" key="ValueSet-mcode-hgvs-vs" name="Human Genome Variation Society Sequence Variant Nomenclature Value Set"/>
 <artifact id="StructureDefinition/mcode-human-specimen" key="StructureDefinition-mcode-human-specimen" name="Human Specimen Profile"/>
 <artifact id="ValueSet/mcode-human-specimen-type-vs" key="ValueSet-mcode-human-specimen-type-vs" name="Human Specimen Type Value Set"/>
@@ -149,6 +149,7 @@
 <artifact id="ValueSet/mcode-lymphoma-stage-value-modifier-vs" key="ValueSet-mcode-lymphoma-stage-value-modifier-vs" name="Lymphoma Stage Value Modifier Value Set"/>
 <artifact id="ValueSet/mcode-lymphoma-stage-value-vs" key="ValueSet-mcode-lymphoma-stage-value-vs" name="Lymphoma Stage Value Set"/>
 <artifact id="ValueSet/mcode-lymphoma-staging-method-vs" key="ValueSet-mcode-lymphoma-staging-method-vs" name="Lymphoma Staging System Value Set"/>
+<artifact id="StructureDefinition/mcode-melanoma-clark-level" key="StructureDefinition-mcode-melanoma-clark-level" name="Melanoma Clark Level Profile"/>
 <artifact id="ValueSet/mcode-melanoma-in-situ-disorder-vs" key="ValueSet-mcode-melanoma-in-situ-disorder-vs" name="Melanoma In-Situ Disorder Value Set"/>
 <artifact id="StructureDefinition/mcode-myeloma-iss-stage" key="StructureDefinition-mcode-myeloma-iss-stage" name="Myeloma ISS Stage Profile"/>
 <artifact id="StructureDefinition/mcode-myeloma-riss-stage" key="StructureDefinition-mcode-myeloma-riss-stage" name="Myeloma RISS Stage Profile"/>
@@ -330,6 +331,7 @@
 <artifact id="Practitioner/gx-practitioner-test-pathologist" key="Practitioner-gx-practitioner-test-pathologist" name="gx-practitioner-test-pathologist"/>
 <artifact id="Organization/gx-us-core-organization-tempus-inc" key="Organization-gx-us-core-organization-tempus-inc" name="gx-us-core-organization-tempus-inc"/>
 <artifact id="Organization/gx-us-core-organization-test-institution" key="Organization-gx-us-core-organization-test-institution" name="gx-us-core-organization-test-institution"/>
+<artifact id="Observation/hodgkins-lymphoma-stage-IIIe" key="Observation-hodgkins-lymphoma-stage-IIIe" name="hodgkins-lymphoma-stage-IIIe"/>
 <artifact id="Specimen/human-specimen-left-breast-jenny-m" key="Specimen-human-specimen-left-breast-jenny-m" name="human-specimen-left-breast-jenny-m"/>
 <artifact id="Specimen/human-specimen-lung" key="Specimen-human-specimen-lung" name="human-specimen-lung"/>
 <artifact id="BodyStructure/jenny-m-chest-wall-lymph-nodes-treatment-volume" key="BodyStructure-jenny-m-chest-wall-lymph-nodes-treatment-volume" name="jenny-m-chest-wall-lymph-nodes-treatment-volume"/>
@@ -383,6 +385,7 @@
 <artifact id="CapabilityStatement/mcode-sender-patients-and-cancer-conditions" key="CapabilityStatement-mcode-sender-patients-and-cancer-conditions" name="mcode-sender-patients-and-cancer-conditions"/>
 <artifact id="CapabilityStatement/mcode-sender-patients-in-group" key="CapabilityStatement-mcode-sender-patients-in-group" name="mcode-sender-patients-in-group"/>
 <artifact id="CapabilityStatement/mcode-sender-patients-with-cancer-condition" key="CapabilityStatement-mcode-sender-patients-with-cancer-condition" name="mcode-sender-patients-with-cancer-condition"/>
+<artifact id="Observation/melanoma-clark-level-4" key="Observation-melanoma-clark-level-4" name="melanoma-clark-level-4"/>
 <artifact id="Observation/multiple-myeloma-iss-stage-II" key="Observation-multiple-myeloma-iss-stage-II" name="multiple-myeloma-iss-stage-II"/>
 <artifact id="Observation/multiple-myeloma-riss-stage-II" key="Observation-multiple-myeloma-riss-stage-II" name="multiple-myeloma-riss-stage-II"/>
 <artifact id="Observation/neuroblastoma-inss-stage-2B" key="Observation-neuroblastoma-inss-stage-2B" name="neuroblastoma-inss-stage-2B"/>

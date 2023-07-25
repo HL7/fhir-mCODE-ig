@@ -29,7 +29,7 @@
 * [Binet staging for chronic lymphocytic leukemia](Observation-binet-stage-group-A.html)
 * [Rai staging for chronic lymphocytic leukemia](Observation-rai-stage-II.html)
 * [Gynecologic tumor staged by FIGO (International Federation of Gynecology and Obstetrics)](Observation-figo-stage-IIIA.html)
-* [Cotswold staging of Hodgkin's disease](Observation-Hodgkins-lymphoma-stage-IIIe.html)
+* [Cotswold staging of Hodgkin's disease](Observation-hodgkins-lymphoma-stage-IIIe.html)
 * [Myeloma stage by International Staging System (ISS)](Observation-multiple-myeloma-iss-stage-II.html)
 * [Myeloma stage by Revised International Staging System (RISS)](Observation-multiple-myeloma-riss-stage-II.html)
 * [Neuroblastoma stage by International Neuroblastoma Staging System (INSS)](Observation-neuroblastoma-inss-stage-2B.html)

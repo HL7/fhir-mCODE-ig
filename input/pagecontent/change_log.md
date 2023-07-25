@@ -1,14 +1,25 @@
 The following changes occurred between the [STU 3 ballot (March 2023)] and publication of STU 3, primarily in response to ballot comments.
 
-### New non-TNM Staging Profiles ()
+### Non-TNM Staging Profiles ([FHIR-41163](https://jira.hl7.org/browse/FHIR-41163), [FHIR-41003](https://jira.hl7.org/browse/FHIR-41003))
+
+mCODE 2.1 and 3.0.0-ballot did not include any profiles for non-TNM staging, so there was no indication on how to use mCODE to represent staging for lymphoma and leukemia, for example. To address this issue, several non-TNM staging profiles were added. Given the numerous non-TNM staging systems, a small set of profiles were added for illustrative purposes:
+
+* [ALLClassification]
+* [CLLBinetStage]
+* [CLLRaiStage]
+* [GynecologicTumorFIGOStage]
+* [LymphomaStage]
+* [MelanomaClarkLevel]
+* [MyelomaISSStage]
+* [MyelomaRISSStage]
+* [NeuroblastomaINSSStage]
+* [NeuroblastomaRiskGroup]
 
 ### New History of Metastatic Disease Profile
 
 ### Expanded Value Sets
 
 ### Clarification of Observation.code and Observation.method in CancerStage
-
-### ET CETERA
 
 
 The following changes occurred between [STU 2 publication](http://hl7.org/fhir/us/mcode/STU2/) (January 2022) and the STU 3 ballot (March 2023). For a history of previous changes, please see the prior change logs in the [appropriate versions](http://hl7.org/fhir/us/mcode/history.html).

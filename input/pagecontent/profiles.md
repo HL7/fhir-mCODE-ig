@@ -30,14 +30,16 @@ The following profiles have been defined for this implementation guide:
 
 The following draft (maturity level 0) profiles have been defined for this implementation guide:
 
-* [CLLBinetStage]
-* [CMLPhase]
 * [ALLClassification]
-* [GynecologicTumorFIGOStage]
-* [NeuroblastomaRiskGroup]
-* [NeuroblastomaINSSStage]
-* [LymphomaStage]
+* [CLLBinetStage]
 * [CLLRaiStage]
-* [WilmsTumorStage]
+* [GynecologicTumorFIGOStage]
+* [LymphomaStage]
+* [MelanomaClarkLevel]
+* [MyelomaISSStage]
+* [MyelomaRISSStage]
+* [NeuroblastomaINSSStage]
+* [NeuroblastomaRiskGroup]
+
 
 {% include markdown-link-references.md %}

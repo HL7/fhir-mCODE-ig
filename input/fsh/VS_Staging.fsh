@@ -9,29 +9,9 @@ Description: "Codes that identify the kind of stage reported in an Observation, 
 * ^experimental = false
 * ^extension[FMM].valueInteger = 4
 // LOINC Codes
-* LNC#42082-8 "Collaborative staging lymph nodes Cancer"
-* LNC#59478-8 "Collaborative staging metastasis at diagnosis - lung involvement Cancer"
-* LNC#42084-4 "Collaborative staging metastasis at diagnosis Cancer"
-* LNC#42085-1 "Collaborative staging metastasis evaluation Cancer"
-* LNC#59479-6 "Collaborative staging post treatment extension Cancer"
-* LNC#59480-4 "Collaborative staging post treatment lymph nodes Cancer"
-* LNC#59481-2 "Collaborative staging post treatment metastasis at diagnosis Cancer"
-* LNC#59482-0 "Collaborative staging post treatment tumor size Cancer"
-* LNC#59559-5 "Collaborative staging pre treatment extension Cancer"
-* LNC#59483-8 "Collaborative staging pre treatment lymph nodes Cancer"
-* LNC#59484-6 "Collaborative staging pre treatment metastasis at diagnosis Cancer"
-* LNC#59485-3 "Collaborative staging pre treatment metastasis evaluation Cancer"
-* LNC#59486-1 "Collaborative staging pre treatment regional nodes evaluation Cancer"
-* LNC#59487-9 "Collaborative staging pre treatment tumor size and extension evaluation Cancer"
-* LNC#59488-7 "Collaborative staging pre treatment tumor size Cancer"
-* LNC#42083-6 "Collaborative staging regional nodes evaluation Cancer"
-* LNC#42081-0 "Collaborative staging tumor size extension evaluation Cancer"
-* LNC#42101-6 "Derived SEER summary stage 1977 Cancer"
-* LNC#42102-4 "Derived SEER summary stage 2000 Cancer"
 * LNC#21907-1 "Distant metastases.clinical [Class] Cancer"
 * LNC#21913-9 "Distant metastases.other [Class] Cancer"
 * LNC#21901-4 "Distant metastases.pathology [Class] Cancer"
-* LNC#42080-2 "Extension collaborative staging Cancer"
 * LNC#21891-7 "Extent of disease Prostate cancer"
 * LNC#21895-8 "Extent of disease.NAACCR.old 13 digit"
 * LNC#21896-6 "Extent of disease.NAACCR.old 2 digit"
@@ -48,6 +28,8 @@ Description: "Codes that identify the kind of stage reported in an Observation, 
 * LNC#21902-2 "Stage group.pathology Cancer"
 * LNC#21888-3 "Summary stage abbreviated at Dx Cancer"
 * LNC#39806-5 "Summary stage at Dx 2000 revised Cancer"
+* LNC#42101-6 "Derived SEER summary stage 1977 Cancer"
+* LNC#42102-4 "Derived SEER summary stage 2000 Cancer"
 * LNC#LA4292-4 "SEER Extent of Disease"
 
 // SNOMED CT Codes
@@ -99,7 +81,6 @@ Description: "Codes that identify the kind of stage reported in an Observation, 
 * SCT#17964000 "Residual tumor stage (observable entity)"
 * SCT#371495009 "Stage of tumor involvement of non-regional lymph nodes (observable entity)"
 // unapproved attribute, do not include! * include codes from system SCT where concept is-a #260760003 "Staging of disease (attribute)"
-
 // NCI Thesaurus terms
 * NCIT#C134969 "AIDS-Related Kaposi Sarcoma Stage"
 * NCIT#C90529 "AJCC v6 Stage"
@@ -215,7 +196,7 @@ Description: "Staging system or method used for staging cancers. The terms in th
 * NCIT#C123333 "Reese-Ellsworth Staging System"
 * NCIT#C62610 "SEER Summary Staging Manual 2000"
 * NCIT#C177309 "Seminoma International Germ Cell Tumor Consensus Risk Classification"
-* NCIT#C140272 "SIOP/COG/NWTSG Staging System"
+* NCIT#C140272 "SIOP/COG/NWTSG Staging System"  // Wilms tumor
 * NCIT#C62611 "Summary Staging Guide 1977"
 * NCIT#C112006 "Thymoma by Masaoka-Koga Stage"
 * NCIT#C18008 "TNM Ovary Neoplasm Staging"
@@ -250,5 +231,3 @@ Description: "A non-exhaustive value set containing codes that result from cance
 * include codes from system SCT where concept descendant-of #258233007 "Generic tumor staging descriptor (tumor staging)"
 * include codes from system SCT where concept descendant-of #258271004 "Specific tumor staging descriptor (tumor staging)"
 * include codes from system SCT where concept descendant-of #106242004 "Walter Reed staging of prostatic cancer (tumor staging)"
-
-

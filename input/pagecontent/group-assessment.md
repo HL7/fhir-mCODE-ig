@@ -38,7 +38,7 @@ Vital signs are measurements of the most essential, or "vital" body functions. F
 
 ### Value Sets
 
-* [ECOG_Performance status] (external)
+* [ECOG performance status] (external)
 * [Karnofsky performance status] (external)
 
 {% include markdown-link-references.md %}

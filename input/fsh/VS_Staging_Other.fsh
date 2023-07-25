@@ -1,11 +1,18 @@
 ValueSet: BinetStageValueVS
-Id: mcode-cll-binet-stage-value-vs
+Id: mcode-binet-stage-value-vs
 Title: "Binet Stage Value Set"
 Description: "Codes in the Binet staging system representing Chronic Lymphocytic Leukemia (CLL) stage."
 * ^experimental = false
 * NCIT#C80134 "Binet Stage A"
 * NCIT#C80135 "Binet Stage B"
 * NCIT#C80136 "Binet Stage C"
+
+ValueSet: ClarkLevelValueVS
+Id: mcode-clark-level-value-vs
+Title: "Clark Level Value Set"
+Description: "Levels for Clark staging of melanoma"
+* insert SNOMEDCopyrightForVS
+* include codes from system SCT where concept descendant-of #385347004 "Clark melanoma level finding (finding)"
 
 ValueSet: ClinOrPathModifierVS
 Id: mcode-clin-or-path-modifier-vs
@@ -15,18 +22,8 @@ Description: "Stage value modifier indicating if staging was based on clinical o
 * SCT#260998006 "Clinical staging (qualifier value)"
 * SCT#261023001 "Pathological staging (qualifier value)"
 
-ValueSet: CMLPhaseValueVS
-Id: mcode-cml-phase-value-vs
-Title: "Chronic Myeloid Leukemia Phase Value Set"
-Description: "Phases of Chronic Myeloid Leukemia (CML)"
-* insert SNOMEDCopyrightForVS
-* SCT#278177007 "Chronic phase (qualifier value)"
-* SCT#278179005 "Accelerated phase (qualifier value)"
-* SCT#255251009 "Acute phase (qualifier value)"
-//* SCT#278180008 "Blast crisis (qualifier value)"
-
 ValueSet: FABClassificationValueVS
-Id: mcode-all-fab-classification-value-vs
+Id: mcode-fab-classification-value-vs
 Title: "FAB Classification Value"
 Description: "French American British classification for acute myeloid leukemias, acute lymphoblastic leukemias, and myelodysplastic syndromes."
 * insert SNOMEDCopyrightForVS
@@ -40,7 +37,7 @@ Description: "Staging methods from International Federation of Gynecology and Ob
 * include codes from system SCT where concept is-a #254383006 "International Federation of Gynecology and Obstetrics staging system of gynecological malignancy (tumor staging)"
 
 ValueSet: FIGOStageValueVS
-Id: mcode-gynecologic-tumor-figo-stage-value-vs
+Id: mcode-figo-stage-value-vs
 Title: "FIGO Stage Value Set"
 Description: "Values for International Federation of Gynecology and Obstetrics (FIGO) Staging System."
 * ^experimental = false
@@ -159,30 +156,6 @@ Description: "Codes in the Rai staging system representing Chronic Lymphocytic L
 * NCIT#C7875 "Stage II Chronic Lymphocytic Leukemia"
 * NCIT#C7876 "Stage III Chronic Lymphocytic Leukemia"
 * NCIT#C8646 "Stage IV Chronic Lymphocytic Leukemia"
-
-ValueSet: WilmsTumorStagingMethodVS
-Id: mcode-wilms-tumor-staging-method-vs
-Title: "WilmsTumor Staging Method Value Set"
-Description: "Methods for staging Wilms Tumors, differentiating the original National Wilms' tumor study staging system from the Children's Oncology Group modification of the National Wilms' Tumor Study Group Staging System."
-* insert SNOMEDCopyrightForVS
-* include SCT#254364004 "National Wilms' tumor study staging system (tumor staging)"
-* include NCIT#C140271 "Children's Oncology Group/National Wilms' Tumor Study Group Staging System"
-
-ValueSet: WilmsTumorStageValueVS
-Id: mcode-wilms-tumor-stage-value-vs
-Title: "Wilms Stage Value Set"
-Description: "Stages I-V for Wilms Tumor Staging."
-* insert SNOMEDCopyrightForVS
-* include codes from system SCT where concept descendant-of #405971004 "National Wilms Tumor Study Group Stage finding (finding)"
-
-ValueSet: WilmsTumorBodySiteVS
-Id: mcode-wilms-tumor-body-site-vs
-Title: "Wilms Tumor Body Site Value Set"
-Description: "Codes indicating the location of Wilms Tumor"
-* insert SNOMEDCopyrightForVS
-* include codes from system SCT where concept is-a #18639004 "Left kidney structure (body structure)"
-* include codes from system SCT where concept is-a #9846003 "Right kidney structure (body structure)"
-
 
 /* not used
 ValueSet: LymphomaStageTypeVS

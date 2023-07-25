@@ -1,4 +1,4 @@
-The following profiles and have been defined for this implementation guide:
+The following profiles have been defined for this implementation guide:
 
 * [BodyStructureIdentifier]
 * [CancerDiseaseStatus]
@@ -27,5 +27,17 @@ The following profiles and have been defined for this implementation guide:
 * [Tumor]
 * [TumorMarkerTest]
 * [TumorSize]
+
+The following draft (maturity level 0) profiles have been defined for this implementation guide:
+
+* [CLLBinetStage]
+* [CMLPhase]
+* [ALLClassification]
+* [GynecologicTumorFIGOStage]
+* [NeuroblastomaRiskGroup]
+* [NeuroblastomaINSSStage]
+* [LymphomaStage]
+* [CLLRaiStage]
+* [WilmsTumorStage]
 
 {% include markdown-link-references.md %}

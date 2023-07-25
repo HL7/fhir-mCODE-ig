@@ -6,11 +6,11 @@
     "include" : [{
       "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/snomed-requested-cs",
       "concept" : [{
-        "code" : "USCRS-34777",
+        "code" : "1284814003",
         "display" : "Lymph node level IIA (qualifier value)"
       },
       {
-        "code" : "USCRS-34775",
+        "code" : "1284815002",
         "display" : "Lymph node level IIB (qualifier value)"
       }]
     }]
@@ -21,8 +21,8 @@ e: {
   "resourceType" : "ValueSet",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:65005597-f32d-4050-b677-f077ec7b326b",
-    "timestamp" : "2023-06-30T11:13:55.000Z",
+    "identifier" : "urn:uuid:35e8207c-c4bb-410c-9b6b-dc82d6df651e",
+    "timestamp" : "2023-07-24T20:14:46.684Z",
     "total" : 2,
     "parameter" : [{
       "name" : "limitedExpansion",
@@ -38,12 +38,12 @@ e: {
     }],
     "contains" : [{
       "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/snomed-requested-cs",
-      "code" : "USCRS-34777",
+      "code" : "1284814003",
       "display" : "Lymph node level IIA (qualifier value)"
     },
     {
       "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/snomed-requested-cs",
-      "code" : "USCRS-34775",
+      "code" : "1284815002",
       "display" : "Lymph node level IIB (qualifier value)"
     }]
   }
@@ -58,12 +58,12 @@ e: {
     "include" : [{
       "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/snomed-requested-cs",
       "concept" : [{
-        "code" : "USCRS-34356",
-        "display" : "Bowel space (body structure)"
+        "code" : "1285442003",
+        "display" : "Estimated contoured volume of bowel in peritoneal cavity using radiographic imaging (observable entity)"
       },
       {
-        "code" : "USCRS-34358",
-        "display" : "Small bowel space (body structure)"
+        "code" : "1285443008",
+        "display" : "Estimated contoured volume of small bowel in peritoneal cavity using imaging (observable entity)"
       }]
     }]
   }
@@ -73,8 +73,8 @@ e: {
   "resourceType" : "ValueSet",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:52a2e1ac-b5a4-4889-9761-57989cf60218",
-    "timestamp" : "2023-06-30T11:13:55.141Z",
+    "identifier" : "urn:uuid:b059aadb-f229-4fdb-b573-75f7b613076b",
+    "timestamp" : "2023-07-24T20:14:47.277Z",
     "total" : 2,
     "parameter" : [{
       "name" : "limitedExpansion",
@@ -90,13 +90,13 @@ e: {
     }],
     "contains" : [{
       "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/snomed-requested-cs",
-      "code" : "USCRS-34356",
-      "display" : "Bowel space (body structure)"
+      "code" : "1285442003",
+      "display" : "Estimated contoured volume of bowel in peritoneal cavity using radiographic imaging (observable entity)"
     },
     {
       "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/snomed-requested-cs",
-      "code" : "USCRS-34358",
-      "display" : "Small bowel space (body structure)"
+      "code" : "1285443008",
+      "display" : "Estimated contoured volume of small bowel in peritoneal cavity using imaging (observable entity)"
     }]
   }
 },

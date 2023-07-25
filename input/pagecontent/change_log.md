@@ -1,3 +1,16 @@
+The following changes occurred between the [STU 3 ballot (March 2023)] and publication of STU 3, primarily in response to ballot comments.
+
+### New non-TNM Staging Profiles ()
+
+### New History of Metastatic Disease Profile
+
+### Expanded Value Sets
+
+### Clarification of Observation.code and Observation.method in CancerStage
+
+### ET CETERA
+
+
 The following changes occurred between [STU 2 publication](http://hl7.org/fhir/us/mcode/STU2/) (January 2022) and the STU 3 ballot (March 2023). For a history of previous changes, please see the prior change logs in the [appropriate versions](http://hl7.org/fhir/us/mcode/history.html).
 
 ### Allowing the Use of AJCC-equivalent SNOMED Codes for Staging

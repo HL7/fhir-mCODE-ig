@@ -62,6 +62,25 @@ The following value sets are defined in this implementation guide:
 * [TumorSizeMethodVS]
 * [TumorSizeUnitsVS]
 
+The following draft (maturity level 0) value sets are defined in this implementation guide:
+
+* [BinetStageValueVS]
+* [ClinOrPathModifierVS]
+* [CMLPhaseValueVS]
+* [FABClassificationValueVS]
+* [FIGOStagingMethodVS]
+* [FIGOStageValueVS]
+* [NeuroblastomaRiskGroupValueVS]
+* [NeuroblastomaStageValueVS]
+* [LymphomaStagingMethodVS]
+* [LymphomaStageValueVS]
+* [LymphomaStageValueModifierVS]
+* [RaiStagingMethodVS]
+* [RaiStageValueVS]
+* [WilmsTumorStagingMethodVS]
+* [WilmsTumorStageValueVS]
+* [WilmsTumorBodySiteVS]
+
 ### External Value Sets Used in mCODE
 
 * [ECOG_Performance status]

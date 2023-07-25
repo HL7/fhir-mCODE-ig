@@ -25,13 +25,19 @@ Because the use of these code systems vary in different institutions, mCODE supp
 
 Implementers should reference the [PrimaryCancerCondition] and [SecondaryCancerCondition] profiles for further details on the use of these terminologies and associated value sets.
 
+#### Clinical Status
+
+On initial diagnosis, the `Condition.clinicalStatus` element will be `active`. Subsequent changes to the disease status should be recorded by updating the `clinicalStatus` element. The permitted values are active, recurrence, relapse, inactive, remission, resolved. Recurrence and relapse are often used interchangeably in the context of cancer. The resource's history can be accessed to see the history of the status value. 
+
+Note that there is another resource profile, the [CancerDiseaseStatus], that is used to record the patient's condition on an encounter-by-encounter basis, and uses values such as improved, stable, worsened, as well as full and partial remission. When the value of CancerDiseaseStatus indicates remission, the `Condition.clinicalStatus` should be updated to reflect that finding.
+
 #### Body Location
 
 Body locations in FHIR are typically represented using a single code. However, a single code is often insufficient to describe where a tumor is located, where a surgery is targeted, or where a radiation treatment is focused. When a single code is insufficient, FHIR recommends using a BodyStructure resource. This is appropriate when the BodyStructure is tracked over time, for example, in the case of [Tumor]. But generally, it is better to describe a body location without using an additional resource.
 
 mCODE has adopted an approach that allows the user to add additional code or codes to further define the body site, without the need to create an independent resource. This takes the form of the [LateralityQualifier] and [BodyLocationQualifier] extensions. These extensions can be used to specify laterality, directionality, and plane.
 
-### Disease Stage
+### Staging
 
 In mCODE, staging information has three components:
 
@@ -48,7 +54,7 @@ A degree of redundancy may exist between these three elements. For example:
 
 The data sender must assure that the values in these three fields are self-consistent.
 
-#### Reporting Staging Information
+#### How to Report Staging Information
 
 Staging information should be provided as Observation resource(s) conforming to the [CancerStage] profile or a constrained version of that profile. CancerStage is a parent profile that should be used only if a more specific profile corresponding to a particular staging system is unavailable. If a patient has been staged more than once, there will be multiple CancerStage observations. 
 
@@ -64,7 +70,7 @@ In the CancerStage profile and its descendants, the following elements are used 
 
 A reference to the CancerStage observation should be given in the PrimaryCancerCondition's `Condition.stage.assessment` element. If staging has been repeated for a patient, the reference in PrimaryCancerCondition should point to the most recent staging information.
 
-#### TNM Staging Information
+#### TNM Staging
 
 TNM staging is used for many types of solid-tumor cancers. The [TNMStageGroup] profile is a specialization of [CancerStage] dedicated to AJCC TNM staging. This profile contains the stage group in `Observation.valueCodeableConcept` and provides optional references in `Observation.hasMember` to additional resources representing the T, N, and M categories. The `Observation.code` element value in TNMStageGroup is used to distinguish the type of staging, e.g., [clinical](https://www.cancer.gov/publications/dictionaries/cancer-terms/def/clinical-staging) or [pathologic](https://www.cancer.gov/publications/dictionaries/cancer-terms/def/pathologic-staging). For other types staging (e.g., retreatment (r) or autopsy (a)), a code indicating "other" staging type is used.
 
@@ -77,7 +83,7 @@ mCODE strongly recommends that the implementers align with AJCC's convention of 
 
 Several widely-used terminologies in the cancer domain, including ICD-O-3 and AJCC staging, are proprietary and cannot be reproduced in this guide. SNOMED-CT has reached an agreement with AJCC to create SNOMED codes that correspond to AJCC stages. mCODE uses these SNOMED codes where applicable, but licensed sites may continue to use AJCC codes and still be in conformance with mCODE. Under the [Fair Use doctrine](https://www.copyright.gov/fair-use/more-info.html), examples illustrating mCODE's representation of cancer diagnoses may use the more familiar AJCC staging values for the purposes of implementation guidance to FHIR developers.
 
-#### Non-TNM Staging Information
+#### Non-TNM Staging
 
 Not all cancer types are staged with a TNM-based staging system, including hematologic cancers like leukemias, multiple myeloma, and some lymphomas. Some specialized solid tumors like gynecologic tumors are staged using the FIGO (International Federation of Gynecology and Obstetrics) staging system. Other non-TNM staging systems include Rai, Binet, and Ann Arbor Cotswold Modification. The staging system should be represented with a code from the [CancerStagingMethodVS] value set, if available.
 
@@ -117,9 +123,21 @@ mCODE includes single FHIR profile, [TumorMarkerTest], for all labs involving se
   * [CancerStage]
 * Staging, AJCC TNM
   * [TNMStageGroup]
-  * [TNMPrimaryTumorCategory]
+  * [TNMPrimaryTumorCategory]All
   * [TNMRegionalNodesCategory]
   * [TNMDistantMetastasesCategory]
+* Staging, non-TNM (Draft Status)
+  * [ALLClassification]
+  * [CLLBinetStage]
+  * [CLLRaiStage]
+  * [CMLPhase]
+  * [GynecologicTumorFIGOStage]
+  * [LymphomaStage]
+  * [MyelomaISSStage]
+  * [MyelomaRISSStage]
+  * [NeuroblastomaINSSStage]
+  * [NeuroblastomaRiskGroup]
+  * [WilmsTumorStage]
 
 ### Extensions
 
@@ -149,13 +167,10 @@ mCODE includes single FHIR profile, [TumorMarkerTest], for all labs involving se
   * [CancerBodyLocationVS]
   * [LateralityQualifierVS]
 
-* Staging, non-TNM
+* Staging, General
   * [CancerStagingMethodVS]
   * [CancerStageTypeVS]
   * [CancerStageValueVS]
-  * STAGING METHOD X  TODO
-    * VALUE SET Y
-    * VALUE SET Z
 
 * Staging, TNM
   * [TNMStagingMethodVS]
@@ -175,6 +190,26 @@ mCODE includes single FHIR profile, [TumorMarkerTest], for all labs involving se
     * [TNMDistantMetastasesCategoryVS]
     * [TNMDistantMetastasesCategoryMaxVS]
     * [TNMDistantMetastasesStagingTypeVS]
+
+* Staging, non-TNM
+    * [BinetStageValueVS]
+    * [ClinOrPathModifierVS]
+    * [CMLPhaseValueVS]
+    * [FABClassificationValueVS]
+    * [FIGOStagingMethodVS]
+    * [FIGOStageValueVS]
+    * [MyelomaISSValueVS]
+    * [MyelomaRISSValueVS]
+    * [LymphomaStagingMethodVS]
+    * [LymphomaStageValueVS]
+    * [LymphomaStageValueModifierVS]
+    * [NeuroblastomaRiskGroupValueVS]
+    * [NeuroblastomaStageValueVS]
+    * [RaiStagingMethodVS]
+    * [RaiStageValueVS]
+    * [WilmsTumorStagingMethodVS]
+    * [WilmsTumorStageValueVS]
+    * [WilmsTumorBodySiteVS]
 
 ### Code Systems
 

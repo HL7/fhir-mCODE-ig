@@ -18,6 +18,7 @@
 [GenomicRegionStudied]: StructureDefinition-mcode-genomic-region-studied.html
 [GenomicsReport]: StructureDefinition-mcode-genomics-report.html
 [GenomicVariant]: StructureDefinition-mcode-genomic-variant.html
+[HistoryOfMetastaticCancer]: StructureDefinition-mcode-history-of-metastatic-cancer.html
 [KarnofskyPerformanceStatus]: StructureDefinition-mcode-karnofsky-performance-status.html
 [MCODEPatientBundle]: StructureDefinition-mcode-patient-bundle.html
 [MCODEPatientGroup]: StructureDefinition-mcode-patient-group.html

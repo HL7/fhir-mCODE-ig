@@ -12,7 +12,7 @@
 [CancerRelatedMedicationAdministration]: StructureDefinition-mcode-cancer-related-medication-administration.html
 [CancerRelatedMedicationRequest]: StructureDefinition-mcode-cancer-related-medication-request.html
 [CancerRelatedSurgicalProcedure]: StructureDefinition-mcode-cancer-related-surgical-procedure.html
-[CancerStageGroup]: StructureDefinition-mcode-cancer-stage-group.html
+[CancerStage]: StructureDefinition-mcode-cancer-stage.html
 [Comorbidities]: StructureDefinition-mcode-comorbidities.html
 [ECOGPerformanceStatus]: StructureDefinition-mcode-ecog-performance-status.html
 [GenomicRegionStudied]: StructureDefinition-mcode-genomic-region-studied.html
@@ -34,6 +34,18 @@
 [Tumor]: StructureDefinition-mcode-tumor.html
 [TumorMarkerTest]: StructureDefinition-mcode-tumor-marker-test.html
 [TumorSize]: StructureDefinition-mcode-tumor-size.html
+
+<!-- mCODE New Staging Profiles -->
+[ALLClassification]: StructureDefinition-mcode-all-fab-classification.html
+[CLLBinetStage]: StructureDefinition-mcode-cll-binet-stage.html
+[CLLRaiStage]: StructureDefinition-mcode-cll-rai-stage.html
+[GynecologicTumorFIGOStage]: StructureDefinition-mcode-gynecologic-tumor-figo-stage.html
+[LymphomaStage]: StructureDefinition-mcode-lymphoma-stage.html
+[MelanomaClarkLevel]: StructureDefinition-mcode-melanoma-clark-level.html
+[MyelomaISSStage]:  StructureDefinition-mcode-myeloma-iss-stage.html
+[MyelomaRISSStage]:  StructureDefinition-mcode-myeloma-riss-stage.html
+[NeuroblastomaINSSStage]: StructureDefinition-mcode-neuroblastoma-inss-stage.html
+[NeuroblastomaRiskGroup]: StructureDefinition-mcode-international-neuroblastoma-risk-group.html
 
 <!-- mCODE Extensions -->
 [BodyLocationQualifier]: StructureDefinition-mcode-body-location-qualifier.html
@@ -66,18 +78,18 @@
 [CancerDiseaseStatusEvidenceTypeVS]: ValueSet-mcode-cancer-disease-status-evidence-type-vs.html
 [CancerDisorderVS]: ValueSet-mcode-cancer-disorder-vs.html
 [CancerRelatedSurgicalProcedureVS]: ValueSet-mcode-cancer-related-surgical-procedure-vs.html
-[CancerStageVS]: ValueSet-mcode-cancer-stage-group-vs.html
+[CancerStageValueVS]: ValueSet-mcode-cancer-stage-value-vs.html
 [CancerStagingMethodVS]: ValueSet-mcode-cancer-staging-method-vs.html
-[CancerStagingTypeVS]: ValueSet-mcode-cancer-staging-type-vs.html
+[CancerStageTypeVS]: ValueSet-mcode-cancer-stage-type-vs.html
 [CarcinomaInSituDisorderVS]: ValueSet-mcode-carcinoma-in-situ-disorder-vs.html
 [TG263CM]: ConceptMap-TG263CM.html
 [ConditionStatusTrendVS]: ValueSet-mcode-condition-status-trend-vs.html
 [CytologicEvidenceOfMalignancyVS]: ValueSet-mcode-cytologic-evidence-malignancy-vs.html
 [HistologyMorphologyBehaviorVS]: ValueSet-mcode-histology-morphology-behavior-vs.html
+[HumanSpecimenTypeVS]: ValueSet-mcode-human-specimen-type-vs.html
 [HypereosinophilicSyndromeDisorderVS]: ValueSet-mcode-hypereosinophilic-syndrome-disorder-vs.html
 [LateralityQualifierVS]: ValueSet-mcode-laterality-qualifier-vs.html
 [MelanomaInSituDisorderVS]: ValueSet-mcode-melanoma-in-situ-disorder-vs.html
-[HumanSpecimenTypeVS]: ValueSet-mcode-human-specimen-type-vs.html
 [PrimaryCancerDisorderVS]: ValueSet-mcode-primary-cancer-disorder-vs.html
 [PrimaryMalignantNeoplasmDisorderVS]: ValueSet-mcode-primary-malignant-neoplasm-disorder-vs.html
 [ProcedureIntentVS]: ValueSet-mcode-procedure-intent-vs.html
@@ -112,8 +124,25 @@
 [TumorSizeMethodVS]: ValueSet-mcode-tumor-size-method-vs.html
 [TumorSizeUnitsVS]: ValueSet-mcode-tumor-size-units-vs.html
 
+<!-- New non-TNM Value Sets -->
+[BinetStageValueVS]: ValueSet-mcode-binet-stage-value-vs.html
+[ClarkLevelValueVS]: ValueSet-mcode-clark-level-value-vs.html
+[ClinOrPathModifierVS]: ValueSet-mcode-clin-or-path-modifier-vs.html
+[FABClassificationValueVS]: ValueSet-mcode-fab-classification-value-vs.html
+[FIGOStagingMethodVS]: ValueSet-mcode-figo-staging-method-vs.html
+[FIGOStageValueVS]: ValueSet-mcode-figo-stage-value-vs.html
+[LymphomaStagingMethodVS]: ValueSet-mcode-lymphoma-staging-method-vs.html
+[LymphomaStageValueVS]: ValueSet-mcode-lymphoma-stage-value-vs.html
+[LymphomaStageValueModifierVS]: ValueSet-mcode-lymphoma-stage-value-modifier-vs.html
+[MyelomaISSValueVS]: ValueSet-mcode-myeloma-iss-stage-value-vs.html
+[MyelomaRISSValueVS]: ValueSet-mcode-myeloma-riss-stage-value-vs.html
+[NeuroblastomaRiskGroupValueVS]: ValueSet-mcode-neuroblastoma-risk-group-value-vs.html
+[NeuroblastomaStageValueVS]: ValueSet-mcode-neuroblastoma-inss-stage-value-vs.html
+[RaiStagingMethodVS]: ValueSet-mcode-rai-staging-method-vs.html
+[RaiStageValueVS]: ValueSet-mcode-rai-stage-value-vs.html
+
 <!-- External Value Sets -->
-[ECOG_Performance status]:  http://loinc.org/vs/LL529-9
+[ECOG performance status]:  http://loinc.org/vs/LL529-9
 [Genomic coordinate system]: http://loinc.org/vs/LL5323-2
 [Karnofsky performance status]:  http://loinc.org/vs/LL4986-7
 [Medication Clinical Drug (RxNorm)]: http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1010.4

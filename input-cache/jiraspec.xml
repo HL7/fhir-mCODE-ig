@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<specification xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ballotUrl="http://hl7.org/fhir/us/mcode/2023May" ciUrl="http://build.fhir.org/ig/HL7/fhir-mCODE-ig" defaultVersion="current" defaultWorkgroup="cic" gitUrl="https://github.com/HL7/fhir-mCODE-ig" url="http://hl7.org/fhir/us/mcode">
+<specification xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ballotUrl="http://hl7.org/fhir/us/mcode/2023May" ciUrl="http://build.fhir.org/ig/HL7/fhir-mCODE-ig" defaultVersion="3.0.0-ballot" defaultWorkgroup="cic" gitUrl="https://github.com/HL7/fhir-mCODE-ig" url="http://hl7.org/fhir/us/mcode">
 <version code="current" url="http://build.fhir.org/ig/HL7/fhir-mCODE-ig"/>
 <version code="3.0.0-ballot" url="http://hl7.org/fhir/us/mcode/2023May"/>
 <version code="2.1.0" url="http://hl7.org/fhir/us/mcode/STU2.1"/>
 <version code="2.0.0" url="http://hl7.org/fhir/us/mcode/STU2"/>
 <version code="1.16.0" deprecated="true" url="http://hl7.org/fhir/us/mcode/2021May"/>
-<version code="1.0.1" deprecated="true" url="http://hl7.org/fhir/us/mcode/STU1"/>
 <version code="1.0.0" deprecated="true" url="http://hl7.org/fhir/us/mcode/STU1"/>
 <version code="0.9.1" deprecated="true" url="http://hl7.org/fhir/us/mcode/2019Sep"/>
+<version code="1.0.1" deprecated="true" url="http://hl7.org/fhir/us/mcode/STU1"/>
 <version code="0.1" deprecated="true"/>
 <artifactPageExtension value="-definitions"/>
 <artifactPageExtension value="-examples"/>
@@ -269,9 +269,11 @@
 <artifact id="Observation/genomic-variant-somatic-single-nucleotide" key="Observation-genomic-variant-somatic-single-nucleotide" name="genomic-variant-somatic-single-nucleotide"/>
 <artifact id="DiagnosticReport/genomics-report-jenny-m" key="DiagnosticReport-genomics-report-jenny-m" name="genomics-report-jenny-m"/>
 <artifact id="DiagnosticReport/genomics-report-john-anyperson" key="DiagnosticReport-genomics-report-john-anyperson" name="genomics-report-john-anyperson"/>
-<artifact id="Patient/gx-cancer-patient-incredible-hulk" key="Patient-gx-cancer-patient-incredible-hulk" name="gx-cancer-patient-incredible-hulk"/>
-<artifact id="Bundle/gx-genomic-bundle-incredible-hulk" key="Bundle-gx-genomic-bundle-incredible-hulk" name="gx-genomic-bundle-incredible-hulk"/>
-<artifact id="Observation/gx-genomic-diagnostic-implication-pof1b" key="Observation-gx-genomic-diagnostic-implication-pof1b" name="gx-genomic-diagnostic-implication-pof1b"/>
+<artifact id="Patient/gx-cancer-patient-adam-anyperson" key="Patient-gx-cancer-patient-adam-anyperson" name="gx-cancer-patient-adam-anyperson"/>
+<artifact deprecated="true" id="Patient/gx-cancer-patient-incredible-hulk" key="Patient-gx-cancer-patient-incredible-hulk" name="gx-cancer-patient-incredible-hulk"/>
+<artifact id="Bundle/gx-genomic-bundle-adam-anyperson" key="Bundle-gx-genomic-bundle-adam-anyperson" name="gx-genomic-bundle-adam-anyperson"/>
+<artifact deprecated="true" id="Bundle/gx-genomic-bundle-incredible-hulk" key="Bundle-gx-genomic-bundle-incredible-hulk" name="gx-genomic-bundle-incredible-hulk"/>
+<artifact id="Observation/gx-genomic-diagnostic-implication-bap1" key="Observation-gx-genomic-diagnostic-implication-bap1" name="gx-genomic-diagnostic-implication-bap1"/><artifact id="Observation/gx-genomic-diagnostic-implication-pof1b" key="Observation-gx-genomic-diagnostic-implication-pof1b" name="gx-genomic-diagnostic-implication-pof1b"/>
 <artifact id="Observation/gx-genomic-diagnostic-implication-polrmt" key="Observation-gx-genomic-diagnostic-implication-polrmt" name="gx-genomic-diagnostic-implication-polrmt"/>
 <artifact id="Observation/gx-genomic-msi" key="Observation-gx-genomic-msi" name="gx-genomic-msi"/>
 <artifact id="Specimen/gx-genomic-specimen-tumornormal-normal" key="Specimen-gx-genomic-specimen-tumornormal-normal" name="gx-genomic-specimen-tumornormal-normal"/>
@@ -292,7 +294,8 @@
 <artifact id="Observation/gx-genomic-variant-somatic-mycn" key="Observation-gx-genomic-variant-somatic-mycn" name="gx-genomic-variant-somatic-mycn"/>
 <artifact id="Observation/gx-genomic-variant-somatic-pof1b" key="Observation-gx-genomic-variant-somatic-pof1b" name="gx-genomic-variant-somatic-pof1b"/>
 <artifact id="Observation/gx-genomic-variant-somatic-polrmt" key="Observation-gx-genomic-variant-somatic-polrmt" name="gx-genomic-variant-somatic-polrmt"/>
-<artifact id="DiagnosticReport/gx-genomics-report-incredible-hulk" key="DiagnosticReport-gx-genomics-report-incredible-hulk" name="gx-genomics-report-incredible-hulk"/>
+<artifact id="DiagnosticReport/gx-genomics-report-adam-anyperson" key="DiagnosticReport-gx-genomics-report-adam-anyperson" name="gx-genomics-report-adam-anyperson"/>
+<artifact deprecated="true" id="DiagnosticReport/gx-genomics-report-incredible-hulk" key="DiagnosticReport-gx-genomics-report-incredible-hulk" name="gx-genomics-report-incredible-hulk"/>
 <artifact id="ServiceRequest/gx-order-tumornormal-tempus-inc" key="ServiceRequest-gx-order-tumornormal-tempus-inc" name="gx-order-tumornormal-tempus-inc"/>
 <artifact id="Practitioner/gx-practitioner-test-pathologist" key="Practitioner-gx-practitioner-test-pathologist" name="gx-practitioner-test-pathologist"/>
 <artifact id="Organization/gx-us-core-organization-tempus-inc" key="Organization-gx-us-core-organization-tempus-inc" name="gx-us-core-organization-tempus-inc"/>

@@ -1,4 +1,28 @@
-The following changes occurred between [STU 2](http://hl7.org/fhir/us/mcode/STU2/) (January 2022) and STU 3. For a history of previous changes, please see the prior change logs in the [appropriate versions](http://hl7.org/fhir/us/mcode/history.html).
+The following changes occurred between the [STU 3 ballot (March 2023)] and publication of STU 3, primarily in response to ballot comments.
+
+### Non-TNM Staging Profiles ([FHIR-41163](https://jira.hl7.org/browse/FHIR-41163), [FHIR-41003](https://jira.hl7.org/browse/FHIR-41003))
+
+mCODE 2.1 and 3.0.0-ballot did not include any profiles for non-TNM staging, so there was no indication on how to use mCODE to represent staging for lymphoma and leukemia, for example. To address this issue, several non-TNM staging profiles were added. Given the numerous non-TNM staging systems, a small set of profiles were added for illustrative purposes:
+
+* [ALLClassification]
+* [CLLBinetStage]
+* [CLLRaiStage]
+* [GynecologicTumorFIGOStage]
+* [LymphomaStage]
+* [MelanomaClarkLevel]
+* [MyelomaISSStage]
+* [MyelomaRISSStage]
+* [NeuroblastomaINSSStage]
+* [NeuroblastomaRiskGroup]
+
+### New History of Metastatic Disease Profile
+
+### Expanded Value Sets
+
+### Clarification of Observation.code and Observation.method in CancerStage
+
+
+The following changes occurred between [STU 2 publication](http://hl7.org/fhir/us/mcode/STU2/) (January 2022) and the STU 3 ballot (March 2023). For a history of previous changes, please see the prior change logs in the [appropriate versions](http://hl7.org/fhir/us/mcode/history.html).
 
 ### Allowing the Use of AJCC-equivalent SNOMED Codes for Staging
 
@@ -24,23 +48,34 @@ The binding strength for these value sets remains "preferred", meaning that the 
 
 ### Staging Profiles
 
-Previously, the [CancerStageGroup] profile contained optional elements specific to TNM staging. This was misleading because CancerStageGroup could be used for non-TNM staging. To avoid this ambiguity, [CancerStageGroup] no longer contains the optional TNM-specific content. A separate child profile, [TNMStageGroup], has been added as a template for TNM-specific staging. This change is backward compatible, since any resource complying with the STU 2 version of CancerStageGroup will comply with STU 3 CancerStageGroup, and every resource complying to TNMStageGroup automatically complies to CancerStageGroup.
+#### Common Parent Profile for TNM and non-TNM Staging
 
-### Staging Value Sets
+Previously, the [CancerStage] profile contained optional elements specific to TNM staging. This was confusing because CancerStage was intended also for non-TNM staging. To avoid this ambiguity, [CancerStage] no longer contains the optional TNM-specific content. A separate child profile, [TNMStageGroup], has been added as a template for TNM-specific staging. This change is backward compatible, since any resource complying with the STU 2 version (named CancerStageGroup) will comply with STU 3 CancerStage, and every resource complying to TNMStageGroup automatically complies to CancerStage.
 
-To support the separation of [TNMStageGroup] from more generic [CancerStageGroup] profile, several value sets were renamed. In FHIR, renaming value sets has little or no impact on implementations, since value set names are not directly used in information exchanges. The following TNM value sets were renamed for clarity:
+#### Value Set Renaming
+
+To support the separation of [TNMStageGroup] from more generic [CancerStage] profile, several value sets were renamed. In FHIR, renaming value sets has little or no impact on implementations, since value set names and ids are not used in information exchanges (although they are involved in validation algorithms). The following value sets were renamed for clarity:
 
 * CancerStageGroupVS was renamed [TNMStageGroupVS], because it contains the TNM stage groups.
 * ObservationCodesDistantMetastasesVS was renamed [TNMDistantMetastasesStagingTypeVS] because it used for TNM staging.
 * ObservationCodesPrimaryTumorVS was renamed [TNMPrimaryTumorStagingTypeVS], because it used for TNM staging.
 * ObservationCodesRegionalNodesVS was renamed [TNMRegionalNodesStagingTypeVS], because it used for TNM staging.
 * ObservationCodesStageGroupVS was renamed [TNMStageGroupStagingTypeVS], because it used for TNM staging.
-
-In addition, the following value sets are now associated with the non-TNM [CancerStageGroup] profile:
-
 * CancerStagingSystemVS was renamed [CancerStagingMethodVS], because it populates `Observation.method`.
-* [CancerStagingTypeVS] was introduced to populate the `Observation.code` element in the CancerStageGroup profile.
-* [CancerStageVS] was introduced to populate the `Observation.valueCodeableConcept` element in the CancerStageGroup profile.
+
+In addition, the following new value sets are now associated with the parent profile, [CancerStage]:
+
+* [CancerStageTypeVS] was introduced to populate the `Observation.code` element in the CancerStage profile. The value set contains LOINC, SNOMED, and NCI Thesaurus terms that represent staging observables, such as "clinical M stage" or "FIGO ovarian tumor stage". These values identify what is being reported in Observation's value element.
+* [CancerStageValueVS] was introduced to populate the `Observation.valueCodeableConcept` element in the CancerStage profile. Because there are numerous possible staging values across all staging systems, this value set is only a brief sampling, presented as an example.
+
+#### Staging Value Set Expansion
+
+* [CancerStagingMethodVS] (formerly CancerStagingSystemVS):
+  * Several staging methods in SNOMED were added (see https://jira.hl7.org/browse/FHIR-37860), including:
+    * SCT#1149162008 "International Staging System for multiple myeloma (staging scale)"
+    * SCT#1149163003 "Revised International Staging System for multiple myeloma (staging scale)"
+  * Staging systems from NCI Thesaurus that are not covered in SNOMED CT have been added.
+  * Certain children of Tumor staging (SCTID: 2542920070) (see https://jira.hl7.org/browse/FHIR-34448) were removed because they represent stage values rather than staging methods.
 
 ### Comorbidity Redesign
 

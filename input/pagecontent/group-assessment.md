@@ -22,23 +22,25 @@ Beyond the requirements of US Core, under [Clinical Laboratory Improvement Amend
 
 Vital signs are measurements of the most essential, or "vital" body functions. For mCODE, blood pressure, body height, and body weight are believed to be most critical to assessment and treatment. Instead of defining its own profiles, mCODE uses the [FHIR R4 vital sign profile](http://hl7.org/fhir/R4/observation-vitalsigns.html), which is incorporated into [US Core](http://hl7.org/fhir/us/core/index.html). As of Version 3.2, US Core defines its own set of vital signs profiles. These profiles are derived from the same FHIR base vital sign profile. mCODE accepts vital sign data conforming to either FHIR or US Core profiles. Examples of height, weight, and blood pressure are given in both sources.
 
+### History of Metastatic Disease
+
+Recurrences and unrelated cancers sometimes occur years after previous metastatic disease, for example, in the case of an adult with history of childhood leukemia. The details of the previous disease may be unavailable, but the fact that the patient had cancer previously may be clinically significant. The profile [HistoryOfMetastaticCancer] provides a method of recording this fact in the absence of other details.
+
 ### Profiles
 
 * [Comorbidities]
 * [ECOGPerformanceStatus]
 * [FHIR Vital Signs](https://www.hl7.org/fhir/observation-vitalsigns.html)
+* [HistoryOfMetastaticCancer]
 * [KarnofskyPerformanceStatus]
 * [US Core Vital Signs](https://hl7.org/fhir/us/core/4.0.0/StructureDefinition-us-core-vital-signs.html) (version 4.0 and higher)
 * [US Core DiagnosticReport Profile for Laboratory Results Reporting](http://hl7.org/fhir/us/core/StructureDefinition-us-core-diagnosticreport-lab.html)
 * [US Core Laboratory Result Profile](http://hl7.org/fhir/us/core/StructureDefinition-us-core-observation-lab.html)
 
-### Extensions
-
-* [CancerDiseaseStatusEvidenceType]
-
 ### Value Sets
 
-* [ECOG_Performance status] (external)
+* [ECOG performance status] (external)
+* [HistoryOfMetastaticMalignantNeoplasmVS]
 * [Karnofsky performance status] (external)
 
 {% include markdown-link-references.md %}

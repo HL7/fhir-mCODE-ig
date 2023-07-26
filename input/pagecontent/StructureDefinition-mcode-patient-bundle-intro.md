@@ -3,6 +3,7 @@
 The bundle MUST contain exactly one Patient resource conforming to the [CancerPatient] profile (any patient conforming with US Core Patient is also conformant). The bundle MUST also contain following mCODE-conformant resources, if available to the server:
 
 * Condition resources conforming to [PrimaryCancerCondition] and [SecondaryCancerCondition] profiles
+* Condition resources conforming to [HistoryMetastaticCancer] profiles
 * Observation resources conforming to [CancerDiseaseStatus] profile
 * Observation resources conforming to [Comorbidities] profile
 * Observation resources conforming to [ECOGPerformanceStatus] and/or [KarnofskyPerformanceStatus] profiles

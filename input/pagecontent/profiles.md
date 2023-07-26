@@ -12,6 +12,7 @@ The following profiles have been defined for this implementation guide:
 * [GenomicRegionStudied]
 * [GenomicsReport]
 * [GenomicVariant]
+* [HistoryOfMetastaticCancer]
 * [HumanSpecimen]
 * [KarnofskyPerformanceStatus]
 * [mCODEPatientBundle]

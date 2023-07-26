@@ -88,10 +88,17 @@ Based on user feedback on the complexity of the STU 2 design, [comorbidities][Co
 
 ### Value Set Content Changes
 
-* Temporary codes for lymph node levels IIA and IIB, missing from previous versions, were added.
-* A code for "multiple" was added to RadiotherapyTreatmentLocationQualifierVS
-* "Noncompliance with treatment (finding)" was added to TreatmentTerminationReasonVS
-* In some intensionally-defined SNOMED CT value sets, the `is-a` operator was replaced with the `descendant-of` operator, removing the top-level code when it was not a valid choice.
+* The following improvements were made to [CancerStagingMethodVS] (formerly CancerStagingSystemVS) value set:
+  * Certain children of Tumor staging (SCTID: 2542920070) (see https://jira.hl7.org/browse/FHIR-34448) were removed because they represent stage values rather than staging methods.
+  * The following staging methods were added (see https://jira.hl7.org/browse/FHIR-37860):
+    * SCT#1149162008 "International Staging System for multiple myeloma (staging scale)"
+    * SCT#1149163003 "Revised International Staging System for multiple myeloma (staging scale)"
+    * SCT#246165003 "Extent of disease (attribute)"
+  * Temporary codes for lymph node levels IIA and IIB, missing from previous versions, were added.
+  * A code for "multiple" was added to RadiotherapyTreatmentLocationQualifierVS
+  * "Noncompliance with treatment (finding)" was added to TreatmentTerminationReasonVS
+  * In some intensionally-defined SNOMED CT value sets, the `is-a` operator was replaced with the `descendant-of` operator, removing the top-level code when it was not a valid choice.
+  * New value set, [HistoryOfMetastaticMalignantNeoplasmVS], was added for enabling more complete reporting of patient history.
 
 ### Update to US Core 5.0.1
 
@@ -131,6 +138,10 @@ mCODE is now is explicitly dependent on the [Genomics Reporting IG STU2 (v2.0.0)
 ### Change in mCODE Bundle Slicing
 
 The mCODE bundle definition now slices on resource type, rather than profile. Slicing logic was changed because, in some cases, instances could not be assigned unambigously to a slice, causing the FHIR validator to output errors. With this change, the assignment to a slice will always be unambiguous. This change has no effect on the contents or use of the mCODE bundle.
+
+### Addition of Patient History of Metastatic Cancer
+
+To enable more complete reporting of patient history, a new profile for recording a patient's cancer history was added. [HistoryOfMetastaticCancer]
 
 ### Maturity Indicators
 

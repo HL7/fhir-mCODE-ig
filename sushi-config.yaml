@@ -1,6 +1,6 @@
 id: hl7.fhir.us.mcode
 canonical: http://hl7.org/fhir/us/mcode
-version:  3.0.0-ballot
+version:  3.0.0
 name: MinimalCommonOncologyDataElements
 title: "minimal Common Oncology Data Elements (mCODE) Implementation Guide"
 status: draft
@@ -21,7 +21,7 @@ parameters:
   path-expansion-params: '../../exp-params.json'  #path is relative to [base]/fsh-generated/resources
   path-binary: input/attachments
 copyrightYear: 2019+
-releaseLabel: 2023May
+releaseLabel: 3.0.0
 pages:
   index.md:
     title: Home

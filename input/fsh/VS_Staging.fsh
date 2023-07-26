@@ -161,6 +161,14 @@ Description: "Staging system or method used for staging cancers. The terms in th
 * SCT#254382001 "Trophoblastic malignancy staging system (tumor staging)"
 * SCT#254368001 "United Kingdom children's cancer study group central nervous system tumor staging system (tumor staging)"
 * SCT#254378003 "Walter Reed testicular tumor staging system (tumor staging)"
+* SCT_TBD#USCRS-34949 "Enneking surgical staging system (tumor staging)" // requested June 2023
+* SCT_TBD#USCRS-34955 "UICC Classification of Malignant Tumours 8th Edition (tumor staging)" // requested June 2023
+* SCT_TBD#USCRS-34956 "UICC Classification of Malignant Tumours 7th Edition (tumor staging)"  // requested June 2023
+* SCT_TBD#USCRS-34957 "Children's Oncology Group Renal Staging System (tumor staging)" // requested June 2023
+* SCT_TBD#1287647003 "Toronto Childhood Cancer Stage Guidelines Version 2 (tumor staging)" //USCRS-34951  requested June 2023
+* SCT_TBD#1287648008 "Masaoka-Koga stage classification for thymic malignancies (tumor staging)" // #USCRS-34950 requested June 2023
+* SCT_TBD#1287643004 "International Neuroblastoma Risk Group staging system (tumor staging)"  // #USCRS-34952  requested June 2023
+* SCT_TBD#1287646007 "International Germ Cell Consensus Classification (tumor staging)" //#USCRS-34948 requested June 2023
 // NCIT Terms
 * NCIT#C191343 "AJCC Cancer Staging Manual 4th Edition"
 * NCIT#C191344 "AJCC Cancer Staging Manual 5th Edition"

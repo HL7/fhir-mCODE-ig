@@ -14,7 +14,7 @@ The mCODE **Patient Information** group contains the following information about
 
 ### Value Sets
 
-* [HistoryOfMalignantNeoplasmVS]
+* [HistoryOfMetastaticMalignantNeoplasmVS]
 * [HumanSpecimenTypeVS]
 
 {% include markdown-link-references.md %}

@@ -63,7 +63,7 @@ Based on user feedback on the complexity of the STU 2 design, [comorbidities][Co
   * A code for "multiple" was added to RadiotherapyTreatmentLocationQualifierVS
   * "Noncompliance with treatment (finding)" was added to TreatmentTerminationReasonVS
   * In some intensionally-defined SNOMED CT value sets, the `is-a` operator was replaced with the `descendant-of` operator, removing the top-level code when it was not a valid choice.
-  * New value set, [HistoryOfMalignantNeoplasmVS], was added for enabling more complete reporting of patient history.
+  * New value set, [HistoryOfMetastaticMalignantNeoplasmVS], was added for enabling more complete reporting of patient history.
 
 ### Update to US Core 5.0.1
 
@@ -104,9 +104,9 @@ mCODE is now is explicitly dependent on the [Genomics Reporting IG STU2 (v2.0.0)
 
 The mCODE bundle definition now slices on resource type, rather than profile. Slicing logic was changed because, in some cases, instances could not be assigned unambigously to a slice, causing the FHIR validator to output errors. With this change, the assignment to a slice will always be unambiguous. This change has no effect on the contents or use of the mCODE bundle.
 
-### Addition of Patient History of Malignant Disease
+### Addition of Patient History of Metastatic Cancer
 
-To enable more complete reporting of patient history, a new profile for recording a patient's cancer history was added.
+To enable more complete reporting of patient history, a new profile for recording a patient's cancer history was added. [HistoryOfMetastaticCancer]
 
 ### Maturity Indicators
 

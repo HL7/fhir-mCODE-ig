@@ -165,6 +165,8 @@ Description: "Staging system or method used for staging cancers. The terms in th
 * SCT_TBD#USCRS-34955 "UICC Classification of Malignant Tumours 8th Edition (tumor staging)" // requested June 2023
 * SCT_TBD#USCRS-34956 "UICC Classification of Malignant Tumours 7th Edition (tumor staging)"  // requested June 2023
 * SCT_TBD#USCRS-34957 "Children's Oncology Group Renal Staging System (tumor staging)" // requested June 2023
+* SCT_TBD#USCRS-34947  "Surveillance Epidemiology and End Results Program Extent of Disease, 2018 edition (tumor staging)"    // requested 6/9/23
+* SCT_TBD#USCRS-34958 "Children's Oncology Group Liver Staging System (tumor staging)" // requested 6/13/23
 * SCT_TBD#1287647003 "Toronto Childhood Cancer Stage Guidelines Version 2 (tumor staging)" //USCRS-34951  requested June 2023
 * SCT_TBD#1287648008 "Masaoka-Koga stage classification for thymic malignancies (tumor staging)" // #USCRS-34950 requested June 2023
 * SCT_TBD#1287643004 "International Neuroblastoma Risk Group staging system (tumor staging)"  // #USCRS-34952  requested June 2023

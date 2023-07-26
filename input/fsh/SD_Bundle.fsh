@@ -30,6 +30,7 @@ Description: "A collection of data for an mCODE cancer patient."
     ECOGPerformanceStatus or
     GenomicRegionStudied or
     GenomicVariant or
+    HistoryOfMetastaticCancer or
     KarnofskyPerformanceStatus or
     TNMDistantMetastasesCategory or
     TNMPrimaryTumorCategory or

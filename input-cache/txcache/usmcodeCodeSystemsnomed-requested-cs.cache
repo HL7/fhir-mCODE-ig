@@ -6,6 +6,130 @@
     "include" : [{
       "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/snomed-requested-cs",
       "concept" : [{
+        "code" : "USCRS-34949",
+        "display" : "Enneking surgical staging system (tumor staging)"
+      },
+      {
+        "code" : "USCRS-34955",
+        "display" : "UICC Classification of Malignant Tumours 8th Edition (tumor staging)"
+      },
+      {
+        "code" : "USCRS-34956",
+        "display" : "UICC Classification of Malignant Tumours 7th Edition (tumor staging)"
+      },
+      {
+        "code" : "USCRS-34957",
+        "display" : "Children's Oncology Group Renal Staging System (tumor staging)"
+      },
+      {
+        "code" : "USCRS-34947",
+        "display" : "Surveillance Epidemiology and End Results Program Extent of Disease, 2018 edition (tumor staging)"
+      },
+      {
+        "code" : "USCRS-34958",
+        "display" : "Children's Oncology Group Liver Staging System (tumor staging)"
+      },
+      {
+        "code" : "1287647003",
+        "display" : "Toronto Childhood Cancer Stage Guidelines Version 2 (tumor staging)"
+      },
+      {
+        "code" : "1287648008",
+        "display" : "Masaoka-Koga stage classification for thymic malignancies (tumor staging)"
+      },
+      {
+        "code" : "1287643004",
+        "display" : "International Neuroblastoma Risk Group staging system (tumor staging)"
+      },
+      {
+        "code" : "1287646007",
+        "display" : "International Germ Cell Consensus Classification (tumor staging)"
+      }]
+    }]
+  }
+}}####
+e: {
+  "valueSet" : {
+  "resourceType" : "ValueSet",
+  "status" : "active",
+  "expansion" : {
+    "identifier" : "urn:uuid:e9733575-e216-4191-88ed-6d5e371acbbc",
+    "timestamp" : "2023-07-26T12:29:41.156Z",
+    "total" : 10,
+    "parameter" : [{
+      "name" : "limitedExpansion",
+      "valueBoolean" : true
+    },
+    {
+      "name" : "excludeNested",
+      "valueBoolean" : true
+    },
+    {
+      "name" : "version",
+      "valueUri" : "http://hl7.org/fhir/us/mcode/CodeSystem/snomed-requested-cs|3.0.0-ballot"
+    }],
+    "contains" : [{
+      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/snomed-requested-cs",
+      "code" : "USCRS-34949",
+      "display" : "Enneking surgical staging system (tumor staging)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/snomed-requested-cs",
+      "code" : "USCRS-34955",
+      "display" : "UICC Classification of Malignant Tumours 8th Edition (tumor staging)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/snomed-requested-cs",
+      "code" : "USCRS-34956",
+      "display" : "UICC Classification of Malignant Tumours 7th Edition (tumor staging)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/snomed-requested-cs",
+      "code" : "USCRS-34957",
+      "display" : "Children's Oncology Group Renal Staging System (tumor staging)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/snomed-requested-cs",
+      "code" : "USCRS-34947",
+      "display" : "Surveillance Epidemiology and End Results Program Extent of Disease, 2018 edition (tumor staging)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/snomed-requested-cs",
+      "code" : "USCRS-34958",
+      "display" : "Children's Oncology Group Liver Staging System (tumor staging)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/snomed-requested-cs",
+      "code" : "1287647003",
+      "display" : "Toronto Childhood Cancer Stage Guidelines Version 2 (tumor staging)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/snomed-requested-cs",
+      "code" : "1287648008",
+      "display" : "Masaoka-Koga stage classification for thymic malignancies (tumor staging)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/snomed-requested-cs",
+      "code" : "1287643004",
+      "display" : "International Neuroblastoma Risk Group staging system (tumor staging)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/snomed-requested-cs",
+      "code" : "1287646007",
+      "display" : "International Germ Cell Consensus Classification (tumor staging)"
+    }]
+  }
+},
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : false, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "inactive" : true,
+    "include" : [{
+      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/snomed-requested-cs",
+      "concept" : [{
         "code" : "1284814003",
         "display" : "Lymph node level IIA (qualifier value)"
       },
@@ -21,8 +145,8 @@ e: {
   "resourceType" : "ValueSet",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:2886e077-9804-40c0-896e-2fc5388ba798",
-    "timestamp" : "2023-07-26T09:39:31.293Z",
+    "identifier" : "urn:uuid:ac024975-791e-415b-af21-d59e9ecafbfd",
+    "timestamp" : "2023-07-26T12:29:41.797Z",
     "total" : 2,
     "parameter" : [{
       "name" : "limitedExpansion",
@@ -73,8 +197,8 @@ e: {
   "resourceType" : "ValueSet",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:9747b602-af06-402e-b414-a72fb697ebca",
-    "timestamp" : "2023-07-26T09:39:31.434Z",
+    "identifier" : "urn:uuid:515b9af4-c43d-4514-b1e0-758da5f3937b",
+    "timestamp" : "2023-07-26T12:29:41.937Z",
     "total" : 2,
     "parameter" : [{
       "name" : "limitedExpansion",

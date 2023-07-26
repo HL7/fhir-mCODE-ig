@@ -52,6 +52,7 @@ Description: "Extension capturing modality and technique of a given radiotherapy
 * extension[technique].value[x] from RadiotherapyTechniqueVS (required)
 * obeys TechniquesForNeutronBeamModality
 * obeys TechniquesForPhotonBeamModality
+* obeys TechniquesForPhotonBeamModalityv2
 * obeys TechniquesForElectronBeamModality
 * obeys TechniquesForCarbonIonBeamModality
 * obeys TechniquesForProtonBeamModality
@@ -64,13 +65,15 @@ Description: "Extension capturing modality and technique of a given radiotherapy
 * obeys ModalityTextRequiredForOther
 * obeys TechniqueTextRequiredForOther
 
+
 Invariant: ModalityTextRequiredForOther
 Description:  "Require a text literal for code other"
-Expression: "extension.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-modality').exists() and
+* expression = "extension.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-modality').exists() and
          extension.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-modality').value.exists(coding.system = 'http://terminology.hl7.org/CodeSystem/v3-NullFlavor' and coding.code = 'UNC')
    implies
        extension.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-modality').value.exists(text)"
-Severity: #error
+* severity =  #error
+
 
 Invariant: TechniqueTextRequiredForOther
 Description:  "Require a text literal for code other"
@@ -80,16 +83,29 @@ Expression: "extension.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefini
        extension.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-technique').value.exists(text)"
 Severity: #error
 
+RuleSet: ModTechniqueConstraint(modCode, techCodes)
+* expression = "extension.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-modality').exists() and
+         extension.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-technique').exists() and
+         extension.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-modality').value.exists(coding.system = 'http://snomed.info/sct' and coding.code = '{modCode}')
+   implies
+         extension.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-technique').value.exists( {techCodes})"
+* severity = #error
+
+Invariant: TechniquesForPhotonBeamModalityv2
+Description: "Allowed Techniques for Photon Beam Modality"
+* insert ModTechniqueConstraint([['1156506007']], [[(coding.code = 'UNC' or coding.code = '441799006' or coding.code = '1156530009' or coding.code = '1162782007' or coding.code = '1156526006' or coding.code = '168524008' or coding.code = '1156530009' or coding.code = '1163157007')]])
+
+
 Invariant: TechniquesForPhotonBeamModality
 Description:  "Allowed Techniques for Photon Beam Modality"
-Expression: "extension.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-modality').exists() and
+* expression = "extension.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-modality').exists() and
          extension.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-technique').exists() and
          extension.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-modality').value.exists(coding.system = 'http://snomed.info/sct' and coding.code = '1156506007')
    implies
          extension.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-technique').value.exists(
            (coding.code = 'UNC' or coding.code = '441799006' or coding.code = '1156530009' or coding.code = '1162782007' or coding.code = '1156526006' or coding.code = '168524008' or coding.code = '1156530009' or coding.code = '1163157007'))"
 
-Severity: #error
+* severity = #error
 
 
 Invariant: TechniquesForElectronBeamModality

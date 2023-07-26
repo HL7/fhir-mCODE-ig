@@ -239,9 +239,11 @@ Description: "Various modifiers that can be applied to body locations where radi
 * SCT#255204007   "Multiple (qualifier value)"
 * SCT#255503000  "Entire (qualifier value)" // flagged spuriously as invalid
 * SCT#255609007  "Partial (qualifier value)"
-//* SCT#7771000    "Left (qualifier value)" - now in separate lateralityQualifier
-//* SCT#24028007    "Right (qualifier value)" - now in separate lateralityQualifier
-//* SCT#51440002    "Right and left (qualifier value)" - now in separate lateralityQualifier
+// we need left, right, right and left in this value set, because there is no laterality qualifier in the Radiotherapy Volume Profile 
+// MK restored 7/26/2023
+* SCT#7771000    "Left (qualifier value)"
+* SCT#24028007    "Right (qualifier value)"
+* SCT#51440002    "Right and left (qualifier value)"
 * SCT#14414005   "Peripheral (qualifier value)"
 * SCT#26216008   "Central (qualifier value)"
 * SCT#260235002  "Core (qualifier value)"
@@ -249,7 +251,7 @@ Description: "Various modifiers that can be applied to body locations where radi
 * SCT#260521003  "Internal (qualifier value)"
 * SCT#261074009  "External (qualifier value)"
 * SCT#260548002  "Oral (qualifier value)"
-* SCT#18769003   "Adjacent" // or "Juxta-posed (qualifier value)"
+* SCT#18769003   "Adjacent" // aka "Juxta-posed (qualifier value)"
 * SCT#1217011006 "Non-adjacent (qualifier value)"
 * SCT#258400004 "Lymph node level I (qualifier value)"
 * SCT#1162616006 "Lymph node level IA (qualifier value)"
@@ -276,8 +278,6 @@ Description: "Various modifiers that can be applied to body locations where radi
 * SCT#1162614009 "Lymph node level X (qualifier value)"
 * SCT#1162615005 "Lymph node level XA (qualifier value)"
 * SCT#1162613003 "Lymph node level XB (qualifier value)"
-
-
 
 
 ValueSet: RadiotherapyTreatmentLocationVS

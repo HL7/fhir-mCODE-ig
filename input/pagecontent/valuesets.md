@@ -17,9 +17,9 @@ The following value sets are defined in this implementation guide:
 * [CancerDiseaseStatusEvidenceTypeVS]
 * [CancerDisorderVS]
 * [CancerRelatedSurgicalProcedureVS]
-* [CancerStageVS]
+* [CancerStageValueVS]
 * [CancerStagingMethodVS]
-* [CancerStagingTypeVS]
+* [CancerStageTypeVS]
 * [CarcinomaInSituDisorderVS]
 * [ConditionStatusTrendVS]
 * [CytologicEvidenceOfMalignancyVS]
@@ -63,9 +63,25 @@ The following value sets are defined in this implementation guide:
 * [TumorSizeMethodVS]
 * [TumorSizeUnitsVS]
 
+The following draft (maturity level 0) value sets are defined in this implementation guide:
+
+* [BinetStageValueVS]
+* [ClarkLevelValueVS]  
+* [ClinOrPathModifierVS]
+* [FABClassificationValueVS]
+* [FIGOStagingMethodVS]
+* [FIGOStageValueVS]
+* [NeuroblastomaRiskGroupValueVS]
+* [NeuroblastomaStageValueVS]
+* [LymphomaStagingMethodVS]
+* [LymphomaStageValueVS]
+* [LymphomaStageValueModifierVS]
+* [RaiStagingMethodVS]
+* [RaiStageValueVS]
+
 ### External Value Sets Used in mCODE
 
-* [ECOG_Performance status]
+* [ECOG performance status]
 * [Karnofsky performance status]
 * [Medication Clinical Drug (RxNorm)]
 

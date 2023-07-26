@@ -21,7 +21,7 @@ parameters:
   path-expansion-params: '../../exp-params.json'  #path is relative to [base]/fsh-generated/resources
   path-binary: input/attachments
 copyrightYear: 2019+
-releaseLabel: 3.0.0
+releaseLabel: STU3 Release
 pages:
   index.md:
     title: Home

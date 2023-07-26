@@ -1,11 +1,11 @@
 {
     "package-id" : "hl7.fhir.us.mcode",
-    "version" : "3.0.0-ballot",
-    "path" : "http://hl7.org/fhir/us/mcode/2023May",
-    "status" : "ballot",
+    "version" : "3.0.0-STU3 Release",
+    "path" : "http://hl7.org/fhir/us/mcode/3.0.0",
+    "status" : "draft",
     "sequence" : "STU 3",
     "milestone":false,
-    "desc" : "Ballot version for STU3",
-    "descmd" : "Ballot version for STU3",
+    "desc" : "STU3 Release",
+    "descmd" : "STU3 Release",
     "changes" : "change_log.html"
   }

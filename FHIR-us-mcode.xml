@@ -132,6 +132,8 @@
 <artifact deprecated="true" id="Extension/mcode-histology-morphology-behavior-extension" key="histology-morphology-behavior-extension" name="Histology Morphology Behavior Extension"/>
 <artifact id="ValueSet/mcode-histology-morphology-behavior-vs" key="histology-morphology-behavior-value-set" name="Histology Morphology Behavior Value Set"/>
 <artifact id="StructureDefinition/mcode-histology-morphology-behavior" key="StructureDefinition-mcode-histology-morphology-behavior" name="Histology-Morphology-Behavior Extension"/>
+<artifact id="StructureDefinition/mcode-history-of-metastatic-cancer" key="StructureDefinition-mcode-history-of-metastatic-cancer" name="History of Metastatic Cancer"/>
+<artifact id="ValueSet/mcode-history-of-metastatic-malignant-neoplasm-vs" key="ValueSet-mcode-history-of-metastatic-malignant-neoplasm-vs" name="History of Metastatic Malignant Neoplasm Value Set"/>
 <artifact deprecated="true" id="ValueSet/mcode-hgvs-vs" key="ValueSet-mcode-hgvs-vs" name="Human Genome Variation Society Sequence Variant Nomenclature Value Set"/>
 <artifact id="StructureDefinition/mcode-human-specimen" key="StructureDefinition-mcode-human-specimen" name="Human Specimen Profile"/>
 <artifact id="ValueSet/mcode-human-specimen-type-vs" key="ValueSet-mcode-human-specimen-type-vs" name="Human Specimen Type Value Set"/>

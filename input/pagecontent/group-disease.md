@@ -66,6 +66,7 @@ In the CancerStage profile and its descendants, the following elements are used 
 | Staging System    | `Observation.method` |  The staging system, method, or protocol used to perform the staging, for example, AJCC Version 8 or the International Neuroblastoma Staging System. In the SNOMED CT hierarchy, these are terms in the **Staging and Scales** hierarchy, specifically, terms descending from **Tumor Staging** that represent staging systems. `Observation.method` is not required if the staging system is implicit in `Observation.code`. |
 | Stage Value | `Observation.valueCodeableConcept` | Contains the actual stage or category determined for the cancer. In terms of SNOMED CT, these are terms from the **Qualifier Value** and **Finding** hierarchies (some staging values appear, perhaps erroneously, in the Tumor Staging hierarchy). |
 | Cancer Staged | `Observation.focus` | A reference to the cancer condition being staged. |
+| Prognostic Factors | `Observation.derivedFrom` | A reference to Observations contributing to the stage. |
 {: .grid }
 
 A reference to the CancerStage observation should be given in the PrimaryCancerCondition's `Condition.stage.assessment` element. If staging has been repeated for a patient, the reference in PrimaryCancerCondition should point to the most recent staging information.
@@ -85,11 +86,11 @@ Several widely-used terminologies in the cancer domain, including ICD-O-3 and AJ
 
 #### Non-TNM Staging
 
-Not all cancer types are staged with a TNM-based staging system, including hematologic cancers like leukemias, multiple myeloma, and some lymphomas. Some specialized solid tumors like gynecologic tumors are staged using the FIGO (International Federation of Gynecology and Obstetrics) staging system. Other non-TNM staging systems include Rai, Binet, and Ann Arbor Cotswold Modification. The staging system should be represented with a code from the [CancerStagingMethodVS] value set, if available.
+Profiles for several non-TNM staging systems are included in mCODE. Not all cancer types are staged with a TNM-based staging system, including hematologic cancers like leukemias, multiple myeloma, and some lymphomas. Some specialized solid tumors like gynecologic tumors are staged using the FIGO (International Federation of Gynecology and Obstetrics) staging system. Staging systems not explicitly covered in mCODE should follow the patterns in the provided profiles. 
 
-Profiles for these staging systems and others are not currently part of mCODE but may be added in the future.
+Prognostic factors related to the cancer stage group can be specified with the `Observation.derivedFrom` element. For example, a hemoglobin lab result which was evaluated in the  staging of chronic lymphocytic leukemia (CLL)using the Binet staging system can be referenced under `Observation.derivedFrom` element. [This example of Binet staging](Observation-binet-stage-group-A.html) illustrates how this could be represented.
 
-Non-TNM staging results are represented using the profile [CancerStage]. Prognostic factors related to the cancer stage group can be specified with the `Observation.derivedFrom` element. For example, a hemoglobin lab result which was evaluated in the  staging of chronic lymphocytic leukemia using the Binet staging system can be referenced under `Observation.derivedFrom` element. [This example of Binet staging](Observation-binet-stage-group-A.html) illustrates how this could be represented.
+**Terminology.** SNOMED CT does not offer codes for every staging system. When SNOMED codes are unavailable, mCODE falls back on codes from the NCI Thesaurus (NCIT). From an implementation perspective, managing two code systems is difficult when there is no consistency of which code system is used for what purpose. We are actively working with SNOMED International to create more consistent semantic approach to coding stages, by adding concepts required by non-TNM staging systems. The current approach of mixing SNOMED and NCIT depending on the cancer type should be regarded as temporary.
 
 #### Summary Stage Information in PrimaryCancerCondition
 

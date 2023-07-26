@@ -12,7 +12,7 @@ Description: "Codes requested from SNOMED by mCODE, to be issued at a later date
 * #USCRS-34955 "UICC Classification of Malignant Tumours 8th Edition (tumor staging)" // requested June 2023
 * #USCRS-34956 "UICC Classification of Malignant Tumours 7th Edition (tumor staging)"  // requested June 2023
 * #USCRS-34957 "Children's Oncology Group Renal Staging System (tumor staging)" // requested June 2023
-* 1287647003 "Toronto Childhood Cancer Stage Guidelines Version 2 (tumor staging)" //USCRS-34951  requested June 2023
-* 1287648008 "Masaoka-Koga stage classification for thymic malignancies (tumor staging)" // #USCRS-34950 requested June 2023
-* 1287643004 "International Neuroblastoma Risk Group staging system (tumor staging)"  // #USCRS-34952  requested June 2023
-* 1287646007 "International Germ Cell Consensus Classification (tumor staging)" //#USCRS-34948 requested June 2023
+* #1287647003 "Toronto Childhood Cancer Stage Guidelines Version 2 (tumor staging)" //USCRS-34951  requested June 2023
+* #1287648008 "Masaoka-Koga stage classification for thymic malignancies (tumor staging)" // #USCRS-34950 requested June 2023
+* #1287643004 "International Neuroblastoma Risk Group staging system (tumor staging)"  // #USCRS-34952  requested June 2023
+* #1287646007 "International Germ Cell Consensus Classification (tumor staging)" //#USCRS-34948 requested June 2023

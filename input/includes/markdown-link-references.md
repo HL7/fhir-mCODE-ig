@@ -86,6 +86,7 @@
 [ConditionStatusTrendVS]: ValueSet-mcode-condition-status-trend-vs.html
 [CytologicEvidenceOfMalignancyVS]: ValueSet-mcode-cytologic-evidence-malignancy-vs.html
 [HistologyMorphologyBehaviorVS]: ValueSet-mcode-histology-morphology-behavior-vs.html
+[HistoryOfMetastaticMalignantNeoplasmVS]: ValueSet-mcode-history-of-metastatic-malignant-neoplasm-vs.html
 [HumanSpecimenTypeVS]: ValueSet-mcode-human-specimen-type-vs.html
 [HypereosinophilicSyndromeDisorderVS]: ValueSet-mcode-hypereosinophilic-syndrome-disorder-vs.html
 [LateralityQualifierVS]: ValueSet-mcode-laterality-qualifier-vs.html

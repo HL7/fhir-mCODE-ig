@@ -321,3 +321,15 @@ Description: "Hemoglobin lab result to support TNMStageGroup example"
 * effectiveDateTime = "2020-03-06"
 * performer = Reference(us-core-practitioner-owen-oncologist)
 * valueQuantity = 13.5 'g/dl' "g/dl"
+
+Instance: history-metastatic-cancer-jenny-m 
+InstanceOf: HistoryOfMetastaticCancer
+Description: "Example showing history of metastatic cancer"
+* clinicalStatus = ClinStatus#remission
+* verificationStatus = VerStatus#confirmed
+* category = CondCat#problem-list-item
+* code = SCT_TBD#1287652008 "History of metastatic malignant neoplasm (situation)"
+* subject = Reference(cancer-patient-jenny-m)
+* onsetDateTime = "2018-03-16"
+* extension[condition-assertedDate].valueDateTime = "2018-11-16"
+* asserter = Reference(us-core-practitioner-owen-oncologist)

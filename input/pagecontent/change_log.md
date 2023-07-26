@@ -1,6 +1,6 @@
-The following changes occurred between the [STU 3 ballot (March 2023)] and publication of STU 3, primarily in response to ballot comments.
+**The following changes occurred between the [STU 3 ballot (March 2023)] and publication of STU 3, in response to ballot comments.**
 
-### Non-TNM Staging Profiles ([FHIR-41163](https://jira.hl7.org/browse/FHIR-41163), [FHIR-41003](https://jira.hl7.org/browse/FHIR-41003))
+### Addition of non-TNM Staging Profiles ([FHIR-41163](https://jira.hl7.org/browse/FHIR-41163), [FHIR-41003](https://jira.hl7.org/browse/FHIR-41003))
 
 mCODE 2.1 and 3.0.0-ballot did not include any profiles for non-TNM staging, so there was no indication on how to use mCODE to represent staging for lymphoma and leukemia, for example. To address this issue, several non-TNM staging profiles were added. Given the numerous non-TNM staging systems, a small set of profiles were added for illustrative purposes:
 
@@ -17,12 +17,22 @@ mCODE 2.1 and 3.0.0-ballot did not include any profiles for non-TNM staging, so 
 
 ### New History of Metastatic Disease Profile
 
+Recurrences and unrelated cancers sometimes occur years after previous metastatic disease, for example, in the case of an adult with history of childhood leukemia. The details of the previous disease may be unavailable, but the fact that the patient had cancer previously may be clinically significant. The profile [HistoryOfMetastaticCancer] provides a method of recording this fact in the absence of other details.
+
 ### Expanded Value Sets
+
+Additional stage identifiers and staging methods were added to [CancerStageTypeVS] and [CancerStagingMethodVS].
 
 ### Clarification of Observation.code and Observation.method in CancerStage
 
+An explanation of how Observation.code differs from (and sometimes subsumes) Observation.method in CancerStage and its descendants [was added](group-disease.html#how-to-report-staging-information).
 
-The following changes occurred between [STU 2 publication](http://hl7.org/fhir/us/mcode/STU2/) (January 2022) and the STU 3 ballot (March 2023). For a history of previous changes, please see the prior change logs in the [appropriate versions](http://hl7.org/fhir/us/mcode/history.html).
+### Birth Sex Added as Must Support
+
+In CancerPatient, birth sex (an extension inherited from US Core), is now designated as must-support.
+
+
+**The following changes occurred between [STU 2 publication](http://hl7.org/fhir/us/mcode/STU2/) (January 2022) and the STU 3 ballot (March 2023). For a history of previous changes, please see the prior change logs in the [appropriate versions](http://hl7.org/fhir/us/mcode/history.html).**
 
 ### Allowing the Use of AJCC-equivalent SNOMED Codes for Staging
 

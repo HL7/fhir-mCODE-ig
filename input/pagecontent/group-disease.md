@@ -106,7 +106,6 @@ In PrimaryCancerCondition, only the stage type and stage value can be reported, 
 
 Representing stage information in this way, i.e., without an explicit staging system, is valid only if the staging system is implicit in the stage type. 
 
-
 ### Tumor Marker Tests
 
 Tumor markers are key prognostic factors in calculating cancer staging, identifying treatment options, and monitoring progression of disease. For example, an abnormal increase in prostate-specific antigen (PSA) levels is a prognostic factor for prostate cancer. Other tumor markers include estrogen receptor (ER) status, progesterone receptor (PR) status, carcinoembryonic antigen (CEA) levels, among others. mCODE distinguishes tumor marker tests from sequencing-based genomic tests measured at the DNA, RNA, or chromosomal level. The latter are addressed in the [Genomics](group-genomics.html) section.

@@ -64,6 +64,13 @@ Based on user feedback on the complexity of the STU 2 design, [comorbidities][Co
   * "Noncompliance with treatment (finding)" was added to TreatmentTerminationReasonVS
   * In some intensionally-defined SNOMED CT value sets, the `is-a` operator was replaced with the `descendant-of` operator, removing the top-level code when it was not a valid choice.
 
+### Relaxing Required Bindings in Profiles and Extensions Related to Radiotherapy
+Based on user feedback that the required bindings on certain fields were a barrier to broader implementation the following changes were made:
+* [RadiotherapyModalityAndTechnique] Extension - [RadiotherapyModalityVS] and [RadiotherapyTechniqueVS] valuesets are bound with required strength, but they have been expanded with an the "un-encoded" value from the NULL Flavor codesystem.  If the "un-encoded" value is provided, and invariant requires that the .text field of the codeable concept be provided.  A coded value can also be provided in the same CodeableConcept.
+* [TreatmentTerminationReason] Extension, [ProcedureIntent] Extension:  the valueset binding has been changed to extensible.
+* [RadiotherapyVolume] Profile, location field:  the valueset binding has been changed to extensible
+* [RadiotherapyCourseSummary] Profile, bodySite field:  the valueset binding has been changed to extensible
+
 ### Update to US Core 5.0.1
 
 mCODE has been updated to the current version of US Core, STU 5. Because there are new profiles in STU 5 that should be used as parent profiles, some mCODE profiles were affected. In particular, the parent profiles of [KarnofskyPerformanceStatus] and [ECOGPerformanceStatus] were switched from Observation to the newly-introduced [US Core Observation Clinical Test Result Profile][USCoreClinicalTestObservation]. Secondly, the parent profiles of [PrimaryCancerCondition] and [SecondaryCancerCondition] were switched to [US Core Condition Problems and Health Concerns Profile]. This change is not backward compatible.

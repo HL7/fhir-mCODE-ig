@@ -52,7 +52,6 @@ Description: "Extension capturing modality and technique of a given radiotherapy
 * extension[technique].value[x] from RadiotherapyTechniqueVS (required)
 * obeys TechniquesForNeutronBeamModality
 * obeys TechniquesForPhotonBeamModality
-* obeys TechniquesForPhotonBeamModalityv2
 * obeys TechniquesForElectronBeamModality
 * obeys TechniquesForCarbonIonBeamModality
 * obeys TechniquesForProtonBeamModality
@@ -91,12 +90,54 @@ RuleSet: ModTechniqueConstraint(modCode, techCodes)
          extension.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-technique').value.exists( {techCodes})"
 * severity = #error
 
-Invariant: TechniquesForPhotonBeamModalityv2
-Description: "Allowed Techniques for Photon Beam Modality"
-* insert ModTechniqueConstraint([['1156506007']], [[(coding.code = 'UNC' or coding.code = '441799006' or coding.code = '1156530009' or coding.code = '1162782007' or coding.code = '1156526006' or coding.code = '168524008' or coding.code = '1156530009' or coding.code = '1163157007')]])
-
-
 Invariant: TechniquesForPhotonBeamModality
+Description: "Allowed Techniques for Photon Beam Modality"
+* insert ModTechniqueConstraint([[1156506007]], [[(coding.code = 'UNC' or coding.code = '441799006' or coding.code = '1156530009' or coding.code = '1162782007' or coding.code = '1156526006' or coding.code = '168524008' or coding.code = '1156530009' or coding.code = '1163157007')]])
+
+Invariant: TechniquesForElectronBeamModality
+Description:  "Allowed Techniques for Electron Beam Modality"
+* insert ModTechniqueConstraint([[45643008]], [[(coding.code = 'UNC' or coding.code = '1162782007' or coding.code = '1156526006' or coding.code = '168524008' or coding.code = '1163157007')]])
+
+Invariant: TechniquesForNeutronBeamModality
+Description:  "Allowed Techniques for Neutron Beam Modality"
+* insert ModTechniqueConstraint([[80347004]], [[(coding.code = 'UNC' or coding.code = '169317000' or coding.code = '1162782007')]])
+
+Invariant: TechniquesForCarbonIonBeamModality
+Description:  "Allowed Techniques for Carbon Ion Beam Modality"
+* insert ModTechniqueConstraint([[1156505006]], [[(coding.code = 'UNC' or coding.code = '1156529004' or coding.code = '1156528007' or coding.code='1204242009')]])
+
+Invariant: TechniquesForProtonBeamModality
+Description:  "Allowed Techniques for Proton Beam Modality"
+* insert ModTechniqueConstraint([[10611004]], [[(coding.code = 'UNC' or coding.code = '1156529004' or coding.code = '1156528007' or coding.code = '1204242009' or coding.code = '1163157007')]])
+
+Invariant: TechniquesForInternalRadiotherapyPermanentSeeds
+Description:  "Allowed Techniques for Internal Radiotherapy - Permanent Seeds"
+* insert ModTechniqueConstraint([[169359004]], [[(coding.code = 'UNC' or coding.code = '113120007')]])
+
+Invariant: TechniquesForLowDoseRateUsingTempRadSource
+Description:  "Allowed Techniques for Low Dose Rate Using Temp Radiation Source"
+* insert ModTechniqueConstraint([[1156708005]], [[(coding.code = 'UNC' or coding.code = '384692006' or coding.code = '113120007' or coding.code = '14473006')]])
+
+Invariant: TechniquesForPulsedDoseRate
+Description:  "Allowed Techniques for Pulsed Dose Rate"
+* insert ModTechniqueConstraint([[1156384006]], [[(coding.code = 'UNC' or coding.code = '1156384006')]])
+
+Invariant: TechniquesForHighDoseRate
+Description:  "Allowed Techniques for High Dose Rate"
+* insert ModTechniqueConstraint([[394902000]], [[(coding.code = 'UNC' or coding.code = '394902000')]])
+
+Invariant: TechniquesForHighDoseRateElectronic
+Description:  "Allowed Techniques for High Dose Rate Electronic"
+* insert ModTechniqueConstraint([[438629002]], [[(coding.code = 'UNC' or coding.code = '384692006' or coding.code = '1156382005' or coding.code = '113120007' or coding.code = '384691004' or coding.code = '168524008' or coding.code = '14473006')]])
+
+Invariant: TechniquesForRadioPharmaceutical
+Description:  "Allowed Techniques for Radiopharmaceutical"
+* insert ModTechniqueConstraint([[440252007]], [[(coding.code = 'UNC' or coding.code = '16560241000119104' or coding.code = '1156383000' or coding.code = '384692006' or coding.code = '113120007')]])
+
+/*
+
+
+Invariant: TechniquesForPhotonBeamModalityv1
 Description:  "Allowed Techniques for Photon Beam Modality"
 * expression = "extension.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-modality').exists() and
          extension.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-technique').exists() and
@@ -107,8 +148,7 @@ Description:  "Allowed Techniques for Photon Beam Modality"
 
 * severity = #error
 
-
-Invariant: TechniquesForElectronBeamModality
+Invariant: TechniquesForElectronBeamModalityv1
 Description:  "Allowed Techniques for Electron Beam Modality"
 Expression: "extension.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-modality').exists() and
          extension.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-technique').exists() and
@@ -117,7 +157,7 @@ Expression: "extension.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefini
          extension.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-technique').value.exists(  (coding.code = 'UNC' or coding.code = '1162782007' or coding.code = '1156526006' or coding.code = '168524008' or coding.code = '1163157007'))"
 Severity: #error
 
-Invariant: TechniquesForNeutronBeamModality
+Invariant: TechniquesForNeutronBeamModalityv1
 Description:  "Allowed Techniques for Neutron Beam Modality"
 Expression: "extension.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-modality').exists() and
          extension.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-technique').exists() and
@@ -126,7 +166,7 @@ Expression: "extension.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefini
          extension.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-technique').value.exists(   (coding.code = 'UNC' or coding.code = '169317000' or coding.code = '1162782007'))"
 Severity: #error
 
-Invariant: TechniquesForCarbonIonBeamModality
+Invariant: TechniquesForCarbonIonBeamModalityv1
 Description:  "Allowed Techniques for Carbon Ion Beam Modality"
 Expression: "extension.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-modality').exists() and
          extension.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-technique').exists() and
@@ -136,7 +176,7 @@ Expression: "extension.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefini
            (coding.code = 'UNC' or coding.code = '1156529004' or coding.code = '1156528007' or coding.code='1204242009'))"
 Severity: #error
 
-Invariant: TechniquesForProtonBeamModality
+Invariant: TechniquesForProtonBeamModalityv1
 Description:  "Allowed Techniques for Proton Beam Modality"
 Expression: "extension.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-modality').exists() and
          extension.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-technique').exists() and
@@ -145,7 +185,7 @@ Expression: "extension.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefini
          extension.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-technique').value.exists( (coding.code = 'UNC' or coding.code = '1156529004' or coding.code = '1156528007' or coding.code = '1204242009' or coding.code = '1163157007'))"
 Severity: #error
 
-Invariant: TechniquesForInternalRadiotherapyPermanentSeeds
+Invariant: TechniquesForInternalRadiotherapyPermanentSeedsv1
 Description:  "Allowed Techniques for Internal Radiotherapy - Permanent Seeds"
 Expression: "extension.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-modality').exists() and
          extension.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-technique').exists() and
@@ -154,7 +194,7 @@ Expression: "extension.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefini
          extension.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-technique').value.exists(coding.system = 'http://snomed.info/sct' and  (coding.code = 'UNC' or coding.code = '113120007'))"
 Severity: #error
 
-Invariant: TechniquesForLowDoseRateUsingTempRadSource
+Invariant: TechniquesForLowDoseRateUsingTempRadSourcev1
 Description:  "Allowed Techniques for Low Dose Rate Using Temp Radiation Source"
 Expression: "extension.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-modality').exists() and
          extension.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-technique').exists() and
@@ -163,7 +203,7 @@ Expression: "extension.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefini
          extension.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-technique').value.exists( (coding.code = 'UNC' or coding.code = '384692006' or coding.code = '113120007' or coding.code = '14473006'))"
 Severity: #error
 
-Invariant: TechniquesForPulsedDoseRate
+Invariant: TechniquesForPulsedDoseRatev1
 Description:  "Allowed Techniques for Pulsed Dose Rate"
 Expression: "extension.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-modality').exists() and
          extension.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-technique').exists() and
@@ -172,7 +212,7 @@ Expression: "extension.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefini
          extension.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-technique').value.exists( (coding.code = 'UNC' or coding.code = '384692006' or coding.code = '113120007'))"
 Severity: #error
 
-Invariant: TechniquesForHighDoseRate
+Invariant: TechniquesForHighDoseRatev1
 Description:  "Allowed Techniques for High Dose Rate"
 Expression: "extension.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-modality').exists() and
          extension.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-technique').exists() and
@@ -181,7 +221,7 @@ Expression: "extension.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefini
          extension.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-technique').value.exists( (coding.code = 'UNC' or coding.code = '384692006' or coding.code = '1156382005' or coding.code = '113120007' or coding.code = '1156383000' or coding.code = '384691004' or coding.code = '168524008' or coding.code = '14473006'))"
 Severity: #error
 
-Invariant: TechniquesForHighDoseRateElectronic
+Invariant: TechniquesForHighDoseRateElectronicv1
 Description:  "Allowed Techniques for High Dose Rate Electronic"
 Expression: "extension.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-modality').exists() and
          extension.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-technique').exists() and
@@ -190,7 +230,7 @@ Expression: "extension.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefini
          extension.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-technique').value.exists( (coding.code = 'UNC' or coding.code = '384692006' or coding.code = '1156382005' or coding.code = '113120007' or coding.code = '384691004' or coding.code = '168524008' or coding.code = '14473006'))"
 Severity: #error
 
-Invariant: TechniquesForRadioPharmaceutical
+Invariant: TechniquesForRadioPharmaceuticalv1
 Description:  "Allowed Techniques for Radiopharmaceutical"
 Expression: "extension.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-modality').exists() and
          extension.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-technique').exists() and
@@ -198,6 +238,7 @@ Expression: "extension.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefini
    implies
          extension.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-technique').value.exists( (coding.code = 'UNC' or coding.code = '16560241000119104' or coding.code = '1156383000' or coding.code = '384692006' or coding.code = '113120007'))"
 Severity: #error
+*/
 
 Extension: RadiotherapyModality
 Id:        mcode-radiotherapy-modality

@@ -100,7 +100,7 @@ Description: "Example of Patient"
 * extension[USCoreRace].extension[text].valueString = "Black or African American"
 * extension[USCoreEthnicity].extension[ombCategory].valueCoding = OmbRaceCat#2186-5 "Not Hispanic or Latino"
 * extension[USCoreEthnicity].extension[text].valueString = "Not Hispanic or Latino"
-* extension[USCoreBirthSex].extension[text].valueCoding = #male
+* extension[USCoreBirthSex].valueCode = #M
 
 Instance: cancer-patient-eve-anyperson
 InstanceOf: CancerPatient
@@ -137,7 +137,7 @@ Description: "Example of Patient"
 * extension[USCoreRace].extension[text].valueString = "White"
 * extension[USCoreEthnicity].extension[ombCategory].valueCoding = OmbRaceCat#2135-2 "Hispanic or Latino"
 * extension[USCoreEthnicity].extension[text].valueString = "Hispanic or Latino"
-* extension[USCoreBirthSex].extension[text].valueCoding = #female
+* extension[USCoreBirthSex].valueCode = #F
 
 Instance: cancer-patient-adam-everyman
 InstanceOf: CancerPatient
@@ -166,7 +166,7 @@ Description: "Example of Patient"
 * extension[USCoreRace].extension[text].valueString = "White"
 * extension[USCoreEthnicity].extension[ombCategory].valueCoding = OmbRaceCat#2186-5 "Not Hispanic or Latino"
 * extension[USCoreEthnicity].extension[text].valueString = "Not Hispanic or Latino"
-* extension[USCoreBirthSex].extension[text].valueCoding = #male
+* extension[USCoreBirthSex].valueCode = #M
 
 Instance: us-core-practitioner-kyle-anydoc
 InstanceOf: USCorePractitioner

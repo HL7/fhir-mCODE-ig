@@ -3428,7 +3428,7 @@
     "uri" : "http://terminology.hl7.org/CodeSystem/v3-SetOperator"
   },
   {
-    "uri" : "http://terminology.hl7.org/CodeSystem/v3-SpecimenType"
+    "uri" : "http://terminology.hl7.org/CodeSystem/v2-0487"
   },
   {
     "uri" : "http://terminology.hl7.org/CodeSystem/v3-styleType"

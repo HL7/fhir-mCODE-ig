@@ -4,4 +4,3 @@ Alias: CGTherapeuticImplication = http://hl7.org/fhir/uv/genomics-reporting/Stru
 Alias: NCBI = http://www.ncbi.nlm.nih.gov/refseq
 Alias: TMB = http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/tmb
 Alias: MSI = http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/msi
-Alias: SpecimenTypeVS = http://terminology.hl7.org/ValueSet/v3-SpecimenEntityType

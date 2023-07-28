@@ -20,7 +20,7 @@ Allowed combinations of modality and technique are shown here and enforced by in
 | Brachytherapy| Radiopharmaceutical  | Oral, Intravascular, Intracavitary, Interstitial, Other (.text required) |
 
 Since it will not always be possible to map modalities and techniques to coded values, an "other" value is allowed for both.   
-If the code other (SNOMEDCT '74964007'), a text literal SHALL be provided for the code. This requirement is enforced by an invariant.
+If the code for 'other' is used (i.e., SNOMED CT 74964007), a text literal that specifies the value SHALL be provided in the `.display` element of the CodeableConcept. This requirement is enforced by an invariant.
 {: .grid }
 
 Technique Acronyms:

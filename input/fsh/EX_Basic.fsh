@@ -24,7 +24,7 @@ Description: "Example of Primary Cancer Condition - hematologic cancer"
 * subject = Reference(cancer-patient-adam-everyman)
 * onsetDateTime = "2020-05-12"
 * asserter = Reference(us-core-practitioner-kyle-anydoc)
-* stage.summary = UMLS#C2698392 "Binet Stage A"     // NCIT#C80134 "Binet Stage A"
+* stage.summary = NCIT#C80134 "Binet Stage A"
 * stage.assessment = Reference(binet-stage-group-A)
 
 Instance: secondary-cancer-condition-brain-mets
@@ -182,7 +182,7 @@ Description: "Example of Practitioner"
 * address.state = "MA"
 * address.postalCode = "12345"
 * address.country = "US"
-* qualification.code = http://terminology.hl7.org/CodeSystem/v2-0360|2.7#MD "Doctor of Medicine"
+* qualification.code = http://terminology.hl7.org/CodeSystem/v2-0360#MD "Doctor of Medicine"
 
 Instance: ecog-performance-status-fully-active
 InstanceOf: ECOGPerformanceStatus
@@ -229,18 +229,6 @@ Description: "Anatomic volume for John Anyperson's brachytherapy."
 * location = SCT#31094006  "Structure of lobe of lung (body structure)"
 * locationQualifier[0] = SCT#261122009 "Lower (qualifier value)"
 * locationQualifier[1] = SCT#7771000 "Left (qualifier value)"
-
-Instance: binet-stage-group-A
-InstanceOf: CancerStageGroup
-Description: "Example of a non-TNM Stage Group (Binet staging for CLL)"
-* code = LNC#67213-9 "Disease stage"
-* valueCodeableConcept = UMLS#C2698392  "Binet Stage A" // or NCIT#C80134 "Binet Stage A"
-* status = #final "final"
-* focus = Reference(primary-cancer-condition-cll) // added requirement STU3
-* subject = Reference(cancer-patient-adam-everyman)
-* effectiveDateTime = "2020-05-18"
-* derivedFrom = Reference(lab-result-observation-hemoglobin)
-* method =  SCT#1149099005 "Binet staging classification for chronic lymphocytic leukemia (tumor staging)"
 
 Instance: tnm-clinical-stage-group-3c
 InstanceOf: TNMStageGroup
@@ -336,3 +324,15 @@ Description: "Hemoglobin lab result to support TNMStageGroup example"
 * effectiveDateTime = "2020-03-06"
 * performer = Reference(us-core-practitioner-owen-oncologist)
 * valueQuantity = 13.5 'g/dl' "g/dl"
+
+Instance: history-metastatic-cancer-jenny-m 
+InstanceOf: HistoryOfMetastaticCancer
+Description: "Example showing history of metastatic cancer"
+* clinicalStatus = ClinStatus#remission
+* verificationStatus = VerStatus#confirmed
+* category = CondCat#problem-list-item
+* code = SCT_TBD#1287652008 "History of metastatic malignant neoplasm (situation)"
+* subject = Reference(cancer-patient-jenny-m)
+* onsetDateTime = "2018-03-16"
+* extension[condition-assertedDate].valueDateTime = "2018-11-16"
+* asserter = Reference(us-core-practitioner-owen-oncologist)

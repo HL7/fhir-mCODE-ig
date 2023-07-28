@@ -1,7 +1,7 @@
 
 // Package hl7.terminology#3.1.0 based on FHIR 4.0.1. Generated 2021-03-06
 
-// External Code Systems with a canonical recognized by terminology.hl7.org
+// External Code Systems with a external canonical recognized by terminology.hl7.org
 Alias:   LNC = http://loinc.org
 //Alias:   SCT = http://snomed.info/sct
 //Alias:   SCT = http://snomed.info/sct|http://snomed.info/sct/731000124108   // latest US edition (see exp-params.json)
@@ -22,7 +22,7 @@ Alias:   CLINVAR = http://www.ncbi.nlm.nih.gov/clinvar
 Alias:   SO = http://www.sequenceontology.org/
 Alias:   AJCC = http://cancerstaging.org
 Alias:   ENTREZ = https://www.ncbi.nlm.nih.gov/gene
-Alias:   NCI = http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl
+Alias:   NCIT = http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl
 
 // From terminology.hl7.org
 Alias:   OmbRaceCat = urn:oid:2.16.840.1.113883.6.238
@@ -43,3 +43,4 @@ Alias:   MedReqIntent = http://hl7.org/fhir/CodeSystem/medicationrequest-intent
 Alias:   MedReqCat = 	http://terminology.hl7.org/CodeSystem/medicationrequest-category
 Alias:   RefMeaning = http://terminology.hl7.org/CodeSystem/referencerange-meaning
 Alias:   AbsentReason = http://terminology.hl7.org/CodeSystem/data-absent-reason
+Alias:   MDR = http://terminology.hl7.org/CodeSystem/mdr

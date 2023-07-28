@@ -10,7 +10,7 @@ Description:  "Codes describing the location(s) of primary or secondary cancer. 
 ValueSet:   ConditionStatusTrendVS
 Id: mcode-condition-status-trend-vs
 Title: "Condition Status Trend Value Set"
-Description:  "How patient's given disease, condition, or ability is trending."
+Description:  "How patient's given disease, condition, or ability is trending. This value set is less than ideal because it mixes findings with disorders, but that is the way that SNOMED (IHTSDO) insisted the new terms for partial and full remission be added. See https://jira.hl7.org/browse/FHIR-29813 for details."
 * insert SNOMEDCopyrightForVS
 * ^extension[FMM].valueInteger = 3
 // * SCT#281900007 "No abnormality detected (finding)" // better than SCT#260415000 "Not detected (qualifier)" - FHIR-32837
@@ -20,7 +20,11 @@ Description:  "How patient's given disease, condition, or ability is trending."
 * SCT#709137006 "Patient condition undetermined (finding)"
 * SCT#550991000124107 "Malignant neoplasm in full remission (disorder)" // FHIR-32837 - MLT_note: SCT FN is displayed. The initial term of "cancer in complete remission" is a synonym for the concept.
 * SCT#551001000124108 "Malignant neoplasm in partial remission (disorder)" // FHIR-32837 - MLT_note: SCT FN is displayed. The initial term of "cancer in partial remission" is a synonym for the concept.
-
+/* Why not these? (instead of dipping into the disorder hierarchy)
+* SCT#103338009 "In full remission (qualifier value)"
+* SCT#103337004 "In partial remission (qualifier value)"
+* SCT#263855007 "Relapse phase (qualifier value)"
+*/
 
 ValueSet: CancerDiseaseStatusEvidenceTypeVS
 Id: mcode-cancer-disease-status-evidence-type-vs

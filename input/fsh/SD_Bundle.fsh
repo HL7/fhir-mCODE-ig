@@ -25,7 +25,7 @@ Description: "A collection of data for an mCODE cancer patient."
 * entry[mcodeObservations] ^definition = "Slice containing mCODE observations"
 * entry[mcodeObservations].resource only 
     CancerDiseaseStatus or 
-    CancerStageGroup or
+    CancerStage or
     Comorbidities or
     ECOGPerformanceStatus or
     GenomicRegionStudied or
@@ -46,6 +46,7 @@ Description: "A collection of data for an mCODE cancer patient."
 * entry[mcodeConditions].resource only 
     PrimaryCancerCondition or
     SecondaryCancerCondition or
+    HistoryOfMetastaticCancer or
     USCoreCondition
 * entry[mcodeMedicationAdministrations] ^short = "mCODE Medication Administration Resources"
 * entry[mcodeMedicationAdministrations] ^definition = "Slice containing mCODE Cancer-Related Medication Administration"
@@ -85,7 +86,7 @@ Description: "A collection of data for an mCODE cancer patient."
 * insert BundleSlice(cancerRelatedMedicationAdministration, 0, *, Cancer-Related Medication Administration, MedicationAdministration resource representing medication administrations., CancerRelatedMedicationAdministration)
 * insert BundleSlice(cancerRelatedMedicationRequest, 0, *, Cancer-Related Medication Request, MedicationRequest resources representing cancer-related medications\, including both active and inactive medications., CancerRelatedMedicationRequest)
 * insert BundleSlice(cancerRelatedSurgicalProcedure, 0, *, Cancer-Related Surgical Procedure,  Procedure resource representing cancer-related surgical procedures., CancerRelatedSurgicalProcedure)
-* insert BundleSlice(cancerStageAssessment, 0, *, Cancer Stage Group Group, Observation resource representing the cancer stage group., CancerStageGroup)
+* insert BundleSlice(cancerStageAssessment, 0, *, CancerStage, Observation resource representing the cancer stage group., CancerStage)
 * insert BundleSlice(comorbidities, 0, *, Cancer-Related Comorbidities, Observation resource representing comorbidities., Comorbidities)
 * insert BundleSlice(diagnosticImplications, 0, *, Genomic Diagnostic Implications, Observation stating a linkage between one or more genotype/haplotype/variation Observations and evidence for or against a particular disease\, condition\, or cancer diagnosis., http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/diagnostic-implication)
 * insert BundleSlice(ecogPerformanceStatus, 0, *, ECOG Performance Status, Observations resource representing ECOG performance status assessment. Include past assessments if available., ECOGPerformanceStatus)

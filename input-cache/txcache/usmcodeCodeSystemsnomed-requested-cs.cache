@@ -6,12 +6,44 @@
     "include" : [{
       "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/snomed-requested-cs",
       "concept" : [{
-        "code" : "USCRS-34777",
-        "display" : "Lymph node level IIA (qualifier value)"
+        "code" : "USCRS-34949",
+        "display" : "Enneking surgical staging system (tumor staging)"
       },
       {
-        "code" : "USCRS-34775",
-        "display" : "Lymph node level IIB (qualifier value)"
+        "code" : "USCRS-34955",
+        "display" : "UICC Classification of Malignant Tumours 8th Edition (tumor staging)"
+      },
+      {
+        "code" : "USCRS-34956",
+        "display" : "UICC Classification of Malignant Tumours 7th Edition (tumor staging)"
+      },
+      {
+        "code" : "USCRS-34957",
+        "display" : "Children's Oncology Group Renal Staging System (tumor staging)"
+      },
+      {
+        "code" : "USCRS-34947",
+        "display" : "Surveillance Epidemiology and End Results Program Extent of Disease, 2018 edition (tumor staging)"
+      },
+      {
+        "code" : "USCRS-34958",
+        "display" : "Children's Oncology Group Liver Staging System (tumor staging)"
+      },
+      {
+        "code" : "1287647003",
+        "display" : "Toronto Childhood Cancer Stage Guidelines Version 2 (tumor staging)"
+      },
+      {
+        "code" : "1287648008",
+        "display" : "Masaoka-Koga stage classification for thymic malignancies (tumor staging)"
+      },
+      {
+        "code" : "1287643004",
+        "display" : "International Neuroblastoma Risk Group staging system (tumor staging)"
+      },
+      {
+        "code" : "1287646007",
+        "display" : "International Germ Cell Consensus Classification (tumor staging)"
       }]
     }]
   }
@@ -19,11 +51,11 @@
 e: {
   "valueSet" : {
   "resourceType" : "ValueSet",
-  "language" : "en",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:3ab43867-4681-4e31-ae44-57313d31420c",
-    "timestamp" : "2023-03-20T15:46:54.293Z",
+    "identifier" : "urn:uuid:b3c7e3b2-6359-4813-9aae-143cef92b971",
+    "timestamp" : "2023-07-26T20:26:42.994Z",
+    "total" : 10,
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -34,16 +66,108 @@ e: {
     },
     {
       "name" : "version",
-      "valueUri" : "http://hl7.org/fhir/us/mcode/CodeSystem/snomed-requested-cs|3.0.0-ballot"
+      "valueUri" : "http://hl7.org/fhir/us/mcode/CodeSystem/snomed-requested-cs|3.0.0"
     }],
     "contains" : [{
       "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/snomed-requested-cs",
-      "code" : "USCRS-34777",
+      "code" : "USCRS-34949",
+      "display" : "Enneking surgical staging system (tumor staging)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/snomed-requested-cs",
+      "code" : "USCRS-34955",
+      "display" : "UICC Classification of Malignant Tumours 8th Edition (tumor staging)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/snomed-requested-cs",
+      "code" : "USCRS-34956",
+      "display" : "UICC Classification of Malignant Tumours 7th Edition (tumor staging)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/snomed-requested-cs",
+      "code" : "USCRS-34957",
+      "display" : "Children's Oncology Group Renal Staging System (tumor staging)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/snomed-requested-cs",
+      "code" : "USCRS-34947",
+      "display" : "Surveillance Epidemiology and End Results Program Extent of Disease, 2018 edition (tumor staging)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/snomed-requested-cs",
+      "code" : "USCRS-34958",
+      "display" : "Children's Oncology Group Liver Staging System (tumor staging)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/snomed-requested-cs",
+      "code" : "1287647003",
+      "display" : "Toronto Childhood Cancer Stage Guidelines Version 2 (tumor staging)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/snomed-requested-cs",
+      "code" : "1287648008",
+      "display" : "Masaoka-Koga stage classification for thymic malignancies (tumor staging)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/snomed-requested-cs",
+      "code" : "1287643004",
+      "display" : "International Neuroblastoma Risk Group staging system (tumor staging)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/snomed-requested-cs",
+      "code" : "1287646007",
+      "display" : "International Germ Cell Consensus Classification (tumor staging)"
+    }]
+  }
+},
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : false, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "inactive" : true,
+    "include" : [{
+      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/snomed-requested-cs",
+      "concept" : [{
+        "code" : "1284814003",
+        "display" : "Lymph node level IIA (qualifier value)"
+      },
+      {
+        "code" : "1284815002",
+        "display" : "Lymph node level IIB (qualifier value)"
+      }]
+    }]
+  }
+}}####
+e: {
+  "valueSet" : {
+  "resourceType" : "ValueSet",
+  "status" : "active",
+  "expansion" : {
+    "identifier" : "urn:uuid:0688d36a-cd9e-4649-bc0b-e7d96ce56982",
+    "timestamp" : "2023-07-26T20:26:49.588Z",
+    "total" : 2,
+    "parameter" : [{
+      "name" : "limitedExpansion",
+      "valueBoolean" : true
+    },
+    {
+      "name" : "excludeNested",
+      "valueBoolean" : true
+    },
+    {
+      "name" : "version",
+      "valueUri" : "http://hl7.org/fhir/us/mcode/CodeSystem/snomed-requested-cs|3.0.0"
+    }],
+    "contains" : [{
+      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/snomed-requested-cs",
+      "code" : "1284814003",
       "display" : "Lymph node level IIA (qualifier value)"
     },
     {
       "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/snomed-requested-cs",
-      "code" : "USCRS-34775",
+      "code" : "1284815002",
       "display" : "Lymph node level IIB (qualifier value)"
     }]
   }
@@ -58,12 +182,12 @@ e: {
     "include" : [{
       "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/snomed-requested-cs",
       "concept" : [{
-        "code" : "USCRS-34356",
-        "display" : "Bowel space (body structure)"
+        "code" : "1285442003",
+        "display" : "Estimated contoured volume of bowel in peritoneal cavity using radiographic imaging (observable entity)"
       },
       {
-        "code" : "USCRS-34358",
-        "display" : "Small bowel space (body structure)"
+        "code" : "1285443008",
+        "display" : "Estimated contoured volume of small bowel in peritoneal cavity using imaging (observable entity)"
       }]
     }]
   }
@@ -71,11 +195,11 @@ e: {
 e: {
   "valueSet" : {
   "resourceType" : "ValueSet",
-  "language" : "en",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:0a2a3536-b438-4cb5-967d-c8e1257babb8",
-    "timestamp" : "2023-03-20T15:46:56.199Z",
+    "identifier" : "urn:uuid:58f6331e-edbb-4ff6-b62a-815f5780b656",
+    "timestamp" : "2023-07-26T20:26:49.838Z",
+    "total" : 2,
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -86,17 +210,17 @@ e: {
     },
     {
       "name" : "version",
-      "valueUri" : "http://hl7.org/fhir/us/mcode/CodeSystem/snomed-requested-cs|3.0.0-ballot"
+      "valueUri" : "http://hl7.org/fhir/us/mcode/CodeSystem/snomed-requested-cs|3.0.0"
     }],
     "contains" : [{
       "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/snomed-requested-cs",
-      "code" : "USCRS-34356",
-      "display" : "Bowel space (body structure)"
+      "code" : "1285442003",
+      "display" : "Estimated contoured volume of bowel in peritoneal cavity using radiographic imaging (observable entity)"
     },
     {
       "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/snomed-requested-cs",
-      "code" : "USCRS-34358",
-      "display" : "Small bowel space (body structure)"
+      "code" : "1285443008",
+      "display" : "Estimated contoured volume of small bowel in peritoneal cavity using imaging (observable entity)"
     }]
   }
 },

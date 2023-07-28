@@ -14,8 +14,8 @@
     },
     {
       "group": "Default",
-      "title": "Cancer Stage Group Profile",
-      "url": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-stage-group",
+      "title": "Cancer Stage Profile",
+      "url": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-stage",
       "description": "An assessment of the extent of the cancer in the body, according to a given cancer staging classification system. This profile can be used with any staging system, but it is specifically targeted for non-TNM staging systems, since specialized TNM staging profiles are provided."
     },
     {
@@ -972,7 +972,7 @@
     },
     {
       "Group": "Default",
-      "Profile Title": "Cancer Stage Group Profile",
+      "Profile Title": "Cancer Stage Profile",
       "Data Element Name": "Status",
       "Definition": "The status of the result value.",
       "Required?": "Required",
@@ -981,26 +981,26 @@
       "Value Set URI": "http://hl7.org/fhir/ValueSet/observation-status|4.0.1",
       "Value Set Binding": "required",
       "FHIR Element (R4)": "Observation.status",
-      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-stage-group",
-      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-stage-group"
+      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-stage",
+      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-stage"
     },
     {
       "Group": "Default",
-      "Profile Title": "Cancer Stage Group Profile",
+      "Profile Title": "Cancer Stage Profile",
       "Data Element Name": "Code",
       "Definition": "The type of staging performed, e.g., clinically by oncologist, by a pathologist on a specimen, or other method. This information is required, although it may be redundant with the stage code recorded in Observation.valueCodeableConcept (for example, the 'c' in cN0 represents clinical staging).",
       "Required?": "Required",
       "Occurrences Allowed": "Single",
       "Data Type": "CodeableConcept",
-      "Value Set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-staging-type-vs",
+      "Value Set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-stage-type-vs",
       "Value Set Binding": "preferred",
       "FHIR Element (R4)": "Observation.code",
-      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-stage-group",
-      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-stage-group"
+      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-stage",
+      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-stage"
     },
     {
       "Group": "Default",
-      "Profile Title": "Cancer Stage Group Profile",
+      "Profile Title": "Cancer Stage Profile",
       "Data Element Name": "Subject",
       "Definition": "The patient associated with staging assessment.",
       "Required?": "Required if known",
@@ -1009,12 +1009,12 @@
       "Value Set URI": "",
       "Value Set Binding": "",
       "FHIR Element (R4)": "Observation.subject",
-      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-stage-group",
-      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-stage-group"
+      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-stage",
+      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-stage"
     },
     {
       "Group": "Default",
-      "Profile Title": "Cancer Stage Group Profile",
+      "Profile Title": "Cancer Stage Profile",
       "Data Element Name": "Focus",
       "Definition": "Staging is associated with a particular primary cancer condition. Observation.focus is used to point back to that condition.",
       "Required?": "Required if known",
@@ -1023,12 +1023,12 @@
       "Value Set URI": "",
       "Value Set Binding": "",
       "FHIR Element (R4)": "Observation.focus",
-      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-stage-group",
-      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-stage-group"
+      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-stage",
+      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-stage"
     },
     {
       "Group": "Default",
-      "Profile Title": "Cancer Stage Group Profile",
+      "Profile Title": "Cancer Stage Profile",
       "Data Element Name": "Effective",
       "Definition": "The time or time-period the observed value is asserted as being true. For biological subjects - e.g. human patients - this is usually called the \"physiologically relevant time\". This is usually either the time of the procedure or of specimen collection, but very often the source of the date/time is not known, only the date/time itself.",
       "Required?": "Required if known",
@@ -1037,26 +1037,26 @@
       "Value Set URI": "",
       "Value Set Binding": "",
       "FHIR Element (R4)": "Observation.effective[x]",
-      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-stage-group",
-      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-stage-group"
+      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-stage",
+      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-stage"
     },
     {
       "Group": "Default",
-      "Profile Title": "Cancer Stage Group Profile",
+      "Profile Title": "Cancer Stage Profile",
       "Data Element Name": "Value",
       "Definition": "The information determined as a result of making the observation, if the information has a simple value.",
       "Required?": "Required if known",
       "Occurrences Allowed": "Single",
       "Data Type": "CodeableConcept",
-      "Value Set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-stage-group-vs",
+      "Value Set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-stage-value-vs",
       "Value Set Binding": "preferred",
       "FHIR Element (R4)": "Observation.value[x]",
-      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-stage-group",
-      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-stage-group"
+      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-stage",
+      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-stage"
     },
     {
       "Group": "Default",
-      "Profile Title": "Cancer Stage Group Profile",
+      "Profile Title": "Cancer Stage Profile",
       "Data Element Name": "Method",
       "Definition": "Indicates the mechanism used to perform the observation.",
       "Required?": "Required if known",
@@ -1065,8 +1065,8 @@
       "Value Set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-staging-method-vs",
       "Value Set Binding": "extensible",
       "FHIR Element (R4)": "Observation.method",
-      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-stage-group",
-      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-stage-group"
+      "Source Profile URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-stage",
+      "Element StructureDefinition URI": "http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-stage"
     },
     {
       "Group": "Default",
@@ -2587,7 +2587,7 @@
       "Definition": "Reference to a formal record of the evidence on which the staging assessment is based.",
       "Required?": "Required if known (conditional on Stage)",
       "Occurrences Allowed": "Multiple",
-      "Data Type": "Reference: CancerStageGroup",
+      "Data Type": "Reference: Cancer Stage",
       "Value Set URI": "",
       "Value Set Binding": "",
       "FHIR Element (R4)": "Condition.stage.assessment",
@@ -4002,8 +4002,8 @@
       "description": "Includes surgical procedure codes from SNOMED CT, ICD-10-PCS and CPT. The value set may be a superset of cancer surgery codes, but narrowing the set further risks eliminating potentially useful and relevant codes."
     },
     {
-      "title": "Cancer Stage Group Value Set",
-      "url": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-stage-group-vs",
+      "title": "Cancer Stage Value Set",
+      "url": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-stage-value-vs",
       "description": "The result of cancer staging, i.e., the stage or category of the cancer."
     },
     {
@@ -4012,8 +4012,8 @@
       "description": "System or method used for staging cancers. The terms in this value set describe staging systems, not specific stages or descriptors used within those systems."
     },
     {
-      "title": "Cancer Staging Type Value Set",
-      "url": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-staging-type-vs",
+      "title": "Cancer Stage Type Value Set",
+      "url": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-stage-type-vs",
       "description": "Identifying codes for the type of cancer staging performed. In terms of the SNOMED CT hierarchy, these codes represent observables."
     },
     {
@@ -4727,50 +4727,50 @@
       "Logical definition": "concept is 387713003"
     },
     {
-      "Value set name": "Cancer Stage Group Value Set",
-      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-stage-group-vs",
+      "Value set name": "Cancer Stage Value Set",
+      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-stage-value-vs",
       "Code system": "http://snomed.info/sct",
       "Code": "13808002",
       "Code description": "Walter Reed stage 3 (tumor staging)"
     },
     {
-      "Value set name": "Cancer Stage Group Value Set",
-      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-stage-group-vs",
+      "Value set name": "Cancer Stage Value Set",
+      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-stage-value-vs",
       "Code system": "http://snomed.info/sct",
       "Code": "15972002",
       "Code description": "Walter Reed stage 2 (tumor staging)"
     },
     {
-      "Value set name": "Cancer Stage Group Value Set",
-      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-stage-group-vs",
+      "Value set name": "Cancer Stage Value Set",
+      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-stage-value-vs",
       "Code system": "http://snomed.info/sct",
       "Code": "42114005",
       "Code description": "Walter Reed stage 1 (tumor staging)"
     },
     {
-      "Value set name": "Cancer Stage Group Value Set",
-      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-stage-group-vs",
+      "Value set name": "Cancer Stage Value Set",
+      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-stage-value-vs",
       "Code system": "http://snomed.info/sct",
       "Code": "66470009",
       "Code description": "Walter Reed stage 5 (tumor staging)"
     },
     {
-      "Value set name": "Cancer Stage Group Value Set",
-      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-stage-group-vs",
+      "Value set name": "Cancer Stage Value Set",
+      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-stage-value-vs",
       "Code system": "http://snomed.info/sct",
       "Code": "74542008",
       "Code description": "Walter Reed stage 4 (tumor staging)"
     },
     {
-      "Value set name": "Cancer Stage Group Value Set",
-      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-stage-group-vs",
+      "Value set name": "Cancer Stage Value Set",
+      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-stage-value-vs",
       "Code system": "http://snomed.info/sct",
       "Code": "83200007",
       "Code description": "Walter Reed stage 6 (tumor staging)"
     },
     {
-      "Value set name": "Cancer Stage Group Value Set",
-      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-stage-group-vs",
+      "Value set name": "Cancer Stage Value Set",
+      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-stage-value-vs",
       "Code system": "http://snomed.info/sct",
       "Logical definition": "concept is 1222584008 AND concept is 258318002 AND concept is 258309004 AND concept is 258233007 AND concept is 258271004"
     },
@@ -4816,29 +4816,29 @@
       "Logical definition": "concept is 254292007"
     },
     {
-      "Value set name": "Cancer Staging Type Value Set",
-      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-staging-type-vs",
+      "Value set name": "Cancer Stage Type Value Set",
+      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-stage-type-vs",
       "Code system": "http://snomed.info/sct",
       "Code": "103420007",
       "Code description": "Modified Dukes stage (observable entity)"
     },
     {
-      "Value set name": "Cancer Staging Type Value Set",
-      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-staging-type-vs",
+      "Value set name": "Cancer Stage Type Value Set",
+      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-stage-type-vs",
       "Code system": "http://snomed.info/sct",
       "Code": "385357003",
       "Code description": "Dukes stage (observable entity)"
     },
     {
-      "Value set name": "Cancer Staging Type Value Set",
-      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-staging-type-vs",
+      "Value set name": "Cancer Stage Type Value Set",
+      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-stage-type-vs",
       "Code system": "http://snomed.info/sct",
       "Code": "409720004",
       "Code description": "International neuroblastoma staging system stage (observable entity)"
     },
     {
-      "Value set name": "Cancer Staging Type Value Set",
-      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-staging-type-vs",
+      "Value set name": "Cancer Stage Type Value Set",
+      "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-stage-type-vs",
       "Code system": "http://snomed.info/sct",
       "Logical definition": "concept is 371508000 AND concept is 385361009 AND concept is 405931009"
     },
@@ -13434,14 +13434,14 @@
       "Value set name": "Radiotherapy Treatment Location Qualifier Value Set",
       "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-radiotherapy-treatment-location-qualifier-vs",
       "Code system": "http://hl7.org/fhir/us/mcode/CodeSystem/snomed-requested-cs",
-      "Code": "USCRS-34775",
+      "Code": "1284815002",
       "Code description": "Lymph node level IIB (qualifier value)"
     },
     {
       "Value set name": "Radiotherapy Treatment Location Qualifier Value Set",
       "Value set URI": "http://hl7.org/fhir/us/mcode/ValueSet/mcode-radiotherapy-treatment-location-qualifier-vs",
       "Code system": "http://hl7.org/fhir/us/mcode/CodeSystem/snomed-requested-cs",
-      "Code": "USCRS-34777",
+      "Code": "1284814003",
       "Code description": "Lymph node level IIA (qualifier value)"
     },
     {
@@ -20925,6 +20925,6 @@
   ],
   "metadata": {
     "title": "minimal Common Oncology Data Elements (mCODE) Implementation Guide",
-    "version": "3.0.0-ballot"
+    "version": "3.0.0"
   }
 }

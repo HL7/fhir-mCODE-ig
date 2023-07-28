@@ -17,7 +17,7 @@ mCODE 2.1 and 3.0.0-ballot did not include any profiles for non-TNM staging, so 
 
 ### New History of Metastatic Disease Profile
 
-Recurrences and unrelated cancers sometimes occur years after previous metastatic disease, for example, in the case of an adult with history of childhood leukemia. The details of the previous disease may be unavailable, but the fact that the patient had cancer previously may be clinically significant. The profile [HistoryOfMetastaticCancer] provides a method of recording this fact in the absence of other details.
+Recurrences and unrelated cancers sometimes occur years after previous metastatic disease, for example, in the case of an adult with history of childhood leukemia. The details of the previous disease may be unavailable, but the fact that the patient had cancer previously may be clinically significant. The profile [HistoryOfMetastaticCancer] provides a method of recording this fact in the absence of other details. This addition brings mCODE and [CMS's Enhancing Oncology Model](https://innovation.cms.gov/innovation-models/enhancing-oncology-model) into full alignment.
 
 ### Expanded Value Sets
 

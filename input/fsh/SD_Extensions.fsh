@@ -70,7 +70,7 @@ Description: "A code explaining the unplanned or premature termination, or norma
 //* insert ExtensionContext(Procedure)         - removed as per FHIR-32243
 * ^extension[FMM].valueInteger = 3
 * value[x] only CodeableConcept
-* value[x] from TreatmentTerminationReasonVS (required)
+* value[x] from TreatmentTerminationReasonVS (extensible)
 * value[x] 1..1
 
 Extension: ProcedureIntent
@@ -81,6 +81,6 @@ Description: "The purpose of a treatment, medication, or procedure."
 //* insert ExtensionContext(Procedure)         - removed as per FHIR-32243
 * ^extension[FMM].valueInteger = 4
 * value[x] only CodeableConcept
-* value[x] from ProcedureIntentVS (required)
+* value[x] from ProcedureIntentVS (extensible)
 * value[x] 1..1
 

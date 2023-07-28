@@ -12,6 +12,7 @@ Description: "Codes describing the modalities of teleradiotherapy (external beam
 * SCT#1156505006 "External beam radiation therapy using carbon ions (procedure)"
 * SCT#1156506007 "External beam radiation therapy using photons (procedure)"
 
+
 ValueSet: BrachytherapyModalityVS
 Id: mcode-brachytherapy-modality-vs
 Title: "Brachytherapy Modality Value Set"
@@ -34,6 +35,7 @@ Description: "Codes describing the modalities of external beam and brachytherapy
 * ^extension[FMM].valueInteger = 3
 * include codes from valueset TeleradiotherapyModalityVS
 * include codes from valueset BrachytherapyModalityVS
+* NULLFLAVOR#UNC "un-encoded" // .text must be provided
 
 //----------- TECHNIQUES -----------------------
 //
@@ -48,6 +50,8 @@ Description: "Codes describing the techniques of teleradiotherapy (external beam
 * include codes from valueset TeleradiotherapyNeutronTechniqueVS
 * include codes from valueset TeleradiotherapyCarbonIonBeamTechniqueVS
 * include codes from valueset TeleradiotherapyProtonBeamTechniqueVS
+* NULLFLAVOR#UNC "un-encoded" // .text must be provided
+
 
 ValueSet: TeleradiotherapyPhotonBeamTechniqueVS
 Id: mcode-teleradiotherapy-photon-beam-technique-vs
@@ -201,6 +205,7 @@ Description: "Codes describing the techniques of external beam and brachytherapy
 // Union of EBRT and brachytherapy value sets
 * include codes from valueset TeleradiotherapyTechniqueVS
 * include codes from valueset BrachytherapyTechniqueVS
+* NULLFLAVOR#UNC "un-encoded" // .text must be provided
 
 ValueSet: RadiotherapyVolumeTypeVS
 Id: mcode-radiotherapy-volume-type-vs

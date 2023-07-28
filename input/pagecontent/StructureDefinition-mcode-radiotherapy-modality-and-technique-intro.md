@@ -6,17 +6,21 @@ Allowed combinations of modality and technique are shown here and enforced by in
 
 | **Treatment Type** |  **Modality**           |      **Technique**       |
 | ---------------| ------------------------ | ------------------------ |
-| External Beam Radiotherapy | Photons                 | IMRT, VMAT, 3D, 2D, IORT, FLASH |
-| External Beam Radiotherapy| Electrons                | 3D, 2D, IORT, FLASH      |
-| External Beam Radiotherapy| Neutrons                 | 3D, NCT                  |
-| External Beam Radiotherapy| Carbon Ions              | PPS, PSS, PS           |
-| External Beam Radiotherapy| Protons                  | PPS, PSS, PS, FLASH    |
-| Brachytherapy | Internal radiotherapy – permanent seeds | Interstitial |
-| Brachytherapy| Low Dose Rate using temporary source | Intracavitary, Interstitial, Surface |
-| Brachytherapy| Pulsed Dose Rate | Intracavitary, Interstitial |
-| Brachytherapy| High Dose Rate  | Intracavitary, IMB, Interstitial, Intravascular, Intraluminal, IORT, Surface |
-| Brachytherapy| High dose rate electronic  | Intracavitary, IMB, Interstitial, Intraluminal, IORT, Surface |
-| Brachytherapy| Radiopharmaceutical  | Oral, Intravascular, Intracavitary, Interstitial |
+| All | Other (.text required)   | Not constrained                 |
+| External Beam Radiotherapy | Photons                 | IMRT, VMAT, 3D, 2D, IORT, FLASH, Other (.text required) |
+| External Beam Radiotherapy| Electrons                | 3D, 2D, IORT, FLASH, Other (.text required)      |
+| External Beam Radiotherapy| Neutrons                 | 3D, NCT, Other (.text required)                  |
+| External Beam Radiotherapy| Carbon Ions              | PPS, PSS, PS, Other (.text required)           |
+| External Beam Radiotherapy| Protons                  | PPS, PSS, PS, FLASH, Other (.text required)    |
+| Brachytherapy | Internal radiotherapy – permanent seeds | Interstitial, Other (.text required) |
+| Brachytherapy| Low Dose Rate using temporary source | Intracavitary, Interstitial, Surface, Other (.text required) |
+| Brachytherapy| Pulsed Dose Rate | Intracavitary, Interstitial, Other (.text required) |
+| Brachytherapy| High Dose Rate  | Intracavitary, IMB, Interstitial, Intravascular, Intraluminal, IORT, Surface, Other (.text required) |
+| Brachytherapy| High dose rate electronic  | Intracavitary, IMB, Interstitial, Intraluminal, IORT, Surface, Other (.text required) |
+| Brachytherapy| Radiopharmaceutical  | Oral, Intravascular, Intracavitary, Interstitial, Other (.text required) |
+
+Since it will not always be possible to map modalities and techniques to coded values, an "other" value is allowed for both.   
+If the code for 'other' is used (i.e., SNOMED CT 74964007), a text literal that specifies the value SHALL be provided in the `.display` element of the CodeableConcept. This requirement is enforced by an invariant.
 {: .grid }
 
 Technique Acronyms:

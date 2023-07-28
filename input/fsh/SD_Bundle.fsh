@@ -92,7 +92,7 @@ Description: "A collection of data for an mCODE cancer patient."
 * insert BundleSlice(ecogPerformanceStatus, 0, *, ECOG Performance Status, Observations resource representing ECOG performance status assessment. Include past assessments if available., ECOGPerformanceStatus)
 * insert BundleSlice(genomicRegionStudied, 0, *, Genomic Region Studied, Observation resource representing regions of the genome analyzed for variants., GenomicRegionStudied)
 * insert BundleSlice(genomicsReport, 0, *, Genomics Report, DiagnosticReport resource representing genomics reports., GenomicsReport)
-* insert BundleSlice(humanSpecimen, 0, *, Human Specimen, Specimen resource representing a specimen obtained for genomic analysis., HumanSpecimen)
+* insert BundleSlice(HumanSpecimen, 0, *, Human Specimen, Specimen resource representing a specimen obtained for genomic analysis., HumanSpecimen)
 * insert BundleSlice(genomicVariant, 0, *, Genomic Variant, Observation resource representing genomic variants., GenomicVariant)
 * insert BundleSlice(karnofskyPerformanceStatus, 0, *, Karnofsky Performance Status, Observation resource representing Karnofsky performance status assessment. Include past assessments if available., KarnofskyPerformanceStatus)
 * insert BundleSlice(microsatelliteInstability, 0, *, Microsatellite Instability, the condition of genetic hypermutability that results from impaired DNA mismatch repair., http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/msi)

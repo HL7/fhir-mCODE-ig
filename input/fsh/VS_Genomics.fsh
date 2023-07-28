@@ -19,7 +19,7 @@ Description: "Specimen taken from a human subject. The values include the subset
 * SPTY#FGA       "Fluid, Abdomen"
 * SPTY#GENV      "Genital vaginal"
 * SPTY#HYDC      "Fluid, Hydrocele"
-* SPTY#JNTFLD    "Fluid, Joint" // FHIR-32838 asked to remove this one because SPTY#SNV is a synonym
+//* SPTY#JNTFLD    "Fluid, Joint" // FHIR-32838 asked to remove this one because SPTY#SNV is a synonym
 * SPTY#KIDFLD    "Fluid, Kidney"
 * SPTY#LSAC      "Fluid, Lumbar Sac"
 * SPTY#MAR       "Marrow"

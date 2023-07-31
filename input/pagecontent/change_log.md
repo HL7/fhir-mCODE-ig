@@ -117,6 +117,9 @@ Based on user feedback that the required bindings on certain fields were a barri
 * [RadiotherapyVolume] Profile, location field:  the valueset binding has been changed to extensible
 * [RadiotherapyCourseSummary] Profile, bodySite field:  the valueset binding has been changed to extensible
 
+### Expanding [DiseaseStatusTrendVS]
+This value set has been expanded to include a code indicating that the patient's cancer has metastasized.  The disorder codes for full and partial remission have also been replaced with qualifier codes.
+
 ### Update to US Core 5.0.1
 
 mCODE has been updated to the current version of US Core, STU 5. Because there are new profiles in STU 5 that should be used as parent profiles, some mCODE profiles were affected. In particular, the parent profiles of [KarnofskyPerformanceStatus] and [ECOGPerformanceStatus] were switched from Observation to the newly-introduced [US Core Observation Clinical Test Result Profile][USCoreClinicalTestObservation]. Secondly, the parent profiles of [PrimaryCancerCondition] and [SecondaryCancerCondition] were switched to [US Core Condition Problems and Health Concerns Profile]. This change is not backward compatible.

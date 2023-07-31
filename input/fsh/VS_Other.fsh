@@ -18,13 +18,15 @@ Description:  "How patient's given disease, condition, or ability is trending. T
 * SCT#359746009 "Patient's condition stable (finding)"
 * SCT#271299001 "Patient's condition worsened (finding)"
 * SCT#709137006 "Patient condition undetermined (finding)"
+/*
+   Retired these, replaced with qualifier values
 * SCT#550991000124107 "Malignant neoplasm in full remission (disorder)" // FHIR-32837 - MLT_note: SCT FN is displayed. The initial term of "cancer in complete remission" is a synonym for the concept.
 * SCT#551001000124108 "Malignant neoplasm in partial remission (disorder)" // FHIR-32837 - MLT_note: SCT FN is displayed. The initial term of "cancer in partial remission" is a synonym for the concept.
-/* Why not these? (instead of dipping into the disorder hierarchy)
+*/
 * SCT#103338009 "In full remission (qualifier value)"
 * SCT#103337004 "In partial remission (qualifier value)"
-* SCT#263855007 "Relapse phase (qualifier value)"
-*/
+/* Added based on FHIR-40811 */
+* SCT#399409002 "Distant metastasis present (finding)"
 
 ValueSet: CancerDiseaseStatusEvidenceTypeVS
 Id: mcode-cancer-disease-status-evidence-type-vs

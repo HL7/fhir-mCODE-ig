@@ -66,13 +66,12 @@ The following value sets are defined in this implementation guide:
 The following draft (maturity level 0) value sets are defined in this implementation guide:
 
 * [BinetStageValueVS]
+* [BreslowDepthStageValueVS]
 * [ClarkLevelValueVS]  
 * [ClinOrPathModifierVS]
-* [FABClassificationValueVS]
 * [FIGOStagingMethodVS]
 * [FIGOStageValueVS]
-* [NeuroblastomaRiskGroupValueVS]
-* [NeuroblastomaStageValueVS]
+* [GleasonGradeGroupVS]
 * [LymphomaStagingMethodVS]
 * [LymphomaStageValueVS]
 * [LymphomaStageValueModifierVS]

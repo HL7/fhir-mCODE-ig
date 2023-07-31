@@ -23,7 +23,7 @@ Description:  "How patient's given disease, condition, or ability is trending. T
 /* Why not these? (instead of dipping into the disorder hierarchy)
 * SCT#103338009 "In full remission (qualifier value)"
 * SCT#103337004 "In partial remission (qualifier value)"
-* SCT#263855007 "Relapse phase (qualifier value)"
+* SCT#399409002 "Distant metastasis present (finding)"
 */
 
 ValueSet: CancerDiseaseStatusEvidenceTypeVS

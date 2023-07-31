@@ -51,9 +51,9 @@ Description: "Codes that identify the kind of stage reported in an Observation, 
 * SCT#371494008 "pN category"
 * SCT#384625004 "pT category"
 //* include codes from system SCT where concept is-a #399390009 "Tumor-node-metastasis (TNM) stage grouping (observable entity)"
-* SCT#399390009 "TNM stage grouping"
-* SCT#399537006 "Clinical TNM stage grouping"
-* SCT#399588009 "Pathologic TNM stage grouping"
+* SCT#399390009 "TNM stage grouping (observable entity)"
+* SCT#399537006 "Clinical TNM stage grouping (observable entity)"
+* SCT#399588009 "Pathologic TNM stage grouping (observable entity)"
 //* include codes from system SCT where concept is-a #385361009 "International Federation of Gynecology and Obstetrics stage for gynecological malignancy (observable entity)"
 * SCT#385361009 "International Federation of Gynecology and Obstetrics stage for gynecological malignancy (observable entity)"
 * SCT#385363007 "FIGO ovarian tumor stage"
@@ -64,15 +64,11 @@ Description: "Codes that identify the kind of stage reported in an Observation, 
 * SCT#385373009 "FIGO uterine tumor stage"
 //* include codes from system SCT where concept is-a #371508000 "Tumor stage (observable entity)"
 * SCT#385388004 "Lymphoma stage (observable entity)"
-//* include codes from system SCT where concept is-a #405978005 "Pathologic stage (observable entity)"
-* SCT#405978005 "Pathologic stage"
-* SCT#405979002 "Pathologic TNM stage"
 
 // singletons
 * SCT#385349001 "Clinical stage (observable entity)"
 * SCT#103420007 "Modified Dukes stage (observable entity)"
 * SCT#385357003 "Dukes stage (observable entity)"
-* SCT#405916000 "Intergroup rhabdomyosarcoma study post-surgical clinical group (observable entity)"
 * SCT#17964000 "Residual tumor stage (observable entity)"
 * SCT#371495009 "Stage of tumor involvement of non-regional lymph nodes (observable entity)"
 // unapproved attribute, do not include! * include codes from system SCT where concept is-a #260760003 "Staging of disease (attribute)"
@@ -154,9 +150,6 @@ Description: "Staging system or method used for staging cancers. The terms in th
 * SCT_TBD#1287648008 "Masaoka-Koga stage classification for thymic malignancies (tumor staging)" // #USCRS-34950 requested June 2023
 * SCT_TBD#1287646007 "International Germ Cell Consensus Classification (tumor staging)" //#USCRS-34948 requested June 2023
 // NCIT Terms
-* NCIT#C191343 "AJCC Cancer Staging Manual 4th Edition"
-* NCIT#C191344 "AJCC Cancer Staging Manual 5th Edition"
-* NCIT#C186613 "AJCC Cancer Staging System Version 9"
 * NCIT#C186527 "Atypical Teratoid/Rhabdoid Tumor Staging System"
 //* NCIT#C141208 "Chronic Lymphocytic Leukemia- Binet Staging System" -- covered by SNOMED
 * NCIT#C141206  "Chronic Lymphocytic Leukemia- Modified Rai Staging System"
@@ -169,8 +162,6 @@ Description: "Staging system or method used for staging cancers. The terms in th
 * NCIT#C115132 "Hepatocellular Carcinoma by BCLC Stage"
 * NCIT#C148010 "Intergroup Rhabdomyosarcoma Study Group Clinical Staging and Grouping System"
 * NCIT#C111073 "International Germ Cell Consensus Risk Classification"
-* NCIT#C140270 "International Society of Pediatric Oncology Staging System"
-* NCIT#C177550 "IRS Clinical Staging System"
 * NCIT#C141168 "Lugano Classification Hodgkin Lymphoma by AJCC v8 Stage"
 * NCIT#C186520 "Medulloblastoma Staging System"
 * NCIT#C198826 "Modified Chang Staging System for Medulloblastoma"
@@ -179,7 +170,6 @@ Description: "Staging system or method used for staging cancers. The terms in th
 * NCIT#C123333 "Reese-Ellsworth Staging System"
 * NCIT#C62610 "SEER Summary Staging Manual 2000"
 * NCIT#C177309 "Seminoma International Germ Cell Tumor Consensus Risk Classification"
-* NCIT#C62611 "Summary Staging Guide 1977"
 * NCIT#C112006 "Thymoma by Masaoka-Koga Stage"
 * NCIT#C18008 "TNM Ovary Neoplasm Staging"
 * NCIT#C25384 "TNM Staging System"

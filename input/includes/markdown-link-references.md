@@ -126,7 +126,7 @@
 
 <!-- New non-TNM Value Sets -->
 [BinetStageValueVS]: ValueSet-mcode-binet-stage-value-vs.html
-[BreslowDepthStageValueVS]: ValueSet-mcode-breslow-depth-stage-value.html
+[BreslowDepthStageValueVS]: ValueSet-mcode-breslow-depth-stage-value-vs.html
 [ClarkLevelValueVS]: ValueSet-mcode-clark-level-value-vs.html
 [ClinOrPathModifierVS]: ValueSet-mcode-clin-or-path-modifier-vs.html
 [FIGOStagingMethodVS]: ValueSet-mcode-figo-staging-method-vs.html

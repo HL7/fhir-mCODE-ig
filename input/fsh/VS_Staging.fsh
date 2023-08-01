@@ -5,8 +5,7 @@ ValueSet: CancerStageTypeVS
 Id: mcode-cancer-stage-type-vs
 Title: "Cancer Stage Type Value Set"
 Description: "Codes that identify the kind of stage reported in an Observation, necessary to correctly interpret the value associated with a staging Observation. In terms of the SNOMED CT hierarchy, these codes represent observable entities. If the staging system used to determine the stage is not implicit in this code, the staging system must be separately recorded in Observation.method. More specific staging profiles, if available, should be consulted before determining the correct code."
-* ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement. This material contains content from LOINC (http://loinc.org). LOINC is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc"
-* ^experimental = false
+* insert SNOINCCopyrightForVS
 * ^extension[FMM].valueInteger = 4
 // LOINC Codes
 * LNC#21907-1 "Distant metastases.clinical [Class] Cancer"

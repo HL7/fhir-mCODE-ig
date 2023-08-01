@@ -33,7 +33,7 @@ In CancerPatient, birth sex (an extension inherited from US Core), is now design
 
 ### Preferred Codes for TNM Stage Group and T, N, and M Classifications
 
-mCODE is moving incrementally toward SNOMED CT as the preferred, standard vocabulary. While still accepting LOINC codes in Observations related to TNM staging, equivalent SNOMED CT codes are now permitted. Users should transition towards SNOMED CT in these profiles.
+mCODE is moving incrementally toward SNOMED CT as the preferred, standard vocabulary (except for laboratory tests). While still accepting LOINC codes in Observations related to TNM staging, equivalent SNOMED CT codes are now permitted. Users should transition towards SNOMED CT in these profiles.
 
 **The following changes occurred between [STU 2 publication](http://hl7.org/fhir/us/mcode/STU2/) (January 2022) and the STU 3 ballot (March 2023). For a history of previous changes, please see the prior change logs in the [appropriate versions](http://hl7.org/fhir/us/mcode/history.html).**
 

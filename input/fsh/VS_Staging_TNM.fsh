@@ -10,8 +10,6 @@ Description: "Staging method used for AJCC TNM staging, e.g., AJCC 6th, 7th, or 
 * SCT#443830009 "American Joint Commission on Cancer, Cancer Staging Manual, 7th edition neoplasm staging system (tumor staging)"
 * SCT#897275008 "American Joint Commission on Cancer, Cancer Staging Manual, 8th edition neoplasm staging system (tumor staging)"
 * SCT#1269566009 "American Joint Commission on Cancer, Cancer Staging Manual, 9th version neoplasm staging system (tumor staging)"
-* NCIT#C191343 "AJCC Cancer Staging Manual 4th Edition"
-* NCIT#C191344 "AJCC Cancer Staging Manual 5th Edition"
 
 // Stage Group: Observation.code
 ValueSet: TNMStageGroupStagingTypeVS
@@ -53,7 +51,6 @@ Description: "Values for AJCC TNM stage group MUST be selected from this value s
 * ^experimental = false
 * include codes from valueset TNMStageGroupVS
 * include codes from system AJCC
-
 
 // Primary Tumor
 

@@ -28,7 +28,7 @@ The following value sets are defined in this implementation guide:
 * [HypereosinophilicSyndromeDisorderVS]
 * [LateralityQualifierVS]
 * [MelanomaInSituDisorderVS]
-* [OncologySpecimenTypeVS]
+* [HumanSpecimenTypeVS]
 * [PrimaryCancerDisorderVS]
 * [PrimaryMalignantNeoplasmDisorderVS]
 * [ProcedureIntentVS]

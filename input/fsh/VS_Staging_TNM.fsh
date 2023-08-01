@@ -46,6 +46,15 @@ Description: "Result values for cancer stage group using TNM staging following A
 * include codes from system SCT where concept descendant-of #1222593009 "American Joint Committee on Cancer pathological stage group allowable value (qualifier value)"
 * include codes from system SCT where concept descendant-of #1222594003 "American Joint Committee on Cancer yp stage group allowable value (qualifier value)"
 
+ValueSet: TNMStageGroupMaxVS
+Id: mcode-tnm-stage-group-max-vs
+Title: "TNM Stage Group Maximum Value Set"
+Description: "Values for AJCC TNM stage group MUST be selected from this value set, which includes all codes from AJCC and all codes from TNMStageGroupVS."
+* ^experimental = false
+* include codes from valueset TNMStageGroupVS
+* include codes from system AJCC
+
+
 // Primary Tumor
 
 ValueSet: TNMPrimaryTumorStagingTypeVS
@@ -142,7 +151,7 @@ Description: "Identifying codes for the type of cancer staging performed, i.e., 
 
 ValueSet: TNMDistantMetastasesStagingTypeMaxVS
 Id: mcode-tnm-distant-metastases-staging-type-max-vs
-Title: "TNM Distant Metastases Staging Type Value Set"
+Title: "TNM Distant Metastases Staging Type Maximum Value Set"
 Description: "Like TNMDistantMetastasesStagingTypeVS, but in addition, contains deprecated LOINC codes (which are still allowed)."
 * insert SNOINCCopyrightForVS
 * ^extension[FMM].valueInteger = 4

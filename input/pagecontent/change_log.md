@@ -21,7 +21,7 @@ Recurrences and unrelated cancers sometimes occur years after previous metastati
 
 ### Expanded Value Sets
 
-Additional stage identifiers and staging methods were added to [CancerStageTypeVS] and [CancerStagingMethodVS].
+Additional stage identifiers and staging methods were added to [CancerStageTypeVS] and [CancerStagingMethodVS]. These are values that could potentially be used in the future and do not affect the immediately functionality of mCODE.
 
 ### Clarification of Observation.code and Observation.method in CancerStage
 
@@ -31,6 +31,9 @@ An explanation of how Observation.code differs from (and sometimes subsumes) Obs
 
 In CancerPatient, birth sex (an extension inherited from US Core), is now designated as must-support.
 
+### Preferred Codes for TNM Stage Group and T, N, and M Classifications
+
+mCODE is moving incrementally toward SNOMED CT as the preferred, standard vocabulary. While still accepting LOINC codes in Observations related to TNM staging, equivalent SNOMED CT codes are now permitted. Users should transition towards SNOMED CT in these profiles.
 
 **The following changes occurred between [STU 2 publication](http://hl7.org/fhir/us/mcode/STU2/) (January 2022) and the STU 3 ballot (March 2023). For a history of previous changes, please see the prior change logs in the [appropriate versions](http://hl7.org/fhir/us/mcode/history.html).**
 

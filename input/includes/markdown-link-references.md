@@ -19,10 +19,10 @@
 [GenomicsReport]: StructureDefinition-mcode-genomics-report.html
 [GenomicVariant]: StructureDefinition-mcode-genomic-variant.html
 [HistoryOfMetastaticCancer]: StructureDefinition-mcode-history-of-metastatic-cancer.html
+[HumanSpecimen]: StructureDefinition-mcode-human-specimen.html
 [KarnofskyPerformanceStatus]: StructureDefinition-mcode-karnofsky-performance-status.html
 [MCODEPatientBundle]: StructureDefinition-mcode-patient-bundle.html
 [MCODEPatientGroup]: StructureDefinition-mcode-patient-group.html
-[HumanSpecimen]: StructureDefinition-mcode-human-specimen.html
 [PrimaryCancerCondition]: StructureDefinition-mcode-primary-cancer-condition.html
 [RadiotherapyCourseSummary]: StructureDefinition-mcode-radiotherapy-course-summary.html
 [RadiotherapyVolume]: StructureDefinition-mcode-radiotherapy-volume.html
@@ -107,23 +107,33 @@
 [TeleradiotherapyPhotonBeamTechniqueVS]: ValueSet-mcode-teleradiotherapy-photon-beam-technique-vs.html
 [TeleradiotherapyProtonBeamTechniqueVS]: ValueSet-mcode-teleradiotherapy-proton-beam-technique-vs.html
 [TeleradiotherapyTechniqueVS]: ValueSet-mcode-teleradiotherapy-technique-vs.html
-[TNMDistantMetastasesStagingTypeVS]: ValueSet-mcode-tnm-distant-metastases-staging-type-vs.html
-[TNMPrimaryTumorStagingTypeVS]: ValueSet-mcode-tnm-primary-tumor-staging-type-vs.html
-[TNMRegionalNodesStagingTypeVS]: ValueSet-mcode-tnm-regional-nodes-staging-type-vs.html
-[TNMStagingMethodVS]: ValueSet-mcode-tnm-staging-method-vs.html
-[TNMStageGroupStagingTypeVS]: ValueSet-mcode-tnm-stage-group-staging-type-vs.html
-[TNMDistantMetastasesCategoryVS]: ValueSet-mcode-tnm-distant-metastases-category-vs.html
-[TNMPrimaryTumorCategoryVS]: ValueSet-mcode-tnm-primary-tumor-category-vs.html
-[TNMRegionalNodesCategoryVS]: ValueSet-mcode-tnm-regional-nodes-category-vs.html
-[TNMStageGroupVS]: ValueSet-mcode-tnm-stage-group-vs.html
-[TNMDistantMetastasesCategoryMaxVS]: ValueSet-mcode-tnm-distant-metastases-category-max-vs.html
-[TNMPrimaryTumorCategoryMaxVS]: ValueSet-mcode-tnm-primary-tumor-category-max-vs.html
-[TNMRegionalNodesCategoryMaxVS]: ValueSet-mcode-tnm-regional-nodes-category-max-vs.html
-[TNMStageGroupMaxVS]: ValueSet-mcode-tnm-stage-group-max-vs.html
 [TreatmentTerminationReasonVS]: ValueSet-mcode-treatment-termination-reason-vs.html
 [TumorMarkerTestVS]: ValueSet-mcode-tumor-marker-test-vs.html
 [TumorSizeMethodVS]: ValueSet-mcode-tumor-size-method-vs.html
 [TumorSizeUnitsVS]: ValueSet-mcode-tumor-size-units-vs.html
+
+<!-- TNM Value Sets-->
+[TNMStagingMethodVS]: ValueSet-mcode-tnm-staging-method-vs.html
+<!-- TNM Stage Group -->
+[TNMStageGroupStagingTypeVS]: ValueSet-mcode-tnm-stage-group-staging-type-vs.html
+[TNMStageGroupStagingTypeMaxVS]: ValueSet-mcode-tnm-stage-group-staging-type-max-vs.html
+[TNMStageGroupVS]: ValueSet-mcode-tnm-stage-group-vs.html
+[TNMStageGroupMaxVS]: ValueSet-mcode-tnm-stage-group-max-vs.html
+<!-- TNM T -->
+[TNMPrimaryTumorStagingTypeVS]: ValueSet-mcode-tnm-primary-tumor-staging-type-vs.html
+[TNMPrimaryTumorStagingTypeMaxVS]: ValueSet-mcode-tnm-primary-tumor-staging-type-max-vs.html
+[TNMPrimaryTumorCategoryVS]: ValueSet-mcode-tnm-primary-tumor-category-vs.html
+[TNMPrimaryTumorCategoryMaxVS]: ValueSet-mcode-tnm-primary-tumor-category-max-vs.html
+<!-- TNM N -->
+[TNMRegionalNodesStagingTypeVS]: ValueSet-mcode-tnm-regional-nodes-staging-type-vs.html
+[TNMRegionalNodesStagingTypeMaxVS]: ValueSet-mcode-tnm-regional-nodes-staging-type-max-vs.html
+[TNMRegionalNodesCategoryVS]: ValueSet-mcode-tnm-regional-nodes-category-vs.html
+[TNMRegionalNodesCategoryMaxVS]: ValueSet-mcode-tnm-regional-nodes-category-max-vs.html
+<!-- TNM M -->
+[TNMDistantMetastasesStagingTypeVS]: ValueSet-mcode-tnm-distant-metastases-staging-type-vs.html
+[TNMDistantMetastasesStagingTypeMaxVS]: ValueSet-mcode-tnm-distant-metastases-staging-type-max-vs.html
+[TNMDistantMetastasesCategoryVS]: ValueSet-mcode-tnm-distant-metastases-category-vs.html
+[TNMDistantMetastasesCategoryMaxVS]: ValueSet-mcode-tnm-distant-metastases-category-max-vs.html
 
 <!-- New non-TNM Value Sets -->
 [BinetStageValueVS]: ValueSet-mcode-binet-stage-value-vs.html

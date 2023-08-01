@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <specification xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ballotUrl="http://hl7.org/fhir/us/mcode/2023May" ciUrl="http://build.fhir.org/ig/HL7/fhir-mCODE-ig" defaultVersion="2.1.0" defaultWorkgroup="cic" gitUrl="https://github.com/HL7/fhir-mCODE-ig" url="http://hl7.org/fhir/us/mcode">
 <version code="current" url="http://build.fhir.org/ig/HL7/fhir-mCODE-ig"/>
+<version code="3.0.0-STU3 Release" url="http://hl7.org/fhir/us/mcode/3.0.0"/>
 <version code="3.0.0-ballot" url="http://hl7.org/fhir/us/mcode/2023May"/>
 <version code="2.1.0" url="http://hl7.org/fhir/us/mcode/STU2.1"/>
 <version code="2.0.0" url="http://hl7.org/fhir/us/mcode/STU2"/>
@@ -213,6 +214,7 @@
 <artifact id="StructureDefinition/mcode-tnm-distant-metastases-category" key="StructureDefinition-mcode-tnm-distant-metastases-category" name="TNM Distant Metastases Category Profile"/>
 <artifact id="ValueSet/mcode-tnm-distant-metastases-category-vs" key="tnm-distant-metastases-category-value-set" name="TNM Distant Metastases Category Value Set"/>
 <artifact id="ValueSet/mcode-tnm-distant-metastases-category-max-vs" key="ValueSet-mcode-tnm-distant-metastases-category-max-vs" name="TNM Distant Metastases Maximum Value Set"/>
+<artifact id="ValueSet/mcode-tnm-distant-metastases-staging-type-max-vs" key="ValueSet-mcode-tnm-distant-metastases-staging-type-max-vs" name="TNM Distant Metastases Staging Type Maximum Value Set"/>
 <artifact id="ValueSet/mcode-tnm-distant-metastases-staging-type-vs" key="ValueSet-mcode-tnm-distant-metastases-staging-type-vs" name="TNM Distant Metastases Staging Type Value Set"/>
 <artifact deprecated="true" id="Profile/mcode-tnm-pathological-distant-metastases-category" key="tnm-pathological-distant-metastases-category" name="TNM Pathological Distant Metastases Category"/>
 <artifact deprecated="true" id="Profile/mcode-tnm-pathological-primary-tumor-category" key="tnm-pathological-primary-tumor-category" name="TNM Pathological Primary Tumor Category"/>
@@ -221,13 +223,16 @@
 <artifact id="StructureDefinition/mcode-tnm-primary-tumor-category" key="StructureDefinition-mcode-tnm-primary-tumor-category" name="TNM Primary Tumor Category Profile"/>
 <artifact id="ValueSet/mcode-tnm-primary-tumor-category-vs" key="tnm-primary-tumor-category-value-set" name="TNM Primary Tumor Category Value Set"/>
 <artifact id="ValueSet/mcode-tnm-primary-tumor-category-max-vs" key="ValueSet-mcode-tnm-primary-tumor-category-max-vs" name="TNM Primary Tumor Maximum Value Set"/>
+<artifact id="ValueSet/mcode-tnm-primary-tumor-staging-type-max-vs" key="ValueSet-mcode-tnm-primary-tumor-staging-type-max-vs" name="TNM Primary Tumor Staging Type Maximum Value Set"/>
 <artifact id="ValueSet/mcode-tnm-primary-tumor-staging-type-vs" key="ValueSet-mcode-tnm-primary-tumor-staging-type-vs" name="TNM Primary Tumor Staging Type Value Set"/>
 <artifact id="StructureDefinition/mcode-tnm-regional-nodes-category" key="StructureDefinition-mcode-tnm-regional-nodes-category" name="TNM Regional Nodes Category Profile"/>
 <artifact id="ValueSet/mcode-tnm-regional-nodes-category-vs" key="tnm-regional-nodes-category-value-set" name="TNM Regional Nodes Category Value Set"/>
 <artifact id="ValueSet/mcode-tnm-regional-nodes-category-max-vs" key="ValueSet-mcode-tnm-regional-nodes-category-max-vs" name="TNM Regional Nodes Maximum Value Set"/>
+<artifact id="ValueSet/mcode-tnm-regional-nodes-staging-type-max-vs" key="ValueSet-mcode-tnm-regional-nodes-staging-type-max-vs" name="TNM Regional Nodes Staging Type Maximum Value Set"/>
 <artifact id="ValueSet/mcode-tnm-regional-nodes-staging-type-vs" key="ValueSet-mcode-tnm-regional-nodes-staging-type-vs" name="TNM Regional Nodes Staging Type Value Set"/>
 <artifact id="ValueSet/mcode-tnm-stage-group-max-vs" key="ValueSet-mcode-tnm-stage-group-max-vs" name="TNM Stage Group Maximum Value Set"/>
 <artifact id="StructureDefinition/mcode-tnm-stage-group" key="StructureDefinition-mcode-tnm-stage-group" name="TNM Stage Group Profile"/>
+<artifact id="ValueSet/mcode-tnm-stage-group-staging-type-max-vs" key="ValueSet-mcode-tnm-stage-group-staging-type-max-vs" name="TNM Stage Group Staging Type Maximum Value Set"/>
 <artifact id="ValueSet/mcode-tnm-stage-group-staging-type-vs" key="ValueSet-mcode-tnm-stage-group-staging-type-vs" name="TNM Stage Group Staging Type Value Set"/>
 <artifact deprecated="true" id="ValueSet/mcode-tnm-stage-group-vs" key="tnm-stage-group-value-set" name="TNM Stage Group Value Set"/>
 <artifact id="ValueSet/mcode-tnm-staging-method-vs" key="ValueSet-mcode-tnm-staging-method-vs" name="TNM Staging Method Value Set"/>
@@ -401,6 +406,8 @@
 <artifact id="Condition/primary-cancer-condition-nonspecific" key="Condition-primary-cancer-condition-nonspecific" name="primary-cancer-condition-nonspecific"/>
 <artifact id="Condition/primary-cancer-condition-nsclc" key="Condition-primary-cancer-condition-nsclc" name="primary-cancer-condition-nsclc"/>
 <artifact id="Procedure/radiotherapy-treatment-summary-chest-wall-jenny-m" key="Procedure-radiotherapy-treatment-summary-chest-wall-jenny-m" name="radiotherapy-treatment-summary-chest-wall-jenny-m"/>
+<artifact id="Procedure/radiotherapy-treatment-summary-other-with-text" key="Procedure-radiotherapy-treatment-summary-other-with-text" name="radiotherapy-treatment-summary-other-with-text"/>
+<artifact id="Procedure/radiotherapy-treatment-summary-other-without-text" key="Procedure-radiotherapy-treatment-summary-other-without-text" name="radiotherapy-treatment-summary-other-without-text"/>
 <artifact id="Observation/rai-stage-II" key="Observation-rai-stage-II" name="rai-stage-II"/>
 <artifact id="Condition/secondary-cancer-condition-brain-mets" key="Condition-secondary-cancer-condition-brain-mets" name="secondary-cancer-condition-brain-mets"/>
 <artifact deprecated="true" id="Procedure/teleradiotherapy-treatment-phase-boost-jenny-m" key="Procedure-teleradiotherapy-treatment-phase-boost-jenny-m" name="teleradiotherapy-treatment-phase-boost-jenny-m"/>

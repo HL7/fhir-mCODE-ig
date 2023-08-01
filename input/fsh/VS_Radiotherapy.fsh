@@ -50,7 +50,6 @@ Description: "Codes describing the techniques of teleradiotherapy (external beam
 * include codes from valueset TeleradiotherapyNeutronTechniqueVS
 * include codes from valueset TeleradiotherapyCarbonIonBeamTechniqueVS
 * include codes from valueset TeleradiotherapyProtonBeamTechniqueVS
-* NULLFLAVOR#UNC "un-encoded" // .text must be provided
 
 
 ValueSet: TeleradiotherapyPhotonBeamTechniqueVS

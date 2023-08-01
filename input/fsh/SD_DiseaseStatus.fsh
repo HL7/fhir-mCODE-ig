@@ -19,7 +19,8 @@ Description:    "A clinician's qualitative judgment on the current trend of the 
 * effective[x] only dateTime
 * performer only Reference(USCorePractitioner)
 * value[x] only CodeableConcept
-* value[x] from ConditionStatusTrendVS (required)
+* value[x] from ConditionStatusTrendVS (preferred)
+* value[x] ^binding.extension[http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet].valueCanonical = Canonical(ConditionStatusTrendMaxVS)
 // ALL MUST SUPPORTS
 * status and code and subject and effective[x] and value[x] and focus and extension[evidenceType]  MS
 //* dataAbsentReason MS

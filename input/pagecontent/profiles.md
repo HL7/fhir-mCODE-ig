@@ -16,7 +16,7 @@ The following profiles have been defined for this implementation guide:
 * [KarnofskyPerformanceStatus]
 * [mCODEPatientBundle]
 * [mCODEPatientGroup]
-* [OncologySpecimen]
+* [HumanSpecimen]
 * [PrimaryCancerCondition]
 * [RadiotherapyCourseSummary]
 * [RadiotherapyVolume]

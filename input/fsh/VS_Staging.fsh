@@ -124,7 +124,6 @@ Description: "Staging system or method used for staging cancers. The terms in th
 * SCT_TBD#1287646007 "International Germ Cell Consensus Classification (tumor staging)" //#USCRS-34948 requested June 2023
 // NCIT Terms
 * NCIT#C186527 "Atypical Teratoid/Rhabdoid Tumor Staging System"
-//* NCIT#C141208 "Chronic Lymphocytic Leukemia- Binet Staging System" -- covered by SNOMED
 * NCIT#C141206  "Chronic Lymphocytic Leukemia- Modified Rai Staging System"
 * NCIT#C62575 "Collaborative Staging"
 * NCIT#C128932 "Derkay Staging System"
@@ -133,7 +132,6 @@ Description: "Staging system or method used for staging cancers. The terms in th
 * NCIT#C85407 "Evans Staging System"
 * NCIT#C99408 "FIGO Staging System and Modified World Health Organization [WHO] Prognostic Scoring System for Gestational Trophoblastic Neoplasms"
 * NCIT#C115132 "Hepatocellular Carcinoma by BCLC Stage"
-* NCIT#C148010 "Intergroup Rhabdomyosarcoma Study Group Clinical Staging and Grouping System"
 * NCIT#C111073 "International Germ Cell Consensus Risk Classification"
 * NCIT#C141168 "Lugano Classification Hodgkin Lymphoma by AJCC v8 Stage"
 * NCIT#C186520 "Medulloblastoma Staging System"
@@ -141,12 +139,9 @@ Description: "Staging system or method used for staging cancers. The terms in th
 * NCIT#C177308 "Non-Seminomatous Germ Cell Tumor International Germ Cell Consensus Risk Classification"
 * NCIT#C186567 "Pineoblastoma Staging System"
 * NCIT#C123333 "Reese-Ellsworth Staging System"
-* NCIT#C62610 "SEER Summary Staging Manual 2000"
 * NCIT#C177309 "Seminoma International Germ Cell Tumor Consensus Risk Classification"
 * NCIT#C112006 "Thymoma by Masaoka-Koga Stage"
 * NCIT#C18008 "TNM Ovary Neoplasm Staging"
-* NCIT#C25384 "TNM Staging System"
-* NCIT#C198206 "UICC Staging System Manual"
 * NCIT#C141685 "Veterans Administration Lung Study Group Clinical Classification"
 * NCIT#C18214 "Whitmore-Jewett Staging System"
 

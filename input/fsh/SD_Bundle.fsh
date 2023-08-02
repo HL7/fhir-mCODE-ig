@@ -22,28 +22,28 @@ Description: "A collection of data for an mCODE cancer patient."
     mcodeProcedures 0..* MS and
     mcodeBodyStructures 0..* MS
 * entry[mcodeObservations] ^short = "mCODE Observation Resources"
-* entry[mcodeObservations] ^definition = "Slice containing mCODE observations"
+* entry[mcodeObservations] ^definition = "Slice containing FHIR Observation resources, if they exist for the patient, including but not limited to: CancerDiseaseStatus, CancerStage (TNM and non-TNM), Comorbidities, ECOGPerformanceStatus,GenomicRegionStudied, GenomicVariant, KarnofskyPerformanceStatus, TumorMarkerTest, TumorSize, and USCoreVitalSigns."
 * entry[mcodeObservations].resource only Observation
 * entry[mcodeConditions] ^short = "mCODE Condition Resources"
-* entry[mcodeConditions] ^definition = "Slice containing mCODE conditions"
+* entry[mcodeConditions] ^definition = "Slice containing FHIR Conditions if they exist for the patient, including but not limited to: PrimaryCancerCondition, SecondaryCancerCondition, and HistoryOfMetastaticCancer"
 * entry[mcodeConditions].resource only Condition
 * entry[mcodeMedicationAdministrations] ^short = "mCODE Medication Administration Resources"
-* entry[mcodeMedicationAdministrations] ^definition = "Slice containing mCODE Cancer-Related Medication Administration"
+* entry[mcodeMedicationAdministrations] ^definition = "Slice containing FHIR MedicationAdministration resources, if they exist for the patient, including but not limited to: CancerRelatedMedicationAdministration."
 * entry[mcodeMedicationAdministrations].resource only MedicationAdministration
 * entry[mcodeMedicationRequests] ^short = "mCODE Medication Request Resources"
-* entry[mcodeMedicationRequests] ^definition = "Slice containing mCODE Cancer-Related Medication Requests"
+* entry[mcodeMedicationRequests] ^definition = "Slice containing FHIR MedicationRequest resources, if they exist for the patient, including but not limited to: CancerRelatedMedicationRequest."
 * entry[mcodeMedicationRequests].resource only MedicationRequest
 * entry[mcodeDiagnosticReports] ^short = "mCODE Diagnostic Report Resources"
-* entry[mcodeDiagnosticReports] ^definition = "Slice containing mCODE diagnostic report resources"
+* entry[mcodeDiagnosticReports] ^definition = "Slice containing FHIR DiagnosticReport resources, if they exist for the patient, including but not limited to: GenomicsReport."
 * entry[mcodeDiagnosticReports].resource only DiagnosticReport
 * entry[mcodeSpecimens] ^short = "mCODE Specimen Resources"
-* entry[mcodeSpecimens] ^definition = "Slice containing mCODE specimen resources"
+* entry[mcodeSpecimens] ^definition = "Slice containing FHIR Specimen resources, if they exist for the patient, including but not limited to: HumanSpecimen."
 * entry[mcodeSpecimens].resource only Specimen
 * entry[mcodeProcedures] ^short = "mCODE Procedure Resources"
-* entry[mcodeProcedures] ^definition = "Slice containing mCODE Procedure resources"
+* entry[mcodeProcedures] ^definition = "Slice containing FHIR Procedure resources, if they exist for the patient, including but not limited to: CancerRelatedSurgicalProcedure and RadiotherapyCourseSummary."
 * entry[mcodeProcedures].resource only Procedure
 * entry[mcodeBodyStructures] ^short = "mCODE BodyStructure Resources"
-* entry[mcodeBodyStructures] ^definition = "Slice containing mCODE BodyStructure resources"
+* entry[mcodeBodyStructures] ^definition = "Slice containing FHIR BodyStructure resources, if they exist for the patient, including but not limited to: RadiotherapyVolume and Tumor"
 * entry[mcodeBodyStructures].resource only  BodyStructure
 * timestamp and entry and entry.resource MS
 

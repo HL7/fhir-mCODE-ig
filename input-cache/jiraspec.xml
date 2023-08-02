@@ -296,9 +296,9 @@
 <artifact id="Observation/gx-genomic-variant-somatic-polrmt" key="Observation-gx-genomic-variant-somatic-polrmt" name="gx-genomic-variant-somatic-polrmt"/>
 <artifact id="DiagnosticReport/gx-genomics-report-adam-anyperson" key="DiagnosticReport-gx-genomics-report-adam-anyperson" name="gx-genomics-report-adam-anyperson"/>
 <artifact deprecated="true" id="DiagnosticReport/gx-genomics-report-incredible-hulk" key="DiagnosticReport-gx-genomics-report-incredible-hulk" name="gx-genomics-report-incredible-hulk"/>
-<artifact id="ServiceRequest/gx-order-tumornormal-tempus-inc" key="ServiceRequest-gx-order-tumornormal-tempus-inc" name="gx-order-tumornormal-tempus-inc"/>
+<artifact id="ServiceRequest/gx-order-tumornormal-gensop-inc" key="ServiceRequest-gx-order-tumornormal-gensop-inc" name="gx-order-tumornormal-gensop-inc"/>
 <artifact id="Practitioner/gx-practitioner-test-pathologist" key="Practitioner-gx-practitioner-test-pathologist" name="gx-practitioner-test-pathologist"/>
-<artifact id="Organization/gx-us-core-organization-tempus-inc" key="Organization-gx-us-core-organization-tempus-inc" name="gx-us-core-organization-tempus-inc"/>
+<artifact id="Organization/gx-us-core-organization-gensop-inc" key="Organization-gx-us-core-organization-gensop-inc" name="gx-us-core-organization-gensop-inc"/>
 <artifact id="Organization/gx-us-core-organization-test-institution" key="Organization-gx-us-core-organization-test-institution" name="gx-us-core-organization-test-institution"/>
 <artifact id="Specimen/human-specimen-left-breast-jenny-m" key="Specimen-human-specimen-left-breast-jenny-m" name="human-specimen-left-breast-jenny-m"/>
 <artifact id="Specimen/human-specimen-lung" key="Specimen-human-specimen-lung" name="human-specimen-lung"/>

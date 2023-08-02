@@ -6,11 +6,11 @@
 // **************************************************************
 
 Instance: gx-cancer-patient-adam-anyperson
-InstanceOf: Patient
+InstanceOf: CancerPatient
 Description: "GenomeX Example of NGS Patient"
 * identifier.use = #usual
 * identifier[0].type = IDTYPE#PT "Patient external identifier"
-* identifier[0].system = "https://www.tempus.com"
+* identifier[0].system = "https://www.gensop.com"
 * identifier[0].value = "22ea1d1b-03a5-47d6-81e0-b9b4cbb15ccf"
 * identifier[1].type = IDTYPE#MR "Medical Record Number"
 * identifier[1].system = "http://hospital.example.org"
@@ -18,6 +18,7 @@ Description: "GenomeX Example of NGS Patient"
 * name.family = "Anyperson"
 * name.given[0] = "Adam"
 * gender = #male
+* extension[birthsex].valueCode = #M
 * birthDate = "1990-01-01"
 * address.line = "987 Main St"
 * address.city = "Anytown"
@@ -25,45 +26,38 @@ Description: "GenomeX Example of NGS Patient"
 * address.country = "US"
 
 
-Instance: gx-order-tumornormal-tempus-inc
+Instance: gx-order-tumornormal-gensop-inc
 InstanceOf: ServiceRequest
 Description: "GenomeX example: Order information"
 * identifier[0].type = IDTYPE#FILL "Filler Identifier"
-* identifier[0].system = "https://www.tempus.com"
+* identifier[0].system = "https://www.gensop.com"
 * identifier[0].value = "22howe"
 * status = #completed
 * intent = #order
 * subject = Reference(gx-cancer-patient-adam-anyperson)
-* code = https://www.tempus.com#XT.V4 "xT - 648 gene panel"
+* code = https://www.gensop.com#XT.V4 "xT - 648 gene panel"
 * reasonCode[0].coding[0] = ICD10CM#C34.9 "Malignant neoplasm of unspecified part of bronchus or lung"
 * reasonCode[0].coding[1] = ICDO3#"C34.9 8140/3" "Lung adenocarcinoma"
 
-Instance: gx-us-core-organization-tempus-inc
+Instance: gx-us-core-organization-gensop-inc
 InstanceOf: USCoreOrganization
 Description: "GenomeX example: example organization"
 * active = true
 * type = http://terminology.hl7.org/CodeSystem/organization-type#other "Other"
-* name = "Tempus Labs, Inc."
-* identifier[0].system = "urn:oid:2.16.840.1.113883.4.7"
-* identifier[0].value = "14D2114007"
+* name = "Gensop Labs, Inc."
+* identifier[0].system = "urn:oid:2.16.840.1.113883.4.7"  //CLIA number
+* identifier[0].value = "14Y73291001"
 * telecom[0].system = #phone
-* telecom[0].value = "999-999-9999"
+* telecom[0].value = "555-555-5555"
 * telecom[1].system = #email
-* telecom[1].value = "support@tempus.com"
+* telecom[1].value = "support@gensop.com"
 * telecom.use = #work
-* address.line = "600 West Chicago Avenue, Ste 510"
+* address.line = "8415 Hitech Road"
 * address.city = "Chicago"
 * address.state = "IL"
 * address.postalCode = "60654"
 * address.country = "US"
-* contact.name.text = "Nike Beaubier, MD, FCAP, MGP"
-
-Instance: gx-us-core-organization-test-institution
-InstanceOf: USCoreOrganization
-Description: "GenomeX example: example organization"
-* active = true
-* type = http://terminology.hl7.org/CodeSystem/organization-type#other "Other"
-* name = "Test Institution"
+* contact.name.text = "Quinn Chen, MD"
 
 Instance: gx-practitioner-test-pathologist
 InstanceOf: Practitioner
@@ -276,7 +270,7 @@ Description: "GenomeX mCODE Example for Genomic Variant - POLRMT"
 
 Instance: gx-genomic-diagnostic-implication-polrmt
 InstanceOf: DiagnosticImplication
-Description: "GenomeX mCODE Example for Clinical Significance of VUS - POF1B"
+Description: "GenomeX mCODE Example for Clinical Significance of VUS - POLRMT"
 * status = #final "Final"
 * subject = Reference(gx-cancer-patient-adam-anyperson)
 * effectiveDateTime = "2019-04-01"
@@ -356,9 +350,9 @@ Description: "GenomeX Example for Genomics Report"
 * status = #final "Final"
 * code = LNC#51969-4 "Genetic analysis report"
 * subject = Reference(gx-cancer-patient-adam-anyperson)
-* performer = Reference(gx-us-core-organization-tempus-inc)
+* performer = Reference(gx-us-core-organization-gensop-inc)
 * effectiveDateTime = "2022-02-15T19:28:58+05:00"
-* basedOn = Reference(gx-order-tumornormal-tempus-inc)
+* basedOn = Reference(gx-order-tumornormal-gensop-inc)
 * resultsInterpreter = Reference(gx-practitioner-test-pathologist)
 * specimen[0] = Reference(Specimen/gx-genomic-specimen-tumornormal-tumor)
 * specimen[1] = Reference(Specimen/gx-genomic-specimen-tumornormal-normal)
@@ -396,8 +390,8 @@ Description: "Extended genomics example conformant with an mCODE Bundle."
 * entry[=].fullUrl = "http://example.org/fhir/Patient/gx-cancer-patient-adam-anyperson"
 * entry[+].resource = gx-genomics-report-adam-anyperson
 * entry[=].fullUrl = "http://example.org/fhir/DiagnosticReport/gx-genomics-report-adam-anyperson"
-* entry[+].resource = gx-order-tumornormal-tempus-inc
-* entry[=].fullUrl = "http://example.org/fhir/ServiceRequest/gx-order-tumornormal-tempus-inc"
+* entry[+].resource = gx-order-tumornormal-gensop-inc
+* entry[=].fullUrl = "http://example.org/fhir/ServiceRequest/gx-order-tumornormal-gensop-inc"
 * entry[+].resource = gx-practitioner-test-pathologist
 * entry[=].fullUrl = "http://example.org/fhir/Practitioner/gx-practitioner-test-pathologist"
 * entry[+].resource = gx-genomic-specimen-tumornormal-tumor

@@ -243,9 +243,9 @@ Description: "Example of TNM Clinical Stage Group"
 * subject = Reference(cancer-patient-john-anyperson)
 * focus = Reference(primary-cancer-condition-nsclc)  // added requirement STU3
 * effectiveDateTime = "2019-04-01"
-* hasMember[tnmPrimaryTumorCategory] = Reference(tnm-clinical-primary-tumor-category-cT3)
-* hasMember[tnmRegionalNodesCategory] = Reference(tnm-clinical-regional-nodes-category-cN3)
-* hasMember[tnmDistantMetastasesCategory] = Reference(tnm-clinical-distant-metastases-category-cM0)
+* hasMember[0] = Reference(tnm-clinical-primary-tumor-category-cT3)
+* hasMember[1] = Reference(tnm-clinical-regional-nodes-category-cN3)
+* hasMember[2] = Reference(tnm-clinical-distant-metastases-category-cM0)
 
 Instance: tnm-clinical-distant-metastases-category-cM0
 InstanceOf: TNMDistantMetastasesCategory

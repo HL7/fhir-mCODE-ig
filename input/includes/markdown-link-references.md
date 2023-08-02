@@ -19,10 +19,10 @@
 [GenomicsReport]: StructureDefinition-mcode-genomics-report.html
 [GenomicVariant]: StructureDefinition-mcode-genomic-variant.html
 [HistoryOfMetastaticCancer]: StructureDefinition-mcode-history-of-metastatic-cancer.html
+[HumanSpecimen]: StructureDefinition-mcode-human-specimen.html
 [KarnofskyPerformanceStatus]: StructureDefinition-mcode-karnofsky-performance-status.html
 [MCODEPatientBundle]: StructureDefinition-mcode-patient-bundle.html
 [MCODEPatientGroup]: StructureDefinition-mcode-patient-group.html
-[HumanSpecimen]: StructureDefinition-mcode-human-specimen.html
 [PrimaryCancerCondition]: StructureDefinition-mcode-primary-cancer-condition.html
 [RadiotherapyCourseSummary]: StructureDefinition-mcode-radiotherapy-course-summary.html
 [RadiotherapyVolume]: StructureDefinition-mcode-radiotherapy-volume.html

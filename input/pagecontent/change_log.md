@@ -14,25 +14,33 @@ mCODE 2.1 and 3.0.0-ballot did not include any profiles for non-TNM staging, so 
 * [MyelomaRISSStage]
 * [ProstateGleasonGradeGroup]
 
-### New History of Metastatic Disease Profile
+### New History of Metastatic Disease Profile ([FHIR-41374](https://jira.hl7.org/browse/FHIR-41374))
 
 Recurrences and unrelated cancers sometimes occur years after previous metastatic disease, for example, in the case of an adult with history of childhood leukemia. The details of the previous disease may be unavailable, but the fact that the patient had cancer previously may be clinically significant. The profile [HistoryOfMetastaticCancer] provides a method of recording this fact in the absence of other details. This addition brings mCODE and [CMS's Enhancing Oncology Model](https://innovation.cms.gov/innovation-models/enhancing-oncology-model) into full alignment.
 
-### Expanded Value Sets
+### Expanded Staging Type and Staging Method Value Sets ([FHIR-41162](https://jira.hl7.org/browse/FHIR-41162), [FHIR-41164](https://jira.hl7.org/browse/FHIR-41164), [FHIR-41032](https://jira.hl7.org/browse/FHIR-41032), [FHIR-41030](https://jira.hl7.org/browse/FHIR-41030))
 
-Additional stage identifiers and staging methods were added to [CancerStageTypeVS] and [CancerStagingMethodVS]. These are values that could potentially be used in the future and do not affect the immediately functionality of mCODE.
+Additional stage type identifiers and staging methods were added to [CancerStageTypeVS] and [CancerStagingMethodVS]. These are values that could potentially be used in the future and inclusions or exclusions do not affect the immediately functionality of mCODE. Codes associated with pediatric cancers were moved out of mCODE in anticipation of an IG focused on pediatric cancer. Certain codes requested from SNOMED were added. Again, since the bindings of these values sets are extensible, inclusion or exclusion of particular values does not affect functionality.
 
-### Clarification of Observation.code and Observation.method in CancerStage
+### Clarification of Observation.code and Observation.method in CancerStage ([FHIR-41163](https://jira.hl7.org/browse/FHIR-41163))
 
 An explanation of how Observation.code differs from (and sometimes subsumes) Observation.method in CancerStage and its descendants [was added](group-disease.html#how-to-report-staging-information).
 
-### Birth Sex Added as Must Support
+### Birth Sex Added as Must Support ([FHIR-40587](https://jira.hl7.org/browse/FHIR-40587))
 
 In CancerPatient, birth sex (an extension inherited from US Core), is now designated as must-support.
 
-### Preferred Codes for TNM Stage Group and T, N, and M Classifications
+### Preferred Codes for TNM Stage Group and T, N, and M Classifications ([FHIR-41655](https://jira.hl7.org/browse/FHIR-41655))
 
-mCODE is moving incrementally toward SNOMED CT as the preferred, standard vocabulary (except for laboratory tests). While still accepting LOINC codes in Observations related to TNM staging, equivalent SNOMED CT codes are now permitted. Users should transition towards SNOMED CT in these profiles.
+mCODE is moving incrementally toward SNOMED CT as the preferred, standard vocabulary (except for identification of laboratory tests and a few other cases). While still accepting LOINC codes in Observations related to TNM staging, SNOMED CT codes are now preferred. Users should transition towards SNOMED CT in these profiles.
+
+### Preferred Codes for Cancer Disease Status ([FHIR-40811](https://jira.hl7.org/browse/FHIR-40811))
+
+A code representing the detection of metastases has been added, for when disease status changes from local disease to metastatic disease. The two disorder codes for partial and full remission, formerly from the SNOMED CT *disorder* hierarchy, have been replaced with analogous codes from the *qualifier value* hierarchy. This change was based on SNOMED guidance that the value of FHIR Observations should be a code from the *qualifier* hierarchy or *finding* hierarchy (see https://confluence.ihtsdotools.org/display/FHIR/Observation+binding). To assure backward compatibility with this change, the two deprecated disorder codes have been moved into a maximum value set, while the binding of the revised value set is now `preferred`. This gives implementers time to transition to the new codes for partial and full remission, since the old disorder codes are still accepted (but not preferred).
+<br/>
+<br/>
+----
+<br/>
 
 **The following changes occurred between [STU 2 publication](http://hl7.org/fhir/us/mcode/STU2/) (January 2022) and the STU 3 ballot (March 2023). For a history of previous changes, please see the prior change logs in the [appropriate versions](http://hl7.org/fhir/us/mcode/history.html).**
 
@@ -231,6 +239,13 @@ A specimen is a specimen. There was no real reason to distinguish specimens obta
   * #1162614009 "Lymph node level X (qualifier value)"
   * #1162615005 "Lymph node level XA (qualifier value)"
   * #1162613003 "Lymph node level XB (qualifier value)"
+
+<br/>
+________________________________
+<br/>
+<br/>
+
+**The change log for changes prior to mCODE version 2.1 [continues here](https://hl7.org/fhir/us/mcode/STU2.1/change_log.html)**
 
 
 {% include markdown-link-references.md %}

@@ -42,24 +42,25 @@
 
 * [Patient for genomics examples](Patient-gx-cancer-patient-adam-anyperson.html)
 
-### [Practitioner](USCorePractitioner)
+### [Practitioner][USCorePractitioner]
 
 * [Interpreter of the next-generation sequencing (NGS) test](Practitioner-gx-practitioner-test-pathologist.html)
 
 ### [Service Request][R4ServiceRequest]
 
-* [Order for tumor-normal test](ServiceRequest-gx-order-tumornormal-gensup-inc.html)
+* [Order for tumor-normal test](ServiceRequest-gx-order-tumornormal-gensop-inc.html)
 
 ### [Therapeutic Implications][TherapeuticImplication]
 
-* [Therapeutic Implications-alectinib](Observation-genomic-therapeutic-implication-alectinib.html)	
-* [Therapeutic Implications-brigatinib](Observation-genomic-therapeutic-implication-brigatinib.html)	
-* [Therapeutic Implications-ceritinib](Observation-genomic-therapeutic-implication-ceritinib.html)	
-* [Therapeutic Implications-crizotinib](Observation-genomic-therapeutic-implication-crizotinib.html)	
-* [Therapeutic Implications-lorlatinib](Observation-genomic-therapeutic-implication-lorlatinib.html)
+* [Therapeutic Implications-alectinib](Observation-gx-genomic-therapeutic-implication-alectinib.html)	
+* [Therapeutic Implications-brigatinib](Observation-gx-genomic-therapeutic-implication-brigatinib.html)	
+* [Therapeutic Implications-ceritinib](Observation-gx-genomic-therapeutic-implication-ceritinib.html)	
+* [Therapeutic Implications-crizotinib](Observation-gx-genomic-therapeutic-implication-crizotinib.html)	
+* [Therapeutic Implications-lorlatinib](Observation-gx-genomic-therapeutic-implication-lorlatinib.html)
 
 ### [Tumor Mutation Burden][TMB]
 
 * [Tumor Mutation Burden](Observation-gx-genomic-tmb.html)
 
 
+{% include markdown-link-references.md %}

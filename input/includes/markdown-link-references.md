@@ -197,7 +197,7 @@
 
 <!-- Genomics -->
 [Variant]: http://hl7.org/fhir/uv/genomics-reporting/STU2/StructureDefinition-variant.html
-[TherapeuticImplication]: http://hl7.org/fhir/uv/genomics-reporting/STU2/StructureDefinition/therapeutic-implication.html
+[TherapeuticImplication]: http://hl7.org/fhir/uv/genomics-reporting/STU2/StructureDefinition-therapeutic-implication.html
 [DiagnosticImplication]: http://hl7.org/fhir/uv/genomics-reporting/STU2/StructureDefinition-diagnostic-implication.html
 [MSI]: http://hl7.org/fhir/uv/genomics-reporting/STU2/StructureDefinition-msi.html
 [TMB]: http://hl7.org/fhir/uv/genomics-reporting/STU2/StructureDefinition-tmb.html

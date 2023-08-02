@@ -335,9 +335,11 @@
 <artifact id="DiagnosticReport/gx-genomics-report-adam-anyperson" key="DiagnosticReport-gx-genomics-report-adam-anyperson" name="gx-genomics-report-adam-anyperson"/>
 <artifact deprecated="true" id="DiagnosticReport/gx-genomics-report-incredible-hulk" key="DiagnosticReport-gx-genomics-report-incredible-hulk" name="gx-genomics-report-incredible-hulk"/>
 <artifact id="ServiceRequest/gx-order-tumornormal-gensop-inc" key="ServiceRequest-gx-order-tumornormal-gensop-inc" name="gx-order-tumornormal-gensop-inc"/>
+<artifact deprecated="true" id="ServiceRequest/gx-order-tumornormal-tempus-inc" key="ServiceRequest-gx-order-tumornormal-tempus-inc" name="gx-order-tumornormal-tempus-inc"/>
 <artifact id="Practitioner/gx-practitioner-test-pathologist" key="Practitioner-gx-practitioner-test-pathologist" name="gx-practitioner-test-pathologist"/>
 <artifact id="Organization/gx-us-core-organization-gensop-inc" key="Organization-gx-us-core-organization-gensop-inc" name="gx-us-core-organization-gensop-inc"/>
-<artifact id="Organization/gx-us-core-organization-test-institution" key="Organization-gx-us-core-organization-test-institution" name="gx-us-core-organization-test-institution"/>
+<artifact deprecated="true" id="Organization/gx-us-core-organization-tempus-inc" key="Organization-gx-us-core-organization-tempus-inc" name="gx-us-core-organization-tempus-inc"/>
+<artifact deprecated="true" id="Organization/gx-us-core-organization-test-institution" key="Organization-gx-us-core-organization-test-institution" name="gx-us-core-organization-test-institution"/>
 <artifact id="Condition/history-metastatic-cancer-jenny-m" key="Condition-history-metastatic-cancer-jenny-m" name="history-metastatic-cancer-jenny-m"/>
 <artifact id="Observation/hodgkins-lymphoma-stage-IIIe" key="Observation-hodgkins-lymphoma-stage-IIIe" name="hodgkins-lymphoma-stage-IIIe"/>
 <artifact id="Specimen/human-specimen-left-breast-jenny-m" key="Specimen-human-specimen-left-breast-jenny-m" name="human-specimen-left-breast-jenny-m"/>
@@ -406,7 +408,6 @@
 <artifact id="Condition/primary-cancer-condition-nsclc" key="Condition-primary-cancer-condition-nsclc" name="primary-cancer-condition-nsclc"/>
 <artifact id="Procedure/radiotherapy-treatment-summary-chest-wall-jenny-m" key="Procedure-radiotherapy-treatment-summary-chest-wall-jenny-m" name="radiotherapy-treatment-summary-chest-wall-jenny-m"/>
 <artifact id="Procedure/radiotherapy-treatment-summary-other-with-text" key="Procedure-radiotherapy-treatment-summary-other-with-text" name="radiotherapy-treatment-summary-other-with-text"/>
-<artifact id="Procedure/radiotherapy-treatment-summary-other-without-text" key="Procedure-radiotherapy-treatment-summary-other-without-text" name="radiotherapy-treatment-summary-other-without-text"/>
 <artifact id="Observation/rai-stage-II" key="Observation-rai-stage-II" name="rai-stage-II"/>
 <artifact id="Condition/secondary-cancer-condition-brain-mets" key="Condition-secondary-cancer-condition-brain-mets" name="secondary-cancer-condition-brain-mets"/>
 <artifact deprecated="true" id="Procedure/teleradiotherapy-treatment-phase-boost-jenny-m" key="Procedure-teleradiotherapy-treatment-phase-boost-jenny-m" name="teleradiotherapy-treatment-phase-boost-jenny-m"/>
@@ -469,6 +470,7 @@
 <page key="examples" name="Extended Example"/>
 <page deprecated="true" key="extensions" name="Extensions"/>
 <page key="group-genomics" name="Genomics"/>
+<page key="examples_genomics" name="Genomics Examples"/>
 <page key="glossary" name="Glossary"/>
 <page deprecated="true" key="history" name="History"/>
 <page key="index" name="Home"/>

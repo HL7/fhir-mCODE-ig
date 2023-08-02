@@ -15,7 +15,7 @@ Description:    "A clinician's qualitative judgment on the current trend of the 
 * code = LNC#97509-4 // "Cancer Disease Progression"
 * subject only Reference(CancerPatient)
 * subject ^definition = "Patient whose disease status is recorded."
-* focus only Reference(PrimaryCancerCondition or SecondaryCancerCondition or Tumor or RadiotherapyVolume)  // Added RadiotherapyVolume per Saul's request in Sept 21, 2022 email
+* focus only Reference(USCoreCondition or Tumor or RadiotherapyVolume)  // Added RadiotherapyVolume per Saul's request in Sept 21, 2022 email
 * effective[x] only dateTime
 * performer only Reference(USCorePractitioner)
 * value[x] only CodeableConcept

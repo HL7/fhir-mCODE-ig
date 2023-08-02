@@ -75,7 +75,7 @@ The following draft (maturity level 0) value sets are defined in this implementa
 * [ClinOrPathModifierVS]
 * [FIGOStagingMethodVS]
 * [FIGOStageValueVS]
-* [GleasonGradeGroupVS]
+* [GleasonGradeGroupValueVS]
 * [LymphomaStagingMethodVS]
 * [LymphomaStageValueVS]
 * [LymphomaStageValueModifierVS]

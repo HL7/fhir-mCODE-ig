@@ -37,6 +37,10 @@ mCODE is moving incrementally toward SNOMED CT as the preferred, standard vocabu
 ### Preferred Codes for Cancer Disease Status ([FHIR-40811](https://jira.hl7.org/browse/FHIR-40811))
 
 A code representing the detection of metastases has been added, for when disease status changes from local disease to metastatic disease. The two disorder codes for partial and full remission, formerly from the SNOMED CT *disorder* hierarchy, have been replaced with analogous codes from the *qualifier value* hierarchy. This change was based on SNOMED guidance that the value of FHIR Observations should be a code from the *qualifier* hierarchy or *finding* hierarchy (see https://confluence.ihtsdotools.org/display/FHIR/Observation+binding). To assure backward compatibility with this change, the two deprecated disorder codes have been moved into a maximum value set, while the binding of the revised value set is now `preferred`. This gives implementers time to transition to the new codes for partial and full remission, since the old disorder codes are still accepted (but not preferred).
+
+### New Page for Genomics Examples
+
+In the ballot version, approximately 20 new examples involving genomics and next generation sequencing (NGS) we added. To increase the visibility of these examples, [a new page](examples_genomics.html) listing all these examples in one place was added.
 <br/>
 <br/>
 ----
@@ -187,7 +191,7 @@ Users requested a link between TumorMarkerTest and the condition the test is rel
 
 ### Multiple Specimen Profiles Simplified
 
-A specimen is a specimen. There was no real reason to distinguish specimens obtained for genomic analysis from those obtained for other uses. A single profile, HumanSpecimen, was created to represent any specimen from a human subject. Since this profile is no longer associated with a single domain (Disease or Genomics), specimens were added to the Patient domain.
+A specimen is a specimen. There was no real reason to distinguish specimens obtained for genomic analysis from those obtained for other uses. A single profile, HumanSpecimen, was created to represent any specimen from a human subject. Since this profile is no longer associated with a single domain (Disease or Genomics), specimens were added to the Patient domain. The values for specimen type are a subset of codes representing human-sourced specimens (fluids, tissues, etc.) from http://terminology.hl7.org/CodeSystem/v2-0487.
 
 ### Technical Corrections
 

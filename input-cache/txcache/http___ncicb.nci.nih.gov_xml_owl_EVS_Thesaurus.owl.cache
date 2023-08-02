@@ -2334,3 +2334,265 @@ e: {
   "error" : "Error from server: Unable to provide support for code system http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl"
 }
 -------------------------------------------------------------------------------------
+{"hierarchical" : false, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "inactive" : true,
+    "include" : [{
+      "system" : "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl",
+      "concept" : [{
+        "code" : "C134969",
+        "display" : "AIDS-Related Kaposi Sarcoma Stage"
+      },
+      {
+        "code" : "C90529",
+        "display" : "AJCC v6 Stage"
+      },
+      {
+        "code" : "C90530",
+        "display" : "AJCC v7 Stage"
+      },
+      {
+        "code" : "C177555",
+        "display" : "AJCC v8 Clinical Stage"
+      },
+      {
+        "code" : "C177556",
+        "display" : "AJCC v8 Pathologic Stage"
+      },
+      {
+        "code" : "C132248",
+        "display" : "AJCC v8 Stage"
+      },
+      {
+        "code" : "C180901",
+        "display" : "AJCC v9 Stage"
+      },
+      {
+        "code" : "C177558",
+        "display" : "Ann Arbor Clinical Stage"
+      },
+      {
+        "code" : "C177559",
+        "display" : "Ann Arbor Pathologic Stage"
+      },
+      {
+        "code" : "C141138",
+        "display" : "Ann Arbor Stage"
+      },
+      {
+        "code" : "C115134",
+        "display" : "BCLC Stage"
+      },
+      {
+        "code" : "C141212",
+        "display" : "Binet Stage"
+      },
+      {
+        "code" : "C139445",
+        "display" : "Breast Cancer Anatomic Stage"
+      },
+      {
+        "code" : "C139446",
+        "display" : "Breast Cancer Prognostic Stage"
+      },
+      {
+        "code" : "C139006",
+        "display" : "Durie/Salmon Stage"
+      },
+      {
+        "code" : "C141099",
+        "display" : "ENSAT Stage"
+      },
+      {
+        "code" : "C186618",
+        "display" : "FIGO 2009 Stage"
+      },
+      {
+        "code" : "C186617",
+        "display" : "FIGO 2018 Stage"
+      },
+      {
+        "code" : "C125738",
+        "display" : "FIGO Stage"
+      },
+      {
+        "code" : "C157232",
+        "display" : "FIGO/TNM Stage"
+      },
+      {
+        "code" : "C28067",
+        "display" : "Hepatoblastoma Stage"
+      },
+      {
+        "code" : "C139007",
+        "display" : "International Staging System Stage"
+      },
+      {
+        "code" : "C141147",
+        "display" : "Lugano Stage"
+      },
+      {
+        "code" : "C143151",
+        "display" : "Masaoka-Koga Stage"
+      },
+      {
+        "code" : "C146847",
+        "display" : "Mediastinal Malignant Germ Cell Tumor Stage"
+      },
+      {
+        "code" : "C16899",
+        "display" : "Neoplasm Stage"
+      },
+      {
+        "code" : "C174125",
+        "display" : "Neoplastic Disease Extent Indicator"
+      },
+      {
+        "code" : "C141461",
+        "display" : "Occult Stage"
+      }]
+    }]
+  }
+}}####
+e: {
+  "error" : "Error from server: Unable to provide support for code system http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl"
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : false, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "inactive" : true,
+    "include" : [{
+      "system" : "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl",
+      "concept" : [{
+        "code" : "C191343",
+        "display" : "AJCC Cancer Staging Manual 4th Edition"
+      },
+      {
+        "code" : "C191344",
+        "display" : "AJCC Cancer Staging Manual 5th Edition"
+      },
+      {
+        "code" : "C186613",
+        "display" : "AJCC Cancer Staging System Version 9"
+      },
+      {
+        "code" : "C186527",
+        "display" : "Atypical Teratoid/Rhabdoid Tumor Staging System"
+      },
+      {
+        "code" : "C141206",
+        "display" : "Chronic Lymphocytic Leukemia- Modified Rai Staging System"
+      },
+      {
+        "code" : "C62575",
+        "display" : "Collaborative Staging"
+      },
+      {
+        "code" : "C128932",
+        "display" : "Derkay Staging System"
+      },
+      {
+        "code" : "C186536",
+        "display" : "Embryonal Tumor with Multilayered Rosettes Staging System"
+      },
+      {
+        "code" : "C140258",
+        "display" : "Enneking Staging System"
+      },
+      {
+        "code" : "C85407",
+        "display" : "Evans Staging System"
+      },
+      {
+        "code" : "C99408",
+        "display" : "FIGO Staging System and Modified World Health Organization [WHO] Prognostic Scoring System for Gestational Trophoblastic Neoplasms"
+      },
+      {
+        "code" : "C115132",
+        "display" : "Hepatocellular Carcinoma by BCLC Stage"
+      },
+      {
+        "code" : "C148010",
+        "display" : "Intergroup Rhabdomyosarcoma Study Group Clinical Staging and Grouping System"
+      },
+      {
+        "code" : "C111073",
+        "display" : "International Germ Cell Consensus Risk Classification"
+      },
+      {
+        "code" : "C140270",
+        "display" : "International Society of Pediatric Oncology Staging System"
+      },
+      {
+        "code" : "C177550",
+        "display" : "IRS Clinical Staging System"
+      },
+      {
+        "code" : "C141168",
+        "display" : "Lugano Classification Hodgkin Lymphoma by AJCC v8 Stage"
+      },
+      {
+        "code" : "C186520",
+        "display" : "Medulloblastoma Staging System"
+      },
+      {
+        "code" : "C198826",
+        "display" : "Modified Chang Staging System for Medulloblastoma"
+      },
+      {
+        "code" : "C177308",
+        "display" : "Non-Seminomatous Germ Cell Tumor International Germ Cell Consensus Risk Classification"
+      },
+      {
+        "code" : "C186567",
+        "display" : "Pineoblastoma Staging System"
+      },
+      {
+        "code" : "C123333",
+        "display" : "Reese-Ellsworth Staging System"
+      },
+      {
+        "code" : "C62610",
+        "display" : "SEER Summary Staging Manual 2000"
+      },
+      {
+        "code" : "C177309",
+        "display" : "Seminoma International Germ Cell Tumor Consensus Risk Classification"
+      },
+      {
+        "code" : "C62611",
+        "display" : "Summary Staging Guide 1977"
+      },
+      {
+        "code" : "C112006",
+        "display" : "Thymoma by Masaoka-Koga Stage"
+      },
+      {
+        "code" : "C18008",
+        "display" : "TNM Ovary Neoplasm Staging"
+      },
+      {
+        "code" : "C25384",
+        "display" : "TNM Staging System"
+      },
+      {
+        "code" : "C198206",
+        "display" : "UICC Staging System Manual"
+      },
+      {
+        "code" : "C141685",
+        "display" : "Veterans Administration Lung Study Group Clinical Classification"
+      },
+      {
+        "code" : "C18214",
+        "display" : "Whitmore-Jewett Staging System"
+      }]
+    }]
+  }
+}}####
+e: {
+  "error" : "Error from server: Unable to provide support for code system http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl"
+}
+-------------------------------------------------------------------------------------

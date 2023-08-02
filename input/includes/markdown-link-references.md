@@ -36,16 +36,15 @@
 [TumorSize]: StructureDefinition-mcode-tumor-size.html
 
 <!-- mCODE New Staging Profiles -->
-[ALLClassification]: StructureDefinition-mcode-all-fab-classification.html
 [CLLBinetStage]: StructureDefinition-mcode-cll-binet-stage.html
 [CLLRaiStage]: StructureDefinition-mcode-cll-rai-stage.html
 [GynecologicTumorFIGOStage]: StructureDefinition-mcode-gynecologic-tumor-figo-stage.html
 [LymphomaStage]: StructureDefinition-mcode-lymphoma-stage.html
+[MelanomaBreslowDepthStage]: StructureDefinition-mcode-melanoma-breslow-depth-stage.html
 [MelanomaClarkLevel]: StructureDefinition-mcode-melanoma-clark-level.html
-[MyelomaISSStage]:  StructureDefinition-mcode-myeloma-iss-stage.html
-[MyelomaRISSStage]:  StructureDefinition-mcode-myeloma-riss-stage.html
-[NeuroblastomaINSSStage]: StructureDefinition-mcode-neuroblastoma-inss-stage.html
-[NeuroblastomaRiskGroup]: StructureDefinition-mcode-international-neuroblastoma-risk-group.html
+[MyelomaISSStage]: StructureDefinition-mcode-myeloma-iss-stage.html
+[MyelomaRISSStage]: StructureDefinition-mcode-myeloma-riss-stage.html
+[ProstateGleasonGradeGroup]: StructureDefinition-mcode-prostate-gleason-grade-group.html
 
 <!-- mCODE Extensions -->
 [BodyLocationQualifier]: StructureDefinition-mcode-body-location-qualifier.html
@@ -127,18 +126,17 @@
 
 <!-- New non-TNM Value Sets -->
 [BinetStageValueVS]: ValueSet-mcode-binet-stage-value-vs.html
+[BreslowDepthStageValueVS]: ValueSet-mcode-breslow-depth-stage-value-vs.html
 [ClarkLevelValueVS]: ValueSet-mcode-clark-level-value-vs.html
 [ClinOrPathModifierVS]: ValueSet-mcode-clin-or-path-modifier-vs.html
-[FABClassificationValueVS]: ValueSet-mcode-fab-classification-value-vs.html
 [FIGOStagingMethodVS]: ValueSet-mcode-figo-staging-method-vs.html
 [FIGOStageValueVS]: ValueSet-mcode-figo-stage-value-vs.html
+[GleasonGradeGroupValueVS]: ValueSet-mcode-gleason-grade-group-value-vs.html
 [LymphomaStagingMethodVS]: ValueSet-mcode-lymphoma-staging-method-vs.html
 [LymphomaStageValueVS]: ValueSet-mcode-lymphoma-stage-value-vs.html
 [LymphomaStageValueModifierVS]: ValueSet-mcode-lymphoma-stage-value-modifier-vs.html
 [MyelomaISSValueVS]: ValueSet-mcode-myeloma-iss-stage-value-vs.html
 [MyelomaRISSValueVS]: ValueSet-mcode-myeloma-riss-stage-value-vs.html
-[NeuroblastomaRiskGroupValueVS]: ValueSet-mcode-neuroblastoma-risk-group-value-vs.html
-[NeuroblastomaStageValueVS]: ValueSet-mcode-neuroblastoma-inss-stage-value-vs.html
 [RaiStagingMethodVS]: ValueSet-mcode-rai-staging-method-vs.html
 [RaiStageValueVS]: ValueSet-mcode-rai-stage-value-vs.html
 

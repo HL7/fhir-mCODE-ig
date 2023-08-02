@@ -7,6 +7,13 @@ Description: "Codes in the Binet staging system representing Chronic Lymphocytic
 * NCIT#C80135 "Binet Stage B"
 * NCIT#C80136 "Binet Stage C"
 
+ValueSet: BreslowDepthStageValueVS
+Id: mcode-breslow-depth-stage-value-vs
+Title: "Breslow Depth Stage Value Set"
+Description: "Codes in the Breslow staging system representing melanoma depth."
+* insert SNOMEDCopyrightForVS
+* include codes from system SCT where concept descendant-of #385348009 "Breslow depth finding for melanoma (finding)"
+
 ValueSet: ClarkLevelValueVS
 Id: mcode-clark-level-value-vs
 Title: "Clark Level Value Set"
@@ -74,12 +81,18 @@ Description: "Values for International Federation of Gynecology and Obstetrics (
 * NCIT#C96262 "FIGO Stage IVA"
 * NCIT#C96263 "FIGO Stage IVB"
 
+ValueSet: GleasonGradeGroupValueVS
+Id: mcode-gleason-grade-group-value-vs
+Title: "Gleason Grade Value Set"
+Description: "Gleason grade for prostatic cancer, with values that explicitly reference the Gleason score."
+* insert SNOMEDCopyrightForVS
+* include codes from system SCT where concept descendant-of #1515521000004104 "International Society of Pathology histologic grade group (qualifier value)"
+
 ValueSet: LymphomaStagingMethodVS
 Id: mcode-lymphoma-staging-method-vs
 Title: "Lymphoma Staging System Value Set"
 Description: "Staging Systems used to stage lymphomas (Hodgkin's and non-Hodgkin's)."
 * insert SNOMEDCopyrightForVS
-* SCT#254372002 "Ann Arbor lymphoma staging system (tumor staging)"
 * SCT#254373007 "Ann Arbor Hodgkin's disease tumor staging system (tumor staging)"
 * SCT#254374001 "Ann Arbor non-Hodgkin's lymphoma tumor staging system (tumor staging)"
 * SCT#254375000 "Cotswolds Hodgkin's disease tumor staging system (tumor staging)"
@@ -120,23 +133,6 @@ Description: "Codes in RISS staging system representing plasma cell or multiple 
 * NCIT#C141394 "RISS Stage I Plasma Cell Myeloma"
 * NCIT#C141395 "RISS Stage II Plasma Cell Myeloma"
 * NCIT#C141396 "RISS Stage III Plasma Cell Myeloma"
-
-ValueSet: NeuroblastomaRiskGroupValueVS
-Id: mcode-neuroblastoma-risk-group-value-vs
-Title: "International Neuroblastoma Risk Group Value Set"
-Description: "Codes in International Neuroblastoma Risk Group. It includes two stages of localized disease (L1 and L2) and two stages of metastatic disease (M and MS)."
-* ^experimental = false
-* NCIT#C133428 "INRG Stage L1"
-* NCIT#C133429 "INRG Stage L2"
-* NCIT#C133430 "INRG Stage M"
-* NCIT#C133431 "INRG Stage MS"
-
-ValueSet: NeuroblastomaStageValueVS
-Id: mcode-neuroblastoma-inss-stage-value-vs
-Title: "International Neuroblastoma Staging System (INSS) Stage Value Set"
-Description: "Codes in INSS staging system representing neuroblastoma stage."
-* insert SNOMEDCopyrightForVS
-* include codes from system SCT where concept descendant-of #409721000 "International neuroblastoma staging system stage finding (finding)"
 
 ValueSet: RaiStagingMethodVS
 Id: mcode-rai-staging-method-vs

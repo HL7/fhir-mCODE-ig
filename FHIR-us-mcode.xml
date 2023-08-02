@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <specification xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ballotUrl="http://hl7.org/fhir/us/mcode/2023May" ciUrl="http://build.fhir.org/ig/HL7/fhir-mCODE-ig" defaultVersion="2.1.0" defaultWorkgroup="cic" gitUrl="https://github.com/HL7/fhir-mCODE-ig" url="http://hl7.org/fhir/us/mcode">
 <version code="current" url="http://build.fhir.org/ig/HL7/fhir-mCODE-ig"/>
+<version code="3.0.0-STU3 Release" url="http://hl7.org/fhir/us/mcode/3.0.0"/>
 <version code="3.0.0-ballot" url="http://hl7.org/fhir/us/mcode/2023May"/>
 <version code="2.1.0" url="http://hl7.org/fhir/us/mcode/STU2.1"/>
 <version code="2.0.0" url="http://hl7.org/fhir/us/mcode/STU2"/>
@@ -12,7 +13,6 @@
 <artifactPageExtension value="-definitions"/>
 <artifactPageExtension value="-examples"/>
 <artifactPageExtension value="-mappings"/>
-<artifact id="StructureDefinition/mcode-all-fab-classification" key="StructureDefinition-mcode-all-fab-classification" name="ALL French-American-British Classification Profile"/>
 <artifact id="ValueSet/mcode-benign-uncertain-neoplasm-brain-cns-disorder-vs" key="ValueSet-mcode-benign-uncertain-neoplasm-brain-cns-disorder-vs" name="Benign Neoplasm of Brain and CNS Disorder Value Set"/>
 <artifact id="ValueSet/mcode-binet-stage-value-vs" key="ValueSet-mcode-binet-stage-value-vs" name="Binet Stage Value Set"/>
 <artifact id="StructureDefinition/mcode-body-location-qualifier" key="StructureDefinition-mcode-body-location-qualifier" name="Body Location Qualifier Extension"/>
@@ -28,6 +28,7 @@
 <artifact id="ValueSet/mcode-brachytherapy-radiopharmaceutical-technique-vs" key="ValueSet-mcode-brachytherapy-radiopharmaceutical-technique-vs" name="Brachytherapy Radiopharmaceutical Technique Value Set"/>
 <artifact id="ValueSet/mcode-brachytherapy-technique-vs" key="ValueSet-mcode-brachytherapy-technique-vs" name="Brachytherapy Technique Value Set"/>
 <artifact deprecated="true" id="StructureDefinition/mcode-brachytherapy-treatment-phase" key="StructureDefinition-mcode-brachytherapy-treatment-phase" name="Brachytherapy Treatment Phase"/>
+<artifact id="ValueSet/mcode-breslow-depth-stage-value-vs" key="ValueSet-mcode-breslow-depth-stage-value-vs" name="Breslow Depth Stage Value Set"/>
 <artifact id="StructureDefinition/mcode-cll-binet-stage" key="StructureDefinition-mcode-cll-binet-stage" name="CLL Binet Stage Profile"/>
 <artifact id="StructureDefinition/mcode-cll-rai-stage" key="StructureDefinition-mcode-cll-rai-stage" name="CLL Rai Stage Profile"/>
 <artifact id="ValueSet/mcode-cancer-body-location-vs" key="cancer-body-location-value-set" name="Cancer Body Location Value Set"/>
@@ -126,6 +127,7 @@
 <artifact deprecated="true" id="ValueSet/mcode-genomic-specimen-type-vs" key="ValueSet-mcode-genomic-specimen-type-vs" name="Genomic Specimen Type Value Set"/>
 <artifact id="StructureDefinition/mcode-genomic-variant" key="StructureDefinition-mcode-genomic-variant" name="Genomic Variant Profile"/>
 <artifact id="StructureDefinition/mcode-genomics-report" key="StructureDefinition-mcode-genomics-report" name="Genomics Report Profile"/>
+<artifact id="ValueSet/mcode-gleason-grade-group-value-vs" key="ValueSet-mcode-gleason-grade-group-value-vs" name="Gleason Grade Value Set"/>
 <artifact id="StructureDefinition/mcode-gynecologic-tumor-figo-stage" key="StructureDefinition-mcode-gynecologic-tumor-figo-stage" name="Gynecologic Tumor FIGO Stage Profile"/>
 <artifact deprecated="true" id="ValueSet/mcode-hgvs-sequence-variant-nomenclature-value-set" key="hgvs-sequence-variant-nomenclature-value-set" name="HGVS Sequence Variant Nomenclature Value Set"/>
 <artifact deprecated="true" id="ValueSet/mcode-hgnc-vs" key="hugo-gene-nomenclature-committee-gene-names-value-set" name="HUGO Gene Nomenclature Committee Gene Names Value Set"/>
@@ -137,8 +139,6 @@
 <artifact deprecated="true" id="ValueSet/mcode-hgvs-vs" key="ValueSet-mcode-hgvs-vs" name="Human Genome Variation Society Sequence Variant Nomenclature Value Set"/>
 <artifact id="StructureDefinition/mcode-human-specimen" key="StructureDefinition-mcode-human-specimen" name="Human Specimen Profile"/>
 <artifact id="ValueSet/mcode-human-specimen-type-vs" key="ValueSet-mcode-human-specimen-type-vs" name="Human Specimen Type Value Set"/>
-<artifact id="ValueSet/mcode-neuroblastoma-risk-group-value-vs" key="ValueSet-mcode-neuroblastoma-risk-group-value-vs" name="International Neuroblastoma Risk Group Value Set"/>
-<artifact id="ValueSet/mcode-neuroblastoma-inss-stage-value-vs" key="ValueSet-mcode-neuroblastoma-inss-stage-value-vs" name="International Neuroblastoma Staging System (INSS) Stage Value Set"/>
 <artifact id="ValueSet/mcode-myeloma-iss-stage-value-vs" key="ValueSet-mcode-myeloma-iss-stage-value-vs" name="International Staging System (ISS) for Myeloma Stage Value Set"/>
 <artifact id="StructureDefinition/mcode-karnofsky-performance-status" key="karnofsky-performance-status" name="Karnofsky Performance Status Profile"/>
 <artifact deprecated="true" id="Extension/mcode-laterality-extension" key="laterality-extension" name="Laterality Extension"/>
@@ -151,12 +151,11 @@
 <artifact id="ValueSet/mcode-lymphoma-stage-value-modifier-vs" key="ValueSet-mcode-lymphoma-stage-value-modifier-vs" name="Lymphoma Stage Value Modifier Value Set"/>
 <artifact id="ValueSet/mcode-lymphoma-stage-value-vs" key="ValueSet-mcode-lymphoma-stage-value-vs" name="Lymphoma Stage Value Set"/>
 <artifact id="ValueSet/mcode-lymphoma-staging-method-vs" key="ValueSet-mcode-lymphoma-staging-method-vs" name="Lymphoma Staging System Value Set"/>
+<artifact id="StructureDefinition/mcode-melanoma-breslow-depth-stage" key="StructureDefinition-mcode-melanoma-breslow-depth-stage" name="Melanoma Breslow Depth Stage Profile"/>
 <artifact id="StructureDefinition/mcode-melanoma-clark-level" key="StructureDefinition-mcode-melanoma-clark-level" name="Melanoma Clark Level Profile"/>
 <artifact id="ValueSet/mcode-melanoma-in-situ-disorder-vs" key="ValueSet-mcode-melanoma-in-situ-disorder-vs" name="Melanoma In-Situ Disorder Value Set"/>
 <artifact id="StructureDefinition/mcode-myeloma-iss-stage" key="StructureDefinition-mcode-myeloma-iss-stage" name="Myeloma ISS Stage Profile"/>
 <artifact id="StructureDefinition/mcode-myeloma-riss-stage" key="StructureDefinition-mcode-myeloma-riss-stage" name="Myeloma RISS Stage Profile"/>
-<artifact id="StructureDefinition/mcode-neuroblastoma-inss-stage" key="StructureDefinition-mcode-neuroblastoma-inss-stage" name="Neuroblastoma INNS Stage Profile"/>
-<artifact id="StructureDefinition/mcode-international-neuroblastoma-risk-group" key="StructureDefinition-mcode-international-neuroblastoma-risk-group" name="Neuroblastoma International Risk Group Profile"/>
 <artifact id="ValueSet/mcode-teleradiotherapy-neutron-beam-technique-vs" key="ValueSet-mcode-teleradiotherapy-neutron-beam-technique-vs" name="Neutron Beam Technique Value Set"/>
 <artifact deprecated="true" key="Observation" name="Observation"/>
 <artifact id="ValueSet/mcode-teleradiotherapy-photon-beam-technique-vs" key="ValueSet-mcode-teleradiotherapy-photon-beam-technique-vs" name="Photon Beam Technique Value Set"/>
@@ -169,6 +168,7 @@
 <artifact deprecated="true" key="Procedure" name="Procedure"/>
 <artifact id="StructureDefinition/mcode-procedure-intent" key="StructureDefinition-mcode-procedure-intent" name="Procedure Intent Extension"/>
 <artifact id="ValueSet/mcode-procedure-intent-vs" key="ValueSet-mcode-procedure-intent-vs" name="Procedure Intent Value Set"/>
+<artifact id="StructureDefinition/mcode-prostate-gleason-grade-group" key="StructureDefinition-mcode-prostate-gleason-grade-group" name="Prostate Gleason Grade Group Profile"/>
 <artifact id="ValueSet/mcode-teleradiotherapy-proton-beam-technique-vs" key="ValueSet-mcode-teleradiotherapy-proton-beam-technique-vs" name="Proton Beam Technique Value Set"/>
 <artifact deprecated="true" id="ValueSet/mcode-radiation-procedure-value-set" key="radiation-procedure-value-set" name="Radiation Procedure Value Set"/>
 <artifact deprecated="true" id="ValueSet/mcode-radiation-target-body-site-value-set" key="radiation-target-body-site-value-set" name="Radiation Target Body Site Value Set"/>
@@ -250,7 +250,6 @@
 <artifact deprecated="true" id="StructureDefinition/mcode-tumor-specimen" key="StructureDefinition-mcode-tumor-specimen" name="Tumor Specimen Profile"/>
 <artifact deprecated="true" id="ValueSet/mcode-units-of-length-value-set" key="units-of-length-value-set" name="Units of Length Value Set"/>
 <artifact deprecated="true" key="ValueSet" name="ValueSet"/>
-<artifact id="Observation/all-fab-classification-M5b" key="Observation-all-fab-classification-M5b" name="all-fab-classification-M5b"/>
 <artifact id="Observation/binet-stage-group-A" key="Observation-binet-stage-group-A" name="binet-stage-group-A"/>
 <artifact id="Observation/bodyheight-jenny-m-2018-03-06" key="Observation-bodyheight-jenny-m-2018-03-06" name="bodyheight-jenny-m-2018-03-06"/>
 <artifact id="Observation/bodyweight-jenny-m-2018-03-16" key="Observation-bodyweight-jenny-m-2018-03-16" name="bodyweight-jenny-m-2018-03-16"/>
@@ -301,6 +300,7 @@
 <artifact id="Observation/genomic-variant-somatic-single-nucleotide" key="Observation-genomic-variant-somatic-single-nucleotide" name="genomic-variant-somatic-single-nucleotide"/>
 <artifact id="DiagnosticReport/genomics-report-jenny-m" key="DiagnosticReport-genomics-report-jenny-m" name="genomics-report-jenny-m"/>
 <artifact id="DiagnosticReport/genomics-report-john-anyperson" key="DiagnosticReport-genomics-report-john-anyperson" name="genomics-report-john-anyperson"/>
+<artifact id="Observation/gleason-grade-group-4" key="Observation-gleason-grade-group-4" name="gleason-grade-group-4"/>
 <artifact id="Patient/gx-cancer-patient-adam-anyperson" key="Patient-gx-cancer-patient-adam-anyperson" name="gx-cancer-patient-adam-anyperson"/>
 <artifact deprecated="true" id="Patient/gx-cancer-patient-incredible-hulk" key="Patient-gx-cancer-patient-incredible-hulk" name="gx-cancer-patient-incredible-hulk"/>
 <artifact id="Bundle/gx-genomic-bundle-adam-anyperson" key="Bundle-gx-genomic-bundle-adam-anyperson" name="gx-genomic-bundle-adam-anyperson"/>
@@ -388,11 +388,10 @@
 <artifact id="CapabilityStatement/mcode-sender-patients-and-cancer-conditions" key="CapabilityStatement-mcode-sender-patients-and-cancer-conditions" name="mcode-sender-patients-and-cancer-conditions"/>
 <artifact id="CapabilityStatement/mcode-sender-patients-in-group" key="CapabilityStatement-mcode-sender-patients-in-group" name="mcode-sender-patients-in-group"/>
 <artifact id="CapabilityStatement/mcode-sender-patients-with-cancer-condition" key="CapabilityStatement-mcode-sender-patients-with-cancer-condition" name="mcode-sender-patients-with-cancer-condition"/>
+<artifact id="Observation/melanoma-breslow-depth-stage" key="Observation-melanoma-breslow-depth-stage" name="melanoma-breslow-depth-stage"/>
 <artifact id="Observation/melanoma-clark-level-4" key="Observation-melanoma-clark-level-4" name="melanoma-clark-level-4"/>
 <artifact id="Observation/multiple-myeloma-iss-stage-II" key="Observation-multiple-myeloma-iss-stage-II" name="multiple-myeloma-iss-stage-II"/>
 <artifact id="Observation/multiple-myeloma-riss-stage-II" key="Observation-multiple-myeloma-riss-stage-II" name="multiple-myeloma-riss-stage-II"/>
-<artifact id="Observation/neuroblastoma-inss-stage-2B" key="Observation-neuroblastoma-inss-stage-2B" name="neuroblastoma-inss-stage-2B"/>
-<artifact id="Observation/neuroblastoma-risk-group-L2" key="Observation-neuroblastoma-risk-group-L2" name="neuroblastoma-risk-group-L2"/>
 <artifact deprecated="true" id="Observation/observation-smoking-history-jenny-m" key="Observation-observation-smoking-history-jenny-m" name="observation-smoking-history-jenny-m"/>
 <artifact id="Observation/observation-smoking-pack-years-jenny-m" key="Observation-observation-smoking-pack-years-jenny-m" name="observation-smoking-pack-years-jenny-m"/>
 <artifact id="Condition/primary-cancer-condition-breast" key="Condition-primary-cancer-condition-breast" name="primary-cancer-condition-breast"/>
@@ -401,6 +400,8 @@
 <artifact id="Condition/primary-cancer-condition-nonspecific" key="Condition-primary-cancer-condition-nonspecific" name="primary-cancer-condition-nonspecific"/>
 <artifact id="Condition/primary-cancer-condition-nsclc" key="Condition-primary-cancer-condition-nsclc" name="primary-cancer-condition-nsclc"/>
 <artifact id="Procedure/radiotherapy-treatment-summary-chest-wall-jenny-m" key="Procedure-radiotherapy-treatment-summary-chest-wall-jenny-m" name="radiotherapy-treatment-summary-chest-wall-jenny-m"/>
+<artifact id="Procedure/radiotherapy-treatment-summary-other-with-text" key="Procedure-radiotherapy-treatment-summary-other-with-text" name="radiotherapy-treatment-summary-other-with-text"/>
+<artifact id="Procedure/radiotherapy-treatment-summary-other-without-text" key="Procedure-radiotherapy-treatment-summary-other-without-text" name="radiotherapy-treatment-summary-other-without-text"/>
 <artifact id="Observation/rai-stage-II" key="Observation-rai-stage-II" name="rai-stage-II"/>
 <artifact id="Condition/secondary-cancer-condition-brain-mets" key="Condition-secondary-cancer-condition-brain-mets" name="secondary-cancer-condition-brain-mets"/>
 <artifact deprecated="true" id="Procedure/teleradiotherapy-treatment-phase-boost-jenny-m" key="Procedure-teleradiotherapy-treatment-phase-boost-jenny-m" name="teleradiotherapy-treatment-phase-boost-jenny-m"/>

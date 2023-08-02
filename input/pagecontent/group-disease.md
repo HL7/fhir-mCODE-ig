@@ -86,7 +86,7 @@ Several widely-used terminologies in the cancer domain, including ICD-O-3 and AJ
 
 #### Non-TNM Staging
 
-Profiles for several non-TNM staging systems are included in mCODE. Not all cancer types are staged with a TNM-based staging system, including hematologic cancers like leukemias, multiple myeloma, and some lymphomas. Some specialized solid tumors like gynecologic tumors are staged using the FIGO (International Federation of Gynecology and Obstetrics) staging system. Staging systems not explicitly covered in mCODE should follow the patterns in the provided profiles. 
+Profiles for several non-TNM staging systems are included in mCODE. Not all cancer types are staged with a TNM-based staging system, including hematologic cancers like leukemias, multiple myeloma, lymphomas, and some solid tumors, for example, gynecologic tumors staged using the FIGO (International Federation of Gynecology and Obstetrics) staging system. Staging systems not explicitly covered in mCODE should follow the patterns in the provided profiles. 
 
 Prognostic factors related to the cancer stage group can be specified with the `Observation.derivedFrom` element. For example, a hemoglobin lab result which was evaluated in the  staging of chronic lymphocytic leukemia (CLL)using the Binet staging system can be referenced under `Observation.derivedFrom` element. [This example of Binet staging](Observation-binet-stage-group-A.html) illustrates how this could be represented.
 
@@ -127,16 +127,15 @@ mCODE includes single FHIR profile, [TumorMarkerTest], for all labs involving se
   * [TNMRegionalNodesCategory]
   * [TNMDistantMetastasesCategory]
 * Staging, non-TNM (Draft Status)
-  * [ALLClassification]
   * [CLLBinetStage]
   * [CLLRaiStage]
   * [GynecologicTumorFIGOStage]
   * [LymphomaStage]
+  * [MelanomaBreslowDepthStage]
   * [MelanomaClarkLevel]
   * [MyelomaISSStage]
   * [MyelomaRISSStage]
-  * [NeuroblastomaINSSStage]
-  * [NeuroblastomaRiskGroup]
+  * [ProstateGleasonGradeGroup]
 
 ### Extensions
 
@@ -196,18 +195,17 @@ mCODE includes single FHIR profile, [TumorMarkerTest], for all labs involving se
 
 * Staging, non-TNM
     * [BinetStageValueVS]
+    * [BreslowDepthStageValueVS]
     * [ClarkLevelValueVS]  
     * [ClinOrPathModifierVS]
-    * [FABClassificationValueVS]
     * [FIGOStagingMethodVS]
     * [FIGOStageValueVS]
+    * [GleasonGradeGroupValueVS]
     * [MyelomaISSValueVS]
     * [MyelomaRISSValueVS]
     * [LymphomaStagingMethodVS]
     * [LymphomaStageValueVS]
     * [LymphomaStageValueModifierVS]
-    * [NeuroblastomaRiskGroupValueVS]
-    * [NeuroblastomaStageValueVS]
     * [RaiStagingMethodVS]
     * [RaiStageValueVS]
 

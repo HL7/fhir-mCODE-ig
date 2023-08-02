@@ -18,28 +18,12 @@
         "display" : "UICC Classification of Malignant Tumours 7th Edition (tumor staging)"
       },
       {
-        "code" : "USCRS-34957",
-        "display" : "Children's Oncology Group Renal Staging System (tumor staging)"
-      },
-      {
         "code" : "USCRS-34947",
         "display" : "Surveillance Epidemiology and End Results Program Extent of Disease, 2018 edition (tumor staging)"
       },
       {
-        "code" : "USCRS-34958",
-        "display" : "Children's Oncology Group Liver Staging System (tumor staging)"
-      },
-      {
-        "code" : "1287647003",
-        "display" : "Toronto Childhood Cancer Stage Guidelines Version 2 (tumor staging)"
-      },
-      {
         "code" : "1287648008",
         "display" : "Masaoka-Koga stage classification for thymic malignancies (tumor staging)"
-      },
-      {
-        "code" : "1287643004",
-        "display" : "International Neuroblastoma Risk Group staging system (tumor staging)"
       },
       {
         "code" : "1287646007",
@@ -53,9 +37,9 @@ e: {
   "resourceType" : "ValueSet",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:79188a4d-6fae-40a2-b0bc-aff612eccd74",
-    "timestamp" : "2023-08-01T14:01:50.467Z",
-    "total" : 10,
+    "identifier" : "urn:uuid:ebe13ecf-b62b-4732-80d4-b1dd58d4dcb8",
+    "timestamp" : "2023-07-31T14:52:00.312Z",
+    "total" : 6,
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -85,33 +69,13 @@ e: {
     },
     {
       "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/snomed-requested-cs",
-      "code" : "USCRS-34957",
-      "display" : "Children's Oncology Group Renal Staging System (tumor staging)"
-    },
-    {
-      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/snomed-requested-cs",
       "code" : "USCRS-34947",
       "display" : "Surveillance Epidemiology and End Results Program Extent of Disease, 2018 edition (tumor staging)"
     },
     {
       "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/snomed-requested-cs",
-      "code" : "USCRS-34958",
-      "display" : "Children's Oncology Group Liver Staging System (tumor staging)"
-    },
-    {
-      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/snomed-requested-cs",
-      "code" : "1287647003",
-      "display" : "Toronto Childhood Cancer Stage Guidelines Version 2 (tumor staging)"
-    },
-    {
-      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/snomed-requested-cs",
       "code" : "1287648008",
       "display" : "Masaoka-Koga stage classification for thymic malignancies (tumor staging)"
-    },
-    {
-      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/snomed-requested-cs",
-      "code" : "1287643004",
-      "display" : "International Neuroblastoma Risk Group staging system (tumor staging)"
     },
     {
       "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/snomed-requested-cs",
@@ -145,8 +109,8 @@ e: {
   "resourceType" : "ValueSet",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:b7705142-478a-4c69-9b90-7b1835967cc6",
-    "timestamp" : "2023-08-01T14:01:52.514Z",
+    "identifier" : "urn:uuid:4cb0c6d6-ce5e-4878-a7c9-176385ec67aa",
+    "timestamp" : "2023-07-31T14:52:03.062Z",
     "total" : 2,
     "parameter" : [{
       "name" : "limitedExpansion",
@@ -197,8 +161,8 @@ e: {
   "resourceType" : "ValueSet",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:9891d6cf-383c-411b-b5c1-bdb94001ef84",
-    "timestamp" : "2023-08-01T14:01:52.701Z",
+    "identifier" : "urn:uuid:51b0f517-16e6-4eef-8f42-3066fa2ce635",
+    "timestamp" : "2023-07-31T14:52:03.453Z",
     "total" : 2,
     "parameter" : [{
       "name" : "limitedExpansion",

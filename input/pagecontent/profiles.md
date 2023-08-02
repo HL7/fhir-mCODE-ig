@@ -13,10 +13,10 @@ The following profiles have been defined for this implementation guide:
 * [GenomicsReport]
 * [GenomicVariant]
 * [HistoryOfMetastaticCancer]
+* [HumanSpecimen]
 * [KarnofskyPerformanceStatus]
 * [mCODEPatientBundle]
 * [mCODEPatientGroup]
-* [HumanSpecimen]
 * [PrimaryCancerCondition]
 * [RadiotherapyCourseSummary]
 * [RadiotherapyVolume]
@@ -31,16 +31,14 @@ The following profiles have been defined for this implementation guide:
 
 The following draft (maturity level 0) profiles have been defined for this implementation guide:
 
-* [ALLClassification]
 * [CLLBinetStage]
 * [CLLRaiStage]
 * [GynecologicTumorFIGOStage]
 * [LymphomaStage]
+* [MelanomaBreslowDepthStage]
 * [MelanomaClarkLevel]
 * [MyelomaISSStage]
 * [MyelomaRISSStage]
-* [NeuroblastomaINSSStage]
-* [NeuroblastomaRiskGroup]
-
+* [ProstateGleasonGradeGroup]
 
 {% include markdown-link-references.md %}

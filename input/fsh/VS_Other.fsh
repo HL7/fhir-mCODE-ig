@@ -10,7 +10,27 @@ Description:  "Codes describing the location(s) of primary or secondary cancer. 
 ValueSet:   ConditionStatusTrendVS
 Id: mcode-condition-status-trend-vs
 Title: "Condition Status Trend Value Set"
-Description:  "How patient's given disease, condition, or ability is trending. This value set is less than ideal because it mixes findings with disorders, but that is the way that SNOMED (IHTSDO) insisted the new terms for partial and full remission be added. See https://jira.hl7.org/browse/FHIR-29813 for details."
+Description:  "How patient's given disease, condition, or ability is trending."
+* insert SNOMEDCopyrightForVS
+* ^extension[FMM].valueInteger = 3
+// * SCT#281900007 "No abnormality detected (finding)" // better than SCT#260415000 "Not detected (qualifier)" - FHIR-32837
+* SCT#268910001 "Patient's condition improved (finding)"
+* SCT#359746009 "Patient's condition stable (finding)"
+* SCT#271299001 "Patient's condition worsened (finding)"
+* SCT#709137006 "Patient condition undetermined (finding)"
+* SCT#103338009 "In full remission (qualifier value)"
+* SCT#103337004 "In partial remission (qualifier value)"
+/* Added based on FHIR-40811 */
+* SCT#399409002 "Distant metastasis present (finding)"
+
+ValueSet:   ConditionStatusTrendMaxVS
+Id: mcode-condition-status-trend-max-vs
+Title: "Condition Status Trend Maximum Value Set"
+Description:  "Like the ConditionStatusTrendVS, but includes two additional deprecated codes. Codes from the SNOMED CT disorder hierarchy were less than ideal because the value of an Observation should be either a finding or a qualifier (see https://confluence.ihtsdotools.org/display/FHIR/Observation+binding for details)."
+* include codes from valueset ConditionStatusTrendVS
+* SCT#550991000124107 "Malignant neoplasm in full remission (disorder)" // FHIR-32837 - MLT_note: SCT FN is displayed. The initial term of "cancer in complete remission" is a synonym for the concept.
+* SCT#551001000124108 "Malignant neoplasm in partial remission (disorder)" // FHIR-32837 - MLT_note: SCT FN is displayed. The initial term of "cancer in partial remission" is a synonym for the concept.
+
 * insert SNOMEDCopyrightForVS
 * ^extension[FMM].valueInteger = 3
 // * SCT#281900007 "No abnormality detected (finding)" // better than SCT#260415000 "Not detected (qualifier)" - FHIR-32837

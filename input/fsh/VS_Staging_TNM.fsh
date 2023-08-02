@@ -32,6 +32,11 @@ Description: "Like TNMStageGroupStagingTypeVS, but additionally contains depreca
 * LNC#21908-9 "Stage group.clinical Cancer"
 * LNC#21902-2 "Stage group.pathology Cancer"
 * LNC#21914-7 "Stage group.other Cancer"
+/* Why not switch to SNOMED codes, for consistency?
+* SCT#399390009 "TNM stage grouping"
+* SCT#399537006 "Clinical TNM stage grouping"
+* SCT#399588009 "Pathologic TNM stage grouping"
+*/
 
 // valueCodeableConcept
 ValueSet: TNMStageGroupVS
@@ -74,6 +79,11 @@ Description: "Like TNMPrimaryTumorStagingTypeVS, but in addition, contains depre
 * LNC#21905-5 "Primary tumor.clinical [Class] Cancer"
 * LNC#21899-0 "Primary tumor.pathology Cancer"
 * LNC#21911-3 "Primary tumor.other [Class] Cancer"
+/* Why not switch to SNOMED codes, for consistency?
+* SCT#78873005 "T category"
+* SCT#399504009 "cT category"
+* SCT#384625004 "pT category"
+*/
 
 ValueSet: TNMPrimaryTumorCategoryVS
 Id: mcode-tnm-primary-tumor-category-vs
@@ -115,6 +125,11 @@ Description: "Like TNMRegionalNodesStagingTypeVS, but additionally contains depr
 * LNC#21906-3 "Regional lymph nodes.clinical [Class] Cancer"
 * LNC#21900-6 "Regional lymph nodes.pathology [Class] Cancer"
 * LNC#21912-1 "Regional lymph nodes.other [Class] Cancer"
+/* Why not switch to SNOMED codes, for consistency?
+* SCT#277206009 "N category"
+* SCT#399534004 "cN category"
+* SCT#371494008 "pN category"
+*/
 
 ValueSet: TNMRegionalNodesCategoryVS
 Id: mcode-tnm-regional-nodes-category-vs
@@ -156,6 +171,12 @@ Description: "Like TNMDistantMetastasesStagingTypeVS, but in addition, contains 
 * LNC#21907-1 "Distant metastases.clinical [Class] Cancer"
 * LNC#21901-4 "Distant metastases.pathology [Class] Cancer"
 * LNC#21913-9 "Distant metastases.other [Class] Cancer"
+/* Why not switch to SNOMED codes, for consistency?
+* SCT#277208005 "M category"
+* SCT#399387003 "cM category"
+* SCT#371497001 "pM category"
+*/
+
 
 ValueSet: TNMDistantMetastasesCategoryVS
 Id: mcode-tnm-distant-metastases-category-vs

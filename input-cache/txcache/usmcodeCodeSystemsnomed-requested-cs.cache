@@ -37,8 +37,8 @@ e: {
   "resourceType" : "ValueSet",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:ebe13ecf-b62b-4732-80d4-b1dd58d4dcb8",
-    "timestamp" : "2023-07-31T14:52:00.312Z",
+    "identifier" : "urn:uuid:984b2693-3335-4574-b939-953671045794",
+    "timestamp" : "2023-08-02T12:12:49.667Z",
     "total" : 6,
     "parameter" : [{
       "name" : "limitedExpansion",
@@ -109,8 +109,8 @@ e: {
   "resourceType" : "ValueSet",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:4cb0c6d6-ce5e-4878-a7c9-176385ec67aa",
-    "timestamp" : "2023-07-31T14:52:03.062Z",
+    "identifier" : "urn:uuid:baa35e43-7dfb-4789-b5a6-7613accdb224",
+    "timestamp" : "2023-08-02T12:12:50.402Z",
     "total" : 2,
     "parameter" : [{
       "name" : "limitedExpansion",
@@ -161,8 +161,8 @@ e: {
   "resourceType" : "ValueSet",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:51b0f517-16e6-4eef-8f42-3066fa2ce635",
-    "timestamp" : "2023-07-31T14:52:03.453Z",
+    "identifier" : "urn:uuid:addf0b6f-89e1-47d9-8da6-a2c24c888631",
+    "timestamp" : "2023-08-02T12:12:50.558Z",
     "total" : 2,
     "parameter" : [{
       "name" : "limitedExpansion",
@@ -185,6 +185,58 @@ e: {
       "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/snomed-requested-cs",
       "code" : "1285443008",
       "display" : "Estimated contoured volume of small bowel in peritoneal cavity using imaging (observable entity)"
+    }]
+  }
+},
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : false, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "inactive" : true,
+    "include" : [{
+      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/snomed-requested-cs",
+      "concept" : [{
+        "code" : "USCRS-34955",
+        "display" : "UICC Classification of Malignant Tumours 8th Edition (tumor staging)"
+      },
+      {
+        "code" : "USCRS-34956",
+        "display" : "UICC Classification of Malignant Tumours 7th Edition (tumor staging)"
+      }]
+    }]
+  }
+}}####
+e: {
+  "valueSet" : {
+  "resourceType" : "ValueSet",
+  "status" : "active",
+  "expansion" : {
+    "identifier" : "urn:uuid:269a898c-919a-4341-8100-f3d37fc6c769",
+    "timestamp" : "2023-08-02T12:12:51.183Z",
+    "total" : 2,
+    "parameter" : [{
+      "name" : "limitedExpansion",
+      "valueBoolean" : true
+    },
+    {
+      "name" : "excludeNested",
+      "valueBoolean" : true
+    },
+    {
+      "name" : "version",
+      "valueUri" : "http://hl7.org/fhir/us/mcode/CodeSystem/snomed-requested-cs|3.0.0"
+    }],
+    "contains" : [{
+      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/snomed-requested-cs",
+      "code" : "USCRS-34955",
+      "display" : "UICC Classification of Malignant Tumours 8th Edition (tumor staging)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/snomed-requested-cs",
+      "code" : "USCRS-34956",
+      "display" : "UICC Classification of Malignant Tumours 7th Edition (tumor staging)"
     }]
   }
 },

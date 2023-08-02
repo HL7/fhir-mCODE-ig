@@ -69,6 +69,7 @@
 <artifact deprecated="true" id="StructureDefinition/mcode-comorbidities-elixhauser" key="StructureDefinition-mcode-comorbidities-elixhauser" name="Comorbidities Elixhauser Profile"/>
 <artifact deprecated="true" id="StructureDefinition/mcode-comorbidities-parent" key="StructureDefinition-mcode-comorbidities-parent" name="Comorbidities Parent Abstract Profile"/>
 <artifact id="StructureDefinition/mcode-comorbidities" key="StructureDefinition-mcode-comorbidities" name="Comorbidities Profile"/>
+<artifact id="ValueSet/mcode-condition-status-trend-max-vs" key="ValueSet-mcode-condition-status-trend-max-vs" name="Condition Status Trend Maximum Value Set"/>
 <artifact id="ValueSet/mcode-condition-status-trend-vs" key="condition-status-trend-value-set" name="Condition Status Trend Value Set"/>
 <artifact deprecated="true" id="StructureDefinition/mcode-condition-related" key="StructureDefinition-mcode-condition-related" name="Condition related to resource"/>
 <artifact id="ValueSet/mcode-cytologic-evidence-malignancy-vs" key="ValueSet-mcode-cytologic-evidence-malignancy-vs" name="Cytologic Evidence of Malignancy Value Set"/>

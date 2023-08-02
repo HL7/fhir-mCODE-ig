@@ -4,21 +4,34 @@
 ValueSet: TNMStagingMethodVS
 Id: mcode-tnm-staging-method-vs
 Title: "TNM Staging Method Value Set"
-Description: "Staging method used for AJCC TNM staging, e.g., AJCC 6th, 7th, or 8th edition."
+Description: "Staging method used for AJCC TNM staging, e.g., AJCC 8th edition, UICC 7th edition, etc."
 * insert SNOMEDCopyrightForVS
 * SCT#444256004 "American Joint Commission on Cancer, Cancer Staging Manual, 6th edition neoplasm staging system (tumor staging)"
 * SCT#443830009 "American Joint Commission on Cancer, Cancer Staging Manual, 7th edition neoplasm staging system (tumor staging)"
 * SCT#897275008 "American Joint Commission on Cancer, Cancer Staging Manual, 8th edition neoplasm staging system (tumor staging)"
 * SCT#1269566009 "American Joint Commission on Cancer, Cancer Staging Manual, 9th version neoplasm staging system (tumor staging)"
+* SCT_TBD#USCRS-34955 "UICC Classification of Malignant Tumours 8th Edition (tumor staging)" // requested June 2023
+* SCT_TBD#USCRS-34956 "UICC Classification of Malignant Tumours 7th Edition (tumor staging)"  // requested June 2023
 
-// Stage Group
 
+// Stage Group: Observation.code
 ValueSet: TNMStageGroupStagingTypeVS
 Id: mcode-tnm-stage-group-staging-type-vs
 Title: "TNM Stage Group Staging Type Value Set"
 Description: "Identifying codes for the type of cancer staging performed, i.e., clinical, pathological, or other, for AJCC stage group observation."
-* insert LOINCCopyrightForVS
+* insert SNOMEDCopyrightForVS
 * ^extension[FMM].valueInteger = 4
+* SCT#399390009 "TNM stage grouping"
+* SCT#399537006 "Clinical TNM stage grouping"
+* SCT#399588009 "Pathologic TNM stage grouping"
+
+ValueSet: TNMStageGroupStagingTypeMaxVS
+Id: mcode-tnm-stage-group-staging-type-max-vs
+Title: "TNM Stage Group Staging Type Maximum Value Set"
+Description: "Like TNMStageGroupStagingTypeVS, but additionally contains deprecated LOINC codes (which are still allowed)."
+* insert SNOINCCopyrightForVS
+* ^extension[FMM].valueInteger = 4
+* include codes from valueset TNMStageGroupStagingTypeVS
 * LNC#21908-9 "Stage group.clinical Cancer"
 * LNC#21902-2 "Stage group.pathology Cancer"
 * LNC#21914-7 "Stage group.other Cancer"
@@ -53,8 +66,19 @@ ValueSet: TNMPrimaryTumorStagingTypeVS
 Id: mcode-tnm-primary-tumor-staging-type-vs
 Title: "TNM Primary Tumor Staging Type Value Set"
 Description: "Identifying codes for the type of cancer staging performed, i.e., clinical, pathological, or other, for primary tumor (T) staging observation, under AJCC guidelines."
-* insert LOINCCopyrightForVS
+* insert SNOMEDCopyrightForVS
 * ^extension[FMM].valueInteger = 4
+* SCT#78873005 "T category"
+* SCT#399504009 "cT category"
+* SCT#384625004 "pT category"
+
+ValueSet: TNMPrimaryTumorStagingTypeMaxVS
+Id: mcode-tnm-primary-tumor-staging-type-max-vs
+Title: "TNM Primary Tumor Staging Type Maximum Value Set"
+Description: "Like TNMPrimaryTumorStagingTypeVS, but in addition, contains deprecated LOINC codes (which are still allowed)."
+* insert SNOINCCopyrightForVS
+* ^extension[FMM].valueInteger = 4
+* include codes from valueset TNMPrimaryTumorStagingTypeVS
 * LNC#21905-5 "Primary tumor.clinical [Class] Cancer"
 * LNC#21899-0 "Primary tumor.pathology Cancer"
 * LNC#21911-3 "Primary tumor.other [Class] Cancer"
@@ -88,8 +112,19 @@ ValueSet: TNMRegionalNodesStagingTypeVS
 Id: mcode-tnm-regional-nodes-staging-type-vs
 Title: "TNM Regional Nodes Staging Type Value Set"
 Description: "Identifying codes for the type of cancer staging performed for AJCC N category, i.e., clinical, pathological, or other, for regional nodes (N) staging observation."
-* insert LOINCCopyrightForVS
+* insert SNOMEDCopyrightForVS
 * ^extension[FMM].valueInteger = 4
+* SCT#277206009 "N category"
+* SCT#399534004 "cN category"
+* SCT#371494008 "pN category"
+
+ValueSet: TNMRegionalNodesStagingTypeMaxVS
+Id: mcode-tnm-regional-nodes-staging-type-max-vs
+Title: "TNM Regional Nodes Staging Type Maximum Value Set"
+Description: "Like TNMRegionalNodesStagingTypeVS, but additionally contains deprecated LOINC codes(which are still allowed)."
+* insert SNOINCCopyrightForVS
+* ^extension[FMM].valueInteger = 4
+* include codes from valueset TNMRegionalNodesStagingTypeVS
 * LNC#21906-3 "Regional lymph nodes.clinical [Class] Cancer"
 * LNC#21900-6 "Regional lymph nodes.pathology [Class] Cancer"
 * LNC#21912-1 "Regional lymph nodes.other [Class] Cancer"
@@ -123,8 +158,19 @@ ValueSet: TNMDistantMetastasesStagingTypeVS
 Id: mcode-tnm-distant-metastases-staging-type-vs
 Title: "TNM Distant Metastases Staging Type Value Set"
 Description: "Identifying codes for the type of cancer staging performed, i.e., clinical, pathological, or other, for distant metastases (M) staging observation, under AJCC staging guidelines."
-* insert LOINCCopyrightForVS
+* insert SNOMEDCopyrightForVS
 * ^extension[FMM].valueInteger = 4
+* SCT#277208005 "M category"
+* SCT#399387003 "cM category"
+* SCT#371497001 "pM category"
+
+ValueSet: TNMDistantMetastasesStagingTypeMaxVS
+Id: mcode-tnm-distant-metastases-staging-type-max-vs
+Title: "TNM Distant Metastases Staging Type Maximum Value Set"
+Description: "Like TNMDistantMetastasesStagingTypeVS, but in addition, contains deprecated LOINC codes (which are still allowed)."
+* insert SNOINCCopyrightForVS
+* ^extension[FMM].valueInteger = 4
+* include codes from valueset TNMDistantMetastasesStagingTypeVS
 * LNC#21907-1 "Distant metastases.clinical [Class] Cancer"
 * LNC#21901-4 "Distant metastases.pathology [Class] Cancer"
 * LNC#21913-9 "Distant metastases.other [Class] Cancer"

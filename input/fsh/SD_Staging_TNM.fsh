@@ -7,7 +7,8 @@ Title: "TNM Stage Group Profile"
 Description: "Reporting of the stage group representing the overall extent of a cancer, based on AJCC staging guidelines."
 * ^extension[FMM].valueInteger = 4
 * insert NotUsed(component)
-* code from TNMStageGroupStagingTypeVS (required)
+* code from TNMStageGroupStagingTypeVS (preferred)
+* code ^binding.extension[http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet].valueCanonical = Canonical(TNMStageGroupStagingTypeMaxVS)
 * value[x] from TNMStageGroupVS (preferred)
 * value[x] ^short = "The stage group"
 * value[x] ^definition = "The overall cancer stage, such as stage group IIA."
@@ -43,8 +44,11 @@ Description: "Category of the primary tumor, based on its size and extent, based
 * insert NotUsed(hasMember)
 * method 1..1
 * method from TNMStagingMethodVS (extensible)
-* code from TNMPrimaryTumorStagingTypeVS (required)  
-* value[x] from TNMPrimaryTumorCategoryVS (preferred)  // MK 8/29/2022 - Using "preferred" binding because some users might use AJCC codes directly; in addition, the codes for "r" and "a" staging are not in SNOMED
+* code from TNMPrimaryTumorStagingTypeVS (preferred)
+* code ^binding.extension[http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet].valueCanonical = Canonical(TNMPrimaryTumorStagingTypeMaxVS)
+// MK 8/29/2022 - Using "preferred" binding with a maximum value set because some users might use AJCC codes directly
+// In addition, the codes for "r" and "a" staging are not in SNOMED
+* value[x] from TNMPrimaryTumorCategoryVS (preferred)  
 * value[x] ^binding.extension[http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet].valueCanonical = Canonical(TNMPrimaryTumorCategoryMaxVS)
 
 Profile:  TNMRegionalNodesCategory
@@ -56,7 +60,8 @@ Description: "Category of the presence or absence of metastases in regional lymp
 * insert NotUsed(hasMember)
 * method 1..1
 * method from TNMStagingMethodVS (extensible)
-* code from TNMRegionalNodesStagingTypeVS (required)
+* code from TNMRegionalNodesStagingTypeVS (preferred)
+* code ^binding.extension[http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet].valueCanonical = Canonical(TNMRegionalNodesStagingTypeMaxVS)
 * value[x] from TNMRegionalNodesCategoryVS (preferred)
 * value[x] ^binding.extension[http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet].valueCanonical = Canonical(TNMRegionalNodesCategoryMaxVS)
 
@@ -69,6 +74,7 @@ Description: "Category describing the extent of a tumor metastasis in remote ana
 * insert NotUsed(hasMember)
 * method 1..1
 * method from TNMStagingMethodVS (extensible)
-* code from TNMDistantMetastasesStagingTypeVS (required)
+* code from TNMDistantMetastasesStagingTypeVS (preferred)
+* code ^binding.extension[http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet].valueCanonical = Canonical(TNMDistantMetastasesStagingTypeMaxVS)
 * value[x] from TNMDistantMetastasesCategoryVS (preferred)
 * value[x] ^binding.extension[http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet].valueCanonical = Canonical(TNMDistantMetastasesCategoryMaxVS)

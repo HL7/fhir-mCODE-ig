@@ -175,4 +175,3 @@ Description:     "Code for methods of measuring tumor size, including physical e
 * SCT#363680008 "Radiographic imaging procedure (procedure)"
 // Other Imaging.  If one of the above doesn't cut it.
 * SCT#363679005 "Imaging (procedure)"
-// * include codes from system LNC where concept is-a #LP29684-5

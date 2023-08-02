@@ -5,34 +5,8 @@ ValueSet: CancerStageTypeVS
 Id: mcode-cancer-stage-type-vs
 Title: "Cancer Stage Type Value Set"
 Description: "Codes that identify the kind of stage reported in an Observation, necessary to correctly interpret the value associated with a staging Observation. In terms of the SNOMED CT hierarchy, these codes represent observable entities. If the staging system used to determine the stage is not implicit in this code, the staging system must be separately recorded in Observation.method. More specific staging profiles, if available, should be consulted before determining the correct code."
-* ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement. This material contains content from LOINC (http://loinc.org). LOINC is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc"
-* ^experimental = false
+* insert SNOMEDCopyrightForVS
 * ^extension[FMM].valueInteger = 4
-// LOINC Codes
-* LNC#21907-1 "Distant metastases.clinical [Class] Cancer"
-* LNC#21913-9 "Distant metastases.other [Class] Cancer"
-* LNC#21901-4 "Distant metastases.pathology [Class] Cancer"
-* LNC#21891-7 "Extent of disease Prostate cancer"
-* LNC#21895-8 "Extent of disease.NAACCR.old 13 digit"
-* LNC#21896-6 "Extent of disease.NAACCR.old 2 digit"
-* LNC#21897-4 "Extent of disease.NAACCR.old 4 digit"
-* LNC#21905-5 "Primary tumor.clinical [Class] Cancer"
-* LNC#21911-3 "Primary tumor.other [Class] Cancer"
-* LNC#21899-0 "Primary tumor.pathology Cancer"
-* LNC#21906-3 "Regional lymph nodes.clinical [Class] Cancer"
-* LNC#21912-1 "Regional lymph nodes.other [Class] Cancer"
-* LNC#21900-6 "Regional lymph nodes.pathology [Class] Cancer"
-* LNC#21887-5 "SEER summary stage 1977 Cancer"
-* LNC#21908-9 "Stage group.clinical Cancer"
-* LNC#21914-7 "Stage group.other Cancer"
-* LNC#21902-2 "Stage group.pathology Cancer"
-* LNC#21888-3 "Summary stage abbreviated at Dx Cancer"
-* LNC#39806-5 "Summary stage at Dx 2000 revised Cancer"
-* LNC#42101-6 "Derived SEER summary stage 1977 Cancer"
-* LNC#42102-4 "Derived SEER summary stage 2000 Cancer"
-* LNC#LA4292-4 "SEER Extent of Disease"
-
-// SNOMED CT Codes
 //* include codes from system SCT where concept is-a #399566009 "Tumor-node-metastasis (TNM) category (observable entity)"
 * SCT#399566009 "TNM category"
 * SCT#78873005 "T category"
@@ -109,7 +83,6 @@ Title: "Cancer Staging Method Value Set"
 Description: "Staging system or method used for staging cancers. The terms in this value set describe staging systems, not specific stages or descriptors used within those systems."
 * insert SNOMEDCopyrightForVS
 * ^extension[FMM].valueInteger = 4
-// LNC#LP7215-9 "Extent of disease coding system"   -- this is a LOINC part code -- should we use it?
 * SCT#444256004 "American Joint Commission on Cancer, Cancer Staging Manual, 6th edition neoplasm staging system (tumor staging)"
 * SCT#443830009 "American Joint Commission on Cancer, Cancer Staging Manual, 7th edition neoplasm staging system (tumor staging)"
 * SCT#897275008 "American Joint Commission on Cancer, Cancer Staging Manual, 8th edition neoplasm staging system (tumor staging)"
@@ -151,7 +124,6 @@ Description: "Staging system or method used for staging cancers. The terms in th
 * SCT_TBD#1287646007 "International Germ Cell Consensus Classification (tumor staging)" //#USCRS-34948 requested June 2023
 // NCIT Terms
 * NCIT#C186527 "Atypical Teratoid/Rhabdoid Tumor Staging System"
-//* NCIT#C141208 "Chronic Lymphocytic Leukemia- Binet Staging System" -- covered by SNOMED
 * NCIT#C141206  "Chronic Lymphocytic Leukemia- Modified Rai Staging System"
 * NCIT#C62575 "Collaborative Staging"
 * NCIT#C128932 "Derkay Staging System"
@@ -160,7 +132,6 @@ Description: "Staging system or method used for staging cancers. The terms in th
 * NCIT#C85407 "Evans Staging System"
 * NCIT#C99408 "FIGO Staging System and Modified World Health Organization [WHO] Prognostic Scoring System for Gestational Trophoblastic Neoplasms"
 * NCIT#C115132 "Hepatocellular Carcinoma by BCLC Stage"
-* NCIT#C148010 "Intergroup Rhabdomyosarcoma Study Group Clinical Staging and Grouping System"
 * NCIT#C111073 "International Germ Cell Consensus Risk Classification"
 * NCIT#C141168 "Lugano Classification Hodgkin Lymphoma by AJCC v8 Stage"
 * NCIT#C186520 "Medulloblastoma Staging System"
@@ -168,12 +139,9 @@ Description: "Staging system or method used for staging cancers. The terms in th
 * NCIT#C177308 "Non-Seminomatous Germ Cell Tumor International Germ Cell Consensus Risk Classification"
 * NCIT#C186567 "Pineoblastoma Staging System"
 * NCIT#C123333 "Reese-Ellsworth Staging System"
-* NCIT#C62610 "SEER Summary Staging Manual 2000"
 * NCIT#C177309 "Seminoma International Germ Cell Tumor Consensus Risk Classification"
 * NCIT#C112006 "Thymoma by Masaoka-Koga Stage"
 * NCIT#C18008 "TNM Ovary Neoplasm Staging"
-* NCIT#C25384 "TNM Staging System"
-* NCIT#C198206 "UICC Staging System Manual"
 * NCIT#C141685 "Veterans Administration Lung Study Group Clinical Classification"
 * NCIT#C18214 "Whitmore-Jewett Staging System"
 

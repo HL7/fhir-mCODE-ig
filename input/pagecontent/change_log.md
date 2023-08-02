@@ -2,18 +2,17 @@
 
 ### Addition of non-TNM Staging Profiles ([FHIR-41163](https://jira.hl7.org/browse/FHIR-41163), [FHIR-41003](https://jira.hl7.org/browse/FHIR-41003))
 
-mCODE 2.1 and 3.0.0-ballot did not include any profiles for non-TNM staging, so there was no indication on how to use mCODE to represent staging for lymphoma and leukemia, for example. To address this issue, several non-TNM staging profiles were added. Given the numerous non-TNM staging systems, a small set of profiles were added for illustrative purposes:
+mCODE 2.1 and 3.0.0-ballot did not include any profiles for non-TNM staging, so there was no indication on how to use mCODE to represent staging for lymphoma and leukemia, for example. To address this issue, several non-TNM staging profiles were added. Given the numerous non-TNM staging systems, a set of profiles were added for illustrative purposes:
 
-* [ALLClassification]
 * [CLLBinetStage]
 * [CLLRaiStage]
 * [GynecologicTumorFIGOStage]
 * [LymphomaStage]
+* [MelanomaBreslowDepthStage]
 * [MelanomaClarkLevel]
 * [MyelomaISSStage]
 * [MyelomaRISSStage]
-* [NeuroblastomaINSSStage]
-* [NeuroblastomaRiskGroup]
+* [ProstateGleasonGradeGroup]
 
 ### New History of Metastatic Disease Profile
 

@@ -14,10 +14,15 @@ RuleSet: IdentifierDisplayName  // FHIR-32239
 Invariant:  TerminationReasonInvariant
 Description: "When status is terminated, only certain statusReason values are allowed"
 Severity: #error
-Expression: "status = 'stopped' and statusReason.exists() and statusReason.coding.exists() implies (statusReason.coding.system = 'http://www.snomed.org/' and 
+/* Expression: "status = 'stopped' and statusReason.exists() and statusReason.coding.exists() implies (statusReason.coding.system = 'http://www.snomed.org/' and 
 (statusReason = '182992009' or statusReason = '266721009' or statusReason = '407563006' or statusReason = '160932005' or
  statusReason = '105480006' or statusReason = '184081006' or statusReason = '309846006' or statusReason = '399307001' or 
  statusReason = '419620001' or statusReason = '7058009'))"
+ */
+ Expression: "statusReason.exists() and statusReason.coding.exists() and (statusReason.coding.system = 'http://www.snomed.org/' and 
+(statusReason = '182992009' or statusReason = '266721009' or statusReason = '407563006' or statusReason = '160932005' or
+ statusReason = '105480006' or statusReason = '184081006' or statusReason = '309846006' or statusReason = '399307001' or 
+ statusReason = '419620001' or statusReason = '7058009')) implies status = 'stopped'"
 
 
 Profile:  RadiotherapyCourseSummary

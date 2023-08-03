@@ -21,11 +21,13 @@ Description:    "An episode of medication administration for a patient whose con
 RuleSet: MedicationResourcesRS
 * ^extension[FMM].valueInteger = 3
 * obeys mcode-reason-required
+* obeys TerminationReasonInvariant
 * subject only Reference(CancerPatient)
 * subject ^definition = "The patient receiving the medication."
 * extension contains
     ProcedureIntent named treatmentIntent 0..1 MS and
     TreatmentTerminationReason named terminationReason 0..* MS
+* statusReason from TreatmentTerminationReasonVS (preferred)
 * reasonCode from CancerDisorderVS (extensible)
 * reasonReference only Reference(PrimaryCancerCondition or SecondaryCancerCondition) // only for cancer-related reasons
 * reasonCode and reasonReference and extension MS

@@ -158,7 +158,7 @@ The mCODE bundle definition now slices on resource type, rather than profile. Sl
 
 ### Addition of Patient History of Metastatic Cancer
 
-To enable more complete reporting of patient history, a new profile for recording a patient's cancer history was added. [HistoryOfMetastaticCancer]
+To enable more complete reporting of patient history, a new Observation profile for recording a patient's cancer history was added. This profile has an optional Boolean value.  If the value is false, it indicates an absence of history of metastatic cancer. If the value is true or absent it indicates a history of metastatic cancer. [HistoryOfMetastaticCancer]
 
 ### Maturity Indicators
 

@@ -943,6 +943,7 @@ Description: "Extended example: example cancer patient"
 * extension[USCoreRace].extension[text].valueString = "White"
 * extension[USCoreEthnicity].extension[ombCategory].valueCoding = OmbRaceCat#2186-5 "Not Hispanic or Latino"
 * extension[USCoreEthnicity].extension[text].valueString = "Not Hispanic or Latino"
+* extension[USCoreBirthSex].valueCode = #female
 
 Instance: us-core-practitioner-jane-radiotech
 InstanceOf: USCorePractitioner

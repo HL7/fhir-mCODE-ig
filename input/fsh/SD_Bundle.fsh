@@ -30,6 +30,7 @@ Description: "A collection of data for an mCODE cancer patient."
     ECOGPerformanceStatus or
     GenomicRegionStudied or
     GenomicVariant or
+    HistoryOfMetastaticCancer or
     KarnofskyPerformanceStatus or
     TNMDistantMetastasesCategory or
     TNMPrimaryTumorCategory or
@@ -46,7 +47,6 @@ Description: "A collection of data for an mCODE cancer patient."
 * entry[mcodeConditions].resource only 
     PrimaryCancerCondition or
     SecondaryCancerCondition or
-    HistoryOfMetastaticCancer or
     USCoreCondition
 * entry[mcodeMedicationAdministrations] ^short = "mCODE Medication Administration Resources"
 * entry[mcodeMedicationAdministrations] ^definition = "Slice containing mCODE Cancer-Related Medication Administration"

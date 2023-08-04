@@ -65,3 +65,13 @@ RuleSet: BodySiteQualifierAndLaterality(path)
 * {path}.extension[locationQualifier] ^definition = "General location qualifier (excluding laterality) for this bodySite"
 * {path}.extension[lateralityQualifier] ^short = "Laterality qualifier for this bodySite"
 * {path}.extension[lateralityQualifier] ^definition = "Laterality qualifier for this bodySite"
+
+
+
+Invariant:  TerminationReasonInvariant
+Description: "When status is terminated, only certain statusReason values are allowed"
+Severity: #error
+Expression: " status = 'stopped' and statusReason.exists() and statusReason.coding.exists() implies (statusReason.coding.system = 'http://www.snomed.org/' and 
+(statusReason = '182992009' or statusReason = '266721009' or statusReason = '407563006' or statusReason = '160932005' or
+ statusReason = '105480006' or statusReason = '184081006' or statusReason = '309846006' or statusReason = '399307001' or 
+ statusReason = '419620001' orstatusReason = '7058009'))"

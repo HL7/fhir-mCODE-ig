@@ -49,6 +49,7 @@ Description: "Qualifier to refine an body location. These include qualifiers for
 // * insert ExtensionContext(Observation.bodySite)
 * insert ExtensionContext(DomainResource)
 * insert ExtensionContext(Extension)
+* insert ExtensionContext(CodeableConcept)
 * ^extension[FMM].valueInteger = 4
 * value[x] only CodeableConcept
 * value[x] from BodyLocationQualifierVS (required)
@@ -65,6 +66,7 @@ Description: "Qualifier to specify laterality."
 // * insert ExtensionContext(Observation.bodySite)
 * insert ExtensionContext(DomainResource)
 * insert ExtensionContext(Extension)
+* insert ExtensionContext(CodeableConcept)
 * ^extension[FMM].valueInteger = 4
 * value[x] only CodeableConcept
 * value[x] from LateralityQualifierVS (required)

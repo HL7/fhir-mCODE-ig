@@ -64,14 +64,16 @@ Description: "Qualifier to specify laterality."
 
 Extension: TreatmentTerminationReason
 Id: mcode-treatment-termination-reason
-Title: "Treatment Termination Reason Extension"
-Description: "A code explaining the unplanned or premature termination, or normal completion, of a plan of treatment, course of medication, or research study."
+Title: "Treatment Termination Reason Extension (deprecated)"
+Description: "A code explaining the unplanned or premature termination, or normal completion, of a plan of treatment, course of medication, or research study.
+This extension is deprecated since it is redundant with the statusReason field."
 //* insert ExtensionContext(MedicationRequest) - removed as per FHIR-32243
 //* insert ExtensionContext(Procedure)         - removed as per FHIR-32243
 * ^extension[FMM].valueInteger = 3
 * value[x] only CodeableConcept
 * value[x] from TreatmentTerminationReasonVS (extensible)
 * value[x] 1..1
+* ^status = #retired 
 
 Extension: ProcedureIntent
 Id: mcode-procedure-intent

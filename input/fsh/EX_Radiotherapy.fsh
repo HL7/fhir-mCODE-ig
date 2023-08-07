@@ -32,6 +32,7 @@ Description: "Example of radiotherapy treatment summary involving external beam 
 * subject = Reference(cancer-patient-jenny-m)
 * asserter = Reference(us-core-practitioner-kyle-anydoc)
 
+/* This is for testing purposes -- if un-commented, it should cause error message: "Rule ModalityTextRequiredForOther: 'Require a text literal for code other' Failed"
 Instance: radiotherapy-treatment-summary-other-without-text
 InstanceOf: RadiotherapyCourseSummary
 Description: "Example of radiotherapy treatment summary involving external beam radiation to chest wall and regional node radiation with a chest wall boost"
@@ -63,3 +64,4 @@ Description: "Example of radiotherapy treatment summary involving external beam 
 * extension[doseDeliveredToVolume][1].extension[fractionsDelivered].valueUnsignedInt = 25
 * subject = Reference(cancer-patient-jenny-m)
 * asserter = Reference(us-core-practitioner-kyle-anydoc)
+*/

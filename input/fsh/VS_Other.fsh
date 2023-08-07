@@ -10,7 +10,7 @@ Description:  "Codes describing the location(s) of primary or secondary cancer. 
 ValueSet:   ConditionStatusTrendVS
 Id: mcode-condition-status-trend-vs
 Title: "Condition Status Trend Value Set"
-Description:  "How patient's given disease, condition, or ability is trending. This value set is less than ideal because it mixes findings with disorders, but that is the way that SNOMED (IHTSDO) insisted the new terms for partial and full remission be added. See https://jira.hl7.org/browse/FHIR-29813 for details."
+Description:  "How patient's given disease, condition, or ability is trending."
 * insert SNOMEDCopyrightForVS
 * ^extension[FMM].valueInteger = 3
 // * SCT#281900007 "No abnormality detected (finding)" // better than SCT#260415000 "Not detected (qualifier)" - FHIR-32837
@@ -18,13 +18,35 @@ Description:  "How patient's given disease, condition, or ability is trending. T
 * SCT#359746009 "Patient's condition stable (finding)"
 * SCT#271299001 "Patient's condition worsened (finding)"
 * SCT#709137006 "Patient condition undetermined (finding)"
-* SCT#550991000124107 "Malignant neoplasm in full remission (disorder)" // FHIR-32837 - MLT_note: SCT FN is displayed. The initial term of "cancer in complete remission" is a synonym for the concept.
-* SCT#551001000124108 "Malignant neoplasm in partial remission (disorder)" // FHIR-32837 - MLT_note: SCT FN is displayed. The initial term of "cancer in partial remission" is a synonym for the concept.
-/* Why not these? (instead of dipping into the disorder hierarchy)
 * SCT#103338009 "In full remission (qualifier value)"
 * SCT#103337004 "In partial remission (qualifier value)"
-* SCT#263855007 "Relapse phase (qualifier value)"
+/* Added based on FHIR-40811 */
+* SCT#399409002 "Distant metastasis present (finding)"
+
+ValueSet:   ConditionStatusTrendMaxVS
+Id: mcode-condition-status-trend-max-vs
+Title: "Condition Status Trend Maximum Value Set"
+Description:  "Like the ConditionStatusTrendVS, but includes two additional deprecated codes. Codes from the SNOMED CT disorder hierarchy were less than ideal because the value of an Observation should be either a finding or a qualifier (see https://confluence.ihtsdotools.org/display/FHIR/Observation+binding for details)."
+* include codes from valueset ConditionStatusTrendVS
+* SCT#550991000124107 "Malignant neoplasm in full remission (disorder)" // FHIR-32837 - MLT_note: SCT FN is displayed. The initial term of "cancer in complete remission" is a synonym for the concept.
+* SCT#551001000124108 "Malignant neoplasm in partial remission (disorder)" // FHIR-32837 - MLT_note: SCT FN is displayed. The initial term of "cancer in partial remission" is a synonym for the concept.
+
+* insert SNOMEDCopyrightForVS
+* ^extension[FMM].valueInteger = 3
+// * SCT#281900007 "No abnormality detected (finding)" // better than SCT#260415000 "Not detected (qualifier)" - FHIR-32837
+* SCT#268910001 "Patient's condition improved (finding)"
+* SCT#359746009 "Patient's condition stable (finding)"
+* SCT#271299001 "Patient's condition worsened (finding)"
+* SCT#709137006 "Patient condition undetermined (finding)"
+/*
+   Retired these, replaced with qualifier values
+* SCT#550991000124107 "Malignant neoplasm in full remission (disorder)" // FHIR-32837 - MLT_note: SCT FN is displayed. The initial term of "cancer in complete remission" is a synonym for the concept.
+* SCT#551001000124108 "Malignant neoplasm in partial remission (disorder)" // FHIR-32837 - MLT_note: SCT FN is displayed. The initial term of "cancer in partial remission" is a synonym for the concept.
 */
+* SCT#103338009 "In full remission (qualifier value)"
+* SCT#103337004 "In partial remission (qualifier value)"
+/* Added based on FHIR-40811 */
+* SCT#399409002 "Distant metastasis present (finding)"
 
 ValueSet: CancerDiseaseStatusEvidenceTypeVS
 Id: mcode-cancer-disease-status-evidence-type-vs
@@ -93,8 +115,7 @@ Title: "Treatment Termination Reason Value Set"
 Description:  "Values used to describe the reasons for stopping a treatment or episode of care. Includes code for 'treatment completed' as well as codes for unplanned (early) stoppage. Applies to medications and other treatments that take place over a period of time, such as radiation treatments."
 * insert SNOMEDCopyrightForVS
 * ^extension[FMM].valueInteger = 3
-* SCT#182992009   "Treatment completed (situation)"
-* SCT#266721009   "No response to treatment (situation)" // more general than SCT#58848006 "Lack of drug action (finding)"
+* SCT#266721009   "No response to treatment (situation)" // more general than SCT#58848006 "Lack of drug action (finding)" or SCT#182841002 "Doctor stopped drugs - ineffective (situation)"
 * SCT#407563006   "Treatment not tolerated (situation)" // more general than SCT#281647001 "Adverse reaction (disorder)"
 * SCT#160932005   "Financial problem (finding)" // more general than 454061000124102 "Unable to afford medication (finding)"
 * SCT#105480006   "Refusal of treatment by patient (situation)"  // patient choice or decision
@@ -102,7 +123,9 @@ Description:  "Values used to describe the reasons for stopping a treatment or e
 * SCT#309846006   "Treatment not available (situation)"
 * SCT#399307001   "Lost to follow-up (finding)" // added by mCODE Exec Council recommendation 2/12/2021
 * SCT#419620001   "Death (event)"  // FHIR-32832  (but why not 419099009 Dead (finding) because other values are findings or situations?)
-* SCT#7058009     "Noncompliance with treatment (finding)" //currently not in TerminationReason
+* SCT#7058009     "Noncompliance with treatment (finding)"
+* SCT#443729008   "Completion of clinical trial (finding)"  // could be SCT#430279008 "Drug treatment stopped at end of clinical trial (situation)"
+* SCT#77386006    "Pregnancy (finding)"  // commonly found in clinical trial case report forms (CRFs)
 
 ValueSet:		ProcedureIntentVS
 Id: mcode-procedure-intent-vs
@@ -153,4 +176,3 @@ Description:     "Code for methods of measuring tumor size, including physical e
 * SCT#363680008 "Radiographic imaging procedure (procedure)"
 // Other Imaging.  If one of the above doesn't cut it.
 * SCT#363679005 "Imaging (procedure)"
-// * include codes from system LNC where concept is-a #LP29684-5

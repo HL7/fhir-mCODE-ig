@@ -232,7 +232,8 @@ Instance: tnm-clinical-stage-group-jenny-m
 InstanceOf: TNMStageGroup
 Description: "Extended example: example showing TNM staging (stage group)"
 * status = #final "final"
-* code = LNC#21908-9 "Stage group.clinical Cancer"
+//* code = LNC#21908-9 "Stage group.clinical Cancer"
+* code = SCT#399537006 "Clinical TNM stage grouping"
 * subject = Reference(cancer-patient-jenny-m)
 * focus = Reference(primary-cancer-condition-jenny-m)  // new STU3 requirement
 * effectiveDateTime = "2018-03-16"
@@ -246,7 +247,8 @@ Instance: tnm-clinical-primary-tumor-category-jenny-m
 InstanceOf: TNMPrimaryTumorCategory
 Description: "Extended example: example showing TNM staging (T)"
 * status = #final "final"
-* code = LNC#21905-5 "Primary tumor.clinical [Class] Cancer"
+//* code = LNC#21905-5 "Primary tumor.clinical [Class] Cancer"
+* code = SCT#399504009 "cT category"
 * subject = Reference(cancer-patient-jenny-m)
 * effectiveDateTime = "2018-03-16"
 * valueCodeableConcept = SCT#1228938002 "American Joint Committee on Cancer cT3 (qualifier value)"
@@ -256,7 +258,8 @@ Instance: tnm-clinical-regional-nodes-category-jenny-m
 InstanceOf: TNMRegionalNodesCategory
 Description: "Extended example: example showing TNM staging (N)"
 * status = #final "final"
-* code = LNC#21906-3 "Regional lymph nodes.clinical [Class] Cancer"
+//* code = LNC#21906-3 "Regional lymph nodes.clinical [Class] Cancer"
+* code = SCT#399534004 "cN category"
 * subject = Reference(cancer-patient-jenny-m)
 * effectiveDateTime = "2018-03-16"
 * valueCodeableConcept = SCT#1229967007 "American Joint Committee on Cancer cN0 (qualifier value)"
@@ -266,7 +269,8 @@ Instance: tnm-clinical-distant-metastases-category-jenny-m
 InstanceOf: TNMDistantMetastasesCategory
 Description: "Extended example: example showing TNM staging (M)"
 * status = #final "final"
-* code = LNC#21907-1 "Distant metastases.clinical [Class] Cancer"
+//* code = LNC#21907-1 "Distant metastases.clinical [Class] Cancer"
+* code = SCT#399387003 "cM category"
 * subject = Reference(cancer-patient-jenny-m)
 * effectiveDateTime = "2018-03-16"
 * valueCodeableConcept = SCT#1229901006 "American Joint Committee on Cancer cM0 (qualifier value)"
@@ -339,7 +343,7 @@ Instance: genomic-variant-jenny-m
 InstanceOf: GenomicVariant
 Description: "Extended example: example showing genomic variant found by breast cancer genomics panel"
 * status = #final "final"
-* code = LNC#69548-6 "Genetic variant assessment"  // not Genomic!
+* code = LNC#69548-6 "Genetic variant assessment"
 * subject = Reference(cancer-patient-jenny-m)
 * effectiveDateTime = "2018-03-15"
 * valueCodeableConcept = LNC#LA9633-4 "Present"
@@ -469,7 +473,8 @@ Instance: tnm-pathologic-stage-group-jenny-m
 InstanceOf: TNMStageGroup
 Description: "Extended example: example showing TNM staging (stage group)"
 * status = #final "final"
-* code = LNC#21902-2 "Stage group.pathology Cancer"
+//* code = LNC#21902-2 "Stage group.pathology Cancer"
+* code = SCT#399588009 "Pathologic TNM stage grouping"
 * subject = Reference(cancer-patient-jenny-m)
 * focus = Reference(primary-cancer-condition-jenny-m)  // new STU3 requirement
 * effectiveDateTime = "2018-04-05"
@@ -483,7 +488,8 @@ Instance: tnm-pathologic-primary-tumor-category-jenny-m
 InstanceOf: TNMPrimaryTumorCategory
 Description: "Extended example: example showing TNM staging (T)"
 * status = #final "final"
-* code = LNC#21899-0 "Primary tumor.pathology Cancer"
+//* code = LNC#21899-0 "Primary tumor.pathology Cancer"
+* code = SCT#384625004 "pT category"
 * subject = Reference(cancer-patient-jenny-m)
 * effectiveDateTime = "2018-04-01"
 * valueCodeableConcept = SCT#1229859000 "American Joint Committee on Cancer pT3 (qualifier value)"
@@ -493,7 +499,8 @@ Instance: tnm-pathologic-regional-nodes-category-jenny-m
 InstanceOf: TNMRegionalNodesCategory
 Description: "Extended example: example showing TNM staging (N)"
 * status = #final "final"
-* code = LNC#21900-6 "Regional lymph nodes.pathology [Class] Cancer"
+//* code = LNC#21900-6 "Regional lymph nodes.pathology [Class] Cancer"
+* code = SCT#371494008 "pN category"
 * subject = Reference(cancer-patient-jenny-m)
 * effectiveDateTime = "2018-04-01"
 * valueCodeableConcept = SCT#1229947003 "American Joint Committee on Cancer pN0 (qualifier value)"
@@ -503,7 +510,8 @@ Instance: tnm-pathologic-distant-metastases-category-jenny-m
 InstanceOf: TNMDistantMetastasesCategory
 Description: "Extended example: example showing TNM staging (M)"
 * status = #final "final"
-* code = LNC#21901-4 "Distant metastases.pathology [Class] Cancer"
+//* code = LNC#21901-4 "Distant metastases.pathology [Class] Cancer"
+* code = SCT#371497001 "pM category"
 * subject = Reference(cancer-patient-jenny-m)
 * effectiveDateTime = "2018-04-01"
 * valueCodeableConcept = AbsentReason#not-applicable "Not Applicable"   // cancer is not metastatic, pM0 is not valid
@@ -943,7 +951,7 @@ Description: "Extended example: example cancer patient"
 * extension[USCoreRace].extension[text].valueString = "White"
 * extension[USCoreEthnicity].extension[ombCategory].valueCoding = OmbRaceCat#2186-5 "Not Hispanic or Latino"
 * extension[USCoreEthnicity].extension[text].valueString = "Not Hispanic or Latino"
-* extension[USCoreBirthSex].valueCode = #female
+* extension[USCoreBirthSex].valueCode = #F
 
 Instance: us-core-practitioner-jane-radiotech
 InstanceOf: USCorePractitioner

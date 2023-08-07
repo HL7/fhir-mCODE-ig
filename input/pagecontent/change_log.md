@@ -2,34 +2,53 @@
 
 ### Addition of non-TNM Staging Profiles ([FHIR-41163](https://jira.hl7.org/browse/FHIR-41163), [FHIR-41003](https://jira.hl7.org/browse/FHIR-41003))
 
-mCODE 2.1 and 3.0.0-ballot did not include any profiles for non-TNM staging, so there was no indication on how to use mCODE to represent staging for lymphoma and leukemia, for example. To address this issue, several non-TNM staging profiles were added. Given the numerous non-TNM staging systems, a small set of profiles were added for illustrative purposes:
+mCODE 2.1 and 3.0.0-ballot did not include any profiles for non-TNM staging, so there was no indication on how to use mCODE to represent staging for lymphoma and leukemia, for example. To address this issue, several non-TNM staging profiles were added. Given the numerous non-TNM staging systems, a set of profiles were added for illustrative purposes:
 
-* [ALLClassification]
 * [CLLBinetStage]
 * [CLLRaiStage]
 * [GynecologicTumorFIGOStage]
 * [LymphomaStage]
+* [MelanomaBreslowDepthStage]
 * [MelanomaClarkLevel]
 * [MyelomaISSStage]
 * [MyelomaRISSStage]
-* [NeuroblastomaINSSStage]
-* [NeuroblastomaRiskGroup]
+* [ProstateGleasonGradeGroup]
 
-### New History of Metastatic Disease Profile
+### New History of Metastatic Disease Profile ([FHIR-41374](https://jira.hl7.org/browse/FHIR-41374))
 
 Recurrences and unrelated cancers sometimes occur years after previous metastatic disease, for example, in the case of an adult with history of childhood leukemia. The details of the previous disease may be unavailable, but the fact that the patient had cancer previously may be clinically significant. The profile [HistoryOfMetastaticCancer] provides a method of recording this fact in the absence of other details. This addition brings mCODE and [CMS's Enhancing Oncology Model](https://innovation.cms.gov/innovation-models/enhancing-oncology-model) into full alignment.
 
-### Expanded Value Sets
+### Expanded Staging Type and Staging Method Value Sets ([FHIR-41162](https://jira.hl7.org/browse/FHIR-41162), [FHIR-41164](https://jira.hl7.org/browse/FHIR-41164), [FHIR-41032](https://jira.hl7.org/browse/FHIR-41032), [FHIR-41030](https://jira.hl7.org/browse/FHIR-41030))
 
-Additional stage identifiers and staging methods were added to [CancerStageTypeVS] and [CancerStagingMethodVS].
+Additional stage type identifiers and staging methods were added to [CancerStageTypeVS] and [CancerStagingMethodVS]. These are values that could potentially be used in the future and inclusions or exclusions do not affect the immediately functionality of mCODE. Codes associated with pediatric cancers were moved out of mCODE in anticipation of an IG focused on pediatric cancer. Certain codes requested from SNOMED were added. Again, since the bindings of these values sets are extensible, inclusion or exclusion of particular values does not affect functionality.
 
-### Clarification of Observation.code and Observation.method in CancerStage
+### Clarification of Observation.code and Observation.method in CancerStage ([FHIR-41163](https://jira.hl7.org/browse/FHIR-41163))
 
 An explanation of how Observation.code differs from (and sometimes subsumes) Observation.method in CancerStage and its descendants [was added](group-disease.html#how-to-report-staging-information).
 
-### Birth Sex Added as Must Support
+### Birth Sex Added as Must Support ([FHIR-40587](https://jira.hl7.org/browse/FHIR-40587))
 
 In CancerPatient, birth sex (an extension inherited from US Core), is now designated as must-support.
+
+### Preferred Codes for TNM Stage Group and T, N, and M Classifications ([FHIR-41655](https://jira.hl7.org/browse/FHIR-41655))
+
+mCODE is moving incrementally toward SNOMED CT as the preferred, standard vocabulary (except for identification of laboratory tests and a few other cases). While still accepting LOINC codes in Observations related to TNM staging, SNOMED CT codes are now preferred. Users should transition towards SNOMED CT in these profiles.
+
+### Preferred Codes for Cancer Disease Status ([FHIR-40811](https://jira.hl7.org/browse/FHIR-40811))
+
+A code representing the detection of metastases has been added, for when disease status changes from local disease to metastatic disease. The two disorder codes for partial and full remission, formerly from the SNOMED CT *disorder* hierarchy, have been replaced with analogous codes from the *qualifier value* hierarchy. This change was based on SNOMED guidance that the value of FHIR Observations should be a code from the *qualifier* hierarchy or *finding* hierarchy (see https://confluence.ihtsdotools.org/display/FHIR/Observation+binding). To assure backward compatibility with this change, the two deprecated disorder codes have been moved into a maximum value set, while the binding of the revised value set is now `preferred`. This gives implementers time to transition to the new codes for partial and full remission, since the old disorder codes are still accepted (but not preferred).
+
+### New Page for Genomics Examples
+
+In the ballot version, approximately 20 new examples involving genomics and next generation sequencing (NGS) we added. To increase the visibility of these examples, [a new page](examples_genomics.html) listing all these examples in one place was added.
+<br/>
+<br/>
+----
+<br/>
+
+### Use StatusReason instead of TreatmentTerminationReason Extension [FHIR-41680](https://jira.hl7.org/browse/FHIR-41680)
+
+An mCODE user [pointed out](https://chat.fhir.org/#narrow/stream/179234-Cancer-Interoperability/topic/Question.20about.20radiotheraphy.20summary.20profile) that the TreatmentTerminationReason extension was unnecessary, because FHIR natively includes a statusReason element that is meant to explain the current status of procedures and medication actions (requests and administrations). When status = "stopped" the statusReason provides the termination reason. Extensions should be avoided when n+ative FHIR elements provide the same functionality. Therefore, the [TreatmentTerminationReason] extension has been deprecated, and henceforth users should populate the statusReason field with the values from [TreatmentTerminationReasonVS]. Two additional values were added to the termination reason value set, representing termination due to pregnancy and termination due to conclusion of the clinical trial.
 
 
 **The following changes occurred between [STU 2 publication](http://hl7.org/fhir/us/mcode/STU2/) (January 2022) and the STU 3 ballot (March 2023). For a history of previous changes, please see the prior change logs in the [appropriate versions](http://hl7.org/fhir/us/mcode/history.html).**
@@ -117,6 +136,9 @@ Based on user feedback that the required bindings on certain fields were a barri
 * [RadiotherapyVolume] Profile, location field:  the valueset binding has been changed to extensible
 * [RadiotherapyCourseSummary] Profile, bodySite field:  the valueset binding has been changed to extensible
 
+### Expanding [DiseaseStatusTrendVS]
+This value set has been expanded to include a code indicating that the patient's cancer has metastasized.  The disorder codes for full and partial remission have also been replaced with qualifier codes.
+
 ### Update to US Core 5.0.1
 
 mCODE has been updated to the current version of US Core, STU 5. Because there are new profiles in STU 5 that should be used as parent profiles, some mCODE profiles were affected. In particular, the parent profiles of [KarnofskyPerformanceStatus] and [ECOGPerformanceStatus] were switched from Observation to the newly-introduced [US Core Observation Clinical Test Result Profile][USCoreClinicalTestObservation]. Secondly, the parent profiles of [PrimaryCancerCondition] and [SecondaryCancerCondition] were switched to [US Core Condition Problems and Health Concerns Profile]. This change is not backward compatible.
@@ -158,7 +180,7 @@ The mCODE bundle definition now slices on resource type, rather than profile. Sl
 
 ### Addition of Patient History of Metastatic Cancer
 
-To enable more complete reporting of patient history, a new Observation profile for recording a patient's cancer history was added. This profile has an optional Boolean value.  If the value is false, it indicates an absence of history of metastatic cancer. If the value is true or absent it indicates a history of metastatic cancer. [HistoryOfMetastaticCancer]
+To enable more complete reporting of patient history, a new Observation profile for recording a patient's cancer history was added. This profile has an optional Boolean value.  If the value is false, it indicates an assertion of absence of a history of metastatic cancer. If the value is true or absent it indicates a history of metastatic cancer. [HistoryOfMetastaticCancer]. If there is no instance of an Observation of this type, and there is no instance of a [SecondaryCancerCondition], then there is no evidence for or against a past or present metastatic cancer.
 
 ### Maturity Indicators
 
@@ -174,7 +196,7 @@ Users requested a link between TumorMarkerTest and the condition the test is rel
 
 ### Multiple Specimen Profiles Simplified
 
-A specimen is a specimen. There was no real reason to distinguish specimens obtained for genomic analysis from those obtained for other uses. A single profile, HumanSpecimen, was created to represent any specimen from a human subject. Since this profile is no longer associated with a single domain (Disease or Genomics), specimens were added to the Patient domain.
+A specimen is a specimen. There was no real reason to distinguish specimens obtained for genomic analysis from those obtained for other uses. A single profile, HumanSpecimen, was created to represent any specimen from a human subject. Since this profile is no longer associated with a single domain (Disease or Genomics), specimens were added to the Patient domain. The values for specimen type are a subset of codes representing human-sourced specimens (fluids, tissues, etc.) from http://terminology.hl7.org/CodeSystem/v2-0487.
 
 ### Technical Corrections
 
@@ -226,6 +248,13 @@ A specimen is a specimen. There was no real reason to distinguish specimens obta
   * #1162614009 "Lymph node level X (qualifier value)"
   * #1162615005 "Lymph node level XA (qualifier value)"
   * #1162613003 "Lymph node level XB (qualifier value)"
+
+<br/>
+________________________________
+<br/>
+<br/>
+
+**The change log for changes prior to mCODE version 2.1 [continues here](https://hl7.org/fhir/us/mcode/STU2.1/change_log.html)**
 
 
 {% include markdown-link-references.md %}

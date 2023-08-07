@@ -51,6 +51,10 @@ RuleSet: LOINCCopyrightForVS
 * ^copyright = "This material contains content from LOINC (http://loinc.org). LOINC is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc"
 * ^experimental = false
 
+RuleSet: SNOINCCopyrightForVS
+* ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement. This material contains content from LOINC (http://loinc.org). LOINC is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc"
+* ^experimental = false
+
 RuleSet: ExtensionContext(path)
 * ^context[+].type = #element
 * ^context[=].expression = "{path}"
@@ -66,12 +70,3 @@ RuleSet: BodySiteQualifierAndLaterality(path)
 * {path}.extension[lateralityQualifier] ^short = "Laterality qualifier for this bodySite"
 * {path}.extension[lateralityQualifier] ^definition = "Laterality qualifier for this bodySite"
 
-
-
-Invariant:  TerminationReasonInvariant
-Description: "When status is terminated, only certain statusReason values are allowed"
-Severity: #error
-Expression: " status = 'stopped' and statusReason.exists() and statusReason.coding.exists() implies (statusReason.coding.system = 'http://www.snomed.org/' and 
-(statusReason = '182992009' or statusReason = '266721009' or statusReason = '407563006' or statusReason = '160932005' or
- statusReason = '105480006' or statusReason = '184081006' or statusReason = '309846006' or statusReason = '399307001' or 
- statusReason = '419620001' orstatusReason = '7058009'))"

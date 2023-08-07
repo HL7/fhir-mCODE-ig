@@ -11,12 +11,31 @@ RuleSet: IdentifierDisplayName  // FHIR-32239
 * identifier[displayName].use = #usual
 * identifier[displayName].value 1..1 MS
 
+Invariant:  termination-reason-invariant 
+Description: "Certain statusReason values are allowed only when status is stopped" 
+Severity: #error
+* expression =  "statusReason.exists() and statusReason.coding.exists() and (statusReason.coding.system = 'http://www.snomed.org/' and 
+(statusReason = '182992009' or statusReason = '266721009' or statusReason = '407563006' or statusReason = '160932005' or
+ statusReason = '105480006' or statusReason = '184081006' or statusReason = '309846006' or statusReason = '399307001' or 
+ statusReason = '419620001' or statusReason = '7058009' or statusReason = '443729008' or statusReason = '77386006')) implies status = 'stopped'"
+
+Invariant:  termination-reason-code-invariant 
+Description: "When status is stopped, only certain statusReason values are allowed"
+Severity: #error
+* expression = "status = 'stopped' and statusReason.exists() and statusReason.coding.exists() implies (statusReason.coding.system = 'http://www.snomed.org/' and 
+(statusReason = '182992009' or statusReason = '266721009' or statusReason = '407563006' or statusReason = '160932005' or
+ statusReason = '105480006' or statusReason = '184081006' or statusReason = '309846006' or statusReason = '399307001' or 
+ statusReason = '419620001' or statusReason = '7058009' or statusReason = '443729008' or statusReason = '77386006'))"
+ 
+
 Profile:  RadiotherapyCourseSummary
 Parent:   USCoreProcedure  // considered one procedure with multiple parts
 Id:       mcode-radiotherapy-course-summary
 Title:    "Radiotherapy Course Summary Profile"
 Description: "A summary of a course of radiotherapy delivered to a patient. It records the treatment intent, termination reason, modalities, techniques, number of sessions, and doses delivered to one or more body volumes. Whether the course has been fully delivered or stopped is indicated in the status element."
 * ^extension[FMM].valueInteger = 3
+* obeys termination-reason-code-invariant 
+* obeys termination-reason-invariant 
 * performed[x] only Period
 * subject only Reference(CancerPatient)
 * subject ^definition = "The patient on whom the procedure was performed."
@@ -34,6 +53,7 @@ Description: "A summary of a course of radiotherapy delivered to a patient. It r
 * bodySite ^definition = "Coded body structure(s) treated in this course of radiotherapy. These codes represent general locations. For additional detail, refer to the BodyStructures references in the doseDeliveredToVolume extension."
 * insert BodySiteQualifierAndLaterality(bodySite)
 * reasonCode from CancerDisorderVS (extensible)
+* statusReason from TreatmentTerminationReasonVS (preferred)
 * reasonReference only Reference(USCoreCondition)
 * reasonCode and reasonReference and bodySite MS
 * obeys mcode-reason-required

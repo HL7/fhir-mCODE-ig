@@ -46,6 +46,11 @@ In the ballot version, approximately 20 new examples involving genomics and next
 ----
 <br/>
 
+### Use StatusReason instead of TreatmentTerminationReason Extension [FHIR-41680](https://jira.hl7.org/browse/FHIR-41680)
+
+An mCODE user [pointed out](https://chat.fhir.org/#narrow/stream/179234-Cancer-Interoperability/topic/Question.20about.20radiotheraphy.20summary.20profile) that the TreatmentTerminationReason extension was unnecessary, because FHIR natively includes a statusReason element that is meant to explain the current status of procedures and medication actions (requests and administrations). When status = "stopped" the statusReason provides the termination reason. Extensions should be avoided when n+ative FHIR elements provide the same functionality. Therefore, the [TreatmentTerminationReason] extension has been deprecated, and henceforth users should populate the statusReason field with the values from [TreatmentTerminationReasonVS]. Two additional values were added to the termination reason value set, representing termination due to pregnancy and termination due to conclusion of the clinical trial.
+
+
 **The following changes occurred between [STU 2 publication](http://hl7.org/fhir/us/mcode/STU2/) (January 2022) and the STU 3 ballot (March 2023). For a history of previous changes, please see the prior change logs in the [appropriate versions](http://hl7.org/fhir/us/mcode/history.html).**
 
 ### Allowing the Use of AJCC-equivalent SNOMED Codes for Staging

@@ -37,8 +37,8 @@ e: {
   "resourceType" : "ValueSet",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:ebe13ecf-b62b-4732-80d4-b1dd58d4dcb8",
-    "timestamp" : "2023-07-31T14:52:00.312Z",
+    "identifier" : "urn:uuid:4fb58f25-ad74-42b7-97fb-7bdf711309f8",
+    "timestamp" : "2023-08-07T15:34:07.231Z",
     "total" : 6,
     "parameter" : [{
       "name" : "limitedExpansion",
@@ -94,12 +94,12 @@ e: {
     "include" : [{
       "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/snomed-requested-cs",
       "concept" : [{
-        "code" : "1284814003",
-        "display" : "Lymph node level IIA (qualifier value)"
+        "code" : "USCRS-34955",
+        "display" : "UICC Classification of Malignant Tumours 8th Edition (tumor staging)"
       },
       {
-        "code" : "1284815002",
-        "display" : "Lymph node level IIB (qualifier value)"
+        "code" : "USCRS-34956",
+        "display" : "UICC Classification of Malignant Tumours 7th Edition (tumor staging)"
       }]
     }]
   }
@@ -109,8 +109,8 @@ e: {
   "resourceType" : "ValueSet",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:4cb0c6d6-ce5e-4878-a7c9-176385ec67aa",
-    "timestamp" : "2023-07-31T14:52:03.062Z",
+    "identifier" : "urn:uuid:ec474f2f-30b1-461d-b21b-9529532a63ce",
+    "timestamp" : "2023-08-07T15:34:08.512Z",
     "total" : 2,
     "parameter" : [{
       "name" : "limitedExpansion",
@@ -126,65 +126,13 @@ e: {
     }],
     "contains" : [{
       "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/snomed-requested-cs",
-      "code" : "1284814003",
-      "display" : "Lymph node level IIA (qualifier value)"
+      "code" : "USCRS-34955",
+      "display" : "UICC Classification of Malignant Tumours 8th Edition (tumor staging)"
     },
     {
       "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/snomed-requested-cs",
-      "code" : "1284815002",
-      "display" : "Lymph node level IIB (qualifier value)"
-    }]
-  }
-},
-  "error" : ""
-}
--------------------------------------------------------------------------------------
-{"hierarchical" : false, "valueSet" :{
-  "resourceType" : "ValueSet",
-  "compose" : {
-    "inactive" : true,
-    "include" : [{
-      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/snomed-requested-cs",
-      "concept" : [{
-        "code" : "1285442003",
-        "display" : "Estimated contoured volume of bowel in peritoneal cavity using radiographic imaging (observable entity)"
-      },
-      {
-        "code" : "1285443008",
-        "display" : "Estimated contoured volume of small bowel in peritoneal cavity using imaging (observable entity)"
-      }]
-    }]
-  }
-}}####
-e: {
-  "valueSet" : {
-  "resourceType" : "ValueSet",
-  "status" : "active",
-  "expansion" : {
-    "identifier" : "urn:uuid:51b0f517-16e6-4eef-8f42-3066fa2ce635",
-    "timestamp" : "2023-07-31T14:52:03.453Z",
-    "total" : 2,
-    "parameter" : [{
-      "name" : "limitedExpansion",
-      "valueBoolean" : true
-    },
-    {
-      "name" : "excludeNested",
-      "valueBoolean" : true
-    },
-    {
-      "name" : "version",
-      "valueUri" : "http://hl7.org/fhir/us/mcode/CodeSystem/snomed-requested-cs|3.0.0"
-    }],
-    "contains" : [{
-      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/snomed-requested-cs",
-      "code" : "1285442003",
-      "display" : "Estimated contoured volume of bowel in peritoneal cavity using radiographic imaging (observable entity)"
-    },
-    {
-      "system" : "http://hl7.org/fhir/us/mcode/CodeSystem/snomed-requested-cs",
-      "code" : "1285443008",
-      "display" : "Estimated contoured volume of small bowel in peritoneal cavity using imaging (observable entity)"
+      "code" : "USCRS-34956",
+      "display" : "UICC Classification of Malignant Tumours 7th Edition (tumor staging)"
     }]
   }
 },

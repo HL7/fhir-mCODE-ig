@@ -2,20 +2,14 @@
 
 The bundle MUST contain exactly one Patient resource conforming to the [CancerPatient] profile (any patient conforming with US Core Patient is also conformant). The bundle MUST also contain following mCODE-conformant resources, if available to the server:
 
-* Condition resources conforming to [PrimaryCancerCondition] and [SecondaryCancerCondition] profiles
-* Condition resources conforming to [HistoryMetastaticCancer] profiles
-* Observation resources conforming to [CancerDiseaseStatus] profile
-* Observation resources conforming to [Comorbidities] profile
-* Observation resources conforming to [ECOGPerformanceStatus] and/or [KarnofskyPerformanceStatus] profiles
-* Observation resources conforming to [GenomicVariant] and [GenomicRegionStudied] profiles
-* Observation resources conforming to [TumorMarkerTest] profile
-* Observation resources conforming to: [TNMStageGroup], [TNMDistantMetastasesCategory], [TNMPrimaryTumorCategory], and [TNMRegionalNodesCategory] profiles, representing staging information
-* Medication resources conforming to [CancerRelatedMedicationRequest] and [CancerRelatedMedicationAdministration] profiles, representing cancer-related prescriptions, administrations, and patient-reported medications
-* Procedure resources conforming to [CancerRelatedSurgicalProcedure] and [RadiotherapyCourseSummary] profiles
-* DiagnosticReport resources conforming to [GenomicsReport] profile
-* Specimen resources conforming to [HumanSpecimen] profiles
-* BodyStructure resources conforming to [RadiotherapyVolume] and [Tumor] profiles
-* Observation resources conforming to [TumorSize] profile
+* FHIR Observation Resources, if they exist for the patient, including but not limited to: [CancerDiseaseStatus], [CancerStage] (TNM and non-TNM), [Comorbidities], [ECOGPerformanceStatus], [GenomicRegionStudied], [GenomicVariant], [KarnofskyPerformanceStatus], [TumorMarkerTest], [TumorSize], and [USCoreVitalSigns].
+* FHIR Condition Resources, if they exist for the patient, including but not limited to: [PrimaryCancerCondition], [SecondaryCancerConditio], and [HistoryOfMetastaticCancer].
+* FHIR Medication Administration Resources, if they exist for the patient, including but not limited to: [CancerRelatedMedicationAdministration].
+* FHIR Medication Request Resources, if they exist for the patient, including but not limited to: [CancerRelatedMedicationRequest].
+* FHIR Diagnostic Report Resources, if they exist for the patient, including but not limited to: [GenomicsReport].
+* FHIR Specimen Resources, if they exist for the patient, including but not limited to: [HumanSpecimen].
+* FHIR Procedure Resources, if they exist for the patient, including but not limited to: [CancerRelatedSurgicalProcedure] and [RadiotherapyCourseSummary].
+* FHIR BodyStructure Resources, if they exist for the patient, including but not limited to:[RadiotherapyVolume] and [Tumor].
 
 In addition, the bundle SHOULD contain the following non-mCODE resources, following appropriate US Core profiles:
 

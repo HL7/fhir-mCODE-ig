@@ -115,8 +115,7 @@ Title: "Treatment Termination Reason Value Set"
 Description:  "Values used to describe the reasons for stopping a treatment or episode of care. Includes code for 'treatment completed' as well as codes for unplanned (early) stoppage. Applies to medications and other treatments that take place over a period of time, such as radiation treatments."
 * insert SNOMEDCopyrightForVS
 * ^extension[FMM].valueInteger = 3
-* SCT#182992009   "Treatment completed (situation)"
-* SCT#266721009   "No response to treatment (situation)" // more general than SCT#58848006 "Lack of drug action (finding)"
+* SCT#266721009   "No response to treatment (situation)" // more general than SCT#58848006 "Lack of drug action (finding)" or SCT#182841002 "Doctor stopped drugs - ineffective (situation)"
 * SCT#407563006   "Treatment not tolerated (situation)" // more general than SCT#281647001 "Adverse reaction (disorder)"
 * SCT#160932005   "Financial problem (finding)" // more general than 454061000124102 "Unable to afford medication (finding)"
 * SCT#105480006   "Refusal of treatment by patient (situation)"  // patient choice or decision
@@ -124,7 +123,9 @@ Description:  "Values used to describe the reasons for stopping a treatment or e
 * SCT#309846006   "Treatment not available (situation)"
 * SCT#399307001   "Lost to follow-up (finding)" // added by mCODE Exec Council recommendation 2/12/2021
 * SCT#419620001   "Death (event)"  // FHIR-32832  (but why not 419099009 Dead (finding) because other values are findings or situations?)
-* SCT#7058009     "Noncompliance with treatment (finding)" //currently not in TerminationReason
+* SCT#7058009     "Noncompliance with treatment (finding)"
+* SCT#443729008   "Completion of clinical trial (finding)"  // could be SCT#430279008 "Drug treatment stopped at end of clinical trial (situation)"
+* SCT#77386006    "Pregnancy (finding)"  // commonly found in clinical trial case report forms (CRFs)
 
 ValueSet:		ProcedureIntentVS
 Id: mcode-procedure-intent-vs

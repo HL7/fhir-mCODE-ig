@@ -2,6 +2,9 @@
 
 # NOTE TO SELF: ERRORS CANNOT BE SUPPRESSED, ONLY WARNINGS AND INFORMATION MESSAGES
 
+# PARSING ERROR DURING TERMINOLOGY EXPANSION
+Error from server: Error parsing HGVS response: Error parsing JSON source: Unexpected char "<" in json stream at Line 0 (path=[])
+
 # NOTE ON ERROR "BUNDLE_BUNDLE_ENTRY_MULTIPLE_PROFILES": This error reflects a limitation in the IG Publisher. Dispensation has been granted by the FHIR Product Manager. See https://chat.fhir.org/#narrow/stream/179192-fmg/topic/BUNDLE_ENTRY_MULTIPLE_PROFILES. Example of error message:
 ERROR: Bundle/mcode-patient-bundle-jenny-m: Bundle.entry[11].resource/*Procedure/radiotherapy-treatment-summary-chest-wall-jenny-m*/: 2 profiles found for entry resource. More than one is not supported at this time. (Type Procedure: http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-related-surgical-procedure, http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-radiotherapy-course-summary)
 
@@ -121,7 +124,7 @@ Code System URI 'urn:oid:2.16.840.1.113883.6.238' is unknown so the code cannot 
 Code System URI 'http://www.ncbi.nlm.nih.gov/gtr' is unknown so the code cannot be validated
 Code System URI 'http://www.ncbi.nlm.nih.gov/clinvar' is unknown so the code cannot be validated
 Code System URI 'http://terminology.hl7.org/CodeSystem/umls' is unknown so the code cannot be validated
-Code System URI 'https://www.tempus.com' is unknown so the code cannot be validated
+Code System URI 'https://www.gensop.com' is unknown so the code cannot be validated
 Code System URI 'http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl' is unknown so the code cannot be validated
 
 # SUPPRESS INFORMATION MESSAGES "DOES NOT MATCH ANY KNOWN SLICE"
@@ -160,7 +163,7 @@ INFORMATION: Observation/gx-genomic-diagnostic-implication-polrmt: Observation.d
 
 
 # SUPPRESS INFORMATION MESSAGES "Details for X matching against profile"
-INFORMATION: Bundle/gx-genomic-bundle-adam-anyperson: Bundle.entry[1].resource/*DiagnosticReport/gx-genomics-report-adam-anyperson*/.basedOn[0]: Details for ServiceRequest/gx-order-tumornormal-tempus-inc matching against profile http://hl7.org/fhir/StructureDefinition/ServiceRequest|4.0.1
+INFORMATION: Bundle/gx-genomic-bundle-adam-anyperson: Bundle.entry[1].resource/*DiagnosticReport/gx-genomics-report-adam-anyperson*/.basedOn[0]: Details for ServiceRequest/gx-order-tumornormal-gensop-inc matching against profile http://hl7.org/fhir/StructureDefinition/ServiceRequest|4.0.1
 INFORMATION: Bundle/gx-genomic-bundle-adam-anyperson: Bundle.entry[1].resource/*DiagnosticReport/gx-genomics-report-adam-anyperson*/.result[0]: Details for Observation/gx-genomic-variant-somatic-bap1-indel matching against profile http://hl7.org/fhir/StructureDefinition/Observation|4.0.1
 INFORMATION: Bundle/gx-genomic-bundle-adam-anyperson: Bundle.entry[1].resource/*DiagnosticReport/gx-genomics-report-adam-anyperson*/.result[6]: Details for Observation/gx-genomic-variant-somatic-pof1b matching against profile http://hl7.org/fhir/StructureDefinition/Observation|4.0.1
 INFORMATION: Bundle/gx-genomic-bundle-adam-anyperson: Bundle.entry[1].resource/*DiagnosticReport/gx-genomics-report-adam-anyperson*/.result[7]: Details for Observation/gx-genomic-variant-somatic-polrmt matching against profile http://hl7.org/fhir/StructureDefinition/Observation|4.0.1

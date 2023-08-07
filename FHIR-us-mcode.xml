@@ -69,6 +69,7 @@
 <artifact deprecated="true" id="StructureDefinition/mcode-comorbidities-elixhauser" key="StructureDefinition-mcode-comorbidities-elixhauser" name="Comorbidities Elixhauser Profile"/>
 <artifact deprecated="true" id="StructureDefinition/mcode-comorbidities-parent" key="StructureDefinition-mcode-comorbidities-parent" name="Comorbidities Parent Abstract Profile"/>
 <artifact id="StructureDefinition/mcode-comorbidities" key="StructureDefinition-mcode-comorbidities" name="Comorbidities Profile"/>
+<artifact id="ValueSet/mcode-condition-status-trend-max-vs" key="ValueSet-mcode-condition-status-trend-max-vs" name="Condition Status Trend Maximum Value Set"/>
 <artifact id="ValueSet/mcode-condition-status-trend-vs" key="condition-status-trend-value-set" name="Condition Status Trend Value Set"/>
 <artifact deprecated="true" id="StructureDefinition/mcode-condition-related" key="StructureDefinition-mcode-condition-related" name="Condition related to resource"/>
 <artifact id="ValueSet/mcode-cytologic-evidence-malignancy-vs" key="ValueSet-mcode-cytologic-evidence-malignancy-vs" name="Cytologic Evidence of Malignancy Value Set"/>
@@ -242,7 +243,7 @@
 <artifact deprecated="true" id="StructureDefinition/mcode-treatment-intent" key="StructureDefinition-mcode-treatment-intent" name="Treatment Intent"/>
 <artifact deprecated="true" id="Extension/mcode-treatment-intent-extension" key="treatment-intent-extension" name="Treatment Intent Extension"/>
 <artifact deprecated="true" id="ValueSet/mcode-treatment-intent-vs" key="treatment-intent-value-set" name="Treatment Intent Value Set"/>
-<artifact id="StructureDefinition/mcode-treatment-termination-reason" key="StructureDefinition-mcode-treatment-termination-reason" name="Treatment Termination Reason Extension"/>
+<artifact id="StructureDefinition/mcode-treatment-termination-reason" key="StructureDefinition-mcode-treatment-termination-reason" name="Treatment Termination Reason Extension (deprecated)"/>
 <artifact id="ValueSet/mcode-treatment-termination-reason-vs" key="treatment-termination-reason-value-set" name="Treatment Termination Reason Value Set"/>
 <artifact deprecated="true" id="Profile/mcode-tumor-marker" key="tumor-marker" name="Tumor Marker"/>
 <artifact id="StructureDefinition/mcode-tumor-marker-test" key="StructureDefinition-mcode-tumor-marker-test" name="Tumor Marker Test Profile"/>
@@ -280,6 +281,7 @@
 <artifact deprecated="true" id="MedicationAdministration/cancer-related-medication-administration-doxorubicin-jenny-m" key="MedicationAdministration-cancer-related-medication-administration-doxorubicin-jenny-m" name="cancer-related-medication-administration-doxorubicin-jenny-m"/>
 <artifact id="MedicationRequest/cancer-related-medication-request-anastrozole-jenny-m" key="MedicationRequest-cancer-related-medication-request-anastrozole-jenny-m" name="cancer-related-medication-request-anastrozole-jenny-m"/>
 <artifact id="MedicationRequest/cancer-related-medication-request-cisplatin" key="MedicationRequest-cancer-related-medication-request-cisplatin" name="cancer-related-medication-request-cisplatin"/>
+<artifact id="MedicationRequest/cancer-related-medication-request-cisplatin-stopped" key="MedicationRequest-cancer-related-medication-request-cisplatin-stopped" name="cancer-related-medication-request-cisplatin-stopped"/>
 <artifact id="MedicationRequest/cancer-related-medication-request-cyclophosphamide-jenny-m" key="MedicationRequest-cancer-related-medication-request-cyclophosphamide-jenny-m" name="cancer-related-medication-request-cyclophosphamide-jenny-m"/>
 <artifact id="MedicationRequest/cancer-related-medication-request-doxorubicin-jenny-m" key="MedicationRequest-cancer-related-medication-request-doxorubicin-jenny-m" name="cancer-related-medication-request-doxorubicin-jenny-m"/>
 <artifact id="MedicationRequest/cancer-related-medication-request-gefitinib" key="MedicationRequest-cancer-related-medication-request-gefitinib" name="cancer-related-medication-request-gefitinib"/>
@@ -333,11 +335,13 @@
 <artifact id="Observation/gx-genomic-variant-somatic-polrmt" key="Observation-gx-genomic-variant-somatic-polrmt" name="gx-genomic-variant-somatic-polrmt"/>
 <artifact id="DiagnosticReport/gx-genomics-report-adam-anyperson" key="DiagnosticReport-gx-genomics-report-adam-anyperson" name="gx-genomics-report-adam-anyperson"/>
 <artifact deprecated="true" id="DiagnosticReport/gx-genomics-report-incredible-hulk" key="DiagnosticReport-gx-genomics-report-incredible-hulk" name="gx-genomics-report-incredible-hulk"/>
-<artifact id="ServiceRequest/gx-order-tumornormal-tempus-inc" key="ServiceRequest-gx-order-tumornormal-tempus-inc" name="gx-order-tumornormal-tempus-inc"/>
+<artifact id="ServiceRequest/gx-order-tumornormal-gensop-inc" key="ServiceRequest-gx-order-tumornormal-gensop-inc" name="gx-order-tumornormal-gensop-inc"/>
+<artifact deprecated="true" id="ServiceRequest/gx-order-tumornormal-tempus-inc" key="ServiceRequest-gx-order-tumornormal-tempus-inc" name="gx-order-tumornormal-tempus-inc"/>
 <artifact id="Practitioner/gx-practitioner-test-pathologist" key="Practitioner-gx-practitioner-test-pathologist" name="gx-practitioner-test-pathologist"/>
-<artifact id="Organization/gx-us-core-organization-tempus-inc" key="Organization-gx-us-core-organization-tempus-inc" name="gx-us-core-organization-tempus-inc"/>
-<artifact id="Organization/gx-us-core-organization-test-institution" key="Organization-gx-us-core-organization-test-institution" name="gx-us-core-organization-test-institution"/>
-<artifact id="Condition/history-metastatic-cancer-jenny-m" key="Condition-history-metastatic-cancer-jenny-m" name="history-metastatic-cancer-jenny-m"/>
+<artifact id="Organization/gx-us-core-organization-gensop-inc" key="Organization-gx-us-core-organization-gensop-inc" name="gx-us-core-organization-gensop-inc"/>
+<artifact deprecated="true" id="Organization/gx-us-core-organization-tempus-inc" key="Organization-gx-us-core-organization-tempus-inc" name="gx-us-core-organization-tempus-inc"/>
+<artifact deprecated="true" id="Organization/gx-us-core-organization-test-institution" key="Organization-gx-us-core-organization-test-institution" name="gx-us-core-organization-test-institution"/>
+<artifact id="Observation/history-metastatic-cancer-jenny-m" key="Observation-history-metastatic-cancer-jenny-m" name="history-metastatic-cancer-jenny-m"/>
 <artifact id="Observation/hodgkins-lymphoma-stage-IIIe" key="Observation-hodgkins-lymphoma-stage-IIIe" name="hodgkins-lymphoma-stage-IIIe"/>
 <artifact id="Specimen/human-specimen-left-breast-jenny-m" key="Specimen-human-specimen-left-breast-jenny-m" name="human-specimen-left-breast-jenny-m"/>
 <artifact id="Specimen/human-specimen-lung" key="Specimen-human-specimen-lung" name="human-specimen-lung"/>
@@ -396,6 +400,7 @@
 <artifact id="Observation/melanoma-clark-level-4" key="Observation-melanoma-clark-level-4" name="melanoma-clark-level-4"/>
 <artifact id="Observation/multiple-myeloma-iss-stage-II" key="Observation-multiple-myeloma-iss-stage-II" name="multiple-myeloma-iss-stage-II"/>
 <artifact id="Observation/multiple-myeloma-riss-stage-II" key="Observation-multiple-myeloma-riss-stage-II" name="multiple-myeloma-riss-stage-II"/>
+<artifact id="Observation/no-history-metastatic-cancer-jenny-m" key="Observation-no-history-metastatic-cancer-jenny-m" name="no-history-metastatic-cancer-jenny-m"/>
 <artifact deprecated="true" id="Observation/observation-smoking-history-jenny-m" key="Observation-observation-smoking-history-jenny-m" name="observation-smoking-history-jenny-m"/>
 <artifact id="Observation/observation-smoking-pack-years-jenny-m" key="Observation-observation-smoking-pack-years-jenny-m" name="observation-smoking-pack-years-jenny-m"/>
 <artifact id="Condition/primary-cancer-condition-breast" key="Condition-primary-cancer-condition-breast" name="primary-cancer-condition-breast"/>
@@ -405,7 +410,6 @@
 <artifact id="Condition/primary-cancer-condition-nsclc" key="Condition-primary-cancer-condition-nsclc" name="primary-cancer-condition-nsclc"/>
 <artifact id="Procedure/radiotherapy-treatment-summary-chest-wall-jenny-m" key="Procedure-radiotherapy-treatment-summary-chest-wall-jenny-m" name="radiotherapy-treatment-summary-chest-wall-jenny-m"/>
 <artifact id="Procedure/radiotherapy-treatment-summary-other-with-text" key="Procedure-radiotherapy-treatment-summary-other-with-text" name="radiotherapy-treatment-summary-other-with-text"/>
-<artifact id="Procedure/radiotherapy-treatment-summary-other-without-text" key="Procedure-radiotherapy-treatment-summary-other-without-text" name="radiotherapy-treatment-summary-other-without-text"/>
 <artifact id="Observation/rai-stage-II" key="Observation-rai-stage-II" name="rai-stage-II"/>
 <artifact id="Condition/secondary-cancer-condition-brain-mets" key="Condition-secondary-cancer-condition-brain-mets" name="secondary-cancer-condition-brain-mets"/>
 <artifact deprecated="true" id="Procedure/teleradiotherapy-treatment-phase-boost-jenny-m" key="Procedure-teleradiotherapy-treatment-phase-boost-jenny-m" name="teleradiotherapy-treatment-phase-boost-jenny-m"/>
@@ -468,6 +472,7 @@
 <page key="examples" name="Extended Example"/>
 <page deprecated="true" key="extensions" name="Extensions"/>
 <page key="group-genomics" name="Genomics"/>
+<page key="examples_genomics" name="Genomics Examples"/>
 <page key="glossary" name="Glossary"/>
 <page deprecated="true" key="history" name="History"/>
 <page key="index" name="Home"/>

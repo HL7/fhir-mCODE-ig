@@ -69,3 +69,4 @@ RuleSet: BodySiteQualifierAndLaterality(path)
 * {path}.extension[locationQualifier] ^definition = "General location qualifier (excluding laterality) for this bodySite"
 * {path}.extension[lateralityQualifier] ^short = "Laterality qualifier for this bodySite"
 * {path}.extension[lateralityQualifier] ^definition = "Laterality qualifier for this bodySite"
+

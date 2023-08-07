@@ -136,6 +136,9 @@ Based on user feedback that the required bindings on certain fields were a barri
 * [RadiotherapyVolume] Profile, location field:  the valueset binding has been changed to extensible
 * [RadiotherapyCourseSummary] Profile, bodySite field:  the valueset binding has been changed to extensible
 
+### Relaxing Required Bindings for stage.type on PrimaryCancerCondition
+The binding strength of Condition.stage.type in the [PrimaryCancerCondition] profile has been relaxed to extensible, since it is unreasonable to expect that the [CancerStagingMethodVS] valueset will encompass all possible staging methods.
+
 ### Expanding [DiseaseStatusTrendVS]
 This value set has been expanded to include a code indicating that the patient's cancer has metastasized.  The disorder codes for full and partial remission have also been replaced with qualifier codes.
 

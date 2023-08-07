@@ -2,6 +2,7 @@ Extension: RelatedCondition
 Id: mcode-related-condition
 Title:  "Related Condition Extension"
 Description: "A condition that has a relationship with the resource."
+* insert ExtensionContext(DomainResource)
 * ^extension[FMM].valueInteger = 4
 * value[x] only CodeableConcept or Reference(Condition) 
 * value[x] 1..1
@@ -43,6 +44,7 @@ Description: "Qualifier to refine an body location. These include qualifiers for
 // * insert ExtensionContext(Procedure.bodySite)
 // * insert ExtensionContext(Condition.bodySite)
 // * insert ExtensionContext(Observation.bodySite)
+* insert ExtensionContext(DomainResource)
 * ^extension[FMM].valueInteger = 4
 * value[x] only CodeableConcept
 * value[x] from BodyLocationQualifierVS (required)
@@ -57,6 +59,7 @@ Description: "Qualifier to specify laterality."
 // * insert ExtensionContext(Procedure.bodySite)
 // * insert ExtensionContext(Condition.bodySite)
 // * insert ExtensionContext(Observation.bodySite)
+* insert ExtensionContext(DomainResource)
 * ^extension[FMM].valueInteger = 4
 * value[x] only CodeableConcept
 * value[x] from LateralityQualifierVS (required)
@@ -69,6 +72,7 @@ Description: "A code explaining the unplanned or premature termination, or norma
 This extension is deprecated since it is redundant with the statusReason field."
 //* insert ExtensionContext(MedicationRequest) - removed as per FHIR-32243
 //* insert ExtensionContext(Procedure)         - removed as per FHIR-32243
+* insert ExtensionContext(DomainResource)
 * ^extension[FMM].valueInteger = 3
 * value[x] only CodeableConcept
 * value[x] from TreatmentTerminationReasonVS (extensible)
@@ -81,6 +85,7 @@ Title: "Procedure Intent Extension"
 Description: "The purpose of a treatment, medication, or procedure."
 //* insert ExtensionContext(MedicationRequest) - removed as per FHIR-32243
 //* insert ExtensionContext(Procedure)         - removed as per FHIR-32243
+* insert ExtensionContext(DomainResource)
 * ^extension[FMM].valueInteger = 4
 * value[x] only CodeableConcept
 * value[x] from ProcedureIntentVS (extensible)

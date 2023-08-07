@@ -2,10 +2,10 @@
   "resourceType" : "TerminologyCapabilities",
   "id" : "FhirServer",
   "url" : "http://tx.fhir.org/r4/metadata",
-  "version" : "1.0.0",
+  "version" : "2.0.0",
   "name" : "FHIR Reference Server Teminology Capability Statement",
   "status" : "active",
-  "date" : "2022-08-29T06:46:24.816Z",
+  "date" : "2023-08-07T19:23:55.173Z",
   "contact" : [{
     "telecom" : [{
       "system" : "other",
@@ -108,9 +108,6 @@
   },
   {
     "uri" : "http://hl7.org/fhir/audit-event-action"
-  },
-  {
-    "uri" : "http://hl7.org/fhir/audit-event-outcome"
   },
   {
     "uri" : "http://hl7.org/fhir/binding-strength"
@@ -432,9 +429,6 @@
   },
   {
     "uri" : "http://hl7.org/fhir/guide-page-generation"
-  },
-  {
-    "uri" : "http://hl7.org/fhir/guide-parameter-code"
   },
   {
     "uri" : "http://hl7.org/fhir/history-status"
@@ -788,9 +782,6 @@
     "uri" : "http://hl7.org/fhir/structure-definition-kind"
   },
   {
-    "uri" : "http://hl7.org/fhir/subscription-channel-type"
-  },
-  {
     "uri" : "http://hl7.org/fhir/subscription-status"
   },
   {
@@ -830,16 +821,40 @@
     "uri" : "http://hl7.org/fhir/us/core/CodeSystem/condition-category"
   },
   {
-    "uri" : "http://hl7.org/fhir/us/core/CodeSystem/us-core-documentreference-category"
+    "uri" : "http://hl7.org/fhir/us/core/CodeSystem/us-core-category"
   },
   {
-    "uri" : "http://hl7.org/fhir/us/core/CodeSystem/us-core-observation-category"
+    "uri" : "http://hl7.org/fhir/us/core/CodeSystem/us-core-documentreference-category"
   },
   {
     "uri" : "http://hl7.org/fhir/us/core/CodeSystem/us-core-provenance-participant-type"
   },
   {
-    "uri" : "http://hl7.org/fhir/us/core/CodeSystem/us-core-tags"
+    "uri" : "http://hl7.org/fhir/us/core/CodeSystem/us-core-sex-for-clinical-use"
+  },
+  {
+    "uri" : "http://hl7.org/fhir/uv/sdc/CodeSystem/assemble-expectation"
+  },
+  {
+    "uri" : "http://hl7.org/fhir/uv/sdc/CodeSystem/chf-codes"
+  },
+  {
+    "uri" : "http://hl7.org/fhir/uv/sdc/CodeSystem/collapsible"
+  },
+  {
+    "uri" : "http://hl7.org/fhir/uv/sdc/CodeSystem/CSPHQ9"
+  },
+  {
+    "uri" : "http://hl7.org/fhir/uv/sdc/CodeSystem/entryMode"
+  },
+  {
+    "uri" : "http://hl7.org/fhir/uv/sdc/CodeSystem/launchContext"
+  },
+  {
+    "uri" : "http://hl7.org/fhir/uv/sdc/CodeSystem/questionnaire-answer-constraint"
+  },
+  {
+    "uri" : "http://hl7.org/fhir/uv/sdc/CodeSystem/temp"
   },
   {
     "uri" : "http://hl7.org/fhir/variable-type"
@@ -924,6 +939,9 @@
   },
   {
     "uri" : "http://terminology.hl7.org/CodeSystem/appointment-cancellation-reason"
+  },
+  {
+    "uri" : "http://terminology.hl7.org/CodeSystem/appropriateness-score"
   },
   {
     "uri" : "http://terminology.hl7.org/CodeSystem/attribute-estimate-type"
@@ -1014,9 +1032,6 @@
   },
   {
     "uri" : "http://terminology.hl7.org/CodeSystem/conceptdomains"
-  },
-  {
-    "uri" : "http://terminology.hl7.org/CodeSystem/condition-category"
   },
   {
     "uri" : "http://terminology.hl7.org/CodeSystem/condition-clinical"
@@ -1269,9 +1284,6 @@
   },
   {
     "uri" : "http://terminology.hl7.org/CodeSystem/hl7-work-group"
-  },
-  {
-    "uri" : "http://terminology.hl7.org/CodeSystem/icd-o-3"
   },
   {
     "uri" : "http://terminology.hl7.org/CodeSystem/immunization-evaluation-dose-status"
@@ -3266,6 +3278,9 @@
     "uri" : "http://terminology.hl7.org/CodeSystem/v3-ManagedParticipationStatus"
   },
   {
+    "uri" : "http://terminology.hl7.org/CodeSystem/v3-ManufacturerModelNameExample"
+  },
+  {
     "uri" : "http://terminology.hl7.org/CodeSystem/v3-MapRelationship"
   },
   {
@@ -3428,7 +3443,10 @@
     "uri" : "http://terminology.hl7.org/CodeSystem/v3-SetOperator"
   },
   {
-    "uri" : "http://terminology.hl7.org/CodeSystem/v2-0487"
+    "uri" : "http://terminology.hl7.org/CodeSystem/v3-SoftwareNameExample"
+  },
+  {
+    "uri" : "http://terminology.hl7.org/CodeSystem/v3-SpecimenType"
   },
   {
     "uri" : "http://terminology.hl7.org/CodeSystem/v3-styleType"

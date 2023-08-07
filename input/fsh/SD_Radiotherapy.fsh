@@ -263,6 +263,8 @@ Extension: RadiotherapyModality
 Id:        mcode-radiotherapy-modality
 Title:    "Radiotherapy Modality Extension"
 Description: "Extension capturing a modality of external beam or brachytherapy radiation procedures."
+* insert ExtensionContext(DomainResource)
+* insert ExtensionContext(Extension)
 //* insert ExtensionContext(Procedure) - removed as per FHIR-32243
 * ^extension[FMM].valueInteger = 3
 * value[x] only CodeableConcept
@@ -272,6 +274,8 @@ Extension: RadiotherapyTechnique
 Id:        mcode-radiotherapy-technique
 Title:     "Radiotherapy Technique Extension"
 Description: "Extension capturing a technique of external beam or brachytherapy radiation procedures."
+* insert ExtensionContext(DomainResource)
+* insert ExtensionContext(Extension)
 //* insert ExtensionContext(Procedure)  - removed as per FHIR-32243
 * ^extension[FMM].valueInteger = 3
 * value[x] only CodeableConcept
@@ -281,6 +285,8 @@ Extension: RadiotherapySessions
 Id:        mcode-radiotherapy-sessions
 Title:     "Radiotherapy Number of Sessions Extension"
 Description: "The number of sessions in a course of radiotherapy."
+* insert ExtensionContext(DomainResource)
+* insert ExtensionContext(Extension)
 // * insert ExtensionContext(Procedure) - removed as per FHIR-32243
 * ^extension[FMM].valueInteger = 3
 * value[x] only unsignedInt
@@ -290,6 +296,8 @@ Extension: RadiotherapyDoseDeliveredToVolume
 Id: mcode-radiotherapy-dose-delivered-to-volume
 Title: "Radiotherapy Dose Delivered To Volume Extension"
 Description: "Dose delivered to a given radiotherapy volume."
+* insert ExtensionContext(DomainResource)
+* insert ExtensionContext(Extension)
 // * insert ExtensionContext(Procedure) - removed as per FHIR-32243
 * ^extension[FMM].valueInteger = 3
 * extension contains

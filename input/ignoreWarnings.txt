@@ -6,31 +6,10 @@
 # PARSING ERROR DURING TERMINOLOGY EXPANSION
 Error from server: Error parsing HGVS response: Error parsing JSON source: Unexpected char "<" in json stream at Line 0 (path=[])
 
-# SUPPRESS US CORE COMPLIANCE MESSAGES.  For STU2, exceptions to US Core parent profiles was approved by Cross-Group Projects Work Group on 1/28/2021 Floyd Eisenberg/Brett Marquard: 28-0-1. See https://jira.hl7.org/browse/FHIR-30707. For STU3, exceptions to US Core parent profiles was approved by the Cross-Group Projects Work Group on 2/9/2023 Saul Kravitz/Floyd Eisenberg: 23-0-2. See https://jira.hl7.org/browse/FHIR-40383
-WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-disease-status').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
-WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cancer-stage').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
-WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cll-binet-stage').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
-WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-cll-rai-stage').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
-WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-comorbidities').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
-WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-ecog-performance-status').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
-WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genomic-region-studied').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
-WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genomics-report').baseDefinition: US FHIR Usage rules require that all profiles on DiagnosticReport derive from one of the base US profiles
-WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genomic-variant').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
-WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-gynecologic-tumor-figo-stage').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
-WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-history-of-metastatic-cancer').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
-WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-human-specimen').baseDefinition: US FHIR Usage rules require that all profiles on Specimen derive from the core US profile
-WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-karnofsky-performance-status').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
-WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-lymphoma-stage').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
-WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-melanoma-breslow-depth-stage').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
-WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-melanoma-clark-level').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
-WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-myeloma-iss-stage').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
-WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-myeloma-riss-stage').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
-WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-prostate-gleason-grade-group').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
-WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-distant-metastases-category').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
-WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-primary-tumor-category').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
-WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-regional-nodes-category').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
-WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tnm-stage-group').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
-WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-tumor-size').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
+# SUPPRESS US CORE COMPLIANCE WARNINGS.  For STU2, exceptions to US Core parent profiles was approved by Cross-Group Projects Work Group on 1/28/2021 Floyd Eisenberg/Brett Marquard: 28-0-1. See https://jira.hl7.org/browse/FHIR-30707. For STU3, exceptions to US Core parent profiles was approved by the Cross-Group Projects Work Group on 2/9/2023 Saul Kravitz/Floyd Eisenberg: 23-0-2. See https://jira.hl7.org/browse/FHIR-40383
+US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
+US FHIR Usage rules require that all profiles on Specimen derive from the core US profile
+US FHIR Usage rules require that all profiles on DiagnosticReport derive from one of the base US profiles
 
 # UNSUPPORTED TERMINOLOGY
 Error from server: Unable to provide support for code system http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl
@@ -50,6 +29,7 @@ Code System URI 'http://www.ncbi.nlm.nih.gov/clinvar' is unknown so the code can
 Code System URI 'https://www.gensop.com' is unknown so the code cannot be validated
 Code System URI 'http://terminology.hl7.org/CodeSystem/icd-o-3' is unknown so the code cannot be validated
 Unknown Source Code System TG263, so the source codes cannot be checked
+Unable to check whether the code is in the value set http://hl7.org/fhir/us/mcode/ValueSet/mcode-cancer-stage-type-vs|3.0.0
 
 # UNABLE TO RESOLVE LOINC LIST ELEMENTS
 The valueSet reference http://loinc.org/vs/LL529-9 on element Observation.interpretation could not be resolved
@@ -68,3 +48,13 @@ The valueSet reference http://loinc.org/vs/LL4986-7 on element Observation.inter
 This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-genomics-report|3.0.0
 This element does not match any known slice defined in the profile http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/diagnostic-implication|2.0.0
 This element does not match any known slice defined in the profile http://hl7.org/fhir/us/mcode/StructureDefinition/mcode-patient-bundle|3.0.0
+
+# DETAILS MESSAGES (THEY APPEAR FOR GROUPING PURPOSES ONLY)
+Details for Observation/genomic-variant-jenny-m matching against profile http://hl7.org/fhir/StructureDefinition/Observation|4.0.1
+Details for Observation/tnm-clinical-stage-group-jenny-m matching against profile http://hl7.org/fhir/StructureDefinition/Observation|4.0.1
+Details for Observation/gx-genomic-variant-somatic-polrmt matching against profile http://hl7.org/fhir/StructureDefinition/Observation|4.0.1
+Details for Observation/gx-genomic-variant-somatic-pof1b matching against profile http://hl7.org/fhir/StructureDefinition/Observation|4.0.1
+Details for Observation/gx-genomic-variant-somatic-bap1-indel matching against profile http://hl7.org/fhir/StructureDefinition/Observation|4.0.1
+Details for Observation/gx-genomic-variant-somatic-polrmt matching against profile http://hl7.org/fhir/StructureDefinition/Observation|4.0.1
+Details for Observation/gx-genomic-variant-somatic-pof1b matching against profile http://hl7.org/fhir/StructureDefinition/Observation|4.0.1
+Details for Observation/gx-genomic-variant-somatic-bap1-indel matching against profile http://hl7.org/fhir/StructureDefinition/Observation|4.0.1

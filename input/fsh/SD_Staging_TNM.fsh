@@ -3,22 +3,23 @@ Profile: TNMCategory
 Id: mcode-tnm-category
 Parent: Observation
 Title: "Parent for T, N, and M Categories."
-Description: "Abstract parent for T, N, and M categories."
+Description: "Parent profile for T, N, and M category profiles."
 * ^abstract = true
 * subject only Reference(CancerPatient)
-* subject ^definition = "The patient associated with staging assessment."
+* subject ^definition = "The patient associated with TNM category."
 * value[x] only CodeableConcept
 * method 1..1
 * method from TNMStagingMethodVS (extensible)
 * method ^short = "The staging system used."
-* method ^definition = "The staging system or protocol used to determine the stage, stage group, or category of the cancer based on its extend. When the staging system is implied by Observation.code, Observation.method is not required. However, when Observation.code does not imply a staging system (for example, if the code is SNOMED CT 385388004 Lymphoma stage), then the staging system must be specified in Observation.method. "
+* method ^definition = "The staging system or protocol used to determine the category of the cancer based on its extent. When the staging system is implied by Observation.code, Observation.method is not required. However, when Observation.code does not imply a staging system (for example, if the code is SNOMED CT 385388004 Lymphoma stage), then the staging system must be specified in Observation.method. "
 * focus only Reference(PrimaryCancerCondition)
-* focus ^short = "The cancer condition associated with staging assessment."
+* focus ^short = "The cancer condition associated with TNM category."
 * focus ^definition = "Staging is associated with a particular primary cancer condition. Observation.focus is used to point back to that condition."
 * insert NotUsed(device)
 * insert NotUsed(referenceRange)
 * insert NotUsed(hasMember)
 * status and code and subject and effective[x] and value[x] and method and focus MS
+
 Profile: TNMStageGroup
 Id: mcode-tnm-stage-group
 Parent: CancerStage
@@ -38,7 +39,7 @@ Description: "Reporting of the stage group representing the overall extent of a 
 * focus 1..1  // NEW requirement -- see https://jira.hl7.org/browse/FHIR-37575
 * insert SliceReferenceOnProfile(hasMember)
 * hasMember contains TNMCategory 0..3 MS
-* hasMember ^short = "Repeated element containing the T, N, and M categories as references to separate observations."
+* hasMember ^short = "Element containing the T, N, and M categories as references to separate T, N, M observations. The referenced resources are observations leading to the Stage Group reported in the current resource."
 
 Profile:  TNMPrimaryTumorCategory
 Id: mcode-tnm-primary-tumor-category

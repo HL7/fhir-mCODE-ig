@@ -159,6 +159,7 @@
 <artifact id="StructureDefinition/mcode-myeloma-riss-stage" key="StructureDefinition-mcode-myeloma-riss-stage" name="Myeloma RISS Stage Profile"/>
 <artifact id="ValueSet/mcode-teleradiotherapy-neutron-beam-technique-vs" key="ValueSet-mcode-teleradiotherapy-neutron-beam-technique-vs" name="Neutron Beam Technique Value Set"/>
 <artifact deprecated="true" key="Observation" name="Observation"/>
+<artifact id="StructureDefinition/mcode-tnm-category" key="StructureDefinition-mcode-tnm-category" name="Parent for T, N, and M Categories."/>
 <artifact id="ValueSet/mcode-teleradiotherapy-photon-beam-technique-vs" key="ValueSet-mcode-teleradiotherapy-photon-beam-technique-vs" name="Photon Beam Technique Value Set"/>
 <artifact deprecated="true" id="ValueSet/mcode-present-absent" key="ValueSet-mcode-present-absent" name="Present Absent Value Set"/>
 <artifact deprecated="true" id="ValueSet/mcode-present-absent-unknown" key="ValueSet-mcode-present-absent-unknown" name="Present-Absent-Unknown"/>

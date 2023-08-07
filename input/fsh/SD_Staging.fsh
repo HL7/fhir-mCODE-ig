@@ -13,9 +13,9 @@ The value (Observation.valueCodeableConcept) may also imply certain things about
 
 * method from CancerStagingMethodVS (extensible)
 * method ^short = "The staging system used."
-* method ^definition = "The staging system or protocol used to determine the stage, stage group, or category of the cancer based on its extend. When the staging system is implied by Observation.code, Observation.method is not required. However, when Observation.code does not imply a staging system (for example, if the code is SNOMED CT 385388004 Lymphoma stage), then the staging system must be specified in Observation.method. "
+* method ^definition = "The staging system or protocol used to determine the stage, stage group, or category of the cancer based on its extent. When the staging system is implied by Observation.code, Observation.method is not required. However, when Observation.code does not imply a staging system (for example, if the code is SNOMED CT 385388004 Lymphoma stage), then the staging system must be specified in Observation.method. "
 
-* value[x] only CodeableConcept // SEER extent of disease codings are strings -- must be handled with a separate profile for 
+* value[x] only CodeableConcept // SEER extent of disease codings are strings -- this might have to be generalized to include strings
 * value[x] from CancerStageValueVS (example)
 * value[x] ^comment = ""    // suppress QA error on #notes link
 * value[x] ^short = "The value of the stage"

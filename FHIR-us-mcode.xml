@@ -243,7 +243,7 @@
 <artifact deprecated="true" id="StructureDefinition/mcode-treatment-intent" key="StructureDefinition-mcode-treatment-intent" name="Treatment Intent"/>
 <artifact deprecated="true" id="Extension/mcode-treatment-intent-extension" key="treatment-intent-extension" name="Treatment Intent Extension"/>
 <artifact deprecated="true" id="ValueSet/mcode-treatment-intent-vs" key="treatment-intent-value-set" name="Treatment Intent Value Set"/>
-<artifact id="StructureDefinition/mcode-treatment-termination-reason" key="StructureDefinition-mcode-treatment-termination-reason" name="Treatment Termination Reason Extension"/>
+<artifact id="StructureDefinition/mcode-treatment-termination-reason" key="StructureDefinition-mcode-treatment-termination-reason" name="Treatment Termination Reason Extension (deprecated)"/>
 <artifact id="ValueSet/mcode-treatment-termination-reason-vs" key="treatment-termination-reason-value-set" name="Treatment Termination Reason Value Set"/>
 <artifact deprecated="true" id="Profile/mcode-tumor-marker" key="tumor-marker" name="Tumor Marker"/>
 <artifact id="StructureDefinition/mcode-tumor-marker-test" key="StructureDefinition-mcode-tumor-marker-test" name="Tumor Marker Test Profile"/>
@@ -281,6 +281,7 @@
 <artifact deprecated="true" id="MedicationAdministration/cancer-related-medication-administration-doxorubicin-jenny-m" key="MedicationAdministration-cancer-related-medication-administration-doxorubicin-jenny-m" name="cancer-related-medication-administration-doxorubicin-jenny-m"/>
 <artifact id="MedicationRequest/cancer-related-medication-request-anastrozole-jenny-m" key="MedicationRequest-cancer-related-medication-request-anastrozole-jenny-m" name="cancer-related-medication-request-anastrozole-jenny-m"/>
 <artifact id="MedicationRequest/cancer-related-medication-request-cisplatin" key="MedicationRequest-cancer-related-medication-request-cisplatin" name="cancer-related-medication-request-cisplatin"/>
+<artifact id="MedicationRequest/cancer-related-medication-request-cisplatin-stopped" key="MedicationRequest-cancer-related-medication-request-cisplatin-stopped" name="cancer-related-medication-request-cisplatin-stopped"/>
 <artifact id="MedicationRequest/cancer-related-medication-request-cyclophosphamide-jenny-m" key="MedicationRequest-cancer-related-medication-request-cyclophosphamide-jenny-m" name="cancer-related-medication-request-cyclophosphamide-jenny-m"/>
 <artifact id="MedicationRequest/cancer-related-medication-request-doxorubicin-jenny-m" key="MedicationRequest-cancer-related-medication-request-doxorubicin-jenny-m" name="cancer-related-medication-request-doxorubicin-jenny-m"/>
 <artifact id="MedicationRequest/cancer-related-medication-request-gefitinib" key="MedicationRequest-cancer-related-medication-request-gefitinib" name="cancer-related-medication-request-gefitinib"/>
@@ -340,7 +341,7 @@
 <artifact id="Organization/gx-us-core-organization-gensop-inc" key="Organization-gx-us-core-organization-gensop-inc" name="gx-us-core-organization-gensop-inc"/>
 <artifact deprecated="true" id="Organization/gx-us-core-organization-tempus-inc" key="Organization-gx-us-core-organization-tempus-inc" name="gx-us-core-organization-tempus-inc"/>
 <artifact deprecated="true" id="Organization/gx-us-core-organization-test-institution" key="Organization-gx-us-core-organization-test-institution" name="gx-us-core-organization-test-institution"/>
-<artifact id="Condition/history-metastatic-cancer-jenny-m" key="Condition-history-metastatic-cancer-jenny-m" name="history-metastatic-cancer-jenny-m"/>
+<artifact id="Observation/history-metastatic-cancer-jenny-m" key="Observation-history-metastatic-cancer-jenny-m" name="history-metastatic-cancer-jenny-m"/>
 <artifact id="Observation/hodgkins-lymphoma-stage-IIIe" key="Observation-hodgkins-lymphoma-stage-IIIe" name="hodgkins-lymphoma-stage-IIIe"/>
 <artifact id="Specimen/human-specimen-left-breast-jenny-m" key="Specimen-human-specimen-left-breast-jenny-m" name="human-specimen-left-breast-jenny-m"/>
 <artifact id="Specimen/human-specimen-lung" key="Specimen-human-specimen-lung" name="human-specimen-lung"/>
@@ -399,6 +400,7 @@
 <artifact id="Observation/melanoma-clark-level-4" key="Observation-melanoma-clark-level-4" name="melanoma-clark-level-4"/>
 <artifact id="Observation/multiple-myeloma-iss-stage-II" key="Observation-multiple-myeloma-iss-stage-II" name="multiple-myeloma-iss-stage-II"/>
 <artifact id="Observation/multiple-myeloma-riss-stage-II" key="Observation-multiple-myeloma-riss-stage-II" name="multiple-myeloma-riss-stage-II"/>
+<artifact id="Observation/no-history-metastatic-cancer-jenny-m" key="Observation-no-history-metastatic-cancer-jenny-m" name="no-history-metastatic-cancer-jenny-m"/>
 <artifact deprecated="true" id="Observation/observation-smoking-history-jenny-m" key="Observation-observation-smoking-history-jenny-m" name="observation-smoking-history-jenny-m"/>
 <artifact id="Observation/observation-smoking-pack-years-jenny-m" key="Observation-observation-smoking-pack-years-jenny-m" name="observation-smoking-pack-years-jenny-m"/>
 <artifact id="Condition/primary-cancer-condition-breast" key="Condition-primary-cancer-condition-breast" name="primary-cancer-condition-breast"/>

@@ -1,29 +1,4 @@
-/* Staging Systems to consider:
-TNM - check
-INSS - check
-INRGSS - check
-Ann Arbor - check
-COG/Wilms - check?  Wilms but not COG/Wilms
-FIGO - check
-French-American-British (FAB) classification -- This is a grading method (based on appearance and behavior of cells), not a staging method, but still fits the overall pattern of CancerStage profile
-Rai - check
-Binet - check
-CML Phase -- Chronic, blastic, accelerated CML are considered disease phases and appear in the SCT disorder hierarchy
-B-cell ALL, T-cell ALL  - Currently, there is no staging system for acute lymphocytic leukemia (ALL).  The phases of ALL are described as untreated, in remission, relapsed (also called recurrent) or refractory.
-
-Consider the WHO classification of myeloid neoplasms and acute leukemia? see https://ashpublications.org/blood/article/127/20/2391/35255/The-2016-revision-to-the-World-Health-Organization
-*/
-
 //  Leukemia Stage
-
-Profile: ALLClassification
-Id: mcode-all-fab-classification
-Parent: CancerStage  // is the FAB classification really a stage?
-Title: "ALL French-American-British Classification Profile"
-Description: "French-American-British (FAB) stage for acute lymphoblastic leukemia (ALL)"
-* ^extension[FMM].valueInteger = 0
-* code = NCIT#C91220 // French-American-British Classification
-* value[x] from FABClassificationValueVS (required)
 
 Profile: CLLBinetStage
 Id: mcode-cll-binet-stage
@@ -78,6 +53,15 @@ Description: "Staging of lymphoma (both Hodgkins and Non-Hodgkins) by Ann Arbor,
 
 // Melanoma
 
+Profile: MelanomaBreslowDepthStage
+Id: mcode-melanoma-breslow-depth-stage
+Parent: CancerStage
+Title: "Melanoma Breslow Depth Stage Profile"
+Description: "Breslow depth stage for melanoma of the skin"
+* ^extension[FMM].valueInteger = 0
+* code = SCT#106243009 // Breslow depth staging for melanoma of skin (observable entity)
+* value[x] from BreslowDepthStageValueVS
+
 Profile: MelanomaClarkLevel
 Id: mcode-melanoma-clark-level
 Parent: CancerStage
@@ -86,6 +70,7 @@ Description: "Clark level for melanoma"
 * ^extension[FMM].valueInteger = 0
 * code = SCT#103419001 // "Clark melanoma level of invasion of excised malignant melanoma of skin (observable entity)
 * value[x] from ClarkLevelValueVS (required)
+
 
 // Myeloma (aka Multiple Myeloma, Plasma Cell Myeloma) Stage. There is no code for Myeloma Stage independent of the staging system, so we need separate profiles for each method (ISS and RISS)
 
@@ -112,23 +97,13 @@ Description: "Myeloma Stage by Revised International Staging System (RISS)"
 //* method = SCT#1149163003 // Revised International Staging System for multiple myeloma (staging scale)
 * value[x] from MyelomaRISSValueVS (required)
 
-// Neuroblastoma Staging
+// Prostate Cancer
 
-Profile: NeuroblastomaINSSStage
-Id: mcode-neuroblastoma-inss-stage
+Profile: ProstateGleasonGradeGroup
+Id: mcode-prostate-gleason-grade-group
 Parent: CancerStage
-Title: "Neuroblastoma INNS Stage Profile"
-Description: "The International Neuroblastoma Staging System (INSS) stage for neuroblastoma."
+Title: "Prostate Gleason Grade Group Profile"
+Description: "Gleason Grade Group for prostatic cancer"
 * ^extension[FMM].valueInteger = 0
-* code = SCT#409720004  // International neuroblastoma staging system stage (observable entity)
-* value[x] from NeuroblastomaStageValueVS (required)
-
-Profile: NeuroblastomaRiskGroup
-Id: mcode-international-neuroblastoma-risk-group
-Parent: CancerStage
-Title: "Neuroblastoma International Risk Group Profile"
-Description: "Neuroblastoma risk group according to the International Neuroblastoma Risk Group Staging System (INRGSS)."
-* ^extension[FMM].valueInteger = 0
-* code = NCIT#C192760 // International Neuroblastoma Risk Group
-* value[x] from NeuroblastomaRiskGroupValueVS (required)
-
+* code = SCT#385377005 // Gleason grade finding for prostatic cancer (finding)
+* value[x] from GleasonGradeGroupValueVS (required)

@@ -34,7 +34,7 @@ Description: "A summary of a course of radiotherapy delivered to a patient. It r
 * bodySite ^definition = "Coded body structure(s) treated in this course of radiotherapy. These codes represent general locations. For additional detail, refer to the BodyStructures references in the doseDeliveredToVolume extension."
 * insert BodySiteQualifierAndLaterality(bodySite)
 * reasonCode from CancerDisorderVS (extensible)
-* reasonReference only Reference(PrimaryCancerCondition or SecondaryCancerCondition)
+* reasonReference only Reference(USCoreCondition)
 * reasonCode and reasonReference and bodySite MS
 * obeys mcode-reason-required
 

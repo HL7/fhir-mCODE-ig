@@ -27,7 +27,7 @@ RuleSet: MedicationResourcesRS
     ProcedureIntent named treatmentIntent 0..1 MS and
     TreatmentTerminationReason named terminationReason 0..* MS
 * reasonCode from CancerDisorderVS (extensible)
-* reasonReference only Reference(PrimaryCancerCondition or SecondaryCancerCondition) // only for cancer-related reasons
+* reasonReference only Reference(USCoreCondition) // only for cancer-related reasons
 * reasonCode and reasonReference and extension MS
 
 Invariant:  mcode-reason-required

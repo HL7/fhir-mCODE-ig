@@ -54,7 +54,7 @@ Description: "A summary of a course of radiotherapy delivered to a patient. It r
 * insert BodySiteQualifierAndLaterality(bodySite)
 * reasonCode from CancerDisorderVS (extensible)
 * statusReason from TreatmentTerminationReasonVS (preferred)
-* reasonReference only Reference(PrimaryCancerCondition or SecondaryCancerCondition)
+* reasonReference only Reference(USCoreCondition)
 * reasonCode and reasonReference and bodySite MS
 * obeys mcode-reason-required
 

@@ -188,6 +188,7 @@ Instance: ecog-performance-status-fully-active
 InstanceOf: ECOGPerformanceStatus
 Description: "Example of ECOG Performance Status"
 * status = #final "final"
+* code = LNC#89247-1 "ECOG Performance Status score"
 * method = SCT#5880005 "Clinical examination"
 * subject = Reference(cancer-patient-john-anyperson)
 * effectiveDateTime = "2019-04-01"
@@ -199,13 +200,14 @@ Instance: karnofsky-performance-status-normal-activity
 InstanceOf: KarnofskyPerformanceStatus
 Description: "Example of Karnofsky Performance Status"
 * status = #final "final"
+* code = LNC#89243-0 "Karnofsky Performance Status score"
 * method = SCT#5880005 "Clinical examination"
 * subject = Reference(cancer-patient-john-anyperson)
 * effectiveDateTime = "2019-04-01"
 * performer = Reference(us-core-practitioner-kyle-anydoc)
 * valueInteger = 90
 * interpretation = LNC#LA29176-7 "Able to carry on normal activity; minor signs or symptoms of disease"
-* code = LNC#89243-0
+
 
 Instance: cancer-related-surgical-procedure-lobectomy
 InstanceOf: CancerRelatedSurgicalProcedure
@@ -233,7 +235,8 @@ Description: "Anatomic volume for John Anyperson's brachytherapy."
 Instance: tnm-clinical-stage-group-3c
 InstanceOf: TNMStageGroup
 Description: "Example of TNM Clinical Stage Group"
-* code = LNC#21908-9 "Stage group.clinical Cancer"
+//* code = LNC#21908-9 "Stage group.clinical Cancer"
+* code = SCT#399537006 "Clinical TNM stage grouping"
 * valueCodeableConcept = SCT#1222806003 "American Joint Committee on Cancer stage IIIC (qualifier value)"
 * status = #final "final"
 * method = SCT#897275008 "American Joint Commission on Cancer, Cancer Staging Manual, 8th edition neoplasm staging system (tumor staging)"
@@ -247,7 +250,8 @@ Description: "Example of TNM Clinical Stage Group"
 Instance: tnm-clinical-distant-metastases-category-cM0
 InstanceOf: TNMDistantMetastasesCategory
 Description: "Example of TNM Clinical Distant Metastases Category"
-* code = LNC#21907-1 "Distant metastases.clinical [Class] Cancer"
+//* code = LNC#21907-1 "Distant metastases.clinical [Class] Cancer"
+* code = SCT#399387003 "cM category"
 * status = #final "final"
 * method = SCT#897275008 "American Joint Commission on Cancer, Cancer Staging Manual, 8th edition neoplasm staging system (tumor staging)"
 * subject = Reference(cancer-patient-john-anyperson)
@@ -257,7 +261,8 @@ Description: "Example of TNM Clinical Distant Metastases Category"
 Instance: tnm-clinical-primary-tumor-category-cT3
 InstanceOf: TNMPrimaryTumorCategory
 Description: "Example of TNM Clinical Primary Tumor Category"
-* code = LNC#21905-5 "Primary tumor.clinical [Class] Cancer"
+//* code = LNC#21905-5 "Primary tumor.clinical [Class] Cancer"
+* code = SCT#399504009 "cT category"
 * valueCodeableConcept = SCT#1228938002 "American Joint Committee on Cancer cT3 (qualifier value)"
 * status = #final "final"
 * method = SCT#897275008 "American Joint Commission on Cancer, Cancer Staging Manual, 8th edition neoplasm staging system (tumor staging)"
@@ -267,7 +272,8 @@ Description: "Example of TNM Clinical Primary Tumor Category"
 Instance: tnm-clinical-regional-nodes-category-cN3
 InstanceOf: TNMRegionalNodesCategory
 Description: "Example of TNM Clinical Regional Nodes Category"
-* code = LNC#21906-3 "Regional lymph nodes.clinical [Class] Cancer"
+//* code = LNC#21906-3 "Regional lymph nodes.clinical [Class] Cancer"
+* code = SCT#399534004 "cN category"
 * valueCodeableConcept = SCT#1229984001 "American Joint Committee on Cancer cN3 (qualifier value)"
 * status = #final "final"
 * method = SCT#897275008 "American Joint Commission on Cancer, Cancer Staging Manual, 8th edition neoplasm staging system (tumor staging)"

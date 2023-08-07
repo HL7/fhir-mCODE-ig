@@ -14,19 +14,18 @@ RuleSet: IdentifierDisplayName  // FHIR-32239
 Invariant:  termination-reason-invariant 
 Description: "Certain statusReason values are allowed only when status is stopped" 
 Severity: #error
-* expression =  "statusReason.exists() and statusReason.coding.exists() and (statusReason.coding.system = 'http://www.snomed.org/' and 
-(statusReason = '182992009' or statusReason = '266721009' or statusReason = '407563006' or statusReason = '160932005' or
- statusReason = '105480006' or statusReason = '184081006' or statusReason = '309846006' or statusReason = '399307001' or 
- statusReason = '419620001' or statusReason = '7058009' or statusReason = '443729008' or statusReason = '77386006')) implies status = 'stopped'"
+* expression =  "statusReason.exists() and statusReason.coding.exists() and (statusReason.coding.system = 'http://snomed.info/sct' and 
+(statusReason.coding.code = '182992009' or statusReason.coding.code = '266721009' or statusReason.coding.code = '407563006' or statusReason.coding.code = '160932005' or
+ statusReason.coding.code = '105480006' or statusReason.coding.code = '184081006' or statusReason.coding.code = '309846006' or statusReason.coding.code = '399307001' or 
+ statusReason.coding.code = '419620001' or statusReason.coding.code = '7058009' or statusReason.coding.code = '443729008' or statusReason.coding.code = '77386006')) implies status = 'stopped'"
 
 Invariant:  termination-reason-code-invariant 
 Description: "When status is stopped, only certain statusReason values are allowed"
 Severity: #error
-* expression = "status = 'stopped' and statusReason.exists() and statusReason.coding.exists() implies (statusReason.coding.system = 'http://www.snomed.org/' and 
-(statusReason = '182992009' or statusReason = '266721009' or statusReason = '407563006' or statusReason = '160932005' or
- statusReason = '105480006' or statusReason = '184081006' or statusReason = '309846006' or statusReason = '399307001' or 
- statusReason = '419620001' or statusReason = '7058009' or statusReason = '443729008' or statusReason = '77386006'))"
- 
+* expression = "status = 'stopped' and statusReason.exists() and statusReason.coding.exists() implies (statusReason.coding.system = 'http://snomed.info/sct' and 
+(statusReason.coding.code = '182992009' or statusReason.coding.code = '266721009' or statusReason.coding.code = '407563006' or statusReason.coding.code = '160932005' or
+ statusReason.coding.code = '105480006' or statusReason.coding.code = '184081006' or statusReason.coding.code = '309846006' or statusReason.coding.code = '399307001' or 
+ statusReason.coding.code = '419620001' or statusReason.coding.code = '7058009' or statusReason.coding.code = '443729008' or statusReason.coding.code = '77386006'))"
 
 Profile:  RadiotherapyCourseSummary
 Parent:   USCoreProcedure  // considered one procedure with multiple parts

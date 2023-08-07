@@ -41,15 +41,18 @@ A code representing the detection of metastases has been added, for when disease
 ### New Page for Genomics Examples
 
 In the ballot version, approximately 20 new examples involving genomics and next generation sequencing (NGS) we added. To increase the visibility of these examples, [a new page](examples_genomics.html) listing all these examples in one place was added.
-<br/>
-<br/>
-----
-<br/>
 
 ### Use StatusReason instead of TreatmentTerminationReason Extension [FHIR-41680](https://jira.hl7.org/browse/FHIR-41680)
 
 An mCODE user [pointed out](https://chat.fhir.org/#narrow/stream/179234-Cancer-Interoperability/topic/Question.20about.20radiotheraphy.20summary.20profile) that the TreatmentTerminationReason extension was unnecessary, because FHIR natively includes a statusReason element that is meant to explain the current status of procedures and medication actions (requests and administrations). When status = "stopped" the statusReason provides the termination reason. Extensions should be avoided when n+ative FHIR elements provide the same functionality. Therefore, the [TreatmentTerminationReason] extension has been deprecated, and henceforth users should populate the statusReason field with the values from [TreatmentTerminationReasonVS]. Two additional values were added to the termination reason value set, representing termination due to pregnancy and termination due to conclusion of the clinical trial.
 
+### Relaxing Required Bindings for stage.type on PrimaryCancerCondition ([FHIR-41031](https://jira.hl7.org/browse/FHIR-41031)
+The binding strength of `Condition.stage.type` in the [PrimaryCancerCondition] profile has been relaxed to extensible, since it is unreasonable to expect that the [CancerStagingMethodVS] valueset will encompass all possible staging methods.
+
+<br/>
+<br/>
+----
+<br/>
 
 **The following changes occurred between [STU 2 publication](http://hl7.org/fhir/us/mcode/STU2/) (January 2022) and the STU 3 ballot (March 2023). For a history of previous changes, please see the prior change logs in the [appropriate versions](http://hl7.org/fhir/us/mcode/history.html).**
 
@@ -135,9 +138,6 @@ Based on user feedback that the required bindings on certain fields were a barri
 * [TreatmentTerminationReason] Extension, [ProcedureIntent] Extension:  the valueset binding has been changed to extensible.
 * [RadiotherapyVolume] Profile, location field:  the valueset binding has been changed to extensible
 * [RadiotherapyCourseSummary] Profile, bodySite field:  the valueset binding has been changed to extensible
-
-### Relaxing Required Bindings for stage.type on PrimaryCancerCondition
-The binding strength of Condition.stage.type in the [PrimaryCancerCondition] profile has been relaxed to extensible, since it is unreasonable to expect that the [CancerStagingMethodVS] valueset will encompass all possible staging methods.
 
 ### Expanding [DiseaseStatusTrendVS]
 This value set has been expanded to include a code indicating that the patient's cancer has metastasized.  The disorder codes for full and partial remission have also been replaced with qualifier codes.

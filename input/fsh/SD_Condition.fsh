@@ -19,7 +19,7 @@ Description: "Records the the primary cancer condition, the original or first ne
 * stage.summary ^definition = "Most recent overall cancer stage, such as stage group IIA in TNM staging. More detailed staging information (such as the individual T, N, and M categories) SHOULD be captured in a separate Observation resource, referenced by stage.assessment, conforming to CancerStage profile."
 * stage.type ^short = "The type of stage Staging system or method used."
 * stage.type ^definition = "The type of stage reported in stage.summary, or the staging method used to arrive at the stage.summary value."
-* stage.type from CancerStagingMethodVS (required)
+* stage.type from CancerStagingMethodVS (extensible)
 * evidence.code from CancerDiseaseStatusEvidenceTypeVS (required)
 * evidence.code ^orderMeaning = "If more than one code or Reference is present, it is interpreted as the the physician's declaration of how the cancer was diagnosed, with the most invasive method first (e.g., autopsy/histopathology, cytology, radiology, physicial exam, etc.)"
 

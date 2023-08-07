@@ -2596,3 +2596,100 @@ e: {
   "error" : "Error from server: Unable to provide support for code system http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl"
 }
 -------------------------------------------------------------------------------------
+{"hierarchical" : false, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "inactive" : true,
+    "include" : [{
+      "system" : "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl",
+      "concept" : [{
+        "code" : "C186527",
+        "display" : "Atypical Teratoid/Rhabdoid Tumor Staging System"
+      },
+      {
+        "code" : "C141206",
+        "display" : "Chronic Lymphocytic Leukemia- Modified Rai Staging System"
+      },
+      {
+        "code" : "C62575",
+        "display" : "Collaborative Staging"
+      },
+      {
+        "code" : "C128932",
+        "display" : "Derkay Staging System"
+      },
+      {
+        "code" : "C186536",
+        "display" : "Embryonal Tumor with Multilayered Rosettes Staging System"
+      },
+      {
+        "code" : "C140258",
+        "display" : "Enneking Staging System"
+      },
+      {
+        "code" : "C85407",
+        "display" : "Evans Staging System"
+      },
+      {
+        "code" : "C99408",
+        "display" : "FIGO Staging System and Modified World Health Organization [WHO] Prognostic Scoring System for Gestational Trophoblastic Neoplasms"
+      },
+      {
+        "code" : "C115132",
+        "display" : "Hepatocellular Carcinoma by BCLC Stage"
+      },
+      {
+        "code" : "C111073",
+        "display" : "International Germ Cell Consensus Risk Classification"
+      },
+      {
+        "code" : "C141168",
+        "display" : "Lugano Classification Hodgkin Lymphoma by AJCC v8 Stage"
+      },
+      {
+        "code" : "C186520",
+        "display" : "Medulloblastoma Staging System"
+      },
+      {
+        "code" : "C198826",
+        "display" : "Modified Chang Staging System for Medulloblastoma"
+      },
+      {
+        "code" : "C177308",
+        "display" : "Non-Seminomatous Germ Cell Tumor International Germ Cell Consensus Risk Classification"
+      },
+      {
+        "code" : "C186567",
+        "display" : "Pineoblastoma Staging System"
+      },
+      {
+        "code" : "C123333",
+        "display" : "Reese-Ellsworth Staging System"
+      },
+      {
+        "code" : "C177309",
+        "display" : "Seminoma International Germ Cell Tumor Consensus Risk Classification"
+      },
+      {
+        "code" : "C112006",
+        "display" : "Thymoma by Masaoka-Koga Stage"
+      },
+      {
+        "code" : "C18008",
+        "display" : "TNM Ovary Neoplasm Staging"
+      },
+      {
+        "code" : "C141685",
+        "display" : "Veterans Administration Lung Study Group Clinical Classification"
+      },
+      {
+        "code" : "C18214",
+        "display" : "Whitmore-Jewett Staging System"
+      }]
+    }]
+  }
+}}####
+e: {
+  "error" : "Error from server: Unable to provide support for code system http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl"
+}
+-------------------------------------------------------------------------------------

@@ -64,6 +64,8 @@ Id:        mcode-radiotherapy-modality-and-technique
 Title:     "Radiotherapy Modality And Technique Extension"
 Description: "Extension capturing modality and technique of a given radiotherapy procedure.  The allowed combinations of modality and technique are constrained by invariants, one per modality."
 * ^extension[FMM].valueInteger = 3
+* insert ExtensionContext(DomainResource)
+* insert ExtensionContext(Extension)
 * extension contains
     RadiotherapyModality named modality 1..1 MS and
     RadiotherapyTechnique named technique 0..* MS
@@ -263,6 +265,8 @@ Extension: RadiotherapyModality
 Id:        mcode-radiotherapy-modality
 Title:    "Radiotherapy Modality Extension"
 Description: "Extension capturing a modality of external beam or brachytherapy radiation procedures."
+* insert ExtensionContext(DomainResource)
+* insert ExtensionContext(Extension)
 //* insert ExtensionContext(Procedure) - removed as per FHIR-32243
 * ^extension[FMM].valueInteger = 3
 * value[x] only CodeableConcept
@@ -272,6 +276,8 @@ Extension: RadiotherapyTechnique
 Id:        mcode-radiotherapy-technique
 Title:     "Radiotherapy Technique Extension"
 Description: "Extension capturing a technique of external beam or brachytherapy radiation procedures."
+* insert ExtensionContext(DomainResource)
+* insert ExtensionContext(Extension)
 //* insert ExtensionContext(Procedure)  - removed as per FHIR-32243
 * ^extension[FMM].valueInteger = 3
 * value[x] only CodeableConcept
@@ -281,6 +287,8 @@ Extension: RadiotherapySessions
 Id:        mcode-radiotherapy-sessions
 Title:     "Radiotherapy Number of Sessions Extension"
 Description: "The number of sessions in a course of radiotherapy."
+* insert ExtensionContext(DomainResource)
+* insert ExtensionContext(Extension)
 // * insert ExtensionContext(Procedure) - removed as per FHIR-32243
 * ^extension[FMM].valueInteger = 3
 * value[x] only unsignedInt
@@ -290,6 +298,8 @@ Extension: RadiotherapyDoseDeliveredToVolume
 Id: mcode-radiotherapy-dose-delivered-to-volume
 Title: "Radiotherapy Dose Delivered To Volume Extension"
 Description: "Dose delivered to a given radiotherapy volume."
+* insert ExtensionContext(DomainResource)
+* insert ExtensionContext(Extension)
 // * insert ExtensionContext(Procedure) - removed as per FHIR-32243
 * ^extension[FMM].valueInteger = 3
 * extension contains

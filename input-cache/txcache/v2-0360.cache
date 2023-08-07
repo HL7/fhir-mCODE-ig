@@ -75,3 +75,79 @@ v: {
   "version" : "0360"
 }
 -------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://terminology.hl7.org/CodeSystem/v2-0360",
+  "version" : "2.7",
+  "code" : "MD"
+}, "valueSet" :null, "langs":"[en-US, en]", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "id" : "exp-params",
+  "parameter" : [{
+    "name" : "system-version",
+    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20230731"
+  }]
+}}####
+v: {
+  "display" : "Doctor of Medicine",
+  "code" : "MD",
+  "system" : "http://terminology.hl7.org/CodeSystem/v2-0360",
+  "version" : "0360"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://terminology.hl7.org/CodeSystem/v2-0360",
+  "version" : "2.7",
+  "code" : "RN"
+}, "valueSet" :null, "langs":"[en-US, en]", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "id" : "exp-params",
+  "parameter" : [{
+    "name" : "system-version",
+    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20230731"
+  }]
+}}####
+v: {
+  "display" : "Registered Nurse",
+  "code" : "RN",
+  "system" : "http://terminology.hl7.org/CodeSystem/v2-0360",
+  "version" : "0360"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://terminology.hl7.org/CodeSystem/v2-0360",
+  "version" : "2.7",
+  "code" : "MD"
+}, "valueSet" :null, "langs":"[en]", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "id" : "exp-params",
+  "parameter" : [{
+    "name" : "system-version",
+    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20230731"
+  }]
+}}####
+v: {
+  "display" : "Doctor of Medicine",
+  "code" : "MD",
+  "system" : "http://terminology.hl7.org/CodeSystem/v2-0360",
+  "version" : "0360"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://terminology.hl7.org/CodeSystem/v2-0360",
+  "version" : "2.7",
+  "code" : "RN"
+}, "valueSet" :null, "langs":"[en]", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "id" : "exp-params",
+  "parameter" : [{
+    "name" : "system-version",
+    "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20230731"
+  }]
+}}####
+v: {
+  "display" : "Registered Nurse",
+  "code" : "RN",
+  "system" : "http://terminology.hl7.org/CodeSystem/v2-0360",
+  "version" : "0360"
+}
+-------------------------------------------------------------------------------------

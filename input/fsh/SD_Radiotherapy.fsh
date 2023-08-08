@@ -294,17 +294,22 @@ Description: "Dose delivered to a given radiotherapy volume."
 * ^extension[FMM].valueInteger = 3
 * extension contains
     volume 1..1 MS and
-    totalDoseDelivered 0..1 MS and
+    totalDoseDelivered 0..1 MS and // physical Dose
+    effectiveDoseDelivered 0..1 MS and // effective/biological dose
     fractionsDelivered 0..1 MS
 * extension[volume].value[x] only Reference(RadiotherapyVolume)
 * extension[totalDoseDelivered].value[x] only Quantity
 * extension[totalDoseDelivered].valueQuantity = UCUM#cGy
+* extension[effectiveDoseDelivered].value[x] only Quantity
+* extension[effectiveDoseDelivered].valueQuantity = UCUM#cGy
 * extension[fractionsDelivered].value[x] only unsignedInt
 // Definitions of in-line extensions
 * extension[volume] ^short = "Volume in the body where radiation was delivered"
 * extension[volume] ^definition = "A BodyStructure resource representing volume in the body where radiation was delivered, for example, Chest Wall Lymph Nodes."
-* extension[totalDoseDelivered] ^short = "Total Radiation Dose Delivered"
-* extension[totalDoseDelivered] ^definition = "The total amount of radiation delivered to this volume within the scope of this dose delivery, i.e., dose delivered from the Procedure in which this extension is used."
+* extension[totalDoseDelivered] ^short = "Total Physical Radiation Dose Delivered"
+* extension[totalDoseDelivered] ^definition = "The total physical amount of radiation delivered to this volume within the scope of this dose delivery, i.e., dose delivered from the Procedure in which this extension is used."
+* extension[effectiveDoseDelivered] ^short = "Total Effective Radiation Dose Delivered"
+* extension[effectiveDoseDelivered] ^definition = "The total effective amount of radiation delivered to this volume within the scope of this dose delivery, i.e., dose delivered from the Procedure in which this extension is used."
 * extension[fractionsDelivered] ^short = "Number of Fractions Delivered"
 * extension[fractionsDelivered] ^definition = "The number of fractions delivered to this volume."
 
